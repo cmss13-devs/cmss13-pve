@@ -6,7 +6,7 @@
 /atom/movable/lighting_mask
 	name = ""
 	icon = LIGHTING_ICON_BIG
-	icon_state  = "light_big"
+	icon_state  = "light_normalized"
 
 	anchored = TRUE
 	plane = LIGHTING_PLANE
@@ -69,7 +69,7 @@
 	// - Center the overlay image
 	// - Ok so apparently translate is affected by the scale we already did huh.
 	// ^ Future me here, its because it works as translate then scale since its backwards.
-	// ^ ^ Future future me here, it totally shouldnt since the translation component of a matrix is independant to the scale component.
+	// ^ ^ Future future me here, it totally shouldnt since the translation component of a matrix is independent to the scale component.
 	new_size_matrix.Translate(-128 + 16)
 	//Adjust for pixel offsets
 	var/invert_offsets = attached_atom.dir & (NORTH | EAST)
@@ -142,6 +142,7 @@
 ///rotating light mask, but only pointing in one direction
 /atom/movable/lighting_mask/rotating_conical
 	icon_state = "light_conical_rotating"
+	var/transform_time = 0
 
 /atom/movable/lighting_mask/ex_act(severity, target)
 	return

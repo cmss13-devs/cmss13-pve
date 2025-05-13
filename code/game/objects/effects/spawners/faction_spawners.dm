@@ -107,8 +107,8 @@
 	mags_max = 2
 	mags_min = 1
 	guns = list(
-		/obj/item/weapon/gun/rifle/m41a/elite = /obj/item/ammo_magazine/rifle/ap,
-		/obj/item/weapon/gun/rifle/m41a/elite = /obj/item/ammo_magazine/rifle/extended,
+		/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/ap,
+		/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/extended,
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/ap,
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/extended,
 		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23/ap,
@@ -134,7 +134,7 @@
 	mags_min = 1
 	guns = list(
 		/obj/item/weapon/gun/pistol/vp78 = /obj/item/ammo_magazine/pistol/vp78,
-		/obj/item/weapon/gun/pistol/mod88 = /obj/item/ammo_magazine/pistol/mod88/normalpoint
+		/obj/item/weapon/gun/pistol/vp70 = /obj/item/ammo_magazine/pistol/vp70
 	)
 
 /obj/effect/spawner/random/gun/pmc_secondary/lowchance

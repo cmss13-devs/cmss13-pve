@@ -1,5 +1,5 @@
 /obj/item/hardpoint/support/flare_launcher
-	name = "M-87F Flare Launcher"
+	name = "\improper M-87F Flare Launcher"
 	desc = "A support module for APCs that shoots flares."
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 
@@ -25,10 +25,10 @@
 	muzzleflash_icon_state = "muzzle_laser"
 
 	muzzle_flash_pos = list(
-		"1" = list(-4, -28),
-		"2" = list(5, 8),
-		"4" = list(-14, -6),
-		"8" = list(14, -6)
+		"1" = list(-4, -34),
+		"2" = list(5, 14),
+		"4" = list(-20, -6),
+		"8" = list(20, -6)
 	)
 
 	scatter = 6

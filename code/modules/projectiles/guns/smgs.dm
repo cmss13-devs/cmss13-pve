@@ -1,10 +1,11 @@
 
 /obj/item/weapon/gun/smg
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	reload_sound = 'sound/weapons/handling/smg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/smg_unload.ogg'
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
-
 	fire_sound = 'sound/weapons/gun_m39.ogg'
+
 	force = 5
 	w_class = SIZE_LARGE
 	movement_onehanded_acc_penalty_mult = 4
@@ -39,11 +40,12 @@
 //M39 SMG
 
 /obj/item/weapon/gun/smg/m39
-	name = "\improper M39 submachinegun"
-	desc = "The Armat Battlefield Systems M-39 submachinegun. Occasionally carried by light-infantry, scouts, engineers and medics. A lightweight, lower caliber alternative to the various Pulse weapons used the USCM. Fires 10x20mm rounds out of 48 round magazines."
+	name = "\improper Viper 9 submachinegun"
+	desc = "Made popular through their use by the United States Secret Service, the Armat Battlefield Systems Model-39 submachinegun, marketed as the 'Viper 9', is a common firearm utilized by private security firms. Chambered in 9x19mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m39"
 	item_state = "m39"
+	fire_sound = "m4a3"
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/smg/m39
 	attachable_allowed = list(
@@ -71,28 +73,37 @@
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/smg/m39/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15, , "side_rail_x" = 25, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/smg/m39/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_4
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
-
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
+
+/obj/item/weapon/gun/smg/m39/solidstock
+	starting_attachment_types = list(/obj/item/attachable/stock/smg)
+
+/obj/item/weapon/gun/smg/m39/tactical
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
+
+/obj/item/weapon/gun/smg/m39/tactical/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
 
 //-------------------------------------------------------
 
@@ -110,13 +121,15 @@
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
 	random_spawn_under = list(
 		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight/grip,
+	)
+	random_spawn_siderail = list(
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 	random_spawn_muzzle = list(
 		/obj/item/attachable/suppressor,
@@ -135,6 +148,14 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult =  BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_7
+
+/obj/item/weapon/gun/smg/m39/elite/pve //duplex round
+	name = "\improper M39B/3 submachinegun"
+	desc = "An experimental M-39 capable of firing squash-head duplex rounds. A bit bulkier and more unwieldy than the average M39, with a thicker reciever and slower projectile. Still produced in small quantities."
+	desc_lore = "The Company recieved a rather unexpected windfall of revenue from the VP78. Squash-head small-arms rounds were rather popular among their clientelle. Initial testing with rifle-caliber HESH rounds presented a few problems. The least of which was that the required additional powder drove the chamber pressure up to dangerous levels, causing premature detonations and inaccurate fire. <BR> <BR> Thanks to Armat's overengineering, the M39 was rated for pressures well beyond that of even +P ammunition. It was simple for Weyland Yutani to iterate upon the problem by taking a step back. How do you fix rifle rounds being too pressurized? Make it a pistol round. How do you remedy its firepower? Make it a duplex."
+	current_mag = /obj/item/ammo_magazine/smg/m39/pve
+	random_spawn_chance = 0
+	fire_sound = 'sound/weapons/gun_m39.ogg'
 
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
@@ -162,13 +183,14 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/gyro, // Under
 		/obj/item/attachable/bipod,
-		/obj/item/attachable/burstfire_assembly
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/grenade/m203,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
@@ -176,7 +198,7 @@
 
 
 /obj/item/weapon/gun/smg/mp5/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 19, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 27, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/mp5/set_gun_config_values()
 	..()
@@ -191,6 +213,13 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/smg/mp5/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(prob(10))
+		var/obj/item/attachable/attached_gun/grenade/m203/UGL = new(src)
+		UGL.Attach(src)
+		update_attachable(UGL.slot)
 
 //-------------------------------------------------------
 //MP27, based on the MP27, based on the M7.
@@ -213,13 +242,13 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/gyro,
+		/obj/item/attachable/gyro, // Under
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
@@ -227,7 +256,7 @@
 
 
 /obj/item/weapon/gun/smg/mp27/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 23, "under_y" = 16, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 26, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/mp27/set_gun_config_values()
 	..()
@@ -257,10 +286,11 @@
 	fire_sound = 'sound/weapons/smg_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/ppsh
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	starting_attachment_types = list(/obj/item/attachable/stock/ppsh)
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 19, "under_x" = 26, "under_y" = 15, "stock_x" = 18, "stock_y" = 15, "side_rail_x" = 18, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/smg/ppsh/set_gun_config_values()
 	..()
@@ -302,7 +332,7 @@
 /obj/item/weapon/gun/smg/ppsh/unique_action(mob/user)
 	if(jammed)
 		if(prob(PPSH_UNJAM_CHANCE))
-			to_chat(user, SPAN_GREEN("You succesfully unjam \the [src]!"))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
 			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
 			jammed = FALSE
 			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
@@ -365,7 +395,7 @@
 	)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 20, "rail_y" = 24, "under_x" = 25, "under_y" = 17, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 19)
 
 /obj/item/weapon/gun/smg/pps43/set_gun_config_values()
 	..()
@@ -400,7 +430,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 
 /obj/item/weapon/gun/smg/bizon/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 27, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_config_values()
 	..()
@@ -452,7 +482,7 @@
 	aim_slowdown = SLOWDOWN_ADS_NONE
 
 /obj/item/weapon/gun/smg/mac15/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 20,"rail_x" = 16, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 13, "rail_y" = 24, "under_x" = 19, "under_y" = 18, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 22, "side_rail_y" = 20)
 
 /obj/item/weapon/gun/smg/mac15/set_gun_config_values()
 	..()
@@ -501,7 +531,7 @@
 	var/jammed = FALSE
 
 /obj/item/weapon/gun/smg/uzi/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 12, "rail_y" = 22, "under_x" = 22, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 23, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smg/uzi/set_gun_config_values()
 	..()
@@ -538,7 +568,7 @@
 /obj/item/weapon/gun/smg/uzi/unique_action(mob/user)
 	if(jammed)
 		if(prob(UZI_UNJAM_CHANCE))
-			to_chat(user, SPAN_GREEN("You succesfully unjam \the [src]!"))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
 			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 35, TRUE)
 			jammed = FALSE
 			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
@@ -572,7 +602,7 @@
 		/obj/item/attachable/heavy_barrel,
 	)
 	random_spawn_chance = 65
-	random_spawn_under = list(
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
 	)
 	random_spawn_muzzle = list(
@@ -592,7 +622,7 @@
 	update_attachable(S.slot)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 20, "rail_y" = 21, "under_x" = 26, "under_y" = 16, "stock_x" = 22, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/smg/fp9000/set_gun_config_values()
 	..()
@@ -609,18 +639,18 @@
 
 /obj/item/weapon/gun/smg/fp9000/pmc
 	name = "\improper FN FP9000/2 Submachinegun"
-	desc = "Despite the rather ancient design, the FN FP9K sees frequent use in PMC teams due to its extreme reliability and versatility, allowing it to excel in any situation, especially due to the fact that they use the patented, official version of the gun, which has recieved several upgrades and tuning to its design over time."
+	desc = "Despite the rather ancient design, the FN FP9K sees frequent use in PMC teams due to its extreme reliability and versatility, allowing it to excel in any situation, especially due to the fact that they use the patented, official version of the gun, which has received several upgrades and tuning to its design over time."
 	icon_state = "fp9000_pmc"
 	item_state = "fp9000_pmc"
 	random_spawn_chance = 100
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 	)
-	random_spawn_under = list(
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 
 /obj/item/weapon/gun/smg/fp9000/pmc/set_gun_config_values()
@@ -657,6 +687,7 @@
 	start_automatic = FALSE
 	var/nailing_speed = 2 SECONDS //Time to apply a sheet for patching. Also haha name. Try to keep sync with soundbyte duration
 	var/repair_sound = 'sound/weapons/nailgun_repair_long.ogg'
+	var/material_per_repair = 1
 
 /obj/item/weapon/gun/smg/nailgun/set_gun_config_values()
 	..()
@@ -681,9 +712,16 @@
 	icon_state = "cnailgun"
 	item_state = "nailgun"
 	w_class = SIZE_SMALL
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_NO_DESCRIPTION
 
 /obj/item/weapon/gun/smg/nailgun/compact/able_to_fire(mob/living/user)
 	. = ..()
-	if(.)
-		click_empty(user)
 	return FALSE
+
+/obj/item/weapon/gun/smg/nailgun/compact/tactical
+	name = "tactical compact nailgun"
+	desc = "A carpentry tool, used to drive nails into tough surfaces. This one is military grade, it's olive drab and tacticool. Cannot fire nails as a projectile."
+	icon_state = "tnailgun"
+	item_state = "tnailgun"
+	w_class = SIZE_SMALL
+	material_per_repair = 2

@@ -103,11 +103,11 @@
 	overlays = list() //resets list
 	overlays += image('icons/obj/items/crayons.dmi',"crayonbox")
 	for(var/obj/item/toy/crayon/crayon in contents)
-		overlays += image('icons/obj/items/crayons.dmi',crayon.colourName)
+		overlays += image('icons/obj/items/crayons.dmi',crayon.colorName)
 
 /obj/item/storage/fancy/crayons/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W,/obj/item/toy/crayon))
-		switch(W:colourName)
+		switch(W:colorName)
 			if("mime")
 				to_chat(usr, "This crayon is too sad to be contained in this box.")
 				return
@@ -126,6 +126,7 @@
 	w_class = SIZE_TINY
 	throwforce = 2
 	flags_equip_slot = SLOT_WAIST
+	flags_obj = parent_type::flags_obj|OBJ_IS_HELMET_GARB
 	max_w_class = SIZE_TINY
 	storage_slots = 20
 	can_hold = list(
@@ -167,29 +168,69 @@
 
 /obj/item/storage/fancy/cigarettes/emeraldgreen
 	name = "\improper Emerald Green Packet"
-	desc = "They remind you of a gross, tar-filled version of Ireland...so regular Ireland."
+	desc = "They remind you of a gross, tar-filled version of Ireland. These cheap cigarettes are Weyland-Yutani's entry into the general market."
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
 
 /obj/item/storage/fancy/cigarettes/wypacket
 	name = "\improper Weyland-Yutani Gold packet"
-	desc = "Building Better Worlds, and rolling better cigarettes. These fancy cigarettes are Weyland-Yutani's entry into the market. Comes backed by a fierce legal team."
+	desc = "Building Better Worlds, and rolling better cigarettes. These fancy cigarettes are Weyland-Yutani's entry into the premium tobacco market. Comes backed by a fierce legal team."
 	icon_state = "wypacket"
 	item_state = "wypacket"
 
+/obj/item/storage/fancy/cigarettes/wypacket_4
+	name = "\improper Weyland-Yutani Gold mini packet"
+	desc = "Building Better Worlds, and rolling better cigarettes. Compact and ready for your executive ventures, protecting corporate assets never felt cooler."
+	icon_state = "wy4packet"
+	item_state = "wypacket"
+	item_state_slots = list(WEAR_AS_GARB = "cig_wypack")
+	storage_slots = 4
+
+/obj/item/storage/fancy/cigarettes/balaji
+	name = "\improper Balaji Imperial packet"
+	desc = "Smoke 'em if you gottem! Quite popular amongst people living in the Three World Empire."
+	icon_state = "bpacket"
+	item_state = "bpacket"
+
+/obj/item/storage/fancy/cigarettes/balaji_4
+	name = "\improper Balaji Imperial Mini packet"
+	desc = "Smoke 'em if you gottem! Now a field, in the new compact package!"
+	icon_state = "b4packet"
+	item_state = "bpacket"
+	item_state_slots = list(WEAR_AS_GARB = "cig_bpack")
+	storage_slots = 4
+
 /obj/item/storage/fancy/cigarettes/lucky_strikes
 	name = "\improper Lucky Strikes Packet"
-	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes...as the leading cause of marine lung cancer."
+	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes... as the leading cause of marine lung cancer."
 	icon_state = "lspacket"
 	item_state = "lspacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
+/obj/item/storage/fancy/cigarettes/lucky_strikes_4
+	name = "\improper Lucky Strikes Mini Packet"
+	desc = "These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free."
+	icon_state = "ls4packet"
+	item_state = "lspacket"
+	item_state_slots = list(WEAR_AS_GARB = "cig_ls_mre")
+	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
+	storage_slots = 4
+
 /obj/item/storage/fancy/cigarettes/blackpack
 	name = "\improper Executive Select packet"
-	desc = "These cigarettes are the height of luxury. They're smooth, they're cool, and they smell like victory...and cigarette smoke."
+	desc = "These cigarettes are the height of luxury. They're smooth, they're cool, and they smell like victory... and cigarette smoke."
 	icon_state = "blackpacket"
 	item_state = "blackpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/bcigarette
+
+/obj/item/storage/fancy/cigarettes/blackpack_4
+	name = "\improper Executive Select mini packet"
+	desc = "Luxury right in your ration. You will have them just in time to use them while observing a nuclear blast and enjoying it."
+	icon_state = "black4packet"
+	item_state = "blackpacket"
+	item_state_slots = list(WEAR_AS_GARB = "cig_blackpack")
+	default_cig_type = /obj/item/clothing/mask/cigarette/bcigarette
+	storage_slots = 4
 
 /obj/item/storage/fancy/cigarettes/kpack
 	name = "\improper Koorlander Gold packet"
@@ -210,14 +251,65 @@
 	item_state = "lfpacket"
 	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
 
-/obj/item/storage/fancy/cigarettes/lucky_strikes_4
-	name = "\improper Lucky Strikes Mini Packet"
-	desc = "These four-packs of Luckies come in every MRE. They're not as good as the Habana Reals that come in the LACN MREs, but at least they're free."
-	icon_state = "ls4packet"
-	item_state = "lspacket"
-	default_cig_type = /obj/item/clothing/mask/cigarette/ucigarette
-	storage_slots = 4
+/obj/item/storage/fancy/cigarettes/spirit
+	name = "\improper American Spirit Turquoise Packet"
+	desc = "A pack of turquoise American Spirit cigarettes, for that strong full-bodied flavour you know and love."
+	icon_state = "naspacket"
+	item_state = "naspacket"
+	default_cig_type = /obj/item/clothing/mask/cigarette
 
+/obj/item/storage/fancy/cigarettes/spirit/yellow
+	name = "\improper American Spirit Yellow Packet"
+	desc = "A pack of yellow American Spirit cigarettes, for that mellow flavour you know and love."
+	icon_state = "y_naspacket"
+	item_state = "y_naspacket"
+
+/obj/item/storage/fancy/cigarettes/laika
+	name = "\improper Laika packet"
+	desc = "A Russian brand of cigarettes maintaining and honoring the legacy of the dog Laika, a space pioneer."
+	icon_state = "laikapacket"
+	item_state = "laikapacket"
+
+/obj/item/storage/fancy/cigarettes/trading_card
+	name = "\improper WeyYu Gold Military Trading Card packet"
+	desc = "Gotta collect 'em all, and smoke 'em all! This fancy military trading card version of Weyland Yutani Gold cigarette packs has one card that is apart of the 3 available 5-card sets."
+	icon_state = "collectpacket"
+	item_state = "collectpacket"
+	storage_slots = 21
+	can_hold = list(
+		/obj/item/clothing/mask/cigarette,
+		/obj/item/clothing/mask/cigarette/ucigarette,
+		/obj/item/clothing/mask/cigarette/bcigarette,
+		/obj/item/tool/lighter,
+		/obj/item/toy/trading_card,
+	)
+	var/obj/item/toy/trading_card/trading_card
+
+/obj/item/storage/fancy/cigarettes/trading_card/fill_preset_inventory()
+	flags_atom |= NOREACT
+	for(var/i = 1 to (storage_slots-1))
+		new default_cig_type(src)
+	trading_card = new(src)
+
+/obj/item/storage/fancy/cigarettes/trading_card/attack_hand(mob/user, mods)
+	if(trading_card?.loc == src && loc == user)
+		to_chat(user, SPAN_NOTICE("You pull a [trading_card.collection_color] trading card out of the cigarette pack."))
+		//have to take two disparate systems n' ram 'em together
+		remove_from_storage(trading_card, user.loc)
+		user.put_in_hands(trading_card)
+		trading_card = null
+
+	return ..()
+
+/obj/item/storage/fancy/cigarettes/trading_card/attackby(obj/item/attacked_by_item, mob/user)
+	if(istype(attacked_by_item, /obj/item/toy/trading_card))
+		trading_card = attacked_by_item
+
+	return ..()
+
+/////////////
+//CIGAR BOX//
+/////////////
 // CIGAR BOX
 
 /obj/item/storage/fancy/cigar
@@ -302,7 +394,7 @@
 		if(istype(W) && !W.heat_source && !W.burnt)
 			if(prob(burn_chance))
 				to_chat(user, SPAN_WARNING("\The [W] lights, but you burn your hand in the process! Ouch!"))
-				user.apply_damage(3, BRUTE, pick("r_hand", "l_hand"))
+				user.apply_damage(3, BURN, pick("r_hand", "l_hand"))
 				if((user.pain.feels_pain) && prob(25))
 					user.emote("scream")
 				W.light_match()
@@ -328,6 +420,13 @@
 	icon_state = "mpacket_es"
 	light_chance = 90
 	burn_chance = 0
+
+/obj/item/storage/fancy/cigar/matchbook/balaji_imperial
+	name = "\improper Balaji Imperial matchbook"
+	desc = "A small book of expensive royal paper matches designed for refined smokers. These ones light almost every time!"
+	icon_state = "mpacket_bi"
+	light_chance = 80
+	burn_chance = 10
 
 /obj/item/storage/fancy/cigar/matchbook/wy_gold
 	name = "\improper Weyland-Yutani Gold matchbook"
@@ -409,3 +508,73 @@
 /obj/item/storage/lockbox/vials/attackby(obj/item/W as obj, mob/user as mob)
 	..()
 	update_icon()
+
+// Trading Card Pack
+
+/obj/item/storage/fancy/trading_card
+	name = "pack of Red WeyYu Military Trading Cards"
+	desc = "A 5 pack of Red Weyland Yutani Military Trading Cards."
+	icon = 'icons/obj/items/playing_cards.dmi'
+	icon_state = "trading_red_pack_closed"
+	storage_slots = 5
+	icon_type = "trading card"
+	can_hold = list(/obj/item/toy/trading_card)
+	foldable = /obj/item/stack/sheet/cardboard
+	var/collection_color = null
+	var/obj/item/toy/trading_card/top_trading_card
+
+/obj/item/storage/fancy/trading_card/Initialize()
+	if(!collection_color)
+		collection_color = pick("red", "green", "blue") // because of vodoo shenanigans with fill_preset_inventory happening during parent's initalize this'll have to run prior to that
+
+	. = ..()
+
+	name = "pack of [capitalize(collection_color)] WeyYu Military Trading Cards"
+	desc = "A 5 pack of [capitalize(collection_color)] Weyland Yutani Military Trading Cards."
+	icon_state = "trading_[collection_color]_pack_closed"
+
+
+/obj/item/storage/fancy/trading_card/fill_preset_inventory()
+
+	for(var/i in 1 to storage_slots)
+		top_trading_card = new /obj/item/toy/trading_card(src)
+
+/obj/item/storage/fancy/trading_card/update_icon()
+	if(!(top_trading_card))
+		icon_state = "trading_[collection_color]_pack_empty"
+		return
+	if(length(contents) == storage_slots)
+		icon_state = "trading_[collection_color]_pack_closed"
+		return
+	icon_state = "trading_[collection_color]_pack_open"
+
+/obj/item/storage/fancy/trading_card/attack_hand(mob/user, mods)
+	if(top_trading_card?.loc == src && loc == user)
+		to_chat(user, SPAN_NOTICE("You pull a [top_trading_card.collection_color] trading card out of the pack."))
+		//have to take two disparate systems n' ram 'em together
+		remove_from_storage(top_trading_card, user.loc)
+		user.put_in_hands(top_trading_card)
+		if(!(length(contents)))
+			top_trading_card = null
+			update_icon()
+			return
+		top_trading_card = contents[(length(contents))]
+		update_icon()
+		return
+
+	return ..()
+
+/obj/item/storage/fancy/trading_card/attackby(obj/item/attacked_by_item, mob/user)
+	if(istype(attacked_by_item, /obj/item/toy/trading_card))
+		top_trading_card = attacked_by_item
+
+	return ..()
+
+/obj/item/storage/fancy/trading_card/red
+	collection_color = "red"
+
+/obj/item/storage/fancy/trading_card/green
+	collection_color = "green"
+
+/obj/item/storage/fancy/trading_card/blue
+	collection_color = "blue"

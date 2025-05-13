@@ -2,6 +2,29 @@
 	name = "prop"
 	desc = "Some kind of prop."
 
+/// A prop that acts as a replacement for another item, mimicking their looks.
+/// Mainly used in Reqs Tutorial to provide the full item selections without side effects.
+/obj/item/prop/replacer
+	/// The type that this object is taking the place of
+	var/original_type
+
+/obj/item/prop/replacer/Initialize(mapload, obj/original_type)
+	if(!original_type)
+		return INITIALIZE_HINT_QDEL
+	. = ..()
+	src.original_type = original_type
+	var/obj/created_type = new original_type // Instancing this for the sake of assigning its appearance to the prop and nothing else
+	name = initial(original_type.name)
+	icon = initial(original_type.icon)
+	icon_state = initial(original_type.icon_state)
+	desc = initial(original_type.desc)
+	if(ispath(original_type, /obj/item))
+		var/obj/item/item_type = original_type
+		item_state = initial(item_type.item_state)
+
+	appearance = created_type.appearance
+	qdel(created_type)
+
 /obj/item/prop/laz_top
 	name = "lazertop"
 	icon = 'icons/obj/structures/props/server_equipment.dmi'
@@ -146,6 +169,18 @@
 	icon_state = "game_kit"
 	icon = 'icons/obj/items/items.dmi'
 
+/obj/item/prop/gripper
+	name = "magnetic gripper"
+	desc = "A simple grasping tool for synthetic assets."
+	icon_state = "gripper"
+	icon = 'icons/obj/items/devices.dmi'
+
+/obj/item/prop/matter_decompiler
+	name = "matter decompiler"
+	desc = "Eating trash, bits of glass, or other debris will replenish your stores."
+	icon_state = "decompiler"
+	icon = 'icons/obj/items/devices.dmi'
+
 /// Xeno-specific props
 
 /obj/item/prop/alien/hugger
@@ -220,7 +255,7 @@
 	icon_state = "poster15"
 	throw_speed = SPEED_FAST
 	throw_range = 5
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_TINY
 	attack_verb = list("bashed", "whacked", "educated")
 	pickup_sound = "sound/handling/book_pickup.ogg"
 	drop_sound = "sound/handling/book_pickup.ogg"
@@ -242,10 +277,10 @@
 
 //books
 /obj/item/prop/magazine/book
-	name = "generic prop book"
-	desc = "some generic hardcover book, probably sucked"
+	name = "book"
+	desc = "A generic hardcore novel. Really boring. Probably. Too bored to read."
 	icon = 'icons/obj/items/books.dmi'
-	icon_state = "bookSpaceLaw"
+	icon_state = "book_blue"
 
 /obj/item/prop/magazine/book/spacebeast
 	name = "\improper Space Beast, by Robert Morse"
@@ -267,27 +302,111 @@
 	name = "The Art of War"
 	desc = "A treatise on war written by Sun Tzu a great general, strategist, and philosopher from ancient Earth. This book is on the Commandant of the United States Colonial Marine Corps reading list and most officers can be found in possession of a copy. Most officers who've read it claim to know a little bit more about fighting than most enlisted but results may vary. "
 
+/obj/item/prop/magazine/book/uppbooklet
+	name = "\improper The People's Handbook"
+	desc = "A booklet provided to the broad citizenry of the Union of Progressive Peoples. The first page is stamped with the Union Roundel and a dedication to the unity of its' member states and the collective working class under the State Councils' guidance. While an easily digestible summary of the collective ideology of the Union, the booklet also provides a succinct description of the UPP's history and summaries of its' member states, alongside various universal laws. Because of this, it is commonly distributed to new citizens upon entry into the UPP."
+	icon_state = "book_upp"
+
+/obj/item/prop/magazine/book/warisaracket
+	name = "War is a Racket"
+	desc = "A book critical of the United States Marine Corps by Marine Corps legend, Major General Smedley Butler. In short, the book outlines the function which the historical Marine Corps had in establishing and enforcing American global hegemony. Good thing its critiques have no contemporary application. Right?"
+
+/obj/item/prop/magazine/book/littleredbook
+	name = "Quotations from Chairman Mao Tse-tung"
+	desc = "A tiny red book that fits in the palm of your hand. While not required reading, it provides the reader with easy access to- as the name implies- Quotations from Chairman Mao Tse-tung."
+	icon_state = "littleredbook"
+
+/obj/item/prop/magazine/book/communistmanifesto
+	name = "Communist Manifesto"
+	desc = "The bare minimum in communist reading."
+
+/obj/item/prop/magazine/book/inframaterialism
+	name = "A Brief Look at Infra-Materialism"
+	desc = "A concise introduction to the esoteric communist theory of infra-materialism by Ignus Nilsen."
+
+/obj/item/prop/magazine/sof
+	name = "Soldier Of Fortune: Issue..."
+	icon_state = "poster8"
+	desc = "A copy of Soldier of Fortune magazine. It's been damaged with water. Damn."
+
+/obj/item/prop/magazine/sof/n2182
+	name = "Soldier Of Fortune: Issue March 2182"
+	icon_state = "poster8"
+	desc = "A copy of Soldier of Fortune magazine. On the cover is a stylized image of the M314 Motion Tracker in use, with the headline '22nd Century Battlespace Awareness'. The article covers advancements in ground sensor and countermeasure technologies for the modern army. Also on the cover, 'Exclusive: SOF Looks At The M41AE2' and 'The Future War: Advancements In Cyberdyne Systems Combat AI'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
+
+/obj/item/prop/magazine/sof/n2181
+	name = "Soldier Of Fortune: Issue December 2181"
+	icon_state = "poster21"
+	desc = "A copy of Soldier of Fortune magazine. On the cover is photo of a Marine in full MOPP gear, with the headline 'War At The Limits: Contaminated Combat Operations'. The main article discusses fighting in contaminated environments, spotlighting the changes made by the Marine 70 program. Secondary on the cover is 'Exclusive: SOF Fires XM99 Phased Plasma Rifle', and 'Remembering Tannhauser'. At the back of the magazine is an extensive pamphlet of advertisements for contractors and combat equipment."
+
+/obj/item/prop/magazine/playboy
+	name = "Playboy: Issue..."
+	icon_state = "poster3"
+	desc = "A copy of Playboy magazine. It's been damaged with water. Damn."
+
+/obj/item/prop/magazine/playboy/n2182
+	name = "Playboy Magazine: Issue March 2182"
+	icon_state = "poster3"
+	desc = "A copy of Playboy magazine. On the cover is photo of guitarist Sadie Summers, with the headline 'Sadie Summers tells ALL'. The article itself focuses on Sadie's many carnal exploits while on tour as well as her very public brawl at an LA nightclub that occured two years prior to the date of this issue. Flipping through the magazine you see article titles such as 'Jungle Mercenary: Life as an Ex-UPP commando' and 'The whys and hows of choosing synthetic girls'."
+
 //boots magazine
 /obj/item/prop/magazine/boots
 	name = "generic Boots! magazine"
 	desc = "The only official USCM magazine!"
 
-/obj/item/prop/magazine/boots/n117
-	name = "Boots!: Issue No.117"
-	desc = "The only official USCM magazine, the headline reads 'STOP CANNING' the short paragraph further explains the dangers of marines throwing CN-20 Nerve gas into bathrooms as a prank."
-
-/obj/item/prop/magazine/boots/n150
-	name = "Boots!: Issue No.150"
-	desc = "The only official USCM magazine, the headline reads 'UPP Rations, The truth.' the short paragraph further explains UPP field rations aren't standardized and are produced at a local level. Because of this, captured and confiscated UPP rations have included some odd choices such as duck liver, century eggs, lutefisk, pickled pig snout, canned tripe, and dehydrated candied radish snacks."
-
-/obj/item/prop/magazine/boots/n160
-	name = "Boots!: Issue No.160"
-	desc = "The only official USCM magazine, the headline reads 'Corporate Liaison 'emotionally exhausted' from screwing so many people over.'"
-
 /obj/item/prop/magazine/boots/n054
-	name = "Boots!: Issue No.54"
-	desc = "The only official USCM magazine, the headline reads 'ARMAT strikes back against litigants in M41A-MK2 self cleaning case'"
+	name = "Boots!: Issue No.54, ARMAT Strikes Back"
+	desc = "This edition's about the old lawsuit over the M41A being billed as being self-cleaning, supposedly. Specifically, ARMAT's response to the allegations."
 
 /obj/item/prop/magazine/boots/n055
-	name = "Boots!: Issue No.55"
-	desc = "The only official USCM magazine, the headline reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.'"
+	name = "Boots!: Issue No.55, Veteran Pilot Tips"
+	desc = "The subtitle reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.' Flipping through it quickly, most are baloney. The rest of the issue isn't that interesting either, except for a neat M3 Armor trick for improved comfort."
+
+/obj/item/prop/magazine/boots/n056
+	name = "Boots!: Issue No.56, Smart Smartgunning"
+	desc = "This issue is somewhat infamous. Unfortunately, it's one of the reprints, which have had the offending 'Pancake Scandal' pages removed and replaced with an advisory for smartgun care."
+
+/obj/item/prop/magazine/boots/n067
+	name = "Boots!: Issue No.67, Make The Best Of It"
+	desc= "Number 57's one of the issues where the Marine Corps really laid it on a little too thick. It's completely filled with advice on how to make the best of situations on the Frontier."
+
+/obj/item/prop/magazine/boots/n117
+	name = "Boots!: Issue No.117, STOP CANNING"
+	desc = "A rapidly printed issue in the wake of the canning incident, with several pages dedicated to the dangers of marines throwing CN-20 Nerve Gas into bathrooms as a prank. It lists some other alternatives, which are all for wimps."
+
+/obj/item/prop/magazine/boots/n150
+	name = "Boots!: Issue No.150, UPP Rations, The Truth"
+	desc = "The short paragraph further explains UPP field rations aren't standardized and are produced at a local level. Because of this, captured and confiscated UPP rations have included some odd choices such as duck liver, century eggs, lutefisk, pickled pig snout, canned tripe, and dehydrated candied radish snacks."
+
+/obj/item/prop/magazine/boots/n160
+	name = "Boots!: Issue No.160, Corporate Liason, Ten Years On"
+	desc = "Featuring an interview with a Weyland Yutani corporate liason, after ten years with a marine unit. An insert features a redeemable survey card for... a fifty dollar MCX gift card."
+
+/obj/item/prop/scrap
+	name = "scrap metal"
+	icon = 'icons/obj/items/fishing_atoms.dmi'
+	icon_state = "sheet-scrap"
+	item_state = ""
+	desc = "A rusty piece of scrap metal."
+	w_class = SIZE_SMALL
+
+/obj/item/prop/rock
+	name = "rock"
+	icon = 'icons/obj/items/plush.dmi'
+	icon_state = "rock"
+	item_state = ""
+	force = 30
+	throwforce = 25
+	desc = "The most ancient of tools."
+	w_class = SIZE_TINY
+	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/prop/deviltrap
+	name = "devil trap"
+	icon = 'icons/obj/items/misc.dmi'
+	icon_state = "deviltrap"
+	item_state = ""
+	force = 0.5
+	throwforce = 0.5
+	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
+	w_class = SIZE_LARGE

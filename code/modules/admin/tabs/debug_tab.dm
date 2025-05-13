@@ -5,7 +5,7 @@
 	if(!check_rights(R_DEBUG))
 		return
 
-	add_verb(src, debug_verbs)
+	add_verb(src, GLOB.debug_verbs)
 	remove_verb(src, /client/proc/enable_debug_verbs)
 
 /client/proc/hide_debug_verbs()
@@ -15,7 +15,7 @@
 	if(!check_rights(R_DEBUG))
 		return
 
-	remove_verb(src, debug_verbs)
+	remove_verb(src, GLOB.debug_verbs)
 	add_verb(src, /client/proc/enable_debug_verbs)
 
 /client/proc/enter_tree()
@@ -32,7 +32,7 @@
 
 	var/value = SStechtree.trees[1]
 
-	if(trees.len > 1)
+	if(length(trees) > 1)
 		value = tgui_input_list(src, "Choose which tree to enter", "Enter Tree", trees)
 
 	if(!value)
@@ -60,7 +60,7 @@
 
 	var/value = SStechtree.trees[1]
 
-	if(trees.len > 1)
+	if(length(trees) > 1)
 		value = tgui_input_list(src, "Choose which tree to give points to", "Give Points", trees)
 
 	if(!value)
@@ -82,7 +82,7 @@
 	if(!check_rights(R_ADMIN|R_DEBUG))
 		return
 
-	debug_variables(round_statistics)
+	debug_variables(GLOB.round_statistics)
 
 /client/proc/cmd_admin_delete(atom/O as obj|mob|turf in world)
 	set category = "Debug"
@@ -153,15 +153,6 @@
 	message_admins("[usr.ckey] manually reloaded admins.")
 	load_admins()
 
-/client/proc/reload_whitelist()
-	set name = "Reload Whitelist"
-	set category = "Debug"
-	if(alert("Are you sure you want to do this?",, "Yes", "No") != "Yes") return
-	if(!check_rights(R_SERVER) || !RoleAuthority) return
-
-	message_admins("[usr.ckey] manually reloaded the role whitelist.")
-	RoleAuthority.load_whitelist()
-
 /client/proc/bulk_fetcher()
 	set name = "Bulk Fetch Items"
 	set category = "Debug"
@@ -175,20 +166,20 @@
 
 	var/dat = {"
 		<B>Fetch Objectives</B><BR>
-		<A href='?src=\ref[src];debug=bulkfetchdisks'>Disks</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchtechmanuals'>Technical Manuals</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchprogressreports'>Progress Reports</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchpaperscraps'>Paper Scraps</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchfolders'>Folders</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchexpdevices'>Experimental Devices</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchdisks'>Disks</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchtechmanuals'>Technical Manuals</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchprogressreports'>Progress Reports</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchpaperscraps'>Paper Scraps</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchfolders'>Folders</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchexpdevices'>Experimental Devices</A><BR>
 		<BR>
 		<B>Research</B><BR>
-		<A href='?src=\ref[src];debug=bulkfetchvials'>Vials</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchresearchnotes'>Research Notes</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchvials'>Vials</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchresearchnotes'>Research Notes</A><BR>
 		<BR>
 		<B>Bodies</B><BR>
-		<A href='?src=\ref[src];debug=bulkfetchhumancorpses'>Human corpses</A><BR>
-		<A href='?src=\ref[src];debug=bulkfetchxenocorpses'>Xeno corpses</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchhumancorpses'>Human corpses</A><BR>
+		<A href='byond://?src=\ref[src];debug=bulkfetchxenocorpses'>Xeno corpses</A><BR>
 		<BR>
 		"}
 

@@ -21,6 +21,11 @@
 #pragma InvalidOverride error
 #pragma DanglingVarType error
 #pragma MissingInterpolatedExpression error
+#pragma InvalidIndexOperation error
+#pragma PointlessPositionalArgument error
+#pragma ProcArgumentGlobal error
+#pragma ScopeOperandNamedType error
 
 //3000-3999
 #pragma EmptyBlock error
+#pragma AmbiguousInOrder error

@@ -266,6 +266,10 @@
 /obj/structure/machinery/door/airlock/strata/mining/autoname
 	autoname = TRUE
 
+/obj/structure/machinery/door/airlock/strata/circular
+	name = "\improper Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_utility.dmi'
+
 //YAUTJA SHIP - CURRENTLY USES STRATA DOORS
 /obj/structure/machinery/door/airlock/yautja
 	name = "\improper Airlock"
@@ -409,6 +413,11 @@
 	icon = 'icons/obj/structures/doors/securedoor.dmi'
 	req_access = list(ACCESS_MARINE_COMMAND)
 
+/obj/structure/machinery/door/airlock/almayer/secure/glass
+	name = "\improper Secure Airlock"
+	icon = 'icons/obj/structures/doors/securedoor_glass.dmi'
+	opacity = FALSE
+
 /obj/structure/machinery/door/airlock/almayer/secure/colony
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
@@ -494,6 +503,12 @@
 	icon = 'icons/obj/structures/doors/medidoor.dmi'
 	req_access = list()
 	req_one_access = list(ACCESS_MARINE_MEDBAY, ACCESS_MARINE_COMMAND)
+
+/obj/structure/machinery/door/airlock/almayer/medical/plain
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/medidoor_plain.dmi'
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_PUBLIC)
 
 /obj/structure/machinery/door/airlock/almayer/medical/colony
 	req_access = null
@@ -886,7 +901,6 @@
 /obj/structure/machinery/door/airlock/dropship_hatch/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
 
-
 /obj/structure/machinery/door/airlock/dropship_hatch/monorail
 	icon = 'icons/obj/structures/doors/pod_doors.dmi' //TEMPLATE NEED TO REPLACE LATER
 	name = "monorail door"
@@ -899,14 +913,24 @@
 	req_one_access = list()
 	unslashable = TRUE
 	unacidable = TRUE
+	dir = SOUTH
 	no_panel = 1
 	not_weldable = 1
 
 /obj/structure/machinery/door/airlock/hatch/cockpit/two
 	icon = 'icons/obj/structures/doors/dropship2_pilot.dmi'
 
+/obj/structure/machinery/door/airlock/hatch/cockpit/three
+	icon = 'icons/obj/structures/doors/dropship3_pilot.dmi'
+
+/obj/structure/machinery/door/airlock/hatch/cockpit/four
+	icon = 'icons/obj/structures/doors/dropship4_pilot.dmi'
+
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
+
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc
+	icon = 'icons/obj/structures/doors/dropshippmc_pilot.dmi'
 
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison
@@ -917,4 +941,33 @@
 /obj/structure/machinery/door/airlock/prison/horizontal
 	dir = SOUTH
 
+/obj/structure/machinery/door/airlock/upp_green
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_green.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
 
+/obj/structure/machinery/door/airlock/upp_green/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_green.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_grey
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_grey.dmi'
+	openspeed = 5
+	req_access = null
+	req_one_access = null
+
+/obj/structure/machinery/door/airlock/upp_grey/window
+	icon = 'icons/obj/structures/doors/upp/uppdoor_glass_grey.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/upp_utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/uppdoor_utility.dmi'
+	openspeed = 6
+	req_access = null
+	req_one_access = null

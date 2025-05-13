@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - bugfix: "Platoon Commanders now use the proper equipped preset in the setup menu."

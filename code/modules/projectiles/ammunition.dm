@@ -12,6 +12,7 @@ They're all essentially identical when it comes to getting the job done.
 	var/bonus_overlay = null //Sprite pointer in ammo.dmi to an overlay to add to the gun, for extended mags, box mags, and so on
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
+	flags_human_ai = AMMUNITION_ITEM
 	matter = list("metal" = 1000)
 	//Low.
 	throwforce = 2
@@ -39,6 +40,8 @@ They're all essentially identical when it comes to getting the job done.
 	var/ammo_band_icon
 	/// Is the greyscale icon used for the ammo band when it's empty of bullets.
 	var/ammo_band_icon_empty
+
+	var/description_ammo = "rounds"
 
 
 /obj/item/ammo_magazine/Initialize(mapload, spawn_empty)
@@ -98,7 +101,7 @@ They're all essentially identical when it comes to getting the job done.
 		. += "Something went horribly wrong. Ahelp the following: ERROR CODE R1: negative current_rounds on examine."
 		log_debug("ERROR CODE R1: negative current_rounds on examine. User: <b>[usr]</b> Magazine: <b>[src]</b>")
 	else
-		. += "[src] has <b>[current_rounds]</b> rounds out of <b>[max_rounds]</b>."
+		. += "[src] has <b>[current_rounds]</b> [description_ammo] out of <b>[max_rounds]</b>."
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(flags_magazine & AMMUNITION_REFILLABLE) //actual refillable magazine, not just a handful of bullets or a fuel tank.
@@ -191,15 +194,21 @@ They're all essentially identical when it comes to getting the job done.
 	default_ammo = source.default_ammo
 	gun_type = source.gun_type
 
+/obj/item/ammo_magazine/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	if(current_rounds <= 0)
+		return FALSE
+
+	return TRUE
+
 //~Art interjecting here for explosion when using flamer procs.
 /obj/item/ammo_magazine/flamer_fire_act(damage, datum/cause_data/flame_cause_data)
 	if(current_rounds < 1)
 		return
 	else
-		var/severity = round(current_rounds / 50)
+		var/severity = floor(current_rounds / 50)
 		//the more ammo inside, the faster and harder it cooks off
 		if(severity > 0)
-			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), loc, -1, ((severity > 4) ? 0 : -1), Clamp(severity, 0, 1), Clamp(severity, 0, 2), 1, 0, 0, flame_cause_data), max(5 - severity, 2))
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(explosion), loc, -1, ((severity > 4) ? 0 : -1), clamp(severity, 0, 1), clamp(severity, 0, 2), 1, 0, 0, flame_cause_data), max(5 - severity, 2))
 
 	if(!QDELETED(src))
 		qdel(src)
@@ -233,6 +242,8 @@ bullets/shells. ~N
 */
 
 /obj/item/ammo_magazine/handful
+	AUTOWIKI_SKIP(TRUE)
+
 	name = "generic handful"
 	desc = "A handful of rounds to reload on the go."
 	icon = 'icons/obj/items/weapons/guns/handful.dmi'
@@ -244,6 +255,7 @@ bullets/shells. ~N
 	max_rounds = 5 // For shotguns, though this will be determined by the handful type when generated.
 	flags_atom = FPRINT|CONDUCT
 	flags_magazine = AMMUNITION_HANDFUL
+	flags_human_ai = NONE
 	attack_speed = 3 // should make reloading less painful
 
 /obj/item/ammo_magazine/handful/Initialize(mapload, spawn_empty)
@@ -335,14 +347,14 @@ Turn() or Shift() as there is virtually no overhead. ~N
 /obj/item/ammo_casing/update_icon()
 	if(max_casings >= current_casings)
 		if(current_casings == 2) name += "s" //In case there is more than one.
-		if(round((current_casings-1)/8) > current_icon)
+		if(floor((current_casings-1)/8) > current_icon)
 			current_icon++
 			icon_state += "_[current_icon]"
 
 		var/I = current_casings*8 // For the metal.
 		matter = list("metal" = I)
 		var/base_direction = current_casings - (current_icon * 8)
-		setDir(base_direction + round(base_direction)/3)
+		setDir(base_direction + floor(base_direction)/3)
 		switch(current_casings)
 			if(3 to 5) w_class = SIZE_SMALL //Slightly heavier.
 			if(9 to 10) w_class = SIZE_MEDIUM //Can't put it in your pockets and stuff.
@@ -365,7 +377,7 @@ Turn() or Shift() as there is virtually no overhead. ~N
 	overlay_ammo_type = "_blank"
 	overlay_gun_type = "_458"
 	overlay_content = "_458"
-	magazine_type = /obj/item/ammo_magazine/handful/lever_action/xm88
+	magazine_type = /obj/item/ammo_magazine/lever_action/xm88
 
 /obj/item/ammo_box/magazine/lever_action/xm88/empty
 	empty = TRUE

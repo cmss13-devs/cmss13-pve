@@ -79,11 +79,14 @@
 	xeno_shields += new_shield
 	new_shield.last_damage_taken = world.time // So we don't insta-delete our shield.
 
-	new_shield.decay_amount_per_second = decay_amount_per_second
+	if(decay_amount_per_second)
+		new_shield.decay_amount_per_second = decay_amount_per_second
+	if(duration)
+		new_shield.duration = duration
 	new_shield.linked_xeno = src
 
-	if(duration > -1)
-		addtimer(CALLBACK(new_shield, TYPE_PROC_REF(/datum/xeno_shield, begin_decay)), duration)
+	if(new_shield.duration > -1)
+		addtimer(CALLBACK(new_shield, TYPE_PROC_REF(/datum/xeno_shield, begin_decay)), new_shield.duration)
 
 	overlay_shields()
 	return new_shield

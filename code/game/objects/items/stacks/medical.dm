@@ -8,6 +8,7 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
 	attack_speed = 3
+	flags_human_ai = HEALING_ITEM
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/alien = FALSE
@@ -21,7 +22,7 @@
 		to_chat(user, SPAN_DANGER("\The [src] cannot be applied to [M]!"))
 		return 1
 
-	if(!ishuman(user) && !isrobot(user))
+	if(!ishuman(user))
 		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return 1
 
@@ -94,6 +95,19 @@
 			else
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
+
+/obj/item/stack/medical/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
+
+/obj/item/stack/medical/bruise_pack/two
+	amount = 2
 
 /obj/item/stack/medical/ointment
 	name = "ointment"
@@ -190,6 +204,45 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
+/obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			return TRUE
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BURN)
+				continue
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				return TRUE
+	return FALSE
+
+/obj/item/stack/medical/advanced/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
+			continue
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BURN)
+				continue
+
+			if(QDELETED(src))
+				return
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				user.zone_selected = limb.name
+				attack(target, user)
+				sleep(ai_brain.short_action_delay)
+
 /obj/item/stack/medical/advanced/bruise_pack/predator
 	name = "mending herbs"
 	singular_name = "mending herb"
@@ -199,6 +252,7 @@
 	heal_brute = 15
 	stack_id = "mending herbs"
 	alien = TRUE
+
 /obj/item/stack/medical/advanced/ointment/predator
 	name = "soothing herbs"
 	singular_name = "soothing herb"
@@ -208,6 +262,7 @@
 	heal_burn = 15
 	stack_id = "soothing herbs"
 	alien = TRUE
+
 /obj/item/stack/medical/advanced/ointment
 	name = "burn kit"
 	singular_name = "burn kit"
@@ -257,6 +312,33 @@
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
 
+/obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BRUTE)
+				continue
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				return TRUE
+	return FALSE
+
+/obj/item/stack/medical/advanced/ointment/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BRUTE)
+				continue
+
+			if(QDELETED(src))
+				return
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				user.zone_selected = limb.name
+				attack(target, user)
+				sleep(ai_brain.short_action_delay)
+
 /obj/item/stack/medical/splint
 	name = "medical splints"
 	singular_name = "medical splint"
@@ -268,7 +350,7 @@
 
 	var/indestructible_splints = FALSE
 
-/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user)
+/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user, mob/living/carbon/target)
 	if(..()) return 1
 
 	if(user.action_busy)
@@ -314,3 +396,15 @@
 		if(affecting.apply_splints(src, user, M, indestructible_splints)) // Referenced in external organ helpers.
 			use(1)
 			playsound(user, 'sound/handling/splint1.ogg', 25, 1, 2)
+
+
+/obj/item/stack/medical/splint/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(limb.is_broken())
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
+			continue

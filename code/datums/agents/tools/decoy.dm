@@ -1,8 +1,10 @@
 /obj/item/explosive/grenade/decoy
+	AUTOWIKI_SKIP(TRUE)
+
 	name = "decoy grenade"
 	desc = "A grenade typically used to distract the enemy. Emits a loud bang. Detonates in 5 seconds. Has 3 uses"
 
-	icon_state = "training_grenade"
+	icon_state = "grenade_training"
 	item_state = "grenade_training"
 
 	det_time = 5 SECONDS

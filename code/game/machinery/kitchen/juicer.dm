@@ -96,9 +96,9 @@
 [beaker_contents]<hr>
 "}
 	if (is_beaker_ready && !is_chamber_empty && !(inoperable()))
-		dat += "<A href='?src=\ref[src];action=juice'>Turn on!<BR>"
+		dat += "<A href='byond://?src=\ref[src];action=juice'>Turn on!<BR>"
 	if (beaker)
-		dat += "<A href='?src=\ref[src];action=detach'>Detach a beaker!<BR>"
+		dat += "<A href='byond://?src=\ref[src];action=detach'>Detach a beaker!<BR>"
 	show_browser(user, dat, "Juicer", "juicer")
 	onclose(user, "juicer")
 	return
@@ -141,7 +141,7 @@
 	else if (O.potency == -1)
 		return 5
 	else
-		return round(5*sqrt(O.potency))
+		return floor(5*sqrt(O.potency))
 
 /obj/structure/machinery/juicer/proc/juice()
 	power_change() //it is a portable machine

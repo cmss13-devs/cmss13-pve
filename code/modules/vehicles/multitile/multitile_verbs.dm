@@ -65,7 +65,7 @@
 	if(!new_hp)
 		new_hp = 0
 
-	new_hp = (new_hp % usable_hps.len) + 1
+	new_hp = (new_hp % length(usable_hps)) + 1
 	var/obj/item/hardpoint/HP = usable_hps[new_hp]
 	if(!HP)
 		return
@@ -167,7 +167,7 @@
 		))
 
 	data["resistance_data"] = resist_data_list
-	data["integrity"] = round(100 * health / initial(health))
+	data["integrity"] = floor(100 * health / initial(health))
 	data["door_locked"] = door_locked
 	data["total_passenger_slots"] = interior.passengers_slots
 	data["total_taken_slots"] = interior.passengers_taken_slots
@@ -235,7 +235,7 @@
 	<font color='#cd6500'><b><i>Driver shortcuts:</i></b></font><br> 1. <b>\"CTRL + Click\"</b> - activates vehicle horn.<br> \
 	<font color=\"red\"><b><i>Gunner shortcuts:</i></b></font><br> 1. <b>\"ALT + Click\"</b> - toggles Turret Gyrostabilizer. <i>(Exists only on vehicles with rotating turret, e.g. M34A2 Longstreet Light Tank)</i><br>"
 
-	show_browser(user, dat, "Vehicle Controls Guide", "vehicle_help", "size=900x500")
+	show_browser(user, dat, "Vehicle Controls Guide", "vehicle_help", width = 900, height = 500)
 	onclose(user, "vehicle_help")
 	return
 

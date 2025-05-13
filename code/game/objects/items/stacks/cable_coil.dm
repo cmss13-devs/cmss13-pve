@@ -22,6 +22,7 @@
 	attack_speed = 3
 	ground_offset_x = 2
 	ground_offset_y = 2
+	flags_human_ai = HEALING_ITEM
 
 /obj/item/stack/cable_coil/Initialize(mapload, length = MAXCOIL, param_color = null)
 	. = ..()
@@ -33,7 +34,7 @@
 
 /obj/item/stack/cable_coil/proc/updateicon()
 	if (!color)
-		color = pick(COLOR_RED, COLOR_BLUE, COLOR_GREEN, COLOR_ORANGE, COLOR_WHITE, COLOR_PINK, COLOR_YELLOW, COLOR_CYAN)
+		color = pick(COLOR_RED, COLOR_BLUE, COLOR_GREEN, COLOR_ORANGE, COLOR_WHITE, COLOR_MAGENTA, COLOR_YELLOW, COLOR_CYAN)
 	if(amount == 1)
 		icon_state = "coil1"
 		name = "cable piece"
@@ -70,7 +71,7 @@
 		if(src.amount <= 14)
 			to_chat(usr, SPAN_WARNING("You need at least 15 lengths to make restraints!"))
 			return
-		var/obj/item/handcuffs/cable/B = new /obj/item/handcuffs/cable(usr.loc)
+		var/obj/item/restraint/adjustable/cable/B = new /obj/item/restraint/adjustable/cable(usr.loc)
 		B.color = color
 		to_chat(usr, SPAN_NOTICE("You wind some cable together to make some restraints."))
 		src.use(15)
@@ -298,11 +299,11 @@
 	color = "#a8c1dd"
 
 /obj/item/stack/cable_coil/white
-	color = "#FFFFFF"
+	color = COLOR_WHITE
 
 /obj/item/stack/cable_coil/random/Initialize()
 	. = ..()
-	color = pick(COLOR_RED, COLOR_BLUE, COLOR_GREEN, COLOR_WHITE, COLOR_PINK, COLOR_YELLOW, COLOR_CYAN)
+	color = pick(COLOR_RED, COLOR_BLUE, COLOR_GREEN, COLOR_WHITE, COLOR_MAGENTA, COLOR_YELLOW, COLOR_CYAN)
 
 /obj/item/stack/cable_coil/attack(mob/M as mob, mob/user as mob)
 	if(ishuman(M))
@@ -335,3 +336,35 @@
 
 	else
 		return ..()
+
+// Medical purposes for synths
+/obj/item/stack/cable_coil/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(!issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || (wound.damage_type == BRUTE))
+				continue
+
+			return TRUE
+
+	return FALSE
+
+/obj/item/stack/cable_coil/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	user.a_intent_change(INTENT_HELP)
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || (wound.damage_type == BRUTE))
+				continue
+
+			if(QDELETED(src))
+				return
+
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay * ai_brain.action_delay_mult)

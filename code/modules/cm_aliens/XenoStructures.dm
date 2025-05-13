@@ -88,13 +88,18 @@
 	else
 		M.animation_attack_on(src)
 		M.visible_message(SPAN_XENONOTICE("\The [M] claws \the [src]!"), \
-		SPAN_XENONOTICE("You claw \the [src]."))
+		SPAN_XENONOTICE("We claw \the [src]."))
 		if(istype(src, /obj/effect/alien/resin/sticky))
 			playsound(loc, "alien_resin_move", 25)
 		else
 			playsound(loc, "alien_resin_break", 25)
 
-		health -= (M.melee_damage_upper + 50) //Beef up the damage a bit
+		var/damage_to_structure = M.melee_damage_upper + XENO_DAMAGE_TIER_7
+		// Builders can destroy beefy things in maximum 5 hits
+		if(isxeno_builder(M))
+			health -= max(initial(health) * 0.2, damage_to_structure)
+		else
+			health -= damage_to_structure
 		healthcheck()
 	return XENO_ATTACK_ACTION
 
@@ -113,7 +118,7 @@
 
 /obj/effect/alien/resin/attackby(obj/item/W, mob/user)
 	if(!(W.flags_item & NOBLUDGEON))
-		var/damage = W.force * RESIN_MELEE_DAMAGE_MULTIPLIER
+		var/damage = W.force * W.demolition_mod * RESIN_MELEE_DAMAGE_MULTIPLIER
 		health -= damage
 		if(istype(src, /obj/effect/alien/resin/sticky))
 			playsound(loc, "alien_resin_move", 25)
@@ -160,13 +165,12 @@
 /obj/effect/alien/resin/sticky/Crossed(atom/movable/AM)
 	. = ..()
 	var/mob/living/carbon/human/H = AM
-	// Wait doesn't this stack slows if you get dragged over it? What's going on here?
 	if(istype(H) && !H.ally_of_hivenumber(hivenumber))
-		H.next_move_slowdown = H.next_move_slowdown + slow_amt
+		H.next_move_slowdown = max(H.next_move_slowdown, slow_amt)
 		return .
 	var/mob/living/carbon/xenomorph/X = AM
 	if(istype(X) && !X.ally_of_hivenumber(hivenumber))
-		X.next_move_slowdown = X.next_move_slowdown + slow_amt
+		X.next_move_slowdown = max(X.next_move_slowdown, slow_amt)
 		return .
 
 /obj/effect/alien/resin/sticky/proc/forsaken_handling()
@@ -203,7 +207,7 @@
 	if (hive)
 		hivenumber = hive
 	set_hive_data(src, hivenumber)
-	setDir(pick(alldirs))
+	setDir(pick(GLOB.alldirs))
 	if(hivenumber == XENO_HIVE_NORMAL)
 		RegisterSignal(SSdcs, COMSIG_GLOB_GROUNDSIDE_FORSAKEN_HANDLING, PROC_REF(forsaken_handling))
 
@@ -387,7 +391,7 @@
 		return // defer to item afterattack
 	if(!(W.flags_item & NOBLUDGEON) && W.force)
 		user.animation_attack_on(src)
-		health -= W.force*RESIN_MELEE_DAMAGE_MULTIPLIER
+		health -= W.force * RESIN_MELEE_DAMAGE_MULTIPLIER * W.demolition_mod
 		to_chat(user, "You hit the [name] with your [W.name]!")
 		playsound(loc, "alien_resin_move", 25)
 		healthcheck()
@@ -463,7 +467,7 @@
 	var/turf/U = loc
 	spawn(0)
 		var/turf/T
-		for(var/i in cardinal)
+		for(var/i in GLOB.cardinals)
 			T = get_step(U, i)
 			if(!istype(T)) continue
 			for(var/obj/structure/mineral_door/resin/R in T)
@@ -496,7 +500,7 @@
 //do we still have something next to us to support us?
 /obj/structure/mineral_door/resin/proc/check_resin_support()
 	var/turf/T
-	for(var/i in cardinal)
+	for(var/i in GLOB.cardinals)
 		T = get_step(src, i)
 		if(!T)
 			continue
@@ -574,11 +578,14 @@
 	if(current_mob.stat == DEAD)
 		return FALSE
 
+	if(HAS_TRAIT(current_mob, TRAIT_NESTED))
+		return FALSE
+
 	var/turf/current_turf
 	var/turf/last_turf = loc
 	var/atom/temp_atom = new acid_type()
 	var/current_pos = 1
-	for(var/i in getline(src, current_mob))
+	for(var/i in get_line(src, current_mob))
 		current_turf = i
 		if(LinkBlocked(temp_atom, last_turf, current_turf))
 			qdel(temp_atom)
@@ -781,7 +788,7 @@
 
 /obj/effect/alien/resin/resin_pillar/proc/brittle()
 	//playsound(granite cracking)
-	visible_message(SPAN_DANGER("You hear cracking sounds from the [src] as splinters start falling off from the structure! It seems brittle now."))
+	visible_message(SPAN_DANGER("You hear cracking sounds from [src] as splinters start falling off from the structure! It seems brittle now."))
 	health = vulnerable_health
 	for(var/i in walls)
 		var/turf/closed/wall/T = i
@@ -814,7 +821,7 @@
 
 /obj/effect/alien/resin/resin_pillar/hitby(atom/movable/AM)
 	if(!brittle)
-		visible_message(SPAN_DANGER("[AM] harmlessly bounces off the [src]!"))
+		visible_message(SPAN_DANGER("[AM] harmlessly bounces off [src]!"))
 		return
 	return ..()
 
@@ -919,6 +926,16 @@
 	E.source = initial(name)
 	qdel(src)
 
+/obj/effect/alien/resin/king_cocoon
+	name = "alien cocoon"
+	desc = "A large pulsating cocoon."
+	icon = 'icons/obj/structures/alien/xenoKingHatchery.dmi'
+	icon_state = "growing" // I wanna to set hatching/hatched state on MMB game panel soon
+	health = 4000
+	pixel_x = -48
+	pixel_y = -64
+	density = TRUE
+	plane = FLOOR_PLANE
 
 /datum/automata_cell/acid
 	neighbor_type = NEIGHBORS_NONE
@@ -940,9 +957,9 @@
 
 	// If the cell is the epicenter, propagate in all directions
 	if(isnull(direction))
-		return alldirs
+		return GLOB.alldirs
 
-	if(direction in cardinal)
+	if(direction in GLOB.cardinals)
 		. += list(direction, turn(direction, 45), turn(direction, -45))
 	else
 		. += direction
@@ -976,7 +993,7 @@
 			// Set the direction the explosion is traveling in
 			E.direction = dir
 
-			if(dir in diagonals)
+			if(dir in GLOB.diagonals)
 				E.range--
 
 			switch(E.range)

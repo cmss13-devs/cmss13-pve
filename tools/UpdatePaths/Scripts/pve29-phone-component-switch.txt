@@ -1,0 +1,2 @@
+/obj/item/phone: /obj/item/handset{@OLD}
+/obj/structure/transmitter/@SUBTYPES : /obj/structure/phone_base/@SUBTYPES{@OLD}

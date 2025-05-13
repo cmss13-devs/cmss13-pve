@@ -33,6 +33,13 @@ SUBSYSTEM_DEF(tgui)
 	polyfill = "<script>\n[polyfill]\n</script>"
 	basehtml = replacetextEx(basehtml, "<!-- tgui:inline-polyfill -->", polyfill)
 
+/datum/controller/subsystem/tgui/OnConfigLoad()
+	if(CONFIG_GET(string/asset_transport) == "webroot")
+		var/datum/asset_transport/webroot/webroot = SSassets.transport
+
+		var/datum/asset_cache_item/item = webroot.register_asset("iframe.html", file("tgui/public/iframe.html"))
+		basehtml = replacetext(basehtml, "tgui:storagecdn", webroot.get_asset_url("iframe.html", item))
+
 /datum/controller/subsystem/tgui/Shutdown()
 	close_all_uis()
 
@@ -45,8 +52,8 @@ SUBSYSTEM_DEF(tgui)
 		src.current_run = open_uis.Copy()
 	// Cache for sanic speed (lists are references anyways)
 	var/list/current_run = src.current_run
-	while(current_run.len)
-		var/datum/tgui/ui = current_run[current_run.len]
+	while(length(current_run))
+		var/datum/tgui/ui = current_run[length(current_run)]
 		current_run.len--
 		// TODO: Move user/src_object check to process()
 		if(ui?.user && ui.src_object)

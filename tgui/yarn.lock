@@ -1507,6 +1507,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/wicg-file-system-access@npm:^2023.10.5":
+  version: 2023.10.5
+  resolution: "@types/wicg-file-system-access@npm:2023.10.5"
+  checksum: 10c0/3c6099320a2517ab405bd65712eb19ba2c1f7f0c30f952744102b76809ed9ad5205f881c79ebe6f92ac7af7a13667df8c23dd59b0a5182119c74afa17335bfd3
+  languageName: node
+  linkType: hard
+
 "@types/yargs-parser@npm:*":
   version: 21.0.3
   resolution: "@types/yargs-parser@npm:21.0.3"
@@ -2840,13 +2847,13 @@ __metadata:
   linkType: hard
 
 "cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "cross-spawn@npm:7.0.3"
+  version: 7.0.6
+  resolution: "cross-spawn@npm:7.0.6"
   dependencies:
     path-key: "npm:^3.1.0"
     shebang-command: "npm:^2.0.0"
     which: "npm:^2.0.1"
-  checksum: 10c0/5738c312387081c98d69c98e105b6327b069197f864a60593245d64c8089c8a0a744e16349281210d56835bb9274130d825a78b2ad6853ca13cfbeffc0c31750
+  checksum: 10c0/053ea8b2135caff68a9e81470e845613e374e7309a47731e81639de3eaeb90c3d01af0e0b44d2ab9d50b43467223b88567dfeb3262db942dc063b9976718ffc1
   languageName: node
   linkType: hard
 
@@ -3146,10 +3153,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dompurify@npm:^2.4.9":
-  version: 2.4.9
-  resolution: "dompurify@npm:2.4.9"
-  checksum: 10c0/cb847f5eacd9ff326dfc4566875709d050dc78c58837cc3afb83386992f6e7002295358cb9f75d66a9b638fe6da71b7d02ffa82f121713f78f7f3891394dece8
+"dompurify@npm:^2.5.4":
+  version: 2.5.8
+  resolution: "dompurify@npm:2.5.8"
+  checksum: 10c0/4101708d190b67be00350369d72619266a2e0ebb7dcab12628cf07711329b1df12239baea613df41b65cba571128e8ea4c29c442f4e2c98670a9bb5563521f03
   languageName: node
   linkType: hard
 
@@ -8289,7 +8296,7 @@ __metadata:
     glob: "npm:^7.2.3"
     source-map: "npm:^0.7.4"
     stacktrace-parser: "npm:^0.1.10"
-    ws: "npm:^8.16.0"
+    ws: "npm:^8.17.1"
   languageName: unknown
   linkType: soft
 
@@ -8300,7 +8307,7 @@ __metadata:
     "@types/node": "npm:^20.12.3"
     "@types/react": "npm:^18.2.74"
     common: "workspace:*"
-    dompurify: "npm:^2.4.9"
+    dompurify: "npm:^2.5.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     tgui: "workspace:*"
@@ -8343,6 +8350,7 @@ __metadata:
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:^20.12.3"
     "@types/webpack-env": "npm:^1.18.4"
+    "@types/wicg-file-system-access": "npm:^2023.10.5"
     "@typescript-eslint/parser": "npm:^7.5.0"
     "@typescript-eslint/utils": "npm:^7.5.0"
     css-loader: "npm:^6.10.0"
@@ -8381,7 +8389,7 @@ __metadata:
     "@types/react": "npm:^18.2.74"
     common: "workspace:*"
     dateformat: "npm:^4.6.3"
-    dompurify: "npm:^2.4.9"
+    dompurify: "npm:^2.5.4"
     highlight.js: "npm:^11.9.0"
     jest: "npm:^29.7.0"
     js-yaml: "npm:^4.1.0"
@@ -9181,7 +9189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.11.0, ws@npm:^8.13.0, ws@npm:^8.16.0":
+"ws@npm:^8.11.0, ws@npm:^8.13.0":
   version: 8.16.0
   resolution: "ws@npm:8.16.0"
   peerDependencies:
@@ -9193,6 +9201,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: 10c0/a7783bb421c648b1e622b423409cb2a58ac5839521d2f689e84bc9dc41d59379c692dd405b15a997ea1d4c0c2e5314ad707332d0c558f15232d2bc07c0b4618a
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.17.1":
+  version: 8.18.0
+  resolution: "ws@npm:8.18.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10c0/25eb33aff17edcb90721ed6b0eb250976328533ad3cd1a28a274bd263682e7296a6591ff1436d6cbc50fa67463158b062f9d1122013b361cec99a05f84680e06
   languageName: node
   linkType: hard
 

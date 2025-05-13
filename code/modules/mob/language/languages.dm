@@ -46,6 +46,15 @@
 
 	syllables = list("al", "an", "bi", "vye", "vo", "go", "dye", "yel", "en", "yer", "yet", "ka", "ko", "la", "ly", "lo", "l", "na", "nye", "ny", "no", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "rye", "ro", "st", "ta", "tye", "to", "t", "at", "bil", "vyer", "yego", "yeny", "yenn", "yest", "kak", "ln", "ova", "ogo", "oro", "ost", "oto", "pry", "pro", "sta", "stv", "tor", "chto", "eto", "rus", "nar", "arya", "mol")
 
+/datum/language/patois
+	name = LANGUAGE_RUSPATOIS
+	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
+	speech_verb = "says"
+	color = "ruspatois"
+	key = "9"
+
+	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
+
 /datum/language/german
 	name = LANGUAGE_GERMAN
 	desc = "Standard High-German, a language spoken mostly in Central Europe, and by German immigrants elsewhere."
@@ -67,6 +76,40 @@
 	key = "5"
 
 	syllables = list("ha", "pana", "ja", "blo", "que", "spa", "di", "ga", "na", "ces", "si", "mo", "so", "de", "el", "to", "ro", "mi", "ca", "la", "di", "ah", "mio", "tar", "ion", "gran", "van", "jo", "cie", "qie", "las", "locho", "mas", "no", "gui", "es", "mal")
+
+/datum/language/portuguese
+	name = LANGUAGE_PORTUGUESE
+	desc = "The third most common language spoken in the UA."
+	speech_verb = "dice"
+	ask_verb = "pregunta"
+	exclaim_verb = "grita"
+	color = "portuguese"
+	key = "6"
+
+	syllables = list("o", "de", "e", "que", "um", "para", "com", "por", "seu", "outro", "ele", "já", "eiro", "bem", "bom", "só", "iço", "iça", "lho", "lha", "ção", "pois", "hoje", "ém", "hão", "três", "ela", "aço", "aça", "ça", "você", "ança", "lhe", "lher", "lado", "fim", "nem", "são", "vir", "sem", "sim", "nó", "se", "em", "até", "esse", "nosso", "eu", "dois", "ar", "mal", "não", "muito", "bém", "mais", "en", "tão", "lá", "aí", "ou")
+
+/datum/language/french
+	name = LANGUAGE_FRENCH
+	desc = "The most spoken language on Earth. Vive la France."
+	speech_verb = "proclaims"
+	ask_verb = "inquires"
+	exclaim_verb = "bellows"
+	color = "french"
+	key = "7"
+
+	syllables = list("la", "là", "pou", "tu", "cou", "fou", "sous", "chou", "je", "ro", "po", "me", "âge", "île", "ni", "moi", "ami", "pâtes", "fromage", "vin", "coup", "grâce", "rôle", "et", "beau", "cuit", "clé", "eau", "lit", "pain", "plus", "trop", "agi", "bien", "songé", "cure", "vite", "dur", "vide", "cru", "bas", "ta", "pis", "pire", "mieux", "meilleur", "bien", "mauvais", "à", "belle", "mur", "sac", "chez", "ai", "pomme", "que", "longe", "genre", "mon", "gérée", "série", "erreur", "ira", "jeu", "jou", "pu", "puis", "qui", "que", "côté", "côte", "vie", "ville", "sur", "tard", "les", "des", "voix", "pluie", "pont", "pot", "roue", "peu", "sec", "vis", "où", "ou", "seul", "mienne", "os", "né", "mort", "trou", "pâle", "tue", "cher", "en", "incroyable", "on", "un", "eu", "au", "œil", "aide", "oui", "non", "si", "été", "nez", "près", "après", "mûr", "sûr", "croît", "ère", "lui", "tâche")
+
+/datum/language/filipino
+	name = LANGUAGE_FILIPINO
+	desc = "The fourth most common language spoken in the UA."
+	speech_verb = "dice"
+	ask_verb = "cuestiona"
+	exclaim_verb = "grita"
+	color = "filipino"
+	key = "f"
+
+	syllables = list("ako", "ito", "dito", "an", "paa", "lam", "kai", "tay", "saan", "taba", "hok", "kama", "ta", "opi", "oo", "dya", "ryo", "kas", "ngi", "nga", "asu", "kal", "lupa", "damo", "baho", "yon", "mari", "pak", "gan", "king", "atin", "ang", "ng", "sa", "nag", "kita", "han", "kan", "araw", "mala", "laba", "baka", "kay", "kina", "ni", "nina", "para", "tung", "kol", "hing", "gil", "ayon", "tungo", "bag", "ba", "bay")
+
 
 /datum/language/commando
 	name = LANGUAGE_TSL
@@ -113,7 +156,7 @@
 	ask_verb = "chimpers"
 	exclaim_verb = "screeches"
 	color = "monkey"
-	key = "9"
+	key = null
 
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH
@@ -174,7 +217,7 @@
 
 	GLOB.STUI.game.Add("\[[time_stamp()]]<font color='#FFFF00'>APOLLO: [key_name(speaker)] : [message]</font><br>")
 	GLOB.STUI.processing |= STUI_LOG_GAME_CHAT
-	log_say("[speaker.name != "Unknown" ? speaker.name : "([speaker.real_name])"] \[APOLLO\]: [message] (CKEY: [speaker.key]) (JOB: [speaker.job])")
+	log_say("[speaker.name != "Unknown" ? speaker.name : "([speaker.real_name])"] \[APOLLO\]: [message] (CKEY: [speaker.key]) (JOB: [speaker.job]) (AREA: [get_area_name(speaker)])")
 	log_ares_apollo(speaker.real_name, message)
 	for (var/mob/dead in GLOB.dead_mob_list)
 		if(!istype(dead,/mob/new_player) && !istype(dead,/mob/living/brain)) //No meta-evesdropping
@@ -196,12 +239,6 @@
 			continue
 		M.show_message("<i><span class='game say'><span class='name'>synthesised voice</span> <span class='message'>beeps, \"beep beep beep\"</span></span></i>",2)
 
-	//robot binary xmitter component power usage
-	if (isrobot(speaker))
-		var/mob/living/silicon/robot/R = speaker
-		var/datum/robot_component/C = R.components["comms"]
-		R.cell_use_power(C.active_usage)
-
 /datum/language/event_hivemind
 	name = LANGUAGE_TELEPATH
 	desc = "An event only language that provides a hivemind for its users."
@@ -209,5 +246,5 @@
 	ask_verb = "resonates"
 	exclaim_verb = "resonates"
 	color = "tajaran"
-	key = "7"
+	key = "8"
 	flags = RESTRICTED|HIVEMIND

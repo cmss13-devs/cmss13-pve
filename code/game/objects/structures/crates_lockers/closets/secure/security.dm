@@ -41,7 +41,7 @@
 /obj/structure/closet/secure_closet/marshal/Initialize()
 	. = ..()
 	new /obj/item/clothing/suit/storage/CMB(src)
-	new /obj/item/clothing/under/CM_uniform(src)
+	new /obj/item/clothing/under/cmb(src)
 	new /obj/item/storage/backpack/security(src)
 	new /obj/item/storage/belt/security(src)
 	new /obj/item/clothing/shoes/jackboots(src)
@@ -195,6 +195,59 @@
 	anchored = TRUE
 	locked = TRUE
 	var/id = null
+
+/obj/structure/closet/secure_closet/brig/prisoner
+
+/obj/structure/closet/secure_closet/brig/prisoner/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/device/radio/headset(src)
+
+/obj/structure/closet/secure_closet/brig/prison_uni
+	name = "Spare Prison Uniforms"
+	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
+	anchored = TRUE
+	locked = TRUE
+
+
+/obj/structure/closet/secure_closet/brig/prison_uni/Initialize()
+	. = ..()
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/shoes/orange(src)
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/clothing/under/color/orange(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+	new /obj/item/device/radio/headset(src)
+
+/obj/structure/closet/secure_closet/brig/restraints
+	name = "Spare Restraints"
+	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_CIVILIAN_BRIG)
+	anchored = TRUE
+	locked = TRUE
+
+
+/obj/structure/closet/secure_closet/brig/restraints/Initialize()
+	. = ..()
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/clothing/suit/straight_jacket(src)
+	new /obj/item/clothing/glasses/sunglasses/blindfold(src)
+	new /obj/item/clothing/glasses/sunglasses/blindfold(src)
+	new /obj/item/clothing/glasses/sunglasses/blindfold(src)
+	new /obj/item/clothing/glasses/sunglasses/blindfold(src)
+	new /obj/item/clothing/glasses/sunglasses/blindfold(src)
 
 /obj/structure/closet/secure_closet/brig/Initialize()
 	. = ..()

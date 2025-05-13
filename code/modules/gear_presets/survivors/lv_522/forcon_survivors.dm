@@ -1,17 +1,23 @@
 ///*****************************LV-522 Force Recon Survivors*******************************************************/
 //Nanu told me to put them here so they dont clutter up survivors.dm
 /datum/equipment_preset/survivor/forecon
-	paygrade = "ME5"
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/dogtag
 	role_comm_title = "FORECON"
 	rank = JOB_SURVIVOR
-	faction_group = list(FACTION_USCM, FACTION_SURVIVOR)
+	faction_group = list(FACTION_MARINE, FACTION_SURVIVOR)
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 	access = list(
 		ACCESS_CIVILIAN_PUBLIC,
 		ACCESS_CIVILIAN_ENGINEERING,
 		ACCESS_CIVILIAN_LOGISTICS,
 	)
+
+	dress_shoes = list(/obj/item/clothing/shoes/laceup)
+	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/nco)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
 
 /datum/equipment_preset/survivor/forecon/load_gear(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/reconnaissance/uniform = new()
@@ -30,16 +36,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/marine(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/facepaint/sniper(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof/survivor_forecon(new_human), WEAR_L_EAR)
 	GLOB.character_traits[/datum/character_trait/skills/spotter].apply_trait(new_human)
-
-/datum/equipment_preset/survivor/forecon/add_survivor_weapon_security(mob/living/carbon/human/new_human)
-	return
 
 /datum/equipment_preset/survivor/forecon/proc/add_forecon_weapon(mob/living/carbon/human/new_human)
 	var/random_gun = rand(1,3)
@@ -49,9 +52,9 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle(new_human), WEAR_IN_BACK)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m4ra(new_human), WEAR_L_HAND)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra(new_human), WEAR_IN_BACK)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a(new_human), WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/survivor/forecon/add_survivor_weapon_pistol(mob/living/carbon/human/new_human)
 	return
@@ -121,7 +124,7 @@
 
 /datum/equipment_preset/survivor/forecon/tech/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/big(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
 	..()
@@ -142,13 +145,13 @@
 	skills = /datum/skills/military/survivor/forecon_marksman
 
 /datum/equipment_preset/survivor/forecon/marksman/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m4ra_custom(new_human), WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a_custom(new_human), WEAR_L_HAND)
 	..()
 	add_forecon_weapon_pistol(new_human)
 	spawn_random_headgear(new_human)
 	add_forecon_equipment(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/custom(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/custom(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/custom(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/custom(new_human), WEAR_IN_BACK)
 
 ///*****************************//
 
@@ -192,7 +195,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/marine(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/facepaint/sniper(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
@@ -208,7 +211,11 @@
 	name = "Survivor - USCM Reconnaissance Squad Leader"
 	assignment = JOB_FORECON_SL
 	skills = /datum/skills/military/survivor/forecon_squad_leader
-	paygrade = "MO1"
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 
 /datum/equipment_preset/survivor/forecon/squad_leader/load_gear(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/reconnaissance/uniform = new()
@@ -234,9 +241,13 @@
 	name = "Survivor - USCM Reconnaissance Major"
 	assignment = JOB_FORECON_CO
 	skills = /datum/skills/commander
-	paygrade = "MO4"
+	paygrades = list(PAY_SHORT_MO4 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/gold
 	role_comm_title = "FORECON CO"
+
+	dress_under = list(/obj/item/clothing/under/marine/dress/blues/senior)
+	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues/officer)
+	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 
 /datum/equipment_preset/survivor/forecon/major/load_gear(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/reconnaissance/uniform = new()
@@ -264,7 +275,7 @@
 //----------------------\\
 
 /datum/equipment_preset/synth/survivor/forecon
-	name = "Survivor - USCM Synthetic"
+	name = "Survivor - Synthetic - FORECON Synth"
 	assignment = JOB_FORECON_SYN
 	faction_group = list(FACTION_MARINE, FACTION_SURVIVOR)
 	idtype = /obj/item/card/id/gold

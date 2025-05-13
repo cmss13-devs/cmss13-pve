@@ -144,9 +144,10 @@
 	active_power_usage = 20
 	power_channel = POWER_CHANNEL_LIGHT //Lights are calc'd via area so they dont need to be in the machine list
 	light_system = STATIC_LIGHT
+	light_color = LIGHT_COLOR_TUNGSTEN
 	var/on = 0 // 1 if on, 0 if off
 	var/on_gs = 0
-	var/brightness = 8 // luminosity when on, also used in power calculation
+	var/brightness = 6 // luminosity when on, also used in power calculation
 	var/status = LIGHT_OK // LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/flickering = 0
 	var/light_type = /obj/item/light_bulb/tube // the type of light item
@@ -171,6 +172,7 @@
 	icon_state = "btube1"
 	base_state = "btube"
 	desc = "A lighting fixture that is fitted with a bright blue fluorescent light tube. Looking at it for too long makes your eyes go watery."
+	light_color = LIGHT_COLOR_XENON
 
 // the smaller bulb light fixture
 
@@ -189,6 +191,26 @@
 	brightness = 4
 	desc = "A small lighting fixture that is fitted with a bright blue fluorescent light bulb. Looking at it for too long makes your eyes go watery."
 	light_type = /obj/item/light_bulb/bulb
+	light_color = LIGHT_COLOR_XENON
+
+/obj/structure/machinery/light/small/blue/golden_arrow
+	icon_state = "bbulb1"
+	base_state = "bbulb"
+	fitting = "bulb"
+	brightness = 4
+	desc = "A small lighting fixture that is fitted with a bright fluorescent light bulb. Looking at it for too long makes your eyes go watery."
+	light_type = /obj/item/light_bulb/bulb
+	light_color = LIGHT_COLOR_XENON_UA
+
+/obj/structure/machinery/light/small/red
+	icon_state = "bulb1"
+	base_state = "bulb"
+	fitting = "bulb"
+	color = "#C02526"
+	brightness = 4
+	desc = "A small red lighting fixture that is dark shade of red. Looking at it for too long makes your eyes go watery."
+	light_type = /obj/item/light_bulb/bulb
+	light_color = LIGHT_COLOR_RED_BULB
 
 /obj/structure/machinery/light/double
 	icon_state = "ptube1"
@@ -199,6 +221,13 @@
 	icon_state = "bptube1"
 	base_state = "bptube"
 	desc = "A lighting fixture that can be fitted with two bright fluorescent light tubes for that extra eye-watering goodness."
+	light_color = LIGHT_COLOR_XENON
+
+/obj/structure/machinery/light/double/blue/golden_arrow
+	icon_state = "bptube1"
+	base_state = "bptube"
+	desc = "A lighting fixture that can be fitted with two bright fluorescent light tubes for that extra eye-watering goodness."
+	light_color = LIGHT_COLOR_XENON_UA
 
 /obj/structure/machinery/light/spot
 	name = "spotlight"
@@ -217,6 +246,7 @@
 	fitting = "large tube"
 	light_type = /obj/item/light_bulb/tube/large/
 	brightness = 12
+	light_color = LIGHT_COLOR_XENON
 
 
 /obj/structure/machinery/light/built/Initialize()
@@ -390,7 +420,7 @@
 	else if(status != LIGHT_BROKEN && status != LIGHT_EMPTY)
 
 
-		if(prob(1+W.force * 5))
+		if(prob(1+W.force * W.demolition_mod * 5))
 
 			to_chat(user, "You hit the light, and it smashes!")
 			for(var/mob/M as anything in viewers(src))
@@ -530,7 +560,7 @@
 
 	L.update()
 
-	if(user.put_in_active_hand(L)) //succesfully puts it in our active hand
+	if(user.put_in_active_hand(L)) //successfully puts it in our active hand
 		L.add_fingerprint(user)
 	else
 		L.forceMove(loc) //if not, put it on the ground
@@ -756,6 +786,7 @@
 	power_channel = POWER_CHANNEL_LIGHT //Lights are calc'd via area so they dont need to be in the machine list
 	unslashable = TRUE
 	unacidable = TRUE
+	light_color = LIGHT_COLOR_FLARE
 	var/obj/docking_port/stationary/marine_dropship/linked_port = null
 
 //Don't allow blowing those up, so Marine nades don't fuck them

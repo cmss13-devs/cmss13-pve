@@ -3,7 +3,7 @@
 /obj/item/disk/data
 	name = "Cloning Data Disk"
 	icon_state = "datadisk0" //Gosh I hope syndies don't mistake them for the nuke disk.
-	item_state = "card-id"
+	item_state = "red-id"
 	w_class = SIZE_TINY
 	var/read_only = 0 //Well,it's still a floppy disk
 
@@ -35,7 +35,7 @@
 	else
 		if(isliving(src.implanted))
 			var/mob/living/L = src.implanted
-			src.healthstring = "[round(L.getOxyLoss())] - [round(L.getFireLoss())] - [round(L.getToxLoss())] - [round(L.getBruteLoss())]"
+			src.healthstring = "[floor(L.getOxyLoss())] - [floor(L.getFireLoss())] - [floor(L.getToxLoss())] - [floor(L.getBruteLoss())]"
 		if (!src.healthstring)
 			src.healthstring = "ERROR"
 		return src.healthstring

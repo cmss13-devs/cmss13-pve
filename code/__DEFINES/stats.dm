@@ -8,7 +8,11 @@
 #define FACEHUG_TIER_3 100
 #define FACEHUG_TIER_4 1000
 
+/// Consecutive rounds this player has readied up and failed to get a slot.
+#define PLAYER_STAT_UNASSIGNED_ROUND_STREAK "unassigned_round_streak"
+
 // Stat Categories
 #define STAT_CATEGORY_MARINE "marine"
 #define STAT_CATEGORY_XENO "xeno"
 #define STAT_CATEGORY_YAUTJA "yautja"
+#define STAT_CATEGORY_MISC "misc"

@@ -31,11 +31,11 @@
 	get_targets()
 
 /obj/structure/machinery/door_display/proc/get_targets()
-	for(var/obj/structure/machinery/door/D in machines)
+	for(var/obj/structure/machinery/door/D in GLOB.machines)
 		if (D.id == id)
 			targets += D
 
-	if(targets.len == 0)
+	if(length(targets) == 0)
 		stat |= BROKEN
 	update_icon()
 
@@ -85,7 +85,7 @@
 
 	if(!uses_tgui)
 		user.set_interaction(src)
-		show_browser(user, display_contents(user), name, "computer", "size=400x500")
+		show_browser(user, display_contents(user), name, "computer", width = 400, height = 500)
 	return
 
 /obj/structure/machinery/door_display/proc/display_contents(mob/user as mob)
@@ -96,13 +96,13 @@
 
 	// Open/Close Door
 	if (open)
-		data += "<a href='?src=\ref[src];open=0'>Close Door</a><br/>"
+		data += "<a href='byond://?src=\ref[src];open=0'>Close Door</a><br/>"
 	else
-		data += "<a href='?src=\ref[src];open=1'>Open Door</a><br/>"
+		data += "<a href='byond://?src=\ref[src];open=1'>Open Door</a><br/>"
 
 	data += "<br/>"
 
-	data += "<br/><a href='?src=\ref[user];mach_close=computer'>Close Display</a>"
+	data += "<br/><a href='byond://?src=\ref[user];mach_close=computer'>Close Display</a>"
 	data += "</TT></BODY></HTML>"
 
 	return data
@@ -199,11 +199,11 @@
 
 /obj/structure/machinery/door_display/research_cell/get_targets()
 	..()
-	for(var/obj/structure/machinery/flasher/F in machines)
+	for(var/obj/structure/machinery/flasher/F in GLOB.machines)
 		if(F.id == id)
 			targets += F
 	if(has_wall_divider)
-		for(var/turf/closed/wall/almayer/research/containment/wall/divide/W in orange(src, 8))
+		for(var/turf/closed/wall/almayer/research/containment/wall/divide/W in ORANGE_TURFS(8, src))
 			targets += W
 
 /obj/structure/machinery/door_display/research_cell/Destroy()

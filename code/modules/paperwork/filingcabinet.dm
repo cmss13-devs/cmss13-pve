@@ -64,16 +64,16 @@
 				to_chat(user, SPAN_NOTICE("You can't put [P] in [src]!"))
 
 /obj/structure/filingcabinet/attack_hand(mob/user as mob)
-	if(contents.len <= 0)
+	if(length(contents) <= 0)
 		to_chat(user, SPAN_NOTICE("\The [src] is empty."))
 		return
 
 	user.set_interaction(src)
 	var/dat = "<center><table>"
 	for(var/obj/item/P in src)
-		dat += "<tr><td><a href='?src=\ref[src];retrieve=\ref[P]'>[P.name]</a></td></tr>"
+		dat += "<tr><td><a href='byond://?src=\ref[src];retrieve=\ref[P]'>[P.name]</a></td></tr>"
 	dat += "</table></center>"
-	show_browser(user, dat, name, "filingcabinet", "size=350x300")
+	show_browser(user, dat, name, "filingcabinet", width = 350, height = 300)
 
 	return
 

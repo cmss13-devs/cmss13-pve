@@ -61,6 +61,9 @@
 	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(ship_id)
 	if (!istype(shuttle))
 		return
+	var/obj/structure/machinery/computer/shuttle/dropship/flight/comp = shuttle.getControlConsole()
+	if(comp?.dropship_control_lost)
+		return
 	if(is_mainship_level(z)) // on the almayer
 		return
 
@@ -95,7 +98,7 @@
 					D.safe = 1
 
 /obj/structure/machinery/door_control/proc/handle_pod()
-	for(var/obj/structure/machinery/door/poddoor/M in machines)
+	for(var/obj/structure/machinery/door/poddoor/M in GLOB.machines)
 		if(M.id == id)
 			if(M.density)
 				INVOKE_ASYNC(M, TYPE_PROC_REF(/obj/structure/machinery/door, open))
@@ -176,9 +179,9 @@
 		flick(initial(icon_state) + "-denied",src)
 		return
 
-	// safety first
-	if(!is_mainship_level(SSshuttle.vehicle_elevator.z))
-		flick(initial(icon_state) + "-denied",src)
+	// If someone's trying to lower the railings but the elevator isn't in the vehicle bay.
+	if(!desiredstate && !is_mainship_level(SSshuttle.vehicle_elevator.z))
+		flick(initial(icon_state) + "-denied", src) // Safety first!
 		return
 
 	use_power(5)
@@ -187,7 +190,7 @@
 	add_fingerprint(user)
 
 	var/effective = 0
-	for(var/obj/structure/machinery/door/poddoor/M in machines)
+	for(var/obj/structure/machinery/door/poddoor/M in GLOB.machines)
 		if(M.id == id)
 			effective = 1
 			spawn()
@@ -234,3 +237,31 @@
 
 	desiredstate = !desiredstate
 
+/obj/structure/machinery/door_control/cl
+	req_access_txt = "200"
+// seperating quarter and office because we might want to allow more access to the office than quarter in the future.
+/obj/structure/machinery/door_control/cl/office
+/obj/structure/machinery/door_control/cl/office/door
+	name = "Office Door Shutter"
+	id = "cl_office_door"
+/obj/structure/machinery/door_control/cl/office/window
+	name = "Office Windows Shutters"
+	id = "cl_office_windows"
+/obj/structure/machinery/door_control/cl/office/divider
+	name = "Room Divider"
+	id = "RoomDivider"
+//special button that unlock the cl lock on is evac pod door bypassing general lockdown.
+/obj/structure/machinery/door_control/cl/office/evac
+	name = "Evac Pod Door Control"
+	id = "cl_evac"
+	normaldoorcontrol = 1
+/obj/structure/machinery/door_control/cl/quarter
+/obj/structure/machinery/door_control/cl/quarter/officedoor
+	name = "Quarter Door Shutter"
+	id = "cl_quarter_door"
+/obj/structure/machinery/door_control/cl/quarter/backdoor
+	name = "Maintenance Door Shutter"
+	id = "cl_quarter_maintenance"
+/obj/structure/machinery/door_control/cl/quarter/windows
+	name = "Quarter Windows Shutters"
+	id = "cl_quarter_windows"

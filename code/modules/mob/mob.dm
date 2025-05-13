@@ -54,8 +54,8 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
-	last_mob_gid++
-	gid = last_mob_gid
+	GLOB.last_mob_gid++
+	gid = GLOB.last_mob_gid
 
 	GLOB.mob_list += src
 	if(stat == DEAD)
@@ -348,48 +348,30 @@
 
 	return 0
 
-/mob/proc/reset_view(atom/A)
-	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, A) & COMPONENT_OVERRIDE_VIEW) return TRUE
+/mob/proc/reset_view(atom/focus)
+	if(SEND_SIGNAL(src, COMSIG_MOB_RESET_VIEW, focus) & COMPONENT_OVERRIDE_VIEW)
+		return TRUE
 
-	if (client)
-		if (istype(A, /atom/movable))
+	if(client)
+		if(istype(focus, /atom/movable))
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = A
+			client.eye = focus
 		else
-			if (isturf(loc))
+			if(isturf(loc))
 				client.eye = client.mob
 				client.perspective = MOB_PERSPECTIVE
 			else
 				client.perspective = EYE_PERSPECTIVE
 				client.eye = loc
 
-		client.mouse_pointer_icon = mouse_icon
+		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
 
-		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, A)
+		SEND_SIGNAL(client, COMSIG_CLIENT_RESET_VIEW, focus)
 	return
 
 /mob/proc/reset_observer_view_on_deletion(atom/deleted, force)
 	SIGNAL_HANDLER
 	reset_view(null)
-
-/mob/proc/show_inv(mob/user)
-	user.set_interaction(src)
-	var/dat = {"
-	<B><HR><FONT size=3>[name]</FONT></B>
-	<BR><HR>
-	<BR><B>Head(Mask):</B> <A href='?src=\ref[src];item=mask'>[(wear_mask ? wear_mask : "Nothing")]</A>
-	<BR><B>Left Hand:</B> <A href='?src=\ref[src];item=l_hand'>[(l_hand ? l_hand  : "Nothing")]</A>
-	<BR><B>Right Hand:</B> <A href='?src=\ref[src];item=r_hand'>[(r_hand ? r_hand : "Nothing")]</A>
-	<BR><B>Back:</B> <A href='?src=\ref[src];item=back'>[(back ? back : "Nothing")]</A> [((istype(wear_mask, /obj/item/clothing/mask) && istype(back, /obj/item/tank) && !( internal )) ? text(" <A href='?src=\ref[];item=internal'>Set Internal</A>", src) : "")]
-	<BR>[(internal ? text("<A href='?src=\ref[src];item=internal'>Remove Internal</A>") : "")]
-	<BR><A href='?src=\ref[src];item=pockets'>Empty Pockets</A>
-	<BR><A href='?src=\ref[user];refresh=1'>Refresh</A>
-	<BR><A href='?src=\ref[user];mach_close=mob[name]'>Close</A>
-	<BR>"}
-	show_browser(user, dat, name, "mob[name]")
-	return
-
-
 
 /mob/proc/point_to_atom(atom/A, turf/T)
 	//Squad Leaders and above have reduced cooldown and get a bigger arrow
@@ -397,7 +379,7 @@
 		recently_pointed_to = world.time + 10
 		new /obj/effect/overlay/temp/point/big(T, src, A)
 	else
-		recently_pointed_to = world.time + 50
+		recently_pointed_to = world.time + 2.5 SECONDS
 		new /obj/effect/overlay/temp/point(T, src, A)
 	visible_message("<b>[src]</b> points to [A]", null, null, 5)
 	return TRUE
@@ -414,7 +396,7 @@
 	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
 
 	if(msg != null)
-		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+		msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
@@ -442,29 +424,15 @@
 		close_browser(src, t1)
 
 	if(href_list["flavor_more"])
-		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, "size=500x200")
+		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, width = 500, height = 200)
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
 	return
 
-
-/mob/MouseDrop(mob/M)
-	..()
-	if(M != usr) return
-	if(usr == src) return
-	if(!Adjacent(usr)) return
-	if(!ishuman(M) && !ismonkey(M)) return
-	if(!ishuman(src) && !ismonkey(src)) return
-	if(M.is_mob_incapacitated())
-		return
-	if(M.pulling == src && (M.a_intent & INTENT_GRAB) && M.grab_level == GRAB_AGGRESSIVE)
-		return
-
-	show_inv(M)
-
 /mob/proc/swap_hand()
 	hand = !hand
+	SEND_SIGNAL(src, COMSIG_MOB_SWAPPED_HAND)
 
 //attempt to pull/grab something. Returns true upon success.
 /mob/proc/start_pulling(atom/movable/AM, lunge, no_msg)
@@ -503,6 +471,9 @@
 		if(!M.can_be_pulled_by(src))
 			return
 	else if(istype(AM, /obj))
+		if(recently_grabbed > world.time)
+			return FALSE
+		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
 
 	if(!QDELETED(AM.pulledby) && !QDELETED(M))
@@ -515,7 +486,7 @@
 
 	return do_pull(AM, lunge, no_msg)
 
-/mob/proc/stop_pulling()
+/mob/proc/stop_pulling(bumped_movement = FALSE)
 	if(!pulling)
 		return
 
@@ -549,11 +520,11 @@
 	var/refid = REF(src)
 	. += {"
 		<br><font size='1'>
-			BRUTE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brute' id='brute'>[getBruteLoss()]</a>
-			FIRE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=fire' id='fire'>[getFireLoss()]</a>
-			TOXIN:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=toxin' id='toxin'>[getToxLoss()]</a>
-			OXY:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=oxygen' id='oxygen'>[getOxyLoss()]</a>
-			CLONE:<font size='1'><a href='?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone' id='clone'>[getCloneLoss()]</a>
+			BRUTE:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=brute' id='brute'>[getBruteLoss()]</a>
+			FIRE:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=fire' id='fire'>[getFireLoss()]</a>
+			TOXIN:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=toxin' id='toxin'>[getToxLoss()]</a>
+			OXY:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=oxygen' id='oxygen'>[getOxyLoss()]</a>
+			CLONE:<font size='1'><a href='byond://?_src_=vars;[HrefToken()];mobToDamage=[refid];adjustDamage=clone' id='clone'>[getCloneLoss()]</a>
 		</font>
 	"}
 
@@ -723,7 +694,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 // facing verbs
 /mob/proc/canface()
-	if(client && client.moving) return 0
+	if(client?.moving) return 0
 	if(stat==2) return 0
 	if(anchored) return 0
 	if(monkeyizing) return 0
@@ -790,7 +761,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	recalculate_move_delay = TRUE
 
 	if(usr.stat)
-		to_chat(usr, "You are unconcious and cannot do that!")
+		to_chat(usr, "You are unconscious and cannot do that!")
 		return
 
 	if(usr.is_mob_restrained())
@@ -832,7 +803,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	else
 		visible_message(SPAN_WARNING("<b>[usr] rips [selection] out of [src]'s body.</b>"),SPAN_WARNING("<b>[usr] rips [selection] out of your body.</b>"), null, 5)
 
-	if(valid_objects.len == 1) //Yanking out last object - removing verb.
+	if(length(valid_objects) == 1) //Yanking out last object - removing verb.
 		remove_verb(src, /mob/proc/yank_out_object)
 
 	if(ishuman(src))
@@ -959,7 +930,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 			conga_line += S.buckled
 	while(!end_of_conga)
 		var/atom/movable/A = S.pulling
-		if(A in conga_line || A.anchored) //No loops, nor moving anchored things.
+		if((A in conga_line) || A.anchored) //No loops, nor moving anchored things.
 			end_of_conga = TRUE
 			break
 		conga_line += A
@@ -1013,6 +984,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 /// Adds this list to the output to the stat browser
 /mob/proc/get_status_tab_items()
 	. = list()
+	SEND_SIGNAL(src, COMSIG_MOB_GET_STATUS_TAB_ITEMS, .)
 
 /mob/proc/get_role_name()
 	return
@@ -1080,3 +1052,14 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 /mob/proc/update_stat()
 	return
+
+/// Send src back to the lobby as a `/mob/new_player()`
+/mob/proc/send_to_lobby()
+	var/mob/new_player/new_player = new
+
+	if(!mind)
+		mind_initialize()
+
+	mind.transfer_to(new_player)
+
+	qdel(src)

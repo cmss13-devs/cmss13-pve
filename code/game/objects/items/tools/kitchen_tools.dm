@@ -8,10 +8,15 @@
  * Butcher's cleaver
  * Rolling Pins
  * Trays
+ * Can openers
  */
 
 /obj/item/tool/kitchen
 	icon = 'icons/obj/items/kitchen_tools.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/kitchen_tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/kitchen_tools_righthand.dmi',
+	)
 
 /*
  * Utensils
@@ -48,7 +53,7 @@
 		var/fullness = M.nutrition + (M.reagents.get_reagent_amount("nutriment") * 25)
 		if(fullness > NUTRITION_HIGH)
 			to_chat(user, SPAN_WARNING("[user == M ? "You" : "They"] don't feel like eating more right now."))
-			return ..()
+			return
 		reagents.set_source_mob(user)
 		reagents.trans_to_ingest(M, reagents.total_volume)
 		if(M == user)
@@ -86,6 +91,16 @@
 	desc = "It's a plastic spoon. How dull."
 	icon_state = "pspoon"
 	attack_verb = list("attacked", "poked")
+
+/obj/item/tool/kitchen/utensil/mre_spork
+	name = "MRE spork"
+	desc = "It's a plastic brown spork. Very robust for what it is, legends tell about stranded marines who dug trenches with those."
+	icon_state = "mre_spork"
+	attack_verb = list("attacked", "poked")
+
+/obj/item/tool/kitchen/utensil/mre_spork/fsr
+	name = "FSR spork"
+	desc = "It's a plastic brown spork. Very robust for what it is, legends tell about stranded marines who dug trenches with those."
 
 /*
  * Knives
@@ -126,7 +141,7 @@
 	flags_atom = FPRINT|CONDUCT
 	sharp = IS_SHARP_ITEM_ACCURATE
 	edge = 1
-	force = 10
+	force = MELEE_FORCE_TIER_4
 	w_class = SIZE_MEDIUM
 	throwforce = 6
 	throw_speed = SPEED_VERY_FAST
@@ -134,6 +149,43 @@
 	matter = list("metal" = 12000)
 
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	flags_human_ai = MELEE_WEAPON_ITEM | TOOL_ITEM
+
+/*
+ * Plastic Pizza Cutter
+ */
+/obj/item/tool/kitchen/pizzacutter
+	name = "pizza cutter"
+	icon_state = "plasticpizzacutter"
+	desc = "A circular blade used for cutting pizzas. This one has a cheap plastic handle."
+	flags_atom = FPRINT|CONDUCT
+	sharp = IS_SHARP_ITEM_ACCURATE
+	edge = TRUE
+	force = 10
+	w_class = SIZE_MEDIUM
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	throwforce = 6
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 6
+	matter = list("metal" = 12000)
+
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+
+/*
+ * Wood Pizza Cutter
+ */
+/obj/item/tool/kitchen/pizzacutter/wood
+	icon_state = "woodpizzacutter"
+	desc = "A circular blade used for cutting pizzas. This one has an authentic wooden handle."
+
+/*
+ * Holy Relic Pizza Cutter
+ */
+/obj/item/tool/kitchen/pizzacutter/holyrelic
+	name = "\improper PIZZA TIME"
+	icon_state = "holyrelicpizzacutter"
+	desc = "Before you is a holy relic of a bygone era when the great Pizza Lords reigned supreme. You know either that or it's just a big damn pizza cutter."
+	force = MELEE_FORCE_VERY_STRONG
 
 /*
  * Bucher's cleaver
@@ -143,7 +195,7 @@
 	icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	flags_atom = FPRINT|CONDUCT
-	force = 15
+	force = MELEE_FORCE_NORMAL
 	w_class = SIZE_SMALL
 	throwforce = 8
 	throw_speed = SPEED_VERY_FAST
@@ -218,7 +270,7 @@
 	var/cooldown = 0
 
 /obj/item/tool/kitchen/tray/attack(mob/living/carbon/M, mob/living/carbon/user)
-	to_chat(user, SPAN_WARNING("You accidentally slam yourself with the [src]!"))
+	to_chat(user, SPAN_WARNING("You accidentally slam yourself with [src]!"))
 	user.apply_effect(1, WEAKEN)
 	user.take_limb_damage(2)
 
@@ -233,3 +285,55 @@
 			cooldown = world.time
 	else
 		..()
+
+/*
+ * Can opener
+ */
+/obj/item/tool/kitchen/can_opener //it has code connected to it in /obj/item/reagent_container/food/drinks/cans/attackby
+	name = "can opener"
+	desc = "A simple can opener, popular tool among UPP due to their doctrine of food preservation."
+	icon = 'icons/obj/items/kitchen_tools.dmi'
+	icon_state = "can_opener"
+	w_class = SIZE_SMALL
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	sharp = IS_SHARP_ITEM_SIMPLE
+	edge = 1
+	force = MELEE_FORCE_TIER_2
+	attack_verb = list("pinched", "nipped", "cut")
+
+/obj/item/tool/kitchen/can_opener/compact
+	name = "folding can opener"
+	desc = "A small compact can opener, can be folded into a safe and easy to store form, popular tool among UPP due to their doctrine of food preservation."
+	icon_state = "can_opener_compact"
+	w_class = SIZE_TINY
+	var/active = 0
+	hitsound = null
+	force = 0
+	edge = 0
+	sharp = 0
+	attack_verb = list("patted", "tapped")
+
+/obj/item/tool/kitchen/can_opener/compact/attack_self(mob/user)
+	..()
+
+	active = !active
+	if(active)
+		to_chat(user, SPAN_NOTICE("You flip out your [src]."))
+		playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
+		force = MELEE_FORCE_TIER_2
+		edge = 1
+		sharp = IS_SHARP_ITEM_SIMPLE
+		hitsound = 'sound/weapons/bladeslice.ogg'
+		icon_state += "_open"
+		w_class = SIZE_SMALL
+		attack_verb = list("pinched", "nipped", "cut")
+	else
+		to_chat(user, SPAN_NOTICE("[src] can now be concealed."))
+		force = initial(force)
+		edge = 0
+		sharp = 0
+		hitsound = initial(hitsound)
+		icon_state = initial(icon_state)
+		w_class = initial(w_class)
+		attack_verb = initial(attack_verb)
+		add_fingerprint(user)

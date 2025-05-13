@@ -66,36 +66,28 @@
 	var/nightmare_path
 
 	var/platoon
-	/// If truthy this is config for a round overriden map: search for override maps in data/, instead of using a path in maps/
+	/// If truthy this is config for a round overridden map: search for override maps in data/, instead of using a path in maps/
 	var/override_map
 
 /datum/map_config/New()
-	survivor_types = list(
-		/datum/equipment_preset/survivor/scientist,
-		/datum/equipment_preset/survivor/doctor,
-		/datum/equipment_preset/survivor/chef,
-		/datum/equipment_preset/survivor/chaplain,
-		/datum/equipment_preset/survivor/miner,
-		/datum/equipment_preset/survivor/colonial_marshal,
-		/datum/equipment_preset/survivor/engineer,
-	)
 
 	synth_survivor_types = list(
 		/datum/equipment_preset/synth/survivor/medical_synth,
 		/datum/equipment_preset/synth/survivor/emt_synth,
 		/datum/equipment_preset/synth/survivor/scientist_synth,
+		/datum/equipment_preset/synth/survivor/archaeologist_synth,
 		/datum/equipment_preset/synth/survivor/engineer_synth,
-		/datum/equipment_preset/synth/survivor/janitor_synth,
 		/datum/equipment_preset/synth/survivor/chef_synth,
 		/datum/equipment_preset/synth/survivor/teacher_synth,
+		/datum/equipment_preset/synth/survivor/surveyor_synth,
 		/datum/equipment_preset/synth/survivor/freelancer_synth,
 		/datum/equipment_preset/synth/survivor/trucker_synth,
 		/datum/equipment_preset/synth/survivor/bartender_synth,
-		/datum/equipment_preset/synth/survivor/detective_synth,
-		/datum/equipment_preset/synth/survivor/cmb_synth,
+		/datum/equipment_preset/synth/survivor/atc_synth,
 		/datum/equipment_preset/synth/survivor/wy/security_synth,
 		/datum/equipment_preset/synth/survivor/wy/protection_synth,
 		/datum/equipment_preset/synth/survivor/wy/corporate_synth,
+		/datum/equipment_preset/synth/survivor/icc_synth,
 		/datum/equipment_preset/synth/survivor/radiation_synth,
 	)
 

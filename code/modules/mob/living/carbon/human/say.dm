@@ -15,7 +15,7 @@
 			if(current_channel == " " || current_channel == ":" || current_channel == ".")
 				i--
 				break
-			.["modes"] += department_radio_keys[":[current_channel]"]
+			.["modes"] += GLOB.department_radio_keys[":[current_channel]"]
 		.["message_and_language"] = copytext(message, i+1)
 		var/multibroadcast_cooldown = 0
 		for(var/obj/item/device/radio/headset/headset in list(wear_l_ear, wear_r_ear))
@@ -26,14 +26,14 @@
 			else
 				headset.last_multi_broadcast = world.time
 		if(multibroadcast_cooldown)
-			.["fail_with"] = "You've used the multi-broadcast system too recently, wait [round(multibroadcast_cooldown / 10)] more seconds."
+			.["fail_with"] = "You've used the multi-broadcast system too recently, wait [floor(multibroadcast_cooldown / 10)] more seconds."
 		return
 
 	if(length(message) >= 2 && (message[1] == "." || message[1] == ":" || message[1] == "#"))
 		var/channel_prefix = copytext(message, 1, 3)
-		if(channel_prefix in department_radio_keys)
+		if(channel_prefix in GLOB.department_radio_keys)
 			.["message_and_language"] = copytext(message, 3)
-			.["modes"] += department_radio_keys[channel_prefix]
+			.["modes"] += GLOB.department_radio_keys[channel_prefix]
 			return
 
 	.["message_and_language"] = message
@@ -57,7 +57,7 @@
 
 	var/verb = "says"
 	var/alt_name = ""
-	var/message_range = world_view_size
+	var/message_range = GLOB.world_view_size
 	var/italics = 0
 
 	if(!able_to_speak)
@@ -134,9 +134,10 @@
 				return
 			if(RADIO_CHANNEL_INTERCOM)
 				message_mode = null
-				for(var/obj/item/device/radio/intercom/I in view(1))
+				FOR_DVIEW(var/obj/item/device/radio/intercom/I, 1, src, HIDE_INVISIBLE_OBSERVER)
 					used_radios += I
 					break // remove this if we EVER have two different intercomms with DIFFERENT frequencies IN ONE ROOM
+				FOR_DVIEW_END
 			else
 				if(message_mode != MESSAGE_MODE_LOCAL)
 					var/earpiece = get_type_in_ears(/obj/item/device/radio)
@@ -158,7 +159,7 @@
 
 			for(var/mob/living/M in hearers(message_range, src))
 				if(M != src)
-					M.show_message(SPAN_NOTICE("[src] talks into [used_radios.len ? used_radios[1] : "the radio."]"), SHOW_MESSAGE_VISIBLE)
+					M.show_message(SPAN_NOTICE("[src] talks into [length(used_radios) ? used_radios[1] : "the radio."]"), SHOW_MESSAGE_VISIBLE)
 			if(ishumansynth_strict(src))
 				playsound(src.loc, 'sound/effects/radiostatic.ogg', 15, 1)
 

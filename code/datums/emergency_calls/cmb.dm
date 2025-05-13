@@ -3,6 +3,7 @@
 	name = "CMB - Colonial Marshals Patrol Team (Friendly)"
 	mob_max = 5
 	probability = 10
+	home_base = /datum/lazy_template/ert/weyland_station
 
 	var/max_synths = 1
 	var/synths = 0
@@ -34,8 +35,8 @@
 	if(!leader && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are the Colonial Marshal!"))
-		arm_equipment(mob, /datum/equipment_preset/cmb/leader, TRUE, TRUE)
-	else if(synths < max_synths && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_SYNTH) && RoleAuthority.roles_whitelist[mob.ckey] & WHITELIST_SYNTHETIC)
+		arm_equipment(mob, /datum/equipment_preset/cmb/marshal, TRUE, TRUE)
+	else if(synths < max_synths && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_SYNTH) && mob.client.check_whitelist_status(WHITELIST_SYNTHETIC))
 		synths++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a CMB Investigative Synthetic!"))
 		arm_equipment(mob, /datum/equipment_preset/cmb/synth, TRUE, TRUE)
@@ -49,11 +50,11 @@
 		arm_equipment(mob, /datum/equipment_preset/cmb/observer, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a CMB Deputy!"))
-		arm_equipment(mob, /datum/equipment_preset/cmb/standard, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/cmb/deputy, TRUE, TRUE)
 
 	print_backstory(mob)
 
-	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(to_chat), mob, SPAN_BOLD("Objectives:</b> [objectives]")), 1 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), mob, SPAN_BOLD("Objectives:</b> [objectives]")), 1 SECONDS)
 
 
 /datum/emergency_call/cmb/print_backstory(mob/living/carbon/human/M)
@@ -140,26 +141,26 @@
 	if(!leader && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are the Marine Fireteam Leader of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/leader, TRUE, TRUE) // placeholder
+		arm_equipment(mob, /datum/equipment_preset/uscm/leader_equipped, TRUE, TRUE) // placeholder
 	else if(smartgunners < max_smartgunners && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_SMARTGUNNER) && check_timelock(mob.client, JOB_SQUAD_SMARTGUN, time_required_for_job))
 		smartgunners++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Smartgunner of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/smartgunner, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/smartgunner_equipped, TRUE, TRUE)
 	else if (medics < max_medics && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_MEDIC) && check_timelock(mob.client, JOB_SQUAD_MEDIC, time_required_for_job))
 		medics++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Marine Corpsman of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/medic, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/medic_equipped, TRUE, TRUE)
 	else if(engineers < max_engineers && HAS_FLAG(mob?.client.prefs.toggles_ert, PLAY_ENGINEER) && check_timelock(mob.client, JOB_SQUAD_ENGI, time_required_for_job))
 		engineers++
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Technical Specialist of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb/rto, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/tl_equipped, TRUE, TRUE)
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a Marine Rifleman of Anchorpoint Station!"))
-		arm_equipment(mob, /datum/equipment_preset/uscm/cmb, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/uscm/private_equipped, TRUE, TRUE)
 
 	print_backstory(mob)
 
-	addtimer(CALLBACK(GLOBAL_PROC, PROC_REF(to_chat), mob, SPAN_BOLD("Objectives:</b> [objectives]")), 1 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), mob, SPAN_BOLD("Objectives:</b> [objectives]")), 1 SECONDS)
 
 
 /datum/emergency_call/cmb/anchorpoint/print_backstory(mob/living/carbon/human/M)

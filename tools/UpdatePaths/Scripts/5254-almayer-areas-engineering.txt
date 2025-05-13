@@ -1,0 +1,5 @@
+/area/almayer/engineering/lower_engineering : /area/almayer/engineering/lower{@OLD}
+/area/almayer/engineering/lower_engine_monitoring : /area/almayer/engineering/lower/engine_monitoring{@OLD}
+/area/almayer/engineering/engineering_workshop : /area/almayer/engineering/lower/workshop{@OLD}
+/area/almayer/engineering/engineering_workshop/hangar : /area/almayer/engineering/lower/workshop/hangar{@OLD}
+/area/almayer/engineering/engine_core : /area/almayer/engineering/lower/engine_core{@OLD}

@@ -102,6 +102,12 @@
 	. = ..()
 
 /mob/living/carbon/human/u_equip(obj/item/I, atom/newloc, nomoveupdate, force)
+	var/slot
+	if(I)
+		if(I == back)
+			slot = SLOT_BACK
+		else if(I == wear_mask)
+			slot = SLOT_FACE
 	. = ..()
 	if(!. || !I)
 		return FALSE
@@ -109,6 +115,8 @@
 	if(I == wear_suit)
 		if(s_store && !(s_store.flags_equip_slot & SLOT_SUIT_STORE))
 			drop_inv_item_on_ground(s_store)
+		if(back && (back.flags_item & SMARTGUNNER_BACKPACK_OVERRIDE)) // Technically some items don't need to be unequipped though
+			drop_inv_item_on_ground(back)
 		wear_suit = null
 		if(I.flags_inv_hide & HIDESHOES)
 			update_inv_shoes()
@@ -117,6 +125,7 @@
 		if(I.flags_inv_hide & HIDEJUMPSUIT)
 			update_inv_w_uniform()
 		update_inv_wear_suit()
+		slot = SLOT_OCLOTHING
 	else if(I == w_uniform)
 		if(r_store)
 			drop_inv_item_on_ground(r_store)
@@ -127,6 +136,7 @@
 		w_uniform = null
 		update_suit_sensors()
 		update_inv_w_uniform()
+		slot = SLOT_ICLOTHING
 	else if(I == head)
 		var/updatename = 0
 		if(head.flags_inv_hide & HIDEFACE)
@@ -144,43 +154,54 @@
 			update_inv_glasses()
 		update_tint()
 		update_inv_head()
+		slot = SLOT_HEAD
 	else if (I == gloves)
 		gloves = null
 		update_inv_gloves()
+		slot = SLOT_HANDS
 	else if (I == glasses)
 		glasses = null
 		update_tint()
 		update_glass_vision(I)
 		update_inv_glasses()
+		slot = SLOT_EYES
 	else if (I == wear_l_ear)
 		wear_l_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == wear_r_ear)
 		wear_r_ear = null
 		update_inv_ears()
+		slot = SLOT_EAR
 	else if (I == shoes)
 		shoes = null
 		update_inv_shoes()
+		slot = SLOT_FEET
 	else if (I == belt)
 		belt = null
 		update_inv_belt()
+		slot = SLOT_WAIST
 	else if (I == wear_id)
 		wear_id = null
 		sec_hud_set_ID()
 		hud_set_squad()
 		update_inv_wear_id()
 		name = get_visible_name()
+		slot = SLOT_ID
 	else if (I == r_store)
 		r_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == l_store)
 		l_store = null
 		update_inv_pockets()
+		slot = SLOT_STORE
 	else if (I == s_store)
 		s_store = null
 		update_inv_s_store()
+		slot = SLOT_SUIT_STORE
 
-
+	SEND_SIGNAL(src, COMSIG_HUMAN_UNEQUIPPED_ITEM, I, slot)
 
 
 /mob/living/carbon/human/wear_mask_update(obj/item/I, equipping)
@@ -354,8 +375,7 @@
 			current_storage.attempt_item_insertion(equipping_item, disable_warning, src)
 			back.update_icon()
 		if(WEAR_IN_SHOES)
-			shoes.attempt_insert_item(src, equipping_item, TRUE)
-			shoes.update_icon()
+			shoes.attempt_insert_item(src, equipping_item)
 		if(WEAR_IN_SCABBARD)
 			var/obj/item/storage/current_storage = back
 			current_storage.attempt_item_insertion(equipping_item, disable_warning, src)
@@ -413,6 +433,8 @@
 
 /mob/living/carbon/human/get_item_by_slot(slot_id)
 	switch(slot_id)
+		if(WEAR_ACCESSORY)
+			return w_uniform.accessories
 		if(WEAR_BACK)
 			return back
 		if(WEAR_FACE)
@@ -495,7 +517,8 @@
 	/// Multiplier for how quickly the user can strip things.
 	var/user_speed = user.get_skill_duration_multiplier(SKILL_CQC)
 	/// The total skill level of CQC & Police
-	var/target_skills = (target.skills.get_skill_level(SKILL_CQC) + target.skills.get_skill_level(SKILL_POLICE))
+	var/target_skills = 0
+	target_skills += (target.skills?.get_skill_level(SKILL_CQC) + target.skills?.get_skill_level(SKILL_POLICE))
 
 	/// Delay then gets + 0.5s per skill level, so long as not dead or cuffed.
 	if(!(target.stat || target.handcuffed))
@@ -504,70 +527,6 @@
 	/// Final result is overall delay * speed multiplier
 	return target_delay * user_speed
 
-/mob/living/carbon/human/stripPanelUnequip(obj/item/interact_item, mob/target_mob, slot_to_process)
-	if(HAS_TRAIT(target_mob, TRAIT_UNSTRIPPABLE) && !target_mob.is_mob_incapacitated()) //Can't strip the unstrippable!
-		to_chat(src, SPAN_DANGER("[target_mob] has an unbreakable grip on their equipment!"))
-		return
-	if(interact_item.flags_item & ITEM_ABSTRACT)
-		return
-	if(interact_item.flags_item & NODROP)
-		to_chat(src, SPAN_WARNING("You can't remove \the [interact_item.name], it appears to be stuck!"))
-		return
-	if(interact_item.flags_inventory & CANTSTRIP)
-		to_chat(src, SPAN_WARNING("You're having difficulty removing \the [interact_item.name]."))
-		return
-	target_mob.attack_log += "\[[time_stamp()]\] <font color='orange'>Has had their [interact_item.name] ([slot_to_process]) attempted to be removed by [key_name(src)]</font>"
-	attack_log += "\[[time_stamp()]\] <font color='red'>Attempted to remove [key_name(target_mob)]'s [interact_item.name] ([slot_to_process])</font>"
-	log_interact(src, target_mob, "[key_name(src)] tried to remove [key_name(target_mob)]'s [interact_item.name] ([slot_to_process]).")
-
-	src.visible_message(SPAN_DANGER("[src] tries to remove [target_mob]'s [interact_item.name]."), \
-					SPAN_DANGER("You are trying to remove [target_mob]'s [interact_item.name]."), null, 5)
-	interact_item.add_fingerprint(src)
-	if(do_after(src, get_strip_delay(src, target_mob), INTERRUPT_ALL, BUSY_ICON_GENERIC, target_mob, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-		if(interact_item && Adjacent(target_mob) && interact_item == target_mob.get_item_by_slot(slot_to_process))
-			target_mob.drop_inv_item_on_ground(interact_item)
-			log_interact(src, target_mob, "[key_name(src)] removed [key_name(target_mob)]'s [interact_item.name] ([slot_to_process]) successfully.")
-
-	if(target_mob)
-		if(interactee == target_mob && Adjacent(target_mob))
-			target_mob.show_inv(src)
-
-
-/mob/living/carbon/human/stripPanelEquip(obj/item/interact_item, mob/target_mob, slot_to_process)
-	if(HAS_TRAIT(target_mob, TRAIT_UNSTRIPPABLE) && !target_mob.is_mob_incapacitated())
-		to_chat(src, SPAN_DANGER("[target_mob] is too strong to force [interact_item.name] onto them!"))
-		return
-	if(interact_item && !(interact_item.flags_item & ITEM_ABSTRACT))
-		if(interact_item.flags_item & NODROP)
-			to_chat(src, SPAN_WARNING("You can't put \the [interact_item.name] on [target_mob], it's stuck to your hand!"))
-			return
-		if(interact_item.flags_inventory & CANTSTRIP)
-			to_chat(src, SPAN_WARNING("You're having difficulty putting \the [interact_item.name] on [target_mob]."))
-			return
-		if(interact_item.flags_item & WIELDED)
-			interact_item.unwield(src)
-		if(!interact_item.mob_can_equip(target_mob, slot_to_process, TRUE))
-			to_chat(src, SPAN_WARNING("You can't put \the [interact_item.name] on [target_mob]!"))
-			return
-		visible_message(SPAN_NOTICE("[src] tries to put \the [interact_item.name] on [target_mob]."), null, null, 5)
-		if(do_after(src, get_strip_delay(src, target_mob), INTERRUPT_ALL, BUSY_ICON_GENERIC, target_mob, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
-			if(interact_item == get_active_hand() && !target_mob.get_item_by_slot(slot_to_process) && Adjacent(target_mob))
-				if(interact_item.flags_item & WIELDED) //to prevent re-wielding it during the do_after
-					interact_item.unwield(src)
-				if(interact_item.mob_can_equip(target_mob, slot_to_process, TRUE))//Placing an item on the mob
-					drop_inv_item_on_ground(interact_item)
-					if(interact_item && !QDELETED(interact_item)) //Might be self-deleted?
-						target_mob.equip_to_slot_if_possible(interact_item, slot_to_process, 1, 0, 1, 1)
-						if(ishuman(target_mob) && target_mob.stat == DEAD)
-							var/mob/living/carbon/human/human_target = target_mob
-							human_target.disable_lights() // take that powergamers -spookydonut
-
-	if(target_mob)
-		if(interactee == target_mob && Adjacent(target_mob))
-			target_mob.show_inv(src)
-
 /mob/living/carbon/human/drop_inv_item_on_ground(obj/item/I, nomoveupdate, force)
 	remember_dropped_object(I)
 	return ..()
-
-

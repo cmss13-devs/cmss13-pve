@@ -1,5 +1,5 @@
 /obj/item/hardpoint/secondary/frontalcannon
-	name = "Bleihagel RE-RE700 Frontal Cannon"
+	name = "\improper Bleihagel RE-RE700 Frontal Cannon"
 	desc = "The marketing department over at Bleihagel would have you believe that the RE-RE700 is an original design. However, experts who pried the cover off the cannon have discovered an object with a striking similarity to the popular M56 Cupola. It is still unknown why the cannon has two barrels."
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 
@@ -25,10 +25,10 @@
 	muzzleflash_icon_state = "muzzle_flash_double"
 
 	muzzle_flash_pos = list(
-		"1" = list(-14, 46),
-		"2" = list(15, -76),
-		"4" = list(62, -26),
-		"8" = list(-62, -26)
+		"1" = list(-14, 52),
+		"2" = list(15, -82),
+		"4" = list(68, -26),
+		"8" = list(-68, -26)
 	)
 
 	scatter = 1

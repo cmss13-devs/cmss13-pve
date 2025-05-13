@@ -47,7 +47,6 @@ map ice_colony_v2
 endmap
 
 map shivas_snowball
-	voteweight 0
 endmap
 
 map kutjevo
@@ -58,7 +57,9 @@ map sorokyne_strata
 endmap
 
 map lv522_chances_claim
-	minplayers 130
+endmap
+
+map lv522_chances_claim_forecon
 endmap
 
 map new_varadero
@@ -71,4 +72,18 @@ map derelict_almayer
 endmap
 
 map whiskey_outpost_v2
+endmap
+
+map lv295_blacksite
+endmap
+map bmg290_otogi_egress_point
+endmap
+
+map canyon_32b
+endmap
+
+map calliope_highway
+endmap
+
+map calliope_desert_bus
 endmap

@@ -86,15 +86,22 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///WY access given to field executives, like a marine liaison.
 #define ACCESS_WY_EXEC 207
 
+//theta
+#define ACCESS_PMC_SQUAD_ONE 208
+#define ACCESS_PMC_SQUAD_TWO 209
+
 #define ACCESS_WY_PMC 210
 #define ACCESS_WY_PMC_TL 211
 #define ACCESS_WY_ARMORY 212
 ///Secret research or other projects with highly restricted access
 #define ACCESS_WY_SECRETS 213
-
+#define ACCESS_WY_DATABASE 214
 #define ACCESS_WY_LEADERSHIP 215
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
+
+#define ACCESS_PMC_GUNNER 217
+
 
 //=================================================
 
@@ -161,6 +168,8 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 /// Ancients only
 #define ACCESS_YAUTJA_ANCIENT 392
 
+/// Anything in a tutorial sequence that shouldn't be accessed
+#define ACCESS_TUTORIAL_LOCKED 998
 ///Temporary, just so I can flag places I need to change
 #define ACCESS_COME_BACK_TO_ME 999
 

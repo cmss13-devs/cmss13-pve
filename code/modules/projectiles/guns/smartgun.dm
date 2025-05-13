@@ -3,61 +3,26 @@
 
 //Come get some.
 /obj/item/weapon/gun/smartgun
-	name = "\improper M56B smartgun"
+	name = "\improper M56A2 smartgun"
 	desc = "The actual firearm in the 4-piece M56 Smartgun System. Essentially a heavy, mobile machinegun.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m56"
 	item_state = "m56"
+	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
+
 	fire_sound = "gun_smartgun"
 	fire_rattle = "gun_smartgun_rattle"
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
+
 	current_mag = /obj/item/ammo_magazine/smartgun
 	flags_equip_slot = NO_FLAGS
 	w_class = SIZE_HUGE
 	force = 20
 	wield_delay = WIELD_DELAY_FAST
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	var/obj/item/smartgun_battery/battery = null
-	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
-	var/requires_power = TRUE
-	/// Whether the smartgun requires a battery
-	var/requires_battery = TRUE
-	/// Whether the smartgun requires a harness to use
-	var/requires_harness = TRUE
-	ammo = /datum/ammo/bullet/smartgun
-	actions_types = list(
-		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
-		/datum/action/item_action/smartgun/toggle_ammo_type,
-		///datum/action/item_action/smartgun/toggle_auto_fire,
-		/datum/action/item_action/smartgun/toggle_lethal_mode,
-		///datum/action/item_action/smartgun/toggle_motion_detector,
-		/datum/action/item_action/smartgun/toggle_recoil_compensation,
-	)
-	var/datum/ammo/ammo_primary = /datum/ammo/bullet/smartgun //Toggled ammo type
-	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/smartgun/armor_piercing //Toggled ammo type
-	var/iff_enabled = TRUE //Begin with the safety on.
-	var/secondary_toggled = 0 //which ammo we use
-	var/recoil_compensation = 0
-	var/accuracy_improvement = 0
-	var/auto_fire = 0
-	var/motion_detector = 0
-	var/drain = 11
-	var/range = 7
-	var/angle = 2
-	var/list/angle_list = list(180,135,90,60,30)
-	var/obj/item/device/motiondetector/sg/MD
-	var/long_range_cooldown = 2
-	var/recycletime = 120
-	var/cover_open = FALSE
-
 	unacidable = 1
 	indestructible = 1
-
-	attachable_allowed = list(
-		/obj/item/attachable/smartbarrel,
-		/obj/item/attachable/flashlight,
-	)
 
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	gun_category = GUN_CATEGORY_HEAVY
@@ -66,10 +31,51 @@
 	start_semiauto = FALSE
 	start_automatic = TRUE
 
+	attachable_allowed = list(
+		/obj/item/attachable/smartbarrel,
+		/obj/item/attachable/flashlight,
+	)
+
+	ammo = /datum/ammo/bullet/rifle/heavy/tracer
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		///datum/action/item_action/smartgun/toggle_auto_fire,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		///datum/action/item_action/smartgun/toggle_motion_detector,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+	)
+
+	var/obj/item/smartgun_battery/battery = null
+	/// Whether the smartgun drains the battery (Ignored if requires_battery is false)
+	var/requires_power = TRUE
+	/// Whether the smartgun requires a battery
+	var/requires_battery = TRUE
+	/// Whether the smartgun requires a harness to use
+	var/requires_harness = TRUE
+
+	var/datum/ammo/ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
+	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet //Toggled ammo type
+	var/iff_enabled = TRUE //Begin with the safety on.
+	var/recoil_compensation = 0
+	var/accuracy_improvement = 0
+	var/auto_fire = 0
+	var/motion_detector = 0
+	var/drain = 75
+	var/range = 7
+	var/angle = 2
+	var/list/angle_list = list(180,135,90,60,30)
+	var/obj/item/device/motiondetector/sg/MD
+	var/long_range_cooldown = 2
+	var/recycletime = 120
+	var/cover_open = FALSE
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
 	ammo_secondary = GLOB.ammo_list[ammo_secondary]
+	ammo_tertiary = GLOB.ammo_list[ammo_tertiary]
+	ammo = ammo_primary
 	MD = new(src)
 	battery = new /obj/item/smartgun_battery(src)
 	. = ..()
@@ -78,12 +84,13 @@
 /obj/item/weapon/gun/smartgun/Destroy()
 	ammo_primary = null
 	ammo_secondary = null
+	ammo_tertiary = null
 	QDEL_NULL(MD)
 	QDEL_NULL(battery)
 	. = ..()
 
 /obj/item/weapon/gun/smartgun/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14, , "side_rail_x" = 17, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smartgun/set_gun_config_values()
 	..()
@@ -145,7 +152,8 @@
 /obj/item/weapon/gun/smartgun/attackby(obj/item/attacking_object, mob/user)
 	if(istype(attacking_object, /obj/item/smartgun_battery))
 		var/obj/item/smartgun_battery/new_cell = attacking_object
-		visible_message("[user] swaps out the power cell in the [src].","You swap out the power cell in the [src] and drop the old one.")
+		visible_message(SPAN_NOTICE("[user] swaps out the power cell in [src]."),
+			SPAN_NOTICE("You swap out the power cell in [src] and drop the old one."))
 		to_chat(user, SPAN_NOTICE("The new cell contains: [new_cell.power_cell.charge] power."))
 		battery.update_icon()
 		battery.forceMove(get_turf(user))
@@ -178,6 +186,7 @@
 //---ability actions--\\
 
 /datum/action/item_action/smartgun/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	if(!ishuman(owner))
 		return
@@ -300,8 +309,12 @@
 
 /datum/action/item_action/smartgun/toggle_ammo_type/proc/update_icon()
 	var/obj/item/weapon/gun/smartgun/G = holder_item
-	if(G.secondary_toggled)
+	if(G.ammo == G.ammo_primary)
+		action_icon_state = "ammo_swap_normal"
+	else if(G.ammo == G.ammo_secondary)
 		action_icon_state = "ammo_swap_ap"
+	else if(G.ammo == G.ammo_tertiary)
+		action_icon_state = "ammo_swap_pen"
 	else
 		action_icon_state = "ammo_swap_normal"
 	button.overlays.Cut()
@@ -326,6 +339,10 @@
 			to_chat(H, SPAN_WARNING("You can't fire \the [src] with the feed cover open! (alt-click to close)"))
 			balloon_alert(user, "cannot fire; feed cover open")
 			return FALSE
+		if(iff_enabled)
+			if(!H.glasses || !(H.glasses.flags_inventory & SMARTGUN_OPTIC))
+				balloon_alert(user, "m56 headset required for iff tracking")
+				return FALSE
 
 /obj/item/weapon/gun/smartgun/unique_action(mob/user)
 	if(isobserver(usr) || isxeno(usr))
@@ -336,24 +353,38 @@
 	if(!iff_enabled)
 		to_chat(user, "[icon2html(src, usr)] Can't switch ammunition type when \the [src]'s fire restriction is disabled.")
 		return
-	secondary_toggled = !secondary_toggled
-	to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire [secondary_toggled ? "armor shredding rounds" : "highly precise rounds"].")
-	balloon_alert(user, "firing [secondary_toggled ? "armor shredding" : "highly precise"]")
+	if(ammo == ammo_primary)
+		ammo = ammo_secondary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire armor-piercing rounds, offering greater penetration against armored targets compared to other rounds.")
+		balloon_alert(user, "firing armor-piercing")
+		drain += 50
+	else if(ammo == ammo_secondary)
+		ammo = ammo_tertiary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire impact-detonating rounds, which stagger most human-sized hostiles on hit and slow them down.")
+		balloon_alert(user, "firing impact-detonating")
+		drain += 10
+	else
+		ammo = ammo_primary
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds. These rounds are accurate and cost less power to operate.")
+		balloon_alert(user, "firing highly precise")
+		drain -= 60
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
 	TAT.update_icon()
 
 /obj/item/weapon/gun/smartgun/replace_ammo()
+	var/old_ammo = ammo
 	..()
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
+	if(old_ammo)
+		ammo = old_ammo
 
 /obj/item/weapon/gun/smartgun/proc/toggle_lethal_mode(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	iff_enabled = !iff_enabled
 	ammo = ammo_primary
-	secondary_toggled = FALSE
+	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
+	TAT.update_icon()
 	if(iff_enabled)
 		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
 		drain += 10
@@ -500,9 +531,9 @@
 			if((angledegree*2) > angle_list[angle])
 				continue
 
-		path = getline2(user, M)
+		path = get_line(user, M)
 
-		if(path.len)
+		if(length(path))
 			var/blocked = FALSE
 			for(T in path)
 				if(T.density || T.opacity)
@@ -525,9 +556,9 @@
 			else
 				conscious_targets += M
 
-	if(conscious_targets.len)
+	if(length(conscious_targets))
 		. = pick(conscious_targets)
-	else if(unconscious_targets.len)
+	else if(length(unconscious_targets))
 		. = pick(unconscious_targets)
 
 /obj/item/weapon/gun/smartgun/proc/process_shot(mob/living/user, warned)
@@ -596,6 +627,7 @@
 // ID lock action \\
 
 /datum/action/item_action/co_sg/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/smartgun/co/protag_gun = holder_item
 	if(!ishuman(owner))
 		return
@@ -666,13 +698,10 @@
 	linked_human = null
 
 /obj/item/weapon/gun/smartgun/dirty
-	name = "\improper M56D 'Dirty' smartgun"
-	desc = "The actual firearm in the 4-piece M56D Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-	current_mag = /obj/item/ammo_magazine/smartgun/dirty
-	ammo = /obj/item/ammo_magazine/smartgun/dirty
-	ammo_primary = /datum/ammo/bullet/smartgun/dirty//Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/dirty/armor_piercing///Toggled ammo type
+	name = "\improper M56A3 'Dirty' smartgun"
+	desc = "The actual firearm in the 4-piece M56A3 Smartgun System. Ruggedized electronics and a slightly lighter frame are the only differences between this and the standard UA-issue A2 model.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	flags_gun_features = GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	drain = 30	//Slightly more power effictient than the basic model
 
 /obj/item/weapon/gun/smartgun/dirty/Initialize(mapload, ...)
 	. = ..()
@@ -681,8 +710,13 @@
 
 //TERMINATOR SMARTGUN
 /obj/item/weapon/gun/smartgun/dirty/elite
-	name = "\improper M56T 'Terminator' smartgun"
-	desc = "The actual firearm in the 4-piece M56T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	name = "\improper M56A3-T 'Terminator' smartgun"
+	current_mag = /obj/item/ammo_magazine/smartgun/dirty
+	ammo = /obj/item/ammo_magazine/smartgun/dirty
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/dirty //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/dirty ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet/dirty
+	desc = "The actual firearm in the 4-piece M56A3-T Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/dirty/elite/Initialize(mapload, ...)
 	. = ..()
@@ -703,8 +737,8 @@
 // CLF SMARTGUN
 
 /obj/item/weapon/gun/smartgun/clf
-	name = "\improper M56B 'Freedom' smartgun"
-	desc = "The actual firearm in the 4-piece M56B Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	name = "\improper M56A2 'Freedom' smartgun"
+	desc = "The actual firearm in the 4-piece M56A2 Smartgun System. Essentially a heavy, mobile machinegun. This one has the CLF logo carved over the manufacturing stamp.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 
 /obj/item/weapon/gun/smartgun/clf/Initialize(mapload, ...)
 	. = ..()
@@ -716,7 +750,7 @@
 	requires_harness = FALSE
 
 /obj/item/smartgun_battery
-	name = "smartgun DV9 battery"
+	name = "\improper DV9 smartgun battery"
 	desc = "A standard-issue 9-volt lithium dry-cell battery, most commonly used within the USCMC to power smartguns. Per the manual, one battery is good for up to 50000 rounds and plugs directly into the smartgun's power receptacle, which is only compatible with this type of battery. Various auxiliary modes usually bring the round count far lower. While this cell is incompatible with most standard electrical system, it can be charged by common rechargers in a pinch. USCMC smartgunners often guard them jealously."
 
 	icon = 'icons/obj/structures/machinery/power.dmi'
@@ -745,8 +779,9 @@
 	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
-	ammo_primary = /datum/ammo/bullet/smartgun/holo_target //Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/smartgun/holo_target/ap ///Toggled ammo type
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/holo_target/ap ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"
@@ -758,6 +793,6 @@
 	MD.iff_signal = FACTION_TWE
 
 /obj/item/weapon/gun/smartgun/silenced
-	name = "XM56E smartgun"
+	name = "XM56A4 smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)

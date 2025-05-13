@@ -26,6 +26,10 @@
 	desc = "A black folder."
 	icon_state = "folder_black"
 
+/obj/item/folder/green
+	desc = "A green folder."
+	icon_state = "folder_green"
+
 /obj/item/folder/black_random
 	desc = "A black folder. It is decorated with stripes."
 	icon_state = "folder_black_green"
@@ -41,14 +45,14 @@
 
 /obj/item/folder/update_icon()
 	overlays.Cut()
-	if(contents.len)
+	if(length(contents))
 		overlays += "folder_paper"
 	return
 
 /obj/item/folder/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/paper) || istype(W, /obj/item/photo) || istype(W, /obj/item/paper_bundle))
 		if(user.drop_inv_item_to_loc(W, src))
-			to_chat(user, SPAN_NOTICE("You put the [W] into \the [src]."))
+			to_chat(user, SPAN_NOTICE("You put [W] into [src]."))
 			update_icon()
 	else if(HAS_TRAIT(W, TRAIT_TOOL_PEN))
 		var/n_name = strip_html(input(usr, "What would you like to label the folder?", "Folder Labelling", null)  as text)
@@ -60,11 +64,11 @@
 
 	var/dat
 	for(var/obj/item/paper/P in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[P]'>Remove</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[P]'>Remove</A> - <A href='byond://?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
 	for(var/obj/item/photo/Ph in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Ph]'>Remove</A> - <A href='?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[Ph]'>Remove</A> - <A href='byond://?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
 	for(var/obj/item/paper_bundle/Pb in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Pb]'>Remove</A> - <A href='?src=\ref[src];browse=\ref[Pb]'>[Pb.name]</A><BR>"
+		dat += "<A href='byond://?src=\ref[src];remove=\ref[Pb]'>Remove</A> - <A href='byond://?src=\ref[src];browse=\ref[Pb]'>[Pb.name]</A><BR>"
 	show_browser(user, dat, name, "folder")
 	onclose(user, "folder")
 	add_fingerprint(usr)

@@ -171,6 +171,9 @@
 
 #define CINEMATIC_LAYER 21
 
+#define INTRO_PLANE 2001
+#define INTRO_LAYER 26
+
 /// for areas, so they appear above everything else on map file.
 #define AREAS_LAYER 999
 
@@ -222,6 +225,8 @@
 #define FLOOR_PLANE -7
 /// Game Plane, where most of the game objects reside
 #define GAME_PLANE -6
+/// Above Game Plane. For things which are above game objects, but below screen effects.
+#define ABOVE_GAME_PLANE -5
 /// Roof plane, disappearing when entering buildings
 #define ROOF_PLANE -4
 

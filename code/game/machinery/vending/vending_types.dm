@@ -51,9 +51,10 @@
 	product_ads = "Kepler Crisps! Try a snack that's out of this world!;Eat an EAT!"
 	icon_state = "snack"
 	products = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 12,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 12,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs =12,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 12,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs =12,
 		/obj/item/reagent_container/food/snacks/kepler_crisps = 12,
 		/obj/item/reagent_container/food/snacks/kepler_crisps/flamehot = 12,
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 12,
@@ -64,9 +65,10 @@
 	)
 
 	prices = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 5,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 5,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 5,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs = 5,
 		/obj/item/reagent_container/food/snacks/kepler_crisps = 3,
 		/obj/item/reagent_container/food/snacks/kepler_crisps/flamehot = 5,
 		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 3,
@@ -81,9 +83,10 @@
 	product_slogans = ""
 	product_ads = ""
 	products = list(
-		/obj/item/reagent_container/food/snacks/packaged_burger = 40,
-		/obj/item/reagent_container/food/snacks/packaged_burrito = 40,
-		/obj/item/reagent_container/food/snacks/packaged_hdogs = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/donkpocket = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_burger = 40,
+		/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs = 40,
 	)
 
 /obj/structure/machinery/vending/cola
@@ -154,8 +157,45 @@
 
 	prices = list()
 
+
+/obj/structure/machinery/vending/generic
+	name = "\improper vending machine"
+	desc = "A generic snack and soft drink vendor with a small plate on the back reading, 'Veni Vendi Vici'"
+	icon_state = "snackvend"
+	product_slogans = ""
+	product_ads = ""
+	products = list(
+		/obj/item/reagent_container/food/snacks/wrapped/barcardine = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/booniebars = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk = 10,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk/hunk = 10,
+		/obj/item/reagent_container/food/snacks/eat_bar = 10,
+		/obj/item/reagent_container/food/snacks/chips = 10,
+		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 10,
+		/obj/item/reagent_container/food/drinks/cans/classcola = 10,
+		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 10,
+		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 10,
+		/obj/item/reagent_container/food/drinks/cans/iced_tea = 10,
+	)
+
+	prices = list(
+		/obj/item/reagent_container/food/snacks/wrapped/barcardine = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/booniebars = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk = 4,
+		/obj/item/reagent_container/food/snacks/wrapped/chunk/hunk = 4,
+		/obj/item/reagent_container/food/snacks/eat_bar = 4,
+		/obj/item/reagent_container/food/snacks/chips = 5,
+		/obj/item/reagent_container/food/snacks/wy_chips/pepper = 5,
+		/obj/item/reagent_container/food/drinks/cans/classcola = 2,
+		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 2,
+		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 2,
+		/obj/item/reagent_container/food/drinks/cans/iced_tea = 2,
+	)
+	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
+	product_type = VENDOR_PRODUCT_TYPE_FOOD
+
 /obj/structure/machinery/vending/cigarette
-	name = "cigarette machine" //OCD had to be uppercase to look nice with the new formating
+	name = "cigarette machine" //Template
 	desc = "If you want to get cancer, might as well do it in style!"
 	product_slogans = "L.S./M.F.T.! Lucky Strikes Means Fine Tobacco.;For a classic style that lights up every time, there's always Zippo!;The FDA would like to remind you that tobacco products cause cancer and increased fatigue.;Real men smoke Lucky Strikes!;Serving the US Armed Forces for over two-hundred years!;Life's short, smoke a Lucky!;L.S./M.F.T.!;Lucky Strike is first again!;You just can't beat a Lucky Strike!;The preferred cigarette of Carlos Hathcock!;First again with tobacco-men!"
 	product_ads = "Real men smoke Lucky Strikes!;Serving the US Armed Forces for over two-hundred years!;Life's short, smoke a Lucky!;L.S./M.F.T.!;Lucky Strike is first again!;You just can't beat a Lucky Strike!;The preferred cigarette of Carlos Hathcock!;First again with tobacco-men!"
@@ -191,33 +231,269 @@
 	)
 	premium = list()
 	prices = list()
+	product_type = VENDOR_PRODUCT_TYPE_NICOTINE
 
 /obj/structure/machinery/vending/cigarette/colony
 	product_slogans = "Koorlander Gold, for the refined palate.;Lady Fingers, for the dainty smoker.;Lady Fingers, treat your palete with pink!;The big blue K means a cool fresh day!;For the taste that cools your mood, look for the big blue K!;Refined smokers go for Gold!;Lady Fingers are preferred by women who appreciate a cool smoke.;Lady Fingers are the number one cigarette this side of Gateway!;The tobacco connoisseur prefers Koorlander Gold.;For the cool, filtered feel, Lady Finger Cigarettes provide the smoothest draw of any cigarette on the market.;For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.;The Colonial Administration Bureau would like to remind you that smoking kills."
 	product_ads = "For the taste that cools your mood, look for the big blue K!;Refined smokers go for Gold!;Lady Fingers are preferred by women who appreciate a cool smoke.;Lady Fingers are the number one cigarette this side of Gateway!;The tobacco connoisseur prefers Koorlander Gold.;For the cool, filtered feel, Lady Finger Cigarettes provide the smoothest draw of any cigarette on the market.;For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.;The Colonial Administration Bureau would like to remind you that smoking kills."
 	products = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 20,
+		/obj/item/storage/fancy/cigarettes/spirit = 20,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 20,
 		/obj/item/storage/fancy/cigarettes/arcturian_ace = 15,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 15,
 		/obj/item/storage/fancy/cigarettes/wypacket = 15,
+		/obj/item/storage/fancy/cigarettes/trading_card = 15,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 15,
 		/obj/item/storage/fancy/cigarettes/blackpack = 10,
 		/obj/item/storage/fancy/cigar/tarbacks = 5,
+
 		/obj/item/storage/box/matches = 10,
 		/obj/item/tool/lighter/random = 20,
 		/obj/item/tool/lighter/zippo = 5,
+
 	)
 
 	prices = list(
 		/obj/item/storage/fancy/cigarettes/kpack = 40,
+		/obj/item/storage/fancy/cigarettes/spirit = 40,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 40,
 		/obj/item/storage/fancy/cigarettes/arcturian_ace = 25,
 		/obj/item/storage/fancy/cigarettes/emeraldgreen = 35,
-		/obj/item/storage/fancy/cigarettes/wypacket = 35,
+		/obj/item/storage/fancy/cigarettes/wypacket = 30,
+		/obj/item/storage/fancy/cigarettes/trading_card = 35,
 		/obj/item/storage/fancy/cigarettes/lady_finger = 30,
 		/obj/item/storage/fancy/cigarettes/blackpack = 75,
 		/obj/item/storage/fancy/cigar/tarbacks = 35,
 		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/random = 10,
+		/obj/item/tool/lighter/zippo = 25,
+
+	)
+
+/obj/structure/machinery/vending/cigarette/koorlander //koorlander machine, contains luckies since they either bought Lucky Strikes as a company, or are working together to survive.
+	name = "Koorlander brand cigarette machine"
+	desc = "A Koorlander brand cigarette vending machine. Comes with Lucky Strikes, Lady Fingers, Koorlander Golds of course, and a few smaller brands you've barely heard of."
+	icon_state = "koorcigs"
+	product_slogans = list(
+		"Koorlander Gold, for the refined palate.",
+		"Lady Fingers, for the dainty smoker.",
+		"Lady Fingers, treat your palete with pink!",
+		"The big blue K means a cool fresh day!",
+		"For the taste that cools your mood, look for the big blue K!",
+		"Refined smokers go for Gold!",
+		"Lady Fingers are preferred by women who appreciate a cool smoke.",
+		"Lady Fingers are the number one cigarette this side of Gateway!",
+		"The tobacco connoisseur prefers Koorlander Gold.",
+		"For the cool, filtered feel, Lady Finger Cigarettes provide the smoothest draw of any cigarette on the market.",
+		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
+		"L.S./M.F.T.! Lucky Strikes Means Fine Tobacco.",
+		"For a classic style that lights up every time, there's always Zippo!",
+		"On a budget? Buy a Bic.",
+		"Bic, making school supplies since 1945.",
+		"Real men smoke Lucky Strikes!",
+		"Serving the US Armed Forces for over two-hundred years!",
+		"Life's short, smoke a Lucky!",
+		"Lucky Strike is first again!",
+		"You just can't beat a Lucky Strike!",
+		"The preferred cigarette of Carlos Hathcock!",
+		"First again with tobacco-men!",
+		"Real. Simple. Different. American Spirit.",
+		"Tobacco Ingredients: Tobacco & Water. American Spirit.",
+		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.",
+	)
+
+	product_ads = list(
+		"For the taste that cools your mood, look for the big blue K!",
+		"Refined smokers go for Gold!",
+		"Lady Fingers are preferred by women who appreciate a cool smoke.",
+		"Lady Fingers are the number one cigarette this side of Gateway!",
+		"The tobacco connoisseur prefers Koorlander Gold.",
+		"For the cool, filtered feel, Lady Finger Cigarettes provide the smoothest draw of any cigarette on the market.",
+		"For the man who knows his place is at the top, Koorlander Gold shows the world that you're the best and no-one can say otherwise.",
+		"Real men smoke Lucky Strikes!;Serving the US Armed Forces for over two-hundred years!",
+		"Life's short, smoke a Lucky!",
+		"L.S./M.F.T.!,",
+		"Lucky Strike is first again!",
+		"You just can't beat a Lucky Strike!",
+		"The preferred cigarette of Carlos Hathcock!",
+		"First again with tobacco-men!",
+		"Real. Simple. Different. American Spirit.",
+		"Tobacco Ingredients: Tobacco & Water. American Spirit.",
+		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.",
+	)
+
+	products = list(
+		/obj/item/storage/fancy/cigarettes/kpack = 20,
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 20,
+		/obj/item/storage/fancy/cigarettes/lady_finger = 20,
+		/obj/item/storage/fancy/cigarettes/spirit = 10,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 10,
+		/obj/item/storage/fancy/cigar/tarbacktube = 10,
+
+		/obj/item/storage/box/matches = 5,
+		/obj/item/storage/fancy/cigar/matchbook/koorlander = 5,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 10,
+		/obj/item/tool/lighter/random = 20,
+		/obj/item/tool/lighter/zippo = 10,
+		/obj/item/tool/lighter/zippo/blue = 5,
+	)
+
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/kpack = 14,
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 8,
+		/obj/item/storage/fancy/cigarettes/lady_finger = 11,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 12,
+		/obj/item/storage/fancy/cigarettes/spirit = 12,
+		/obj/item/storage/fancy/cigar/tarbacktube = 20,
+		/obj/item/storage/box/matches = 3,
+		/obj/item/storage/fancy/cigar/matchbook/koorlander = 2,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 1,
+		/obj/item/tool/lighter/random = 5,
+		/obj/item/tool/lighter/zippo = 20,
+		/obj/item/tool/lighter/zippo/blue = 30,
+	)
+
+/obj/structure/machinery/vending/cigarette/koorlander/free
+		prices = list(
+		/obj/item/storage/fancy/cigarettes/kpack = 0,
+		/obj/item/storage/fancy/cigarettes/lucky_strikes = 0,
+		/obj/item/storage/fancy/cigarettes/lady_finger = 0,
+		/obj/item/storage/fancy/cigarettes/spirit/yellow = 0,
+		/obj/item/storage/fancy/cigarettes/spirit = 0,
+		/obj/item/storage/fancy/cigar/tarbacktube = 0,
+		/obj/item/storage/box/matches = 0,
+		/obj/item/storage/fancy/cigar/matchbook/koorlander = 0,
+		/obj/item/storage/fancy/cigar/matchbook/brown = 0,
+		/obj/item/tool/lighter/random = 0,
+		/obj/item/tool/lighter/zippo = 0,
+		/obj/item/tool/lighter/zippo/blue = 0,
+	)
+
+/obj/structure/machinery/vending/cigarette/wy //WY machine
+	name = "Weyland Yutani brand cigarette machine"
+	desc = "A Weyland Yutani Brand cigarette vending machine, looks like a Wey-Yu Gold pack. Comes with Emerald Greens, Wey-Yu Golds of course, Arcturian Aces, and some Three World Empire brand you've barely heard of. Executive Selects are still out of stock due to shipping issues..."
+	icon_state = "wycigs"
+	product_slogans = list(
+		"Weyland Yutani Gold, for those high up the chain.",
+		"Arcturian Ace, for those who can't stand bad taste!",
+		"Arcturian Ace, good for the lungs! On account of exotic Arctura flora.", //it's cocaine
+		"Tastes how a cigarette should, smoke Wey-Yu Golds!",
+		"Refined smokers go for Gold!",
+		"Arcturian Aces, minty fresh.",
+		"Aces, keeps your breah as fresh as an Arcturian waterfall!",
+		"Emerald Greens are the number one cigarette this side of New Eden!",
+		"The tobacco aficionado prefers Executive Selects.",
+		"For the minty freshness of another world, try Arcturian Aces!",
+		"For the Executive on top of the world, smoke Exec Selects.",
+		"Arcturian Aces, good for first timers!",
+		"For a classic style that lights up every time, there's always Zippo!",
+		"On a budget? Buy a Bic.",
+		"Bic, making school supplies since 1945.",
+		"Emerald Greens, green as the fields of New Eden.",
+		"Emerald Greens, favored by doctors!",
+		"You just can't beat the green!",
+		"The preferred brand of Richard Nixon!", //:smug:
+		"First again with doctors!",
+		"Balaji Imperials, for King and Country!",
+		"Life's short, smoke a 'laji!",
+		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.",
+	)
+
+	product_ads = list(
+		"Weyland Yutani Gold, for those high up the chain.",
+		"Arcturian Ace, for those who don't like bad taste.",
+		"Arcturian Ace, good for the lungs! On account of local Arctura flora.",
+		"Tastes how a cigarette should, Weyland Yutani Gold!",
+		"Refined smokers go for Gold!",
+		"Arcturian Aces, minty fresh.",
+		"Emerald Greens are the number one cigarette this side of New Eden!",
+		"The tobacco aficionado prefers Executives.",
+		"For the minty freshness of another world, try Arcturian Aces!",
+		"For the Executive on top of the world, smoke Exec Selects.",
+		"Arcturian Aces, good for first timers!",
+		"Emerald Greens, favorited by doctors!",
+		"You just can't beat the green!",
+		"The preferred cigarette of Richard Nixon!",
+		"First again with doctors!",
+		"Balaji Imperials, for King and Country!",
+		"Life's short, smoke a 'laji!",
+		"The Interstellar Commerce Commission would like to remind you that smoking kills.",
+		"The Food and Drug Administration would like to remind you that tobacco products cause cancer and increased fatigue.",
+	)
+
+	premium = list(/obj/item/storage/fancy/cigar = 5)
+	products = list(
+		/obj/item/storage/fancy/cigarettes/wypacket = 15,
+		/obj/item/storage/fancy/cigarettes/emeraldgreen = 30,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 10,
+		/obj/item/storage/fancy/cigarettes/balaji = 10,
+		/obj/item/storage/fancy/cigarettes/blackpack = 0,
+
+		/obj/item/storage/box/matches = 5,
+		/obj/item/storage/fancy/cigar/matchbook/exec_select = 10,
+		/obj/item/storage/fancy/cigar/matchbook/balaji_imperial = 10,
+		/obj/item/storage/fancy/cigar/matchbook/wy_gold = 10,
+		/obj/item/tool/lighter/random = 20,
+		/obj/item/tool/lighter/zippo/black = 5,
+		/obj/item/tool/lighter/zippo/executive = 1,
+
+	)
+
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/wypacket = 15,
+		/obj/item/storage/fancy/cigarettes/emeraldgreen = 5,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 8,
+		/obj/item/storage/fancy/cigarettes/balaji = 15,
+		/obj/item/storage/fancy/cigarettes/blackpack = 40,
+
+		/obj/item/storage/box/matches = 2,
+		/obj/item/storage/fancy/cigar/matchbook/exec_select = 7,
+		/obj/item/storage/fancy/cigar/matchbook/balaji_imperial = 6,
+		/obj/item/storage/fancy/cigar/matchbook/wy_gold = 5,
+		/obj/item/tool/lighter/random = 3,
+		/obj/item/tool/lighter/zippo/black = 15,
+		/obj/item/tool/lighter/zippo/executive = 50,
+	)
+
+/obj/structure/machinery/vending/cigarette/wy/Initialize(mapload, ...)
+	var/exec_number = rand(0, 2)
+	products[/obj/item/storage/fancy/cigarettes/blackpack] = exec_number
+	return ..()
+
+/obj/structure/machinery/vending/cigarette/wy/free
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/wypacket = 0,
+		/obj/item/storage/fancy/cigarettes/emeraldgreen = 0,
+		/obj/item/storage/fancy/cigarettes/arcturian_ace = 0,
+		/obj/item/storage/fancy/cigarettes/balaji = 0,
+		/obj/item/storage/fancy/cigarettes/blackpack = 0,
+
+		/obj/item/storage/box/matches = 5,
+		/obj/item/storage/fancy/cigar/matchbook/exec_select = 0,
+		/obj/item/storage/fancy/cigar/matchbook/wy_gold = 0,
+		/obj/item/tool/lighter/random = 0,
+		/obj/item/tool/lighter/zippo/black = 0,
+		/obj/item/tool/lighter/zippo/executive = 0,
+	)
+
+
+/obj/structure/machinery/vending/cigarette/upp
+	desc = "A state-owned cigarette vendor. Its drab colour was chosen to discourage purchases, but its existence is an admittance to the necessity for such machines to exist in the first place."
+	product_slogans = ""
+	product_ads = ""
+	icon_state = "china_cig_vending"
+	products = list(
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/storage/box/matches = 15,
+		/obj/item/tool/lighter/zippo = 10,
+	)
+	prices = list(
+		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/zippo = 25,
 	)
 
@@ -229,8 +505,9 @@
 	icon_deny = "sec-deny"
 	req_access = list(ACCESS_MARINE_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
-		/obj/item/handcuffs/zip = 10,
+		/obj/item/restraint/handcuffs = 8,
+		/obj/item/restraint/handcuffs/zip = 10,
+		/obj/item/restraint/legcuffs = 3,
 		/obj/item/weapon/gun/energy/taser = 4,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/weapon/baton = 4,
@@ -244,15 +521,47 @@
 	)
 	contraband = list(/obj/item/clothing/glasses/sunglasses = 2,/obj/item/storage/donut_box = 2)
 
+/obj/structure/machinery/vending/security/riot
+	name = "\improper RiotTech"
+	desc = "A security riot equipment vendor."
+	hacking_safety = TRUE
+	wrenchable = FALSE
+	products = list(
+		/obj/item/restraint/handcuffs/zip = 40,
+		/obj/item/explosive/grenade/flashbang = 20,
+		/obj/item/explosive/grenade/tear/marine = 40,
+		/obj/item/ammo_magazine/smg/m39/rubber = 40,
+		/obj/item/ammo_magazine/pistol/rubber = 40,
+		/obj/item/ammo_magazine/pistol/vp70/rubber = 40,
+		/obj/item/ammo_magazine/rifle/rubber = 40,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 40,
+		/obj/item/clothing/head/helmet/marine/MP = 8,
+		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
+	)
+
 /obj/structure/machinery/vending/security/colony
 	name = "\improper SecTech Police Vendor"
 	desc = "A generic police vendor."
 	req_access = list(ACCESS_CIVILIAN_BRIG)
 	products = list(
-		/obj/item/handcuffs = 8,
+		/obj/item/restraint/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/device/flashlight = 4,
 		/obj/item/storage/belt/security/MP/CMB = 4,
+		/obj/item/device/flash = 5,
+		/obj/item/storage/box/evidence = 6,
+		/obj/item/tape/regulation = 5,
+	)
+
+/obj/structure/machinery/vending/security/upp
+	name = "\improper People's Police Equipment Vendor"
+	desc = "A standard security vendor used by security forces of the UPP."
+	req_access = list(ACCESS_CIVILIAN_BRIG)
+	products = list(
+		/obj/item/restraint/handcuffs = 8,
+		/obj/item/reagent_container/spray/pepper = 4,
+		/obj/item/device/flashlight = 4,
+		/obj/item/storage/belt/security/MP/UPP = 4,
 		/obj/item/device/flash = 5,
 		/obj/item/storage/box/evidence = 6,
 		/obj/item/tape/regulation = 5,
@@ -270,14 +579,15 @@
 	products = list(
 		/obj/item/ammo_magazine/smg/m39/rubber = 20,
 		/obj/item/ammo_magazine/pistol/rubber = 20,
-		/obj/item/ammo_magazine/pistol/mod88/rubber = 20,
+		/obj/item/ammo_magazine/pistol/vp70/rubber = 20,
 		/obj/item/ammo_magazine/rifle/rubber = 20,
-		/obj/item/ammo_magazine/rifle/m4ra/rubber = 20,
+		/obj/item/ammo_magazine/rifle/m49a/rubber = 20,
 		/obj/item/ammo_magazine/shotgun/beanbag = 20,
 		/obj/item/storage/firstaid/regular = 2,
 		/obj/item/storage/firstaid/fire = 2,
 		/obj/item/storage/firstaid/rad = 1,
 		/obj/item/device/radio/headset = 6,
+		/obj/item/tool/crew_monitor = 1,
 	)
 	contraband = list(/obj/item/storage/fancy/cigar = 2,/obj/item/tool/lighter/zippo = 2)
 
@@ -395,7 +705,7 @@
 	name = "\improper Rec-Vend"
 	desc = "Contains Weyland-Yutani approved recreational items, like Walkmans and Cards."
 	icon_state = "walkman"
-	product_ads = "The only place to have fun in the entire Marine Corps!;You'll find no better music from here to Arcturus!;Instructions not included with decks of cards!;No volume controls - you don't need them!;All products responsibly made by people having just as much fun as you will be!"
+	product_ads = "The only place to have fun in the entire Marine Corps!;You'll find no better music from here to Arcturus!;Instructions not included with decks of cards!;No volume controls - you don't need them!;All products responsibly made by people having just as much fun as you will be!;Say goodbye to the lucky strike military tobacco monopoly, with the new Weyland Yutani Military Trading Card Gold cigarette pack!"
 	vend_delay = 0.5 SECONDS
 	idle_power_usage = 200
 
@@ -424,6 +734,10 @@
 		/obj/item/tool/pen/blue = 10,
 		/obj/item/tool/pen/red = 10,
 		/obj/item/tool/pen/fountain = 3,
+		/obj/item/storage/fancy/cigarettes/trading_card = 20,
+		/obj/item/storage/fancy/trading_card = 20,
+		/obj/item/toy/trading_card = 50,
+
 	)
 
 	contraband = list(/obj/item/toy/sword = 2)
@@ -451,5 +765,75 @@
 		/obj/item/tool/pen/blue = 2,
 		/obj/item/tool/pen/red = 2,
 		/obj/item/tool/pen/fountain = 30,
+		/obj/item/storage/fancy/cigarettes/trading_card = 30,
+		/obj/item/storage/fancy/trading_card = 20,
+		/obj/item/toy/trading_card = 5,
+
 	)
 	product_type = VENDOR_PRODUCT_TYPE_RECREATIONAL
+
+//vendor of ingredients for kitchen
+/obj/structure/machinery/vending/ingredients
+	name = "\improper Galley Auxiliary Storage Requisition System"
+	desc = "A vending machine meant to be use for cooks."
+	product_ads = "If your out of ingredients i am here for you;all my organic produce are fresh;don't let my potatoes go stale time for you to cook some fries"
+	icon_state = "snack"
+	hacking_safety = TRUE
+	products = list(
+		/obj/item/storage/fancy/egg_box = 12,
+		/obj/item/storage/box/fish = 12,
+		/obj/item/storage/box/meat = 12,
+		/obj/item/storage/box/milk = 12,
+		/obj/item/storage/box/soymilk = 12,
+		/obj/item/storage/box/enzyme = 12,
+		/obj/item/storage/box/flour = 12,
+		/obj/item/storage/box/sugar = 12,
+		/obj/item/storage/box/saltshaker = 12,
+		/obj/item/storage/box/peppermill = 12,
+		/obj/item/storage/box/mint = 12,
+		/obj/item/storage/box/apple = 12,
+		/obj/item/storage/box/banana = 12,
+		/obj/item/storage/box/chanterelle = 12,
+		/obj/item/storage/box/cherries = 12,
+		/obj/item/storage/box/chili = 12,
+		/obj/item/storage/box/cabbage = 12,
+		/obj/item/storage/box/carrot = 12,
+		/obj/item/storage/box/corn = 12,
+		/obj/item/storage/box/eggplant = 12,
+		/obj/item/storage/box/lemon = 12,
+		/obj/item/storage/box/lime = 12,
+		/obj/item/storage/box/orange = 12,
+		/obj/item/storage/box/potato = 12,
+		/obj/item/storage/box/tomato = 12,
+		/obj/item/storage/box/whitebeet = 12,
+	)
+
+	prices = list(
+		/obj/item/storage/fancy/egg_box = 1,
+		/obj/item/storage/box/fish = 1,
+		/obj/item/storage/box/meat = 1,
+		/obj/item/storage/box/milk =1,
+		/obj/item/storage/box/soymilk = 1,
+		/obj/item/storage/box/enzyme = 1,
+		/obj/item/storage/box/flour = 1,
+		/obj/item/storage/box/sugar = 1,
+		/obj/item/storage/box/saltshaker = 1,
+		/obj/item/storage/box/peppermill = 1,
+		/obj/item/storage/box/mint = 1,
+		/obj/item/storage/box/apple = 1,
+		/obj/item/storage/box/banana = 2,
+		/obj/item/storage/box/chanterelle = 2,
+		/obj/item/storage/box/cherries = 2,
+		/obj/item/storage/box/chili = 2,
+		/obj/item/storage/box/cabbage = 2,
+		/obj/item/storage/box/carrot = 2,
+		/obj/item/storage/box/corn = 2,
+		/obj/item/storage/box/eggplant = 2,
+		/obj/item/storage/box/lemon = 2,
+		/obj/item/storage/box/lime = 2,
+		/obj/item/storage/box/orange = 2,
+		/obj/item/storage/box/potato = 2,
+		/obj/item/storage/box/tomato = 2,
+		/obj/item/storage/box/whitebeet = 2,
+	)
+	product_type = VENDOR_PRODUCT_TYPE_FOOD

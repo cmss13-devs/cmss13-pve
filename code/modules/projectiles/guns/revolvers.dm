@@ -4,20 +4,9 @@
 /obj/item/weapon/gun/revolver
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
-
+	mouse_pointer = 'icons/effects/mouse_pointer/pistol_mouse.dmi'
 	matter = list("metal" = 2000)
-	fire_sound = 'sound/weapons/gun_44mag_v3.ogg'
-	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
-	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
-	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
-	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
-	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
-	var/spin_sound = 'sound/effects/spin.ogg'
-	var/thud_sound = 'sound/effects/thud.ogg'
-	var/trick_delay = 4 SECONDS
-	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
-	var/recent_trick //So they're not spamming tricks.
-	var/russian_roulette = 0 //God help you if you do this.
+
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_ONE_HAND_WIELDED
 	gun_category = GUN_CATEGORY_HANDGUN
 	wield_delay = WIELD_DELAY_VERY_FAST //If you modify your revolver to be two-handed, it will still be fast to aim
@@ -25,6 +14,20 @@
 	has_empty_icon = FALSE
 	has_open_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/internal/revolver
+
+	fire_sound = 'sound/weapons/gun_44mag_v4.ogg'
+	reload_sound = 'sound/weapons/gun_44mag_speed_loader.wav'
+	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
+	unload_sound = 'sound/weapons/gun_44mag_open_chamber.wav'
+	var/chamber_close_sound = 'sound/weapons/gun_44mag_close_chamber.wav'
+	var/hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
+	var/spin_sound = 'sound/effects/spin.ogg'
+	var/thud_sound = 'sound/effects/thud.ogg'
+	var/list/cylinder_click = list('sound/weapons/gun_empty.ogg')
+
+	var/trick_delay = 4 SECONDS
+	var/recent_trick //So they're not spamming tricks.
+	var/russian_roulette = 0 //God help you if you do this.
 
 /obj/item/weapon/gun/revolver/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -293,14 +296,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m44r"
 	item_state = "m44r"
-
+	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	cocked_sound = 'sound/weapons/gun_revolver_spun.ogg'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
 	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
 
 	current_mag = /obj/item/ammo_magazine/internal/revolver/m44
 	force = 8
-	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
@@ -319,7 +322,7 @@
 	var/folded = FALSE // Used for the stock attachment, to check if we can shoot or not
 
 /obj/item/weapon/gun/revolver/m44/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 18, "stock_x" = 16, "stock_y" = 20)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 12, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 16, "stock_y" = 20, "side_rail_x" = 21, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/revolver/m44/set_gun_config_values()
 	..()
@@ -374,7 +377,7 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
 	..()
@@ -399,21 +402,7 @@
 	)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/k2049/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
-
-/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series
-	name = "\improper PKL 'Double' Blaster"
-	desc = "Sold to civilians and private corporations, the Pflager Katsumata Series-L Blaster is a premium double barrel sidearm that can fire two rounds at the same time. Usually found in the hands of combat synths and replicants, this hand cannon is worth more than the combined price of three Emanators. Originally commissioned by the Wallace Corporation, it has since been released onto public market as a luxury firearm."
-	icon_state = "pkd_double"
-	item_state = "88m4" //placeholder
-
-	attachable_allowed = list(
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/lasersight,
-	)
-
-/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/revolver/m44/custom/pkd_special/set_gun_config_values()
 	..()
@@ -423,6 +412,16 @@
 	set_burst_amount(BURST_AMOUNT_TIER_2)
 	set_burst_delay(FIRE_DELAY_TIER_12)
 
+/obj/item/weapon/gun/revolver/m44/custom/pkd_special/l_series
+	name = "\improper PKL 'Double' Blaster"
+	desc = "Sold to civilians and private corporations, the Pflager Katsumata Series-L Blaster is a premium double barrel sidearm that can fire two rounds at the same time. Usually found in the hands of combat synths and replicants, this hand cannon is worth more than the combined price of three Emanators. Originally commissioned by the Wallace Corporation, it has since been released onto public market as a luxury firearm."
+	icon_state = "pkd_double"
+	item_state = "vp70" //placeholder
+
+	attachable_allowed = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+	)
 
 /obj/item/weapon/gun/revolver/m44/custom/webley //Van Bandolier's Webley.
 	name = "\improper Webley Mk VI service pistol"
@@ -452,8 +451,7 @@
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
-	fire_sound = "gun_pkd" //sounds stolen from bladerunner revolvers bc they arent used and sound awesome
-	fire_rattle = 'sound/weapons/gun_pkd_fire01_rattle.ogg'
+	fire_sound = 'sound/weapons/gun_kt42.ogg'
 	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
 	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
@@ -464,18 +462,18 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/bayonet, // Muzzle
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/lasersight, // Underbarrel
+		/obj/item/attachable/lasersight, // Underbarrel/special
+		/obj/item/attachable/flashlight,
 		)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 19, "under_y" = 17, "stock_x" = 24, "stock_y" = 19, "side_rail_x" = 19, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/revolver/upp/set_gun_config_values()
 	..()
@@ -489,9 +487,10 @@
 /obj/item/weapon/gun/revolver/upp/shrapnel
 	current_mag = /obj/item/ammo_magazine/internal/revolver/upp/shrapnel
 	random_spawn_chance = 100
-	random_under_chance = 100
-	random_spawn_under = list(
+	random_siderail_chance = 100
+	random_spawn_siderail = list(
 		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
 	)
 
 //-------------------------------------------------------
@@ -503,14 +502,14 @@
 	desc = "A Frontier Special. Out here, you get a lot of smalltime companies that try to push themselves as better by upping the pressure of their ammo and fiddling with the designs to make it work. It usually means that their accuracy is awful, but the impact is impressive... if you've got the knowhow to shoot them straight."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "sw357"
-	item_state = "ny762" //PLACEHOLDER
+	item_state = "sw357"
 	fire_sound = 'sound/weapons/gun_44mag2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/revolver/small
 	force = 6
 	flags_gun_features = GUN_ANTIQUE|GUN_ONE_HAND_WIELDED|GUN_CAN_POINTBLANK
 
 /obj/item/weapon/gun/revolver/small/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 21, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15, "side_rail_x" = 20, "side_rail_y" = 15)
 
 /obj/item/weapon/gun/revolver/small/set_gun_config_values()
 	..()
@@ -539,7 +538,7 @@
 	desc = "Used to swap the barrels of a mateba revolver."
 	icon = 'icons/obj/items/items.dmi'
 	icon_state = "matebakey"
-	flags_atom = FPRINT|CONDUCT
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
 	force = 5
 	w_class = SIZE_TINY
 	throwforce = 5
@@ -560,7 +559,6 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/mateba,
@@ -699,18 +697,20 @@
 //-------------------------------------------------------
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
-/obj/item/weapon/gun/revolver/cmb
-	name = "\improper CMB Spearhead autorevolver"
-	desc = "An automatic revolver chambered in .357, often loaded with hollowpoint on spaceships to prevent hull damage. Commonly issued to Colonial Marshals."
+/obj/item/weapon/gun/revolver/spearhead
+	name = "\improper Spearhead Armoury revolver"
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead"
 	item_state = "spearhead"
 	fire_sound = null
 	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
 	fire_rattle = 'sound/weapons/gun_cmb_rattle.ogg'
-	cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
-	force = 12
+	//cylinder_click = list('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg')
+	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
+	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead
+	force = 15
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/extended_barrel,
@@ -718,27 +718,27 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/gyro, // Under
-		/obj/item/attachable/lasersight,
+		/obj/item/attachable/lasersight, // Special
+		/obj/item/attachable/flashlight,
 	)
 
-/obj/item/weapon/gun/revolver/cmb/click_empty(mob/user)
+/obj/item/weapon/gun/revolver/spearhead/click_empty(mob/user)
 	if(user)
 		to_chat(user, SPAN_WARNING("<b>*click*</b>"))
 		playsound(user, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5) //5 tile range
 	else
 		playsound(src, pick('sound/weapons/handling/gun_cmb_click1.ogg', 'sound/weapons/handling/gun_cmb_click2.ogg'), 25, 1, 5)
 
-/obj/item/weapon/gun/revolver/cmb/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+/obj/item/weapon/gun/revolver/spearhead/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	playsound('sound/weapons/gun_cmb_bass.ogg') // badass shooting bass
 	return ..()
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18)
+/obj/item/weapon/gun/revolver/spearhead/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 22,"rail_x" = 11, "rail_y" = 25, "under_x" = 20, "under_y" = 18, "stock_x" = 20, "stock_y" = 18, "side_rail_x" = 20, "side_rail_y" = 18)
 
-/obj/item/weapon/gun/revolver/cmb/set_gun_config_values()
+/obj/item/weapon/gun/revolver/spearhead/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -749,5 +749,12 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
-/obj/item/weapon/gun/revolver/cmb/normalpoint
-	current_mag = /obj/item/ammo_magazine/internal/revolver/cmb
+/obj/item/weapon/gun/revolver/spearhead/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+
+/obj/item/weapon/gun/revolver/spearhead/black
+	name = "\improper Spearhead Armoury revolver"
+	desc = "A sleek high-quality revolver designed by Spearhead Armoury chambered in .357 commonly issued to Colonial Marshals, though this version has been customized with a black metal finish indicating it is unlikely to be a service weapon."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "spearhead_black"
+	item_state = "spearhead_black"
