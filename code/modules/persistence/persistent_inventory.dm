@@ -217,6 +217,7 @@ proc/listclearnulls(list/list)
 
 	if(href_list["cancel"])
 		var/mob/user = usr
+		var/mob/living/carbon/human/H = user
 
 		if(H.ckey != current_inventory.unique_id)
 			visible_message("<b>[src]</b> beeps, \"<span class='danger'>This stash does not belong to you. Please use a different stash point.</span>\" ")
