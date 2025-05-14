@@ -83,9 +83,7 @@
 	pixel_y = 5
 	},
 /obj/item/storage/firstaid/adv,
-/obj/item/device/healthanalyzer{
-	pixel_y = -9
-	},
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/almayer/plate,
 /area/template_noop)
 "iJ" = (
