@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 /datum/health_scan
 	var/mob/living/target_mob
 	var/detail_level = DETAIL_LEVEL_FULL
+	var/ui_mode = UI_MODE_CLASSIC
 	var/atom/scanner_device = FALSE
 
 /datum/health_scan/New(mob/target)
@@ -114,6 +115,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		"blood_amount" = target_mob.blood_volume,
 		"holocard" = get_holo_card_color(target_mob),
 		"hugged" = (locate(/obj/item/alien_embryo) in target_mob),
+		"ui_mode" = ui_mode
 	)
 
 	var/internal_bleeding = FALSE //do they have internal bleeding anywhere
@@ -495,6 +497,13 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				var/mob/living/carbon/human/target_human = target_mob
 				target_human.change_holo_card(ui.user)
 				return TRUE
+		if("change_ui_mode")
+			switch(ui_mode)
+				if(UI_MODE_CLASSIC)
+					ui_mode = UI_MODE_MINIMAL
+				if(UI_MODE_MINIMAL)
+					ui_mode = UI_MODE_CLASSIC
+			return TRUE
 		if("previous_scan")
 			if(ishuman(target_mob))
 				//var/mob/living/carbon/human/target_human = target_mob

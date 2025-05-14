@@ -50,7 +50,7 @@
 	overdose = 900 //50
 	overdose_critical = 900 //75
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_RELAXING = 1, PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 1.5, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
+	properties = list(PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 1, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
 
 /datum/reagent/medical/tramadol
 	name = "Tramadol"

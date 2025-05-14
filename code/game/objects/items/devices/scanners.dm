@@ -143,14 +143,14 @@ FORENSIC SCANNER
 	start_sound = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_length = 1 SECONDS
-	volume = 4
+	volume = 3
 	extra_range = 14
 
 /datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
 	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_length = 0.9 SECONDS
-	volume = 5
+	volume = 4
 	extra_range = 14
 /*
 /datum/looping_sound/healthanalyzer_heart_beeping_bad
@@ -405,7 +405,7 @@ FORENSIC SCANNER
 	update_beam(TRUE)
 	perform_scan_and_report()
 	var/health_percentage = connected_to.health - connected_to.halloss
-	if ((connected_to.oxyloss >= 40 || connected_to.health < -150) && connected_to.stat < 2)
+	if ((connected_to.oxyloss >= 40 || connected_to.health < -140) && connected_to.stat < 2)
 		oxygen_alarm_loop.start()
 	else
 		oxygen_alarm_loop.stop()
@@ -441,6 +441,9 @@ FORENSIC SCANNER
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
+		if(connected_to)
+			disconnect(TRUE)
+			return
 		to_chat(user, SPAN_WARNING("You cannot connect this to yourself! You need someone else to do it for you!"))
 		return
 
@@ -485,9 +488,6 @@ FORENSIC SCANNER
 		return
 	if(bad_disconnect)
 		connected_to.visible_message(SPAN_DANGER("[src] breaks free of [connected_to]!"), SPAN_DANGER("[src] is pulled out of you!"))
-		connected_to.apply_damage(3, BRUTE, pick("r_arm", "l_arm"))
-		if(connected_to.pain.feels_pain)
-			connected_to.emote("pain")
 	else
 		connected_from.visible_message(SPAN_HELPFUL("[connected_from] detaches [src] from [connected_to]."), \
 			SPAN_HELPFUL("You detach [src] from [connected_to]."))
