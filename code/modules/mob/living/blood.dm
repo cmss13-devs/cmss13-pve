@@ -321,27 +321,12 @@
 		newdir = turn(dir, -90) // Turn right
 
 	angle = ((dir2angle(newdir)+90)+spray_angle_offset) % 360
-	if(angle > 337.5 || angle <= 22.5)
-		newdir = 8  // WEST
-	if(angle > 22.5 && angle <= 67.5)
-		newdir = 9  // NORTHWEST
-	if(angle > 67.5 && angle <= 112.5)
-		newdir = 1  // NORTH
-	if(angle > 112.5 && angle <= 157.5)
-		newdir = 9  // NORTHWEST
-	if(angle > 157.5 && angle <= 202.5)
-		newdir = 4  // EAST
-	if(angle > 202.5 && angle <= 247.5)
-		newdir = 6  // SOUTHEAST
-	if(angle > 247.5 && angle <= 292.5)
-		newdir = 2  // SOUTH
-	if(angle > 292.5 && angle <= 337.5)
-		newdir = 10  // SOUTHWEST
+	newdir = angle2dir(angle)
 
 	visible_message(\
 			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
 			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
-			SPAN_HIGHDANGER("You hear something spray violently!"))
+			SPAN_HIGHDANGER("You hear something fleshy gush!"))
 	for(var/i = 1 to (floor(src.blood_volume / 160)))
 		var/reverse_odd_numbered_decals
 		if(i % 2 != 0)
@@ -382,8 +367,6 @@
 		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
 		blood_spraying.pixel_x = decal_pixel_x % world.icon_size
 		blood_spraying.pixel_y = decal_pixel_y % world.icon_size
-		if(prob(50))
-			blood_spraying.apply_transform(matrix(1, 0, 0, -1, 0, 0))
 		blood_spraying.apply_transform(turn(transform, angle))
 
 		if(src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask
@@ -396,7 +379,7 @@
 		blood_spraying.color = get_blood_color()
 		blood_spraying.pixel_x = blood_spraying.pixel_x + rand(-1, 1)
 		blood_spraying.pixel_y = blood_spraying.pixel_y + rand(-1, 1)
-		playsound(src, 'sound/effects/blood_squirt.ogg', 50, TRUE)
+		playsound(src, 'sound/effects/blood_squirt.ogg', 40, TRUE)
 
 
 /obj/effect/decal/cleanable/blood/squirt

@@ -129,7 +129,7 @@
 			affected_mob.spray_blood(spray_angle_offset, limb)
 			affected_mob.blood_volume = max(affected_mob.blood_volume - blood_loss * BLOOD_SPRAY_LOSS_MULTIPLIER * ((affected_mob.blood_volume / BLOOD_VOLUME_NORMAL) ** BLOOD_SPRAY_LOSS_FALLOFF), 0) //less punishing at lower volume
 		else
-			if(prob(5))
+			if(prob(3))
 				has_been_bandaged = FALSE
 				affected_mob.visible_message(\
 			SPAN_WARNING("The gauze on [affected_mob]'s [limb.display_name] is soaked through!"),
@@ -137,7 +137,7 @@
 			null) //fix later
 
 				var/obj/item/prop/colony/usedbandage/bloody_bandage = new /obj/item/prop/colony/usedbandage(affected_mob.loc)
-				bloody_bandage.dir = pick(4,10)
+				bloody_bandage.dir = pick(1, 4, 5, 6, 9, 10)
 				bloody_bandage.pixel_x = pick(rand(8,18), rand(-8,-18))
 				bloody_bandage.pixel_y = pick(rand(8, 18), rand(-8,-18))
 
