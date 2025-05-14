@@ -1134,12 +1134,6 @@
 /obj/structure/closet,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/housing)
-"ip" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/closed/wall/shiva/prefabricated/orange,
-/area/Greenvault_Ranch/int_reg/farmbay)
 "it" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -1942,12 +1936,6 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
-"oq" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/turf/open/floor/prison/cell_stripe/north,
-/area/Greenvault_Ranch/int_reg/farmbay)
 "ot" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /obj/structure/pipes/standard/simple/visible,
@@ -4552,9 +4540,6 @@
 	dir = 4;
 	id = "Reactor_e_entry_3"
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
-	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "Ip" = (
@@ -4821,15 +4806,6 @@
 	},
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
-"KH" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/Greenvault_Ranch/int_reg/telecomms_yard)
 "KI" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony{
 	dir = 1;
@@ -4939,15 +4915,6 @@
 "Lp" = (
 /turf/open/floor/prison/darkred2/north,
 /area/Greenvault_Ranch/int_reg/marshals)
-"Lt" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4
-	},
-/turf/open/floor/prison/cell_stripe/east,
-/area/Greenvault_Ranch/int_reg/farmbay)
 "LF" = (
 /obj/structure/closet,
 /obj/structure/machinery/light/small,
@@ -5107,7 +5074,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wheatfields)
 "MT" = (
-/turf/open/space/basic,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/marshals)
 "MV" = (
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -6228,11 +6195,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
-"UX" = (
-/obj/structure/window/framed/shiva,
-/obj/structure/window/framed/shiva,
-/turf/open/floor/almayer/dark_sterile,
-/area/Greenvault_Ranch/int_reg/clinic)
 "Ve" = (
 /obj/structure/closet/secure_closet/guncabinet/blue/riot_control,
 /obj/structure/machinery/light/small{
@@ -6308,11 +6270,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
-"VG" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/obj/structure/machinery/door/poddoor/shutters/almayer,
-/turf/open/floor/prison/cell_stripe/north,
-/area/Greenvault_Ranch/int_reg/farmbay)
 "VI" = (
 /obj/structure/machinery/light,
 /turf/closed/wall/shiva/prefabricated/orange,
@@ -8651,7 +8608,7 @@ SJ
 SJ
 SJ
 Tg
-oq
+BY
 kc
 kc
 kc
@@ -8803,7 +8760,7 @@ SJ
 SJ
 SJ
 Tg
-VG
+BY
 kc
 kc
 kc
@@ -10768,8 +10725,8 @@ VI
 jf
 In
 In
-Lt
-ip
+jf
+lw
 lw
 aW
 lw
@@ -11057,7 +11014,7 @@ iw
 iw
 SO
 SO
-iw
+nS
 Qe
 Qe
 Qe
@@ -11067,13 +11024,13 @@ Qe
 iw
 iw
 iw
-iw
+nS
 Qe
 Qe
 Qe
 Qe
 Qe
-iw
+nS
 iw
 SO
 SO
@@ -16102,7 +16059,7 @@ gE
 jv
 eo
 zC
-UX
+zC
 zC
 LM
 iw
@@ -21983,8 +21940,8 @@ Kt
 Kt
 Kt
 Kt
-KH
-FA
+Kt
+Kt
 Kt
 Kt
 Kt
