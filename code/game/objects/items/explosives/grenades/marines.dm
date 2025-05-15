@@ -1368,7 +1368,7 @@
 	item_state = "grenade_hefa"
 	caliber = "20mm"
 	explosion_power = 50
-	shrapnel_count = 48
+	shrapnel_count = 36
 
 /obj/item/explosive/grenade/incendiary/airburst/rmc20mm
 	name = "\improper L103A1/I 20mm incendiary grenade"
@@ -1378,7 +1378,9 @@
 	caliber = "20mm"
 	flame_level = BURN_TIME_TIER_1
 	burn_level = BURN_LEVEL_TIER_8
-	shrapnel_count = 7
+	flameshape = FLAMESHAPE_IRREGULAR
+	radius = 2
+	shrapnel_count = 12
 	shrapnel_type = /datum/ammo/bullet/shrapnel/incendiary/heavy
 
 /obj/item/explosive/grenade/smokebomb/airburst/rmc20mm
@@ -1401,9 +1403,9 @@
 	icon_state = "grenade_20mm_holo"
 	item_state = "grenade_phos"
 	caliber = "20mm"
-	shrapnel_count = 8
+	shrapnel_count = 12
 	shrapnel_type = /datum/ammo/bullet/shrapnel/hornet_rounds/rmc
-	dispersion_angle = 25
+	dispersion_angle = 30
 
 /obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm
 	name = "\improper L108A1 HESH grenade"
@@ -1411,4 +1413,4 @@
 	icon_state = "grenade_20mm_squash"
 	item_state = "grenade_training"
 	caliber = "20mm"
-	explosion_power = 220
+	explosion_power = 180

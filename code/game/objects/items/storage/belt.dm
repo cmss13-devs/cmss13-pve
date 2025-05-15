@@ -2235,7 +2235,7 @@
 
 /obj/item/storage/belt/gun/mortarbelt/rmc
 	name = "\improper L84 pattern ammo load rig"
-	desc = "An L84 pattern load-bearing rig configured to carry ammunition for the L53A1 light mortar, along with a sidearm & magazine. Made of special rot-resistant fabric."
+	desc = "An L84 pattern load-bearing rig configured to carry support ammunition for either the L53A1 light mortar or L164A3 multiple grenade launcher, along with a sidearm & magazine. Made of special rot-resistant fabric."
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
@@ -2249,6 +2249,7 @@
 		/obj/item/weapon/gun/revolver/m44,
 		/obj/item/weapon/gun/flare,
 		/obj/item/mortar_shell,
+		/obj/item/storage/box/packet/rmc/mini,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,

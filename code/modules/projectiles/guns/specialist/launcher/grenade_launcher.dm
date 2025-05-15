@@ -152,6 +152,7 @@
 	if(.)
 		if(!length(cylinder.contents))
 			to_chat(user, SPAN_WARNING("The [name] is empty."))
+			click_empty(user)
 			return FALSE
 		var/obj/item/explosive/grenade/G = cylinder.contents[1]
 		if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
@@ -290,6 +291,52 @@
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
+
+//-------------------------------------------------------
+//RMC GRENADE LAUNCHER
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc
+	name = "\improper L164A3 multiple grenade launcher"
+	desc = "A lightweight support weapon fielded by the Royal Marines. Chambered in small 20mm grenades, it lacks the punch of larger grenades, but makes up for that in rate of fire."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmcgl"
+	item_state = "rmcgl"
+	fire_sound = 'sound/weapons/gun_ugl_fire.ogg'
+	reload_sound = 'sound/weapons/gun_shotgun_open2.ogg'
+	unload_sound = 'sound/weapons/gun_shotgun_shell_insert.ogg'
+	attachable_allowed = list()
+	flags_item = TWOHANDED
+	throw_speed = SPEED_VERY_FAST
+	force = 15
+	GL_has_empty_icon = FALSE
+	flags_equip_slot = SLOT_BACK
+	map_specific_decoration = FALSE
+	auto_retrieval_slot = WEAR_BACK
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	valid_munitions = list(/obj/item/explosive/grenade/high_explosive/impact/rmc20mm,
+	/obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm,
+	/obj/item/explosive/grenade/incendiary/airburst/rmc20mm,
+	/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm,
+	/obj/item/explosive/grenade/high_explosive/airburst/hornet_shell/rmc20mm,
+	/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm)
+	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+
+	is_lobbing = TRUE
+	internal_slots = 8
+	direct_draw = TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/rmcgl/optic = new(src)
+	optic.hidden = TRUE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
 
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER

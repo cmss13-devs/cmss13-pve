@@ -269,18 +269,17 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		/obj/item/tool/wrench,
 	)
 
-/* //Todo; make dual-tube 20mm GL for RMC along with ammo types
 /obj/effect/essentials_set/rmcgl
 	spawned_gear_list = list(
-		gun,
-		ammo belt,
+		/obj/item/weapon/gun/launcher/grenade/m92/rmc,
+		/obj/item/storage/belt/gun/mortarbelt/rmc,
 	)
-*/
+
 
 GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
 		list("FIRE SUPPORT SET (MANDATORY)", 0, null, null, null),
 		list("L53A1 light mortar kit", 0, /obj/effect/essentials_set/rmcmortar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		//list("L164A3 MGL kit", 0, /obj/effect/essentials_set/rmcgl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("L164A3 MGL kit", 0, /obj/effect/essentials_set/rmcgl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
 		list("MORTAR SHELLS", 0, null, null, null),
 		list("High Explosive Mortar Shell", 15, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
@@ -290,7 +289,6 @@ GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
 		list("White Phosphorus Explosive Mortar Shell", 25, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
 		list("Flare/Cam Mortar Shell", 10, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
 
-/*
 		list("20MM GRENADE PACKETS", 0, null, null, null),
 		list("L103A1 20mm HE", 20, /obj/item/storage/box/packet/rmc/mini, null, VENDOR_ITEM_REGULAR),
 		list("L104A1 20mm Fragmentation", 20, /obj/item/storage/box/packet/rmc/mini/frag, null, VENDOR_ITEM_REGULAR),
@@ -298,7 +296,7 @@ GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
 		list("L108A1 20mm HESH", 30, /obj/item/storage/box/packet/rmc/mini/squash, null, VENDOR_ITEM_REGULAR),
 		list("L104A1/H 20mm holo-targetting", 20, /obj/item/storage/box/packet/rmc/mini/holo, null, VENDOR_ITEM_REGULAR),
 		list("L101A2 20mm nerve-agent", 30, /obj/item/storage/box/packet/rmc/mini/gas, null, VENDOR_ITEM_REGULAR),
-*/
+
 	))
 
 /obj/structure/machinery/cm_vending/gear/mortar_stuff

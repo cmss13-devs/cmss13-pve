@@ -1199,6 +1199,12 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "SADAR sight system."
 	zoom_offset = 3
 
+/obj/item/attachable/scope/mini/rmcgl
+	name = "L164A3 collimator sight assembly"
+	desc = "L164A3 sight system."
+	zoom_offset = 3
+	icon_state = "reflex"
+
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4

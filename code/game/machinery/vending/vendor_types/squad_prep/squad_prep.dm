@@ -488,7 +488,6 @@
 		list("L70 Pattern Ammo Load Rig", round(scale * 10), /obj/item/storage/belt/marine/rmc, VENDOR_ITEM_RECOMMENDED),
 		list("L26 Pattern General Utility Belt", round(scale * 10), /obj/item/storage/backpack/general_belt/rmc, VENDOR_ITEM_REGULAR),
 		list("L165 Gunbelt", round(scale * 10), /obj/item/storage/belt/gun/l905, VENDOR_ITEM_REGULAR),
-		list("M276 Pattern M82F Holster Rig", round(scale * 5), /obj/item/storage/belt/gun/flaregun, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES", -1, null, null, null),
 		list("First Responder Pouch", floor(scale * 5), /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR), //Only the FRP so they can store the ATKs & ABKs
