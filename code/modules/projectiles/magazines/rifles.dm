@@ -560,7 +560,7 @@
 	icon_state = "xm51"
 	caliber = "16g"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6
