@@ -6369,10 +6369,7 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/attachable/scope/pve{
-	pixel_x = 3;
-	pixel_y = -1
-	},
+/obj/item/attachable/scope/pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (

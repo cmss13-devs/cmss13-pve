@@ -198,6 +198,7 @@
 
 		health = min(health + max_hp/100 * (5 / amount_fixed_adjustment), max_hp)
 		if(health >= max_hp * 0.50)
+			update_minimap_icon()
 			set_light_on(vehicle_light_range && vehicle_light_power)
 			light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
 			to_chat(user, SPAN_NOTICE("[src]'s lights flicker to life!"))
