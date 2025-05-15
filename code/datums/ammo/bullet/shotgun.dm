@@ -436,7 +436,6 @@
 
 /datum/ammo/bullet/shotgun/buckshot/light
 	name = "light buckshot"
-	icon_state = "lightshot"
 	handful_state = "lightshot_shell"
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/buckshot/light/spread
