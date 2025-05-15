@@ -160,6 +160,7 @@
 	name = "\improper Worn United States of America flag"
 	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "usaflag_worn"
+
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
