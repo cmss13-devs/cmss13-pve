@@ -774,3 +774,43 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	desc = "Looks like some of that fruit might be edible."
 	icon_tag = "plant"
 	variations  = 7
+
+/obj/structure/flora/tree/tyrargo
+	icon = 'icons/obj/structures/props/natural/vegetation/tyrargo_pine_tree.dmi'
+	icon_state = "pine_1_snow"
+
+/obj/structure/flora/tree/tyrargo/tree_2
+	icon_state = "pine_1"
+
+/obj/structure/flora/tree/tyrargo/tree_3
+	icon_state = "bald"
+
+/obj/structure/flora/tree/tyrargo/tree_4
+	icon_state = "dead_tree1"
+
+/obj/structure/flora/tree/tyrargo/tree_5
+	icon_state = "dead_tree2"
+
+/obj/structure/flora/tree/tyrargo/tree_6
+	icon_state = "dead_tree3"
+
+
+/obj/structure/flora/tree/tyrargo_small
+	icon = 'icons/obj/structures/props/natural/vegetation/tyrargo_dead_trees.dmi'
+	icon_state = "tree_1"
+
+/obj/structure/flora/tree/tyrargo_small/tree_2
+	icon_state = "tree_2"
+
+/obj/structure/flora/tree/tyrargo_small/tree_3
+	icon_state = "tree_3"
+
+/obj/structure/flora/tree/tyrargo_small/tree_4
+	icon_state = "tree_4"
+
+/obj/structure/flora/tree/tyrargo_small/tree_5
+	icon_state = "tree_5"
+
+/obj/structure/flora/tree/tyrargo_small/tree_stump
+	icon_state = "tree_stump"
+	density = FALSE

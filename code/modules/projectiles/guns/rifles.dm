@@ -106,6 +106,13 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/stock/rifle/collapsible)
 
+/obj/item/weapon/gun/rifle/m41a/army
+	current_mag = /obj/item/ammo_magazine/rifle/heap/empty
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade, /obj/item/attachable/stock/rifle/collapsible)
+
+/obj/item/weapon/gun/rifle/m41a/army/full
+	current_mag = /obj/item/ammo_magazine/rifle/heap
+
 /obj/item/weapon/gun/rifle/m41a/corporate
 	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'

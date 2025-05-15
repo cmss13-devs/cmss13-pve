@@ -40,6 +40,7 @@
 #define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
+#define MAP_TYRARGO_RIFT "Tyrargo Rift"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"

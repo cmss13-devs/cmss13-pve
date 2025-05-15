@@ -132,6 +132,18 @@
 	specialty = "military warden"
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/under/marine/army
+	name = "US Army uniform"
+	desc = "Standard-issue Army uniform. They have shards of light Kevlar to help protect against stabbing weapons and bullets."
+	specialty = "US Army"
+	icon_state = "army_uniform"
+	worn_state = "army_uniform"
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/UA.dmi'
+	flags_atom = NO_NAME_OVERRIDE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/UA.dmi',
+	)
+
 /obj/item/clothing/under/marine/officer
 	name = "marine officer uniform"
 	desc = "Substantially comfier officer's uniform. Still has the protection of a sheet of paper against actual threats but at least you won't be uncomfortable while bleeding out."

@@ -23,6 +23,7 @@
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
+#define SQUAD_ARMY "US Army"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -348,6 +349,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FORECON_SUPPORT "Reconnaissance Support Technician"
 #define JOB_FORECON_RIFLEMAN "Reconnaissance Rifleman"
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
+
+//-------- US ARMY --------//
+
+#define JOB_ARMY_CO "US Army Commander"
+#define JOB_ARMY_SYN "US Army Synthetic"
+
+#define JOB_ARMY_LIST list(JOB_ARMY_TROOPER, JOB_ARMY_ENGI, JOB_ARMY_MEDIC, JOB_ARMY_MARKSMAN, JOB_ARMY_SMARTGUNNER, JOB_ARMY_SNCO, JOB_ARMY_CO, JOB_ARMY_SYN)
 
 //-------- UPP --------//
 #define JOB_UPP "Naval Infantry Rifleman"

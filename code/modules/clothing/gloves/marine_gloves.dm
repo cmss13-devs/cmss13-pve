@@ -20,6 +20,10 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
+/obj/item/clothing/gloves/marine/army
+	name = "army combat gloves"
+	desc = "Standard issue army tactical gloves. It reads: 'knit by Army Widows Association'."
+
 /obj/item/clothing/gloves/marine/fingerless
 	name = "fingerless combat gloves"
 	desc = "A pair of black combat gloves with the finger coverings cut off. No longer insulated from electrical shocks, nor wholly capable of protecting from shrapnel, at least your hands won't be quiet as sweaty all the time now though."
