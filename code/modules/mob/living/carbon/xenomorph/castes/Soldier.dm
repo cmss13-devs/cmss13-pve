@@ -10,7 +10,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
 	armor_deflection = XENO_ARMOR_TIER_2
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_RAPTOR //Faster than drones, slower than lurkers.
+	speed = XENO_SPEED_HELLHOUND //Faster than drones, slower than lurkers.
 
 	caste_desc = "A warrior of the hive."
 	evolves_to = list(XENO_CASTE_QUEEN, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD) //Add more here separated by commas

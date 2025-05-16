@@ -10,7 +10,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_HELLHOUND
+	speed = XENO_SPEED_RAPTOR
 
 	available_strains = list(
 		/datum/xeno_strain/gardener,
