@@ -362,6 +362,8 @@
 			marker_flags = MINIMAP_FLAG_USCM
 		else if(hud_type == MOB_HUD_FACTION_UPP)
 			marker_flags = MINIMAP_FLAG_UPP
+		else if(hud_type == MOB_HUD_FACTION_TWE)
+			marker_flags = MINIMAP_FLAG_TWE
 		else if(hud_type == MOB_HUD_FACTION_PMC)
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
@@ -670,9 +672,13 @@
 	item_state = "upp_headset"
 	minimap_type = MINIMAP_FLAG_TWE
 	frequency = RMC_FREQ
-	initial_keys = null
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_TWE
+	inbuilt_tracking_options = list(
+		"Troop Commander" = TRACKER_PLTCO,
+		"Section/Team Leader" = TRACKER_FTL,
+	)
+	locate_setting = TRACKER_PLTCO
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ

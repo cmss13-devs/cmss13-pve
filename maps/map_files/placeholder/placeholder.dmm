@@ -796,7 +796,7 @@
 "acH" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
-	req_one_access = list(300,302)
+	req_one_access = list(302)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
@@ -9497,7 +9497,7 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/vp78{
+/obj/item/ammo_box/magazine/vp78/rmc{
 	pixel_y = 15
 	},
 /obj/item/ammo_box/magazine/vp70{
@@ -14601,7 +14601,7 @@
 	dir = 8;
 	name = "\improper Medical Office";
 	req_one_access = list();
-	req_one_access_txt = "300;302"
+	req_one_access_txt = "302"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -15554,7 +15554,7 @@
 	pixel_y = 15;
 	pixel_x = -5
 	},
-/obj/item/ammo_box/magazine/vp78{
+/obj/item/ammo_box/magazine/vp78/rmc{
 	pixel_y = 5;
 	pixel_x = -3
 	},

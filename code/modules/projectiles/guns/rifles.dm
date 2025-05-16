@@ -109,8 +109,8 @@
 //NSG 23 ASSAULT RIFLE - RMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
-	name = "\improper NSG L23A1 pulse rifle"
-	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
+	name = "\improper NSG 23 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle in use by various W-Y personnel. Comparable performance with the ARMAT M41A series of rifles, with slightly better handling."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
@@ -120,7 +120,7 @@
 	cocked_sound = 'sound/weapons/handling/nsg23_cocked.ogg'
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -129,13 +129,13 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/stock/nsg23/rmc,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/attached_gun/grenade/nsg,
 	)
 
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/attached_gun/grenade/nsg,
 		/obj/item/attachable/stock/nsg23,
 	)
 
@@ -157,22 +157,38 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/nsg23/unloaded
+/obj/item/weapon/gun/rifle/nsg23/no_lock
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
+/obj/item/weapon/gun/rifle/nsg23/rmc
+	name = "\improper NSG L23A1 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmc_nsg23"
+	item_state = "rmc_nsg23"
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/attached_gun/grenade/nsg,
+		/obj/item/attachable/stock/nsg23/rmc,
+	)
+
+/obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-/obj/item/weapon/gun/rifle/nsg23/preloaded
+/obj/item/weapon/gun/rifle/nsg23/rmc/preloaded
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
-		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/stock/nsg23/rmc,
 	)
 
-/obj/item/weapon/gun/rifle/nsg23/preloaded/tactical
+/obj/item/weapon/gun/rifle/nsg23/rmc/preloaded/tactical
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
-		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/stock/nsg23/rmc,
 		/obj/item/attachable/suppressor,
 	)
 
@@ -1610,11 +1626,11 @@
 	random_under_chance = 50
 	random_spawn_under = list(/obj/item/attachable/flashlight/grip)
 
-//=ROYAL MARINES=\\
+//=OLD ROYAL MARINES RIFLES=\\
 
 /obj/item/weapon/gun/rifle/rmc_f90
 	name = "\improper F903A1 Rifle"
-	desc = "The standard issue rifle of the royal marines. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "The old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "aug"
 	item_state = "aug"
@@ -1658,7 +1674,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/a_grip
 	name = "\improper F903A2 Rifle"
-	desc = "A non-standard issue rifle of the royal marines the F903A2 is currently being phased into the royal marines as their new mainline rifle but currently only sees use by unit leaders. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon_state = "aug_com"
 	item_state = "aug_com"
 	attachable_allowed = list(
@@ -1678,7 +1694,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/scope
 	name = "\improper F903A1 Marksman Rifle"
-	desc = "A variation of the F903 rifle used by the royal marines commando. This weapon only accepts the smaller 20 round magazines of 10x24mm."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Only accepts smaller 20-round magazines of 10x24mm caseless ammunition."
 	icon_state = "aug_dmr"
 	item_state = "aug_dmr"
 	attachable_allowed = null
@@ -1716,7 +1732,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/shotgun
 	name = "\improper F903A1/B 'Breacher' Rifle"
-	desc = "A variation of the F903 rifle used by the royal marines commando. Modified to be used in one hand with a shield. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines fitted with an underbarrel shotgun, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon_state = "aug_mkey"
 	item_state = "aug_mkey"
 	attachable_allowed = list(

@@ -850,7 +850,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
-	name = "L165A1 Laser-Light Module"
+	name = "Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "vplaserlight"
@@ -2848,7 +2848,7 @@ Defined in conflicts.dm of the #defines folder.
 		R.flags_equip_slot |= SLOT_WAIST
 
 /obj/item/attachable/stock/nsg23
-	name = "NSG L23A1 stock"
+	name = "NSG 23 stock"
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "nsg23_stock"
 	slot = "stock"
@@ -2858,6 +2858,11 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 21
 	pixel_shift_y = 20
 	hud_offset_mod = 2
+
+/obj/item/attachable/stock/nsg23/rmc
+	name = "NSG L23A1 stock"
+	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
+	icon_state = "rmc_nsg23_stock"
 
 // ======== Underbarrel Attachments ======== //
 

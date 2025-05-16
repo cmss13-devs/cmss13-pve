@@ -584,10 +584,9 @@
 //VP78 - High power pistol?
 
 /obj/item/weapon/gun/pistol/vp78
-	name = "\improper L165A1 service pistol"
-	desc = "Service issue pistol to the Royal Marine Commandos. A sleek, modern, semi-automatic handgun specifically designed to chambered specialized 9x19mm explosive squash-head rounds. Based on a Beretta Arms patented design, this Weyland-Yutani modification has earned its place in the hands of the Three World Empire's best soldiers."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
-	icon_state = "b92fs"
+	name = "\improper VP78 pistol"
+	desc = "A massive, formidable semi-automatic handgun based on a Beretta Arms patented design and chambered in overpressured 9mm rounds. A common sight throughout both UA and 3WE space, often held by well-equipped Weyland-Yutani personnel."
+	icon_state = "vp78"
 	item_state = "b92fs"
 	fire_sound = 'sound/weapons/gun_vp78_v2.ogg'
 	reload_sound = 'sound/weapons/gun_vp78_reload.ogg'
@@ -599,11 +598,17 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight/laser_light_combo,
 		/obj/item/attachable/extended_barrel,
 	)
-	starting_attachment_types = null
+
+/obj/item/weapon/gun/pistol/vp78/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/flashlight/laser_light_combo/VP = new(src)
+	VP.flags_attach_features &= ~ATTACH_REMOVABLE
+	VP.hidden = FALSE
+	VP.Attach(src)
+	update_attachable(VP.slot)
 
 /obj/item/weapon/gun/pistol/vp78/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 22, "under_y" = 15, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 21, "side_rail_y" = 14)
@@ -624,6 +629,14 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/pistol/vp78/unloaded
+	current_mag = null
+
+/obj/item/weapon/gun/pistol/vp78/rmc
+	name = "\improper L165A1 service pistol"
+	desc = "Service issue pistol to the Royal Marine Commandos. A sleek, modern, semi-automatic handgun specifically designed to chambered specialized 9x19mm explosive squash-head rounds. Based on a Beretta Arms patented design, this Weyland-Yutani modification has earned its place in the hands of the Three World Empire's best soldiers. Can load normal VP78 magazines with no issue too."
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/rmc
+
+/obj/item/weapon/gun/pistol/vp78/rmc/unloaded
 	current_mag = null
 
 //-------------------------------------------------------

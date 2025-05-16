@@ -86,7 +86,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/mor
 	job_options = null
 	supervisors = "the troop commander and troop sergeant"
-	entry_message_body = "You are a commando-trained member of the Royal Artillery serving with the Royal Marines Commando forces. You're responsible for the handling and operation of the light mortar issued to the Troop. You will be working closely with the Troop Sergeant, who carries your spare rounds, and the Troop Commander as part of the Headquarters Section.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Mortar Workshop.</b>"
+	entry_message_body = "You are a commando-trained member of the Royal Artillery serving with the Royal Marines Commando forces. You're responsible for offering light fire support to the Troop via either a mortar or multiple-grenade-launcher weapon system. You will be working closely with the Troop Sergeant, who should be carrying your spare support-weapon ammo, and the Troop Commander as part of the Headquarters Section.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Mortar Workshop.</b>"
 
 /obj/effect/landmark/start/marine/engineer/rmcmortar
 	name = JOB_TWE_RMC_BREACHER

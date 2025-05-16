@@ -382,7 +382,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_ENGI "RMC Assault Engineer"
 #define JOB_TWE_RMC_MARKSMAN "RMC Marksman"
 #define JOB_TWE_RMC_SMARTGUNNER "RMC Smartgunner"
-#define JOB_TWE_RMC_BREACHER "RMC Gunner"
+#define JOB_TWE_RMC_BREACHER "RMC Light Gunner"
 #define JOB_TWE_RMC_TEAMLEADER "RMC Team Leader"
 #define JOB_TWE_RMC_SECTIONLEADER "RMC Section Leader"
 #define JOB_TWE_RMC_TROOPLEADER "RMC Troop Sergeant"

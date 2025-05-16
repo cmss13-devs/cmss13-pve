@@ -209,11 +209,11 @@
 	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five L23A1 pulse rifles."
 	max_stored = 5
 	initial_stored = 5
-	allowed_type = /obj/item/weapon/gun/rifle/nsg23
-	populate_type = /obj/item/weapon/gun/rifle/nsg23
+	allowed_type = /obj/item/weapon/gun/rifle/nsg23/rmc
+	populate_type = /obj/item/weapon/gun/rifle/nsg23/rmc
 
 /obj/structure/gun_rack/nsg/unloaded
-	populate_type = /obj/item/weapon/gun/rifle/nsg23/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
 
 /obj/structure/gun_rack/nsg/Empty
 	initial_stored = 0

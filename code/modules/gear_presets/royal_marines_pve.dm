@@ -77,7 +77,7 @@
 	rank = JOB_TWE_RMC_MARKSMAN
 
 /datum/equipment_preset/uscm/rmc/mor
-	name = "Royal Marine Commando, Mortar Gunner"
+	name = "Royal Marine Commando, Light Gunner"
 	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM HW(MOR)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)

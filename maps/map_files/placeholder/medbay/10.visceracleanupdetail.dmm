@@ -295,7 +295,7 @@
 "uK" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
-	req_one_access = list(300,302)
+	req_one_access = list(302)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
@@ -393,7 +393,7 @@
 	dir = 8;
 	name = "\improper Medical Office";
 	req_one_access = list();
-	req_one_access_txt = "300;302"
+	req_one_access_txt = "302"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8

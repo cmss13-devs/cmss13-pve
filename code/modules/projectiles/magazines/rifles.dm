@@ -444,8 +444,8 @@
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/ammo_magazine/rifle/nsg23
-	name = "\improper NSG L23A1 magazine (8.5x33mm)"
-	desc = "An NSG L23A1 assault rifle magazine."
+	name = "\improper NSG 23 magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles."
 	caliber = "8.5x33mm"
 	default_ammo = /datum/ammo/bullet/rifle/twe
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
@@ -458,14 +458,14 @@
 	ammo_band_icon_empty = "+nsg23_band_e"
 
 /obj/item/ammo_magazine/rifle/nsg23/ap
-	name = "\improper NSG L23A1 armor-piercing magazine (8.5x33mm)"
-	desc = "An NSG L23A1 assault rifle magazine. This one is armor piercing."
+	name = "\improper NSG 23 armor-piercing magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
-	name = "\improper NSG L23A1 HEAP magazine (8.5x33mm)"
-	desc = "An NSG L23A1 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
+	name = "\improper NSG 23 HEAP magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor-piercing explosive tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 

@@ -1581,9 +1581,9 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/rmc
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/rmc/fill_preset_inventory()
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1

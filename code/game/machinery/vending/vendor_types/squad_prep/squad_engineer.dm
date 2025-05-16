@@ -282,12 +282,12 @@ GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
 		list("L164A3 MGL kit", 0, /obj/effect/essentials_set/rmcgl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
 		list("MORTAR SHELLS", 0, null, null, null),
-		list("High Explosive Mortar Shell", 15, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
-		list("Fragmentation Mortar Shell", 10, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
-		list("Incendiary Mortar Shell", 15, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
-		list("Smoke Mortar Shell", 10, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
-		list("White Phosphorus Explosive Mortar Shell", 25, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
-		list("Flare/Cam Mortar Shell", 10, /obj/item/mortar_shell, null, VENDOR_ITEM_REGULAR),
+		list("High Explosive Mortar Shell", 15, /obj/item/mortar_shell/he, null, VENDOR_ITEM_REGULAR),
+		list("Fragmentation Mortar Shell", 10, /obj/item/mortar_shell/frag, null, VENDOR_ITEM_REGULAR),
+		list("Incendiary Mortar Shell", 15, /obj/item/mortar_shell/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("Smoke Mortar Shell", 10, /obj/item/mortar_shell/smoke, null, VENDOR_ITEM_REGULAR),
+		list("White Phosphorus Explosive Mortar Shell", 25, /obj/item/mortar_shell/phosphorus, null, VENDOR_ITEM_REGULAR),
+		list("Flare/Cam Mortar Shell", 10, /obj/item/mortar_shell/flare, null, VENDOR_ITEM_REGULAR),
 
 		list("20MM GRENADE PACKETS", 0, null, null, null),
 		list("L103A1 20mm HE", 20, /obj/item/storage/box/packet/rmc/mini, null, VENDOR_ITEM_REGULAR),

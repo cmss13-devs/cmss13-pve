@@ -2227,9 +2227,9 @@
 			"icon_y" = -3))
 
 /obj/item/storage/belt/gun/l905/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
 	for(var/i in 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/vp78(src)
+		new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 
 #define MAXIMUM_MORTARSHELL_COUNT 3
 
@@ -2265,20 +2265,37 @@
 		if(!stop_messages)
 			to_chat(usr, SPAN_WARNING("[src] can't hold any more mortar shells."))
 		return FALSE
+	else if(shells >= MAXIMUM_MORTARSHELL_COUNT && istype(item, /obj/item/storage/box/packet/rmc/mini))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more grenade packets."))
+		return FALSE
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
 	. = ..()
 	if(istype(item, /obj/item/mortar_shell))
+		shells++
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
 		shells++
 
 /obj/item/storage/belt/gun/mortarbelt/rmc/remove_from_storage(obj/item/item as obj, atom/new_location)
 	. = ..()
 	if(istype(item, /obj/item/mortar_shell))
 		shells--
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
+		shells--
 
 //If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
 /obj/item/storage/belt/gun/mortarbelt/rmc/on_stored_atom_del(atom/movable/item)
 	if(istype(item, /obj/item/mortar_shell))
 		shells--
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
+		shells--
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/smoke(src)
 
 #undef MAXIMUM_MORTARSHELL_COUNT
