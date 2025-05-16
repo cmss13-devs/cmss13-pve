@@ -204,6 +204,14 @@
 	var/exploding = 0
 	var/reinforced = FALSE
 	var/datum/weakref/source_mob
+	var/randomize = TRUE
+
+/obj/structure/reagent_dispensers/fueltank/Initialize()
+	. = ..()
+	if(prob(25) && randomize)
+		var/new_fueltank = pick(/obj/structure/reagent_dispensers/fueltank/gas/hydrogen, /obj/structure/reagent_dispensers/fueltank/gas/methane, /obj/structure/reagent_dispensers/fueltank/oxygentank)
+		new new_fueltank(get_turf(src))
+		qdel(src)
 
 /obj/structure/reagent_dispensers/fueltank/get_examine_text(mob/user)
 	. = ..()
@@ -389,6 +397,7 @@
 /obj/structure/reagent_dispensers/fueltank/gas
 	name = "gastank"
 	desc = "A gas tank"
+	randomize = FALSE
 
 /obj/structure/reagent_dispensers/fueltank/gas/leak_fuel(amount)
 	if(reagents.total_volume == 0)
@@ -415,6 +424,8 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "oxygentank"
 	chemical = "oxygen"
+	randomize = FALSE
+
 
 /obj/structure/reagent_dispensers/fueltank/custom
 	name = "reagent tank"
@@ -504,3 +515,23 @@
 	density = FALSE
 	chemical = "virusfood"
 
+/obj/structure/reagent_dispensers/fueltank/smoke
+	name = "pressurized tank"
+	desc = "Some kind of reagent tank."
+	icon_state = "methanetank"
+	chemical = "pacid"
+	var/reagent_amount = 15
+
+/obj/structure/reagent_dispensers/fueltank/smoke/explode(force)
+	var/location = get_turf(src)
+	var/datum/effect_system/smoke_spread/chem/S = new /datum/effect_system/smoke_spread/chem
+	S.attach(location)
+	S.set_up(reagents, reagent_amount, 0, location)
+	playsound(location, 'sound/effects/smoke.ogg', 25, 1)
+	INVOKE_ASYNC(S, TYPE_PROC_REF(/datum/effect_system/smoke_spread/chem, start))
+	reagents.clear_reagents()
+	deconstruct(FALSE)
+	return
+
+	exploding = FALSE
+	update_icon()

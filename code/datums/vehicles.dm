@@ -54,6 +54,10 @@
 	name = "Van"
 	interior_id = "van"
 
+/datum/map_template/interior/truck
+	name = "Truck"
+	interior_id = "miltruck"
+
 /datum/map_template/interior/box_van
 	name = "Box Van"
 	interior_id = "box_van"

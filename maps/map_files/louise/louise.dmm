@@ -1,0 +1,21177 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/engineering)
+"ab" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/engineering)
+"ac" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/maintenance)
+"ad" = (
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"ae" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"af" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"ag" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/survival)
+"ah" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/obj/structure/machinery/light/double,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"ai" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/survival)
+"aj" = (
+/obj/structure/sign/safety/water{
+	pixel_x = -16;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ak" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/hangar)
+"al" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 120;
+	teleport_z = 7;
+	teleport_y = 73
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"am" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/synth)
+"an" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"ao" = (
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ap" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -24
+	},
+/turf/open/floor/almayer,
+/area/louise/survival)
+"aq" = (
+/obj/structure/machinery/power/apc/almayer/hardened/north,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"ar" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint0";
+	dir = 2
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"as" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"at" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"au" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/dorms)
+"av" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 2;
+	req_one_access = list()
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/corsat,
+/area/louise/exterior)
+"aw" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/hangar)
+"ax" = (
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/louise/northeasthall)
+"ay" = (
+/turf/open/floor/almayer/edge,
+/area/louise/northeasthall)
+"az" = (
+/obj/structure/machinery/light/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge,
+/area/louise/northeasthall)
+"aA" = (
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/louise/northeasthall)
+"aB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"aC" = (
+/turf/open/floor/almayer/mono,
+/area/louise/hangar)
+"aD" = (
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/northeasthall)
+"aE" = (
+/turf/open/floor/almayer/edge/north,
+/area/louise/northeasthall)
+"aF" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/northeasthall)
+"aG" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/northeasthall)
+"aH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"aI" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"aJ" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/northwesthall)
+"aK" = (
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/louise/northwesthall)
+"aL" = (
+/turf/open/floor/almayer,
+/area/louise/medical)
+"aM" = (
+/obj/structure/surface/table/almayer,
+/obj/item/toy/deck{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/toy/deck/uno{
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"aN" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northwesthall)
+"aO" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/medical)
+"aP" = (
+/obj/structure/machinery/power/apc/power/south,
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"aQ" = (
+/obj/effect/landmark/start/marine/leader/guard,
+/obj/effect/landmark/late_join,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"aR" = (
+/obj/effect/landmark/start/marine/tl/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"aS" = (
+/obj/effect/landmark/start/marine/medic/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"aT" = (
+/obj/effect/landmark/start/marine/smartgunner/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"aU" = (
+/obj/effect/landmark/start/marine/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"aV" = (
+/obj/effect/landmark/start/marine/guard,
+/obj/effect/landmark/late_join,
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/dorms)
+"aW" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"aX" = (
+/obj/effect/landmark/start/marine/guard,
+/obj/effect/landmark/late_join,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/dorms)
+"aY" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Infirmary"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/medical)
+"aZ" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/medical)
+"ba" = (
+/turf/open/floor/almayer/sterile_green_side,
+/area/louise/medical)
+"bb" = (
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"bc" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"bd" = (
+/obj/structure/machinery/cm_vending/clothing/synth,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"be" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bf" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bg" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"bh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/sterile_green_side/east,
+/area/louise/medical)
+"bi" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/medical)
+"bj" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/medical)
+"bk" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_x = -6;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/obj/item/reagent_container/food/drinks/cans/food/upp/meat{
+	pixel_x = -1;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"bl" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/medical)
+"bn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/almayer/plate,
+/area/louise/medical)
+"bo" = (
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"bp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/canteen)
+"bq" = (
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"br" = (
+/obj/structure/machinery/cm_vending/sorted/medical,
+/obj/structure/machinery/power/apc/almayer/west,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bs" = (
+/obj/structure/machinery/cm_vending/clothing/medic/guard,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bt" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/box/bodybags{
+	pixel_y = 12;
+	pixel_x = -2
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_y = 0;
+	pixel_x = 0
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medical{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bu" = (
+/obj/structure/closet/crate/freezer{
+	name = "blood cooler crate";
+	pixel_y = 7
+	},
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = -5
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = 7
+	},
+/obj/item/reagent_container/blood/OMinus,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/medical)
+"bv" = (
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = 6;
+	dir = 8
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/medical)
+"bw" = (
+/obj/structure/machinery/medical_pod/bodyscanner{
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/medical)
+"bx" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"by" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/canteen)
+"bz" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/canteen)
+"bA" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/armory)
+"bB" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/bathroom)
+"bC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/magazine/book/spacebeast{
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"bD" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = -6
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = -3
+	},
+/obj/item/trash/USCMtray{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/item/storage/box/drinkingglasses{
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/canteen)
+"bE" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/guard,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"bF" = (
+/obj/structure/bed/chair/comfy,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/canteen)
+"bG" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/canteen)
+"bH" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/obj/structure/machinery/portable_atmospherics/hydroponics{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer,
+/area/louise/survival)
+"bI" = (
+/obj/structure/bed/chair/comfy,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/canteen)
+"bJ" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/canteen)
+"bK" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"bL" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 26
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"bM" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/lighter{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/item/storage/fancy/cigar/tarbacktube{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"bN" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/guard,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"bO" = (
+/obj/structure/closet/crate/green{
+	name = "sidearm crate"
+	},
+/obj/item/weapon/gun/pistol/m4a3/unloaded,
+/obj/item/weapon/gun/pistol/m4a3/unloaded,
+/obj/item/weapon/gun/pistol/m4a3/unloaded,
+/obj/item/weapon/gun/pistol/m4a3/custom{
+	current_mag = null
+	},
+/obj/item/weapon/gun/revolver/m44,
+/obj/item/weapon/gun/revolver/m44,
+/obj/item/weapon/gun/revolver/m44,
+/obj/item/weapon/gun/revolver/m44,
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"bP" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"bQ" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 121;
+	teleport_z = 7;
+	teleport_y = 73
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"bR" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint0";
+	dir = 2
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"bS" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/guard,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"bT" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/exterior)
+"bU" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/northwesthall)
+"bV" = (
+/obj/structure/gun_rack/m20a/unloaded,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"bW" = (
+/obj/structure/gun_rack/m20a/unloaded,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"bX" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/opcenter)
+"bY" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/mob/living/simple_animal/scorpion/wounded{
+	layer = 2.9
+	},
+/turf/open/desert/rock,
+/area/louise/exterior)
+"bZ" = (
+/obj/structure/machinery/photocopier,
+/obj/item/paper{
+	pixel_x = -5;
+	pixel_y = 10;
+	name = "printed paper";
+	info = "[large][b]Subject[/b]: Project Rattlesnake - Termination Report[/large][br][large][b]Date[/b]: May 3rd, 2175[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code[/b]: R21-T221-F[br][b]Executive Summary[/b]:[/large] [br]Project Rattlesnake was initiated to develop a secure and clandestine operating base in Great Middle Canyon of LV-834 to serve as a contingency command center. The project progressed through the conceptual design, site selection, construction, and initial fit-out phases. However, after thorough risk assessment and strategic re-evaluation, the decision was made to terminate Project Rattlesnake and decline to activate the completed facility. Risk report and further justification for project termination can be found in file R21-T221-F-J1.";
+	icon_state = "paper_words"
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"ca" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/item/paper{
+	pixel_x = -1;
+	pixel_y = 3;
+	name = "printed paper";
+	info = "[large][b]Subject[/b]: Project Rattlesnake - Transfer of Operational Control to UAAC[br][b]Date[/b]: October 26, 2177[br][b]Prepared by[/b]: [i]Executive Alexandra Wachowski[/i][br][b]Reporting Code: R21-T221-F-11X[/b][br][b]Executive Summary:[/b][/large] [br]This - final - report documents the transfer of operational control of Project Rattlesnake, a secure operating base located in Great Middle Canyon of LV-834, from Weyland-Yutani Intelligence Department to United Americas Allied Command. No futher information will be disclosed in public reports. All inquiries about Project Rattlesnake will be ignored.";
+	icon_state = "paper_words"
+	},
+/obj/item/clothing/glasses/regular,
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"cb" = (
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"cc" = (
+/obj/structure/machinery/power/apc/almayer/hardened/south,
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"cd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"ce" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"cf" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/opcenter)
+"cg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"ch" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"ci" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"cj" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/prop/invuln/lore_computer{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"ck" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cn" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"co" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cp" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cq" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = list()
+	},
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"cr" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cs" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"ct" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cu" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cv" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cy" = (
+/obj/structure/machinery/defenses/sentry{
+	dir = 1;
+	turned_on = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"cz" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cA" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cB" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cC" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cD" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cE" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cF" = (
+/obj/structure/closet/secure_closet/marine_personal/guard/corpsman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/squad_leader{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/dorms)
+"cG" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cH" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cK" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 150
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cL" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cM" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cN" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cQ" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 120;
+	teleport_z = 7;
+	teleport_y = 74
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cR" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 121;
+	teleport_z = 7;
+	teleport_y = 74
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cS" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 123;
+	teleport_z = 7;
+	teleport_y = 74
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"cT" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"cU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"cV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"cW" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"cX" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = -7;
+	pixel_y = 8;
+	id = "uacg_outer"
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 7;
+	pixel_y = 8;
+	id = "uacg_inner"
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_x = 1;
+	pixel_y = -4;
+	id = "watch"
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"cY" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"cZ" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 4
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"da" = (
+/turf/open/asphalt,
+/area/louise/exterior)
+"db" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"dc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"dd" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"de" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"df" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"dg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"dh" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"di" = (
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/m2c,
+/obj/item/ammo_magazine/m2c,
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"dj" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"dk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"dl" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	req_access = null
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"dm" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 123;
+	teleport_z = 7;
+	teleport_y = 73
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"dn" = (
+/obj/structure/machinery/vending/hydroseeds,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"do" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/survival)
+"dp" = (
+/turf/open/floor/almayer,
+/area/louise/survival)
+"dq" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "garage_base2"
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"dr" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	pixel_x = 2;
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"ds" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"dt" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/structure/machinery/door_control/card{
+	pixel_x = -8;
+	pixel_y = -24;
+	id = "garage_base"
+	},
+/obj/structure/machinery/door_control/card{
+	pixel_x = 9;
+	pixel_y = -24;
+	id = "garage_base2"
+	},
+/turf/open/asphalt,
+/area/louise/garage)
+"du" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/hangar)
+"dv" = (
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dw" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dx" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dy" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	req_access = null
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/engineering)
+"dz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dA" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dB" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/hangar)
+"dC" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"dD" = (
+/obj/structure/machinery/camera{
+	network = list("Louise");
+	c_tag = "Entrance";
+	tag = "Entrance";
+	icon = 'icons/obj/structures/props/dam.dmi';
+	icon_state = "boulder2";
+	name = "boulder";
+	density = 1;
+	desc = "There's something wrong with this boulder...";
+	no_icon_update = 1
+	},
+/turf/open/desert/rock,
+/area/louise/exterior)
+"dE" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/entrancetunnel)
+"dF" = (
+/obj/structure/machinery/power/apc/almayer/hardened/north,
+/turf/open/floor/almayer/edge/north,
+/area/louise/southeasthall)
+"dG" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"dH" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"dI" = (
+/obj/structure/machinery/autolathe,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 2;
+	pixel_y = -26
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"dJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"dK" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	id = "uacg_outer"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/entrancetunnel)
+"dL" = (
+/turf/open/floor/almayer/test_floor4,
+/area/louise/entrancetunnel)
+"dM" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"dN" = (
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"dO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/test_floor4,
+/area/louise/entrancetunnel)
+"dP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	id = "uacg_inner"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/hangar)
+"dQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/dam/crane,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dT" = (
+/obj/structure/flora/grass/desert/lightgrass_4,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"dU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dV" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/cross{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dW" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dX" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"dY" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"dZ" = (
+/obj/structure/roof/cargocrane_tracks/cross{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ea" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"eb" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"ec" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 24;
+	id = "uacg_outer"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/entrancetunnel)
+"ed" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 24;
+	id = "uacg_inner"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/entrancetunnel)
+"ee" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	id = "uacg_inner"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/louise/hangar)
+"ef" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal11"
+	},
+/obj/effect/decal/sand_overlay/sand1,
+/turf/open/asphalt,
+/area/louise/exterior)
+"eg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -25;
+	pixel_y = 25;
+	id = "uacg_inner"
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"eh" = (
+/obj/structure/window/framed/prefab{
+	not_damageable = 1;
+	not_deconstructable = 1;
+	unslashable = 1;
+	unacidable = 1;
+	health = 999999
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "watch"
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"ei" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	id = "watch"
+	},
+/obj/structure/window/framed/prefab{
+	not_damageable = 1;
+	not_deconstructable = 1;
+	unslashable = 1;
+	unacidable = 1;
+	health = 999999
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"ej" = (
+/obj/structure/cargo_container/horizontal/blue/bottom,
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ek" = (
+/obj/structure/flora/grass/tallgrass/desert/corner,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"el" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras{
+	network = list("Louise");
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"em" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/radio/headset/distress/guard,
+/obj/item/reagent_container/food/drinks/coffee/marine{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"en" = (
+/obj/structure/cargo_container/horizontal/blue/middle,
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"eo" = (
+/obj/structure/prop/dam/wide_boulder/boulder1,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"ep" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"eq" = (
+/obj/structure/bed/chair/office/dark,
+/mob/living/carbon/human/sleepyjim,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"er" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"es" = (
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 32;
+	pixel_y = 24
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"et" = (
+/obj/structure/machinery/vending/cigarette,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"eu" = (
+/obj/effect/landmark/start/marine/guard,
+/obj/effect/landmark/late_join,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"ev" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/cargo_container/horizontal/blue/top,
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ew" = (
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt/bcigbutt,
+/obj/item/trash/cigbutt/cigarbutt,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"ex" = (
+/obj/structure/machinery/vending/coffee/simple,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"ey" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 1;
+	pixel_y = 25
+	},
+/obj/structure/surface/rack,
+/obj/item/ammo_magazine/shotgun/buckshot/special,
+/obj/item/clothing/suit/marine/guard,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717{
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"ez" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/almayer/mono,
+/area/louise/hangar)
+"eA" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"eB" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 8
+	},
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"eC" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 10
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"eD" = (
+/obj/structure/prop/invuln{
+	icon = 'icons/obj/structures/doors/securedoor.dmi';
+	icon_state = "door_locked";
+	opacity = 1;
+	desc = "It's locked as per SOP. No one disturbs the gate watch.";
+	name = "\improper Secure Airlock"
+	},
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"eE" = (
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/louise/northwesthall)
+"eF" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/medical)
+"eG" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/bathroom)
+"eH" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 8
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"eI" = (
+/obj/structure/flora/grass/desert/lightgrass_11,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"eJ" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/entrancetunnel)
+"eK" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northwesthall)
+"eL" = (
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"eM" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 8
+	},
+/turf/open/desert/rock,
+/area/louise/exterior)
+"eN" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"eO" = (
+/obj/effect/landmark/start/marine/leader/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"eP" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 10
+	},
+/turf/open/desert/rock,
+/area/louise/exterior)
+"eQ" = (
+/obj/structure/flora/grass/desert/heavygrass_4,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"eR" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"eS" = (
+/obj/structure/prop/invuln{
+	icon = 'icons/obj/structures/doors/securedoor.dmi';
+	icon_state = "door_locked";
+	dir = 4;
+	opacity = 1;
+	desc = "It's locked as per SOP. No one disturbs the gate watch.";
+	name = "\improper Secure Airlock"
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/entrancetunnel)
+"eT" = (
+/obj/structure/machinery/power/reactor,
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"eU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northwesthall)
+"eV" = (
+/obj/structure/machinery/door/airlock/almayer/generic,
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/bathroom)
+"eW" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"eX" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northwesthall)
+"eY" = (
+/obj/structure/closet/secure_closet/marine_personal/guard/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/dorms)
+"eZ" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/canteen)
+"fa" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 5
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fb" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fc" = (
+/obj/structure/machinery/portable_atmospherics/canister/phoron{
+	name = "fuel canister"
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"fd" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 9
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fe" = (
+/obj/structure/flora/grass/desert/lightgrass_1,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"ff" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	dir = 6
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fg" = (
+/obj/structure/flora/grass/tallgrass/desert/corner,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fh" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"fi" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"fj" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"fk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"fl" = (
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"fm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/edge/smooth/corner/east,
+/area/louise/canteen)
+"fn" = (
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"fo" = (
+/obj/structure/machinery/door_control/card{
+	pixel_x = 24;
+	pixel_y = 4;
+	id = "uacgarmory"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northwesthall)
+"fp" = (
+/obj/structure/closet/crate/secure/gear{
+	req_one_access = list(12,14);
+	name = "automatic rifleman gear crate"
+	},
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box,
+/obj/item/ammo_magazine/hpr_box/ap,
+/obj/item/ammo_magazine/hpr_box/ap,
+/obj/item/ammo_magazine/hpr_box/ap,
+/obj/item/ammo_magazine/hpr_box/ap,
+/obj/item/weapon/gun/rifle/lmg/guard,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"fq" = (
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"fr" = (
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"fs" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/exterior)
+"ft" = (
+/obj/item/paper{
+	pixel_x = -1;
+	pixel_y = 28;
+	name = "note";
+	anchored = 1;
+	icon_state = "paper_words";
+	info = "Note to self: don't forget to grab the access card from my locker or else grunts will laugh at me again."
+	},
+/obj/item/weapon/knife/marine/sas{
+	pixel_x = -9;
+	pixel_y = 23;
+	anchored = 1;
+	desc = "Stuck deep, damn."
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"fu" = (
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 30;
+	pixel_y = -8
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northwesthall)
+"fv" = (
+/obj/structure/desertdam/decals/road_edge,
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"fw" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"fx" = (
+/obj/structure/machinery/defenses/sentry{
+	dir = 1;
+	turned_on = 1;
+	placed = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/northwesthall)
+"fz" = (
+/obj/structure/sign/safety/commline_connection{
+	pixel_x = 31;
+	pixel_y = 9
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/northwesthall)
+"fA" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/checkpoint)
+"fB" = (
+/obj/structure/machinery/door/airlock/almayer/generic,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"fC" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fD" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/mob/living/carbon/human/mute,
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fE" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fF" = (
+/obj/structure/bed/chair,
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fG" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/opcenter)
+"fH" = (
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/opcenter)
+"fI" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"fJ" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "checkpoint1"
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fK" = (
+/obj/structure/fence,
+/turf/open/desert/rock,
+/area/louise/exterior)
+"fL" = (
+/obj/structure/bed/chair/office/dark,
+/turf/open/floor/almayer,
+/area/louise/opcenter)
+"fM" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint1"
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"fN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint1"
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"fO" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint1"
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"fP" = (
+/obj/structure/window_frame/prefab,
+/obj/item/reagent_container/food/drinks/cans/space_mountain_wind{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"fQ" = (
+/turf/open/floor/almayer,
+/area/louise/opcenter)
+"fR" = (
+/obj/structure/machinery/vending/coffee/simple,
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/louise/canteen)
+"fS" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/almayer,
+/area/louise/opcenter)
+"fT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"fU" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/opcenter)
+"fV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/opcenter)
+"fW" = (
+/obj/structure/machinery/camera{
+	network = list("Louise");
+	c_tag = "Left";
+	tag = "Left";
+	icon = 'icons/obj/structures/props/dam.dmi';
+	icon_state = "boulder2";
+	name = "boulder";
+	density = 1;
+	desc = "There's something wrong with this boulder...";
+	no_icon_update = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"fX" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/sign/banners/usa_flag{
+	pixel_x = 15;
+	pixel_y = 30
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/tool/pen{
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"fY" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/cameras{
+	network = list("Louise")
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"fZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/phone_base{
+	pixel_y = 36;
+	pixel_x = -8;
+	phone_id = "Camp Louise";
+	name = "Camp Louise Phone";
+	phone_category = "Guard"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"ga" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2;
+	pixel_x = 10
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	pixel_x = 10;
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 7;
+	pixel_x = 10;
+	dir = 8
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gb" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2;
+	pixel_x = 4
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gc" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2;
+	pixel_x = 10
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	layer = 4.2;
+	pixel_x = 17
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gd" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"ge" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	pixel_x = 10;
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 11;
+	pixel_x = 10;
+	dir = 8
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/device/flashlight/lamp{
+	pixel_x = 11;
+	pixel_y = 11
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/tool/pen{
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"gg" = (
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = 31;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"gh" = (
+/obj/effect/vehicle_spawner/tank/fixed/guard{
+	dir = 4
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gi" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	pixel_x = 10;
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 9;
+	pixel_x = 10;
+	dir = 8
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gj" = (
+/obj/structure/flora/tree/joshua,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gk" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	pixel_x = 10;
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -10;
+	pixel_x = 10;
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 13
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gl" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 13
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 7
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/louise/canteen)
+"gn" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 13
+	},
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"go" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = 2;
+	dir = 1;
+	pixel_x = 13
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gp" = (
+/obj/structure/barricade/sandbags/full{
+	has_offset = 0;
+	pixel_y = -5;
+	pixel_x = 10;
+	dir = 8
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gq" = (
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/northeasthall)
+"gr" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 4
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"gs" = (
+/obj/structure/machinery/camera{
+	network = list("Louise");
+	c_tag = "Pass";
+	tag = "Pass";
+	icon = 'icons/obj/structures/props/dam.dmi';
+	icon_state = "boulder1";
+	name = "boulder";
+	density = 1;
+	desc = "There's something wrong with this boulder...";
+	no_icon_update = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gt" = (
+/obj/structure/flora/grass/desert/lightgrass_2,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gu" = (
+/obj/structure/flora/grass/desert/lightgrass_9,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gv" = (
+/obj/structure/flora/grass/desert/lightgrass_7,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"gx" = (
+/obj/structure/flora/grass/tallgrass/desert,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gy" = (
+/obj/structure/flora/bush/desert{
+	icon_state = "tree_3"
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gz" = (
+/obj/structure/flora/grass/desert/heavygrass_6,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gA" = (
+/obj/structure/flora/grass/desert/lightgrass_12,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gB" = (
+/obj/structure/flora/grass/desert/heavygrass_3,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gC" = (
+/obj/structure/flora/bush/desert{
+	icon_state = "tree_4"
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gD" = (
+/turf/open/desert/dirt/desert_transition_edge1/southwest,
+/area/louise/exterior)
+"gE" = (
+/obj/structure/prop/dam/boulder/boulder2,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gF" = (
+/obj/structure/prop/dam/large_boulder/boulder2,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gG" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 8
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"gH" = (
+/obj/structure/flora/grass/desert/lightgrass_6,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gI" = (
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gJ" = (
+/obj/structure/flora/grass/desert/lightgrass_8,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gK" = (
+/obj/structure/flora/grass/desert/lightgrass_10,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gL" = (
+/obj/structure/machinery/camera{
+	network = list("Louise");
+	c_tag = "Pass";
+	tag = "Pass";
+	icon = 'icons/obj/structures/props/dam.dmi';
+	icon_state = "boulder2";
+	name = "boulder";
+	density = 1;
+	desc = "There's something wrong with this boulder...";
+	no_icon_update = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gM" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northwesthall)
+"gN" = (
+/obj/structure/machinery/camera{
+	network = list("Louise");
+	c_tag = "Tunnel";
+	tag = "Tunnel";
+	icon = 'icons/obj/structures/props/dam.dmi';
+	icon_state = "boulder3";
+	name = "boulder";
+	density = 1;
+	desc = "There's something wrong with this boulder...";
+	no_icon_update = 1
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"gO" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 122;
+	teleport_z = 7;
+	teleport_y = 73
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"gP" = (
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/structure/prop/invuln/darkness{
+	alpha = 255
+	},
+/obj/effect/step_trigger/teleporter{
+	teleport_x = 122;
+	teleport_z = 7;
+	teleport_y = 74
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"gQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"gR" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gS" = (
+/obj/structure/machinery/power/apc/almayer/hardened/east,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/m20,
+/obj/item/ammo_box/magazine/mk1/large/m20{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gT" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gX" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"gY" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 2;
+	req_one_access = list()
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"gZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/item/trash/USCMtray,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"ha" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hb" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/computer/arcade,
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"hc" = (
+/obj/structure/surface/rack,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hd" = (
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"he" = (
+/obj/item/trash/burger,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hf" = (
+/obj/structure/surface/rack,
+/obj/item/storage/bag/trash,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"hh" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 3
+	},
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/maintenance)
+"hl" = (
+/obj/structure/disposalpipe/junction,
+/turf/closed/wall/rock/orange,
+/area/louise/exterior)
+"hm" = (
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hn" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"ho" = (
+/obj/structure/machinery/conveyor{
+	dir = 8;
+	id = "gym_1";
+	name = "treadmill"
+	},
+/obj/structure/plasticflaps,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hp" = (
+/obj/structure/machinery/recycler,
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"hq" = (
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = 6;
+	pixel_y = 52;
+	layer = 3.1
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"hG" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = -8;
+	pixel_y = 19
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_y = 20;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"hX" = (
+/obj/structure/sign/safety/bathunisex{
+	pixel_x = -17;
+	pixel_y = -4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northeasthall)
+"hY" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/shotgun/beanbag{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/structure/machinery/light/small,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"iH" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/corner/north,
+/area/louise/dorms)
+"iM" = (
+/obj/structure/machinery/disposal,
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"iY" = (
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"jb" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717{
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"kk" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/dorms)
+"kl" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"kt" = (
+/obj/structure/machinery/disposal,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"kM" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/prop/static_tank/water{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"kW" = (
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/louise/southeasthall)
+"la" = (
+/obj/structure/window_frame/prefab,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"lb" = (
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 8;
+	pixel_y = 27
+	},
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_y = 27;
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"mg" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"mK" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/machinery/vending/walkman,
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"mY" = (
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/louise/dorms)
+"nl" = (
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"nn" = (
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/dorms)
+"nt" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"nS" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"oc" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 9;
+	pixel_y = -3
+	},
+/obj/structure/mirror{
+	pixel_x = 24
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"od" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/knife{
+	pixel_x = 9
+	},
+/obj/item/tool/kitchen/rollingpin{
+	pixel_y = 4;
+	pixel_x = -6
+	},
+/obj/item/tool/kitchen/can_opener/compact,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"ol" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint0";
+	dir = 2
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"oo" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/power/apc/power/west,
+/obj/item/weapon/gun/flare,
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"oM" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = list()
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"oV" = (
+/obj/structure/cargo_container/wy/left,
+/obj/structure/machinery/light/double,
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"oY" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/kitchen/tray{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_x = 12;
+	pixel_y = 18
+	},
+/obj/item/trash/plate{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/trash/plate{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/tabasco{
+	pixel_y = 18;
+	pixel_x = 2
+	},
+/obj/item/trash/plate{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"pf" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/canteen)
+"pi" = (
+/obj/structure/machinery/power/apc/almayer/hardened/west,
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"pq" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 2;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"pT" = (
+/obj/structure/machinery/power/smes,
+/obj/structure/machinery/power/smes{
+	pixel_x = 0;
+	pixel_y = 17
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"qd" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"ql" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"qn" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"qD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"qS" = (
+/obj/structure/closet/crate/explosives,
+/obj/item/weapon/gun/launcher/rocket/anti_tank/disposable,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"qT" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/canteen)
+"qY" = (
+/obj/structure/machinery/light/small,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"rl" = (
+/obj/structure/prop/almayer/whiteboard{
+	pixel_y = 25;
+	density = 0
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"rm" = (
+/obj/structure/window/framed/prefab,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"rx" = (
+/obj/structure/machinery/light/double,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"rA" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 2
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"rB" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/dorms)
+"rM" = (
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	layer = 3.2;
+	pixel_x = 1;
+	pixel_y = 14
+	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	pixel_x = -3;
+	pixel_y = 36
+	},
+/obj/structure/prop{
+	desc = "A pneumatic waste disposal unit. Seems to be broken.";
+	icon = 'icons/obj/pipes/disposal.dmi';
+	icon_state = "disposal";
+	name = "disposal unit"
+	},
+/obj/item/tool/screwdriver{
+	pixel_x = -7;
+	pixel_y = -11
+	},
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"rQ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"rS" = (
+/obj/structure/machinery/portable_atmospherics/canister/phoron{
+	name = "fuel canister"
+	},
+/obj/structure/machinery/portable_atmospherics/canister/phoron{
+	name = "empty fuel canister";
+	icon_state = "orange-1";
+	pixel_x = -8;
+	pixel_y = -13;
+	density = 0
+	},
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"rY" = (
+/obj/structure/window_frame/prefab,
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"si" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint0";
+	dir = 2
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"sz" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/chem_dispenser/soda{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/canteen)
+"sA" = (
+/turf/open/floor/almayer/edge/north,
+/area/louise/southeasthall)
+"sC" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 2;
+	req_one_access = list()
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"sY" = (
+/obj/structure/machinery/vending/cola,
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/canteen)
+"tl" = (
+/obj/structure/machinery/m56d_hmg/auto{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"tq" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list()
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"ts" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = list()
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"tH" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/north,
+/area/louise/southeasthall)
+"um" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"up" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"uq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"uY" = (
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"ve" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"vp" = (
+/obj/structure/machinery/power/reactor,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"vy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge,
+/area/louise/southeasthall)
+"vB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"vZ" = (
+/obj/structure/machinery/light/double,
+/obj/structure/closet/secure_closet/marine_personal/guard/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/squad_leader{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"wm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/opcenter)
+"wu" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 12;
+	pixel_y = 5
+	},
+/obj/item/toy/deck{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"wC" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	dir = 1;
+	req_access = null
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"wF" = (
+/obj/structure/fence,
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"wP" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/northwesthall)
+"xd" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"xI" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "garage_base"
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"xU" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/item/ashtray/glass{
+	icon_state = "ashtray_half_gl"
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"yd" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"yp" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/general_air_control/large_tank_control{
+	name = "Lower Oxygen Supply Console";
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"yw" = (
+/obj/structure/reagent_dispensers/water_cooler/walk_past{
+	pixel_x = 8;
+	pixel_y = 23
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/canteen)
+"yG" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_one_access_txt = "12";
+	req_access = null
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/northwesthall)
+"yP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"yQ" = (
+/obj/structure/sign/safety/med_life_support{
+	pixel_x = 15;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/medical{
+	pixel_x = 2;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_x = 8;
+	pixel_y = 38
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"zp" = (
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/southeasthall)
+"zx" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"zN" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"zS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/canteen)
+"zT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"AI" = (
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/dorms)
+"AM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/canteen)
+"AT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/louise/dorms)
+"AV" = (
+/obj/structure/largecrate/random/barrel/white{
+	pixel_x = -8;
+	pixel_y = 12;
+	layer = 2.9
+	},
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 7;
+	pixel_y = 9
+	},
+/obj/structure/largecrate/random/barrel/blue,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"AZ" = (
+/obj/structure/closet/crate/explosives,
+/obj/item/ammo_box/magazine/nade_box/m15,
+/obj/item/ammo_box/magazine/nade_box/m15,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"Bi" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/garage)
+"Bn" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/opcenter)
+"Bs" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/railing{
+	id = "checkpoint1"
+	},
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"BV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"BZ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/louise/entrancetunnel)
+"Cx" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"CE" = (
+/obj/item/prop/colony/canister{
+	pixel_x = -14;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"Dg" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = list()
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/survival)
+"DF" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/closet/crate,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_x = -30;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"DL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"DP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"DX" = (
+/obj/structure/sign/safety/galley{
+	pixel_x = 32;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/coffee{
+	pixel_x = 32;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/northeasthall)
+"Ea" = (
+/obj/structure/machinery/power/apc/almayer/hardened/north,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"Ef" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/louise/dorms)
+"Ei" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"Ev" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"FE" = (
+/obj/structure/pipes/standard/tank/air{
+	dir = 8
+	},
+/turf/open/floor/corsat,
+/area/louise/engineering)
+"Gb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/exterior)
+"Gy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"GA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/louise/northeasthall)
+"GD" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"GT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"Ha" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"Hl" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/surface/table/almayer,
+/obj/item/toy/minesweeper{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"Hm" = (
+/obj/structure/bed/chair/comfy{
+	buckling_y = 2;
+	dir = 8;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"Hn" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt,
+/area/louise/checkpoint)
+"Hz" = (
+/obj/structure/machinery/pipedispenser,
+/turf/open/floor/almayer,
+/area/louise/engineering)
+"HV" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"HZ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/hangar)
+"Ic" = (
+/obj/item/hardpoint/locomotion/van_wheels{
+	pixel_x = -7;
+	pixel_y = 13;
+	layer = 3
+	},
+/obj/item/tool/wrench,
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"IM" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"Jb" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"Jq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/louise/opcenter)
+"Jv" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal3"
+	},
+/obj/effect/decal/sand_overlay/sand1,
+/turf/open/asphalt,
+/area/louise/exterior)
+"Ko" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/obj/item/folder/black{
+	pixel_x = -11;
+	pixel_y = 11
+	},
+/obj/item/tool/pen{
+	pixel_x = -10;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"Ku" = (
+/obj/effect/vehicle_spawner/military_truck{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"Kw" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	dir = 4;
+	id = "uacgarmory"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/armory)
+"KI" = (
+/obj/structure/cargo_container/kelland/left,
+/obj/structure/cargo_container/kelland/left{
+	pixel_x = 0;
+	pixel_y = 23
+	},
+/obj/structure/cargo_container/kelland/right{
+	pixel_x = 0;
+	pixel_y = 45
+	},
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"Lt" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"LE" = (
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"Ms" = (
+/turf/open/desert/dirt,
+/area/louise/exterior)
+"Mv" = (
+/obj/structure/sign/safety/synth_storage{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/southeasthall)
+"Mw" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 12;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"MO" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "checkpoint0"
+	},
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"Nj" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 2;
+	req_one_access = list()
+	},
+/turf/open/floor/corsat,
+/area/louise/maintenance)
+"Oy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	dir = 1
+	},
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/synth)
+"OH" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/bathroom)
+"OL" = (
+/obj/structure/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/louise/canteen)
+"Pa" = (
+/obj/structure/cargo_container/kelland/right,
+/obj/structure/cargo_container/kelland/right{
+	pixel_x = 0;
+	pixel_y = 23
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"Pw" = (
+/obj/structure/cargo_container/wy/mid,
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"PS" = (
+/obj/structure/machinery/light/double,
+/turf/open/floor/almayer,
+/area/louise/entrancetunnel)
+"PU" = (
+/obj/structure/surface/table/almayer,
+/obj/item/paper_bin,
+/obj/item/tool/pen/clicky,
+/turf/open/floor/almayer,
+/area/louise/northwesthall)
+"Qj" = (
+/obj/structure/bed{
+	can_buckle = 0
+	},
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/louise/dorms)
+"Qq" = (
+/obj/structure/machinery/vending/hydronutrients,
+/turf/open/floor/almayer,
+/area/louise/survival)
+"Qr" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"Qv" = (
+/turf/open/floor/almayer,
+/area/louise/checkpoint)
+"QB" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"QT" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal8"
+	},
+/obj/effect/decal/sand_overlay/sand1/corner1{
+	dir = 4
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"Rl" = (
+/obj/structure/surface/rack,
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"Ro" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/louise/bathroom)
+"Rs" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/guard,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"Rz" = (
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"RH" = (
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/landmark/start/marine/smartgunner/guard,
+/obj/effect/landmark/late_join,
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"RJ" = (
+/obj/structure/largecrate/supply/supplies/water{
+	layer = 2.9
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/survival)
+"RP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/louise/medical)
+"RZ" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal10"
+	},
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 1
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"Sl" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal4"
+	},
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 1
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"Sq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/louise/canteen)
+"Sy" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"SK" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal12"
+	},
+/obj/effect/decal/sand_overlay/sand1{
+	dir = 10
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"SV" = (
+/turf/open/floor/almayer/edge,
+/area/louise/southeasthall)
+"SX" = (
+/obj/structure/cargo_container/wy/right,
+/obj/structure/cargo_container/kelland/left{
+	pixel_x = 0;
+	pixel_y = 45
+	},
+/turf/open/floor/almayer,
+/area/louise/hangar)
+"TL" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/hotsauce/sriracha,
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"TR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/louise/armory)
+"TZ" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"Ue" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"Ul" = (
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"UU" = (
+/turf/closed/wall/shiva/prefabricated,
+/area/louise/maintenance)
+"UX" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/edge/north,
+/area/louise/southeasthall)
+"Va" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list()
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"Wp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plate,
+/area/louise/opcenter)
+"Wz" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -13;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/louise/canteen)
+"WA" = (
+/turf/open/desert/rock,
+/area/louise/exterior)
+"WZ" = (
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/toy/plush/box,
+/turf/open/floor/almayer/edge/smooth,
+/area/louise/dorms)
+"Xo" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	layer = 5
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/canteen)
+"Xv" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+"Xx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"Ya" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 9;
+	pixel_y = -3
+	},
+/obj/item/weapon/straight_razor{
+	pixel_x = 7;
+	pixel_y = -10
+	},
+/obj/structure/mirror{
+	pixel_x = 24
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/louise/bathroom)
+"YV" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/turf/open/floor/almayer/mono,
+/area/louise/opcenter)
+"YZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/asphalt,
+/area/louise/exterior)
+"Ze" = (
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/louise/southeasthall)
+"Zh" = (
+/obj/structure/surface/rack,
+/obj/effect/spawner/random/technology_scanner,
+/turf/open/floor/almayer/plate,
+/area/louise/engineering)
+"Zk" = (
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/guard/rifleman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer,
+/area/louise/dorms)
+"Zz" = (
+/obj/structure/surface/rack,
+/obj/item/hardpoint/locomotion/van_treads,
+/turf/open/floor/almayer/mono,
+/area/louise/garage)
+"ZP" = (
+/obj/structure/machinery/power/smes,
+/obj/structure/machinery/power/smes{
+	pixel_x = 0;
+	pixel_y = 17
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/plating/northeast,
+/area/louise/engineering)
+
+(1,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(2,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(3,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(4,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(5,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(6,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+cY
+cY
+cY
+bY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(7,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+cY
+cY
+dG
+dG
+dG
+dG
+dG
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(8,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+cY
+dG
+dH
+eb
+eb
+eb
+dH
+dH
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(9,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+dG
+dG
+dH
+dH
+dH
+dH
+dH
+dG
+dG
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(10,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+dG
+dH
+dH
+dG
+dG
+dG
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(11,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ek
+cY
+cY
+dG
+dG
+dH
+dH
+cY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(12,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+fK
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+WA
+WA
+ek
+cY
+cY
+dG
+dG
+dH
+dG
+cY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(13,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+fK
+WA
+WA
+WA
+WA
+WA
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+eP
+eM
+eH
+eB
+cY
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(14,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+eI
+eC
+cY
+dG
+cY
+cY
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(15,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+cY
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(16,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(17,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fW
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(18,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(19,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gj
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(20,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(21,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eo
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gj
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+la
+cy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(22,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(23,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gt
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(24,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gj
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eI
+ff
+fa
+gK
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+ff
+fa
+gv
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(25,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gJ
+fg
+gx
+fa
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fe
+fg
+gx
+fa
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(26,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+ff
+gx
+gx
+fd
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gt
+eC
+gx
+gx
+fa
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(27,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+fg
+gx
+fd
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gB
+gu
+gB
+eC
+eB
+fb
+gt
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(28,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eC
+fd
+gu
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gC
+Ms
+eI
+eC
+fd
+gu
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(29,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gt
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gD
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fe
+eQ
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(30,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+ff
+fa
+Ms
+Ms
+eQ
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(31,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gz
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gk
+Ms
+ga
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fg
+fb
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(32,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gl
+Ms
+gb
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eC
+fd
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(33,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gn
+gh
+gb
+Ms
+Ms
+Ms
+Ms
+fA
+fA
+fA
+fA
+fA
+Ms
+Ms
+Ms
+Ms
+eQ
+Ms
+Ms
+eQ
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(34,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+go
+Ms
+gc
+Ms
+Ms
+Ms
+Ms
+rY
+Qv
+fC
+oo
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(35,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+gN
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gp
+gi
+ge
+Ms
+Ms
+Ms
+Ms
+rY
+Qv
+fD
+Qv
+Qv
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(36,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+rY
+fJ
+fE
+MO
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(37,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fA
+rY
+rY
+rY
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(38,1,1) = {"
+cT
+cQ
+al
+cL
+cL
+cL
+cH
+cD
+cA
+cv
+cs
+co
+ck
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+gr
+gr
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+Bs
+fv
+fv
+fv
+bR
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+cZ
+SK
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(39,1,1) = {"
+cU
+cR
+bQ
+cO
+cM
+cM
+cI
+cE
+cB
+cw
+ct
+cp
+cl
+da
+da
+dc
+db
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+db
+db
+df
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+da
+da
+dc
+db
+db
+dc
+da
+da
+dc
+db
+db
+df
+da
+da
+dc
+da
+da
+dc
+da
+da
+df
+db
+db
+dc
+da
+da
+dc
+da
+da
+dc
+da
+fM
+DP
+Hn
+Hn
+ar
+db
+db
+dc
+da
+da
+dc
+db
+db
+df
+da
+da
+dc
+da
+da
+df
+db
+db
+dc
+da
+db
+dc
+da
+da
+dc
+da
+Jv
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+"}
+(40,1,1) = {"
+cV
+gP
+gO
+cP
+cM
+cM
+cJ
+cE
+cB
+cx
+ct
+cp
+cm
+da
+da
+de
+da
+db
+dd
+da
+db
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+dd
+db
+db
+dd
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+db
+dd
+db
+db
+dd
+db
+da
+de
+da
+da
+de
+da
+da
+de
+da
+da
+dd
+da
+da
+de
+da
+da
+de
+da
+da
+de
+da
+fN
+yP
+Hn
+bb
+ol
+da
+db
+dd
+db
+db
+dd
+db
+da
+de
+da
+da
+de
+db
+db
+de
+da
+da
+de
+da
+da
+dd
+db
+da
+YZ
+Gb
+Jv
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+"}
+(41,1,1) = {"
+cW
+cS
+dm
+cN
+cN
+cN
+cK
+cG
+cC
+cz
+cu
+cr
+cn
+dC
+dC
+dC
+dC
+dC
+dC
+dg
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+gG
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dg
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+fO
+zN
+fw
+fw
+si
+dC
+dC
+dC
+dg
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+QT
+da
+db
+Jv
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+"}
+(42,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+dT
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fA
+fA
+fA
+fA
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Sl
+db
+db
+Jv
+rS
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+"}
+(43,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+rY
+Qv
+Qv
+Qv
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Sl
+Gy
+hg
+ds
+Bi
+Bi
+Bi
+Bi
+Bi
+Bi
+Bi
+bo
+bo
+"}
+(44,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gz
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fP
+tl
+fF
+Qv
+Qv
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Sl
+da
+da
+ds
+xI
+nl
+IM
+pi
+CE
+Ul
+Bi
+bo
+bo
+"}
+(45,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+rY
+Qv
+dj
+di
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+Ms
+WA
+WA
+Sl
+da
+db
+ds
+xI
+nl
+nl
+nl
+Ku
+Ic
+Bi
+bo
+bo
+"}
+(46,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fA
+fA
+fA
+fA
+fA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+Sl
+Gy
+Gb
+ds
+xI
+nl
+nl
+nl
+nl
+nl
+Bi
+bo
+bo
+"}
+(47,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gE
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gz
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+Ms
+WA
+Sl
+db
+da
+ds
+xI
+nl
+nl
+nl
+nl
+Zz
+Bi
+bo
+bo
+"}
+(48,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gE
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+Sl
+da
+db
+dt
+Bi
+Bi
+Bi
+oM
+Bi
+Bi
+Bi
+bo
+bo
+"}
+(49,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gt
+gI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eo
+Ms
+WA
+WA
+WA
+WA
+WA
+Sl
+Gy
+dJ
+ds
+dq
+fc
+nl
+nl
+nl
+Rl
+Bi
+bo
+bo
+"}
+(50,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gI
+gK
+ff
+fa
+gJ
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+Sl
+db
+ve
+yd
+dq
+nl
+nl
+nl
+nl
+nl
+Bi
+bo
+bo
+"}
+(51,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eQ
+ff
+gx
+fb
+fe
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+dT
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+Sl
+db
+da
+yd
+dq
+nl
+nl
+nl
+nl
+nl
+Bi
+WA
+bo
+"}
+(52,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+ff
+gx
+gx
+fd
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Sl
+um
+hg
+ds
+dq
+nl
+GD
+nl
+nl
+Rl
+Bi
+WA
+bo
+"}
+(53,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+eC
+eH
+fd
+gu
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Sl
+db
+da
+ds
+Bi
+Bi
+Bi
+Bi
+Bi
+Bi
+Bi
+WA
+bo
+"}
+(54,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+fe
+gH
+gJ
+eI
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+dD
+RZ
+TZ
+TZ
+ef
+WA
+WA
+WA
+WA
+Ms
+Ms
+WA
+WA
+bo
+"}
+(55,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+"}
+(56,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+la
+fx
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+dE
+dK
+dK
+dK
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+"}
+(57,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+ec
+dL
+dL
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+"}
+(58,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gs
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+up
+dM
+rx
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+bo
+"}
+(59,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dM
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(60,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dE
+dE
+dE
+dE
+dN
+dM
+dM
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(61,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gj
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dE
+dE
+dE
+dE
+ex
+ep
+cX
+eh
+dN
+dN
+dN
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(62,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dN
+eD
+dN
+eq
+el
+ei
+dM
+dM
+dN
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(63,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+wF
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dN
+dE
+ey
+dN
+em
+ei
+dM
+dN
+dN
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(64,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+fK
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dE
+dE
+dE
+dE
+dE
+BZ
+dM
+dN
+dM
+dE
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(65,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dE
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dM
+dE
+bo
+bo
+do
+do
+do
+do
+do
+do
+ac
+UU
+UU
+bo
+bo
+"}
+(66,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+dE
+eR
+dN
+dE
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dM
+dE
+bo
+bo
+do
+gd
+gd
+ae
+RJ
+kM
+ac
+LE
+UU
+bo
+bo
+"}
+(67,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gy
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+aJ
+aJ
+aJ
+aJ
+aJ
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dE
+bo
+bo
+bo
+bo
+dE
+as
+dN
+PS
+dE
+bo
+bo
+do
+gd
+gd
+zT
+RJ
+kM
+ac
+LE
+UU
+bo
+bo
+"}
+(68,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+aJ
+aJ
+bO
+bK
+bM
+aJ
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dE
+bo
+bo
+bo
+bo
+dE
+ed
+dO
+dO
+dE
+bo
+bo
+do
+gd
+gd
+zT
+RJ
+kM
+ac
+LE
+UU
+bo
+bo
+"}
+(69,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+fG
+fG
+fG
+fG
+fG
+fG
+aJ
+ft
+bP
+Ei
+fn
+aJ
+bo
+bo
+bo
+bo
+bo
+dE
+dN
+dN
+dE
+bo
+ak
+ak
+ak
+ak
+ee
+dP
+dP
+ak
+ak
+ak
+du
+gd
+dr
+af
+RJ
+kM
+ac
+LE
+UU
+bo
+bo
+"}
+(70,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+bU
+yG
+aJ
+qn
+PU
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+eJ
+eS
+eJ
+eJ
+aJ
+ak
+AV
+dv
+dv
+eg
+dU
+dQ
+dv
+ao
+dv
+du
+do
+do
+Dg
+do
+do
+ac
+LE
+UU
+bo
+bo
+"}
+(71,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+fG
+fG
+fG
+cb
+ce
+cb
+cb
+bX
+fy
+eX
+aN
+eX
+eX
+gM
+gM
+wP
+gM
+eX
+eX
+eX
+gM
+gM
+wP
+aK
+ez
+er
+dA
+dA
+dz
+dV
+dA
+dA
+dz
+dw
+aj
+DL
+dp
+dp
+ap
+dn
+Nj
+LE
+UU
+bo
+bo
+"}
+(72,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+fG
+fG
+fX
+cb
+fQ
+fQ
+cb
+fH
+fz
+fu
+eK
+eK
+fo
+eK
+eK
+eK
+eK
+eK
+eK
+eK
+eU
+eK
+eK
+eE
+aC
+es
+dv
+dv
+dv
+dW
+dR
+dv
+dv
+dx
+dv
+dp
+ql
+kl
+ad
+Qq
+ac
+LE
+UU
+bo
+bo
+"}
+(73,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+fG
+fG
+fY
+fU
+fQ
+Wp
+kt
+fG
+bA
+bA
+Kw
+Kw
+bA
+bA
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+aJ
+ak
+et
+dv
+dv
+dv
+dY
+dS
+dx
+dv
+dv
+du
+do
+Dg
+do
+do
+do
+ac
+LE
+UU
+bo
+bo
+"}
+(74,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+ch
+fQ
+fQ
+cb
+fG
+fG
+bV
+Ha
+fr
+fr
+jb
+bA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+ak
+ev
+en
+ej
+dA
+dZ
+dA
+dA
+dA
+oV
+du
+bH
+ql
+bH
+ac
+LE
+LE
+LE
+UU
+bo
+bo
+"}
+(75,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+rl
+fV
+fS
+cc
+fG
+fG
+bW
+fr
+TR
+TR
+hY
+bA
+eF
+eF
+eF
+eF
+eF
+eF
+eF
+eF
+eF
+eF
+ak
+yQ
+dv
+dv
+dv
+dY
+dv
+dv
+dv
+Pw
+du
+bH
+ql
+bH
+ac
+LE
+UU
+UU
+UU
+bo
+bo
+"}
+(76,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+fG
+cb
+fV
+fQ
+cb
+fG
+fG
+bV
+hq
+fr
+TR
+qS
+bA
+br
+bl
+be
+be
+ba
+aY
+aL
+aL
+RP
+aL
+ez
+dv
+dv
+dx
+dx
+dW
+dv
+dv
+dv
+SX
+du
+ai
+dp
+ah
+ac
+LE
+UU
+bo
+bo
+bo
+bo
+"}
+(77,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+fG
+Wp
+Wp
+cf
+Jq
+cb
+cb
+fG
+bA
+bE
+fr
+TR
+AZ
+bA
+bs
+be
+be
+be
+ba
+aZ
+aL
+aL
+aO
+aL
+aC
+er
+dA
+dA
+dA
+dZ
+dA
+dA
+dA
+KI
+du
+bH
+ag
+bH
+ac
+LE
+UU
+bo
+bo
+bo
+bo
+"}
+(78,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+Ms
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+gf
+cb
+Bn
+YV
+Qr
+wm
+cb
+bZ
+bA
+bN
+fr
+TR
+fp
+bA
+bt
+be
+be
+bf
+eF
+eF
+eF
+eF
+eF
+eF
+ak
+ew
+dv
+dv
+dv
+ea
+bL
+dB
+dB
+Pa
+du
+do
+do
+do
+ac
+LE
+UU
+bo
+bo
+bo
+bo
+"}
+(79,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+Ms
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+ch
+cb
+Bn
+Lt
+Ko
+wm
+fL
+ca
+bA
+Rs
+TR
+fr
+fp
+bA
+bu
+be
+be
+eF
+eF
+bo
+bo
+bo
+bo
+bo
+ak
+ak
+aC
+aw
+ak
+ak
+ak
+dB
+HZ
+UU
+UU
+LE
+UU
+LE
+Nj
+LE
+UU
+bo
+bo
+bo
+bo
+"}
+(80,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+cj
+Wp
+Bn
+xU
+Ue
+wm
+cb
+fI
+bA
+bS
+fr
+fr
+qY
+bA
+bh
+bh
+bh
+eF
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+aG
+aD
+ax
+UU
+LE
+UU
+zp
+Ze
+UU
+LE
+LE
+UU
+LE
+UU
+LE
+UU
+bo
+bo
+bo
+bo
+"}
+(81,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+fG
+fZ
+cb
+cb
+uq
+cb
+cb
+fG
+bA
+gX
+fr
+gT
+gS
+bA
+bv
+bm
+bi
+eF
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+aG
+aE
+ay
+UU
+LE
+UU
+sA
+SV
+Nj
+LE
+LE
+LE
+LE
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+"}
+(82,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+gj
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+bA
+bA
+bA
+bA
+bA
+bA
+bw
+bn
+bj
+eF
+eG
+eG
+eG
+eG
+eG
+eG
+bo
+aG
+aE
+ay
+UU
+LE
+UU
+sA
+SV
+UU
+UU
+UU
+UU
+LE
+LE
+LE
+LE
+LE
+LE
+LE
+UU
+"}
+(83,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+fG
+bT
+ac
+LE
+LE
+LE
+bB
+eG
+eG
+eG
+eG
+qd
+eG
+qd
+eG
+qd
+eG
+bo
+aG
+aE
+az
+UU
+LE
+UU
+UX
+SV
+aa
+ts
+cq
+aa
+ab
+ab
+ab
+ab
+ab
+ab
+LE
+UU
+"}
+(84,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+LE
+UU
+fq
+eG
+Ro
+Ro
+Ro
+eG
+fB
+eG
+fB
+eG
+fB
+eG
+bo
+aG
+aE
+ay
+UU
+LE
+UU
+UX
+SV
+aa
+aB
+rQ
+tq
+ab
+at
+nt
+yp
+Hz
+ab
+LE
+UU
+"}
+(85,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+LE
+UU
+UU
+eG
+bx
+eN
+eN
+rA
+eN
+aW
+vB
+aW
+vB
+eG
+bo
+aG
+aE
+ay
+Nj
+LE
+UU
+UX
+SV
+dy
+rQ
+rQ
+iY
+dl
+iY
+iY
+iY
+iY
+ab
+LE
+UU
+"}
+(86,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+LE
+LE
+LE
+eG
+OH
+OH
+OH
+eG
+oc
+Ya
+Xx
+cd
+aP
+eG
+bo
+aG
+aE
+ay
+UU
+LE
+UU
+sA
+SV
+aa
+Zh
+gg
+dI
+ab
+rm
+rm
+rm
+rm
+ab
+LE
+UU
+"}
+(87,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+LE
+UU
+UU
+eG
+eG
+eG
+eG
+eG
+eG
+eG
+eV
+eG
+eG
+eG
+aG
+aG
+aE
+ay
+UU
+LE
+UU
+tH
+SV
+aa
+aa
+mg
+aa
+ab
+FE
+FE
+FE
+FE
+ab
+LE
+UU
+"}
+(88,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+gH
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gU
+av
+GA
+dh
+gQ
+dk
+dh
+dh
+dh
+hX
+cg
+eA
+eA
+eA
+eA
+eW
+aF
+ay
+UU
+LE
+UU
+sA
+SV
+aa
+pT
+Rz
+pT
+ab
+ab
+ab
+ab
+ab
+ab
+LE
+UU
+"}
+(89,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+fs
+gq
+fk
+fi
+fT
+DX
+aI
+uY
+uY
+uY
+uY
+uY
+uY
+aI
+uY
+uY
+aA
+UU
+LE
+UU
+sA
+SV
+aa
+QB
+GT
+dX
+aa
+vp
+eT
+vp
+aa
+LE
+LE
+UU
+"}
+(90,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+eZ
+eZ
+eZ
+qT
+eZ
+eZ
+au
+au
+au
+kk
+au
+au
+au
+UU
+UU
+UU
+UU
+LE
+UU
+sA
+SV
+aa
+Ea
+GT
+Rz
+wC
+Rz
+Rz
+Rz
+sC
+LE
+UU
+UU
+"}
+(91,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+gL
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+sz
+bD
+by
+bp
+fR
+eZ
+cF
+eY
+rB
+AT
+rB
+mY
+au
+LE
+LE
+LE
+Nj
+LE
+UU
+dF
+vy
+aa
+Xv
+GT
+HV
+aa
+vp
+vp
+vp
+aa
+LE
+UU
+bo
+"}
+(92,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+Sq
+zx
+bq
+gw
+sY
+eZ
+AI
+eL
+eL
+eL
+eL
+vZ
+au
+LE
+UU
+UU
+UU
+LE
+UU
+Mv
+kW
+aa
+ZP
+Va
+pT
+aa
+aa
+aa
+aa
+aa
+LE
+UU
+bo
+"}
+(93,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+bG
+fl
+bq
+fm
+OL
+eZ
+nn
+Zk
+iH
+eL
+eL
+aM
+au
+LE
+UU
+bo
+UU
+LE
+am
+am
+nS
+am
+am
+aa
+aa
+aa
+LE
+LE
+LE
+LE
+LE
+UU
+bo
+"}
+(94,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+bF
+Mw
+fj
+AM
+eZ
+eZ
+eZ
+eZ
+rM
+eL
+eL
+Hl
+au
+LE
+UU
+bo
+UU
+LE
+am
+bd
+qD
+an
+am
+LE
+LE
+LE
+LE
+UU
+UU
+UU
+UU
+UU
+bo
+"}
+(95,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+gV
+eZ
+bF
+bC
+fj
+gm
+Xo
+bg
+iM
+eZ
+hb
+aU
+aQ
+RH
+au
+LE
+UU
+bo
+UU
+LE
+am
+Oy
+qD
+qD
+am
+LE
+UU
+UU
+UU
+UU
+bo
+bo
+bo
+bo
+bo
+"}
+(96,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+UU
+UU
+UU
+UU
+UU
+gV
+eZ
+bF
+wu
+fj
+ci
+bk
+bg
+Sy
+eZ
+xd
+eu
+aR
+Jb
+au
+LE
+UU
+bo
+UU
+LE
+am
+aq
+an
+aH
+am
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(97,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+hm
+hh
+hd
+gZ
+UU
+gV
+eZ
+bF
+Wz
+fj
+ci
+fh
+bg
+oY
+eZ
+DF
+aR
+aS
+mK
+au
+LE
+UU
+bo
+UU
+LE
+am
+am
+am
+am
+am
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(98,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+hn
+hi
+LE
+gV
+UU
+gV
+eZ
+bI
+TL
+fj
+BV
+hG
+bg
+od
+eZ
+xd
+eO
+aT
+Jb
+au
+LE
+UU
+bo
+UU
+LE
+LE
+LE
+LE
+LE
+LE
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(99,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+hn
+hj
+he
+gV
+UU
+gV
+eZ
+bJ
+Hm
+bq
+Ev
+eZ
+lb
+bc
+eZ
+pq
+aT
+aU
+WZ
+au
+LE
+UU
+bo
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(100,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+ho
+hk
+LE
+ha
+gY
+gW
+eZ
+yw
+bz
+zS
+pf
+bg
+bg
+Cx
+eZ
+Qj
+aX
+aV
+Ef
+au
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(101,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+Ms
+Ms
+Ms
+Ms
+Ms
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+hp
+hk
+hf
+hc
+UU
+LE
+eZ
+eZ
+eZ
+eZ
+eZ
+eZ
+eZ
+eZ
+eZ
+au
+au
+au
+au
+au
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(102,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+Ms
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+UU
+UU
+UU
+UU
+UU
+LE
+LE
+LE
+LE
+gR
+LE
+LE
+LE
+Nj
+LE
+LE
+LE
+LE
+LE
+LE
+LE
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(103,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+WA
+WA
+WA
+WA
+WA
+WA
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+UU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(104,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+hl
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(105,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(106,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(107,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(108,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(109,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(110,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(111,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}
+(112,1,1) = {"
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+"}

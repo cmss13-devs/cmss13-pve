@@ -40,8 +40,10 @@
 /obj/structure/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(!indestructible && !unacidable && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
-		playsound(V, 'sound/effects/metal_crash.ogg', 20)
+		if(!excavatable)
+			playsound(V, 'sound/effects/metal_crash.ogg', 20)
 		qdel(src)
+		return FALSE
 	if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM || V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		return TRUE
 	return FALSE

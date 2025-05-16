@@ -12,6 +12,7 @@
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/alien = FALSE
+	var/can_apply_over_spacesuits = FALSE
 
 /obj/item/stack/medical/attack_self(mob/user)
 	..()
@@ -38,11 +39,11 @@
 		return 1
 
 	if(affecting.display_name == "head")
-		if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
+		if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space) && !can_apply_over_spacesuits)
 			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.head]!"))
 			return 1
 	else
-		if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
+		if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space) && !can_apply_over_spacesuits)
 			to_chat(user, SPAN_WARNING("You can't apply [src] through [H.wear_suit]!"))
 			return 1
 
@@ -347,7 +348,7 @@
 	amount = 5
 	max_amount = 5
 	stack_id = "splint"
-
+	can_apply_over_spacesuits = TRUE
 	var/indestructible_splints = FALSE
 
 /obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user, mob/living/carbon/target)
