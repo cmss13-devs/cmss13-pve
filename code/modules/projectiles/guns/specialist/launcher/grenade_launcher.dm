@@ -314,7 +314,8 @@
 	auto_retrieval_slot = WEAR_BACK
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	wield_delay = WIELD_DELAY_NORMAL
-	valid_munitions = list(/obj/item/explosive/grenade/high_explosive/impact/rmc20mm,
+	valid_munitions = list(
+	/obj/item/explosive/grenade/high_explosive/impact/rmc20mm,
 	/obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm,
 	/obj/item/explosive/grenade/incendiary/airburst/rmc20mm,
 	/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm,
