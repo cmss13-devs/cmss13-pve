@@ -103,7 +103,6 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define CLF_CMD_FREQ 1272
 #define CLF_ENGI_FREQ 1273
 #define CLF_MED_FREQ 1274
-#define CLF_CCT_FREQ 1275
 
 //Listening Bugs (1290-1291)
 #define BUG_A_FREQ 1290
@@ -210,7 +209,6 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_CLF_CMD = CLF_CMD_FREQ,
 	RADIO_CHANNEL_CLF_ENGI = CLF_ENGI_FREQ,
 	RADIO_CHANNEL_CLF_MED = CLF_MED_FREQ,
-	RADIO_CHANNEL_CLF_CCT = CLF_CCT_FREQ,
 
 	RADIO_CHANNEL_BUG_A = BUG_A_FREQ,
 	RADIO_CHANNEL_BUG_B = BUG_B_FREQ,
@@ -223,7 +221,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 #define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
 
 // CLF Frequencies
-#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ, CLF_CCT_FREQ)
+#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ)
 
 // PMC Frequencies
 #define PMC_FREQS list(PMC_FREQ, PMC_CMD_FREQ, PMC_ENGI_FREQ, PMC_MED_FREQ, PMC_CCT_FREQ, WY_WO_FREQ, WY_FREQ)
@@ -311,7 +309,6 @@ SUBSYSTEM_DEF(radio)
 		"[CLF_CMD_FREQ]" = "opforcmd",
 		"[CLF_ENGI_FREQ]" = "opforeng",
 		"[CLF_MED_FREQ]" = "opformed",
-		"[CLF_CCT_FREQ]" = "opforcct",
 	)
 
 /datum/controller/subsystem/radio/proc/add_object(obj/device as obj, new_frequency as num, filter = null as text|null)
