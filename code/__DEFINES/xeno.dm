@@ -434,7 +434,7 @@
 #define XENO_HEALTH_MOD_MED 60
 #define XENO_HEALTH_MOD_LARGE   80
 #define XENO_HEALTH_MOD_VERY_LARGE  100
-#define XENO_HEALTH_MOD_ACIDER  115
+#define XENO_HEALTH_MOD_ACIDER  -60
 
 // Armor mods. Use the above defines for some guidance
 // In general, +20 armor should be a little more than +20% effective HP, however,

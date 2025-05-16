@@ -168,6 +168,9 @@
 	if(hide)
 		hide.post_attack()
 
+/mob/living/carbon/xenomorph/runner/acider
+	crit_health = 0
+
 /mob/living/carbon/xenomorph/runner/acider/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
 	. = ..()
 	playsound(src, 'sound/effects/acider.ogg', 100, TRUE, 30, falloff = 5)
