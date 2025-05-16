@@ -1243,7 +1243,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -2456,7 +2455,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -3636,7 +3634,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4418,7 +4415,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -5914,7 +5910,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer,
@@ -6746,6 +6741,23 @@
 /obj/structure/cargo_container/seegson/left,
 /turf/open/floor/plating,
 /area/westerneye/hull/port_warehouse)
+"csN" = (
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/turf/open/floor/almayer{
+	icon_state = "cargo"
+	},
+/area/westerneye/hallways/hangar)
 "ctc" = (
 /obj/structure/machinery/cm_vending/gear/spec,
 /turf/open/floor/almayer,
@@ -7855,7 +7867,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/dropship_equipment/fulton_system,
@@ -8103,7 +8114,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -8697,7 +8707,12 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
+	interactable_projections = 0
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -10522,7 +10537,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -15399,12 +15413,17 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/sign/safety/opens_up{
 	pixel_x = 8;
 	pixel_y = 23
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/westerneye/hallways/hangar)
@@ -18311,6 +18330,21 @@
 	icon_state = "plate"
 	},
 /area/westerneye/command/cichallway)
+"gfs" = (
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/westerneye/hallways/hangar)
 "gfw" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -18348,7 +18382,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/sign/safety/landingzone{
@@ -18477,6 +18510,18 @@
 	icon_state = "kitchen"
 	},
 /area/westerneye/living/kitchen)
+"giy" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/westerneye/hallways/hangar)
 "giX" = (
 /turf/closed/wall/almayer/reinforced,
 /area/westerneye/shipboard/brig/armory)
@@ -20282,6 +20327,7 @@
 	pixel_x = -6;
 	pixel_y = 7
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/westerneye/hallways/hangar)
 "gPV" = (
@@ -22438,7 +22484,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer,
@@ -23236,7 +23281,12 @@
 	pixel_x = -13;
 	pixel_y = 8
 	},
-/obj/effect/step_trigger/clone_cleaner,
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
 /turf/open/floor/almayer,
 /area/westerneye/hallways/hangar)
 "hLI" = (
@@ -24124,14 +24174,13 @@
 /turf/open/floor/almayer,
 /area/westerneye/command/cichallway)
 "icm" = (
-/obj/structure/machinery/landinglight/ds2/delaytwo{
-	dir = 8
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
 	},
 /obj/effect/projector{
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -25424,7 +25473,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -31633,7 +31681,11 @@
 	},
 /area/westerneye/shipboard/brig/chief_mp_office)
 "kFT" = (
-/turf/open/floor/kutjevo/tan/multi_tiles/east,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = -87
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/void,
 /area/westerneye/shipboard/navigation)
 "kFU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -32709,6 +32761,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating/plating_catwalk,
 /area/westerneye/hallways/hangar)
 "kXX" = (
@@ -33793,7 +33846,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -34044,7 +34096,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -35216,7 +35267,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -39606,7 +39656,11 @@
 	icon_state = "lattice12";
 	pixel_y = 16
 	},
-/turf/open/floor/kutjevo/tan/multi_tiles/east,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = -87
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/void,
 /area/westerneye/shipboard/navigation)
 "nol" = (
 /obj/structure/machinery/light{
@@ -39962,7 +40016,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -42871,6 +42924,23 @@
 	icon_state = "test_floor4"
 	},
 /area/westerneye/hallways/port_escape_hallway)
+"ovz" = (
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
+/turf/open/floor/almayer{
+	icon_state = "test_floor4"
+	},
+/area/westerneye/hallways/hangar)
 "ovE" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer{
@@ -43737,7 +43807,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -45482,7 +45551,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer,
@@ -47535,7 +47603,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -49982,7 +50049,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -50167,7 +50233,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -50938,7 +51003,12 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
+	interactable_projections = 0
+	},
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
 	interactable_projections = 0
 	},
 /turf/closed/wall/almayer,
@@ -56257,7 +56327,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer,
@@ -57284,7 +57353,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/sign/safety/landingzone{
@@ -57353,6 +57421,7 @@
 /obj/structure/platform{
 	layer = 3.1
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/westerneye/hallways/hangar)
 "toy" = (
@@ -57984,7 +58053,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -58028,7 +58096,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/almayer{
@@ -60941,7 +61008,12 @@
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 4
 	},
-/obj/effect/step_trigger/clone_cleaner,
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -61890,7 +61962,12 @@
 /obj/structure/machinery/landinglight/ds2/delaytwo{
 	dir = 8
 	},
-/obj/effect/step_trigger/clone_cleaner,
+/obj/effect/projector{
+	name = "Wayfinder_Hangar_Up";
+	vector_x = 87;
+	layer_override = 1.95;
+	interactable_projections = 0
+	},
 /turf/open/floor/almayer{
 	icon_state = "plate"
 	},
@@ -63217,7 +63294,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -63269,7 +63345,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -67159,7 +67234,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/machinery/landinglight/ds1/delayone{
@@ -68325,6 +68399,7 @@
 /area/westerneye/shipboard/firing_range_north)
 "wYW" = (
 /obj/structure/platform_decoration,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating/plating_catwalk,
 /area/westerneye/hallways/hangar)
 "wZf" = (
@@ -70545,7 +70620,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -71166,7 +71240,6 @@
 	name = "Wayfinder_Hangar_Up";
 	vector_x = 87;
 	layer_override = 1.95;
-	vector_y = -2;
 	interactable_projections = 0
 	},
 /obj/structure/machinery/landinglight/ds1{
@@ -96275,7 +96348,7 @@ ufZ
 ufZ
 ufZ
 ufZ
-caO
+ufZ
 caO
 caO
 caO
@@ -96466,18 +96539,18 @@ nnJ
 xEk
 lCY
 luV
-icm
+uSH
 dHy
 ntN
 luV
-icm
+uSH
 dHy
 ntN
 luV
 ntN
 luV
 uSH
-xEk
+dHy
 lCY
 ppD
 hhr
@@ -96672,15 +96745,15 @@ pmT
 pmT
 oIW
 qOc
-oIW
+csN
 qOc
 pVQ
 pmT
 pmT
 pmT
 ceT
-dNW
-dNW
+pmT
+pmT
 tou
 nBy
 tXf
@@ -96881,8 +96954,8 @@ pmT
 vrq
 cTr
 cTr
-qjo
-qjo
+cTr
+cTr
 kXU
 qUQ
 onM
@@ -97083,9 +97156,9 @@ pmT
 qQZ
 pmT
 pmT
+pmT
+pmT
 dNW
-dNW
-cgX
 cgX
 cgX
 wZR
@@ -97277,7 +97350,7 @@ sEX
 sVT
 pmT
 oIW
-ddm
+giy
 cOE
 qOc
 oIW
@@ -97285,9 +97358,9 @@ pmT
 txH
 pmT
 pmT
+pmT
+pmT
 dNW
-dNW
-cgX
 cgX
 cgX
 wZR
@@ -97482,14 +97555,14 @@ cTr
 xKw
 rgG
 fhK
-cTr
+gfs
 pmT
 txh
 lOZ
 lOZ
+lOZ
+lOZ
 wEk
-wEk
-wZR
 wZR
 wZR
 wZR
@@ -97682,16 +97755,16 @@ hzS
 pmT
 oIW
 qOc
-oIW
+csN
 ddm
-oIW
+csN
 pmT
 lqX
 pmT
 pmT
+pmT
+pmT
 dNW
-dNW
-cgX
 cgX
 cgX
 wZR
@@ -97884,16 +97957,16 @@ pmT
 pmT
 oIW
 qOc
-oIW
-qOc
-oIW
+csN
+ovz
+csN
 pmT
 btZ
 pmT
 pmT
 hLB
+pmT
 dNW
-cgX
 cgX
 cgX
 wZR
@@ -98086,15 +98159,15 @@ tmY
 pmT
 oIW
 qOc
-oIW
-qOc
-oIW
+csN
+ovz
+csN
 pmT
 aVU
 cTr
 cTr
-qjo
-qjo
+cTr
+cTr
 wYW
 lMz
 fwW
@@ -98288,15 +98361,15 @@ pmT
 pmT
 oIW
 qOc
-oIW
-qOc
-oIW
+csN
+ovz
+csN
 pmT
 pmT
 pmT
 pmT
-dNW
-dNW
+pmT
+pmT
 gPB
 nBy
 xOR
@@ -98496,7 +98569,7 @@ xVH
 wFN
 ayA
 bFP
-xwr
+icm
 uDY
 pvu
 wmd
@@ -98699,7 +98772,7 @@ ufZ
 ufZ
 ufZ
 ufZ
-caO
+ufZ
 caO
 caO
 caO
