@@ -60,3 +60,11 @@
 /area/interior/vehicle/arc
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
+
+/area/interior/vehicle/uppapc
+	name = "\improper UPP ZSL-68 interior"
+	icon_state = "upp_apc"
+
+/area/interior/vehicle/upptank
+	name = "\improper UPP tank interior"
+	icon_state = "upp_tank"
