@@ -2,7 +2,7 @@
 	name = "Army Paygrade"
 	rank_pin = /obj/item/clothing/accessory/ranks/army
 	pay_multiplier = 1.4	//Army strong, army smash, meatheads get paid a lil' less 'cause they get decent kit
-	default_faction = FACTION_MARINE
+	default_faction = FACTION_ARMY
 
 // ENLISTED PAYGRADES
 
