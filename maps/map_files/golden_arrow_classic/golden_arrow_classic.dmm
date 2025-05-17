@@ -4393,6 +4393,7 @@
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ey" = (

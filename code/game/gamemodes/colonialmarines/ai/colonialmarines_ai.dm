@@ -55,6 +55,7 @@
 
 /datum/game_mode/colonialmarines/ai/post_setup()
 	set_lz_resin_allowed(TRUE)
+	spawn_personal_weapon()
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/announce_bioscans()
@@ -110,3 +111,36 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON))
 
+GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded, "Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
+											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\
+											"Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff, "4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack))
+
+/datum/game_mode/colonialmarines/ai/proc/spawn_personal_weapon()
+	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads
+	if(!squad || squad.faction != FACTION_MARINE)
+		return
+	if(!GLOB.personal_weapon.len)
+		return
+	var/mob/living/carbon/human/marine
+	var/chosen_weapon
+	var/iteration = 1 //10 marines with no personal weapon selected? its more likely than you think!
+	while(!chosen_weapon && iteration < 10)
+		iteration++
+		marine = pick(squad.marines_list)
+		if(!marine)
+			chosen_weapon = "bugged"
+			break
+		if(marine.job == JOB_SO) //get outta here butter bars
+			continue
+		if(!marine.client)
+			continue
+		if(marine.client.prefs.personal_weapon == "None")
+			continue
+		chosen_weapon = marine.client.prefs.personal_weapon
+	var/obj/item/storage/box/personalcase/pcase = new(get_turf(pick(GLOB.personal_weapon)))
+	pcase.assign_owner(marine.real_name)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), marine, SPAN_NOTICE("You remember that you've managed to snuck in your <b>heirloom weapon</b> aboard: <b>[marine.client.prefs.personal_weapon]</b>.")), 5 SECONDS)
+	var/the_gun = GLOB.personal_weapons_list[chosen_weapon]
+	new the_gun(pcase)
+	for(var/obj/effect/landmark/personal_weapon/PW in GLOB.personal_weapon)
+		qdel(PW)
