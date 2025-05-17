@@ -164,7 +164,7 @@
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "jb" = (
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
@@ -549,7 +549,7 @@
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "wE" = (
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/whitegreen/east,
 /area/bigredv2/outside/medical)
 "wH" = (
@@ -1087,7 +1087,7 @@
 /area/bigredv2/outside/medical)
 "Pv" = (
 /obj/structure/closet/secure_closet/CMO,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/whitegreenfull,
 /area/bigredv2/outside/medical)
 "Qc" = (
