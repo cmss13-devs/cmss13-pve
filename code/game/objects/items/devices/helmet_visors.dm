@@ -83,6 +83,11 @@
 	desc = "An insertable visor HUD into a standard UPP helmet."
 	hud_type = MOB_HUD_FACTION_UPP
 
+/obj/item/device/helmet_visor/twe
+	name = "squad optic"
+	desc = "An insertable visor HUD into a standard RMC helmet."
+	hud_type = list(MOB_HUD_FACTION_TWE)
+
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"
@@ -236,9 +241,9 @@
 /obj/item/device/helmet_visor/night_vision/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
 
-	user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
+	user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0.1), color_matrix_from_string("#cfcfcf")))
 	user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
+	user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 1)
 	user.update_sight()
 	if(visor_glows)
 		on_light = new(attached_helmet)
@@ -350,3 +355,12 @@
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
+
+
+/obj/item/device/helmet_visor/night_vision/marine_raider/rmc
+	name = "advanced night vision optic"
+	desc = "An insertable visor HUD into a standard RMC helmet. This type gives a form of night vision and is standard issue in special forces units."
+	hud_type = list(MOB_HUD_FACTION_TWE)
+	helmet_overlay = "nvg_sight_right_raider"
+	power_use = 0
+	visor_glows = FALSE

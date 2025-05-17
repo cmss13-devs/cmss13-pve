@@ -156,6 +156,11 @@
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
+/datum/ammo/bullet/shrapnel/hornet_rounds/rmc
+	name = "holo-targeting pellet"
+	icon_state = "hornet_round"
+	damage = 25
+	holo_stacks = 30
 
 /datum/ammo/bullet/shrapnel/incendiary
 	name = "flaming shrapnel"

@@ -802,7 +802,7 @@ SUBSYSTEM_DEF(minimaps)
 		faction = allowed_flags == MINIMAP_FLAG_XENO ? XENO_HIVE_NORMAL : FACTION_MARINE
 
 	if(is_xeno && xeno.hive.see_humans_on_tacmap && targeted_ztrait != ZTRAIT_MARINE_MAIN_SHIP)
-		allowed_flags |= MINIMAP_FLAG_USCM|MINIMAP_FLAG_PMC|MINIMAP_FLAG_UPP|MINIMAP_FLAG_CLF
+		allowed_flags |= MINIMAP_FLAG_USCM|MINIMAP_FLAG_PMC|MINIMAP_FLAG_UPP|MINIMAP_FLAG_TWE|MINIMAP_FLAG_CLF
 		targeted_ztrait = ZTRAIT_MARINE_MAIN_SHIP
 		map_holder = null
 
@@ -1107,10 +1107,16 @@ SUBSYSTEM_DEF(minimaps)
 			return MINIMAP_FLAG_XENO
 		if(FACTION_MARINE)
 			return MINIMAP_FLAG_USCM
+		if(FACTION_ARMY)
+			return MINIMAP_FLAG_USCM
+		if(FACTION_NAVY)
+			return MINIMAP_FLAG_USCM
 		if(FACTION_UPP)
 			return MINIMAP_FLAG_UPP
 		if(FACTION_WY)
 			return MINIMAP_FLAG_USCM
+		if(FACTION_TWE)
+			return MINIMAP_FLAG_TWE
 		if(FACTION_CLF)
 			return MINIMAP_FLAG_CLF
 		if(FACTION_PMC)

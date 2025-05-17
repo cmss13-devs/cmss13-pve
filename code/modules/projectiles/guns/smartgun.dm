@@ -776,7 +776,7 @@
 
 /obj/item/weapon/gun/smartgun/rmc
 	name = "\improper L56A2 smartgun"
-	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	desc = "The actual firearm in the L56A2 Smartgun System. This variant is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
 	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
@@ -791,6 +791,10 @@
 /obj/item/weapon/gun/smartgun/rmc/Initialize(mapload, ...)
 	. = ..()
 	MD.iff_signal = FACTION_TWE
+
+//For the RMC ship, giving them access to weapons early but no ammo
+/obj/item/weapon/gun/smartgun/rmc/unloaded
+	current_mag = null
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"

@@ -235,6 +235,11 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
 
+/obj/item/ammo_magazine/internal/shotgun/rmcgl
+	caliber = "20mm"
+	max_rounds = 5
+	current_rounds = 0
+
 //-------------------------------------------------------
 
 /*
