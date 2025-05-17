@@ -52,6 +52,7 @@
 	. = ..()
 	to_chat(user, SPAN_WARNING("You pop out [src]'s tube!"))
 	update_icon()
+	eject_casing()
 
 /obj/item/weapon/gun/flare/attackby(obj/item/attacking_item, mob/user)
 	if(istype(attacking_item, /obj/item/device/flashlight/flare))
