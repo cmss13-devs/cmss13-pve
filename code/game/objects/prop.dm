@@ -138,6 +138,7 @@
 	desc = "Some used gauze."
 	icon_state = "bandages_prop"
 	icon = 'icons/monkey_icos.dmi'
+	w_class = SIZE_TINY
 
 /obj/item/prop/colony/folded_bedroll
 	name = "folded bedroll"
