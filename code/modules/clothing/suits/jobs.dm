@@ -214,7 +214,6 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/det_suit/black
 	icon_state = "detective2"
@@ -274,7 +273,6 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/forensics/red
 	name = "red jacket"
@@ -395,7 +393,6 @@
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/lawyer/purpjacket
 	name = "Purple Suit Jacket"
@@ -414,7 +411,6 @@
 	blood_overlay_type = "coat"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 
 /obj/item/clothing/suit/storage/internalaffairs/verb/toggle()
 	set name = "Toggle Coat Buttons"
@@ -468,7 +464,6 @@
 	)
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 	var/zip_unzip = FALSE
 	actions_types = list(/datum/action/item_action/toggle)
 
