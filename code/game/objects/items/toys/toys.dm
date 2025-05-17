@@ -696,3 +696,55 @@
 
 /obj/item/toy/plush/shark/alt
 	icon_state = "shark_alt"
+
+//desk toys
+/obj/item/toy/desk
+	name = "generic desk-toy"
+	desc = "You shouldn't be seeing this."
+	icon = 'icons/obj/items/toy.dmi'
+	var/on = FALSE
+	var/activation_sound = 'sound/machines/click.ogg'
+
+/obj/item/toy/desk/update_icon()
+	if(on)
+		icon_state = initial(icon_state) + "-on"
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/toy/desk/proc/activate(mob/user as mob)
+	on = !on
+	playsound(src.loc, activation_sound, 75, 1)
+	update_icon()
+	return 1
+
+/obj/item/toy/desk/attack_self(mob/user)
+	..()
+	activate(user)
+
+/obj/item/toy/desk/MouseDrop(atom/over_object)
+	if(over_object == usr && ishuman(usr) && !usr.is_mob_restrained() && !usr.stat && (loc == usr || in_range(src, usr)))
+		if(!usr.get_active_hand()) //if active hand is empty
+			usr.put_in_hands(src)
+		to_chat(usr, SPAN_NOTICE("You pick up [src]."))
+	return
+
+/obj/item/toy/desk/newtoncradle
+	name = "\improper Newton's cradle"
+	desc = "A ancient 21th century super-weapon model demonstrating that Sir Isaac Newton is the deadliest sonuvabitch in space."
+	icon_state = "newtoncradle"
+
+/obj/item/toy/desk/fan
+	name = "office fan"
+	desc = "Your greatest fan."
+	icon_state = "fan"
+
+/obj/item/toy/desk/officetoy
+	name = "office toy"
+	desc = "A generic battery-powered office desk toy. Only generates magnetism and ennui."
+	icon_state = "desktoy"
+
+/obj/item/toy/desk/dippingbird
+	name = "dipping bird toy"
+	desc = "Engineers marvel at this scale model of a primitive thermal engine. It's highly debated why the majority of owners \
+	were in low-level bureaucratic jobs."
+	icon_state = "dippybird"
