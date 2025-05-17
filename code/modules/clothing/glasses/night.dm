@@ -165,6 +165,8 @@
 /obj/item/clothing/glasses/night/m56_goggles/equipped(mob/user, slot)
 	if(slot != SLOT_EYES)
 		disable_far_sight(user)
+	if(camera)
+		camera.c_tag = user.name
 	return ..()
 
 /obj/item/clothing/glasses/night/m56_goggles/dropped(mob/living/carbon/human/user)
