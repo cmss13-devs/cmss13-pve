@@ -27119,7 +27119,7 @@
 /area/bmg290/colony/hangar)
 "mLq" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/flamer,
+/obj/item/weapon/gun/flamer/weak,
 /obj/structure/machinery/light/small{
 	dir = 1
 	},

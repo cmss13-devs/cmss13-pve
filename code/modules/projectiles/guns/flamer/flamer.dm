@@ -13,12 +13,13 @@
 
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
-	fire_sound = ""
+	fire_sound = "gun_flamethrower"
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 15
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
+	projectile_type = /datum/ammo/flamethrower
 	start_automatic = TRUE
 
 	attachable_allowed = list( //give it some flexibility.
@@ -27,17 +28,15 @@
 		/obj/item/attachable/sling,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/extinguisher/pyro,
-		/obj/item/attachable/attached_gun/flamer_nozzle,
 	)
-	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_WIELDED_FIRING_ONLY|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_UNUSUAL_DESIGN|GUN_TRIGGER_SAFETY|GUN_WIELDED_FIRING_ONLY
 	gun_category = GUN_CATEGORY_HEAVY
-
+	initiate_sound = 'sound/weapons/flamethrower_start.ogg'
 	//Pressure setting of the attached fueltank, controls how much fuel is used per tile
 	var/fuel_pressure = 1
-
 	//max range of flames that can fire, can change depending on fueling
 	var/max_range = 9
-
+	COOLDOWN_DECLARE(fire_sound_cooldown)
 
 /obj/item/weapon/gun/flamer/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -60,7 +59,14 @@
 
 /obj/item/weapon/gun/flamer/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_fire_delay(FIRE_DELAY_TIER_13)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4 + 2*HIT_ACCURACY_MULT_TIER_1
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/flamer/unique_action(mob/user)
 	toggle_gun_safety()
@@ -87,14 +93,14 @@
 	icon_state = new_icon_state
 
 	if(current_mag && current_mag.reagents)
-		var/image/I = image(icon, icon_state="[base_gun_icon]_strip")
-		I.color = mix_color_from_reagents(current_mag.reagents.reagent_list)
-		overlays += I
+		var/obj/item/ammo_magazine/flamer_tank/flamtank = current_mag
+		if(flamtank.stripe_icon)
+			var/image/I = image(icon, icon_state="[base_gun_icon]_strip")
+			I.color = mix_color_from_reagents(current_mag.reagents.reagent_list)
+			overlays += I
 
 	if(!(flags_gun_features & GUN_TRIGGER_SAFETY))
-		var/obj/item/attachable/attached_gun/flamer_nozzle/nozzle = locate() in contents
 		var/image/I = image(icon, src, "+lit")
-		I.pixel_x += nozzle && nozzle == active_attachable ? 6 : 1
 		overlays += I
 
 /obj/item/weapon/gun/flamer/able_to_fire(mob/user)
@@ -102,13 +108,6 @@
 	if(.)
 		if(!current_mag || !current_mag.current_rounds)
 			return NONE
-
-/obj/item/weapon/gun/flamer/proc/get_fire_sound()
-	var/list/fire_sounds = list(
-							'sound/weapons/gun_flamethrower1.ogg',
-							'sound/weapons/gun_flamethrower2.ogg',
-							'sound/weapons/gun_flamethrower3.ogg')
-	return pick(fire_sounds)
 
 /obj/item/weapon/gun/flamer/Fire(atom/target, mob/living/user, params, reflex)
 	set waitfor = FALSE
@@ -139,6 +138,7 @@
 		return NONE
 
 	if(!current_mag)
+		click_empty(user)
 		return NONE
 
 	if(current_mag.current_rounds <= 0)
@@ -211,37 +211,32 @@
 
 	update_icon()
 
+/obj/item/weapon/gun/flamer/reset_fire()
+	. = ..()
+	playsound(get_turf(src), 'sound/weapons/flamethrower_complete.ogg', 50)
+
 /obj/item/weapon/gun/flamer/proc/unleash_flame(atom/target, mob/living/user)
 	set waitfor = 0
 	last_fired = world.time
 	if(!current_mag || !current_mag.reagents || !length(current_mag.reagents.reagent_list))
 		return
 
-	var/datum/reagent/R = current_mag.reagents.reagent_list[1]
+	var/datum/reagent/flamer_reagent = current_mag.reagents.reagent_list[1]
+	current_mag.reagents.remove_reagent(flamer_reagent.id, FLAME_REAGENT_USE_AMOUNT)
+	var/turf/curloc = get_turf(user)
 
-	var/flameshape = R.flameshape
-	var/fire_type = R.fire_type
+	var/obj/projectile/P = new(src, create_cause_data(initial(name), user, src))
+	var/datum/ammo/flamethrower/ammo_datum = new projectile_type
+	ammo_datum.flamer_reagent_id = flamer_reagent.id
+	P.generate_bullet(ammo_datum)
+	var/bullet_velocity = P?.ammo?.shell_speed + velocity_add
+	apply_bullet_scatter(P, user)
+	P.fire_at(target, user, src, P?.ammo?.max_range, bullet_velocity, null)
+	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
+		return
+	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
+	playsound(curloc, fire_sound, 45)
 
-	R.intensityfire = clamp(R.intensityfire, current_mag.reagents.min_fire_int, current_mag.reagents.max_fire_int)
-	R.durationfire = clamp(R.durationfire, current_mag.reagents.min_fire_dur, current_mag.reagents.max_fire_dur)
-	R.rangefire = clamp(R.rangefire, current_mag.reagents.min_fire_rad, current_mag.reagents.max_fire_rad)
-	var/max_range = R.rangefire
-	if (max_range < fuel_pressure) //Used for custom tanks, allows for higher ranges
-		max_range = clamp(fuel_pressure, 0, current_mag.reagents.max_fire_rad)
-	if(R.rangefire == -1)
-		max_range = current_mag.reagents.max_fire_rad
-
-	var/turf/temp[] = get_line(get_turf(user), get_turf(target))
-
-	var/turf/to_fire = temp[2]
-
-	var/obj/flamer_fire/fire = locate() in to_fire
-	if(fire)
-		qdel(fire)
-
-	playsound(to_fire, src.get_fire_sound(), 50, TRUE)
-
-	new /obj/flamer_fire(to_fire, create_cause_data(initial(name), user), R, max_range, current_mag.reagents, flameshape, target, CALLBACK(src, PROC_REF(show_percentage), user), fuel_pressure, fire_type)
 
 /obj/item/weapon/gun/flamer/proc/unleash_smoke(atom/target, mob/living/user)
 	last_fired = world.time
@@ -379,38 +374,8 @@
 
 /obj/item/weapon/gun/flamer/deathsquad/pve
 	name = "\improper M240-R2 incinerator unit"
-	desc = "A next-generation incinerator unit, the M240-R2 is much lighter and dextrous than its predecessors thanks to the ceramic alloy construction. It can be slinged over a belt and usually comes equipped with EX-type fuel. This one is configured to fire globs of fire to preserve fuel."
-	start_automatic = FALSE
+	desc = "A next-generation incinerator unit, the M240-R2 is much lighter and dextrous than its predecessors thanks to the ceramic alloy construction. It can be slinged over a belt and usually comes equipped with EX-type fuel."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/extinguisher/pyro)
-	var/fuel_usage = 10
-
-/obj/item/weapon/gun/flamer/deathsquad/pve/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_6 * 5)
-
-/obj/item/weapon/gun/flamer/deathsquad/pve/unleash_flame(atom/target, mob/living/user)
-	if(!length(current_mag.reagents.reagent_list))
-		to_chat(user, SPAN_WARNING("\The [src] doesn't have enough fuel to launch a projectile!"))
-		return
-
-	var/datum/reagent/flamer_reagent = current_mag.reagents.reagent_list[1]
-	if(flamer_reagent.volume < FLAME_REAGENT_USE_AMOUNT * fuel_usage)
-		to_chat(user, SPAN_WARNING("\The [src] doesn't have enough fuel to launch a projectile!"))
-		return
-
-	last_fired = world.time
-	current_mag.reagents.remove_reagent(flamer_reagent.id, FLAME_REAGENT_USE_AMOUNT * fuel_usage)
-
-	var/obj/projectile/P = new(src, create_cause_data(initial(name), user, src))
-	var/datum/ammo/flamethrower/ammo_datum = new /datum/ammo/flamethrower/pve
-	ammo_datum.flamer_reagent_id = flamer_reagent.id
-	P.generate_bullet(ammo_datum)
-	P.icon_state = "naptha_ball"
-	P.color = flamer_reagent.color
-	P.hit_effect_color = flamer_reagent.burncolor
-	P.fire_at(target, user, user, max_range, AMMO_SPEED_TIER_2, null)
-	var/turf/user_turf = get_turf(user)
-	playsound(user_turf, get_fire_sound(), 50, TRUE)
 
 /obj/item/weapon/gun/flamer/unloaded
 	current_mag = null
@@ -422,11 +387,17 @@
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 
 /obj/item/weapon/gun/flamer/weak
+	name = "\improper improvised flamethrower"
+	desc = "A custom made incinerator, made from repurposed welding and piping equipment."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "flamer"
+	item_state = "flamer"
+	projectile_type = /datum/ammo/flamethrower/weak
 	current_mag = /obj/item/ammo_magazine/flamer_tank/weak
 
 /obj/item/weapon/gun/flamer/weak/set_gun_config_values()
 	. = ..()
-	set_fire_delay(FIRE_DELAY_TIER_5) // less full auto
+	set_fire_delay(0.25) // less full auto
 
 /obj/item/weapon/gun/flamer/M240T
 	name = "\improper M240-T incinerator unit"
@@ -541,10 +512,6 @@
 	desc = "A prototyped model of the M240-T incinerator unit, it was discontinued after its automatic mode was deemed too expensive to deploy in the field."
 	start_semiauto = FALSE
 	start_automatic = TRUE
-
-/obj/item/weapon/gun/flamer/M240T/auto/set_gun_config_values()
-	. = ..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
 
 /obj/item/weapon/gun/flamer/upp
 	name = "\improper LPO80 incinerator unit"
