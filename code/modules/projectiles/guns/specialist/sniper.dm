@@ -579,3 +579,41 @@
 
 /obj/item/weapon/gun/rifle/sniper/svd/pve
 	current_mag = /obj/item/ammo_magazine/sniper/svd/pve
+
+/obj/item/weapon/gun/rifle/sniper/rmc
+	name = "\improper L64A3 designated marksman rifle"
+	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Commonly loaded with squash-head bullets in a 25-round magazine."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmcdmr"
+	item_state = "rmcdmr"
+	unacidable = TRUE
+	indestructible = 1
+	aiming_time = 0.6 SECONDS
+	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	current_mag = /obj/item/ammo_magazine/sniper/rmc
+	wield_delay = WIELD_DELAY_NORMAL
+	zoomdevicename = "scope"
+	attachable_allowed = list(/obj/item/attachable/bipod)
+	starting_attachment_types = list(/obj/item/attachable/stock/rmcdmr)
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	map_specific_decoration = FALSE
+	flags_item = TWOHANDED
+
+/obj/item/weapon/gun/rifle/sniper/rmc/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/rmcdmr/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
+/obj/item/weapon/gun/rifle/sniper/rmc/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 20, "under_x" = 19, "under_y" = 14, "stock_x" = 22, "stock_y" = 11)
+
+/obj/item/weapon/gun/rifle/sniper/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_3)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_9
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5

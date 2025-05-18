@@ -174,6 +174,14 @@
 		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
+/datum/ammo/bullet/rifle/heavy/rmcdmr
+	name = "8.88x51mm squash-head bullet"
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_6
+	accuracy = HIT_ACCURACY_TIER_3
+	shell_speed = AMMO_SPEED_TIER_7
+	effective_range_max = 24
+
 /datum/ammo/bullet/rifle/heavy/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE

@@ -242,9 +242,9 @@
 "aaC" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/rmcsmg,
-/obj/item/ammo_box/magazine/m39/squash{
-	pixel_y = 11;
-	pixel_x = 16
+/obj/item/ammo_box/rounds/smartgun/holo_target{
+	pixel_y = 9;
+	pixel_x = -4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -1506,6 +1506,10 @@
 "afk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/rmcsmg,
+/obj/item/ammo_box/magazine/m39/squash{
+	pixel_y = 11;
+	pixel_x = -7
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "afl" = (
@@ -1790,6 +1794,9 @@
 /area/golden_arrow/platoonarmory)
 "aga" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/rmcnvg{
+	pixel_y = 10
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -6361,7 +6368,6 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/weapon/gun/rifle/sniper/M42A/silenced/unloaded,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "awN" = (

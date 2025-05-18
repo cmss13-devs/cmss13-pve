@@ -70,6 +70,22 @@
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
 	default_ammo = /datum/ammo/bullet/sniper/upp_pve
 
+//RMC DMR magazine
+
+/obj/item/ammo_magazine/sniper/rmc
+	name = "\improper L64A3 squash-head magazine (8.88x51mm Caseless)"
+	desc = "A magazine of L10A7 squash-head match-grade 8.88x51mm ammo. An aimed shot with it will deal significant damage."
+	caliber = "8.88x51mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "rmcdmr"
+	w_class = SIZE_MEDIUM
+	max_rounds = 25
+	default_ammo = /datum/ammo/bullet/rifle/heavy/rmcdmr
+	gun_type = /obj/item/weapon/gun/rifle/sniper/rmc
+	ammo_band_icon = "+rmcdmr_band"
+	ammo_band_icon_empty = "+rmcdmr_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
 //M49A magazines
 
 /obj/item/ammo_magazine/rifle/m49a/custom

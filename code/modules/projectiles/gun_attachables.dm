@@ -1188,6 +1188,13 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "miniscope"
 	attach_icon = "miniscope_a"
 
+/obj/item/attachable/scope/mini/rmcdmr
+	name = "L5A2 SUMMR scope"
+	icon_state = "sniperscope"
+	attach_icon = "sniperscope_a"
+	desc = "Sight Unit, Marine Marksman Rifle. A 4x power optic commonly fielded on the Royal Marines L64A3 DMRs."
+	dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
+
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
 	desc = "An ARMAT XS-9 optical interface, type designation XAN/PVG-90. Computer controlled 2x magnification with electronic fire control system, interfacing with the rifle's sensors to provide near perfect shooting accuracy... In theory."
@@ -2072,6 +2079,29 @@ Defined in conflicts.dm of the #defines folder.
 	name = "hg3717 stock"
 	desc = "The non-detachable stock of a M37-17 pump shotgun."
 	icon_state = "hg3717_stock"
+
+/obj/item/attachable/stock/rmcdmr
+	name = "L64A3 stock"
+	desc = "The non-detachable stock of a L64A3 DMR."
+	icon_state = "rmcdmr_stock"
+	pixel_shift_x = 40
+	pixel_shift_y = 10
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 6
+
+/obj/item/attachable/stock/rmcdmr/New()
+	..()
+
+	//stock is purely aesthetics, any changes should be done to the gun itself
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
 
 /obj/item/attachable/stock/rifle
 	name = "\improper M41A solid stock"
