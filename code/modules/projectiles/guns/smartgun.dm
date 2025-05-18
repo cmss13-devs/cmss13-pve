@@ -783,6 +783,7 @@
 	ammo_secondary = /datum/ammo/bullet/rifle/heavy/holo_target/ap ///Toggled ammo type
 	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	zoomdevicename = "gunsight"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"
 	item_state = "magsg"
@@ -799,6 +800,23 @@
 	optic.flags_attach_features &= ~ATTACH_REMOVABLE
 	optic.Attach(src)
 	update_attachable(optic.slot)
+
+/obj/item/weapon/gun/smartgun/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_8
+	fa_max_scatter = SCATTER_AMOUNT_TIER_9
+	if(accuracy_improvement)
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_3
+	else
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_1
+	if(recoil_compensation)
+		scatter = SCATTER_AMOUNT_TIER_10
+		recoil = RECOIL_OFF
+	else
+		scatter = SCATTER_AMOUNT_TIER_6
+		recoil = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded

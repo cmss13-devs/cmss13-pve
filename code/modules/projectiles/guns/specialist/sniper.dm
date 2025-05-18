@@ -582,22 +582,26 @@
 
 /obj/item/weapon/gun/rifle/sniper/rmc
 	name = "\improper L64A3 designated marksman rifle"
-	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Commonly loaded with squash-head bullets in a 25-round magazine."
+	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Designed to provide commandos with responsive long range reach past what the old F903 could manage. A continuous-charge HESH payload removes the requirement for traditional armor piercing steel core ammunition, and improves damage retention at extended range. Faster cycle rate of the breech and a light trigger gives fast and precise followup shots even at thousand meter distances."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "rmcdmr"
 	item_state = "rmcdmr"
 	unacidable = TRUE
 	indestructible = 1
 	aiming_time = 0.6 SECONDS
-	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	fire_sound = 'sound/weapons/gun_rmcdmr_fire.ogg'
+	reload_sound = 'sound/weapons/handling/gun_rmcdmr_reload.ogg'
+	unload_sound = 'sound/weapons/handling/gun_rmcdmr_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/sniper/rmc
-	wield_delay = WIELD_DELAY_NORMAL
+	wield_delay = WIELD_DELAY_FAST
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	zoomdevicename = "scope"
 	attachable_allowed = list(/obj/item/attachable/bipod)
 	starting_attachment_types = list(/obj/item/attachable/stock/rmcdmr)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	map_specific_decoration = FALSE
 	flags_item = TWOHANDED
+	loud = FALSE
 
 /obj/item/weapon/gun/rifle/sniper/rmc/handle_starting_attachment()
 	..()
@@ -611,7 +615,7 @@
 
 /obj/item/weapon/gun/rifle/sniper/rmc/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_3)
+	set_fire_delay(FIRE_DELAY_TIER_8)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_9

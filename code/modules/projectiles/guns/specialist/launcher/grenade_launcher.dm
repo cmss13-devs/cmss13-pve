@@ -296,8 +296,8 @@
 //RMC GRENADE LAUNCHER
 
 /obj/item/weapon/gun/launcher/grenade/m92/rmc
-	name = "\improper L164A3 multiple grenade launcher"
-	desc = "A lightweight support weapon fielded by the Royal Marines. Chambered in small 20mm grenades, it lacks the punch of larger grenades, but makes up for that in rate of fire."
+	name = "\improper L164A3 multi-shot grenade launcher"
+	desc = "A lightweight support weapon fielded by the Royal Marines. Chambered in small 20mm grenades, it lacks the punch of larger bore grenade launchers, but makes up for that in rate of fire."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "rmcgl"
 	item_state = "rmcgl"
@@ -311,7 +311,6 @@
 	GL_has_empty_icon = FALSE
 	flags_equip_slot = SLOT_BACK
 	map_specific_decoration = FALSE
-	auto_retrieval_slot = WEAR_BACK
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	wield_delay = WIELD_DELAY_NORMAL
 	valid_munitions = list(

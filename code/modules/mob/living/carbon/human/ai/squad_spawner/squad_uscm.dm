@@ -1,6 +1,6 @@
 
 /datum/human_ai_squad_preset/uscm
-	faction = "United States Colonial Marines"
+	faction = FACTION_MARINE
 
 /datum/human_ai_squad_preset/uscm/rifleteam
 	name = "USCM, Rifle Team"

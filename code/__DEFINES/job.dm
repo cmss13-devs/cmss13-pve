@@ -377,17 +377,17 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
 
 //-------- RMC --------//
-#define JOB_TWE_RMC_RIFLEMAN "RMC Marine Commando"
-#define JOB_TWE_RMC_MEDIC "RMC Medical Assistant"
-#define JOB_TWE_RMC_ENGI "RMC Assault Engineer"
-#define JOB_TWE_RMC_MARKSMAN "RMC Marksman"
-#define JOB_TWE_RMC_SMARTGUNNER "RMC Smartgunner"
-#define JOB_TWE_RMC_BREACHER "RMC Light Gunner"
-#define JOB_TWE_RMC_TEAMLEADER "RMC Team Leader"
-#define JOB_TWE_RMC_SECTIONLEADER "RMC Section Leader"
-#define JOB_TWE_RMC_TROOPLEADER "RMC Troop Sergeant"
-#define JOB_TWE_RMC_LIEUTENANT "RMC Troop Commander"
-#define JOB_TWE_RMC_COMMANDER "RMC Squadron Commander"
+#define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
+#define JOB_TWE_RMC_MEDIC "Medical Assistant"
+#define JOB_TWE_RMC_ENGI "Assault Engineer"
+#define JOB_TWE_RMC_MARKSMAN "Marksman"
+#define JOB_TWE_RMC_SMARTGUNNER "Smartgunner"
+#define JOB_TWE_RMC_BREACHER "Light Gunner"
+#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
+#define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
+#define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
+#define JOB_TWE_RMC_COMMANDER "Squadron Commander"
 
 #define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
 

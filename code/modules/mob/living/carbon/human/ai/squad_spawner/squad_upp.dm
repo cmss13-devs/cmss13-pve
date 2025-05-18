@@ -1,5 +1,5 @@
 /datum/human_ai_squad_preset/upp
-	faction = "Union of Progressive Peoples Armed Collective"
+	faction = FACTION_UPP
 
 /datum/human_ai_squad_preset/upp/militia
 	name = "Territorial Guard, Patrol"

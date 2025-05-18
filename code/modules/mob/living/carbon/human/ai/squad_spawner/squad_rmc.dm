@@ -1,5 +1,5 @@
 /datum/human_ai_squad_preset/twe
-	faction = "Royal Marine Commandos"
+	faction = FACTION_TWE
 
 /datum/human_ai_squad_preset/twe/rifleteam
 	name = "TWE, Assault Group"

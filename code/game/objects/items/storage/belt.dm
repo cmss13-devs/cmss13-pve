@@ -2282,4 +2282,11 @@
 	new /obj/item/mortar_shell/he(src)
 	new /obj/item/mortar_shell/smoke(src)
 
+/obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/storage/box/packet/rmc/mini(src)
+	new /obj/item/storage/box/packet/rmc/mini/frag(src)
+	new /obj/item/storage/box/packet/rmc/mini/holo(src)
+
 #undef MAXIMUM_MORTARSHELL_COUNT
