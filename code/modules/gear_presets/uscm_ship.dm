@@ -757,6 +757,7 @@
 /datum/equipment_preset/uscm_ship/so/rmc
 	name = "Royal Marine Commando, Troop Commander"
 	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	role_comm_title = "RM TC"
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT

@@ -1361,14 +1361,17 @@
 	explosion_power = 80
 	shrapnel_count = 8
 
-/obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm
+/obj/item/explosive/grenade/high_explosive/airburst/rmc20mm
 	name = "\improper L104A1 20mm fragmentation grenade"
 	desc = "A 20mm grenade that explodes into shrapnel upon impact."
 	icon_state = "grenade_20mm_frag"
 	item_state = "grenade_hefa"
 	caliber = "20mm"
-	explosion_power = 50
+	shrapnel_type = /datum/ammo/bullet/shrapnel/heavy
+	direct_hit_shrapnel = 12
+	explosion_power = 30
 	shrapnel_count = 36
+	dispersion_angle = 45
 
 /obj/item/explosive/grenade/incendiary/airburst/rmc20mm
 	name = "\improper L103A1/I 20mm incendiary grenade"
@@ -1390,22 +1393,23 @@
 	item_state = "grenade_smoke"
 	caliber = "20mm"
 	spent_case = null
-	smoke_duration = 8
+	smoke_radius = 3
+	smoke_duration = 12
 
 /obj/item/explosive/grenade/smokebomb/airburst/rmc20mm/New()
 	..()
 	smoke = new /datum/effect_system/smoke_spread/cn20/xeno
 	smoke.attach(src)
 
-/obj/item/explosive/grenade/high_explosive/airburst/hornet_shell/rmc20mm
+/obj/item/explosive/grenade/high_explosive/impact/rmc20mm/holo
 	name = "\improper L104A1/H 20mm holo-targetting grenade"
 	desc = "A 20mm grenade that explodes into shrapnel upon impact. The shrapenl of this one douses the target in a chemical compound which aids in target acquisition by sensors."
 	icon_state = "grenade_20mm_holo"
 	item_state = "grenade_phos"
 	caliber = "20mm"
-	shrapnel_count = 12
+	explosion_power = 10
+	shrapnel_count = 32
 	shrapnel_type = /datum/ammo/bullet/shrapnel/hornet_rounds/rmc
-	dispersion_angle = 30
 
 /obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm
 	name = "\improper L108A1 HESH grenade"
@@ -1413,4 +1417,4 @@
 	icon_state = "grenade_20mm_squash"
 	item_state = "grenade_training"
 	caliber = "20mm"
-	explosion_power = 180
+	explosion_power = 160

@@ -215,6 +215,11 @@
 	vision_flags = 0
 	lighting_alpha = 255
 
+/obj/item/clothing/glasses/night/m56_goggles/rmc
+	name = "\improper L56A2 head mounted gunsight interface"
+	desc = "A headset and optic system for the L56A2 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	actions_types = list(/datum/action/item_action/toggle)
+
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."

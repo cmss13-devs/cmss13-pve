@@ -93,7 +93,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera(new_human), WEAR_R_EAR)
-	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m56_goggles(new_human), WEAR_EYES)
+	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m56_goggles/rmc(new_human), WEAR_EYES)
 	//head
 	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
@@ -457,7 +457,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/royal_marine/coloursergeant
+/datum/equipment_preset/royal_marine/troopsergeant
 	name = "Royal Marine Commando, Troop Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
@@ -467,16 +467,13 @@
 	skills = /datum/skills/rmc/officer
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
-/datum/equipment_preset/royal_marine/coloursergeant/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/royal_marine/troopsergeant/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/frame(new_human), WEAR_BACK) //Shock horror, a SNCO kitted to not be a frontline leadership jockey? Can't wait to see people try it anyways
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_shell/he(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_shell/he(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_shell/he(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_shell/smoke(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_shell/smoke(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/nsg23(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera(new_human), WEAR_R_EAR)

@@ -1052,10 +1052,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
-	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_sniper_hat"
-	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc, new /obj/item/device/helmet_visor/twe)
-	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
+	built_in_visors = list(new /obj/item/device/helmet_visor/twe)
+	start_down_visor_type = /obj/item/device/helmet_visor/twe
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	name = "\improper Mk16 tactical helmet"
@@ -1068,8 +1068,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
 	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "heavy_rmc"
-	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc, new /obj/item/device/helmet_visor/twe)
-	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
+	built_in_visors = list(new /obj/item/device/helmet_visor/twe)
+	start_down_visor_type = /obj/item/device/helmet_visor/twe
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
 	name = "\improper M5X helmet"

@@ -207,7 +207,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	name = "\improper L104A1 20mm fragmentation grenade packet"
 	desc = "It contains eight L104A1 20mm frag grenades. Handle with care."
 	packet_icon = "wpsi-p"
-	content_type = /obj/item/explosive/grenade/high_explosive/impact/frag/rmc20mm
+	content_type = /obj/item/explosive/grenade/high_explosive/airburst/rmc20mm
 
 /obj/item/storage/box/packet/rmc/mini/incen
 	name = "\improper L103A1/I 20mm incendiary grenade packet"
@@ -225,7 +225,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	name = "\improper L104A1/H 20mm holo-targetting grenade packet"
 	desc = "It contains eight L104A1/H 20mm holo-targetting grenades. Handle with care."
 	packet_icon = "hiaf-p"
-	content_type = /obj/item/explosive/grenade/high_explosive/airburst/hornet_shell/rmc20mm
+	content_type = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm/holo
 
 /obj/item/storage/box/packet/rmc/mini/squash
 	name = "\improper L108A1 20mm HESH grenade packet"

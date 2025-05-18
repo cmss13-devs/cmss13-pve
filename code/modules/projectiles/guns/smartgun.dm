@@ -792,6 +792,14 @@
 	. = ..()
 	MD.iff_signal = FACTION_TWE
 
+/obj/item/weapon/gun/smartgun/rmc/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/rmcsg/optic = new(src)
+	optic.hidden = TRUE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
+
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
 	current_mag = null

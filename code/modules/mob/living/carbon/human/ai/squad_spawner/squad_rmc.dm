@@ -36,9 +36,9 @@
 
 /datum/human_ai_squad_preset/twe/command
 	name = "TWE, Headquarters Section"
-	desc = "TWE command team armed with NSG L23A1 rifles, carrying ample ammunition & a light mortar."
+	desc = "TWE command team armed with NSG L23A1 rifles, carrying ample ammunition."
 	ai_to_spawn = list(
 		/datum/equipment_preset/royal_marine/lieuteant = 1,
-		/datum/equipment_preset/royal_marine/coloursergeant = 1,
-		/datum/equipment_preset/royal_marine/mortar = 1,
+		/datum/equipment_preset/royal_marine/troopsergeant = 1,
+		/datum/equipment_preset/royal_marine/standard = 1,
 	)

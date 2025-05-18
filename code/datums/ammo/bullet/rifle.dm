@@ -488,12 +488,18 @@
 
 /datum/ammo/bullet/rifle/twe
 	name = "8.5x33 bullet"
+	damage = 36
+	penetration = ARMOR_PENETRATION_TIER_2
+	accurate_range = 20
 
 /datum/ammo/bullet/rifle/ap/twe
 	name = "armor-piercing 8.5x33 bullet"
 
 /datum/ammo/bullet/rifle/heap/twe
 	name = "high-explosive armor-piercing 8.5x33 bullet"
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_9
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_4
 
 //9.7x16 AG80
 

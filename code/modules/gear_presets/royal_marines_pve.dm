@@ -4,6 +4,7 @@
 /datum/equipment_preset/uscm/rmc
 	name = "Royal Marine Commando, Rifleman"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 	role_comm_title = "RM"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
 	faction_group = FACTION_LIST_TWE
@@ -16,7 +17,7 @@
 
 /datum/equipment_preset/uscm/rmc/cs
 	name = "Royal Marine Commando, Troop Sergeant"
-	paygrades = list(PAY_SHORT_RMC5 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP, ACCESS_TWE_ARMORY)
 	assignment = JOB_TWE_RMC_TROOPLEADER
@@ -25,7 +26,7 @@
 
 /datum/equipment_preset/uscm/rmc/sl
 	name = "Royal Marine Commando, Section Leader"
-	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM STL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_SECTIONLEADER
@@ -34,7 +35,7 @@
 
 /datum/equipment_preset/uscm/rmc/tl
 	name = "Royal Marine Commando, Team Leader"
-	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM TL"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_TLPREP)
 	assignment = JOB_TWE_RMC_TEAMLEADER
@@ -43,7 +44,7 @@
 
 /datum/equipment_preset/uscm/rmc/sg
 	name = "Royal Marine Commando, Smartgunner"
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM HW(SG)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_SMARTGUNNER
@@ -70,7 +71,7 @@
 
 /datum/equipment_preset/uscm/rmc/snp
 	name = "Royal Marine Commando, Sniper"
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM ScS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_SNIPERPREP)
 	assignment = JOB_TWE_RMC_MARKSMAN
@@ -79,7 +80,7 @@
 /datum/equipment_preset/uscm/rmc/mor
 	name = "Royal Marine Commando, Light Gunner"
 	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM HW(MOR)"
+	role_comm_title = "RM HW(GNR)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER

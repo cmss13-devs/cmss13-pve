@@ -159,8 +159,11 @@
 /datum/ammo/bullet/shrapnel/hornet_rounds/rmc
 	name = "holo-targeting pellet"
 	icon_state = "hornet_round"
-	damage = 25
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+	damage = 10
 	holo_stacks = 30
+	accuracy = HIT_ACCURACY_TIER_5
+	max_range = 6
 
 /datum/ammo/bullet/shrapnel/incendiary
 	name = "flaming shrapnel"

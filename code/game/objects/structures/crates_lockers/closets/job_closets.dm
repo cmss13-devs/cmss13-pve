@@ -196,4 +196,4 @@
 	new /obj/item/ammo_magazine/smartgun/holo_targetting(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targetting(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targetting(src)
-	new /obj/item/clothing/glasses/night/m56_goggles(src)
+	new /obj/item/clothing/glasses/night/m56_goggles/rmc(src)

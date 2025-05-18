@@ -130,12 +130,12 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/stock/nsg23,
 		/obj/item/attachable/stock/nsg23/rmc,
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/nsg23,
 		/obj/item/attachable/attached_gun/grenade/nsg,
 	)
 
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/nsg23,
 		/obj/item/attachable/stock/nsg23,
 	)
 
@@ -166,27 +166,27 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "rmc_nsg23"
 	item_state = "rmc_nsg23"
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_BURST_FIRING
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/nsg23/rmc,
 		/obj/item/attachable/attached_gun/grenade/nsg,
 		/obj/item/attachable/stock/nsg23/rmc,
 	)
 
 /obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
 	current_mag = null
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY|GUN_BURST_FIRING
 
 /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/nsg23/rmc,
 		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
 		/obj/item/attachable/stock/nsg23/rmc,
 	)
 
 /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded/tactical
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/nsg23/rmc,
 		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
 		/obj/item/attachable/stock/nsg23/rmc,
 		/obj/item/attachable/suppressor,

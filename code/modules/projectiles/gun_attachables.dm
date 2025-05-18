@@ -478,7 +478,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/l56a2_smartgun
-	name = "l56a2 barrel"
+	name = "L56A2 barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "magsg_barrel_a"
 	attach_icon = "magsg_barrel_a"
@@ -1176,11 +1176,17 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
-	desc = "An ARMAT S4 telescoping eye piece, revised by W-Y scientists to be much more ergonomic."
+	desc = "An ARMAT S4 telescoping eye piece, tweaked by a third-party contractor for ergonomics."
 	icon_state = "miniscope_nsg23"
 	attach_icon = "miniscope_nsg23_a"
-	zoom_offset = 7
+	zoom_offset = 4
 	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+
+/obj/item/attachable/scope/mini/nsg23/rmc
+	name = "L4A5 SUMSA mini-scope" //Sight Unit, General Marine Armaments was a serious contender for the name instead of this
+	desc = "Sight Unit, Marine Small-Arms. A modified ARMAT S4 telescoping eye piece, adopted by the RMC for use on their L23A1 rifles. This one is has been coated in a coat of dark matte paint."
+	icon_state = "miniscope"
+	attach_icon = "miniscope_a"
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
@@ -1204,6 +1210,12 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "L164A3 sight system."
 	zoom_offset = 3
 	icon_state = "reflex"
+
+/obj/item/attachable/scope/mini/rmcsg
+	name = "L56A2 gunsight interface"
+	desc = "L56A2 gunsight interface. You shouldn't ever see this."
+	zoom_offset = 4
+	icon_state = "sgsight"
 
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
