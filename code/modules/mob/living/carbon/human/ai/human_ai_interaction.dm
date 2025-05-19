@@ -36,21 +36,6 @@
 
 	return ..()
 
-/obj/structure/barricade/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if(!is_wired)
-		if(!ai_human.action_busy)
-			do_climb(ai_human)
-		return TRUE
-
-	return ..()
-
-/obj/structure/barricade/plasteel/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if(!closed) // this means it's closed
-		ai_human.do_click(src, "", list())
-		return TRUE
-
-	return ..()
-
 /////////////////////////////
 //       MINERAL DOOR      //
 /////////////////////////////
@@ -98,10 +83,7 @@
 
 	return INFINITY
 
-/obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if(locked || welded || isElectrified())
-		return
-
+/obj/structure/machinery/door/poddoor/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
 	if(!(stat & NOPOWER) || !brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR))
 		return
 
@@ -206,6 +188,14 @@
 /////////////////////////////
 //       BARRICADES        //
 /////////////////////////////
+/obj/structure/barricade/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
+	if(!is_wired)
+		if(!ai_human.action_busy)
+			do_climb(ai_human)
+		return TRUE
+
+	return ..()
+
 /obj/structure/barricade/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
 	. = ..()
 	if(!.)
@@ -214,7 +204,10 @@
 	return BARRICADE_PENALTY
 
 /obj/structure/barricade/plasteel/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	. = ..()
+	if(!closed) // this means it's closed
+		ai_human.do_click(src, "", list())
+	else
+		. = ..()
 	if(!closed)
 		close(src)
 

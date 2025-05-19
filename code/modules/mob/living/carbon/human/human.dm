@@ -276,13 +276,6 @@
 /mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
 	. = ..()
 
-
-/**
- * Handles any storage containers that the human is looking inside when auto-observed.
- */
-/mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
-	. = ..()
-
 	// If `src` doesn't have an inventory open.
 	if(!s_active)
 		return
