@@ -937,6 +937,30 @@ Defined in conflicts.dm of the #defines folder.
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
+/obj/item/attachable/powerloader_harness
+	name = "magnetic harness"
+	desc = "A magnetically attached harness kit that attaches to the rail mount of a weapon. When dropped, the weapon will sling to any set of USCM armor."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "magnetic"
+	attach_icon = "magnetic_a"
+	slot = "rail"
+	pixel_shift_x = 13
+	var/linked_loader //Needs MANUAL linking
+
+/obj/item/attachable/powerloader_harness/can_be_attached_to_gun(mob/user, obj/item/weapon/gun/G)
+	if(SEND_SIGNAL(G, COMSIG_DROP_RETRIEVAL_CHECK) & COMPONENT_DROP_RETRIEVAL_PRESENT)
+		to_chat(user, SPAN_WARNING("[G] already has a retrieval system installed!"))
+		return FALSE
+	return ..()
+
+/obj/item/attachable/powerloader_harness/Attach(obj/item/weapon/gun/G)
+	. = ..()
+	G.AddElement(/datum/element/drop_retrieval/powerloader, linked_loader)
+
+/obj/item/attachable/powerloader_harness/Detach(mob/user, obj/item/weapon/gun/detaching_gun)
+	. = ..()
+	detaching_gun.RemoveElement(/datum/element/drop_retrieval/powerloader, linked_loader)
+
 /obj/item/attachable/sling //Mostly cosmetic, some one-handed fire adjustments
 	name = "two-point sling"
 	desc = "A traditional strip of toughened nylon fabric with clips on either end for attaching to suitable mounting points on most longarms in the UA armed forces arsenals."
@@ -3303,7 +3327,7 @@ Defined in conflicts.dm of the #defines folder.
 
 	var/obj/item/weapon/gun/attached_gun = loc
 
-	if(!(attached_gun.flags_item & WIELDED))
+	if(!(flags_attach_features & ATTACH_WIELD_OVERRIDE) && !(attached_gun.flags_item & WIELDED))
 		to_chat(user, SPAN_WARNING("You must wield [attached_gun] to fire [src]!"))
 		return
 
