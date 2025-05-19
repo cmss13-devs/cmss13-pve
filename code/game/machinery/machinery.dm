@@ -144,7 +144,7 @@ Class Procs:
 	if(A)
 		A.remove_machine(src) //takes care of removing machine from power usage
 	if(breaker_switch)
-		breaker_switch.machinery_list -= src
+//		breaker_switch.machinery_list -= src
 		breaker_switch = null
 	. = ..()
 
