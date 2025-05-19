@@ -1166,7 +1166,10 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
 	)
-	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/stock/rifle/collapsible,
+	)
 
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
@@ -1194,15 +1197,46 @@
 	wield_delay = WIELD_DELAY_SLOW
 
 /obj/item/weapon/gun/rifle/lmg/tactical
+	desc = "A modification of a modification. Swaps the bipod for a grip, returning it closer to its original assault rifle state."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip)
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/angledgrip,
+	)
+
 /obj/item/weapon/gun/rifle/lmg/tactical/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
+/obj/item/weapon/gun/rifle/lmg/tactical/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 13, "stock_x" = 24, "stock_y" = 13)
+
 /obj/item/weapon/gun/rifle/lmg/army
+	desc = "The US Army's adoption of the M41AE2 adds a longer barrel and improved retention system, operating in a more traditional machine gun role."
 	current_mag = /obj/item/ammo_magazine/hpr_box/ap
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel, /obj/item/attachable/bipod/integral, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/bipod/integral,
+	)
+
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
@@ -1451,14 +1485,14 @@
 //L42A Battle Rifle
 
 /obj/item/weapon/gun/rifle/l42a
-	name = "\improper L42A battle rifle"
-	desc = "The L42A Battle Rifle, found commonly around the frontiers of the Galaxy. It's commonly used by colonists for self defense, as well as many colonial militias, whomever they serve due to it's rugged reliability and ease of use without much training. This rifle was put up for adoption by the USCM and tested for a time, but ultimately lost to the M49A already in service."
+	name = "\improper L42A pulse rifle"
+	desc = "The L42A pulse rifle, despite its age, remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
+	fire_sound = 'sound/weapons/gun_m39.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = 'sound/weapons/gun_m49a.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/l42a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -1491,12 +1525,12 @@
 
 /obj/item/weapon/gun/rifle/l42a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_7)
 	set_burst_amount(0)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_8
 

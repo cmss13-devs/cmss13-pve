@@ -88,7 +88,7 @@
 
 	if(!ishuman(user))
 		return ..()
-	if(mods["alt"]) //Changing UI theme
+	if(mods[ALT_CLICK]) //Changing UI theme
 		var/list/possible_options = list("Blue"= "crtblue", "Green" = "crtgreen", "Yellow" = "crtyellow", "Red" = "crtred")
 		var/chosen_theme = tgui_input_list(user, "Choose a UI theme:", "UI Theme", list("Blue", "Green", "Yellow", "Red"))
 		if(possible_options[chosen_theme])
