@@ -351,16 +351,22 @@
 		if(new_turf.density)
 			break
 		for(var/mob/living/carbon/human/sprayed_with_blood in new_turf.contents)
-			if(ishuman(sprayed_with_blood))
-				if(!sprayed_with_blood == src)
+			if(ishuman_strict(sprayed_with_blood))
+				if(sprayed_with_blood != src)
 					if(!sprayed_with_blood.body_position == LYING_DOWN)
 						sprayed_with_blood.add_mob_blood(src)
-						if(sprayed_with_blood.glasses && sprayed_with_blood.glasses.flags_armor_protection & BODY_FLAG_EYES || sprayed_with_blood.get_eye_protection())
-							to_chat(sprayed_with_blood, SPAN_HIGHDANGER("Blood sprays against your eyewear!"))
-							sprayed_with_blood.EyeBlur(3)
-						else
-							to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
-							sprayed_with_blood.EyeBlur(14)
+						if(sprayed_with_blood.dir in get_related_directions(get_dir(sprayed_with_blood, src)))
+							var/total_eye_protection = 0
+							for(var/obj/item/clothing/glasses in list(sprayed_with_blood.glasses, sprayed_with_blood.wear_mask, sprayed_with_blood.head))
+								if(glasses && (glasses.flags_armor_protection & BODY_FLAG_EYES) || sprayed_with_blood.get_eye_protection())
+									total_eye_protection++
+							if(total_eye_protection)
+								to_chat(sprayed_with_blood, SPAN_HIGHDANGER("Blood sprays against your eyewear!"))
+								sprayed_with_blood.EyeBlur(2)
+							else
+								to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
+								sprayed_with_blood.EyeBlur(14)
+						sprayed_with_blood.visible_message(SPAN_WARNING("[sprayed_with_blood] is hit by the spray of blood!")	)
 						break
 
 		// remainder within the tile.
