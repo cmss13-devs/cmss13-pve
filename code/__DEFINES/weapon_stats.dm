@@ -104,6 +104,7 @@ It DOES NOT control where your bullets go, that's scatter and projectile varianc
 #define RECOIL_AMOUNT_TIER_3 3
 #define RECOIL_AMOUNT_TIER_4 2
 #define RECOIL_AMOUNT_TIER_5 1
+#define RECOIL_AMOUNT_TIER_6 0.5
 #define RECOIL_OFF 0
 
 /*

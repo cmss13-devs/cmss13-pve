@@ -66,7 +66,7 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	recoil = RECOIL_AMOUNT_TIER_5
+	recoil = RECOIL_AMOUNT_TIER_6
 
 /obj/item/weapon/gun/flamer/unique_action(mob/user)
 	toggle_gun_safety()
@@ -153,6 +153,7 @@
 			else
 				unleash_flame(target, user)
 		current_mag.current_rounds = current_mag.get_ammo_percent()
+		simulate_recoil(1, user)
 		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src)
 		return AUTOFIRE_CONTINUE
 	return NONE
@@ -235,7 +236,7 @@
 	if(!COOLDOWN_FINISHED(src, fire_sound_cooldown))
 		return
 	COOLDOWN_START(src, fire_sound_cooldown, 1 SECONDS)
-	playsound(curloc, fire_sound, 45)
+	playsound(curloc, fire_sound, 35)
 
 
 /obj/item/weapon/gun/flamer/proc/unleash_smoke(atom/target, mob/living/user)
