@@ -319,7 +319,7 @@
 		/obj/item/explosive/grenade/incendiary/airburst/rmc20mm,
 		/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm,
 		/obj/item/explosive/grenade/high_explosive/impact/rmc20mm/holo,
-		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm
+		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm,
 	)
 	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
 

@@ -1,4 +1,33 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/secdoor/reinforced{
+	name = "Brig";
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "Brig";
+	dir = 4;
+	desc = "That looks like it doesn't open easily. Probably dont wanna go in there.";
+	id = "Brig"
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/space)
+"ab" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/almayer/floor,
+/area/golden_arrow/platoonarmory)
+"ac" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "Brig";
+	dir = 4;
+	desc = "That looks like it doesn't open easily. Probably dont wanna go in there.";
+	id = "Brig"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/space)
 "ad" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -815,9 +844,7 @@
 "cA" = (
 /obj/structure/closet/secure_closet/brig/prisoner,
 /turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "cC" = (
 /obj/structure/platform,
 /turf/open/floor/almayer/cargo_arrow/east,
@@ -844,9 +871,7 @@
 	pixel_x = -24
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "cI" = (
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/supplydrop)
@@ -868,9 +893,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "cN" = (
 /obj/structure/machinery/door_control{
 	pixel_y = 12;
@@ -902,9 +925,7 @@
 "cS" = (
 /obj/structure/filingcabinet/security,
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "cT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth/endcap_left,
@@ -1000,16 +1021,12 @@
 "dj" = (
 /obj/structure/closet/secure_closet/brig/restraints,
 /turf/open/floor/almayer/edge/smooth/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "dm" = (
 /obj/item/tool/soap/weyland_yutani,
 /obj/structure/surface/rack,
 /turf/open/floor/almayer/edge/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "dn" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -1198,11 +1215,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"dU" = (
-/turf/closed/wall/almayer/aicore/white/hull,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
 "dV" = (
 /turf/closed/wall/almayer/outer,
 /area/space)
@@ -1252,9 +1264,7 @@
 "ec" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer/edge,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "ed" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2,
 /obj/structure/largecrate/random/case,
@@ -1435,9 +1445,7 @@
 	dir = 4
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "eF" = (
 /obj/structure/sign/safety/airlock,
 /turf/closed/wall/almayer/aicore/white/hull,
@@ -1540,9 +1548,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/cargo_arrow/west,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "fa" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -1657,9 +1663,7 @@
 	dir = 5
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "fw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1708,9 +1712,7 @@
 /area/golden_arrow/hangar)
 "fD" = (
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "fG" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2016,9 +2018,7 @@
 	name = "Royal Military Police Vendor"
 	},
 /turf/open/floor/almayer/edge/smooth/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "gO" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /turf/open/floor/almayer/cargo,
@@ -2304,9 +2304,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/edge,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "hw" = (
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/cleanable/dirt{
@@ -2358,9 +2356,7 @@
 	dir = 6
 	},
 /turf/open/floor/almayer/edge/smooth/northeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "hH" = (
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/almayer/edge/smooth/east,
@@ -2478,9 +2474,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "ij" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2503,9 +2497,7 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "im" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -2724,9 +2716,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "iV" = (
 /obj/structure/sign/safety/airlock,
 /turf/closed/wall/almayer/aicore/white,
@@ -2795,9 +2785,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/almayer/edge/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "jg" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -3047,9 +3035,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/edge/southeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "jV" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3209,9 +3195,7 @@
 /obj/item/storage/box/guncase/heavy/rmcsmg,
 /obj/item/storage/box/guncase/heavy/rmcsmg,
 /turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "kp" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/flower_vase/redwhiteflowers,
@@ -3691,9 +3675,7 @@
 "lK" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "lL" = (
 /obj/structure/ship_ammo/rocket/harpoon{
 	pixel_x = -18;
@@ -3910,9 +3892,7 @@
 "mu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "mv" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
 	name = "Troop Coomander's Quarters"
@@ -4143,9 +4123,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "ng" = (
 /obj/structure/machinery/cm_vending/gear/synth{
 	name = "Weyland-Yutani Synthetic Auxiliary Gear Rack"
@@ -4245,18 +4223,14 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "nt" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/brig/prisoner,
 /turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "nu" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/machinery/bot/cleanbot,
@@ -4442,9 +4416,7 @@
 /area/golden_arrow/prep_hallway)
 "nW" = (
 /turf/open/floor/almayer/cargo_arrow/west,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "nX" = (
 /turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
 /area/golden_arrow/vehicle_shuttle/upper)
@@ -4887,9 +4859,7 @@
 /area/golden_arrow/dorms)
 "px" = (
 /turf/open/floor/almayer/edge/southeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "py" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Hangar Lockdown Blast Door";
@@ -5436,9 +5406,7 @@
 	dir = 6
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "rr" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/largecrate/random/case/double,
@@ -5530,9 +5498,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/almayer/edge/southeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "rE" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -5726,9 +5692,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "sm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/working_joe{
@@ -5966,9 +5930,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "sS" = (
 /turf/closed/wall/almayer/aicore/white,
 /area/golden_arrow/shared_office)
@@ -6019,9 +5981,7 @@
 "tj" = (
 /obj/structure/closet/secure_closet/brig/prison_uni,
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "tm" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -6134,9 +6094,7 @@
 	id = "Brig"
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/golden_arrow/prep_hallway)
 "tC" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
@@ -6800,9 +6758,7 @@
 /obj/item/clothing/accessory/armband/mpsec,
 /obj/item/clothing/accessory/holobadge/cord,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "vA" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -6925,9 +6881,7 @@
 "wa" = (
 /obj/structure/closet/secure_closet/brig/prisoner,
 /turf/open/floor/almayer/edge/smooth/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "wb" = (
 /turf/open/floor/almayer/sterile_green_corner,
 /area/golden_arrow/medical)
@@ -7008,9 +6962,7 @@
 	pixel_x = -10
 	},
 /turf/open/floor/almayer/edge/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "wp" = (
 /obj/structure/machinery/vending/walkman{
 	pixel_y = 21;
@@ -7262,9 +7214,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "wX" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "aicorespawnarea";
@@ -7630,9 +7580,7 @@
 /area/golden_arrow/hangar)
 "yd" = (
 /turf/open/floor/almayer/edge/smooth/southeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "ye" = (
 /obj/structure/gun_rack/nsg/unloaded,
 /turf/open/floor/almayer/edge/smooth/southwest,
@@ -7738,9 +7686,7 @@
 /area/golden_arrow/engineering)
 "yv" = (
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "yw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -7798,9 +7744,7 @@
 	dir = 8
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "yA" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25;
@@ -7858,9 +7802,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/almayer/edge/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "yM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -7895,9 +7837,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/golden_arrow/prep_hallway)
 "yR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -8039,9 +7979,7 @@
 /area/golden_arrow/cryo_cells)
 "zl" = (
 /turf/open/floor/almayer/edge/smooth/endcap_right,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "zn" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 1
@@ -8118,9 +8056,7 @@
 /area/golden_arrow/medical)
 "zA" = (
 /turf/open/floor/almayer/edge/northeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "zC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8265,8 +8201,9 @@
 /area/golden_arrow/dorms)
 "Ag" = (
 /obj/structure/ladder{
-	id = "aicore";
-	desc = "A sturdy metal ladder. It seems to go down to the AI Core Chamber or atleast one of the areas to get to the AI Core."
+	id = "aicore1";
+	desc = "A sturdy metal ladder. It seems to go down to the AI Core Chamber or atleast one of the areas to get to the AI Core.";
+	height = 1
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/briefing)
@@ -8380,9 +8317,7 @@
 "Az" = (
 /obj/structure/surface/rack,
 /turf/open/floor/almayer/edge/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "AC" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -8693,9 +8628,7 @@
 "BB" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "BC" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -8929,9 +8862,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Cr" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -9240,9 +9171,7 @@
 "Dr" = (
 /obj/structure/bed/chair/comfy/bench/south,
 /turf/open/floor/almayer/edge/smooth/endcap_left/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Ds" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -9410,9 +9339,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "DP" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/smooth/southwest,
@@ -9570,11 +9497,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/floor,
 /area/golden_arrow/shared_office)
-"Et" = (
-/turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
 "Eu" = (
 /obj/structure/machinery/cm_vending/clothing/medic/rmc{
 	pixel_y = 20;
@@ -9802,9 +9724,7 @@
 	pixel_x = -10
 	},
 /turf/open/floor/almayer/edge/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Fd" = (
 /obj/structure/roof/cargocrane_tracks/tjoint3,
 /obj/effect/decal/cleanable/dirt{
@@ -9901,9 +9821,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "FB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -10073,9 +9991,7 @@
 "Gg" = (
 /obj/structure/closet/secure_closet/brig/prisoner,
 /turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Gh" = (
 /obj/structure/platform{
 	dir = 8;
@@ -10220,7 +10136,8 @@
 "GG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/ladder{
-	id = "engineering2"
+	id = "engineering2";
+	height = 1
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
@@ -10388,9 +10305,7 @@
 	},
 /obj/item/tool/soap/weyland_yutani,
 /turf/open/floor/almayer/edge,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Hd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -10572,9 +10487,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "HE" = (
 /obj/structure/platform{
 	dir = 8;
@@ -11227,7 +11140,8 @@
 /area/golden_arrow/vehicle_shuttle/upper)
 "JQ" = (
 /obj/structure/ladder{
-	id = "unknown1"
+	id = "unknown";
+	height = 1
 	},
 /turf/open/floor/almayer/edge/northwest,
 /area/golden_arrow/supply)
@@ -11273,9 +11187,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/cargo_arrow/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "JY" = (
 /mob/living/simple_animal/spiderbot{
 	name = "Breaker Box"
@@ -11562,9 +11474,7 @@
 "KN" = (
 /obj/structure/machinery/computer/prisoner,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "KO" = (
 /obj/structure/prop/invuln/pipe_water,
 /obj/effect/decal/cleanable/dirt,
@@ -11620,9 +11530,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "La" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -11775,9 +11683,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer/edge/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Lu" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -11883,9 +11789,7 @@
 	pixel_x = 13
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "LN" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/food/drinks/drinkingglass{
@@ -11918,9 +11822,7 @@
 "LR" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "LU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -12012,9 +11914,7 @@
 "Me" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Mf" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12032,9 +11932,7 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen,
 /turf/open/floor/almayer/edge/northwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Mh" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -12345,9 +12243,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/almayer/edge/northeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Nd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/scrubber,
@@ -12571,9 +12467,7 @@
 "NO" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "NR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -12603,9 +12497,7 @@
 "NV" = (
 /obj/structure/bed/chair/comfy/bench/mid,
 /turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "NW" = (
 /obj/structure/machinery/cryopod/big/flipped{
 	pixel_x = -5
@@ -12657,9 +12549,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Od" = (
 /obj/structure/cargo_container/arious/mid,
 /turf/open/floor/almayer/cargo,
@@ -12758,9 +12648,7 @@
 "Os" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Ot" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -12821,9 +12709,7 @@
 /obj/structure/surface/rack,
 /obj/item/tool/soap/weyland_yutani,
 /turf/open/floor/almayer/edge/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "OE" = (
 /turf/open/floor/almayer/floor,
 /area/golden_arrow/cryo_cells)
@@ -12880,9 +12766,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "OR" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/effect/decal/cleanable/dirt{
@@ -12914,9 +12798,7 @@
 	name = "Royal Military Police Vendor"
 	},
 /turf/open/floor/almayer/edge/smooth/southwest,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "OV" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2,
 /obj/structure/cargo_container/arious/right,
@@ -12927,7 +12809,7 @@
 /area/golden_arrow/hangar)
 "OW" = (
 /obj/structure/ladder{
-	id = "unknown2"
+	id = "unknown"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
@@ -12946,9 +12828,7 @@
 	dir = 5
 	},
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "OZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -13026,9 +12906,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Pm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
@@ -13386,9 +13264,7 @@
 	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/edge/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "QB" = (
 /turf/open/floor/almayer/sterile_green,
 /area/golden_arrow/medical)
@@ -13415,9 +13291,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/almayer/edge/northeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "QF" = (
 /obj/structure/dropship_equipment/weapon/heavygun,
 /obj/effect/decal/warning_stripes{
@@ -13491,9 +13365,7 @@
 "QS" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "QT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -13526,9 +13398,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "QZ" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	pixel_x = -1
@@ -13732,9 +13602,7 @@
 /area/golden_arrow/supply)
 "RA" = (
 /turf/open/floor/almayer/edge/smooth/endcap_left/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "RB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -13781,9 +13649,7 @@
 "RN" = (
 /obj/structure/pipes/vents/pump/siphon,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "RO" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -14003,9 +13869,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "St" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /turf/open/floor/almayer,
@@ -14695,9 +14559,7 @@
 /obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/surface/table/almayer,
 /turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "UL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -14806,9 +14668,7 @@
 /area/golden_arrow/medical)
 "Vj" = (
 /turf/closed/wall/almayer/aicore/white/reinforced,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Vk" = (
 /obj/structure/prop/invuln/fusion_reactor,
 /turf/open/floor/almayer/edge/smooth/northwest,
@@ -15033,9 +14893,7 @@
 	},
 /obj/item/paper_bin,
 /turf/open/floor/almayer/floor,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "VT" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
 	name = "Lockerroom";
@@ -15094,7 +14952,8 @@
 "Wd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/ladder{
-	id = "engineering1"
+	id = "engineering1";
+	height = 1
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/engineering)
@@ -15246,9 +15105,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/surface/table/almayer,
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "WG" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/floor/almayer/test_floor4,
@@ -15386,9 +15243,7 @@
 	dir = 8
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Xd" = (
 /obj/structure/prop/almayer/ai_wallmonitor/east,
 /turf/open/floor/almayer/aicore/glowing,
@@ -15483,9 +15338,7 @@
 "Xq" = (
 /obj/structure/closet/secure_closet/military_police,
 /turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Xs" = (
 /obj/structure/machinery/door/airlock/almayer/secure/colony{
 	name = "Lavatory"
@@ -15585,14 +15438,7 @@
 "XL" = (
 /obj/structure/bed/chair/comfy/bench/north,
 /turf/open/floor/almayer/edge/smooth/endcap_right/east,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
-"XM" = (
-/turf/open/floor/plating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "XN" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -15651,9 +15497,7 @@
 	pixel_x = 12
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/golden_arrow/prep_hallway)
 "XU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -15686,9 +15530,7 @@
 	dir = 4
 	},
 /turf/open/shuttle/elevator/grating,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Yb" = (
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/medical)
@@ -16252,9 +16094,7 @@
 "Zy" = (
 /obj/structure/closet/secure_closet/brig/prisoner,
 /turf/open/floor/almayer/edge/smooth/northeast,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 "Zz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -16424,9 +16264,7 @@
 "ZZ" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/north,
-/area/golden_arrow/firingrange{
-	name = "Brig"
-	})
+/area/space)
 
 (1,1,1) = {"
 Av
@@ -32272,7 +32110,7 @@ PQ
 WJ
 PQ
 WJ
-iy
+ab
 jp
 iy
 PQ
@@ -34088,7 +33926,7 @@ df
 df
 df
 df
-dU
+df
 XT
 yQ
 tB
@@ -34289,12 +34127,12 @@ Av
 Av
 Av
 Av
-dU
-dU
-dU
+UV
+UV
+UV
 sl
 mu
-dU
+UV
 Av
 Av
 Av
@@ -34493,10 +34331,10 @@ UV
 UV
 cH
 KZ
-dU
+UV
 sl
 Fz
-dU
+UV
 Av
 Av
 Av
@@ -34693,12 +34531,12 @@ UV
 NF
 DK
 DK
-XM
-XM
-dU
+DK
+DK
+UV
 ns
 mu
-dU
+UV
 Av
 Av
 Av
@@ -34895,12 +34733,12 @@ UV
 DK
 DK
 DK
-XM
-XM
-dU
+DK
+DK
+UV
 sl
 fD
-dU
+UV
 Av
 Av
 Av
@@ -35094,19 +34932,19 @@ Om
 ge
 Av
 UV
-dU
-dU
-dU
-dU
-dU
-dU
-yQ
-tB
-dU
-dU
-dU
-dU
-dU
+UV
+UV
+UV
+UV
+UV
+UV
+ac
+aa
+UV
+UV
+UV
+UV
+UV
 Av
 Av
 Av
@@ -35296,7 +35134,7 @@ gC
 ge
 Av
 Av
-dU
+UV
 wa
 Gg
 nt
@@ -35308,7 +35146,7 @@ Vj
 gN
 ko
 OU
-dU
+UV
 Av
 Av
 Av
@@ -35498,19 +35336,19 @@ ge
 ge
 Av
 Av
-dU
+UV
 yv
-Et
+Jh
 QS
 OY
 Vj
 Oc
-Et
+Jh
 Vj
 hG
 Os
 yd
-dU
+UV
 Av
 Av
 Av
@@ -35700,19 +35538,19 @@ ge
 ge
 Av
 Av
-dU
+UV
 Zy
 cA
 cA
 nf
 Vj
 Xc
-Et
+Jh
 Vj
 OQ
 Vj
 Vj
-dU
+UV
 Av
 Av
 Av
@@ -35902,19 +35740,19 @@ JF
 ge
 Av
 Av
-dU
+UV
 Vj
 Vj
 Vj
 cM
 Vj
 Oc
-Et
-Et
+Jh
+Jh
 Oc
-Et
+Jh
 Xq
-dU
+UV
 Av
 Av
 Av
@@ -36104,7 +35942,7 @@ bV
 ge
 Av
 Av
-dU
+UV
 tj
 rq
 BB
@@ -36116,7 +35954,7 @@ BB
 ii
 fv
 Xq
-dU
+UV
 Av
 Av
 Av
@@ -36306,19 +36144,19 @@ ww
 ge
 Av
 Av
-dU
+UV
 cS
 Oc
-Et
-Et
+Jh
+Jh
 KN
 Cq
-Et
+Jh
 HD
-Et
+Jh
 Oc
 Xq
-dU
+UV
 Av
 Av
 Av
@@ -36508,11 +36346,11 @@ gd
 ge
 Av
 Av
-dU
+UV
 Me
 Ya
 QS
-Et
+Jh
 VS
 yz
 LL
@@ -36520,7 +36358,7 @@ vz
 RN
 WF
 NO
-dU
+UV
 Av
 Av
 Av
@@ -36710,19 +36548,19 @@ ge
 ge
 Av
 Av
-dU
+UV
 UK
 iU
-Et
-Et
-Et
+Jh
+Jh
+Jh
 Oc
-Et
-Et
-Et
+Jh
+Jh
+Jh
 il
 Ss
-dU
+UV
 Av
 Av
 Av
@@ -36912,19 +36750,19 @@ Hu
 rj
 Av
 Av
-dU
+UV
 RA
 Xc
-Et
-Et
-Et
+Jh
+Jh
+Jh
 Xc
-Et
-Et
-Et
+Jh
+Jh
+Jh
 Xc
 zl
-dU
+UV
 Av
 Av
 Av
@@ -37114,7 +36952,7 @@ GJ
 rj
 Av
 Av
-dU
+UV
 zA
 JX
 XL
@@ -37126,7 +36964,7 @@ NV
 Dr
 JX
 px
-dU
+UV
 Av
 Av
 Av
@@ -37316,7 +37154,7 @@ Hu
 rj
 Av
 Av
-dU
+UV
 Vj
 sR
 Vj
@@ -37328,7 +37166,7 @@ Vj
 Vj
 DM
 Vj
-dU
+UV
 Av
 Av
 Av
@@ -37518,7 +37356,7 @@ Hu
 rj
 Av
 Av
-dU
+UV
 Mg
 eX
 OD
@@ -37530,7 +37368,7 @@ Vj
 Ls
 eX
 dm
-dU
+UV
 Av
 Av
 Av
@@ -37720,7 +37558,7 @@ GJ
 rj
 Av
 Av
-dU
+UV
 ZZ
 LR
 hu
@@ -37732,7 +37570,7 @@ Vj
 ZZ
 LR
 hu
-dU
+UV
 Av
 Av
 Av
@@ -37922,7 +37760,7 @@ Hu
 rj
 Av
 Av
-dU
+UV
 jf
 wW
 ec
@@ -37934,7 +37772,7 @@ Vj
 jf
 wW
 ec
-dU
+UV
 Av
 Av
 Av
@@ -38124,7 +37962,7 @@ rj
 rj
 Av
 Av
-dU
+UV
 QE
 JX
 jU
@@ -38136,7 +37974,7 @@ Vj
 QE
 JX
 jU
-dU
+UV
 Av
 Av
 Av
@@ -38326,7 +38164,7 @@ Av
 Av
 Av
 Av
-dU
+UV
 Vj
 QY
 Vj
@@ -38338,7 +38176,7 @@ Vj
 Vj
 QY
 Vj
-dU
+UV
 Av
 Av
 Av
@@ -38528,7 +38366,7 @@ Av
 Av
 Av
 Av
-dU
+UV
 Fc
 eX
 wo
@@ -38540,7 +38378,7 @@ Vj
 Fc
 eX
 wo
-dU
+UV
 Av
 Av
 Av
@@ -38730,7 +38568,7 @@ Av
 Av
 Av
 Av
-dU
+UV
 ZZ
 eE
 ec
@@ -38742,7 +38580,7 @@ Vj
 ZZ
 eE
 ec
-dU
+UV
 Av
 Av
 Av
@@ -38932,7 +38770,7 @@ Av
 Av
 Av
 Av
-dU
+UV
 Nb
 Qy
 rD
@@ -38944,7 +38782,7 @@ Vj
 Nb
 Qy
 rD
-dU
+UV
 Av
 Av
 Av
@@ -39134,19 +38972,19 @@ Av
 Av
 Av
 Av
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
-dU
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
+UV
 Av
 Av
 Av
