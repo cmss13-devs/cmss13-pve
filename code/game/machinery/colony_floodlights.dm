@@ -79,10 +79,10 @@ GLOBAL_LIST_INIT(all_breaker_switches, list())
 		if(ispowered && is_on)
 			toggle_machines()
 		ispowered = FALSE
-		set_is_on(FALSE)
+		turned_on = FALSE
 	else
 		ispowered = TRUE
-		update_icon()
+	update_icon()
 
 /obj/structure/machinery/colony_floodlight_switch/proc/toggle_machines()
 	for(var/obj/structure/machinery/machine as anything in machinery_list)
