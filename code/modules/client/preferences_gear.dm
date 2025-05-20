@@ -578,8 +578,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/accessory/paint/heart
 
 /datum/gear/paint/uaflag
-	display_name = "M3 Pattern Flag Paint"
+	display_name = "M3 Pattern UA Flag Paint"
 	path = /obj/item/clothing/accessory/paint/uaflag
+
+/datum/gear/paint/usflag
+	display_name = "M3 Pattern US Flag Paint"
+	path = /obj/item/clothing/accessory/paint/usflag
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -1489,3 +1493,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
 
+/datum/gear/misc/can_opener
+	display_name = "Can opener"
+	path = /obj/item/tool/kitchen/can_opener
+	cost = 1
+
+/datum/gear/misc/can_opener/compact
+	display_name = "Compact can opener"
+	path = /obj/item/tool/kitchen/can_opener/compact
+	cost = 2
