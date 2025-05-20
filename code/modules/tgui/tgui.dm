@@ -43,6 +43,9 @@
 	/// If the window should be closed with other windows when requested
 	var/closeable = TRUE
 
+	/// For objects, keep the window open as long as it is on the users loc
+	var/keep_open_if_on_same_loc = FALSE
+
 	/// Any partial packets that we have received from TGUI, waiting to be sent
 	var/partial_packets
 
@@ -320,7 +323,7 @@
  */
 /datum/tgui/proc/process_status()
 	var/prev_status = status
-	status = src_object.ui_status(user, state)
+	status = src_object.ui_status(user, state, keep_open_if_on_same_loc)
 	return prev_status != status
 
 /**
