@@ -377,7 +377,7 @@
 	set waitfor = 0
 
 	if(!customizable)
-		create_shrapnel(loc, 30, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
+		create_shrapnel(loc, 15, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
 		// low lethality edition
 		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
 		qdel(src)
