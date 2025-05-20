@@ -254,8 +254,6 @@
 	VAR_PROTECTED/start_semiauto = TRUE
 	/// If this gun should spawn with automatic fire. Protected due to it never needing to be edited.
 	VAR_PROTECTED/start_automatic = FALSE
-	/// If this gun should spawn with burst fire. Protected due to it never needing to be edited.
-	VAR_PROTECTED/start_burstfire = FALSE
 	/// The type of projectile that this gun should shoot
 	var/projectile_type = /obj/projectile
 	/// The multiplier for how much slower this should fire in automatic mode. 1 is normal, 1.2 is 20% slower, 2 is 100% slower, etc. Protected due to it never needing to be edited.
