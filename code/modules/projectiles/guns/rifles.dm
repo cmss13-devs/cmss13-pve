@@ -167,8 +167,10 @@
 	icon_state = "rmc_nsg23"
 	item_state = "rmc_nsg23"
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	start_semiauto = FALSE
-	start_burstfire = TRUE
+/*
+	//start_semiauto = FALSE	//To add back after #971 is in
+	//start_burstfire = TRUE
+*/
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23/rmc,
 		/obj/item/attachable/attached_gun/grenade/nsg,
