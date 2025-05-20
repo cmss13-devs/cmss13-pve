@@ -386,6 +386,13 @@
 	playsound(src,'sound/effects/bamf.ogg',100,TRUE)
 	qdel(src)
 
+/obj/item/reagent_container/glass/watertank/pheromones
+	name = "backpack watertank"
+	icon_state = "backpack_foamer"
+	item_state = "backpack_foamer"
+	volume = 500
+	fill_reagent = "pheromones"
+
 #undef EXTINGUISHER
 #undef METAL_LAUNCHER
 #undef METAL_FOAM
