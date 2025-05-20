@@ -226,17 +226,17 @@ Template
 
 /datum/poster/upp_3
 	icon_state="upp_poster_3"
-	name = "Trust In The Strength Of The Union"
+	name = "Trust in the Strength of the Union"
 	desc = "A stylized depiction of the UPP star."
 
 /datum/poster/upp_4
 	icon_state="upp_poster_4"
-	name = "Through The Union Our Power Is Secured"
-	desc = "A stylized depiction of the UPP's flag and the words, 'Our Unity is the dream of all Peoples. Trust in the strength of ther Union.'"
+	name = "Through the Union Our Power is Secured"
+	desc = "A stylized depiction of the UPP's flag and the words, 'Our Unity is the dream of all Peoples. Trust in the strength of the Union.'"
 
 /datum/poster/upp_5
 	icon_state="upp_poster_5"
-	name = "We Forge A Path Into the Stars"
+	name = "We Forge a Path into the Stars"
 	desc = "The head of a man in a UPPAC EVA suit smiles looking not at you, but up to the right of the poster."
 
 /datum/poster/upp_6
@@ -262,5 +262,5 @@ Template
 
 /datum/poster/upp_10
 	icon_state="upp_poster_10"
-	name = "Ever Vigilant Against The Stooges of Capitalism and Imperialism"
+	name = "Ever Vigilant Against the Stooges of Capitalism and Imperialism"
 	desc = "A warped screaming eagle made to look like a vulture bears its talons over Earth which has the UPP roundel super-imposed over it. The poster reads, 'The UA will not break the resolve of the people."
