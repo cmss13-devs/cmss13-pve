@@ -175,7 +175,7 @@
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
 /datum/ammo/bullet/rifle/heavy/rmcdmr
-	name = "8.88x51mm squash-head bullet"
+	name = "8.88x51 squash-head bullet"
 	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
