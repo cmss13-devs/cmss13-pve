@@ -633,7 +633,7 @@
 
 /obj/item/weapon/gun/pistol/vp78/rmc
 	name = "\improper L165A1 service pistol"
-	desc = "Service issue pistol to the Royal Marine Commandos. A sleek, modern, semi-automatic handgun specifically designed to chambered specialized 9x19mm explosive squash-head rounds. Based on a Beretta Arms patented design, this Weyland-Yutani modification has earned its place in the hands of the Three World Empire's best soldiers. Can load normal VP78 magazines with no issue too."
+	desc = "Service issue pistol to the Royal Marine Commandos. A sleek, modern, semi-automatic handgun specifically designed to chamber specialized 9x19mm explosive squash-head rounds. Based on a Beretta Arms patented design, this Weyland-Yutani modification has earned its place in the hands of the Three World Empire's best soldiers. Can load normal VP78 magazines with no issue too."
 	current_mag = /obj/item/ammo_magazine/pistol/vp78/rmc
 
 /obj/item/weapon/gun/pistol/vp78/rmc/unloaded
