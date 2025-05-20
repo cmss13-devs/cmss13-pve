@@ -54,6 +54,9 @@
 	},
 /turf/open/floor/prison/darkyellowcorners2/north,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"ar" = (
+/turf/open/floor/wood/wood_broken3,
+/area/Greenvault_Ranch/outside/pens)
 "at" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -75,6 +78,16 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"aB" = (
+/obj/item/trash/cigbutt/ucigbutt,
+/turf/open/floor/prison/floor_plate,
+/area/Greenvault_Ranch/int_reg/kitchen)
+"aC" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "aD" = (
 /obj/structure/sink{
 	dir = 8;
@@ -123,6 +136,10 @@
 /obj/structure/closet/secure_closet/guncabinet/riot_control,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
+"aV" = (
+/obj/structure/flora/bush/desert,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "aW" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -145,6 +162,11 @@
 	},
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
+"aZ" = (
+/obj/structure/barricade/handrail/wire,
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "be" = (
 /obj/structure/machinery/photocopier,
 /turf/open/floor/prison/darkred2,
@@ -167,6 +189,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"bp" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "bq" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/bright_clean,
@@ -176,6 +202,10 @@
 /obj/item/prop/tableflag/uscm,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/housing)
+"bu" = (
+/obj/structure/prop/rock/black_ground,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "bv" = (
 /obj/structure/filingcabinet/filingcabinet{
 	pixel_y = 8;
@@ -194,6 +224,10 @@
 	},
 /turf/open/floor/prison/darkbrown2/west,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"bz" = (
+/obj/structure/flora/jungle/thickbush,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "bB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail/wire{
@@ -211,6 +245,12 @@
 	},
 /turf/open/asphalt/cement,
 /area/Greenvault_Ranch/int_reg/virology)
+"bD" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "bG" = (
 /obj/structure/prop/vehicles/crawler{
 	dir = 8;
@@ -219,12 +259,27 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"bH" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "bI" = (
 /turf/open/floor/prison/green/west,
 /area/Greenvault_Ranch/int_reg/housing)
 "bJ" = (
 /obj/item/lightstick/red/planted,
 /turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"bK" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/gm/dirt,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "bL" = (
 /obj/structure/bed/chair{
@@ -260,9 +315,8 @@
 /turf/open/floor/prison/darkyellow2,
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "bW" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison/floor_plate,
-/area/Greenvault_Ranch/int_reg/farmbay)
+/turf/open/floor/plating/wood_broken3,
+/area/Greenvault_Ranch/outside/pens)
 "bY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -287,13 +341,19 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "cl" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison/darkyellowfull2,
-/area/Greenvault_Ranch/int_reg/telecomms_yard)
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "cn" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/prison/floor_marked,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"cr" = (
+/turf/open/floor/wood/wood_broken2,
+/area/Greenvault_Ranch/outside/pens)
 "ct" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -313,6 +373,10 @@
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"cy" = (
+/obj/item/toy/beach_ball,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "cA" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -327,7 +391,7 @@
 "cE" = (
 /obj/structure/prop/rock/black_ground,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/outside/pens)
 "cF" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/clothing/head/hardhat/dblue,
@@ -350,10 +414,28 @@
 /obj/structure/cargo_container/lockmart/mid,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"cN" = (
+/obj/item/trash/cigbutt/cigarbutt,
+/turf/open/floor/prison/green/north,
+/area/Greenvault_Ranch/int_reg/housing)
+"cR" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "cS" = (
 /obj/structure/bed/sofa/vert,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"cT" = (
+/obj/structure/flora/jungle/vines,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
+"cU" = (
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/prison/floor_plate,
+/area/Greenvault_Ranch/int_reg/kitchen)
 "cV" = (
 /obj/structure/flora/jungle/thickbush/jungle_plant,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -382,6 +464,10 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
+"df" = (
+/obj/structure/machinery/r_n_d/destructive_analyzer,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "dl" = (
@@ -459,6 +545,14 @@
 "dI" = (
 /turf/open/floor/plating,
 /area/Greenvault_Ranch/shuttles/drop1)
+"dK" = (
+/obj/structure/flora/jungle/alienplant1{
+	layer = 4.13;
+	pixel_y = 18
+	},
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "dO" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -488,13 +582,17 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "dV" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/telecomms)
 "dW" = (
 /obj/structure/prop/fishing/pole_interactive,
 /turf/open/gm/coast/beachcorner/south_west,
 /area/Greenvault_Ranch/outside/north_river)
+"dX" = (
+/obj/structure/flora/bush/ausbushes/var3/sunnybush,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "dY" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 4
@@ -526,10 +624,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "ei" = (
-/obj/structure/flora/grass/tallgrass/jungle,
-/obj/structure/flora/grass/tallgrass/jungle,
-/obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/wildplace)
 "ek" = (
 /obj/structure/closet,
@@ -620,6 +715,23 @@
 /obj/item/clothing/gloves/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"eM" = (
+/obj/structure/surface/table/almayer,
+/obj/item/trash/candle,
+/turf/open/floor/prison,
+/area/Greenvault_Ranch/int_reg/housing)
+"eP" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"eR" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "eU" = (
 /turf/open/floor/almayer/sterile_green_side,
 /area/Greenvault_Ranch/int_reg/clinic)
@@ -711,9 +823,14 @@
 /turf/open/gm/coast/south,
 /area/Greenvault_Ranch/outside/north_river)
 "fv" = (
-/obj/structure/flora/grass/tallgrass/jungle,
-/obj/item/device/flashlight/lamp/tripod,
-/turf/open/auto_turf/strata_grass/layer0_mud,
+/obj/structure/prop/invuln/ice_prefab/trim{
+	dir = 4
+	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "solarpanel2";
+	pixel_y = -9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/pens)
 "fw" = (
 /obj/effect/decal/warning_stripes{
@@ -833,9 +950,7 @@
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/housing)
 "gk" = (
-/turf/closed/wall/rock{
-	color = "#a39e99"
-	},
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "gl" = (
 /obj/structure/closet/fireaxecabinet,
@@ -882,6 +997,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/virology)
+"gz" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "gB" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 4
@@ -913,6 +1032,10 @@
 /obj/structure/flora/tree/dead/tree_2,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"gP" = (
+/obj/effect/overlay/palmtree_l,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "gQ" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -955,6 +1078,9 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/shuttles/drop1)
+"gZ" = (
+/turf/open/floor/wood/wood_broken4,
+/area/Greenvault_Ranch/outside/pens)
 "hb" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /obj/structure/largecrate/random/barrel/yellow,
@@ -1004,6 +1130,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/item/trash/liquidfood,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "ho" = (
@@ -1027,6 +1154,10 @@
 /obj/item/prop/magazine/playboy,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"hq" = (
+/obj/structure/prop/rock/black_ground/dense,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "hs" = (
 /turf/open/floor/prison/darkyellow2/east,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -1043,10 +1174,28 @@
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer/silverfull,
 /area/Greenvault_Ranch/int_reg/virology)
+"hz" = (
+/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
+"hA" = (
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/pens)
 "hD" = (
 /obj/structure/pipes/vents/pump,
+/obj/item/trash/cigbutt/bcigbutt,
 /turf/open/floor/prison/green,
 /area/Greenvault_Ranch/int_reg/housing)
+"hE" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/obj/structure/machinery/implantchair,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "hF" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -1054,6 +1203,15 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"hG" = (
+/turf/open/gm/coast/east,
+/area/Greenvault_Ranch/outside/wildplace)
+"hK" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "hN" = (
 /obj/structure/machinery/power/reactor,
 /turf/open/floor/prison/darkyellow2/northeast,
@@ -1134,9 +1292,32 @@
 /obj/structure/closet,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/housing)
+"io" = (
+/obj/structure/flora/tree/dead/tree_1,
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"ip" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/closed/wall/shiva/prefabricated/orange,
+/area/Greenvault_Ranch/int_reg/farmbay)
+"iq" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/turf/open/gm/coast,
+/area/Greenvault_Ranch/outside/wildplace)
 "it" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/housing)
+"iu" = (
+/obj/item/trash/chips,
+/turf/open/floor/prison/floor_plate,
+/area/Greenvault_Ranch/int_heavy/powerplace)
+"iv" = (
+/obj/structure/flora/bush/desert,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "iw" = (
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
@@ -1152,11 +1333,21 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"iG" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "iH" = (
 /obj/structure/surface/table/holotable/wood,
 /obj/structure/curtain/medical,
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"iJ" = (
+/obj/structure/flora/tree/dead/tree_5,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "iP" = (
 /turf/open/floor/prison/darkpurple2/west,
 /area/Greenvault_Ranch/int_reg/telecomms)
@@ -1221,6 +1412,12 @@
 /obj/effect/decal/cleanable/dirt/greenglow,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"jb" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "je" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 5
@@ -1242,6 +1439,20 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"ji" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1
+	},
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
+"jj" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "jk" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -1271,13 +1482,25 @@
 /turf/open/floor/prison/darkbrown2/southeast,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "jv" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"jx" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
+"jB" = (
+/obj/effect/overlay/palmtree_l,
+/turf/open/gm/coast/beachcorner/south_west,
+/area/Greenvault_Ranch/outside/wildplace)
 "jD" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	req_one_access = "102;104;106"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "jE" = (
@@ -1303,10 +1526,10 @@
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "jR" = (
-/obj/structure/surface/table/almayer,
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison/darkpurple2,
 /area/Greenvault_Ranch/int_reg/telecomms)
 "jS" = (
@@ -1362,6 +1585,10 @@
 /obj/item/ammo_box/magazine/nailgun,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/Greenvault_Ranch/int_reg/virology)
+"kg" = (
+/obj/structure/flora/jungle/alienplant1,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "kh" = (
 /turf/open/floor/prison/darkred2,
 /area/Greenvault_Ranch/int_reg/marshals)
@@ -1392,6 +1619,7 @@
 	dir = 8;
 	layer = 2.991
 	},
+/obj/item/trash/crushed_cup,
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
 "kn" = (
@@ -1423,6 +1651,13 @@
 "ku" = (
 /turf/open/floor/prison/darkyellowcorners2/east,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"kv" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "kw" = (
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/prison/floor_plate,
@@ -1448,10 +1683,8 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "kI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/Greenvault_Ranch/int_reg/farmbay)
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "kK" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -1476,6 +1709,12 @@
 /obj/structure/machinery/telecomms/broadcaster,
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"kR" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "kT" = (
 /obj/structure/cargo_container/wy/mid,
 /turf/open/floor/prison/darkbrown2,
@@ -1507,6 +1746,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"kZ" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "lc" = (
 /obj/structure/machinery/computer/mecha,
 /obj/structure/machinery/computer/med_data/laptop{
@@ -1522,13 +1767,17 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wheatfields)
-"li" = (
-/obj/structure/pipes/vents/pump{
-	dir = 8
+"lh" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_plate,
-/area/Greenvault_Ranch/int_reg/farmbay)
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"li" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
 "lj" = (
 /turf/open/floor/prison/cell_stripe,
 /area/Greenvault_Ranch/int_reg/farmbay)
@@ -1536,6 +1785,10 @@
 /obj/item/weapon/gun/pistol/clfpistol,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"ln" = (
+/obj/structure/flora/jungle/planttop1,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "lp" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -1550,6 +1803,10 @@
 	},
 /turf/open/floor/prison/green,
 /area/Greenvault_Ranch/int_reg/housing)
+"lv" = (
+/obj/item/trash/burger,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "lw" = (
 /turf/closed/wall/shiva/prefabricated/orange,
 /area/Greenvault_Ranch/int_reg/farmbay)
@@ -1597,6 +1854,10 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"lL" = (
+/obj/structure/prop/rock/black_ground/dense,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "lN" = (
 /obj/structure/machinery/power/port_gen/pacman/mrs{
 	layer = 3.1;
@@ -1604,6 +1865,25 @@
 	},
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"lP" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"lQ" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "lS" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/prison/blue_plate/north,
@@ -1633,12 +1913,25 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
+"mk" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "mm" = (
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"mn" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "mp" = (
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/darkred2,
@@ -1655,6 +1948,23 @@
 /obj/structure/xenoautopsy/tank/larva,
 /turf/open/floor/almayer/research/containment/floor2/west,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"mA" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 11
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -14
+	},
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
+"mB" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "mD" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 1
@@ -1712,6 +2022,12 @@
 /obj/structure/sign/banners/united_americas_flag,
 /turf/closed/wall/shiva/prefabricated/red,
 /area/Greenvault_Ranch/int_reg/marshals)
+"mX" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "mZ" = (
 /turf/open/floor/prison/darkbrown2/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
@@ -1750,6 +2066,13 @@
 	dir = 5
 	},
 /obj/item/prop/tableflag/uscm,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"nh" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "ni" = (
@@ -1791,9 +2114,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/pens)
 "np" = (
-/obj/structure/filingcabinet,
-/turf/open/floor/prison/floor_plate,
-/area/Greenvault_Ranch/int_reg/farmbay)
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "nq" = (
 /obj/structure/prop/rock/black_ground/dense,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1828,8 +2150,20 @@
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "nH" = (
-/turf/closed/wall/shiva/prefabricated/white,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -14;
+	pixel_y = 11
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -14
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
+"nI" = (
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "nJ" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/trash/plate,
@@ -1862,6 +2196,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"nR" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "nS" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1886,19 +2226,29 @@
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
 "nZ" = (
-/obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/tunnel,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "ob" = (
 /turf/open/floor/prison/darkbrown2/southeast,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"od" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "oe" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/weapon/gun/smg/fp9000/pmc,
 /obj/item/weapon/gun/smg/fp9000/pmc,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"of" = (
+/obj/structure/flora/bush/desert,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "oh" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4;
@@ -1919,6 +2269,7 @@
 	pixel_y = 23
 	},
 /obj/item/clothing/shoes/cowboy,
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
 "ol" = (
@@ -1931,16 +2282,29 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"on" = (
+/obj/structure/flora/jungle/planttop1,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "op" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"oq" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/turf/open/floor/prison/cell_stripe/north,
+/area/Greenvault_Ranch/int_reg/farmbay)
 "ot" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
-/obj/structure/pipes/standard/simple/visible,
-/turf/open/floor/prison,
-/area/Greenvault_Ranch/int_heavy/powerplace)
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"ov" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "ow" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1967,6 +2331,10 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"oH" = (
+/mob/living/simple_animal/cow,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "oL" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/caves)
@@ -1991,6 +2359,9 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/marshals)
+"oQ" = (
+/turf/open/floor/plating/wood_broken5,
+/area/Greenvault_Ranch/outside/pens)
 "oR" = (
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
@@ -2028,13 +2399,23 @@
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "pd" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison/darkpurplefull2,
-/area/Greenvault_Ranch/int_reg/telecomms)
+/turf/closed/wall/wood,
+/area/Greenvault_Ranch/outside/pens)
+"pf" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "ph" = (
 /obj/structure/closet/secure_closet/guncabinet/blue/riot_control,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
+"pi" = (
+/turf/closed/wall/rock{
+	color = "#a39e99"
+	},
+/area/Greenvault_Ranch/outside/pens)
 "pj" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -2097,7 +2478,6 @@
 	pixel_x = -7;
 	pixel_y = 23
 	},
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
 "pv" = (
@@ -2134,6 +2514,12 @@
 /obj/structure/flora/tree/dead/tree_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"pQ" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "pR" = (
 /turf/closed/wall/rock{
 	color = "#a39e99"
@@ -2187,6 +2573,13 @@
 /obj/structure/largecrate/random/barrel/purewhite,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"qf" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"qh" = (
+/obj/structure/flora/tree/dead/tree_5,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "qk" = (
 /obj/structure/largecrate,
 /obj/structure/machinery/light/small{
@@ -2205,6 +2598,10 @@
 	},
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"qp" = (
+/obj/structure/flora/bush/ausbushes/ausbush,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "qt" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -2275,6 +2672,22 @@
 /obj/structure/machinery/telecomms/bus/preset_one,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"qY" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"qZ" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/reagent_container/food/drinks/cans/beer,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
+"rb" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "rf" = (
 /obj/structure/prop/invuln/ice_prefab{
 	icon_state = "fab_2"
@@ -2342,8 +2755,8 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "rw" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	dir = 1
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	dir = 2
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
@@ -2368,6 +2781,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"rD" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "rG" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -2419,12 +2836,22 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wheatfields)
+"rU" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "rV" = (
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
 /turf/open/floor/corsat/lightplate,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"rW" = (
+/obj/structure/flora/bush/ausbushes/var3/sunnybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "rY" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer,
@@ -2441,7 +2868,7 @@
 /area/Greenvault_Ranch/outside/northwest)
 "sb" = (
 /obj/structure/flora/jungle/vines/heavy,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "sc" = (
 /turf/closed/wall/almayer/research/containment/wall/corner{
@@ -2484,6 +2911,14 @@
 /obj/structure/sign/catclock,
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"so" = (
+/obj/structure/coatrack,
+/turf/open/floor/prison/floor_plate,
+/area/Greenvault_Ranch/int_reg/housing)
+"sq" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "sr" = (
 /obj/structure/bed/chair,
 /turf/open/floor/almayer/dark_sterile,
@@ -2500,7 +2935,7 @@
 /turf/open/floor/prison/green/southeast,
 /area/Greenvault_Ranch/int_reg/housing)
 "sy" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "sB" = (
@@ -2547,6 +2982,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"sQ" = (
+/obj/structure/barricade/handrail/wire,
+/mob/living/simple_animal/cow,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "sR" = (
 /obj/structure/surface/table,
 /obj/item/mre_food_packet/entree/wy,
@@ -2559,7 +2999,6 @@
 	},
 /area/Greenvault_Ranch/int_heavyoutofbounds)
 "sV" = (
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "sW" = (
@@ -2574,18 +3013,32 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"sY" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/wood/wood_broken6,
+/area/Greenvault_Ranch/outside/pens)
 "tb" = (
 /obj/structure/flora/tree/dead/tree_2,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/outside/pens)
 "td" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms)
 "tf" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"ti" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/machinery/vending/cigarette,
+/turf/open/floor/prison/darkyellowfull2,
+/area/Greenvault_Ranch/int_reg/telecomms_yard)
 "tj" = (
 /obj/item/prop/scrap,
 /turf/open/floor/prison/green/north,
@@ -2631,6 +3084,18 @@
 "tv" = (
 /turf/open/floor/shiva/redfull/west,
 /area/Greenvault_Ranch/int_reg/marshals)
+"ty" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
+"tz" = (
+/obj/structure/prop/ice_colony/dense/planter_box,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "tA" = (
 /obj/structure/flora/grass/tallgrass/ice,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -2670,7 +3135,9 @@
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/housing)
 "tG" = (
-/obj/structure/prop/dam/van/damaged,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "tH" = (
@@ -2683,11 +3150,18 @@
 	pixel_x = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom,
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 2
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"tJ" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "tK" = (
 /obj/structure/window/framed/shiva,
 /turf/open/floor/prison/bright_clean,
@@ -2700,6 +3174,11 @@
 /obj/structure/prop/brazier,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"tS" = (
+/obj/structure/flora/bush/ausbushes/ausbush,
+/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "tT" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "solarpanel1";
@@ -2729,7 +3208,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "ui" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
 "uj" = (
@@ -2760,7 +3239,9 @@
 /turf/open/floor/prison/darkbrown2/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "un" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	req_one_access = "102;104;106"
+	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "ur" = (
@@ -2782,6 +3263,13 @@
 "uv" = (
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"uz" = (
+/obj/structure/prop/invuln/ice_prefab{
+	dir = 1
+	},
+/obj/structure/fence,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "uA" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/virology)
@@ -2835,10 +3323,17 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/shuttles/drop1)
+"uX" = (
+/turf/open/gm/coast/beachcorner/south_east,
+/area/Greenvault_Ranch/outside/wildplace)
 "va" = (
 /obj/docking_port/stationary/marine_dropship/lz1,
 /turf/open/floor/plating,
 /area/Greenvault_Ranch/shuttles/drop1)
+"vb" = (
+/obj/item/tool/mop,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "vd" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -2934,8 +3429,8 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "vx" = (
-/obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass/layer0_mud,
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/wildplace)
 "vB" = (
 /obj/structure/machinery/power/reactor,
@@ -2962,19 +3457,28 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"vG" = (
+/obj/structure/surface/table/woodentable,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "vH" = (
 /obj/structure/machinery/processor,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "vI" = (
-/obj/structure/flora/grass/tallgrass/jungle,
-/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "vJ" = (
 /obj/structure/sign/poster/pinup,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/housing)
+"vM" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "vO" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 1
@@ -3016,6 +3520,13 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"vZ" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "wb" = (
 /obj/structure/flora/grass/tallgrass/desert{
 	color = "#bfff00"
@@ -3040,6 +3551,10 @@
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"wh" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "wi" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -3051,6 +3566,11 @@
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"wk" = (
+/obj/item/storage/beer_pack,
+/obj/item/clothing/mask/cigarette/cigar/classic,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "wl" = (
 /obj/structure/prop/ice_colony/surveying_device,
 /turf/open/gm/dirt,
@@ -3096,6 +3616,27 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"wB" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
+"wE" = (
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"wF" = (
+/obj/structure/flora/bush/ausbushes/genericbush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"wG" = (
+/obj/structure/tunnel,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "wH" = (
 /obj/structure/machinery/smartfridge/chemistry,
 /turf/open/floor/almayer/dark_sterile,
@@ -3114,6 +3655,24 @@
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"wM" = (
+/mob/living/simple_animal/cow,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
+"wO" = (
+/obj/effect/overlay/palmtree_l,
+/turf/open/gm/coast/east,
+/area/Greenvault_Ranch/outside/wildplace)
+"wP" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "wQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
@@ -3122,6 +3681,9 @@
 /area/Greenvault_Ranch/int_reg/kitchen)
 "wS" = (
 /obj/structure/prop/ice_colony/surveying_device/measuring_device,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "wU" = (
@@ -3150,6 +3712,10 @@
 /obj/structure/bed/sofa/south/grey,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"xg" = (
+/obj/structure/flora/jungle/alienplant1,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "xl" = (
 /obj/structure/cargo_container/ferret/right,
 /turf/open/floor/prison/floor_plate,
@@ -3280,6 +3846,10 @@
 /obj/item/tool/kitchen/rollingpin,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"yd" = (
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "yg" = (
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -3350,6 +3920,10 @@
 /obj/item/clothing/shoes/cowboy,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"yO" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "yQ" = (
 /obj/structure/cargo_container/hd/mid,
 /turf/open/floor/prison/floor_plate,
@@ -3365,6 +3939,11 @@
 /obj/structure/closet/fireaxecabinet,
 /turf/closed/wall/shiva/prefabricated/red,
 /area/Greenvault_Ranch/int_reg/marshals)
+"yZ" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
 "zb" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -3372,9 +3951,15 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"ze" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "zf" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 2
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -3387,6 +3972,13 @@
 /obj/structure/machinery/power/smes,
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"zi" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "zj" = (
 /obj/structure/filingcabinet/security,
 /turf/open/floor/prison/darkred2/north,
@@ -3405,6 +3997,10 @@
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/shiva/prefabricated/white,
 /area/Greenvault_Ranch/int_reg/clinic)
+"zv" = (
+/obj/structure/flora/bush/ausbushes/var3/sparsegrass,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "zw" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/jungle/vines/light_3,
@@ -3415,6 +4011,15 @@
 /obj/structure/closet/crate/secure/weyland,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"zy" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "zC" = (
 /obj/structure/window/framed/shiva,
 /turf/open/floor/almayer/dark_sterile,
@@ -3427,6 +4032,12 @@
 	},
 /turf/open/floor/prison/darkpurple2,
 /area/Greenvault_Ranch/shuttles/drop1)
+"zE" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "zG" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 9
@@ -3443,6 +4054,12 @@
 /obj/structure/flora/jungle/alienplant1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
+"zJ" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "zK" = (
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -3450,6 +4067,14 @@
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"zN" = (
+/obj/structure/prop/invuln/ice_prefab{
+	dir = 1;
+	icon_state = "fab_2"
+	},
+/obj/structure/fence,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "zP" = (
 /obj/structure/machinery/door/window/brigdoor/westleft{
 	dir = 1;
@@ -3463,7 +4088,9 @@
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "zV" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	req_one_access = "102;104;106"
+	},
 /turf/open/floor/shiva/redfull/west,
 /area/Greenvault_Ranch/int_reg/marshals)
 "zW" = (
@@ -3542,6 +4169,12 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
+"Au" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Aw" = (
 /obj/structure/closet,
 /obj/structure/machinery/light/small{
@@ -3555,6 +4188,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"AB" = (
+/obj/structure/flora/tree/joshua,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "AC" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -3592,6 +4229,13 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"AG" = (
+/obj/structure/bed/chair/wood/normal{
+	dir = 4;
+	pixel_x = -8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "AH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3630,6 +4274,15 @@
 	},
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/housing)
+"AM" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"AN" = (
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "AP" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
@@ -3641,13 +4294,20 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
 "AR" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/almayer/dark_sterile,
-/area/Greenvault_Ranch/int_reg/clinic)
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "AS" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"AU" = (
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "AV" = (
 /obj/structure/machinery/floodlight,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -3664,11 +4324,19 @@
 /obj/item/reagent_container/food/snacks/meatsteak,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"AZ" = (
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "Ba" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison/darkyellow2/west,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"Bc" = (
+/obj/structure/displaycase/destroyed,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Be" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/tan,
@@ -3684,20 +4352,30 @@
 /obj/structure/machinery/prop/almayer/computer,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"Bl" = (
+/obj/item/trash/crushed_cup,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Bo" = (
 /obj/structure/cargo_container/ferret/left,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "Bp" = (
-/obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "Bq" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"Bs" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "Bt" = (
 /obj/structure/machinery/vending/cola,
@@ -3733,9 +4411,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "BE" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Underground Security Brig";
-	req_access_txt = "100"
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	req_one_access = "102;104;106"
 	},
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/marshals)
@@ -3765,6 +4442,7 @@
 /turf/open/floor/prison/green,
 /area/Greenvault_Ranch/int_reg/housing)
 "BN" = (
+/obj/structure/machinery/vending/cigarette,
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "BP" = (
@@ -3804,6 +4482,14 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer,
 /turf/open/floor/prison/cell_stripe/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"BZ" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Cd" = (
 /obj/structure/machinery/vending/cola,
 /turf/open/floor/strata/white_cyan1,
@@ -3811,12 +4497,23 @@
 "Ce" = (
 /turf/open/floor/prison/darkyellowcorners2/north,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"Cf" = (
+/obj/item/reagent_container/glass/bucket/mopbucket,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "Ci" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
 /turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms)
+"Ck" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Cm" = (
 /obj/effect/spawner/random/toolbox,
 /obj/structure/surface/table/woodentable,
@@ -3826,6 +4523,13 @@
 /obj/structure/inflatable,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/virology)
+"Cu" = (
+/obj/structure/prop/invuln/ice_prefab{
+	dir = 9
+	},
+/obj/item/toy/beach_ball,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "Cw" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/corsat/tan,
@@ -3858,6 +4562,11 @@
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"CL" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/flora/grass/tallgrass/jungle,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "CO" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/almayer/dark_sterile,
@@ -3911,7 +4620,7 @@
 "Dr" = (
 /obj/structure/flora/jungle/vines/light_3,
 /obj/structure/flora/jungle/vines/light_3,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Dx" = (
 /obj/structure/largecrate/random/case/double,
@@ -3920,6 +4629,12 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Dy" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "DB" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 4
@@ -3929,6 +4644,16 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"DC" = (
+/obj/structure/prop/invuln/ice_prefab/trim{
+	dir = 8
+	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "solarpanel2";
+	pixel_y = -9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "DD" = (
 /obj/structure/sign/nosmoking_1,
 /turf/closed/wall/r_wall/biodome,
@@ -3967,6 +4692,12 @@
 "DX" = (
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
+"Ea" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "Ec" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/darkyellowfull2,
@@ -3977,6 +4708,9 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Ej" = (
+/turf/open/gm/coast/south,
+/area/Greenvault_Ranch/outside/wildplace)
 "En" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_x = 8;
@@ -4041,10 +4775,17 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"EG" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "EJ" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tool/kitchen/utensil/spoon,
+/obj/item/trash/plate,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "EM" = (
@@ -4057,6 +4798,13 @@
 /obj/structure/surface/rack,
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"EQ" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "ER" = (
 /obj/structure/machinery/ares/processor,
 /turf/open/floor/prison/darkpurplefull2,
@@ -4069,6 +4817,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair,
+/obj/item/trash/cigbutt/ucigbutt,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "Fa" = (
@@ -4154,6 +4903,9 @@
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"FB" = (
+/turf/open/gm/coast/beachcorner/north_east,
+/area/Greenvault_Ranch/outside/wildplace)
 "FD" = (
 /turf/open/gm/coast/west,
 /area/Greenvault_Ranch/outside/north_river)
@@ -4169,6 +4921,25 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"FK" = (
+/turf/open/gm/coast,
+/area/Greenvault_Ranch/outside/wildplace)
+"FL" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
+"FN" = (
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
+	dir = 2
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/Greenvault_Ranch/int_reg/virology)
+"FP" = (
+/obj/structure/flora/bush/desert/cactus/multiple,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "FR" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -4180,6 +4951,13 @@
 /obj/structure/flora/tree/dead/tree_3,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Gf" = (
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "Gg" = (
 /obj/structure/flora/jungle/vines/heavy,
 /obj/structure/flora/jungle/vines/heavy,
@@ -4281,6 +5059,10 @@
 "GC" = (
 /turf/open/gm/coast/beachcorner/south_east,
 /area/Greenvault_Ranch/outside/north_river)
+"GD" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "GF" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -4349,6 +5131,13 @@
 /obj/structure/xenoautopsy/tank/hugger,
 /turf/open/floor/almayer/research/containment/corner2,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"GZ" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Ha" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
@@ -4375,6 +5164,13 @@
 /obj/item/weapon/gun/smg/nailgun,
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/virology)
+"Hj" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Hk" = (
 /obj/structure/sink/puddle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -4461,6 +5257,10 @@
 /mob/living/simple_animal/cow,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"HE" = (
+/obj/item/trash/crushed_cup,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "HF" = (
 /obj/structure/largecrate/random/barrel/medical,
 /turf/open/floor/corsat/tan,
@@ -4499,6 +5299,17 @@
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"HT" = (
+/obj/structure/flora/jungle/alienplant1,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
+"HU" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "HW" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -4508,6 +5319,9 @@
 /obj/structure/machinery/optable,
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"Ia" = (
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "Ic" = (
 /obj/structure/closet/fireaxecabinet,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -4540,6 +5354,9 @@
 	dir = 4;
 	id = "Reactor_e_entry_3"
 	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
 /turf/open/floor/prison/cell_stripe/east,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "Ip" = (
@@ -4559,8 +5376,15 @@
 "Ir" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair,
+/obj/item/trash/pmc_mre,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"Is" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "It" = (
 /obj/structure/sign/poster/propaganda,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -4601,14 +5425,32 @@
 "IK" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/pens)
+"IN" = (
+/turf/open/gm/coast/west,
+/area/Greenvault_Ranch/outside/wildplace)
 "IQ" = (
 /obj/structure/machinery/computer/telecomms/server,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/telecomms)
+"IS" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"IT" = (
+/obj/structure/closet/l3closet,
+/turf/open/floor/almayer/dark_sterile,
+/area/Greenvault_Ranch/int_reg/virology)
 "IV" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/darkred2/north,
 /area/Greenvault_Ranch/int_reg/marshals)
+"IZ" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Ja" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -4703,6 +5545,10 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"JF" = (
+/obj/structure/coatrack,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "JG" = (
 /obj/structure/pipes/vents/scrubber/on,
 /obj/structure/machinery/shower{
@@ -4744,9 +5590,15 @@
 /obj/structure/flora/tree/dead/tree_4,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"JW" = (
+/obj/structure/mineral_door/wood/open,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "JY" = (
 /mob/living/simple_animal/cow,
-/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/pens)
 "Kb" = (
@@ -4806,10 +5658,41 @@
 	},
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Kx" = (
+/obj/item/reagent_container/glass/bucket/janibucket,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
+"Kz" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"KA" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
+"KB" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"KC" = (
+/obj/structure/flora/jungle/thickbush/jungle_plant,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"KH" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/int_reg/telecomms_yard)
 "KI" = (
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	dir = 1;
-	name = "\improper Underground Security Armory"
+/obj/structure/machinery/door/airlock/almayer/security/glass/autoname{
+	dir = 2;
+	req_access = null
 	},
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/marshals)
@@ -4848,6 +5731,11 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"KT" = (
+/obj/item/tool/mop,
+/obj/item/reagent_container/glass/bucket/janibucket,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "KV" = (
 /obj/structure/prop/ice_colony/surveying_device{
 	dir = 8
@@ -4912,9 +5800,22 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
+"Lo" = (
+/obj/effect/overlay/palmtree_r,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Lp" = (
 /turf/open/floor/prison/darkred2/north,
 /area/Greenvault_Ranch/int_reg/marshals)
+"Lt" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/Greenvault_Ranch/int_reg/farmbay)
 "LF" = (
 /obj/structure/closet,
 /obj/structure/machinery/light/small,
@@ -4940,6 +5841,10 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/pens)
+"LL" = (
+/obj/structure/flora/jungle/vines/light_3,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "LM" = (
 /obj/structure/prop/ice_colony/poly_kevlon_roll,
 /turf/closed/wall/shiva/prefabricated/white,
@@ -4990,14 +5895,34 @@
 /obj/structure/machinery/chem_dispenser/canteen,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Mb" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"Me" = (
+/obj/item/trash/cigbutt/cigarbutt,
+/obj/item/trash/cigbutt/cigarbutt,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
+"Mf" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "Ml" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access,
 /turf/open/floor/almayer/sterile_green,
 /area/Greenvault_Ranch/int_reg/virology)
 "Mo" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison,
-/area/Greenvault_Ranch/int_reg/marshals)
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Mr" = (
 /obj/structure/machinery/light/small,
 /obj/structure/barricade/handrail/wire{
@@ -5010,6 +5935,13 @@
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"Mt" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/obj/structure/prop/dam/van/damaged,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Mu" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 1
@@ -5073,6 +6005,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wheatfields)
+"MS" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/pens)
 "MT" = (
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/marshals)
@@ -5089,6 +6027,13 @@
 /obj/item/tool/kitchen/knife,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"MZ" = (
+/obj/structure/flora/grass/tallgrass/jungle,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Nb" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -5104,6 +6049,12 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Nc" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "Nd" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/corsat/tan,
@@ -5113,10 +6064,18 @@
 /obj/structure/machinery/telecomms/broadcaster,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Nk" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "Nn" = (
-/obj/structure/cargo_container/kelland/right,
-/turf/open/floor/prison/floor_marked,
-/area/Greenvault_Ranch/int_reg/farmbay)
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "No" = (
 /obj/structure/machinery/autodoc_console,
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -5176,7 +6135,7 @@
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
 "ND" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
 /turf/open/floor/almayer/dark_sterile,
@@ -5204,6 +6163,9 @@
 	dir = 8
 	},
 /obj/structure/flag/plantable/upp,
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "NL" = (
@@ -5252,6 +6214,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"NZ" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/structure/flora/bush/ausbushes/pointybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Oa" = (
 /obj/item/book/manual/marine_law,
 /obj/structure/surface/table/reinforced/prison,
@@ -5332,6 +6299,11 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"OF" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "OG" = (
 /obj/structure/machinery/vending/security/colony,
 /turf/open/floor/prison/redfull,
@@ -5362,6 +6334,10 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"OP" = (
+/obj/structure/flora/bush/ausbushes/var3/fernybush,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "OQ" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 5
@@ -5372,10 +6348,19 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"OS" = (
+/obj/structure/flora/bush/ausbushes/var3/fullgrass,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "OV" = (
 /obj/structure/prop/invuln/ice_prefab,
+/obj/structure/dartboard,
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
+"OY" = (
+/obj/structure/flora/bush/ausbushes/grassybush,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Pa" = (
 /obj/structure/prop/invuln/ice_prefab,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -5456,15 +6441,22 @@
 /obj/structure/closet/crate/secure/weyland,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Pw" = (
+/obj/structure/flora/bush/snow,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
+"Py" = (
+/turf/open/floor/plating/wood_broken6,
+/area/Greenvault_Ranch/outside/pens)
 "Pz" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1;
 	pixel_y = 4
 	},
 /turf/closed/wall/shiva/prefabricated/white,
-/area/Greenvault_Ranch/outside/northwest)
+/area/Greenvault_Ranch/int_reg/virology)
 "PA" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
 /turf/open/floor/corsat/tan,
@@ -5519,11 +6511,15 @@
 	},
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
+"PR" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tuxedo,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "PT" = (
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/almayer/sterile_green_side/southwest,
 /area/Greenvault_Ranch/int_reg/virology)
 "PU" = (
@@ -5552,9 +6548,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "Qj" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/prison/floor_plate,
-/area/Greenvault_Ranch/int_reg/kitchen)
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/pens)
 "Qk" = (
 /obj/structure/vehicle_locker/cabinet/utensils,
 /turf/closed/wall/shiva/prefabricated/blue,
@@ -5569,6 +6564,13 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"Qp" = (
+/obj/structure/flora/jungle/alienplant1{
+	layer = 4.13;
+	pixel_y = 18
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Qw" = (
 /obj/structure/cargo_container/ferret/mid,
 /turf/open/floor/prison/floor_plate,
@@ -5610,9 +6612,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "QI" = (
-/obj/structure/prop/souto_land/pole,
+/obj/structure/bed/chair/wood/normal,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "QM" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/Greenvault_Ranch/int_reg/farmbay)
@@ -5648,9 +6650,18 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"QU" = (
+/obj/structure/prop/invuln/ice_prefab,
+/obj/structure/fence,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "QW" = (
 /turf/open/gm/river/ocean/deep_water,
 /area/Greenvault_Ranch/outside/north_river)
+"QZ" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "Rc" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
@@ -5700,10 +6711,36 @@
 	},
 /turf/open/floor/prison/darkbrown2/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"Rk" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
+"Rl" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 4
+	},
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"Rm" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Ro" = (
 /obj/structure/prop/rock/brown,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"Rp" = (
+/obj/structure/prop/rock/brown,
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "Rq" = (
 /obj/structure/largecrate/mule,
 /obj/structure/machinery/light/small{
@@ -5719,6 +6756,18 @@
 /obj/vehicle/powerloader/ft,
 /turf/open/floor/prison/darkbrown2/west,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"Rs" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/sink{
+	pixel_y = -10;
+	pixel_x = -10
+	},
+/obj/structure/sink{
+	pixel_x = 10;
+	pixel_y = -10
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "Rt" = (
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue,
@@ -5729,12 +6778,23 @@
 /obj/item/clothing/head/cowboy,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Rv" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"Rw" = (
+/obj/structure/flora/jungle/vines/light_1,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Rx" = (
 /obj/structure/flora/tree/pine,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
 "Ry" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
 /turf/open/floor/prison/redfull,
@@ -5773,6 +6833,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"RJ" = (
+/obj/structure/flora/bush/ausbushes,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/trailerpark)
 "RM" = (
 /obj/structure/machinery/camera/autoname/almayer/containment{
 	dir = 4
@@ -5791,17 +6855,26 @@
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "RR" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 2
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"RT" = (
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "RW" = (
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"RX" = (
+/obj/structure/flora/jungle/vines/light_2,
+/obj/structure/flora/jungle/vines/light_2,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Sc" = (
 /obj/structure/prop/invuln/ice_prefab,
 /obj/structure/sign/banners/usa_flag,
@@ -5811,6 +6884,10 @@
 /obj/structure/closet/secure_closet/guncabinet/red/armory_m4a3_pistol,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
+"Sh" = (
+/obj/effect/overlay/palmtree_l,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "Sj" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -5845,14 +6922,33 @@
 /obj/item/reagent_container/food/snacks/birthdaycakeslice,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"Ss" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "St" = (
 /obj/structure/machinery/power/reactor,
 /turf/open/floor/prison/darkyellow2/north,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"Su" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "Sw" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/open/floor/prison/darkredfull2,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Sx" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "SA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
@@ -5873,6 +6969,12 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"SF" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "SJ" = (
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
@@ -5887,6 +6989,9 @@
 	pixel_x = 8;
 	pixel_y = -5
 	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 5
+	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "SM" = (
@@ -5898,6 +7003,13 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"SN" = (
+/obj/structure/prop/structure_lattice,
+/obj/structure/sink{
+	pixel_y = -10
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "SO" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -5931,6 +7043,10 @@
 /obj/structure/prop/dam/drill,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"SU" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "SY" = (
 /obj/structure/machinery/gibber,
 /turf/open/floor/prison/kitchen,
@@ -5955,6 +7071,12 @@
 	},
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
+"Te" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "Tf" = (
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/virology)
@@ -5995,6 +7117,10 @@
 /obj/structure/sign/banners/united_americas_flag,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Tu" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "Tv" = (
 /obj/structure/extinguisher_cabinet/lifeboat,
 /turf/closed/wall/shiva/prefabricated/orange,
@@ -6070,6 +7196,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"TY" = (
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Ua" = (
 /obj/structure/machinery/flasher{
 	id = "Containment Cell 1";
@@ -6114,12 +7247,29 @@
 	dir = 1;
 	icon_state = "fab_2"
 	},
+/obj/item/toy/beach_ball,
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
 "Um" = (
 /obj/structure/prop/rock/brown,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wildplace)
+"Un" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
+"Uq" = (
+/obj/item/trash/cigbutt/bcigbutt,
+/turf/open/floor/prison/green,
+/area/Greenvault_Ranch/int_reg/housing)
+"Us" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
+"Ut" = (
+/obj/structure/prop/rock/brown,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "Uv" = (
 /obj/structure/largecrate/machine/sleeper,
 /turf/open/floor/corsat/tan,
@@ -6127,8 +7277,11 @@
 "Ux" = (
 /obj/structure/flora/jungle/thickbush/jungle_plant,
 /obj/structure/flora/jungle/vines/heavy,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/wildplace)
+"Uy" = (
+/turf/open/floor/wood/wood_broken5,
+/area/Greenvault_Ranch/outside/pens)
 "UD" = (
 /obj/structure/bed,
 /obj/item/device/working_joe_pda,
@@ -6155,6 +7308,29 @@
 /obj/vehicle/powerloader/jd,
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"UK" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/sink{
+	pixel_y = -10;
+	pixel_x = -10
+	},
+/obj/structure/sink{
+	pixel_y = -10;
+	pixel_x = 10
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
+"UL" = (
+/obj/structure/flora/bush/ausbushes/ppflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
+"UM" = (
+/obj/structure/reagent_dispensers/beerkeg/alt,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
+"UP" = (
+/turf/open/gm/river/ocean/deep_water,
+/area/Greenvault_Ranch/outside/wildplace)
 "UR" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 9
@@ -6195,6 +7371,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"UX" = (
+/obj/structure/window/framed/shiva,
+/obj/structure/window/framed/shiva,
+/turf/open/floor/almayer/dark_sterile,
+/area/Greenvault_Ranch/int_reg/clinic)
+"Vd" = (
+/obj/item/toy/waterflower/flags,
+/turf/closed/wall/shiva/prefabricated/red,
+/area/Greenvault_Ranch/int_reg/marshals)
 "Ve" = (
 /obj/structure/closet/secure_closet/guncabinet/blue/riot_control,
 /obj/structure/machinery/light/small{
@@ -6207,19 +7392,30 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Vj" = (
+/obj/structure/prop/invuln/ice_prefab/trim{
+	dir = 6
+	},
+/obj/structure/fence,
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "solarpanel2";
+	pixel_y = -9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "Vk" = (
-/obj/structure/flora/grass/tallgrass/desert{
-	color = "#bfff00"
-	},
-/obj/structure/flora/grass/tallgrass/desert{
-	color = "#bfff00"
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/outside/wheatfields)
+/turf/open/floor/plating,
+/area/Greenvault_Ranch/outside/northwest)
 "Vm" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Vo" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "Vq" = (
 /obj/structure/largecrate/machine/autodoc,
 /turf/open/floor/corsat/tan,
@@ -6259,6 +7455,12 @@
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms)
+"VA" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "VD" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/shiva/prefabricated/white,
@@ -6270,6 +7472,11 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"VG" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/obj/structure/machinery/door/poddoor/shutters/almayer,
+/turf/open/floor/prison/cell_stripe/north,
+/area/Greenvault_Ranch/int_reg/farmbay)
 "VI" = (
 /obj/structure/machinery/light,
 /turf/closed/wall/shiva/prefabricated/orange,
@@ -6281,6 +7488,10 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"VM" = (
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
 "VN" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/mre_food_packet/entree/wy,
@@ -6290,6 +7501,9 @@
 /obj/structure/machinery/biogenerator,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"VQ" = (
+/turf/open/gm/coast/beachcorner/north_west,
+/area/Greenvault_Ranch/outside/wildplace)
 "VR" = (
 /turf/open/floor/almayer/sterile_green_side,
 /area/Greenvault_Ranch/int_reg/virology)
@@ -6302,6 +7516,19 @@
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/prison/darkyellow2/southeast,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"VX" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1
+	},
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
+"Wa" = (
+/obj/structure/prop/static_tank/water,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "Wd" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4
@@ -6360,7 +7587,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "Wn" = (
-/obj/structure/prop/rock/brown,
+/obj/structure/flora/jungle/vines,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
 "Wo" = (
@@ -6375,6 +7602,10 @@
 /obj/structure/sink/puddle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"Wy" = (
+/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "Wz" = (
 /obj/structure/filingcabinet/disk,
 /turf/open/floor/corsat/tan,
@@ -6383,9 +7614,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/shiva/prefabricated/blue,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"WB" = (
+/obj/structure/flora/jungle/thickbush/jungle_plant,
+/obj/structure/flora/grass/tallgrass/desert/corner{
+	color = "#bfff00";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "WC" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/north_river)
+"WE" = (
+/obj/structure/machinery/light/small,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "WF" = (
 /obj/structure/surface/table,
 /turf/open/floor/strata/white_cyan1,
@@ -6399,6 +7642,10 @@
 /obj/structure/tunnel,
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
+"WK" = (
+/obj/effect/overlay/palmtree_r,
+/turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
 "WL" = (
 /obj/structure/bed/chair{
@@ -6421,8 +7668,18 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"WR" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
+"WT" = (
+/obj/structure/prop/rock,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wheatfields)
 "WU" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
+/obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 2
 	},
 /turf/open/floor/prison/greenfull,
@@ -6542,6 +7799,10 @@
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Xy" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "Xz" = (
 /obj/structure/prop/invuln/ice_prefab{
 	icon_state = "fab_2"
@@ -6566,6 +7827,10 @@
 /obj/structure/xenoautopsy/tank/alien,
 /turf/open/floor/almayer/research/containment/floor2/north,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"XC" = (
+/obj/structure/barricade/handrail/wire,
+/turf/open/floor/wood/wood_broken4,
+/area/Greenvault_Ranch/outside/pens)
 "XE" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
 /turf/open/floor/almayer/dark_sterile,
@@ -6581,6 +7846,11 @@
 /obj/structure/largecrate/lisa,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"XI" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/structure/flora/jungle/vines/heavy,
+/turf/closed/wall/strata_ice/jungle,
+/area/Greenvault_Ranch/outside/wildplace)
 "XK" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4
@@ -6650,6 +7920,12 @@
 /obj/structure/machinery/ares/cpu,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Yj" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 6
+	},
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/northwest)
 "Yk" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -6664,6 +7940,10 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Ym" = (
+/obj/structure/bed/chair/bolted,
+/turf/open/gm/dirt,
+/area/Greenvault_Ranch/outside/wildplace)
 "Yo" = (
 /obj/structure/surface/table,
 /obj/item/device/flashlight/lamp{
@@ -6738,6 +8018,12 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"Za" = (
+/obj/structure/flora/grass/tallgrass/jungle/corner{
+	dir = 9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "Zd" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -6745,7 +8031,7 @@
 "Ze" = (
 /obj/structure/flora/jungle/vines/light_3,
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/wildplace)
 "Zf" = (
 /obj/structure/machinery/microwave{
@@ -6781,6 +8067,12 @@
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"Zo" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/outside/pens)
 "Zr" = (
 /obj/structure/surface/table,
 /obj/item/tool/lighter/zippo,
@@ -6856,6 +8148,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"ZL" = (
+/obj/structure/flora/jungle/thickbush/jungle_plant,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/wildplace)
 "ZM" = (
 /obj/structure/cargo_container/lockmart/right,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -6877,6 +8173,11 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/marshals)
+"ZZ" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/storage/bag/plasticbag,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 
 (1,1,1) = {"
 sU
@@ -7374,6 +8675,10 @@ iw
 iw
 iw
 Qe
+Qe
+Qe
+Qe
+Qe
 lw
 lw
 lw
@@ -7388,48 +8693,44 @@ lw
 lw
 lw
 lw
-lw
-lw
-lw
-lw
-lw
+gC
 si
 si
 si
 si
 si
 si
+zi
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
 si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
+Nn
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 pR
 pR
 pR
@@ -7506,15 +8807,13 @@ BS
 BS
 iw
 iw
-iw
-SO
-SO
-SO
-SO
-SO
-iw
-iw
-iw
+mX
+VA
+VA
+VA
+VA
+VA
+bH
 iw
 iw
 iw
@@ -7526,11 +8825,13 @@ iw
 iw
 iw
 iw
+iw
+Qe
+Qe
 lw
-QG
-SJ
-Tq
-SJ
+lw
+lw
+lw
 bm
 lw
 Rr
@@ -7542,15 +8843,15 @@ bw
 Yq
 Yq
 Yq
-bw
 sv
 lw
+gC
 si
 si
 si
 si
 si
-si
+zi
 wb
 wb
 wb
@@ -7566,28 +8867,28 @@ wb
 wb
 wb
 wb
-si
+vZ
 si
 kc
 kc
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
+Nn
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 pR
 pR
 pR
@@ -7649,6 +8950,7 @@ QW
 QW
 fu
 BS
+Sh
 BS
 BS
 BS
@@ -7656,8 +8958,7 @@ BS
 BS
 BS
 BS
-BS
-iw
+mX
 SO
 SO
 SO
@@ -7665,24 +8966,24 @@ SO
 SO
 SO
 SO
+Su
 iw
 iw
 iw
 iw
 iw
+mX
+VA
+Su
 iw
 iw
 iw
-iw
-iw
-iw
-iw
-iw
-gl
+Qe
+Qe
+lw
+QG
 SJ
-SJ
-mP
-kI
+Tq
 SJ
 dP
 SJ
@@ -7694,14 +8995,14 @@ cn
 cn
 cn
 cn
-cn
 Tg
 lw
+gC
 si
 si
 si
 si
-si
+zi
 wb
 wb
 wb
@@ -7718,11 +9019,11 @@ wb
 wb
 wb
 wb
-si
+vZ
 si
 kc
 si
-si
+Nn
 wb
 wb
 wb
@@ -7739,7 +9040,7 @@ wb
 wb
 wb
 wb
-si
+wb
 pR
 pR
 pR
@@ -7808,7 +9109,7 @@ BS
 BS
 BS
 BS
-iw
+mX
 SO
 SO
 SO
@@ -7818,26 +9119,26 @@ SO
 SO
 SO
 SO
-iw
-iw
-iw
+Su
 iw
 iw
-SO
-SO
-SO
 iw
+mX
+SO
+SO
+SO
+Su
 iw
 iw
 Qe
 lw
-np
+gl
 SJ
-li
+SJ
 mP
 SJ
 lw
-bW
+SJ
 lj
 iF
 HK
@@ -7846,13 +9147,13 @@ HK
 HK
 HK
 HK
-Nn
 Tg
+lw
 lw
 si
 si
 si
-si
+zi
 wb
 wb
 wb
@@ -7870,12 +9171,11 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 kc
 zI
-si
-si
+AR
 wb
 wb
 wb
@@ -7891,7 +9191,8 @@ wb
 wb
 wb
 wb
-si
+wb
+wb
 pR
 pR
 pR
@@ -7971,15 +9272,15 @@ SO
 SO
 SO
 SO
+Su
 iw
-iw
-iw
+mX
 SO
 SO
 SO
 SO
 SO
-iw
+Su
 iw
 Qe
 lw
@@ -8004,29 +9305,30 @@ lw
 si
 si
 si
+Nn
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-si
-si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 kc
 kc
 si
+Nn
 wb
 wb
 wb
@@ -8043,7 +9345,6 @@ wb
 wb
 wb
 wb
-si
 pR
 pR
 si
@@ -8124,15 +9425,15 @@ SO
 SO
 SO
 SO
-iw
-iw
 SO
 SO
 SO
 SO
 SO
 SO
-iw
+SO
+SO
+Su
 iw
 lw
 kw
@@ -8156,29 +9457,30 @@ lw
 si
 si
 si
+Nn
 wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 kc
 kc
 si
+Nn
 wb
 wb
 wb
@@ -8195,9 +9497,8 @@ wb
 wb
 wb
 wb
-si
-si
-si
+wb
+wb
 si
 si
 si
@@ -8263,7 +9564,7 @@ BS
 BS
 BS
 iw
-iw
+mX
 SO
 SO
 SO
@@ -8285,7 +9586,7 @@ SO
 SO
 SO
 SO
-iw
+Su
 lw
 lw
 lw
@@ -8308,30 +9609,30 @@ lw
 si
 si
 si
+Nn
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 kc
 kc
 xt
-wb
+Nn
 wb
 wb
 wb
@@ -8350,7 +9651,7 @@ kq
 wb
 wb
 wb
-si
+vZ
 si
 si
 pR
@@ -8412,9 +9713,9 @@ BS
 BS
 BS
 BS
+WK
 BS
-BS
-iw
+mX
 SO
 SO
 SO
@@ -8436,8 +9737,8 @@ op
 op
 op
 SO
-iw
-iw
+SO
+Vo
 lw
 fN
 ZF
@@ -8460,6 +9761,7 @@ BY
 si
 si
 si
+Nn
 wb
 wb
 wb
@@ -8477,13 +9779,12 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
+vZ
+si
 kc
 kc
 si
-wb
+Nn
 wb
 wb
 wb
@@ -8502,7 +9803,7 @@ kq
 wb
 wb
 wb
-si
+vZ
 si
 si
 si
@@ -8575,21 +9876,21 @@ SO
 SO
 SO
 SO
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-SO
+jb
+jb
+jb
+jb
+jb
+jb
+jb
+jb
+jb
+jb
 SO
 SO
 op
 SO
-iw
+Vo
 lw
 WY
 SJ
@@ -8608,10 +9909,11 @@ SJ
 SJ
 SJ
 Tg
-BY
+oq
 kc
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -8629,13 +9931,12 @@ wb
 wb
 wb
 wb
-wb
-wb
+vZ
 si
 kc
 kc
 si
-wb
+Nn
 wb
 wb
 wb
@@ -8654,7 +9955,7 @@ pq
 kq
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -8737,11 +10038,11 @@ bf
 bf
 bf
 iw
-iw
-iw
+kZ
+jb
 SO
 SO
-iw
+Vo
 lw
 vu
 SJ
@@ -8760,12 +10061,12 @@ SJ
 SJ
 SJ
 Tg
-BY
+VG
 kc
 kc
 kc
+pQ
 Lm
-si
 wb
 wb
 wb
@@ -8782,12 +10083,12 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 dl
 kc
 si
-wb
+Nn
 wb
 wb
 wb
@@ -8806,7 +10107,7 @@ Xo
 pq
 pq
 pq
-si
+vZ
 si
 si
 si
@@ -8878,7 +10179,7 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 bf
 bf
@@ -8893,7 +10194,7 @@ iw
 iw
 SO
 SO
-iw
+Vo
 lw
 BT
 xC
@@ -8916,7 +10217,7 @@ BY
 kc
 kc
 kc
-kc
+pQ
 wb
 wb
 wb
@@ -8934,12 +10235,12 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 kc
 kc
-wb
-wb
+si
+Nn
 wb
 wb
 wb
@@ -8958,7 +10259,7 @@ pq
 kq
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -9029,7 +10330,7 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 bf
 bf
@@ -9043,8 +10344,8 @@ BN
 bf
 bf
 iw
-SO
-SO
+kZ
+Za
 iw
 lw
 mZ
@@ -9068,7 +10369,7 @@ BY
 kc
 si
 si
-kc
+EQ
 wb
 wb
 wb
@@ -9086,12 +10387,12 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 KV
 kc
-wb
-wb
+si
+Nn
 wb
 wb
 wb
@@ -9110,7 +10411,7 @@ pq
 kq
 pq
 pq
-si
+vZ
 si
 si
 si
@@ -9180,7 +10481,7 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 bf
 bf
@@ -9195,8 +10496,8 @@ Jc
 Gn
 bf
 bf
-SO
-SO
+iw
+iw
 iw
 lw
 vu
@@ -9221,7 +10522,7 @@ fQ
 le
 si
 kc
-kc
+EQ
 wb
 wb
 wb
@@ -9238,12 +10539,12 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 kc
 si
 si
-si
+Nn
 wb
 wb
 wb
@@ -9262,7 +10563,7 @@ kq
 wb
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -9331,7 +10632,7 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 bf
 bf
@@ -9374,7 +10675,7 @@ MQ
 si
 kc
 kc
-kc
+EQ
 wb
 wb
 wb
@@ -9390,12 +10691,12 @@ wb
 wb
 wb
 wb
+rb
 si
-si
 kc
 kc
 si
-wb
+Nn
 wb
 wb
 wb
@@ -9415,8 +10716,8 @@ kq
 pq
 pq
 kq
-wb
-wb
+Mo
+Rv
 si
 si
 si
@@ -9478,11 +10779,11 @@ BS
 BS
 BS
 iw
-iw
+kZ
 op
 SO
 SO
-SO
+Vo
 iw
 iw
 bf
@@ -9499,8 +10800,8 @@ bf
 bf
 bf
 bf
-SO
-SO
+iw
+iw
 iw
 lw
 Xt
@@ -9527,27 +10828,27 @@ si
 kc
 kc
 kc
-Lm
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
+EQ
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 si
 kc
 kc
 si
-si
+AR
 wb
 wb
 wb
@@ -9631,10 +10932,10 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
-SO
+Vo
 iw
 iw
 bf
@@ -9651,8 +10952,8 @@ Om
 zh
 bf
 bf
-SO
-SO
+iw
+iw
 iw
 lw
 Ri
@@ -9700,7 +11001,7 @@ kc
 kc
 si
 si
-si
+AR
 wb
 wb
 wb
@@ -9779,15 +11080,15 @@ fu
 BS
 BS
 BS
+WK
 BS
-BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
-iw
+Su
 iw
 bf
 bf
@@ -9796,16 +11097,16 @@ ur
 eA
 NW
 yH
-ot
+yH
 Rz
 yH
 NG
 MO
 bf
 bf
-SO
-SO
 iw
+mX
+Su
 lw
 vu
 RF
@@ -9840,7 +11141,7 @@ kc
 si
 dl
 kc
-kc
+lL
 kc
 kc
 kc
@@ -9853,26 +11154,26 @@ kc
 si
 si
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-si
-wb
-wb
-wb
-wb
-wb
+AR
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 si
 si
@@ -9935,12 +11236,12 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Su
 bf
 bf
 St
@@ -9956,8 +11257,8 @@ aG
 bf
 bf
 iw
-iw
-iw
+SO
+Vo
 lw
 BT
 RF
@@ -10087,12 +11388,12 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Vo
 bf
 bf
 St
@@ -10107,9 +11408,9 @@ GN
 bV
 bf
 bf
-SO
-SO
 iw
+QZ
+SO
 lw
 um
 RF
@@ -10137,19 +11438,19 @@ kc
 kc
 kc
 kc
-Lm
 kc
 kc
+kc
 si
 si
 si
 si
 si
-wb
 si
-wb
 si
-wb
+si
+si
+si
 si
 si
 kc
@@ -10239,12 +11540,12 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Vo
 bf
 bf
 St
@@ -10259,9 +11560,9 @@ cF
 VW
 bf
 bf
-SO
-SO
 iw
+QZ
+SO
 lw
 kW
 zo
@@ -10285,48 +11586,48 @@ kc
 si
 kc
 kc
-wb
 si
-wb
-wb
-wb
-wb
-wb
-si
-si
-si
-si
-wb
-wb
-wb
-wb
-wb
-wb
-si
+zi
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+TY
 kc
 kc
 kc
 kc
 kc
-kc
-dl
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-si
-si
-si
-si
+BZ
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Rl
+Rv
 si
 si
 si
@@ -10391,12 +11692,12 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Vo
 bf
 bf
 hN
@@ -10411,7 +11712,7 @@ bf
 bf
 bf
 iw
-SO
+mX
 SO
 SO
 lw
@@ -10435,9 +11736,9 @@ lw
 Qe
 kc
 si
-kc
-Lm
-wb
+Ck
+IZ
+Mo
 wb
 wb
 wb
@@ -10455,12 +11756,12 @@ wb
 wb
 wb
 wb
-Lm
+Sx
 kc
 kc
 si
 si
-si
+zi
 wb
 wb
 wb
@@ -10478,7 +11779,7 @@ kq
 wb
 wb
 wb
-si
+vZ
 si
 si
 si
@@ -10543,12 +11844,12 @@ BS
 BS
 iw
 iw
-iw
-iw
-iw
+kZ
+jb
 SO
 SO
-iw
+SO
+Vo
 iw
 bf
 bf
@@ -10556,16 +11857,16 @@ Bt
 aq
 Jx
 jD
-Jx
+iu
 jD
 Qe
 Qe
 Qe
 Qe
 iw
-SO
-SO
-SO
+kZ
+jb
+Za
 gC
 lw
 lw
@@ -10587,7 +11888,7 @@ lw
 Qe
 kc
 kc
-si
+Nn
 wb
 wb
 wb
@@ -10607,11 +11908,11 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
 si
-si
+zi
 wb
 wb
 wb
@@ -10630,7 +11931,7 @@ pq
 kq
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -10697,10 +11998,10 @@ iw
 iw
 iw
 iw
-iw
+QZ
 SO
 SO
-iw
+Vo
 Wj
 iw
 bf
@@ -10725,21 +12026,21 @@ VI
 jf
 In
 In
-jf
+Lt
+ip
+lw
+aW
 lw
 lw
 aW
 lw
 lw
-aW
-lw
-lw
 Qe
 Qe
 Qe
 Qe
 kc
-si
+Nn
 wb
 wb
 wb
@@ -10759,10 +12060,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-si
+zi
 wb
 wb
 wb
@@ -10782,7 +12083,7 @@ kq
 kq
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -10849,13 +12150,13 @@ iw
 iw
 iw
 iw
-iw
+QZ
 SO
 SO
-SO
+Vo
 iw
 iw
-iw
+UM
 bf
 bf
 bf
@@ -10880,18 +12181,18 @@ Qe
 Qe
 iw
 iw
+mX
 SO
 SO
 SO
 SO
-SO
-SO
+Su
 iw
 iw
 iw
 Qe
 kc
-si
+Nn
 wb
 wb
 wb
@@ -10911,10 +12212,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -10934,7 +12235,7 @@ kq
 kq
 pq
 pq
-si
+vZ
 si
 si
 si
@@ -11001,20 +12302,20 @@ iw
 iw
 iw
 iw
-iw
-iw
-SO
-SO
-iw
-iw
-iw
+kZ
+jb
+jb
+Za
 iw
 iw
 iw
+nI
+nI
+nI
+nI
+nI
+nI
 iw
-SO
-SO
-nS
 Qe
 Qe
 Qe
@@ -11024,26 +12325,26 @@ Qe
 iw
 iw
 iw
-nS
-Qe
-Qe
-Qe
-Qe
-Qe
-nS
 iw
+Qe
+Qe
+Qe
+Qe
+Qe
+iw
+mX
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
+iw
 iw
 iw
 Qe
 kc
-si
+Nn
 wb
 wb
 wb
@@ -11063,10 +12364,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11086,7 +12387,7 @@ wb
 wb
 kq
 kq
-si
+vZ
 si
 si
 si
@@ -11160,42 +12461,42 @@ iw
 iw
 iw
 iw
+nI
+AG
+AG
+AG
+AG
+HE
 iw
 iw
-iw
-SO
-SO
-SO
-iw
-iw
 Qe
 Qe
 Qe
 Qe
 Qe
-Qe
-Qe
-Qe
+KA
+Rk
+EG
 Qe
 Qe
 Qe
 Qe
 iw
+mX
 SO
 SO
 SO
 SO
+SO
+SO
+SO
+Vo
 iw
-SO
-SO
-SO
-SO
-SO
 iw
 Qe
 Qe
 kc
-si
+Nn
 wb
 wb
 wb
@@ -11215,10 +12516,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11239,7 +12540,7 @@ kq
 pq
 pq
 wb
-si
+Rv
 si
 si
 si
@@ -11304,30 +12605,30 @@ BS
 iw
 iw
 iw
-iw
+mX
 SO
 SO
 SO
-iw
-iw
-iw
+Su
 iw
 iw
 iw
-SO
-SO
-SO
-SO
-SO
+QI
+ZZ
+vG
+qZ
+qZ
+nI
+iw
 iw
 iw
 iw
 Qe
 Qe
 Qe
-Qe
-Qe
-Qe
+Tu
+HW
+Ss
 Qe
 Qe
 Qe
@@ -11337,17 +12638,17 @@ SO
 SO
 SO
 SO
+SO
+SO
+SO
+SO
+Vo
 iw
-SO
-SO
-SO
-SO
-SO
 iw
 Qe
 Qe
 si
-si
+Nn
 wb
 wb
 wb
@@ -11367,10 +12668,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11392,7 +12693,7 @@ wb
 wb
 wb
 wb
-si
+Rv
 si
 si
 si
@@ -11455,51 +12756,51 @@ BS
 BS
 iw
 iw
-iw
+mX
 SO
 SO
 SO
 SO
 SO
 SO
+Su
+iw
+QI
+vG
+PR
+qZ
+qZ
+nI
 iw
 iw
 iw
 iw
-SO
-SO
-SO
-SO
-SO
 iw
 iw
 iw
-iw
-iw
-iw
-iw
+kZ
+Te
+Is
+SU
 Qe
 Qe
-Qe
-Qe
-Qe
 iw
 iw
 SO
 SO
 SO
 SO
-iw
 SO
 SO
 SO
 SO
+Vo
 iw
 iw
 Qe
 iw
 si
-si
+Nn
 wb
 wb
 wb
@@ -11519,10 +12820,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11544,7 +12845,7 @@ pq
 pq
 kq
 wb
-wb
+vZ
 si
 si
 si
@@ -11603,8 +12904,8 @@ QW
 fu
 BS
 BS
+Sh
 BS
-BS
 iw
 iw
 SO
@@ -11619,14 +12920,14 @@ iw
 iw
 iw
 iw
-SO
-SO
-SO
-iw
-SO
-SO
 iw
 iw
+iw
+mX
+VA
+VA
+VA
+Su
 iw
 Qe
 Qe
@@ -11637,21 +12938,21 @@ iw
 iw
 iw
 iw
+QZ
 SO
 SO
 SO
 SO
-iw
-iw
-iw
-iw
-iw
+SO
+SO
+SO
+Vo
 iw
 iw
 Qe
 iw
 si
-si
+AR
 wb
 wb
 wb
@@ -11671,10 +12972,10 @@ wb
 wb
 wb
 wb
-si
+vZ
 aw
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11696,7 +12997,7 @@ kq
 kq
 wb
 wb
-wb
+vZ
 si
 si
 si
@@ -11771,21 +13072,22 @@ iw
 iw
 iw
 iw
-SO
-SO
 iw
-SO
-SO
-SO
-SO
-SO
 iw
+mX
+SO
+SO
+SO
+SO
+SO
+Su
 Qe
 Qe
 Qe
 Qe
 Qe
 iw
+mX
 SO
 SO
 SO
@@ -11796,15 +13098,14 @@ SO
 SO
 SO
 SO
-SO
+Vo
 iw
 iw
-iw
-Qe
+Vk
 iw
 si
 si
-si
+AR
 wb
 wb
 wb
@@ -11823,10 +13124,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -11848,7 +13149,7 @@ Xo
 Xo
 pq
 wb
-wb
+vZ
 si
 si
 si
@@ -11911,33 +13212,34 @@ BS
 BS
 iw
 iw
-iw
+kZ
 SO
 SO
 SO
 SO
 SO
 SO
-iw
-iw
-iw
+Za
 iw
 iw
 iw
 iw
 iw
+iw
+QZ
 SO
 SO
 SO
 SO
 SO
+Ss
 Qe
 Qe
 Qe
 Qe
-Qe
 iw
 iw
+QZ
 SO
 SO
 SO
@@ -11948,15 +13250,15 @@ SO
 SO
 SO
 SO
-SO
-SO
-SO
+Vo
+iw
 iw
 Qe
 iw
 si
 si
 si
+Nn
 wb
 wb
 wb
@@ -11974,11 +13276,10 @@ wb
 wb
 wb
 wb
-wb
-si
+vZ
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -12000,7 +13301,7 @@ kq
 kq
 kq
 wb
-wb
+rb
 si
 si
 si
@@ -12064,11 +13365,12 @@ BS
 iw
 iw
 iw
-iw
+kZ
 SO
 op
 SO
 SO
+Za
 iw
 iw
 iw
@@ -12076,40 +13378,39 @@ iw
 iw
 iw
 iw
-iw
-iw
+QZ
 SO
 SO
 SO
 SO
 SO
+Ss
 Qe
 Qe
-Qe
 iw
 iw
 iw
 iw
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
+jb
 SO
 SO
 SO
 SO
-SO
-SO
-SO
+Su
 iw
 Qe
 Qe
 si
 si
 si
-si
+AR
 wb
 wb
 wb
@@ -12127,10 +13428,10 @@ wb
 wb
 wb
 wb
-si
+rb
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -12150,8 +13451,8 @@ kq
 pq
 pq
 pq
-pq
-wb
+kq
+rb
 si
 si
 si
@@ -12226,63 +13527,63 @@ iw
 iw
 iw
 iw
+mB
 iw
 iw
-iw
-iw
+QZ
 SO
 SO
 SO
 SO
 SO
+Is
 Qe
+SO
+hz
+iw
+iw
+iw
+QZ
+SO
+SO
+SO
+jb
+jb
+Za
+mX
+SO
+SO
+SO
+SO
+SO
+Su
+iw
 Qe
-SO
-iw
-iw
-iw
-iw
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-iw
-iw
-Qe
 si
 si
 si
 si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
+AR
+cl
+cl
+cl
+WB
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -12301,7 +13602,7 @@ wb
 wb
 kq
 kq
-wb
+rb
 si
 si
 si
@@ -12370,23 +13671,23 @@ iw
 iw
 iw
 iw
+mX
+VA
+VA
+VA
+Su
 iw
 iw
+iw
+iw
+iw
+iw
+QZ
 SO
 SO
 SO
-iw
-iw
-iw
-iw
-iw
-iw
-iw
 SO
-SO
-SO
-SO
-iw
+Za
 Qe
 iw
 SO
@@ -12401,15 +13702,15 @@ DK
 iw
 iw
 iw
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
-SO
+EG
 Qe
-Qe
 si
 si
 si
@@ -12424,7 +13725,7 @@ si
 si
 si
 si
-si
+cV
 si
 si
 si
@@ -12434,7 +13735,7 @@ si
 si
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -12452,7 +13753,7 @@ wb
 wb
 wb
 kq
-wb
+rb
 si
 si
 si
@@ -12464,8 +13765,8 @@ si
 si
 si
 si
-si
-si
+WR
+pf
 pR
 pR
 pR
@@ -12514,14 +13815,14 @@ QW
 fu
 BS
 BS
+Sh
 BS
 BS
-BS
 iw
 iw
 iw
 iw
-iw
+mX
 SO
 SO
 SO
@@ -12533,11 +13834,11 @@ iw
 iw
 iw
 iw
-iw
-iw
-iw
-iw
-iw
+kZ
+jb
+jb
+jb
+jb
 iw
 SO
 SO
@@ -12553,19 +13854,19 @@ DK
 DK
 iw
 iw
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
-SO
+Is
 Qe
-Qe
 si
 si
 si
-si
+WT
 si
 si
 si
@@ -12586,7 +13887,7 @@ si
 si
 kc
 kc
-si
+AR
 wb
 wb
 wb
@@ -12603,7 +13904,7 @@ wb
 wb
 wb
 wb
-si
+rb
 kc
 kc
 kc
@@ -12615,9 +13916,9 @@ si
 si
 si
 si
-si
+WR
 rS
-rS
+mk
 pR
 pR
 pR
@@ -12673,12 +13974,12 @@ BS
 iw
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Za
 iw
 iw
 iw
@@ -12711,23 +14012,23 @@ SO
 SO
 SO
 SO
-iw
+Vo
 Qe
 Qe
 kc
 si
 si
 si
+cV
 si
 si
 si
 si
 si
 si
+WT
 si
-si
-si
-si
+ln
 si
 si
 si
@@ -12756,17 +14057,17 @@ wb
 wb
 wb
 si
-kc
-kc
-Lm
-Lm
-wb
-wb
-wb
+Ck
+IZ
+IZ
+IZ
+Mo
+Mo
+Mo
+Rv
 si
 si
-si
-si
+WR
 rS
 rS
 rS
@@ -12825,11 +14126,11 @@ BS
 iw
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
-SO
+wP
 iw
 iw
 CB
@@ -12863,7 +14164,7 @@ SO
 SO
 SO
 SO
-iw
+Vo
 Qe
 Qe
 si
@@ -12875,6 +14176,7 @@ si
 si
 si
 si
+cV
 si
 si
 si
@@ -12884,8 +14186,7 @@ si
 si
 si
 si
-si
-si
+Ut
 si
 si
 kc
@@ -12906,19 +14207,19 @@ wb
 wb
 wb
 wb
+rb
+zi
+Lm
+Lm
+Lm
+Lm
 wb
+wb
+wb
+vZ
 si
-Lm
-Lm
-Lm
-Lm
-wb
-wb
-wb
-wb
 si
-si
-rS
+qY
 rS
 pR
 pR
@@ -12972,17 +14273,17 @@ BS
 BS
 BS
 BS
+cy
 BS
-BS
 iw
 iw
 iw
+QZ
+SO
+SO
+SO
+Vo
 iw
-SO
-SO
-SO
-SO
-SO
 iw
 CB
 Hk
@@ -13015,14 +14316,14 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 Qe
 kc
 si
 si
 si
-si
+Ut
 si
 si
 si
@@ -13043,7 +14344,7 @@ si
 kc
 KV
 si
-kc
+EQ
 wb
 wb
 wb
@@ -13057,20 +14358,20 @@ wb
 wb
 wb
 wb
+rb
+si
+Nn
 wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-rS
-rS
-rS
+qY
 rS
 pR
 pR
@@ -13122,28 +14423,28 @@ QW
 fu
 BS
 BS
-BS
+WK
 BS
 BS
 BS
 iw
 iw
 iw
+QZ
+SO
+SO
+SO
+Vo
 iw
-SO
-SO
-SO
-SO
-SO
 iw
 CB
 Qe
 Qe
 Qe
-Qe
+ov
 iw
-HW
-HW
+Qe
+Qe
 iw
 Qe
 Qe
@@ -13155,7 +14456,7 @@ it
 pu
 Jh
 Mv
-KK
+so
 zK
 Mv
 it
@@ -13166,7 +14467,7 @@ SO
 SO
 SO
 SO
-iw
+Za
 iw
 iw
 Qe
@@ -13196,33 +14497,33 @@ kc
 kc
 si
 kc
+AR
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
+kc
+kc
+pQ
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 si
-kc
-kc
-kc
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-rS
-rS
-MV
+qY
 rS
 pR
 pR
@@ -13281,12 +14582,12 @@ BS
 iw
 iw
 iw
+QZ
 SO
 SO
 SO
 SO
-SO
-SO
+Su
 iw
 CB
 Qe
@@ -13294,8 +14595,8 @@ Qe
 AV
 CB
 OC
-OC
-OC
+CB
+CB
 OC
 WJ
 Cz
@@ -13326,7 +14627,7 @@ kc
 si
 si
 si
-MT
+si
 QB
 QB
 QB
@@ -13363,18 +14664,18 @@ si
 kc
 kc
 si
+Nn
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 si
-rS
-rS
+qY
 rS
 pR
 pR
@@ -13433,12 +14734,12 @@ BS
 iw
 iw
 iw
+kZ
+jb
+jb
+jb
 SO
-op
-SO
-iw
-SO
-iw
+Za
 CB
 CB
 Qe
@@ -13457,7 +14758,7 @@ NR
 iw
 Xe
 oO
-Jh
+Uq
 KK
 vf
 tj
@@ -13478,7 +14779,7 @@ kc
 si
 si
 si
-QB
+Vd
 QB
 QB
 EU
@@ -13499,33 +14800,33 @@ si
 si
 kc
 si
+zi
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+IZ
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
 wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-Lm
-Lm
-wb
-wb
-wb
+kq
+kq
 kq
 wb
 wb
-kq
-kq
-kq
 wb
 wb
-wb
-wb
-wb
+vZ
 si
-rS
+WR
 MV
 rS
 rS
@@ -13602,7 +14903,7 @@ SO
 SO
 SO
 SO
-Tr
+lQ
 Qe
 Qe
 XQ
@@ -13633,7 +14934,7 @@ si
 QB
 QB
 QB
-Mo
+sF
 kh
 KI
 sF
@@ -13651,7 +14952,7 @@ kc
 kc
 kc
 si
-wb
+Nn
 wb
 wb
 wb
@@ -13675,8 +14976,8 @@ wb
 wb
 wb
 wb
-si
-rS
+vZ
+WR
 rS
 rS
 rS
@@ -13747,14 +15048,14 @@ CB
 Qe
 Qe
 CB
-Qe
+KA
 SO
 SO
 SO
 SO
 SO
 SO
-Tr
+Bp
 Qe
 Qe
 XQ
@@ -13770,7 +15071,7 @@ it
 mj
 zK
 bs
-ia
+eM
 Jh
 Xb
 it
@@ -13802,7 +15103,7 @@ si
 kc
 kc
 kc
-wb
+zi
 wb
 wb
 wb
@@ -13823,11 +15124,11 @@ wb
 wb
 wb
 wb
-si
-si
-si
-si
-SP
+wb
+wb
+cl
+cl
+lP
 FJ
 SP
 SP
@@ -13883,8 +15184,8 @@ QW
 fu
 BS
 BS
+WK
 BS
-BS
 Qe
 iw
 Qe
@@ -13898,7 +15199,7 @@ Qe
 Qe
 Qe
 Qe
-Qe
+KA
 HW
 SO
 SO
@@ -13952,8 +15253,8 @@ QB
 si
 si
 ao
-Lm
-wb
+kc
+zi
 wb
 wb
 wb
@@ -13975,11 +15276,11 @@ kq
 kq
 kq
 kq
+wb
+vZ
 si
 si
-si
-si
-SP
+GD
 SP
 FJ
 SP
@@ -14050,7 +15351,7 @@ Qe
 Qe
 Qe
 Qe
-Qe
+Mf
 HW
 SO
 SO
@@ -14068,7 +15369,7 @@ Td
 Jh
 vk
 cL
-zK
+cN
 km
 WU
 yg
@@ -14104,6 +15405,7 @@ QB
 si
 kc
 kc
+zi
 wb
 wb
 wb
@@ -14127,11 +15429,10 @@ wb
 wb
 wb
 wb
+vZ
+Kz
 si
-si
-si
-si
-SP
+GD
 SP
 SP
 SP
@@ -14192,11 +15493,11 @@ BS
 BS
 iw
 iw
-SO
-iw
-iw
-iw
-iw
+mX
+VA
+VA
+VA
+Su
 iw
 iw
 iw
@@ -14256,6 +15557,7 @@ QB
 si
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -14279,11 +15581,10 @@ wb
 wb
 wb
 wb
+vZ
 si
 si
-si
-si
-SP
+GD
 SP
 SP
 SP
@@ -14343,12 +15644,12 @@ BS
 BS
 BS
 iw
+mX
 SO
 SO
 SO
 SO
-SO
-iw
+Vo
 iw
 iw
 CB
@@ -14408,7 +15709,7 @@ QB
 si
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -14432,10 +15733,10 @@ kq
 kq
 kq
 wb
+vZ
 si
 si
-si
-SP
+GD
 SP
 SP
 SP
@@ -14494,13 +15795,13 @@ BS
 BS
 BS
 BS
-iw
+mX
 SO
 SO
 SO
 SO
 SO
-SO
+Vo
 iw
 iw
 CB
@@ -14560,7 +15861,7 @@ QB
 si
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -14584,10 +15885,10 @@ kq
 kq
 kq
 wb
+vZ
 si
 si
-si
-SP
+GD
 SP
 SP
 SP
@@ -14646,13 +15947,13 @@ BS
 BS
 BS
 BS
+QZ
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
 iw
 iw
 CB
@@ -14712,6 +16013,7 @@ QB
 si
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -14735,11 +16037,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 si
-si
-SP
+GD
 SP
 SP
 SP
@@ -14794,17 +16095,17 @@ QW
 QW
 QW
 fu
+Sh
 BS
 BS
 BS
-BS
+QZ
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
 iw
 iw
 CB
@@ -14864,6 +16165,7 @@ QB
 si
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -14887,11 +16189,10 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 si
-si
-SP
+aC
 SP
 SP
 SP
@@ -14950,13 +16251,13 @@ BS
 BS
 BS
 BS
+QZ
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
 iw
 iw
 CB
@@ -15016,6 +16317,7 @@ QB
 si
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -15039,12 +16341,11 @@ wb
 wb
 wb
 wb
-wb
-si
+vZ
 si
 si
 pt
-SP
+aC
 SP
 SP
 SP
@@ -15102,13 +16403,13 @@ BS
 BS
 BS
 BS
+QZ
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
 iw
 iw
 CB
@@ -15117,12 +16418,12 @@ Qe
 OC
 SO
 SO
+Vo
+Te
 SO
-HW
 SO
 SO
-SO
-Tr
+VX
 Qe
 Qe
 XQ
@@ -15168,7 +16469,7 @@ QB
 si
 kc
 kc
-wb
+Nn
 wb
 wb
 wb
@@ -15192,12 +16493,12 @@ kq
 kq
 kq
 kq
+vZ
 si
-si
-si
+Kz
 pt
 pt
-SP
+aC
 SP
 SP
 SP
@@ -15254,13 +16555,13 @@ BS
 BS
 BS
 iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Vo
 iw
 iw
 CB
@@ -15269,11 +16570,11 @@ Qe
 OC
 SO
 SO
-SO
+Vo
 Qe
+QZ
 SO
-SO
-SO
+Vo
 Tr
 Qe
 Qe
@@ -15320,6 +16621,7 @@ QB
 si
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -15343,14 +16645,13 @@ wb
 wb
 wb
 wb
-wb
-si
+vZ
 si
 nq
 pt
 pt
 pt
-SP
+aC
 SP
 sj
 pR
@@ -15407,25 +16708,25 @@ BS
 BS
 iw
 iw
+kZ
+jb
 SO
+SO
+SO
+SO
+Su
 iw
-SO
-SO
-SO
-SO
-SO
-SO
 CB
-tO
+tS
 Qe
 CB
 SO
 SO
+Vo
+Wy
+QZ
 SO
-Qe
-SO
-SO
-SO
+Vo
 Tr
 Qe
 Qe
@@ -15472,6 +16773,7 @@ QB
 Fr
 kc
 kc
+Nn
 wb
 wb
 wb
@@ -15495,14 +16797,13 @@ wb
 wb
 wb
 wb
-wb
+vZ
 si
 si
-si
 pt
 pt
 pt
-pt
+kR
 sj
 zM
 pW
@@ -15566,18 +16867,18 @@ SO
 SO
 SO
 SO
-SO
+Su
 CB
 Qe
 Qe
 CB
 SO
 SO
-SO
+Vo
 Qe
+QZ
 SO
-SO
-SO
+Za
 Tr
 Qe
 Qe
@@ -15608,9 +16909,9 @@ xD
 eo
 QB
 IV
-BI
-Zf
-Ao
+sF
+sF
+kh
 QB
 DX
 DX
@@ -15625,7 +16926,7 @@ Fr
 tA
 kc
 si
-si
+AR
 wb
 wb
 wb
@@ -15648,14 +16949,14 @@ wb
 wb
 wb
 wb
-si
+vZ
 si
 si
 pt
 pt
+kR
 SP
-SP
-sj
+yZ
 Ze
 Ze
 pR
@@ -15718,18 +17019,18 @@ SO
 SO
 SO
 SO
-SO
+Vo
 GO
 Qe
 Qe
 CB
 SO
 SO
-SO
+Za
 Qe
+QZ
 SO
-SO
-SO
+iw
 Tr
 Qe
 Qe
@@ -15758,11 +17059,11 @@ Fp
 gE
 HZ
 eo
+MT
 QB
-QB
-QB
-QB
-QB
+BI
+Zf
+Ao
 QB
 QB
 DX
@@ -15800,16 +17101,16 @@ kq
 kq
 kq
 wb
-si
+rb
 si
 si
 pt
+kR
 SP
 SP
-SP
-zw
-zw
-zw
+li
+li
+li
 pR
 pR
 pR
@@ -15859,18 +17160,18 @@ QW
 QW
 fu
 BS
+WK
 BS
 BS
-BS
 iw
 iw
 iw
-iw
+mX
 SO
 SO
 SO
 SO
-SO
+Vo
 CB
 Qe
 Qe
@@ -15879,10 +17180,10 @@ PK
 Go
 Ik
 Qe
-SO
-SO
+QZ
+Vo
 iw
-Tr
+ji
 Qe
 Qe
 XQ
@@ -15892,7 +17193,7 @@ zk
 KM
 yl
 pT
-Hn
+aB
 ik
 NH
 TP
@@ -15903,7 +17204,7 @@ eo
 Wl
 yr
 eo
-AR
+gE
 gE
 gE
 Fp
@@ -15912,10 +17213,10 @@ Fp
 eo
 iw
 iw
-iw
-iw
-iw
-iw
+QB
+QB
+QB
+QB
 iw
 kc
 kc
@@ -15930,39 +17231,39 @@ Fr
 kc
 kc
 kc
+AR
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+rb
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-si
-si
-si
-si
-SP
+WR
+pf
+SF
 SP
 SP
 SP
 zw
-zw
-zw
-zM
+li
+li
+vx
 pR
 pR
 pR
@@ -16016,13 +17317,13 @@ BS
 BS
 iw
 iw
-iw
+mX
 SO
 SO
 SO
 SO
 SO
-SO
+Vo
 CB
 Qe
 Qe
@@ -16031,8 +17332,8 @@ rZ
 WO
 VE
 Qe
-SO
-SO
+QZ
+Vo
 iw
 Tr
 Qe
@@ -16059,7 +17360,7 @@ gE
 jv
 eo
 zC
-zC
+UX
 zC
 LM
 iw
@@ -16084,36 +17385,36 @@ KV
 kc
 kc
 si
+AR
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 si
-si
-si
+qY
 SP
 SP
 SP
 SP
 sj
 zw
-zw
-zw
+li
+li
 pR
 pR
 pR
@@ -16167,14 +17468,14 @@ BS
 BS
 iw
 iw
-iw
+mX
 SO
 SO
 SO
 SO
 SO
 SO
-iw
+Za
 CB
 Qe
 Qe
@@ -16183,8 +17484,8 @@ jk
 WO
 RE
 Qe
-SO
-SO
+QZ
+Vo
 iw
 Tr
 Qe
@@ -16237,33 +17538,33 @@ kc
 kc
 kc
 kc
-kc
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-kq
-kq
-wb
-wb
-wb
-wb
+EQ
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 si
-si
+rS
 SP
 SP
 SP
 SP
 dT
-zM
+vx
 Dr
 gk
 Tl
@@ -16319,13 +17620,13 @@ BS
 BS
 iw
 iw
-iw
+OF
 SO
 SO
 SO
 SO
 SO
-iw
+Za
 iw
 CB
 Qe
@@ -16335,8 +17636,8 @@ DB
 uI
 zH
 Qe
-SO
-SO
+QZ
+Vo
 iw
 Tr
 Qe
@@ -16390,16 +17691,16 @@ kc
 kc
 kc
 kc
-Lm
-Lm
-Lm
-Lm
-Lm
-Lm
-Lm
-Vk
-Vk
-Lm
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
+kc
 kc
 kc
 kc
@@ -16409,18 +17710,18 @@ kc
 kc
 cV
 si
-si
+AM
 SP
 SP
-pt
+rU
 pt
 dT
-zM
-cZ
+vx
+LL
 gk
 gk
-rV
-DV
+gk
+gk
 DV
 Xn
 DV
@@ -16471,7 +17772,7 @@ BS
 BS
 iw
 iw
-iw
+QZ
 SO
 SO
 SO
@@ -16487,8 +17788,8 @@ iw
 iw
 iw
 Qe
-SO
-SO
+kZ
+Za
 iw
 Tr
 Qe
@@ -16563,15 +17864,15 @@ si
 si
 si
 pt
-pt
+KB
 pt
 pt
 dT
-zM
-cZ
+vx
+LL
 gk
 gk
-DV
+gk
 DV
 DV
 Xn
@@ -16620,10 +17921,10 @@ QW
 fu
 BS
 BS
-BS
+WK
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
@@ -16719,10 +18020,10 @@ pt
 pt
 dT
 zM
-zM
-cZ
+vx
+LL
 gk
-DV
+gk
 DV
 DV
 DV
@@ -16775,13 +18076,13 @@ BS
 BS
 BS
 iw
-iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
+Su
 iw
 iw
 iw
@@ -16862,7 +18163,7 @@ kc
 kc
 kc
 si
-si
+Kz
 Ja
 si
 si
@@ -16873,7 +18174,7 @@ dT
 dT
 HR
 cZ
-DV
+AN
 DV
 DV
 DV
@@ -16928,21 +18229,21 @@ BS
 BS
 BS
 iw
-iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
+Su
 CB
 Qe
 Qe
 CB
 iw
 iw
-SO
-SO
+mX
+Su
 Qe
 Qe
 Qe
@@ -16982,38 +18283,38 @@ iw
 iw
 iw
 si
+Ut
 si
 si
 si
-si
-si
-wb
-wb
-wb
-wb
-si
-si
-si
-si
-wb
-Lm
-Lm
-Lm
-kc
-kc
-kc
-kc
-kc
-kc
-Lm
-Lm
-wb
-wb
-wb
-wb
-wb
-wb
-si
+zi
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+IZ
+Mo
+Mo
+Mo
+Mo
+Mo
+Mo
+Rv
 si
 si
 HA
@@ -17021,10 +18322,10 @@ si
 pt
 pt
 pt
-dT
+HU
 zM
-zM
-cZ
+vx
+LL
 gk
 DV
 DV
@@ -17081,7 +18382,7 @@ BS
 BS
 iw
 iw
-iw
+kZ
 SO
 SO
 SO
@@ -17095,7 +18396,7 @@ iw
 iw
 SO
 SO
-Qe
+EG
 Qe
 Qe
 Vy
@@ -17108,7 +18409,7 @@ YC
 Nr
 vH
 zk
-Qj
+Hn
 EF
 zk
 Ud
@@ -17136,23 +18437,6 @@ iw
 si
 si
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-si
-si
-wb
-wb
-wb
-wb
-wb
-wb
-si
 si
 si
 wb
@@ -17166,16 +18450,33 @@ wb
 wb
 wb
 wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
 si
 si
 pt
 cY
-SP
+kR
 SP
 zM
-zM
+vx
 Dr
 gk
 gk
@@ -17248,7 +18549,7 @@ iw
 SO
 SO
 SO
-SO
+Su
 Qe
 iw
 Tz
@@ -17287,7 +18588,7 @@ HD
 iw
 si
 si
-si
+zi
 wb
 wb
 wb
@@ -17304,7 +18605,6 @@ wb
 wb
 wb
 wb
-si
 wb
 wb
 wb
@@ -17318,6 +18618,7 @@ wb
 wb
 wb
 wb
+vZ
 kc
 kc
 kc
@@ -17396,12 +18697,12 @@ Qe
 Qe
 CB
 iw
-iw
-iw
+mX
 SO
 SO
 SO
 SO
+Su
 iw
 iw
 iw
@@ -17469,14 +18770,14 @@ wb
 wb
 wb
 wb
-wb
+vZ
 kc
 kc
 YQ
 si
 pt
 pt
-pt
+aC
 SP
 SP
 SP
@@ -17536,7 +18837,7 @@ OV
 BS
 BS
 iw
-iw
+mX
 SO
 SO
 SO
@@ -17547,20 +18848,20 @@ CB
 Qe
 Qe
 CB
-iw
-iw
+mX
 SO
 SO
 SO
 SO
 SO
-iw
+SO
+Su
 iw
 iw
 iw
 iw
 zk
-Hn
+cU
 OD
 Hn
 jZ
@@ -17586,7 +18887,7 @@ Qe
 Vy
 iw
 iw
-iw
+Ro
 iw
 iw
 si
@@ -17603,6 +18904,8 @@ wb
 wb
 wb
 wb
+rb
+AR
 wb
 wb
 wb
@@ -17619,9 +18922,7 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
+vZ
 si
 si
 si
@@ -17629,7 +18930,7 @@ si
 pt
 pt
 pt
-SP
+aC
 SP
 FJ
 SP
@@ -17688,18 +18989,18 @@ Uk
 BS
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
 SO
-iw
+Za
 CB
 Qe
 iw
-OC
-SO
+CB
+QZ
 SO
 SO
 SO
@@ -17754,6 +19055,10 @@ kq
 kq
 wb
 wb
+rb
+si
+si
+AR
 wb
 wb
 wb
@@ -17769,11 +19074,7 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
-wb
-wb
+vZ
 si
 si
 kc
@@ -17782,7 +19083,7 @@ Zu
 pt
 pt
 pt
-pt
+aC
 SP
 SP
 SP
@@ -17835,30 +19136,30 @@ QW
 fu
 BS
 eq
-zG
+Cu
 rf
 BS
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Za
 iw
 CB
 Qe
 Qe
-OC
-SO
+CB
+QZ
 SO
 SO
 SO
 SO
 SO
 op
-iw
+Vo
 iw
 iw
 iw
@@ -17892,10 +19193,25 @@ iw
 iw
 iw
 uf
-iw
+hi
+si
+zi
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+rb
 si
 si
 si
+si
+AR
 wb
 wb
 wb
@@ -17910,22 +19226,7 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
+vZ
 si
 si
 kc
@@ -17935,7 +19236,7 @@ pt
 Gv
 pt
 pt
-SP
+aC
 SP
 SP
 SP
@@ -17958,7 +19259,7 @@ Tl
 de
 yp
 yp
-yp
+Bc
 Tl
 BL
 Ys
@@ -17989,10 +19290,10 @@ BS
 en
 Of
 Er
-BS
+JF
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
@@ -18003,14 +19304,14 @@ CB
 Qe
 Qe
 CB
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
-SO
-iw
+Vo
 iw
 iw
 iw
@@ -18057,6 +19358,12 @@ wb
 wb
 wb
 wb
+Rv
+si
+si
+si
+si
+zi
 wb
 wb
 wb
@@ -18071,13 +19378,7 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
+vZ
 si
 si
 si
@@ -18089,7 +19390,7 @@ pt
 pt
 pt
 pt
-pt
+aC
 SP
 SP
 pR
@@ -18144,38 +19445,38 @@ BS
 BS
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
-iw
+Su
 iw
 CB
 Qe
 Qe
 CB
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
-SO
-SO
+Su
+VA
+VA
+VA
+VA
+VA
+VA
+VA
+VA
+VA
+VA
+VA
+Su
 iw
-iw
-iw
-iw
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
 Qe
 Qe
 Qe
@@ -18210,6 +19511,10 @@ wb
 wb
 wb
 wb
+Rv
+si
+si
+zi
 wb
 wb
 wb
@@ -18225,11 +19530,7 @@ wb
 wb
 wb
 wb
-wb
-wb
-wb
-wb
-wb
+vZ
 si
 si
 kc
@@ -18242,9 +19543,9 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
+aC
+ei
+ei
 pR
 pR
 pR
@@ -18296,17 +19597,18 @@ BS
 BS
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
 SO
 SO
-iw
+Su
 CB
 Qe
 Qe
 CB
+QZ
 SO
 SO
 SO
@@ -18325,14 +19627,13 @@ SO
 SO
 SO
 SO
-SO
-iw
+Vo
 Qe
-HW
-SO
-SO
-SO
+Qe
 iw
+mX
+SO
+Su
 iw
 iw
 iw
@@ -18363,27 +19664,27 @@ wb
 wb
 wb
 wb
+Rv
+zi
 wb
 wb
 wb
 wb
 wb
 wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-si
-si
-si
-si
 si
 si
 pt
@@ -18396,7 +19697,7 @@ pt
 pt
 pt
 pt
-pt
+ei
 pR
 pR
 pR
@@ -18411,7 +19712,7 @@ DD
 yp
 yp
 nU
-yp
+df
 yp
 yp
 Le
@@ -18444,11 +19745,11 @@ fu
 BS
 BS
 BS
-BS
+Sh
 BS
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
@@ -18459,6 +19760,7 @@ CB
 Qe
 Qe
 CB
+QZ
 SO
 SO
 SO
@@ -18477,15 +19779,14 @@ SO
 SO
 SO
 SO
-SO
-SO
+Vo
 Qe
-SO
-SO
-SO
-SO
-SO
 iw
+mX
+SO
+SO
+SO
+Su
 iw
 iw
 Bu
@@ -18520,11 +19821,6 @@ wb
 wb
 wb
 wb
-si
-si
-si
-si
-si
 wb
 wb
 wb
@@ -18532,8 +19828,13 @@ wb
 wb
 wb
 wb
-si
-si
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
 si
@@ -18547,8 +19848,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -18600,7 +19901,7 @@ BS
 kD
 BS
 iw
-iw
+QZ
 SO
 SO
 SO
@@ -18611,6 +19912,16 @@ CB
 Qe
 Qe
 CB
+kZ
+SO
+SO
+SO
+SO
+SO
+SO
+SO
+jb
+jb
 SO
 SO
 SO
@@ -18619,25 +19930,15 @@ SO
 SO
 SO
 SO
-iw
-iw
 SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-HW
+Ss
 Qe
-SO
-SO
-SO
-SO
-SO
 iw
+SO
+SO
+SO
+SO
+Vo
 iw
 iw
 iw
@@ -18671,28 +19972,28 @@ wb
 wb
 wb
 wb
-si
-si
-si
-si
-si
-si
-si
-si
 wb
 wb
 wb
-si
-si
-si
-si
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+vZ
 si
 si
 si
 kc
 Zu
 Zu
-Zu
+AU
 pt
 pt
 pt
@@ -18700,7 +20001,7 @@ pt
 pt
 pt
 pt
-pt
+ei
 pR
 pR
 pR
@@ -18752,19 +20053,19 @@ BS
 BS
 BS
 BS
-iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
+Za
 CB
 Qe
 iw
 CB
 iw
-iw
+kZ
 SO
 SO
 SO
@@ -18773,7 +20074,7 @@ SO
 SO
 iw
 iw
-iw
+kZ
 SO
 SO
 SO
@@ -18782,14 +20083,14 @@ SO
 SO
 SO
 SO
+Is
 Qe
-HW
+mX
 SO
 SO
 SO
 SO
-SO
-iw
+Vo
 iw
 iw
 iw
@@ -18806,6 +20107,7 @@ iw
 iw
 iw
 si
+AR
 wb
 wb
 wb
@@ -18822,22 +20124,21 @@ wb
 wb
 wb
 wb
-wb
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
-si
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 si
 si
@@ -18852,7 +20153,7 @@ pt
 pt
 pt
 pt
-pt
+ei
 pR
 pR
 pR
@@ -18905,12 +20206,12 @@ JO
 BS
 BS
 iw
-SO
-SO
-SO
-SO
-SO
-SO
+iw
+iw
+iw
+iw
+iw
+iw
 CB
 Qe
 Qe
@@ -18919,29 +20220,29 @@ iw
 Jw
 iw
 iw
+kZ
+SO
+SO
+Za
+iw
+iw
 iw
 SO
 SO
-iw
-iw
-iw
-iw
 SO
 SO
 SO
 SO
 SO
-SO
-SO
-HW
-HW
-HW
+Is
+Qe
+KA
 SO
 SO
 SO
 SO
 SO
-iw
+Vo
 iw
 HD
 iw
@@ -18958,23 +20259,23 @@ iw
 iw
 iw
 si
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
-wb
 si
-si
-si
-si
-si
-si
-si
-si
+AR
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+cl
+rb
 si
 si
 si
@@ -19002,9 +20303,9 @@ pt
 pt
 pt
 pt
+Pw
 pt
-pt
-pt
+ei
 pR
 pR
 pR
@@ -19069,14 +20370,14 @@ GF
 OC
 iw
 iw
-op
 iw
 iw
 iw
 iw
 iw
 iw
-op
+iw
+iw
 iw
 SO
 SO
@@ -19084,16 +20385,16 @@ SO
 SO
 SO
 SO
-SO
+Vo
 Qe
 Qe
-Qe
+Tu
 SO
 SO
 SO
 SO
 SO
-iw
+Vo
 iw
 iw
 iw
@@ -19156,7 +20457,7 @@ pt
 pt
 pt
 pt
-pt
+ei
 pR
 pR
 pR
@@ -19177,10 +20478,10 @@ yp
 Fx
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19207,11 +20508,11 @@ QW
 QW
 fu
 BS
-BS
-HW
-HW
-HW
-Qe
+Yj
+Rk
+Rk
+Rk
+EG
 Qe
 Qe
 Qe
@@ -19221,31 +20522,31 @@ Qe
 OC
 iw
 iw
-SO
 iw
 iw
 iw
 iw
 iw
 iw
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
-SO
 iw
-HW
-HW
+mX
 SO
 SO
 SO
 SO
 SO
+SO
+SO
+Vo
 iw
+Qe
+Tu
+SO
+SO
+SO
+SO
+SO
+Vo
 iw
 iw
 iw
@@ -19273,31 +20574,31 @@ nN
 nN
 nN
 nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
-nN
 Ko
+Ko
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+nN
 pt
 gL
 pt
@@ -19329,10 +20630,10 @@ yp
 vg
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19359,11 +20660,11 @@ QW
 QW
 fu
 BS
-BS
+od
 SO
 SO
 SO
-iw
+SO
 Kt
 pa
 pa
@@ -19380,6 +20681,7 @@ Kt
 Kt
 Kt
 iw
+QZ
 SO
 SO
 SO
@@ -19387,17 +20689,16 @@ SO
 SO
 SO
 SO
-SO
-iw
+Vo
 Qe
 iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
-iw
+Vo
 iw
 CZ
 iw
@@ -19418,7 +20719,6 @@ iw
 iw
 iw
 iw
-nN
 Ko
 Ko
 Ko
@@ -19449,7 +20749,8 @@ Ko
 Ko
 Ko
 Ko
-nN
+Ko
+Ko
 pt
 pt
 pt
@@ -19481,10 +20782,10 @@ yp
 tq
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19511,15 +20812,15 @@ QW
 QW
 fu
 kD
-BS
+od
 SO
 SO
 SO
-iw
+SO
 Kt
 EO
 EO
-Jp
+ti
 nO
 nO
 Jp
@@ -19532,6 +20833,7 @@ xB
 uH
 Kt
 iw
+QZ
 SO
 SO
 SO
@@ -19539,17 +20841,16 @@ SO
 SO
 SO
 SO
-SO
-SO
-SO
-HW
-SO
-SO
-SO
-SO
-SO
-SO
+Vo
 iw
+Qe
+iw
+QZ
+SO
+SO
+SO
+SO
+Vo
 iw
 EM
 iw
@@ -19570,15 +20871,12 @@ iw
 iw
 iw
 iw
-nN
 Ko
 Ko
-LK
-LK
-LK
-LK
 Ko
-LK
+Ko
+Nc
+Ea
 Ko
 Ko
 Ko
@@ -19601,19 +20899,22 @@ Ko
 Ko
 Ko
 Ko
-nN
+Ko
+Ko
+Ko
+Ko
 pt
 pt
 pt
 Zu
 Zu
 Zu
+Pw
 pt
 pt
 pt
-pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -19629,14 +20930,14 @@ yp
 Tl
 Xl
 Xl
-yp
+tz
 pJ
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19663,13 +20964,13 @@ mE
 mE
 GC
 BS
-BS
+od
 SO
 SO
 SO
-iw
+SO
 Kt
-cl
+nO
 lx
 lx
 bq
@@ -19684,6 +20985,7 @@ lx
 xB
 Kt
 iw
+QZ
 SO
 SO
 SO
@@ -19691,24 +20993,23 @@ SO
 SO
 SO
 SO
-SO
-SO
-SO
-Qe
-SO
-SO
-SO
-SO
-SO
-SO
+Vo
 iw
+Qe
+mX
+SO
+SO
+SO
+SO
+SO
+Vo
 iw
 iw
 iw
 iw
 iw
 Pz
-PV
+uJ
 Tr
 Qe
 Vy
@@ -19725,21 +21026,21 @@ iw
 nN
 Ko
 Ko
-LK
+Nc
 AI
 AI
-LK
-LK
-AI
-LK
+iG
+iG
+tJ
+iG
+iG
+iG
+iG
+iG
+iG
+Ea
 Ko
 Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-LK
 IK
 IK
 Ko
@@ -19764,8 +21065,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -19785,10 +21086,10 @@ Tl
 Tl
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19836,6 +21137,7 @@ lx
 xB
 Kt
 iw
+QZ
 SO
 SO
 SO
@@ -19843,22 +21145,21 @@ SO
 SO
 SO
 SO
-SO
-iw
+Za
 Qe
+mX
 SO
 SO
 SO
 SO
 SO
 SO
-SO
+Vo
 iw
 iw
 iw
 iw
-iw
-PV
+uJ
 uJ
 uJ
 uJ
@@ -19870,7 +21171,7 @@ iw
 iw
 iw
 iw
-iw
+on
 iw
 iw
 iw
@@ -19889,18 +21190,18 @@ zZ
 zZ
 LK
 LK
-AI
+jx
 Ko
-LK
+Nc
 zZ
-IK
-LK
-LK
-zZ
-zZ
-Ko
-IK
-IK
+nR
+iG
+iG
+nR
+nR
+iG
+nR
+ze
 Ko
 Ko
 Ko
@@ -19916,8 +21217,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -19937,10 +21238,10 @@ yp
 Xc
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -19988,28 +21289,28 @@ lx
 xB
 Kt
 iw
+QZ
 SO
 SO
 SO
 SO
 SO
 SO
-SO
+Za
 iw
-SO
-HW
-SO
+KA
 SO
 SO
 SO
 SO
 SO
 SO
+SO
+Vo
 iw
 iw
 iw
-iw
-PV
+uJ
 uJ
 mL
 HP
@@ -20029,20 +21330,20 @@ iw
 nN
 Ko
 Ko
-zZ
-zZ
-BV
-zZ
-zZ
-zZ
+MS
+Dy
+Dy
+Dy
+Dy
+Dy
 nN
 zZ
 zZ
 zZ
 LK
 LK
-Ko
-zZ
+jx
+IK
 AI
 AI
 LK
@@ -20052,7 +21353,7 @@ LK
 LK
 LK
 LK
-LK
+jx
 Ko
 IK
 Ko
@@ -20068,8 +21369,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -20089,10 +21390,10 @@ yp
 Ae
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20140,7 +21441,7 @@ lx
 pO
 Kt
 iw
-SO
+QZ
 SO
 SO
 SO
@@ -20149,7 +21450,7 @@ SO
 SO
 iw
 Qe
-iw
+QZ
 SO
 SO
 SO
@@ -20161,7 +21462,7 @@ wS
 iw
 iw
 iw
-PV
+uJ
 uJ
 SR
 DS
@@ -20183,19 +21484,19 @@ Ko
 Ko
 Ko
 Ko
-LK
-LK
+Ko
+Ko
 Ko
 Ko
 nN
-Ko
-Ko
-Ko
-Ko
-LK
-XO
 LK
 LK
+LK
+LK
+LK
+JY
+Ko
+FL
 LK
 LK
 BV
@@ -20205,7 +21506,7 @@ LK
 LK
 LK
 LK
-Ko
+Ea
 Ko
 IK
 Ko
@@ -20220,8 +21521,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -20241,10 +21542,10 @@ yp
 VO
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20292,28 +21593,28 @@ lx
 EO
 Kt
 iw
+kZ
 SO
 SO
 SO
 SO
 SO
-SO
-iw
+Za
 Qe
 Qe
+kZ
+SO
+SO
+SO
+SO
+SO
+SO
+SO
+Za
 iw
-SO
-SO
-SO
-SO
-SO
-SO
-SO
 iw
 iw
-iw
-iw
-PV
+uJ
 KN
 DS
 YE
@@ -20340,16 +21641,16 @@ Ko
 Ko
 Ko
 nN
-Ko
-Ko
-oY
-Ko
-Ko
-Ko
+LK
+LK
+CL
+LK
+LK
+jx
 IK
 IK
 IK
-Ko
+FL
 Ab
 LK
 zZ
@@ -20358,8 +21659,8 @@ zZ
 LK
 AI
 LK
-LK
-Ko
+iG
+Ea
 Ko
 nN
 pt
@@ -20372,8 +21673,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -20393,10 +21694,10 @@ yp
 zn
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20454,18 +21755,18 @@ Qe
 Qe
 Qe
 iw
-iw
+kZ
 SO
+Za
 iw
-iw
-iw
+kZ
 SO
+Za
 iw
 iw
 iw
 iw
-iw
-PV
+uJ
 uJ
 SR
 DS
@@ -20485,19 +21786,19 @@ nN
 nN
 Ko
 Ko
-Ko
-Ko
-LK
-LK
-LK
-LK
+Nc
+iG
+iG
+iG
+iG
+iG
 nN
-Ko
-Ko
 LK
-Ko
-Ko
-Ko
+LK
+LK
+LK
+LK
+jx
 Ko
 Ko
 Ko
@@ -20507,11 +21808,11 @@ Ko
 Ko
 Ko
 IK
-Ko
+FL
 LK
 LK
 LK
-Ko
+jx
 IK
 xG
 pt
@@ -20524,10 +21825,10 @@ Zu
 Zu
 pt
 pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
 pR
 pR
 pR
@@ -20545,10 +21846,10 @@ yp
 uL
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20616,8 +21917,8 @@ iw
 iw
 iw
 iw
-PV
-PV
+uJ
+uJ
 uJ
 Hi
 Kl
@@ -20637,7 +21938,7 @@ Cq
 Ko
 Ko
 Ko
-LK
+Xy
 LK
 LK
 LK
@@ -20647,9 +21948,9 @@ LK
 LK
 LK
 LK
-Ko
-Ko
 LK
+LK
+jx
 Ko
 Ko
 Ko
@@ -20660,33 +21961,33 @@ Ko
 XO
 Ko
 IK
-fv
+Gf
 zZ
 LK
-Ko
+jx
 IK
 xG
 pt
 pt
-pt
+KB
 pt
 Zu
 Zu
 Zu
 Zu
+KB
 pt
 pt
 pt
-pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
 pR
 pR
 Tl
-Lk
+hE
 zn
 TL
 zn
@@ -20697,10 +21998,10 @@ zn
 yp
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20789,7 +22090,7 @@ Cq
 Ko
 Ko
 Ko
-LK
+Xy
 AI
 LK
 LK
@@ -20800,8 +22101,8 @@ LK
 LK
 LK
 LK
-Ko
 LK
+jx
 Ko
 IK
 IK
@@ -20813,9 +22114,9 @@ XO
 IK
 IK
 IK
-IK
-Ko
-Ko
+zZ
+LK
+jx
 Ko
 nN
 pt
@@ -20830,8 +22131,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -20849,10 +22150,10 @@ Tl
 Tl
 Tl
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -20941,20 +22242,20 @@ Cq
 Ko
 Ko
 Ko
-AI
+Xy
 LV
 LK
 LK
 LK
 LK
 LK
+LK
+LK
+LK
+LK
+LK
+jx
 Ko
-LK
-LK
-LK
-LK
-Ko
-LK
 IK
 IK
 kA
@@ -20962,12 +22263,12 @@ aR
 Ko
 Ko
 IK
-kn
+IK
 IK
 kn
 zZ
 AI
-Ko
+jx
 Ko
 nN
 pt
@@ -20982,8 +22283,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -21001,10 +22302,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21093,20 +22394,20 @@ Cq
 Ko
 IK
 Ko
-Ko
+FL
 LK
 LK
 LK
 LK
 LK
 LK
-Ko
 LK
 LK
 LK
 LK
 LK
-Ko
+LK
+Ea
 IK
 Ko
 Ko
@@ -21115,11 +22416,11 @@ IK
 Ko
 Ko
 Ko
-Ko
+Nc
 zZ
 zZ
 LK
-LK
+jx
 Ko
 nN
 pt
@@ -21153,10 +22454,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21246,15 +22547,15 @@ IK
 IK
 Ko
 Ko
-Ko
+FL
 LK
 LK
 LK
 LK
 LK
-Ko
-XO
-Ko
+LK
+LK
+LK
 LK
 LK
 LK
@@ -21265,13 +22566,13 @@ IK
 IK
 IK
 Ko
-Ko
+Nc
 LK
 LK
 LK
 LK
 zZ
-LK
+jx
 Ko
 nN
 pt
@@ -21305,10 +22606,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21366,7 +22667,7 @@ XG
 pv
 XG
 XG
-Vi
+XG
 XG
 rI
 XG
@@ -21376,8 +22677,8 @@ pv
 pv
 pv
 XG
-nH
-nH
+uJ
+uJ
 uJ
 VR
 vO
@@ -21399,7 +22700,7 @@ IK
 IK
 Ko
 Ko
-Ko
+FL
 LK
 LK
 LK
@@ -21410,20 +22711,20 @@ LK
 LK
 LK
 AI
-AI
+jj
 IK
 IK
 Ko
 Ko
 IK
-LK
+Nc
 LK
 LK
 LK
 LK
 LK
 zZ
-LK
+jx
 Ko
 nN
 pt
@@ -21436,8 +22737,11 @@ pt
 pt
 pt
 pt
+aV
 pt
-pt
+pR
+pR
+oL
 pR
 pR
 pR
@@ -21454,13 +22758,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21517,10 +22818,10 @@ hS
 XG
 pv
 XG
-ow
-ow
-ow
-XG
+eP
+zE
+zE
+eR
 XG
 XG
 XG
@@ -21529,7 +22830,7 @@ pv
 pv
 XG
 XG
-nH
+uJ
 uJ
 VR
 vO
@@ -21554,14 +22855,14 @@ XO
 Ko
 Ko
 Ko
+FL
 LK
 LK
 LK
-Ko
 LK
 LK
 AI
-LK
+cR
 Ko
 IK
 IK
@@ -21575,7 +22876,7 @@ zZ
 LK
 LK
 LK
-LK
+jx
 Ko
 nN
 pt
@@ -21589,10 +22890,10 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
 pR
 pR
 pR
@@ -21609,10 +22910,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21668,11 +22969,11 @@ hS
 hS
 pv
 pv
-nZ
+wG
 ow
 ow
 ow
-ow
+tG
 XG
 XG
 Sk
@@ -21708,11 +23009,11 @@ IK
 kA
 Ko
 Ko
-Ko
+FL
 LK
 AI
-Ko
-Ko
+LK
+cR
 XO
 Ko
 IK
@@ -21727,7 +23028,7 @@ zZ
 LK
 LK
 LK
-LK
+jx
 Ko
 nN
 pt
@@ -21741,10 +23042,10 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
 pR
 pR
 pR
@@ -21761,10 +23062,10 @@ pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
+kI
+kI
+kI
+kI
 pR
 pR
 pR
@@ -21820,11 +23121,11 @@ pv
 pv
 pv
 FS
+hK
 ow
 ow
-ow
-ow
-ow
+tG
+XG
 XG
 XG
 xm
@@ -21863,7 +23164,7 @@ Ko
 Ko
 LK
 LK
-Ko
+cR
 Ko
 Ko
 Ko
@@ -21872,51 +23173,51 @@ IK
 IK
 IK
 Ko
-Ko
+FL
 LK
 LK
 LK
 LK
 Ab
 LK
-LK
+jx
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+nN
+nN
+nN
+nN
+nN
+nN
+nN
+Ko
+Qj
+Qj
+pi
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
 pR
 pR
 pR
@@ -21940,8 +23241,8 @@ Kt
 Kt
 Kt
 Kt
-Kt
-Kt
+KH
+FA
 Kt
 Kt
 Kt
@@ -21973,9 +23274,9 @@ kG
 pv
 pv
 XG
-ow
-ow
-ow
+hK
+tG
+XG
 XG
 sK
 XR
@@ -22026,49 +23327,49 @@ IK
 IK
 Ko
 Ko
-Ko
+FL
 LK
 LK
 LK
 LK
-Ko
+jx
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Qj
+Qj
+pi
+pd
+np
+Zo
+yd
+np
+oH
+yd
+np
+kv
+oH
+yd
+np
+yd
+np
+kv
+np
+aZ
+np
+np
+sY
+np
+np
+pd
 pR
 pR
 pR
@@ -22102,7 +23403,7 @@ Ap
 Ap
 Ap
 xM
-pd
+jH
 jH
 jH
 jH
@@ -22114,7 +23415,7 @@ xM
 ow
 ow
 ow
-ow
+mn
 Ki
 MC
 MC
@@ -22147,8 +23448,44 @@ ND
 uJ
 uJ
 uJ
+DS
+IT
 uJ
-Tf
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+Ko
+Ko
+Ko
+FL
+LK
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+FL
+zZ
+LK
+LK
+cR
+Ko
 nN
 Ko
 Ko
@@ -22159,68 +23496,32 @@ Ko
 Ko
 Ko
 Ko
-IK
-IK
-IK
-Ko
-Ko
-Ko
-Ko
-LK
-Ko
-Ko
-Ko
-Ko
-Ko
-LK
-LK
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-IK
-Ko
-LK
-Ko
-Ko
-nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Qj
+Qj
+pi
+pd
+KT
+np
+yd
+np
+np
+yd
+np
+sQ
+np
+yd
+bW
+sQ
+oH
+yd
+np
+sQ
+np
+np
+sQ
+np
+np
+pd
 pR
 pR
 pR
@@ -22266,7 +23567,7 @@ xM
 ow
 ow
 ow
-ow
+mn
 XG
 Sj
 KX
@@ -22297,11 +23598,11 @@ XG
 pv
 pv
 XG
-nH
-nH
-nH
-XG
-nN
+uJ
+IT
+DS
+IT
+uJ
 Ko
 Ko
 Ko
@@ -22320,59 +23621,59 @@ Ko
 Ko
 Ko
 Ko
-LK
-Ko
-LK
-LK
-Ko
-Ko
-LK
 Ko
 Ko
 Ko
 Ko
 Ko
 Ko
-LK
 Ko
 Ko
 Ko
-nN
-pt
-pt
+Ko
+Ko
+Ko
+FL
+wB
+cR
+Ko
+DC
+QU
+Ko
+Ko
 cE
-pt
-pt
-pt
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+IK
+IK
+Qj
+Qj
+Qj
+pd
+pd
+Kx
+np
+yd
+Py
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+ar
+yd
+np
+np
+yd
+np
+WE
+pd
 pR
 pR
 pR
@@ -22418,7 +23719,7 @@ xM
 ow
 ow
 ow
-ow
+mn
 XG
 EA
 az
@@ -22431,7 +23732,7 @@ pv
 pv
 pv
 XG
-ow
+XG
 XG
 dF
 dC
@@ -22449,11 +23750,11 @@ pv
 pv
 pv
 XG
-ow
-ow
-ow
-XG
-nN
+FN
+DS
+DS
+DS
+FN
 Ko
 Ko
 Ko
@@ -22474,7 +23775,7 @@ nN
 nN
 XO
 Ko
-IK
+bD
 nN
 nN
 nN
@@ -22488,43 +23789,43 @@ nN
 nN
 nN
 nN
-nN
-nN
-pt
-pt
-pt
-pt
-Ms
-pt
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Vj
+zN
+Ko
+Ko
+Ko
+Ko
+AB
+Ko
+IK
+IK
+hA
+Qj
+IK
+IK
+JW
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -22570,7 +23871,7 @@ xM
 ow
 ow
 ow
-ow
+mn
 XG
 gB
 Ps
@@ -22582,9 +23883,9 @@ je
 Pa
 tD
 pv
+eP
 ow
-ow
-ow
+eR
 QT
 Aa
 yR
@@ -22601,11 +23902,11 @@ pv
 vq
 XG
 XG
-ow
-ow
-ow
-XG
-nN
+uJ
+IT
+DS
+IT
+uJ
 Ko
 Ko
 Ko
@@ -22625,12 +23926,12 @@ IK
 Ko
 Ko
 Ko
-Ko
+Nc
 LK
 LK
 LK
 LK
-Ko
+Ea
 Ko
 Ko
 IK
@@ -22640,43 +23941,43 @@ Ko
 XO
 Ko
 Ko
+fv
+uz
 Ko
-nN
-pt
-pt
-pt
-pt
-pt
-pt
-Zu
-IJ
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+AZ
+IK
+bu
+Qj
+IK
+IK
+IK
+JW
+np
+np
+np
+np
+np
+np
+oQ
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -22723,7 +24024,7 @@ ow
 ow
 ow
 ow
-ow
+eR
 XG
 XG
 XG
@@ -22733,11 +24034,11 @@ CR
 NF
 OJ
 pv
-Db
+Nk
 ow
 ow
 ow
-ow
+eR
 XG
 XG
 XG
@@ -22752,12 +24053,12 @@ XG
 XG
 pv
 XG
-XG
-ow
-ow
-ow
-XG
-nN
+eP
+uJ
+IT
+DS
+IT
+uJ
 Ko
 Ko
 Ko
@@ -22776,16 +24077,16 @@ Ko
 Ko
 Ko
 Ko
+bD
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+Ea
 IK
-LK
-LK
-LK
-LK
-Ko
-Ko
-Ko
-Ko
-Ko
 Ko
 Ko
 Ko
@@ -22794,41 +24095,41 @@ IK
 IK
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+Qj
+IK
+IK
+IK
+JW
+np
+bW
+np
+np
+bW
+np
+np
+np
+np
+np
+cr
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -22876,10 +24177,10 @@ ow
 ow
 ow
 ow
-ow
-ow
-ow
-XG
+zE
+zE
+zE
+eR
 XG
 EA
 az
@@ -22889,7 +24190,7 @@ vI
 ow
 ow
 ow
-Vi
+tG
 XG
 XG
 XG
@@ -22905,11 +24206,11 @@ XG
 pv
 XG
 ow
-ow
-ow
-ow
-XG
-nN
+uJ
+IT
+DS
+IT
+uJ
 Ko
 Ko
 Ko
@@ -22928,16 +24229,16 @@ Ko
 Ko
 IK
 IK
-Ko
+Xy
 LK
 LK
 LK
 LK
-Ko
-Ko
-Ko
-Ko
-Ko
+LK
+LK
+LK
+LK
+Ea
 Ko
 Ko
 Ko
@@ -22946,41 +24247,41 @@ IK
 IK
 Ko
 nN
-pt
-pt
-XA
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+iJ
+Ko
+Ko
+Ko
+IK
+IK
+Qj
+pd
+pd
+pd
+pd
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+gZ
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -23031,16 +24332,16 @@ ow
 ow
 ow
 Vi
-ow
+mn
 XG
 NY
 MC
 vR
 cS
 PZ
+hK
 ow
-ow
-ow
+tG
 XG
 XG
 XG
@@ -23057,10 +24358,46 @@ pv
 Fb
 XG
 xK
-ow
-ow
-XG
-XG
+uJ
+uJ
+uJ
+uJ
+uJ
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+IK
+IK
+Ko
+IK
+IK
+Xy
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+Ea
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
 nN
 Ko
 Ko
@@ -23068,71 +24405,35 @@ Ko
 Ko
 Ko
 Ko
-Ko
-Ko
-Ko
-Ko
 IK
 IK
-IK
-IK
-IK
-Ko
-IK
-IK
-Ko
-LK
-LK
-LK
-LK
-LK
-LK
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Qj
+pi
+pi
+pi
+pd
+UK
+np
+np
+yd
+oQ
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+np
+yd
+np
+WE
+pd
 pR
 pR
 pR
@@ -23175,6 +24476,7 @@ nd
 aN
 KY
 xM
+hK
 ow
 ow
 ow
@@ -23182,8 +24484,7 @@ ow
 ow
 ow
 ow
-ow
-ow
+mn
 XG
 XG
 XG
@@ -23191,7 +24492,7 @@ XG
 XG
 XG
 XG
-ow
+XG
 XG
 XG
 XG
@@ -23207,13 +24508,13 @@ UR
 iX
 XG
 XG
-XG
+eP
 Vi
 Vi
 ow
 XG
-XG
-nN
+AE
+QU
 Ko
 Ko
 Ko
@@ -23232,59 +24533,59 @@ Ko
 Ko
 Ko
 Ko
+Xy
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+LK
+Ea
 Ko
-LK
-LK
-LK
-LK
-LK
+IK
 Ko
 Ko
-LK
+nN
 Ko
 Ko
 Ko
 Ko
 Ko
 IK
-Ko
-Ko
-nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+IK
+IK
+Qj
+pi
+pi
+pi
+pd
+SN
+np
+np
+yd
+np
+yd
+np
+yd
+oH
+yd
+oH
+yd
+np
+yd
+np
+yd
+np
+np
+yd
+np
+np
+pd
 pR
 pR
 pR
@@ -23328,14 +24629,14 @@ xM
 xM
 xM
 XG
+hK
 ow
 ow
 ow
 ow
 ow
 ow
-ow
-Vi
+GZ
 pP
 XG
 XG
@@ -23362,10 +24663,10 @@ XG
 ow
 ow
 ow
+tG
 XG
-XG
-XG
-nN
+jU
+zN
 Ko
 Ko
 Ko
@@ -23384,7 +24685,7 @@ XO
 Ko
 Ko
 Ko
-Ko
+Xy
 LK
 LK
 zZ
@@ -23392,51 +24693,51 @@ LK
 LK
 LK
 LK
+LK
+LK
+LK
+LK
+LK
+Ea
+IK
 Ko
+Ko
+nN
 Ko
 Ko
 Ko
 Ko
 Ko
 IK
-Ko
-Ko
-nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+IK
+IK
+Qj
+Qj
+pi
+pi
+pd
+Rs
+ty
+np
+yd
+np
+yd
+np
+zy
+oH
+yd
+np
+yd
+np
+zy
+np
+yd
+np
+oH
+zy
+np
+np
+pd
 pR
 pR
 pR
@@ -23470,22 +24771,22 @@ Ap
 Ap
 Ap
 Ap
-pv
+vI
 Db
-Db
+Au
 pv
-ow
+vM
 ow
 ow
 ow
 ow
 XG
 GA
-XG
-ow
-ow
-ow
-XG
+hK
+zJ
+zJ
+zJ
+tG
 XG
 jF
 XG
@@ -23510,15 +24811,15 @@ Nq
 MC
 vR
 XG
-Bq
+wG
 ow
 ow
 ow
 XG
 XG
-XG
-nN
-nN
+vp
+uz
+Ea
 nN
 nN
 nN
@@ -23536,59 +24837,59 @@ Ko
 Ko
 Ko
 Ko
-Ko
+Xy
 LK
 LK
 zZ
 LK
 LK
-Ko
-Ko
-Ko
-IK
-Ko
-Ko
-Ko
-Ko
+LK
+LK
+LK
+zZ
+LK
+LK
+LK
+jx
 Ko
 XO
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Qj
+Qj
+pi
+pi
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
 pR
 pR
 pR
@@ -23623,10 +24924,10 @@ Ap
 Ap
 Ap
 pv
+bp
+Au
 pv
-Db
-pv
-ow
+vM
 ow
 ow
 ow
@@ -23636,7 +24937,7 @@ NL
 je
 Df
 XG
-tG
+XG
 XG
 XG
 cM
@@ -23674,7 +24975,7 @@ LK
 AI
 Ko
 Ko
-LK
+Ko
 Ko
 Ko
 aR
@@ -23688,59 +24989,59 @@ IK
 IK
 Ko
 Ko
-Ko
-LK
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-IK
-Ko
-Ko
-Ko
-Ko
+FL
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+wB
+Dy
+wB
+wB
+wB
+cR
 Ko
 Ko
 Ko
 nN
-pt
-pt
+Ko
+Ko
 cE
-pt
-pt
-Tx
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+qh
+IK
+IK
+Qj
+Qj
+Qj
+pi
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+Wa
+Wa
+pd
+pd
+pd
+pd
+pd
+Wa
+Wa
+pd
+pd
+pd
+pd
+pd
 pR
 pR
 pR
@@ -23775,20 +25076,20 @@ Ap
 Ap
 Ap
 Ap
-Ap
-Db
+IS
+Au
 pv
+vM
 ow
 ow
 ow
-ow
-ow
+Hj
 XG
 CR
 NF
 OJ
 XG
-XG
+Mt
 XG
 XG
 ZM
@@ -23814,9 +25115,9 @@ XG
 XG
 XG
 XG
+hK
 ow
-ow
-XG
+tG
 XG
 XG
 XG
@@ -23824,9 +25125,9 @@ XG
 nN
 LK
 LK
+Ea
 Ko
-LK
-LK
+Ko
 Ko
 Ko
 Ko
@@ -23858,41 +25159,41 @@ aR
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+Qj
+Qj
+Qj
+pi
+pd
+np
+Zo
+yd
+np
+np
+yd
+np
+kv
+nH
+mA
+np
+np
+yd
+Zo
+yd
+nH
+mA
+np
+kv
+np
+np
+pd
 pR
 pR
 pR
@@ -23927,14 +25228,14 @@ Ap
 Ap
 Ap
 Ap
-Ap
-Db
+IS
+Au
 pv
+vM
 ow
 ow
 ow
-ow
-XG
+tG
 XG
 EA
 az
@@ -23976,9 +25277,9 @@ XG
 nN
 LK
 LK
-LK
+jx
 Ko
-LK
+Ko
 Ko
 Ko
 Ko
@@ -24010,41 +25311,41 @@ IK
 IK
 IK
 nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+Qj
+Qj
+Qj
+pi
+pd
+Cf
+np
+yd
+np
+np
+yd
+cr
+yd
+np
+yd
+np
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+np
+pd
 pR
 pR
 pR
@@ -24079,13 +25380,13 @@ Ap
 Ap
 Ap
 Ap
-Ap
-Db
+IS
+Au
 pv
+vM
 ow
 ow
-ow
-XG
+tG
 XG
 XG
 NY
@@ -24128,9 +25429,9 @@ XG
 Fa
 LK
 AI
-LK
+jx
 IK
-LK
+Ko
 Ko
 Ko
 Ko
@@ -24162,41 +25463,41 @@ IK
 IK
 IK
 nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+Qj
+Qj
+Qj
+pd
+pd
+vb
+np
+yd
+np
+np
+yd
+np
+yd
+np
+yd
+np
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+WE
+pd
 pR
 pR
 pR
@@ -24231,12 +25532,12 @@ Ap
 Ap
 Ap
 Ap
-Ap
+bK
+lh
 pv
-pv
+vM
 ow
-ow
-XG
+tG
 XG
 XG
 XG
@@ -24279,8 +25580,8 @@ XG
 XG
 nN
 LK
-Ko
-Ko
+LK
+cR
 IK
 IK
 Ko
@@ -24293,8 +25594,8 @@ nN
 Ko
 Ko
 Ko
-Ko
-Ko
+Nc
+Ea
 Ko
 aR
 Ko
@@ -24313,42 +25614,42 @@ IK
 IK
 IK
 IK
-nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+IK
+IK
+IK
+IK
+IK
+Ko
+Ko
+IK
+IK
+Qj
+IK
+IK
+JW
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+cr
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -24386,8 +25687,8 @@ pv
 pv
 pv
 pv
-XG
-XG
+hK
+tG
 XG
 XG
 XG
@@ -24416,9 +25717,9 @@ OJ
 XG
 XG
 XG
+eP
 ow
-ow
-ow
+eR
 wz
 XG
 XG
@@ -24444,7 +25745,7 @@ IK
 nN
 Ko
 Ko
-Ko
+Nc
 LK
 LK
 IK
@@ -24465,42 +25766,42 @@ IK
 IK
 IK
 IK
-nN
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+IK
+JW
+np
+np
+np
+np
+np
+np
+oQ
+np
+np
+np
+oH
+np
+np
+np
+np
+oH
+np
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -24551,7 +25852,7 @@ pv
 XG
 XG
 XG
-sH
+Sj
 Tp
 je
 Sc
@@ -24566,11 +25867,11 @@ MC
 MC
 vR
 Yr
+eP
+zE
 ow
 ow
-ow
-ow
-ow
+mn
 XG
 XG
 XG
@@ -24584,7 +25885,7 @@ XG
 nN
 LK
 LK
-Uc
+wM
 IK
 IK
 IK
@@ -24595,7 +25896,7 @@ IK
 IK
 nN
 Ko
-Ko
+Nc
 LK
 LK
 LK
@@ -24618,41 +25919,41 @@ Uc
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+IK
+IK
+IK
+IK
+IK
+JW
+np
+bW
+np
+np
+bW
+oH
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+pd
 pR
 pR
 pR
@@ -24701,15 +26002,15 @@ XG
 pv
 XG
 XG
-ow
+eP
 ow
 Wm
 NF
 ew
 nT
 aJ
-XG
-XG
+Me
+Bl
 XG
 XG
 Ax
@@ -24717,12 +26018,12 @@ XG
 XG
 XG
 XG
-ow
+eP
 Vi
 ow
 ow
 ow
-ow
+tG
 XG
 XG
 XG
@@ -24735,8 +26036,8 @@ XG
 XG
 nN
 LK
-Ko
-Ko
+LK
+jx
 Ko
 Ko
 Ko
@@ -24746,12 +26047,12 @@ XO
 Ko
 Ko
 nN
-Ko
+Nc
 LK
 LK
 LV
 LK
-Ko
+Ea
 Ko
 Ko
 IK
@@ -24770,41 +26071,41 @@ oY
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Qj
+pd
+pd
+pd
+pd
+pd
+Kx
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+np
+Uy
+np
+np
+pd
 pR
 pR
 pR
@@ -24832,7 +26133,7 @@ ey
 FD
 FD
 dW
-Ap
+gP
 Ap
 Ap
 Ap
@@ -24853,7 +26154,7 @@ ut
 pv
 pv
 XG
-ow
+vM
 ow
 Wm
 az
@@ -24873,7 +26174,7 @@ ow
 Vi
 ow
 ow
-ow
+mn
 XG
 XG
 rI
@@ -24886,9 +26187,9 @@ pv
 pv
 XG
 nN
-Ko
+LK
 AI
-LK
+jx
 IK
 IK
 Ko
@@ -24896,9 +26197,9 @@ Ko
 IK
 IK
 Ko
-LK
+Ko
 nN
-Ko
+FL
 LK
 LK
 LK
@@ -24913,8 +26214,8 @@ Ko
 Ko
 Ko
 IK
-IK
-zZ
+bD
+ze
 Ko
 IK
 IK
@@ -24922,41 +26223,41 @@ IK
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
+Ko
+wh
+Ko
+Ko
 cE
-pt
-pt
-pt
+Ko
+Ko
+Qj
 pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+pd
+Kx
+np
+yd
+np
+oQ
+yd
+np
+yd
+np
+yd
+np
+np
+yd
+np
+yd
+np
+yd
+np
+yd
+np
+WE
+pd
 pR
 pR
 pR
@@ -25005,14 +26306,14 @@ XG
 pv
 sf
 XG
-ow
+vM
 ow
 Wm
 NF
 NF
 OJ
 GQ
-XG
+lv
 XG
 XG
 XG
@@ -25025,7 +26326,7 @@ nZ
 Vi
 ow
 ow
-ow
+tG
 XG
 XG
 XG
@@ -25040,22 +26341,22 @@ XG
 nN
 LK
 AI
-Ko
+jx
 IK
 IK
 Uc
 Ko
 IK
 IK
-LK
-LK
+Nc
+Ea
 nN
 Ko
-Ko
+FL
 LK
 LK
 LK
-LK
+jx
 Ko
 Ko
 Ko
@@ -25064,9 +26365,9 @@ IK
 Ko
 Ko
 IK
-IK
+bD
 zZ
-IK
+zZ
 Ko
 IK
 IK
@@ -25074,41 +26375,41 @@ IK
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-cY
-pt
-pt
+Ko
+Ko
+Ko
+Ko
+Ko
+hq
+Ko
+Qj
 pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+pd
+np
+np
+yd
+np
+np
+yd
+np
+yd
+np
+yd
+np
+np
+yd
+np
+XC
+np
+yd
+np
+yd
+np
+np
+pd
 pR
 pR
 pR
@@ -25149,15 +26450,15 @@ XG
 XG
 XG
 XG
+eP
 ow
 ow
-ow
-ow
+eR
 XG
 pv
 XG
 XG
-ow
+vM
 yq
 Yu
 NF
@@ -25174,7 +26475,7 @@ XG
 AE
 Pa
 XG
-Bq
+XG
 XG
 XG
 AE
@@ -25190,24 +26491,24 @@ pv
 pv
 pv
 nN
-Ko
-Ko
-LK
-zZ
-Ko
-Ko
-Ko
-Ko
-Ko
 LK
 LK
+jx
+IK
+Ko
+Ko
+Ko
+Ko
+Ko
+Xy
+jx
 nN
 Ko
-LK
-LK
-LK
-LK
-LK
+Ko
+FL
+wB
+wB
+cR
 Ko
 Ko
 Ko
@@ -25215,52 +26516,52 @@ IK
 IK
 Ko
 Ko
-IK
+bD
 zZ
 LK
 LK
-Ko
+Ea
 IK
 IK
 IK
 Ko
 Ko
 nN
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Qj
+Qj
+Qj
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+pd
+np
+ty
+yd
+np
+np
+yd
+np
+zy
+np
+yd
+np
+np
+yd
+ty
+yd
+np
+yd
+np
+zy
+np
+np
+pd
 pR
 pR
 pR
@@ -25298,7 +26599,7 @@ pv
 pv
 pv
 XG
-XG
+eP
 ow
 ow
 ow
@@ -25309,7 +26610,7 @@ XG
 QO
 Jd
 XG
-ow
+vM
 Wm
 aX
 NF
@@ -25344,19 +26645,19 @@ pv
 nN
 LK
 LK
-LK
+cR
 Ko
 Ko
 kA
 Ko
 Ko
-Ko
+Nc
 LK
-LK
+jx
 nN
 Ko
 Ko
-LK
+Ko
 Ko
 Ko
 Ko
@@ -25366,53 +26667,53 @@ Ko
 Ko
 Ko
 Ko
-Ko
+Nc
 LK
 LK
 LK
 AI
-Ko
+jx
 IK
 IK
 IK
 Ko
 Ko
 nN
-pt
-pt
-pt
-Zu
-Zu
-Zu
-pt
-pt
-pt
-pt
+Ko
+Ko
+Ko
+IK
+IK
+IK
+Ko
+Qj
+Qj
+Qj
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
-pR
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
 pR
 pR
 pR
@@ -25461,7 +26762,7 @@ rO
 mJ
 pv
 XG
-ow
+vM
 sW
 qG
 NF
@@ -25494,17 +26795,17 @@ XG
 XG
 Sj
 PH
+wB
+cR
 Ko
 Ko
 Ko
 Ko
 Ko
-Ko
-Ko
-Ko
+Nc
 LK
 AI
-LK
+jx
 nN
 Ko
 Ko
@@ -25517,29 +26818,29 @@ Ko
 Ko
 Ko
 Ko
-Ko
+Nc
 LK
 LK
 LK
 LK
 LK
-Ko
+jx
 IK
 IK
 IK
 Ko
 Ko
 nN
-pt
-pt
-pt
+Ko
+Ko
+Ko
 tb
-Zu
-Zu
-pt
-pt
-pt
-pt
+IK
+gz
+Ko
+Qj
+Qj
+Qj
 pR
 pR
 pR
@@ -25602,10 +26903,10 @@ pv
 pv
 pv
 XG
-XG
+hK
 ow
 ow
-ow
+mn
 ZB
 az
 Xz
@@ -25613,7 +26914,7 @@ Xr
 nA
 QO
 XG
-ow
+vM
 ow
 gS
 MC
@@ -25625,8 +26926,8 @@ wZ
 XG
 XG
 XG
-ow
-ow
+XG
+XG
 tB
 vR
 XG
@@ -25652,49 +26953,49 @@ Ko
 Ko
 Ko
 Ko
+Nc
+LK
+LK
+LK
+jx
 Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Ko
+Xy
 LK
 LK
 LK
 LK
+LK
+jx
+Ko
+Ko
+Ko
+Ko
+Ko
 nN
 Ko
 Ko
 Ko
+IK
+IK
+IK
 Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-Ko
-nN
-pt
-pt
-pt
-Zu
-Zu
-Zu
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+Qj
+Qj
+Qj
+ei
+ei
+ei
 pR
 pR
 pR
@@ -25748,7 +27049,7 @@ Ap
 Ap
 Ap
 Ap
-Ap
+Lo
 Ap
 Ap
 Ap
@@ -25757,14 +27058,14 @@ pv
 XG
 ow
 ow
-ow
+XG
 aF
 Ps
 iY
 CF
 XG
 XG
-XG
+eP
 ow
 Vi
 fm
@@ -25777,11 +27078,11 @@ XG
 XG
 XG
 XG
-ow
-ow
 XG
 XG
-Ax
+XG
+XG
+XG
 XG
 XG
 XG
@@ -25813,6 +27114,11 @@ nN
 nN
 nN
 nN
+Ko
+Ko
+nN
+nN
+nN
 nN
 nN
 nN
@@ -25839,14 +27145,9 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
 pR
 pR
 pR
@@ -25907,14 +27208,14 @@ Ap
 pv
 pv
 XG
+hK
+ow
 XG
-ow
-ow
 xz
 zg
 zg
 XG
-XG
+eP
 ow
 ow
 Vi
@@ -25927,12 +27228,12 @@ XG
 XG
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
+XG
+XG
+XG
+XG
+XG
+XG
 XG
 XG
 pt
@@ -25973,6 +27274,11 @@ pt
 pt
 pt
 pt
+zM
+pt
+zM
+pt
+zM
 pt
 pt
 pt
@@ -25992,15 +27298,10 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
 pR
 pR
 pR
@@ -26061,11 +27362,11 @@ pv
 XG
 XG
 ow
-ow
+XG
 jo
 XG
-XG
-ow
+eP
+MZ
 ow
 Vi
 ow
@@ -26078,16 +27379,31 @@ vR
 XG
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-Vi
-ow
-SP
+XG
+XG
+XG
+XG
+XG
+XG
+XG
+XG
+XG
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+Wn
+cT
+ei
+ei
+ei
 pt
 pt
 pt
@@ -26100,39 +27416,24 @@ pt
 pt
 pt
 pt
+Rw
+pt
+Rw
 pt
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+Wn
+Wn
+HR
+Wn
+dT
+dT
+zM
+zM
+dT
+dT
+zM
+dT
+dT
 pt
 pt
 pt
@@ -26146,13 +27447,13 @@ Zu
 pt
 pt
 pt
+zv
 pt
 pt
 pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
 pR
 pR
 pR
@@ -26212,10 +27513,10 @@ pv
 pv
 XG
 XG
-XG
+hK
 ow
 ow
-XG
+ow
 ow
 ow
 ow
@@ -26230,60 +27531,60 @@ Zd
 XG
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-Vi
-ow
-SP
-SP
-SP
-SP
+XG
+XG
+XG
+XG
+XG
+XG
+XG
+XG
+ot
+dT
+dT
+dT
+cT
+cT
+cT
+cT
+cT
+cT
+ei
+cT
+ei
+ei
+VM
+VM
+ei
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
+VM
+dT
+dT
+dT
+RT
+RT
+Rw
+RX
+RT
+Rw
+Rw
+Wn
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
 pt
 pt
 Gv
@@ -26303,8 +27604,8 @@ pt
 pt
 pt
 pt
-pt
-pt
+ei
+ei
 pR
 pR
 pR
@@ -26366,7 +27667,7 @@ XG
 XG
 XG
 XG
-XG
+hK
 ow
 gH
 Pa
@@ -26382,71 +27683,71 @@ Zd
 XG
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-Vi
-ow
-SP
-SP
-SP
-SP
+XG
+XG
+XG
+XG
+XG
+ot
+ot
+ot
+qf
+ei
+ei
+dT
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+dT
+cT
+cT
+cT
+ei
+cT
+dT
 pt
 pt
 pt
 pt
 pt
+dT
+ei
+VM
+VM
+ei
+XI
+Gg
+dT
+XI
+VM
+ei
+XI
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+dT
+ei
+ei
+ei
+ei
+dT
+dT
+dT
+zM
+zM
+zM
 pt
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
 pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+wE
 pt
 pt
 pt
@@ -26534,56 +27835,23 @@ Zd
 XG
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-Vi
-ow
-SP
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-SP
-pt
-SP
+XG
+XG
+XG
+ot
+ot
+XG
+Bs
+qf
+qf
+VM
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-SP
 pt
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+VM
+dT
 pt
 pt
 pt
@@ -26593,6 +27861,39 @@ pt
 pt
 pt
 pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+pt
+ei
+ei
+ei
+ei
+ei
+pt
+ei
+ei
+ei
+ei
+dT
+dT
+dT
+zM
+HR
+zM
 pt
 Gv
 pt
@@ -26605,7 +27906,7 @@ pt
 pt
 pt
 pt
-pt
+zv
 pt
 pt
 pR
@@ -26671,7 +27972,7 @@ XG
 XG
 XG
 XG
-XG
+hK
 kV
 vR
 XG
@@ -26686,60 +27987,22 @@ XG
 XG
 XG
 XG
-ow
-ow
-ow
-Vi
-ow
-ow
-ow
-ow
-ow
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+ot
+XG
+ot
+ot
+qf
+qf
+XG
+XG
+qf
 pt
 pt
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-Wn
+ei
 pt
 pt
 pt
@@ -26754,8 +28017,46 @@ pt
 pt
 pt
 pt
+ei
 pt
 pt
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+dT
+dT
+dT
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+OY
 pt
 pt
 pt
@@ -26813,7 +28114,7 @@ Ap
 Ap
 Ap
 Ap
-Ap
+gP
 Ap
 Ap
 pv
@@ -26831,72 +28132,72 @@ XG
 tB
 vR
 XG
+vd
+XG
+XG
+XG
+ot
+ot
+XG
+ot
+ot
+ot
+Bs
 XG
 XG
 XG
 XG
-XG
-XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
+qf
 pt
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+pt
+pt
+ei
+ei
 pt
 pt
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
 pt
 pt
 pt
+ei
+pt
+pt
+pt
+pt
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+ei
+pt
+ei
+ei
+ei
 pt
 Gv
 pt
-pt
-pt
-pt
+dT
+dT
+dT
 Zu
 Zu
 Zu
@@ -26982,73 +28283,73 @@ XG
 XG
 XG
 XG
-Ax
+XG
+XG
+XG
+ot
+ot
+XG
+XG
+qf
+qf
+qf
+qf
 XG
 XG
 XG
 XG
 XG
-XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+qf
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+pt
+pt
+pt
+ei
+ei
+ei
+pt
+pt
+ei
+ei
+ei
+ei
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
 pt
 pt
 pt
+ei
+ei
+ei
+ei
+ei
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+dT
+dT
 Zu
 Zu
 Zu
@@ -27061,7 +28362,7 @@ pt
 pt
 pt
 pt
-pt
+OY
 pt
 pt
 pR
@@ -27131,75 +28432,75 @@ XG
 Zd
 XG
 XG
+vd
+XG
+ot
+ot
+ot
+XG
+XG
+XG
+Bs
+Bs
+ot
+ot
+qf
+qf
 XG
 XG
 XG
 XG
-XG
-XG
-XG
-XG
-XG
-XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+KC
+qf
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
 pt
-QI
+ei
+ei
+ei
+ei
+ei
+zM
+pt
+pt
+pt
+zM
+zM
+zM
+zM
+ei
+ei
+pt
+ei
+pt
+ei
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+KB
+pt
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
 pt
 pt
 pt
+pt
+ei
+ei
+ei
+ei
+pt
+dT
 pt
 Gv
 pt
@@ -27265,7 +28566,7 @@ Ap
 Ap
 Ap
 Ap
-Ap
+Lo
 Ap
 Ap
 Ap
@@ -27285,76 +28586,76 @@ XG
 XG
 XG
 XG
+ot
+ot
+ot
+ot
+Bs
+qf
+ot
+ot
+ot
+ot
+qf
+qf
+OS
+im
 XG
 XG
 XG
 XG
-XG
-XG
-XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
-FJ
-SP
-SP
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
 pt
 pt
 pt
 pt
 pt
 pt
+pt
+zM
+pt
+zM
+pt
+zM
+zM
+zM
+zM
+ei
+pt
+pt
+ei
+pt
+pt
+pt
+xg
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+Us
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+rW
+pt
+pt
+pt
+zM
+zM
+ei
 pt
 Zu
-Zu
-Um
-pt
+Un
+Rp
+dT
 pt
 pt
 pt
@@ -27434,79 +28735,79 @@ XG
 XG
 Zd
 XG
-XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
+RJ
 XG
 XG
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-ow
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
-FJ
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+ot
+ot
+ot
+qf
+qf
+qf
+XG
+XG
+XG
+XG
+qf
+qf
+XG
+XG
+XG
+XG
+XG
+sq
 pt
 pt
 pt
 pt
-Gv
 pt
 pt
-Zu
-Zu
-Zu
 pt
+zM
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+Qp
+pt
+pt
+xg
+pt
+pt
+zM
+zM
+io
+pt
+pt
+Un
+Un
+Un
+dT
 pt
 pt
 pt
@@ -27586,81 +28887,81 @@ XG
 XG
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-Zu
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
-FJ
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+pt
+pt
+ei
+ei
+ei
 pt
 pt
 pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-pt
+ei
+ei
 pt
 Zu
+pt
+ei
+ei
+ei
+pt
+pt
+zM
+pt
+pt
+pt
+zM
+pt
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+FP
+pt
+pt
+pt
+zM
+zM
+zM
+zM
+zM
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+zM
+zM
+pt
+pt
+pt
+pt
+dT
+dT
+dT
+Un
 pR
 pR
 pR
@@ -27738,81 +29039,81 @@ XG
 XG
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+pt
+dT
+dT
+dT
+ei
 pt
 pt
-SP
-SP
-SP
 pt
-SP
-pt
-pt
-Zu
-Zu
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+Rm
+ei
+ei
+ei
 pt
 pt
-SP
-SP
-SP
-SP
 pt
-SP
-SP
-SP
-SP
-SP
-SP
 pt
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
 pt
+pt
+ei
+ei
+ei
 pt
 pt
 pt
 Zu
 Zu
-Zu
-Zu
+pt
+pt
+zM
+zM
+zM
+ei
+ei
+ei
+pt
+Pw
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+vx
+zM
+zM
+zM
+zM
+pt
+Qp
+pt
+pt
+ei
+ei
+ei
 pt
 pt
 Zu
+Zu
+zM
+zM
+zM
+pt
+Zu
+Zu
+Zu
+Zu
+pt
+dT
+Un
 pR
 pR
 pR
@@ -27890,77 +29191,77 @@ XG
 XG
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+pt
+dT
+dT
+dT
+ei
 pt
 pt
 pt
 pt
-SP
+ei
+ei
+ei
 pt
-SP
-SP
 pt
+rD
+pt
+pt
+pt
+ei
+ei
+ei
+pt
+Ms
 Zu
+ei
+ei
+ei
 pt
-Zu
+zM
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-Zu
-vx
-pt
-Zu
-Zu
-Zu
-Zu
 pt
 pt
 pt
 Zu
 Zu
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
+Zu
+ei
+ei
+ei
+ei
 pt
 pt
 Zu
 Zu
+ei
+ei
+ei
+ei
+zM
+zM
+zM
+Wx
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+pt
+pt
 Zu
 Zu
+yO
+yO
+yO
 Zu
 Zu
-Zu
-Um
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
+ei
+ei
 Zu
 Zu
 pt
@@ -28043,35 +29344,35 @@ XG
 Zd
 pv
 Zu
-Zu
-Zu
-pt
-pt
-pt
-Zu
-pt
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-pt
-pt
+Un
+Un
+NZ
 pt
 pt
 Zu
 pt
 pt
 pt
+pt
+pt
+pt
 Zu
 Zu
-Zu
-Zu
+pt
 Wx
 pt
 pt
+Zu
+pt
+zM
+pt
+Zu
+ei
+ei
+ei
+pt
+zM
+zM
 pt
 pt
 pt
@@ -28079,40 +29380,40 @@ Zu
 Zu
 Zu
 pt
-pt
-pt
-pt
-pt
+ei
+ei
+ei
+ei
 Zu
 Zu
-Zu
-Zu
-pt
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
+kg
 Zu
 pt
 pt
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
+pt
+pt
+zM
+zM
+yO
 Zu
 Zu
 pt
 pt
+Zu
+ei
+ei
+ei
+Zu
+Zu
+Zu
+Zu
+dK
+yO
+vx
+ei
+ei
+ei
+ei
 pt
 pt
 pt
@@ -28185,52 +29486,52 @@ Ap
 pv
 pv
 pv
-pv
-XG
-XG
+Nk
+zE
+zE
 ow
-XG
+ow
+Mb
 pv
 pv
 pv
-pv
+qp
 Zu
 Zu
 Zu
+pt
+pt
+pt
+pt
+Ms
+pt
+UL
+Zu
+pt
+Zu
+Zu
+pt
+ei
+Zu
+pt
+Zu
+Zu
+Zu
+pt
+ZL
+ei
+ei
+ei
+yO
+ei
+ei
+ei
+ei
+pt
+pt
+pt
 jg
 pt
-pt
-pt
-pt
-pt
-pt
-Zu
-Zu
-pt
-Zu
-Zu
-pt
-pt
-Zu
-pt
-Zu
-Zu
-Zu
-pt
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-Zu
-pt
-pt
-pt
-pt
-pt
-Zu
-pt
 Zu
 pt
 pt
@@ -28243,9 +29544,9 @@ Zu
 Zu
 Zu
 Zu
-pt
-pt
-Zu
+zM
+zM
+yO
 Zu
 Zu
 Zu
@@ -28260,17 +29561,17 @@ pt
 pt
 pt
 pt
-pt
-pt
-pt
-SP
-SP
-PL
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
-pR
-pR
+pt
+pt
+dX
 pR
 pR
 pR
@@ -28337,20 +29638,20 @@ Ap
 pv
 pv
 pv
-pv
+bp
 ow
 Vi
 Vi
-pv
-XG
-XG
+Db
+nh
+eR
 Zd
 XG
 Zu
 pt
 pt
 pt
-Zu
+jg
 pt
 pt
 Zu
@@ -28358,74 +29659,74 @@ Zu
 pt
 pt
 pt
+ei
+ei
+ei
+Zu
 pt
 pt
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+ei
+pt
+pt
+Zu
+pt
+pt
+bz
+Zu
+Zu
+pt
+pt
+Zu
 pt
 Zu
 pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-Zu
-pt
-pt
 Zu
 Zu
 Zu
-pt
-pt
-Zu
-pt
-Zu
-pt
-pt
-pt
-pt
-Zu
-Zu
-Zu
-Zu
+yO
+zM
+zM
+Qp
 pt
 pt
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-vx
+of
 pt
 pt
 pt
 pt
 pt
-pt
-pt
-pt
-pt
-SP
-SP
-PL
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
+pt
+Ia
+Ia
+Ia
+iv
+Ia
 pR
 pR
 pR
@@ -28489,96 +29790,96 @@ Ap
 Ap
 Ap
 Ap
-pv
-XG
+bp
 ow
 ow
 ow
-Vi
 ow
+ow
+mn
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-Zu
 pt
-pt
-pt
-pt
+wF
 pt
 pt
 pt
 pt
 pt
 Zu
-SP
-SP
-SP
+pt
+pt
+pt
+pt
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+pt
+pt
+pt
+zM
+pt
+ei
+pt
+pt
+pt
+pt
+pt
+pt
+ei
 Zu
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
+Zu
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
 pt
 pt
 pt
+ei
+ei
+ei
+ei
+ei
 pt
-pt
-pt
-pt
-pt
-SP
-SP
-SP
-FJ
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-SP
-FJ
-Oy
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
+OP
+VQ
+IN
+IN
+IN
+jB
 pR
 pR
 pR
@@ -28641,96 +29942,96 @@ Ap
 Ap
 Ap
 Ap
-pv
+bp
 ow
 Vi
 ow
 om
 Vi
-ow
+mn
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+pt
+pt
+pt
+pt
+pt
+zM
+zM
+pt
+yO
+zM
+zM
+pt
+zM
+zM
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 Zu
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-pt
-SP
-SP
-SP
-Zu
-Zu
 pt
 Zu
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+ei
+vx
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+Zu
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-FJ
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
 pt
 pt
-SP
-PL
+HT
+pt
+pt
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
+wk
+iq
+UP
+UP
+UP
+Ej
 pR
 pR
 pR
@@ -28785,7 +30086,7 @@ fu
 Ap
 Ap
 Ap
-Ap
+gP
 Ap
 Ap
 Ap
@@ -28793,96 +30094,96 @@ Ap
 pv
 pv
 pv
-pv
-XG
-XG
+bp
+ow
+ow
 ow
 Vi
 ow
-XG
+mn
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-SP
-pt
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
-FJ
-FJ
-SP
-SP
+dT
+dT
 pt
 pt
 pt
+zM
+zM
 pt
-SP
-SP
-SP
-SP
+zM
+zM
+zM
+ei
+vx
+vx
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
 pt
+pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+Zu
+ei
+Zu
+Zu
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
 pt
 pt
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
 pt
 pt
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
 pR
-pR
-pR
-pR
-pR
-pR
-pR
+Ym
+FK
+UP
+UP
+UP
+Ej
 pR
 pR
 pR
@@ -28945,96 +30246,96 @@ Ap
 Ap
 pv
 pv
-pv
-pv
+bp
+Db
 ow
 ow
-XG
 ow
 ow
+mn
 Zd
 XG
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-FJ
+dT
+dT
 ei
-FJ
-FJ
-SP
-SP
+ei
+pt
+Wn
+cT
+ei
+ei
+ei
+ei
+ei
+vx
+vx
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+Zu
+Zu
+Zu
+Zu
+Zu
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pt
-SP
-SP
-SP
-SP
-SP
+ei
 pt
 pt
-SP
-SP
-SP
-SP
-SP
-SP
-PL
-PL
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
 pR
 pR
-pR
-pR
-pR
+FK
+UP
+UP
+UP
+Ej
 pR
 pR
 pR
@@ -29097,96 +30398,96 @@ Ap
 Ap
 Ap
 pv
-pv
-pv
-XG
+bp
+Db
+ow
 ow
 ow
 Vi
-ow
+mn
 Zd
 XG
-SP
-SP
-SP
-SP
 pt
 pt
+cT
+ei
 pt
-SP
-SP
-SP
-SP
-pt
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-FJ
-FJ
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-SP
-pt
-SP
-SP
-SP
-SP
-SP
-pt
-pt
-SP
-SP
-SP
-SP
-SP
-SP
-PL
-PL
+Wn
+cT
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
 pR
 pR
-pR
-pR
-pR
+FB
+wO
+hG
+hG
+uX
 pR
 pR
 pR
@@ -29258,25 +30559,6 @@ Oy
 pR
 aI
 pR
-PL
-PL
-PL
-PL
-pR
-pR
-pR
-PL
-PL
-PL
-PL
-pR
-pR
-pR
-PL
-PL
-PL
-PL
-PL
 pR
 pR
 pR
@@ -29296,43 +30578,62 @@ pR
 pR
 pR
 pR
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
 pR
 pR
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
-PL
 pR
-PL
-PL
-SP
-SP
-SP
-pt
-pt
-pt
-pt
-pt
-pt
-SP
-SP
-SP
-SP
-pt
-pt
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+pR
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
+ei
 pR
 pR
 pR
