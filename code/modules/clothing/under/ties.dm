@@ -544,7 +544,7 @@
 	return ..()
 
 /obj/item/clothing/accessory/storage/clicked(mob/user, list/mods)
-	if(mods["alt"] && !isnull(hold) && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
+	if(mods[ALT_CLICK] && !isnull(hold) && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
 		return
 	. = ..()
 
@@ -836,7 +836,7 @@
 	hold = /obj/item/storage/internal/accessory/knifeharness
 
 /obj/item/clothing/accessory/storage/knifeharness/attack_hand(mob/user, mods)
-	if(!mods || !mods["alt"] || !length(hold.contents))
+	if(!mods || !mods[ALT_CLICK] || !length(hold.contents))
 		return ..()
 
 	hold.contents[length(contents)].attack_hand(user, mods)
@@ -964,7 +964,7 @@
 /obj/item/clothing/accessory/storage/holster/attack_hand(mob/user, mods)
 	var/obj/item/storage/internal/accessory/holster/H = hold
 	if(H.current_gun && ishuman(user) && (loc == user || has_suit))
-		if(mods && mods["alt"] && length(H.contents) > 1) //Withdraw the most recently inserted magazine, if possible.
+		if(mods && mods[ALT_CLICK] && length(H.contents) > 1) //Withdraw the most recently inserted magazine, if possible.
 			var/obj/item/I = H.contents[length(H.contents)]
 			if(isgun(I))
 				I = H.contents[length(H.contents) - 1]
@@ -1339,10 +1339,16 @@
 	item_state = "medic"
 
 /obj/item/clothing/accessory/paint/uaflag
-	name = "cross armor paint"
+	name = "UA flag armor paint"
 	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
 	icon_state = "uaflag"
 	item_state = "uaflag"
+
+/obj/item/clothing/accessory/paint/usflag
+	name = "US flag armor paint"
+	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
+	icon_state = "usflag"
+	item_state = "usflag"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"

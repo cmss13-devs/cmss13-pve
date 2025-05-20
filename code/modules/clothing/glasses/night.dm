@@ -113,11 +113,6 @@
 	. = ..()
 	camera = new /obj/structure/machinery/camera/overwatch(src)
 
-/obj/item/clothing/glasses/night/m56_goggles/equipped(mob/living/carbon/human/mob, slot)
-	if(camera)
-		camera.c_tag = mob.name
-	..()
-
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
 	QDEL_NULL(camera)
 	linked_smartgun = null
@@ -141,6 +136,8 @@
 /obj/item/clothing/glasses/night/m56_goggles/equipped(mob/user, slot)
 	if(slot != SLOT_EYES)
 		disable_far_sight(user)
+	if(camera)
+		camera.c_tag = user.name
 	return ..()
 
 /obj/item/clothing/glasses/night/m56_goggles/dropped(mob/living/carbon/human/user)
