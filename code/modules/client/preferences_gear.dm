@@ -1478,3 +1478,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
 
+/datum/gear/misc/can_opener
+	display_name = "Can opener"
+	path = /obj/item/tool/kitchen/can_opener
+	cost = 1
+
+/datum/gear/misc/can_opener/compact
+	display_name = "Compact can opener"
+	path = /obj/item/tool/kitchen/can_opener/compact
+	cost = 2
