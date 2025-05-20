@@ -28,16 +28,16 @@
 /datum/ammo/bullet/shrapnel/landmine
 	name = "landmine shrapnel"
 	icon_state = "buckshot"
-	accurate_range_min = 4
+	accurate_range_min = 0
 	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
 
 	accuracy = HIT_ACCURACY_TIER_3
-	accurate_range = 32
+	accurate_range = 3
 	max_range = 6
 	damage = 30
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = -ARMOR_PENETRATION_TIER_3
+	penetration = -ARMOR_PENETRATION_TIER_1
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 5
 
@@ -53,7 +53,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 2
-	max_range = 7
+	max_range = 5
 	damage = 20
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
