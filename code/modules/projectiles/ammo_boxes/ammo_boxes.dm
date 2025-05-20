@@ -358,7 +358,7 @@
 			to_chat(user, SPAN_WARNING("\The [src] must be on the ground to be used."))
 			return
 		if(AM.flags_magazine & AMMUNITION_REFILLABLE)
-			if(default_ammo != AM.default_ammo)
+			if(default_ammo != AM.default_ammo && AM.current_rounds)
 				to_chat(user, SPAN_WARNING("Those aren't the same rounds. Better not mix them up."))
 				return
 			if(caliber != AM.caliber)
@@ -380,6 +380,7 @@
 					transferable = min(AM.current_rounds, max_bullet_amount - bullet_amount)
 				else
 					transferable = min(bullet_amount, AM.max_rounds - AM.current_rounds)
+					AM.default_ammo = default_ammo
 				if(transferable < 1)
 					to_chat(user, SPAN_NOTICE("You cannot transfer any more rounds."))
 
