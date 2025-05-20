@@ -597,6 +597,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -710,6 +711,18 @@
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/tool/wirecutters(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+
+/obj/item/clothing/accessory/storage/tool_webbing/tactical
+	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+
+/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
@@ -1371,6 +1384,7 @@
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 //Partial Pre-load For Props
@@ -1405,6 +1419,7 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 //Pre-load For Army Props
