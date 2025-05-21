@@ -54,7 +54,7 @@
 			else if(isobj(target))
 				var/obj/obj_target = target
 				obj_target.update_health(250)
-		new /obj/effect/temp_visual/heavyimpact(strafed)
+		new /obj/effect/temp_visual/heavyimpact_cas(strafed)
 
 	if(length(strafelist))
 		addtimer(CALLBACK(src, PROC_REF(strafe_turfs), strafelist), 0.2 SECONDS)

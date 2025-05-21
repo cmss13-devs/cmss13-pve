@@ -192,14 +192,14 @@
 /obj/effect/temp_visual/dropship_hover/krokodil
 	icon_state = "krokodil"
 
-/obj/effect/temp_visual/heavyimpact
+/obj/effect/temp_visual/heavyimpact_cas
 	name = "heavy impact"
 	icon = 'icons/effects/heavyimpact.dmi'
 	icon_state = ""
 	duration = 13
 	indestructible = TRUE
 
-/obj/effect/temp_visual/heavyimpact/Initialize(mapload)
+/obj/effect/temp_visual/heavyimpact_cas/Initialize(mapload)
 	. = ..()
 	flick("heavyimpact", src)
 
