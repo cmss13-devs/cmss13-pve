@@ -18,7 +18,7 @@
 /obj/item/mre_food_packet/entree/hdr/two
 	food_list = list(
 		/obj/item/reagent_container/food/snacks/mre_food/hdr/entree/yellowrice,
-		/obj/item/reagent_container/food/snacks/mre_food/hdr/entree/yellowrice,
+		/obj/item/reagent_container/food/snacks/mre_food/hdr/entree/herbrice,
 	)
 
 /obj/item/reagent_container/food/snacks/mre_food/hdr
