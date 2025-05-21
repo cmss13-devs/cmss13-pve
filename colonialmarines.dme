@@ -1498,6 +1498,7 @@
 #include "code\modules\admin\game_master\fire_support\fire_support_toggles.dm"
 #include "code\modules\admin\game_master\fire_support\set_cooldown.dm"
 #include "code\modules\admin\game_master\fire_support\set_fire_support_points.dm"
+#include "code\modules\admin\game_master\fire_support\toggle_portrait.dm"
 #include "code\modules\admin\game_master\game_master_submenu\ambush.dm"
 #include "code\modules\admin\game_master\game_master_submenu\infest.dm"
 #include "code\modules\admin\game_master\game_master_submenu\tunnels.dm"
