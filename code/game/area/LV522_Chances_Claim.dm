@@ -511,3 +511,25 @@
 	name = "Chances Claim - Colony Sublevel"
 	icon_state = "red"
 	requires_power = FALSE
+
+//Elevators 
+/area/lv522/elevator
+	name = "\improper Elevator shuttle"
+	icon_state = "red"
+	unlimited_power = TRUE
+	requires_power = FALSE
+
+/area/lv522/elevator/one
+	name = "\improper Lukes Landing"
+//
+/area/lv522/elevator/two
+	name = "\improper Chances Claim 1"
+//
+/area/lv522/elevator/three
+	name = "\improper Chances Claim 2"
+//
+/area/lv522/elevator/four
+	name = "\improper Reactor 1"
+//
+/area/lv522/elevator/five
+	name = "\improper Reactor 2"
