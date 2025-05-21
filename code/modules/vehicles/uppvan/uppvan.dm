@@ -545,7 +545,7 @@
 
 /obj/vehicle/multitile/uppvan/logistics
 	name = "Kheshig-1M-logistics"
-	desc = "The Kheshig-1M is a result of a modernization program to try and make a common heavy utility vehicle for the Union. Lightly armored and relatively compact, most variants are unarmed, The orange stripe across the side marks this vehicle as a logistics transporter."
+	desc = "The Kheshig-1M is a result of a modernization program to try and make a common heavy utility vehicle for the Union. Lightly armored and relatively compact, most variants are unarmed, The orange stripe across the side marks this vehicle as a logistics transport."
 	layer = ABOVE_XENO_LAYER
 
 	icon = 'icons/obj/vehicles/uppvan_logistics.dmi'
@@ -589,7 +589,7 @@
 // UPP Van prisoner
 
 /obj/vehicle/multitile/uppvan/prisoner
-	name = "Kheshig-1M-prisoner"
+	name = "Kheshig-1M-Prisoner"
 	desc = "The Kheshig-1M is a result of a modernization program to try and make a common heavy utility vehicle for the Union. Lightly armored and relatively compact, most variants are unarmed, The red stripe across the side marks this vehicle as a prisoner transport."
 	layer = ABOVE_XENO_LAYER
 
