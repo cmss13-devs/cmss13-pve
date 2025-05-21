@@ -58,6 +58,26 @@
 	name = "Van"
 	interior_id = "van"
 
+/datum/map_template/interior/uppvan
+	name = "UPP Van"
+	interior_id = "uppvan"
+
+/datum/map_template/interior/uppvan/medical
+	name = "UPP Van Medical"
+	interior_id = "uppvan_medical"
+
+/datum/map_template/interior/uppvan/logistics
+	name = "UPP Van Supply"
+	interior_id = "uppvan_logistics"
+
+/datum/map_template/interior/uppvan/prisoner
+	name = "UPP Van Prisoner"
+	interior_id = "uppvan_prisoner"
+
+/datum/map_template/interior/uppvant
+	name = "UPP Van Turret"
+	interior_id = "uppvant"
+
 /datum/map_template/interior/box_van
 	name = "Box Van"
 	interior_id = "box_van"

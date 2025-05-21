@@ -68,3 +68,23 @@
 /area/interior/vehicle/upptank
 	name = "\improper UPP tank interior"
 	icon_state = "upp_tank"
+
+/area/interior/vehicle/uppvan
+	name = "\improper UPP van interior"
+	icon_state = "upp_van"
+
+/area/interior/vehicle/uppvant
+	name = "\improper UPP van turret interior"
+	icon_state = "upp_vant"
+
+/area/interior/vehicle/uppvan/medical
+	name = "\improper UPP van medical interior"
+	icon_state = "upp_van_medical"
+
+/area/interior/vehicle/uppvan/logistics
+	name = "\improper UPP van logistics interior"
+	icon_state = "upp_van_logistics"
+
+/area/interior/vehicle/uppvan/prisoner
+	name = "\improper UPP van prisoner interior"
+	icon_state = "upp_van_prisoner"

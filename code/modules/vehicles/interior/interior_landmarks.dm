@@ -361,3 +361,26 @@
 	V.update_icon()
 
 	qdel(src)
+
+// UPP VAN Gunner without skill
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van
+	name = "armor gunner's seat spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "armor_chair"
+	color = "yellow"
+
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/van_gunner/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+
+	qdel(src)

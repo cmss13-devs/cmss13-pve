@@ -161,6 +161,11 @@
 
 	var/has_tray = TRUE
 
+/obj/structure/vehicle_locker/uppvan
+	name = "storage ammunition"
+	icon = 'icons/obj/vehicles/interiors/uppvan.dmi'
+	icon_state = "small_storage"
+
 /obj/structure/vehicle_locker/med/on_pocket_open(first_open)
 	if(first_open)
 		playsound(src.loc, 'sound/handling/hinge_squeak1.ogg', 25, TRUE, 3)
