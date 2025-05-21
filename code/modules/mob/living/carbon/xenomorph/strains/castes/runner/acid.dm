@@ -113,6 +113,12 @@
 	var/image/holder = bound_xeno.hud_list[PLASMA_HUD]
 	holder.overlays.Cut()
 
+	var/datum/effect_system/smoke_spread/xeno_acid/spicy_gas = new /datum/effect_system/smoke_spread/xeno_acid(bound_xeno)
+	var/datum/cause_data/cause_data = create_cause_data("acider kamikaze", bound_xeno)
+	spicy_gas.set_up(2, 0, get_turf(bound_xeno), null, 6, new_cause_data = cause_data)
+	spicy_gas.start()
+	playsound(bound_xeno,"acid_sizzle", 50, 1)
+
 /datum/behavior_delegate/runner_acider/proc/do_caboom()
 	if(!bound_xeno)
 		return
