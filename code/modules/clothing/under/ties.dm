@@ -174,6 +174,7 @@
 	var/recipient_rank
 	var/medal_citation
 	worn_accessory_slot = ACCESSORY_SLOT_MEDAL
+	worn_accessory_limit = 10
 	high_visibility = TRUE
 	jumpsuit_hide_states = UNIFORM_JACKET_REMOVED
 
@@ -404,6 +405,7 @@
 	icon_state = "uscmpatch"
 	worn_accessory_slot = ACCESSORY_SLOT_PATCH
 	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+	worn_accessory_limit = 2
 
 /obj/item/clothing/accessory/patch/falcon
 	name = "USCM Falling Falcons patch"

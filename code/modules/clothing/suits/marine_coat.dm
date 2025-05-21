@@ -40,7 +40,7 @@
 		/obj/item/tool/pen,
 		/obj/item/storage/large_holster/machete,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_MASK, ACCESSORY_SLOT_TIE, ACCESSORY_SLOT_PATCH)
 
 	//Buttons
 	var/has_buttons = FALSE

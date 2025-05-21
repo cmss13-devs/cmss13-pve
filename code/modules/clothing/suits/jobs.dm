@@ -463,7 +463,7 @@
 		/obj/item/device/motiondetector,
 	)
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
+	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_MASK, ACCESSORY_SLOT_TIE, ACCESSORY_SLOT_PATCH)
 	var/zip_unzip = FALSE
 	actions_types = list(/datum/action/item_action/toggle)
 
