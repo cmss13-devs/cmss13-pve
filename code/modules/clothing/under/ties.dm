@@ -1046,11 +1046,11 @@
 	var/drawSound = 'sound/handling/holsterout.ogg'
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
-	/obj/item/weapon/knife/marine/bowie,
-	/obj/item/weapon/knife/marine/bowie/kukri,
-	/obj/item/weapon/sword/machete,
-	/obj/item/weapon/sword/machete/arnold,
-	/obj/item/weapon/sword/machete/arnold/weak,
+		/obj/item/weapon/knife/marine/bowie,
+		/obj/item/weapon/knife/marine/bowie/kukri,
+		/obj/item/weapon/sword/machete,
+		/obj/item/weapon/sword/machete/arnold,
+		/obj/item/weapon/sword/machete/arnold/weak,
 	)
 
 /obj/item/storage/internal/accessory/sheath/on_stored_atom_del(atom/movable/AM)
