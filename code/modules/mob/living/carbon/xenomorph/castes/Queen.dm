@@ -17,8 +17,6 @@
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_QUEEN
 
-	acid_blood_damage = 100 /// Strong acid blood. Her final dance.
-
 	build_time_mult = BUILD_TIME_MULT_BUILDER
 
 	is_intelligent = 1
@@ -275,6 +273,8 @@
 	small_explosives_stun = FALSE
 	pull_speed = 3 //screech/neurodragging is cancer, at the very absolute least get some runner to do it for teamwork
 	organ_value = 8000 // queen is expensive
+
+	acid_blood_damage = 60 /// Strong acid blood. Don't get too close!
 
 	icon_xeno = 'icons/mob/xenos/queen.dmi'
 	icon_xenonid = 'icons/mob/xenonids/queen.dmi'
