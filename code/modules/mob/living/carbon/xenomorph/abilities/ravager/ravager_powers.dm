@@ -176,7 +176,7 @@
 				blocked = TRUE
 				break
 
-		for(var/obj/vehicle/combat_mech/mech in temp)
+		for(var/obj/vehicle/rx47_mech/mech in temp)
 			blocked = TRUE
 			break
 
