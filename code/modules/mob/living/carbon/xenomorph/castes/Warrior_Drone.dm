@@ -45,7 +45,7 @@
 	claw_type = CLAW_TYPE_SHARP
 	pull_multiplier = 0.2 /// Pretty much no pull delay, for those quick drags.
 
-	acid_blood_damage = 30 /// Strong acid blood. But slightly weaker than Soldiers
+	acid_blood_damage = 30 /// Better than drone worse than soldier
 	acid_blood_spatter = FALSE /// We dont want that for these guys
 
 	icon_xeno = 'icons/mob/xenos/warriordrone.dmi'
