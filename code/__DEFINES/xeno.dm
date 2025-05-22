@@ -322,6 +322,7 @@
 #define XENO_SPEED_TIER_5 -0.4
 #define XENO_SPEED_TIER_6 -0.6
 #define XENO_SPEED_TIER_7 -0.8
+#define XENO_SPEED_TIER_7_5 -0.9
 #define XENO_SPEED_HELLHOUND -1
 #define XENO_SPEED_TIER_8 -1.4
 #define XENO_SPEED_TIER_9 -1.6
@@ -689,9 +690,10 @@
 #define XENO_CASTE_CARRIER    "Carrier"
 #define XENO_CASTE_HIVELORD   "Hivelord"
 #define XENO_CASTE_LURKER "Lurker"
-#define XENO_CASTE_WARRIOR    "Warrior"
+#define XENO_CASTE_WARRIOR    "Veteran Warrior" //PVP Warrior
 #define XENO_CASTE_SOLDIER    "Soldier"
 #define XENO_CASTE_SPITTER    "Spitter"
+#define XENO_CASTE_WARRIOR_DRONE "Warrior" //PVE 'Warrior Drone'
 #define XENO_T2_CASTES    list(XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD, XENO_CASTE_LURKER, XENO_CASTE_WARRIOR, XENO_CASTE_SPITTER, XENO_CASTE_SOLDIER)
 //t3
 #define XENO_CASTE_BOILER "Boiler"
