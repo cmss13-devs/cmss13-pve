@@ -18819,23 +18819,20 @@
 /obj/item/clothing/accessory/medal/silver/valor{
 	pixel_x = -8;
 	pixel_y = 1;
-	anchored = 1;
 	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
 	},
 /obj/item/prop{
-	name = "battered M10 pattern ballistic helmet";
 	icon = 'icons/obj/items/clothing/cm_hats.dmi';
 	icon_state = "helmet";
 	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
 	pixel_y = 6;
 	pixel_x = 3;
-	anchored = 1
+	name = "\improper damaged M10 pattern ballistic helmet"
 	},
 /obj/item/card/id/dogtag{
 	layer = 3.001;
 	pixel_x = 2;
-	pixel_y = 0;
-	anchored = 1
+	pixel_y = 0
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
