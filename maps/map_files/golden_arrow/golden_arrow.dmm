@@ -191,6 +191,40 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"aau" = (
+/obj/item/trash/snack_bowl{
+	pixel_x = -7;
+	pixel_y = 14;
+	name = "water bowl";
+	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/supply)
+"aav" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/medal/silver/valor{
+	pixel_x = -8;
+	pixel_y = 1;
+	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon_state = "helmet";
+	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
+	pixel_y = 6;
+	pixel_x = 3;
+	name = "\improper damaged M10 pattern ballistic helmet"
+	},
+/obj/item/card/id/dogtag{
+	layer = 3.001;
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -18811,31 +18845,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
-"oWc" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/clothing/accessory/medal/silver/valor{
-	pixel_x = -8;
-	pixel_y = 1;
-	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
-	},
-/obj/item/prop{
-	icon = 'icons/obj/items/clothing/cm_hats.dmi';
-	icon_state = "helmet";
-	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
-	pixel_y = 6;
-	pixel_x = 3;
-	name = "\improper damaged M10 pattern ballistic helmet"
-	},
-/obj/item/card/id/dogtag{
-	layer = 3.001;
-	pixel_x = 2;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer/cargo_arrow/north,
-/area/golden_arrow/supply)
 "oWU" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -20692,15 +20701,6 @@
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
-"wCR" = (
-/obj/item/trash/snack_bowl{
-	pixel_x = -7;
-	pixel_y = 14;
-	name = "water bowl";
-	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
-	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/supply)
 "wDL" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -31041,7 +31041,7 @@ aEG
 aEG
 vYW
 cqk
-oWc
+aav
 aAu
 afz
 aAu
@@ -31219,7 +31219,7 @@ aEG
 vYW
 cqk
 vve
-wCR
+aau
 afz
 aAu
 aPB
