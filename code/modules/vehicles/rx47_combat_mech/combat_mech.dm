@@ -11,8 +11,8 @@
 	light_range = 5
 	move_delay = 7
 	buckling_y = 17
-	health = 3000
-	maxhealth = 3000
+	health = 5000
+	maxhealth = 5000
 	pixel_x = -17
 	pixel_y = -2
 	var/mouse_pointer = 'icons/effects/mouse_pointer/mecha_mouse.dmi'
