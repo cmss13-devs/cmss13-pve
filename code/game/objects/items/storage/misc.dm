@@ -243,6 +243,26 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
+/obj/item/storage/box/loadout/bowie
+	name = "Bowie knife storage case"
+	desc = "A relatively large storage case containing a Bowie fighting knife and a fine leather sheath for it."
+	w_class = SIZE_MEDIUM
+	max_w_class = SIZE_LARGE	//So the sheath can fit
+	can_hold = list(/obj/item/weapon/knife/marine/bowie, /obj/item/clothing/accessory/storage/sheath)
+
+/obj/item/storage/box/loadout/bowie/fill_preset_inventory()
+	new /obj/item/clothing/accessory/storage/sheath(src)
+	new /obj/item/weapon/knife/marine/bowie(src)
+
+/obj/item/storage/box/loadout/bowie/kukri
+	name = "Kukri knife storage case"
+	desc = "A relatively large storage case containing a Kukri utility knife and a fine leather sheath for it."
+	can_hold = list(/obj/item/weapon/knife/marine/bowie/kukri, /obj/item/clothing/accessory/storage/sheath)
+
+/obj/item/storage/box/loadout/bowie/kukri/fill_preset_inventory()
+	new /obj/item/clothing/accessory/storage/sheath(src)
+	new /obj/item/weapon/knife/marine/bowie/kukri(src)
+
 /obj/item/storage/box/loadout/co2_knife
 	name = "M8 cartridge bayonet packaging"
 	desc = "Contains one M8 Cartridge Bayonet and two sister CO2 cartridges. Thanks for being a dedicated Boots magazine subscriber!"

@@ -1027,6 +1027,64 @@
 	icon_state = "holster_hip"
 	item_state = "holster_hip"
 
+//Knife sheath, for the really big kinds of knives you get in the loadout
+//Butchered holster code
+
+/obj/item/clothing/accessory/storage/sheath
+	name = "large knife sheath"
+	desc = "A well-made leather sheath, looks big enough to hold a proper knife in it, or even a machete at a push."
+	icon_state = "holster_knife"
+	high_visibility = TRUE
+	hold = /obj/item/storage/internal/accessory/sheath
+
+/obj/item/storage/internal/accessory/sheath
+	storage_slots = 1
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_LARGE
+	var/obj/item/weapon/current_blade
+	var/sheatheSound = 'sound/handling/holsterin.ogg'
+	var/drawSound = 'sound/handling/holsterout.ogg'
+	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
+	can_hold = list(
+	/obj/item/weapon/knife/marine/bowie,
+	/obj/item/weapon/knife/marine/bowie/kukri,
+	/obj/item/weapon/sword/machete,
+	/obj/item/weapon/sword/machete/arnold,
+	/obj/item/weapon/sword/machete/arnold/weak,
+	)
+
+/obj/item/storage/internal/accessory/sheath/on_stored_atom_del(atom/movable/AM)
+	if(AM == current_blade)
+		current_blade = null
+
+/obj/item/clothing/accessory/storage/sheath/attack_hand(mob/user, mods)
+	var/obj/item/storage/internal/accessory/sheath/S = hold
+	if(S.current_blade && ishuman(user) && (loc == user || has_suit))
+		S.current_blade.attack_hand(user)
+
+	..()
+
+/obj/item/storage/internal/accessory/sheath/can_be_inserted(obj/item/W, mob/user, stop_messages = FALSE)
+	if( ..() ) //If the parent did their thing, this should be fine. It pretty much handles all the checks.
+		if(isweapon(W))
+			if(current_blade)
+				if(!stop_messages)
+					to_chat(usr, SPAN_WARNING("[src] already holds \a [W]."))
+				return
+		return 1
+
+/obj/item/storage/internal/accessory/sheath/_item_insertion(obj/item/W)
+	if(isweapon(W))
+		current_blade = W //If there's no active gun, we want to make this our gun
+		playsound(src, sheatheSound, 15, TRUE)
+	. = ..()
+
+/obj/item/storage/internal/accessory/sheath/_item_removal(obj/item/W)
+	if(isweapon(W))
+		current_blade = null
+		playsound(src, drawSound, 15, TRUE)
+	. = ..()
+
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
 	Security agent - the user details can be imprinted on the badge with a Security-access ID card,
