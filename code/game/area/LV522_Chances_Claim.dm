@@ -518,6 +518,7 @@
 	icon_state = "red"
 	unlimited_power = TRUE
 	requires_power = FALSE
+	ceiling = CEILING_METAL
 
 /area/lv522/elevator/one
 	name = "\improper Lukes Landing"
