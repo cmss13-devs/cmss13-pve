@@ -91,7 +91,7 @@
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "personalcase"
 	w_class = SIZE_HUGE
-	storage_slots = 3
+	storage_slots = 4
 	slowdown = 1
 	can_hold = list()
 	foldable = FALSE

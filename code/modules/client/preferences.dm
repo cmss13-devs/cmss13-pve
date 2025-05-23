@@ -1694,7 +1694,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 						f_style = new_f_style
 
 				if("personalweapon")
-					var/new_weapon = tgui_input_list(user, "Choose your character's personal weapon:", "Character Preference", GLOB.personal_weapons_list+"None")
+					var/new_weapon = tgui_input_list(user, "Choose your character's personal weapon:", "Character Preference (USCM Only)", GLOB.personal_weapons_list+"None")
 					if(new_weapon)
 						personal_weapon = new_weapon
 					ShowChoices(user)
