@@ -5,7 +5,7 @@
 	name = "PMC Rifle Team"
 	desc = "A patrol group of 2 Standard PMCs."
 	ai_to_spawn = list(
-		/datum/equipment_preset/pmc/pmc_standard = 2,
+		/datum/equipment_preset/pmc/standard = 2,
 	)
 
 /datum/human_ai_squad_preset/pmc/gunteam
@@ -29,5 +29,5 @@
 	name = "PMC, Medical Element"
 	desc = "A PMC medical element with 2 medics."
 	ai_to_spawn = list(
-		/datum/equipment_preset/pmc/pmc_medic = 2,
+		/datum/equipment_preset/pmc/medic = 2,
 	)
