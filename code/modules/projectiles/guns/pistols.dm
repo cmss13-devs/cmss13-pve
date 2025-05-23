@@ -667,7 +667,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 
 /obj/item/weapon/gun/pistol/b92fs
 	name = "\improper Beretta 92FS M9 pistol"
-	desc = "Semi-automatic 9mm service pistol of the United States military with the exception of the United States Colonial Marine Corps. Also enjoys popularity in the civilian market among law enforcement and private security."
+	desc = "Semi-automatic 9mm service pistol of the United States Army. Also enjoys popularity in the civilian market among law enforcement and private security."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "b92fs"
 	item_state = "b92fs"
