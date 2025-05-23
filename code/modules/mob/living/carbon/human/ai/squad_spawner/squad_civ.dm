@@ -23,8 +23,7 @@
 	name = "Civilian Gathering (UPP)"
 	desc = "A small gathering of UPP colonists."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/colonist = 2,
-		/datum/equipment_preset/upp/admin = 1,
+		/datum/equipment_preset/upp/colonist = 3,
 	)
 
 /datum/human_ai_squad_preset/civ/gathering/twe
@@ -160,4 +159,38 @@
 	ai_to_spawn = list(
 		/datum/equipment_preset/colonist/cargo/japanese = 3,
 		/datum/equipment_preset/colonist/operations/japanese = 1,
+	)
+
+// Operations
+
+/datum/human_ai_squad_preset/civ/ops
+	name = "Civilian Operations Group"
+	desc = "A small group of English-speaking UA admin & operations workers."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/admin = 1,
+		/datum/equipment_preset/colonist/operations = 2,
+	)
+
+/datum/human_ai_squad_preset/civ/ops/latam
+	name = "Civilian Operations Group (LatAm)"
+	desc = "A small group of Spanish-speaking UA admin & operations workers."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/admin/spanish = 1,
+		/datum/equipment_preset/colonist/operations/spanish = 2,
+	)
+
+/datum/human_ai_squad_preset/civ/ops/upp
+	name = "Civilian Operations Group (UPP)"
+	desc = "A small group of UPP admin & operations workers."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/admin = 1,
+		/datum/equipment_preset/upp/operations = 2,
+	)
+
+/datum/human_ai_squad_preset/civ/ops/twe
+	name = "Civilian Operations Group (TWE)"
+	desc = "A small group of Japanese-speaking TWE admin & operations workers."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/admin/japanese = 1,
+		/datum/equipment_preset/colonist/operations/japanese = 2,
 	)
