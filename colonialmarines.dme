@@ -790,6 +790,7 @@
 #include "code\game\area\Corsat.dm"
 #include "code\game\area\DesertDam.dm"
 #include "code\game\area\golden_arrow.dm"
+#include "code\game\area\hms_brynhild.dm"
 #include "code\game\area\IceColony.dm"
 #include "code\game\area\kutjevo.dm"
 #include "code\game\area\lead_hawk.dm"
