@@ -138,6 +138,12 @@
 	icon = 'icons/obj/items/storage/mre.dmi'
 	icon_state = "mealpackempty"
 
+/obj/item/trash/hdr_mre
+	name = "\improper crumbled HDR"
+	desc = "Someone is going to live another day."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "hdr_mealpackempty"
+
 /obj/item/trash/waffles
 	name = "Waffles"
 	gender = PLURAL
