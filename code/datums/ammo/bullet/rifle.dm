@@ -39,6 +39,7 @@
 	holo_stacks = 15
 
 /datum/ammo/bullet/rifle/holo_target/tracer
+	name = "tracer holo-targeting 10x24 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -69,11 +70,13 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/ap/tracer
+	name = "tracer armor-piercing 10x24 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
 /datum/ammo/bullet/rifle/tracer
+	name = "tracer 10x24 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -128,6 +131,7 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/heap/tracer
+	name = "tracer high-explosive armor-piercing 10x24 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -175,6 +179,7 @@
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
 /datum/ammo/bullet/rifle/heavy/tracer
+	name = "tracer 10x28 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -186,6 +191,7 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 
 /datum/ammo/bullet/rifle/heavy/ap/tracer
+	name = "tracer armor-piercing 10x28 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -211,6 +217,7 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
 /datum/ammo/bullet/rifle/heavy/heap/tracer
+	name = "tracer high explosive armor-piercing 10x28 bullet"
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -492,6 +499,7 @@
 	penetration = ARMOR_PENETRATION_TIER_2
 
 /datum/ammo/bullet/rifle/ag80/tracer
+	name = "tracer 9.7x16 bullet"
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
@@ -502,6 +510,7 @@
 	penetration = ARMOR_PENETRATION_TIER_9
 
 /datum/ammo/bullet/rifle/ag80/ap/tracer
+	name = "tracer 9.7x16 bullet"
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
@@ -514,6 +523,7 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
 
 /datum/ammo/bullet/rifle/ag80/heap/tracer
+	name = "tracer high-explosive armor-piercing 9.7x16 bullet"
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
