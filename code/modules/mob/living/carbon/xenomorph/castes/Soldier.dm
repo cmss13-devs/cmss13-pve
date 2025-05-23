@@ -35,7 +35,7 @@
 
 	gib_chance = 100
 	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 0.2 /// Pretty much no pull delay, for those quick drags.
+	pull_multiplier = 0.6 /// Pretty much no pull delay, for those quick drags. EDIT - slight increase to reduce the Soldier "Dance"
 
 	acid_blood_damage = 35 /// Strong acid blood. Should be a define in the future.
 	acid_blood_spatter = TRUE /// Testing variable, means that their blood can melt objects in the environment. Primarily barricades.
@@ -57,7 +57,7 @@
 /// The maximum aggression it is possible to accumulate.
 #define AGGRESSION_MAXIMUM 100
 /// Aggression required to go full-on lethals instead of capture.
-#define AGGRESSION_ENABLE_LETHAL 50
+#define AGGRESSION_ENABLE_LETHAL 40
 /// If there is no hive to drag people to, this is the aggression the alien starts with.
 #define AGGRESSION_NO_HIVE AGGRESSION_ENABLE_LETHAL
 /// The cap on aggression increase when something significant happens, like taking damage.
@@ -66,9 +66,9 @@
 /// Threshold for lunging at a target. Low as the alien wants to do this early.
 #define AGGRESSION_LUNGE 10
 /// Threshold for throwing humans around.
-#define AGGRESSION_FLING 35
+#define AGGRESSION_FLING 70
 /// Threshold for stabbing them with the tail.
-#define AGGRESSION_TAIL_STAB 70
+#define AGGRESSION_TAIL_STAB 50
 /// Threshold for headbiting/instakilling a downed human.
 #define AGGRESSION_HEADBITE 90
 
@@ -189,9 +189,9 @@
 
 /datum/action/xeno_action/activable/tail_stab/soldier /// Specific to soldiers, so that not all xenos get it.
 	default_ai_action = TRUE
-	ai_prob_chance = 65 //So they are not spamming it quite as often.
+	ai_prob_chance = 50 //So they are not spamming it quite as often.
 	charge_time = null /// AI soldiers can just use this whenever instead of having to charge it up.
-	xeno_cooldown = 11 SECONDS
+	xeno_cooldown = 15 SECONDS
 
 /datum/action/xeno_action/activable/tail_stab/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
@@ -200,8 +200,8 @@
 
 /datum/action/xeno_action/activable/fling/soldier
 	default_ai_action = TRUE
-	ai_prob_chance = 70
-	xeno_cooldown = 8 SECONDS
+	ai_prob_chance = 35
+	xeno_cooldown = 10 SECONDS
 
 /datum/action/xeno_action/activable/fling/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// We have a home turf to fling to.
