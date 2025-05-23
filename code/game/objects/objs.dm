@@ -462,3 +462,12 @@
 /// override for subtypes that require extra behaviour when spawned from a vendor
 /obj/proc/post_vendor_spawn_hook(mob/living/carbon/human/user)
 	return
+
+/obj/lava_act()
+	if(indestructible)
+		return FALSE
+	if(QDELETED(src))
+		return FALSE
+	fire_act(LAVA_BURN_LEVEL)
+	health = max(0, health - 50)
+	return TRUE

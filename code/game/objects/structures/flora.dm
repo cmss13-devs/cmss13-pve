@@ -327,12 +327,17 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /obj/structure/flora/grass/tallgrass/Initialize()
 	. = ..()
-	update_icon()
+	var/static/list/connections = list(
+		COMSIG_ATOM_ENTERED = PROC_REF(on_cross),
+		COMSIG_TURF_ENTERED = PROC_REF(on_cross),
+	)
+	AddElement(/datum/element/connect_loc, connections)
+	AddComponent(/datum/component/submerge_modifier, 10)
 
-/obj/structure/flora/grass/tallgrass/update_icon()
-	..()
-	overlays.Cut()
-	overlays += image("icon"=src.icon,"icon_state"=overlay_type,"layer"=ABOVE_XENO_LAYER,"dir"=dir)
+/obj/structure/flora/grass/tallgrass/proc/on_cross(arrived)
+	if(isobserver(arrived))
+		return
+	Shake(3, 3, 5)
 
 // MAP VARIANTS //
 // PARENT FOR COLOR, CORNERS AND CENTERS, BASED ON DIRECTIONS //
@@ -346,7 +351,6 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /obj/structure/flora/grass/tallgrass/desert/corner
 	icon_state = "tallgrass_corner"
-	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
 //ICE COLONY - SOROKYNE//
@@ -357,7 +361,6 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /obj/structure/flora/grass/tallgrass/ice/corner
 	icon_state = "tallgrass_corner"
-	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
 //LV - JUNGLE MAPS//
@@ -370,7 +373,6 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 
 /obj/structure/flora/grass/tallgrass/jungle/corner
 	icon_state = "tallgrass_corner"
-	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
 //BUSHES
