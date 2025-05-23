@@ -578,8 +578,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/accessory/paint/heart
 
 /datum/gear/paint/uaflag
-	display_name = "M3 Pattern Flag Paint"
+	display_name = "M3 Pattern UA Flag Paint"
 	path = /obj/item/clothing/accessory/paint/uaflag
+
+/datum/gear/paint/usflag
+	display_name = "M3 Pattern US Flag Paint"
+	path = /obj/item/clothing/accessory/paint/usflag
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -726,7 +730,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/toy/film
 	display_name = "Camera film"
 	path = /obj/item/device/camera_film
-	cost = 1
+	cost = 0
 
 /datum/gear/toy/card
 	cost = 1
@@ -770,14 +774,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/d6
 	display_name = "Die, 6 sides"
+	cost = 1
 	path = /obj/item/toy/dice
 
 /datum/gear/toy/d20
 	display_name = "Die, 20 sides"
+	cost = 1
 	path = /obj/item/toy/dice/d20
 
 /datum/gear/toy/crayon
 	display_name = "Crayon"
+	cost = 1
 	path = /obj/item/toy/crayon/rainbow
 
 /datum/gear/toy/pride
@@ -1449,6 +1456,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo
+	cost = 1
 
 /datum/gear/misc/compass
 	display_name = "Compass"
@@ -1458,6 +1466,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/bug_spray
 	display_name = "Bug spray"
 	path = /obj/item/prop/helmetgarb/bug_spray
+	cost = 1
 
 /datum/gear/misc/straight_razor
 	display_name = "Cut-throat razor"
@@ -1469,3 +1478,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
 
+/datum/gear/misc/can_opener
+	display_name = "Can opener"
+	path = /obj/item/tool/kitchen/can_opener
+	cost = 1
+
+/datum/gear/misc/can_opener/compact
+	display_name = "Compact can opener"
+	path = /obj/item/tool/kitchen/can_opener/compact
+	cost = 2

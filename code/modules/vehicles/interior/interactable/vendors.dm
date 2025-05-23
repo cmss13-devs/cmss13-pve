@@ -141,7 +141,7 @@
 		. += SPAN_INFO("[SPAN_HELPFUL("CTRL + Click")] \the [src] to start re-stocking it with supplies near vendor.")
 
 /obj/structure/machinery/cm_vending/sorted/vehicle_supply/clicked(mob/user, list/mods)
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		initiate_autorestock(user)
@@ -282,8 +282,8 @@
 		list("Box Of M94 Marking Flare Packs", floor(scale * 2), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool", floor(scale * 2), /obj/item/tool/shovel/etool, VENDOR_ITEM_REGULAR),
 		list("M5 Bayonet", floor(scale * 5), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", 0, /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", floor(scale * 1), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", 0, /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", floor(scale * 1), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", floor(scale * 1), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
 		list("MB-6 Folding Barricades (x3)", 0, /obj/item/stack/folding_barricade/three, VENDOR_ITEM_REGULAR),
 		list("Motion Detector", 0, /obj/item/device/motiondetector, VENDOR_ITEM_REGULAR),
@@ -304,7 +304,7 @@
 		return FALSE
 
 	//storage items except few are exempted because checks would be huge and not worth it
-	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/m94) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
+	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/flare) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
 		if(user)
 			to_chat(user, SPAN_WARNING("Can't restock \the [item_to_stock]."))
 		return FALSE
@@ -433,8 +433,8 @@
 		list("MISCELLANEOUS", -1, null, null),
 		list("Box Of MREs", 0, /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
 		list("Box Of M94 Marking Flare Packs", 0, /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", 0, /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", 0, /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", 0, /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", 0, /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("Flashlights", 1, /obj/item/device/flashlight, VENDOR_ITEM_REGULAR),
 		list("MB-6 Folding Barricades (x3)", 0, /obj/item/stack/folding_barricade/three, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool", 0, /obj/item/tool/shovel/etool, VENDOR_ITEM_REGULAR),
