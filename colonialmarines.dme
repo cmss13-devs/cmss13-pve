@@ -1253,6 +1253,7 @@
 #include "code\game\objects\items\reagent_containers\food\drinks\jar.dm"
 #include "code\game\objects\items\reagent_containers\food\mre_food\clf.dm"
 #include "code\game\objects\items\reagent_containers\food\mre_food\core_food.dm"
+#include "code\game\objects\items\reagent_containers\food\mre_food\hdr.dm"
 #include "code\game\objects\items\reagent_containers\food\mre_food\mercenary.dm"
 #include "code\game\objects\items\reagent_containers\food\mre_food\twe.dm"
 #include "code\game\objects\items\reagent_containers\food\mre_food\upp.dm"
