@@ -72,6 +72,9 @@
 	icon_state = "marine_brown"
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
+/obj/item/clothing/shoes/marine/upp/guard/knife
+	spawn_item_type = /obj/item/weapon/knife/marine/chinese
+
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
 	desc = "M2 MOPP boots excel at keeping viscera or other biological contaminants away from your feet."
