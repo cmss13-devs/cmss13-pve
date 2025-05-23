@@ -44,7 +44,6 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
 	var/buttoned = TRUE
 
 /obj/item/clothing/suit/storage/labcoat/verb/toggle()
