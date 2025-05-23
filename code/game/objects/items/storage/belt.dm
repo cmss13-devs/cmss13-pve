@@ -2195,15 +2195,11 @@
 
 /obj/item/storage/belt/gun/l905
 	name = "\improper L165 gunbelt"
-	desc = "Finely-tooled leather, an L165 pistol, and six magazines. More than enough for a Royal Marine Commando."
+	desc = "A belt of finely-tooled leather, with holster & pouches for most kinds of sidearms and corresponding ammo."
 	icon_state = "rmc_pistol"
 	item_state = "rmc_pistol"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	storage_slots = 7
-	can_hold = list(
-		/obj/item/weapon/gun/pistol/vp78,
-		/obj/item/ammo_magazine/pistol/vp78,
-	)
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(

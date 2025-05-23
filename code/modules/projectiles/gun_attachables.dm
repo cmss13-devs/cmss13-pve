@@ -1194,6 +1194,7 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "sniperscope_a"
 	desc = "Sight Unit, Marine Marksman Rifle. A 4x power optic commonly fielded on the Royal Marines L64A3 DMRs."
 	dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
+	zoom_offset = 8
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
