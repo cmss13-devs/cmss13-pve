@@ -109,3 +109,71 @@
 			take_damage( I.force * I.demolition_mod * 1.5 )
 		if("brute")
 			take_damage( I.force * I.demolition_mod * 0.75 )
+
+// Prop flipped tables
+
+/obj/structure/barricade/table
+	name = "table barricade"
+	desc = "A square metal surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
+	icon = 'icons/obj/structures/barricades.dmi'
+	icon_state = "metalflip"
+	health = 100
+	maxhealth = 100
+	can_change_dmg_state = 0
+	can_wire = FALSE
+	stack_type = /obj/item/stack/sheet/metal
+	stack_amount = 1 
+	destroyed_stack_amount = 1
+	debris = list(/obj/item/stack/sheet/metal)
+	layer = OBJ_LAYER
+	barricade_type = "metalflip"
+	barricade_hitsound = 'sound/effects/metalhit.ogg'
+
+/obj/structure/barricade/table/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH) && !(user.a_intent == INTENT_HELP))
+		user.visible_message(SPAN_NOTICE("[user] starts disassembling [src]."),
+		SPAN_NOTICE("You start disassembling [src]."))
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+		if(do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			user.visible_message(SPAN_NOTICE("[user] disassembles [src]."),
+			SPAN_NOTICE("You disassemble [src]."))
+			deconstruct(TRUE)
+		return
+
+/obj/structure/barricade/table/wood
+	name = "wooden table barricade"
+	desc = "A square wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
+	icon_state = "woodflip"
+	barricade_hitsound = 'sound/effects/woodhit.ogg'
+	barricade_type = "woodflip"
+	repair_materials = list("wood" = 1)
+	stack_type = /obj/item/stack/sheet/wood
+	debris = list(/obj/item/stack/sheet/wood)
+
+/obj/structure/barricade/table/wood/poor
+	name = "poor wooden table barricade"
+	desc = "A semi-poorly constructed wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
+	icon_state = "pwoodflip"
+	barricade_type = "pwoodflip"
+
+/obj/structure/barricade/table/wood/gambling
+	name = "gambling table barricade"
+	desc = "A curved wood and carpet surface resting on four legs. Used for gambling games. Can be flipped in emergencies to act as cover."
+	icon_state = "gambleflip"
+	barricade_type = "gambleflip"
+
+/obj/structure/barricade/table/reinforced
+	name = "reinforced table barricade"
+	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
+	icon_state = "reinfflip"
+	barricade_type = "reinfflip"
+
+/obj/structure/barricade/table/almayer
+	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
+	icon_state = "almflip"
+	barricade_type = "almflip"
+
+/obj/structure/barricade/table/prison
+	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
+	icon_state = "prisonflip"
+	barricade_type = "prisonflip"
