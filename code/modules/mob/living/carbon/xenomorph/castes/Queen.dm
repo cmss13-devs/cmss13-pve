@@ -17,8 +17,6 @@
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_QUEEN
 
-	acid_blood_damage = 100 /// Strong acid blood. Her final dance.
-
 	build_time_mult = BUILD_TIME_MULT_BUILDER
 
 	is_intelligent = 1

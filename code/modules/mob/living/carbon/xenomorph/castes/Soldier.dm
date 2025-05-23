@@ -37,9 +37,6 @@
 	claw_type = CLAW_TYPE_SHARP
 	pull_multiplier = 0.2 /// Pretty much no pull delay, for those quick drags.
 
-	acid_blood_damage = 35 /// Strong acid blood. Should be a define in the future.
-	acid_blood_spatter = TRUE /// Testing variable, means that their blood can melt objects in the environment. Primarily barricades.
-
 	icon_xeno = 'icons/mob/xenos/soldier.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
 
