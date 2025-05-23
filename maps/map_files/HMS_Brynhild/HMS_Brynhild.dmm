@@ -7064,7 +7064,7 @@
 "tH" = (
 /obj/item/weapon/gun/rifle/rmc_f90{
 	anchored = 1;
-	name = "F903A1 "Gallahad" Rifle";
+	name = "F903A1 'Gallahad' Rifle";
 	desc = "An old standard-issue rifle of the Royal Marine Corps. Now an antique weapon with memories of its use etched into the weapon. Despite the mess it has been well maintained though the weapon itself seems unusuable."
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
