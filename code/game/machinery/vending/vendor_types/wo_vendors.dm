@@ -163,7 +163,7 @@
 	..()
 	listed_products += list(
 		list("EXTRA SCOUT AMMUNITION", -1, null, null, null),
-		list("A19 High Velocity Impact Magazine (10x24mm)", floor(scale * 1), /obj/item/ammo_magazine/rifle/m49a/custom/impact, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Impact Magazine (10x24mm)", floor(scale * 1), /obj/item/ammo_magazine/rifle/m49a/custom/explosive, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Incendiary Magazine (10x24mm)", floor(scale * 1), /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Magazine (10x24mm)", floor(scale * 1.5), /obj/item/ammo_magazine/rifle/m49a/custom, VENDOR_ITEM_REGULAR),
 
