@@ -279,7 +279,7 @@
 /area/bigredv2/outside/medical)
 "ny" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "nB" = (
@@ -324,7 +324,7 @@
 /area/bigredv2/outside/medical)
 "og" = (
 /obj/structure/bed/chair,
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "ol" = (
@@ -381,7 +381,7 @@
 /turf/open/floor/white,
 /area/bigredv2/outside/medical)
 "qV" = (
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "rj" = (
@@ -612,7 +612,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "yy" = (
@@ -649,7 +649,7 @@
 /area/bigredv2/outside/medical)
 "zQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Ap" = (
@@ -756,7 +756,7 @@
 	amount = 1;
 	icon_state = "coil2"
 	},
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "EY" = (
@@ -831,7 +831,7 @@
 /area/bigredv2/outside/medical)
 "HO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Iv" = (
@@ -1019,7 +1019,7 @@
 /turf/open/floor/whitepurplecorner/north,
 /area/bigredv2/outside/medical)
 "Om" = (
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Ot" = (
@@ -1065,7 +1065,7 @@
 /turf/open/floor/whitebluefull/northeast,
 /area/bigredv2/outside/medical)
 "OP" = (
-/obj/item/ammo_casing/shell,
+/obj/item/ammo_casing/redshell,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "OU" = (

@@ -13,6 +13,7 @@
 	damage = 40
 	penetration= -ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/item/ammo_casing
 
 /datum/ammo/bullet/pistol/tiny
 	name = "light pistol bullet"
