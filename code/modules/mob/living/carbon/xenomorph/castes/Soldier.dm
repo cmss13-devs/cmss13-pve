@@ -37,8 +37,6 @@
 	claw_type = CLAW_TYPE_SHARP
 	pull_multiplier = 0.2 /// Pretty much no pull delay, for those quick drags.
 
-	acid_blood_damage = 60 /// Strong acid blood. Don't get too close!
-
 	icon_xeno = 'icons/mob/xenos/soldier.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
 
