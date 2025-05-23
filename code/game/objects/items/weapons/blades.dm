@@ -176,8 +176,12 @@
 	. = ..()
 	create_reagents(5)
 
-/obj/item/weapon/swiss_army_knife/attack_self(mob/user)
-	. = ..()
+/obj/item/weapon/swiss_army_knife/attack_hand(mob/user)
+	if(!ishuman(user))
+		return ..()
+	var/mob/living/carbon/human/human = user
+	if(human.l_hand != src && human.r_hand != src)
+		return ..()
 	if(mode != "swiss_stock")
 		switch_tool("swiss_stock")
 	else
@@ -540,7 +544,10 @@
 	icon_state = disabled_icon
 
 /obj/item/weapon/straight_razor/attack_hand(mob/user)
-	if(loc != user) //Only do unique stuff if you are holding it
+	if(!ishuman(user))
+		return ..()
+	var/mob/living/carbon/human/human = user
+	if(human.l_hand != src && human.r_hand != src) //Only do unique stuff if you are holding it
 		return ..()
 
 	playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
