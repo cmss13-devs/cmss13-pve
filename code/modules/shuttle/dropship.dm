@@ -428,6 +428,33 @@
 	icon_state = "101a"
 	opacity = FALSE
 
+/obj/structure/shuttle/part/inchon
+	name = "\improper Inchon"
+	icon = 'icons/turf/dropship5.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/inchon/transparent
+	desc = "The cockpit canopy transparency of a UD-4 gunship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/inchon/transparent/nosecone
+	desc = "Part of the nose assembly of the UD-4 Cheyenne. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/inchon/prop
+	name = "\improper Inchon"
+	desc = "A grounded USCM dropship. Looks locked down, no way aboard that thing."
+	icon = 'icons/turf/dropship5-1.dmi'
+	icon_state = "dropship_fore"
+	opacity = TRUE
+	pixel_x = -160
+
+/obj/structure/shuttle/part/inchon/prop/tail
+	name = "\improper Inchon"
+	icon_state = "dropship_tail"
+	pixel_x = -160
+	pixel_y = -320
+
 /obj/structure/shuttle/part/cyclone
 	name = "\improper Cyclone"
 	icon = 'icons/turf/dropship2.dmi'
