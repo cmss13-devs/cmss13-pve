@@ -2612,6 +2612,8 @@
 #include "code\modules\vehicles\multitile\multitile_interaction.dm"
 #include "code\modules\vehicles\multitile\multitile_movement.dm"
 #include "code\modules\vehicles\multitile\multitile_verbs.dm"
+#include "code\modules\vehicles\rx47_combat_mech\combat_mech.dm"
+#include "code\modules\vehicles\rx47_combat_mech\guns.dm"
 #include "code\modules\vehicles\tank\aev.dm"
 #include "code\modules\vehicles\tank\interior.dm"
 #include "code\modules\vehicles\tank\tank.dm"
