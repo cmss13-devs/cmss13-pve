@@ -6,14 +6,14 @@
 	caste_type = XENO_CASTE_QUEEN
 	tier = 0
 
-	melee_damage_lower = XENO_DAMAGE_TIER_4
-	melee_damage_upper = XENO_DAMAGE_TIER_6
+	melee_damage_lower = XENO_DAMAGE_TIER_5
+	melee_damage_upper = XENO_DAMAGE_TIER_7
 	melee_vehicle_damage = XENO_DAMAGE_TIER_9 //Queen and Ravs have extra multiplier when dealing damage in multitile_interaction.dm
-	max_health = XENO_HEALTH_QUEEN
+	max_health = XENO_HEALTH_QUEEN * 5 // PVE boss edition
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
-	plasma_max = XENO_PLASMA_TIER_10
+	plasma_max = XENO_PLASMA_TIER_10 * 3 // PVE boss edition
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_2
+	armor_deflection = XENO_ARMOR_TIER_4
 	evasion = XENO_EVASION_NONE
 	speed = XENO_SPEED_QUEEN
 
@@ -273,6 +273,8 @@
 	small_explosives_stun = FALSE
 	pull_speed = 3 //screech/neurodragging is cancer, at the very absolute least get some runner to do it for teamwork
 	organ_value = 8000 // queen is expensive
+
+	acid_blood_damage = 60 /// Strong acid blood. Don't get too close!
 
 	icon_xeno = 'icons/mob/xenos/queen.dmi'
 	icon_xenonid = 'icons/mob/xenonids/queen.dmi'
