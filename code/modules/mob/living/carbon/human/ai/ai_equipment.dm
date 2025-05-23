@@ -202,7 +202,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
 
 /datum/equipment_preset/royal_marine/sniper/ai
-	name = "TWE Royal Marine Commando, Sniper (AI)"
+	name = "Royal Marine Commando, Sniper (AI)"
 
 /datum/equipment_preset/royal_marine/sniper/ai/load_gear(mob/living/carbon/human/new_human)
 
@@ -239,4 +239,4 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)

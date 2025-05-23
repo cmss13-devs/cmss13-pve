@@ -50,7 +50,7 @@
 			if(JOB_TWE_RMC_SECTIONLEADER) hud_icon_state = "sectionleader"
 			if(JOB_TWE_RMC_TROOPLEADER) hud_icon_state = "troopleader"
 			if(JOB_TWE_RMC_LIEUTENANT) hud_icon_state = "lieutenant"
-		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H)
+		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H || squad.fireteam_leaders["SQ4"] == H)
 			H.langchat_styles = "langchat_smaller_bolded"
 		else
 			H.langchat_styles = initial(H.langchat_styles)
@@ -61,11 +61,11 @@
 			var/image/IMG = image('icons/mob/hud/marine_hud.dmi', H, "rmc_[hud_icon_state]")
 			holder.overlays += IMG
 		if(H.assigned_squad && H.assigned_fireteam)
-			var/image/IMG2 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_[H.assigned_fireteam]")
+			var/image/IMG2 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_rmc_[H.assigned_fireteam]")
 			IMG2.color = squad_clr
 			holder.overlays += IMG2
 			if(H.assigned_squad.fireteam_leaders[H.assigned_fireteam] == H)
-				var/image/IMG3 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_ftl")
+				var/image/IMG3 = image('icons/mob/hud/marine_hud.dmi', H, "hudsquad_rmc_sl")
 				IMG3.color = squad_clr
 				holder.overlays += IMG3
 

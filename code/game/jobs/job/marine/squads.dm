@@ -27,7 +27,7 @@
 /datum/squad_type/rmc_troop
 	name = "Troop"
 	lead_name = "Troop Commander"
-	lead_icon = "leader"
+	lead_icon = "rmctl"
 	sub_squad = "Section"
 	sub_leader = "Section Leader"
 
@@ -349,7 +349,7 @@
 
 /datum/squad/marine/rmc
 	name = SQUAD_RMC
-	equipment_color = "#2f5a39"
+	equipment_color = "#3D6F43"
 	chat_color = "#aa740f"
 	minimap_color = MINIMAP_SQUAD_RMC
 	use_stripe_overlay = FALSE
@@ -647,53 +647,48 @@
 			assignment = JOB_TWE_RMC_SECTIONLEADER
 			num_tl++
 			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ2", M)
-			assign_ft_leader("SQ2", M)
+			assign_fireteam("SQ1", M)
+			assign_ft_leader("SQ1", M)
 		if(JOB_TWE_RMC_RIFLEMAN)
 			assignment = JOB_TWE_RMC_RIFLEMAN
 			num_riflemen++
-			assign_fireteam("SQ2", M)
+			assign_fireteam("SQ1", M)
 		if(JOB_TWE_RMC_ENGI)
 			assignment = JOB_TWE_RMC_ENGI
 			num_engineers++
 			C.claimedgear = FALSE
-			assign_fireteam("SQ2", M)
+			assign_fireteam("SQ1", M)
 		if(JOB_TWE_RMC_MEDIC)
 			assignment = JOB_TWE_RMC_MEDIC
 			num_medics++
 			C.claimedgear = FALSE
-			assign_fireteam("SQ2", M)
+			assign_fireteam("SQ1", M)
 		if(JOB_TWE_RMC_TEAMLEADER)
 			assignment = JOB_TWE_RMC_TEAMLEADER
 			num_tl++
 			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ3", M)
-			assign_ft_leader("SQ3", M)
+			assign_fireteam("SQ2", M)
+			assign_ft_leader("SQ2", M)
 		if(JOB_TWE_RMC_SMARTGUNNER)
 			assignment = JOB_TWE_RMC_SMARTGUNNER
 			num_smartgun++
-			assign_fireteam("SQ3", M)
+			assign_fireteam("SQ2", M)
 		if(JOB_TWE_RMC_MARKSMAN)
 			assignment = JOB_TWE_RMC_MARKSMAN
 			num_specialists++
-			assign_fireteam("SQ3", M)
+			assign_fireteam("SQ2", M)
 		if(JOB_TWE_RMC_LIEUTENANT)
 			assignment = JOB_TWE_RMC_LIEUTENANT
-			num_tl++
 			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ1", M)
-			assign_ft_leader("SQ1", M)
 			num_leaders++
+			squad_leader = M
 			SStracking.set_leader(tracking_id, M)
 			SStracking.start_tracking("marine_sl", M)
 		if(JOB_TWE_RMC_BREACHER)
 			assignment = JOB_TWE_RMC_BREACHER
 			num_engineers++
-			assign_fireteam("SQ1", M)
 		if(JOB_TWE_RMC_TROOPLEADER)
 			assignment = JOB_TWE_RMC_TROOPLEADER
-			num_leaders++
-			assign_fireteam("SQ1", M)
 
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)
