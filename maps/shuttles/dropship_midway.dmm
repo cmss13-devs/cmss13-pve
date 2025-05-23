@@ -159,9 +159,9 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/obj/structure/machinery/light/double{
+/obj/structure/machinery/light/double/blue{
 	dir = 4;
-	pixel_y = -5
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -209,8 +209,9 @@
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/obj/structure/machinery/light/double{
-	dir = 8
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -312,8 +313,9 @@
 	},
 /area/shuttle/midway)
 "zG" = (
-/obj/structure/machinery/light/double{
-	dir = 8
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -383,12 +385,9 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "DO" = (
-/obj/structure/machinery/light{
+/obj/structure/machinery/light/double/blue{
 	dir = 4;
-	pixel_x = 14
-	},
-/obj/structure/machinery/light/double{
-	dir = 4
+	light_color = "#dae2ff"
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -444,8 +443,7 @@
 /area/shuttle/midway)
 "Jn" = (
 /obj/structure/machinery/camera/autoname/golden_arrow/midway{
-	dir = 4;
-	pixel_x = -23
+	dir = 8
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -665,8 +663,8 @@ Kw
 Mw
 Yr
 Gk
-mA
 tT
+mA
 mA
 BI
 dE
@@ -688,8 +686,8 @@ TE
 CX
 NK
 XS
-Jn
 zG
+XS
 us
 Kw
 Kw
@@ -723,9 +721,9 @@ XS
 dd
 aP
 NK
-XS
-XS
+Jn
 DO
+XS
 WF
 Kw
 Kw
@@ -737,8 +735,8 @@ Kw
 UI
 rq
 kL
-PW
 oB
+PW
 PW
 Lr
 yB
