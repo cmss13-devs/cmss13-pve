@@ -1297,20 +1297,14 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Leader";
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "adQ" = (
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Platoon Commander"
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
@@ -1466,10 +1460,7 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner"
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/smartgunner,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "aeo" = (
@@ -1550,27 +1541,6 @@
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
-"aey" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Leader"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
-"aez" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Section Sergeant";
-	has_cryo_gear = 0
-	},
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/item/clothing/under/marine/veteran/pmc/leader,
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "aeA" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
@@ -1646,26 +1616,6 @@
 /obj/structure/roof/cargocrane_tracks/vertical,
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
-"aeN" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Corpsman";
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
-"aeO" = (
-/obj/item/device/radio/headset/distress/pmc/platoon,
-/obj/item/clothing/under/marine/veteran/pmc,
-/obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Smartgunner";
-	has_cryo_gear = 0
-	},
-/turf/open/floor/corsat/plate,
-/area/firefly/cryo_cell)
 "aeP" = (
 /obj/structure/machinery/power/apc/almayer/hardened/west,
 /obj/effect/decal/cleanable/dirt,
@@ -1694,6 +1644,11 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_theta)
+"aeU" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/training,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "aeV" = (
 /turf/open/floor/almayer_hull,
 /area/firefly/cafeteria)
@@ -5113,9 +5068,7 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/rifleman,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
@@ -5123,10 +5076,7 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Squad Leader";
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/squad_leader,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
@@ -17498,9 +17448,6 @@
 /turf/open/floor/almayer_hull,
 /area/space)
 "jEu" = (
-/obj/item/storage/box/nade_box/training{
-	pixel_y = 7
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
@@ -19313,9 +19260,7 @@
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
 /obj/item/clothing/shoes/marine/civilian/knife,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0
-	},
+/obj/structure/closet/secure_closet/marine_personal/pmc/rifleman,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
 "lLu" = (
@@ -46180,7 +46125,7 @@ acQ
 acQ
 acQ
 adw
-aeN
+aen
 aKv
 aoE
 anL
@@ -46564,11 +46509,11 @@ aeV
 aeV
 aeV
 adw
-lLq
+adP
 aKv
 aoE
 anL
-aey
+aok
 adA
 adP
 aKv
@@ -46948,11 +46893,11 @@ aqc
 aeV
 aeV
 adw
-aeO
+lLq
 cFL
 iCh
 iea
-aez
+adQ
 adA
 lLq
 aKv
@@ -52919,7 +52864,7 @@ anC
 aYi
 adq
 ani
-aPZ
+aeU
 fqJ
 fqJ
 fqJ
