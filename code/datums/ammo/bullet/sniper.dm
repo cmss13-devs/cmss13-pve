@@ -49,9 +49,11 @@
 	name = "anti-materiel sniper bullet"
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
-	accuracy = HIT_ACCURACY_TIER_8
-	damage = 125
-	shell_speed = AMMO_SPEED_TIER_8
+	accuracy = HIT_ACCURACY_TIER_10
+	accurate_range = 48
+	max_range = 48 //Overpen through half a colony amuses me greatly
+	damage = 190
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/sniper/anti_materiel/proc/stopping_power_knockback(mob/living/living_mob, obj/projectile/fired_projectile)
@@ -211,7 +213,7 @@
 /datum/ammo/bullet/sniper/anti_materiel/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture
