@@ -81,13 +81,15 @@
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
 		//Packing Arterial Bleeding
-		var/time_to_take = 10 SECONDS
+		var/time_to_take = 4 SECONDS
 		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
 			if(!I.has_been_bandaged)
 				if(M == user)
 					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 5 SECONDS
+					time_to_take = 10 SECONDS
 				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+					if(I.has_been_bandaged)
+						return
 					possessive = "[user == M ? "your" : "\the [M]'s"]"
 					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
 					user.affected_message(M,
@@ -205,12 +207,12 @@
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
 		//Packing Arterial Bleeding
-		var/time_to_take = 5 SECONDS
+		var/time_to_take = 2.5 SECONDS
 		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
 			if(!I.has_been_bandaged)
 				if(M == user)
 					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 2.5 SECONDS
+					time_to_take = 5 SECONDS
 				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					possessive = "[user == M ? "your" : "\the [M]'s"]"
 					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
