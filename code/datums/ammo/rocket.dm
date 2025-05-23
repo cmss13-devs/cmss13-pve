@@ -254,7 +254,7 @@
 	smoke.set_up(1, turf)
 	smoke.start()
 	var/datum/reagent/napalm/upp/reagent = new()
-	new /obj/flamer_fire(turf, cause_data, reagent, 3)
+	new /obj/flamer_fire(turf, cause_data, reagent, 1)
 
 /datum/ammo/rocket/wp/upp/on_hit_mob(mob/mob, obj/projectile/projectile)
 	drop_flame(get_turf(mob), projectile.weapon_cause_data)

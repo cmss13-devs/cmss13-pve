@@ -5,7 +5,7 @@
 /obj/effect/step_trigger/message/memorial
 	message = "Please stand silently for a moment of reflection and respect. "
 	once = 0
-	
+
 /obj/effect/step_trigger/message/Trigger(mob/M)
 	if(!istype(M) || !M)
 		return
@@ -13,6 +13,17 @@
 		to_chat(M, SPAN_INFO("[message]"))
 		if(once)
 			qdel(src)
+
+/obj/effect/step_trigger/message/once_for_each
+	var/list/activated = list()
+	once = FALSE
+
+/obj/effect/step_trigger/message/once_for_each/Trigger(mob/M)
+	if(!istype(M) || !M)
+		return
+	if(M.client && !M.client in activated)
+		to_chat(M, SPAN_INFO("[message]"))
+		activated += M.client
 
 /obj/effect/step_trigger/teleport_fancy
 	var/locationx

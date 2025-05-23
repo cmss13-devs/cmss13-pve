@@ -433,3 +433,14 @@
 	icon_state = "data"
 	item_state = "red-id"
 	unacidable = 1
+
+/obj/item/card/data/access
+	name = "access card"
+	desc = "An access card used to interact with card readers."
+	icon_state = "centcom_old"
+	item_state = "red-id"
+	var/list/id_list = list()
+
+/obj/item/card/data/access/sergeant
+	desc = "An access card used to interact with card readers. This one has 3 stripes drawn on it with sharpie."
+	id_list = list("uacgarmory", "garage_base", "garage_base2")

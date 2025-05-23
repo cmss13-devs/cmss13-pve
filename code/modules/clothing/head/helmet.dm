@@ -296,6 +296,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/raincover = "raincover",
 	/obj/item/prop/helmetgarb/camocover = "camocover",
 	/obj/item/prop/helmetgarb/camocover/desert = "d_camocover",
+	/obj/item/prop/helmetgarb/camocover/desert/nohole = "d_camocover_nohole",
 	/obj/item/prop/helmetgarb/camocover/snow = "s_camocover",
 	/obj/item/prop/helmetgarb/rabbitsfoot = "rabbitsfoot",
 	/obj/item/prop/helmetgarb/rosary = "helmet_rosary", // This one was already in the game for some reason, but never had an object
@@ -359,6 +360,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/attachable/flashlight = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/chaplain_patch = "chaplain_patch",
 	/obj/item/tool/pen/fountain = "fountainpen",
+	/obj/item/device/blinker = "blinker",
 
 	// MEDICAL
 	/obj/item/stack/medical/bruise_pack ="brutepack (bandages)",
@@ -909,13 +911,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 
 /obj/item/clothing/head/helmet/marine/pyro
-	name = "\improper M10-P pyrotechnician helmet"
+	name = "\improper XM13 environmental helmet"
 	icon_state = "pyro_helmet"
 	desc = "M10 variant with complete facial coverage and internal breathing apparatus. Environmentally sealed with a full fitting of polymer compounds to resist burning."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
-	specialty = "M35 pyrotechnician"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	specialty = "XM13 environmental"
 
 /obj/item/clothing/head/helmet/marine/M3T
 	name = "\improper M10-R bombardier helmet"
@@ -1114,6 +1115,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "ua_riot"
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medical
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 // KUTJEVO HELMET
 
 /obj/item/clothing/head/helmet/marine/veteran/kutjevo

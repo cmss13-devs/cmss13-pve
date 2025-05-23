@@ -24,6 +24,13 @@
 	description = "A toxic chemical."
 	custom_metabolism = AMOUNT_PER_TIME(1, 2 SECONDS)
 
+/datum/reagent/toxin/sttoxin
+	name = "Toxin"
+	id = "sttoxin"
+	description = "A toxic chemical."
+	custom_metabolism = AMOUNT_PER_TIME(1, 2 SECONDS)
+	properties = list(PROPERTY_TOXIC = 4)
+
 /datum/reagent/toxin/sdtoxin
 	name = "Toxin"
 	id = "sdtoxin"

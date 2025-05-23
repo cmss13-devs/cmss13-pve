@@ -40,6 +40,7 @@
 	///Autonaming
 	var/autoname = FALSE
 	var/autonumber = 0 //camera number in area
+	var/no_icon_update = FALSE
 
 GLOBAL_LIST_EMPTY_TYPED(all_cameras, /obj/structure/machinery/camera)
 /obj/structure/machinery/camera/Initialize(mapload, ...)
@@ -88,6 +89,8 @@ GLOBAL_LIST_EMPTY_TYPED(all_cameras, /obj/structure/machinery/camera)
 
 /obj/structure/machinery/camera/update_icon()
 	. = ..()
+	if(no_icon_update)
+		return
 	// If the camera has been EMPed.
 	if(stat & EMPED)
 		icon_state = "cameraemp"
@@ -99,6 +102,8 @@ GLOBAL_LIST_EMPTY_TYPED(all_cameras, /obj/structure/machinery/camera)
 		icon_state = "camera"
 
 /obj/structure/machinery/camera/set_pixel_location()
+	if(no_icon_update)
+		return
 	switch(dir)
 		if(NORTH) pixel_y = -18
 		if(SOUTH) pixel_y = 40

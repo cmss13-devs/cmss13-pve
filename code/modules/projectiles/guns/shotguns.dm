@@ -624,6 +624,33 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
+/obj/item/weapon/gun/shotgun/double/bone
+	name = "bone pistol"
+	desc = "Alarmingly weird, unusual double-barreled gun, seemingly made of bone to avoid tripping all kinds of sensors. Can't be reloaded, must've been printed with its load inside. 3D printing technology is cool, man. Too bad evil ecoterrorists use it."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/event.dmi'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/double/bone
+	icon_state = "bone"
+	item_state = "bone"
+	fire_sound = 'sound/weapons/gun_bone_gunshot.ogg'
+	flags_equip_slot = SLOT_WAIST
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	attachable_allowed = list()
+	pickup_sound = 'sound/handling/tape_pickup.ogg'
+	w_class = SIZE_MEDIUM
+
+/obj/item/weapon/gun/shotgun/double/bone/open_chamber(mob/user, override)
+	return
+
+/obj/item/weapon/gun/shotgun/double/bone/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+
 // COULDN'T THINK OF ANOTHER WAY SORRY!!!! SOMEONE ADD A GUN COMPONENT!!
 
 /obj/item/weapon/gun/shotgun/double/cane

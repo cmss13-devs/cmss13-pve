@@ -319,3 +319,18 @@
 	desc = "The flag of the Union of Progressive Peoples. Unity through Strength, Freedom through Unity."
 	icon_state = "flag_upp_planted"
 	flag_type = /obj/item/flag/plantable/upp
+
+
+/obj/item/flag/plantable/gbm
+	name = "\improper Green Banner Movement flag"
+	desc = "A simple green flag. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_gbm"
+	flag_type = /obj/structure/flag/plantable/gbm
+	faction = FACTION_ECOTERROR
+
+/obj/structure/flag/plantable/gbm
+	name = "\improper Green Banner Movement flag"
+	desc = "The flag of the Green Banner Movement - radical ecoterrorist cell that went quiet a few years ago but suddenly re-emerged more violent than ever."
+	icon_state = "flag_gbm_planted"
+	flag_type = /obj/item/flag/plantable/gbm
