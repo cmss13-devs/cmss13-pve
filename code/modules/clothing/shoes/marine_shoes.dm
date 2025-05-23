@@ -72,7 +72,7 @@
 	icon_state = "marine_brown"
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
-/obj/item/clothing/shoes/marine/upp/guard/knife
+/obj/item/clothing/shoes/marine/upp/guard/canc
 	spawn_item_type = /obj/item/weapon/knife/marine/chinese
 
 /obj/item/clothing/shoes/marine/pve_mopp
