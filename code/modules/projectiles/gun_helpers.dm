@@ -720,7 +720,7 @@ DEFINES in setup.dm, referenced here.
 	if(start_semiauto)
 		gun_firemode_list |= GUN_FIREMODE_SEMIAUTO
 
-	if(burst_amount > BURST_AMOUNT_TIER_1)
+	if(start_burstfire || burst_amount > BURST_AMOUNT_TIER_1)
 		gun_firemode_list |= GUN_FIREMODE_BURSTFIRE
 
 	if(!length(gun_firemode_list))
