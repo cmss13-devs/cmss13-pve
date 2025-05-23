@@ -683,7 +683,10 @@
 	unacidable = TRUE
 	health = 1000000 //Failsafe, shouldn't matter
 
-
+/obj/structure/window/framed/colony/reinforced/hull/yautja
+	name = "alien hull window"
+	icon_state = "pred_window0"
+	basestate = "pred_window"
 
 //Chigusa windows
 
