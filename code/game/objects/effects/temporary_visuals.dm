@@ -132,3 +132,34 @@
 	transform = matrix().Scale(32 / 1024, 32 / 1024)
 	animate(src, time = 0.5 * radius * speed, transform=matrix().Scale((32 / 1024) * radius * 1.5, (32 / 1024) * radius * 1.5), easing = easing_type)
 
+GLOBAL_DATUM_INIT(flamer_explosion_particles, /particles/flamer_explosion, new)
+/particles/flamer_explosion
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "flamer"
+	width = 100
+	height = 100
+	count = 3
+	spawning = 3
+	lifespan = 5
+	fade = 6
+	grow = 0.15
+	drift = generator(GEN_CIRCLE, 0, 1)
+	scale = 1
+	spin = generator(GEN_NUM, -20, 20)
+	friction = 0.35
+	rotation = generator(GEN_NUM, -20, 20)
+	velocity = generator(GEN_CIRCLE, 11, 11)
+
+/obj/effect/temp_visual/flamer_explosion
+	icon = null
+	layer = ABOVE_MOB_LAYER
+	light_system = STATIC_LIGHT
+	light_power = 5
+	light_color = "#f88818"
+	light_range = 5
+	duration = 5
+
+/obj/effect/temp_visual/flamer_explosion/Initialize(mapload, fire_icon)
+	. = ..()
+	particles = GLOB.flamer_explosion_particles
+	particles.icon_state = fire_icon
