@@ -109,9 +109,6 @@
 	damage_cap = HEALTH_WALL_REINFORCED
 	icon_state = "reinforced"
 
-/turf/closed/wall/almayer/white/outer_tile
-	tiles_with = list(/turf/closed/wall/almayer/white,/turf/closed/wall/almayer/outer)
-
 /turf/closed/wall/almayer/white/hull
 	name = "ultra reinforced hull"
 	desc = "An extremely reinforced metal wall used to isolate potentially dangerous areas"
