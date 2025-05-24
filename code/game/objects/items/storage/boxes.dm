@@ -622,24 +622,24 @@
 
 
 /obj/item/storage/box/explosive_mines
-	name = "\improper M20 mine box"
+	name = "\improper M20A2 mine box"
 	desc = "A secure box holding five M20 anti-personnel proximity mines."
 	icon = 'icons/obj/items/storage/packets.dmi'
 	icon_state = "minebox"
 	w_class = SIZE_MEDIUM
 	max_storage_space = 10
-	can_hold = list(/obj/item/explosive/mine)
+	can_hold = list(/obj/item/explosive/mine/strong)
 
 /obj/item/storage/box/explosive_mines/fill_preset_inventory()
 	for(var/i in 1 to 5)
-		new /obj/item/explosive/mine(src)
+		new /obj/item/explosive/mine/strong(src)
 
 /obj/item/storage/box/explosive_mines/pmc
-	name = "\improper M20P mine box"
+	name = "\improper M20A2P mine box"
 
 /obj/item/storage/box/explosive_mines/pmc/fill_preset_inventory()
 	for(var/i in 1 to 5)
-		new /obj/item/explosive/mine/pmc(src)
+		new /obj/item/explosive/mine/pmc/strong(src)
 
 /obj/item/storage/box/flare
 	name = "\improper M94 marking flare pack"
