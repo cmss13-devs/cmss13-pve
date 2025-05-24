@@ -79,7 +79,6 @@ GLOBAL_LIST_INIT(all_breaker_switches, list())
 		if(ispowered && is_on)
 			toggle_machines()
 		ispowered = FALSE
-		turned_on = FALSE
 	else
 		ispowered = TRUE
 	update_icon()
