@@ -10,7 +10,7 @@
 	item_state = "m5"
 	unacidable = TRUE
 	indestructible = 1
-
+	var/launch_sound = 'sound/weapons/gun_rocketlauncher.ogg'
 	matter = list("metal" = 10000)
 	current_mag = /obj/item/ammo_magazine/rocket
 	flags_equip_slot = NO_FLAGS
@@ -61,7 +61,7 @@
 		. += "It's not loaded."
 		return
 	if(current_mag.current_rounds > 0)
-		. += "It has an 84mm [ammo.name] loaded."
+		. += "It has \a [ammo.name] loaded."
 
 
 /obj/item/weapon/gun/launcher/rocket/able_to_fire(mob/living/user)
@@ -160,6 +160,7 @@
 		current_mag = rocket
 		rocket.forceMove(src)
 		replace_ammo(,rocket)
+	update_icon()
 	return TRUE
 
 /obj/item/weapon/gun/launcher/rocket/unload(mob/user,  reload_override = 0, drop_override = 0)
@@ -191,7 +192,7 @@
 	var/backblast_loc = get_turf(get_step(user.loc, turn(user.dir, 180)))
 	smoke.set_up(1, 0, backblast_loc, turn(user.dir, 180))
 	smoke.start()
-	playsound(src, 'sound/weapons/gun_rocketlauncher.ogg', 100, TRUE, 10)
+	playsound(src, launch_sound, 100, TRUE, 10)
 	for(var/mob/living/carbon/mob in backblast_loc)
 		if(mob.body_position != STANDING_UP || HAS_TRAIT(mob, TRAIT_EAR_PROTECTION)) //Have to be standing up to get the fun stuff
 			continue
@@ -409,3 +410,160 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
 	))
+
+/obj/item/weapon/gun/launcher/rocket/anti_air
+	name = "\improper anti-air missile launcher"
+	desc = "What crackhead modified an M5 to fire AA missiles? Truly derranged."
+	current_mag = /obj/item/ammo_magazine/rocket/anti_air
+	w_class = SIZE_LARGE
+	aim_slowdown = SLOWDOWN_ADS_SCOPE
+	actions_types = list(/datum/action/item_action/toggle_aerial_targetting)
+	var/targetting_air = FALSE
+	var/SAM_has_empty_icon = FALSE
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/set_bullet_traits()
+	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	accuracy_mult = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/get_examine_text(mob/user)
+	. = ..()
+	if(!targetting_air)
+		. += "The targetting system has been turned off, you'll hit what is ahead of you upon firing."
+	else if(targetting_air == TRUE)
+		. += "The targetting system is active, you'll send the missile up into the sky upon firing."
+		return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/update_icon()
+	. = ..()
+	var/SAM_sprite = base_gun_icon
+	if(SAM_has_empty_icon && current_mag.current_rounds <= 0)
+		SAM_sprite += "_e"
+	icon_state = SAM_sprite
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/able_to_fire(mob/living/user)
+	. = ..()
+	if (. && istype(user))
+		if(current_mag && current_mag.current_rounds > 0)
+			make_rocket(user, 0, 1)
+
+	var/turf/TU = get_turf(user)
+	var/area/targ_area = get_area(user)
+	if(!istype(TU)) return
+	var/is_outside = FALSE
+	switch(targ_area.ceiling)
+		if(CEILING_NONE)
+			is_outside = TRUE
+		if(CEILING_GLASS)
+			is_outside = TRUE
+	if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
+		is_outside = FALSE
+	if(targetting_air && !is_outside)
+		to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
+		return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
+	. = ..()
+	if(targetting_air && (current_mag.current_rounds > 0))
+		qdel(current_mag)
+		sleep(5)	//simulating it arcing up out of view before igniting
+		for(var/mob/mob in range(10, user))
+			mob.show_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SHOW_MESSAGE_VISIBLE)
+		message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
+		log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
+	update_icon()
+
+//Todo; finish fixing this so it works properly
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/uscm
+	name = "\improper SIM-118 anti-air missile launcher"
+	desc = "Shoulder-fired disposable anti-air launcher that launches a hypervelocity missile. Point towards aircraft, wait for tone, pull trigger and throw away."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "fim_hornet"
+	item_state = "fim_hornet"
+	launch_sound = 'sound/weapons/gun_hornet.ogg'
+	has_empty_icon = TRUE
+	current_mag = /obj/item/ammo_magazine/rocket/anti_air
+	attachable_allowed = null
+	SAM_has_empty_icon = TRUE
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/simbarrel/tube = new(src)
+	tube.flags_attach_features &= ~ATTACH_REMOVABLE
+	tube.Attach(src)
+	update_attachable(tube.slot)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/reload()
+	to_chat(usr, SPAN_WARNING("You cannot reload \the [src]!"))
+	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/uscm/unload()
+	to_chat(usr, SPAN_WARNING("You cannot unload \the [src]!"))
+	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/upp
+	name = "\improper EMBLR-92 anti-air weapon system"
+	desc = "A German-made MANPAD system designed to replace the aging Russian 'spear' missile launchers. It offers reasonable air defence capabilities at the platoon-level for members of the UPPAC."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "emblr"
+	item_state = "emblr"
+	launch_sound = 'sound/weapons/gun_emblr.ogg'
+	current_mag = /obj/item/ammo_magazine/rocket/anti_air/upp
+	attachable_allowed = null
+	SAM_has_empty_icon = TRUE
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 16,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/upp/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/emblrbarrel/tube = new(src)
+	tube.flags_attach_features &= ~ATTACH_REMOVABLE
+	tube.Attach(src)
+	update_attachable(tube.slot)
+
+
+//-------------------------------------------------------
+//Toggle firing level special action for grenade launchers
+
+/datum/action/item_action/toggle_aerial_targetting/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Aerial Targetting"
+	button.name = name
+	update_icon()
+
+/datum/action/item_action/toggle_aerial_targetting/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/launcher/rocket/anti_air/SAM = holder_item
+	if(!ishuman(owner))
+		return
+	var/mob/living/carbon/human/H = owner
+	if(H.is_mob_incapacitated() || SAM.get_active_firearm(H, FALSE) != holder_item)
+		return
+	SAM.toggle_aerial_targetting(usr)
+
+/datum/action/item_action/toggle_aerial_targetting/proc/update_icon()
+	var/obj/item/weapon/gun/launcher/rocket/anti_air/SAM = holder_item
+	if(SAM.targetting_air)
+		action_icon_state = "designator_one_weapon"
+	else
+		action_icon_state = "hightoss_off"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/toggle_aerial_targetting(mob/user)
+	targetting_air = !targetting_air
+	to_chat(user, "[icon2html(src, usr)] You toggle \the [src]'s targetting systems. You will now fire [targetting_air ? "into the sky overhead" : "directly at your target"].")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	var/datum/action/item_action/toggle_aerial_targetting/TAT = locate(/datum/action/item_action/toggle_aerial_targetting) in actions
+	TAT.update_icon()

@@ -397,6 +397,40 @@
 	reload_delay = 85
 
 //-------------------------------------------------------
+//AA Missiles
+
+/obj/item/ammo_magazine/rocket/anti_air
+	name = "\improper 70mm 'Hornet' hypervelocity anti-air missile"
+	desc = "A thin missile designed to be fired by M579 ADS-C vehicles or launched from the SIM-118 MANPAD. A no-frills hypervelocity missile, the hornet relies on the kinetic energy it imparts on impact to take down targets."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon_state = "hornet"
+	default_ammo = /datum/ammo/rocket/ap/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/uscm
+
+/obj/item/ammo_magazine/rocket/anti_air/update_icon()
+	if(current_rounds <= 0)
+		qdel(src)
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/ammo_magazine/rocket/anti_air/upp
+	name = "\improper 92mm 'Goose' anti-air missile canister"
+	desc = "A squat missile canister for the EMBLR surface-to-air weapons system. Unlike it's USCM counterpart, the Goose carries a small but powerful warhead designed to spread a cloud of flechettes around it's target."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "emblr"
+	default_ammo = /datum/ammo/rocket/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/upp
+
+/obj/item/ammo_magazine/rocket/anti_air/upp/update_icon()
+	..()
+	if(current_rounds <= 0)
+		name = "\improper spent 92mm missile canister"
+		desc = "A spent canister assembly for the EMBLR anti-air missile launcher."
+		icon_state = "emblr_e"
+
+//-------------------------------------------------------
 // XM99 power/fuel cells
 
 /obj/item/ammo_magazine/plasma

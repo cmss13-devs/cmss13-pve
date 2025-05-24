@@ -174,6 +174,10 @@
 	set waitfor = 0
 	last_fired = world.time
 
+	// Safety check - prevent targeting atoms in containers (notably your equipment/inventory), stolen from the laser designator
+	if(target.z == 0)
+		return
+
 	var/to_firer = "You fire the [name]!"
 	if(internal_slots > 1)
 		to_firer += " [length(cylinder.contents)-1]/[internal_slots] grenades remaining."
