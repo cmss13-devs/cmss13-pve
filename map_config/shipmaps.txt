@@ -23,9 +23,6 @@ endmap
 map chapaev
 endmap
 
-map hms_placeholder
-endmap
-
 map hms_brynhild
 endmap
 
