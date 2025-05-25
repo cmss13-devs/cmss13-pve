@@ -1227,6 +1227,16 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
+/obj/item/attachable/scope/m79
+	name = "M79 sight"
+	desc = "You shouldn't be seeing this!"
+	icon_state = "m79_sight"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	attach_icon = null
+	hidden = TRUE
+
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
@@ -2955,7 +2965,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
-	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU
+	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
 
 /obj/item/attachable/attached_gun/grenade/New()
 	..()
@@ -3681,7 +3691,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bipod/New()
 	..()
 
-	delay_mod = FIRE_DELAY_TIER_11
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
@@ -3748,7 +3757,6 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
-	delay_mod = FIRE_DELAY_TIER_12
 	//if we are no longer on full auto, don't bother switching back to the old firemode
 	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
 		gun.do_toggle_firemode(user, null, old_firemode)
@@ -3795,8 +3803,6 @@ Defined in conflicts.dm of the #defines folder.
 				else if(istype(gun,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
 					fa_scatter_peak_mod = FULL_AUTO_SCATTER_PEAK_TIER_3
-				else
-					delay_mod = -FIRE_DELAY_TIER_12
 				gun.recalculate_attachment_bonuses()
 				gun.stop_fire()
 
@@ -3847,25 +3853,6 @@ Defined in conflicts.dm of the #defines folder.
 			return O2
 	return 0
 
-/obj/item/attachable/bipod/integral
-	name = "integral bipod"
-	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
-	icon_state = "bipod"
-	attach_icon = "integ_bipod_a"
-	slot = "under"
-	size_mod = 0
-	melee_mod = 0
-	flags_attach_features = ATTACH_ACTIVATION
-	attachment_action_type = /datum/action/item_action/toggle
-
-/obj/item/attachable/bipod/integral/New()
-	..()
-
-	delay_mod = 0
-	wield_delay_mod = WIELD_DELAY_FAST
-	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = -SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 //item actions for handling deployment to full auto.
 /datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
 	. = ..()
@@ -3892,6 +3879,25 @@ Defined in conflicts.dm of the #defines folder.
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
+/obj/item/attachable/bipod/integral
+	name = "integral bipod"
+	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
+	icon_state = "bipod"
+	attach_icon = "integ_bipod_a"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/integral/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/m60
 	name = "bipod"
