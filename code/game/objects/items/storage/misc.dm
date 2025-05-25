@@ -266,6 +266,7 @@
 /obj/item/storage/box/loadout/VP78_loadout
 	name = "VP78 storage box"
 	desc = "A slim storage case containing a loaded VP78 pistol and additional magazines."
+	storage_slots = 3	//Limited magazines thanks to how strong this is. Enough for a shoulder holster but little more than that
 	can_hold = list(/obj/item/weapon/gun/pistol/vp78, /obj/item/ammo_magazine/pistol/vp78)
 
 /obj/item/storage/box/loadout/VP78_loadout/fill_preset_inventory()
