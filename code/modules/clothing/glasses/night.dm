@@ -53,6 +53,18 @@
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
 
+/obj/item/clothing/glasses/night/thermal
+	name = "\improper K77 DP TAC-PACK thermal monocular"
+	gender = NEUTER
+	desc = "A stuttery monocular used to detect people through walls. Not commonly used due to the constant need to recharge the damned things and rarely detonating. Made by Davis Proprietary, no longer in production."
+	icon = 'icons/obj/items/clothing/glasses.dmi'
+	icon_state = "ghillie_goggles"
+	deactive_state = "ghillie_goggles"
+	vision_flags = SEE_MOBS
+	toggleable = TRUE
+	fullscreen_vision = null
+	actions_types = list(/datum/action/item_action/toggle)
+
 /obj/item/clothing/glasses/night/m42_night_goggles
 	name = "\improper M42 scout sight"
 	gender = NEUTER
