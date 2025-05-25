@@ -1227,6 +1227,16 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
+/obj/item/attachable/scope/m79
+	name = "M79 sight"
+	desc = "You shouldn't be seeing this!"
+	icon_state = "m79_sight"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	attach_icon = null
+	hidden = TRUE
+
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
@@ -2956,7 +2966,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
-	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU
+	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
 
 /obj/item/attachable/attached_gun/grenade/New()
 	..()
