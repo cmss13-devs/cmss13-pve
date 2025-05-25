@@ -256,7 +256,7 @@
 	..()
 
 //*****************************************************************************************************/
-//Commando-trained attached specialists. Royal Navy & Army Royal Engineers
+//Commando-trained attached specialists. Royal Navy, Army Royal Engineers & Army Royal Artillery
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/medic
@@ -436,7 +436,7 @@
 	assignment = JOB_TWE_RMC_SECTIONLEADER
 	rank = JOB_TWE_RMC_SECTIONLEADER
 	skills = /datum/skills/rmc/leader
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
 
 /datum/equipment_preset/royal_marine/leader/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -500,7 +500,7 @@
 	assignment = JOB_TWE_RMC_TROOPLEADER
 	rank = JOB_TWE_RMC_TROOPLEADER
 	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_ARMORY)
 
 /datum/equipment_preset/royal_marine/troopsergeant/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -548,7 +548,7 @@
 	assignment = JOB_TWE_RMC_LIEUTENANT
 	rank = JOB_TWE_RMC_LIEUTENANT
 	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
+	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_MEDICAL, ACCESS_TWE_ENGINEERING, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
 
 /datum/equipment_preset/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
 	//back

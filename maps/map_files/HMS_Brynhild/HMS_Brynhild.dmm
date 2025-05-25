@@ -21,6 +21,17 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/space)
+"ad" = (
+/obj/structure/machinery/door_control{
+	pixel_y = -7;
+	pixel_x = 7;
+	id = "squadarmoryexit";
+	name = "armoury passageway door-control";
+	req_one_access_txt = "301";
+	desc = "A remote control-switch for a door. This seems to only accept higher authority."
+	},
+/turf/closed/wall/almayer/aicore/white/reinforced,
+/area/hms_brynhild/armoury)
 "ae" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -180,6 +191,15 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
+"av" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "EVAblastdoorinner";
+	name = "eva preparation blast door control";
+	pixel_y = -6;
+	pixel_x = 7
+	},
+/turf/closed/wall/almayer/aicore/white/reinforced,
+/area/hms_brynhild/EVA_prep)
 "aw" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -224,6 +244,16 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
+"aA" = (
+/obj/item/paper/wy{
+	pixel_x = -5;
+	pixel_y = 5;
+	name = "GRENADES NOTICE!";
+	info = "<font face="Verdana" color=black>Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations.</font>";
+	anchored = 1
+	},
+/turf/closed/wall/almayer/aicore/white/hull,
+/area/hms_brynhild/armoury)
 "aB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -231,6 +261,9 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
+"aC" = (
+/turf/closed/wall/almayer/aicore/white/hull,
+/area/hms_brynhild/armoury_station)
 "aD" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/almayer/plate,
@@ -887,6 +920,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/Docking)
+"bP" = (
+/obj/structure/machinery/door_control{
+	pixel_y = -7;
+	pixel_x = 7;
+	id = "squadarmoryexit";
+	name = "armoury passageway door-control";
+	req_one_access_txt = "301";
+	desc = "A remote control-switch for a door. This seems to only accept higher authority."
+	},
+/turf/closed/wall/almayer/aicore/white,
+/area/hms_brynhild/prep_hallway)
 "bQ" = (
 /obj/structure/largecrate/supply/ammo/nsg23,
 /obj/effect/decal/cleanable/dirt{
@@ -2981,7 +3025,7 @@
 	layer = 2.52
 	},
 /obj/structure/target{
-	name = "sir arlelan";
+	name = "Sir Arlelan";
 	pixel_y = 24;
 	pixel_x = 5;
 	anchored = 1
@@ -3097,7 +3141,7 @@
 	pixel_x = -16;
 	layer = 2.81
 	},
-/turf/closed/wall/almayer/aicore/white/reinforced,
+/turf/closed/wall/almayer/aicore/white/hull,
 /area/hms_brynhild/armoury)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
@@ -3150,7 +3194,7 @@
 	pixel_y = -21;
 	pixel_x = 0;
 	id = "squadarmoryexit";
-	name = "armory passageway door-control";
+	name = "armoury passageway door-control";
 	desc = "A remote control-switch for a door. This seems to only accept higher authority.";
 	req_one_access_txt = "301"
 	},
@@ -4145,7 +4189,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
-	id = "EVAblastdoorinner";
+	id = "EVAblastdoorouter";
 	name = "eva preparation blast door control"
 	},
 /obj/structure/surface/table/reinforced/prison{
@@ -4242,8 +4286,8 @@
 	pixel_y = -4;
 	pixel_x = 10;
 	id = "squadarmory";
-	name = "armory door-control";
-	req_one_access_txt = "301";
+	name = "armoury door-control";
+	req_one_access_txt = "294";
 	desc = "A remote control-switch for a door. This seems to only accept higher authority."
 	},
 /turf/open/floor/kutjevo/colors,
@@ -11458,7 +11502,7 @@
 	pixel_y = 5;
 	layer = 5.2
 	},
-/turf/closed/wall/almayer/aicore/white/reinforced,
+/turf/closed/wall/almayer/aicore/white/hull,
 /area/hms_brynhild/armoury)
 "zQ" = (
 /obj/effect/decal/warning_stripes{
@@ -13902,7 +13946,7 @@
 /obj/structure/machinery/door/airlock/upp_grey{
 	name = "NCO's Mess";
 	dir = 2;
-	req_one_access_txt = "301;310"
+	req_one_access_txt = "301;306;310"
 	},
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/hms_brynhild/canteen)
@@ -15257,8 +15301,7 @@
 	pixel_x = -8
 	},
 /obj/structure/machinery/door/window{
-	req_access = list(302);
-	req_one_access = list()
+	req_access = list(294)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -18963,15 +19006,15 @@
 	pixel_y = 25;
 	pixel_x = -6;
 	id = "squadarmory";
-	name = "armory door-control";
-	req_one_access_txt = "301";
+	name = "armoury door-control";
+	req_one_access_txt = "294";
 	desc = "A remote control-switch for a door. This seems to only accept higher authority."
 	},
 /obj/structure/machinery/door_control{
 	pixel_y = 25;
 	pixel_x = 7;
 	id = "squadarmoryexit";
-	name = "armory passageway door-control";
+	name = "armoury passageway door-control";
 	req_one_access_txt = "301";
 	desc = "A remote control-switch for a door. This seems to only accept higher authority."
 	},
@@ -19552,7 +19595,7 @@
 /area/hms_brynhild/dorms)
 "Xv" = (
 /obj/structure/machinery/door/airlock/upp_grey{
-	req_one_access_txt = "301";
+	req_one_access_txt = "301;306;310";
 	name = "Troop Command Deck"
 	},
 /obj/structure/cable/heavyduty{
@@ -27685,12 +27728,12 @@ Jr
 mE
 Ft
 mE
-Jr
-Jr
-PG
-PG
-PG
-PG
+aC
+aC
+sw
+sw
+sw
+sw
 iY
 Nx
 CE
@@ -27829,13 +27872,13 @@ uO
 ny
 WY
 ZF
-PG
+sw
 gi
 AI
-PG
-PG
-PG
-PG
+sw
+sw
+sw
+sw
 ni
 aT
 Er
@@ -27974,10 +28017,10 @@ sf
 gx
 gn
 bm
-PG
+sw
 XK
 Ne
-PG
+sw
 Er
 vJ
 Er
@@ -28113,13 +28156,13 @@ YK
 ny
 WY
 WQ
-PG
+sw
 gs
 Ne
-PG
+sw
 ga
 AI
-PG
+sw
 Po
 RZ
 zo
@@ -28255,10 +28298,10 @@ YK
 lD
 jP
 sf
-PG
+sw
 km
 km
-PG
+sw
 km
 km
 zP
@@ -28390,14 +28433,14 @@ UH
 La
 td
 Er
-rW
+bP
 Jr
 jr
 YK
 lD
 jP
 ZF
-PG
+sw
 HZ
 Rh
 iR
@@ -28537,9 +28580,9 @@ fI
 Fh
 UI
 gF
-PG
-PG
-PG
+sw
+sw
+aA
 VE
 Yy
 rB
@@ -28971,7 +29014,7 @@ mI
 Jy
 Ws
 Ws
-PG
+ad
 iD
 vW
 cF
@@ -29965,7 +30008,7 @@ mn
 Qs
 KK
 KK
-oo
+av
 zp
 Er
 vJ
