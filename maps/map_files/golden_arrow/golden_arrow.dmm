@@ -192,16 +192,28 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aau" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/cryo_cells)
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 19;
+	pixel_x = -6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 6;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "aav" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/obj/effect/decal/strata_decals/grime/grime1{
-	dir = 8
+/obj/item/trash/snack_bowl{
+	pixel_x = -7;
+	pixel_y = 14;
+	name = "water bowl";
+	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
 	},
 /turf/open/floor/almayer/mono,
-/area/golden_arrow/cryo_cells)
+/area/golden_arrow/supply)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -241,6 +253,42 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/medal/silver/valor{
+	pixel_x = -8;
+	pixel_y = 1;
+	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon_state = "helmet";
+	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
+	pixel_y = 6;
+	pixel_x = 3;
+	name = "\improper damaged M10 pattern ballistic helmet"
+	},
+/obj/item/card/id/dogtag{
+	layer = 3.001;
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"aaC" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"aaD" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"aaE" = (
 /obj/structure/machinery/shower{
 	dir = 4
 	},
@@ -257,7 +305,7 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"aaC" = (
+"aaF" = (
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
 	},
@@ -267,7 +315,7 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"aaD" = (
+"aaG" = (
 /obj/structure/machinery/shower{
 	dir = 8
 	},
@@ -289,7 +337,7 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
-"aaE" = (
+"aaH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -304,7 +352,10 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"aaF" = (
+"aaI" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/medical)
+"aaJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
@@ -315,37 +366,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
-"aaG" = (
-/obj/structure/machinery/shower{
-	pixel_y = 16
-	},
-/obj/effect/decal/cleanable/cobweb2,
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1
-	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1
-	},
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 11
-	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1;
-	pixel_y = 11
-	},
-/obj/structure/curtain/open/shower{
-	pixel_y = -6
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
-"aaI" = (
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/medical)
 "aaK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -373,6 +393,34 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
+"aaN" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/curtain/open/shower{
+	pixel_y = -6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "aaO" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.5;
@@ -9660,11 +9708,8 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 6;
-	pixel_x = 9
+	pixel_y = 10;
+	pixel_x = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -16279,6 +16324,7 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -16631,6 +16677,13 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 9;
+	pixel_y = 10
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "gqG" = (
@@ -26603,7 +26656,7 @@ adW
 avj
 agG
 adt
-aaB
+aaE
 acO
 aRz
 aog
@@ -26782,7 +26835,7 @@ aBw
 atm
 aPf
 aQr
-aau
+aaC
 aog
 atY
 ayJ
@@ -26945,7 +26998,7 @@ aEG
 aEG
 aWh
 afI
-aaF
+aaJ
 aHd
 aog
 fSy
@@ -26957,7 +27010,7 @@ aNn
 aAs
 agh
 aUh
-aaC
+aaF
 ato
 aSu
 aog
@@ -27121,8 +27174,8 @@ aEG
 aEG
 aEG
 aWh
-aaG
-aaF
+aaN
+aaJ
 aHd
 aog
 ajq
@@ -27136,7 +27189,7 @@ aBw
 aGr
 aPf
 aNT
-aav
+aaD
 aog
 aCH
 adj
@@ -27309,9 +27362,9 @@ aht
 aCB
 aQm
 aBk
-aaE
+aaH
 aog
-aaD
+aaG
 aYH
 azq
 aog
@@ -31177,8 +31230,8 @@ aEG
 aEG
 vYW
 cqk
-vve
-aAu
+aaB
+aau
 afz
 aAu
 aoN
@@ -31355,7 +31408,7 @@ aEG
 vYW
 cqk
 vve
-aDj
+aav
 afz
 aAu
 aPB
