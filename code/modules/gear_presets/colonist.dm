@@ -192,12 +192,12 @@
 	//limbs
 	add_worker_shoe(new_human)
 
-/datum/equipment_preset/colonist/colonist/cook/spanish
+/datum/equipment_preset/colonist/cook/spanish
 	name = "LatAm Colonist, Blue-Collar (Cook)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/cook/japanese
+/datum/equipment_preset/colonist/cook/japanese
 	name = "TWE Colonist, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
@@ -225,12 +225,12 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
-/datum/equipment_preset/colonist/colonist/chef/spanish
+/datum/equipment_preset/colonist/chef/spanish
 	name = "LatAm Colonist, Blue-Collar (Chef)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/chef/japanese
+/datum/equipment_preset/colonist/chef/japanese
 	name = "TWE Colonist, Blue-Collar (Chef)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
@@ -258,12 +258,12 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 
-/datum/equipment_preset/colonist/colonist/priest/spanish
+/datum/equipment_preset/colonist/priest/spanish
 	name = "LatAm Colonist, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
-/datum/equipment_preset/colonist/colonist/priest/japanese
+/datum/equipment_preset/colonist/priest/japanese
 	name = "TWE Colonist, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
@@ -754,7 +754,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
 	//head
 	if(prob(85))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/black(new_human), WEAR_BODY)
 	var/obj/item/clothing/under/liaison_suit/black/uniform = new()
@@ -797,50 +797,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
 	//head
 	if(prob(25))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate, WEAR_HEAD)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/cyan, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/ballistic, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/solidstock, WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/vp70, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/vp70, WEAR_IN_BELT)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
-	add_worker_gloves(new_human)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70, WEAR_IN_R_STORE)
-
-/datum/equipment_preset/colonist/security/weyland/japanese
-	name = "TWE Civilian Security Guard, Wey-Yu"
-	ethnicity = JAPANESE_ETHNICITY
-	languages = list(LANGUAGE_JAPANESE)
-
-/datum/equipment_preset/colonist/security/weyland/tactical
-	name = "US Civilian Security Guard, Wey-Yu (Tactical SMG)"
-	assignment = "Weyland-Yutani Corporate Tactical Response Officer"
-
-/datum/equipment_preset/colonist/security/weyland/tactical/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
-	//head
-	if(prob(25))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate, WEAR_HEAD)
 	//uniform
@@ -881,7 +838,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY, WEAR_L_EAR)
 	//head
 	if(prob(25))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu, WEAR_HEAD)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/corporate, WEAR_HEAD)
 	//uniform
