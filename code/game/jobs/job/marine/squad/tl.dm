@@ -93,7 +93,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/sl
 	job_options = null
 	supervisors = "the troop commander and troop sergeant"
-	entry_message_body = "You are the Section Leader for a Rifle Section of Royal Marines Commando. Your task is leading the Rifle Section, utilize available ordnance and detach the Fire-Support Team of your Section as needed.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sergeants Mess.</b>"
+	entry_message_body = "You are the Section Leader for a Rifle Section of Royal Marines Commando. Your task is leading the Rifle Section, utilize available ordnance and detach the Fire-Support Team of your Section as needed.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
 
 /obj/effect/landmark/start/marine/tl/rmc
 	name = JOB_TWE_RMC_SECTIONLEADER

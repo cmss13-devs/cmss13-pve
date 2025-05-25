@@ -73,7 +73,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/snp
 	job_options = null
 	supervisors = "the team leader and troop commander"
-	entry_message_body = "You are a specially trained scout sniper in the Royal Marines Commando. Your task is to provide highly accurate fire support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sniper Workshop.</b>"
+	entry_message_body = "You are a specially trained scout-sniper in the Royal Marines Commando. Your task is to provide highly accurate fire support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
 
 /obj/effect/landmark/start/marine/specialist/rmc
 	name = JOB_TWE_RMC_MARKSMAN

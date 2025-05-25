@@ -71,7 +71,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/eng
 	job_options = null
 	supervisors = "the section leader and troop commander"
-	entry_message_body = "You are a commando-trained member of the Royal Engineers serving with the Royal Marines Commando forces. You're given the equipment and responsibility amongst the Rifle Section to build fortifications, reroute power lines, and handle all things engineering related in the field of battle. <br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sappers Workshop.</b>"
+	entry_message_body = "You are a commando-trained member of the Royal Engineers serving with the Royal Marines Commando forces. You're given the equipment and responsibility amongst the Rifle Section to build fortifications, reroute power lines, and handle all things engineering related in the field of battle. <br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
 
 /obj/effect/landmark/start/marine/engineer/rmc
 	name = JOB_TWE_RMC_ENGI
@@ -86,7 +86,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/mor
 	job_options = null
 	supervisors = "the troop commander and troop sergeant"
-	entry_message_body = "You are a commando-trained member of the Royal Artillery serving with the Royal Marines Commando forces. You're responsible for offering light fire support to the Troop via either a mortar or multiple-grenade-launcher weapon system. You will be working closely with the Troop Sergeant, who should be carrying your spare support-weapon ammo, and the Troop Commander as part of the Headquarters Section.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Mortar Workshop.</b>"
+	entry_message_body = "You are a commando-trained member of the Royal Artillery serving with the Royal Marines Commando forces. You're responsible for offering light fire support to the Troop via either a mortar or multiple-grenade-launcher weapon system. You will be working closely with the Troop Sergeant, who should be carrying your spare support-weapon ammo, and the Troop Commander as part of the Headquarters Section.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
 
 /obj/effect/landmark/start/marine/engineer/rmcmortar
 	name = JOB_TWE_RMC_BREACHER

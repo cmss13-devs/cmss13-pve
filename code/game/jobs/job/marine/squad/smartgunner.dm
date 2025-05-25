@@ -115,7 +115,7 @@
 	gear_preset = /datum/equipment_preset/uscm/rmc/sg
 	job_options = null
 	supervisors = "the team leader and troop commander"
-	entry_message_body = "You are a specialized automatic rifleman in the Royal Marines Commando. Your task is to provide heavy weapons support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Smartgunners Workshop.</b>"
+	entry_message_body = "You are a specialized automatic rifleman in the Royal Marines Commando. Your task is to provide heavy weapons support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
 
 /obj/effect/landmark/start/marine/smartgunner/rmc
 	name = JOB_TWE_RMC_SMARTGUNNER
