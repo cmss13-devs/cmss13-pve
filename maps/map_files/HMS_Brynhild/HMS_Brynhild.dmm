@@ -249,7 +249,7 @@
 	pixel_x = -5;
 	pixel_y = 5;
 	name = "GRENADES NOTICE!";
-	info = "<font face="Verdana" color=black>Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations.</font>";
+	info = "<p>Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations.</p>";
 	anchored = 1
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
