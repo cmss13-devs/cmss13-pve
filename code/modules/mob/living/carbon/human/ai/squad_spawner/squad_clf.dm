@@ -73,7 +73,7 @@
 		/datum/equipment_preset/rebel/medic = 1,
 	)
 
-/datum/human_ai_squad_preset/clf/ua/leader_escort
+/datum/human_ai_squad_preset/clf/ua/support
 	name = "UA Rebel, Medic Element"
 	ai_to_spawn = list(
 		/datum/equipment_preset/rebel/medic = 2,
