@@ -1227,6 +1227,16 @@ Defined in conflicts.dm of the #defines folder.
 	G.slowdown -= dynamic_aim_slowdown
 	..()
 
+/obj/item/attachable/scope/m79
+	name = "M79 sight"
+	desc = "You shouldn't be seeing this!"
+	icon_state = "m79_sight"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
+	attach_icon = null
+	hidden = TRUE
+
 /obj/item/attachable/scope/mini_iff
 	name = "B8 Smart-Scope"
 	icon_state = "iffbarrel"
@@ -2944,6 +2954,7 @@ Defined in conflicts.dm of the #defines folder.
 	slot = "under"
 	fire_sound = 'sound/weapons/gun_m92_attachable.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	var/caliber = "30mm"
 	var/grenade_pass_flags
 	var/list/loaded_grenades //list of grenade types loaded in the UGL
 	var/breech_open = FALSE // is the UGL open for loading?
@@ -2954,7 +2965,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/Initialize()
 	. = ..()
-	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU
+	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
 
 /obj/item/attachable/attached_gun/grenade/New()
 	..()
@@ -3014,7 +3025,7 @@ Defined in conflicts.dm of the #defines folder.
 	if(has_breech && !breech_open)
 		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
 		return
-	if(!istype(G) || istype(G, /obj/item/explosive/grenade/spawnergrenade/))
+	if(!istype(G) || (G.caliber != caliber))
 		to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
 		return
 	if(!G.active) //can't load live grenades
@@ -3162,6 +3173,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "An antique underbarrel grenade launcher. Adopted in 1969 for the M16, it was made obsolete centuries ago; how its ended up here is a mystery to you. Holds only one propriatary 40mm grenade, does not have modern IFF systems, it won't pass through your friends."
 	icon_state = "grenade-m203"
 	attach_icon = "grenade-m203_a"
+	caliber = "40x53mm"
 	current_rounds = 0
 	max_rounds = 1
 	max_range = 14
@@ -3176,6 +3188,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "type83"
 	attach_icon = "type83_a"
+	caliber = "40x103mm"
 	current_rounds = 0
 	max_rounds = 1
 	max_range = 14
@@ -3678,7 +3691,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/bipod/New()
 	..()
 
-	delay_mod = FIRE_DELAY_TIER_11
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
@@ -3745,7 +3757,6 @@ Defined in conflicts.dm of the #defines folder.
 	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
-	delay_mod = FIRE_DELAY_TIER_12
 	//if we are no longer on full auto, don't bother switching back to the old firemode
 	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
 		gun.do_toggle_firemode(user, null, old_firemode)
@@ -3792,8 +3803,6 @@ Defined in conflicts.dm of the #defines folder.
 				else if(istype(gun,/obj/item/weapon/gun/rifle/lmg))
 					delay_mod = 0
 					fa_scatter_peak_mod = FULL_AUTO_SCATTER_PEAK_TIER_3
-				else
-					delay_mod = -FIRE_DELAY_TIER_12
 				gun.recalculate_attachment_bonuses()
 				gun.stop_fire()
 
@@ -3844,25 +3853,6 @@ Defined in conflicts.dm of the #defines folder.
 			return O2
 	return 0
 
-/obj/item/attachable/bipod/integral
-	name = "integral bipod"
-	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
-	icon_state = "bipod"
-	attach_icon = "integ_bipod_a"
-	slot = "under"
-	size_mod = 0
-	melee_mod = 0
-	flags_attach_features = ATTACH_ACTIVATION
-	attachment_action_type = /datum/action/item_action/toggle
-
-/obj/item/attachable/bipod/integral/New()
-	..()
-
-	delay_mod = 0
-	wield_delay_mod = WIELD_DELAY_FAST
-	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = -SCATTER_AMOUNT_TIER_9
-	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 //item actions for handling deployment to full auto.
 /datum/action/item_action/bipod/toggle_full_auto_switch/New(Target, obj/item/holder)
 	. = ..()
@@ -3889,6 +3879,25 @@ Defined in conflicts.dm of the #defines folder.
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
+/obj/item/attachable/bipod/integral
+	name = "integral bipod"
+	desc = "An integral bipod for the M41AE2 Heavy Pulse Rifle."
+	icon_state = "bipod"
+	attach_icon = "integ_bipod_a"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/integral/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/m60
 	name = "bipod"

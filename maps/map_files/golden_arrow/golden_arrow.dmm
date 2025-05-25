@@ -192,23 +192,28 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
 "aau" = (
-/obj/item/tool/dumbbell/alt{
-	pixel_x = -7;
-	pixel_y = -11
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/turf/open/floor/almayer/edge/smooth/north,
-/area/golden_arrow/hangar)
+/obj/item/trash/cigbutt{
+	pixel_y = 19;
+	pixel_x = -6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 6;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
 "aav" = (
-/obj/structure/sign/poster{
-	pixel_x = 3;
-	icon_state = "poster32";
-	pixel_y = -1;
-	desc = "This poster depicts Lance McDonell, the winner of Mr. Universe 2170-74. Don't ask how you know that. He bears a striking resemblance to the 42nd President of the United States, Arnold Schwarzenegger.";
-	name = "Mr. Universe 2170-74";
-	serial_number = 32
+/obj/item/trash/snack_bowl{
+	pixel_x = -7;
+	pixel_y = 14;
+	name = "water bowl";
+	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
 	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/supply)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -248,10 +253,53 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aaB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/medal/silver/valor{
+	pixel_x = -8;
+	pixel_y = 1;
+	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon_state = "helmet";
+	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
+	pixel_y = 6;
+	pixel_x = 3;
+	name = "\improper damaged M10 pattern ballistic helmet"
+	},
+/obj/item/card/id/dogtag{
+	layer = 3.001;
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"aaC" = (
+/obj/item/tool/dumbbell/alt{
+	pixel_x = -7;
+	pixel_y = -11
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"aaD" = (
+/obj/structure/sign/poster{
+	pixel_x = 3;
+	icon_state = "poster32";
+	pixel_y = -1;
+	desc = "This poster depicts Lance McDonell, the winner of Mr. Universe 2170-74. Don't ask how you know that. He bears a striking resemblance to the 42nd President of the United States, Arnold Schwarzenegger.";
+	name = "Mr. Universe 2170-74";
+	serial_number = 32
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"aaE" = (
 /obj/item/trash/cigbutt,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aaC" = (
+"aaF" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
 	},
@@ -270,18 +318,21 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aaD" = (
+"aaG" = (
 /obj/item/reagent_container/food/drinks/cans/thirteenloko{
 	pixel_x = -12;
 	pixel_y = 20
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
-"aaE" = (
+"aaH" = (
 /obj/structure/punching_bag,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aaF" = (
+"aaI" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/medical)
+"aaJ" = (
 /obj/structure/sign/poster{
 	pixel_x = -5;
 	icon_state = "poster3";
@@ -290,33 +341,6 @@
 	name = "Lita"
 	},
 /turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
-"aaG" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/structure/prop{
-	name = "\improper uncomfy case";
-	desc = "A regular case you'd sit on. The label says it's full of steel sheets. Probably empty now.";
-	icon_state = "case";
-	icon = 'icons/obj/structures/crates.dmi';
-	can_buckle = 1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
-"aaH" = (
-/obj/structure/weightmachine/weightlifter,
-/turf/open/floor/almayer/edge/smooth,
-/area/golden_arrow/hangar)
-"aaI" = (
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/medical)
-"aaJ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/weightmachine/stacklifter,
-/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aaK" = (
 /obj/structure/disposalpipe/segment,
@@ -343,15 +367,17 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
 "aaN" = (
-/obj/structure/sign/poster{
-	pixel_x = 5;
-	pixel_y = 5;
-	icon_state = "poster12";
-	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that.";
-	name = "'Miss January' pinup";
-	serial_number = 12
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/closed/wall/almayer/outer,
+/obj/structure/prop{
+	name = "\improper uncomfy case";
+	desc = "A regular case you'd sit on. The label says it's full of steel sheets. Probably empty now.";
+	icon_state = "case";
+	icon = 'icons/obj/structures/crates.dmi';
+	can_buckle = 1
+	},
+/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aaO" = (
 /obj/structure/machinery/light/small/blue/golden_arrow{
@@ -361,12 +387,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/turf/open/floor/almayer,
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
@@ -389,23 +411,11 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaS" = (
-/obj/structure/sign/poster{
-	pixel_x = -6;
-	icon_state = "poster33";
-	pixel_y = -1;
-	desc = "This poster depicts Rockwell Jordan, the winner of Mr. Universe 2174-76. Don't ask how you know that.";
-	name = "Mr. Universe 2174-76";
-	serial_number = 33
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/sign/poster{
-	pixel_x = 5;
-	pixel_y = 3;
-	icon_state = "poster34";
-	name = "Mr. Universe 2176-present";
-	serial_number = 34;
-	desc = "This poster depicts Wilson Winslow, the current Mr. Universe reigning champion. Don't ask how you know that."
-	},
-/turf/closed/wall/almayer/outer,
+/obj/structure/weightmachine/stacklifter,
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
@@ -445,6 +455,54 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "aaX" = (
+/obj/structure/sign/poster{
+	pixel_x = 5;
+	pixel_y = 5;
+	icon_state = "poster12";
+	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that.";
+	name = "'Miss January' pinup";
+	serial_number = 12
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"aaY" = (
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/obj/item/trash/cigbutt,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"aaZ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"aba" = (
+/obj/structure/sign/poster{
+	pixel_x = -6;
+	icon_state = "poster33";
+	pixel_y = -1;
+	desc = "This poster depicts Rockwell Jordan, the winner of Mr. Universe 2174-76. Don't ask how you know that.";
+	name = "Mr. Universe 2174-76";
+	serial_number = 33
+	},
+/obj/structure/sign/poster{
+	pixel_x = 5;
+	pixel_y = 3;
+	icon_state = "poster34";
+	name = "Mr. Universe 2176-present";
+	serial_number = 34;
+	desc = "This poster depicts Wilson Winslow, the current Mr. Universe reigning champion. Don't ask how you know that."
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"abb" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"abc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = 1
@@ -458,16 +516,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
-"aaZ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"abb" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
 "abf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -9639,11 +9687,8 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 6;
-	pixel_x = 9
+	pixel_y = 10;
+	pixel_x = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -16222,6 +16267,7 @@
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -16572,6 +16618,13 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 9;
+	pixel_y = 10
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "gqG" = (
@@ -31095,8 +31148,8 @@ aEG
 aEG
 vYW
 cqk
-vve
-aAu
+aaB
+aau
 afz
 aAu
 aoN
@@ -31273,7 +31326,7 @@ aEG
 vYW
 cqk
 vve
-aDj
+aav
 afz
 aAu
 aPB
@@ -36059,9 +36112,9 @@ aVr
 azS
 amf
 aSw
-aaB
+aaE
+aaN
 aaG
-aaD
 aMz
 aWa
 aFf
@@ -36765,13 +36818,13 @@ axH
 aHu
 aVr
 aEF
-aaX
+abc
+aaY
 aaP
-aaH
 aph
 aVD
 aLy
-aau
+aaC
 aFf
 avh
 azF
@@ -37124,7 +37177,7 @@ aez
 aWa
 arJ
 aWa
-aaB
+aaE
 aWa
 aKa
 aKX
@@ -37297,11 +37350,11 @@ aHI
 adz
 aEG
 adz
+aba
 aaS
-aaJ
 ahT
-aaE
-aaC
+aaH
+aaF
 dJo
 fuL
 aZQ
@@ -37475,11 +37528,11 @@ aEG
 aEG
 aEG
 adz
-aaN
+aaX
 adz
-aaF
+aaJ
 adz
-aav
+aaD
 adz
 aJf
 aok

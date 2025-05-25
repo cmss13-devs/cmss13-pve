@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "M07 grenades can no longer kill people"
+  - bugfix: "M108 canister grenades are now the right caliber"

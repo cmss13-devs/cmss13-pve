@@ -23,45 +23,30 @@ const FactionContext = (props, context) => {
   const { data, act } = useBackend<BackendContext>();
   const [selectedToCreateFaction, setSelectedToCreateFaction] = useState('');
   return (
-    <Stack fill vertical>
-      <div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            paddingRight: '6px',
+    <Stack vertical>
+      <Stack.Item>
+        <Dropdown
+          selected={selectedToCreateFaction}
+          options={data.datumless_factions}
+          onSelected={(value) => setSelectedToCreateFaction(value)}
+        />
+        <Button
+          onClick={() => {
+            act('create_faction', {
+              faction: selectedToCreateFaction,
+            });
+            setSelectedToCreateFaction('');
           }}
         >
-          <Dropdown
-            selected={selectedToCreateFaction}
-            options={data.datumless_factions}
-            onSelected={(value) => setSelectedToCreateFaction(value)}
-          />
-        </div>
-        <div
-          style={{
-            float: 'left',
-            display: 'inline-block',
-            paddingRight: '6px',
-          }}
-        >
-          <Button
-            content="Create Faction Datum"
-            onClick={() => {
-              act('create_faction', {
-                faction: selectedToCreateFaction,
-              });
-              setSelectedToCreateFaction('');
-            }}
-          />
-        </div>
-      </div>
+          Create Faction Datum
+        </Button>
+      </Stack.Item>
       <Divider />
-      <div>
+      <Stack fill justify="space-around" align="baseline" wrap>
         {data.factions.map((faction) => (
           <ExistingFaction faction={faction} key={faction.ref} />
         ))}
-      </div>
+      </Stack>
     </Stack>
   );
 };
@@ -71,14 +56,7 @@ const ExistingFaction = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const faction: Faction = props.faction;
   return (
-    <div
-      style={{
-        float: 'left',
-        display: 'inline-block',
-        paddingRight: '6px',
-        paddingBottom: '6px',
-      }}
-    >
+    <Stack.Item width="300px">
       <Section title={`${faction.name}`}>
         Shoot To Kill: {faction.shoot_to_kill}
         <Dropdown
@@ -92,60 +70,54 @@ const ExistingFaction = (props) => {
             })
           }
         />
-        Friendly Factions: {faction.friendly_factions}
-        <>
-          <Button
-            content="Add"
-            onClick={() =>
-              act('add_friendly_faction', {
-                faction: faction.name,
-              })
-            }
-            style={{
-              float: 'left',
-            }}
-          />
-          <Button
-            content="Remove"
-            onClick={() =>
-              act('remove_friendly_faction', {
-                faction: faction.name,
-              })
-            }
-            style={{
-              float: 'left',
-            }}
-          />
-        </>
-        <br />
-        <br />
-        Neutral Factions: {faction.neutral_factions}
-        <>
-          <Button
-            content="Add"
-            onClick={() =>
-              act('add_neutral_faction', {
-                faction: faction.name,
-              })
-            }
-            style={{
-              float: 'left',
-            }}
-          />
-          <Button
-            content="Remove"
-            onClick={() =>
-              act('remove_neutral_faction', {
-                faction: faction.name,
-              })
-            }
-            style={{
-              float: 'left',
-            }}
-          />
-        </>
+        <Stack vertical>
+          <Stack.Item>
+            <Button
+              inline
+              onClick={() =>
+                act('add_friendly_faction', {
+                  faction: faction.name,
+                })
+              }
+            >
+              Add
+            </Button>
+            <Button
+              inline
+              onClick={() =>
+                act('remove_friendly_faction', {
+                  faction: faction.name,
+                })
+              }
+            >
+              Remove
+            </Button>
+            Friendly Factions: {faction.friendly_factions}
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              onClick={() =>
+                act('add_neutral_faction', {
+                  faction: faction.name,
+                })
+              }
+            >
+              Add
+            </Button>
+            <Button
+              onClick={() =>
+                act('remove_neutral_faction', {
+                  faction: faction.name,
+                })
+              }
+            >
+              Remove
+            </Button>
+            Neutral Factions: {faction.neutral_factions}
+          </Stack.Item>
+        </Stack>
       </Section>
-    </div>
+    </Stack.Item>
   );
 };
 
@@ -153,7 +125,9 @@ export const HumanFactionManager = (props) => {
   return (
     <Window width={1850} height={610} title="Human Faction Manager">
       <Window.Content>
-        <FactionContext />
+        <Section fill scrollable>
+          <FactionContext />
+        </Section>
       </Window.Content>
     </Window>
   );
