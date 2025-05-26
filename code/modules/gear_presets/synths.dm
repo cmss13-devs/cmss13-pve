@@ -668,7 +668,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/glass/reinforced/large_stack(new_human.back), WEAR_IN_R_STORE)
 
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/engi/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
@@ -717,7 +717,7 @@
 /datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/upp/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"

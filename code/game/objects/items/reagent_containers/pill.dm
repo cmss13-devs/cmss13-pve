@@ -293,7 +293,7 @@
 
 /obj/item/reagent_container/pill/iron
 	pill_desc = "An iron pill. Used to regenerate blood."
-	pill_initial_reagents = list("iron" = 15)
+	pill_initial_reagents = list("iron" = 15, "sugar" = 7.5)
 	pill_icon_class = "spac"
 
 /obj/item/reagent_container/pill/nitrogenwater

@@ -144,7 +144,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
@@ -381,7 +381,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 
@@ -524,7 +524,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader(new_human), WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
@@ -601,7 +601,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
@@ -635,6 +635,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
