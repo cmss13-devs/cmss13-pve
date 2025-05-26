@@ -2184,8 +2184,8 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		if(!ejection_turf)
 			return
 
-		var/obj/item/ammo_casing/found_casings = null
-		for(var/obj/item/ammo_casing/C in ejection_turf)
+		var/obj/effect/decal/ammo_casing/found_casings = null
+		for(var/obj/effect/decal/ammo_casing/C in ejection_turf)
 			if(C.type == ammo.shell_casing)
 				found_casings = C
 				break

@@ -196,7 +196,7 @@
 	accurate_range = 12
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_6
-	shell_casing = /obj/item/ammo_casing/cartridge
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/minigun/New()
 	..()
@@ -214,7 +214,7 @@
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
-	shell_casing = /obj/item/ammo_casing/cartridge
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/m60
 	name = "Mk70 bullet"
@@ -229,7 +229,7 @@
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	shell_casing = /obj/item/ammo_casing/cartridge
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"
