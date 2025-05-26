@@ -356,7 +356,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	tiles_with = list(/turf/closed/wall/mineral)
 	minimap_color = MINIMAP_BLACK
 
-/turf/closed/mineral/Initialize(mapload)
+/turf/closed/wall/mineral/Initialize(mapload)
 	. = ..()
 	for(var/direction in GLOB.cardinals)
 		var/turf/turf_to_check = get_step(src, direction)
