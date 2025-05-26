@@ -221,7 +221,7 @@
 		return PROCESS_KILL
 	if(move_delay + 1 > world.time)
 		return // driver present but they look to be moving so dont play idle
-	playsound(src, islist(idle_engine_sound) ? pick(idle_engine_sound) : idle_engine_sound, 50, FALSE, 10)
+	playsound(src, islist(idle_engine_sound) ? pick(idle_engine_sound) : idle_engine_sound, 25, FALSE, 10)
 	if(idle_interior_engine_sound && interior)
 		play_interior_sound(idle_interior_engine_sound, src, 20)
 
@@ -350,7 +350,7 @@
 	if(seat == VEHICLE_DRIVER)
 		STOP_PROCESSING(SSobj, src)
 		play_interior_sound(engine_off_interior_sound, src, 25)
-		playsound(get_turf(src), engine_off_sound, 60, FALSE, 20)
+		playsound(get_turf(src), engine_off_sound, 30, FALSE, 20)
 	return
 
 /obj/vehicle/multitile/set_seated_mob(seat, mob/living/M)
@@ -363,7 +363,7 @@
 	if(seat == VEHICLE_DRIVER && !(datum_flags & DF_ISPROCESSING))
 		START_PROCESSING(SSobj, src)
 		play_interior_sound(engine_on_interior_sound, src, 25)
-		playsound(get_turf(src), engine_on_sound, 60, FALSE, 20)
+		playsound(get_turf(src), engine_on_sound, 30, FALSE, 20)
 
 	seats[seat] = M
 
@@ -409,9 +409,9 @@
 	COOLDOWN_START(src, enginesound_cooldown, engine_sound_length)
 	///whether we play the outside sound for the interior or no
 	var/play_loc = interior_engine_sound ? src : get_turf(src)
-	playsound(play_loc, islist(engine_sound) ? pick(engine_sound) : engine_sound, 80, FALSE, 20)
+	playsound(play_loc, islist(engine_sound) ? pick(engine_sound) : engine_sound, 40, FALSE, 20)
 	if(interior_engine_sound)
-		play_interior_sound(islist(interior_engine_sound) ? pick(interior_engine_sound) : interior_engine_sound, src, 60, 1)
+		play_interior_sound(islist(interior_engine_sound) ? pick(interior_engine_sound) : interior_engine_sound, src, 30, 1)
 
 ///playsound_local identical args, use this when a sound should be played for the occupants.
 /obj/vehicle/multitile/proc/play_interior_sound(soundin, atom/origin, vol, random_freq, vol_cat = VOLUME_SFX, channel)
