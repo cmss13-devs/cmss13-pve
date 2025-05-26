@@ -243,6 +243,37 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
+/obj/item/storage/box/loadout/L54_loadout
+	name = "L54 storage box"
+	desc = "A slim storage case containing a loaded L54 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/l54, /obj/item/ammo_magazine/pistol/l54)
+
+/obj/item/storage/box/loadout/L54_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/l54())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/l54(src)
+
+/obj/item/storage/box/loadout/M9_loadout
+	name = "Berreta 92FS storage box"
+	desc = "A slim storage case containing a loaded M9 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/b92fs, /obj/item/ammo_magazine/pistol/b92fs)
+
+/obj/item/storage/box/loadout/M9_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
+
+/obj/item/storage/box/loadout/VP78_loadout
+	name = "VP78 storage box"
+	desc = "A slim storage case containing a loaded VP78 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/vp78, /obj/item/ammo_magazine/pistol/vp78)
+//Base VP's been nerfed in this PR, so it can come with full mags now. On par with the automag
+
+/obj/item/storage/box/loadout/VP78_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
+
 /obj/item/storage/box/loadout/bowie
 	name = "Bowie knife storage case"
 	desc = "A relatively large storage case containing a Bowie fighting knife and a fine leather sheath for it."

@@ -478,10 +478,12 @@
 /datum/ammo/bullet/rifle/mar40
 	name = "8.8x29 rifle bullet"
 	damage = 45
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16
 	name = "5.56x45 rifle bullet"
 	damage = 35
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16/ap
 	name = "armor-piercing 5.56x45 rifle bullet"
@@ -491,6 +493,7 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 //NSG TWE RMC AMMO
 
