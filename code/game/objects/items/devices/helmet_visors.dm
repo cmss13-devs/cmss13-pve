@@ -61,13 +61,18 @@
 
 /// Called by toggle_visor() to activate the visor's effects
 /obj/item/device/helmet_visor/proc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
-	current_mob_hud.add_hud_to(user, attached_helmet)
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+		current_mob_hud.add_hud_to(user, attached_helmet)
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
-	current_mob_hud.remove_hud_from(user, attached_helmet)
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
+		current_mob_hud.remove_hud_from(user, attached_helmet)
+
+/obj/item/device/helmet_visor/process(delta_time)
+	return PROCESS_KILL
 
 /// Called by /obj/item/clothing/head/helmet/marine/get_examine_text(mob/user) to get extra examine text for this visor
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
@@ -81,7 +86,14 @@
 /obj/item/device/helmet_visor/medical
 	name = "basic medical optic"
 	icon_state = "med_sight"
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
+	action_icon_string = "med_sight_down"
+	helmet_overlay = "med_sight_right"
+
+/obj/item/device/helmet_visor/medical/army
+	name = "medical optic"
+	icon_state = "med_sight"
+	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_MEDICAL_ADVANCED)
 	action_icon_string = "med_sight_down"
 	helmet_overlay = "med_sight_right"
 
@@ -267,7 +279,7 @@
 	if(!.)
 		return
 
-	if(user.client.view > 7)
+	if(user.client?.view > 7)
 		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
 		return FALSE
 

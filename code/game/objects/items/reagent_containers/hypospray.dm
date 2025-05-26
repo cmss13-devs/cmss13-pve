@@ -14,6 +14,7 @@
 	flags_atom = FPRINT|OPENCONTAINER
 	flags_equip_slot = SLOT_WAIST
 	flags_item = NOBLUDGEON
+	flags_human_ai = HEALING_ITEM
 	matter = list("plastic" = 1250, "glass" = 250)
 	transparent = TRUE
 	var/skilllock = SKILL_MEDICAL_TRAINED
@@ -39,7 +40,7 @@
 
 //Transfer amount switch//
 /obj/item/reagent_container/hypospray/clicked(mob/user, list/mods)
-	if(!isnull(possible_transfer_amounts) && mods["alt"]) //Autoinjectors aren't supposed to have toggleable transfer amounts.
+	if(!isnull(possible_transfer_amounts) && mods[ALT_CLICK]) //Autoinjectors aren't supposed to have toggleable transfer amounts.
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		amount_per_transfer_from_this = next_in_list(amount_per_transfer_from_this, possible_transfer_amounts)
@@ -197,8 +198,8 @@
 			return 0
 		if(!M.Adjacent(user))
 			return 0
-	if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-		user.apply_effect(3, WEAKEN)
+	if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+		user.apply_effect(0.5, WEAKEN)
 		M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 		msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)

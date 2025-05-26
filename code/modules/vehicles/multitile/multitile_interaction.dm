@@ -302,7 +302,7 @@
 	if(P.runtime_iff_group && get_target_lock(P.runtime_iff_group))
 		return
 
-	if(ammo_flags & AMMO_ANTISTRUCT|AMMO_ANTIVEHICLE)
+	if(ammo_flags & (AMMO_ANTISTRUCT|AMMO_ANTIVEHICLE))
 		// Multiplier based on tank railgun relationship, so might have to reconsider multiplier for AMMO_SIEGE in general
 		damage = floor(damage*ANTISTRUCT_DMG_MULT_TANK)
 	if(ammo_flags & AMMO_ACIDIC)
@@ -372,7 +372,7 @@
 	SIGNAL_HANDLER
 
 	var/list/modifiers = params2list(params)
-	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK]) //don't step on examine, point, etc
+	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5]) //don't step on examine, point, etc
 		return
 
 	var/seat = get_mob_seat(source)

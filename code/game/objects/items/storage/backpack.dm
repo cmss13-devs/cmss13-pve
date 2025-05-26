@@ -12,11 +12,6 @@
 	max_w_class = SIZE_MEDIUM
 	storage_slots = null
 	max_storage_space = 21
-	cant_hold = list(/obj/item/storage/firstaid, /obj/item/storage/toolkit)
-	can_hold_skill = list(
-		/obj/item/storage/firstaid = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		)
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
 	var/obj/item/card/id/locking_id = null
@@ -419,11 +414,9 @@
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
 	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
-	icon_state = "marinepack"
-	item_state = "marinepack"
+	icon_state = "imp"
+	item_state = "imp"
 	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
-	xeno_icon_state = "marinepack"
-	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
 /obj/item/storage/backpack/marine/standard
 	has_gamemode_skin = FALSE
@@ -625,7 +618,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/grenadepack/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/belt/grenade))
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/belt/grenade))
 		dump_into(W,user)
 	else
 		return ..()
@@ -673,6 +666,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "upp_g8pouch"
 	has_gamemode_skin = FALSE
 
+//this preset is for the US Army machinegunner.
+/obj/item/storage/backpack/general_belt/army
+	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
+//this fills the preset's ammo belt
+/obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+		new /obj/item/ammo_magazine/hpr_box/ap (src)
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
@@ -709,9 +710,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!ishuman(usr))
 		return
 	var/mob/living/carbon/human/H = usr
-	if(!skillcheck(H, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && H.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
-		to_chat(H, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
 
 	if(H.back != src)
 		to_chat(H, SPAN_WARNING("You must be wearing the cloak to activate it!"))
@@ -1050,7 +1048,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/smartguns = typesof(/obj/item/weapon/gun/smartgun)
 	var/list/training_guns = list(
 		/obj/item/weapon/gun/rifle/m41a/training,
-		/obj/item/weapon/gun/rifle/m4ra/training,
+		/obj/item/weapon/gun/rifle/m49a/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
 		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.

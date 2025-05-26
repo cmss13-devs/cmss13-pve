@@ -46,8 +46,8 @@
 #define format_frequency(f) "[floor((f) / 10)].[(f) % 10]"
 
 #define reverse_direction(direction) ( \
-											( dir & (NORTH|SOUTH) ? ~dir & (NORTH|SOUTH) : 0 ) | \
-											( dir & (EAST|WEST) ? ~dir & (EAST|WEST) : 0 ) \
+											( direction & (NORTH|SOUTH) ? ~direction & (NORTH|SOUTH) : 0 ) | \
+											( direction & (EAST|WEST) ? ~direction & (EAST|WEST) : 0 ) \
 										)
 
 // The sane, counter-clockwise angle to turn to get from /direction/ A to /direction/ B
@@ -403,7 +403,7 @@
 
 	if(key)
 		if(include_link && C)
-			. += "<a href='?priv_msg=[C.ckey]'>"
+			. += "<a href='byond://?priv_msg=[C.ckey]'>"
 
 		. += key
 
@@ -884,33 +884,33 @@ GLOBAL_DATUM(action_purple_power_up, /image)
 		if((user_flags|target_flags) & INTERRUPT_OUT_OF_RANGE && target && get_dist(busy_user, target) > max_dist)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_LCLICK && busy_user.clicked_something["left"] || \
-			target_is_mob && (target_flags & INTERRUPT_LCLICK && T.clicked_something["left"])
+		if(user_flags & INTERRUPT_LCLICK && busy_user.clicked_something[LEFT_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_LCLICK && T.clicked_something[LEFT_CLICK])
 		)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_RCLICK && busy_user.clicked_something["right"] || \
-			target_is_mob && (target_flags & INTERRUPT_RCLICK && T.clicked_something["right"])
+		if(user_flags & INTERRUPT_RCLICK && busy_user.clicked_something[RIGHT_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_RCLICK && T.clicked_something[RIGHT_CLICK])
 		)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_SHIFTCLICK && busy_user.clicked_something["left"] && busy_user.clicked_something["shift"] || \
-			target_is_mob && (target_flags & INTERRUPT_SHIFTCLICK && T.clicked_something["left"] && T.clicked_something["shift"])
+		if(user_flags & INTERRUPT_SHIFTCLICK && busy_user.clicked_something[LEFT_CLICK] && busy_user.clicked_something[SHIFT_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_SHIFTCLICK && T.clicked_something[LEFT_CLICK] && T.clicked_something[SHIFT_CLICK])
 		)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_ALTCLICK && busy_user.clicked_something["left"] && busy_user.clicked_something["alt"] || \
-			target_is_mob && (target_flags & INTERRUPT_ALTCLICK && T.clicked_something["left"] && T.clicked_something["alt"])
+		if(user_flags & INTERRUPT_ALTCLICK && busy_user.clicked_something[LEFT_CLICK] && busy_user.clicked_something[ALT_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_ALTCLICK && T.clicked_something[LEFT_CLICK] && T.clicked_something[ALT_CLICK])
 		)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_CTRLCLICK && busy_user.clicked_something["left"] && busy_user.clicked_something["ctrl"] || \
-			target_is_mob && (target_flags & INTERRUPT_CTRLCLICK && T.clicked_something["left"] && T.clicked_something["ctrl"])
+		if(user_flags & INTERRUPT_CTRLCLICK && busy_user.clicked_something[LEFT_CLICK] && busy_user.clicked_something[CTRL_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_CTRLCLICK && T.clicked_something[LEFT_CLICK] && T.clicked_something[CTRL_CLICK])
 		)
 			. = FALSE
 			break
-		if(user_flags & INTERRUPT_MIDDLECLICK && busy_user.clicked_something["middle"] || \
-			target_is_mob && (target_flags & INTERRUPT_MIDDLECLICK && T.clicked_something["middle"])
+		if(user_flags & INTERRUPT_MIDDLECLICK && busy_user.clicked_something[MIDDLE_CLICK] || \
+			target_is_mob && (target_flags & INTERRUPT_MIDDLECLICK && T.clicked_something[MIDDLE_CLICK])
 		)
 			. = FALSE
 			break
@@ -1484,7 +1484,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	if(isRemoteControlling(user))
 		return TRUE
 	// If the user is not a xeno (with active ability) with the shift click pref on, we examine. God forgive me for snowflake
-	if(user.client?.prefs && !(user.client?.prefs?.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK))
+	if(user.get_ability_mouse_key() == XENO_ABILITY_CLICK_SHIFT)
 		if(isxeno(user))
 			var/mob/living/carbon/xenomorph/X = user
 			if(X.selected_ability)
@@ -1734,6 +1734,57 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars,list(
 
 		if(NORTHWEST)
 			return list(NORTHWEST, NORTH, WEST)
+
+/// Makes a given dir cardinal. If the dir is non-cardinal, it will return both cardinal directions that make up the direction. Else, it will be a single-entry list returned.
+/proc/make_dir_cardinal(direction)
+	switch(direction)
+		if(NORTH)
+			return list(NORTH)
+
+		if(EAST)
+			return list(EAST)
+
+		if(SOUTH)
+			return list(SOUTH)
+
+		if(WEST)
+			return list(WEST)
+
+		if(NORTHEAST)
+			return list(NORTH, EAST)
+
+		if(SOUTHEAST)
+			return list(EAST, SOUTH)
+
+		if(SOUTHWEST)
+			return list(SOUTH, WEST)
+
+		if(NORTHWEST)
+			return list(NORTH, WEST)
+
+//straight directions get priority over diagonal directions in edge cases
+/proc/angle2dir4ai(angle)
+	if(isnull(angle))
+		return null
+	switch(angle) // 80/10 degrees diagonals/cardinals respectively
+		if (40 to 50)
+			return NORTHEAST
+		if (130 to 140)
+			return SOUTHEAST
+		if (220 to 230)
+			return SOUTHWEST
+		if (310 to 320)
+			return NORTHWEST
+		if (0 to 40)
+			return NORTH
+		if (50 to 130)
+			return EAST
+		if (140 to 220)
+			return SOUTH
+		if (230 to 310)
+			return WEST
+		else
+			return NORTH
 
 /// Returns TRUE if the target is somewhere that the game should not interact with if possible
 /// In this case, admin Zs and tutorial areas

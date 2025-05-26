@@ -2,24 +2,26 @@
 	name = ORIGIN_UPP
 	desc = "You were born in the Union of Progressive Peoples."
 
-/datum/origin/upp/generate_human_name(gender = MALE)
-	var/first_name
-	var/last_name
 
-	if(gender == MALE)
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_male_upp)]"
-	else
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_female_upp)]"
+/datum/origin/upp/cradle
+	name = ORIGIN_UPP_CRADLE
+	desc = "From one of the numerous member states of Earth, or from a heavily developed colony in the inner rim, you've been enthralled by Frontier adventure."
 
-	if(prob(35))
-		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
-	else
-		last_name = "[pick(GLOB.last_names_upp)]"
 
-	return first_name + " " + last_name
+/datum/origin/upp/frontier
+	name = ORIGIN_UPP_FRONTIERSMAN
+	desc = "You hail from the distant Far-Frontier of UPP space, growing up in sterile and tight quarters, never having seen the sun."
+
+
+/datum/origin/upp/volunteer
+	name = ORIGIN_UPP_VOLUNTEER
+	desc = "You escaped capitalist oppression and lies, passed all of the tests and background checks and are earning your citizenship with a member state, welcome aboard Comrade."
+
+
+/datum/origin/upp/excanc
+	name = ORIGIN_UPP_EXCANC
+	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War."
+
+/datum/origin/upp/canc
+	name = ORIGIN_CANC
+	desc = "You hail from the now extinct Chinese/Asian-Nation Cooperative, a once powerful colonizing entity, which was absorbed into the UPP after the disastrous Dog War. You fight on."

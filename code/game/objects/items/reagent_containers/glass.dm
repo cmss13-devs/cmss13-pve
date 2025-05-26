@@ -390,6 +390,14 @@
 	reagents.add_reagent("chloralhydrate", 30)
 	update_icon()
 
+/obj/item/reagent_container/glass/beaker/vial/iron
+	name = "iron vial"
+
+/obj/item/reagent_container/glass/beaker/vial/iron/Initialize()
+	. = ..()
+	reagents.add_reagent("iron", 30)
+	update_icon()
+
 /obj/item/reagent_container/glass/beaker/vial/random
 	var/tier
 
@@ -644,7 +652,7 @@
 	name = "janitorial bucket"
 	desc = "It's a large bucket that fits in a janitorial cart. Holds 500 units."
 	icon_state = "janibucket"
-	matter = list("metal" = 8000)	
+	matter = list("metal" = 8000)
 	w_class = SIZE_LARGE
 	volume = 500
 

@@ -160,6 +160,32 @@
 	if(wear_id)
 		msg += "[t_He] [t_is] [wear_id.get_examine_location(src, user, WEAR_ID, t_He, t_his, t_him, t_has, t_is)].\n"
 
+	//Inform user if their weapon's IFF will or won't hit src
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_with_gun = user
+		if(istype(human_with_gun.r_hand, /obj/item/weapon/gun) || istype(human_with_gun.l_hand, /obj/item/weapon/gun))
+			var/obj/item/weapon/gun/gun_with_iff
+			var/found_iff = FALSE
+			if(istype(human_with_gun.get_active_hand(), /obj/item/weapon/gun))
+				gun_with_iff = human_with_gun.get_active_hand()
+			else
+				gun_with_iff = human_with_gun.get_inactive_hand()
+			for(var/obj/item/attachable/attachment in gun_with_iff.contents)
+				if(locate(/datum/element/bullet_trait_iff) in attachment.traits_to_give)
+					found_iff = TRUE
+					break
+			if(gun_with_iff.traits_to_give != null)
+				if(gun_with_iff.traits_to_give.Find("iff") || LAZYFIND(gun_with_iff.traits_to_give,/datum/element/bullet_trait_iff))
+					found_iff = TRUE
+			if(gun_with_iff.in_chamber != null && gun_with_iff.in_chamber.bullet_traits != null )
+				if(gun_with_iff.in_chamber.bullet_traits.Find("iff") || LAZYFIND(gun_with_iff.in_chamber.bullet_traits,/datum/element/bullet_trait_iff))
+					found_iff = TRUE
+			if(found_iff)
+				if(get_target_lock(human_with_gun.get_id_faction_group()) > 0)
+					msg += SPAN_HELPFUL("[capitalize(t_He)] is compatible with your weapon's IFF.\n")
+				else
+					msg += SPAN_DANGER("[capitalize(t_He)] is not compatible with your weapon's IFF. They will be shot by your weapon!\n")
+
 	//Restraints
 	if(handcuffed)
 		msg += SPAN_ORANGE("[capitalize(t_his)] arms are restrained by [handcuffed].\n")
@@ -463,19 +489,19 @@
 
 			msg += "<span class = 'deptradio'>Criminal status:</span>"
 			if(!observer)
-				msg += "<a href='?src=\ref[src];criminal=1'>\[[criminal]\]</a>\n"
+				msg += "<a href='byond://?src=\ref[src];criminal=1'>\[[criminal]\]</a>\n"
 			else
 				msg += "\[[criminal]\]\n"
 
-			msg += "<span class = 'deptradio'>Security records:</span> <a href='?src=\ref[src];secrecord=1'>\[View\]</a>"
+			msg += "<span class = 'deptradio'>Security records:</span> <a href='byond://?src=\ref[src];secrecord=1'>\[View\]</a>"
 			if(!observer)
-				msg += " <a href='?src=\ref[src];secrecordadd=1'>\[Add comment\]</a>\n"
+				msg += " <a href='byond://?src=\ref[src];secrecordadd=1'>\[Add comment\]</a>\n"
 			else
 				msg += "\n"
 	if(hasHUD(user,"medical"))
 		var/cardcolor = holo_card_color
 		if(!cardcolor) cardcolor = "none"
-		msg += "<span class = 'deptradio'>Triage holo card:</span> <a href='?src=\ref[src];medholocard=1'>\[[cardcolor]\]</a> - "
+		msg += "<span class = 'deptradio'>Triage holo card:</span> <a href='byond://?src=\ref[src];medholocard=1'>\[[cardcolor]\]</a> - "
 
 		// scan reports
 		var/datum/data/record/N = null
@@ -488,15 +514,21 @@
 			if(!(N.fields["last_scan_time"]))
 				msg += "<span class = 'deptradio'>No scan report on record</span>\n"
 			else
-				msg += "<span class = 'deptradio'><a href='?src=\ref[src];scanreport=1'>Scan from [N.fields["last_scan_time"]]</a></span>\n"
+				msg += "<span class = 'deptradio'><a href='byond://?src=\ref[src];scanreport=1'>Scan from [N.fields["last_scan_time"]]</a></span>\n"
 
 
 	if(hasHUD(user,"squadleader"))
 		var/mob/living/carbon/human/H = user
 		if(assigned_squad) //examined mob is a marine in a squad
 			if(assigned_squad == H.assigned_squad) //same squad
-				msg += "<a href='?src=\ref[src];squadfireteam=1'>\[Manage Fireteams.\]</a>\n"
+				msg += "<a href='byond://?src=\ref[src];squadfireteam=1'>\[Manage Fireteams.\]</a>\n"
 
+	if(user.Adjacent(src) && ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		var/temp_msg = "<a href='byond://?src=\ref[src];check_status=1'>\[Check Status\]</a>"
+		if(skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC) && locate(/obj/item/clothing/accessory/stethoscope) in human_user.w_uniform)
+			temp_msg += " <a href='byond://?src=\ref[src];use_stethoscope=1'>\[Use Stethoscope\]</a>"
+		msg += "\n<span class = 'deptradio'>Medical actions: [temp_msg]\n"
 
 	if(print_flavor_text())
 		msg += "[print_flavor_text()]\n"

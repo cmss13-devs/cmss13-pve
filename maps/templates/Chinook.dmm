@@ -2975,7 +2975,7 @@
 /area/adminlevel/chinook/offices)
 "ln" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -11059,7 +11059,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/adminlevel/chinook/engineering)
 "SX" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/test_floor5,
 /area/adminlevel/chinook/engineering)
 "SY" = (
@@ -11385,7 +11385,7 @@
 /turf/open/floor/almayer/plate,
 /area/adminlevel/chinook)
 "Uu" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -11917,7 +11917,7 @@
 /turf/closed/wall/almayer,
 /area/adminlevel/chinook)
 "WG" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/machinery/light{
 	dir = 4
 	},

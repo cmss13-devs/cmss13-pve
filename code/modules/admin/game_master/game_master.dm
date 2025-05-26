@@ -27,9 +27,23 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(src)
 		open_game_master_panel(src)
 
+/client/proc/toggle_barricade_creation()
+	set name = "Toggle Barricade Creation"
+	set category = "Game Master.Flags"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(!SSticker.mode)
+		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
+		return
+
+	SSticker.mode.toggleable_flags ^= MODE_NO_MAKE_BARRICADES
+	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES) ? "disabled" : "enabled"] Barricade Creation.")
+
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
