@@ -240,12 +240,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(B.amount != 3)
 			to_chat(user, SPAN_WARNING("[B]s are being stored in [SPAN_HELPFUL("stacks of 3")] for convenience. Add to \the [B] stack to make it a stack of 3 before restocking."))
 			return
-	else if(istype(item_to_stock, /obj/item/clothing))
-		var/obj/item/clothing/remove_accessories = item_to_stock
-		for(var/obj/item/clothing/accessory/drop_on_ground in remove_accessories)
-			if(drop_on_ground.removable)
-				drop_on_ground.on_removed(user, drop_on_ground)
-				LAZYREMOVE(remove_accessories.accessories, drop_on_ground)
 	//M94 flare packs handling
 	else if(istype(item_to_stock, /obj/item/storage/box/flare))
 		var/obj/item/storage/box/flare/flare_pack = item_to_stock
@@ -353,7 +347,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(tele.phone_handset.loc != null) //it is not stowed. Prevent telephone dupe.
 			to_chat(user, SPAN_WARNING("You must put the [tele.phone_handset] back into [item_to_stock] before restocking."))
 			return FALSE
-
 	//Storage Accessories with their contents not directly in the atoms vars
 	else if(istype(item_to_stock, /obj/item/clothing/accessory/storage))
 		var/obj/item/clothing/accessory/storage/webbing_to_stock = item_to_stock
@@ -369,7 +362,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something inside it. Empty it before restocking."))
 			return FALSE
 		qdel(temp_container)
-
 		//Storage Accessories with their contents not directly in the atoms vars
 	else if(istype(item_to_stock, /obj/item/clothing/under))
 		var/obj/item/clothing/under/uniform_to_stock = item_to_stock
@@ -384,6 +376,16 @@ GLOBAL_LIST_EMPTY(vending_products)
 			to_chat(user, SPAN_WARNING("\The [item_to_stock] has something attached to it. Empty it before restocking."))
 			return FALSE
 		qdel(temp_uniform)
+
+	else if(istype(item_to_stock, /obj/item/clothing))
+		var/obj/item/clothing/remove_accessories = item_to_stock
+		for(var/obj/item/clothing/accessory/drop_on_ground in remove_accessories)
+			if(drop_on_ground.removable)
+				drop_on_ground.on_removed(user, drop_on_ground)
+				LAZYREMOVE(remove_accessories.accessories, drop_on_ground)
+			else
+				to_chat(user, SPAN_WARNING("\The [item_to_stock] has something attached to it that can't be removed."))
+				return FALSE
 
 	//catch all storage handling, from now on it only works on items that start empty!
 	else if(istype(item_to_stock, /obj/item/storage))
