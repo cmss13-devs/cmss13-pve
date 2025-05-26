@@ -56,7 +56,6 @@
 /obj/structure/machinery/computer/dropship_weapons/Destroy()
 	. = ..()
 	QDEL_NULL(firemission_envelope)
-	QDEL_NULL(tacmap)
 	UnregisterSignal(src, COMSIG_CAMERA_MAPNAME_ASSIGNED)
 
 /obj/structure/machinery/computer/dropship_weapons/proc/camera_mapname_update(source, value)
