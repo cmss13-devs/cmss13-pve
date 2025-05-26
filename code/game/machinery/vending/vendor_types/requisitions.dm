@@ -168,9 +168,6 @@
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/stock(obj/item/item_to_stock, mob/user)
-	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/m94) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
-		to_chat(user, SPAN_WARNING("Can't restock \the [item_to_stock]."))
-		return
 
 	//this below is in case we have subtype of an object, that SHOULD be treated as parent object (like /empty ammo box)
 	var/corrected_path = return_corresponding_type(item_to_stock.type)

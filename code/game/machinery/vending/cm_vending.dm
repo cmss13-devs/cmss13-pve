@@ -331,8 +331,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 				to_chat(user, SPAN_WARNING("\The [H] has something inside it. Empty it before restocking."))
 			return FALSE
 	//MREs
-	else if(istype(item_to_stock, /obj/item/storage/box/MRE))
-		var/obj/item/storage/box/MRE/mre_to_stock = item_to_stock
+	else if(istype(item_to_stock, /obj/item/storage/box/mre))
+		var/obj/item/storage/box/mre/mre_to_stock = item_to_stock
 		if(mre_to_stock.isopened)
 			to_chat(user, SPAN_WARNING("[item_to_stock] was already opened and isn't suitable for restocking."))
 			return
