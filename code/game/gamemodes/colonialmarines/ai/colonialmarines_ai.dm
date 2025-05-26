@@ -150,7 +150,7 @@ GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/wea
 		chosen_weapon = marine.client.prefs.personal_weapon
 	var/obj/item/storage/box/personalcase/pcase = new(get_turf(pick(GLOB.personal_weapon)))
 	pcase.assign_owner(marine.real_name)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), marine, SPAN_NOTICE("You remember that you've managed to snuck in your <b>heirloom weapon</b> aboard: <b>[marine.client.prefs.personal_weapon]</b>.")), 5 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), marine, SPAN_NOTICE("You remember that you've successfully snuck in your <b>heirloom weapon</b> aboard: <b>[marine.client.prefs.personal_weapon]</b>. It's in the armory")), 5 SECONDS)
 	var/the_gun = GLOB.personal_weapons_list[chosen_weapon]
 	new the_gun(pcase)
 	for(var/obj/effect/landmark/personal_weapon/PW in GLOB.personal_weapon)

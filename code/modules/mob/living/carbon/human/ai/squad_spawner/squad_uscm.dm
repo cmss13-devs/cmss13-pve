@@ -23,8 +23,8 @@
 	desc = "USCM patrol armed with 3 M41A rifle and an M56A2 smartgun, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/uscm/tl_equipped = 1,
-		/datum/equipment_preset/uscm/private_equipped = 2,
 		/datum/equipment_preset/uscm/smartgunner_equipped = 1,
+		/datum/equipment_preset/uscm/private_equipped = 2,
 	)
 
 /datum/human_ai_squad_preset/uscm/medical
@@ -39,7 +39,7 @@
 	desc = "Best utilized as defended objective, PltCo is not armed effectively."
 	ai_to_spawn = list(
 		/datum/equipment_preset/uscm_ship/so_equipped = 1,
-		/datum/equipment_preset/uscm/private_equipped = 2,
 		/datum/equipment_preset/uscm/leader_equipped = 1,
+		/datum/equipment_preset/uscm/private_equipped = 2,
 	)
 
