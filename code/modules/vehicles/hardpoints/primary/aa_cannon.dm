@@ -49,7 +49,7 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
-/obj/item/hardpoint/primary/autocannon/update_smoke_dir(datum/source, dir, newdir)
+/obj/item/hardpoint/primary/aa_quadcannon/update_smoke_dir(datum/source, dir, newdir)
 	switch(newdir)
 		if(SOUTH)
 			smoke_holder.particles.position = list(55, 70, 0)
