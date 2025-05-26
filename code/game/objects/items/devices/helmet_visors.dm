@@ -99,8 +99,14 @@
 	name = "medical optic"
 	icon_state = "med_sight"
 	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_MEDICAL_ADVANCED)
-	action_icon_string = "med_sight_down"
-	helmet_overlay = "med_sight_right"
+
+/obj/item/device/helmet_visor/medical/twe
+	name = "squad optic"
+	desc = "An insertable visor HUD into a standard RMC helmet."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	icon_state = "hud_sight"
+	action_icon_string = "hud_sight_down"
+	helmet_overlay = "hud_sight_right"
 
 /obj/item/device/helmet_visor/medical/advanced
 	name = "advanced medical optic"

@@ -3176,6 +3176,10 @@
 	pixel_y = 15;
 	pixel_x = 6
 	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -14;
+	pixel_y = 23
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "go" = (
@@ -4743,7 +4747,8 @@
 /obj/structure/machinery/cm_vending/sorted/medical{
 	pixel_y = 18;
 	density = 0;
-	hackable = 0
+	hackable = 0;
+	req_access = list(291)
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/medical)
@@ -10426,7 +10431,7 @@
 	},
 /mob/living/simple_animal/hostile/retaliate/goat{
 	name = "Matilda";
-	desc = "Someone found her and now she lives here."
+	desc = "One of the Welsh marines found her and her aboard. Seemingly unphased by tachyon shunts, or gets shoved into a hypersleep pod by someone."
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -10769,15 +10774,18 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/canteen)
 "wP" = (
-/obj/item/ammo_box/magazine/nade_box/rmc,
-/obj/item/ammo_box/magazine/nade_box/rmc,
-/obj/structure/largecrate/supply/ammo{
-	fill_from_loc = 1;
-	name = "grenade crate"
+/obj/item/ammo_box/magazine/nade_box/rmc{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/nade_box/rmc{
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/surface/rack,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "wQ" = (
@@ -11999,6 +12007,10 @@
 	pixel_y = 3
 	},
 /obj/structure/surface/table/reinforced/black,
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -10;
+	pixel_y = 10
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/colour_office)
 "AO" = (
@@ -15490,7 +15502,7 @@
 	pixel_x = -8
 	},
 /obj/structure/machinery/door/window{
-	req_access_txt = "294"
+	req_access_txt = "291"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -19476,7 +19488,7 @@
 "Wu" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/door/window{
-	req_access_txt = "294"
+	req_access_txt = "291"
 	},
 /obj/item/reagent_container/glass/minitank{
 	pixel_x = 8;
@@ -20680,11 +20692,6 @@
 /obj/item/roller_holder{
 	pixel_x = 11;
 	pixel_y = 2
-	},
-/obj/item/storage/surgical_case/rmc_surgical_case/full{
-	desc = "It's a mdedical case for storing basic surgical tools. This one was made specifically for Royal Marine Commandos, allowing them to suture their wounds during prolonged operations or perform emergency organ-repair surgeries.";
-	pixel_x = -11;
-	pixel_y = -2
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/medical)

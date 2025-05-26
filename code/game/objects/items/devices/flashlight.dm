@@ -548,6 +548,7 @@
 /obj/item/device/flashlight/flare/rmc
 	name = "L96 flare"
 	desc = "An RMC issued flare that burns in both the visual and ultraviolet spectrum. There are instructions on the side, it reads 'pull cord, make light'."
+	flame_tint = "#d79be5"
 	flame_base_tint = "#6f00ff"
 
 /obj/item/device/flashlight/slime

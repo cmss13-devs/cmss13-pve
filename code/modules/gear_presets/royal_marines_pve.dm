@@ -43,9 +43,9 @@
 	skills = /datum/skills/rmc/leader
 
 /datum/equipment_preset/uscm/rmc/sg
-	name = "Royal Marine Commando, Smartgunner"
+	name = "Royal Marine Commando, GPMG Gunner"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM HW(SG)"
+	role_comm_title = "RM HW(GPMG)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_SMARTGUNNER
 	rank = JOB_TWE_RMC_SMARTGUNNER
@@ -55,7 +55,7 @@
 	name = "Royal Marine Commando, Medical Assistant"
 	paygrades = list(PAY_SHORT_RMC2N = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM MA"
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_MEDICAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_MEDICAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDPREP)
 	assignment = JOB_TWE_RMC_MEDIC
 	rank = JOB_TWE_RMC_MEDIC
 	skills = /datum/skills/rmc/medic
@@ -64,7 +64,7 @@
 	name = "Royal Marine Commando, Assault Engineer"
 	paygrades = list(PAY_SHORT_RMC2E = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM AE"
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_ENGINEERING, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGPREP)
+	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_ENGINEERING, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGPREP)
 	assignment = JOB_TWE_RMC_ENGI
 	rank = JOB_TWE_RMC_ENGI
 	skills = /datum/skills/rmc/engi
@@ -78,9 +78,9 @@
 	rank = JOB_TWE_RMC_MARKSMAN
 
 /datum/equipment_preset/uscm/rmc/mor
-	name = "Royal Marine Commando, Light Gunner"
+	name = "Royal Marine Commando, Bombardment Specialist"
 	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM HW(GNR)"
+	role_comm_title = "RM HW(BMBRD)"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_HEVWEAPPREP)
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER

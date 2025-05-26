@@ -165,7 +165,7 @@
 /obj/structure/closet/secure_closet/rmc_troop_sergeant
 	name = "troop sergeant locker"
 	desc = "A secure storage unit for the senior sergeant of the Royal Marines Commando troop."
-	req_one_access = list(ACCESS_TWE_ARMORY, ACCESS_TWE_TLPREP)
+	req_access = list(ACCESS_TWE_ARMORY, ACCESS_TWE_TLPREP)
 
 /obj/structure/closet/secure_closet/rmc_troop_sergeant/Initialize()
 	. = ..()
@@ -177,7 +177,7 @@
 /obj/structure/closet/secure_closet/rmc_section_leader
 	name = "section leader locker"
 	desc = "A secure storage unit for the Royal Marines Commando section leader."
-	req_one_access = list(ACCESS_TWE_TLPREP)
+	req_access = list(ACCESS_TWE_TLPREP, ACCESS_TWE_SQUAD_ONE)
 
 /obj/structure/closet/secure_closet/rmc_section_leader/Initialize()
 	. = ..()
@@ -187,7 +187,7 @@
 /obj/structure/closet/secure_closet/rmc_smartgunner
 	name = "smartgunner locker"
 	desc = "A secure storage unit for a Royal Marines Commando smartgunner."
-	req_one_access = list(ACCESS_TWE_ARMORY, ACCESS_TWE_HEVWEAPPREP)
+	req_access = list(ACCESS_TWE_SQUAD_TWO, ACCESS_TWE_HEVWEAPPREP)
 
 /obj/structure/closet/secure_closet/rmc_smartgunner/Initialize()
 	. = ..()

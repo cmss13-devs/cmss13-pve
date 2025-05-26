@@ -756,6 +756,20 @@
 	new /obj/item/tool/extinguisher/mini(src)
 	new /obj/item/bodybag/cryobag(src)
 
+/obj/item/storage/pouch/first_responder/rmc
+	name = "advanced first aid pouch"
+	desc = "A pouch designed for carrying supplies to assist medical personnel and quickly respond to injuries on the battlefield without immediately treating them."
+	icon_state = "frt_med"
+	storage_slots = 5
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/reagent_container/blood,
+	)
+
 
 /obj/item/storage/pouch/vials
 	name = "vial pouch"

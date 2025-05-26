@@ -330,11 +330,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
 /obj/effect/essentials_set/rmcmedic
 	spawned_gear_list = list(
-		/obj/item/storage/firstaid/adv,
-		/obj/item/storage/firstaid/adv,
 		/obj/item/storage/surgical_case/rmc_surgical_case/full,
 		/obj/item/device/healthanalyzer,
-		/obj/item/roller/surgical,
 		/obj/item/tool/surgery/synthgraft,
 		/obj/item/device/flashlight/pen,
 		/obj/item/clothing/accessory/stethoscope,

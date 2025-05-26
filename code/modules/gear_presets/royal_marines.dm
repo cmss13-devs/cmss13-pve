@@ -74,10 +74,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/machinegun
-	name = "Royal Marine Commando, Smartgunner (Equipped)"
+	name = "Royal Marine Commando, GPMG Gunner (Equipped)"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA
-	role_comm_title = "RM HW(SG)"
+	role_comm_title = "RM HW(GPMG)"
 	assignment = JOB_TWE_RMC_SMARTGUNNER
 	rank = JOB_TWE_RMC_SMARTGUNNER
 	skills = /datum/skills/rmc/smartgun
@@ -370,10 +370,10 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/mortar
-	name = "Royal Marine Commando, Light Gunner (Equipped)"
+	name = "Royal Marine Commando, Bombardment Specialist (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM HW(MOR)"
+	role_comm_title = "RM HW(BMBRD)"
 	assignment = JOB_TWE_RMC_BREACHER
 	rank = JOB_TWE_RMC_BREACHER
 	skills = /datum/skills/rmc
@@ -413,7 +413,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/mortar/light
-	name = "Royal Marine Commando, Light Gunner (GL) (Equipped)"
+	name = "Royal Marine Commando, Bombardment Specialist (GL) (Equipped)"
 
 /datum/equipment_preset/royal_marine/mortar/light/load_gear(mob/living/carbon/human/new_human)
 	//uniform

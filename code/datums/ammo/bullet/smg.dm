@@ -27,7 +27,15 @@
 
 /datum/ammo/bullet/smg/squash
 	name = "squash-head submachinegun bullet"
-	penetration = ARMOR_PENETRATION_TIER_4
+	damage = 26
+	penetration = ARMOR_PENETRATION_TIER_3
+	effective_range_max = 7
+	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	max_range = 14
+
+/datum/ammo/bullet/smg/squash/on_hit_mob(mob/entity, obj/projectile/bullet)
+	..()
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
