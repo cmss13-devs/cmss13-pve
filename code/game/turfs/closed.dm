@@ -261,6 +261,7 @@
 	icon_state = "wall1"
 	icon = 'icons/turf/shuttle.dmi'
 	layer = ABOVE_TURF_LAYER
+	unacidable = TRUE
 
 /turf/closed/shuttle/add_debris_element()
 	AddElement(/datum/element/debris, DEBRIS_SPARKS, -40, 8, 1)
