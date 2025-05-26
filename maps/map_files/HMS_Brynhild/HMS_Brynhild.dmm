@@ -3959,6 +3959,15 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/Docking)
+"hP" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "squadarmory";
+	name = "\improper Gear Lockers";
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/medical)
 "hQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -27334,7 +27343,7 @@ BP
 BP
 BP
 BP
-BP
+iw
 iw
 iw
 iw
@@ -27476,9 +27485,9 @@ BP
 BP
 BP
 BP
-BP
 iw
 FN
+hP
 hC
 Uu
 rt
@@ -27618,9 +27627,9 @@ BP
 BP
 BP
 BP
-BP
 iw
 Ri
+hP
 tQ
 en
 FP
@@ -27754,8 +27763,8 @@ BP
 BP
 BP
 BP
-iw
-iw
+BP
+BP
 iw
 iw
 iw
