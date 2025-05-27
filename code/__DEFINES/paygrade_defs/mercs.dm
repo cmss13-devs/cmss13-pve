@@ -60,5 +60,8 @@
 /// BD-S, Bulwark
 #define PAY_SHORT_BD_B "BD-B"
 
+/// BD-S, Synth
+#define PAY_SHORT_BD_SY "BD-SY"
+
 /// BD-O, Officer
 #define PAY_SHORT_BD_O "BD-O"
