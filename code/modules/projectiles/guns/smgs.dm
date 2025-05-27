@@ -660,8 +660,8 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 
 /obj/item/weapon/gun/smg/fp9000/tactical
-	name = "\improper FN FP9000X TAC Submachinegun"
-	desc = "A variation on the standard FP9000 design, with it's internal mechanisms improved and given a new color scheme to sell at extortionate prices by Highfire Manufacturing. Whilst not as good as the official FP9000/2, it's still able to hold it's own."
+	name = "\improper FN FP9000-X TAC Submachinegun"
+	desc = "A variation on the standard FP9000 design, with it's internal mechanisms improved and given a new color scheme to sell at extortionate prices by Highfire Manufacturing. Whilst not as good as the official FP9000/2, it's still able to hold it's own and has a much more managable spread."
 	icon_state = "fp9000_tactical"
 	item_state = "fp9000_tactical"
 	random_spawn_rail = list(
@@ -675,11 +675,11 @@
 
 /obj/item/weapon/gun/smg/fp9000/tactical/set_gun_config_values()
 	..()
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
+	damage_mult = BULLET_DAMAGE_MULT_TIER_10 + BULLET_DAMAGE_MULT_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/smg/nailgun
