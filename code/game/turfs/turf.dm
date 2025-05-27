@@ -69,6 +69,8 @@
 	///hybrid lights affecting this turf
 	var/tmp/list/atom/movable/lighting_mask/hybrid_lights_affecting
 
+	vis_flags = VIS_INHERIT_PLANE
+
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // this doesn't parent call for optimisation reasons
 	if(flags_atom & INITIALIZED)
@@ -84,6 +86,15 @@
 	assemble_baseturfs()
 
 	levelupdate()
+
+	var/turf/above = SSmapping.get_turf_above(src)
+	var/turf/below = SSmapping.get_turf_below(src)
+
+	if(above)
+		above.multiz_new(dir=DOWN)
+
+	if(below)
+		below.multiz_new(dir=UP)
 
 	pass_flags = GLOB.pass_flags_cache[type]
 	if (isnull(pass_flags))
@@ -122,6 +133,16 @@
 	for(var/cleanable_type in cleanables)
 		var/obj/effect/decal/cleanable/C = cleanables[cleanable_type]
 		C.cleanup_cleanable()
+
+
+	var/turf/above = SSmapping.get_turf_above(src)
+	var/turf/below = SSmapping.get_turf_below(src)
+	if(above)
+		above.multiz_del(dir=DOWN)
+
+	if(below)
+		below.multiz_del(dir=UP)
+
 	if(force)
 		..()
 		//this will completely wipe turf state
@@ -133,6 +154,12 @@
 		return
 	flags_atom &= ~INITIALIZED
 	..()
+
+/turf/proc/multiz_new(dir)
+	return
+
+/turf/proc/multiz_del(dir)
+	return
 
 /turf/vv_get_dropdown()
 	. = ..()
@@ -875,3 +902,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(T.name != name)
 		T.name = name
 	return T
+
+/turf/proc/on_throw_end(atom/movable/thrown_atom)
+	return TRUE

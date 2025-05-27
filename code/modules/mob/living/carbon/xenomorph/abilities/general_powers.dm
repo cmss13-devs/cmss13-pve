@@ -678,7 +678,7 @@
 		qdel(structure_template)
 		return FALSE
 
-	var/queen_on_zlevel = !X.hive.living_xeno_queen || X.hive.living_xeno_queen.z == T.z
+	var/queen_on_zlevel = !X.hive.living_xeno_queen || SSmapping.same_z_map(X.hive.living_xeno_queen.z, T.z)
 	if(!queen_on_zlevel)
 		to_chat(X, SPAN_WARNING("Our link to the Queen is too weak here. She is on another world."))
 		qdel(structure_template)
@@ -925,6 +925,9 @@
 
 	if (world.time <= stabbing_xeno.next_move)
 		return FALSE
+
+	if(stabbing_xeno.z != targetted_atom.z)
+		return
 
 	var/distance = get_dist(stabbing_xeno, targetted_atom)
 	if(distance > 2)
