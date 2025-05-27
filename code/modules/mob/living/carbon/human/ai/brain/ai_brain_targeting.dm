@@ -78,6 +78,14 @@
 		if(potential_vehicle_target.health <= 0)
 			continue
 
+		var/all_broken = TRUE
+		for(var/obj/item/hardpoint/H in potential_vehicle_target.hardpoints)
+			if(H.can_take_damage())
+				all_broken = FALSE
+
+		if(all_broken)
+			continue
+
 		if(faction_check(potential_vehicle_target))
 			continue
 
