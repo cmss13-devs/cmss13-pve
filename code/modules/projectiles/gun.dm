@@ -2161,9 +2161,6 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	if(user.a_intent < INTENT_GRAB)
 		return TRUE
 
-	if(!skillcheck(user, SKILL_LEADERSHIP, SKILL_LEAD_MASTER)) // XO and CO
-		return TRUE
-
 	if(user.action_busy)
 		return
 

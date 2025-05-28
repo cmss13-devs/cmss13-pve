@@ -286,6 +286,9 @@
 		to_chat(user, SPAN_WARNING("You fumble with [src] like an idiot... Uncool."))
 		return FALSE
 
+/obj/item/weapon/gun/revolver/unique_action(mob/user)
+	if(fire_into_air(user))
+		return ..()
 
 //-------------------------------------------------------
 //M44 Revolver
@@ -598,10 +601,6 @@
 			to_chat(user, SPAN_WARNING("You need to attach a barrel first!"))
 			return
 	. = ..()
-
-/obj/item/weapon/gun/revolver/mateba/unique_action(mob/user)
-	if(fire_into_air(user))
-		return ..()
 
 /obj/item/weapon/gun/revolver/mateba/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 25, "muzzle_y" = 20,"rail_x" = 11, "rail_y" = 24, "under_x" = 19, "under_y" = 17, "stock_x" = 19, "stock_y" = 17, "special_x" = 23, "special_y" = 22)
