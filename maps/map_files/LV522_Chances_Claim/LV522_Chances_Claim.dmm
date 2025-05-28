@@ -6076,7 +6076,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522/outdoors/colony_streets/north_east_street)
 "ddH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/cargo_intake)
 "ddK" = (
@@ -14815,7 +14815,7 @@
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms)
 "hKv" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/darkpurplefull2,
 /area/lv522/indoors/a_block/dorms/glass)
 "hKE" = (
@@ -17951,7 +17951,7 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/colony_streets/central_streets)
 "juq" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/blue1,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
@@ -19880,7 +19880,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -20080,7 +20080,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522/outdoors/colony_streets/windbreaker/observation)
 "kso" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -21881,7 +21881,7 @@
 	pixel_y = 20
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jaccuzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	pixel_x = -5;
@@ -22431,7 +22431,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor)
 "lwZ" = (
-/obj/item/ammo_box/magazine/m4ra/ap/empty,
+/obj/item/ammo_box/magazine/m49a/ap/empty,
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
 	},
@@ -28238,7 +28238,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -37323,7 +37323,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Display synthetic"
 	},
-/obj/item/clothing/under/CM_uniform{
+/obj/item/clothing/under/cmb{
 	pixel_y = -2
 	},
 /obj/structure/window/reinforced,
@@ -42154,7 +42154,7 @@
 /turf/open/floor/almayer/w_y0/north,
 /area/lv522/atmos/way_in_command_centre)
 "vaB" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	name = "Suit Storage Unit";
 	pixel_x = 3
 	},
@@ -44952,7 +44952,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/casino)
 "wuB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -47568,7 +47568,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/hydro)
 "xKH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "xKO" = (

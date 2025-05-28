@@ -32,7 +32,7 @@
 	var/worn_state = null
 	var/hood_state //for uniforms with hoods.
 	drag_unequip = TRUE
-	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER)
+	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER, ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER)
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/uniform_monkey_0.dmi')
 	equip_sounds = list('sound/handling/clothing_on.ogg')
@@ -354,9 +354,10 @@
 	REMOVE_TRAIT(src, TRAIT_CLOTHING_HOOD, TRAIT_SOURCE_CLOTHING)
 
 /obj/item/clothing/under/attackby(obj/item/B, mob/user)
-	if(istype(B, /obj/item/attachable/bayonet) && (user.a_intent == INTENT_HARM))
+	if(istype(B,/obj/item/weapon/knife) && (user.a_intent == INTENT_HARM))
 		cut_suit_jacket(TRUE, user, B)
-
+	if(istype(B,/obj/item/attachable/bayonet) && (user.a_intent == INTENT_HARM))
+		cut_suit_jacket(TRUE, user, B)
 	else if(loc == user && istype(B, /obj/item/clothing/under) && src != B && ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.w_uniform == src)

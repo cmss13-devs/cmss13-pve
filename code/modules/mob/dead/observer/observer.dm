@@ -393,6 +393,12 @@
 				if("Xeno Status HUD")
 					H = GLOB.huds[MOB_HUD_XENO_STATUS]
 					H.add_hud_to(src, src)
+				if("Faction US Army HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_ARMY]
+					H.add_hud_to(src, src)
+				if("Faction USASF HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_NAVY]
+					H.add_hud_to(src, src)
 				if("Faction UPP HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_UPP]
 					H.add_hud_to(src, src)
@@ -866,7 +872,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/dat = GLOB.data_core.get_manifest()
 
-	show_browser(src, dat, "Crew Manifest", "manifest", "size=450x750")
+	show_browser(src, dat, "Crew Manifest", "manifest", width = 450, height = 750)
 
 /mob/dead/verb/hive_status()
 	set name = "Hive Status"
@@ -1254,11 +1260,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(ismob(target))
 		if(!jump_tag)
 			jump_tag = "FLW"
-		return "(<a href='?src=\ref[src];track=\ref[target]'>[jump_tag]</a>)"
+		return "(<a href='byond://?src=\ref[src];track=\ref[target]'>[jump_tag]</a>)"
 	if(!jump_tag)
 		jump_tag = "JMP"
 	var/turf/turf = get_turf(target)
-	return "(<a href='?src=\ref[src];jumptocoord=1;X=[turf.x];Y=[turf.y];Z=[turf.z]'>[jump_tag]</a>)"
+	return "(<a href='byond://?src=\ref[src];jumptocoord=1;X=[turf.x];Y=[turf.y];Z=[turf.z]'>[jump_tag]</a>)"
 
 /mob/dead/observer/point_to(atom/A in view())
 	if(!(client?.prefs?.toggles_chat & CHAT_DEAD))

@@ -55,6 +55,7 @@
 
 /datum/game_mode/colonialmarines/ai/post_setup()
 	set_lz_resin_allowed(TRUE)
+	spawn_personal_weapon()
 	return ..()
 
 /datum/game_mode/colonialmarines/ai/announce_bioscans()
@@ -85,13 +86,19 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE), \
+		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/upp = list(/datum/job/command/bridge/ai/upp = JOB_SO,\
 		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
+		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),
+		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_MARINE,\
+		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
+		/datum/job/command/bridge/ai/pmc = JOB_PMCPLAT_OW),\
 		/datum/squad/marine/forecon = list(/datum/job/marine/standard/ai/forecon = JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
@@ -101,4 +108,39 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
+												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+
+GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded, "Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
+											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\
+											"Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff, "4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack))
+
+/datum/game_mode/colonialmarines/ai/proc/spawn_personal_weapon()
+	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads
+	if(!squad || squad.faction != FACTION_MARINE)
+		return
+	if(!GLOB.personal_weapon.len)
+		return
+	var/mob/living/carbon/human/marine
+	var/chosen_weapon
+	var/iteration = 1 //10 marines with no personal weapon selected? its more likely than you think!
+	while(!chosen_weapon && iteration < 10)
+		iteration++
+		marine = pick(squad.marines_list)
+		if(!marine)
+			chosen_weapon = "bugged"
+			break
+		if(marine.job == JOB_SO) //get outta here butter bars
+			continue
+		if(!marine.client)
+			continue
+		if(marine.client.prefs.personal_weapon == "None")
+			continue
+		chosen_weapon = marine.client.prefs.personal_weapon
+	var/obj/item/storage/box/personalcase/pcase = new(get_turf(pick(GLOB.personal_weapon)))
+	pcase.assign_owner(marine.real_name)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), marine, SPAN_NOTICE("You remember that you've successfully snuck in your <b>heirloom weapon</b> aboard: <b>[marine.client.prefs.personal_weapon]</b>. It's in the armory")), 5 SECONDS)
+	var/the_gun = GLOB.personal_weapons_list[chosen_weapon]
+	new the_gun(pcase)
+	for(var/obj/effect/landmark/personal_weapon/PW in GLOB.personal_weapon)
+		qdel(PW)

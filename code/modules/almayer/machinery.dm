@@ -51,10 +51,6 @@
 	stat |= BROKEN
 	update_icon()
 
-/obj/structure/machinery/prop/almayer/computer/power_change()
-	..()
-	update_icon()
-
 /obj/structure/machinery/prop/almayer/computer/update_icon()
 	..()
 	icon_state = initial(icon_state)
@@ -164,12 +160,12 @@
 	if(!click_data)
 		return
 
-	if(!click_data["icon-x"] || !click_data["icon-y"])
+	if(!click_data[ICON_X] || !click_data[ICON_Y])
 		return
 
 	// Calculation to apply new pixelshift.
-	var/mouse_x = text2num(click_data["icon-x"])-1 // Ranging from 0 to 31
-	var/mouse_y = text2num(click_data["icon-y"])-1
+	var/mouse_x = text2num(click_data[ICON_X])-1 // Ranging from 0 to 31
+	var/mouse_y = text2num(click_data[ICON_Y])-1
 
 	var/cell_x = clamp(floor(mouse_x/CELLSIZE), 0, CELLS-1) // Ranging from 0 to CELLS-1
 	var/cell_y = clamp(floor(mouse_y/CELLSIZE), 0, CELLS-1)
@@ -180,14 +176,7 @@
 	new_item.pixel_y = (CELLSIZE * (cell_y + 0.5)) - center["y"]
 	new_item.pixel_z = 0
 
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal
-	icon_state = "h_maptable"
-	bound_width = 96
-	bound_height = 64
-	light_pixel_x = 32
-	light_pixel_y = 16
-
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/update_icon()
+/obj/structure/machinery/prop/almayer/CICmap/table/update_icon()
 	..()
 
 	overlays.Cut()
@@ -198,6 +187,39 @@
 		overlays += mutable_appearance(source_image.icon, source_image.icon_state)
 		light_power = 1
 	else return
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment
+	icon = 'icons/obj/structures/props/maptable.dmi'
+	icon_state = "v_maptable1"
+	bound_width = 32
+	bound_height = 32
+	light_pixel_x = 0
+	light_pixel_y = 0
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/one
+	icon_state = "v_maptable1"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/two
+	icon_state = "v_maptable2"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three
+	icon_state = "v_maptable3"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/four
+	icon_state = "v_maptable4"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five
+	icon_state = "v_maptable5"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/six
+	icon_state = "v_maptable6"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal
+	icon_state = "h_maptable"
+	bound_width = 96
+	bound_height = 64
+	light_pixel_x = 32
+	light_pixel_y = 16
 
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'

@@ -105,13 +105,13 @@
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 1.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] open using the [name]!"), SPAN_DANGER("You force [door] open with your [name]."))
-				door.Open()
+				door.open()
 		else
 			user.visible_message(SPAN_DANGER("[user] pushes [door] with their [name] to force it closed..."), SPAN_DANGER("You push [door] with your [name] to force it closed..."))
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] closed using the [name]!"), SPAN_DANGER("You force [door] closed with your [name]."))
-				door.Close()
+				door.close()
 
 /obj/item/weapon/wristblades/attack_self(mob/living/carbon/human/user)
 	..()
@@ -719,11 +719,11 @@
 	var/rare_weight = 5
 	var/ultra_rare_weight = 1
 
-/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, click_parameters)
+/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, /turf/fishing_allowed, click_parameters)
 	. = ..()
 	if(proximity_flag && !busy_fishing && isturf(target))
 		var/turf/T = target
-		if(!T.supports_fishing)
+		if(!T.fishing_allowed)
 			return
 		busy_fishing = TRUE
 		user.visible_message(SPAN_NOTICE("[user] starts aiming \the [src] at the water..."), SPAN_NOTICE("You prepare to catch something in the water..."), max_distance = 3)
@@ -813,7 +813,7 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
 	)
 
-	muzzle_flash = null // TO DO, add a decent one.
+	muzzleflash_iconstate = null // TO DO, add a decent one.
 
 	unacidable = TRUE
 	fire_sound = 'sound/effects/woodhit.ogg' // TODO: Decent THWOK noise.
@@ -902,7 +902,7 @@
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	icon_state = null
 	works_in_recharger = FALSE
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MAGENTA
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
@@ -1013,7 +1013,7 @@
 	fire_sound = 'sound/weapons/pulse3.ogg'
 	flags_equip_slot = SLOT_WAIST
 	ammo = /datum/ammo/energy/yautja/pistol
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	w_class = SIZE_MEDIUM
 	/// Max amount of shots
@@ -1139,7 +1139,7 @@
 	)
 	fire_sound = 'sound/weapons/pred_plasmacaster_fire.ogg'
 	ammo = /datum/ammo/energy/yautja/caster/stun
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	w_class = SIZE_HUGE
 	force = 0
@@ -1259,6 +1259,7 @@
 /obj/item/weapon/gun/energy/yautja/plasma_caster/dropped(mob/living/carbon/human/M)
 	playsound(M, 'sound/weapons/pred_plasmacaster_off.ogg', 15, 1)
 	to_chat(M, SPAN_NOTICE("You deactivate your plasma caster."))
+	update_mouse_pointer(M, FALSE)
 
 	var/datum/action/predator_action/bracer/caster/caster_action
 	for(caster_action as anything in M.actions)

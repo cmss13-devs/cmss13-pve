@@ -68,18 +68,9 @@
 	bypass_pamphlet_limit = TRUE
 
 /obj/item/pamphlet/skill/spotter/can_use(mob/living/carbon/human/user)
-	var/specialist_skill = user.skills.get_skill_level(SKILL_SPEC_WEAPONS)
-	if(specialist_skill == SKILL_SPEC_SNIPER)
-		to_chat(user, SPAN_WARNING("You don't need to use this! Give it to another marine to make them your spotter."))
-		return FALSE
-	if(specialist_skill != SKILL_SPEC_DEFAULT)
-		to_chat(user, SPAN_WARNING("You're already a specialist! Give this to a lesser trained marine."))
-		return FALSE
-
 	if(user.job != JOB_SQUAD_MARINE)
 		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
 		return
-
 	var/obj/item/card/id/ID = user.get_idcard()
 	if(!ID) //not wearing an ID
 		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
@@ -98,6 +89,35 @@
 	var/obj/item/card/id/ID = user.get_idcard()
 	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Spotter")
 	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Spotter")
+
+/obj/item/pamphlet/skill/loader
+	name = "Loader instructional pamphlet"
+	desc = "A pamphlet used to quickly impart vital knowledge. This one has the image of a rocket on it."
+	icon_state = "pamphlet_loader"
+	trait = /datum/character_trait/skills/loader
+	bypass_pamphlet_limit = TRUE
+
+/obj/item/pamphlet/skill/loader/can_use(mob/living/carbon/human/user)
+	if(user.job != JOB_SQUAD_MARINE)
+		to_chat(user, SPAN_WARNING("Only squad riflemen can use this."))
+		return
+	var/obj/item/card/id/ID = user.get_idcard()
+	if(!ID) //not wearing an ID
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+	if(!ID.check_biometrics(user))
+		to_chat(user, SPAN_WARNING("You should wear your ID before doing this."))
+		return FALSE
+	return ..()
+
+/obj/item/pamphlet/skill/loader/on_use(mob/living/carbon/human/user)
+	. = ..()
+	user.rank_fallback = "load"
+	user.hud_set_squad()
+
+	var/obj/item/card/id/ID = user.get_idcard()
+	ID.set_assignment((user.assigned_squad ? (user.assigned_squad.name + " ") : "") + "Loader")
+	GLOB.data_core.manifest_modify(user.real_name, WEAKREF(user), "Loader")
 
 /obj/item/pamphlet/skill/machinegunner
 	name = "heavy machinegunner instructional pamphlet"
@@ -166,7 +186,20 @@
 	desc = "This pamphlet was designed for Intelligence Officers operating on Earth to interact with the local populaces of the Latin American states, but only for IOs who managed to sleep through Dialects and Mannerisms Class."
 	trait = /datum/character_trait/language/spanish
 
+/obj/item/pamphlet/language/filipino
+	name = "Simples phrases in Filipino"
+	desc = "This pamphlet teaches you Filipino."
+	trait = /datum/character_trait/language/filipino
 
+/obj/item/pamphlet/language/french
+	name = "Simples phrases in French"
+	desc = "This pamphlet teaches you French."
+	trait = /datum/character_trait/language/french
+
+/obj/item/pamphlet/language/portuguese
+	name = "Simples phrases in Portuguese."
+	desc = "This pamphlet teaches you Portuguese."
+	trait = /datum/character_trait/language/portuguese
 
 //Restricted languages, spawnable for events.
 

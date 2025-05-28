@@ -6,12 +6,10 @@
 	name = "\improper Basira-Armstrong bolt-action hunting rifle"
 	desc = "Named after its eccentric designers, the Basira-Armstrong is a cheap but reliable civilian bolt-action rifle frequently found in the outer colonies. Despite its legally-mandated limited magazine capacity, its light weight and legendary accuracy makes it popular among hunters and competitive shooters."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
-	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
-	fire_sound = 'sound/weapons/gun_boltaction.ogg'
-	var/open_bolt_sound ='sound/weapons/handling/gun_boltaction_open.ogg'
-	var/close_bolt_sound ='sound/weapons/handling/gun_boltaction_close.ogg'
 	icon_state = "boltaction"
 	item_state = "hunting"
+	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
+
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_LARGE
 	force = 5
@@ -35,6 +33,12 @@
 	civilian_usable_override = TRUE
 	unacidable = TRUE // Like other 1-of-a-kind weapons, it can't be gotten rid of that fast
 	indestructible = TRUE
+
+	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	fire_sound = 'sound/weapons/gun_boltaction.ogg'
+	var/open_bolt_sound ='sound/weapons/handling/gun_boltaction_open.ogg'
+	var/close_bolt_sound ='sound/weapons/handling/gun_boltaction_close.ogg'
+
 	var/bolted = TRUE // FALSE IS OPEN, TRUE IS CLOSE
 	var/bolt_delay
 	var/recent_cycle //world.time to see when they last bolted it.
@@ -86,6 +90,7 @@
 	else
 		to_chat(M, SPAN_DANGER("You open the bolt of [src]!"))
 		playsound(get_turf(src), close_bolt_sound, 65, TRUE, 1)
+		eject_casing()
 		unload_chamber(M)
 
 	update_icon()

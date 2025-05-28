@@ -8,6 +8,7 @@
 	density = TRUE
 	anchored = TRUE
 	layer = BELOW_OBJ_LAYER
+	projectile_coverage = PROJECTILE_COVERAGE_MAX
 
 	req_access = list()
 	req_one_access = list()
@@ -73,12 +74,7 @@ IN_USE used for vending/denying
 	. = ..()
 	cm_build_inventory(get_listed_products(), 1, 3)
 
-/obj/structure/machinery/power_change(area/master_area = null)
-	..()
-	update_icon()
-
 /obj/structure/machinery/cm_vending/update_icon()
-
 	//restoring sprite to initial
 	overlays.Cut()
 	//icon_state = initial(icon_state) //shouldn't be needed but just in case
@@ -245,13 +241,13 @@ GLOBAL_LIST_EMPTY(vending_products)
 			to_chat(user, SPAN_WARNING("[B]s are being stored in [SPAN_HELPFUL("stacks of 3")] for convenience. Add to \the [B] stack to make it a stack of 3 before restocking."))
 			return
 	//M94 flare packs handling
-	else if(istype(item_to_stock, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/flare_pack = item_to_stock
+	else if(istype(item_to_stock, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/flare_pack = item_to_stock
 		if(length(flare_pack.contents) < flare_pack.max_storage_space)
 			to_chat(user, SPAN_WARNING("\The [item_to_stock] is not full."))
 			return
 		var/flare_type
-		if(istype(item_to_stock, /obj/item/storage/box/m94/signal))
+		if(istype(item_to_stock, /obj/item/storage/box/flare/signal))
 			flare_type = /obj/item/device/flashlight/flare/signal
 		else
 			flare_type = /obj/item/device/flashlight/flare
@@ -1199,9 +1195,9 @@ GLOBAL_LIST_INIT(cm_vending_gear_corresponding_types_list, list(
 		/obj/item/ammo_box/magazine/m39/incen/empty = /obj/item/ammo_box/magazine/m39/incen,
 		/obj/item/ammo_box/magazine/m39/le/empty = /obj/item/ammo_box/magazine/m39/le,
 
-		/obj/item/ammo_box/magazine/m4ra/empty = /obj/item/ammo_box/magazine/m4ra,
-		/obj/item/ammo_box/magazine/m4ra/ap/empty = /obj/item/ammo_box/magazine/m4ra/ap,
-		/obj/item/ammo_box/magazine/m4ra/incen/empty = /obj/item/ammo_box/magazine/m4ra/incen,
+		/obj/item/ammo_box/magazine/m49a/empty = /obj/item/ammo_box/magazine/m49a,
+		/obj/item/ammo_box/magazine/m49a/ap/empty = /obj/item/ammo_box/magazine/m49a/ap,
+		/obj/item/ammo_box/magazine/m49a/incen/empty = /obj/item/ammo_box/magazine/m49a/incen,
 
 		/obj/item/ammo_box/magazine/l42a/empty = /obj/item/ammo_box/magazine/l42a,
 		/obj/item/ammo_box/magazine/l42a/ap/empty = /obj/item/ammo_box/magazine/l42a/ap,

@@ -10,6 +10,7 @@
 /datum/ammo/bullet/shotgun/slug
 	name = "shotgun slug"
 	handful_state = "slug_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/greenshell
 
 	accurate_range = 7
 	max_range = 14
@@ -21,7 +22,7 @@
 	handful_state = "slug_shell"
 
 /datum/ammo/bullet/shotgun/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 8)
+	knockback(M, P, 4)
 
 /datum/ammo/bullet/shotgun/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
@@ -43,6 +44,7 @@
 	headshot_state = HEADSHOT_OVERLAY_LIGHT //It's not meant to kill people... but if you put it in your mouth, it will.
 	handful_state = "beanbag_slug"
 	icon_state = "beanbag"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
 	max_range = 12
 	shrapnel_chance = 0
@@ -62,6 +64,7 @@
 /datum/ammo/bullet/shotgun/incendiary
 	name = "incendiary slug"
 	handful_state = "incendiary_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	damage_type = BURN
 	flags_ammo_behavior = AMMO_BALLISTIC
 
@@ -79,7 +82,7 @@
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	burst(get_turf(M),P,damage_type)
-	knockback(M,P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/incendiary/on_hit_obj(obj/O,obj/projectile/P)
 	burst(get_turf(P),P,damage_type)
@@ -92,6 +95,7 @@
 	name = "flechette shell"
 	icon_state = "flechette"
 	handful_state = "flechette_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/flechette_spread
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
@@ -104,6 +108,9 @@
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	handful_state = "flechette_shell"
 	multiple_handful_name = TRUE
+
+/datum/ammo/bullet/shotgun/flechette/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 2)
 
 /datum/ammo/bullet/shotgun/flechette_spread
 	name = "additional flechette"
@@ -118,10 +125,14 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
+/datum/ammo/bullet/shotgun/flechette_spread/awesome
+	damage = 60
+
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
 	icon_state = "buckshot"
 	handful_state = "buckshot_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread
 
@@ -141,7 +152,7 @@
 	multiple_handful_name = TRUE
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 4)
+	knockback(M, P, 3)
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -160,7 +171,11 @@
 /datum/ammo/bullet/shotgun/buckshot/incendiary
 	name = "incendiary buckshot shell"
 	handful_state = "incen_buckshot"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
+	damage = 40
+	shell_speed = AMMO_SPEED_TIER_1
 
 /datum/ammo/bullet/shotgun/buckshot/incendiary/set_bullet_traits()
 	. = ..()
@@ -168,8 +183,8 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P)
+/datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
@@ -209,7 +224,7 @@
 	damage = 20
 
 /datum/ammo/bullet/shotgun/spread/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 4)
+	knockback(M, P, 3)
 /datum/ammo/bullet/shotgun/spread/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -233,6 +248,20 @@
 	damage = 90
 	firing_freq_offset = SOUND_FREQ_LOW
 
+/datum/ammo/bullet/shotgun/spread/incendiary
+	name = "additional incendiary buckshot"
+	damage = 40
+	shell_speed = AMMO_SPEED_TIER_1
+
+/datum/ammo/bullet/shotgun/spread/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
+/datum/ammo/bullet/shotgun/spread/incendiary/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P)
+
 /*
 					8 GAUGE SHOTGUN AMMO
 */
@@ -241,6 +270,7 @@
 	name = "heavy buckshot shell"
 	icon_state = "buckshot"
 	handful_state = "heavy_buckshot"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
@@ -253,7 +283,7 @@
 	pen_armor_punch = 0
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M,P,5)
+	knockback(M, P, 4)
 /datum/ammo/bullet/shotgun/heavy/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
@@ -333,6 +363,7 @@
 /datum/ammo/bullet/shotgun/heavy/slug
 	name = "heavy shotgun slug"
 	handful_state = "heavy_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/greenshell
 
 	accurate_range = 7
 	max_range = 17
@@ -341,7 +372,7 @@
 	damage_armor_punch = 2
 
 /datum/ammo/bullet/shotgun/heavy/slug/on_hit_mob(mob/M,obj/projectile/P)
-	knockback(M, P, 8)
+	knockback(M, P, 5)
 
 /datum/ammo/bullet/shotgun/heavy/slug/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
@@ -361,6 +392,7 @@
 /datum/ammo/bullet/shotgun/heavy/beanbag
 	name = "heavy beanbag slug"
 	icon_state = "beanbag"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	handful_state = "heavy_beanbag"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
@@ -383,6 +415,7 @@
 	name = "heavy flechette shell"
 	icon_state = "flechette"
 	handful_state = "heavy_flechette"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/flechette_spread
 

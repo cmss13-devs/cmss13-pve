@@ -1,4 +1,17 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/item/fishing_pole,
+/turf/open/gm/dirt,
+/area/varadero/exterior/monsoon)
+"aab" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/plating/icefloor/asteroidplating,
+/area/varadero/interior/maintenance/north)
+"aac" = (
+/obj/item/fishing_pole,
+/turf/open/gm/coast/west,
+/area/varadero/exterior/pontoon_beach)
 "aae" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva,
@@ -653,7 +666,7 @@
 /area/varadero/interior_protected/caves/central)
 "aBY" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "cartridge_2"
 	},
@@ -1248,7 +1261,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_1_1"
 	},
 /turf/open/floor/shiva/redfull,
@@ -1878,7 +1891,7 @@
 	name = "exotic bedsheet";
 	pixel_x = -1
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/wood,
 /area/varadero/interior/bunks)
 "bBt" = (
@@ -3111,7 +3124,7 @@
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "cBl" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/greenfull/west,
 /area/varadero/interior/hall_SE)
 "cBq" = (
@@ -3334,7 +3347,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/maintenance/north)
 "cLd" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/blue/southeast,
 /area/varadero/interior/administration)
 "cLz" = (
@@ -5572,7 +5585,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/interior_protected/caves/digsite)
 "esZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/hall_N)
 "etk" = (
@@ -7346,7 +7359,7 @@
 /turf/open/floor/bcircuit,
 /area/varadero/interior/maintenance/north)
 "fUJ" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/wood,
 /area/varadero/interior/hall_SE)
 "fVk" = (
@@ -7685,7 +7698,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/pontoon_beach)
 "gfm" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/red/northeast,
 /area/varadero/interior/security)
 "gfx" = (
@@ -8319,7 +8332,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/technical_storage)
 "gCH" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_5"
 	},
@@ -8597,7 +8610,7 @@
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "gNA" = (
@@ -14127,7 +14140,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/security)
 "lnm" = (
@@ -14226,7 +14239,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_3_1"
 	},
 /turf/open/floor/shiva/wredfull,
@@ -14827,7 +14840,7 @@
 /turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "lRz" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_7_1"
 	},
 /turf/open/floor/carpet,
@@ -15016,7 +15029,7 @@
 /turf/open/floor/shiva/snow_mat,
 /area/varadero/interior/maintenance)
 "lZU" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	dir = 10;
 	icon_state = "bshell_"
 	},
@@ -15606,7 +15619,7 @@
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty"
 	},
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "mzd" = (
@@ -15675,7 +15688,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_10_1"
 	},
 /turf/open/floor/carpet,
@@ -17737,7 +17750,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior_protected/maintenance/south)
 "olt" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_10"
 	},
 /turf/open/floor/plating/icefloor/asteroidplating,
@@ -18822,7 +18835,7 @@
 /obj/structure/bed/chair/comfy/orange{
 	dir = 8
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_3_1"
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
@@ -18926,7 +18939,7 @@
 "oYq" = (
 /obj/structure/surface/table,
 /obj/item/prop/helmetgarb/flair_uscm,
-/obj/item/storage/box/uscm_mre{
+/obj/item/storage/box/mre{
 	pixel_x = -4;
 	pixel_y = 13
 	},
@@ -20849,7 +20862,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_SE)
 "qwn" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_1_1"
 	},
 /obj/effect/decal/cleanable/blood,
@@ -21959,7 +21972,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/maintenance/north)
 "rmW" = (
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/bunks)
 "rnb" = (
@@ -22011,7 +22024,7 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "rpT" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_9_1"
 	},
 /turf/open/floor/wood,
@@ -23813,7 +23826,7 @@
 /area/varadero/interior/maintenance)
 "sKz" = (
 /obj/structure/closet/crate/supply,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/item/storage/beer_pack,
 /obj/item/spacecash,
 /turf/open/gm/dirt,
@@ -27061,7 +27074,7 @@
 /area/varadero/interior_protected/vessel)
 "vvz" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/weapon/gun/rifle/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/bunks)
 "vvA" = (
@@ -27231,7 +27244,7 @@
 /area/varadero/interior/hall_SE)
 "vCZ" = (
 /obj/structure/bedsheetbin,
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/structure/machinery/storm_siren{
 	dir = 4;
 	pixel_x = -3
@@ -27622,7 +27635,7 @@
 /turf/open/floor/wood,
 /area/varadero/interior/security)
 "vPK" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_8"
 	},
 /turf/open/floor/wood,
@@ -29241,7 +29254,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/security)
 "xgj" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/green/east,
 /area/varadero/interior/hall_SE)
 "xgq" = (
@@ -30152,14 +30165,14 @@
 /area/varadero/interior/chapel)
 "xXp" = (
 /obj/structure/closet/crate/ammo/alt,
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_x = 5
 	},
-/obj/item/ammo_magazine/rifle/m4ra{
+/obj/item/ammo_magazine/rifle/m49a{
 	pixel_y = -5;
 	pixel_x = -8
 	},
-/obj/item/ammo_magazine/rifle/m4ra,
+/obj/item/ammo_magazine/rifle/m49a,
 /obj/item/ammo_magazine/rifle{
 	pixel_x = 5;
 	pixel_y = 4
@@ -45758,7 +45771,7 @@ mMJ
 krO
 doL
 mWE
-cDG
+aab
 wHk
 qyw
 aVQ
@@ -46080,7 +46093,7 @@ vjs
 uod
 uod
 eGX
-hKK
+aac
 fLY
 cOZ
 uod
@@ -61465,7 +61478,7 @@ bEF
 fnU
 ghN
 bGU
-bGU
+aaa
 bGU
 bGU
 rvD

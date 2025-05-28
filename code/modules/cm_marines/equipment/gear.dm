@@ -160,38 +160,11 @@
 	icon_state = "apc"
 
 
-/obj/item/storage/box/uscm_mre
-	name = "\improper USCM meal ready to eat"
-	desc = "<B>Instructions:</B> Extract food using maximum firepower. Eat.\n\nOn the box is a picture of a shouting Squad Leader. \n\"YOU WILL EAT YOUR NUTRIENT GOO AND YOU WILL ENJOY IT, MAGGOT.\""
-	icon_state = "mre1"
-
-/obj/item/storage/box/uscm_mre/Initialize()
-	. = ..()
-	pixel_y = rand(-3,3)
-	pixel_x = rand(-3,3)
-	for(var/i = 0,i < 6,i++)
-		var/rand_type = rand(0,8)
-		switch(rand_type)
-			if(0 to 2)
-				new /obj/item/reagent_container/food/snacks/protein_pack(src)
-			if(3)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal1(src)
-			if(4)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal2(src)
-			if(5)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal3(src)
-			if(6)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal4(src)
-			if(7)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal5(src)
-			if(8)
-				new /obj/item/reagent_container/food/snacks/mre_pack/meal6(src)
-
-
 /obj/item/reagent_container/food/snacks/protein_pack
 	name = "stale USCM protein bar"
 	desc = "The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute."
 	icon_state = "yummers"
+	icon = 'icons/obj/items/food/mre_food/uscm.dmi'
 	filling_color = "#ED1169"
 	w_class = SIZE_TINY
 
@@ -203,8 +176,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
-	//trash = /obj/item/trash/USCMtray
-	trash = null
+	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
@@ -314,6 +286,65 @@
 	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
 
+//UPP Tray Food
+
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp
+	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food.dmi'
+	trash = /obj/item/trash/UPPtray
+	w_class = SIZE_SMALL
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
+	name = "\improper UPP Prepared Meal (Chow mein)"
+	desc = "Chow mein with imitation shrimp, two slightly overcooked spring rolls, some type of porridge and a small tofu cube."
+	icon_state = "upp_chowmein"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal2
+	name = "\improper UPP Prepared Meal (Banush)"
+	desc = "Ukrainian style Banush cornmeal stew, dried apricots, and a couple vienna sausages."
+	icon_state = "upp_banush"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal3
+	name = "\improper UPP Prepared Meal (Frankfurter)"
+	desc = "A large, juicy frankfurter with mashed potato, crispy potato pancakes and saurkraut."
+	icon_state = "upp_frankfurter"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal4
+	name = "\improper UPP Prepared Meal (Jiaozi)"
+	desc = "Four boiled dumplings, soy-vinegar dipping sauce, pickled red cucumbers and two rye biscuits."
+	icon_state = "upp_jiaozi"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal5
+	name = "\improper UPP Prepared Meal (Wursts)"
+	desc = "Two scoops of rice, two Weiner wursts, a tortilla with tomato sauce and a small bowl of Mungbean soup fill this tray."
+	icon_state = "upp_wursts"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal6
+	name = "\improper UPP Prepared Meal (Luncheon)"
+	desc = "A prepackaged meal for UPP troops with two scoops of slightly dried out rice, a square of some kind of luncheon meat, two carrot sticks, and a 'fruit' bar."
+	icon_state = "upp_luncheon"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal7
+	name = "\improper UPP Prepared Meal (Shrimp)"
+	desc = "A prepackaged meal for UPP troops that sports a greasy rice patty with bits of fake imitation shrimp and egg flavoring. Smells quite off. On the side there's a slightly soggy spring roll."
+	icon_state = "upp_shrimp"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8
+	name = "\improper UPP Prepared Meal (Cuban)"
+	desc = "A prepackaged meal for UPP troops containing Cuban rice with bland-ish eggs pieces, tomato sauce, potato salad, and a dry biscuit."
+	icon_state = "upp_cuban"
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9
+	name = "\improper UPP Prepared Meal (Meatballs)"
+	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
+	icon_state = "upp_meatballs"
+
 /obj/item/storage/box/pizza
 	name = "food delivery box"
 	desc = "A space-age food storage device, capable of keeping food extra fresh. Actually, it's just a box."
@@ -344,33 +375,6 @@
 	icon_state = "pamphlet"
 	info = "In loving memory of Cub Johnson."
 
-/obj/item/storage/box/wy_mre
-	name = "\improper Weyland-Yutani brand MRE"
-	desc = "A prepackaged, long-lasting food box from Weyland-Yutani Industries.\nOn the box is the Weyland-Yutani logo, with a slogan surrounding it: \n<b>WEYLAND-YUTANI. BUILDING BETTER LUNCHES</b>"
-	icon_state = "mre2"
-	can_hold = list(/obj/item/reagent_container/food/snacks)
-	w_class = SIZE_LARGE
-
-/obj/item/storage/box/wy_mre/Initialize()
-	. = ..()
-	pixel_y = rand(-3,3)
-	pixel_x = rand(-3,3)
-	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
-	new /obj/item/reagent_container/food/drinks/coffee(src)
-	var/randsnack = rand(0,5)
-	switch(randsnack)
-		if(0)
-			new /obj/item/reagent_container/food/snacks/cheesiehonkers(src)
-		if(1)
-			new /obj/item/reagent_container/food/snacks/no_raisin(src)
-		if(2)
-			new /obj/item/reagent_container/food/snacks/spacetwinkie(src)
-		if(4)
-			new /obj/item/reagent_container/food/snacks/cookie(src)
-		if(5)
-			new /obj/item/reagent_container/food/snacks/chocolatebar(src)
 
 /obj/item/device/overwatch_camera
 	name = "M5 Camera Gear"

@@ -13,6 +13,11 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aad" = (
+/obj/structure/surface/rack,
+/obj/item/fishing_pole,
+/turf/open/floor/vault,
+/area/lv624/lazarus/quartstorage)
 "aag" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
@@ -605,7 +610,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/sand_temple)
 "afk" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/central_barrens)
 "afl" = (
@@ -654,13 +659,13 @@
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "afL" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "afN" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "afR" = (
@@ -678,8 +683,8 @@
 /turf/closed/wall/cult,
 /area/lv624/ground/caves/south_west_caves)
 "afX" = (
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "afY" = (
@@ -744,7 +749,7 @@
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "agk" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/landmark/crap_item,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
@@ -805,7 +810,7 @@
 /area/lv624/ground/barrens/central_barrens)
 "agG" = (
 /obj/structure/surface/table,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/item/weapon/gun/pistol/holdout,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
@@ -827,12 +832,12 @@
 	flipped = 1
 	},
 /obj/item/ammo_magazine/pistol,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "agS" = (
 /obj/effect/decal/remains/human,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "agT" = (
@@ -851,8 +856,8 @@
 /area/lv624/ground/barrens/central_barrens)
 "agU" = (
 /obj/effect/decal/remains/human,
-/obj/item/ammo_casing,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "agV" = (
@@ -882,7 +887,7 @@
 /area/lv624/ground/barrens/west_barrens)
 "ahh" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "ahi" = (
@@ -897,7 +902,7 @@
 /obj/structure/surface/table/reinforced{
 	flipped = 1
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/landmark/good_item,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
@@ -906,7 +911,7 @@
 	flipped = 1
 	},
 /obj/effect/decal/remains/human,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "ahm" = (
@@ -921,7 +926,7 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "ahs" = (
 /obj/effect/decal/remains/human,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/effect/landmark/good_item,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
@@ -1954,18 +1959,14 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
 /area/lv624/ground/jungle/south_west_jungle)
 "auE" = (
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "auM" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/gm/dirtgrassborder/south,
 /area/lv624/ground/jungle/east_jungle)
 "auO" = (
-/obj/structure/machinery/door/airlock/almayer/medical/glass/colony{
-	name = "\improper River Snack Bar";
-	req_access_txt = "100";
-	req_one_access = null
-	},
+/obj/structure/curtain/red,
 /turf/open/floor/wood,
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "auP" = (
@@ -1974,7 +1975,7 @@
 /area/lv624/ground/river/west_river)
 "auZ" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "ave" = (
 /obj/structure/surface/rack,
@@ -2013,7 +2014,7 @@
 /area/lv624/ground/jungle/west_jungle/ceiling)
 "avw" = (
 /obj/effect/landmark/good_item,
-/turf/open/gm/river,
+/turf/open/gm/river/pool,
 /area/lv624/lazarus/fitness)
 "avy" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -3533,7 +3534,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/north_east_caves)
 "aPR" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	density = 0
 	},
 /turf/open/gm/grass/grass1,
@@ -4448,7 +4449,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/east_caves)
 "bgd" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_9_1"
 	},
 /turf/open/floor/white,
@@ -5549,7 +5550,7 @@
 /turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship_containers)
 "cAH" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/structure/machinery/colony_floodlight,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
@@ -5582,13 +5583,13 @@
 	current_rounds = 0;
 	pixel_y = -13
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_10_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "casing_9_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_6_1"
 	},
 /turf/open/gm/dirt,
@@ -5796,7 +5797,7 @@
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)
 "cPQ" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "casing_9_1"
 	},
 /turf/open/floor/white,
@@ -6014,7 +6015,7 @@
 /turf/open/floor/freezerfloor,
 /area/lv624/lazarus/toilet)
 "ddm" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating/warnplate/east,
 /area/lv624/ground/barrens/central_barrens)
 "ddS" = (
@@ -6849,7 +6850,7 @@
 /area/lv624/ground/river/east_river)
 "eiX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/under/CM_uniform,
+/obj/item/clothing/under/cmb,
 /obj/item/clothing/suit/armor/vest/security,
 /turf/open/floor/red,
 /area/lv624/lazarus/security)
@@ -8073,10 +8074,10 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_west_caves)
 "goz" = (
-/obj/structure/machinery/vending/cigarette,
 /obj/structure/machinery/light{
 	dir = 4
 	},
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/whiteblue/southeast,
 /area/lv624/lazarus/corporate_dome)
 "gpf" = (
@@ -9506,7 +9507,7 @@
 /turf/open/floor/dark,
 /area/lv624/ground/barrens/north_east_barrens/ceiling)
 "inu" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_3_1"
 	},
 /turf/open/floor/white,
@@ -10613,7 +10614,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/colony/north_nexus_road)
 "jRo" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_6_1"
 	},
 /obj/item/ammo_magazine/smg/mp5,
@@ -10812,7 +10813,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "kgB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "kgS" = (
@@ -11320,7 +11321,7 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/north_west_jungle)
 "kRI" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "casing_1_1"
 	},
 /obj/item/ammo_magazine/smg/mp5,
@@ -11391,7 +11392,7 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/lv624/ground/colony/north_tcomms_road)
 "kUQ" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_9_1"
 	},
 /turf/open/floor/whiteyellow,
@@ -11809,7 +11810,7 @@
 /turf/open/floor/redcorner/east,
 /area/lv624/lazarus/security)
 "lAI" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteblue/northwest,
 /area/lv624/lazarus/main_hall)
 "lAN" = (
@@ -12908,7 +12909,7 @@
 /area/lv624/ground/barrens/south_eastern_barrens)
 "ngX" = (
 /obj/item/weapon/gun/smg/mp5,
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_3_1"
 	},
 /obj/effect/decal/cleanable/blood/drip,
@@ -12981,7 +12982,7 @@
 /turf/open/floor/plating/warnplate/east,
 /area/lv624/lazarus/engineering)
 "nlB" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /obj/structure/machinery/colony_floodlight,
 /turf/open/floor/plating/warnplate/northwest,
 /area/lv624/ground/barrens/central_barrens)
@@ -13046,7 +13047,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/river/west_river)
 "nsA" = (
-/obj/structure/lz_sign/lazarus_sign{
+/obj/structure/lz_sign/lazarus_sign/damaged{
 	layer = 4
 	},
 /turf/open/gm/dirt,
@@ -13369,7 +13370,7 @@
 /turf/open/gm/coast/beachcorner/south_west,
 /area/lv624/ground/river/central_river)
 "nQC" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating/warnplate/west,
 /area/lv624/ground/barrens/central_barrens)
 "nQQ" = (
@@ -13970,13 +13971,13 @@
 /turf/open/gm/coast/north,
 /area/lv624/ground/caves/sand_temple)
 "oEc" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_6_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_3_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_10_1"
 	},
 /turf/open/gm/dirt,
@@ -16663,7 +16664,7 @@
 	dir = 1;
 	flipped = 1
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating/warnplate/north,
 /area/lv624/ground/barrens/central_barrens)
 "sqj" = (
@@ -17324,13 +17325,13 @@
 /turf/open/floor/whiteblue/northeast,
 /area/lv624/lazarus/corporate_dome)
 "tka" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "casing_9_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_6_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_9_1"
 	},
 /turf/open/gm/dirt,
@@ -18051,10 +18052,10 @@
 /turf/open/gm/grass/grass1,
 /area/lv624/ground/jungle/central_jungle)
 "ukh" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_6_1"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "casing_9_1"
 	},
 /turf/open/gm/dirt,
@@ -18237,8 +18238,8 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/jungle/east_jungle)
 "uux" = (
-/obj/structure/machinery/vending/cigarette/colony,
 /obj/effect/landmark/crap_item,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
 "uuE" = (
@@ -18509,7 +18510,7 @@
 /turf/open/gm/dirtgrassborder/west,
 /area/lv624/lazarus/landing_zones/lz2)
 "uSi" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	icon_state = "cartridge_10_1"
 	},
 /turf/open/floor/white,
@@ -19280,7 +19281,7 @@
 /turf/open/floor/whiteyellowfull/east,
 /area/lv624/ground/jungle/south_west_jungle/ceiling)
 "vSE" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/plating/warnplate,
 /area/lv624/ground/barrens/central_barrens)
 "vSG" = (
@@ -53362,7 +53363,7 @@ lyS
 ati
 ati
 ati
-wWs
+aad
 ati
 wWs
 ati
