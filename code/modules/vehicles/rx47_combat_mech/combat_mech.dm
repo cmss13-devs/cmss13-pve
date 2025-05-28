@@ -1,9 +1,10 @@
 #define MECH_LAYER MOB_LAYER + 0.12
 #define MECH_CORE_LAYER MOB_LAYER + 0.11
 /obj/vehicle/rx47_mech
-	name = "\improper RX47-CC Combat Mechsuit"
+	name = "\improper RX47 Combat Mechsuit"
 	icon = 'icons/obj/vehicles/wymech.dmi'
-	desc = "Yeehaw!"
+
+	desc = "A RX47 Combat Mechsuit, equipped with a 20mm Chaingun and support Cupola Smartgun. It has a flamethrower attached to the cupola unit."
 	icon_state = "wymech"
 	layer = MOB_LAYER
 	anchored = TRUE
@@ -15,6 +16,9 @@
 	maxhealth = 5000
 	pixel_x = -17
 	pixel_y = -2
+
+	heal_increment = 100
+
 	var/mouse_pointer = 'icons/effects/mouse_pointer/mecha_mouse.dmi'
 	var/wreckage = /obj/structure/combat_mech_wreckage
 	var/obj/item/weapon/gun/mech/gun_primary
@@ -23,11 +27,23 @@
 	var/gun_secondary_path = /obj/item/weapon/gun/mech/cupola
 
 	var/helmet_closed = FALSE
-	var/squad_color
+	var/has_cannon = FALSE
+	var/has_tow_launcher = FALSE
+	var/markings_color
+	var/markings_specialty
 
 /obj/vehicle/rx47_mech/siegebreaker
 	name = "\improper RX47-SB Combat Mechsuit"
+	desc = "A RX47-SB 'Siegebreaker' Combat Mechsuit, equipped with a 50mm IFF-locked explosive cannon and support Cupola Smartgun. It has a flamethrower attached to the cupola unit."
+	has_cannon = TRUE
 	gun_primary_path = /obj/item/weapon/gun/mech/cannon
+
+
+/obj/vehicle/rx47_mech/exterminator
+	name = "\improper RX47-EX Combat Mechsuit"
+	desc = "A RX47-EX 'Exterminator' Combat Mechsuit, equipped with a 20mm Chaingun and 50mm IFF-locked explosive cannon"
+	has_cannon = TRUE
+	gun_secondary_path = /obj/item/weapon/gun/mech/cannon
 
 //--------------------GENERAL PROCS-----------------
 
@@ -47,19 +63,30 @@
 	if(buckled_mob)
 		overlays += image(icon_state = "wymech_body_overlay", layer = MECH_CORE_LAYER)
 		overlays += image(icon_state = "wymech_legs", layer = MECH_CORE_LAYER)
-	if(helmet_closed)
-		overlays += image(icon_state = "wymech_helmet_closed", layer = MECH_LAYER)
+		if(helmet_closed)
+			overlays += image(icon_state = "wymech_helmet_closed", layer = MECH_LAYER)
+		else
+			overlays += image(icon_state = "wymech_helmet_open", layer = MECH_LAYER)
 	else
 		overlays += image(icon_state = "wymech_helmet_open", layer = MECH_LAYER)
 	overlays += image(icon_state = "wymech_arms", layer = MECH_LAYER)
-	overlays += image(icon_state = "wymech_weapon_left", layer = MECH_LAYER)
-	overlays += image(icon_state = "wymech_weapon_right", layer = MECH_LAYER)
-	if(squad_color)
-		overlays += image(icon_state = "wymech_markings_[squad_color]", layer = MECH_LAYER)
 
+	overlays += image(icon_state = "weapon_left", layer = MECH_LAYER)
+	if(has_cannon)
+		overlays += image(icon_state = "weapon_cannon", layer = MECH_LAYER)
+	else
+		overlays += image(icon_state = "weapon_right", layer = MECH_LAYER)
+	if(has_tow_launcher)
+		overlays += image(icon_state = "weapon_tow", layer = MECH_LAYER)
+
+	if(markings_color)
+		overlays += image(icon_state = "markings_c_[markings_color]", layer = MECH_LAYER)
+	if(markings_specialty)
+		overlays += image(icon_state = "markings_s_[markings_specialty]", layer = MECH_LAYER)
 
 /obj/vehicle/rx47_mech/Destroy()
 	if(buckled_mob)
+		clean_driver(buckled_mob)
 		unbuckle()
 	if(gun_primary)
 		qdel(gun_primary)
@@ -68,6 +95,12 @@
 		qdel(gun_secondary)
 		gun_secondary = null
 	return ..()
+
+/obj/vehicle/rx47_mech/unbuckle()
+	gun_primary.flags_gun_features |= GUN_TRIGGER_SAFETY
+	gun_secondary.flags_gun_features |= GUN_TRIGGER_SAFETY
+	clean_driver(buckled_mob)
+	. = ..()
 
 /obj/vehicle/rx47_mech/relaymove(mob/user, direction)
 	if(user.is_mob_incapacitated())
@@ -104,7 +137,7 @@
 /obj/vehicle/rx47_mech/Collide(atom/A)
 	if(ishumansynth_strict(A))
 		var/mob/living/carbon/human/human_hit = A
-		human_hit.KnockDown(3)
+		human_hit.KnockDown(1)
 		return
 
 	if(istype(A, /obj/structure/barricade/plasteel))
@@ -208,7 +241,7 @@
 	ADD_TRAIT(new_buckled_mob, TRAIT_INSIDE_VEHICLE, TRAIT_SOURCE_BUCKLE)
 	ADD_TRAIT(new_buckled_mob, TRAIT_FORCED_STANDING, TRAIT_SOURCE_BUCKLE)
 	RegisterSignal(new_buckled_mob, COMSIG_LIVING_FLAMER_CROSSED, PROC_REF(flamer_fire_crossed_callback))
-	update_mouse_pointer(buckled_mob, TRUE)
+	update_mouse_pointer(new_buckled_mob, TRUE)
 	rebuild_icon()
 	playsound(loc, 'sound/mecha/powerloader_buckle.ogg', 25)
 	if(.)
@@ -217,25 +250,30 @@
 		if(gun_primary && !new_buckled_mob.put_in_l_hand(gun_primary))
 			gun_primary.forceMove(src)
 			gun_primary.flags_gun_features |= GUN_TRIGGER_SAFETY
+			clean_driver(new_buckled_mob)
 			unbuckle()
 			return
 		else if(gun_secondary && !new_buckled_mob.put_in_r_hand(gun_secondary))
 			gun_secondary.forceMove(src)
-			gun_primary.flags_gun_features |= GUN_TRIGGER_SAFETY
+			gun_secondary.flags_gun_features |= GUN_TRIGGER_SAFETY
+			clean_driver(new_buckled_mob)
 			unbuckle()
 			return
 			//can't use the mech without both weapons equipped
 	else
 		move_delay = initial(move_delay)
+		clean_driver(new_buckled_mob)
 		new_buckled_mob.drop_held_items(TRUE) //drop the weapons when unbuckling
 
-/obj/vehicle/rx47_mech/unbuckle()
-	buckled_mob.layer = MOB_LAYER
-	REMOVE_TRAIT(buckled_mob, TRAIT_INSIDE_VEHICLE, TRAIT_SOURCE_BUCKLE)
-	REMOVE_TRAIT(buckled_mob, TRAIT_FORCED_STANDING, TRAIT_SOURCE_BUCKLE)
-	UnregisterSignal(buckled_mob, COMSIG_LIVING_FLAMER_CROSSED)
-	update_mouse_pointer(buckled_mob, FALSE)
-	..()
+/obj/vehicle/rx47_mech/proc/clean_driver(mob/driver)
+	if(!istype(driver))
+		return FALSE
+	driver.layer = MOB_LAYER
+	REMOVE_TRAIT(driver, TRAIT_INSIDE_VEHICLE, TRAIT_SOURCE_BUCKLE)
+	REMOVE_TRAIT(driver, TRAIT_FORCED_STANDING, TRAIT_SOURCE_BUCKLE)
+	UnregisterSignal(driver, COMSIG_LIVING_FLAMER_CROSSED)
+	update_mouse_pointer(driver, FALSE)
+	return TRUE
 
 /obj/vehicle/rx47_mech/proc/update_mouse_pointer(mob/user, new_cursor)
 	if(!user.client?.prefs.custom_cursors)
