@@ -221,7 +221,6 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_RELAXING = 1)
 
 /datum/reagent/blackpepper
 	name = "Black Pepper"
@@ -355,6 +354,15 @@
 	name = "Cherry Jelly"
 	id = "cherryjelly"
 	description = "Sweet jelly made from the cherry fruit."
+	reagent_state = LIQUID
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#801E28" // rgb: 128, 30, 40
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+
+/datum/reagent/strawberryjam
+	name = "Strawberry Jam"
+	id = "strawberryjam"
+	description = "Sweet jam made from strawberries."
 	reagent_state = LIQUID
 	nutriment_factor = 1 * REAGENTS_METABOLISM
 	color = "#801E28" // rgb: 128, 30, 40
