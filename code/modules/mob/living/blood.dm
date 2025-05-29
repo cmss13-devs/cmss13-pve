@@ -84,6 +84,25 @@
 	blood_volume = max(0, blood_volume - amount) // Removes blood if human
 	return 1
 
+/*Gets blood from mob to the container, preserving all data in it.
+/mob/living/carbon/proc/take_blood_and_other_reagents(obj/O, amount)
+	if(!O.reagents || amount <= 0 || blood_volume <= 0)
+		return
+
+	if(blood_volume < amount)
+		amount = blood_volume
+
+	var/b_id = get_blood_id()
+	if(!b_id)
+		return
+
+	var/list/data = get_blood_data()
+
+	O.reagents.add_reagent(b_id, amount, data)
+
+	blood_volume = max(0, blood_volume - amount) // Removes blood if human
+	return 1
+*/
 
 /mob/living/carbon/human/take_blood(obj/O, amount)
 	if(species && species.flags & NO_BLOOD)

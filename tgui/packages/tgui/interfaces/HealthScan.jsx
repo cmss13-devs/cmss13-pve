@@ -186,6 +186,29 @@ export const HealthScan = (props) => {
                 Change
               </Button>
             </LabeledList.Item>
+            <LabeledList.Item label="Buffered Scans">
+              <Button
+                inline
+                style={{ marginLeft: '2%' }}
+                onClick={() => act('previous_scan')}
+              >
+                Previous Scan
+              </Button>
+              <Button
+                inline
+                style={{ marginLeft: '2%' }}
+                onClick={() => act('print_scan')}
+              >
+                Print Scan
+              </Button>
+              <Button
+                inline
+                style={{ marginLeft: '2%' }}
+                onClick={() => act('next_scan')}
+              >
+                Next Scan
+              </Button>
+            </LabeledList.Item>
           </LabeledList>
         </Section>
         {limbs_damaged ? <ScannerLimbs /> : null}
