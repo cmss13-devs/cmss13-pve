@@ -612,7 +612,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78/rmc(new_human), WEAR_IN_ACCESSORY)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BELT)

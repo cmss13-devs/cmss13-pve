@@ -7985,7 +7985,7 @@
 /area/hms_brynhild/supply)
 "qm" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
-	name = "Hangar Bay Aft";
+	name = "Starboard Hangar Bay";
 	id = "golden arrow lz2";
 	roundstart_template = null
 	},
@@ -11715,7 +11715,10 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
 "zS" = (
-/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/gibraltar;
+	name = "Port Hangar Bay"
+	},
 /turf/open/floor/plating/prison,
 /area/hms_brynhild/hangar)
 "zT" = (
@@ -18030,7 +18033,7 @@
 "RM" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
-	network = list("Brynhild");
+	network = list("Brynhild", "Gibraltar");
 	pixel_x = -3;
 	pixel_y = 3
 	},
