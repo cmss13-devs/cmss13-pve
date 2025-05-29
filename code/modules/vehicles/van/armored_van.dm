@@ -1,6 +1,6 @@
 /obj/vehicle/multitile/van/armored
-	name = "\improper Armored UACG Van"
-	desc = "A colony van, uparmored and with a mounted M56 Cupola on the top. Commonly found use by the UACG. Entrances by the sides."
+	name = "\improper Armored Van"
+	desc = "A colony van, uparmored and with a mounted M56 Cupola on the top. Commonly found use by the UACG, though also found in the hands of insurgents. Entrances by the sides."
 
 	icon = 'icons/obj/vehicles/van.dmi'
 	icon_state = "van_armored_base"
