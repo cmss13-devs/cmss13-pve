@@ -1202,6 +1202,127 @@
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
 
+//huge digger
+/obj/structure/prop/invuln/dense/excavator
+	name = "Model 30 Light Excavator"
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice orange color."
+	icon = 'icons/obj/structures/props/digger.dmi'
+	icon_state = "digger_orange"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/excavator/gray
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice gray color."
+	icon_state = "digger_gray"
+
+/obj/structure/prop/invuln/dense/excavator/Initialize()
+	. = ..()
+	if(dir & (SOUTH|NORTH))
+		bound_height = 192
+		bound_width = 96
+	else
+		bound_height = 96
+		bound_width = 192
+
+/obj/structure/prop/invuln/dense/stasiscell
+	name = "stasis cell"
+	desc = "A large vat full of a viscous green liquid. You have a feeling it's not green apple flavored. It is empty and looks to be off."
+	icon = 'icons/obj/structures/machinery/cryogenics2.dmi'
+	icon_state = "cell"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/stasiscell/on
+	icon_state = "cell-on-empty"
+	desc = "A large vat full of a viscous green liquid. You have a feeling it's not green apple flavored. It is empty and appears to be on."
+
+/obj/structure/prop/invuln/dense/stasiscell/embryo1
+	icon_state = "cell-on-occupied-embryo"
+	desc = "A large vat full of a viscous green liquid. You can see some kind of embryo of sorts suspended in the middle of it."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage2
+	icon_state = "cell-on-occupied-stage2"
+	desc = "A large vat full of a viscous green liquid. The outline of an under-developed torso can be seen through it, floating in the center of the pod."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage3
+	icon_state = "cell-on-occupied-stage3"
+	desc = "A large vat full of a viscous green liquid. The outline of a human torso can be seen through it, floating in the center of the pod."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage4
+	icon_state = "cell-on-occupied-stage4"
+	desc = "A large vat full of a viscous green liquid. The shape of a fully formed human body can be seen from within."
+
+/obj/structure/prop/invuln/dense/stasiscell/stage4/alt
+	icon_state = "cell-on-occupied"
+
+/obj/structure/prop/invuln/dense/jockey
+	name = "jockey prop"
+
+/obj/structure/prop/invuln/dense/jockey/pod
+	name = "strange pod"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. It's empty."
+	icon = 'icons/obj/structures/props/engineers/engineerPod.dmi'
+	icon_state = "pod"
+	layer = ABOVE_MOB_LAYER
+	bound_width = 64
+	bound_height = 96
+
+/obj/structure/prop/invuln/dense/jockey/pod/flipped
+	icon_state = "pod_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken
+	icon_state = "pod_broken"
+	desc = "A massive alien pod made of some kind of unknown material. It looks as though as if it was grown rather than constructed. This one appears to be empty."
+
+/obj/structure/prop/invuln/dense/jockey/pod/broken/flipped
+	icon_state = "pod_broken_flipped"
+
+/obj/structure/prop/invuln/dense/jockey/console
+	name = "strange console"
+	desc = "A large console with three separate panels. You can't seem to interface with them."
+	icon = 'icons/obj/structures/props/engineers/consoles.dmi'
+	icon_state = "engineerconsole"
+	pixel_x = -1
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar
+	name = "strange pillar"
+	desc = "A strange alien pillar that extends at an angle."
+	icon = 'icons/obj/structures/props/engineers/pillarangled.dmi'
+	icon_state = "placeholder"
+	density = FALSE
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest1
+	icon_state = "engineerpillar_NW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/northwest/northwest2
+	icon_state = "engineerpillar_NW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest1
+	icon_state = "engineerpillar_SW1"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/southwest/southwest2
+	icon_state = "engineerpillar_SW2"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade
+	name = "strange pillar"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest1
+	icon_state = "engineerpillar_SW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/southwest2
+	icon_state = "engineerpillar_SW2fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest1
+	icon_state = "engineerpillar_NW1fade"
+
+/obj/structure/prop/invuln/dense/jockey/angled_pillar/fade/northwest2
+	icon_state = "engineerpillar_NW2fade"
+
 /obj/structure/prop/invuln/joey/normal
 	name = "Working Joe"
 	desc = "A Seegson-brand Working Joe, stored in the synthetic maintenance station to be called upon whenever you need. If only you had the keys."

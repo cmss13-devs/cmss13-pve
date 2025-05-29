@@ -388,7 +388,11 @@
 #define WALL_DEVWALL "devwall"
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
+#define WALL_BASALT "basalt_rock"
+#define WALL_LAVALAND "lavaland"
+#define WALL_LAVALAND_R "lavaland_r"
 #define WALL_AICORE "aiwall"
+#define WALL_JOCKEY "metal"
 #define WALL_UPP_GREEN "uppwall_interior"
 #define WALL_UPP_GREY "uppwall_interior"
 

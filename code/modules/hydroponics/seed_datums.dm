@@ -1010,6 +1010,25 @@ GLOBAL_LIST_EMPTY(gene_tag_masks)   // Gene obfuscation for delicious trial and 
 	yield = 4
 	potency = 0
 
+/datum/seed/mushroom/plump/doorknob
+	name = "doorknob"
+	seed_name = "door knob"
+	display_name = "doorknob mushrooms"
+	products = list(/obj/item/reagent_container/food/snacks/grown/mushroom/doorknob)
+
+/datum/seed/mushroom/plump/steelhelmet
+	name = "steelhelmet"
+	seed_name = "steel helmet"
+	display_name = "steel-helmet mushrooms"
+	products = list(/obj/item/reagent_container/food/snacks/grown/mushroom/steelhelmet)
+
+/datum/seed/mushroom/plump/bluewhale
+	name = "blue-whale"
+	seed_name = "blue whale"
+	display_name = "blue-whale mushrooms"
+	products = list(/obj/item/reagent_container/food/snacks/grown/mushroom/bluewhale)
+	chems = list("mushroom" = list(2,10), "water" = list(2,10))
+
 /datum/seed/mushroom/hallucinogenic
 	name = "reishi"
 	seed_name = "reishi"
