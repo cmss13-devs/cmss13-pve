@@ -677,6 +677,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 #define FULL_CAMO_ALPHA 15
 #define VISIBLE_CAMO_ALPHA 60
 
+#define FULL_PVE_CAMO_ALPHA 30
+#define VISIBLE_PVE_CAMO_ALPHA 75
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
@@ -686,10 +689,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	indestructible = TRUE
 	has_gamemode_skin = FALSE //same sprite for all gamemode.
 	var/camo_active = FALSE
-	var/full_camo_alpha = FULL_CAMO_ALPHA
+	var/full_camo_alpha = FULL_PVE_CAMO_ALPHA
 	var/incremental_shooting_camo_penalty = 30
-	var/current_camo = FULL_CAMO_ALPHA
-	var/visible_camo_alpha = VISIBLE_CAMO_ALPHA
+	var/current_camo = FULL_PVE_CAMO_ALPHA
+	var/visible_camo_alpha = VISIBLE_PVE_CAMO_ALPHA
 	var/camouflage_break = 8 SECONDS
 	var/cloak_cooldown
 	var/camo_message_delay = 2 SECONDS
@@ -841,6 +844,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	. = ..()
 	var/obj/item/storage/backpack/marine/satchel/scout_cloak/SC = holder_item
 	SC.camouflage()
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/invis
+	full_camo_alpha = FULL_CAMO_ALPHA
+	current_camo = FULL_CAMO_ALPHA
+	visible_camo_alpha = VISIBLE_CAMO_ALPHA
 
 // Welder Backpacks //
 
@@ -1117,12 +1125,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
 	max_storage_space = 21
 
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/weak
-	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This one is less effective than normal."
-	actions_types = null
+/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/invis
+	full_camo_alpha = FULL_CAMO_ALPHA
+	current_camo = FULL_CAMO_ALPHA
+	visible_camo_alpha = VISIBLE_CAMO_ALPHA
 
 #undef FULL_CAMO_ALPHA
 #undef VISIBLE_CAMO_ALPHA
+#undef FULL_PVE_CAMO_ALPHA
+#undef VISIBLE_PVE_CAMO_ALPHA
 
 //----------TWE SECTION----------
 /obj/item/storage/backpack/rmc

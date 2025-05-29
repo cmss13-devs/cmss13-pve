@@ -1,6 +1,9 @@
 #define FULL_CAMOUFLAGE_ALPHA 5
 #define VISIBLE_CAMOUFLAGE_ALPHA 60
 
+#define FULL_PVE_CAMOUFLAGE_ALPHA 20
+#define VISIBLE_PVE_CAMOUFLAGE_ALPHA 75
+
 /obj/item/clothing/suit/storage/marine/ghillie
 	name = "\improper M45 pattern ghillie armor"
 	desc = "A lightweight ghillie camouflage suit, used by USCM scout-snipers on recon missions. Very lightweight, but doesn't protect much."
@@ -15,10 +18,10 @@
 
 	var/camo_active = FALSE
 	var/hide_in_progress = FALSE
-	var/full_camo_alpha = FULL_CAMOUFLAGE_ALPHA
+	var/full_camo_alpha = FULL_PVE_CAMOUFLAGE_ALPHA
 	var/incremental_shooting_camo_penalty = 20
-	var/current_camo = FULL_CAMOUFLAGE_ALPHA
-	var/visible_camo_alpha = VISIBLE_CAMOUFLAGE_ALPHA
+	var/current_camo = FULL_PVE_CAMOUFLAGE_ALPHA
+	var/visible_camo_alpha = VISIBLE_PVE_CAMOUFLAGE_ALPHA
 	var/camouflage_break = 5 SECONDS
 	var/camouflage_enter_delay = 2 SECONDS
 	var/can_camo = TRUE
@@ -154,11 +157,23 @@
 	var/obj/item/clothing/suit/storage/marine/ghillie/GS = holder_item
 	GS.camouflage()
 
-#undef FULL_CAMOUFLAGE_ALPHA
-#undef VISIBLE_CAMOUFLAGE_ALPHA
+/obj/item/clothing/suit/storage/marine/ghillie/invis
+	full_camo_alpha = FULL_CAMOUFLAGE_ALPHA
+	current_camo = FULL_CAMOUFLAGE_ALPHA
+	visible_camo_alpha = VISIBLE_CAMOUFLAGE_ALPHA
 
 /obj/item/clothing/suit/storage/marine/ghillie/forecon
 	name = "UDEP Thermal Poncho"
 	desc = "UDEP or the Ultra Diffusive Environmental Poncho is a camouflaged rain-cover worn to protect against the elements and chemical spills. It's commonly treated with an infrared absorbing coating, making a marine almost invisible in the rain. Favoured by USCM specialists for it's comfort and practicality."
 	icon_state = "mercenary_miner_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/storage/marine/ghillie/forecon/invis
+	full_camo_alpha = FULL_CAMOUFLAGE_ALPHA
+	current_camo = FULL_CAMOUFLAGE_ALPHA
+	visible_camo_alpha = VISIBLE_CAMOUFLAGE_ALPHA
+
+#undef FULL_CAMOUFLAGE_ALPHA
+#undef VISIBLE_CAMOUFLAGE_ALPHA
+#undef FULL_PVE_CAMOUFLAGE_ALPHA
+#undef VISIBLE_PVE_CAMOUFLAGE_ALPHA
