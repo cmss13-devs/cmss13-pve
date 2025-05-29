@@ -139,14 +139,20 @@
 //VP78
 
 /obj/item/ammo_magazine/pistol/vp78
-	name = "\improper VP78 magazine (9x19mm)"
-	default_ammo = /datum/ammo/bullet/pistol/squash
+	name = "\improper VP78 +P magazine (9x19mm)"
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = "9x19mm"
-	icon_state = "vp78"
+	icon_state = "m4a3"
 	max_rounds = 18
 	gun_type = /obj/item/weapon/gun/pistol/vp78
-	ammo_band_icon = "+vp78_band"
-	ammo_band_icon_empty = "+vp78_band_e"
+	ammo_band_icon = "+m4a3_band"
+	ammo_band_icon_empty = "+m4a3_band_e"
+
+/obj/item/ammo_magazine/pistol/vp78/rmc
+	name = "\improper L165A1 Squash-Head magazine (9x19mm)"
+	default_ammo = /datum/ammo/bullet/pistol/squash
+	gun_type = /obj/item/weapon/gun/pistol/vp78/rmc
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 /obj/item/ammo_magazine/pistol/vp78/toxin
 	name = "\improper VP78 toxic magazine (9x19mm)"
