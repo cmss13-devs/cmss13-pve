@@ -168,6 +168,7 @@
 /area/lv314/outdoors/lava
 	name = "LV-314 Lava"
 	icon_state = "lava"
+	minimap_color = MINIMAP_AREA_LAVA
 
 /area/lv314/outdoors/lava/lavaflats
 	name = "Lava Flats Lava"
