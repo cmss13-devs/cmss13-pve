@@ -61,10 +61,7 @@
 	icon_state = "away1"
 
 
-/area/shuttle/drop2/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
+
 
 /area/shuttle/drop2
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
@@ -74,6 +71,11 @@
 	is_landing_zone = TRUE
 	ceiling = CEILING_REINFORCED_METAL
 	base_lighting_alpha = 0
+
+/area/shuttle/drop2/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
 
 /area/shuttle/drop2/sulaco
 	name = "\improper Dropship Normandy"
@@ -204,10 +206,6 @@
 	if(istype(O, /obj/structure/barricade))
 		return FALSE
 	return TRUE
-/area/shuttle/drop2/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
 
 /area/shuttle/drop3
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
@@ -217,6 +215,11 @@
 	is_landing_zone = TRUE
 	ceiling = CEILING_REINFORCED_METAL
 	base_lighting_alpha = 0
+
+/area/shuttle/drop3/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
 
 /area/shuttle/drop3/sulaco
 	name = "\improper Dropship Saipan"
