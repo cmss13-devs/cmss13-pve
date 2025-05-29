@@ -68,7 +68,7 @@
 	w_class = SIZE_MEDIUM
 	flags_magazine = NO_FLAGS
 	caliber = "Napalm B"
-	max_rounds = 100
+	max_rounds = 800
 	default_ammo = /datum/ammo/flamethrower/sentry_flamer
 	gun_type = null
 
@@ -88,7 +88,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "wy22e5"
 	caliber = "Sticky Napalm"
-	max_rounds = 200
+	max_rounds = 800
 	default_ammo = /datum/ammo/flamethrower/sentry_flamer/wy
 
 /obj/item/ammo_magazine/sentry_flamer/upp
@@ -97,5 +97,5 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "uppsds4"
 	caliber = "Sticky Napalm"
-	max_rounds = 200
+	max_rounds = 800
 	default_ammo = /datum/ammo/flamethrower/sentry_flamer/upp

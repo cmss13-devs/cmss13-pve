@@ -104,6 +104,7 @@ It DOES NOT control where your bullets go, that's scatter and projectile varianc
 #define RECOIL_AMOUNT_TIER_3 3
 #define RECOIL_AMOUNT_TIER_4 2
 #define RECOIL_AMOUNT_TIER_5 1
+#define RECOIL_AMOUNT_TIER_6 0.5
 #define RECOIL_OFF 0
 
 /*
@@ -154,6 +155,7 @@ As such, don't expect any values assigned to common firearms to even consider ho
 #define FIRE_DELAY_TIER_SG 1.0
 #define FIRE_DELAY_TIER_SMG 1.5
 #define FIRE_DELAY_TIER_12 1
+#define FIRE_DELAY_TIER_13 0.1
 
 /*
 ////RANGE RELATED////
