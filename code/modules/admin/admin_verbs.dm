@@ -668,8 +668,5 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 
 	prefs.save_preferences()
 
-
-
-
 #undef MAX_WARNS
 #undef AUTOBANTIME
