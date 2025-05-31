@@ -185,9 +185,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/atrium)
 "ajp" = (
 /obj/structure/surface/rack{
@@ -643,9 +641,7 @@
 /turf/open/floor/prison/bluecorner/east,
 /area/taipei/club)
 "aDG" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "aEq" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -795,9 +791,7 @@
 /area/taipei/atrium/store)
 "aLd" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 10
-	},
+/turf/open/floor/kutjevo/colors/red/edge/southwest,
 /area/taipei/cmb)
 "aLh" = (
 /obj/structure/window/reinforced,
@@ -924,6 +918,10 @@
 	},
 /turf/open/floor/carpet9_4,
 /area/taipei/atrium/hotel)
+"aQv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/red/inner_corner,
+/area/taipei/atrium)
 "aQN" = (
 /obj/structure/platform{
 	dir = 4
@@ -965,9 +963,7 @@
 "aRZ" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "aSJ" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
@@ -1728,9 +1724,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "byp" = (
 /obj/structure/platform{
@@ -2050,9 +2044,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/cmb)
 "bJt" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -2458,9 +2450,7 @@
 /area/taipei/atrium/medbay)
 "ceO" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 6
-	},
+/turf/open/floor/whitered/southeast,
 /area/taipei/atrium/restaurant)
 "cfC" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -3206,9 +3196,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt/ucigbutt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "cGq" = (
 /obj/structure/prop/turbine,
@@ -3239,9 +3227,7 @@
 /obj/item/stool{
 	icon_state = "stool_alt"
 	},
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "cHV" = (
 /obj/structure/surface/rack{
@@ -3407,9 +3393,7 @@
 "cPC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "cPE" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -3448,7 +3432,7 @@
 "cQW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "cRg" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
@@ -4323,9 +4307,7 @@
 "dDy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 5
-	},
+/turf/open/floor/whitered/northeast,
 /area/taipei/atrium/restaurant)
 "dEt" = (
 /obj/structure/prop/turbine{
@@ -4577,9 +4559,7 @@
 	pixel_x = 4;
 	light_power = 0.5
 	},
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "dPm" = (
 /obj/structure/machinery/light{
@@ -4633,9 +4613,7 @@
 	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "dSv" = (
 /obj/structure/surface/rack{
@@ -4737,9 +4715,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "dXn" = (
 /obj/structure/barricade/handrail/strata{
@@ -4866,9 +4842,7 @@
 	pixel_x = -7;
 	pixel_y = 14
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "edd" = (
 /obj/structure/sink{
@@ -4971,9 +4945,7 @@
 "efj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/atrium)
 "efH" = (
 /obj/effect/decal/warning_stripes{
@@ -5101,9 +5073,7 @@
 "ejA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "ejE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5534,9 +5504,7 @@
 /area/taipei/atrium)
 "eDs" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/cmb)
 "eDy" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -5858,9 +5826,7 @@
 /area/taipei/atrium)
 "eWm" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 5
-	},
+/turf/open/floor/kutjevo/colors/red/edge/northeast,
 /area/taipei/cmb)
 "eWu" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -5994,9 +5960,7 @@
 /obj/item/storage/box/flashbangs,
 /obj/item/storage/box/flashbangs,
 /obj/structure/closet/secure_closet/security_empty,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/north,
 /area/taipei/cmb)
 "faQ" = (
 /obj/structure/stairs/perspective{
@@ -6211,9 +6175,7 @@
 	icon_state = "stool_alt"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "fhU" = (
 /obj/structure/surface/rack,
@@ -6733,9 +6695,7 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/atrium)
 "fLv" = (
 /obj/effect/decal/warning_stripes{
@@ -7103,9 +7063,7 @@
 	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "gak" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -7173,9 +7131,7 @@
 "gbP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "gdg" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7230,7 +7186,7 @@
 /area/taipei/hangar)
 "gfR" = (
 /obj/structure/machinery/light,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "ghB" = (
 /obj/structure/surface/table/almayer,
@@ -7401,9 +7357,7 @@
 /obj/structure/machinery/camera{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/atrium)
 "gqY" = (
 /obj/structure/bed/chair/comfy{
@@ -7826,9 +7780,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "gMS" = (
 /obj/structure/cable/heavyduty{
@@ -7909,9 +7861,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/north,
 /area/taipei/cmb)
 "gSg" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -8003,9 +7953,7 @@
 "gXu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "gYN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8256,9 +8204,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/west,
 /area/taipei/atrium)
 "hnO" = (
 /obj/structure/platform_decoration,
@@ -8284,9 +8230,7 @@
 /area/taipei/maints/south)
 "hob" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "hpD" = (
 /obj/structure/pipes/vents/scrubber,
@@ -9188,9 +9132,7 @@
 /area/taipei/atrium)
 "igI" = (
 /obj/structure/closet/secure_closet/security_empty,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/west,
 /area/taipei/cmb)
 "igT" = (
 /obj/structure/surface/table,
@@ -9242,9 +9184,7 @@
 "iid" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 9
-	},
+/turf/open/floor/whitered/northwest,
 /area/taipei/atrium/restaurant)
 "iif" = (
 /obj/structure/machinery/camera{
@@ -9560,9 +9500,7 @@
 /obj/item/stool{
 	icon_state = "stool_alt"
 	},
-/turf/open/floor/whitered{
-	dir = 8
-	},
+/turf/open/floor/whitered/west,
 /area/taipei/atrium/restaurant)
 "iCh" = (
 /obj/effect/decal/warning_stripes{
@@ -10017,9 +9955,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/whitered{
-	dir = 8
-	},
+/turf/open/floor/whitered/west,
 /area/taipei/atrium/restaurant)
 "iXI" = (
 /obj/structure/cable/heavyduty{
@@ -10382,12 +10318,10 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "jin" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 10
-	},
+/turf/open/floor/kutjevo/colors/red/edge/southwest,
 /area/taipei/cmb)
 "jix" = (
 /obj/structure/mirror{
@@ -10705,9 +10639,7 @@
 /area/taipei/cmb)
 "jAX" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 5
-	},
+/turf/open/floor/kutjevo/colors/red/edge/northeast,
 /area/taipei/atrium)
 "jBA" = (
 /obj/structure/surface/table,
@@ -10818,9 +10750,7 @@
 	pixel_x = 4;
 	pixel_y = 14
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "jGS" = (
 /obj/structure/cable/heavyduty{
@@ -12649,9 +12579,7 @@
 	dir = 8;
 	light_power = .25
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/atrium)
 "lqR" = (
 /turf/open/floor/plating/asteroidfloor/north,
@@ -12676,9 +12604,7 @@
 /area/taipei/atrium/medbay)
 "lss" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/red/edge/northwest,
 /area/taipei/cmb)
 "ltb" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -13251,9 +13177,7 @@
 /area/taipei/cargo)
 "lPp" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "lPM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13933,9 +13857,7 @@
 /area/taipei/reactor)
 "mtu" = (
 /obj/structure/surface/table,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "mtx" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -14078,9 +14000,7 @@
 /area/taipei/hangar)
 "mBC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/cmb)
 "mBF" = (
 /obj/structure/platform/shiva/catwalk{
@@ -14319,9 +14239,7 @@
 /area/taipei/hangar)
 "mOh" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 6
-	},
+/turf/open/floor/kutjevo/colors/red/edge/southeast,
 /area/taipei/cmb)
 "mOj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14490,9 +14408,7 @@
 /area/taipei/club)
 "mXX" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/atrium)
 "mYx" = (
 /obj/structure/machinery/light{
@@ -14546,7 +14462,7 @@
 	pixel_x = 0;
 	pixel_y = -7
 	},
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "naG" = (
 /obj/structure/bed/chair/comfy/black{
@@ -14584,9 +14500,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/taipei/atrium)
 "nbz" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/red/edge/northwest,
 /area/taipei/cmb)
 "nbA" = (
 /obj/structure/barricade/handrail/strata{
@@ -14807,7 +14721,7 @@
 /obj/item/bodybag,
 /obj/item/bodybag,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "nkt" = (
 /obj/structure/machinery/photocopier,
@@ -14894,9 +14808,7 @@
 /area/taipei/hangar/cargoshuttle)
 "nqr" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/west,
 /area/taipei/cmb)
 "nrh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14926,9 +14838,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/atrium)
 "nsj" = (
 /obj/structure/machinery/light{
@@ -15577,9 +15487,7 @@
 /area/taipei/hangar)
 "nVM" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "nWA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16833,9 +16741,7 @@
 "oZS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 10
-	},
+/turf/open/floor/whitered/southwest,
 /area/taipei/atrium/restaurant)
 "pay" = (
 /obj/structure/machinery/atm{
@@ -17037,9 +16943,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/west,
 /area/taipei/cmb)
 "pho" = (
 /obj/structure/machinery/door/airlock/multi_tile/elevator/research,
@@ -17181,9 +17085,7 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/atrium)
 "poN" = (
 /obj/structure/surface/rack,
@@ -17193,9 +17095,7 @@
 	},
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /obj/item/weapon/baton,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/cmb)
 "poO" = (
 /obj/effect/decal/warning_stripes{
@@ -17934,9 +17834,7 @@
 /area/taipei/atrium/hotel)
 "pRt" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/red/edge/northwest,
 /area/taipei/atrium)
 "pRA" = (
 /turf/open/floor/strata/fake_wood,
@@ -18037,7 +17935,7 @@
 /area/taipei/cargo)
 "pWq" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "pWD" = (
 /turf/closed/wall/biodome,
@@ -18193,9 +18091,7 @@
 /area/taipei/hangar)
 "qfi" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/west,
 /area/taipei/atrium)
 "qgc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18436,9 +18332,7 @@
 /turf/open/floor/bar,
 /area/taipei/atrium/restaurant)
 "qpE" = (
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "qpY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19331,9 +19225,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "rfD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19394,9 +19286,7 @@
 /area/taipei/atrium)
 "rhi" = (
 /obj/structure/machinery/camera,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "rhs" = (
 /obj/structure/barricade/handrail/strata{
@@ -19704,9 +19594,7 @@
 	icon_state = "stool_alt"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 8
-	},
+/turf/open/floor/whitered/west,
 /area/taipei/atrium/restaurant)
 "rtt" = (
 /obj/structure/machinery/door/window{
@@ -19825,9 +19713,7 @@
 /turf/open/floor/prison,
 /area/taipei/telecomms)
 "ryp" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/atrium)
 "ryw" = (
 /obj/structure/surface/rack{
@@ -19848,9 +19734,7 @@
 /area/taipei/atrium/store)
 "ryG" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 6
-	},
+/turf/open/floor/kutjevo/colors/red/edge/southeast,
 /area/taipei/atrium)
 "ryI" = (
 /turf/closed/wall/biodome,
@@ -19952,9 +19836,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "rDp" = (
 /obj/structure/bed/chair/comfy{
@@ -20233,9 +20115,7 @@
 	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "rLX" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -20477,9 +20357,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "rUJ" = (
 /obj/structure/sign/safety/hazard,
@@ -20903,9 +20781,7 @@
 "smV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "snK" = (
 /turf/open/floor/kutjevo/colors/cyan/edge,
@@ -20985,9 +20861,7 @@
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/cmb)
 "srh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21093,9 +20967,7 @@
 /obj/structure/machinery/camera{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "syB" = (
 /obj/structure/cable/heavyduty{
@@ -21254,9 +21126,7 @@
 	pixel_x = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "sFd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -21318,7 +21188,7 @@
 	unslashable = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "sHa" = (
 /obj/structure/extinguisher_cabinet{
@@ -21920,14 +21790,10 @@
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/north,
 /area/taipei/atrium/medbay)
 "tey" = (
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/east,
 /area/taipei/cmb)
 "teY" = (
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/north,
 /area/taipei/cmb)
 "tfm" = (
 /obj/structure/cable/heavyduty{
@@ -21988,9 +21854,7 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/north,
 /area/taipei/atrium)
 "tiJ" = (
 /obj/structure/bed/chair/comfy{
@@ -22711,9 +22575,7 @@
 "tOa" = (
 /obj/structure/window/framed/corsat,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "tOn" = (
 /obj/structure/stairs/perspective{
@@ -22959,9 +22821,7 @@
 /turf/open/floor/kutjevo/tan/alt_inner_edge/west,
 /area/taipei/atrium)
 "udD" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 4
-	},
+/turf/open/floor/kutjevo/colors/red/edge/east,
 /area/taipei/cmb)
 "ueo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23124,9 +22984,7 @@
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/east,
 /area/taipei/atrium/medbay)
 "ukq" = (
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/cmb)
 "ukr" = (
 /obj/structure/machinery/portable_atmospherics/canister/empty,
@@ -24313,9 +24171,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/blue{
-	dir = 8
-	},
+/turf/open/floor/prison/blue/west,
 /area/taipei/club)
 "vtK" = (
 /obj/structure/platform{
@@ -24328,9 +24184,7 @@
 /area/taipei/hangar)
 "vuu" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 10
-	},
+/turf/open/floor/kutjevo/colors/red/edge/southwest,
 /area/taipei/atrium)
 "vuz" = (
 /obj/structure/extinguisher_cabinet{
@@ -24457,9 +24311,7 @@
 /turf/open/floor/kutjevo/tan/alt_edge/north,
 /area/taipei/atrium)
 "vyU" = (
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "vzG" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25492,9 +25344,7 @@
 /area/taipei/cargo)
 "wnz" = (
 /obj/structure/window/framed/corsat,
-/turf/open/floor/whitered{
-	dir = 4
-	},
+/turf/open/floor/whitered/east,
 /area/taipei/atrium/restaurant)
 "wnD" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -25534,9 +25384,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/edge/north,
 /area/taipei/cmb)
 "wrq" = (
 /obj/structure/platform/strata/metal{
@@ -25654,9 +25502,7 @@
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/inner_corner{
-	dir = 1
-	},
+/turf/open/floor/kutjevo/colors/red/inner_corner/north,
 /area/taipei/atrium)
 "wzr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25991,9 +25837,7 @@
 /area/taipei/hangar/cargoshuttle)
 "wSl" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/red/edge{
-	dir = 8
-	},
+/turf/open/floor/kutjevo/colors/red/edge/west,
 /area/taipei/atrium)
 "wSu" = (
 /turf/closed/wall/r_wall/elevator,
@@ -26461,14 +26305,12 @@
 "xls" = (
 /obj/structure/surface/rack,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "xlJ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open,
-/turf/open/floor/whitered{
-	dir = 1
-	},
+/turf/open/floor/whitered/north,
 /area/taipei/atrium/restaurant)
 "xmi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26894,7 +26736,7 @@
 /turf/open/floor/cmo,
 /area/taipei/atrium/hotel)
 "xCf" = (
-/turf/open/floor/kutjevo/colors/red/edge,
+/turf/open/floor/kutjevo/colors/red/edge/south,
 /area/taipei/cmb)
 "xCI" = (
 /obj/structure/toilet{
@@ -27352,9 +27194,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/whitered{
-	dir = 8
-	},
+/turf/open/floor/whitered/west,
 /area/taipei/atrium/restaurant)
 "xXQ" = (
 /obj/structure/machinery/gear{
@@ -37098,7 +36938,7 @@ pdD
 pdD
 lBe
 pPz
-eCz
+aQv
 eds
 gJg
 sXt
@@ -37300,7 +37140,7 @@ cwG
 nrh
 tmq
 cgV
-kzi
+aQv
 kzi
 aqj
 iOX
