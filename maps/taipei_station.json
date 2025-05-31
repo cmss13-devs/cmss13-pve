@@ -3,7 +3,7 @@
     "short_name": "Taipei Station",
     "map_path": "map_files/taipei_station",
     "map_file": "taipei_station.dmm",
-    "map_item_type": "/obj/item/map/taipei_map",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
     "traits": [{ "ground": true}],
     "camouflage": "jungle",
     "environment_traits": {},
