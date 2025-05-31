@@ -87,3 +87,7 @@ endmap
 
 map calliope_desert_bus
 endmap
+
+map greenvault_ranch
+endmap
+g
