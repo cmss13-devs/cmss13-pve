@@ -1059,7 +1059,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/l54
-	display_name = "L54 Pistol"
+	display_name = "L54A2 Pistol"
 	path = /obj/item/storage/box/loadout/L54_loadout
 	cost = 4
 

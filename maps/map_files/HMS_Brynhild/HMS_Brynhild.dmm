@@ -56,7 +56,7 @@
 /obj/structure/closet/secure_closet/marine_personal/rmc/medic{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/rmc/marksman{
+/obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -2973,11 +2973,11 @@
 /obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
 	pixel_x = -8
 	},
-/obj/structure/closet/secure_closet/marine_personal/rmc/smartgunner{
-	pixel_x = 8
-	},
 /obj/structure/machinery/light/double/blue{
 	light_color = "#dae2ff"
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/section_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
@@ -4171,6 +4171,16 @@
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/hms_brynhild/hangar)
+"il" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#ffe6e6"
+	},
+/obj/item/mre_food_packet/clf{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/hms_brynhild/canteen)
 "im" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -4714,6 +4724,18 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
+"jq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/marksman{
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/cryo_cells)
 "jr" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/weapon/gun/rifle/nsg23/rmc/unloaded{
@@ -4725,6 +4747,15 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
+"js" = (
+/obj/structure/closet/secure_closet/marine_personal/rmc/marksman{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/smartgunner{
+	pixel_x = -8
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/cryo_cells)
 "jt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -7149,11 +7180,11 @@
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
 "oB" = (
-/obj/structure/closet/secure_closet/marine_personal/rmc/team_leader{
-	pixel_x = 8
-	},
 /obj/structure/closet/secure_closet/marine_personal/rmc/gunner{
 	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
@@ -8550,17 +8581,9 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint/black{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/item/facepaint/brown{
-	pixel_x = -2;
-	pixel_y = 1
-	},
-/obj/item/facepaint/green{
-	pixel_y = 5;
-	pixel_x = 12
+/obj/item/weapon/gun/smartgun/rmc/unloaded{
+	pixel_x = 4;
+	pixel_y = -2
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -9652,11 +9675,11 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/lower_hangar)
 "tG" = (
-/obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
-	pixel_x = -8
-	},
 /obj/structure/closet/secure_closet/marine_personal/rmc/engi{
 	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/gunner{
+	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
@@ -10939,6 +10962,10 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
 	},
+/obj/item/mre_food_packet/clf{
+	pixel_x = 6;
+	pixel_y = 11
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
 "xp" = (
@@ -12211,17 +12238,20 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/item/clothing/glasses/welding{
-	pixel_x = 9;
-	pixel_y = 13
-	},
 /obj/item/circuitboard/apc{
-	pixel_x = 11;
-	pixel_y = 6
+	pixel_x = 14;
+	pixel_y = 2
 	},
 /obj/item/cell/high{
-	pixel_x = 3;
-	pixel_y = -1
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/item/engi_upgrade_kit{
+	pixel_x = -6;
+	pixel_y = 15;
+	desc = "A kit used for maintenance of delicate electronic systems within firearms.";
+	name = "weapon maintenance kit";
+	anchored = 1
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -12898,8 +12928,8 @@
 /area/hms_brynhild/supply)
 "Dn" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/prop/magazine/dirty/torn{
-	pixel_x = 6;
+/obj/item/prop/magazine/dropship{
+	pixel_x = 7;
 	pixel_y = 4
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
@@ -13234,10 +13264,10 @@
 /area/hms_brynhild/hangar)
 "DZ" = (
 /obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
-	pixel_x = -8
-	},
-/obj/structure/closet/secure_closet/marine_personal/rmc/rifleman{
 	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/medic{
+	pixel_x = -8
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
@@ -14683,18 +14713,18 @@
 /area/hms_brynhild/briefing)
 "HS" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/engi_upgrade_kit{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/item/tool/weldingtool/simple{
-	pixel_x = -8;
-	pixel_y = 9
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/clothing/glasses/welding{
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/obj/item/tool/weldingtool/simple{
+	pixel_x = 5;
+	pixel_y = 5
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "HT" = (
@@ -14739,20 +14769,24 @@
 	pixel_x = 7;
 	layer = 2.81
 	},
-/obj/item/weapon/gun/smartgun/rmc/unloaded{
-	pixel_x = 4;
-	pixel_y = 22
-	},
-/obj/item/ammo_box/rounds/smartgun/holo_target{
-	pixel_x = 7;
-	pixel_y = 13
-	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	network = list("Brynhild")
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
+	},
+/obj/item/facepaint/green{
+	pixel_y = 8;
+	pixel_x = 15
+	},
+/obj/item/facepaint/black{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/facepaint/brown{
+	pixel_x = 7;
+	pixel_y = 19
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -16862,6 +16896,10 @@
 /area/hms_brynhild/canteen)
 "Oc" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/rounds/smartgun/holo_target{
+	pixel_x = 1;
+	pixel_y = 4
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "Od" = (
@@ -17394,6 +17432,12 @@
 "PJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/team_leader{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/team_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
@@ -25662,8 +25706,8 @@ jV
 fp
 EN
 ZX
-MY
-Wc
+js
+jq
 PJ
 xF
 TJ
@@ -25686,7 +25730,7 @@ BB
 tb
 jK
 IT
-xn
+il
 xn
 Dx
 ds

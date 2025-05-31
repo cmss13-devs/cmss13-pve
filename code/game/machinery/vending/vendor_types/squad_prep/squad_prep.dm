@@ -931,7 +931,7 @@
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),
-		list("L54 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/l54/unloaded, VENDOR_ITEM_REGULAR),
+		list("L54A2 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/l54/unloaded, VENDOR_ITEM_REGULAR),
 		list("L165A1 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/rmc/unloaded, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),

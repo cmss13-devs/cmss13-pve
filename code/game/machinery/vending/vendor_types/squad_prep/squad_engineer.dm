@@ -219,6 +219,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 /obj/effect/essentials_set/rmcengi
 	spawned_gear_list = list(
 		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
+		/obj/item/defenses/handheld/tesla_coil/stun/rmc,
 		/obj/item/tool/shovel/etool/rmc/folded,
 		/obj/item/storage/toolkit,
 		/obj/item/circuitboard/apc,
@@ -301,7 +302,7 @@ GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
 
 /obj/structure/machinery/cm_vending/gear/mortar_stuff
 	name = "\improper WeyTech Section OFS Gear Rack"
-	desc = "An automated gear rack filled with specialized equipment for organic fire support for an RMC section."
+	desc = "An automated gear rack filled with specialized fire support equipment for the bombardment specialist of an RMC troop."
 	icon_state = "mor_gear"
 	show_points = TRUE
 	use_snowflake_points = TRUE

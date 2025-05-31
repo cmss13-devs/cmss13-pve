@@ -106,17 +106,17 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
 
-//L54, browning hi-power but in space
+//L54A2, browning hi-power but in space
 
 /obj/item/weapon/gun/pistol/l54
-	name = "\improper L54 service pistol"
+	name = "\improper L54A2 service pistol"
 	desc = "Standard issue semi-automatic service pistol of the NSPA. Chambered in 9mm, it is comparable to the popular M4A3 pistol utilized by the USCM. Until recently, it was also the standard issue pistol for the RMC before being replace by the L165A1."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "l54"
 	item_state = "l54"
 	fire_sound = "vp70"
 	current_mag = /obj/item/ammo_magazine/pistol/l54
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AUTO_EJECT_CASINGS
 	attachable_allowed = null
 
 /obj/item/weapon/gun/pistol/l54/set_gun_attachment_offsets()

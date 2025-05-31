@@ -48,12 +48,12 @@
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 /obj/item/ammo_magazine/pistol/l54
-	name = "\improper L54 magazine (9mm)"
+	name = "\improper L54A2 magazine (9mm)"
 	desc = "A pistol magazine."
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
 	icon_state = "l54"
-	max_rounds = 12
+	max_rounds = 13
 	w_class = SIZE_SMALL
 	default_ammo = /datum/ammo/bullet/pistol
 	gun_type = /obj/item/weapon/gun/pistol/l54

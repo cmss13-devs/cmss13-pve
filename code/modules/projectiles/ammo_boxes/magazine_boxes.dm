@@ -459,7 +459,7 @@
 //-----------------------L54 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/l54
-	name = "magazine box (L54 x 16)"
+	name = "magazine box (L54A2 x 16)"
 	icon_state = "base_vp78"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"

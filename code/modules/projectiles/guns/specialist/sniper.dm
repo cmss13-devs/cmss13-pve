@@ -589,6 +589,7 @@
 	unacidable = TRUE
 	indestructible = 1
 	aiming_time = 0.6 SECONDS
+	aimed_shot_cooldown_delay = 1.2 SECONDS
 	fire_sound = "gun_rmcdmr"
 	reload_sound = 'sound/weapons/handling/gun_rmcdmr_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_rmcdmr_unload.ogg'
