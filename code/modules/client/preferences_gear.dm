@@ -976,8 +976,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Baker-pattern fighting knife"
 	path = 	/obj/item/weapon/knife/marine/baker
 
+/datum/gear/weapon/chinese
+	display_name = "Type 4 bayonet"
+	path = 	/obj/item/weapon/knife/marine/chinese
+	allowed_origins = UPP_ORIGINS
+
 /datum/gear/weapon/type_80_Bayonet
-	display_name = "Type 80 Bayonet"
+	display_name = "Type 80 bayonet"
 	path = /obj/item/attachable/bayonet/upp/surplus
 	cost = 3
 	allowed_origins = USCM_ORIGINS
@@ -1051,6 +1056,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	cost = 4
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/l54
+	display_name = "L54 Pistol"
+	path = /obj/item/storage/box/loadout/L54_loadout
+	cost = 4
+
+/datum/gear/weapon/m9
+	display_name = "M9 Pistol"
+	path = /obj/item/storage/box/loadout/M9_loadout
+	cost = 4
+
+/datum/gear/weapon/vp78
+	display_name = "VP78 Pistol"
+	path = /obj/item/storage/box/loadout/VP78_loadout
+	cost = 4
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
