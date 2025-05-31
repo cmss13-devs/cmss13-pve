@@ -868,14 +868,11 @@
 		/datum/action/xeno_action/onclick/queen_order,
 		/datum/action/xeno_action/activable/expand_weeds, //third macro
 		/datum/action/xeno_action/activable/secrete_resin/remote/queen, //fifth macro
-		/datum/action/xeno_action/onclick/queen_tacmap,
 		/datum/action/xeno_action/onclick/eye,
 	)
 
 	for(var/path in immobile_abilities)
 		give_action(src, path)
-
-	add_verb(src, /mob/living/carbon/xenomorph/proc/xeno_tacmap)
 
 	ADD_TRAIT(src, TRAIT_ABILITY_NO_PLASMA_TRANSFER, TRAIT_SOURCE_ABILITY("Ovipositor"))
 	ADD_TRAIT(src, TRAIT_ABILITY_OVIPOSITOR, TRAIT_SOURCE_ABILITY("Ovipositor"))
@@ -923,8 +920,6 @@
 
 	set_resin_build_order(GLOB.resin_build_order_drone) // This needs to occur before we update the abilities so we can update the choose resin icon
 	give_combat_abilities()
-
-	remove_verb(src, /mob/living/carbon/xenomorph/proc/xeno_tacmap)
 
 	REMOVE_TRAIT(src, TRAIT_ABILITY_NO_PLASMA_TRANSFER, TRAIT_SOURCE_ABILITY("Ovipositor"))
 	REMOVE_TRAIT(src, TRAIT_ABILITY_OVIPOSITOR, TRAIT_SOURCE_ABILITY("Ovipositor"))

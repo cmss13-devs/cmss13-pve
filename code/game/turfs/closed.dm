@@ -34,6 +34,7 @@
 	name = "Rock"
 	icon = 'icons/turf/walls/walls.dmi'
 	icon_state = "rock"
+	minimap_color = MINIMAP_BLACK
 
 /turf/closed/mineral/Initialize(mapload)
 	. = ..()
@@ -44,6 +45,10 @@
 		if(istype(turf_to_check,/turf/open))
 			turf_to_check.overlays += image('icons/turf/walls/walls.dmi', "rock_side_[direction]", 2.99) //Really high since it's an overhead turf and it shouldn't collide with anything else
 
+	for(var/direction in GLOB.cardinals)
+		var/turf/turf_to_check = get_step(src, direction)
+		if(!isnull(turf_to_check) && !turf_to_check.density && !(istype(turf_to_check, /turf/open/space)))
+			minimap_color = MINIMAP_SOLID
 
 //Ground map dense jungle
 /turf/closed/gm
