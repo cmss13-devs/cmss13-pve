@@ -935,7 +935,7 @@
 	name = "Tutorial"
 	faction = FACTION_MARINE
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id
 	/// If the player should start out underfed

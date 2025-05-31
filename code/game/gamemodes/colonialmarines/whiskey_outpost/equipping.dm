@@ -22,22 +22,6 @@ Stay alive, and Godspeed, commander!"}
 		marine_announcement("All forces, Ground Commander [H.real_name] is in command!")
 
 
-
-//*************************************
-//----------------SYNTHETIC-------------
-//*************************************/
-
-/datum/job/civilian/synthetic/whiskey
-	title = JOB_WO_SYNTH
-	gear_preset = /datum/equipment_preset/synth/uscm/wo
-
-/datum/job/civilian/synthetic/whiskey/generate_entry_message()
-	. = {"You are a Synthetic! You are held to a higher standard and are required to obey not only the Server Rules but Marine Law and Synthetic Rules. Failure to do so may result in your White-list Removal.
-You were deployed alongside the Dust Raiders to assist in engineering, medical, and diplomatic duties. Things seem to have taken a turn for the worst.
-Assist the humans in sending a signal to the remaining Dust Raiders on board the USS Alistoun, to inform them of the threat.
-Destruction in inevitable. At the very least, you can assist in preventing others from sharing the same fate."}
-
-
 //*************************************
 //---------EXECUITIVE OFFICER-----------
 //*************************************/

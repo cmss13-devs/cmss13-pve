@@ -1,7 +1,7 @@
 /datum/equipment_preset/usa
 	name = "US Army"
 	faction = FACTION_ARMY
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the soldiers their radios

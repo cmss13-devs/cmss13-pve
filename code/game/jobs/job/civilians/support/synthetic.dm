@@ -15,8 +15,8 @@
 	. = ..()
 	gear_preset_whitelist = list(
 		"[JOB_SYNTH][WHITELIST_NORMAL]" = /datum/equipment_preset/synth/uscm,
-		"[JOB_SYNTH][WHITELIST_COUNCIL]" = /datum/equipment_preset/synth/uscm/councillor,
-		"[JOB_SYNTH][WHITELIST_LEADER]" = /datum/equipment_preset/synth/uscm/councillor
+		"[JOB_SYNTH][WHITELIST_COUNCIL]" = /datum/equipment_preset/synth/uscm,
+		"[JOB_SYNTH][WHITELIST_LEADER]" = /datum/equipment_preset/synth/uscm
 	)
 
 /datum/job/civilian/synthetic/get_whitelist_status(client/player)
