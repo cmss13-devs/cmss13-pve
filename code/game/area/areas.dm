@@ -82,6 +82,9 @@
 	/// Doesn't need to be set for areas/Z levels that are marked as admin-only
 	var/block_game_interaction = FALSE
 
+	// Day-Night settings
+	var/daytime_affected = TRUE
+
 
 /area/New()
 	// This interacts with the map loader, so it needs to be set immediately
@@ -102,6 +105,9 @@
 	reg_in_areas_in_z()
 	if(is_mainship_level(z))
 		GLOB.ship_areas += src
+		daytime_affected = FALSE
+	if(ceiling > CEILING_GLASS)
+		daytime_affected = FALSE
 
 	update_base_lighting()
 
