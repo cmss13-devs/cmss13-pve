@@ -475,3 +475,62 @@
 	name = "Atmospheric Processor - Garage"
 	icon_state = "green"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+
+//Megamap
+
+/area/lv522/indoors/garrison
+	name = "LV522 - Colonial Garrison Canteen"
+	icon_state = "green"
+
+/area/lv522/indoors/garrison/storage
+	name = "LV522 - Colonial Garrison Storage"
+	icon_state = "red"
+
+/area/lv522/indoors/garrison/barracks
+	name = "LV522 - Colonial Garrison Barracks"
+	icon_state = "blue"
+
+/area/lv522/indoors/garrison/gas
+	name = "LV522 - Barrens Gas Station"
+	icon_state = "blue"
+
+/area/lv522/indoors/garrison/engi
+	name = "LV522 - Colonial Garrison Engineering Prefab"
+	icon_state = "yellow"
+
+/area/lv522/outdoors/garrison/
+	name = "LV522 - Colonial Garrison Comms Relay"
+	icon_state = "yellow"
+
+/area/lv522/basement
+	name = "Chances Claim - Underground"
+	icon_state = "cliff_blocked"
+	ceiling = CEILING_REINFORCED_METAL
+
+/area/lv522/basement/colony
+	name = "Chances Claim - Colony Sublevel"
+	icon_state = "red"
+	requires_power = FALSE
+
+//Elevators 
+/area/lv522/elevator
+	name = "\improper Elevator shuttle"
+	icon_state = "red"
+	unlimited_power = TRUE
+	requires_power = FALSE
+	ceiling = CEILING_METAL
+
+/area/lv522/elevator/one
+	name = "\improper Lukes Landing"
+//
+/area/lv522/elevator/two
+	name = "\improper Chances Claim 1"
+//
+/area/lv522/elevator/three
+	name = "\improper Chances Claim 2"
+//
+/area/lv522/elevator/four
+	name = "\improper Reactor 1"
+//
+/area/lv522/elevator/five
+	name = "\improper Reactor 2"
