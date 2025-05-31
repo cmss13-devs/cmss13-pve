@@ -216,7 +216,7 @@
 				if(DEAD)
 					mob_state = "Dead"
 
-			if(mob_state == "Conscious" && (locate(/datum/effects/crit) in marine_human.effects_list))
+			if(mob_state == "Conscious" && ((locate(/datum/effects/crit) in marine_human.effects_list) && !(marine_human.status_flags & CANKNOCKOUT)))
 				mob_state = "Incapacitated"
 
 			if(!marine_has_camera(marine_human))
