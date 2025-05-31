@@ -284,3 +284,11 @@
 
 /obj/structure/ladder/rope/update_icon()
 	return
+
+/obj/structure/ladder/multiz/LateInitialize()
+	. = ..()
+
+	up = locate(/obj/structure/ladder) in SSmapping.get_turf_above(get_turf(src))
+	down = locate(/obj/structure/ladder) in SSmapping.get_turf_below(get_turf(src))
+
+	update_icon()

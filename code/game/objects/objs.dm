@@ -37,6 +37,7 @@
 	/// set when a player uses a pen on a renamable object
 	var/renamedByPlayer = FALSE
 
+	vis_flags = VIS_INHERIT_PLANE
 
 /obj/Initialize(mapload, ...)
 	. = ..()
