@@ -97,6 +97,9 @@
 		update_icon()
 		return XENO_ATTACK_ACTION
 
+/turf/open/floor/light/blue_glow
+	light_color = "#38a9fd"
+
 /turf/open/floor/light/red
 	icon_state = "light_on-r"
 	state = LIGHT_FLOOR_COLOR_RED
