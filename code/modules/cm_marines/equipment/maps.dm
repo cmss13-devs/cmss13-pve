@@ -150,6 +150,12 @@
 	html_link = ""
 	color = "white"
 
+/obj/item/map/taipei
+	name = "\improper Taipei Way-Station map"
+	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
+	html_link = "https://github.com/user-attachments/assets/bfe1a3dd-f737-4b89-a030-ff819e320dea"
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -178,6 +184,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_TAIPAI = new /obj/item/map/taipei(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
