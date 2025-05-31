@@ -390,9 +390,7 @@
 /area/taipei/cargo)
 "ass" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "atd" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -756,8 +754,7 @@
 "aJO" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1958,8 +1955,7 @@
 "bEU" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2325,8 +2321,7 @@
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -4350,9 +4345,7 @@
 /turf/open/floor/prison/bright_clean2,
 /area/taipei/hangar/cargoshuttle)
 "dGS" = (
-/obj/structure/bed/chair/comfy/alpha{
-	dir = 3
-	},
+/obj/structure/bed/chair/comfy/alpha,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/floor4,
@@ -7456,8 +7449,7 @@
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -8813,9 +8805,7 @@
 /area/taipei/maints/north)
 "hOI" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northwest,
 /area/taipei/atrium/medbay)
 "hOJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -9644,9 +9634,7 @@
 /turf/open/floor/strata/faux_wood,
 /area/taipei/atrium/hotel)
 "iHD" = (
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 5
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northeast,
 /area/taipei/atrium)
 "iIC" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -11072,9 +11060,7 @@
 /turf/open/floor/plating/asteroidfloor/north,
 /area/taipei/hangar)
 "jZx" = (
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northwest,
 /area/taipei/atrium)
 "jZK" = (
 /obj/structure/surface/table,
@@ -11618,9 +11604,7 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/taipei/atrium)
 "kxK" = (
-/obj/structure/bed/chair/comfy/alpha{
-	dir = 3
-	},
+/obj/structure/bed/chair/comfy/alpha,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -12028,8 +12012,7 @@
 "kQD" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/closed/wall/almayer,
 /area/taipei/maints/south)
@@ -12047,9 +12030,7 @@
 /area/taipei/reactor)
 "kRV" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 5
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northeast,
 /area/taipei/atrium)
 "kRY" = (
 /obj/item/trash/wy_chips_pepper{
@@ -14404,7 +14385,7 @@
 	pixel_x = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/light,
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "mXX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16847,9 +16828,7 @@
 	pixel_x = -4;
 	pixel_y = 14
 	},
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "pdA" = (
 /obj/structure/cable/heavyduty{
@@ -17604,9 +17583,7 @@
 /turf/open/floor/prison,
 /area/taipei/atrium)
 "pLb" = (
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "pLt" = (
 /obj/structure/pipes/vents/pump,
@@ -18622,9 +18599,7 @@
 "qDp" = (
 /obj/item/spacecash/c20,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "qDy" = (
 /obj/structure/machinery/deployable,
@@ -19192,9 +19167,7 @@
 /area/taipei/maints/south)
 "rdN" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 10
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/southwest,
 /area/taipei/atrium/medbay)
 "rek" = (
 /obj/structure/cable/heavyduty{
@@ -20033,9 +20006,7 @@
 /turf/open/floor/plating,
 /area/taipei/elevator/arrivals)
 "rIO" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 7
-	},
+/obj/effect/decal/grass_overlay/grass1/inner,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
@@ -20444,9 +20415,7 @@
 /area/taipei/cmb)
 "rYl" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 9
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northwest,
 /area/taipei/atrium)
 "rYm" = (
 /obj/structure/machinery/light{
@@ -20561,8 +20530,7 @@
 /obj/structure/barricade/handrail/strata,
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -20722,9 +20690,7 @@
 	pixel_x = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "skO" = (
 /obj/structure/machinery/light{
@@ -22266,9 +22232,7 @@
 /area/taipei/atrium/offices)
 "tyv" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 6
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/southeast,
 /area/taipei/atrium/medbay)
 "tyN" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -22290,13 +22254,6 @@
 /obj/structure/machinery/door/airlock/almayer/maint/autoname,
 /turf/open/floor/corsat/marked,
 /area/taipei/atrium/store)
-"tzW" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 7
-	},
-/obj/structure/flora/grass/tallgrass/jungle/corner,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/taipei/atrium)
 "tAf" = (
 /turf/open/floor/plating/asteroidwarning/east,
 /area/taipei/maints/south)
@@ -22357,8 +22314,7 @@
 	},
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/open/void,
 /area/taipei/reactor/chamber)
@@ -23311,8 +23267,7 @@
 "uwC" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = 6;
-	pixel_y = 6;
-	dir = 3
+	pixel_y = 6
 	},
 /turf/closed/wall/almayer,
 /area/taipei/theatre)
@@ -25398,9 +25353,7 @@
 /area/taipei/atrium)
 "wrB" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/kutjevo/colors/cyan/edge{
-	dir = 5
-	},
+/turf/open/floor/kutjevo/colors/cyan/edge/northeast,
 /area/taipei/atrium/medbay)
 "wsc" = (
 /turf/closed/wall/r_wall/elevator{
@@ -27477,9 +27430,7 @@
 /area/taipei/hangar/cargoshuttle)
 "yjz" = (
 /obj/item/spacecash/c20,
-/turf/open/floor/light{
-	light_color = "#38a9fd"
-	},
+/turf/open/floor/light/blue_glow,
 /area/taipei/club)
 "yjJ" = (
 /obj/effect/decal/warning_stripes{
@@ -43617,7 +43568,7 @@ sYj
 eOl
 jEW
 dAe
-tzW
+qTx
 ahH
 nhs
 fdE
