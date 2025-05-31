@@ -5632,15 +5632,6 @@
 	},
 /turf/open/floor/prison/darkbrowncorners2/southwest,
 /area/taipei/theatre)
-"eKu" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 3
-	},
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 6
-	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/taipei/atrium)
 "eKU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/grey_inner_edge/west,
@@ -6512,9 +6503,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/taipei/maints/south)
 "fxA" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 3
-	},
+/obj/effect/decal/grass_overlay/grass1/inner,
 /obj/effect/decal/grass_overlay/grass1/inner{
 	dir = 10
 	},
@@ -19344,7 +19333,6 @@
 "rkq" = (
 /obj/structure/barricade/handrail/kutjevo,
 /obj/item/trash/popcorn{
-	dir = 3;
 	pixel_y = 10
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -23924,9 +23912,7 @@
 /area/taipei/cmb)
 "vif" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 3
-	},
+/obj/effect/decal/grass_overlay/grass1/inner,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
@@ -44782,7 +44768,7 @@ pIu
 dAe
 nIY
 sIl
-eKu
+rIO
 ahH
 iXm
 dxP
@@ -45185,7 +45171,7 @@ jEW
 jEW
 mmU
 etP
-eKu
+rIO
 ylV
 iXm
 dqq
