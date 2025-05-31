@@ -1203,6 +1203,19 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
 
+//Combi mini-scope & mag-harn/sling for the scout rifle
+
+/obj/item/attachable/scope/mini/scout
+	name = "M49A targeting relay"
+	desc = "An ARMAT M49A5 optical interface, type designation AN/PVX-56. Wirelessly links to the operators M49A eyepiece to give a one-to-one boresighted picture of where the rifle is aiming. Includes a Computer-Calculated-Impact-Point system for precision shooting."
+	icon_state = "d_boomslang-scope"
+	zoom_offset = 7
+	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+
+/obj/item/attachable/scope/mini/scout/New()
+	..()
+	attach_icon = icon_state
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
