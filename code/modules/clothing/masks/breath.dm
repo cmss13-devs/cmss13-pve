@@ -129,6 +129,7 @@
 	icon_state = "scarf_gray"
 	item_state = "scarf_gray"
 	original_state = "scarf_gray"
+	w_class = SIZE_SMALL
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEFACE|HIDELOWHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
@@ -228,6 +229,7 @@
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
 	)
+	w_class = SIZE_SMALL
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
 	var/adjust = FALSE
 	var/original_state = "neckerchief"
