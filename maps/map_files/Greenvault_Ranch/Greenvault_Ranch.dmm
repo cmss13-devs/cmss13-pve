@@ -273,6 +273,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
+"bf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/white_cyan2/west,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "bg" = (
 /obj/structure/closet/secure_closet/surgical,
 /turf/closed/wall/shiva/prefabricated/white,
@@ -293,6 +301,7 @@
 	pixel_y = 13
 	},
 /obj/item/prop/magazine/playboy,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "bj" = (
@@ -609,10 +618,8 @@
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/bar)
 "cu" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/microwave,
-/turf/open/floor/prison/darkredfull2,
-/area/Greenvault_Ranch/int_heavy/researchlab)
+/turf/closed/wall/strata_ice,
+/area/Greenvault_Ranch/caves)
 "cv" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1021,6 +1028,10 @@
 	},
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_heavy/controlroom)
+"eh" = (
+/obj/structure/machinery/light/small,
+/turf/open/floor/whitegreenfull,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "ei" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 5
@@ -1098,6 +1109,10 @@
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_heavy/grainstorage)
+"eA" = (
+/obj/structure/machinery/r_n_d/server,
+/turf/open/floor/bluegrid/bcircuitoff,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "eB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1139,7 +1154,8 @@
 /area/Greenvault_Ranch/int_reg/virology)
 "eM" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/corsat/tan,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "eN" = (
 /obj/structure/machinery/door/window/brigdoor/westleft{
@@ -1560,12 +1576,21 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
+"gm" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/turf/open/floor/prison/darkredfull2,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "gn" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Vehicle Depot Shutters"
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"go" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/mill,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "gp" = (
 /turf/open/floor/prison/green,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -1764,6 +1789,10 @@
 /obj/item/clothing/gloves/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"hg" = (
+/obj/structure/inflatable/door,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "hh" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -1953,6 +1982,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Greenvault_Ranch/outside/northwest)
+"hY" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/whitegreenfull,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "hZ" = (
 /obj/structure/flora/grass/desert/heavygrass_7,
 /turf/open/mars_cave,
@@ -2148,7 +2183,7 @@
 /area/Greenvault_Ranch/outside/pens)
 "iN" = (
 /obj/structure/machinery/telecomms/bus/preset_one,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "iO" = (
 /obj/structure/prop/invuln/overhead_pipe,
@@ -2361,18 +2396,17 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"jM" = (
+/obj/structure/closet/crate/internals,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "jN" = (
 /obj/structure/largecrate/lisa,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "jO" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	name = "General Listening Channel";
-	pixel_y = 28
-	},
-/turf/open/floor/corsat/tan,
-/area/Greenvault_Ranch/int_heavy/researchlab)
+/turf/open/space/basic,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "jP" = (
 /turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
@@ -2625,6 +2659,10 @@
 /obj/structure/closet/l3closet/janitor,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"kM" = (
+/obj/effect/decal/cleanable/greenglow,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "kN" = (
 /obj/item/wrapping_paper,
 /turf/open/floor/prison/floor_plate,
@@ -2744,6 +2782,11 @@
 	},
 /turf/open/floor/prison/darkyellow2/northwest,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"lt" = (
+/obj/structure/surface/table,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "lu" = (
 /obj/structure/machinery/vending/snack,
 /turf/open/floor/plating/wood,
@@ -2928,6 +2971,7 @@
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/mre_food_packet/entree/wy,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "mi" = (
@@ -3007,9 +3051,11 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wheatfields)
 "mz" = (
-/obj/structure/prop/ice_colony/tiger_rug,
-/turf/open/floor/carpet,
-/area/Greenvault_Ranch/int_heavy/researchlab)
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "mC" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 10
@@ -3141,6 +3187,11 @@
 	},
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"nf" = (
+/obj/structure/surface/table,
+/obj/item/clothing/glasses/science,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "ng" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -3187,6 +3238,10 @@
 /obj/item/reagent_container/glass/bucket/janibucket,
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/outside/pens)
+"no" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "np" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
@@ -3600,6 +3655,10 @@
 "oX" = (
 /turf/closed/wall/almayer/research/containment/wall/north,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"oY" = (
+/obj/structure/machinery/vending/cigarette/wy/free,
+/turf/open/floor/prison/darkredfull2,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "oZ" = (
 /obj/structure/janitorialcart,
 /obj/item/tool/mop,
@@ -3667,6 +3726,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "po" = (
@@ -3745,6 +3805,10 @@
 	},
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_heavy/grainstorage)
+"pF" = (
+/obj/structure/closet/crate/radiation,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "pG" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/warning_stripes{
@@ -3869,9 +3933,13 @@
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "qd" = (
-/obj/item/folder/green,
-/turf/open/floor/corsat/tan,
-/area/Greenvault_Ranch/int_heavy/researchlab)
+/obj/item/device/flashlight/lamp/tripod,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 4
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "qe" = (
 /obj/structure/surface/table,
 /turf/open/floor/prison/darkredfull2,
@@ -3900,6 +3968,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/machinery/portable_atmospherics/hydroponics,
 /turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "qm" = (
@@ -3977,7 +4046,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "qC" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -4255,6 +4324,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
+"rL" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	name = "General Listening Channel";
+	pixel_y = 28
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall/biodome,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "rM" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -4522,6 +4600,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/bar)
+"sY" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 4
+	},
+/obj/effect/decal/remains/xeno,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "sZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
@@ -4543,11 +4629,9 @@
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
 "te" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 80
-	},
-/turf/open/floor/corsat/tan,
+/obj/effect/decal/cleanable/spiderling_remains,
+/obj/structure/inflatable/door,
+/turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "tf" = (
 /turf/open/floor/strata/white_cyan1,
@@ -4686,6 +4770,11 @@
 "tK" = (
 /turf/open/floor/prison/green/northeast,
 /area/Greenvault_Ranch/int_reg/housing)
+"tL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "tM" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/barricade/metal{
@@ -4869,8 +4958,9 @@
 /turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "us" = (
-/obj/structure/machinery/chem_dispenser/canteen,
-/turf/open/floor/strata/white_cyan1,
+/obj/structure/pipes/vents/pump/on,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "ut" = (
 /turf/closed/wall/rock{
@@ -4944,6 +5034,14 @@
 /obj/structure/flora/tree/dead/tree_1,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"uF" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/carpet,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "uH" = (
 /obj/structure/largecrate/random/barrel,
 /turf/open/floor/prison/bright_clean,
@@ -4961,6 +5059,10 @@
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer,
 /turf/open/floor/almayer/sterile_green_side,
 /area/Greenvault_Ranch/int_reg/virology)
+"uL" = (
+/obj/structure/prop/ice_colony/tiger_rug,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "uM" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/microwave,
@@ -5198,6 +5300,7 @@
 /area/Greenvault_Ranch/int_reg/farmbay)
 "vK" = (
 /obj/item/folder/white,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "vL" = (
@@ -5955,6 +6058,11 @@
 /mob/living/simple_animal/cow,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"yH" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/centrifuge,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "yI" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
@@ -5995,6 +6103,11 @@
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
+"yO" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/vials/random,
+/turf/open/floor/whitegreenfull,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "yP" = (
 /obj/structure/flora/grass/desert/heavygrass_5,
 /turf/open/mars_cave,
@@ -6085,6 +6198,13 @@
 "zh" = (
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/housing)
+"zi" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "zj" = (
 /obj/structure/machinery/telecomms/broadcaster,
 /turf/open/floor/prison/darkyellow2/northwest,
@@ -6176,7 +6296,6 @@
 	dir = 1
 	},
 /obj/structure/filingcabinet/disk,
-/obj/item/folder/green,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "zD" = (
@@ -6361,7 +6480,7 @@
 "AA" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/ares/cpu,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "AC" = (
 /obj/structure/surface/table/almayer,
@@ -6381,11 +6500,13 @@
 /obj/structure/prop/ice_colony/surveying_device,
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"AJ" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "AK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/microwave,
-/turf/open/floor/strata/white_cyan1,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/corsat/retrosquareslight,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "AL" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -6402,6 +6523,16 @@
 /obj/structure/prop/dam/van,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"AP" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 4
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "AQ" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -6760,8 +6891,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/Greenvault_Ranch/int_heavy/bunkermedical)
 "Cm" = (
-/obj/structure/machinery/vending/cigarette/wy/free,
-/turf/open/floor/strata/white_cyan1,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Cn" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -6933,6 +7063,10 @@
 /obj/structure/machinery/gibber,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"CT" = (
+/obj/structure/machinery/smartfridge/secure/virology,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "CU" = (
 /obj/structure/prop/vehicles/crawler{
 	dir = 8;
@@ -6952,6 +7086,10 @@
 /obj/structure/filingcabinet/security,
 /turf/open/floor/prison/darkred2/north,
 /area/Greenvault_Ranch/int_reg/marshals)
+"Da" = (
+/obj/structure/machinery/disease2/diseaseanalyser,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Db" = (
 /obj/structure/closet/secure_closet/RD,
 /turf/open/floor/corsat/tan,
@@ -7322,6 +7460,13 @@
 /obj/item/storage/bag/plasticbag,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"EF" = (
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 1;
+	pixel_y = 4
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "EG" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -7444,6 +7589,15 @@
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Fa" = (
+/obj/structure/machinery/computer/aifixer,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
+"Fb" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/xenoautopsy,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Fc" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent,
 /turf/closed/wall/shiva/prefabricated/white,
@@ -7533,6 +7687,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Fw" = (
 /obj/structure/closet/l3closet/virology,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Fy" = (
@@ -7693,11 +7848,7 @@
 /turf/closed/wall/shiva/prefabricated/orange,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "Gn" = (
-/obj/structure/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/machinery/vending/ingredients,
-/turf/open/floor/prison/darkredfull2,
+/turf/open/floor/whitegreenfull,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Gp" = (
 /obj/structure/surface/rack,
@@ -7719,6 +7870,13 @@
 /obj/structure/machinery/autodoc_console,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/Greenvault_Ranch/int_reg/clinic)
+"Gs" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall/biodome,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Gu" = (
 /obj/structure/pipes/vents/pump,
 /obj/item/trash/cigbutt/bcigbutt,
@@ -7888,6 +8046,10 @@
 	},
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
+"Hb" = (
+/obj/structure/machinery/r_n_d/protolathe,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Hc" = (
 /obj/structure/prop/rock/black_ground,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -7896,7 +8058,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 4
 	},
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "He" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -7913,10 +8075,16 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"Hg" = (
+/obj/structure/pipes/vents/pump/on,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Hh" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/telecomms/broadcaster,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Hi" = (
 /obj/structure/ice/thin/indestructible{
@@ -8237,6 +8405,11 @@
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"Iy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/white_cyan1,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Iz" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
@@ -9034,6 +9207,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/trash/syndi_cakes,
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Lo" = (
@@ -9173,6 +9347,10 @@
 /obj/structure/janitorialcart/brown,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/bar)
+"LJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "LL" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1;
@@ -9181,9 +9359,9 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "LN" = (
-/obj/structure/machinery/chem_master{
-	vial_maker = 1
-	},
+/obj/structure/surface/table,
+/obj/structure/machinery/cell_charger,
+/obj/item/cell/hyper,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "LO" = (
@@ -9281,6 +9459,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Mh" = (
 /obj/structure/machinery/light/small,
+/obj/structure/machinery/portable_atmospherics/hydroponics,
 /turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Mi" = (
@@ -9569,6 +9748,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
+"Nk" = (
+/obj/structure/closet/crate/freezer/rations,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Nl" = (
 /obj/structure/barricade/handrail/wire,
 /obj/structure/prop/invuln/overhead_pipe,
@@ -9700,6 +9883,10 @@
 	},
 /turf/open/floor/strata/white_cyan1/east,
 /area/Greenvault_Ranch/int_heavy/bunkermedical)
+"NL" = (
+/obj/effect/decal/cleanable/cobweb2,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "NN" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -9867,7 +10054,7 @@
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "Ox" = (
 /obj/structure/machinery/computer/telecomms/traffic,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Oy" = (
 /obj/structure/machinery/reagent_analyzer,
@@ -9915,7 +10102,7 @@
 	dir = 8;
 	pixel_y = 6
 	},
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "OM" = (
 /obj/structure/machinery/power/port_gen/pacman/mrs{
@@ -9924,6 +10111,11 @@
 	},
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"ON" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/r_n_d/server,
+/turf/open/floor/bluegrid/bcircuitoff,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "OO" = (
 /mob/living/simple_animal/cow,
 /turf/open/floor/plating/wood,
@@ -9934,6 +10126,13 @@
 	},
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_heavy/bunkermedical)
+"OR" = (
+/obj/structure/machinery/light{
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "OS" = (
 /obj/item/desk_bell{
 	pixel_y = 8;
@@ -10005,6 +10204,10 @@
 	},
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
+"Ph" = (
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Pj" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -10029,6 +10232,10 @@
 /obj/structure/prop/rock,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"Pn" = (
+/obj/effect/decal/remains/xeno,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "Po" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
 	dir = 1
@@ -10139,7 +10346,7 @@
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "PK" = (
 /obj/structure/machinery/ares/processor,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "PN" = (
 /obj/structure/surface/table/almayer,
@@ -10336,6 +10543,11 @@
 "QF" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/Greenvault_Ranch/outside/north_river)
+"QJ" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/vials/random,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "QK" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
@@ -10459,6 +10671,11 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison/darkred2/north,
 /area/Greenvault_Ranch/int_reg/marshals)
+"Rp" = (
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/microwave,
+/turf/open/floor/strata/white_cyan1,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Rq" = (
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/darkyellowfull2,
@@ -10468,12 +10685,9 @@
 /turf/open/gm/coast/beachcorner/south_west,
 /area/Greenvault_Ranch/outside/north_river)
 "Ru" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/Greenvault_Ranch/int_heavy/researchlab)
+/obj/effect/decal/remains/human,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "Rv" = (
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/almayer/dark_sterile,
@@ -10585,6 +10799,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/green/southeast,
 /area/Greenvault_Ranch/int_reg/housing)
+"RW" = (
+/obj/structure/surface/table/reinforced,
+/obj/item/mre_food_packet/entree/wy,
+/obj/item/reagent_container/food/snacks/syndicake,
+/turf/open/floor/strata/white_cyan1,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "RY" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
@@ -10683,10 +10903,14 @@
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "St" = (
-/obj/structure/surface/table/reinforced,
-/obj/item/mre_food_packet/entree/wy,
-/turf/open/floor/prison/darkredfull2,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Su" = (
+/obj/structure/flora/grass/desert/heavygrass_7,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/caves)
 "Sw" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/cell_stripe/west,
@@ -10776,7 +11000,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "SP" = (
 /obj/structure/machinery/computer/telecomms/server,
-/turf/open/floor/corsat/tan,
+/turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "SQ" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -10937,6 +11161,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
+"Tw" = (
+/obj/effect/decal/cleanable/ash,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Tx" = (
 /obj/structure/filtration/machine_64x96{
 	icon_state = "filtration_machine_B_1"
@@ -10980,6 +11208,14 @@
 /obj/structure/cargo_container/canc/mid,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"TK" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/white_cyan2/west,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "TL" = (
 /obj/structure/machinery/power/apc/upgraded/power/north,
 /turf/open/floor/prison/darkyellowfull2,
@@ -11007,6 +11243,12 @@
 /obj/item/trash/crushed_cup,
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/housing)
+"TQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced,
+/obj/structure/machinery/microwave,
+/turf/open/floor/prison/darkredfull2,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "TR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /turf/open/floor/prison,
@@ -11250,6 +11492,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
+"Va" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/botany/extractor,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Vb" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
@@ -11264,6 +11511,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_reg/bar)
+"Ve" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Vf" = (
 /obj/structure/inflatable/door,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -11431,6 +11683,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/pens)
+"VU" = (
+/obj/structure/pipes/vents/scrubber/on,
+/turf/open/floor/bluegrid/bcircuitoff,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "VV" = (
 /obj/item/weapon/twohanded/folded_metal_chair,
 /obj/item/weapon/twohanded/folded_metal_chair,
@@ -11468,6 +11724,11 @@
 	},
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"Wf" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/botany/editor,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "Wg" = (
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/outside/wheatfields)
@@ -11768,6 +12029,10 @@
 	},
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/bar)
+"XB" = (
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "XC" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/jungle/vines/heavy,
@@ -11938,6 +12203,7 @@
 "Yk" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/device/flashlight/lamp/green,
+/obj/item/reagent_container/food/snacks/plaincakeslice,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Yl" = (
@@ -12068,6 +12334,13 @@
 /obj/structure/machinery/medical_pod/autodoc,
 /turf/open/floor/almayer/sterile_green,
 /area/Greenvault_Ranch/int_reg/clinic)
+"YK" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/tan,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "YL" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -12240,6 +12513,10 @@
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"ZA" = (
+/obj/structure/machinery/autolathe,
+/turf/open/floor/bluegrid/bcircuitoff,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "ZC" = (
 /obj/item/tool/warning_cone,
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -12284,6 +12561,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Greenvault_Ranch/outside/northwest)
+"ZN" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_y = -12
+	},
+/obj/structure/machinery/portable_atmospherics/hydroponics,
+/turf/open/floor/corsat/retrosquares,
+/area/Greenvault_Ranch/int_heavy/researchlab)
 "ZO" = (
 /obj/item/poster,
 /turf/open/floor/prison,
@@ -34205,15 +34490,15 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -34396,16 +34681,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -34588,16 +34873,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -34780,16 +35065,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -34972,16 +35257,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -35164,16 +35449,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -35356,16 +35641,16 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
-sQ
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
+jO
 sQ
 sQ
 sQ
@@ -35548,8 +35833,8 @@ sQ
 sQ
 sQ
 sQ
-sQ
-sQ
+jO
+jO
 sQ
 sQ
 sQ
@@ -37075,8 +37360,8 @@ Vu
 Yd
 DA
 tW
-tW
-tW
+Fa
+Db
 sv
 Yk
 uW
@@ -37089,12 +37374,12 @@ dQ
 Jj
 Ns
 Jp
-Ru
-Jp
 Yr
 Jp
-Ru
-Jp
+Yr
+Yd
+Bs
+uc
 Yd
 Bs
 uc
@@ -37270,8 +37555,8 @@ MD
 Ks
 MD
 MD
-mz
-tW
+MD
+uL
 Yd
 tl
 RY
@@ -37281,12 +37566,12 @@ lG
 RY
 MX
 gb
-Jp
-gb
-Jp
+tf
+Yr
+RW
 St
-Jp
-gb
+TK
+bf
 Yd
 Ln
 vE
@@ -37465,9 +37750,9 @@ MD
 MD
 tW
 Yd
-Yr
+Ve
 oO
-qe
+lt
 mh
 qe
 oP
@@ -37475,10 +37760,10 @@ Mg
 Jp
 Yr
 Jp
-Yr
-AK
-Yr
-Jp
+TQ
+Yd
+Yd
+zy
 Yd
 Yd
 zy
@@ -37657,7 +37942,7 @@ tW
 tW
 iB
 Yd
-Jp
+Iy
 fE
 vR
 fE
@@ -37666,14 +37951,14 @@ fE
 vR
 gb
 Jp
-gb
-Jp
-cu
-Jp
-gb
+Yr
+Rp
 Yd
 tW
-oZ
+tW
+tW
+tW
+tW
 SS
 Yd
 Kr
@@ -37855,15 +38140,15 @@ hh
 tf
 gb
 yg
-gb
+oY
 Jw
-Gn
-Cm
 gb
-us
-hh
 tf
+gm
 Yd
+OR
+tW
+tW
 tW
 pn
 oA
@@ -38045,19 +38330,19 @@ Yd
 Yd
 Yd
 Yd
+Yd
+Yd
+Yd
+Yd
 tW
 lT
 Yd
 Yd
-Yd
-Yd
-Yd
-Yd
-Yd
-Yd
-Yd
-jO
+Gs
+rL
 tW
+tW
+oZ
 jY
 Yd
 Kr
@@ -38234,19 +38519,19 @@ WB
 tW
 tj
 iD
-tW
-tW
+Cm
+Cm
 Hh
-tW
-tW
-iD
+Cm
+Cm
+Yd
 tW
 tW
 tW
 tW
 Gk
-tW
-tW
+KK
+KK
 tW
 tW
 tW
@@ -38426,12 +38711,12 @@ fj
 tW
 tW
 tW
-tW
+Cm
 eM
-tW
-tW
-tW
-tW
+Cm
+Cm
+Cm
+Yd
 tW
 tW
 tW
@@ -38609,7 +38894,7 @@ Vu
 Vu
 Vu
 Yd
-te
+tW
 SU
 pQ
 zk
@@ -38619,10 +38904,10 @@ vK
 ga
 Yd
 SP
-tW
-sT
-tW
-tW
+Cm
+ZA
+Cm
+eA
 Yd
 Yd
 Yd
@@ -38802,8 +39087,8 @@ Vu
 Vu
 Yd
 tW
-MD
-MD
+uF
+uF
 wD
 Yd
 Lz
@@ -38811,14 +39096,14 @@ tW
 ga
 Yd
 Ox
-tW
+Cm
 PK
-tW
-tW
+Cm
+eA
 Yd
 pO
 tW
-rM
+FV
 bi
 tW
 rM
@@ -39002,11 +39287,11 @@ AL
 tW
 ja
 Ct
-tW
-tW
+eA
+Cm
 AA
-tW
-tW
+Cm
+ON
 Yd
 ie
 tW
@@ -39191,14 +39476,14 @@ MD
 aN
 Yd
 zC
-qd
+tW
 Ie
 Yd
-tW
+Cm
 Hd
 iN
-tW
-tW
+Cm
+eA
 Yd
 vL
 tW
@@ -39389,8 +39674,8 @@ Yd
 qA
 OK
 iN
-tW
-JQ
+Cm
+VU
 Yd
 Pz
 tW
@@ -39766,7 +40051,7 @@ tW
 tW
 tW
 MM
-tW
+XB
 tW
 Al
 tz
@@ -39958,7 +40243,7 @@ tW
 tW
 tW
 MM
-tW
+Tw
 tW
 tW
 tW
@@ -40535,20 +40820,20 @@ tW
 tW
 MM
 tW
-tW
+Tw
 tW
 nT
+KK
 tW
-tW
-tW
+KK
 tW
 tW
 iD
 tW
 tj
-tW
-tW
-tj
+KK
+KK
+zi
 tW
 PS
 tW
@@ -40726,7 +41011,7 @@ jd
 jd
 tW
 MM
-tW
+NL
 MV
 tW
 Ol
@@ -40734,7 +41019,7 @@ YW
 At
 tW
 tW
-tW
+KK
 tW
 tW
 xS
@@ -41101,7 +41386,7 @@ Yd
 Yd
 Td
 Td
-Td
+LJ
 Td
 Td
 Vu
@@ -41317,8 +41602,8 @@ tW
 Yd
 bY
 tW
-tW
-tW
+jM
+pF
 Kh
 Kh
 tW
@@ -41480,7 +41765,7 @@ tW
 tW
 tW
 tW
-tW
+KK
 tW
 Yd
 Td
@@ -41509,8 +41794,8 @@ GM
 Yd
 tW
 tW
-tW
-tW
+Nk
+Nk
 Kh
 Kh
 tW
@@ -41661,22 +41946,22 @@ Vu
 Vu
 Vu
 Vu
-Td
+Vu
 Td
 Td
 Td
 Td
 Td
 Yd
-BV
+YK
+tL
+KK
 tW
-tW
-tW
-tW
-tW
+KK
+KK
 Yd
 Td
-Td
+LJ
 hZ
 Td
 Td
@@ -41692,7 +41977,7 @@ wf
 Xk
 Yd
 Bx
-wt
+Bx
 Yd
 xX
 tW
@@ -41844,8 +42129,8 @@ Vu
 Td
 Td
 Td
-Td
-Td
+Vu
+Vu
 Vu
 Vu
 Vu
@@ -41861,11 +42146,11 @@ Td
 Td
 Yd
 Fv
+KK
+KK
 tW
-tW
-tW
-tW
-tW
+KK
+KK
 Yd
 Td
 Td
@@ -42037,13 +42322,13 @@ Vu
 Td
 Td
 Td
+Vu
 Td
 Td
+Vu
+Vu
 Td
-Td
-Td
-Td
-Td
+Vu
 Td
 Td
 Td
@@ -42053,16 +42338,16 @@ Td
 Td
 Yd
 Fv
+KK
+Hg
 tW
-Gk
-tW
-tW
-tW
+KK
+KK
 Yd
 Td
 Td
 Td
-hZ
+Su
 Td
 Td
 Vu
@@ -42249,13 +42534,13 @@ tW
 tW
 tW
 Kh
-tW
+KK
 Yd
 Td
 Td
 Td
-Td
-Td
+LJ
+LJ
 Td
 Vu
 Vu
@@ -42277,9 +42562,9 @@ eb
 Yd
 Wx
 De
-Wx
-Wx
-Wx
+tW
+tW
+tW
 Wx
 De
 Wx
@@ -42460,7 +42745,7 @@ Pu
 bW
 QT
 Bx
-Bx
+AK
 Pl
 tW
 tW
@@ -42470,7 +42755,7 @@ Yd
 xX
 tW
 tW
-tW
+KK
 tW
 tW
 tW
@@ -42630,7 +42915,7 @@ Td
 Yd
 mE
 tW
-tW
+KK
 tW
 Kh
 tW
@@ -42655,13 +42940,13 @@ Bx
 Bx
 Yd
 Ja
-tW
+KK
 tW
 XZ
 Yd
 tW
 tW
-tW
+KK
 tW
 tW
 tW
@@ -42805,8 +43090,8 @@ Td
 Td
 Td
 Td
-Td
-Td
+Vu
+Vu
 Vu
 Vu
 Vu
@@ -42822,7 +43107,7 @@ Td
 Yd
 Yd
 tW
-Gk
+us
 tW
 tW
 Yd
@@ -43009,15 +43294,15 @@ Vu
 Vu
 Vu
 Td
-Td
+Vu
 Vu
 Vu
 Yd
 BV
 tW
 tW
-tW
-Yd
+KK
+St
 Yd
 Vu
 Td
@@ -43208,8 +43493,8 @@ Yd
 Un
 tW
 tW
-tW
-Yd
+KK
+St
 Yd
 Vu
 Vu
@@ -43227,13 +43512,13 @@ Vu
 Vu
 Vu
 Yd
-Bx
+AK
 Bx
 Yd
+Da
 tW
 tW
-tW
-tW
+nf
 Yd
 Gk
 Yd
@@ -43422,10 +43707,10 @@ Yd
 Bx
 Bx
 Yd
+CT
+KK
 tW
-tW
-tW
-tW
+Hb
 Yd
 tW
 tW
@@ -43587,7 +43872,7 @@ Td
 Td
 Td
 Td
-Td
+Vu
 Yd
 Yd
 Yd
@@ -43614,16 +43899,16 @@ Yd
 Bx
 Bx
 Yd
+CT
+KK
 tW
 tW
-tW
-Gk
 iD
 tW
+KK
 tW
-tW
-tW
-tW
+KK
+KK
 tW
 tW
 Yd
@@ -43779,8 +44064,8 @@ Td
 Td
 Td
 Td
-Td
-Td
+Vu
+Vu
 Vu
 Vu
 Vu
@@ -43804,9 +44089,9 @@ Vu
 Vu
 Yd
 Rl
-Bx
+wt
 Yd
-tW
+sT
 tW
 tW
 tW
@@ -43995,8 +44280,8 @@ Yd
 Yd
 Yd
 Yd
-jP
-jP
+hg
+te
 Yd
 Yd
 Yd
@@ -44186,10 +44471,10 @@ Vu
 Yd
 Yd
 Yd
-ql
-jP
-jP
-Mh
+hY
+Gn
+Gn
+eh
 Yd
 Yd
 Yd
@@ -44197,10 +44482,10 @@ xX
 tW
 tW
 tW
+KK
+KK
 tW
-tW
-tW
-tW
+KK
 tW
 tW
 Yd
@@ -44376,14 +44661,14 @@ Vu
 Vu
 Vu
 Yd
+Wf
+yO
+Gn
+no
 jP
-jP
-jP
-jP
-jP
-jP
-jP
-jP
+Gn
+Fb
+QJ
 Yd
 tW
 tW
@@ -44392,7 +44677,7 @@ sW
 Hi
 HX
 HR
-tW
+KK
 tW
 tW
 Yd
@@ -44568,14 +44853,14 @@ Vu
 Vu
 Vu
 Yd
+Va
+Gn
+Gn
 jP
-jP
-jP
-jP
-jP
-jP
-jP
-jP
+kM
+Gn
+Gn
+Fb
 Yd
 Zf
 tW
@@ -44730,18 +45015,18 @@ Vu
 Td
 Td
 Vu
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
 Vu
 Vu
 Td
@@ -44761,13 +45046,13 @@ Vu
 Vu
 Yd
 ql
-jP
+Gn
 NU
 jP
 jP
 NU
-jP
-jP
+Gn
+Ph
 Yd
 wy
 tW
@@ -44922,6 +45207,9 @@ Td
 Td
 Td
 Vu
+cu
+cu
+cu
 Td
 Td
 Td
@@ -44930,10 +45218,7 @@ Td
 Td
 Td
 Td
-Td
-Td
-Td
-Td
+cu
 Vu
 Vu
 Vu
@@ -44952,13 +45237,13 @@ Vu
 Vu
 Vu
 Yd
-jP
-jP
+Ph
+Gn
 Yd
 jP
 jP
 Yd
-jP
+Gn
 Mh
 Yd
 qu
@@ -45114,18 +45399,18 @@ Td
 Td
 Td
 Vu
+cu
+Td
+EF
+Td
+Td
+Td
+Pn
 Td
 Td
 Td
 Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
+cu
 Vu
 Vu
 Vu
@@ -45144,22 +45429,22 @@ Vu
 Vu
 Vu
 Yd
-jP
-jP
+Ph
+Gn
 Yd
 vo
 gU
 Yd
-jP
-jP
+Gn
+Ph
 Yd
 Vl
 Zg
 tW
-tW
-tW
-tW
-tW
+KK
+KK
+KK
+KK
 Gk
 tW
 tW
@@ -45306,9 +45591,9 @@ Td
 Td
 Td
 Vu
+cu
 Td
-Td
-Td
+qd
 Td
 Td
 Td
@@ -45317,8 +45602,8 @@ Td
 Td
 oW
 Td
-Td
-Td
+cu
+cu
 Vu
 Vu
 Td
@@ -45337,12 +45622,12 @@ Vu
 Vu
 Yd
 ql
-jP
+Gn
 Yd
 Yd
 Yd
 Yd
-jP
+Gn
 Mh
 Yd
 YV
@@ -45490,27 +45775,27 @@ Vu
 Td
 Td
 Td
-Td
 Vu
 Vu
-Vu
-Td
-Td
-Td
-Vu
-Td
-Td
-Td
-Td
 Vu
 Vu
 Vu
 Td
 Td
+Vu
+cu
+Td
+sY
+Ru
+cu
+cu
+cu
 Td
 Td
+Pn
 Td
-Td
+cu
+cu
 Vu
 Vu
 Td
@@ -45528,14 +45813,14 @@ Td
 Vu
 Vu
 Yd
+Ph
+Gn
 jP
 jP
 jP
 jP
-jP
-jP
-jP
-jP
+Gn
+Ph
 Yd
 Yg
 tW
@@ -45692,17 +45977,17 @@ Td
 Td
 Td
 Td
+EF
 Td
-Td
-Vu
-Vu
-Vu
-Td
-Td
+cu
+cu
+cu
 Td
 Td
 Td
 Td
+cu
+cu
 Vu
 Vu
 Td
@@ -45720,14 +46005,14 @@ Vu
 Vu
 Vu
 Yd
-jP
-jP
-jP
-jP
-jP
-jP
-jP
-jP
+go
+Gn
+Gn
+Gn
+Gn
+Gn
+Gn
+Fb
 Yd
 tT
 zY
@@ -45878,22 +46163,22 @@ Td
 Vu
 Vu
 Vu
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Vu
-Vu
 Vu
 Td
 Td
 Td
 Td
 Td
+EF
+Td
+cu
+cu
+cu
+Td
+Td
+Td
+Td
+cu
 Vu
 Vu
 Vu
@@ -45902,7 +46187,7 @@ Td
 Td
 Vu
 Td
-Vu
+Td
 Vu
 Vu
 Vu
@@ -45912,14 +46197,14 @@ Vu
 Vu
 Vu
 Yd
-jP
-jP
-NU
-jP
-jP
-NU
-jP
-jP
+AJ
+yH
+ZN
+Ph
+Ph
+ZN
+Fb
+QJ
 Yd
 Yd
 Yd
@@ -46074,18 +46359,18 @@ Td
 Td
 Td
 Td
+cu
 Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
+AP
+mz
+mz
+mz
+mz
+mz
+mz
+mz
+mz
+cu
 Vu
 Vu
 Td
@@ -46094,8 +46379,8 @@ Td
 Td
 Vu
 Td
-Vu
-Vu
+Td
+Td
 Vu
 Vu
 Vu
@@ -46266,18 +46551,18 @@ Td
 Td
 Td
 Td
+cu
+cu
 Td
 Td
 Td
 Td
 Td
+oW
 Td
 Td
 Td
-Td
-Td
-Td
-Td
+cu
 Vu
 Vu
 Td
@@ -46459,6 +46744,7 @@ Td
 Td
 Td
 Td
+cu
 Td
 Td
 Td
@@ -46466,10 +46752,9 @@ Td
 Td
 Td
 Td
-Td
-Td
-Td
-Td
+cu
+cu
+cu
 Vu
 Vu
 Td
@@ -46646,20 +46931,20 @@ Td
 Vu
 Vu
 Vu
+Vu
 Td
 Td
 Td
 Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
-Td
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
+cu
 Vu
 Vu
 Vu
@@ -46670,8 +46955,8 @@ Td
 Vu
 Vu
 Td
-Vu
-Vu
+Td
+Td
 Vu
 Td
 Td
@@ -46838,31 +47123,31 @@ xZ
 Vu
 Vu
 Vu
-Td
-Td
-Td
-Td
-Td
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
-Vu
 Vu
 Vu
 Td
+Td
+Td
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
+Vu
 Vu
 Vu
 Td
 Vu
+Vu
+Td
+Td
 Vu
 Vu
 Vu
