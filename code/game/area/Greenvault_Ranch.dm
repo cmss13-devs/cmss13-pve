@@ -74,12 +74,38 @@
 /area/Greenvault_Ranch/outside/wheatfields
 	name = "Southeast Wheat Fields"
 	icon_state = "southwest"
-/area/Greenvault_Ranch/int_heavy/researchlab
+/area/Greenvault_Ranch/caves/researchlab
 	name = "Hidden Research Lab"
 	icon_state = "south"
 /area/Greenvault_Ranch/int_heavy/powerplace
 	name = "Power Generators"
 	icon_state = "yellow"
+/area/Greenvault_Ranch/int_reg/bar
+	name = "Colony Bar"
+	icon_state = "bar"
+
+//============================================================Bunker
+/area/Greenvault_Ranch/int_heavy/grainbunker
+	name = "Colony Grain Bunker"
+	icon_state = "orange"
+/area/Greenvault_Ranch/int_heavy/bunkermedical
+	name = "Grain Bunker Medical"
+	icon_state = "medbay"
+/area/Greenvault_Ranch/int_heavy/livingspaces
+	name = "Emergency Living Spaces"
+	icon_state = "green"
+/area/Greenvault_Ranch/int_heavy/powergenerators
+	name = "Bunker Power Generators"
+	icon_state = "yellow"
+/area/Greenvault_Ranch/int_heavy/controlroom
+	name = "Bunker Control Room"
+	icon_state = "cyan"
+/area/Greenvault_Ranch/int_heavy/grainstorage
+	name = "Bunker Grain Storage"
+	icon_state = "blue"
+/area/Greenvault_Ranch/int_heavy/secondarystorage
+	name = "Bunker Auxilliary Storage"
+	icon_state = "purple"
 
 /area/Greenvault_Ranch/int_heavyoutofbounds
 	name = "Greenvault Ranch Out Of Bounds"

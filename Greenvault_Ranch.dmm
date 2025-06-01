@@ -1847,9 +1847,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
-"hN" = (
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/Greenvault_Ranch/outside/wheatfields)
 "hP" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -5289,10 +5286,6 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/caves/researchlab)
-"wu" = (
-/obj/structure/machinery/sensortower,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wheatfields)
 "wv" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -8765,10 +8758,6 @@
 /obj/structure/flora/tree/joshua,
 /turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/int_reg/trailerpark)
-"KW" = (
-/obj/structure/prop/almayer/cannon_cables,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wheatfields)
 "KX" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerempty3,
 /turf/open/floor/prison/greenfull,
@@ -9615,10 +9604,6 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/caves/researchlab)
-"Ob" = (
-/obj/structure/prop/vehicle/sensor_equipment,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wheatfields)
 "Oc" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -11073,10 +11058,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_reg/bar)
-"Ve" = (
-/obj/structure/machinery/power/apc/upgraded/power/west,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wheatfields)
 "Vf" = (
 /obj/structure/inflatable/door,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -26238,10 +26219,10 @@ rx
 rx
 rx
 qf
-hN
 aQ
-wu
-KW
+aQ
+aQ
+aQ
 qC
 rx
 rx
@@ -26430,9 +26411,9 @@ rx
 rx
 rx
 EL
-Ve
 aQ
-Ob
+aQ
+aQ
 aQ
 fq
 rx
