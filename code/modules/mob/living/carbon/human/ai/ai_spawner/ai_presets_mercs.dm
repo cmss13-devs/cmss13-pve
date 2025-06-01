@@ -45,3 +45,13 @@
 	name = "Black Dragoons Synth (Response)"
 	desc = "A standard Gen II Synthetic employed under the Black Dragoons. This one is better equipped for it's duties as a QRF Support."
 	path = /datum/equipment_preset/mercenary/synth/response
+
+/datum/human_ai_equipment_preset/mercenaries/bulwark
+	name = "Black Dragoons Bulwark (Heavy Response Breacher)"
+	desc = "A heavily armoured and well equipped operative meant to act as shock troops against hostiles that Sentinels are unable to handle. This one has a shotgun."
+	path = /datum/equipment_preset/mercenary/bulwark
+
+/datum/human_ai_equipment_preset/mercenaries/bulwark/machinegun
+	name = "Black Dragoons Bulwark (Heavy Response Suppressor)"
+	desc = "A heavily armoured and well equipped operative meant to act as shock troops against hostiles that Sentinels are unable to handle. This one has a machinegun."
+	path = /datum/equipment_preset/mercenary/bulwark/machinegun

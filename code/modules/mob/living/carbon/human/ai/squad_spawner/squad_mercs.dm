@@ -44,3 +44,18 @@
 		/datum/equipment_preset/mercenary/supervisor/response = 1,
 		/datum/equipment_preset/mercenary/synth/response = 1,
 	)
+
+/datum/human_ai_squad_preset/mercs/response/heavy
+	name = "Bulwark Heavy Response Team"
+	desc = "A team of heavy Bulwark operatives, armed with slug shotguns and enough armor to hold against most threats encountered."
+	ai_to_spawn = list(
+		/datum/equipment_preset/mercenary/bulwark = 2,
+	)
+
+/datum/human_ai_squad_preset/mercs/response/heavy/squad
+	name = "Bulwark Heavy Response Squad"
+	desc = "A squad of heavy Bulwark operatives, armed with slug shotguns, an M60 Machine Gun and enough armor to hold against most threats encountered."
+	ai_to_spawn = list(
+		/datum/equipment_preset/mercenary/bulwark = 3,
+		/datum/equipment_preset/mercenary/bulwark/machinegun = 3,
+	)
