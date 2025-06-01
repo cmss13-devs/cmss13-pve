@@ -6455,7 +6455,7 @@
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/outside/wheatfields)
 "Bb" = (
 /obj/structure/closet/secure_closet/engineering_materials,
 /turf/open/floor/corsat/tan,
@@ -9569,10 +9569,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
-"Nk" = (
-/obj/structure/mineral_door/wood/open,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/outside/pens)
 "Nl" = (
 /obj/structure/barricade/handrail/wire,
 /obj/structure/prop/invuln/overhead_pipe,
@@ -37202,7 +37198,7 @@ dd
 Xa
 Xa
 Xa
-Nk
+nu
 nu
 nu
 nu
@@ -37394,7 +37390,7 @@ dd
 dd
 dd
 dd
-Nk
+nu
 nu
 nu
 JX
@@ -37586,7 +37582,7 @@ dd
 dd
 dd
 dd
-Nk
+nu
 nu
 aq
 nu
@@ -39506,7 +39502,7 @@ dd
 dd
 dd
 dd
-Nk
+nu
 QE
 nu
 nu
@@ -39698,7 +39694,7 @@ dd
 dd
 dd
 dd
-Nk
+nu
 QE
 nu
 nu
@@ -39890,7 +39886,7 @@ dd
 dd
 dd
 dd
-Nk
+nu
 QE
 aq
 nu
