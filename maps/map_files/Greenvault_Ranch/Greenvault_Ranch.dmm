@@ -5276,11 +5276,11 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/int_reg/trailerpark)
 "vV" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	id = s;
+/obj/structure/machinery/door_control/brbutton{
+	id = "Dig Site Access";
 	name = "\improper Dig Site Access"
 	},
-/turf/open/floor/corsat/lightplate,
+/turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "vW" = (
 /obj/structure/prop/invuln/ice_prefab{
@@ -9292,7 +9292,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Mh" = (
 /obj/structure/machinery/door_control/brbutton{
-	id = "Dig Site Access";
+	id = s;
 	name = "\improper Dig Site Access"
 	},
 /turf/closed/wall/r_wall/biodome,
@@ -39642,7 +39642,7 @@ zJ
 zJ
 zy
 zJ
-Mh
+vV
 zJ
 YD
 wt
@@ -40795,7 +40795,7 @@ iX
 jd
 jd
 YD
-vV
+MM
 YD
 MV
 YD
