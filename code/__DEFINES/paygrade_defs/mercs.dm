@@ -63,5 +63,8 @@
 /// BD-S, Synth
 #define PAY_SHORT_BD_SY "BD-SY"
 
+/// BD-I, Infiltrator
+#define PAY_SHORT_BD_I "BD-I"
+
 /// BD-O, Officer
 #define PAY_SHORT_BD_O "BD-O"
