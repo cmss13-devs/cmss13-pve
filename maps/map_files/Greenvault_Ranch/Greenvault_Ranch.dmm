@@ -11292,9 +11292,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/platform/kutjevo{
-	dir = 4
-	},
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
 "Vb" = (
