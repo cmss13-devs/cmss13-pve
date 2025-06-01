@@ -19,7 +19,7 @@
 	var/force = 0
 	var/damtype = BRUTE
 	var/embeddable = TRUE //FALSE if unembeddable
-	var/embedded_organ = null
+	var/obj/embedded_organ = null
 	var/attack_speed = 11  //+3, Adds up to 10.  Added an extra 4 removed from /mob/proc/do_click()
 	///Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/list/attack_verb
@@ -572,12 +572,8 @@ cases. Override_icon_state should be a list.*/
 			if(WEAR_WAIST)
 				if(human.belt)
 					return FALSE
-				if(!human.w_uniform && (WEAR_BODY in mob_equip))
-					if(!disable_warning)
-						to_chat(human, SPAN_WARNING("You need a jumpsuit before you can attach this [name]."))
-					return FALSE
 				if(!(flags_equip_slot & SLOT_WAIST))
-					return
+					return FALSE
 				return TRUE
 			if(WEAR_EYES)
 				if(human.glasses)

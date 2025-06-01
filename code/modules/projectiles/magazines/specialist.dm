@@ -410,6 +410,10 @@
 	default_ammo = /datum/ammo/energy/plasma
 	gun_type = /obj/item/weapon/gun/XM99
 
+/obj/item/ammo_magazine/plasma/m99
+	max_rounds = 20
+	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the M99A series of phased plasma pulse rifles. Advanced version with higher energy cap. Do not puncture or put in a microwave."
+
 // The "round-remover" power/fuel cell for the XM99
 /obj/item/ammo_magazine/plasma/gibber
 	name = "\improper XM99A1 lithium battery drum"

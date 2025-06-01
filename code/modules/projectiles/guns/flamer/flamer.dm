@@ -942,3 +942,6 @@
 			if(CEILING_IS_PROTECTED(picked_area?.ceiling, get_ceiling_protection_level(aerial_flame_level)))
 				continue
 		fire_spread_recur(picked_turf, cause_data, spread_power, direction, fire_lvl, burn_lvl, f_color, burn_sprite, aerial_flame_level)
+
+/obj/item/weapon/gun/flamer/acid
+	current_mag = /obj/item/ammo_magazine/flamer_tank/smoke/acid

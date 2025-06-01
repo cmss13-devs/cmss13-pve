@@ -6,6 +6,7 @@
 	if(!.)
 		return //If they're already dead, it will return.
 
+	GLOB.xenos_died++
 	GLOB.living_xeno_list -= src
 
 	if(is_zoomed)
