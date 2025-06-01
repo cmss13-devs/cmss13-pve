@@ -5830,11 +5830,6 @@
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/mars_cave,
 /area/Greenvault_Ranch/caves)
-"yb" = (
-/mob/living/simple_animal/cow,
-/obj/structure/mineral_door/wood/open,
-/turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
 "yc" = (
 /obj/structure/ice/thin/indestructible{
 	dir = 4;
@@ -9574,22 +9569,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
-"Nj" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown,
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/turf/open/floor/corsat/tan,
-/area/Greenvault_Ranch/int_heavy/researchlab)
 "Nk" = (
 /obj/structure/mineral_door/wood/open,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -10471,10 +10450,6 @@
 /obj/item/prop/geiger_counter,
 /turf/open/floor/prison/darkbrown2/north,
 /area/Greenvault_Ranch/int_reg/farmbay)
-"Ri" = (
-/obj/structure/mineral_door/wood/open,
-/turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
 "Rl" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/corsat/retrosquareslight,
@@ -36474,9 +36449,9 @@ Cw
 Cw
 Cw
 Cw
-Ri
-Ri
-Ri
+nu
+nu
+nu
 Cw
 Cw
 Cw
@@ -36484,9 +36459,9 @@ Cw
 Cw
 Cw
 Cw
-Ri
-Ri
-Ri
+nu
+nu
+nu
 Cw
 Cw
 Cw
@@ -37238,7 +37213,7 @@ nu
 nu
 nu
 nu
-Ri
+nu
 nu
 nu
 nu
@@ -37430,7 +37405,7 @@ uw
 nu
 nu
 nu
-Ri
+nu
 nu
 nu
 nu
@@ -37622,7 +37597,7 @@ nu
 nu
 nu
 nu
-Ri
+nu
 nu
 nu
 nu
@@ -37814,7 +37789,7 @@ nu
 nu
 nu
 nu
-Ri
+nu
 nu
 nu
 nu
@@ -39542,7 +39517,7 @@ nu
 nu
 nu
 QE
-Ri
+nu
 nu
 nu
 nu
@@ -39734,7 +39709,7 @@ uw
 nu
 nu
 QE
-yb
+nu
 nu
 nu
 nu
@@ -39926,7 +39901,7 @@ nu
 nu
 nu
 QE
-Ri
+nu
 nu
 nu
 nu
@@ -39999,7 +39974,7 @@ tW
 Yd
 Ej
 Ky
-Nj
+tW
 UL
 rS
 Kt
@@ -40118,7 +40093,7 @@ nu
 JX
 nu
 QE
-Ri
+nu
 nu
 nu
 nu
@@ -40191,7 +40166,7 @@ GM
 Yd
 Xj
 KK
-gI
+tW
 NY
 KK
 Oa
