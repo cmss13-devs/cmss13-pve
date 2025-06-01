@@ -74,9 +74,6 @@
 /area/Greenvault_Ranch/outside/wheatfields
 	name = "Southeast Wheat Fields"
 	icon_state = "southwest"
-/area/Greenvault_Ranch/caves/researchlab
-	name = "Hidden Research Lab"
-	icon_state = "south"
 /area/Greenvault_Ranch/int_heavy/powerplace
 	name = "Power Generators"
 	icon_state = "yellow"
@@ -106,6 +103,9 @@
 /area/Greenvault_Ranch/int_heavy/secondarystorage
 	name = "Bunker Auxilliary Storage"
 	icon_state = "purple"
+/area/Greenvault_Ranch/int_heavy/researchlab
+	name = "Hidden Research Lab"
+	icon_state = "south"
 
 /area/Greenvault_Ranch/int_heavyoutofbounds
 	name = "Greenvault Ranch Out Of Bounds"
