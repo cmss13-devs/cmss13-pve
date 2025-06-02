@@ -222,15 +222,6 @@
 	name = "Military Block - Human AI Interface";
 	ceiling_muffle = 1
 	})
-"ahQ" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.9
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/shuttle/tripoli{
-	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
-	})
 "aip" = (
 /turf/closed/wall/upp_wall/grey,
 /area/strata/ag/interior/outpost/maint/aerodrome_to_admin{
@@ -554,11 +545,6 @@
 /turf/open/floor/corsat/plate,
 /area/strata/ag/interior/outpost/gen{
 	name = "Hab Block - Hallway"
-	})
-"azH" = (
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/shuttle/tripoli{
-	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "aAx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -1462,7 +1448,7 @@
 	temperature = 259.15
 	})
 "bcl" = (
-/turf/open/gm/river/ocean/deep_ocean,
+/turf/open/gm/river/no_overlay,
 /area/desert_dam/interior/caves{
 	name = "Binhai Caves";
 	temperature = 259.15
@@ -1602,9 +1588,6 @@
 /obj/item/fuel_cell,
 /obj/item/fuel_cell,
 /obj/structure/closet/crate,
-/obj/item/storage/firstaid/regular{
-	pixel_y = 28
-	},
 /turf/open/floor/corsat/plate,
 /area/strata/ag/interior/outpost/engi/tool_storage{
 	name = "Main Block - Engineering Lower Access"
@@ -1693,6 +1676,15 @@
 /area/corsat/gamma/cargo{
 	name = "Hangar Block - Arrivals and Storage";
 	ceiling = 1.1
+	})
+"bmx" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/tripoli{
+	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "bmJ" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey{
@@ -2335,7 +2327,7 @@
 	})
 "bOS" = (
 /obj/structure/machinery/light/small{
-	dir = 4;
+	dir = 8;
 	light_power = 0.9
 	},
 /turf/open/shuttle/vehicle,
@@ -3040,16 +3032,6 @@
 /area/strata/ag/interior/outpost/gen/foyer{
 	name = "Main Block - Assembly Hall"
 	})
-"cjw" = (
-/obj/structure/machinery/light/small{
-	light_power = 0.9
-	},
-/turf/open/floor/corsat,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
-	ceiling_muffle = 1
-	})
 "cjB" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -3528,6 +3510,15 @@
 /area/golden_arrow/ai_interface{
 	name = "Military Block - Human AI Interface";
 	ceiling_muffle = 1
+	})
+"cCt" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
+	},
+/turf/open/shuttle/vehicle,
+/area/shuttle/tripoli{
+	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "cCO" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -4289,7 +4280,7 @@
 "dcf" = (
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "dcq" = (
 /obj/structure/bed/chair/comfy/beige{
@@ -5131,7 +5122,7 @@
 	})
 "dEo" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass{
-	name = "sTesting Space";
+	name = "\improper Testing Space";
 	req_access = list(103,236,240,241)
 	},
 /turf/open/floor/prison/sterile_white,
@@ -5367,17 +5358,6 @@
 /area/corsat/gamma/cargo/lobby{
 	name = "Hangar Block - Commissary";
 	ceiling = 1.1
-	})
-"dLQ" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.9
-	},
-/turf/open/floor/prison/sterile_white,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
-	ceiling_muffle = 1
 	})
 "dMq" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -6845,7 +6825,7 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "eKJ" = (
 /turf/closed/wall/upp_wall/grey,
@@ -7139,6 +7119,14 @@
 /area/strata/ag/interior/dorms/lobby{
 	name = "Hab Block - Apartments East"
 	})
+"eSe" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/prison/sterile_white,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
+	})
 "eSf" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	name = "colonial operations terminal";
@@ -7244,7 +7232,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "eXc" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
@@ -8535,18 +8523,9 @@
 	temperature = 259.15
 	})
 "fKZ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/floor3,
-/area/strata/ag/interior/outpost/gen{
-	name = "\impropers Main Block - Lower Access"
+/turf/closed/wall/upp_wall/grey,
+/area/strata/ag/interior/outpost/security/hall{
+	name = "Main Block - PAP Space"
 	})
 "fLd" = (
 /obj/structure/bed/chair{
@@ -8954,6 +8933,16 @@
 /turf/open/floor/strata/floor3,
 /area/desert_dam/building/administration/control_room{
 	name = "Military Block - Command Room"
+	})
+"gdU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/prison/bright_clean,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
 	})
 "gen" = (
 /obj/effect/decal/warning_stripes{
@@ -9500,7 +9489,7 @@
 "gvv" = (
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "gvI" = (
 /obj/effect/decal/warning_stripes{
@@ -10187,6 +10176,13 @@
 	ceiling = 1.1
 	})
 "gXR" = (
+/obj/structure/phone_base/colony_net{
+	phone_category = "Binhai Net";
+	phone_id = "Research Office";
+	pixel_y = 1;
+	pixel_x = -19;
+	dir = 4
+	},
 /turf/open/floor/strata/fake_wood,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
@@ -11080,7 +11076,7 @@
 "hzQ" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "hzY" = (
 /turf/open/floor/corsat/plate,
@@ -11801,7 +11797,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/gen{
-	name = "Main Block - Lower Access"
+	name = "\impropers Main Block - Lower Access"
 	})
 "hYn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12124,20 +12120,6 @@
 /turf/open/floor/corsat/plate,
 /area/strata/ag/interior/outpost/gen{
 	name = "Main Block - Lower Access"
-	})
-"ioE" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning"
-	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
-/turf/open/floor/prison/bright_clean,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
-	ceiling_muffle = 1
 	})
 "ioP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -12645,7 +12627,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "iDy" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -12787,6 +12769,17 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/ag/interior/outpost/engi/power_monitoring{
 	name = "Main Block - Engineering"
+	})
+"iGO" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
+/turf/open/floor/prison/sterile_white,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
 	})
 "iHk" = (
 /obj/effect/decal/warning_stripes{
@@ -13147,17 +13140,6 @@
 /turf/open/floor/almayer/aicore/glowing/no_build,
 /area/golden_arrow/ai_interface{
 	name = "Military Block - Human AI Interface";
-	ceiling_muffle = 1
-	})
-"iSD" = (
-/obj/structure/pipes/vents/pump,
-/obj/structure/machinery/light/small{
-	light_power = 0.9
-	},
-/turf/open/floor/prison/sterile_white,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
 	ceiling_muffle = 1
 	})
 "iTd" = (
@@ -13751,7 +13733,7 @@
 	pixel_x = 9;
 	pixel_y = -2
 	},
-/turf/open/gm/river/ocean/deep_ocean,
+/turf/open/floor/corsat/plate,
 /area/desert_dam/building/water_treatment_one/control_room{
 	name = "Binhai - Water Treatment Control"
 	})
@@ -14036,19 +14018,6 @@
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/engi{
 	name = "Main Block - Atmospherics"
-	})
-"juD" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning";
-	dir = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.9
-	},
-/turf/open/shuttle/vehicle,
-/area/shuttle/tripoli{
-	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "jvK" = (
 /obj/structure/machinery/light/small{
@@ -15954,10 +15923,10 @@
 	name = "Main Block - Bar"
 	})
 "kNR" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "\improper Block Security Shutter";
 	id = "ResearchSh";
 	color = "#8B9490";
-	dir = 2;
 	pixel_y = -3
 	},
 /turf/open/floor/corsat/marked,
@@ -16931,12 +16900,6 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "PAPrmory";
-	name = "\improper Weapon Storage";
-	color = "#8B9490";
-	dir = 4
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "PAPArmory";
 	name = "\improper Weapon Storage";
 	dir = 4
@@ -17089,7 +17052,10 @@
 	ceiling = 1.1
 	})
 "lyn" = (
-/turf/open/floor/prison/bright_clean,
+/obj/structure/machinery/light/small{
+	light_power = 0.9
+	},
+/turf/open/floor/prison/sterile_white,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
 	ceiling = 1.1;
@@ -17767,7 +17733,7 @@
 	})
 "lXa" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/gm/river/ocean/deep_ocean,
+/turf/open/floor/corsat/plate,
 /area/desert_dam/building/water_treatment_one/control_room{
 	name = "Binhai - Water Treatment Control"
 	})
@@ -17990,6 +17956,20 @@
 /turf/open/floor/corsat/plate,
 /area/strata/ag/interior/outpost/gen{
 	name = "Main Block - Hallway"
+	})
+"mhK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/strata/ag/interior/outpost/gen{
+	name = "Main Block - Lower Access"
 	})
 "mhR" = (
 /obj/structure/machinery/bioprinter{
@@ -19598,7 +19578,7 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "noh" = (
 /obj/structure/closet/emcloset{
@@ -19638,19 +19618,6 @@
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/security/hall{
 	name = "Main Block - PAP Space"
-	})
-"npR" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "door_warning";
-	dir = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
-/turf/open/shuttle/vehicle,
-/area/shuttle/tripoli{
-	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "npW" = (
 /turf/closed/shuttle/ert{
@@ -20577,6 +20544,10 @@
 	icon_state = "door_warning";
 	dir = 1
 	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
+	},
 /turf/open/shuttle/vehicle,
 /area/shuttle/tripoli{
 	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
@@ -20636,6 +20607,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
 	},
 /turf/open/floor/prison/bright_clean,
 /area/ice_colony/underground/research{
@@ -20844,7 +20819,11 @@
 	name = "Hab Block - Hallway"
 	})
 "oem" = (
-/turf/closed/wall/shiva/prefabricated/reinforced,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
+	},
+/turf/open/floor/prison/sterile_white,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
 	ceiling = 1.1;
@@ -21505,6 +21484,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
 /turf/open/floor/prison/bright_clean,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
@@ -21980,10 +21963,6 @@
 	temperature = 259.15
 	})
 "oSX" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/tripoli{
 	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
@@ -23243,18 +23222,12 @@
 	name = "MSS Block - Operations Space"
 	})
 "pJO" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
+/obj/structure/sign/safety/ladder{
+	pixel_x = 15
 	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "PAPArmory";
-	name = "\improper Weapon Storage";
-	dir = 4
-	},
-/turf/open/floor/corsat/marked,
-/area/strata/ag/interior/outpost/security/armory{
-	name = "Main Block - PAP Armory"
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/desert_dam/building/mining/workshop_foyer{
+	name = "Mining Block - Prep"
 	})
 "pKe" = (
 /obj/structure/coatrack{
@@ -24086,7 +24059,7 @@
 "qjZ" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "qks" = (
 /obj/structure/sign/safety/hazard,
@@ -24618,7 +24591,7 @@
 /obj/structure/machinery/light/small{
 	light_power = 0.9
 	},
-/turf/open/floor/prison/sterile_white,
+/turf/open/floor/corsat,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
 	ceiling = 1.1;
@@ -24921,6 +24894,12 @@
 /area/shuttle/tripoli{
 	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
+"qJl" = (
+/obj/item/storage/firstaid/regular,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/strata/ag/interior/outpost/engi/tool_storage{
+	name = "Main Block - Engineering Lower Access"
+	})
 "qJY" = (
 /turf/open/floor/strata/multi_tiles/west,
 /area/strata/ag/interior/dorms/north{
@@ -24996,7 +24975,7 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "qNR" = (
 /obj/structure/bed/chair/comfy,
@@ -25050,7 +25029,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "qPN" = (
 /obj/effect/decal/warning_stripes{
@@ -25145,7 +25124,7 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "qSi" = (
 /obj/structure/ladder{
@@ -25244,6 +25223,9 @@
 	})
 "qTi" = (
 /obj/structure/pipes/vents/pump,
+/obj/structure/machinery/light/small{
+	light_power = 0.9
+	},
 /turf/open/floor/prison/sterile_white,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
@@ -30004,6 +29986,15 @@
 /area/shuttle/tripoli{
 	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
+"tUx" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/tripoli{
+	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
+	})
 "tUA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -30370,9 +30361,11 @@
 	ceiling = 1.1
 	})
 "udG" = (
-/turf/closed/wall/upp_wall/grey,
-/area/strata/ag/interior/outpost/security/hall{
-	name = "Main Block - PAP Space"
+/turf/open/floor/strata/fake_wood,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
 	})
 "udN" = (
 /obj/effect/decal/warning_stripes{
@@ -30752,10 +30745,6 @@
 	name = "Military Block - Hallway"
 	})
 "umm" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
 /turf/open/floor/prison/bright_clean,
 /area/ice_colony/underground/research{
 	name = "Binhai - Research";
@@ -31026,6 +31015,17 @@
 /turf/closed/wall/upp_wall/grey,
 /area/strata/ag/interior/outpost/engi/power_monitoring{
 	name = "Main Block - Engineering"
+	})
+"uvc" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
+/turf/open/floor/prison/bright_clean,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
 	})
 "uvi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31320,15 +31320,17 @@
 	name = "MSS Block - Operations Space"
 	})
 "uGj" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/barricade/handrail/type_b{
-	layer = 3.01;
-	dir = 8
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
 	},
-/turf/open/gm/river/ocean/deep_ocean,
-/area/desert_dam/interior/caves{
-	name = "Binhai Caves";
-	temperature = 259.15
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
+/turf/open/shuttle/vehicle,
+/area/shuttle/tripoli{
+	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "uGw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -31667,6 +31669,17 @@
 /area/strata/ag/interior/dorms/south{
 	name = "Hab Block - Apartments South"
 	})
+"uQT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/prison/bright_clean,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
+	})
 "uRl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -31780,21 +31793,6 @@
 /turf/open/floor/corsat,
 /area/strata/ag/interior/outpost/gen{
 	name = "Hab Block - Hallway"
-	})
-"uUR" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.9
-	},
-/turf/open/floor/prison/bright_clean,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
-	ceiling_muffle = 1
 	})
 "uVG" = (
 /obj/effect/decal/warning_stripes{
@@ -32233,7 +32231,7 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "vif" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -32394,7 +32392,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "vnv" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -33467,7 +33465,7 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "vRc" = (
 /obj/effect/decal/warning_stripes{
@@ -34292,13 +34290,11 @@
 	name = "Main Block - Colony Operations"
 	})
 "wpy" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
-/turf/open/shuttle/vehicle,
-/area/shuttle/tripoli{
-	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/ice_colony/underground/research{
+	name = "Binhai - Research";
+	ceiling = 1.1;
+	ceiling_muffle = 1
 	})
 "wpO" = (
 /obj/structure/prop/structure_lattice{
@@ -34660,7 +34656,8 @@
 	ceiling = 1.1
 	})
 "wCG" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "\improper Block Security Shutter";
 	id = "ResearchSh";
 	color = "#8B9490";
 	dir = 4;
@@ -35028,10 +35025,10 @@
 	})
 "wPH" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
+/obj/structure/machinery/door/poddoor/shutters/almayer/open{
+	name = "\improper Block Security Shutter";
 	id = "ResearchSh";
 	color = "#8B9490";
-	dir = 2;
 	pixel_y = -3
 	},
 /turf/open/floor/corsat/marked,
@@ -35150,17 +35147,6 @@
 /turf/open/floor/carpet,
 /area/strata/ag/interior/outpost/admin{
 	name = "Main Block - Colony Operations"
-	})
-"wRL" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.9
-	},
-/turf/open/floor/prison/sterile_white,
-/area/ice_colony/underground/research{
-	name = "Binhai - Research";
-	ceiling = 1.1;
-	ceiling_muffle = 1
 	})
 "wSj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -36252,7 +36238,7 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "xBS" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -36544,6 +36530,15 @@
 /turf/open/floor/prison/bright_clean,
 /area/bmg290/colony/diner{
 	name = "Hab Block - Canteen"
+	})
+"xJk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/turf/open/shuttle/vehicle,
+/area/shuttle/tripoli{
+	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	})
 "xJp" = (
 /obj/effect/decal/warning_stripes{
@@ -36911,7 +36906,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/corsat/gamma/cargo{
-	name = "\improper Binhai - Umbillical Arrivals"
+	name = "Binhai - Umbillical Arrivals"
 	})
 "xZv" = (
 /obj/effect/decal/warning_stripes{
@@ -49389,7 +49384,7 @@ iJV
 iJV
 iJV
 iJV
-tux
+rsD
 rPj
 mAr
 pJL
@@ -55738,13 +55733,13 @@ xnw
 ufk
 epO
 cMh
-oem
-oem
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
 ufk
 ufk
 xnw
@@ -55981,12 +55976,12 @@ epO
 epO
 cMh
 plx
-lyn
 umm
-lyn
+uvc
+umm
 fNW
 vqZ
-oem
+wpy
 cMh
 cMh
 epO
@@ -56228,7 +56223,7 @@ kwF
 ndo
 eLS
 rbH
-oem
+wpy
 cMh
 gSe
 gSe
@@ -56464,13 +56459,13 @@ cMh
 epO
 epO
 epO
-oem
+wpy
 rnX
 eHo
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
 epO
 gSe
 jiX
@@ -56706,13 +56701,13 @@ ufk
 ufk
 epO
 cMh
-oem
+wpy
 bXY
-nZo
-lyn
-ioE
+uQT
+umm
+oBm
 xcn
-oem
+wpy
 epO
 gSe
 jiX
@@ -56948,13 +56943,13 @@ xnw
 ufk
 epO
 cMh
-oem
+wpy
 bXY
-uUR
-lyn
-oBm
+nZo
+umm
+gdU
 wdu
-oem
+wpy
 epO
 gSe
 vJf
@@ -57190,13 +57185,13 @@ xnw
 ufk
 epO
 cMh
-oem
-oem
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
 epO
 gSe
 pjk
@@ -62516,7 +62511,7 @@ wzR
 wzR
 wzR
 wzR
-udG
+fKZ
 oJC
 vTf
 maj
@@ -62992,9 +62987,9 @@ mgP
 qYW
 xnE
 aJz
-udG
-udG
-udG
+fKZ
+fKZ
+fKZ
 wzR
 kYg
 kDZ
@@ -63234,7 +63229,7 @@ sOK
 gkC
 xnE
 vbe
-udG
+fKZ
 wRE
 iKZ
 wzR
@@ -63475,14 +63470,14 @@ lRN
 wub
 isM
 eKJ
-udG
-udG
+fKZ
+fKZ
 ufu
 iKZ
 wzR
 lun
-pJO
-pJO
+lun
+lun
 wzR
 oBN
 oJC
@@ -63960,7 +63955,7 @@ lVa
 bSL
 uIg
 lQW
-udG
+fKZ
 isC
 isC
 wzR
@@ -63968,7 +63963,7 @@ wzR
 wzR
 wzR
 wzR
-udG
+fKZ
 fDf
 lCC
 czs
@@ -64685,7 +64680,7 @@ lVa
 kou
 vGO
 maj
-udG
+fKZ
 asJ
 emp
 kZq
@@ -64693,12 +64688,12 @@ cQi
 pxg
 wOX
 oMb
-udG
-udG
+fKZ
+fKZ
 vCu
 ocB
 hsI
-udG
+fKZ
 eel
 bvF
 ong
@@ -65419,10 +65414,10 @@ kLf
 qlW
 loc
 tAJ
-udG
+fKZ
 maj
 nEK
-udG
+fKZ
 maj
 nEK
 tbW
@@ -65651,20 +65646,20 @@ bRe
 bRe
 qRo
 vjD
-udG
-udG
-udG
-udG
-udG
-udG
-udG
-udG
-udG
-udG
-udG
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
 nZY
 ges
-udG
+fKZ
 nZY
 ges
 tbW
@@ -65903,10 +65898,10 @@ epO
 epO
 epO
 epO
-udG
+fKZ
 xsi
 odx
-udG
+fKZ
 xsi
 odx
 tbW
@@ -66145,13 +66140,13 @@ ufk
 ufk
 ufk
 epO
-udG
-udG
-udG
-udG
-udG
-udG
-udG
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
+fKZ
 epO
 epO
 epO
@@ -71308,7 +71303,7 @@ lCV
 hrU
 sjx
 lCV
-lCV
+pJO
 oEK
 hpi
 xAT
@@ -77261,11 +77256,11 @@ hjO
 tUq
 iTO
 llT
+bmx
 oSX
-azH
 eoL
 qIM
-npR
+uGj
 kSh
 pza
 wuu
@@ -77512,8 +77507,8 @@ fOO
 voZ
 voZ
 voZ
-nXd
-wpy
+xJk
+bOS
 rMm
 ouz
 hjO
@@ -77741,7 +77736,7 @@ twd
 hjO
 sZn
 hDp
-wpy
+bOS
 mYz
 foB
 hAO
@@ -78225,7 +78220,7 @@ tcD
 hjO
 sZn
 sHa
-bOS
+cCt
 doA
 noh
 hAO
@@ -78234,7 +78229,7 @@ uww
 usC
 xgj
 voZ
-nXd
+xJk
 wcE
 nzi
 usZ
@@ -78481,7 +78476,7 @@ eLl
 cOI
 uqt
 xzS
-bOS
+cCt
 npW
 jza
 qGw
@@ -78713,11 +78708,11 @@ hjO
 qgY
 jsf
 uAv
-ahQ
-azH
+tUx
+oSX
 xtV
 qIM
-juD
+nXd
 kSh
 oyI
 voZ
@@ -87939,16 +87934,16 @@ xnw
 xnw
 xnw
 xnw
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
 xnw
 xnw
 ufk
@@ -88177,20 +88172,20 @@ xnw
 xnw
 xnw
 xnw
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
 ekZ
 fih
-wRL
+iGO
 sgj
 sgj
 kNR
 sgj
 pKe
-oem
+wpy
 xnw
 xnw
 xnw
@@ -88419,24 +88414,24 @@ xnw
 jHI
 ufk
 ufk
-oem
+wpy
 ycc
 ycc
 ycc
-oem
+wpy
 smN
 fih
-qTi
+eSe
 hhU
 hhU
 wPH
 hhU
 tbY
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
 xnw
 ufk
 ufk
@@ -88661,24 +88656,24 @@ xnw
 xnw
 ufk
 ufk
-oem
+wpy
 ycc
 ycc
-cjw
-oem
-oem
-oem
-oem
-oem
-oem
-oem
+qBi
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
 sgj
 mMo
-oem
+wpy
 fhc
 gXR
-gXR
-oem
+udG
+wpy
 xnw
 xnw
 xnw
@@ -88903,7 +88898,7 @@ ufk
 xnw
 xnw
 xnw
-oem
+wpy
 ycc
 ycc
 ycc
@@ -88911,16 +88906,16 @@ wCL
 sgj
 sgj
 wCL
-wRL
+iGO
 cEc
-oem
+wpy
 afH
 uqd
-oem
+wpy
 pIi
 sBw
 myZ
-oem
+wpy
 xnw
 xnw
 xnw
@@ -89145,14 +89140,14 @@ ufk
 ufk
 xnw
 xnw
-oem
+wpy
 ycc
 ycc
-cjw
-oem
-ehB
 qBi
-oem
+wpy
+ehB
+lyn
+wpy
 kjY
 sgj
 dEo
@@ -89162,7 +89157,7 @@ lzf
 rzJ
 gYR
 nMl
-oem
+wpy
 xnw
 xnw
 xnw
@@ -89387,24 +89382,24 @@ ufk
 sQj
 xnw
 xnw
-oem
+wpy
 fHm
 fHm
 fHm
-oem
+wpy
 gRm
 jlj
-oem
+wpy
 qQu
 pvc
 pvc
 pvc
-iSD
-oem
+qTi
+wpy
 xSb
 lzf
-oem
-oem
+wpy
+wpy
 ufk
 ufk
 ufk
@@ -89629,24 +89624,24 @@ ufk
 ufk
 ufk
 ufk
-oem
+wpy
 hqk
 dmB
 sgj
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
 xuu
 sgj
-oem
+wpy
 pVo
 fom
 sgm
 nPW
 sgj
 gtT
-oem
+wpy
 oSC
 oSC
 ufk
@@ -89871,24 +89866,24 @@ ufk
 ufk
 xnw
 ufk
-oem
+wpy
 iaT
-dLQ
+oem
 sgj
 sgj
 sgj
 sgj
 kGA
-dLQ
-sgj
 oem
+sgj
+wpy
 jUq
 sgj
 sgj
 sgj
 sgj
-qBi
-oem
+lyn
+wpy
 ufk
 oSC
 ufk
@@ -90113,24 +90108,24 @@ ufk
 ufk
 ufk
 ufk
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
-oem
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
+wpy
 oLX
 sgj
 rpx
 rjH
 nOF
 sgj
-oem
+wpy
 ufk
 oSC
 oSC
@@ -90365,14 +90360,14 @@ xnw
 xnw
 xnw
 xnw
-oem
+wpy
 ygb
 sgj
 whv
 ulV
 qbb
 sgj
-oem
+wpy
 ufk
 ufk
 ufk
@@ -90607,14 +90602,14 @@ xnw
 xnw
 xnw
 xnw
-oem
+wpy
 sgj
 sgj
 sgj
 sgj
 sgj
-qBi
-oem
+lyn
+wpy
 ufk
 xnw
 ufk
@@ -90849,14 +90844,14 @@ sQj
 xnw
 xnw
 xnw
-oem
+wpy
 qTh
 vwE
 sgj
 sgj
 xmu
 hmf
-oem
+wpy
 ufk
 ufk
 xnw
@@ -91091,14 +91086,14 @@ ufk
 ufk
 xnw
 ufk
-oem
-oem
-oem
+wpy
+wpy
+wpy
 ycc
 rtY
-oem
-oem
-oem
+wpy
+wpy
+wpy
 ufk
 ufk
 xnw
@@ -91297,7 +91292,7 @@ jGg
 oSC
 hBz
 cMh
-psy
+qJl
 bim
 lSB
 gti
@@ -91335,10 +91330,10 @@ ufk
 ufk
 ufk
 ufk
-oem
+wpy
 wCG
 wCG
-oem
+wpy
 ufk
 oSC
 ufk
@@ -92287,7 +92282,7 @@ wiU
 wiU
 wiU
 rKl
-fKZ
+hYc
 usm
 wiU
 usm
@@ -92771,7 +92766,7 @@ byV
 usm
 wiU
 rKl
-hYc
+mhK
 vYg
 wiU
 qFv
@@ -92982,8 +92977,8 @@ ufk
 ufk
 ufk
 epO
-uGj
-uGj
+yeP
+yeP
 yeP
 yeP
 jHA
