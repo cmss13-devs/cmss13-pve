@@ -129,7 +129,6 @@
 	icon_state = "scarf_gray"
 	item_state = "scarf_gray"
 	original_state = "scarf_gray"
-	w_class = SIZE_SMALL
 	flags_inventory = COVERMOUTH|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEFACE|HIDELOWHAIR
 	flags_cold_protection = BODY_FLAG_HEAD
