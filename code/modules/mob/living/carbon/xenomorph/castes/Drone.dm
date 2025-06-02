@@ -10,7 +10,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_RAPTOR
+	speed = XENO_SPEED_TIER_7
 
 	available_strains = list(
 		/datum/xeno_strain/gardener,
@@ -77,7 +77,7 @@
 	)
 	gib_chance = 100
 
-	acid_blood_damage = 35 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
+	acid_blood_damage = 40 /// Stronger acid blood. "Should be a define in the future" per 32bitguy
 
 	icon_xeno = 'icons/mob/xenos/drone.dmi'
 	icon_xenonid = 'icons/mob/xenonids/drone.dmi'
