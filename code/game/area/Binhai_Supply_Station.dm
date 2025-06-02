@@ -204,6 +204,9 @@
 /area/binhai/hab/south
 	name = "Hab Block - Apartments South"
 	icon_state = "blue"
+/area/binhai/hab/study
+	name = "Hab Block - Study Space"
+	icon_state = "blue"
 /area/binhai/hab/washing
 	name = "Hab Block - Washing Space"
 	icon_state = "blue"
@@ -225,6 +228,7 @@
 /area/binhai/other/ship1
 	name = "Cargo Freight Shuttle - Herschel OBERON-Class"
 	icon_state = "blue-red2"
+	requires_power = FALSE
 /area/binhai/other/checkpoint
 	name = "Binhai - Checkpoint"
 	icon_state = "red"
