@@ -270,3 +270,6 @@
 /area/binhai/other/hyrdo
 	name = "Binhai - Hydroponics"
 	icon_state = "hydro"
+/area/binhai/other/umbilical
+	name = "Binhai - Umbillical Arrivals"
+	icon_state = "yellow"
