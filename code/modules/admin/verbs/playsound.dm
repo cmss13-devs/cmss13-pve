@@ -4,7 +4,7 @@
 	if(!check_rights(R_SOUNDS))
 		return
 
-	var/sound_mode = tgui_input_list(src, "Play a sound from which source?", "Select Source", list("Web", "Upload"))
+	var/sound_mode = tgui_input_list(src, "Play a sound from which source?", "Select Source", list("Upload","Web"))
 	if(!sound_mode)
 		return
 
@@ -97,7 +97,7 @@
 		return
 
 
-	switch(tgui_alert(src, "Show the name of this sound to the players?", "Sound Name", list("Yes","No","Cancel")))
+	switch(tgui_alert(src, "Show the name of this sound to the players?", "Sound Name", list("No","Yes","Cancel")))
 		if("No")
 			music_extra_data["title"] = "Admin sound"
 			announce_title = FALSE
@@ -106,8 +106,8 @@
 
 	var/list/targets = list()
 	var/list/sound_type_list = list(
-		"Meme" = SOUND_ADMIN_MEME,
-		"Atmospheric" = SOUND_ADMIN_ATMOSPHERIC
+		"Atmospheric" = SOUND_ADMIN_ATMOSPHERIC,
+		"Meme" = SOUND_ADMIN_MEME
 	)
 
 	var/style = tgui_input_list(src, "Who do you want to play this to?", "Select Listeners", list("Globally", "Xenos", "Marines", "Ghosts", "All In View Range", "Single Mob"))
