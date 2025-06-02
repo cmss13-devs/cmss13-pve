@@ -782,6 +782,7 @@
 #include "code\game\area\areas.dm"
 #include "code\game\area\areas_event.dm"
 #include "code\game\area\BigRed.dm"
+#include "code\game\area\Binhai_Supply_Station.dm"
 #include "code\game\area\BMG290_Otogi_Egress_Point.dm"
 #include "code\game\area\calliope_desert_bus.dm"
 #include "code\game\area\Calliope_Highway.dm"
