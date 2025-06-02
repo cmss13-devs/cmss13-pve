@@ -271,11 +271,11 @@
 		return
 
 	if(istype(tied_human.wear_suit, /obj/item/clothing/suit) && tied_human.loc) // being in nullspace makes lights play weirdly
-		var/obj/item/clothing/suit/marine_armor = tied_human.wear_suit
-		if(!marine_armor.light_on)
-			marine_armor.turn_light(tied_human, TRUE)
-		else if(!marine_armor.has_light)
+		var/obj/item/clothing/suit/worn_armor = tied_human.wear_suit
+		if(!worn_armor.has_light)
 			return
+		else if(!worn_armor.light_on)
+			worn_armor.turn_light(tied_human, TRUE)
 
 	var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
 	for(var/id in equipment_map)
