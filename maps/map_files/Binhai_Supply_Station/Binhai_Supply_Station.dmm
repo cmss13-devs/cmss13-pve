@@ -29202,7 +29202,7 @@
 "twM" = (
 /turf/open/floor/corsat/plate,
 /area/desert_dam/building/substation/northwest{
-	name = "s Substation"
+	name = "MSS Block - Substation"
 	})
 "twQ" = (
 /obj/effect/decal/warning_stripes{
