@@ -24,3 +24,23 @@
 	icon_state = "tires"
 	disp_icon = "arc"
 	disp_icon_state = "arc_wheels"
+
+// UPP APC
+/obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels
+	name = "\improper ZSL wheels"
+	desc = "Integral to the movement of the ZSL"
+	icon = 'icons/obj/vehicles/hardpoints/uppapc.dmi'
+
+	damage_multiplier = 0.20
+
+	icon_state = "upp_tires"
+	disp_icon = "uppapc"
+	disp_icon_state = "wheels"
+
+	health = 1650
+
+	move_delay = VEHICLE_SPEED_SUPERFAST
+	move_max_momentum = 2
+	move_momentum_build_factor = 1.5
+	move_turn_momentum_loss_factor = 0.5
+
