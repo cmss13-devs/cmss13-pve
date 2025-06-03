@@ -285,12 +285,12 @@
 			em_call.owner = owner
 
 			var/quiet_launch = TRUE
-			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("Yes", "No"), 20 SECONDS)
+			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("No", "Yes"), 20 SECONDS)
 			if(ql_prompt == "Yes")
 				quiet_launch = FALSE
 
 			var/announce_receipt = FALSE
-			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("Yes", "No"), 20 SECONDS)
+			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("No", "Yes"), 20 SECONDS)
 			if(ar_prompt == "Yes")
 				announce_receipt = TRUE
 

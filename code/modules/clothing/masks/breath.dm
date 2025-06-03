@@ -231,6 +231,7 @@
 	icon_state = "neckerchief"
 	item_state = "neckerchief"
 	icon = 'icons/obj/items/clothing/masks.dmi'
+	w_class = SIZE_SMALL
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
 	var/adjust = FALSE
 	var/original_state = "neckerchief"
