@@ -32856,9 +32856,7 @@
 	})
 "vyO" = (
 /turf/open/floor/prison/sterile_white,
-/area/lv624/lazarus/toilet{
-	name = s
-	})
+/area/space)
 "vyW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -36915,9 +36913,7 @@
 	light_power = 0.9
 	},
 /turf/open/floor/strata/fake_wood,
-/area/desert_dam/building/security/warden{
-	name = s
-	})
+/area/space)
 "ycc" = (
 /turf/open/floor/corsat,
 /area/ice_colony/underground/research{
