@@ -288,6 +288,7 @@
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
+	skills = /datum/skills/clf/commander
 
 /datum/equipment_preset/rebel/commander/get_assignment(mob/living/carbon/human/new_human)
 	return "Commander"
