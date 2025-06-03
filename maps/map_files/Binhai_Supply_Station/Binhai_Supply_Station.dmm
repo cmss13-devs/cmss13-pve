@@ -1,4 +1,89 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "Umb2";
+	name = "Lock"
+	},
+/turf/open/floor/strata/floor3,
+/area/corsat/gamma/cargo{
+	name = "Binhai - Umbillical Arrivals"
+	})
+"aab" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 8;
+	id = "UmbMain"
+	},
+/turf/open/floor/corsat/marked,
+/area/corsat/gamma/cargo{
+	name = "Binhai - Umbillical Arrivals"
+	})
+"aac" = (
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "UmbMain";
+	name = "Lock"
+	},
+/turf/open/floor/strata/floor3,
+/area/corsat/gamma/cargo{
+	name = "Binhai - Umbillical Arrivals"
+	})
+"aad" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 8;
+	id = "Umb1"
+	},
+/turf/open/floor/corsat/marked,
+/area/corsat/gamma/cargo{
+	name = "Binhai - Umbillical Arrivals"
+	})
+"aae" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 28;
+	id = "Umb1";
+	name = "Lock"
+	},
+/turf/open/floor/strata/floor3,
+/area/corsat/gamma/cargo{
+	name = "Binhai - Umbillical Arrivals"
+	})
+"aaf" = (
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.9
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/desert_dam/building/security/staffroom{
+	name = "MSS Block - Operations Space"
+	})
+"aag" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 2
+	},
+/turf/open/floor/corsat,
+/area/desert_dam/building/security/staffroom{
+	name = "MSS Block - Operations Space"
+	})
+"aah" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4;
+	light_power = 0.25
+	},
+/turf/open/floor/corsat,
+/area/desert_dam/building/security/staffroom{
+	name = "MSS Block - Operations Space"
+	})
 "aaI" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -10522,11 +10607,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_y = 20;
-	light_power = 0.9
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/desert_dam/building/security/staffroom{
@@ -36196,7 +36276,8 @@
 	})
 "xBA" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
-	dir = 8
+	dir = 8;
+	id = "Umb2"
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
@@ -51018,9 +51099,9 @@ tvl
 rsD
 tux
 tux
-eSS
+tux
 hhC
-nve
+mAr
 eSS
 eSS
 eSS
@@ -51257,12 +51338,12 @@ lSW
 lSW
 tux
 wgE
-tux
-lSW
-lSW
-eSS
-xcb
-dkG
+xdp
+aah
+xdp
+aag
+xcc
+xcc
 eSS
 lSW
 eSS
@@ -51500,13 +51581,13 @@ eSS
 iaz
 iaz
 iaz
+tux
+tux
 eSS
+aaf
+nve
 eSS
-ffO
-vBq
-vBq
-ffO
-eSS
+lSW
 eSS
 epO
 ufk
@@ -51741,15 +51822,15 @@ epO
 epO
 cMh
 cMh
-cMh
-cMh
-cMh
-cMh
-cMh
-cMh
-cMh
-epO
-epO
+eSS
+lSW
+lSW
+eSS
+xcb
+dkG
+eSS
+lSW
+eSS
 epO
 qBi
 qBi
@@ -51982,17 +52063,17 @@ ufk
 ufk
 ufk
 vjN
-qBi
-qBi
-qBi
-lDG
 cMh
+eSS
+eSS
+eSS
+ffO
+vBq
+vBq
+ffO
+eSS
+eSS
 cMh
-epO
-epO
-cMh
-qBi
-qBi
 qBi
 qBi
 qBi
@@ -52224,17 +52305,17 @@ ufk
 ufk
 ufk
 qBi
-qBi
-qBi
-qBi
-qBi
 cMh
 cMh
 cMh
-qBi
-qBi
-qBi
-qBi
+cMh
+cMh
+cMh
+cMh
+cMh
+epO
+epO
+cMh
 qBi
 fBE
 ufk
@@ -52469,12 +52550,12 @@ qBi
 qBi
 qBi
 qBi
-qBi
-fBE
+lDG
 cMh
-qBi
-qBi
-qBi
+cMh
+epO
+epO
+cMh
 qBi
 qBi
 ufk
@@ -52712,9 +52793,9 @@ qBi
 qBi
 qBi
 qBi
-qBi
-qBi
-qBi
+cMh
+cMh
+cMh
 qBi
 qBi
 qBi
@@ -52954,12 +53035,12 @@ qBi
 qBi
 qBi
 qBi
+fBE
+cMh
 qBi
 qBi
 qBi
 qBi
-vLV
-ufk
 ufk
 ufk
 ufk
@@ -79178,11 +79259,11 @@ hzQ
 hzQ
 hzQ
 hzQ
-xBA
-xBA
-xBA
-xBA
-xBA
+aab
+aab
+aab
+aab
+aab
 hzQ
 hzQ
 hzQ
@@ -79420,7 +79501,7 @@ hzQ
 hzQ
 hzQ
 hzQ
-dcf
+aac
 dcf
 qOA
 dcf
@@ -81834,11 +81915,11 @@ ass
 fED
 fED
 hzQ
-xBA
-xBA
-xBA
-xBA
-xBA
+aad
+aad
+aad
+aad
+aad
 hzQ
 ass
 ass
@@ -82076,7 +82157,7 @@ ass
 ass
 fED
 hzQ
-qNu
+aae
 qNu
 qNu
 qNu
@@ -82096,7 +82177,7 @@ ass
 ass
 ass
 hzQ
-qNu
+aaa
 qNu
 qNu
 qNu
