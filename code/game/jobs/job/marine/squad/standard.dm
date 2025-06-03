@@ -1,5 +1,6 @@
 #define STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO 0.4
 
+#define LCPL_VARIANT "Lance Corporal"
 #define PFC_VARIANT "Private First Class"
 #define PVT_VARIANT "Private"
 
