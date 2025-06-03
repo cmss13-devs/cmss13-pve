@@ -25991,7 +25991,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/prison/bright_clean,
 /area/strata/ag/interior/outpost/engi{
-	name = s
+	name = "Main Block - Atmospherics"
 	})
 "rqe" = (
 /obj/effect/decal/warning_stripes{
