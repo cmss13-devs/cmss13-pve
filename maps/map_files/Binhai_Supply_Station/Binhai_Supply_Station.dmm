@@ -15338,7 +15338,7 @@
 "ksT" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey{
 	dir = 2;
-	req_one_access = s;
+	req_one_access = list(102,232);
 	name = "\improper Engineering Lower"
 	},
 /obj/effect/decal/cleanable/dirt,
