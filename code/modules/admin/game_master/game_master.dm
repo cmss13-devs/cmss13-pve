@@ -410,17 +410,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			var/image/background = mutable_appearance('icons/ui_icons/map_blips.dmi', "background")
 			background.color = color_option
 
-			var/mutable_appearance/icon = image('icons/ui_icons/map_blips.dmi', icon_state = number_option)
-			icon.appearance_flags = RESET_COLOR
+			var/image/underlay = image('icons/ui_icons/map_blips_large.dmi', null, "background")
+			var/image/overlay = image('icons/ui_icons/map_blips_large.dmi', null, number_option)
+			overlay.appearance_flags = RESET_COLOR
+			underlay.color = color_option
+			underlay.overlays += overlay
 
-			background.overlays += icon
-
-			var/z_level = object_turf?.z
-
-			if(!object || !z_level)
+			if(!object)
 				return
 
-			SSminimaps.add_marker(object, z_level, MINIMAP_FLAG_ALL, given_image = background)
+			SSminimaps.add_marker(object, MINIMAP_FLAG_ALL, underlay)
 
 			var/objective_info = tgui_input_text(user, "Objective info?", "Objective Info")
 
