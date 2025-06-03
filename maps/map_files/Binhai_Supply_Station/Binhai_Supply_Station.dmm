@@ -19247,7 +19247,7 @@
 "ncA" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Kitchen Space";
-	req_one_access = s
+	req_one_access = list(230,100)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
