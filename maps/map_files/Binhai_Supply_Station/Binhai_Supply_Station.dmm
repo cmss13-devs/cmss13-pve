@@ -3670,14 +3670,15 @@
 	pixel_y = 24;
 	layer = 3.1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/west{
@@ -5649,7 +5650,8 @@
 	})
 "dYF" = (
 /obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/structure/sink{
 	pixel_y = 22
@@ -9056,9 +9058,6 @@
 	pixel_y = 24;
 	layer = 3.1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
@@ -9066,6 +9065,10 @@
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/west{
@@ -10007,15 +10010,16 @@
 	pixel_y = 35;
 	pixel_x = -1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
 	},
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/lobby{
@@ -13516,7 +13520,8 @@
 	layer = 3.1
 	},
 /obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
@@ -17009,15 +17014,16 @@
 	pixel_y = 35;
 	pixel_x = -1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 8
 	},
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/north{
@@ -19360,15 +19366,16 @@
 	pixel_y = 35;
 	pixel_x = -1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
 	},
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/south{
@@ -19757,7 +19764,8 @@
 	layer = 3.1
 	},
 /obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 1
@@ -20636,15 +20644,16 @@
 	pixel_y = 35;
 	pixel_x = -1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 8
 	},
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/south{
@@ -21907,9 +21916,6 @@
 	pixel_y = 24;
 	layer = 3.1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1,
 /obj/effect/decal/strata_decals/grime/grime1{
 	dir = 4
@@ -21917,6 +21923,10 @@
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/west{
@@ -26547,15 +26557,16 @@
 	pixel_y = 35;
 	pixel_x = -1
 	},
-/obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
-	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
 	},
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_power = 0.9
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_y = 19;
+	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
 /area/strata/ag/interior/dorms/lobby{
@@ -30071,7 +30082,8 @@
 	pixel_x = -1
 	},
 /obj/structure/filingcabinet/chestdrawer{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/structure/sink{
 	pixel_y = 22
