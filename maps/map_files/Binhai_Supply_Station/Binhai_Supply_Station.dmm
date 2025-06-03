@@ -236,7 +236,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "aiz" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -1909,11 +1909,6 @@
 /area/lv522/indoors/c_block/mining{
 	name = "Mining Block - Lower Excavation"
 	})
-"bxL" = (
-/turf/open/floor/carpet,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
-	})
 "bxO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1999,7 +1994,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "bzt" = (
 /obj/structure/platform/shiva/catwalk{
@@ -2395,7 +2390,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "bPF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2954,13 +2949,6 @@
 /area/golden_arrow/ai_interface{
 	name = "Military Block - Human AI Interface";
 	ceiling_muffle = 1
-	})
-"chj" = (
-/obj/structure/window/framed/upp/grey,
-/obj/structure/curtain/red,
-/turf/open/floor/strata/floor3,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
 	})
 "chp" = (
 /obj/structure/surface/table/almayer{
@@ -3964,7 +3952,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "cRL" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -7286,13 +7274,6 @@
 	name = "Hangar Block - Arrivals and Storage";
 	ceiling = 1.1
 	})
-"eXW" = (
-/obj/structure/window/framed/upp/grey,
-/obj/structure/curtain/red,
-/turf/open/floor/strata/floor3,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
-	})
 "eYo" = (
 /obj/structure/machinery/autolathe/full,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -8061,7 +8042,7 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "fte" = (
 /obj/structure/machinery/light/small{
@@ -9506,7 +9487,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "gvv" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -11807,20 +11788,6 @@
 /area/desert_dam/building/security/lobby{
 	name = "Military Block - Lobby"
 	})
-"hYc" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/floor3,
-/area/strata/ag/interior/outpost/gen{
-	name = "\impropers Main Block - Lower Access"
-	})
 "hYn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -12214,12 +12181,6 @@
 /area/strata/ag/interior/outpost/admin{
 	name = "Main Block - Colony Operations"
 	})
-"irc" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/closed/wall/upp_wall/grey,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
-	})
 "irA" = (
 /obj/structure/machinery/landinglight/ds2{
 	dir = 1
@@ -12582,7 +12543,7 @@
 /obj/structure/window/framed/upp/grey,
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "iBP" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -13141,7 +13102,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "iRN" = (
 /obj/structure/machinery/light/small{
@@ -14901,12 +14862,6 @@
 /area/prison/cleaning{
 	name = "Hab Block - Washing Space";
 	ceiling = 1.1
-	})
-"kdF" = (
-/obj/structure/window/framed/upp/grey,
-/turf/open/floor/strata/floor3,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
 	})
 "kdK" = (
 /obj/effect/decal/cleanable/dirt,
@@ -17457,11 +17412,6 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/strata/ag/interior/outpost/gen/foyer{
 	name = "Main Block - Assembly Hall"
-	})
-"lNN" = (
-/turf/closed/wall/upp_wall/grey,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
 	})
 "lOZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20481,7 +20431,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "nRm" = (
 /obj/structure/stairs,
@@ -21579,7 +21529,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "oED" = (
 /obj/structure/platform/strata/metal,
@@ -24134,7 +24084,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "qlW" = (
 /obj/structure/bed/chair/comfy/black{
@@ -25899,7 +25849,7 @@
 	},
 /turf/open/floor/carpet,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "rnH" = (
 /obj/docking_port/stationary/marine_dropship/lz1{
@@ -26337,7 +26287,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/closed/wall/upp_wall/grey,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "rFy" = (
 /obj/structure/surface/rack{
@@ -26948,11 +26898,6 @@
 	name = "Hangar Block - Arrivals and Storage";
 	ceiling = 1.1
 	})
-"sar" = (
-/turf/open/floor/carpet,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
-	})
 "sbb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -27040,7 +26985,7 @@
 	},
 /turf/open/floor/carpet,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "sdI" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -28620,11 +28565,6 @@
 /area/desert_dam/building/administration/control_room{
 	name = "Military Block - Command Room"
 	})
-"tbW" = (
-/turf/closed/wall/upp_wall/grey,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
-	})
 "tbY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -28709,7 +28649,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "tdJ" = (
 /obj/effect/decal/warning_stripes{
@@ -32100,7 +32040,7 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/desert_dam/building/administration/control_room{
-	name = s
+	name = "Military Block - Command Room"
 	})
 "vbx" = (
 /obj/structure/surface/rack{
@@ -34394,7 +34334,7 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - Administrator Office"
+	name = "Main Block - Colony Operations"
 	})
 "wsg" = (
 /obj/effect/decal/cleanable/dirt,
@@ -34965,7 +34905,7 @@
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Air Filtration Space";
-	req_one_access = s
+	req_one_access = list(102,232)
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/bright_clean,
@@ -35636,7 +35576,7 @@
 /obj/item/device/radio,
 /turf/open/floor/strata/fake_wood,
 /area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
+	name = "Main Block - Colony Operations"
 	})
 "xiD" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -36968,14 +36908,6 @@
 /turf/open/floor/corsat,
 /area/desert_dam/building/security/staffroom{
 	name = "MSS Block - Operations Space"
-	})
-"ybj" = (
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/turf/open/floor/strata/fake_wood,
-/area/strata/ag/interior/outpost/admin{
-	name = "Main Block - PAP Office"
 	})
 "ybH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -62529,11 +62461,11 @@ jLD
 vvR
 vvR
 vvR
-lNN
-eXW
-lNN
-lNN
-lNN
+jLD
+vvR
+jLD
+jLD
+jLD
 cMh
 qBi
 ufk
@@ -62773,9 +62705,9 @@ olM
 pDr
 bzq
 sdA
-bxL
-bxL
-lNN
+olM
+olM
+jLD
 cMh
 qBi
 ufk
@@ -63017,7 +62949,7 @@ iBE
 tds
 oEx
 wrX
-lNN
+jLD
 cMh
 ufk
 ufk
@@ -63255,11 +63187,11 @@ kHd
 wIg
 rGe
 ekv
-lNN
+jLD
 ais
 nRc
 iRH
-lNN
+jLD
 epO
 ufk
 ufk
@@ -63497,10 +63429,10 @@ ekv
 iNy
 tjH
 apF
-lNN
-lNN
-lNN
-lNN
+jLD
+jLD
+jLD
+jLD
 rFe
 cMh
 ufk
@@ -64938,10 +64870,10 @@ wSQ
 nLm
 jnU
 dVV
-tbW
+jLD
 fsO
-kdF
-tbW
+iBE
+jLD
 lUt
 scV
 fOH
@@ -65180,11 +65112,11 @@ pMF
 fEK
 ile
 eSi
-chj
+vvR
 rmI
-sar
-sar
-tbW
+olM
+olM
+jLD
 lUt
 lUt
 lUt
@@ -65422,11 +65354,11 @@ nEK
 fKZ
 maj
 nEK
-tbW
+jLD
 qlC
 cRG
-ybj
-tbW
+wrX
+jLD
 epO
 cMh
 cMh
@@ -65664,11 +65596,11 @@ ges
 fKZ
 nZY
 ges
-tbW
+jLD
 gvm
 xix
 bPs
-tbW
+jLD
 epO
 kWZ
 qBi
@@ -65906,11 +65838,11 @@ odx
 fKZ
 xsi
 odx
-tbW
-tbW
-tbW
-tbW
-irc
+jLD
+jLD
+jLD
+jLD
+rFe
 epO
 ufk
 ufk
@@ -69772,7 +69704,7 @@ xnw
 xnw
 xnw
 xnw
-ass
+xnw
 xnw
 xnw
 xnw
@@ -92284,7 +92216,7 @@ wiU
 wiU
 wiU
 rKl
-hYc
+cIn
 usm
 wiU
 usm
