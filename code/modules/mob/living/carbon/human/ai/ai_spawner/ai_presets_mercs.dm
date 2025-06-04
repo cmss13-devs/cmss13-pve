@@ -21,10 +21,10 @@
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a modified FP9000 and pistol."
 	path = /datum/equipment_preset/mercenary/sentinel/response
 
-/datum/human_ai_equipment_preset/mercenaries/sentinel/response/carbine
-	name = "Black Dragoons Sentinel (Response, Carbine)"
-	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a pulse carbine and pistol."
-	path = /datum/equipment_preset/mercenary/sentinel/response/carbine
+/datum/human_ai_equipment_preset/mercenaries/sentinel/response/grenadier
+	name = "Black Dragoons Sentinel (Response, Grenade Launcher)"
+	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a grenade launcher and pistol."
+	path = /datum/equipment_preset/mercenary/sentinel/response/grenadier
 
 /datum/human_ai_equipment_preset/mercenaries/supervisor
 	name = "Black Dragoons Supervisor (Unequipped)"
