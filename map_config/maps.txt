@@ -82,6 +82,9 @@ endmap
 map canyon_32b
 endmap
 
+map taipei_station
+endmap
+
 map calliope_highway
 endmap
 
