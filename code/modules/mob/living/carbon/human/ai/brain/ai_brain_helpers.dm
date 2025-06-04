@@ -52,7 +52,16 @@
 
 		if(mob_target.faction in neutral_factions)
 			return TRUE
+	if(istype(target, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/vehicle_target = target
+		if(vehicle_target.vehicle_faction == tied_human.faction)
+			return TRUE
 
+		if(vehicle_target.vehicle_faction in friendly_factions)
+			return TRUE
+
+		if(vehicle_target.vehicle_faction in neutral_factions)
+			return TRUE
 	if(isdefenses(target))
 		var/obj/structure/machinery/defenses/defense_target = target
 		if(tied_human.faction in defense_target.faction_group)
