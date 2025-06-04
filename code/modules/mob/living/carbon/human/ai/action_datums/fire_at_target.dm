@@ -192,15 +192,23 @@
 		stop_firing(brain)
 		return
 
-	if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun/pump))
+	if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun))
 		currently_firing = FALSE
-		var/obj/item/weapon/gun/shotgun/pump/shotgun = brain.primary_weapon
-		addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
-		//addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
-		COOLDOWN_START(brain, stop_fire_cooldown, max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1)
-		stop_firing(brain)
-		qdel(src)
-		return
+		if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun/pump))
+			var/obj/item/weapon/gun/shotgun/pump/shotgun = brain.primary_weapon
+			addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
+			//addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
+			COOLDOWN_START(brain, stop_fire_cooldown, max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1)
+			stop_firing(brain)
+			qdel(src)
+			return
+		else
+			var/obj/item/weapon/gun/shotgun/autoshotty = brain.primary_weapon
+			addtimer(CALLBACK(autoshotty, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun, start_fire), tied_human), autoshotty.get_fire_delay()*3)
+			COOLDOWN_START(brain, stop_fire_cooldown, max(autoshotty.get_fire_delay()) + 3)
+			stop_firing(brain)
+			qdel(src)
+			return
 
 	else if(istype(brain.primary_weapon, /obj/item/weapon/gun/boltaction))
 		var/obj/item/weapon/gun/boltaction/bolt = brain.primary_weapon
