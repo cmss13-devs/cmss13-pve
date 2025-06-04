@@ -22,11 +22,10 @@
 	spawn_positions = max((floor(count * STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO)), 8)
 
 /datum/job/marine/standard/handle_job_options(option)
-	if(option == PFC_VARIANT)
-		gear_preset = initial(gear_preset)
-	else if(option == PVT_VARIANT)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
-	else
+	if(option = LCPL_VARIANT)
 		gear_preset = gear_preset_tertiary
 
 /datum/job/marine/standard/whiskey
