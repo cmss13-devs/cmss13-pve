@@ -359,12 +359,22 @@
 	color = "#801E28" // rgb: 128, 30, 40
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
+/datum/reagent/strawberryjam
+	name = "Strawberry Jam"
+	id = "strawberryjam"
+	description = "Sweet jam made from strawberries."
+	reagent_state = LIQUID
+	nutriment_factor = 1 * REAGENTS_METABOLISM
+	color = "#801E28" // rgb: 128, 30, 40
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+
 /datum/reagent/honey
 	name = "Honey"
 	id = "honey"
 	description = "Honey is a natural sweet, viscous food substance composed of mainly fructose and glucose."
 	color = COLOR_YELLOW
 	chemclass = CHEM_CLASS_RARE
+	properties = list(PROPERTY_NUTRITIOUS = 2)
 	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/dehydrated_juice
