@@ -4100,7 +4100,7 @@
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "bXW" = (
@@ -14462,7 +14462,7 @@
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -15186,7 +15186,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
@@ -17310,7 +17310,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -19011,7 +19011,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iOX" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -19586,7 +19586,7 @@
 	pixel_x = 9;
 	pixel_y = -1
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = -2;
 	pixel_y = -14
 	},
@@ -20640,7 +20640,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "jCX" = (
@@ -23954,7 +23954,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/caverns/cave_west)
 "lkY" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -27834,7 +27834,7 @@
 /obj/structure/machinery/door/window{
 	dir = 8
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
 "neT" = (
@@ -33546,25 +33546,25 @@
 	pixel_x = 2;
 	pixel_y = 17
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -7;
 	pixel_y = -5;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -11;
 	pixel_y = 7;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = 10;
 	pixel_y = 0;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -9;
 	pixel_y = 10;
 	name = "token";
@@ -41487,7 +41487,7 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/misc/mre/empty,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/beach)
 "tCN" = (
@@ -45272,7 +45272,7 @@
 	density = 0;
 	pixel_y = 18
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "vCB" = (
@@ -45281,7 +45281,7 @@
 "vCO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/USCMtray,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
 "vCR" = (
@@ -47867,7 +47867,7 @@
 /area/bmg290/wilderness/road)
 "wIM" = (
 /obj/item/weapon/gun/launcher/grenade/m81,
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,

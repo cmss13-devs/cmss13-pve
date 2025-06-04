@@ -5,7 +5,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns
 	name = "\improper ColMarTech Automated Armaments Vendor"
 	desc = "An automated supply rack hooked up to a big storage of various firearms and explosives. Can be accessed by the Requisitions Officer and Cargo Techs."
-	icon_state = "req_guns"
+	icon_state = "prep"
 	req_access = list(ACCESS_MARINE_CARGO)
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_LOAD_AMMO_BOXES
@@ -50,7 +50,7 @@
 
 		list("EXPLOSIVES", -1, null, null),
 		list("M15 Fragmentation Grenade", floor(scale * 2), /obj/item/explosive/grenade/high_explosive/m15, VENDOR_ITEM_REGULAR),
-		list("M20 Claymore Anti-Personnel Mine", floor(scale * 4), /obj/item/explosive/mine, VENDOR_ITEM_REGULAR),
+		list("M20A2 Claymore Anti-Personnel Mine", floor(scale * 4), /obj/item/explosive/mine/strong, VENDOR_ITEM_REGULAR),
 		list("M40 HEDP Grenade", floor(scale * 25), /obj/item/explosive/grenade/high_explosive, VENDOR_ITEM_REGULAR),
 		list("M40 HIDP Incendiary Grenade", floor(scale * 4), /obj/item/explosive/grenade/incendiary, VENDOR_ITEM_REGULAR),
 		list("M40 CCDP Chemical Compound Smoke Grenade", floor(scale * 4), /obj/item/explosive/grenade/phosphorus, VENDOR_ITEM_REGULAR),
@@ -145,16 +145,16 @@
 		list("EXPLOSIVES BOXES", -1, null, null),
 		list("M15 Fragmentation Grenade Packet", 0, /obj/item/storage/box/packet/m15, VENDOR_ITEM_REGULAR),
 		list("M40 HEDP Grenade Packet", 0, /obj/item/storage/box/packet/high_explosive, VENDOR_ITEM_REGULAR),
-		list("M40 HEDP Grenade Box", 0, /obj/item/storage/box/nade_box, VENDOR_ITEM_REGULAR),
+		list("M40 HEDP Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box, VENDOR_ITEM_REGULAR),
 		list("M77 HIAM Grenade Packet", 0, /obj/item/storage/box/packet/incendiary, VENDOR_ITEM_REGULAR),
-		list("M77 HIAM Grenade Box", 0, /obj/item/storage/box/nade_box/incen, VENDOR_ITEM_REGULAR),
+		list("M77 HIAM Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/incen, VENDOR_ITEM_REGULAR),
 		list("M60 WPSI Grenade Packet", 0, /obj/item/storage/box/packet/phosphorus, VENDOR_ITEM_REGULAR),
-		list("M60 WPSI Grenade Box", 0, /obj/item/storage/box/nade_box/phophorus, VENDOR_ITEM_REGULAR),
+		list("M60 WPSI Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/phophorus, VENDOR_ITEM_REGULAR),
 		list("M47 HSDP Grenade Packet", 0, /obj/item/storage/box/packet/smoke, VENDOR_ITEM_REGULAR),
 		list("M230 LLRB Grenade Packet", 0, /obj/item/storage/box/packet/baton, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-F Grenade box", 0, /obj/item/storage/box/nade_box/airburst, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-I Grenade Box", 0, /obj/item/storage/box/nade_box/airburstincen, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-S Smoke Grenade Packet", 0, /obj/item/storage/box/packet/airburst_smoke, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-F Grenade box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-I Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst/incen, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-S Smoke Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst/smoke, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Star Shell Packet", 0, /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock grenade packet", 0, /obj/item/storage/box/packet/sebb, VENDOR_ITEM_REGULAR),
 		list("M20 mine box", 0, /obj/item/storage/box/explosive_mines, VENDOR_ITEM_REGULAR),
