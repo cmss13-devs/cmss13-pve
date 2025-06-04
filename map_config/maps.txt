@@ -86,6 +86,9 @@ endmap
 map bigred_2016_pve
 endmap
 
+map fop_v1_classic
+endmap
+
 map calliope_highway
 endmap
 

@@ -179,6 +179,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_BIGRED_2016_PVE = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_FOP_CLASSIC = new /obj/item/map/FOP_map_v3(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

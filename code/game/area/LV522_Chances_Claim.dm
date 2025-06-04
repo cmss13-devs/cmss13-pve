@@ -29,7 +29,7 @@
 	flags_area = AREA_NOTUNNEL
 
 /area/lv522/oob/w_y_vault
-	name = "LV522 - Weyland Secure Vault"
+	name = " - Weyland Secure Vault"
 	icon_state = "blue"
 
 //Landing Zone 1
