@@ -10,6 +10,7 @@
 /datum/ammo/bullet/shotgun/slug
 	name = "shotgun slug"
 	handful_state = "slug_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/greenshell
 
 	accurate_range = 7
 	max_range = 14
@@ -43,6 +44,7 @@
 	headshot_state = HEADSHOT_OVERLAY_LIGHT //It's not meant to kill people... but if you put it in your mouth, it will.
 	handful_state = "beanbag_slug"
 	icon_state = "beanbag"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
 	max_range = 12
 	shrapnel_chance = 0
@@ -62,6 +64,7 @@
 /datum/ammo/bullet/shotgun/incendiary
 	name = "incendiary slug"
 	handful_state = "incendiary_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	damage_type = BURN
 	flags_ammo_behavior = AMMO_BALLISTIC
 
@@ -92,6 +95,7 @@
 	name = "flechette shell"
 	icon_state = "flechette"
 	handful_state = "flechette_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/flechette_spread
 
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
@@ -128,6 +132,7 @@
 	name = "buckshot shell"
 	icon_state = "buckshot"
 	handful_state = "buckshot_shell"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread
 
@@ -166,6 +171,7 @@
 /datum/ammo/bullet/shotgun/buckshot/incendiary
 	name = "incendiary buckshot shell"
 	handful_state = "incen_buckshot"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	handful_type = /obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/incendiary
 	damage = 40
@@ -264,6 +270,7 @@
 	name = "heavy buckshot shell"
 	icon_state = "buckshot"
 	handful_state = "heavy_buckshot"
+	shell_casing = /obj/effect/decal/ammo_casing/redshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
@@ -356,6 +363,7 @@
 /datum/ammo/bullet/shotgun/heavy/slug
 	name = "heavy shotgun slug"
 	handful_state = "heavy_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/greenshell
 
 	accurate_range = 7
 	max_range = 17
@@ -384,6 +392,7 @@
 /datum/ammo/bullet/shotgun/heavy/beanbag
 	name = "heavy beanbag slug"
 	icon_state = "beanbag"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	handful_state = "heavy_beanbag"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
@@ -406,6 +415,7 @@
 	name = "heavy flechette shell"
 	icon_state = "flechette"
 	handful_state = "heavy_flechette"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
 	multiple_handful_name = TRUE
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/flechette_spread
 
