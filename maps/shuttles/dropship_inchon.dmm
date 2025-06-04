@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/roof_node,
+/obj/structure/machinery/light/double/blue{
+	layer = -5
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/thirty,
+/area/shuttle/inchon)
 "bo" = (
 /obj/structure/shuttle/part/inchon/transparent{
 	icon_state = "dropship_interior 5,18";
@@ -132,12 +139,7 @@
 /obj/structure/machinery/light/double/blue{
 	layer = -5
 	},
-/obj/structure/roof/dropship_tail{
-	pixel_x = -160;
-	pixel_y = -288;
-	mouse_opacity = 0;
-	icon_state = "dropship_tail_fade"
-	},
+/obj/effect/roof_node,
 /turf/open/shuttle/dropship/can_surgery/inchon/twentyseven,
 /area/shuttle/inchon)
 "pg" = (
@@ -145,7 +147,7 @@
 /area/shuttle/inchon)
 "pv" = (
 /obj/effect/roof_node,
-/turf/template_noop,
+/turf/open/shuttle/dropship/can_surgery/inchon/thirty,
 /area/shuttle/inchon)
 "pF" = (
 /obj/structure/shuttle/part/inchon{
@@ -454,6 +456,12 @@
 /turf/template_noop,
 /area/shuttle/inchon)
 "ZY" = (
+/obj/structure/roof/dropship_tail{
+	pixel_x = -160;
+	pixel_y = -320;
+	mouse_opacity = 0;
+	icon_state = "dropship_tail_fade"
+	},
 /turf/open/shuttle/dropship/can_surgery/inchon/twentyfour,
 /area/shuttle/inchon)
 
@@ -474,7 +482,7 @@ EZ
 EZ
 EZ
 EZ
-pv
+EZ
 pv
 "}
 (2,1,1) = {"
@@ -494,7 +502,7 @@ EZ
 EZ
 EZ
 EZ
-pv
+EZ
 pv
 "}
 (3,1,1) = {"
@@ -510,12 +518,12 @@ na
 MO
 Hl
 Ln
+EZ
+EZ
+EZ
+EZ
 pv
-pv
-pv
-pv
-pv
-pv
+EZ
 "}
 (4,1,1) = {"
 SK
@@ -534,7 +542,7 @@ pv
 pv
 pv
 pv
-pv
+aa
 EZ
 "}
 (5,1,1) = {"
@@ -550,12 +558,12 @@ yv
 vv
 Ru
 MA
+EZ
+EZ
+EZ
+EZ
 pv
-pv
-pv
-pv
-pv
-pv
+EZ
 "}
 (6,1,1) = {"
 EZ
@@ -574,7 +582,7 @@ EZ
 EZ
 EZ
 EZ
-pv
+EZ
 pv
 "}
 (7,1,1) = {"
@@ -594,6 +602,6 @@ EZ
 EZ
 EZ
 EZ
-pv
+EZ
 pv
 "}

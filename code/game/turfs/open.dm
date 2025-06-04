@@ -1419,6 +1419,9 @@
 /turf/open/shuttle/dropship/can_surgery/inchon/twentynine
 	icon_state = "dropship_interior 5,17"
 
+/turf/open/shuttle/dropship/can_surgery/inchon/thirty
+	icon_state = "dropship_tail_underside"
+
 /turf/open/shuttle/predship
 	name = "ship floor"
 	icon_state = "floor6"
