@@ -1,0 +1,4 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "Base UGL - formerly the \"U1 grenade launcher\" gets it's attached icon using the right sprite. Mk2 gets the Mk1 as they should be the same UGL in lore."
