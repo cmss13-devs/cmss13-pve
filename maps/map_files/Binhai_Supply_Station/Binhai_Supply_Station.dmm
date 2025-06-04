@@ -7,7 +7,8 @@
 /obj/structure/machinery/door_control{
 	pixel_y = 28;
 	id = "Umb2";
-	name = "Lock"
+	name = "Lock";
+	use_power = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
@@ -16,7 +17,8 @@
 "aab" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 8;
-	id = "UmbMain"
+	id = "UmbMain";
+	use_power = 0
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
@@ -26,7 +28,8 @@
 /obj/structure/machinery/door_control{
 	pixel_y = 28;
 	id = "UmbMain";
-	name = "Lock"
+	name = "Lock";
+	use_power = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
@@ -35,7 +38,8 @@
 "aad" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 8;
-	id = "Umb1"
+	id = "Umb1";
+	use_power = 0
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
@@ -49,7 +53,8 @@
 /obj/structure/machinery/door_control{
 	pixel_y = 28;
 	id = "Umb1";
-	name = "Lock"
+	name = "Lock";
+	use_power = 0
 	},
 /turf/open/floor/strata/floor3,
 /area/corsat/gamma/cargo{
@@ -36277,7 +36282,8 @@
 "xBA" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 8;
-	id = "Umb2"
+	id = "Umb2";
+	use_power = 0
 	},
 /turf/open/floor/corsat/marked,
 /area/corsat/gamma/cargo{
