@@ -507,3 +507,61 @@
 	icon = 'icons/turf/dropship.dmi'
 	icon_state = "101a"
 	opacity = FALSE
+
+/obj/structure/shuttle/part/gibraltar
+	name = "\improper Gibraltar"
+	icon = 'icons/turf/dropship_rmc.dmi'
+	icon_state = "1"
+	opacity = TRUE
+
+/obj/structure/shuttle/part/gibraltar/lefttailfin
+	icon_state = "2"
+
+/obj/structure/shuttle/part/gibraltar/lefttailfin2
+	icon_state = "3"
+
+/obj/structure/shuttle/part/gibraltar/righttailfin
+	icon_state = "4"
+
+/obj/structure/shuttle/part/gibraltar/righttailfin2
+	icon_state = "5"
+
+/obj/structure/shuttle/part/gibraltar/righttailfin3
+	icon_state = "6"
+
+/obj/structure/shuttle/part/gibraltar/lefttailboom
+	icon_state = "7"
+
+/obj/structure/shuttle/part/gibraltar/righttailboom
+	icon_state = "8"
+
+/obj/structure/shuttle/part/gibraltar/leftenginerear
+	icon_state = "0,3"
+
+/obj/structure/shuttle/part/gibraltar/rightenginerear
+	icon_state = "8,3"
+
+/obj/structure/shuttle/part/gibraltar/leftenginefore
+	icon_state = "0,8"
+
+/obj/structure/shuttle/part/gibraltar/rightenginefore
+	icon_state = "8,8"
+
+/obj/structure/shuttle/part/gibraltar/leftaftdivot
+	icon_state = "46"
+
+/obj/structure/shuttle/part/gibraltar/rightaftdivot
+	icon_state = "49"
+
+/obj/structure/shuttle/part/gibraltar/transparent
+	desc = "The cockpit canopy transparency of a DAA.4 Nimrod dropship. Composed of a composite material that matches the hull's radar absorbency while providing protection against glare and sniping lasers."
+	opacity = FALSE
+
+/obj/structure/shuttle/part/gibraltar/transparent/nosecone
+	desc = "Part of the nose assembly of the DAA.4 Nimrod. Contains the forward sensor complex."
+
+/obj/structure/shuttle/part/gibraltar/gunpod_prop
+	name = "\improper Gibraltar"
+	desc = "The nose of a TWE produced DAA.4 Nimrod dropship. Contains the AESA radar system and the chin-mounted powered gunpod."
+	icon_state = "101a"
+	opacity = FALSE
