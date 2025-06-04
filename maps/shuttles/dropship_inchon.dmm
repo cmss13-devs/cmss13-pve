@@ -1,0 +1,607 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/roof_node,
+/obj/structure/machinery/light/double/blue{
+	layer = -5
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/thirty,
+/area/shuttle/inchon)
+"bo" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 5,18";
+	density = 0;
+	layer = 2.69
+	},
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_color = "#a2c4fc"
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact/wizzo{
+	dir = 1;
+	layer = 2.73;
+	pixel_y = -7;
+	pixel_x = -6
+	},
+/obj/structure/machinery/computer/dropship_weapons/inchon{
+	layer = 2.72;
+	density = 0
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact{
+	dir = 1;
+	pixel_y = 13;
+	pixel_x = 3;
+	layer = 2.71
+	},
+/turf/open/floor/almayer_hull,
+/area/shuttle/inchon)
+"bU" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 2,12"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"cU" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 2,14"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"dS" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 8
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -4
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon,
+/area/shuttle/inchon)
+"eL" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 2,17"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"hh" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/nine,
+/area/shuttle/inchon)
+"hq" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/fourteen,
+/area/shuttle/inchon)
+"hM" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 3,12"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"ii" = (
+/obj/effect/attach_point/computer/inchon,
+/turf/open/shuttle/dropship/can_surgery/inchon/twelve,
+/area/shuttle/inchon)
+"iz" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 8,12"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"jA" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/four{
+	icon = 'icons/obj/structures/doors/dropship5.dmi';
+	pixel_x = -1;
+	layer = 3.03
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/roof/dropship_canopy{
+	pixel_x = -32
+	},
+/obj/structure/roof/dropship_canopy{
+	pixel_x = -32;
+	icon_state = "canopyglass"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentynine,
+/area/shuttle/inchon)
+"jQ" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/thirteen,
+/area/shuttle/inchon)
+"ko" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 4,17";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"kJ" = (
+/obj/docking_port/mobile/marine_dropship/inchon,
+/turf/open/shuttle/dropship/can_surgery/inchon/eighteen,
+/area/shuttle/inchon)
+"md" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 3,9"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"na" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/inchon{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/seventeen,
+/area/shuttle/inchon)
+"nK" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 3,11"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"oS" = (
+/obj/structure/machinery/light/double/blue{
+	layer = -5
+	},
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyseven,
+/area/shuttle/inchon)
+"pg" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/eight,
+/area/shuttle/inchon)
+"pv" = (
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/thirty,
+/area/shuttle/inchon)
+"pF" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 7,11"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"pQ" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 6,18"
+	},
+/obj/effect/attach_point/electronics/inchon{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 6,18"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"re" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 8,14"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"rz" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/eleven,
+/area/shuttle/inchon)
+"so" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 7,13";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"sY" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 6,17";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"uW" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/three,
+/area/shuttle/inchon)
+"uY" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 8,17"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"vv" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/twentytwo,
+/area/shuttle/inchon)
+"vE" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 3,10"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"xW" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 7,9"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"ya" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 7,12"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"yv" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/nineteen,
+/area/shuttle/inchon)
+"BD" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyone,
+/area/shuttle/inchon)
+"BZ" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 7,17";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"CC" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 7,18"
+	},
+/obj/effect/attach_point/weapon/inchon/right_fore,
+/turf/template_noop,
+/area/shuttle/inchon)
+"EZ" = (
+/turf/template_noop,
+/area/template_noop)
+"Fp" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/two,
+/area/shuttle/inchon)
+"FN" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 3,13";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"FS" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_color = "#a2c4fc"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/ten,
+/area/shuttle/inchon)
+"Hl" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_color = "#a2c4fc"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentythree,
+/area/shuttle/inchon)
+"HN" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/seven,
+/area/shuttle/inchon)
+"Kg" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/fifteen,
+/area/shuttle/inchon)
+"KF" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 7,10"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"Le" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow/inchon{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/five,
+/area/shuttle/inchon)
+"Ln" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4{
+	id = "aft_door";
+	name = "Inchon cargo door"
+	},
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/twentysix,
+/area/shuttle/inchon)
+"LQ" = (
+/obj/effect/attach_point/weapon/inchon/left_wing,
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 2,15";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"MA" = (
+/obj/effect/roof_node,
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyeight,
+/area/shuttle/inchon)
+"MJ" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/sixteen,
+/area/shuttle/inchon)
+"MO" = (
+/turf/open/shuttle/dropship/can_surgery/inchon/twenty,
+/area/shuttle/inchon)
+"NA" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 4,18"
+	},
+/obj/effect/attach_point/electronics/inchon{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 4,18"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"NS" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 2,16"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"OT" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 3,17";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"Ru" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_color = "#a2c4fc"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfive,
+/area/shuttle/inchon)
+"RH" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 7,14";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"So" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_color = "#a2c4fc"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/six,
+/area/shuttle/inchon)
+"SK" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 5,20"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"SL" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 5,19";
+	layer = 2
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small/inchon{
+	pixel_y = -5;
+	layer = 2.7
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"SO" = (
+/obj/effect/attach_point/weapon/inchon/right_wing,
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 8,15";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"Ur" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 2,13"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"UR" = (
+/obj/structure/shuttle/part/inchon{
+	icon_state = "dropship_interior 8,16"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"WY" = (
+/turf/closed/shuttle/dropship1{
+	icon = 'icons/turf/dropship5.dmi';
+	icon_state = "dropship_interior 3,14";
+	name = "Inchon"
+	},
+/area/shuttle/inchon)
+"Xz" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 3,18"
+	},
+/obj/effect/attach_point/weapon/inchon/left_fore,
+/turf/template_noop,
+/area/shuttle/inchon)
+"XU" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 8,13"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"Ya" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 8,18"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"YL" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2
+	},
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/four,
+/area/shuttle/inchon)
+"ZB" = (
+/obj/structure/shuttle/part/inchon/transparent{
+	icon_state = "dropship_interior 2,18"
+	},
+/turf/template_noop,
+/area/shuttle/inchon)
+"ZY" = (
+/obj/structure/roof/dropship_tail{
+	pixel_x = -160;
+	pixel_y = -320;
+	mouse_opacity = 0;
+	icon_state = "dropship_tail_fade"
+	},
+/turf/open/shuttle/dropship/can_surgery/inchon/twentyfour,
+/area/shuttle/inchon)
+
+(1,1,1) = {"
+EZ
+EZ
+ZB
+eL
+NS
+LQ
+cU
+Ur
+bU
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+pv
+"}
+(2,1,1) = {"
+EZ
+EZ
+Xz
+OT
+dS
+So
+WY
+FN
+hM
+nK
+vE
+md
+EZ
+EZ
+EZ
+EZ
+EZ
+pv
+"}
+(3,1,1) = {"
+EZ
+EZ
+NA
+ko
+Fp
+HN
+rz
+hq
+na
+MO
+Hl
+Ln
+EZ
+EZ
+EZ
+EZ
+pv
+EZ
+"}
+(4,1,1) = {"
+SK
+SL
+bo
+jA
+uW
+pg
+ii
+Kg
+kJ
+BD
+ZY
+oS
+pv
+pv
+pv
+pv
+aa
+EZ
+"}
+(5,1,1) = {"
+EZ
+EZ
+pQ
+sY
+YL
+hh
+jQ
+MJ
+yv
+vv
+Ru
+MA
+EZ
+EZ
+EZ
+EZ
+pv
+EZ
+"}
+(6,1,1) = {"
+EZ
+EZ
+CC
+BZ
+Le
+FS
+RH
+so
+ya
+pF
+KF
+xW
+EZ
+EZ
+EZ
+EZ
+EZ
+pv
+"}
+(7,1,1) = {"
+EZ
+EZ
+Ya
+uY
+UR
+SO
+re
+XU
+iz
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+EZ
+pv
+"}
