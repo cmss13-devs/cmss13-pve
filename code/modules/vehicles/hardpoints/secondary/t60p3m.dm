@@ -14,7 +14,7 @@
 	ammo = new /obj/item/ammo_magazine/hardpoint/t60p3m
 	max_clips = 1
 
-	use_muzzle_flash = TRUE
+	use_muzzle_flash = FALSE
 	angle_muzzleflash = FALSE
 	muzzleflash_icon_state = "muzzle_flash"
 
