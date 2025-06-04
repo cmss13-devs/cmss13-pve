@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Shotgun shell pouch added to the USCM & FORECON gear vendor in the restricted pouches section"
+  - rscdel: "Pressurized Reagent Canister pouches removed from FORECON & PMC medic gear vendor"
+  - qol: "See above, both QoL changes"
