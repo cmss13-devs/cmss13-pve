@@ -476,6 +476,15 @@
 	icon_state = "green"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 
+/area/lv522/atmos/sewer/primary
+	name = "Atmospheric Processor - Primary Heat Exchanger - Eastern Lower Reactor"
+
+/area/lv522/atmos/sewer/secondary
+	name = "Atmospheric Processor - Secondary Heat Exchanger - Western Lower Reactor"
+
+/area/lv522/atmos/sewer/lower
+	name = "Atmospheric Processor - Maintenance - Central Lower Reactor"
+
 //Megamap
 
 /area/lv522/indoors/garrison
