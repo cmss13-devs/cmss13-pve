@@ -1,57 +1,57 @@
-/datum/human_ai_equipment_preset/zombies
+/datum/human_ai_equipment_preset/zombie
 	faction = FACTION_ZOMBIE
 
-/datum/human_ai_equipment_preset/zombies/zombie
-	name = "Zombie"
+/datum/human_ai_equipment_preset/zombie/generic
+	name = "Zombie - Generic"
 	desc = "Brains"
 	path = /datum/equipment_preset/other/zombie
 
-/datum/human_ai_equipment_preset/zombies/ua_marine
+/datum/human_ai_equipment_preset/zombie/ua_marine
 	name = "Zombie - USCM Marine"
 	desc = "Braaaaaains"
 	path = /datum/equipment_preset/other/zombie/ua_marine
 
-/datum/human_ai_equipment_preset/zombies/ua_marine_eva
+/datum/human_ai_equipment_preset/zombie/ua_marine_eva
 	name = "Zombie - USCM EVA Marine"
 	desc = "Braaaaaaains"
 	path = /datum/equipment_preset/other/zombie/ua_marine_eva
 
-/datum/human_ai_equipment_preset/zombies/bluecollar
+/datum/human_ai_equipment_preset/zombie/bluecollar
 	name = "Zombie - Blue-Collar"
 	desc = "Braaaaaaaains"
 	path = /datum/equipment_preset/other/zombie/bluecollar
 
-/datum/human_ai_equipment_preset/zombies/upp_rifleman
+/datum/human_ai_equipment_preset/zombie/upp_rifleman
 	name = "Zombie - UPP Squad Rifleman"
 	desc = "Braaaaaaaaains"
 	path = /datum/equipment_preset/other/zombie/upp_rifleman
 
-/datum/human_ai_equipment_preset/zombies/upp_rifleman_eva
+/datum/human_ai_equipment_preset/zombie/upp_rifleman_eva
 	name = "Zombie - UPP EVA Marine"
 	desc = "Braaaaaaaaaains"
 	path = /datum/equipment_preset/other/zombie/upp_eva
 
-/datum/human_ai_equipment_preset/zombies/upp_colonist
+/datum/human_ai_equipment_preset/zombie/upp_colonist
 	name = "Zombie - UPP Civilian"
 	desc = "Braaaaaaaaaaains"
 	path = /datum/equipment_preset/other/zombie/upp_colonist
 
-/datum/human_ai_equipment_preset/zombies/pmc
+/datum/human_ai_equipment_preset/zombie/pmc
 	name = "Zombie - PMC"
 	desc = "Braaaaaaaaaaaaaains"
 	path = /datum/equipment_preset/other/zombie/pmc_standard
 
-/datum/human_ai_equipment_preset/zombies/researcher
+/datum/human_ai_equipment_preset/zombie/researcher
 	name = "Zombie - Researcher"
 	desc = "Braaaaaiiins"
 	path = /datum/equipment_preset/other/zombie/researcher
 
-/datum/human_ai_equipment_preset/zombies/cmb
+/datum/human_ai_equipment_preset/zombie/cmb
 	name = "Zombie - CMB"
 	desc = "Braaaaaiiiiiins"
 	path = /datum/equipment_preset/other/zombie/cmb
 
-/datum/human_ai_equipment_preset/zombies/guard
+/datum/human_ai_equipment_preset/zombie/guard
 	name = "Zombie - US Colonial Guard"
 	desc = "Braaaaainsssssss"
 	path = /datum/equipment_preset/other/zombie/guard
