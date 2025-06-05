@@ -25,7 +25,7 @@
 	gear_preset = initial(gear_preset)
 	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
-	if(option = LCPL_VARIANT)
+	if(option == LCPL_VARIANT)
 		gear_preset = gear_preset_tertiary
 
 /datum/job/marine/standard/whiskey
