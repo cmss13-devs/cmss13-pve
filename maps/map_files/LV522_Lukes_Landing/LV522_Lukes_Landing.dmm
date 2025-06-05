@@ -1,10 +1,228 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/mob/living/simple_animal/bat{
+	name = "Lukes Landing Bat"
+	},
+/turf/closed/wall/strata_ice/dirty,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aab" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
+	dir = 1;
+	req_one_access = list(104,106,201)
+	},
+/turf/open/floor/corsat/marked,
+/area/lv522_l_l/indoors/corporate)
+"aac" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_y = 29
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/indoors/corporate)
+"aad" = (
+/obj/structure/sign/safety/coffee{
+	pixel_x = -22
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/corporate)
+"aae" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair/comfy,
+/obj/structure/sign/safety/terminal{
+	pixel_y = 29
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 29;
+	pixel_x = 13
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/corporate)
+"aaf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/terminal,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/indoors/corporate)
+"aag" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = -30
+	},
+/obj/structure/sign/safety/electronics{
+	pixel_x = -18
+	},
+/obj/structure/sign/safety/fibre_optics{
+	pixel_x = -30;
+	pixel_y = -13
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = -18;
+	pixel_y = -13
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/indoors/corporate)
+"aah" = (
+/obj/structure/sign/safety/storage,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/indoors/storage)
+"aai" = (
+/obj/structure/sign/safety/terminal{
+	pixel_y = 2;
+	pixel_x = 36
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/sec)
+"aaj" = (
+/obj/structure/sign/safety/medical,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/indoors/clinic)
+"aak" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	req_one_access = list(104,106)
+	},
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/corsat/marked,
+/area/lv522_l_l/indoors/sec)
+"aal" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/cable/heavyduty/north_south,
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/engineering)
+"aam" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/galley{
+	pixel_y = 29
+	},
+/turf/open/asphalt/cement,
+/area/lv522_l_l/outdoors/colony)
+"aan" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "Storage-Shutter-Secure"
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/basement/colony)
+"aao" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "1-Storage-Shutter-Secure"
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/basement/colony)
+"aap" = (
+/obj/structure/sign/safety/security,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/indoors/sec)
+"aaq" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/shale/layer2,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aar" = (
+/obj/structure/sign/safety/refridgeration{
+	pixel_x = -5
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/indoors/canteen)
+"aas" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/shale/layer1,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aat" = (
+/obj/structure/sign/safety/terminal{
+	pixel_x = 9;
+	pixel_y = 29
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/dorms)
+"aau" = (
+/obj/structure/sign/safety/intercom{
+	pixel_x = -22;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 9;
+	pixel_y = 29
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/dorms)
 "aav" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
+"aaw" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/snow/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aax" = (
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/dorms)
+"aay" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/sand_white/layer0,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aaz" = (
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29
+	},
+/turf/open/floor/prison,
+/area/lv522_l_l/indoors/slaughterhouse)
+"aaA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/cable/heavyduty/west_south,
+/turf/open/floor/plating,
+/area/lv522_l_l/outdoors/colony_outskirts)
+"aaB" = (
+/mob/living/simple_animal/bat{
+	name = "Mining Incert Bat"
+	},
+/turf/closed/shuttle{
+	dir = 1;
+	icon_state = "pwall"
+	},
+/area/lv522_l_l/basement/mine)
+"aaC" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/sign/safety/rewire{
+	pixel_y = -29;
+	pixel_x = 9
+	},
+/turf/open/floor/prison/floor_plate,
+/area/lv522_l_l/indoors/mining)
+"aaD" = (
+/turf/open/floor/almayer/empty/golden_arrow,
+/area/lv522_l_l/indoors/mining)
+"aaE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/lv522_l_l/outdoors/mining)
+"aaF" = (
+/turf/open/floor/corsat,
+/area/lv522_l_l/basement/mine)
 "aaO" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
@@ -183,9 +401,6 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/colony)
-"akZ" = (
-/turf/open/space/transit/north/shuttlespace_ns4,
-/area/shuttle/elevator2/transit)
 "alH" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/asphalt/cement/cement4,
@@ -217,7 +432,9 @@
 	dir = 1
 	},
 /obj/item/reagent_container/food/snacks/grown/wheat{
-	name = "straw"
+	name = "straw";
+	pixel_x = -2;
+	pixel_y = -4
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
@@ -324,7 +541,9 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
 "asA" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
+	req_one_access = list(106,102,101)
+	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/storage)
 "atm" = (
@@ -363,9 +582,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/platform/strata/metal,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
@@ -478,7 +695,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/powerloader_clamp,
@@ -556,7 +773,8 @@
 /area/lv522_l_l/indoors/canteen)
 "aFl" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper B-Block 'Engineering'"
+	name = "\improper B-Block 'Engineering'";
+	req_one_access = list(106,102,101,201)
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/engineering)
@@ -608,9 +826,7 @@
 /area/lv522_l_l/basement/colony)
 "aIC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "aKx" = (
@@ -729,9 +945,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "aRE" = (
@@ -1065,6 +1279,7 @@
 "bmA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/firecloset/full,
+/obj/structure/machinery/light/double,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "bmV" = (
@@ -1105,16 +1320,6 @@
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/slaughterhouse)
-"bpf" = (
-/obj/structure/machinery/door_display/research_cell{
-	dir = 4;
-	id = "Storage-Shutter-Secure";
-	pixel_x = -16;
-	req_access = null
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "bpm" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
@@ -1179,10 +1384,6 @@
 	light_color = "#BB3F3F"
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre{
-	pixel_y = 6;
-	pixel_x = -7
-	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 4
 	},
@@ -1217,6 +1418,10 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "bus" = (
 /obj/structure/machinery/power/apc/no_power/west,
+/obj/structure/sign/safety/rewire{
+	pixel_y = -29;
+	pixel_x = 9
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv522_l_l/indoors/storage)
 "buG" = (
@@ -1368,7 +1573,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1378,9 +1583,6 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wy_mre{
-	pixel_y = 6
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -1452,9 +1654,7 @@
 "bFA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/generic,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "bGf" = (
@@ -1555,7 +1755,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/trash/USCMtray{
 	pixel_y = 11
@@ -1574,13 +1774,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 21
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
 "bMI" = (
@@ -1641,9 +1835,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
@@ -1761,13 +1953,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 21
-	},
+/obj/structure/cable/heavyduty/north_west,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
 "bUS" = (
@@ -1869,13 +2055,7 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/sec)
 "cbI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = -23
-	},
+/obj/structure/cable/heavyduty/west_south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -2050,11 +2230,15 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 10
 	},
+/obj/structure/machinery/firealarm{
+	pixel_y = 28
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
 "clg" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper B-Block 'Clinic' Airlock"
+	name = "\improper B-Block 'Clinic' Airlock";
+	req_one_access = list(105,103,106)
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/clinic)
@@ -2103,6 +2287,10 @@
 "cng" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/engineering_welding,
+/obj/structure/sign/safety/rewire{
+	pixel_y = 4;
+	pixel_x = -22
+	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
 "cnr" = (
@@ -2151,6 +2339,10 @@
 /obj/item/storage/donut_box/empty{
 	pixel_x = 1;
 	pixel_y = 8
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 33;
+	pixel_x = 14
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
@@ -2234,10 +2426,7 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
 "ctK" = (
-/obj/structure/machinery/sensortower{
-	pixel_x = -10;
-	pixel_y = 10
-	},
+/obj/structure/machinery/telecomms/relay/preset/ice_colony,
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
 	layer = 3.2
@@ -2445,13 +2634,6 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/canteen)
-"cCx" = (
-/obj/structure/largecrate/random,
-/obj/item/storage/box/wy_mre{
-	pixel_y = 11
-	},
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "cDt" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
 	dir = 4
@@ -2525,9 +2707,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/shale/layer2,
 /area/lv522_l_l/outdoors/comms_relay)
-"cHz" = (
-/turf/closed/wall/strata_outpost/reinforced,
-/area/lv522/oob)
 "cHV" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/machinery/light/double{
@@ -2537,18 +2716,8 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
-"cIB" = (
-/turf/open/floor/plating/icefloor/warnplate/northeast,
-/area/shuttle/elevator2/underground)
 "cKf" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/m94{
-	pixel_y = 7;
-	pixel_x = 12
-	},
-/obj/item/storage/box/m94{
-	pixel_y = 4
-	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "cKS" = (
@@ -2564,9 +2733,7 @@
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "cMP" = (
@@ -2586,9 +2753,6 @@
 /obj/structure/platform/strata/metal,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"cNf" = (
-/turf/open/floor/plating/icefloor/warnplate/northwest,
-/area/shuttle/elevator2/underground)
 "cNs" = (
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
@@ -2605,13 +2769,6 @@
 /turf/open/auto_turf/shale/layer2,
 /area/lv522_l_l/basement/mine)
 "cPa" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = -23
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -2623,6 +2780,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
+/obj/structure/cable/heavyduty/west_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "cPd" = (
@@ -2643,6 +2801,14 @@
 /obj/item/tool/pen/red/clicky{
 	pixel_y = 5;
 	pixel_x = -7
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 16;
+	pixel_y = 28
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 28;
+	pixel_x = 4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
@@ -2737,9 +2903,7 @@
 	light_color = "#BB3F3F"
 	},
 /obj/effect/decal/cleanable/generic,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "cSP" = (
@@ -2783,7 +2947,8 @@
 /area/lv522_l_l/indoors/engineering)
 "cTQ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	req_one_access = list(104,106)
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -2838,7 +3003,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -2931,23 +3096,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/comms_relay)
-"dec" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 15
-	},
-/turf/open/floor/plating,
-/area/lv522_l_l/outdoors/colony_outskirts)
 "deh" = (
 /obj/structure/platform/strata/metal,
 /obj/effect/decal/cleanable/dirt,
@@ -3037,7 +3185,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -3074,6 +3222,13 @@
 	phone_category = "LV-522 Lukes Landing";
 	phone_id = "Corporate Office Telephone"
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 29
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 29;
+	pixel_x = 13
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "dmI" = (
@@ -3098,7 +3253,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/paper/wy{
-	pixel_x = 5;
+	pixel_x = 6;
 	pixel_y = 6
 	},
 /obj/item/newspaper,
@@ -3235,9 +3390,7 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "dwI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
@@ -3500,7 +3653,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/device/flashlight{
 	pixel_y = 3
@@ -3569,6 +3722,10 @@
 	pixel_y = 5;
 	pixel_x = 6
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 2;
+	pixel_x = 36
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/sec)
 "dRl" = (
@@ -3589,9 +3746,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/basement/colony)
-"dRW" = (
-/turf/open/floor/plating/icefloor/warnplate/north,
-/area/shuttle/elevator2/underground)
 "dSS" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/prison/floor_plate,
@@ -3666,7 +3820,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/tool/shovel/spade,
 /obj/item/tool/shovel/spade,
@@ -3843,6 +3997,9 @@
 	height = 1;
 	id = "ladder-sec-1"
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = -29
+	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/sec)
 "ekL" = (
@@ -3886,9 +4043,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
 "eof" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
@@ -4053,9 +4208,7 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/slaughterhouse)
 "evU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
@@ -4142,15 +4295,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
+/obj/structure/cable/heavyduty/west,
+/obj/structure/cable/heavyduty/south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "eAH" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -4177,7 +4327,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -4201,7 +4351,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/storage/box/powderedmilk{
 	pixel_y = -2
@@ -4370,7 +4520,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/cardboard/full_stack,
@@ -4654,7 +4804,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -4792,9 +4942,7 @@
 	pixel_y = 9;
 	light_color = "#BB3F3F"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "flw" = (
@@ -4843,9 +4991,7 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_east_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "fmR" = (
@@ -5141,6 +5287,10 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "fEN" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/rewire{
+	pixel_y = 34;
+	pixel_x = -7
+	},
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 1;
 	pixel_y = 26
@@ -5295,9 +5445,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
@@ -5332,7 +5480,8 @@
 /area/lv522_l_l/indoors/airtraffic)
 "fQq" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	req_one_access = list(105,103,106)
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -5364,9 +5513,6 @@
 /area/lv522_l_l/outdoors/colony_outskirts)
 "fSG" = (
 /obj/structure/machinery/power/apc/no_power/west,
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -5374,10 +5520,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 23
-	},
+/obj/structure/cable/heavyduty/north_west,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "fSN" = (
@@ -5536,7 +5679,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -5610,17 +5753,12 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"gil" = (
-/turf/open/floor/plating/icefloor/warnplate/northwest,
-/area/shuttle/elevator2/ground)
 "giF" = (
 /obj/structure/platform/strata/metal,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
 "gjm" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "gjp" = (
@@ -5641,8 +5779,10 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/lv522_l_l/basement/colony)
 "gkU" = (
-/obj/docking_port/stationary/marine_dropship/lz1,
-/turf/open/auto_turf/snow/layer0,
+/obj/docking_port/stationary/marine_dropship/lz1{
+	name = "Lukes Landing Northwest Landing Zone"
+	},
+/turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "gli" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -5823,6 +5963,9 @@
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = -29
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
@@ -6006,6 +6149,10 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/generic,
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29;
+	pixel_x = -10
+	},
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
 "gFl" = (
@@ -6125,7 +6272,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/storage/box/lightstick/red{
 	pixel_y = 8
@@ -6178,13 +6325,13 @@
 /obj/docking_port/stationary/trijent_elevator{
 	height = 5;
 	width = 8;
-	id = "Lower_Dorms";
-	name = "Lower Dorms";
+	id = "Lower_Arrivals";
+	name = "Lower Arrivals";
 	airlock_exit = "elevator";
-	elevator_network = "dorm";
-	airlock_area = /area/shuttle/elevator2/underground
+	elevator_network = "Arrivals";
+	airlock_area = /area/shuttle/elevator1/underground
 	},
-/turf/open/floor/plating/icefloor/warnplate/southwest,
+/turf/open/floor/corsat,
 /area/shuttle/elevator2/underground)
 "gLL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6214,6 +6361,9 @@
 /obj/structure/ladder{
 	height = 1;
 	id = "ladder-storage-1"
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 39
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/storage)
@@ -6296,6 +6446,9 @@
 	dir = 8;
 	pixel_y = 1
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 39
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "gQN" = (
@@ -6312,6 +6465,14 @@
 "gRU" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 35;
+	pixel_y = 9
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = -3;
+	pixel_x = 35
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "gTR" = (
@@ -6343,6 +6504,10 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = -21;
+	pixel_y = 7
+	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/canteen)
 "gUB" = (
@@ -6369,7 +6534,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/maintenance_jack,
@@ -6465,9 +6630,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "hbA" = (
@@ -6522,6 +6685,14 @@
 	pixel_x = -7
 	},
 /obj/item/newspaper,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 16;
+	pixel_y = 28
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 28;
+	pixel_x = 4
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "hep" = (
@@ -6612,9 +6783,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
@@ -6682,7 +6851,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7020,9 +7189,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
-"hMq" = (
-/turf/open/floor/plating/icefloor/warnplate/west,
-/area/shuttle/elevator2/underground)
 "hML" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -7346,7 +7512,8 @@
 /area/lv522_l_l/basement/mine)
 "ihY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	dir = 1
+	dir = 1;
+	req_one_access = list(104,106)
 	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -7402,9 +7569,7 @@
 /turf/open/floor/almayer/w_y0/north,
 /area/lv522_l_l/indoors/dorms)
 "ily" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
@@ -7484,9 +7649,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "isX" = (
@@ -7582,7 +7745,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -7740,6 +7903,10 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "iGj" = (
 /obj/structure/prop/server_equipment/yutani_server,
+/obj/structure/sign/safety/terminal{
+	pixel_y = 4;
+	pixel_x = 29
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
 "iGq" = (
@@ -7824,12 +7991,13 @@
 /area/lv522_l_l/basement/mine)
 "iMD" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 8
-	},
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
 	pixel_y = 16
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 4;
+	pixel_x = -29
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
@@ -7853,9 +8021,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
@@ -7863,7 +8029,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_y = -3
@@ -7901,9 +8067,7 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/dorms)
 "iPI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
+/obj/structure/cable/heavyduty/north_east,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -8238,8 +8402,9 @@
 "jha" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
-/obj/structure/machinery/firealarm{
-	pixel_y = 28
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29;
+	pixel_x = 10
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
@@ -8338,7 +8503,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -8464,9 +8629,7 @@
 	pixel_y = 1;
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
+/obj/structure/cable/heavyduty/north_east,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "jsO" = (
@@ -8615,9 +8778,7 @@
 /area/lv522_l_l/outdoors/colony)
 "jBR" = (
 /obj/effect/decal/cleanable/generic,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "jBZ" = (
@@ -8921,7 +9082,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/ammo_box/magazine/spearhead/empty{
 	pixel_y = -4
@@ -9013,7 +9174,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/storage)
@@ -9304,7 +9465,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -9351,7 +9512,9 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "kAJ" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	req_one_access = list(104,106,201)
+	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/corporate)
@@ -9446,8 +9609,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
 "kFK" = (
-/obj/structure/platform_decoration/strata/metal,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/platform/strata/metal,
 /turf/open/asphalt/cement/cement4,
 /area/lv522_l_l/outdoors/mining)
 "kFY" = (
@@ -9607,9 +9770,6 @@
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/basement/mine)
 "kPs" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -9621,6 +9781,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "kPQ" = (
@@ -9840,16 +10001,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/mining)
-"lcy" = (
-/obj/structure/machinery/door_display/research_cell{
-	dir = 8;
-	id = "1-Storage-Shutter-Secure";
-	pixel_x = 16;
-	req_access = null
-	},
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/prison,
-/area/lv522_l_l/basement/colony)
 "lcB" = (
 /obj/item/storage/backpack/marine/satchel{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
@@ -10072,9 +10223,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/mining)
-"lpf" = (
-/turf/open/floor/plating/icefloor,
-/area/shuttle/elevator2/ground)
 "lpu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/east,
@@ -10192,6 +10340,9 @@
 "lxu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/no_power/north,
+/obj/structure/sign/safety/rewire{
+	pixel_x = -29
+	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/airtraffic)
 "lxy" = (
@@ -10317,6 +10468,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 35;
+	pixel_y = 9
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "lGz" = (
@@ -10338,7 +10493,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -10430,6 +10585,9 @@
 	pixel_y = 4;
 	dir = 8
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 35
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
 "lOu" = (
@@ -10495,10 +10653,6 @@
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
 "lSu" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	pixel_x = -20
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -10510,9 +10664,7 @@
 	layer = 3.3;
 	dir = 4
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "lSW" = (
@@ -10682,9 +10834,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony_outskirts)
-"mbc" = (
-/turf/open/floor/plating/icefloor/warnplate/north,
-/area/shuttle/elevator2/ground)
 "mbM" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -10697,9 +10846,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"mcC" = (
-/turf/open/floor/plating/icefloor/warnplate/east,
-/area/shuttle/elevator2/underground)
 "mdo" = (
 /obj/structure/surface/table/almayer,
 /turf/open/floor/prison,
@@ -10856,7 +11002,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -10910,7 +11056,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/storage/pouch/survival,
 /obj/item/storage/pouch/survival{
@@ -11069,23 +11215,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/comms_relay)
-"mtM" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = -9
-	},
-/turf/open/floor/plating,
-/area/lv522_l_l/outdoors/comms_relay)
 "muA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
@@ -11115,6 +11244,14 @@
 	pixel_y = 16;
 	phone_category = "LV-522 Lukes Landing";
 	phone_id = "Clinic Office Two Telephone"
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 29;
+	pixel_x = 14
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 1;
+	pixel_y = 29
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
@@ -11152,7 +11289,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/packageWrap,
 /obj/item/packageWrap,
@@ -11202,9 +11339,7 @@
 /area/lv522_l_l/basement/colony)
 "mCV" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "mDw" = (
@@ -11252,9 +11387,7 @@
 /turf/open/floor/prison,
 /area/lv522_l_l/basement/colony)
 "mGZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "mHi" = (
@@ -11321,6 +11454,10 @@
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 16;
+	pixel_y = 28
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/slaughterhouse)
 "mLq" = (
@@ -11427,9 +11564,6 @@
 /area/lv522_l_l/basement/colony)
 "mPB" = (
 /obj/structure/machinery/power/apc/no_power/west,
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
@@ -11438,6 +11572,8 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/cable/heavyduty/west_south,
+/obj/structure/cable/heavyduty/east_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/indoors/engineering)
 "mQp" = (
@@ -11554,9 +11690,6 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/lv522_l_l/outdoors/colony)
-"mVY" = (
-/turf/open/floor/plating/icefloor/warnplate/southeast,
-/area/shuttle/elevator2/ground)
 "mWa" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -11675,9 +11808,7 @@
 	pixel_y = 9;
 	light_color = "#BB3F3F"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "nfe" = (
@@ -11890,9 +12021,7 @@
 /area/lv522_l_l/outdoors/colony)
 "nqU" = (
 /obj/structure/surface/table/almayer,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/item/clipboard{
 	pixel_y = 6
 	},
@@ -11947,9 +12076,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
 "ntm" = (
@@ -11989,7 +12116,7 @@
 	},
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/tool/wet_sign{
 	pixel_x = 2;
@@ -12034,6 +12161,9 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/generic,
+/obj/structure/sign/safety/rewire{
+	pixel_y = 29
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/indoors/corporate)
 "nxx" = (
@@ -12171,9 +12301,6 @@
 /obj/structure/pipes/standard/manifold/fourway/hidden/green,
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/storage)
-"nER" = (
-/turf/open/floor/plating/icefloor/warnplate/northeast,
-/area/shuttle/elevator2/ground)
 "nEV" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid,
 /turf/open/floor/corsat/marked,
@@ -12308,7 +12435,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/storage/pouch/tools,
 /obj/item/storage/pouch/tools{
@@ -12541,9 +12668,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
-"odg" = (
-/turf/open/floor/plating/icefloor/warnplate/east,
-/area/shuttle/elevator2/ground)
 "ods" = (
 /obj/structure/pipes/standard/simple/hidden/yellow{
 	dir = 4
@@ -12571,12 +12695,8 @@
 /turf/open/auto_turf/shale/layer2,
 /area/lv522_l_l/basement/mine)
 "oeT" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/cable/heavyduty/north_east,
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/lv522_l_l/indoors/corporate)
@@ -12665,6 +12785,10 @@
 "oiK" = (
 /obj/structure/prop/server_equipment/yutani_server,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/terminal{
+	pixel_y = 4;
+	pixel_x = 29
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
 "ojd" = (
@@ -12764,6 +12888,10 @@
 /turf/open/floor/prison/kitchen,
 /area/lv522_l_l/indoors/canteen)
 "onX" = (
+/obj/structure/sign/safety/rewire{
+	pixel_y = -29;
+	pixel_x = 9
+	},
 /turf/open/floor/prison,
 /area/lv522_l_l/outdoors/comms_relay)
 "ooc" = (
@@ -12829,9 +12957,7 @@
 	pixel_y = 9;
 	light_color = "#BB3F3F"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "oqv" = (
@@ -13000,9 +13126,7 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522_l_l/outdoors/colony)
 "oDi" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -13086,9 +13210,6 @@
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
-"oHK" = (
-/turf/open/floor/plating/icefloor/warnplate/west,
-/area/shuttle/elevator2/ground)
 "oIv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -13103,9 +13224,7 @@
 "oKi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/train/cargo/trolley,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "oKj" = (
@@ -13207,7 +13326,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -13256,6 +13375,10 @@
 	phone_category = "LV-522 Lukes Landing";
 	phone_id = "Clinic Office One Telephone"
 	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = 4;
+	pixel_x = 34
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/clinic)
 "oTL" = (
@@ -13290,9 +13413,7 @@
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/engineering)
 "oVq" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice12";
 	pixel_y = 16;
@@ -13535,7 +13656,10 @@
 	height = 1;
 	id = "ladder-w-2"
 	},
-/turf/open/floor/prison/floor_plate,
+/obj/structure/sign/safety/ladder{
+	pixel_x = -29
+	},
+/turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/corporate)
 "phP" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
@@ -13835,12 +13959,6 @@
 /turf/open/asphalt/cement/cement1,
 /area/lv522_l_l/outdoors/colony)
 "pBi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 12;
-	pixel_x = 4
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -13848,6 +13966,8 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "pBs" = (
@@ -13921,7 +14041,9 @@
 /turf/open/asphalt/cement/cement4,
 /area/lv522_l_l/outdoors/colony)
 "pHI" = (
-/obj/structure/machinery/door/airlock/almayer/generic/glass,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	req_one_access = list(104,106)
+	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/sec)
 "pIn" = (
@@ -14010,11 +14132,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 12;
-	pixel_x = 4
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -14022,6 +14139,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "pMX" = (
@@ -14152,9 +14270,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
-"pTD" = (
-/turf/open/floor/plating/icefloor/warnplate/southeast,
-/area/shuttle/elevator2/underground)
 "pUR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -14320,7 +14435,8 @@
 /area/lv522_l_l/indoors/corporate)
 "qgO" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 1
+	dir = 1;
+	req_one_access = list(104,106,201)
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -14510,28 +14626,11 @@
 /obj/structure/cargo_container/kelland/right,
 /turf/open/auto_turf/shale/layer1,
 /area/lv522_l_l/outdoors/colony)
-"qtz" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 15
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/lv522_l_l/outdoors/colony_outskirts)
 "qtA" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/server_equipment/laptop/closed{
@@ -14773,7 +14872,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -14915,7 +15014,8 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "qLH" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	dir = 1
+	dir = 1;
+	req_one_access = list(104,106)
 	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -14923,16 +15023,14 @@
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/sec)
 "qLL" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/outdoors/comms_relay)
 "qLQ" = (
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -15068,14 +15166,14 @@
 /obj/docking_port/stationary/trijent_elevator{
 	height = 5;
 	width = 8;
-	id = "Upper_Dorms";
-	name = "Upper Dorms";
-	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/dorm;
+	id = "Upper_Arrivals";
+	name = "Upper Arrivals";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/arrivals;
 	airlock_exit = "elevator";
-	elevator_network = "dorm";
-	airlock_area = /area/shuttle/elevator2/ground
+	elevator_network = "Arrivals";
+	airlock_area = /area/shuttle/elevator1/ground
 	},
-/turf/open/floor/plating/icefloor/warnplate/southwest,
+/turf/open/floor/almayer/empty/golden_arrow,
 /area/shuttle/elevator2/ground)
 "qVw" = (
 /obj/structure/ladder{
@@ -15269,7 +15367,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/dorms)
 "rgd" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
+/obj/structure/machinery/door/airlock/almayer/generic{
+	req_one_access = list(105,103,106)
+	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -15386,7 +15486,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -15404,6 +15504,10 @@
 /obj/structure/ladder{
 	height = 1;
 	id = "Ladder-Butcher-2"
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 36;
+	pixel_y = 7
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/slaughterhouse)
@@ -15439,7 +15543,8 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "rsQ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper B-Block 'Storage' Airlock"
+	name = "\improper B-Block 'Storage' Airlock";
+	req_one_access = list(106,102,101)
 	},
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/storage)
@@ -15534,6 +15639,10 @@
 	height = 1;
 	id = "Ladder-Butcher-3"
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = -21;
+	pixel_y = 7
+	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/slaughterhouse)
 "ryD" = (
@@ -15605,7 +15714,7 @@
 /turf/open/floor/corsat/marked,
 /area/lv522_l_l/indoors/airtraffic)
 "rDh" = (
-/obj/structure/machinery/suit_storage_unit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	pixel_x = 6
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -15694,7 +15803,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/mine)
 "rHL" = (
-/turf/open/floor/plating/icefloor/warnplate,
+/turf/open/floor/corsat,
 /area/shuttle/elevator2/underground)
 "rIe" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
@@ -15759,6 +15868,10 @@
 /obj/structure/ladder{
 	height = 1;
 	id = "ladder-butcher-6"
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 36;
+	pixel_y = 7
 	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/slaughterhouse)
@@ -16013,7 +16126,8 @@
 /area/lv522_l_l/basement/colony)
 "scQ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	name = "\improper B-Block 'Clinic' Airlock"
+	name = "\improper B-Block 'Clinic' Airlock";
+	req_one_access = list(105,103,106)
 	},
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/corsat/marked,
@@ -16142,6 +16256,14 @@
 	pixel_y = -1;
 	phone_category = "LV-522 Lukes Landing";
 	phone_id = "Storehouse Telephone"
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 2;
+	pixel_x = -22
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_x = -22;
+	pixel_y = -12
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/lv522_l_l/indoors/storage)
@@ -16417,6 +16539,9 @@
 	height = 1;
 	id = "admin-e-1"
 	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 29
+	},
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/corporate)
 "sCB" = (
@@ -16582,7 +16707,8 @@
 	dir = 4
 	},
 /obj/structure/machinery/firealarm{
-	pixel_y = 28
+	pixel_y = 28;
+	pixel_x = -4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/canteen)
@@ -16601,9 +16727,7 @@
 /area/lv522_l_l/basement/colony)
 "sKy" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
 	pixel_x = 16;
@@ -16623,7 +16747,7 @@
 	height = 1;
 	id = "ladder-w-1"
 	},
-/turf/open/floor/prison/floor_plate,
+/turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/indoors/corporate)
 "sLD" = (
 /obj/structure/surface/table/almayer,
@@ -16670,9 +16794,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
+/obj/structure/cable/heavyduty/north_east,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "sPI" = (
@@ -16746,9 +16868,7 @@
 	icon_state = "NW-out";
 	pixel_y = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
+/obj/structure/cable/heavyduty/north_west,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
 "sTN" = (
@@ -16814,9 +16934,7 @@
 /area/lv522_l_l/indoors/dorms)
 "sVW" = (
 /obj/vehicle/train/cargo/trolley,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "sWd" = (
@@ -16870,9 +16988,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/engineering)
-"sXE" = (
-/turf/closed/wall/strata_ice/dirty,
-/area/lv522/oob)
 "sXI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/random,
@@ -16950,7 +17065,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/ammo_box/magazine/spearhead/empty{
 	pixel_y = -4
@@ -17017,7 +17132,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522_l_l/outdoors/colony)
 "tib" = (
-/obj/structure/machinery/suit_storage_unit,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
 "tiy" = (
@@ -17071,6 +17186,10 @@
 /obj/structure/stairs/perspective{
 	dir = 9;
 	icon_state = "p_stair_full"
+	},
+/obj/structure/sign/safety/galley{
+	pixel_y = 7;
+	pixel_x = 29
 	},
 /turf/open/asphalt/cement,
 /area/lv522_l_l/outdoors/colony)
@@ -17165,7 +17284,7 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/indoors/clinic)
 "trD" = (
-/obj/structure/gun_rack/m41/empty{
+/obj/structure/gun_rack/m20a/empty{
 	pixel_y = 16;
 	density = 0
 	},
@@ -17278,7 +17397,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/circuitboard/computer{
 	pixel_x = 6;
@@ -17676,7 +17795,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "tTa" = (
-/turf/open/floor/plating/icefloor/warnplate,
+/turf/open/floor/almayer/empty/golden_arrow,
 /area/shuttle/elevator2/ground)
 "tTd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18180,9 +18299,7 @@
 /turf/open/floor/prison/cell_stripe/east,
 /area/lv522_l_l/basement/colony)
 "uxG" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
@@ -18294,6 +18411,10 @@
 "uFw" = (
 /obj/structure/machinery/vending/coffee,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/coffee{
+	pixel_y = 29;
+	pixel_x = 7
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/canteen)
 "uGd" = (
@@ -18375,7 +18496,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/inflatable{
@@ -18605,9 +18726,7 @@
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "uTD" = (
@@ -18679,9 +18798,6 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
-"vaT" = (
-/turf/open/asphalt/cement/cement2,
-/area/lv522_l_l/outdoors/mining)
 "vbT" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -18752,6 +18868,10 @@
 	pixel_y = 16
 	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/structure/sign/safety/terminal{
+	pixel_y = 29;
+	pixel_x = 23
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "vig" = (
@@ -18793,7 +18913,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/tool/warning_cone{
 	pixel_y = 4;
@@ -18826,11 +18946,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/basement/colony)
-"vlL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/platform/strata/metal,
-/turf/open/asphalt/cement,
-/area/lv522_l_l/outdoors/mining)
 "vlS" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/strata/white_cyan2/west,
@@ -18989,15 +19104,14 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /obj/structure/platform/strata/metal,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/colony_outskirts)
 "vqY" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
-	dir = 1
+	dir = 1;
+	req_one_access = list(106,102,101)
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Storage";
@@ -19233,7 +19347,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/masks{
@@ -19366,9 +19480,7 @@
 	dir = 4;
 	light_color = "#BB3F3F"
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "vNL" = (
@@ -19464,6 +19576,9 @@
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 4
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 29
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
 "vTG" = (
@@ -19537,9 +19652,7 @@
 /area/lv522_l_l/indoors/slaughterhouse)
 "vWb" = (
 /obj/vehicle/train/cargo/engine,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv522_l_l/basement/colony)
 "vWM" = (
@@ -19643,7 +19756,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/stack/sheet/cardboard/full_stack,
 /obj/item/stack/sheet/cardboard/full_stack,
@@ -19656,7 +19769,7 @@
 /turf/open/floor/prison/bright_clean_marked,
 /area/lv522_l_l/basement/colony)
 "wdX" = (
-/obj/structure/gun_rack/m41/unloaded{
+/obj/structure/gun_rack/m20a/empty{
 	pixel_y = 16;
 	density = 0
 	},
@@ -19751,6 +19864,10 @@
 	density = 0;
 	pixel_y = 16
 	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 29;
+	pixel_x = 29
+	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/storage)
 "wjO" = (
@@ -19808,7 +19925,7 @@
 /turf/open/floor/prison/cell_stripe/north,
 /area/lv522_l_l/indoors/corporate)
 "wnq" = (
-/obj/structure/machinery/suit_storage_unit,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/mining)
@@ -19850,19 +19967,6 @@
 /area/lv522_l_l/basement/mine)
 "wpe" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	pixel_x = -7
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	pixel_x = -9
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 12;
-	pixel_x = 4
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -19875,6 +19979,7 @@
 	layer = 2.5;
 	pixel_y = 1
 	},
+/obj/structure/cable/heavyduty/north_west,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/engineering)
 "wpM" = (
@@ -20055,7 +20160,8 @@
 "wCC" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid{
 	name = "\improper B-Block 'Engineering'";
-	dir = 1
+	dir = 1;
+	req_one_access = list(106,102,101,201)
 	},
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
@@ -20094,19 +20200,6 @@
 /obj/structure/largecrate/random,
 /turf/open/asphalt/cement/cement12,
 /area/lv522_l_l/outdoors/mining)
-"wDy" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating,
-/area/lv522_l_l/outdoors/comms_relay)
 "wEJ" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/invuln/minecart_tracks{
@@ -20182,7 +20275,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/pouch/general/large{
@@ -20741,10 +20834,7 @@
 	icon_state = "SE-out";
 	pixel_x = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8";
-	pixel_x = 12
-	},
+/obj/structure/cable/heavyduty/east_south,
 /turf/open/floor/plating,
 /area/lv522_l_l/outdoors/comms_relay)
 "xpq" = (
@@ -20875,6 +20965,10 @@
 	pixel_y = 4;
 	phone_category = "LV-522 Lukes Landing";
 	phone_id = "Corporate West Office Telephone"
+	},
+/obj/structure/sign/safety/intercom{
+	pixel_y = -28;
+	pixel_x = 13
 	},
 /turf/open/floor/prison/floor_plate,
 /area/lv522_l_l/indoors/corporate)
@@ -21067,7 +21161,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -21164,9 +21258,7 @@
 /turf/open/asphalt/cement/cement2,
 /area/lv522_l_l/outdoors/comms_relay)
 "xOS" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/cable/heavyduty/west_east,
 /obj/structure/prop/server_equipment/laptop/on{
 	pixel_x = -21;
 	pixel_y = -11
@@ -21255,7 +21347,7 @@
 /obj/structure/surface/rack,
 /obj/structure/surface/rack{
 	pixel_y = 19;
-	layer = 3.5
+	layer = 5.2
 	},
 /obj/item/ammo_box/magazine/spearhead/empty{
 	pixel_y = -4
@@ -21286,9 +21378,6 @@
 	},
 /turf/open/floor/prison,
 /area/lv522_l_l/indoors/clinic)
-"xZu" = (
-/turf/open/floor/plating/icefloor,
-/area/shuttle/elevator2/underground)
 "xZD" = (
 /obj/structure/xenoautopsy/tank{
 	pixel_y = 15;
@@ -21302,23 +21391,6 @@
 	},
 /turf/open/floor/strata/white_cyan1,
 /area/lv522_l_l/indoors/clinic)
-"xZH" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2";
-	pixel_y = 21
-	},
-/turf/open/floor/plating,
-/area/lv522_l_l/outdoors/comms_relay)
 "xZN" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -24761,7 +24833,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -24963,7 +25035,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -25165,7 +25237,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -25366,8 +25438,8 @@ fnP
 fnP
 fnP
 fnP
-hVd
-hVd
+fnP
+fnP
 vVe
 vVe
 vVe
@@ -25568,8 +25640,8 @@ fnP
 fnP
 fnP
 fnP
-hVd
-hVd
+fnP
+fnP
 vVe
 vVe
 pip
@@ -25770,7 +25842,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -25972,7 +26044,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -26174,7 +26246,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+fnP
 vVe
 vVe
 vVe
@@ -27993,7 +28065,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+aaw
 hVd
 hVd
 vVe
@@ -28401,7 +28473,7 @@ hVd
 hVd
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -29658,10 +29730,10 @@ vVe
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
 stX
 stX
 vVe
@@ -29858,15 +29930,15 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -29879,9 +29951,9 @@ vVe
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
 vVe
 vVe
 hVd
@@ -30060,18 +30132,10 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-hVd
-hVd
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -30080,11 +30144,19 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+hVd
+hVd
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 hVd
 hVd
@@ -30262,16 +30334,16 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -30281,12 +30353,12 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 hVd
@@ -30464,16 +30536,16 @@ vVe
 vVe
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -30483,12 +30555,12 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -30666,17 +30738,17 @@ vVe
 vVe
 stX
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+aas
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -30685,12 +30757,12 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -30867,32 +30939,32 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+hVd
+hVd
+aaw
 hVd
 hVd
 hVd
-hVd
-hVd
-hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -31069,32 +31141,32 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -31271,31 +31343,31 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 fnP
 hVd
 vVe
@@ -31473,32 +31545,32 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-hVd
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+aaw
 hVd
 hVd
 vVe
@@ -31512,9 +31584,9 @@ fnP
 hVd
 vVe
 vVe
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -31675,30 +31747,30 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -31714,10 +31786,10 @@ hVd
 hVd
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -31879,26 +31951,26 @@ vVe
 vVe
 stX
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 stX
 hVd
@@ -31916,11 +31988,11 @@ hVd
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -32081,25 +32153,25 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
+vVe
+vVe
 hVd
 hVd
-hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+aaw
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -32117,13 +32189,13 @@ hVd
 hVd
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -32283,24 +32355,24 @@ vVe
 vVe
 vVe
 vVe
-fnP
+vVe
 hVd
 hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+aas
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -32319,13 +32391,13 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -32478,42 +32550,7 @@ fnP
 fnP
 fnP
 hVd
-hVd
-hVd
-vVe
-vVe
-vVe
-vVe
-vVe
-stX
-hVd
-hVd
-hVd
-hVd
-hVd
-hVd
-hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-hVd
-hVd
-vVe
-vVe
-vVe
-vVe
-vVe
-hVd
-hVd
-hVd
-hVd
-hVd
+aaw
 hVd
 vVe
 vVe
@@ -32521,12 +32558,47 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+hVd
+hVd
+vVe
+vVe
+vVe
+vVe
+vVe
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+aas
+vVe
+vVe
+vVe
+vVe
+stX
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -32650,7 +32722,7 @@ vVe
 vVe
 vVe
 hVd
-hVd
+aaw
 fnP
 fnP
 fnP
@@ -32695,13 +32767,13 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 hVd
@@ -32709,7 +32781,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 hVd
 hVd
@@ -32723,11 +32795,11 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -32860,7 +32932,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+aaw
 hVd
 hVd
 stX
@@ -32898,12 +32970,12 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -32924,12 +32996,12 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -33100,12 +33172,12 @@ vVe
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -33125,12 +33197,12 @@ hVd
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -33150,7 +33222,7 @@ hVd
 hVd
 hVd
 hVd
-vVe
+aas
 vVe
 stX
 vVe
@@ -33303,11 +33375,11 @@ tUL
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -33325,14 +33397,14 @@ hVd
 hVd
 hVd
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -33493,7 +33565,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 stX
 stX
 vVe
@@ -33505,10 +33577,10 @@ tUL
 tUL
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -33524,16 +33596,16 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -33545,7 +33617,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+aaw
 hVd
 hVd
 hVd
@@ -33667,7 +33739,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 hVd
@@ -33708,14 +33780,14 @@ tUL
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-stX
 vVe
 vVe
 vVe
 stX
+vVe
+vVe
+vVe
+stX
 fnP
 fnP
 fnP
@@ -33727,15 +33799,15 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -33766,7 +33838,7 @@ vVe
 vVe
 tUL
 tUL
-tUL
+aay
 tUL
 vVe
 vVe
@@ -33858,7 +33930,7 @@ fnP
 fnP
 fnP
 fnP
-hVd
+aaw
 hVd
 vVe
 vVe
@@ -33885,7 +33957,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -33911,13 +33983,13 @@ vVe
 vVe
 vVe
 vVe
-fnP
-stX
-vVe
-vVe
-vVe
 vVe
 stX
+vVe
+vVe
+vVe
+vVe
+stX
 fnP
 fnP
 fnP
@@ -33930,14 +34002,14 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+aas
+vVe
 hVd
 vVe
 vVe
@@ -34127,47 +34199,47 @@ fnP
 fnP
 fnP
 fnP
+aaw
 hVd
 hVd
 hVd
 hVd
-hVd
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 fnP
 fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-vVe
-vVe
-vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-hVd
-hVd
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
-vVe
 hVd
 hVd
 vVe
 vVe
 vVe
 vVe
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+hVd
+hVd
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 tUL
@@ -34335,17 +34407,17 @@ hVd
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 stX
 vVe
 vVe
 vVe
-stX
+aaq
 hVd
 hVd
 hVd
@@ -34369,10 +34441,10 @@ vVe
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
 tUL
 tUL
 tUL
@@ -34382,7 +34454,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 vVe
 vVe
 vVe
@@ -34538,8 +34610,8 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
+vVe
+vVe
 stX
 stX
 vVe
@@ -34570,17 +34642,17 @@ hVd
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 stX
 vVe
@@ -34677,11 +34749,11 @@ vVe
 vVe
 vVe
 vVe
+aas
 vVe
 vVe
 vVe
 vVe
-vVe
 stX
 stX
 stX
@@ -34694,7 +34766,7 @@ fnP
 fnP
 fnP
 stX
-stX
+aaq
 fnP
 fnP
 fnP
@@ -34765,25 +34837,25 @@ hVd
 hVd
 hVd
 stX
+aas
+vVe
+hVd
+hVd
 vVe
 vVe
 hVd
-hVd
 vVe
 vVe
-hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 stX
 vVe
 vVe
@@ -34793,7 +34865,7 @@ vVe
 vVe
 vVe
 vVe
-hVd
+aaw
 fnP
 fnP
 fnP
@@ -34902,12 +34974,12 @@ fnP
 fnP
 fnP
 fnP
+aaw
 hVd
-hVd
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -34961,7 +35033,7 @@ stX
 stX
 hVd
 hVd
-hVd
+aaw
 fnP
 fnP
 fnP
@@ -34974,18 +35046,18 @@ hVd
 vVe
 vVe
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -35176,18 +35248,18 @@ hVd
 hVd
 vVe
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+aas
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -35283,7 +35355,7 @@ stX
 stX
 stX
 vVe
-vVe
+aas
 vVe
 vVe
 vVe
@@ -35346,7 +35418,7 @@ hVd
 hVd
 hVd
 hVd
-hVd
+aaw
 hVd
 hVd
 vVe
@@ -35378,18 +35450,18 @@ hVd
 hVd
 vVe
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -35500,7 +35572,7 @@ stX
 stX
 stX
 stX
-vVe
+aas
 vVe
 hVd
 hVd
@@ -35580,17 +35652,17 @@ hVd
 hVd
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -35759,7 +35831,7 @@ stX
 fnP
 fnP
 stX
-stX
+aaq
 vVe
 hVd
 hVd
@@ -35783,15 +35855,15 @@ hVd
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+aas
+vVe
+vVe
 hVd
 hVd
 vVe
@@ -35986,14 +36058,14 @@ hVd
 vVe
 vVe
 vVe
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 hVd
 vVe
 vVe
@@ -36002,7 +36074,7 @@ vVe
 hVd
 hVd
 fnP
-hVd
+aaw
 hVd
 stX
 vVe
@@ -36106,7 +36178,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 vVe
 vVe
 vVe
@@ -36189,12 +36261,12 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -36392,10 +36464,10 @@ vVe
 vVe
 vVe
 stX
-fnP
-fnP
-fnP
-fnP
+vVe
+vVe
+vVe
+vVe
 vVe
 vVe
 vVe
@@ -36410,14 +36482,14 @@ fnP
 fnP
 fnP
 fnP
+aas
 vVe
-vVe
 tUL
 tUL
 tUL
 tUL
 vVe
-stX
+aaq
 fnP
 fnP
 fnP
@@ -37217,7 +37289,7 @@ fnP
 fnP
 fnP
 fnP
-vVe
+aas
 tUL
 tUL
 tUL
@@ -37424,7 +37496,7 @@ tUL
 tUL
 tUL
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -37821,7 +37893,7 @@ fnP
 fnP
 fnP
 stX
-stX
+aaq
 vVe
 vVe
 vVe
@@ -38616,7 +38688,7 @@ stX
 stX
 stX
 stX
-vVe
+aas
 vVe
 vVe
 vVe
@@ -38626,7 +38698,7 @@ fnP
 fnP
 stX
 stX
-vVe
+aas
 vVe
 vVe
 vVe
@@ -39036,7 +39108,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 vVe
 stX
 stX
@@ -39154,7 +39226,7 @@ fnP
 fnP
 fnP
 fnP
-fnP
+hVd
 hVd
 vVe
 vVe
@@ -39356,8 +39428,8 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
+hVd
+hVd
 stX
 vVe
 vVe
@@ -39415,7 +39487,7 @@ fnP
 fnP
 fnP
 fnP
-vVe
+aas
 vVe
 vVe
 vVe
@@ -39434,7 +39506,7 @@ fnP
 stX
 stX
 stX
-stX
+aaq
 vVe
 vVe
 vVe
@@ -39557,10 +39629,10 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
 stX
 vVe
 vVe
@@ -39759,10 +39831,10 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
 stX
 stX
 stX
@@ -39828,7 +39900,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -39961,11 +40033,11 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
 stX
 hVd
 hVd
@@ -40162,19 +40234,19 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -40228,7 +40300,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 fnP
 fnP
 fnP
@@ -40363,20 +40435,20 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -40565,6 +40637,19 @@ fnP
 fnP
 fnP
 fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -40610,20 +40695,7 @@ fnP
 fnP
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-vVe
+aas
 vVe
 vVe
 vVe
@@ -40767,19 +40839,19 @@ hVd
 hVd
 fnP
 fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -40969,18 +41041,18 @@ hVd
 hVd
 hVd
 fnP
-fnP
 hVd
 hVd
 hVd
 hVd
 hVd
-fnP
-fnP
-fnP
-fnP
-fnP
-fnP
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -41113,7 +41185,7 @@ hVd
 hVd
 hVd
 fnP
-fnP
+aaa
 iRD
 "}
 (98,1,1) = {"
@@ -41180,8 +41252,8 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -41233,7 +41305,7 @@ vVe
 vVe
 vVe
 vVe
-vVe
+aas
 stX
 fnP
 fnP
@@ -41382,8 +41454,8 @@ hVd
 hVd
 hVd
 hVd
-fnP
-fnP
+hVd
+hVd
 fnP
 fnP
 fnP
@@ -42848,8 +42920,8 @@ reh
 fRV
 jKW
 sDi
-eAx
-dec
+aaA
+hau
 hau
 hau
 hau
@@ -43023,7 +43095,7 @@ sRZ
 sRZ
 nvh
 xoV
-xZH
+bLV
 auN
 iNT
 iNT
@@ -43031,9 +43103,9 @@ iNT
 iNT
 iNT
 hkq
-wDy
-wDy
-mtM
+bLV
+bLV
+bLV
 sTF
 fnP
 fnP
@@ -43058,7 +43130,7 @@ jKW
 jKW
 sDi
 eAx
-qtz
+hau
 hau
 hau
 hau
@@ -46111,7 +46183,7 @@ aMT
 oFb
 oka
 klR
-cvK
+aar
 qFo
 iri
 dNU
@@ -46123,7 +46195,7 @@ ydf
 cvK
 joK
 cPa
-evU
+aal
 evU
 fmC
 eof
@@ -47939,7 +48011,7 @@ mOL
 aFa
 cmo
 cvK
-ivG
+aam
 hit
 hQO
 eIp
@@ -49207,7 +49279,7 @@ fnP
 fnP
 fnP
 fnP
-stX
+fnP
 bUS
 bUS
 bUS
@@ -50359,7 +50431,7 @@ rPv
 rPv
 qhE
 jzK
-ivb
+aah
 ivb
 ivb
 fQU
@@ -50421,8 +50493,8 @@ bUS
 bUS
 bUS
 bUS
-bUS
 hqn
+lQJ
 lQJ
 lQJ
 mpV
@@ -50531,7 +50603,7 @@ rNK
 uKv
 gqB
 mAI
-kDz
+aaz
 lBP
 rNc
 mAI
@@ -50623,8 +50695,8 @@ phf
 bUS
 bUS
 bUS
-vaT
-vlL
+qvX
+lWx
 xAq
 xAq
 xAq
@@ -50797,7 +50869,7 @@ qkM
 xdS
 dTa
 acM
-jbQ
+aab
 dTa
 sLW
 ogA
@@ -50826,12 +50898,12 @@ bUS
 bUS
 bUS
 kFK
-gGl
-xAq
-gil
-oHK
-oHK
-oHK
+lWx
+aaD
+tTa
+tTa
+tTa
+tTa
 qUB
 xAq
 suJ
@@ -51029,11 +51101,11 @@ lAE
 bUS
 qFV
 xAq
-xAq
-mbc
-lpf
-lpf
-lpf
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 xAq
 qnb
@@ -51152,7 +51224,7 @@ bKD
 sVU
 ozr
 eld
-dNM
+aax
 yct
 eld
 eld
@@ -51185,9 +51257,9 @@ ivb
 jGQ
 vqY
 ivb
+aah
 ivb
-ivb
-ivb
+aah
 pIq
 wew
 jTb
@@ -51231,11 +51303,11 @@ lAE
 bUS
 qFV
 xAq
-xAq
-mbc
-lpf
-lpf
-lpf
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 cKS
 ifg
@@ -51433,11 +51505,11 @@ lAE
 bUS
 qvX
 xAq
-xAq
-mbc
-lpf
-lpf
-lpf
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 fbF
 bPL
@@ -51635,11 +51707,11 @@ lAE
 bUS
 qvX
 xAq
-xAq
-mbc
-lpf
-lpf
-lpf
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 cKS
 tNy
@@ -51837,11 +51909,11 @@ lAE
 bUS
 qvX
 xAq
-xAq
-mbc
-lpf
-lpf
-lpf
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 vBG
 oYr
@@ -52037,13 +52109,13 @@ lEJ
 uij
 lAE
 bUS
-kOn
-hYN
-xAq
-mbc
-lpf
-lpf
-lpf
+qvX
+aaE
+aaD
+tTa
+tTa
+tTa
+tTa
 tTa
 xAq
 dbG
@@ -52241,12 +52313,12 @@ bUS
 bUS
 qFV
 xAq
-xAq
-nER
-odg
-odg
-odg
-mVY
+aaD
+tTa
+tTa
+tTa
+tTa
+tTa
 xAq
 xAq
 eZH
@@ -52368,7 +52440,7 @@ lHN
 eld
 eld
 eld
-iAZ
+aat
 aYw
 raZ
 ayK
@@ -52987,7 +53059,7 @@ qhE
 rPv
 aRE
 hAn
-coI
+aap
 xUn
 kSN
 gfZ
@@ -53220,7 +53292,7 @@ acI
 cxD
 fmo
 dTa
-eaO
+aac
 ecp
 dTa
 sLW
@@ -53405,7 +53477,7 @@ png
 cZU
 coI
 xdc
-png
+aai
 yfV
 yfV
 qgj
@@ -53580,7 +53652,7 @@ iwP
 eld
 eld
 eld
-iAZ
+aau
 aYw
 pvq
 roM
@@ -53593,7 +53665,7 @@ sFx
 aRE
 edT
 cts
-coI
+aap
 ljG
 bbo
 rLb
@@ -53625,7 +53697,7 @@ gQM
 dTa
 dTa
 acM
-jbQ
+aab
 dTa
 dTa
 juA
@@ -54205,7 +54277,7 @@ kYS
 bbo
 bbo
 ozR
-mrY
+aak
 gyK
 qHw
 mrY
@@ -55885,7 +55957,7 @@ bGo
 gjp
 xAq
 tNy
-qKD
+aaC
 xAq
 xAq
 roX
@@ -56451,7 +56523,7 @@ pwz
 qkM
 cZu
 ahb
-qkM
+aad
 hqt
 dTa
 dTa
@@ -56609,7 +56681,7 @@ rPv
 rPv
 jTb
 jzK
-iqq
+aaj
 iqq
 iqq
 nDb
@@ -56647,7 +56719,7 @@ gJi
 vtf
 dTa
 dTa
-rTr
+aaf
 dTa
 bOk
 qkM
@@ -57844,7 +57916,7 @@ iqq
 iqq
 rgd
 iqq
-iqq
+aaj
 jux
 jTb
 rPv
@@ -58470,7 +58542,7 @@ mrT
 cxD
 drQ
 dTa
-deO
+aae
 bMI
 cxD
 pgR
@@ -58662,7 +58734,7 @@ gHC
 cxD
 xSP
 guJ
-acI
+aag
 acI
 acI
 cxD
@@ -61924,16 +61996,6 @@ iRD
 "}
 (201,1,1) = {"
 iRD
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-iRD
 cyH
 cyH
 cyH
@@ -62034,6 +62096,16 @@ cyH
 cyH
 cyH
 cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+aaB
 cyH
 cyH
 cyH
@@ -62126,16 +62198,16 @@ iRD
 "}
 (202,1,1) = {"
 iRD
-sXE
-cHz
-cHz
-cHz
-cHz
-cHz
-cHz
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -62234,9 +62306,9 @@ fGo
 fGo
 fGo
 fGo
-fGo
-fGo
-fGo
+hQf
+hQf
+hQf
 fGo
 fGo
 fGo
@@ -62328,16 +62400,16 @@ iRD
 "}
 (203,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -62530,16 +62602,16 @@ iRD
 "}
 (204,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -62732,16 +62804,16 @@ iRD
 "}
 (205,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -62934,16 +63006,16 @@ iRD
 "}
 (206,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -63136,16 +63208,16 @@ iRD
 "}
 (207,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -63338,16 +63410,16 @@ iRD
 "}
 (208,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -63540,16 +63612,16 @@ iRD
 "}
 (209,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -63742,16 +63814,16 @@ iRD
 "}
 (210,1,1) = {"
 iRD
-sXE
-cHz
-akZ
-akZ
-akZ
-akZ
-akZ
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -63944,16 +64016,16 @@ iRD
 "}
 (211,1,1) = {"
 iRD
-sXE
-cHz
-cHz
-cHz
-cHz
-cHz
-cHz
-cHz
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -64146,16 +64218,16 @@ iRD
 "}
 (212,1,1) = {"
 iRD
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-sXE
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 cyH
@@ -64348,16 +64420,16 @@ iRD
 "}
 (213,1,1) = {"
 iRD
-iRD
-iRD
-iRD
-iRD
-iRD
-iRD
-iRD
-iRD
-iRD
-iRD
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
+cyH
 cyH
 cyH
 ddo
@@ -66112,7 +66184,7 @@ mCp
 tLj
 orR
 fGo
-cCx
+tLj
 mGY
 mCp
 wuf
@@ -70360,7 +70432,7 @@ fGo
 fGo
 fGo
 fGo
-fGo
+aan
 wru
 iVK
 fGo
@@ -70562,7 +70634,7 @@ ert
 lGz
 lZq
 eKH
-bpf
+bHd
 hSx
 gOV
 vLU
@@ -70764,7 +70836,7 @@ tzC
 vRD
 kPY
 myy
-lcy
+eWC
 fJa
 vQC
 wLs
@@ -70966,7 +71038,7 @@ fGo
 fGo
 fGo
 fGo
-fGo
+aao
 nCo
 yaf
 fGo
@@ -71227,7 +71299,7 @@ kzn
 cyH
 cyH
 cyH
-cyH
+kQA
 kQA
 kQA
 kQA
@@ -71429,12 +71501,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
 kQA
-cNf
-hMq
-hMq
-hMq
+aaF
+rHL
+rHL
+rHL
+rHL
 gKX
 kQA
 gGo
@@ -71631,12 +71703,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
-cyH
-dRW
-xZu
-xZu
-xZu
+kQA
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 kQA
 xMU
@@ -71833,12 +71905,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
-cyH
-dRW
-xZu
-xZu
-xZu
+kQA
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 eYg
 bgY
@@ -72035,12 +72107,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
-cyH
-dRW
-xZu
-xZu
-xZu
+kQA
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 eYg
 bgY
@@ -72237,12 +72309,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
-cyH
-dRW
-xZu
-xZu
-xZu
+kQA
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 eYg
 bgY
@@ -72439,12 +72511,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
-cyH
-dRW
-xZu
-xZu
-xZu
+kQA
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 eYg
 idV
@@ -72641,12 +72713,12 @@ cyH
 cyH
 cyH
 cyH
-cyH
 kQA
-dRW
-xZu
-xZu
-xZu
+aaF
+rHL
+rHL
+rHL
+rHL
 rHL
 kQA
 cyH
@@ -72843,13 +72915,13 @@ cyH
 cyH
 cyH
 cyH
-cyH
 kQA
-cIB
-mcC
-mcC
-mcC
-pTD
+aaF
+rHL
+rHL
+rHL
+rHL
+rHL
 kQA
 cyH
 sVd
@@ -73045,7 +73117,7 @@ cyH
 cyH
 cyH
 cyH
-cyH
+kQA
 kQA
 kQA
 kQA
