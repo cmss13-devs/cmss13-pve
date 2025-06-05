@@ -13,4 +13,4 @@
 	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
 
 /datum/weather_ss_map_holder/Greenvault_Ranch/should_start_event()
-	return prob(PROB_WEATHER_Greenvault_Ranch)
+	return TRUE
