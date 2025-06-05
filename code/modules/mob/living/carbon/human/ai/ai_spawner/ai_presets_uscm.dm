@@ -25,3 +25,8 @@
 	name = "USCM Section Leader"
 	desc = "Functionally a rifleman. Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
 	path = /datum/equipment_preset/uscm/leader_equipped
+
+/datum/human_ai_equipment_preset/uscm/combat_android
+	name = "USCM Combat Android"
+	desc = "You signed documents saying you wouldn't use these..."
+	path = /datum/equipment_preset/synth/working_joe/security_android
