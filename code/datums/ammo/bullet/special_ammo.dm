@@ -45,6 +45,18 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	damage_armor_punch = 3
 
+/datum/ammo/bullet/smartgun/dirty/impdet
+	debilitate = list(0,0,0,3,0,0,0,1)
+
+	accurate_range = 22
+	accuracy = HIT_ACCURACY_TIER_3
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage_armor_punch = 5
+
+/datum/ammo/bullet/smartgun/dirty/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
 	name = "holo-targeting smartgun bullet"
 	damage = 30
@@ -68,6 +80,18 @@
 	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 1
+
+/datum/ammo/bullet/smartgun/holo_target/impdet
+	name = "impact-detonating smartgun bullet"
+	icon_state = "bullet"
+
+	accurate_range = 12
+	accuracy = HIT_ACCURACY_TIER_2
+	damage = 25
+	penetration = ARMOR_PENETRATION_TIER_4
+
+/datum/ammo/bullet/smartgun/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/smartgun/m56_fpw
 	name = "\improper M56 FPW bullet"
@@ -149,9 +173,8 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	accurate_range = 10
-	damage =  50
-	penetration = ARMOR_PENETRATION_TIER_6
-	accuracy = -HIT_ACCURACY_TIER_2 // 75 accuracy
+	damage =  80
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	max_range = 15
 	effective_range_max = 7
@@ -173,6 +196,7 @@
 	accurate_range = 12
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_6
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/minigun/New()
 	..()
@@ -190,6 +214,7 @@
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/m60
 	name = "Mk70 bullet"
@@ -204,6 +229,7 @@
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"

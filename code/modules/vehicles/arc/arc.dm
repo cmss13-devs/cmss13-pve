@@ -86,7 +86,7 @@
 
 /obj/vehicle/multitile/arc/crew_mousedown(datum/source, atom/object, turf/location, control, params)
 	var/list/modifiers = params2list(params)
-	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK]) //don't step on examine, point, etc
+	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5]) //don't step on examine, point, etc
 		return
 
 	switch(get_mob_seat(source))
@@ -153,7 +153,7 @@
 /obj/vehicle/multitile/arc/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "CIC Officer"
-	RRS.roles = list(JOB_SO, JOB_SEA, JOB_XO, JOB_CO, JOB_GENERAL)
+	RRS.roles = list(JOB_SO, JOB_DI, JOB_XO, JOB_CO, JOB_GENERAL)
 	RRS.total = 2
 	role_reserved_slots += RRS
 

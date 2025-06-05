@@ -276,13 +276,6 @@
 /mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
 	. = ..()
 
-
-/**
- * Handles any storage containers that the human is looking inside when auto-observed.
- */
-/mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
-	. = ..()
-
 	// If `src` doesn't have an inventory open.
 	if(!s_active)
 		return
@@ -824,6 +817,18 @@
 	if(istype(head, /obj/item/clothing))
 		var/obj/item/clothing/C = head
 		number += C.eye_protection
+		if(istype(head, /obj/item/clothing/head/helmet/marine) || istype(head, /obj/item/clothing/head/cmcap))
+			var/list/contents_of_headgear = null
+			if(istype(head, /obj/item/clothing/head/helmet/marine))
+				var/obj/item/clothing/head/helmet/marine/headgear = head
+				contents_of_headgear = headgear.pockets.contents
+			if(istype(head, /obj/item/clothing/head/cmcap))
+				var/obj/item/clothing/head/cmcap/headgear = head
+				contents_of_headgear = headgear.pockets.contents
+			for(var/obj/item/clothing/glasses/mgoggles/goggles in contents_of_headgear)
+				if(goggles.activated == TRUE)
+					number += goggles.eye_protection
+
 	if(istype(wear_mask, /obj/item/clothing))
 		number += wear_mask.eye_protection
 	if(glasses)
@@ -861,7 +866,7 @@
 		addtimer(CALLBACK(src, PROC_REF(do_vomit)), 25 SECONDS)
 
 /mob/living/carbon/human/proc/do_vomit()
-	apply_effect(5, STUN)
+	apply_effect(2, STUN)
 	if(stat == 2) //One last corpse check
 		return
 	src.visible_message(SPAN_WARNING("[src] throws up!"), SPAN_WARNING("You throw up!"), null, 5)
@@ -1016,7 +1021,7 @@
 
 	if(job in GLOB.ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
-		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
+		show_browser(src, dat, "Crew Manifest", "manifest", width = 400, height = 750)
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
 
@@ -1592,7 +1597,7 @@
 	HTML += "<hr />"
 	HTML +="<a href='byond://?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
-	show_browser(src, HTML, "Update Flavor Text", "flavor_changes", "size=430x300")
+	show_browser(src, HTML, "Update Flavor Text", "flavor_changes", width = 430, height = 300)
 
 /mob/living/carbon/human/throw_item(atom/target)
 	if(!throw_allowed)

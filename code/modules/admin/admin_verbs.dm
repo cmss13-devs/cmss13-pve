@@ -154,6 +154,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_events,
 	/client/proc/toggle_shipside_sd,
 	/client/proc/shakeshipverb,
+	/client/proc/shakegroundverb,
 	/client/proc/adminpanelweapons,
 	/client/proc/admin_general_quarters,
 	/client/proc/admin_biohazard_alert,
@@ -366,6 +367,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
+		add_verb(src, /client/proc/gm_lighting)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
 	if(CLIENT_HAS_RIGHTS(src, R_DEBUG))
@@ -403,6 +405,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/admin_marine_announcement,
 		/client/proc/screen_alert_menu,
 		/client/proc/toggle_intro,
+		/client/proc/gm_lighting,
 		GLOB.admin_verbs_admin,
 		GLOB.admin_verbs_ban,
 		GLOB.admin_verbs_minor_event,
