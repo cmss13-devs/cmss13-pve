@@ -436,10 +436,6 @@
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
-"bE" = (
-/obj/structure/flag/plantable/usa,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wildplace)
 "bF" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 5
@@ -1193,6 +1189,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/pens)
+"eu" = (
+/obj/structure/machinery/power/monitor,
+/turf/open/floor/prison/bright_clean,
+/area/Greenvault_Ranch/int_heavy/powergenerators)
 "ev" = (
 /obj/structure/pipes/vents/pump,
 /obj/structure/machinery/light,
@@ -1307,6 +1307,15 @@
 /area/Greenvault_Ranch/int_reg/virology)
 "eS" = (
 /turf/closed/wall/wood,
+/area/Greenvault_Ranch/outside/wildplace)
+"eT" = (
+/obj/structure/prop/vehicles/crawler{
+	icon_state = "crawler_crate_alt"
+	},
+/obj/structure/machinery/elevator_strut/bottom{
+	layer = 2.9
+	},
+/turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
 "eU" = (
 /obj/structure/flora/grass/tallgrass/jungle,
@@ -2110,14 +2119,6 @@
 /obj/structure/machinery/processor,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
-"hF" = (
-/obj/structure/pipes/standard/simple/visible,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/prop/turbine,
-/turf/open/floor/prison,
-/area/Greenvault_Ranch/int_heavy/powerplace)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/mini/chest,
@@ -2612,6 +2613,13 @@
 /obj/structure/sign/safety/food_storage,
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"jz" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/machinery/disposal,
+/turf/open/floor/prison/bright_clean,
+/area/Greenvault_Ranch/int_heavy/powergenerators)
 "jA" = (
 /turf/open/floor/prison/darkyellow2/east,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -4531,13 +4539,6 @@
 /obj/structure/cryofeed,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
-"qv" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/machinery/disposal,
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_heavy/powergenerators)
 "qw" = (
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/caves)
@@ -8212,6 +8213,14 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/trailerpark)
+"DN" = (
+/obj/structure/pipes/standard/simple/visible,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/prop/turbine,
+/turf/open/floor/prison,
+/area/Greenvault_Ranch/int_heavy/powerplace)
 "DQ" = (
 /obj/structure/bed,
 /obj/item/device/working_joe_pda,
@@ -8861,13 +8870,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
 "Gc" = (
-/obj/structure/catwalk,
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Bunker West Side Shutters";
-	id = s
-	},
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_heavy/grainbunker)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/bcircuit,
+/area/Greenvault_Ranch/int_heavy/powergenerators)
 "Gd" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
 /turf/open/floor/prison/darkyellow2/northwest,
@@ -8935,6 +8940,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"Gt" = (
+/obj/structure/flag/plantable/usa,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/wildplace)
 "Gu" = (
 /obj/structure/pipes/vents/pump,
 /obj/item/trash/cigbutt/bcigbutt,
@@ -9926,15 +9935,6 @@
 /obj/structure/largecrate/random/case,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
-"JJ" = (
-/obj/structure/prop/vehicles/crawler{
-	icon_state = "crawler_crate_alt"
-	},
-/obj/structure/machinery/elevator_strut/bottom{
-	layer = 2.9
-	},
-/turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/outside/wildplace)
 "JK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9953,7 +9953,11 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms)
 "JO" = (
-/turf/open/floor/bcircuit,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/recharge_station,
+/turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
 "JP" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
@@ -10675,10 +10679,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/bar)
-"Me" = (
-/obj/structure/pipes/vents/scrubber,
-/turf/open/floor/bcircuit,
-/area/Greenvault_Ranch/int_heavy/powergenerators)
 "Mf" = (
 /obj/structure/machinery/camera/autoname/almayer/containment{
 	dir = 4
@@ -11886,13 +11886,6 @@
 /obj/structure/prop/rock/black_ground/dense,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
-"QC" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/structure/machinery/recharge_station,
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_heavy/powergenerators)
 "QD" = (
 /obj/structure/prop/invuln/ice_prefab/roof_greeble{
 	icon_state = "vent4";
@@ -12408,7 +12401,6 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wildplace)
 "SG" = (
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/bcircuit,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
 "SJ" = (
@@ -13323,10 +13315,6 @@
 "Wg" = (
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/outside/wheatfields)
-"Wh" = (
-/obj/structure/machinery/power/monitor,
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_heavy/powergenerators)
 "Wi" = (
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/prison/floor_plate,
@@ -13751,6 +13739,10 @@
 	},
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/Greenvault_Ranch/int_reg/virology)
+"XJ" = (
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/bcircuit,
+/area/Greenvault_Ranch/int_heavy/powergenerators)
 "XK" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/floor_plate,
@@ -18266,7 +18258,7 @@ fb
 pP
 sB
 bb
-hF
+DN
 uQ
 hi
 uQ
@@ -24341,10 +24333,10 @@ JG
 zM
 sL
 ax
-JO
-JO
 SG
-JO
+SG
+Gc
+SG
 Oj
 sL
 sQ
@@ -24726,8 +24718,8 @@ cd
 ha
 hK
 Pd
-JO
-JO
+SG
+SG
 Pd
 hK
 sL
@@ -24908,7 +24900,7 @@ TH
 TH
 rg
 sL
-QC
+JO
 JG
 uV
 th
@@ -24918,7 +24910,7 @@ UU
 sL
 Ya
 Pd
-JO
+SG
 bQ
 Pd
 PI
@@ -25303,7 +25295,7 @@ iS
 PI
 py
 ny
-JO
+SG
 Pd
 sU
 sL
@@ -25494,7 +25486,7 @@ TG
 hK
 hK
 py
-SG
+Gc
 LQ
 py
 hK
@@ -25868,7 +25860,7 @@ Wd
 Wd
 aS
 sL
-qv
+jz
 JG
 cx
 US
@@ -25878,8 +25870,8 @@ JG
 sL
 hK
 py
-JO
-JO
+SG
+SG
 Pd
 hK
 sL
@@ -26039,7 +26031,7 @@ tu
 tu
 tu
 yt
-Gc
+sJ
 sJ
 Aj
 YY
@@ -26060,7 +26052,7 @@ Wd
 Wd
 rg
 sL
-Wh
+eu
 JG
 TD
 US
@@ -26070,7 +26062,7 @@ JG
 ot
 hK
 Pd
-JO
+SG
 bQ
 Pd
 hK
@@ -26454,8 +26446,8 @@ JG
 sL
 hK
 py
-JO
-JO
+SG
+SG
 Pd
 PI
 sL
@@ -26837,10 +26829,10 @@ JG
 rg
 sL
 Oj
-JO
 SG
-JO
-Me
+Gc
+SG
+XJ
 Rq
 sL
 sQ
@@ -46498,7 +46490,7 @@ eS
 mN
 Iv
 mN
-JJ
+eT
 mN
 dy
 dy
@@ -48226,7 +48218,7 @@ eS
 yj
 yj
 mN
-bE
+Gt
 zL
 qJ
 dy
