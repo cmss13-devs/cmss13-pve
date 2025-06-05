@@ -406,7 +406,7 @@
 /datum/equipment_preset/clf/leader
 	name = "TWE Rebel, Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/sl_pve
+	skills = /datum/skills/clf/leader
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guard Team Leader"
 
