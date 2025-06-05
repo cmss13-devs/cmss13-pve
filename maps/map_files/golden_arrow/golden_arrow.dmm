@@ -19890,13 +19890,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"sgG" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/bare_catwalk,
-/area/golden_arrow/engineering)
 "sgR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -30282,9 +30275,9 @@ duL
 duL
 duL
 hCn
-sgG
-sgG
-sgG
+rqE
+rqE
+rqE
 hCn
 nrp
 anm
