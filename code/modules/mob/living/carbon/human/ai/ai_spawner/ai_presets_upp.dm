@@ -27,3 +27,8 @@
 	name = "UPP Squad Sergeant"
 	desc = "The leader of a UPP squad. Functionally very similar to squad riflemen."
 	path = /datum/equipment_preset/upp/squadlead
+
+/datum/human_ai_equipment_preset/upp/combat_android
+	name = "UPP Combat Android"
+	desc = "VERY Illegal"
+	path = /datum/equipment_preset/synth/working_joe/upp/combat
