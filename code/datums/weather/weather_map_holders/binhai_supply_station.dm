@@ -1,7 +1,7 @@
 /datum/weather_ss_map_holder/binhai_supply_station
 	name = "Binhai Supply Station Map Holder"
 
-	min_time_between_events = 20 MINUTES
+	min_time_between_events = 15 MINUTES
 	no_weather_turf_icon_state = "strata_clearsky"
 
 	potential_weather_events = list(

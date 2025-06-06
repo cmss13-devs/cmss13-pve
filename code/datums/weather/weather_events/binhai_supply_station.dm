@@ -1,7 +1,7 @@
 /datum/weather_event/dust
 	name = "Duststorm"
 	display_name = "Duststorm"
-	length = 10 MINUTES
+	length = 6 MINUTES
 	turf_overlay_icon_state = "bigred_dust"
 
 	effect_message = "You feel dust blow into every crevice of your body, annoying."
@@ -15,7 +15,7 @@
 /datum/weather_event/rock
 	name = "Rockstorm"
 	display_name = "Rockstorm"
-	length = 3 MINUTES
+	length = 2 MINUTES
 	turf_overlay_icon_state = "bigred_rocks"
 
 	effect_message = "You feel multiple small rocks hit all over your body!"

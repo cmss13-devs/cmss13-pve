@@ -30,7 +30,8 @@
 	soundscape_playlist = AMBIENCE_SHIP
 /area/binhai/oob
 	name = "OOB"
-	ceiling = CEILING_NO_PROTECTION
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+	requires_power = FALSE
 /area/binhai/other
 	name = "Binhai Other"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
@@ -40,12 +41,14 @@
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 /area/binhai/shuttles/drop2
 	name = "Military Block - Landing Pad"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
 	soundscape_playlist = SCAPE_PL_HANGAR
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 //==============================================================================BASEMIL
 /area/binhai/basemil/lower
 	name = "MSS Block - Operations Space"
@@ -270,3 +273,8 @@
 /area/binhai/other/umbilical
 	name = "Binhai - Umbillical Arrivals"
 	icon_state = "yellow"
+//===============================================================================OOB
+/area/binhai/oob/buttons
+	name = "Out of Bounds"
+	icon_state = "mech"
+	requires_power = FALSE
