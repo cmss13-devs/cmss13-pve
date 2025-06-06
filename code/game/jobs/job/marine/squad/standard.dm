@@ -72,6 +72,7 @@
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC")
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
