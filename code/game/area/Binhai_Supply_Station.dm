@@ -14,18 +14,18 @@
 	soundscape_playlist = AMBIENCE_SHIP
 /area/binhai/caves
 	name = "Binhai Caves"
-	ceiling = CEILING_DEEP_UNDERGROUND
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
 	ambience_exterior = AMBIENCE_CAVE
 	soundscape_playlist = SCAPE_PL_CAVE
 	base_muffle = MUFFLE_HIGH
 /area/binhai/hab
 	name = "Binhai Habitation Block"
-	ceiling = CEILING_METAL
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
 	soundscape_playlist = AMBIENCE_SHIP
 /area/binhai/main
 	name = "Binhai Main Block"
-	ceiling = CEILING_METAL
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
 	soundscape_playlist = AMBIENCE_SHIP
 /area/binhai/oob
@@ -33,7 +33,7 @@
 	ceiling = CEILING_NO_PROTECTION
 /area/binhai/other
 	name = "Binhai Other"
-	ceiling = CEILING_METAL
+	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 //=============================================================================SHUTTLES
 /area/binhai/shuttles/drop1
 	name = "Hangar Block - Supply Pad"
