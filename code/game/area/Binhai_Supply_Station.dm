@@ -45,6 +45,7 @@
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	soundscape_playlist = SCAPE_PL_HANGAR
 //==============================================================================BASEMIL
 /area/binhai/basemil/lower
 	name = "MSS Block - Operations Space"
@@ -52,7 +53,7 @@
 	minimap_color = MINIMAP_AREA_SEC_CAVE
 /area/binhai/basemil/lowerss
 	name = "MSS Block - Substation"
-	icon_state = "SMES"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	soundscape_playlist = SCAPE_PL_ENG
 /area/binhai/basemil/office
@@ -67,7 +68,7 @@
 	icon_state = "red"
 /area/binhai/basemil/lowerarmory
 	name = "MSS Block - Armory"
-	icon_state = "secure armory"
+	icon_state = "armory"
 	minimap_color = MINIMAP_AREA_SEC
 /area/binhai/basemil/command
 	name = "Military Block - Command Room"
@@ -76,7 +77,7 @@
 	soundscape_playlist = SCAPE_PL_CIC
 /area/binhai/basemil/airoom
 	name = "Military Block - Human AI Interface"
-	icon_state = "airoom"
+	icon_state = "blue"
 	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 	soundscape_playlist = SCAPE_PL_AICORE
 /area/binhai/basemil/lobby
@@ -89,7 +90,7 @@
 	minimap_color = MINIMAP_AREA_SEC_CAVE
 /area/binhai/basemil/upperss
 	name = "Military Block - Substation"
-	icon_state = "SMES"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	soundscape_playlist = SCAPE_PL_ENG
 /area/binhai/basemil/maint
@@ -101,14 +102,10 @@
 /area/binhai/basemil/upperbunks
 	name = "Military Block - Quarters"
 	icon_state = "green"
-/area/binhai/basemil/lowerarmory
+/area/binhai/basemil/upperarmory
 	name = "Military Block - Armory"
 	icon_state = "secure armory"
 	minimap_color = MINIMAP_AREA_SEC
-/area/binhai/basemil/hangar
-	name = "Military Block - Landing Pad"
-	icon_state = "lz2"
-	soundscape_playlist = SCAPE_PL_HANGAR
 //===============================================================================CAVES
 /area/binhai/caves/main
 	name = "Binhai Caves"
@@ -116,19 +113,19 @@
 	temperature = T0C
 /area/binhai/caves/depths
 	name = "Binhai Depths"
-	icon_state = "cave2"
+	icon_state = "cave"
 	temperature = ICE_COLONY_TEMPERATURE
 //======================================================================MAIN BLOCK & HANGAR
 /area/binhai/main/hangar
 	name = "Hangar Block - Arrivals and Storage"
-	icon_state = "lz1"
+	icon_state = "away1"
 	soundscape_playlist = SCAPE_PL_HANGAR
 /area/binhai/main/shed
 	name = "Binhai - Storage Shed"
 	icon_state = "storage"
 /area/binhai/main/commissary
 	name = "Hangar Block - Commissary"
-	icon_state = "cargo"
+	icon_state = "quart"
 /area/binhai/main/lobby
 	name = "Main Block - Arrivals Lobby"
 	icon_state = "blue-red"
@@ -146,11 +143,11 @@
 	minimap_color = MINIMAP_AREA_SEC
 /area/binhai/main/operations
 	name = "Main Block - Colony Operations"
-	icon_state = "command"
+	icon_state = "purple"
 	minimap_color = MINIMAP_AREA_COMMAND
 /area/binhai/main/server
 	name = "Main Block - Server Room"
-	icon_state = "telecomms"
+	icon_state = "purple"
 	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 /area/binhai/main/diner
 	name = "Main Block - Diner"
@@ -175,7 +172,7 @@
 	icon_state = "storage"
 /area/binhai/main/synth
 	name = "Main Block - Synthetic Storage"
-	icon_state = "robotics"
+	icon_state = "yellow"
 /area/binhai/main/atmos
 	name = "Main Block - Atmospherics"
 	icon_state = "atmos"
@@ -212,7 +209,7 @@
 	icon_state = "blue"
 /area/binhai/hab/canteen
 	name = "Hab Block - Canteen"
-	icon_state = "blue"
+	icon_state = "cafeteria"
 /area/binhai/hab/bunks
 	name = "Hab Block - Bunks"
 	icon_state = "blue"
@@ -221,7 +218,7 @@
 	icon_state = "toilet"
 /area/binhai/hab/substation
 	name = "Hab Block - Substation"
-	icon_state = "smes"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	soundscape_playlist = SCAPE_PL_ENG
 //===============================================================================Other
@@ -244,7 +241,7 @@
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 /area/binhai/other/powerstation
 	name = "Binhai - Power Station"
-	icon_state = "SMES"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI
 	soundscape_playlist = SCAPE_PL_ENG
 /area/binhai/other/watertreat

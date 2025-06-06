@@ -8,8 +8,8 @@
 		/datum/weather_event/dust,
 	)
 
-/datum/weather_ss_map_holder/calliope_desert_bus/should_affect_area(area/A)
+/datum/weather_ss_map_holder/binhai_supply_station/should_affect_area(area/A)
 	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
 
-/datum/weather_ss_map_holder/calliope_desert_bus/should_start_event()
+/datum/weather_ss_map_holder/binhai_supply_station/should_start_event()
 	return prob(PROB_WEATHER_BIG_RED)

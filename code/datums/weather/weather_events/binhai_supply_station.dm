@@ -15,7 +15,7 @@
 /datum/weather_event/rock
 	name = "Rockstorm"
 	display_name = "Rockstorm"
-	length = 4 MINUTES
+	length = 3 MINUTES
 	turf_overlay_icon_state = "bigred_rocks"
 
 	effect_message = "You feel multiple small rocks hit all over your body!"
