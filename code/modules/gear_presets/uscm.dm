@@ -109,6 +109,10 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
+/datum/equipment_preset/uscm/pfc/upper_rank
+	name = parent_type::name + " (Upper Rank)"
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm/pfc/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
