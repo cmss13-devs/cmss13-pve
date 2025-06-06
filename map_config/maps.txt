@@ -87,3 +87,6 @@ endmap
 
 map calliope_desert_bus
 endmap
+
+map redemption_valley
+endmap

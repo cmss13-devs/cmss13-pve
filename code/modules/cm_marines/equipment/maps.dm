@@ -178,6 +178,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
