@@ -167,9 +167,7 @@
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/housefive)
 "au" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "av" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -201,9 +199,7 @@
 	layer = 3.1;
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "aA" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
@@ -523,9 +519,7 @@
 /turf/open/gm/river/ocean/deep_water,
 /area/redemptionvalley/valley/Westbound)
 "by" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/valley/Westbound)
 "bz" = (
 /obj/structure/stairs/perspective,
@@ -851,9 +845,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "cp" = (
 /obj/structure/bed/chair{
@@ -1026,9 +1018,7 @@
 /obj/structure/barricade/sandbags/wired{
 	pixel_y = -6
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "cM" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -1059,9 +1049,7 @@
 /obj/structure/barricade/handrail/type_b{
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "cR" = (
 /turf/open/floor/prison/blue/southeast,
@@ -1553,9 +1541,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "dW" = (
 /obj/structure/machinery/power/apc/power/north,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "dX" = (
 /obj/structure/pipes/vents/pump{
@@ -1752,18 +1738,14 @@
 /area/redemptionvalley/valleyroof/housefour)
 "ex" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "ey" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "ez" = (
 /turf/open/floor/prison/whitegreen,
@@ -2004,9 +1986,7 @@
 	name = "Garage Door"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "fd" = (
 /obj/structure/platform/kutjevo/rock{
@@ -2155,9 +2135,7 @@
 	color = "#C02526"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "fz" = (
 /obj/structure/bed/chair{
@@ -2224,9 +2202,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "fI" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/glowshroom,
@@ -2294,9 +2270,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "fU" = (
 /obj/effect/decal/warning_stripes{
@@ -3457,9 +3431,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "iZ" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -3747,9 +3719,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 30
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "jO" = (
 /obj/effect/decal/warning_stripes{
@@ -4278,9 +4248,7 @@
 	pixel_x = -1;
 	pixel_y = -4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "lg" = (
 /obj/structure/machinery/power/apc/power/east,
@@ -4381,9 +4349,7 @@
 /area/redemptionvalley/valley/proper)
 "lw" = (
 /obj/structure/barricade/metal,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "lx" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -4410,9 +4376,7 @@
 	color = "#C02526";
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "lD" = (
 /obj/effect/decal/warning_stripes{
@@ -4536,9 +4500,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "lU" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "lV" = (
 /obj/effect/decal/warning_stripes{
@@ -4911,9 +4873,7 @@
 	color = "#C02526";
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "mZ" = (
 /obj/structure/bed/chair/office/light{
@@ -5238,17 +5198,13 @@
 	icon_state = "cargo"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "nQ" = (
 /obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "nR" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
@@ -5396,9 +5352,7 @@
 /turf/open/floor/prison/greenblue/east,
 /area/redemptionvalley/valleyroof/laundro)
 "om" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "on" = (
 /obj/structure/platform{
@@ -5711,9 +5665,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "pf" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -5986,9 +5938,7 @@
 	layer = 3.01;
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "pP" = (
 /obj/effect/decal/warning_stripes{
@@ -6114,9 +6064,7 @@
 /turf/open/floor/prison/whitegreen/east,
 /area/redemptionvalley/valleyroof/medical)
 "qg" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "qh" = (
 /obj/structure/machinery/light/small{
@@ -6125,9 +6073,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "qi" = (
 /obj/structure/platform/shiva/catwalk{
@@ -6235,9 +6181,7 @@
 /area/redemptionvalley/outpost/brief)
 "qx" = (
 /obj/effect/vehicle_spawner/van/decrepit,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "qy" = (
 /obj/structure/machinery/light/small/blue{
@@ -6255,9 +6199,7 @@
 	pixel_x = -4;
 	pixel_y = -5
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "qA" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -6326,9 +6268,7 @@
 	color = "#C02526";
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "qK" = (
 /turf/open/floor,
@@ -6421,9 +6361,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "ra" = (
 /obj/structure/girder,
@@ -6437,9 +6375,7 @@
 	icon_state = "cargo_arrow2";
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/elevlow)
 "rd" = (
 /obj/structure/platform_decoration/shiva/catwalk{
@@ -6568,9 +6504,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "rv" = (
 /obj/structure/cargo_container/wy/right,
@@ -6790,9 +6724,7 @@
 	pixel_x = -19;
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "rX" = (
 /obj/structure/machinery/light{
@@ -6874,9 +6806,7 @@
 	phone_category = "Redemption Outpost";
 	phone_id = "Checkpoint"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "sg" = (
 /obj/structure/cable/heavyduty{
@@ -7344,9 +7274,7 @@
 	pixel_x = 3;
 	pixel_y = 23
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "ts" = (
 /obj/structure/machinery/light/small/blue{
@@ -7417,9 +7345,7 @@
 /area/redemptionvalley/valleyroof/cafe)
 "tA" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "tB" = (
 /obj/structure/sign/banners/united_americas_worn{
@@ -7430,9 +7356,7 @@
 /area/redemptionvalley/outpost/ops)
 "tC" = (
 /obj/structure/barricade/metal,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "tD" = (
 /obj/structure/platform/kutjevo/rock{
@@ -8046,9 +7970,7 @@
 /area/redemptionvalley/outpost/barracks)
 "vj" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "vk" = (
 /obj/item/trash/burger,
@@ -8254,9 +8176,7 @@
 	icon_state = "E"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "vN" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -8774,9 +8694,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "xl" = (
 /obj/structure/closet{
@@ -9389,9 +9307,7 @@
 	pixel_y = -14
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "za" = (
 /obj/structure/closet/secure_closet/guncabinet{
@@ -9867,9 +9783,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "An" = (
 /obj/item/storage/bag/trash{
@@ -10059,9 +9973,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "AQ" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -10144,9 +10056,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "Bd" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -10903,9 +10813,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Dm" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -11029,9 +10937,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "DE" = (
 /obj/structure/machinery/disposal,
@@ -11140,9 +11046,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "DO" = (
 /turf/open/floor/prison/greenblue,
@@ -11473,9 +11377,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "EU" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
@@ -11546,9 +11448,7 @@
 	pixel_y = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Fe" = (
 /obj/effect/decal/warning_stripes{
@@ -11610,9 +11510,7 @@
 /area/redemptionvalley/valley/cliff)
 "Fo" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Fp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -11736,9 +11634,7 @@
 /obj/structure/barricade/sandbags/wired{
 	pixel_y = -6
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "FJ" = (
 /obj/structure/machinery/power/apc/power/south,
@@ -11846,9 +11742,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "FZ" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -11975,9 +11869,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Gr" = (
 /obj/effect/decal/warning_stripes{
@@ -12197,9 +12089,7 @@
 	color = "#C02526";
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "GW" = (
 /obj/effect/decal/warning_stripes{
@@ -12394,9 +12284,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/Westbound)
 "Hw" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/valley/proper)
 "Hx" = (
 /obj/structure/sign/poster{
@@ -12428,9 +12316,7 @@
 	icon_state = "W"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "Hz" = (
 /obj/structure/bed/chair{
@@ -12465,9 +12351,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "HF" = (
 /turf/open/floor/prison,
@@ -12523,9 +12407,7 @@
 	icon_state = "cargo_arrow2";
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "HQ" = (
 /obj/structure/bed/sofa/vert/grey/top,
@@ -12553,9 +12435,7 @@
 "HU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "HV" = (
 /obj/structure/machinery/light/small{
@@ -13063,9 +12943,7 @@
 	pixel_y = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "Jm" = (
 /obj/structure/sign/banners/united_americas_flag{
@@ -13163,9 +13041,7 @@
 	dir = 8;
 	pixel_x = -1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "Jw" = (
 /obj/structure/machinery/light{
@@ -13276,9 +13152,7 @@
 	pixel_y = -5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "JJ" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -13623,9 +13497,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "KL" = (
 /turf/closed/wall/r_wall,
@@ -13645,9 +13517,7 @@
 	dir = 8;
 	pixel_x = -1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "KP" = (
 /obj/structure/machinery/vending/hydroseeds,
@@ -13845,9 +13715,7 @@
 	pixel_y = -6
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "Lo" = (
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -14141,9 +14009,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Ml" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -14157,9 +14023,7 @@
 	},
 /obj/structure/stairs/perspective,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Mn" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14464,9 +14328,7 @@
 	layer = 3.01
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "MZ" = (
 /obj/structure/prop/rock/brown{
@@ -14575,9 +14437,7 @@
 /area/redemptionvalley/caverns/north)
 "Nl" = (
 /obj/structure/machinery/power/apc/power/north,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "Nm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14756,9 +14616,7 @@
 	dir = 8
 	},
 /obj/structure/stairs/perspective,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "NM" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -14831,9 +14689,7 @@
 /area/redemptionvalley/outpost/cells)
 "NV" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "NW" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
@@ -15089,9 +14945,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "OB" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "OC" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
@@ -15254,9 +15108,7 @@
 	pixel_y = 18;
 	layer = 3.01
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "OZ" = (
 /obj/structure/flora/pottedplant/random,
@@ -15380,9 +15232,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Pp" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -15432,9 +15282,7 @@
 "Pz" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "PA" = (
 /obj/effect/decal/warning_stripes{
@@ -15598,9 +15446,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkwest)
 "PX" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerempty2,
@@ -16053,9 +15899,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Rn" = (
 /obj/structure/machinery/light/blue{
@@ -16091,9 +15935,7 @@
 /turf/open/floor,
 /area/redemptionvalley/outpost/ops)
 "Rs" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Rt" = (
 /obj/structure/platform/strata/metal,
@@ -16347,9 +16189,7 @@
 /turf/open/floor/prison/red,
 /area/redemptionvalley/valleyroof/security)
 "Sf" = (
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/caverns/north)
 "Sg" = (
 /obj/structure/machinery/light,
@@ -16437,9 +16277,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "St" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Su" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -16752,9 +16590,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Tl" = (
 /obj/structure/cargo_container/trijent/left,
@@ -16785,9 +16621,7 @@
 	pixel_x = -11
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "Tq" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage,
@@ -17204,9 +17038,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "UD" = (
 /obj/structure/bed/chair,
@@ -17527,9 +17359,7 @@
 	pixel_y = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "Vr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18095,9 +17925,7 @@
 "WV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "WW" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
@@ -18241,9 +18069,7 @@
 	pixel_x = 19;
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "Xo" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18377,9 +18203,7 @@
 	color = "#C02526";
 	dir = 1
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/bunkeast)
 "XG" = (
 /obj/item/tool/warning_cone{
@@ -18485,9 +18309,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/cavestruct)
 "XV" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
@@ -19109,9 +18931,7 @@
 	icon_state = "cargo_arrow2";
 	dir = 8
 	},
-/turf/open/asphalt/cement{
-	color = "#aeaeae"
-	},
+/turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/elevlow)
 "Zx" = (
 /obj/structure/barricade/handrail/kutjevo,
