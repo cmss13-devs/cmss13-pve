@@ -155,9 +155,7 @@
 	icon_state = "cargo_arrow";
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/oob/buttons)
 "aau" = (
 /obj/structure/mirror{
@@ -581,9 +579,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "awY" = (
 /obj/structure/closet/secure_closet/freezer/meat,
@@ -705,9 +701,7 @@
 "aGi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "aGA" = (
 /obj/item/stool{
@@ -1110,9 +1104,7 @@
 	color = "#464847";
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "aWZ" = (
 /obj/structure/sign/safety/landingzone,
@@ -1182,9 +1174,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "aZA" = (
 /obj/structure/window/framed/shiva,
@@ -1294,9 +1284,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "bbG" = (
 /obj/structure/tent/big{
@@ -1598,9 +1586,7 @@
 	pixel_y = -9;
 	pixel_x = -11
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "bvo" = (
 /obj/structure/closet/secure_closet/personal{
@@ -1849,9 +1835,7 @@
 /area/binhai/main/hangar)
 "bGI" = (
 /obj/item/storage/firstaid/adv,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "bHR" = (
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -1963,9 +1947,7 @@
 /area/binhai/main/atmos)
 "bND" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "bNF" = (
 /turf/open/floor/prison/bright_clean,
@@ -2212,9 +2194,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "bWk" = (
 /obj/structure/machinery/door/airlock/upp_grey{
@@ -2320,9 +2300,7 @@
 "bYn" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/item/trash/cigbutt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "bYr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2380,9 +2358,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ccn" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -2543,9 +2519,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "cjQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2630,9 +2604,7 @@
 	dir = 4
 	},
 /obj/structure/bed/chair,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "coa" = (
 /obj/structure/window/reinforced{
@@ -2660,9 +2632,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "cpL" = (
 /obj/effect/decal/warning_stripes{
@@ -2918,9 +2888,7 @@
 	layer = 3.01
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "cEc" = (
 /obj/item/storage/firstaid/regular{
@@ -3146,9 +3114,7 @@
 	pixel_y = 6;
 	layer = 2.5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "cQi" = (
 /obj/structure/platform/strata/metal{
@@ -3706,9 +3672,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "dlE" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -3899,9 +3863,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dtJ" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -4071,9 +4033,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dAt" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4149,9 +4109,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dDC" = (
 /obj/structure/platform/strata/metal{
@@ -4218,9 +4176,7 @@
 /area/binhai/main/commissary)
 "dGJ" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dHq" = (
 /obj/effect/decal/warning_stripes{
@@ -4241,9 +4197,7 @@
 /obj/structure/largecrate/random/secure{
 	pixel_x = -5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dIb" = (
 /obj/structure/platform/strata/metal{
@@ -4251,9 +4205,7 @@
 	pixel_y = 6;
 	layer = 2.5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dId" = (
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
@@ -4348,9 +4300,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "dLv" = (
 /obj/structure/surface/rack{
@@ -4472,9 +4422,7 @@
 /area/binhai/other/hyrdo)
 "dUe" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "dUk" = (
 /obj/structure/dartboard{
@@ -4753,9 +4701,7 @@
 /obj/item/prop/colony/usedbandage{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "efO" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4853,9 +4799,7 @@
 /obj/effect/spawner/random/technology_scanner,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ejx" = (
 /obj/structure/platform/kutjevo/rock{
@@ -5041,9 +4985,7 @@
 /area/binhai/main/diner)
 "epO" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "epR" = (
 /obj/effect/decal/warning_stripes{
@@ -5132,9 +5074,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "eug" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -5254,9 +5194,7 @@
 	pixel_y = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ezU" = (
 /obj/structure/coatrack{
@@ -5324,9 +5262,7 @@
 /area/binhai/main/operations)
 "eCp" = (
 /obj/structure/prop/rock/brown,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "eCL" = (
 /obj/structure/machinery/door/airlock/upp_grey{
@@ -5359,9 +5295,7 @@
 "eDO" = (
 /obj/structure/stairs,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "eDZ" = (
 /obj/structure/closet,
@@ -5464,9 +5398,7 @@
 	color = "#464847";
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "eJt" = (
 /obj/structure/machinery/door/poddoor/railing{
@@ -5488,9 +5420,7 @@
 /obj/structure/machinery/floodlight{
 	name = "Floodlight"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "eKu" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -5837,9 +5767,7 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "eXV" = (
 /obj/effect/decal/warning_stripes{
@@ -6030,9 +5958,7 @@
 	layer = 3.02
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "fcP" = (
 /obj/structure/machinery/vending/cigarette/upp{
@@ -6265,9 +6191,7 @@
 	dir = 8
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "fnw" = (
 /obj/structure/machinery/door/airlock/upp_utility,
@@ -6328,9 +6252,7 @@
 	pixel_x = -3;
 	pixel_y = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "fpD" = (
 /turf/closed/wall/upp_wall/hull,
@@ -6374,9 +6296,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "fsg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -6671,9 +6591,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "fGr" = (
 /obj/structure/surface/table{
@@ -6932,9 +6850,7 @@
 "fRL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "fRM" = (
 /obj/structure/surface/rack{
@@ -7026,9 +6942,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "fXp" = (
 /obj/structure/closet/fireaxecabinet{
@@ -7226,9 +7140,7 @@
 	pixel_y = 6;
 	layer = 2.5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "giz" = (
 /obj/structure/surface/table/almayer{
@@ -7319,9 +7231,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "goX" = (
 /obj/structure/machinery/light/small{
@@ -7532,9 +7442,7 @@
 	},
 /obj/item/reagent_container/glass/bucket,
 /obj/structure/tent/big,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "gvm" = (
 /obj/structure/bed/chair,
@@ -7670,9 +7578,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "gBl" = (
 /obj/structure/sign/safety/high_voltage{
@@ -7829,9 +7735,7 @@
 /area/binhai/hab/north)
 "gGR" = (
 /obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "gGW" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -7903,9 +7807,7 @@
 /obj/structure/prop/ice_colony/surveying_device{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "gKT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7989,9 +7891,7 @@
 /obj/item/trash/cigbutt{
 	pixel_y = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "gQo" = (
 /turf/closed/wall/upp_wall,
@@ -8052,9 +7952,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "gXQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -8184,9 +8082,7 @@
 "hcf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "hck" = (
 /obj/structure/machinery/light/small{
@@ -8239,9 +8135,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "heR" = (
 /obj/structure/sign/safety/restrictedarea{
@@ -8345,9 +8239,7 @@
 /area/binhai/caves/main)
 "hit" = (
 /obj/structure/barricade/sandbags/full,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "hiz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -8414,9 +8306,7 @@
 "hko" = (
 /obj/item/lightstick/red/variant/planted,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "hkN" = (
 /obj/effect/decal/warning_stripes{
@@ -8670,9 +8560,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "huG" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -9076,9 +8964,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "hOT" = (
 /obj/structure/platform_decoration/shiva/catwalk{
@@ -9253,9 +9139,7 @@
 	pixel_x = 2;
 	pixel_y = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "hWc" = (
 /obj/structure/platform/strata/metal{
@@ -9263,9 +9147,7 @@
 	layer = 3.01
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "hWl" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -9273,9 +9155,7 @@
 	layer = 2.84;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "hWK" = (
 /obj/structure/machinery/door/airlock/upp_grey{
@@ -9383,9 +9263,7 @@
 	pixel_x = -3;
 	pixel_y = 10
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ibp" = (
 /obj/structure/sign/safety/storage,
@@ -9711,9 +9589,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "ixG" = (
 /obj/effect/decal/warning_stripes{
@@ -9841,9 +9717,7 @@
 "iAV" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iBc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -9870,9 +9744,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iBE" = (
 /obj/structure/window/framed/upp/grey,
@@ -10128,9 +10000,7 @@
 	dir = 1
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iKG" = (
 /obj/effect/decal/warning_stripes{
@@ -10168,9 +10038,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iMe" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10227,9 +10095,7 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iPf" = (
 /obj/effect/decal/warning_stripes{
@@ -10254,9 +10120,7 @@
 	pixel_y = -3;
 	pixel_x = -8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "iQn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -10448,9 +10312,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "jaW" = (
 /obj/structure/filingcabinet/chestdrawer{
@@ -10762,9 +10624,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/binhai/main/pap)
 "joa" = (
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "job" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -10939,9 +10799,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "jsl" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -10982,16 +10840,12 @@
 	dir = 4
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "jto" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "jtN" = (
 /obj/structure/sign/safety/storage,
@@ -11196,9 +11050,7 @@
 /area/binhai/other/hablower)
 "jGg" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "jHi" = (
 /obj/structure/surface/rack{
@@ -11232,9 +11084,7 @@
 /area/binhai/caves/main)
 "jHI" = (
 /obj/structure/tunnel,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "jIk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -11406,9 +11256,7 @@
 /turf/open/floor/corsat/marked,
 /area/binhai/other/minelower)
 "jSr" = (
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/other/minelower)
 "jSB" = (
 /obj/item/stool,
@@ -11470,9 +11318,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "jVe" = (
 /obj/structure/extinguisher_cabinet{
@@ -11746,9 +11592,7 @@
 	dir = 8;
 	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "kjE" = (
 /turf/closed/wall/upp_wall,
@@ -12013,9 +11857,7 @@
 "ktf" = (
 /obj/item/prop/rock,
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ktB" = (
 /obj/effect/decal/warning_stripes{
@@ -12144,9 +11986,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "kzB" = (
 /obj/effect/decal/warning_stripes{
@@ -12179,9 +12019,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "kDG" = (
 /obj/structure/barricade/metal{
@@ -12526,9 +12364,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "kRF" = (
 /obj/structure/surface/table/woodentable{
@@ -12645,9 +12481,7 @@
 	pixel_y = 13;
 	layer = 3.02
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "kXd" = (
 /obj/effect/decal/warning_stripes{
@@ -12673,17 +12507,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "kXv" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "kXK" = (
 /obj/effect/decal/warning_stripes{
@@ -13294,9 +13124,7 @@
 	})
 "lxy" = (
 /obj/structure/closet/crate/ammo,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "lxU" = (
 /obj/structure/sign/safety/commline_connection,
@@ -13341,9 +13169,7 @@
 	},
 /obj/item/tool/hand_labeler,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "lyn" = (
 /obj/structure/machinery/light/small{
@@ -13358,9 +13184,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "lyH" = (
 /obj/structure/toilet{
@@ -13482,9 +13306,7 @@
 /obj/item/lightstick/red/variant/planted,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "lBL" = (
 /obj/item/stack/rods{
@@ -13684,9 +13506,7 @@
 /obj/item/prop/colony/usedbandage{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "lQP" = (
 /obj/structure/surface/rack{
@@ -13970,9 +13790,7 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mbG" = (
 /turf/closed/wall/upp_wall/grey,
@@ -14019,9 +13837,7 @@
 /area/binhai/other/mainlower)
 "meQ" = (
 /obj/item/ammo_box/magazine/misc/mre/upp/empty,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mfE" = (
 /obj/structure/platform_decoration/shiva/catwalk{
@@ -14085,9 +13901,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mkI" = (
 /obj/structure/machinery/light/small{
@@ -14131,9 +13945,7 @@
 	color = "#464847";
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mmB" = (
 /obj/structure/surface/rack{
@@ -14157,9 +13969,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mnz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14229,9 +14039,7 @@
 /area/binhai/main/engineering)
 "msc" = (
 /obj/structure/largecrate/supply/weapons,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "msJ" = (
 /obj/effect/decal/warning_stripes{
@@ -14478,9 +14286,7 @@
 	layer = 2.5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mGz" = (
 /obj/effect/decal/warning_stripes{
@@ -14582,9 +14388,7 @@
 /area/binhai/other/hyrdo)
 "mJB" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "mJV" = (
 /obj/structure/machinery/door/airlock/upp_utility,
@@ -14904,9 +14708,7 @@
 	color = "#464847"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "mVE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15080,9 +14882,7 @@
 	pixel_y = 17
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "neD" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15285,9 +15085,7 @@
 	pixel_y = -9;
 	pixel_x = 10
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "nof" = (
 /obj/effect/decal/warning_stripes{
@@ -15431,9 +15229,7 @@
 "nwk" = (
 /obj/item/lightstick/red/variant/planted,
 /obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "nwt" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
@@ -15546,9 +15342,7 @@
 "nzz" = (
 /obj/structure/prop/dam/drill,
 /obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "nzE" = (
 /obj/structure/platform/mineral{
@@ -15607,9 +15401,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "nCh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -16010,9 +15802,7 @@
 	layer = 2.5
 	},
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "nUM" = (
 /obj/structure/machinery/light/small{
@@ -16182,9 +15972,7 @@
 	pixel_x = 6;
 	pixel_y = -9
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "och" = (
 /obj/structure/platform/strata/metal{
@@ -16281,9 +16069,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ofi" = (
 /obj/structure/surface/table{
@@ -16304,9 +16090,7 @@
 /obj/effect/spawner/random/tool,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ofR" = (
 /turf/open/floor/plating/icefloor{
@@ -16441,9 +16225,7 @@
 	color = "#666600"
 	},
 /obj/item/ammo_box/magazine/misc/mre/upp,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ojN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16495,9 +16277,7 @@
 /area/binhai/main/operations)
 "omi" = (
 /obj/structure/platform/kutjevo/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "omn" = (
 /turf/closed/wall/mineral/bone_resin,
@@ -16535,9 +16315,7 @@
 "opc" = (
 /obj/structure/platform/strata/metal,
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "oqc" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass{
@@ -16575,9 +16353,7 @@
 	dir = 4;
 	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ost" = (
 /turf/open/floor/prison/bright_clean,
@@ -16601,9 +16377,7 @@
 /obj/structure/ladder/rope{
 	id = "crevice"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "otG" = (
 /obj/structure/prop/power_transformer{
@@ -16649,9 +16423,7 @@
 	dir = 4;
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ouP" = (
 /obj/structure/largecrate/random{
@@ -16917,9 +16689,7 @@
 /area/binhai/caves/main)
 "oHJ" = (
 /obj/item/reagent_container/food/drinks/flask/canteen,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "oIk" = (
 /obj/structure/barricade/handrail/type_b{
@@ -17108,9 +16878,7 @@
 	pixel_x = -5;
 	pixel_y = 17
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "oRA" = (
 /obj/effect/decal/warning_stripes{
@@ -17272,9 +17040,7 @@
 /obj/structure/barricade/sandbags/full{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "oXr" = (
 /obj/effect/decal/warning_stripes{
@@ -17441,9 +17207,7 @@
 	dir = 1
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "pdC" = (
 /obj/structure/machinery/power/reactor{
@@ -17462,9 +17226,7 @@
 	layer = 3.02
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "pdY" = (
 /obj/structure/bed/chair{
@@ -17973,9 +17735,7 @@
 /obj/structure/machinery/floodlight{
 	name = "Floodlight"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "pEp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18024,9 +17784,7 @@
 "pFF" = (
 /obj/item/lightstick/red/variant/planted,
 /obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "pFI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18503,9 +18261,7 @@
 "pWY" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "pXd" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -18643,9 +18399,7 @@
 "qdz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "qdV" = (
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -18667,9 +18421,7 @@
 	layer = 3.01
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qeI" = (
 /obj/effect/decal/warning_stripes{
@@ -18685,9 +18437,7 @@
 /area/binhai/basemil/upperss)
 "qeR" = (
 /obj/structure/machinery/space_heater,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qfc" = (
 /obj/effect/decal/warning_stripes{
@@ -18829,9 +18579,7 @@
 	pixel_x = -8;
 	pixel_y = -4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qlC" = (
 /obj/structure/bed/chair,
@@ -19033,9 +18781,7 @@
 /area/binhai/basemil/lower)
 "quu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "quE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -19087,9 +18833,7 @@
 	pixel_y = 6
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qwe" = (
 /obj/structure/window/reinforced,
@@ -19251,9 +18995,7 @@
 /area/binhai/other/ship1)
 "qDo" = (
 /obj/structure/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qDv" = (
 /obj/structure/machinery/light/small{
@@ -19290,9 +19032,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qEO" = (
 /obj/structure/platform/strata/metal{
@@ -19760,9 +19500,7 @@
 /area/binhai/basemil/lobby)
 "qVe" = (
 /obj/structure/machinery/power/port_gen/pacman,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "qVz" = (
 /obj/effect/decal/warning_stripes{
@@ -19822,9 +19560,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "qXT" = (
 /obj/effect/decal/warning_stripes{
@@ -19988,9 +19724,7 @@
 	pixel_x = 8;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "reA" = (
 /obj/structure/surface/rack{
@@ -20436,9 +20170,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "rAM" = (
 /turf/open/floor/corsat,
@@ -20479,9 +20211,7 @@
 	dir = 4;
 	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "rBV" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full,
@@ -20510,9 +20240,7 @@
 /area/binhai/main/lobby)
 "rDg" = (
 /obj/structure/bed/chair,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "rDB" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -20722,9 +20450,7 @@
 /area/binhai/other/ship1)
 "rNa" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "rNe" = (
 /obj/effect/decal/strata_decals/grime/grime1{
@@ -20760,9 +20486,7 @@
 /obj/structure/machinery/floodlight{
 	name = "Floodlight"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "rOg" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -20978,9 +20702,7 @@
 	dir = 8
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "rXI" = (
 /obj/effect/decal/warning_stripes{
@@ -21035,9 +20757,7 @@
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "scV" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -21115,9 +20835,7 @@
 	dir = 4;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "seH" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey{
@@ -21339,9 +21057,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "soy" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -21400,9 +21116,7 @@
 	pixel_y = -4
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "srW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -21486,9 +21200,7 @@
 "sua" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "suy" = (
 /obj/effect/decal/warning_stripes{
@@ -21611,9 +21323,7 @@
 /area/binhai/hab/south)
 "sxI" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "sxY" = (
 /obj/structure/machinery/landinglight/ds2{
@@ -21756,9 +21466,7 @@
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "sCX" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -21851,9 +21559,7 @@
 /area/binhai/main/treatment)
 "sFC" = (
 /obj/structure/tunnel,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "sHa" = (
 /obj/structure/prop/almayer/computers/sensor_computer2{
@@ -22073,9 +21779,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "sQy" = (
 /obj/effect/decal/warning_stripes{
@@ -22468,9 +22172,7 @@
 /area/binhai/other/mainlower)
 "tjY" = (
 /obj/structure/prop/ice_colony/ground_wire,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "tkj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -22617,9 +22319,7 @@
 	name = "plastic table frame"
 	},
 /obj/structure/machinery/computer,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "tpD" = (
 /obj/effect/decal/warning_stripes{
@@ -22794,9 +22494,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "twM" = (
 /turf/open/floor/corsat/plate,
@@ -23177,18 +22875,14 @@
 	pixel_x = 7;
 	pixel_y = 3
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tMY" = (
 /turf/open/floor/engine,
 /area/binhai/main/atmos)
 "tMZ" = (
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tNI" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -23240,9 +22934,7 @@
 /obj/structure/platform/mineral{
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tQJ" = (
 /obj/structure/machinery/recharge_station,
@@ -23308,9 +23000,7 @@
 	layer = 3.02
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tSl" = (
 /obj/structure/machinery/computer/shuttle/elevator_controller{
@@ -23318,9 +23008,7 @@
 	pixel_x = -2;
 	shuttleId = "ice_classic_shuttle"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tSw" = (
 /obj/structure/platform/mineral{
@@ -23375,9 +23063,7 @@
 	pixel_y = -9;
 	pixel_x = 10
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "tUc" = (
 /obj/structure/sign/safety/high_voltage{
@@ -23418,9 +23104,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tVK" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -23428,9 +23112,7 @@
 	dir = 4;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tVP" = (
 /obj/effect/decal/warning_stripes{
@@ -23512,9 +23194,7 @@
 	dir = 8;
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "tYL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -23560,9 +23240,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uaK" = (
 /obj/structure/machinery/light/small{
@@ -23576,9 +23254,7 @@
 "uaU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ubC" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -23755,9 +23431,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/binhai/main/diner)
 "ufk" = (
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ufu" = (
 /obj/structure/closet/secure_closet/personal{
@@ -23850,9 +23524,7 @@
 "ugA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "ugF" = (
 /turf/open/floor/corsat/marked,
@@ -23863,9 +23535,7 @@
 	layer = 2.84;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "uhZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24196,9 +23866,7 @@
 /area/binhai/other/ship1)
 "uvi" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "uwc" = (
 /obj/structure/platform/strata/metal{
@@ -24243,9 +23911,7 @@
 	layer = 2.84;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uxp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -24330,9 +23996,7 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uEX" = (
 /obj/structure/surface/rack{
@@ -24436,9 +24100,7 @@
 	layer = 3.01;
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uGw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -24465,9 +24127,7 @@
 	pixel_y = 6;
 	layer = 2.5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uJo" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -24858,9 +24518,7 @@
 	pixel_x = 6;
 	pixel_y = -2
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "uWU" = (
 /obj/structure/platform/strata/metal{
@@ -25188,15 +24846,11 @@
 /obj/structure/bed/bedroll{
 	dir = 5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vjN" = (
 /obj/item/lightstick/red/variant/planted,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vka" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25316,9 +24970,7 @@
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "vou" = (
 /obj/structure/largecrate/random/barrel/true_random{
@@ -25497,9 +25149,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 10
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vuc" = (
 /obj/structure/prop/almayer/computers/sensor_computer3{
@@ -25591,9 +25241,7 @@
 	dir = 8
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vwv" = (
 /obj/effect/decal/warning_stripes{
@@ -25770,15 +25418,11 @@
 	layer = 3.01
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vCp" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vCu" = (
 /turf/open/floor/strata/floor3,
@@ -25835,9 +25479,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vEJ" = (
 /obj/effect/decal/warning_stripes{
@@ -26014,9 +25656,7 @@
 /area/binhai/main/operations)
 "vLV" = (
 /obj/item/prop/rock,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vMW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26302,9 +25942,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "vXZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -26410,9 +26048,7 @@
 	dir = 8;
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "waP" = (
 /obj/effect/spawner/random/toolbox{
@@ -26541,9 +26177,7 @@
 	dir = 4;
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "wdG" = (
 /obj/effect/decal/warning_stripes{
@@ -26896,9 +26530,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "wwy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -26963,9 +26595,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 9
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "wzB" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
@@ -27147,9 +26777,7 @@
 	layer = 2.5
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "wHn" = (
 /obj/structure/barricade/handrail/wire{
@@ -27447,9 +27075,7 @@
 "wUo" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "wUS" = (
 /obj/structure/machinery/landinglight/ds1,
@@ -27986,9 +27612,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "xtm" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28032,9 +27656,7 @@
 /area/binhai/other/research)
 "xvd" = (
 /obj/structure/platform_decoration/strata/metal,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "xvp" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -28072,9 +27694,7 @@
 /obj/structure/barricade/sandbags/full{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "xwd" = (
 /obj/structure/machinery/recharge_station,
@@ -28087,9 +27707,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "xwH" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -28373,9 +27991,7 @@
 	dir = 4;
 	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "xGg" = (
 /obj/effect/decal/warning_stripes{
@@ -28446,9 +28062,7 @@
 	density = 0
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "xIp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -28456,9 +28070,7 @@
 	dir = 1;
 	color = "#464847"
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "xIU" = (
 /obj/structure/surface/table{
@@ -28526,9 +28138,7 @@
 /area/binhai/basemil/lowerarmory)
 "xNt" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "xNF" = (
 /obj/effect/decal/warning_stripes{
@@ -28667,9 +28277,7 @@
 	dir = 4;
 	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "xVb" = (
 /obj/structure/filingcabinet{
@@ -28941,9 +28549,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 
 (1,1,1) = {"
