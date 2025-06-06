@@ -2169,8 +2169,11 @@
 /area/redemptionvalley/valleyroof/hydro)
 "fA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/safety/north,
-/turf/open/auto_turf/strata_grass/layer0_mud,
+/obj/structure/sign/safety/north{
+	pixel_x = 14
+	},
+/obj/structure/sign/safety/east,
+/turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valley/proper)
 "fB" = (
 /obj/structure/cargo_container/uscm/chinook/mid,
@@ -3333,6 +3336,14 @@
 /obj/item/prop/helmetgarb/rabbitsfoot,
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/barracks)
+"iG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/south{
+	pixel_x = 8;
+	pixel_y = -6
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/redemptionvalley/valley/proper)
 "iH" = (
 /obj/structure/sign/poster/ad,
 /turf/closed/wall/strata_outpost/reinforced,
@@ -3927,6 +3938,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/redemptionvalley/valley/checkpoint)
+"km" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/west,
+/turf/closed/wall/strata_outpost/reinforced,
+/area/redemptionvalley/valley/proper)
 "kn" = (
 /obj/structure/platform/shiva/catwalk,
 /obj/structure/platform/shiva/catwalk{
@@ -13370,10 +13386,6 @@
 "Kb" = (
 /turf/open/floor/prison/cell_stripe/east,
 /area/redemptionvalley/valleyroof/engi)
-"Kc" = (
-/obj/structure/sign/safety/west,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/proper)
 "Kd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -18059,10 +18071,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/company)
-"WS" = (
-/obj/structure/sign/safety/east,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/proper)
 "WT" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -70020,7 +70028,7 @@ LI
 TI
 LI
 wh
-Kc
+gW
 gW
 gW
 bh
@@ -70272,7 +70280,7 @@ wh
 LI
 LI
 wh
-bh
+km
 bh
 bh
 gW
@@ -70524,8 +70532,8 @@ wh
 wh
 LI
 wh
-WS
-bh
+iT
+iG
 gW
 gW
 gW
