@@ -68,11 +68,11 @@
 	minimap_color = MINIMAP_AREA_MEDBAY
 /area/redemptionvalley/valleyroof/admin
 	name = "Redemption Valley - Site Administration"
-	icon_state = "outpost_admin_0"
+	icon_state = "blue"
 	minimap_color = MINIMAP_AREA_COMMAND
 /area/redemptionvalley/valleyroof/server
 	name = "Redemption Valley - Site Server Room"
-	icon_state = "records"
+	icon_state = "blue"
 	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 /area/redemptionvalley/valleyroof/cafe
 	name = "Redemption Valley - Cafe"
@@ -82,11 +82,11 @@
 	icon_state = "janitor"
 /area/redemptionvalley/valleyroof/engi
 	name = "Redemption Valley - Engineering"
-	icon_state = "power"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI
 /area/redemptionvalley/valleyroof/company
 	name = "Redemption Valley - Company Housing"
-	icon_state = "offices1"
+	icon_state = "purple"
 /area/redemptionvalley/valleyroof/hydro
 	name = "Redemption Valley - Hydroponics"
 	icon_state = "hydro"
@@ -95,25 +95,25 @@
 	icon_state = "storage"
 /area/redemptionvalley/valleyroof/houseone
 	name = "Redemption Valley - House One"
-	icon_state = "outpost_canteen_0"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/housetwo
 	name = "Redemption Valley - House Two"
-	icon_state = "outpost_canteen_1"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/housethree
 	name = "Redemption Valley - House Three"
-	icon_state = "outpost_canteen_2"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/housefour
 	name = "Redemption Valley - House Four"
-	icon_state = "outpost_canteen_3"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/housefive
 	name = "Redemption Valley - House Five"
-	icon_state = "outpost_canteen_4"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/housesix
 	name = "Redemption Valley - House Six"
-	icon_state = "outpost_canteen_0"
+	icon_state = "green"
 /area/redemptionvalley/valleyroof/cliffcomms
 	name = "Clifftop - T-Comms"
-	icon_state = "power"
+	icon_state = "yellow"
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
 //=============================================================================================CAVERNS
 /area/redemptionvalley/caverns/north
@@ -133,11 +133,11 @@
 	soundscape_playlist = SCAPE_PL_LV522_INDOORS
 /area/redemptionvalley/outpost/flight
 	name = "Military Base - Flight Control"
-	icon_state = "flight_center"
+	icon_state = "purple"
 	soundscape_playlist = SCAPE_PL_LV522_INDOORS
 /area/redemptionvalley/outpost/ops
 	name = "Military Base - Operations Room"
-	icon_state = "almayer"
+	icon_state = "blue"
 	soundscape_playlist = SCAPE_PL_LV522_INDOORS
 	minimap_color = MINIMAP_AREA_COMMAND
 /area/redemptionvalley/outpost/elevlow
@@ -145,13 +145,13 @@
 	icon_state = "away2"
 /area/redemptionvalley/outpost/bunkwest
 	name = "Military Base - Bunkers West"
-	icon_state = "bunker"
+	icon_state = "red"
 /area/redemptionvalley/outpost/bunkeast
 	name = "Military Base - Bunkers East"
-	icon_state = "bunker"
+	icon_state = "red"
 /area/redemptionvalley/outpost/cavestruct
 	name = "Military Base - Cave Structures"
-	icon_state = "bunker"
+	icon_state = "red"
 /area/redemptionvalley/outpost/entry
 	name = "Military Base - Entryway"
 	icon_state = "away1"
@@ -164,7 +164,7 @@
 	minimap_color = MINIMAP_AREA_SEC
 /area/redemptionvalley/outpost/barracks
 	name = "Military Base - Barracks"
-	icon_state = "gruntrnr"
+	icon_state = "yellow"
 /area/redemptionvalley/outpost/canteen
 	name = "Military Base - Canteen"
 	icon_state = "cafeteria"
@@ -177,7 +177,7 @@
 	minimap_color = MINIMAP_AREA_MEDBAY
 /area/redemptionvalley/outpost/brief
 	name = "Military Base - Briefing Hall"
-	icon_state = "briefing"
+	icon_state = "blue"
 /area/redemptionvalley/outpost/cells
 	name = "Military Base - Holding Cells"
 	icon_state = "security"
