@@ -73,6 +73,14 @@
 	},
 /turf/open/floor/corsat,
 /area/binhai/basemil/lower)
+"aai" = (
+/obj/structure/sign/poster/io,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/binhai/hab/north)
+"aaj" = (
+/obj/structure/sign/poster/safety,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/binhai/other/powerstation)
 "aaI" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -42653,7 +42661,7 @@ xnw
 ufk
 qBi
 epO
-gVJ
+aai
 seX
 seX
 qqP
@@ -82521,7 +82529,7 @@ ufk
 ufk
 ufk
 tQb
-rcN
+aaj
 ice
 ice
 ice
