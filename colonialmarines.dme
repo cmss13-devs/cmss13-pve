@@ -1865,6 +1865,7 @@
 #include "code\modules\gear_presets\wy.dm"
 #include "code\modules\gear_presets\wy_goons.dm"
 #include "code\modules\gear_presets\yautja.dm"
+#include "code\modules\gear_presets\zombie.dm"
 #include "code\modules\gear_presets\survivors\misc.dm"
 #include "code\modules\gear_presets\survivors\survivors.dm"
 #include "code\modules\gear_presets\survivors\lv_522\forcon_survivors.dm"
