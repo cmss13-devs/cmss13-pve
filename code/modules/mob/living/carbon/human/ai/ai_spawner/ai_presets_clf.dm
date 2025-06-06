@@ -78,3 +78,12 @@
 	desc = "Armed with a M56A2 smartgun."
 	path = /datum/equipment_preset/rebel/commander
 
+/datum/human_ai_equipment_preset/clf/ua/security_android
+	name = "UA Rebel Combat Android"
+	desc = "Remember, Highly illegal"
+	path = /datum/equipment_preset/synth/working_joe/security_android/ua_rebel
+
+/datum/human_ai_equipment_preset/clf/combat_android
+	name = "TWE Rebel Automaton"
+	desc = "Remember, Very illegal"
+	path = /datum/equipment_preset/synth/working_joe/upp/combat/twe_rebel
