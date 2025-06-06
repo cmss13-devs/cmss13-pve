@@ -97,9 +97,7 @@
 	dir = 1;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/underground{
-	ceiling = 4.3
-	})
+/area/space)
 "aan" = (
 /obj/structure/sink{
 	dir = 1;
@@ -2556,9 +2554,7 @@
 	airlock_area = /area/shuttle/elevator1/underground
 	},
 /turf/open/floor/plating,
-/area/shuttle/elevator2/underground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator2/underground)
 "cmf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3503,9 +3499,7 @@
 	dir = 8;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "der" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -6671,9 +6665,7 @@
 /area/binhai/other/minelower)
 "fIU" = (
 /turf/open/floor/plating/icefloor,
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "fJU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -7170,9 +7162,7 @@
 	dir = 6;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "gkm" = (
 /obj/structure/platform/strata/metal{
 	dir = 8;
@@ -9977,9 +9967,7 @@
 /area/binhai/main/commissary)
 "iJV" = (
 /turf/open/floor/plating,
-/area/shuttle/elevator2/underground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator2/underground)
 "iKq" = (
 /obj/structure/sign/safety/one{
 	pixel_x = 15;
@@ -15500,9 +15488,7 @@
 	airlock_area = /area/shuttle/elevator1/ground
 	},
 /turf/open/floor/plating,
-/area/shuttle/elevator2/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator2/ground)
 "nGX" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap";
@@ -16096,9 +16082,7 @@
 /turf/open/floor/plating/icefloor{
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "ogn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -16524,9 +16508,7 @@
 /area/binhai/other/ship1)
 "oyO" = (
 /turf/open/space/transit/north/shuttlespace_ns4,
-/area/shuttle/elevator1/transit{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/transit)
 "ozd" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
@@ -18361,9 +18343,7 @@
 	dir = 1;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "qcn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -19365,9 +19345,7 @@
 	dir = 9;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "qSf" = (
 /obj/structure/machinery/suit_storage_unit/carbon_unit,
 /obj/effect/decal/warning_stripes{
@@ -20656,9 +20634,7 @@
 	dir = 4;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "rVr" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/morgue{
@@ -24157,9 +24133,7 @@
 /area/binhai/basemil/lowerss)
 "uKw" = (
 /turf/open/floor/plating,
-/area/shuttle/elevator2/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator2/ground)
 "uKx" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -24560,9 +24534,7 @@
 	dir = 5;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "uYe" = (
 /obj/item/stool{
 	icon_state = "stool_alt";
@@ -25173,9 +25145,7 @@
 	dir = 10;
 	icon_state = "warnplate"
 	},
-/area/shuttle/elevator1/ground{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator1/ground)
 "vvq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -26546,9 +26516,7 @@
 /area/binhai/main/supply)
 "wxn" = (
 /turf/open/space/transit/north/shuttlespace_ns4,
-/area/shuttle/elevator2/transit{
-	ceiling = 4.3
-	})
+/area/shuttle/elevator2/transit)
 "wxM" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
