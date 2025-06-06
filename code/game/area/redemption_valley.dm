@@ -41,7 +41,7 @@
 	minimap_color = MINIMAP_AREA_LZ
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
 //=============================================================================================VALLEY
-/area/redemptionvalley/valley/mainroad
+/area/redemptionvalley/valley/proper
 	name = "Redemption Valley Main Road"
 	icon_state = "south"
 /area/redemptionvalley/valley/checkpoint
