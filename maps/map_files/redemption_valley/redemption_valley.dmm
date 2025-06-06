@@ -4228,6 +4228,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk,
 /area/redemptionvalley/outpost/halls)
+"kZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/dam/crane,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/caverns/north)
 "la" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -44537,7 +44542,7 @@ JK
 NV
 bB
 bB
-MT
+kZ
 bB
 vF
 ZX
@@ -60299,7 +60304,7 @@ Eh
 Eh
 HA
 Qj
-UU
+Eh
 Eh
 Eh
 Eh
