@@ -2849,6 +2849,10 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
+"gA" = (
+/obj/structure/girder/displaced,
+/turf/closed/wall/kutjevo/rock,
+/area/firebase_zulu/outside)
 "gB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -44507,7 +44511,7 @@ Iu
 Iu
 Iu
 Iu
-Iu
+gA
 Iu
 Iu
 Iu
