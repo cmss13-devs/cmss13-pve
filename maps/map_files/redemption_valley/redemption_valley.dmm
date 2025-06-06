@@ -8034,9 +8034,7 @@
 	},
 /obj/item/reagent_container/glass/bucket,
 /obj/structure/tent/big,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
 "vr" = (
 /obj/structure/machinery/light/blue{
@@ -10668,9 +10666,7 @@
 /area/redemptionvalley/valley/proper)
 "CP" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
 "CQ" = (
 /obj/structure/bed,
@@ -17100,9 +17096,7 @@
 /obj/structure/bed/bedroll{
 	dir = 5
 	},
-/turf/open/auto_turf/sand_white/layer0{
-	unacidable = 1
-	},
+/turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
 "UM" = (
 /obj/structure/prop/server_equipment/yutani_server{
