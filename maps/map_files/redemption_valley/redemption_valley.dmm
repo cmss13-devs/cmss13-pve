@@ -147,9 +147,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "as" = (
 /obj/structure/closet{
 	pixel_x = -8;
@@ -172,9 +170,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "av" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
@@ -208,25 +204,19 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "aA" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood,
 /obj/structure/machinery/light/blue{
 	dir = 4
 	},
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "aB" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "aC" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 1;
@@ -417,9 +407,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "bf" = (
 /obj/structure/machinery/vending/cola{
 	pixel_y = 18;
@@ -447,9 +435,7 @@
 /area/redemptionvalley/valley/proper)
 "bi" = (
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "bj" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /obj/effect/decal/cleanable/dirt,
@@ -468,9 +454,7 @@
 "bm" = (
 /obj/structure/bed/chair,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "bn" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -670,9 +654,7 @@
 	layer = 3.23
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "bP" = (
 /obj/item/stool{
 	pixel_y = 16
@@ -772,9 +754,7 @@
 	layer = 3.5
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "cc" = (
 /obj/structure/machinery/door/window/brigdoor/northright{
 	req_one_access = "9"
@@ -815,9 +795,7 @@
 	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/sand_white/layer0,
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "cj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -888,9 +866,7 @@
 /area/redemptionvalley/valleyroof/cafe)
 "cq" = (
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "cr" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -900,9 +876,7 @@
 "cs" = (
 /obj/structure/sign/safety/medical,
 /turf/closed/wall/hangar,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "ct" = (
 /obj/structure/stairs/perspective{
 	dir = 8;
@@ -927,9 +901,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "cx" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -1039,9 +1011,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "cJ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -1051,9 +1021,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "cK" = (
 /turf/closed/wall/strata_outpost/reinforced,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "cL" = (
 /obj/structure/barricade/sandbags/wired{
 	pixel_y = -6
@@ -1094,9 +1062,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "cR" = (
 /turf/open/floor/prison/blue/southeast,
 /area/redemptionvalley/valleyroof/admin)
@@ -1209,9 +1175,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "dd" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -1253,9 +1217,7 @@
 	pixel_x = -3
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "dk" = (
 /obj/structure/prop/dam/truck/cargo,
 /obj/effect/decal/cleanable/blood/oil,
@@ -1291,9 +1253,7 @@
 "do" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/strata_outpost/reinforced,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "dp" = (
 /obj/structure/barricade/handrail/type_b{
 	layer = 3.01;
@@ -1301,9 +1261,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "dq" = (
 /obj/structure/closet{
 	pixel_x = -8;
@@ -1558,9 +1516,7 @@
 "dR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "dS" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -1600,9 +1556,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "dX" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1662,9 +1616,7 @@
 	},
 /obj/structure/curtain,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "ef" = (
 /obj/structure/bed/chair/office/light,
 /turf/open/floor/prison,
@@ -1726,9 +1678,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "en" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/open/floor/prison/darkyellow2/west,
@@ -1943,9 +1893,7 @@
 "eP" = (
 /obj/structure/machinery/light/blue,
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "eQ" = (
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/caverns/east)
@@ -2346,9 +2294,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "fU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -2377,9 +2323,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "fY" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -2543,9 +2487,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "gA" = (
 /obj/structure/machinery/colony_floodlight,
 /obj/effect/decal/cleanable/dirt,
@@ -2558,9 +2500,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "gC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -2794,9 +2734,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "hc" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -2920,9 +2858,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "hs" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/cameras{
@@ -2964,9 +2900,7 @@
 "hw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "hx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/redcorner/west,
@@ -2999,9 +2933,7 @@
 	density = 0
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "hC" = (
 /obj/structure/cargo_container/uscm/crestus/left,
 /turf/open/auto_turf/sand_white/layer0,
@@ -3056,9 +2988,7 @@
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "hM" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -3107,9 +3037,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "hT" = (
 /obj/structure/platform{
 	dir = 4
@@ -3203,9 +3131,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "ie" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -3232,9 +3158,7 @@
 "ij" = (
 /obj/structure/machinery/light,
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "ik" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
@@ -3275,9 +3199,7 @@
 "io" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "ip" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -3296,17 +3218,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "is" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "it" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -3400,9 +3318,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "iF" = (
 /obj/structure/closet/secure_closet/personal{
 	pixel_x = -8;
@@ -3491,16 +3407,12 @@
 	},
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "iR" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "iS" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -3528,9 +3440,7 @@
 "iX" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "iY" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/effect/decal/warning_stripes{
@@ -3561,9 +3471,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "jc" = (
 /obj/structure/window/framed/corsat,
 /obj/structure/curtain/blue,
@@ -3579,9 +3487,7 @@
 "je" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "jf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3628,9 +3534,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/cell_stripe/east,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "jk" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
@@ -3835,9 +3739,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "jO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3874,9 +3776,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "jT" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2
@@ -3912,9 +3812,7 @@
 	color = "#ffe6e6"
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "jY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4105,9 +4003,7 @@
 	dir = 8
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "kB" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -4339,9 +4235,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "le" = (
 /obj/structure/prop/dam/crane/cargo{
 	dir = 1;
@@ -4370,9 +4264,7 @@
 "lg" = (
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "lh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -4471,9 +4363,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "lx" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
@@ -4502,9 +4392,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "lD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -4630,9 +4518,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "lV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4659,9 +4545,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "lY" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -4744,18 +4628,14 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "ml" = (
 /obj/structure/bed/chair{
 	dir = 8;
 	pixel_y = 3
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "mm" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -4897,9 +4777,7 @@
 "mF" = (
 /obj/structure/machinery/chem_dispenser/canteen,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "mG" = (
 /obj/structure/largecrate{
 	name = "farm food supply"
@@ -4930,9 +4808,7 @@
 	dir = 8
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "mL" = (
 /obj/structure/machinery/smartfridge/chemistry,
 /turf/open/floor/prison/whitegreen/northwest,
@@ -5126,9 +5002,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "nm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5354,9 +5228,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "nR" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
 	pixel_y = 4;
@@ -5506,9 +5378,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "on" = (
 /obj/structure/platform{
 	dir = 1
@@ -5748,9 +5618,7 @@
 "oV" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "oW" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
@@ -5817,9 +5685,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "pe" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -5929,9 +5795,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "pw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/red/northwest,
@@ -6089,9 +5953,7 @@
 	pixel_x = 5
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "pM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -6106,9 +5968,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "pP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -6206,9 +6066,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "qc" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap";
@@ -6249,9 +6107,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "qi" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 8
@@ -6355,9 +6211,7 @@
 	dir = 8
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "qx" = (
 /obj/effect/vehicle_spawner/van/decrepit,
 /turf/open/asphalt/cement{
@@ -6513,9 +6367,7 @@
 	pixel_x = 15
 	},
 /turf/closed/wall/strata_outpost/reinforced,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "qV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/grime/grime1{
@@ -6595,9 +6447,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "rh" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_box/magazine/misc/mre/wy,
@@ -6625,9 +6475,7 @@
 	pixel_y = 7
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "rk" = (
 /turf/open/floor/strata,
 /area/redemptionvalley/valleyroof/store)
@@ -6702,9 +6550,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "rv" = (
 /obj/structure/cargo_container/wy/right,
 /turf/open/auto_turf/sand_white/layer0,
@@ -6886,9 +6732,7 @@
 	},
 /obj/item/tool/pen,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "rR" = (
 /turf/open/floor,
 /area/redemptionvalley/outpost/halls)
@@ -6906,9 +6750,7 @@
 "rU" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "rV" = (
 /obj/structure/sign/safety/restrictedarea{
 	pixel_x = 15
@@ -7014,9 +6856,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "sg" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
@@ -7106,9 +6946,7 @@
 /area/redemptionvalley/outpost/elevup)
 "ss" = (
 /turf/closed/wall/r_wall,
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "st" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -7128,9 +6966,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "sv" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison/whitegreen/east,
@@ -7367,14 +7203,10 @@
 	},
 /obj/item/prop/magazine/sof/n2182,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "td" = (
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "te" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -7445,9 +7277,7 @@
 	},
 /obj/item/tool/pen,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "tn" = (
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/Westbound)
@@ -7569,9 +7399,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "tB" = (
 /obj/structure/sign/banners/united_americas_worn{
 	pixel_y = 27
@@ -7584,9 +7412,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "tD" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8;
@@ -7617,9 +7443,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "tI" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -7785,9 +7609,7 @@
 "ue" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "uf" = (
 /turf/open/asphalt,
 /area/redemptionvalley/valley/proper)
@@ -8008,20 +7830,14 @@
 	pixel_y = -10
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "uI" = (
 /turf/closed/wall/r_wall,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "uJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "uL" = (
 /obj/structure/surface/rack,
 /obj/item/storage/box/lightstick/red{
@@ -8132,9 +7948,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "vb" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -8176,9 +7990,7 @@
 	},
 /obj/structure/curtain/blue,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "vg" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "LZBunker";
@@ -8382,9 +8194,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "vH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
@@ -8664,9 +8474,7 @@
 /area/redemptionvalley/valleyroof/store)
 "wx" = (
 /turf/closed/wall/r_wall/bunker,
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "wy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2"
@@ -8814,9 +8622,7 @@
 "wU" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "wV" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
 	pixel_y = 4;
@@ -8867,9 +8673,7 @@
 /area/redemptionvalley/valleyroof/housefour)
 "xa" = (
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "xb" = (
 /obj/structure/machinery/computer3/server/rack,
 /obj/structure/machinery/door/window/brigdoor/westleft{
@@ -8944,9 +8748,7 @@
 "xj" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "xk" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
@@ -9053,9 +8855,7 @@
 	pixel_y = 11
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "xA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9167,9 +8967,7 @@
 /area/shuttle/elevator2/underground)
 "xS" = (
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "xT" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
 	pixel_y = 4;
@@ -9190,9 +8988,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "xW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9202,14 +8998,10 @@
 	pixel_y = 15
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "xX" = (
 /turf/open/floor/prison/cell_stripe/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "xY" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/tool/hand_labeler{
@@ -9315,9 +9107,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "yn" = (
 /turf/open/floor/prison/greenbluecorner/west,
 /area/redemptionvalley/valleyroof/cafe)
@@ -9681,9 +9471,7 @@
 "zp" = (
 /obj/structure/platform_decoration/kutjevo,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "zq" = (
 /obj/structure/bed/chair{
 	buckling_y = 18;
@@ -9692,9 +9480,7 @@
 	pixel_y = 13
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "zr" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -9953,9 +9739,7 @@
 "zY" = (
 /obj/structure/sign/safety/restrictedarea,
 /turf/closed/wall/r_wall/bunker,
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "zZ" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/sand_white/layer0,
@@ -10025,9 +9809,7 @@
 	pixel_x = -7
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Ai" = (
 /obj/structure/surface/table/holotable,
 /obj/structure/bedsheetbin{
@@ -10105,9 +9887,7 @@
 "As" = (
 /obj/structure/sign/safety/conference_room,
 /turf/closed/wall/hangar,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "At" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "SWPass";
@@ -10135,9 +9915,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "Ax" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass,
@@ -10184,9 +9962,7 @@
 "AF" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "AG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -10223,9 +9999,7 @@
 /area/redemptionvalley/valleyroof/engi)
 "AK" = (
 /turf/open/floor/prison/cell_stripe/east,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "AL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -10379,9 +10153,7 @@
 	pixel_y = 16
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Bh" = (
 /turf/open/floor/prison/darkyellow2/southeast,
 /area/redemptionvalley/valleyroof/engi)
@@ -10443,9 +10215,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Br" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plating,
@@ -10560,9 +10330,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "BF" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -10604,9 +10372,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "BI" = (
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/admin)
@@ -10700,9 +10466,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "BW" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -10749,9 +10513,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Ce" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
@@ -10835,9 +10597,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Cr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10869,9 +10629,7 @@
 /area/redemptionvalley/valley/proper)
 "Cx" = (
 /turf/closed/wall/hangar,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Cy" = (
 /obj/structure/prop/fishing/pole_interactive,
 /obj/structure/surface/table/holotable,
@@ -10900,9 +10658,7 @@
 /area/redemptionvalley/valley/Westbound)
 "CD" = (
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "CE" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap";
@@ -11038,9 +10794,7 @@
 "CX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "CY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -11105,9 +10859,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Di" = (
 /obj/structure/machinery/atm,
 /turf/closed/wall/strata_outpost/reinforced,
@@ -11124,9 +10876,7 @@
 	pixel_x = 2
 	},
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Dl" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -11245,9 +10995,7 @@
 	},
 /obj/structure/curtain,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "DB" = (
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/redemptionvalley/valleyroof/housetwo)
@@ -11435,9 +11183,7 @@
 /area/redemptionvalley/outpost/halls)
 "DZ" = (
 /turf/closed/wall/hangar,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "Ea" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -11512,9 +11258,7 @@
 	density = 0
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Eo" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
@@ -11609,9 +11353,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "EC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -11654,9 +11396,7 @@
 /area/redemptionvalley/outpost/flight)
 "EK" = (
 /turf/closed/wall/r_wall,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "EL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -11735,9 +11475,7 @@
 "EW" = (
 /obj/structure/surface/table/holotable,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "EX" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3"
@@ -11759,9 +11497,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Fa" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -11816,9 +11552,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Fh" = (
 /obj/structure/machinery/fuelcell_recycler/full,
 /turf/open/floor/prison/darkyellow2/east,
@@ -11918,9 +11652,7 @@
 	},
 /obj/structure/machinery/light/blue,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "FA" = (
 /obj/structure/largecrate/random/secure{
 	pixel_x = 2;
@@ -11968,9 +11700,7 @@
 "FF" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "FG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/whitegreen/northeast,
@@ -11988,9 +11718,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "FJ" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/prison/blue,
@@ -12014,9 +11742,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "FN" = (
 /obj/structure/platform{
 	dir = 1
@@ -12094,9 +11820,7 @@
 "FX" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "FY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -12104,9 +11828,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "FZ" = (
 /obj/structure/machinery/door/poddoor/railing{
 	dir = 4;
@@ -12130,9 +11852,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Gd" = (
 /obj/structure/ladder{
 	id = "Base2";
@@ -12181,9 +11901,7 @@
 	layer = 2.9
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Gj" = (
 /obj/structure/gun_rack/m20a/unloaded,
 /obj/structure/machinery/light/blue{
@@ -12211,9 +11929,7 @@
 /area/redemptionvalley/valley/proper)
 "Gm" = (
 /turf/closed/wall/hangar,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Gn" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
@@ -12571,9 +12287,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Hi" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1;
@@ -12648,9 +12362,7 @@
 	pixel_x = -5
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Hu" = (
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/redemptionvalley/valleyroof/housesix)
@@ -12698,9 +12410,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "Hz" = (
 /obj/structure/bed/chair{
 	buckling_y = 18;
@@ -12747,9 +12457,7 @@
 "HH" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "HJ" = (
 /obj/structure/bed/chair{
 	buckling_y = 5;
@@ -12757,9 +12465,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "HL" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/storage)
@@ -12957,9 +12663,7 @@
 /area/redemptionvalley/outpost/elevup)
 "Iq" = (
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Ir" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
@@ -13227,17 +12931,13 @@
 	pixel_y = 4
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Jb" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Jc" = (
 /obj/structure/toilet{
 	dir = 1
@@ -13323,9 +13023,7 @@
 	dir = 1
 	},
 /turf/open/floor/prison/cell_stripe/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Jj" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -13347,9 +13045,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "Jm" = (
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_x = -32;
@@ -13369,9 +13065,7 @@
 "Jo" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Jp" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -24;
@@ -13451,9 +13145,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "Jw" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -13566,9 +13258,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "JJ" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -13813,9 +13503,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Kw" = (
 /obj/structure/ladder{
 	id = "Base1";
@@ -13943,9 +13631,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "KP" = (
 /obj/structure/machinery/vending/hydroseeds,
 /obj/effect/decal/cleanable/dirt,
@@ -14001,9 +13687,7 @@
 "KU" = (
 /obj/structure/machinery/power/apc/power/west,
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "KV" = (
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
@@ -14162,9 +13846,7 @@
 /area/redemptionvalley/valleyroof/admin)
 "Lq" = (
 /turf/open/floor/almayer/sterile_green,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Lr" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -14196,9 +13878,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Lx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -14251,9 +13931,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "LH" = (
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/houseone)
@@ -14288,9 +13966,7 @@
 	pixel_x = 3
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "LO" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -14329,9 +14005,7 @@
 	},
 /obj/structure/surface/table/holotable,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "LV" = (
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housethree)
@@ -14363,15 +14037,11 @@
 /obj/structure/surface/table/holotable,
 /obj/structure/machinery/light,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Ma" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Mb" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2
@@ -14645,9 +14315,7 @@
 	dir = 8
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "MI" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
@@ -14782,9 +14450,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "MZ" = (
 /obj/structure/prop/rock/brown{
 	dir = 6
@@ -14885,9 +14551,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Nk" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
@@ -15289,9 +14953,7 @@
 	},
 /obj/item/trash/USCMtray,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "On" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
@@ -15330,9 +14992,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Or" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -15369,9 +15029,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Ow" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -15417,9 +15075,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "OC" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /turf/open/floor/prison/sterile_white,
@@ -15432,9 +15088,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "OE" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 2
@@ -15503,9 +15157,7 @@
 /area/redemptionvalley/valleyroof/storage)
 "OM" = (
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "ON" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -15626,9 +15278,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Pf" = (
 /obj/structure/surface/rack,
 /obj/item/ammo_box/magazine/misc/flashlight,
@@ -15902,9 +15552,7 @@
 /area/redemptionvalley/valleyroof/storage)
 "PT" = (
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "PU" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -15944,9 +15592,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "PY" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	color = "#aeaeae"
@@ -16016,15 +15662,11 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Qh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "Qi" = (
 /obj/structure/prop/rock/brown{
 	dir = 9
@@ -16095,9 +15737,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/kutjevo/multi_tiles/east,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Qu" = (
 /obj/structure/platform/shiva/catwalk,
 /turf/open/floor/plating,
@@ -16135,9 +15775,7 @@
 	pixel_x = 3
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "QA" = (
 /turf/open/floor/prison/cell_stripe/west,
 /area/redemptionvalley/valley/proper)
@@ -16232,9 +15870,7 @@
 "QN" = (
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "QO" = (
 /obj/structure/platform/kutjevo{
 	layer = 2.97
@@ -16430,9 +16066,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Rr" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -16579,9 +16213,7 @@
 /area/redemptionvalley/valley/checkpoint)
 "RO" = (
 /turf/closed/wall/r_wall/bunker,
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "RP" = (
 /obj/structure/machinery/light/blue,
 /turf/open/floor/almayer,
@@ -16624,9 +16256,7 @@
 /obj/item/folder/white,
 /obj/item/tool/pen,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "RV" = (
 /obj/structure/sign/safety/bathunisex{
 	pixel_x = 15
@@ -16707,9 +16337,7 @@
 "Sg" = (
 /obj/structure/machinery/light,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Sh" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -16821,9 +16449,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Sz" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -16861,9 +16487,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "SE" = (
 /turf/closed/wall/rock/brown,
 /area/redemptionvalley/caverns/west)
@@ -17087,9 +16711,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Ti" = (
 /obj/structure/platform{
 	dir = 8
@@ -17297,9 +16919,7 @@
 /obj/structure/machinery/power/apc/power/east,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "TP" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -17574,9 +17194,7 @@
 "UD" = (
 /obj/structure/bed/chair,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "UE" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_y = 2
@@ -17678,17 +17296,13 @@
 "UO" = (
 /obj/structure/surface/table/holotable,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "UP" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "UQ" = (
 /obj/structure/closet/secure_closet/freezer/fridge/full{
 	pixel_y = 4;
@@ -17848,9 +17462,7 @@
 "Vl" = (
 /obj/structure/machinery/vending/generic,
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Vm" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -17901,9 +17513,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "Vr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkyellow2/northeast,
@@ -18096,9 +17706,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "VV" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -18120,9 +17728,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/prison,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "VX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -18196,9 +17802,7 @@
 	},
 /obj/item/folder/yellow,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Wj" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -26;
@@ -18290,9 +17894,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "Wu" = (
 /turf/closed/wall/biodome,
 /area/redemptionvalley/valleyroof/housefour)
@@ -18308,9 +17910,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "Wx" = (
 /turf/open/floor/prison/darkyellow2/west,
 /area/redemptionvalley/valleyroof/engi)
@@ -18390,9 +17990,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "WK" = (
 /turf/open/floor/kutjevo/colors,
 /area/redemptionvalley/outpost/ops)
@@ -18460,9 +18058,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "WS" = (
 /obj/structure/sign/safety/east,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -18489,9 +18085,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "WW" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
 /turf/open/auto_turf/strata_grass,
@@ -18610,15 +18204,11 @@
 	},
 /obj/item/folder/blue,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Xl" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/almayer,
-/area/calliope/bunker/cafeteria{
-	name = "Military Base - Canteen"
-	})
+/area/redemptionvalley/outpost/canteen)
 "Xm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -18641,9 +18231,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "Xo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -18671,9 +18259,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand_white/layer0,
-/area/calliope/bunker/sterlingtransfer{
-	name = "Military Base - Entryway"
-	})
+/area/redemptionvalley/outpost/entry)
 "Xs" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8;
@@ -18781,9 +18367,7 @@
 /turf/open/asphalt/cement{
 	color = "#aeaeae"
 	},
-/area/calliope/bunker_exterior_buildings/east_checkpoint{
-	name = "Military Base - Bunkers East"
-	})
+/area/redemptionvalley/outpost/bunkeast)
 "XG" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -8
@@ -18868,9 +18452,7 @@
 	pixel_y = 18
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
-/area/strata/ag/interior/outpost/gen/foyer{
-	name = "Military Base - Briefing Hall"
-	})
+/area/redemptionvalley/outpost/brief)
 "XR" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 4
@@ -18900,9 +18482,7 @@
 /area/redemptionvalley/valleyroof/cafe)
 "XW" = (
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "XX" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Pod1";
@@ -19164,9 +18744,7 @@
 "YF" = (
 /obj/structure/window/framed/hangar/reinforced,
 /turf/open/floor/almayer/plating,
-/area/calliope/bunker/hospital{
-	name = "Military Base - Medical"
-	})
+/area/redemptionvalley/outpost/medical)
 "YG" = (
 /obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/strata_grass,
@@ -19406,9 +18984,7 @@
 	pixel_y = 20
 	},
 /turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Zi" = (
 /turf/open/space/transit/north/shuttlespace_ns4,
 /area/shuttle/elevator2/transit)
@@ -19514,9 +19090,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "Zw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -19556,9 +19130,7 @@
 "ZC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata,
-/area/strata/ag/interior/outpost/canteen/northlock{
-	name = "Redemption Valley - Company Housing"
-	})
+/area/redemptionvalley/valleyroof/company)
 "ZD" = (
 /obj/structure/surface/rack{
 	pixel_y = 12;
