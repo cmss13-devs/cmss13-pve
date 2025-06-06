@@ -2969,6 +2969,7 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
+/obj/item/tool/mop,
 /turf/open/floor/prison/bright_clean,
 /area/strata/ag/interior/outpost/maint{
 	name = "Main Block - Sanitation Closet"
@@ -27512,17 +27513,6 @@
 	name = "Binhai Caves";
 	temperature = 259.15
 	})
-"sre" = (
-/obj/structure/machinery/washing_machine,
-/obj/structure/machinery/washing_machine{
-	pixel_y = 13
-	},
-/turf/open/floor/corsat/plate,
-/area/prison/cleaning{
-	name = "\improper Hab Block - Washing Space";
-	ceiling = 1.1;
-	ceiling_muffle = 1
-	})
 "srW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -32948,9 +32938,6 @@
 /area/strata/ag/interior/outpost/gen{
 	name = "Hab Block - Hallway"
 	})
-"vyO" = (
-/turf/open/floor/prison/sterile_white,
-/area/space)
 "vyW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -49272,7 +49259,7 @@ aXY
 lHx
 aXY
 lHx
-sre
+aXY
 lHx
 rWL
 qoF
@@ -59639,7 +59626,7 @@ ssV
 nvx
 wfz
 sqP
-vyO
+pFd
 oaD
 qBh
 dgh
