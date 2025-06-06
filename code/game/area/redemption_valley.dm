@@ -41,7 +41,7 @@
 	minimap_color = MINIMAP_AREA_LZ
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
 //=============================================================================================VALLEY
-/area/redemptionvalley/valley/proper
+/area/redemptionvalley/valley/mainroad
 	name = "Redemption Valley Main Road"
 	icon_state = "south"
 /area/redemptionvalley/valley/checkpoint
@@ -72,7 +72,7 @@
 	minimap_color = MINIMAP_AREA_COMMAND
 /area/redemptionvalley/valleyroof/server
 	name = "Redemption Valley - Site Server Room"
-	icon_state = "outpost_admin_1"
+	icon_state = "records"
 	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 /area/redemptionvalley/valleyroof/cafe
 	name = "Redemption Valley - Cafe"
@@ -82,7 +82,7 @@
 	icon_state = "janitor"
 /area/redemptionvalley/valleyroof/engi
 	name = "Redemption Valley - Engineering"
-	icon_state = "engine_smes"
+	icon_state = "power"
 	minimap_color = MINIMAP_AREA_ENGI
 /area/redemptionvalley/valleyroof/company
 	name = "Redemption Valley - Company Housing"
@@ -146,7 +146,7 @@
 /area/redemptionvalley/outpost/bunkwest
 	name = "Military Base - Bunkers West"
 	icon_state = "bunker"
-/area/redemptionvalley/outpost/bunkwest
+/area/redemptionvalley/outpost/bunkeast
 	name = "Military Base - Bunkers East"
 	icon_state = "bunker"
 /area/redemptionvalley/outpost/cavestruct
@@ -164,8 +164,8 @@
 	minimap_color = MINIMAP_AREA_SEC
 /area/redemptionvalley/outpost/barracks
 	name = "Military Base - Barracks"
-	icon_state = "green"
-/area/redemptionvalley/outpost/barracks
+	icon_state = "gruntrnr"
+/area/redemptionvalley/outpost/canteen
 	name = "Military Base - Canteen"
 	icon_state = "cafeteria"
 /area/redemptionvalley/outpost/toilet
@@ -184,7 +184,7 @@
 	minimap_color = MINIMAP_AREA_SEC_CAVE
 /area/redemptionvalley/outpost/engi
 	name = "Military Base - Engineering"
-	icon_state = "engineering"
+	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	soundscape_playlist = SCAPE_PL_ENG
 //=============================================================================================OOB
