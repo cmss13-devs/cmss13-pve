@@ -259,9 +259,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "aen" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -404,9 +402,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "amI" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -802,9 +798,7 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "aKT" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 8;
@@ -1534,9 +1528,7 @@
 "bqJ" = (
 /obj/structure/machinery/landinglight/ds2,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "bsi" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -1840,9 +1832,7 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "bII" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -1872,9 +1862,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "bLr" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -2058,15 +2046,11 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "bRH" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "bRK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2534,9 +2518,7 @@
 "clK" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "clS" = (
 /obj/docking_port/stationary/trijent_elevator{
 	height = 5;
@@ -3618,9 +3600,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "dkd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -3721,9 +3701,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "doA" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 4;
@@ -4625,9 +4603,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "ecE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
@@ -4816,9 +4792,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "ekI" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
@@ -5098,9 +5072,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "ewp" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -5363,9 +5335,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "eId" = (
 /obj/structure/sign/safety/galley{
 	pixel_x = 8;
@@ -5612,9 +5582,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "eQH" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/prison/bright_clean,
@@ -5838,9 +5806,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "fap" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/floor3,
@@ -6144,9 +6110,7 @@
 	id = "dropship-lz2"
 	},
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "flu" = (
 /obj/structure/phone_base/colony_net{
 	pixel_y = 32;
@@ -6162,9 +6126,7 @@
 /area/binhai/other/mineoffice)
 "fma" = (
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "fmV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -7182,9 +7144,7 @@
 /obj/structure/machinery/landinglight/ds1,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "glz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
@@ -7195,9 +7155,7 @@
 	},
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "glL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/power/apc/power/east,
@@ -7630,9 +7588,7 @@
 "gDs" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "gDu" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8159,9 +8115,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "hgW" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/prison/bright_clean,
@@ -8723,9 +8677,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "hEn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
@@ -8961,9 +8913,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "hPB" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -9171,9 +9121,7 @@
 "hYL" = (
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "hZe" = (
 /turf/closed/wall/upp_wall,
 /area/binhai/basemil/uppertoilet)
@@ -9457,9 +9405,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "isj" = (
 /obj/structure/platform_decoration/shiva/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9636,9 +9582,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "izg" = (
 /obj/structure/bed/sofa/vert/grey,
 /turf/open/floor/strata/floor3,
@@ -9754,9 +9698,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "iCy" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -10469,9 +10411,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "jiM" = (
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
@@ -11437,9 +11377,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "kbE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -12725,9 +12663,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "lfx" = (
 /turf/open/floor/corsat,
 /area/binhai/caves/main)
@@ -13605,9 +13541,7 @@
 "lTL" = (
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "lTY" = (
 /obj/item/stool{
 	pixel_x = 6;
@@ -14040,9 +13974,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "mtP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -14110,9 +14042,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "mxp" = (
 /obj/structure/stairs{
 	dir = 8
@@ -14413,9 +14343,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "mLf" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
@@ -14548,9 +14476,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "mOm" = (
 /obj/structure/prop/almayer/hangar_stencil,
 /obj/effect/decal/warning_stripes{
@@ -14566,9 +14492,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "mPy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -14637,9 +14561,7 @@
 "mSM" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "mTr" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -15190,9 +15112,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "nvW" = (
 /obj/structure/filtration/machine_96x96/filtration,
 /obj/structure/barricade/handrail/type_b{
@@ -15284,9 +15204,7 @@
 /area/binhai/main/kitchen)
 "nyu" = (
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "nyv" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -15462,9 +15380,7 @@
 "nGo" = (
 /obj/structure/machinery/landinglight/ds1,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "nGw" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -15691,9 +15607,7 @@
 	},
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "nPF" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 4
@@ -15887,9 +15801,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "nZY" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -16247,9 +16159,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "olM" = (
 /turf/open/floor/carpet,
 /area/binhai/main/operations)
@@ -17421,9 +17331,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "prn" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -17785,9 +17693,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "pFN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -18009,9 +17915,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "pOX" = (
 /obj/structure/filingcabinet{
 	pixel_x = -8;
@@ -18093,9 +17997,7 @@
 	light_power = 0.9
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "pRt" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -18171,9 +18073,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "pUZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -19331,9 +19231,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "qSa" = (
 /turf/open/floor/plating/icefloor{
 	dir = 9;
@@ -19621,9 +19519,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "rbg" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = 5;
@@ -19740,9 +19636,7 @@
 	},
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "rge" = (
 /obj/structure/sign/safety/ammunition,
 /turf/closed/wall/upp_wall,
@@ -19922,9 +19816,7 @@
 	name = "LZ1 Supply Hangar Pad"
 	},
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "rnX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -21302,9 +21194,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "syw" = (
 /obj/structure/machinery/smartfridge/chemistry,
 /obj/structure/machinery/light/small{
@@ -21342,9 +21232,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "szZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -21578,9 +21466,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "sJJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -22568,9 +22454,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "tzS" = (
 /obj/structure/sign/safety/hazard,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -22823,9 +22707,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "tLh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -22864,9 +22746,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "tOb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/folder/white{
@@ -22883,9 +22763,7 @@
 "tOT" = (
 /obj/structure/machinery/landinglight/ds2/delaythree,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "tPx" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -24104,9 +23982,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "uJz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -24177,9 +24053,7 @@
 /obj/structure/machinery/landinglight/ds2,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "uLB" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -24366,9 +24240,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "uTc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -24758,9 +24630,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "vhJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -24874,9 +24744,7 @@
 "vmY" = (
 /obj/structure/machinery/landinglight/ds2/delayone,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "vnc" = (
 /obj/structure/window/framed/shiva,
 /turf/open/floor/strata/floor3,
@@ -25975,9 +25843,7 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "vZu" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -26286,9 +26152,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "wiU" = (
 /turf/closed/wall/shiva/prefabricated,
 /area/binhai/other/mainlower)
@@ -26433,9 +26297,7 @@
 "wsR" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "wty" = (
 /obj/structure/surface/table{
 	name = "plastic table frame"
@@ -27327,9 +27189,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "xhQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -27809,9 +27669,7 @@
 	},
 /obj/structure/machinery/floodlight/landing/floor,
 /turf/open/floor/corsat/plate,
-/area/bmg290/shuttles/drop1{
-	name = "Hangar Block - Supply Pad"
-	})
+/area/binhai/shuttles/drop1)
 "xBA" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 8;
@@ -28383,9 +28241,7 @@
 "yei" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "yeM" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
@@ -28483,9 +28339,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/bmg290/shuttles/drop2{
-	name = "Military Block - Landing Pad"
-	})
+/area/binhai/shuttles/drop2)
 "yke" = (
 /obj/structure/prop/static_tank/water,
 /turf/open/floor/strata/floor3,
