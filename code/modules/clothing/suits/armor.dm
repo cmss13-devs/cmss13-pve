@@ -530,8 +530,8 @@
 	icon_state = "merc_medium"
 	item_state = "merc_medium"
 	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
 
 /obj/item/clothing/suit/armor/vest/merc/light
 	name = "DP TAC-PACK Gen I-L armored vest"
@@ -543,7 +543,7 @@
 	icon_state = "merc_light"
 	item_state = "merc_light"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	flags_armor_protection = BODY_FLAG_CHEST
 
 /obj/item/clothing/suit/armor/vest/merc/heavy
