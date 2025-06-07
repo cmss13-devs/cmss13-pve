@@ -2361,12 +2361,6 @@
 "cdO" = (
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/airoom)
-"ceh" = (
-/turf/open/floor/plating/icefloor{
-	dir = 5;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "ceF" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/gm/dirt2,
@@ -3464,12 +3458,6 @@
 	},
 /turf/open/floor/plating,
 /area/binhai/main/pap)
-"ddv" = (
-/turf/open/floor/plating/icefloor{
-	dir = 8;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "der" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -4079,9 +4067,7 @@
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "dDY" = (
-/turf/open/floor/plating/icefloor{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating,
 /area/shuttle/elevator1/underground)
 "dEf" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4427,12 +4413,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/binhai/main/hangar)
-"dWJ" = (
-/turf/open/floor/plating/icefloor{
-	dir = 1;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "dXA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
@@ -5455,14 +5435,13 @@
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "eMp" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "DRAUGR Main";
 	name = "\improper DRAUGR Core Shutters";
-	plane = -7;
 	dir = 8
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
 	},
 /turf/open/floor/corsat/marked,
 /area/binhai/basemil/airoom)
@@ -6607,9 +6586,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/other/minelower)
-"fIU" = (
-/turf/open/floor/plating/icefloor,
-/area/shuttle/elevator1/ground)
 "fJU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6858,12 +6834,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/lobby)
-"fVS" = (
-/turf/open/floor/plating/icefloor{
-	dir = 8;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "fWI" = (
 /obj/structure/janitorialcart/brown,
 /obj/item/tool/mop{
@@ -7041,12 +7011,6 @@
 "ggx" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/binhai/other/hablower)
-"ggF" = (
-/turf/open/floor/plating/icefloor{
-	dir = 9;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "ghd" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	dir = 1;
@@ -7099,12 +7063,6 @@
 /obj/structure/sign/safety/galley,
 /turf/closed/wall/upp_wall,
 /area/binhai/basemil/lower)
-"gkd" = (
-/turf/open/floor/plating/icefloor{
-	dir = 6;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "gkm" = (
 /obj/structure/platform/strata/metal{
 	dir = 8;
@@ -14626,11 +14584,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
-"mZp" = (
-/obj/structure/window/framed/shiva,
-/obj/structure/window/framed/shiva,
-/turf/open/floor/strata/floor3,
-/area/binhai/other/hyrdo)
 "mZu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -15947,9 +15900,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/main/shed)
 "ofR" = (
-/turf/open/floor/plating/icefloor{
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating,
 /area/shuttle/elevator1/ground)
 "ogn" = (
 /obj/effect/decal/warning_stripes{
@@ -16218,10 +16169,7 @@
 	id = "ice_dorm_lower";
 	name = "Excavation Lower"
 	},
-/turf/open/floor/plating/icefloor{
-	dir = 10;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating,
 /area/shuttle/elevator1/underground)
 "ote" = (
 /obj/structure/ladder/rope{
@@ -18190,12 +18138,6 @@
 /obj/structure/machinery/power/terminal,
 /turf/open/floor/greengrid,
 /area/binhai/hab/substation)
-"qbU" = (
-/turf/open/floor/plating/icefloor{
-	dir = 1;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "qcn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -18838,7 +18780,6 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "DRAUGR Main";
 	name = "\improper DRAUGR Core Shutters";
-	plane = -7;
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
@@ -19188,12 +19129,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/binhai/shuttles/drop2)
-"qSa" = (
-/turf/open/floor/plating/icefloor{
-	dir = 9;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "qSf" = (
 /obj/structure/machinery/suit_storage_unit/carbon_unit,
 /obj/effect/decal/warning_stripes{
@@ -19855,9 +19790,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
 /area/binhai/basemil/command)
-"rqv" = (
-/turf/open/floor/plating/icefloor,
-/area/shuttle/elevator1/underground)
 "rqH" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/prison/bright_clean,
@@ -20469,12 +20401,6 @@
 /obj/item/device/cotablet/upp,
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/command)
-"rUT" = (
-/turf/open/floor/plating/icefloor{
-	dir = 4;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "rVr" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/morgue{
@@ -24341,12 +24267,6 @@
 /obj/item/storage/surgical_tray,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
-"uXK" = (
-/turf/open/floor/plating/icefloor{
-	dir = 5;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/ground)
 "uYe" = (
 /obj/item/stool{
 	icon_state = "stool_alt";
@@ -24947,10 +24867,7 @@
 	elevator_network = "dorm";
 	airlock_area = /area/shuttle/elevator2/ground
 	},
-/turf/open/floor/plating/icefloor{
-	dir = 10;
-	icon_state = "warnplate"
-	},
+/turf/open/floor/plating,
 /area/shuttle/elevator1/ground)
 "vvq" = (
 /obj/effect/decal/warning_stripes{
@@ -27499,12 +27416,6 @@
 /obj/structure/window/framed/upp/grey,
 /turf/open/floor/strata/floor3,
 /area/binhai/main/atmos)
-"xxE" = (
-/turf/open/floor/plating/icefloor{
-	dir = 4;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "xxG" = (
 /turf/open/floor/prison/bright_clean,
 /area/binhai/main/diner)
@@ -27640,12 +27551,6 @@
 	opacity = 0
 	},
 /area/binhai/other/ship1)
-"xCy" = (
-/turf/open/floor/plating/icefloor{
-	dir = 6;
-	icon_state = "warnplate"
-	},
-/area/shuttle/elevator1/underground)
 "xCH" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -60390,7 +60295,7 @@ xnw
 xnw
 xnw
 epO
-mZp
+aZA
 uGw
 rkC
 kMR
@@ -63367,10 +63272,10 @@ lCV
 lCV
 gCb
 aaW
-qSa
-ddv
-ddv
-ddv
+ofR
+ofR
+ofR
+ofR
 vuM
 aaW
 pdO
@@ -63609,10 +63514,10 @@ lCV
 jVy
 tYL
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 pnM
 rNX
@@ -63851,10 +63756,10 @@ lCV
 jVy
 bHR
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 vVO
 cMh
@@ -64093,10 +63998,10 @@ lCV
 lCV
 lCV
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 izA
 bBn
@@ -64335,10 +64240,10 @@ ufk
 qBi
 ufk
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 sED
 vOW
@@ -64577,10 +64482,10 @@ ufk
 qBi
 qBi
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 izA
 cMh
@@ -64819,10 +64724,10 @@ ufk
 qBi
 ufk
 aaW
-qbU
-fIU
-fIU
-fIU
+ofR
+ofR
+ofR
+ofR
 ofR
 aaW
 tSl
@@ -65061,11 +64966,11 @@ qBi
 qBi
 ufk
 aaW
-uXK
-rUT
-rUT
-rUT
-gkd
+ofR
+ofR
+ofR
+ofR
+ofR
 aaW
 kWZ
 qBi
@@ -99880,10 +99785,10 @@ eQf
 xhs
 cqg
 kKS
-ggF
-fVS
-fVS
-fVS
+dDY
+dDY
+dDY
+dDY
 osZ
 kKS
 fdv
@@ -100122,10 +100027,10 @@ eQf
 wcV
 jgt
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 ikc
 qdz
@@ -100364,10 +100269,10 @@ oFy
 tzS
 dnu
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 rtD
 hVC
@@ -100606,10 +100511,10 @@ cqg
 wdG
 oGu
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 ugF
 aTb
@@ -100848,10 +100753,10 @@ xhs
 jLX
 pQa
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 ugF
 qSK
@@ -101090,10 +100995,10 @@ stS
 stS
 eBI
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 ugF
 fdv
@@ -101332,10 +101237,10 @@ bOm
 bOm
 nPF
 kKS
-dWJ
-rqv
-rqv
-rqv
+dDY
+dDY
+dDY
+dDY
 dDY
 kKS
 jlv
@@ -101574,11 +101479,11 @@ hhi
 yiG
 gxN
 kKS
-ceh
-xxE
-xxE
-xxE
-xCy
+dDY
+dDY
+dDY
+dDY
+dDY
 kKS
 gzO
 aTb
