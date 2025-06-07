@@ -22,6 +22,13 @@
 		/datum/equipment_preset/mercenary/sentinel = 4,
 	)
 
+/datum/human_ai_squad_preset/mercs/riot
+	name = "Sentinel Riot Team"
+	desc = "A sentinel riot team, consisting of two sentinels armed with pistols, riot shields and light armour."
+	ai_to_spawn = list(
+		/datum/equipment_preset/mercenary/sentinel/riot = 2,
+	)
+
 /datum/human_ai_squad_preset/mercs/response
 	name = "Sentinel Response Team"
 	desc = "A team of sentinels armed with better equipment and armour to respond to hostile action, though their weapon makeup is the same."
@@ -31,9 +38,10 @@
 
 /datum/human_ai_squad_preset/mercs/response/squad
 	name = "Sentinel Response Squad"
-	desc = "A squad of sentinels, better armed to respond to hostile action. With better armour and equipment, they're a tougher foe to go up against."
+	desc = "A squad of sentinels, better armed to respond to hostile action. With better armour and equipment, they're a tougher foe to go up against, with a squad leader with an M20CW Carbine as well."
 	ai_to_spawn = list(
-		/datum/equipment_preset/mercenary/sentinel/response = 4,
+		/datum/equipment_preset/mercenary/sentinel/response = 3,
+		/datum/equipment_preset/mercenary/sentinel/response/carbine = 1,
 	)
 
 /datum/human_ai_squad_preset/mercs/response/command

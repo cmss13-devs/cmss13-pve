@@ -16,15 +16,25 @@
 	desc = "The primary infantryman for the Black Dragoons, equipped with a modified FP9000 SMG and pistol."
 	path = /datum/equipment_preset/mercenary/sentinel
 
+/datum/human_ai_equipment_preset/mercenaries/sentinel/riot
+	name = "Black Dragoons Sentinel (Riot)"
+	desc = "The primary infantryman for the Black Dragoons, equipped with a pistol and riot shield."
+	path = /datum/equipment_preset/mercenary/sentinel/riot
+
+/datum/human_ai_equipment_preset/mercenaries/sentinel/riot/grenadier
+	name = "Black Dragoons Sentinel (Riot, Grenadier)"
+	desc = "The primary infantryman for the Black Dragoons, equipped with a pistol and grenade launcher."
+	path = /datum/equipment_preset/mercenary/sentinel/riot/grenadier
+
 /datum/human_ai_equipment_preset/mercenaries/sentinel/response
 	name = "Black Dragoons Sentinel (Response, SMG)"
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a modified FP9000 and pistol."
 	path = /datum/equipment_preset/mercenary/sentinel/response
 
-/datum/human_ai_equipment_preset/mercenaries/sentinel/response/grenadier
-	name = "Black Dragoons Sentinel (Response, Grenade Launcher)"
-	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a grenade launcher and pistol."
-	path = /datum/equipment_preset/mercenary/sentinel/response/grenadier
+/datum/human_ai_equipment_preset/mercenaries/sentinel/response
+	name = "Black Dragoons Sentinel (Response, Carbine)"
+	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with an M20CW Carbine and pistol."
+	path = /datum/equipment_preset/mercenary/sentinel/response
 
 /datum/human_ai_equipment_preset/mercenaries/supervisor
 	name = "Black Dragoons Supervisor (Unequipped)"
@@ -32,8 +42,13 @@
 	path = /datum/equipment_preset/mercenary/supervisor
 
 /datum/human_ai_equipment_preset/mercenaries/supervisor/equipped
+	name = "Black Dragoons Supervisor (Equipped)"
+	desc = "An NCO for the Black Dragoons, armed and ready for some basic patrols and on-site incidents. Armed with an M20CW Carbine and revolver."
+	path = /datum/equipment_preset/mercenary/supervisor/patrol
+
+/datum/human_ai_equipment_preset/mercenaries/supervisor/equipped/response
 	name = "Black Dragoons Supervisor (Response)"
-	desc = "An NCO for the Black Dragoons, armed and ready to lead their platoon to victory. Equipped with a modified FP9000 and revolver."
+	desc = "An NCO for the Black Dragoons, armed and ready to lead their platoon to victory. Equipped with a modified M20CW Carbine and revolver."
 	path = /datum/equipment_preset/mercenary/supervisor/response
 
 /datum/human_ai_equipment_preset/mercenaries/synth
@@ -55,3 +70,8 @@
 	name = "Black Dragoons Bulwark (Heavy Response Suppressor)"
 	desc = "A heavily armoured and well equipped operative meant to act as shock troops against hostiles that Sentinels are unable to handle. This one has a machinegun."
 	path = /datum/equipment_preset/mercenary/bulwark/machinegun
+
+/datum/human_ai_equipment_preset/mercenaries/infiltrator
+	name = "Black Dragoons Infiltrator"
+	desc = "Black Dragoons' only force of stealth operatives, equipped for maximum manuverability and to strike fear in anyone who gets in their way."
+	path = /datum/equipment_preset/mercenary/synth
