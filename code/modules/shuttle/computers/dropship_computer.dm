@@ -205,7 +205,7 @@
 		var/obj/docking_port/mobile/maybe_dropship = landing_zone.get_docked()
 
 		if(maybe_dropship)
-			to_chat(xeno, SPAN_NOTICE("A metal bird already is here."))
+			to_chat(xeno, SPAN_NOTICE("A dropship already is here."))
 			return
 
 		var/conflicting_transit = FALSE
@@ -215,13 +215,12 @@
 				break
 
 		if(conflicting_transit)
-			to_chat(xeno, SPAN_NOTICE("A metal bird is already coming."))
+			to_chat(xeno, SPAN_NOTICE("A dropship is already coming."))
 			return
 
 		playsound(loc, 'sound/machines/terminal_success.ogg', KEYBOARD_SOUND_VOLUME, 1)
 		if(shuttle.mode == SHUTTLE_IDLE && !is_ground_level(shuttle.z))
 			if(istype(shuttle.get_docked(), /obj/docking_port/stationary/marine_dropship/airlock))
-				var/number_to_call = 0
 				var/dock = shuttle.get_docked()
 				var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock
 				if(istype(dock, /obj/docking_port/stationary/marine_dropship/airlock/inner))
@@ -229,33 +228,17 @@
 				else if(istype(dock, /obj/docking_port/stationary/marine_dropship/airlock/outer))
 					var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_airlock = dock
 					inner_airlock = outer_airlock.linked_inner
+				if(!inner_airlock.allow_processing_to_end)
+					to_chat(xeno, "The shuttle is already exiting the airlocks. Have patience.")
 				inner_airlock.processing = TRUE
-				inner_airlock.disable_manual_input = TRUE
-
-				if(inner_airlock.open_outer_airlock)
-					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-					number_to_call += 1
-				if(inner_airlock.lowered_dropship)
-					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-					number_to_call += 1
-				else
-					inner_airlock.update_inner_airlock(TRUE, TRUE)
-					number_to_call += 1
-					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_dropship_height), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-					number_to_call += 1
-					addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-					number_to_call += 1
-				addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-				number_to_call += 1
-				addtimer(CALLBACK(inner_airlock, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_clamps), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
-				number_to_call += 1
+				inner_airlock.allow_processing_to_end = FALSE
+				var/time_to_airlock_process = inner_airlock.force_process(DROPSHIP_AIRLOCK_GO_DOWN)
 				log_ares_flight("Unknown", "Safety override exit signal for [inner_airlock.name] received. Authentication garbled.")
 				log_ares_security("Security Alert", "Safety override exit signal for [inner_airlock.name] received. Authentication garbled.")
-				to_chat(xeno, "You command-override the airlock to begin exiting the shuttle with all speed. The screen reads T-[number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD * 0.1]...")
-				addtimer(CALLBACK(src, PROC_REF(alien_call_dropship), xeno, shuttle, inner_airlock), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+				to_chat(xeno, "You command-override the airlock to begin exiting the shuttle with all speed. The screen reads T-[time_to_airlock_process * 0.1]...")
+				addtimer(CALLBACK(src, PROC_REF(alien_call_dropship), xeno, shuttle, inner_airlock), time_to_airlock_process + DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 			else
 				alien_call_dropship(xeno, shuttle)
-
 		if(shuttle.destination && shuttle.destination.id != linked_lz)
 			to_chat(xeno, "The shuttle not ready. The screen reads T-[shuttle.timeLeft(10)]. Have patience.")
 			return
@@ -270,14 +253,17 @@
 			return
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/proc/alien_call_dropship(mob/living/carbon/xenomorph/xeno, obj/docking_port/mobile/shuttle, obj/docking_port/stationary/marine_dropship/airlock/inner/inner_airlock)
+	if(!linked_lz)
+		to_chat(xeno, SPAN_WARNING("ERROR. NO LINKED LZ."))
+		return
 	var/result = SSshuttle.moveShuttle(shuttleId, linked_lz, TRUE)
 	if(result != DOCKING_SUCCESS)
-		to_chat(xeno, SPAN_WARNING("The metal bird can not land here. It might be currently occupied!"))
+		to_chat(xeno, SPAN_WARNING("The dropship can not land here. It might be currently occupied!"))
 		return
 	if(inner_airlock)
-		inner_airlock.disable_manual_input = FALSE
-	to_chat(xeno, SPAN_NOTICE("You command the metal bird to come down. Clever girl."))
-	xeno_announcement(SPAN_XENOANNOUNCE("Our Queen has commanded the metal bird to the hive at [linked_lz]."), xeno.hivenumber, XENO_GENERAL_ANNOUNCE)
+		inner_airlock.allow_processing_to_end = TRUE
+	to_chat(xeno, SPAN_NOTICE("You command the dropship to come down. Clever girl."))
+	xeno_announcement(SPAN_XENOANNOUNCE("Our Queen has commanded the dropship to the hive at [linked_lz]."), xeno.hivenumber, XENO_GENERAL_ANNOUNCE)
 	log_ares_flight("Unknown", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
 	log_ares_security("Security Alert", "Remote launch signal for [shuttle.name] received. Authentication garbled.")
 	return
@@ -289,6 +275,7 @@
 		shuttleId = pick(alternatives)["id"]
 
 	var/obj/docking_port/mobile/marine_dropship/dropship = SSshuttle.getShuttle(shuttleId)
+	var/obj/docking_port/stationary/marine_dropship/docked_port = dropship?.get_docked()
 
 	// If the attacking xeno isn't the queen.
 	if(xeno.hive_pos != XENO_QUEEN)
@@ -305,6 +292,37 @@
 
 	if(!is_ground_level(z))
 		// "you" rather than "we" for this one since non-queen castes will have returned above.
+		if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock))
+			xeno.animation_attack_on(src)
+			to_chat(xeno, SPAN_XENONOTICE("You slash at the terminal, the screen flickers."))
+			playsound(loc, 'sound/machines/terminal_shutdown.ogg', 20)
+			if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock/outer))
+				var/obj/docking_port/stationary/marine_dropship/airlock/outer/outer_dock = docked_port
+				outer_dock.linked_inner.update_outer_airlock(FALSE, TRUE)
+				outer_dock.linked_inner.allow_processing_to_end = FALSE
+			if(istype(docked_port, /obj/docking_port/stationary/marine_dropship/airlock/inner))
+				var/obj/docking_port/stationary/marine_dropship/airlock/inner/inner_dock = docked_port
+				inner_dock.update_inner_airlock(FALSE, TRUE)
+				inner_dock.allow_processing_to_end = FALSE
+			return XENO_NONCOMBAT_ACTION
+
+		if(docked_port == dropship?.assigned_transit && dropship?.mode == SHUTTLE_IDLE)
+			if(linked_lz)
+				alien_call_dropship(xeno, dropship)
+				return XENO_NONCOMBAT_ACTION
+			for(var/obj/docking_port/stationary/possible_lz as anything in compatible_landing_zones)
+				if(!possible_lz.registered)
+					continue
+				if(possible_lz.get_docked())
+					continue
+				var/result = SSshuttle.moveShuttle(shuttleId, possible_lz.id, TRUE)
+				if(result == DOCKING_SUCCESS)
+					to_chat(xeno, SPAN_XENONOTICE("You command the dropship elsewhere!"))
+					return XENO_NONCOMBAT_ACTION
+				break
+			to_chat(xeno, SPAN_WARNING("You are clueless of where to send the dropship. Maybe Queen Mother can help?"))
+			return XENO_NONCOMBAT_ACTION
+
 		to_chat(xeno, SPAN_NOTICE("Lights flash from the terminal but you can't comprehend their meaning."))
 		playsound(loc, 'sound/machines/terminal_error.ogg', KEYBOARD_SOUND_VOLUME, TRUE)
 		return XENO_NONCOMBAT_ACTION
@@ -329,7 +347,7 @@
 		stop_playing_launch_announcement_alarm()
 
 		to_chat(xeno, SPAN_XENONOTICE("You override the doors."))
-		xeno_message(SPAN_XENOANNOUNCE("The doors of the metal bird have been overridden! Rejoice!"), 3, xeno.hivenumber)
+		xeno_message(SPAN_XENOANNOUNCE("The doors of the dropship have been overridden! Rejoice!"), 3, xeno.hivenumber)
 		message_admins("[key_name(xeno)] has locked the dropship '[dropship]'", xeno.x, xeno.y, xeno.z)
 		notify_ghosts(header = "Dropship Locked", message = "[xeno] has locked [dropship]!", source = xeno, action = NOTIFY_ORBIT)
 		return
