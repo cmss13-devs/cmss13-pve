@@ -2144,6 +2144,12 @@
 /obj/structure/machinery/processor,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"hF" = (
+/obj/structure/bookcase{
+	icon_state = "book-5"
+	},
+/turf/open/floor/interior/wood/alt,
+/area/Greenvault_Ranch/outside/wildplace)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/mini/chest,
@@ -2646,6 +2652,12 @@
 /obj/structure/sign/safety/food_storage,
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"jz" = (
+/obj/structure/surface/table/woodentable,
+/obj/item/paper_bin,
+/obj/item/tool/pen/blue/clicky,
+/turf/open/floor/interior/wood/alt,
+/area/Greenvault_Ranch/outside/wildplace)
 "jA" = (
 /turf/open/floor/prison/darkyellow2/east,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -3034,6 +3046,7 @@
 "kP" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/ammo_box/magazine/misc/mre/upp/empty,
+/obj/item/tool/pen,
 /turf/open/floor/interior/wood/alt,
 /area/Greenvault_Ranch/outside/wildplace)
 "kS" = (
@@ -22192,8 +22205,8 @@ tF
 tF
 tF
 tF
-nH
-nH
+aO
+aO
 aO
 aO
 aO
@@ -47149,7 +47162,7 @@ sQ
 sQ
 sQ
 QL
-PD
+hF
 PD
 Qr
 PD
@@ -47341,7 +47354,7 @@ sQ
 eS
 eS
 eS
-PD
+hF
 PD
 eS
 eS
@@ -47921,7 +47934,7 @@ PD
 QR
 PD
 zw
-hv
+jz
 hv
 eS
 sg
