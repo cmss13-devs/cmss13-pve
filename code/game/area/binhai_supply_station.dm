@@ -105,7 +105,7 @@
 	icon_state = "green"
 /area/binhai/basemil/upperarmory
 	name = "Military Block - Armory"
-	icon_state = "secure armory"
+	icon_state = "armory"
 	minimap_color = MINIMAP_AREA_SEC
 //===============================================================================CAVES
 /area/binhai/caves/main
