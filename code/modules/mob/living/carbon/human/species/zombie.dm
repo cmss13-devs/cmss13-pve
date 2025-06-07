@@ -45,19 +45,11 @@
 	zombie.faction = FACTION_ZOMBIE
 	zombie.faction_group = list(FACTION_ZOMBIE)
 
-	if(zombie.l_hand) zombie.drop_inv_item_on_ground(zombie.l_hand, FALSE, TRUE)
-	if(zombie.r_hand) zombie.drop_inv_item_on_ground(zombie.r_hand, FALSE, TRUE)
 	if(zombie.wear_id) qdel(zombie.wear_id)
 	if(zombie.gloves) zombie.drop_inv_item_on_ground(zombie.gloves, FALSE, TRUE)
 	if(zombie.head) zombie.drop_inv_item_on_ground(zombie.head, FALSE, TRUE)
-	if(zombie.glasses) zombie.drop_inv_item_on_ground(zombie.glasses, FALSE, TRUE)
 	if(zombie.wear_mask) zombie.drop_inv_item_on_ground(zombie.wear_mask, FALSE, TRUE)
-
-	var/obj/item/weapon/zombie_claws/ZC = new(zombie)
-	ZC.icon_state = "claw_r"
-	zombie.equip_to_slot_or_del(ZC, WEAR_R_HAND, TRUE)
-	zombie.equip_to_slot_or_del(new /obj/item/weapon/zombie_claws(zombie), WEAR_L_HAND, TRUE)
-	zombie.equip_to_slot_or_del(new /obj/item/clothing/glasses/zombie_eyes(zombie), WEAR_EYES, TRUE)
+	equip_zombie_items(zombie) // Handles held items -> claws and glasses -> zombie "eyes"
 
 	var/datum/disease/black_goo/zombie_infection = locate() in zombie.viruses
 	if(!zombie_infection)
@@ -74,6 +66,7 @@
 /datum/species/zombie/post_species_loss(mob/living/carbon/human/zombie)
 	..()
 	remove_from_revive(zombie)
+	unequip_zombie_items(zombie)
 	var/datum/mob_hud/Hu = GLOB.huds[MOB_HUD_MEDICAL_OBSERVER]
 	Hu.remove_hud_from(zombie, zombie)
 
@@ -114,6 +107,7 @@
 /datum/species/zombie/proc/revive_from_death(mob/living/carbon/human/zombie)
 	if(zombie && zombie.loc && zombie.stat == DEAD)
 		zombie.revive(TRUE)
+		equip_zombie_items(zombie)
 		zombie.apply_effect(4, STUN)
 
 		zombie.make_jittery(500)
@@ -160,3 +154,21 @@
 		if(receiving_client)
 			receiving_client.mob.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>Beheaded...</u></span><br>Your corpse will no longer rise.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
+
+/datum/species/zombie/proc/equip_zombie_items(mob/living/carbon/human/zombie)
+	// Drop previous items
+	if(zombie.l_hand) zombie.drop_inv_item_on_ground(zombie.l_hand, FALSE, TRUE)
+	if(zombie.r_hand) zombie.drop_inv_item_on_ground(zombie.r_hand, FALSE, TRUE)
+	if(zombie.glasses) zombie.drop_inv_item_on_ground(zombie.glasses, FALSE, TRUE)
+
+	// Equip claws and "eyes"
+	var/obj/item/weapon/zombie_claws/ZC = new(zombie)
+	ZC.icon_state = "claw_r"
+	zombie.equip_to_slot_or_del(ZC, WEAR_R_HAND, TRUE)
+	zombie.equip_to_slot_or_del(new /obj/item/weapon/zombie_claws(zombie), WEAR_L_HAND, TRUE)
+	zombie.equip_to_slot_or_del(new /obj/item/clothing/glasses/zombie_eyes(zombie), WEAR_EYES, TRUE)
+
+/datum/species/zombie/proc/unequip_zombie_items(mob/living/carbon/human/zombie)
+	if(istype(zombie.l_hand, /obj/item/weapon/zombie_claws)) qdel(zombie.l_hand)
+	if(istype(zombie.r_hand, /obj/item/weapon/zombie_claws)) qdel(zombie.r_hand)
+	if(istype(zombie.glasses, /obj/item/clothing/glasses/zombie_eyes)) qdel(zombie.glasses)
