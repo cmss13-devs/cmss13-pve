@@ -926,7 +926,7 @@
 	pixel_x = -26;
 	pixel_y = 28;
 	id = "Pod6";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -1140,7 +1140,7 @@
 	pixel_x = 26;
 	pixel_y = 28;
 	id = "Pod6";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -2112,10 +2112,7 @@
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/halls)
 "fw" = (
-/obj/structure/machinery/power/smes/buildable{
-	capacity = 1e+006;
-	dir = 1
-	},
+/obj/structure/machinery/power/smes,
 /turf/open/floor/almayer/tcomms,
 /area/redemptionvalley/valleyroof/engi)
 "fx" = (
@@ -2191,7 +2188,7 @@
 	pixel_x = -26;
 	pixel_y = 28;
 	id = "Pod2";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -2458,9 +2455,6 @@
 /area/redemptionvalley/caverns/east)
 "gz" = (
 /obj/structure/machinery/cm_vending/sorted/medical,
-/obj/structure/machinery/light/blue{
-	dir = 4
-	},
 /turf/open/floor/almayer/sterile_green,
 /area/redemptionvalley/outpost/medical)
 "gA" = (
@@ -3007,10 +3001,6 @@
 /obj/structure/sink{
 	pixel_y = 22
 	},
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
-	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/company)
 "hT" = (
@@ -3208,7 +3198,7 @@
 	pixel_x = 26;
 	pixel_y = 28;
 	id = "Pod8";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -4579,6 +4569,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/armory)
+"me" = (
+/obj/structure/mirror{
+	pixel_x = 7
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/redemptionvalley/valleyroof/admin)
 "mf" = (
 /obj/structure/noticeboard{
 	pixel_y = 30
@@ -4779,6 +4775,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/proper)
+"mH" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -11
+	},
+/turf/open/floor/prison/sterile_white,
+/area/redemptionvalley/valleyroof/admin)
 "mI" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -4863,6 +4866,12 @@
 "mU" = (
 /turf/open/floor,
 /area/redemptionvalley/outpost/elevup)
+"mV" = (
+/obj/structure/mirror{
+	pixel_x = 7
+	},
+/turf/closed/wall/strata_outpost/reinforced,
+/area/redemptionvalley/valleyroof/company)
 "mW" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -4910,6 +4919,13 @@
 /obj/effect/spawner/random/tool,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/housefive)
+"nc" = (
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/turf/open/floor/kutjevo/tan/multi_tiles/west,
+/area/redemptionvalley/valleyroof/company)
 "nd" = (
 /obj/structure/platform{
 	density = 0;
@@ -5186,6 +5202,11 @@
 	},
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/armory)
+"nL" = (
+/obj/structure/bed/roller/hospital_empty/bigrollerempty2,
+/obj/structure/curtain/medical,
+/turf/open/floor/almayer/dark_sterile,
+/area/redemptionvalley/outpost/medical)
 "nM" = (
 /obj/structure/bed/chair{
 	dir = 1;
@@ -5654,7 +5675,7 @@
 	pixel_x = -24;
 	pixel_y = 28;
 	id = "Pod3";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -7172,7 +7193,7 @@
 	pixel_x = -26;
 	pixel_y = 28;
 	id = "Pod4";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -7606,7 +7627,7 @@
 	pixel_x = -24;
 	pixel_y = 28;
 	id = "Pod5";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -8074,15 +8095,6 @@
 "vx" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
-"vy" = (
-/obj/structure/machinery/door_control{
-	pixel_x = -24;
-	pixel_y = -22;
-	id = "CivArmory";
-	name = "/improper Shutters"
-	},
-/turf/open/floor/prison,
-/area/redemptionvalley/valleyroof/security)
 "vz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -8684,7 +8696,7 @@
 /obj/structure/stairs/perspective{
 	dir = 4;
 	icon_state = "p_stair_sn_full_cap";
-	pixel_x = 20
+	pixel_x = 22
 	},
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/proper)
@@ -8759,12 +8771,11 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/east)
 "xv" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	name = "/improper Armory Shutters";
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Armory";
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/outpost/armory)
 "xw" = (
@@ -11146,7 +11157,7 @@
 	pixel_x = -24;
 	pixel_y = 28;
 	id = "Pod7";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -11455,13 +11466,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/redemptionvalley/outpost/elevup)
-"Ff" = (
-/obj/structure/machinery/light/blue{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer,
-/area/redemptionvalley/outpost/halls)
 "Fg" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#8B7B5B"
@@ -11962,7 +11966,7 @@
 	pixel_x = 26;
 	pixel_y = 28;
 	id = "Pod4";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -12539,8 +12543,8 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housesix)
 "In" = (
-/obj/structure/machinery/power/smes/buildable,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/smes,
 /turf/open/floor/almayer/tcomms,
 /area/redemptionvalley/outpost/engi)
 "Io" = (
@@ -12966,7 +12970,7 @@
 	pixel_x = -24;
 	pixel_y = -22;
 	id = "Pod3";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/machinery/light/small/blue{
@@ -13899,7 +13903,7 @@
 	pixel_x = 26;
 	pixel_y = 28;
 	id = "Pod4";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/stairs{
 	dir = 4
@@ -15330,7 +15334,7 @@
 	pixel_x = -24;
 	pixel_y = -22;
 	id = "Pod5";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/stairs,
 /obj/effect/decal/cleanable/dirt,
@@ -15654,8 +15658,8 @@
 "QF" = (
 /obj/structure/machinery/door_control{
 	pixel_x = 24;
-	id = "chen garage";
-	name = "Garage Door";
+	id = "Armory";
+	name = "Shutters";
 	pixel_y = 10
 	},
 /obj/structure/bed/chair{
@@ -15815,7 +15819,7 @@
 	pixel_x = -24;
 	pixel_y = -22;
 	id = "Pod3";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/machinery/light/small/blue{
 	dir = 8;
@@ -15861,8 +15865,7 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/cliff)
 "Rj" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer/open{
-	name = "/improper Armory Shutters";
+/obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Armory";
 	dir = 4
 	},
@@ -16062,10 +16065,6 @@
 "RO" = (
 /turf/closed/wall/r_wall/bunker,
 /area/redemptionvalley/outpost/entry)
-"RP" = (
-/obj/structure/machinery/light/blue,
-/turf/open/floor/almayer,
-/area/redemptionvalley/outpost/halls)
 "RQ" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -16474,7 +16473,7 @@
 	pixel_x = -24;
 	pixel_y = 28;
 	id = "CivArmory";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/red/north,
@@ -17441,7 +17440,7 @@
 	pixel_x = -26;
 	pixel_y = 28;
 	id = "Pod1";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
@@ -17642,7 +17641,7 @@
 	pixel_x = -26;
 	pixel_y = 28;
 	id = "Pod6";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -17883,10 +17882,6 @@
 	},
 /obj/structure/sink{
 	pixel_y = 22
-	},
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
 	},
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
@@ -18393,7 +18388,7 @@
 	pixel_x = 26;
 	pixel_y = 28;
 	id = "Pod2";
-	name = "/improper Shutters"
+	name = "Shutters"
 	},
 /obj/structure/machinery/light/small/blue{
 	dir = 1;
@@ -34172,7 +34167,7 @@ zu
 TZ
 yY
 am
-vy
+HF
 gr
 SW
 HF
@@ -46293,7 +46288,7 @@ Qr
 No
 Qr
 Ko
-Ko
+me
 Ko
 Ko
 Ko
@@ -46545,7 +46540,7 @@ zJ
 sC
 tz
 Ko
-ha
+mH
 FH
 Zm
 Cb
@@ -53153,11 +53148,11 @@ Pb
 Cx
 pd
 ld
-PX
+nL
 nl
 PX
 Nj
-PX
+nL
 pL
 Cx
 GX
@@ -53919,9 +53914,9 @@ cs
 EV
 QO
 LY
-Ff
+Nq
 Sb
-RP
+wl
 LY
 yO
 YB
@@ -54812,7 +54807,7 @@ do
 AF
 cK
 cK
-cK
+mV
 ee
 DA
 cK
@@ -54927,9 +54922,9 @@ lD
 ek
 hj
 LY
-vr
+wl
 dK
-RP
+wl
 LY
 GP
 oo
@@ -57075,7 +57070,7 @@ LI
 sJ
 eD
 cK
-XW
+nc
 XW
 SD
 Gi
