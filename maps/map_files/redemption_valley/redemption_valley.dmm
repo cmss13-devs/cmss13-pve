@@ -322,9 +322,6 @@
 	pixel_x = -5;
 	pixel_y = -3
 	},
-/obj/structure/machinery/light{
-	dir = 8
-	},
 /turf/open/floor/prison/blue/north,
 /area/redemptionvalley/valleyroof/admin)
 "aT" = (
@@ -1876,9 +1873,6 @@
 /obj/structure/machinery/light/blue,
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/redemptionvalley/outpost/brief)
-"eQ" = (
-/turf/open/auto_turf/strata_grass,
-/area/redemptionvalley/caverns/east)
 "eR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -2455,6 +2449,10 @@
 /area/redemptionvalley/caverns/east)
 "gz" = (
 /obj/structure/machinery/cm_vending/sorted/medical,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
 /turf/open/floor/almayer/sterile_green,
 /area/redemptionvalley/outpost/medical)
 "gA" = (
@@ -2555,7 +2553,7 @@
 	pixel_y = 9
 	},
 /obj/structure/barricade/metal{
-	layer = 3.1;
+	layer = 2;
 	pixel_x = -1
 	},
 /obj/structure/curtain/blue,
@@ -2831,8 +2829,7 @@
 "hs" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/computer/cameras{
-	colony_camera_mapload = 0;
-	network = list("Sekhmet");
+	network = list("Redemption Outpost");
 	dir = 8;
 	layer = 2.96;
 	pixel_y = 3;
@@ -4780,6 +4777,9 @@
 	dir = 8;
 	pixel_x = -11
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/admin)
 "mI" = (
@@ -5785,6 +5785,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "ps" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/prison/kitchen,
 /area/redemptionvalley/valleyroof/laundro)
 "pt" = (
@@ -5966,6 +5969,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/redemptionvalley/outpost/engi)
+"pN" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost")
+	},
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
 "pO" = (
 /obj/structure/barricade/handrail/type_b{
 	layer = 3.01;
@@ -6071,6 +6083,16 @@
 	},
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/canteen)
+"qb" = (
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost");
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/redemptionvalley/valley/checkpoint)
 "qc" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_ew_full_cap";
@@ -6126,6 +6148,13 @@
 	},
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/security)
+"qk" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
+/turf/open/auto_turf/strata_grass,
+/area/redemptionvalley/valley/checkpoint)
 "ql" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -6163,6 +6192,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valleyroof/cliffcomms)
+"qq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost")
+	},
+/turf/open/floor,
+/area/redemptionvalley/outpost/elevlow)
 "qr" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
@@ -6245,12 +6280,6 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housefive)
-"qB" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/white,
-/area/redemptionvalley/valleyroof/store)
 "qC" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/auto_turf/sand_white/layer0,
@@ -6373,6 +6402,13 @@
 	},
 /turf/open/asphalt,
 /area/redemptionvalley/valley/checkpoint)
+"qX" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost");
+	dir = 1
+	},
+/turf/open/floor/kutjevo/multi_tiles/west,
+/area/redemptionvalley/outpost/brief)
 "qY" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7327,6 +7363,9 @@
 /obj/effect/decal/strata_decals/grime/grime1{
 	pixel_x = 8
 	},
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/admin)
 "tv" = (
@@ -7410,6 +7449,13 @@
 	},
 /turf/open/asphalt,
 /area/redemptionvalley/valley/checkpoint)
+"tG" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/caverns/north)
 "tH" = (
 /obj/structure/machinery/autodoc_console{
 	dir = 1
@@ -7514,6 +7560,13 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/north)
+"tT" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
+/turf/open/asphalt/cement_darkened,
+/area/redemptionvalley/outpost/entry)
 "tU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -7810,6 +7863,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/redemptionvalley/outpost/brief)
+"uK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost");
+	dir = 4
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/valley/cliff)
 "uL" = (
 /obj/structure/surface/rack,
 /obj/item/storage/box/lightstick/red{
@@ -7832,6 +7893,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/checkpoint)
+"uN" = (
+/obj/structure/desertdam/decals/road_edge,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost");
+	dir = 4
+	},
+/turf/open/asphalt,
+/area/redemptionvalley/caverns/north)
 "uO" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin{
@@ -8057,6 +8127,13 @@
 /obj/structure/tent/big,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
+"vq" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
+/turf/open/floor,
+/area/redemptionvalley/outpost/halls)
 "vr" = (
 /obj/structure/machinery/light/blue{
 	dir = 1
@@ -8095,6 +8172,15 @@
 "vx" = (
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/redemptionvalley/valley/proper)
+"vy" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost")
+	},
+/turf/open/floor/almayer/mono,
+/area/redemptionvalley/outpost/elevup)
 "vz" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -8251,6 +8337,14 @@
 /obj/item/trash/chips,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/cliff)
+"vY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
+/turf/open/floor/almayer,
+/area/redemptionvalley/outpost/canteen)
 "vZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -8859,7 +8953,6 @@
 /area/redemptionvalley/valleyroof/cafe)
 "xJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light,
 /turf/open/floor/prison/greenblue/east,
 /area/redemptionvalley/valleyroof/laundro)
 "xK" = (
@@ -11162,9 +11255,6 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
 "Ej" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/prison/red/southeast,
 /area/redemptionvalley/valleyroof/security)
 "Ek" = (
@@ -12023,12 +12113,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/valleyroof/store)
-"GJ" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/prison/red/northeast,
-/area/redemptionvalley/valleyroof/security)
 "GK" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -12113,9 +12197,6 @@
 /area/redemptionvalley/outpost/halls)
 "GY" = (
 /obj/structure/bed/chair,
-/obj/structure/machinery/light{
-	dir = 1
-	},
 /turf/open/floor/wood,
 /area/redemptionvalley/valleyroof/admin)
 "GZ" = (
@@ -13044,9 +13125,6 @@
 /turf/open/asphalt/cement_darkened,
 /area/redemptionvalley/outpost/entry)
 "Jw" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
 /obj/structure/machinery/disposal,
 /turf/open/floor/prison/greenblue/west,
 /area/redemptionvalley/valleyroof/cafe)
@@ -14856,6 +14934,9 @@
 /obj/item/clothing/suit/storage/windbreaker/windbreaker_yellow{
 	pixel_x = -4
 	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/whitegreenfull,
 /area/redemptionvalley/valleyroof/store)
 "Oq" = (
@@ -15207,6 +15288,9 @@
 	pixel_x = -8;
 	pixel_y = 23
 	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost")
+	},
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/armory)
 "Pn" = (
@@ -15481,6 +15565,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Redemption Outpost");
+	dir = 4
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/redemptionvalley/outpost/flight)
 "Qe" = (
@@ -15653,6 +15741,10 @@
 /area/redemptionvalley/valley/proper)
 "QE" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	network = list("Redemption Outpost")
+	},
 /turf/open/floor/prison,
 /area/redemptionvalley/outpost/engi)
 "QF" = (
@@ -17270,6 +17362,9 @@
 /obj/item/ammo_box/magazine/misc/flashlight{
 	pixel_x = -8;
 	pixel_y = 14
+	},
+/obj/structure/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/redemptionvalley/valleyroof/security)
@@ -26663,7 +26758,7 @@ LI
 mT
 LI
 LI
-eQ
+LI
 Eh
 Eh
 Eh
@@ -26915,7 +27010,7 @@ LI
 rG
 rG
 LI
-eQ
+LI
 Eh
 Eh
 Eh
@@ -27167,7 +27262,7 @@ LI
 zu
 rG
 rG
-eQ
+LI
 Eh
 Eh
 Eh
@@ -27419,7 +27514,7 @@ LI
 zu
 LI
 LI
-eQ
+LI
 Eh
 Eh
 Eh
@@ -27671,7 +27766,7 @@ LI
 zu
 LI
 LI
-eQ
+LI
 Eh
 Eh
 Eh
@@ -28135,7 +28230,7 @@ Lt
 aK
 aK
 Op
-qB
+lj
 lj
 lj
 lj
@@ -33412,7 +33507,7 @@ TZ
 uD
 uD
 Vh
-GJ
+vv
 Oe
 ef
 fq
@@ -42574,7 +42669,7 @@ bB
 bB
 bB
 bB
-bB
+tG
 bB
 bB
 bB
@@ -43603,7 +43698,7 @@ ZX
 Bc
 Bc
 ZX
-qs
+pN
 Ss
 Ss
 jd
@@ -44851,7 +44946,7 @@ ZX
 Bc
 Bc
 ZX
-qs
+pN
 Ss
 qr
 Bz
@@ -46095,7 +46190,7 @@ Fo
 WA
 rl
 fk
-rl
+uN
 fk
 fk
 fk
@@ -48127,7 +48222,7 @@ wx
 fT
 fT
 wx
-qs
+pN
 hN
 PC
 cl
@@ -48393,7 +48488,7 @@ wx
 wx
 wx
 wx
-qs
+pN
 jG
 DK
 pV
@@ -50129,7 +50224,7 @@ ru
 ru
 ru
 ru
-om
+tT
 tA
 om
 om
@@ -50146,7 +50241,7 @@ Ot
 kl
 Ot
 Ot
-Ss
+qk
 Ss
 jp
 We
@@ -50912,7 +51007,7 @@ Ck
 Ck
 Ck
 Ck
-Ck
+qb
 oX
 Ss
 IO
@@ -51147,7 +51242,7 @@ Dh
 iX
 is
 cq
-cq
+qX
 EK
 bB
 Sf
@@ -52646,7 +52741,7 @@ rR
 rR
 GE
 rR
-rR
+vq
 rR
 GE
 rR
@@ -54551,7 +54646,7 @@ cK
 cK
 rQ
 Sy
-Jb
+bi
 oV
 lg
 cK
@@ -55158,7 +55253,7 @@ mF
 td
 TO
 Aw
-dR
+vY
 zN
 KB
 MB
@@ -56193,7 +56288,7 @@ aD
 hn
 DJ
 hn
-Yr
+qq
 al
 or
 hn
@@ -60955,7 +61050,7 @@ eE
 vV
 ye
 ye
-Ml
+vy
 Lf
 Lx
 Lf
@@ -63736,7 +63831,7 @@ bD
 bD
 vU
 Fp
-CK
+uK
 sX
 KJ
 sX
