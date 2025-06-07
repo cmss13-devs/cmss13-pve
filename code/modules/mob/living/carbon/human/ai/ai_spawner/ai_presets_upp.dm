@@ -11,6 +11,11 @@
 	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily."
 	path = /datum/equipment_preset/upp/machinegunner
 
+/datum/human_ai_equipment_preset/upp/at
+	name = "UPP Squad Anti-Tank"
+	desc = "..."
+	path = /datum/equipment_preset/upp/rifleman/at
+
 /datum/human_ai_equipment_preset/upp/combat_synth
 	name = "UPP Synthetic Commando"
 	desc = "A strong commando synthetic equipped with several weapons. Its durability and firepower lets it take on multiple marines at once."

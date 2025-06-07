@@ -60,3 +60,8 @@
 	name = "Zombie - CANC"
 	desc = "Communist Brains"
 	path = /datum/equipment_preset/zombie/canc
+
+/datum/human_ai_equipment_preset/zombie/cbrn
+	name = "Zombie - USCM CBRN"
+	desc = "Uuuggh..."
+	path = /datum/equipment_preset/zombie/cbrn

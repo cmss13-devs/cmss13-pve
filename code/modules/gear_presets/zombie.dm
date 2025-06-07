@@ -317,3 +317,40 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/upp(new_human), WEAR_R_STORE)
+
+
+/datum/equipment_preset/zombie/cbrn
+	name = "Zombie - USCM CBRN"
+
+/datum/equipment_preset/zombie/cbrn/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/cbrn(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/pve_mopp(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/cbrn(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/cbrn(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/mopp(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/five_slots(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert(new_human), WEAR_L_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/toxin(new_human), WEAR_L_STORE)
+
+	switch(pick("flamethrower", "mk2"))
+		if("flamethrower")
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/flamethrower/kit(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_BACK)
+
+		if("mk2")
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap(new_human), WEAR_IN_ACCESSORY)
+			new_human.equip_to_slot_or_del(new /obj/item/device/analyzer(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/device/reagent_scanner(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/geiger_counter(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/cleaner(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/bodybag(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/bodybag(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/bodybag(new_human), WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/bodybag(new_human), WEAR_IN_BACK)
