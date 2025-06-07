@@ -92,12 +92,6 @@
 "aal" = (
 /turf/open/floor/strata/floor3,
 /area/binhai/hab/study)
-"aam" = (
-/turf/open/floor/plating/icefloor{
-	dir = 1;
-	icon_state = "warnplate"
-	},
-/area/space)
 "aan" = (
 /obj/structure/sink{
 	dir = 1;
@@ -101064,7 +101058,7 @@ xhs
 jLX
 pQa
 kKS
-aam
+dWJ
 rqv
 rqv
 rqv
