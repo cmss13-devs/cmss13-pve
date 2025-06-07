@@ -41,14 +41,12 @@
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
-	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 /area/binhai/shuttles/drop2
 	name = "Military Block - Landing Pad"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
 	soundscape_playlist = SCAPE_PL_HANGAR
-	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 //==============================================================================BASEMIL
 /area/binhai/basemil/lower
 	name = "MSS Block - Operations Space"
