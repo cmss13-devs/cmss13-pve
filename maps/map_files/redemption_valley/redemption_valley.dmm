@@ -1873,6 +1873,13 @@
 /obj/structure/machinery/light/blue,
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/redemptionvalley/outpost/brief)
+"eQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/docking_port/stationary/marine_dropship/lz2{
+	name = "LZ2 - Military Clifftop"
+	},
+/turf/open/floor/almayer/mono,
+/area/redemptionvalley/shuttles/drop2)
 "eR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -66849,7 +66856,7 @@ LW
 LW
 LW
 SR
-LW
+eQ
 LW
 LW
 LW

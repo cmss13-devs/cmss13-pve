@@ -33,12 +33,14 @@
 	name = "Redemption Valley - Supply Pad"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
+	is_landing_zone = TRUE
 	minimap_color = MINIMAP_AREA_LZ
 /area/redemptionvalley/shuttles/drop2
 	name = "Military Base - Clifftop Landing Pad"
 	icon_state = "shuttle2"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
+	is_landing_zone = TRUE
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
 //=============================================================================================VALLEY
 /area/redemptionvalley/valley/proper
