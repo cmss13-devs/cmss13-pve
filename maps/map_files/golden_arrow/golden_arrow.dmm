@@ -2136,7 +2136,6 @@
 /area/golden_arrow/supply)
 "ahm" = (
 /obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
