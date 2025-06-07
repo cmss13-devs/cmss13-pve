@@ -1001,13 +1001,6 @@
 	},
 /turf/open/floor/almayer/sterile_green,
 /area/redemptionvalley/outpost/medical)
-"cJ" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "cK" = (
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/company)
@@ -2113,7 +2106,7 @@
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/halls)
 "fw" = (
-/obj/structure/machinery/power/smes,
+/obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer/tcomms,
 /area/redemptionvalley/valleyroof/engi)
 "fx" = (
@@ -2949,14 +2942,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/cliff)
-"hK" = (
-/obj/item/tool/shovel{
-	pixel_x = 8;
-	pixel_y = 20
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "hL" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
 /obj/effect/decal/cleanable/dirt,
@@ -4498,12 +4483,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/housefive)
-"lT" = (
-/obj/structure/barricade/sandbags/wired{
-	dir = 1
-	},
-/turf/open/auto_turf/strata_grass,
-/area/redemptionvalley/valley/checkpoint)
 "lU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
@@ -6287,6 +6266,12 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/redemptionvalley/valleyroof/housefive)
+"qB" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass,
+/area/redemptionvalley/valley/checkpoint)
 "qC" = (
 /obj/structure/cargo_container/wy/left,
 /turf/open/auto_turf/sand_white/layer0,
@@ -7084,12 +7069,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
-"sK" = (
-/obj/structure/barricade/sandbags/wired{
-	pixel_y = -6
-	},
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "sL" = (
 /obj/structure/sign/safety/elevator{
 	pixel_x = 15
@@ -7302,13 +7281,6 @@
 "tn" = (
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/Westbound)
-"to" = (
-/obj/structure/barricade/sandbags/wired{
-	pixel_y = -6
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/gm/dirt2,
-/area/redemptionvalley/valley/checkpoint)
 "tp" = (
 /obj/structure/bed/chair{
 	pixel_y = 3;
@@ -8048,7 +8020,11 @@
 /area/redemptionvalley/outpost/elevup)
 "vh" = (
 /obj/structure/barricade/sandbags/wired{
-	dir = 8
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	pixel_y = -6;
+	build_stage = 5
 	},
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/checkpoint)
@@ -8481,6 +8457,15 @@
 	},
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/housefour)
+"wr" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass,
+/area/redemptionvalley/valley/checkpoint)
 "ws" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
@@ -11954,13 +11939,6 @@
 /obj/structure/machinery/power/reactor/colony,
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/outpost/engi)
-"Gp" = (
-/obj/structure/platform/kutjevo/rock,
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/checkpoint)
 "Gq" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -12632,7 +12610,7 @@
 /area/redemptionvalley/valleyroof/housesix)
 "In" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/smes,
+/obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/almayer/tcomms,
 /area/redemptionvalley/outpost/engi)
 "Io" = (
@@ -12760,15 +12738,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
-"II" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/checkpoint)
 "IJ" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 2
@@ -14469,10 +14438,6 @@
 	},
 /turf/open/floor/almayer,
 /area/redemptionvalley/outpost/armory)
-"Ne" = (
-/obj/structure/platform/kutjevo/rock,
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/checkpoint)
 "Nf" = (
 /obj/structure/platform/shiva/catwalk,
 /obj/structure/prop/vehicles/crawler{
@@ -17466,12 +17431,6 @@
 "Vu" = (
 /turf/open/floor/prison/bright_clean,
 /area/redemptionvalley/valleyroof/housefour)
-"Vv" = (
-/obj/structure/barricade/sandbags/wired{
-	pixel_y = -6
-	},
-/turf/open/auto_turf/strata_grass,
-/area/redemptionvalley/valley/checkpoint)
 "Vw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -17567,12 +17526,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
-"VK" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/valley/checkpoint)
 "VL" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 4;
@@ -53039,8 +52992,8 @@ IO
 Da
 IO
 Ss
-qr
-jG
+Bz
+Ss
 Ss
 Ss
 Ss
@@ -53290,11 +53243,11 @@ Da
 IO
 Da
 IO
-jG
-to
-cJ
-hK
-IO
+Ss
+Bz
+Bz
+Bz
+Ss
 Ss
 SE
 SE
@@ -53543,11 +53496,11 @@ IO
 Da
 IO
 Ss
-sK
-pY
-qr
-Ne
-lT
+Ss
+Ss
+Bz
+jG
+Ss
 SE
 SE
 SE
@@ -53795,11 +53748,11 @@ Ie
 IO
 IO
 IO
-Vv
-II
-VK
-Gp
-lT
+Ss
+jG
+jG
+hH
+Ss
 Ss
 Ss
 SE
@@ -54048,8 +54001,8 @@ IO
 Da
 IO
 Ss
-vh
-vh
+wr
+qB
 vh
 Ss
 Ss
