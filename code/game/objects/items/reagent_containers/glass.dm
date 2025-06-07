@@ -390,6 +390,14 @@
 	reagents.add_reagent("chloralhydrate", 30)
 	update_icon()
 
+/obj/item/reagent_container/glass/beaker/vial/iron
+	name = "iron vial"
+
+/obj/item/reagent_container/glass/beaker/vial/iron/Initialize()
+	. = ..()
+	reagents.add_reagent("iron", 30)
+	update_icon()
+
 /obj/item/reagent_container/glass/beaker/vial/random
 	var/tier
 

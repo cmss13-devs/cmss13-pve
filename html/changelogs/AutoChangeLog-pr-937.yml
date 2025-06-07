@@ -1,0 +1,4 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - rscadd: "Buttons in the GM panel to spawn specific grenades/flares under \"Throwables\""
