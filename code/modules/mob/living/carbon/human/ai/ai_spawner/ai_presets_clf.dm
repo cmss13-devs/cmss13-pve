@@ -3,6 +3,11 @@
 
 //UA Rebels
 
+/datum/human_ai_equipment_preset/clf/ua/guerilla
+	name = "UA Rebel, Soldier (Pistol)"
+	desc = "Strapped with a nine."
+	path = /datum/equipment_preset/rebel/guerilla
+
 /datum/human_ai_equipment_preset/clf/ua/soldier
 	name = "UA Rebel, Soldier (Rifle)"
 	desc = "Armed with a M20A, L42A or very rarely a M41A. Even more rarely, will only be equipped with a M1911, M4A3 or VP70."
