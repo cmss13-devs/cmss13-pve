@@ -48,7 +48,7 @@
 	name = "Sentinel Response Command Team"
 	desc = "A sentinel and supervisor duo, alongside a Synthetic, responsible for the oversight of a sentinel response platoon."
 	ai_to_spawn = list(
-		/datum/equipment_preset/mercenary/sentinel/response = 1,
+		/datum/equipment_preset/mercenary/sentinel/response/medic = 1,
 		/datum/equipment_preset/mercenary/supervisor/response = 1,
 		/datum/equipment_preset/mercenary/synth/response = 1,
 	)

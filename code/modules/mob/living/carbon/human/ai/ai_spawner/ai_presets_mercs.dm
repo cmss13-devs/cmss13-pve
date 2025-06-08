@@ -2,9 +2,14 @@
 	faction = FACTION_MERCENARY
 
 /datum/human_ai_equipment_preset/mercenaries/grunt
-	name = "Black Dragoons Grunt"
+	name = "Black Dragoons Grunt (Technician)"
 	desc = "A basic grunt of the Black Dragoons mercenary company, mainly used for auxiliary services such as logistics and engineering."
 	path = /datum/equipment_preset/mercenary/grunt
+
+/datum/human_ai_equipment_preset/mercenaries/grunt/doctor
+	name = "Black Dragoons Grunt (Doctor)"
+	desc = "A basic grunt of the Black Dragoons mercenary company, mainly used for medical purposes."
+	path = /datum/equipment_preset/mercenary/grunt/doctor
 
 /datum/human_ai_equipment_preset/mercenaries/pilot
 	name = "Black Dragoons Pilot"
@@ -31,10 +36,15 @@
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a modified FP9000 and pistol."
 	path = /datum/equipment_preset/mercenary/sentinel/response
 
-/datum/human_ai_equipment_preset/mercenaries/sentinel/response
+/datum/human_ai_equipment_preset/mercenaries/sentinel/response/carbine
 	name = "Black Dragoons Sentinel (Response, Carbine)"
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with an M20CW Carbine and pistol."
-	path = /datum/equipment_preset/mercenary/sentinel/response
+	path = /datum/equipment_preset/mercenary/sentinel/response/carbine
+
+/datum/human_ai_equipment_preset/mercenaries/sentinel/response/medic
+	name = "Black Dragoons Sentinel (Response, Medic)"
+	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. This one is equipped with medical supplies and to act as the squad's medic."
+	path = /datum/equipment_preset/mercenary/sentinel/response/medic
 
 /datum/human_ai_equipment_preset/mercenaries/supervisor
 	name = "Black Dragoons Supervisor (Unequipped)"
