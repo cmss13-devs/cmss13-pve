@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "hAI using autoshotguns have dialed back their rate of fire from _insane_ to _reasonable but still threatening_"
+  - balance: "hAI UA & TWE rebel skillsets tweaked, making them no longer on-par or better than the basic player skillsets"
+  - bugfix: "hAI now toggle on their suit lights when in the dark once more"
