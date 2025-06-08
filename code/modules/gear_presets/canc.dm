@@ -123,6 +123,9 @@
 	name = "CANC Rebel, Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Machinegunner"
+	skills = /datum/skills/smartgunner
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+
 
 /datum/equipment_preset/canc/machinegunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
