@@ -55,7 +55,7 @@
 
 	var/list/uniform_sets = null
 
-	var/ai_looting = TRUE
+	var/ai_disallow_looting = FALSE
 
 
 

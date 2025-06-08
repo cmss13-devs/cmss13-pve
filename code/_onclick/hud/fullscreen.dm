@@ -209,6 +209,9 @@
 /atom/movable/screen/fullscreen/weather/high
 	icon_state = "impairedoverlay3"
 
+/atom/movable/screen/fullscreen/weather/sand
+	icon_state = "impairedoverlaysand"
+
 /atom/movable/screen/fullscreen/lighting_backdrop
 	icon = 'icons/mob/hud/screen1.dmi'
 	icon_state = "flash"

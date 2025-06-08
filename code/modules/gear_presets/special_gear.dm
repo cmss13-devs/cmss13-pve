@@ -379,7 +379,7 @@
 
 /datum/equipment_preset/other/ecoterrorist/grenadier
 	name = "Green Banner Grenadier"
-	ai_looting = FALSE
+	ai_disallow_looting = TRUE
 
 /datum/equipment_preset/other/ecoterrorist/grenadier/load_gear(mob/living/carbon/human/new_human)
 	var/uniform = pick(/obj/item/clothing/under/colonist/boilersuit/cyan, /obj/item/clothing/under/colonist/boilersuit/darkblue, /obj/item/clothing/under/colonist/boilersuit/khaki, /obj/item/clothing/under/colonist/boilersuit/grey)

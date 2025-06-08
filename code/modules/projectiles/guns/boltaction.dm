@@ -296,3 +296,42 @@
 
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/mk41
+	name = "\improper Mk41A pulse rifle"
+	desc = "With Japan and Great Britain both being founding members of Three World Empire, most of their strict gun control laws still apply to Imperial core worlds and even far-away colonies. This pump-action, 15 round, fixed stock abomination is a result of some civilian firearms manufacturer trying to live off the popularity of M41A design."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "mk41"
+	item_state = "m41amk1"
+	mouse_pointer = 'icons/effects/mouse_pointer/rifle_mouse.dmi'
+
+	flags_equip_slot = SLOT_BACK
+	w_class = SIZE_LARGE
+	force = 5
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
+	gun_category = GUN_CATEGORY_RIFLE
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/mk41
+	attachable_allowed = list(
+		/obj/item/attachable/stock/rifle/mk41,
+	)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/mk41)
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	civilian_usable_override = TRUE
+	indestructible = TRUE
+
+	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	fire_sound = 'sound/weapons/gun_m39.ogg'
+	open_bolt_sound = 'sound/weapons/handling/ugl_open.ogg'
+	close_bolt_sound = 'sound/weapons/handling/ugl_close.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+
+/obj/item/weapon/gun/boltaction/mk41/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/boltaction/mk41/fake
+	name = "\improper M41A pulse rifle"
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."

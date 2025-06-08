@@ -2193,6 +2193,15 @@ Defined in conflicts.dm of the #defines folder.
 	gun.recalculate_attachment_bonuses()
 	gun.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/rifle/mk41
+	name = "\improper M41A extendable stock"
+	desc = "Looks like this one has been modified and can no longer be collapsed."
+	hud_offset_mod = 5
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	icon_state = "m41_folding_on"
+	attach_icon = "m41_folding_a_on"
+
 /obj/item/attachable/stock/m20a
 	name = "\improper M20A stock"
 	desc = "The M20A's standard polymer collapsible stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
