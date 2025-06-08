@@ -376,6 +376,7 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 //REDEMPTION VALLEY//
 /obj/structure/flora/grass/tallgrass/crop
 	//color = COLOR_G_DES
+	name = "crop patch"
 	icon = 'icons/obj/structures/props/dam.dmi' //Override since the greyscale can't match
 	color = "#bfff00"
 	icon_state = "tallgrass"

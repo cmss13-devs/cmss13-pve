@@ -1773,7 +1773,9 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
 "eE" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = list()
+	},
 /turf/open/floor/plating,
 /area/redemptionvalley/outpost/elevup)
 "eF" = (
@@ -4668,7 +4670,9 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/valley/cliff)
 "mu" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = list()
+	},
 /turf/open/floor/plating,
 /area/redemptionvalley/outpost/engi)
 "mv" = (
@@ -7697,13 +7701,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/redemptionvalley/valleyroof/storage)
-"ur" = (
-/obj/structure/platform{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/mono,
-/area/redemptionvalley/shuttles/drop2)
 "us" = (
 /obj/structure/flora/grass/tallgrass/crop/corner{
 	dir = 5
@@ -8779,7 +8776,7 @@
 /obj/structure/stairs/perspective{
 	dir = 4;
 	icon_state = "p_stair_sn_full_cap";
-	pixel_x = 22
+	pixel_x = 16
 	},
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/proper)
@@ -13830,7 +13827,9 @@
 /turf/open/floor/almayer/mono,
 /area/redemptionvalley/shuttles/drop2)
 "LC" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = list()
+	},
 /turf/open/floor/plating,
 /area/redemptionvalley/outpost/elevlow)
 "LD" = (
@@ -17614,12 +17613,6 @@
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/plating,
 /area/redemptionvalley/valleyroof/housefive)
-"Wc" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/almayer/mono,
-/area/redemptionvalley/shuttles/drop2)
 "Wd" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
 /obj/effect/decal/cleanable/dirt,
@@ -66275,7 +66268,7 @@ LW
 LW
 SR
 ST
-ur
+ST
 DR
 tK
 zk
@@ -66770,8 +66763,8 @@ LW
 LW
 LW
 SR
-eQ
 LW
+eQ
 LW
 LW
 LW
@@ -67283,7 +67276,7 @@ LW
 rE
 LW
 mC
-Wc
+mC
 ng
 mt
 lh
