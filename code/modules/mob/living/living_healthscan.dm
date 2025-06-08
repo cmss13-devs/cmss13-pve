@@ -115,7 +115,8 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		"blood_amount" = target_mob.blood_volume,
 		"holocard" = get_holo_card_color(target_mob),
 		"hugged" = (locate(/obj/item/alien_embryo) in target_mob),
-		"ui_mode" = ui_mode
+		"ui_mode" = ui_mode,
+		"time" = worldtime2text("hh:mm:ss")
 	)
 
 	var/internal_bleeding = FALSE //do they have internal bleeding anywhere
@@ -212,7 +213,8 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				"bleeding" = bleeding_check,
 				"implant" = implant,
 				"internal_bleeding" = internal_bleeding_check,
-				"arterial_bleeding" = arterial_bleeding_check
+				"arterial_bleeding" = arterial_bleeding_check,
+				"time" = worldtime2text("hh:mm:ss")
 			)
 			//broken-ness and splints
 			var/limb_status = null
@@ -506,6 +508,10 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 					ui_mode = UI_MODE_MINIMAL
 				if(UI_MODE_MINIMAL)
 					ui_mode = UI_MODE_CLASSIC
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.last_scan["ui_mode"] = !analyzer.last_scan["ui_mode"]
+				analyzer.tgui_interact(ui.user)
 			return TRUE
 		if("previous_scan")
 			if(ishuman(target_mob))
@@ -515,12 +521,16 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 					analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan - 1, 1,analyzer.buffer_for_report.len)
 					analyzer.tgui_interact(ui.user)
 					return TRUE
+				else
+					to_chat(ui.user, "This device does not support this.")
 		if("next_scan")
 			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
 				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
 				analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan + 1, 1,analyzer.buffer_for_report.len)
 				analyzer.tgui_interact(ui.user)
 				return TRUE
+			else
+				to_chat(ui.user, "This device does not support this.")
 		if("print_scan")
 			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
 				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
@@ -530,6 +540,17 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				var/obj/structure/machinery/body_scanconsole/analyzer = scanner_device
 				analyzer.print_report(ui.user)
 				return TRUE
+			else
+				to_chat(ui.user, "This device does not support this.")
+		if("clear_scans")
+			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
+				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
+				analyzer.buffer_for_report.Cut(0,analyzer.buffer_for_report.len-1)
+				analyzer.tgui_interact(ui.user)
+				playsound(analyzer.loc, 'sound/machines/buzz-sigh.ogg', 5, 0)
+				return TRUE
+			else
+				to_chat(ui.user, "This device does not support this.")
 
 /// legacy proc for to_chat messages on health analysers
 /mob/living/proc/health_scan(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.

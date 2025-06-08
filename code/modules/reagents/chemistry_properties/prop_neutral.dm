@@ -269,7 +269,7 @@
 	category = PROPERTY_TYPE_METABOLITE
 
 /datum/chem_property/neutral/hypothermic/process(mob/living/M, potency = 1, delta_time)
-	if(prob(5 * delta_time))
+	if(prob(5 * delta_time * potency))
 		M.emote("shiver")
 	if(ishuman(M))
 		var/mob/living/carbon/human/human_becoming_cold = M

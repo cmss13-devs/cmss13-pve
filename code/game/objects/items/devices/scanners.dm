@@ -191,7 +191,7 @@ FORENSIC SCANNER
 	item_state_slots = list(
 		WEAR_WAIST = "medical_scanner",
 		WEAR_BACK = "medical_scanner",
-		WEAR_IN_J_STORE = "medical_scanner",)
+		WEAR_J_STORE = "medical_scanner",)
 	flags_equip_slot = SLOT_WAIST | SLOT_BACK | SLOT_SUIT_STORE
 	w_class = SIZE_MEDIUM
 	var/record_scan_on_connect = FALSE
@@ -201,6 +201,9 @@ FORENSIC SCANNER
 	var/datum/beam/current_beam
 	var/datum/looping_sound/healthanalyzer_oxygen_beeping/oxygen_alarm_loop
 	var/datum/looping_sound/healthanalyzer_heart_beeping/heart_rate_loop
+	var/has_silence_mode = FALSE
+	var/obj/item/device/quiet_silent_healthanalyzer/silence_chip
+
 /obj/item/device/healthanalyzer/soul/Initialize()
 	. = ..()
 	heart_rate_loop = new(src)
@@ -230,12 +233,35 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/soul/attackby(obj/item/I, mob/user)
 	. = ..()
 	if(istype(I, /obj/item/paper))
-		if(paper_left != initial(paper_left))
-			to_chat(user, SPAN_NOTICE("You insert [I] into [src]."))
-			qdel(I) //delete the paper item
-			paper_left = initial(paper_left)
+		if(!findtext(I.name, "scan print-out of"))
+			if(paper_left != initial(paper_left))
+				to_chat(user, SPAN_NOTICE("You insert [I] into [src]."))
+				qdel(I) //delete the paper item
+				paper_left = initial(paper_left)
+			else
+				to_chat(user, SPAN_NOTICE("[src] is already full."))
+	else if(istype(I, /obj/item/device/quiet_silent_healthanalyzer))
+		if(!has_silence_mode)
+			has_silence_mode = TRUE
+			silence_chip = I
+			to_chat(user, SPAN_NOTICE("You insert [I] into [src], disabling it's alarm system."))
+			user.drop_inv_item_to_loc(I, src)
+			name = "Silenced " + name
 		else
-			to_chat(user, SPAN_NOTICE("[src] is already full."))
+			to_chat(user, SPAN_NOTICE("This [src] already has a [I] installed."))
+	else if(HAS_TRAIT(I, TRAIT_TOOL_SCREWDRIVER))
+		user.put_in_hands(silence_chip)
+		has_silence_mode = FALSE
+		silence_chip = null
+		to_chat(user, SPAN_NOTICE("You remove the [I] from the [src]."))
+		name = initial(name)
+
+/obj/item/device/quiet_silent_healthanalyzer
+	icon_state = "voice0"
+	name = "Health Diagnostic Silencer Chip"
+	desc = "An override chip for the health diagnostic equipment. It disables the loud alarms of the scanner. Can be removed from the scanner with a screwdriver."
+	w_class = SIZE_TINY
+
 
 /obj/item/device/healthanalyzer/soul/get_examine_text(mob/user)
 	. = ..()
@@ -258,9 +284,9 @@ FORENSIC SCANNER
 
 	// Show overall
 	if(scan_data["dead"])
-		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>DEAD<b> at " + worldtime2text("hh:mm:ss") + "\n"
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>DEAD<b> at " + scan_data["time"] + "\n"
 	else
-		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>[scan_data["health"]]% at " + worldtime2text("hh:mm:ss") + "\n"
+		dat += "<table border=1 cellspacing=0 cellpadding=3 style='border: 1px solid black;'><td>[scan_data["patient"]] <b>[scan_data["health"]]% at " + scan_data["time"] + "\n"
 	//dat += "[SET_CLASS("Oxygen", INTERFACE_BLUE)]-[SET_CLASS("Toxin", INTERFACE_GREEN)]-[SET_CLASS("Burns", INTERFACE_ORANGE)]-[SET_CLASS("Brute", INTERFACE_RED)]<td>"
 	dat += "\t[SET_CLASS(BR, INTERFACE_RED)] - [SET_CLASS(BU, INTERFACE_ORANGE)] - [SET_CLASS(TX, INTERFACE_GREEN)] - [SET_CLASS(OX, INTERFACE_BLUE)]\n"
 	//dat += "\tUntreated: {B}=Burns,{T}=Trauma,{F}=Fracture\n"
@@ -392,7 +418,7 @@ FORENSIC SCANNER
 			//buffer_for_report_but_html += list(connected_to.health_scan_table(connected_from, FALSE, TRUE, popup_window, alien, FALSE, last_scan))
 			currently_selected_last_scan = buffer_for_report.len
 		if(buffer_for_report.len > 40)
-			buffer_for_report.Cut(1,3) //stop memory leak, maybe
+			buffer_for_report.Cut(0,3) //stop memory leak, maybe
 
 /obj/item/device/healthanalyzer/soul/process()
 	//if we're not connected to anything stop doing stuff
@@ -404,6 +430,10 @@ FORENSIC SCANNER
 		return PROCESS_KILL
 	update_beam(TRUE)
 	perform_scan_and_report()
+	if(has_silence_mode)
+		oxygen_alarm_loop.stop()
+		heart_rate_loop.stop()
+		return
 	var/health_percentage = connected_to.health - connected_to.halloss
 	if ((connected_to.oxyloss >= 40 || connected_to.health < -140) && connected_to.stat < 2)
 		oxygen_alarm_loop.start()
@@ -437,7 +467,7 @@ FORENSIC SCANNER
 	if(current_beam)
 		QDEL_NULL(current_beam)
 	if(connected_from && connected_to && new_beam && (connected_to != connected_from))
-		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube")
+		current_beam = connected_from.beam(get_atom_on_turf(connected_to), "iv_tube", extra_x_offset_at_target = 4)
 
 /obj/item/device/healthanalyzer/soul/attack(mob/living/M, mob/living/user)
 	if(M == user)
@@ -457,14 +487,14 @@ FORENSIC SCANNER
 	if(user.action_busy)
 		return
 
-	if(!do_after(user, skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) ? (0.2 SECONDS) * user.get_skill_duration_multiplier(SKILL_SURGERY) : (2 SECONDS), INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+	if(!do_after(user, skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE) ? (0.2 SECONDS) * user.get_skill_duration_multiplier(SKILL_SURGERY) : (1 SECONDS), INTERRUPT_INCAPACITATED, BUSY_ICON_FRIENDLY, M, BUSY_ICON_MEDICAL))
 		to_chat(user, SPAN_WARNING("You were interrupted before you could finish!"))
 		return
 
 	if(istype(M, /mob/living/carbon/human))
 		connected_to = M
 		connected_from = user
-		connected_to.base_pixel_x = 5
+		//connected_to.base_pixel_x = 5
 		START_PROCESSING(SSobj, src)
 		record_scan_on_connect = TRUE
 		user.visible_message(SPAN_HELPFUL("[user] attaches \the [src] to [connected_to]."), \
@@ -491,7 +521,7 @@ FORENSIC SCANNER
 	else
 		connected_from.visible_message(SPAN_HELPFUL("[connected_from] detaches [src] from [connected_to]."), \
 			SPAN_HELPFUL("You detach [src] from [connected_to]."))
-	connected_to.base_pixel_x = 0
+	//connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
 

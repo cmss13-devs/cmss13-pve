@@ -40,17 +40,28 @@
 /datum/reagent/medical/saline
 	name = "Saline Solution"
 	id = "saline"
-	description = "A mixture of water, sodium chloride and glucose made to treat blood loss, the symptoms of minor poisoning or hyperthermia.."
+	description = "A mixture of water, sodium chloride and glucose made to treat blood loss, the symptoms of minor poisoning or hyperthermia."
 	reagent_state = LIQUID
 	color = COLOR_SILVER
 	chemfiresupp = TRUE
 	intensitymod = 0.1
 	burncolor = "#ffff00"
 	burncolormod = 2
-	overdose = 900 //50
-	overdose_critical = 900 //75
+	overdose = 999
+	overdose_critical = 999 //customlife
 	chemclass = CHEM_CLASS_COMMON
 	properties = list(PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 1, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
+
+/datum/reagent/medical/saline/on_mob_life(mob/living/M)
+	. = ..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/human = M
+		if(volume >= 40 && prob(25))
+			human.EyeBlur(6)
+		if(volume >= 70 && prob(25))
+			M.make_dizzy(4)
+		if(volume >= 100 && prob(25))
+			human.vomit()
 
 /datum/reagent/medical/tramadol
 	name = "Tramadol"
