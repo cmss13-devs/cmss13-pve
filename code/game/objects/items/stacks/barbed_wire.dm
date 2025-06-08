@@ -29,6 +29,6 @@
  */
 
 GLOBAL_LIST_INIT_TYPED(wire_recipes, /datum/stack_recipe, list ( \
-	new/datum/stack_recipe("razor wire", /obj/structure/barricade/razorwire, 2, time = 2 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED, min_time = 5 SECONDS), \
+	new/datum/stack_recipe("razor wire", /obj/structure/barricade/razorwire, 2, time = 2 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED, min_time = 2 SECONDS), \
 	null, \
 ))
