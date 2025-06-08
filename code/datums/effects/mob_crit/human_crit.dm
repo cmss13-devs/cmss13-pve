@@ -7,10 +7,11 @@
 	if(affected_mob.health > HEALTH_THRESHOLD_CRIT)
 		qdel(src)
 		return FALSE
-
-	affected_mob.KnockDown(3)
-	affected_mob.Stun(3)
 	if(!affected_mob.reagents || !affected_mob.reagents.has_reagent("inaprovaline"))
 		affected_mob.apply_damage(1, OXY)
+
+	if(affected_mob.status_flags & CANKNOCKOUT)
+		affected_mob.KnockDown(3)
+		affected_mob.Stun(3)
 
 	return TRUE
