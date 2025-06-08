@@ -45,10 +45,14 @@
 	zombie.faction = FACTION_ZOMBIE
 	zombie.faction_group = list(FACTION_ZOMBIE)
 
-	if(zombie.wear_id) qdel(zombie.wear_id)
-	if(zombie.gloves) zombie.drop_inv_item_on_ground(zombie.gloves, FALSE, TRUE)
-	if(zombie.head) zombie.drop_inv_item_on_ground(zombie.head, FALSE, TRUE)
-	if(zombie.wear_mask) zombie.drop_inv_item_on_ground(zombie.wear_mask, FALSE, TRUE)
+	if(zombie.wear_id)
+		qdel(zombie.wear_id)
+	if(zombie.gloves)
+		zombie.drop_inv_item_on_ground(zombie.gloves, FALSE, TRUE)
+	if(zombie.head)
+		zombie.drop_inv_item_on_ground(zombie.head, FALSE, TRUE)
+	if(zombie.wear_mask)
+		zombie.drop_inv_item_on_ground(zombie.wear_mask, FALSE, TRUE)
 	equip_zombie_items(zombie) // Handles held items -> claws and glasses -> zombie "eyes"
 
 	var/datum/disease/black_goo/zombie_infection = locate() in zombie.viruses
@@ -157,9 +161,12 @@
 
 /datum/species/zombie/proc/equip_zombie_items(mob/living/carbon/human/zombie)
 	// Drop previous items
-	if(zombie.l_hand) zombie.drop_inv_item_on_ground(zombie.l_hand, FALSE, TRUE)
-	if(zombie.r_hand) zombie.drop_inv_item_on_ground(zombie.r_hand, FALSE, TRUE)
-	if(zombie.glasses) zombie.drop_inv_item_on_ground(zombie.glasses, FALSE, TRUE)
+	if(zombie.l_hand)
+		zombie.drop_inv_item_on_ground(zombie.l_hand, FALSE, TRUE)
+	if(zombie.r_hand)
+		zombie.drop_inv_item_on_ground(zombie.r_hand, FALSE, TRUE)
+	if(zombie.glasses)
+		zombie.drop_inv_item_on_ground(zombie.glasses, FALSE, TRUE)
 
 	// Equip claws and "eyes"
 	var/obj/item/weapon/zombie_claws/ZC = new(zombie)
@@ -169,6 +176,9 @@
 	zombie.equip_to_slot_or_del(new /obj/item/clothing/glasses/zombie_eyes(zombie), WEAR_EYES, TRUE)
 
 /datum/species/zombie/proc/unequip_zombie_items(mob/living/carbon/human/zombie)
-	if(istype(zombie.l_hand, /obj/item/weapon/zombie_claws)) qdel(zombie.l_hand)
-	if(istype(zombie.r_hand, /obj/item/weapon/zombie_claws)) qdel(zombie.r_hand)
-	if(istype(zombie.glasses, /obj/item/clothing/glasses/zombie_eyes)) qdel(zombie.glasses)
+	if(istype(zombie.l_hand, /obj/item/weapon/zombie_claws))
+		qdel(zombie.l_hand)
+	if(istype(zombie.r_hand, /obj/item/weapon/zombie_claws))
+		qdel(zombie.r_hand)
+	if(istype(zombie.glasses, /obj/item/clothing/glasses/zombie_eyes))
+		qdel(zombie.glasses)
