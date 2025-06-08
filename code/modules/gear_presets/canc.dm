@@ -29,8 +29,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -44,7 +48,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
 	add_canc_rifle(new_human)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/remnant/leader
 	name = "CANC Rebel, Unit Leader"
@@ -64,8 +72,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -79,7 +91,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
 	add_canc_rifle(new_human)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/remnant/marksman
 	name = "CANC Rebel, Marksman"
@@ -97,8 +113,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -117,6 +137,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/svd/pve(new_human), WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 //
 
@@ -131,8 +153,12 @@
 	new_human.undershirt = "undershirt"
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -152,6 +178,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/at
 	name = "CANC Rebel, Anti-Tank"
@@ -166,8 +194,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_ACCESSORY)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -191,6 +223,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/canc/medic
 	name = "CANC Rebel, Medic"
@@ -215,8 +249,12 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	if(prob(65))
-		add_neckerchief(new_human)
+	var/random_neckwear_canc = rand(1,4)
+	switch(random_neckwear_canc)
+		if(1,2)
+			add_neckerchief(new_human)
+		if(3)
+			add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -238,11 +276,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
 	add_canc_rifle(new_human)
+	if(prob(30))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
+
+//CANC Newblood
 
 /datum/equipment_preset/canc/newblood
 	name = "CANC Colonist Recruit"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "CANC Colonist Recruit"
+	idtype = /obj/item/card/id/lanyard
 
 /datum/equipment_preset/canc/newblood/load_gear(mob/living/carbon/human/new_human)
 
@@ -268,4 +311,52 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
 		if(7)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
-	add_canc_rifle(new_human)
+	var/random_helmet_canc = rand(1,8)
+	switch(random_helmet_canc)
+		if(1,2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+		if(3,4)
+			add_rebel_upp_helmet(new_human)
+	add_canc_rifle_newblood(new_human)
+
+/datum/equipment_preset/canc/newblood_machinegunner
+	name = "CANC Colonist Recruit -  MAR LMG Machinegunner"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "CANC Colonist Recruit"
+	idtype = /obj/item/card/id/lanyard
+
+/datum/equipment_preset/canc/newblood_machinegunner/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	//limbs
+	var/random_civilian_shoe = rand(1,7)
+	switch(random_civilian_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
+	var/random_helmet_canc = rand(1,8)
+	switch(random_helmet_canc)
+		if(1,2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+		if(3,4)
+			add_rebel_upp_helmet(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
