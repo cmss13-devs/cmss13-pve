@@ -1,9 +1,9 @@
 /obj/structure/barricade/razorwire
 	name = "razorwire"
 	desc = "A set of razorwire, able to slow down anything that tries to move through it."
-	icon = 'icons/obj/structures/razorwire.dmi'
-	icon_state = "razorwire_a_0"
-	barricade_type = "razorwire"
+	icon = 'icons/obj/structures/handrail.dmi'
+	icon_state = "handrail_a_0"
+	barricade_type = "handrail"
 	health = 50
 	maxhealth = 50
 	density = FALSE
@@ -50,6 +50,6 @@
 /obj/structure/barricade/razorwire/Crossed(atom/movable/AM)
 	. = ..()
 	var/mob/living/L = AM
-	var/new_slowdown = L.next_move_slowdown + 16
+	var/new_slowdown = L.next_move_slowdown + 10
 	L.next_move_slowdown = new_slowdown
 	to_chat(L, SPAN_WARNING("Moving through [src] slows you down substantially!"))
