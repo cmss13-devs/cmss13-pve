@@ -68,11 +68,11 @@
 /area/Greenvault_Ranch/int_reg/farmbay
 	name = "Farming Vehicle Storage"
 	icon_state = "storage"
-/area/Greenvault_Ranch/int_reg/trailerpark
+/area/Greenvault_Ranch/outside/trailerpark
 	name = "Trailer Park"
 	icon_state = "northeast"
 /area/Greenvault_Ranch/outside/wheatfields
-	name = "Southeast Wheat Fields"
+	name = "Southwest Wheat Fields"
 	icon_state = "southwest"
 /area/Greenvault_Ranch/int_heavy/powerplace
 	name = "Power Generators"
@@ -80,7 +80,12 @@
 /area/Greenvault_Ranch/int_reg/bar
 	name = "Colony Bar"
 	icon_state = "bar"
-
+/area/Greenvault_Ranch/int_reg/houseinthewoods
+	name = "House In The Woods"
+	icon_state = "grey"
+/area/Greenvault_Ranch/int_reg/cowhouse
+	name = "Cowhouse"
+	icon_state = "blue"
 //============================================================Bunker
 /area/Greenvault_Ranch/int_heavy/grainbunker
 	name = "Colony Grain Bunker"

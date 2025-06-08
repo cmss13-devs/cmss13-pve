@@ -22,7 +22,7 @@
 "ae" = (
 /obj/structure/flora/tree/dead/tree_4,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "af" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -73,7 +73,7 @@
 "al" = (
 /obj/structure/flora/bush/ausbushes/ausbush,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "am" = (
 /turf/open/floor/prison/darkpurple2/northwest,
 /area/Greenvault_Ranch/int_reg/telecomms)
@@ -92,7 +92,7 @@
 /area/Greenvault_Ranch/shuttles/drop1)
 "aq" = (
 /turf/open/floor/plating/wood_broken3,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "ar" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/flora/jungle/vines,
@@ -150,7 +150,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "aC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -165,13 +165,13 @@
 "aD" = (
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "aE" = (
 /obj/structure/prop/invuln/ice_prefab{
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "aF" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/spawner/random/toolbox,
@@ -262,11 +262,11 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "aX" = (
 /obj/item/trash/crushed_cup,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "aY" = (
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/prison/darkbrown2/north,
@@ -392,7 +392,7 @@
 "bs" = (
 /obj/item/clothing/head/cowboy/light,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "bt" = (
 /obj/structure/barricade/handrail{
 	dir = 4;
@@ -447,7 +447,7 @@
 "bC" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "bD" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -458,7 +458,7 @@
 	},
 /obj/item/reagent_container/food/snacks/meatsteak,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "bG" = (
 /obj/structure/prop/dam/truck{
 	dir = 4;
@@ -513,7 +513,7 @@
 "bN" = (
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "bO" = (
 /obj/structure/bed/sofa/south/grey/right,
 /turf/open/floor/corsat/tan,
@@ -592,7 +592,7 @@
 	},
 /obj/item/prop/tableflag/uscm,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "cb" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 9
@@ -653,7 +653,7 @@
 /area/Greenvault_Ranch/outside/northwest)
 "cj" = (
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ck" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/spawner/random/toolbox,
@@ -726,7 +726,7 @@
 "cy" = (
 /obj/structure/flora/tree/dead,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "cz" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -778,7 +778,7 @@
 "cM" = (
 /obj/structure/bed/sofa/vert,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "cN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair/comfy{
@@ -843,7 +843,7 @@
 /area/Greenvault_Ranch/outside/northwest)
 "cW" = (
 /turf/open/floor/wood/wood_broken7,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "cX" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00";
@@ -865,11 +865,11 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "da" = (
 /obj/item/stack/cable_coil/cut,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "db" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/plating/wood,
@@ -903,7 +903,7 @@
 	layer = 2.991
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "dl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -945,7 +945,7 @@
 "du" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "dv" = (
 /obj/structure/prop/static_tank/fuel,
 /obj/structure/machinery/light{
@@ -995,7 +995,7 @@
 	pixel_y = -15
 	},
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "dE" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -1037,7 +1037,7 @@
 "dK" = (
 /obj/structure/flora/jungle/thickbush/jungle_plant,
 /turf/closed/wall/strata_ice/jungle,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "dM" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -1110,11 +1110,11 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "dY" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ea" = (
 /obj/structure/machinery/light{
 	dir = 8;
@@ -1169,7 +1169,7 @@
 	},
 /obj/item/prop/tableflag/uscm,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ej" = (
 /obj/item/vehicle_clamp,
 /turf/open/floor/prison/floor_plate,
@@ -1212,7 +1212,7 @@
 "er" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "et" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 4
@@ -1239,7 +1239,7 @@
 	},
 /obj/structure/sign/banners/colonial_marines_flag,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ez" = (
 /obj/structure/largecrate/random/barrel/yellow,
 /turf/open/floor/prison/bluefull,
@@ -1341,7 +1341,7 @@
 /area/Greenvault_Ranch/int_reg/virology)
 "eS" = (
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "eU" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/jungle/vines/light_3,
@@ -1462,7 +1462,7 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "fp" = (
 /obj/structure/flora/bush/ausbushes/var3,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1580,7 +1580,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "fI" = (
 /obj/structure/bookcase/manuals/engineering,
 /turf/open/floor/prison,
@@ -1675,7 +1675,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "fW" = (
 /obj/structure/prop/ice_colony/surveying_device{
 	dir = 8
@@ -1722,7 +1722,7 @@
 	},
 /obj/item/prop/tableflag/uscm,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "gf" = (
 /obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -1856,7 +1856,7 @@
 "gA" = (
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "gB" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 4;
@@ -1913,7 +1913,7 @@
 /obj/item/tool/mop,
 /obj/item/reagent_container/glass/bucket/janibucket,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "gN" = (
 /obj/item/device/flashlight/lamp/tripod,
 /obj/structure/pipes/vents/scrubber/on,
@@ -1923,7 +1923,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/explosive/grenade/custom/large,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "gP" = (
 /obj/structure/flora/jungle/thickbush/jungle_plant,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1972,7 +1972,7 @@
 	},
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/wood/wood_broken6,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "gX" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 1
@@ -2042,7 +2042,7 @@
 	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "hn" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3";
@@ -2088,7 +2088,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/storage/box/donkpockets,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "hw" = (
 /obj/structure/prop/server_equipment/yutani_server{
 	density = 0;
@@ -2127,7 +2127,7 @@
 /obj/item/clothing/shoes/cowboy,
 /obj/structure/surface/rack,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "hB" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/prison/darkyellowfull2,
@@ -2149,7 +2149,7 @@
 	icon_state = "book-5"
 	},
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/largecrate/random/mini/chest,
@@ -2158,7 +2158,7 @@
 "hH" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "hI" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -2174,7 +2174,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "hM" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
@@ -2474,7 +2474,7 @@
 "iO" = (
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "iP" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
@@ -2526,7 +2526,7 @@
 /obj/structure/bed/sofa/south/grey,
 /obj/item/clothing/head/cowboy/light,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ja" = (
 /obj/structure/filingcabinet/medical,
 /turf/open/floor/corsat/tan,
@@ -2534,7 +2534,7 @@
 "jb" = (
 /obj/structure/reagent_dispensers/pacidtank,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "jc" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -2581,7 +2581,7 @@
 "jk" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "jl" = (
 /obj/structure/holohoop{
 	dir = 8
@@ -2642,7 +2642,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/revolver/spearhead/black,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "jx" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/cameras/engineering,
@@ -2657,7 +2657,7 @@
 /obj/item/paper_bin,
 /obj/item/tool/pen/blue/clicky,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "jA" = (
 /turf/open/floor/prison/darkyellow2/east,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -2707,7 +2707,7 @@
 "jJ" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "jK" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
@@ -2728,7 +2728,7 @@
 	pixel_y = -1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "jM" = (
 /obj/structure/closet/crate/internals,
 /turf/open/floor/corsat/tan,
@@ -2820,7 +2820,7 @@
 	icon_state = "solarpanel1"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ka" = (
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_heavy/controlroom)
@@ -2851,7 +2851,7 @@
 	},
 /obj/structure/reagent_dispensers/beerkeg,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "kh" = (
 /obj/structure/surface/table/gamblingtable{
 	color = "#aeaeae"
@@ -2954,7 +2954,7 @@
 /obj/item/explosive/grenade/custom,
 /obj/item/explosive/grenade/custom,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "kA" = (
 /turf/open/floor/light/yellow,
 /area/Greenvault_Ranch/int_reg/bar)
@@ -2982,7 +2982,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "kD" = (
 /turf/open/floor/prison/darkredfull2,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
@@ -3048,7 +3048,7 @@
 /obj/item/ammo_box/magazine/misc/mre/upp/empty,
 /obj/item/tool/pen,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "kS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/shower{
@@ -3069,7 +3069,7 @@
 "kW" = (
 /obj/structure/flora/tree/dead/tree_3,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "kX" = (
 /obj/structure/machinery/light{
 	dir = 1;
@@ -3276,7 +3276,7 @@
 "lK" = (
 /obj/structure/cargo_container/lockmart/right,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "lM" = (
 /obj/structure/flora/tree/dead/tree_5,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -3434,7 +3434,7 @@
 	dir = 5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "mr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair,
@@ -3478,7 +3478,7 @@
 "mx" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "my" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
@@ -3500,7 +3500,7 @@
 	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "mD" = (
 /obj/structure/window/framed/prefab,
 /turf/open/floor/prison,
@@ -3618,7 +3618,7 @@
 "mZ" = (
 /obj/structure/prop/ice_colony/flamingo,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "na" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -3668,7 +3668,7 @@
 	pixel_y = 11
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "nj" = (
 /obj/structure/prop/dam/truck,
 /turf/open/floor/prison/floor_plate,
@@ -3681,7 +3681,7 @@
 "nl" = (
 /obj/effect/decal/strata_decals/grime/grime2,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "nm" = (
 /obj/structure/catwalk,
 /obj/structure/prop/invuln/lattice_prop{
@@ -3695,7 +3695,7 @@
 "nn" = (
 /obj/item/reagent_container/glass/bucket/janibucket,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "no" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/dirt,
@@ -3708,7 +3708,7 @@
 	},
 /obj/structure/prop/dam/van/damaged,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "nq" = (
 /obj/structure/catwalk,
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -3736,7 +3736,7 @@
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "nu" = (
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "nv" = (
 /obj/structure/displaycase/destroyed,
 /turf/open/floor/corsat/tan,
@@ -3787,14 +3787,14 @@
 	pixel_y = -13
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "nC" = (
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_heavy/powerplace)
 "nD" = (
 /obj/effect/overlay/palmtree_r,
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "nF" = (
 /obj/structure/largecrate/random/barrel,
 /turf/open/floor/corsat/tan,
@@ -3877,7 +3877,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "nR" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/storage/box/drinkingglasses,
@@ -3917,6 +3917,9 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/darkred2,
 /area/Greenvault_Ranch/int_reg/marshals)
+"nY" = (
+/turf/closed/wall/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "oa" = (
 /obj/structure/sign/safety/biolab,
 /turf/closed/wall/r_wall/biodome,
@@ -3951,7 +3954,7 @@
 	pixel_y = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "og" = (
 /obj/item/storage/donut_box,
 /obj/structure/surface/table/reinforced/prison,
@@ -3968,7 +3971,7 @@
 	layer = 2.9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "oj" = (
 /obj/structure/surface/rack,
 /obj/item/tool/screwdriver,
@@ -3994,7 +3997,7 @@
 "oo" = (
 /obj/structure/bed/sofa/south/grey/right,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "op" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 6
@@ -4005,7 +4008,7 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "oq" = (
 /obj/structure/prop/almayer/whiteboard,
 /turf/open/floor/prison/darkred2/north,
@@ -4051,7 +4054,7 @@
 /obj/item/explosive/grenade/custom,
 /obj/item/reagent_container/food/snacks/sausage,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "ox" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
@@ -4104,7 +4107,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/storage/box/guncase/m3717,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "oI" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -4169,7 +4172,7 @@
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "oV" = (
 /obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop,
@@ -4193,7 +4196,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "pa" = (
 /turf/closed/wall/strata_ice/jungle,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "pb" = (
 /obj/structure/sign/poster/music,
 /turf/closed/wall/shiva/prefabricated,
@@ -4327,7 +4330,7 @@
 "pz" = (
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/plating/wood_broken4,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "pA" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/floor/prison/bright_clean,
@@ -4392,7 +4395,7 @@
 	layer = 2.991
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "pN" = (
 /obj/structure/machinery/light/double{
 	dir = 1;
@@ -4554,7 +4557,7 @@
 "qo" = (
 /obj/structure/flora/tree/dead/tree_2,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qp" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 4
@@ -4565,7 +4568,7 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qq" = (
 /obj/structure/flora/jungle/alienplant1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -4620,7 +4623,7 @@
 	pixel_y = 2
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qz" = (
 /obj/structure/closet/secure_closet/bar,
 /obj/structure/machinery/light/small,
@@ -4669,7 +4672,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qH" = (
 /obj/structure/machinery/chem_simulator{
 	density = 0;
@@ -4738,11 +4741,11 @@
 "qT" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qU" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "qV" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
@@ -4890,7 +4893,7 @@
 	pixel_y = -1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "rw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced,
@@ -4912,13 +4915,13 @@
 	dir = 8
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "rA" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "rC" = (
 /obj/structure/sign/banners/united_americas_flag,
 /turf/closed/wall/shiva/prefabricated/red,
@@ -4929,7 +4932,7 @@
 "rE" = (
 /obj/structure/prop/static_tank/water,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "rF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -5160,7 +5163,7 @@
 	pixel_y = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "sv" = (
 /obj/structure/closet/wardrobe/suit,
 /turf/open/floor/corsat/tan,
@@ -5172,7 +5175,7 @@
 "sx" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "sy" = (
 /turf/open/floor/shiva/radiator_tile,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
@@ -5210,7 +5213,7 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "sE" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -5220,7 +5223,7 @@
 /area/Greenvault_Ranch/int_reg/marshals)
 "sF" = (
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "sG" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/computer/cameras/wooden_tv{
@@ -5254,7 +5257,7 @@
 "sK" = (
 /obj/structure/prop/invuln/ice_prefab/standalone,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "sL" = (
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
@@ -5411,7 +5414,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "ts" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent,
 /turf/closed/wall/shiva/prefabricated,
@@ -5514,7 +5517,7 @@
 /obj/structure/prop/invuln/ice_prefab,
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "tK" = (
 /turf/open/floor/prison/green/northeast,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -5555,11 +5558,11 @@
 "tQ" = (
 /obj/structure/flora/tree/dead/tree_4,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "tR" = (
 /obj/item/lightstick/red/planted,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "tS" = (
 /obj/structure/curtain/open/shower,
 /obj/structure/barricade/metal{
@@ -5610,7 +5613,7 @@
 /obj/structure/prop/structure_lattice,
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "tZ" = (
 /obj/structure/flora/bush/ausbushes/ausbush,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -5705,7 +5708,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "uo" = (
 /obj/structure/machinery/blackbox_recorder,
 /turf/open/floor/prison/darkpurplefull2,
@@ -5716,7 +5719,7 @@
 "ur" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "us" = (
 /obj/structure/pipes/vents/pump/on,
 /obj/effect/decal/cleanable/dirt,
@@ -5737,7 +5740,7 @@
 /area/Greenvault_Ranch/int_heavy/controlroom)
 "uw" = (
 /turf/open/floor/plating/wood_broken5,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "ux" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -5953,7 +5956,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "vj" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
@@ -5972,9 +5975,6 @@
 "vl" = (
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/outside/wildplace)
-"vm" = (
-/turf/closed/wall/shiva/prefabricated/white,
-/area/Greenvault_Ranch/int_reg/trailerpark)
 "vn" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
@@ -5995,7 +5995,7 @@
 "vq" = (
 /obj/effect/decal/strata_decals/grime/grime2,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "vr" = (
 /obj/item/trash/crushed_cup,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -6017,7 +6017,7 @@
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "vw" = (
 /obj/structure/reagent_dispensers/beerkeg/alt,
 /turf/open/floor/prison,
@@ -6079,7 +6079,7 @@
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "vI" = (
 /obj/structure/prop/almayer/cannon_cables,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -6157,7 +6157,7 @@
 	},
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "vV" = (
 /obj/structure/ice/thin/indestructible{
 	dir = 8;
@@ -6203,7 +6203,7 @@
 "wc" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "wd" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
@@ -6214,7 +6214,7 @@
 "we" = (
 /obj/structure/cargo_container/upp/tan/right,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "wf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -6307,7 +6307,7 @@
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "wr" = (
 /obj/structure/machinery/power/smes,
 /turf/open/floor/prison/darkyellow2/west,
@@ -6335,7 +6335,7 @@
 "ww" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "wx" = (
 /obj/structure/sign/banners/happybirthdaysteve,
 /turf/closed/wall/shiva/prefabricated/blue,
@@ -6420,7 +6420,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "wL" = (
 /obj/effect/decal/cleanable/blood,
 /mob/living/simple_animal/cow{
@@ -6471,7 +6471,7 @@
 "wU" = (
 /obj/structure/cargo_container/lockmart/left,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "wW" = (
 /obj/structure/sign/safety/medical,
 /turf/closed/wall/shiva/prefabricated/white,
@@ -6502,7 +6502,7 @@
 "xd" = (
 /obj/item/explosive/grenade/custom,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "xe" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -6543,7 +6543,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "xk" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/prison/blue_plate/north,
@@ -6574,7 +6574,7 @@
 	pixel_y = -13
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "xo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/almayer/computers/sensor_computer3,
@@ -6612,7 +6612,7 @@
 	pixel_y = -1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "xv" = (
 /obj/structure/reagent_dispensers/fueltank/gas,
 /turf/open/floor/prison/bright_clean,
@@ -6690,7 +6690,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "xH" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /obj/structure/flora/jungle/vines,
@@ -6975,7 +6975,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "yD" = (
 /obj/structure/machinery/prop/almayer/computer,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -6999,7 +6999,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/rifle/l42a/abr40,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "yI" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/platform/kutjevo/smooth{
@@ -7129,7 +7129,7 @@
 	},
 /obj/structure/cargo_container/upp/tan/left,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zf" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 4
@@ -7225,7 +7225,7 @@
 /obj/structure/bed/sofa/south/grey/left,
 /obj/item/weapon/gun/lever_action/r4t,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zv" = (
 /turf/closed/wall/rock{
 	color = "#a39e99"
@@ -7235,7 +7235,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/structure/machinery/microwave,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "zy" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname,
 /turf/open/floor/corsat/tan,
@@ -7255,7 +7255,7 @@
 	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zC" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -7299,7 +7299,7 @@
 "zK" = (
 /obj/structure/cargo_container/upp/tan/mid,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zL" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/angel,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -7330,7 +7330,7 @@
 	pixel_y = -9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zS" = (
 /obj/effect/spider/stickyweb,
 /turf/open/floor/prison/bright_clean,
@@ -7349,7 +7349,7 @@
 	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "zX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/safety/restrictedarea,
@@ -7398,7 +7398,7 @@
 	pixel_y = -9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ah" = (
 /obj/structure/flora/jungle/planttop1,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -7521,7 +7521,7 @@
 "AI" = (
 /obj/structure/prop/ice_colony/surveying_device,
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "AJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/whitegreenfull,
@@ -7543,7 +7543,7 @@
 "AN" = (
 /obj/structure/prop/dam/van,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "AP" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -7582,7 +7582,7 @@
 "AV" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "AW" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
@@ -7641,7 +7641,7 @@
 /area/Greenvault_Ranch/int_heavy/bunkermedical)
 "Bg" = (
 /turf/open/floor/wood/wood_broken4,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Bh" = (
 /obj/item/tool/warning_cone,
 /obj/structure/machinery/light/double,
@@ -7722,11 +7722,11 @@
 "Bv" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Bw" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Bx" = (
 /turf/open/floor/corsat/retrosquareslight,
 /area/Greenvault_Ranch/int_heavy/researchlab)
@@ -7762,7 +7762,7 @@
 	pixel_x = -14
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "BD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7790,14 +7790,14 @@
 /obj/item/trash/cigbutt/cigarbutt,
 /obj/item/trash/cigbutt/cigarbutt,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "BJ" = (
 /obj/structure/machinery/bot/mulebot,
 /turf/open/floor/prison/darkbrown2/east,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "BK" = (
 /turf/open/floor/plating/wood_broken6,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "BL" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/prison,
@@ -7923,7 +7923,7 @@
 /obj/structure/prop/invuln/ice_prefab,
 /obj/structure/sign/banners/twe_flag,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Cg" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/prison/whitepurplefull,
@@ -7935,7 +7935,7 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Cj" = (
 /obj/item/trash/wy_chips_pepper,
 /turf/open/floor/strata/white_cyan2/west,
@@ -7984,12 +7984,12 @@
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Cr" = (
 /obj/structure/barricade/handrail/wire,
 /mob/living/simple_animal/cow,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Cs" = (
 /obj/structure/bed,
 /obj/item/bedsheet/brown,
@@ -8026,7 +8026,7 @@
 "Cy" = (
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Cz" = (
 /obj/item/tool/warning_cone,
 /turf/open/floor/prison/bright_clean,
@@ -8088,7 +8088,7 @@
 	pixel_y = 10
 	},
 /turf/open/auto_turf/ice/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "CL" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/prison,
@@ -8134,7 +8134,7 @@
 /obj/effect/decal/cleanable/dirt/greenglow,
 /obj/item/reagent_container/food/drinks/bottle/vodka,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "CS" = (
 /obj/structure/machinery/gibber,
 /turf/open/floor/prison/kitchen,
@@ -8227,7 +8227,7 @@
 	},
 /obj/structure/flag/plantable/ua,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Dm" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/Greenvault_Ranch/int_reg/virology)
@@ -8307,7 +8307,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/greenglow,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "DC" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -8352,7 +8352,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "DN" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/almayer/flight_recorder/colony{
@@ -8488,7 +8488,7 @@
 	pixel_y = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "El" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	id = "Grain Storage";
@@ -8544,7 +8544,7 @@
 	pixel_y = -13
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Eu" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /obj/structure/flora/jungle/vines,
@@ -8572,7 +8572,7 @@
 	pixel_y = -9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ez" = (
 /obj/structure/bed,
 /obj/item/bedsheet/orange,
@@ -8665,7 +8665,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "EO" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
@@ -8879,7 +8879,7 @@
 	dir = 5
 	},
 /turf/open/auto_turf/ice/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "FB" = (
 /obj/structure/flora/bush/ausbushes,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -8928,11 +8928,11 @@
 	pixel_x = -14
 	},
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "FL" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "FM" = (
 /obj/structure/sign/safety/fire_haz,
 /turf/closed/wall/r_wall/bunker,
@@ -8959,7 +8959,7 @@
 	pixel_y = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "FR" = (
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/bar)
@@ -8999,7 +8999,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "FW" = (
 /turf/open/floor/wood/wood_broken3,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "FX" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -9020,7 +9020,7 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ga" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
 	color = "#bfff00"
@@ -9048,13 +9048,13 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Gh" = (
 /obj/structure/prop/ice_colony/surveying_device{
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Gi" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
 	dir = 2
@@ -9102,7 +9102,7 @@
 	pixel_x = 10
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Gr" = (
 /obj/structure/machinery/autodoc_console,
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -9178,7 +9178,7 @@
 "GD" = (
 /obj/structure/bed/sofa/south/grey,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "GE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/flour,
@@ -9281,7 +9281,7 @@
 	},
 /obj/structure/flag/plantable/usa,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "GX" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent,
 /turf/closed/wall/shiva/prefabricated/orange,
@@ -9334,7 +9334,7 @@
 	icon_state = "solarpanel1"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Hg" = (
 /obj/structure/pipes/vents/pump/on,
 /obj/effect/decal/cleanable/dirt,
@@ -9369,7 +9369,7 @@
 /obj/structure/barricade/handrail/wire,
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating/wood_broken4,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Hm" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -9377,7 +9377,7 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flag/plantable/usa,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Hn" = (
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/wheatfields)
@@ -9444,7 +9444,7 @@
 	},
 /obj/structure/sign/banners/usa_worn,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Hz" = (
 /obj/structure/surface/table/almayer,
 /obj/item/ammo_box/magazine/nailgun,
@@ -9505,7 +9505,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "HN" = (
 /obj/item/flag/plantable/upp,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -9515,7 +9515,7 @@
 	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "HP" = (
 /obj/item/tool/warning_cone,
 /obj/structure/machinery/light/double{
@@ -9624,7 +9624,7 @@
 "If" = (
 /obj/structure/flora/tree/dead/tree_3,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ig" = (
 /obj/structure/machinery/door/airlock/almayer/generic/autoname{
 	dir = 2
@@ -9680,7 +9680,7 @@
 "Ip" = (
 /obj/structure/machinery/autolathe/armylathe/full,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Iq" = (
 /obj/structure/machinery/floodlight/landing,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -9773,7 +9773,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "IF" = (
 /obj/structure/machinery/power/smes,
 /turf/open/floor/prison/darkyellow2/southwest,
@@ -9821,7 +9821,7 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "IP" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/ares/cpu,
@@ -9841,7 +9841,7 @@
 "IT" = (
 /obj/structure/cargo_container/lockmart/mid,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "IU" = (
 /obj/structure/bed,
 /obj/effect/spawner/random/toy,
@@ -9914,7 +9914,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Je" = (
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1
@@ -10039,7 +10039,7 @@
 "Jv" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Jw" = (
 /obj/structure/machinery/vending/cola,
 /turf/open/floor/strata/white_cyan1,
@@ -10190,7 +10190,7 @@
 /area/Greenvault_Ranch/int_heavy/grainbunker)
 "JX" = (
 /turf/open/floor/wood/wood_broken,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Kb" = (
 /obj/structure/machinery/door_control/brbutton{
 	name = "Control Room Access";
@@ -10214,7 +10214,7 @@
 "Kf" = (
 /obj/structure/flora/tree/pine,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Kg" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
@@ -10428,7 +10428,7 @@
 "KI" = (
 /obj/structure/prop/invuln/ice_prefab,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "KJ" = (
 /obj/structure/machinery/light/small,
 /obj/structure/surface/rack,
@@ -10444,7 +10444,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/tan,
@@ -10462,7 +10462,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "KN" = (
 /obj/structure/machinery/cm_vending/sorted/walkman{
 	pixel_x = -2;
@@ -10487,7 +10487,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "KQ" = (
 /obj/structure/prop/almayer/computers/sensor_computer3,
 /obj/structure/machinery/light/double{
@@ -10520,7 +10520,7 @@
 "KV" = (
 /obj/structure/flora/tree/joshua,
 /turf/closed/wall/strata_ice/jungle,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "KX" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerempty3,
 /turf/open/floor/prison/greenfull,
@@ -10529,7 +10529,7 @@
 /obj/item/bedsheet,
 /obj/structure/bed,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "KZ" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	id = "Bunker East Side Shutters";
@@ -10561,7 +10561,7 @@
 /area/Greenvault_Ranch/outside/wildplace)
 "Le" = (
 /turf/open/floor/plating/wood_broken2,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Lf" = (
 /obj/structure/largecrate,
 /obj/structure/machinery/light/small{
@@ -10578,7 +10578,7 @@
 	pixel_y = -9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Lh" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -10596,7 +10596,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Lk" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ll" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -10605,7 +10605,7 @@
 	},
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Lm" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -10824,13 +10824,16 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "LV" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/device/analyzer,
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/Greenvault_Ranch/int_reg/virology)
+"LW" = (
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "LX" = (
 /obj/structure/surface/table/woodentable,
 /obj/structure/prop/server_equipment/laptop,
@@ -10915,7 +10918,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Mm" = (
 /obj/effect/spider/spiderling/nogrow,
 /turf/open/floor/prison/whitepurplefull,
@@ -10974,7 +10977,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Mu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/greenfull,
@@ -11032,7 +11035,7 @@
 	},
 /obj/structure/barricade/handrail/wire,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "MB" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
@@ -11051,7 +11054,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "MF" = (
 /obj/structure/pipes/standard/simple/visible,
 /turf/open/gm/coast/north,
@@ -11073,7 +11076,7 @@
 	pixel_y = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "MJ" = (
 /turf/open/gm/coast/beachcorner/south_east,
 /area/Greenvault_Ranch/outside/wheatfields)
@@ -11089,7 +11092,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "MM" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	id = "Dig Site Access";
@@ -11104,7 +11107,7 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "MQ" = (
 /obj/structure/bed/bedroll,
 /obj/item/clothing/head/cowboy/light,
@@ -11139,7 +11142,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "MX" = (
 /obj/structure/surface/table,
 /turf/open/floor/strata/white_cyan1,
@@ -11224,7 +11227,7 @@
 /obj/structure/barricade/handrail/wire,
 /obj/structure/prop/invuln/overhead_pipe,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Nm" = (
 /obj/structure/largecrate/random/mini/med,
 /turf/open/floor/corsat/tan,
@@ -11328,7 +11331,7 @@
 	layer = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "NE" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -11460,14 +11463,14 @@
 	},
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Od" = (
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
 /obj/item/explosive/grenade/custom,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Of" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -11535,7 +11538,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Ot" = (
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/caves)
@@ -11551,7 +11554,7 @@
 "Ow" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ox" = (
 /obj/structure/machinery/computer/telecomms/traffic,
 /turf/open/floor/bluegrid/bcircuitoff,
@@ -11560,6 +11563,9 @@
 /obj/structure/machinery/reagent_analyzer,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/Greenvault_Ranch/int_reg/virology)
+"Oz" = (
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "OB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -11636,7 +11642,7 @@
 "OO" = (
 /mob/living/simple_animal/cow,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "OP" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -11665,7 +11671,7 @@
 	},
 /obj/structure/sign/banners/united_americas_flag,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "OV" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/plating/wood,
@@ -11749,7 +11755,7 @@
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Pk" = (
 /obj/structure/closet/l3closet,
 /turf/open/floor/almayer/dark_sterile,
@@ -11845,10 +11851,10 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "PD" = (
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "PE" = (
 /obj/structure/machinery/disposal,
 /turf/open/floor/prison/floor_plate,
@@ -11886,7 +11892,7 @@
 "PJ" = (
 /obj/effect/overlay/palmtree_l,
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "PK" = (
 /obj/structure/machinery/ares/processor,
 /turf/open/floor/bluegrid/bcircuitoff,
@@ -11977,7 +11983,7 @@
 "Qa" = (
 /obj/structure/prop/brazier,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Qb" = (
 /obj/structure/machinery/light/small,
 /obj/structure/machinery/optable,
@@ -12050,7 +12056,7 @@
 "Qr" = (
 /obj/structure/curtain/red,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Qs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -12065,7 +12071,7 @@
 "Qt" = (
 /obj/structure/reagent_dispensers/fueltank/gas/hydrogen,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Qu" = (
 /obj/structure/sign/safety/ammunition,
 /turf/closed/wall/r_wall/bunker,
@@ -12112,7 +12118,7 @@
 	pixel_y = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "QE" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -12120,7 +12126,7 @@
 	pixel_x = 16
 	},
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "QF" = (
 /turf/open/gm/coast/beachcorner/north_west,
 /area/Greenvault_Ranch/outside/north_river)
@@ -12143,7 +12149,7 @@
 "QL" = (
 /obj/structure/sign/poster/music,
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "QM" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/prison/whitegreenfull,
@@ -12164,7 +12170,7 @@
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "QQ" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -12180,7 +12186,7 @@
 	dir = 4
 	},
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "QS" = (
 /obj/structure/extinguisher_cabinet,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -12223,11 +12229,11 @@
 /obj/item/reagent_container/glass/bucket/janibucket,
 /obj/structure/surface/table/woodentable,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "QZ" = (
 /obj/item/clothing/head/cowboy,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ra" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/prison/green,
@@ -12262,7 +12268,7 @@
 	},
 /obj/structure/flag/plantable/ua,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Rh" = (
 /obj/structure/machinery/light{
 	dir = 1;
@@ -12365,11 +12371,11 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "RF" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
 /turf/open/floor/plating/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "RG" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4;
@@ -12390,7 +12396,7 @@
 	icon_state = "snowgrassall_3"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "RJ" = (
 /obj/structure/coatrack,
 /turf/open/floor/corsat/tan,
@@ -12469,13 +12475,13 @@
 	},
 /obj/item/reagent_container/food/drinks/cans/spread/jalapeno,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Sa" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Sb" = (
 /obj/structure/surface/table,
 /obj/effect/decal/cleanable/dirt,
@@ -12513,7 +12519,7 @@
 	dir = 10
 	},
 /turf/open/gm/dirt,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Sj" = (
 /obj/structure/largecrate/random/mini/chest,
 /turf/open/floor/prison/bright_clean,
@@ -12533,14 +12539,14 @@
 	pixel_y = 11
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "So" = (
 /obj/structure/flora/bush/snow{
 	icon_state = "snowgrassgb_2"
 	},
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Sq" = (
 /obj/item/trash/cigbutt/ucigbutt,
 /obj/effect/decal/cleanable/dirt,
@@ -12574,7 +12580,7 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Sy" = (
 /obj/structure/ice/thin/indestructible{
 	dir = 8;
@@ -12743,7 +12749,7 @@
 "SX" = (
 /obj/item/reagent_container/food/drinks/bottle/whiskey,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "SY" = (
 /obj/item/device/flashlight/lamp/tripod,
 /obj/structure/pipes/standard/simple/visible,
@@ -12811,7 +12817,7 @@
 	},
 /obj/item/reagent_container/food/drinks/cans/spread/jalapeno,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Tl" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 4
@@ -12823,7 +12829,7 @@
 	},
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Tm" = (
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/Greenvault_Ranch/outside/north_river)
@@ -12852,7 +12858,7 @@
 	pixel_y = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ts" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -12928,7 +12934,7 @@
 "TF" = (
 /obj/item/device/analyzer,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "TG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -12948,7 +12954,7 @@
 	pixel_y = -8
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "TJ" = (
 /obj/structure/cargo_container/canc/mid,
 /turf/open/floor/corsat/tan,
@@ -12969,7 +12975,7 @@
 /obj/structure/surface/table/woodentable,
 /obj/item/weapon/gun/rifle/l42a/abr40/tactical,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "TN" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3"
@@ -13103,7 +13109,7 @@
 	pixel_y = -5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Uk" = (
 /obj/structure/flora/bush/desert/cactus/multiple,
 /obj/structure/flora/bush/desert/cactus/multiple,
@@ -13125,7 +13131,7 @@
 /obj/structure/surface/rack,
 /obj/item/clothing/head/uppcap/boonie,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Up" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -13145,7 +13151,7 @@
 	dir = 5
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ut" = (
 /obj/structure/sink{
 	dir = 8;
@@ -13166,7 +13172,7 @@
 	},
 /obj/item/reagent_container/food/drinks/cans/spread/jalapeno,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ux" = (
 /obj/structure/pipes/standard/simple/visible,
 /turf/closed/wall/r_wall/bunker,
@@ -13204,7 +13210,7 @@
 	dir = 8
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "UH" = (
 /obj/structure/machinery/power/port_gen/pacman/mrs{
 	layer = 3.1;
@@ -13311,13 +13317,13 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Vc" = (
 /obj/structure/surface/table/woodentable,
 /obj/item/ammo_magazine/rifle/l42a/abr40,
 /obj/item/ammo_magazine/rifle/l42a/abr40,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "Vd" = (
 /obj/structure/sink{
 	dir = 8;
@@ -13398,7 +13404,7 @@
 "Vt" = (
 /obj/structure/flora/tree/dead/tree_1,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Vu" = (
 /turf/closed/wall/solaris/rock,
 /area/Greenvault_Ranch/caves)
@@ -13431,7 +13437,7 @@
 /obj/structure/prop/invuln/ice_prefab,
 /obj/structure/sign/banners/usa_flag,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "VA" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 4
@@ -13478,14 +13484,14 @@
 	pixel_x = 16
 	},
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "VJ" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "VK" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/faxmachine,
@@ -13507,7 +13513,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/wood_broken4,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "VN" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass,
@@ -13518,7 +13524,7 @@
 /area/Greenvault_Ranch/int_heavy/grainbunker)
 "VP" = (
 /turf/open/floor/plating/wood_broken4,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "VQ" = (
 /obj/structure/cargo_container/seegson/right,
 /turf/open/floor/corsat/tan,
@@ -13550,7 +13556,7 @@
 "VX" = (
 /obj/item/trash/burger,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "VY" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/sterile_green_side/west,
@@ -13568,7 +13574,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "Wc" = (
 /turf/open/floor/wood/wood_broken6,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Wd" = (
 /obj/structure/catwalk,
 /turf/open/floor/prison/bright_clean,
@@ -13621,7 +13627,7 @@
 "Ws" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent,
 /turf/closed/wall/wood,
-/area/Greenvault_Ranch/outside/pens)
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "Wt" = (
 /turf/closed/wall/almayer/research/containment/wall/corner{
 	dir = 1
@@ -13764,7 +13770,7 @@
 	},
 /obj/structure/flag/plantable/ua,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "WO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -13801,7 +13807,7 @@
 	dir = 9
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "WT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -13815,7 +13821,7 @@
 	icon_state = "smokestack"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "WV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
@@ -13838,7 +13844,7 @@
 "WY" = (
 /obj/structure/prop/broken_arcade,
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "WZ" = (
 /obj/structure/largecrate/random/barrel/blue,
 /turf/open/floor/prison/bright_clean,
@@ -13928,7 +13934,7 @@
 /obj/item/lightstick/red/variant/planted,
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Xq" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -13953,7 +13959,7 @@
 	icon_state = "fab_2"
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Xu" = (
 /turf/closed/wall/rock{
 	color = "#a39e99"
@@ -13962,7 +13968,7 @@
 "Xv" = (
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Xw" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -13997,7 +14003,7 @@
 	dir = 6
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "XE" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/almayer/dark_sterile,
@@ -14027,6 +14033,11 @@
 	},
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/Greenvault_Ranch/int_reg/virology)
+"XJ" = (
+/turf/closed/wall/rock{
+	color = "#a39e99"
+	},
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "XK" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/prison/floor_plate,
@@ -14083,7 +14094,7 @@
 	dir = 10
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "XT" = (
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
@@ -14110,7 +14121,7 @@
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "XZ" = (
 /obj/structure/machinery/chem_dispenser/research,
 /turf/open/floor/corsat/tan,
@@ -14272,7 +14283,7 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "YA" = (
 /obj/vehicle/powerloader/jd,
 /turf/open/floor/prison/greenfull,
@@ -14332,7 +14343,7 @@
 	},
 /obj/structure/tunnel,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "YM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -14390,7 +14401,7 @@
 	},
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "YU" = (
 /obj/structure/surface/table/almayer,
 /obj/item/clothing/suit/storage/CMB/marshal,
@@ -14441,7 +14452,7 @@
 	dir = 5
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Ze" = (
 /obj/item/tool/carpenters_hammer,
 /turf/open/gm/dirt,
@@ -14510,7 +14521,7 @@
 	},
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
-/area/Greenvault_Ranch/int_reg/trailerpark)
+/area/Greenvault_Ranch/outside/trailerpark)
 "Zt" = (
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/housing)
@@ -14541,7 +14552,7 @@
 "ZB" = (
 /obj/structure/reagent_dispensers/ethanoltank,
 /turf/open/floor/interior/wood/alt,
-/area/Greenvault_Ranch/outside/wildplace)
+/area/Greenvault_Ranch/int_reg/houseinthewoods)
 "ZC" = (
 /obj/item/tool/warning_cone,
 /obj/structure/machinery/door/poddoor/almayer/locked{
@@ -34337,7 +34348,7 @@ sF
 sF
 Lk
 Lk
-vm
+Ir
 Ir
 Pk
 CB
@@ -38201,19 +38212,19 @@ dd
 Xa
 Xa
 Xa
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 dd
 dd
 Xa
@@ -38392,21 +38403,21 @@ dd
 dd
 Xa
 Xa
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 dd
 Xa
 Xa
@@ -38414,11 +38425,11 @@ bP
 Xa
 Xa
 Xa
-Cw
+nY
 dd
 wG
 Xa
-Cw
+nY
 Xa
 Xa
 SN
@@ -38583,35 +38594,35 @@ Xa
 Xa
 Xa
 Xa
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
 OO
 Cy
 nu
 MA
 OO
 Cy
-Cw
+nY
 Cy
 nu
 MA
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-dd
-dd
-Xa
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+LW
+LW
+Oz
+nY
+nY
 Xa
 Xa
 Xa
@@ -38774,10 +38785,10 @@ Xa
 Xa
 dd
 Xa
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
 nu
 nu
 pz
@@ -38785,27 +38796,27 @@ nu
 Cr
 nu
 Cy
-Cw
+nY
 Cr
 OO
 Cy
 nu
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 nu
 nu
 nu
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
 Xa
 Xa
 SN
@@ -38966,8 +38977,8 @@ Xa
 Xa
 dd
 Xa
-Cw
-Cw
+nY
+nY
 RF
 Os
 nu
@@ -38977,7 +38988,7 @@ nu
 Cy
 nu
 nu
-Cw
+nY
 Cy
 nu
 Cy
@@ -38988,7 +38999,7 @@ nu
 gW
 nu
 nu
-Cw
+nY
 nu
 rz
 nu
@@ -38997,8 +39008,8 @@ nu
 rE
 rE
 nu
-Cw
-Cw
+nY
+nY
 Xa
 Rb
 Rb
@@ -39158,7 +39169,7 @@ Xa
 Xa
 dd
 Xa
-Cw
+nY
 gM
 nu
 Cy
@@ -39169,7 +39180,7 @@ nu
 Cy
 nu
 nu
-Cw
+nY
 Cy
 nu
 Cy
@@ -39180,7 +39191,7 @@ nu
 Cr
 nu
 nu
-Cw
+nY
 MW
 MW
 nu
@@ -39190,7 +39201,7 @@ BC
 BC
 MW
 MW
-Cw
+nY
 Xa
 Rb
 Rb
@@ -39361,7 +39372,7 @@ nu
 Cy
 nu
 Cy
-Cw
+nY
 Cy
 nu
 Cy
@@ -39372,7 +39383,7 @@ nu
 Cy
 nu
 wc
-Cw
+nY
 nu
 nu
 nu
@@ -39382,7 +39393,7 @@ nu
 nu
 nu
 wc
-Cw
+nY
 Xa
 Rb
 Rb
@@ -39564,7 +39575,7 @@ nu
 nu
 nu
 nu
-Cw
+nY
 MW
 MW
 nu
@@ -39574,7 +39585,7 @@ nu
 nu
 MW
 VM
-Cw
+nY
 Xa
 SN
 SN
@@ -39756,7 +39767,7 @@ nu
 nu
 ww
 nu
-Cw
+nY
 nu
 nu
 VP
@@ -39766,7 +39777,7 @@ nu
 nu
 nu
 nu
-Cw
+nY
 Xa
 SN
 SN
@@ -39948,7 +39959,7 @@ nu
 nu
 nu
 nu
-Cw
+nY
 MW
 MW
 nu
@@ -39958,7 +39969,7 @@ cW
 nu
 MW
 MW
-Cw
+nY
 Xa
 SN
 SN
@@ -40117,8 +40128,8 @@ bP
 dd
 dd
 dd
-Cw
-Cw
+nY
+nY
 nu
 nu
 nu
@@ -40140,7 +40151,7 @@ nu
 nu
 nu
 nu
-Cw
+nY
 nu
 nu
 nu
@@ -40150,7 +40161,7 @@ nu
 nu
 Le
 wc
-Cw
+nY
 Xa
 SN
 SN
@@ -40309,7 +40320,7 @@ aP
 dd
 dd
 dd
-ut
+XJ
 dD
 Gq
 nu
@@ -40321,7 +40332,7 @@ nu
 Cy
 nu
 Cy
-Cw
+nY
 Cy
 nu
 Cy
@@ -40332,7 +40343,7 @@ nu
 Cy
 nu
 wc
-Cw
+nY
 MW
 MW
 nu
@@ -40342,7 +40353,7 @@ nu
 nu
 MW
 MW
-Cw
+nY
 Xa
 SN
 SN
@@ -40501,8 +40512,8 @@ ZT
 dd
 dd
 dd
-ut
-Cw
+XJ
+nY
 tY
 iO
 iO
@@ -40524,17 +40535,17 @@ iO
 Nl
 iO
 iO
-Cw
+nY
 nu
 nu
 nu
 nu
-Cw
+nY
 nu
 nu
 nu
 nu
-Cw
+nY
 Xa
 SN
 SN
@@ -40693,8 +40704,8 @@ bP
 dd
 dd
 dd
-ut
-Cw
+XJ
+nY
 nQ
 ni
 nu
@@ -40705,8 +40716,8 @@ nu
 Ll
 OO
 EN
-Cw
-Cw
+nY
+nY
 nu
 Ll
 nu
@@ -40716,17 +40727,17 @@ OO
 Ll
 nu
 nu
-Cw
+nY
 nu
 ni
 nu
-Cw
-Cw
-Cw
+nY
+nY
+nY
 nu
 nu
 wc
-Cw
+nY
 Xa
 SN
 SN
@@ -40885,40 +40896,40 @@ aP
 dd
 dd
 ut
-ut
-Cw
+XJ
+nY
 VH
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 VH
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
 VH
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 Xa
 SN
 SN
@@ -41077,30 +41088,30 @@ bP
 dd
 dd
 Rb
-ut
-Cw
+XJ
+nY
 VH
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 rE
 dX
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
 rE
 dX
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
 SZ
 Xa
 Xa
@@ -41269,8 +41280,8 @@ aP
 dd
 dd
 Rb
-ut
-Cw
+XJ
+nY
 IE
 rz
 Cy
@@ -41281,8 +41292,8 @@ nu
 MA
 BC
 kC
-Cw
-Cw
+nY
+nY
 Cy
 rz
 Cy
@@ -41292,7 +41303,7 @@ nu
 MA
 nu
 nu
-Cw
+nY
 st
 Xa
 SN
@@ -41461,8 +41472,8 @@ aP
 dd
 dd
 Rb
-ut
-Cw
+XJ
+nY
 yC
 nu
 Cy
@@ -41473,7 +41484,7 @@ nu
 Cy
 nu
 EN
-Cw
+nY
 bN
 Cy
 Wc
@@ -41483,8 +41494,8 @@ EN
 nu
 Cy
 nu
-Cw
-Cw
+nY
+nY
 Xa
 Xa
 SN
@@ -41654,7 +41665,7 @@ dd
 dd
 Rb
 Cw
-Cw
+nY
 nQ
 nu
 Cy
@@ -41665,7 +41676,7 @@ nu
 Cy
 nu
 EN
-Cw
+nY
 nu
 Cy
 nu
@@ -41675,8 +41686,8 @@ EN
 nu
 Cy
 wc
-Cw
-Cw
+nY
+nY
 Xa
 Xa
 SN
@@ -41867,8 +41878,8 @@ QE
 nu
 nu
 nu
-Cw
-Cw
+nY
+nY
 Xa
 Xa
 Uu
@@ -42060,7 +42071,7 @@ ww
 ni
 Wc
 nu
-Cw
+nY
 Xa
 ds
 ds
@@ -42244,15 +42255,15 @@ QE
 nu
 nu
 nu
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 SN
 ds
 ds
@@ -42422,7 +42433,7 @@ Cw
 Cw
 Cw
 Cw
-Cw
+nY
 aB
 nu
 nu
@@ -42436,7 +42447,7 @@ QE
 nu
 nu
 nu
-Cw
+nY
 SN
 SN
 SN
@@ -42614,7 +42625,7 @@ ut
 ut
 ut
 ut
-Cw
+nY
 aB
 nu
 Cy
@@ -42625,10 +42636,10 @@ nu
 Cy
 nu
 EN
-Cw
+nY
 nu
 Cy
-Cw
+nY
 SN
 SN
 SN
@@ -42806,7 +42817,7 @@ Rb
 ut
 ut
 ut
-Cw
+nY
 QE
 nu
 Cy
@@ -42817,10 +42828,10 @@ nu
 Cy
 nu
 EN
-Cw
+nY
 nu
 Cy
-Cw
+nY
 SN
 SN
 SN
@@ -42998,7 +43009,7 @@ Rb
 Rb
 ut
 ut
-Cw
+nY
 VH
 ni
 Cy
@@ -43009,10 +43020,10 @@ nu
 Ll
 nu
 EN
-Cw
+nY
 ni
 Cy
-Cw
+nY
 SN
 SN
 SN
@@ -43190,21 +43201,21 @@ Rb
 Rb
 ut
 ut
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+nY
 VH
-Cw
-Cw
-Cw
-Cw
+nY
+nY
+nY
+nY
 SN
 SN
 SN
