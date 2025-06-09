@@ -178,6 +178,7 @@
 	hand_throwable = FALSE
 	underslug_launchable = TRUE
 	dual_purpose = FALSE
+	caliber = "30mm"
 	explosion_power = 0
 	explosion_falloff = 25
 	det_time = 0 //this should mean that it will explode instantly when fired and thus generate the shotshell effect.
@@ -1213,6 +1214,8 @@
 	dangerous = TRUE
 	harmful = FALSE
 	antigrief_protection = FALSE
+	explosion_power = 0	//SOMEHOW, MARINES FOUND A WAY TO KILL ONE ANOTHER WITH THESE
+	explosion_falloff = 0
 
 /obj/item/explosive/grenade/high_explosive/training/prime()
 	spawn(0)
@@ -1227,6 +1230,10 @@
 /obj/item/explosive/grenade/high_explosive/training/flamer_fire_act()
 	return
 
+/obj/item/explosive/grenade/high_explosive/training/launch_impact(atom/hit_atom)
+	if(!active)
+		return
+	icon_state = initial(icon_state)
 
 /obj/item/explosive/grenade/high_explosive/m15/rubber
 	name = "\improper M15 rubber pellet grenade"
