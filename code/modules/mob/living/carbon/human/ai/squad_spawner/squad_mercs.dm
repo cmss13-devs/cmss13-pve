@@ -62,7 +62,7 @@
 
 /datum/human_ai_squad_preset/mercs/response/heavy
 	name = "Bulwark Heavy Response Team (USE WITH CAUTION)"
-	desc = "A team of heavy Bulwark operatives, armed with slug shotguns, M90 Machineguns and enough armor to hold against most threats encountered, for when everything goes to hell.."
+	desc = "A team of heavy Bulwark operatives, armed with slug shotguns, a minigun and enough armor to hold against most threats encountered, for when everything goes to hell.."
 	ai_to_spawn = list(
 		/datum/equipment_preset/mercenary/bulwark = 2,
 		/datum/equipment_preset/mercenary/bulwark/machinegun = 1,

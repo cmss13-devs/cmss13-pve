@@ -78,7 +78,7 @@
 
 /datum/human_ai_equipment_preset/mercenaries/bulwark/machinegun
 	name = "Black Dragoons Bulwark (Heavy Response Suppressor)"
-	desc = "A heavily armoured and well equipped operative meant to act as shock troops against hostiles that Sentinels are unable to handle. This one has a machinegun."
+	desc = "A heavily armoured and well equipped operative meant to act as shock troops against hostiles that Sentinels are unable to handle. This one has a minigun."
 	path = /datum/equipment_preset/mercenary/bulwark/machinegun
 
 /datum/human_ai_equipment_preset/mercenaries/infiltrator
