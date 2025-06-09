@@ -110,7 +110,7 @@ DEFINES in setup.dm, referenced here.
 //----------------------------------------------------------
 
 /obj/item/weapon/gun/clicked(mob/user, list/mods)
-	if (mods["alt"])
+	if (mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		toggle_gun_safety()
@@ -157,29 +157,28 @@ DEFINES in setup.dm, referenced here.
 	if(CONFIG_GET(flag/remove_gun_restrictions))
 		return TRUE //Not if the config removed it.
 
-	if(user.mind)
-		switch(user.job)
-			if(
-				"PMC",
-				"WY Agent",
-				"Corporate Liaison",
-				"Event",
-				"UPP Armsmaster", //this rank is for the Fun - Ivan preset, it allows him to use the PMC guns randomly generated from his backpack
-			) return TRUE
-		switch(user.faction)
-			if(
-				FACTION_WY_DEATHSQUAD,
-				FACTION_PMC,
-				FACTION_MERCENARY,
-				FACTION_FREELANCER,
-			) return TRUE
+	switch(user.job)
+		if(
+			"PMC",
+			"WY Agent",
+			"Corporate Liaison",
+			"Event",
+			"UPP Armsmaster", //this rank is for the Fun - Ivan preset, it allows him to use the PMC guns randomly generated from his backpack
+		) return TRUE
+	switch(user.faction)
+		if(
+			FACTION_WY_DEATHSQUAD,
+			FACTION_PMC,
+			FACTION_MERCENARY,
+			FACTION_FREELANCER,
+		) return TRUE
 
-		for(var/faction in user.faction_group)
-			if(faction in FACTION_LIST_WY)
-				return TRUE
-
-		if(user.faction in FACTION_LIST_WY)
+	for(var/faction in user.faction_group)
+		if(faction in FACTION_LIST_WY)
 			return TRUE
+
+	if(user.faction in FACTION_LIST_WY)
+		return TRUE
 
 	to_chat(user, SPAN_WARNING("[src] flashes a warning sign indicating unauthorized use!"))
 
@@ -721,7 +720,7 @@ DEFINES in setup.dm, referenced here.
 	if(start_semiauto)
 		gun_firemode_list |= GUN_FIREMODE_SEMIAUTO
 
-	if(burst_amount > BURST_AMOUNT_TIER_1)
+	if(start_burstfire || burst_amount > BURST_AMOUNT_TIER_1)
 		gun_firemode_list |= GUN_FIREMODE_BURSTFIRE
 
 	if(!length(gun_firemode_list))
@@ -957,7 +956,7 @@ DEFINES in setup.dm, referenced here.
 		return target
 	if(!istype(target, /atom/movable/screen/click_catcher))
 		return null
-	return params2turf(modifiers["screen-loc"], get_turf(user), user.client)
+	return params2turf(modifiers[SCREEN_LOC], get_turf(user), user.client)
 
 /// check if the gun contains any light source that is currently turned on.
 /obj/item/weapon/gun/proc/light_sources()

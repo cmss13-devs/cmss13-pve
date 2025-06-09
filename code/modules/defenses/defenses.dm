@@ -52,7 +52,13 @@
 	connect()
 
 /obj/structure/machinery/defenses/Destroy()
-	if(!QDESTROYING(HD))
+	GLOB.all_active_defenses -= src
+	owner_mob = null
+	HD = null // FIXME: Might also need to delete. Unsure.
+	if(linked_laptop)
+		linked_laptop.unpair_sentry(src)
+		linked_laptop = null
+	if(!QDELETED(HD))
 		QDEL_NULL(HD)
 	return ..()
 
@@ -98,6 +104,8 @@
 		return FALSE
 	if(!(placed||static))
 		return FALSE
+	if(turned_on)
+		return TRUE
 
 	msg_admin_niche("[key_name(usr)] turned on [src] at [get_location_in_text(src)] [ADMIN_JMP(loc)]")
 	turned_on = TRUE
@@ -105,14 +113,19 @@
 	update_icon()
 
 	GLOB.all_active_defenses += src
+	return TRUE
 
 /obj/structure/machinery/defenses/proc/power_off()
+	if(!turned_on)
+		return TRUE
+
 	msg_admin_niche("[key_name(usr)] turned off [src] at [get_location_in_text(src)] [ADMIN_JMP(loc)]")
 	turned_on = FALSE
 	power_off_action()
 	update_icon()
 
 	GLOB.all_active_defenses -= src
+	return TRUE
 
 /**
  * Update state category for this structure.
@@ -154,6 +167,16 @@
 			faction_group = FACTION_LIST_WY
 		if(FACTION_UPP)
 			faction_group = FACTION_LIST_UPP
+		if(FACTION_UA_REBEL)
+			faction_group = FACTION_LIST_UA_REBEL
+		if(FACTION_TWE_REBEL)
+			faction_group = FACTION_LIST_TWE_REBEL
+		if(FACTION_CANC)
+			faction_group = FACTION_LIST_CANC
+		if(FACTION_FREELANCER)
+			faction_group = FACTION_LIST_FREELANCER
+		if(FACTION_TWE)
+			faction_group = FACTION_LIST_TWE
 
 
 /obj/structure/machinery/defenses/start_processing()
@@ -479,17 +502,6 @@
 //Fixes a bug with power changes in the area.
 /obj/structure/machinery/defenses/power_change()
 	return
-
-/obj/structure/machinery/defenses/Destroy()
-	GLOB.all_active_defenses -= src
-
-	if(owner_mob)
-		owner_mob = null
-	HD = null // FIXME: Might also need to delete. Unsure.
-	if(linked_laptop)
-		linked_laptop.unpair_sentry(src)
-		linked_laptop = null
-	. = ..()
 
 /obj/structure/machinery/defenses/verb/toggle_turret_locks_verb()
 	set name = "Toggle Turret Lock"

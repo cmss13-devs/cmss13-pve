@@ -81,7 +81,7 @@
 
 	if(!ishuman(user))
 		return ..()
-	if(mods["alt"]) //Changing UI theme
+	if(mods[ALT_CLICK]) //Changing UI theme
 		var/list/possible_options = list("Blue"= "crtblue", "Green" = "crtgreen", "Yellow" = "crtyellow", "Red" = "crtred")
 		var/chosen_theme = tgui_input_list(user, "Choose a UI theme:", "UI Theme", list("Blue", "Green", "Yellow", "Red"))
 		if(possible_options[chosen_theme])
@@ -655,7 +655,7 @@
 
 /// checks if the human has an overwatch camera at all
 /obj/structure/machinery/computer/overwatch/proc/marine_has_camera(mob/living/carbon/human/marine)
-	if(istype(marine.head, /obj/item/clothing/head/helmet/marine))
+	if(istype(marine.head, /obj/item/clothing/head/helmet/marine) || istype(marine.head, /obj/item/clothing/head/helmet/upp))
 		return TRUE
 	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 		return TRUE
@@ -668,6 +668,9 @@
 		if(marine && istype(marine))
 			if(istype(marine.head, /obj/item/clothing/head/helmet/marine))
 				var/obj/item/clothing/head/helmet/marine/helm = marine.head
+				return helm.camera
+			if(istype(marine.head, /obj/item/clothing/head/helmet/upp))
+				var/obj/item/clothing/head/helmet/upp/helm = marine.head
 				return helm.camera
 			var/obj/item/device/overwatch_camera/cam_gear
 			if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera))

@@ -120,7 +120,7 @@
 	spawn_priority = SPAWN_PRIORITY_HIGH
 
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc_medic
-	equipment = /datum/equipment_preset/pmc/pmc_medic
+	equipment = /datum/equipment_preset/pmc/medic
 	synth_equipment = /datum/equipment_preset/synth/survivor/pmc
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"You are NOT aware of the xenomorph threat.",\
@@ -133,7 +133,7 @@
 	spawn_priority = SPAWN_PRIORITY_VERY_HIGH
 
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc_engineer
-	equipment = /datum/equipment_preset/pmc/pmc_standard
+	equipment = /datum/equipment_preset/pmc/standard
 	synth_equipment = /datum/equipment_preset/synth/survivor/pmc
 	intro_text = list("<h2>You are a survivor of a crash landing!</h2>",\
 	"You are NOT aware of the xenomorph threat.",\
@@ -201,7 +201,7 @@
 //CMB Survivors//
 
 /obj/effect/landmark/survivor_spawner/fiorina_armory_cmb
-	equipment = /datum/equipment_preset/cmb/standard
+	equipment = /datum/equipment_preset/cmb/deputy
 	synth_equipment = /datum/equipment_preset/cmb/synth
 	intro_text = list("<h2>You are a CMB Deputy!</h2>",\
 	"<span class='notice'>You are aware of the 'alien' threat.</span>",\

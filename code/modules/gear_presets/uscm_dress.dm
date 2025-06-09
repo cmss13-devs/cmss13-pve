@@ -49,7 +49,7 @@
 /datum/equipment_preset/uscm_event/dress/nco/snco
 	name = "Dress Blues - (E-6) Staff Sergeant"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/SEA
+	skills = /datum/skills/DI
 	access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_DROPSHIP)
 
 /datum/equipment_preset/uscm_event/dress/nco/snco/load_gear(mob/living/carbon/human/new_human)

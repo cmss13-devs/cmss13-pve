@@ -108,8 +108,6 @@
 /datum/chem_property/positive/hemogenic/process(mob/living/M, potency = 1, delta_time)
 	if(!iscarbon(M))
 		return
-	if(M.nutrition < 200)
-		return
 
 	handle_nutrition_loss(M, potency, delta_time)
 	M.blood_volume = min(M.blood_volume + potency, M.limit_blood)
@@ -604,7 +602,7 @@
 		if(ghost?.client)
 			COOLDOWN_START(src, ghost_notif, 30 SECONDS)
 			playsound_client(ghost.client, 'sound/effects/revive_notify.ogg')
-			to_chat(ghost, SPAN_BOLDNOTICE("Your heart is struggling to pump! There is a chance you might get up!(Verbs -> Ghost -> Re-enter corpse, or <a href='?src=\ref[ghost];reentercorpse=1'>click here!</a>)"))
+			to_chat(ghost, SPAN_BOLDNOTICE("Your heart is struggling to pump! There is a chance you might get up!(Verbs -> Ghost -> Re-enter corpse, or <a href='byond://?src=\ref[ghost];reentercorpse=1'>click here!</a>)"))
 	return TRUE
 
 /datum/chem_property/positive/hyperdensificating

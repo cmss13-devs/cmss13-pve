@@ -92,6 +92,15 @@
 	/// Changes the freq of firing sound based on ammo type
 	var/firing_freq_offset = FALSE
 
+	/// If the ammo has light
+	var/ammo_glowing = FALSE
+
+	/// Color of the light of the bullet
+	var/bullet_light_color = COLOR_WHITE
+
+	/// Type of empty shell casing
+	var/shell_casing = null
+
 /datum/ammo/New()
 	set_bullet_traits()
 
@@ -178,12 +187,11 @@
 /datum/ammo/proc/slowdown(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(isxeno(living_mob))
 		var/mob/living/carbon/xenomorph/xeno = living_mob
-		if(xeno.caste.tier > 2 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_BIG))
+		if(xeno.caste.tier > 2 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_XENO))
 			return //tier 3 and big tier 0 (like queen) are not affected
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
-		target.apply_effect(1, SUPERSLOW)
-		target.apply_effect(2, SLOW)
+		target.apply_effect(4, SUPERSLOW)
 		to_chat(target, SPAN_XENODANGER("You are slowed by the sudden impact!"))
 	else
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)

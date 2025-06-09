@@ -17,6 +17,10 @@
 /obj/structure/girder,
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/colony/medseceng)
+"aaf" = (
+/obj/structure/machinery/vending/cigarette/koorlander,
+/turf/closed/wall/shiva/ice,
+/area/shiva/exterior/cp_s_research)
 "aah" = (
 /obj/item/stack/sheet/metal,
 /turf/open/auto_turf/ice/layer1,
@@ -4710,7 +4714,7 @@
 /turf/open/auto_turf/snow/layer1,
 /area/shiva/exterior/telecomm/lz2_northeast)
 "cnc" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/medseceng)
 "cng" = (
@@ -5007,7 +5011,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/bar)
 "cBL" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva,
 /area/shiva/interior/bar)
 "cCr" = (
@@ -7784,7 +7788,7 @@
 /turf/closed/wall/shiva/ice,
 /area/shiva/exterior/cp_s_research)
 "fUy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/lz2_habs)
 "fUG" = (
@@ -8968,7 +8972,7 @@
 /turf/open/floor/wood,
 /area/shiva/interior/colony/central)
 "hiX" = (
-/obj/structure/machinery/vending/cigarette,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/bar)
 "hjP" = (
@@ -13079,7 +13083,7 @@
 /turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "lxp" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "lxu" = (
@@ -15234,7 +15238,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/exterior/cp_lz2)
 "nUH" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5"
 	},
 /turf/open/floor/shiva/green/northeast,
@@ -16721,7 +16725,7 @@
 /area/shiva/interior/caves/research_caves)
 "pLX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/n_admin)
 "pMd" = (
@@ -18340,7 +18344,7 @@
 /turf/open/auto_turf/snow/layer2,
 /area/shiva/exterior/cp_colony_grounds)
 "rER" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/multi_tiles,
 /area/shiva/interior/colony/research_hab)
 "rEV" = (
@@ -18607,7 +18611,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/interior/caves/cp_camp)
 "rUy" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/central)
 "rUD" = (
@@ -19335,7 +19339,7 @@
 /turf/open/floor/shiva/wred,
 /area/shiva/interior/colony/medseceng)
 "sOP" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/aerodrome)
 "sPo" = (
@@ -21696,7 +21700,7 @@
 /turf/open/auto_turf/ice/layer1,
 /area/shiva/interior/warehouse/caves)
 "vFc" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "vFi" = (
@@ -22081,7 +22085,7 @@
 /turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "wbZ" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/central)
 "wcA" = (
@@ -23226,7 +23230,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/shiva/interior/caves/cp_camp)
 "xGu" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/n_admin)
 "xHv" = (
@@ -48343,7 +48347,7 @@ dKc
 pLf
 pLf
 pLf
-pLf
+aaf
 pLf
 pLf
 asz

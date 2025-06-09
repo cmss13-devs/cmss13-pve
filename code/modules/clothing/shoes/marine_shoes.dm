@@ -27,52 +27,44 @@
 		/obj/item/tool/screwdriver,
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/weapon/straight_razor,
+		/obj/item/weapon/knife/marine,
 	)
 	drop_sound = "armorequip"
 
 /obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		icon_state = initial(icon_state)
-
-/obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item && !armor_stage)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		if(!armor_stage)
+	if(!armor_stage)
+		if(stored_item)
+			icon_state = "[initial(icon_state)]-1"
+		else
 			icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/knife
-	spawn_item_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/weapon/knife/marine
 
 /obj/item/clothing/shoes/marine/brown
 	icon_state = "marine_brown"
 	desc = "A pair of standard issue brown United States Colonial Marine combat boots."
 
 /obj/item/clothing/shoes/marine/brown/knife
-	spawn_item_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/weapon/knife/marine
 
 /obj/item/clothing/shoes/marine/jungle
 	icon_state = "marine_jungle"
 	desc = "A pair of standard issue United States Colonial Marine jungle boots. Don't go walkin' slow, the devil's on the loose."
 
 /obj/item/clothing/shoes/marine/jungle/knife
-	spawn_item_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/weapon/knife/marine
 
 /obj/item/clothing/shoes/marine/army
 	name = "\improper US Army combat boots"
 	desc = "A pair of standard issue black United States Army combat boots."
 
 /obj/item/clothing/shoes/marine/army/knife
-	spawn_item_type = /obj/item/attachable/bayonet
+	spawn_item_type = /obj/item/weapon/knife/marine/baker
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
 	desc = "A pair of standard issue black UPP Naval Infantry combat boots."
-	spawn_item_type = /obj/item/attachable/bayonet/upp
-
-/obj/item/clothing/shoes/marine/upp_knife
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
 /obj/item/clothing/shoes/marine/upp/guard
@@ -92,17 +84,16 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
-/obj/item/clothing/shoes/marine/rmc/New()
-	..()
-	var/obj/item/attachable/bayonet/upp/knife = new(src)
-	knife.name = "\improper Fairbairn-Sykes fighting knife"
-	knife.desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
-	stored_item = knife
-	update_icon()
+
+/obj/item/clothing/shoes/marine/rmc/knife
+	spawn_item_type = /obj/item/weapon/knife/marine/sas
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
 	desc = "A pair of black boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
+/obj/item/clothing/shoes/marine/civilian/knife
+	spawn_item_type = /obj/item/attachable/bayonet
 
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
@@ -134,3 +125,13 @@
 	desc = "A pair of sneakers designed to elicit a morale boosting response within anyone that witnesses them."
 	icon_state = "stompers"
 	flags_inventory = NOSLIPPING
+
+/obj/item/clothing/shoes/cowboy
+	name = "leather boots"
+	desc = "A pair of leather cowboy boots."
+	icon_state = "cowboy"
+
+/obj/item/clothing/shoes/lizardskin
+	name = "lizardskin boots"
+	desc = "A pair of lizardskin cowboy boots. Get your disco on, baby."
+	icon_state = "lizardskin"

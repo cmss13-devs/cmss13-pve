@@ -8,6 +8,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"aab" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
 "aac" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -29,6 +36,14 @@
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"aaf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aag" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -43,6 +58,47 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
+"aai" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_y = -6;
+	wrenchable = 0;
+	pixel_x = 5
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aaj" = (
+/obj/structure/machinery/vending/coffee{
+	pixel_y = -7;
+	pixel_x = -1;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aak" = (
+/obj/structure/machinery/vending/cigarette/koorlander{
+	pixel_x = -7;
+	pixel_y = -7;
+	wrenchable = 0
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/cryo_cells)
+"aal" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/obj/structure/machinery/vending/cigarette/wy,
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/hangar)
+"aam" = (
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aan" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -56,7 +112,7 @@
 	serial_number = 11
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -105,6 +161,15 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
+"aar" = (
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/cryo_cells)
 "aas" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -126,6 +191,29 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/briefing)
+"aau" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 19;
+	pixel_x = -6
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 6;
+	pixel_x = -16
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/supply)
+"aav" = (
+/obj/item/trash/snack_bowl{
+	pixel_x = -7;
+	pixel_y = 14;
+	name = "water bowl";
+	desc = "A standard-issue bowl, fashioned into a makeshift water bowl for a stowaway. Despite being scratched on with what looks like a boot knife, the word 'KOMARU' is printed with surprisingly decent penmanship for a Marine."
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/supply)
 "aaw" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/almayer/outer,
@@ -164,9 +252,120 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
+"aaB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/clothing/accessory/medal/silver/valor{
+	pixel_x = -8;
+	pixel_y = 1;
+	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
+	},
+/obj/item/prop{
+	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon_state = "helmet";
+	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
+	pixel_y = 6;
+	pixel_x = 3;
+	name = "\improper damaged M10 pattern ballistic helmet"
+	},
+/obj/item/card/id/dogtag{
+	layer = 3.001;
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/cargo_arrow/north,
+/area/golden_arrow/supply)
+"aaC" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"aaD" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"aaE" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 2;
+	pixel_x = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaF" = (
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"aaG" = (
+/obj/structure/machinery/shower{
+	dir = 8
+	},
+/obj/item/toy/bikehorn/rubberducky{
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 2;
+	pixel_x = -1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aaI" = (
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/medical)
+"aaJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/golden_arrow/cryo_cells)
 "aaK" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -194,11 +393,38 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/motor_pool)
-"aaO" = (
-/obj/structure/machinery/light/small/blue{
+"aaN" = (
+/obj/structure/machinery/shower{
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
 	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.5
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/curtain/open/shower{
+	pixel_y = -6
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
+"aaO" = (
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.5;
+	dir = 8
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
@@ -243,8 +469,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -468,7 +693,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/machinery/light/small/blue,
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "abT" = (
@@ -610,9 +837,8 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/dark_sterile,
@@ -660,10 +886,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/structure/prop{
 	icon = 'icons/obj/structures/props/platforms.dmi';
 	icon_state = "platform";
@@ -728,9 +951,15 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/structure/barricade/handrail{
-	layer = 3.1;
-	pixel_y = -1
+/obj/item/tool/soap{
+	pixel_x = -6;
+	pixel_y = -6
+	},
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -896,19 +1125,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "adt" = (
-/obj/structure/closet/wardrobe{
-	name = "PT uniform"
+/obj/structure/sign/safety/water{
+	pixel_y = 7;
+	pixel_x = 11
 	},
-/obj/item/clothing/under/shorts/blue,
-/obj/item/clothing/under/shorts/red,
-/obj/item/clothing/under/shorts/blue,
-/obj/item/clothing/head/headband/red,
-/obj/item/clothing/under/shorts/red,
-/obj/structure/barricade/handrail{
-	layer = 3.1;
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/mono,
+/turf/closed/wall/almayer,
 /area/golden_arrow/cryo_cells)
 "adv" = (
 /obj/structure/disposalpipe/segment,
@@ -953,9 +1174,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "adB" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1025,6 +1245,7 @@
 	dir = 4;
 	pixel_x = 21
 	},
+/obj/structure/machinery/disposal,
 /turf/open/floor/almayer/edge/southeast,
 /area/golden_arrow/cryo_cells)
 "adK" = (
@@ -1054,9 +1275,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "adQ" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
@@ -1142,9 +1361,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -1173,9 +1391,8 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/dark_sterile,
@@ -1244,6 +1461,14 @@
 /obj/item/storage/pill_bottle/paracetamol{
 	pixel_x = -5
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = 7;
+	pixel_y = -1;
+	name = "towel"
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aeG" = (
@@ -1269,9 +1494,8 @@
 "aeH" = (
 /obj/structure/machinery/faxmachine/uscm/command/capt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
 	},
@@ -1435,13 +1659,23 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "afl" = (
-/obj/structure/machinery/vending/coffee{
-	pixel_x = 14;
-	pixel_y = 13
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/vending/snack/packaged{
-	pixel_x = -7;
-	pixel_y = 14
+/obj/structure/closet/crate/trashcart{
+	pixel_y = 8
+	},
+/obj/item/trash/candy,
+/obj/item/trash/burger,
+/obj/item/trash/cigbutt,
+/obj/item/trash/burger{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	pixel_y = 20
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -1541,9 +1775,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
 "afy" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -1578,29 +1811,33 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/hangar)
 "afD" = (
-/obj/structure/machinery/light/double/blue,
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/motor_pool)
 "afI" = (
-/obj/structure/barricade/metal{
-	dir = 8
-	},
-/obj/structure/barricade/metal{
-	dir = 4
-	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_y = 8
-	},
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_y = 8
-	},
 /obj/structure/machinery/shower{
 	pixel_y = 16
 	},
-/obj/structure/curtain{
-	pixel_y = -10
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 11
+	},
+/obj/structure/curtain/open/shower{
+	pixel_y = -6
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -1642,9 +1879,8 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "afQ" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1771,6 +2007,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "agj" = (
@@ -1830,10 +2069,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "agD" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1853,12 +2091,16 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/cryo_cells)
 "agH" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/east,
@@ -1887,8 +2129,7 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "agM" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -2047,6 +2288,9 @@
 /obj/item/paper{
 	pixel_y = 5;
 	pixel_x = -4
+	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/shared_office)
@@ -2274,10 +2518,7 @@
 	pixel_y = 2;
 	pixel_x = 2
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -2405,8 +2646,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /obj/structure/pipes/vents/pump,
@@ -2493,9 +2733,8 @@
 /area/golden_arrow/cryo_cells)
 "aiM" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/machinery/computer/med_data/laptop{
@@ -2735,9 +2974,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "ajA" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -2764,8 +3002,7 @@
 /turf/open/floor/corsat,
 /area/golden_arrow/motor_pool)
 "ajG" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -2925,9 +3162,8 @@
 	id = "basketball";
 	side = "right"
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -2998,8 +3234,7 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge,
@@ -3025,9 +3260,8 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -3069,10 +3303,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "akN" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -3144,13 +3375,11 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "alc" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Section Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 8
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Corpsman"
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -3173,9 +3402,8 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/motor_pool)
 "alm" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/machinery/medical_pod/bodyscanner{
@@ -3349,17 +3577,15 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
 "alS" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "alT" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -3441,9 +3667,8 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "amh" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -3528,9 +3753,8 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/west,
@@ -3575,7 +3799,7 @@
 	layer = 2.52
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -3997,8 +4221,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -4083,10 +4306,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/lower_cargo)
@@ -4214,9 +4436,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/motor_pool)
 "aoE" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -4239,8 +4460,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "aoL" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -4256,9 +4476,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/supply)
-"aoO" = (
-/turf/open/floor/almayer/edge/east,
-/area/golden_arrow/cryo_cells)
 "aoR" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer,
@@ -4277,10 +4494,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aoU" = (
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
 	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -4382,9 +4599,8 @@
 	layer = 2.52
 	},
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -4584,9 +4800,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
 	},
@@ -4689,9 +4904,8 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -4910,8 +5124,7 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "arf" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /obj/structure/pipes/vents/scrubber{
@@ -5145,9 +5358,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "arM" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5221,8 +5433,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/north,
@@ -5523,11 +5734,16 @@
 /turf/open/floor/almayer/black/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "atm" = (
-/turf/open/floor/almayer/edge/northwest,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_sn_full_cap";
+	color = "grey"
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "ato" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer/edge,
+/obj/effect/decal/strata_decals/grime/grime3,
+/obj/structure/bed/chair/comfy/bench/north,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "atq" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -5550,9 +5766,8 @@
 /turf/open/floor/almayer/sterile_green_side,
 /area/golden_arrow/medical)
 "atw" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/west,
@@ -5617,10 +5832,9 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/motor_pool)
 "atF" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.5;
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
@@ -5812,9 +6026,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -5943,9 +6156,8 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -5980,9 +6192,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/west,
@@ -6218,8 +6429,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -6362,9 +6572,8 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/platoonarmory)
 "awR" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6722,8 +6931,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "axM" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -6914,8 +7122,7 @@
 /area/golden_arrow/supply)
 "ayo" = (
 /obj/effect/decal/strata_decals/grime/grime4,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.5
 	},
 /turf/open/floor/almayer,
@@ -7004,6 +7211,9 @@
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.7
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
@@ -7227,9 +7437,8 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/briefing)
 "azd" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -7323,6 +7532,10 @@
 "azq" = (
 /obj/structure/machinery/shower{
 	dir = 8
+	},
+/obj/item/tool/soap{
+	pixel_x = -6;
+	pixel_y = -6
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -7419,9 +7632,10 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "azG" = (
-/obj/structure/machinery/vending/cigarette{
-	pixel_x = 4;
-	pixel_y = 14
+/obj/structure/machinery/vending/dinnerware,
+/obj/structure/sign/banners/usa_flag{
+	pixel_x = -15;
+	pixel_y = 32
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
@@ -7433,9 +7647,8 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -7797,13 +8010,11 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Squad Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -7932,16 +8143,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aBd" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aBe" = (
@@ -8037,14 +8245,17 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "aBw" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -8112,10 +8323,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aBK" = (
@@ -8734,9 +8942,8 @@
 	pixel_y = 18;
 	density = 0
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/dark_sterile,
@@ -8802,7 +9009,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/briefing)
 "aDZ" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -8854,13 +9061,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/prep_hallway)
 "aEe" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = -7;
-	job = "Smartgunner"
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -7
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_x = 8;
-	job = "Squad Sergeant"
+/obj/structure/closet/secure_closet/marine_personal/squad_leader{
+	pixel_x = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -8892,17 +9097,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
-"aEi" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/vending/dinnerware,
-/obj/item/ashtray/glass{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/almayer/edge/northeast,
-/area/golden_arrow/cryo_cells)
 "aEl" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -8915,9 +9109,8 @@
 	id = "basketball";
 	side = "left"
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -9167,8 +9360,7 @@
 	icon_state = "door_warning";
 	dir = 4
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -9225,13 +9417,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoonprep)
 "aFo" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	job = "Platoon Commander"
-	},
-/obj/item/clothing/under/marine/officer/boiler,
-/obj/item/clothing/suit/storage/jacket/marine/service,
-/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber,
-/obj/item/clothing/under/marine/officer/bridge,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aFr" = (
@@ -9297,9 +9483,8 @@
 /obj/item/reagent_container/food/drinks/plasticcup{
 	pixel_y = 9
 	},
-/obj/effect/decal/strata_decals/grime/grime4{
+/obj/effect/decal/strata_decals/grime/grime4/game_plane{
 	layer = 2.9;
-	plane = -6;
 	pixel_y = 2
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
@@ -9352,9 +9537,8 @@
 /turf/open/floor/almayer/cargo_arrow/west,
 /area/golden_arrow/hangar)
 "aFK" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/machinery/computer/cryopod{
@@ -9399,7 +9583,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aFT" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/almayer/test_floor4,
@@ -9422,9 +9606,8 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aFX" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9524,12 +9707,9 @@
 /area/golden_arrow/cryo_cells)
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m4ra_pve{
-	pixel_y = 18
-	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 6;
-	pixel_x = 9
+/obj/item/storage/box/guncase/heavy/m49a_pve{
+	pixel_y = 10;
+	pixel_x = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -9545,7 +9725,12 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aGr" = (
-/turf/open/floor/almayer/edge/northeast,
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_sn_full_cap";
+	color = "grey"
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aGt" = (
 /obj/structure/sign/safety/bulkhead_door{
@@ -9718,9 +9903,8 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -9756,10 +9940,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526"
-	},
+/obj/structure/machinery/light/small/red,
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
 "aHa" = (
@@ -9802,15 +9983,14 @@
 	},
 /obj/structure/barricade/metal{
 	dir = 8;
-	pixel_y = 8;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = 11
 	},
 /obj/structure/barricade/metal{
 	dir = 4;
-	pixel_y = 8;
-	pixel_x = 1
+	pixel_x = 1;
+	pixel_y = 11
 	},
-/obj/structure/curtain/red,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aHh" = (
@@ -9898,9 +10078,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -9957,24 +10135,11 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aHQ" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/item/ashtray/bronze{
+	pixel_x = 29;
+	pixel_y = 37
 	},
-/obj/structure/sign/banners/united_americas_flag{
-	pixel_x = -30;
-	pixel_y = 31
-	},
-/obj/structure/closet/crate/trashcart{
-	pixel_y = 8
-	},
-/obj/item/trash/candy,
-/obj/item/trash/burger,
-/obj/item/trash/cigbutt,
-/obj/item/trash/burger{
-	pixel_y = 6;
-	pixel_x = 3
-	},
-/turf/open/floor/almayer/edge/smooth/endcap_left/north,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aHR" = (
 /obj/effect/decal/warning_stripes{
@@ -10062,7 +10227,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -10240,9 +10405,8 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
 "aIN" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -10264,10 +10428,9 @@
 /turf/open/floor/almayer/blackcorner/north,
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
+	pixel_y = 40
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food,
 /turf/open/floor/almayer/plate,
@@ -10471,9 +10634,8 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aJq" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/north,
@@ -10651,9 +10813,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -10762,9 +10922,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aKu" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -10785,10 +10944,9 @@
 	icon_state = "0-8";
 	layer = 2.36
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.5;
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/platoonarmory)
@@ -10916,9 +11074,8 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
 "aLb" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/west,
@@ -11053,9 +11210,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/cargo_arrow/east,
@@ -11244,9 +11400,8 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -11356,9 +11511,8 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "aMP" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer,
@@ -11684,10 +11838,10 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/platoonarmory)
 "aNT" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/effect/decal/strata_decals/grime/grime1{
+	dir = 4
 	},
-/turf/open/floor/almayer/edge/southeast,
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aNV" = (
 /obj/effect/decal/cleanable/dirt{
@@ -11977,9 +12131,8 @@
 	pixel_x = 1;
 	pixel_y = 1
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/north,
@@ -11996,11 +12149,14 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "aPf" = (
-/turf/open/floor/almayer/edge/west,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aPg" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -12058,8 +12214,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aPo" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/north,
@@ -12147,10 +12302,9 @@
 	icon_state = "cargo_arrow";
 	dir = 1
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12348,6 +12502,14 @@
 /obj/effect/decal/strata_decals/grime/grime2{
 	dir = 1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 2
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "aQF" = (
@@ -12504,9 +12666,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -12560,10 +12721,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
-	light_power = 0.5;
-	pixel_y = -1
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	pixel_y = -1;
+	light_power = 0.5
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/platoonarmory)
@@ -12630,6 +12790,9 @@
 "aRz" = (
 /obj/structure/machinery/shower{
 	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -12723,10 +12886,9 @@
 /area/golden_arrow/supply)
 "aRK" = (
 /obj/effect/decal/cleanable/blood/oil,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	light_power = 0.3
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 1
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/supply)
@@ -12897,10 +13059,10 @@
 /area/golden_arrow/hangar)
 "aSr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 15;
 	layer = 3.2;
 	pixel_x = -4
@@ -12929,12 +13091,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "aSu" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.7
+/obj/structure/bed/chair/comfy/bench/south,
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = 7;
+	pixel_y = -1;
+	name = "towel"
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "aSv" = (
 /obj/effect/decal/cleanable/dirt{
@@ -13192,9 +13355,8 @@
 /turf/closed/wall/almayer/outer,
 /area/space)
 "aTw" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/east,
@@ -13300,9 +13462,8 @@
 	pixel_y = 9;
 	layer = 3.1
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/cargo/southwest,
@@ -13394,8 +13555,11 @@
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/dorms)
 "aUh" = (
-/obj/structure/machinery/disposal,
-/turf/open/floor/almayer/edge/north,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	color = "grey"
+	},
+/turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "aUi" = (
 /obj/effect/decal/cleanable/dirt{
@@ -13603,10 +13767,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aUX" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
@@ -13794,9 +13957,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aVI" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/cable/heavyduty{
@@ -13852,9 +14014,8 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
 "aVQ" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -13948,9 +14109,8 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/cryo_cells)
 "aWi" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer,
@@ -13959,9 +14119,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/west,
@@ -13996,6 +14155,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
 	pixel_x = -1
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 30
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -14098,8 +14260,7 @@
 "aWM" = (
 /obj/structure/surface/table/almayer,
 /obj/item/toy/deck,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /obj/structure/disposalpipe/segment,
@@ -14166,9 +14327,8 @@
 	icon_state = "N";
 	pixel_y = 2
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/pipes/vents/scrubber{
@@ -14230,8 +14390,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/plate,
@@ -14257,9 +14416,8 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "aXk" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/warning_stripes{
@@ -14405,9 +14563,8 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "aXP" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -14456,9 +14613,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth,
@@ -14552,8 +14708,7 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/synthcloset)
 "aYy" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge,
@@ -14614,9 +14769,8 @@
 /obj/structure/machinery/shower{
 	dir = 8
 	},
-/obj/structure/barricade/handrail{
-	layer = 3.1;
-	pixel_y = -1
+/obj/structure/barricade/handrail/type_b{
+	layer = 3.2
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
@@ -14822,9 +14976,8 @@
 	pixel_x = 14;
 	layer = 2.01
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/item/clothing/glasses/hud/health{
@@ -15145,10 +15298,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 4;
-	light_power = 0.3
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
@@ -15309,10 +15461,9 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supplydrop)
@@ -15443,9 +15594,7 @@
 /obj/structure/surface/rack,
 /obj/item/tool/weldingtool/hugetank,
 /obj/item/tool/wirecutters,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/almayer,
@@ -15521,6 +15670,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
+"cMX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/supply)
 "cQH" = (
 /obj/structure/machinery/door/poddoor/almayer{
 	name = "\improper Lower Storage Bay Five Blast Door";
@@ -15629,8 +15786,7 @@
 	layer = 2.52
 	},
 /obj/effect/decal/strata_decals/grime/grime2,
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -15676,6 +15832,9 @@
 	pixel_y = 22;
 	pixel_x = 1;
 	layer = 3.2
+	},
+/obj/item/ammo_box/magazine/nade_box/flare{
+	pixel_x = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -15737,9 +15896,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/closet/coffin/woodencrate{
@@ -15932,10 +16090,9 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "epS" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/lower_cargo)
@@ -15996,6 +16153,9 @@
 /area/golden_arrow/engineering)
 "exo" = (
 /obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_y = -7
+	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "eyg" = (
@@ -16158,13 +16318,13 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
 "eZR" = (
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "fbw" = (
@@ -16283,7 +16443,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "fBD" = (
-/obj/structure/bed/chair/comfy/bench/north/east,
+/obj/structure/bed/chair/comfy/bench/north/east{
+	dir = 2
+	},
 /obj/structure/prop/almayer/sadar_decoration{
 	pixel_y = 29
 	},
@@ -16515,6 +16677,13 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow,
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 9;
+	pixel_y = 10
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "gqG" = (
@@ -16545,25 +16714,21 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/lower_cargo)
 "gsQ" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.3
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/supply)
 "gtS" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.3
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
 "gwS" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/effect/decal/warning_stripes{
@@ -16595,9 +16760,7 @@
 	dir = 4
 	},
 /obj/vehicle/powerloader,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/structure/prop{
@@ -16757,8 +16920,7 @@
 	pixel_y = 22;
 	pixel_x = -14
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -16844,9 +17006,8 @@
 	dir = 4;
 	pixel_y = 7
 	},
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
 	},
@@ -17102,9 +17263,8 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/supply)
 "iLR" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/structure/surface/table/almayer,
@@ -17156,10 +17316,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/lower_cargo)
 "iUC" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17260,8 +17419,7 @@
 /obj/structure/prop/dam/crane{
 	pixel_y = -13
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -17288,10 +17446,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -17473,9 +17630,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
 "kjn" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -17512,7 +17667,7 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/nade_box{
+/obj/item/ammo_box/magazine/nade_box{
 	pixel_y = 13;
 	layer = 3.2
 	},
@@ -17537,10 +17692,9 @@
 /obj/structure/machinery/telecomms/hub/preset{
 	pixel_x = -6
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
@@ -17558,9 +17712,7 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/lower_cargo)
 "kKs" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/west,
@@ -17792,10 +17944,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/lower_cargo)
@@ -17905,10 +18056,9 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
 "lUn" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/structure/platform,
@@ -18026,9 +18176,8 @@
 /area/golden_arrow/supply)
 "moW" = (
 /obj/structure/gun_rack/m41/unloaded,
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer,
@@ -18186,10 +18335,9 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
@@ -18321,10 +18469,9 @@
 	icon_state = "cargo_arrow";
 	dir = 1
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -18409,9 +18556,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "nnZ" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -18494,17 +18639,15 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.5;
 	pixel_y = 10
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "nuo" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
 	},
 /turf/open/floor/almayer,
@@ -18584,10 +18727,9 @@
 /obj/structure/machinery/telecomms/hub/preset{
 	pixel_x = 6
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/engineering)
@@ -18665,9 +18807,7 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
 "odf" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -18709,10 +18849,9 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/supply)
 "ojW" = (
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	dir = 1;
-	light_power = 0.3
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	light_power = 0.3;
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/supply)
@@ -18771,10 +18910,9 @@
 /area/golden_arrow/lower_cargo)
 "ouD" = (
 /obj/structure/machinery/chem_dispenser/canteen,
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	pixel_y = 20
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
+	pixel_y = 40
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -18875,8 +19013,7 @@
 	pixel_x = 17;
 	dir = 8
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.5
 	},
 /turf/open/floor/almayer,
@@ -18942,16 +19079,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/engineering)
 "pce" = (
-/obj/structure/machinery/light/small/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	light_power = 0.25
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
 "pcD" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -19061,9 +19195,8 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/lower_cargo)
 "pKQ" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /obj/effect/decal/warning_stripes{
@@ -19652,10 +19785,9 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/briefing)
 "rOB" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 1;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 1
 	},
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/engineering)
@@ -19758,13 +19890,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"sgG" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/bare_catwalk,
-/area/golden_arrow/engineering)
 "sgR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -20117,10 +20242,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/engineering)
@@ -20135,9 +20259,7 @@
 	dir = 8;
 	pixel_x = -1
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /obj/structure/prop{
@@ -20257,9 +20379,8 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/lower_cargo)
 "uls" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer,
@@ -20328,10 +20449,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "uxq" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/lower_cargo)
@@ -20350,8 +20470,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.3
 	},
 /turf/open/floor/almayer/edge/smooth/north,
@@ -20414,9 +20533,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 1
 	},
 /turf/open/floor/almayer,
@@ -20436,10 +20553,9 @@
 	pixel_y = 2;
 	pixel_x = 5
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
@@ -20467,10 +20583,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/supply)
 "vms" = (
-/obj/structure/machinery/light/small/blue{
-	dir = 8;
-	light_color = "#dae2ff";
-	light_power = 0.25
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 8
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/lower_cargo)
@@ -20558,8 +20673,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -20575,10 +20689,9 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.5
+/obj/structure/machinery/light/small/blue/golden_arrow{
+	light_power = 0.25;
+	dir = 4
 	},
 /turf/open/floor/almayer/plating/northeast,
 /area/golden_arrow/supplydrop)
@@ -20636,7 +20749,7 @@
 /area/golden_arrow/supply)
 "vNW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/blue{
+/obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
 /obj/item/ammo_box/rounds/smartgun{
@@ -20741,9 +20854,8 @@
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/lower_cargo)
 "wuZ" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/west,
@@ -20815,8 +20927,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	light_power = 0.7
 	},
 /turf/open/floor/plating/plating_catwalk,
@@ -20876,9 +20987,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/cargo/southwest,
@@ -20941,9 +21051,8 @@
 /turf/open/floor/almayer/plating_striped,
 /area/golden_arrow/engineering)
 "xlL" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
-	light_color = "#dae2ff";
 	light_power = 0.7
 	},
 /turf/open/floor/almayer/edge/smooth/corner,
@@ -21012,9 +21121,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "xJl" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
+/obj/structure/machinery/light/small/red{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -25828,7 +25935,7 @@ aFo
 awW
 apm
 alD
-alc
+aam
 aog
 alc
 awW
@@ -26178,7 +26285,7 @@ aWh
 aWh
 aWh
 aWh
-aAI
+aar
 aZw
 amS
 azT
@@ -26542,7 +26649,7 @@ adW
 avj
 agG
 adt
-acO
+aaE
 acO
 aRz
 aog
@@ -26720,8 +26827,8 @@ aQr
 aBw
 atm
 aPf
-aOM
-ave
+aQr
+aaC
 aog
 atY
 ayJ
@@ -26884,7 +26991,7 @@ aEG
 aEG
 aWh
 afI
-aHF
+aaJ
 aHd
 aog
 fSy
@@ -26896,7 +27003,7 @@ aNn
 aAs
 agh
 aUh
-ahK
+aaF
 ato
 aSu
 aog
@@ -27060,8 +27167,8 @@ aEG
 aEG
 aEG
 aWh
-afI
-aHF
+aaN
+aaJ
 aHd
 aog
 ajq
@@ -27071,11 +27178,11 @@ aKk
 ahK
 aLw
 aBk
-axK
+aBw
 aGr
-aoO
+aPf
 aNT
-aQr
+aaD
 aog
 aCH
 adj
@@ -27248,9 +27355,9 @@ aht
 aCB
 aQm
 aBk
-aBw
-adt
-aYH
+aaH
+aog
+aaG
 aYH
 azq
 aog
@@ -27952,7 +28059,7 @@ aWh
 arr
 alD
 aBk
-ahK
+aaf
 aZr
 arj
 aBk
@@ -28126,7 +28233,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+aai
 alD
 ave
 anG
@@ -28303,7 +28410,7 @@ aEG
 aEG
 aEG
 aWh
-aog
+aaj
 aHQ
 aBk
 aBk
@@ -28480,8 +28587,8 @@ aEG
 aEG
 aEG
 aWh
-aog
-aEi
+aak
+aBk
 azd
 aQd
 aZl
@@ -29018,7 +29125,7 @@ aHF
 arQ
 aHF
 aHF
-aHF
+aab
 aog
 aVa
 apO
@@ -30168,9 +30275,9 @@ duL
 duL
 duL
 hCn
-sgG
-sgG
-sgG
+rqE
+rqE
+rqE
 hCn
 nrp
 anm
@@ -31116,8 +31223,8 @@ aEG
 aEG
 vYW
 cqk
-vve
-aAu
+aaB
+aau
 afz
 aAu
 aoN
@@ -31294,7 +31401,7 @@ aEG
 vYW
 cqk
 vve
-aDj
+aav
 afz
 aAu
 aPB
@@ -33070,7 +33177,7 @@ aLe
 ati
 roZ
 odS
-exo
+cMX
 rdX
 btA
 rTJ
@@ -35006,7 +35113,7 @@ aEG
 aEG
 aEG
 atb
-axa
+aal
 aBg
 alK
 aUD
