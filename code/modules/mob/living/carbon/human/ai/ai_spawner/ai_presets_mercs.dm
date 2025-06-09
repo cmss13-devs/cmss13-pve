@@ -83,5 +83,5 @@
 
 /datum/human_ai_equipment_preset/mercenaries/infiltrator
 	name = "Black Dragoons Infiltrator"
-	desc = "Black Dragoons' only force of stealth operatives, equipped for maximum manuverability and to strike fear in anyone who gets in their way."
+	desc = "The Black Dragoons' only force of stealth operatives, equipped for maximum manuverability and to strike fear in anyone who gets in their way."
 	path = /datum/equipment_preset/mercenary/infiltrator
