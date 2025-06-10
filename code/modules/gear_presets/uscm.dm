@@ -114,7 +114,8 @@
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/pfc/upp
-	name = "UPP Squad Rifleman"
+	name = "UPP Squad Infantryman"
+	assignment = JOB_SQUAD_MARINE_UPP
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
@@ -166,7 +167,7 @@
 /datum/equipment_preset/uscm/sg/upp
 	name = "UPP Squad Machinegunner"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
-	assignment = "Machinegunner"
+	assignment = JOB_SQUAD_SMARTGUN_UPP
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
@@ -236,10 +237,11 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/medic/upp
-	name = "UPP Squad Sanitar"
+	name = "UPP Platoon Sanitar"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
-	assignment = "Sanitar"
+	assignment = JOB_SQUAD_MEDIC_UPP
+	role_comm_title = "PltStr"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
@@ -258,7 +260,7 @@
 
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
-	assignment = "Squad Corpsman"
+	assignment = JOB_SQUAD_MEDIC_FORECON
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/combat_medic/recon
 
@@ -286,6 +288,8 @@
 
 /datum/equipment_preset/uscm/tl/upp
 	name = "UPP Squad Sergeant"
+	assignment = JOB_SQUAD_TEAM_LEADER_UPP
+	role_comm_title = "SqSgt"
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
@@ -306,7 +310,7 @@
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
-	assignment = "Assistant Squad Leader"
+	assignment = JOB_SQUAD_TEAM_LEADER_FORECON
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ASL"
 	skills = /datum/skills/tl/recon
@@ -364,6 +368,8 @@
 
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
+	assignment = JOB_SQUAD_LEADER_UPP
+	role_comm_title = "PltSgt"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -384,7 +390,7 @@
 
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
-	assignment = "Squad Leader"
+	assignment = JOB_SQUAD_LEADER_FORECON
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SL"
 
