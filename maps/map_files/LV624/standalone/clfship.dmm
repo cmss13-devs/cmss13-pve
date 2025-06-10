@@ -162,7 +162,7 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/crashed_ship)
 "fE" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_2_1"
 	},
 /obj/structure/machinery/defenses/sentry/premade/dumb{
@@ -385,7 +385,7 @@
 	dir = 4;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_9_1"
 	},
 /turf/open/gm/dirt,
@@ -513,7 +513,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_west_caves)
 "rf" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -537,7 +537,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "rX" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_4_1"
 	},
 /turf/open/floor/plating,
@@ -990,7 +990,7 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/ground/caves/south_west_caves)
 "GI" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_2_1"
 	},
 /turf/open/floor/plating/platingdmg3,
@@ -1025,7 +1025,7 @@
 	dir = 1;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -1043,7 +1043,7 @@
 /turf/open/floor/almayer/emerald/northeast,
 /area/lv624/lazarus/crashed_ship)
 "IH" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_3_1"
 	},
 /turf/open/floor/plating,
@@ -1276,7 +1276,7 @@
 /turf/open/floor/plating/warnplate/southwest,
 /area/lv624/lazarus/crashed_ship)
 "OT" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_6_1"
 	},
 /obj/structure/barricade/metal/wired{
@@ -1313,7 +1313,7 @@
 /turf/open/floor/almayer/green/northeast,
 /area/lv624/lazarus/crashed_ship)
 "PV" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_9_1"
 	},
 /obj/structure/machinery/defenses/sentry/premade/dumb{
@@ -1441,7 +1441,7 @@
 	dir = 1;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -1479,7 +1479,7 @@
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/crashed_ship)
 "Vs" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_2_1"
 	},
 /turf/open/gm/dirt,

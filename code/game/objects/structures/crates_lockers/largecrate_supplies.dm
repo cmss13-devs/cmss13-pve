@@ -222,8 +222,8 @@
 	icon_state = "case_double"
 
 /obj/structure/largecrate/supply/explosives/mines
-	name = "M20 claymore bulk crate (x25)"
-	desc = "A crate containing five cases of five M20 claymores."
+	name = "M20A2 claymore bulk crate (x25)"
+	desc = "A crate containing five cases of five M20A2 claymores."
 	supplies = list(/obj/item/storage/box/explosive_mines = 5)
 
 /obj/structure/largecrate/supply/explosives/mines/m760
