@@ -335,7 +335,7 @@
 	icon_state = "ag80"
 	ammo_band_icon = "+ag80_band"
 	ammo_band_icon_empty = "+ag80_band_e"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/ag80 //need to reference the actual ammo designed for the carbine
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 

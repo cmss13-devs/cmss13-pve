@@ -424,7 +424,7 @@
 
 /obj/item/weapon/gun/rifle/ag80
 	name = "\improper AG80 pulse rifle"
-	desc = "Pulse action 9.7x16mm caseless assault rifle of the UPPAC Naval Infantry. Only recently entered service and has yet to see full integration."
+	desc = "Pulse action 9.7x16mm caseless assault rifle of the UPPAC Naval Infantry. Only recently entered service and has yet to see full integration. The design suggests that it is a carbine sibling to the Type-71's rifle role, rather than an outright replacement."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ag80"
 	item_state = "ag80"
