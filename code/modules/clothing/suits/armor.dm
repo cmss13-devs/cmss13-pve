@@ -549,7 +549,7 @@
 
 /obj/item/clothing/suit/armor/vest/merc/heavy
 	name = "DP TAC-PACK Gen IV-H armored vest"
-	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts. Made by Davis Proprietary."
+	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts, allowing users to resist a lot of damage before going down. Made by Davis Proprietary."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -560,7 +560,8 @@
 	armor_bullet = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	flags_inventory = BLOCK_KNOCKDOWN
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	slowdown = SLOWDOWN_ARMOR_HEAVY
 	time_to_unequip = 20
 	time_to_equip = 20
