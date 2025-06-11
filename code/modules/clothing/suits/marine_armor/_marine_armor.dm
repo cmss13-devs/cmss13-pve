@@ -995,3 +995,21 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	time_to_unequip = 10
 	time_to_equip = 10
+
+/obj/item/clothing/suit/marine/random_parts/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	attach_accessory(null, shinguards, TRUE)
+	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	attach_accessory(null, shoulderpads, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/kneepads/knees = new()
+		attach_accessory(null, knees, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/bracers/armguards = new()
+		attach_accessory(null, armguards, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/neckguard/neck = new()
+		attach_accessory(null, neck, TRUE)

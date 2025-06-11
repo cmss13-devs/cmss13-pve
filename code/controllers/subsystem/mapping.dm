@@ -44,7 +44,7 @@ SUBSYSTEM_DEF(mapping)
 /datum/controller/subsystem/mapping/proc/HACK_LoadMapConfig()
 	if(!configs)
 		configs = load_map_configs(ALL_MAPTYPES, error_if_missing = FALSE)
-		world.name = "[CONFIG_GET(string/title)] - Operation Rattlesnake"
+		world.name = "[CONFIG_GET(string/title)] - AndroBetel's Edition"
 
 /datum/controller/subsystem/mapping/Initialize(timeofday)
 	HACK_LoadMapConfig()

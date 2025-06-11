@@ -60,6 +60,14 @@
 	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
 	force = MELEE_FORCE_STRONG
 
+/obj/item/weapon/sword/gladius
+	name = "gladius"
+	desc = "A sword of ancient design, made with contemporary materials using 3D-printing technique. Why would someone carry it in this day and age is beyond you."
+	icon_state = "gladius"
+	item_state = "gladius"
+	w_class = SIZE_MEDIUM
+	throwforce = MELEE_FORCE_STRONG //funny
+
 /obj/item/weapon/sword/hefa
 	name = "HEFA sword"
 	icon_state = "hefasword"

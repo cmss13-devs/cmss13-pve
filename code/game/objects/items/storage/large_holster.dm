@@ -121,13 +121,23 @@
 /obj/item/storage/large_holster/machete/smartgunner/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
 
+/obj/item/storage/large_holster/machete/gladius
+	name = "\improper modified H5 patter M2132 gladius scabbard"
+	desc = "A large leather scabbard modified to carry an ancient sword. It can be strapped on your waist or the armor."
+	icon_state = "gladius_holster"
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+	can_hold = list(/obj/item/weapon/sword/gladius)
+
+/obj/item/storage/large_holster/machete/gladius/full/fill_preset_inventory()
+	new /obj/item/weapon/sword/gladius(src)
+
 /obj/item/storage/large_holster/katana
 	name = "\improper katana scabbard"
 	desc = "A large, vibrantly colored katana scabbard used to carry a Japanese sword. It can be strapped to the back or worn at the belt. Because of the sturdy wood casing of the scabbard, it makes an okay defensive weapon in a pinch."
 	icon_state = "katana_holster"
 	force = 12
 	attack_verb = list("bludgeoned", "struck", "cracked")
-	flags_equip_slot = SLOT_WAIST|SLOT_BACK
+	flags_equip_slot = SLOT_WAIST
 	can_hold = list(/obj/item/weapon/sword/katana)
 
 /obj/item/storage/large_holster/katana/full/fill_preset_inventory()

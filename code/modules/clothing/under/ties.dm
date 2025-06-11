@@ -1401,7 +1401,7 @@
 /obj/item/storage/internal/accessory/webbing/m3mag/mk1/fill_preset_inventory()
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/shotgun
