@@ -169,7 +169,7 @@
 	name = "hypervelocity anti-air missile"
 	damage = 250
 	max_range = 16
-	vehicle_slowdown_time = 2 SECONDS
+	vehicle_slowdown_time = 4 SECONDS
 	shell_speed = AMMO_SPEED_TIER_8
 
 //UPP Goose AA missile

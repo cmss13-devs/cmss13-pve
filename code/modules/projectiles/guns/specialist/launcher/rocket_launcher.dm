@@ -420,9 +420,21 @@
 	actions_types = list(/datum/action/item_action/toggle_aerial_targetting)
 	var/targetting_air = FALSE
 	var/SAM_has_empty_icon = FALSE
+	var/is_outside = FALSE //Whether the user is firing from inside an unsuitable location or not
+	var/secondary_toggled = 0 //Which ammo is used
+	var/datum/ammo/ammo_primary = /datum/ammo/rocket/anti_air //Actual missile type
+	var/datum/ammo/ammo_secondary = /datum/ammo/anti_air //'AA targetting' missile type
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_bullet_traits()
 	return
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/Initialize(mapload, ...)
+	ammo_primary = GLOB.ammo_list[ammo_primary]
+	ammo_secondary = GLOB.ammo_list[ammo_secondary]
+	ammo = ammo_primary
+	. = ..()
+	smoke = new()
+	smoke.attach(src)
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_gun_config_values()
 	..()
@@ -452,34 +464,28 @@
 	if (. && istype(user))
 		if(current_mag && current_mag.current_rounds > 0)
 			make_rocket(user, 0, 1)
-
-	var/turf/TU = get_turf(user)
-	var/area/targ_area = get_area(user)
-	if(!istype(TU)) return
-	var/is_outside = FALSE
-	switch(targ_area.ceiling)
-		if(CEILING_NONE)
-			is_outside = TRUE
-		if(CEILING_GLASS)
-			is_outside = TRUE
-	if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
-		is_outside = FALSE
-	if(targetting_air && !is_outside)
-		to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
-		return
-
-/obj/item/weapon/gun/launcher/rocket/anti_air/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
-	. = ..()
-	if(targetting_air && (current_mag.current_rounds > 0))
-		qdel(current_mag)
-		sleep(5)	//simulating it arcing up out of view before igniting
-		for(var/mob/mob in range(10, user))
-			mob.show_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SHOW_MESSAGE_VISIBLE)
-		message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
-		log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
-	update_icon()
-
-//Todo; finish fixing this so it works properly
+		var/turf/TU = get_turf(user)
+		var/area/targ_area = get_area(user)
+		if(!istype(TU))
+			return
+		switch(targ_area.ceiling)
+			if(CEILING_NONE)
+				is_outside = TRUE
+			if(CEILING_GLASS)
+				is_outside = TRUE
+		if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
+			is_outside = FALSE
+		if(targetting_air && !is_outside)
+			to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
+			return FALSE
+		else if(targetting_air && is_outside && (current_mag.current_rounds > 0))
+			for(var/mob/mob in range(10, user))
+				sleep(5)
+				mob.show_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SHOW_MESSAGE_VISIBLE)
+			message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
+			log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
+			update_icon()
+			return TRUE
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/uscm
 	name = "\improper SIM-118 anti-air missile launcher"
@@ -490,6 +496,7 @@
 	launch_sound = 'sound/weapons/gun_hornet.ogg'
 	has_empty_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/rocket/anti_air
+	ammo_primary = /datum/ammo/rocket/ap/anti_air
 	attachable_allowed = null
 	SAM_has_empty_icon = TRUE
 
@@ -513,7 +520,7 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/upp
 	name = "\improper EMBLR-92 anti-air weapon system"
-	desc = "A German-made MANPAD system designed to replace the aging Russian 'spear' missile launchers. It offers reasonable air defence capabilities at the platoon-level for members of the UPPAC."
+	desc = "A German designed MANPAD system designed to replace the aging Russian-made 'spear' missile launchers. It offers reasonable air defence capabilities at the platoon-level for members of the UPPAC."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "emblr"
 	item_state = "emblr"
@@ -534,7 +541,7 @@
 
 
 //-------------------------------------------------------
-//Toggle firing level special action for grenade launchers
+//Toggle firing level special action for AA launchers, edited from the GL item_action
 
 /datum/action/item_action/toggle_aerial_targetting/New(Target, obj/item/holder)
 	. = ..()
@@ -563,7 +570,13 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/proc/toggle_aerial_targetting(mob/user)
 	targetting_air = !targetting_air
+	secondary_toggled = !secondary_toggled
 	to_chat(user, "[icon2html(src, usr)] You toggle \the [src]'s targetting systems. You will now fire [targetting_air ? "into the sky overhead" : "directly at your target"].")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/toggle_aerial_targetting/TAT = locate(/datum/action/item_action/toggle_aerial_targetting) in actions
 	TAT.update_icon()
+	ammo = secondary_toggled ? ammo_secondary : ammo_primary
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/replace_ammo()
+	..()
+	ammo = secondary_toggled ? ammo_secondary : ammo_primary
