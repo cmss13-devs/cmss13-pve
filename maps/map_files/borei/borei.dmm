@@ -1587,11 +1587,13 @@
 /area/space)
 "gK" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/six{
-	pixel_x = 18
+	pixel_x = 18;
+	light_color = "#e7c0a4"
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/five{
 	pixel_y = 0;
-	pixel_x = -14
+	pixel_x = -14;
+	light_color = "#e7c0a4"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -4158,6 +4160,10 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/supply)
+"tr" = (
+/obj/item/map/current_map,
+/turf/closed/wall/upp_wall,
+/area/space)
 "ts" = (
 /obj/structure/janitorialcart{
 	pixel_y = 8
@@ -4762,11 +4768,13 @@
 /area/golden_arrow/hangar)
 "wc" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/four{
-	pixel_x = 18
+	pixel_x = 18;
+	light_color = "#e7c0a4"
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/three{
 	pixel_y = 0;
-	pixel_x = -14
+	pixel_x = -14;
+	light_color = "#e7c0a4"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -5769,10 +5777,12 @@
 /area/golden_arrow/supply)
 "Bi" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/two{
-	pixel_x = 18
+	pixel_x = 18;
+	light_color = "#e7c0a4"
 	},
 /obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/one{
-	pixel_x = -14
+	pixel_x = -14;
+	light_color = "#e7c0a4"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -7610,10 +7620,8 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/map/current_map,
-/obj/item/map/current_map,
-/obj/item/map/current_map,
-/obj/item/map/current_map,
+/obj/item/pamphlet/language/russian,
+/obj/item/pamphlet/language/chinese,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "IF" = (
@@ -12410,7 +12418,7 @@ zr
 pY
 oF
 BU
-zr
+tr
 fd
 cE
 nI
@@ -14369,7 +14377,7 @@ FM
 WS
 WS
 WS
-tR
+gQ
 aq
 aq
 nI
@@ -14481,7 +14489,7 @@ gQ
 es
 es
 es
-gQ
+tR
 aq
 nI
 nI
