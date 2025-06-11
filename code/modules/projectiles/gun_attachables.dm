@@ -2964,10 +2964,10 @@ Defined in conflicts.dm of the #defines folder.
 
 //The requirement for an attachable being alt fire is AMMO CAPACITY > 0.
 /obj/item/attachable/attached_gun/grenade
-	name = "U1 grenade launcher"
+	name = "Underbarrel grenade launcher"
 	desc = "A weapon-mounted, reloadable grenade launcher."
 	icon_state = "grenade"
-	attach_icon = "grenade"
+	attach_icon = "grenade_a"
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
