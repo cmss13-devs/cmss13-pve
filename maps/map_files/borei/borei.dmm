@@ -361,9 +361,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "bz" = (
 /obj/structure/pipes/vents/pump{
@@ -3134,9 +3132,7 @@
 	dir = 1;
 	color = "#6e6e6e"
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "oB" = (
 /obj/structure/barricade/handrail/strata{
@@ -3310,9 +3306,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "pn" = (
 /obj/structure/surface/rack{
@@ -3701,9 +3695,7 @@
 	vector_x = 7;
 	vector_y = -2
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "rs" = (
 /obj/structure/platform{
@@ -4992,9 +4984,7 @@
 	dir = 2;
 	color = "#6e6e6e"
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/space)
 "xF" = (
 /obj/structure/surface/rack,
@@ -5939,9 +5929,7 @@
 	dir = 2;
 	color = "#6e6e6e"
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "BR" = (
 /obj/effect/decal/warning_stripes{
@@ -6055,14 +6043,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
-"Cm" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
-/area/space)
 "Co" = (
 /obj/structure/closet/crate/upp{
 	pixel_x = 0;
@@ -6371,9 +6351,7 @@
 	light_power = 0.5;
 	light_range = 4
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "Du" = (
 /obj/structure/machinery/light/small{
@@ -7476,9 +7454,7 @@
 	light_power = 0.5;
 	light_range = 4
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "Ib" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -8067,9 +8043,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/supply)
 "Ko" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -8753,9 +8727,7 @@
 	vector_x = -7;
 	vector_y = 2
 	},
-/turf/open/floor/strata/floor3/east{
-	color = "#79807d"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "Nz" = (
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap2{
@@ -12140,7 +12112,7 @@ DA
 DA
 kL
 xH
-Cm
+hG
 BU
 BU
 Ho
@@ -12252,7 +12224,7 @@ DA
 IT
 OU
 HJ
-Cm
+hG
 BU
 mu
 BU
@@ -12700,7 +12672,7 @@ DA
 VI
 UI
 BU
-Cm
+hG
 BU
 mu
 BU
@@ -12812,7 +12784,7 @@ DA
 DA
 mv
 hz
-Cm
+hG
 BU
 BU
 Ho
