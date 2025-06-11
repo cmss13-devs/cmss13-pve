@@ -3150,10 +3150,7 @@
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = -30
 	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "oF" = (
 /obj/structure/bed/chair/comfy/black{
@@ -5558,10 +5555,7 @@
 	pixel_x = 15;
 	pixel_y = 2
 	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "Ad" = (
 /obj/effect/decal/warning_stripes{
@@ -8877,10 +8871,7 @@
 	req_access = list(36);
 	pixel_x = 6
 	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "Of" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -9990,10 +9981,7 @@
 	desc = "A vendor with a large snowflake on it. Provided by Ministry of Fashion.";
 	name = "\improper UPP Synthetic Conformity Unit"
 	},
-/turf/open/floor/strata{
-	dir = 6;
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "Tn" = (
 /turf/open/floor/strata/floor3/east,
