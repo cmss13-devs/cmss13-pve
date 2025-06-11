@@ -331,49 +331,49 @@
 	path_to_spawn = /obj/item/explosive/mine/sebb/active
 
 /datum/human_ai_defense/mine/m760ap
-	name = "Weak M760 blast mine"
+	name = "Weak M760 Blast Mine"
 	desc = /obj/item/explosive/mine/m760ap/active::desc
 	icon_state = "m760"
 	path_to_spawn = /obj/item/explosive/mine/m760ap/active
 
 /datum/human_ai_defense/mine/m760ap/strong
-	name = "Strong M760 blast mine"
+	name = "Strong M760 Blast Mine"
 	desc = /obj/item/explosive/mine/m760ap/strong/active::desc
 	icon_state = "m760"
 	path_to_spawn = /obj/item/explosive/mine/m760ap/strong/active
 
 /datum/human_ai_defense/mine/m5a3betty
-	name = "Weak M5A3 bounding mine"
+	name = "Weak M5A3 Bounding Mine"
 	desc = /obj/item/explosive/mine/m5a3betty/active::desc
 	icon_state = "m5"
 	path_to_spawn = /obj/item/explosive/mine/m5a3betty/active
 
 /datum/human_ai_defense/mine/m5a3betty/strong
-	name = "Strong M5A3 bounding mine"
+	name = "Strong M5A3 Bounding Mine"
 	desc = /obj/item/explosive/mine/m5a3betty/strong/active::desc
 	icon_state = "m5"
 	path_to_spawn = /obj/item/explosive/mine/m5a3betty/strong/active
 
 /datum/human_ai_defense/mine/fzd91
-	name = "Weak FZD-91 landmine"
+	name = "Weak FZD-91 Landmine"
 	desc = /obj/item/explosive/mine/fzd91/active::desc
 	icon_state = "fzd91"
 	path_to_spawn = /obj/item/explosive/mine/fzd91/active
 
 /datum/human_ai_defense/mine/fzd91/strong
-	name = "Strong FZD-91 landmine"
+	name = "Strong FZD-91 Landmine"
 	desc = /obj/item/explosive/mine/fzd91/strong/active::desc
 	icon_state = "fzd91"
 	path_to_spawn = /obj/item/explosive/mine/fzd91/strong/active
 
 /datum/human_ai_defense/mine/tn13
-	name = "Weak TN-13 landmine"
+	name = "Weak TN-13 Landmine"
 	desc = /obj/item/explosive/mine/tn13/active::desc
 	icon_state = "tn13"
 	path_to_spawn = /obj/item/explosive/mine/tn13/active
 
 /datum/human_ai_defense/mine/tn13/strong
-	name = "Regular TN-13 landmine"
+	name = "Regular TN-13 Landmine"
 	desc = /obj/item/explosive/mine/tn13/strong/active::desc
 	icon_state = "tn13"
 	path_to_spawn = /obj/item/explosive/mine/tn13/strong/active
