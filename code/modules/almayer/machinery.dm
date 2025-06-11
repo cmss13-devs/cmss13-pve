@@ -247,6 +247,54 @@
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six
 	icon_state = "h_maptable6"
 
+/obj/structure/machinery/prop/almayer/CICmap/table/upp
+	minimap_type = MINIMAP_FLAG_UPP
+	faction = FACTION_UPP
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp
+	minimap_type = MINIMAP_FLAG_UPP
+	faction = FACTION_UPP
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/one
+	icon_state = "v_maptable1"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/two
+	icon_state = "v_maptable2"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/three
+	icon_state = "v_maptable3"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/four
+	icon_state = "v_maptable4"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/five
+	icon_state = "v_maptable5"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/upp/segment/six
+	icon_state = "v_maptable6"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment
+	minimap_type = MINIMAP_FLAG_UPP
+	faction = FACTION_UPP
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/one
+	icon_state = "h_maptable1"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/two
+	icon_state = "h_maptable2"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/three
+	icon_state = "h_maptable3"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/four
+	icon_state = "h_maptable4"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/five
+	icon_state = "h_maptable5"
+
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/upp/segment/six
+	icon_state = "h_maptable6"
+
 //Nonpower using props
 
 /obj/structure/prop/almayer

@@ -1068,3 +1068,21 @@
 	icon_state = "uppwall_window0"
 	basestate = "uppwall_window"
 	window_frame = /obj/structure/window_frame/upp/grey
+
+/obj/structure/window/framed/upp/green/hull
+	name = "hull window"
+	desc = "A glass window. This one was made out of exotic materials to prevent hull breaches. No way to get through here."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000 //Failsafe, shouldn't matter
+
+/obj/structure/window/framed/upp/grey/hull
+	name = "hull window"
+	desc = "A glass window. This one was made out of exotic materials to prevent hull breaches. No way to get through here."
+	not_damageable = TRUE
+	not_deconstructable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	health = 1000000 //Failsafe, shouldn't matter
