@@ -116,9 +116,7 @@
 	light_power = 0.5;
 	light_range = 5
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "aA" = (
 /obj/effect/decal/warning_stripes{
@@ -1165,9 +1163,7 @@
 	name = "gym semiotic";
 	desc = "Semiotic Standard denoting the nearby presence of a sport area."
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/dorms)
 "eN" = (
 /obj/effect/decal/warning_stripes{
@@ -1559,9 +1555,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "gH" = (
 /obj/structure/pipes/vents/pump{
@@ -2015,9 +2009,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/space)
 "je" = (
-/turf/open/floor/almayer_hull/outerhull_dir/north{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/north,
 /area/space)
 "jf" = (
 /obj/structure/cargo_container/upp/mk6/mid,
@@ -3725,9 +3717,7 @@
 	light_power = 0.5;
 	light_range = 5
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "rt" = (
 /obj/structure/extinguisher_cabinet/alt{
@@ -3856,9 +3846,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "rZ" = (
-/turf/open/floor/almayer_hull{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/upp,
 /area/space)
 "sf" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -4812,9 +4800,7 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "wi" = (
-/turf/open/floor/almayer_hull/outerhull_dir/southeast{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/southeast,
 /area/space)
 "wt" = (
 /obj/structure/platform_decoration{
@@ -5546,9 +5532,7 @@
 	dir = 1;
 	color = "#757575"
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "zM" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
@@ -5844,9 +5828,7 @@
 	network = list("Borei");
 	c_tag = "Briefing Room, Stage"
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/dorms)
 "Br" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -6512,9 +6494,7 @@
 	icon_state = "pipe-c";
 	color = "#757575"
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "DX" = (
 /obj/structure/surface/rack{
@@ -6881,9 +6861,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/hangar)
 "FC" = (
 /obj/effect/decal/warning_stripes{
@@ -7195,9 +7173,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "GE" = (
-/turf/open/floor/almayer_hull/outerhull_dir/northeast{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/northeast,
 /area/space)
 "GF" = (
 /obj/structure/disposalpipe/segment,
@@ -7351,9 +7327,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/space)
 "Hr" = (
-/turf/open/floor/almayer_hull/outerhull_dir/southwest{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/southwest,
 /area/space)
 "Hs" = (
 /obj/structure/machinery/door/airlock/upp_grey{
@@ -7462,9 +7436,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
 "HT" = (
-/turf/open/floor/almayer_hull/outerhull_dir{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp,
 /area/space)
 "HU" = (
 /obj/item/storage/firstaid/o2,
@@ -9291,9 +9263,7 @@
 	color = "#757575"
 	},
 /obj/structure/platform,
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/dorms)
 "PG" = (
 /obj/effect/decal/warning_stripes{
@@ -9373,9 +9343,7 @@
 /turf/open/floor/strata/floor3/east,
 /area/space)
 "PR" = (
-/turf/open/floor/almayer_hull/outerhull_dir/west{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/west,
 /area/space)
 "PZ" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -10657,9 +10625,7 @@
 	color = "#757575"
 	},
 /obj/structure/platform,
-/turf/open/floor/plating/plating_catwalk/strata{
-	color = "#757575"
-	},
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level,
 /area/golden_arrow/dorms)
 "VS" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -10744,9 +10710,7 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/hangar)
 "Wn" = (
-/turf/open/floor/almayer_hull/outerhull_dir/northwest{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/northwest,
 /area/space)
 "Ws" = (
 /obj/effect/decal/warning_stripes{
@@ -10771,9 +10735,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/dorms)
 "Wv" = (
-/turf/open/floor/almayer_hull/outerhull_dir/east{
-	color = "#afb196"
-	},
+/turf/open/floor/almayer_hull/outerhull_dir/upp/east,
 /area/space)
 "Ww" = (
 /obj/effect/decal/warning_stripes{
