@@ -86,6 +86,19 @@
 /area/Greenvault_Ranch/int_reg/cowhouse
 	name = "Cowhouse"
 	icon_state = "blue"
+/area/Greenvault_Ranch/int_reg/opcenter
+	name = "Operations Center"
+	icon_state = "green"
+/area/Greenvault_Ranch/int_reg/corpooffice
+	name = "Corporate Office"
+	icon_state = "orange"
+/area/Greenvault_Ranch/int_reg/meetingroom
+	name = "Office Meeting Room"
+	icon_state = "yellow"
+/area/Greenvault_Ranch/int_reg/checkpoint
+	name = "Loading Dock Checkpoint"
+	icon_state = "security"
+
 //============================================================Bunker
 /area/Greenvault_Ranch/int_heavy/grainbunker
 	name = "Colony Grain Bunker"
