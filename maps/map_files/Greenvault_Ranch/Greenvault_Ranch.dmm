@@ -6149,12 +6149,6 @@
 "jxL" = (
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
-"jyk" = (
-/obj/structure/window{
-	dir = 4
-	},
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/Greenvault_Ranch/int_reg/opcenter)
 "jyD" = (
 /obj/structure/prop/vehicles/crawler{
 	density = 0;
@@ -34615,7 +34609,7 @@ rbK
 unq
 tww
 olc
-jyk
+qCm
 kCv
 nQV
 nQV
@@ -35000,7 +34994,7 @@ guE
 guE
 roK
 djG
-ikx
+qCm
 nQV
 xuE
 xUt
@@ -35192,7 +35186,7 @@ ugw
 roK
 roK
 fMt
-ikx
+qCm
 aUc
 xuE
 ciE
