@@ -520,3 +520,9 @@
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/isr
+	name = "heavy 9.2x34mm bullet"
+
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_5
