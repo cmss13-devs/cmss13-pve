@@ -352,8 +352,8 @@ export const RADIO_PREFIXES = {
     label: 'CLF Cmd.',
   },
   '#d ': {
-    id: 'clf-cct',
-    label: 'CLF CCT',
+    id: 'merc',
+    label: 'Mercenary',
   },
   '#e ': {
     id: 'pmc-engi',
@@ -428,8 +428,8 @@ export const RADIO_PREFIXES = {
     label: 'CLF Cmd.',
   },
   '#D ': {
-    id: 'clf-cct',
-    label: 'CLF CCT',
+    id: 'merc',
+    label: 'Mercenary',
   },
   '#E ': {
     id: 'pmc-engi',
