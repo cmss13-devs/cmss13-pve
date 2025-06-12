@@ -269,3 +269,13 @@
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
+/datum/ammo/bullet/pistol/ap/bone
+	name = "toxic ceramic bullet"
+	shrapnel_chance = 100
+	icon_state = "bullet_green"
+
+/datum/ammo/bullet/pistol/ap/bone/on_hit_mob(mob/M,obj/projectile/P)
+	if(ishuman(M))
+		var/mob/living/carbon/human/human = M
+		human.reagents.add_reagent("stoxin", rand(5, 15))
+		to_chat(human, SPAN_HIGHDANGER("You feel sick."))

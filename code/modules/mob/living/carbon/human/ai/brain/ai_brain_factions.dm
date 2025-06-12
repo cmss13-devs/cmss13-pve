@@ -1616,3 +1616,111 @@
 
 /datum/human_ai_faction/xeno_cultist/corrupted
 	faction = FACTION_XENOMORPH_CORRPUTED
+
+/datum/human_ai_faction/working_joes
+	faction = FACTION_WJ
+	enter_combat_lines = list(
+		"*alwaysknow",
+		"*dontrun",
+		"*someonehurt",
+		"*safety",
+		"*hysterical",
+		"*patience",
+		"*holdstill",
+		"*haveaproblem",
+		"*dangerousitems",
+		"*hurtyourself",
+		"*runningaccidents",
+		"*noneed",
+		"*letmehelp",
+		"*thisisfutile",
+		"*misbehaving",
+		"*firearmconcerning",
+		"*firearm",
+		"*trespassing",
+		"*interloper",
+		"*areacompromised",
+		"*shouldntbehere",
+		"*reallyshouldntbehere"
+	)
+	exit_combat_lines = list(
+		"*awful",
+		"*ticketremoved",
+		"*dayneverdone",
+		"*alwaysknow",
+		"*report",
+	)
+	squad_member_death_lines = list(
+		"*expensivemistake",
+		"*damage",
+		"*really",
+		"*alwaysknow",
+	)
+	reload_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	reload_internal_mag_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	grenade_thrown_lines = list(
+		"*careful",
+		"*healthrisks",
+		"*littledetails",
+	)
+
+/datum/human_ai_faction/greenbanner
+	faction = FACTION_ECOTERROR
+	enter_combat_lines = list(
+		"*nod",
+		"*me grunts.",
+		"...",
+		"*cough",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"*twitch",
+		"Men are born soft and supple; dead they are stiff and hard. Plants are born tender and pliant; dead, they are brittle and dry.",
+	)
+	exit_combat_lines = list(
+		"*nod",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	squad_member_death_lines = list(
+		"*me grunts.",
+		"...dead, they are stiff and hard...",
+		"...dead, they are brittle and dry...",
+		"*twitch",
+		"*me groans.",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	grenade_thrown_lines = list(
+		"...everything that's been planned come true...",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	reload_lines = list(
+		"...",
+	)
+	reload_internal_mag_lines = list(
+		"...",
+	)
