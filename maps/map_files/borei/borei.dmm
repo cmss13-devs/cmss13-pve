@@ -504,6 +504,9 @@
 	pixel_y = 12;
 	pixel_x = -5
 	},
+/obj/structure/machinery/light_switch{
+	pixel_x = -30
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "ch" = (
@@ -516,6 +519,9 @@
 	icon_state = "NE-out";
 	pixel_x = 1;
 	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 5
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -684,6 +690,10 @@
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/machinery/light_switch{
+	pixel_x = 8;
+	pixel_y = 27
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
@@ -3825,9 +3835,10 @@
 /area/golden_arrow/cryo_cells)
 "rW" = (
 /obj/structure/machinery/light/small{
-	light_range = 3;
+	dir = 4;
 	light_color = "#e7c0a4";
-	invisibility = 100
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/dorms)
@@ -4785,6 +4796,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -6731,11 +6745,11 @@
 	pixel_x = 3;
 	pixel_y = 11
 	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Borei");
+	c_tag = "Briefing Room, Stage"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
@@ -7562,8 +7576,11 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/pamphlet/language/russian,
-/obj/item/pamphlet/language/chinese,
+/obj/item/map/current_map,
+/obj/item/map/current_map,
+/obj/item/map/current_map,
+/obj/item/map/current_map,
+/obj/item/map/current_map,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "IF" = (
@@ -7743,6 +7760,8 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
+/obj/structure/pipes/standard/cap/hidden/scrubbers,
+/obj/structure/pipes/standard/cap/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/cryo_cells)
 "Jj" = (
@@ -7758,6 +7777,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -7841,12 +7866,6 @@
 	pixel_y = 0;
 	id = "tower";
 	height = 1
-	},
-/obj/structure/machinery/light/small{
-	light_power = 0.5;
-	light_range = 2;
-	light_color = "#e7c0a4";
-	invisibility = 100
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/dorms)
@@ -8062,7 +8081,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/space)
 "Kx" = (
-/obj/structure/gun_rack/ag80/unloaded,
+/obj/structure/gun_rack/ag80/unloaded/grom,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/prep_hallway)
 "KC" = (
@@ -8171,7 +8190,8 @@
 "KX" = (
 /obj/structure/ladder{
 	id = "lowercargo";
-	height = -1
+	height = -1;
+	pixel_y = 10
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/lower_cargo)
@@ -8252,11 +8272,13 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "Lo" = (
-/obj/structure/machinery/status_display{
-	pixel_y = 30;
-	pixel_x = 15
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_color = "#e7c0a4";
+	light_power = 0.5;
+	light_range = 5
 	},
-/turf/open/asphalt/cement/cement4,
+/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
 "Lp" = (
 /obj/structure/barricade/handrail/strata{
@@ -8408,6 +8430,9 @@
 	icon_state = "E";
 	pixel_y = 1;
 	pixel_x = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 10
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -8668,6 +8693,12 @@
 	pixel_y = 32;
 	networks_receive = list("USCM","UPP");
 	networks_transmit = list("USCM","UPP")
+	},
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/dorms)
@@ -9532,11 +9563,11 @@
 	dir = 4;
 	pixel_y = 5
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 4;
-	name = "ship-grade camera";
-	network = list("Borei");
-	c_tag = "Briefing Room, Stage"
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
@@ -10143,6 +10174,10 @@
 "Uh" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/machinery/light_switch{
+	pixel_x = 1;
+	pixel_y = -30
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/canteen)
@@ -10873,6 +10908,9 @@
 	layer = 2.5;
 	pixel_y = 2;
 	pixel_x = 0
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -14171,7 +14209,7 @@ nP
 nP
 uB
 mJ
-tn
+rW
 nP
 nP
 HT
@@ -16977,7 +17015,7 @@ KS
 Db
 HW
 pg
-rW
+tn
 mJ
 dI
 jV
@@ -17090,7 +17128,7 @@ oT
 Mv
 eM
 yg
-KS
+Lo
 lP
 lP
 lP
@@ -17191,7 +17229,7 @@ nP
 nP
 uA
 Mv
-Lo
+fj
 eX
 LG
 TF
