@@ -1176,6 +1176,10 @@
 /mob/living/simple_animal/mouse,
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_reg/housing)
+"bKb" = (
+/obj/structure/largecrate/random/barrel/black,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "bKg" = (
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -1297,6 +1301,10 @@
 /obj/structure/machinery/microwave,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"bVW" = (
+/obj/structure/closet/crate/secure/gear,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "bWk" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/almayer/dark_sterile,
@@ -1556,6 +1564,7 @@
 /obj/structure/reagent_dispensers/water_cooler/stacks{
 	pixel_y = 16
 	},
+/obj/structure/closet/crate/freezer/cooler,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/checkpoint)
 "crq" = (
@@ -1705,9 +1714,9 @@
 /turf/open/floor/light/purple,
 /area/Greenvault_Ranch/int_reg/bar)
 "cHB" = (
-/obj/structure/window/framed/shiva,
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_reg/telecomms_yard)
+/obj/structure/closet/crate/secure,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "cHN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1847,6 +1856,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/checkpoint)
+"cTN" = (
+/obj/structure/largecrate/random/barrel/medical,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "cVv" = (
 /obj/structure/prop/invuln/ice_prefab{
 	icon_state = "fab_2"
@@ -1882,10 +1897,9 @@
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "dbk" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/recharger,
-/turf/open/floor/prison/darkpurple2,
-/area/Greenvault_Ranch/int_reg/telecomms_yard)
+/obj/structure/surface/rack,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "dby" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2154,6 +2168,10 @@
 /obj/structure/ore_box,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"duC" = (
+/obj/structure/closet/crate/freezer/rations,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "duG" = (
 /obj/structure/flora/tree/dead/tree_5,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -2450,6 +2468,11 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/marshals)
+"dTb" = (
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/mechanical/green,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "dTg" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -2795,6 +2818,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"era" = (
+/obj/structure/closet/crate/plastic,
+/obj/structure/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "erj" = (
 /obj/item/clothing/head/cowboy,
 /obj/effect/decal/cleanable/dirt,
@@ -2942,6 +2971,11 @@
 /obj/item/trash/cigbutt/cigarbutt,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"eFe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/bright_clean,
+/area/Greenvault_Ranch/int_reg/opcenter)
 "eFs" = (
 /turf/open/floor/interior/wood/alt,
 /area/Greenvault_Ranch/int_reg/houseinthewoods)
@@ -3867,10 +3901,10 @@
 /area/Greenvault_Ranch/int_reg/corpooffice)
 "fVh" = (
 /obj/structure/surface/table/almayer,
-/obj/item/device/flashlight,
 /obj/item/device/taperecorder,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lamp/green,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/checkpoint)
 "fVX" = (
@@ -4005,6 +4039,12 @@
 /obj/structure/cryofeed/right,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"ghx" = (
+/obj/structure/prop/ice_colony/surveying_device{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "ghz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
@@ -4068,6 +4108,10 @@
 	},
 /turf/open/mars_cave,
 /area/Greenvault_Ranch/caves)
+"gls" = (
+/obj/structure/closet/crate/hydroponics/prespawned,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "gmN" = (
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
@@ -4336,6 +4380,12 @@
 /obj/structure/machinery/recharger,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/checkpoint)
+"gHN" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
+	dir = 2
+	},
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "gHQ" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -4411,6 +4461,11 @@
 	},
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/northwest)
+"gNh" = (
+/obj/structure/closet/crate/plastic,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "gOC" = (
 /obj/structure/prop/invuln/ice_prefab/trim{
 	dir = 8
@@ -4720,6 +4775,11 @@
 /obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
+"hpN" = (
+/obj/structure/largecrate/random/barrel/purewhite,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "hpS" = (
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/bright_clean,
@@ -5064,6 +5124,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/green/north,
 /area/Greenvault_Ranch/int_reg/housing)
+"hQV" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "hUh" = (
 /obj/structure/sink/kitchen,
 /turf/closed/wall/shiva/prefabricated/blue,
@@ -6149,6 +6213,10 @@
 "jxL" = (
 /turf/closed/wall/r_wall/biodome,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"jyk" = (
+/obj/structure/flora/bush/ausbushes/var3,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "jyD" = (
 /obj/structure/prop/vehicles/crawler{
 	density = 0;
@@ -6320,6 +6388,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
+"jMt" = (
+/obj/structure/sign/safety/security,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/int_reg/checkpoint)
 "jMU" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly,
 /turf/open/floor/prison/bright_clean,
@@ -6361,6 +6433,11 @@
 	},
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_reg/opcenter)
+"jPc" = (
+/obj/structure/surface/rack,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "jQH" = (
 /obj/structure/machinery/light/double,
 /obj/effect/decal/cleanable/dirt,
@@ -6425,6 +6502,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
+"jSc" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "jTo" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 6;
@@ -6559,7 +6640,7 @@
 "kij" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails,
-/turf/open/floor/prison/darkpurple2,
+/turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "kiU" = (
 /obj/structure/surface/table,
@@ -6582,6 +6663,10 @@
 /obj/structure/machinery/space_heater/radiator,
 /turf/open/floor/prison/greenfull,
 /area/Greenvault_Ranch/int_reg/meetingroom)
+"kmt" = (
+/obj/structure/sign/safety/landingzone,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/int_reg/opcenter)
 "kmE" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -6736,6 +6821,11 @@
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"kwm" = (
+/obj/structure/closet/crate/secure,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "kwt" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
@@ -6894,6 +6984,10 @@
 /obj/structure/bed/sofa/south/grey/left,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"kHg" = (
+/obj/structure/largecrate/random/barrel/purewhite,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "kHS" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -6956,6 +7050,10 @@
 	},
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/cowhouse)
+"kLQ" = (
+/obj/structure/closet/crate/science,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "kMx" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 8
@@ -7126,6 +7224,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/Greenvault_Ranch/shuttles/drop1)
+"lbd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "lbz" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer,
@@ -7139,8 +7242,8 @@
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
 "ldn" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/autoname,
-/turf/open/floor/prison/blue_plate/north,
+/obj/structure/blocker/forcefield,
+/turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/shuttles/drop1)
 "ldy" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
@@ -7258,6 +7361,10 @@
 	},
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
+"ljO" = (
+/obj/structure/prop/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "lke" = (
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/Greenvault_Ranch/outside/north_river)
@@ -7411,6 +7518,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
+"lwO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "lwT" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/snacks/cheeseburger,
@@ -7583,6 +7694,7 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "lGp" = (
 /obj/structure/pipes/vents/pump,
+/obj/structure/blocker/forcefield,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/shuttles/drop1)
 "lGx" = (
@@ -8023,6 +8135,14 @@
 /obj/structure/flora/grass/desert/heavygrass_8,
 /turf/open/mars_cave,
 /area/Greenvault_Ranch/caves)
+"mlG" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/blocker/forcefield,
+/turf/open/gm/river/ocean/deep_water,
+/area/Greenvault_Ranch/outside/north_river)
 "mlQ" = (
 /obj/structure/prop/invuln/ice_prefab,
 /obj/structure/fence,
@@ -8552,6 +8672,13 @@
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"mZW" = (
+/obj/structure/largecrate/cow,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "nae" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/effect/decal/cleanable/dirt,
@@ -8766,7 +8893,7 @@
 "nmx" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/card/wey_yu,
-/turf/open/floor/prison/darkpurple2,
+/turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "nmK" = (
 /turf/open/floor/prison/darkyellowcorners2/east,
@@ -8811,7 +8938,7 @@
 /obj/item/prop/colony/usedbandage{
 	dir = 10
 	},
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "noa" = (
 /obj/structure/prop/invuln/ice_prefab{
@@ -8974,6 +9101,11 @@
 /obj/item/handheld_distress_beacon/cmb,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
+"nBi" = (
+/obj/structure/largecrate/random/barrel/brown,
+/obj/structure/largecrate/random/barrel/black,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "nBy" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 4
@@ -9093,6 +9225,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
+"nLv" = (
+/obj/structure/closet/crate/hydroponics,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "nLD" = (
 /obj/structure/surface/table/reinforced,
 /obj/item/clothing/under/marine/veteran/pmc/corporate/lead,
@@ -9664,6 +9800,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/Greenvault_Ranch/int_reg/corpooffice)
+"oHK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/gm/river/ocean/deep_water,
+/area/Greenvault_Ranch/outside/north_river)
 "oHX" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/dark_sterile,
@@ -10046,7 +10186,7 @@
 	dir = 1
 	},
 /obj/structure/machinery/vending/cigarette,
-/turf/open/floor/prison/darkpurple2,
+/turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "pkj" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
@@ -10747,6 +10887,10 @@
 	color = "#a39e99"
 	},
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
+"qiI" = (
+/obj/structure/sign/safety/flightcontrol,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/int_reg/opcenter)
 "qjg" = (
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/int_reg/cowhouse)
@@ -11254,7 +11398,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/opcenter)
 "qVv" = (
@@ -11346,6 +11489,15 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/pens)
+"rcZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/Greenvault_Ranch/shuttles/drop1)
 "reh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/fake_wood,
@@ -11420,9 +11572,9 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/Greenvault_Ranch/int_reg/corpooffice)
 "riI" = (
-/obj/structure/prop/ice_colony/surveying_device,
-/turf/open/gm/dirt,
-/area/Greenvault_Ranch/outside/trailerpark)
+/obj/structure/largecrate/cow,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "riU" = (
 /obj/structure/closet/l3closet,
 /turf/open/floor/almayer/dark_sterile,
@@ -11625,6 +11777,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wheatfields)
+"rtV" = (
+/obj/structure/flora/bush/desert/cactus,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "rtZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11869,6 +12025,11 @@
 	},
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_heavy/controlroom)
+"rME" = (
+/obj/structure/closet/crate/secure/gear,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "rMO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/stack/cable_coil/cut,
@@ -13033,7 +13194,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/prison/darkpurple2,
+/turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "tbZ" = (
 /obj/structure/surface/rack,
@@ -13351,6 +13512,10 @@
 	},
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_heavy/grainstorage)
+"tvH" = (
+/obj/structure/closet/secure_closet/freezer/fridge/full,
+/turf/open/floor/prison/kitchen,
+/area/Greenvault_Ranch/int_reg/kitchen)
 "tvK" = (
 /obj/structure/flora/bush/desert/cactus,
 /obj/structure/fence,
@@ -13359,7 +13524,8 @@
 "tww" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/trash/candle,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/opcenter)
 "tyi" = (
@@ -13883,11 +14049,10 @@
 /turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "unq" = (
-/obj/item/trash/candle,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/bright_clean,
-/area/Greenvault_Ranch/int_reg/opcenter)
+/obj/structure/blocker/forcefield,
+/obj/structure/blocker/forcefield,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/shuttles/drop1)
 "unP" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/prop/server_equipment/laptop/closed,
@@ -14368,6 +14533,17 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/strata_ice/jungle,
 /area/Greenvault_Ranch/outside/wildplace)
+"uUT" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/line_nexter{
+	dir = 1;
+	id = "MTline";
+	pixel_y = 3
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/Greenvault_Ranch/shuttles/drop1)
 "uVe" = (
 /obj/effect/decal/strata_decals/grime/grime2,
 /obj/effect/decal/strata_decals/grime/grime2,
@@ -14988,6 +15164,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
 "vMm" = (
+/obj/structure/machinery/telecomms/bus/preset_one,
 /turf/open/floor/prison/darkpurple2/southeast,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "vMA" = (
@@ -15203,8 +15380,10 @@
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
 "wcz" = (
-/turf/closed/wall/shiva/prefabricated/reinforced,
-/area/Greenvault_Ranch/outside/trailerpark)
+/obj/structure/largecrate/random/barrel/purewhite,
+/obj/structure/machinery/light,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "wdE" = (
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/marshals)
@@ -15280,6 +15459,12 @@
 	},
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/north_river)
+"wjT" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.5
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "wlB" = (
 /obj/item/device/flashlight/lamp/tripod,
 /turf/open/gm/dirt,
@@ -15359,6 +15544,14 @@
 /obj/structure/machinery/telecomms/broadcaster,
 /turf/open/floor/bluegrid/bcircuitoff,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"wqW" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/prison/bright_clean,
+/area/Greenvault_Ranch/int_reg/opcenter)
+"wrA" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/turf/open/floor/prison/kitchen,
+/area/Greenvault_Ranch/int_reg/kitchen)
 "wrS" = (
 /obj/item/prop/scrap,
 /turf/open/floor/prison/green/north,
@@ -15745,7 +15938,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
 	},
-/turf/open/auto_turf/strata_grass/layer0,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "wUj" = (
 /obj/structure/flora/grass/tallgrass/desert{
@@ -16215,6 +16408,10 @@
 /obj/item/clothing/gloves/yellow,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"xCJ" = (
+/obj/structure/largecrate/random/barrel/medical,
+/turf/open/floor/strata/floor3,
+/area/Greenvault_Ranch/shuttles/drop1)
 "xCS" = (
 /obj/structure/largecrate/random/barrel/white,
 /obj/effect/decal/cleanable/dirt,
@@ -16300,6 +16497,12 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"xIR" = (
+/obj/structure/blocker/forcefield,
+/obj/structure/blocker/forcefield,
+/obj/structure/blocker/forcefield,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/Greenvault_Ranch/shuttles/drop1)
 "xJf" = (
 /obj/structure/machinery/prop/almayer/computer/PC{
 	dir = 1;
@@ -16562,7 +16765,7 @@
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/Greenvault_Ranch/int_reg/clinic)
 "ybE" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/structure/closet/secure_closet/freezer/fridge/groceries,
 /turf/open/floor/prison/kitchen,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "ybU" = (
@@ -22167,7 +22370,7 @@ rxo
 wOy
 qzV
 gkO
-rxo
+gRZ
 rxo
 vVx
 vVx
@@ -22359,7 +22562,7 @@ qzV
 vyn
 qzV
 gkO
-rxo
+gRZ
 pmc
 moj
 lMs
@@ -22551,7 +22754,7 @@ qzV
 vyn
 qzV
 gkO
-rxo
+gRZ
 pmc
 vwt
 lOk
@@ -22609,7 +22812,7 @@ fzG
 hyb
 fEv
 fEv
-fEv
+fWi
 fEv
 fEv
 fEv
@@ -22743,7 +22946,7 @@ qzV
 vyn
 qzV
 gkO
-rxo
+gRZ
 pmc
 vwt
 pJK
@@ -22801,7 +23004,7 @@ tMn
 hyb
 fEv
 fEv
-fEv
+fWi
 fEv
 fEv
 sNQ
@@ -22992,8 +23195,8 @@ dik
 tMn
 hyb
 fEv
-fEv
-fEv
+fWi
+fWi
 fEv
 fEv
 fEv
@@ -23127,7 +23330,7 @@ qzV
 qzV
 qzV
 gkO
-rxo
+gRZ
 pmc
 vwt
 xtB
@@ -23184,11 +23387,11 @@ dik
 tMn
 hyb
 fEv
+fWi
 fEv
 fEv
 fEv
-fEv
-fEv
+fWi
 fEv
 sNQ
 sNQ
@@ -23379,8 +23582,8 @@ fEv
 fEv
 fEv
 fEv
-fEv
-fEv
+fWi
+fWi
 fEv
 fEv
 sNQ
@@ -23761,8 +23964,8 @@ fEv
 hyb
 fEv
 fEv
-fEv
-fEv
+fWi
+fWi
 fEv
 fEv
 fEv
@@ -24088,7 +24291,7 @@ eRb
 rxo
 rxo
 rxo
-pmc
+wjT
 vwt
 nDZ
 xtB
@@ -24665,9 +24868,9 @@ eCQ
 tXY
 rxo
 rxo
-rxo
-rxo
-rxo
+gRZ
+gRZ
+gRZ
 gqi
 rxo
 gRZ
@@ -28685,7 +28888,7 @@ gRZ
 nLq
 rxo
 pmH
-ybE
+tvH
 sFc
 sFc
 qYT
@@ -29069,7 +29272,7 @@ gRZ
 nLq
 rxo
 pmH
-ybE
+wrA
 bFC
 bFC
 yik
@@ -30061,7 +30264,7 @@ lwX
 rxo
 rxo
 rxo
-rxo
+gRZ
 rxo
 hyb
 fEv
@@ -30445,7 +30648,7 @@ awz
 rxo
 rxo
 rxo
-rxo
+gRZ
 rxo
 hyb
 fEv
@@ -30636,8 +30839,8 @@ awz
 awz
 rxo
 rxo
-rxo
-rxo
+gRZ
+gRZ
 rxo
 hyb
 fEv
@@ -30828,8 +31031,8 @@ awz
 awz
 dEF
 rxo
-rxo
-rxo
+gRZ
+gRZ
 rxo
 hyb
 pEZ
@@ -31020,8 +31223,8 @@ awz
 awz
 rxo
 rxo
-rxo
-kph
+gRZ
+jyk
 rxo
 hyb
 dik
@@ -31212,7 +31415,7 @@ awz
 awz
 rxo
 rxo
-rxo
+gRZ
 rxo
 rxo
 hyb
@@ -31251,7 +31454,7 @@ eKV
 tAi
 tAi
 tAi
-tAi
+eKV
 tAi
 tAi
 tAi
@@ -31443,7 +31646,7 @@ tAi
 tAi
 tAi
 tAi
-tAi
+eKV
 tAi
 tAi
 tAi
@@ -31636,7 +31839,7 @@ tAi
 tAi
 tAi
 tAi
-tAi
+eKV
 tAi
 tAi
 tAi
@@ -31980,8 +32183,8 @@ awz
 awz
 awz
 rxo
-rxo
-rxo
+gRZ
+gRZ
 rxo
 hyb
 kUp
@@ -32155,7 +32358,7 @@ qzV
 qzV
 qzV
 gkO
-rxo
+gRZ
 lwX
 rxo
 awz
@@ -32172,8 +32375,8 @@ qyA
 awz
 rxo
 rxo
-rxo
-rxo
+gRZ
+gRZ
 rxo
 hyb
 fEv
@@ -32325,7 +32528,7 @@ rxo
 rxo
 rxo
 rxo
-rxo
+gRZ
 rxo
 rxo
 rxo
@@ -32364,7 +32567,7 @@ rxo
 rxo
 dMU
 rxo
-nNV
+ghx
 rxo
 rxo
 hyb
@@ -32519,7 +32722,7 @@ rxo
 rxo
 rxo
 rxo
-rxo
+gRZ
 rxo
 rXB
 qzV
@@ -32540,7 +32743,7 @@ qzV
 qzV
 gkO
 rxo
-rxo
+gRZ
 rxo
 rxo
 rxo
@@ -32598,8 +32801,8 @@ tAi
 tAi
 tAi
 tAi
-tAi
-tAi
+eKV
+eKV
 tAi
 sNQ
 sNQ
@@ -32711,8 +32914,8 @@ kqI
 kqI
 kBy
 kBy
-kBy
 rxo
+gRZ
 qyQ
 qzV
 qzV
@@ -32732,7 +32935,7 @@ qzV
 qzV
 gkO
 rxo
-cSn
+ljO
 rxo
 rxo
 rxo
@@ -32741,14 +32944,14 @@ rxo
 vxO
 gRZ
 sZn
-rxo
-rxo
+gRZ
+gRZ
 dEF
 rxo
 rxo
 rxo
-rxo
-rxo
+gRZ
+gRZ
 rxo
 rxo
 xdX
@@ -32791,7 +32994,7 @@ tAi
 eKV
 tAi
 tAi
-tAi
+eKV
 tAi
 xGW
 sNQ
@@ -32935,11 +33138,11 @@ gRZ
 sZn
 rxo
 rxo
+gRZ
+gRZ
+rtV
 rxo
-rxo
-alC
-rxo
-rxo
+gRZ
 rxo
 dMU
 rxo
@@ -33117,7 +33320,7 @@ qzV
 gkO
 rxo
 rxo
-rxo
+gRZ
 rxo
 rxo
 qqG
@@ -33263,14 +33466,14 @@ hzb
 qCm
 qCm
 sPs
+guE
 roK
+guE
+guE
+guE
 roK
-roK
-roK
-roK
-roK
-vvk
-roK
+guE
+guE
 iRR
 ocN
 dUB
@@ -33457,7 +33660,7 @@ jgV
 crq
 roK
 aYf
-roK
+guE
 vGJ
 vQo
 vQo
@@ -33650,11 +33853,11 @@ roK
 guE
 guE
 guE
-roK
+guE
 iYC
 jor
-tww
-roK
+guE
+guE
 crq
 cRf
 iwx
@@ -33752,7 +33955,7 @@ tAi
 tAi
 tAi
 tAi
-tAi
+eKV
 niq
 sNQ
 sNQ
@@ -33845,7 +34048,7 @@ dLn
 roK
 roK
 roK
-roK
+guE
 roK
 olc
 nnF
@@ -33944,7 +34147,7 @@ urF
 tAi
 tAi
 tAi
-tAi
+eKV
 xTi
 sNQ
 sNQ
@@ -34030,7 +34233,7 @@ bGg
 hzb
 qCm
 dBH
-vvk
+roK
 gKf
 dRP
 etr
@@ -34222,8 +34425,8 @@ bGg
 hzb
 ikx
 rOW
-vvk
-roK
+guE
+guE
 roK
 guE
 bQi
@@ -34414,7 +34617,7 @@ wvK
 pnl
 ikx
 jJO
-vvk
+roK
 vvk
 roK
 mfX
@@ -34606,7 +34809,7 @@ xvI
 xWp
 ikx
 rbK
-unq
+guE
 tww
 olc
 qCm
@@ -34798,8 +35001,8 @@ fcq
 uBG
 pcz
 oBl
-guE
-guE
+roK
+wqW
 niV
 xJf
 qCm
@@ -34990,8 +35193,8 @@ bGg
 hzb
 qCm
 axb
-guE
-guE
+roK
+eFe
 roK
 djG
 qCm
@@ -35003,7 +35206,7 @@ lIS
 oAM
 oAM
 oAM
-lIS
+uUT
 nQV
 nQV
 nQV
@@ -35097,7 +35300,7 @@ tAi
 tAi
 tAi
 tAi
-tAi
+eKV
 tAi
 tAi
 tAi
@@ -35180,7 +35383,7 @@ xvI
 orL
 bGg
 kDJ
-qCm
+qiI
 jjt
 ugw
 roK
@@ -35191,7 +35394,7 @@ aUc
 xuE
 ciE
 ecm
-ecm
+jMt
 feT
 feT
 oDL
@@ -35378,7 +35581,7 @@ crq
 roK
 xiM
 kdN
-qCm
+kmt
 sqp
 xuE
 dsp
@@ -35958,7 +36161,7 @@ lst
 aUc
 xuE
 ciE
-ecm
+caw
 cqY
 xJZ
 wYr
@@ -36131,7 +36334,7 @@ xvI
 xvI
 fFu
 fFu
-xvI
+fFu
 xvI
 xvI
 xvI
@@ -36159,7 +36362,7 @@ ecm
 ecm
 rhl
 rhl
-cHB
+rhl
 rhl
 gmN
 uDx
@@ -36167,7 +36370,7 @@ rhl
 rhl
 rhl
 rhl
-wcz
+rhl
 ijP
 ici
 ici
@@ -36323,7 +36526,7 @@ xvI
 xvI
 fFu
 fFu
-xvI
+fFu
 xvI
 xvI
 xvI
@@ -36350,17 +36553,17 @@ fyh
 dNa
 xRz
 rhl
+rhl
+rhl
 djk
-vUU
-vUU
 vUU
 vUU
 vUU
 vUU
 apK
 rhl
-wcz
-wcz
+rhl
+rhl
 xeE
 prl
 soj
@@ -36514,8 +36717,8 @@ xvI
 xvI
 xvI
 fFu
-xvI
-xvI
+fFu
+fFu
 kwt
 uvZ
 uvZ
@@ -36551,8 +36754,8 @@ bLk
 bLk
 qoG
 pee
-wcz
-wcz
+rhl
+rhl
 sSn
 eQJ
 cVv
@@ -36706,16 +36909,16 @@ xvI
 xvI
 xvI
 fFu
-xvI
-bvt
-hAA
-hAA
-hAA
-hAA
-hAA
-hAA
-hAA
-hAA
+gIY
+mlG
+unq
+ldn
+ldn
+ldn
+ldn
+ldn
+ldn
+ldn
 hAA
 hAA
 hAA
@@ -36743,8 +36946,8 @@ rTJ
 xGp
 ees
 dFg
-wcz
-wcz
+rhl
+rhl
 sSh
 bjn
 dbF
@@ -36898,10 +37101,10 @@ xvI
 xvI
 xvI
 fFu
-bvt
-hAA
-hAA
-hAA
+mlG
+unq
+xIR
+ldn
 aUc
 aUc
 aUc
@@ -36922,7 +37125,7 @@ aUc
 aUc
 aUc
 csi
-xJH
+jHI
 enO
 piM
 rhl
@@ -36935,8 +37138,8 @@ uZj
 xxN
 ees
 vzZ
-wcz
-wcz
+rhl
+rhl
 vGr
 vGr
 vGr
@@ -37090,8 +37293,8 @@ fFu
 fFu
 fFu
 dSA
-hAA
-hAA
+ldn
+ldn
 lGp
 dJh
 xHV
@@ -37114,7 +37317,7 @@ xHV
 xHV
 pVM
 aUc
-xJH
+enO
 jHI
 dBd
 rhl
@@ -37127,8 +37330,8 @@ lNE
 xxN
 ees
 ocK
-wcz
-wcz
+rhl
+rhl
 rGY
 rGY
 rGY
@@ -37281,9 +37484,9 @@ xvI
 fFu
 xvI
 bvt
-hAA
-hAA
-hAA
+ldn
+unq
+ldn
 aUc
 fQD
 wyR
@@ -37310,7 +37513,7 @@ enO
 jHI
 ias
 pVe
-dbk
+vUU
 hFf
 xxN
 xxN
@@ -37319,8 +37522,8 @@ xxN
 xxN
 ees
 oZT
-wcz
-wcz
+rhl
+rhl
 dks
 dks
 dKj
@@ -37472,9 +37675,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+ldn
+ldn
+unq
 aUc
 xHV
 wyR
@@ -37510,9 +37713,9 @@ hzK
 hzK
 gLf
 vMm
-gXO
-wcz
-wcz
+rhl
+rhl
+rhl
 dks
 dks
 dks
@@ -37664,9 +37867,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+ldn
+ldn
+unq
 aUc
 wyR
 wyR
@@ -37701,9 +37904,9 @@ vUU
 vUU
 vfw
 bZg
-vUU
 gXO
-wcz
+rhl
+rhl
 dks
 dks
 dks
@@ -37856,9 +38059,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+unq
+ldn
+unq
 aUc
 wyR
 wyR
@@ -38048,9 +38251,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+unq
+ldn
+ldn
 uyS
 wyR
 wyR
@@ -38077,8 +38280,8 @@ enO
 enO
 enO
 fdi
-ldn
-rWD
+hAA
+rhl
 vGr
 rWD
 rWD
@@ -38240,9 +38443,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+unq
+unq
+unq
 aUc
 wyR
 wyR
@@ -38269,7 +38472,7 @@ enO
 bkl
 enO
 wzl
-nQV
+hAA
 rWD
 vGr
 vGr
@@ -38432,9 +38635,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+ldn
+unq
+ldn
 aUc
 wyR
 wyR
@@ -38624,9 +38827,9 @@ xvI
 xvI
 fFu
 wbk
-hAA
-hAA
-hAA
+ldn
+unq
+ldn
 aUc
 xHV
 wyR
@@ -38817,9 +39020,9 @@ xvI
 fFu
 xvI
 mrl
-hAA
-hAA
-hAA
+ldn
+ldn
+ldn
 aUc
 rig
 wyR
@@ -38842,8 +39045,8 @@ cHq
 qWb
 aCR
 enO
+rcZ
 jHI
-enO
 aBB
 hAA
 rWD
@@ -39010,9 +39213,9 @@ fFu
 xvI
 xvI
 mrl
-hAA
-hAA
-hAA
+ldn
+ldn
+ldn
 aUc
 xHV
 wyR
@@ -39034,7 +39237,7 @@ xHV
 xHV
 kpr
 aUc
-aUc
+csi
 fhV
 hAA
 hAA
@@ -39203,9 +39406,9 @@ xvI
 xvI
 xvI
 mrl
-hAA
-hAA
-hAA
+ldn
+ldn
+ldn
 aUc
 aUc
 aUc
@@ -39221,15 +39424,15 @@ kMT
 aUc
 aUc
 aUc
-aUc
 kMT
 aUc
+csi
+csi
+csi
 aUc
 aUc
 hAA
-ulg
 hAA
-vGr
 vGr
 vGr
 rWD
@@ -39396,6 +39599,12 @@ fFu
 xvI
 xvI
 mrl
+ldn
+ldn
+ldn
+ldn
+ldn
+ldn
 hAA
 hAA
 hAA
@@ -39409,19 +39618,13 @@ hAA
 hAA
 hAA
 hAA
+xHV
+gHN
 hAA
 hAA
 hAA
 hAA
 hAA
-hAA
-hAA
-hAA
-hAA
-hAA
-vGr
-vGr
-vGr
 rWD
 rWD
 rWD
@@ -39602,18 +39805,18 @@ kWV
 kWV
 kWV
 nNo
-wvK
-wvK
 fCQ
-apv
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-rWD
-rWD
+hAA
+hAA
+riI
+hQV
+lwO
+xHV
+xHV
+jSc
+hAA
+hAA
+hAA
 vGr
 vGr
 vGr
@@ -39794,18 +39997,18 @@ xvI
 xvI
 xvI
 xvI
-xvI
-xvI
 orL
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-vGr
-vGr
+hAA
+hAA
+riI
+nBi
+lwO
+xHV
+xHV
+era
+hAA
+hAA
+hAA
 vGr
 vGr
 vGr
@@ -39986,18 +40189,18 @@ xvI
 xvI
 xvI
 xvI
-xvI
-xvI
 orL
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-vGr
-vGr
+hAA
+hAA
+mZW
+nLv
+bKb
+lwO
+lwO
+gNh
+jPc
+hAA
+hAA
 vGr
 vGr
 vGr
@@ -40178,18 +40381,18 @@ xvI
 xvI
 xvI
 xvI
-xvI
-xvI
 orL
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-rWD
-vGr
+hAA
+hAA
+riI
+duC
+lbd
+xHV
+kHg
+bVW
+jPc
+hAA
+hAA
 vGr
 dun
 dks
@@ -40370,18 +40573,18 @@ xvI
 xvI
 xvI
 xvI
-xvI
-xvI
 orL
+hAA
+hAA
 riI
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-rWD
-vGr
+gls
+cTN
+xHV
+lwO
+rME
+dTb
+hAA
+hAA
 vGr
 dks
 dks
@@ -40562,18 +40765,18 @@ xvI
 xvI
 lke
 fcq
-fcq
-fcq
 rVL
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-rWD
-rWD
-rWD
+hAA
+hAA
+mZW
+lwO
+xHV
+xCJ
+hpN
+xHV
+dbk
+hAA
+hAA
 vGr
 dwo
 dks
@@ -40755,17 +40958,17 @@ xvI
 orL
 qwt
 qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-dTl
-qwt
-qwt
-qwt
-rWD
+hAA
+hAA
+riI
+jSc
+kwm
+lwO
+lbd
+wcz
+hAA
+hAA
+hAA
 vGr
 vGr
 dks
@@ -40948,15 +41151,15 @@ mby
 wvK
 pfB
 qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
+hAA
+hAA
+kLQ
+cHB
+kHg
+kHg
+xHV
+hAA
+hAA
 rWD
 rWD
 vGr
@@ -41141,13 +41344,13 @@ xvI
 mby
 wvK
 pfB
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
-qwt
+hAA
+hAA
+hAA
+hAA
+hAA
+hAA
+hAA
 qwt
 rWD
 rWD
@@ -42471,7 +42674,7 @@ xvI
 xvI
 xvI
 xvI
-xvI
+oHK
 xvI
 xvI
 xvI
