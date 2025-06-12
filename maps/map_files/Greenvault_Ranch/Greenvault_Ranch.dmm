@@ -1099,7 +1099,8 @@
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/kitchen)
 "bFs" = (
-/obj/item/flag/plantable/upp,
+/obj/structure/flora/bush/ausbushes/var3/sunnybush,
+/obj/item/trash/candy,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "bFC" = (
@@ -1995,6 +1996,10 @@
 "diI" = (
 /turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"diV" = (
+/obj/item/trash/hotdog,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/Greenvault_Ranch/outside/northwest)
 "diZ" = (
 /obj/structure/filingcabinet/chestdrawer{
 	density = 0;
@@ -2666,6 +2671,10 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/space/basic,
 /area/Greenvault_Ranch/int_reg/meetingroom)
 "egD" = (
@@ -2861,6 +2870,13 @@
 /obj/structure/machinery/power/apc/upgraded/power/north,
 /turf/open/floor/kutjevo/fake_wood,
 /area/Greenvault_Ranch/int_reg/corpooffice)
+"euL" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
+/turf/open/floor/prison/blue_plate/north,
+/area/Greenvault_Ranch/shuttles/drop1)
 "euR" = (
 /obj/structure/flora/bush/snow,
 /obj/structure/flora/jungle/vines,
@@ -3406,7 +3422,8 @@
 /area/Greenvault_Ranch/int_heavy/controlroom)
 "fmg" = (
 /obj/item/weapon/gun/pistol/clfpistol,
-/turf/open/auto_turf/strata_grass/layer0,
+/obj/structure/bed/sofa/south/grey,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "fof" = (
 /obj/structure/largecrate/random/barrel/yellow,
@@ -3497,6 +3514,13 @@
 /obj/structure/machinery/recharge_station,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_heavy/powerplace)
+"fuq" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/Greenvault_Ranch/shuttles/drop1)
 "fuY" = (
 /obj/item/reagent_container/glass/bucket/janibucket,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -4375,6 +4399,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"gGD" = (
+/obj/structure/prop/brazier/campfire,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "gHd" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger,
@@ -5350,6 +5378,10 @@
 /area/Greenvault_Ranch/outside/northwest)
 "ikx" = (
 /obj/structure/window/framed/prefab,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/opcenter)
 "imf" = (
@@ -5389,6 +5421,7 @@
 /area/Greenvault_Ranch/int_reg/virology)
 "ipD" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
+/obj/item/trash/hotdog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
 "ipY" = (
@@ -6755,6 +6788,10 @@
 /area/Greenvault_Ranch/int_reg/farmbay)
 "kqI" = (
 /obj/structure/window/framed/prefab,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/Greenvault_Ranch/int_reg/corpooffice)
 "krq" = (
@@ -9173,6 +9210,7 @@
 	pixel_x = 8;
 	pixel_y = -4
 	},
+/obj/structure/bed/sofa/south/grey/right,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
 "nFH" = (
@@ -9465,9 +9503,12 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
 "ogH" = (
-/obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/power/smes/buildable{
-	pixel_y = 16
+	powernet = "ground"
+	},
+/obj/structure/machinery/power/smes/buildable{
+	pixel_y = 16;
+	powernet = "ground"
 	},
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
@@ -10504,6 +10545,10 @@
 /area/Greenvault_Ranch/int_reg/clinic)
 "pDr" = (
 /obj/structure/window/framed/prefab,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/floor/prison/darkpurplefull2,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
 "pDM" = (
@@ -11470,6 +11515,7 @@
 /turf/open/gm/dirt,
 /area/Greenvault_Ranch/outside/wildplace)
 "rbb" = (
+/obj/structure/bed/sofa/south/grey/left,
 /obj/item/clothing/head/headband/red,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/northwest)
@@ -14008,6 +14054,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/whitegreenfull,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"ukc" = (
+/obj/item/trash/kepler,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "ukH" = (
 /obj/structure/sign/banners/usa_flag,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -14024,6 +14074,10 @@
 /area/Greenvault_Ranch/outside/northwest)
 "ulg" = (
 /obj/structure/window/framed/prefab,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/floor/prison/darkyellowfull2,
 /area/Greenvault_Ranch/shuttles/drop1)
 "ulz" = (
@@ -14380,6 +14434,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1/east,
 /area/Greenvault_Ranch/int_heavy/bunkermedical)
+"uMI" = (
+/obj/structure/window/framed/prefab,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
+/turf/open/floor/prison/bright_clean,
+/area/Greenvault_Ranch/int_reg/meetingroom)
 "uNe" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -15546,8 +15608,16 @@
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "wqW" = (
 /obj/structure/surface/table/almayer,
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "Spaceport Lockdown";
+	name = "Spaceport Lockdown"
+	},
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_reg/opcenter)
+"wrx" = (
+/obj/item/trash/candy,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/northwest)
 "wrA" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/open/floor/prison/kitchen,
@@ -15758,9 +15828,12 @@
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
 "wGa" = (
-/obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/power/smes/buildable{
-	pixel_y = 16
+	powernet = "ground"
+	},
+/obj/structure/machinery/power/smes/buildable{
+	pixel_y = 16;
+	powernet = "ground"
 	},
 /turf/open/floor/prison/darkyellow2/west,
 /area/Greenvault_Ranch/int_heavy/powerplace)
@@ -16002,6 +16075,10 @@
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/grainbunker)
 "xaW" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Spaceport Lockdown";
+	id = "Spaceport Lockdown"
+	},
 /turf/open/space/basic,
 /area/Greenvault_Ranch/int_reg/meetingroom)
 "xbw" = (
@@ -26976,7 +27053,7 @@ tPM
 bAS
 tXY
 tXY
-rxo
+rbb
 rxo
 rxo
 rxo
@@ -27169,17 +27246,17 @@ hKr
 tXY
 rxo
 fmg
-bFs
-rxo
-rxo
-rxo
+gRZ
+gGD
+gRZ
+gRZ
 rxo
 gqi
 rxo
 gRZ
 rxo
 gRZ
-gRZ
+diV
 gRZ
 rxo
 uKJ
@@ -27361,8 +27438,8 @@ tXY
 tXY
 tXY
 nFG
-rbb
-rxo
+gRZ
+gRZ
 rxo
 rxo
 rxo
@@ -27948,7 +28025,7 @@ rxo
 rxo
 gRZ
 rxo
-sJp
+bFs
 rxo
 uKJ
 hbj
@@ -28136,7 +28213,7 @@ rxo
 rxo
 rxo
 rxo
-rxo
+wrx
 gRZ
 rxo
 gRZ
@@ -28519,7 +28596,7 @@ rxo
 rxo
 rxo
 rxo
-rxo
+ukc
 rxo
 rxo
 dTg
@@ -32901,8 +32978,8 @@ qCm
 qCm
 nnF
 nnF
-jOR
-jOR
+uMI
+uMI
 nnF
 xaW
 egd
@@ -34832,7 +34909,7 @@ nQV
 nQV
 nQV
 wHo
-nQV
+euL
 dgg
 nQV
 xKk
@@ -35024,7 +35101,7 @@ xuE
 heV
 xuE
 heV
-xuE
+fuq
 xuE
 xuE
 xuE
@@ -35216,7 +35293,7 @@ nQV
 nQV
 qtk
 wHo
-nQV
+euL
 qtk
 nQV
 mch
@@ -36922,7 +36999,7 @@ ldn
 hAA
 hAA
 hAA
-hAA
+qUs
 gdx
 enO
 enO
