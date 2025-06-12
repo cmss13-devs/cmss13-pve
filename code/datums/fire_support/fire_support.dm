@@ -72,7 +72,7 @@
 		playsound(target_turf, initiate_sound, 100)
 	if(initiate_chat_message)
 		to_chat(user, SPAN_NOTICE(initiate_chat_message))
-	if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_FS_PORTRAIT)))
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_ENABLE_FS_PORTRAIT))
 		if(portrait_type && initiate_title && initiate_screen_message)
 			var/list/alert_receivers = list()
 			var/picked_screen_message = pick(initiate_screen_message)

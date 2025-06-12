@@ -9,6 +9,6 @@
 		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
 		return
 
-	SSticker.mode.toggleable_flags ^= MODE_DISABLE_FS_PORTRAIT
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_FS_PORTRAIT) ? "turned off" : "turned on"] fire support portraits.")
+	SSticker.mode.toggleable_flags ^= MODE_ENABLE_FS_PORTRAIT
+	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_ENABLE_FS_PORTRAIT) ? "turned on" : "turned off"] fire support portraits.")
 
