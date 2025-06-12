@@ -378,7 +378,7 @@
 		WEAR_FACE = /obj/item/clothing/mask/tornscarf,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility,
 		WEAR_BACK = /obj/item/storage/backpack/lightpack/five_slot,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,
@@ -427,7 +427,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/cmcap,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility/yellow,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/norm,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,
@@ -666,7 +666,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/glass/reinforced/large_stack(new_human.back), WEAR_IN_R_STORE)
 
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/engi/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
@@ -715,7 +715,7 @@
 /datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/upp/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
