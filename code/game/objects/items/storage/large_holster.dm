@@ -122,7 +122,7 @@
 	new /obj/item/weapon/sword/machete(src)
 
 /obj/item/storage/large_holster/machete/gladius
-	name = "\improper modified H5 patter M2132 gladius scabbard"
+	name = "\improper modified H5 pattern M2132 gladius scabbard"
 	desc = "A large leather scabbard modified to carry an ancient sword. It can be strapped on your waist or the armor."
 	icon_state = "gladius_holster"
 	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
