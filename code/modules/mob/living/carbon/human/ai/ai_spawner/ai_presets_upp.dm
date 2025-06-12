@@ -55,12 +55,12 @@
 
 /datum/human_ai_equipment_preset/upp/military_police
 	name = "UPP - Military Police"
-	desc = "UPP Extras"
+	desc = "UPP - Military Police, armed with a T73."
 	path = /datum/equipment_preset/upp/military_police
 
 /datum/human_ai_equipment_preset/upp/officer
 	name = "UPP - Officer"
-	desc = "UPP Extras"
+	desc = "UPP Lieutenant, armed with a clicky pen and Type73"
 	path = /datum/equipment_preset/upp/officer
 
 /datum/human_ai_equipment_preset/upp/officer/kapitan

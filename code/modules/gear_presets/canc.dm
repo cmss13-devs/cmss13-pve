@@ -230,6 +230,7 @@
 	name = "CANC Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
+	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/canc/medic/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
