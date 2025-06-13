@@ -70,6 +70,9 @@
 	max_rounds = 1000
 	default_ammo = /datum/ammo/bullet/smg/wy_minisentry
 
+/obj/item/ammo_magazine/sentry/upp/dropped
+	max_rounds = 100
+
 // FLAMER Sentry
 /obj/item/ammo_magazine/sentry_flamer
 	name = "sentry incinerator tank"
