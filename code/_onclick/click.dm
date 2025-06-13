@@ -30,9 +30,9 @@
 	if ((A.flags_atom & NOINTERACT))
 		if (istype(A, /atom/movable/screen/click_catcher))
 			var/list/mods = params2list(params)
-			var/turf/TU = params2turf(mods["screen-loc"], get_turf(client.eye), client)
+			var/turf/TU = params2turf(mods[SCREEN_LOC], get_turf(client.eye), client)
 			if (TU)
-				params += ";click_catcher=1"
+				params += CLICK_CATCHER_ADD_PARAM
 				do_click(TU, location, params)
 		return
 
@@ -49,7 +49,7 @@
 		clicked_something[mod] = TRUE
 
 	// Don't allow any other clicks while dragging something
-	if (mods["drag"])
+	if(mods[DRAG])
 		return
 
 	if(client && SEND_SIGNAL(client, COMSIG_CLIENT_PRE_CLICK, A, mods) & COMPONENT_INTERRUPT_CLICK)
@@ -82,8 +82,10 @@
 		return
 
 	face_atom(A)
-	if(mods["middle"])
+
+	if(mods[MIDDLE_CLICK] || mods[BUTTON4] || mods[BUTTON5])
 		return
+
 	// Special type of click.
 	if (is_mob_restrained())
 		RestrainedClickOn(A)
@@ -191,16 +193,51 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 
+/*
+	AI ClickOn()
+
+	Note currently ai is_mob_restrained() returns 0 in all cases,
+	therefore restrained code has been removed
+
+	The AI can double click to move the camera (this was already true but is cleaner),
+	or double click a mob to track them.
+
+	Note that AI have no need for the adjacency proc, and so this proc is a lot cleaner.
+*/
+
 /mob/proc/click(atom/A, list/mods)
-	return FALSE
+	if(!client || !client.remote_control)
+		return FALSE
+
+	if(mods[MIDDLE_CLICK])
+		A.AIMiddleClick(src)
+		return TRUE
+
+	if(mods[SHIFT_CLICK])
+		A.AIShiftClick(src)
+		return TRUE
+
+	if(mods[ALT_CLICK])
+		A.AIAltClick(src)
+		return TRUE
+
+	if(mods[CTRL_CLICK])
+		A.AICtrlClick(src)
+		return TRUE
+
+	if(world.time <= next_move)
+		return TRUE
+
+	A.attack_remote(src)
+	return TRUE
 
 /atom/proc/clicked(mob/user, list/mods)
-	if (mods["shift"] && !mods["middle"])
+	if (mods[SHIFT_CLICK] && !mods[MIDDLE_CLICK])
 		if(can_examine(user))
 			examine(user)
 		return TRUE
 
-	if (mods["alt"])
+	if (mods[ALT_CLICK])
 		var/turf/T = get_turf(src)
 		if(T && user.TurfAdjacent(T) && length(T.contents))
 			user.set_listed_turf(T)
@@ -212,7 +249,7 @@
 	if (..())
 		return TRUE
 
-	if (mods["ctrl"])
+	if (mods[CTRL_CLICK])
 		if (Adjacent(user) && user.next_move < world.time)
 			user.start_pulling(src)
 		return TRUE
@@ -229,7 +266,9 @@
 	in human click code to allow glove touches only at melee range.
 */
 /mob/proc/UnarmedAttack(atom/A, proximity_flag, click_parameters)
-	return
+	if(!client || !client.remote_control)
+		return FALSE
+	A.attack_remote(src)
 
 /*
 	Ranged unarmed attack:
@@ -240,7 +279,9 @@
 	animals lunging, etc.
 */
 /mob/proc/RangedAttack(atom/A, params)
-	return
+	if(!client || !client.remote_control)
+		return FALSE
+	A.attack_remote(src)
 
 /*
 	Restrained ClickOn

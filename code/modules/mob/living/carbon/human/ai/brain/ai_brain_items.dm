@@ -267,13 +267,15 @@
 	item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
 
 /datum/human_ai_brain/proc/appraise_armor()
-	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit))
 		return
 
-	if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage/marine) && tied_human.loc) // being in nullspace makes lights play weirdly
-		var/obj/item/clothing/suit/storage/marine/marine_armor = tied_human.wear_suit
-		if(!marine_armor.light_on)
-			marine_armor.turn_light(tied_human, TRUE)
+	if(istype(tied_human.wear_suit, /obj/item/clothing/suit) && tied_human.loc) // being in nullspace makes lights play weirdly
+		var/obj/item/clothing/suit/worn_armor = tied_human.wear_suit
+		if(!worn_armor.has_light)
+			return
+		else if(!worn_armor.light_on)
+			worn_armor.turn_light(tied_human, TRUE)
 
 	var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
 	for(var/id in equipment_map)
@@ -425,7 +427,9 @@
 
 			if(thing.flags_human_ai & GRENADE_ITEM)
 				var/obj/item/explosive/grenade/nade = thing
-				if(nade.active)
+				if(nade.active && (nade.fuse_type == IMPACT_FUSE))
+					return
+				else if(nade.active && (nade.fuse_type == TIMED_FUSE))
 					active_grenade_found = thing
 					continue
 

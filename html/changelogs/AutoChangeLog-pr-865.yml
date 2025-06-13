@@ -1,0 +1,8 @@
+author: "Harry Drathek Kashargul"
+delete-after: True
+changes:
+  - bugfix: "mouse 4/5 presses no longer count as mouse 1 presses"
+  - bugfix: "the audio player shouldn't blow up in weird circumstances"
+  - bugfix: "Dropship equipment weapons that aren't in a weapon slot now get defaulted gimbal offsets (none) instead of crashing"
+  - ui: "Tweaked the size of gauges in the ping relay browser"
+  - bugfix: "large batch processes offsetting the chat scrollbar"

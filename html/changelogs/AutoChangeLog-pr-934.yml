@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - spellcheck: "Changes \"cyrostasis\" in POSSIBLE_DREAM_TOPICS to \"hypersleep\""

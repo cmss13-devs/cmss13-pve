@@ -534,7 +534,7 @@ Primarily made up of things that would be best utilized, well, shipside. Recreat
 		/obj/item/reagent_container/food/snacks/egg/random,
 		/obj/item/reagent_container/food/snacks/egg/random, //not a dupe
 		/obj/item/reagent_container/food/snacks/xemeatpie,
-		/obj/item/reagent_container/food/snacks/upp,
+		/obj/item/storage/box/mre/upp,
 		/obj/item/reagent_container/food/snacks/mre_pack/xmas1,
 		/obj/item/reagent_container/food/snacks/mre_pack/xmas2,
 		/obj/item/reagent_container/food/snacks/mre_pack/xmas3,
@@ -1058,7 +1058,7 @@ This is where the RO can reclaim their lost honor and purchase the M44 custom, t
 
 /datum/supply_packs/contraband/deep_storage/type_replica
 	name = "Type 80 Bayonet Replica"
-	contains = list(/obj/item/attachable/bayonet/upp_replica)
+	contains = list(/obj/item/attachable/bayonet/upp/surplus)
 	dollar_cost = 10
 	containertype = /obj/structure/largecrate/black_market
 
@@ -1207,7 +1207,7 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			new /obj/item/ammo_magazine/smg/mac15/extended(loc)
 			new /obj/item/ammo_magazine/smg/mac15/extended(loc)
 			loot_message = SPAN_NOTICE("It's some CLF SMG armaments.")
-		if(21 to 29)
+		if(21 to 25)
 			// Discovered Yautja ruins.. (None of these will trigger any alarms. They are far too old, degraded, and useless for any Yautja to care.)
 			new /obj/item/clothing/mask/yautja_flavor(loc)
 			new /obj/item/clothing/suit/armor/yautja_flavor(loc)
@@ -1215,6 +1215,14 @@ Things that don't fit anywhere else. If they're meant for shipside use, they pro
 			new /obj/item/weapon/twohanded/yautja/glaive/damaged(loc)
 			new /obj/item/stack/yautja_rope(loc)
 			loot_message = SPAN_NOTICE("It's some strange ancient gear...?")
+		if(26 to 29)
+			// stevemre1989's secret stash
+			new /obj/item/storage/box/mre/fsr(loc)
+			new /obj/item/storage/box/mre/twe(loc)
+			new /obj/item/storage/box/mre/wy(loc)
+			new /obj/item/storage/box/mre/pmc(loc)
+			new /obj/item/storage/box/mre/upp(loc)
+			loot_message = SPAN_NOTICE("It's some rations...?")
 		if(30 to 35)
 		// CLF nades!
 			loot_message = SPAN_NOTICE("It's a package of assorted CLF grenades!")
