@@ -977,7 +977,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/merc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/covert, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/thermal, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l42a/abr40/tactical/always_scope, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/poncho/blue, WEAR_ACCESSORY)
