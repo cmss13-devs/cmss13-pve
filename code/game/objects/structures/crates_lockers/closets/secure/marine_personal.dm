@@ -105,6 +105,7 @@
 /obj/structure/closet/secure_closet/marine_personal/grom/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/accessory/patch/upp/grom(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
 /obj/structure/closet/secure_closet/marine_personal/grom/rifleman
