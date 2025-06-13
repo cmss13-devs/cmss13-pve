@@ -138,7 +138,7 @@
 
 /obj/item/storage/belt/utility/construction
 	name = "\improper M277 pattern construction rig"
-	desc = "The M277 is a common rig used by Combat Technicians to carry around materials and other supplies. It consists of a modular belt with various clips. This version sarafices storage space for specialized material loading clips."
+	desc = "The M277 is an uncommon rig used by specialist combat engineers to carry around materials and other supplies. It consists of a modular belt with various clips. This version sarafices storage space for specialized material loading clips."
 	storage_slots = 6
 	can_hold = list(
 		/obj/item/tool/crowbar,
@@ -167,6 +167,8 @@
 		/obj/item/stack/sandbags,
 		/obj/item/stack/barbed_wire,
 		/obj/item/defenses/handheld/sentry,
+		/obj/item/ammo_magazine/sentry,
+		/obj/item/device/sentry_computer,
 		/obj/item/stack/rods,
 		/obj/item/stack/tile,
 	)
@@ -179,6 +181,14 @@
 		/obj/item/stack/sandbags,
 		/obj/item/defenses/handheld/sentry,
 	)
+
+/obj/item/storage/belt/utility/construction/full/fill_preset_inventory()
+	new /obj/item/stack/sheet/plasteel(src, 30)
+	new /obj/item/stack/sheet/metal(src, 50)
+	new /obj/item/stack/barbed_wire(src, 20)
+	new /obj/item/defenses/handheld/sentry(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/device/sentry_computer(src)
 
 /obj/item/storage/belt/utility/full/pred
 	name = "\improper Yautja toolbelt"
@@ -472,6 +482,14 @@
 		/obj/item/notepad/blue,
 	)
 
+/obj/item/storage/belt/security/full/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is filled with an array of small pouches, meant to carry non-lethal equipment and restraints."
@@ -573,10 +591,12 @@
 		/obj/item/explosive/grenade,
 		/obj/item/explosive/mine,
 		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
 	)
 	bypass_w_limit = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
 	)
 	has_gamemode_skin = FALSE
 
@@ -1020,7 +1040,7 @@
 		new /obj/item/explosive/grenade/high_explosive(src)
 
 /obj/item/storage/belt/grenade/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack))
 		dump_into(W,user)
 	else
 		return ..()
@@ -1132,7 +1152,7 @@
 /obj/item/storage/belt/gun/attack_hand(mob/user, mods)
 	if(length(holstered_guns) && ishuman(user) && loc == user)
 		var/obj/item/I
-		if(mods && mods["alt"] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
+		if(mods && mods[ALT_CLICK] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
 			var/list/magazines = contents - holstered_guns
 			I = magazines[length(magazines)]
 		else //Otherwise find and draw the last-inserted gun.
@@ -1375,21 +1395,10 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
 
-/obj/item/storage/belt/gun/m4a3/nailgun
-	name = "customized nailgun holster"
-	desc = "Combination of a M276 pistol holster and engineering toolbelt that have been cannibalized into a unique belt that can holster a compact nailgun and two spare nailgun magazines."
-	icon_state = "nailgun_holster"
-	storage_slots = 3
-	can_hold = list(
-		/obj/item/weapon/gun/smg/nailgun/compact,
-		/obj/item/ammo_magazine/smg/nailgun,
-	)
-	has_gamemode_skin = FALSE
-
-/obj/item/storage/belt/gun/m4a3/nailgun/prefilled/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact())
+/obj/item/storage/belt/gun/m4a3/army/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/nailgun(src)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
 
 /obj/item/storage/belt/gun/m4a3/nailgun
 	name = "customized nailgun holster"
@@ -1844,8 +1853,8 @@
 		new /obj/item/device/flashlight/flare(src)
 
 /obj/item/storage/belt/gun/flaregun/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()
@@ -1905,9 +1914,9 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
-	new /obj/item/ammo_magazine/pistol(src)
-	new /obj/item/ammo_magazine/pistol(src)
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 

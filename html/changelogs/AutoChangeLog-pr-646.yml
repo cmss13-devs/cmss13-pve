@@ -1,0 +1,16 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Logistics presets for Army & Marines, pilot presets for USASF, redone mortar operator preset for Marines"
+  - rscadd: "Custom-armor compliant versions of the army & usasf M4 armour"
+  - rscadd: "US Army & USASF hAI faction datums, so they shouldn't spawn immediately hostile to USCM forces"
+  - rscadd: "CMB & UACG hAI faction datum, allied to all the UA armed forces"
+  - rscadd: "'Voicelines' for the above factions when spawned as hAI"
+  - rscadd: "Various colonist 'squds' added to the hAI squad spawner, in English, LatAm, Japanese & UPP flavours where available"
+  - qol: "ComTech is now a Combat Engineer, to seperate them as a specialist attached to the section. They get slightly better engi-skills, materials & a sentry-gun"
+  - qol: "The USASF Para-rescue set up has been split in two, one kitted for medical work, the other kitted for engineering works. Both retain the combined skillsets so they can do the work the other sort is expected of doing"
+  - qol: "SEA has been rebranded into a Drill Instructor"
+  - bugfix: "Warrant Officer rank-boards now use the right sprite for non-marine ones"
+  - imageadd: "Sprites for logistics guys on the HUD, along with a new patch for the engineers"
+  - imageadd: "Army & USASF HUD icons, displaying correctly in-game"
+  - maptweak: "Removed the now non-existant spawners from maps they were present on"

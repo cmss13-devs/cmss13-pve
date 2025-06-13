@@ -393,6 +393,12 @@
 				if("Xeno Status HUD")
 					H = GLOB.huds[MOB_HUD_XENO_STATUS]
 					H.add_hud_to(src, src)
+				if("Faction US Army HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_ARMY]
+					H.add_hud_to(src, src)
+				if("Faction USASF HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_NAVY]
+					H.add_hud_to(src, src)
 				if("Faction UPP HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_UPP]
 					H.add_hud_to(src, src)
