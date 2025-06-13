@@ -36,14 +36,14 @@
 #define JOB_SQUAD_MEDIC_UPP "Platoon Sanitar"
 #define JOB_SQUAD_TEAM_LEADER_UPP "Squad Sergeant"
 #define JOB_SQUAD_SMARTGUN_UPP "Machinegunner"
-#define JOB_SO_UPP "Platoon Commander"
+#define JOB_SO_UPP "UPP Platoon Commander"
 
-#define JOB_SQUAD_TEAM_LEADER_FORECON "Assistant Squad Leader"
-#define JOB_SQUAD_LEADER_FORECON  "Squad Leader"
-#define JOB_SQUAD_MEDIC_FORECON "Squad Corpsman"
-#define JOB_SQUAD_RTO "Radio Telephone Operator"
-#define JOB_SQUAD_MARINE_FORECON "Rifleman"
-#define JOB_SQUAD_SMARTGUN_FORECON "Smartgunner"
+#define JOB_SQUAD_TEAM_LEADER_FORECON "Assistant Recon Squad Leader"
+#define JOB_SQUAD_LEADER_FORECON  "Recon Squad Leader"
+#define JOB_SQUAD_MEDIC_FORECON "Recon Corpsman"
+#define JOB_SQUAD_RTO "Recon Radio Telephone Operator"
+#define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
+#define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 

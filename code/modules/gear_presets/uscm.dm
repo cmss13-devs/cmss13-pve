@@ -312,7 +312,7 @@
 	name = "FORECON Assistant Squad Leader"
 	assignment = JOB_SQUAD_TEAM_LEADER_FORECON
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "ASL"
+	role_comm_title = "ARSL"
 	skills = /datum/skills/tl/recon
 
 /datum/equipment_preset/uscm/tl/forecon/lesser_rank
@@ -392,7 +392,7 @@
 	name = "FORECON Squad Leader"
 	assignment = JOB_SQUAD_LEADER_FORECON
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SL"
+	role_comm_title = "RSL"
 
 /datum/equipment_preset/uscm/leader/forecon/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
