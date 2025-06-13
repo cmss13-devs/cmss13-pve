@@ -78,6 +78,7 @@
 #define MODE_HUMAN_AI_TWEAKS (1<<14) // Modifies some numbers to be more friendly to marines when fighting against human AI
 #define MODE_NO_MAKE_BARRICADES (1<<15) // Stops players from making barricades
 #define MODE_DISABLE_INTRO_BLURB (1<<16) // Show intro blurb when first launching dropship or not
+#define MODE_DISABLE_FS_PORTRAIT (1<<17) // Show fire support portrait when calling in fire support or not
 
 #define ROUNDSTATUS_FOG_DOWN 1
 #define ROUNDSTATUS_PODDOORS_OPEN 2
