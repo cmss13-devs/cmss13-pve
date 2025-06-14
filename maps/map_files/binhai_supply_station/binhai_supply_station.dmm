@@ -92,6 +92,12 @@
 "aal" = (
 /turf/open/floor/strata/floor3,
 /area/binhai/hab/study)
+"aam" = (
+/obj/structure/sign/safety/biolab{
+	pixel_x = 14
+	},
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/binhai/other/research)
 "aan" = (
 /obj/structure/sink{
 	dir = 1;
@@ -183,6 +189,85 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/binhai/basemil/uppertoilet)
+"aax" = (
+/obj/structure/sign/safety/biolab{
+	pixel_x = 14;
+	pixel_y = 8
+	},
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/binhai/other/research)
+"aay" = (
+/obj/structure/sign/safety/biolab{
+	pixel_y = 8
+	},
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/binhai/other/research)
+"aaz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/galley{
+	pixel_x = 15
+	},
+/turf/closed/wall/upp_wall,
+/area/binhai/basemil/upperbunks)
+"aaA" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1;
+	color = "#9494b8"
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"aaB" = (
+/obj/item/lightstick/red/variant/planted,
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"aaC" = (
+/obj/item/lightstick/red/variant/planted,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"aaD" = (
+/obj/structure/machinery/door/airlock/upp_utility,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/binhai/basemil/command)
+"aaE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/gm/dirt2,
+/area/binhai/caves/main)
+"aaF" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/binhai/basemil/command)
+"aaG" = (
+/obj/structure/stairs,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 4;
+	pixel_y = 6
+	},
+/turf/open/gm/dirt2,
+/area/binhai/caves/main)
+"aaH" = (
+/obj/structure/stairs,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8;
+	layer = 2.84;
+	pixel_y = 6
+	},
+/turf/open/gm/dirt2,
+/area/binhai/caves/main)
 "aaI" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -191,6 +276,43 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/binhai/hab/bunks)
+"aaJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.25
+	},
+/turf/open/floor/corsat,
+/area/binhai/basemil/maint)
+"aaK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"aaL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 2
+	},
+/turf/open/floor/corsat,
+/area/binhai/basemil/maint)
+"aaM" = (
+/obj/structure/sign/safety/commline_connection,
+/turf/closed/wall/upp_wall/hull,
+/area/binhai/basemil/maint)
+"aaN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	dir = 8;
+	layer = 3.01
+	},
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
 "aaO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -199,6 +321,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/main/hangar)
+"aaP" = (
+/obj/structure/machinery/telecomms/relay/preset/tower/mapcomms,
+/turf/open/floor/corsat/marked,
+/area/binhai/caves/main)
+"aaQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/power/port_gen/pacman,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"aaR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
 "aaS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -211,9 +353,94 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/lobby)
+"aaT" = (
+/obj/structure/prop/structure_lattice{
+	dir = 4
+	},
+/obj/structure/prop/structure_lattice{
+	dir = 4;
+	pixel_y = 13;
+	layer = 3.02
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"aaU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/darkness,
+/turf/open/gm/dirt2,
+/area/binhai/caves/main)
+"aaV" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/blue{
+	icon_state = "6-8"
+	},
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
 "aaW" = (
 /turf/closed/wall/shiva/prefabricated/reinforced/hull,
 /area/binhai/other/mineprep)
+"aaX" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"aaY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"aaZ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/darkness,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"aba" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.18;
+	dir = 1;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"abb" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.18;
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/binhai/caves/main)
+"abc" = (
+/obj/structure/platform_decoration/strata/metal{
+	layer = 2.84
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"abd" = (
+/obj/structure/prop/invuln/darkness,
+/turf/open/floor/corsat/marked,
+/area/binhai/caves/main)
+"abe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"abf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
+"abg" = (
+/obj/structure/prop/invuln/darkness,
+/turf/open/auto_turf/sand_white/layer0,
+/area/binhai/caves/main)
 "abm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1025,6 +1252,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "aUh" = (
@@ -1354,6 +1582,7 @@
 /obj/structure/prop/almayer/cannon_cables{
 	name = "cables"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "bgC" = (
@@ -2196,12 +2425,9 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/other/checkpoint)
 "bWH" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/decal/warning_stripes{
-	icon_state = "W"
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
+/obj/structure/prop/server_equipment,
+/obj/structure/machinery/door/window/northleft,
+/turf/open/floor/almayer/tcomms,
 /area/binhai/basemil/command)
 "bWP" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2472,11 +2698,9 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/main/hall)
 "cjB" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/structure/stairs,
-/turf/open/floor/corsat,
+/obj/structure/prop/server_equipment/broken,
+/obj/structure/machinery/door/window/brigdoor/westleft,
+/turf/open/floor/almayer/tcomms,
 /area/binhai/basemil/command)
 "cjM" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2501,7 +2725,10 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/main/lobby)
 "clx" = (
-/turf/open/floor/corsat/marked,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/corsat,
 /area/binhai/basemil/command)
 "clK" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo,
@@ -2720,6 +2947,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "cxp" = (
@@ -2752,6 +2980,10 @@
 /obj/structure/sign/safety/maint{
 	pixel_x = 14;
 	pixel_y = -5
+	},
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = 8;
+	pixel_x = 14
 	},
 /turf/closed/wall/upp_wall,
 /area/binhai/basemil/maint)
@@ -3718,14 +3950,8 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/binhai/other/mainlower)
 "dqE" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 9
-	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	dir = 4;
-	light_power = 0.9
-	},
+/obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/command)
 "drn" = (
@@ -4059,13 +4285,6 @@
 /obj/structure/platform/strata/metal,
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
-"dDC" = (
-/obj/structure/platform/strata/metal{
-	pixel_y = -4
-	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/gm/dirt2,
-/area/binhai/caves/main)
 "dDY" = (
 /turf/open/floor/plating,
 /area/shuttle/elevator1/underground)
@@ -4270,14 +4489,11 @@
 /turf/open/floor/corsat,
 /area/binhai/other/mainlower)
 "dOr" = (
-/obj/structure/machinery/blackbox_recorder{
-	name = "blackbox processor"
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 80
-	},
-/turf/open/floor/almayer/tcomms,
+/turf/open/floor/strata/floor3,
 /area/binhai/basemil/command)
 "dOD" = (
 /turf/open/gm/dirt2,
@@ -4405,6 +4621,7 @@
 /area/binhai/main/pap)
 "dVY" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "dWg" = (
@@ -4493,10 +4710,6 @@
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/hyrdo)
 "dZI" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/cable/blue{
-	icon_state = "6-8"
-	},
 /turf/open/floor/corsat,
 /area/binhai/basemil/command)
 "eag" = (
@@ -5855,6 +6068,7 @@
 /area/binhai/main/bar)
 "fcs" = (
 /obj/structure/roof/cargocrane_tracks/horizontal,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "fcv" = (
@@ -7974,8 +8188,10 @@
 /turf/open/floor/prison/bright_clean,
 /area/binhai/basemil/upperbunks)
 "hcB" = (
-/obj/structure/machinery/telecomms/relay/preset/tower/mapcomms,
-/turf/open/floor/corsat/marked,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/corsat,
 /area/binhai/basemil/command)
 "hcX" = (
 /obj/structure/bed/chair/comfy,
@@ -8157,7 +8373,11 @@
 /turf/open/shuttle/vehicle,
 /area/binhai/other/ship1)
 "hjH" = (
-/turf/closed/wall/mineral/bone_resin,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.5
+	},
+/turf/open/floor/corsat,
 /area/binhai/caves/main)
 "hjK" = (
 /obj/structure/largecrate/random/secure{
@@ -8907,6 +9127,7 @@
 	light_power = 0.25;
 	pixel_y = 20
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "hSx" = (
@@ -8942,7 +9163,7 @@
 	name = "Armory Access";
 	pixel_y = 40;
 	req_access_txt = "240";
-	pixel_x = 25
+	pixel_x = 26
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
@@ -9410,6 +9631,7 @@
 "iuF" = (
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "iuK" = (
@@ -9631,16 +9853,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/binhai/shuttles/drop2)
-"iCy" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	light_power = 0.25
-	},
-/turf/open/floor/corsat,
-/area/binhai/basemil/command)
 "iCz" = (
 /obj/structure/closet{
 	pixel_x = -8;
@@ -10250,6 +10462,7 @@
 	light_power = 0.25;
 	pixel_y = 20
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "jdE" = (
@@ -10996,7 +11209,12 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/other/minelower)
 "jMg" = (
-/obj/structure/sign/safety/maint,
+/obj/structure/sign/safety/maint{
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/commline_connection{
+	pixel_y = 8
+	},
 /turf/closed/wall/upp_wall,
 /area/binhai/basemil/maint)
 "jMr" = (
@@ -11176,13 +11394,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/binhai/main/pap)
-"jVk" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/sign/safety/galley{
-	pixel_x = 15
-	},
-/turf/closed/wall/upp_wall,
-/area/binhai/basemil/upperbunks)
 "jVy" = (
 /obj/structure/closet/secure_closet/miner{
 	can_be_stacked = 1;
@@ -11518,6 +11729,7 @@
 	dir = 8;
 	light_power = 0.25
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "kmn" = (
@@ -12254,6 +12466,7 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/other/mineprep)
 "kTY" = (
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "kUT" = (
@@ -12307,10 +12520,6 @@
 	},
 /turf/open/floor/corsat,
 /area/binhai/other/mainlower)
-"kWQ" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/floor/corsat,
-/area/binhai/basemil/command)
 "kWW" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = -5;
@@ -12965,8 +13174,10 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "lxU" = (
-/obj/structure/sign/safety/commline_connection,
-/turf/closed/wall/upp_wall,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3,
 /area/binhai/basemil/command)
 "lxW" = (
 /obj/effect/decal/strata_decals/grime/grime1{
@@ -13192,19 +13403,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/binhai/caves/main)
-"lFw" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/barricade/handrail/wire{
-	layer = 3.18;
-	dir = 1;
-	pixel_y = 10
-	},
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 4
-	},
-/turf/open/floor/corsat,
-/area/binhai/basemil/command)
 "lGa" = (
 /obj/structure/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/engine,
@@ -13861,6 +14059,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat,
 /area/binhai/caves/main)
 "mrB" = (
@@ -13977,18 +14176,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/hab/bunks)
-"mxG" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 1;
-	pixel_y = -4
-	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/gm/dirt2,
-/area/binhai/caves/main)
 "mxQ" = (
 /obj/structure/machinery/door_control{
 	id = "UPPmilArmory";
@@ -14351,6 +14538,7 @@
 "mLV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "mLX" = (
@@ -14861,6 +15049,7 @@
 	color = "#C02526";
 	light_power = 0.25
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "nmq" = (
@@ -15249,12 +15438,9 @@
 /turf/open/floor/plating,
 /area/binhai/other/morgue)
 "nEe" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/turf/open/floor/corsat,
+/obj/structure/prop/server_equipment,
+/obj/structure/machinery/door/window/brigdoor/westleft,
+/turf/open/floor/almayer/tcomms,
 /area/binhai/basemil/command)
 "nEv" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -16337,15 +16523,11 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/lower)
 "ozP" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 80
+/obj/structure/surface/rack{
+	color = "#424a50"
 	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/machinery/telecomms/allinone,
-/turf/open/floor/almayer/tcomms,
+/obj/item/prop/almayer/handheld1,
+/turf/open/floor/strata/floor3,
 /area/binhai/basemil/command)
 "oBj" = (
 /obj/structure/barricade/handrail/type_b{
@@ -16389,6 +16571,7 @@
 	color = "#C02526";
 	light_power = 0.25
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "oEu" = (
@@ -16865,6 +17048,7 @@
 "oYO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "oZr" = (
@@ -16939,7 +17123,7 @@
 	color = "#8B9490"
 	},
 /obj/item/paper_bin{
-	pixel_x = 4;
+	pixel_x = 8;
 	pixel_y = 8
 	},
 /obj/item/tool/pen{
@@ -16952,8 +17136,8 @@
 	name = "Base Lockdown";
 	id = "UPPBase";
 	req_access_txt = 240;
-	pixel_y = -3;
-	pixel_x = -7
+	pixel_y = -1;
+	pixel_x = -6
 	},
 /turf/open/floor/corsat,
 /area/binhai/basemil/command)
@@ -17588,6 +17772,7 @@
 	light_power = 0.25;
 	pixel_y = 20
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "pFJ" = (
@@ -18248,6 +18433,7 @@
 /obj/structure/prop/almayer/cannon_cables{
 	name = "cables"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "qgY" = (
@@ -18560,6 +18746,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "qvd" = (
@@ -18591,6 +18778,7 @@
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "qvL" = (
@@ -19558,6 +19746,7 @@
 /obj/structure/prop/almayer/missile_tube,
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "ric" = (
@@ -19781,15 +19970,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/binhai/other/mainlower)
-"rqj" = (
-/obj/structure/machinery/door/airlock/upp_utility,
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/binhai/basemil/command)
 "rqH" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/prison/bright_clean,
@@ -20143,12 +20323,12 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/binhai/other/mainlower)
 "rJr" = (
-/obj/structure/barricade/handrail/wire{
-	layer = 3.18;
-	dir = 1;
-	pixel_y = 10
+/obj/structure/machinery/blackbox_recorder{
+	name = "blackbox processor"
 	},
-/turf/open/floor/corsat/marked,
+/obj/structure/machinery/door/window/eastleft,
+/obj/structure/window/reinforced,
+/turf/open/floor/almayer/tcomms,
 /area/binhai/basemil/command)
 "rJx" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_grey{
@@ -20392,6 +20572,7 @@
 "rUo" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "rUH" = (
@@ -20426,6 +20607,7 @@
 	name = "cables"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "rXo" = (
@@ -20623,11 +20805,9 @@
 /turf/open/floor/corsat/plate,
 /area/binhai/hab/east)
 "sfV" = (
-/obj/structure/stairs{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
+/obj/structure/sign/safety/fibre_optics,
+/turf/closed/wall/upp_wall,
 /area/binhai/basemil/command)
 "sgc" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -20854,12 +21034,10 @@
 /turf/closed/wall/upp_wall/grey,
 /area/binhai/main/toilet)
 "sqS" = (
-/obj/structure/platform/strata/metal{
-	pixel_y = -4
-	},
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/auto_turf/sand_white/layer0,
-/area/binhai/caves/main)
+/obj/structure/machinery/telecomms/allinone,
+/obj/structure/machinery/door/window/eastleft,
+/turf/open/floor/almayer/tcomms,
+/area/binhai/basemil/command)
 "srW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -20937,6 +21115,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "sua" = (
@@ -22095,6 +22274,7 @@
 	light_power = 0.25;
 	pixel_y = 20
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "tsy" = (
@@ -23263,6 +23443,7 @@
 /area/binhai/caves/depths)
 "uhZ" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "uic" = (
@@ -23317,6 +23498,7 @@
 	layer = 3.02
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat,
 /area/binhai/caves/main)
 "ukP" = (
@@ -23923,6 +24105,7 @@
 /obj/structure/roof/cargocrane_tracks/vertical,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "uLw" = (
@@ -24481,6 +24664,7 @@
 	name = "cables"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "vgW" = (
@@ -24646,6 +24830,7 @@
 "vnR" = (
 /obj/structure/prop/almayer/missile_tube,
 /obj/structure/roof/cargocrane_tracks/vertical,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/engine,
 /area/binhai/caves/main)
 "vod" = (
@@ -26209,6 +26394,7 @@
 "wuZ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "wvL" = (
@@ -26272,6 +26458,7 @@
 /obj/structure/roof/cargocrane_tracks/horizontal,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/darkness,
 /turf/open/floor/corsat/marked,
 /area/binhai/caves/main)
 "wzv" = (
@@ -27035,11 +27222,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/other/minelower)
-"xhx" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/power/port_gen/pacman,
-/turf/open/floor/corsat,
-/area/binhai/basemil/command)
 "xhF" = (
 /obj/structure/machinery/landinglight/ds2{
 	dir = 8
@@ -27186,6 +27368,7 @@
 	dir = 4;
 	light_power = 0.25
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "xpZ" = (
@@ -29204,17 +29387,17 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
 xnw
 xnw
 xnw
@@ -29431,9 +29614,6 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
 xnw
 xnw
 xnw
@@ -29442,28 +29622,31 @@ xnw
 xnw
 xnw
 xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
+ufk
+ufk
+ufk
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
+xnw
+xnw
+jHI
+xnw
+xnw
+xnw
+xnw
 xnw
 xnw
 ass
@@ -29669,43 +29852,43 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-xnw
-hjH
-hjH
-hjH
-hjH
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-xnw
-xnw
-hjH
-xnw
-xnw
-hjH
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
 xnw
-hjH
-hjH
+xnw
+jHI
+ufk
+ufk
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+xnw
+xnw
+ufk
+ufk
+xnw
+xnw
+xnw
 xnw
 xnw
 ass
@@ -29910,8 +30093,6 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
 xnw
 xnw
 xnw
@@ -29921,33 +30102,35 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
-xnw
-hjH
-hjH
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
+xnw
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+xnw
+xnw
+ufk
+ufk
+xnw
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
-xnw
-xnw
-hjH
-hjH
+ufk
 xnw
 xnw
 xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -30152,7 +30335,13 @@ xnw
 xnw
 xnw
 xnw
-hjH
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -30164,32 +30353,26 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
+xnw
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
+jHI
+ufk
 xnw
 xnw
 xnw
-xnw
-hjH
-hjH
-xnw
+ufk
+ufk
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -30394,7 +30577,19 @@ xnw
 xnw
 xnw
 xnw
-hjH
+ufk
+abc
+ose
+ose
+ose
+ose
+hWl
+ufk
+xnw
+xnw
+xnw
+xnw
+ufk
 xnw
 xnw
 xnw
@@ -30403,15 +30598,11 @@ xnw
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -30420,18 +30611,10 @@ xnw
 xnw
 xnw
 xnw
+ufk
+ufk
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -30635,8 +30818,23 @@ ass
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+ufk
+tMZ
+mpl
+aaN
+aaN
+mpl
+dIb
+ufk
+awX
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -30644,15 +30842,10 @@ xnw
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -30660,20 +30853,10 @@ xnw
 xnw
 xnw
 xnw
+ufk
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -30877,26 +31060,24 @@ ass
 xnw
 xnw
 xnw
+ufk
+ufk
+tMZ
+aba
+oEK
+oEK
 hjH
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
+dIb
+vjN
+awX
+ufk
+epO
+epO
+epO
+vjN
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -30904,18 +31085,20 @@ xnw
 xnw
 xnw
 xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+xnw
+xnw
+ufk
+ufk
+xnw
+xnw
+xnw
 xnw
 xnw
 ass
@@ -31118,45 +31301,45 @@ bUI
 ass
 xnw
 xnw
+ufk
+ufk
+ufk
+tMZ
+abb
+vYZ
+aaP
+aaK
+aaG
+aaE
+cMh
+epO
+epO
+epO
+epO
+epO
+epO
+epO
+ufk
+awX
+ufk
 xnw
-hjH
+ufk
+ufk
 xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
 xnw
 xnw
+ufk
+ufk
+ufk
 xnw
-hjH
+xnw
 xnw
 xnw
 xnw
@@ -31360,46 +31543,46 @@ bUI
 ass
 xnw
 xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
+ufk
+ufk
+ufk
+szE
+abb
+vYZ
+vYZ
+aaK
+aaH
+aaE
+epO
+epO
+epO
+ufk
+epO
+epO
+epO
+epO
+epO
+fGj
+ufk
+ufk
+ufk
 xnw
 xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
-hjH
-hjH
-hjH
-hjH
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-xnw
-hjH
-hjH
-hjH
 xnw
 xnw
 ass
@@ -31603,45 +31786,45 @@ ass
 xnw
 xnw
 xnw
+ufk
+qBi
+szE
+aba
+aaV
+oEK
 hjH
+dIb
+ufk
+ufk
+aaC
+ufk
+ufk
+ufk
+ufk
+epO
+epO
+epO
+cMh
+cMh
+ufk
+ufk
+ufk
+omi
+ufk
+ufk
+xnw
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -31845,45 +32028,45 @@ ass
 xnw
 xnw
 xnw
-hjH
+ufk
+qBi
+szE
+mpl
+aaX
+aaQ
+mpl
+dIb
+ufk
+ufk
+awX
+xnw
+xnw
+ufk
+ufk
+ufk
+awX
+vjN
+epO
+cMh
+ufk
+ufk
+ufk
+omi
+ufk
+xnw
+xnw
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
+ufk
+ufk
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 ass
@@ -32086,46 +32269,46 @@ bUI
 ass
 xnw
 xnw
+ufk
+ufk
+ufk
+wMO
+kjt
+ohN
+kjt
+kjt
+seE
 xnw
-hjH
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
 xnw
-xnw
-xnw
-hjH
-hjH
-hjH
-hjH
-xnw
-xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
+ufk
+awX
+ufk
+ufk
+cMh
+cMh
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+ufk
+ufk
+xnw
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+ufk
+xnw
 xnw
 xnw
 ass
@@ -32329,44 +32512,44 @@ ass
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-hjH
-xnw
-xnw
-hjH
-hjH
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
 xnw
 xnw
+fGj
+ufk
+ufk
+epO
+epO
+vjN
+ufk
+ufk
 xnw
 xnw
 xnw
-xnw
-xnw
-hjH
-xnw
+ufk
+ufk
 xnw
 xnw
 xnw
-hjH
+jHI
+xnw
+xnw
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -32571,44 +32754,44 @@ ass
 xnw
 xnw
 xnw
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
-hjH
-hjH
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-hjH
-xnw
-xnw
-hjH
-xnw
-xnw
-hjH
-xnw
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-xnw
-hjH
-hjH
+ufk
+ufk
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+epO
+epO
+ufk
+ufk
+xnw
+xnw
+xnw
+ufk
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+ufk
+ufk
+ufk
+xnw
 xnw
 xnw
 xnw
@@ -32815,42 +32998,42 @@ xnw
 xnw
 xnw
 xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
+ufk
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-xnw
-fED
-bUI
-bUI
-bUI
-bUI
-bUI
-bUI
-bUI
-bUI
-fED
-xnw
-hjH
-hjH
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+epO
+epO
+epO
+ufk
+ufk
+xnw
+xnw
+ufk
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
+xnw
 xnw
 xnw
 xnw
@@ -33058,7 +33241,9 @@ xnw
 xnw
 xnw
 xnw
-hjH
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -33066,35 +33251,33 @@ xnw
 xnw
 xnw
 xnw
-hjH
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
+xnw
+ufk
+ufk
+epO
+cMh
+ufk
+ufk
+ufk
+xnw
+ufk
+xnw
 xnw
 fED
-bUI
-ass
-ass
-ass
-ass
-ass
-ass
-bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
+fED
+fED
+fED
+fED
+fED
+fED
+fED
+fED
 xnw
 ass
 bUI
@@ -33300,7 +33483,16 @@ xnw
 xnw
 xnw
 xnw
-hjH
+ufk
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+ufk
+omi
+ufk
 xnw
 xnw
 xnw
@@ -33308,14 +33500,14 @@ xnw
 xnw
 xnw
 xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
+ufk
+epO
+cMh
+cMh
+ufk
+ufk
+ufk
+ufk
 xnw
 xnw
 fED
@@ -33325,18 +33517,9 @@ bUI
 bUI
 bUI
 bUI
-ass
+bUI
 bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
 xnw
 ass
 bUI
@@ -33542,43 +33725,43 @@ xnw
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+ufk
+ufk
+vjN
+cMh
+epO
+omi
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
+ufk
+ufk
+cMh
+cMh
+qBi
+kRz
+kRz
 xnw
 xnw
 xnw
-xnw
-xnw
-hjH
-hjH
-xnw
-xnw
-fED
-fED
-fED
-fED
-fED
 fED
 bUI
 ass
+ass
+ass
+ass
+ass
+ass
 bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
 xnw
 ass
 bUI
@@ -33783,44 +33966,44 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+xnw
+xnw
+xnw
+ufk
+ufk
+epO
+cMh
+cMh
+aaA
+kRz
+ufk
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+ufk
+vjN
+epO
+epO
+cMh
+ufk
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
 xnw
 xnw
 fED
-fED
-fED
-fED
-fED
-fED
+bUI
+bUI
+bUI
+bUI
+bUI
 bUI
 ass
 bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
 xnw
 ass
 bUI
@@ -34025,23 +34208,32 @@ xnw
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+ufk
+ufk
+epO
+epO
+ufk
+ufk
+epO
+epO
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
+kRz
+kRz
+ufk
+epO
+epO
+ufk
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
 xnw
 xnw
 fED
@@ -34051,18 +34243,9 @@ fED
 fED
 fED
 bUI
-bUI
+ass
 bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
-xnw
 xnw
 ass
 bUI
@@ -34266,45 +34449,45 @@ xnw
 xnw
 xnw
 xnw
-hjH
-hjH
 xnw
 xnw
 xnw
+ufk
+ufk
+ufk
+epO
+epO
+ufk
+ufk
+aaB
+cMh
+epO
+ufk
+ufk
 xnw
 xnw
-hjH
+xnw
+ufk
+ufk
+ufk
+cMh
+epO
+epO
+ufk
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 fED
 fED
+fED
+fED
+fED
+fED
 bUI
-bUI
-bUI
-bUI
-bUI
-bUI
+ass
 bUI
 fED
-xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-hjH
-hjH
-xnw
 xnw
 ass
 bUI
@@ -34507,46 +34690,46 @@ ass
 xnw
 xnw
 xnw
-hjH
-hjH
 xnw
 xnw
 xnw
 xnw
+ufk
+vjN
+epO
+epO
+vjN
+ufk
+xnw
+omi
+cMh
+epO
+ufk
+ufk
+xnw
+ufk
+ufk
+ufk
+ufk
+cMh
+cMh
+epO
+ufk
+ufk
 xnw
 xnw
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 fED
+fED
+fED
+fED
+fED
+fED
 bUI
 bUI
-ass
-bUI
-bUI
-bUI
-ass
 bUI
 fED
-xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
 xnw
 ass
 bUI
@@ -34749,46 +34932,46 @@ ass
 xnw
 xnw
 xnw
-hjH
 xnw
 xnw
 xnw
+ufk
+ufk
+epO
+epO
+ufk
+ufk
+xnw
+xnw
+omi
+epO
+epO
+vjN
+omi
+ufk
+ufk
+xnw
+vjN
+epO
+epO
+epO
+vjN
+ufk
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 fED
-bUI
-ass
-ass
+fED
 bUI
 bUI
-ass
-ass
+bUI
+bUI
+bUI
+bUI
 bUI
 fED
-xnw
-xnw
-hjH
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
 xnw
 ass
 bUI
@@ -34991,46 +35174,46 @@ ass
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+kRz
+kRz
+epO
+epO
+ufk
 xnw
 xnw
 xnw
 xnw
+ufk
+epO
+epO
+epO
+epO
+epO
+epO
+epO
+epO
+epO
+ufk
+ufk
 xnw
-hjH
-hjH
-hjH
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-hjH
 xnw
 xnw
 fED
 bUI
+bUI
 ass
 bUI
 bUI
-ass
-ass
+bUI
 ass
 bUI
 fED
-xnw
-xnw
-xnw
-hjH
-xnw
-xnw
-hjH
-xnw
-xnw
 xnw
 ass
 bUI
@@ -35233,46 +35416,46 @@ ass
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+ufk
+ufk
+epO
+epO
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
+ufk
+epO
+cMh
+cMh
+cMh
+epO
+epO
+epO
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
+xnw
 xnw
 xnw
 fED
 bUI
 ass
 ass
-ass
-ass
 bUI
+bUI
+ass
 ass
 bUI
 fED
-xnw
-xnw
-xnw
-hjH
-hjH
-hjH
-hjH
-xnw
-xnw
 xnw
 ass
 bUI
@@ -35475,22 +35658,31 @@ ass
 xnw
 xnw
 xnw
-hjH
+xnw
+ufk
+ufk
+ufk
+epO
+epO
+kRz
+kRz
 xnw
 xnw
 xnw
-hjH
-hjH
+xnw
+ufk
+ufk
+omi
+ufk
+ufk
+vjN
+ufk
+ufk
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
-hjH
 xnw
 xnw
 xnw
@@ -35498,23 +35690,14 @@ xnw
 xnw
 fED
 bUI
-bUI
-ass
 ass
 bUI
 bUI
+ass
+ass
 ass
 bUI
 fED
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
 xnw
 ass
 bUI
@@ -35716,15 +35899,24 @@ bUI
 ass
 xnw
 xnw
-hjH
-hjH
+xnw
+xnw
+ufk
+ufk
+epO
+epO
+vjN
+ufk
 xnw
 xnw
 xnw
-hjH
 xnw
 xnw
 xnw
+xnw
+xnw
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -35739,24 +35931,15 @@ xnw
 xnw
 xnw
 fED
+bUI
+ass
+ass
+ass
+ass
+bUI
+ass
+bUI
 fED
-bUI
-bUI
-bUI
-bUI
-bUI
-bUI
-bUI
-fED
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
 xnw
 ass
 bUI
@@ -35958,12 +36141,21 @@ bUI
 ass
 xnw
 xnw
-hjH
+xnw
+ufk
+ufk
+vjN
+cMh
+epO
+ufk
 xnw
 xnw
 xnw
 xnw
-hjH
+xnw
+xnw
+xnw
+xnw
 xnw
 xnw
 xnw
@@ -35981,24 +36173,15 @@ xnw
 xnw
 xnw
 fED
+bUI
+bUI
+ass
+ass
+bUI
+bUI
+ass
+bUI
 fED
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-fED
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
 xnw
 ass
 bUI
@@ -36200,13 +36383,13 @@ bUI
 ass
 xnw
 xnw
-hjH
 xnw
-xnw
-xnw
-hjH
-hjH
-xnw
+kRz
+kRz
+epO
+cMh
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -36231,16 +36414,16 @@ xnw
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
+fED
+fED
+bUI
+bUI
+bUI
+bUI
+bUI
+bUI
+bUI
+fED
 xnw
 ass
 bUI
@@ -36441,13 +36624,13 @@ bUI
 bUI
 ass
 xnw
-hjH
-hjH
 xnw
 xnw
-xnw
-hjH
-xnw
+ufk
+ufk
+cMh
+cMh
+kRz
 xnw
 xnw
 xnw
@@ -36473,16 +36656,16 @@ xnw
 xnw
 xnw
 xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
-xnw
+fED
+fED
+fED
+fED
+fED
+fED
+fED
+fED
+fED
+fED
 xnw
 ass
 bUI
@@ -36683,13 +36866,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
+epO
+cMh
+ufk
+ufk
 xnw
 xnw
 xnw
@@ -36925,13 +37108,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-hjH
-xnw
-xnw
+ufk
+epO
+epO
+vjN
+ufk
 xnw
 xnw
 xnw
@@ -37167,12 +37350,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-hjH
-hjH
+ufk
+ugA
+epO
+ufk
 xnw
 xnw
 pTB
@@ -37409,12 +37592,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-xnw
-hjH
+ufk
+epO
+epO
+ufk
 xnw
 xnw
 pTB
@@ -37651,12 +37834,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-xnw
-hjH
+vjN
+epO
+epO
+ufk
 xnw
 xnw
 pTB
@@ -37893,12 +38076,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
+ufk
+epO
+epO
 xnw
-xnw
-hjH
 xnw
 xnw
 pTB
@@ -38135,12 +38318,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
+ufk
+epO
+epO
 xnw
-hjH
-hjH
 xnw
 xnw
 pTB
@@ -38377,11 +38560,11 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-hjH
+ufk
+epO
+epO
 xnw
 xnw
 xnw
@@ -38619,12 +38802,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-hjH
-xnw
+ufk
+epO
+epO
+vjN
 xnw
 xnw
 pTB
@@ -38861,12 +39044,12 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-hjH
-hjH
+epO
+epO
+ufk
 xnw
 xnw
 pTB
@@ -38888,12 +39071,12 @@ fRU
 gQo
 crV
 yfg
-yfg
-jVk
+aaz
+crV
 wDH
 rIs
-lYO
 gQo
+lYO
 gQo
 gQo
 bxx
@@ -39103,13 +39286,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-xnw
-hjH
-xnw
+ufk
+epO
+epO
+ufk
+ufk
 xnw
 pTB
 egq
@@ -39345,13 +39528,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
-xnw
-xnw
-hjH
-xnw
+ufk
+epO
+epO
+ufk
+ufk
 xnw
 pTB
 vPo
@@ -39587,13 +39770,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-xnw
-hjH
-xnw
+ufk
+epO
+epO
+ufk
 xnw
 pTB
 swt
@@ -39829,13 +40012,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-hjH
-hjH
-xnw
+ufk
+vjN
+epO
+ufk
 xnw
 pTB
 pTB
@@ -40071,13 +40254,13 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-hjH
-xnw
-xnw
+ufk
+ufk
+hcf
+epO
 xnw
 xKN
 xKN
@@ -40313,14 +40496,14 @@ bUI
 bUI
 ass
 xnw
-hjH
 xnw
 xnw
 xnw
-hjH
 xnw
-xnw
-xnw
+ufk
+jGg
+hcf
+epO
 xKN
 mmn
 mmn
@@ -40555,16 +40738,16 @@ bUI
 bUI
 ass
 xnw
-hjH
-hjH
-hjH
-hjH
-hjH
 xnw
 xnw
 xnw
-xKN
-shi
+xnw
+xnw
+ufk
+aaY
+aaR
+aaL
+aaJ
 oxK
 oxK
 oxK
@@ -40805,7 +40988,7 @@ xnw
 xnw
 xnw
 xnw
-xKN
+aaM
 cQV
 mmn
 mmn
@@ -41281,14 +41464,14 @@ bUI
 bUI
 ass
 fpD
-mpl
-ufk
-jGg
-mpl
-mpl
-epO
-epO
-mpl
+aaT
+abg
+abf
+aaT
+aaT
+aaZ
+aaZ
+aaT
 mmn
 cQV
 mmn
@@ -41523,14 +41706,14 @@ bUI
 bUI
 ass
 fpD
-vYZ
-vYZ
-vYZ
+abd
+abd
+abd
 dVY
-vYZ
+abd
 xoX
-cMh
-cMh
+aaU
+aaU
 mmn
 shi
 mmn
@@ -42733,7 +42916,7 @@ bUI
 bUI
 ass
 fpD
-vYZ
+abd
 uhZ
 rUo
 uLs
@@ -43217,10 +43400,10 @@ bUI
 bUI
 ass
 fpD
-ufk
-jGg
-jGg
-sua
+abg
+abf
+abf
+abe
 iuF
 olA
 vyf
@@ -43459,9 +43642,9 @@ bUI
 bUI
 ass
 fpD
-jGg
+abf
 ukw
-mpl
+aaT
 mrf
 oDu
 cxE
@@ -43701,10 +43884,10 @@ bUI
 bUI
 ass
 fpD
-ufk
-jGg
-jGg
-sua
+abg
+abf
+abf
+abe
 iuF
 olA
 vyf
@@ -44681,7 +44864,7 @@ oON
 ozP
 dOr
 lxU
-rqj
+qOi
 cxE
 xgt
 clK
@@ -44920,9 +45103,9 @@ olA
 qOi
 vPW
 pbb
-olA
-olA
 cxE
+cxE
+aaD
 sfV
 cxE
 xgt
@@ -45399,15 +45582,15 @@ hRG
 mLV
 dVY
 mLV
-vYZ
+abd
 klR
-cMh
-cMh
-klR
-dDC
-rJr
+aaU
+aaU
+olA
+dZI
+aaF
 clx
-iCy
+bWH
 cxE
 aMK
 bqJ
@@ -45637,19 +45820,19 @@ bUI
 bUI
 ass
 fpD
-mpl
-ufk
-ufk
-mpl
-mpl
-epO
-epO
-mpl
-epO
-dDC
-lFw
+aaT
+abg
+abg
+aaT
+aaT
+aaZ
+aaZ
+aaT
+cxE
 dZI
-kWQ
+dZI
+dZI
+bWH
 cxE
 xgt
 uSz
@@ -45888,10 +46071,10 @@ fpD
 fpD
 fpD
 fpD
-mxG
+nEe
 cjB
 nEe
-xhx
+cxE
 cxE
 xgt
 xgt
@@ -46735,7 +46918,7 @@ xnw
 ufk
 epO
 cMh
-oem
+aax
 oem
 oem
 oem
@@ -47461,7 +47644,7 @@ cMh
 epO
 epO
 epO
-oem
+aay
 rnX
 eHo
 oem
@@ -82332,10 +82515,10 @@ ufk
 ufk
 ufk
 ufk
-oem
+aam
 wCG
 wCG
-oem
+aam
 ufk
 qBi
 ufk
@@ -98826,7 +99009,7 @@ lAd
 joa
 dOD
 joa
-mxS
+joa
 mxS
 mxS
 mxS
@@ -99068,8 +99251,8 @@ anW
 fdv
 dOD
 joa
-mxS
-mxS
+joa
+joa
 mxS
 mxS
 mxS
@@ -99310,8 +99493,8 @@ hVC
 bbw
 dOD
 joa
-mxS
-mxS
+joa
+joa
 mxS
 mxS
 mxS
@@ -99992,7 +100175,7 @@ joa
 dle
 joa
 mxS
-joa
+mxS
 joa
 joa
 joa
@@ -100263,11 +100446,11 @@ dOD
 dnu
 dnu
 dnu
-dnu
 tzS
+dnu
 oFy
-tzS
 dnu
+tzS
 kKS
 dDY
 dDY
@@ -105572,14 +105755,14 @@ mxS
 mxS
 mxS
 mxS
+joa
+joa
+joa
+joa
 mxS
-mxS
-mxS
-mxS
-mxS
-mxS
-mxS
-mxS
+joa
+joa
+joa
 mxS
 mxS
 mxS
