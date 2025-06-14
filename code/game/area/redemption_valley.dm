@@ -5,16 +5,15 @@
 	icon_state = "lv-626"
 	can_build_special = TRUE
 	powernet_name = "ground"
+	minimap_color = MINIMAP_AREA_COLONY
 //=============================================================================================PARENT
 /area/redemptionvalley/valley
 	name = "Outside"
 	ceiling = CEILING_NONE
-	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/valleyroof
 	name = "Sheltered"
 	ceiling = CEILING_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
-	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/caverns
 	name = "Caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
@@ -25,10 +24,10 @@
 	name = "Redemption Outpost"
 	ceiling = CEILING_DEEP_UNDERGROUND_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
-	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/oob
 	name = "OOB"
 	ceiling = CEILING_NO_PROTECTION
+	minimap_color = MINIMAP_SOLID
 //===============================================================================SHUTTLES
 /area/redemptionvalley/shuttles/drop1
 	name = "Redemption Valley - Supply Pad"
@@ -120,27 +119,29 @@
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
 //=============================================================================================CAVERNS
 /area/redemptionvalley/caverns/north
-	name = "Redemption Valley - Northern Caves"
+	name = "Redemption Valley - Caves Upper"
 	icon_state = "cave"
+	minimap_color = MINIMAP_SOLID
 /area/redemptionvalley/caverns/east
-	name = "Redemption Valley - Eastern Caves"
+	name = "Redemption Valley - Caves Valley"
 	icon_state = "cave"
+	minimap_color = MINIMAP_SOLID
 /area/redemptionvalley/caverns/bunker
-	name = "Redemption Valley - Bunker Cave"
+	name = "Redemption Valley - Caves Bunker"
+	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
 	icon_state = "cave"
-	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/caverns/lake
-	name = "Redemption Valley - Cave Lake"
+	name = "Redemption Valley - Caves Lake"
 	icon_state = "cave"
-	minimap_color = MINIMAP_AREA_COLONY
+	minimap_color = MINIMAP_SOLID
 /area/redemptionvalley/caverns/entry
-	name = "Redemption Valley - Cave Entrance"
-	icon_state = "cave"
-	minimap_color = MINIMAP_AREA_COLONY
-/area/redemptionvalley/caverns/west
-	name = "Redemption Valley - Western Caves"
+	name = "Redemption Valley - Caves Central"
 	icon_state = "cave"
 	ceiling = CEILING_UNDERGROUND_ALLOW_CAS
+/area/redemptionvalley/caverns/west
+	name = "Redemption Valley - Caves Lower"
+	icon_state = "cave"
+	minimap_color = MINIMAP_SOLID
 //=============================================================================================OUTPOST
 /area/redemptionvalley/outpost/elevup
 	name = "Military Base - Elevator Upper"
