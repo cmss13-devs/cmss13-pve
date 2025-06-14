@@ -208,10 +208,10 @@
 	id = DROPSHIP_WALLACE_AND_GROMIT
 
 	width = 11
-	height = 11
+	height = 18
 
 	dwidth = 5
-	dheight = 5
+	dheight = 9
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
@@ -256,7 +256,7 @@
 
 /obj/docking_port/mobile/marine_dropship/proc/automated_check()
 	var/obj/structure/machinery/computer/shuttle/dropship/flight/root_console = getControlConsole()
-	if(root_console.dropship_control_lost)
+	if(root_console?.dropship_control_lost)
 		automated_hangar_id = null
 		automated_lz_id = null
 		automated_delay = null

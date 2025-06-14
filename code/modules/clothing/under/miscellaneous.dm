@@ -242,4 +242,5 @@
 
 /obj/item/clothing/under/suit_jacket/wallace
 	name = "Wallace's Shirt"
+	item_state = "wallace_under"
 	icon_state = "wallace_under"

@@ -165,27 +165,3 @@
 
 /datum/species/human/spook/handle_paygrades()
 	return ""
-
-/datum/species/human/gromit
-	name = "Gromit"
-	name_plural = "Gromits"
-	icobase = 'icons/mob/humans/species/r_gromit.dmi'
-	deform = 'icons/mob/humans/species/r_gromit.dmi'
-	brute_mod = 0.5
-	burn_mod = 0.5
-	unarmed_type = /datum/unarmed_attack/punch/strong
-	secondary_unarmed_type = /datum/unarmed_attack/bite/strong
-	pain_type = /datum/pain/human_hero
-	darksight = 5
-	cold_level_1 = 220
-	cold_level_2 = 180
-	cold_level_3 = 80
-	heat_level_1 = 390
-	heat_level_2 = 480
-	heat_level_3 = 1100
-	knock_down_reduction = 2
-	stun_reduction = 2
-	weed_slowdown_mult = 0.5
-
-/datum/species/human/gromit/handle_paygrades()
-	return ""

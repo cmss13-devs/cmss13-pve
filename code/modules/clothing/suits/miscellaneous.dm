@@ -552,4 +552,6 @@
 
 /obj/item/clothing/suit/storage/wallace
 	name = "Wallace's Vest"
+	item_icons = list(WEAR_JACKET ='icons/mob/humans/onmob/suit_1.dmi')
+	item_state = "wallace_vest"
 	icon_state = "wallace_vest"
