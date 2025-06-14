@@ -351,7 +351,9 @@ FORENSIC SCANNER
 		dat += "\t<span class='scannerb'> *Warning: [scan_data["diseases"][disease]["form"]] Detected</span><span class='scanner'>\nName: [scan_data["diseases"][disease]["name"]].\nType: [scan_data["diseases"][disease]["form"]].\nStage: [scan_data["diseases"][disease]["stages"]]/[scan_data["diseases"][disease]["max_stages"]].\nPossible Cure: [scan_data["diseases"][disease]["cure"]]</span>\n"
 	if(!scan_data["damaged_organs"] && !scan_data["damaged_organs"]["brain"] && scan_data["damaged_organs"]["brain"]["damage"] >= 100)
 		dat += "\t<span class='scanner'> *Subject has taken extreme amounts of <b>brain damage</b></span>.\n"
-
+	if(scan_data["detail_level"])
+		for(var/organ in scan_data["damaged_organs"])
+			dat += ("\t<span class='scannerb'> [capitalize(organ["name"])]: [num2text(organ["damage"])] Damage.</span> \n")
 	dat += SPAN_WARNING("\t[scan_data["ssd"]]\n") // SSD
 
 	if(species_of_patient == "Human" || synth_types.Find(species_of_patient))

@@ -604,6 +604,7 @@
 	new_human.set_species(SYNTH_GEN_THREE)
 
 /datum/equipment_preset/upp/synth/load_gear(mob/living/carbon/human/new_human)
+	new_human.allow_gun_usage = TRUE
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)

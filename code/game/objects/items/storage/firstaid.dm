@@ -231,7 +231,6 @@
 	name = "basic field surgery kit"
 	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically. With medical training you can fit this in a backpack."
 	icon_state = "bezerk"
-	max_w_class = SIZE_MEDIUM
 	storage_slots = 8
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
@@ -247,7 +246,7 @@
 	)
 
 /obj/item/storage/firstaid/surgical/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer/soul(src)
+	new /obj/item/reagent_container/hypospray/iron(src)
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/cautery(src)
@@ -285,7 +284,7 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/syringe_case/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/softpack/burn
@@ -295,7 +294,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
+	new /obj/item/reagent_container/hypospray/kilodermlipo(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
@@ -331,6 +330,7 @@
 		/obj/item/paper,
 		/obj/item/reagent_container/syringe,
 		/obj/item/reagent_container/hypospray/autoinjector,
+		/obj/item/reagent_container/glass/beaker
 	)
 
 /obj/item/storage/syringe_case/regular
@@ -360,6 +360,13 @@
 	new /obj/item/reagent_container/syringe( src )
 	new /obj/item/reagent_container/glass/bottle/inaprovaline( src )
 	new /obj/item/reagent_container/glass/bottle/dexalin( src )
+
+/obj/item/storage/syringe_case/iron
+
+/obj/item/storage/syringe_case/iron/fill_preset_inventory()
+	new /obj/item/reagent_container/syringe( src )
+	new /obj/item/reagent_container/glass/beaker/vial/iron( src )
+	new /obj/item/reagent_container/glass/beaker/vial/iron( src )
 
 //---------SURGICAL CASE---------
 

@@ -398,6 +398,18 @@
 	reagents.add_reagent("iron", 30)
 	update_icon()
 
+
+/obj/item/reagent_container/glass/beaker/vial/kilodermlipo
+	name = "vial (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature, kelotane and dermaline - used to rapidly heal burns. Filled in a 1:3:2 ratio."
+
+/obj/item/reagent_container/syringe/leporazine_dermaline/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 5)
+	reagents.add_reagent("dermaline", 15)
+	reagents.add_reagent("kelotane", 10)
+	update_icon()
+
 /obj/item/reagent_container/glass/beaker/vial/random
 	var/tier
 
