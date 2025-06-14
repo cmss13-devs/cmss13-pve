@@ -114,7 +114,7 @@
 /datum/paygrade/upp/uo7
 	paygrade = PAY_SHORT_UO7
 	name = "Major General"
-	prefix = "May. Gen."
+	prefix = "Maj. Gen."
 	pay_multiplier = 5
 	officer_grade = GRADE_FLAG
 
