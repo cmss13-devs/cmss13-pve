@@ -21,16 +21,6 @@
 	desc = "The primary infantryman for the Black Dragoons, equipped with a modified FP9000 SMG and pistol."
 	path = /datum/equipment_preset/mercenary/sentinel
 
-/datum/human_ai_equipment_preset/mercenaries/sentinel/riot
-	name = "Black Dragoons Sentinel (Riot)"
-	desc = "The primary infantryman for the Black Dragoons, equipped with a pistol and riot shield."
-	path = /datum/equipment_preset/mercenary/sentinel/riot
-
-/datum/human_ai_equipment_preset/mercenaries/sentinel/riot/grenadier
-	name = "Black Dragoons Sentinel (Riot, Grenadier)"
-	desc = "The primary infantryman for the Black Dragoons, equipped with a pistol and grenade launcher."
-	path = /datum/equipment_preset/mercenary/sentinel/riot/grenadier
-
 /datum/human_ai_equipment_preset/mercenaries/sentinel/response
 	name = "Black Dragoons Sentinel (Response, SMG)"
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. Equipped with a modified FP9000 and pistol."
