@@ -31,6 +31,7 @@
 	desc = "Tanky support unit. The multipurpose synth is a neutered version of the combat synth that can’t use firearms. Combat synth recommended to be used instead."
 	path = /datum/equipment_preset/clf/synth
 
+
 /datum/human_ai_equipment_preset/clf/leader
 	name = "TWE Rebel Leader"
 	desc = "Armed with either a MAR variant or a F90."
