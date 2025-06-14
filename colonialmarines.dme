@@ -2231,6 +2231,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\castes\Soldier.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Spitter.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Warrior.dm"
+#include "code\modules\mob\living\carbon\xenomorph\castes\Warrior_Drone.dm"
 #include "code\modules\mob\living\carbon\xenomorph\items\iff_tag.dm"
 #include "code\modules\mob\living\carbon\xenomorph\strains\behavior_delegate.dm"
 #include "code\modules\mob\living\carbon\xenomorph\strains\xeno_strain.dm"
