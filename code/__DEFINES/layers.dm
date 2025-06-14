@@ -173,10 +173,18 @@
 #define CINEMATIC_LAYER 21
 
 #define INTRO_PLANE 2001
+#define TACMAP_LAYER 25
 #define INTRO_LAYER 26
 
 /// for areas, so they appear above everything else on map file.
 #define AREAS_LAYER 999
+
+//Float layers. These layer over normal layers, but a high float layer will layer over a lower float layer (i.e. -1 over -2)
+#define BELOW_FLOAT_LAYER -2
+#define STANDARD_FLOAT_LAYER -1
+#define ABOVE_FLOAT_LAYER -0.9
+#define HIGH_FLOAT_LAYER -0.8
+#define VERY_HIGH_FLOAT_LAYER -0.7
 
 //---------- EMISSIVES -------------
 //Layering order of these is not particularly meaningful.
@@ -257,6 +265,8 @@
 /// HUD layer defines
 #define HUD_PLANE 1000
 #define ABOVE_HUD_PLANE 1100
+#define TACMAP_PLANE 1150
+#define ABOVE_TACMAP_PLANE 1151
 
 #define CINEMATIC_PLANE 1200
 

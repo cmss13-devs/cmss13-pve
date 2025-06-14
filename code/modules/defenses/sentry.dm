@@ -63,6 +63,8 @@
 	can_be_near_defense = TRUE
 
 	var/start_up_message = "Default systems initiated."
+	///Minimap iconstate to use for this sentry
+	var/minimap_icon_state = "sentry"
 
 	///Effect for the muzzle flash of the gun.
 	var/atom/movable/vis_obj/effect/muzzle_flash/muzzle_flash
@@ -90,6 +92,7 @@
 		start_processing()
 		set_range()
 	update_icon()
+	update_minimap_icon()
 	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(unset_range))
 
 /obj/structure/machinery/defenses/sentry/Destroy() //Clear these for safety's sake.
@@ -213,12 +216,14 @@
 
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] hums to life and emits several beeps.")]")
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] buzzes in a monotone voice: '[start_up_message]'")]")
+	update_minimap_icon()
 	start_processing()
 	set_range()
 
 /obj/structure/machinery/defenses/sentry/power_off_action()
 	set_light(0)
 	visible_message("[icon2html(src, viewers(src))] [SPAN_NOTICE("The [name] powers down and goes silent.")]")
+	update_minimap_icon(off = TRUE)
 	stop_processing()
 	unset_range()
 
@@ -248,6 +253,7 @@
 		playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 		user.visible_message(SPAN_NOTICE("[user] rotates [src]."), SPAN_NOTICE("You rotate [src]."))
 		setDir(turn(dir, -90))
+		update_minimap_icon()
 		return
 
 	if(istype(O, ammo))
@@ -282,6 +288,7 @@
 	playsound(loc, 'sound/mecha/critdestrsyndi.ogg', 25, 1)
 	for(var/i = 1 to 6)
 		setDir(pick(NORTH, EAST, SOUTH, WEST))
+		update_minimap_icon()
 		sleep(2)
 
 	cell_explosion(loc, 10, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data("sentry explosion", owner_mob))
@@ -316,6 +323,7 @@
 
 	if(omni_directional)
 		setDir(get_dir(src, A))
+		update_minimap_icon()
 
 	actual_fire(A, burst, FALSE)
 
@@ -350,6 +358,7 @@
 
 	if(!recursive)
 		muzzle_flash(Get_Angle(get_turf(src), firing_target))
+		update_minimap_icon(TRUE)
 		if(firing_sound)
 			playsound(loc, firing_sound, 75, 1)
 
@@ -588,9 +597,27 @@
 		target = pick(unconscious_targets)
 
 	if(!target) //No targets, don't bother firing
+		update_minimap_icon()
 		return
 
 	fire(target)
+
+///Updates the vehicles minimap icon
+/obj/structure/machinery/defenses/sentry/proc/update_minimap_icon(firing, off)
+	if(!minimap_icon_state)
+		return
+	SSminimaps.remove_marker(src)
+	if(off)
+		return
+	var/minimap_flags = get_minimap_flag_for_faction(selected_categories[SENTRY_CATEGORY_IFF])
+	if(!minimap_flags)
+		return
+	minimap_icon_state = initial(minimap_icon_state)
+	if(firing)
+		minimap_icon_state += "_firing"
+	else
+		minimap_icon_state += "_passive"
+	SSminimaps.add_marker(src, minimap_flags, image('icons/ui_icons/map_blips_larger.dmi', null, minimap_icon_state, HIGH_FLOAT_LAYER, dir = src.dir), -28.25, -28.25)
 
 /obj/structure/machinery/defenses/sentry/premade
 	name = "\improper UA-577 Gauss Turret"
@@ -675,6 +702,7 @@
 	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed and modified for UA warship use."
 	fire_delay = 0.4 SECONDS
 	omni_directional = TRUE
+	minimap_icon_state = "sentry_omni"
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/almayer/mini
 	name = "\improper UA 512-S mini sentry"
@@ -695,6 +723,7 @@
 	fire_delay = 2
 	sentry_range = 10
 	omni_directional = TRUE
+	minimap_icon_state = "sentry_omni"
 	/// How long the battery for this turret lasts. Will warn low at 70% and critical at 90% use.
 	var/battery_duration = 20 MINUTES
 	/// The current battery state
@@ -762,6 +791,7 @@
 	selected_categories = list()
 	var/obj/structure/dropship_equipment/sentry_holder/deployment_system
 	var/obj/structure/machinery/camera/cas/linked_cam
+	minimap_icon_state = "sentry_omni"
 
 /obj/structure/machinery/defenses/sentry/premade/dropship/Destroy()
 	if(deployment_system)
@@ -834,6 +864,7 @@
 	var/static/sentry_count = 1
 	var/sentry_number
 	luminosity_strength = 9
+	minimap_icon_state = "sentry_omni"
 
 /obj/structure/machinery/defenses/sentry/launchable/Initialize()
 	. = ..()
@@ -946,6 +977,7 @@
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/wy
 	ammo = new /obj/item/ammo_magazine/sentry/wy
+	minimap_icon_state = "sentry_omni"
 	selected_categories = list(
 		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
 	)
@@ -1016,6 +1048,7 @@
 	sentry_range = 3
 	omni_directional = TRUE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
+	minimap_icon_state = "sentry_omni"
 
 #undef SENTRY_FIREANGLE
 #undef SENTRY_RANGE
