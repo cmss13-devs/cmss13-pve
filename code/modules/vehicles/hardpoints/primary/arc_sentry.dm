@@ -41,7 +41,7 @@
 	/// The range that this turret can shoot at the furthest
 	var/turret_range = 5
 	/// What factions this sentry is aligned with
-	var/faction_group = FACTION_LIST_MARINE
+	var/faction_group = FACTION_LIST_UA
 
 /obj/item/hardpoint/primary/arc_sentry/on_install(obj/vehicle/multitile/vehicle)
 	. = ..()
