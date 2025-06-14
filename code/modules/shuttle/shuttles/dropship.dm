@@ -203,6 +203,16 @@
 /obj/docking_port/mobile/marine_dropship/pmc/get_transit_path_type()
 	return /turf/open/space/transit/dropship/pmc
 
+/obj/docking_port/mobile/marine_dropship/wallace_and_gromit
+	name = "Wallace and Gromit"
+	id = DROPSHIP_WALLACE_AND_GROMIT
+
+	width = 11
+	height = 11
+
+	dwidth = 5
+	dheight = 5
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -447,3 +457,7 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
+
+/datum/map_template/shuttle/wallace_and_gromit
+	name = "Wallace and Gromit"
+	shuttle_id = DROPSHIP_WALLACE_AND_GROMIT
