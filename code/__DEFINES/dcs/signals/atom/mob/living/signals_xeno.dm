@@ -93,3 +93,7 @@
 
 /// From /mob/living/carbon/xenomorph/proc/handle_ai_shot()
 #define COMSIG_XENO_HANDLE_AI_SHOT "xeno_handle_ai_shot"
+
+/// From /obj/structure/tunnel/attack_alien() : (mob/living/carbon/xenomorph/xeno)
+#define COMSIG_XENO_ENTER_TUNNEL "xeno_enter_tunnel"
+	#define COMPONENT_CANCEL_TUNNEL (1<<0)

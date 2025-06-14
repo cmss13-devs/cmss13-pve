@@ -511,3 +511,5 @@ GLOBAL_LIST(trait_name_map)
 #define CHLOROFORM_TRAIT "chloroform"
 /// traits from wall hiding
 #define WALL_HIDING_TRAIT "wallhiding"
+/// from watchtower.dm
+#define TRAIT_ON_WATCHTOWER "on_watchtower"
