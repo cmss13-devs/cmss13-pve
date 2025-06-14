@@ -463,7 +463,12 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 //=================================================
 
 //=================================================
+/// Default accessory slot for non-accessory specific clothing
+#define ACCESSORY_SLOT_DEFAULT "Accessory"
+
 #define ACCESSORY_SLOT_UTILITY "Utility"
+#define ACCESSORY_SLOT_PATCH "Patch"
+#define ACCESSORY_SLOT_TIE "Tie"
 #define ACCESSORY_SLOT_ARMBAND "Armband"
 #define ACCESSORY_SLOT_RANK "Rank"
 #define ACCESSORY_SLOT_DECOR "Decor"
@@ -482,6 +487,7 @@ GLOBAL_LIST_INIT(slot_to_contained_sprite_shorthand, list(
 #define ACCESSORY_SLOT_M56UTILITY "M56 Utility"
 #define ACCESSORY_SLOT_WRIST_L "Left wrist"
 #define ACCESSORY_SLOT_WRIST_R "Right wrist"
+#define ACCESSORY_SLOT_MASK "Mask"
 
 /// Used for uniform armor inserts.
 #define ACCESSORY_SLOT_ARMOR_C "Chest armor"
