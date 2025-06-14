@@ -36,6 +36,9 @@
 /atom/movable/screen/text/screen_text/picture/snake_eater
 	image_to_play = "snake_eater"
 
+/atom/movable/screen/text/screen_text/picture/gamma_troop
+	image_to_play = "gamma_troop"
+
 /atom/movable/screen/text/screen_text/directed_by
 	layer = INTRO_LAYER
 	plane = INTRO_PLANE
