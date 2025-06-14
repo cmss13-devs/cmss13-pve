@@ -82,6 +82,9 @@
 
 	vis_contents += holding_movable
 
+/atom/movable/screen/text/screen_text/potrait/faster
+	fade_out_delay = 4 SECONDS
+
 /atom/movable/screen/text/screen_text/picture/potrait_custom_mugshot
 	image_to_play = "custom"
 	screen_loc = "LEFT,TOP-3"
