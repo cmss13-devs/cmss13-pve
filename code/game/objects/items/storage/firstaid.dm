@@ -330,7 +330,7 @@
 		/obj/item/paper,
 		/obj/item/reagent_container/syringe,
 		/obj/item/reagent_container/hypospray/autoinjector,
-		/obj/item/reagent_container/glass/beaker
+		/obj/item/reagent_container/glass/beaker,
 	)
 
 /obj/item/storage/syringe_case/regular
