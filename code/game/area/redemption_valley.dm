@@ -5,15 +5,16 @@
 	icon_state = "lv-626"
 	can_build_special = TRUE
 	powernet_name = "ground"
-	minimap_color = MINIMAP_AREA_COLONY
 //=============================================================================================PARENT
 /area/redemptionvalley/valley
 	name = "Outside"
 	ceiling = CEILING_NONE
+	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/valleyroof
 	name = "Sheltered"
 	ceiling = CEILING_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
+	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/caverns
 	name = "Caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
@@ -24,10 +25,10 @@
 	name = "Redemption Outpost"
 	ceiling = CEILING_DEEP_UNDERGROUND_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
+	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/oob
 	name = "OOB"
 	ceiling = CEILING_NO_PROTECTION
-	minimap_color = MINIMAP_SOLID
 //===============================================================================SHUTTLES
 /area/redemptionvalley/shuttles/drop1
 	name = "Redemption Valley - Supply Pad"
@@ -124,6 +125,18 @@
 /area/redemptionvalley/caverns/east
 	name = "Redemption Valley - Eastern Caves"
 	icon_state = "cave"
+/area/redemptionvalley/caverns/bunker
+	name = "Redemption Valley - Bunker Cave"
+	icon_state = "cave"
+	minimap_color = MINIMAP_AREA_COLONY
+/area/redemptionvalley/caverns/lake
+	name = "Redemption Valley - Cave Lake"
+	icon_state = "cave"
+	minimap_color = MINIMAP_AREA_COLONY
+/area/redemptionvalley/caverns/entry
+	name = "Redemption Valley - Cave Entrance"
+	icon_state = "cave"
+	minimap_color = MINIMAP_AREA_COLONY
 /area/redemptionvalley/caverns/west
 	name = "Redemption Valley - Western Caves"
 	icon_state = "cave"
