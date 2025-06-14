@@ -23,6 +23,8 @@ endmap
 map chapaev
 endmap
 
+map borei
+endmap
 
 map firefly
 endmap

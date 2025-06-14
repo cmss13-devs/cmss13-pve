@@ -77,6 +77,18 @@
 	gear_preset = /datum/equipment_preset/uscm/sg/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/lesser_rank
 
+/datum/job/marine/smartgunner/ai/grom
+	title = JOB_SQUAD_SMARTGUN_GROM
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/sg/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/smartgunner/grom
+	name = JOB_SQUAD_SMARTGUN_GROM
+	job = JOB_SQUAD_SMARTGUN_GROM
+	squad = SQUAD_GROM
+
 /datum/job/marine/smartgunner/ai/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON
 	total_positions = 1

@@ -409,3 +409,7 @@
 	if(camera)
 		camera.c_tag = "Unknown"
 	..()
+
+/obj/item/device/overwatch_camera/upp
+	name = "YI9 Camera Gear"
+	desc = "A rugged helmet camera used by UPP recon forces to stream frontline visuals to command. Based on captured M5 designs used by USCM marines."
