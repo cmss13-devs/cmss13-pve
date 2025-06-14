@@ -387,7 +387,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/mercenary/sentinel/response/medic
-	name = "Black Dragoons Sentinel (Medic)"
+	name = "Black Dragoons Sentinel (Rapid Response, Medic)"
 	paygrades = list(PAY_SHORT_BD_S = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Sentinel"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -819,7 +819,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/merc/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/slug, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_IN_ACCESSORY)
@@ -886,7 +885,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/vest/merc/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/isr/modded, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_IN_ACCESSORY)

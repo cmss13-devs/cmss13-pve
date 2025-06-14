@@ -524,5 +524,5 @@
 /datum/ammo/bullet/rifle/isr
 	name = "heavy 9.2x34mm bullet"
 
-	damage = 40
-	penetration = ARMOR_PENETRATION_TIER_5
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
