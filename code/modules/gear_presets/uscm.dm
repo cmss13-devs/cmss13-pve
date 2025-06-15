@@ -320,9 +320,9 @@
 
 /datum/equipment_preset/uscm/medic/grom
 	name = "GROM Squad Sanitar"
+	assignment = "Sanitar"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
-	assignment = "Sanitar"
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
@@ -390,6 +390,7 @@
 
 /datum/equipment_preset/uscm/tl/grom
 	name = "GROM Assistant Squad Leader"
+	assignment = "Assistant Squad Leader"
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
@@ -448,6 +449,29 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/engineer/grom
+	name = "GROM Sapper"
+	assignment = "Sapper"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_ENGINEERING)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	role_comm_title = "Sap"
+	skills = /datum/skills/combat_engineer/recon
+
+/datum/equipment_preset/uscm/engineer/grom/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+
+/datum/equipment_preset/uscm/engineer/grom/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/engineer/grom/lesser_rank/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader
@@ -489,6 +513,7 @@
 
 /datum/equipment_preset/uscm/leader/grom
 	name = "GROM Squad Leader"
+	assignment = "Squad Leader"
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_FLIGHT)
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)

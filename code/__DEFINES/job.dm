@@ -40,6 +40,7 @@
 #define JOB_SO_UPP "UPP Platoon Commander"
 
 #define JOB_SQUAD_MARINE_GROM "GROM Rifleman"
+#define JOB_SQUAD_ENGI_GROM "GROM Sapper"
 #define JOB_SQUAD_SMARTGUN_GROM "GROM Machinegunner"
 #define JOB_SQUAD_MEDIC_GROM "GROM Sanitar"
 #define JOB_SQUAD_RTO_GROM "GROM Radio Telephone Operator"

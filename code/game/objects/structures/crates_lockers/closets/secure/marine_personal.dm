@@ -111,6 +111,9 @@
 /obj/structure/closet/secure_closet/marine_personal/grom/rifleman
 	job = JOB_SQUAD_MARINE
 
+/obj/structure/closet/secure_closet/marine_personal/grom/engi
+	job = JOB_SQUAD_ENGI
+
 /obj/structure/closet/secure_closet/marine_personal/grom/smartgunner
 	job = JOB_SQUAD_SMARTGUN
 

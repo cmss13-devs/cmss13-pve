@@ -175,6 +175,47 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 /obj/structure/machinery/cm_vending/clothing/engi/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_engi
 
+GLOBAL_LIST_INIT(cm_vending_gear_grom_sapper, list(
+		list("ENGINEER SET (MANDATORY)", 0, null, null, null),
+		list("Essential Engineer Set", 0, /obj/effect/essentials_set/grom_sapper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("HANDHELD DEFENSE", 0, null, null, null),
+		list("UPP Planted Flag", 10, /obj/item/defenses/handheld/planted_flag/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("SDS-R5 Sentry Flamer", 10, /obj/item/defenses/handheld/sentry/flamer/upp, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("SDS-R8 light sentry", 10, /obj/item/defenses/handheld/sentry/upp/light, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+
+		list("ENGINEERING SUPPLIES", 0, null, null, null),
+		list("ES-11 Mobile Fuel Canister", 1, /obj/item/tool/weldpack/minitank, null, VENDOR_ITEM_REGULAR),
+		list("Plastic Explosive", 2, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", 2, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_REGULAR),
+		list("Super-Capacity Power Cell", 3, /obj/item/cell/super, null, VENDOR_ITEM_REGULAR),
+
+		list("CLOTHING ITEMS", 0, null, null, null),
+		list("Sling Pouch", 1, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Fuel Tank Strap Pouch", 2, /obj/item/storage/pouch/flamertank, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Electronics Pouch (Full)", 2, /obj/item/storage/pouch/electronics/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 3, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch (Tactical)", 5, /obj/item/storage/pouch/tools/tactical/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Tool Webbing (Full)", 0, /obj/item/clothing/accessory/storage/tool_webbing/small, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/own_points/grom_sapper
+	name = "\improper UnTech Sapper Gear Rack"
+	desc = "An automated gear rack for UPP sappers."
+	icon_state = "eng_gear"
+	available_points_to_display = 15
+	vendor_role = list(JOB_SQUAD_ENGI)
+	req_access = list(ACCESS_UPP_ENGINEERING)
+	vendor_theme = VENDOR_THEME_UPP
+	vend_flags = VEND_CLUTTER_PROTECTION|VEND_CATEGORY_CHECK
+
+/obj/structure/machinery/cm_vending/own_points/grom_sapper/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_grom_sapper
+
 /obj/structure/machinery/cm_vending/clothing/engi/alpha
 	squad_tag = SQUAD_MARINE_1
 	req_access = list(ACCESS_MARINE_ENGPREP, ACCESS_MARINE_ALPHA)
@@ -212,4 +253,15 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/tool/shovel/etool/folded,
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
+	)
+
+/obj/effect/essentials_set/grom_sapper
+	spawned_gear_list = list(
+		/obj/item/storage/backpack/marine/engineerpack/upp,
+		/obj/item/storage/pouch/tools/full,
+		/obj/item/storage/pouch/etool,
+		/obj/item/tool/shovel/etool/upp/folded,
+		/obj/item/circuitboard/apc,
+		/obj/item/cell/high,
+		/obj/item/clothing/glasses/welding/superior,
 	)
