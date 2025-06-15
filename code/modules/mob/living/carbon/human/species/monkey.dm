@@ -46,8 +46,13 @@
 /datum/species/monkey/handle_npc(mob/living/carbon/human/H)
 	if(H.stat != CONSCIOUS)
 		return
-	if(prob(33) && isturf(H.loc) && !H.pulledby && (H.mobility_flags & MOBILITY_MOVE) && !H.is_mob_restrained()) //won't move if being pulled
-		step(H, pick(GLOB.cardinals))
+
+	var/is_on_turf = isturf(monkey.loc)
+	var/monkey_turf = get_turf(monkey)
+	var/hauled = HAS_TRAIT(monkey, TRAIT_HAULED)
+
+	if(prob(33) && is_on_turf && !monkey.pulledby && (monkey.mobility_flags & MOBILITY_MOVE) && !monkey.is_mob_restrained() && !hauled) //won't move if being pulled
+		step(monkey, pick(GLOB.cardinals))
 
 	var/obj/held = H.get_active_hand()
 	if(held && prob(1))
@@ -64,8 +69,8 @@
 			else
 				H.throw_item(T)
 		else
-			H.drop_held_item()
-	if(!held && !H.buckled && prob(5))
+			monkey.drop_held_item()
+	if(!held && !monkey.buckled && !hauled && prob(5))
 		var/list/touchables = list()
 		for(var/obj/O in range(1,get_turf(H)))
 			if(O.Adjacent(H))
