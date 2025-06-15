@@ -272,7 +272,7 @@
 /**
  * Any additional effects to apply to the target
  * is called if and only if we actually hit a human target
- */
+*/
 /datum/action/xeno_action/activable/pounce/proc/additional_effects(mob/living/L)
 	return
 
@@ -514,6 +514,7 @@
 	charge_time = 1 SECONDS
 	xeno_cooldown = 10 SECONDS
 	ability_primacy = XENO_TAIL_STAB
+	var/stab_range = 2
 	/// Used for defender's tail 'stab'.
 	var/blunt_stab = FALSE
 
