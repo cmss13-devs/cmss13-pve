@@ -38,6 +38,16 @@ United States Colonial Marines
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 	)
 
+/datum/skills/combat_engineer/recon
+	name = "Recon Engineer"
+	skills = list(
+		SKILL_POWERLOADER = SKILL_POWERLOADER_MASTER,
+		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_MASTER,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
+	)
+
 /datum/skills/smartgunner
 	name = "Squad Smartgunner"
 	skills = list(

@@ -153,6 +153,17 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
+/datum/squad/marine/grom
+	name = SQUAD_GROM
+	equipment_color = "#8B0000"
+	chat_color = "#B22222"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
+
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
 	access = list(ACCESS_MARINE_ALPHA)
