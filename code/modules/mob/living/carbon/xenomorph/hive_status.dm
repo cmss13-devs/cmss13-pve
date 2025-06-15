@@ -133,18 +133,12 @@
 
 	var/list/available_nicknumbers = list()
 
-	/// List of references to hive pylons active in the game world
-	var/list/active_endgame_pylons
-
 	/*Stores the image()'s for the xeno evolution radial menu
 	To add an image for your caste - add an icon to icons/mob/xenos/radial_xenos.dmi
 	Icon size should be 32x32, to make them fit within the radial menu border size your icon 22x22 and leave 10px transparent border.
 	The name of the icon should be the same as the XENO_CASTE_ define for that caste eg. #define XENO_CASTE_DRONE "Drone"
 	*/
 	var/static/list/evolution_menu_images
-
-	/// Has a King hatchery
-	var/has_hatchery = FALSE
 
 /datum/hive_status/New()
 	hive_ui = new(src)
