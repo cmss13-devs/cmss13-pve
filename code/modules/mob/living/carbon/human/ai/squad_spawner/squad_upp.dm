@@ -8,6 +8,24 @@
 		/datum/equipment_preset/upp/militia = 2,
 	)
 
+/datum/human_ai_squad_preset/upp/militia/AT
+	name = "Territorial Guard, AT Patrol"
+	desc = "Territorial Guard tank hunter patrol armed with Type 71 rifles or KS29 pump-shotguns, alongside their single-use launcher and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/militia = 1,
+		/datum/equipment_preset/upp/militia/sadar = 1,
+	)
+
+/datum/human_ai_squad_preset/upp/militia/squad
+	name = "Territorial Guard, Squad"
+	desc = "Territorial Guard recon squad armed with Type 71 rifles, Type 64 SMGs or KS29 pump-shotguns and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/militia = 3,
+		/datum/equipment_preset/upp/militia/nco = 1,
+		/datum/equipment_preset/upp/militia/tech = 1,
+		/datum/equipment_preset/upp/militia/medic = 1,
+	)
+
 /datum/human_ai_squad_preset/upp/rifleteam
 	name = "Naval Infantry, Assault Team"
 	desc = "Naval Infantry patrol armed with 2 AG80 rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
