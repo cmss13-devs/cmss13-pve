@@ -1,0 +1,761 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"cf" = (
+/obj/structure/prop/turbine,
+/obj/structure/prop/ice_colony/ground_wire,
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"cA" = (
+/turf/closed/shuttle/dropship{
+	icon_state = "rasputin_light"
+	},
+/area/shuttle/wallace_and_gromit)
+"cW" = (
+/turf/closed/shuttle/elevator{
+	dir = 10
+	},
+/area/shuttle/wallace_and_gromit)
+"dh" = (
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "23"
+	},
+/area/shuttle/wallace_and_gromit)
+"du" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/head/welding,
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/sign/banners/twe_flag{
+	pixel_y = 32
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"gD" = (
+/turf/closed/shuttle/dropship{
+	icon_state = "rasputin_nose";
+	name = "wallace and gromit"
+	},
+/area/shuttle/wallace_and_gromit)
+"iB" = (
+/turf/closed/shuttle/elevator/gears,
+/area/shuttle/wallace_and_gromit)
+"iK" = (
+/turf/closed/shuttle/elevator{
+	dir = 6
+	},
+/area/shuttle/wallace_and_gromit)
+"jr" = (
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "22"
+	},
+/area/shuttle/wallace_and_gromit)
+"ki" = (
+/turf/closed/wall/wood,
+/area/shuttle/wallace_and_gromit)
+"kL" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/item/reagent_container/food/snacks/cheesewedge,
+/obj/structure/machinery/conveyor{
+	id = "cheese";
+	dir = 8
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"lH" = (
+/turf/closed/wall/r_wall/elevator/arrivals,
+/area/shuttle/wallace_and_gromit)
+"lT" = (
+/turf/closed/shuttle/elevator{
+	dir = 9
+	},
+/area/shuttle/wallace_and_gromit)
+"mD" = (
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"nf" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/item/reagent_container/food/snacks/cracker,
+/obj/structure/machinery/conveyor{
+	id = "crackers";
+	dir = 8
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"nk" = (
+/obj/structure/machinery/conveyor_switch/oneway{
+	pixel_x = -15;
+	name = "main switch";
+	id = "wallace main";
+	pixel_y = -5
+	},
+/obj/structure/machinery/conveyor_switch/oneway{
+	pixel_x = -8;
+	name = "crackers switch";
+	id = "crackers";
+	pixel_y = -5
+	},
+/obj/structure/machinery/conveyor_switch/oneway{
+	name = "cheese switch";
+	id = "cheese";
+	pixel_x = -1;
+	pixel_y = -5
+	},
+/obj/structure/machinery/conveyor_switch/oneway{
+	pixel_x = 6;
+	name = "tea switch";
+	id = "tea";
+	pixel_y = -5
+	},
+/obj/structure/machinery/conveyor_switch/oneway{
+	pixel_x = 13;
+	name = "uranium switch";
+	id = "uranium";
+	pixel_y = -5
+	},
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"nx" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	req_one_access = null
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"nQ" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/surface/rack,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/item/stack/sheet/mineral/uranium,
+/obj/structure/machinery/conveyor{
+	id = "uranium";
+	dir = 8
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"oO" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "16"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"pP" = (
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/item/reagent_container/food/drinks/tea,
+/obj/structure/shuttle/engine/heater{
+	name = "tea heater"
+	},
+/obj/structure/machinery/conveyor{
+	id = "tea";
+	dir = 8
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"qn" = (
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "34"
+	},
+/area/shuttle/wallace_and_gromit)
+"si" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "38"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"us" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_left_exhaust,
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"vP" = (
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "35"
+	},
+/area/shuttle/wallace_and_gromit)
+"wE" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "26"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"wP" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "32"
+	},
+/obj/effect/attach_point/fuel/typhoon{
+	layer = 3.1;
+	dir = 1
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"xe" = (
+/turf/closed/shuttle/dropship{
+	icon_state = "rasputin2"
+	},
+/area/shuttle/wallace_and_gromit)
+"xo" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"xs" = (
+/obj/item/holder/mouse/brown/Tom,
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"xB" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"yT" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "27"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"yU" = (
+/obj/structure/closet/secure_closet/personal/cabinet,
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"zj" = (
+/obj/structure/machinery/conveyor{
+	id = "wallace main";
+	dir = 1
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"zs" = (
+/obj/structure/machinery/door/airlock/vault/colony{
+	req_one_access = null
+	},
+/obj/docking_port/mobile/marine_dropship/wallace_and_gromit,
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"Bc" = (
+/turf/closed/shuttle/elevator{
+	dir = 5
+	},
+/area/shuttle/wallace_and_gromit)
+"CT" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/reagent_container/food/drinks/tea{
+	pixel_y = 11
+	},
+/obj/item/trash/ceramic_plate{
+	pixel_x = -4;
+	pixel_y = -1
+	},
+/obj/item/newspaper{
+	pixel_x = 7
+	},
+/obj/item/reagent_container/food/snacks/cracker{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/snacks/cheesewedge{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/turf/open/floor/carpet,
+/area/shuttle/wallace_and_gromit)
+"DT" = (
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "29"
+	},
+/area/shuttle/wallace_and_gromit)
+"EN" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "17"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"EY" = (
+/turf/template_noop,
+/area/space)
+"FJ" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "39"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"Gt" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "33"
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"GI" = (
+/turf/closed/shuttle/elevator,
+/area/shuttle/wallace_and_gromit)
+"GM" = (
+/obj/structure/bed/sofa,
+/obj/structure/sign/catclock{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"Hz" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_right_exhaust,
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"Ia" = (
+/obj/effect/attach_point/fuel/dropship1{
+	dir = 1
+	},
+/turf/closed/shuttle/dropship1/transparent{
+	icon_state = "28"
+	},
+/area/shuttle/wallace_and_gromit)
+"IB" = (
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"Jm" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"JU" = (
+/obj/structure/plasticflaps,
+/obj/structure/machinery/conveyor{
+	id = "wallace main";
+	dir = 1
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"Mw" = (
+/turf/closed/shuttle/dropship{
+	icon_state = "rasputin12"
+	},
+/area/shuttle/wallace_and_gromit)
+"Nq" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/shuttle/wallace_and_gromit)
+"NZ" = (
+/obj/structure/shuttle/part/typhoon/transparent{
+	icon_state = "41";
+	density = 0;
+	layer = 4.2
+	},
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"Qa" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/obj/item/storage/box/mre/twe,
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"Qj" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	id = "breach close"
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"Ra" = (
+/turf/closed/shuttle/elevator{
+	dir = 4
+	},
+/area/shuttle/wallace_and_gromit)
+"TX" = (
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/machinery/conveyor{
+	id = "wallace main";
+	dir = 1
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"UB" = (
+/turf/closed/shuttle/dropship,
+/area/shuttle/wallace_and_gromit)
+"VC" = (
+/turf/open/floor/carpet,
+/area/shuttle/wallace_and_gromit)
+"Wa" = (
+/turf/closed/shuttle/dropship{
+	icon_state = "rasputin3"
+	},
+/area/shuttle/wallace_and_gromit)
+"Wg" = (
+/turf/closed/shuttle/dropship{
+	dir = 1;
+	icon_state = "diagrasputin"
+	},
+/area/shuttle/wallace_and_gromit)
+"Wi" = (
+/obj/structure/shuttle/part/dropship1/transparent/engine_left_cap,
+/turf/template_noop,
+/area/shuttle/wallace_and_gromit)
+"WG" = (
+/obj/item/holder/mouse/white{
+	name = "Harry"
+	},
+/turf/open/floor/elevatorshaft,
+/area/shuttle/wallace_and_gromit)
+"XT" = (
+/obj/structure/window/framed/wood/reinforced,
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"Zf" = (
+/turf/closed/wall/r_wall/elevator/freight,
+/area/shuttle/wallace_and_gromit)
+"ZD" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/trash/ceramic_plate,
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+"ZF" = (
+/obj/structure/surface/table/woodentable/fancy,
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	dir = 8
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = 12;
+	pixel_x = -4;
+	id = "breach close";
+	name = "Emergency Window Shutter Close"
+	},
+/turf/open/floor/plating/wood,
+/area/shuttle/wallace_and_gromit)
+
+(1,1,1) = {"
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+Wi
+qn
+Ia
+jr
+us
+EY
+EY
+EY
+EY
+EY
+"}
+(2,1,1) = {"
+EY
+EY
+EY
+gD
+Wa
+UB
+nx
+xe
+Wa
+vP
+DT
+dh
+Hz
+EY
+EY
+EY
+EY
+EY
+"}
+(3,1,1) = {"
+EY
+EY
+EY
+cA
+ki
+ki
+xo
+ki
+lT
+GI
+GI
+GI
+GI
+cW
+EY
+EY
+EY
+EY
+"}
+(4,1,1) = {"
+EY
+EY
+EY
+Mw
+ki
+GM
+IB
+xB
+Zf
+du
+mD
+mD
+cf
+iB
+EY
+EY
+EY
+EY
+"}
+(5,1,1) = {"
+EY
+EY
+EY
+Qj
+XT
+CT
+VC
+yU
+Ra
+mD
+WG
+xs
+Qa
+Mw
+Jm
+EY
+EY
+EY
+"}
+(6,1,1) = {"
+EY
+EY
+EY
+Qj
+XT
+VC
+VC
+IB
+zs
+mD
+mD
+mD
+cf
+Mw
+Jm
+EY
+EY
+EY
+"}
+(7,1,1) = {"
+EY
+EY
+EY
+Qj
+XT
+Nq
+VC
+ZD
+JU
+zj
+zj
+zj
+TX
+Mw
+Jm
+EY
+EY
+EY
+"}
+(8,1,1) = {"
+EY
+EY
+EY
+Mw
+ki
+ZF
+IB
+nk
+lH
+nf
+kL
+pP
+nQ
+iB
+EY
+EY
+EY
+EY
+"}
+(9,1,1) = {"
+EY
+EY
+EY
+cA
+ki
+ki
+xo
+ki
+Bc
+GI
+GI
+GI
+GI
+iK
+EY
+EY
+EY
+EY
+"}
+(10,1,1) = {"
+EY
+EY
+EY
+Wg
+Wa
+UB
+nx
+xe
+Wa
+si
+wP
+wE
+oO
+EY
+EY
+EY
+EY
+EY
+"}
+(11,1,1) = {"
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+EY
+NZ
+FJ
+Gt
+yT
+EN
+EY
+EY
+EY
+EY
+EY
+"}
