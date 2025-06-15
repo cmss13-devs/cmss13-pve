@@ -167,13 +167,13 @@
 			if(affecting && initiate_surgery_moment(null, src, affecting, target_mob))
 				return TRUE
 
-		for(var/datum/disease/virus in viruses)
-			if(virus.spread_by_touch())
-				target_mob.contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
+	for(var/datum/disease/virus in viruses)
+		if(virus.spread_by_touch())
+			target_mob.contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
 
-		for(var/datum/disease/virus in target_mob.viruses)
-			if(virus.spread_by_touch())
-				contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
+	for(var/datum/disease/virus in target_mob.viruses)
+		if(virus.spread_by_touch())
+			contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
 
 	target_mob.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
 	return
