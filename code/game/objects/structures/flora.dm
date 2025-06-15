@@ -373,6 +373,21 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
 
+//REDEMPTION VALLEY//
+/obj/structure/flora/grass/tallgrass/crop
+	//color = COLOR_G_DES
+	name = "crop patch"
+	icon = 'icons/obj/structures/props/dam.dmi' //Override since the greyscale can't match
+	color = "#bfff00"
+	icon_state = "tallgrass"
+	desc = "A growing crop, it looks a lot like wheat"
+	fire_flag = FLORA_BURN_SPREAD_ALL
+
+/obj/structure/flora/grass/tallgrass/crop/corner
+	icon_state = "tallgrass_corner"
+	overlay_type = "tallgrass_overlay_corner"
+	center = FALSE
+
 //BUSHES
 
 /*
