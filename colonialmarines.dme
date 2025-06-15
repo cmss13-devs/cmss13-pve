@@ -2647,4 +2647,10 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+#include "void-marines\code\custom_email.dm"
+#include "void-marines\code\fluff_emails_void.dm"
+#include "void-marines\code\human_hair.dm"
+#include "void-marines\code\puzzle_things.dm"
+#include "void-marines\code\step_triggers_voidmarines.dm"
+#include "void-marines\code\talking_prop.dm"
 // END_INCLUDE
