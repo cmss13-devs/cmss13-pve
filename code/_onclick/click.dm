@@ -146,15 +146,14 @@
 	SEND_SIGNAL(src, COMSIG_MOB_POST_CLICK, A, mods)
 	return
 
-/mob/proc/click_adjacent(atom/A, obj/item/W, mods)
-	if(W)
-		if(W.attack_speed && !src.contains(A)) //Not being worn or carried in the user's inventory somewhere, including internal storages.
-			next_move += W.attack_speed
-
-		if(SEND_SIGNAL(A, COMSIG_ATOM_MOB_ATTACKBY, W, src) & COMPONENT_CANCEL_ATTACKBY)
+/mob/proc/click_adjacent(atom/targeted_atom, obj/item/used_item, mods)
+	if(HAS_TRAIT(src, TRAIT_HAULED))
+		if(!isstorage(targeted_atom) && !isclothing(targeted_atom) && !isweapon(targeted_atom) && !isgun(targeted_atom))
 			return
-
-		if(!A.attackby(W, src, mods) && A && !QDELETED(A))
+	if(used_item)
+		var/attackby_result = targeted_atom.attackby(used_item, src, mods)
+		var/afterattack_result
+		if(!QDELETED(targeted_atom) && !(attackby_result & ATTACKBY_HINT_NO_AFTERATTACK))
 			// in case the attackby slept
 			if(!W)
 				UnarmedAttack(A, 1, mods)
