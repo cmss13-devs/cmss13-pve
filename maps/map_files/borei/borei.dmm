@@ -196,18 +196,17 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/dorms)
 "aO" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
 /obj/structure/machinery/light/double{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.5;
 	light_range = 5
 	},
-/obj/item/storage/backpack/marine/ammo_rack{
-	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
-	name = "\improper makeshift ammo rack"
+/obj/structure/gun_rack/uppflamer/unloaded{
+	pixel_x = 6;
+	icon_state = "lpo80_1";
+	max_stored = 1;
+	initial_stored = 1
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/prep_hallway)
@@ -6586,15 +6585,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/medical)
-"DS" = (
-/obj/structure/gun_rack/uppflamer/unloaded{
-	pixel_x = 6;
-	icon_state = "lpo80_1";
-	max_stored = 1;
-	initial_stored = 1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/golden_arrow/prep_hallway)
 "DU" = (
 /obj/structure/platform{
 	dir = 8
@@ -8305,7 +8295,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/space)
 "Kx" = (
-/obj/structure/gun_rack/ag80/unloaded/grom,
+/obj/structure/gun_rack/ag80/unloaded,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/prep_hallway)
 "KC" = (
@@ -9987,6 +9977,10 @@
 	},
 /obj/item/clothing/accessory/storage/droppouch/upp,
 /obj/item/clothing/accessory/storage/droppouch/upp,
+/obj/item/storage/backpack/marine/ammo_rack{
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
+	name = "\improper makeshift ammo rack"
+	},
 /obj/structure/closet/crate/upp{
 	pixel_x = 0;
 	pixel_y = 4
@@ -17271,7 +17265,7 @@ lP
 uA
 uo
 uo
-DS
+Kx
 aO
 Kx
 uo

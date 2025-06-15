@@ -202,7 +202,3 @@
 
 /obj/structure/gun_rack/ag80/empty
 	initial_stored = 0
-
-/obj/structure/gun_rack/ag80/unloaded/grom
-	max_stored = 6
-	initial_stored = 6
