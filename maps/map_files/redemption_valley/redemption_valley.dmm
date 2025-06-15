@@ -9,6 +9,42 @@
 /obj/structure/prop/rock/brown,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/north)
+"aac" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"aad" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave up";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -22
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"aae" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north cave";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
 "aaR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1945,8 +1981,8 @@
 	dir = 1
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage central cave";
-	vector_x = 258;
+	name = "fall damage western cave up";
+	vector_x = -258;
 	damage = 50;
 	affect_ghosts = 0
 	},
@@ -2383,8 +2419,8 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage central cave";
-	vector_x = 258;
+	name = "fall damage western cave up";
+	vector_x = -258;
 	damage = 50;
 	affect_ghosts = 0
 	},
@@ -7633,19 +7669,6 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/redemptionvalley/valley/proper)
-"iTq" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/rock,
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage central cave";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
-/turf/open/void,
-/area/redemptionvalley/caverns/north)
 "iTs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/strata_outpost/reinforced,
@@ -7685,7 +7708,7 @@
 "iVv" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
@@ -9514,7 +9537,7 @@
 	dir = 1
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
@@ -12634,7 +12657,7 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
@@ -15481,10 +15504,10 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage central cave";
-	vector_x = 258;
+	name = "fall damage north east cave down";
 	damage = 50;
-	affect_ghosts = 0
+	affect_ghosts = 0;
+	vector_y = -21
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -19555,15 +19578,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor,
 /area/redemptionvalley/outpost/cavestruct)
-"wTl" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
-/turf/open/void,
-/area/redemptionvalley/caverns/entry)
 "wTE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -54462,7 +54476,7 @@ aOY
 qSE
 tdb
 mfd
-wTl
+lFA
 lFA
 ceX
 pss
@@ -103284,7 +103298,7 @@ jBP
 tcz
 ocf
 qZR
-iTq
+kUg
 qap
 qap
 akQ
@@ -103535,7 +103549,7 @@ jBP
 jBP
 tcz
 qap
-cec
+aae
 sLK
 kUg
 qap
@@ -116396,7 +116410,7 @@ jBP
 jBP
 xOC
 qZR
-cDY
+aad
 kQz
 fur
 jBP
@@ -118933,7 +118947,7 @@ aHB
 jBP
 qap
 qZR
-cDY
+aac
 fvs
 hup
 qap
