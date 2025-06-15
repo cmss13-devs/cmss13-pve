@@ -351,7 +351,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/militia/sadar
-	name = "UPP People's Territorial Guardsman"
+	name = "UPP People's Territorial Guardsman (SADAR)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "People's Territorial Guard Rifleman"
 	role_comm_title = "PTG-RFN"
