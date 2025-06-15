@@ -72,9 +72,9 @@
 			monkey.drop_held_item()
 	if(!held && !monkey.buckled && !hauled && prob(5))
 		var/list/touchables = list()
-		for(var/obj/O in range(1,get_turf(monkey)))
-			if(O.Adjacent(monkey))
-				touchables += O
+		for(var/obj/thing in range(1, monkey_turf))
+			if(thing.Adjacent(monkey))
+				touchables += thing
 		if(length(touchables))
 			var/obj/touchy = pick(touchables)
 			touchy.attack_hand(monkey)
