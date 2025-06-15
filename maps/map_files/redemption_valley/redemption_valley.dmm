@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/prop/rock/brown{
+	dir = 5
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/caverns/north)
+"aab" = (
+/obj/structure/prop/rock/brown,
+/turf/open/auto_turf/sand_white/layer0,
+/area/redemptionvalley/caverns/north)
 "aaR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2011,14 +2021,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/outpost/engi)
-"chU" = (
-/obj/structure/prop/rock/brown{
-	dir = 5;
-	pixel_y = -9;
-	pixel_x = 10
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/caverns/west)
 "cir" = (
 /obj/structure/filingcabinet{
 	pixel_x = -8;
@@ -37841,7 +37843,7 @@ cOa
 jpT
 jpT
 cOa
-ejm
+cOa
 cOa
 cOa
 cOa
@@ -87315,7 +87317,7 @@ cyU
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 hbD
@@ -89586,7 +89588,7 @@ uSb
 uSb
 uSb
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -90867,12 +90869,12 @@ cyU
 cyU
 cyU
 cyU
-cyU
 hbD
 hbD
 hbD
 hbD
-cyU
+hbD
+hbD
 cyU
 cyU
 cyU
@@ -91125,7 +91127,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -91371,13 +91373,13 @@ cyU
 cyU
 cyU
 cyU
-cyU
 hbD
 hbD
 hbD
 hbD
-cyU
-cyU
+hbD
+hbD
+hbD
 cyU
 cyU
 cyU
@@ -91624,7 +91626,7 @@ cyU
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 hbD
@@ -100346,7 +100348,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -100597,7 +100599,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -101843,7 +101845,7 @@ cyU
 cyU
 cyU
 cyU
-hbD
+ewy
 hbD
 hbD
 hbD
@@ -102347,11 +102349,11 @@ cyU
 cyU
 cyU
 cyU
-chU
+hbD
 hbD
 hbD
 cyU
-hbD
+cyU
 cyU
 cyU
 tge
@@ -102600,7 +102602,7 @@ cyU
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 cyU
@@ -104062,7 +104064,7 @@ aHB
 aHB
 jBP
 jBP
-jBP
+aaa
 aHB
 aHB
 aHB
@@ -104621,8 +104623,8 @@ cyU
 cyU
 hbD
 hbD
-cyU
-cyU
+hbD
+hbD
 cyU
 cyU
 cyU
@@ -104864,7 +104866,7 @@ cyU
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 cyU
@@ -105116,7 +105118,7 @@ cyU
 cyU
 cyU
 hbD
-cyU
+hbD
 hbD
 hbD
 cyU
@@ -105320,7 +105322,7 @@ aHB
 aHB
 aHB
 aHB
-jBP
+aab
 jBP
 jBP
 aHB
@@ -105621,7 +105623,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -107811,8 +107813,8 @@ hOi
 hOi
 aHB
 aHB
+aaa
 jBP
-aHB
 aHB
 aHB
 aHB
@@ -108064,7 +108066,7 @@ hOi
 aHB
 aHB
 jBP
-aHB
+jBP
 aHB
 jBP
 jBP
@@ -108316,7 +108318,7 @@ hOi
 aHB
 aHB
 jBP
-aHB
+jBP
 jBP
 jBP
 aHB
@@ -108567,7 +108569,7 @@ hOi
 hOi
 aHB
 aHB
-jBP
+aHB
 jBP
 jBP
 aHB
@@ -116763,7 +116765,7 @@ hbD
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 hbD
@@ -117015,7 +117017,7 @@ hbD
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 hbD
@@ -117267,7 +117269,7 @@ cyU
 cyU
 cyU
 cyU
-cyU
+hbD
 hbD
 hbD
 hbD
@@ -117774,7 +117776,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
@@ -118025,7 +118027,7 @@ cyU
 cyU
 hbD
 hbD
-cyU
+hbD
 cyU
 cyU
 cyU
