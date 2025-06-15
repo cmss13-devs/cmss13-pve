@@ -21,7 +21,7 @@
 	unacidable = TRUE
 	var/should_track_build = FALSE
 	var/datum/cause_data/construction_data
-	var/list/blocks = list()
+	var/list/blockers = list()
 	var/block_range = 0
 
 /obj/effect/alien/resin/Initialize(mapload, mob/builder)
@@ -32,12 +32,12 @@
 		for(var/turf/T in range(block_range, src))
 			var/obj/effect/build_blocker/SP = new(T)
 			SP.linked_structure = src
-			blocks.Add(SP)
+			blockers.Add(SP)
 
 /obj/effect/alien/resin/Destroy()
 	if(block_range)
-		for(var/obj/effect/build_blocker/SP as anything in blocks)
-			blocks -= SP
+		for(var/obj/effect/build_blocker/SP as anything in blockers)
+			blockers -= SP
 			SP.linked_structure = null
 			qdel(SP)
 	return ..()
@@ -1087,7 +1087,7 @@
 	if(!candidate.client)
 		return FALSE
 
-	return candidate.client.prefs.be_special & BE_KING
+	return candidate.client.prefs.be_special
 
 #undef KING_PLAYTIME_HOURS
 

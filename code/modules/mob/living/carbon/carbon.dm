@@ -157,25 +157,25 @@
 	if(!istype(target_mob, /mob/living/carbon))
 		return
 
-	if(M.mob_flags & SURGERY_MODE_ON && M.a_intent & (INTENT_HELP|INTENT_DISARM))
-		var/datum/surgery/current_surgery = active_surgeries[M.zone_selected]
+	if(target_mob.mob_flags & SURGERY_MODE_ON && target_mob.a_intent & (INTENT_HELP|INTENT_DISARM))
+		var/datum/surgery/current_surgery = active_surgeries[target_mob.zone_selected]
 		if(current_surgery)
-			if(current_surgery.attempt_next_step(M, null))
+			if(current_surgery.attempt_next_step(target_mob, null))
 				return TRUE
 		else
-			var/obj/limb/affecting = get_limb(check_zone(M.zone_selected))
-			if(affecting && initiate_surgery_moment(null, src, affecting, M))
+			var/obj/limb/affecting = get_limb(check_zone(target_mob.zone_selected))
+			if(affecting && initiate_surgery_moment(null, src, affecting, target_mob))
 				return TRUE
 
-	for(var/datum/disease/D in viruses)
-		if(D.spread_by_touch())
-			M.contract_disease(D, 0, 1, CONTACT_HANDS)
+		for(var/datum/disease/virus in viruses)
+			if(virus.spread_by_touch())
+				target_mob.contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
 
-	for(var/datum/disease/D in M.viruses)
-		if(D.spread_by_touch())
-			contract_disease(D, 0, 1, CONTACT_HANDS)
+		for(var/datum/disease/virus in target_mob.viruses)
+			if(virus.spread_by_touch())
+				contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
 
-	M.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
+	target_mob.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
 	return
 
 /mob/living/carbon/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null)

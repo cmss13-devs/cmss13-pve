@@ -155,15 +155,20 @@
 		var/afterattack_result
 		if(!QDELETED(targeted_atom) && !(attackby_result & ATTACKBY_HINT_NO_AFTERATTACK))
 			// in case the attackby slept
-			if(!W)
-				UnarmedAttack(A, 1, mods)
+			if(!used_item)
+				if(!isitem(targeted_atom) && !issurface(targeted_atom))
+					next_move += 4
+				UnarmedAttack(targeted_atom, 1, mods)
 				return
 
-			W.afterattack(A, src, 1, mods)
+			afterattack_result = used_item.afterattack(targeted_atom, src, 1, mods)
+
+		if(used_item.attack_speed && !src.contains(targeted_atom) && (attackby_result & ATTACKBY_HINT_UPDATE_NEXT_MOVE) || (afterattack_result & ATTACKBY_HINT_UPDATE_NEXT_MOVE))
+			next_move += used_item.attack_speed
 	else
-		if(!isitem(A) && !issurface(A))
+		if(!isitem(targeted_atom) && !issurface(targeted_atom))
 			next_move += 4
-		UnarmedAttack(A, 1, mods)
+		UnarmedAttack(targeted_atom, 1, mods)
 
 /mob/proc/check_click_intercept(params,A)
 	//Client level intercept
