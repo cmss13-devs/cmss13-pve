@@ -700,6 +700,13 @@
 	item_state = "upp_headset"
 	frequency = CLF_FREQ
 
+/obj/item/device/radio/headset/almayer/cia
+	name = "radio headset"
+	desc = "A radio headset."
+	frequency = CIA_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/cia, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/listening_bug/freq_a)
+
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
