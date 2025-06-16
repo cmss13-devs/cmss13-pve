@@ -101,6 +101,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -695,6 +696,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
