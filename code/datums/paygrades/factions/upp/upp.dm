@@ -104,6 +104,13 @@
 	pay_multiplier = 3
 	officer_grade = GRADE_OFFICER
 
+/datum/paygrade/upp/uo4p
+	paygrade = PAY_SHORT_UO4P
+	name = "Political Commissar"
+	prefix = "Pol."
+	pay_multiplier = 5
+	officer_grade = GRADE_OFFICER
+
 /datum/paygrade/upp/uo6
 	paygrade = PAY_SHORT_UO6
 	name = "Colonel"
