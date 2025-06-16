@@ -378,7 +378,7 @@
 
 /obj/item/device/overwatch_camera
 	name = "M5 Camera Gear"
-	desc = "A camera and associated headgear designed to allow marine commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard USCM combat helmets."
+	desc = "A camera and associated headgear designed to allow unit commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard combat helmets in use by UA forces."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "overwatch_gear"
 	item_icons = list(
@@ -392,7 +392,7 @@
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
@@ -419,22 +419,17 @@
 			MH.remove_hud_from(user, src)
 	..()
 
-/obj/item/device/overwatch_camera/army
-	name = "M5A Camera Gear"
-	desc = "Army model of the M5 camera gear system in-use by the USCM."
-	hud_type = MOB_HUD_FACTION_ARMY
-
 /obj/item/device/overwatch_camera/twe
 	name = "OOCUHM Cam-Gear"
 	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
-	hud_type = MOB_HUD_FACTION_TWE
+	hud_type = list(MOB_HUD_FACTION_TWE)
 
 /obj/item/device/overwatch_camera/pmc
 	name = "Mk3 TOCU headcam"
 	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
-	hud_type = MOB_HUD_FACTION_PMC
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY)
 
 /obj/item/device/overwatch_camera/upp
 	name = "1PN77M \"Periskop\" camera unit"
 	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
-	hud_type = MOB_HUD_FACTION_UPP
+	hud_type = list(MOB_HUD_FACTION_UPP)

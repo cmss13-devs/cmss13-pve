@@ -297,6 +297,13 @@
 /obj/item/device/radio/headset/proc/turn_on_map_tracking()
 	SIGNAL_HANDLER
 
+/obj/item/device/radio/headset/proc/toggle_hudicons()
+	if(!headset_hud_on)
+		return
+	else
+		var/datum/mob_hud/H = GLOB.huds[hud_type]
+		H.add_hud_to(usr, src)
+
 /obj/item/device/radio/headset/proc/toggle_squadhud()
 	set name = "Toggle Headset HUD"
 	set category = "Object"
