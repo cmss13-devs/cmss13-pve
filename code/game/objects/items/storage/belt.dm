@@ -1019,9 +1019,9 @@
 		WEAR_L_HAND = "s_marinebelt",
 		WEAR_R_HAND = "s_marinebelt")
 	w_class = SIZE_LARGE
-	storage_slots = 12
+	storage_slots = 15
 	max_w_class = SIZE_MEDIUM
-	max_storage_space = 24
+	max_storage_space = 30
 	can_hold = list(/obj/item/explosive/grenade)
 
 
