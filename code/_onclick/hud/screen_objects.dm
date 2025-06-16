@@ -457,24 +457,18 @@
 	if(!istype(user))
 		return
 
-	///The object which we're using the tracking options from.
-	var/obj/item/device/tracker_object
-
 	var/obj/item/device/radio/headset/earpiece = user.get_type_in_ears(/obj/item/device/radio/headset)
-	var/has_access = earpiece?.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece?.frequency)
-	if(istype(earpiece) && earpiece.has_hud && has_access)
-		tracker_object = earpiece
-/*
-	if(!tracker_object)
+	var/has_access = earpiece.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece.frequency)
+	if(!istype(earpiece) || !earpiece.has_hud || !has_access)
 		to_chat(user, SPAN_WARNING("Unauthorized access detected."))
 		return
-*/
+
 	if(mods[SHIFT_CLICK])
 		var/area/current_area = get_area(user)
 		to_chat(user, SPAN_NOTICE("You are currently at: <b>[current_area.name]</b>."))
 		return
 	else if(mods[ALT_CLICK])
-		tracker_object.switch_tracker_target()
+		earpiece.switch_tracker_target()
 		return
 	if(user.get_active_hand())
 		return

@@ -89,14 +89,15 @@
 	action_icon_string = "med_sight_down"
 	helmet_overlay = "med_sight_right"
 
+/obj/item/device/helmet_visor/medical/army
+	name = "medical optic"
+	helmet_overlay = "med_sight_right"
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
+
 /obj/item/device/helmet_visor/medical/advanced
 	name = "advanced medical optic"
 	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
-
-/obj/item/device/helmet_visor/medical/advanced/army
-	name = "medical optic"
-	helmet_overlay = "med_sight_right"
 
 /obj/item/device/helmet_visor/medical/advanced/pmc_twe
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
@@ -190,7 +191,6 @@
 	hud_type = null
 	action_icon_string = "blank_hud_sight_down"
 	helmet_overlay = "weld_visor"
-	has_tracker = FALSE
 
 /obj/item/device/helmet_visor/welding_visor/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	attached_helmet.vision_impair = VISION_IMPAIR_MAX

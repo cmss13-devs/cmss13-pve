@@ -20,34 +20,33 @@
 	var/list/keys //Actual objects.
 	maxf = 1489
 
-	inbuilt_tracking_options = list(
+	var/list/inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
 		"Section Sergeant" = TRACKER_SL,
 		"Squad Leader" = TRACKER_FTL,
 		"Landing Zone" = TRACKER_LZ
 	)
-	tracking_options = list()
+	var/list/tracking_options = list()
 
 	var/list/volume_settings
 
 	var/last_multi_broadcast = -999
 	var/multibroadcast_cooldown = HIGH_MULTIBROADCAST_COOLDOWN
 
+
 	has_hud = FALSE
-	squad_hud_on = FALSE
+	var/headset_hud_on = FALSE
+	var/locate_setting = TRACKER_SL
+	var/misc_tracking = FALSE
 	///Tracker specific vars
-	has_tracker = FALSE
-	tracker_hud_on = FALSE
-	misc_tracking = FALSE
-	locate_setting = TRACKER_SL
+	var/has_tracker = FALSE
 	///Whether or not the headset will show them on the tac-map
-	map_tracking = FALSE
+	var/map_tracking = FALSE
 	///What HUD it will display if present
 	hud_type = MOB_HUD_FACTION_MARINE
-
-	minimap_type = MINIMAP_FLAG_USCM
-
+	var/minimap_type = MINIMAP_FLAG_USCM
 	var/default_freq
+	var/mob/living/carbon/human/wearer
 
 /obj/item/device/radio/headset/Initialize()
 	. = ..()
@@ -60,14 +59,10 @@
 		verbs += /obj/item/device/radio/headset/proc/set_volume_setting
 
 	if(has_hud)
-		squad_hud_on = TRUE
-		verbs += /obj/item/proc/toggle_squadhud
-
-	if(has_tracker)
-		tracker_hud_on = TRUE
+		headset_hud_on = TRUE
 		misc_tracking = TRUE
-		verbs += /obj/item/proc/toggle_trackerhud
-		verbs += /obj/item/proc/switch_tracker_target
+		verbs += /obj/item/device/radio/headset/proc/toggle_squadhud
+		verbs += /obj/item/device/radio/headset/proc/switch_tracker_target
 
 	if(frequency)
 		for(var/cycled_channel in GLOB.radiochannels)
@@ -252,7 +247,7 @@
 
 /obj/item/device/radio/headset/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
-	if (slot == WEAR_L_EAR || slot == WEAR_R_EAR)
+	if(user.has_item_in_ears(src))
 		RegisterSignal(user, list(
 			COMSIG_LIVING_REJUVENATED,
 			COMSIG_HUMAN_REVIVED,
@@ -262,12 +257,12 @@
 		RegisterSignal(user, COMSIG_MOB_LOGGED_IN, PROC_REF(add_hud_tracker))
 		RegisterSignal(user, COMSIG_MOB_DEATH, PROC_REF(update_minimap_icon))
 		RegisterSignal(user, COMSIG_HUMAN_SET_UNDEFIBBABLE, PROC_REF(update_minimap_icon))
-		if(squad_hud_on)
+		if(headset_hud_on)
 			var/datum/mob_hud/H = GLOB.huds[hud_type]
 			H.add_hud_to(user, src)
-		//squad leader locator is invisible again unless a visor tracker is active
-		if(user.mind && (user.assigned_squad || misc_tracking) && user.hud_used && user.hud_used.locate_leader)
-			user.show_hud_tracker()
+			//squad leader locator is no longer invisible on our player HUD.
+			if(user.mind && (user.assigned_squad || misc_tracking) && user.hud_used && user.hud_used.locate_leader)
+				user.show_hud_tracker()
 			if(misc_tracking)
 				SStracking.start_misc_tracking(user)
 			INVOKE_NEXT_TICK(src, PROC_REF(update_minimap_icon), wearer)
@@ -293,9 +288,109 @@
 	wearer = null
 	..()
 
+/obj/item/device/radio/headset/proc/add_hud_tracker(mob/living/carbon/human/user)
+	SIGNAL_HANDLER
+
+	if(headset_hud_on && user.mind && (user.assigned_squad || misc_tracking) && user.hud_used?.locate_leader)
+		user.show_hud_tracker()
+
+/obj/item/device/radio/headset/proc/turn_on_map_tracking()
+	SIGNAL_HANDLER
+
+/obj/item/device/radio/headset/proc/toggle_squadhud()
+	set name = "Toggle Headset HUD"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return 0
+	headset_hud_on = !headset_hud_on
+	if(ishuman(usr))
+		var/mob/living/carbon/human/user = usr
+		if(user.has_item_in_ears(src)) //worn
+			var/datum/mob_hud/H = GLOB.huds[hud_type]
+			if(headset_hud_on)
+				H.add_hud_to(usr, src)
+				if(user.mind && (misc_tracking || user.assigned_squad) && user.hud_used?.locate_leader)
+					user.show_hud_tracker()
+				if(misc_tracking)
+					SStracking.start_misc_tracking(user)
+				update_minimap_icon()
+			else
+				H.remove_hud_from(usr, src)
+				if(user.hud_used?.locate_leader)
+					user.hide_hud_tracker()
+				if(misc_tracking)
+					SStracking.stop_misc_tracking(user)
+				SSminimaps.remove_marker(wearer)
+	to_chat(usr, SPAN_NOTICE("You toggle [src]'s headset HUD [headset_hud_on ? "on":"off"]."))
+	playsound(src,'sound/machines/click.ogg', 20, 1)
+
+/obj/item/device/radio/headset/proc/switch_tracker_target()
+	set name = "Switch Tracker Target"
+	set category = "Object"
+	set src in usr
+
+	if(usr.is_mob_incapacitated())
+		return
+
+	handle_switching_tracker_target(usr)
+
+/obj/item/device/radio/headset/proc/handle_switching_tracker_target(mob/living/carbon/human/user)
+	var/new_track = tgui_input_list(user, "Choose a new tracking target.", "Tracking Selection", tracking_options)
+	if(!new_track)
+		return
+	to_chat(user, SPAN_NOTICE("You set your headset's tracker to point to <b>[new_track]</b>."))
+	locate_setting = tracking_options[new_track]
+
+/obj/item/device/radio/headset/proc/update_minimap_icon()
+	SIGNAL_HANDLER
+	if(!has_hud)
+		return
+
+	if(!wearer)
+		return
+
+	SSminimaps.remove_marker(wearer)
+	if(!wearer.assigned_equipment_preset || !wearer.assigned_equipment_preset.minimap_icon)
+		return
+	var/marker_flags = minimap_type
+	var/turf/turf_gotten = get_turf(wearer)
+	if(!turf_gotten)
+		return
+	var/z_level = turf_gotten.z
+
+	if(wearer.assigned_equipment_preset.always_minimap_visible == TRUE || wearer.stat == DEAD) //We show to all marines if we have this flag, separated by faction
+		if(hud_type == MOB_HUD_FACTION_MARINE)
+			marker_flags = MINIMAP_FLAG_USCM
+		else if(hud_type == MOB_HUD_FACTION_UPP)
+			marker_flags = MINIMAP_FLAG_UPP
+		else if(hud_type == MOB_HUD_FACTION_PMC)
+			marker_flags = MINIMAP_FLAG_PMC
+		else if(hud_type == MOB_HUD_FACTION_CLF)
+			marker_flags = MINIMAP_FLAG_CLF
+
+	if(wearer.undefibbable)
+		set_undefibbable_on_minimap(z_level, marker_flags)
+		return
+
+	if(wearer.stat == DEAD)
+		set_dead_on_minimap(z_level, marker_flags)
+		return
+
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer))
+
+///Change the minimap icon to a dead icon
+/obj/item/device/radio/headset/proc/set_dead_on_minimap(z_level, marker_flags)
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer), overlay_iconstates = list("defibbable"))
+
+///Change the minimap icon to a undefibbable icon
+/obj/item/device/radio/headset/proc/set_undefibbable_on_minimap(z_level, marker_flags)
+	SSminimaps.add_marker(wearer, z_level, marker_flags, given_image = wearer.assigned_equipment_preset.get_minimap_icon(wearer), overlay_iconstates = list("undefibbable"))
 
 /obj/item/device/radio/headset/binary
 	initial_keys = list(/obj/item/device/encryptionkey/binary)
+
 
 /obj/item/device/radio/headset/ai_integrated //No need to care about icons, it should be hidden inside the AI anyway.
 	name = "AI Subspace Transceiver"
@@ -320,7 +415,7 @@
 	icon_state = "generic_headset"
 	item_state = "headset"
 	frequency = PUB_FREQ
-	has_hud = FALSE
+	has_hud = TRUE
 	map_tracking = TRUE
 
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
@@ -525,7 +620,7 @@
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	has_hud = TRUE	// Synth retains as they don't often wear helmets
+	has_hud = TRUE
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
@@ -576,12 +671,10 @@
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	has_hud = TRUE	// Synth retains as they don't often wear helmets
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
-		"Platoon Commander" = TRACKER_PLTCO,
-		"Section Sergeant" = TRACKER_ASL,
+		"Squad Leader" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -595,6 +688,7 @@
 	item_state = "upp_headset"
 	frequency = UPP_FREQ
 	minimap_type = MINIMAP_FLAG_UPP
+	hud_type = MOB_HUD_FACTION_UPP
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth
 	name = "UPP synth headset"
@@ -602,8 +696,6 @@
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	has_hud = TRUE	// Synth retains as they don't often wear helmets
-	hud_type = MOB_HUD_FACTION_UPP
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
@@ -635,6 +727,7 @@
 	icon_state = "upp_headset"
 	item_state = "upp_headset"
 	frequency = CLF_FREQ
+	has_hud = FALSE //Until we get CANC stuff, this'll do
 
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
@@ -921,7 +1014,6 @@
 /obj/item/device/radio/headset/distress/pmc/platoon
 	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc)
-	has_hud = FALSE
 	locate_setting = TRACKER_SL
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
@@ -937,8 +1029,6 @@
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	has_hud = TRUE	// Synth retains as they don't often wear helmets
-	hud_type = MOB_HUD_FACTION_PMC
 	locate_setting = TRACKER_ASL
 
 	inbuilt_tracking_options = list(
@@ -951,8 +1041,6 @@
 	name = "overwatch headset"
 	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
-	has_hud = TRUE	// Fancy corporate shit
-	hud_type = MOB_HUD_FACTION_PMC
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"

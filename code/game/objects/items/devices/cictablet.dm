@@ -18,7 +18,7 @@
 	var/add_pmcs = TRUE
 
 	var/datum/tacmap/tacmap
-	minimap_type = MINIMAP_FLAG_USCM
+	var/minimap_type = MINIMAP_FLAG_USCM
 
 	COOLDOWN_DECLARE(announcement_cooldown)
 	COOLDOWN_DECLARE(distress_cooldown)
