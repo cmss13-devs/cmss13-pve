@@ -488,11 +488,6 @@
 	desc = "A set of armor worn by medical members of the Weyland-Yutani Emergency Response Team. Has red and white highlights."
 	icon_state = "ertarmor_med"
 
-
-
-
-
-
 /obj/item/clothing/suit/armor/hos
 	name = "armored coat"
 	desc = "A greatcoat enhanced with a special alloy for some protection and style."
@@ -519,49 +514,3 @@
 	flags_inv_hide = NO_FLAGS
 	siemens_coefficient = 0.6
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
-
-/obj/item/clothing/suit/armor/vest/merc
-	name = "DP TAC-PACK Gen II armored vest"
-	desc = "A decent armored vest used by better funded insurgencies and mercenary groups, able to take some small arm hits before going down. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_medium"
-	item_state = "merc_medium"
-	armor_melee = CLOTHING_ARMOR_MEDIUM
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
-
-/obj/item/clothing/suit/armor/vest/merc/light
-	name = "DP TAC-PACK Gen I-L armored vest"
-	desc = "A slightly less armored vest which prioritises freedom of movement and mobility over actual armour. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_light"
-	item_state = "merc_light"
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_LOW
-	flags_armor_protection = BODY_FLAG_CHEST
-
-/obj/item/clothing/suit/armor/vest/merc/heavy
-	name = "DP TAC-PACK Gen IV-H armored vest"
-	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts, allowing users to resist a lot of damage before going down. Made by Davis Proprietary."
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "merc_heavy"
-	item_state = "merc_heavy"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_VERYHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	flags_inventory = BLOCK_KNOCKDOWN
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	slowdown = SLOWDOWN_ARMOR_HEAVY
-	time_to_unequip = 20
-	time_to_equip = 20
