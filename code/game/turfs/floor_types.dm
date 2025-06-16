@@ -316,6 +316,9 @@
 /turf/open/floor/plating/plating_catwalk/strata
 	icon = 'icons/turf/floors/strata_floor.dmi'
 
+/turf/open/floor/plating/plating_catwalk/strata/fake_bottom_level
+	color = "#757575"
+
 /turf/open/floor/plating/plating_catwalk/shiva
 	icon = 'icons/turf/floors/ice_colony/shiva_floor.dmi'
 
@@ -1211,10 +1214,32 @@
 /turf/open/floor/almayer_hull/blackfull
 	icon_state = "blackfull"
 
+/turf/open/floor/almayer_hull/upp
+	color = "#afb196"
 
+/turf/open/floor/almayer_hull/outerhull_dir/upp
+	color = "#afb196"
 
+/turf/open/floor/almayer_hull/outerhull_dir/upp/southwest
+	dir = SOUTHWEST
 
+/turf/open/floor/almayer_hull/outerhull_dir/upp/north
+	dir = NORTH
 
+/turf/open/floor/almayer_hull/outerhull_dir/upp/east
+	dir = EAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/upp/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/upp/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/upp/west
+	dir = WEST
+
+/turf/open/floor/almayer_hull/outerhull_dir/upp/northwest
+	dir = NORTHWEST
 
 //////////////////////////////////////////////////////////////////////
 

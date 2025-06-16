@@ -91,6 +91,15 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/medic/ai/upp
 
+/datum/job/marine/medic/ai/grom
+	title = JOB_SQUAD_MEDIC_GROM
+	gear_preset = /datum/equipment_preset/uscm/medic/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/medic/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/medic/grom
+	name = JOB_SQUAD_MEDIC_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/medic/ai/grom
 
 /datum/job/marine/medic/ai/pmc
 	title = JOB_PMCPLAT_MEDIC

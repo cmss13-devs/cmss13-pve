@@ -82,6 +82,29 @@
 	squad = SQUAD_UPP
 	job = /datum/job/marine/standard/ai/upp
 
+/datum/job/marine/standard/ai/grom
+	title = JOB_SQUAD_MARINE_GROM
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/pfc/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/grom
+	name = JOB_SQUAD_MARINE_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/standard/ai/grom
+
+/datum/job/marine/standard/ai/rto/grom
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_SQUAD_RTO_GROM
+	gear_preset = /datum/equipment_preset/uscm/rto/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/rto/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/rto/grom
+	name = JOB_SQUAD_RTO_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/standard/ai/rto/grom
 
 /datum/job/marine/standard/ai/pmc
 	title = JOB_PMCPLAT_STANDARD

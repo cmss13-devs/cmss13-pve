@@ -104,12 +104,21 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN)))
+		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN,\
+		/datum/squad/marine/grom = list(/datum/job/marine/standard/ai/grom = JOB_SQUAD_MARINE,\
+		/datum/job/marine/engineer/ai/grom = JOB_SQUAD_ENGI,\
+		/datum/job/marine/standard/ai/rto/grom = JOB_SQUAD_RTO_GROM,\
+		/datum/job/marine/smartgunner/ai/grom = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/leader/ai/grom = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/grom = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/grom = JOB_SQUAD_TEAM_LEADER))))
+
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/grom = ROLES_AI_GROM))
 
 GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded, "Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
 											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\

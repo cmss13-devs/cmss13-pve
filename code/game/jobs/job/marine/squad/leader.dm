@@ -70,6 +70,15 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
 
+/datum/job/marine/leader/ai/grom
+	title = JOB_SQUAD_LEADER_GROM
+	gear_preset = /datum/equipment_preset/uscm/leader/grom
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/grom/lesser_rank
+
+/obj/effect/landmark/start/marine/leader/grom
+	name = JOB_SQUAD_LEADER_GROM
+	squad = SQUAD_GROM
+	job = /datum/job/marine/leader/ai/grom
 
 /datum/job/marine/leader/ai/pmc
 	title = JOB_PMCPLAT_LEADER
