@@ -45,6 +45,29 @@
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
+"aaf" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/redemptionvalley/shuttles/drop1)
+"aag" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_x = 7;
+	pixel_y = 17
+	},
+/turf/open/gm/dirt2,
+/area/redemptionvalley/shuttles/drop1)
+"aah" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/redemptionvalley/shuttles/drop1)
 "aaR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2088,8 +2111,8 @@
 /area/redemptionvalley/valley/Westbound)
 "cjh" = (
 /obj/item/lightstick/red/spoke/planted{
-	pixel_x = 6;
-	pixel_y = -7
+	pixel_x = -4;
+	pixel_y = 1
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/shuttles/drop1)
@@ -4802,7 +4825,7 @@
 "fnC" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -9;
-	pixel_y = -2
+	pixel_y = 12
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/shuttles/drop1)
@@ -7105,14 +7128,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/valley/proper)
-"ikJ" = (
-/obj/structure/machinery/landinglight/ds1/spoke,
-/obj/item/lightstick/red/spoke/planted{
-	pixel_x = -9;
-	pixel_y = 3
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/shuttles/drop1)
 "ilC" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/gm/river/ocean/deep_water,
@@ -11509,10 +11524,6 @@
 /area/redemptionvalley/valley/checkpoint)
 "nAR" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
-/obj/item/lightstick/red/spoke/planted{
-	pixel_x = 11;
-	pixel_y = 2
-	},
 /turf/open/gm/dirt2,
 /area/redemptionvalley/shuttles/drop1)
 "nAT" = (
@@ -12918,10 +12929,6 @@
 /obj/structure/machinery/landinglight/ds1/spoke{
 	pixel_x = -14;
 	pixel_y = -4
-	},
-/obj/item/lightstick/red/spoke/planted{
-	pixel_x = -1;
-	pixel_y = 2
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/shuttles/drop1)
@@ -18695,14 +18702,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/redemptionvalley/valleyroof/houseone)
-"vRX" = (
-/obj/structure/machinery/landinglight/ds1/spoke,
-/obj/item/lightstick/red/spoke/planted{
-	pixel_x = -9;
-	pixel_y = 12
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/redemptionvalley/shuttles/drop1)
 "vSt" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 4
@@ -41006,8 +41005,8 @@ lAd
 lAd
 lAd
 lAd
-ikJ
-lAd
+uRB
+aaf
 lAd
 lAd
 jfU
@@ -41753,7 +41752,7 @@ qgO
 qgO
 cBN
 uqy
-vRX
+uRB
 lAd
 jfU
 jfU
@@ -42005,7 +42004,7 @@ qgO
 mrN
 lAd
 lAd
-lAd
+fnC
 jfU
 jfU
 jfU
@@ -43769,7 +43768,7 @@ qgO
 cVT
 nHs
 lAd
-lAd
+aah
 lAd
 lAd
 lAd
@@ -44031,7 +44030,7 @@ lAd
 jfU
 jfU
 nAR
-jfU
+aag
 jfU
 lAd
 lAd
