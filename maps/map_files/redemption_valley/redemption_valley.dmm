@@ -68,6 +68,40 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/redemptionvalley/shuttles/drop1)
+"aai" = (
+/obj/structure/desertdam/decals/road_edge{
+	icon_state = "road_edge_decal2"
+	},
+/obj/structure/platform{
+	density = 0;
+	dir = 8;
+	icon_state = "platform_deco"
+	},
+/turf/open/asphalt,
+/area/redemptionvalley/valley/checkpoint)
+"aaj" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "OuterBunker";
+	name = "Outer Bunker";
+	use_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/redemptionvalley/oob/buttons)
+"aak" = (
+/obj/structure/prop/structure_lattice{
+	dir = 4
+	},
+/obj/structure/prop/structure_lattice{
+	dir = 4;
+	pixel_y = 13;
+	layer = 3.02
+	},
+/turf/open/floor/corsat,
+/area/redemptionvalley/outpost/halls)
 "aaR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -122,7 +156,7 @@
 	vector_x = 258
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "western_cave_up";
 	name = "cable rope"
 	},
@@ -1363,7 +1397,7 @@
 	},
 /obj/structure/prop/invuln/darkness,
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "northern_cave";
 	name = "cable rope"
 	},
@@ -2534,7 +2568,7 @@
 	vector_x = -258
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "central_cave_right";
 	name = "cable rope";
 	height = -1
@@ -3552,7 +3586,7 @@
 	vector_x = -258
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "south_western_cave_left";
 	name = "cable rope";
 	height = -1
@@ -5964,7 +5998,7 @@
 	vector_y = 21
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "north_eastern_cave_down";
 	name = "cable rope";
 	height = -1
@@ -6252,7 +6286,7 @@
 	vector_x = -258
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "central_cave_left";
 	name = "cable rope";
 	height = -1
@@ -10214,7 +10248,7 @@
 	vector_y = 22
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "north_eastern_cave_up";
 	name = "cable rope"
 	},
@@ -11241,7 +11275,7 @@
 	vector_x = -258
 	},
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "south_western_cave_right";
 	name = "cable rope";
 	height = -1
@@ -14800,18 +14834,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/whitegreenfull,
 /area/redemptionvalley/valleyroof/store)
-"rfg" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	dir = 4
-	},
-/obj/structure/machinery/door_control/brbutton/alt{
-	id = "OuterBunker";
-	name = "Outer Bunker";
-	use_power = 0
-	},
-/turf/open/floor/plating,
-/area/redemptionvalley/oob/buttons)
 "rfU" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -19442,7 +19464,7 @@
 	},
 /obj/structure/prop/invuln/darkness,
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 3;
 	id = "redemption_western_cave_down";
 	name = "cable rope";
 	height = -1
@@ -44851,7 +44873,7 @@ lRw
 clk
 sMf
 sMf
-rfg
+sMf
 sMf
 sMf
 sMf
@@ -48396,9 +48418,9 @@ dkJ
 jDW
 tRh
 kyw
-amG
-amG
-xJt
+kyw
+kyw
+aai
 dkJ
 mdi
 hYs
@@ -51891,7 +51913,7 @@ sMf
 sMf
 goT
 goT
-goT
+dwY
 dwY
 slg
 uik
@@ -52143,15 +52165,15 @@ sMf
 sMf
 sMf
 sMf
-sMf
 dwY
+aak
 dwY
 ojv
 mKx
 lqE
 ojv
 dwY
-mxS
+aak
 dwY
 dwY
 dwY
@@ -52421,7 +52443,7 @@ amX
 amX
 oyR
 sMf
-sMf
+aaj
 sMf
 eBa
 eBa
@@ -52673,7 +52695,7 @@ wnL
 wnL
 clk
 sMf
-sMf
+mxS
 sMf
 sMf
 sMf
@@ -52924,7 +52946,7 @@ wnL
 wnL
 wnL
 clk
-hSo
+sMf
 sMf
 sMf
 sMf
@@ -53422,7 +53444,7 @@ kfb
 yae
 gmO
 fKZ
-clk
+hSo
 wnL
 vzL
 wnL
