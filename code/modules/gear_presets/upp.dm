@@ -173,17 +173,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
-/datum/equipment_preset/upp/rifleman/cia
-	name = "CIA Spy (UPP Rifleman)"
-	skills = /datum/skills/cia
-
-/datum/equipment_preset/upp/rifleman/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
-
-/datum/equipment_preset/upp/rifleman/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	. = ..()
-	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia/covert, WEAR_IN_BACK)
 
 /datum/equipment_preset/upp/rifleman/ag80
 	name = "UPP Squad Rifleman (Equipped, AG80)"
@@ -544,18 +533,6 @@
 	role_comm_title = "SRLT"
 	rank = JOB_UPP_SRLT_OFFICER
 	paygrades = list(PAY_SHORT_UO2 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/upp/officer/senior/dressed/cia
-	name = "CIA Spy (UPP Senior Officer)"
-	skills = /datum/skills/cia
-
-/datum/equipment_preset/upp/officer/senior/dressed/cia/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
-
-/datum/equipment_preset/upp/officer/senior/dressed/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	. = ..()
-	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia, WEAR_IN_BACK)
 
 /datum/equipment_preset/upp/officer/kapitan
 	name = "UPP Kapitan"

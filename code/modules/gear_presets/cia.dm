@@ -135,5 +135,137 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/not_op, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)
 
+/// Spies ///
+
+/datum/equipment_preset/rebel/engineer/cia
+	name = "CIA Spy (UA Rebel Engineer)"
+	skills = /datum/skills/cia
+	idtype = /obj/item/card/id/dogtag
+	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
+	assignment = "Sapper"
+
+/datum/equipment_preset/rebel/engineer/cia/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+
+/datum/equipment_preset/rebel/engineer/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.undershirt = "undershirt"
+
+	//head
+	if(prob(45))
+		add_facewrap(new_human)
+	add_rebel_ua_helmet(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
+	//uniform
+	var/obj/item/clothing/under/colonist/boilersuit/darkblue/uniform = new()
+	var/obj/item/clothing/accessory/storage/tool_webbing/equipped/webbing = new()
+	uniform.attach_accessory(new_human, webbing)
+	var/random_uniform = rand(1,2)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	//jacket
+	add_rebel_ua_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_ua_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
+	if(prob(25))
+		add_rebel_ua_shotgun(new_human)
+	else
+		add_rebel_ua_rifle(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/low_grade_full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
+
+/datum/equipment_preset/clf/engineer/cia
+	name = "CIA Spy (TWE Rebel Engineer)"
+	skills = /datum/skills/cia
+	idtype = /obj/item/card/id/dogtag
+	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
+	assignment = "Revolutionary Sapper"
+
+/datum/equipment_preset/clf/engineer/cia/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+
+/datum/equipment_preset/clf/engineer/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+	new_human.undershirt = "undershirt"
+
+	//head
+	if(prob(45))
+		add_facewrap(new_human)
+	add_rebel_twe_helmet(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/meson, WEAR_EYES)
+	//uniform
+	var/obj/item/clothing/under/colonist/boilersuit/khaki/uniform = new()
+	var/obj/item/clothing/accessory/storage/tool_webbing/equipped/webbing = new()
+	uniform.attach_accessory(new_human, webbing)
+	var/random_uniform = rand(1,2)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	//jacket
+	add_rebel_twe_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow, WEAR_HANDS)
+	if(prob(25))
+		add_rebel_twe_smg(new_human)
+	else
+		add_rebel_twe_rifle(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary/molotov, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/low_grade_full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_R_STORE)
+
+/datum/equipment_preset/upp/rifleman/cia
+	name = "CIA Spy (UPP Rifleman)"
+	skills = /datum/skills/cia
+
+/datum/equipment_preset/upp/rifleman/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+
+/datum/equipment_preset/upp/rifleman/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia/covert, WEAR_IN_BACK)
+
+
+/datum/equipment_preset/upp/officer/senior/dressed/cia
+	name = "CIA Spy (UPP Senior Officer)"
+	skills = /datum/skills/cia
+
+/datum/equipment_preset/upp/officer/senior/dressed/cia/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
+
+/datum/equipment_preset/upp/officer/senior/dressed/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.equip_to_slot_or_del(new /obj/item/device/portable_vendor/antag/cia, WEAR_IN_BACK)
 
 
