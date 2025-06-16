@@ -422,12 +422,12 @@
 /obj/item/device/overwatch_camera/twe
 	name = "OOCUHM Cam-Gear"
 	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
-	hud_type = list(MOB_HUD_FACTION_TWE)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/device/overwatch_camera/pmc
 	name = "Mk3 TOCU headcam"
 	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY)
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
 
 /obj/item/device/overwatch_camera/upp
 	name = "1PN77M \"Periskop\" camera unit"

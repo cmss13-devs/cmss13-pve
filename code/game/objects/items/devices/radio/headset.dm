@@ -1331,7 +1331,7 @@
 	icon_state = "generic_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/guard)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARINE
+	hud_type = MOB_HUD_FACTION_MARSHAL //More likely to be working alongside marshals than marines if responding to crap
 
 /obj/item/device/radio/headset/distress/rebel_ua
 	name = "colony headset"
