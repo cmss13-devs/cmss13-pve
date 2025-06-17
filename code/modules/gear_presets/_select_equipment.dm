@@ -792,6 +792,7 @@ GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
 
 GLOBAL_LIST_INIT(rebel_twe_smgs, list(
 	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
+	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
 	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
@@ -801,6 +802,8 @@ GLOBAL_LIST_INIT(rebel_twe_rifles, list(
 	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
+	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
+	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90,
 	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90
 	))
 
@@ -860,6 +863,8 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 	))
 
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(
+	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
+	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
