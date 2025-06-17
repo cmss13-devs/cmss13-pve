@@ -115,7 +115,7 @@
 			to_chat(xeno, SPAN_WARNING("Ew, [pulled] is already starting to rot."))
 			return 0
 		if(xeno.hauled_mob?.resolve()) // We can't carry more than one mob
-			to_chat(xeno, SPAN_WARNING("You already are carrying something, there's no way that will work."))
+			to_chat(xeno, SPAN_WARNING("You are already carrying something, there's no way that will work."))
 			return 0
 		if(HAS_TRAIT(pulled, TRAIT_HAULED))
 			to_chat(xeno, SPAN_WARNING("They are already being hauled by someone else."))

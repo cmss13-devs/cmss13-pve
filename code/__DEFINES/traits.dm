@@ -165,8 +165,6 @@
 #define TRAIT_NO_STRAY "trait_no_stray"
 /// When a Xeno hauls us. We can take out our knife or gun if hauled though we are immobilized, also shielded from most damage.
 #define TRAIT_HAULED "hauled"
-// only used by valkyrie
-#define TRAIT_VALKYRIE_ARMORED "trait_valkyrie_armored"
 
 // SPECIES TRAITS
 /// Knowledge of Yautja technology
