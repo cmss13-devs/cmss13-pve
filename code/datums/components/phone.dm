@@ -333,7 +333,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		calling_phone.reset_call(timeout, recursed = TRUE)
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_STOPPED_RINGING)
-
+	if(src.radio_pack)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	ringing_loop?.stop()
 
 	handle_reset_call_message(timeout, recursed)
