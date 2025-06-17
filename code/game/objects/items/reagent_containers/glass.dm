@@ -403,7 +403,7 @@
 	name = "vial (temperature stablization)"
 	desc = "Contains leporazine - used to stabilize body temperature, kelotane and dermaline - used to rapidly heal burns. Filled in a 1:3:2 ratio."
 
-/obj/item/reagent_container/syringe/leporazine_dermaline/Initialize()
+/obj/item/reagent_container/glass/beaker/vial/kilodermlipo/Initialize()
 	. = ..()
 	reagents.add_reagent("leporazine", 5)
 	reagents.add_reagent("dermaline", 15)
