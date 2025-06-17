@@ -49,7 +49,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Whether the phone is able to be called or not
 	var/enabled = TRUE
 
-/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+	var/radio_pack = FALSE
+/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, radio_pack)
 	. = ..()
 
 	if(!istype(parent, /atom))
@@ -80,7 +81,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	return ..()
 
 /// Handles all of our variables usually set in Initialize(), needs to be a proc so virtual phones don't get incorrect signals or a handset
-/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, radio_pack)
 	src.phone_category = isnull(phone_category) ? src.phone_category : phone_category
 	src.phone_color = isnull(phone_color) ? src.phone_color : phone_color
 	src.phone_id = isnull(phone_id) ? src.phone_id : phone_id
@@ -94,8 +95,10 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
-	RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
-
+	if(!radio_pack)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
+	else
+		RegisterSignal(src.holder, COMSIG_ATOM_BUTTON_USE, PROC_REF(use_phone))
 	if(istype(src.holder, /obj/item))
 		RegisterSignal(src.holder, COMSIG_ITEM_PICKUP, PROC_REF(holder_picked_up))
 		RegisterSignal(src.holder, COMSIG_ITEM_DROPPED, PROC_REF(holder_dropped))
