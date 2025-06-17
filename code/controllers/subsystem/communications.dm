@@ -75,6 +75,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define DUT_FREQ 1210
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
+#define FAAMI_FREQ 1219
 #define CMB_FREQ 1220
 #define ASF_FREQ 1224
 #define ARM_FREQ 1228
@@ -102,7 +103,6 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define CLF_FREQ 1271
 #define CLF_CMD_FREQ 1272
 #define CLF_ENGI_FREQ 1273
-#define CLF_MED_FREQ 1274
 #define CLF_CCT_FREQ 1275
 #define PFA_FREQ 1278
 #define JSC_FREQ 1279
@@ -156,6 +156,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_YAUTJA = YAUT_FREQ,
 	RADIO_CHANNEL_VAI = VAI_FREQ,
 	RADIO_CHANNEL_CMB = CMB_FREQ,
+	RADIO_CHANNEL_FAAMI = FAAMI_FREQ,
 	RADIO_CHANNEL_USASF = ASF_FREQ,
 	RADIO_CHANNEL_US_ARMY = ARM_FREQ,
 	RADIO_CHANNEL_UA_GUARD = GRD_FREQ,
@@ -211,7 +212,6 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_CLF_GEN = CLF_FREQ,
 	RADIO_CHANNEL_CLF_CMD = CLF_CMD_FREQ,
 	RADIO_CHANNEL_CLF_ENGI = CLF_ENGI_FREQ,
-	RADIO_CHANNEL_CLF_MED = CLF_MED_FREQ,
 	RADIO_CHANNEL_CLF_CCT = CLF_CCT_FREQ,
 
 	RADIO_CHANNEL_BUG_A = BUG_A_FREQ,
@@ -222,13 +222,13 @@ GLOBAL_LIST_INIT(radiochannels, list(
 ))
 
 // Response Teams
-#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ)
+#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, FAAMI_FREQ)
 
 // UPP Frequencies
 #define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
 
 // CLF Frequencies
-#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ, CLF_CCT_FREQ)
+#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_CCT_FREQ)
 
 // Rebel Frequencies
 #define REBEL_FREQS list(PFA_FREQ, JSC_FREQ)
@@ -291,6 +291,7 @@ SUBSYSTEM_DEF(radio)
 		"[VAI_FREQ]" = "vairadio",
 		"[RMC_FREQ]" = "rmcradio",
 		"[CMB_FREQ]" = "cmbradio",
+		"[FAAMI_FREQ]" = "opformerc",
 		"[ASF_FREQ]" = "usasfradio",
 		"[ARM_FREQ]" = "armyradio",
 		"[GRD_FREQ]" = "guardradio",
@@ -318,7 +319,6 @@ SUBSYSTEM_DEF(radio)
 		"[CLF_FREQ]" = "clfradio",
 		"[CLF_CMD_FREQ]" = "opforcmd",
 		"[CLF_ENGI_FREQ]" = "opforeng",
-		"[CLF_MED_FREQ]" = "opformed",
 		"[CLF_CCT_FREQ]" = "opforcct",
 		"[PFA_FREQ]" = "pfaradio",
 		"[JSC_FREQ]" = "jscradio",

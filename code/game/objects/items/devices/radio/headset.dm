@@ -1294,3 +1294,10 @@
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
+/obj/item/device/radio/headset/distress/faami
+	name = "military headset"
+	desc = "A military headset, commonly used by mercernaries and paticularly the FAAMI."
+	icon_state = "generic_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/faami)
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_FAAMI
