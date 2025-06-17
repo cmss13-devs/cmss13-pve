@@ -90,12 +90,13 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	src.networks_receive = isnull(networks_receive) ? src.networks_receive : networks_receive.Copy()
 	src.networks_transmit = isnull(networks_transmit) ? src.networks_transmit : networks_transmit.Copy()
 	src.holder = holder ? holder : parent
+	src.radio_pack = isnull(radio_pack) ? src.radio_pack : radio_pack
 
 	phone_handset = new(null, src, src.holder)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
-	if(!radio_pack)
+	if(!src.radio_pack)
 		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
 	else
 		RegisterSignal(src.holder, COMSIG_ATOM_BUTTON_USE, PROC_REF(use_phone))
@@ -142,6 +143,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return
 
 	picked_up_call(user)
+	if(src.radio_pack)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	calling_phone.other_phone_picked_up_call()
 
 	return COMPONENT_CANCEL_HUMAN_ATTACK_HAND
@@ -304,6 +307,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	calling_phone = incoming_call
 	last_caller = incoming_call.phone_id
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_RINGING)
+	if(src.radio_pack)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
 	ringing_loop.start()
 
 /// What we do after our call is set up from call_phone()
