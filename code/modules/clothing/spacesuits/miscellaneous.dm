@@ -167,6 +167,11 @@
 	item_state = "pressure_dark"
 	icon_state = "pressure_dark"
 
+/obj/item/clothing/head/helmet/space/pressure/dark
+	item_state = "pressure_dark"
+	icon_state = "pressure_dark"
+	helmet_color = "dark"
+
 /obj/item/clothing/head/helmet/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the MK.35 pressure suit utilized by the United States Colonial Marines and a few other American or UA organizations. Feels like you could hotbox in here."
