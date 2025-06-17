@@ -29,27 +29,11 @@
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
 //============================================================MAIN MAP
-/area/Greenvault_Ranch/int_reg/clinic
-	name = "Clinic"
-	icon_state = "medbay"
-/area/Greenvault_Ranch/int_reg/marshals
-	name = "Colonial Marshals Complex"
-	icon_state = "security"
-/area/Greenvault_Ranch/int_reg/virology
-	name = "Veterinarian Clinic"
-	icon_state = "virology"
+//============================================================OUTSIDE AREAS
 /area/Greenvault_Ranch/outside/northwest
 	name = "Greenvault Ranch Fields"
 	icon_state = "northwest"
-/area/Greenvault_Ranch/int_reg/telecomms
-	name = "Spaceport Telecommunication Hub"
-	icon_state = "yellow"
-/area/Greenvault_Ranch/int_reg/telecomms_yard
-	name = "Spaceport Telecommunication Yard"
-	icon_state = "blue-red"
-/area/Greenvault_Ranch/int_reg/garage
-	name = "Spaceport"
-	icon_state = "storage"
+
 /area/Greenvault_Ranch/outside/north_river
 	name = "Northern River"
 	icon_state = "varadero2"
@@ -59,6 +43,31 @@
 /area/Greenvault_Ranch/outside/wildplace
 	name = "Southeasten Wilderness"
 	icon_state = "purple"
+/area/Greenvault_Ranch/outside/trailerpark
+	name = "Trailer Park"
+	icon_state = "northeast"
+/area/Greenvault_Ranch/outside/wheatfields
+	name = "Southwest Wheat Fields"
+	icon_state = "southwest"
+//==============================================================MAIN COLONY
+/area/Greenvault_Ranch/int_reg/clinic
+	name = "Clinic"
+	icon_state = "medbay"
+/area/Greenvault_Ranch/int_reg/marshals
+	name = "Colonial Marshals Complex"
+	icon_state = "security"
+/area/Greenvault_Ranch/int_reg/virology
+	name = "Veterinarian Clinic"
+	icon_state = "virology"
+/area/Greenvault_Ranch/int_reg/telecomms
+	name = "Spaceport Telecommunication Hub"
+	icon_state = "yellow"
+/area/Greenvault_Ranch/int_reg/telecomms_yard
+	name = "Spaceport Telecommunication Yard"
+	icon_state = "blue-red"
+/area/Greenvault_Ranch/int_reg/garage
+	name = "Spaceport"
+	icon_state = "storage"
 /area/Greenvault_Ranch/int_reg/housing
 	name = "Farm Dormitories"
 	icon_state = "blue"
@@ -68,12 +77,6 @@
 /area/Greenvault_Ranch/int_reg/farmbay
 	name = "Farming Vehicle Storage"
 	icon_state = "storage"
-/area/Greenvault_Ranch/outside/trailerpark
-	name = "Trailer Park"
-	icon_state = "northeast"
-/area/Greenvault_Ranch/outside/wheatfields
-	name = "Southwest Wheat Fields"
-	icon_state = "southwest"
 /area/Greenvault_Ranch/int_heavy/powerplace
 	name = "Power Generators"
 	icon_state = "yellow"
@@ -85,7 +88,8 @@
 	icon_state = "grey"
 /area/Greenvault_Ranch/int_reg/cowhouse
 	name = "Cowhouse"
-	icon_state = "blue"
+	icon_state = "red"
+//=========================== SPACEPORT AREAS
 /area/Greenvault_Ranch/int_reg/opcenter
 	name = "Operations Center"
 	icon_state = "green"
@@ -98,11 +102,17 @@
 /area/Greenvault_Ranch/int_reg/checkpoint
 	name = "Loading Dock Checkpoint"
 	icon_state = "security"
+/area/Greenvault_Ranch/int_reg/spaceporthall
+	name = "Spaceport Hallway"
+	icon_state = "yellow"
+/area/Greenvault_Ranch/int_reg/landingpad
+	name = "Spaceport Landing Pad"
+	icon_state = "purple"
 
 //============================================================Bunker
 /area/Greenvault_Ranch/int_heavy/grainbunker
 	name = "Colony Grain Bunker"
-	icon_state = "orange"
+	icon_state = "yellow"
 /area/Greenvault_Ranch/int_heavy/bunkermedical
 	name = "Grain Bunker Medical"
 	icon_state = "medbay"
@@ -114,7 +124,7 @@
 	icon_state = "yellow"
 /area/Greenvault_Ranch/int_heavy/controlroom
 	name = "Bunker Control Room"
-	icon_state = "cyan"
+	icon_state = "command"
 /area/Greenvault_Ranch/int_heavy/grainstorage
 	name = "Bunker Grain Storage"
 	icon_state = "blue"
@@ -124,6 +134,20 @@
 /area/Greenvault_Ranch/int_heavy/researchlab
 	name = "Hidden Research Lab"
 	icon_state = "south"
+
+/area/Greenvault_Ranch/int_heavy/waterfiltration
+	name = "Water Filtration"
+	icon_state = "blue-red"
+/area/Greenvault_Ranch/int_heavy/swmaint
+	name = "Southwestern Bunker Maintenance"
+	icon_state = "southwest"
+/area/Greenvault_Ranch/int_heavy/smaint
+	name = "Southern Maintenance"
+	icon_state = "south"
+/area/Greenvault_Ranch/int_heavy/semaint
+	name = "Southeast Maintenance"
+	icon_state = "southeast"
+
 
 /area/Greenvault_Ranch/int_heavyoutofbounds
 	name = "Greenvault Ranch Out Of Bounds"
