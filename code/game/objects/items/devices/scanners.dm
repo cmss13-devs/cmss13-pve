@@ -213,6 +213,13 @@ FORENSIC SCANNER
 	oxygen_alarm_loop = new(src)
 	overlays += image(icon, src, "+unhooked")
 
+/obj/item/device/healthanalyzer/soul/Destroy()
+	QDEL_NULL(silence_chip)
+	QDEL_NULL(oxygen_alarm_loop)
+	QDEL_NULL(heart_rate_loop)
+	QDEL_NULL(current_beam)
+	return ..()
+
 /obj/item/device/healthanalyzer/soul/proc/print_report(mob/living/user)
 	if(!last_scan)
 		to_chat(user, "There is no scan data to print.")
