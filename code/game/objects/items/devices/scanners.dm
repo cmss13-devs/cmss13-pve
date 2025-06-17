@@ -115,7 +115,10 @@ FORENSIC SCANNER
 	if(!last_scan)
 		user.show_message("No previous scan found.")
 		return
-
+	if(istype(src, /obj/item/device/healthanalyzer/soul))
+		var/obj/item/device/healthanalyzer/soul/disconnect_scanner
+		if(disconnect_scanner.connected_to)
+			disconnect_scanner.disconnect(TRUE)
 	tgui_interact(user)
 
 	return
@@ -180,7 +183,7 @@ FORENSIC SCANNER
 
 /obj/item/device/healthanalyzer/soul
 	name = "\improper Health Diagnostic Equipment"
-	icon = 'icons/obj/items/Medical Scanner new.dmi'
+	icon = 'icons/obj/items/medical_scanner.dmi'
 	icon_state = "medical_scanner"
 	item_state = "medical_scanner"
 	item_icons = list(

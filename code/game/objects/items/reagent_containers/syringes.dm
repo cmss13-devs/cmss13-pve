@@ -226,6 +226,12 @@
 		overlays += injoverlay
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
+	if(istype(loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/person = loc
+		if(person.r_hand == src)
+			person.update_inv_r_hand()
+		if(person.l_hand == src)
+			person.update_inv_l_hand()
 
 	if(reagents.total_volume)
 		var/image/filling = image('icons/obj/items/reagentfillings.dmi', src, "syringe10")
