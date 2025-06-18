@@ -1,0 +1,5 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - qol: "Gave the Golden Arrow an extra box of grenades so you can take more than one UBGL load without taking somebody else's"
+  - balance: "Buffed the grenade belt to 14 grenades"
