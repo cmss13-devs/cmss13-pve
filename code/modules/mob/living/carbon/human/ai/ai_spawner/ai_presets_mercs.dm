@@ -36,6 +36,11 @@
 	desc = "The primary infantryman for the Black Dragoons, equipped to act as a rapid response force against hostile action. This one is equipped with medical supplies and to act as the squad's medic."
 	path = /datum/equipment_preset/mercenary/sentinel/response/medic
 
+/datum/human_ai_equipment_preset/mercenaries/sentinel/response/space
+	name = "Black Dragoons Sentinel (Space)"
+	desc = "Some more better trained and equipped sentinels, equipped to do space operations and work."
+	path = /datum/equipment_preset/mercenary/sentinel/response/carbine
+
 /datum/human_ai_equipment_preset/mercenaries/supervisor
 	name = "Black Dragoons Supervisor (Unequipped)"
 	desc = "An NCO for the Black Dragoons, mainly for small facility supervision and platoon leadership."

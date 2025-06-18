@@ -1007,11 +1007,11 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/mercenary/sentinel/space
-	name = "Black Dragoons Orbital Warden"
+	name = "Black Dragoons Sentinel (Space)"
 	paygrades = list(PAY_SHORT_BD_S = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Sentinel"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "Black Dragoons Space Warden"
+	assignment = "Black Dragoons Sentinel"
 	rank = JOB_MERCENARY_SENTINEL
 	skills = /datum/skills/pfc
 	faction = FACTION_MERCENARY
