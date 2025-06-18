@@ -1,0 +1,4 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - rscadd: "day-night settings for GMs"

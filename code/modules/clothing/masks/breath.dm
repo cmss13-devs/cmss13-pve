@@ -228,6 +228,7 @@
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
 	)
+	w_class = SIZE_SMALL
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
 	var/adjust = FALSE
 	var/original_state = "neckerchief"

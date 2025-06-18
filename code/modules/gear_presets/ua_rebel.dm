@@ -4,7 +4,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_UA_REBEL
 	faction_group = FACTION_LIST_UA_REBEL
-	skills = /datum/skills/pfc
+	skills = /datum/skills/clf
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
 
@@ -122,6 +122,7 @@
 
 /datum/equipment_preset/rebel/soldier/flamer
 	name = "UA Rebel, Soldier (Incinerator)"
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/rebel/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -157,6 +158,7 @@
 
 /datum/equipment_preset/rebel/soldier/leader
 	name = "UA Rebel, Soldier (Squad Leader)"
+	skills = /datum/skills/clf/leader
 
 /datum/equipment_preset/rebel/soldier/leader/get_assignment(mob/living/carbon/human/new_human)
 	return "Squad Leader"
@@ -200,7 +202,7 @@
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
-	skills = /datum/skills/corpsman
+	skills = /datum/skills/clf/combat_medic
 
 /datum/equipment_preset/rebel/medic/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
@@ -248,7 +250,7 @@
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
-	skills = /datum/skills/corpsman
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/rebel/at/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
@@ -335,7 +337,7 @@
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_LIST_CLF_BASE)
-	skills = /datum/skills/specialist
+	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/rebel/sniper/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(85))
