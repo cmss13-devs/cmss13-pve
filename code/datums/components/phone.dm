@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Whether the phone is able to be called or not
 	var/enabled = TRUE
 
-	///If the phone is activated by COMSIG_PHONE_BUTTON_USE or not
+	///If the phone is activated by COMSIG_PHONE_BUTTON_USE or not. And if true Will only allow COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND if recieving a call.
 	var/overlay_interactable = FALSE
 /datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, overlay_interactable)
 	. = ..()
