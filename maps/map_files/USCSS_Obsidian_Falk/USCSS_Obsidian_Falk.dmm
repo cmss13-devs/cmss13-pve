@@ -1541,6 +1541,21 @@
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
+"aey" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/pmc/corpsman,
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
+"aez" = (
+/obj/item/device/radio/headset/distress/pmc/platoon,
+/obj/item/clothing/under/marine/veteran/pmc,
+/obj/item/clothing/shoes/marine/civilian/knife,
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
+/turf/open/floor/corsat/plate,
+/area/firefly/cryo_cell)
 "aeA" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
@@ -46509,7 +46524,7 @@ aeV
 aeV
 aeV
 adw
-adP
+aez
 aKv
 aoE
 anL
@@ -46519,7 +46534,7 @@ adP
 aKv
 aoE
 anL
-aok
+aey
 adA
 uTV
 gez
