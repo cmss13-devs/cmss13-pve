@@ -422,6 +422,19 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TIS_SA "UAAC-TIS Special Agent"
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
+
+//-------- FAAMI --------//
+#define JOB_FAAMI_RIFLE "FAAMI Rifleman"
+#define JOB_FAAMI_MEDIC "FAAMI Field Medic"
+#define JOB_FAAMI_TECH "FAAMI Field Technician"
+#define JOB_FAAMI_MG "FAAMI Machinegunner"
+#define JOB_FAAMI_SL "FAAMI Squad Leader"
+#define JOB_FAAMI_LT "FAAMI Field Officer"
+#define JOB_FAAMI_SCOUT "FAAMI Scout"
+#define JOB_FAAMI_CO "FAAMI Commanding Officer"
+
+#define FAAMI_JOB_LIST list(JOB_FAAMI_RIFLE, JOB_FAAMI_MEDIC, JOB_FAAMI_TECH, JOB_FAAMI_MG, JOB_FAAMI_SL, JOB_FAAMI_LT, JOB_FAAMI_SCOUT, JOB_FAAMI_CO)
+
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
 #define JOB_DUTCH_RIFLEMAN "Dutch's Dozen - Rifleman"
