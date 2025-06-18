@@ -468,7 +468,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/autoname{
 	dir = 2
 	},
-/turf/closed/wall/r_wall/bunker,
+/turf/open/floor/prison,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
 "aGx" = (
 /turf/closed/wall/almayer/research/containment/wall/east,
@@ -2220,7 +2220,6 @@
 "daO" = (
 /obj/structure/sign/safety/food_storage,
 /turf/closed/wall/r_wall/bunker,
-/area/Greenvault_Ranch/int_heavy/livingspaces,
 /area/Greenvault_Ranch/int_heavy/livingspaces)
 "dbk" = (
 /obj/structure/surface/rack,
@@ -23268,7 +23267,7 @@ nHr
 dgQ
 bhy
 daO
-nHr
+wEL
 aFR
 bhy
 nHr
