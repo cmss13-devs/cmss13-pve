@@ -178,8 +178,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
-		MAP_TAIPAI = new /obj/item/map/taipei(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_TAIPAI = new /obj/item/map/taipei(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
