@@ -58,8 +58,8 @@
 /// From /atom/proc/attack_hand()
 #define COMSIG_ATOM_ATTACK_HAND "atom_attack_hand"
 
-/// Shit code probably
-#define COMSIG_ATOM_BUTTON_USE "atom_button_use"
+/// From /datum/action/item_action/rto_pack/use_phone/action_activate()
+#define COMSIG_ATOM_PHONE_BUTTON_USE "atom_phone_button_use"
 
 /// From /datum/component/phone/proc/picked_up_call() and /datum/component/phone/proc/post_call_phone()
 #define COMSIG_ATOM_PHONE_PICKED_UP "atom_phone_picked_up"
