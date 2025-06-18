@@ -435,12 +435,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/upp/rifleman/enginner_eva_basic
+/datum/equipment_preset/upp/enginner_eva_basic
 	name = "UPP Squad Engineer (Equipped-, EVA)"
 	assignment = "Combat Engineer"
 	role_comm_title = "ComTech"
 
-/datum/equipment_preset/upp/rifleman/engineer_eva_basic/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/engineer_eva_basic/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back

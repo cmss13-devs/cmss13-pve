@@ -53,7 +53,7 @@
 /datum/human_ai_equipment_preset/upp/engineer_eva
 	name = "EVA UPP Squad Engineer"
 	desc = "Standard soldier apart from carrying plastic explosives and a tool belt."
-	path = /datum/equipment_preset/upp/rifleman/enginner_eva_basic
+	path = /datum/equipment_preset/upp/enginner_eva_basic
 
 /datum/human_ai_equipment_preset/upp/eva_rocket
 	name = "EVA UPP Squad AP Rocketeer(!!)"
