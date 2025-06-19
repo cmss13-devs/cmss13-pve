@@ -4696,7 +4696,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding4"
 	},
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/floor/grass,
 /area/bmg290/colony/complex)
 "ckj" = (
@@ -29355,7 +29355,7 @@
 /obj/effect/decal/siding{
 	icon_state = "siding8"
 	},
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /obj/structure/prop/rock/black_ground,
 /turf/open/floor/grass,
 /area/bmg290/colony/complex)
