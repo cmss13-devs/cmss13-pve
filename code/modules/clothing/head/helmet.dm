@@ -269,6 +269,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	//GASMASK
 	/obj/item/clothing/mask/gas/military = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/mask/gas/military/sporeproof = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/mask/gas/military/upp = HELMET_GARB_RELAY_ICON_STATE,
 
 	// WALKMAN AND CASSETTES
