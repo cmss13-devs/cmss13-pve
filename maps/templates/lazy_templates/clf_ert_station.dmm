@@ -1308,7 +1308,7 @@
 /obj/item/spacecash/c1,
 /obj/item/storage/box/matches,
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/transmitter/rotary{
+/obj/structure/phone_base/rotary{
 	name = "CLF Outpost";
 	phone_category = "CLF";
 	phone_id = "CLF Outpost";
