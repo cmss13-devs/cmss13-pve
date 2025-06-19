@@ -10,7 +10,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
 
 	accuracy_mult = 1.15
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SHOTGUN
 	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
 	wield_delay = WIELD_DELAY_NORMAL //Shotguns are as hard to pull up as a rifle. They're quite bulky afterall
@@ -271,7 +271,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		load_into_chamber()
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13.)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_config_values()
 	..()
@@ -284,7 +284,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/m120, /obj/item/attachable/stock/tactical)
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/m120, /obj/item/attachable/stock/tactical)
 
 /obj/item/weapon/gun/shotgun/combat/get_examine_text(mob/user)
 	. = ..()
@@ -309,7 +309,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/marsoc
 
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	auto_retrieval_slot = WEAR_J_STORE
 	start_automatic = TRUE
 
@@ -328,7 +328,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	return */ //we keep the UGL
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_config_values()
 	..()
@@ -359,7 +359,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/scope/upp,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/bayonet, // Muzzle
 		/obj/item/attachable/heavy_barrel,
@@ -373,14 +372,15 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/stock/type23, // Stock
+		/obj/item/attachable/flashlight, // Side Rail
 		)
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17, "side_rail_x" = 25, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_config_values()
 	..()
@@ -421,7 +421,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
 /obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
 	..()
@@ -476,7 +476,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	additional_fire_group_delay = 1.5 SECONDS
 
 /obj/item/weapon/gun/shotgun/double/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/shotgun/double/set_gun_config_values()
 	..()
@@ -572,6 +572,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	if (current_mag.chamber_closed)
 		playsound(user, break_sound, 25, 1)
+		eject_casing()
 	else
 		playsound(user, seal_sound, 25, 1)
 
@@ -610,7 +611,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16, "side_rail_x" = 19, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_config_values()
 	..()
@@ -740,7 +741,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	civilian_usable_override = FALSE
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9, "side_rail_x" = 20, "side_rail_y" = 17) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
 
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_config_values()
@@ -1063,7 +1064,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14, "side_rail_x" = 25, "side_rail_y" = 18)
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_config_values()
@@ -1117,6 +1118,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	ready_shotgun_tube()
 
 	playsound(user, pump_sound, 10, 1)
+	eject_casing()
 	recent_pump = world.time
 	if (in_chamber)
 		pumped = TRUE
@@ -1142,6 +1144,9 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
+
+/obj/item/weapon/gun/shotgun/pump/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 
 //-------------------------------------------------------
 
@@ -1217,7 +1222,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10)
+	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10, "side_rail_x" = 27, "side_rail_y" = 17)
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_config_values()
@@ -1231,6 +1236,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/slug
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717
 	name = "\improper M37-17 pump shotgun"

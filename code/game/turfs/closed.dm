@@ -246,6 +246,7 @@
 	icon_state = "wall1"
 	icon = 'icons/turf/shuttle.dmi'
 	layer = ABOVE_TURF_LAYER
+	unacidable = TRUE
 
 /turf/closed/shuttle/is_weedable()
 	return FULLY_WEEDABLE
@@ -288,6 +289,14 @@
 	icon_state = "1"
 
 /turf/closed/shuttle/cyclone/transparent
+	opacity = FALSE
+
+/turf/closed/shuttle/pmc
+	name = "\improper Cash Flow"
+	icon = 'icons/turf/dropship_pmc.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/pmc/transparent
 	opacity = FALSE
 
 /turf/closed/shuttle/typhoon

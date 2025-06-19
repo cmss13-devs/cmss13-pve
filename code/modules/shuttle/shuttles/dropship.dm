@@ -44,18 +44,21 @@
 					door_control.add_door(air, "port")
 				if("aft_door")
 					door_control.add_door(air, "aft")
+
 			var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/hatch = air
 			if(istype(hatch))
 				hatch.linked_dropship = src
 
 	RegisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT, PROC_REF(add_equipment))
 	RegisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT, PROC_REF(remove_equipment))
+	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
 
 /obj/docking_port/mobile/marine_dropship/Destroy(force)
 	. = ..()
 	qdel(door_control)
 	UnregisterSignal(src, COMSIG_DROPSHIP_ADD_EQUIPMENT)
 	UnregisterSignal(src, COMSIG_DROPSHIP_REMOVE_EQUIPMENT)
+	UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
 
 /obj/docking_port/mobile/marine_dropship/proc/send_for_flyby()
 	in_flyby = TRUE
@@ -73,25 +76,6 @@
 /obj/docking_port/mobile/marine_dropship/proc/get_door_data()
 	return door_control.get_data()
 
-/obj/docking_port/mobile/marine_dropship/Initialize(mapload)
-	. = ..()
-	door_control = new()
-	for(var/place in shuttle_areas)
-		for(var/obj/structure/machinery/door/air in place)
-			switch(air.id)
-				if("starboard_door")
-					door_control.add_door(air, "starboard")
-				if("port_door")
-					door_control.add_door(air, "port")
-				if("aft_door")
-					door_control.add_door(air, "aft")
-	RegisterSignal(src, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_dir_change))
-
-/obj/docking_port/mobile/marine_dropship/Destroy(force)
-	. = ..()
-	qdel(door_control)
-	UnregisterSignal(src, COMSIG_ATOM_DIR_CHANGE)
-
 /obj/docking_port/mobile/marine_dropship/proc/control_doors(action, direction, force, asynchronous = TRUE)
 	// its been locked down by the queen
 	if(door_override)
@@ -105,8 +89,9 @@
 	. = ..()
 	if(!destination)
 		in_flyby = TRUE
-	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
-		SSticker.mode.ds_first_drop(src)
+	if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
+		if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
+			SSticker.mode.ds_first_drop(src)
 
 /obj/docking_port/mobile/marine_dropship/beforeShuttleMove(turf/newT, rotation, move_mode, obj/docking_port/mobile/moving_dock)
 	. = ..()
@@ -165,6 +150,7 @@
 	dwidth = 4
 	dheight = 8
 
+
 /obj/docking_port/mobile/marine_dropship/cyclone/get_transit_path_type()
 	return /turf/open/space/transit/dropship/cyclone
 
@@ -203,6 +189,19 @@
 
 /obj/docking_port/mobile/marine_dropship/tripoli/get_transit_path_type()
 	return /turf/open/space/transit/dropship/tripoli
+
+/obj/docking_port/mobile/marine_dropship/pmc
+	name = "Cash Flow"
+	id = DROPSHIP_PMC
+
+	width = 9
+	height = 18
+
+	dwidth = 4
+	dheight = 8
+
+/obj/docking_port/mobile/marine_dropship/pmc/get_transit_path_type()
+	return /turf/open/space/transit/dropship/pmc
 
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
@@ -336,8 +335,9 @@
 		var/obj/structure/machinery/computer/shuttle/dropship/flight/console = dropship.getControlConsole()
 		console?.update_equipment()
 	if(is_ground_level(z))
-		SSticker.mode.ds_first_landed(src)
-		SSticker.mode.flags_round_type |= MODE_DS_LANDED
+		if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
+			SSticker.mode.ds_first_landed(src)
+			SSticker.mode.flags_round_type |= MODE_DS_LANDED
 
 	if(xeno_announce)
 		xeno_announcement(SPAN_XENOANNOUNCE("The dropship has landed."), "everything")
@@ -431,6 +431,10 @@
 /datum/map_template/shuttle/cyclone
 	name = "Cyclone"
 	shuttle_id = DROPSHIP_CYCLONE
+
+/datum/map_template/shuttle/pmc
+	name = "Cash Flow"
+	shuttle_id = DROPSHIP_PMC
 
 /datum/map_template/shuttle/typhoon
 	name = "CMD-Typhoon"

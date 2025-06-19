@@ -912,6 +912,25 @@
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
 
+/obj/structure/machinery/defenses/sentry/launchable/upp
+	name = "\improper UPPA 32-O rapid deploy sentry"
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
+	)
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+	faction_group = FACTION_LIST_UPP
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_type71.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp/dropped
+
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."

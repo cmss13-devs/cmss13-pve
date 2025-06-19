@@ -1,0 +1,4 @@
+author: "banana-battery"
+delete-after: True
+changes:
+  - rscadd: "adds GM tools and extra information for shake"

@@ -30,8 +30,7 @@
 	surgery_duration_multiplier = SURGERY_SURFACE_MULT_UNSUITED
 
 /obj/structure/bed/initialize_pass_flags(datum/pass_flags_container/PF)
-	..()
-	if (PF)
+	if(PF)
 		PF.flags_can_pass_all = PASS_OVER|PASS_AROUND|PASS_UNDER
 
 /obj/structure/bed/update_icon()
@@ -423,7 +422,7 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 /obj/structure/bed/bedroll
 	name = "unfolded bedroll"
 	desc = "Perfect for those long missions, when there's nowhere else to sleep, you remembered to bring at least one thing of comfort."
-	icon = 'icons/monkey_icos.dmi'
+	icon = 'icons/obj/structures/rollerbed.dmi'
 	icon_state = "bedroll_o"
 	buckling_y = 0
 	foldabletype = /obj/item/roller/bedroll
@@ -434,6 +433,39 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 /obj/item/roller/bedroll
 	name = "folded bedroll"
 	desc = "A standard issue bedroll, They've been in service for as long as you can remember. The tag on it states to unfold it before rest, but who needs rules anyway, right?"
-	icon = 'icons/monkey_icos.dmi'
+	icon = 'icons/obj/structures/rollerbed.dmi'
 	icon_state = "bedroll"
 	rollertype = /obj/structure/bed/bedroll
+
+//Hospital Rollers (non foldable)
+
+/obj/structure/bed/roller/hospital
+	name = "hospital bed"
+	icon = 'icons/obj/structures/rollerbed.dmi'
+	icon_state = "bigrollerempty_up"
+	foldabletype = null
+	base_bed_icon = "bigrollerempty"
+
+/obj/structure/bed/roller/hospital_empty
+	icon_state = "bigrollerempty2_down"
+	foldabletype = null
+
+/obj/structure/bed/roller/hospital_empty/bigrollerempty
+	icon_state = "bigrollerempty_down"
+	buckling_y = 2
+	base_bed_icon = "bigrollerempty"
+
+/obj/structure/bed/roller/hospital_empty/bigrollerempty2
+	icon_state = "bigrollerempty2_down"
+	buckling_y = 2
+	base_bed_icon = "bigrollerempty2"
+
+/obj/structure/bed/roller/hospital_empty/bigrollerempty3
+	icon_state = "bigrollerempty3_down"
+	buckling_y = 2
+	base_bed_icon = "bigrollerempty3"
+
+/obj/structure/bed/roller/hospital_empty/bigrollerbloodempty
+	icon_state = "bigrollerbloodempty_down"
+	buckling_y = 2
+	base_bed_icon = "bigrollerbloodempty"
