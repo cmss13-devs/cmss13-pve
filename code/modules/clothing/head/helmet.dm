@@ -1209,8 +1209,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	specialty = "6B68 helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/faami
-	name = "\improper MK.4 0AB helmet"
-	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
+	name = "\improper Burgonet-Ri"
+	desc = "Modeled after the burgonet pattern helmet, the new standard French armed forces helmet provides improved shrapnel protection with a splinter-proof aventail. An imported heads up display unit is integrated for battlefield awareness, and a low-profile high gain antenna complex is mounted along the top of the head. Shock impact protection is provided by gel padding which also serve to maintain comfort."
 	icon_state = "faami"
 	flags_inventory = NO_FLAGS
 	flags_inv_hide = NO_FLAGS

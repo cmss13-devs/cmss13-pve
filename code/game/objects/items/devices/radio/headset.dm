@@ -366,6 +366,8 @@
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
 			marker_flags = MINIMAP_FLAG_CLF
+		else if(hud_type == MOB_HUD_FACTION_FAAMI)
+			marker_flags = MINIMAP_FLAG_CLF
 
 	if(wearer.undefibbable)
 		set_undefibbable_on_minimap(z_level, marker_flags)
@@ -1297,7 +1299,8 @@
 /obj/item/device/radio/headset/distress/faami
 	name = "military headset"
 	desc = "A military headset, commonly used by mercernaries and paticularly the FAAMI."
-	icon_state = "generic_headset"
+	frequency = FAAMI_FREQ
+	icon_state = "vai_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/faami)
 	has_hud = TRUE
 	hud_type = MOB_HUD_FACTION_FAAMI

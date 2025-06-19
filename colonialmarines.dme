@@ -644,6 +644,7 @@
 #include "code\datums\paygrades\factions\other\cmb.dm"
 #include "code\datums\paygrades\factions\other\contractors.dm"
 #include "code\datums\paygrades\factions\other\dutch_dozen.dm"
+#include "code\datums\paygrades\factions\other\faami.dm"
 #include "code\datums\paygrades\factions\other\freelancer.dm"
 #include "code\datums\paygrades\factions\other\misc.dm"
 #include "code\datums\paygrades\factions\twe\twe.dm"
