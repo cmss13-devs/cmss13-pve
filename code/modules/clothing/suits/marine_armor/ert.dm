@@ -228,6 +228,58 @@
 		/obj/item/storage/belt/shotgun/van_bandolier,
 	)
 
+/obj/item/clothing/suit/storage/marine/veteran/faami
+	name = "\improper QT-9 Standard armor"
+	desc = "The standard body armor system of the French Armed Forces. Composed of a shell of hard-wearing weatherproof inflammable polymer, aluminum oxide strike face, and ultra high molecular weight polyethylene backer. Integrated mounting brackets for the LBE system are included. Thermal camouflage patterns have been applied to the polymer shell, though radar absorbing properties are poor."
+	icon_state = "faami"
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	storage_slots = 2
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine/,
+		/obj/item/weapon/baton,
+		/obj/item/restraint/handcuffs,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/explosive/grenade,
+		/obj/item/storage/bible,
+		/obj/item/tool/crowbar,
+		/obj/item/storage/large_holster/katana,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/weapon/sword/machete,
+		/obj/item/attachable/bayonet,
+		/obj/item/device/motiondetector,
+		/obj/item/tool/crew_monitor,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
+	)
+	item_state_slots = list(WEAR_JACKET = "faami")
+
+/obj/item/clothing/suit/storage/marine/veteran/faami/light
+	name = "\improper QT-7 Light armor"
+	icon_state = "faami_aux"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	item_state_slots = list(WEAR_JACKET = "faami_aux")
+
 //===========================//U.P.P\\================================\\
 //=====================================================================\\
 

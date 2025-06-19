@@ -205,3 +205,11 @@
 	desc = "The L7 Gasmask used by members of the three world empires royal marines commando."
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+//--FAAMI--\\
+
+/obj/item/clothing/mask/gas/pmc/faami
+	name = "\improper ARP F3 gasmask"
+	desc = "The ARP F3 gas mask, often used by the French Armed Forces and French aligned mercenaries."
+	icon_state = "rmc_mask"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE

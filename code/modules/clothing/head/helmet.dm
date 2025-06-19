@@ -1208,6 +1208,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	specialty = "6B68 helmet"
 
+/obj/item/clothing/head/helmet/marine/veteran/faami
+	name = "\improper MK.4 0AB helmet"
+	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
+	icon_state = "faami"
+	flags_inventory = NO_FLAGS
+	flags_inv_hide = NO_FLAGS
+	flags_marine_helmet = NO_FLAGS
+
 //==========================//UPP\\=================================\\
 //=======================================================================\\
 
