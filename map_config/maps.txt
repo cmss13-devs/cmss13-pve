@@ -89,6 +89,9 @@ endmap
 map fop_v1_classic
 endmap
 
+map taipei_station
+endmap
+
 map calliope_highway
 endmap
 
