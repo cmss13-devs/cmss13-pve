@@ -214,7 +214,7 @@
 /datum/equipment_preset/upp/militia/nco
 	name = "UPP People's Territorial Guardsman Sergeant"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "People's Territorial Guard Rifleman"
+	assignment = "People's Territorial Guard Squad Leader"
 	role_comm_title = "PTG-NCO"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc

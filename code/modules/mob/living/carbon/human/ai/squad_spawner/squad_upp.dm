@@ -20,7 +20,7 @@
 	name = "Territorial Guard, Squad"
 	desc = "Territorial Guard recon squad armed with Type 71 rifles, Type 64 SMGs or KS29 pump-shotguns and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
-		/datum/equipment_preset/upp/militia = 3,
+		/datum/equipment_preset/upp/militia = 1,
 		/datum/equipment_preset/upp/militia/nco = 1,
 		/datum/equipment_preset/upp/militia/tech = 1,
 		/datum/equipment_preset/upp/militia/medic = 1,
