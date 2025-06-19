@@ -583,7 +583,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "SIM-118 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "fim_barrel"
-	desc = "The very end of the M56 smart gun, featuring a compensator. CANNOT BE REMOVED."
+	desc = "The very end of an SIM 118 launcher. CANNOT BE REMOVED."
 	slot = "muzzle"
 	flags_attach_features = NO_FLAGS
 	pixel_shift_x = 14
@@ -593,7 +593,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "EMBLR 92 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "emblr_barrel"
-	desc = "The very end of the M56 smart gun, featuring a compensator. CANNOT BE REMOVED."
+	desc = "The very end of an EMBLR surface-to-air missile launcher. CANNOT BE REMOVED."
 	slot = "muzzle"
 	flags_attach_features = NO_FLAGS
 	pixel_shift_x = 14

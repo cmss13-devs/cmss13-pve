@@ -59,7 +59,6 @@
 	. = ..()
 	if(current_mag.current_rounds <= 0)
 		. += "It's not loaded."
-		return
 	if(current_mag.current_rounds > 0)
 		. += "It has \a [ammo.name] loaded."
 
@@ -67,13 +66,13 @@
 /obj/item/weapon/gun/launcher/rocket/able_to_fire(mob/living/user)
 	. = ..()
 	if(!.) //Let's check all that other stuff first.
-		return
+		return FALSE
 	if(!istype(user))
-		return
+		return FALSE
 	else
 		if(skill_locked && !skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_ROCKET)
 			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
-			return 0
+			return FALSE
 		if(user.faction == FACTION_MARINE && explosive_antigrief_check(src, user))
 			to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
 			msg_admin_niche("[key_name(user)] attempted to fire \a [name] in [get_area(src)] [ADMIN_JMP(loc)]")
@@ -426,7 +425,7 @@
 	var/launcher_has_empty_icon = FALSE
 	var/is_outside = FALSE //Whether the user is firing from inside an unsuitable location or not
 	var/secondary_toggled = 0 //Which ammo is used
-	var/missile_message_time = 15
+	var/missile_message_time = 1.5 SECONDS
 	var/datum/ammo/ammo_primary = /datum/ammo/rocket/anti_air //Actual missile type
 	var/datum/ammo/ammo_secondary = /datum/ammo/anti_air //'AA targeting' missile type
 
@@ -455,7 +454,6 @@
 		. += "The targeting system has been turned off, you'll hit what is ahead of you upon firing."
 	else if(targeting_air == TRUE)
 		. += "The targeting system is active, you'll send the missile up into the sky upon firing."
-		return
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/update_icon()
 	. = ..()
@@ -471,17 +469,19 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/able_to_fire(mob/living/user)
 	..()
-	if(targeting_air && current_mag.current_rounds > 0)
-		var/turf/TU = get_turf(user)
+	if(!current_mag.current_rounds > 0)
+		return FALSE
+	if(targeting_air)
+		var/turf/user_turf = get_turf(user)
 		var/area/targ_area = get_area(user)
-		if(!istype(TU))
-			return
+		if(!istype(user_turf))
+			return FALSE
 		switch(targ_area.ceiling)
 			if(CEILING_NONE)
 				is_outside = TRUE
 			if(CEILING_GLASS)
 				is_outside = TRUE
-		if(protected_by_pylon(TURF_PROTECTION_CAS, TU))
+		if(protected_by_pylon(TURF_PROTECTION_CAS, user_turf))
 			is_outside = FALSE
 		if(!is_outside)
 			to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
