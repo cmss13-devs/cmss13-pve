@@ -25,7 +25,7 @@
 	},
 /area/shuttle/lifeboat)
 "fc" = (
-/turf/open/shuttle/escapepod/floor,
+/turf/open/shuttle/escapepod,
 /area/shuttle/lifeboat)
 "fh" = (
 /turf/closed/shuttle/lifeboat{
