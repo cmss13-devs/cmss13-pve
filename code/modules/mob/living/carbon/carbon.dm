@@ -514,8 +514,9 @@
 	remove_traits(list(TRAIT_HAULED, TRAIT_NO_STRAY, TRAIT_FLOORED, TRAIT_IMMOBILIZED), TRAIT_SOURCE_XENO_HAUL)
 	pixel_y = 0
 	UnregisterSignal(src, list(COMSIG_ATTEMPT_MOB_PULL, COMSIG_LIVING_PREIGNITION, COMSIG_LIVING_FLAMER_CROSSED, COMSIG_LIVING_FLAMER_FLAMED))
-	UnregisterSignal(hauling_xeno, COMSIG_MOB_DEATH)
-	hauling_xeno = null
+	if(!isnull(hauling_xeno)) // Check because if the xeno gets gibbed for some reason we throw a null into the following
+		UnregisterSignal(hauling_xeno, COMSIG_MOB_DEATH)
+		hauling_xeno = null
 	layer = MOB_LAYER
 	remove_filter("hauled_shadow")
 	forceMove(location)
