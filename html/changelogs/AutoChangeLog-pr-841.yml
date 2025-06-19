@@ -1,0 +1,5 @@
+author: "tyeagg"
+delete-after: True
+changes:
+  - soundadd: "ports tgmcs bullet miss and ricochet sounds"
+  - sounddel: "old bullet miss and ricochet sounds"

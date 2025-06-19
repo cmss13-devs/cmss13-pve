@@ -4,7 +4,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_TWE_REBEL
 	faction_group = FACTION_LIST_TWE_REBEL
-	skills = /datum/skills/pfc
+	skills = /datum/skills/clf
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
 
@@ -111,6 +111,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -151,7 +152,7 @@
 /datum/equipment_preset/clf/medic
 	name = "TWE Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/corpsman
+	skills = /datum/skills/clf/combat_medic
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guard Medic"
 
@@ -197,7 +198,6 @@
 /datum/equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/pfc
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
 
@@ -280,6 +280,7 @@
 
 /datum/equipment_preset/clf/soldier/flamer
 	name = "TWE Rebel, Soldier (Incinerator)"
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -318,6 +319,7 @@
 
 /datum/equipment_preset/clf/soldier/bolt
 	name = "TWE Rebel, Sniper (Basira-Armstrong)"
+	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/bolt/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -360,6 +362,7 @@
 
 /datum/equipment_preset/clf/soldier/svd
 	name = "TWE Rebel, Sniper (Type-88)"
+	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/svd/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"

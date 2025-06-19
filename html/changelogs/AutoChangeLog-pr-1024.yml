@@ -1,0 +1,4 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - config: "Silences the announcer for power restoration in Events Panel"
