@@ -113,7 +113,7 @@
 		ACCESSORY_SLOT_DECORSHIN,
 		ACCESSORY_SLOT_DECORKNEE,
 		ACCESSORY_SLOT_DECORGROIN,
-		)
+	)
 	restricted_accessory_slots = list(
 		ACCESSORY_SLOT_PAINT,
 		ACCESSORY_SLOT_SGPAINT,
@@ -123,7 +123,7 @@
 		ACCESSORY_SLOT_DECORSHIN,
 		ACCESSORY_SLOT_DECORKNEE,
 		ACCESSORY_SLOT_DECORGROIN,
-		)
+	)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
