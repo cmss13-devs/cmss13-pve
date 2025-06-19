@@ -66,7 +66,11 @@
 
 /obj/item/weapon/gun/launcher/rocket/able_to_fire(mob/living/user)
 	. = ..()
-	if (. && istype(user)) //Let's check all that other stuff first.
+	if(!.) //Let's check all that other stuff first.
+		return
+	if(!istype(user))
+		return
+	else
 		if(skill_locked && !skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_ROCKET)
 			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
 			return 0
@@ -413,17 +417,18 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air
 	name = "\improper anti-air missile launcher"
-	desc = "What crackhead modified an M5 to fire AA missiles? Truly derranged."
+	desc = "What crackhead modified an M5 to fire AA missiles? Truly deranged."
 	current_mag = /obj/item/ammo_magazine/rocket/anti_air
 	w_class = SIZE_LARGE
 	aim_slowdown = SLOWDOWN_ADS_SCOPE
-	actions_types = list(/datum/action/item_action/toggle_aerial_targetting)
-	var/targetting_air = FALSE
-	var/SAM_has_empty_icon = FALSE
+	actions_types = list(/datum/action/item_action/toggle_aerial_targeting)
+	var/targeting_air = FALSE
+	var/launcher_has_empty_icon = FALSE
 	var/is_outside = FALSE //Whether the user is firing from inside an unsuitable location or not
 	var/secondary_toggled = 0 //Which ammo is used
+	var/missile_message_time = 15
 	var/datum/ammo/ammo_primary = /datum/ammo/rocket/anti_air //Actual missile type
-	var/datum/ammo/ammo_secondary = /datum/ammo/anti_air //'AA targetting' missile type
+	var/datum/ammo/ammo_secondary = /datum/ammo/anti_air //'AA targeting' missile type
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_bullet_traits()
 	return
@@ -446,24 +451,27 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/get_examine_text(mob/user)
 	. = ..()
-	if(!targetting_air)
-		. += "The targetting system has been turned off, you'll hit what is ahead of you upon firing."
-	else if(targetting_air == TRUE)
-		. += "The targetting system is active, you'll send the missile up into the sky upon firing."
+	if(!targeting_air)
+		. += "The targeting system has been turned off, you'll hit what is ahead of you upon firing."
+	else if(targeting_air == TRUE)
+		. += "The targeting system is active, you'll send the missile up into the sky upon firing."
 		return
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/update_icon()
 	. = ..()
-	var/SAM_sprite = base_gun_icon
-	if(SAM_has_empty_icon && current_mag.current_rounds <= 0)
-		SAM_sprite += "_e"
-	icon_state = SAM_sprite
+	var/launcher_sprite = base_gun_icon
+	if(launcher_has_empty_icon && current_mag.current_rounds <= 0)
+		launcher_sprite += "_e"
+	icon_state = launcher_sprite
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/missile_launch(mob/living/user)
+	user.visible_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SPAN_WARNING("The missile arcs up into the air!"), ,10)
+	message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
+	log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/able_to_fire(mob/living/user)
-	. = ..()
-	if (. && istype(user))
-		if(current_mag && current_mag.current_rounds > 0)
-			make_rocket(user, 0, 1)
+	..()
+	if(targeting_air && current_mag.current_rounds > 0)
 		var/turf/TU = get_turf(user)
 		var/area/targ_area = get_area(user)
 		if(!istype(TU))
@@ -473,19 +481,21 @@
 				is_outside = TRUE
 			if(CEILING_GLASS)
 				is_outside = TRUE
-		if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
+		if(protected_by_pylon(TURF_PROTECTION_CAS, TU))
 			is_outside = FALSE
-		if(targetting_air && !is_outside)
+		if(!is_outside)
 			to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
 			return FALSE
-		else if(targetting_air && is_outside && (current_mag.current_rounds > 0))
-			for(var/mob/mob in range(10, user))
-				sleep(5)
-				mob.show_message(SPAN_HIGHDANGER("A missile flies off into the sky overhead!"), SHOW_MESSAGE_VISIBLE)
-			message_admins("[key_name_admin(user)] fired an AA weapon ([name]) into the air! [ADMIN_JMP(user)]")
-			log_game("[key_name_admin(user)] used an AA missile launcher ([name]).")
-			update_icon()
+		else
+			addtimer(CALLBACK(src, PROC_REF(missile_launch), user), missile_message_time)
 			return TRUE
+	else
+		. = ..()
+
+/obj/item/weapon/gun/launcher/rocket/anti_air/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
+	. = ..()
+	if(. && launcher_has_empty_icon)
+		update_icon()
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/uscm
 	name = "\improper SIM-118 anti-air missile launcher"
@@ -498,7 +508,7 @@
 	current_mag = /obj/item/ammo_magazine/rocket/anti_air
 	ammo_primary = /datum/ammo/rocket/ap/anti_air
 	attachable_allowed = null
-	SAM_has_empty_icon = TRUE
+	launcher_has_empty_icon = TRUE
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/uscm/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
@@ -527,7 +537,7 @@
 	launch_sound = 'sound/weapons/gun_emblr.ogg'
 	current_mag = /obj/item/ammo_magazine/rocket/anti_air/upp
 	attachable_allowed = null
-	SAM_has_empty_icon = TRUE
+	launcher_has_empty_icon = TRUE
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/upp/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 16,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
@@ -543,13 +553,13 @@
 //-------------------------------------------------------
 //Toggle firing level special action for AA launchers, edited from the GL item_action
 
-/datum/action/item_action/toggle_aerial_targetting/New(Target, obj/item/holder)
+/datum/action/item_action/toggle_aerial_targeting/New(Target, obj/item/holder)
 	. = ..()
-	name = "Toggle Aerial Targetting"
+	name = "Toggle Aerial Targeting"
 	button.name = name
 	update_icon()
 
-/datum/action/item_action/toggle_aerial_targetting/action_activate()
+/datum/action/item_action/toggle_aerial_targeting/action_activate()
 	. = ..()
 	var/obj/item/weapon/gun/launcher/rocket/anti_air/SAM = holder_item
 	if(!ishuman(owner))
@@ -557,23 +567,23 @@
 	var/mob/living/carbon/human/H = owner
 	if(H.is_mob_incapacitated() || SAM.get_active_firearm(H, FALSE) != holder_item)
 		return
-	SAM.toggle_aerial_targetting(usr)
+	SAM.toggle_aerial_targeting(usr)
 
-/datum/action/item_action/toggle_aerial_targetting/proc/update_icon()
+/datum/action/item_action/toggle_aerial_targeting/proc/update_icon()
 	var/obj/item/weapon/gun/launcher/rocket/anti_air/SAM = holder_item
-	if(SAM.targetting_air)
+	if(SAM.targeting_air)
 		action_icon_state = "designator_one_weapon"
 	else
 		action_icon_state = "hightoss_off"
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
-/obj/item/weapon/gun/launcher/rocket/anti_air/proc/toggle_aerial_targetting(mob/user)
-	targetting_air = !targetting_air
+/obj/item/weapon/gun/launcher/rocket/anti_air/proc/toggle_aerial_targeting(mob/user)
+	targeting_air = !targeting_air
 	secondary_toggled = !secondary_toggled
-	to_chat(user, "[icon2html(src, usr)] You toggle \the [src]'s targetting systems. You will now fire [targetting_air ? "into the sky overhead" : "directly at your target"].")
+	to_chat(user, "[icon2html(src, usr)] You toggle \the [src]'s targeting systems. You will now fire [targeting_air ? "into the sky overhead" : "directly at your target"].")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	var/datum/action/item_action/toggle_aerial_targetting/TAT = locate(/datum/action/item_action/toggle_aerial_targetting) in actions
+	var/datum/action/item_action/toggle_aerial_targeting/TAT = locate(/datum/action/item_action/toggle_aerial_targeting) in actions
 	TAT.update_icon()
 	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 
