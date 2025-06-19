@@ -1,6 +1,6 @@
 /datum/equipment_preset/cia
 	name = "CIA"
-	flags = EQUIPMENT_PRESET_EXTRA
+	flags = null
 	minimum_age = 25
 	assignment = JOB_CIA
 	skills = /datum/skills/cia
@@ -13,6 +13,7 @@
 
 /datum/equipment_preset/cia/analyst
 	name = "CIA Agent (Civilian Clothing)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	rank = "Intelligence Analyst"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	role_comm_title = PAY_SHORT_CIV
@@ -62,6 +63,7 @@
 
 /datum/equipment_preset/cia/officer
 	name = "CIA Agent (USCM Liaison - 1st Lieutenant)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	rank = "Intelligence Liaison Officer"
 	assignment = JOB_CIA_LIAISON
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
@@ -89,11 +91,13 @@
 
 /datum/equipment_preset/cia/officer/o3
 	name = "CIA Agent (USCM Liaison - Captain)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 	minimum_age = 30
 
 /datum/equipment_preset/uscm/marsoc/cia
 	name = "CIA Agent (Marine Raider Advisor)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	minimum_age = 30
 	skills = /datum/skills/cia
 
@@ -110,6 +114,7 @@
 
 /datum/equipment_preset/rebel/cia
 	name = "CIA Spy (UA Rebel Engineer)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cia
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -163,6 +168,7 @@
 
 /datum/equipment_preset/clf/engineer/cia
 	name = "CIA Spy (TWE Rebel Engineer)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cia
 	idtype = /obj/item/card/id/dogtag
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
@@ -216,6 +222,7 @@
 
 /datum/equipment_preset/upp/rifleman/cia
 	name = "CIA Spy (UPP Rifleman)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cia
 
 /datum/equipment_preset/upp/rifleman/New()
@@ -229,6 +236,7 @@
 
 /datum/equipment_preset/upp/officer/senior/cia
 	name = "CIA Spy (UPP Senior Officer)"
+	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/cia
 
 /datum/equipment_preset/upp/officer/senior/cia/New()

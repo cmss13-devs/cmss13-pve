@@ -175,8 +175,8 @@
 		list("MARINE CLOTHING", 0, null, null, null),
 		list("Marine Helmet", 5, /obj/item/clothing/head/helmet/marine, "white", "A USCM standard military helmet."),
 		list("Marine Fatigues", 8, /obj/item/clothing/under/marine, "white", "A USCM standard military battle dress uniform."),
-		list("M3 Pattern Marine Armor", 20, /obj/item/clothing/suit/storage/marine, "white", "A USCM standard armor rig for combat situations."),
-		list("M3-L Pattern Marine Armor", 15, /obj/item/clothing/suit/storage/marine/light, "white", "A USCM light armor rig for combat situations."),
+		list("M3 Pattern Marine Armor", 20, /obj/item/clothing/suit/marine, "white", "A USCM standard armor rig for combat situations."),
+		list("M3-L Pattern Marine Armor", 15, /obj/item/clothing/suit/marine/light, "white", "A USCM light armor rig for combat situations."),
 		list("M3-VL Ballistics Vest", 12, /obj/item/clothing/suit/storage/marine/light/vest, "white", "A USCM light ballistic vest for combat situations."),
 
 		list("RADIO KEYS", 0, null, null, null),
