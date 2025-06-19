@@ -1,8 +1,8 @@
 
 // Called when the item is in the active hand, and clicked; alternately, there is an 'activate held object' verb or you can hit pagedown.
 /obj/item/proc/attack_self(mob/user)
-	if(HAS_TRAIT(user, TRAIT_HAULED))
-		return
+//	if(HAS_TRAIT(user, TRAIT_HAULED)) - Haul sovlening - This is going to explode something probably.
+//		return
 	SHOULD_CALL_PARENT(TRUE)
 	SEND_SIGNAL(src, COMSIG_ITEM_ATTACK_SELF, user)
 	SEND_SIGNAL(user, COMSIG_MOB_ITEM_ATTACK_SELF, src)
