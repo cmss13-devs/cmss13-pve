@@ -103,8 +103,8 @@
 
 /obj/item/explosive/grenade/spawnergrenade/smartdisc/launch_impact(atom/hit_atom)
 	if(isyautja(hit_atom))
-		var/mob/living/carbon/human/hooman = hit_atom
-		if(hooman.put_in_hands(src))
+		var/mob/living/carbon/human/humantarget = hit_atom
+		if(humantarget.put_in_hands(src))
 			hit_atom.visible_message("[hit_atom] expertly catches [src] out of the air.","You catch [src] easily.")
 			throwing = FALSE
 		return

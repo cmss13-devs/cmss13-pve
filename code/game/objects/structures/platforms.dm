@@ -209,3 +209,33 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed
 	name = "sandstone temple platform corner"
 	color = "#b29082"
+
+
+//------------------------------------//
+// Metal based Platforms "decoration" //
+//------------------------------------//
+
+/obj/structure/platform_decoration/metal/kutjevo
+	name = "raised metal corner"
+	desc = "The corner of what appears to be raised piece of metal, often used to imply the illusion of elevation in non-Euclidean 2d spaces. But you don't know that, you're just a spaceman with a rifle."
+	icon_state = "kutjevo_platform_deco"
+
+/obj/structure/platform_decoration/metal/kutjevo/north
+	dir = NORTH
+/obj/structure/platform_decoration/metal/kutjevo/east
+	dir = EAST
+/obj/structure/platform_decoration/metal/kutjevo/west
+	dir = WEST
+
+
+/obj/structure/platform_decoration/metal/kutjevo_smooth
+	name = "raised metal corner"
+	desc = "The corner of what appears to be raised piece of metal, often used to imply the illusion of elevation in non-Euclidean 2d spaces. But you don't know that, you're just a spaceman with a rifle."
+	icon_state = "kutjevo_platform_sm_deco"
+
+/obj/structure/platform_decoration/metal/kutjevo_smooth/north
+	dir = NORTH
+/obj/structure/platform_decoration/metal/kutjevo_smooth/east
+	dir = EAST
+/obj/structure/platform_decoration/metal/kutjevo_smooth/west
+	dir = WEST
