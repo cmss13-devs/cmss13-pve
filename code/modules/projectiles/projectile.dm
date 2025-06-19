@@ -842,9 +842,9 @@
 
 /mob/living/proc/get_projectile_hit_chance(obj/projectile/P)
 	//This checks to see if a mob is lying down. If they are a bullet has very poor chances to hit them. Made with many thanks to ihatethisengine2.
-	if((body_position == LYING_DOWN && !(P.projectile_flags & PROJECTILE_SHRAPNEL)|| HAS_TRAIT(src, TRAIT_NO_STRAY)) && src != P.original)
-		return FALSE
 	var/ammo_flags = P.ammo.flags_ammo_behavior | P.projectile_override_flags
+	if((body_position == LYING_DOWN && !(ammo_flags & AMMO_PRONETARGET)|| HAS_TRAIT(src, TRAIT_NO_STRAY)) && src != P.original)
+		return FALSE
 	if(ammo_flags & AMMO_XENO)
 		if((status_flags & XENO_HOST) && HAS_TRAIT(src, TRAIT_NESTED))
 			return FALSE
@@ -1233,7 +1233,7 @@
 	if(!P || !P.ammo.ping)
 		return
 
-	if(P.ammo.sound_bounce) playsound(src, P.ammo.sound_bounce, 50, 1)
+	if(P.ammo.sound_bounce) playsound(src, P.ammo.sound_bounce, 30)
 	var/image/I = image('icons/obj/items/weapons/projectiles.dmi', src, P.ammo.ping, 10)
 	var/offset_x = clamp(P.pixel_x + pixel_x_offset, -10, 10)
 	var/offset_y = clamp(P.pixel_y + pixel_y_offset, -10, 10)
