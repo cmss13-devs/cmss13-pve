@@ -32,16 +32,10 @@
 	drop_sound = "armorequip"
 
 /obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		icon_state = initial(icon_state)
-
-/obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item && !armor_stage)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		if(!armor_stage)
+	if(!armor_stage)
+		if(stored_item)
+			icon_state = "[initial(icon_state)]-1"
+		else
 			icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/knife
@@ -77,6 +71,9 @@
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"
 	spawn_item_type = /obj/item/attachable/bayonet/upp
+
+/obj/item/clothing/shoes/marine/upp/guard/canc
+	spawn_item_type = /obj/item/weapon/knife/marine/chinese
 
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
