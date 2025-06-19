@@ -210,6 +210,39 @@
 	name = "sandstone temple platform corner"
 	color = "#b29082"
 
+//------------------------------------//
+//       Metal based Platforms        //
+//------------------------------------//
+
+
+/obj/structure/platform/metal/kutjevo
+	icon_state = "kutjevo_platform"
+	name = "raised metal edge"
+	desc =  "A raised level of metal, often used to elevate areas above others, or construct bridges. You could probably climb it."
+
+/obj/structure/platform/metal/kutjevo/north
+	dir = NORTH
+/obj/structure/platform/metal/kutjevo/east
+	dir = EAST
+/obj/structure/platform/metal/kutjevo/west
+	dir = WEST
+
+
+/obj/structure/platform/metal/kutjevo_smooth
+	icon_state = "kutjevo_platform_sm"
+	name = "raised metal edge"
+	desc =  "A raised level of metal, often used to elevate areas above others, or construct bridges. You could probably climb it."
+
+/obj/structure/platform/metal/kutjevo_smooth/north
+	dir = NORTH
+/obj/structure/platform/metal/kutjevo_smooth/east
+	dir = EAST
+/obj/structure/platform/metal/kutjevo_smooth/west
+	dir = WEST
+
+
+/obj/structure/platform/metal/kutjevo_smooth/stair_plate
+	icon_state = "kutjevo_stair_plate"
 
 //------------------------------------//
 // Metal based Platforms "decoration" //
