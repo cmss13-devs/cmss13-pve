@@ -234,7 +234,8 @@
 /obj/structure/machinery/computer/dropship_weapons/midway/small{
 	pixel_y = 8;
 	pixel_x = 8;
-	name = "\improper 'Cash Flow' weapons controls"
+	name = "\improper 'Cash Flow' weapons controls";
+	req_one_access = list(12,22,205, 200)
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
