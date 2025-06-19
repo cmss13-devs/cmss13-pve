@@ -353,6 +353,7 @@
 /obj/item/reagent_container/food/snacks/mre_pack/upp
 	name = "\improper generic MRE pack"
 	icon = 'icons/obj/items/food.dmi'
+	icon_state = "upp_lid"
 	trash = /obj/item/trash/UPPtray
 	w_class = SIZE_SMALL
 	bitesize = 5
