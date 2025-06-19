@@ -4,6 +4,8 @@
 	pathogen_creature = TRUE
 	language = LANGUAGE_PATHOGEN
 
+
+/*
 /datum/caste_datum/pathogen/get_minimap_icon()
 	var/image/background = mutable_appearance('icons/mob/pathogen/neo_blips.dmi', minimap_background)
 
@@ -13,6 +15,7 @@
 	background.overlays += icon
 
 	return background
+*/
 
 /datum/admins/var/create_pathogen_creatures_html = null
 /datum/admins/proc/create_pathogen_creatures(mob/user)
@@ -229,3 +232,15 @@
 
 	to_chat(unbuffslash_user, SPAN_XENODANGER("We have waited too long, our slash will no longer apply blight!"))
 	button.icon_state = "template"
+
+
+/mob/living/carbon/xenomorph/proc/is_hive_ruler()
+	if(hive && (hive.living_xeno_queen == src))
+		return TRUE
+	return FALSE
+
+/mob/living/carbon/xenomorph/proc/give_blight_core()
+	if(hivenumber == XENO_HIVE_PATHOGEN)
+		give_action(src, /datum/action/xeno_action/activable/create_core)
+		return TRUE
+	return FALSE

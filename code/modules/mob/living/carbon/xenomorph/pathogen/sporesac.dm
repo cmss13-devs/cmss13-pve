@@ -223,15 +223,23 @@
 	if(inhaling) // Can't be inhaled by more than one person.
 		return FALSE
 	inhaling = TRUE
-	if(prob(98) && (human_passer.wear_mask && (human_passer.wear_mask.flags_inventory & BLOCKGASEFFECT)))
-		inhaling = FALSE
-		return FALSE
-	if(prob(98) && (human_passer.head && (human_passer.head.flags_inventory & BLOCKGASEFFECT)))
-		inhaling = FALSE
-		return FALSE
-	if(prob(100) && (human_passer.head && (human_passer.head.flags_inventory & SPOREPROOF)))
-		inhaling = FALSE
-		return FALSE
+
+	var/obj/item/mask = human_passer.wear_mask
+	var/obj/item/helmet = human_passer.head
+	if(mask)
+		if(mask.flags_inventory & SPOREPROOF)
+			inhaling = FALSE
+			return FALSE
+		if(prob(80) && (mask.flags_inventory & BLOCKGASEFFECT))
+			inhaling = FALSE
+			return FALSE
+	if(helmet)
+		if(helmet.flags_inventory & SPOREPROOF)
+			inhaling = FALSE
+			return FALSE
+		if(prob(80) && (helmet.flags_inventory & BLOCKGASEFFECT))
+			inhaling = FALSE
+			return FALSE
 
 	var/embryos = 0
 	for(var/obj/item/alien_embryo/embryo in human_passer) // already got one, stops doubling up

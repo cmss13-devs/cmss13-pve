@@ -2,10 +2,10 @@
 	caste_type = PATHOGEN_CREATURE_POPPER
 	tier = 1
 
-	melee_damage_lower = XENO_DAMAGE_TIER_1
-	melee_damage_upper = XENO_DAMAGE_TIER_1
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	melee_vehicle_damage = 0
-	max_health = XENO_HEALTH_TIER_2
+	max_health = XENO_HEALTH_LESSER_DRONE
 	plasma_gain = XENO_PLASMA_GAIN_TIER_2
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
@@ -18,9 +18,8 @@
 	available_strains = list()
 	behavior_delegate_type = /datum/behavior_delegate/pathogen_base
 
-	deevolves_to = list(PATHOGEN_CREATURE_BURSTER)
 	caste_desc = "A fast, powerful combatant."
-	evolves_to = list(PATHOGEN_CREATURE_NEOMORPH)
+	evolves_to = list()
 
 	heal_resting = 1
 
@@ -33,7 +32,7 @@
 	icon_size = 32
 	icon_state = "Popper Walking"
 	plasma_types = list()
-	tier = 1
+	tier = 0
 	base_pixel_x = 0
 	base_pixel_y = -20
 	organ_value = 10000
@@ -51,8 +50,9 @@
 	)
 	claw_type = CLAW_TYPE_NORMAL
 
-	tackle_min = 2
+	tackle_min = 6
 	tackle_max = 6
+	tackle_chance = 10
 
 	icon_xeno = 'icons/mob/pathogen/popper.dmi'
 	icon_xenonid = 'icons/mob/pathogen/popper.dmi'
@@ -80,6 +80,10 @@
 /mob/living/carbon/xenomorph/popper/death(cause, gibbed)
 	. = ..()
 	new /obj/effect/pathogen/spore_cloud(loc)
+
+
+/mob/living/carbon/xenomorph/popper/start_pulling(atom/movable/AM)
+	return
 
 /datum/action/xeno_action/onclick/place_spore_sac
 	name = "Place spore sac (700)"
@@ -160,6 +164,7 @@
 	plasma_cost = 200
 	action_type = XENO_ACTION_CLICK
 	ability_primacy = XENO_PRIMARY_ACTION_3
+	var/windup_duration = 1 SECONDS
 
 /datum/action/xeno_action/onclick/release_spores/use_ability(atom/A)
 	var/mob/living/carbon/xenomorph/popper = owner
@@ -172,10 +177,217 @@
 		return
 	if(!popper.check_plasma(plasma_cost))
 		return
-	if(!do_after(popper, 2 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
+	if(!do_after(popper, windup_duration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 		return
 	popper.use_plasma(plasma_cost)
 	playsound(popper.loc, "alien_resin_build", 25)
 	new /obj/effect/pathogen/spore_cloud(target_turf)
 	popper.visible_message(SPAN_DANGER("[src] releases a cloud of spores!"), SPAN_XENONOTICE("We release a spore cloud."))
 	return ..()
+
+
+
+/datum/resin_construction/resin_obj/popper_cocoon
+	name = PATHOGEN_STRUCTURE_COCOON
+	desc = "A cocoon to grow a Pathogen Popper."
+	construction_name = "mycelial cocoon"
+	cost = 800
+	max_per_xeno = 3
+
+	build_path = /obj/effect/alien/resin/special/popper_cocoon
+
+/obj/effect/alien/resin/special/popper_cocoon
+	name = PATHOGEN_STRUCTURE_COCOON
+	desc = "Something strange must be growing in this cocoon..."
+	icon = 'icons/mob/pathogen/pathogen_weeds.dmi'
+	icon_state = "cocoon_half"
+	health = 300
+	maxhealth = 300
+
+	pixel_x = 0
+	pixel_y = 0
+	forced_hive = TRUE
+	hivenumber = XENO_HIVE_PATHOGEN
+
+	var/growth_state = POPPER_COCOON_GROWING
+	var/mature_time
+
+/obj/effect/alien/resin/special/popper_cocoon/Initialize(mapload, hive_ref)
+	mature_time = addtimer(CALLBACK(src, PROC_REF(mature)), 60 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
+	. = ..()
+
+/obj/effect/alien/resin/special/popper_cocoon/proc/mature()
+	if((health <= 0) || !(growth_state == POPPER_COCOON_GROWING))
+		return FALSE
+
+	icon_state = "cocoon_full"
+	desc = "There is definitely something odd in here..."
+	health = 500
+	maxhealth = 500
+	growth_state = POPPER_COCOON_GROWN
+
+	xeno_message("Confluence: \A [name] has finished growing at [sanitize_area(get_area_name(src))]!", 3, XENO_HIVE_PATHOGEN)
+
+	var/area/growth_area = get_area(src)
+	notify_ghosts(header = "Popper Cocoon", message = "A <b>Popper Cocoon</b> has fully grown at <b>[growth_area]</b>!", source = src)
+	return TRUE
+
+/obj/effect/alien/resin/special/popper_cocoon/update_icon()
+	. = ..()
+
+	if(health > 0)
+		switch(growth_state)
+			if(POPPER_COCOON_GROWING)
+				icon_state = "cocoon_half"
+			if(POPPER_COCOON_GROWN)
+				icon_state = "cocoon_full"
+			if(POPPER_COCOON_HATCHED)
+				icon_state = "cocoon_empty"
+	else
+		icon_state = "cocoon_dead"
+
+/obj/effect/alien/resin/special/popper_cocoon/process()
+	if(growth_state == POPPER_COCOON_HATCHED)
+		STOP_PROCESSING(SSobj, src)
+		return
+	if(health <= 0)
+		STOP_PROCESSING(SSobj, src)
+		return
+
+	if((health < maxhealth))
+		health = max(health + 5, maxhealth)
+
+/obj/effect/alien/resin/special/popper_cocoon/healthcheck()
+	if(health > 0)
+		return
+
+	flick("cocoon_pop", src)
+	STOP_PROCESSING(SSobj, src)
+	update_icon()
+	growth_state = POPPER_COCOON_DEAD
+
+	xeno_message("Confluence: \A [name] has been destroyed at [sanitize_area(get_area_name(src))]!", 3, XENO_HIVE_PATHOGEN)
+
+/obj/effect/alien/resin/special/popper_cocoon/proc/hatch(mob/dead/observer/user)
+	if(growth_state != POPPER_COCOON_GROWN) // No dooubling up
+		to_chat(user, SPAN_WARNING("There is no Popper left in this cocoon!"))
+		return FALSE
+
+	growth_state = POPPER_COCOON_HATCHED
+	update_icon()
+	linked_hive.spawn_as_popper(user, src)
+	addtimer(CALLBACK(src, PROC_REF(decay)), 30 SECONDS)
+	return TRUE
+
+/obj/effect/alien/resin/special/popper_cocoon/attack_ghost(mob/dead/observer/user)
+	. = ..()
+	if(growth_state != POPPER_COCOON_GROWN)
+		return FALSE
+
+	if(!linked_hive.can_spawn_as_popper(user))
+		return FALSE
+
+	if(!(tgui_alert(user, "Do you wish to spawn as a Pathogen Popper?", "Confirm Spawn", list("Yes", "No"), 5 SECONDS) == "Yes"))
+		return FALSE
+
+	hatch(user)
+	return TRUE
+
+/obj/effect/alien/resin/special/popper_cocoon/proc/death()
+	if(health <= 0)
+		return FALSE
+
+	health = 0
+	healthcheck()
+	addtimer(CALLBACK(src, PROC_REF(decay)), 30 SECONDS)
+	return TRUE
+
+/obj/effect/alien/resin/special/popper_cocoon/proc/decay()
+	if(mature_time)
+		deltimer(mature_time)
+	mature_time = null
+	qdel(src)
+
+/datum/hive_status/proc/spawn_as_popper(mob/dead/observer/user, atom/source)
+	var/mob/living/carbon/xenomorph/popper/popper = new /mob/living/carbon/xenomorph/popper(source.loc, null, XENO_HIVE_PATHOGEN)
+	user.mind.transfer_to(popper, TRUE)
+	popper.visible_message(SPAN_XENODANGER("A Popper suddenly emerges out of \the [source]!"), SPAN_XENODANGER("You emerge out of \the [source] and awaken from your slumber."))
+	playsound(popper, 'sound/effects/xeno_newlarva.ogg', 25, TRUE)
+	popper.generate_name()
+	popper.timeofdeath = user.timeofdeath
+	msg_admin_niche("[key_name(popper)] has joined as a Pathogen Popper at ([source.x],[source.y],[source.z]).")
+
+/datum/hive_status/proc/can_spawn_as_popper(mob/dead/observer/user)
+	if(!GLOB.hive_datum || ! GLOB.hive_datum[XENO_HIVE_PATHOGEN])
+		return FALSE
+
+	if(jobban_isbanned(user, JOB_XENOMORPH)) // User is jobbanned
+		to_chat(user, SPAN_WARNING("You are banned from playing aliens and cannot spawn as a Pathogen Popper."))
+		return FALSE
+
+	for(var/mob_name in banished_ckeys)
+		if(banished_ckeys[mob_name] == user.ckey)
+			to_chat(user, SPAN_WARNING("You are banished from the [src], you may not rejoin unless the Overmind re-admits you."))
+			return FALSE
+
+	var/mob/living/carbon/human/original_human = user.mind?.original
+	if(istype(original_human) && !original_human.undefibbable && !original_human.chestburst && HAS_TRAIT_FROM(original_human, TRAIT_NESTED, TRAIT_SOURCE_BUCKLE))
+		to_chat(user, SPAN_WARNING("You cannot become a Popper until you are no longer alive in a nest."))
+		return FALSE
+
+	if(world.time - user.client?.player_details.larva_queue_time < XENO_JOIN_DEAD_TIME)
+		var/time_left = floor((user.client.player_details.larva_queue_time + XENO_JOIN_DEAD_TIME - world.time) / 10)
+		to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [XENO_JOIN_DEAD_TIME / 600] minutes have passed ([time_left] seconds remaining)."))
+		return FALSE
+
+	if(world.time - user.timeofdeath < JOIN_AS_LESSER_DRONE_DELAY)
+		var/time_left = floor((user.timeofdeath + JOIN_AS_LESSER_DRONE_DELAY - world.time) / 10)
+		to_chat(user, SPAN_WARNING("You ghosted too recently. You cannot become a Popper until [JOIN_AS_LESSER_DRONE_DELAY / 10] seconds have passed ([time_left] seconds remaining)."))
+		return FALSE
+
+	if(!user.client)
+		return FALSE
+
+	return TRUE
+
+/datum/game_mode/proc/attempt_to_join_as_pathogen_popper(mob/xeno_candidate)
+	var/datum/hive_status/hive
+
+	hive = GLOB.hive_datum[XENO_HIVE_PATHOGEN]
+
+	if(length(hive.totalXenos) <= 0)
+		to_chat(xeno_candidate, SPAN_WARNING("The confluence isn't active at this point for you to join."))
+		return FALSE
+
+
+	var/list/selection_list = list()
+	var/list/selection_list_structure = list()
+
+	for(var/obj/effect/alien/resin/special/popper_cocoon/cocoon as anything in hive.hive_structures[PATHOGEN_STRUCTURE_COCOON])
+		if(cocoon.growth_state == POPPER_COCOON_GROWN)
+			var/cocoon_number = 1
+			var/cocoon_name = "[cocoon.name] at [get_area(cocoon)]"
+			//For renaming the cocoons if we have duplicates
+			var/cocoon_selection_name = cocoon_name
+			while(cocoon_selection_name in selection_list)
+				cocoon_selection_name = "[cocoon_name] ([cocoon_number])"
+				cocoon_number++
+			selection_list += cocoon_selection_name
+			selection_list_structure += cocoon
+
+	if(!length(selection_list))
+		to_chat(xeno_candidate, SPAN_WARNING("The confluence does not have enough cocoons to hatch another Popper!"))
+		return FALSE
+
+	var/prompt = tgui_input_list(xeno_candidate, "Select spawn?", "Spawnpoint Selection", selection_list)
+	if(!prompt)
+		return FALSE
+
+	var/obj/effect/alien/resin/special/popper_cocoon/selected_structure = selection_list_structure[selection_list.Find(prompt)]
+
+	if(!hive.can_spawn_as_popper(xeno_candidate))
+		return FALSE
+
+	selected_structure.hatch(xeno_candidate)
+	return TRUE
+
