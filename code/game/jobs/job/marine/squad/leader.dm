@@ -1,7 +1,8 @@
-
+#define MSSGT_VARIANT "Master Sergeant"
 #define GYSGT_VARIANT "Gunnery Sergeant"
+#define SGTMJR_VARIANT "Sergeant Major"
 #define SSGT_VARIANT "Staff Sergeant"
-
+#define SRSGT_VARIANT "Senior Sergeant"
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
 	total_positions = 4
@@ -59,22 +60,36 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	title = JOB_SQUAD_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/leader/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/upp/lesser_rank
+	job_options = list(SRSGT_VARIANT = "SrSGT", SGTMJR_VARIANT = "SGTMJR")
+
+/datum/job/marine/leader/ai/upp/handle_job_options(option)
+	if(option != SRSGT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/lesser_rank
+	job_options = list(GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
+
+/datum/job/marine/leader/ai/forecon/handle_job_options(option)
+	if(option != GYSGT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
 	job = /datum/job/marine/leader/ai/upp
 
-
 /datum/job/marine/leader/ai/pmc
 	title = JOB_PMCPLAT_LEADER
 	gear_preset = /datum/equipment_preset/uscm/pmc/sl
 	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sl
+	job_options = null
 
 /obj/effect/landmark/start/marine/leader/pmc
 	name = JOB_PMCPLAT_LEADER
@@ -100,5 +115,8 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_RMC
 	job = /datum/job/marine/leader/ai/rmc
 
+#undef MSSGT_VARIANT
 #undef GYSGT_VARIANT
+#undef SGTMJR_VARIANT
 #undef SSGT_VARIANT
+#undef SRSGT_VARIANT

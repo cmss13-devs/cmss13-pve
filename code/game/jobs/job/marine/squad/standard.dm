@@ -1,6 +1,9 @@
 #define STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO 0.4
 
+#define CPL_VARIANT "Corporal"
+#define LCPL_VARIANT "Lance Corporal"
 #define PFC_VARIANT "Private First Class"
+#define SR_PVT_VARIANT "Senior Private"
 #define PVT_VARIANT "Private"
 
 /datum/job/marine/standard
@@ -10,17 +13,22 @@
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/pfc
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/lesser_rank
-	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC")
-	entry_message_body = "You are a rank-and-file <a href='"+WIKI_PLACEHOLDER+"'>Soldier of your standing army</a>, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Ooh-rah!<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
+	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/upper_rank
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL")
+
+/datum/job/marine/standard/on_config_load()
+	entry_message_body = "You are a rank-and-file <a href='[CONFIG_GET(string/wikiarticleurl)]/[URL_WIKI_MARINE_QUICKSTART]'>Soldier of your standing army</a>, and that is your strength. What you lack alone, you gain standing shoulder to shoulder with the men and women of the platoon. Ooh-rah!<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
+	return ..()
 
 /datum/job/marine/standard/set_spawn_positions(count)
 	spawn_positions = max((floor(count * STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO)), 8)
 
 /datum/job/marine/standard/handle_job_options(option)
-	if(option != PVT_VARIANT)
-		gear_preset = initial(gear_preset)
-	else
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
 		gear_preset = gear_preset_secondary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
 
 /datum/job/marine/standard/whiskey
 	title = JOB_WO_SQUAD_MARINE
@@ -59,6 +67,15 @@
 	title = JOB_SQUAD_MARINE_UPP
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/upp/upper_rank
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL")
+
+/datum/job/marine/standard/ai/upp/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_secondary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
 
 /datum/job/marine/standard/ai/forecon
 	title = JOB_SQUAD_MARINE_FORECON
@@ -66,6 +83,15 @@
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/forecon/lesser_rank
+	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/forecon/upper_rank
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
+
+/datum/job/marine/standard/ai/forecon/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_secondary
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_tertiary
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
@@ -73,6 +99,12 @@
 	title = JOB_SQUAD_RTO
 	gear_preset = /datum/equipment_preset/uscm/rto
 	gear_preset_secondary = /datum/equipment_preset/uscm/rto/lesser_rank
+	job_options = list(LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
+
+/datum/job/marine/standard/ai/rto/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/upp
 	name = JOB_SQUAD_MARINE_UPP
@@ -84,6 +116,7 @@
 	title = JOB_PMCPLAT_STANDARD
 	gear_preset = /datum/equipment_preset/uscm/pmc
 	gear_preset_secondary = /datum/equipment_preset/uscm/pmc
+	job_options = null
 
 /obj/effect/landmark/start/marine/pmc
 	name = JOB_PMCPLAT_STANDARD
@@ -114,5 +147,8 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+#undef CPL_VARIANT
+#undef LCPL_VARIANT
 #undef PFC_VARIANT
+#undef SR_PVT_VARIANT
 #undef PVT_VARIANT

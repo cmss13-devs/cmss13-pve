@@ -1,7 +1,7 @@
-
+#define SSGT_VARIANT "Staff Sergeant"
 #define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
-
+#define JSGT_VARIANT "Junior Sergeant"
 /datum/job/marine/tl
 	title = JOB_SQUAD_TEAM_LEADER
 	total_positions = 8
@@ -53,6 +53,12 @@
 	title = JOB_SQUAD_TEAM_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/tl/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/upp/lesser_rank
+	job_options = list(JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
+
+/datum/job/marine/tl/ai/upp/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == JSGT_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /datum/job/marine/tl/ai/forecon
 	total_positions = 1
@@ -60,6 +66,12 @@
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/lesser_rank
+	job_options = list(SGT_VARIANT = "SGT", SSGT_VARIANT = "SSGT")
+
+/datum/job/marine/tl/ai/forecon/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == SGT_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
@@ -71,12 +83,12 @@
 	title = JOB_PMCPLAT_FTL
 	gear_preset = /datum/equipment_preset/uscm/pmc/tl
 	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/tl
+	job_options = null
 
 /obj/effect/landmark/start/marine/tl/pmc
 	name = JOB_PMCPLAT_FTL
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/tl/ai/pmc
-
 
 /obj/effect/landmark/start/marine/tl/forecon
 	name = JOB_SQUAD_TEAM_LEADER_FORECON
@@ -116,3 +128,4 @@
 
 #undef SGT_VARIANT
 #undef CPL_VARIANT
+#undef JSGT_VARIANT
