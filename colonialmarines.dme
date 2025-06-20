@@ -1396,6 +1396,7 @@
 #include "code\game\objects\structures\barricade\handrail.dm"
 #include "code\game\objects\structures\barricade\misc.dm"
 #include "code\game\objects\structures\barricade\non_folding.dm"
+#include "code\game\objects\structures\barricade\razorwire.dm"
 #include "code\game\objects\structures\barricade\sandbags.dm"
 #include "code\game\objects\structures\beacons\deployable_beacons.dm"
 #include "code\game\objects\structures\crates_lockers\closets.dm"
