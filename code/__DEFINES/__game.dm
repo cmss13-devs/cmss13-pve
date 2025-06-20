@@ -47,6 +47,7 @@
 #define MAP_CANYON_32B "Canyon 32B"
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
+#define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
