@@ -91,6 +91,13 @@ endmap
 map calliope_desert_bus
 endmap
 
-map greenvault_ranch
+map oread_garrison
 endmap
+
+<<<<<<< HEAD
+map greenvault_ranch
 g
+=======
+map oread_garrison
+endmap
+>>>>>>> upstream/master
