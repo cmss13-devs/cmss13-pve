@@ -276,8 +276,7 @@
 	},
 /obj/item/card/id/dogtag{
 	layer = 3.001;
-	pixel_x = 2;
-	pixel_y = 0
+	pixel_x = 2
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
@@ -436,12 +435,18 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/structure/disposalpipe/down/almayer{
-	id = "rubbish";
-	dir = 1
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13;
+	pixel_x = 5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -463,9 +468,12 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaS" = (
-/obj/structure/disposalpipe/segment,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/dorms)
+/obj/structure/disposalpipe/down/almayer{
+	id = "rubbish";
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -504,18 +512,15 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "aaX" = (
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
+"aaY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
 /turf/closed/wall/almayer,
-/area/golden_arrow/hangar)
-"aaY" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -525,7 +530,7 @@
 /area/golden_arrow/hangar)
 "aba" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
+	dir = 8;
 	icon_state = "pipe-c"
 	},
 /turf/closed/wall/almayer/outer,
@@ -535,6 +540,13 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "abc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"abd" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -546,7 +558,7 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
-"abd" = (
+"abe" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -554,15 +566,6 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/cryo_cells)
-"abe" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "abf" = (
 /obj/effect/decal/warning_stripes{
@@ -572,6 +575,9 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
 "abg" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
@@ -606,15 +612,21 @@
 /area/golden_arrow/cryo_cells)
 "abj" = (
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	dir = 1
 	},
-/turf/open/floor/almayer/mono,
+/turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "abk" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
 "abl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"abm" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -624,7 +636,7 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/platoonprep)
-"abm" = (
+"abn" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -632,21 +644,6 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
-"abn" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
@@ -666,16 +663,24 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "abq" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/platoonprep)
+"abr" = (
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
-	},
-/turf/open/space/basic,
-/area/space)
-"abr" = (
-/obj/structure/disposalpipe/up/almayer{
-	id = "rubbish";
-	dir = 8
 	},
 /turf/open/space/basic,
 /area/space)
@@ -690,6 +695,13 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"abt" = (
+/obj/structure/disposalpipe/up/almayer{
+	id = "rubbish";
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
 "abu" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3432,7 +3444,6 @@
 /area/golden_arrow/dorms)
 "akL" = (
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -4318,7 +4329,6 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -8263,7 +8273,6 @@
 /area/golden_arrow/hangar)
 "aAK" = (
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -9952,8 +9961,7 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 10;
-	pixel_x = 0
+	pixel_y = 10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -10673,7 +10681,6 @@
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 2;
 	pixel_y = 40
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food,
@@ -11145,7 +11152,6 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -12585,6 +12591,10 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 9;
+	pixel_x = -4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aPE" = (
@@ -15707,10 +15717,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/computer/ares_console/large{
-	pixel_x = -16;
-	pixel_y = -8
-	},
+/obj/structure/machinery/computer/ares_console/large,
 /obj/structure/bed/chair/comfy/ai_interface{
 	buckling_y = 2
 	},
@@ -19191,7 +19198,6 @@
 "ouD" = (
 /obj/structure/machinery/chem_dispenser/canteen,
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 2;
 	pixel_y = 40
 	},
 /turf/open/floor/almayer/plate,
@@ -21032,11 +21038,20 @@
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 13;
-	pixel_x = 7
+/obj/item/ammo_magazine/smartgun{
+	pixel_y = 8;
+	pixel_x = -2
 	},
-/obj/item/ammo_box/rounds/smartgun,
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "vPN" = (
@@ -25329,11 +25344,11 @@ aWh
 awS
 alP
 atN
-abe
 abg
+abj
 axN
-abe
-abe
+abg
+abg
 apV
 atM
 aBk
@@ -25512,7 +25527,7 @@ aFK
 aTS
 aQd
 ase
-abd
+abe
 aqd
 abx
 aeL
@@ -25681,7 +25696,7 @@ aEG
 aEG
 aWh
 aog
-abj
+abl
 anC
 aQr
 aog
@@ -25878,8 +25893,8 @@ alw
 aMQ
 aHk
 aWM
+aaX
 aaS
-aaP
 aEG
 aEG
 aEG
@@ -28701,7 +28716,7 @@ aLz
 aDS
 azx
 aQb
-abc
+abd
 aCm
 acs
 aIR
@@ -28820,7 +28835,7 @@ aUO
 tNi
 aaw
 aOK
-abq
+abr
 aTv
 aNx
 aPh
@@ -28997,7 +29012,7 @@ qRO
 aVX
 aXB
 aEG
-abr
+abt
 aDh
 aPh
 aPh
@@ -30280,8 +30295,8 @@ ahl
 ahl
 ahl
 aMS
+abn
 abm
-abl
 alW
 aun
 agE
@@ -30471,7 +30486,7 @@ aVC
 auU
 aiq
 ayw
-abc
+abd
 aCm
 aEo
 aEo
@@ -30988,7 +31003,7 @@ gry
 bfK
 azW
 aXt
-abn
+abq
 aoq
 aDQ
 aiD
@@ -32066,7 +32081,7 @@ aeW
 aZm
 aEt
 aoz
-aaX
+aaY
 akb
 akb
 akb
@@ -32242,8 +32257,8 @@ arP
 aTD
 adz
 adz
+abc
 aba
-aaY
 akb
 akb
 akb
@@ -32952,7 +32967,7 @@ aZy
 adz
 ayX
 adz
-aza
+aaP
 vRh
 aVD
 akZ
