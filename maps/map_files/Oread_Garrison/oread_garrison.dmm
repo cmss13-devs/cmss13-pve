@@ -3701,10 +3701,6 @@
 /obj/item/weapon/gun/pistol/m4a3{
 	shots_fired = 1
 	},
-/obj/item/ammo_casing/bullet{
-	pixel_y = -6;
-	pixel_x = 4
-	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "si" = (
