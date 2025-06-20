@@ -193,6 +193,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
 		MAP_TAIPAI = new /obj/item/map/taipei(),
+		MAP_LV818_FEATURELESS_JUNGLE = new /obj/item/map/lv522_map (),
 	)
 
 //used by marine equipment machines to spawn the correct map.
