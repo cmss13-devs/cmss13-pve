@@ -1,6 +1,31 @@
 /datum/human_ai_equipment_preset/upp
 	faction = FACTION_UPP
 
+/datum/human_ai_equipment_preset/upp/militia
+	name = "UPP People's Territorial Guardsman"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
+	path = /datum/equipment_preset/upp/militia
+
+/datum/human_ai_equipment_preset/upp/militia/sadar
+	name = "UPP People's Territorial Guardsman Designated Rocketeer"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has a disposable AT launcher."
+	path = /datum/equipment_preset/upp/militia/sadar
+
+/datum/human_ai_equipment_preset/upp/militia/medic
+	name = "UPP People's Territorial Guardsman Sanitar"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic medical supplies and training."
+	path = /datum/equipment_preset/upp/militia/medic
+
+/datum/human_ai_equipment_preset/upp/militia/tech
+	name = "UPP People's Territorial Guardsman Technician"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic technican supplies and training."
+	path = /datum/equipment_preset/upp/militia/tech
+
+/datum/human_ai_equipment_preset/upp/militia/nco
+	name = "UPP People's Territorial Guardsman Sergeant"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one leads the entire bundle of disorganised troops into battle."
+	path = /datum/equipment_preset/upp/militia/nco
+
 /datum/human_ai_equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman"
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
