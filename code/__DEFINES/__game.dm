@@ -49,6 +49,8 @@
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_FOP_CLASSIC "FOP_V1_Classic"
+#define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
 
