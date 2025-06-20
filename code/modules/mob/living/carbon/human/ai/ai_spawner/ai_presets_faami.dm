@@ -1,0 +1,42 @@
+/datum/human_ai_equipment_preset/faami
+	faction = FACTION_FAAMI
+
+/datum/human_ai_equipment_preset/faami/rifle
+	name = "FAAMI Operator"
+	desc = "The main frontline unit for FAAMI, equipped decently and trained well."
+	path = /datum/equipment_preset/faami/rifleman
+
+/datum/human_ai_equipment_preset/faami/rifle/auxiliary
+	name = "FAAMI Auxiliary Operator"
+	desc = "A lesser trained and equipped operator for FAAMI, often responsible for security and garrison work rather than frontline combat."
+	path = /datum/equipment_preset/faami/rifleman/auxiliary
+
+/datum/human_ai_equipment_preset/faami/rifle/mg
+	name = "FAAMI Machinegun Operator"
+	desc = "A higher ranking FAAMI Operator, equipped with a machinegun and training to lay down suppressive fire."
+	path = /datum/equipment_preset/faami/rifleman/mg
+
+/datum/human_ai_equipment_preset/faami/rifle/tech
+	name = "FAAMI Field Technician"
+	desc = "A FAAMI Technician, equipped for frontline work along with their squad."
+	path = /datum/equipment_preset/faami/rifleman/tech
+
+/datum/human_ai_equipment_preset/faami/rifle/medic
+	name = "FAAMI Field Medic"
+	desc = "A FAAMI Medic, equipped for frontline work along with their squad."
+	path = /datum/equipment_preset/faami/rifleman/medic
+
+/datum/human_ai_equipment_preset/faami/rifle/sl
+	name = "FAAMI Squad Leader"
+	desc = "A FAAMI Team Leader, given better training to manage a small team of operators."
+	path = /datum/equipment_preset/faami/rifleman/squadlead
+
+/datum/human_ai_equipment_preset/faami/rifle/scout
+	name = "FAAMI Scout"
+	desc = "A FAAMI Scout, used for... scouting. Otherwise, they can also act as a team leader."
+	path = /datum/equipment_preset/faami/rifleman/scout
+
+/datum/human_ai_equipment_preset/faami/rifle/radio
+	name = "FAAMI Radioman"
+	desc = "A higher ranking FAAMI Operator, equipped with a radiopack for communication between platoons and to Command."
+	path = /datum/equipment_preset/faami/rifleman/scout/radio

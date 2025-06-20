@@ -428,6 +428,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FAAMI_MEDIC "FAAMI Field Medic"
 #define JOB_FAAMI_TECH "FAAMI Field Technician"
 #define JOB_FAAMI_MG "FAAMI Machinegunner"
+#define JOB_FAAMI_TL "FAAMI Team Leader"
 #define JOB_FAAMI_SL "FAAMI Squad Leader"
 #define JOB_FAAMI_LT "FAAMI Field Officer"
 #define JOB_FAAMI_SCOUT "FAAMI Scout"

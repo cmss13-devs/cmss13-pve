@@ -77,7 +77,6 @@ $_channel_map: (
   'upp-cmd': $upp,
   'upp-kdo': $upp,
   'upp': $upp,
-  'clf-med': $clf,
   'clf-engi': $clf,
   'clf-cmd': $clf,
   'clf-cct': $clf,
@@ -88,6 +87,7 @@ $_channel_map: (
   'pmc-cmd': $pmc,
   'specops': $pmc,
   'pmc': $pmc,
+  'faami': $intel,
 );
 
 $channel_keys: map.keys($_channel_map) !default;

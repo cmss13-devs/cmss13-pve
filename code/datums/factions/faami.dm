@@ -19,6 +19,8 @@
 			hud_icon_state = "mg"
 		if(JOB_FAAMI_TECH)
 			hud_icon_state = "tech"
+		if(JOB_FAAMI_TL)
+			hud_icon_state = "rifle"
 		if(JOB_FAAMI_SL)
 			hud_icon_state = "sl"
 		if(JOB_FAAMI_LT)

@@ -6,13 +6,31 @@
 
 /datum/paygrade/faami
 	paygrade = PAY_SHORT_FA2
-	name = "FAAMI Operator"
-	prefix = "Operator"
+	name = "Soldat First Class"
+	prefix = "Soldat"
 	ranking = 1
 
 /datum/paygrade/faami/auxiliary
 	paygrade = PAY_SHORT_FA1
-	name = "FAAMI Operator"
-	prefix = "Operator"
+	name = "Soldat"
+	prefix = "Soldat"
 	ranking = 0
 	pay_multiplier = 0.9
+
+/datum/paygrade/faami/support
+	paygrade = PAY_SHORT_FA3
+	name = "Soldat Corporal"
+	prefix = "Soldat"
+	ranking = 2
+
+/datum/paygrade/faami/mg
+	paygrade = PAY_SHORT_FA4
+	name = "Soldat Chief Corporal"
+	prefix = "Soldat"
+	ranking = 3
+
+/datum/paygrade/faami/sl
+	paygrade = PAY_SHORT_FA6
+	name = "Soldat Sergeant"
+	prefix = "Soldat"
+	ranking = 4

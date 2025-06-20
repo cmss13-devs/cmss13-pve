@@ -578,6 +578,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	networks_transmit = list(FACTION_UPP)
 	phone_category = PHONE_UPP_SOLDIER
 
+/obj/item/storage/backpack/marine/satchel/rto/merc
+	name = "\improper Mercenary Radio Telephone Pack"
+	networks_receive = list(FACTION_FAAMI)
+	networks_transmit = list(FACTION_FAAMI)
+	max_storage_space = 10
+
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
