@@ -124,6 +124,10 @@
 	display_maptext = TRUE
 	maptext_label = "Ad"
 
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated/New(loc, ...)
+	. = ..()
+	new /obj/item/device/helmet_visor/medical/advanced(loc)
+
 /obj/item/reagent_container/hypospray/autoinjector/dexalinp
 	name = "dexalin plus autoinjector"
 	chemname = "dexalinp"
@@ -347,6 +351,13 @@
 	icon_state = "emptyskill"
 	item_state = "emptyskill"
 	skilllock = SKILL_MEDICAL_DEFAULT
+
+/obj/item/reagent_container/hypospray/autoinjector/nutriment
+	name = "nutriment autoinjector"
+	chemname = "nutriment"
+	desc = "An autoinjector loaded with 3 uses of a nutrition replacement mix. Not as efficient as eating real food."
+	amount_per_transfer_from_this = 8
+	volume = 8 * INJECTOR_USES
 
 
 /obj/item/reagent_container/hypospray/autoinjector/empty
