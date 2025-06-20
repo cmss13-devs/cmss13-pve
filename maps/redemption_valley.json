@@ -1,0 +1,14 @@
+{
+    "map_name": "Redemption Valley",
+    "short_name": "Valley",
+    "map_path": "map_files/redemption_valley",
+    "map_file": "redemption_valley.dmm",
+    "webmap_url": "NewVaradero",
+
+    "weather_holder": "/datum/weather_ss_map_holder/redemption_valley",
+
+    "map_item_type": "/obj/item/map/new_varadero",
+
+    "camouflage": "jungle"
+
+}
