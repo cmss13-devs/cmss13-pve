@@ -49,7 +49,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Whether the phone is able to be called or not
 	var/enabled = TRUE
 
-/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+	///If the phone is activated by COMSIG_PHONE_BUTTON_USE or not. And if true Will only allow COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND if recieving a call.
+	var/overlay_interactable = FALSE
+/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, overlay_interactable)
 	. = ..()
 
 	if(!istype(parent, /atom))
@@ -80,7 +82,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	return ..()
 
 /// Handles all of our variables usually set in Initialize(), needs to be a proc so virtual phones don't get incorrect signals or a handset
-/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, overlay_interactable)
 	src.phone_category = isnull(phone_category) ? src.phone_category : phone_category
 	src.phone_color = isnull(phone_color) ? src.phone_color : phone_color
 	src.phone_id = isnull(phone_id) ? src.phone_id : phone_id
@@ -89,13 +91,16 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	src.networks_receive = isnull(networks_receive) ? src.networks_receive : networks_receive.Copy()
 	src.networks_transmit = isnull(networks_transmit) ? src.networks_transmit : networks_transmit.Copy()
 	src.holder = holder ? holder : parent
+	src.overlay_interactable = isnull(overlay_interactable) ? src.overlay_interactable : overlay_interactable
 
 	phone_handset = new(null, src, src.holder)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
-	RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
-
+	if(!src.overlay_interactable)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
+	else
+		RegisterSignal(src.holder, COMSIG_ATOM_PHONE_BUTTON_USE, PROC_REF(use_phone))
 	if(istype(src.holder, /obj/item))
 		RegisterSignal(src.holder, COMSIG_ITEM_PICKUP, PROC_REF(holder_picked_up))
 		RegisterSignal(src.holder, COMSIG_ITEM_DROPPED, PROC_REF(holder_dropped))
@@ -139,6 +144,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return
 
 	picked_up_call(user)
+	if(src.overlay_interactable)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	calling_phone.other_phone_picked_up_call()
 
 	return COMPONENT_CANCEL_HUMAN_ATTACK_HAND
@@ -301,6 +308,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	calling_phone = incoming_call
 	last_caller = incoming_call.phone_id
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_RINGING)
+	if(src.overlay_interactable)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
 	ringing_loop.start()
 
 /// What we do after our call is set up from call_phone()
@@ -325,7 +334,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		calling_phone.reset_call(timeout, recursed = TRUE)
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_STOPPED_RINGING)
-
+	if(src.overlay_interactable)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	ringing_loop?.stop()
 
 	handle_reset_call_message(timeout, recursed)
