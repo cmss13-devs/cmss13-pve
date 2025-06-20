@@ -232,7 +232,7 @@
 	rank = JOB_SQUAD_MEDIC
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HM"
-	skills = /datum/skills/combat_medic
+	skills = /datum/skills/combat_medic_pve
 
 	minimap_icon = "medic"
 
