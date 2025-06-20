@@ -33,6 +33,8 @@
 			hud_icon_state = "ct"
 		if(JOB_ARMY_MEDIC)
 			hud_icon_state = "cmt"
+		if(JOB_ARMY_TANK_CREW)
+			hud_icon_state = "tc"
 		if(JOB_ARMY_NCO)
 			hud_icon_state = "tl"
 		if(JOB_ARMY_SNCO)
