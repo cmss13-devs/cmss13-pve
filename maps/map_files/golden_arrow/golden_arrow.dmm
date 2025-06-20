@@ -17100,12 +17100,12 @@
 	},
 /obj/item/ammo_box/magazine/m4a3{
 	pixel_y = 11;
-	pixel_x = -7;
+	pixel_x = -8;
 	layer = 2.98
 	},
 /obj/item/ammo_box/magazine/mk1{
 	pixel_y = 12;
-	pixel_x = 16;
+	pixel_x = 13;
 	layer = 2.98
 	},
 /turf/open/floor/almayer,
@@ -21039,18 +21039,20 @@
 	pixel_y = -1
 	},
 /obj/item/ammo_magazine/smartgun{
-	pixel_y = 8;
-	pixel_x = -2
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_x = 9
-	},
-/obj/item/ammo_magazine/smartgun{
+	pixel_y = 4;
 	pixel_x = -9
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
