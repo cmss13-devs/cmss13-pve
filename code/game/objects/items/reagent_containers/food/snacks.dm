@@ -521,21 +521,6 @@
 	visible_message(SPAN_WARNING("[name] has been squashed."),SPAN_WARNING("You hear a smack."))
 	qdel(src)
 
-/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype( W, /obj/item/toy/crayon ))
-		var/obj/item/toy/crayon/C = W
-		var/clr = C.colorName
-
-		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
-			to_chat(usr, SPAN_NOTICE(" The egg refuses to take on this color!"))
-			return
-
-		to_chat(usr, SPAN_NOTICE(" You color \the [src] [clr]"))
-		icon_state = "egg-[clr]"
-		egg_color = clr
-	else
-		..()
-
 /obj/item/reagent_container/food/snacks/egg/blue
 	icon_state = "egg-blue"
 	egg_color = "blue"
@@ -2956,12 +2941,28 @@
 		qdel(src)
 
 // Egg + flour = dough
-/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/reagent_container/food/snacks/flour))
+/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W, mob/living/user, list/mods)
+	if(istype(W, /obj/item/reagent_container/food/snacks/flour))
 		new /obj/item/reagent_container/food/snacks/dough(get_turf(src))
 		to_chat(user, "You make some dough.")
 		qdel(W)
 		qdel(src)
+		return TRUE
+
+	if(istype(W, /obj/item/toy/crayon))
+		var/obj/item/toy/crayon/C = W
+		var/clr = C.colorName
+
+		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
+			to_chat(usr, SPAN_NOTICE("The egg refuses to take on this color!"))
+			return
+
+		to_chat(usr, SPAN_NOTICE("You color [src] [clr]"))
+		icon_state = "egg-[clr]"
+		egg_color = clr
+		return TRUE
+
+	return ..()
 
 /obj/item/reagent_container/food/snacks/dough
 	name = "dough"
@@ -3129,8 +3130,19 @@
 		new /obj/item/reagent_container/food/snacks/rawsticks(get_turf(src))
 		to_chat(user, "You cut the potato.")
 		qdel(src)
-	else
-		..()
+		return TRUE
+
+	if(istype(W, /obj/item/stack/cable_coil))
+		var/obj/item/stack/cable_coil/C = W
+		if(C.use(5))
+			to_chat(user, SPAN_NOTICE("You add some cable to the potato and slide it inside the battery encasing."))
+			var/obj/item/cell/potato/pocell = new /obj/item/cell/potato(user.loc)
+			pocell.maxcharge = src.potency * 10
+			pocell.charge = pocell.maxcharge
+			qdel(src)
+			return TRUE
+
+	return ..()
 
 /obj/item/reagent_container/food/snacks/rawsticks
 	name = "raw potato sticks"
@@ -3264,18 +3276,18 @@
 		icon_state = "open-hotdog"
 
 /*
-/obj/item/reagent_container/food/snacks/upp
+//obj/item/reagent_container/food/snacks/upp
 	name = "\improper UPP survival ration"
 	desc = "A small compressed package containing a single portion of food you cannot distinguish. Mass produced as emergency rations they are available in abundance anywhere in the Union and are packed with nutritional additives. They are commonplace in the diets of many citizens of the Union who eat them out of convenience in place of more flavourful nutrient bars, or as nutritional additives to dishes. Despite popular myths in the UA, they are not the standard MRE of the UPPAC, but are utilized in scenarios where the actual MRE supply has been depleted, as one would expect of survival food."
 	icon_state = "upp_ration"
 	bitesize = 4
 	package = 1
 
-/obj/item/reagent_container/food/snacks/upp/Initialize()
+//obj/item/reagent_container/food/snacks/upp/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 14)
 
-/obj/item/reagent_container/food/snacks/upp/attack_self(mob/user)
+//obj/item/reagent_container/food/snacks/upp/attack_self(mob/user)
 	..()
 
 	if(package)

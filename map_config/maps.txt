@@ -83,11 +83,17 @@ endmap
 map canyon_32b
 endmap
 
+Kleschers-Research-Site
 map kleschers_research_site
+
+map taipei_station
 endmap
 
 map calliope_highway
 endmap
 
 map calliope_desert_bus
+endmap
+
+map oread_garrison
 endmap
