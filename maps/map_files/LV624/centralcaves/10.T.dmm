@@ -181,7 +181,7 @@
 /turf/open/floor/warning/northwest,
 /area/lv624/ground/barrens/containers)
 "Z" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
 

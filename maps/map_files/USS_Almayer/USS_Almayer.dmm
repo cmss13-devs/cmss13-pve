@@ -15,6 +15,12 @@
 	},
 /turf/open/space,
 /area/space)
+"aac" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/closed/wall/almayer/white,
+/area/almayer/medical/morgue)
 "aag" = (
 /turf/open/floor/almayer_hull,
 /area/space)
@@ -542,7 +548,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/engineering/lower/engine_core)
 "ahN" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/floor/grass,
 /area/almayer/living/starboard_garden)
 "ahP" = (
@@ -733,7 +739,7 @@
 /turf/open/floor/almayer/orange,
 /area/almayer/engineering/upper_engineering/port)
 "alg" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /obj/structure/bed/chair{
 	dir = 4
 	},
@@ -1962,7 +1968,7 @@
 /turf/open/floor/almayer,
 /area/almayer/command/cic)
 "aIx" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/floor/grass,
 /area/almayer/living/starboard_garden)
 "aIB" = (
@@ -96383,7 +96389,7 @@ fcn
 hoY
 mWZ
 mWZ
-aoe
+aac
 rmq
 evO
 pPu

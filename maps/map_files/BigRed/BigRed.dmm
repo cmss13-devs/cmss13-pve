@@ -16448,7 +16448,7 @@
 /area/bigredv2/caves/lambda/xenobiology)
 "lRf" = (
 /obj/effect/spawner/random/tool,
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "lRG" = (
 /obj/structure/bed/chair{
@@ -20056,7 +20056,7 @@
 /area/bigredv2/outside/virology)
 "oZl" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "oZo" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -22130,7 +22130,7 @@
 	name = "handful of HE/FRAG shells (12g)";
 	pixel_y = 3
 	},
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "qOT" = (
 /obj/structure/surface/table,
@@ -22831,7 +22831,7 @@
 /obj/structure/prop/almayer/cannon_cable_connector{
 	name = "\improper Cable connector"
 	},
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "rxF" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
@@ -27612,7 +27612,7 @@
 	desc = "A bewildering tangle of machinery and pipes.";
 	name = "\improper coolant feed"
 	},
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "vyf" = (
 /turf/open/floor/asteroidwarning/west,
@@ -27717,7 +27717,7 @@
 	name = "\improper Cable connector"
 	},
 /obj/structure/cable,
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "vCz" = (
 /obj/structure/sink{
@@ -27801,7 +27801,7 @@
 /area/bigredv2/outside/filtration_cave_cas)
 "vEM" = (
 /obj/effect/spawner/random/toolbox,
-/turf/open/shuttle/escapepod/floor5,
+/turf/open/shuttle/escapepod/floor1/north,
 /area/bigredv2/oob)
 "vEO" = (
 /turf/open/floor/warnwhite/west,

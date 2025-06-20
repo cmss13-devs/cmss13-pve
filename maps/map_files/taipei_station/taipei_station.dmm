@@ -13315,7 +13315,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/taipei/atrium/offices)

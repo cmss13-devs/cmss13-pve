@@ -8,7 +8,7 @@
 	var/content_type
 	var/base_icon
 	var/packet_icon
-	has_gamemode_skin = FALSE
+	flags_atom = parent_type::flags_atom | NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/box/packet/post_skin_selection()
 	base_icon = icon_state

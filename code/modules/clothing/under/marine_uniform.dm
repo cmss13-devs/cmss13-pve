@@ -33,9 +33,8 @@
 			name += " cold-weather uniform"
 		else
 			name += " uniform"
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type, override_icon_state, new_protection)
-	. = ..() //Done after above in case gamemode skin is missing sprites.
+	select_gamemode_skin(type, override_icon_state, new_protection)
+	return ..() //Done after above in case gamemode skin is missing sprites.
 
 /obj/item/clothing/under/marine/set_sensors(mob/user)
 	if(!skillcheckexplicit(user, SKILL_ANTAG, SKILL_ANTAG_AGENT))
@@ -43,8 +42,12 @@
 		return
 	. = ..()
 
-/obj/item/clothing/under/marine/standard
-	flags_atom = NO_SNOW_TYPE
+/obj/item/clothing/under/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	for(var/i in map_variants_roll_accessories)
+		if(findtext(icon_state, i, 1, 3))
+			flags_jumpsuit |= UNIFORM_DO_NOT_HIDE_ACCESSORIES
+	return .
 
 /obj/item/clothing/under/marine/medic
 	name = "\improper USCM corpsman uniform"
@@ -54,7 +57,7 @@
 	specialty = "USCM Hospital Corpsman"
 
 /obj/item/clothing/under/marine/medic/standard
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/engineer
 	name = "\improper USCM combat technician uniform"
@@ -64,12 +67,12 @@
 	specialty = "USCM Combat Technician"
 
 /obj/item/clothing/under/marine/engineer/standard
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/engineer/darker
 	icon_state = "d_marine_engineer"
 	worn_state = "d_marine_engineer"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/rto
 	name = "\improper USCM radio telephone operator uniform"
@@ -103,7 +106,7 @@
 	worn_state = "chef_uniform"
 	flags_jumpsuit = FALSE
 	specialty = "USCM mess technician"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/mp
 	name = "USCMC military police uniform"
@@ -115,12 +118,12 @@
 	specialty = "military police"
 
 /obj/item/clothing/under/marine/mp/standard
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/mp/darker
 	icon_state = "d_MP_jumpsuit"
 	worn_state = "d_MP_jumpsuit"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/warden
 	name = "military warden jumpsuit"
@@ -130,7 +133,7 @@
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/warden)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_SLEEVE_CUTTABLE|UNIFORM_JACKET_REMOVABLE
 	specialty = "military warden"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer
 	name = "marine officer uniform"
@@ -142,6 +145,7 @@
 	flags_jumpsuit = FALSE
 	specialty = "marine officer"
 	black_market_value = 25
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/clothing/under/marine/officer/intel
 	name = "\improper marine intelligence officer sweatsuit"
@@ -160,14 +164,14 @@
 	suit_restricted = list(/obj/item/clothing/suit/storage/marine, /obj/item/clothing/suit/armor/riot/marine, /obj/item/clothing/suit/storage/jacket/marine/service/cmp)
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	specialty = "chief MP"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/technical
 	name = "technical officer uniform"
 	icon_state = "johnny"
 	worn_state = "johnny"
 	specialty = "technical officer"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/pilot
 	name = "pilot bodysuit"
@@ -187,7 +191,7 @@
 	item_state = "pilot_flightsuit_alt"
 	worn_state = "pilot_flightsuit_alt"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
 
 /obj/item/clothing/under/marine/officer/pilot/dcc
@@ -197,7 +201,7 @@
 	item_state = "crewchief_flightsuit"
 	worn_state = "crewchief_flightsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/tanker
 	name = "vehicle crewman uniform"
@@ -217,7 +221,7 @@
 	worn_state = "service_uniform"
 	specialty = "marine service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/boiler
 	name = "\improper multi-branch operations boilersuit"
@@ -226,7 +230,7 @@
 	item_state = "command_jumpsuit"
 	worn_state = "command_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/qm_suit
 	name = "logistics officer uniform"
@@ -234,7 +238,7 @@
 	icon_state = "RO_jumpsuit"
 	worn_state = "RO_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/cargo
 	name = "support uniform"
@@ -242,7 +246,7 @@
 	icon_state = "cargotech"
 	worn_state = "cargotech"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/command
 	name = "\improper USCM officer uniform"
@@ -257,7 +261,7 @@
 	item_state = "general_jumpsuit"
 	worn_state = "general_jumpsuit"
 	specialty = "general"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/ce
 	name = "chief engineer uniform"
@@ -267,7 +271,7 @@
 	icon_state = "EC_jumpsuit"
 	worn_state = "EC_jumpsuit"
 	specialty = "chief engineer"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	item_state_slots = list(WEAR_BODY = "EC_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/engi
@@ -279,7 +283,7 @@
 	worn_state = "mt_jumpsuit"
 	specialty = "crew"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/engi/OT
@@ -298,7 +302,7 @@
 	icon_state = "research_jumpsuit"
 	worn_state = "research_jumpsuit"
 	specialty = "researcher"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/formal/servicedress
 	name = "commanding officer's dress shirt"
@@ -306,7 +310,7 @@
 	specialty = "captain's service dress"
 	icon_state = "CO_service"
 	worn_state = "CO_service"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/formal/white
 	name = "Commanding Officer's white formal uniform"
@@ -314,7 +318,7 @@
 	icon_state = "CO_formal_white"
 	worn_state = "CO_formal_white"
 	specialty = "captain's white formal"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/officer/formal/black
 	name = "Commanding Officer's gray formal uniform"
@@ -322,7 +326,7 @@
 	icon_state = "CO_formal_black"
 	worn_state = "CO_formal_black"
 	specialty = "captain's gray formal"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/dress
 	name = "marine formal service uniform"
@@ -330,7 +334,7 @@
 	icon_state = "formal_jumpsuit"
 	worn_state = "formal_jumpsuit"
 	specialty = "marine formal"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 	flags_jumpsuit = FALSE
 	black_market_value = 15
 
@@ -374,7 +378,7 @@
 
 /obj/item/clothing/under/marine/mp/provost
 	flags_jumpsuit = FALSE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 	name = "\improper Provost Uniform"
 	desc = "The crisp uniform of a Provost Officer."
@@ -409,7 +413,7 @@
 	name = "\improper UAAC-TIS Special Agent Uniform"
 	desc = "A modified USCM Provost uniform, with its original insignia replaced by those of the UAAC-TIS Intelligence Service. TIS Special Agents are often recruited from the upper echelons of law enforcement agencies in various UA armed forces. These recruits often take all their gear, uniform included with them and later modify them to include TIS and UAAC insignia."
 	flags_jumpsuit = FALSE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	siemens_coefficient = 0.9
 	icon_state = "tis"
 	worn_state = "tis"
@@ -436,7 +440,7 @@
 	desc = "Torn, Burned and blood stained. This uniform has seen much more than you could possibly imagine."
 	icon_state = "damage_marine_jumpsuit"
 	worn_state = "damage_marine_jumpsuit"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/under/marine/reconnaissance/Initialize(mapload)
 	. = ..()
@@ -455,7 +459,7 @@
 
 /obj/item/clothing/under/marine/veteran
 	flags_jumpsuit = FALSE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make them keep their original name.
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE //Let's make them keep their original name.
 
 //=========================//Marine Raiders\\================================\\
 
@@ -465,7 +469,7 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	icon_state = "marsoc_jumpsuit"
 	worn_state = "marsoc_jumpsuit"
-	flags_item = NO_SNOW_TYPE
+	flags_item = NO_GAMEMODE_SKIN
 
 //=========================//PMC\\================================\\
 
@@ -656,7 +660,7 @@
 	desc = "Overalls made of kevlon cover a snazzy blue dress shirt. UA branded security uniforms are notorious for their association with anti-union riot control teams."
 	icon_state = "ua_riot"
 	worn_state = "ua_riot"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make them keep their original name.
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE //Let's make them keep their original name.
 	flags_jumpsuit = FALSE
 	suit_restricted = null
 
@@ -665,7 +669,7 @@
 	desc = "A Unified Clown Federation combat uniform. Features the latest in anti-mime technology."
 	icon_state = "clown"
 	worn_state = "clown"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make them keep their original name.
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE //Let's make them keep their original name.
 	black_market_value = 25
 
 /obj/item/clothing/under/pizza
@@ -943,7 +947,7 @@
 	desc = "A relaxed and robust uniform fit for any potential reporting needs."
 	icon_state = "cc_white"
 	worn_state = "cc_white"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
 	)
@@ -1030,7 +1034,7 @@
 	item_state = "pilot_flightsuit_alt"
 	worn_state = "pilot_flightsuit_alt"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
 
 /obj/item/clothing/under/rank/synthetic/old
@@ -1097,7 +1101,7 @@
 	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
 	icon_state = "rmc_uniform"
 	worn_state = "rmc_uniform"
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	contained_sprite = TRUE
 	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
 
@@ -1115,7 +1119,7 @@
 	name = "\improper M2 MOPP suit"
 	desc = "M2 MOPP suits are purpose built to defend the wearer against biological and radioactive contaminants, from nerve gas to nuclear fallout."
 	desc_lore = "The several-paragraph long expository pamphlet that usually comes with these is missing."
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	flags_jumpsuit = NO_FLAGS
 	icon_state = "cbrn"
 	worn_state = "cbrn"
@@ -1129,7 +1133,7 @@
 	name = "\improper M3 MOPP suit"
 	desc = "M3 MOPP suits are specially designed and engineered to protect the wearer from unshielded exposure to any Chemical, Biological, Radiological, or Nuclear (CBRN) threats in the field. The suit has a recommended lifespan of twenty-four hours once contact with a toxic environment is made, but depending on the severity this can be shortened to eight hours or less."
 	desc_lore = "Since the outbreak of the New Earth Plague in 2157 and the subsequent Interstellar Commerce Commission (ICC) sanctioned decontamination of the colony and its 40 million inhabitants, the abandoned colony has been left under a strict quarantine blockade to prevent any potential scavengers from spreading what’s left of the highly-durable airborne flesh-eating bacteria. Following those events, the three major superpowers have been investing heavily in the development and procurement of CBRN equipment, in no small part due to the extensive damage that the plague and other similar bioweapons could do. The \"Marine 70\" upgrade package and the launch of the M3 pattern armor series saw the first M3-M prototypes approved for CBRN usage."
-	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE|NO_GAMEMODE_SKIN
 	icon_state = "cbrn"
 	worn_state = "cbrn"
 	flags_jumpsuit = NO_FLAGS
@@ -1294,7 +1298,7 @@
 	icon_state = "boilersuit_khaki"
 	worn_state = "boilersuit_khaki"
 	suit_restricted = null //so most officers can wear whatever suit they want
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	item_state_slots = list(WEAR_BODY = "boilersuit_khaki")
 
 /obj/item/clothing/under/navy/tech
@@ -1306,7 +1310,7 @@
 	icon_state = "mt_jumpsuit"
 	worn_state = "mt_jumpsuit"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
 
 /obj/item/clothing/under/marine/officer/engi/OT/navy
@@ -1315,20 +1319,20 @@
 	icon_state = "ot_jumpsuit"
 	worn_state = "ot_jumpsuit"
 	item_state_slots = list(WEAR_BODY = "ot_jumpsuit")
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/engi/navy/tech
 	name = "\improper engineering technician uniform"
 	desc = "The uniform of an aerospace force engineering technician. Specially treated for hazardous materials handing and hostile conditions, with reinforced material around the elbows and knees."
 	icon_state = "boilersuit_darkblue"
 	worn_state = "boilersuit_darkblue"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/pilot/flight/para
 	name = "\improper para-rescue flightsuit"
 	desc = "A flightsuit worn by the elite para-rescue forces of the USASF, with all the necessary straps and rigging for supporting the sheer balls these servicemen have. Looks badass."
 	suit_restricted = null
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/intel/navy
 	name = "\improper USASF combat uniform"
@@ -1337,7 +1341,7 @@
 	item_state = "jfo"
 	worn_state = "jfo"
 	suit_restricted = null
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/standard/army
 	name = "\improper army combat uniform"
@@ -1345,5 +1349,5 @@
 	item_state = "army_jumpsuit"
 	worn_state = "army_jumpsuit"
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_GAMEMODE_SKIN|NO_NAME_OVERRIDE
 

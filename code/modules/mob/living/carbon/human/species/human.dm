@@ -86,9 +86,8 @@
 	name_plural = "Humans"
 	primitive = /mob/living/carbon/human/monkey
 	unarmed_type = /datum/unarmed_attack/punch
-	flags = HAS_SKIN_TONE|HAS_LIPS|HAS_UNDERWEAR|HAS_HARDCRIT
+	flags = HAS_SKIN_TONE|HAS_LIPS|HAS_UNDERWEAR|HAS_HARDCRIT|HAS_SKIN_COLOR
 	mob_flags = KNOWS_TECHNOLOGY
-	uses_skin_color = TRUE
 	special_body_types = TRUE
 
 /datum/species/human/handle_on_fire(humanoidmob)

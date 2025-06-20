@@ -7998,7 +7998,7 @@
 /obj/structure/window{
 	dir = 4
 	},
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1,
 /area/lv295/indoors/sublevel_3)
 "zq" = (
@@ -12328,7 +12328,7 @@
 /obj/structure/window{
 	dir = 8
 	},
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1,
 /area/lv295/indoors/sublevel_3)
 "LY" = (
@@ -14264,7 +14264,7 @@
 	layer = 4.1;
 	pixel_y = 6
 	},
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1,
 /area/lv295/indoors/sublevel_3)
 "RY" = (
@@ -16712,7 +16712,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/lv295/indoors/sublevel_3)
 "Zy" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/gm/grass/grass1,
 /area/lv295/indoors/sublevel_3)
 "Zz" = (

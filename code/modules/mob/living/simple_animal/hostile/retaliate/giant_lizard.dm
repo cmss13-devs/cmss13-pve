@@ -44,8 +44,13 @@
 	///Reference to the ZZzzz sleep overlay when resting.
 	var/sleep_overlay
 
+	///How far the mob is willing to chase before losing its target.
+	var/max_attack_distance = 16
 	///If 0, moves the mob out of attacking into idle state. Used to prevent the mob from chasing down targets that did not mean to hurt it.
 	var/aggression_value = 0
+	///Every type of structure that can get attacked in the DestroySurroundings() proc.
+	var/list/destruction_targets = list(/obj/structure/mineral_door/resin, /obj/structure/window, /obj/structure/closet, /obj/structure/surface/table, /obj/structure/grille, /obj/structure/barricade, /obj/structure/machinery/door, /obj/structure/largecrate)
+
 
 	///Emotes to play when being pet by a friend.
 	var/list/pet_emotes = list("closes its eyes.", "growls happily.", "wags its tail.", "rolls on the ground.")
@@ -71,9 +76,10 @@
 	var/retreat_attempts = 0
 	///Tied directly to retreat_attempts. If our retreat fail, then we will completely stop trying to retreat for the length of this cooldown.
 	COOLDOWN_DECLARE(retreat_cooldown)
-
-	///The food object that the mob is trying to eat.
-	var/food_target
+	///Can this mob be tamed?
+	var/tameable = TRUE
+	/// A weakref to the food object that the mob is trying to eat.
+	var/datum/weakref/food_target_ref
 	///A list of foods the mob is interested in eating.
 	var/list/acceptable_foods = list(/obj/item/reagent_container/food/snacks/meat, /obj/item/reagent_container/food/snacks/mre_food, /obj/item/reagent_container/food/snacks/resin_fruit)
 	///Is the mob currently eating the food_target?
@@ -132,7 +138,7 @@
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/proc/find_target_on_trait_loss()
 	is_retreating = FALSE
 	if(stance > HOSTILE_STANCE_ALERT)
-		FindTarget()
+		target_mob_ref = WEAKREF(FindTarget())
 		MoveToTarget()
 
 //procs for handling sleeping icons when resting
@@ -249,7 +255,7 @@
 			addtimer(VARSET_CALLBACK(src, speed, LIZARD_SPEED_NORMAL_CLIENT), 8 SECONDS)
 			addtimer(VARSET_CALLBACK(src, is_retreating, FALSE), 8 SECONDS)
 		else
-			MoveTo(target_mob, 12, TRUE, 8 SECONDS)
+			MoveTo(target_mob_ref?.resolve(), 12, TRUE, 4.5 SECONDS)
 	if(damage >= 10 && damagetype == BRUTE)
 		add_splatter_floor(loc, TRUE)
 		bleed_ticks = clamp(bleed_ticks + ceil(damage / 10), 0, 30)
@@ -261,8 +267,8 @@
 
 	//forget EVERYTHING. we need to stop the flames!!!
 	stance = HOSTILE_STANCE_ALERT
-	target_mob = null
-	food_target = null
+	target_mob_ref = null
+	food_target_ref = null
 	is_eating = FALSE
 	manual_emote("hisses in agony!")
 	playsound(src, "giant_lizard_hiss", 40)
@@ -285,6 +291,13 @@
 	AdjustStun(-0.5)
 	if(aggression_value > 0)
 		aggression_value--
+
+	//it is possible for the mob to keep a target_mob saved, yet be stuck in alert stance and never lose said target.
+	//this will cause it to be paralyzed and do nothing for the rest of its life, so this specific check is here to remedy that (hopefully)
+	var/mob/living/target_mob = target_mob_ref?.resolve()
+	if(!client && stance == HOSTILE_STANCE_ALERT && target_mob && !is_retreating && !on_fire)
+		target_mob_ref = WEAKREF(FindTarget())
+		MoveToTarget()
 
 	if(resting && stat != DEAD)
 		health += maxHealth * 0.05
@@ -345,15 +358,19 @@
 		stance = HOSTILE_STANCE_IDLE
 
 	//if we're hungry and we don't have already have our eyes on a snack, try eating food if possible
-	if(!food_target && COOLDOWN_FINISHED(src, food_cooldown))
+	var/obj/item/reagent_container/food/snacks/food_target = food_target_ref?.resolve()
+	if(tameable && !food_target && COOLDOWN_FINISHED(src, food_cooldown))
 		for(var/obj/item/reagent_container/food/snacks/food in view(6, src))
-			if(!is_type_in_list(food, acceptable_foods))
-				continue
-			food_target = food
-			stance = HOSTILE_STANCE_ALERT
-			stop_automated_movement = TRUE
-			MoveTo(food_target)
-			break
+			var/is_meat = locate(/datum/reagent/nutriment/meat) in food.reagents.reagent_list
+
+			if(is_meat || is_type_in_list(food, acceptable_foods))
+				food_target_ref = WEAKREF(food)
+				if(!food_target) // qdeleted check
+					continue
+				stance = HOSTILE_STANCE_ALERT
+				stop_automated_movement = TRUE
+				MoveTo(food_target)
+				break
 
 	//handling mobs that are invading our personal space
 	if(stance <= HOSTILE_STANCE_ALERT && !food_target && COOLDOWN_FINISHED(src, calm_cooldown))
@@ -396,7 +413,7 @@
 	var/obj/effect/temp_visual/dir_setting/bloodsplatter/human/bloodsplatter = new(loc, splatter_dir)
 	bloodsplatter.pixel_y = -2
 
-/mob/living/simple_animal/hostile/retaliate/giant_lizard/AttackingTarget(inherited_target = target_mob)
+/mob/living/simple_animal/hostile/retaliate/giant_lizard/AttackingTarget(inherited_target = target_mob_ref?.resolve())
 	if(!Adjacent(inherited_target) || is_ravaging || body_position == LYING_DOWN)
 		return
 
@@ -426,7 +443,7 @@
 				addtimer(VARSET_CALLBACK(src, speed, LIZARD_SPEED_NORMAL_CLIENT), 2 SECONDS)
 				addtimer(VARSET_CALLBACK(src, is_retreating, FALSE), 2 SECONDS)
 			else
-				MoveTo(target_mob, 8, TRUE, 2 SECONDS, TRUE) //skirmish around our target
+				MoveTo(target_mob_ref?.resolve(), 8, TRUE, 2 SECONDS, TRUE) //skirmish around our target
 		return target
 
 //Used to handle attacks when a client is in the mob. Otherwise we'd default to a generic animal attack.
@@ -444,9 +461,33 @@
 			target = targets
 			break
 
-	if(isliving(target))
-		AttackingTarget(target)
-		next_move = world.time + 8
+	AttackingTarget(target)
+	//turf attacks are missed attacks so it should just be a minor penalty to attack delay
+	next_move = isturf(target) ? world.time + 4 : world.time + 8
+
+/mob/living/simple_animal/hostile/retaliate/giant_lizard/DestroySurroundings()
+	if(!prob(break_stuff_probability))
+		return
+
+	for(var/obj/structure/obstacle in view(1, src))
+		if(is_type_in_list(obstacle, destruction_targets))
+			AttackingTarget(obstacle)
+			return
+
+//no longer checks for distance with ListTargets(). thershold for losing targets is increased, due to needing range for skirmishing
+/mob/living/simple_animal/hostile/retaliate/giant_lizard/AttackTarget()
+	stop_automated_movement = TRUE
+	var/mob/living/target_mob = target_mob_ref?.resolve()
+	if(!target_mob || SA_attackable(target_mob))
+		LoseTarget()
+		return
+	if(get_dist(src, target_mob) > max_attack_distance)
+		LoseTarget()
+		return
+	if(in_range(src, target_mob)) //Attacking
+		AttackingTarget()
+		return TRUE
+
 
 ///Proc for when the mob finds food and starts DEVOURING it.
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/proc/handle_food(obj/item/reagent_container/food/snacks/food)
@@ -468,7 +509,7 @@
 		break
 
 	qdel(food)
-	food_target = null
+	food_target_ref = null
 	is_eating = FALSE
 	stance = HOSTILE_STANCE_IDLE
 	COOLDOWN_START(src, food_cooldown, 30 SECONDS)
@@ -481,7 +522,7 @@
 	var/mob/living/food_holder = food.loc
 	stop_moving()
 	COOLDOWN_START(src, food_cooldown, 15 SECONDS)
-	food_target = null
+	food_target_ref = null
 	is_eating = FALSE
 	//snagging the food while you're right next to the mob makes it very angry
 	if(get_dist(src, food_holder) <= 2 && !(food_holder.faction in faction_group))
@@ -495,7 +536,7 @@
 //Proc for when we lose our food target.
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/proc/lose_food()
 	stance = HOSTILE_STANCE_IDLE
-	food_target = null
+	food_target_ref = null
 	is_eating = FALSE
 	COOLDOWN_START(src, food_cooldown, 15 SECONDS)
 
@@ -504,15 +545,20 @@
 	if(!length(enemies))
 		return list()
 	var/list/see = orange(src, dist)
-	see &= enemies
-	return see
+	var/list/seen_enemies = list()
+	// Remove all entries that aren't in enemies
+	for(var/thing in see)
+		if(WEAKREF(thing) in enemies)
+			seen_enemies += thing
+	return seen_enemies
 
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/evaluate_target(mob/living/target)
-	//we need to check for monkeys else these guys will tear up all the small hosts for xenos
-	if((target.faction == faction || (target.faction in faction_group)) && !attack_same || ismonkey(target) || (target in friends))
+	if(!..())
 		return FALSE
-	if(target.stat != DEAD)
-		return target
+	//we need to check for monkeys else these guys will tear up all the small hosts for xenos
+	if(ismonkey(target))
+		return FALSE
+	return target
 
 //Mobs in critical state are now fair game. Rip and tear.
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/SA_attackable(target_mob)
@@ -525,20 +571,22 @@
 
 //Immediately retaliate after being attacked.
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/Retaliate()
-	if(stat == DEAD || target_mob || on_fire)
+	var/mob/living/target_mob = target_mob_ref?.resolve()
+	if(stat == DEAD || get_dist(src, target_mob) < 6 || on_fire)
 		return
 	aggression_value = clamp(aggression_value + 5, 0, 15)
 
 	. = ..()
 
 	target_mob = FindTarget()
-	if(target_mob)
+	target_mob_ref = WEAKREF(target_mob)
+	if(target_mob_ref) // qdeleted check
 		growl(target_mob)
 		MoveToTarget()
 
 	//basic pack behaviour
-	for(var/mob/living/simple_animal/hostile/retaliate/giant_lizard/pack_member in view(7, src))
-		if(pack_member == src || pack_member.target_mob)
+	for(var/mob/living/simple_animal/hostile/retaliate/giant_lizard/pack_member in view(12, src))
+		if(pack_member == src || pack_member.target_mob_ref?.resolve())
 			continue
 		pack_member.Retaliate()
 
@@ -568,7 +616,7 @@
 	if(!return_to_combat)
 		//can't retreat? go back to fighting
 		if(retreat_attempts >= 2)
-			FindTarget()
+			target_mob_ref = WEAKREF(FindTarget())
 			MoveToTarget()
 			retreat_attempts = 0
 			//seems like it's a life or death situation. we will stop trying to run away.
@@ -584,12 +632,13 @@
 		retreat_attempts = 0
 		LoseTarget()
 	else
-		FindTarget()
+		target_mob_ref = WEAKREF(FindTarget())
 		MoveToTarget()
 
 //Replaced walk_to() with MoveTo().
 /mob/living/simple_animal/hostile/retaliate/giant_lizard/MoveToTarget()
 	stop_automated_movement = TRUE
+	var/mob/living/target_mob = target_mob_ref?.resolve()
 	if(!target_mob || SA_attackable(target_mob))
 		stance = HOSTILE_STANCE_IDLE
 	if(target_mob in ListTargets(10))

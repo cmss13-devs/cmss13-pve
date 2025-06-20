@@ -4065,7 +4065,7 @@
 /area/lv522/landing_zone_1/ceiling)
 "bWd" = (
 /obj/structure/flora/jungle/planttop1,
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
 "bWo" = (
@@ -5468,7 +5468,7 @@
 	dir = 9;
 	layer = 2.9
 	},
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	layer = 3
 	},
 /turf/open/floor/prison/greenfull/east,
@@ -25904,7 +25904,7 @@
 /turf/open/floor/plating,
 /area/lv522/indoors/a_block/security)
 "mtI" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/floor/grass,
 /area/lv522/indoors/a_block/garden)
 "mtQ" = (
@@ -28983,7 +28983,7 @@
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 9
 	},
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/floor/prison/greenfull/east,
 /area/lv522/indoors/b_block/bridge)
 "nNQ" = (
@@ -38250,7 +38250,7 @@
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 9
 	},
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	layer = 3
 	},
 /turf/open/floor/prison/darkredfull2,
@@ -39458,7 +39458,7 @@
 /obj/structure/prop/ice_colony/dense/planter_box{
 	dir = 9
 	},
-/obj/structure/flora/bush/ausbushes/var3/ywflowers{
+/obj/structure/flora/bush/ausbushes/ywflowers{
 	layer = 3
 	},
 /obj/structure/machinery/light,
@@ -48264,7 +48264,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/mining)
 "wIE" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/organic/grass,
 /area/lv522/indoors/a_block/garden)
 "wIO" = (
