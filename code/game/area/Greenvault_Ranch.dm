@@ -22,7 +22,7 @@
 /area/Greenvault_Ranch/caves
 	name = "Greenvault Ranch Caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
-//============================================================SHUTTLES
+//============================================================LZ
 /area/Greenvault_Ranch/shuttles/drop1
 	name = "Greenvault Ranch Spaceport"
 	icon_state = "shuttle"
