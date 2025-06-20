@@ -1270,17 +1270,13 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/clothing/accessory/storage/surg_vest/drop_green/upp{
-	pixel_x = 4;
-	pixel_y = 0
+/obj/item/storage/firstaid/surgical/empty{
+	pixel_x = -3;
+	pixel_y = 3
 	},
-/obj/item/roller/surgical{
-	pixel_x = 2;
-	pixel_y = 11
-	},
-/obj/item/storage/firstaid/surgical{
-	pixel_x = -4;
-	pixel_y = -2
+/obj/item/roller{
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
@@ -2403,17 +2399,11 @@
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
 "bye" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_access = null
-	},
-/obj/item/weapon/gun/smg/pps43,
-/obj/item/ammo_magazine/smg/pps43,
-/obj/item/clothing/suit/space/pressure/dark,
-/obj/item/clothing/head/helmet/space/pressure/upp,
 /obj/structure/sign/safety/suit_storage{
 	pixel_x = 30;
 	pixel_y = -12
 	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/shuttle/black,
 /area/sekhmet/int_reg/ship1)
 "byi" = (
@@ -2775,6 +2765,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_gen)
+"bMz" = (
+/obj/structure/tunnel,
+/turf/open/auto_turf/sand_white/layer0,
+/area/sekhmet/caves/south_cave)
 "bMB" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
 	dir = 1
@@ -3427,7 +3421,6 @@
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/storage/box/czsp/medical,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
 "cfg" = (
@@ -4203,6 +4196,8 @@
 	desc = "A proper face protector that doesn't ruin that beautiful face of yours";
 	name = "face shield protector"
 	},
+/obj/item/clothing/head/helmet/upp,
+/obj/item/clothing/head/helmet/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
 "cEt" = (
@@ -5594,6 +5589,7 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
+/obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/southwest_complex)
 "dwS" = (
@@ -6933,6 +6929,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
+"esu" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Staircase Access"
+	},
+/turf/open/floor/corsat/marked,
+/area/sekhmet/int_reg/military_hangar)
 "esx" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	color = "#999900";
@@ -8406,10 +8408,12 @@
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/outside/temple_outer)
 "flJ" = (
-/obj/structure/largecrate/black_market/confiscated_weaponry,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5
+	},
+/obj/structure/largecrate/black_market/clf_supplies{
+	name = "unmarked supply crate"
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
@@ -10190,17 +10194,24 @@
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_reg/complex_intel)
 "gkY" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "106;233;235;240;241";
-	req_access = null;
-	name = "gun locker"
+/obj/item/ammo_box/magazine/type64{
+	pixel_x = -7;
+	pixel_y = 12
 	},
-/obj/item/ammo_box/magazine/type64,
-/obj/item/weapon/gun/smg/bizon,
-/obj/item/weapon/gun/smg/bizon,
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526"
+	},
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/obj/item/ammo_box/magazine/np92{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = -5;
+	pixel_y = 0
 	},
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/complex_operation)
@@ -11251,7 +11262,6 @@
 /area/sekhmet/int_reg/complex_operation)
 "gQa" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/accessory/health/research_plate/emergency_injector,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
 "gQf" = (
@@ -15135,8 +15145,8 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/ammo_box/magazine/np92,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/warehouse)
 "jfg" = (
@@ -15576,7 +15586,9 @@
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/research)
 "jrB" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four{
+	faction = "UPP"
+	},
 /obj/item/device/megaphone{
 	pixel_x = 7;
 	pixel_y = -4
@@ -17032,7 +17044,7 @@
 	req_access = null;
 	name = "gun locker"
 	},
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71/unloaded,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
 "kkf" = (
@@ -19096,14 +19108,6 @@
 	pixel_x = 2;
 	pixel_y = -5
 	},
-/obj/item/ammo_magazine/flamer_tank/upp{
-	pixel_x = 5;
-	pixel_y = 2
-	},
-/obj/item/ammo_magazine/flamer_tank/upp{
-	pixel_x = -7;
-	pixel_y = 0
-	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
 "lBX" = (
@@ -20582,7 +20586,9 @@
 /turf/open/floor/almayer/research/containment/corner/east,
 /area/sekhmet/int_heavy/low_level_rsr)
 "mtL" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one{
+	faction = "UPP"
+	},
 /obj/item/prop/tableflag/upp{
 	pixel_x = -7;
 	pixel_y = 6
@@ -21374,6 +21380,14 @@
 	},
 /turf/open/floor/carpet,
 /area/sekhmet/int_glass/complex_generic)
+"mWJ" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1
+	},
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_reg/military_hangar)
 "mWX" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/beachcorner2/south_east,
@@ -21620,7 +21634,7 @@
 	pixel_x = 19;
 	dir = 8
 	},
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/floor3,
 /area/sekhmet/int_glass/offices)
 "nfl" = (
 /obj/structure/machinery/vending/sovietsoda,
@@ -22497,7 +22511,7 @@
 	},
 /obj/item/ammo_magazine/pistol/t73,
 /obj/item/weapon/gun/pistol/t73/unloaded,
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/offices)
 "nCx" = (
 /obj/structure/surface/table/almayer{
@@ -22505,6 +22519,10 @@
 	},
 /obj/item/clothing/accessory/storage/droppouch/upp,
 /obj/item/storage/belt/medical/lifesaver/upp,
+/obj/item/device/defibrillator/compact{
+	pixel_x = 0;
+	pixel_y = -6
+	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
 "nDx" = (
@@ -22800,8 +22818,16 @@
 /obj/structure/closet/crate/secure/upp/alt{
 	req_one_access = list(103,106)
 	},
-/obj/item/stack/medical/advanced/bruise_pack/upgraded,
-/obj/item/stack/medical/advanced/ointment/upgraded,
+/obj/item/stack/medical/advanced/bruise_pack/upgraded{
+	amount = 2;
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/item/stack/medical/advanced/ointment/upgraded{
+	amount = 2;
+	pixel_x = -5;
+	pixel_y = -5
+	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_heavy/research)
 "nOw" = (
@@ -23712,7 +23738,7 @@
 	color = "#8B9490"
 	},
 /obj/structure/machinery/prop/almayer/computer/PC,
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/offices)
 "ona" = (
 /obj/structure/platform/shiva/catwalk{
@@ -24196,6 +24222,11 @@
 /obj/item/device/lightreplacer,
 /turf/open/floor/corsat/squares,
 /area/sekhmet/int_reg/engineering)
+"oAB" = (
+/obj/structure/flora/jungle/vines/light_1,
+/obj/structure/tunnel,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/sekhmet/outside/swamp)
 "oBb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -24499,7 +24530,7 @@
 	pixel_x = 19;
 	dir = 8
 	},
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/floor3,
 /area/sekhmet/int_glass/offices)
 "oLv" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_utility{
@@ -24686,11 +24717,11 @@
 /area/sekhmet/caves/south_cave)
 "oRG" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/weapon/gun/smg/pps43,
-/obj/item/ammo_magazine/smg/pps43,
 /obj/item/clothing/head/helmet/upp/alt,
 /obj/item/clothing/head/uppcap/beret/naval,
 /obj/item/flag/plantable/upp,
+/obj/item/weapon/gun/revolver/upp,
+/obj/item/explosive/grenade/high_explosive/upp,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_heavy/low_level_gen)
 "oSx" = (
@@ -25466,17 +25497,17 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/weapon/gun/flamer/upp/unloaded{
-	pixel_x = -3;
-	pixel_y = 17
+/obj/item/clothing/under/marine/veteran/UPP/naval{
+	pixel_y = 13;
+	pixel_x = -7
 	},
 /obj/item/clothing/under/marine/veteran/UPP/naval{
-	pixel_y = -1;
-	pixel_x = -9
+	pixel_y = 15;
+	pixel_x = 6
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
-	pixel_y = -4;
-	pixel_x = 2
+/obj/item/ammo_box/rounds/type71{
+	pixel_x = -6;
+	pixel_y = -1
 	},
 /turf/open/floor/strata,
 /area/sekhmet/int_reg/military_hangar)
@@ -26041,7 +26072,9 @@
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/garage)
 "pRQ" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six{
+	faction = "UPP"
+	},
 /obj/item/prop/tableflag/upp{
 	pixel_x = 6;
 	pixel_y = 15
@@ -26186,11 +26219,6 @@
 	req_access = null;
 	name = "gun locker"
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy,
-/obj/item/ammo_magazine/shotgun/slug/heavy,
-/obj/item/ammo_box/magazine/np92,
-/obj/item/weapon/gun/pistol/np92/suppressed/tranq,
-/obj/item/ammo_magazine/pistol/np92/tranq,
 /obj/item/weapon/gun/shotgun/pump/type23/unloaded,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/complex_operation)
@@ -26205,7 +26233,6 @@
 /obj/item/ammo_magazine/smg/bizon,
 /obj/item/clothing/suit/armor/vest/ballistic,
 /obj/item/clothing/suit/armor/vest/ballistic,
-/obj/item/device/motiondetector/upp,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
 	light_power = 0.5;
@@ -26310,9 +26337,9 @@
 	req_access = null;
 	name = "gun locker"
 	},
-/obj/item/ammo_magazine/rifle/type71,
-/obj/item/explosive/grenade/high_explosive/upp,
 /obj/item/weapon/gun/rifle/type71/unloaded,
+/obj/item/weapon/gun/smg/bizon,
+/obj/item/weapon/gun/smg/bizon,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/complex_operation)
 "qbG" = (
@@ -26323,7 +26350,9 @@
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/low_level_rsr)
 "qbT" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three{
+	faction = "UPP"
+	},
 /obj/item/reagent_container/food/drinks/cans/boda{
 	pixel_y = 11;
 	pixel_x = 1
@@ -26783,7 +26812,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/defenses/handheld/sentry/upp/light,
 /obj/item/explosive/mine/pmc{
 	iff_signal = "UPP";
 	color = "#009933";
@@ -26840,10 +26868,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/storage/pill_bottle/iron{
-	pixel_x = -5;
-	pixel_y = 13
-	},
 /obj/item/storage/pill_bottle/inaprovaline{
 	pixel_x = 6;
 	pixel_y = 5
@@ -26863,6 +26887,12 @@
 /obj/structure/machinery/light/small{
 	light_power = 0.25;
 	dir = 1
+	},
+/obj/item/storage/pill_bottle/happy{
+	pixel_x = -7;
+	pixel_y = 13;
+	desc = "It's an airtight container for storing medication.";
+	name = "Naproleve"
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
@@ -27288,7 +27318,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_glass/offices)
 "qIx" = (
 /obj/structure/largecrate,
@@ -27956,7 +27986,7 @@
 	pixel_y = 1;
 	pixel_x = 9
 	},
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/offices)
 "rbW" = (
 /obj/structure/platform/shiva/catwalk,
@@ -27993,6 +28023,13 @@
 	color = "#a39e99"
 	},
 /area/sekhmet/caves/west_cave)
+"rdV" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.25
+	},
+/turf/open/floor/strata/fake_wood,
+/area/sekhmet/int_glass/offices)
 "reh" = (
 /obj/structure/largecrate/random,
 /obj/effect/decal/cleanable/dirt,
@@ -28149,8 +28186,6 @@
 /obj/item/clothing/suit/marine/faction/UPP/standard,
 /obj/item/clothing/suit/marine/faction/UPP/light,
 /obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/head/helmet/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
 "rlC" = (
@@ -28516,7 +28551,6 @@
 	icon_state = "S"
 	},
 /obj/item/device/working_joe_pda,
-/obj/item/storage/box/emps,
 /obj/item/prop/colony/game,
 /obj/item/device/black_market_scanner,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -28558,7 +28592,6 @@
 	pixel_x = 4;
 	pixel_y = -3
 	},
-/obj/item/weapon/twohanded/breacher,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_heavy/research)
 "rwK" = (
@@ -29162,14 +29195,6 @@
 	pixel_x = 2;
 	pixel_y = -1
 	},
-/obj/item/clothing/accessory/health/ceramic_plate{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/clothing/accessory/health/ceramic_plate{
-	pixel_x = -2;
-	pixel_y = -3
-	},
 /obj/item/clothing/gloves/black,
 /obj/item/device/walkman,
 /obj/item/storage/fancy/trading_card/green{
@@ -29255,6 +29280,7 @@
 	},
 /obj/item/device/black_market_hacking_device,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
 "rQZ" = (
@@ -30388,6 +30414,10 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/low_level_rsr)
+"szk" = (
+/obj/structure/tunnel,
+/turf/open/floor/sandstone/runed,
+/area/sekhmet/caves/temple)
 "szq" = (
 /obj/structure/platform_decoration/strata{
 	dir = 1;
@@ -30879,18 +30909,6 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/ammo_box/rounds/type71{
-	pixel_x = 6;
-	pixel_y = 9
-	},
-/obj/item/ammo_magazine/flamer_tank/upp{
-	pixel_x = -3;
-	pixel_y = -5
-	},
-/obj/item/ammo_magazine/flamer_tank/upp{
-	pixel_x = 7;
-	pixel_y = -11
-	},
 /obj/item/tool/crowbar/tactical,
 /turf/open/floor/strata,
 /area/sekhmet/int_reg/military_hangar)
@@ -31193,7 +31211,18 @@
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
 "sXR" = (
-/obj/structure/gun_rack/type71/unloaded,
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/rifle/type71/unloaded{
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/obj/item/weapon/gun/rifle/type71/unloaded{
+	pixel_x = 0;
+	pixel_y = -3
+	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_reg/military_hangar)
 "sYm" = (
@@ -34823,6 +34852,10 @@
 /area/sekhmet/outside/swamp)
 "voZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/head/helmet/space/pressure/upp{
+	pixel_x = -5;
+	pixel_y = -2
+	},
 /turf/open/shuttle/black,
 /area/sekhmet/int_reg/ship1)
 "vpu" = (
@@ -34972,6 +35005,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/item/toy/deck,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/research)
 "vuh" = (
@@ -35620,6 +35654,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/water_filters)
+"vOl" = (
+/obj/structure/prop/almayer/computers/sensor_computer1{
+	name = "colonial operations terminal";
+	color = "#8B9490"
+	},
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_reg/military_hangar)
 "vOo" = (
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
@@ -37982,9 +38023,11 @@
 /turf/open/floor/kutjevo/plate,
 /area/sekhmet/outside/southroad)
 "xka" = (
-/obj/structure/largecrate/black_market/confiscated_equipment,
-/turf/open/floor/strata/floor3/east,
-/area/sekhmet/int_heavy/research)
+/obj/structure/surface/table/almayer{
+	color = "#8B9490"
+	},
+/turf/open/floor/plating/kutjevo,
+/area/sekhmet/int_reg/military_hangar)
 "xkB" = (
 /obj/structure/machinery/disposal,
 /obj/structure/machinery/camera{
@@ -38307,7 +38350,7 @@
 	pixel_y = 9
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/fake_wood,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/sekhmet/int_glass/offices)
 "xvS" = (
 /obj/structure/closet{
@@ -39304,7 +39347,11 @@
 /turf/open/floor/prison,
 /area/sekhmet/int_heavy/low_level_rsr)
 "yeT" = (
-/obj/structure/gun_rack/type71/empty,
+/obj/structure/surface/rack{
+	color = "#6b675e";
+	layer = 2.79
+	},
+/obj/item/weapon/gun/smg/bizon/upp,
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_reg/military_hangar)
 "yfb" = (
@@ -40675,10 +40722,10 @@ fJT
 fJT
 fJT
 psY
-nnp
-wim
-wim
 hFf
+wim
+wim
+esu
 hEu
 ngu
 fBF
@@ -40837,10 +40884,10 @@ fJT
 fJT
 fJT
 psY
-nnp
-wim
-wim
 hFf
+wim
+wim
+esu
 hEu
 ngu
 fBF
@@ -40999,10 +41046,10 @@ fJT
 fJT
 fJT
 psY
-nnp
-wim
-wim
 hFf
+wim
+wim
+esu
 fBF
 ngu
 fBF
@@ -43747,7 +43794,7 @@ iXF
 fJT
 fJT
 psY
-dkI
+mWJ
 psY
 xQd
 yhX
@@ -43907,7 +43954,7 @@ iXF
 "}
 (28,1,1) = {"
 fJT
-fJT
+psY
 psY
 dkI
 psY
@@ -44069,8 +44116,8 @@ iXF
 "}
 (29,1,1) = {"
 fJT
-fJT
 psY
+xka
 dkI
 trG
 kQO
@@ -44231,8 +44278,8 @@ iXF
 "}
 (30,1,1) = {"
 fJT
-fJT
 psY
+xka
 dkI
 trG
 vNz
@@ -44393,8 +44440,8 @@ iXF
 "}
 (31,1,1) = {"
 fJT
-fJT
 psY
+vOl
 dkI
 trG
 duM
@@ -44555,8 +44602,8 @@ iXF
 "}
 (32,1,1) = {"
 fJT
-fJT
 psY
+dkI
 dkI
 trG
 plt
@@ -44717,8 +44764,8 @@ iXF
 "}
 (33,1,1) = {"
 fJT
-fJT
 psY
+dkI
 dkI
 trG
 gSs
@@ -44879,8 +44926,8 @@ iXF
 "}
 (34,1,1) = {"
 fJT
-fJT
 psY
+dkI
 dkI
 trG
 rGW
@@ -45041,35 +45088,35 @@ iXF
 "}
 (35,1,1) = {"
 fJT
-fJT
+psY
 psY
 dkI
 trG
 trG
 trG
 trG
-trG
-trG
-trG
-trG
-trG
-trG
-trG
-trG
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
 trG
 xiT
 wRx
 aVs
 xiT
 trG
-trG
-trG
-trG
-trG
-trG
-trG
-trG
-trG
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
+mgR
 trG
 xiT
 wRx
@@ -45205,7 +45252,7 @@ iXF
 kCV
 kCV
 psY
-dkI
+mWJ
 trG
 vRr
 pBz
@@ -49403,7 +49450,7 @@ eLr
 chP
 ceP
 jfF
-efR
+bMz
 vnP
 vnP
 vnP
@@ -50715,7 +50762,7 @@ kCV
 kCV
 kCV
 cyh
-wKY
+oAB
 aDJ
 pBz
 gDr
@@ -50865,7 +50912,7 @@ jfF
 efR
 vnP
 vnP
-vnP
+oRx
 vnP
 efR
 oRx
@@ -51350,7 +51397,7 @@ jfF
 efR
 vnP
 vnP
-vnP
+oRx
 vnP
 vnP
 efR
@@ -53292,7 +53339,7 @@ dgp
 vnP
 vnP
 vnP
-vnP
+oRx
 vnP
 oRx
 vnP
@@ -53454,7 +53501,7 @@ rCu
 vnP
 vnP
 vnP
-vnP
+oRx
 vnP
 oRx
 oRx
@@ -62463,7 +62510,7 @@ lVJ
 rFj
 iwv
 mRF
-mox
+rdV
 upE
 vvx
 qCz
@@ -63111,7 +63158,7 @@ iUA
 uFl
 iAI
 cvv
-mox
+rdV
 upE
 uzD
 uzD
@@ -63187,7 +63234,7 @@ pNj
 rEu
 rEu
 wbb
-gXs
+gIB
 gXs
 lTd
 gXs
@@ -67202,7 +67249,7 @@ eZo
 nTd
 rMV
 rvU
-xka
+iLb
 qMZ
 bEu
 eZo
@@ -71155,8 +71202,8 @@ rEu
 gXs
 gXs
 gXs
-gXs
-gXs
+rEu
+rEu
 gXs
 gXs
 rEu
@@ -71642,8 +71689,8 @@ rEu
 gXs
 gXs
 gXs
-gXs
-gXs
+rEu
+gIB
 gXs
 gXs
 rEu
@@ -71804,8 +71851,8 @@ rEu
 gXs
 gXs
 gXs
-gXs
-gXs
+rEu
+rEu
 gXs
 gXs
 rEu
@@ -71967,7 +72014,7 @@ gXs
 gXs
 gXs
 gXs
-gXs
+rEu
 gXs
 gXs
 rEu
@@ -72908,7 +72955,7 @@ rEu
 rEu
 rEu
 nld
-lTd
+szk
 mmR
 lTd
 mmR
