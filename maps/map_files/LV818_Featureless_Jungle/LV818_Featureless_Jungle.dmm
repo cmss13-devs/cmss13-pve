@@ -81,9 +81,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
 	},
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 3
-	},
+/obj/structure/flora/grass/tallgrass/jungle/corner,
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/barrens/central_barrens)
@@ -1121,13 +1119,6 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/barrens/central_barrens)
-"Uf" = (
-/obj/structure/flora/grass/tallgrass/jungle/corner{
-	dir = 3
-	},
-/obj/structure/flora/jungle/vines/heavy,
-/turf/open/auto_turf/strata_grass/layer1,
-/area/lv624/ground/barrens/central_barrens)
 "UI" = (
 /obj/structure/flora/bush/ausbushes/var3/ywflowers,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1216,18 +1207,6 @@
 /area/lv624/ground/barrens/central_barrens)
 "XN" = (
 /obj/structure/flora/jungle/vines/heavy,
-/turf/open/gm/river,
-/area/lv624/ground/barrens/central_barrens)
-"Yr" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 4
-	},
 /turf/open/gm/river,
 /area/lv624/ground/barrens/central_barrens)
 "YD" = (
@@ -5773,7 +5752,7 @@ UW
 UW
 UW
 UW
-Yr
+Kw
 MA
 MA
 MA
@@ -23112,7 +23091,7 @@ CU
 yF
 yF
 yF
-Uf
+Cz
 bB
 bB
 bB
@@ -49512,7 +49491,7 @@ ua
 jm
 CU
 ua
-Uf
+Cz
 Ua
 Ua
 bB
@@ -49764,7 +49743,7 @@ ua
 CU
 CU
 yF
-Uf
+Cz
 bB
 bB
 bB
@@ -50770,7 +50749,7 @@ ua
 UM
 ua
 yF
-Uf
+Cz
 bB
 bB
 bB
