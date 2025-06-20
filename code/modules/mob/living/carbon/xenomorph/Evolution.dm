@@ -16,6 +16,10 @@
 
 	if (!evolve_checks())
 		return
+	var/mob/living/carbon/human/user = hauled_mob?.resolve()
+	if(user)
+		to_chat(src, "Release [user] before evolving!")
+		return
 
 	var/castes_available = caste.evolves_to.Copy()
 
