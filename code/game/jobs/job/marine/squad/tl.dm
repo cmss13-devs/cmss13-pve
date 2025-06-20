@@ -2,6 +2,7 @@
 #define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
 #define JSGT_VARIANT "Junior Sergeant"
+
 /datum/job/marine/tl
 	title = JOB_SQUAD_TEAM_LEADER
 	total_positions = 8
@@ -9,7 +10,7 @@
 	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/tl
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uscm/tl/corporal
 	entry_message_body = "You are the <a href='"+WIKI_PLACEHOLDER+"'>Squad Leader.</a> Your task is leading the designated squad and utilize available ordnance. If the section sergeant dies, you are expected to lead in their place.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
 	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
@@ -52,7 +53,7 @@
 /datum/job/marine/tl/ai/upp
 	title = JOB_SQUAD_TEAM_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/tl/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/upp/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uscm/tl/upp/junior_sergeant
 	job_options = list(JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
 
 /datum/job/marine/tl/ai/upp/handle_job_options(option)
@@ -65,7 +66,7 @@
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/sergeant
 	job_options = list(SGT_VARIANT = "SGT", SSGT_VARIANT = "SSGT")
 
 /datum/job/marine/tl/ai/forecon/handle_job_options(option)
@@ -82,7 +83,6 @@
 /datum/job/marine/tl/ai/pmc
 	title = JOB_PMCPLAT_FTL
 	gear_preset = /datum/equipment_preset/uscm/pmc/tl
-	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/tl
 	job_options = null
 
 /obj/effect/landmark/start/marine/tl/pmc
@@ -95,7 +95,7 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
 
-
+#undef SSGT_VARIANT
 #undef SGT_VARIANT
 #undef CPL_VARIANT
 #undef JSGT_VARIANT

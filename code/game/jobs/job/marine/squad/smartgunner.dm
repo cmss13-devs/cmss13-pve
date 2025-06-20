@@ -1,7 +1,11 @@
 #define SGT_VARIANT "Sergeant"
+#define JSGT_VARIANT "Junior Sergeant"
 #define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
-#define JSGT_VARIANT "Junior Sergeant"
+#define PFC_VARIANT "Private First Class"
+#define SR_PVT_VARIANT "Senior Private"
+#define PVT_VARIANT "Private"
+
 /datum/job/marine/smartgunner
 	title = JOB_SQUAD_SMARTGUN
 	total_positions = 4
@@ -10,10 +14,12 @@
 	scaled = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/sg
-	gear_preset_secondary = /datum/equipment_preset/uscm/sg/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/lance_corporal
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/pfc
+	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/private
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are a specialized automatic rifleman.</a> Your task is to provide heavy weapons support for your squad.<br>You might be the same rank as a squad leader, but they have precedence over you for command should the situation call upon it.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 
 /datum/job/marine/smartgunner/set_spawn_positions(count)
 	spawn_positions = sg_slot_formula(count)
@@ -31,9 +37,12 @@
 	return positions
 
 /datum/job/marine/smartgunner/handle_job_options(option)
-	if(option != LCPL_VARIANT)
-		gear_preset = initial(gear_preset)
-	else
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == LCPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/smartgunner/whiskey
@@ -75,11 +84,17 @@
 /datum/job/marine/smartgunner/ai/upp
 	title = JOB_SQUAD_SMARTGUN_UPP
 	gear_preset = /datum/equipment_preset/uscm/sg/upp
-	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/lesser_rank
-	job_options = list(CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/corporal
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/upp/senior_private
+	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/upp/private
+	job_options = list(PVT_VARIANT = "PVT", SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
 
 /datum/job/marine/smartgunner/ai/upp/handle_job_options(option)
 	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == SR_PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
@@ -88,11 +103,17 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/lesser_rank
-	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/corporal
+	gear_preset_tertiary = /datum/equipment_preset/uscm/sg/forecon/lance_corporal
+	gear_preset_quaternary = /datum/equipment_preset/uscm/sg/forecon/pfc
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
 
 /datum/job/marine/smartgunner/ai/forecon/handle_job_options(option)
 	gear_preset = initial(gear_preset)
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset_quaternary
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_tertiary
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
@@ -101,11 +122,9 @@
 	job = JOB_SQUAD_SMARTGUN_UPP
 	squad = SQUAD_UPP
 
-
 /datum/job/marine/smartgunner/ai/pmc
 	title = JOB_PMCPLAT_SG
 	gear_preset = /datum/equipment_preset/uscm/pmc/sg
-	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sg
 	job_options = null
 
 /obj/effect/landmark/start/marine/smartgunner/pmc
@@ -118,6 +137,9 @@
 	squad = SQUAD_LRRP
 
 #undef SGT_VARIANT
+#undef JSGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
-#undef JSGT_VARIANT
+#undef PFC_VARIANT
+#undef SR_PVT_VARIANT
+#undef PVT_VARIANT
