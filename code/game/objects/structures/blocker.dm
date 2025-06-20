@@ -131,6 +131,12 @@ GLOBAL_VAR_INIT(vehicle_blockers, TRUE)
 
 	visible = TRUE
 
+/obj/structure/blocker/forcefield/xenomorph
+	types = list(/mob/living/carbon/xenomorph)
+	icon_state = "purple_line"
+	opacity = FALSE
+	visible = FALSE
+
 /obj/structure/blocker/forcefield/human/bulletproof/get_projectile_hit_boolean()
 	return TRUE
 
