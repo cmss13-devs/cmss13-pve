@@ -38,3 +38,6 @@ endmap
 
 map golden_arrow_tethered
 endmap
+
+map lv_818_firebase_juliet
+endmap
