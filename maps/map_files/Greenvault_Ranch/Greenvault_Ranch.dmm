@@ -131,6 +131,10 @@
 	},
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"akP" = (
+/obj/item/reagent_container/food/snacks/fishable/fish/catfish,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "ald" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -1549,6 +1553,14 @@
 /obj/structure/cargo_container/upp/tan/mid,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"bZd" = (
+/obj/item/weapon/gun/shotgun/pump{
+	desc = "THE PLABBER";
+	name = "The Chunger"
+	},
+/obj/item/ammo_magazine/handful/shotgun/buckshot/special,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "bZg" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/emails{
@@ -2781,6 +2793,10 @@
 "dLO" = (
 /turf/open/floor/plating/wood_broken6,
 /area/Greenvault_Ranch/int_reg/cowhouse)
+"dMo" = (
+/obj/item/reagent_container/food/snacks/fishable/fish/bluegill,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "dML" = (
 /obj/structure/filingcabinet{
 	density = 0;
@@ -3942,6 +3958,10 @@
 /obj/structure/machinery/vending/security/colony,
 /turf/open/floor/prison/redfull,
 /area/Greenvault_Ranch/int_reg/checkpoint)
+"feC" = (
+/obj/item/reagent_container/food/snacks/fishable/fish/white_perch,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "feG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -7075,6 +7095,10 @@
 /obj/structure/flora/bush/ausbushes/var3,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/northwest)
+"jyw" = (
+/obj/item/reagent_container/food/snacks/fishable/fish/bass,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "jyA" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 8
@@ -12164,6 +12188,10 @@
 /obj/structure/inflatable/door,
 /turf/open/floor/corsat/retrosquares,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"pUm" = (
+/obj/item/reagent_container/food/snacks/fishable/urchin/purple,
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "pUs" = (
 /obj/structure/prop/vehicles/crawler{
 	density = 0;
@@ -13133,6 +13161,15 @@
 "rhl" = (
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/Greenvault_Ranch/int_reg/telecomms_yard)
+"rhP" = (
+/obj/structure/prop/almayer/ship_memorial/centcomm/admin{
+	name = "Slab of Mapping";
+	desc = "Map made by Joooks. Special thanks to Spartanbobby, Karmac, Amaxin and all others who helped and playtested.";
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "ria" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -14179,6 +14216,9 @@
 /obj/structure/reagent_dispensers/fueltank/gas,
 /turf/open/floor/prison/bright_clean,
 /area/Greenvault_Ranch/int_heavy/secondarystorage)
+"slU" = (
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "sms" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
@@ -17302,6 +17342,12 @@
 	},
 /turf/closed/wall/r_wall/bunker,
 /area/Greenvault_Ranch/int_heavy/powergenerators)
+"vPQ" = (
+/obj/item/holder/cat/blackcat/Runtime{
+	name = "\improper Kbitty"
+	},
+/turf/open/mars_cave,
+/area/Greenvault_Ranch/int_heavyoutofbounds)
 "vQo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/shiva/prefabricated/reinforced,
@@ -53463,7 +53509,7 @@ tSX
 tSX
 tSX
 tSX
-tSX
+slU
 tSX
 tSX
 tSX
@@ -53654,9 +53700,9 @@ tSX
 tSX
 tSX
 tSX
-tSX
-tSX
-tSX
+vPQ
+rhP
+bZd
 tSX
 tSX
 tSX
@@ -53845,11 +53891,11 @@ fCu
 tSX
 tSX
 tSX
-tSX
-tSX
-tSX
-tSX
-tSX
+slU
+pUm
+slU
+feC
+slU
 tSX
 tSX
 tSX
@@ -54038,9 +54084,9 @@ tSX
 tSX
 tSX
 tSX
-tSX
-tSX
-tSX
+jyw
+dMo
+feC
 tSX
 tSX
 tSX
@@ -54231,7 +54277,7 @@ tSX
 tSX
 tSX
 tSX
-tSX
+akP
 tSX
 tSX
 tSX
