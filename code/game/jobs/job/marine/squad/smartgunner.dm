@@ -1,7 +1,7 @@
-
+#define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
-
+#define JSGT_VARIANT "Junior Sergeant"
 /datum/job/marine/smartgunner
 	title = JOB_SQUAD_SMARTGUN
 	total_positions = 4
@@ -76,6 +76,12 @@
 	title = JOB_SQUAD_SMARTGUN_UPP
 	gear_preset = /datum/equipment_preset/uscm/sg/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/upp/lesser_rank
+	job_options = list(CPL_VARIANT = "CPL", JSGT_VARIANT = "JrSGT")
+
+/datum/job/marine/smartgunner/ai/upp/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /datum/job/marine/smartgunner/ai/forecon
 	title = JOB_SQUAD_SMARTGUN_FORECON
@@ -83,6 +89,12 @@
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/sg/forecon/lesser_rank
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+
+/datum/job/marine/smartgunner/ai/forecon/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == CPL_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP
@@ -94,7 +106,7 @@
 	title = JOB_PMCPLAT_SG
 	gear_preset = /datum/equipment_preset/uscm/pmc/sg
 	gear_preset_secondary = /datum/equipment_preset/uscm/pmc/sg
-
+	job_options = null
 
 /obj/effect/landmark/start/marine/smartgunner/pmc
 	name = JOB_PMCPLAT_SG
@@ -105,5 +117,7 @@
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
 
+#undef SGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
+#undef JSGT_VARIANT
