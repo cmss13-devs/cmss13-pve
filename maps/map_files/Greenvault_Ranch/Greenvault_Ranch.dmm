@@ -937,6 +937,10 @@
 "biJ" = (
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/int_reg/farmbay)
+"biQ" = (
+/obj/structure/prop/haysquare,
+/turf/open/floor/wood/wood_broken6,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "bjn" = (
 /obj/structure/prop/invuln/ice_prefab{
 	dir = 10
@@ -988,6 +992,19 @@
 /obj/structure/machinery/iv_drip,
 /turf/open/floor/almayer/dark_sterile,
 /area/Greenvault_Ranch/int_reg/clinic)
+"bmc" = (
+/obj/structure/prop/haysquare{
+	pixel_x = -6
+	},
+/obj/structure/prop/haysquare{
+	pixel_x = 11
+	},
+/obj/structure/prop/haysquare,
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "bmB" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
 /obj/structure/largecrate/machine/bodyscanner,
@@ -1306,6 +1323,11 @@
 /obj/structure/flora/grass/desert/heavy,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wildplace)
+"bGO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "bHu" = (
 /obj/structure/machinery/portable_atmospherics/powered/pump,
 /turf/open/floor/whitegreenfull,
@@ -2756,6 +2778,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/white_cyan1,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"dIX" = (
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "dJh" = (
 /turf/open/floor/prison/floor_plate,
 /area/Greenvault_Ranch/shuttles/drop1)
@@ -6372,6 +6398,13 @@
 /obj/structure/flora/tree/dead/tree_6,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"ixq" = (
+/obj/structure/prop/haysquare,
+/obj/structure/prop/haysquare{
+	pixel_x = 14
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "ixt" = (
 /obj/structure/barricade/handrail/wire,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -7338,6 +7371,16 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/strata/floor3,
 /area/Greenvault_Ranch/int_reg/landingpad)
+"jQD" = (
+/obj/structure/prop/haysquare{
+	pixel_x = -6
+	},
+/obj/structure/prop/haysquare{
+	pixel_x = 11
+	},
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "jQH" = (
 /obj/structure/machinery/light/double,
 /obj/effect/decal/cleanable/dirt,
@@ -7454,6 +7497,17 @@
 /obj/structure/machinery/vending/coffee,
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
+"jWb" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/obj/structure/prop/haysquare{
+	pixel_x = 9
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "jWO" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/prison/greenfull,
@@ -8086,6 +8140,16 @@
 /obj/structure/flora/grass/tallgrass/jungle,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/trailerpark)
+"kOs" = (
+/obj/structure/barricade/handrail/wire{
+	dir = 4
+	},
+/obj/structure/prop/haysquare{
+	pixel_x = 8
+	},
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "kOv" = (
 /obj/structure/window{
 	dir = 8;
@@ -8817,6 +8881,18 @@
 /obj/structure/machinery/cm_vending/sorted/boozeomat,
 /turf/open/floor/kutjevo/fake_wood,
 /area/Greenvault_Ranch/int_reg/bar)
+"lKY" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 19;
+	pixel_x = 16
+	},
+/obj/structure/prop/haysquare,
+/obj/structure/prop/haysquare{
+	pixel_x = 14
+	},
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "lLo" = (
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/floor/corsat/retrosquares,
@@ -9556,6 +9632,11 @@
 	},
 /turf/open/floor/prison/blue_plate/north,
 /area/Greenvault_Ranch/int_reg/virology)
+"mGs" = (
+/obj/structure/barricade/handrail/wire,
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "mGw" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/corsat/tan,
@@ -9569,6 +9650,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/haysquare,
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/cowhouse)
 "mHd" = (
@@ -11635,6 +11717,7 @@
 /area/Greenvault_Ranch/int_heavy/grainbunker)
 "pkj" = (
 /obj/structure/machinery/power/apc/upgraded/power/west,
+/obj/structure/prop/haysquare,
 /turf/open/floor/plating/wood,
 /area/Greenvault_Ranch/int_reg/cowhouse)
 "pkD" = (
@@ -18540,6 +18623,15 @@
 "xld" = (
 /turf/open/floor/prison/green/northeast,
 /area/Greenvault_Ranch/int_reg/housing)
+"xlo" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/obj/structure/prop/haysquare,
+/turf/open/floor/plating/wood,
+/area/Greenvault_Ranch/int_reg/cowhouse)
 "xlU" = (
 /obj/structure/fence,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -43242,8 +43334,8 @@ seU
 vRx
 wSl
 sZl
-wSl
-yef
+mGs
+dIX
 seU
 sZl
 sZl
@@ -43426,7 +43518,7 @@ sZl
 sZl
 sZl
 sZl
-yef
+dIX
 yef
 mUT
 yef
@@ -43637,7 +43729,7 @@ gHQ
 sZl
 sZl
 sZl
-yef
+jQD
 seB
 yef
 yef
@@ -43829,7 +43921,7 @@ qTa
 oev
 sZl
 sZl
-fih
+kOs
 pnN
 yef
 hxI
@@ -44021,8 +44113,8 @@ crv
 sZl
 sZl
 sZl
-yef
-yef
+bmc
+jQD
 yef
 yef
 jAB
@@ -44209,12 +44301,12 @@ oqS
 yef
 yef
 hxI
-yef
+dIX
 sZl
 sZl
 sZl
-gOV
-fih
+kOs
+kOs
 yef
 yef
 hxI
@@ -44401,12 +44493,12 @@ lgs
 yef
 yef
 yef
-hxI
+bGO
 oJL
 sZl
 sZl
-yef
-hxI
+jQD
+jQD
 vKA
 knm
 yef
@@ -44593,12 +44685,12 @@ yef
 hxI
 yef
 yef
-yef
+dIX
 oev
 oev
 sZl
-fih
-fih
+kOs
+kOs
 yef
 hxI
 hxI
@@ -44785,7 +44877,7 @@ yef
 yef
 dVb
 yef
-yef
+dIX
 sZl
 sZl
 sZl
@@ -45344,8 +45436,8 @@ aEN
 kJF
 sZl
 nhN
-kLG
-yef
+xlo
+dIX
 wSl
 yef
 wSl
@@ -45939,7 +46031,7 @@ wfr
 yef
 seU
 yef
-yef
+dIX
 sZl
 sEB
 aEN
@@ -46705,9 +46797,9 @@ kLG
 vRx
 yef
 knm
-kLG
-xhk
-yef
+xlo
+biQ
+dIX
 sZl
 xdX
 rae
@@ -47274,7 +47366,7 @@ wSl
 yef
 fVZ
 oev
-hxI
+bGO
 wSl
 sZl
 qqn
@@ -47455,8 +47547,8 @@ kxJ
 kxJ
 kxJ
 sZl
-kmE
-yef
+lKY
+ixq
 mGU
 hxI
 yef
@@ -47466,7 +47558,7 @@ hrW
 yef
 ixt
 sZl
-yef
+dIX
 wSl
 sZl
 qqn
@@ -47648,8 +47740,8 @@ kxJ
 kxJ
 sZl
 bhe
-kLG
-wSl
+jWb
+mGs
 yef
 yef
 wSl
@@ -47658,7 +47750,7 @@ joW
 yef
 fVZ
 sZl
-kLG
+xlo
 wSl
 sZl
 qqn

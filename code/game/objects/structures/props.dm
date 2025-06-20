@@ -845,6 +845,11 @@
 	icon_state = "arcadeb"
 	name = "Spirit Phone, The Game, The Movie: II"
 
+/obj/structure/prop/haysquare
+	name = "Hay square"
+	icon = 'icons/obj/structures/props/greenvaultprops.dmi'
+	icon_state = 'haycube'
+	desc = "A square of processed and pressed hay. Lovely and soft."
 //INVULNERABLE PROPS
 
 /obj/structure/prop/invuln
