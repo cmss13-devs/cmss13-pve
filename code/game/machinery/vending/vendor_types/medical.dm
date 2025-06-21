@@ -516,7 +516,6 @@
 		list("M276 Pattern Medical Storage Rig", floor(scale * 2), /obj/item/storage/belt/medical, VENDOR_ITEM_REGULAR),
 		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
 		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
-		list("Gas Mask", 6, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/populate_product_list_and_boxes(scale)
@@ -658,7 +657,7 @@
 		list("Box of Pill Bottles", floor(scale * 2), /obj/item/storage/box/pillbottles, VENDOR_ITEM_REGULAR),
 		list("Dropper", floor(scale * 3), /obj/item/reagent_container/dropper, VENDOR_ITEM_REGULAR),
 		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
-		list("Gas Mask", 6, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR)
+
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/no_access
@@ -716,8 +715,7 @@
 		list("Health Diagnostic Equipment", floor(scale * 3), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("Type 41 Pattern Medical Storage Rig", floor(scale * 2), /obj/item/storage/belt/medical/upp, VENDOR_ITEM_REGULAR),
 		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
-		list("Gas Mask", 6, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR)
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access

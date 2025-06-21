@@ -134,7 +134,7 @@
 	new /obj/item/reagent_container/pill/carbon(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/pill/antitox(src)
-	new /obj/item/reagent_container/pill/antitox(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/pill/ethylredoxrazine(src)
 
@@ -229,7 +229,7 @@
 
 /obj/item/storage/firstaid/surgical
 	name = "basic field surgery kit"
-	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically. With medical training you can fit this in a backpack."
+	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically."
 	icon_state = "bezerk"
 	storage_slots = 8
 	can_hold = list(
@@ -330,7 +330,7 @@
 		/obj/item/paper,
 		/obj/item/reagent_container/syringe,
 		/obj/item/reagent_container/hypospray/autoinjector,
-		/obj/item/reagent_container/glass/beaker,
+		/obj/item/reagent_container/glass/beaker/vial,
 	)
 
 /obj/item/storage/syringe_case/regular
