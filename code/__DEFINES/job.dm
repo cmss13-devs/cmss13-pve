@@ -209,6 +209,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_ARMY_MT "Army Technical Engineer"
 #define JOB_ARMY_CT "Army Logistics Specialist"
 #define JOB_ARMY_MEDIC "Army Combat Medical Technician"
+#define JOB_ARMY_TANK_CREW "Army Vehicle Crewman"
 #define JOB_ARMY_NCO "Army Fireteam Lead"
 #define JOB_ARMY_SNCO "Army Squad Leader"
 #define JOB_ARMY_LT "Army Lieutenant"
