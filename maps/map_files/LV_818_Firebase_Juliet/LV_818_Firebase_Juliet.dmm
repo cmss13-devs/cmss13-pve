@@ -2558,6 +2558,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/inside/platoonarmory)
+"eQ" = (
+/obj/structure/girder/displaced,
+/turf/closed/wall/strata_ice/jungle,
+/area/firebase_zulu/outside)
 "fa" = (
 /obj/structure/fence,
 /turf/open/gm/dirt2,
@@ -8094,7 +8098,7 @@ aD
 aD
 aD
 aD
-aD
+eQ
 OD
 kR
 eq
