@@ -35,5 +35,25 @@
 	name = "UACG, Patrol"
 	desc = "Small Colonial Guard militia patrol armed with M20A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
-		/datum/equipment_preset/colonist/security/guard = 3,
+		/datum/equipment_preset/colonist/security/guard = 2,
+	)
+
+/datum/human_ai_squad_preset/cmb/uacg/squad
+	name = "UACG, Squad"
+	desc = "A small squad of Colonial Guard militia, armed with M20A rifles."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/security/guard/nco = 1,
+		/datum/equipment_preset/colonist/security/guard/tech = 1,
+		/datum/equipment_preset/colonist/security/guard/medic = 1,
+		/datum/equipment_preset/colonist/security/guard = 1,
+	)
+
+/datum/human_ai_squad_preset/cmb/uacg/command
+	name = "UACG, Command"
+	desc = "A central command team for UACG forces in the area."
+	ai_to_spawn = list(
+		/datum/equipment_preset/colonist/security/guard/co = 1,
+		/datum/equipment_preset/colonist/security/guard = 1,
+		/datum/equipment_preset/colonist/security/guard/medic = 1,
+		/datum/equipment_preset/colonist/security/guard/co = 1,
 	)
