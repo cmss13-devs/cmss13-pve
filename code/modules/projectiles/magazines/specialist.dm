@@ -76,6 +76,7 @@
 	name = "\improper A19 HV magazine (10x28mm)"
 	desc = "A magazine of A19 high velocity rounds for use in the M49A custom battle rifle. The M49A custom battle rifle is the only gun that can chamber these rounds."
 	icon_state = "a19"
+	caliber = "10x28mmHV"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom

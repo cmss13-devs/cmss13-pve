@@ -102,6 +102,9 @@ They're all essentially identical when it comes to getting the job done.
 		log_debug("ERROR CODE R1: negative current_rounds on examine. User: <b>[usr]</b> Magazine: <b>[src]</b>")
 	else
 		. += "[src] has <b>[current_rounds]</b> [description_ammo] out of <b>[max_rounds]</b>."
+		if(!flags_magazine & AMMUNITION_CANT_CHECK_AMMO_TYPE)
+			var/datum/ammo/bullet/bullet = default_ammo
+			. += "It is loaded with [bullet.name]."
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(flags_magazine & AMMUNITION_REFILLABLE) //actual refillable magazine, not just a handful of bullets or a fuel tank.
@@ -254,7 +257,7 @@ bullets/shells. ~N
 	current_rounds = 1 // So it doesn't get autofilled for no reason.
 	max_rounds = 5 // For shotguns, though this will be determined by the handful type when generated.
 	flags_atom = FPRINT|CONDUCT
-	flags_magazine = AMMUNITION_HANDFUL
+	flags_magazine = AMMUNITION_HANDFUL | AMMUNITION_CANT_CHECK_AMMO_TYPE
 	flags_human_ai = NONE
 	attack_speed = 3 // should make reloading less painful
 
