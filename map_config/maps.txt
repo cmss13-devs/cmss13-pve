@@ -93,3 +93,6 @@ endmap
 
 map oread_garrison
 endmap
+
+map lv818_featureless_jungle
+endmap
