@@ -1379,13 +1379,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
-"cF" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/obj/structure/machinery/power/apc/almayer/north,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/firebase_zulu/outside/compound)
 "cG" = (
 /obj/structure/largecrate{
 	layer = 2.9
@@ -1995,11 +1988,11 @@
 /obj/structure/tent/big,
 /obj/structure/tent_curtain,
 /turf/open/floor/interior/plastic,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/dorms)
 "dL" = (
 /obj/structure/tent_curtain,
 /turf/open/floor/interior/plastic,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/dorms)
 "dM" = (
 /obj/structure/tent_curtain,
 /obj/effect/decal/warning_stripes{
@@ -2007,7 +2000,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/interior/plastic,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/dorms)
 "dN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -2060,10 +2053,10 @@
 "dS" = (
 /obj/structure/largecrate/supply/explosives/himat_antipersonnel,
 /turf/open/floor/interior/plastic,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/dorms)
 "dT" = (
 /turf/open/floor/interior/plastic,
-/area/firebase_zulu/outside/compound)
+/area/firebase_zulu/inside/dorms)
 "dU" = (
 /obj/structure/machinery/power/apc/almayer/north,
 /turf/open/floor/interior/plastic,
@@ -2479,8 +2472,10 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/platoonarmory)
 "eJ" = (
-/obj/structure/platform{
-	dir = 1
+/obj/structure/platform/stair_cut/alt,
+/obj/structure/stairs/perspective{
+	dir = 10;
+	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
@@ -2562,13 +2557,163 @@
 /obj/structure/girder/displaced,
 /turf/closed/wall/strata_ice/jungle,
 /area/firebase_zulu/outside)
+"eR" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1
+	},
+/obj/item/facepaint/sniper{
+	pixel_y = 7
+	},
+/obj/effect/vehicle_roof/van,
+/turf/open/gm/dirt2,
+/area/firebase_zulu/inside/canteen)
+"eS" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/firebase_zulu/outside/compound)
+"eT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"eU" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/firebase_zulu/inside/shared_office)
+"eV" = (
+/obj/structure/prop/static_tank/water,
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/firebase_zulu/outside/compound)
+"eW" = (
+/obj/structure/largecrate/supply/ammo{
+	name = "materials crate";
+	fill_from_loc = 1
+	},
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/plasteel{
+	amount = 40;
+	pixel_x = 7;
+	pixel_y = 6
+	},
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"eX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/case/double,
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"eY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/weapons/pistols{
+	layer = 3.1
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"eZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
 "fa" = (
 /obj/structure/fence,
 /turf/open/gm/dirt2,
 /area/firebase_zulu/outside/compound)
+"fb" = (
+/obj/structure/surface/table/almayer,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
 "fc" = (
 /turf/closed/wall/rock/brown,
 /area/firebase_zulu/outside/compound)
+"fd" = (
+/obj/structure/prop/dam/crane{
+	layer = 3.1
+	},
+/obj/structure/largecrate/supply/supplies/flares{
+	layer = 3.1;
+	pixel_y = 22;
+	pixel_x = -1
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"ff" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_y = -7
+	},
+/obj/structure/surface/table/almayer,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/floodlights{
+	pixel_y = 4;
+	layer = 3.2
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fh" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/bedroll{
+	pixel_y = -1;
+	pixel_x = 3;
+	layer = 3.1
+	},
+/obj/item/toy/plush/therapy/red{
+	desc = "An unapproved bootleg copy of the patented Sergeant Huggs. Looks like he's seen better days.";
+	force = 15;
+	layer = 4.1;
+	name = "Discharged Huggs";
+	pixel_y = -2;
+	throwforce = 15;
+	pixel_x = 5
+	},
+/obj/item/clothing/head/cmcap{
+	layer = 4.2;
+	pixel_y = 5;
+	pixel_x = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fi" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/supply/supplies/sandbags{
+	pixel_y = -8;
+	layer = 3.1;
+	pixel_x = -3
+	},
+/obj/structure/largecrate/supply/supplies/mre{
+	layer = 3.1;
+	pixel_y = 8;
+	pixel_x = -1
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
 "fj" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -2577,6 +2722,62 @@
 /obj/effect/vehicle_roof/van,
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/canteen)
+"fk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/kelland/left{
+	layer = 3;
+	opacity = 0;
+	pixel_y = 8
+	},
+/obj/structure/cargo_container/kelland/left{
+	pixel_y = 31;
+	opacity = 0
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	layer = 3.1;
+	pixel_y = -1
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 10;
+	layer = 3.2
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/kelland/right{
+	opacity = 0;
+	pixel_y = 8;
+	layer = 3
+	},
+/obj/structure/cargo_container/kelland/right{
+	pixel_y = 31;
+	opacity = 0
+	},
+/obj/structure/largecrate/supply/supplies/sandbags{
+	pixel_y = -6;
+	layer = 3.1;
+	pixel_x = -3
+	},
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 5;
+	layer = 3.2;
+	pixel_x = -3
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
+"fm" = (
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	layer = 3.1;
+	pixel_y = 6
+	},
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_y = 17;
+	layer = 3.2;
+	pixel_x = -2
+	},
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/shared_office)
 "fq" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -30844,13 +31045,13 @@ Ar
 Ar
 Ar
 Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
+fk
+fh
+ff
+fe
+eZ
+mI
+eW
 Ar
 Ar
 eJ
@@ -31056,16 +31257,16 @@ Ar
 MN
 GE
 Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-eJ
+fl
+Iw
+Iw
+mI
+fb
+Iw
+mI
+mI
+Vj
+lj
 mW
 mW
 mW
@@ -31268,16 +31469,16 @@ Vj
 Iw
 yR
 Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-cF
+mI
+mI
+mI
+mI
+Iw
+mI
+mI
+Iw
+Vj
+lj
 mW
 mW
 mW
@@ -31480,16 +31681,16 @@ Ar
 de
 Iw
 Ar
+fm
+mI
+mI
+mI
+fd
+mI
+Iw
+eT
 Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-eJ
+xW
 hf
 mW
 jQ
@@ -31693,13 +31894,13 @@ Ar
 Ar
 Ar
 Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
-Ar
+fi
+fg
+mI
+mI
+eY
+eX
+eU
 Ar
 pI
 mW
@@ -31912,8 +32113,8 @@ Ar
 Ar
 Ar
 Ar
-Ar
-eJ
+eS
+OK
 mW
 mW
 mW
@@ -32124,8 +32325,8 @@ cX
 cX
 cX
 cX
-cX
 OK
+mW
 mW
 mW
 mW
@@ -34454,8 +34655,8 @@ cV
 Pi
 mW
 Vz
-Vz
-Dm
+kP
+eV
 mW
 mW
 mW
@@ -38493,7 +38694,7 @@ cq
 ch
 Us
 ca
-bX
+eR
 bT
 bR
 Yo
