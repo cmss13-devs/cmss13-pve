@@ -114,7 +114,7 @@
 		ACCESSORY_SLOT_DECORKNEE,
 		ACCESSORY_SLOT_DECORGROIN,
 		ACCESSORY_SLOT_MASK,
-		ACCESSORY_SLOT_PATCH
+		ACCESSORY_SLOT_PATCH,
 	)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
