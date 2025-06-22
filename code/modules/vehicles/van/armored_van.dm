@@ -1,6 +1,6 @@
 /obj/vehicle/multitile/van/armored
 	name = "\improper Armored Van"
-	desc = "A colony van, uparmored and with a mounted M56 Cupola on the top. Commonly found use by the UACG, though also found in the hands of insurgents. Entrances by the sides."
+	desc = "A colony van, uparmored and with a mounted M56 Cupola on the top. Commonly found use with Insurgents and underfunded UACG forces. Entrances by the sides."
 
 	icon = 'icons/obj/vehicles/van.dmi'
 	icon_state = "van_armored_base"
@@ -9,7 +9,7 @@
 
 	interior_map = /datum/map_template/interior/van_armored
 
-	passengers_slots = 1 //4  total
+	passengers_slots = 2 //4  total
 	xenos_slots = 2
 
 	entrances = list(
@@ -21,20 +21,17 @@
 
 	light_range = 5
 
-	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/locomotion/van_wheels,
-		/obj/item/hardpoint/secondary/m56cupola/van,
+		/obj/item/hardpoint/primary/van_mg,
 	)
 
 	seats = list(
 		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
 	)
 
 	active_hp = list(
 		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
 	)
 
 
@@ -64,12 +61,6 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
-	else if(seat == VEHICLE_GUNNER)
-		add_verb(M.client, list(
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
-		))
 
 /obj/vehicle/multitile/van/armored/remove_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -87,12 +78,6 @@
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
-		))
-	else if(seat == VEHICLE_GUNNER)
-		remove_verb(M.client, list(
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /*
@@ -133,11 +118,7 @@
 	load_damage(ARM_VAN)
 	ARM_VAN.update_icon()
 
-/obj/effect/vehicle_spawner/van/armored/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/van)
-
 //PRESET: MG
 /obj/effect/vehicle_spawner/van/armored/mg/load_hardpoints(obj/vehicle/multitile/apc/arc/V)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/van_wheels)
-	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/van)
+	V.add_hardpoint(new /obj/item/hardpoint/primary/van_mg)

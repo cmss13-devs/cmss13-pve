@@ -76,4 +76,4 @@
 
 /datum/map_template/interior/van_armored
 	name = "Armored Van"
-	interior_id = "armored_van"
+	interior_id = "van_armored"

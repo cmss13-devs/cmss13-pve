@@ -2591,6 +2591,7 @@
 #include "code\modules\vehicles\hardpoints\primary\ltb.dm"
 #include "code\modules\vehicles\hardpoints\primary\minigun.dm"
 #include "code\modules\vehicles\hardpoints\primary\primary.dm"
+#include "code\modules\vehicles\hardpoints\primary\van_mg.dm"
 #include "code\modules\vehicles\hardpoints\secondary\aa_launcher.dm"
 #include "code\modules\vehicles\hardpoints\secondary\cupola.dm"
 #include "code\modules\vehicles\hardpoints\secondary\flamer.dm"
