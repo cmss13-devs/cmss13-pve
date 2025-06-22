@@ -354,6 +354,35 @@
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
+"aH" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
+"aI" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/closet/crate/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
 "aJ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -990,10 +1019,6 @@
 /obj/effect/vehicle_roof/van,
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/canteen)
-"bU" = (
-/obj/effect/vehicle_roof/van,
-/turf/closed/wall/rock/brown,
-/area/firebase_zulu/outside/compound)
 "bV" = (
 /obj/structure/barricade/sandbags/full{
 	dir = 4
@@ -2771,6 +2796,19 @@
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
+"fo" = (
+/obj/structure/closet/crate/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/obj/item/clothing/accessory/poncho/green,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
 "fq" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -2837,7 +2875,12 @@
 	id = "squadarmory";
 	name = "\improper Gear Lockers"
 	},
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/inside/platoonarmory)
 "ga" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -3089,8 +3132,8 @@
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/drinks/cans/souto/lime{
-	pixel_y = 3;
-	pixel_x = 5
+	pixel_y = 11;
+	pixel_x = -1
 	},
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
@@ -3315,8 +3358,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/outside/compound)
 "lI" = (
-/obj/structure/platform{
-	dir = 1
+/obj/structure/platform_decoration{
+	dir = 8
 	},
 /obj/structure/platform{
 	dir = 8
@@ -4834,6 +4877,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/skills{
+	dir = 4;
+	pixel_y = 13
+	},
 /obj/structure/machinery/computer/secure_data/noaccess{
 	dir = 4
 	},
@@ -5693,6 +5740,7 @@
 	pixel_x = -2;
 	pixel_y = 7
 	},
+/obj/item/storage/pouch/machete/full,
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/shared_office)
@@ -6023,6 +6071,14 @@
 	},
 /obj/item/map/current_map{
 	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/cup{
+	pixel_x = -27;
+	pixel_y = 26
+	},
+/obj/item/reagent_container/food/drinks/cans/classcola{
+	pixel_x = -15;
+	pixel_y = 16
 	},
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
@@ -6496,15 +6552,19 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
 /obj/item/paper{
-	pixel_y = 5;
-	pixel_x = -4
+	pixel_y = 3;
+	pixel_x = -2
 	},
 /obj/item/tool/pen{
-	pixel_x = 6;
+	pixel_x = 10;
 	pixel_y = 6
 	},
 /obj/structure/sign/banners/usa_flag{
 	pixel_y = 28
+	},
+/obj/item/paper_bin{
+	pixel_y = 8;
+	pixel_x = -3
 	},
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
@@ -6974,18 +7034,21 @@
 "Zq" = (
 /obj/structure/surface/table/almayer,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = -8
-	},
 /obj/item/device/flashlight/lamp/on{
-	pixel_y = 14;
-	pixel_x = 14
+	pixel_y = 12;
+	pixel_x = 17
 	},
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
-	pixel_x = 9;
-	pixel_y = 2
+	pixel_x = 15;
+	pixel_y = -2
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	icon_state = "map";
+	layer = 2.97;
+	name = "Tactical Map Display";
+	pixel_y = 10
 	},
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
@@ -9350,7 +9413,7 @@ GM
 ej
 ed
 er
-fZ
+CQ
 uY
 eh
 Kh
@@ -9562,7 +9625,7 @@ VE
 eh
 Kh
 eb
-fZ
+CQ
 gx
 eh
 Kh
@@ -9986,7 +10049,7 @@ GM
 OD
 Kh
 Kh
-fZ
+aH
 uY
 ei
 eg
@@ -10198,7 +10261,7 @@ VE
 OD
 Kh
 Kh
-fZ
+aH
 gx
 CQ
 ee
@@ -10410,7 +10473,7 @@ Zr
 OD
 et
 Kh
-fZ
+aH
 tJ
 ej
 ef
@@ -12106,7 +12169,7 @@ KE
 KE
 lp
 lp
-AM
+aI
 GM
 OD
 aD
@@ -12318,7 +12381,7 @@ lQ
 Th
 Tq
 lp
-GM
+fo
 GM
 OD
 aD
@@ -27020,8 +27083,8 @@ fc
 fc
 fc
 fc
-bU
-bU
+fc
+fc
 fc
 fc
 fc

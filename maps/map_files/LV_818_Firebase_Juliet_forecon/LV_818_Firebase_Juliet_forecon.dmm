@@ -354,6 +354,20 @@
 /obj/effect/vehicle_roof/van,
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
+"aH" = (
+/turf/closed/wall/shiva/prefabricated/reinforced,
+/area/firebase_zulu/inside/dorms)
+"aI" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "squadarmory";
+	name = "\improper Gear Lockers"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
 "aJ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -2277,6 +2291,24 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/inside/platoonarmory)
+"eu" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/closet/crate/green,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/obj/item/attachable/suppressor,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
 "ev" = (
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
@@ -2323,6 +2355,21 @@
 	pixel_x = 7
 	},
 /turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/platoonarmory)
+"eA" = (
+/obj/structure/closet/crate/green,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/obj/item/attachable/reddot,
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/inside/platoonarmory)
 "eB" = (
 /obj/structure/machinery/light/small/blue{
@@ -2528,6 +2575,13 @@
 /area/firebase_zulu/outside/compound)
 "fb" = (
 /obj/structure/surface/table/almayer,
+/obj/item/storage/box/explosive_mines{
+	pixel_y = 9;
+	pixel_x = -5
+	},
+/obj/item/storage/box/explosive_mines{
+	pixel_y = 1
+	},
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/shared_office)
 "fc" = (
@@ -2738,7 +2792,12 @@
 	id = "squadarmory";
 	name = "\improper Gear Lockers"
 	},
-/turf/open/floor/almayer/plate,
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1;
+	pixel_x = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/inside/platoonarmory)
 "ga" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -6893,10 +6952,15 @@
 "Za" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/closet/secure_closet/marine_personal/forecon/rto{
+	pixel_x = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/forecon/corpsman{
+	pixel_x = -10
+	},
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/marine_personal/forecon/rto,
 /obj/effect/vehicle_roof/van,
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/dorms)
@@ -9280,7 +9344,7 @@ GM
 ej
 ed
 er
-fZ
+CQ
 tJ
 eh
 Kh
@@ -9492,7 +9556,7 @@ VE
 eh
 Kh
 eb
-fZ
+CQ
 gx
 eh
 Kh
@@ -9916,7 +9980,7 @@ GM
 OD
 Kh
 Kh
-fZ
+aI
 tJ
 ei
 eg
@@ -10128,7 +10192,7 @@ VE
 OD
 Kh
 Kh
-fZ
+aI
 gx
 CQ
 ee
@@ -10340,7 +10404,7 @@ Zr
 OD
 et
 Kh
-fZ
+aI
 tJ
 ej
 ef
@@ -12036,7 +12100,7 @@ KE
 KE
 lp
 lp
-AM
+eu
 GM
 OD
 aD
@@ -12248,7 +12312,7 @@ lQ
 Th
 Tq
 lp
-GM
+eA
 GM
 OD
 aD
@@ -26516,8 +26580,8 @@ fc
 fc
 fc
 fc
-bU
-bU
+fc
+fc
 fc
 fc
 fc
@@ -26950,8 +27014,8 @@ fc
 fc
 fc
 fc
-fc
-fc
+bU
+bU
 fc
 fc
 fc
@@ -31284,8 +31348,8 @@ uz
 uz
 aD
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -31495,9 +31559,9 @@ uz
 uz
 uz
 aD
+aD
 uz
-uz
-uz
+aD
 uz
 uz
 aD
@@ -31917,8 +31981,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -32129,7 +32193,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -32341,7 +32405,7 @@ uz
 uz
 aD
 aD
-uz
+aD
 uz
 uz
 uz
@@ -32552,7 +32616,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -32765,7 +32829,7 @@ uz
 uz
 aD
 uz
-uz
+aD
 uz
 uz
 aD
@@ -32975,8 +33039,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -33187,7 +33251,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -33399,8 +33463,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -33611,8 +33675,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -33824,7 +33888,7 @@ uz
 uz
 aD
 uz
-uz
+aD
 uz
 uz
 uz
@@ -35091,7 +35155,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -35302,7 +35366,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -35408,7 +35472,7 @@ mW
 KY
 xV
 KY
-LV
+aH
 Vy
 mW
 fy
@@ -35513,7 +35577,7 @@ uz
 uz
 aD
 aD
-uz
+aD
 uz
 uz
 uz
@@ -35724,8 +35788,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -35936,14 +36000,14 @@ uz
 uz
 aD
 aD
+aD
 uz
 uz
 uz
 uz
 uz
 uz
-uz
-uz
+aD
 aD
 aD
 uz
@@ -36147,6 +36211,7 @@ uz
 uz
 uz
 aD
+aD
 uz
 uz
 uz
@@ -36154,8 +36219,7 @@ uz
 uz
 uz
 uz
-uz
-uz
+aD
 aD
 uz
 uz
@@ -36570,7 +36634,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -36579,8 +36643,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -36791,8 +36855,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -36993,7 +37057,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -37002,10 +37066,10 @@ uz
 uz
 uz
 aD
-uz
-uz
-uz
-uz
+aD
+aD
+aD
+aD
 uz
 uz
 uz
@@ -37205,7 +37269,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -37214,10 +37278,10 @@ uz
 uz
 uz
 aD
-uz
-uz
-uz
-uz
+aD
+aD
+aD
+aD
 uz
 uz
 uz
@@ -37417,7 +37481,7 @@ uz
 uz
 uz
 aD
-uz
+aD
 uz
 uz
 uz
@@ -37426,9 +37490,9 @@ uz
 uz
 uz
 aD
-uz
-uz
-uz
+aD
+aD
+aD
 aD
 uz
 uz
@@ -37638,8 +37702,8 @@ uz
 uz
 uz
 aD
-uz
-uz
+aD
+aD
 uz
 aD
 uz
@@ -37848,11 +37912,11 @@ uz
 uz
 uz
 uz
-uz
 aD
-uz
-uz
-uz
+aD
+aD
+aD
+aD
 aD
 uz
 uz
@@ -38051,8 +38115,8 @@ uz
 uz
 uz
 uz
-uz
-uz
+aD
+aD
 aD
 uz
 uz
@@ -38060,11 +38124,11 @@ aD
 aD
 uz
 uz
-uz
-uz
 aD
-uz
-uz
+aD
+aD
+aD
+aD
 uz
 aD
 uz
@@ -38263,7 +38327,7 @@ uz
 uz
 uz
 uz
-uz
+aD
 uz
 aD
 uz
@@ -38272,9 +38336,9 @@ uz
 aD
 uz
 uz
-uz
-uz
-uz
+aD
+aD
+aD
 aD
 uz
 uz
@@ -38475,7 +38539,7 @@ uz
 uz
 uz
 uz
-uz
+aD
 uz
 aD
 uz
@@ -38484,8 +38548,8 @@ uz
 uz
 aD
 uz
-uz
-uz
+aD
+aD
 uz
 aD
 aD
@@ -38687,7 +38751,7 @@ uz
 uz
 uz
 uz
-uz
+aD
 uz
 aD
 uz
@@ -38696,8 +38760,8 @@ uz
 uz
 aD
 uz
-uz
-uz
+aD
+aD
 uz
 uz
 uz
@@ -38909,9 +38973,9 @@ uz
 uz
 aD
 uz
+aD
 uz
-uz
-uz
+aD
 uz
 aD
 uz
