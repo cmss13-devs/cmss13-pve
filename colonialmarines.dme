@@ -2038,6 +2038,7 @@
 #include "code\modules\mob\living\carbon\human\ai\action_datums\follow_leader.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\item_pickup.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\keep_distance.dm"
+#include "code\modules\mob\living\carbon\human\ai\action_datums\mg_nest.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\patrol_waypoints.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\quick_approach.dm"
 #include "code\modules\mob\living\carbon\human\ai\action_datums\reload.dm"
