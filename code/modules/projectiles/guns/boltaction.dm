@@ -90,6 +90,7 @@
 	else
 		to_chat(M, SPAN_DANGER("You open the bolt of [src]!"))
 		playsound(get_turf(src), close_bolt_sound, 65, TRUE, 1)
+		eject_casing()
 		unload_chamber(M)
 
 	update_icon()
