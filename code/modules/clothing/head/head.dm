@@ -418,6 +418,11 @@
 	desc = "A casual cap issued as part of the non-combat uniform. While it only protects from the wind and snow, it's much more comfortable than a helmet. This one comes with flaps to keep your neck and ears warm."
 	icon_state = "flapcap_snow"
 
+/obj/item/clothing/head/cmcap/flap/canc
+	name = "\improper flapcap"
+	desc = "A casual cap issued as part of the non-combat uniform in the colors of CANC military."
+	icon_state = "canc_flapcap"
+
 /obj/item/clothing/head/cmcap/reporter
 	name = "combat correspondent cap"
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
