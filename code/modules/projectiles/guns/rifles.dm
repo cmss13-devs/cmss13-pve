@@ -1371,6 +1371,7 @@
 		/obj/item/attachable/suppressor, // Muzzle
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/bayonet/canc,
 		/obj/item/attachable/verticalgrip, // Underbarrel
 		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip/upp,
