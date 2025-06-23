@@ -515,13 +515,18 @@
 /obj/item/weapon/gun/rifle/m41aMK1/carbine
 	name = "XM43 pulse carbine"
 	desc = "Pulse action 10x24mm caseless carbine, semi-experimental. Exchanges the firepower of a grenade launcher and some modularity for handling."
-	icon_state = "xm43a"
-	item_state = "xm43a"
+	icon_state = "xm43"
+	item_state = "xm43"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/lasersight/carbine)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine
+	)
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 	wield_delay = WIELD_DELAY_MIN
 	attachable_allowed = list(
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/stock/rifle,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/lasersight/carbine,
@@ -534,11 +539,19 @@
 	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	scatter = SCATTER_AMOUNT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/handle_starting_attachment()
+	. = ..()
+	var/obj/item/attachable/lasersight/carbine/laser = new(src)
+	laser.flags_attach_features &= ~ATTACH_REMOVABLE
+	laser.hidden = FALSE
+	laser.Attach(src)
+	update_attachable()
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
 	current_mag = null

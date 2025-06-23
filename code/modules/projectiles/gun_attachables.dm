@@ -3784,7 +3784,7 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
 
 /obj/item/attachable/lasersight/carbine
-	name = "XM43A carbine underbarrel laser module"
+	name = "XM43 carbine underbarrel laser module"
 	desc = "What in god's name is this doing off the gun?"
 	icon_state = "lasersight"
 	attach_icon = "carbine_laser_a"
