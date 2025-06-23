@@ -116,10 +116,14 @@ FORENSIC SCANNER
 		user.show_message("No previous scan found.")
 		return
 	if(istype(src, /obj/item/device/healthanalyzer/soul))
-		var/obj/item/device/healthanalyzer/soul/disconnect_scanner
+		var/obj/item/device/healthanalyzer/soul/disconnect_scanner = src
 		if(disconnect_scanner.connected_to)
 			disconnect_scanner.disconnect(TRUE)
-	tgui_interact(user)
+			return
+	if(popup_window)
+		tgui_interact(user)
+	else
+		user.show_message(last_scan)
 
 	return
 
@@ -142,19 +146,20 @@ FORENSIC SCANNER
 	last_scan = null // reset the data
 	to_chat(usr, "The scanner [popup_window ? "now" : "no longer"] shows results on the hud.")
 
-/datum/looping_sound/healthanalyzer_oxygen_beeping //This will be instanced and the sounds changed because I might as well
+/datum/looping_sound/healthanalyzer_oxygen_beeping
 	start_sound = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_oxygen_alarm.ogg' = 1)
 	mid_length = 1 SECONDS
 	volume = 3
 	extra_range = 14
 
-/datum/looping_sound/healthanalyzer_heart_beeping //This will be instanced and the sounds changed because I might as well
+/datum/looping_sound/healthanalyzer_heart_beeping
 	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_sounds = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
 	mid_length = 0.9 SECONDS
 	volume = 4
 	extra_range = 14
+//below for reference
 /*
 /datum/looping_sound/healthanalyzer_heart_beeping_bad
 	start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)

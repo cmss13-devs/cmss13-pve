@@ -228,7 +228,7 @@
 		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
 		WEAR_IN_BACK = /obj/item/roller,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
-		WEAR_IN_JACKET = /obj/item/reagent_container/hypospray/autoinjector/adrenaline,
+		WEAR_IN_JACKET = /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 		WEAR_WAIST = /obj/item/storage/belt/medical/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,

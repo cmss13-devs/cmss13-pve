@@ -309,7 +309,7 @@
 	color = "#38352e" //pretty dark but not 100% black
 
 /obj/item/reagent_container/pill/ethylredoxrazine
-	pill_desc = "An ethylredxrazine pill. Used to treat alcohol poisoning and the related effects of similiar chemical depressants."
+	pill_desc = "An ethylredoxrazine pill. Used to treat alcohol poisoning and the related effects of similiar chemical depressants."
 	pill_initial_reagents = list("ethylredoxrazine" = 7.5)
 	pill_icon_class = "alky"
 	color = COLOR_OLIVE
