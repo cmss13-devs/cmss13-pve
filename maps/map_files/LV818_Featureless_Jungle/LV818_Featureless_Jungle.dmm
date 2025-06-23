@@ -119,6 +119,11 @@
 /obj/structure/flora/jungle/vines/heavy,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/jungle/central_jungle)
+"aA" = (
+/obj/structure/flora/jungle/vines/heavy,
+/obj/structure/flora/bush/ausbushes/var3/brflowers,
+/turf/open/auto_turf/strata_grass/layer1,
+/area/lv624/ground/jungle/central_jungle)
 "aB" = (
 /obj/structure/flora/jungle/thickbush,
 /obj/structure/flora/jungle/thickbush,
@@ -11742,7 +11747,7 @@ ae
 ae
 CU
 CU
-ae
+YN
 ar
 ar
 ar
@@ -31207,7 +31212,7 @@ CU
 CU
 xT
 CU
-ae
+YN
 ae
 ae
 ar
@@ -32681,7 +32686,7 @@ CU
 ag
 CU
 CU
-ae
+YN
 au
 UW
 UW
@@ -36699,7 +36704,7 @@ CU
 CU
 CU
 CU
-ae
+YN
 TV
 ae
 Ua
@@ -38459,7 +38464,7 @@ ae
 ae
 TV
 TV
-ae
+YN
 TV
 TV
 ae
@@ -38798,7 +38803,7 @@ ar
 sj
 ak
 ak
-UW
+ac
 CU
 UW
 UW
@@ -40762,7 +40767,7 @@ al
 ak
 ae
 au
-UW
+ac
 CU
 Kw
 aa
@@ -46574,7 +46579,7 @@ UW
 ae
 ae
 ak
-ae
+YN
 CU
 CU
 CU
@@ -53884,7 +53889,7 @@ CU
 ag
 CU
 CU
-ak
+aA
 ak
 ak
 ae
@@ -55919,7 +55924,7 @@ au
 ae
 ae
 ae
-ae
+YN
 CU
 CU
 CU
