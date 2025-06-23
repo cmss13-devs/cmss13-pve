@@ -10,16 +10,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
 "ac" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/vehicle_roof/van,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/inside/dorms)
@@ -92,16 +92,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/outside/compound)
 "ao" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	light_color = "#dae2ff";
@@ -671,16 +671,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "bl" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -805,16 +805,16 @@
 /turf/open/mars_cave/mars_cave_2,
 /area/firebase_zulu/outside/compound)
 "bz" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
@@ -860,16 +860,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
 "bF" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -959,16 +959,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "bP" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
 	pixel_y = 1;
@@ -1020,16 +1020,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/canteen)
 "bV" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -1461,16 +1461,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "cP" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -1501,32 +1501,32 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/inside/dorms)
 "cS" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/vehicle_roof/van,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/inside/dorms)
 "cT" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -1561,16 +1561,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/outside/compound)
 "cW" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
 	pixel_x = 1
@@ -1585,16 +1585,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "cY" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -1628,16 +1628,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "dc" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
 	pixel_x = -1
@@ -1645,16 +1645,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "dd" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
@@ -1797,16 +1797,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/shared_office)
 "ds" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -1878,16 +1878,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/outside/compound)
 "dz" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
 	pixel_y = 1;
@@ -3841,16 +3841,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/outside/compound)
 "qM" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -3942,16 +3942,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/canteen)
 "st" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 31;
 	layer = 3
@@ -3999,16 +3999,16 @@
 /turf/open/gm/river/ocean,
 /area/firebase_zulu/outside/compound)
 "tw" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -4544,16 +4544,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/firebase_zulu/outside/compound)
 "Ai" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
 	light_color = "#dae2ff";
@@ -4688,16 +4688,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
 "Cm" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
 	light_color = "#dae2ff";
@@ -4888,16 +4888,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/shared_office)
 "DO" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -4914,16 +4914,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "Ec" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/effect/vehicle_roof/van,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -5051,16 +5051,16 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/firebase_zulu/outside/compound)
 "EW" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -5111,16 +5111,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/dorms)
 "Fs" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -5604,16 +5604,16 @@
 /turf/open/gm/dirt2,
 /area/firebase_zulu/inside/canteen)
 "KY" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /obj/structure/tent_curtain,
 /obj/effect/vehicle_roof/van,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -6533,16 +6533,16 @@
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/dorms)
 "TU" = (
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags/full{
+/obj/structure/barricade/sandbags/wired{
 	dir = 8
 	},
-/obj/structure/barricade/sandbags/full,
+/obj/structure/barricade/sandbags/wired,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
 "TV" = (
