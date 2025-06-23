@@ -720,7 +720,7 @@
 	pixel_y = 10;
 	pixel_x = 4
 	},
-/obj/item/device/healthanalyzer/soul,
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "Vp" = (

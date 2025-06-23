@@ -15708,7 +15708,7 @@
 	pixel_y = 13;
 	pixel_x = -5
 	},
-/obj/item/device/healthanalyzer/soul,
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "cWH" = (

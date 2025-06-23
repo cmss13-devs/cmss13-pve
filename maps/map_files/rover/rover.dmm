@@ -2088,19 +2088,11 @@
 	dir = 8;
 	pixel_y = -14
 	},
-/obj/item/device/quiet_silent_healthanalyzer{
-	pixel_x = 11;
-	pixel_y = 14
-	},
 /obj/item/device/flashlight/pen{
 	pixel_y = 6;
 	pixel_x = -5
 	},
 /obj/item/clothing/accessory/stethoscope,
-/obj/item/device/quiet_silent_healthanalyzer{
-	pixel_x = 11;
-	pixel_y = 14
-	},
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
 "jv" = (
@@ -3079,7 +3071,15 @@
 	pixel_x = 10;
 	pixel_y = -24
 	},
-/obj/item/device/healthanalyzer/soul,
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 11;
+	pixel_y = 14
+	},
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
 "si" = (

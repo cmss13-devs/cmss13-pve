@@ -236,6 +236,9 @@
 		/obj/item/reagent_container/blood,
 	)
 
+/obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
+
 /obj/item/storage/belt/medical/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
