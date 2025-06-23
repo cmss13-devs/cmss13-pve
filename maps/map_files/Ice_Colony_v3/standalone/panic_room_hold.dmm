@@ -121,7 +121,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/bar)
 "fM" = (
@@ -186,7 +185,7 @@
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "hN" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/colony/s_admin)
 "iF" = (
@@ -268,13 +267,6 @@
 "lq" = (
 /obj/item/ammo_magazine/rifle{
 	current_rounds = 0
-	},
-/turf/open/floor/shiva/north,
-/area/shiva/interior/colony/s_admin)
-"lP" = (
-/obj/effect/landmark/corpsespawner/wygoon,
-/obj/effect/decal/cleanable/blood{
-	layer = 3
 	},
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
@@ -387,10 +379,6 @@
 	},
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
-"qU" = (
-/obj/effect/landmark/corpsespawner/scientist,
-/turf/open/floor/shiva/bluefull,
-/area/shiva/interior/colony/s_admin)
 "rM" = (
 /obj/structure/barricade/wooden{
 	dir = 1
@@ -456,7 +444,6 @@
 	pixel_x = 9;
 	pixel_y = 17
 	},
-/obj/effect/landmark/corpsespawner/chef,
 /obj/structure/bed/bedroll,
 /obj/item/bedsheet/ce,
 /turf/open/floor/shiva/floor3,
@@ -483,7 +470,7 @@
 /area/shiva/interior/colony/s_admin)
 "uh" = (
 /obj/effect/decal/cleanable/blood/drip,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "ul" = (
@@ -688,7 +675,7 @@
 /turf/open/floor/shiva/green/southeast,
 /area/shiva/interior/colony/botany)
 "zw" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "zA" = (
@@ -788,7 +775,7 @@
 /turf/open/floor/shiva/north,
 /area/shiva/interior/colony/s_admin)
 "CZ" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "Dg" = (
@@ -927,7 +914,6 @@
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
-/obj/effect/landmark/corpsespawner/wysec,
 /turf/open/floor/wood,
 /area/shiva/interior/colony/s_admin)
 "IB" = (
@@ -979,7 +965,7 @@
 /area/shiva/interior/colony/botany)
 "Ko" = (
 /obj/structure/bed/chair,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/bluefull,
 /area/shiva/interior/colony/s_admin)
 "Kp" = (
@@ -1221,7 +1207,7 @@
 /area/shiva/interior/colony/s_admin)
 "Td" = (
 /obj/item/reagent_container/food/drinks/cans/waterbottle,
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/floor3,
 /area/shiva/interior/colony/s_admin)
 "Tj" = (
@@ -1243,7 +1229,7 @@
 /turf/open/floor/shiva/redfull/west,
 /area/shiva/interior/colony/s_admin)
 "TI" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/multi_tiles/west,
 /area/shiva/interior/colony/s_admin)
 "TL" = (
@@ -1262,7 +1248,7 @@
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/shiva/interior/bar)
 "UD" = (
@@ -1551,7 +1537,7 @@ dF
 tk
 Kp
 XP
-qU
+dF
 ce
 ul
 dF
@@ -1620,7 +1606,7 @@ zA
 do
 Hx
 Hx
-lP
+LF
 dF
 Lr
 Hx

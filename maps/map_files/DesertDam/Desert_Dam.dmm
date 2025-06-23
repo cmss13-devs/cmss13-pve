@@ -4887,7 +4887,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_two/hallway)
 "baM" = (
@@ -5134,7 +5134,6 @@
 /area/desert_dam/building/security/marshals_office)
 "bes" = (
 /obj/structure/bed/chair/comfy/black,
-/obj/effect/landmark/corpsespawner/security/marshal,
 /turf/open/floor/interior/wood/alt,
 /area/desert_dam/building/security/marshals_office)
 "bev" = (
@@ -7636,10 +7635,6 @@
 /obj/structure/machinery/light,
 /turf/open/floor/prison,
 /area/desert_dam/building/security/prison)
-"bQG" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/prison,
-/area/desert_dam/building/security/warden)
 "bQH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -8978,7 +8973,7 @@
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/bar/bar)
 "ceH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/bar/bar)
 "ceJ" = (
@@ -11513,7 +11508,6 @@
 /area/desert_dam/exterior/telecomm/lz2_containers)
 "cKk" = (
 /obj/structure/bed,
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/prison,
 /area/desert_dam/building/security/execution_chamber)
 "cKl" = (
@@ -18906,9 +18900,6 @@
 	dir = 4
 	},
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/asphalt/cement/cement1,
 /area/desert_dam/interior/dam_interior/central_tunnel)
@@ -18917,7 +18908,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/exterior/valley/valley_civilian)
 "fyj" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/desert_dam/building/administration/meetingrooom)
 "fyz" = (
@@ -19580,7 +19571,7 @@
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/interior/caves/central_caves)
 "fQD" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/hydroponics/hydroponics_breakroom)
 "fRa" = (
@@ -20333,7 +20324,6 @@
 /area/desert_dam/interior/dam_interior/west_tunnel)
 "gmz" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/engineer,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean/southwest,
@@ -22288,10 +22278,6 @@
 	},
 /turf/open/floor/prison/red/east,
 /area/desert_dam/building/water_treatment_one/lobby)
-"hyR" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/gm/river/darkred_pool,
-/area/desert_dam/building/dorms/pool)
 "hzl" = (
 /obj/effect/decal/sand_overlay/sand1/corner1{
 	dir = 4
@@ -23956,9 +23942,6 @@
 	dir = 4
 	},
 /obj/structure/stairs,
-/obj/structure/platform{
-	dir = 4
-	},
 /turf/open/asphalt/cement/cement1,
 /area/desert_dam/interior/dam_interior/west_tunnel)
 "iCd" = (
@@ -25813,7 +25796,6 @@
 /area/desert_dam/exterior/valley/valley_civilian)
 "jAO" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/effect/landmark/corpsespawner/security/liaison,
 /turf/open/floor/carpet15_15/west,
 /area/desert_dam/building/administration/overseer_office)
 "jAR" = (
@@ -26103,7 +26085,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpsespawner/scientist,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/east_wing_hallway)
@@ -26167,7 +26148,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/interior/dam_interior/central_tunnel)
 "jKN" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/dark2,
 /area/desert_dam/building/administration/hallway)
 "jLd" = (
@@ -27753,7 +27734,7 @@
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/west_wing_hallway)
 "kMb" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/building/warehouse/breakroom)
 "kMi" = (
@@ -28933,10 +28914,6 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/interior/dam_interior/smes_main)
-"lwj" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/prison/floor_plate,
-/area/desert_dam/building/security/evidence)
 "lwl" = (
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/medical/treatment_room)
@@ -31571,7 +31548,7 @@
 /turf/open/floor/cult,
 /area/desert_dam/building/security/courtroom)
 "nbu" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteyellow/north,
 /area/desert_dam/interior/dam_interior/break_room)
 "nby" = (
@@ -37327,11 +37304,6 @@
 /obj/structure/filingcabinet,
 /turf/open/floor/wood,
 /area/desert_dam/building/administration/overseer_office)
-"qCT" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/vault2/northeast,
-/area/desert_dam/building/security/prison)
 "qCW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white/west,
@@ -38232,7 +38204,7 @@
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/river_mouth/southern)
 "reW" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/loading)
 "rfm" = (
@@ -40804,7 +40776,7 @@
 /turf/open/gm/river/desert/shallow_edge/west,
 /area/desert_dam/exterior/river/riverside_central_north)
 "sDC" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/cafeteria)
 "sDJ" = (
@@ -44967,11 +44939,6 @@
 	},
 /turf/open/floor/prison/bright_clean/southwest,
 /area/desert_dam/interior/dam_interior/primary_tool_storage)
-"uYI" = (
-/obj/structure/bed,
-/obj/effect/landmark/corpsespawner/prisoner,
-/turf/open/floor/prison/darkred2/east,
-/area/desert_dam/building/security/deathrow)
 "uYW" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass/colony{
 	name = "\improper Security Office"
@@ -49774,7 +49741,7 @@
 /turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/north_tunnel_entrance)
 "xPX" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/greenfull/northwest,
 /area/desert_dam/building/dorms/hallway_northwing)
 "xQc" = (
@@ -57410,7 +57377,7 @@ bNE
 mVN
 jeJ
 rZJ
-qCT
+kOc
 kOc
 kOc
 pBN
@@ -58097,7 +58064,7 @@ pDE
 vEY
 aWK
 kBS
-lwj
+iAl
 iAl
 iAl
 aWK
@@ -60922,7 +60889,7 @@ bWt
 jbh
 bJU
 pFV
-uYI
+rAM
 sAz
 bBL
 fSr
@@ -61150,7 +61117,7 @@ eRG
 bJV
 bNi
 bNi
-bQG
+bNi
 bNi
 bWA
 dKr
@@ -97028,7 +96995,7 @@ onZ
 vFZ
 lcM
 hFc
-hyR
+hFc
 hFc
 tDS
 dIk

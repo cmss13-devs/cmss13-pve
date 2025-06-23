@@ -30,7 +30,7 @@
 "di" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/rods,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating,
 /area/bigredv2/outside/medical)
 "fN" = (
@@ -76,7 +76,7 @@
 /area/bigredv2/outside/medical)
 "gR" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "gU" = (
@@ -108,7 +108,6 @@
 "hv" = (
 /obj/effect/decal/cleanable/blood,
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "hA" = (
@@ -126,7 +125,6 @@
 "hQ" = (
 /obj/structure/machinery/optable,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/wygoon,
 /obj/item/reagent_container/food/snacks/margheritaslice,
 /turf/open/floor/white,
 /area/bigredv2/outside/medical)
@@ -145,7 +143,7 @@
 	amount = 1;
 	icon_state = "coil2"
 	},
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "iD" = (
@@ -220,7 +218,7 @@
 /area/bigredv2/outside/medical)
 "kZ" = (
 /obj/item/stack/sheet/metal,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "la" = (
@@ -230,7 +228,6 @@
 /area/bigredv2/outside/medical)
 "lk" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "lD" = (
@@ -282,7 +279,7 @@
 /area/bigredv2/outside/medical)
 "ny" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "nB" = (
@@ -327,12 +324,12 @@
 /area/bigredv2/outside/medical)
 "og" = (
 /obj/structure/bed/chair,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "ol" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "oq" = (
@@ -384,7 +381,7 @@
 /turf/open/floor/white,
 /area/bigredv2/outside/medical)
 "qV" = (
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "rj" = (
@@ -440,7 +437,7 @@
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "sC" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged4/west,
 /area/bigredv2/outside/medical)
 "sJ" = (
@@ -481,15 +478,8 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 9
 	},
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
-/area/bigredv2/outside/medical)
-"ur" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/landmark/corpsespawner/doctor,
-/turf/open/floor/white,
 /area/bigredv2/outside/medical)
 "uv" = (
 /obj/structure/machinery/light,
@@ -508,7 +498,6 @@
 "vg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "vr" = (
@@ -533,7 +522,7 @@
 	amount = 1;
 	icon_state = "coil2"
 	},
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged3/west,
 /area/bigredv2/outside/medical)
 "vL" = (
@@ -623,7 +612,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "yy" = (
@@ -658,15 +647,9 @@
 /obj/item/stack/sheet/metal,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
-"yZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
-/turf/open/floor/platingdmg1,
-/area/bigredv2/outside/medical)
 "zQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Ap" = (
@@ -732,7 +715,7 @@
 /turf/open/floor/asteroidwarning,
 /area/bigredv2/outside/c)
 "CP" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Dh" = (
@@ -740,7 +723,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged3/west,
 /area/bigredv2/outside/medical)
 "DB" = (
@@ -773,7 +756,7 @@
 	amount = 1;
 	icon_state = "coil2"
 	},
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "EY" = (
@@ -805,11 +788,6 @@
 "Gd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/crap_item,
-/turf/open/floor/platingdmg1,
-/area/bigredv2/outside/medical)
-"Go" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Gr" = (
@@ -853,7 +831,7 @@
 /area/bigredv2/outside/medical)
 "HO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Iv" = (
@@ -959,7 +937,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/bigredv2/outside/medical)
 "Ma" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Mc" = (
@@ -983,7 +961,7 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "MA" = (
@@ -1041,7 +1019,7 @@
 /turf/open/floor/whitepurplecorner/north,
 /area/bigredv2/outside/medical)
 "Om" = (
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Ot" = (
@@ -1062,7 +1040,7 @@
 /area/bigredv2/outside/medical)
 "Oy" = (
 /obj/item/stack/sheet/metal,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "OK" = (
@@ -1087,7 +1065,7 @@
 /turf/open/floor/whitebluefull/northeast,
 /area/bigredv2/outside/medical)
 "OP" = (
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "OU" = (
@@ -1112,11 +1090,6 @@
 /obj/item/device/healthanalyzer,
 /turf/open/floor/whitegreenfull,
 /area/bigredv2/outside/medical)
-"PH" = (
-/obj/effect/landmark/corpsespawner/doctor,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/white,
-/area/bigredv2/outside/medical)
 "Qc" = (
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/whitebluefull/northeast,
@@ -1127,7 +1100,6 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Qn" = (
@@ -1157,11 +1129,11 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 4
 	},
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "RR" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/platingdmg3,
 /area/bigredv2/outside/medical)
 "Sm" = (
@@ -1219,7 +1191,7 @@
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/medical)
 "Ud" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged3/west,
 /area/bigredv2/outside/medical)
 "Ue" = (
@@ -1339,7 +1311,7 @@
 /area/bigredv2/outside/medical)
 "WQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "WW" = (
@@ -1364,7 +1336,7 @@
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/medical)
 "Xs" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged5/west,
 /area/bigredv2/outside/medical)
 "Xt" = (
@@ -1429,7 +1401,7 @@
 /area/bigredv2/outside/n)
 "ZI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/damaged3/west,
 /area/bigredv2/outside/medical)
 "ZM" = (
@@ -1576,7 +1548,7 @@ GH
 aj
 hA
 Fb
-PH
+Re
 JC
 Iv
 aa
@@ -1784,7 +1756,7 @@ yH
 Mf
 Of
 Ma
-Go
+xT
 BO
 xT
 BO
@@ -2016,7 +1988,7 @@ oE
 BY
 RR
 CP
-yZ
+BY
 Dh
 Re
 Us
@@ -2163,7 +2135,7 @@ nt
 sQ
 qd
 ND
-ur
+Gr
 WW
 Xy
 ap

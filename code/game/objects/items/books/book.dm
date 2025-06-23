@@ -4,7 +4,7 @@
 /obj/item/book
 	name = "book"
 	icon = 'icons/obj/items/books.dmi'
-	icon_state ="book"
+	icon_state ="book_blue"
 	throw_speed = SPEED_FAST
 	throw_range = 5
 	/// upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)
@@ -40,7 +40,7 @@
 			to_chat(user, SPAN_NOTICE("The pages of [title] have been cut out!"))
 			return
 	if(src.dat)
-		show_browser(user, "<body class='paper'><TT><I>Owner: [author].</I></TT> <BR>[dat]</body>", "window=book;size=800x600")
+		show_browser(user, "<body class='paper'><TT><I>Owner: [author].</I></TT> <BR>[dat]</body>", "window=book", width = 800, height = 600)
 		user.visible_message("[user] opens \"[src.title]\".")
 		onclose(user, "book")
 	else

@@ -116,19 +116,29 @@
 	desc = "A wooden case that fits a pistol and a number of magazines."
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "matebacase"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 7
 
-/obj/item/storage/box/loadout/upp
+/obj/item/storage/box/loadout/T73_loadout
 	name = "Type 73 storing case"
 	desc = "A small case containing a loaded Type 73, and additional magazines."
 	can_hold = list(/obj/item/weapon/gun/pistol/t73, /obj/item/ammo_magazine/pistol/t73)
 
-/obj/item/storage/box/loadout/upp/fill_preset_inventory()
+/obj/item/storage/box/loadout/T73_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/t73(src)
+
+/obj/item/storage/box/loadout/ZHNK72_loadout
+	name = "ZHNK-72 storing case"
+	desc = "A small case containing a loaded ZHNK-72, and additional speedloaders."
+	can_hold = list(/obj/item/weapon/gun/revolver/upp, /obj/item/ammo_magazine/revolver/upp)
+
+/obj/item/storage/box/loadout/ZHNK72_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/upp(src)
 
 /obj/item/storage/box/loadout/M4A3_custom_loadout
 	name = "M4A3 storage case"
@@ -220,7 +230,7 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver(src)
 
-/obj/item/storage/box/loadout/clf
+/obj/item/storage/box/loadout/CLF_loadout
 	name = "Hummingbird storage box"
 	desc = "A slim storage case containing a loaded Hummingbird pistol and additional magazines."
 	w_class = SIZE_SMALL
@@ -228,10 +238,41 @@
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/pistol/clfpistol, /obj/item/ammo_magazine/pistol/clfpistol)
 
-/obj/item/storage/box/loadout/clf/fill_preset_inventory()
+/obj/item/storage/box/loadout/CLF_loadout/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/clfpistol())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
+
+/obj/item/storage/box/loadout/L54_loadout
+	name = "L54 storage box"
+	desc = "A slim storage case containing a loaded L54 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/l54, /obj/item/ammo_magazine/pistol/l54)
+
+/obj/item/storage/box/loadout/L54_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/l54())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/l54(src)
+
+/obj/item/storage/box/loadout/M9_loadout
+	name = "Berreta 92FS storage box"
+	desc = "A slim storage case containing a loaded M9 pistol and additional magazines."
+	can_hold = list(/obj/item/weapon/gun/pistol/b92fs, /obj/item/ammo_magazine/pistol/b92fs)
+
+/obj/item/storage/box/loadout/M9_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
+
+/obj/item/storage/box/loadout/VP78_loadout
+	name = "VP78 storage box"
+	desc = "A slim storage case containing a loaded VP78 pistol and additional magazines."
+	storage_slots = 3	//Limited magazines thanks to how strong this is. Enough for a shoulder holster but little more than that
+	can_hold = list(/obj/item/weapon/gun/pistol/vp78, /obj/item/ammo_magazine/pistol/vp78)
+
+/obj/item/storage/box/loadout/VP78_loadout/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/vp78(src)
 
 /obj/item/storage/box/loadout/co2_knife
 	name = "M8 cartridge bayonet packaging"

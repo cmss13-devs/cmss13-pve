@@ -203,7 +203,6 @@
 //Mobs on Fire end
 
 /mob/living/proc/handle_weather(delta_time = 1)
-	var/starting_weather_type = current_weather_effect_type
 	var/area/area = get_area(src)
 	// Check if we're supposed to be something affected by weather
 	if(!SSweather.weather_event_instance || !SSweather.map_holder.should_affect_area(area))
@@ -211,12 +210,6 @@
 	else
 		current_weather_effect_type = SSweather.weather_event_type
 		SSweather.weather_event_instance.process_mob_effect(src, delta_time)
-
-	if(current_weather_effect_type != starting_weather_type)
-		if(current_weather_effect_type)
-			overlay_fullscreen("weather", SSweather.weather_event_instance.fullscreen_type)
-		else
-			clear_fullscreen("weather")
 
 /mob/living/handle_flamer_fire(obj/flamer_fire/fire, damage, delta_time)
 	. = ..()

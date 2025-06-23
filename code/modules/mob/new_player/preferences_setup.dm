@@ -263,23 +263,25 @@
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_CO]
 			return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(owner)]"]
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so/equipped
+			return /datum/equipment_preset/uscm_ship/so_equipped
 		if(JOB_XO)
 			return /datum/equipment_preset/uscm_ship/xo
+		/*
 		if(JOB_AUXILIARY_OFFICER)
 			return /datum/equipment_preset/uscm_ship/auxiliary_officer
-		/*
 		if(JOB_INTEL)
 			return /datum/equipment_preset/uscm/intel/full
-		*/
 		if(JOB_CAS_PILOT)
 			return /datum/equipment_preset/uscm_ship/gp/full
+		*/
 		if(JOB_TANK_CREW)
-			return /datum/equipment_preset/uscm/tank/full
+			return /datum/equipment_preset/uscm/tank
+		/*
 		if(JOB_DROPSHIP_PILOT)
 			return /datum/equipment_preset/uscm_ship/dp/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
 			return /datum/equipment_preset/uscm_ship/dcc/full
+		*/
 		if(JOB_CORPORATE_LIAISON)
 			return /datum/equipment_preset/uscm_ship/liaison
 		if(JOB_COMBAT_REPORTER)
@@ -295,8 +297,8 @@
 			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
 		if(JOB_WARDEN)
 			return /datum/equipment_preset/uscm_ship/uscm_police/warden
-		if(JOB_SEA)
-			return /datum/equipment_preset/uscm_ship/sea
+		if(JOB_DI)
+			return /datum/equipment_preset/uscm_ship/di
 		if(JOB_CHIEF_ENGINEER)
 			return /datum/equipment_preset/uscm_ship/chief_engineer
 		if(JOB_ORDNANCE_TECH)
@@ -321,7 +323,7 @@
 			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].survivor_types
 			if(length(survivor_types))
 				return pick(survivor_types)
-			return /datum/equipment_preset/survivor
+			return /datum/equipment_preset/colonist
 		if(JOB_SYNTH_SURVIVOR)
 			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].synth_survivor_types
 			if(length(survivor_types))

@@ -9,6 +9,8 @@
 	var/can_explode = FALSE
 	var/burning = FALSE
 	var/limit_per_tile = 1 //how many you can deploy per tile
+	var/holds_ammo = TRUE
+	var/holds_grenades = FALSE
 	layer = LOWER_ITEM_LAYER //to not hide other items
 
 	var/text_markings_icon = 'icons/obj/items/weapons/guns/ammo_boxes/text.dmi'
@@ -144,8 +146,10 @@
 				. += SPAN_INFO("It feels about half full.")
 				return
 			. += SPAN_INFO("It feels almost full.")
-	if(burning)
+	if(burning && holds_ammo)
 		. += SPAN_DANGER("It's on fire and might explode!")
+	if(burning && holds_grenades)
+		. += SPAN_DANGER("It's on fire and the grenades inside might explode at any time!")
 
 /obj/item/ammo_box/magazine/is_loaded()
 	if(handfuls)
@@ -154,7 +158,7 @@
 	return length(contents)
 
 /obj/item/ammo_box/magazine/deploy_ammo_box(mob/living/user, turf/T)
-	if(burning)
+	if(burning && holds_ammo)
 		to_chat(user, SPAN_DANGER("It's on fire and might explode!"))
 		return
 
@@ -164,7 +168,7 @@
 			to_chat(user, SPAN_WARNING("You can't deploy different size boxes in one place!"))
 			return
 		box_on_tile++
-		if(box_on_tile >= limit_per_tile)
+		if(box_on_tile == limit_per_tile)
 			to_chat(user, SPAN_WARNING("You can't cram any more boxes in here!"))
 			return
 
@@ -178,6 +182,12 @@
 	M.update_icon()
 	if(limit_per_tile > 1)
 		M.assign_offsets(T)
+	if(holds_ammo)
+		M.holds_ammo = TRUE
+		M.holds_grenades = FALSE
+	if(holds_grenades)
+		M.holds_ammo = FALSE
+		M.holds_grenades = TRUE
 	user.drop_inv_item_on_ground(src)
 	Move(M)
 
@@ -214,15 +224,29 @@
 		severity = floor(severity / 150)
 	return severity
 
+//Just a few grenades will cause a detonation. Lots will nuke it all in one go
+/obj/item/ammo_box/magazine/proc/get_nade_severity()
+	var/severity = 0
+	for(var/obj/item/explosive/grenade/nade in contents)
+		severity += length(contents)
+	severity = floor(severity / 280)
+	return severity
+
 /obj/item/ammo_box/magazine/process_burning(datum/cause_data/flame_cause_data)
 	var/obj/structure/magazine_box/host_box
 	if(istype(loc, /obj/structure/magazine_box))
 		host_box = loc
-	if(can_explode)
+	if(can_explode && holds_ammo)
 		var/severity = get_severity()
 		if(severity > 0)
 			handle_side_effects(host_box, TRUE)
 			addtimer(CALLBACK(src, PROC_REF(explode), severity, flame_cause_data), max(5 - severity, 2)) //the more ammo inside, the faster and harder it cooks off
+			return
+	if(holds_grenades)
+		var/severity = get_nade_severity()
+		if(severity > 0)
+			handle_side_effects(host_box, TRUE)
+			addtimer(CALLBACK(src, PROC_REF(explode), severity, flame_cause_data), 80) //I may be evil, but not that evil I won't give mooks a chance to run
 			return
 	handle_side_effects(host_box)
 	//need to make sure we delete the structure box if it exists, it will handle the deletion of ammo box inside
@@ -231,17 +255,29 @@
 
 /obj/item/ammo_box/magazine/handle_side_effects(obj/structure/magazine_box/host_box, will_explode = FALSE)
 	var/shown_message = "\The [src] catches on fire!"
-	if(will_explode)
+	if(will_explode && holds_ammo)
 		shown_message = "\The [src] catches on fire and ammunition starts cooking off! It's gonna blow!"
+	if(holds_grenades)
+		shown_message = "\The [src] catches on fire and grenades begin cooking off! Duck and cover!"
 
-	if(host_box)
-		host_box.apply_fire_overlay(will_explode)
-		host_box.set_light(3)
-		host_box.visible_message(SPAN_WARNING(shown_message))
-	else
-		apply_fire_overlay(will_explode)
-		set_light(3)
-		visible_message(SPAN_WARNING(shown_message))
+	if(holds_ammo)
+		if(host_box)
+			host_box.apply_fire_overlay(will_explode)
+			host_box.set_light(3)
+			host_box.visible_message(SPAN_WARNING(shown_message))
+		else
+			apply_fire_overlay(will_explode)
+			set_light(3)
+			visible_message(SPAN_WARNING(shown_message))
+	if(holds_grenades)
+		if(host_box)
+			host_box.apply_fire_overlay(will_explode)
+			host_box.set_light(5)
+			host_box.visible_message(SPAN_HIGHDANGER(shown_message))
+		else
+			apply_fire_overlay(will_explode)
+			set_light(5)
+			visible_message(SPAN_HIGHDANGER(shown_message))
 
 /obj/item/ammo_box/magazine/apply_fire_overlay(will_explode = FALSE)
 	//original fire overlay is made for standard mag boxes, so they don't need additional offsetting
@@ -257,7 +293,7 @@
 
 /obj/item/ammo_box/rounds
 	name = "\improper rifle ammunition box (10x24mm)"
-	desc = "A 10x24mm ammunition box. Used to refill M41A MK1, MK2, M4RA and M41AE2 HPR magazines. It comes with a leather strap allowing to wear it on the back."
+	desc = "A 10x24mm ammunition box. Used to refill M41A and M41AE2 HPR magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_m41"
 	item_state = "base_m41"
 	flags_equip_slot = SLOT_BACK
@@ -284,6 +320,7 @@
 	if(overlays)
 		overlays.Cut()
 	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding base color stripes
+	overlays += image(text_markings_icon, icon_state = "base_type[overlay_content]") //adding base color stripes
 
 	if(bullet_amount == max_bullet_amount)
 		overlays += image(handfuls_icon, icon_state = "rounds[overlay_content]")

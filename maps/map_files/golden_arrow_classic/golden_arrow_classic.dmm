@@ -1683,8 +1683,8 @@
 /area/golden_arrow/squad_two)
 "lI" = (
 /obj/structure/closet/crate/supply,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "lL" = (
@@ -1723,11 +1723,11 @@
 /area/golden_arrow/medical)
 "lU" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
+/obj/item/ammo_magazine/rifle/m49a/pve,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
@@ -3446,7 +3446,7 @@
 	serial_number = 12
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	pixel_x = 32;
@@ -3749,7 +3749,7 @@
 /area/golden_arrow/synthcloset)
 "Ai" = (
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -4008,7 +4008,7 @@
 /area/golden_arrow/platoon_commander_rooms)
 "Ca" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m4ra/pve{
+/obj/item/weapon/gun/rifle/m49a/pve{
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -4393,6 +4393,7 @@
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ey" = (
@@ -6351,7 +6352,7 @@
 	serial_number = 12
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -6378,7 +6379,7 @@
 /area/golden_arrow/engineering)
 "Ro" = (
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";

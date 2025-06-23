@@ -302,7 +302,7 @@
 	/// Factor of duration between acid progression
 	var/acid_delay = 1
 	/// How much fuel the acid drains from the flare every acid tick
-	var/flare_damage = 500
+	var/flare_damage = 600
 	var/barricade_damage = 40
 	var/in_weather = FALSE
 
@@ -311,7 +311,7 @@
 	name = "weak acid"
 	acid_delay = 2.5 //250% delay (40% speed)
 	barricade_damage = 20
-	flare_damage = 150
+	flare_damage = 180
 	icon_state = "acid_weak"
 
 //Superacid
@@ -319,8 +319,14 @@
 	name = "strong acid"
 	acid_delay = 0.4 //40% delay (250% speed)
 	barricade_damage = 100
-	flare_damage = 1875
+	flare_damage = 2250
 	icon_state = "acid_strong"
+
+//Similar to strong acid, just not quite as strong other than barricade damage.
+/obj/effect/xenomorph/acid/spatter
+	acid_delay = 0.6
+	barricade_damage = 100
+	flare_damage = 1000
 
 /obj/effect/xenomorph/acid/Initialize(mapload, atom/target)
 	. = ..()
@@ -333,6 +339,31 @@
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(handle_weather))
 	RegisterSignal(acid_t, COMSIG_PARENT_QDELETING, PROC_REF(cleanup))
 	START_PROCESSING(SSoldeffects, src)
+
+/obj/effect/xenomorph/acid/spatter/Initialize(mapload, atom/target)
+	. = ..()
+	if(!acid_t)
+		var/obj/structure/barricade/B = locate() in loc
+		if(B && !B.unacidable) acid_t = B
+		else
+			for(var/obj/O in loc) //Find the first thing.
+				if(istype(O, /obj/vehicle/multitile))
+					var/obj/vehicle/multitile/acid_vehicle = O
+					acid_vehicle.take_damage_type(100 / src.acid_delay, "acid", src)
+					visible_message(SPAN_XENOWARNING("\the [acid_vehicle] is burnt by the strong acid blood!"))
+					continue //We just damaged it, to not break proc would completely melt the vehicle.
+				if(O.unacidable || istype(O, /obj/effect)) continue //Not unacidable things or effects. Don't want to melt xenogibs.
+				acid_t = O
+				break
+		if(acid_t) layer = acid_t.layer
+		else
+			var/atom/check_if_acidable = get_turf(loc)
+			if(check_if_acidable.unacidable)
+				STOP_PROCESSING(SSoldeffects, src)
+				animate(src, alpha = 0, 1 SECONDS)
+				QDEL_IN(src, 1 SECONDS)
+			else
+				acid_t = check_if_acidable
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null
@@ -428,8 +459,11 @@
 	else
 		for(var/mob/mob in acid_t)
 			mob.forceMove(loc)
-		qdel(acid_t)
-	qdel(src)
+		animate(acid_t, alpha = 0, 1 SECONDS)
+		QDEL_IN(acid_t, 1 SECONDS)
+
+	animate(src, alpha = 0, 1 SECONDS)
+	QDEL_IN(src, 1 SECONDS)
 
 /obj/effect/xenomorph/boiler_bombard
 	name = "???"

@@ -281,7 +281,6 @@
 /obj/item/weapon/gun/pistol/m4a3/training{
 	name = "dented M4A3 service pistol"
 	},
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
 "eG" = (
@@ -390,13 +389,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/office_complex)
-"jv" = (
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock{
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. The IFF electronics appear to be non-functional.";
-	name = "battered M41A pulse rifle Mk2"
-	},
-/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
 "jK" = (
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/office_complex)
@@ -415,14 +407,6 @@
 	dir = 8
 	},
 /obj/effect/landmark/survivor_spawner/bigred_crashed_pmc,
-/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
-"ld" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
 "lo" = (
@@ -604,14 +588,6 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
-"tU" = (
-/obj/effect/spawner/gibspawner/human,
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock{
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. The IFF electronics appear to be non-functional.";
-	name = "battered M41A pulse rifle Mk2"
-	},
-/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
 "tW" = (
 /turf/open/mars_cave/mars_dirt_4,
 /area/bigredv2/outside/e)
@@ -649,7 +625,6 @@
 /area/bigredv2/outside/se)
 "wF" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/wygoon,
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_left_to_right,
 /area/bigredv2/outside/office_complex)
 "wL" = (
@@ -1169,7 +1144,6 @@
 /area/bigredv2/outside/office_complex)
 "XG" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/pmc,
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
@@ -1558,7 +1532,7 @@ zy
 kB
 GO
 Hf
-jv
+Ak
 Ak
 Iz
 Ak
@@ -1684,7 +1658,7 @@ aQ
 NU
 Ak
 Ak
-tU
+Iz
 Ak
 LQ
 Ak
@@ -1709,7 +1683,7 @@ Ci
 Ir
 aN
 kB
-ld
+Nt
 zy
 QF
 Oz

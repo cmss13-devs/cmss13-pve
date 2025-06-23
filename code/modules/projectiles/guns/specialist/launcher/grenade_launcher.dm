@@ -182,7 +182,7 @@
 	playsound(user.loc, fire_sound, 50, 1)
 
 	var/angle = floor(Get_Angle(user,target))
-	muzzle_flash(angle,user)
+	muzzle_flash(angle)
 	simulate_recoil(0, user)
 
 	var/obj/item/explosive/grenade/fired = cylinder.contents[1]
@@ -197,9 +197,18 @@
 			pass_flags |= PASS_MOB_THRU_HUMAN|PASS_MOB_IS_OTHER|PASS_OVER
 		else
 			pass_flags |= PASS_MOB_THRU|PASS_HIGH_OVER
+	if(fired.dual_purpose != FALSE)
+		fired.fuse_type = IMPACT_FUSE
+	fired.arm_sound = null
 
 	msg_admin_attack("[key_name_admin(user)] fired a grenade ([fired.name]) from \a ([name]).")
 	log_game("[key_name_admin(user)] used a grenade ([name]).")
+
+// canister rounds explode before leaving the barrel of the launcher.
+	if(istype(fired, /obj/item/explosive/grenade/high_explosive/airburst/canister))
+		var/obj/item/explosive/grenade/high_explosive/airburst/canister/canister_round = fired
+		canister_round.canister_fire(user, target)
+		return
 
 	fired.throw_range = 20
 	fired.det_time = min(10, fired.det_time)
@@ -282,14 +291,6 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
-/obj/item/weapon/gun/launcher/grenade/m92/able_to_fire(mob/living/user)
-	. = ..()
-	if (. && istype(user))
-		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_GRENADIER)
-			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
-			return FALSE
-
-
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
@@ -324,8 +325,8 @@
 /obj/item/weapon/gun/launcher/grenade/m81/riot
 	name = "\improper M81 riot grenade launcher"
 	desc = "A lightweight, single-shot low-angle grenade launcher to launch tear gas grenades. Used by the Colonial Marines Military Police during riots."
-	valid_munitions = list(/obj/item/explosive/grenade/custom/teargas, /obj/item/explosive/grenade/slug/baton)
-	preload = /obj/item/explosive/grenade/custom/teargas
+	valid_munitions = list(/obj/item/explosive/grenade/tear/marine, /obj/item/explosive/grenade/slug/baton)
+	preload = /obj/item/explosive/grenade/tear/marine
 
 //-------------------------------------------------------
 //M79 Grenade Launcher subtype of the M81
@@ -340,6 +341,7 @@
 	preload = null
 	is_lobbing = TRUE
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
+	valid_munitions = list(/obj/item/explosive/grenade/slug/baton/m79, /obj/item/explosive/grenade/smokebomb/airburst, /obj/item/explosive/grenade/high_explosive/airburst/starshell, /obj/item/explosive/grenade/incendiary/impact, /obj/item/explosive/grenade/high_explosive/impact, /obj/item/explosive/grenade/high_explosive/impact/frag, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
 
 	fire_sound = 'sound/weapons/handling/m79_shoot.ogg'
 	cocked_sound = 'sound/weapons/handling/m79_break_open.ogg'
@@ -348,7 +350,6 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/stock/m79,
@@ -369,3 +370,29 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)//might not need this because of is_lobbing, but let's keep it just incase
 	))
+
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified
+	name = "\improper modified M79 grenade launcher"
+	desc = "A heavy, low-angle grenade launcher. It's been in use since the Vietnam War, though this version has been modified to fire standard USCM 30mm grenades. The wooden furniture is, in fact, an attempt at modernization and is made of painted hardened polykevlon."
+	valid_munitions = list(/obj/item/explosive/grenade/high_explosive, /obj/item/explosive/grenade/high_explosive/impact/tmfrag, /obj/item/explosive/grenade/high_explosive/impact/heap, /obj/item/explosive/grenade/high_explosive/impact/flare, /obj/item/explosive/grenade/incendiary, /obj/item/explosive/grenade/smokebomb, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
+
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/m79/scope = new(src)
+	scope.hidden = FALSE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff
+	name = "\improper sawn-off M79 grenade launcher"
+	desc = "A heavy, low-angle grenade launcher, though this one had its stock and half the barrel sawn-off. It's been in use since the Vietnam War, and this version has been modified to fire standard USCM 30mm grenades. The wooden furniture is, in fact, an attempt at modernization and is made of painted hardened polykevlon."
+	icon_state = "m79_short"
+	item_state = "m79_short"
+	w_class = SIZE_MEDIUM
+	flags_equip_slot = SLOT_WAIST
+	attachable_allowed = list()
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff/handle_starting_attachment()
+	return

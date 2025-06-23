@@ -65,11 +65,6 @@
 "dN" = (
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
-"dP" = (
-/obj/item/stack/rods,
-/obj/effect/landmark/corpsespawner/clf,
-/turf/open/floor/damaged3/west,
-/area/lv624/lazarus/crashed_ship)
 "dS" = (
 /obj/structure/bed,
 /obj/item/bedsheet/purple,
@@ -167,7 +162,7 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/crashed_ship)
 "fE" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "cartridge_2_1"
 	},
 /obj/structure/machinery/defenses/sentry/premade/dumb{
@@ -319,7 +314,6 @@
 /area/lv624/lazarus/crashed_ship)
 "jR" = (
 /obj/item/stack/rods,
-/obj/effect/landmark/corpsespawner/clf,
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "jS" = (
@@ -391,7 +385,7 @@
 	dir = 4;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_9_1"
 	},
 /turf/open/gm/dirt,
@@ -429,10 +423,6 @@
 "nv" = (
 /obj/item/weapon/gun/smg/fp9000,
 /turf/open/floor/platingdmg1,
-/area/lv624/lazarus/crashed_ship)
-"nA" = (
-/obj/effect/landmark/corpsespawner/wysec,
-/turf/open/floor/damaged3/west,
 /area/lv624/lazarus/crashed_ship)
 "nJ" = (
 /obj/item/stack/rods,
@@ -523,7 +513,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_west_caves)
 "rf" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -547,7 +537,7 @@
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "rX" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_4_1"
 	},
 /turf/open/floor/plating,
@@ -697,11 +687,6 @@
 /obj/structure/machinery/floodlight,
 /turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
-"wp" = (
-/obj/effect/landmark/corpsespawner/colonist/random,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/almayer/emeraldcorner/west,
-/area/lv624/lazarus/crashed_ship)
 "wx" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
@@ -746,10 +731,6 @@
 "xp" = (
 /obj/item/stack/rods,
 /turf/open/floor/platingdmg1,
-/area/lv624/lazarus/crashed_ship)
-"xs" = (
-/obj/effect/landmark/corpsespawner/wysec,
-/turf/open/gm/dirt,
 /area/lv624/lazarus/crashed_ship)
 "xu" = (
 /turf/open/gm/dirt,
@@ -1009,14 +990,10 @@
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/ground/caves/south_west_caves)
 "GI" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_2_1"
 	},
 /turf/open/floor/plating/platingdmg3,
-/area/lv624/lazarus/crashed_ship)
-"GQ" = (
-/obj/effect/landmark/corpsespawner/engineer,
-/turf/open/floor/plating,
 /area/lv624/lazarus/crashed_ship)
 "Hj" = (
 /turf/closed/wall/rock/brown,
@@ -1048,7 +1025,7 @@
 	dir = 1;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -1066,7 +1043,7 @@
 /turf/open/floor/almayer/emerald/northeast,
 /area/lv624/lazarus/crashed_ship)
 "IH" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_3_1"
 	},
 /turf/open/floor/plating,
@@ -1299,7 +1276,7 @@
 /turf/open/floor/plating/warnplate/southwest,
 /area/lv624/lazarus/crashed_ship)
 "OT" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_6_1"
 	},
 /obj/structure/barricade/metal/wired{
@@ -1314,7 +1291,6 @@
 "Pb" = (
 /obj/structure/bed,
 /obj/item/bedsheet/rd,
-/obj/effect/landmark/corpsespawner/colonist,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/almayer/green/east,
 /area/lv624/lazarus/crashed_ship)
@@ -1337,7 +1313,7 @@
 /turf/open/floor/almayer/green/northeast,
 /area/lv624/lazarus/crashed_ship)
 "PV" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_9_1"
 	},
 /obj/structure/machinery/defenses/sentry/premade/dumb{
@@ -1465,7 +1441,7 @@
 	dir = 1;
 	faction_group = list("CLF")
 	},
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "casing_7_1"
 	},
 /turf/open/gm/dirt,
@@ -1503,7 +1479,7 @@
 /turf/open/floor/plating/warnplate,
 /area/lv624/lazarus/crashed_ship)
 "Vs" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_2_1"
 	},
 /turf/open/gm/dirt,
@@ -1664,10 +1640,6 @@
 	name = "\improper Umbillical Airlock"
 	},
 /turf/open/floor/damaged3/west,
-/area/lv624/lazarus/crashed_ship)
-"Zq" = (
-/obj/effect/landmark/corpsespawner/clf,
-/turf/open/floor/platingdmg1,
 /area/lv624/lazarus/crashed_ship)
 "ZS" = (
 /turf/closed/shuttle/ert{
@@ -1977,7 +1949,7 @@ IR
 KW
 Xq
 qj
-wp
+Go
 HF
 XX
 ha
@@ -2264,9 +2236,9 @@ lr
 lr
 lr
 dN
-Zq
+Ep
 JC
-GQ
+dN
 hw
 gc
 KO
@@ -2365,7 +2337,7 @@ mX
 dN
 Dd
 ro
-nA
+Dd
 Uz
 ig
 YL
@@ -2499,7 +2471,7 @@ ev
 IK
 kC
 dN
-dP
+Uz
 rX
 FM
 xO
@@ -2551,7 +2523,7 @@ dN
 Dd
 Hx
 Ep
-xs
+ro
 ro
 Dd
 ro
@@ -2688,7 +2660,7 @@ IK
 sB
 dN
 ok
-Zq
+Ep
 Xc
 Dd
 kZ
@@ -2738,7 +2710,7 @@ Ep
 fm
 Dd
 ed
-Zq
+Ep
 lC
 Dm
 VX

@@ -9,8 +9,9 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	damage = 70
-	penetration = ARMOR_PENETRATION_TIER_3
+	penetration = -ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()
@@ -24,7 +25,7 @@
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
-	penetration = ARMOR_PENETRATION_TIER_7
+	penetration = ARMOR_PENETRATION_TIER_4
 
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"

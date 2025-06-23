@@ -16,18 +16,30 @@
 	damage = 34
 	accurate_range = 4
 	effective_range_max = 4
-	penetration = ARMOR_PENETRATION_TIER_1
+	penetration = -ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
+	shell_casing = /obj/effect/decal/ammo_casing //We back on that cased 9mm grind for the M39 series
 
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
+/datum/ammo/bullet/smg/pve
+	name = "squash-head submachinegun duplex bullet"
+	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't
+	penetration = ARMOR_PENETRATION_TIER_4
+	bonus_projectiles_type = /datum/ammo/bullet/smg/duplex
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_1 //1 extra
+
+/datum/ammo/bullet/smg/duplex
+	name = "squash-head submachinegun duplex bullet"
+	penetration = ARMOR_PENETRATION_TIER_4
+	shell_speed = AMMO_SPEED_TIER_3 //high velocitisn't - lags behind first
+
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
-
 	damage = 26
 	penetration = ARMOR_PENETRATION_TIER_6
 	shell_speed = AMMO_SPEED_TIER_4
@@ -64,10 +76,11 @@
 	icon_state = "nail-projectile"
 
 	damage = 25
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = -ARMOR_PENETRATION_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	accurate_range = 5
 	shell_speed = AMMO_SPEED_TIER_4
+	shell_casing = null
 
 /datum/ammo/bullet/smg/incendiary
 	name = "incendiary submachinegun bullet"
@@ -133,7 +146,7 @@
 	damage = 26
 	accurate_range = 7
 	effective_range_max = 7
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_5
 
@@ -142,6 +155,6 @@
 	damage = 35
 	accurate_range = 7
 	effective_range_max = 10
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = -ARMOR_PENETRATION_TIER_4
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_6

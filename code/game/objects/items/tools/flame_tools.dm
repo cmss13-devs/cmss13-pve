@@ -28,13 +28,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "candle1"
 	w_class = SIZE_TINY
 
-	var/wax = 800
+	var/wax = 3000
 
 /obj/item/tool/candle/update_icon()
 	var/i
-	if(wax>150)
+	if(wax>1500)
 		i = 1
-	else if(wax>80)
+	else if(wax>250)
 		i = 2
 	else i = 3
 	icon_state = "candle[i][heat_source ? "_lit" : ""]"
@@ -434,7 +434,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 ////////////
 /obj/item/clothing/mask/cigarette/weed
 	name = "weed joint"
-	desc = "A rolled-up package of ambrosia vulgaris, aka space weed, in some smooth paper; you sure this is legal dude?"
+	desc = "A rolled-up package of marijuana, aka weed, in some smooth paper."
 	chem_volume = 39
 	smoketime = 20 MINUTES
 

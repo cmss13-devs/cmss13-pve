@@ -241,6 +241,7 @@
 /obj/item/toy/prize
 	icon_state = "ripleytoy"
 	var/cooldown = 0
+	w_class = SIZE_SMALL
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user)
@@ -530,6 +531,31 @@
 	desc = "It says it is a plush on the tag, at least."
 	icon_state = "rock"
 
+/obj/item/toy/plush/otter
+	name = "otter plush"
+	desc = "A perfectly sized snuggable river weasel plush. Keep away from Clams."
+	icon_state = "otter"
+
+/obj/item/toy/plush/fox
+	name = "fox plush"
+	desc = "What does the fox say? Well, this one says nothing on account of it being a stuffed toy."
+	icon_state = "fox"
+
+/obj/item/toy/plush/kitten
+	name = "kitten plush"
+	desc = "A plushie of a cute kitten. Sadly, this one won't purr like the real thing."
+	icon_state = "kbitty"
+
+/obj/item/toy/plush/box
+	name = "box plush"
+	desc = "A toy box plushie, it holds cotton."
+	icon_state = "box"
+
+/obj/item/toy/plush/carp
+	name = "carp plush"
+	desc = "A stuffed toy that resembles a mythological space carp."
+	icon_state = "carp"
+
 /obj/item/toy/plush/therapy
 	name = "therapy plush"
 	desc = "A therapeutic toy to assist marines in recovering from mental and behavioral disorders after experiencing the trauma of battles."
@@ -580,6 +606,11 @@
 		/obj/item/toy/plush/shark,
 		/obj/item/toy/plush/moth,
 		/obj/item/toy/plush/rock,
+		/obj/item/toy/plush/otter,
+		/obj/item/toy/plush/fox,
+		/obj/item/toy/plush/kitten,
+		/obj/item/toy/plush/box,
+		/obj/item/toy/plush/carp,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(
@@ -665,3 +696,55 @@
 
 /obj/item/toy/plush/shark/alt
 	icon_state = "shark_alt"
+
+//desk toys
+/obj/item/toy/desk
+	name = "generic desk-toy"
+	desc = "You shouldn't be seeing this."
+	icon = 'icons/obj/items/toy.dmi'
+	var/on = FALSE
+	var/activation_sound = 'sound/machines/click.ogg'
+
+/obj/item/toy/desk/update_icon()
+	if(on)
+		icon_state = initial(icon_state) + "-on"
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/toy/desk/proc/activate(mob/user as mob)
+	on = !on
+	playsound(src.loc, activation_sound, 75, 1)
+	update_icon()
+	return 1
+
+/obj/item/toy/desk/attack_self(mob/user)
+	..()
+	activate(user)
+
+/obj/item/toy/desk/MouseDrop(atom/over_object)
+	if(over_object == usr && ishuman(usr) && !usr.is_mob_restrained() && !usr.stat && (loc == usr || in_range(src, usr)))
+		if(!usr.get_active_hand()) //if active hand is empty
+			usr.put_in_hands(src)
+		to_chat(usr, SPAN_NOTICE("You pick up [src]."))
+	return
+
+/obj/item/toy/desk/newtoncradle
+	name = "\improper Newton's cradle"
+	desc = "A ancient 21th century super-weapon model demonstrating that Sir Isaac Newton is the deadliest sonuvabitch in space."
+	icon_state = "newtoncradle"
+
+/obj/item/toy/desk/fan
+	name = "office fan"
+	desc = "Your greatest fan."
+	icon_state = "fan"
+
+/obj/item/toy/desk/officetoy
+	name = "office toy"
+	desc = "A generic battery-powered office desk toy. Only generates magnetism and ennui."
+	icon_state = "desktoy"
+
+/obj/item/toy/desk/dippingbird
+	name = "dipping bird toy"
+	desc = "Engineers marvel at this scale model of a primitive thermal engine. It's highly debated why the majority of owners \
+	were in low-level bureaucratic jobs."
+	icon_state = "dippybird"

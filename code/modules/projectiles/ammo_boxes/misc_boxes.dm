@@ -58,11 +58,81 @@
 /obj/item/ammo_box/magazine/misc/mre
 	name = "\improper box of MREs"
 	desc = "A box of MREs. Nutritious, but not delicious."
-	magazine_type = /obj/item/storage/box/MRE
+	magazine_type = /obj/item/storage/box/mre
 	num_of_magazines = 12
 	overlay_content = "_mre"
 
 /obj/item/ammo_box/magazine/misc/mre/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/upp
+	name = "\improper box of UPP military rations"
+	desc = "A box of rations. Tastes like homeland."
+	icon_state = "upp_food_crate"
+	magazine_type = /obj/item/storage/box/mre/upp
+	overlay_content = "_upp_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/upp/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/pmc
+	name = "\improper box of PMC CFR rations"
+	desc = "A box of expensive rations. You don't need a restaurant to eat nicely."
+	icon_state = "pmc_food_crate"
+	magazine_type = /obj/item/storage/box/mre/pmc
+	overlay_content = "_colony_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/pmc/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/wy
+	name = "\improper box of W-Y brand rations"
+	desc = "A box of basic packed foods, comes with all sorts of W-Y branded snacks. \nOn the box is the Weyland-Yutani logo, with a slogan surrounding it: \n<b>WEYLAND-YUTANI. FEEDING BETTER WORLDS</b>."
+	icon_state = "wy_food_crate"
+	magazine_type = /obj/item/storage/box/mre/wy
+	overlay_content = "_wy_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/wy/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/twe
+	name = "\improper box of TWE ORP rations"
+	desc = "A box of expensive rations. You don't need a restaurant to eat nicely."
+	icon_state = "twe_food_crate"
+	magazine_type = /obj/item/storage/box/mre/twe
+	overlay_content = "_twe_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/twe/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/emergency
+	name = "\improper box of emergency rations"
+	desc = "A box of emergency rations. Designed to withstand."
+	icon_state = "colony_food_crate"
+	magazine_type = /obj/item/mre_food_packet/wy/cookie_brick
+	num_of_magazines = 20
+	overlay_content = "_colony_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/emergency/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/fsr
+	name = "\improper box of FSR rations"
+	desc = "A box of First Strike Rations. Nutritious, but not delicious, cigarettes not included."
+	icon_state = "merc_food_crate"
+	magazine_type = /obj/item/storage/box/mre/fsr
+
+/obj/item/ammo_box/magazine/misc/mre/fsr/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/misc/mre/hdr
+	name = "\improper box of HDR rations"
+	desc = "A box of Humanitarian Daily Rations. Give these out to hungry colonist kids, will you?"
+	icon_state = "hdr_food_crate"
+	magazine_type = /obj/item/storage/box/mre/hdr
+	overlay_content = "_hdr_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/hdr/empty
 	empty = TRUE
 
 //------------------------M94 Marking Flare Packs Box--------------------------
@@ -70,17 +140,26 @@
 /obj/item/ammo_box/magazine/misc/flares
 	name = "\improper box of M94 marking flare packs"
 	desc = "A box of M94 marking flare packs, to brighten up your day."
-	magazine_type = /obj/item/storage/box/m94
+	magazine_type = /obj/item/storage/box/flare
 	num_of_magazines = 10
 	overlay_gun_type = "_m94"
 	overlay_content = "_flares"
+
+/obj/item/ammo_box/magazine/misc/flares/upp
+	name = "\improper box of R52 marking flare packs"
+	desc = "A box of R52 marking flare packs, to brighten up your day."
+	icon_state = "upp_supply_crate_black"
+	magazine_type = /obj/item/storage/box/flare/upp
+	num_of_magazines = 10
+	overlay_gun_type = "_blank"
+	overlay_content = "_flares_upp"
 
 //------------------------M89 Signal Flare Packs Box--------------------------
 
 /obj/item/ammo_box/magazine/misc/flares/signal
 	name = "\improper box of M89 signal flare packs"
 	desc = "A box of M89 signal flare packs, to mark up the way."
-	magazine_type = /obj/item/storage/box/m94/signal
+	magazine_type = /obj/item/storage/box/flare/signal
 	overlay_gun_type = "_m89"
 	overlay_content = "_flares_signal"
 
@@ -95,9 +174,9 @@
 
 /obj/item/ammo_box/magazine/misc/flares/get_severity()
 	var/flare_amount = 0
-	for(var/obj/item/storage/box/m94/flare_box in contents)
+	for(var/obj/item/storage/box/flare/flare_box in contents)
 		flare_amount += length(flare_box.contents)
-	flare_amount = floor(flare_amount / 20) //10 packs, 20 flares each, maximum total of 10 flares we can throw out
+	flare_amount = floor(flare_amount / 14) //10 packs, 14 flares each, maximum total of 10 flares we can throw out
 	return flare_amount
 
 /obj/item/ammo_box/magazine/misc/flares/process_burning(datum/cause_data/flame_cause_data)

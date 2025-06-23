@@ -77,10 +77,10 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	var/dat
 
 	dat += "<i>Welcome, [user.real_name].</i><br/><br/><hr/>"
-	dat += "<a href='?src=\ref[src];log=1'>View storage log</a>.<br>"
-	dat += "<a href='?src=\ref[src];view=1'>View objects</a>.<br>"
-	dat += "<a href='?src=\ref[src];item=1'>Recover object</a>.<br>"
-	dat += "<a href='?src=\ref[src];allitems=1'>Recover all objects</a>.<br>"
+	dat += "<a href='byond://?src=\ref[src];log=1'>View storage log</a>.<br>"
+	dat += "<a href='byond://?src=\ref[src];view=1'>View objects</a>.<br>"
+	dat += "<a href='byond://?src=\ref[src];item=1'>Recover object</a>.<br>"
+	dat += "<a href='byond://?src=\ref[src];allitems=1'>Recover all objects</a>.<br>"
 
 	show_browser(user, dat, "Cryogenic Oversight Control for [cryotype]", "cryopod_console")
 
@@ -174,9 +174,9 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 //Cryopods themselves.
 /obj/structure/machinery/cryopod
 	name = "hypersleep chamber"
-	desc = "A large automated capsule with LED displays intended to put anyone inside into 'hypersleep', a form of non-cryogenic statis used on most ships, linked to a long-term hypersleep bay on a lower level."
+	desc = "A large automated capsule with LED displays intended to put anyone inside into 'hypersleep', a form of non-cryogenic stasis used on most ships."
 	icon = 'icons/obj/structures/machinery/cryogenics.dmi'
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	density = TRUE
 	anchored = TRUE
 
@@ -186,6 +186,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	var/time_entered = 0 //Used to keep track of the safe period.
 	var/silent_exit = FALSE
 	var/obj/item/device/radio/intercom/announce //Intercom for cryo announcements
+
 
 /obj/structure/machinery/cryopod/right
 	dir = WEST
@@ -200,6 +201,11 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	QDEL_NULL(announce)
 	. = ..()
 
+/obj/structure/machinery/cryopod/update_icon()
+	if(occupant)
+		icon_state = "hypersleep_closed"
+	else
+		icon_state = "hypersleep_open"
 
 //Lifted from Unity stasis.dm and refactored. ~Zuhayr
 /obj/structure/machinery/cryopod/process()
@@ -361,7 +367,6 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 			GLOB.data_core.general -= G
 			qdel(G)
 
-	icon_state = "body_scanner_open"
 	set_light(0)
 
 	if(occupant.key)
@@ -378,6 +383,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 	QDEL_NULL(occupant)
 	stop_processing()
+	update_icon()
 
 /obj/structure/machinery/cryopod/attackby(obj/item/W, mob/living/user)
 	if(isxeno(user))
@@ -495,12 +501,12 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		add_fingerprint(usr)
 
 
-/obj/structure/machinery/cryopod/proc/go_in_cryopod(mob/mob, silent = FALSE)
+/obj/structure/machinery/cryopod/proc/go_in_cryopod(mob/living/mob, silent = FALSE)
 	if(occupant)
 		return
 	mob.forceMove(src)
 	occupant = mob
-	icon_state = "body_scanner_closed"
+	update_icon()
 	set_light(2)
 	time_entered = world.time
 	start_processing()
@@ -523,7 +529,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 	occupant.forceMove(get_turf(src))
 	occupant = null
 	stop_processing()
-	icon_state = "body_scanner_open"
+	update_icon()
 	set_light(0)
 	playsound(src, 'sound/machines/pod_open.ogg', 30)
 	SEND_SIGNAL(src, COMSIG_CRYOPOD_GO_OUT)
@@ -546,6 +552,54 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 
 	move_inside(target)
 
+/obj/structure/machinery/cryopod/big
+	icon = 'icons/obj/structures/machinery/hypersleep.dmi'
+	icon_state = "hypersleep_base"
+	dir = EAST
+	var/image/occupant_image
+	var/occupant_angle = 270
+	var/occupant_dir = 4
+	var/occupant_x = 6
+	var/occupant_y = 0
+
+/obj/structure/machinery/cryopod/big/Initialize()
+	. = ..()
+	var/cover_image = image(icon, icon_state = "cover_fog", layer = 3.22)
+	overlays += cover_image
+
+/obj/structure/machinery/cryopod/big/update_icon()
+	return
+
+/obj/structure/machinery/cryopod/big/go_in_cryopod(mob/living/mob, silent = FALSE)
+	..()
+	overlays.Cut()
+	occupant_image = image(mob.appearance, loc, layer = 3.21)
+	occupant_image.pixel_x = occupant_x
+	occupant_image.pixel_y = occupant_y
+	occupant_image.dir = occupant_dir
+	if(mob.body_position == STANDING_UP)
+		occupant_image.transform = occupant.transform.Turn(occupant_angle)
+	overlays += occupant_image
+	var/cover_image = image(icon, icon_state = "cover", layer = 3.22)
+	overlays += cover_image
+
+/obj/structure/machinery/cryopod/big/go_out()
+	..()
+	overlays -= occupant_image
+	occupant_image = null
+
+/obj/structure/machinery/cryopod/big/despawn_occupant()
+	..()
+	overlays.Cut()
+	occupant_image = null
+	var/cover_image = image(icon, icon_state = "cover_fog", layer = 3.22)
+	overlays += cover_image
+
+/obj/structure/machinery/cryopod/big/flipped
+	dir = WEST
+	occupant_angle = 90
+	occupant_dir = 8
+	occupant_x = 10
 
 /obj/structure/machinery/cryopod/tutorial
 	silent_exit = TRUE
@@ -558,7 +612,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		return
 	mob.forceMove(src)
 	occupant = mob
-	icon_state = "body_scanner_closed"
+	icon_state = "hypersleep_closed"
 	set_light(2)
 	time_entered = world.time
 	if(del_them)
@@ -571,7 +625,7 @@ GLOBAL_LIST_INIT(frozen_items, list(SQUAD_MARINE_1 = list(), SQUAD_MARINE_2 = li
 		var/mob/living/carbon/human/man = occupant
 		man.species.handle_cryo(man)
 
-	icon_state = "body_scanner_open"
+	icon_state = "hypersleep_open"
 	set_light(0)
 
 

@@ -176,9 +176,9 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 
 		var/new_bonus = 0
 		switch(cycled_unassigned.client.get_total_human_playtime()) //+1 for new players, +2 for really new players
-			if(0 to 2 HOURS)
+			if(0 to 5 HOURS)
 				new_bonus = 2
-			if(2 HOURS to 5 HOURS)
+			if(5 HOURS to 8 HOURS)
 				new_bonus = 1
 
 		var/streak_bonus = max(get_client_stat(cycled_unassigned.client, PLAYER_STAT_UNASSIGNED_ROUND_STREAK) - 2, 0) //+1 per missed round after 2
@@ -744,8 +744,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_SOLDIER)
+			M = /mob/living/carbon/xenomorph/soldier
 		if(XENO_CASTE_KING)
 			M = /mob/living/carbon/xenomorph/king
+		if(RUNNER_ACIDER)
+			M = /mob/living/carbon/xenomorph/runner/acider
 	return M
 
 

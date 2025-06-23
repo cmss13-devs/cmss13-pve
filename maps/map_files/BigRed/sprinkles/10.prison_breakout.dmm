@@ -142,11 +142,10 @@
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 8
 	},
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
 "dM" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/redcorner,
 /area/bigredv2/outside/marshal_office)
@@ -238,9 +237,8 @@
 /area/bigredv2/outside/marshal_office)
 "lw" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/prison_security,
 /obj/effect/decal/cleanable/blood,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor/redcorner/west,
 /area/bigredv2/outside/marshal_office)
@@ -284,7 +282,7 @@
 	dir = 4;
 	icon_state = "gib6"
 	},
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
 "pd" = (
@@ -359,7 +357,7 @@
 /turf/open/floor/red/west,
 /area/bigredv2/outside/marshal_office)
 "rZ" = (
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/redcorner/west,
 /area/bigredv2/outside/marshal_office)
 "sb" = (
@@ -464,7 +462,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
 "AB" = (
@@ -620,7 +618,6 @@
 /area/bigredv2/outside/marshal_office)
 "KI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /obj/item/tool/screwdriver,
 /turf/open/floor/dark,
@@ -629,7 +626,6 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/effect/landmark/corpsespawner/prisoner,
 /turf/open/floor/white,
 /area/bigredv2/outside/marshal_office)
 "Ly" = (
@@ -723,7 +719,6 @@
 /turf/open/floor/whitegreenfull/northeast,
 /area/bigredv2/outside/marshal_office)
 "Rh" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
@@ -777,7 +772,6 @@
 /area/bigredv2/outside/marshal_office)
 "To" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /obj/item/tool/kitchen/knife,
 /turf/open/floor/redcorner,
@@ -845,11 +839,6 @@
 	},
 /turf/open/floor/dark,
 /area/bigredv2/outside/marshal_office)
-"Vp" = (
-/obj/effect/landmark/corpsespawner/prison_security,
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/dark,
-/area/bigredv2/outside/marshal_office)
 "Vv" = (
 /obj/structure/machinery/light,
 /turf/open/floor/bcircuit,
@@ -894,7 +883,7 @@
 "XM" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/shell,
+/obj/effect/decal/ammo_casing/redshell,
 /turf/open/floor/redcorner,
 /area/bigredv2/outside/marshal_office)
 "Yv" = (
@@ -1415,7 +1404,7 @@ uK
 Mx
 ah
 Xg
-Vp
+Rh
 ih
 tk
 ah

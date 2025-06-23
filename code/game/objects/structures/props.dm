@@ -553,9 +553,9 @@
 	/// time between sounds
 	var/time_to_sound = 20
 	/// Time for it to burn through fuel
-	var/fuel_stage_time = 1 MINUTES
+	var/fuel_stage_time = 5 MINUTES
 	/// How much fuel it has
-	var/remaining_fuel = 5 //Maxes at 5, but burns one when made
+	var/remaining_fuel = 10 //Maxes at 10, but burns one when made
 	/// If the fire can be manually put out
 	var/extinguishable = TRUE
 	/// Make no noise
@@ -569,11 +569,11 @@
 /obj/structure/prop/brazier/campfire/get_examine_text(mob/user)
 	. = ..()
 	switch(remaining_fuel)
-		if(4 to INFINITY)
+		if(7 to INFINITY)
 			. += "The fire is roaring."
-		if(2 to 3)
+		if(4 to 6)
 			. += "The fire is burning warm."
-		if(-INFINITY to 1)
+		if(-INFINITY to 3)
 			. += "The embers of the fire barely burns."
 
 /obj/structure/prop/brazier/campfire/process(delta_time)
@@ -589,7 +589,7 @@
 		return
 	time_to_sound -= delta_time
 	if(time_to_sound <= 0)
-		playsound(loc, 'sound/machines/firepit_ambience.ogg', 15, FALSE, heating_range)
+		playsound(loc, 'sound/machines/firepit_ambience.ogg', 40, FALSE, heating_range)
 		time_to_sound = initial(time_to_sound)
 
 /obj/structure/prop/brazier/campfire/attack_hand(mob/user)
@@ -745,6 +745,10 @@
 	desc = "Apparently at one point, Hawaii had beaches."
 	icon = 'icons/obj/structures/props/ice_colony/Hula.dmi'
 	icon_state = "Hula_Gal"
+
+/obj/structure/prop/ice_colony/hula_girl/attack_hand(mob/user)
+	..()
+	flick("Hula_Gal_Bounce", src)
 
 /obj/structure/prop/ice_colony/tiger_rug
 	name = "tiger rug"
@@ -1128,12 +1132,17 @@
 	COOLDOWN_DECLARE(damage_delay)
 	/// list of quip emotes, taken from Working Joe
 	var/static/list/quips = list(
-		/datum/emote/living/carbon/human/synthetic/working_joe/damage/alwaysknow_damaged,
+		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/hello,
 		/datum/emote/living/carbon/human/synthetic/working_joe/quip/not_liking,
 		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/how_can_i_help,
 		/datum/emote/living/carbon/human/synthetic/working_joe/farewell/day_never_done,
-		/datum/emote/living/carbon/human/synthetic/working_joe/farewell/required_by_apollo,
-		/datum/emote/living/carbon/human/synthetic/working_joe/warning/safety_breach
+		/datum/emote/living/carbon/human/synthetic/working_joe/greeting/been_looking_for_you,
+		/datum/emote/living/carbon/human/synthetic/working_joe/question/lost,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/alwaysknow,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/talk_to_seegson,
+		/datum/emote/living/carbon/human/synthetic/working_joe/restricted_area/interloper,
+		/datum/emote/living/carbon/human/synthetic/working_joe/quip/seegson_quality,
+		/datum/emote/living/carbon/human/synthetic/working_joe/task_update/with_you_shortly
 	)
 	/// list of voicelines to use when damaged
 	var/static/list/damaged = list(
@@ -1192,3 +1201,18 @@
 	if(initial(emote.sound))
 		playsound(loc, initial(emote.sound), 50, FALSE)
 	return TRUE
+
+/obj/structure/prop/invuln/joey/normal
+	name = "Working Joe"
+	desc = "A Seegson-brand Working Joe, stored in the synthetic maintenance station to be called upon whenever you need. If only you had the keys."
+	icon_state = "joe"
+
+/obj/structure/prop/invuln/darkness //I cant take credit for this, whoever made LV671 this was all you
+	name = "Darkness"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "dark128"
+	alpha = 200
+	opacity = 0
+	mouse_opacity = 0
+	layer = 6
+	density = 0

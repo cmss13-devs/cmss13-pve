@@ -16,8 +16,11 @@
 	stack_id = "empty sandbags"
 
 /obj/item/stack/sandbags_empty/attackby(obj/item/W, mob/user)
-	if (istype(W, /obj/item/tool/shovel))
+	if(istype(W, /obj/item/tool/shovel))
 		var/obj/item/tool/shovel/ET = W
+		if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
+			to_chat(usr, SPAN_WARNING("The sandbags cannot be filled!"))
+			return
 		if(ET.dirt_amt)
 			ET.dirt_amt--
 			ET.update_icon()
@@ -60,17 +63,17 @@
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "sandbag_pile"
 	item_state = "sandbag_pile"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 	force = 9
 	throwforce = 15
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
-	max_amount = 25
+	max_amount = 50
 	attack_verb = list("hit", "bludgeoned", "whacked")
 	stack_id = "sandbags"
 
 /obj/item/stack/sandbags/large_stack
-	amount = 25
+	amount = 50
 
 /obj/item/stack/sandbags/small_stack
 	amount = 5
@@ -104,6 +107,10 @@
 		if(AC)
 			to_chat(usr, SPAN_WARNING("The [O.name] cannot be built here!"))
 			return
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
+		to_chat(usr, SPAN_WARNING("The sandbags cannot be placed."))
+		return
 
 	if(user.action_busy)
 		return

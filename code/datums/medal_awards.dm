@@ -163,7 +163,7 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 			recipient_player.track_medal_earned(medal_type, recipient_mob, recipient_rank, citation, usr)
 
 	// Inform staff of success
-	message_admins("[key_name_admin(usr)] awarded a <a href='?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
+	message_admins("[key_name_admin(usr)] awarded a <a href='byond://?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
 
 	return TRUE
 
@@ -256,7 +256,7 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 			recipient_player.track_medal_earned(medal_type, recipient_mob, recipient_rank, citation, giving_mob)
 
 	// Inform staff of success
-	message_admins("[key_name_admin(giving_mob)] awarded a <a href='?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
+	message_admins("[key_name_admin(giving_mob)] awarded a <a href='byond://?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
 
 	return TRUE
 
@@ -267,7 +267,7 @@ GLOBAL_LIST_INIT(human_medals, list(MARINE_CONDUCT_MEDAL))
 		return
 
 	if(!((card.paygrade in GLOB.co_paygrades) || (card.paygrade in GLOB.platco_paygrades) || (card.paygrade in GLOB.uscm_highcom_paygrades)))
-		to_chat(user, SPAN_WARNING("Only a Senior Officer can award medals!"))
+		to_chat(user, SPAN_WARNING("Only an Officer can award medals!"))
 		return
 
 	if(!card.registered_ref)
@@ -394,7 +394,7 @@ GLOBAL_LIST_INIT(xeno_medals, list(XENO_SLAUGHTER_MEDAL, XENO_RESILIENCE_MEDAL, 
 			recipient_player.track_medal_earned(medal_type, recipient_mob, recipient_caste, citation, usr)
 
 	// Inform staff of success
-	message_admins("[key_name_admin(usr)] awarded a <a href='?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
+	message_admins("[key_name_admin(usr)] awarded a <a href='byond://?medals_panel=1'>[medal_type]</a> to [chosen_recipient] for: \'[citation]\'.")
 
 	return TRUE
 
@@ -468,7 +468,7 @@ GLOBAL_LIST_INIT(xeno_medals, list(XENO_SLAUGHTER_MEDAL, XENO_RESILIENCE_MEDAL, 
 			recipient_player.untrack_medal_earned(medal_type, recipient_mob, citation)
 
 	// Inform staff of success
-	message_admins("[key_name_admin(usr)] deleted [recipient_name]'s <a href='?medals_panel=1'>[medal_type]</a> for: \'[citation]\'.")
+	message_admins("[key_name_admin(usr)] deleted [recipient_name]'s <a href='byond://?medals_panel=1'>[medal_type]</a> for: \'[citation]\'.")
 
 	return TRUE
 
@@ -599,8 +599,8 @@ GLOBAL_DATUM_INIT(ic_medals_panel, /datum/ic_medal_panel, new)
 		to_chat(user, SPAN_WARNING("You must have an authenticated ID Card to award medals."))
 		return
 
-	if(!((card.paygrade in GLOB.co_paygrades) || (card.paygrade in GLOB.uscm_highcom_paygrades)))
-		to_chat(user, SPAN_WARNING("Only a Senior Officer can award medals!"))
+	if(!((card.paygrade in GLOB.co_paygrades) || (card.paygrade in GLOB.platco_paygrades) || (card.paygrade in GLOB.uscm_highcom_paygrades)))
+		to_chat(user, SPAN_WARNING("Only an Officer can award medals!"))
 		return
 
 	if(!card.registered_ref)

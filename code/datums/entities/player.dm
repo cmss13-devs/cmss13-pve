@@ -503,9 +503,10 @@ BSQL_PROTECT_DATUM(/datum/entity/player)
 	set waitfor=0
 	WAIT_DB_READY
 	load_player_data_info(get_player_from_key(ckey))
-	check_discord_link()
 
 /client/proc/load_player_data_info(datum/entity/player/player)
+	set waitfor = FALSE
+
 	if(ckey != player.ckey)
 		error("ALARM: MISMATCH. Loaded player data for client [ckey], player data ckey is [player.ckey], id: [player.id]")
 	player_data = player
@@ -523,24 +524,22 @@ BSQL_PROTECT_DATUM(/datum/entity/player)
 	record_login_triplet(player.ckey, address, computer_id)
 	player_data.sync()
 
-/client/proc/check_discord_link()
-	var/datum/view_record/discord_link/current_link = locate() in DB_VIEW(/datum/view_record/discord_link, DB_COMP("player_id", DB_EQUALS, player_data.id))
+	if(isSenator(src))
+		add_verb(src, /client/proc/whitelist_panel)
+	if(isCouncil(src))
+		add_verb(src, /client/proc/other_records)
 
-	if(!current_link)
+	if(GLOB.RoleAuthority && check_whitelist_status(WHITELIST_PREDATOR))
+		clan_info = GET_CLAN_PLAYER(player.id)
+		clan_info.sync()
 
-		if(player_data.discord_link_id != null)
-			player_data.discord_link_id = null
-			player_data.save()
-			player_data.sync()
+		if(check_whitelist_status(WHITELIST_YAUTJA_LEADER))
+			clan_info.clan_rank = GLOB.clan_ranks_ordered[CLAN_RANK_ADMIN]
+			clan_info.permissions |= CLAN_PERMISSION_ALL
+		else
+			clan_info.permissions &= ~CLAN_PERMISSION_ADMIN_MANAGER // Only the leader can manage the ancients
 
-		return
-
-	if(player_data.discord_link_id == current_link.id)
-		return
-
-	player_data.discord_link_id = current_link.id
-	player_data.save()
-	player_data.sync()
+		clan_info.save()
 
 /datum/entity/player/proc/check_ban(computer_id, address, is_telemetry)
 	. = list()

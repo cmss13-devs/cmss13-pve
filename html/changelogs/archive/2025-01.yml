@@ -1,0 +1,68 @@
+2025-01-04:
+  AmoryBlaine:
+  - bugfix: opacity on secure door
+  DexterDude:
+  - rscadd: Adds a map table you can place objects on like a normal table
+  - rscadd: Adds new crates to the prep rooms and replaces the old wooden crowbar-able
+      crates. Now all items are stored organically.
+  - rscadd: Garrow hypersleep pods now start fogged and if used, become unfogged and
+      show the marine inside.
+  - rscadd: tachyon cracker
+  - imageadd: tachyon cracker
+  - rscdel: Removes some items from the medical vendor, placing them on the table
+      in the medbay
+  - qol: Removes the different medical pouch from the vendors and replaces them with
+      empty medpouch types, moving the medical supplies to the utility vendors.
+  - balance: Changes default squad rangefinders to tactical monocular with a slightly
+      nerfed range, SL binoculars now become tactical binoculars with a slightly different
+      sprite as well as laser designating abilities
+  - imageadd: Changes the Golden Arrow's food vendors to be more movielike and adds
+      a new icon for drink dispensers
+  - imageadd: Trays and food icons for an upcoming sovlful food change soontm
+  - imageadd: New larger computers for prop usage mostly
+  - imageadd: Adds monoculars, tactical monoculars, and tactical binoculars
+  - maptweak: Adds 1 drink dispenser to the Golden Arrow canteen
+  - maptweak: Repositions the cargo elevator to be north of marine prep, alongside
+      a new supply bay which houses materials for the marines
+  - maptweak: Repositions and redesigns briefing to be a more viable & interesting
+      choice for the platoon commander, complete with a map table
+  - maptweak: Merges separate platoon equipment lockers into one, placing all relevant
+      marine supplies into it
+  - maptweak: Removes the squad sergeant lockers, putting laser designators in the
+      vendors
+  - maptweak: PlatCo privacy shutters & removal of their private office, now their
+      main room works as an office.
+  - maptweak: Changes the cargo areas below decks to accommodate the briefing and
+      supply elevator changes
+  - maptweak: Restructures medbay to look nicer
+  - maptweak: Destroys trash bins actually using the piping system so I dont have
+      to deal with nightmare insert problems with piping not connecting properly.
+  - mapadd: Some nightmare inserts for the Golden Arrow
+  Max-023:
+  - bugfix: Cigarette packs now show
+  mesnomer:
+  - rscdel: Removed salt from prepackaged MRE components
+2025-01-05:
+  SpartanBobby:
+  - maptweak: Adds security console to Golden Arrow shared office
+2025-01-06:
+  AmoryBlaine:
+  - rscadd: M20A racks, unloaded variant of M20A
+  SpartanBobby:
+  - maptweak: Adds two APC storage containers to the UD4 Midway
+2025-01-09:
+  SpartanBobby:
+  - maptweak: Fixes Rover layering issue
+  SpartanBobby and idk how made LV617 but his darkness overlay tile is cool as fuck:
+  - rscadd: Adds a ladder that looks like a rope, A teleport vector that hurts you
+      to simulate falling and the "darkness" overlay tile from LV617
+2025-01-15:
+  AndroBetel:
+  - rscadd: PLTCO can now rename their platoon's dropship
+  Doubleumc:
+  - balance: weeds no longer heal AI xenos, need a channeled action to remove
+  KoishiVibe:
+  - balance: bottles of 'regular' drugs hold 180u, bottles of 'special' drugs hold
+      135u.
+  - balance: syringes are slower without training BUT USABLE. with training they are
+      much faster.

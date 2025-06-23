@@ -117,7 +117,7 @@
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
 	if(job in GLOB.ROLES_USCM)
 		. += ""
-		. += "<a href='?MapView=1'>View Tactical Map</a>"
+		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
 		. += "Active Order: MOVE"
 	if(protection_aura)
@@ -269,13 +269,6 @@
 				if(L in O.implants)
 					return TRUE
 	return FALSE
-
-/**
- * Handles any storage containers that the human is looking inside when auto-observed.
- */
-/mob/living/carbon/human/auto_observed(mob/dead/observer/observer)
-	. = ..()
-
 
 /**
  * Handles any storage containers that the human is looking inside when auto-observed.
@@ -501,7 +494,7 @@
 							if(hasHUD(usr,"security") || isobserver(usr))
 								to_chat(usr, "<b>Name:</b> [R.fields["name"]] <b>Criminal Status:</b> [R.fields["criminal"]]")
 								to_chat(usr, "<b>Incidents:</b> [R.fields["incident"]]")
-								to_chat(usr, "<a href='?src=\ref[src];secrecordComment=1'>\[View Comment Log\]</a>")
+								to_chat(usr, "<a href='byond://?src=\ref[src];secrecordComment=1'>\[View Comment Log\]</a>")
 								read = 1
 
 			if(!read)
@@ -537,7 +530,7 @@
 						comment_markup += text("<i>Comment deleted by [] at []</i><br />", comment["deleted_by"], comment["deleted_at"])
 					to_chat(usr, comment_markup)
 					if(!isobserver(usr))
-						to_chat(usr, "<a href='?src=\ref[src];secrecordadd=1'>\[Add comment\]</a><br />")
+						to_chat(usr, "<a href='byond://?src=\ref[src];secrecordadd=1'>\[Add comment\]</a><br />")
 
 		if(!read)
 			to_chat(usr, SPAN_DANGER("Unable to locate a data core entry for this person."))
@@ -570,7 +563,7 @@
 					else
 						var/new_com_i = length(R.fields["comments"]) + 1
 						R.fields["comments"]["[new_com_i]"] = new_comment
-					to_chat(usr, "You have added a new comment to the Security Record of [R.fields["name"]]. <a href='?src=\ref[src];secrecordComment=1'>\[View Comment Log\]</a>")
+					to_chat(usr, "You have added a new comment to the Security Record of [R.fields["name"]]. <a href='byond://?src=\ref[src];secrecordComment=1'>\[View Comment Log\]</a>")
 
 	if(href_list["medical"])
 		if(hasHUD(usr,"medical"))
@@ -625,7 +618,7 @@
 									to_chat(usr, "<b>Major Disabilities:</b> [R.fields["ma_dis"]]")
 									to_chat(usr, "<b>Details:</b> [R.fields["ma_dis_d"]]")
 									to_chat(usr, "<b>Notes:</b> [R.fields["notes"]]")
-									to_chat(usr, "<a href='?src=\ref[src];medrecordComment=1'>\[View Comment Log\]</a>")
+									to_chat(usr, "<a href='byond://?src=\ref[src];medrecordComment=1'>\[View Comment Log\]</a>")
 									read = 1
 
 			if(!read)
@@ -654,7 +647,7 @@
 										counter++
 									if(counter == 1)
 										to_chat(usr, "No comment found")
-									to_chat(usr, "<a href='?src=\ref[src];medrecordadd=1'>\[Add comment\]</a>")
+									to_chat(usr, "<a href='byond://?src=\ref[src];medrecordadd=1'>\[Add comment\]</a>")
 
 			if(!read)
 				to_chat(usr, SPAN_DANGER("Unable to locate a data core entry for this person."))
@@ -700,16 +693,16 @@
 				close_browser(src, "flavor_changes")
 				return
 			if("general")
-				var/msg = input(usr,"Update the general description of your character. This will be shown regardless of clothing, and may include OOC notes and preferences.","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
+				var/msg = input(usr,"Update the general description of your character. This will be shown regardless of clothing, and may include OOC notes and preferences. Character limit is [MAX_FLAVOR_MESSAGE_LEN].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
 				if(msg != null)
-					msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+					msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 					msg = html_encode(msg)
 				flavor_texts[href_list["flavor_change"]] = msg
 				return
 			else
 				var/msg = input(usr,"Update the flavor text for your [href_list["flavor_change"]].","Flavor Text",html_decode(flavor_texts[href_list["flavor_change"]])) as message
 				if(msg != null)
-					msg = copytext(msg, 1, MAX_MESSAGE_LEN)
+					msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
 					msg = html_encode(msg)
 				flavor_texts[href_list["flavor_change"]] = msg
 				set_flavor()
@@ -733,6 +726,21 @@
 					if(R.fields["last_scan_time"] && R.fields["last_scan_result"])
 						tgui_interact(usr)
 					break
+
+	if(href_list["check_status"])
+		if(!usr.Adjacent(src))
+			return
+		var/mob/living/carbon/human/user = usr
+		user.check_status(src)
+
+	if(href_list["use_stethoscope"])
+		var/mob/living/carbon/human/user = usr
+		var/obj/item/clothing/accessory/stethoscope/stethoscope = locate() in user.w_uniform
+		if(!stethoscope || !user.Adjacent(src))
+			return
+
+		stethoscope.attack(src, user)
+
 	..()
 	return
 
@@ -809,6 +817,18 @@
 	if(istype(head, /obj/item/clothing))
 		var/obj/item/clothing/C = head
 		number += C.eye_protection
+		if(istype(head, /obj/item/clothing/head/helmet/marine) || istype(head, /obj/item/clothing/head/cmcap))
+			var/list/contents_of_headgear = null
+			if(istype(head, /obj/item/clothing/head/helmet/marine))
+				var/obj/item/clothing/head/helmet/marine/headgear = head
+				contents_of_headgear = headgear.pockets.contents
+			if(istype(head, /obj/item/clothing/head/cmcap))
+				var/obj/item/clothing/head/cmcap/headgear = head
+				contents_of_headgear = headgear.pockets.contents
+			for(var/obj/item/clothing/glasses/mgoggles/goggles in contents_of_headgear)
+				if(goggles.activated == TRUE)
+					number += goggles.eye_protection
+
 	if(istype(wear_mask, /obj/item/clothing))
 		number += wear_mask.eye_protection
 	if(glasses)
@@ -846,7 +866,7 @@
 		addtimer(CALLBACK(src, PROC_REF(do_vomit)), 25 SECONDS)
 
 /mob/living/carbon/human/proc/do_vomit()
-	apply_effect(5, STUN)
+	apply_effect(2, STUN)
 	if(stat == 2) //One last corpse check
 		return
 	src.visible_message(SPAN_WARNING("[src] throws up!"), SPAN_WARNING("You throw up!"), null, 5)
@@ -943,6 +963,9 @@
 		else if(istype(W, /obj/item/shard/shrapnel))
 			var/obj/item/shard/shrapnel/embedded = W
 			embedded.on_embedded_movement(src)
+		else if(istype(W, /obj/item/sharp))
+			var/obj/item/sharp/embedded = W
+			embedded.on_embedded_movement(src)
 		// Check if its a sharp weapon
 		else if(is_sharp(W))
 			if(organ.status & LIMB_SPLINTED) //Splints prevent movement.
@@ -952,45 +975,44 @@
 		if(prob(30)) // Spam chat less
 			to_chat(src, SPAN_HIGHDANGER("Your movement jostles [W] in your [organ.display_name] painfully."))
 
-/mob/living/carbon/human/verb/check_status()
-	set category = "Object"
-	set name = "Check Status"
-	set src in view(1)
-	var/self = (usr == src)
-	var/msg = ""
-
-
-	if(usr.stat > 0 || usr.is_mob_restrained() || !ishuman(usr)) return
+/mob/living/carbon/human/proc/check_status(mob/living/carbon/human/target)
+	if(is_dead() || is_mob_restrained())
+		return
+	///Final message detailing injuries on the target.
+	var/msg
+	///Is the target the user or somebody else?
+	var/self = (target == src)
+	to_chat(usr,SPAN_NOTICE("You [self ? "take a moment to analyze yourself." : "start analyzing [target.name]."]"))
 
 	if(self)
-		var/list/L = get_broken_limbs() - list("chest","head","groin")
-		if(length(L) > 0)
-			msg += "Your [english_list(L)] [length(L) > 1 ? "are" : "is"] broken\n"
-	to_chat(usr,SPAN_NOTICE("You [self ? "take a moment to analyze yourself":"start analyzing [src]"]"))
-	if(toxloss > 20)
-		msg += "[self ? "Your" : "Their"] skin is slightly green\n"
-	if(is_bleeding())
-		msg += "[self ? "You" : "They"] have bleeding wounds on [self ? "your" : "their"] body\n"
+		var/list/broken_limbs = target.get_broken_limbs() - list("chest","head","groin")
+		if(length(broken_limbs))
+			msg += "Your [english_list(broken_limbs)] [length(broken_limbs) > 1 ? "are" : "is"] broken.\n"
+	if(target.toxloss > 20)
+		msg += "[self ? "Your" : "Their"] skin is slightly green.\n"
+
+	if(target.is_bleeding())
+		msg += "[self ? "You" : "They"] have bleeding wounds on [self ? "your" : "their"] body.\n"
 
 	if(!self && skillcheck(usr, SKILL_SURGERY, SKILL_SURGERY_NOVICE))
-		for(var/datum/effects/bleeding/internal/internal_bleed in effects_list)
-			msg += "They have bloating and discoloration on their [internal_bleed.limb.display_name]\n"
+		for(var/datum/effects/bleeding/internal/internal_bleed in target.effects_list)
+			msg += "They have bloating and discoloration on their [internal_bleed.limb.display_name].\n"
 
-	if(stat == UNCONSCIOUS)
-		msg += "They seem to be unconscious\n"
-	else if(stat == DEAD)
-		if(src.check_tod() && is_revivable())
-			msg += "They're not breathing"
-		else
-			if(has_limb("head"))
-				msg += "Their eyes have gone blank, there are no signs of life"
+	switch(target.stat)
+		if(DEAD)
+			if(target.check_tod() && target.is_revivable())
+				msg += "They're not breathing."
 			else
-				msg += "They are definitely dead"
-	else
-		msg += "[self ? "You're":"They're"] alive and breathing"
+				if(has_limb("head"))
+					msg += "Their eyes have gone blank, there are no signs of life."
+				else
+					msg += "They are definitely dead."
+		if(UNCONSCIOUS)
+			msg += "They seem to be unconscious.\n"
+		if(CONSCIOUS)
+			msg += "[self ? "You're" : "They're"] alive and breathing."
 
-
-	to_chat(usr,SPAN_WARNING(msg))
+	to_chat(src,SPAN_WARNING(msg))
 
 
 /mob/living/carbon/human/verb/view_manifest()
@@ -999,7 +1021,7 @@
 
 	if(job in GLOB.ROLES_USCM)
 		var/dat = GLOB.data_core.get_manifest()
-		show_browser(src, dat, "Crew Manifest", "manifest", "size=400x750")
+		show_browser(src, dat, "Crew Manifest", "manifest", width = 400, height = 750)
 	else
 		to_chat(usr, SPAN_WARNING("You have no access to [MAIN_SHIP_NAME] crew manifest."))
 
@@ -1065,6 +1087,8 @@
 
 	default_lighting_alpha = species.default_lighting_alpha
 	update_sight()
+
+	SEND_SIGNAL(src, COMSIG_HUMAN_SET_SPECIES, new_species)
 
 	if(species)
 		return TRUE
@@ -1191,7 +1215,7 @@
 		else
 			if(tracker_setting in squad_leader_trackers)
 				var/datum/squad/S = GLOB.RoleAuthority.squads_by_type[squad_leader_trackers[tracker_setting]]
-				H = S.squad_leader
+				H = S?.squad_leader
 				tracking_suffix = tracker_setting
 
 	if(!H || H.w_uniform?.sensor_mode != SENSOR_MODE_LOCATION)
@@ -1534,7 +1558,7 @@
 	set desc = "Sets a description which will be shown when someone examines you."
 	set category = "IC"
 
-	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as text)
+	pose =  strip_html(input(usr, "This is [src]. \He is...", "Pose", null)  as message, MAX_FLAVOR_MESSAGE_LEN)
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
@@ -1571,9 +1595,9 @@
 	HTML += TextPreview(flavor_texts["feet"])
 	HTML += "<br>"
 	HTML += "<hr />"
-	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
+	HTML +="<a href='byond://?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
-	show_browser(src, HTML, "Update Flavor Text", "flavor_changes", "size=430x300")
+	show_browser(src, HTML, "Update Flavor Text", "flavor_changes", width = 430, height = 300)
 
 /mob/living/carbon/human/throw_item(atom/target)
 	if(!throw_allowed)

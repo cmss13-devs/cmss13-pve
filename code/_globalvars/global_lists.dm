@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(language_keys, setup_language_keys()) //table of say codes for 
 
 // Origins
 GLOBAL_REFERENCE_LIST_INDEXED(origins, /datum/origin, name)
-GLOBAL_LIST_INIT(player_origins, USCM_ORIGINS)
+GLOBAL_LIST_INIT(player_origins, FACTION_ORIGINS)
 
 //Xeno hives
 GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(dropship_camos, list(DROPSHIP_CAMO_TAN, DROPSHIP_CAMO_NAVY, DRO
 	//Backpacks
 GLOBAL_LIST_INIT(backbaglist, list("Backpack", "Satchel"))
 	//Armor styles
-GLOBAL_LIST_INIT(armor_style_list, list("Padded" = 1, "Padless" = 2, "Ridged" = 3, "Carrier" = 4, "Skull" = 5, "Smooth" = 6, "Random"))
+GLOBAL_LIST_INIT(armor_style_list, list("Standard" = 1, "Ridged" = 2, "Smooth" = 3, "Random"))
 
 // var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 GLOBAL_VAR_INIT(round_should_check_for_win, TRUE)

@@ -13,7 +13,9 @@
 	throw_range = 15
 	throw_speed = SPEED_VERY_FAST
 	/// If FALSE won't change icon_state to a camo marine bino.
-	var/uses_camo = TRUE
+	var/uses_camo = FALSE
+	var/zoom_offset = 11
+	var/view_range = 12
 
 
 	//matter = list("metal" = 50,"glass" = 50)
@@ -30,7 +32,7 @@
 	if(SEND_SIGNAL(user, COMSIG_BINOCULAR_ATTACK_SELF, src))
 		return
 
-	zoom(user, 11, 12)
+	zoom(user, zoom_offset, view_range)
 
 /obj/item/device/binoculars/dropped(/obj/item/item, mob/user)
 	. = ..()
@@ -98,7 +100,7 @@
 		QDEL_NULL(coord)
 
 /obj/item/device/binoculars/range/clicked(mob/user, list/mods)
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		stop_targeting(user)
@@ -108,13 +110,13 @@
 /obj/item/device/binoculars/range/handle_click(mob/living/carbon/human/user, atom/targeted_atom, list/mods)
 	if(!istype(user))
 		return
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(user.stat != CONSCIOUS)
 			to_chat(user, SPAN_WARNING("You cannot use [src] while incapacitated."))
 			return FALSE
 		if(SEND_SIGNAL(user, COMSIG_BINOCULAR_HANDLE_CLICK, src))
 			return FALSE
-		if(mods["click_catcher"])
+		if(mods[CLICK_CATCHER])
 			return FALSE
 		if(user.z != targeted_atom.z && !coord)
 			to_chat(user, SPAN_WARNING("You cannot get a direct laser from where you are."))
@@ -213,6 +215,13 @@
 	/// Normally used for the red CAS dot overlay.
 	var/cas_laser_overlay = "laser_cas"
 
+	var/list/connected_himats = list()
+	var/himat_id = 1
+	var/barrage_mode = FALSE
+
+	actions_types = list(/datum/action/item_action/fire_himat, /datum/action/item_action/switch_himat, /datum/action/item_action/himat_barrage)
+	var/list/actions_list = list(/datum/action/item_action/fire_himat, /datum/action/item_action/switch_himat, /datum/action/item_action/himat_barrage)
+
 /obj/item/device/binoculars/range/designator/Initialize()
 	. = ..()
 	tracking_id = ++GLOB.cas_tracking_id_increment
@@ -234,7 +243,7 @@
 	. += SPAN_NOTICE("[src] is currently set to [range_mode ? "range finder" : "CAS marking"] mode.")
 
 /obj/item/device/binoculars/range/designator/clicked(mob/user, list/mods)
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		toggle_bino_mode(user)
@@ -246,6 +255,13 @@
 	if(laser)
 		QDEL_NULL(laser)
 		to_chat(user, SPAN_WARNING("You stop lasing."))
+
+/obj/item/device/binoculars/range/designator/attackby(obj/item/item, mob/user)
+	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
+		to_chat(user, SPAN_WARNING("You begin flushing connection data..."))
+		if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			connected_himats.Cut()
+		to_chat(user, SPAN_WARNING("You successfully flush connection data."))
 
 /obj/item/device/binoculars/range/designator/verb/toggle_mode()
 	set category = "Object"
@@ -350,6 +366,97 @@
 				QDEL_NULL(laser)
 				break
 
+/datum/action/item_action/fire_himat/New(Target, obj/item/holder)
+	. = ..()
+	name = "Fire HIMATs"
+	action_icon_state = "designator_mortar"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/fire_himat/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	var/howmanyhimats = 0
+	if(!desig.range_mode && desig.laser && desig.connected_himats.len)
+		if(desig.barrage_mode)
+			for(var/obj/structure/mortar/himat/himat in desig.connected_himats)
+				if(himat.handle_shell(get_turf(desig.laser), himat.loaded_shell))
+					howmanyhimats++
+			to_chat(usr, SPAN_NOTICE("Command sent. Fired: [howmanyhimats] shells."))
+		else
+			var/obj/structure/mortar/himat/himat = desig.connected_himats[desig.himat_id]
+			if(himat.handle_shell(get_turf(desig.laser), himat.loaded_shell))
+				to_chat(usr, SPAN_NOTICE("Command sent. Fired: HIMAT [himat.id]."))
+
+/datum/action/item_action/switch_himat/New(Target, obj/item/holder)
+	. = ..()
+	name = "Switch HIMAT"
+	action_icon_state = "designator_swap_mortar"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/switch_himat/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	desig.himat_id++
+	if(desig.himat_id > desig.connected_himats.len)
+		desig.himat_id = 1
+	var/obj/structure/mortar/himat/selected_himat = desig.connected_himats[desig.himat_id]
+	to_chat(usr, SPAN_NOTICE("Selected HIMAT ID: [selected_himat.id]"))
+
+/datum/action/item_action/himat_barrage/New(Target, obj/item/holder)
+	. = ..()
+	name = "Switch Barrage Mode"
+	action_icon_state = "designator_one_weapon"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/himat_barrage/action_activate()
+	. = ..()
+	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	desig.barrage_mode = !desig.barrage_mode
+	button.overlays.Cut()
+	if(desig.barrage_mode)
+		action_icon_state = "designator_all_weapons"
+	else
+		action_icon_state = "designator_one_weapon"
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+/obj/item/device/binoculars/range/designator/upp
+
+	icon_state = "binoculars_upp_alt"
+	cas_laser_overlay = "binoculars_laser_civ"
+	range_laser_overlay = "binoculars_range_civ"
+
+//pve binocs
+/obj/item/device/binoculars/range/monocular
+	name = "rangefinder monocular"
+	desc = "A military-grade monocular equipped with rangefinding capabilities. Capable of withstanding a pretty hefty beating. Ctrl + Click turf to acquire it's coordinates. Ctrl + Click rangefinder to stop lasing."
+	icon_state = "advanced_monocular"
+	uses_camo = FALSE
+	range_laser_overlay = FALSE
+	zoom_offset = 8
+	view_range = 9
+
+/obj/item/device/binoculars/range/designator/sergeant
+	name = "tactical binoculars"
+	desc = "A laser designator issued to USCM command elements. It has two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	icon_state = "advanced_binoculars"
+	range_laser_overlay = "adv_laser_range"
+	cas_laser_overlay = "adv_laser_cas"
+	uses_camo = FALSE
+
+/obj/item/device/binoculars/range/designator/monocular
+	name = "tactical monocular"
+	desc = "Two-mode tactical monocular, developed alongside M112 HIMAT, even though other tactical optical devices can be connected to them. Use IR laser mode to laze for HIMAT strike. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+	icon_state = "advanced_monocular"
+	range_laser_overlay = "adv_laser_range"
+	cas_laser_overlay = "adv_laser_cas"
+	uses_camo = FALSE
+
+
 //IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
 /obj/item/device/binoculars/range/designator/scout
 	name = "scout laser designator"
@@ -408,24 +515,19 @@
 		return
 	var/mob/living/carbon/human/human = owner
 	if(human.selected_ability == src)
-		to_chat(human, "You will no longer use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will no longer use [name] with [human.get_ability_mouse_name()].")
 		button.icon_state = "template"
-		human.selected_ability = null
+		human.set_selected_ability(null)
 	else
-		to_chat(human, "You will now use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will now use [name] with [human.get_ability_mouse_name()].")
 		if(human.selected_ability)
 			human.selected_ability.button.icon_state = "template"
-			human.selected_ability = null
+			human.set_selected_ability(null)
 		button.icon_state = "template_on"
-		human.selected_ability = src
+		human.set_selected_ability(src)
 
 /datum/action/item_action/specialist/spotter_target/can_use_action()
 	var/mob/living/carbon/human/human = owner
-	if(!(GLOB.character_traits[/datum/character_trait/skills/spotter] in human.traits))
-		to_chat(human, SPAN_WARNING("You have no idea how to use this!"))
-		return FALSE
 	if(istype(human) && !human.is_mob_incapacitated() && (holder_item == human.r_hand || holder_item || human.l_hand))
 		return TRUE
 
@@ -598,7 +700,7 @@
 		return FALSE
 
 	var/list/modifiers = params2list(params) //Only single clicks.
-	if(modifiers["middle"] || modifiers["shift"] || modifiers["alt"] || modifiers["ctrl"])
+	if(modifiers[MIDDLE_CLICK] || modifiers[SHIFT_CLICK] || modifiers[ALT_CLICK] || modifiers[CTRL_CLICK])
 		return FALSE
 
 	var/turf/SS = get_turf(src) //Stand Still, not what you're thinking.

@@ -37,7 +37,9 @@
 #define RADIO_CHANNEL_REQ "Req"
 #define RADIO_CHANNEL_SENTRY "Sentry Network"
 #define RADIO_CHANNEL_SPECIAL "special"
-
+#define RADIO_CHANNEL_USASF "USASF"
+#define RADIO_CHANNEL_US_ARMY "US Army"
+#define RADIO_CHANNEL_UA_GUARD "UA Colonial Guard"
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"
@@ -45,6 +47,9 @@
 #define RADIO_CHANNEL_CLF_MED "CLF Med"
 #define RADIO_CHANNEL_CLF_ENGI "CLF Engi"
 
+//CLF Comms
+#define RADIO_CHANNEL_REBEL_UA "PFA"
+#define RADIO_CHANNEL_REBEL_TWE "JSC"
 //UPP Comms
 #define RADIO_CHANNEL_UPP_GEN "UPP"
 #define RADIO_CHANNEL_UPP_CMD "UPP Command"
@@ -52,7 +57,7 @@
 #define RADIO_CHANNEL_UPP_ENGI "UPP Engi"
 #define RADIO_CHANNEL_UPP_CCT "UPP CCT"
 #define RADIO_CHANNEL_UPP_KDO "UPP Kdo"
-
+#define RADIO_CHANNEL_UPP_GRD "UPP Guard"
 //WY Comms
 #define RADIO_CHANNEL_WY "WY"
 #define RADIO_CHANNEL_PMC_GEN "WY PMC"

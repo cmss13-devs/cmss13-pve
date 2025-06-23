@@ -394,12 +394,19 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	safety = TRUE
 
 	playsound(src, 'sound/machines/Alarm.ogg', 75, 0, 30)
-	world << pick('sound/theme/nuclear_detonation1.ogg','sound/theme/nuclear_detonation2.ogg')
+	world << pick('sound/theme/nuclear_klaxon.ogg')
 
-	for(var/mob/current_mob as anything in GLOB.mob_list)
-		var/turf/current_turf = get_turf(current_mob)
-		if(current_turf?.z == z && current_mob.stat != DEAD)
-			shake_camera(current_mob, 110, 4)
+	var/list/humans_other = GLOB.human_mob_list + GLOB.dead_mob_list
+	var/list/humans_uscm = list()
+	for(var/mob/current_mob as anything in humans_other)
+		if(current_mob.stat != CONSCIOUS || isyautja(current_mob))
+			humans_other -= current_mob
+			continue
+		if(current_mob.faction == FACTION_MARINE || current_mob.faction == FACTION_SURVIVOR) //separating marines from other factions. Survs go here too
+			humans_uscm += current_mob
+			humans_other -= current_mob
+	announcement_helper("IMMINENT NUCLEAR DETONATION.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/effects/ob_alert.ogg')
+	announcement_helper("IMMINENT NUCLEAR BLAST, DUCK AND COVER IMMEDIATELY.", "Colony Alert System", humans_other, 'sound/effects/ob_alert.ogg')
 
 	sleep(10 SECONDS)
 
@@ -413,6 +420,17 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 				continue
 			alive_mobs |= current_mob
 
+	for(var/datum/interior/interior in SSinterior.interiors)
+		if(!interior.exterior || interior.exterior.z != z)
+			continue
+
+		for(var/mob/living/passenger in interior.get_passengers())
+			if(!(passenger in (alive_mobs + dead_mobs)))
+				if(passenger.stat != DEAD)
+					passenger.death(create_cause_data("nuclear explosion"))
+				for(var/obj/item/alien_embryo/embryo in passenger)
+					qdel(embryo)
+
 	for(var/mob/current_mob in alive_mobs)
 		if(istype(current_mob.loc, /obj/structure/closet/secure_closet/freezer/fridge))
 			continue
@@ -424,7 +442,9 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 		for(var/obj/item/alien_embryo/embryo in current_mob)
 			qdel(embryo)
 
-	cell_explosion(loc, 500, 150, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	cell_explosion(loc, 500, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "Colony Alert System", humans_other, 'sound/misc/notice1.ogg')
 	qdel(src)
 	return TRUE
 
@@ -629,3 +649,88 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 
 	decrypting = FALSE
 	announce_to_players()
+
+/obj/structure/machinery/nuclearbomb/ADM
+	name = "\improper Tactical Atomic Demolition Munition"
+	desc = "Commonly referred to as a 'nuclear landmine' and colloquially as 'Heinz' for its cylindrical shape. The Mk-214 TADM is designed for discrete deployment in an area of operations to completely clear a several-mile radius around the blast point."
+	icon = 'icons/obj/items/marine-items.dmi'
+	icon_state = "adm"
+	pixel_x = 0
+	var/source_type = /obj/item/ADM
+
+/obj/structure/machinery/nuclearbomb/ADM/attackby(obj/item/item, mob/user)
+	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
+		if(user.action_busy)
+			return
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+			to_chat(user, SPAN_WARNING("You do not know how to pack up [src] using a security tuner..."))
+			return
+		user.visible_message(SPAN_NOTICE("[user] starts packing up [src]."), \
+			SPAN_NOTICE("You begin packing up [src]..."))
+		playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
+		if(do_after(user, 5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src))
+			collapse(usr)
+		else
+			to_chat(user, SPAN_WARNING("You stop packing up [src]."))
+	return ..()
+
+/obj/structure/machinery/nuclearbomb/ADM/proc/collapse(mob/living/carbon/human/user)
+	var/obj/item/ADM = new source_type(loc)
+	if(istype(user))
+		user.visible_message(SPAN_NOTICE("[user] packs up [src]."),
+			SPAN_NOTICE("You pack up [src]."))
+		user.put_in_active_hand(ADM)
+	qdel(src)
+
+// ADM in hands
+/obj/item/ADM
+	name = "Mk-214 Tactical Atomic Demolition Munition"
+	desc = "A packed-up TADM awaiting deployment to bring some serious pain. Includes the console and arming keys for the warhead."
+	w_class = SIZE_LARGE
+	unacidable = TRUE
+	flags_equip_slot = SLOT_BACK
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
+	icon_state = "admpacked"
+	item_state = "admpacked"
+	icon = 'icons/obj/items/marine-items.dmi'
+
+/obj/item/ADM/attack_self(mob/user)
+	. = ..()
+
+	if(SSinterior.in_interior(user))
+		to_chat(usr, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
+		return
+	var/turf/Tile = get_step(user, user.dir)
+	var/blocked = FALSE
+	for(var/obj/Obj in Tile)
+		if(Obj.density)
+			blocked = TRUE
+			break
+	for(var/mob/Mob in Tile)
+		blocked = TRUE
+		break
+	if(istype(Tile, /turf/open))
+		var/turf/open/floor = Tile
+		if(!floor.allow_construction)
+			to_chat(user, SPAN_WARNING("You cannot deploy \a [src] here, find a more secure surface!"))
+			return FALSE
+	else
+		blocked = TRUE
+	if(blocked)
+		to_chat(usr, SPAN_WARNING("You need a clear, open area to deploy \a [src], something is blocking the way in front of you!"))
+		return
+
+	if(usr.action_busy)
+		return
+	user.visible_message(SPAN_NOTICE("[user] begins deploying [src]."),
+			SPAN_NOTICE("You begin deploying [src]."))
+	playsound(loc, list('sound/handling/armorequip_1.ogg', 'sound/handling/armorequip_2.ogg'), 25, 1)
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		to_chat(user, SPAN_WARNING("You were interrupted."))
+		return
+	user.visible_message(SPAN_NOTICE("[user] has finished deploying [src]."),
+			SPAN_NOTICE("You finish deploying [src]."))
+
+	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(Tile)
+	planted.update_icon()
+	qdel(src)

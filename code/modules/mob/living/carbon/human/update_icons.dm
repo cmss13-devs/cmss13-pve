@@ -490,6 +490,23 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
 				apply_overlay(i)
 
+		else if(istype(head, /obj/item/clothing/head/helmet/upp))
+			var/obj/item/clothing/head/helmet/upp/upp_helmet = head
+			var/num_helmet_overlays = 0
+			for(var/i in 1 to length(upp_helmet.helmet_overlays))
+				// Add small numbers to the head garb layer so we don't have a layer conflict
+				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, upp_helmet.helmet_overlays[i])
+				num_helmet_overlays++
+
+			// null out the rest of the space allocated for helmet overlays
+			// God I hate 1-based indexing
+			for(var/i in num_helmet_overlays+1 to MAX_HEAD_GARB_ITEMS)
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = null
+
+			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
+				apply_overlay(i)
+
 #undef MAX_HEAD_GARB_ITEMS
 
 
@@ -525,6 +542,34 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 
 		if(istype(wear_suit, /obj/item/clothing/suit/storage/marine))
 			var/obj/item/clothing/suit/storage/marine/marine_armor = wear_suit
+			if(marine_armor.flags_marine_armor & ARMOR_SQUAD_OVERLAY)
+				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
+					var/leader = assigned_squad.squad_leader
+					var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "std-armor")
+					if(leader == src)
+						squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "sql-armor")
+					squad_overlay.layer = -SUIT_SQUAD_LAYER
+					squad_overlay.alpha = assigned_squad.armor_alpha
+					squad_overlay.color = assigned_squad.equipment_color
+					overlays_standing[SUIT_SQUAD_LAYER] = squad_overlay
+					apply_overlay(SUIT_SQUAD_LAYER)
+
+			if(length(marine_armor.armor_overlays))
+				var/image/K
+				var/image/IMG
+				for(var/i in marine_armor.armor_overlays)
+					K = marine_armor.armor_overlays[i]
+					if(K)
+						if(!IMG)
+							IMG = image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+						else
+							IMG.overlays += image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+				if(IMG)
+					overlays_standing[SUIT_GARB_LAYER] = IMG
+					apply_overlay(SUIT_GARB_LAYER)
+
+		if(istype(wear_suit, /obj/item/clothing/suit/marine))
+			var/obj/item/clothing/suit/marine/marine_armor = wear_suit
 			if(marine_armor.flags_marine_armor & ARMOR_SQUAD_OVERLAY)
 				if(assigned_squad && assigned_squad.equipment_color && assigned_squad.use_stripe_overlay)
 					var/leader = assigned_squad.squad_leader

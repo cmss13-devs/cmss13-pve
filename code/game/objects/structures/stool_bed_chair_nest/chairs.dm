@@ -20,9 +20,8 @@
 	if(!can_rotate)
 		verbs.Remove(/obj/structure/bed/chair/verb/rotate)
 
-/obj/structure/bed/initialize_pass_flags(datum/pass_flags_container/PF)
-	..()
-	if (PF)
+/obj/structure/bed/chair/initialize_pass_flags(datum/pass_flags_container/PF)
+	if(PF)
 		PF.flags_can_pass_all = PASS_AROUND|PASS_UNDER
 	flags_can_pass_all_temp = PASS_OVER
 
@@ -306,6 +305,48 @@
 	name = "AI core chair"
 	desc = "A functional chair designed for comfortably sitting a single person with intent to facilitate interactions with the ship AI."
 
+/obj/structure/bed/chair/comfy/bench
+	icon_state = null
+	can_rotate = FALSE
+	name = "metal bench"
+	desc = "A metal bench to rest upon."
+
+/obj/structure/bed/chair/comfy/bench/north
+	icon_state = "bench_1"
+
+/obj/structure/bed/chair/comfy/bench/north/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/north/east
+	dir = EAST
+
+/obj/structure/bed/chair/comfy/bench/mid
+	icon_state = "bench_2"
+
+/obj/structure/bed/chair/comfy/bench/mid/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/mid/east
+	dir = EAST
+
+/obj/structure/bed/chair/comfy/bench/south
+	icon_state = "bench_3"
+
+/obj/structure/bed/chair/comfy/bench/south/west
+	dir = WEST
+
+/obj/structure/bed/chair/comfy/bench/south/east
+	dir = EAST
+
+
+/obj/structure/bed/chair/comfy/ai_interface
+	icon_state = "ai_interface_chair"
+	name = "AI interface chair"
+	desc = "A functional chair designed for comfortably sitting a single person with intent to facilitate interactions with the ship AI."
+	can_rotate = FALSE
+	dir = NORTH
+	pixel_y = -5
+
 /obj/structure/bed/chair/office
 	anchored = FALSE
 	drag_delay = 1 //Pulling something on wheels is easy
@@ -449,7 +490,7 @@
 		chair_state = DROPSHIP_CHAIR_UNFOLDED
 		icon_state = "hotseat"
 
-/obj/structure/bed/chair/dropship/passenger/buckle_mob(mob/living/M, mob/living/user)
+/obj/structure/bed/chair/dropship/passenger/shuttle_chair/buckle_mob(mob/living/M, mob/living/user)
 	if(chair_state != DROPSHIP_CHAIR_UNFOLDED)
 		return
 	..()

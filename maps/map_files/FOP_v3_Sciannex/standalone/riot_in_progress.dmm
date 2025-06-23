@@ -118,6 +118,10 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
+"fl" = (
+/obj/item/explosive/grenade/tear/marine,
+/turf/open/floor/prison,
+/area/fiorina/station/security)
 "fs" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -180,10 +184,6 @@
 "gV" = (
 /obj/structure/window/framed/prison,
 /turf/open/floor/plating/prison,
-/area/fiorina/station/security)
-"hg" = (
-/obj/effect/landmark/corpsespawner/security/marshal,
-/turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
 "hI" = (
 /obj/item/stack/folding_barricade,
@@ -312,7 +312,6 @@
 /area/fiorina/station/security)
 "mt" = (
 /obj/effect/spawner/random/gun/shotgun/midchance,
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "mD" = (
@@ -324,7 +323,7 @@
 /area/fiorina/station/security)
 "nf" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "nl" = (
@@ -393,7 +392,7 @@
 /turf/closed/wall/r_wall/prison,
 /area/fiorina/station/security)
 "pp" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "pE" = (
@@ -413,7 +412,6 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "pV" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/item/tool/kitchen/utensil/knife,
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/security)
@@ -576,10 +574,6 @@
 	dir = 8
 	},
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot,
-/turf/open/floor/prison,
-/area/fiorina/station/security)
-"wW" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "xp" = (
@@ -806,7 +800,6 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "FQ" = (
-/obj/effect/landmark/corpsespawner/ua_riot,
 /obj/item/weapon/gun/energy/taser,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
@@ -902,7 +895,7 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/fiorina/lz/near_lzII)
 "JR" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "Kb" = (
@@ -930,7 +923,6 @@
 /obj/structure/reagent_dispensers/peppertank{
 	pixel_y = 30
 	},
-/obj/item/explosive/grenade/custom/teargas,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "MX" = (
@@ -970,7 +962,6 @@
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
 "OV" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/prison,
 /area/fiorina/lz/near_lzII)
@@ -1239,7 +1230,6 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "YZ" = (
-/obj/effect/landmark/corpsespawner/prisoner,
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
@@ -1404,9 +1394,9 @@ vq
 vq
 vq
 qQ
-wW
 sq
 sq
+fl
 FH
 PA
 sq
@@ -1476,7 +1466,7 @@ FH
 bm
 Su
 YH
-hg
+FH
 PA
 sq
 sq
@@ -1645,7 +1635,7 @@ Sm
 nD
 IG
 xW
-wW
+sq
 sq
 sq
 sq

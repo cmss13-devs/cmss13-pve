@@ -184,6 +184,14 @@
 	if(href_list["equip_with"] == "no_equipment")
 		strip_the_humans = TRUE
 
+	var/kill_the_humans = FALSE
+	var/burst_the_humans = FALSE
+	if(href_list["mob_status"] == "dead")
+		kill_the_humans = TRUE
+
+	if(href_list["mob_status"] == "burst")
+		burst_the_humans = TRUE
+
 	if(humans_to_spawn)
 		var/list/turfs = list()
 		if(isnull(range_to_spawn_on))
@@ -253,7 +261,20 @@
 					if(istype(hand_item, /obj/item/explosive))
 						qdel(hand_item)
 
+			if(kill_the_humans)
+				spawned_human.death(create_cause_data("existing"), TRUE)
+				spawned_human.apply_damage(100, BRUTE)
+				spawned_human.apply_damage(100, BRUTE)
+				spawned_human.apply_damage(100, BRUTE)
+				spawned_human.updatehealth()
+				spawned_human.pulse = PULSE_NONE
 
+			if(burst_the_humans)
+				spawned_human.death(create_cause_data("existing"), TRUE)
+				spawned_human.chestburst = 2
+				spawned_human.update_burst()
+				spawned_human.updatehealth()
+				spawned_human.pulse = PULSE_NONE
 
 		if (offer_as_ert)
 			var/datum/emergency_call/custom/em_call = new()
@@ -264,12 +285,12 @@
 			em_call.owner = owner
 
 			var/quiet_launch = TRUE
-			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("Yes", "No"), 20 SECONDS)
+			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("No", "Yes"), 20 SECONDS)
 			if(ql_prompt == "Yes")
 				quiet_launch = FALSE
 
 			var/announce_receipt = FALSE
-			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("Yes", "No"), 20 SECONDS)
+			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("No", "Yes"), 20 SECONDS)
 			if(ar_prompt == "Yes")
 				announce_receipt = TRUE
 

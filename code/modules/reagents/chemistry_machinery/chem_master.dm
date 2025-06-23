@@ -52,11 +52,6 @@
 			deconstruct(FALSE)
 			return
 
-
-/obj/structure/machinery/chem_master/power_change()
-	..()
-	update_icon()
-
 /obj/structure/machinery/chem_master/update_icon()
 	if(stat & BROKEN)
 		icon_state = (beaker?"mixer1_b":"mixer0_b")
@@ -293,14 +288,14 @@
 		else if(href_list["change_pill"])
 			var/dat = "<table>"
 			for(var/i = 1 to PILL_ICON_CHOICES)
-				dat += "<tr><td><a href=\"?src=\ref[src]&pill_sprite=[i]\"><img src=\"pill[i].png\" /></a></td></tr>"
+				dat += "<tr><td><a href=\"byond://?src=\ref[src]&pill_sprite=[i]\"><img src=\"pill[i].png\" /></a></td></tr>"
 			dat += "</table>"
 			show_browser(user, dat, "Change Pill Type", "chem_master")
 			return
 		else if(href_list["change_bottle"])
 			var/dat = "<table>"
 			for(var/i = 1 to BOTTLE_ICON_CHOICES)
-				dat += "<tr><td><a href=\"?src=\ref[src]&bottle_sprite=[i]\"><img src=\"bottle-[i].png\" /></a></td></tr>"
+				dat += "<tr><td><a href=\"byond://?src=\ref[src]&bottle_sprite=[i]\"><img src=\"bottle-[i].png\" /></a></td></tr>"
 			dat += "</table>"
 			show_browser(user, dat, "Change Bottle Type", "chem_master")
 			return
@@ -352,66 +347,66 @@
 		dat = "Please insert beaker.<BR>"
 		if(pill_maker)
 			if(loaded_pill_bottle)
-				dat += "<A href='?src=\ref[src];ejectp=1;user=\ref[user]'>Eject Pill Bottle \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR><BR>"
+				dat += "<A href='byond://?src=\ref[src];ejectp=1;user=\ref[user]'>Eject Pill Bottle \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR><BR>"
 			else
 				dat += "No pill bottle inserted.<BR><BR>"
-		dat += "<A href='?src=\ref[src];close=1'>Close</A>"
+		dat += "<A href='byond://?src=\ref[src];close=1'>Close</A>"
 	else
-		dat += "<A href='?src=\ref[src];eject=1;user=\ref[user]'>Eject beaker and Clear Buffer</A><BR><BR>"
+		dat += "<A href='byond://?src=\ref[src];eject=1;user=\ref[user]'>Eject beaker and Clear Buffer</A><BR><BR>"
 		if(pill_maker)
 			if(loaded_pill_bottle)
-				dat += "<A href='?src=\ref[src];ejectp=1;user=\ref[user]'>Eject [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR>"
-				dat += "<A href='?src=\ref[src];addlabelp=1;user=\ref[user]'>Add label to [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR>"
-				dat += "<A href='?src=\ref[src];setcolor=1;user=\ref[user]'>Set color to [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR><BR>"
-				dat += "<A href='?src=\ref[src];transferp=1;'>Transfer [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\] to the smartfridge</A><BR><BR>"
+				dat += "<A href='byond://?src=\ref[src];ejectp=1;user=\ref[user]'>Eject [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR>"
+				dat += "<A href='byond://?src=\ref[src];addlabelp=1;user=\ref[user]'>Add label to [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR>"
+				dat += "<A href='byond://?src=\ref[src];setcolor=1;user=\ref[user]'>Set color to [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\]</A><BR><BR>"
+				dat += "<A href='byond://?src=\ref[src];transferp=1;'>Transfer [loaded_pill_bottle] \[[length(loaded_pill_bottle.contents)]/[loaded_pill_bottle.max_storage_space]\] to the smartfridge</A><BR><BR>"
 			else
 				dat += "No pill bottle inserted.<BR><BR>"
 		if(!connected && pill_maker)
-			dat += "<A href='?src=\ref[src];connect=1'>Connect Smartfridge</A><BR><BR>"
+			dat += "<A href='byond://?src=\ref[src];connect=1'>Connect Smartfridge</A><BR><BR>"
 		if(!beaker.reagents.total_volume)
 			dat += "Beaker is empty."
 		else
 			dat += "Add to buffer:<BR>"
 			for(var/datum/reagent/G in beaker.reagents.reagent_list)
 				dat += "[G.name] , [G.volume] Units - "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=1'>1</A> "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=5'>5</A> "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=10'>10</A> "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=30'>30</A> "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=60'>60</A> "
-				dat += "<A href='?src=\ref[src];add=[G.id];amount=[G.volume]'>All</A> "
-				dat += "<A href='?src=\ref[src];addcustom=[G.id]'>Custom</A><BR>"
-			dat += "<A href='?src=\ref[src];addall=[beaker]'>All reagents</A><BR>"
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=1'>1</A> "
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=5'>5</A> "
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=10'>10</A> "
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=30'>30</A> "
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=60'>60</A> "
+				dat += "<A href='byond://?src=\ref[src];add=[G.id];amount=[G.volume]'>All</A> "
+				dat += "<A href='byond://?src=\ref[src];addcustom=[G.id]'>Custom</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];addall=[beaker]'>All reagents</A><BR>"
 
-		dat += "<HR>Transfer to <A href='?src=\ref[src];toggle=1'>[(!mode ? "disposal" : "beaker")]:</A><BR>"
+		dat += "<HR>Transfer to <A href='byond://?src=\ref[src];toggle=1'>[(!mode ? "disposal" : "beaker")]:</A><BR>"
 		if(reagents.total_volume)
 			for(var/datum/reagent/N in reagents.reagent_list)
 				dat += "[N.name] , [N.volume] Units - "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=1'>1</A> "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=5'>5</A> "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=10'>10</A> "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=30'>30</A> "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=60'>60</A> "
-				dat += "<A href='?src=\ref[src];remove=[N.id];amount=[N.volume]'>All</A> "
-				dat += "<A href='?src=\ref[src];removecustom=[N.id]'>Custom</A><BR>"
-			dat += "<A href='?src=\ref[src];removeall=[src]'>All reagents</A><BR>"
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=1'>1</A> "
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=5'>5</A> "
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=10'>10</A> "
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=30'>30</A> "
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=60'>60</A> "
+				dat += "<A href='byond://?src=\ref[src];remove=[N.id];amount=[N.volume]'>All</A> "
+				dat += "<A href='byond://?src=\ref[src];removecustom=[N.id]'>Custom</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];removeall=[src]'>All reagents</A><BR>"
 		else
 			dat += "Empty<BR>"
 		if(!condi)
 			if(pill_maker)
-				dat += "<HR><BR><A href='?src=\ref[src];createpill=1'>Create pill (60 units max)</A><a href=\"?src=\ref[src]&change_pill=1\"><img src=\"pill[pillsprite].png\" /></a><BR>"
-				dat += "<A href='?src=\ref[src];createpill_multiple=1'>Create multiple pills</A><BR>"
-			dat += "<A href='?src=\ref[src];createglass=1;createbottle=1;user=\ref[user]'>Create bottle (60 units max)<a href=\"?src=\ref[src]&change_bottle=1\"><img src=\"bottle-[bottlesprite].png\" /></A>"
+				dat += "<HR><BR><A href='byond://?src=\ref[src];createpill=1'>Create pill (60 units max)</A><a href=\"byond://?src=\ref[src]&change_pill=1\"><img src=\"pill[pillsprite].png\" /></a><BR>"
+				dat += "<A href='byond://?src=\ref[src];createpill_multiple=1'>Create multiple pills</A><BR>"
+			dat += "<A href='byond://?src=\ref[src];createglass=1;createbottle=1;user=\ref[user]'>Create bottle (60 units max)<a href=\"byond://?src=\ref[src]&change_bottle=1\"><img src=\"bottle-[bottlesprite].png\" /></A>"
 			if(connected)
-				dat += "<BR><A href='?src=\ref[src];createglass=1;createbottle=1;store=1;user=\ref[user]'>Store bottle in smartfridge (60 units max)</A>"
+				dat += "<BR><A href='byond://?src=\ref[src];createglass=1;createbottle=1;store=1;user=\ref[user]'>Store bottle in smartfridge (60 units max)</A>"
 			if(vial_maker)
-				dat += "<BR><BR><A href='?src=\ref[src];createglass=1;createvial=1;user=\ref[user]'>Create vial (30 units max)</A>"
+				dat += "<BR><BR><A href='byond://?src=\ref[src];createglass=1;createvial=1;user=\ref[user]'>Create vial (30 units max)</A>"
 				if(connected)
-					dat += "<BR><A href='?src=\ref[src];createglass=1;createvial=1;store=1;user=\ref[user]'>Store vial in smartfridge (30 units max)</A>"
+					dat += "<BR><A href='byond://?src=\ref[src];createglass=1;createvial=1;store=1;user=\ref[user]'>Store vial in smartfridge (30 units max)</A>"
 		else
-			dat += "<A href='?src=\ref[src];createglass=1;user=\ref[user]'>Create bottle (50 units max)</A>"
+			dat += "<A href='byond://?src=\ref[src];createglass=1;user=\ref[user]'>Create bottle (50 units max)</A>"
 	if(!condi)
-		show_browser(user, "[name] menu:<BR><BR>[dat]", name, "chem_master", "size=460x520")
+		show_browser(user, "[name] menu:<BR><BR>[dat]", name, "chem_master", width = 460, height = 520)
 	else
 		show_browser(user, "Condimaster menu:<BR><BR>[dat]", name, "chem_master")
 	return
