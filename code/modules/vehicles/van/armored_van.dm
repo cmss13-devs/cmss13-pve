@@ -9,7 +9,7 @@
 
 	interior_map = /datum/map_template/interior/van_armored
 
-	passengers_slots = 2 //4  total
+	passengers_slots = 2
 	xenos_slots = 2
 
 	entrances = list(
