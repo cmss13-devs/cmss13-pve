@@ -877,7 +877,7 @@
 	icon_state = "S"
 	},
 /obj/effect/vehicle_roof/van,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/inside/dorms)
 "bH" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -2732,7 +2732,7 @@
 	dir = 4
 	},
 /obj/effect/vehicle_roof/van,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/inside/dorms)
 "ft" = (
 /obj/structure/tent_curtain,
@@ -2866,7 +2866,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "hf" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
@@ -3270,7 +3270,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "lF" = (
 /obj/structure/catwalk/bigred,
@@ -3367,7 +3367,7 @@
 	dir = 8
 	},
 /obj/structure/platform_decoration/kutjevo/rock,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "mI" = (
 /turf/open/floor/interior/plastic,
@@ -3438,7 +3438,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "nG" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3916,7 +3916,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "tw" = (
 /obj/structure/barricade/sandbags/wired{
@@ -4085,7 +4085,7 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "vW" = (
 /obj/structure/platform/kutjevo/rock{
@@ -4500,7 +4500,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "AM" = (
 /obj/structure/machinery/light/double/blue{
@@ -4625,7 +4625,7 @@
 "CG" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/effect/vehicle_roof/van,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/inside/dorms)
 "CO" = (
 /obj/structure/largecrate/random/case/small,
@@ -5042,7 +5042,7 @@
 	dir = 8
 	},
 /obj/structure/platform_decoration/kutjevo/rock,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "Fw" = (
 /obj/structure/platform/kutjevo/rock,
@@ -5052,7 +5052,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "Fz" = (
 /obj/structure/platform{
@@ -5118,7 +5118,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "Gq" = (
 /obj/structure/cable/heavyduty{
@@ -5174,7 +5174,7 @@
 "GQ" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /obj/effect/vehicle_roof/van,
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/inside/dorms)
 "GX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5328,7 +5328,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "IU" = (
 /obj/structure/tent_curtain,
@@ -5553,7 +5553,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "Le" = (
 /obj/structure/machinery/power/terminal{
@@ -5698,7 +5698,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/gm/river/ocean,
+/turf/open/gm/river,
 /area/firebase_zulu/outside/compound)
 "Mt" = (
 /obj/structure/platform/kutjevo/rock{
