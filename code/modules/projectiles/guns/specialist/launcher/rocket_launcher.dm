@@ -423,18 +423,12 @@
 	var/targeting_air = FALSE
 	var/launcher_has_empty_icon = FALSE
 	var/is_outside = FALSE //Whether the user is firing from inside an unsuitable location or not
-	var/secondary_toggled = 0 //Which ammo is used
 	var/missile_message_time = 1.5 SECONDS
-	var/datum/ammo/ammo_primary = /datum/ammo/rocket/anti_air //Actual missile type
-	var/datum/ammo/ammo_secondary = /datum/ammo/anti_air //'AA targeting' missile type
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/set_bullet_traits()
 	return
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/Initialize(mapload, ...)
-	ammo_primary = GLOB.ammo_list[ammo_primary]
-	ammo_secondary = GLOB.ammo_list[ammo_secondary]
-	ammo = ammo_primary
 	. = ..()
 	smoke = new()
 	smoke.attach(src)
@@ -486,6 +480,7 @@
 			to_chat(user, SPAN_WARNING("You cannot fire this whilst under a roof! Get outdoors and try again!"))
 			return FALSE
 		else
+			ammo = /datum/ammo/anti_air
 			addtimer(CALLBACK(src, PROC_REF(missile_launch), user), missile_message_time)
 			return TRUE
 	else
@@ -505,7 +500,6 @@
 	launch_sound = 'sound/weapons/gun_hornet.ogg'
 	has_empty_icon = TRUE
 	current_mag = /obj/item/ammo_magazine/rocket/anti_air
-	ammo_primary = /datum/ammo/rocket/ap/anti_air
 	attachable_allowed = null
 	launcher_has_empty_icon = TRUE
 
@@ -579,13 +573,8 @@
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/proc/toggle_aerial_targeting(mob/user)
 	targeting_air = !targeting_air
-	secondary_toggled = !secondary_toggled
 	to_chat(user, "[icon2html(src, usr)] You toggle \the [src]'s targeting systems. You will now fire [targeting_air ? "into the sky overhead" : "directly at your target"].")
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/toggle_aerial_targeting/TAT = locate(/datum/action/item_action/toggle_aerial_targeting) in actions
 	TAT.update_icon()
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
 
-/obj/item/weapon/gun/launcher/rocket/anti_air/replace_ammo()
-	..()
-	ammo = secondary_toggled ? ammo_secondary : ammo_primary
