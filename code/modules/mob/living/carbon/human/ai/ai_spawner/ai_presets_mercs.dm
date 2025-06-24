@@ -39,7 +39,7 @@
 /datum/human_ai_equipment_preset/mercenaries/sentinel/response/space
 	name = "Black Dragoons Sentinel (Space)"
 	desc = "Some more better trained and equipped sentinels, equipped to do space operations and work."
-	path = /datum/equipment_preset/mercenary/sentinel/response/carbine
+	path = /datum/equipment_preset/mercenary/sentinel/space
 
 /datum/human_ai_equipment_preset/mercenaries/supervisor
 	name = "Black Dragoons Supervisor (Unequipped)"
