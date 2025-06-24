@@ -1257,7 +1257,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/xm51
 	name = "\improper M1771 shotgun"
-	desc = "Full designation: Model 1771 Cobra Max Tactical. Magazine-fed, pump-action shotgun designed by ARMAT Battlefield System meant for civilian and law-enforcement use. Failed its short USCM trails due to unreliability and was ridiculed heavily for having a 'tryhard' name."
+	desc = "Full designation: Model 1771 Cobra Max Tactical. Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems meant for civilian and law-enforcement use. Failed its short USCM trials due to unreliability and was ridiculed heavily for having a 'tryhard' name."
 	icon_state = "xm51"
 	item_state = "xm51"
 	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
