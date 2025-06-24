@@ -557,7 +557,8 @@
 
 /datum/action/item_action/bomb/activate/can_use_action()
 	var/mob/living/carbon/human/H = owner
-	if(!H || H.is_mob_incapacitated(TRUE))
+	if(!H || H.is_mob_incapacitated(TRUE)) //Can't activate if incapacitated
+
 		return
 	if(activated) //don't detonate twice
 		return
@@ -570,12 +571,14 @@
 	playsound(H, 'sound/items/bomb_vest.ogg', 50, 1)
 	activated = TRUE
 
-	var/wait = 1
-	addtimer(CALLBACK(src, wait, FALSE), 30 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 3 SECONDS)
 
+/datum/action/item_action/bomb/activate/proc/detonate()
+	var/mob/living/carbon/human/H = owner
 	var/turf/epicenter = get_turf(H)
 	target.ex_act(400, null, src, H, 100)
 	cell_explosion(epicenter, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), H))
+	H.gib()
 	qdel(src)
 
 //Ties that can store stuff
