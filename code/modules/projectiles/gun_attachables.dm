@@ -2351,7 +2351,7 @@ Defined in conflicts.dm of the #defines folder.
 	name = "\improper XM51 stock"
 	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
 	icon_state = "xm51_military_stock"
-	attach_icon = "xm51_miltary_stock_a"
+	attach_icon = "xm51_military_stock_a"
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"

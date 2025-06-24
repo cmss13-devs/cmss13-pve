@@ -80,7 +80,7 @@
 /obj/item/ammo_box/magazine/shotgun/light
 	name = "\improper 16-gauge shotgun shell box (Buckshot x 120)"
 	icon_state = "base_breach"
-	overlay_content = "_breach"
+	overlay_content = "_buck"
 	magazine_type = /obj/item/ammo_magazine/shotgun/buckshot/light
 	num_of_magazines = 120 //10 full mag reloads.
 	can_explode = FALSE
