@@ -49,11 +49,18 @@
 		/obj/item/tool/crowbar,
 		/obj/item/storage/large_holster/katana,
 		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
 		/obj/item/weapon/sword/machete,
 		/obj/item/attachable/bayonet,
 		/obj/item/device/motiondetector,
 		/obj/item/tool/crew_monitor,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/flaregun,
 		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
 	)
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 
@@ -341,6 +348,30 @@
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
+
+/obj/item/clothing/suit/marine/faction/UPP/CANC
+	name = "\improper Type 12 CANC armor"
+	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
+	icon_state = "canc"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	time_to_unequip = 10
+	time_to_equip = 10
+	flags_inventory = null
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper Type 12"
+
+/obj/item/clothing/suit/marine/faction/UPP/CANC/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	src.attach_accessory(null, webbing, TRUE)
 
 /obj/item/clothing/suit/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"

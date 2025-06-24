@@ -29,6 +29,7 @@
 	var/pill_desc = "An unknown pill." // The real description of the pill, shown when examined by a medically trained person
 	var/pill_icon_class = "random" // Pills with the same icon class share icons
 	var/list/pill_initial_reagents // Default reagents if any
+	var/fluff_text = "pill" //what this object is logically, used for actions descriptions like force feeding
 
 /obj/item/reagent_container/pill/Initialize(mapload, ...)
 	. = ..()
@@ -64,7 +65,7 @@
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
 			if(H.species.flags & IS_SYNTHETIC)
-				to_chat(H, SPAN_DANGER("You can't eat pills."))
+				to_chat(H, SPAN_DANGER("You can't eat [fluff_text]s."))
 				return
 
 		M.visible_message(SPAN_NOTICE("[user] swallows [src]."),
@@ -89,9 +90,9 @@
 			return
 
 		user.affected_message(M,
-			SPAN_HELPFUL("You <b>start feeding</b> [M] a pill."),
-			SPAN_HELPFUL("[user] <b>starts feeding</b> you a pill."),
-			SPAN_NOTICE("[user] starts feeding [M] a pill."))
+			SPAN_HELPFUL("You <b>start feeding</b> [M] a [fluff_text]."),
+			SPAN_HELPFUL("[user] <b>starts feeding</b> you a [fluff_text]."),
+			SPAN_NOTICE("[user] starts feeding [M] a [fluff_text]."))
 
 		var/ingestion_time = 30
 		if(user.skills)
@@ -105,9 +106,9 @@
 		user.drop_inv_item_on_ground(src) //icon update
 
 		user.affected_message(M,
-			SPAN_HELPFUL("You <b>fed</b> [M] a pill."),
-			SPAN_HELPFUL("[user] <b>fed</b> you a pill."),
-			SPAN_NOTICE("[user] fed [M] a pill."))
+			SPAN_HELPFUL("You <b>fed</b> [M] a [fluff_text]."),
+			SPAN_HELPFUL("[user] <b>fed</b> you a [fluff_text]."),
+			SPAN_NOTICE("[user] fed [M] a [fluff_text]."))
 		user.count_niche_stat(STATISTICS_NICHE_PILLS)
 
 		var/rgt_list_text = get_reagent_list_text()
@@ -130,14 +131,14 @@
 
 	if(target.is_open_container() != 0 && target.reagents)
 		if(!target.reagents.total_volume)
-			to_chat(user, SPAN_DANGER("[target] is empty. Can't dissolve pill."))
+			to_chat(user, SPAN_DANGER("[target] is empty. Can't dissolve [fluff_text]."))
 			return
-		to_chat(user, SPAN_NOTICE("You dissolve the pill in [target]"))
+		to_chat(user, SPAN_NOTICE("You dissolve the [fluff_text] in [target]"))
 
 		var/rgt_list_text = get_reagent_list_text()
 
-		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Spiked \a [target] with a pill. Reagents: [rgt_list_text]</font>")
-		msg_admin_attack("[key_name(user)] spiked \a [target] with a pill (REAGENTS: [rgt_list_text]) (INTENT: [uppertext(intent_text(user.a_intent))]) in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
+		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Spiked \a [target] with a [fluff_text]. Reagents: [rgt_list_text]</font>")
+		msg_admin_attack("[key_name(user)] spiked \a [target] with a [fluff_text] (REAGENTS: [rgt_list_text]) (INTENT: [uppertext(intent_text(user.a_intent))]) in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
 
 		reagents.trans_to(target, reagents.total_volume)
 		for(var/mob/O in viewers(2, user))
@@ -292,7 +293,7 @@
 
 /obj/item/reagent_container/pill/iron
 	pill_desc = "An iron pill. Used to regenerate blood."
-	pill_initial_reagents = list("iron" = 15)
+	pill_initial_reagents = list("iron" = 15, "sugar" = 7.5)
 	pill_icon_class = "spac"
 
 /obj/item/reagent_container/pill/nitrogenwater

@@ -414,6 +414,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
 	icon_state = "forecon_patch"
 
+/obj/item/clothing/accessory/patch/sapper
+	name = "USCM Combat Engineering patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 4th Combat Engineering Battalion, part of the USCM 2nd Colonial Support Group."
+	icon_state = "sapper_patch"
+
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
@@ -539,7 +544,7 @@
 	return ..()
 
 /obj/item/clothing/accessory/storage/clicked(mob/user, list/mods)
-	if(mods["alt"] && !isnull(hold) && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
+	if(mods[ALT_CLICK] && !isnull(hold) && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
 		return
 	. = ..()
 
@@ -592,6 +597,7 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -708,6 +714,18 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
+/obj/item/clothing/accessory/storage/tool_webbing/tactical
+	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+
+/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool(src)
+
 /obj/item/storage/internal/accessory/surg_vest
 	storage_slots = 14
 	can_hold = list(
@@ -818,7 +836,7 @@
 	hold = /obj/item/storage/internal/accessory/knifeharness
 
 /obj/item/clothing/accessory/storage/knifeharness/attack_hand(mob/user, mods)
-	if(!mods || !mods["alt"] || !length(hold.contents))
+	if(!mods || !mods[ALT_CLICK] || !length(hold.contents))
 		return ..()
 
 	hold.contents[length(contents)].attack_hand(user, mods)
@@ -946,7 +964,7 @@
 /obj/item/clothing/accessory/storage/holster/attack_hand(mob/user, mods)
 	var/obj/item/storage/internal/accessory/holster/H = hold
 	if(H.current_gun && ishuman(user) && (loc == user || has_suit))
-		if(mods && mods["alt"] && length(H.contents) > 1) //Withdraw the most recently inserted magazine, if possible.
+		if(mods && mods[ALT_CLICK] && length(H.contents) > 1) //Withdraw the most recently inserted magazine, if possible.
 			var/obj/item/I = H.contents[length(H.contents)]
 			if(isgun(I))
 				I = H.contents[length(H.contents) - 1]
@@ -1215,8 +1233,8 @@
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
-	name = "\improper M3 Shoulder Pads"
-	desc = "A set shoulder pads attachable to the M3 armor set worn by the USCM."
+	name = "\improper M3 Pauldrons"
+	desc = "Attachable supplementary armor for the M3 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
 	icon_state = "pads"
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
@@ -1228,49 +1246,48 @@
 	update_icon()
 
 /obj/item/clothing/accessory/pads/bracers
-	name = "\improper M3 Arm Bracers"
-	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCMC."
+	name = "\improper M3 Vambraces"
+	desc = "Attachable supplementary armor for the M3 armor system. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
 	icon_state = "bracers"
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
 /obj/item/clothing/accessory/pads/neckguard
-	name = "\improper M3 Neck Guard"
-	desc = "An attachable neck guard option for the M3 armor set worn by the USCMC."
+	name = "\improper M3 Gorget"
+	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard"
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
 /obj/item/clothing/accessory/pads/neckguard/uacg
-	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard_uacg"
 	item_state = "neckguard_uacg"
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/pads/greaves
-	name = "\improper M3 Shin Guards"
-	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Greaves"
+	desc = "Attachable supplementary armor for the M3 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
 	icon_state = "shinguards"
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
 /obj/item/clothing/accessory/pads/kneepads
-	name = "\improper M3 Knee Guards"
-	desc = "A set knee guards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Kneepads"
+	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
 
 /obj/item/clothing/accessory/pads/groin
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the USCMC often seen worn than not."
+	name = "\improper M3 Lap Panel"
+	desc = "Attachable supplementary armor for the M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate"
 	item_state = "groinplate"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
 /obj/item/clothing/accessory/pads/groin/uacg
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the UACG often seen worn than not."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
@@ -1321,10 +1338,16 @@
 	item_state = "medic"
 
 /obj/item/clothing/accessory/paint/uaflag
-	name = "cross armor paint"
+	name = "UA flag armor paint"
 	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
 	icon_state = "uaflag"
 	item_state = "uaflag"
+
+/obj/item/clothing/accessory/paint/usflag
+	name = "US flag armor paint"
+	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
+	icon_state = "usflag"
+	item_state = "usflag"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
@@ -1366,6 +1389,7 @@
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 //Partial Pre-load For Props
@@ -1400,11 +1424,45 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
 		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
 	)
+
+//Pre-load For Army Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/small/army
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
+//===
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40
 	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40 grenades."
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades."
 	icon_state = "m3webbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
 
@@ -1412,13 +1470,20 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
@@ -1445,6 +1510,7 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
 		/obj/item/ammo_magazine/pistol/t73,
 		/obj/item/ammo_magazine/pistol/np92,
 		/obj/item/ammo_magazine/handful/shotgun/heavy,
@@ -1479,7 +1545,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
 	name = "\improper M3-R Pattern Grenade Webbing"
-	desc = "An alternative to the M3-R Pattern webbing fitted to store M40 grenades."
+	desc = "An alternative to the M3-R Pattern webbing fitted to store M40-hull grenades."
 	icon_state = "m3rwebbingm40"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
 
@@ -1524,7 +1590,7 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-//Partial Pre-load For Props
+//Pre-load For Props
 
 /obj/item/clothing/accessory/storage/webbing/m56/preset
 	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
@@ -1533,7 +1599,7 @@
 	storage_slots = 3
 
 /obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 
@@ -1549,11 +1615,18 @@
 	storage_slots = 4
 	can_hold = list(
 		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/high_explosive/super,
 		/obj/item/explosive/grenade/high_explosive/airburst/canister,
 		/obj/item/explosive/grenade/high_explosive/impact/heap,
 		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
+		/obj/item/explosive/grenade/high_explosive/impact/flare,
+		/obj/item/explosive/grenade/high_explosive/training,
+		/obj/item/explosive/grenade/incendiary,
+		/obj/item/explosive/grenade/smokebomb,
+		/obj/item/explosive/grenade/smokebomb/green,
+		/obj/item/explosive/grenade/smokebomb/red,
+		/obj/item/explosive/grenade/metal_foam,
 		/obj/item/explosive/grenade/phosphorus,
 		/obj/item/explosive/grenade/slug/baton,
+		/obj/item/explosive/grenade/tear/marine,
 	)

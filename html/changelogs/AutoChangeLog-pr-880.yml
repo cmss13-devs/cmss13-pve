@@ -1,0 +1,4 @@
+author: "lordloko"
+delete-after: True
+changes:
+  - rscadd: "Added USCM Headset to FORECON vendor. Adjusted the description."

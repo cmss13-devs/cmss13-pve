@@ -19,6 +19,8 @@
 	var/on = FALSE
 	var/raillight_compatible = TRUE //Can this be turned into a rail light ?
 	var/toggleable = TRUE
+	///Should the flashlight rotate when thrown?
+	var/rotation_on_throw = FALSE
 
 	var/can_be_broken = TRUE //can xenos swipe at this to break it/turn it off?
 	var/breaking_sound = 'sound/handling/click_2.ogg' //sound used when this happens
@@ -38,8 +40,9 @@
 		item_state = initial(item_state)
 
 /obj/item/device/flashlight/animation_spin(speed = 5, loop_amount = -1, clockwise = TRUE, sections = 3, angular_offset = 0, pixel_fuzz = 0)
-	clockwise = pick(TRUE, FALSE)
-	angular_offset = rand(360)
+	if(rotation_on_throw)
+		clockwise = pick(TRUE, FALSE)
+		angular_offset = rand(360)
 	return ..()
 
 /obj/item/device/flashlight/proc/update_brightness(mob/user = null)
@@ -313,6 +316,7 @@
 	actions = list() //just pull it manually, neckbeard.
 	raillight_compatible = 0
 	can_be_broken = FALSE
+	rotation_on_throw = TRUE
 	var/burnt_out = FALSE
 	var/fuel = 16 MINUTES
 	var/fuel_rate = AMOUNT_PER_TIME(1 SECONDS, 1 SECONDS)
@@ -534,6 +538,12 @@
 		return INITIALIZE_HINT_QDEL
 	set_light(light_range)
 	fuel = amount * 5 SECONDS
+
+/obj/item/device/flashlight/flare/upp
+	name = "\improper R52 flare"
+	desc = "A red UPPAC-issued flare."
+	icon_state = "upp_flare"
+	item_state = "upp_flare"
 
 /obj/item/device/flashlight/slime
 	gender = PLURAL

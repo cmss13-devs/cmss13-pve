@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - spellcheck: "Fixes a one letter typo in the hypersleep pod description"

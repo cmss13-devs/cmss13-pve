@@ -488,8 +488,8 @@
 /area/almayer/engineering/airmix)
 "ahc" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/almayer,
 /area/almayer/living/cafeteria_officer)
 "ahh" = (
@@ -7206,7 +7206,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/hull/upper/u_f_s)
 "cMk" = (
-/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/machinery/cm_vending/clothing/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "cMl" = (
@@ -8550,8 +8550,8 @@
 /area/almayer/engineering/upper_engineering)
 "dkK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /obj/item/book/manual/chef_recipes,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 15;
@@ -12217,8 +12217,8 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "eBE" = (
@@ -12542,7 +12542,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/gear/sea,
+/obj/structure/machinery/cm_vending/gear/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "eHM" = (
@@ -21906,7 +21906,7 @@
 	pixel_x = 4;
 	pixel_y = 15
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 2
 	},
@@ -24175,7 +24175,6 @@
 /turf/open/floor/wood/ship,
 /area/almayer/engineering/ce_room)
 "iKP" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/pilotbunks)
 "iKR" = (
@@ -24661,7 +24660,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/upper/u_m_p)
 "iTD" = (
-/obj/effect/landmark/start/auxiliary_officer,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/bridgebunks)
 "iTI" = (
@@ -28425,9 +28423,9 @@
 /area/almayer/hallways/hangar)
 "kkT" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /obj/item/frame/rack,
 /obj/item/frame/rack,
@@ -39089,8 +39087,8 @@
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/almayer/medical/medical_science)
 "nVr" = (
-/obj/item/storage/box/nade_box/tear_gas,
-/obj/item/storage/box/nade_box/tear_gas{
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -41259,7 +41257,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering)
 "oHm" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/hull/lower/l_f_p)
 "oHp" = (
@@ -51830,7 +51828,7 @@
 /area/almayer/squads/alpha_bravo_shared)
 "spt" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/effect/spawner/random/tool,
 /obj/item/tool/hand_labeler,
 /obj/item/clipboard,
