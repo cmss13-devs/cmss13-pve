@@ -1279,6 +1279,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/xm51,
+		/obj/item/attachable/stock/xm51/military,
 	)
 	flags_equip_slot = SLOT_BACK
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -1357,3 +1358,12 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/xm51/withstock
 	starting_attachment_types = list(/obj/item/attachable/stock/xm51)
+
+/obj/item/weapon/gun/rifle/xm51/military
+	name = "\improper XM51 shotgun"
+	desc = "Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems, also known as M1771 Cobra Max Tactical. This one is painted with a fresh coat of Humbrol 170."
+	icon_state = "xm51_military"
+	item_state = "xm51_military"
+
+/obj/item/weapon/gun/rifle/xm51/military/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)
