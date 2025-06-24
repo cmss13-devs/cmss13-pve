@@ -1647,12 +1647,13 @@
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, play_opening_sequence))
 
 /mob/living/carbon/human/proc/play_opening_sequence()
-	sleeping = 11
-	addtimer(CALLBACK(src, PROC_REF(play_screen_text), "HYPERSLEEP MONITOR<br><br>SYSTEM STATUS<br>LIFE SUPPORT:ONLINE<br>THAWING SYSTEMS:ONLINE<br>IMMUNIZATION:COMPLETE<br>OCCUPANT REM:NOMINAL", /atom/movable/screen/text/screen_text/hypersleep_status), 1.25 SECONDS)
-	addtimer(CALLBACK(src, PROC_REF(play_manifest)), 13 SECONDS)
-	overlay_fullscreen_timer(13 SECONDS, 10, "roundstart1", /atom/movable/screen/fullscreen/black)
-	overlay_fullscreen_timer(13 SECONDS, 10, "roundstartcrt1", /atom/movable/screen/fullscreen/crt)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_intro.ogg', src, 90), 12 SECONDS)
+	if(SSticker.intro_sequence)
+		sleeping = 11
+		addtimer(CALLBACK(src, PROC_REF(play_screen_text), "HYPERSLEEP MONITOR<br><br>SYSTEM STATUS<br>LIFE SUPPORT:ONLINE<br>THAWING SYSTEMS:ONLINE<br>IMMUNIZATION:COMPLETE<br>OCCUPANT REM:NOMINAL", /atom/movable/screen/text/screen_text/hypersleep_status), 1.25 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_manifest)), 13 SECONDS)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstart1", /atom/movable/screen/fullscreen/black)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstartcrt1", /atom/movable/screen/fullscreen/crt)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_intro.ogg', src, 90), 12 SECONDS)
 
 /mob/living/carbon/human/proc/play_manifest()
 	var/human_manifest
