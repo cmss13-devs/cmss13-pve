@@ -96,3 +96,12 @@ endmap
 
 map lv818_featureless_jungle
 endmap
+
+map featureless_space
+endmap
+
+map lv295_featureless_arctic
+endmap
+
+map lv818_featureless_desert
+endmap
