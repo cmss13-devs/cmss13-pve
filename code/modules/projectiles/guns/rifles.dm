@@ -1395,7 +1395,7 @@
 
 /obj/item/weapon/gun/rifle/lw317/dmr
 	name = "\improper LW/RS-317 pulse carbine"
-	desc = "Light Weapon, Rifle, Sniper, Type 317. Modification of Type 317 carbine, this unorthodox DMR was developed in order to provide long-range support to guerilla fighting groups. Modified internal mechanism allows for improved accuracy, but because of that rate of fire is impeded severly."
+	desc = "Light Weapon, Rifle, Sniper, Type 317. Modification of Type 317 carbine, this unorthodox DMR was developed in order to provide long-range support to guerilla fighting groups. Modified internal mechanism allows for improved accuracy, but because of that rate of fire is impeded severely."
 	current_mag = /obj/item/ammo_magazine/rifle/lw317/ap
 	start_automatic = FALSE
 	attachable_allowed = list(
