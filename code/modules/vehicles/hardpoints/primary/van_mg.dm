@@ -1,4 +1,4 @@
-// APC cannons
+// Van MG
 /obj/item/hardpoint/primary/van_mg
 	name = "\improper Adjusted M56 Cupola"
 	desc = "A secondary weapon for tanks that shoots bullets, this one has been slightly adjusted to fit onto an Armored Van."
