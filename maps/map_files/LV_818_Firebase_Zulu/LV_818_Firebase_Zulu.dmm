@@ -17,9 +17,6 @@
 	pixel_y = 2;
 	pixel_x = -3
 	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 13
-	},
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonarmory)
 "ac" = (
@@ -8286,13 +8283,6 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/auto_turf/sand/layer1,
 /area/firebase_zulu/outside)
-"tV" = (
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 13;
-	pixel_x = 7
-	},
-/turf/open/floor/almayer/plate,
-/area/firebase_zulu/inside/platoonarmory)
 "tW" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -9775,13 +9765,10 @@
 /area/firebase_zulu/outside/compound)
 "xr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_y = 6;
-	pixel_x = 9
-	},
 /obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_y = 18
 	},
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/plate,
 /area/firebase_zulu/inside/platoonarmory)
 "xt" = (
@@ -60756,7 +60743,7 @@ fe
 zq
 zq
 if
-tV
+CN
 CN
 BU
 zq
