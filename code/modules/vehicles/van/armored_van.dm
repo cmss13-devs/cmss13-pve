@@ -5,7 +5,7 @@
 	icon = 'icons/obj/vehicles/van.dmi'
 	icon_state = "van_armored_base"
 
-	health = 800
+	health = 600
 
 	interior_map = /datum/map_template/interior/van_armored
 
@@ -43,6 +43,12 @@
 		"explosive" = 0.8,
 		"blunt" = 0.8,
 		"abstract" = 1,
+	)
+
+	misc_multipliers = list(
+		"move" = 0.8,
+		"accuracy" = 1,
+		"cooldown" = 1
 	)
 
 /obj/vehicle/multitile/van/armored/add_seated_verbs(mob/living/M, seat)
