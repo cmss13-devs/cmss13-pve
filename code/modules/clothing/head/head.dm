@@ -516,6 +516,16 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	desc = "It's a fancy hat for a not-so-fancy military supply clerk."
 	icon_state = "rocap"
 
+/obj/item/clothing/head/cmcap/khaki
+	name = "\improper khaki patrol cap"
+	desc = "A khaki patrol cap."
+	icon_state = "cap_khaki"
+
+/obj/item/clothing/head/cmcap/desert
+	name = "\improper desert patrol cap"
+	desc = "A desert BDU patrol cap."
+	icon_state = "cap_desert"
+
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
 	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
