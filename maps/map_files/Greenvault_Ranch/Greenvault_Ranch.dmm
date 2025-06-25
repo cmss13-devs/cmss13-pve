@@ -3730,13 +3730,45 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/pipes/vents/pump/on,
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
 	pixel_x = 16;
 	pixel_y = -10
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_heavy/grainstorage)
 "eQW" = (
@@ -5336,6 +5368,46 @@
 /obj/structure/flora/jungle/vines,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"gVv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/Greenvault_Ranch/outside/pens)
 "gWj" = (
 /turf/open/gm/coast/beachcorner/south_east,
 /area/Greenvault_Ranch/outside/wildplace)
@@ -6378,7 +6450,43 @@
 /turf/open/floor/corsat/tan,
 /area/Greenvault_Ranch/int_heavy/researchlab)
 "ivy" = (
-/obj/structure/largecrate/random/barrel/yellow,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
 /turf/open/floor/prison/bluefull,
 /area/Greenvault_Ranch/int_heavy/grainstorage)
 "iwk" = (
@@ -10974,6 +11082,46 @@
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/prison,
 /area/Greenvault_Ranch/int_reg/bar)
+"omm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/turf/open/floor/prison/greenfull,
+/area/Greenvault_Ranch/int_heavy/grainstorage)
 "onf" = (
 /obj/structure/closet/wardrobe/suit,
 /turf/open/floor/corsat/tan,
@@ -11268,6 +11416,46 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0,
 /area/Greenvault_Ranch/outside/wildplace)
+"oID" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike.";
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/full{
+	name = "grain bags";
+	desc = "A stack of bags filled with delicious grain, for feeding human and animal alike."
+	},
+/turf/closed/wall/r_wall/bunker,
+/area/Greenvault_Ranch/int_heavy/grainstorage)
 "oJD" = (
 /obj/structure/reagent_dispensers/pacidtank,
 /turf/open/floor/interior/wood/alt,
@@ -17171,6 +17359,14 @@
 /obj/item/reagent_container/food/snacks/grown/mushroom/libertycap,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/Greenvault_Ranch/outside/wildplace)
+"vyz" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 16;
+	pixel_y = -10
+	},
+/turf/open/floor/prison/greenfull,
+/area/Greenvault_Ranch/int_heavy/grainstorage)
 "vyK" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -27234,7 +27430,7 @@ gQa
 eXN
 bCo
 xyi
-esi
+ivy
 wBa
 wBa
 bCo
@@ -27426,8 +27622,8 @@ gQa
 eXN
 bCo
 xyi
-oJU
-esi
+ivy
+ivy
 bCo
 bCo
 bCo
@@ -27618,16 +27814,16 @@ uzu
 eXN
 bCo
 xyi
-oJU
-oJU
-oJU
+ivy
+ivy
+ivy
 bCo
 bCo
 bCo
 oJU
 oJU
 esi
-xyi
+moI
 xyi
 xyi
 xyi
@@ -27810,16 +28006,16 @@ kUk
 nsI
 bCo
 xyi
-oJU
-oJU
-esi
-esi
+ivy
+ivy
+ivy
+ivy
 giv
 oJU
 oJU
 oJU
-rmL
-iRT
+ivy
+sOz
 bCo
 bCo
 bCo
@@ -28002,16 +28198,16 @@ dMS
 fWE
 bCo
 xyi
-wBa
-rmL
-rmL
-esi
+ivy
+ivy
+ivy
+ivy
 oJU
 oJU
 oJU
 esi
-wBa
-iRT
+ivy
+sOz
 bCo
 euc
 euc
@@ -28196,14 +28392,14 @@ bCo
 xyi
 esi
 esi
-oJU
-oJU
+ivy
+ivy
 wBa
 rmL
 wBa
-wBa
-wBa
-xyi
+ivy
+ivy
+moI
 bCo
 bCo
 gQa
@@ -28392,10 +28588,10 @@ esi
 esi
 rmL
 rmL
-rmL
-wBa
-wBa
-xyi
+ivy
+ivy
+ivy
+moI
 bCo
 bCo
 pMK
@@ -28582,12 +28778,12 @@ esi
 esi
 esi
 wBa
-kWZ
-kWZ
-kWZ
-wBa
-wBa
-xyi
+ivy
+ivy
+ivy
+ivy
+ivy
+moI
 bCo
 bCo
 gQa
@@ -28774,12 +28970,12 @@ esi
 esi
 oJU
 oJU
-rmL
-wBa
-rmL
-wBa
-wBa
-xyi
+ivy
+ivy
+ivy
+ivy
+ivy
+moI
 bCo
 euc
 dMS
@@ -28966,12 +29162,12 @@ sBi
 dTe
 dTe
 sBi
-dZh
-dTe
-dZh
+eQS
+eQS
+eQS
 eQS
 dZh
-qFA
+vyz
 bCo
 euc
 dMS
@@ -29159,11 +29355,11 @@ wBa
 rmL
 oJU
 iMi
+ivy
+ivy
+ivy
 esi
-oJU
-esi
-esi
-xyi
+moI
 bCo
 tHu
 gQa
@@ -29355,7 +29551,7 @@ bCo
 oJU
 oJU
 qAr
-xyi
+moI
 bCo
 bCo
 adv
@@ -29547,7 +29743,7 @@ bCo
 bCo
 oJU
 esi
-xyi
+moI
 bCo
 bCo
 gQa
@@ -29739,7 +29935,7 @@ bCo
 oJU
 oJU
 oJU
-iRT
+sOz
 mxf
 euc
 fTh
@@ -31458,8 +31654,8 @@ gQa
 eNh
 mxf
 bCo
-usC
-hQd
+ivy
+oID
 nnA
 usC
 alH
@@ -31650,8 +31846,8 @@ gQa
 euc
 fJh
 qlb
-rmL
-kWZ
+ivy
+tue
 wBa
 ivy
 iMi
@@ -32425,7 +32621,7 @@ wBa
 giv
 oJU
 oJU
-esi
+ivy
 iEs
 xyi
 bCo
@@ -32616,8 +32812,8 @@ esi
 wBa
 wBa
 rmL
-wBa
-esi
+ivy
+ivy
 oJU
 xyi
 bCo
@@ -32807,8 +33003,8 @@ esi
 esi
 esi
 ajC
-wmG
-wBa
+ivy
+ivy
 oJU
 oJU
 xyi
@@ -32999,7 +33195,7 @@ esi
 rXo
 esi
 esi
-fXx
+ivy
 oJU
 oJU
 oJU
@@ -33570,8 +33766,8 @@ euc
 bCo
 bCo
 xyi
-esi
-fXx
+ivy
+ivy
 fXx
 esi
 esi
@@ -33762,10 +33958,10 @@ euc
 bCo
 bCo
 xyi
-esi
-fXx
-fXx
-esi
+ivy
+ivy
+ivy
+ivy
 bCo
 bCo
 bCo
@@ -33954,9 +34150,9 @@ jRF
 bCo
 bCo
 xyi
-esi
-esi
-esi
+ivy
+ivy
+ivy
 bCo
 bCo
 bCo
@@ -34146,8 +34342,8 @@ dMS
 xjL
 bCo
 xyi
-esi
-esi
+ivy
+ivy
 wBa
 aSU
 bCo
@@ -34338,10 +34534,10 @@ gQa
 euc
 bCo
 xyi
+ivy
+ivy
 esi
-esi
-esi
-esi
+ivy
 esi
 giv
 wBa
@@ -34530,8 +34726,8 @@ dMS
 euc
 bCo
 xyi
-esi
-esi
+ivy
+usC
 esi
 esi
 esi
@@ -34542,8 +34738,8 @@ rmL
 rmL
 oJU
 oJU
-esi
-esi
+ivy
+ivy
 xyi
 bCo
 eXN
@@ -34734,8 +34930,8 @@ rmL
 rmL
 oJU
 oJU
-esi
-esi
+ivy
+omm
 xyi
 bCo
 eXN
@@ -34919,15 +35115,15 @@ xyi
 xyi
 xyi
 xyi
-esi
-wBa
+ivy
+ivy
 wBa
 wBa
 tue
 wBa
 wBa
-wBa
-esi
+ivy
+ivy
 xyi
 bCo
 bCo
@@ -35111,15 +35307,15 @@ bCo
 bCo
 bCo
 xyi
-esi
-wBa
+ivy
+ivy
 ajC
 wBa
 tue
 wBa
-wBa
-wBa
-esi
+ivy
+ivy
+ivy
 xyi
 bCo
 bCo
@@ -35303,16 +35499,16 @@ euc
 bCo
 bCo
 xyi
-esi
-wBa
-wBa
-wBa
+ivy
+ivy
+ivy
+ivy
 ttj
 wBa
 wBa
-wBa
-esi
-xyi
+ivy
+ivy
+omm
 bCo
 bCo
 dMS
@@ -35495,15 +35691,15 @@ dMS
 qnv
 bCo
 xyi
-esi
-esi
-esi
+ivy
+ivy
+ivy
 bCo
 fWE
 afq
 wBa
-wmG
-fXx
+ivy
+ivy
 xyi
 bCo
 eXN
@@ -35687,15 +35883,15 @@ dMS
 euc
 bCo
 xyi
-esi
-esi
+ivy
+ivy
 bCo
 bCo
 fWE
 fWE
 fWE
-wBa
-esi
+ivy
+ivy
 xyi
 bCo
 xaH
@@ -35879,8 +36075,8 @@ gQa
 euc
 bCo
 xyi
-esi
-esi
+ivy
+ivy
 esi
 bCo
 fWE
@@ -35888,7 +36084,7 @@ fWE
 wBa
 wBa
 esi
-xyi
+omm
 bCo
 fWE
 xDA
@@ -36071,8 +36267,8 @@ gQa
 euc
 bCo
 xyi
-esi
-esi
+ivy
+ivy
 esi
 esi
 giv
@@ -44089,7 +44285,7 @@ xlU
 aEN
 xdX
 aEN
-xdX
+gVv
 xFD
 rzU
 yef
