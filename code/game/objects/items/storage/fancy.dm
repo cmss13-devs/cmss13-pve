@@ -186,6 +186,11 @@
 	item_state = "wypacket"
 	item_state_slots = list(WEAR_AS_GARB = "cig_wypack")
 
+/obj/item/storage/fancy/cigarettes/wypacket_4
+	name = "\improper Weyland-Yutani Gold mini packet"
+	desc = "Building Better Worlds, and rolling better cigarettes. Compact and ready for your executive ventures, protecting corporate assets never felt cooler."
+	icon_state = "wy4packet"
+
 /obj/item/storage/fancy/cigarettes/balaji
 	name = "\improper Balaji Imperial packet"
 	desc = "Smoke 'em if you gottem! Quite popular amongst people living in the Three World Empire."
