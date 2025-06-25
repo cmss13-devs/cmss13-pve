@@ -221,10 +221,6 @@
 	if(!barrel_overheat_image)
 		barrel_overheat_image = image('icons/obj/items/weapons/guns/guns_by_faction/USCM/machineguns.dmi', "+M2C_overheat")
 
-/obj/structure/machinery/m56d_hmg/auto/Destroy()
-	QDEL_NULL_LIST(cadeblockers)
-	return ..()
-
 /obj/structure/machinery/m56d_hmg/auto/process()
 	overheat_value -= M2C_PASSIVE_COOLDOWN_AMOUNT
 	if(overheat_value <= 0)
