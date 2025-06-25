@@ -186,6 +186,20 @@
 	item_state = "wypacket"
 	item_state_slots = list(WEAR_AS_GARB = "cig_wypack")
 
+/obj/item/storage/fancy/cigarettes/balaji
+	name = "\improper Balaji Imperial packet"
+	desc = "Smoke 'em if you gottem! Quite popular amongst people living in the Three World Empire."
+	icon_state = "bpacket"
+	item_state = "bpacket"
+
+/obj/item/storage/fancy/cigarettes/balaji_4
+	name = "\improper Balaji Imperial Mini packet"
+	desc = "Smoke 'em if you gottem! Now a field, in the new compact package!"
+	icon_state = "b4packet"
+	item_state = "bpacket"
+	item_state_slots = list(WEAR_AS_GARB = "cig_bpack")
+	storage_slots = 4
+
 /obj/item/storage/fancy/cigarettes/lucky_strikes
 	name = "\improper Lucky Strikes Packet"
 	desc = "Lucky Strikes Means Fine Tobacco! 9/10 doctors agree on Lucky Strikes... as the leading cause of marine lung cancer."

@@ -42,11 +42,6 @@
 	unacidable = TRUE // Like other 1-of-a-kind weapons, it can't be gotten rid of that fast
 	indestructible = TRUE
 
-	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
-	fire_sound = 'sound/weapons/gun_boltaction.ogg'
-	var/open_bolt_sound ='sound/weapons/handling/gun_boltaction_open.ogg'
-	var/close_bolt_sound ='sound/weapons/handling/gun_boltaction_close.ogg'
-
 	var/bolted = TRUE // FALSE IS OPEN, TRUE IS CLOSE
 	var/bolt_delay
 	var/recent_cycle //world.time to see when they last bolted it.
