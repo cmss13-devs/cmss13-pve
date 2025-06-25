@@ -8,6 +8,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/dorms)
+"ac" = (
+/obj/structure/flag/plantable/usa,
+/obj/structure/flag/plantable/ua{
+	pixel_y = 17;
+	pixel_x = -7;
+	layer = 4.11
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
 "ad" = (
 /obj/structure/sign/banners/united_americas_flag{
 	pixel_y = 28
@@ -8531,7 +8540,7 @@ Lp
 JY
 Pe
 Ti
-mY
+ac
 mY
 Ql
 Ql

@@ -47,3 +47,6 @@ endmap
 
 map lv522_firebase_charlie_charlie
 endmap
+
+map lv295_firebase_sierra_bravo
+endmap
