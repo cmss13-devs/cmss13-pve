@@ -25,13 +25,13 @@
 /// UE7, Sergeant Major
 #define PAY_SHORT_UE7 "UE7"
 
-/// UC1, Junior Kommando
+/// UC1, Junior Commando
 #define PAY_SHORT_UK1 "UK1"
 
-/// UC2, 2nd Kommando
+/// UC2, 2nd Commando
 #define PAY_SHORT_UK2 "UK2"
 
-/// UC3, 1st Kommando
+/// UC3, 1st Commando
 #define PAY_SHORT_UK3 "UK3"
 
 /// UO1, Junior Lieutenant

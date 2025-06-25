@@ -377,7 +377,7 @@ export const RADIO_PREFIXES = {
   },
   '#t ': {
     id: 'upp-kdo',
-    label: 'UPP Kdo',
+    label: 'UPP Cdo',
   },
   '#y ': {
     id: 'wy',
@@ -453,7 +453,7 @@ export const RADIO_PREFIXES = {
   },
   '#T ': {
     id: 'upp-kdo',
-    label: 'UPP Kdo',
+    label: 'UPP Cdo',
   },
   '#Y ': {
     id: 'wy',

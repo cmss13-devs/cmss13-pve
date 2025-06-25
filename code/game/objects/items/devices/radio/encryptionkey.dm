@@ -320,7 +320,7 @@
 	channels = list(RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_MED = TRUE)
 
 /obj/item/device/encryptionkey/upp/kdo
-	name = "\improper UPP Kommando Radio Encryption Key"
+	name = "\improper UPP Commando Radio Encryption Key"
 	channels = list(RADIO_CHANNEL_UPP_GEN = TRUE, RADIO_CHANNEL_UPP_KDO = TRUE, RADIO_CHANNEL_UPP_CCT = TRUE)
 
 /obj/item/device/encryptionkey/upp/command

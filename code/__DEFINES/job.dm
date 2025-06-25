@@ -328,20 +328,20 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UPP "Rifleman"
 #define JOB_UPP_ENGI "Sapper"
 #define JOB_UPP_MEDIC "Sanitar"
-#define JOB_UPP_SPECIALIST "Serzhant"
+#define JOB_UPP_SPECIALIST "Sergeant"
 #define JOB_UPP_SNIPER "Marksman"
-#define JOB_UPP_LEADER "Master Serzhant"
+#define JOB_UPP_LEADER "Platoon Sergeant"
 #define JOB_UPP_POLICE "Politsiya"
 #define JOB_UPP_SUPPLY "Logistics Technician"
-#define JOB_UPP_LT_OFFICER "Leytenant"
-#define JOB_UPP_LT_DOKTOR "Leytenant Doktor"
-#define JOB_UPP_SRLT_OFFICER "Senior Leytenant"
-#define JOB_UPP_KPT_OFFICER "Kapitan"
-#define JOB_UPP_MAY_OFFICER "Mayjor"
-#define JOB_UPP_LTKOL_OFFICER "Leytenant Kolonel"
-#define JOB_UPP_KOL_OFFICER "Kolonel"
-#define JOB_UPP_MAY_GENERAL "Mayjor General"
-#define JOB_UPP_LT_GENERAL "Leytenant General"
+#define JOB_UPP_LT_OFFICER "Junior Lieutenant"
+#define JOB_UPP_LT_DOKTOR "Lieutenant Doctor"
+#define JOB_UPP_SRLT_OFFICER "Senior Lieutenant"
+#define JOB_UPP_KPT_OFFICER "Captain"
+#define JOB_UPP_MAY_OFFICER "Major"
+#define JOB_UPP_LTKOL_OFFICER "Lieutenant Colonel"
+#define JOB_UPP_KOL_OFFICER "Colonel"
+#define JOB_UPP_MAY_GENERAL "Major General"
+#define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
 
 #define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
@@ -350,9 +350,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define UPP_JOB_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_LT_OFFICER, JOB_UPP_LT_DOKTOR, JOB_UPP_SRLT_OFFICER, JOB_UPP_KPT_OFFICER, JOB_UPP_KOL_OFFICER, JOB_UPP_COMBAT_SYNTH)
 #define UPP_JOB_GRUNT_LIST list(JOB_UPP, JOB_UPP_ENGI, JOB_UPP_MEDIC, JOB_UPP_SPECIALIST, JOB_UPP_LEADER, JOB_UPP_POLICE, JOB_UPP_CREWMAN)
 
-#define JOB_UPP_COMMANDO "Junior Kommando"
-#define JOB_UPP_COMMANDO_MEDIC "2nd Kommando"
-#define JOB_UPP_COMMANDO_LEADER "1st Kommando"
+#define JOB_UPP_COMMANDO "Junior Commando"
+#define JOB_UPP_COMMANDO_MEDIC "2nd Commando"
+#define JOB_UPP_COMMANDO_LEADER "1st Commando"
 
 #define UPP_COMMANDO_JOB_LIST list(JOB_UPP_COMMANDO, JOB_UPP_COMMANDO_MEDIC, JOB_UPP_COMMANDO_LEADER)
 
