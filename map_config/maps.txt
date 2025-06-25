@@ -105,3 +105,6 @@ endmap
 
 map lv818_featureless_desert
 endmap
+
+map lv522_featureless_barrens
+endmap

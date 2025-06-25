@@ -513,6 +513,12 @@
 /obj/structure/platform/kutjevo/rock,
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
+"bH" = (
+/mob/living/simple_animal/bat{
+	name = "Featureless Jungle"
+	},
+/turf/closed/wall/strata_ice/jungle,
+/area/lv624/ground/jungle/central_jungle)
 "cx" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/flora/jungle/vines/heavy,
@@ -2787,7 +2793,7 @@ CU
 CU
 CU
 CU
-CU
+bH
 CU
 CU
 CU
