@@ -2885,6 +2885,12 @@
 /obj/item/ammo_box/magazine/misc/flares/signal,
 /turf/open/auto_turf/sand/layer0,
 /area/firebase_zulu/outside/compound)
+"gE" = (
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/plate,
+/area/firebase_zulu/inside/platoonarmory)
 "gF" = (
 /obj/structure/closet,
 /turf/open/floor/prison/floor_plate,
@@ -60743,7 +60749,7 @@ fe
 zq
 zq
 if
-CN
+gE
 CN
 BU
 zq

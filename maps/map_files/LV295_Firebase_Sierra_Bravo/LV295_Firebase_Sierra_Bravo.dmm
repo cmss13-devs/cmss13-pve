@@ -1,4 +1,32 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/machinery/space_heater,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"ab" = (
+/obj/structure/closet/secure_closet/platoon_sergeant,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"ac" = (
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;39";
+	req_one_access = list();
+	name = "squad one smartgunner locker"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"ad" = (
+/obj/structure/closet/secure_closet/smartgunner{
+	req_access_txt = "14;40";
+	req_one_access = list();
+	name = "squad two smartgunner locker"
+	},
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/platoonarmory)
+"ae" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
 "ai" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin/uscm{
@@ -339,17 +367,6 @@
 	layer = 2.52
 	},
 /obj/structure/pipes/vents/pump,
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/mk1{
-	layer = 3.1;
-	pixel_y = 13;
-	pixel_x = 3
-	},
-/obj/item/facepaint/sunscreen_stick{
-	pixel_y = 2;
-	pixel_x = -2;
-	layer = 3.2
-	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "fR" = (
@@ -1254,14 +1271,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/engineering)
-"xo" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/power/apc/almayer/east,
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/prison/floor_plate,
-/area/firebase_zulu/inside/platoonarmory)
 "xp" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8
@@ -1597,16 +1606,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/dorms)
-"BW" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/platform/strata/metal{
-	layer = 3.3;
-	dir = 8
-	},
-/turf/open/auto_turf/snow/layer3,
-/area/firebase_zulu/inside/platoonarmory)
 "BY" = (
 /obj/structure/machinery/cryopod/big{
 	dir = 4;
@@ -1816,6 +1815,10 @@
 	pixel_x = 4;
 	pixel_y = -5
 	},
+/obj/item/storage/fancy/cigar/matchbook{
+	pixel_y = 8;
+	pixel_x = -2
+	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "GA" = (
@@ -1888,6 +1891,11 @@
 /obj/item/facepaint/brown{
 	pixel_x = -2;
 	pixel_y = 1
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 9;
+	pixel_y = -2
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
@@ -2262,16 +2270,16 @@
 	layer = 2.52
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/storage/fancy/cigar/matchbook{
-	pixel_y = 8;
-	pixel_x = -2
-	},
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = 9;
-	pixel_y = 6
-	},
 /obj/item/storage/box/pdt_kit/advanced,
+/obj/item/ammo_box/magazine/mk1{
+	layer = 3.1;
+	pixel_y = 13;
+	pixel_x = 3
+	},
+/obj/item/facepaint/sunscreen_stick{
+	pixel_y = 6;
+	layer = 3.2
+	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "No" = (
@@ -2497,6 +2505,7 @@
 	pixel_x = 7
 	},
 /obj/item/ammo_box/rounds/smartgun,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "Tn" = (
@@ -11879,7 +11888,7 @@ Zz
 rB
 iX
 iX
-iX
+CM
 iX
 iX
 iX
@@ -12082,9 +12091,9 @@ ZO
 cy
 cy
 gU
+iX
+iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12184,11 +12193,11 @@ ZH
 Wo
 cy
 gU
+iX
+iX
 vr
 vr
 CM
-iX
-iX
 iX
 iX
 iX
@@ -12286,11 +12295,11 @@ Ib
 Wo
 cy
 gU
-vr
-vr
-vr
 iX
 iX
+vr
+vr
+vr
 iX
 iX
 iX
@@ -12389,9 +12398,9 @@ IA
 cy
 gU
 iX
+iX
+iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12489,11 +12498,11 @@ cy
 MS
 MS
 cy
-gU
+lv
+Hq
+rB
 iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12591,12 +12600,12 @@ cy
 vB
 vB
 cy
+cy
+cy
 gU
 vr
 vr
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12692,12 +12701,12 @@ ZH
 yq
 Ib
 Wo
+aa
+cy
 cy
 gU
 iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12782,9 +12791,9 @@ VX
 ZK
 ZK
 VX
-cy
-kZ
-xo
+pO
+gx
+fO
 Wo
 Ib
 ZH
@@ -12792,14 +12801,14 @@ ZH
 ZH
 ZH
 Wo
-JB
+Wo
+ZO
+ZO
 cy
 cy
 gU
 iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12885,24 +12894,24 @@ ap
 HR
 VX
 cy
-cy
-cy
+kZ
+ae
 nF
 wm
 Ib
 ZH
 bT
 Td
+ad
+ac
+ab
 cy
 cy
-cy
-BW
+ap
 tD
 vr
 vr
 vr
-iX
-iX
 iX
 iX
 iX
@@ -12986,8 +12995,8 @@ VX
 gU
 KH
 VX
-ap
-HR
+cy
+cy
 cy
 cy
 KV
@@ -12996,14 +13005,14 @@ vA
 cy
 cy
 cy
-ap
-pa
-tD
+cy
+cy
+cy
+cy
+gU
 iX
 iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -13088,8 +13097,8 @@ MU
 tD
 fi
 MU
-tD
-fi
+pa
+pa
 Ie
 cy
 cy
@@ -13098,14 +13107,14 @@ cy
 cy
 ap
 pa
+pa
+pa
+pa
+pa
 tD
 iX
 iX
-iX
-iX
 vr
-iX
-iX
 iX
 iX
 iX
@@ -13204,11 +13213,11 @@ iX
 iX
 iX
 iX
-vr
-vr
-vr
 iX
 iX
+vr
+vr
+vr
 iX
 iX
 iX
@@ -13306,10 +13315,10 @@ iX
 iX
 iX
 iX
-vr
-vr
 iX
 iX
+vr
+vr
 iX
 iX
 iX
@@ -13408,10 +13417,10 @@ iX
 iX
 iX
 iX
+iX
+iX
 vr
 CM
-iX
-iX
 iX
 iX
 iX

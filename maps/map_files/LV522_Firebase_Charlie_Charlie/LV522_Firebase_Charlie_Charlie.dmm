@@ -1471,6 +1471,9 @@
 	layer = 3.2
 	},
 /obj/item/ammo_box/rounds/smartgun,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 10
+	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "pr" = (
