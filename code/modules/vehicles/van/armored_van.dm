@@ -46,7 +46,7 @@
 	)
 
 	misc_multipliers = list(
-		"move" = 0.8,
+		"move" = 0.6,
 		"accuracy" = 1,
 		"cooldown" = 1
 	)
