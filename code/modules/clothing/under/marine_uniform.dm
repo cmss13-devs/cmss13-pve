@@ -967,7 +967,7 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
 
-/obj/item/clothing/under/cmb
+/obj/item/clothing/under/CM_uniform
 	name = "\improper Colonial Marshal uniform"
 	desc = "A pair of off-white slacks and a blue button-down shirt with a dark brown tie; the standard uniform of the Colonial Marshals."
 	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/CMB.dmi'

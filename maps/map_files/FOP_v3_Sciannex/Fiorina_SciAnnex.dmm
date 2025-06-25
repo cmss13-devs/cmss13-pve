@@ -12362,7 +12362,7 @@
 /turf/open/floor/wood,
 /area/fiorina/station/chapel)
 "jpl" = (
-/obj/item/clothing/under/cmb,
+/obj/item/clothing/under/CM_uniform,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "jpm" = (
