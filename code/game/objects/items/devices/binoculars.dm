@@ -17,9 +17,11 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_righthand.dmi',
 	)
 	var/tile_offset = 11
-	var/viewsize = 12
-	var/hvh_tile_offset = 6 //same as miniscopes
-	var/hvh_zoom_viewsize = 7
+	var/zoom_offset = 11
+	var/view_range = 12
+
+
+	//matter = list("metal" = 50,"glass" = 50)
 
 /obj/item/device/binoculars/Initialize()
 	. = ..()
