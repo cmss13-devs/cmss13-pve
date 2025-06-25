@@ -847,8 +847,8 @@
 
 /obj/structure/prop/haysquare
 	name = "Hay square"
-	icon = 'icons/obj/structures/props/greenvaultprops.dmi'
-	icon_state = 'haycube'
+	icon = 'icons/obj/structures/props/haysquare.dmi'
+	icon_state = "haysquare1"
 	desc = "A square of processed and pressed hay. Lovely and soft."
 //INVULNERABLE PROPS
 
