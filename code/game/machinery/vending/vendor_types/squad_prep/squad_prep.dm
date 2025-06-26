@@ -100,7 +100,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
-		list("Marine Jungle Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/jungle/knife, VENDOR_ITEM_REGULAR),
+		list("Marine Jungle Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/jungle, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform, Camo Conforming", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform, Jungle BDU", floor(scale * 15), /obj/item/clothing/under/marine/standard, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
@@ -222,7 +222,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
-		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp, VENDOR_ITEM_REGULAR),
+		list("Military Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/upp/knifeless, VENDOR_ITEM_REGULAR),
 		list("Naval Infantry Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/UPP, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("6b82 Combat Helmet (Green)", round(scale * 15), /obj/item/clothing/head/helmet/upp, VENDOR_ITEM_REGULAR),
@@ -296,7 +296,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
-		list("Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/civilian/knife, VENDOR_ITEM_REGULAR),
+		list("Combat Boots", round(scale * 15), /obj/item/clothing/shoes/marine/civilian, VENDOR_ITEM_REGULAR),
 		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Tactical Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
@@ -361,7 +361,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
-		list("Marine Jungle Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/jungle/knife, VENDOR_ITEM_REGULAR),
+		list("Marine Jungle Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/jungle, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform, Camo Conforming", floor(scale * 15), /obj/item/clothing/under/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform, Jungle BDU", floor(scale * 15), /obj/item/clothing/under/marine/standard, VENDOR_ITEM_REGULAR),
 		list("Marine Black Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
@@ -664,7 +664,7 @@
 		list("Laser Designator", round(scale * 2), /obj/item/device/binoculars/range/designator/upp, VENDOR_ITEM_REGULAR),
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
-		list("Type 80 Bayonet", round(scale * 5), /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
+		list("Type 80 Bayonet", round(scale * 25), /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
 		list("Type 83 Grenade Launcher", 3, /obj/item/attachable/attached_gun/grenade/type71, null, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
@@ -735,7 +735,7 @@
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
-		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
 
 		list("CLOTHING", -1, null, null),
 		list("Poncho (green)", round(scale * 10), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
