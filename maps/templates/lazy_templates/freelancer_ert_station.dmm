@@ -856,7 +856,7 @@
 /turf/closed/wall/r_wall/unmeltable,
 /area/adminlevel/ert_station)
 "Rz" = (
-/obj/structure/machinery/medical_pod/autodoc/unskilled,
+/obj/structure/machinery/medical_pod/autodoc,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station)
 "RC" = (

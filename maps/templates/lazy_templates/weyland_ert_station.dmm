@@ -869,7 +869,7 @@
 /turf/open/floor/corsat/whitetan,
 /area/adminlevel/ert_station/weyland_station)
 "no" = (
-/obj/structure/machinery/medical_pod/autodoc/unskilled{
+/obj/structure/machinery/medical_pod/autodoc{
 	dir = 1
 	},
 /obj/structure/machinery/light/double{

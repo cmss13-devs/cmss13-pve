@@ -1,11 +1,10 @@
 //Autodoc
 /obj/structure/machinery/medical_pod/autodoc
 	name = "\improper autodoc emergency medical system"
-	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention. The interface is rather complex and would only be useful to trained Doctors however."
+	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention."
 	icon_state = "autodoc_open"
 
 	entry_timer = 2 SECONDS
-	skilllock = SKILL_SURGERY_NOVICE
 
 	var/list/surgery_todo_list = list() //a list of surgeries to do.
 	var/surgery = 0 //Are we operating or no? 0 for no, 1 for yes
@@ -669,7 +668,7 @@
 		dat += "This console is not connected to a Auto-Doc or the Auto-Doc is non-functional."
 		to_chat(user, "This console seems to be powered down.")
 	else
-		if(!skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE))
+		if(!skillcheck(user, SKILL_SURGERY, connected.skilllock))
 			to_chat(user, SPAN_WARNING("You have no idea how to use this."))
 			return
 		var/mob/living/occupant = connected.occupant
@@ -923,8 +922,3 @@
 			connected.eject()
 			updateUsrDialog()
 		add_fingerprint(usr)
-
-/obj/structure/machinery/medical_pod/autodoc/unskilled
-	name = "advanced autodoc emergency medical system"
-	desc = "A much more expensive model of autodoc modified with an A.I. diagnostic unit. The result is a much simpler, point-and-click interface that anyone, regardless of training, can use. Often employed in autodoc systems deployed to military front lines for soldiers to use."
-	skilllock = null

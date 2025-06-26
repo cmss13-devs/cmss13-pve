@@ -7450,7 +7450,7 @@
 /turf/open/floor/prison/whitegreencorner/east,
 /area/calliope/bunker/hospital)
 "gLt" = (
-/obj/structure/machinery/medical_pod/autodoc/unskilled,
+/obj/structure/machinery/medical_pod/autodoc,
 /turf/open/floor/prison/whitegreen/northeast,
 /area/calliope/bunker/hospital)
 "gLA" = (
