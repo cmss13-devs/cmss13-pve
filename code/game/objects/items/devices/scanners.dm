@@ -130,10 +130,17 @@ FORENSIC SCANNER
 /obj/item/device/healthanalyzer/tgui_interact(mob/user, datum/tgui/ui)
 	if(!last_scan)
 		return
-	last_scan = buffer_for_report[currently_selected_last_scan]
 	SStgui.close_user_uis(user, last_health_display)
-	last_health_display.scanner_device = src
-	last_health_display.tgui_interact(user)
+	if(istype(src, /obj/item/device/healthanalyzer/soul))
+		last_scan = buffer_for_report[currently_selected_last_scan]
+		last_health_display.scanner_device = src
+		last_health_display.tgui_interact(user)
+	else
+		ui = SStgui.try_update_ui(user, src, ui)
+		if(!ui)
+			ui = new(user, src, "HealthScan", "Stored Health Scan")
+			ui.open()
+			ui.set_autoupdate(FALSE)
 
 /obj/item/device/healthanalyzer/ui_data(mob/user)
 	return last_scan

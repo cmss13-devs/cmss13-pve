@@ -169,7 +169,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
@@ -246,7 +246,7 @@
 	)
 
 /obj/item/storage/firstaid/surgical/fill_preset_inventory()
-	new /obj/item/reagent_container/hypospray/iron(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/cautery(src)
@@ -284,7 +284,7 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/storage/syringe_case/iron(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/softpack/burn
@@ -303,7 +303,7 @@
 	icon_state = "softpack_green"
 
 /obj/item/storage/firstaid/softpack/toxin/fill_preset_inventory()
-	new /obj/item/storage/syringe_case/tox(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/storage/pill_bottle/nitrogenwater(src)
 	new /obj/item/storage/pill_bottle/russianRed/skillless(src)
 	new /obj/item/reagent_container/blood/saline(src)
@@ -360,13 +360,6 @@
 	new /obj/item/reagent_container/syringe( src )
 	new /obj/item/reagent_container/glass/bottle/inaprovaline( src )
 	new /obj/item/reagent_container/glass/bottle/dexalin( src )
-
-/obj/item/storage/syringe_case/iron
-
-/obj/item/storage/syringe_case/iron/fill_preset_inventory()
-	new /obj/item/reagent_container/syringe( src )
-	new /obj/item/reagent_container/glass/beaker/vial/iron( src )
-	new /obj/item/reagent_container/glass/beaker/vial/iron( src )
 
 //---------SURGICAL CASE---------
 

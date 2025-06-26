@@ -56,9 +56,10 @@
 	. = ..()
 	if(ishuman(M))
 		var/mob/living/carbon/human/human = M
+		if(volume >= 40 && prob(25))
+			human.EyeBlur(3)
 		if(volume >= 60 && prob(25))
-			human.EyeBlur(4)
-		if(volume >= 80 && prob(25))
+			human.EyeBlur(9)
 			M.make_dizzy(3)
 		if(volume >= 100 && prob(25))
 			human.vomit()

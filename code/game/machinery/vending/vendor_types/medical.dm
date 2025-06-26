@@ -824,7 +824,6 @@
 
 		list("UTILITY", -1, null, null),
 		list("Gas Mask", 2, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
-		list("Health Diagnostic Equipment", 1, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR)
 	)
 
 	chem_refill_volume = 250
