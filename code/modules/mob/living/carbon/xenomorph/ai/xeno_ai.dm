@@ -207,7 +207,7 @@
 					thrown_piece = new /obj/item/stack/sheet/xenochitin(src.loc)
 				else
 					thrown_piece = new /obj/item/xenos_claw(src.loc)
-				thrown_piece.throw_atom(get_ranged_target_turf(src, reverse_direction(inertia_dir), 8), 8, SPEED_VERY_SLOW, src, TRUE)
+				INVOKE_ASYNC(thrown_piece, TYPE_PROC_REF(/atom/movable, throw_atom), get_ranged_target_turf(src, reverse_direction(inertia_dir), 8), 8, SPEED_VERY_SLOW, src, TRUE)
 				QDEL_IN(thrown_piece, 20)
 			return TRUE
 
