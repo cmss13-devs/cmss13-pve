@@ -491,7 +491,8 @@
 			to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
 			return
 
-		if(ship_side)
+		var/area/our_area = get_area(src)
+		if(ship_side && (CEILING_IS_PROTECTED(our_area.ceiling, CEILING_PROTECTION_TIER_2)))
 			var/crash_occurred = (SSticker?.mode?.is_in_endgame)
 			if(crash_occurred)
 				travel_time = 0.5 SECONDS
