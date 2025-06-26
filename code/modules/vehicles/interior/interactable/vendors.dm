@@ -78,7 +78,7 @@
 		list("MEDICAL UTILITIES", -1, null, null),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
-		list("Health Analyzer", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Equipment", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray, VENDOR_ITEM_REGULAR),
 		list("Syringe", floor(scale * 3), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)

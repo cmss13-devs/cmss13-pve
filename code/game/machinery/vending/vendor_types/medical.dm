@@ -863,7 +863,7 @@
 		list("Pain-Stop Autoinjector", 8, /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("DEVICES", -1, null, null),
-		list("Health Analyzer", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("FIELD SUPPLIES", -1, null, null),
 		list("Burn Kit", 8, /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Trauma Kit", 8, /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),

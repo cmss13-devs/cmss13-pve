@@ -110,7 +110,7 @@
 
 /obj/item/storage/firstaid/robust/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer/soul(src)
-	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)

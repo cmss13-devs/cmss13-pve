@@ -270,7 +270,7 @@
 		list("Pill Bottle (Tramadol)", 5, /obj/item/storage/pill_bottle/tramadol, null, VENDOR_ITEM_RECOMMENDED),
 
 		list("MEDICAL UTILITIES", 0, null, null, null),
-		list("Health Analyzer", 4, /obj/item/device/healthanalyzer/soul, null, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Equipment", 4, /obj/item/device/healthanalyzer/soul, null, VENDOR_ITEM_REGULAR),
 		list("Medical HUD Glasses", 4, /obj/item/clothing/glasses/hud/health, null, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", 4, /obj/item/roller, null, VENDOR_ITEM_REGULAR),
 		list("Stasis Bag", 6, /obj/item/bodybag/cryobag, null, VENDOR_ITEM_REGULAR),

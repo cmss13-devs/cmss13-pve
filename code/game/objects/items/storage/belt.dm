@@ -455,7 +455,6 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/security
 	name = "\improper duty belt"

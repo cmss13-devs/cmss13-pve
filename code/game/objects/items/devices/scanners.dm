@@ -166,32 +166,6 @@ FORENSIC SCANNER
 	mid_length = 0.9 SECONDS
 	volume = 4
 	extra_range = 14
-//below for reference
-/*
-/datum/looping_sound/healthanalyzer_heart_beeping_bad
-	start_sound = list('sound/items/healthanalyzer_heart_bad.ogg' = 1)
-	mid_sounds = start_sound
-	mid_length = 1.402 SECONDS
-	volume = 20
-
-/datum/looping_sound/healthanalyzer_heart_beeping_very_bad
-	start_sound = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
-	mid_sounds = list('sound/items/healthanalyzer_heart_very_bad.ogg' = 1)
-	mid_length = 0.492 SECONDS
-	volume = 20
-
-/datum/looping_sound/healthanalyzer_heart_beeping_severe
-	start_sound = list('sound/items/healthanalyzer_heart_severe.ogg' = 1)
-	mid_sounds = start_sound
-	mid_length = 0.408 SECONDS
-	volume = 20
-
-/datum/looping_sound/healthanalyzer_heart_beeping_flatline
-	start_sound = list('sound/items/healthanalyzer_heart_flatline.ogg' = 1)
-	mid_sounds = start_sound
-	mid_length = 1.446 SECONDS
-	volume = 20
-*/
 
 /obj/item/device/healthanalyzer/soul
 	name = "\improper Health Diagnostic Equipment"

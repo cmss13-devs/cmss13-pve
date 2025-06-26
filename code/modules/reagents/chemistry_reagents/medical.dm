@@ -238,7 +238,7 @@
 	custom_metabolism = AMOUNT_PER_TIME(1, 2 SECONDS)
 	overdose = MED_REAGENTS_OVERDOSE
 	overdose_critical = MED_REAGENTS_OVERDOSE_CRITICAL
-	properties = list(PROPERTY_ANTITOXIC = 1, PROPERTY_AIDING = 1, PROPERTY_BIOCIDIC = 2, PROPERTY_OCULOTOXIC = 0.5)
+	properties = list(PROPERTY_ANTITOXIC = 4, PROPERTY_AIDING = 1, PROPERTY_BIOCIDIC = 2, PROPERTY_OCULOTOXIC = 0.5)
 
 /datum/reagent/medical/alkysine
 	name = "Alkysine"
