@@ -188,8 +188,10 @@
 	MD = new(src)
 	integrated_tank = new /obj/item/tank/emergency_oxygen/double(src)
 	integrated_tank.name = name + " Integrated Tank"
+
 /obj/item/clothing/suit/space/pressure/Destroy()
 	QDEL_NULL(MD)
+	QDEL_NULL(integrated_tank)
 	. = ..()
 
 /obj/item/clothing/suit/space/pressure/attack_self(mob/user)
