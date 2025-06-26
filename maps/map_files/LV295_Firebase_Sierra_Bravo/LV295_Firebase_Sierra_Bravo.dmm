@@ -27,6 +27,30 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
+"af" = (
+/obj/item/lightstick/red/spoke/planted,
+/obj/structure/platform_decoration/strata/metal{
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/ice_colony/exterior/surface/clearing/pass)
+"ag" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap";
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/ice_colony/exterior/surface/clearing/pass)
+"ah" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/ice_colony/exterior/surface/clearing/pass)
 "ai" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/paper_bin/uscm{
@@ -42,16 +66,84 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/dorms)
+"aj" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/platoonarmory)
+"ak" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/prison/cell_stripe/west,
+/area/firebase_zulu/inside/platoonarmory)
+"al" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/firebase_zulu/inside/platoonarmory)
+"am" = (
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/ice_colony/exterior/surface/clearing/pass)
 "an" = (
 /obj/structure/curtain/open/shower,
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/dorms)
+"ao" = (
+/obj/structure/platform_decoration/strata/metal,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/snow/layer0,
+/area/ice_colony/exterior/surface/clearing/pass)
 "ap" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/snow/layer3,
+/area/ice_colony/exterior/surface/clearing/pass)
+"aq" = (
+/obj/structure/window/framed/prefab,
+/turf/open/floor/corsat/marked,
+/area/firebase_zulu/inside/platoonarmory)
+"ar" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/prison/cell_stripe,
+/area/firebase_zulu/inside/dorms)
+"as" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/firebase_zulu/inside/dorms)
+"at" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/dorms)
+"au" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/strata/metal{
 	dir = 8
 	},
 /turf/open/auto_turf/snow/layer3,
@@ -332,15 +424,6 @@
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/clearing/pass)
-"fz" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/space_heater/radiator/red{
-	dir = 4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/firebase_zulu/inside/platoonarmory)
 "fF" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -871,7 +954,8 @@
 "ou" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
+	req_one_access = list();
+	hacked = 1
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
@@ -1218,7 +1302,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/double,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/firebase_zulu/inside/dorms)
 "vY" = (
@@ -1271,29 +1358,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firebase_zulu/inside/engineering)
-"xp" = (
-/obj/structure/platform_decoration/strata/metal{
-	dir = 8
-	},
-/obj/item/lightstick/red/spoke/planted,
-/turf/open/auto_turf/snow/layer3,
-/area/ice_colony/exterior/surface/clearing/pass)
 "xq" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/dorms)
-"xy" = (
-/obj/structure/stairs/perspective{
-	dir = 9;
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/turf/open/auto_turf/snow/layer3,
-/area/ice_colony/exterior/surface/clearing/pass)
 "xD" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1763,7 +1833,8 @@
 "EB" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
 	req_one_access_txt = "8;12;39;40";
-	req_access = list()
+	req_access = list();
+	hacked = 1
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
@@ -1900,6 +1971,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "HB" = (
+/obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/prison/cell_stripe/east,
 /area/firebase_zulu/inside/platoonarmory)
 "HH" = (
@@ -2352,16 +2424,6 @@
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/dorms)
-"OJ" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_ew_full_cap";
-	dir = 1
-	},
-/turf/open/auto_turf/snow/layer3,
-/area/ice_colony/exterior/surface/clearing/pass)
 "Pe" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -2441,12 +2503,12 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/firebase_zulu/inside/dorms)
 "QS" = (
-/obj/structure/stairs/perspective{
-	dir = 8;
-	icon_state = "p_stair_full"
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.7
 	},
-/turf/open/auto_turf/snow/layer3,
-/area/ice_colony/exterior/surface/clearing/pass)
+/turf/open/floor/prison/cell_stripe/east,
+/area/firebase_zulu/inside/platoonarmory)
 "Ro" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -2766,12 +2828,12 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/firebase_zulu/inside/platoonarmory)
 "YD" = (
-/obj/structure/stairs/perspective{
-	dir = 10;
-	icon_state = "p_stair_full"
-	},
 /obj/structure/platform/strata/metal{
 	dir = 4
+	},
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full"
 	},
 /turf/open/auto_turf/snow/layer3,
 /area/ice_colony/exterior/surface/clearing/pass)
@@ -2802,13 +2864,6 @@
 /obj/structure/machinery/space_heater,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/dorms)
-"Zz" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/item/lightstick/red/spoke/planted,
-/turf/open/auto_turf/snow/layer3,
-/area/ice_colony/exterior/surface/clearing/pass)
 "ZA" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -10351,8 +10406,8 @@ iX
 iX
 iX
 iX
-iX
-iX
+mp
+mp
 iX
 iX
 iX
@@ -10451,13 +10506,13 @@ iX
 iX
 iX
 iX
-iX
-iX
-iX
-iX
-QC
-QC
-QC
+mp
+mp
+mp
+mp
+mp
+mp
+mp
 QC
 QC
 iX
@@ -10551,16 +10606,16 @@ tD
 iX
 QC
 QC
-QC
-iX
-iX
-iX
 mp
 mp
-QC
-QC
-QC
-QC
+mp
+mp
+mp
+mp
+mp
+mp
+mp
+mp
 QC
 QC
 iX
@@ -10652,18 +10707,18 @@ iX
 iX
 QC
 QC
-QC
-QC
 mp
 mp
 mp
 mp
 mp
 mp
-QC
-QC
-QC
-QC
+mp
+mp
+mp
+mp
+mp
+mp
 mp
 mp
 iX
@@ -10753,8 +10808,6 @@ gU
 iX
 QC
 QC
-QC
-QC
 mp
 mp
 mp
@@ -10763,6 +10816,8 @@ mp
 mp
 mp
 mp
+mp
+Mv
 mp
 mp
 mp
@@ -10966,7 +11021,7 @@ mp
 mp
 mp
 mp
-Mv
+mp
 mp
 mp
 mp
@@ -11136,12 +11191,12 @@ iX
 iX
 iX
 iX
-iX
-iX
-iX
-iX
-iX
 He
+Hq
+Hq
+Hq
+Hq
+Hq
 qD
 VX
 fM
@@ -11171,7 +11226,7 @@ mp
 mp
 mp
 mp
-QC
+mp
 mp
 mp
 mp
@@ -11238,12 +11293,12 @@ iX
 iX
 iX
 iX
-iX
-iX
-iX
-iX
-iX
 KH
+VX
+VX
+VX
+VX
+VX
 VX
 VX
 jU
@@ -11273,9 +11328,9 @@ mp
 mp
 mp
 mp
-QC
-QC
-QC
+mp
+mp
+mp
 mp
 mp
 mp
@@ -11340,13 +11395,13 @@ iX
 iX
 CM
 iX
-iX
-iX
-iX
-iX
-iX
 fi
-HR
+au
+at
+as
+NZ
+NZ
+KG
 VX
 jU
 Cz
@@ -11375,10 +11430,10 @@ mp
 mp
 QC
 QC
-QC
-QC
-QC
-QC
+mp
+mp
+mp
+mp
 mp
 mp
 mp
@@ -11440,15 +11495,15 @@ vr
 vr
 iX
 He
-xy
-QS
-QS
+Hq
+Hq
+Hq
 YD
-rB
-iX
-iX
-He
-qD
+NZ
+Ek
+VI
+VI
+fd
 VX
 zv
 JZ
@@ -11478,8 +11533,8 @@ QC
 QC
 QC
 QC
-QC
-QC
+mp
+mp
 QC
 QC
 mp
@@ -11541,15 +11596,15 @@ iX
 vr
 iX
 He
-qD
+sg
+VX
+VX
+VX
+VX
+VX
 VX
 sd
 xq
-VX
-lv
-xp
-iX
-KH
 VX
 VX
 MJ
@@ -11573,12 +11628,12 @@ QC
 QC
 mp
 mp
-mp
-mp
-mp
-mp
-QC
-QC
+ao
+am
+iy
+ah
+ag
+af
 QC
 QC
 iX
@@ -11645,16 +11700,16 @@ iX
 KH
 VX
 VX
-Mx
+ra
+ra
+KG
+ra
+ra
 lD
-VX
-VX
-gU
-iX
-fi
-HR
-ZK
-sQ
+lD
+Ro
+bP
+pC
 JZ
 JZ
 Cz
@@ -11675,12 +11730,12 @@ iX
 iX
 iX
 mp
-mp
-mp
-iX
-QC
-QC
-QC
+KH
+cy
+rS
+Vd
+cy
+gU
 iX
 iX
 iX
@@ -11746,18 +11801,18 @@ vr
 vr
 KH
 VX
-rC
-xZ
-Cz
-SF
-VX
-gU
-iX
-He
-qD
-ZK
+mJ
+VI
+VI
+fd
+ra
+ra
+NZ
+NZ
+ar
+sd
+pC
 tM
-sQ
 zY
 NZ
 NZ
@@ -11777,12 +11832,12 @@ iX
 iX
 iX
 iX
-iX
-iX
-iX
-iX
-iX
-iX
+KH
+cy
+ak
+aj
+cy
+gU
 iX
 iX
 iX
@@ -11848,14 +11903,14 @@ vr
 iX
 KH
 VX
-Ca
-qX
-PA
-yy
 VX
-gU
-iX
-KH
+sd
+xq
+VX
+VX
+VX
+ZK
+ZK
 VX
 VX
 ZK
@@ -11879,12 +11934,12 @@ Hq
 Hq
 Hq
 Hq
-Hq
-Zz
-iy
+sg
+cy
+al
 QS
-OJ
-Zz
+cy
+lv
 rB
 iX
 iX
@@ -11950,14 +12005,14 @@ vr
 iX
 KH
 VX
-Nl
-qX
-PA
-yy
 VX
-gU
-iX
-fi
+Mx
+lD
+VX
+VX
+ap
+pa
+pa
 pa
 pa
 pa
@@ -11978,9 +12033,9 @@ nK
 VX
 cy
 cy
-cy
-cy
-cy
+aq
+aq
+aq
 cy
 cy
 rS
@@ -12052,10 +12107,10 @@ vr
 vr
 KH
 VX
-hF
+rC
+xZ
 Cz
-Cz
-ET
+SF
 VX
 gU
 iX
@@ -12080,7 +12135,7 @@ VX
 VX
 cy
 JB
-fz
+Wo
 fO
 Nm
 FO
@@ -12155,9 +12210,9 @@ iX
 KH
 VX
 Ca
-Cz
-Cz
-ET
+qX
+PA
+yy
 VX
 gU
 iX
@@ -12256,10 +12311,10 @@ vr
 iX
 KH
 VX
-Ca
-NB
+Nl
+qX
 PA
-ET
+yy
 VX
 gU
 iX
@@ -12358,10 +12413,10 @@ vr
 vr
 KH
 VX
-MG
-NB
-PA
-gc
+hF
+mJ
+mJ
+ET
 VX
 gU
 iX
@@ -12460,9 +12515,9 @@ vr
 iX
 KH
 VX
-MG
-NB
-PA
+Ca
+mJ
+mJ
 ET
 VX
 gU
@@ -12562,9 +12617,9 @@ vr
 iX
 KH
 VX
-MG
-Cz
-Cz
+Ca
+NB
+PA
 ET
 VX
 gU
@@ -12665,9 +12720,9 @@ vr
 KH
 VX
 MG
-Cz
-Cz
-ET
+NB
+PA
+gc
 VX
 gU
 iX
@@ -12769,7 +12824,7 @@ VX
 MG
 NB
 PA
-KE
+ET
 VX
 gU
 iX
@@ -12868,10 +12923,10 @@ vr
 iX
 KH
 VX
-Ur
-NB
-sT
-KE
+MG
+mJ
+mJ
+ET
 VX
 gU
 iX
@@ -12970,10 +13025,10 @@ vr
 vr
 KH
 VX
-fF
-xZ
-xZ
-Qi
+MG
+mJ
+mJ
+ET
 VX
 gU
 iX
@@ -13072,10 +13127,10 @@ vr
 iX
 KH
 VX
-VX
-YE
-Iy
-VX
+MG
+NB
+PA
+KE
 VX
 gU
 iX
@@ -13172,14 +13227,14 @@ iX
 iX
 vr
 iX
-fi
-HR
+KH
 VX
+Ur
+NB
+sT
+KE
 VX
-VX
-VX
-ap
-tD
+gU
 iX
 iX
 iX
@@ -13274,14 +13329,14 @@ iX
 vr
 vr
 vr
-iX
-fi
-pa
-pa
-pa
-pa
-tD
-iX
+KH
+VX
+fF
+xZ
+xZ
+Qi
+VX
+gU
 iX
 iX
 iX
@@ -13376,14 +13431,14 @@ iX
 iX
 vr
 vr
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
+KH
+VX
+VX
+YE
+Iy
+VX
+VX
+gU
 iX
 iX
 iX
@@ -13478,14 +13533,14 @@ iX
 iX
 iX
 vr
-iX
-CM
-iX
-iX
-iX
-iX
-iX
-iX
+fi
+HR
+VX
+VX
+VX
+VX
+ap
+tD
 iX
 iX
 iX
@@ -13581,12 +13636,12 @@ iX
 iX
 iX
 iX
-iX
-iX
-iX
-iX
-iX
-iX
+fi
+pa
+pa
+pa
+pa
+tD
 iX
 iX
 iX

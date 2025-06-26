@@ -23,8 +23,33 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonprep)
+"ae" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/lightstick/red/planted,
+/turf/open/asphalt/cement,
+/area/lv522/outdoors/w_rockies)
+"af" = (
+/obj/item/ammo_box/magazine/mk1/large{
+	layer = 2.98;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/platoonarmory)
 "ag" = (
 /turf/closed/wall/strata_outpost,
+/area/firebase_zulu/inside/platoonarmory)
+"ah" = (
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_y = 18
+	},
+/turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
 "al" = (
 /obj/structure/platform_decoration/mineral{
@@ -383,7 +408,8 @@
 "en" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
 	req_one_access_txt = "8;12;39;40";
-	req_access = list()
+	req_access = list();
+	hacked = 1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
@@ -1947,6 +1973,7 @@
 	pixel_x = 3;
 	pixel_y = -1
 	},
+/obj/item/ammo_box/magazine/nade_box,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "tf" = (
@@ -3434,6 +3461,10 @@
 /area/firebase_zulu/inside/dorms)
 "JC" = (
 /obj/structure/gun_rack/m41/unloaded,
+/obj/structure/gun_rack/m41/unloaded{
+	pixel_y = 27;
+	layer = 3.1
+	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "JL" = (
@@ -3455,7 +3486,7 @@
 /obj/structure/machinery/light/double{
 	dir = 1
 	},
-/turf/open/floor/prison,
+/turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
 "JU" = (
 /obj/structure/machinery/light/double/blue,
@@ -3914,7 +3945,8 @@
 "OQ" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
 	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
+	req_one_access = list();
+	hacked = 1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
@@ -4738,6 +4770,10 @@
 /obj/structure/gun_rack/m41/unloaded,
 /obj/structure/machinery/light/double{
 	dir = 8
+	},
+/obj/structure/gun_rack/m41/unloaded{
+	pixel_y = 27;
+	layer = 3.1
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
@@ -10270,7 +10306,7 @@ gs
 is
 is
 Xz
-VW
+ae
 Pe
 Pe
 Pe
@@ -10635,7 +10671,7 @@ KM
 ag
 JC
 Sk
-Sk
+af
 ag
 ag
 QR
@@ -10819,7 +10855,7 @@ Yl
 ag
 ag
 JT
-Sk
+hX
 ag
 ag
 QR
@@ -11095,7 +11131,7 @@ qz
 ag
 ag
 JT
-Sk
+hX
 ag
 ag
 QR
@@ -11278,7 +11314,7 @@ ax
 kW
 ag
 Bi
-Sk
+ah
 Sk
 ag
 ag

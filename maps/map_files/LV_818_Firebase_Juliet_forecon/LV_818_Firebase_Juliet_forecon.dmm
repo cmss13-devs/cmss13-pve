@@ -3106,7 +3106,8 @@
 "gx" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/forecon{
 	req_one_access = list();
-	req_one_access_txt = "8;12;13;39"
+	req_one_access_txt = "8;12;13;39";
+	hacked = 1
 	},
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonarmory)
@@ -4527,7 +4528,8 @@
 "tJ" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon{
 	req_access = list();
-	req_one_access_txt = "8;12;13;39"
+	req_one_access_txt = "8;12;13;39";
+	hacked = 1
 	},
 /turf/open/floor/almayer,
 /area/firebase_zulu/inside/platoonarmory)
