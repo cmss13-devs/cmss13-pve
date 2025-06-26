@@ -54,6 +54,7 @@
 
 /obj/item/clothing/suit/space/Initialize()
 	. = ..()
+	base_name = "[name]"
 	START_PROCESSING(SSobj, src)
 
 /obj/item/clothing/suit/space/process()

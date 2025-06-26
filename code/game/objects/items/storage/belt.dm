@@ -367,7 +367,6 @@
 	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/syringe(src)
-	new /obj/item/reagent_container/syringe/leporazine(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/dutch/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -460,7 +459,6 @@
 	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/reagent_container/syringe(src)
-	new /obj/item/reagent_container/syringe/leporazine(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/partial/liquid/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
