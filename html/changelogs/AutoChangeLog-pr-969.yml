@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "Tweaks the claymores to be much fairer weapons, no longer having the potential to wipe out most of a platoon/section at full health in one go."
+  - code_imp: "Sanatizes the mine code somewhat"

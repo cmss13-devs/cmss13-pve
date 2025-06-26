@@ -4,6 +4,7 @@
 #define LANGUAGE_RUSSIAN "Russian"
 #define LANGUAGE_RUSPATOIS "Russian Patois"
 #define LANGUAGE_GERMAN "German"
+#define LANGUAGE_SCANDINAVIAN "Scandinavian"
 #define LANGUAGE_SPANISH "Spanish"
 #define LANGUAGE_PORTUGUESE "Portuguese"
 #define LANGUAGE_FRENCH "French"

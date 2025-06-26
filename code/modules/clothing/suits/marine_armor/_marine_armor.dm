@@ -101,6 +101,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -674,8 +675,28 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_MEDAL,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_M3UTILITY,
+		ACCESSORY_SLOT_PONCHO,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORARMOR,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORGROIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORSHIN,
+	)
+	restricted_accessory_slots = list(
+		ACCESSORY_SLOT_M3UTILITY,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORARMOR,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORGROIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORSHIN,
+	)
 
 	light_power = 3
 	light_range = 4
@@ -696,6 +717,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'

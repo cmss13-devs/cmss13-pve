@@ -390,6 +390,14 @@
 	reagents.add_reagent("chloralhydrate", 30)
 	update_icon()
 
+/obj/item/reagent_container/glass/beaker/vial/iron
+	name = "iron vial"
+
+/obj/item/reagent_container/glass/beaker/vial/iron/Initialize()
+	. = ..()
+	reagents.add_reagent("iron", 30)
+	update_icon()
+
 /obj/item/reagent_container/glass/beaker/vial/random
 	var/tier
 
@@ -657,6 +665,7 @@
 	icon_state = "rag"
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5)
+	splashable = FALSE
 	volume = 5
 	can_be_placed_into = null
 	flags_atom = FPRINT|OPENCONTAINER
