@@ -244,9 +244,9 @@
 //Delay of long mode with range of short mode
 /obj/item/device/motiondetector/spacesuit
 	detector_mode = MOTION_DETECTOR_LONG
-	detector_range = 7
+	detector_range = 8
 	blip_type = "tracker"
-	idle_sound_volume = 20
+	idle_sound_volume = 15
 
 /obj/item/device/motiondetector/spacesuit/get_user()
 	if(ishuman(loc.loc))
@@ -288,20 +288,6 @@
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/spacesuit/toggle_motion_detector/TMD = locate(/datum/action/item_action/spacesuit/toggle_motion_detector) in actions
 	TMD.update_icon()
-/*
-/obj/item/clothing/suit/space/pressure/process()
-	if(proximity.active)
-		recycletime--
-		if(!recycletime)
-			recycletime = initial(recycletime)
-			MD.refresh_blip_pool()
-
-		long_range_cooldown--
-		if(long_range_cooldown)
-			return
-		long_range_cooldown = initial(long_range_cooldown)
-		MD.scan()
-	..()*/
 
 /obj/item/clothing/head/helmet/marine/pressure/orange
 	item_state = "pressure_orange"

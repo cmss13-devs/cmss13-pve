@@ -33,11 +33,6 @@ GLOBAL_DATUM_INIT(spacesuit_config, /datum/spacesuit_configuration, new)
 	var/burn_damage = 0  // Specifically burn damage.
 	var/base_name    // Used to keep the original name safe while we apply modifiers.
 
-/obj/item/clothing/suit/space/Initialize()
-	. = ..()
-	base_name = "[name]"
-
-
 //Some simple descriptors for breaches. Global because lazy, TODO: work out a better way to do this.
 
 GLOBAL_LIST_INIT(breach_brute_descriptors, list(
@@ -78,8 +73,8 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 	if(!can_breach || !amount || (amount < SPACESUIT_BREACH_THRESHOLD_CONSTANT/breach_vulnerability)) //fire is soul, and napalm is below threshold of combat suits
 		return
 
-		if(!breaches)
-			breaches = list()
+	if(!breaches)
+		breaches = list()
 
 	if(damage > 35) return //We don't need to keep tracking it when it's so high.
 

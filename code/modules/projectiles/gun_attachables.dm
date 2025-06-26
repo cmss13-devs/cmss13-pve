@@ -755,6 +755,8 @@ Defined in conflicts.dm of the #defines folder.
 		return
 
 	if(istype(attached_item, /obj/item/clothing/head/helmet/marine))
+		if(istype(attached_item, /obj/item/clothing/head/helmet/marine/pressure))
+			return
 		if(!toggle_on || light_on)
 			if(light_on)
 				playsound(user, deactivation_sound, 15, 1)

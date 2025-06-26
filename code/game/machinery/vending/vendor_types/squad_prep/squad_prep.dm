@@ -851,16 +851,17 @@
 		list("Kelotane Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
 		list("Tricordrazine Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
 		list("Tramadol Injector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+		list("Dexalin and Inaprovaline Injector", round(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/dexalin, VENDOR_ITEM_REGULAR),
 
 		list("SUIT REPAIR", -1, null, null),
-		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_RECOMMENDED),
-		list("Cable Coil", round(scale * 2), /obj/item/stack/cable_coil, VENDOR_ITEM_RECOMMENDED),
+		list("Welding Tool", round(scale * 3), /obj/item/tool/weldingtool, VENDOR_ITEM_RECOMMENDED),
+		list("Cable Coil", round(scale * 4), /obj/item/stack/cable_coil, VENDOR_ITEM_RECOMMENDED),
 
 		list("ADDITIONAL EQUIPMENT", -1, null, null),
 		list("Folded Emergency Spacesuit", round(scale * 12), /obj/item/prop/folded_emergency_spacesuit, VENDOR_ITEM_REGULAR),
 		list("Magnetic Boots", round(scale * 3), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
-		list("M40 MFHS Metal Foam Grenade", round(scale * 1), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
+		list("M40 MFHS Metal Foam Grenade", round(scale * 4), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
@@ -889,7 +890,7 @@
 		list("Extinguisher", round(scale * 2), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Spare Magnetic Boots/PDT Batteries.", round(scale * 4), /obj/item/cell/crap, VENDOR_ITEM_REGULAR),
-		list("Rail Flashlight(Not for helmet!)", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Gas Analyzer", round(scale * 5), /obj/item/device/analyzer, VENDOR_ITEM_REGULAR),
 		list("Inflatable Barrier Case", round(scale * 1), /obj/item/storage/briefcase/inflatable, VENDOR_ITEM_REGULAR),
 
