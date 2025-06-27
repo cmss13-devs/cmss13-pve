@@ -464,6 +464,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
 
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"
@@ -1416,7 +1421,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/small
 	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -1430,6 +1435,9 @@
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
+	name = "\improper PBAS Webbing"
+	desc = "A sturdy set of webbing designed to fit on the US Army's standard body armor system. Fully outfitted with pouches and pockets to carry a whole array of small items."
+	icon_state = "armywebbing"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
@@ -1438,7 +1446,7 @@
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
@@ -1448,7 +1456,7 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
