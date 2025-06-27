@@ -80,6 +80,12 @@
 		/datum/equipment_preset/contractor/duty/heavy::name = /datum/equipment_preset/contractor/duty/heavy,
 		/datum/equipment_preset/pmc/gunner::name = /datum/equipment_preset/pmc/gunner,
 		/datum/equipment_preset/uscm/smartgunner_equipped::name = /datum/equipment_preset/uscm/smartgunner_equipped,
+		/datum/equipment_preset/usa/gunner::name = /datum/equipment_preset/usa/gunner,
+		/datum/equipment_preset/usa/heavygunner::name = /datum/equipment_preset/usa/heavygunner,
+		/datum/equipment_preset/twe/royal_marine/spec/machinegun::name = /datum/equipment_preset/twe/royal_marine/spec/machinegun,
+		/datum/equipment_preset/contractor/covert/heavy::name = /datum/equipment_preset/contractor/covert/heavy,
+		/datum/equipment_preset/other/freelancer/standard::name = /datum/equipment_preset/other/freelancer/standard,
+		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,
 	)
 
 	if(!check_rights(R_DEBUG))
