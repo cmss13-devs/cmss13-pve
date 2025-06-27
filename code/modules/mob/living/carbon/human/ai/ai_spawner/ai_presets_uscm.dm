@@ -35,47 +35,47 @@
 
 /datum/human_ai_equipment_preset/uscm/engineer
 	name = "USCM Combat Engineer"
-	desc = "USCM Extras"
+	desc = "A USCM Combat engineer, standard equipment with some engineerign tools. Per the techmanual these guys are pretty fucking crazy, read it. It's cool."
 	path = /datum/equipment_preset/uscm/engineer_equipped
 
 /datum/human_ai_equipment_preset/uscm/mortar_operator
 	name = "USCM Mortar Operator"
-	desc = "USCM Extras"
+	desc = "Amred with a pistol this guy operates mortars"
 	path = /datum/equipment_preset/uscm/mortar_operator_equipped
 
 /datum/human_ai_equipment_preset/uscm/rpg_weapons_op
 	name = "USCM RPG Weapons Operator"
-	desc = "USCM Extras"
+	desc = "A USCM rocketeer, has an RPG"
 	path = /datum/equipment_preset/uscm/specialist_equipped
 
 /datum/human_ai_equipment_preset/uscm/rpg_weapons_loader
 	name = "USCM RPG Weapons Loader"
-	desc = "USCM Extras"
+	desc = "USCM RPG assistant, armed with M41A"
 	path = /datum/equipment_preset/uscm/specialist_equipped/loader
 
 /datum/human_ai_equipment_preset/uscm/b18_operator
 	name = "USCM B18 Operator"
-	desc = "USCM Extras"
+	desc = "USCM B18 Spec, armed with M41A"
 	path = /datum/equipment_preset/uscm/specialist_equipped/b18
 
 /datum/human_ai_equipment_preset/uscm/sniper_operator
 	name = "USCM Sniper Operator"
-	desc = "USCM Extras"
+	desc = "USCM generic marine outfitted with an M42A"
 	path = /datum/equipment_preset/uscm/specialist_equipped/sniper
 
 /datum/human_ai_equipment_preset/uscm/spotter_operator
 	name = "USCM Spotter Operator"
-	desc = "USCM Extras"
+	desc = "USCM generic marine spotter"
 	path = /datum/equipment_preset/uscm/specialist_equipped/spotter
 
 /datum/human_ai_equipment_preset/uscm/tanker
 	name = "USCM Tank Crewman"
-	desc = "USCM Extras"
+	desc = "USCM Tank crewman, armed with a pistol"
 	path = /datum/equipment_preset/uscm/tank
 
 /datum/human_ai_equipment_preset/uscm/marsoc
 	name = "USCM MARSOC"
-	desc = "USCM Extras"
+	desc = "USCM Special Forces MARSOC. Use sparingly"
 	path = /datum/equipment_preset/uscm/marsoc
 
 //
@@ -84,3 +84,13 @@
 	name = "USCM Combat Android"
 	desc = "You signed documents saying you wouldn't use these..."
 	path = /datum/equipment_preset/synth/working_joe/security_android
+
+/datum/human_ai_equipment_preset/uscm/working_joe
+	name = "USCM Working Joe"
+	desc = "You always know a working joe"
+	path = /datum/equipment_preset/synth/working_joe
+
+/datum/human_ai_equipment_preset/uscm/working_joe/engi
+	name = "USCM Hazmat Joe"
+	desc = "You always know a working joe"
+	path = /datum/equipment_preset/synth/working_joe/engi

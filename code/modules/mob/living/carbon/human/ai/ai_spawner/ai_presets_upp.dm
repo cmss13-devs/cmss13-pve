@@ -18,7 +18,7 @@
 
 /datum/human_ai_equipment_preset/upp/rifleman/eva
 	name = "UPP Squad Rifleman - EVA"
-	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
+	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. EVA equipped"
 	path = /datum/equipment_preset/upp/rifleman/eva
 
 /datum/human_ai_equipment_preset/upp/machinegunner
@@ -28,7 +28,7 @@
 
 /datum/human_ai_equipment_preset/upp/at
 	name = "UPP Squad Anti-Tank"
-	desc = "..."
+	desc = "UPP RPG armed soldier, otherwise similarly equipped as standard"
 	path = /datum/equipment_preset/upp/rifleman/at
 
 /datum/human_ai_equipment_preset/upp/combat_synth
@@ -65,127 +65,132 @@
 
 /datum/human_ai_equipment_preset/upp/officer/kapitan
 	name = "UPP - Officer Kapitan"
-	desc = "UPP Extras"
+	desc = "UPP Kapitan, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/kapitan
 
 /datum/human_ai_equipment_preset/upp/officer/kolonel
 	name = "UPP - Officer Kolonel"
-	desc = "UPP Extras"
+	desc = "UPP Kolonel, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/kolonel
 
 /datum/human_ai_equipment_preset/upp/officer/lt_kolonel
 	name = "UPP - Officer Lt Kolonel"
-	desc = "UPP Extras"
+	desc = "UPP LT Kolonel, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/lt_kolonel
 
 /datum/human_ai_equipment_preset/upp/officer/mjaor
 	name = "UPP - Officer Major"
-	desc = "UPP Extras"
+	desc = "UPP Major, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/major
 
 /datum/human_ai_equipment_preset/upp/officer/naval
-	name = "UPP - Officer Naval"
-	desc = "UPP Extras"
+	name = "UPP - Officer Naval Lieutenant"
+	desc = "UPP Lieutenant, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/naval
 
 /datum/human_ai_equipment_preset/upp/officer/senior
-	name = "UPP - Officer Senior"
-	desc = "UPP Extras"
+	name = "UPP - Officer Senior Lieutenant"
+	desc = "UPP Senior lieutenant, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/senior
 
 /datum/human_ai_equipment_preset/upp/support_synth
 	name = "UPP Support Synthetic"
-	desc = "UPP Extras"
+	desc = "A generic UPP Support synthetic"
 	path = /datum/equipment_preset/upp/synth
 
 /datum/human_ai_equipment_preset/upp/combat_android
 	name = "UPP Combat Android"
-	desc = "VERY Illegal"
+	desc = "The UPP never signed documents pretaining to the legality of combat androids but GMs should be mindful not to overuse them, Dressed like a standard"
 	path = /datum/equipment_preset/synth/working_joe/upp/combat
 
 /datum/human_ai_equipment_preset/upp/synth_commando
 	name = "UPP Synthetic Commando"
-	desc = "ILLEGAL AS FUCK"
+	desc = "The UPP never signed documents pretaining to the legality of combat androids but GMs should be mindful not to overuse them, This one is very deadly"
 	path = /datum/equipment_preset/upp/synth/commando
 
 /datum/human_ai_equipment_preset/upp/commando
 	name = "UPP - Commando"
-	desc = "Frogman"
+	desc = "A UPP Special forces commando - Equipped with a cloak and a very deadly rifle"
 	path = /datum/equipment_preset/upp/commando
 
 /datum/human_ai_equipment_preset/upp/commando/leader
 	name = "UPP - Commando Leader"
-	desc = "Frogman"
+	desc = "A UPP Special forces commando - Equipped with a cloak and a very deadly rifle, this one is a leader"
 	path = /datum/equipment_preset/upp/commando/leader
 
 /datum/human_ai_equipment_preset/upp/tanker
 	name = "UPP - Vehicle Crew"
-	desc = "UPP Extras"
+	desc = "UPP generic vehicle crewman"
 	path = /datum/equipment_preset/upp/tank
 
 /datum/human_ai_equipment_preset/upp/pilot
 	name = "UPP - Pilot"
-	desc = "UPP Extras"
+	desc = "UPP generic pilot"
 	path = /datum/equipment_preset/upp/pilot
 
 /datum/human_ai_equipment_preset/upp/mil_doc
 	name = "UPP - Military Doctor"
-	desc = "UPP Extras"
+	desc = "UPP military doctor, unarmed but still a member of the military"
 	path = /datum/equipment_preset/upp/mildoctor
 
 //Colonists
 
 /datum/human_ai_equipment_preset/upp/colonist
 	name = "UPP - Colonist"
-	desc = "UPP Extras"
+	desc = "A generic UPP colonist, unarmed"
 	path = /datum/equipment_preset/upp/colonist
 
 /datum/human_ai_equipment_preset/upp/researcher
 	name = "UPP - Researcher"
-	desc = "UPP Extras"
+	desc = "A civillian researcher for the UPP, Unarmed"
 	path = /datum/equipment_preset/upp/researcher
 
 /datum/human_ai_equipment_preset/upp/doctor
 	name = "UPP - Doctor"
-	desc = "UPP Extras"
+	desc = "A civillian doctor for the UPP, unarmed"
 	path = /datum/equipment_preset/upp/doctor
 
 /datum/human_ai_equipment_preset/upp/admin
 	name = "UPP - Admin Tech"
-	desc = "UPP Extras"
+	desc = "A civillian admin tech for the UPP, unarmed"
 	path = /datum/equipment_preset/upp/admin
 
 /datum/human_ai_equipment_preset/upp/cargo
 	name = "UPP - Cargo Tech"
-	desc = "UPP Extras"
+	desc = "A civillian cargo tech for the UPP, unarmed"
 	path = /datum/equipment_preset/upp/cargo
 
 /datum/human_ai_equipment_preset/upp/engineer
 	name = "UPP - Engineer"
-	desc = "UPP Extras"
+	desc = "A civillian engineer for the UPP, unarmed"
 	path = /datum/equipment_preset/upp/engineer
 
 /datum/human_ai_equipment_preset/upp/operations
 	name = "UPP - Operations Tech"
-	desc = "UPP Extras"
+	desc = "A civillian operations tech for the UPP, unarmed"
 	path = /datum/equipment_preset/upp/operations
 
 /datum/human_ai_equipment_preset/upp/police
 	name = "UPP - Police"
-	desc = "UPP Extras"
+	desc = "Police officer armed with a pistol"
 	path = /datum/equipment_preset/upp/police
 
 /datum/human_ai_equipment_preset/upp/police/riot
 	name = "UPP - Riot Police"
-	desc = "UPP Extras"
+	desc = "Riot police officer armed with a shotgun and less than lethal beanbags"
 	path = /datum/equipment_preset/upp/police/riot
 
 /datum/human_ai_equipment_preset/upp/prisoner
 	name = "UPP - Prisoner"
-	desc = "UPP Extras"
+	desc = "UPP prisoner, unarmed"
 	path = /datum/equipment_preset/upp/prisoner
 
 /datum/human_ai_equipment_preset/upp/police/mss
 	name = "UPP MSS Agent"
-	desc = "UPP Extras"
+	desc = "A ministry of space security operative with a pistol"
 	path = /datum/equipment_preset/upp/police/mss
+
+/datum/human_ai_equipment_preset/upp/dzho
+	name = "UPP Dzho Automaton"
+	desc = "You always know a legally distinct working joe"
+	path = /datum/equipment_preset/synth/working_joe/upp

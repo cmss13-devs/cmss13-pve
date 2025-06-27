@@ -5,7 +5,7 @@
 
 /datum/human_ai_equipment_preset/clf/ua/guerilla
 	name = "UA Rebel, Soldier (Pistol)"
-	desc = "Strapped with a nine."
+	desc = "UA Rebel soldier with a random pistol."
 	path = /datum/equipment_preset/rebel/guerilla
 
 /datum/human_ai_equipment_preset/clf/ua/soldier
@@ -45,5 +45,5 @@
 
 /datum/human_ai_equipment_preset/clf/ua/security_android
 	name = "UA Rebel Combat Android"
-	desc = "Remember, Highly illegal"
+	desc = "An illegal combat android for the UA rebel faction. Use this sparingly."
 	path = /datum/equipment_preset/synth/working_joe/security_android/ua_rebel

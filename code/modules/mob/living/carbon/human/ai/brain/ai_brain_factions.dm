@@ -1809,3 +1809,9 @@
 
 /datum/human_ai_faction/xeno_cultist/corrupted
 	faction = FACTION_XENOMORPH_CORRPUTED
+
+/datum/human_ai_faction/malfunctioning_synth
+	faction = FACTION_MALFUNCTION_SYNTH
+	friendly_factions = list(
+		FACTION_COLONIST,
+	)

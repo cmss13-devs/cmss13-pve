@@ -28,5 +28,5 @@
 
 /datum/human_ai_equipment_preset/freelancer/android
 	name = "Synthetic - Security Android - Freelancer"
-	desc = "Remember, Very illegal"
+	desc = "A security android for the freelancer faction, GMs should remember not to use this as they are illegal"
 	path = /datum/equipment_preset/synth/working_joe/security_android/freelancer

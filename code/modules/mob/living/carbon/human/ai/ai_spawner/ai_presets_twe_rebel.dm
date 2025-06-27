@@ -3,7 +3,7 @@
 
 /datum/human_ai_equipment_preset/twe_rebel/guerilla
 	name = "TWE Rebel, Soldier (Pistol)"
-	desc = "Strapped with pistols"
+	desc = "A guerilla TWE rebel, armed with a pistol and civillian clothing"
 	path = /datum/equipment_preset/clf/guerilla
 
 /datum/human_ai_equipment_preset/twe_rebel/soldier
@@ -48,5 +48,5 @@
 
 /datum/human_ai_equipment_preset/twe_rebel/combat_android
 	name = "TWE Rebel Automaton"
-	desc = "Remember, Very illegal"
+	desc = "A very illegal security droid used by rebel forces"
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/twe_rebel

@@ -43,5 +43,5 @@
 
 /datum/human_ai_equipment_preset/canc/combat_android
 	name = "CANC Combat Android"
-	desc = "You signed documents saying you wouldn't use these..."
+	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc
