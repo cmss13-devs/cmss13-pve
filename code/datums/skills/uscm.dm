@@ -529,5 +529,5 @@ CIA
 /datum/skills/cia/officer
 	name = "CIA Officer"
 	additional_skills = list(
-		SKILL_LEADERSHIP = SKILL_LEAD_EXPERT
+		SKILL_LEADERSHIP = SKILL_LEAD_EXPERT,
 	)
