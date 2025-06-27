@@ -488,13 +488,15 @@
 	icon_state = "china_cig_vending"
 	products = list(
 		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/clothing/mask/cigarette/cigar/classic = 3,
 		/obj/item/storage/box/matches = 15,
-		/obj/item/tool/lighter/zippo = 10,
+		/obj/item/tool/lighter/random = 10,
 	)
 	prices = list(
-		/obj/item/storage/fancy/cigarettes/laika = 45,
+		/obj/item/storage/fancy/cigarettes/laika = 25,
+		/obj/item/clothing/mask/cigarette/cigar/classic = 40,
 		/obj/item/storage/box/matches = 1,
-		/obj/item/tool/lighter/zippo = 25,
+		/obj/item/tool/lighter/random = 5,
 	)
 
 /obj/structure/machinery/vending/security
