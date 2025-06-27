@@ -2869,6 +2869,10 @@
 	pixel_x = 4;
 	pixel_y = -1
 	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_y = 5;
+	pixel_x = 7
+	},
 /turf/open/floor/interior/plastic,
 /area/firebase_zulu/inside/platoon_commander_rooms)
 "gC" = (
@@ -2997,6 +3001,10 @@
 /obj/structure/prop/static_tank/water,
 /turf/open/auto_turf/sand/layer2,
 /area/firebase_zulu/outside/compound)
+"gR" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/interior/plastic,
+/area/firebase_zulu/inside/medical)
 "gS" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -78816,7 +78824,7 @@ Rb
 Xm
 Xm
 Ba
-AS
+gR
 AS
 HB
 Rb

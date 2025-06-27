@@ -296,6 +296,7 @@
 /obj/structure/machinery/space_heater/radiator/red{
 	dir = 4
 	},
+/obj/structure/machinery/iv_drip,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/dorms)
 "dz" = (

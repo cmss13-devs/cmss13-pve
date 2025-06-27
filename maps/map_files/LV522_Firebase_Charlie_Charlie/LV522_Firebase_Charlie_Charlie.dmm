@@ -51,6 +51,11 @@
 	},
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
+"ai" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double,
+/turf/open/floor/prison/floor_plate,
+/area/firebase_zulu/inside/canteen)
 "al" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
@@ -1298,6 +1303,10 @@
 	pixel_y = 3;
 	pixel_x = 7
 	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_y = 5;
+	pixel_x = 7
+	},
 /turf/open/floor/carpet,
 /area/firebase_zulu/inside/platoonprep)
 "mQ" = (
@@ -1609,6 +1618,12 @@
 /obj/item/notepad/black{
 	pixel_x = -8;
 	pixel_y = 1
+	},
+/obj/structure/machinery/door_control{
+	pixel_y = -2;
+	pixel_x = 6;
+	id = "squadarmory";
+	name = "gear lockers door-control"
 	},
 /turf/open/floor/carpet,
 /area/firebase_zulu/inside/platoonprep)
@@ -2878,7 +2893,9 @@
 /turf/open/floor/prison,
 /area/firebase_zulu/inside/platoonarmory)
 "Cp" = (
-/obj/structure/machinery/door/airlock/almayer/secure,
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null
+	},
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/engineering)
 "Ct" = (
@@ -3455,7 +3472,8 @@
 /area/lv522/outdoors/w_rockies)
 "JB" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
-	dir = 1
+	dir = 1;
+	req_access = null
 	},
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/dorms)
@@ -6921,7 +6939,7 @@ Ql
 Ql
 Ql
 qg
-nT
+Ql
 Ql
 Ql
 Ql
@@ -7011,9 +7029,9 @@ mY
 Ql
 Ql
 Ql
-kX
-DZ
-mY
+Ql
+qg
+nT
 mY
 Ql
 Ql
@@ -7103,9 +7121,9 @@ mY
 Ql
 Ql
 mY
-mY
+kX
 DZ
-jC
+mY
 mY
 mY
 Ql
@@ -8467,7 +8485,7 @@ Pv
 Pv
 yk
 yk
-ll
+ai
 nA
 fB
 uO
