@@ -42,7 +42,7 @@
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/twe_rebel/malf_synth
 
 /datum/human_ai_equipment_preset/malfunctioning_synth/malf_synth/canc_rebel_combat
-	name = "DANC Combat Android - Malfunctioning"
+	name = "CANC Combat Android - Malfunctioning"
 	desc = "A damaged and hostile working joe"
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/malf_synth
 
