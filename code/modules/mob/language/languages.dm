@@ -121,9 +121,10 @@
 	ask_verb = "pyta"
 	exclaim_verb = "krzyczy"
 	color = "polish"
-	key = "p"
+	key = "o"
 
 	syllables = list("się", "w", "je", "na", "to", "nie", "że", "i", "z", "do", "tak", "jak", "o", "mnie", "za", "ja", "mi", "ale", "czy", "ty", "ci", "cię", "już", "ma", "mam", "pan", "coś", "dla", "dobrze", "szę", "być", "wię", "mogę", "są", "więc", "kurwa", "pierdole", "był", "moj", "chcę", "ją", "pęk", "gor", "żeb", "że", "źółć", "kto", "bo", "mu", "on", "ona", "tej", "ktoś", "sam", "ta", "czas", "raz", "daj", "kim", "przy", "nikt", "dwa", "cóż", "iść", "ile", "cały", "nią", "idź", "trzy", "rację", "chaj", "spójrz", "nasz", "lub", "kogo", "którą", "źle", "pew", "oto", "całą", "zrób", "wczor", "boga", "bog")
+
 /datum/language/commando
 	name = LANGUAGE_TSL
 	desc = "TSL is a modern technique with a combination of modified American sign language, tactical hand signals and discreet and esoteric code names for radios only known by elite commando groups."
