@@ -9,12 +9,12 @@
 /datum/human_ai_equipment_preset/freelancer/shotgunner
 	name = "Freelancer Shotgunner"
 	desc = "A freelancer armed with a KS-23 shotgun and plenty of shells."
-	path = /datum/equipment_preset/other/freelancer/standard
+	path = /datum/equipment_preset/other/freelancer/shotgunner
 
 /datum/human_ai_equipment_preset/freelancer/machinegunner
 	name = "Freelancer Machinegunner"
 	desc = "A freelancer unit armed with an HPR. Would be pretty deadly, if they knew how to use the bipod."
-	path = /datum/equipment_preset/other/freelancer/standard
+	path = /datum/equipment_preset/other/freelancer/machinegunner
 
 /datum/human_ai_equipment_preset/freelancer/medic
 	name = "Freelancer Medic"

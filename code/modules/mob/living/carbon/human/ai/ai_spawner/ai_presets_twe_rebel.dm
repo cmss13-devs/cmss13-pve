@@ -11,6 +11,11 @@
 	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
 	path = /datum/equipment_preset/clf/soldier
 
+/datum/human_ai_equipment_preset/twe_rebel/machinegunner
+	name = "TWE Rebel, Soldier (Machinegunner)"
+	desc = "Armed with a MAR-LMG"
+	path = /datum/equipment_preset/clf/soldier/machinegunner
+
 /datum/human_ai_equipment_preset/twe_rebel/shotgunner
 	name = "TWE Rebel, Soldier (Shotgunner)"
 	desc = "Armed with an HG-37 shotgun."

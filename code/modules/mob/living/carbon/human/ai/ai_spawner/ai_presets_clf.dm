@@ -13,6 +13,11 @@
 	desc = "Armed with a M20A, L42A or very rarely a M41A. Even more rarely, will only be equipped with a M1911, M4A3 or VP70."
 	path = /datum/equipment_preset/rebel/soldier
 
+/datum/human_ai_equipment_preset/clf/ua/machinegunner
+	name = "UA Rebel, Soldier (Machinegunner)"
+	desc = "Armed with a HPR."
+	path = /datum/equipment_preset/rebel/soldier/machinegunner
+
 /datum/human_ai_equipment_preset/clf/ua/shotgunner
 	name = "UA Rebel, Soldier (Shotgunner)"
 	desc = "Armed with either a M120 combat shotgun or a Ithaca-37 pump-shotgun."

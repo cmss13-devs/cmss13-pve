@@ -84,8 +84,10 @@
 		/datum/equipment_preset/usa/heavygunner::name = /datum/equipment_preset/usa/heavygunner,
 		/datum/equipment_preset/twe/royal_marine/spec/machinegun::name = /datum/equipment_preset/twe/royal_marine/spec/machinegun,
 		/datum/equipment_preset/contractor/covert/heavy::name = /datum/equipment_preset/contractor/covert/heavy,
-		/datum/equipment_preset/other/freelancer/standard::name = /datum/equipment_preset/other/freelancer/standard,
+		/datum/equipment_preset/other/freelancer/machinegunner::name = /datum/equipment_preset/other/freelancer/machinegunner,
 		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,
+		/datum/equipment_preset/rebel/soldier/machinegunner::name = /datum/equipment_preset/rebel/soldier/machinegunner,
+		/datum/equipment_preset/clf/soldier/machinegunner::name = /datum/equipment_preset/clf/soldier/machinegunner,
 	)
 
 	if(!check_rights(R_DEBUG))
