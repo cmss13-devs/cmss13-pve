@@ -16,6 +16,11 @@
 		gulp_size = 5
 	else gulp_size = max(floor(reagents.total_volume / 5), 5)
 
+/obj/item/reagent_container/food/drinks/flask/on_reagent_change()
+	if(gulp_size < 15)
+		gulp_size = 15
+	else gulp_size = max(floor(reagents.total_volume / 15), 15)
+
 /obj/item/reagent_container/food/drinks/attack(mob/M, mob/user)
 	var/datum/reagents/R = src.reagents
 
@@ -338,6 +343,7 @@
 	icon_state = "flask"
 	volume = 180
 	center_of_mass = "x=17;y=8"
+	gulp_size = 15
 
 /obj/item/reagent_container/food/drinks/flask/marine
 	name = "\improper USCM flask"
@@ -371,7 +377,7 @@
 
 /obj/item/reagent_container/food/drinks/flask/canteen/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 60)
+	reagents.add_reagent("water", 180)
 
 /obj/item/reagent_container/food/drinks/flask/canteen/empty
 
