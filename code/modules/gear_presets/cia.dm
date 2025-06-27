@@ -67,6 +67,7 @@
 	rank = "Intelligence Liaison Officer"
 	assignment = JOB_CIA_LIAISON
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/cia/officer
 	role_comm_title = "ILO"
 	minimum_age = 25
 	minimap_icon = "cia_lo"
@@ -99,7 +100,7 @@
 	name = "CIA Agent (Marine Raider Advisor)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	minimum_age = 30
-	skills = /datum/skills/cia
+	skills = /datum/skills/cia/officer
 
 /datum/equipment_preset/uscm/marsoc/cia/New()
 	. = ..()
@@ -237,7 +238,7 @@
 /datum/equipment_preset/upp/officer/senior/cia
 	name = "CIA Spy (UPP Senior Officer)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/cia
+	skills = /datum/skills/cia/officer
 
 /datum/equipment_preset/upp/officer/senior/cia/New()
 	. = ..()
