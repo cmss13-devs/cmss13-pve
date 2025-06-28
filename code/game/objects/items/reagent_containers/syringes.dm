@@ -454,6 +454,16 @@
 	mode = SYRINGE_INJECT
 	update_icon()
 
+/obj/item/reagent_container/syringe/oxycodone
+	name = "syringe (oxycodone)"
+	desc = "Contains a small dose of potent painkiller."
+
+/obj/item/reagent_container/syringe/oxycodone/Initialize()
+	. = ..()
+	reagents.add_reagent("oxycodone",  5)
+	mode = SYRINGE_INJECT
+	update_icon()
+
 /obj/item/reagent_container/ld50_syringe/choral
 
 /obj/item/reagent_container/ld50_syringe/choral/Initialize()
