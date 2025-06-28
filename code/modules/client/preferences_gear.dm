@@ -1503,7 +1503,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	allowed_origins = UPP_ORIGINS
 
 /datum/gear/misc/patch_upp/sof
-	display_name = "Solar Devils shoulder patch"
+	display_name = "Naval Infantry shoulder patch"
 	path = /obj/item/clothing/accessory/patch/upp/naval
 
 /datum/gear/misc/family_photo
