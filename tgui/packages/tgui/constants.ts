@@ -92,6 +92,11 @@ export const RADIO_CHANNELS = [
     color: '#1ecc43',
   },
   {
+    name: 'Yautja Overseer',
+    freq: 1206,
+    color: '#1ecc43',
+  },
+  {
     name: "Dutch's Dozen",
     freq: 1210,
     color: '#1ecc43',
@@ -102,9 +107,34 @@ export const RADIO_CHANNELS = [
     color: '#e3580e',
   },
   {
+    name: 'RMC',
+    freq: 1229,
+    color: '#e3580e',
+  },
+  {
     name: 'CMB',
     freq: 1220,
     color: '#1b748c',
+  },
+  {
+    name: 'CIA',
+    freq: 1225,
+    color: '#e6754c',
+  },
+  {
+    name: 'USASF',
+    freq: 1224,
+    color: '#2a1bb6',
+  },
+  {
+    name: 'US Army',
+    freq: 1228,
+    color: '#037741',
+  },
+  {
+    name: 'USCG',
+    freq: 1229,
+    color: '#62a759',
   },
   {
     name: 'WY',
@@ -242,7 +272,7 @@ export const RADIO_CHANNELS = [
     color: '#779cc2',
   },
   {
-    name: 'Medsci',
+    name: 'MedSci',
     freq: 1482,
     color: '#008160',
   },
