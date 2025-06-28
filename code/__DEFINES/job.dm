@@ -14,6 +14,7 @@
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_FORECON "FORECON"
 #define SQUAD_SOLAR "Solar Devils"
+#define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
