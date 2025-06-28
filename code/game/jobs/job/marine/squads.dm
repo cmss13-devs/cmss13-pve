@@ -295,7 +295,7 @@
 	chat_color = "#828cff"
 
 /datum/squad/upp/kdo
-	name = "UPPCdo"
+	name = "UPPKdo"
 	equipment_color = "#c47a50"
 	chat_color = "#c47a50"
 	squad_type = "Team"

@@ -49,22 +49,22 @@
 
 //UPP Commandos
 /datum/paygrade/upp/uk1
-	paygrade = "UC1"
-	name = "Junior Commando"
-	prefix = "JCdo."
+	paygrade = "UK1"
+	name = "Junior Kommando"
+	prefix = "JKdo."
 	pay_multiplier = 1.5
 
 /datum/paygrade/upp/uk2
-	paygrade = "UC2"
-	name = "2nd Commando"
-	prefix = "2ndCdo."
+	paygrade = "UK2"
+	name = "2nd Kommando"
+	prefix = "2ndKdo."
 	pay_multiplier = 2
 	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uk3
-	paygrade = "UC3"
-	name = "1st Commando"
-	prefix = "1stCdo."
+	paygrade = "UK3"
+	name = "1st Kommando"
+	prefix = "1stKdo."
 	pay_multiplier = 2.5
 	officer_grade = GRADE_OFFICER
 

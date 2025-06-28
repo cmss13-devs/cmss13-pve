@@ -341,7 +341,7 @@
 
 /obj/item/weapon/gun/pistol/np92/suppressed
 	name = "\improper NPZ92 pistol"
-	desc = "The NPZ92 is a version of the NP92 that includes an integrated suppressor, issued sparingly to commando units."
+	desc = "The NPZ92 is a version of the NP92 that includes an integrated suppressor, issued sparingly to Kommando units."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "npz92"
 	item_state = "npz92"
