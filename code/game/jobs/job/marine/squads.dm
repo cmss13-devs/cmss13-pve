@@ -294,7 +294,7 @@
 	equipment_color = "#4148c8"
 	chat_color = "#828cff"
 
-/datum/squad/upp/cdo
+/datum/squad/upp/kdo
 	name = "UPPCdo"
 	equipment_color = "#c47a50"
 	chat_color = "#c47a50"

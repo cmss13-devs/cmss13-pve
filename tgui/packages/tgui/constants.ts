@@ -167,7 +167,7 @@ export const RADIO_CHANNELS = [
     color: '#b3222e',
   },
   {
-    name: 'UPP CDO',
+    name: 'UPP KDO',
     freq: 1259,
     color: '#789e18',
   },
