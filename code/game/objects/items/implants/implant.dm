@@ -522,6 +522,9 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	var/poison_reagent = "cyanide"
 	var/poison_amount = 50
 
+/obj/item/implant/poison_tooth/meltdown()
+	return
+
 /obj/item/implant/poison_tooth/trigger(emote, mob/source)
 	if (emote == activation_emote)
 		activate()
