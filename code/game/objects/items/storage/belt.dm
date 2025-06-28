@@ -146,7 +146,7 @@
 		/obj/item/tool/weldingtool,
 		/obj/item/tool/wirecutters,
 		/obj/item/tool/wrench,
-		/obj/item/tool/extinguisher/mini,
+		/obj/item/tool/extinguisher,
 		/obj/item/tool/shovel/etool,
 		/obj/item/stack/cable_coil,
 		/obj/item/weapon/gun/smg/nailgun/compact,
@@ -180,6 +180,7 @@
 		/obj/item/stack/sandbags_empty,
 		/obj/item/stack/sandbags,
 		/obj/item/defenses/handheld/sentry,
+		/obj/item/tool/extinguisher,
 	)
 
 /obj/item/storage/belt/utility/construction/full/fill_preset_inventory()
@@ -347,6 +348,26 @@
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
 
+/obj/item/storage/belt/medical/lifesaver/full/liquid/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/dexalin(src)
+	new /obj/item/reagent_container/glass/bottle/antitoxin(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/reagent_container/glass/bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/tricordrazine(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+
 /obj/item/storage/belt/medical/lifesaver/full/dutch/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -419,18 +440,36 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 
-/obj/item/storage/belt/medical/lifesaver/upp/partial/fill_preset_inventory()
+/obj/item/storage/belt/medical/lifesaver/upp/full/liquid/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/dexalin(src)
+	new /obj/item/reagent_container/glass/bottle/antitoxin(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/reagent_container/glass/bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/tricordrazine(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/partial/liquid/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/storage/pill_bottle/bicaridine(src)
-	new /obj/item/storage/pill_bottle/kelotane(src)
-	new /obj/item/storage/pill_bottle/inaprovaline(src)
-	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/reagent_container/glass/bottle/bicaridine(src)
+	new /obj/item/reagent_container/glass/bottle/kelotane(src)
+	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
+	new /obj/item/reagent_container/syringe(src)
+	new /obj/item/reagent_container/syringe(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/synth/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
