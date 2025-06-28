@@ -553,6 +553,19 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	to_chat(source, SPAN_NOTICE("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it"))
 	return TRUE
 
+/obj/item/implant/poison_tooth/cia
+	poison_reagent = "cia_toxin"
+
+/obj/item/implant/poison_tooth/preset/cia
+	poison_reagent = "cia_toxin"
+
+/obj/item/implant/poison_tooth/mss
+	poison_reagent = "mss_toxin"
+
+/obj/item/implant/poison_tooth/preset/mss
+	poison_reagent = "mss_toxin"
+
+
 /obj/item/storage/syringe_case/poison_tooth
 	storage_slots = 4
 	can_hold = list(
