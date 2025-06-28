@@ -52,6 +52,7 @@
 	. = ..()
 	to_chat(user, SPAN_WARNING("You pop out [src]'s tube!"))
 	update_icon()
+	eject_casing()
 
 /obj/item/weapon/gun/flare/attackby(obj/item/attacking_item, mob/user)
 	if(istype(attacking_item, /obj/item/device/flashlight/flare))
@@ -126,6 +127,8 @@
 	fired_flare.visible_message(SPAN_WARNING("\A [fired_flare] bursts into brilliant light in the sky!"))
 	fired_flare.invisibility = INVISIBILITY_MAXIMUM
 	fired_flare.mouse_opacity = FALSE
+	fired_flare.indestructible = TRUE
+	fired_flare.unacidable = TRUE
 	fired_flare.fuel = 3 MINUTES
 	fired_flare.light_range = 6
 	fired_flare.light_power = 3

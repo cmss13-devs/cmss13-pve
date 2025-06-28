@@ -105,13 +105,13 @@
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 1.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] open using the [name]!"), SPAN_DANGER("You force [door] open with your [name]."))
-				door.Open()
+				door.open()
 		else
 			user.visible_message(SPAN_DANGER("[user] pushes [door] with their [name] to force it closed..."), SPAN_DANGER("You push [door] with your [name] to force it closed..."))
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] closed using the [name]!"), SPAN_DANGER("You force [door] closed with your [name]."))
-				door.Close()
+				door.close()
 
 /obj/item/weapon/wristblades/attack_self(mob/living/carbon/human/user)
 	..()
@@ -499,14 +499,6 @@
 
 	var/mob/living/carbon/human/victim = target
 
-	if(!HAS_TRAIT(user, TRAIT_SUPER_STRONG))
-		to_chat(user, SPAN_WARNING("You're not strong enough to rip an entire humanoid apart. Also, that's kind of fucked up.")) //look at this dumbass
-		return TRUE
-
-	if(issamespecies(user, victim))
-		to_chat(user, SPAN_HIGHDANGER("ARE YOU OUT OF YOUR MIND!?"))
-		return
-
 	if(isspeciessynth(victim))
 		to_chat(user, SPAN_WARNING("You can't flay metal...")) //look at this dumbass
 		return TRUE
@@ -534,8 +526,7 @@
 			victim.apply_damage(15, BRUTE, limb, sharp = FALSE)
 		victim.add_flay_overlay(stage = 1)
 
-		var/datum/flaying_datum/flay_datum = new(victim)
-		flay_datum.create_leftovers(victim, TRUE, 0)
+		new /datum/flaying_datum(victim)
 		SEND_SIGNAL(victim, COMSIG_HUMAN_FLAY_ATTEMPT, user, src, TRUE)
 	else
 		to_chat(user, SPAN_WARNING("You were interrupted before you could finish your work!"))
@@ -584,7 +575,6 @@
 					SPAN_DANGER("<B>[victim] is missing \his head. Pelts like this just aren't the same... You peel the skin around the stump loose with your [tool.name].</B>"))
 			else
 				victim.apply_damage(10, BRUTE, v_head, sharp = TRUE)
-				create_leftovers(victim, has_meat = FALSE, skin_amount = 1)
 				if(victim.h_style == "Bald") //you can't scalp someone with no hair.
 					user.visible_message(SPAN_DANGER("<B>[user] makes some rough cuts on [victim]'s head and face with \a [tool].</B>"),
 						SPAN_DANGER("<B>You make some rough cuts on [victim]'s head and face.</B>"))
@@ -600,7 +590,6 @@
 			user.visible_message(SPAN_DANGER("<B>[user] jabs \his [tool.name] into [victim]'s cuts, prying, cutting, then tearing off large areas of skin. The remainder hangs loosely.</B>"),
 				SPAN_DANGER("<B>You jab your [tool.name] into [victim]'s cuts, prying, cutting, then tearing off large areas of skin. The remainder hangs loosely.</B>"))
 			playsound(user.loc, 'sound/weapons/bladeslice.ogg', 25)
-			create_leftovers(victim, has_meat = FALSE, skin_amount = 3)
 			flaying_stage = FLAY_STAGE_SKIN
 			for(var/limb in victim.limbs)
 				victim.apply_damage(18, BRUTE, limb, sharp = TRUE)
@@ -614,7 +603,6 @@
 			user.visible_message(SPAN_DANGER("<B>[user] completely flays [victim], pulling the remaining skin off of \his body like a glove!</B>"),
 				SPAN_DANGER("<B>You completely flay [victim], pulling the remaining skin off of \his body like a glove.\nUse rope to hang \him from the ceiling.</B>"))
 			playsound(user.loc, 'sound/weapons/wristblades_hit.ogg', 25)
-			create_leftovers(victim, has_meat = TRUE, skin_amount = 2)
 			for(var/limb in victim.limbs)
 				victim.apply_damage(22, BRUTE, limb, sharp = TRUE)
 			for(var/obj/item/item in victim)
@@ -673,6 +661,27 @@
 	to_chat(user, SPAN_WARNING("You finish flaying [current_limb]."))
 	current_limb.flayed = TRUE
 
+/obj/item/weapon/yautja/knife/marine
+	name = "\improper extremely sharp M5 'Night Raider' bayonet"
+	desc = "USCMC standard issue combat knife. Can be put into boot holster, but not attached to a rifle. This one is incredibly sharp. Can also be used to extract shrapnel..."
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "bayonet"
+	item_state = "combat_knife"
+	flags_atom = FPRINT|QUICK_DRAWABLE|CONDUCT
+	flags_item = CAN_DIG_SHRAPNEL
+	flags_equip_slot = SLOT_FACE
+	flags_armor_protection = SLOT_FACE
+	sharp = IS_SHARP_ITEM_ACCURATE
+	force = MELEE_FORCE_TIER_5
+	w_class = SIZE_TINY
+	throwforce = MELEE_FORCE_TIER_6
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 6
+	hitsound = 'sound/weapons/slash.ogg'
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	actions_types = list(/datum/action/item_action/toggle/use)
+	unacidable = TRUE
+
 /*#########################################
 ########### Two Handed Weapons ############
 #########################################*/
@@ -710,11 +719,11 @@
 	var/rare_weight = 5
 	var/ultra_rare_weight = 1
 
-/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, click_parameters)
+/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, /turf/fishing_allowed, click_parameters)
 	. = ..()
 	if(proximity_flag && !busy_fishing && isturf(target))
 		var/turf/T = target
-		if(!T.supports_fishing)
+		if(!T.fishing_allowed)
 			return
 		busy_fishing = TRUE
 		user.visible_message(SPAN_NOTICE("[user] starts aiming \the [src] at the water..."), SPAN_NOTICE("You prepare to catch something in the water..."), max_distance = 3)
@@ -804,7 +813,7 @@
 		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
 	)
 
-	muzzle_flash = null // TO DO, add a decent one.
+	muzzleflash_iconstate = null // TO DO, add a decent one.
 
 	unacidable = TRUE
 	fire_sound = 'sound/effects/woodhit.ogg' // TODO: Decent THWOK noise.
@@ -893,7 +902,7 @@
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	icon_state = null
 	works_in_recharger = FALSE
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MAGENTA
 	item_icons = list(
 		WEAR_BACK = 'icons/mob/humans/onmob/hunter/pred_gear.dmi',
@@ -1004,7 +1013,7 @@
 	fire_sound = 'sound/weapons/pulse3.ogg'
 	flags_equip_slot = SLOT_WAIST
 	ammo = /datum/ammo/energy/yautja/pistol
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	w_class = SIZE_MEDIUM
 	/// Max amount of shots
@@ -1130,7 +1139,7 @@
 	)
 	fire_sound = 'sound/weapons/pred_plasmacaster_fire.ogg'
 	ammo = /datum/ammo/energy/yautja/caster/stun
-	muzzle_flash = "muzzle_flash_blue"
+	muzzleflash_iconstate = "muzzle_flash_blue"
 	muzzle_flash_color = COLOR_MUZZLE_BLUE
 	w_class = SIZE_HUGE
 	force = 0
@@ -1250,6 +1259,7 @@
 /obj/item/weapon/gun/energy/yautja/plasma_caster/dropped(mob/living/carbon/human/M)
 	playsound(M, 'sound/weapons/pred_plasmacaster_off.ogg', 15, 1)
 	to_chat(M, SPAN_NOTICE("You deactivate your plasma caster."))
+	update_mouse_pointer(M, FALSE)
 
 	var/datum/action/predator_action/bracer/caster/caster_action
 	for(caster_action as anything in M.actions)

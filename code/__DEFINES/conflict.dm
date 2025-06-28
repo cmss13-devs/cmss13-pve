@@ -3,6 +3,8 @@
 #define GRAB_AGGRESSIVE 1
 #define GRAB_CARRY   2
 #define GRAB_CHOKE   3
+/// Alien-specific grab, somewhat between an aggressive and choke. Limited to AI only for the moment.
+#define GRAB_XENO	 4
 
 //Ammo defines for gun/projectile related things.
 
@@ -34,13 +36,16 @@
 /// Whether or not the bullet hits the target that was clicked or if it keeps travelling
 #define AMMO_HITS_TARGET_TURF (1<<17)
 #define AMMO_ALWAYS_FF (1<<18)
-//                              (1<<19) unused, previously was AMMO_HOMING
+// This one is for ammo that ignores prone. Includes landmine shrapnel and BFAB. previously was AMMO_HOMING
+#define AMMO_PRONETARGET (1<<19)
 /// Can't be deflected
 #define AMMO_NO_DEFLECT (1<<20)
 ///Can only hit people with criminal status
 #define AMMO_MP (1<<21)
 /// Handles sentry flamers glob
 #define AMMO_FLAME (1<<22)
+// If the projectile hits a dense turf it'll do on_hit_turf on the turf just in front of the turf instead of on the turf itself (This one does not work on mobs)
+#define AMMO_STRIKES_SURFACE_ONLY (1<<23)
 // NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
 
 /// Projectile is shrpanel which allow it to skip some collisions
@@ -73,6 +78,8 @@
 #define GUN_SUPPORT_PLATFORM (1<<16)
 /// No gun description, only base desc
 #define GUN_NO_DESCRIPTION (1<<17)
+/// Automatically eject shell casings
+#define GUN_AUTO_EJECT_CASINGS (1<<18)
 // NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
 
 #define USES_STREAKS (1<<0)

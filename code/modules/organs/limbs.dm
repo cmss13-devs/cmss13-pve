@@ -105,16 +105,6 @@
 	if(owner)
 		forceMove(owner)
 
-
-
-/*
-/obj/limb/proc/get_icon(icon/race_icon, icon/deform_icon)
-	return icon('icons/mob/human.dmi',"blank")
-*/
-
-/obj/limb/process()
-		return 0
-
 /obj/limb/Destroy()
 	if(parent)
 		parent.children -= src
@@ -459,6 +449,8 @@ This function completely restores a damaged organ to perfect condition.
 		armor += owner.skills.get_skill_level(SKILL_ENDURANCE)*5
 
 	var/damage_ratio = armor_damage_reduction(GLOB.marine_organ_damage, 2*damage/3, armor, 0, 0, 0, max_damage ? (100*(max_damage - brute_dam) / max_damage) : 100)
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS))
+		damage_ratio *= 0.33
 	if(prob(damage_ratio) && damage > 10)
 		var/datum/wound/internal_bleeding/I = new (0)
 		add_bleeding(I, TRUE)
@@ -474,7 +466,7 @@ This function completely restores a damaged organ to perfect condition.
 	if(!is_ff && type != BURN && !(status & (LIMB_ROBOT|LIMB_SYNTHSKIN)))
 		take_damage_internal_bleeding(damage)
 
-	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob(10 + damage * 2.5)) //If they have it splinted, the splint won't hold.
+	if(!(status & LIMB_SPLINTED_INDESTRUCTIBLE) && (status & LIMB_SPLINTED) && damage > 5 && prob((10 + damage * 2.5) * (MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS) ? 0.33 : 1))) //If they have it splinted, the splint won't hold.
 		status &= ~LIMB_SPLINTED
 		playsound(get_turf(loc), 'sound/items/splintbreaks.ogg', 20)
 		to_chat(owner, SPAN_HIGHDANGER("The splint on your [display_name] comes apart!"))
@@ -588,7 +580,6 @@ This function completely restores a damaged organ to perfect condition.
 	return FALSE
 
 /obj/limb/process()
-
 	// Process wounds, doing healing etc. Only do this every few ticks to save processing power
 	if(owner.life_tick % wound_update_accuracy == 0)
 		update_wounds()
@@ -1260,7 +1251,23 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 				owner.pain.apply_pain(PAIN_BONE_BREAK_SPLINTED)
 			. = TRUE
 			owner.update_med_icon()
-
+/*
+/obj/limb/proc/apply_tourniquet(obj/item/stack/medical/splint/S, mob/living/user, mob/living/carbon/human/target, datum/effects/bleeding/internal/I)
+	var/time_to_take = 5 SECONDS
+	if(target == user)
+		user.visible_message(SPAN_WARNING("[user] fumbles with [S]"), SPAN_WARNING("You fumble with [S]..."))
+		time_to_take = 10 SECONDS
+	if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, target, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+		var/possessive = "[user == target ? "your" : "\the [target]'s"]"
+		var/possessive_their = "[user == target ? user.gender == MALE ? "his" : "her" : "\the [target]'s"]"
+		user.affected_message(target,
+		SPAN_HELPFUL("You tighten the <b>splint</b> on [possessive] <b>[display_name]</b>, <b>resticting the blood flow to the damaged artery.</b>"),
+		SPAN_HELPFUL("[user] tightens the <b>splint</b> on your <b>[display_name]</b>, <b>resticting the blood flow to the damaged artery.</b>"),
+		SPAN_NOTICE("[user] tightens the <b>splint</b> on [possessive_their] [display_name], <b>resticting the blood flow to the damaged artery.</b>"))
+		I.has_been_bandaged = TRUE
+		return TRUE
+	return FALSE
+*/
 ///called when limb is removed or robotized, any ongoing surgery and related vars are reset unless set otherwise.
 /obj/limb/proc/reset_limb_surgeries()
 	owner.incision_depths[name] = SURGERY_DEPTH_SURFACE

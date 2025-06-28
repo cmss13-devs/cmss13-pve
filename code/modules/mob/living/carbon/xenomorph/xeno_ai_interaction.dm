@@ -17,37 +17,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//         OBJECTS         //
-/////////////////////////////
-/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return
-
-	if(!density)
-		return 0
-
-	if((unslashable || isfacehugger(X)) && !climbable)
-		return
-
-	return OBJECT_PENALTY
-
-/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(unslashable || indestructible || (climbable && islurker(X)))
-		if(!X.action_busy)
-			do_climb(X)
-		return
-
-	return ..()
-
-/obj/structure/machinery/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(stat & TIPPED_OVER)
-		return
-
-	return ..()
-
-
-/////////////////////////////
 //       MINERAL DOOR      //
 /////////////////////////////
 /obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -151,8 +120,34 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 //          MOBS           //
 /////////////////////////////
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
-	return stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
+//	if(X.target_unconscious)
+//		return TRUE
+	return X.target_unconscious || stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
 
+/////////////////////////////
+//         CARBON          //
+/////////////////////////////
+/mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/X)
+	if(!ai_check_stat(X))
+		return FALSE
+
+	if(X.can_not_harm(src))
+		return FALSE
+
+	if(alpha <= 45 && get_dist(X, src) > 2)
+		return FALSE
+
+	if(isfacehugger(X))
+		if(status_flags & XENO_HOST)
+			return FALSE
+
+		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
+			return FALSE
+
+	else if(HAS_TRAIT(src, TRAIT_NESTED))
+		return FALSE
+
+	return TRUE
 
 /////////////////////////////
 //         HUMANS         //
@@ -174,13 +169,9 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 /mob/living/carbon/human/ai_can_target(mob/living/carbon/xenomorph/X)
 	. = ..()
-	if(!.)
-		return FALSE
 
 	if(species.flags & IS_SYNTHETIC)
 		return FALSE
-
-	return TRUE
 
 /mob/living/carbon/human/ai_check_stat(mob/living/carbon/xenomorph/X)
 	. = ..()
@@ -245,6 +236,35 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 	return SENTRY_PENALTY
 
+/////////////////////////////
+//       STRUCTURE         //
+/////////////////////////////
+/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(!density)
+		return 0
+
+	if((unslashable || isfacehugger(X)) && !climbable)
+		return
+
+	return OBJECT_PENALTY
+
+/obj/structure/machinery/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(stat & TIPPED_OVER)
+		return
+
+	return ..()
+
+/// Allows this xenomorph to climb most structures that can be climbed, if they are capable of it.
+/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(X.ai_movement_handler.do_climb_structures && can_climb(X))
+		do_climb(X)
+	else
+		X.do_click(src, "", list())
+	return TRUE
 
 /////////////////////////////
 //      WINDOW FRAME       //

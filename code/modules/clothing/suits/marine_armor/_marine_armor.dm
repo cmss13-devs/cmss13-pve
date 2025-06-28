@@ -84,6 +84,7 @@
 
 	light_power = 3
 	light_range = 4
+	light_color = LIGHT_COLOR_TUNGSTEN
 	light_system = MOVABLE_LIGHT
 
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
@@ -100,6 +101,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -609,29 +611,8 @@
 	icon_state = "cc_armor"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-//==================PLU Lamp Rig==================\\
-
-/obj/item/clothing/suit/storage/marine/veteran/lamp
-	name = "\improper PLU lamp rig"
-	icon_state = "lamp_rig"
-	desc = "A lightweight rig designed to support a shoulder lamp."
-	blood_overlay_type = "coat"
-	flags_armor_protection = BODY_FLAG_CHEST
-	flags_cold_protection = BODY_FLAG_CHEST
-	min_cold_protection_temperature = null
-	armor_melee = CLOTHING_ARMOR_NONE
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_LOW //marginally better against shrapnel.
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
-	storage_slots = 1
-	time_to_unequip = 10
-	time_to_equip = 10
-
 //==================USASF & ARMY==================\\
+
 /obj/item/clothing/suit/storage/marine/medium/rto/navy
 	name = "\improper M4 pattern naval-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches."
@@ -694,8 +675,28 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_MEDAL,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_M3UTILITY,
+		ACCESSORY_SLOT_PONCHO,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORARMOR,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORGROIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORSHIN,
+	)
+	restricted_accessory_slots = list(
+		ACCESSORY_SLOT_M3UTILITY,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORARMOR,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORGROIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORSHIN,
+	)
 
 	light_power = 3
 	light_range = 4
@@ -716,6 +717,7 @@
 	pickup_sound = "armorequip"
 	drop_sound = "armorequip"
 	equip_sounds = list('sound/handling/putting_on_armor1.ogg')
+	has_light = TRUE
 	var/armor_variation = 0
 	/// The dmi where the grayscale squad overlays are contained
 	var/squad_overlay_icon = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -914,17 +916,16 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	light_range = 5 //slightly higher
 	specialty = "M4 pattern marine"
-
-/obj/item/clothing/suit/marine/rto/intel
-	name = "\improper XM4 pattern intelligence officer armor"
-	uniform_restricted = list(/obj/item/clothing/under/marine/officer, /obj/item/clothing/under/rank/qm_suit, /obj/item/clothing/under/marine/officer/intel)
-	specialty = "XM4 pattern intel"
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/rto/forecon
 	name = "\improper M3-R pattern recon armor"
 	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued mostly to recon units."
 	icon_state = "4"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
 	. = ..()
@@ -953,3 +954,61 @@
 	. = ..()
 	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
+
+//Army & USASF custom-armors\\
+
+/obj/item/clothing/suit/marine/medium/rto/navy
+	name = "\improper M4 pattern shore-deployment armor"
+	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
+	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/marine/medium/rto/navy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	src.attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	src.attach_accessory(null, shinguards, TRUE)
+	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	src.attach_accessory(null, shoulderpads, TRUE)
+
+/obj/item/clothing/suit/marine/medium/rto/army
+	name = "\improper M4 pattern trooper armor"
+	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor. At least it's compatible with attachable components of the M3 series."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/marine/medium/rto/army/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	src.attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	src.attach_accessory(null, shinguards, TRUE)
+	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	src.attach_accessory(null, shoulderpads, TRUE)
+	var/obj/item/clothing/accessory/pads/bracers/armguards = new()
+	src.attach_accessory(null, armguards, TRUE)
+	var/obj/item/clothing/accessory/pads/kneepads/knees = new()
+	src.attach_accessory(null, knees, TRUE)
+
+//==================PLU Lamp Rig==================\\
+
+/obj/item/clothing/suit/marine/lamp
+	name = "\improper PLU lamp rig"
+	icon_state = "lamp_rig"
+	desc = "A lightweight rig designed to support a shoulder lamp."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	blood_overlay_type = "coat"
+	flags_armor_protection = BODY_FLAG_CHEST
+	flags_cold_protection = BODY_FLAG_CHEST
+	min_cold_protection_temperature = null
+	slowdown = SLOWDOWN_ARMOR_NONE
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	time_to_unequip = 10
+	time_to_equip = 10

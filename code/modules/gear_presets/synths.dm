@@ -100,9 +100,9 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/synth/uscm/usasf
+/datum/equipment_preset/synth/usasf
 	name = "USASF Synthetic"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NAVY
 	faction_group = FACTION_LIST_MARINE
 	idtype = /obj/item/card/id/gold
@@ -110,7 +110,7 @@
 	rank = "Synthetic"
 	role_comm_title = "USASF Syn"
 
-/datum/equipment_preset/synth/uscm/usasf/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/usasf/load_gear(mob/living/carbon/human/new_human)
 	var/back_item = /obj/item/storage/backpack/marine/satchel
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/industrial
@@ -378,7 +378,7 @@
 		WEAR_FACE = /obj/item/clothing/mask/tornscarf,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility,
 		WEAR_BACK = /obj/item/storage/backpack/lightpack/five_slot,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,
@@ -427,7 +427,7 @@
 		WEAR_HEAD = /obj/item/clothing/head/cmcap,
 		WEAR_BODY = /obj/item/clothing/under/rank/synthetic/utility/yellow,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/norm,
-		WEAR_IN_BACK = /obj/item/storage/box/m94,
+		WEAR_IN_BACK = /obj/item/storage/box/flare,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest,
 		WEAR_IN_JACKET = /obj/item/device/binoculars,
 		WEAR_WAIST = /obj/item/storage/backpack/general_belt,
@@ -453,30 +453,6 @@
 		WEAR_R_HAND = /obj/item/device/camera,
 		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
 		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
-	)
-
-	survivor_variant = SECURITY_SURVIVOR
-
-/datum/equipment_preset/synth/survivor/cmb_synth
-	name = "Survivor - Synthetic - CMB Synth"
-	idtype = /obj/item/card/id/deputy
-	role_comm_title = "CMB Syn"
-	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/CMB,
-		WEAR_L_EAR = /obj/item/device/radio/headset/distress/CMB/limited,
-		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
-		WEAR_BODY = /obj/item/clothing/under/CM_uniform,
-		WEAR_ACCESSORY = /obj/item/clothing/accessory/holobadge/cord,
-		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
-		WEAR_IN_BACK = /obj/item/device/camera,
-		WEAR_IN_BACK = /obj/item/device/taperecorder,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/CMB,
-		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
-		WEAR_WAIST = /obj/item/storage/belt/security/MP/CMB/synth,
-		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
-		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
 	)
 
 	survivor_variant = SECURITY_SURVIVOR
@@ -690,7 +666,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/glass/reinforced/large_stack(new_human.back), WEAR_IN_R_STORE)
 
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/engi/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
@@ -739,7 +715,7 @@
 /datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/upp/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"

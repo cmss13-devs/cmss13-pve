@@ -1,0 +1,7 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - maptweak: "varedited light colors on Golden Arrow changed to have standardized Xenon colors"
+  - rscadd: "tweaks to lighting system for softer lighting (armor, tungsten/xenon tube lights, landing/take-off lighting, candles)"
+  - rscadd: "USS Golden Arrow light subtypes with a special xenon color"
+  - rscadd: "red light bulb subtype"

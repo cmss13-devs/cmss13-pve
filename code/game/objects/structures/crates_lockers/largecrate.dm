@@ -74,6 +74,10 @@
 	if(power >= EXPLOSION_THRESHOLD_VLOW)
 		unpack()
 
+/obj/structure/largecrate/pull_response(atom/movable/AM)
+	animate(src, pixel_x = 0, pixel_y = 0, time = 1 SECONDS)
+	return TRUE
+
 /obj/structure/largecrate/proc/take_damage(damage)
 	health -= damage
 	if(health <= 0)
@@ -362,6 +366,26 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	desc = "A white storage barrel."
 	icon_state = "barrel_white"
 
+/obj/structure/largecrate/random/barrel/medical
+	name = "white barrel"
+	desc = "A white storage barrel."
+	icon_state = "barrel_medical"
+
+/obj/structure/largecrate/random/barrel/black
+	name = "black barrel"
+	desc = "A black storage barrel."
+	icon_state = "barrel_wy"
+
+/obj/structure/largecrate/random/barrel/brown
+	name = "brown barrel"
+	desc = "A brown storage barrel."
+	icon_state = "barrel_tan"
+
+/obj/structure/largecrate/random/barrel/purewhite
+	name = "white barrel"
+	desc = "A white storage barrel."
+	icon_state = "barrel_purewhite"
+
 /obj/structure/largecrate/random/secure
 	name = "secure supply crate"
 	desc = "A secure crate."
@@ -527,8 +551,8 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 
 /obj/structure/largecrate/hunter_games_supplies/Initialize()
 	. = ..()
-	new /obj/item/storage/box/m94(src)
-	new /obj/item/storage/box/m94(src)
+	new /obj/item/storage/box/flare(src)
+	new /obj/item/storage/box/flare(src)
 	new /obj/item/storage/pouch/general/medium(src)
 	new /obj/item/storage/pouch/survival(src)
 	new /obj/item/device/flashlight (src)
@@ -547,10 +571,10 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/weapon/throwing_knife(src)
 	new /obj/item/weapon/throwing_knife(src)
-	new /obj/item/storage/box/uscm_mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/donkpockets(src)
-	new /obj/item/storage/box/MRE(src)
-	new /obj/item/storage/box/MRE(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/storage/box/mre(src)
 	new /obj/item/storage/box/pizza(src)
 
 

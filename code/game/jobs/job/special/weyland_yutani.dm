@@ -55,11 +55,11 @@
 
 /datum/job/special/wey_yu/pmc/standard
 	title = JOB_PMC_STANDARD
-	gear_preset = /datum/equipment_preset/pmc/pmc_standard
+	gear_preset = /datum/equipment_preset/pmc/standard
 
 /datum/job/special/wey_yu/pmc/medic
 	title = JOB_PMC_MEDIC
-	gear_preset = /datum/equipment_preset/pmc/pmc_medic
+	gear_preset = /datum/equipment_preset/pmc/medic
 
 /datum/job/special/wey_yu/pmc/engineer
 	title = JOB_PMC_ENGINEER
@@ -67,31 +67,31 @@
 
 /datum/job/special/wey_yu/pmc/gunner
 	title = JOB_PMC_GUNNER
-	gear_preset = /datum/equipment_preset/pmc/pmc_gunner
+	gear_preset = /datum/equipment_preset/pmc/gunner
 
 /datum/job/special/wey_yu/pmc/sniper
 	title = JOB_PMC_SNIPER
-	gear_preset = /datum/equipment_preset/pmc/pmc_sniper
+	gear_preset = /datum/equipment_preset/pmc/sniper
 
 /datum/job/special/wey_yu/pmc/leader
 	title = JOB_PMC_LEADER
-	gear_preset = /datum/equipment_preset/pmc/pmc_leader
+	gear_preset = /datum/equipment_preset/pmc/leader
 
 /datum/job/special/wey_yu/pmc/investigator
 	title = JOB_PMC_INVESTIGATOR
-	gear_preset = /datum/equipment_preset/pmc/pmc_med_investigator
+	gear_preset = /datum/equipment_preset/pmc/leader
 
 /datum/job/special/wey_yu/pmc/lead_invest
 	title = JOB_PMC_LEAD_INVEST
-	gear_preset = /datum/equipment_preset/pmc/pmc_lead_investigator
+	gear_preset = /datum/equipment_preset/pmc/leader
 
 /datum/job/special/wey_yu/pmc/detainer
 	title = JOB_PMC_DETAINER
-	gear_preset = /datum/equipment_preset/pmc/pmc_detainer
+	gear_preset = /datum/equipment_preset/pmc/standard
 
 /datum/job/special/wey_yu/pmc/crewman
 	title = JOB_PMC_CREWMAN
-	gear_preset = /datum/equipment_preset/pmc/pmc_crewman
+	gear_preset = /datum/equipment_preset/pmc/crewman
 
 /datum/job/special/wey_yu/pmc/doctor
 	title = JOB_PMC_DOCTOR

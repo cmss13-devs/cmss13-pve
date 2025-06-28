@@ -403,7 +403,7 @@
 								/obj/item/explosive/grenade/high_explosive/m15,
 								/obj/item/explosive/grenade/high_explosive/m15,
 								/obj/item/explosive/grenade/high_explosive,
-								/obj/item/storage/box/nade_box
+								/obj/item/ammo_box/magazine/nade_box
 								)
 			if(41 to 44)
 				crate = new /obj/structure/closet/crate/ammo(T)
@@ -452,8 +452,8 @@
 								/obj/item/ammo_box/rounds/smg/ap,
 								/obj/item/ammo_box/magazine/ap,
 								/obj/item/ammo_box/magazine/ext,
-								/obj/item/ammo_box/magazine/m4ra/ap,
-								/obj/item/ammo_box/magazine/m4ra/ap,
+								/obj/item/ammo_box/magazine/m49a/ap,
+								/obj/item/ammo_box/magazine/m49a/ap,
 								/obj/item/ammo_box/magazine/m39/ap,
 								/obj/item/ammo_box/magazine/m39/ext,
 				)
@@ -461,10 +461,10 @@
 			if(80 to 82)
 				crate = new /obj/structure/closet/crate/ammo(T)
 				choosemax = rand(2, 3)
-				randomitems = list(/obj/item/ammo_magazine/rifle/lmg/holo_target,
-								/obj/item/ammo_magazine/rifle/lmg/holo_target,
-								/obj/item/ammo_magazine/rifle/lmg,
-								/obj/item/ammo_magazine/rifle/lmg,
+				randomitems = list(/obj/item/ammo_magazine/hpr_box/holo_target,
+								/obj/item/ammo_magazine/hpr_box/holo_target,
+								/obj/item/ammo_magazine/hpr_box,
+								/obj/item/ammo_magazine/hpr_box,
 				)
 
 			if(83 to 86)
@@ -753,10 +753,10 @@
 							/obj/item/ammo_magazine/flamer_tank/large,
 							fuel)
 		if(7) // Scout
-			spawnitems = list(/obj/item/ammo_magazine/rifle/m4ra/custom,
-							/obj/item/ammo_magazine/rifle/m4ra/custom,
-							/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
-							/obj/item/ammo_magazine/rifle/m4ra/custom/impact)
+			spawnitems = list(/obj/item/ammo_magazine/rifle/m49a/custom,
+							/obj/item/ammo_magazine/rifle/m49a/custom,
+							/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
+							/obj/item/ammo_magazine/rifle/m49a/custom/impact)
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)

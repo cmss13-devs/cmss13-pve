@@ -31,3 +31,5 @@
 /maps/tutorial/ @Zonespace27
 
 # MULTIPLE OWNERS
+
+/code/modules/mob/living/carbon/human/ai/ @Danilcus-W @Zonespace27

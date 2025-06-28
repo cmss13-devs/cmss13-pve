@@ -69,8 +69,8 @@
 
 	if (user.a_intent == INTENT_HARM && ismob(target))
 		var/mob/M = target
-		if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-			user.apply_effect(3, WEAKEN)
+		if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+			user.apply_effect(0.5, WEAKEN)
 			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 			msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
@@ -82,13 +82,12 @@
 		syringestab(target, user)
 		return
 
-	var/injection_time = 2 SECONDS
+	var/injection_time = 10 SECONDS
 	if(user.skills)
-		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You aren't trained to use syringes..."))
-			return
+		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
+			to_chat(user, SPAN_WARNING("You aren't trained to use syringes... better go slow."))
 		else
-			injection_time = (injection_time*user.get_skill_duration_multiplier(SKILL_MEDICAL))
+			injection_time = ((injection_time/5)*user.get_skill_duration_multiplier(SKILL_MEDICAL))
 
 
 	switch(mode)

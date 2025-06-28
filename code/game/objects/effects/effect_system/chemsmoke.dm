@@ -41,9 +41,11 @@
 // Culls the selected turfs to a (roughly) circle shape, then calls smokeFlow() to make
 // sure the smoke can actually path to the turfs. This culls any turfs it can't reach.
 //------------------------------------------
-/datum/effect_system/smoke_spread/chem/set_up(datum/reagents/carry = null, n = 10, c = 0, loca, direct, datum/cause_data/new_cause_data)
+/datum/effect_system/smoke_spread/chem/set_up(datum/reagents/carry = null, n = 10, c = 0, loca, direct, datum/cause_data/new_cause_data, smoke_time)
 	cause_data = istype(new_cause_data) ? new_cause_data : cause_data
 	range = n * 0.3
+	if(smoke_time)
+		lifetime = smoke_time
 	cardinals = c
 	carry.copy_to(chemholder, carry.total_volume)
 
@@ -87,7 +89,7 @@
 	last_reaction_signature = reaction_signature
 
 	var/where = "[A.name]|[location.x], [location.y]"
-	var/whereLink = "<A HREF='?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>[where]</a>"
+	var/whereLink = "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>[where]</a>"
 
 	if(carry.my_atom.fingerprintslast)
 		msg_admin_niche("A chemical smoke reaction has taken place in ([whereLink])[contained]. Last associated key is [carry.my_atom.fingerprintslast].")

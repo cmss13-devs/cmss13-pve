@@ -73,3 +73,23 @@ endmap
 
 map whiskey_outpost_v2
 endmap
+
+map lv295_blacksite
+endmap
+map bmg290_otogi_egress_point
+endmap
+
+map canyon_32b
+endmap
+
+map taipei_station
+endmap
+
+map calliope_highway
+endmap
+
+map calliope_desert_bus
+endmap
+
+map oread_garrison
+endmap

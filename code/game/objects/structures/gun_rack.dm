@@ -129,6 +129,21 @@
 /obj/structure/gun_rack/flamer/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/uppflamer
+	name = "LPO80 incinerator rack"
+	icon_state = "lpo80"
+	desc = "A rack designed to hold two LPO80 incinerator units."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/flamer/upp
+	populate_type = /obj/item/weapon/gun/flamer/upp
+
+/obj/structure/gun_rack/uppflamer/unloaded
+	populate_type = /obj/item/weapon/gun/flamer/upp/unloaded
+
+/obj/structure/gun_rack/flamer/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/mk221
 	name = "M120 shotgun rack"
 	icon_state = "mk221"
@@ -139,4 +154,51 @@
 	populate_type = /obj/item/weapon/gun/shotgun/combat
 
 /obj/structure/gun_rack/mk221/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m20a
+	name = "M20A pulse rifle rack"
+	icon_state = "m20a"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m20a
+	populate_type = /obj/item/weapon/gun/rifle/m20a
+
+/obj/structure/gun_rack/m20a/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m20a/unloaded
+	initial_stored = 5
+	populate_type = /obj/item/weapon/gun/rifle/m20a/unloaded
+
+/obj/structure/gun_rack/m41/elite
+	name = "M41A2 pulse rifle rack"
+	icon_state = "m41a_elite"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite
+
+/obj/structure/gun_rack/m41/elite/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m41/elite/unloaded
+	initial_stored = 5
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded
+
+/obj/structure/gun_rack/m41/elite/unloaded/platoon
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/elite/unloaded/platoon
+
+/obj/structure/gun_rack/ag80
+	icon_state = "ag80"
+	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/ag80
+	populate_type = /obj/item/weapon/gun/rifle/ag80
+
+/obj/structure/gun_rack/ag80/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/ag80/unloaded
+
+/obj/structure/gun_rack/ag80/empty
 	initial_stored = 0

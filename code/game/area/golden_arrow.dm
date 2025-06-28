@@ -5,7 +5,7 @@
 	powernet_name = "golden_arrow"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_interval = 30
-	ambience_exterior = AMBIENCE_ALMAYER
+	ambience_exterior = AMBIENCE_SHIP
 	ceiling_muffle = FALSE
 
 /area/golden_arrow/hangar
@@ -87,6 +87,7 @@
 	icon_state = "airoom"
 	soundscape_playlist = SCAPE_PL_AICORE
 	soundscape_interval = 7
+	ambience_exterior = AMBIENCE_AICORE
 
 /area/golden_arrow/motor_pool
 	name = "\improper Motor Pool"
