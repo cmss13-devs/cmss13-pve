@@ -300,3 +300,17 @@
 	pill_desc = "A pill containing nitrogen and water. Used to treat Tramadol overdoses."
 	pill_initial_reagents = list("nitrogen" = 15, "water" = 15)
 	pill_icon_class = "spac"
+	color = COLOR_BLUE
+
+/obj/item/reagent_container/pill/carbon
+	pill_desc = "A bulky pill of activated carbon. Commonly thought to be effective in treating posioning, in reality it is inadequate for most cases, especially at this dosage."
+	pill_initial_reagents = list("carbon" = 7.5)
+	pill_icon_class = "alky"
+	color = "#38352e" //pretty dark but not 100% black
+
+/obj/item/reagent_container/pill/ethylredoxrazine
+	pill_desc = "An ethylredoxrazine pill. Used to treat alcohol poisoning and the related effects of similiar chemical depressants."
+	pill_initial_reagents = list("ethylredoxrazine" = 7.5)
+	pill_icon_class = "alky"
+	color = COLOR_OLIVE
+
