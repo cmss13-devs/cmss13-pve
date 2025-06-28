@@ -1083,20 +1083,20 @@
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
 
-/obj/item/device/radio/headset/distress/UPP/kdo
+/obj/item/device/radio/headset/distress/UPP/cdo
 	name = "UPP-Cdo headset"
 	desc = "A specialist headset used by UPP commandos. Channels are as follows: #j - combat controller, #u - UPP general, #T - commandos."
-	initial_keys = /obj/item/device/encryptionkey/upp/kdo
+	initial_keys = /obj/item/device/encryptionkey/upp/cdo
 
-/obj/item/device/radio/headset/distress/UPP/kdo/medic
+/obj/item/device/radio/headset/distress/UPP/cdo/medic
 	name = "UPP-CdoM headset"
 	desc = "A specialist headset used by UPP commandos. Channels are as follows: :o - colony, #j - combat controller, #m - medical #u - UPP general, #T - commandos."
-	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony)
+	initial_keys = list(/obj/item/device/encryptionkey/upp/cdo, /obj/item/device/encryptionkey/colony)
 
-/obj/item/device/radio/headset/distress/UPP/kdo/command
+/obj/item/device/radio/headset/distress/UPP/cdo/command
 	name = "UPP-CdoC headset"
 	desc = "A specialist headset used by UPP commandos. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general, #T - commandos."
-	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
+	initial_keys = list(/obj/item/device/encryptionkey/upp/cdo, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
 
 //CLF Headsets
 /obj/item/device/radio/headset/distress/CLF
