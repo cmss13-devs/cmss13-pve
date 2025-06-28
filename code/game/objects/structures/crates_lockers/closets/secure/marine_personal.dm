@@ -6,7 +6,7 @@
 	var/owner
 	var/has_cryo_gear = TRUE
 
-	var/job = "DO NOT USE!!!"
+	var/job = "DO NOT USE!!!" //why isn't this just null?? why not explain further??? why is it a string????
 	var/x_to_linked_spawn_turf
 	var/y_to_linked_spawn_turf
 	var/turf/linked_spawn_turf
@@ -36,7 +36,7 @@
 
 /obj/structure/closet/secure_closet/marine_personal/proc/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/jungle(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/rifleman
@@ -63,12 +63,12 @@
 	new /obj/item/clothing/under/marine/officer/bridge(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/service(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/jungle(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
-	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/shoes/marine/upp/knifeless(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman
@@ -92,14 +92,14 @@
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/UPP/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
-	new /obj/item/clothing/shoes/marine/upp(src)
+	new /obj/item/clothing/shoes/marine/upp/knifeless(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()
 	new /obj/item/clothing/under/marine/standard(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/jungle(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/rifleman
@@ -124,7 +124,7 @@
 /obj/structure/closet/secure_closet/marine_personal/pmc/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/pmc(src)
 	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
-	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+	new /obj/item/clothing/shoes/marine/civilian(src)
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/rifleman
 	job = JOB_SQUAD_MARINE

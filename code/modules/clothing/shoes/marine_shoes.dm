@@ -75,6 +75,9 @@
 /obj/item/clothing/shoes/marine/upp/guard/canc
 	spawn_item_type = /obj/item/weapon/knife/marine/chinese
 
+/obj/item/clothing/shoes/marine/upp/knifeless
+	spawn_item_type = null
+
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
 	desc = "M2 MOPP boots excel at keeping viscera or other biological contaminants away from your feet."
