@@ -239,3 +239,8 @@
 	desc = "It's a uniform that has a Wey-Yu insignia on it with the words \"Trainee\" stamped below."
 	icon_state = "trainee_uniform"
 	item_state = "trainee_uniform"
+
+/obj/item/clothing/under/suit_jacket/wallace
+	name = "Wallace's Shirt"
+	item_state = "wallace_under"
+	icon_state = "wallace_under"
