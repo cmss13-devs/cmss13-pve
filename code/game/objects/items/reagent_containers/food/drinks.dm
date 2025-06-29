@@ -16,6 +16,11 @@
 		gulp_size = 5
 	else gulp_size = max(floor(reagents.total_volume / 5), 5)
 
+/obj/item/reagent_container/food/drinks/flask/on_reagent_change()
+	if(gulp_size < 15)
+		gulp_size = 15
+	else gulp_size = max(floor(reagents.total_volume / 15), 15)
+
 /obj/item/reagent_container/food/drinks/attack(mob/M, mob/user)
 	var/datum/reagents/R = src.reagents
 
@@ -336,26 +341,26 @@
 	name = "metal flask"
 	desc = "A metal flask with a decent liquid capacity."
 	icon_state = "flask"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/marine
 	name = "\improper USCM flask"
 	desc = "A metal flask embossed with the USCM logo and probably filled with a slurry of water, motor oil, and medicinal alcohol."
 	icon_state = "flask_uscm"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/marine/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 59)
-	reagents.add_reagent("hooch", 1)
+	reagents.add_reagent("water", 118)
+	reagents.add_reagent("hooch", 2)
 
 /obj/item/reagent_container/food/drinks/flask/weylandyutani
 	name = "\improper Weyland-Yutani flask"
 	desc = "A metal flask embossed with Weyland-Yutani's signature logo that some corporate bootlicker probably ordered to be stocked in USS military vessels' canteen vendors."
 	icon_state = "flask_wy"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/weylandyutani/Initialize()
@@ -366,12 +371,12 @@
 	name = "canteen"
 	desc = "A ruggedized metal alloy flask. Can hold a good amount of water... Or other liquids."
 	icon_state = "canteen"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/canteen/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 60)
+	reagents.add_reagent("water", 120)
 
 /obj/item/reagent_container/food/drinks/flask/canteen/empty
 
@@ -383,7 +388,7 @@
 	name = "brown leather flask"
 	desc = "A flask with a leather band around the sides, often seen filled with whiskey and carried by rugged, gritty detectives."
 	icon_state = "brownflask"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/detflask/Initialize()
@@ -395,14 +400,14 @@
 	name = "black leather flask"
 	desc = "A flask with a slick black leather band around the sides. For those who can't be bothered to hang out at the bar to drink."
 	icon_state = "blackflask"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=17;y=7"
 
 /obj/item/reagent_container/food/drinks/flask/vacuumflask
 	name = "vacuum flask"
 	desc = "Keeping your drinks at the perfect temperature since 1892."
 	icon_state = "vacuumflask"
-	volume = 60
+	volume = 120
 	center_of_mass = "x=15;y=4"
 
 /obj/item/reagent_container/food/drinks/coffeecup
