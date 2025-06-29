@@ -331,8 +331,6 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	/obj/item/clothing/glasses/mgoggles/black/prescription = PREFIX_HAT_GARB_OVERRIDE,
 	/obj/item/clothing/glasses/mgoggles/orange = PREFIX_HAT_GARB_OVERRIDE,
 	/obj/item/clothing/glasses/mgoggles/orange/prescription = PREFIX_HAT_GARB_OVERRIDE,
-	/obj/item/clothing/glasses/mgoggles/v2 = NO_GARB_OVERRIDE,
-	/obj/item/clothing/glasses/mgoggles/v2/prescription = NO_GARB_OVERRIDE,
 	/obj/item/prop/helmetgarb/helmet_nvg = PREFIX_HAT_GARB_OVERRIDE,
 	/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = PREFIX_HAT_GARB_OVERRIDE,
 	/obj/item/prop/helmetgarb/helmet_nvg/marsoc = PREFIX_HAT_GARB_OVERRIDE,
@@ -353,7 +351,6 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "sulacocap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	var/helmet_overlays[]
 	var/flipped_cap = FALSE
 	var/list/flipping_message = list(
 		"flipped" = "You spin the hat backwards! You look like a tool.",

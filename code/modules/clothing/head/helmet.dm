@@ -174,8 +174,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/reagent_container/food/snacks/mushroompizzaslice = NO_GARB_OVERRIDE, // Fuck whoever put these under different paths for some REASON
 	/obj/item/reagent_container/food/snacks/vegetablepizzaslice = NO_GARB_OVERRIDE,
 	/obj/item/reagent_container/food/snacks/meatpizzaslice = NO_GARB_OVERRIDE,
-	/obj/item/reagent_container/food/snacks/packaged_burrito = NO_GARB_OVERRIDE,
-	/obj/item/reagent_container/food/snacks/packaged_hdogs = NO_GARB_OVERRIDE,
+	/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito = NO_GARB_OVERRIDE,
+	/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs = NO_GARB_OVERRIDE,
 	/obj/item/reagent_container/food/snacks/wrapped/chunk = NO_GARB_OVERRIDE,
 	/obj/item/reagent_container/food/snacks/donkpocket = NO_GARB_OVERRIDE,
 	/obj/item/reagent_container/food/snacks/wrapped/booniebars = NO_GARB_OVERRIDE,
@@ -183,8 +183,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	// EYEWEAR
 	/obj/item/clothing/glasses/mgoggles = PREFIX_HELMET_GARB_OVERRIDE, // helmet_
-	/obj/item/clothing/glasses/mgoggles/v2 = NO_GARB_OVERRIDE,
-	/obj/item/clothing/glasses/mgoggles/v2/prescription = NO_GARB_OVERRIDE,
 	/obj/item/clothing/glasses/mgoggles/prescription = PREFIX_HELMET_GARB_OVERRIDE, // helmet_
 	/obj/item/clothing/glasses/mgoggles/black = PREFIX_HELMET_GARB_OVERRIDE, // helmet_
 	/obj/item/clothing/glasses/mgoggles/black/prescription = PREFIX_HELMET_GARB_OVERRIDE, // helmet_
@@ -1254,7 +1252,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	throwforce = 15
 	attack_verb = list("whacked", "hit", "smacked", "beaten", "battered")
 	var/obj/structure/machinery/camera/camera
-	var/helmet_overlays[]
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NONE
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
