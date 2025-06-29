@@ -377,7 +377,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/head/headset
 
 /datum/gear/headwear/upp
-	allowed_origins = ORIGIN_UPP
+	allowed_origins = UPP_ORIGINS
 
 /datum/gear/headwear/upp/cap
 	display_name = "UPP cap"
