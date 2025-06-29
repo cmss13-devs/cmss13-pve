@@ -78,3 +78,7 @@
 
 /// Called when an atom has emp_act called on it, from /atom/emp_act: (severity)
 #define COMSIG_ATOM_EMP_ACT "atom_emp_act"
+
+#define COMSIG_ATOM_ENTERED "atom_entered"                      //from base of atom/Entered(): (atom/movable/entering, atom/oldloc, list/atom/oldlocs)
+#define COMSIG_ATOM_EXITED "atom_exited"						//from base of atom/Exited(): (atom/movable/exiting, direction)
+#define COMSIG_ATOM_INITIALIZED_ON "atom_initialized_on"		//called from atom/Initialize() of target: (atom/target)

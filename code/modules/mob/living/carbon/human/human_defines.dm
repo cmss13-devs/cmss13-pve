@@ -2,6 +2,7 @@
 	light_system = MOVABLE_LIGHT
 	rotate_on_lying = TRUE
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
+	submerge_height_offset = -6
 	//Hair color and style
 	var/r_hair = 0
 	var/g_hair = 0
