@@ -218,3 +218,15 @@
 /mob/living/handle_flamer_fire_crossed(obj/flamer_fire/fire)
 	. = ..()
 	fire.set_on_fire(src)
+
+/mob/living/lava_act()
+	if(stat == DEAD)
+		return FALSE
+	if(status_flags & GODMODE)
+		return TRUE //while godmode will stop the damage, we don't want the process to stop in case godmode is removed
+
+	var/lava_damage = 20
+	take_overall_damage(lava_damage, used_weapon = "lava", limb_damage_chance = 100)
+	adjust_fire_stacks(20)
+	IgniteMob()
+	return TRUE

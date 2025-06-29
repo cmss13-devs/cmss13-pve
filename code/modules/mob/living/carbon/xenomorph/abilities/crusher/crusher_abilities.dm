@@ -325,10 +325,9 @@
 		if(momentum)
 			stop_momentum()
 
-/datum/action/xeno_action/onclick/charger_charge/proc/handle_river(datum/source, covered)
+/datum/action/xeno_action/onclick/charger_charge/proc/handle_river(datum/source)
 	SIGNAL_HANDLER
-	if(!covered)
-		stop_momentum()
+	stop_momentum()
 
 /datum/action/xeno_action/onclick/charger_charge/proc/update_speed(mob/living/carbon/xenomorph/Xeno)
 	SIGNAL_HANDLER

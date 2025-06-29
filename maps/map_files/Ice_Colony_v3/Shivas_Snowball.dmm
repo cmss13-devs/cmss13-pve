@@ -655,7 +655,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "acL" = (
 /turf/closed/shuttle/elevator/arrivals,
@@ -924,7 +924,7 @@
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "ahi" = (
 /obj/structure/surface/table/woodentable,
@@ -1463,7 +1463,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "apD" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -1858,7 +1858,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "aus" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony,
@@ -2344,7 +2344,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "aEH" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
@@ -2369,7 +2369,7 @@
 /turf/open/floor/plating,
 /area/shiva/interior/valley_huts)
 "aEY" = (
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "aFa" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
@@ -2793,7 +2793,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "aNE" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
@@ -2980,7 +2980,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "aRN" = (
 /obj/structure/closet/radiation,
@@ -3602,7 +3602,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "bcJ" = (
 /turf/closed/shuttle/ert{
@@ -3617,7 +3617,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "bdF" = (
 /obj/structure/window/reinforced/tinted{
@@ -4669,7 +4669,7 @@
 /obj/structure/platform/strata{
 	dir = 1
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "ckB" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -4942,7 +4942,7 @@
 /turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "cxr" = (
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "cxJ" = (
 /obj/structure/platform_decoration/strata{
@@ -5032,7 +5032,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "cDi" = (
 /obj/structure/bed,
@@ -5214,7 +5214,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "cMl" = (
 /obj/structure/girder,
@@ -6456,7 +6456,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_s_research)
 "enq" = (
 /obj/structure/barricade/handrail/strata{
@@ -6798,7 +6798,7 @@
 	dir = 1
 	},
 /obj/structure/platform_decoration/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "eLu" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -7329,7 +7329,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "fyJ" = (
 /obj/effect/landmark/xeno_spawn,
@@ -7812,7 +7812,7 @@
 /obj/structure/prop/ice_colony/dense/planter_box/hydro{
 	density = 0
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "fVB" = (
 /obj/structure/barricade/handrail/strata,
@@ -8230,7 +8230,7 @@
 /area/shiva/interior/colony/research_hab)
 "gso" = (
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "gss" = (
 /turf/closed/wall/shiva/ice,
@@ -8947,7 +8947,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "hhv" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -9054,7 +9054,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "hpv" = (
 /obj/structure/bed/chair/office/light{
@@ -9853,7 +9853,7 @@
 /obj/structure/platform_decoration/strata{
 	dir = 1
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "iev" = (
 /obj/effect/decal/warning_stripes{
@@ -10055,7 +10055,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_lz2)
 "isk" = (
 /turf/open/floor/shiva/yellow/north,
@@ -10610,7 +10610,7 @@
 /area/shiva/interior/colony/n_admin)
 "iXG" = (
 /obj/structure/prop/ice_colony/dense/planter_box/hydro,
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "iXK" = (
 /obj/effect/decal/warning_stripes{
@@ -11289,7 +11289,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "jHP" = (
 /obj/item/storage/toolbox/electrical,
@@ -11332,7 +11332,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "jJZ" = (
 /obj/structure/largecrate/random/mini/small_case/b{
@@ -12317,7 +12317,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "kFR" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -12544,7 +12544,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "kTd" = (
 /turf/open/auto_turf/ice/layer0,
@@ -13214,7 +13214,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "lGF" = (
 /obj/structure/machinery/disposal,
@@ -13443,7 +13443,7 @@
 /obj/structure/platform/shiva/catwalk{
 	dir = 4
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "lVU" = (
 /obj/structure/machinery/light/double,
@@ -14198,7 +14198,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_s_research)
 "mIx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14712,7 +14712,7 @@
 /obj/structure/platform_decoration/strata{
 	dir = 8
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "nlL" = (
 /obj/structure/machinery/light/double{
@@ -15795,7 +15795,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "oGg" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
@@ -16585,7 +16585,7 @@
 /obj/structure/platform/strata{
 	dir = 1
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "pGy" = (
 /obj/item/storage/toolbox/emergency,
@@ -16986,7 +16986,7 @@
 /obj/structure/platform_decoration/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "qaF" = (
 /obj/structure/barricade/handrail/wire,
@@ -17420,7 +17420,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "qCm" = (
 /obj/structure/girder/reinforced,
@@ -17631,7 +17631,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_lz2)
 "qNK" = (
 /obj/structure/surface/table,
@@ -18280,7 +18280,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "rBC" = (
 /obj/effect/spawner/random/toolbox,
@@ -18457,7 +18457,7 @@
 /obj/structure/platform/strata{
 	dir = 1
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "rKa" = (
 /obj/structure/surface/table,
@@ -18633,7 +18633,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "rVb" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -19516,7 +19516,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "taB" = (
 /turf/open/floor/shiva/yellowfull,
@@ -19568,7 +19568,7 @@
 /obj/structure/platform_decoration/strata{
 	dir = 8
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "tdR" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -19594,7 +19594,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "tez" = (
 /obj/structure/barricade/snow{
@@ -19712,7 +19712,7 @@
 /obj/structure/platform_decoration/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "tlw" = (
 /turf/open/floor/shiva/snow_mat,
@@ -19894,7 +19894,7 @@
 	dir = 1
 	},
 /obj/structure/platform_decoration/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "tuA" = (
 /obj/structure/largecrate/random/mini/chest{
@@ -20091,7 +20091,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "tFk" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -20126,7 +20126,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "tGs" = (
 /obj/item/lightstick/red/spoke/planted{
@@ -20228,7 +20228,7 @@
 /obj/structure/platform/shiva/catwalk{
 	dir = 4
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/colony/central)
 "tLW" = (
 /obj/structure/flora/bush/snow{
@@ -21111,7 +21111,7 @@
 	pixel_x = -10;
 	pixel_y = 10
 	},
-/turf/open/gm/river/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/shiva/interior/caves/cp_camp)
 "uLi" = (
 /obj/structure/foamed_metal,
@@ -21637,7 +21637,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/warehouse/caves)
 "vAX" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -21924,7 +21924,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_lz2)
 "vQo" = (
 /obj/structure/surface/table,
@@ -21958,7 +21958,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_lz2)
 "vSL" = (
 /obj/structure/flora/tree/dead/tree_3,
@@ -22007,7 +22007,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_s_research)
 "vWg" = (
 /obj/structure/filingcabinet,
@@ -22529,7 +22529,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_s_research)
 "wFm" = (
 /obj/structure/surface/rack,
@@ -22971,7 +22971,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/cp_camp)
 "xtu" = (
 /obj/structure/flora/pottedplant,
@@ -22996,7 +22996,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/exterior/cp_lz2)
 "xuz" = (
 /obj/structure/machinery/space_heater,
@@ -23040,7 +23040,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "xwA" = (
 /obj/structure/bed/chair/comfy/blue,
@@ -23387,7 +23387,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/shiva/interior/caves/research_caves)
 "xVU" = (
 /obj/item/lightstick/red/spoke/planted{

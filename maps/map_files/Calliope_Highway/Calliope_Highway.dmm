@@ -1397,7 +1397,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/south_section)
 "bnw" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -2669,7 +2669,7 @@
 	pixel_y = -2;
 	layer = 2.6
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "cvP" = (
 /obj/structure/largecrate/random/barrel/true_random,
@@ -3467,7 +3467,7 @@
 /obj/structure/platform_decoration{
 	dir = 5
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "dmG" = (
 /obj/structure/surface/table/almayer,
@@ -3496,7 +3496,7 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/north_section)
 "dnU" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -3535,7 +3535,7 @@
 	dir = 8;
 	layer = 2.7
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "doC" = (
 /obj/effect/decal/siding{
@@ -7162,7 +7162,7 @@
 	density = 0;
 	climb_delay = 0
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "gAf" = (
 /obj/structure/flora/bush/desert/cactus,
@@ -7804,7 +7804,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "gXa" = (
-/turf/open/gm/river/no_overlay_lighted,
+/turf/open/liquid/water/river,
 /area/calliope/highway/checkpoint)
 "gXb" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -8169,7 +8169,7 @@
 	dir = 1;
 	layer = 2.6
 	},
-/turf/open/gm/river/dark_water,
+/turf/open/liquid/water/river,
 /area/calliope/bunker/south_section)
 "hkL" = (
 /obj/structure/machinery/camera{
@@ -8631,7 +8631,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/south_section)
 "hEp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10400,7 +10400,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/south_section)
 "jsp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10892,7 +10892,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "jJH" = (
-/turf/open/gm/river/no_overlay_lighted,
+/turf/open/liquid/water/river,
 /area/calliope/highway/southbound)
 "jJR" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -12532,7 +12532,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/calliope/highway/southbound)
 "laD" = (
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/south_section)
 "lbl" = (
 /obj/structure/ladder{
@@ -13232,7 +13232,7 @@
 /area/space)
 "lNO" = (
 /obj/structure/platform/shiva,
-/turf/open/gm/river/dark_water,
+/turf/open/liquid/water/river,
 /area/calliope/bunker/south_section)
 "lNQ" = (
 /obj/structure/platform{
@@ -14199,7 +14199,7 @@
 	dir = 4;
 	layer = 2.7
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "mHk" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -15116,7 +15116,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "nCO" = (
 /obj/structure/platform{
@@ -17511,7 +17511,7 @@
 /turf/open/floor/barber,
 /area/calliope/highway/southbound)
 "pMN" = (
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/north_section)
 "pMZ" = (
 /obj/structure/flora/bush/desert/cactus,
@@ -19947,7 +19947,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/calliope/bunker/cargo_under)
 "rYu" = (
-/turf/open/gm/river/dark_water,
+/turf/open/liquid/water/river,
 /area/calliope/bunker/south_section)
 "rYV" = (
 /obj/structure/bed/chair,
@@ -21258,7 +21258,7 @@
 	pixel_y = -2;
 	layer = 2.6
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "tsN" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -22133,7 +22133,7 @@
 /obj/structure/machinery/light/blue{
 	dir = 1
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "uiU" = (
 /obj/structure/platform{
@@ -22823,9 +22823,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker_exterior_buildings/east_checkpoint)
-"uVd" = (
-/turf/open/gm/river/ocean/no_overlay,
-/area/calliope/highway/southbound)
 "uVi" = (
 /obj/structure/largecrate/random{
 	pixel_x = -4;
@@ -23809,7 +23806,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/calliope/highway/checkpoint)
 "waj" = (
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "wak" = (
 /turf/open/gm/dirt/desert1,
@@ -23889,9 +23886,6 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/prison/floor_plate,
 /area/calliope/exterior_buildings/north_buildings)
-"wfv" = (
-/turf/open/gm/river/no_overlay,
-/area/calliope/highway/southbound)
 "wfz" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 10
@@ -24811,7 +24805,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "wNr" = (
 /obj/structure/barricade/handrail/kutjevo{
@@ -25091,7 +25085,7 @@
 /area/calliope/highway/checkpoint)
 "wVM" = (
 /obj/structure/machinery/light/blue,
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "wWF" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
@@ -25566,7 +25560,7 @@
 	density = 0;
 	climb_delay = 0
 	},
-/turf/open/gm/river/dark_water/no_overlay,
+/turf/open/liquid/water/river/no_overlay,
 /area/calliope/bunker/fuel_depot)
 "xwg" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
@@ -49473,13 +49467,13 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -49717,24 +49711,24 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -49965,27 +49959,27 @@ tZr
 fjg
 kdo
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
 jJH
 jJH
 jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -50217,24 +50211,24 @@ jkZ
 fjg
 kdo
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
 jJH
 jJH
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 dub
 jtT
 pqw
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -50470,10 +50464,10 @@ fjg
 kdo
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -50482,10 +50476,10 @@ dub
 dub
 kdo
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -50723,9 +50717,9 @@ kdo
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -50733,9 +50727,9 @@ dub
 dub
 dub
 ton
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -50976,18 +50970,18 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
+jJH
+jJH
 jJH
 jJH
 dub
 dub
 dub
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -51228,17 +51222,17 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -51480,16 +51474,16 @@ pqw
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
 jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -51733,14 +51727,14 @@ pqw
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -51986,12 +51980,12 @@ pqw
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -52239,10 +52233,10 @@ pqw
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -52493,9 +52487,9 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -52745,9 +52739,9 @@ pqw
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -52997,10 +52991,10 @@ dyA
 pqw
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 itJ
@@ -53250,9 +53244,9 @@ kdo
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -53502,10 +53496,10 @@ kdo
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 vNM
@@ -53754,10 +53748,10 @@ kdo
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -54007,9 +54001,9 @@ jJH
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -54259,9 +54253,9 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -54511,9 +54505,9 @@ jFK
 dub
 dub
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -54764,9 +54758,9 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -55016,9 +55010,9 @@ jFK
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -55268,9 +55262,9 @@ jFK
 dub
 dub
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -55521,8 +55515,8 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -55773,9 +55767,9 @@ jFK
 dub
 dub
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -56025,9 +56019,9 @@ jFK
 dub
 dub
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -56278,9 +56272,9 @@ dub
 dub
 dub
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -56530,10 +56524,10 @@ dub
 dub
 dub
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -56783,10 +56777,10 @@ dub
 dub
 jJH
 jJH
-uVd
+jJH
 dub
-uVd
-uVd
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -57034,11 +57028,11 @@ jFK
 jFK
 dub
 dub
-wfv
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -57289,9 +57283,9 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 dub
 jJH
 jJH
@@ -57541,10 +57535,10 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
+jJH
 dub
 jJH
 jJH
@@ -57795,8 +57789,8 @@ dub
 jJH
 jJH
 jJH
-uVd
-uVd
+jJH
+jJH
 dub
 jJH
 jJH
@@ -58047,9 +58041,9 @@ dub
 jJH
 jJH
 jJH
-uVd
-uVd
-uVd
+jJH
+jJH
+jJH
 jJH
 jJH
 dub
@@ -58300,7 +58294,7 @@ jJH
 jJH
 jJH
 dub
-uVd
+jJH
 jJH
 jJH
 jJH
@@ -58551,8 +58545,8 @@ dub
 dub
 jJH
 jJH
-uVd
-uVd
+jJH
+jJH
 jJH
 jJH
 jJH
@@ -58804,7 +58798,7 @@ dub
 jJH
 jJH
 jJH
-uVd
+jJH
 jJH
 jJH
 jJH
@@ -59056,7 +59050,7 @@ dub
 dub
 dub
 jJH
-uVd
+jJH
 jJH
 jJH
 jJH
