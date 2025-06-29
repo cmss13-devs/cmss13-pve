@@ -948,7 +948,7 @@
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_UACG
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
 	role_comm_title = "UACG"
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
@@ -1046,7 +1046,7 @@
 	assignment = "Colonial Militiaman Medic"
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "UACG-M"
-	skills = /datum/skills/medic
+	skills = /datum/skills/civilian/survivor/marshal/medic
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_CIVILIAN_MEDBAY)
 
 /datum/equipment_preset/colonist/security/guard/medic/load_gear(mob/living/carbon/human/new_human)
@@ -1100,7 +1100,7 @@
 	assignment = "Colonial Militiaman Technician"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "UACG-T"
-	skills = /datum/skills/sapper
+	skills = /datum/skills/civilian/survivor/marshal/tech
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 
 /datum/equipment_preset/colonist/security/guard/tech/load_gear(mob/living/carbon/human/new_human)
