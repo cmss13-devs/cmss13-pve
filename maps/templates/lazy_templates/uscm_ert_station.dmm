@@ -521,7 +521,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/machinery/medical_pod/autodoc,
+/obj/structure/machinery/medical_pod/autodoc/unskilled,
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/uscm_station)
 "gE" = (

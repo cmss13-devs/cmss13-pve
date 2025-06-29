@@ -503,7 +503,7 @@
 		new parts_type(loc, 2)
 	playsound(src, unpacking_sound, 35)
 
-	var/obj/structure/machinery/medical_pod/autodoc/E = new (T)
+	var/obj/structure/machinery/medical_pod/autodoc/unskilled/E = new (T)
 	var/obj/structure/machinery/autodoc_console/C = new (get_step(T, dir_needed))
 	E.connected = C
 	C.connected = E
