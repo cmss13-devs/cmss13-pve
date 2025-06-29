@@ -1088,22 +1088,27 @@
 "cd" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/reagent_container/food/snacks/lemondrop{
-	pixel_x = 8;
+	pixel_x = 9;
 	pixel_y = -1
 	},
 /obj/item/reagent_container/food/snacks/lemondrop{
-	pixel_x = 1;
-	pixel_y = -6
+	pixel_x = 2;
+	pixel_y = -5
 	},
 /obj/item/reagent_container/food/drinks/coffeecup{
 	pixel_x = -6;
 	pixel_y = 11
 	},
 /obj/item/reagent_container/pill/teabag{
-	pixel_x = 3;
-	pixel_y = 7
+	pixel_x = 5;
+	pixel_y = 10
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/item/trash/ceramic_plate{
+	pixel_y = -2;
+	pixel_x = 5;
+	layer = 3.01
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
 "ce" = (
@@ -1231,8 +1236,7 @@
 	layer = 2.52
 	},
 /obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
@@ -2208,12 +2212,16 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
 "eu" = (
-/obj/structure/urinal{
-	pixel_x = 0;
-	pixel_y = 31
-	},
 /obj/effect/decal/strata_decals/grime/grime4{
 	dir = 8
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/hms_brynhild/canteen)
@@ -2994,7 +3002,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/computer3frame,
+/obj/structure/machinery/computer/drone_control{
+	pixel_x = 3;
+	pixel_y = 0
+	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
 "fX" = (
@@ -4179,6 +4190,11 @@
 	pixel_x = -6;
 	pixel_y = -1
 	},
+/obj/item/trash/ceramic_plate{
+	layer = 3.01;
+	pixel_x = -6;
+	pixel_y = -5
+	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
 "im" = (
@@ -4248,13 +4264,12 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "iu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
@@ -4783,6 +4798,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/medical)
+"jw" = (
+/obj/structure/sign/banners/twe_flag,
+/turf/closed/wall/almayer/aicore/white/hull,
+/area/hms_brynhild/medical)
 "jx" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 24
@@ -4859,11 +4878,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600";
-	dir = 4
-	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "jG" = (
@@ -4887,6 +4901,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/lower_hangar)
 "jI" = (
+/obj/structure/machinery/door/poddoor/almayer/blended/white_aicore,
 /turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/hangar)
 "jJ" = (
@@ -6285,7 +6300,9 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "mE" = (
-/obj/structure/fence,
+/obj/structure/fence{
+	icon_state = "fence1"
+	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -6653,10 +6670,6 @@
 /obj/structure/barricade/handrail/type_b{
 	dir = 8
 	},
-/obj/structure/sign/banners/twe_worn{
-	pixel_x = 0;
-	pixel_y = 30
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -6951,12 +6964,11 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
 "od" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
@@ -10452,10 +10464,6 @@
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
-/mob/living/simple_animal/hostile/retaliate/goat{
-	name = "Matilda";
-	desc = "One of the Welsh marines found her and her aboard. Seemingly unphased by tachyon shunts, or gets shoved into a hypersleep pod by someone."
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
@@ -10481,26 +10489,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/motor_pool)
-"vM" = (
-/obj/item/tool/kitchen/tray{
-	pixel_x = -6;
-	pixel_y = 16
-	},
-/obj/item/mre_food_packet/clf{
-	pixel_x = -4;
-	pixel_y = 15;
-	layer = 3.03
-	},
-/turf/open/floor/prison/floor_plate,
-/area/hms_brynhild/supply)
 "vN" = (
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/supply)
 "vP" = (
-/obj/structure/dropship_equipment/weapon/laser_beam_gun,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/dropship_equipment/weapon/rocket_pod,
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/hangar)
 "vR" = (
@@ -10965,6 +10961,11 @@
 /obj/item/mre_food_packet/clf{
 	pixel_x = 6;
 	pixel_y = 11
+	},
+/obj/item/trash/ceramic_plate{
+	layer = 3.01;
+	pixel_x = 5;
+	pixel_y = 7
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
@@ -12828,7 +12829,6 @@
 	pixel_x = 5;
 	pixel_y = 0
 	},
-/obj/item/maintenance_jack,
 /turf/open/floor/prison,
 /area/hms_brynhild/synthcloset)
 "CZ" = (
@@ -13121,16 +13121,15 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
 "DI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/Docking)
@@ -14956,10 +14955,6 @@
 	pixel_x = 4;
 	pixel_y = 21
 	},
-/obj/item/weapon/telebaton{
-	pixel_x = -4;
-	pixel_y = 22
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -15145,11 +15140,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/hangar)
-"Jd" = (
-/obj/structure/bed/chair/comfy/bench/south/west,
-/obj/item/reagent_container/pill/teabag/earl_grey,
-/turf/open/organic/grass/astroturf,
-/area/hms_brynhild/medical)
 "Je" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -17204,13 +17194,6 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
-"Pa" = (
-/obj/structure/reagent_dispensers/beerkeg/alt{
-	pixel_x = -8;
-	pixel_y = -3
-	},
-/turf/open/floor/carpet,
-/area/hms_brynhild/canteen)
 "Pb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -17364,10 +17347,6 @@
 	pixel_y = 6
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/armoury_station)
 "PC" = (
@@ -17768,13 +17747,6 @@
 	pixel_x = 1
 	},
 /turf/open/floor/prison,
-/area/hms_brynhild/hangar)
-"QJ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow";
-	color = "#E10600"
-	},
-/turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
 "QK" = (
 /obj/structure/surface/table/reinforced/black,
@@ -19163,7 +19135,9 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/engineering)
 "Vr" = (
-/obj/structure/closet/cabinet,
+/obj/structure/closet/cabinet{
+	req_one_access_txt = "294"
+	},
 /obj/structure/window/reinforced/toughened{
 	dir = 4
 	},
@@ -20080,12 +20054,6 @@
 	pixel_y = -12
 	},
 /turf/open/floor/prison,
-/area/hms_brynhild/hangar)
-"XZ" = (
-/obj/structure/machinery/door/poddoor/two_tile/four_tile{
-	name = "hangar door"
-	},
-/turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/hangar)
 "Ya" = (
 /obj/structure/cable/heavyduty{
@@ -25156,9 +25124,9 @@ Vt
 zn
 zm
 LN
-LE
-xC
 rZ
+xC
+LE
 UY
 zm
 zm
@@ -25304,7 +25272,7 @@ zn
 zn
 xC
 uU
-Pa
+KI
 KI
 Vr
 zm
@@ -27965,7 +27933,7 @@ iw
 iw
 nR
 XD
-Jd
+Om
 jC
 jC
 vE
@@ -29251,7 +29219,7 @@ vm
 dw
 sq
 cg
-tf
+jw
 nt
 Er
 vJ
@@ -31560,7 +31528,7 @@ lW
 xQ
 yl
 yl
-XZ
+Gg
 Wn
 Wn
 Wn
@@ -31702,7 +31670,7 @@ nE
 Rs
 Rs
 Rs
-jI
+Gg
 Wn
 Wn
 Wn
@@ -31844,7 +31812,7 @@ nE
 Rs
 Rs
 Rs
-jI
+Gg
 Wn
 Wn
 Wn
@@ -32128,7 +32096,7 @@ KW
 zJ
 zJ
 zJ
-XZ
+jI
 Wn
 Wn
 Wn
@@ -32366,7 +32334,7 @@ AQ
 AQ
 AQ
 NJ
-vM
+Av
 vK
 Qx
 AQ
@@ -32696,7 +32664,7 @@ nE
 vz
 Ew
 AM
-XZ
+jI
 Wn
 Wn
 Wn
@@ -33264,7 +33232,7 @@ Vc
 Wy
 zJ
 zJ
-XZ
+jI
 Wn
 Wn
 Wn
@@ -33832,7 +33800,7 @@ nE
 zJ
 zJ
 zJ
-XZ
+Gg
 Wn
 Wn
 Wn
@@ -33974,7 +33942,7 @@ nE
 Rs
 Rs
 kM
-jI
+Gg
 Wn
 Wn
 Wn
@@ -34116,7 +34084,7 @@ nE
 Rs
 kM
 kM
-jI
+Gg
 Wn
 Wn
 Wn
@@ -34258,7 +34226,7 @@ nE
 zJ
 zJ
 uw
-jI
+Gg
 Wn
 Wn
 Wn
@@ -34400,7 +34368,7 @@ nE
 zJ
 cX
 zJ
-XZ
+jI
 Wn
 Wn
 Wn
@@ -34968,7 +34936,7 @@ Vc
 uw
 zJ
 zJ
-XZ
+jI
 Wn
 Wn
 Wn
@@ -35536,7 +35504,7 @@ nE
 vz
 Ew
 AM
-XZ
+jI
 Wn
 Wn
 Wn
@@ -36104,7 +36072,7 @@ KW
 zJ
 cX
 zJ
-XZ
+jI
 Wn
 Wn
 Wn
@@ -36246,7 +36214,7 @@ nE
 kM
 Rs
 Rs
-jI
+Gg
 Wn
 Wn
 Wn
@@ -36388,7 +36356,7 @@ Vc
 kM
 Rs
 Rs
-jI
+Gg
 Wn
 Wn
 Wn
@@ -36530,7 +36498,7 @@ DM
 hw
 hw
 hw
-jI
+Gg
 Wn
 Wn
 Wn
@@ -37950,7 +37918,7 @@ zJ
 zJ
 zJ
 zJ
-in
+od
 YB
 Kc
 YB
@@ -38092,7 +38060,7 @@ zJ
 zJ
 zJ
 zJ
-QJ
+eE
 YB
 Kc
 YB
