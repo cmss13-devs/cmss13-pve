@@ -43,3 +43,28 @@
 
 /// VAI-L, Team Leader
 #define PAY_SHORT_VAI_L "VAI-L"
+
+// BLACK DRAGOONS COMPANY LTD.
+/// BD-G, Logistics Grunt
+#define PAY_SHORT_BD_G "BD-G"
+
+/// BD-S, Sentinel
+#define PAY_SHORT_BD_S "BD-S"
+
+/// BD-SV, Supervisor
+#define PAY_SHORT_BD_SV "BD-SV"
+
+/// BD-P, Pilot
+#define PAY_SHORT_BD_P "BD-P"
+
+/// BD-S, Bulwark
+#define PAY_SHORT_BD_B "BD-B"
+
+/// BD-S, Synth
+#define PAY_SHORT_BD_SY "BD-SY"
+
+/// BD-I, Infiltrator
+#define PAY_SHORT_BD_I "BD-I"
+
+/// BD-O, Officer
+#define PAY_SHORT_BD_O "BD-O"

@@ -488,11 +488,6 @@
 	desc = "A set of armor worn by medical members of the Weyland-Yutani Emergency Response Team. Has red and white highlights."
 	icon_state = "ertarmor_med"
 
-
-
-
-
-
 /obj/item/clothing/suit/armor/hos
 	name = "armored coat"
 	desc = "A greatcoat enhanced with a special alloy for some protection and style."
