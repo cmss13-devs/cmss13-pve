@@ -332,6 +332,42 @@ export const RADIO_PREFIXES = {
     id: 'pmc-cmd',
     label: 'PMC Cmd.',
   },
+  ':0 ': {
+    id: 'uscg',
+    label: 'USCG',
+  },
+  '.0 ': {
+    id: 'uscg',
+    label: 'USCG',
+  },
+  '#0 ': {
+    id: 'uscg',
+    label: 'USCG',
+  },
+  ':1 ': {
+    id: 'us-army',
+    label: 'US Army',
+  },
+  '.1 ': {
+    id: 'us-army',
+    label: 'US Army',
+  },
+  '#1 ': {
+    id: 'us-army',
+    label: 'US Army',
+  },
+  ':2 ': {
+    id: 'usasf',
+    label: 'USASF',
+  },
+  '.2 ': {
+    id: 'usasf',
+    label: 'USASF',
+  },
+  '#2 ': {
+    id: 'usasf',
+    label: 'USASF',
+  },
 } as const;
 
 export const LANGUAGE_PREFIXES = {
