@@ -1,11 +1,9 @@
-import './styles/main.scss';
-
-import { isEscape, KEY } from 'common/keys';
-import { type BooleanLike, classes } from 'common/react';
-import { useEffect, useRef, useState } from 'react';
+import { KEY } from 'common/keys';
+import { BooleanLike } from 'common/react';
+import { Component, createRef, RefObject } from 'react';
 import { dragStartHandler } from 'tgui/drag';
 
-import { type Channel, ChannelIterator } from './ChannelIterator';
+import { Channel, ChannelIterator } from './ChannelIterator';
 import { ChatHistory } from './ChatHistory';
 import {
   LANGUAGE_PREFIXES,
@@ -19,7 +17,6 @@ import { byondMessages } from './timers';
 type ByondOpen = {
   channel: Channel;
   mapfocus: BooleanLike;
-  lobbyfocus: BooleanLike;
 };
 
 type ByondProps = {
@@ -30,176 +27,208 @@ type ByondProps = {
   languages: Array<string>;
 };
 
-export function TguiSay() {
-  const innerRef = useRef<HTMLTextAreaElement>(null);
-  const channelIterator = useRef(new ChannelIterator());
-  const chatHistory = useRef(new ChatHistory());
-  const messages = useRef(byondMessages);
-  const scale = useRef(true);
+type State = {
+  buttonContent: string | number;
+  size: WindowSize;
+};
 
-  // I initially wanted to make these an object or a reducer, but it's not really worth it.
-  // You lose the granulatity and add a lot of boilerplate.
-  const [buttonContent, setButtonContent] = useState('');
-  const [currentPrefix, setCurrentPrefix] = useState<
-    keyof typeof RADIO_PREFIXES | keyof typeof LANGUAGE_PREFIXES | null
-  >(null);
-  const [maxLength, setMaxLength] = useState(1024);
-  const [size, setSize] = useState(WindowSize.Small);
-  const [lightMode, setLightMode] = useState(false);
-  const [value, setValue] = useState('');
-  const [extraChannels, setExtraChennels] = useState<Array<Channel>>([]);
-  const [languages, setLanguages] = useState<Array<string>>([]);
+export class TguiSay extends Component<{}, State> {
+  private channelIterator: ChannelIterator;
+  private chatHistory: ChatHistory;
+  private currentPrefix:
+    | keyof typeof RADIO_PREFIXES
+    | keyof typeof LANGUAGE_PREFIXES
+    | null;
+  private innerRef: RefObject<HTMLTextAreaElement>;
+  private lightMode: boolean;
+  private scale: boolean;
+  private extraChannels: Array<Channel>;
+  private maxLength: number;
+  private languages: Array<string>;
+  private messages: typeof byondMessages;
+  state: State;
 
-  const position = useRef([window.screenX, window.screenY]);
-  const isDragging = useRef(false);
+  constructor(props: never) {
+    super(props);
 
-  function handleArrowKeys(direction: KEY.Up | KEY.Down): void {
-    const chat = chatHistory.current;
-    const iterator = channelIterator.current;
+    this.channelIterator = new ChannelIterator();
+    this.chatHistory = new ChatHistory();
+    this.currentPrefix = null;
+    this.innerRef = createRef();
+    this.lightMode = false;
+    this.maxLength = 1024;
+    this.messages = byondMessages;
+    this.languages = [];
+    this.state = {
+      buttonContent: '',
+      size: WindowSize.Small,
+    };
+
+    this.handleArrowKeys = this.handleArrowKeys.bind(this);
+    this.handleBackspaceDelete = this.handleBackspaceDelete.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleForceSay = this.handleForceSay.bind(this);
+    this.handleIncrementChannel = this.handleIncrementChannel.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleProps = this.handleProps.bind(this);
+    this.reset = this.reset.bind(this);
+    this.setSize = this.setSize.bind(this);
+    this.setValue = this.setValue.bind(this);
+  }
+
+  componentDidMount() {
+    windowSet(WindowSize.Small, this.scale);
+
+    Byond.subscribeTo('props', this.handleProps);
+    Byond.subscribeTo('force', this.handleForceSay);
+    Byond.subscribeTo('open', this.handleOpen);
+  }
+
+  handleArrowKeys(direction: KEY.Up | KEY.Down) {
+    const currentValue = this.innerRef.current?.value;
 
     if (direction === KEY.Up) {
-      if (chat.isAtLatest() && value) {
+      if (this.chatHistory.isAtLatest() && currentValue) {
         // Save current message to temp history if at the most recent message
-        chat.saveTemp(value);
+        this.chatHistory.saveTemp(currentValue);
       }
       // Try to get the previous message, fall back to the current value if none
-      const prevMessage = chat.getOlderMessage();
+      const prevMessage = this.chatHistory.getOlderMessage();
 
       if (prevMessage) {
-        setButtonContent(chat.getIndex().toString());
-        setValue(prevMessage);
+        this.setState({ buttonContent: this.chatHistory.getIndex() });
+        this.setSize(prevMessage.length);
+        this.setValue(prevMessage);
       }
     } else {
-      const nextMessage = chat.getNewerMessage() || chat.getTemp() || '';
+      const nextMessage =
+        this.chatHistory.getNewerMessage() || this.chatHistory.getTemp() || '';
 
-      const newContent = chat.isAtLatest()
-        ? iterator.current()
-        : chat.getIndex().toString();
+      const buttonContent = this.chatHistory.isAtLatest()
+        ? this.channelIterator.current()
+        : this.chatHistory.getIndex();
 
-      setButtonContent(newContent);
-      setValue(nextMessage);
+      this.setState({ buttonContent });
+      this.setSize(nextMessage.length);
+      this.setValue(nextMessage);
     }
   }
 
-  function handleBackspaceDelete(): void {
-    const chat = chatHistory.current;
-    const iterator = channelIterator.current;
+  handleBackspaceDelete() {
+    const typed = this.innerRef.current?.value;
 
     // User is on a chat history message
-    if (!chat.isAtLatest()) {
-      chat.reset();
-      setButtonContent(currentPrefix ?? iterator.current());
-
+    if (!this.chatHistory.isAtLatest()) {
+      this.chatHistory.reset();
+      this.setState({
+        buttonContent: this.currentPrefix ?? this.channelIterator.current(),
+      });
       // Empty input, resets the channel
-    } else if (currentPrefix && iterator.isSay() && value?.length === 0) {
-      setCurrentPrefix(null);
-      setButtonContent(iterator.current());
-    }
-  }
-
-  function handleButtonClick(event: React.MouseEvent<HTMLButtonElement>): void {
-    isDragging.current = true;
-
-    setTimeout(() => {
-      // So the button doesn't jump around accidentally
-      if (isDragging.current) {
-        dragStartHandler(event.nativeEvent);
-      }
-    }, 50);
-  }
-
-  // Prevents the button from changing channels if it's dragged
-  function handleButtonRelease(): void {
-    isDragging.current = false;
-    const currentPosition = [window.screenX, window.screenY];
-
-    if (JSON.stringify(position.current) !== JSON.stringify(currentPosition)) {
-      position.current = currentPosition;
-      return;
+    } else if (
+      !!this.currentPrefix &&
+      this.channelIterator.isSay() &&
+      typed?.length === 0
+    ) {
+      this.currentPrefix = null;
+      this.setState({ buttonContent: this.channelIterator.current() });
     }
 
-    handleIncrementChannel();
+    this.setSize(typed?.length);
   }
 
-  function handleClose(): void {
-    innerRef.current?.blur();
-    windowClose(scale.current);
+  handleClose() {
+    const current = this.innerRef.current;
 
-    setTimeout(() => {
-      chatHistory.current.reset();
-      channelIterator.current.reset();
-      unloadChat();
-    }, 25);
+    if (current) {
+      current.blur();
+    }
+
+    this.reset();
+    this.chatHistory.reset();
+    this.channelIterator.reset();
+    this.currentPrefix = null;
+    windowClose(this.scale);
   }
 
-  function handleEnter(): void {
-    const iterator = channelIterator.current;
-    const prefix = currentPrefix ?? '';
+  handleEnter() {
+    const prefix = this.currentPrefix ?? '';
+    const value = this.innerRef.current?.value;
 
-    if (value?.length && value.length < maxLength) {
-      chatHistory.current.add(value);
+    if (value?.length && value.length < this.maxLength) {
+      this.chatHistory.add(value);
       Byond.sendMessage('entry', {
-        channel: iterator.current(),
-        entry: iterator.isSay() ? prefix + value : value,
+        channel: this.channelIterator.current(),
+        entry: this.channelIterator.isSay() ? prefix + value : value,
       });
     }
 
-    handleClose();
+    this.handleClose();
   }
 
-  function handleForceSay(): void {
-    const iterator = channelIterator.current;
-
+  handleForceSay() {
+    const currentValue = this.innerRef.current?.value;
     // Only force say if we're on a visible channel and have typed something
-    if (!value || iterator.isVisible()) return;
+    if (!currentValue || !this.channelIterator.isVisible()) return;
 
-    const prefix = currentPrefix ?? '';
-    const grunt = iterator.isSay() ? prefix + value : value;
+    const prefix = this.currentPrefix ?? '';
+    const grunt = this.channelIterator.isSay()
+      ? prefix + currentValue
+      : currentValue;
 
-    messages.current.forceSayMsg(grunt, iterator.current());
-    unloadChat();
+    this.messages.forceSayMsg(grunt, this.channelIterator.current());
+    this.reset();
   }
 
-  function handleIncrementChannel(): void {
-    const iterator = channelIterator.current;
+  handleIncrementChannel() {
+    this.currentPrefix = null;
 
-    iterator.next(extraChannels);
-    setButtonContent(iterator.current());
-    setCurrentPrefix(null);
-    messages.current.channelIncrementMsg(iterator.isVisible());
+    const prevThinking = this.channelIterator.isVisible();
+    this.channelIterator.next(this.extraChannels);
+    const nowThinking = this.channelIterator.isVisible();
+
+    // If we've changed to/from a quiet channel, tell byond to hide/show thinking indicators
+    if (prevThinking !== nowThinking) {
+      this.messages.channelIncrementMsg(nowThinking);
+    }
+
+    this.setState({ buttonContent: this.channelIterator.current() });
   }
 
-  function handleInput(event: React.FormEvent<HTMLTextAreaElement>): void {
-    const iterator = channelIterator.current;
-    let newValue = event.currentTarget.value;
+  handleInput() {
+    const typed = this.innerRef.current?.value;
 
-    const newPrefix = getPrefix(newValue) || currentPrefix;
-    // Handles switching prefixes
-    if (canChangePrefix(newPrefix)) {
+    // If we're typing, send the message
+    if (this.channelIterator.isVisible()) {
+      this.messages.typingMsg();
+    }
+
+    this.setSize(typed?.length);
+
+    // Is there a value? Is it long enough to be a prefix?
+    if (!typed || typed.length < 3) {
+      return;
+    }
+
+    const newPrefix = getPrefix(typed) || this.currentPrefix;
+
+    if (this.canChangePrefix(newPrefix)) {
       if (RADIO_PREFIXES[newPrefix!]) {
-        setButtonContent(RADIO_PREFIXES[newPrefix!]?.label);
+        this.setState({ buttonContent: RADIO_PREFIXES[newPrefix!]?.label });
       } else if (LANGUAGE_PREFIXES[newPrefix!]) {
-        setButtonContent(LANGUAGE_PREFIXES[newPrefix!]?.label);
-      }
-      setCurrentPrefix(newPrefix);
-      newValue = newValue.slice(3);
-      iterator.set('Say');
-
-      if (newPrefix === ':b ') {
-        Byond.sendMessage('thinking', { visible: false });
+        this.setState({ buttonContent: LANGUAGE_PREFIXES[newPrefix!]?.label });
       }
     }
 
-    // Handles typing indicators
-    if (channelIterator.current.isVisible() && newPrefix !== ':b ') {
-      messages.current.typingMsg();
-    }
-
-    setValue(newValue);
+    this.currentPrefix = newPrefix;
+    this.setValue(typed.slice(3));
+    this.channelIterator.set('Say');
   }
 
-  function canChangePrefix(newPrefix: string | null) {
-    if (!newPrefix || newPrefix === currentPrefix) {
+  canChangePrefix(newPrefix: string | null) {
+    if (!newPrefix || newPrefix === this.currentPrefix) {
       return false;
     }
 
@@ -210,14 +239,13 @@ export function TguiSay() {
     const newLanguage = LANGUAGE_PREFIXES[newPrefix];
     if (newLanguage) {
       // Do we know this language?
-      if (!languages.includes(newLanguage.id)) {
+      if (!this.languages.includes(newLanguage.id)) {
         return false;
       }
-
       // Are we on the default channel with no prefix?
       if (
-        !channelIterator.current.isSay() ||
-        (currentPrefix && RADIO_PREFIXES[currentPrefix])
+        !this.channelIterator.isSay() ||
+        (this.currentPrefix && RADIO_PREFIXES[this.currentPrefix])
       ) {
         return false;
       }
@@ -226,151 +254,162 @@ export function TguiSay() {
     return true;
   }
 
-  function handleKeyDown(
-    event: React.KeyboardEvent<HTMLTextAreaElement>,
-  ): void {
-    if (event.getModifierState('AltGraph')) return;
-
+  handleKeyDown(event) {
     switch (event.key) {
       case KEY.Up:
       case KEY.Down:
         event.preventDefault();
-        handleArrowKeys(event.key);
+        this.handleArrowKeys(event.key);
         break;
 
       case KEY.Delete:
       case KEY.Backspace:
-        handleBackspaceDelete();
+        this.handleBackspaceDelete();
         break;
 
       case KEY.Enter:
         event.preventDefault();
-        handleEnter();
+        this.handleEnter();
         break;
 
       case KEY.Tab:
         event.preventDefault();
-        handleIncrementChannel();
+        this.handleIncrementChannel();
         break;
 
-      default:
-        if (isEscape(event.key)) {
-          handleClose();
-        }
+      case KEY.Escape:
+        this.handleClose();
+        break;
     }
   }
 
-  function handleOpen(data: ByondOpen): void {
-    setTimeout(() => {
-      innerRef.current?.focus();
-    }, 1);
-
-    const { mapfocus, lobbyfocus } = data;
-
-    if (!mapfocus && !lobbyfocus) {
+  handleOpen = (data: ByondOpen) => {
+    const { channel, mapfocus } = data;
+    if (!mapfocus) {
       return;
     }
-    channelIterator.current.set(data.channel);
 
-    setCurrentPrefix(null);
-    setButtonContent(channelIterator.current.current());
-    windowOpen(channelIterator.current.current(), scale.current);
-    innerRef.current?.focus();
+    setTimeout(() => {
+      this.innerRef.current?.focus();
+    }, 0);
+
+    // Catches the case where the modal is already open
+    if (this.channelIterator.isSay()) {
+      this.channelIterator.set(channel);
+    }
+    this.setState({ buttonContent: this.channelIterator.current() });
+
+    windowOpen(this.channelIterator.current(), this.scale);
+  };
+
+  handleProps = (data: ByondProps) => {
+    const { maxLength, lightMode, extraChannels, scale, languages } = data;
+    this.maxLength = maxLength;
+    this.lightMode = !!lightMode;
+    this.scale = !!scale;
+    this.extraChannels = extraChannels;
+    this.languages = languages;
+
+    if (!this.scale) {
+      window.document.body.style['zoom'] = `${100 / window.devicePixelRatio}%`;
+    } else {
+      window.document.body.style['zoom'] = null;
+    }
+  };
+
+  reset() {
+    this.setValue('');
+    this.setSize();
+    this.setState({
+      buttonContent: this.channelIterator.current(),
+    });
   }
 
-  function handleProps(data: ByondProps): void {
-    setMaxLength(data.maxLength);
-    setLightMode(!!data.lightMode);
-    setExtraChennels(data.extraChannels);
-    setLanguages(data.languages);
-    scale.current = !!data.scale;
-  }
-
-  function unloadChat(): void {
-    setCurrentPrefix(null);
-    setButtonContent(channelIterator.current.current());
-    setValue('');
-  }
-
-  /** Subscribe to Byond messages */
-  useEffect(() => {
-    Byond.subscribeTo('props', handleProps);
-    Byond.subscribeTo('force', handleForceSay);
-    Byond.subscribeTo('open', handleOpen);
-  }, []);
-
-  /** Value has changed, we need to check if the size of the window is ok */
-  useEffect(() => {
-    const len = value?.length || 0;
-
+  setSize(length = 0) {
     let newSize: WindowSize;
-    if (len > LineLength.Medium) {
+
+    if (length > LineLength.Medium) {
       newSize = WindowSize.Large;
-    } else if (len <= LineLength.Medium && len > LineLength.Small) {
+    } else if (length <= LineLength.Medium && length > LineLength.Small) {
       newSize = WindowSize.Medium;
     } else {
       newSize = WindowSize.Small;
     }
 
-    if (size !== newSize) {
-      windowSet(newSize, scale.current);
-      setSize(newSize);
+    if (this.state.size !== newSize) {
+      this.setState({ size: newSize });
+      windowSet(newSize, this.scale);
     }
-  }, [value]);
+  }
 
-  const theme =
-    (lightMode && 'lightMode') ||
-    (currentPrefix && RADIO_PREFIXES[currentPrefix])?.id ||
-    channelIterator.current.current().toLowerCase();
+  setValue(value: string) {
+    const textArea = this.innerRef.current;
+    if (textArea) {
+      textArea.value = value;
+    }
+  }
+
+  render() {
+    const theme =
+      (this.lightMode && 'lightMode') ||
+      (this.currentPrefix && RADIO_PREFIXES[this.currentPrefix])?.id ||
+      this.channelIterator.current().toLowerCase();
+
+    return (
+      <div className={`window window-${theme} window-${this.state.size}`}>
+        <Dragzone position="top" theme={theme} />
+        <div className="window__content">
+          <Dragzone position="left" theme={theme} />
+          {!!theme && (
+            <button
+              className={`button button-${theme}`}
+              onClick={this.handleIncrementChannel}
+              type="button"
+            >
+              {this.state.buttonContent}
+            </button>
+          )}
+          <textarea
+            className={`textarea textarea-${theme}`}
+            maxLength={this.maxLength}
+            onInput={this.handleInput}
+            onKeyDown={this.handleKeyDown}
+            ref={this.innerRef}
+          />
+          {!!theme && (
+            <button
+              key="escape"
+              className={`button button-${theme}`}
+              onClick={this.handleClose}
+              type="submit"
+              style={{ width: '2rem', marginRight: '5px' }}
+            >
+              X
+            </button>
+          )}
+          <Dragzone position="right" theme={theme} />
+        </div>
+        <Dragzone position="bottom" theme={theme} />
+      </div>
+    );
+  }
+}
+
+const Dragzone = ({
+  theme,
+  position,
+}: {
+  readonly theme: string;
+  readonly position: string;
+}) => {
+  // Horizontal or vertical?
+  const location =
+    position === 'left' || position === 'right' ? 'vertical' : 'horizontal';
 
   return (
-    <>
-      <div
-        className={`window window-${theme} window-${size}`}
-        style={{
-          zoom: scale.current ? '' : `${100 / window.devicePixelRatio}%`,
-        }}
-        onMouseDown={dragStartHandler}
-      >
-        {!lightMode && <div className={`shine shine-${theme}`} />}
-      </div>
-      <div
-        className={classes(['content', lightMode && 'content-lightMode'])}
-        style={{
-          zoom: scale.current ? '' : `${100 / window.devicePixelRatio}%`,
-        }}
-      >
-        <button
-          className={`button button-${theme}`}
-          onMouseDown={handleButtonClick}
-          onMouseUp={handleButtonRelease}
-          type="button"
-        >
-          {buttonContent}
-        </button>
-        <textarea
-          spellCheck
-          autoCorrect="off"
-          className={classes([
-            'textarea',
-            `textarea-${theme}`,
-            value.length > LineLength.Large && 'textarea-large',
-          ])}
-          maxLength={maxLength}
-          onInput={handleInput}
-          onKeyDown={handleKeyDown}
-          ref={innerRef}
-          value={value}
-        />
-        <button
-          key="escape"
-          className={`button button-${theme}`}
-          onClick={handleClose}
-          type="submit"
-        >
-          X
-        </button>
-      </div>
-    </>
+    <div
+      className={`dragzone-${location} dragzone-${position} dragzone-${theme}`}
+      onMouseDown={dragStartHandler}
+    />
   );
-}
+};
