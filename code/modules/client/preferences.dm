@@ -286,8 +286,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	owner = C
 	macros.owner = C
 
-	C.tgui_say?.load()
-
 /datum/preferences/Del()
 	. = ..()
 
