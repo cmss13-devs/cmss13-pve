@@ -861,22 +861,22 @@
 	name = "Volaju (Long)"
 	icon_state = "hair_volajupompless"
 
-/datum/sprite_accessory/hair/gloomylonger
+/datum/sprite_accessory/hair/modern
 	name = "Modern"
 	icon_state = "hair_modern"
 
-/datum/sprite_accessory/hair/gloomylonger
+/datum/sprite_accessory/hair/jessica
 	name = "Jessica"
 	icon_state = "hair_jessica"
 
-/datum/sprite_accessory/hair/gloomylonger
+/datum/sprite_accessory/hair/vriska
 	name = "Vriska"
 	icon_state = "hair_vriska"
 
-/datum/sprite_accessory/hair/gloomylonger
+/datum/sprite_accessory/hair/fluffyshort
 	name = "Fluffy (Short)"
 	icon_state = "hair_fluffy"
 
-	/datum/sprite_accessory/hair/gloomylonger
+	/datum/sprite_accessory/hair/fluffylong
 	name = "Fluffy (Long)"
 	icon_state = "hair_fluffy_long"
