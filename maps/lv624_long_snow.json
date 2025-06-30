@@ -1,0 +1,19 @@
+{
+    "map_name": "LV624 Long Snow",
+    "short_name": "LV624 Long Snow",
+    "map_path": "map_files/lv624_long_snow",
+    "map_file": "lv624_long_snow.dmm",
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+    "traits": [{ "ground": true}],
+    "camouflage": "jungle",
+    "environment_traits": {},
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "announce_text": "A distress signal has been received from a section of the 'USS Bulldogs' on Lazarus Landing, a border world of 'LV-624'. A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}
