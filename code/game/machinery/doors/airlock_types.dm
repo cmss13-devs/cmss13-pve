@@ -875,10 +875,10 @@
 /obj/structure/machinery/door/airlock/dropship_hatch/ex_act(severity)
 	return
 
-/obj/structure/machinery/door/airlock/dropship_hatch/unlock()
-	if(is_reserved_level(z)) // in flight
-		return
-	..()
+/obj/structure/machinery/door/airlock/dropship_hatch/unlock(forced = FALSE)
+	if(is_reserved_level(z) && !forced) // in flight
+		return FALSE
+	return ..()
 
 /obj/structure/machinery/door/airlock/dropship_hatch/attack_alien(mob/living/carbon/xenomorph/xeno)
 
@@ -900,7 +900,6 @@
 
 /obj/structure/machinery/door/airlock/dropship_hatch/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_side.dmi' //Tiles with is here FOR SAFETY PURPOSES
-
 
 /obj/structure/machinery/door/airlock/dropship_hatch/monorail
 	icon = 'icons/obj/structures/doors/pod_doors.dmi' //TEMPLATE NEED TO REPLACE LATER
@@ -929,6 +928,9 @@
 
 /obj/structure/machinery/door/airlock/hatch/cockpit/upp
 	icon = 'icons/obj/structures/doors/dropshipupp_pilot.dmi'
+
+/obj/structure/machinery/door/airlock/hatch/cockpit/pmc
+	icon = 'icons/obj/structures/doors/dropshippmc_pilot.dmi'
 
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison

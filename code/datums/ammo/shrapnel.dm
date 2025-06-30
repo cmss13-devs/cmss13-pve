@@ -79,6 +79,7 @@
 /datum/ammo/bullet/shrapnel/heavy
 	name = "shrapnel cloud"
 	icon_state = "shrapnel_light"
+	flags_ammo_behavior = AMMO_PRONETARGET
 	max_range = 6
 	damage = 35
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
@@ -86,6 +87,45 @@
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_3
 	shrapnel_chance = 10
+
+/datum/ammo/bullet/shrapnel/claymore
+	name = "claymore pellet"
+	icon_state = "buckshot"
+	accurate_range_min = 0
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
+	accuracy = HIT_ACCURACY_TIER_10 //half & half chance of being hit
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
+	accurate_range = 7
+	max_range = 10
+	damage = 20
+	damage_var_low = PROJECTILE_VARIANCE_TIER_5
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_3
+	shrapnel_chance = 5
+
+//player-given claymore shrapnel
+/datum/ammo/bullet/shrapnel/claymore/strong
+	damage = 35
+	shrapnel_chance = 15
+
+/datum/ammo/bullet/shrapnel/claymore/strong/on_hit_mob(mob/entity, obj/projectile/bullet)
+	. = ..()
+	knockback(entity, bullet, 4)
+
+/datum/ammo/bullet/shrapnel/claymore/strong/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	if(iscarbonsizexeno(living_mob))
+		var/mob/living/carbon/xenomorph/target = living_mob
+		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
+		target.KnockDown(1.5)
+		target.Stun(1.5)
+		target.Slow(3)
+	else
+		living_mob.KnockDown(1.5)
+		living_mob.Stun(1.5)
+		living_mob.Slow(3)
+		to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
@@ -229,6 +269,14 @@
 /datum/ammo/bullet/shrapnel/jagged/on_hit_mob(mob/M, obj/projectile/P)
 	if(isxeno(M))
 		M.apply_effect(0.4, SLOW)
+
+/datum/ammo/bullet/shrapnel/himat
+	accurate_range = 8
+	max_range = 8
+	damage = 75
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	accuracy = HIT_ACCURACY_TIER_MAX
+	icon_state = "shrapnel_light"
 
 /*
 //========

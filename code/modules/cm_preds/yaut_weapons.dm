@@ -105,13 +105,13 @@
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 1.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] open using the [name]!"), SPAN_DANGER("You force [door] open with your [name]."))
-				door.Open()
+				door.open()
 		else
 			user.visible_message(SPAN_DANGER("[user] pushes [door] with their [name] to force it closed..."), SPAN_DANGER("You push [door] with your [name] to force it closed..."))
 			playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
 			if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !door.density)
 				user.visible_message(SPAN_DANGER("[user] forces [door] closed using the [name]!"), SPAN_DANGER("You force [door] closed with your [name]."))
-				door.Close()
+				door.close()
 
 /obj/item/weapon/wristblades/attack_self(mob/living/carbon/human/user)
 	..()
@@ -719,11 +719,11 @@
 	var/rare_weight = 5
 	var/ultra_rare_weight = 1
 
-/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, click_parameters)
+/obj/item/weapon/twohanded/yautja/spear/afterattack(atom/target, mob/living/user, proximity_flag, /turf/fishing_allowed, click_parameters)
 	. = ..()
 	if(proximity_flag && !busy_fishing && isturf(target))
 		var/turf/T = target
-		if(!T.supports_fishing)
+		if(!T.fishing_allowed)
 			return
 		busy_fishing = TRUE
 		user.visible_message(SPAN_NOTICE("[user] starts aiming \the [src] at the water..."), SPAN_NOTICE("You prepare to catch something in the water..."), max_distance = 3)

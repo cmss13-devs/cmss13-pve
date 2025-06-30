@@ -1,0 +1,6 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - ui: "Upload is now default for Source pop-up"
+  - ui: "No is now default for showing players the filename pop-up"
+  - ui: "Atmospheric is now default for sound type pop-up"
