@@ -828,3 +828,27 @@
 	name = "Emo Fringe"
 	icon_state = "hair_emo_fringe"
 	gender = FEMALE
+
+/datum/sprite_accessory/hair/eighties
+	name = "The Eighties"
+	icon_state = "hair_80s"
+
+/datum/sprite_accessory/hair/overeyebowl
+	name = "Over Eye Bowlcut"
+	icon_state = "hair_overeyebowl"
+
+/datum/sprite_accessory/hair/zone
+	name = "Zone"
+	icon_state = "hair_zone"
+
+/datum/sprite_accessory/hair/gloomyshort
+	name = "Gloomy (Short)"
+	icon_state = "hair_gloomy_short"
+
+/datum/sprite_accessory/hair/gloomymedium
+	name = "Gloomy (Medium)"
+	icon_state = "hair_gloomy_medium"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Gloomy (Long)"
+	icon_state = "hair_gloomy_long"
