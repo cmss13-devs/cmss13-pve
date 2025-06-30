@@ -852,3 +852,31 @@
 /datum/sprite_accessory/hair/gloomylonger
 	name = "Gloomy (Long)"
 	icon_state = "hair_gloomy_long"
+
+/datum/sprite_accessory/hair/volajushort
+	name = "Volaju (Short)"
+	icon_state = "hair_volaju"
+
+/datum/sprite_accessory/hair/volajulong
+	name = "Volaju (Long)"
+	icon_state = "hair_volajupompless"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Modern"
+	icon_state = "hair_modern"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Jessica"
+	icon_state = "hair_jessica"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Vriska"
+	icon_state = "hair_vriska"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Fluffy (Short)"
+	icon_state = "hair_fluffy"
+
+	/datum/sprite_accessory/hair/gloomylonger
+	name = "Fluffy (Long)"
+	icon_state = "hair_fluffy_long"
