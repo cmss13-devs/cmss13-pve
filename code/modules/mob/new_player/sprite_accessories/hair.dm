@@ -877,6 +877,6 @@
 	name = "Fluffy (Short)"
 	icon_state = "hair_fluffy"
 
-/datum/sprite_accessory/hair/fluffylong
+/datum/sprite_accessory/hair/fluffylong //ignore
 	name = "Fluffy (Long)"
 	icon_state = "hair_fluffy_long"
