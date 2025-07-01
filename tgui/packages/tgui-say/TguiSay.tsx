@@ -220,11 +220,10 @@ export class TguiSay extends Component<{}, State> {
       } else if (LANGUAGE_PREFIXES[newPrefix!]) {
         this.setState({ buttonContent: LANGUAGE_PREFIXES[newPrefix!]?.label });
       }
+      this.currentPrefix = newPrefix;
+      this.setValue(typed.slice(3));
+      this.channelIterator.set('Say');
     }
-
-    this.currentPrefix = newPrefix;
-    this.setValue(typed.slice(3));
-    this.channelIterator.set('Say');
   }
 
   canChangePrefix(newPrefix: string | null) {
