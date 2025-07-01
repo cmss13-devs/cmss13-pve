@@ -947,7 +947,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "helmetp_tex"
 
 /obj/item/clothing/head/helmet/upp/marinepilot/merc //just so it uses the wide overlay for garbs
-	name = "\improper DP MK80-TAC aviation helmet."
+	name = "\improper DP MK80-TAC aviation helmet"
 	desc = "Standard flight helmet of the UA treaty forces, presumably stolen or found and reproduced with cheaper materials by Davis Proprietary for extortionate amounts. Less comfortable but comes with some cool goggles that do absolutely nothing!"
 	icon_state = "pilot_merc"
 	item_state = "pilot_merc"
