@@ -488,7 +488,7 @@
 	icon_state = "china_cig_vending"
 	products = list(
 		/obj/item/storage/fancy/cigarettes/laika = 10,
-		/obj/item/clothing/mask/cigarette/cigar/classic = 3,
+		/obj/item/clothing/mask/cigarette/cigar/cohiba = 3,
 		/obj/item/storage/box/matches = 15,
 		/obj/item/tool/lighter/random = 10,
 	)
