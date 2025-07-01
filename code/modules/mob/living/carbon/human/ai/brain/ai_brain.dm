@@ -15,7 +15,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/shoot_to_kill = TRUE
 
 	/// Distance for view checks
-	var/view_distance = 6 //
+	var/view_distance = 6
 
 	/// Should we limit our FOV in case view_distance is more than 7
 	var/scope_vision = TRUE
