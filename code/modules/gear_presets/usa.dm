@@ -34,12 +34,7 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
 
-/datum/equipment_preset/usa/proc/spawn_army_fluff_items(mob/living/carbon/human/new_human)
-	var/obj/item/helmet_accessory = pick(GLOB.allowed_army_helmet_items)
-	new_human.equip_to_slot_or_del(new helmet_accessory, WEAR_IN_HELMET)
-	if(prob(30))
-		var/obj/item/helmet_accessory_two = pick(GLOB.allowed_army_helmet_items)
-		new_human.equip_to_slot_or_del(new helmet_accessory_two, WEAR_IN_HELMET)
+/datum/equipment_preset/usa/proc/spawn_army_mask_items(mob/living/carbon/human/new_human)
 	var/list/possible_masks = subtypesof(/obj/item/clothing/mask/rebreather) + subtypesof(/obj/item/clothing/mask/tornscarf)
 	if(prob(20))
 		var/obj/item/clothing/mask/new_mask = pick(possible_masks)
@@ -59,6 +54,8 @@
 /datum/equipment_preset/usa/trooper/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -80,7 +77,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/grenadier
 	name = "Army Grenadier"
@@ -94,6 +91,8 @@
 /datum/equipment_preset/usa/grenadier/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -115,7 +114,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/incendiary(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 
 /datum/equipment_preset/usa/marksman
@@ -130,6 +129,8 @@
 /datum/equipment_preset/usa/marksman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -151,7 +152,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ap(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ap(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/incendiary(new_human), WEAR_IN_R_STORE)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/marksman/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -170,6 +171,8 @@
 /datum/equipment_preset/usa/gunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -187,7 +190,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/folding_barricade/three(new_human), WEAR_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/gunner/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -222,7 +225,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/heavygunner/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -241,6 +244,8 @@
 /datum/equipment_preset/usa/ATgunner/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -261,7 +266,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine/army(new_human), WEAR_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/ATgunner/loader
 	name = "Army Anti-Tank Loader"
@@ -278,7 +283,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/wp(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 	..()
 
 
@@ -294,6 +299,8 @@
 /datum/equipment_preset/usa/sapper/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -318,7 +325,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 
 /datum/equipment_preset/usa/mainttech
@@ -397,6 +404,8 @@
 /datum/equipment_preset/usa/medic/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
@@ -419,7 +428,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/tank
 	name = "Army Vehicle Crewman"
@@ -433,6 +442,8 @@
 /datum/equipment_preset/usa/tank/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves()
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
@@ -453,7 +464,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/nco
 	name = "Army Fireteam Leader"
@@ -467,6 +478,8 @@
 /datum/equipment_preset/usa/nco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
@@ -487,7 +500,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large/buckshot(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/breacher(new_human), WEAR_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 
 /datum/equipment_preset/usa/snco
@@ -502,6 +515,8 @@
 /datum/equipment_preset/usa/snco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	add_army_helmet_accessory(new_human)
+	add_army_helmet_eyewear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
 	add_combat_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
@@ -525,7 +540,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/signal(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive(new_human), WEAR_IN_BACK)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/snco/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -562,7 +577,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
-	spawn_army_fluff_items(new_human)
+	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/lt/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
