@@ -266,10 +266,6 @@
 /obj/structure/machinery/door/airlock/strata/mining/autoname
 	autoname = TRUE
 
-/obj/structure/machinery/door/airlock/strata/circular
-	name = "\improper Secure Airlock"
-	icon = 'icons/obj/structures/doors/strata/strata_utility.dmi'
-
 //YAUTJA SHIP - CURRENTLY USES STRATA DOORS
 /obj/structure/machinery/door/airlock/yautja
 	name = "\improper Airlock"
