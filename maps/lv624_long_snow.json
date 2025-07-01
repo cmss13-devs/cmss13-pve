@@ -8,7 +8,7 @@
     "camouflage": "jungle",
     "environment_traits": {},
     "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
-    "announce_text": "A distress signal has been received from a section of the 'USS Bulldogs' on Lazarus Landing, a border world of 'LV-624'. A response team from the ###SHIPNAME### will be dispatched shortly to investigate.",
+    "announce_text": "Pan-Pan. This is the commanding officer of the USS Kuala, USCM. We are currently grounded on planet LV-624 to the far north of the colony. We are unable to contact the Hanyut and our dropship is unable to take off at this time. We are requesting assistance from any nearby vessels; this broadcast is set to repeat every 24 hours.",
     "gamemodes": [
         "Distress Signal",
         "Hunter Games",
