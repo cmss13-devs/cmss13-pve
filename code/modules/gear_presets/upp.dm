@@ -139,7 +139,7 @@
 	role_comm_title = "PTG-SNA"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/medic
-	access = list(ACCESS_UPP_GENERAL, , ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_MEDBAY, ACCESS_UPP_MEDICAL)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_MEDBAY, ACCESS_UPP_MEDICAL)
 
 /datum/equipment_preset/upp/militia/medic/load_gear(mob/living/carbon/human/new_human)
 
