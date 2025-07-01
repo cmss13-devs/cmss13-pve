@@ -18,8 +18,8 @@
 	icon_state = "tracker_blip"
 
 /obj/item/device/motiondetector
-	name = "M314 motion detector"
-	desc = "A military grade, hand-held motion detection device that can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with USCM IFF."
+	name = "motion detector"
+	desc = "A device that detects movement, but ignores marines. Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "detector"
 	item_state = "motion_detector"
@@ -57,13 +57,8 @@
 	update_icon()
 
 /obj/item/device/motiondetector/Destroy()
-	STOP_PROCESSING(SSobj, src)
-	for(var/to_delete in blip_pool)
-		qdel(blip_pool[to_delete])
-		blip_pool.Remove(to_delete)
-	blip_pool = null
+	. = ..()
 	range_bounds = null
-	return ..()
 
 /obj/item/device/motiondetector/update_icon()
 	//clear overlays
@@ -114,7 +109,7 @@
 /obj/item/device/motiondetector/clicked(mob/user, list/mods)
 	if (isobserver(user) || isxeno(user)) return
 
-	if (mods[ALT_CLICK])
+	if (mods["alt"])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		if(!long_range_locked)
@@ -157,6 +152,14 @@
 	icon_state = "[initial(icon_state)]"
 	playsound(loc, 'sound/items/detector_turn_off.ogg', 30, FALSE, 5, 2)
 	STOP_PROCESSING(SSfastobj, src)
+
+/obj/item/device/motiondetector/Destroy()
+	STOP_PROCESSING(SSfastobj, src)
+	for(var/to_delete in blip_pool)
+		qdel(blip_pool[to_delete])
+		blip_pool.Remove(to_delete)
+	blip_pool = null
+	return ..()
 
 /obj/item/device/motiondetector/process(delta_time)
 	if(isturf(loc))
@@ -299,15 +302,6 @@
 /obj/item/device/motiondetector/proc/clear_pings(mob/user, obj/effect/detector_blip/DB)
 	if(user.client)
 		user.client.remove_from_screen(DB)
-
-
-/obj/item/device/motiondetector/upp
-	name = "UDO-58 motion detector"
-	desc = "Ustroystvo Dalnego Obnaruzhenia/Long Range Detection Device. A military grade, hand-held motion detection device designed not long after its analogue in the USCM was developed. The device can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with UPPAC Naval Infantry IFF."
-	icon = 'icons/obj/items/upp-items.dmi'
-	icon_state = "detector"
-	item_state = "upp_motion_detector"
-	iff_signal = FACTION_UPP
 
 /obj/item/device/motiondetector/m717
 	name = "M717 pocket motion detector"

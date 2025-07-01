@@ -4,9 +4,7 @@
  * @license MIT
  */
 
-import type { AudioState } from './types';
-
-const initialState: AudioState = {
+const initialState = {
   visible: false,
   playing: false,
   track: null,

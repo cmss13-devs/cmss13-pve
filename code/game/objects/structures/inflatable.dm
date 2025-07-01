@@ -173,8 +173,8 @@
 	icon = 'icons/obj/items/inflatable.dmi'
 	icon_state = "door_closed"
 
-	var/open = FALSE
-	var/isSwitchingStates = FALSE
+	var/state = 0 //closed, 1 == open
+	var/isSwitchingStates = 0
 
 /obj/structure/inflatable/door/attack_remote(mob/user as mob) //those aren't machinery, they're just big fucking slabs of a mineral
 	if(isRemoteControlling(user)) //so the AI can't open it
@@ -197,43 +197,36 @@
 				SwitchState()
 
 /obj/structure/inflatable/door/proc/SwitchState()
-	if(open)
-		close()
+	if(state)
+		Close()
 	else
-		open()
+		Open()
 
-/obj/structure/inflatable/door/proc/open()
-	isSwitchingStates = TRUE
+
+/obj/structure/inflatable/door/proc/Open()
+	isSwitchingStates = 1
 	//playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
 	flick("door_opening",src)
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-
-/obj/structure/inflatable/door/proc/finish_open()
-	if(!loc)
-		return
+	sleep(10)
 	density = FALSE
 	opacity = FALSE
-	open = TRUE
+	state = 1
 	update_icon()
-	isSwitchingStates = FALSE
+	isSwitchingStates = 0
 
-/obj/structure/inflatable/door/proc/close()
-	isSwitchingStates = TRUE
+/obj/structure/inflatable/door/proc/Close()
+	isSwitchingStates = 1
 	//playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
 	flick("door_closing",src)
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-
-/obj/structure/inflatable/door/proc/finish_close()
-	if(!loc)
-		return
+	sleep(10)
 	density = TRUE
 	opacity = FALSE
-	open = FALSE
+	state = 0
 	update_icon()
-	isSwitchingStates = FALSE
+	isSwitchingStates = 0
 
 /obj/structure/inflatable/door/update_icon()
-	if(open)
+	if(state)
 		icon_state = "door_open"
 	else
 		icon_state = "door_closed"

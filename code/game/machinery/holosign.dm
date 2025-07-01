@@ -22,11 +22,9 @@
 		icon_state = on_icon
 
 /obj/structure/machinery/holosign/power_change()
-	. = ..()
 	if(stat & NOPOWER)
-		if(lit)
-			lit = FALSE
-			update_icon()
+		lit = 0
+	update_icon()
 
 /obj/structure/machinery/holosign/surgery
 	name = "surgery holosign"

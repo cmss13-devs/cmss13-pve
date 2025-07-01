@@ -28,13 +28,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "candle1"
 	w_class = SIZE_TINY
 
-	var/wax = 3000
+	var/wax = 800
 
 /obj/item/tool/candle/update_icon()
 	var/i
-	if(wax>1500)
+	if(wax>150)
 		i = 1
-	else if(wax>250)
+	else if(wax>80)
 		i = 2
 	else i = 3
 	icon_state = "candle[i][heat_source ? "_lit" : ""]"

@@ -75,8 +75,14 @@ const setupApp = () => {
   Byond.subscribe((type, payload) => store.dispatch({ type, payload }));
 
   // Unhide the panel
-  Byond.winset('legacy_output_selector', {
-    left: 'output_browser',
+  Byond.winset('output', {
+    'is-visible': false,
+  });
+  Byond.winset('browseroutput', {
+    'is-visible': true,
+    'is-disabled': false,
+    pos: '0x0',
+    size: '0x0',
   });
 
   // Resize the panel to match the non-browser output

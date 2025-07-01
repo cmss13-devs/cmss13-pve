@@ -20,48 +20,44 @@
 	if(!C.pry_capable)
 		return
 	if(density && (stat & NOPOWER) && !operating && !unacidable)
-		operating = DOOR_OPERATING_OPENING
+		operating = 1
 		spawn(-1)
 			flick("[base_icon_state]c0", src)
 			icon_state = "[base_icon_state]0"
 			sleep(15)
 			density = FALSE
 			set_opacity(0)
-			operating = DOOR_OPERATING_IDLE
+			operating = 0
 			return
 	return
 
-/obj/structure/machinery/door/poddoor/shutters/open(forced = FALSE)
+/obj/structure/machinery/door/poddoor/shutters/open()
 	if(operating) //doors can still open when emag-disabled
-		return FALSE
+		return
 
-	operating = DOOR_OPERATING_OPENING
+	operating = TRUE
 	flick("[base_icon_state]c0", src)
 	icon_state = "[base_icon_state]0"
 	playsound(loc, 'sound/machines/blastdoor.ogg', 25)
 
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed)
 	return TRUE
 
 /obj/structure/machinery/door/poddoor/shutters/finish_open()
-	if(operating != DOOR_OPERATING_OPENING)
-		return
-	if(QDELETED(src))
-		return // Specifically checked because of the possiible addtimer
-
 	density = FALSE
 	layer = open_layer
 	set_opacity(0)
 
-	operating = DOOR_OPERATING_IDLE
+	if(operating) //emag again
+		operating = FALSE
 	if(autoclose)
-		addtimer(CALLBACK(src, PROC_REF(autoclose)), 15 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+		addtimer(CALLBACK(src, PROC_REF(autoclose)), 150)
 
-/obj/structure/machinery/door/poddoor/shutters/close(forced = FALSE)
+/obj/structure/machinery/door/poddoor/shutters/close()
 	if(operating)
-		return FALSE
+		return
 
-	operating = DOOR_OPERATING_CLOSING
+	operating = TRUE
 	flick("[base_icon_state]c1", src)
 	icon_state = "[base_icon_state]1"
 	layer = closed_layer
@@ -70,14 +66,11 @@
 		set_opacity(1)
 	playsound(loc, 'sound/machines/blastdoor.ogg', 25)
 
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-	return TRUE
+	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed)
+	return
 
 /obj/structure/machinery/door/poddoor/shutters/finish_close()
-	if(operating != DOOR_OPERATING_CLOSING)
-		return
-
-	operating = DOOR_OPERATING_IDLE
+	operating = FALSE
 
 /obj/structure/machinery/door/poddoor/shutters/attack_alien(mob/living/carbon/xenomorph/M)
 	if(density && !operating)

@@ -6,3 +6,7 @@
 #if defined(UNIT_TESTS)
 
 #endif
+
+#if DM_VERSION >= 516
+#error "Remove all 515 experiments"
+#endif

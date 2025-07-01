@@ -39,13 +39,13 @@
 		return
 	if(density && (stat & NOPOWER) && !operating && !unacidable)
 		spawn(0)
-			operating = DOOR_OPERATING_OPENING
+			operating = 1
 			flick("[base_icon_state]c0", src)
 			icon_state = "[base_icon_state]0"
 			set_opacity(0)
 			sleep(15)
 			density = FALSE
-			operating = DOOR_OPERATING_IDLE
+			operating = 0
 
 /obj/structure/machinery/door/poddoor/attack_alien(mob/living/carbon/xenomorph/X)
 	if((stat & NOPOWER) && density && !operating && !unacidable)
@@ -75,29 +75,30 @@
 /obj/structure/machinery/door/poddoor/try_to_activate_door(mob/user)
 	return
 
-/obj/structure/machinery/door/poddoor/open(forced = FALSE)
+/obj/structure/machinery/door/poddoor/open()
 	if(operating) //doors can still open when emag-disabled
-		return FALSE
+		return
+
 	if(!opacity)
 		return TRUE
 
-	operating = DOOR_OPERATING_OPENING
+	operating = TRUE
 
 	playsound(loc, 'sound/machines/blastdoor.ogg', 20, 0)
 	flick("[base_icon_state]c0", src)
 	icon_state = "[base_icon_state]0"
 	set_opacity(0)
 
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed)
 	return TRUE
 
-/obj/structure/machinery/door/poddoor/close(forced = FALSE)
+/obj/structure/machinery/door/poddoor/close()
 	if(operating)
-		return FALSE
+		return
 	if(opacity == initial(opacity))
-		return TRUE
+		return
 
-	operating = DOOR_OPERATING_CLOSING
+	operating = TRUE
 	playsound(loc, 'sound/machines/blastdoor.ogg', 20, 0)
 
 	layer = closed_layer
@@ -106,14 +107,11 @@
 	density = TRUE
 	set_opacity(initial(opacity))
 
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-	return TRUE
+	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed)
+	return
 
 /obj/structure/machinery/door/poddoor/finish_close()
-	if(operating != DOOR_OPERATING_CLOSING)
-		return
-
-	operating = DOOR_OPERATING_IDLE
+	operating = FALSE
 
 /obj/structure/machinery/door/poddoor/filler_object
 	name = ""

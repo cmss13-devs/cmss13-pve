@@ -51,10 +51,10 @@ export class DrawnMap extends Component {
 
   getSize() {
     const ratio = Math.min(
-      (self.innerWidth - 16) / 684,
-      (self.innerHeight - 166) / 684,
+      (self.innerWidth - 50) / 650,
+      (self.innerHeight - 150) / 600,
     );
-    return { width: 684 * ratio, height: 684 * ratio };
+    return { width: 650 * ratio, height: 600 * ratio };
   }
 
   render() {
@@ -62,21 +62,35 @@ export class DrawnMap extends Component {
     const size = this.getSize();
 
     return (
-      <div ref={this.containerRef} className="TacticalMapDrawn">
+      <div ref={this.containerRef}>
         {this.state.loadingBackup && !this.state.mapLoad && (
           <Box my="40%">
             <h1>Loading map...</h1>
           </Box>
         )}
         {this.img && this.state.mapLoad && (
-          <img src={this.img.src} width={size.width} height={size.height} />
+          <img
+            src={this.img.src}
+            style={{
+              position: 'absolute',
+              zIndex: 0,
+              left: '18px',
+            }}
+            width={size.width}
+            height={size.height}
+          />
         )}
         {parsedSvgData && this.state.mapLoad && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={size.width}
             height={size.height}
-            viewBox={'0 0 684 684'}
+            viewBox={'0 0 650 600'}
+            style={{
+              position: 'absolute',
+              zIndex: 1,
+              left: '18px',
+            }}
           >
             {parsedSvgData.map((line, index) => (
               <line

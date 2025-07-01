@@ -213,6 +213,10 @@
 			return
 		*/
 
+/obj/structure/machinery/recharger/power_change()
+	..()
+	update_icon()
+
 /obj/structure/machinery/recharger/emp_act(severity)
 	. = ..()
 	if(inoperable() || !anchored)

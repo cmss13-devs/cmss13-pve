@@ -17,7 +17,7 @@
 	var/secondsElectrified = 0
 	var/visible = TRUE
 	var/panel_open = FALSE
-	var/operating = DOOR_OPERATING_IDLE
+	var/operating = FALSE
 	var/autoclose = FALSE
 	var/glass = FALSE
 	/// If FALSE it speeds up the autoclosing timing.
@@ -211,68 +211,50 @@
 			flick("door_deny", src)
 	return
 
-/obj/structure/machinery/door/proc/open(forced = FALSE)
+/obj/structure/machinery/door/proc/open(forced)
 	if(!density)
 		return TRUE
-	if(operating && !forced)
-		return FALSE
-	if(!loc)
+	if(operating || !loc)
 		return FALSE
 
-	operating = DOOR_OPERATING_OPENING
+	operating = TRUE
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(FALSE)
 	if(length(filler_turfs))
 		change_filler_opacity(opacity)
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), openspeed)
 	return TRUE
 
 /obj/structure/machinery/door/proc/finish_open()
-	if(operating != DOOR_OPERATING_OPENING)
-		return
-	if(QDELETED(src))
-		return // Specifically checked because of the possiible addtimer
-
 	layer = open_layer
 	density = FALSE
 	update_icon()
 
-	operating = DOOR_OPERATING_IDLE
+	if(operating)
+		operating = FALSE
 	if(autoclose)
-		addtimer(CALLBACK(src, PROC_REF(autoclose)), normalspeed ? 15 SECONDS + openspeed : 5 DECISECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+		addtimer(CALLBACK(src, PROC_REF(autoclose)), normalspeed ? 150 + openspeed : 5)
 
-/obj/structure/machinery/door/proc/close(forced = FALSE)
-	if(density && !operating)
+/obj/structure/machinery/door/proc/close()
+	if(density)
 		return TRUE
-	if(operating && !forced)
-		return FALSE
-	if(!loc)
+	if(operating)
 		return FALSE
 
-	for(var/turf/turf_tile in locs)
-		for(var/obj/structure/blocking_structure in turf_tile)
-			if(blocking_structure.density || istype(blocking_structure, /obj/structure/closet))
-				addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-				return FALSE
-
-	operating = DOOR_OPERATING_CLOSING
-	density = TRUE
-	layer = closed_layer
+	operating = TRUE
+	src.density = TRUE
+	src.layer = closed_layer
 	do_animate("closing")
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-	return TRUE
+	addtimer(CALLBACK(src, PROC_REF(finish_close)), openspeed)
 
 /obj/structure/machinery/door/proc/finish_close()
-	if(operating != DOOR_OPERATING_CLOSING)
-		return
-
 	update_icon()
 	if(visible && !glass)
 		set_opacity(TRUE)
 		if(length(filler_turfs))
 			change_filler_opacity(opacity)
-	operating = DOOR_OPERATING_IDLE
+	operating = FALSE
 
 /obj/structure/machinery/door/proc/requiresID()
 	return TRUE

@@ -147,8 +147,7 @@ class PingApp extends Component<PingAppProps> {
                       value={result.ping}
                       maxValue={1000}
                       minValue={50}
-                      minWidth={3.8}
-                      pr={1}
+                      minWidth={4}
                       ranges={{
                         good: [0, 200],
                         average: [200, 500],

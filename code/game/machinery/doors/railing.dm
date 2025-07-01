@@ -35,45 +35,35 @@
 	if (PF)
 		PF.flags_can_pass_all = (PASS_OVER^PASS_OVER_FIRE)|PASS_CRUSHER_CHARGE
 
-/obj/structure/machinery/door/poddoor/railing/open(forced = FALSE)
-	if(operating && !forced) //doors can still open when emag-disabled
-		return FALSE
-	if(!loc)
+/obj/structure/machinery/door/poddoor/railing/open()
+	if(operating) //doors can still open when emag-disabled
 		return FALSE
 
-	operating = DOOR_OPERATING_OPENING
+	operating = TRUE
 	flick("railingc0", src)
 	icon_state = "railing0"
 	layer = open_layer
 
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1.2 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1.2 SECONDS)
 	return TRUE
 
 /obj/structure/machinery/door/poddoor/railing/finish_open()
-	if(operating != DOOR_OPERATING_OPENING)
-		return
-
 	density = FALSE
-	operating = DOOR_OPERATING_IDLE
+	if(operating) //emag again
+		operating = FALSE
 
-/obj/structure/machinery/door/poddoor/railing/close(forced = FALSE)
+/obj/structure/machinery/door/poddoor/railing/close()
 	if(operating)
 		return FALSE
 
 	density = TRUE
-	operating = DOOR_OPERATING_CLOSING
+	operating = TRUE
 	layer = closed_layer
 	flick("railingc1", src)
 	icon_state = "railing1"
 
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), 1.2 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(VARSET_CALLBACK(src, operating, FALSE), 1.2 SECONDS)
 	return TRUE
 
-/obj/structure/machinery/door/poddoor/railing/finish_close()
-	if(operating != DOOR_OPERATING_CLOSING)
-		return
-
-	operating = DOOR_OPERATING_IDLE
-
-/obj/structure/machinery/door/poddoor/railing/preopened
+/obj/structure/machinery/door/poddoor/railing/open
 	density = FALSE

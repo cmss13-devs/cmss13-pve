@@ -1,23 +1,12 @@
-function selectFilterField(){
+function selectTextField(){
 	var filter_text = document.getElementById('filter');
-	if(!filter_text) {
-		return;
-	}
 	filter_text.focus();
 	filter_text.select();
 }
-var last_filter = "";
-function updateFilter(){
+function updateSearch(){
 	var input_form = document.getElementById('filter');
-	if(!input_form) {
-		return;
-	}
 	var filter = input_form.value.toLowerCase();
 	input_form.value = filter;
-	if (filter === last_filter) {
-		// An event triggered an update but nothing has changed.
-		return;
-	}
 	var table = document.getElementById('searchable');
 	var alt_style = 'norm';
 	for(var i = 0; i < table.rows.length; i++){
@@ -41,10 +30,4 @@ function updateFilter(){
 			}
 		}catch(err) { }
 	}
-
-	last_filter = filter;
-}
-// onkeyup because somereason updateFilter directly won't work
-function handle_filter() {
-	updateFilter();
 }

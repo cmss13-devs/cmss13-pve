@@ -6,7 +6,6 @@ GLOBAL_LIST_EMPTY(cleanable_decal_cache)
 	var/obj/structure/machinery/bot/cleanbot/targeted_by = null
 	var/cleanable_type = CLEANABLE_MISC
 	var/overlay_on_initialize = TRUE
-	var/allow_this_to_overlap = FALSE
 	/// A reference to the image overlayed on a turf
 	var/image/overlayed_image
 	/**
@@ -62,7 +61,7 @@ GLOBAL_LIST_EMPTY(cleanable_decal_cache)
 
 /obj/effect/decal/cleanable/proc/place_cleanable(turf/T, overlayed)
 	var/obj/effect/decal/cleanable/C = LAZYACCESS(T.cleanables, cleanable_type)
-	if(C && !allow_this_to_overlap)
+	if(C)
 		C.cleanup_cleanable()
 	cleaned_up = FALSE
 	LAZYSET(T.cleanables, cleanable_type, src)

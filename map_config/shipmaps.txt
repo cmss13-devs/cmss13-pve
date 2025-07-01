@@ -23,10 +23,6 @@ endmap
 map chapaev
 endmap
 
-
-map firefly
-endmap
-
 map rover
 endmap
 

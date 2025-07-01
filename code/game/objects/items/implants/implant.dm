@@ -267,7 +267,6 @@ Implant Specifics:<BR>"}
 /obj/item/implant/chem/Initialize()
 	. = ..()
 	GLOB.chem_implant_list += src
-	create_reagents(50)
 
 /obj/item/implant/chem/Destroy()
 	GLOB.chem_implant_list -= src
@@ -326,6 +325,10 @@ the implant may become unstable and either pre-maturely inject the subject or si
 
 	spawn(20)
 		malfunction--
+
+/obj/item/implant/chem/Initialize()
+	. = ..()
+	create_reagents(50)
 
 /obj/item/implant/loyalty
 	name = "loyalty implant"

@@ -9,10 +9,13 @@
 	var/obj/item/implant/imp = null
 
 /obj/item/implanter/proc/update()
-	if(imp)
-		icon_state = "implanter1"
+
+
+/obj/item/implanter/update()
+	if (src.imp)
+		src.icon_state = "implanter1"
 	else
-		icon_state = "implanter0"
+		src.icon_state = "implanter0"
 	return
 
 

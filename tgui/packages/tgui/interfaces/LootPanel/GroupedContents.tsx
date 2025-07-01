@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 import { createSearch } from 'common/string';
 import { useMemo } from 'react';
 

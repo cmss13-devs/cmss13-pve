@@ -11,7 +11,6 @@
 	damage = 70
 	penetration = -ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_2
-	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()

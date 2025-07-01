@@ -23,6 +23,10 @@
 	. = ..()
 	update_icon()
 
+/obj/structure/machinery/recycler/power_change()
+	..()
+	update_icon()
+
 /obj/structure/machinery/recycler/update_icon()
 	. = ..()
 	icon_state = "separator-AO[(inoperable()) ? "0":"1"]"

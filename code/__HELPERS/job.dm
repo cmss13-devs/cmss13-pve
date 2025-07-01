@@ -57,6 +57,6 @@
 			JOB_WARDEN,
 			JOB_CHIEF_POLICE,
 			JOB_WARDEN,
-			JOB_DI,
+			JOB_SEA,
 			JOB_MARINE
 			)

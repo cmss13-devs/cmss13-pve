@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 import { ReactNode, useEffect, useState } from 'react';
 
 import { resolveAsset } from '../assets';

@@ -255,7 +255,7 @@
 	if(!..())
 		return FALSE
 
-	if(mods[CLICK_CATCHER])
+	if(mods["click_catcher"])
 		return
 
 	if(!action_cooldown_check())

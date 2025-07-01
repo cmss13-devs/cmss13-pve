@@ -334,6 +334,11 @@
 		if (maptext)
 			maptext = ""
 
+/obj/structure/machinery/brig_cell/power_change()
+	..()
+
+	update_icon()
+
 /obj/structure/machinery/brig_cell/attackby(obj/item/W, mob/living/user)
 	if(!istype(W, /obj/item/paper/incident))
 		return

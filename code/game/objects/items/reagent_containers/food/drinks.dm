@@ -12,8 +12,7 @@
 	volume = 50
 
 /obj/item/reagent_container/food/drinks/on_reagent_change()
-	if(gulp_size < 5)
-		gulp_size = 5
+	if (gulp_size < 5) gulp_size = 5
 	else gulp_size = max(floor(reagents.total_volume / 5), 5)
 
 /obj/item/reagent_container/food/drinks/attack(mob/M, mob/user)
@@ -144,8 +143,8 @@
 // Formatting is the same as food.
 
 /obj/item/reagent_container/food/drinks/milk
-	name = "milk carton"
-	desc = "A carton of 2% cow milk."
+	name = "Space Milk"
+	desc = "It's milk. White and nutritious goodness!"
 	icon_state = "milk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
@@ -170,8 +169,8 @@
 */
 
 /obj/item/reagent_container/food/drinks/soymilk
-	name = "soy milk carton"
-	desc = "A carton of soy milk."
+	name = "soy milk"
+	desc = "It's soy milk. White and nutritious goodness!"
 	icon_state = "soymilk"
 	item_state = "carton"
 	center_of_mass = "x=16;y=9"
@@ -179,17 +178,6 @@
 /obj/item/reagent_container/food/drinks/soymilk/Initialize()
 	. = ..()
 	reagents.add_reagent("soymilk", 50)
-
-/obj/item/reagent_container/food/drinks/chocolatemilk
-	name = "chocolate milk carton"
-	desc = "A carton of chocolate milk."
-	icon_state = "chocmilk"
-	item_state = "carton"
-	center_of_mass = "x=16;y=9"
-
-/obj/item/reagent_container/food/drinks/chocolatemilk/Initialize()
-	. = ..()
-	reagents.add_reagent("chocolatemilk", 50)
 
 /obj/item/reagent_container/food/drinks/coffee
 	name = "\improper Coffee"
@@ -214,28 +202,6 @@
 /obj/item/reagent_container/food/drinks/tea/Initialize()
 	. = ..()
 	reagents.add_reagent("tea", 30)
-
-/obj/item/reagent_container/food/drinks/tea/upp
-	name = "\improper insulated container"
-	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
-	icon_state = "tea_upp"
-	item_state = "coffee"
-	center_of_mass = "x=16;y=14"
-
-/obj/item/reagent_container/food/drinks/tea/upp/Initialize()
-	. = ..()
-	reagents.add_reagent("tea", 30)
-
-/obj/item/reagent_container/food/drinks/water
-	name = "\improper insulated container"
-	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
-	icon_state = "tea_upp"
-	item_state = "coffee"
-	center_of_mass = "x=16;y=14"
-
-/obj/item/reagent_container/food/drinks/water/Initialize()
-	. = ..()
-	reagents.add_reagent("water", 30)
 
 /obj/item/reagent_container/food/drinks/ice
 	name = "ice cup"

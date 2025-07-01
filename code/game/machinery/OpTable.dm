@@ -171,6 +171,10 @@
 	else if(ismob(A))
 		..()
 
+/obj/structure/machinery/optable/power_change()
+	..()
+	update_icon()
+
 /obj/structure/machinery/optable/update_icon()
 	if(inoperable())
 		icon_state = "table2-idle"

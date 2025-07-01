@@ -1,6 +1,3 @@
-/obj/item/tool
-	flags_human_ai = TOOL_ITEM
-
 /obj/item/tool/mop
 	desc = "The world of janitalia wouldn't be complete without a mop."
 	name = "mop"

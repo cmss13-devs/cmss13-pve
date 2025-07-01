@@ -411,24 +411,19 @@
 		if (C.ally_of_hivenumber(hivenumber))
 			return ..()
 
-/obj/structure/mineral_door/resin/open()
-	if(open || !loc)
-		return //already open
-	isSwitchingStates = TRUE
+/obj/structure/mineral_door/resin/Open()
+	if(state || !loc) return //already open
+	isSwitchingStates = 1
 	playsound(loc, "alien_resin_move", 25)
 	flick("[mineralType]opening",src)
-	addtimer(CALLBACK(src, PROC_REF(finish_open)), 3 DECISECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-
-/obj/structure/mineral_door/resin/finish_open()
-	if(!loc || QDELETED(src))
-		return
+	sleep(3)
 	density = FALSE
 	opacity = FALSE
-	open = TRUE
+	state = 1
 	update_icon()
-	isSwitchingStates = FALSE
+	isSwitchingStates = 0
 	layer = DOOR_OPEN_LAYER
-	addtimer(CALLBACK(src, PROC_REF(close)), close_delay, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+	addtimer(CALLBACK(src, PROC_REF(Close)), close_delay, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /obj/structure/mineral_door/resin/proc/close_blocked()
 	for(var/turf/turf in locs)
@@ -437,31 +432,28 @@
 				return TRUE
 	return FALSE
 
-/obj/structure/mineral_door/resin/close()
-	if(!open || !loc || isSwitchingStates)
+/obj/structure/mineral_door/resin/Close()
+	if(!state || !loc || isSwitchingStates)
 		return //already closed or changing
 	//Can't close if someone is blocking it
 	if(close_blocked())
-		addtimer(CALLBACK(src, PROC_REF(close)), close_delay, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+		addtimer(CALLBACK(src, PROC_REF(Close)), close_delay, TIMER_UNIQUE|TIMER_OVERRIDE)
 		return
 
-	isSwitchingStates = TRUE
+	isSwitchingStates = 1
 	playsound(loc, "alien_resin_move", 25)
 	flick("[mineralType]closing",src)
-	addtimer(CALLBACK(src, PROC_REF(finish_close)), 3 DECISECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-
-/obj/structure/mineral_door/resin/finish_close()
-	if(!loc || QDELETED(src))
-		return
+	sleep(3)
 	density = TRUE
 	opacity = TRUE
-	open = FALSE
+	state = 0
 	update_icon()
-	isSwitchingStates = FALSE
+	isSwitchingStates = 0
 	layer = DOOR_CLOSED_LAYER
 
 	if(close_blocked())
-		open()
+		Open()
+		return
 
 /obj/structure/mineral_door/resin/Dismantle(devastated = 0)
 	qdel(src)

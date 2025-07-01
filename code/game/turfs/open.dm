@@ -628,7 +628,6 @@
 	name = "river"
 	icon_state = "seashallow"
 	can_bloody = FALSE
-	fishing_allowed = TRUE
 	var/icon_overlay = "riverwater"
 	var/covered = 0
 	var/covered_name = "grate"
@@ -641,9 +640,6 @@
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
 
-/turf/open/gm/river/pool
-	fishing_allowed = 0
-
 /turf/open/gm/river/Initialize(mapload, ...)
 	. = ..()
 	update_icon()
@@ -653,9 +649,9 @@
 	update_overlays()
 
 /turf/open/gm/river/proc/update_overlays()
+	overlays.Cut()
 	if(no_overlay)
 		return
-	overlays.Cut()
 	if(covered)
 		name = covered_name
 		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
@@ -758,13 +754,6 @@
 	color = "#995555"
 	name = "pool"
 
-/turf/open/gm/river/dark_water
-	color = "#4d4d4d"
-	name = "fuel"
-
-/turf/open/gm/river/dark_water/no_overlay
-	no_overlay = TRUE
-
 /turf/open/gm/river/red
 	color = "#995555"
 
@@ -774,27 +763,14 @@
 /turf/open/gm/river/shallow_ocean_shallow_ocean
 	name = "shallow ocean"
 	default_name = "shallow ocean"
-/turf/open/gm/river/beach_water
-	name = "shallow water"
-	supports_fishing = TRUE
-	no_overlay = TRUE
 
 /turf/open/gm/river/ocean
 	color = "#dae3e2"
 	base_river_slowdown = 4 // VERY. SLOW.
 
-/turf/open/gm/river/ocean/deep_water
-	name = "deep water"
-
-/turf/open/gm/river/ocean/no_overlay
-	no_overlay = TRUE
-
 /turf/open/gm/river/ocean/deep_ocean
 	name = "deep ocean"
 	default_name = "deep ocean"
-
-/turf/open/gm/river/ocean/deep_ocean/no_overlay
-	no_overlay = TRUE
 
 /turf/open/gm/river/ocean/Entered(atom/movable/AM)
 	. = ..()
@@ -875,7 +851,6 @@
 	supports_surgery = FALSE
 	minimap_color = MINIMAP_WATER
 	is_groundmap_turf = FALSE // Not real ground
-	fishing_allowed = TRUE
 
 
 /turf/open/gm/riverdeep/Initialize(mapload, ...)
@@ -886,9 +861,6 @@
 	no_overlay = TRUE
 	supports_surgery = FALSE
 
-/turf/open/gm/river/no_overlay_lighted
-	no_overlay = TRUE
-	supports_surgery = FALSE
 
 
 
@@ -985,11 +957,6 @@
 /turf/open/asphalt/cement_sunbleached
 	name = "concrete"
 	icon_state = "cement_sunbleached5"
-
-/turf/open/asphalt/cement_sunbleached_darkened
-	name = "floor"
-	icon_state = "cement_sunbleached5"
-	color = "#a39e99"
 
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1
 	icon_state = "cement_sunbleached1"
@@ -1226,7 +1193,6 @@
 	name = "floor"
 	icon_state = "floor"
 	icon = 'icons/turf/shuttle.dmi'
-	unacidable = TRUE
 
 /turf/open/shuttle/can_surgery
 	allow_construction = TRUE
@@ -1439,12 +1405,6 @@
 	name = "floor"
 	icon_state = "dark_sterile"
 	supports_surgery = TRUE
-
-/turf/open/shuttle/vehicle/med/slate
-	color = "#495462"
-
-/turf/open/shuttle/vehicle/med/gray
-	color = "#9c9a97"
 
 /turf/open/shuttle/vehicle/dark_sterile
 	icon_state = "dark_sterile"

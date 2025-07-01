@@ -39,6 +39,14 @@
 		stat |= BROKEN
 	update_icon()
 
+
+// has the door power situation changed, if so update icon.
+/obj/structure/machinery/door_display/power_change()
+	..()
+	update_icon()
+	return
+
+
 // open/closedoor checks if door_display has power, if so it checks if the
 // linked door is open/closed (by density) then opens it/closes it.
 
@@ -77,7 +85,7 @@
 
 	if(!uses_tgui)
 		user.set_interaction(src)
-		show_browser(user, display_contents(user), name, "computer", width = 400, height = 500)
+		show_browser(user, display_contents(user), name, "computer", "size=400x500")
 	return
 
 /obj/structure/machinery/door_display/proc/display_contents(mob/user as mob)
@@ -88,13 +96,13 @@
 
 	// Open/Close Door
 	if (open)
-		data += "<a href='byond://?src=\ref[src];open=0'>Close Door</a><br/>"
+		data += "<a href='?src=\ref[src];open=0'>Close Door</a><br/>"
 	else
-		data += "<a href='byond://?src=\ref[src];open=1'>Open Door</a><br/>"
+		data += "<a href='?src=\ref[src];open=1'>Open Door</a><br/>"
 
 	data += "<br/>"
 
-	data += "<br/><a href='byond://?src=\ref[user];mach_close=computer'>Close Display</a>"
+	data += "<br/><a href='?src=\ref[user];mach_close=computer'>Close Display</a>"
 	data += "</TT></BODY></HTML>"
 
 	return data
@@ -210,6 +218,9 @@
 	open_shutter(TRUE)
 	open_door(TRUE)
 
+/obj/structure/machinery/door_display/update_icon()
+	return
+
 // TGUI \\
 
 /obj/structure/machinery/door_display/research_cell/tgui_interact(mob/user, datum/tgui/ui)
@@ -310,8 +321,7 @@
 		if(!D.density)
 			continue
 		D.unlock(force)
-		if(D.operating != DOOR_OPERATING_OPENING)
-			D.open(force)
+		D.open(force)
 		open = TRUE
 
 	return TRUE

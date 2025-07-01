@@ -72,11 +72,11 @@
 /obj/structure/machinery/smartfridge/power_change()
 	..()
 	if( !(stat & NOPOWER) )
-		ispowered = TRUE
+		src.ispowered = TRUE
 		icon_state = icon_on
 	else
 		spawn(rand(0, 15))
-			ispowered = FALSE
+			src.ispowered = FALSE
 			icon_state = icon_off
 
 //*******************

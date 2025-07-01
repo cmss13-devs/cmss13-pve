@@ -16,7 +16,7 @@
 	var/build_stage = BARRICADE_SANDBAG_1
 	metallic = FALSE
 
-/obj/structure/barricade/sandbags/Initialize(loc, mob/user, direction, amount = 1)
+/obj/structure/barricade/sandbags/New(loc, mob/user, direction, amount = 1)
 	if(direction)
 		setDir(direction)
 
@@ -25,7 +25,7 @@
 	else if(dir == NORTH)
 		pixel_y = 7
 
-	. = ..(loc, user)
+	..(loc, user)
 
 	for(var/i = 1 to amount-1)
 		increment_build_stage()
@@ -133,13 +133,8 @@
 		health += 50
 	build_stage++
 
-/obj/structure/barricade/sandbags/full
 
-/obj/structure/barricade/sandbags/full/Initialize(mapload, mob/user, direction, amount = 5)
-	. = ..(loc, user, direction, amount = 5)
-
-/obj/structure/barricade/sandbags/wired/Initialize(mapload, mob/user)
-	. = ..()
+/obj/structure/barricade/sandbags/wired/New()
 	health = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth = BARRICADE_SANDBAG_TRESHOLD_5
 	maxhealth += 50
@@ -150,6 +145,7 @@
 	build_stage = BARRICADE_SANDBAG_5
 	update_icon()
 	climbable = FALSE
+	. = ..()
 
 /obj/structure/barricade/sandbags/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()

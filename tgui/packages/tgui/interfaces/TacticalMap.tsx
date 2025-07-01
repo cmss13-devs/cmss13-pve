@@ -163,10 +163,8 @@ const ViewMapPanel = (props) => {
   }
 
   return (
-    <Section fill fitted height="86%">
+    <Section fitted height="86%">
       <ByondUi
-        height="100%"
-        width="100%"
         params={{
           id: data.mapRef,
           type: 'map',
@@ -181,7 +179,7 @@ const ViewMapPanel = (props) => {
 const OldMapPanel = (props) => {
   const { data } = useBackend<TacMapProps>();
   return (
-    <Section fill fitted height="86%" align="center" fontSize="30px">
+    <Section fitted height="86%" align="center" fontSize="30px">
       {data.canViewCanvas ? (
         <DrawnMap
           svgData={data.svgData}
@@ -226,8 +224,6 @@ const DrawMapPanel = (props) => {
         title="Canvas Options"
         className={'canvas-options'}
         width="688px"
-        position="absolute"
-        style={{ zIndex: '1' }}
       >
         <Stack height="15px">
           <Stack.Item grow>
@@ -324,13 +320,7 @@ const DrawMapPanel = (props) => {
           </Stack.Item>
         </Stack>
       </Section>
-      <Section
-        width="688px"
-        height="694px"
-        align="center"
-        textAlign="center"
-        fitted
-      >
+      <Section width="688px" align="center" textAlign="center">
         <CanvasLayer
           selection={handleColorSelection(data.toolbarUpdatedSelection)}
           actionQueueChange={data.actionQueueChange}

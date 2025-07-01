@@ -1,3 +1,4 @@
+/* eslint-disable func-style */
 /**
  * @file
  * @copyright 2020 Aleksej Komarov
@@ -53,7 +54,6 @@ type Props = Partial<{
   iconRotation: number;
   iconSpin: BooleanLike;
   onClick: (e: any) => void;
-  allowAnyClick: BooleanLike;
   selected: BooleanLike;
   tooltip: ReactNode;
   tooltipPosition: Placement;
@@ -81,7 +81,6 @@ export const Button = (props: Props) => {
     iconRotation,
     iconSpin,
     onClick,
-    allowAnyClick,
     selected,
     tooltip,
     tooltipPosition,
@@ -114,7 +113,7 @@ export const Button = (props: Props) => {
       ])}
       tabIndex={!disabled ? 0 : undefined}
       onClick={(event) => {
-        if (!disabled && onClick && (allowAnyClick || event.button === 0)) {
+        if (!disabled && onClick) {
           onClick(event);
         }
       }}
@@ -237,7 +236,7 @@ const ButtonConfirm = (props: ConfirmProps) => {
       setTimeout(() => window.addEventListener('click', handleClickOff));
     } else {
       window.removeEventListener('click', handleClickOff);
-      if (event && (props.allowAnyClick || event.button === 0)) {
+      if (event) {
         onClick?.(event);
       }
     }
@@ -257,7 +256,7 @@ const ButtonConfirm = (props: ConfirmProps) => {
       }}
       {...rest}
     >
-      {clickedOnce && confirmContent ? confirmContent : children}
+      {clickedOnce ? confirmContent : children}
     </Button>
   );
 };

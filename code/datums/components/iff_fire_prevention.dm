@@ -76,8 +76,6 @@
 		for(var/mob/living/checked_living in checked_turf)
 			if(checked_living == user) // sometimes it still happens
 				continue
-			if(checked_living.loc == user.loc) //behave like everyother gun, the bullets physically can't hit them anyway
-				continue
 			if(checked_living.body_position == LYING_DOWN && projectile_to_fire.original != checked_living)
 				continue
 

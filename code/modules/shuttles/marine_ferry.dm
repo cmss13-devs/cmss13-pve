@@ -58,7 +58,7 @@
 		for(var/obj/vehicle/multitile/M in D.loc)
 			if(M) return 0
 
-		for(var/turf/T in D.locs)
+		for(var/turf/T in D.locate_filler_turfs())
 			for(var/obj/vehicle/multitile/M in T)
 				if(M) return 0
 
@@ -250,9 +250,8 @@
 
 	close_doors(turfs_int) // adding this for safety.
 
-	if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
-		if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
-			SSticker.mode.ds_first_drop()
+	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED)) //Launching on first drop.
+		SSticker.mode.ds_first_drop()
 
 	in_transit_time_left = travel_time
 	while(in_transit_time_left>0)
@@ -292,9 +291,8 @@
 	//END: Heavy lifting backend
 
 	if(SSticker?.mode && !(SSticker.mode.flags_round_type & MODE_DS_LANDED))
-		if(!(MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_INTRO_BLURB)))
-			SSticker.mode.ds_first_landed(src)
-			SSticker.mode.flags_round_type |= MODE_DS_LANDED
+		SSticker.mode.flags_round_type |= MODE_DS_LANDED
+		SSticker.mode.ds_first_landed(src)
 
 	for(var/X in equipments)
 		var/obj/structure/dropship_equipment/E = X

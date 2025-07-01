@@ -35,11 +35,8 @@
 		return
 
 	var/obj/item/device/radio/headset/current_headset = loc
-	var/datum/radio_frequency/old_connections = current_headset.secure_radio_connections[old_name]
-	if(!old_connections)
-		return
 
-	var/passed_freq = old_connections.frequency
+	var/passed_freq = current_headset.secure_radio_connections[old_name].frequency
 	current_headset.secure_radio_connections -= old_name
 
 	SSradio.remove_object(current_headset, passed_freq)

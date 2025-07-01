@@ -122,6 +122,10 @@
 
 	update_icon()
 
+/obj/structure/machinery/fuelcell_recycler/power_change()
+	..()
+	update_icon()
+
 /obj/structure/machinery/fuelcell_recycler/update_icon()
 	overlays.Cut()
 

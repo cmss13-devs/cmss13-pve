@@ -5,8 +5,8 @@ import { WINDOW_SIZES } from './constants';
  * Once byond signals this via keystroke, it
  * ensures window size, visibility, and focus.
  */
-export const windowOpen = (channel: Channel, scale: boolean) => {
-  setWindowVisibility(true, scale);
+export const windowOpen = (channel: Channel) => {
+  setWindowVisibility(true);
   Byond.sendMessage('open', { channel });
 };
 
@@ -14,8 +14,8 @@ export const windowOpen = (channel: Channel, scale: boolean) => {
  * Resets the state of the window and hides it from user view.
  * Sending "close" logs it server side.
  */
-export const windowClose = (scale: boolean) => {
-  setWindowVisibility(false, scale);
+export const windowClose = () => {
+  setWindowVisibility(false);
   Byond.winset('map', {
     focus: true,
   });
@@ -25,32 +25,22 @@ export const windowClose = (scale: boolean) => {
 /**
  * Modifies the window size.
  */
-export const windowSet = (size = WINDOW_SIZES.small, scale: boolean) => {
-  const pixelRatio = scale ? window.devicePixelRatio : 1;
+export const windowSet = (size = WINDOW_SIZES.small) => {
+  let sizeStr = `${WINDOW_SIZES.width}x${size}`;
 
-  let sizeStr = `${WINDOW_SIZES.width * pixelRatio}x${size * pixelRatio}`;
-
-  Byond.winset('tgui_say', {
+  Byond.winset('tgui_say.browser', {
     size: sizeStr,
   });
 
-  Byond.winset('tgui_say.browser', {
+  Byond.winset('tgui_say', {
     size: sizeStr,
   });
 };
 
 /** Helper function to set window size and visibility */
-const setWindowVisibility = (visible: boolean, scale: boolean) => {
-  const pixelRatio = scale ? window.devicePixelRatio : 1;
-
-  const sizeString = `${WINDOW_SIZES.width * pixelRatio}x${WINDOW_SIZES.small * pixelRatio}`;
-
+const setWindowVisibility = (visible: boolean) => {
   Byond.winset('tgui_say', {
     'is-visible': visible,
-    size: sizeString,
-  });
-
-  Byond.winset('tgui_say.browser', {
-    size: sizeString,
+    size: `${WINDOW_SIZES.width}x${WINDOW_SIZES.small}`,
   });
 };

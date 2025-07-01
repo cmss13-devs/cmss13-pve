@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-export const THEMES = ['dark', 'light'];
+export const THEMES = ['light', 'dark'];
 
 const COLOR_DARK_BG = '#202020';
 const COLOR_DARK_BG_DARKER = '#171717';

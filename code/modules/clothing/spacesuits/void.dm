@@ -1,14 +1,14 @@
 
 //NASA Voidsuit
-/obj/item/clothing/head/helmet/space/odyssey
-	name = "\improper environmental helmet"
-	desc = "An aged environmental suit helmet designed by the now defunct United States National Council of Astronautics."
+/obj/item/clothing/head/helmet/space/uscm
+	name = "\improper USCM Compression Helmet"
+	desc = "A high tech, USCM designed, dark red space suit helmet. Used for maintenance in space."
 	icon_state = "void"
 	item_state = "void"
 
-/obj/item/clothing/suit/space/odyssey
-	name = "\improper environmental suit"
+/obj/item/clothing/suit/space/uscm
+	name = "\improper USCM Compression Suit"
 	icon_state = "void"
 	item_state = "void"
-	desc = "An aged environmental suit designed by the now defunct United States National Council of Astronautics."
+	desc = "A high tech, USCM designed, dark red Space suit. Used for maintenance in space."
 	slowdown = 1

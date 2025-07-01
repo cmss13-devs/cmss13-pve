@@ -277,7 +277,7 @@
 	current_rounds = 17
 	},
 /obj/effect/spawner/gibspawner/human,
-/obj/item/clothing/head/helmet/marine/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
 /turf/open/floor/plating,
 /area/lv624/lazarus/hydroponics)
 "zS" = (

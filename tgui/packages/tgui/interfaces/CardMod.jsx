@@ -140,7 +140,6 @@ export const CardContent = (props) => {
           <>
             Linked Account:
             <NumberInput
-              step={1}
               value={id_account}
               minValue={111111}
               maxValue={999999}

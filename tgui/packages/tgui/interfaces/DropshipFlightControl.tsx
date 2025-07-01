@@ -450,9 +450,6 @@ const RenderScreen = () => {
       {data.shuttle_mode === 'igniting' && <LaunchCountdown />}
       {data.shuttle_mode === 'pre-arrival' && <TouchdownCooldown />}
       {data.shuttle_mode === 'recharging' && <ShuttleRecharge />}
-      {data.shuttle_mode === 'recharging' && data.can_set_automated === 1 && (
-        <AutopilotConfig />
-      )}
       {data.shuttle_mode === 'called' && data.target_destination && (
         <InFlightCountdown />
       )}

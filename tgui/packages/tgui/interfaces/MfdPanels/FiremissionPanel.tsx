@@ -374,7 +374,7 @@ const OffsetDetailed = (
     readonly equipment: DropshipEquipment;
   },
 ) => {
-  const availableGimbals = gimbals[props.equipment.mount_point] ?? gimbals[0];
+  const availableGimbals = gimbals[props.equipment.mount_point];
   const weaponFm = props.fm.records.find(
     (x) => x.weapon === props.equipment.mount_point,
   );
@@ -455,7 +455,7 @@ const FMOffsetStack = (
   )?.offsets;
 
   const { editFm } = fmEditState(props.panelStateId);
-  const availableGimbals = gimbals[props.equipment.mount_point] ?? gimbals[0];
+  const availableGimbals = gimbals[props.equipment.mount_point];
 
   const firemissionOffsets = props.equipment.firemission_delay ?? 0;
 

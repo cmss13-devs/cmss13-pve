@@ -8,24 +8,24 @@
 
 /datum/paygrade/navy/e1
 	paygrade = PAY_SHORT_NE1
-	name = "Crewman Recruit"
-	prefix = "CR"
+	name = "Seaman Recruit"
+	prefix = "SR"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e1
 	ranking = 0
 	pay_multiplier = 1.8
 
 /datum/paygrade/navy/e2
 	paygrade = PAY_SHORT_NE2
-	name = "Crewman Apprentice"
-	prefix = "CA"
+	name = "Seaman Apprentice"
+	prefix = "SA"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e2
 	ranking = 1
 	pay_multiplier = 1.9
 
 /datum/paygrade/navy/e3
 	paygrade = PAY_SHORT_NE3
-	name = "Crewman"
-	prefix = "CMN"
+	name = "Seaman"
+	prefix = "SN"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e3
 	ranking = 2
 	pay_multiplier = 2.1
@@ -249,8 +249,8 @@
 
 /datum/paygrade/navy/o10c
 	paygrade = PAY_SHORT_NO10C
-	name = "Chief of Aerospace Operations"
-	prefix = "CAO"
+	name = "Chief of Naval Operations"
+	prefix = "CNO"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/o10c
 	ranking = 28
 	pay_multiplier = 8.5

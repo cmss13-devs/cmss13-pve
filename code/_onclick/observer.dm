@@ -14,11 +14,11 @@
 	if(..())
 		return TRUE
 
-	if (mods[SHIFT_CLICK] && mods[MIDDLE_CLICK])
+	if (mods["shift"] && mods["middle"])
 		point_to(target)
 		return TRUE
 
-	if(mods[CTRL_CLICK])
+	if(mods["ctrl"])
 		if(target == src)
 			if(!can_reenter_corpse || !mind || !mind.current)
 				return
@@ -81,7 +81,7 @@
 	next_move = world.time + 8
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below
-	if(!mods[SHIFT_CLICK])
+	if(!mods["shift"])
 		target.attack_ghost(src)
 	return FALSE
 

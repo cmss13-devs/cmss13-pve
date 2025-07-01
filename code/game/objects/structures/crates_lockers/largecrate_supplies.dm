@@ -156,12 +156,6 @@
 	desc = "An ammunition case containing 10 M41A magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle = 10)
 
-/obj/structure/largecrate/supply/ammo/m41a/extended
-	name = "\improper M41A ext. magazine case (x20)"
-	desc = "An ammunition case containing 20 extended M41A magazines."
-	supplies = list(/obj/item/ammo_magazine/rifle/extended = 20)
-
-
 /obj/structure/largecrate/supply/ammo/m41amk1
 	name = "\improper M41A magazine case (x20)"
 	desc = "An ammunition case containing 20 M41A MK1 magazines."
@@ -222,20 +216,20 @@
 	icon_state = "case_double"
 
 /obj/structure/largecrate/supply/explosives/mines
-	name = "\improper M20A2 claymore case (x25)"
-	desc = "A case containing five boxes of five M20A2 claymores."
+	name = "\improper M20 claymore case (x25)"
+	desc = "A case containing five boxes of five M20 claymores."
 	supplies = list(/obj/item/storage/box/explosive_mines = 5)
 
 /obj/structure/largecrate/supply/explosives/grenades
 	name = "\improper M40 HEDP grenade case (x50)"
 	desc = "A case containing two twenty-five M40 HEDP grenade boxes."
-	supplies = list(/obj/item/ammo_box/magazine/nade_box = 2)
+	supplies = list(/obj/item/storage/box/nade_box = 2)
 
 /obj/structure/largecrate/supply/explosives/grenades/less
 	name = "\improper M40 HEDP grenade case (x25)"
 	desc = "A case containing one twenty-five M40 HEDP grenade box."
 	icon_state = "case"
-	supplies = list(/obj/item/ammo_box/magazine/nade_box = 1)
+	supplies = list(/obj/item/storage/box/nade_box = 1)
 
 /obj/structure/largecrate/supply/explosives/mortar_he
 	name = "80mm HE mortar shell case (x25)"
@@ -251,31 +245,6 @@
 	name = "80mm flare mortar shell case (x25)"
 	desc = "A case containing twenty-five 80mm flare mortar shells."
 	supplies = list(/obj/item/mortar_shell/flare = 25)
-
-/obj/structure/largecrate/supply/explosives/himat
-	name = "HIMAT missiles case (x25)"
-	desc = "A case containing twenty-five HIMAT missiles."
-	supplies = list(/obj/item/mortar_shell/himat = 25)
-
-/obj/structure/largecrate/supply/explosives/himat_training
-	name = "HIMAT training missiles case (x25)"
-	desc = "A case containing twenty-five HIMAT training missiles."
-	supplies = list(/obj/item/mortar_shell/himat/training = 25)
-
-/obj/structure/largecrate/supply/explosives/himat_explosive
-	name = "HIMAT HE missiles case (x25)"
-	desc = "A case containing twenty-five HE HIMAT missiles."
-	supplies = list(/obj/item/mortar_shell/himat/explosive = 25)
-
-/obj/structure/largecrate/supply/explosives/himat_antipersonnel
-	name = "HIMAT AP missiles case (x25)"
-	desc = "A case containing twenty-five anti-personnel HIMAT missiles."
-	supplies = list(/obj/item/mortar_shell/himat/antipersonnel = 25)
-
-/obj/structure/largecrate/supply/explosives/himat_incendiary
-	name = "HIMAT INC missiles case (x25)"
-	desc = "A case containing twenty-five incendiary HIMAT missiles."
-	supplies = list(/obj/item/mortar_shell/incendiary/himat = 25)
 
 
 /obj/structure/largecrate/supply/supplies
@@ -311,16 +280,6 @@
 	name = "\improper USCM MRE crate (x60)"
 	desc = "A supply crate containing sixty USCM MRE packets."
 	supplies = list(/obj/item/ammo_box/magazine/misc/mre = 5)
-
-/obj/structure/largecrate/supply/supplies/mre/wy
-	name = "\improper W-Y brand rations crate (x60)"
-	desc = "A supply crate containing sixty W-Y brand ration packets."
-	supplies = list(/obj/item/ammo_box/magazine/misc/mre/wy = 5)
-
-/obj/structure/largecrate/supply/supplies/wy_emergency_food
-	name = "\improper WY emergency nutrition briquettes crate (x100)"
-	desc = "A supply crate containing one hundred WY emergency nutrition briquettes."
-	supplies = list(/obj/item/ammo_box/magazine/misc/mre/emergency = 5)
 
 /obj/structure/largecrate/supply/supplies/water
 	name = "\improper WY Bottled Water crate (x50)"
