@@ -244,7 +244,7 @@
 	matter = list("metal" = 500)
 	attack_speed = 4
 	volume = 180
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 	splashable = FALSE
 	can_be_placed_into = list(
 		/obj/structure/machinery/chem_master/,
