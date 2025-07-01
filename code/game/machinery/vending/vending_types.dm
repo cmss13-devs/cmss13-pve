@@ -493,8 +493,8 @@
 		/obj/item/tool/lighter/random = 10,
 	)
 	prices = list(
-		/obj/item/storage/fancy/cigarettes/laika = 25,
-		/obj/item/clothing/mask/cigarette/cigar/classic = 40,
+		/obj/item/storage/fancy/cigarettes/laika = 10,
+		/obj/item/clothing/mask/cigarette/cigar/cohiba = 20,
 		/obj/item/storage/box/matches = 1,
 		/obj/item/tool/lighter/random = 5,
 	)
