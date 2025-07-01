@@ -345,28 +345,40 @@ export const RADIO_PREFIXES = {
     label: 'USCG',
   },
   ':1 ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'usasf',
+    label: 'USASF',
   },
   '.1 ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'usasf',
+    label: 'USASF',
   },
   '#1 ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'usasf',
+    label: 'USASF',
   },
   ':2 ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'pfa',
+    label: 'PFA',
   },
   '.2 ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'pfa',
+    label: 'PFA',
   },
   '#2 ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'pfa',
+    label: 'PFA',
+  },
+  ':3 ': {
+    id: 'jsc',
+    label: 'JSC',
+  },
+  '.3 ': {
+    id: 'jsc',
+    label: 'JSC',
+  },
+  '#3 ': {
+    id: 'jsc',
+    label: 'JSC',
   },
 } as const;
 

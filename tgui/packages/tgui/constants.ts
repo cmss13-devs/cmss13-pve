@@ -227,6 +227,16 @@ export const RADIO_CHANNELS = [
     color: '#b3222e',
   },
   {
+    name: 'PFA',
+    freq: 1278,
+    color: '#4a4dc9',
+  },
+  {
+    name: 'JSC',
+    freq: 1279,
+    color: '#8b3434',
+  },
+  {
     name: 'LSTN BUG A',
     freq: 1290,
     color: '#d65d95',

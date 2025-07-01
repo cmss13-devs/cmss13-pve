@@ -45,6 +45,8 @@ $rmc: #e3580e;
 $us-army: #037741;
 $usasf: #2a1bb6;
 $uscg: #62a759;
+$pfa: #4a4dc9;
+$jsc: #8b3434;
 
 $_channel_map: (
   'say': $say,
@@ -97,6 +99,8 @@ $_channel_map: (
   'usasf': $usasf,
   'uscg': $uscg,
   'rmc': $rmc,
+  'pfa': $pfa,
+  'jsc': $jsc,
 );
 
 $channel_keys: map.keys($_channel_map) !default;
