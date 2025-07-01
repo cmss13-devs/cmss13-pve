@@ -1295,7 +1295,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
 /obj/item/device/radio/headset/distress/merc
-	name = "Mercenary headset"
+	name = "mercenary headset"
 	desc = "A civilian commercial headset, modified to work as a military one. Featured channels include: ; - Mercenary,  :o - Colony."
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
