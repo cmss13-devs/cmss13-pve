@@ -31,13 +31,18 @@
 //EVA
 
 /datum/human_ai_equipment_preset/upp/rifleman_eva
-	name = "EVA UPP Squad Rifleman"
-	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
+	name = "EVA UPP Squad Rifleman (AG 80)"
+	desc = "The standard UPP soldier armed with a AG-80."
 	path = /datum/equipment_preset/upp/rifleman/eva
+
+/datum/human_ai_equipment_preset/upp/rifleman_eva_type71
+	name = "EVA UPP Squad Rifleman (Type 71)"
+	desc = "The standard UPP soldier armed with a Type 71. Has less falloff and more damage and AP than the AG 80."
+	path = /datum/equipment_preset/upp/rifleman/eva_type71
 
 /datum/human_ai_equipment_preset/upp/shotgun_eva
 	name = "EVA UPP Squad Shotgunner(!!)"
-	desc = "The standard UPP soldier, but with a type 23 shotgun."
+	desc = "The standard UPP soldier, but with a Type 23 shotgun loaded with slugs."
 	path = /datum/equipment_preset/upp/rifleman/shotgun_eva
 
 /datum/human_ai_equipment_preset/upp/machinegunner_eva

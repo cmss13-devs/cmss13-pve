@@ -907,6 +907,48 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 	return 1
 
+/datum/equipment_preset/proc/add_terrible_rebel_eva_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/helmet/space,
+		/obj/item/clothing/head/helmet/space/odyssey)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
+/datum/equipment_preset/proc/add_rebel_eva_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/helmet/marine/pressure,
+		/obj/item/clothing/head/helmet/marine/pressure/cyan,
+		/obj/item/clothing/head/helmet/marine/pressure/light,
+		/obj/item/clothing/head/helmet/marine/pressure/orange,
+		/obj/item/clothing/head/helmet/marine/pressure/red,
+		/obj/item/clothing/head/helmet/marine/pressure/yellow)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+	if(istype(helmetpath, /obj/item/clothing/head/helmet/marine/pressure))
+		spawn_army_fluff_items(new_human)
+
+/datum/equipment_preset/proc/add_terrible_rebel_eva_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/space,
+		/obj/item/clothing/suit/space/emergency,
+		/obj/item/clothing/suit/space/odyssey,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
+
+/datum/equipment_preset/proc/add_rebel_eva_suit(mob/living/carbon/human/new_human)
+	if(!istype(new_human)) return
+	var/suitpath = pick(
+		/obj/item/clothing/suit/space/pressure,
+		/obj/item/clothing/suit/space/pressure/cyan,
+		/obj/item/clothing/suit/space/pressure/dark,
+		/obj/item/clothing/suit/space/pressure/orange,
+		/obj/item/clothing/suit/space/pressure/red,
+		/obj/item/clothing/suit/space/pressure/yellow,
+		)
+	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+
 //*****************************************************************************************************/
 
 //MERC SHIT

@@ -242,9 +242,9 @@
 	maptext_label = "In"
 
 /obj/item/reagent_container/hypospray/autoinjector/dexalin
-	name = "dexalin autoinjector"
+	name = "stablization autoinjector"
 	chemname = "dexalinp"
-	desc = "An autoinjector loaded with 3 uses of Dexalin and Inaprovaline, designed to gradually oxygenate the entire body"
+	desc = "An autoinjector loaded with 3 uses of Dexalin and Inaprovaline, designed to gradually oxygenate the entire body."
 	amount_per_transfer_from_this = (REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD)*2
 	volume = (REAGENTS_OVERDOSE*2 * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
 	display_maptext = TRUE

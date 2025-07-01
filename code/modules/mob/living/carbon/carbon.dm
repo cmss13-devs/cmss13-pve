@@ -383,21 +383,20 @@
 			return
 		visible_message(SPAN_WARNING("[src] has thrown [thrown_thing]."), null, null, 5)
 
-		lastarea = get_area(src.loc)
-		if(!lastarea.gravity)
-			inertia_dir = get_dir(target, src)
-			step(src, inertia_dir)
-
 		if(throw_type == THROW_MODE_HIGH)
 			to_chat(src, SPAN_NOTICE("You prepare to perform a high toss."))
 			if(!do_after(src, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				to_chat(src, SPAN_WARNING("You need to set up the high toss!"))
 				return
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH))
 		else
 			drop_inv_item_on_ground(I, TRUE)
-			thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw)
+			INVOKE_ASYNC(thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw))
+		lastarea = get_area(src.loc)
+		if(!lastarea.gravity)
+			inertia_dir = get_dir(target, src)
+			step(src, inertia_dir)
 
 /mob/living/carbon/fire_act(exposed_temperature, exposed_volume)
 	..()

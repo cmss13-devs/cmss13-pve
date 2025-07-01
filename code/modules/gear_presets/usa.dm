@@ -34,7 +34,7 @@
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
 
-/datum/equipment_preset/usa/proc/spawn_army_fluff_items(mob/living/carbon/human/new_human)
+/datum/equipment_preset/proc/spawn_army_fluff_items(mob/living/carbon/human/new_human)
 	var/obj/item/helmet_accessory = pick(GLOB.allowed_helmet_items)
 	new_human.equip_to_slot_or_del(new helmet_accessory, WEAR_IN_HELMET)
 	if(prob(50))

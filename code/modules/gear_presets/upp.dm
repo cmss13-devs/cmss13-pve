@@ -207,8 +207,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
+////////// EVA
+
 /datum/equipment_preset/upp/rifleman/eva
-	name = "UPP Squad Rifleman (Equipped, EVA)"
+	name = "UPP Squad Rifleman (Equipped AG-80, EVA)"
 
 /datum/equipment_preset/upp/rifleman/eva/load_gear(mob/living/carbon/human/new_human)
 
@@ -217,7 +219,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp/impact, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
@@ -239,6 +240,41 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/upp/rifleman/eva_type71
+	name = "UPP Squad Rifleman (Equipped Type 71, EVA)"
+
+/datum/equipment_preset/upp/rifleman/eva_type71/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/breath, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/upp, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_HELMET)
+	//uniform
+	add_upp_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 //*****************************************************************************************************/
@@ -492,7 +528,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/impact/upp, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
