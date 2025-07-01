@@ -8,7 +8,7 @@
 
 /datum/human_ai_equipment_preset/upp/militia/sadar
 	name = "UPP People's Territorial Guardsman Designated Rocketeer"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has a disposable AT launcher."
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
 	path = /datum/equipment_preset/upp/militia/sadar
 
 /datum/human_ai_equipment_preset/upp/militia/medic

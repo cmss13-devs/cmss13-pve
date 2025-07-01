@@ -10,7 +10,7 @@
 
 /datum/human_ai_squad_preset/upp/militia/AT
 	name = "Territorial Guard, AT Patrol"
-	desc = "Territorial Guard tank hunter patrol armed with Type 71 rifles or KS29 pump-shotguns, alongside their single-use launcher and carrying IFAKs containing gauze, ointment, splints and an injector."
+	desc = "Territorial Guard tank hunter patrol armed with Type 71 rifles or KS29 pump-shotguns, alongside their anti-tank launcher and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/upp/militia = 1,
 		/datum/equipment_preset/upp/militia/sadar = 1,
