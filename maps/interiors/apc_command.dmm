@@ -168,7 +168,10 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
-/obj/effect/landmark/interior/spawn/telephone{
+/obj/structure/phone_base{
+	name = "APC reciever";
+	phone_category = "Vehicles";
+	phone_id = "M577-CMD Armoured Personnel Carrier";
 	pixel_x = -9;
 	pixel_y = 30
 	},

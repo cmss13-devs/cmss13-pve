@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Color of phone displayed in the phone menu
 	var/phone_color = "white"
 
-	/// The id of our phone which shows up when we talk. Recommended to make unique. Preferably do not include "(#:".
+	/// The id of our phone which shows up when we talk. Recommended to make unique. Do not include "(#:".
 	var/phone_id = "Telephone"
 
 	/// Our phone icon that is displayed in the phone menu TGUI
