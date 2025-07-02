@@ -43,6 +43,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_auto_aim,
 	)
 
 	var/obj/item/smartgun_battery/battery = null
@@ -60,15 +61,17 @@
 	var/recoil_compensation = 0
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
+	var/auto_aim = 0
 	var/motion_detector = 0
 	var/drain = 75
-	var/range = 7
+	var/range = 2
 	var/angle = 2
 	var/list/angle_list = list(180,135,90,60,30)
 	var/obj/item/device/motiondetector/sg/MD
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
+	var/image/autoshot_image
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -77,6 +80,11 @@
 	ammo = ammo_primary
 	MD = new(src)
 	battery = new /obj/item/smartgun_battery(src)
+	autoshot_image = image('icons/effects/effects.dmi', null, "lock")
+	autoshot_image.layer = ABOVE_XENO_LAYER
+	autoshot_image.plane = GAME_PLANE
+	autoshot_image.appearance_flags = RESET_COLOR|RESET_ALPHA|RESET_TRANSFORM|KEEP_APART
+	autoshot_image.alpha = 190
 	. = ..()
 	update_icon()
 
@@ -240,6 +248,70 @@
 	else
 		button.icon_state = "template"
 */
+/obj/item/weapon/gun/smartgun/proc/toggle_auto_aim(mob/user)
+	to_chat(user, "[icon2html(src, user)] You [auto_aim ? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s aim assist.")
+	balloon_alert(user, "aim assist [auto_aim ? "disabled" : "enabled"]")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	auto_aim = !auto_aim
+
+	if(auto_aim)
+		enable_auto_aim(user)
+	else
+		disable_auto_aim(user)
+
+/obj/item/weapon/gun/smartgun/proc/enable_auto_aim(mob/user)
+	drain += 200
+	START_PROCESSING(SSobj, src)
+	var/datum/action/item_action/smartgun/toggle_auto_aim/auto_aim_action = locate(/datum/action/item_action/smartgun/toggle_auto_aim) in actions
+	auto_aim_action.update_icon()
+
+/obj/item/weapon/gun/smartgun/proc/disable_auto_aim(mob/user)
+	drain -= 200
+	auto_aim = FALSE
+	var/datum/action/item_action/smartgun/toggle_auto_aim/auto_aim_action = locate(/datum/action/item_action/smartgun/toggle_auto_aim) in actions
+	auto_aim_action.update_icon()
+
+/obj/item/weapon/gun/smartgun/wield(mob/living/user)
+	. = ..()
+	user.client.images |= autoshot_image
+
+/obj/item/weapon/gun/smartgun/unwield(mob/user)
+	. = ..()
+	user.client?.images -= autoshot_image
+	reset_autoshot_image()
+
+/obj/item/weapon/gun/smartgun/proc/reset_autoshot_image()
+	autoshot_image.loc = null
+	autoshot_image.pixel_x = 0
+	autoshot_image.pixel_y = 0
+
+/obj/item/weapon/gun/smartgun/proc/set_autoshot_image(mob/living/target)
+	autoshot_image.loc = target
+	autoshot_image.pixel_x = -target.pixel_x // -16 is counted by -(-16)
+	autoshot_image.pixel_y = -target.pixel_y
+
+/datum/action/item_action/smartgun/toggle_auto_aim/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Aim Assist"
+	action_icon_state = "autofire"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_auto_aim/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/toggledgun= holder_item
+	toggledgun.toggle_auto_aim(usr)
+
+/datum/action/item_action/smartgun/toggle_auto_aim/proc/update_icon()
+	if(!holder_item)
+		return
+	var/obj/item/weapon/gun/smartgun/toggledgun = holder_item
+	if(toggledgun.auto_aim)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
 /datum/action/item_action/smartgun/toggle_accuracy_improvement/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Accuracy Improvement"
@@ -395,6 +467,7 @@
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	target = get_target(user, target)
 	if(!requires_battery)
 		return ..()
 
@@ -443,6 +516,57 @@
 	else
 		drain -= 50
 	recalculate_attachment_bonuses()
+
+/obj/item/weapon/gun/smartgun/process()
+	if(!auto_aim)
+		STOP_PROCESSING(SSobj, src)
+	if(auto_aim && last_fired + 1 SECONDS <= world.time)
+		reset_autoshot_image()
+
+/obj/item/weapon/gun/smartgun/proc/get_target(mob/living/user, target)
+	if(!auto_aim)
+		return target
+
+	var/dist_unconscious = 9999
+	var/dist_conscious = 9999
+
+	var/mob/living/unconscious_target = null
+	var/mob/living/conscious_target = null
+
+	for(var/mob/living/targetted_mob in range(range, target) & oviewers(user.get_maximum_view_range(), user))
+		if(targetted_mob.invisibility)
+			continue
+
+		if(HAS_TRAIT(targetted_mob, TRAIT_ABILITY_BURROWED))
+			continue
+
+		if(targetted_mob.is_ventcrawling)
+			continue
+
+		if(targetted_mob.stat == DEAD)
+			continue // No dead or non living.
+
+		if(iff_enabled && targetted_mob.get_target_lock(user.faction_group))
+			continue
+
+		var/dist = get_dist_sqrd(user, targetted_mob)
+
+		if(targetted_mob.stat == UNCONSCIOUS && dist_unconscious > dist)
+			dist_unconscious = dist
+			unconscious_target = targetted_mob
+		else if(dist_conscious > dist)
+			dist_conscious = dist
+			conscious_target = targetted_mob
+
+	if(conscious_target)
+		set_autoshot_image(conscious_target)
+		. = conscious_target
+	else if(unconscious_target)
+		set_autoshot_image(unconscious_target)
+		. = unconscious_target
+	else
+		. = target
+		reset_autoshot_image()
 /*
 /obj/item/weapon/gun/smartgun/proc/toggle_auto_fire(mob/user)
 	if(!(flags_item & WIELDED))
