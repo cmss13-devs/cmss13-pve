@@ -485,12 +485,14 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	.["available_transmitters"] = get_phones() - list(phone_id)
 	var/list/phones = list()
-	for(var/datum/component/phone/cycled_phone as anything in GLOB.phones)
-		phones += list(list(
-			"phone_category" = cycled_phone.phone_category,
-			"phone_color" = cycled_phone.phone_color,
-			"phone_id" = cycled_phone.phone_id,
-			"phone_icon" = cycled_phone.phone_icon
+	for(var/interate_phone in GLOB.phones)
+		var/datum/component/phone/cycled_phone = interate_phone
+		if (cycled_phone.phone_available())
+			phones += list(list(
+				"phone_category" = cycled_phone.phone_category,
+				"phone_color" = cycled_phone.phone_color,
+				"phone_id" = cycled_phone.phone_id,
+				"phone_icon" = cycled_phone.phone_icon
 		))
 
 	.["transmitters"] = phones
