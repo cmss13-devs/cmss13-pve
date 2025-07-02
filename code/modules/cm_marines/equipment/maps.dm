@@ -226,12 +226,11 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 // Tac-map showing map, for those groundmaps which haven't got a proper map(item) made
 /obj/item/tacmap_map
-	name = "\improper local map"
-	desc = "An orbital scan printout of the local area of operations."
-	color = "grey"
-	icon = 'icons/obj/items/marine-items.dmi'
-	icon_state = "map"
-	item_state = "map"
+	name = "\improper sat-scan tablet"
+	desc = "A handheld electronic device which displays an orbital scan of the local area of operations."
+	icon = 'icons/obj/items/devices.dmi'
+	icon_state = "maptablet"
+	item_state = "Cotablet"
 	throw_speed = SPEED_FAST
 	throw_range = 5
 	w_class = SIZE_TINY
@@ -247,7 +246,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /obj/item/tacmap_map/attack_self(mob/user) //Open the map
 	..()
-	user.visible_message(SPAN_NOTICE("[user] opens the [src.name]. "))
+	user.visible_message(SPAN_NOTICE("[user] looks closely at the [src.name]. "))
 	map.tgui_interact(user)
 
 /obj/item/tacmap_map/attack()
