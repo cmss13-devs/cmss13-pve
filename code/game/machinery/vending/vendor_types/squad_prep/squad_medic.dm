@@ -191,7 +191,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		/obj/item/storage/firstaid/adv,
 		/obj/item/storage/firstaid/adv,
 		/obj/item/device/healthanalyzer/soul,
-		/obj/item/roller/medevac,
 		/obj/item/roller,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,

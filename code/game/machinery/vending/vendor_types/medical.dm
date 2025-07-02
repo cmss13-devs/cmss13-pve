@@ -823,6 +823,7 @@
 		list("Saline IV bag", 2, /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("UTILITY", -1, null, null),
+		list("Health Diagnostic Equipment", 1, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("Gas Mask", 2, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
 	)
 
