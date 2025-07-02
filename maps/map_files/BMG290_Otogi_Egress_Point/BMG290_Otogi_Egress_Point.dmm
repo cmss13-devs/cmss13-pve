@@ -23954,7 +23954,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/caverns/cave_west)
 "lkY" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -33546,25 +33546,25 @@
 	pixel_x = 2;
 	pixel_y = 17
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -7;
 	pixel_y = -5;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -11;
 	pixel_y = 7;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = 10;
 	pixel_y = 0;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -9;
 	pixel_y = 10;
 	name = "token";

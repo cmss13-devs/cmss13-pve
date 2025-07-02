@@ -78,7 +78,7 @@
 		if(potential_vehicle_target.health <= 0)
 			continue
 
-		if(potential_vehicle_target.vehicle_faction == tied_human.faction)
+		if(faction_check(potential_vehicle_target))
 			continue
 
 		viable_targets += potential_vehicle_target
