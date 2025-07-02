@@ -342,7 +342,7 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("Liquid Bottle (Dexalin+)", 40, /obj/item/reagent_container/glass/bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 
 		list("INJECTORS", 0, null, null, null),
-		list("Smart Refill Tank"), 40, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
+		list("Smart Refill Tank", 40, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical
