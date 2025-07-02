@@ -173,7 +173,7 @@
 	///Whether it has a squad/medical HUD or not
 	var/has_hud = FALSE
 	///What HUD it will display if present
-	var/hud_type = null
+	var/list/hud_type = null
 
 /obj/item/Initialize(mapload, ...)
 	. = ..()
