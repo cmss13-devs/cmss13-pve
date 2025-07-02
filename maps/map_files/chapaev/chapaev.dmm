@@ -4922,6 +4922,7 @@
 	color = "#8B9490"
 	},
 /obj/item/roller,
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "lu" = (

@@ -449,7 +449,7 @@
 
 	new /obj/item/device/assembly/prox_sensor(Tsec)
 
-	new /obj/item/device/healthanalyzer(Tsec)
+	new /obj/item/device/healthanalyzer/soul(Tsec) //yeah
 
 	if(src.reagent_glass)
 		src.reagent_glass.forceMove(Tsec)
