@@ -523,7 +523,7 @@
 	if(auto_aim && last_fired + 1 SECONDS <= world.time)
 		reset_autoshot_image()
 
-/obj/item/weapon/gun/smartgun/proc/get_target(mob/living/user, target)
+/obj/item/weapon/gun/smartgun/get_target(mob/living/user, target)
 	if(!auto_aim)
 		return target
 
