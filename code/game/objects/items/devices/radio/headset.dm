@@ -1016,7 +1016,7 @@
 	icon_state = "pmc_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl)
 	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_PMC)
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
 
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CL
@@ -1201,7 +1201,7 @@
 	icon_state = "vai_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
 	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_TWE)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	volume = RADIO_VOLUME_IMPORTANT
 
 //CMB Headsets

@@ -89,7 +89,7 @@
 	name = "AN/MPAV-71 visor"
 	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. Uncommon to see in use outside of US Army units."
 	icon_state = "med_sight"
-	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_MEDICAL_BASIC)
 	action_icon_string = "med_sight_down"
 	helmet_overlay = "med_sight_right"
 
@@ -97,7 +97,7 @@
 	name = "AN/MPAV-71A visor"
 	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. This one has US Army markings on its casing."
 	helmet_overlay = "med_sight_right"
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
 
 /obj/item/device/helmet_visor/medical/advanced
 	name = "AN/MAV-72 visor"
@@ -105,8 +105,11 @@
 	helmet_overlay = "med_sight_left"
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 
-/obj/item/device/helmet_visor/medical/advanced/pmc_twe
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+/obj/item/device/helmet_visor/medical/advanced/pmc
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/medical/advanced/twe
+	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
 
 /obj/item/device/helmet_visor/medical/advanced/upp
 	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_ADVANCED)
@@ -380,4 +383,4 @@
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/twe
 	desc = "A high-tech visor often seen used by the Royal Marine Commando forces of the TWE. Offers various tactical readouts as well as providing night-vision capabilities."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
