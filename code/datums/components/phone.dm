@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Color of phone displayed in the phone menu
 	var/phone_color = "white"
 
-	/// The id of our phone which shows up when we talk
+	/// The id of our phone which shows up when we talk. Recommended to make unique. Preferably do not include "(#:".
 	var/phone_id = "Telephone"
 
 	/// Our phone icon that is displayed in the phone menu TGUI
@@ -92,6 +92,19 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	src.networks_transmit = isnull(networks_transmit) ? src.networks_transmit : networks_transmit.Copy()
 	src.holder = holder ? holder : parent
 	src.overlay_interactable = isnull(overlay_interactable) ? src.overlay_interactable : overlay_interactable
+
+	//Makes sure all phone IDs are Unique... Hopefully.
+	var/id = src.phone_id
+	var/num_id = 2
+	for(var/possible_phone in GLOB.phones) //Go through extra times to make sure.
+		for(var/dupe_phone in GLOB.phones) //Safety check all phones for duplicate IDs
+			var/datum/component/phone/possible_duplicate_id = dupe_phone
+			if(id == possible_duplicate_id.phone_id)
+				if(findtext(id, " (#:")) //Already a duplicate?
+					id = copytext(id, 1, findtext(id, " (#:"))
+				id = "[id] (#:[num_id])"
+				num_id++
+		 src.phone_id = id
 
 	phone_handset = new(null, src, src.holder)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
@@ -232,14 +245,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		if(!net_link)
 			continue
 
-		var/id = target_phone.phone_id
-		var/num_id = 1
-		while(id in phone_list)
-			id = "[target_phone.phone_id] [num_id]"
-			num_id++
-
-		target_phone.phone_id = id
-		phone_list[id] = target_phone
+		phone_list[target_phone.phone_id] += target_phone
 
 	return phone_list
 
