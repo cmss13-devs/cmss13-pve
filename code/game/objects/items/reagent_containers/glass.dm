@@ -244,7 +244,7 @@
 	matter = list("metal" = 500)
 	attack_speed = 4
 	volume = 180
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 	splashable = FALSE
 	can_be_placed_into = list(
 		/obj/structure/machinery/chem_master/,
@@ -665,6 +665,7 @@
 	icon_state = "rag"
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5)
+	splashable = FALSE
 	volume = 5
 	can_be_placed_into = null
 	flags_atom = FPRINT|OPENCONTAINER
