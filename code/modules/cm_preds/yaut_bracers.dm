@@ -55,8 +55,8 @@
 		if(!owner)
 			owner = user
 		toggle_lock_internal(user, TRUE)
-		RegisterSignal(user, list(COMSIG_MOB_STAT_SET_ALIVE, COMSIG_MOB_DEATH), PROC_REF(update_minimap_icon))
-		INVOKE_NEXT_TICK(src, PROC_REF(update_minimap_icon), user)
+		RegisterSignal(user, list(COMSIG_MOB_STAT_SET_ALIVE, COMSIG_MOB_DEATH), PROC_REF(update_yautja_minimap_icon))
+		INVOKE_NEXT_TICK(src, PROC_REF(update_yautja_minimap_icon), user)
 
 /obj/item/clothing/gloves/yautja/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -110,7 +110,7 @@
 	return
 
 /// Called to update the minimap icon of the predator
-/obj/item/clothing/gloves/yautja/proc/update_minimap_icon()
+/obj/item/clothing/gloves/yautja/proc/update_yautja_minimap_icon()
 	if(!ishuman(owner))
 		return
 
@@ -227,7 +227,7 @@
 	minimap_icon = "thrall"
 
 
-/obj/item/clothing/gloves/yautja/thrall/update_minimap_icon()
+/obj/item/clothing/gloves/yautja/thrall/update_yautja_minimap_icon()
 	if(!ishuman(owner))
 		return
 

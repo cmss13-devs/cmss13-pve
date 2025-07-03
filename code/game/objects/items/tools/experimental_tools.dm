@@ -1,6 +1,6 @@
 /obj/item/tool/crew_monitor
 	name = "crew monitor"
-	desc = "A tool used to get coordinates to deployed personnel. It was invented after it was found out 3/4 command officers couldn't read numbers."
+	desc = "A tool used to get coordinates to deployed personnel."
 	icon = 'icons/obj/items/experimental_tools.dmi'
 	icon_state = "crew_monitor"
 	flags_equip_slot = SLOT_WAIST
@@ -23,6 +23,14 @@
 /obj/item/tool/crew_monitor/dropped(mob/user)
 	. = ..()
 	SStgui.close_uis(src)
+
+/obj/item/tool/crew_monitor/upp
+	name = "\"Dísir\" lifesigns monitor"
+	faction = FACTION_UPP
+
+/obj/item/tool/crew_monitor/pmc
+	name = "operative wellbeing monitor"
+	faction = FACTION_PMC
 
 /obj/item/clothing/suit/auto_cpr
 	name = "autocompressor" //autocompressor
