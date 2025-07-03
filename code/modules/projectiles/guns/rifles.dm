@@ -546,11 +546,11 @@
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/handle_starting_attachment()
-	. = ..()
-	var/obj/item/attachable/lasersight/carbine/laser = new(src)
-	laser.flags_attach_features &= ~ATTACH_REMOVABLE
-	laser.hidden = FALSE
-	laser.Attach(src)
+	..()
+	var/obj/item/attachable/lasersight/carbine/CL = new(src)
+	CL.flags_attach_features &= ~ATTACH_REMOVABLE
+	CL.hidden = FALSE
+	CL.Attach(src)
 	update_attachable()
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
