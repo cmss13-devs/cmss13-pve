@@ -1,5 +1,5 @@
 /datum/human_ai_equipment_preset/malfunctioning_synth
-	faction = FACTION_MALFUNCTION_SYNTH
+	faction = FACTION_MALF_SYNTH
 
 /datum/human_ai_equipment_preset/malfunctioning_synth/malf_synth
 	name = "Working Joe - Malfunctioning"
