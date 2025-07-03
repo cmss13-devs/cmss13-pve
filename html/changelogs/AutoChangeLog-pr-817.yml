@@ -1,0 +1,5 @@
+author: "Pandora029"
+delete-after: True
+changes:
+  - balance: "The M402 mortar & rangefinding functions can now be used on the ship map, so long as the ceiling isn't too tough"
+  - balance: "Laser designators can now laze targets that are under a roof, so long as the user themselves are in the open"
