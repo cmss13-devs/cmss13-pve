@@ -130,13 +130,13 @@
 
 /datum/ammo/bullet/smg/mp27
 	name = "simple submachinegun bullet"
-	damage = 20
+	damage = 25
 	accurate_range = 5
 	effective_range_max = 7
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_8
 	accuracy = HIT_ACCURACY_TIER_2
 
 /datum/ammo/bullet/smg/ppsh
@@ -146,7 +146,7 @@
 	effective_range_max = 7
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_9
 
 /datum/ammo/bullet/smg/pps43
 	name = "simple submachinegun bullet"
@@ -155,4 +155,4 @@
 	effective_range_max = 10
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_10

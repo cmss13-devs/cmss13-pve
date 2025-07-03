@@ -21,10 +21,11 @@
 
 /datum/ammo/bullet/revolver/marksman
 	name = "marksman revolver bullet"
-	damage = 50
+	damage = 55
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
+	accuracy = HIT_ACCURACY_MULT_TIER_6
 
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
@@ -82,7 +83,7 @@
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_1
-	damage = 55
+	damage = 70
 
 
 /datum/ammo/bullet/revolver/upp/shrapnel
