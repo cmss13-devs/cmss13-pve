@@ -531,6 +531,12 @@
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/lasersight/carbine,
 	)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+	)
+	start_semiauto = FALSE
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_config_values()
 	..()
@@ -551,7 +557,7 @@
 	CL.flags_attach_features &= ~ATTACH_REMOVABLE
 	CL.hidden = FALSE
 	CL.Attach(src)
-	update_attachable()
+	update_attachable(CL.slot)
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
 	current_mag = null

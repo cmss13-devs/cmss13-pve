@@ -3790,6 +3790,7 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "lasersight"
 	attach_icon = "carbine_laser_a"
 	slot = "under"
+	flags_attach_features = NO_FLAGS
 
 /obj/item/attachable/lasersight/upp
 	name = "Zvezda Laser Module"
