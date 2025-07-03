@@ -306,8 +306,8 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define CONTRACTOR_JOB_LIST list(JOB_CONTRACTOR, JOB_CONTRACTOR_ST, JOB_CONTRACTOR_MEDIC, JOB_CONTRACTOR_ENGI, JOB_CONTRACTOR_MG, JOB_CONTRACTOR_TL, JOB_CONTRACTOR_COV, JOB_CONTRACTOR_COVST, JOB_CONTRACTOR_COVMED, JOB_CONTRACTOR_COVENG, JOB_CONTRACTOR_COVTL)
 
 //-------- CMB --------//
-#define JOB_CMB "CMB Deputy"
-#define JOB_CMB_TL "CMB Marshal"
+#define JOB_CMB "Office of Colonial Marshals Deputy"
+#define JOB_CMB_TL "Colonial Marshal"
 #define JOB_CMB_SYN "CMB Investigative Synthetic"
 #define JOB_CMB_ICC "Interstellar Commerce Commission Liaison"
 #define JOB_CMB_OBS "Interstellar Human Rights Observer"
