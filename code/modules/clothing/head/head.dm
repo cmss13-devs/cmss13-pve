@@ -350,7 +350,7 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	name = "\improper USS Golden Arrow Cap"
 	desc = "A casual cap able to be purchased and worn by Marines stationed on the USS Golden Arrow. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "sulacocap"
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon = 'icons/obj/items/clothing/hats/hats.dmi'
 	var/flipped_cap = FALSE
 	var/list/flipping_message = list(
 		"flipped" = "You spin the hat backwards! You look like a tool.",
@@ -359,7 +359,7 @@ GLOBAL_LIST_INIT(allowed_hat_items, list(
 	var/base_cap_icon
 	var/flags_marine_hat = HAT_GARB_OVERLAY|HAT_CAN_FLIP
 	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats.dmi'
 	)
 
 /obj/item/clothing/head/cmcap

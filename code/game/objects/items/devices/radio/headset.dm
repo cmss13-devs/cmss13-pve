@@ -530,10 +530,6 @@
 	desc = "This is used by members of the marine honor guard. Channels are as follows: :p - military police, :v - marine command. :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
 	icon_override = 'icons/obj/items/radio.dmi'
 	icon_state = "sec_headset"
-	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
 	initial_keys = list(/obj/item/device/encryptionkey/mmpo)
 	volume = RADIO_VOLUME_RAISED
 	locate_setting = TRACKER_CO

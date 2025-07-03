@@ -597,12 +597,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/image/IMG = image('icons/obj/structures/phone.dmi', button, "rpb_phone")
 	button.overlays += IMG
 
-/datum/action/item_action/rto_pack/use_phone/action_activate()
-	. = ..()
-	for(var/obj/item/storage/backpack/marine/satchel/rto/radio_backpack in owner)
-		radio_backpack.use_phone(owner)
-		return
-
 /obj/item/storage/backpack/marine/satchel/rto/post_skin_selection()
 	base_icon = icon_state
 

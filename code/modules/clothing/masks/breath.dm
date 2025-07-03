@@ -252,9 +252,9 @@
 	desc = "A simple cloth worn around the neck, adjustable between a loose fit or a more tightly secured style."
 	icon_state = "neckerchief"
 	item_state = "neckerchief"
-	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon = 'icons/obj/items/clothing/masks/scarves.dmi'
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/scarves.dmi'
 	)
 	w_class = SIZE_SMALL
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
