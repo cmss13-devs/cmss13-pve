@@ -243,6 +243,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	/// if this client has custom cursors enabled
 	var/custom_cursors = TRUE
+	var/main_cursor = TRUE
 
 	/// if this client has tooltips enabled
 	var/tooltips = TRUE
