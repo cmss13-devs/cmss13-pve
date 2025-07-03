@@ -61,7 +61,7 @@
 	AddComponent(/datum/component/camera_manager)
 	SEND_SIGNAL(src, COMSIG_CAMERA_CLEAR)
 
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	transceiver.forceMove(src)
 	transceiver.set_frequency(SENTRY_FREQ)
 	transceiver.config(list(RADIO_CHANNEL_SENTRY=1))
