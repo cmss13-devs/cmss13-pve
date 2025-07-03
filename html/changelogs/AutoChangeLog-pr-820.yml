@@ -1,0 +1,11 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "The M10's squad optic visor, M56 gunsight eyepiece, M42 scout sight, M49A battle-sight, Mk4 Battlemedic sight, M5 camera gear and all relevant subtypes now function as the a means to see allied-faction HUD icons."
+  - rscadd: "The M42A, M42C, UPP commando NVGs and M56 gunsight optic now offer corresponding faction HUDs, for those who run those kinds of eyepieces without a helmet. Many of them will also offer a camera for OW units to observe through the wearer"
+  - rscadd: "Faction subtypes of the M5 cam-gear, PMC, TWE & UPP"
+  - rscadd: "Synthetic headset subtypes for PMC, UPP & FORECON ones, bringing them in-line with the USCM one"
+  - rscadd: "Subtypes of the crew monitor tablet, in UPP & PMC flavours"
+  - rscadd: "CMB faction HUD"
+  - qol: "Many HUD sources will give the squad HUD info of allied factions, so USCM can see USASF & Army and PMC can see the TWE/WY ones"
+  - qol: "The USCM medical vendors have recieved a new category for a combi squad & medical HUD eyepiece. The USCM LT of the Garrow recieves one in their office too"
