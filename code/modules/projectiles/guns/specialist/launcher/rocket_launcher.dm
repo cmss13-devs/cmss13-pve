@@ -445,7 +445,7 @@
 	. = ..()
 	if(!targeting_air)
 		. += "The targeting system has been turned off, you'll hit what is ahead of you upon firing."
-	else if(targeting_air == TRUE)
+	else
 		. += "The targeting system is active, you'll send the missile up into the sky upon firing."
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/update_icon()
