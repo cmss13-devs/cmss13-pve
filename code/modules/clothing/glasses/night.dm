@@ -79,9 +79,9 @@
 	lighting_alpha = 255
 
 /obj/item/clothing/glasses/night/m42_night_goggles
-	name = "\improper M42 scout sight"
+	name = "\improper M42 head-mounted night sight"
 	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M42 Scout Rifle. Allows highlighted imaging of surroundings. Click it to toggle."
+	desc = "A headset and night vision goggles system for the M42 Scoped Rifle. Allows highlighted imaging of surroundings and connects the user to the Command & Control network, all whilst also providing a HUD display. Click it to toggle."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
@@ -92,6 +92,9 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	flags_item = NO_CRYO_STORE
 	headcam = TRUE
+
+/obj/item/clothing/glasses/night/m42_night_goggles/rmc
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m42_night_goggles/no_nvg
 	name = "\improper M42 head-mounted sight"
@@ -251,12 +254,13 @@
 	name = "\improper L56A2 head mounted gunsight interface"
 	desc = "A headset and optic system for the L56A2 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
 	actions_types = list(/datum/action/item_action/toggle)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
 	vision_flags = SEE_TURFS|SEE_MOBS
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE)
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"

@@ -701,7 +701,7 @@
 	minimap_type = MINIMAP_FLAG_TWE
 	frequency = RMC_FREQ
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_TWE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	inbuilt_tracking_options = list(
 		"Troop Commander" = TRACKER_PLTCO,
 		"Section/Team Leader" = TRACKER_FTL,
