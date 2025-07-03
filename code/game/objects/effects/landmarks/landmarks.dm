@@ -361,8 +361,6 @@
 	job = /datum/job/command/bridge/whiskey
 
 //****************************************** AUXILIARY - SUPPORT ************************************************/
-/obj/effect/landmark/start/whiskey/synthetic
-	job = /datum/job/civilian/synthetic/whiskey
 
 /obj/effect/landmark/start/whiskey/senior
 	job = /datum/job/command/senior  //Need to create a WO variant in the future

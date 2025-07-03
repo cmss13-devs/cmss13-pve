@@ -7,7 +7,7 @@
 
 	if(stat != DEAD) //the dead get zero fullscreens
 
-		if(stat == UNCONSCIOUS || (locate(/datum/effects/crit) in effects_list))
+		if(stat == UNCONSCIOUS || ((locate(/datum/effects/crit) in effects_list) && (status_flags & CANKNOCKOUT)))
 			var/severity = 0
 			switch(health)
 				if(-20 to -10) severity = 1
