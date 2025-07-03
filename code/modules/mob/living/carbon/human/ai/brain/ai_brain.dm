@@ -45,7 +45,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/combat_decay_time_max = 30 SECONDS
 
 	/// If this AI can seek cover while not possessing a gun
-	var/cover_without_gun = TRUE // Civilians and other unarmed /should/ be running for cover when a firefight starts
+	var/cover_without_gun = FALSE
 
 	/// The chance that the AI will leave cover when exiting combat
 	var/peek_cover_chance = 60
