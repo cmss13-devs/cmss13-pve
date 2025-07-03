@@ -3786,9 +3786,10 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/lasersight/carbine
 	name = "XM43 carbine underbarrel laser module"
 	desc = "What in god's name is this doing off the gun?"
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "lasersight"
 	attach_icon = "carbine_laser_a"
-	flags_attach_features = NO_FLAGS
+	slot = "under"
 
 /obj/item/attachable/lasersight/upp
 	name = "Zvezda Laser Module"
