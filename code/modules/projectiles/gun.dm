@@ -1317,12 +1317,11 @@ and you're good to go.
 		return TRUE //Nothing else to do here, time to cancel out.
 	return TRUE
 
-#define EXECUTION_CHECK (attacked_mob.stat == UNCONSCIOUS || attacked_mob.is_mob_restrained()) && ((user.a_intent == INTENT_GRAB)||(user.a_intent == INTENT_DISARM))
+#define EXECUTION_CHECK (attacked_mob.stat == UNCONSCIOUS || attacked_mob.is_mob_restrained()) && ((user.zone_selected="head") && (user.a_intent == INTENT_DISARM) || (user.a_intent == INTENT_GRAB))
 
 /obj/item/weapon/gun/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!proximity_flag)
 		return FALSE
-
 	if(active_attachable && (active_attachable.flags_attach_features & ATTACH_MELEE))
 		active_attachable.last_fired = world.time
 		active_attachable.fire_attachment(target, src, user)
@@ -1423,7 +1422,7 @@ and you're good to go.
 		user.visible_message(SPAN_DANGER("[user] puts [src] up to [attacked_mob], steadying their aim."), SPAN_WARNING("You put [src] up to [attacked_mob], steadying your aim."),null, null, CHAT_TYPE_COMBAT_ACTION)
 		if(!do_after(user, 3 SECONDS, INTERRUPT_ALL|INTERRUPT_DIFF_INTENT, BUSY_ICON_HOSTILE))
 			return TRUE
-	else if(user.a_intent != INTENT_HARM) //Thwack them
+	else if(user.a_intent != INTENT_HARM && user.a_intent != INTENT_GRAB) //Thwack them
 		return ..()
 
 	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_ATTACK_DEAD) && attacked_mob.stat == DEAD) // don't shoot dead people
@@ -2117,7 +2116,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		if(gun_user.throw_mode)
 			return FALSE
 
-		if(gun_user.Adjacent(object)) //Dealt with by attack code
+		if(gun_user.Adjacent(object) && gun_user.a_intent != INTENT_HARM) //Dealt with by attack code
 			return FALSE
 
 	if(QDELETED(object))
