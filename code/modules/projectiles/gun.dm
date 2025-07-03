@@ -1322,6 +1322,7 @@ and you're good to go.
 /obj/item/weapon/gun/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	if(!proximity_flag)
 		return FALSE
+		
 	if(active_attachable && (active_attachable.flags_attach_features & ATTACH_MELEE))
 		active_attachable.last_fired = world.time
 		active_attachable.fire_attachment(target, src, user)
