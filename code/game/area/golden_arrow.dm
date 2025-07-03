@@ -1,7 +1,7 @@
 /area/golden_arrow
 	icon = 'icons/turf/area_almayer.dmi'
 	icon_state = "almayer"
-	ceiling = CEILING_METAL
+	ceiling = CEILING_HULL_METAL
 	powernet_name = "golden_arrow"
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_interval = 30

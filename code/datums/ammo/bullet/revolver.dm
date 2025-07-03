@@ -8,8 +8,8 @@
 	name = "revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 70
-	penetration = -ARMOR_PENETRATION_TIER_2
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing
 
@@ -25,7 +25,7 @@
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
-	penetration = ARMOR_PENETRATION_TIER_4
+	accuracy = HIT_ACCURACY_MULT_TIER_6
 
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
@@ -82,7 +82,7 @@
 /datum/ammo/bullet/revolver/upp
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_1
 	damage = 70
 
 
@@ -97,7 +97,7 @@
 	max_range = 6
 	damage = 40 // + TIER_4 * 3
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	penetration = ARMOR_PENETRATION_TIER_8
+	penetration = -ARMOR_PENETRATION_TIER_1
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	shrapnel_chance = 100
 	shrapnel_type = /obj/item/shard/shrapnel/upp
@@ -112,7 +112,7 @@
 
 	max_range = 6
 	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = -ARMOR_PENETRATION_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
 	shrapnel_type = /obj/item/shard/shrapnel/upp/bits
@@ -120,17 +120,16 @@
 /datum/ammo/bullet/revolver/small
 	name = "small revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
-
-	damage = 45
-
+	damage = 50
 	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_5
 
 /datum/ammo/bullet/revolver/small/hollowpoint
 	name = "small hollowpoint revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
-	damage = 75 // way too strong because it's hard to make a good balance between HP and normal with this system, but the damage falloff is really strong
-	penetration = 0
+	damage = 75
+	penetration = -ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
 /datum/ammo/bullet/revolver/mateba
