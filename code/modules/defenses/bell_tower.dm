@@ -85,7 +85,7 @@
 	invisibility = 101
 	unacidable = TRUE
 	var/obj/structure/machinery/defenses/bell_tower/linked_bell
-	var/faction = FACTION_LIST_MARINE
+	var/faction = FACTION_LIST_UA
 
 /obj/effect/bell_tripwire/New(turf/T, faction = null)
 	..(T)
