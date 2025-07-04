@@ -435,6 +435,10 @@ export const LANGUAGE_PREFIXES = {
     id: 'tatical',
     label: 'Tacitical Sign',
   },
+  '!m ': {
+    id: 'primitive',
+    label: 'Primitive',
+  },
   '!s ': {
     id: 'sainja',
     label: 'Sainja',
@@ -450,9 +454,5 @@ export const LANGUAGE_PREFIXES = {
   '!x ': {
     id: 'xenomorph',
     label: 'Xenomporph',
-  },
-  '!_ ': {
-    id: 'primitive',
-    label: 'Primitive',
   },
 } as const;
