@@ -14980,7 +14980,7 @@
 	dir = 1;
 	light_power = 0.7
 	},
-/obj/item/clothing/glasses/hud/health{
+/obj/item/clothing/glasses/night/medhud/no_nvg{
 	pixel_y = 5;
 	pixel_x = 7
 	},
@@ -17667,15 +17667,20 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 13;
-	layer = 3.2
-	},
 /obj/item/storage/box/guncase/heavy/sentry{
 	pixel_y = 13
 	},
 /obj/item/storage/box/guncase/heavy/sentry,
 /obj/structure/machinery/power/apc/almayer/east,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 13;
+	layer = 3.2
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 20;
+	layer = 3.2;
+	pixel_x = 3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "kDp" = (

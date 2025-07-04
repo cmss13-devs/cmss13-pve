@@ -1,7 +1,7 @@
 /datum/equipment_preset/uscm_ship
 	name = "USCM (ship roles)"
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
@@ -739,7 +739,7 @@
 	name = "PMC Overwatch (PltCo)"
 	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "OW"
-	assignment = "Overwatch Operator"
+	assignment = JOB_PMCPLAT_OW
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	access_list = ACCESS_LIST_WY_SENIOR

@@ -159,6 +159,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/vp70,
 	)
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 11, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 16)

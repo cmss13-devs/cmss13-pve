@@ -23,7 +23,6 @@
 	var/req_skill
 	var/req_skill_level
 	var/req_skill_explicit = FALSE
-	var/hud_type //hud type the glasses gives
 
 /obj/item/clothing/glasses/Initialize(mapload, ...)
 	. = ..()
@@ -70,13 +69,14 @@
 			update_clothing_icon()
 
 			if(hud_type)
-				var/datum/mob_hud/MH = GLOB.huds[hud_type]
-				if(active)
-					MH.add_hud_to(H, src)
-					playsound(H, 'sound/handling/hud_on.ogg', 25, 1)
-				else
-					MH.remove_hud_from(H, src)
-					playsound(H, 'sound/handling/hud_off.ogg', 25, 1)
+				for(var/type in hud_type)
+					var/datum/mob_hud/MH = GLOB.huds[type]
+					if(active)
+						MH.add_hud_to(H, src)
+						playsound(H, 'sound/handling/hud_on.ogg', 25, 1)
+					else
+						MH.remove_hud_from(H, src)
+						playsound(H, 'sound/handling/hud_off.ogg', 25, 1)
 			if(active) //turning it on? then add the traits
 				for(var/trait in clothing_traits)
 					ADD_TRAIT(H, trait, TRAIT_SOURCE_EQUIPMENT(flags_equip_slot))
@@ -126,18 +126,20 @@
 			to_chat(user, SPAN_WARNING("You have no idea what any of the data means and power it off before it makes you nauseated."))
 
 		else if(hud_type)
-			var/datum/mob_hud/MH = GLOB.huds[hud_type]
-			MH.add_hud_to(user, src)
+			for(var/type in hud_type)
+				var/datum/mob_hud/MH = GLOB.huds[type]
+				MH.add_hud_to(user, src)
 	user.update_sight()
 	..()
 
 /obj/item/clothing/glasses/dropped(mob/living/carbon/human/user)
 	if(hud_type && active && istype(user))
 		if(src == user.glasses) //dropped is called before the inventory reference is updated.
-			var/datum/mob_hud/H = GLOB.huds[hud_type]
-			H.remove_hud_from(user, src)
-			user.glasses = null
-			user.update_inv_glasses()
+			for(var/type in hud_type)
+				var/datum/mob_hud/H = GLOB.huds[type]
+				H.remove_hud_from(user, src)
+				user.glasses = null
+				user.update_inv_glasses()
 	user.update_sight()
 	return ..()
 
