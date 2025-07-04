@@ -151,6 +151,15 @@
 	syllables = list("!", "?", ".", "@", "$", "%", "^", "&", "*", "-", "=", "+", "e", "b", "y", "p", "|", "z", "~", ">")
 	space_chance = 20
 
+/datum/language/primitive
+	name = LANGUAGE_MONKEY
+	desc = "Ook ook ook."
+	speech_verb = "chimpers"
+	ask_verb = "chimpers"
+	exclaim_verb = "screeches"
+	color = "monkey"
+	key = "m"
+
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH
 	color = "xenotalk"
