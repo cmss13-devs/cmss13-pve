@@ -700,7 +700,7 @@
 	item_state = "bimex_orange"
 
 /obj/item/clothing/glasses/sunglasses/big/classic
-	name = "BiMex hardened sunglasses"
+	name = "BiMex classic ballistic sunglasses"
 	desc = "Formerly in limited issue with the USCMC, these sunglasses have a rugged frame and metamaterial lenses. Automatic polarization factor can resist light from sniping lasers to atomic glare, while composite construction defeats splinter impacts and prevents shattering. Old, but never obsolete."
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
