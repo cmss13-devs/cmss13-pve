@@ -133,6 +133,7 @@
 #define SLOWDOWN_ADS_RIFLE 1
 #define SLOWDOWN_AMT_GREENFIRE 1.5
 #define SLOWDOWN_ADS_SCOPE 1.20
+#define SLOWDOWN_ADS_SMARTGUN 1.55 //accounting for light-to-med slowdown change on armor
 #define SLOWDOWN_ADS_LMG 1.75
 #define SLOWDOWN_ADS_INCINERATOR 1.75
 #define SLOWDOWN_ADS_SPECIALIST 1.75

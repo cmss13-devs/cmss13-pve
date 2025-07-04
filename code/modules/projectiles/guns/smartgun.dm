@@ -19,7 +19,7 @@
 	w_class = SIZE_HUGE
 	force = 20
 	wield_delay = WIELD_DELAY_FAST
-	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
+	aim_slowdown = SLOWDOWN_ADS_SMARTGUN
 	unacidable = 1
 	indestructible = 1
 
