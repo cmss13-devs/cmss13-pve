@@ -121,9 +121,6 @@
 		if(user.z != targeted_atom.z && !coord)
 			to_chat(user, SPAN_WARNING("You cannot get a direct laser from where you are."))
 			return FALSE
-		if(!(is_ground_level(targeted_atom.z)))
-			to_chat(user, SPAN_WARNING("INVALID TARGET: target must be on the surface."))
-			return FALSE
 		if(user.sight & SEE_TURFS)
 			var/list/turf/path = get_line(user, targeted_atom, include_start_atom = FALSE)
 			for(var/turf/T in path)
@@ -320,9 +317,15 @@
 
 	var/turf/TU = get_turf(targeted_atom)
 	var/area/targ_area = get_area(targeted_atom)
+	var/area/user_area = get_area(user) // Surely future-tech lets the the designator calculate C if it can get eyes on the dropship above too
 	if(!istype(TU)) return
 	var/is_outside = FALSE
 	switch(targ_area.ceiling)
+		if(CEILING_NONE)
+			is_outside = TRUE
+		if(CEILING_GLASS)
+			is_outside = TRUE
+	switch(user_area.ceiling)
 		if(CEILING_NONE)
 			is_outside = TRUE
 		if(CEILING_GLASS)
@@ -332,7 +335,7 @@
 		is_outside = FALSE
 
 	if(!is_outside && !range_mode) //rangefinding works regardless of ceiling
-		to_chat(user, SPAN_WARNING("INVALID TARGET: target must be visible from high altitude."))
+		to_chat(user, SPAN_WARNING("INVALID TARGET: target or user must be visible from high altitude."))
 		return
 	if(user.action_busy)
 		return
