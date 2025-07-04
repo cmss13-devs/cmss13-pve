@@ -370,31 +370,31 @@
 	for(var/entry in bullet_trait_entries)
 		if(!in_chamber)
 			break
-		var/list/L
+		var/list/listed_traits
 		// Check if this is an ID'd bullet trait
 		if(istext(entry))
-			L = bullet_trait_entries[entry].Copy()
+			listed_traits = bullet_trait_entries[entry].Copy()
 		else
 			// Prepend the bullet trait to the list
-			L = list(entry) + bullet_trait_entries[entry]
+			listed_traits = list(entry) + bullet_trait_entries[entry]
 		// Apply bullet traits from gun to current projectile
-		in_chamber.apply_bullet_trait(L)
+		in_chamber.apply_bullet_trait(listed_traits)
 
 /// @bullet_traits: A list of bullet trait typepaths or ids
 /obj/item/weapon/gun/proc/remove_bullet_traits(list/bullet_traits)
 	for(var/entry in bullet_traits)
 		if(!LAZYISIN(traits_to_give, entry))
 			continue
-		var/list/L
+		var/list/listed_traits
 		if(istext(entry))
-			L = traits_to_give[entry].Copy()
+			listed_traits = traits_to_give[entry].Copy()
 		else
-			L = list(entry) + traits_to_give[entry]
+			listed_traits = list(entry) + traits_to_give[entry]
 		LAZYREMOVE(traits_to_give, entry)
 		if(in_chamber)
 			// Remove bullet traits of gun from current projectile
 			// Need to use the proc instead of the wrapper because each entry is a list
-			in_chamber._RemoveElement(L)
+			in_chamber._RemoveElement(listed_traits)
 
 /obj/item/weapon/gun/proc/recalculate_attachment_bonuses()
 	//reset weight and force mods
@@ -1012,14 +1012,14 @@ and you're good to go.
 			var/obj/projectile/bullet = create_bullet(active_attachable.ammo, initial(name))
 			// For now, only bullet traits from the attachment itself will apply to its projectiles
 			for(var/entry in active_attachable.traits_to_give_attached)
-				var/list/L
+				var/list/listed_traits
 				// Check if this is an ID'd bullet trait
 				if(istext(entry))
-					L = active_attachable.traits_to_give_attached[entry].Copy()
+					listed_traits = active_attachable.traits_to_give_attached[entry].Copy()
 				else
 					// Prepend the bullet trait to the list
-					L = list(entry) + active_attachable.traits_to_give_attached[entry]
-				bullet.apply_bullet_trait(L)
+					listed_traits = list(entry) + active_attachable.traits_to_give_attached[entry]
+				bullet.apply_bullet_trait(listed_traits)
 			return bullet
 		else
 			to_chat(user, SPAN_WARNING("[active_attachable] is empty!"))
@@ -1029,17 +1029,17 @@ and you're good to go.
 	else
 		return ready_in_chamber()//We're not using the active attachable, we must use the active mag if there is one.
 
-/obj/item/weapon/gun/proc/apply_traits(obj/projectile/P)
+/obj/item/weapon/gun/proc/apply_traits(obj/projectile/specific_projectile)
 	// Apply bullet traits from gun
 	for(var/entry in traits_to_give)
-		var/list/L
+		var/list/listed_traits
 		// Check if this is an ID'd bullet trait
 		if(istext(entry))
-			L = traits_to_give[entry].Copy()
+			listed_traits = traits_to_give[entry].Copy()
 		else
 			// Prepend the bullet trait to the list
-			L = list(entry) + traits_to_give[entry]
-		P.apply_bullet_trait(L)
+			listed_traits = list(entry) + traits_to_give[entry]
+		specific_projectile.apply_bullet_trait(listed_traits)
 
 	// Apply bullet traits from attachments
 	for(var/slot in attachments)
@@ -1048,14 +1048,14 @@ and you're good to go.
 
 		var/obj/item/attachable/AT = attachments[slot]
 		for(var/entry in AT.traits_to_give)
-			var/list/L
+			var/list/listed_traits
 			// Check if this is an ID'd bullet trait
 			if(istext(entry))
-				L = AT.traits_to_give[entry].Copy()
+				listed_traits = AT.traits_to_give[entry].Copy()
 			else
 				// Prepend the bullet trait to the list
-				L = list(entry) + AT.traits_to_give[entry]
-			P.apply_bullet_trait(L)
+				listed_traits = list(entry) + AT.traits_to_give[entry]
+			specific_projectile.apply_bullet_trait(listed_traits)
 
 /obj/item/weapon/gun/proc/ready_in_chamber()
 	QDEL_NULL(in_chamber)
@@ -1076,10 +1076,10 @@ and you're good to go.
 	if(isliving(loc))
 		var/mob/M = loc
 		weapon_source_mob = M
-	var/obj/projectile/P = new projectile_type(src, create_cause_data(bullet_source, weapon_source_mob))
-	P.generate_bullet(chambered, 0, NO_FLAGS)
+	var/obj/projectile/specific_projectile = new projectile_type(src, create_cause_data(bullet_source, weapon_source_mob))
+	specific_projectile.generate_bullet(chambered, 0, NO_FLAGS)
 
-	return P
+	return specific_projectile
 
 //This proc is needed for firearms that chamber rounds after firing.
 /obj/item/weapon/gun/proc/reload_into_chamber(mob/user)
