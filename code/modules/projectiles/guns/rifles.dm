@@ -551,14 +551,6 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
-/obj/item/weapon/gun/rifle/m41aMK1/carbine/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/lasersight/carbine/CL = new(src)
-	CL.flags_attach_features &= ~ATTACH_REMOVABLE
-	CL.hidden = FALSE
-	CL.Attach(src)
-	update_attachable(CL.slot)
-
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
 	current_mag = null
 
