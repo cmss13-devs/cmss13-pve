@@ -1629,7 +1629,10 @@
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/lower_hangar)
 "di" = (
-/obj/structure/gun_rack/nsg/unloaded,
+/obj/structure/gun_rack/nsg/unloaded{
+	pixel_y = 22;
+	density = 0
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "dj" = (
@@ -3434,7 +3437,8 @@
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	req_one_access = list();
 	pixel_y = 23;
-	pixel_x = -5
+	pixel_x = -5;
+	density = 0
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -4983,6 +4987,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
+"jS" = (
+/obj/item/paper{
+	name = "RMC NVGS, COPY AND DROP IN AMMO ROOM IF YOU WANT THEM TO HAVE THEM"
+	},
+/turf/open/space/basic,
+/area/hms_brynhild/supply)
 "jT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/motiondetectors/rmc{
@@ -5161,6 +5171,9 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/prep_hallway)
+"kl" = (
+/turf/closed/wall/almayer/white/hull,
+/area/hms_brynhild/supply)
 "km" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -5179,6 +5192,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
+"ko" = (
+/obj/structure/closet/crate/secure/rmcnvg,
+/turf/open/space/basic,
+/area/hms_brynhild/supply)
 "kp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -5236,6 +5253,13 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
+"ku" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
+/turf/open/space/basic,
+/area/hms_brynhild/supply)
 "kv" = (
 /obj/structure/platform{
 	dir = 8;
@@ -6300,9 +6324,6 @@
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "mE" = (
-/obj/structure/fence{
-	icon_state = "fence1"
-	},
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
 	},
@@ -7601,7 +7622,10 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/lower_hangar)
 "pt" = (
-/obj/structure/gun_rack/nsg/Empty,
+/obj/structure/gun_rack/nsg/Empty{
+	pixel_y = 22;
+	density = 0
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "pu" = (
@@ -17187,10 +17211,13 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
 "OZ" = (
-/obj/structure/gun_rack/nsg/unloaded,
+/obj/structure/gun_rack/nsg/unloaded{
+	pixel_y = 22;
+	density = 0
+	},
 /obj/item/reagent_container/glass/rag{
 	pixel_x = -5;
-	pixel_y = 17
+	pixel_y = 39
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
@@ -17427,7 +17454,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 1
 	},
-/obj/structure/closet/crate/secure/rmcnvg,
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 8
@@ -20524,10 +20550,14 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/supply)
 "Zq" = (
-/obj/structure/gun_rack/nsg/unloaded,
+/obj/structure/gun_rack/nsg/unloaded{
+	pixel_y = 22;
+	density = 0
+	},
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
-	light_color = "#dae2ff"
+	light_color = "#dae2ff";
+	pixel_y = 27
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
@@ -29350,10 +29380,10 @@ BP
 BP
 BP
 BP
-iw
-iw
-iw
-iw
+kl
+MU
+MU
+MU
 iw
 fH
 Sw
@@ -29492,10 +29522,10 @@ BP
 BP
 BP
 BP
-iw
-iw
-iw
-iw
+kl
+ku
+ko
+jS
 iw
 Sy
 Hg
@@ -29634,10 +29664,10 @@ BP
 BP
 BP
 BP
-iw
-iw
-iw
-iw
+kl
+MU
+MU
+MU
 iw
 iw
 iw
@@ -29776,10 +29806,10 @@ BP
 BP
 BP
 BP
-iw
-iw
-iw
-iw
+kl
+kl
+kl
+kl
 iw
 iw
 AQ
