@@ -509,6 +509,51 @@
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
+//-------------------------------------------------------
+//XM43, a cut down official carbine modification of the M41A. Y'know,  a space XM177 or whatever.
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine
+	name = "XM43 pulse carbine"
+	desc = "Pulse action 10x24mm caseless carbine, semi-experimental. Exchanges the firepower of a grenade launcher and some modularity for handling."
+	icon_state = "xm43"
+	item_state = "xm43"
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine
+	)
+	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
+	wield_delay = WIELD_DELAY_MIN
+	attachable_allowed = list(
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+	)
+	start_semiauto = FALSE
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
+	current_mag = null
+
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 

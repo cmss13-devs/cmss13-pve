@@ -221,7 +221,7 @@
 
 /obj/item/clothing/under/marine/officer/boiler
 	name = "\improper multi-branch operations boilersuit"
-	desc = "A uniform favoured by those in the UA armed forces who are rarely on the field. Looks a little outdated."
+	desc = "A multi-issue uniform issued often to UA military support personnel. One-piece coverage of the body and limbs."
 	icon_state = "command_jumpsuit"
 	item_state = "command_jumpsuit"
 	worn_state = "command_jumpsuit"
