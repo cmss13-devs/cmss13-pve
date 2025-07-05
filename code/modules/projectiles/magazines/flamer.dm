@@ -144,6 +144,12 @@
 	icon_state = "LPO80"
 	item_state = "LPO80"
 
+/obj/item/ammo_magazine/flamer_tank/upp/weak
+	caliber = "Napalm Gel"
+	flamer_chem = "napalmgel"
+
+	max_range = 5
+
 // This is gellie fuel. Green Flames.
 /obj/item/ammo_magazine/flamer_tank/gellied
 	name = "incinerator tank (B-Gel)"

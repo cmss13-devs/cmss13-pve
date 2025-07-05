@@ -449,6 +449,12 @@
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_8
 
+/datum/ammo/bullet/rifle/upp/ap/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+	penetration = ARMOR_PENETRATION_TIER_5
+
 /datum/ammo/bullet/rifle/upp/heap
 	name = "high-explosive armor-piercing 10x27 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY

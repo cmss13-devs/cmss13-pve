@@ -334,3 +334,22 @@
 	desc = "The flag of the Green Banner Movement - radical ecoterrorist cell that went quiet a few years ago but suddenly re-emerged more violent than ever."
 	icon_state = "flag_gbm_planted"
 	flag_type = /obj/item/flag/plantable/gbm
+
+
+
+/obj/item/flag/plantable/revanchist
+	name = "\improper black UPP flag"
+	desc = "Black flag bearing a white Union of Progressive Peoples' seal. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_revanchists"
+	flag_type = /obj/structure/flag/plantable/revanchist
+	faction = FACTION_REVANCHISTS
+	play_warcry = TRUE
+	warcry_sound = 'sound/effects/flag_upp_warcry.ogg'
+	warcry_extra_sound = 'sound/effects/flag_upp_warcry_extra.ogg'
+
+/obj/structure/flag/plantable/revanchist
+	name = "\improper black UPP flag"
+	desc = "Black flag bearing a white Union of Progressive Peoples' seal."
+	icon_state = "flag_revanchists_planted"
+	flag_type = /obj/item/flag/plantable/revanchist

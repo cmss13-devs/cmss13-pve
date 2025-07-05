@@ -1317,6 +1317,21 @@
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+/obj/item/clothing/accessory/upppads/black
+	desc = "A set of arm plates designed for the 6B90 armor system. This set is painted black."
+	icon_state = "upp_arms_evil"
+	item_state = "upp_arms_evil"
+
+/obj/item/clothing/accessory/upppads/legs/black
+	desc = "A set of leg greaves designed for the 6B90 armor system. This set is painted black."
+	icon_state = "upp_greaves_evil"
+	item_state = "upp_greaves_evil"
+
+/obj/item/clothing/accessory/upppads/crotch/black
+	desc = "A crotch plate designed for the 6B90 armor system. This plate is painted black."
+	icon_state = "upp_crotch_evil"
+	item_state = "upp_crotch_evil"
+
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
 /obj/item/clothing/accessory/paint

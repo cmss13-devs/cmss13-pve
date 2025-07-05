@@ -1568,6 +1568,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
 
+/obj/item/clothing/head/helmet/upp/black
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is black, meant for urban/night ops."
+	icon_state = "upp_helmet_naval_black"
+
 /obj/item/clothing/head/uppcap
 	name = "\improper UL2 cap"
 	desc = "Standard issue patrol cap of the UPP's military."

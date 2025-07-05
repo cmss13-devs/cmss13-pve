@@ -88,6 +88,10 @@
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
 
+/obj/item/ammo_magazine/pkp/ap
+	name = "QYJ-72 ammo box (10x27mm AP)"
+	desc = "A 250 round box of AP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/tracer
 //rocket launchers
 
 /obj/item/ammo_magazine/rifle/grenadespawner

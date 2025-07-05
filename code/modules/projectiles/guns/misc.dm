@@ -339,6 +339,9 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/pkp/ap
+	current_mag = /obj/item/ammo_magazine/pkp/ap
+
 /obj/effect/syringe_gun_dummy
 	name = ""
 	desc = ""
