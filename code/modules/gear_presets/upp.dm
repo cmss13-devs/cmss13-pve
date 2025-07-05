@@ -1242,6 +1242,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")
 	//back
 	//face
 	//head

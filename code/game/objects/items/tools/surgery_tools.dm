@@ -37,6 +37,13 @@
 
 	attack_verb = list("attacked", "pinched")
 
+/obj/item/tool/surgery/hemostat/miniature
+	name = "miniature hemostat"
+	desc = "For extremely fine work."
+	icon_state = "hemostat_mini"
+	matter = list("metal" = 1000, "glass" = 500)
+	w_class = SIZE_TINY
+
 /obj/item/tool/surgery/hemostat/predatorhemostat
 	name = "pincher"
 	desc = "You think you have seen this before."
