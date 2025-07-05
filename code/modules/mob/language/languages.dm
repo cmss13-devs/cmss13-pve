@@ -92,7 +92,7 @@
 	color = "chinese"
 	key = "8"
 
-/datum/language/patois
+/datum/language/ruspatois
 	name = LANGUAGE_RUSPATOIS
 	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
 	speech_verb = "says"
