@@ -157,3 +157,7 @@
 		list("Smoke Grenade", 5, /obj/item/explosive/grenade/smokebomb, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", 40, /obj/item/attachable/bayonet/upp, VENDOR_ITEM_REGULAR),
 	)
+
+/datum/faction/upp/revanchists
+	name = "Revanchists"
+	faction_tag = FACTION_REVANCHISTS

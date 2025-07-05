@@ -25,6 +25,8 @@
 
 	var/fire_smothering_strength = 0 // How much will this weather smother fires on turfs and on mobs - should be 0 to 10
 
+	var/fullscreen_type = null
+
 /datum/weather_event/proc/start_weather_event()
 	return
 

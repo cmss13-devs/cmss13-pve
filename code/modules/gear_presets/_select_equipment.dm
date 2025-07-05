@@ -55,6 +55,8 @@
 
 	var/list/uniform_sets = null
 
+	var/ai_disallow_looting = FALSE
+
 
 
 /datum/equipment_preset/New()

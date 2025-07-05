@@ -119,6 +119,12 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/medic/ai/guard
+	title = JOB_SQUAD_MEDIC_GUARD
+	gear_preset = /datum/equipment_preset/uscm/medic/guard
+	gear_preset_secondary = null
+	job_options = null
+
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP
 	squad = SQUAD_UPP
@@ -140,6 +146,10 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
+/obj/effect/landmark/start/marine/medic/guard
+	name = JOB_SQUAD_MEDIC_GUARD
+	squad = "Colonial Guard"
+	job = /datum/job/marine/medic/ai/guard
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT

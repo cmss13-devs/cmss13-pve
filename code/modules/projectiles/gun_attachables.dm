@@ -250,6 +250,9 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/proc/handle_pre_break_attachment_description(base_description_text as text)
 	return base_description_text
 
+/obj/item/attachable/proc/modify_bullet(obj/projectile/projectile_to_fire)
+	return
+
 // ======== Muzzle Attachments ======== //
 
 /obj/item/attachable/suppressor
@@ -267,6 +270,39 @@ Defined in conflicts.dm of the #defines folder.
 	..()
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
+
+/obj/item/attachable/tracer
+	name = "tracer unit"
+	desc = "While intended for airsoft and, rarely, firing excersises during UACG training, some marines buy these attachments simply because firing purple bullets is funny.\n<span class='notice'>Tracer color can be changed using a <b>screwdriver</b>. Activating it <b>in hand</b> resets tracer color.</span>"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "tracer"
+	slot = "muzzle"
+	pixel_shift_y = 15
+	attach_icon = "tracer_a"
+	hud_offset_mod = -3
+	var/tracer_color = null
+
+/obj/item/attachable/tracer/modify_bullet(obj/projectile/projectile_to_fire)
+	if(!tracer_color)
+		return
+
+	projectile_to_fire.icon_state = "blank"
+	projectile_to_fire.color = tracer_color
+	projectile_to_fire.light_color = tracer_color
+	projectile_to_fire.set_light_range(1)
+	projectile_to_fire.set_light_power(0.5)
+	projectile_to_fire.set_light_color(tracer_color)
+	projectile_to_fire.set_light_on(1)
+
+/obj/item/attachable/tracer/attackby(obj/item/W, mob/user)
+	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))
+		tracer_color = input(user, "Please select the main color.", "Tracer color") as color
+	..()
+
+/obj/item/attachable/tracer/attack_self(mob/user)
+	..()
+	tracer_color = null
+	to_chat(user, SPAN_NOTICE("You reset the tracer color"))
 
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"
@@ -2157,6 +2193,15 @@ Defined in conflicts.dm of the #defines folder.
 	gun.recalculate_attachment_bonuses()
 	gun.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/rifle/mk41
+	name = "\improper M41A extendable stock"
+	desc = "Looks like this one has been modified and can no longer be collapsed."
+	hud_offset_mod = 5
+	pixel_shift_x = 40
+	pixel_shift_y = 14
+	icon_state = "m41_folding_on"
+	attach_icon = "m41_folding_a_on"
+
 /obj/item/attachable/stock/m20a
 	name = "\improper M20A stock"
 	desc = "The M20A's standard polymer collapsible stock. When extended, it improves scatter, accuracy, and recoil, but slightly hinders agility."
@@ -2750,6 +2795,55 @@ Defined in conflicts.dm of the #defines folder.
 
 	G.recalculate_attachment_bonuses()
 	G.update_overlays(src, "stock")
+
+/obj/item/attachable/stock/wisefire
+	name = "\improper WY WiseFire™ stock"
+	desc = "A specialized stock that was developed by Weyland-Yutani for security market. Comes in a package with WiseFire™ sensor and, upon connecting, is able to move the gun via miniature servos, allowing users to \"lock\" on targets."
+	icon_state = "wisefire_stock"
+	attach_icon = "wisefire_stock_a"
+	pixel_shift_x = 43
+	pixel_shift_y = 11
+	hud_offset_mod = 4
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/stock/wisefire/set_bullet_traits()
+	if(!isgun(loc))
+		return
+	var/obj/item/weapon/gun/gun = loc
+	var/obj/item/attachable/wisefire/sensor = locate() in gun
+	if(!sensor)
+		return
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+	gun.AddComponent(/datum/component/iff_fire_prevention)
+
+/obj/item/attachable/stock/wisefire/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user)
+	var/obj/item/attachable/wisefire/sensor = locate() in G
+	if(!sensor)
+		to_chat(user, SPAN_WARNING("Unable to connect to WiseFire™ sensor component. Make sure it's installed correctly."))
+		return
+	to_chat(user, SPAN_NOTICE("Reconnected to WiseFire™ sensor component. Safe shooting!"))
+	set_bullet_traits()
+
+/obj/item/attachable/stock/wisefire/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
+	. = ..()
+	var/datum/component/iff_fire_prevention/comp = detaching_gub.GetComponent(/datum/component/iff_fire_prevention)
+	comp.RemoveComponent()
+
+/obj/item/attachable/wisefire
+	name = "WY WiseFire™ sensor"
+	desc = "Commercial furearm sensor, manufactured and sold by Weyland-Yutani. Onboard microcomputer is able to detect targets in optical, infrared and thermal ranges while being compatible with IFF-settings. Received data is then transferred to another WiseFire™ component - maneuvrable stock."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "wisefire_sensor"
+	attach_icon = "wisefire_sensor_a"
+	slot = "side_rail"
+	flags_attach_features = NO_FLAGS
+
+/obj/item/attachable/wisefire/Detach(mob/user, obj/item/weapon/gun/detaching_gub, drop_attachment = TRUE)
+	. = ..()
+	traits_to_give = list()
 
 /obj/item/attachable/stock/revolver
 	name = "\improper M44 magnum sharpshooter stock"

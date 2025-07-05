@@ -339,6 +339,9 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/pkp/ap
+	current_mag = /obj/item/ammo_magazine/pkp/ap
+
 /obj/effect/syringe_gun_dummy
 	name = ""
 	desc = ""
@@ -391,6 +394,15 @@
 	///Delay before another beam can start again, in tenths of seconds
 	var/beam_delay = 20
 
+/obj/item/weapon/gun/XM99/M99
+	name = "M99A2 phased plasma pulse rifle"
+	desc = "No longer experimental, this plasma rifle has increased ammo capacity, rate of fire and less problems with overheating."
+	current_mag = /obj/item/ammo_magazine/plasma/m99
+	fire_sound = 'sound/weapons/gun_xm99_short.ogg'
+
+/obj/item/weapon/gun/XM99/M99/set_gun_config_values()
+	..()
+	set_fire_delay(7)
 
 // Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
 /obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
