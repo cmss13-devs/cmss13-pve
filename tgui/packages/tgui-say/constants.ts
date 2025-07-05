@@ -105,8 +105,8 @@ export const RADIO_PREFIXES = {
     label: 'Charl.',
   },
   '#c ': {
-    id: 'clf-cmd',
-    label: 'CLF Cmd.',
+    id: 'cia',
+    label: 'CIA',
   },
   ':d ': {
     id: 'delta',
