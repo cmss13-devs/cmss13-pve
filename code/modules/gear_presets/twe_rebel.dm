@@ -111,12 +111,6 @@
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/lanyard
 
-/datum/equipment_preset/clf/guerilla/get_assignment(mob/living/carbon/human/new_human)
-	if(prob(50))
-		return "Class D Inhabitant"
-
-	return "Class C Inhabitant"
-
 /datum/equipment_preset/clf/guerilla_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back

@@ -922,7 +922,9 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/head/helmet/marine/pressure/light,
 		/obj/item/clothing/head/helmet/marine/pressure/orange,
 		/obj/item/clothing/head/helmet/marine/pressure/red,
-		/obj/item/clothing/head/helmet/marine/pressure/yellow)
+		/obj/item/clothing/head/helmet/marine/pressure/yellow,
+		/obj/item/clothing/head/helmet/space,
+		/obj/item/clothing/head/helmet/space/odyssey)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 	if(istype(helmetpath, /obj/item/clothing/head/helmet/marine/pressure))
 		spawn_army_fluff_items(new_human)
@@ -946,6 +948,8 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/suit/space/pressure/orange,
 		/obj/item/clothing/suit/space/pressure/red,
 		/obj/item/clothing/suit/space/pressure/yellow,
+		/obj/item/clothing/suit/space/odyssey,
+
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
 	var/random_paint = rand(1,3)
