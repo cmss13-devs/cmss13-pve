@@ -49,6 +49,8 @@
 		to_chat(user, SPAN_WARNING("Your programming prevents you from using this!"))
 		return FALSE
 
+//	if(HAS_TRAIT(user, TRAIT_HAULED)) // If somehow they have a grenade in hand while hauled, we don't want them to prime it - Haul sovlening - This is going to explode something probably. Literally in this case
+//		return FALSE
 	return TRUE
 
 /obj/item/explosive/grenade/dropped(mob/user)
