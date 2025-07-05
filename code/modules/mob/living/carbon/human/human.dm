@@ -136,8 +136,6 @@
 	if(body_position == LYING_DOWN && direction)
 		severity *= EXPLOSION_PRONE_MULTIPLIER
 
-
-
 	var/b_loss = 0
 	var/f_loss = 0
 
@@ -154,6 +152,10 @@
 		create_shrapnel(oldloc, rand(5, 9), direction, 45, /datum/ammo/bullet/shrapnel/light/human, last_damage_data)
 		create_shrapnel(oldloc, rand(5, 9), direction, 30, /datum/ammo/bullet/shrapnel/light/human/var1, last_damage_data)
 		create_shrapnel(oldloc, rand(5, 9), direction, 45, /datum/ammo/bullet/shrapnel/light/human/var2, last_damage_data)
+		return
+
+	if(HAS_TRAIT(src, TRAIT_HAULED)) // We still probably wanna gib them as well if they were supposed to be gibbed by the explosion in the first place
+		visible_message(SPAN_WARNING("[src] is shielded from the blast!"), SPAN_WARNING("You are shielded from the blast!"))
 		return
 
 	if(!HAS_TRAIT(src, TRAIT_EAR_PROTECTION))
@@ -1644,6 +1646,54 @@
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, regenerate_icons))
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_body), 1, 0)
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_hair))
+	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, play_opening_sequence))
+
+/mob/living/carbon/human/proc/play_opening_sequence()
+	if(SSticker.intro_sequence)
+		sleeping = 11
+		addtimer(CALLBACK(src, PROC_REF(play_screen_text), "HYPERSLEEP MONITOR<br><br>SYSTEM STATUS<br>LIFE SUPPORT:ONLINE<br>THAWING SYSTEMS:ONLINE<br>IMMUNIZATION:COMPLETE<br>OCCUPANT REM:NOMINAL", /atom/movable/screen/text/screen_text/hypersleep_status), 1.25 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_manifest)), 13 SECONDS)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstart1", /atom/movable/screen/fullscreen/black)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstartcrt1", /atom/movable/screen/fullscreen/crt)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_intro.ogg', src, 90), 12 SECONDS)
+
+/mob/living/carbon/human/proc/play_manifest()
+	var/human_manifest
+	var/time_to_remove = 5 SECONDS
+	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+		if(human.z != ZTRAIT_GROUND)
+			if(human.faction == faction)
+				time_to_remove += 2.5 SECONDS
+				var/obj/item/card/id/card = human.get_idcard()
+				var/datum/paygrade/account_paygrade = "UNKWN"
+				if(card)
+					account_paygrade = GLOB.paygrades[card.paygrade]
+				human_manifest += "[human.name]...[account_paygrade.prefix]/A[rand(01,99)]/TQ[rand(0,10)].0.[rand(100000,999999)]<br>"
+	sleeping = (time_to_remove - 2 SECONDS)/10
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_beep.ogg', src, 80), time_to_remove - 2 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_opening.ogg', src, 80), time_to_remove)
+	overlay_fullscreen_timer(time_to_remove, 10, "roundstart2", /atom/movable/screen/fullscreen/black)
+	overlay_fullscreen_timer(time_to_remove, 10, "roundstartcrt2", /atom/movable/screen/fullscreen/crt)
+	overlay_fullscreen_timer(time_to_remove + 2 SECONDS, 20, "roundstart_fade", /atom/movable/screen/fullscreen/spawning_in)
+	var/alert_type = /atom/movable/screen/text/screen_text/picture/starting
+	var/platoon = "3rd Bat. 'Solar Devils"
+	switch(faction)
+		if(FACTION_MARINE)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting
+			if(assigned_squad && assigned_squad.name == SQUAD_LRRP)
+				platoon = "Snake Eaters"
+			else
+				platoon = "3rd Bat. 'Solar Devils"
+		if(FACTION_UPP)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/upp
+			platoon = "Red Dawn"
+		if(FACTION_PMC)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
+			platoon = "Azure-15"
+		if(FACTION_TWE)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
+			platoon = "Royal Marine Corps"
+	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
