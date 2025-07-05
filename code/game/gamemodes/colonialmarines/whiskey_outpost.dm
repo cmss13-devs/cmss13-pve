@@ -755,7 +755,7 @@
 			spawnitems = list(/obj/item/ammo_magazine/rifle/m49a/custom,
 							/obj/item/ammo_magazine/rifle/m49a/custom,
 							/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-							/obj/item/ammo_magazine/rifle/m49a/custom/impact)
+							/obj/item/ammo_magazine/rifle/m49a/custom/explosive)
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)
