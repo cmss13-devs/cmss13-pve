@@ -1,7 +1,7 @@
 /mob/living/can_resist()
 	if(next_move > world.time)
 		return FALSE
-	if(HAS_TRAIT(src, TRAIT_INCAPACITATED) || HAS_TRAIT(src, TRAIT_HAULED))
+	if(HAS_TRAIT(src, TRAIT_INCAPACITATED))
 		return FALSE
 	return TRUE
 
