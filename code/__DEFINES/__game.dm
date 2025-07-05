@@ -47,6 +47,7 @@
 #define MAP_CANYON_32B "Canyon 32B"
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
+#define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -278,6 +279,7 @@
 #define CEILING_PROTECTION_TIER_2 2
 #define CEILING_UNDERGROUND_ALLOW_CAS 2.1
 #define CEILING_UNDERGROUND_METAL_ALLOW_CAS 2.2
+#define CEILING_HULL_METAL 2.3
 
 /// Blocks CAS fire
 #define CEILING_PROTECTION_TIER_3 3
