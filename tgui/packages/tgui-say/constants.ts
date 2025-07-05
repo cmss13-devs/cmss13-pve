@@ -420,7 +420,7 @@ export const LANGUAGE_PREFIXES = {
     label: 'Chinese',
   },
   '!9 ': {
-    id: 'ruspatois',
+    id: 'russian patois',
     label: 'Russian patois',
   },
   '!f ': {
@@ -432,7 +432,7 @@ export const LANGUAGE_PREFIXES = {
     label: 'Hellhound',
   },
   '!l ': {
-    id: 'tatical',
+    id: 'tatical sign language',
     label: 'Tacitical Sign',
   },
   '!m ': {
