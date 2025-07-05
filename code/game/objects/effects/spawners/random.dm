@@ -597,3 +597,34 @@ GLOBAL_VAR_INIT(spawn_ob, TRUE)
 		/obj/structure/ob_ammo/warhead/cluster
 	)
 	return pick(spawnables)
+
+/obj/effect/spawner/random/trash
+	name = "Random Trash"
+	desc = "This is random trash"
+	icon_state = "random_kit"
+
+/obj/effect/spawner/random/trash/item_to_spawn()
+	return pick(/obj/item/trash/barcardine,\
+				/obj/item/trash/boonie,\
+				/obj/item/trash/burger,\
+				/obj/item/trash/buritto,\
+				/obj/item/trash/c_tube,\
+				/obj/item/trash/candy,\
+				/obj/item/trash/ceramic_plate,\
+				/obj/item/trash/cheesie,\
+				/obj/item/trash/chunk,\
+				/obj/item/trash/chunk/hunk,\
+				/obj/item/trash/cigbutt,\
+				/obj/item/trash/cigbutt/bcigbutt,\
+				/obj/item/trash/cigbutt/cigarbutt,\
+				/obj/item/trash/cigbutt/ucigbutt,\
+				/obj/item/trash/crushed_cup,\
+				/obj/item/trash/eat,\
+				/obj/item/trash/hotdog,\
+				/obj/item/trash/kepler,\
+				/obj/item/trash/kepler/flamehot,\
+				/obj/item/trash/liquidfood,\
+				/obj/item/trash/pistachios,\
+				/obj/item/trash/plate,\
+				/obj/item/trash/popcorn,\
+				/obj/item/trash/candle)
