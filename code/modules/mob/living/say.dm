@@ -33,7 +33,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":1" = RADIO_CHANNEL_USASF, ".1" = RADIO_CHANNEL_USASF, "#1" = RADIO_CHANNEL_USASF,
 	":2" = RADIO_CHANNEL_REBEL_UA, ".2" = RADIO_CHANNEL_REBEL_UA, "#2" = RADIO_CHANNEL_REBEL_UA,
 	":3" = RADIO_CHANNEL_REBEL_TWE, ".3" = RADIO_CHANNEL_REBEL_TWE, "#3" = RADIO_CHANNEL_REBEL_TWE,
-	//0-9 available
+	//4-9 available, CLF not in use, channels available for overwrite.
 ))
 
 /proc/channel_to_prefix(channel)
