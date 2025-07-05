@@ -1,0 +1,6 @@
+author: "MistChristmas, Git-Nivrak"
+delete-after: True
+changes:
+  - bugfix: "fixed an RTO Bag crash. Fix phone_ids generating as non-unique and causing weird TGUI stuff later."
+  - maptweak: "Medical Bay no longer called Hypersleep Bay. Medical Bay phone no longer called Supply Bay. APC/ARC Interirors with phones have names and categories."
+  - code_imp: "Phone Spawners killed. And replaced by just mapping in the phone."
