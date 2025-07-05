@@ -948,6 +948,14 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/suit/space/pressure/yellow,
 		)
 	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+	var/random_paint = rand(1,3)
+	switch(random_paint)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint/usflag(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint/uaflag(new_human), WEAR_ACCESSORY)
+			//You get nothing, good day sir
+
 
 //*****************************************************************************************************/
 

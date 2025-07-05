@@ -1,5 +1,5 @@
-/datum/human_ai_equipment_preset/clf
-	faction = "Insurrectionists"
+/datum/human_ai_equipment_preset/eva_clf
+	faction = "Insurrectionists (EVA)"
 
 /datum/human_ai_equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
@@ -41,6 +41,33 @@
 	name = "TWE Rebel Cell Commander"
 	desc = "Armed with a M56B smartgun."
 	path = /datum/equipment_preset/clf/commander
+
+//TWE Rebels in EVA
+/datum/human_ai_equipment_preset/eva_clf/soldier_eva
+	name = "UA Rebel, Soldier (Rifle, EVA)"
+	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
+	path = /datum/equipment_preset/rebel/soldier_eva
+
+/datum/human_ai_equipment_preset/eva_clf/shotgunner_eva
+	name = "UA Rebel, Soldier (Shotgunner, EVA)"
+	desc = "Armed with an HG-37 shotgun."
+	path = /datum/equipment_preset/rebel/soldier/shotgun_eva
+
+
+/datum/human_ai_equipment_preset/eva_clf/flamer_eva
+	name = "UA Rebel, Soldier (Incinerator, EVA)"
+	desc = "Armed with a M240A1 incinerator unit."
+	path = /datum/equipment_preset/rebel/soldier/flamer_eva
+
+/datum/human_ai_equipment_preset/eva_clf/sniper_eva
+	name = "UA Rebel, Sniper (SVD, Eva)"
+	desc = "Armed with a Non-AP Type 88 SVD Marksman rifle."
+	path = /datum/equipment_preset/rebel/soldier/svd_eva
+
+/datum/human_ai_equipment_preset/eva_clf/bolt_eva
+	name = "UA Rebel, Sniper (Bolt, EVA)"
+	desc = "Armed with either a bolt-action rifle."
+	path = /datum/equipment_preset/rebel/soldier/bolt_eva
 
 //UA Rebels
 
