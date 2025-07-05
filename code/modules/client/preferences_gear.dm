@@ -87,6 +87,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/glasses/sunglasses/big/orange
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/eyewear/bimex_shades_classic
+	display_name = "BiMex Classic Shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/classic
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
