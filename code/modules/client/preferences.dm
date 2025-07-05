@@ -161,6 +161,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/skin_color = "Pale 2" // Skin color
 	var/body_size = "Average" // Body Size
 	var/body_type = "Lean" // Body Type
+	var/blood_type = "O+"
 	var/language = "None" //Secondary language
 	var/list/gear //Custom/fluff item loadout.
 	var/preferred_squad = "None"
@@ -361,6 +362,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<b>Skin Color:</b> <a href='byond://?_src_=prefs;preference=skin_color;task=input'><b>[skin_color]</b></a><br>"
 			dat += "<b>Body Size:</b> <a href='byond://?_src_=prefs;preference=body_size;task=input'><b>[body_size]</b></a><br>"
 			dat += "<b>Body Muscularity:</b> <a href='byond://?_src_=prefs;preference=body_type;task=input'><b>[body_type]</b></a><br>"
+			dat += "<b>Blood Type:</b> <a href='byond://?_src_=prefs;preference=blood_type;task=input'><b>[blood_type]</b></a><br>"
 			dat += "<b>Traits:</b> <a href='byond://?src=\ref[user];preference=traits;task=open'><b>Character Traits</b></a>"
 			dat += "<br>"
 
@@ -1688,6 +1690,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					if (new_body_size)
 						body_size = new_body_size
 
+				if("blood_type")
+					var/choice = tgui_input_list(user, "Please choose a blood type.", "Blood type choice", GLOB.blood_type_choices)
+					if(!choice)
+						return
+					blood_type = choice
+
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair color:", "Character Preference", rgb(r_facial, g_facial, b_facial)) as color|null
 					if(new_facial)
@@ -2201,6 +2209,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.skin_color = skin_color
 	character.body_type = body_type
 	character.body_size = body_size
+	character.blood_type = blood_type
 
 	character.r_eyes = r_eyes
 	character.g_eyes = g_eyes

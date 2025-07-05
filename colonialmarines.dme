@@ -1638,6 +1638,7 @@
 #include "code\modules\client\country_flags.dm"
 #include "code\modules\client\player_details.dm"
 #include "code\modules\client\preferences.dm"
+#include "code\modules\client\preferences_blood_types.dm"
 #include "code\modules\client\preferences_factions.dm"
 #include "code\modules\client\preferences_gear.dm"
 #include "code\modules\client\preferences_savefile.dm"
