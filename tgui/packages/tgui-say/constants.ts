@@ -432,7 +432,7 @@ export const LANGUAGE_PREFIXES = {
     label: 'Hellhound',
   },
   '!l ': {
-    id: 'tatical sign language',
+    id: 'tactical sign language',
     label: 'Tacitical Sign',
   },
   '!m ': {
