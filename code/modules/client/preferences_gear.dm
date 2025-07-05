@@ -991,8 +991,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/bowie
 	display_name = "Bowie fighting knife"
-	path = 	/obj/item/weapon/knife/marine/bowie
-	cost = 3
+	path = 	/obj/item/storage/box/loadout/bowie
+	cost = 4
+
+/datum/gear/weapon/kukri
+	display_name = "Kukri utility knife"
+	path = 	/obj/item/storage/box/loadout/bowie/kukri
+	cost = 4
+	allowed_origins = TWE_ORIGINS
 
 /datum/gear/weapon/baker
 	display_name = "Baker-pattern fighting knife"
@@ -1080,7 +1086,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/l54
-	display_name = "L54 Pistol"
+	display_name = "L54A2 Pistol"
 	path = /obj/item/storage/box/loadout/L54_loadout
 	cost = 4
 

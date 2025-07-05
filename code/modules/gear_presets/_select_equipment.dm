@@ -164,6 +164,7 @@
 			new_human.b_hair = hair_colors[hair_color][3]
 			new_human.r_facial = hair_colors[hair_color][1]
 			new_human.g_facial = hair_colors[hair_color][2]
+			new_human.b_facial = hair_colors[hair_color][3]
 			var/eye_color = pick(colors)
 			new_human.r_eyes = colors[eye_color][1]
 			new_human.g_eyes = colors[eye_color][2]
@@ -668,7 +669,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/suit/marine/lamp,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_brown,
 		/obj/item/clothing/suit/storage/windbreaker/windbreaker_blue,
-		/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+		/obj/item/clothing/suit/marine/veteran/royal_marine,
 		/obj/item/clothing/suit/armor/bulletproof,
 		/obj/item/clothing/suit/armor/vest/ballistic,
 		)
@@ -802,7 +803,9 @@ GLOBAL_LIST_INIT(rebel_twe_rifles, list(
 	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
-	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90
+	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90,
+	/obj/item/weapon/gun/rifle/rmc_f90 = /obj/item/ammo_magazine/rifle/rmc_f90,
+	/obj/item/weapon/gun/rifle/rmc_f90/a_grip = /obj/item/ammo_magazine/rifle/rmc_f90,
 	))
 
 GLOBAL_LIST_INIT(rebel_twe_pistols, list(
@@ -1215,7 +1218,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/shotgun_ammo, WEAR_WAIST)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/no_lock/stripped(new_human), WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/nsg23(new_human), WEAR_WAIST)
 		if(4)
 			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine(new_human), WEAR_L_HAND)
@@ -1555,11 +1558,11 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
-	var/random_uniform = rand(1,2)
+	var/random_uniform = rand(1,4)
 	switch(random_uniform)
 		if(1)
 			uniform.roll_suit_jacket(new_human)
-		if(2)
+		if(2 to 3)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
@@ -1573,21 +1576,21 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 /datum/equipment_preset/proc/add_uscm_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/uniform = new()
-	var/random_uniform = rand(1,3)
+	var/random_uniform = rand(1,4)
 	switch(random_uniform)
 		if(1)
 			uniform.roll_suit_jacket(new_human)
-		if(2)
+		if(2 to 3)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
 /datum/equipment_preset/proc/add_uscm_uniform_standard(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/standard/uniform = new()
-	var/random_uniform = rand(1,3)
+	var/random_uniform = rand(1,4)
 	switch(random_uniform)
 		if(1)
 			uniform.roll_suit_jacket(new_human)
-		if(2)
+		if(2 to 3)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
@@ -1640,6 +1643,29 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/wypacket, WEAR_IN_HELMET)
 		if(6)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/fancy/cigarettes/arcturian_ace, WEAR_IN_HELMET)
+
+
+/datum/equipment_preset/proc/add_rmc_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/royal_marine/uniform = new()
+	var/random_uniform = rand(1,10)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+/datum/equipment_preset/proc/add_rmc_lt_uniform(mob/living/carbon/human/new_human)
+	var/obj/item/clothing/under/marine/veteran/royal_marine/lt/uniform = new()
+	var/random_uniform = rand(1,10)
+	switch(random_uniform)
+		if(1)
+			uniform.roll_suit_jacket(new_human)
+		if(2)
+			uniform.roll_suit_sleeves(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 
 /datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/canc/uniform = new()
