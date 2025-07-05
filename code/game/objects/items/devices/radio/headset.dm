@@ -1166,7 +1166,7 @@
 
 /obj/item/device/radio/headset/distress/CLF/cct
 	name = "CLF-CCT headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #d - combat controller, #b - engineering"
+	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #b - engineering"
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/clf/engi)
 
 /obj/item/device/radio/headset/distress/CLF/medic
@@ -1351,3 +1351,9 @@
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
+/obj/item/device/radio/headset/distress/merc
+	name = "mercenary headset"
+	desc = "A civilian commercial headset, modified to work as a military one. Featured channels include: ; - Mercenary,  :o - Colony."
+	frequency = MERC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+	ignore_z = TRUE
