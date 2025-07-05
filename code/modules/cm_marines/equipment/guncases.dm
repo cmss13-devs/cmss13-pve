@@ -103,6 +103,7 @@
 	new /obj/item/weapon/gun/rifle/m41aMK1/carbine(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
 //------------
 //M79 grenade launcher

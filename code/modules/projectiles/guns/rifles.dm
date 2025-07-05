@@ -518,10 +518,6 @@
 	icon_state = "xm43"
 	item_state = "xm43"
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
-	starting_attachment_types = list(
-		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/lasersight/carbine
-	)
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 	wield_delay = WIELD_DELAY_MIN
 	attachable_allowed = list(
