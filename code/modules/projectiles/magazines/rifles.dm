@@ -564,3 +564,33 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6
+
+//------------------------------------------------------
+//FN107 Rifle
+
+/obj/item/ammo_magazine/rifle/fn107
+	name = "\improper FN107 magazine (7.5x28mm)"
+	desc = "An 7.5mm magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "fn107"
+	item_state = "fn107"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/rifle/fn107
+	max_rounds = 100
+	gun_type = /obj/item/weapon/gun/rifle/fn107
+
+/obj/item/ammo_magazine/rifle/fn107/hollowpoint
+	name = "\improper FN107 hollowpoint magazine (7.5x28mm)"
+	desc = "An 7.5mm hollowpoint magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	default_ammo = /datum/ammo/bullet/rifle/fn107/hollowpoint
+	ammo_band_icon = "+fn107_band"
+	ammo_band_icon_empty = "+fn107_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/fn107/ap
+	name = "\improper FN107 AP magazine (7.5x28mm)"
+	desc = "An 7.5mm AP magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	default_ammo = /datum/ammo/bullet/rifle/fn107/ap
+	ammo_band_icon = "+fn107_band"
+	ammo_band_icon_empty = "+fn107_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_AP

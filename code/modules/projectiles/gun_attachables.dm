@@ -2863,6 +2863,18 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 20
 	hud_offset_mod = 2
 
+/obj/item/attachable/stock/fn107
+	name = "FN107 Carbine Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "fn107_stock"
+	attach_icon = "fn107_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
 // ======== Underbarrel Attachments ======== //
 
 
