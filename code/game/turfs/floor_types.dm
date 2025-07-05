@@ -208,6 +208,9 @@
 /turf/open/floor/plating/almayer/no_build
 	allow_construction = FALSE
 
+/turf/open/floor/plating/almayer/no_build/is_weedable()
+	return NOT_WEEDABLE
+
 /turf/open/floor/plating/airless
 	icon_state = "plating"
 	name = "airless plating"
@@ -1183,6 +1186,10 @@
 	icon_state = "outerhull"
 	name = "hull"
 	hull_floor = TRUE
+	allow_construction = FALSE
+
+/turf/open/floor/almayer_hull/is_weedable()
+	return NOT_WEEDABLE
 
 /turf/open/floor/almayer_hull/outerhull_dir
 	icon_state = "outerhull_dir"
@@ -1210,9 +1217,6 @@
 
 /turf/open/floor/almayer_hull/blackfull
 	icon_state = "blackfull"
-
-
-
 
 
 

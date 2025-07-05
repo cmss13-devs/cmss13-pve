@@ -736,6 +736,15 @@
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(update_in_weather_status))
 
+	var/turf/current_turf = get_turf(src)
+	if(istype(current_turf, /turf/open_space))
+		var/turf/open_space/current_open_turf = current_turf
+		current_open_turf.check_fall(src)
+
+// So it doens't do the spinny animation
+/obj/flamer_fire/onZImpact(turf/impact_turf, height)
+	return
+
 /obj/flamer_fire/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	to_call = null
