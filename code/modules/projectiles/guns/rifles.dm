@@ -121,6 +121,7 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	start_automatic = TRUE
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -162,12 +163,12 @@
 
 /obj/item/weapon/gun/rifle/nsg23/rmc
 	name = "\improper NSG L23A1 pulse rifle"
-	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Features an integrated 30mm grenade launcher and ammo tube that can hold two grenades on backup."
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Comes with semi-auto and burst-fire firemodes and features an integrated 30mm grenade launcher that can hold two grenades on backup with one in the chamber."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "rmc_nsg23"
 	item_state = "rmc_nsg23"
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	start_semiauto = FALSE
+	start_automatic = FALSE
 	start_burstfire = TRUE
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23/rmc,
