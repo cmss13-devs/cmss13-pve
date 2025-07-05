@@ -57,9 +57,9 @@ Contains most of the procs that are called when a mob is attacked by something
 	var/siemens_coefficient = 1
 
 	var/list/clothing_items = list(head, wear_mask, wear_suit, w_uniform, gloves, shoes, glasses) // What all are we checking?
-	for(var/obj/item/clothing/C in clothing_items)
-		if(istype(C) && (C.flags_armor_protection & def_zone.body_part)) // Is that body part being targeted covered?
-			siemens_coefficient *= C.siemens_coefficient
+	for(var/obj/item/clothing/Clothingvar in clothing_items)
+		if(istype(Clothingvar) && (Clothingvar.flags_armor_protection & def_zone.body_part)) // Is that body part being targeted covered?
+			siemens_coefficient *= Clothingvar.siemens_coefficient
 
 	return siemens_coefficient
 
@@ -71,9 +71,9 @@ Contains most of the procs that are called when a mob is attacked by something
 	var/list/protective_gear = list(head, wear_mask, wear_suit, w_uniform, gloves, shoes, glasses)
 	for(var/gear in protective_gear)
 		if(gear && istype(gear, /obj/item/clothing))
-			var/obj/item/clothing/C = gear
-			if(C.flags_armor_protection & def_zone.body_part)
-				protection += C.get_armor(type)
+			var/obj/item/clothing/Clothingvar = gear
+			if(Clothingvar.flags_armor_protection & def_zone.body_part)
+				protection += Clothingvar.get_armor(type)
 	return protection
 
 /mob/living/carbon/human/get_sharp_obj_blocker(obj/limb/limb)
@@ -84,20 +84,20 @@ Contains most of the procs that are called when a mob is attacked by something
 /mob/living/carbon/human/proc/check_head_coverage()
 
 	var/list/body_parts = list(head, wear_mask, wear_suit ) /* w_uniform, gloves, shoes*/ //We don't need to check these for heads.
-	for(var/bp in body_parts)
-		if(!bp)
+	for(var/partvar in body_parts)
+		if(!partvar)
 			continue
-		if(bp && istype(bp ,/obj/item/clothing))
-			var/obj/item/clothing/C = bp
-			if(C.flags_armor_protection & BODY_FLAG_HEAD)
+		if(partvar && istype(partvar, /obj/item/clothing))
+			var/obj/item/clothing/Clothingvar = partvar
+			if(Clothingvar.flags_armor_protection & BODY_FLAG_HEAD)
 				return TRUE
 	return FALSE
 
 /mob/living/carbon/human/proc/check_shields(damage = 0, attack_text = "the attack", combistick=0)
 	if(l_hand && istype(l_hand, /obj/item/weapon))//Current base is the prob(50-d/3)
 		if(combistick && istype(l_hand,/obj/item/weapon/yautja/combistick) && prob(66))
-			var/obj/item/weapon/yautja/combistick/C = l_hand
-			if(C.on)
+			var/obj/item/weapon/yautja/combistick/Clothingvar = l_hand
+			if(Clothingvar.on)
 				return TRUE
 
 		if(l_hand.IsShield() && istype(l_hand,/obj/item/weapon/shield)) // Activable shields
@@ -114,15 +114,15 @@ Contains most of the procs that are called when a mob is attacked by something
 				return TRUE
 			// We cannot return FALSE on fail here, because we haven't checked r_hand yet. Dual-wielding shields perhaps!
 
-		var/obj/item/weapon/I = l_hand
-		if(I.IsShield() && !istype(I, /obj/item/weapon/shield) && (prob(50 - floor(damage / 3)))) // 'other' shields, like predweapons. Make sure that item/weapon/shield does not apply here, no double-rolls.
+		var/obj/item/weapon/weapon_inhand = l_hand
+		if(weapon_inhand.IsShield() && !istype(weapon_inhand, /obj/item/weapon/shield) && (prob(50 - floor(damage / 3)))) // 'other' shields, like predweapons. Make sure that item/weapon/shield does not apply here, no double-rolls.
 			visible_message(SPAN_DANGER("<B>[src] blocks [attack_text] with the [l_hand.name]!</B>"), null, null, 5)
 			return TRUE
 
 	if(r_hand && istype(r_hand, /obj/item/weapon))
 		if(combistick && istype(r_hand,/obj/item/weapon/yautja/combistick) && prob(66))
-			var/obj/item/weapon/yautja/combistick/C = r_hand
-			if(C.on)
+			var/obj/item/weapon/yautja/combistick/Clothingvar = r_hand
+			if(Clothingvar.on)
 				return TRUE
 
 		if(r_hand.IsShield() && istype(r_hand,/obj/item/weapon/shield)) // Activable shields
@@ -138,8 +138,8 @@ Contains most of the procs that are called when a mob is attacked by something
 				visible_message(SPAN_DANGER("<B>[src] blocks [attack_text] with the [r_hand.name]!</B>"), null, null, 5)
 				return TRUE
 
-		var/obj/item/weapon/I = r_hand
-		if(I.IsShield() && !istype(I, /obj/item/weapon/shield) && (prob(50 - floor(damage / 3)))) // other shields. Don't doublecheck activable here.
+		var/obj/item/weapon/weapon_inhand = r_hand
+		if(weapon_inhand.IsShield() && !istype(weapon_inhand, /obj/item/weapon/shield) && (prob(50 - floor(damage / 3)))) // other shields. Don't doublecheck activable here.
 			visible_message(SPAN_DANGER("<B>[src] blocks [attack_text] with the [r_hand.name]!</B>"), null, null, 5)
 			return TRUE
 
@@ -164,15 +164,15 @@ Contains most of the procs that are called when a mob is attacked by something
 		if(O.status & LIMB_DESTROYED)
 			continue
 		O.emp_act(severity)
-		for(var/datum/internal_organ/I in O.internal_organs)
-			if(I.robotic == FALSE)
+		for(var/datum/internal_organ/weapon_inhand in O.internal_organs)
+			if(weapon_inhand.robotic == FALSE)
 				continue
-			I.emp_act(severity)
+			weapon_inhand.emp_act(severity)
 
 
 //Returns 1 if the attack hit, 0 if it missed.
-/mob/living/carbon/human/proc/attacked_by(obj/item/I, mob/living/user)
-	if(!I || !user)
+/mob/living/carbon/human/proc/attacked_by(obj/item/weapon_inhand, mob/living/user)
+	if(!weapon_inhand || !user)
 		return FALSE
 
 	user.animation_attack_on(src)
@@ -180,7 +180,7 @@ Contains most of the procs that are called when a mob is attacked by something
 	//IF there is an override, use that, otherwise, check if selected zone is valid, if it is, use that, otherwise use chest
 
 	if(!target_zone) //this should NEVER happen
-		visible_message(SPAN_DANGER("[user] misses [src] with \the [I]!"), null, null, 5)
+		visible_message(SPAN_DANGER("[user] misses [src] with \the [weapon_inhand]!"), null, null, 5)
 		return FALSE
 
 	var/obj/limb/affecting = get_limb(target_zone)
@@ -191,42 +191,42 @@ Contains most of the procs that are called when a mob is attacked by something
 		return FALSE
 	var/hit_area = affecting.display_name
 
-	if((user != src) && check_shields(I.force, "the [I.name]"))
+	if((user != src) && check_shields(weapon_inhand.force, "the [weapon_inhand.name]"))
 		return FALSE
 
-	if(LAZYLEN(I.attack_verb))
-		visible_message(SPAN_DANGER("<B>[src] has been [pick(I.attack_verb)] in the [hit_area] with [I.name] by [user]!</B>"), null, null, 5)
+	if(LAZYLEN(weapon_inhand.attack_verb))
+		visible_message(SPAN_DANGER("<B>[src] has been [pick(weapon_inhand.attack_verb)] in the [hit_area] with [weapon_inhand.name] by [user]!</B>"), null, null, 5)
 	else
-		visible_message(SPAN_DANGER("<B>[src] has been attacked in the [hit_area] with [I.name] by [user]!</B>"), null, null, 5)
+		visible_message(SPAN_DANGER("<B>[src] has been attacked in the [hit_area] with [weapon_inhand.name] by [user]!</B>"), null, null, 5)
 
 	var/armor = getarmor(affecting, ARMOR_MELEE)
 
-	var/weapon_sharp = is_sharp(I)
-	var/weapon_edge = has_edge(I)
+	var/weapon_sharp = is_sharp(weapon_inhand)
+	var/weapon_edge = has_edge(weapon_inhand)
 	if ((weapon_sharp || weapon_edge) && prob(getarmor(target_zone, ARMOR_MELEE)))
 		weapon_sharp = FALSE
 		weapon_edge = FALSE
 
-	if(!I.force)
+	if(!weapon_inhand.force)
 		return FALSE
 	if(weapon_sharp)
 		user.flick_attack_overlay(src, "punch")
 	else
 		user.flick_attack_overlay(src, "punch")
 
-	var/damage = armor_damage_reduction(GLOB.marine_melee, I.force, armor, (weapon_sharp?30:0) + (weapon_edge?10:0)) // no penetration frm punches
-	apply_damage(damage, I.damtype, affecting, sharp=weapon_sharp, edge=weapon_edge, used_weapon=I)
+	var/damage = armor_damage_reduction(GLOB.marine_melee, weapon_inhand.force, armor, (weapon_sharp?30:0) + (weapon_edge?10:0)) // no penetration frm punches
+	apply_damage(damage, weapon_inhand.damtype, affecting, sharp=weapon_sharp, edge=weapon_edge, used_weapon=weapon_inhand)
 
 	if(damage > 5)
-		last_damage_data = create_cause_data(initial(I.name), user)
-		user.track_hit(initial(I.name))
+		last_damage_data = create_cause_data(initial(weapon_inhand.name), user)
+		user.track_hit(initial(weapon_inhand.name))
 		if(user.faction == faction)
-			user.track_friendly_fire(initial(I.name))
+			user.track_friendly_fire(initial(weapon_inhand.name))
 
 	var/bloody = FALSE
-	if((I.damtype == BRUTE || I.damtype == HALLOSS) && prob(I.force*2 + 25))
+	if((weapon_inhand.damtype == BRUTE || weapon_inhand.damtype == HALLOSS) && prob(weapon_inhand.force*2 + 25))
 		var/color_override = (affecting.status & LIMB_ROBOT) ? COLOR_OIL : null
-		I.add_mob_blood(src, color_override) //Make the weapon bloody, not the person.
+		weapon_inhand.add_mob_blood(src, color_override) //Make the weapon bloody, not the person.
 		if(prob(33))
 			bloody = TRUE
 			var/turf/location = loc
@@ -256,11 +256,11 @@ Contains most of the procs that are called when a mob is attacked by something
 					add_blood(get_blood_color(), BLOOD_BODY)
 
 	//Melee weapon embedded object code.
-	if (I.damtype == BRUTE && !(I.flags_item & (NODROP|DELONDROP)))
-		damage = I.force
+	if (weapon_inhand.damtype == BRUTE && !(weapon_inhand.flags_item & (NODROP|DELONDROP)))
+		damage = weapon_inhand.force
 		if(damage > 40) damage = 40  //Some sanity, mostly for yautja weapons. CONSTANT STICKY ICKY
 		if (weapon_sharp && prob(3) && !isyautja(user)) // make yautja less likely to get their weapon stuck
-			affecting.embed(I)
+			affecting.embed(weapon_inhand)
 
 	return TRUE
 
@@ -320,8 +320,8 @@ Contains most of the procs that are called when a mob is attacked by something
 	if (damage > 5)
 		last_damage_source = initial(AM.name)
 		animation_flash_color(src)
-		var/obj/item/I = O
-		if(istype(I) && I.sharp) //Hilarious is_sharp only returns true if it's sharp AND edged, while a bunch of things don't have edge to limit embeds.
+		var/obj/item/weapon_inhand = O
+		if(istype(weapon_inhand) && weapon_inhand.sharp) //Hilarious is_sharp only returns true if it's sharp AND edged, while a bunch of things don't have edge to limit embeds.
 			playsound(loc, 'sound/effects/spike_hit.ogg', 20, TRUE, 5, falloff = 2)
 		else
 			playsound(loc, 'sound/effects/thud.ogg', 25, TRUE, 5, falloff = 2)
@@ -345,25 +345,25 @@ Contains most of the procs that are called when a mob is attacked by something
 
 	//thrown weapon embedded object code.
 	if (dtype == BRUTE && istype(O,/obj/item))
-		var/obj/item/I = O
-		var/sharp = is_sharp(I)
+		var/obj/item/weapon_inhand = O
+		var/sharp = is_sharp(weapon_inhand)
 		//blunt objects should really not be embedding in things unless a huge amount of force is involved
-		var/embed_chance = sharp? damage/I.w_class : damage/(I.w_class*3)
-		var/embed_threshold = sharp? 5*I.w_class : 15*I.w_class
+		var/embed_chance = sharp? damage/weapon_inhand.w_class : damage/(weapon_inhand.w_class*3)
+		var/embed_threshold = sharp? 5*weapon_inhand.w_class : 15*weapon_inhand.w_class
 
 		//Sharp objects will always embed if they do enough damage.
 		//Thrown sharp objects have some momentum already and have a small chance to embed even if the damage is below the threshold
-		if (!isyautja(src) && ((sharp && prob(damage/(10*I.w_class)*100)) || (damage > embed_threshold && prob(embed_chance))))
-			affecting.embed(I)
+		if (!isyautja(src) && ((sharp && prob(damage/(10*weapon_inhand.w_class)*100)) || (damage > embed_threshold && prob(embed_chance))))
+			affecting.embed(weapon_inhand)
 
 /mob/living/carbon/human/proc/get_id_faction_group()
-	var/obj/item/card/id/C = wear_id
-	if(!istype(C))
-		C = get_active_hand()
-	if(!istype(C))
+	var/obj/item/card/id/Clothingvar = wear_id
+	if(!istype(Clothingvar))
+		Clothingvar = get_active_hand()
+	if(!istype(Clothingvar))
 		return null
 
-	return C.faction_group
+	return Clothingvar.faction_group
 
 /mob/living/proc/get_target_lock(access_to_check)
 	if(isnull(access_to_check))
