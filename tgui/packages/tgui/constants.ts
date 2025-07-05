@@ -207,7 +207,7 @@ export const RADIO_CHANNELS = [
     color: '#8e83ca',
   },
   {
-    name: 'CIA',
+    name: 'CLF CMD',
     freq: 1272,
     color: '#4a768f',
   },
