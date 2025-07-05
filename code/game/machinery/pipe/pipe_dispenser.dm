@@ -72,21 +72,21 @@
 	onclose(user, "pipedispenser")
 	return
 
-/obj/structure/machinery/pipedispenser/Topic(href, href_list)
+/obj/structure/machinery/pipedispenser/Topic(href, href_list, mob/user)
 	if(..())
 		return
-	if(unwrenched || usr.is_mob_incapacitated() || !in_range(loc, usr))
-		close_browser(usr, "pipedispenser")
+	if(unwrenched || user.is_mob_incapacitated() || !in_range(loc, user))
+		close_browser(user, "pipedispenser")
 		return
-	usr.set_interaction(src)
-	src.add_fingerprint(usr)
+	user.set_interaction(src)
+	src.add_fingerprint(user)
 	if(href_list["make"])
 		if(!wait)
 			var/p_type = text2num(href_list["make"])
 			var/p_dir = text2num(href_list["dir"])
 			var/obj/item/pipe/P = new (/*usr.loc*/ src.loc, p_type, p_dir)
 			P.update()
-			P.add_fingerprint(usr)
+			P.add_fingerprint(user)
 			wait = 1
 			addtimer(VARSET_CALLBACK(src, wait, FALSE), 1 SECONDS)
 	if(href_list["makemeter"])
@@ -96,10 +96,10 @@
 			addtimer(VARSET_CALLBACK(src, wait, FALSE), 1.5 SECONDS)
 	return
 
-/obj/structure/machinery/pipedispenser/attackby(obj/item/W as obj, mob/user as mob)
-	src.add_fingerprint(usr)
+/obj/structure/machinery/pipedispenser/attackby(obj/item/W as obj, mob/user)
+	src.add_fingerprint(user)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
-		to_chat(usr, SPAN_NOTICE(" You put [W] back to [src]."))
+		to_chat(user, SPAN_NOTICE(" You put [W] back to [src]."))
 		user.drop_held_item()
 		qdel(W)
 		return
@@ -115,8 +115,8 @@
 				src.anchored = FALSE
 				src.stat |= MAINT
 				src.unwrenched = 1
-				if (usr.interactee==src)
-					close_browser(usr, "pipedispenser")
+				if (user.interactee==src)
+					close_browser(user, "pipedispenser")
 		else /*if (unwrenched==1)*/
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			to_chat(user, SPAN_NOTICE(" You begin to fasten \the [src] to the floor..."))
@@ -149,11 +149,11 @@ Nah
 */
 
 //Allow you to drag-drop disposal pipes into it
-/obj/structure/machinery/pipedispenser/disposal/MouseDrop_T(obj/structure/disposalconstruct/pipe as obj, mob/usr as mob)
-	if(usr.is_mob_incapacitated())
+/obj/structure/machinery/pipedispenser/disposal/MouseDrop_T(obj/structure/disposalconstruct/pipe as obj, mob/user)
+	if(user.is_mob_incapacitated())
 		return
 
-	if (!istype(pipe) || get_dist(usr, src) > 1 || get_dist(src,pipe) > 1 )
+	if (!istype(pipe) || get_dist(user, src) > 1 || get_dist(src,pipe) > 1 )
 		return
 
 	if (pipe.anchored)
@@ -186,14 +186,14 @@ Nah
 // 0=straight, 1=bent, 2=junction-j1, 3=junction-j2, 4=junction-y, 5=trunk
 
 
-/obj/structure/machinery/pipedispenser/disposal/Topic(href, href_list)
+/obj/structure/machinery/pipedispenser/disposal/Topic(href, href_list, mob/user)
 	if(..())
 		return
-	usr.set_interaction(src)
-	src.add_fingerprint(usr)
+	user.set_interaction(src)
+	src.add_fingerprint(user)
 	if(href_list["dmake"])
-		if(unwrenched || usr.is_mob_incapacitated() || !in_range(loc, usr))
-			close_browser(usr, "pipedispenser")
+		if(unwrenched || user.is_mob_incapacitated() || !in_range(loc, user))
+			close_browser(user, "pipedispenser")
 			return
 		if(!wait)
 			var/p_type = text2num(href_list["dmake"])
@@ -224,7 +224,7 @@ Nah
 				if(22)
 					C.ptype = 12
 ///// Z-Level stuff
-			C.add_fingerprint(usr)
+			C.add_fingerprint(user)
 			C.update()
 			wait = 1
 			addtimer(VARSET_CALLBACK(src, wait, FALSE), 1.5 SECONDS)
