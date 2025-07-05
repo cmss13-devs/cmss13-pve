@@ -63,6 +63,12 @@
 
 	return default
 
+/proc/sanitize_blood_type(blood_type, default = "O+")
+	if(blood_type in GLOB.blood_type_choices)
+		return blood_type
+
+	return default
+
 /proc/sanitize_hexcolor(color, default="#000000")
 	if(!istext(color)) return default
 	var/len = length(color)
