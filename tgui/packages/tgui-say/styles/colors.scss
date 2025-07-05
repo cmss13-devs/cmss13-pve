@@ -42,6 +42,7 @@ $clf: #8e83ca;
 $upp: #8f4a4b;
 $colony: #993399;
 $rmc: #e3580e;
+$guard: #7ec837;
 $us-army: #037741;
 $usasf: #2a1bb6;
 $uscg: #62a759;
@@ -80,6 +81,7 @@ $_channel_map: (
   'sof': $highcom,
   'ship': $comms,
   'colony': $colony,
+  'guard': $guard,
   'upp-med': $upp,
   'upp-engi': $upp,
   'upp-cmd': $upp,
@@ -89,7 +91,6 @@ $_channel_map: (
   'clf-med': $clf,
   'clf-engi': $clf,
   'clf-cmd': $clf,
-  'clf-cct': $clf,
   'clf': $clf,
   'pmc-med': $pmc,
   'pmc-engi': $pmc,
