@@ -374,7 +374,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/upp/junior_sergeant
-	name = parent_type::name + " (Lesser Rank)"
+	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/tl/upp/junior_sergeant/load_gear(mob/living/carbon/human/new_human)
