@@ -157,6 +157,7 @@
 	var/voice_name = "unidentifiable voice"
 
 	var/job = null // Internal job title used when mob is spawned. Preds are "Predator", Xenos are "Xenomorph", Marines have their actual job title
+	var/title = null
 	var/comm_title = ""
 	var/faction = FACTION_NEUTRAL
 	var/faction_group
