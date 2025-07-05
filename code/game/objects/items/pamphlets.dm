@@ -206,6 +206,16 @@
 	desc = "This pamphlet teaches you Polish."
 	trait = /datum/character_trait/language/polish
 
+/obj/item/pamphlet/language/patois
+	name = "Simples phrases in Russian patois"
+	desc = "This pamphlet teaches you Russian patois."
+	trait = /datum/character_trait/language/polish
+
+/obj/item/pamphlet/language/scandinavian
+	name = "Simples phrases in various Scandinavian languages."
+	desc = "This pamphlet teaches you Scandinavian."
+	trait = /datum/character_trait/language/polish
+
 //Restricted languages, spawnable for events.
 
 /obj/item/pamphlet/language/yautja

@@ -439,6 +439,10 @@ export const LANGUAGE_PREFIXES = {
     id: 'primitive',
     label: 'Primitive',
   },
+  '!p ': {
+    id: 'polish',
+    label: 'Polish',
+  },
   '!s ': {
     id: 'sainja',
     label: 'Sainja',
