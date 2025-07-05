@@ -127,9 +127,9 @@
 /datum/language/polish
 	name = LANGUAGE_POLISH
 	desc = "A West Slavic language spoken by Polish people. Currently the fifth most commonly spoken in the UPP."
-	speech_verb = "mowi"
-	ask_verb = "pyta"
-	exclaim_verb = "krzyczy"
+	speech_verb = "says"
+	ask_verb = "inquires"
+	exclaim_verb = "shouts"
 	color = "polish"
 	key = "o"
 
