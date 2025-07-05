@@ -72,21 +72,21 @@
 	onclose(user, "pipedispenser")
 	return
 
-/obj/structure/machinery/pipedispenser/Topic(href, href_list, mob/user)
+/obj/structure/machinery/pipedispenser/Topic(href, href_list)
 	if(..())
 		return
-	if(unwrenched || user.is_mob_incapacitated() || !in_range(loc, user))
-		close_browser(user, "pipedispenser")
+	if(unwrenched || usr.is_mob_incapacitated() || !in_range(loc, usr))
+		close_browser(usr, "pipedispenser")
 		return
-	user.set_interaction(src)
-	src.add_fingerprint(user)
+	usr.set_interaction(src)
+	src.add_fingerprint(usr)
 	if(href_list["make"])
 		if(!wait)
 			var/p_type = text2num(href_list["make"])
 			var/p_dir = text2num(href_list["dir"])
 			var/obj/item/pipe/P = new (/*usr.loc*/ src.loc, p_type, p_dir)
 			P.update()
-			P.add_fingerprint(user)
+			P.add_fingerprint(usr)
 			wait = 1
 			addtimer(VARSET_CALLBACK(src, wait, FALSE), 1 SECONDS)
 	if(href_list["makemeter"])
@@ -97,9 +97,9 @@
 	return
 
 /obj/structure/machinery/pipedispenser/attackby(obj/item/W as obj, mob/user)
-	src.add_fingerprint(user)
+	src.add_fingerprint(usr)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
-		to_chat(user, SPAN_NOTICE(" You put [W] back to [src]."))
+		to_chat(usr, SPAN_NOTICE(" You put [W] back to [src]."))
 		user.drop_held_item()
 		qdel(W)
 		return
@@ -108,22 +108,22 @@
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			to_chat(user, SPAN_NOTICE(" You begin to unfasten \the [src] from the floor..."))
 			if (do_after(user, 40, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				user.visible_message( \
-					"[user] unfastens \the [src].", \
-					SPAN_NOTICE("You have unfastened \the [src]. Now it can be pulled somewhere else."), \
+				user.visible_message(
+					"[user] unfastens \the [src].",
+					SPAN_NOTICE("You have unfastened \the [src]. Now it can be pulled somewhere else."),
 					"You hear ratchet.")
 				src.anchored = FALSE
 				src.stat |= MAINT
 				src.unwrenched = 1
-				if (user.interactee==src)
-					close_browser(user, "pipedispenser")
+				if (usr.interactee==src)
+					close_browser(usr, "pipedispenser")
 		else /*if (unwrenched==1)*/
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			to_chat(user, SPAN_NOTICE(" You begin to fasten \the [src] to the floor..."))
 			if (do_after(user, 20, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				user.visible_message( \
-					"[user] fastens \the [src].", \
-					SPAN_NOTICE("You have fastened \the [src]. Now it can dispense pipes."), \
+				user.visible_message(
+					"[user] fastens \the [src].",
+					SPAN_NOTICE("You have fastened \the [src]. Now it can dispense pipes."),
 					"You hear ratchet.")
 				src.anchored = TRUE
 				src.stat &= ~MAINT
@@ -186,14 +186,14 @@ Nah
 // 0=straight, 1=bent, 2=junction-j1, 3=junction-j2, 4=junction-y, 5=trunk
 
 
-/obj/structure/machinery/pipedispenser/disposal/Topic(href, href_list, mob/user)
+/obj/structure/machinery/pipedispenser/disposal/Topic(href, href_list)
 	if(..())
 		return
-	user.set_interaction(src)
-	src.add_fingerprint(user)
+	usr.set_interaction(src)
+	src.add_fingerprint(usr)
 	if(href_list["dmake"])
-		if(unwrenched || user.is_mob_incapacitated() || !in_range(loc, user))
-			close_browser(user, "pipedispenser")
+		if(unwrenched || usr.is_mob_incapacitated() || !in_range(loc, usr))
+			close_browser(usr, "pipedispenser")
 			return
 		if(!wait)
 			var/p_type = text2num(href_list["dmake"])
@@ -224,7 +224,7 @@ Nah
 				if(22)
 					C.ptype = 12
 ///// Z-Level stuff
-			C.add_fingerprint(user)
+			C.add_fingerprint(usr)
 			C.update()
 			wait = 1
 			addtimer(VARSET_CALLBACK(src, wait, FALSE), 1.5 SECONDS)
