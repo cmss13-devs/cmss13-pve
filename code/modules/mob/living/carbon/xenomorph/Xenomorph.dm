@@ -60,6 +60,9 @@
 	var/obj/item/clothing/head/head = null
 	var/obj/item/r_store = null
 	var/obj/item/l_store = null
+	// Mob we are hauling
+	var/datum/weakref/hauled_mob
+	var/haul_timer
 
 	var/obj/item/iff_tag/iff_tag = null
 
@@ -280,8 +283,6 @@
 	/// 0/FALSE - upright, 1/TRUE - all fours
 	var/agility = FALSE
 	var/ripping_limb = FALSE
-	/// The world.time at which we will regurgitate our currently-vored victim
-	var/devour_timer = 0
 	/// For drones/hivelords. Extends the maximum build range they have
 	var/extra_build_dist = 0
 	/// tiles from self you can plant eggs.
@@ -341,9 +342,6 @@
 	var/used_burrow = 0
 	var/used_tunnel = 0
 
-	//Taken from update_icon for all xeno's
-	var/list/overlays_standing[X_TOTAL_LAYERS]
-
 	var/atom/movable/vis_obj/xeno_wounds/wound_icon_holder
 	var/atom/movable/vis_obj/xeno_pack/backpack_icon_holder
 	/// If TRUE, the xeno cannot slash anything
@@ -396,7 +394,8 @@
 		//If we're holding things drop them
 		for(var/obj/item/item in old_xeno.contents) //Drop stuff
 			old_xeno.drop_inv_item_on_ground(item)
-		old_xeno.empty_gut()
+		if(old_xeno.hauled_mob?.resolve())
+			old_xeno.release_haul(old_xeno.hauled_mob.resolve())
 
 		if(old_xeno.iff_tag)
 			iff_tag = old_xeno.iff_tag
@@ -688,6 +687,10 @@
 /mob/living/carbon/xenomorph/Destroy()
 	GLOB.living_xeno_list -= src
 	GLOB.xeno_mob_list -= src
+	var/mob/living/carbon/human/user = hauled_mob?.resolve()
+	if(user)
+		user.handle_unhaul()
+		hauled_mob = null
 
 	if(tracked_marker)
 		tracked_marker.xenos_tracking -= src

@@ -201,6 +201,11 @@
 	desc = "This pamphlet teaches you Portuguese."
 	trait = /datum/character_trait/language/portuguese
 
+/obj/item/pamphlet/language/polish
+	name = "Simples phrases in Polish"
+	desc = "This pamphlet teaches you Polish."
+	trait = /datum/character_trait/language/polish
+
 //Restricted languages, spawnable for events.
 
 /obj/item/pamphlet/language/yautja

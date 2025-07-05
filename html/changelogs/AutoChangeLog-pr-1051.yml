@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "UPP Riflemen can no longer pick their E3 corporal rank, limited to E1 or E2 (USCM standard & FORECON retain the three option pick)"
+  - qol: "Smartgunners/Machinegunners and Corpsmen/sanitars can pick between the E1, E2, E3 & E4 ranks as standard (E2-E5 for FORECON)"
+  - qol: "FORECON RTO can pick between E2, E3 & E4 ranks now"
+  - code_imp: "tidied up alt-rank subtypes for player jobs & removed un-needed gear_secondary entries for the PMC roles"

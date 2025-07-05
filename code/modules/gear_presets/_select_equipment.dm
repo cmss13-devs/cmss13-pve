@@ -316,6 +316,7 @@
 		new_human.mind.name = new_human.real_name
 		// Bank account details handled in generate_money_account()
 	new_human.job = rank
+	new_human.title = assignment
 	new_human.comm_title = role_comm_title
 
 /datum/equipment_preset/proc/get_assignment(mob/living/carbon/human/new_human)

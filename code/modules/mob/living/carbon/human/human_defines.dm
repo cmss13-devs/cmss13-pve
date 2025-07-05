@@ -152,8 +152,6 @@
 
 	var/default_lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 
-	//Taken from update_icons
-	var/list/overlays_standing[TOTAL_LAYERS]
 	var/hardcore = FALSE //If TRUE, removes the body upon unrevivable death (for WO)
 	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
 	throw_range = 4 // Humans can't be thrown that far
@@ -171,6 +169,15 @@
 
 	/// Stored image references associated with focus-fire.
 	var/image/focused_fire_marker
+
+	// Are we currently using inherent zoom vision?
+	var/is_zoomed = FALSE
+
+	// Xenomorph that is hauling us if we are hauled
+	var/mob/living/carbon/xenomorph/hauling_xeno
+
+	// Haul resist cooldown
+	var/next_haul_resist
 
 /client/var/cached_human_playtime
 

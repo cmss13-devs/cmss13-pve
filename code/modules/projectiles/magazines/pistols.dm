@@ -309,7 +309,7 @@
 
 /obj/item/ammo_magazine/pistol/highpower
 	name = "\improper HG-45 'Aguila' magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"

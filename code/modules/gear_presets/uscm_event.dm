@@ -1,7 +1,7 @@
 /datum/equipment_preset/uscm_event
 	name = "USCM (Event Roles)"
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 30
 	languages = list(LANGUAGE_ENGLISH)
 
@@ -446,15 +446,8 @@
 
 /*****************************************************************************************************/
 
-/datum/equipment_preset/uscm_event/uaac/tis
-	name = "UAAC-TIS"
 
-	idtype = /obj/item/card/id/provost
-	skills = /datum/skills/provost
 
-/datum/equipment_preset/uscm_event/uaac/tis/New()
-	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_ALL)
 
 /datum/equipment_preset/uscm_event/uaac/tis/io
 	name = "UAAC-TIS Intelligence Officer (NO2)"
@@ -515,145 +508,3 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_mateba(new_human), WEAR_R_STORE)
 
 /*****************************************************************************************************/
-
-/datum/equipment_preset/uscm/gladius
-	name = "Gladius Legionnaire (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	faction_group = list(FACTION_MARINE, FACTION_ARMY, FACTION_NAVY, FACTION_UA_REBEL)
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
-	assignment = JOB_SQUAD_MARINE
-	rank = JOB_SQUAD_MARINE
-	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_3)
-	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
-
-	minimap_icon = "private"
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/uscm/gladius/load_status(mob/living/carbon/human/new_human)
-	new_human.nutrition = NUTRITION_NORMAL
-
-/datum/equipment_preset/uscm/gladius/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
-	//back
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
-	add_uscm_cover(new_human)
-	add_uscm_goggles(new_human)
-	//uniform
-	add_uscm_uniform(new_human)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/random_parts(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/internal/accessory/webbing/m3mag/mk1(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/gladius/full(new_human), WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_BACK)
-	//waist
-	var/waist_item = pick(/obj/item/device/motiondetector, /obj/item/storage/belt/utility/full, /obj/item/storage/belt/grenade/army, /obj/item/storage/belt/gun/m4a3/m1911, /obj/item/storage/belt/gun/m44/full,\
-	/obj/item/storage/belt/gun/flaregun)
-	new_human.equip_to_slot_or_del(new waist_item(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
-	add_combat_gloves(new_human)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-
-	if(prob(50))
-		var/mask_item = pick(/obj/item/clothing/mask/rebreather/scarf/gray, /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, /obj/item/clothing/mask/rebreather/skull/black)
-		new_human.equip_to_slot_or_del(new mask_item(new_human), WEAR_FACE)
-	else if(prob(25))
-		var/obj/item/facepaint/skull/paint = new()
-		paint.paint_face(new_human, new_human)
-		qdel(paint)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	var/the_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female) + " " + "A.W. Gladius")
-	new_human.change_real_name(new_human, the_name)
-	var/obj/item/card/id/dogtag/ID = new_human.wear_id
-	ID.name = "[new_human.real_name]'s [ID.card_name] ([ID.assignment])"
-	ID.set_user_data(new_human)
-
-
-/datum/equipment_preset/uscm/gladius/sg
-	name = "Gladius Smartgunner (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
-	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_LOGISTICS, ACCESS_CIVILIAN_ENGINEERING, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_COMMAND)
-	assignment = JOB_SQUAD_SMARTGUN
-	rank = JOB_SQUAD_SMARTGUN
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_1)
-	role_comm_title = "SG"
-	skills = /datum/skills/smartgunner
-
-	minimap_icon = "smartgunner"
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/uscm/gladius/sg/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
-	//back
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
-	//head
-	var/random_cover = pick(/obj/item/clothing/head/cmcap/boonie/tan, /obj/item/clothing/head/cmcap/khaki, /obj/item/clothing/head/headband/red)
-	if(prob(66))
-		new_human.equip_to_slot_or_del(new random_cover(new_human), WEAR_HEAD)
-	//uniform
-	add_uscm_uniform(new_human)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m56/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_R_HAND)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/gladius/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
-	add_combat_gloves(new_human)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
-
-	if(prob(50))
-		var/mask_item = pick(/obj/item/clothing/mask/rebreather/scarf/gray, /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, /obj/item/clothing/mask/rebreather/skull/black)
-		new_human.equip_to_slot_or_del(new mask_item(new_human), WEAR_FACE)
-	else if(prob(25))
-		var/obj/item/facepaint/skull/paint = new()
-		paint.paint_face(new_human, new_human)
-		qdel(paint)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	var/the_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female) + " " + "A.W. Gladius")
-	new_human.change_real_name(new_human, the_name)
-	var/obj/item/card/id/dogtag/ID = new_human.wear_id
-	ID.name = "[new_human.real_name]'s [ID.card_name] ([ID.assignment])"
-	ID.set_user_data(new_human)
-	var/obj/item/storage/backpack/general_belt/g8 = new()
-	new /obj/item/ammo_magazine/smartgun(g8)
-	new /obj/item/ammo_magazine/smartgun(g8)
-	new_human.equip_to_slot_or_del(g8, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster(new_human), WEAR_ACCESSORY)
-	var/random_handgun = rand(1, 3)
-	switch(random_handgun)
-		if(1)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3/custom(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_IN_ACCESSORY)
-		if(2)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_IN_ACCESSORY)
-		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/grizzly(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/grizzly(new_human), WEAR_IN_ACCESSORY)
-			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/grizzly(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint(new_human), WEAR_ACCESSORY)

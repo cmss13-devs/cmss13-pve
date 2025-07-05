@@ -11,7 +11,6 @@
 
 /obj/effect/landmark/interior/spawn
 	name = "interior interactable spawner"
-
 // Interiors will call this when they're created
 /obj/effect/landmark/interior/spawn/on_load(datum/interior/I)
 	qdel(src)
@@ -228,32 +227,6 @@
 	CAM.update_icon()
 	CAM.pixel_x = pixel_x
 	CAM.pixel_y = pixel_y
-
-	qdel(src)
-
-/obj/effect/landmark/interior/spawn/telephone
-	name = "telephone spawner"
-	icon = 'icons/obj/vehicles/interiors/general.dmi'
-	icon_state = "wall_phone"
-	color = "yellow"
-
-/obj/effect/landmark/interior/spawn/telephone/toc
-	icon = 'icons/obj/vehicles/interiors/movie.dmi'
-	icon_state = "wall_phone"
-
-/obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/phone_base/Phone = new(loc)
-
-	Phone.icon = icon
-	Phone.icon_state = icon_state
-	Phone.layer = layer
-	Phone.setDir(dir)
-	Phone.alpha = alpha
-	Phone.update_icon()
-	Phone.pixel_x = pixel_x
-	Phone.pixel_y = pixel_y
-	Phone.phone_category = "Vehicles"
-	Phone.phone_id = replacetext(Phone.phone_id, "\improper", "") // this has to be done because phone IDs need to be the same as their display name (\improper doesn't display, obviously)
 
 	qdel(src)
 

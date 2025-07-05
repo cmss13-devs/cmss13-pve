@@ -376,6 +376,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
+/datum/gear/headwear/upp
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/headwear/upp/cap
+	display_name = "UPP cap"
+	path = /obj/item/clothing/head/uppcap
+
+/datum/gear/headwear/upp/boonie
+	display_name = "UPP boonie"
+	path = /obj/item/clothing/head/uppcap/boonie
+
+/datum/gear/headwear/upp/ushanka
+	display_name = "UPP ushanka"
+	path = /obj/item/clothing/head/uppcap/ushanka
+
 /datum/gear/headwear/beret_red
 	display_name = "Beret, red"
 	path = /obj/item/clothing/head/beret
@@ -548,6 +563,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/suit/storage/jacket/marine/service
 	cost = 3
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/clothing/upp_service_jacket
+	display_name = "UPP service jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	cost = 3
+	allowed_origins = UPP_ORIGINS
+
 
 /datum/gear/clothing/shorts
 	display_name = "USCM PT Shorts"
@@ -1477,6 +1499,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
+
+/datum/gear/misc/patch_upp
+	display_name = "UPPAC shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/misc/patch_upp/sof
+	display_name = "Naval Infantry shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp/naval
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"

@@ -73,6 +73,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 #define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
+#define RECORD_CREATE_CLICK_INTERCEPT_ACTION "record_create_click_intercept_action"
 
 
 /datum/game_master
@@ -125,6 +126,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// If we are currently using the click intercept for the objective section
 	var/objective_click_intercept = FALSE
 
+	// Record stuff
+	/// If we are currently using the click intercepts for record creation
+	var/record_create_click_intercept = FALSE
 
 	// Communication stuff
 
@@ -187,6 +191,10 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	data["radio_clarity_example"] = stars("The quick brown fox jumped over the lazy dog.", GLOB.radio_communication_clarity)
 	data["xenos_spawned"] = GLOB.xenos_spawned
 	data["xenos_died"] = GLOB.xenos_died
+
+	// Record stuff
+	data["record_create_click_intercept"] = record_create_click_intercept
+
 	return data
 
 /datum/game_master/ui_static_data(mob/user)
@@ -238,6 +246,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			reset_click_overrides()
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
+			return
+
+		if("toggle_click_record_creation")
+			if(record_create_click_intercept)
+				reset_click_overrides()
+				return
+
+			reset_click_overrides()
+			record_create_click_intercept = TRUE
+			current_click_intercept_action = RECORD_CREATE_CLICK_INTERCEPT_ACTION
 			return
 
 		if("delete_all_xenos")
@@ -335,10 +353,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(user_client?.click_intercept == src)
 		user_client.click_intercept = null
 
-	spawn_click_intercept = FALSE
-	objective_click_intercept = FALSE
-	behavior_click_intercept = FALSE
-	current_click_intercept_action = null
+	reset_click_overrides()
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
@@ -448,7 +463,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				"object_ref" = object_ref,
 				))
 			return TRUE
-
+		if(RECORD_CREATE_CLICK_INTERCEPT_ACTION)
+			if(!ishuman(object))
+				return FALSE
+			var/mob/living/carbon/human/target = object
+			GLOB.data_core.manifest_inject(target)
+			to_chat(user, SPAN_NOTICE("Record created for [target.real_name]"))
+			return TRUE
 		else
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
@@ -468,6 +489,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE
+	record_create_click_intercept = FALSE
 	current_click_intercept_action = null
 
 /datum/game_master/proc/is_objective(atom/checked_object)

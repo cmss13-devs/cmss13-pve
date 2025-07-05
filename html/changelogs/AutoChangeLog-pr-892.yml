@@ -1,0 +1,7 @@
+author: "tyeagg"
+delete-after: True
+changes:
+  - rscadd: "fire support binos and system"
+  - soundadd: "fire support sounds"
+  - imageadd: "fire support radials"
+  - imageadd: "dropship shadows for krokodil and ud"
