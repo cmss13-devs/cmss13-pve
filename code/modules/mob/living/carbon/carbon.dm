@@ -15,6 +15,7 @@
 		remove_all_indicators()
 
 /mob/living/carbon/Destroy()
+	stomach_contents?.Cut()
 	view_change_sources = null
 	active_transfusions = null
 	. = ..()
@@ -77,6 +78,20 @@
 /mob/living/carbon/gib(datum/cause_data/cause = create_cause_data("gibbing", src))
 	if(legcuffed)
 		drop_inv_item_on_ground(legcuffed)
+
+	for(var/atom/movable/bursting_out in stomach_contents)
+		stomach_contents.Remove(bursting_out)
+		bursting_out.forceMove(get_turf(loc))
+		bursting_out.acid_damage = 0 //Reset the acid damage
+		if(ismob(bursting_out))
+			visible_message(SPAN_DANGER("[bursting_out] bursts out of [src]!"))
+
+	for(var/atom/movable/possible_object in contents_recursive())
+		if(isobj(possible_object))
+			var/obj/bursting_object = possible_object
+			if(bursting_object.unacidable)
+				bursting_object.forceMove(get_turf(loc))
+				bursting_object.throw_atom(pick(range(1, get_turf(loc))), 1, SPEED_FAST)
 	. = ..(cause)
 
 /mob/living/carbon/revive()
