@@ -287,7 +287,13 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 18,
+		"rail_x" = 12, "rail_y" = 23,
+		"under_x" = 23, "under_y" = 13,
+		"stock_x" = 24, "stock_y" = 14,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
 
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_config_values()
@@ -526,6 +532,7 @@
 		/obj/item/attachable/stock/rifle,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/lasersight/carbine,
+		/obj/item/attachable/suppressor,
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/stock/rifle/collapsible,
@@ -546,6 +553,15 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 30, "muzzle_y" = 19,
+		"rail_x" = 12, "rail_y" = 22,
+		"under_x" = 22, "under_y" = 16,
+		"stock_x" = 24, "stock_y" = 14,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
 
 /obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
 	current_mag = null
@@ -610,7 +626,13 @@
 	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 26, "side_rail_y" = 17)
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 17,
+		"rail_x" = 11, "rail_y" = 19,
+		"under_x" = 24, "under_y" = 12,
+		"stock_x" = 24, "stock_y" = 13,
+		"side_rail_x" = 26, "side_rail_y" = 17
+	)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_config_values()
 	..()
