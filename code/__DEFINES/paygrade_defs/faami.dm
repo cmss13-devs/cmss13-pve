@@ -20,6 +20,12 @@
 /// FA6 - Soldat Chief Sergeant
 #define PAY_SHORT_FA6 "FA6"
 
+/// FE1 - Commando Soldat
+#define PAY_SHORT_FE1 "FE1"
+
+/// FE1 - Commando Soldat Sergeant
+#define PAY_SHORT_FE2 "FE2"
+
 /// FO1 - Adjundant Secondary
 #define PAY_SHORT_FO1 "FO1"
 

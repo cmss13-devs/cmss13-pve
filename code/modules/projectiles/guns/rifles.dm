@@ -1899,6 +1899,7 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/fn107,
+		/obj/item/attachable/scope/mini,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -1926,3 +1927,9 @@
 /obj/item/weapon/gun/rifle/fn107/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
+
+/obj/item/weapon/gun/rifle/fn107/hollowpoint
+	current_mag = /obj/item/ammo_magazine/rifle/fn107/hollowpoint
+
+/obj/item/weapon/gun/rifle/fn107/marksman
+	starting_attachment_types = list(/obj/item/attachable/stock/fn107, /obj/item/attachable/scope/mini)

@@ -29,5 +29,11 @@
 			hud_icon_state = "scout"
 		if(JOB_FAAMI_CO)
 			hud_icon_state = "co"
+		if(JOB_FAAMI_SNIPER)
+			hud_icon_state = "sniper"
+		if(JOB_FAAMI_ELITE)
+			hud_icon_state = "elite"
+		if(JOB_FAAMI_ELITE_SL)
+			hud_icon_state = "elite_sl"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "faami_[hud_icon_state]")

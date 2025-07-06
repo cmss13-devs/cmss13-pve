@@ -34,3 +34,31 @@
 	name = "Soldat Sergeant"
 	prefix = "Soldat"
 	ranking = 4
+
+/datum/paygrade/faami/elite
+	paygrade = PAY_SHORT_FE1
+	name = "Commando"
+	prefix = "Commando"
+	ranking = 5
+	pay_multiplier = 1.4
+
+/datum/paygrade/faami/elite/sl
+	paygrade = PAY_SHORT_FE2
+	name = "Commando Lead"
+	prefix = "Commando Lead"
+	ranking = 6
+	pay_multiplier = 1.4
+
+/datum/paygrade/faami/lt
+	paygrade = PAY_SHORT_FO2
+	name = "Adjundant"
+	prefix = "Adjundant"
+	ranking = 7
+	pay_multiplier = 1.5
+
+/datum/paygrade/faami/co
+	paygrade = PAY_SHORT_FO4
+	name = "Major"
+	prefix = "Major"
+	ranking = 8
+	pay_multiplier = 1.8
