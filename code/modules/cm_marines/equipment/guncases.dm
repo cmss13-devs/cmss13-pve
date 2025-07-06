@@ -95,7 +95,7 @@
 
 /obj/item/storage/box/guncase/m41aMK1/carbine
 	name = "\improper XM43 pulse carbine case"
-	desc = "Contains an unloaded XM43 pulse carbine and three 99 round clips."
+	desc = "Contains an unloaded XM43 pulse carbine and three standard M41A magazines."
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/rifle/m41aMK1/carbine, /obj/item/ammo_magazine/rifle/m41aMK1)
 
