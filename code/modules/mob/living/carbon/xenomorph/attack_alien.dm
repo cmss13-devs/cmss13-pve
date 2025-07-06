@@ -12,10 +12,6 @@
 	if(attacking_xeno.fortify || HAS_TRAIT(attacking_xeno, TRAIT_ABILITY_BURROWED))
 		return XENO_NO_DELAY_ACTION
 
-	if(HAS_TRAIT(src, TRAIT_HAULED))
-		to_chat(attacking_xeno, SPAN_WARNING("[src] is being hauled, we cannot do anything to them."))
-		return
-
 	var/intent = attacking_xeno.a_intent
 
 	if(attacking_xeno.behavior_delegate)
