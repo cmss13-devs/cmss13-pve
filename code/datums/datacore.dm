@@ -46,8 +46,9 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 		)
 		departments += marines_by_squad
 		var/list/manifest_out = list()
+		var/datum/squad/marine/main_ship_platoon = MAIN_SHIP_PLATOON
 		for(var/datum/data/record/record_entry in GLOB.data_core.general)
-			if(record_entry.fields["mob_faction"] != FACTION_MARINE) //we process only USCM humans
+			if(record_entry.fields["mob_faction"] != main_ship_platoon.faction) //we process only humans of the same faction as the ship forces
 				continue
 			var/name = record_entry.fields["name"]
 			var/rank = record_entry.fields["rank"]
@@ -99,8 +100,9 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	var/dept_flags = NO_FLAGS //Is there anybody in the department?.
 	var/list/squad_sublists = GLOB.ROLES_SQUAD_ALL.Copy() //Are there any marines in the squad?
 
+	var/datum/squad/marine/main_ship_platoon = MAIN_SHIP_PLATOON
 	for(var/datum/data/record/record_entry in GLOB.data_core.general)
-		if(record_entry.fields["mob_faction"] != FACTION_MARINE) //we process only USCM humans
+		if(record_entry.fields["mob_faction"] != main_ship_platoon.faction) //we process only humans of the same faction as the ship forces
 			continue
 
 		var/name = record_entry.fields["name"]
@@ -168,7 +170,7 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 				dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[auxil[real_rank][name]]</td><td>[isactive[name]]</td></tr>"
 				even = !even
 	if(dept_flags & FLAG_SHOW_MARINES)
-		dat += "<tr><th colspan=3>Marines</th></tr>"
+		dat += "<tr><th colspan=3>Combat Forces</th></tr>"
 		for(var/squad_name in GLOB.ROLES_SQUAD_ALL)
 			if(!squad_sublists[squad_name])
 				continue
@@ -269,8 +271,8 @@ GLOBAL_DATUM_INIT(data_core, /datum/datacore, new)
 	record_general.fields["id"] = id
 	record_general.fields["name"] = target.real_name
 	record_general.name = target.real_name
-	record_general.fields["real_rank"] = target.job
-	record_general.fields["rank"] = assignment
+	record_general.fields["real_rank"] = assignment
+	record_general.fields["rank"] = target.title
 	record_general.fields["squad"] = target.assigned_squad ? target.assigned_squad.name : null
 	record_general.fields["age"] = target.age
 	record_general.fields["p_stat"] = "Active"
