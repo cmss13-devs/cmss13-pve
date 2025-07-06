@@ -69,7 +69,7 @@
 	path = /datum/equipment_preset/upp/rifleman/eva_rocket
 
 /datum/human_ai_equipment_preset/upp_eva/grenade_eva
-	name = "EVA UPP Squad Grenadier"
+	name = "EVA UPP Squad Grenadier (M92 HEFA)"
 	desc = "Has a sidearm and a M92 grenade launcher loaded with 30mm HEFA."
 	path = /datum/equipment_preset/upp/rifleman/grenade_eva
 

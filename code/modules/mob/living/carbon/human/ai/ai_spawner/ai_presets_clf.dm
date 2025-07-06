@@ -45,16 +45,16 @@
 //TWE Rebels in EVA
 /datum/human_ai_equipment_preset/eva_clf/soldier_eva
 	name = "UA Rebel, Soldier (Rifle, EVA)"
-	desc = "Armed with either a MAR variant rifle and very rarely an F90 or M16 rifle."
+	desc = "Armed with either a MAR variant rifle or F90 rifle, or sometimes a Viper SMG with AP rounds."
 	path = /datum/equipment_preset/rebel/soldier/eva
 
 /datum/human_ai_equipment_preset/eva_clf/machine_gun_eva
 	name = "UA Rebel, Soldier (Machine Gun, EVA)"
-	desc = "Armed with either a MAR-50 LMG or AG80."
+	desc = "Armed with either a MAR-50 LMG , AR10 or M16 rifle."
 	path = /datum/equipment_preset/rebel/soldier/eva/machine_gun
 
 /datum/human_ai_equipment_preset/eva_clf/grenade
-	name = "UA Rebel, Soldier (IED Launcher, EVA)"
+	name = "UA Rebel, Grenadier (M92 HE IED, EVA)"
 	desc = "Will shoot improvised HE grenades wih a M92 grenade launcher. Has a two second delay."
 	path = /datum/equipment_preset/rebel/soldier/eva/grenade
 

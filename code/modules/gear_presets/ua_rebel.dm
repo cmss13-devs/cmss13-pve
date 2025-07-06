@@ -424,12 +424,10 @@
 	if(prob(70))
 		add_rebel_twe_rifle(new_human)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m16, WEAR_J_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BACK)
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/ap, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39/ap, WEAR_IN_BELT)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -476,18 +474,26 @@
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	//limbs
 	add_rebel_twe_shoes(new_human)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg, WEAR_J_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/extended, WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ag80, WEAR_J_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BELT)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ag80, WEAR_IN_BACK)
+	var/random_gun = rand(1,3)
+	switch(random_gun)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m16, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m16, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ar10, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ar10, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
@@ -496,7 +502,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/rebel/soldier/eva/grenade
-	name = "TWE Rebel, Soldier (Grenade Man, EVA)"
+	name = "TWE Rebel, Grenadier (M92 HE IED, EVA)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"

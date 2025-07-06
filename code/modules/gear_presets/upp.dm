@@ -284,7 +284,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/rifleman/eva_sniper
-	name = "UPP Squad Rifleman (Equipped Sniper, EVA)"
+	name = "UPP Squad Sniper (Equipped, Sniper, EVA)"
 
 /datum/equipment_preset/upp/rifleman/eva_sniper/load_gear(mob/living/carbon/human/new_human)
 
