@@ -198,7 +198,7 @@
 	overdose = REAGENTS_OVERDOSE/2
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL/2
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_SEDATIVE = 6, PROPERTY_TOXIC = 1)
+	properties = list(PROPERTY_SEDATIVE = 6)
 
 /datum/reagent/toxin/potassium_chloride
 	name = "Potassium Chloride"
