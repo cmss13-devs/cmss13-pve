@@ -32,7 +32,7 @@
 			if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS) && !(user.a_intent == INTENT_HELP))
 				user.visible_message(SPAN_NOTICE("[user] starts cutting [src]."),
 				SPAN_NOTICE("You start cutting [src]."))
-				playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
+				playsound(src.loc, 'sound/items/Wirecutter.ogg', 25, 1)
 				if(do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					user.visible_message(SPAN_NOTICE("[user] cuts [src]."),
 					SPAN_NOTICE("You cut [src]."))
