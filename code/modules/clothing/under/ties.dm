@@ -1458,6 +1458,16 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/small/space
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/space
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/space/fill_preset_inventory()
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/nutriment(src)
+
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/m40

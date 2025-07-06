@@ -1,5 +1,5 @@
 /datum/human_ai_equipment_preset/eva_clf
-	faction = "Insurrectionists (EVA)"
+	faction = "UA Rebel EVA"
 
 /datum/human_ai_equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
@@ -45,29 +45,38 @@
 //TWE Rebels in EVA
 /datum/human_ai_equipment_preset/eva_clf/soldier_eva
 	name = "UA Rebel, Soldier (Rifle, EVA)"
-	desc = "Armed with either a Bizon SMG, MAR variant rifle and very rarely an F90 rifle."
-	path = /datum/equipment_preset/rebel/soldier_eva
+	desc = "Armed with either a MAR variant rifle and very rarely an F90 or M16 rifle."
+	path = /datum/equipment_preset/rebel/soldier/eva
+
+/datum/human_ai_equipment_preset/eva_clf/machine_gun_eva
+	name = "UA Rebel, Soldier (Machine Gun, EVA)"
+	desc = "Armed with either a MAR-50 LMG or AG80."
+	path = /datum/equipment_preset/rebel/soldier/eva/machine_gun
+
+/datum/human_ai_equipment_preset/eva_clf/grenade
+	name = "UA Rebel, Soldier (IED Launcher, EVA)"
+	desc = "Will shoot improvised HE grenades wih a M92 grenade launcher. Has a two second delay."
+	path = /datum/equipment_preset/rebel/soldier/eva/grenade
 
 /datum/human_ai_equipment_preset/eva_clf/shotgunner_eva
 	name = "UA Rebel, Soldier (Shotgunner, EVA)"
 	desc = "Armed with an HG-37 shotgun."
-	path = /datum/equipment_preset/rebel/soldier/shotgun_eva
-
+	path = /datum/equipment_preset/rebel/soldier/shotgun/eva
 
 /datum/human_ai_equipment_preset/eva_clf/flamer_eva
 	name = "UA Rebel, Soldier (Incinerator, EVA)"
 	desc = "Armed with a M240A1 incinerator unit."
-	path = /datum/equipment_preset/rebel/soldier/flamer_eva
+	path = /datum/equipment_preset/rebel/soldier/flamer/eva
 
 /datum/human_ai_equipment_preset/eva_clf/sniper_eva
 	name = "UA Rebel, Sniper (SVD, Eva)"
 	desc = "Armed with a Non-AP Type 88 SVD Marksman rifle."
-	path = /datum/equipment_preset/rebel/soldier/svd_eva
+	path = /datum/equipment_preset/rebel/soldier/sniper/eva
 
 /datum/human_ai_equipment_preset/eva_clf/bolt_eva
 	name = "UA Rebel, Sniper (Bolt, EVA)"
-	desc = "Armed with either a bolt-action rifle."
-	path = /datum/equipment_preset/rebel/soldier/bolt_eva
+	desc = "Armed with a bolt-action rifle."
+	path = /datum/equipment_preset/rebel/soldier/bolt/eva
 
 //UA Rebels
 

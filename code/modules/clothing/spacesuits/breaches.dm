@@ -9,8 +9,8 @@
 #define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.1
 
 /datum/spacesuit_configuration
-	var/breach_probabability_scale = 13 //Log scale based on damage after armour is used to prob if a breach should happen
-	var/breach_magnitude_scale = 0.08 //Size of breach after above
+	var/breach_probabability_scale = 13 //Log scale based on damage after armour reduced it is used to prob if a breach should happen
+	var/breach_magnitude_scale = 0.07 //Size of breach after above
 	var/breach_prob_of_new_vs_widen = 30 //prob of making a new breach over widening an existing one
 	var/oxygen_usage_multiplier = 1
 	var/movement_delay_while_drifting = 3

@@ -197,6 +197,27 @@
 
 	update_icon()
 
+/obj/item/explosive/grenade/custom/large/ied_he
+	name = "improvised high explosive device"
+	desc = "An improvised chemical explosive grenade. Designed to kill through overpressure."
+	assembly_stage = ASSEMBLY_LOCKED
+	has_blast_wave_dampener = FALSE
+
+/obj/item/explosive/grenade/custom/large/ied_he/Initialize()
+	. = ..()
+	var/obj/item/reagent_container/glass/beaker/large/B1 = new(src)
+	var/obj/item/reagent_container/glass/beaker/large/B2 = new(src)
+
+	B1.reagents.add_reagent("potassium", 80)
+	B2.reagents.add_reagent("water", 80)
+
+	detonator = new/obj/item/device/assembly_holder/timer_igniter(src, 2) //~4 second timer
+
+	containers += B1
+	containers += B2
+
+	update_icon()
+
 
 /obj/item/explosive/grenade/custom/ied_incendiary
 	name = "improvised explosive device (incendiary)"
