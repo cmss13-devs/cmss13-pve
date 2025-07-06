@@ -70,7 +70,7 @@
 
 /obj/item/clothing/suit/armor/vest/pilot
 	name = "\improper M70 flak jacket"
-	desc = "Venlar flak jacket worn by combat support personnel such as air or armor crew."
+	desc = "Venlar flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Despite the name it's actually better at stopping ballistics..."
 	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
@@ -81,10 +81,10 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
 	armor_bio = CLOTHING_ARMOR_LOW
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
