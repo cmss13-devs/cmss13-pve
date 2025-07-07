@@ -269,6 +269,14 @@
 
 /atom/movable/clone/bullet_act(obj/projectile/P)
 	return src.mstr.bullet_act(P)
+
+/atom/movable/clone/onShuttleMove(turf/newT, turf/oldT, list/movement_force, move_dir, obj/docking_port/stationary/old_dock, obj/docking_port/mobile/moving_dock)
+	return TRUE
+
+/atom/movable/clone/Destroy(force)
+	if(!force)
+		return QDEL_HINT_LETMELIVE
+	. = ..()
 /////////////////////
 
 /atom/movable/proc/create_clone_movable(shift_x, shift_y, shift_z)
