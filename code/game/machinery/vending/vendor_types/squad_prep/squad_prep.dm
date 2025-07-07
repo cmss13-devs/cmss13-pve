@@ -503,7 +503,7 @@
 		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
 		list("Construction Pouch", floor(scale * 2), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", floor(scale * 2), /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
-		list("Tools Pouch", floor(scale * 2), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", floor(scale * 1), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", floor(scale * 2), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
@@ -918,17 +918,17 @@
 		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
-		list("2155 Pattern Entrenching Tool", round(scale * 2), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
-		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver/tactical, VENDOR_ITEM_REGULAR),
-		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters/tactical, VENDOR_ITEM_REGULAR),
-		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
-		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("2155 Pattern Entrenching Tool", round(scale * 1), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
+		list("Screwdriver", round(scale * 1), /obj/item/tool/screwdriver/tactical, VENDOR_ITEM_REGULAR),
+		list("Wirecutters", round(scale * 1), /obj/item/tool/wirecutters/tactical, VENDOR_ITEM_REGULAR),
+		list("Crowbar", round(scale * 1), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
+		list("Wrench", round(scale * 1), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 
 		list("EXPLOSIVES", -1, null, null),
-		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
-		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
+		list("Plastic Explosives", round(scale * 1), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", round(scale * 1), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 10), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
@@ -940,8 +940,7 @@
 		list("L165A1 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp78/rmc/unloaded, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
-		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
-		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Fire Extinguisher (Portable)", round(scale * 2), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
 		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),

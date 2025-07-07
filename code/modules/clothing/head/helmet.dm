@@ -1053,8 +1053,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
 	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_sniper_hat"
-	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
 	name = "\improper Mk16 tactical helmet"

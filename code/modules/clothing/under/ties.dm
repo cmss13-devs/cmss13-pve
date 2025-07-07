@@ -725,7 +725,7 @@
 /obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
 	new /obj/item/tool/screwdriver/tactical(src)
 	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/weldingtool/largetank(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src)

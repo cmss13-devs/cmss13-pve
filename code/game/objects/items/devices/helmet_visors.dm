@@ -118,6 +118,9 @@
 	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
 	icon_state = "hud_sight"
 	action_icon_string = "hud_sight_down"
+	helmet_overlay = "hud_sight_full"
+
+/obj/item/device/helmet_visor/medical/advanced/rmc/alt
 	helmet_overlay = "hud_sight_right"
 
 /obj/item/device/helmet_visor/medical/advanced/upp
@@ -394,6 +397,6 @@
 	name = "HIBVS night-sight visor"
 	desc = "A heavily modified version of the standard HBVS, that offers infrared night-vision capabilities alongside the existent biomonitoring systems."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
-	helmet_overlay = "nvg_sight_right_raider"
+	helmet_overlay = "nvg_sight_rmc"
 	power_use = 0
 	visor_glows = FALSE

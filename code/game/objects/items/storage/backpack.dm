@@ -1145,6 +1145,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "backpack_medium"
 	max_storage_space = 18
 
+/obj/item/storage/backpack/marine/engineerpack/satchel/rmc
+	name = "RMC engineering backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by ingenious Royal Engineers to better fit their requirements."
+	icon_state = "backpack_sapper"
+	item_state = "backpack_sapper"
+	max_storage_space = 18
+	max_fuel = 150
+	worn_accessible = TRUE
+
 /obj/item/storage/backpack/rmc/light
 	name = "lightweight RMC backpack"
 	desc = "A TWE military light-carry RMC combat pack MK3."

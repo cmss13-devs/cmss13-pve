@@ -1354,6 +1354,16 @@
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 
+/obj/item/storage/pouch/tools/tactical/rmc/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/nailgun/compact(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/rmc/folded(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
 /obj/item/storage/pouch/tools/tactical/upp
 	name = "synthetic tools pouch"
 	desc = "Special issue tools pouch for UPP synthetics. Due to the enhanced strength of the synthetic and its inability to feel discomfort, this pouch is designed to maximize internal space with no concern for its wearer's comfort."

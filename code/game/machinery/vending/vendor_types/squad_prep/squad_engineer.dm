@@ -219,24 +219,23 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 /obj/effect/essentials_set/rmcengi
 	spawned_gear_list = list(
 		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
+		/obj/item/storage/pouch/tools/tactical/rmc,
 		/obj/item/defenses/handheld/tesla_coil/stun/rmc,
-		/obj/item/tool/shovel/etool/rmc/folded,
-		/obj/item/storage/toolkit,
-		/obj/item/circuitboard/apc,
-		/obj/item/cell/high,
-		/obj/item/explosive/plastic,
-		/obj/item/stack/cable_coil/random,
+		/obj/item/storage/toolkit/full,
 	)
 
 GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		list("ENGINEERING SET (MANDATORY)", 0, null, null, null),
 		list("Essential Engineering Set", 0, /obj/effect/essentials_set/rmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
-		list("BACK-CARRIED EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("HEAVY-DUTY BREACHING EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Standard Backpack", 0, /obj/item/storage/backpack/rmc/medium, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Engineering Backpack", 0, /obj/item/storage/backpack/marine/engineerpack/satchel/rmc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Standard Backpack", 0, /obj/item/storage/backpack/rmc/medium, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Lightweight Backpack", 0, /obj/item/storage/backpack/rmc/light, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("L70 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
