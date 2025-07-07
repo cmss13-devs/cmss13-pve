@@ -343,16 +343,16 @@
 		/datum/action/xeno_action/onclick/grow_ovipositor,
 		/datum/action/xeno_action/onclick/manage_hive,
 		/datum/action/xeno_action/activable/info_marker/queen,
-		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
-		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
+		/datum/action/xeno_action/onclick/screech/ai, //custom macro, Screech
+		/datum/action/xeno_action/activable/xeno_spit/queen_macro/ai, //third macro
 		/datum/action/xeno_action/onclick/shift_spits,
 		//second macro
 	)
 
 	// Abilities they get when they've successfully aged.
 	var/mobile_aged_abilities = list(
-		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
-		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
+		/datum/action/xeno_action/onclick/screech/ai, //custom macro, Screech
+		/datum/action/xeno_action/activable/xeno_spit/queen_macro/ai, //third macro
 		/datum/action/xeno_action/onclick/shift_spits, //second macro
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
@@ -361,6 +361,8 @@
 	var/queen_age_timer_id = TIMER_ID_NULL
 
 	bubble_icon = "alienroyal"
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
 
 /mob/living/carbon/xenomorph/queen/can_destroy_special()
 	return TRUE
@@ -440,6 +442,14 @@
 
 	AddComponent(/datum/component/footstep, 2 , 35, 11, 4, "alien_footstep_large")
 	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(check_block))
+
+	playsound(src, 'sound/voice/alien_death_unused.ogg', 100, TRUE, 30, falloff = 5)
+	if(!get_turf(src)) //autowiki compat, spawns in nullspace
+		return
+	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(src), 30) - src)
+		var/relative_dir = get_dir(current_mob, src)
+		var/final_dir = dir2text(relative_dir)
+		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
 
 /mob/living/carbon/xenomorph/queen/proc/check_block(mob/queen, turf/new_loc)
 	SIGNAL_HANDLER
@@ -991,3 +1001,23 @@
 	point.color = "#a800a8"
 
 	visible_message("<b>[src]</b> points to [target_atom]", null, null, 5)
+
+/datum/action/xeno_action/onclick/screech/ai
+    default_ai_action = TRUE
+    ai_prob_chance = 70
+    xeno_cooldown = 30 SECONDS
+
+/datum/action/xeno_action/onclick/screech/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+    /// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
+    /// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
+    return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 6)
+
+/datum/action/xeno_action/activable/xeno_spit/queen_macro/ai
+    default_ai_action = TRUE
+    ai_prob_chance = 70
+    xeno_cooldown = 8 SECONDS
+
+/datum/action/xeno_action/activable/xeno_spit/queen_macro/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
+    /// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
+    /// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
+    return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/toxin/queen])

@@ -68,7 +68,8 @@
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	weed_food_states = list("Ravager_1","Ravager_2","Ravager_3")
 	weed_food_states_flipped = list("Ravager_1","Ravager_2","Ravager_3")
-
+	ai_range = 24
+	forced_retarget_time = (3 SECONDS)
 
 // Mutator delegate for base ravager
 /datum/behavior_delegate/ravager_base
