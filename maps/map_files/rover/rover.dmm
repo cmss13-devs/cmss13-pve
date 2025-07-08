@@ -1192,6 +1192,11 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
+"cG" = (
+/obj/effect/landmark/personal_weapon,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/platoonarmory)
 "cH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4891,11 +4896,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Iy" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoonarmory)
@@ -6006,7 +6012,6 @@
 	pixel_x = 4;
 	pixel_y = -3
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 2;
 	pixel_y = 25
@@ -14145,7 +14150,7 @@ wB
 wB
 md
 Iy
-iS
+cG
 Pw
 Pw
 Pw

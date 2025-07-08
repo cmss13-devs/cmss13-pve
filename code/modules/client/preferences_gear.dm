@@ -87,6 +87,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/glasses/sunglasses/big/orange
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/eyewear/bimex_shades_classic
+	display_name = "BiMex Classic Shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/classic
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
@@ -376,6 +381,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
+/datum/gear/headwear/upp
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/headwear/upp/cap
+	display_name = "UPP cap"
+	path = /obj/item/clothing/head/uppcap
+
+/datum/gear/headwear/upp/boonie
+	display_name = "UPP boonie"
+	path = /obj/item/clothing/head/uppcap/boonie
+
+/datum/gear/headwear/upp/ushanka
+	display_name = "UPP ushanka"
+	path = /obj/item/clothing/head/uppcap/ushanka
+
 /datum/gear/headwear/beret_red
 	display_name = "Beret, red"
 	path = /obj/item/clothing/head/beret
@@ -383,6 +403,38 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/beret_black
 	display_name = "Beret, black"
 	path = /obj/item/clothing/head/beret/black
+
+/datum/gear/headwear/uscm/beret_white
+	display_name = "Beret, white"
+	path = /obj/item/clothing/head/beret/cm/white
+
+/datum/gear/headwear/uscm/beret_alpha
+	display_name = "Beret, red flash"
+	path = /obj/item/clothing/head/beret/cm/alpha
+
+/datum/gear/headwear/uscm/beret_bravo
+	display_name = "Beret, yellow flash"
+	path = /obj/item/clothing/head/beret/cm/bravo
+
+/datum/gear/headwear/uscm/beret_charlie
+	display_name = "Beret, purple flash"
+	path = /obj/item/clothing/head/beret/cm/charlie
+
+/datum/gear/headwear/uscm/beret_delta
+	display_name = "Beret, blue flash"
+	path = /obj/item/clothing/head/beret/cm/delta
+
+/datum/gear/headwear/uscm/beret_echo
+	display_name = "Beret, green flash"
+	path = /obj/item/clothing/head/beret/cm/echo
+
+/datum/gear/headwear/uscm/beret_foxtrot
+	display_name = "Beret, brown flash"
+	path = /obj/item/clothing/head/beret/cm/foxtrot
+
+/datum/gear/headwear/uscm/beret_intel
+	display_name = "Beret, black flash"
+	path = /obj/item/clothing/head/beret/cm/intel
 
 /*
 //================================================
@@ -549,6 +601,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	cost = 3
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/clothing/upp_service_jacket
+	display_name = "UPP service jacket"
+	path = /obj/item/clothing/suit/storage/jacket/marine/upp/naval
+	cost = 3
+	allowed_origins = UPP_ORIGINS
+
+
 /datum/gear/clothing/shorts
 	display_name = "USCM PT Shorts"
 	path = /obj/item/clothing/under/shorts/red/uscm
@@ -578,8 +637,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/accessory/paint/heart
 
 /datum/gear/paint/uaflag
-	display_name = "M3 Pattern Flag Paint"
+	display_name = "M3 Pattern UA Flag Paint"
 	path = /obj/item/clothing/accessory/paint/uaflag
+
+/datum/gear/paint/usflag
+	display_name = "M3 Pattern US Flag Paint"
+	path = /obj/item/clothing/accessory/paint/usflag
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -972,8 +1035,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Baker-pattern fighting knife"
 	path = 	/obj/item/weapon/knife/marine/baker
 
+/datum/gear/weapon/chinese
+	display_name = "Type 4 bayonet"
+	path = 	/obj/item/weapon/knife/marine/chinese
+	allowed_origins = UPP_ORIGINS
+
 /datum/gear/weapon/type_80_Bayonet
-	display_name = "Type 80 Bayonet"
+	display_name = "Type 80 bayonet"
 	path = /obj/item/attachable/bayonet/upp/surplus
 	cost = 3
 	allowed_origins = USCM_ORIGINS
@@ -1047,6 +1115,21 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	cost = 4
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/l54
+	display_name = "L54 Pistol"
+	path = /obj/item/storage/box/loadout/L54_loadout
+	cost = 4
+
+/datum/gear/weapon/m9
+	display_name = "M9 Pistol"
+	path = /obj/item/storage/box/loadout/M9_loadout
+	cost = 4
+
+/datum/gear/weapon/vp78
+	display_name = "VP78 Pistol"
+	path = /obj/item/storage/box/loadout/VP78_loadout
+	cost = 4
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
@@ -1449,6 +1532,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
 
+/datum/gear/misc/patch_upp
+	display_name = "UPPAC shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/misc/patch_upp/sof
+	display_name = "Naval Infantry shoulder patch"
+	path = /obj/item/clothing/accessory/patch/upp/naval
+
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
 	path = /obj/item/prop/helmetgarb/family_photo
@@ -1474,3 +1568,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/weapon/swiss_army_knife
 	cost = 4 // Two tools & a knife in one package
 
+/datum/gear/misc/can_opener
+	display_name = "Can opener"
+	path = /obj/item/tool/kitchen/can_opener
+	cost = 1
+
+/datum/gear/misc/can_opener/compact
+	display_name = "Compact can opener"
+	path = /obj/item/tool/kitchen/can_opener/compact
+	cost = 2

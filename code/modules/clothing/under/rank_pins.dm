@@ -447,3 +447,23 @@
 	name = "rank boards"
 	rank_short = "PvI"
 	icon_state = "ranks_pvstofficer"
+
+/obj/item/clothing/accessory/ranks/canc
+	name = "CANC collar tabs"
+	rank_short = null
+	icon_state = "ranks_canc"
+
+/obj/item/clothing/accessory/ranks/canc/e1
+	rank_short = PAY_SHORT_CA1
+
+/obj/item/clothing/accessory/ranks/canc/e2
+	rank_short = PAY_SHORT_CA2
+
+/obj/item/clothing/accessory/ranks/canc/e3
+	rank_short = PAY_SHORT_CA3
+
+/obj/item/clothing/accessory/ranks/canc/e4
+	rank_short = PAY_SHORT_CA4
+
+/obj/item/clothing/accessory/ranks/canc/e5
+	rank_short = PAY_SHORT_CA5

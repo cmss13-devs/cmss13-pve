@@ -14,7 +14,7 @@
 	current_mag = /obj/item/ammo_magazine/minigun
 	w_class = SIZE_HUGE
 	force = 20
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_RECOIL_BUILDUP|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_RECOIL_BUILDUP|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_HEAVY
 	start_semiauto = FALSE
 	start_automatic = TRUE
@@ -48,7 +48,7 @@
 /obj/item/weapon/gun/minigun/upp
 	name = "\improper GSh-7.62 rotary machine gun"
 	desc = "A gas-operated rotary machine gun used by UPP heavies. Its enormous volume of fire and ammunition capacity allows the suppression of large concentrations of enemy forces. Heavy weapons training is required control its recoil."
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_RECOIL_BUILDUP|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_RECOIL_BUILDUP|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	current_mag = /obj/item/ammo_magazine/minigun/upp
 
 /obj/item/weapon/gun/minigun/upp/able_to_fire(mob/living/user)
@@ -77,7 +77,7 @@
 	current_mag = /obj/item/ammo_magazine/m60
 	w_class = SIZE_LARGE
 	force = 25
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_HEAVY
 	attachable_allowed = list(
 		/obj/item/attachable/m60barrel,
@@ -117,7 +117,7 @@
 	empty_sound = 'sound/weapons/gun_empty.ogg'
 
 /obj/item/weapon/gun/m60/clicked(mob/user, list/mods)
-	if(!mods["alt"] || !CAN_PICKUP(user, src))
+	if(!mods[ALT_CLICK] || !CAN_PICKUP(user, src))
 		return ..()
 	else
 		if(!locate(src) in list(user.get_active_hand(), user.get_inactive_hand()))
@@ -230,7 +230,7 @@
 	empty_sound = 'sound/weapons/gun_empty.ogg'
 
 /obj/item/weapon/gun/pkp/clicked(mob/user, list/mods)
-	if(!mods["alt"] || !CAN_PICKUP(user, src))
+	if(!mods[ALT_CLICK] || !CAN_PICKUP(user, src))
 		return ..()
 	else
 		if(!locate(src) in list(user.get_active_hand(), user.get_inactive_hand()))
@@ -313,6 +313,7 @@
 
 /datum/action/item_action/toggle_iff_pkp/action_activate()
 	. = ..()
+
 	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	if(!ishuman(owner))
 		return
@@ -320,9 +321,6 @@
 	if(H.is_mob_incapacitated() || G.get_active_firearm(H, FALSE) != holder_item)
 		return
 
-/datum/action/item_action/toggle_iff_pkp/action_activate()
-	. = ..()
-	var/obj/item/weapon/gun/pkp/iff/G = holder_item
 	G.toggle_lethal_mode(usr)
 	if(G.iff_enabled)
 		action_icon_state = "iff_toggle_on"

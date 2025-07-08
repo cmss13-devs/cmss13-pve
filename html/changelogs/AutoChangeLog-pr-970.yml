@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "High CQC skills will only floor someone trying to heal you if they aren't of the same faction _and_ you're on harm intent"
+  - balance: "As above, this is also something pertaining to balance"

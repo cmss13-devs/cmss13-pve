@@ -141,7 +141,7 @@
 		. += SPAN_INFO("[SPAN_HELPFUL("CTRL + Click")] \the [src] to start re-stocking it with supplies near vendor.")
 
 /obj/structure/machinery/cm_vending/sorted/vehicle_supply/clicked(mob/user, list/mods)
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		initiate_autorestock(user)
@@ -195,7 +195,7 @@
 
 		list("EXPLOSIVES", -1, null, null),
 		list("M15 Fragmentation Grenade", 0, /obj/item/explosive/grenade/high_explosive/m15, VENDOR_ITEM_REGULAR),
-		list("M20 Claymore Anti-Personnel Mine", 0, /obj/item/explosive/mine, VENDOR_ITEM_REGULAR),
+		list("M20A2 Claymore Anti-Personnel Mine", 0, /obj/item/explosive/mine/strong, VENDOR_ITEM_REGULAR),
 		list("M40 HEDP Grenade", 0, /obj/item/explosive/grenade/high_explosive, VENDOR_ITEM_REGULAR),
 		list("M40 HIDP Incendiary Grenade", 0, /obj/item/explosive/grenade/incendiary, VENDOR_ITEM_REGULAR),
 		list("M40 CCDP Chemical Compound Smoke Grenade", 0, /obj/item/explosive/grenade/phosphorus, VENDOR_ITEM_REGULAR),

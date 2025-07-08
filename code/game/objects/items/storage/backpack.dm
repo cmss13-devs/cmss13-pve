@@ -12,11 +12,6 @@
 	max_w_class = SIZE_MEDIUM
 	storage_slots = null
 	max_storage_space = 21
-	cant_hold = list(/obj/item/storage/firstaid, /obj/item/storage/toolkit)
-	can_hold_skill = list(
-		/obj/item/storage/firstaid = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		)
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
 	var/obj/item/card/id/locking_id = null
@@ -545,14 +540,30 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone)
+
 /obj/item/storage/backpack/marine/satchel/rto/Initialize()
 	. = ..()
 
-	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit)
+	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE)
 	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_STOPPED_RINGING, PROC_REF(phone_stopped_ringing))
+
+/datum/action/item_action/rto_pack/use_phone/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
 
 /obj/item/storage/backpack/marine/satchel/rto/proc/phone_picked_up()
 	icon_state = PHONE_OFF_BASE_UNIT_ICON_STATE

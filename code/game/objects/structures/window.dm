@@ -317,7 +317,7 @@
 	deconstruct(FALSE)
 
 /obj/structure/window/clicked(mob/user, list/mods)
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		revrotate(user)
 		return TRUE
 

@@ -1,0 +1,5 @@
+author: "SpartanBobby"
+delete-after: True
+changes:
+  - rscadd: "Added Table-Barricade props. An optical illusion for mappers and GMs to place for setup purposes"
+  - rscadd: "Portable barricades and security barriers to GM defense panel along with table-cades"

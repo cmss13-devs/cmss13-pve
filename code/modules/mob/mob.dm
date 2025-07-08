@@ -418,17 +418,26 @@
 	. = ..()
 	if(.)
 		return
+
 	if(href_list["mach_close"])
 		var/t1 = href_list["mach_close"]
 		unset_interaction()
 		close_browser(src, t1)
+		return TRUE
 
 	if(href_list["flavor_more"])
 		show_browser(usr, "<BODY><TT>[replacetext(flavor_text, "\n", "<BR>")]</TT></BODY>", name, name, width = 500, height = 200)
 		onclose(usr, "[name]")
+		return TRUE
+
 	if(href_list["flavor_change"])
 		update_flavor_text()
-	return
+		return TRUE
+
+	if(href_list["preference"])
+		if(client)
+			client.prefs.process_link(src, href_list)
+		return TRUE
 
 /mob/proc/swap_hand()
 	hand = !hand
@@ -610,6 +619,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 /mob/proc/dizzy_process()
 	is_dizzy = 1
 	while(dizziness > 100)
+		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		if(client)
 			if(buckled || resting)
 				client.pixel_x = 0
@@ -651,6 +661,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	var/jittering_old_y = pixel_y
 	is_jittery = 1
 	while(jitteriness > 100)
+		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		var/amplitude = min(4, jitteriness / 100)
 		pixel_x = jittering_old_x + rand(-amplitude, amplitude)
 		pixel_y = jittering_old_y + rand(-amplitude/3, amplitude/3)
@@ -1001,15 +1012,6 @@ note dizziness decrements automatically in the mob's Life() proc.
 				GLOB.alive_mob_list -= src
 				GLOB.dead_mob_list += src
 	return ..()
-
-/mob/Topic(href, href_list)
-	. = ..()
-	if(.)
-		return
-	if(href_list["preference"])
-		if(client)
-			client.prefs.process_link(src, href_list)
-		return TRUE
 
 /mob/proc/reset_perspective(atom/A)
 	if(!client)

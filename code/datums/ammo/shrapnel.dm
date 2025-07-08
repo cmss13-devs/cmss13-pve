@@ -92,39 +92,29 @@
 	name = "claymore pellet"
 	icon_state = "buckshot"
 	accurate_range_min = 0
-	//targets bomb armor by AMMO_ROCKET. Stupid, but it works.
-	flags_ammo_behavior = AMMO_ROCKET|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
-
-	accuracy = HIT_ACCURACY_TIER_MAX
-	accurate_range = 14
-	max_range = 18
-	damage = 40
-	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
+	accuracy = HIT_ACCURACY_TIER_10 //half & half chance of being hit
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
+	accurate_range = 7
+	max_range = 10
+	damage = 20
+	damage_var_low = PROJECTILE_VARIANCE_TIER_5
 	damage_var_high = PROJECTILE_VARIANCE_TIER_5
-	//justifying the AP as being the sheer density of stuff ig.
-	penetration = ARMOR_PENETRATION_TIER_2
-	shell_speed = AMMO_SPEED_TIER_2
-	shrapnel_chance = 10
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_3
+	shrapnel_chance = 5
 
-/datum/ammo/bullet/shrapnel/claymore/set_bullet_traits()
+//player-given claymore shrapnel
+/datum/ammo/bullet/shrapnel/claymore/strong
+	damage = 35
+	shrapnel_chance = 15
+
+/datum/ammo/bullet/shrapnel/claymore/strong/on_hit_mob(mob/entity, obj/projectile/bullet)
 	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
+	knockback(entity, bullet, 4)
 
-//low lethality claymore shrapnel
-/datum/ammo/bullet/shrapnel/claymore/confetti
-	damage = 10
-	penetration = 0
-	shrapnel_chance = 0
-	flags_ammo_behavior = AMMO_ROCKET|AMMO_STOPPED_BY_COVER
-
-/datum/ammo/bullet/shrapnel/claymore/confetti/on_hit_mob(mob/entity, obj/projectile/bullet)
-	. = ..()
-	slowdown(entity, bullet)
-	pushback(entity, bullet, 4)
-
-/datum/ammo/bullet/shrapnel/claymore/confetti/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+/datum/ammo/bullet/shrapnel/claymore/strong/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))

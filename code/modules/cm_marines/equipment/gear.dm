@@ -294,96 +294,56 @@
 	icon = 'icons/obj/items/food.dmi'
 	trash = /obj/item/trash/UPPtray
 	w_class = SIZE_SMALL
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
 	name = "\improper UPP Prepared Meal (Chow mein)"
 	desc = "Chow mein with imitation shrimp, two slightly overcooked spring rolls, some type of porridge and a small tofu cube."
 	icon_state = "upp_chowmein"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
-
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal2
 	name = "\improper UPP Prepared Meal (Banush)"
 	desc = "Ukrainian style Banush cornmeal stew, dried apricots, and a couple vienna sausages."
 	icon_state = "upp_banush"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal3
 	name = "\improper UPP Prepared Meal (Frankfurter)"
 	desc = "A large, juicy frankfurter with mashed potato, crispy potato pancakes and saurkraut."
 	icon_state = "upp_frankfurter"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal3/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
-
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal4
 	name = "\improper UPP Prepared Meal (Jiaozi)"
 	desc = "Four boiled dumplings, soy-vinegar dipping sauce, pickled red cucumbers and two rye biscuits."
 	icon_state = "upp_jiaozi"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal4/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal5
 	name = "\improper UPP Prepared Meal (Wursts)"
 	desc = "Two scoops of rice, two Weiner wursts, a tortilla with tomato sauce and a small bowl of Mungbean soup fill this tray."
 	icon_state = "upp_wursts"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal5/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
-
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal6
 	name = "\improper UPP Prepared Meal (Luncheon)"
 	desc = "A prepackaged meal for UPP troops with two scoops of slightly dried out rice, a square of some kind of luncheon meat, two carrot sticks, and a 'fruit' bar."
 	icon_state = "upp_luncheon"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal6/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal7
 	name = "\improper UPP Prepared Meal (Shrimp)"
 	desc = "A prepackaged meal for UPP troops that sports a greasy rice patty with bits of fake imitation shrimp and egg flavoring. Smells quite off. On the side there's a slightly soggy spring roll."
 	icon_state = "upp_shrimp"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal7/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
-
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal8
 	name = "\improper UPP Prepared Meal (Cuban)"
 	desc = "A prepackaged meal for UPP troops containing Cuban rice with bland-ish eggs pieces, tomato sauce, potato salad, and a dry biscuit."
 	icon_state = "upp_cuban"
 
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
-
 /obj/item/reagent_container/food/snacks/mre_pack/upp/meal9
 	name = "\improper UPP Prepared Meal (Meatballs)"
 	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
 	icon_state = "upp_meatballs"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-	bitesize = 5
 
 /obj/item/storage/box/pizza
 	name = "food delivery box"
@@ -418,7 +378,7 @@
 
 /obj/item/device/overwatch_camera
 	name = "M5 Camera Gear"
-	desc = "A camera and associated headgear designed to allow marine commanders to see what their troops can see. A more robust version of this equipment is integrated into all standard USCM combat helmets."
+	desc = "A camera and associated headgear designed to allow unit commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard combat helmets in use by UA forces."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "overwatch_gear"
 	item_icons = list(
@@ -431,6 +391,8 @@
 	)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
@@ -441,11 +403,33 @@
 	return ..()
 
 /obj/item/device/overwatch_camera/equipped(mob/living/carbon/human/mob, slot)
-	if(camera)
+	if(mob.has_item_in_ears(src))
 		camera.c_tag = mob.name
+		for(var/type in hud_type)
+			var/datum/mob_hud/MH = GLOB.huds[type]
+			MH.add_hud_to(mob, src)
 	..()
 
 /obj/item/device/overwatch_camera/dropped(mob/user)
 	if(camera)
 		camera.c_tag = "Unknown"
+	if(hud_type)
+		for(var/type in hud_type)
+			var/datum/mob_hud/MH = GLOB.huds[type]
+			MH.remove_hud_from(user, src)
 	..()
+
+/obj/item/device/overwatch_camera/twe
+	name = "OOCUHM Cam-Gear"
+	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
+/obj/item/device/overwatch_camera/pmc
+	name = "Mk3 TOCU headcam"
+	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
+
+/obj/item/device/overwatch_camera/upp
+	name = "1PN77M \"Periskop\" camera unit"
+	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
+	hud_type = list(MOB_HUD_FACTION_UPP)

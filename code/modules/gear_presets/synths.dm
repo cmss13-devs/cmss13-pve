@@ -57,46 +57,18 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/synth/uscm/councillor
-	name = "USCM Synthetic Councillor"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	faction = FACTION_MARINE
-	idtype = /obj/item/card/id/gold
-	assignment = JOB_SYNTH
-	rank = "Synthetic"
-	role_comm_title = "Syn"
+/datum/equipment_preset/synth/uscm/forecon
+	name = "USCM FORECON Synthetic"
+	assignment = JOB_FORECON_SYN
 
-/datum/equipment_preset/synth/uscm/councillor/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/satchel
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/industrial
-
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/councillor(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+/datum/equipment_preset/synth/uscm/forecon/load_gear(mob/living/carbon/human/new_human) //Bishop from Aliens
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/red(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/forecon(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/synth/uscm/wo
-	name = "WO Support Synthetic"
-	flags = EQUIPMENT_PRESET_START_OF_ROUND_WO
-
-/datum/equipment_preset/synth/uscm/wo/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/synth(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/RO(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest/brown_vest(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/tan(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon/synth(new_human), WEAR_L_EAR)
 
 //*****************************************************************************************************/
 
@@ -104,7 +76,7 @@
 	name = "USASF Synthetic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_NAVY
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	idtype = /obj/item/card/id/gold
 	assignment = JOB_NAVY_SYNTH
 	rank = "Synthetic"
@@ -208,8 +180,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/medical/lifesaver/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = MEDICAL_SURVIVOR
@@ -232,8 +203,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/medical/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/latex,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = MEDICAL_SURVIVOR
@@ -253,8 +223,7 @@
 		WEAR_HANDS = /obj/item/clothing/gloves/black,
 		WEAR_R_HAND = /obj/item/device/motiondetector,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = SCIENTIST_SURVIVOR
@@ -270,8 +239,7 @@
 		WEAR_IN_JACKET = /obj/item/explosive/plastic,
 		WEAR_WAIST = /obj/item/device/flashlight/lantern,
 		WEAR_R_HAND = /obj/item/stack/sandbags_empty/half,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/tool/pickaxe/hammer
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = SCIENTIST_SURVIVOR
@@ -318,8 +286,7 @@
 		WEAR_HANDS = /obj/item/clothing/gloves/purple,
 		WEAR_R_HAND = /obj/item/tool/mop,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/galoshes,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/spear
+		WEAR_FEET = /obj/item/clothing/shoes/galoshes
 	)
 
 /datum/equipment_preset/synth/survivor/chef_synth
@@ -350,8 +317,7 @@
 		WEAR_IN_JACKET = /obj/item/device/healthanalyzer,
 		WEAR_WAIST = /obj/item/reagent_container/spray/cleaner,
 		WEAR_R_HAND = /obj/item/storage/fancy/crayons,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/butterfly/switchblade
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 /datum/equipment_preset/synth/survivor/freelancer_synth
@@ -367,8 +333,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/marine,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
 		WEAR_R_HAND = /obj/item/storage/pouch/flare/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/upp,
-		WEAR_L_HAND = /obj/item/storage/large_holster/katana/full
+		WEAR_FEET = /obj/item/clothing/shoes/marine/upp
 	)
 
 /datum/equipment_preset/synth/survivor/surveyor_synth
@@ -385,8 +350,7 @@
 		WEAR_IN_BELT = /obj/item/stack/flag/green,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
 		WEAR_R_HAND = /obj/item/storage/box/lightstick,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 /datum/equipment_preset/synth/survivor/trucker_synth
@@ -397,8 +361,7 @@
 		WEAR_BACK = /obj/item/storage/backpack/satchel/norm,
 		WEAR_IN_BACK = /obj/item/pamphlet/skill/powerloader,
 		WEAR_R_HAND = /obj/item/tool/weldingtool/hugetank,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/baseballbat/metal
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 /datum/equipment_preset/synth/survivor/bartender_synth
@@ -416,8 +379,7 @@
 		WEAR_HANDS = /obj/item/clothing/gloves/marine,
 		WEAR_R_HAND = /obj/item/storage/beer_pack,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/baseballbat
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 /datum/equipment_preset/synth/survivor/atc_synth
@@ -434,8 +396,7 @@
 		WEAR_IN_BELT = /obj/item/stack/flag/red,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran,
 		WEAR_R_HAND = /obj/item/storage/box/lightstick/red,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 /datum/equipment_preset/synth/survivor/detective_synth
@@ -451,8 +412,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/security/MP/full/synth,
 		WEAR_HANDS = /obj/item/clothing/gloves/black,
 		WEAR_R_HAND = /obj/item/device/camera,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = SECURITY_SURVIVOR
@@ -474,8 +434,7 @@
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
 		WEAR_HANDS = /obj/item/clothing/gloves/black,
 		WEAR_R_STORE = /obj/item/storage/pouch/tools/full,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/knife,
-		WEAR_L_HAND = /obj/item/weapon/classic_baton
+		WEAR_FEET = /obj/item/clothing/shoes/marine/knife
 	)
 
 	survivor_variant = SECURITY_SURVIVOR
@@ -497,8 +456,7 @@
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/black,
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
 		WEAR_HANDS = /obj/item/clothing/gloves/marine/veteran/pmc,
-		WEAR_FEET = /obj/item/clothing/shoes/marine/civilian,
-		WEAR_L_HAND = /obj/item/storage/large_holster/machete/full
+		WEAR_FEET = /obj/item/clothing/shoes/marine/civilian
 	)
 
 	survivor_variant = SECURITY_SURVIVOR
@@ -520,8 +478,7 @@
 		WEAR_WAIST = /obj/item/storage/belt/utility/full,
 		WEAR_HANDS = /obj/item/clothing/gloves/botanic_leather,
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
-		WEAR_R_HAND = /obj/item/clipboard,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_R_HAND = /obj/item/clipboard
 	)
 
 	survivor_variant = CORPORATE_SURVIVOR
@@ -544,8 +501,7 @@
 		WEAR_JACKET = /obj/item/clothing/suit/storage/hazardvest/yellow,
 		WEAR_IN_JACKET = /obj/item/device/taperecorder,
 		WEAR_FEET = /obj/item/clothing/shoes/laceup,
-		WEAR_R_HAND = /obj/item/device/camera,
-		WEAR_L_HAND = /obj/item/weapon/twohanded/fireaxe
+		WEAR_R_HAND = /obj/item/device/camera
 	)
 
 	survivor_variant = CORPORATE_SURVIVOR
@@ -666,7 +622,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/glass/reinforced/large_stack(new_human.back), WEAR_IN_R_STORE)
 
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/engi/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
@@ -715,7 +671,7 @@
 /datum/equipment_preset/synth/working_joe/upp/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.change_real_name(new_human, "Dzho Automaton #[rand(100)][rand(100)]")
 
-/datum/equipment_preset/synth/working_joe/load_race(mob/living/carbon/human/new_human)
+/datum/equipment_preset/synth/working_joe/upp/load_race(mob/living/carbon/human/new_human)
 	. = ..()
 	new_human.set_species(joe_type)
 	new_human.h_style = "Bald"
@@ -760,43 +716,6 @@
 	var/obj/item/clothing/head/cultist_hood/hood = new /obj/item/clothing/head/cultist_hood(new_human)
 	hood.flags_item |= NODROP|DELONDROP
 	new_human.equip_to_slot_or_del(hood, WEAR_HEAD)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/synth/survivor/midwife
-	name = "Fun - Xeno Cultist Midwife (Synthetic)"
-	faction = FACTION_XENOMORPH
-
-/datum/equipment_preset/synth/survivor/midwife/load_gear(mob/living/carbon/human/new_human)
-	var/back_item = /obj/item/storage/backpack/marine/satchel/medic
-	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
-		back_item = /obj/item/storage/backpack/marine/medic
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/synthetic/joe(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_suture_and_graft(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/survival/full(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/xenos(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/collectable/xenom(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human.back), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/dutch(new_human), WEAR_L_EAR)
-
-
-/datum/equipment_preset/synth/survivor/midwife/load_name(mob/living/carbon/human/new_human, randomise)
-	var/final_name = "Midwife Joe"
-	if(new_human.client && new_human.client.prefs)
-		final_name = new_human.client.prefs.synthetic_name
-		if(!final_name || final_name == "Undefined") //In case they don't have a name set or no prefs, there's a name.
-			final_name = "Midwife Joe"
-		else
-			final_name = "Midwife [new_human.real_name]"
-	new_human.change_real_name(new_human, final_name)
 
 //*****************************************************************************************************/
 
