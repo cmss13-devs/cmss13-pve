@@ -118,6 +118,61 @@
 		FACTION_TWE_REBEL,
 		FACTION_UA_REBEL,
 	)
+	enter_combat_lines = list(
+		"PLEASE! HELP ME!",
+		"HELP ME!",
+		"IT'S CONTROLLING ME!",
+		"I DON'T WANT THIS!",
+		"PLEASE, NO!",
+		"NO, NO!",
+		"NO-NO-NO-NO!",
+		"I CAN'T CONTROL MYSELF!",
+		"*cry",
+		"PLEASE, STOP IT!",
+		"HELP!",
+		"*cry",
+		"I CAN'T CONTROL MY BODY!",
+	)
+	exit_combat_lines = list(
+		"*cry",
+	)
+	squad_member_death_lines = list(
+		"I DON'T WANT TO DIE!",
+		"I'M SORRY!",
+		"PLEASE, STOP!",
+		"I DON'T WANT THIS!",
+		"NO, PLEASE!",
+		"WE DON'T WANT THIS!",
+		"WE CAN'T CONTROL OURSELVES!",
+		"SPARE ME!",
+	)
+	grenade_thrown_lines = list(
+		"PLEASE! HELP ME!",
+		"HELP ME!",
+		"IT'S CONTROLLING ME!",
+		"I DON'T WANT THIS!",
+		"PLEASE, NO!",
+		"NO, NO!",
+		"NO-NO-NO-NO!",
+		"I CAN'T CONTROL MYSELF!",
+		"*cry",
+		"PLEASE, STOP IT!",
+		"HELP!",
+		"*cry",
+		"I CAN'T CONTROL MY BODY!",
+	)
+
+	reload_lines = list(
+		"STOP IT!",
+		"NO-NO-NO!",
+		"PLEASE!",
+	)
+	reload_internal_mag_lines = list(
+		"STOP IT!",
+		"NO-NO-NO!",
+		"PLEASE!",
+	)
+
 
 /datum/human_ai_faction/contractor
 	faction = FACTION_CONTRACTOR

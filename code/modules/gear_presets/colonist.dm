@@ -6,6 +6,15 @@
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
 
+/datum/equipment_preset/colonist/load_status(mob/living/carbon/human/new_human, client/mob_client)
+	..()
+	if(prob(75))
+		add_survivor_weapon_pistol(new_human)
+	else if(prob(65))
+		add_rebel_ua_rifle(new_human)
+	else
+		add_rebel_ua_shotgun(new_human)
+
 /datum/equipment_preset/colonist/bluecollar
 
 	name = "US Civilian Colonist, Blue-Collar"

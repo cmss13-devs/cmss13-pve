@@ -549,3 +549,19 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
+
+/obj/item/clothing/suit/xenos
+	name = "???"
+	icon = 'icons/mob/humans/onmob/xeno_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/xeno_suits.dmi'
+	)
+	flags_item = NODROP
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_GROIN
+	flags_inv_hide = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
+	item_state = "drone_suit"
+	icon_state = "drone_suit"
+
+	allowed = list(
+		/obj/item/weapon/gun,)
