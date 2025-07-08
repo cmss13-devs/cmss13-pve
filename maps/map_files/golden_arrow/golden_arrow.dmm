@@ -1987,6 +1987,125 @@
 /area/golden_arrow/platoonarmory)
 "aga" = (
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/suppressor{
+	pixel_y = 8
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
+/obj/item/attachable/scope/pve{
+	pixel_x = 3;
+	pixel_y = -5
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonarmory)
 "agb" = (
@@ -7652,9 +7771,9 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/sign/safety/coffee{
-	pixel_x = 13;
-	pixel_y = 29
+/obj/structure/machinery/vending/cola{
+	pixel_y = 22;
+	wrenchable = 0
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
@@ -12521,6 +12640,19 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/closet/crate/secure/explosives,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonarmory)
 "aQf" = (
