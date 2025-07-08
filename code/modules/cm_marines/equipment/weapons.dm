@@ -84,3 +84,40 @@
 		overlays += image(icon, "smartgun")
 	else
 		icon_state = "kit_case_e"
+
+/obj/item/storage/box/personalcase
+	name = "personal weapon case"
+	desc = "A secure case with dactyle lock containing someone's valuable personal weapon."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "personalcase"
+	w_class = SIZE_HUGE
+	storage_slots = 4
+	slowdown = 1
+	can_hold = list()
+	foldable = FALSE
+	var/owner
+	var/locked = TRUE
+
+/obj/item/storage/box/personalcase/update_icon()
+	icon_state = "[initial(icon_state)][locked]"
+
+/obj/item/storage/box/personalcase/attackby(obj/item/W as obj, mob/user)
+	if(!locked)
+		..()
+	else
+		to_chat(user, SPAN_DANGER("[src] is locked!"))
+
+/obj/item/storage/box/personalcase/show_to(mob/user as mob)
+	if(!locked)
+		..()
+	else if(user.real_name == owner)
+		locked = FALSE
+		to_chat(user, SPAN_NOTICE("You unlock your personal weapon case."))
+		..()
+	else
+		to_chat(user, SPAN_DANGER("[src] is locked!"))
+
+/obj/item/storage/box/personalcase/proc/assign_owner(new_owner)
+	owner = new_owner
+	name = "\improper [owner]'s personal weapon case"
+	desc = "A secure case with dactyle lock containing [owner]'s valuable personal weapon."

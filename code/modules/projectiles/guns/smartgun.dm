@@ -11,7 +11,6 @@
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
 
 	fire_sound = "gun_smartgun"
-	fire_rattle = "gun_smartgun_rattle"
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
 
@@ -128,7 +127,7 @@
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
 
 /obj/item/weapon/gun/smartgun/clicked(mob/user, list/mods)
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		if(!locate(src) in list(user.get_active_hand(), user.get_inactive_hand()))

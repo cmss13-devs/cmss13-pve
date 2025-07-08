@@ -498,11 +498,6 @@
 	name = "\improper USCM provost command beret"
 	icon_state = "pvciberet"
 
-/obj/item/clothing/head/beret/marine/mp/tis
-	name = "\improper UAAC-TIS Special Agent Beret"
-	icon_state = "berettis"
-	desc = "A beret with the UAAC-TIS insignia emblazoned on it. A mark of a TIS Special Agent, these berets are one of the only pieces of equipment that the TIS actually manufactures for itself and earning one is one of the rare signs of achievement the Three Eyes allows."
-
 /obj/item/clothing/head/beret/marine/commander
 	name = "marine commanding officer beret"
 	desc = "A beret with the commanding officer's insignia emblazoned on it. Wearer may suffer the heavy weight of responsibility upon their head and shoulders."
@@ -772,9 +767,16 @@
 	desc = "An improvised head wrap made out of a black neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 
-/obj/item/clothing/head/durag/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/clothing/head/durag)
+/obj/item/clothing/head/skullcap
+	name = "skullcap"
+	desc = "A head wrap. Great for keeping the sweat out of your eyes and protecting your hair."
+	icon_state = "skullcap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = NO_SNOW_TYPE
+	flags_inv_hide = HIDETOPHAIR
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
 
 /obj/item/clothing/head/drillhat
 	name = "\improper USCM drill hat"

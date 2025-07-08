@@ -355,3 +355,37 @@
 		/obj/item/reagent_container/food/drinks/cans/food/upp/rice,
 	)
 	return ..()
+
+
+///HUMANITARIAN DAILY RATION
+
+/obj/item/storage/box/mre/hdr
+	name = "\improper UA humanitarian daily ration"
+	desc = "HDR for short. Sometimes given out by armies of UA memberstates on conflicted colonies or during natural disasters. Vegeterian, two entrees, but no beverage powder. Menu is quite limited, too."
+	icon_state = "hdr_mealpack"
+	icon_closed = "hdr_mealpack"
+	icon_opened = "hdr_mealpackopened"
+	item_state = "hdr_mealpack"
+	trash_item = /obj/item/trash/hdr_mre
+	should_have_spread = TRUE
+	should_have_beverage = FALSE
+	should_have_utencil = TRUE
+	should_have_drink = FALSE
+	should_have_cigarettes = FALSE
+	should_have_matches = FALSE
+	should_have_cookie = FALSE
+	entree = /obj/item/mre_food_packet/entree/hdr
+	side = /obj/item/mre_food_packet/entree/hdr/two
+	snack = /obj/item/mre_food_packet/hdr/side
+	dessert = /obj/item/mre_food_packet/hdr/dessert
+
+/obj/item/storage/box/mre/hdr/choose_utencil()
+	new /obj/item/tool/kitchen/utensil/pspoon(src)
+
+/obj/item/storage/box/mre/hdr/choose_spread()
+	var/spread_type = rand(1, 2)
+	switch(spread_type)
+		if(1)
+			new /obj/item/reagent_container/food/drinks/cans/spread/strawberryjam(src)
+		if(2)
+			new /obj/item/reagent_container/food/drinks/cans/spread/sunflowerbutter(src)

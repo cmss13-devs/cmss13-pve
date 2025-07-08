@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Insurgent factions for each of the major factions"
+  - rscadd: "L54 TWE pistol"
+  - rscdel: "CLF as an entity"
+  - code_imp: "Insurgents added to the hAI faction stuff so they have 'voice lines'"

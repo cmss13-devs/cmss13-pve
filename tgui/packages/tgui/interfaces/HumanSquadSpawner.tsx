@@ -25,7 +25,7 @@ export const HumanSquadSpawner = (props) => {
         <Stack fill vertical>
           <Stack fill>
             <Stack.Item grow mr={1}>
-              <Section fill height="100%">
+              <Section fill scrollable>
                 {Object.keys(squads).map((dictKey) => (
                   <Collapsible title={dictKey} key={dictKey} color="good">
                     {squads[dictKey].map((squad) => (

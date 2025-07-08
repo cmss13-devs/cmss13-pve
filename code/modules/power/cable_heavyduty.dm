@@ -26,3 +26,42 @@
 
 /obj/structure/cable/heavyduty/cableColor(colorC)
 	return
+
+/obj/structure/cable/heavyduty/south
+	icon_state = "0-2"
+
+/obj/structure/cable/heavyduty/east
+	icon_state = "0-4"
+
+/obj/structure/cable/heavyduty/west
+	icon_state = "0-8"
+
+/obj/structure/cable/heavyduty/north_south
+	icon_state = "1-2"
+
+/obj/structure/cable/heavyduty/north_east
+	icon_state = "1-4"
+
+/obj/structure/cable/heavyduty/north_west
+	icon_state = "1-8"
+
+/obj/structure/cable/heavyduty/east_south
+	icon_state = "2-4"
+
+/obj/structure/cable/heavyduty/west_south
+	icon_state = "2-8"
+
+/obj/structure/cable/heavyduty/west_east
+	icon_state = "4-8"
+
+/obj/structure/cable/heavyduty/north_east_south
+	icon_state = "1-2-4"
+
+/obj/structure/cable/heavyduty/north_east_west
+	icon_state = "1-4-8"
+
+/obj/structure/cable/heavyduty/north_west_south
+	icon_state = "1-2-8"
+
+/obj/structure/cable/heavyduty/north_south_east_west
+	icon_state = "1-2-4-8"

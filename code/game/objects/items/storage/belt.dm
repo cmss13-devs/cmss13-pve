@@ -1019,9 +1019,8 @@
 		WEAR_L_HAND = "s_marinebelt",
 		WEAR_R_HAND = "s_marinebelt")
 	w_class = SIZE_LARGE
-	storage_slots = 12
+	storage_slots = 14
 	max_w_class = SIZE_MEDIUM
-	max_storage_space = 24
 	can_hold = list(/obj/item/explosive/grenade)
 
 
@@ -1152,7 +1151,7 @@
 /obj/item/storage/belt/gun/attack_hand(mob/user, mods)
 	if(length(holstered_guns) && ishuman(user) && loc == user)
 		var/obj/item/I
-		if(mods && mods["alt"] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
+		if(mods && mods[ALT_CLICK] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
 			var/list/magazines = contents - holstered_guns
 			I = magazines[length(magazines)]
 		else //Otherwise find and draw the last-inserted gun.
@@ -1395,21 +1394,10 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
 
-/obj/item/storage/belt/gun/m4a3/nailgun
-	name = "customized nailgun holster"
-	desc = "Combination of a M276 pistol holster and engineering toolbelt that have been cannibalized into a unique belt that can holster a compact nailgun and two spare nailgun magazines."
-	icon_state = "nailgun_holster"
-	storage_slots = 3
-	can_hold = list(
-		/obj/item/weapon/gun/smg/nailgun/compact,
-		/obj/item/ammo_magazine/smg/nailgun,
-	)
-	has_gamemode_skin = FALSE
-
-/obj/item/storage/belt/gun/m4a3/nailgun/prefilled/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact())
+/obj/item/storage/belt/gun/m4a3/army/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/nailgun(src)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
 
 /obj/item/storage/belt/gun/m4a3/nailgun
 	name = "customized nailgun holster"
@@ -1925,9 +1913,9 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
-	new /obj/item/ammo_magazine/pistol(src)
-	new /obj/item/ammo_magazine/pistol(src)
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 

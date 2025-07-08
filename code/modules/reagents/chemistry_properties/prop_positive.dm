@@ -108,8 +108,6 @@
 /datum/chem_property/positive/hemogenic/process(mob/living/M, potency = 1, delta_time)
 	if(!iscarbon(M))
 		return
-	if(M.nutrition < 200)
-		return
 
 	handle_nutrition_loss(M, potency, delta_time)
 	M.blood_volume = min(M.blood_volume + potency, M.limit_blood)

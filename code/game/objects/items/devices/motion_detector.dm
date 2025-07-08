@@ -57,8 +57,13 @@
 	update_icon()
 
 /obj/item/device/motiondetector/Destroy()
-	. = ..()
+	STOP_PROCESSING(SSobj, src)
+	for(var/to_delete in blip_pool)
+		qdel(blip_pool[to_delete])
+		blip_pool.Remove(to_delete)
+	blip_pool = null
 	range_bounds = null
+	return ..()
 
 /obj/item/device/motiondetector/update_icon()
 	//clear overlays
@@ -109,7 +114,7 @@
 /obj/item/device/motiondetector/clicked(mob/user, list/mods)
 	if (isobserver(user) || isxeno(user)) return
 
-	if (mods["alt"])
+	if (mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		if(!long_range_locked)
@@ -152,14 +157,6 @@
 	icon_state = "[initial(icon_state)]"
 	playsound(loc, 'sound/items/detector_turn_off.ogg', 30, FALSE, 5, 2)
 	STOP_PROCESSING(SSfastobj, src)
-
-/obj/item/device/motiondetector/Destroy()
-	STOP_PROCESSING(SSfastobj, src)
-	for(var/to_delete in blip_pool)
-		qdel(blip_pool[to_delete])
-		blip_pool.Remove(to_delete)
-	blip_pool = null
-	return ..()
 
 /obj/item/device/motiondetector/process(delta_time)
 	if(isturf(loc))

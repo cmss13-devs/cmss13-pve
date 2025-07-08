@@ -22,6 +22,7 @@
 	var/has_arm_sound = TRUE
 	var/underslug_launchable = FALSE
 	var/hand_throwable = TRUE
+	var/caliber = "non-standard"
 	harmful = TRUE //Is it harmful? Are they banned for synths?
 	antigrief_protection = TRUE //Should it be checked by antigrief?
 	ground_offset_x = 7

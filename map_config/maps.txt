@@ -83,11 +83,16 @@ endmap
 map canyon_32b
 endmap
 
-map bosenmori_basho
+map taipei_station
 endmap
 
+map bosenmori_basho
+endmap
 map calliope_highway
 endmap
 
 map calliope_desert_bus
+endmap
+
+map oread_garrison
 endmap

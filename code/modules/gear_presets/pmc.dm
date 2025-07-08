@@ -49,7 +49,7 @@
 
 
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/pmc_standard
+/datum/equipment_preset/pmc/standard
 	name = "Weyland-Yutani PMC (Standard)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_STANDARD
@@ -57,7 +57,7 @@
 	paygrades = list(PAY_SHORT_PMC_OP = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc
 
-/datum/equipment_preset/pmc/pmc_standard/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/standard/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -111,7 +111,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_L_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/pmc_medic
+/datum/equipment_preset/pmc/medic
 	name = "Weyland-Yutani PMC (Corporate Medic)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_MEDIC
@@ -119,7 +119,7 @@
 	paygrades = list(PAY_SHORT_PMC_MS = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc/medic
 
-/datum/equipment_preset/pmc/pmc_medic/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/medic/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
@@ -173,7 +173,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/pmc_leader
+/datum/equipment_preset/pmc/leader
 	name = "Weyland-Yutani PMC (Leader)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
@@ -183,11 +183,11 @@
 	role_comm_title = "SL"
 	skills = /datum/skills/pmc/SL
 
-/datum/equipment_preset/pmc/pmc_leader/New()
+/datum/equipment_preset/pmc/leader/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_WY_PMC) + list(ACCESS_WY_LEADERSHIP, ACCESS_WY_PMC_TL)
 
-/datum/equipment_preset/pmc/pmc_leader/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/leader/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive, WEAR_IN_BACK)
@@ -243,7 +243,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/pmc_gunner
+/datum/equipment_preset/pmc/gunner
 	name = "Weyland-Yutani PMC (Gunner)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
@@ -253,7 +253,7 @@
 	role_comm_title = "SG"
 	skills = /datum/skills/pmc/smartgunner
 
-/datum/equipment_preset/pmc/pmc_gunner/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/gunner/load_gear(mob/living/carbon/human/new_human)
 	//TODO: add backpacks and satchels
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	//face
@@ -292,7 +292,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/pmc/pmc_sniper
+/datum/equipment_preset/pmc/sniper
 	name = "Weyland-Yutani PMC (Sniper)"
 	flags = EQUIPMENT_PRESET_EXTRA
 
@@ -302,7 +302,7 @@
 	role_comm_title = "Spc"
 	skills = /datum/skills/pmc/specialist
 
-/datum/equipment_preset/pmc/pmc_sniper/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/sniper/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
@@ -347,7 +347,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_sniper, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 //*****************************************************************************************************/
-/datum/equipment_preset/pmc/pmc_crewman
+/datum/equipment_preset/pmc/crewman
 	name = "Weyland-Yutani PMC (Crewman)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_PMC_CREWMAN
@@ -355,7 +355,7 @@
 	paygrades = list(PAY_SHORT_PMC_VS = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pmc/tank_crew
 
-/datum/equipment_preset/pmc/pmc_crewman/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/pmc/crewman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
@@ -584,11 +584,11 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth, WEAR_JACKET)
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun, WEAR_IN_JACKET)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/nailgun, WEAR_IN_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor/pmc, WEAR_IN_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_JACKET)
 
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
+		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/platoon/synth, WEAR_L_EAR)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/experimental_mesons, WEAR_EYES)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
 
@@ -597,14 +597,32 @@
 
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/white, WEAR_BACK)
 		new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/upgraded, WEAR_IN_BACK)
-		new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor, WEAR_IN_BACK)
 
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full/dutch, WEAR_WAIST)
-		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/nailgun/compact, WEAR_J_STORE)
 
+		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/wrench, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_R_STORE)
+
+/datum/equipment_preset/pmc/synth/barebones
+	name = "Weyland-Yutani PMC (Support Synthetic(Minimally Equipped))"
+
+/datum/equipment_preset/pmc/synth/barebones/load_gear(mob/living/carbon/human/new_human)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc, WEAR_BODY)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth, WEAR_JACKET)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/snow, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/experimental_mesons, WEAR_EYES)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife, WEAR_FEET)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smartpack/white, WEAR_BACK)
 		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_L_STORE)
@@ -614,4 +632,3 @@
 		new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/hugetank, WEAR_IN_L_STORE)
-		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_R_STORE)

@@ -166,9 +166,11 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		var/unknown_implants = 0
 		for(var/obj/limb/limb in human_target_mob.limbs)
 			var/internal_bleeding_check = FALSE //do they have internal bleeding in this limb
+			var/arterial_bleeding_check = FALSE //this should be the opposite but fix later
 			for(var/datum/effects/bleeding/internal/ib in limb.bleeding_effects_list)
 				internal_bleeding = TRUE
 				internal_bleeding_check = TRUE
+				arterial_bleeding_check = ib.has_been_bandaged //this is for showing "[Arterial Bleeding!]" in a pink colour in HealthScan.jsx
 				break
 			if(limb.hidden)
 				unknown_implants++
@@ -198,7 +200,8 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				"limb_status" = null,
 				"bleeding" = bleeding_check,
 				"implant" = implant,
-				"internal_bleeding" = internal_bleeding_check
+				"internal_bleeding" = internal_bleeding_check,
+				"arterial_bleeding" = arterial_bleeding_check
 			)
 			//broken-ness and splints
 			var/limb_status = null

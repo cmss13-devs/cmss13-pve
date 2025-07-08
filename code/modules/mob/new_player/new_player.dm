@@ -53,12 +53,16 @@
 
 	else
 		output += "<a href='byond://?src=\ref[src];lobby_choice=manifest'>View the Crew Manifest</A><br><br>"
+/*
+// commented out tutorial due to their lack of relevance/use on pve
 		output += "<a href='byond://?src=\ref[src];lobby_choice=hiveleaders'>View Hive Leaders</A><br><br>"
-		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the USCM!</A></p>"
+*/
+		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join'>Join the round!</A></p>"
+/*
 		output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_xeno'>Join the Hive!</A></p>"
 		if(SSticker.mode.flags_round_type & MODE_PREDATOR)
 			if(SSticker.mode.check_predator_late_join(src,0)) output += "<p><a href='byond://?src=\ref[src];lobby_choice=late_join_pred'>Join the Hunt!</A></p>"
-
+*/
 	output += "<p><a href='byond://?src=\ref[src];lobby_choice=observe'>Observe</A></p>"
 
 	output += "</div>"
@@ -171,6 +175,8 @@
 
 			LateChoices()
 
+/*
+// commented out tutorial due to their lack of relevance on pve
 		if("late_join_xeno")
 			if(SSticker.current_state != GAME_STATE_PLAYING || !SSticker.mode)
 				to_chat(src, SPAN_WARNING("The round is either not ready, or has already finished..."))
@@ -195,6 +201,7 @@
 				else
 					to_chat(src, SPAN_WARNING("You are no longer able to join as predator."))
 					new_player_panel()
+*/
 
 		if("manifest")
 			ViewManifest()
