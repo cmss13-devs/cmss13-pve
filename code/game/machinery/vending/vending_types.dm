@@ -196,7 +196,7 @@
 
 /obj/structure/machinery/vending/generic/alternate
 	name = "vending machine"
-	desc = "A vending machine full of some various bars, chips, and sodas, all refrigerated for your enjoyment. Produced by Col-Agro Industrial. If the wiring goes out, kick the baseplate."
+	desc = "A vending machine full of some various bars, chips, and sodas, all refrigerated for your enjoyment. Produced by Gen-Agro Industrial. If the wiring goes out, kick the baseplate."
 	icon_state = "snackvend"
 	product_slogans = ""
 	product_ads = ""
