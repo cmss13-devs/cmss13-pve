@@ -1,166 +1,189 @@
-"am" = (/turf/closed/wall/almayer/reinforced,/area/space)
-"aJ" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"bm" = (/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = -7},/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = 7},/turf/open/floor/freezerfloor,/area/space)
-"bJ" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"bX" = (/obj/structure/machinery/landinglight/ds1/delaytwo,/turf/open/floor/almayer/plate,/area/space)
-"cV" = (/obj/structure/machinery/telecomms/relay/preset/tower,/turf/open/floor/almayer,/area/space)
-"cW" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"de" = (/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,/turf/open/floor/plating,/area/space)
-"do" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"dq" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/almayer/silverfull,/area/space)
-"dK" = (/turf/open/floor/freezerfloor,/area/space)
-"dR" = (/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
-"em" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"eL" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"fj" = (/turf/closed/wall/almayer/outer,/area/space)
-"fG" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
-"gk" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/almayer/silverfull,/area/space)
-"hD" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"id" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"ir" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
-"jZ" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1; pixel_x = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"lP" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"lW" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{name = "\improper Hypersleep Bay"},/turf/open/floor/freezerfloor,/area/space)
-"lY" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"mB" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"mQ" = (/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"mY" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"oe" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"pa" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"qp" = (/obj/structure/machinery/landinglight/ds1,/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"qB" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"qC" = (/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
-"qW" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"sB" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_x = 1; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"sO" = (/turf/closed/wall/almayer,/area/space)
-"tM" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/item/stack/catwalk{pixel_x = 2; pixel_y = -9},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"tO" = (/obj/effect/decal/warning_stripes{icon_state = "W"; pixel_x = -1; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"ud" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"ui" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"uH" = (/obj/structure/machinery/light{dir = 1},/turf/open/floor/freezerfloor,/area/space)
-"uM" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"vf" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"vr" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
-"vy" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
-"vL" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/crew/alt{dir = 4; pixel_x = -10},/turf/open/floor/freezerfloor,/area/space)
-"xo" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"xE" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"xP" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"zk" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
-"zF" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
-"At" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"Ba" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Cm" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
-"Dx" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
-"Dy" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
-"ES" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"Fy" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Gt" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Ha" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Ie" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Jr" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
-"JK" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/power/apc,/turf/closed/wall/almayer,/area/space)
-"Ka" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Kk" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"Mo" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"MO" = (/turf/open/floor/plating,/area/space)
-"MX" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"Oh" = (/obj/item/stack/catwalk{pixel_x = 4},/obj/item/stack/catwalk{pixel_x = -3; pixel_y = 6},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Ov" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"Ow" = (/turf/open/floor/almayer,/area/space)
-"Pg" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"PR" = (/obj/effect/landmark/observer_start,/turf/open/floor/freezerfloor,/area/space)
-"PZ" = (/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"Qn" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/machinery/light{dir = 8; invisibility = 101},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
-"Qt" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"QD" = (/obj/structure/machinery/door/airlock/almayer/maint{req_one_access = null; req_one_access_txt = "2;30;34"},/turf/open/floor/freezerfloor,/area/space)
-"QX" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"RU" = (/turf/open/space/basic,/area/space)
-"Tg" = (/obj/structure/machinery/cryopod/big,/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
-"Tk" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/cryopod{pixel_x = 6; pixel_y = -2},/turf/open/floor/freezerfloor,/area/space)
-"UH" = (/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
-"UN" = (/obj/structure/machinery/power/reactor{name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/space)
-"Vk" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"Vy" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"VA" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"XM" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"ZN" = (/obj/structure/machinery/cryopod/big/flipped{pixel_y = 0; pixel_x = -17},/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
-"ZP" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"ae" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
+"af" = (/obj/structure/pipes/vents/scrubber{dir = 8},/turf/open/floor/freezerfloor,/area/space)
+"ao" = (/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
+"aA" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"aO" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
+"aR" = (/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
+"aY" = (/obj/structure/bed/chair{can_buckle = 0; dir = 4},/turf/open/floor/freezerfloor,/area/space)
+"br" = (/obj/structure/machinery/vending/generic,/turf/open/floor/freezerfloor,/area/space)
+"cs" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"ct" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/cryopod{pixel_x = 6; pixel_y = -2},/turf/open/floor/freezerfloor,/area/space)
+"cI" = (/turf/open/floor/plating,/area/space)
+"cZ" = (/obj/structure/bed/chair{dir = 8; pixel_y = 3},/turf/open/floor/freezerfloor,/area/space)
+"dx" = (/obj/structure/surface/table/almayer,/obj/structure/vehicle_locker/cabinet/utensils{pixel_x = -7; pixel_y = 27},/obj/structure/vehicle_locker/cabinet/utensils/flip{pixel_x = 8; pixel_y = 27},/turf/open/floor/freezerfloor,/area/space)
+"dA" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
+"dI" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"ee" = (/turf/open/floor/almayer,/area/space)
+"fb" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
+"fg" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
+"gn" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
+"gB" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"hA" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"iG" = (/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"je" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"jg" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"jB" = (/obj/structure/machinery/landinglight/ds1,/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"jM" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"kh" = (/obj/structure/pipes/standard/manifold/hidden/supply{dir = 1},/turf/closed/wall/almayer/outer,/area/space)
+"kG" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"lb" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
+"lk" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"lL" = (/obj/structure/surface/table,/turf/open/floor/freezerfloor,/area/space)
+"mJ" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"nf" = (/obj/structure/bed/chair,/turf/open/floor/freezerfloor,/area/space)
+"nk" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
+"nw" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"nC" = (/obj/structure/machinery/chem_dispenser/canteen,/turf/open/floor/freezerfloor,/area/space)
+"nG" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"nN" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"ow" = (/obj/structure/pipes/standard/manifold/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
+"pv" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
+"pz" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/almayer/silverfull,/area/space)
+"pC" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
+"qa" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
+"qh" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"rb" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
+"ro" = (/obj/structure/machinery/cryopod/big/flipped{pixel_y = 0; pixel_x = -17},/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
+"rK" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"sr" = (/obj/structure/machinery/cm_vending/sorted/marine_food,/turf/open/floor/freezerfloor,/area/space)
+"tS" = (/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = -7},/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = 7},/turf/open/floor/freezerfloor,/area/space)
+"tV" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/turf/open/floor/freezerfloor,/area/space)
+"uf" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer/reinforced,/area/space)
+"uE" = (/obj/structure/machinery/door/airlock/almayer/maint{req_one_access = null; req_one_access_txt = "2;30;34"},/turf/open/floor/freezerfloor,/area/space)
+"uH" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"uN" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"vo" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"vQ" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
+"wA" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"wR" = (/obj/structure/machinery/light{dir = 8; invisibility = 101},/turf/open/floor/freezerfloor,/area/space)
+"xb" = (/turf/closed/wall/almayer/reinforced,/area/space)
+"xr" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
+"yp" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer,/area/space)
+"zJ" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
+"zV" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
+"An" = (/obj/structure/machinery/power/reactor{name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/space)
+"At" = (/obj/structure/machinery/light{dir = 1},/turf/open/floor/freezerfloor,/area/space)
+"Au" = (/obj/item/stack/catwalk{pixel_x = 4},/obj/item/stack/catwalk{pixel_x = -3; pixel_y = 6},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"Bv" = (/turf/closed/wall/almayer,/area/space)
+"BU" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"Ca" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
+"Cy" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"Dk" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/power/apc,/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer,/area/space)
+"DA" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
+"EJ" = (/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
+"EP" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"Fu" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"Fy" = (/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,/turf/open/floor/plating,/area/space)
+"Ge" = (/obj/structure/machinery/light,/obj/structure/cable/heavyduty{icon_state = "4-8"},/turf/open/floor/freezerfloor,/area/space)
+"Gj" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"Gp" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/item/stack/catwalk{pixel_x = 2; pixel_y = -9},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"HW" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"Ih" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/freezerfloor,/area/space)
+"IO" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/machinery/light{dir = 8; invisibility = 101},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
+"KB" = (/turf/closed/wall/almayer/outer,/area/space)
+"KJ" = (/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
+"KK" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/almayer/silverfull,/area/space)
+"ML" = (/obj/structure/machinery/light{unacidable = 1; unslashable = 1},/turf/open/floor/freezerfloor,/area/space)
+"Ns" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"OI" = (/obj/effect/landmark/observer_start,/obj/structure/pipes/standard/simple/hidden/supply,/obj/structure/cable/heavyduty{icon_state = "1-4-8"},/turf/open/floor/freezerfloor,/area/space)
+"OQ" = (/obj/structure/machinery/light{dir = 1},/obj/structure/pipes/standard/simple/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
+"OV" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
+"Qc" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
+"QK" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1; pixel_x = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
+"QU" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
+"Rj" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
+"Rk" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
+"Rt" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
+"RI" = (/turf/open/space/basic,/area/space)
+"SD" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{name = "\improper Hypersleep Bay"},/turf/open/floor/freezerfloor,/area/space)
+"Tu" = (/obj/structure/machinery/telecomms/relay/preset/tower,/turf/open/floor/almayer,/area/space)
+"Tw" = (/obj/structure/machinery/cryopod/big,/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
+"Ut" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
+"Vl" = (/obj/effect/decal/warning_stripes{icon_state = "W"; pixel_x = -1; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
+"Wq" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer/outer,/area/space)
+"WB" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/crew/alt{dir = 4; pixel_x = -10},/turf/open/floor/freezerfloor,/area/space)
+"Xi" = (/obj/structure/pipes/vents/pump{dir = 4},/turf/open/floor/freezerfloor,/area/space)
+"Xo" = (/turf/open/floor/freezerfloor,/area/space)
+"Xs" = (/obj/structure/machinery/landinglight/ds1/delaytwo,/turf/open/floor/almayer/plate,/area/space)
+"XI" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
+"Ya" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
+"Zk" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_x = 1; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
+"ZP" = (/obj/structure/cable/heavyduty{icon_state = "4-8"},/turf/open/floor/freezerfloor,/area/space)
 
 (1,1,1) = {"
-UNUNUNUNUNRURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-UNUNcVUNUNRURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-UNUNUNUNUNRURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-UNUNUNUNUNRURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-UNUNUNUNUNRURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUPgdRUHzkbXdRqpqCbXfGvrqCBaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUxoMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUxEMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUVAMOMOMOMOMOMOMOMOMOMOMOaJRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUZPMOMOMOMOMOMOMOMOMOMOMOcWRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUQXMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUhDMOMOMOMOMOMOMOMOMOMOMOtMRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUMoMOMOMOMOMOMOMOMOMOMOMOOhRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUZPMOMOMOMOMOMOMOMOMOMOMOcWRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUQXMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUQtMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUIeMOMOMOMOMOdeMOMOMOMOMOHaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUXMMOMOMOMOMOMOMOMOMOMOMOuiRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURUQXMOMOMOMOMOMOMOMOMOMOMOdoRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKxEMOMOMOMOMOMOMOMOMOMOMOKaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKMoMOMOMOMOMOMOMOMOMOMOMOeLRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKidMOMOMOMOMOMOMOMOMOMOMOGtRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKxoMOMOMOMOMOMOMOMOMOMOMOdoRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKxEMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKMoMOMOMOMOMOMOMOMOMOMOMOeLRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKXMMOMOMOMOMOMOMOMOMOMOMOuiRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKxoMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKsBPZoeqWmYmBqBqWVkPZPZoeFyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKOwOwOwOwOwOwOwOwOwOwOwOwOwRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKOwOwOwOwOwOwOwOwOwOwOwOwOwRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjfjfjfjfjfjfjfjfjfjfjfjfjfjfjRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKOwOwOwOwOwOwOwOwOwOwOwOwOwRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKOwOwOwOwOwOwOwOwOwOwOwOwOwRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKPgdRUHzkbXdRqpqCbXfGvrqCBaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKxoMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKxEMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKVAMOMOMOMOMOMOMOMOMOMOMOaJRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKZPMOMOMOMOMOMOMOMOMOMOMOcWRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKQXMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKhDMOMOMOMOMOMOMOMOMOMOMOtMRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKMoMOMOMOMOMOMOMOMOMOMOMOOhRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKfjdKZPMOMOMOMOMOMOMOMOMOMOMOcWRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamamlWdKamamamamamamamamamamamlWdKamamdKdKdKdKdKdKfjdKQXMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKdKdKdKdKsOdKdKsObmbmbmsOdKdKsOdKdKdKdKdKdKdKdKdKdKfjdKQtMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKzFMXMXpauHdKdKuHdKdKdKuHdKdKuHbJMXMXDydKdKdKdKdKdKfjdKIeMOMOMOMOMOdeMOMOMOMOMOHaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamTgdKtOdKdKbJMXMXKkMXMXCmdKdKxPdKZNamdKdKdKdKdKdKfjdKXMMOMOMOMOMOMOMOMOMOMOMOuiRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamTgdKtOdKdKxPdKZNfjTgdKtOdKdKxPdKZNamdKdKdKdKdKdKfjdKQXMOMOMOMOMOMOMOMOMOMOMOdoRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamTgdKtOdKdKxPdKZNfjTgdKtOdKdKxPdKZNamdKdKdKdKdKdKfjdKxEMOMOMOMOMOMOMOMOMOMOMOKaRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamQngkjZESESOvdqvyfjJrgkemESESlPgkDxamdKdKdKdKdKdKfjdKMoMOMOMOMOMOMOMOMOMOMOMOeLRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamTgdKtOdKdKxPdKZNfjTgdKtOdKdKxPdKZNamdKdKdKdKdKdKfjdKidMOMOMOMOMOMOMOMOMOMOMOGtRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKdKdKamTgdKtOdKdKxPdKZNfjTgdKtOdKdKxPdKZNamdKdKdKdKdKdKfjdKxoMOMOMOMOMOMOMOMOMOMOMOdoRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKamamamTgdKtOdKdKAtudTkJKvLudirdKdKxPdKZNamamamdKdKdKdKfjdKxEMOMOMOMOMOMOMOMOMOMOMOlYRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKsOdKQDududuMdKdKdKmQdKPRdKmQdKdKdKvfududQDdKsOdKdKdKdKfjdKMoMOMOMOMOMOMOMOMOMOMOMOeLRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKsOdKamamamamamamamamamamamamamamamamamamamdKsOdKdKdKdKfjdKXMMOMOMOMOMOMOMOMOMOMOMOuiRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKsOdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKdKsOdKdKdKdKfjdKxoMOMOMOMOMOMOMOMOMOMOMOVyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURUdKdKdKdKdKdKdKsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOsOdKdKdKdKdKdKsBPZoeqWmYmBqBqWVkPZPZoeFyRURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
-RURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURURU
+AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+AnAnTuAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIFuEJaonkXsEJjBKJXspCqaKJCyRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIvocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIcscIcIcIcIcIcIcIcIcIcIcInwRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIrKcIcIcIcIcIcIcIcIcIcIcIGpRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIjgcIcIcIcIcIcIcIcIcIcIcIAuRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInNcIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRImJcIcIcIcIcIFycIcIcIcIcIqhRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXovocIcIcIcIcIcIcIcIcIcIcIuNRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXogBcIcIcIcIcIcIcIcIcIcIcINsRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXIcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoZkiGGjBURtjelkBUuHiGiGGjhARIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvBvBvBvBvBvBvBvBvXoXoXoXoXoXoXoXoXoXoXoKBXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoAtsrdxnCAtbrBvXoXoXoXoXoXoXoXoXoXoXoKBXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXoFuEJaonkXsEJjBKJXspCqaKJCyRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvwRXonfnfnfXotVBvXoXoXoXoXoXoXoXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoaYlLlLlLcZXoXoXoXoXoXoXoXoXoXoXoXoXoKBXocscIcIcIcIcIcIcIcIcIcIcInwRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoIhIhIhXoXoXoXoXoXoXoXoXoXoXoXoXoXoKBXonGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvwRXonfnfnfXotVBvXoXoXoXoXoXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoaYlLlLlLcZXoBvXoXoXoXoXoXoXoXoXoXoXoKBXorKcIcIcIcIcIcIcIcIcIcIcIGpRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoIhIhIhXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIAuRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoQUBvXoMLXoXoXoMLXoBvQUXoXoXoXoXoXoXoXoXoXoKBXonGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbxbSDXoufxbxbxbxbxbxbxbxbxbufSDXoxbxbXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoypXoXoBvtStStSBvXoXoypXoXoXoXoXoXoXoXoXoXoKBXonNcIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoYaCaCapvOQXoXoAtXoXoXoAtXoXoOQlbCaCaDAXoXoXoXoXoXoKBXomJcIcIcIcIcIFycIcIcIcIcIqhRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXolbCaCaQcCaCagnXoQUvQXoroxbXoXoXoXoXoXoKBXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXovQXoroKBTwXoVlXoQUvQXoroxbXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXovQXoroKBTwXoVlXoQUvQXoroxbXoXoXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIuNRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbIOKKQKowRkfgpzdAkhaOKKaeRkowOVKKRjxbXoXoXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlXoXovQXoroWqTwXoVlXoXovQXoroxbXoXoXoXoXoXoKBXogBcIcIcIcIcIcIcIcIcIcIcINsRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlXoXovQXoroWqTwXoVlXoXovQXoroxbXoXoXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoxbxbxbTwXoVlXoXozVzJctDkWBzJfbXoXovQXoroxbxbxbXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXouEzJzJrbXoXoXoaRXoOIZPGeZPZPXoxrzJzJuEXoBvXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXoxbxbxbxbxbxbxbxbxbufxbxbxbxbxbxbxbxbxbXoBvXoXoXoXoKBXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXoXoXoXoXoXoafRkRkRkowRkRkRkXiXoXoXoXoXoXoBvXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvXoXoXoXoXoXoZkiGGjBURtjelkBUuHiGiGGjhARIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
 "}
