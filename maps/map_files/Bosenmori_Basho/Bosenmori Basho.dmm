@@ -12,6 +12,13 @@
 "aaM" = (
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/north_barrens)
+"aaY" = (
+/obj/structure/sign/safety/fridge{
+	pixel_x = 32;
+	pixel_y = -7
+	},
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "aaZ" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "abandoned_lock_south";
@@ -1763,10 +1770,12 @@
 /turf/open/floor,
 /area/bosenmori/outside/filtration)
 "aTI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/prop/almayer/CICmap/yautja,
-/turf/open/floor/kutjevo/plate,
-/area/bosenmori/mountain/unknown_level_temple)
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -16;
+	pixel_y = 0
+	},
+/turf/open/floor,
+/area/bosenmori/shuttles/drop1)
 "aTM" = (
 /turf/open/floor/shiva/multi_tiles,
 /area/bosenmori/interior_glass/cargo)
@@ -3870,11 +3879,14 @@
 	pixel_x = -9;
 	pixel_y = 10
 	},
-/obj/item/clothing/glasses/thermal,
 /obj/effect/spawner/random/powercell,
 /obj/item/tool/weldingtool/simple{
 	pixel_x = -7;
 	pixel_y = -2
+	},
+/obj/item/clothing/glasses/mgoggles/black{
+	pixel_x = -1;
+	pixel_y = 5
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_regular/engineering)
@@ -4491,7 +4503,9 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_barrens)
 "cto" = (
-/obj/item/stack/sheet/animalhide/xeno/kinghide,
+/obj/item/stack/sheet/animalhide/xeno/kinghide{
+	anchored = 1
+	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
 "ctA" = (
@@ -5328,6 +5342,10 @@
 	light_color = "#dae2ff";
 	dir = 1
 	},
+/obj/structure/sign/safety/fibre_optics{
+	pixel_x = 0;
+	pixel_y = 28
+	},
 /turf/open/floor/shiva/multi_tiles/east,
 /area/bosenmori/interior_regular/telecommunication)
 "cTl" = (
@@ -6100,32 +6118,12 @@
 	},
 /area/bosenmori/outside/east_barrens)
 "doZ" = (
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 5
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 8;
+	pixel_y = -23
 	},
-/obj/effect/decal/grass_overlay/grass1/inner{
-	dir = 9
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -12;
-	pixel_y = 17;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -10;
-	pixel_y = 14;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = 14;
-	pixel_y = 18;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/turf/open/gm/dirt2,
-/area/bosenmori/mountain/pilgrim)
+/turf/open/auto_turf/sand/layer0,
+/area/bosenmori/outside/north_area)
 "dpc" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass/autoname{
@@ -6286,6 +6284,11 @@
 /area/bosenmori/outside/filtration)
 "dsz" = (
 /obj/structure/sign/banners/happybirthdaysteve{
+	pixel_x = 0;
+	pixel_y = 30;
+	layer = 3.51
+	},
+/obj/structure/sign/safety/bathmens{
 	pixel_x = 0;
 	pixel_y = 30
 	},
@@ -6921,6 +6924,11 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
+/obj/item/device/motiondetector/m717/hacked{
+	pixel_x = -4;
+	pixel_y = -3;
+	iff_signal = "TWE"
+	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_heavy/Mai_armory)
 "dKc" = (
@@ -7012,8 +7020,12 @@
 	pixel_y = 13
 	},
 /obj/item/device/t_scanner{
-	pixel_x = 3;
-	pixel_y = -1
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/item/coin/copper{
+	pixel_x = -8;
+	pixel_y = -3
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
@@ -7832,7 +7844,9 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_regular/telecommunication)
 "efZ" = (
-/obj/item/storage/large_holster/ceremonial_sword/full,
+/obj/item/storage/large_holster/ceremonial_sword/full{
+	anchored = 1
+	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
 "egE" = (
@@ -8220,7 +8234,9 @@
 /turf/open/floor/asteroidfloor,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "etw" = (
-/obj/item/clothing/head/helmet/marine/veteran/mercenary,
+/obj/item/clothing/head/helmet/marine/veteran/mercenary{
+	anchored = 1
+	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
 "etT" = (
@@ -8831,11 +8847,10 @@
 	pixel_x = 5;
 	pixel_y = 8
 	},
-/obj/item/storage/pouch/machete{
-	pixel_x = -6;
-	pixel_y = 2
+/obj/item/storage/pouch/sling{
+	pixel_x = -5;
+	pixel_y = 0
 	},
-/obj/item/storage/pouch/sling,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
 "eKn" = (
@@ -10174,9 +10189,15 @@
 /turf/open/floor/asteroidwarning/east,
 /area/bosenmori/outside/filtration)
 "fqd" = (
-/obj/item/ammo_casing/bullet,
-/turf/open/auto_turf/sand_white/layer0,
-/area/bosenmori/mountain/first_level_caves)
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 1
+	},
+/obj/structure/sign/safety/food_storage{
+	pixel_x = 31;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/prison,
+/area/bosenmori/interior_heavy/Mai_nexus)
 "fqm" = (
 /obj/structure/window/framed/solaris/reinforced,
 /turf/open/floor/vault,
@@ -11026,6 +11047,31 @@
 /obj/item/fishing_pole,
 /turf/open/floor/wood,
 /area/bosenmori/outside/west_barrens)
+"fNg" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 8;
+	name = "Post";
+	pixel_x = 16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 4;
+	name = "Post";
+	pixel_x = -16;
+	pixel_y = 16;
+	density = 0
+	},
+/obj/structure/sign/safety/conference_room{
+	pixel_x = 14;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/west{
+	pixel_x = 3;
+	pixel_y = 26
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/bosenmori/outside/west_area)
 "fNi" = (
 /turf/open/floor/filtrationside/west,
 /area/bosenmori/interior_glass/filtration)
@@ -11434,6 +11480,10 @@
 /area/bosenmori/interior_heavy/Mai_engineering)
 "fYg" = (
 /obj/structure/largecrate/random/barrel/true_random,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 8;
+	pixel_y = 23
+	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/outside/south_area)
 "fYo" = (
@@ -12275,7 +12325,6 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/gloves/marine/veteran/pmc/commando,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "gui" = (
@@ -15879,29 +15928,15 @@
 	pixel_x = 9;
 	pixel_y = -2
 	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = 11;
-	pixel_y = 4;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -6;
-	pixel_y = 12;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = 13;
-	pixel_y = 6;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
 /obj/item/reagent_container/food/drinks/flask/detflask{
 	pixel_x = -11;
 	pixel_y = -3
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/coin/copper{
+	pixel_x = 5;
+	pixel_y = 7
+	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
 "inE" = (
@@ -16642,6 +16677,7 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/coin/copper,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "iHQ" = (
@@ -17619,6 +17655,10 @@
 	pixel_y = 16;
 	pixel_x = -5
 	},
+/obj/structure/sign/safety/bathwomens{
+	pixel_x = 15;
+	pixel_y = 30
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/living)
 "jmI" = (
@@ -18058,7 +18098,8 @@
 	},
 /obj/item/weapon/gun/revolver/mateba/special{
 	pixel_x = 0;
-	pixel_y = -7
+	pixel_y = -7;
+	anchored = 1
 	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
@@ -18689,10 +18730,6 @@
 /obj/item/storage/pouch/cassette{
 	pixel_x = 1;
 	pixel_y = 10
-	},
-/obj/item/storage/pouch/tools/tactical{
-	pixel_x = -1;
-	pixel_y = 7
 	},
 /obj/item/storage/pouch/tools{
 	pixel_x = 1;
@@ -19720,6 +19757,13 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/bosenmori/interior_heavy/Mai_cargo)
+"knM" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -16;
+	pixel_y = 0
+	},
+/turf/open/floor/warning/west,
+/area/bosenmori/shuttles/drop1)
 "kob" = (
 /obj/structure/prop/invuln/minecart_tracks{
 	dir = 10
@@ -19880,6 +19924,7 @@
 	pixel_x = -5;
 	pixel_y = -11
 	},
+/obj/item/clothing/head/cmcap/corrections,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
 "ksy" = (
@@ -20789,6 +20834,14 @@
 	id = "science_ladd";
 	height = 2
 	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = 31;
+	pixel_y = 0
+	},
+/obj/structure/sign/safety/chem_lab{
+	pixel_x = 7;
+	pixel_y = -24
+	},
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_regular/research)
 "kRR" = (
@@ -21246,6 +21299,11 @@
 	light_power = 0.25;
 	dir = 1
 	},
+/obj/item/device/motiondetector/m717/hacked/contractor{
+	iff_signal = "PMC";
+	name = "M717 pocket motion detector";
+	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets. This one has been modified with an after-market IFF sensor to filter out WY employees."
+	},
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "ldZ" = (
@@ -21658,41 +21716,9 @@
 	pixel_x = 3;
 	pixel_y = 14
 	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -9;
-	pixel_y = -4;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -7;
-	pixel_y = 12;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -8;
-	pixel_y = 10;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
+/obj/item/coin/copper{
 	pixel_x = -6;
-	pixel_y = 11;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -7;
-	pixel_y = -5;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
-	},
-/obj/item/ammo_casing/bullet{
-	pixel_x = -4;
-	pixel_y = -4;
-	name = "token";
-	desc = "Something to lead you riches. By 0.34% chance at a time!"
+	pixel_y = -3
 	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/shipment)
@@ -22571,16 +22597,6 @@
 /area/bosenmori/shuttles/drop2)
 "lOI" = (
 /obj/structure/surface/rack,
-/obj/item/device/motiondetector/m717/hacked{
-	pixel_x = 5;
-	pixel_y = 8;
-	iff_signal = "TWE"
-	},
-/obj/item/device/motiondetector/m717/hacked{
-	pixel_x = -4;
-	pixel_y = -3;
-	iff_signal = "TWE"
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_cargo)
@@ -23088,6 +23104,10 @@
 /area/bosenmori/interior_glass/cargo)
 "mbq" = (
 /obj/effect/decal/strata_decals/grime/grime1,
+/obj/structure/sign/safety/biohazard{
+	pixel_x = 0;
+	pixel_y = 29
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_heavy/Mai_research)
 "mbE" = (
@@ -24296,14 +24316,18 @@
 	color = "#8B7B5B"
 	},
 /obj/item/clothing/accessory/poncho/brown{
-	pixel_x = -2;
-	pixel_y = 5
-	},
-/obj/item/clothing/accessory/poncho/brown{
-	pixel_x = 2;
-	pixel_y = -2
+	pixel_x = 3;
+	pixel_y = -2;
+	desc = "A poncho meant for wet environments. Supposedly makes you slightly stealthier in such environments.";
+	name = "Poncho"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/accessory/poncho/brown{
+	pixel_x = -3;
+	pixel_y = 4;
+	desc = "A poncho meant for wet environments. Supposedly makes you slightly stealthier in such environments.";
+	name = "Poncho"
+	},
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
 "mHQ" = (
@@ -24731,8 +24755,6 @@
 /area/bosenmori/mountain/clearing)
 "mVI" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/pistol/es4,
-/obj/item/ammo_magazine/pistol/es4,
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_glass/corporate)
 "mVJ" = (
@@ -24938,8 +24960,7 @@
 	color = "#A3A3A3"
 	},
 /obj/item/weapon/gun/lever_action/r4t{
-	pixel_x = 0;
-	pixel_y = -4
+	anchored = 1
 	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
@@ -26423,7 +26444,6 @@
 	color = "#8B7B5B"
 	},
 /obj/item/clothing/accessory/storage/surg_vest,
-/obj/item/storage/surgical_case/regular,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
@@ -29125,13 +29145,15 @@
 	pixel_x = -18
 	},
 /obj/structure/surface/table/reinforced,
-/obj/item/clothing/accessory/health/research_plate,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 /obj/item/device/flashlight/lamp/on{
 	pixel_x = 5;
 	pixel_y = 12
 	},
 /obj/item/weapon/gun/pistol/vp70/unloaded,
+/obj/item/clothing/accessory/health/research_plate{
+	desc = "Some sort of device meant to attach to uniforms although this one doesn't seem to work."
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "pnN" = (
@@ -29158,7 +29180,6 @@
 	name = "Secure Research and Development Crate";
 	color = "#527a7a"
 	},
-/obj/item/weapon/gun/shotgun/combat/marsoc,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "pou" = (
@@ -29268,6 +29289,10 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
+/obj/item/clothing/head/cmcap/corrections{
+	pixel_x = -12;
+	pixel_y = -1
+	},
 /turf/open/floor/prison/west,
 /area/bosenmori/interior_regular/security)
 "pqf" = (
@@ -29368,6 +29393,13 @@
 	},
 /turf/open/floor/plating/prison,
 /area/bosenmori/interior_heavy/Mai_nexus)
+"psG" = (
+/obj/structure/sign/safety/intercom{
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/turf/closed/wall/solaris,
+/area/bosenmori/interior_glass/corporate)
 "psH" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/effect/decal/cleanable/dirt,
@@ -29729,14 +29761,6 @@
 /obj/item/pamphlet/trait/vulture{
 	pixel_x = -5;
 	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/shotgun/incendiarybuck/empty{
-	pixel_x = 1;
-	pixel_y = 13
-	},
-/obj/item/ammo_box/magazine/shotgun/flechette/empty{
-	pixel_x = -2;
-	pixel_y = 2
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
@@ -31040,12 +31064,17 @@
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "qlZ" = (
-/obj/structure/surface/rack{
-	color = "#8B7B5B"
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 4
 	},
-/obj/item/ammo_box/magazine/shotgun/special_buck,
-/turf/open/floor/corsat,
-/area/bosenmori/interior_heavy/Mai_secure_arm)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_glass/tree)
 "qma" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5;
@@ -31223,7 +31252,6 @@
 /turf/open/floor/prison/darkred2/southwest,
 /area/bosenmori/interior_regular/security)
 "qqL" = (
-/obj/structure/largecrate/supply/motiondetectors,
 /obj/structure/machinery/light/small/blue{
 	dir = 4;
 	light_color = "#dae2ff";
@@ -32535,13 +32563,12 @@
 	req_access = null;
 	req_one_access = list(207)
 	},
-/obj/item/weapon/gun/pistol/heavy/co/gold,
-/obj/item/ammo_magazine/pistol/heavy/super,
-/obj/item/ammo_magazine/pistol/heavy,
-/obj/item/ammo_magazine/pistol/heavy,
-/obj/item/ammo_magazine/pistol/heavy/super,
 /obj/item/storage/pouch/magazine/pistol,
 /obj/item/clothing/suit/armor/vest/ballistic,
+/obj/item/weapon/gun/pistol/es4,
+/obj/item/ammo_magazine/pistol/es4,
+/obj/item/ammo_magazine/pistol/es4,
+/obj/item/ammo_magazine/pistol/es4,
 /turf/open/floor/greengrid,
 /area/bosenmori/interior_glass/corporate)
 "qQO" = (
@@ -33152,18 +33179,9 @@
 /turf/open/asphalt/cement_sunbleached,
 /area/bosenmori/shuttles/drop3)
 "riN" = (
-/obj/structure/largecrate{
-	name = "Ceramic plate crate (x6)"
-	},
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/floor_marked,
-/area/bosenmori/interior_heavy/secured_armory)
+/obj/item/stack/cable_coil/random,
+/turf/open/floor/plating/plating_catwalk/shiva,
+/area/bosenmori/outside/cargo)
 "riO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/food/condiment/peppermill{
@@ -33816,9 +33834,9 @@
 	dir = 1;
 	pixel_y = 0
 	},
-/obj/item/ammo_magazine/pistol/vp70/toxin{
-	pixel_x = 12;
-	pixel_y = 16
+/obj/item/ammo_magazine/pistol/vp70/rubber{
+	pixel_x = 10;
+	pixel_y = 5
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/research)
@@ -34593,11 +34611,6 @@
 	pixel_y = 12
 	},
 /obj/item/device/pinpointer,
-/obj/item/device/motiondetector/m717/hacked/contractor{
-	iff_signal = "PMC";
-	name = "M717 pocket motion detector";
-	desc = "This prototype motion detector sacrifices versatility, having only the long-range mode, for size, being so small it can even fit in pockets. This one has been modified with an after-market IFF sensor to filter out WY employees."
-	},
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
 "rWn" = (
@@ -35535,6 +35548,10 @@
 	colony_camera_mapload = 0;
 	network = list("Corporate")
 	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_x = -1;
+	pixel_y = 29
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/nexus)
 "sxh" = (
@@ -35718,6 +35735,10 @@
 	light_color = "#dae2ff";
 	dir = 1;
 	pixel_x = 15
+	},
+/obj/structure/sign/safety/commline_connection{
+	pixel_x = 0;
+	pixel_y = 30
 	},
 /turf/open/floor/shiva/floor3,
 /area/bosenmori/interior_regular/telecommunication)
@@ -37219,7 +37240,9 @@
 /turf/open/floor/prison/darkbrown2/southeast,
 /area/bosenmori/interior_glass/cargo)
 "tsC" = (
-/obj/item/stack/sheet/animalhide/cat,
+/obj/item/stack/sheet/animalhide/cat{
+	anchored = 1
+	},
 /turf/closed/wall/mineral/sandstone/runed,
 /area/bosenmori/mountain/unknown_level_temple)
 "tsP" = (
@@ -38661,6 +38684,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/bosenmori/interior_heavy/Mai_hall)
+"udZ" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 8;
+	pixel_y = 23
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bosenmori/outside/south_area)
 "ueh" = (
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8;
@@ -38772,16 +38802,13 @@
 /turf/open/gm/river/desert/deep/no_overlay,
 /area/bosenmori/outside/river)
 "uhN" = (
-/obj/structure/closet/crate/secure{
-	req_one_access = list(213);
-	name = "Secure Research and Development Crate";
-	color = "#527a7a"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/distribution_pipes{
+	pixel_x = -17;
+	pixel_y = 0
 	},
-/obj/item/weapon/gun/rifle/sharp,
-/obj/item/ammo_magazine/rifle/sharp/track,
-/obj/item/ammo_magazine/rifle/sharp/flechette,
-/turf/open/floor/corsat,
-/area/bosenmori/interior_heavy/Mai_secure_arm)
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_glass/cargo)
 "uhV" = (
 /obj/structure/machinery/door/airlock/almayer/maint/autoname{
 	req_access = null;
@@ -38925,7 +38952,6 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/ammo_box/rounds,
 /obj/item/stack/sheet/wood{
 	amount = 2;
 	pixel_x = 1;
@@ -39231,6 +39257,13 @@
 /obj/effect/decal/strata_decals/grime/grime4,
 /turf/open/floor/redyellowfull,
 /area/bosenmori/interior_regular/kitchen)
+"unJ" = (
+/obj/structure/sign/safety/intercom{
+	pixel_x = -1;
+	pixel_y = 29
+	},
+/turf/open/floor/prison/sterile_white,
+/area/bosenmori/interior_regular/operations)
 "unO" = (
 /obj/item/device/radio/intercom{
 	freerange = 1;
@@ -39240,6 +39273,10 @@
 	pixel_x = -26
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/intercom{
+	pixel_x = -16;
+	pixel_y = 10
+	},
 /turf/open/floor/prison/darkredfull2,
 /area/bosenmori/interior_regular/security)
 "unW" = (
@@ -40781,6 +40818,13 @@
 /obj/structure/closet/secure_closet/freezer/fridge/full,
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
+"vnk" = (
+/obj/structure/sign/safety/fibre_optics{
+	pixel_x = 10;
+	pixel_y = -24
+	},
+/turf/open/floor/shiva/multi_tiles/east,
+/area/bosenmori/interior_regular/telecommunication)
 "vnl" = (
 /obj/structure/flora/jungle/vines/light_3,
 /turf/open/floor/kutjevo/multi_tiles,
@@ -41276,6 +41320,10 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/outside/north_area)
 "vzZ" = (
+/obj/structure/sign/safety/bathunisex{
+	pixel_x = 12;
+	pixel_y = -26
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_glass/fitness)
 "vAd" = (
@@ -42318,6 +42366,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_sewer)
+"way" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 8;
+	pixel_y = -23
+	},
+/turf/open/auto_turf/sand_white/layer0,
+/area/bosenmori/outside/north_area)
 "wbA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/west,
@@ -42502,6 +42557,10 @@
 	phone_color = "red";
 	phone_id = "Marshal Office - B"
 	},
+/obj/item/clothing/head/cmcap/corrections{
+	pixel_x = -8;
+	pixel_y = 9
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/security)
 "whf" = (
@@ -42569,7 +42628,9 @@
 /area/bosenmori/mountain/clearing)
 "wjv" = (
 /obj/structure/closet/crate/trashcart,
-/obj/item/stack/medical/splint/nano/research,
+/obj/item/stack/medical/splint/nano/research{
+	amount = 1
+	},
 /obj/item/oldresearch/Chitin,
 /obj/item/oldresearch/Chitin,
 /obj/item/storage/fancy/vials/empty,
@@ -42890,9 +42951,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/bosenmori/mountain/temple_proper)
 "wvl" = (
-/obj/item/ammo_casing/bullet,
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
-/area/bosenmori/mountain/first_level_caves)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/fridge{
+	pixel_x = 15;
+	pixel_y = -25
+	},
+/turf/open/floor/redyellowfull,
+/area/bosenmori/interior_regular/kitchen)
 "wvr" = (
 /turf/open/gm/dirt2,
 /area/bosenmori/mountain/unknown_level_caves)
@@ -43857,12 +43922,16 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/bosenmori/interior_glass/cargo)
 "wXP" = (
-/obj/structure/surface/rack{
-	color = "#8B7B5B"
+/obj/structure/machinery/light/small/blue{
+	light_color = "#dae2ff";
+	dir = 4
 	},
-/obj/item/device/motiondetector/m717/hacked,
-/turf/open/floor/interior/wood,
-/area/bosenmori/mountain/unknown_level_temple)
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/floor_plate,
+/area/bosenmori/interior_glass/tree)
 "wXZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -44202,8 +44271,8 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bosenmori/shuttles/drop1)
 "xhT" = (
-/obj/item/storage/surgical_tray,
 /obj/structure/surface/table/almayer,
+/obj/item/storage/surgical_tray/empty,
 /obj/item/device/flashlight/pen,
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
@@ -44686,17 +44755,13 @@
 /turf/open/auto_turf/sand/layer1,
 /area/bosenmori/outside/south_area)
 "xwQ" = (
-/obj/item/ammo_magazine/rifle/boltaction/vulture,
-/obj/item/device/vulture_spotter_scope/skillless,
-/obj/item/weapon/gun/boltaction/vulture/skillless,
-/obj/item/device/vulture_spotter_tripod,
-/obj/structure/closet/crate/secure{
-	req_one_access = list(213);
-	name = "Secure Research and Development Crate";
-	color = "#527a7a"
+/obj/structure/fence,
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -16;
+	pixel_y = 0
 	},
-/turf/open/floor/corsat,
-/area/bosenmori/interior_heavy/Mai_secure_arm)
+/turf/open/floor/almayer/plating,
+/area/bosenmori/interior_regular/security_armory)
 "xxs" = (
 /obj/structure/machinery/recharger,
 /obj/structure/surface/table/reinforced{
@@ -45645,6 +45710,10 @@
 	light_color = "#dae2ff";
 	dir = 1
 	},
+/obj/structure/sign/safety/med_life_support{
+	pixel_x = 0;
+	pixel_y = 31
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
 "xVx" = (
@@ -46340,6 +46409,10 @@
 /area/bosenmori/mountain/pilgrim)
 "ylt" = (
 /obj/structure/fence,
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -17;
+	pixel_y = 1
+	},
 /turf/open/floor/almayer/plating,
 /area/bosenmori/interior_regular/security_armory)
 "ylv" = (
@@ -53212,15 +53285,15 @@ sLk
 sLk
 czP
 iXJ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
 oIH
 oIH
 sUH
@@ -53440,15 +53513,15 @@ akD
 oyj
 oyj
 czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
-czZ
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
+ikp
 czZ
 oIH
 oIH
@@ -53673,7 +53746,7 @@ bWn
 ePV
 ykw
 oKG
-riN
+oBy
 czZ
 czZ
 czZ
@@ -60266,7 +60339,7 @@ lLc
 lLc
 bfL
 iRC
-lLc
+psG
 uAQ
 aZo
 lLc
@@ -60517,7 +60590,7 @@ iih
 qkh
 epw
 uUj
-chu
+vnk
 qkh
 qkh
 qkh
@@ -64433,7 +64506,7 @@ gwc
 gwc
 gwc
 kpK
-doZ
+jxA
 gwc
 gwc
 gwc
@@ -68691,20 +68764,20 @@ jZG
 jZG
 jZG
 jZG
-mmI
+fNg
 mmI
 mmI
 lUX
 cLS
-umy
+qlZ
 cLS
 eyg
 urR
-wfj
+wXP
 eyg
 snH
 cLS
-wfj
+wXP
 irt
 lUX
 mlY
@@ -69617,7 +69690,7 @@ jkD
 xDE
 dzL
 smQ
-ylt
+xwQ
 mGH
 ylt
 smQ
@@ -72329,7 +72402,7 @@ qQM
 gmY
 qQM
 dbE
-dbE
+way
 rWs
 rWs
 rWs
@@ -73279,7 +73352,7 @@ xDE
 jkD
 fCv
 rvb
-mlY
+udZ
 eKR
 eKR
 eKR
@@ -73689,7 +73762,7 @@ cQZ
 pqf
 skG
 nbj
-umg
+riN
 ufb
 rLt
 aRk
@@ -74153,7 +74226,7 @@ rLt
 rLt
 rLt
 rLt
-rLt
+doZ
 wXf
 wXf
 osA
@@ -74868,7 +74941,7 @@ adk
 fnq
 kKy
 rZY
-rZY
+wvl
 wdP
 wdP
 wdP
@@ -75760,7 +75833,7 @@ uDt
 qXl
 ykX
 imF
-haF
+unJ
 eAP
 haF
 eAP
@@ -77824,7 +77897,7 @@ kha
 vBC
 kha
 vBC
-vBC
+knM
 vBC
 vBC
 vBC
@@ -78044,7 +78117,7 @@ wzx
 lRK
 lRK
 lRK
-dAg
+aTI
 dAg
 dAg
 lRK
@@ -79159,7 +79232,7 @@ aEp
 vCv
 qwm
 hMN
-ngZ
+uhN
 qGi
 avS
 bCq
@@ -121163,9 +121236,9 @@ dAV
 ist
 dAK
 gPp
-uhN
 poq
-xwQ
+poq
+poq
 gPp
 gPp
 pHD
@@ -121849,7 +121922,7 @@ dAK
 gPp
 gtO
 xLL
-qlZ
+gtO
 gPp
 gPp
 pHD
@@ -126721,7 +126794,7 @@ aDY
 aDY
 rbV
 rbV
-fqd
+aua
 aDY
 aDY
 aDY
@@ -129224,7 +129297,7 @@ rbV
 aDY
 aDY
 aDY
-fqd
+aua
 fyr
 aDY
 aDY
@@ -131270,7 +131343,7 @@ aDY
 aDY
 aDY
 rbV
-wvl
+rbV
 fyr
 aDY
 aDY
@@ -140336,7 +140409,7 @@ dOC
 biv
 biv
 biv
-aTI
+gkI
 dtl
 keU
 dls
@@ -140992,7 +141065,7 @@ tVk
 pss
 eQg
 tVk
-tVk
+fqd
 gYJ
 gZj
 mhI
@@ -141902,7 +141975,7 @@ aav
 uCl
 iZV
 yks
-vkL
+aaY
 gdQ
 vkL
 gVJ
@@ -143344,7 +143417,7 @@ pOT
 aQv
 pOT
 bmA
-wXP
+bmA
 tOm
 rvQ
 rvQ
