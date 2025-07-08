@@ -344,8 +344,21 @@
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/chips
-	name = "chips"
-	desc = "Commander Riker's What-The-Crisps"
+	name = "regular potato chips"
+	desc = "Standard potato chips."
+	icon_state = "chips"
+	trash = /obj/item/trash/chips
+	filling_color = "#E8C31E"
+
+/obj/item/reagent_container/food/snacks/chips/Initialize()
+	. = ..()
+	reagents.add_reagent("potato", 4)
+	reagents.add_reagent("sodiumchloride", 2)
+	bitesize = 4
+
+/obj/item/reagent_container/food/snacks/chips/pepper
+	name = "cracked pepper and salt potato chips"
+	desc = "Potato chips with black pepper for spice and salt for flavor."
 	icon_state = "chips"
 	trash = /obj/item/trash/chips
 	filling_color = "#E8C31E"
