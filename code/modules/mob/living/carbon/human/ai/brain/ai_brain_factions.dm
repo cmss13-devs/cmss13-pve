@@ -1162,7 +1162,6 @@
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
-		FACTION_UACG,
 	)
 	enter_combat_lines = list(
 		"CONTACT!",
