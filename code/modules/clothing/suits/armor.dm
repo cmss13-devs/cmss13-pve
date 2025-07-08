@@ -26,6 +26,10 @@
 
 //armored vest
 
+/obj/item/clothing/suit/armor/patrolcoat
+	name = "Colonial Marshal Patrol Coat"
+	desc = "An improved protective vest for Colonial Marshals "
+
 /obj/item/clothing/suit/armor/vest
 	name = "stab-proof vest"
 	desc = "Generic protective vest found in the hands of various private sector security types designed to protect against stabs."

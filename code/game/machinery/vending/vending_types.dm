@@ -228,6 +228,7 @@
 		/obj/item/reagent_container/food/drinks/cans/dr_gibb = 4,
 		/obj/item/reagent_container/food/drinks/cans/space_mountain_wind = 4,
 		/obj/item/reagent_container/food/drinks/cans/iced_tea = 4,
+	)
 
 /obj/structure/machinery/vending/cigarette
 	name = "cigarette machine" //Template

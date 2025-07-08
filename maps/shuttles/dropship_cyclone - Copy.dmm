@@ -1,0 +1,468 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"ac" = (
+/obj/structure/platform{
+	dir = 4
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"ag" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan22"
+	},
+/area/space)
+"aD" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"ba" = (
+/obj/docking_port/mobile/marine_dropship,
+/obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
+	pixel_y = 13
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"bw" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"cj" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan21"
+	},
+/area/space)
+"cR" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_rightengine"
+	},
+/area/space)
+"cW" = (
+/obj/structure/gun_rack/m20a/unloaded{
+	pixel_y = -11;
+	pixel_x = 1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "stan21"
+	},
+/area/space)
+"dx" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "38"
+	},
+/area/space)
+"ef" = (
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"el" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full"
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"eQ" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"fy" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"gx" = (
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"hV" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "23"
+	},
+/area/space)
+"iO" = (
+/obj/structure/shuttle/part/dropship3/lower_right_wall,
+/turf/open/space/basic,
+/area/space)
+"mI" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"od" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "29"
+	},
+/area/space)
+"pj" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/structure/machinery/iv_drip{
+	anchored = 1;
+	pixel_y = 10
+	},
+/obj/structure/bed/portable_surgery,
+/obj/structure/machinery/cm_vending/sorted/medical/vehicle{
+	pixel_x = -6;
+	pixel_y = 28
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"py" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds2,
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"pz" = (
+/turf/closed/shuttle/ert,
+/area/space)
+"rf" = (
+/turf/closed/shuttle/dropship3{
+	icon_state = "56"
+	},
+/area/space)
+"rB" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "35"
+	},
+/area/space)
+"sA" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan20"
+	},
+/area/space)
+"ta" = (
+/turf/closed/shuttle/dropship3{
+	icon_state = "53"
+	},
+/area/space)
+"tU" = (
+/obj/structure/gun_rack/m20a/unloaded{
+	pixel_y = -11;
+	pixel_x = -1
+	},
+/turf/closed/shuttle/ert{
+	icon_state = "stan21"
+	},
+/area/space)
+"vt" = (
+/obj/structure/bed/chair/dropship/passenger/folded{
+	pixel_y = 8;
+	buckling_y = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"vH" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan_leftengine"
+	},
+/area/space)
+"wk" = (
+/turf/template_noop,
+/area/space)
+"xD" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/machinery/door/airlock/hatch/cockpit,
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"yy" = (
+/turf/closed/shuttle/dropship3{
+	icon_state = "68"
+	},
+/area/space)
+"zG" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan5"
+	},
+/area/space)
+"zH" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan2"
+	},
+/area/space)
+"Ax" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/machinery/iv_drip{
+	anchored = 1;
+	pixel_y = 10
+	},
+/obj/structure/bed/portable_surgery,
+/obj/structure/machinery/cm_vending/sorted/medical/vehicle{
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"Bt" = (
+/obj/structure/shuttle/part/dropship3/transparent/engine_left_exhaust,
+/turf/template_noop,
+/area/space)
+"Cb" = (
+/obj/structure/machinery/door/airlock/dropship_hatch/two,
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"Cf" = (
+/obj/structure/shuttle/part/dropship3/lower_left_wall,
+/turf/open/space/basic,
+/area/space)
+"Da" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "26"
+	},
+/area/space)
+"EP" = (
+/obj/structure/shuttle/part/dropship3/transparent/engine_right_cap,
+/turf/template_noop,
+/area/space)
+"GE" = (
+/obj/structure/shuttle/part/dropship3/transparent/engine_right_exhaust,
+/turf/template_noop,
+/area/space)
+"Hg" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"MU" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"Rj" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan27"
+	},
+/area/space)
+"Sl" = (
+/obj/structure/shuttle/part/dropship3/transparent/engine_left_cap,
+/turf/template_noop,
+/area/space)
+"Uo" = (
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/can_surgery/dark_grey_bottom,
+/area/space)
+"Wv" = (
+/turf/closed/shuttle/dropship3/transparent{
+	icon_state = "32"
+	},
+/area/space)
+"XU" = (
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/space)
+"XY" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan23"
+	},
+/area/space)
+"YL" = (
+/turf/closed/shuttle/ert{
+	icon_state = "stan25"
+	},
+/area/space)
+
+(1,1,1) = {"
+wk
+wk
+sA
+pz
+Cb
+Cb
+pz
+pz
+pz
+pz
+vH
+dx
+Wv
+Da
+Bt
+wk
+"}
+(2,1,1) = {"
+Sl
+dx
+cW
+MU
+ef
+ef
+mI
+eQ
+ef
+pj
+zH
+rB
+od
+hV
+GE
+wk
+"}
+(3,1,1) = {"
+EP
+rB
+cj
+bw
+ef
+ef
+ef
+ef
+ef
+ef
+YL
+zG
+pz
+pz
+Cf
+wk
+"}
+(4,1,1) = {"
+sA
+pz
+ag
+vt
+ef
+Uo
+Uo
+Uo
+ef
+ef
+ab
+gx
+ef
+ef
+py
+wk
+"}
+(5,1,1) = {"
+Rj
+XU
+xD
+ef
+yy
+rf
+rf
+ta
+ba
+ef
+el
+ef
+ef
+ef
+ef
+wk
+"}
+(6,1,1) = {"
+YL
+zG
+XY
+vt
+ef
+eQ
+eQ
+eQ
+ef
+ef
+ac
+aD
+ef
+ef
+ef
+wk
+"}
+(7,1,1) = {"
+Sl
+dx
+cj
+bw
+ef
+ef
+ef
+ef
+ef
+ef
+sA
+zG
+zG
+zG
+iO
+wk
+"}
+(8,1,1) = {"
+EP
+rB
+tU
+fy
+ef
+ef
+Hg
+Uo
+ef
+Ax
+zH
+dx
+Wv
+Da
+Bt
+wk
+"}
+(9,1,1) = {"
+wk
+wk
+YL
+zG
+Cb
+Cb
+zG
+zG
+zG
+zG
+cR
+rB
+od
+hV
+GE
+wk
+"}

@@ -3145,6 +3145,17 @@ Defined in conflicts.dm of the #defines folder.
 			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
 	return handle_pre_break_attachment_description(base_attachment_desc) + "<br>"
 
+//evil M20A4 semi auto GL
+/obj/item/attachable/attached_gun/grenade/harrington
+	name = "M20 overslung grenade launcher"
+	desc = "You shouldn't ever see this detached from the rifle."
+	icon_state = "m20-osgl"
+	attach_icon = "m20-osgl"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = FIRE_DELAY_TIER_6
+
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
 	name = "\improper PN 30mm underslung grenade launcher"

@@ -76,7 +76,13 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/smg/m39/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15, , "side_rail_x" = 25, "side_rail_y" = 19)
+	attachable_offset = list(
+		"muzzle_x" = 30, "muzzle_y" = 20,
+		"rail_x" = 14, "rail_y" = 22,
+		"under_x" = 21, "under_y" = 16,
+		"stock_x" = 24, "stock_y" = 15, ,
+		"side_rail_x" = 25, "side_rail_y" = 19
+	)
 
 /obj/item/weapon/gun/smg/m39/set_gun_config_values()
 	..()
@@ -96,14 +102,33 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
 
 /obj/item/weapon/gun/smg/m39/solidstock
-	starting_attachment_types = list(/obj/item/attachable/stock/smg)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/smg
+	)
 
 /obj/item/weapon/gun/smg/m39/tactical
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/smg/collapsible,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/suppressor
+	)
 
 /obj/item/weapon/gun/smg/m39/tactical/ap
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/smg/collapsible,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip
+	)
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+
+/obj/item/weapon/gun/smg/m39/superduty
+	name = "Viper 9 Superduty"
+	desc = "A deep modification of the original Viper 9 submachine gun for CMB tactical teams. Fitted with the Wraith Manufacturing 9SD-WM integral reflex silencer for indoor use. Seen in CMB hands over the M20A4 for close-confined action."
+	icon_state = "m39super"
+	item_state = "m39super"
+	current_mag = /obj/item/ammo_magazine/smg/m39/subsonic
+
 
 //-------------------------------------------------------
 

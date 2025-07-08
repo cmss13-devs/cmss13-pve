@@ -70,6 +70,10 @@
 	icon_state = "m39_HV_extended"
 	bonus_overlay = "m39_ex"
 
+/obj/item/ammo_magazine/smg/m39/subsonic
+	name = "Viper 9 JHP subsonic magazine"
+	desc = "A 9x19mm "
+
 /obj/item/ammo_magazine/smg/m39/pve
 	name = "\improper Viper 9 duplex magazine (9mm)"
 	desc = "A 9mm submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
