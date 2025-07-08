@@ -481,7 +481,6 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/outside/lambda_entry)
 "ajJ" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
 	},
@@ -910,15 +909,6 @@
 /obj/item/ammo_box/magazine/vp70,
 /turf/open/floor/vault2/west,
 /area/kleschers/int_heavy/eta)
-"auY" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 8;
-	layer = 3.01
-	},
-/turf/open/auto_turf/ice/layer1,
-/area/kleschers/caves/southwest_caves)
 "auZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/yellowcorners/east,
@@ -1112,7 +1102,7 @@
 /area/kleschers/int_reg/engineering)
 "ayJ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed,
+/obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/kleschers/int_reg/virology)
 "ayX" = (
@@ -1921,9 +1911,10 @@
 /turf/open/floor/corsat/officesquares,
 /area/kleschers/int_reg/admin)
 "aTo" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/no_overlay,
-/area/kleschers/outside/east)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/roller/hospital_empty/bigrollerempty2,
+/turf/open/floor/shiva/multi_tiles,
+/area/kleschers/int_heavy/lambda_virology)
 "aTu" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
@@ -2124,19 +2115,8 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/marshals)
 "aXj" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#6b675e"
-	},
-/obj/item/ammo_magazine/pistol/vp70/toxin{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/ammo_magazine/pistol/vp70/toxin{
-	pixel_x = 2;
-	pixel_y = 12
-	},
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/eta)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "aXm" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -3205,8 +3185,9 @@
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_glass/fitness)
 "bAY" = (
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/int_heavy/reactor_excess)
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "bBj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3563,7 +3544,7 @@
 	layer = 3.01
 	},
 /turf/open/auto_turf/strata_grass,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "bKQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/multi_tiles/east,
@@ -3699,7 +3680,7 @@
 "bOw" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "bOA" = (
 /turf/open/floor/shiva,
 /area/kleschers/int_glass/fitness)
@@ -4633,11 +4614,6 @@
 	pixel_x = 4;
 	pixel_y = 8
 	},
-/obj/item/storage/pouch/tools/tactical{
-	layer = 3.01;
-	pixel_x = 1;
-	pixel_y = 4
-	},
 /obj/item/storage/pouch/construction{
 	pixel_x = -5;
 	pixel_y = -5
@@ -4912,14 +4888,15 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
 "cyD" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
+/obj/structure/platform/strata/metal{
+	dir = 4;
+	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "cyJ" = (
 /obj/structure/shuttle/part/dropship2/transparent/nose_center,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -5807,8 +5784,8 @@
 	dir = 4;
 	layer = 3.01
 	},
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "cZa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -8257,14 +8234,13 @@
 /turf/open/floor/shiva/multi_tiles/east,
 /area/kleschers/int_reg/hydroponics)
 "exN" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_y = -11;
-	pixel_x = -10;
-	layer = 5
+/obj/structure/platform/strata{
+	color = "#df9f9f";
+	dir = 4;
+	layer = 3.01
 	},
-/turf/closed/wall/strata_outpost/reinforced,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "eye" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9105,11 +9081,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/central_road)
 "eXg" = (
@@ -9376,10 +9347,6 @@
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_reg/cargo)
-"feE" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/caves/east)
 "feI" = (
 /obj/structure/closet{
 	pixel_x = -8;
@@ -9583,7 +9550,8 @@
 	},
 /obj/item/stack/medical/advanced/bruise_pack/upgraded{
 	pixel_x = 3;
-	pixel_y = 7
+	pixel_y = 7;
+	amount = 1
 	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9592,7 +9560,8 @@
 	},
 /obj/item/stack/medical/advanced/bruise_pack/upgraded{
 	pixel_x = -4;
-	pixel_y = -3
+	pixel_y = -3;
+	amount = 1
 	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
@@ -9933,19 +9902,14 @@
 /turf/open/floor/shiva/red/east,
 /area/kleschers/int_reg/marshals)
 "fqJ" = (
-/obj/structure/closet/crate/secure,
 /obj/structure/sign/poster/clf{
 	pixel_x = -8;
 	pixel_y = 29
 	},
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/ammo_magazine/handful/shotgun/buckshot/incendiary,
-/obj/item/ammo_magazine/shotgun/slugs,
 /obj/structure/extinguisher_cabinet/lifeboat{
 	pixel_y = 26;
 	pixel_x = 8
 	},
-/obj/item/clothing/suit/marine/lamp,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
 "fqM" = (
@@ -10053,20 +10017,20 @@
 "ftc" = (
 /obj/structure/noticeboard{
 	pixel_y = 30;
-	pixel_x = -16;
+	pixel_x = 1;
 	layer = 2.1;
 	name = "wooden rack";
 	desc = "A wooden rack fitted to the wall.";
 	color = "#967e73"
 	},
-/obj/item/weapon/gun/shotgun/type23/unloaded{
-	pixel_x = -26;
-	pixel_y = 27
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
 	light_power = 0.4;
 	dir = 4
+	},
+/obj/item/weapon/gun/shotgun/type23/riot{
+	pixel_x = -25;
+	pixel_y = 27
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
@@ -10311,19 +10275,6 @@
 	},
 /obj/structure/closet/crate/secure/gear,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/m56d_gun,
-/obj/item/ammo_magazine/m56d{
-	pixel_x = -4;
-	pixel_y = -2
-	},
-/obj/item/device/m56d_post{
-	pixel_x = 5;
-	pixel_y = -3
-	},
-/obj/item/ammo_magazine/m56d{
-	pixel_x = -4;
-	pixel_y = -2
-	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
 "fBu" = (
@@ -11180,7 +11131,6 @@
 /turf/open/floor/corsat/bluegrey/north,
 /area/kleschers/int_reg/admin)
 "fXL" = (
-/obj/structure/largecrate/supply/weapons/m56d,
 /obj/structure/machinery/light/double{
 	dir = 4
 	},
@@ -11781,12 +11731,13 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/clinic)
 "gnq" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_power = 0.4;
+	dir = 4
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/outside/northwest)
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "gnv" = (
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/space)
@@ -12305,8 +12256,8 @@
 /area/kleschers/int_reg/hydroponics)
 "gGd" = (
 /obj/structure/closet/crate/secure,
-/obj/item/weapon/gun/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
+/obj/item/clothing/suit/marine/lamp,
+/obj/item/clothing/suit/marine/lamp,
 /obj/item/clothing/suit/marine/lamp,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
@@ -12726,7 +12677,6 @@
 	req_one_access = list(203,206);
 	req_access = null
 	},
-/obj/item/ammo_magazine/shotgun/incendiarybuck,
 /obj/item/clothing/suit/armor/vest/ballistic,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/weapon/gun/shotgun/double/mou53,
@@ -13064,18 +13014,14 @@
 /obj/item/device/flashlight/lamp{
 	pixel_y = 15
 	},
-/obj/item/ammo_box/magazine/misc/mre{
-	pixel_x = -7;
-	pixel_y = 4
-	},
-/obj/item/ammo_box/magazine/misc/mre{
-	pixel_x = -7;
-	pixel_y = -8
-	},
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 8
+	},
+/obj/item/ammo_box/magazine/misc/mre/fsr{
+	pixel_x = -5;
+	pixel_y = 7
 	},
 /turf/open/floor/elevatorshaft/north,
 /area/kleschers/int_heavy/lambda_saferoom)
@@ -13185,13 +13131,12 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/garage)
 "hcC" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
+/obj/structure/platform/strata{
+	color = "#df9f9f";
+	dir = 1
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "hcK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/disposal,
@@ -13280,13 +13225,16 @@
 /turf/open/floor/plating,
 /area/kleschers/int_reg/admin)
 "hfj" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
+/obj/structure/platform/strata{
+	color = "#df9f9f";
+	dir = 4;
+	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/obj/structure/platform/strata{
+	color = "#df9f9f"
+	},
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "hfs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -13475,7 +13423,7 @@
 	},
 /obj/item/maintenance_jack,
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "hkh" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/green/east,
@@ -13669,19 +13617,6 @@
 	color = "#a39e99"
 	},
 /area/kleschers/outside/rebel_landing)
-"hqT" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 8;
-	layer = 3.01
-	},
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 1
-	},
-/turf/open/auto_turf/ice/layer1,
-/area/kleschers/caves/southwest_caves)
 "hrc" = (
 /obj/structure/platform{
 	dir = 8
@@ -13930,14 +13865,12 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/marshals)
 "hxu" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
+/obj/structure/machinery/light/small{
+	light_power = 0.4;
+	dir = 4
 	},
-/obj/structure/blocker/invisible_wall,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "hxw" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	dir = 2;
@@ -14219,7 +14152,7 @@
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/engineering)
 "hEX" = (
-/obj/structure/bed/roller,
+/obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "hFp" = (
@@ -15960,14 +15893,13 @@
 /turf/closed/wall/strata_outpost,
 /area/kleschers/int_reg/buildings)
 "ixV" = (
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 8;
+/obj/structure/platform/strata/metal{
+	dir = 4;
 	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
+/obj/structure/platform/strata/metal,
 /turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/caves/north_river)
+/area/kleschers/caves/southwest_caves)
 "iyg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -16786,14 +16718,6 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/outside/central_road)
-"iQX" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/outside/central_road)
 "iRa" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/decal/cleanable/dirt,
@@ -16887,10 +16811,13 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/gun/rifle/sniper/M42A/silenced,
-/obj/item/ammo_magazine/sniper{
-	pixel_x = 5;
-	pixel_y = -6
+/obj/item/ammo_box/magazine/mk1/large/heap/empty{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/mk1/large/ap/empty{
+	pixel_x = 0;
+	pixel_y = 8
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
@@ -16938,12 +16865,11 @@
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "iVP" = (
-/obj/structure/platform/strata{
+/obj/structure/platform_decoration/strata{
 	color = "#df9f9f"
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/northwest)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "iWe" = (
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/lambda_entry)
@@ -17527,9 +17453,8 @@
 "jkd" = (
 /obj/structure/filtration/collector_pipes{
 	icon_state = "upper_2";
-	layer = 3.05
+	layer = 3.1
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/filtration)
 "jkh" = (
@@ -18738,17 +18663,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/asphalt,
 /area/kleschers/int_reg/cargo)
-"jNw" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
-	},
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/kleschers/int_heavy/reactor_excess)
 "jNQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail/medical{
@@ -19753,11 +19667,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/gun/rifle/sniper/elite,
-/obj/item/ammo_magazine/sniper/elite{
-	pixel_x = 6;
-	pixel_y = -7
-	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "koB" = (
@@ -20054,7 +19963,9 @@
 "kxj" = (
 /obj/structure/surface/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/stack/medical/advanced/ointment/upgraded,
+/obj/item/stack/medical/advanced/ointment/upgraded{
+	amount = 2
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/lambda_north_wing)
 "kxv" = (
@@ -20186,7 +20097,7 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/closed/wall/strata_outpost/reinforced/hull,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "kAg" = (
 /obj/structure/machinery/computer/pandemic,
 /turf/open/floor/shiva/wredfull,
@@ -21070,10 +20981,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/kleschers/outside/northwest)
-"kYd" = (
-/obj/structure/largecrate/supply/explosives/mines,
-/turf/open/shuttle/black,
-/area/kleschers/int_reg/shuttle)
 "kYh" = (
 /obj/structure/bed/chair{
 	buckling_y = 5;
@@ -21331,16 +21238,9 @@
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/outside/east)
 "ldw" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
-	},
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4
-	},
-/turf/open/floor/filtrationside/west,
-/area/kleschers/outside/east)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "let" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/vents/pump,
@@ -21987,19 +21887,8 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/clinic)
 "lsV" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_y = -11;
-	pixel_x = -10;
-	layer = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice8";
-	pixel_x = 16
-	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "ltk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -22332,7 +22221,6 @@
 	color = "#424a50"
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/accessory/health/research_plate,
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
 "lAf" = (
@@ -22786,22 +22674,16 @@
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/clinic)
 "lJK" = (
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
 /obj/structure/prop/invuln/overhead/flammable_pipe/fly{
 	dir = 8;
 	pixel_y = -11;
 	pixel_x = -10;
 	layer = 5
 	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16
+/turf/closed/wall/rock{
+	color = "#a39e99"
 	},
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "lKd" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.02
@@ -24061,11 +23943,8 @@
 /area/kleschers/outside/lambda_entry)
 "mrR" = (
 /obj/structure/largecrate{
-	name = "Ceramic plate crate (x6)"
+	name = "Ceramic plate crate (x3)"
 	},
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
-/obj/item/clothing/accessory/health/ceramic_plate,
 /obj/item/clothing/accessory/health/ceramic_plate,
 /obj/item/clothing/accessory/health/ceramic_plate,
 /obj/item/clothing/accessory/health/ceramic_plate,
@@ -24593,7 +24472,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "mFh" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -25074,7 +24953,7 @@
 	id = "hole4"
 	},
 /turf/open/auto_turf/strata_grass,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "mSU" = (
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap2,
 /obj/structure/desertdam/decals/road_edge{
@@ -25239,12 +25118,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/engineering)
 "mYm" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
+/turf/closed/wall/strata_outpost/reinforced,
 /area/kleschers/caves/east)
 "mYv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25950,7 +25824,9 @@
 /area/kleschers/int_reg/engineering)
 "nrN" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/stack/medical/splint/nano,
+/obj/item/stack/medical/splint/nano{
+	amount = 1
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/lambda_north_wing)
 "nsa" = (
@@ -26693,10 +26569,6 @@
 	},
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/east)
-"nPu" = (
-/obj/structure/largecrate/supply/medicine/optable,
-/turf/open/shuttle/black,
-/area/kleschers/int_reg/shuttle)
 "nPB" = (
 /obj/structure/machinery/light{
 	light_power = 0.7;
@@ -27400,11 +27272,6 @@
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/asteroidwarning/west,
 /area/kleschers/outside/central_road)
 "oim" = (
@@ -27517,13 +27384,17 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/dorms)
 "omv" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.05
+/obj/structure/platform/strata{
+	color = "#df9f9f";
+	dir = 1
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/rebel_landing)
+/obj/structure/platform/strata{
+	color = "#df9f9f";
+	dir = 4;
+	layer = 3.01
+	},
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "omx" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
 	req_one_access = list(105,103,106,100);
@@ -27707,10 +27578,10 @@
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/outside/northwest)
 "orV" = (
-/obj/structure/bed/roller,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/bed/roller/hospital_empty/bigrollerempty,
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "orY" = (
@@ -27757,8 +27628,8 @@
 	dir = 8;
 	layer = 3.01
 	},
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "otN" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -27843,7 +27714,6 @@
 	dir = 8;
 	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
 /obj/structure/platform/strata{
 	color = "#df9f9f";
 	layer = 3.11
@@ -27891,13 +27761,10 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/buildings)
 "owN" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/caves/east)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/roller/hospital_empty/bigrollerbloodempty,
+/turf/open/floor/kutjevo/tan/multi_tiles/southeast,
+/area/kleschers/int_reg/virology)
 "oxd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -29014,9 +28881,12 @@
 /turf/open/floor/shiva/yellowcorners/north,
 /area/kleschers/int_heavy/eta)
 "oWU" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
 	},
 /turf/open/auto_turf/ice/layer0,
 /area/kleschers/outside/central_road)
@@ -29812,7 +29682,7 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/marshals)
 "pvE" = (
-/obj/structure/bed,
+/obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/kutjevo/tan/multi_tiles/southeast,
 /area/kleschers/int_reg/virology)
 "pvF" = (
@@ -29949,14 +29819,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/library)
-"pyK" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/outside/northwest)
 "pzf" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/structure/platform_decoration/strata/metal{
@@ -30718,7 +30580,7 @@
 /area/kleschers/int_reg/offices)
 "pUU" = (
 /turf/open/floor/plating/plating_catwalk/shiva,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "pVb" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1
@@ -30965,13 +30827,12 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/int_reg/marshals)
 "qcT" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/outside/central_road)
+/area/kleschers/caves/southern_caves)
 "qdg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -31236,10 +31097,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/kleschers/int_glass/fitness)
-"qkc" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
 "qkp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/holotable{
@@ -31339,9 +31196,8 @@
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/kleschers/outside/northwest)
 "qng" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/central_road)
+/turf/closed/wall/strata_outpost/reinforced/hull,
+/area/kleschers/caves/southern_caves)
 "qnT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/pottedplant{
@@ -32888,7 +32744,6 @@
 /turf/open/auto_turf/strata_grass,
 /area/kleschers/shuttles/drop2)
 "qWt" = (
-/obj/structure/blocker/invisible_wall,
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
@@ -33601,12 +33456,13 @@
 /turf/open/asphalt,
 /area/kleschers/shuttles/drop2)
 "rpS" = (
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata{
-	color = "#df9f9f"
+/obj/structure/platform/strata/metal{
+	dir = 8;
+	layer = 3.01
 	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/northwest)
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "rpV" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	pixel_x = 5;
@@ -33740,13 +33596,12 @@
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_glass/fitness)
 "ruM" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.05
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.4;
+	light_range = 4
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/rebel_landing)
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "ruP" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -33975,8 +33830,8 @@
 /turf/open/floor/elevatorshaft/north,
 /area/kleschers/int_heavy/lambda_saferoom)
 "rAC" = (
-/obj/structure/bed/roller,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/roller/hospital_empty/bigrollerempty,
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "rAE" = (
@@ -34122,10 +33977,6 @@
 /obj/item/clothing/accessory/storage/black_vest{
 	pixel_x = -3;
 	pixel_y = -4
-	},
-/obj/item/clothing/accessory/storage/surg_vest{
-	pixel_x = 0;
-	pixel_y = 8
 	},
 /obj/item/clothing/accessory/storage/webbing{
 	pixel_x = 1;
@@ -34444,13 +34295,6 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/eta)
-"rKL" = (
-/obj/structure/platform/strata/metal{
-	dir = 1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/ice/layer0,
-/area/kleschers/outside/central_road)
 "rKZ" = (
 /obj/structure/platform/strata/metal{
 	dir = 4;
@@ -34525,9 +34369,12 @@
 /turf/open/asphalt,
 /area/kleschers/outside/central_road)
 "rNT" = (
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/outside/northwest)
+/obj/structure/machinery/light/small{
+	light_power = 0.4;
+	dir = 8
+	},
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "rOh" = (
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/engineering)
@@ -34761,7 +34608,7 @@
 	color = "#424a50"
 	},
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "rSQ" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
@@ -35707,8 +35554,16 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/storage/surgical_tray,
-/obj/item/storage/pouch/medical/socmed/not_op,
+/obj/item/stack/medical/advanced/ointment/upgraded{
+	pixel_x = -4;
+	pixel_y = 3;
+	amount = 1
+	},
+/obj/item/stack/medical/advanced/ointment/upgraded{
+	pixel_x = 3;
+	pixel_y = -5;
+	amount = 1
+	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "srh" = (
@@ -36581,8 +36436,8 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "sOK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -36601,17 +36456,8 @@
 /turf/open/floor/shiva/radiator_tile2,
 /area/kleschers/int_glass/bar)
 "sPm" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata{
-	color = "#df9f9f";
-	dir = 1
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/closed/wall/strata_outpost/reinforced,
+/area/kleschers/caves/southern_caves)
 "sPA" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
 	name = "\improper Engineering Complex"
@@ -36810,17 +36656,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
-"sVt" = (
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_y = -11;
-	pixel_x = -10;
-	layer = 5
-	},
-/turf/closed/wall/rock{
-	color = "#a39e99"
-	},
-/area/kleschers/int_heavy/reactor_excess)
 "sVC" = (
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
@@ -37375,7 +37210,7 @@
 "tnj" = (
 /obj/structure/window/framed/strata/reinforced,
 /turf/open/floor/plating,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "tnk" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -37606,7 +37441,7 @@
 	dir = 1
 	},
 /turf/open/auto_turf/strata_grass,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "tup" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 1
@@ -38050,11 +37885,11 @@
 /turf/open/floor/shiva/yellow/east,
 /area/kleschers/int_reg/engineering)
 "tFh" = (
-/obj/structure/bed/roller,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/bed/roller/hospital_empty/bigrollerempty,
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "tFC" = (
@@ -38241,13 +38076,8 @@
 /turf/open/asphalt/cement/cement1,
 /area/kleschers/int_reg/clinic)
 "tLL" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/floor/shiva/radiator_tile2,
+/area/kleschers/caves/southern_caves)
 "tLT" = (
 /obj/structure/machinery/cm_vending/sorted/tech/comp_storage{
 	req_one_access = list(106,102,101);
@@ -40505,7 +40335,7 @@
 "uTY" = (
 /obj/structure/prop/rock/black_ground,
 /turf/open/auto_turf/strata_grass,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "uUp" = (
 /obj/effect/decal/siding{
 	icon_state = "siding6"
@@ -40674,7 +40504,7 @@
 	layer = 3.01
 	},
 /turf/open/auto_turf/strata_grass,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "uZy" = (
 /obj/structure/roof/cargocrane_tracks/vertical,
 /turf/open/floor/shiva/yellow/north,
@@ -41298,7 +41128,6 @@
 /turf/open/floor/shiva/yellow/west,
 /area/kleschers/int_reg/cargo)
 "vwn" = (
-/obj/structure/bed/roller,
 /obj/structure/noticeboard{
 	pixel_x = 16;
 	pixel_y = 31
@@ -41306,6 +41135,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "vwv" = (
@@ -41825,12 +41655,11 @@
 /area/kleschers/int_reg/library)
 "vNn" = (
 /obj/structure/closet/crate/secure,
-/obj/item/weapon/gun/rifle/ar10,
-/obj/item/ammo_magazine/rifle/ar10,
 /obj/structure/machinery/light/double{
 	dir = 8
 	},
-/obj/item/clothing/suit/marine/lamp,
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
+/obj/item/weapon/gun/rifle/ar10,
 /turf/open/shuttle/escapepod,
 /area/kleschers/int_reg/shuttle)
 "vNu" = (
@@ -42058,7 +41887,9 @@
 /area/kleschers/int_glass/fitness)
 "vWs" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/stack/medical/advanced/bruise_pack/upgraded,
+/obj/item/stack/medical/advanced/bruise_pack/upgraded{
+	amount = 1
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/lambda_north_wing)
 "vWz" = (
@@ -42476,16 +42307,9 @@
 /turf/open/asphalt/cement/cement3,
 /area/kleschers/outside/construction)
 "wgL" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
-	},
-/obj/structure/blocker/invisible_wall,
-/obj/structure/barricade/handrail/kutjevo{
-	dir = 4
-	},
-/turf/open/floor/filtrationside/west,
-/area/kleschers/outside/east)
+/obj/structure/platform_decoration/strata/metal,
+/turf/open/auto_turf/sand_white/layer0,
+/area/kleschers/caves/southwest_caves)
 "whb" = (
 /obj/structure/platform_decoration/strata{
 	color = "#df9f9f"
@@ -42999,16 +42823,8 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/east,
 /area/kleschers/int_reg/clinic)
 "wtw" = (
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_x = -6;
-	pixel_y = 12
-	},
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
-	},
-/obj/item/ammo_magazine/handful/shotgun/heavy/dragonsbreath{
-	pixel_x = 7;
-	pixel_y = 8
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_x = -8;
@@ -43017,8 +42833,30 @@
 	name = "Storm Shutter Access"
 	},
 /obj/item/tool/lighter/zippo/executive{
-	pixel_x = 3;
-	pixel_y = -2
+	pixel_x = 11;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/shotgun/beanbag/heavy{
+	pixel_x = 5;
+	pixel_y = -1
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/dragonsbreath{
+	pixel_x = -8;
+	pixel_y = 6;
+	current_rounds = 1
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/flechette{
+	current_rounds = 1;
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/buckshot{
+	current_rounds = 1;
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/obj/item/ammo_magazine/handful/shotgun/heavy/slug{
+	current_rounds = 1
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
@@ -43373,16 +43211,11 @@
 /turf/open/floor/corsat/officesquares,
 /area/kleschers/int_reg/admin)
 "wBP" = (
-/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
-	unacidable = 1
+/obj/structure/tunnel{
+	id = "hole4"
 	},
-/obj/structure/blocker/invisible_wall,
-/obj/structure/platform/strata/metal{
-	dir = 8;
-	layer = 3.01
-	},
-/turf/closed/wall/strata_outpost/reinforced/hull,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/shale/layer1,
+/area/kleschers/caves/southern_caves)
 "wCh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -43507,13 +43340,13 @@
 /turf/open/floor/corsat,
 /area/kleschers/int_heavy/eta)
 "wFt" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "lower_2";
-	layer = 3.1
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	light_power = 0.4;
+	light_range = 4
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/snow/brown_base/layer0,
-/area/kleschers/outside/northwest)
+/turf/open/floor/shiva/floor3,
+/area/kleschers/caves/southern_caves)
 "wFO" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/shiva,
@@ -44321,7 +44154,6 @@
 	pixel_x = 0;
 	pixel_y = -10
 	},
-/obj/structure/blocker/invisible_wall,
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/filtration)
 "xcl" = (
@@ -44458,10 +44290,6 @@
 	layer = 2.79
 	},
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless,
-/obj/item/ammo_magazine/rifle/boltaction/vulture/holo_target{
-	pixel_x = 5;
-	pixel_y = -6
-	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
 "xfR" = (
@@ -44486,13 +44314,12 @@
 /turf/open/floor/kutjevo/tan/multi_tiles/east,
 /area/kleschers/int_reg/clinic)
 "xfV" = (
-/obj/structure/filtration/collector_pipes{
-	icon_state = "upper_2";
-	layer = 3.1
+/obj/structure/platform/strata/metal{
+	dir = 4;
+	layer = 3.01
 	},
-/obj/structure/blocker/invisible_wall,
-/turf/open/auto_turf/sand_white/layer0,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/snow/brown_base/layer0,
+/area/kleschers/caves/southern_caves)
 "xga" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal7";
@@ -44820,7 +44647,7 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/shiva/floor3,
-/area/kleschers/int_heavy/reactor_excess)
+/area/kleschers/caves/southern_caves)
 "xtj" = (
 /obj/structure/machinery/space_heater,
 /turf/open/auto_turf/strata_grass/layer0_mud,
@@ -45747,22 +45574,12 @@
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/admin)
 "xWg" = (
-/obj/structure/platform/strata/metal{
-	dir = 4;
-	layer = 3.01
+/obj/structure/platform_decoration/strata{
+	color = "#df9f9f";
+	dir = 8
 	},
-/obj/structure/prop/invuln/overhead/flammable_pipe/fly{
-	dir = 8;
-	pixel_y = -11;
-	pixel_x = -10;
-	layer = 5
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice12";
-	pixel_x = 16
-	},
-/turf/open/gm/river/no_overlay,
-/area/kleschers/int_heavy/reactor_excess)
+/turf/open/auto_turf/strata_grass,
+/area/kleschers/caves/southern_caves)
 "xWi" = (
 /turf/open/auto_turf/ice/layer1,
 /area/kleschers/caves/southwest_caves)
@@ -50750,15 +50567,15 @@ nbl
 rWj
 rWj
 qDb
-qDb
+fPK
 iwF
 iwF
 iwF
-qDb
+fPK
 iwF
 iwF
 iwF
-qDb
+fPK
 iwF
 iwF
 iwF
@@ -50837,8 +50654,8 @@ qId
 bhL
 bhL
 pnd
-kYd
-nPu
+bhL
+bhL
 bhL
 bhL
 lFk
@@ -51581,8 +51398,8 @@ keb
 dvT
 bvo
 rpu
-wFt
-pyK
+keb
+keb
 keb
 keb
 txd
@@ -51622,7 +51439,7 @@ nbl
 rWj
 rWj
 qDb
-qDb
+fPK
 iwF
 iwF
 iwF
@@ -51799,8 +51616,8 @@ dvT
 hsL
 bSv
 imX
-rNT
-rpS
+bvo
+rpu
 keb
 keb
 txd
@@ -52494,7 +52311,7 @@ nbl
 rWj
 rWj
 qDb
-qDb
+fPK
 iwF
 iwF
 iwF
@@ -53130,7 +52947,7 @@ sHP
 ayJ
 jNf
 nbl
-ayJ
+owN
 dpr
 nbl
 pvE
@@ -53364,9 +53181,9 @@ nbl
 fOX
 dgG
 iNs
-qDb
-qDb
-qDb
+fPK
+fPK
+fPK
 iwF
 iwF
 iwF
@@ -53582,9 +53399,9 @@ fOX
 dgG
 iNs
 iNs
-qDb
-qDb
-qDb
+fPK
+fPK
+fPK
 iwF
 iwF
 iwF
@@ -54546,8 +54363,8 @@ vBW
 kYY
 vBW
 mrk
-ruM
-omv
+bPH
+bPH
 hqF
 hqF
 hqF
@@ -54764,8 +54581,8 @@ vBW
 vBW
 vBW
 mrk
-hqT
-auY
+aUH
+aUH
 oiX
 jOH
 jOH
@@ -56359,8 +56176,8 @@ txd
 txd
 keb
 keb
-wFt
-gnq
+keb
+keb
 keb
 vNv
 tvO
@@ -56577,8 +56394,8 @@ txd
 keb
 keb
 dvT
-rNT
-iVP
+bvo
+rpu
 keb
 keb
 vNv
@@ -62820,7 +62637,7 @@ ykI
 fVB
 lCA
 iLu
-iLu
+wgL
 uhm
 uhm
 uhm
@@ -63037,25 +62854,25 @@ dAJ
 cGp
 gAK
 sPm
-xfV
-wAe
-dAJ
-dAJ
-dAJ
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dQY
-dQY
-dQY
+sPm
+ixV
+lsV
+lsV
+aEE
+wBP
+hmz
+hmz
+hmz
+hmz
+aEE
+sPm
+sPm
+sPm
+sPm
+sPm
+aEE
+aEE
+aEE
 uhm
 ykI
 ykI
@@ -63254,26 +63071,26 @@ hks
 aBK
 qqc
 dSy
-qkc
-qkc
-qqc
-aBK
-hks
-dAJ
-dAJ
-dQY
-dQY
-dQY
-dQY
-dQY
-dAJ
+aEE
+aEE
+lsV
+lsV
+wFt
+aEE
+aEE
+hmz
+gZo
+hmz
+hmz
+hmz
+sPm
 mEO
-qjA
-hks
-dAJ
-dAJ
-dAJ
-dAJ
+bAY
+ldw
+sPm
+sPm
+sPm
+sPm
 uhm
 uhm
 ykI
@@ -63453,7 +63270,7 @@ aBK
 qqc
 hks
 hks
-qqc
+qjA
 aBK
 qqc
 qqc
@@ -63472,26 +63289,26 @@ qqc
 qqc
 qqc
 dSy
-qqc
-fQc
-fQc
-qqc
-hks
-hks
-dAJ
-dAJ
-dQY
-dQY
-dQY
-dQY
-dAJ
+aEE
+aEE
+tLL
+lsV
+ldw
+ldw
+aEE
+gZo
+gZo
+aEE
+gZo
+gZo
+sPm
 hkf
-hks
-qqc
+ldw
+lsV
 bOw
-aBK
+rNT
 rSO
-dAJ
+sPm
 uhm
 uhm
 ykI
@@ -63688,36 +63505,36 @@ pMY
 pMY
 pMY
 pMY
-pMY
+aEE
 lJK
-pMY
-pMY
-pMY
-iKQ
-qqc
-hks
-wuI
-dAJ
-dAJ
-dQY
-dQY
-dQY
-dAJ
+aEE
+qcT
+qcT
+rpS
+lsV
+ldw
+ldw
+lsV
+aEE
+aEE
+aEE
+gZo
+sPm
 rSO
 rSO
-hks
-qqc
-hks
+ldw
+lsV
+ldw
 rSO
-dAJ
+sPm
 uhm
 uhm
 ykI
 ykI
 ykI
 ykI
-eHP
-eHP
+qng
+qng
 fIe
 hQI
 hQI
@@ -63886,10 +63703,10 @@ iKQ
 qqc
 fQc
 fQc
-hfj
-hxu
-cyD
-tLL
+qqc
+qqc
+qqc
+qqc
 qqc
 qqc
 qqc
@@ -63906,36 +63723,36 @@ guI
 guI
 guI
 guI
-guI
-xWg
-guI
-guI
-guI
+aEE
+aEE
+aEE
+aEE
+xfV
 sOI
-iKQ
-qqc
-hks
-qqc
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
+rpS
+lsV
+ldw
+lsV
+ruM
+aEE
+gZo
+gZo
+sPm
+sPm
 tnj
 tnj
-dAJ
+sPm
 pUU
-dAJ
-dAJ
-dAJ
-dAJ
+sPm
+sPm
+sPm
+sPm
 bKB
 bKB
 bKB
-eHP
-eHP
-eHP
+qng
+qng
+qng
 fIe
 hQI
 hQI
@@ -64104,10 +63921,10 @@ kez
 pMY
 pMY
 pMY
-hcC
-hcC
-hcC
-hcC
+pMY
+pMY
+pMY
+pMY
 pMY
 pMY
 pMY
@@ -64125,35 +63942,35 @@ fQc
 qqc
 qqc
 qqc
-dSy
-qqc
-fQc
-fQc
-eaF
+aEE
+aEE
+aEE
+tLL
+cyD
 sOI
-iKQ
-qqc
-qqc
-qqc
-aBK
-qqc
-qqc
-qqc
-aBK
-hks
-hks
-hks
-hks
-aBK
-qqc
-qqc
-aBK
-hks
-hks
-hks
-eHP
-eHP
-eHP
+rpS
+lsV
+lsV
+lsV
+lsV
+lsV
+lsV
+lsV
+rNT
+ldw
+ldw
+ldw
+ldw
+rNT
+lsV
+lsV
+rNT
+ldw
+ldw
+ldw
+qng
+qng
+qng
 fIe
 hQI
 hQI
@@ -64344,33 +64161,33 @@ hks
 hks
 sAY
 lsV
-qqc
-qqc
-qqc
-qqc
-eaF
+lsV
+lsV
+lsV
+lsV
+cyD
 sOI
-iKQ
-fQc
-fQc
-qqc
-qqc
-qqc
-qqc
-fQc
-fQc
-hks
-hks
-qqc
-qqc
-fQc
-fQc
-qqc
-qqc
-qqc
-qqc
+rpS
+tLL
+tLL
+lsV
+lsV
+lsV
+lsV
+tLL
+tLL
+ldw
+ldw
+lsV
+lsV
+tLL
+tLL
+lsV
+lsV
+lsV
+lsV
 xte
-fQc
+tLL
 kzY
 fIe
 hQI
@@ -64562,34 +64379,34 @@ dAJ
 dAJ
 dAJ
 exN
-dAJ
-dAJ
-qBI
-qqc
-qqc
-eaF
+xWg
+aXj
+lsV
+lsV
+lsV
+cyD
 sOI
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
-pMY
+qcT
+qcT
+qcT
+qcT
+qcT
+qcT
+qcT
+qcT
+qcT
+qcT
+aEE
+aEE
+aEE
+qcT
+qcT
+qcT
+qcT
+qcT
 otq
-pMY
-wBP
+qcT
+otq
 fIe
 hQI
 hQI
@@ -64776,38 +64593,38 @@ qqc
 qqc
 dAJ
 dAJ
-dQY
-dQY
-dQY
-sVt
-dQY
-dAJ
-dAJ
-qqc
-qqc
-qqc
-eaF
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
-guI
+aEE
+aEE
+aEE
+gZo
+hcC
+aXj
+aXj
+lsV
+lsV
+lsV
+cyD
+xfV
+xfV
+xfV
+xfV
+xfV
+xfV
+xfV
+xfV
+xfV
+aEE
+aEE
+aEE
+xfV
+xfV
+xfV
+xfV
+xfV
+xfV
 cYf
-guI
-jNw
+xfV
+cYf
 fIe
 hQI
 hQI
@@ -64993,38 +64810,38 @@ dAJ
 dAJ
 dAJ
 dAJ
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dAJ
-hks
-hks
-hks
-qqc
-fQc
-fQc
-qqc
-qqc
-qqc
-qqc
-fQc
-fQc
-qqc
-qqc
-qqc
-qqc
-fQc
-fQc
-qqc
-qqc
-qqc
-hks
+aEE
+aEE
+aEE
+aEE
+gZo
+hcC
+aXj
+aXj
+ldw
+ldw
+ldw
+lsV
+tLL
+tLL
+lsV
+lsV
+lsV
+lsV
+tLL
+tLL
+lsV
+lsV
+lsV
+lsV
+tLL
+tLL
+lsV
+lsV
+lsV
+ldw
 xte
-fQc
+tLL
 kzY
 fIe
 hQI
@@ -65211,39 +65028,39 @@ jQg
 jQg
 jQg
 jQg
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dAJ
-dAJ
-qqc
-hks
-sAY
-hks
-hks
-hks
-qBI
-qqc
-qqc
-qqc
-qBI
-qqc
-qqc
-qqc
-qqc
-qqc
-qqc
-qqc
-hks
-hks
-hks
-eHP
-eHP
-eHP
+aEE
+aEE
+aEE
+hmz
+gZo
+hcC
+iVP
+exN
+sPm
+lsV
+ldw
+gnq
+ldw
+ldw
+ldw
+hxu
+lsV
+lsV
+lsV
+hxu
+lsV
+lsV
+lsV
+lsV
+lsV
+lsV
+lsV
+ldw
+ldw
+ldw
+qng
+qng
+qng
 fIe
 hQI
 hQI
@@ -65429,39 +65246,39 @@ pfc
 iDW
 pQt
 jQg
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
-dAJ
+aEE
+aEE
+aEE
+hmz
+gZo
+omv
+hfj
+gZo
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
+sPm
 uZj
 uZj
 uZj
 uZj
-dQY
-dQY
+aEE
+aEE
 uZj
 uZj
 uZj
 uZj
-eHP
-eHP
-eHP
+qng
+qng
+qng
 fIe
 hQI
 hQI
@@ -65647,39 +65464,39 @@ dqQ
 dqQ
 dBc
 jQg
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-eHP
-eHP
+aEE
+aEE
+aEE
+aEE
+gZo
+gZo
+gZo
+gZo
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+qng
+qng
 fIe
 hQI
 hQI
@@ -65865,39 +65682,39 @@ dqQ
 dqQ
 dBc
 jQg
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
+aEE
+aEE
+aEE
+aEE
+hmz
+hmz
+gZo
+gZo
+hmz
+hmz
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
 uTY
-mAc
-mAc
-mAc
-mAc
-mAc
+aXj
+aXj
+aXj
+aXj
+aXj
 uTY
-mAc
-mAc
-mAc
-dQY
-dQY
+aXj
+aXj
+aXj
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -66083,39 +65900,39 @@ pfc
 pfc
 nIq
 jQg
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-dQY
+aEE
+aEE
+aEE
+aEE
+hmz
+hmz
+hmz
+hmz
+hmz
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -66318,22 +66135,22 @@ oiN
 oiN
 oiN
 oiN
-dQY
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-dQY
+aEE
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -66537,21 +66354,21 @@ gjj
 fDx
 oiN
 oiN
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-dQY
-dQY
-dQY
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -66756,20 +66573,20 @@ uRh
 oiN
 oiN
 oiN
-dQY
-dQY
-mAc
-mAc
-mAc
+aEE
+aEE
+aXj
+aXj
+aXj
 mSy
-mAc
-mAc
-mAc
-dQY
-dQY
-dQY
-dQY
-dQY
+aXj
+aXj
+aXj
+aEE
+aEE
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -66975,19 +66792,19 @@ oiN
 jbQ
 oiN
 oiN
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -67193,19 +67010,19 @@ pIL
 iMP
 hIz
 oiN
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -67386,7 +67203,7 @@ fPI
 vbI
 iUC
 bIc
-aXj
+vOj
 uYn
 vbI
 tbG
@@ -67411,19 +67228,19 @@ ePq
 bIc
 hIz
 oiN
-mAc
+aXj
 uTY
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-dQY
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -67629,19 +67446,19 @@ dZH
 uSw
 vbI
 oiN
-mAc
-mAc
-mAc
-mAc
+aXj
+aXj
+aXj
+aXj
 tum
-mAc
-mAc
-mAc
+aXj
+aXj
+aXj
 uTY
-mAc
-dQY
-dQY
-dQY
+aXj
+aEE
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -67847,19 +67664,19 @@ iCm
 qlv
 hIz
 oiN
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -68065,19 +67882,19 @@ pIL
 nro
 hIz
 oiN
-dQY
-dQY
-dQY
-dQY
-dQY
-dQY
-mAc
-mAc
-mAc
-mAc
-mAc
-dQY
-dQY
+aEE
+aEE
+aEE
+aEE
+aEE
+aEE
+aXj
+aXj
+aXj
+aXj
+aXj
+aEE
+aEE
 fIe
 hQI
 hQI
@@ -68290,12 +68107,12 @@ oiN
 oiN
 oFO
 oFO
-bAY
-bAY
-bAY
-mAc
-mAc
-dQY
+qpo
+qpo
+qpo
+aXj
+aXj
+aEE
 fIe
 hQI
 hQI
@@ -68508,12 +68325,12 @@ dUS
 oiN
 oiN
 oFO
-dQY
+aEE
 oya
-bAY
-bAY
-bAY
-dQY
+qpo
+qpo
+qpo
+aEE
 fIe
 hQI
 hQI
@@ -69851,8 +69668,8 @@ chQ
 tXq
 tXq
 fil
-wFt
-pyK
+keb
+keb
 keb
 txd
 txd
@@ -69928,8 +69745,8 @@ sAR
 sAR
 sAR
 xmQ
-iQX
-qcT
+sAR
+sAR
 sAR
 sAR
 sAR
@@ -70069,7 +69886,7 @@ chQ
 chQ
 tXq
 fvW
-ixV
+kZV
 ovR
 keb
 keb
@@ -70146,8 +69963,8 @@ vUH
 vUH
 vUH
 nll
-qng
-qng
+vUH
+vUH
 vUH
 vUH
 vUH
@@ -70814,7 +70631,7 @@ bpi
 bpi
 bpi
 gJZ
-rKL
+iPC
 oWU
 fyg
 xCW
@@ -74756,9 +74573,9 @@ oMs
 suT
 wwq
 lTb
-wgL
 lTb
-ldw
+lTb
+lTb
 vzy
 jRs
 xpQ
@@ -74974,9 +74791,9 @@ ljO
 avb
 vRq
 qhH
-aTo
 kVQ
-aTo
+kVQ
+kVQ
 dxf
 jRs
 xpQ
@@ -81965,7 +81782,7 @@ tAH
 dpH
 fTT
 mYm
-owN
+mYm
 acU
 pTF
 xkJ
@@ -82182,8 +81999,8 @@ tAH
 tAH
 dpH
 dpH
-feE
-feE
+mYm
+mYm
 pTF
 xkJ
 xkJ
@@ -90837,8 +90654,8 @@ eVw
 feZ
 feZ
 aym
-bcl
-bcl
+aTo
+aTo
 ioB
 bcl
 ioB
