@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Reverses a fix to force narrate that made langchat unable to overlap"

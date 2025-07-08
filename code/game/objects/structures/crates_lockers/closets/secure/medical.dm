@@ -189,14 +189,14 @@
 	new /mob/living/carbon/human/professor_dummy(src)
 
 /obj/structure/closet/secure_closet/professor_dummy/togglelock(mob/living/user)
-	if(user.job == JOB_CMO || user.job == JOB_SEA)
+	if(user.job == JOB_CMO || user.job == JOB_DI)
 		return ..()
 
-	to_chat(user, SPAN_WARNING("Only the [JOB_CMO] or the [JOB_SEA] can toggle this lock."))
+	to_chat(user, SPAN_WARNING("Only the [JOB_CMO] or the [JOB_DI] can toggle this lock."))
 
 /obj/structure/closet/secure_closet/professor_dummy/dump_contents()
 	if(locate(/mob/living/carbon/human/professor_dummy) in src)
-		visible_message(SPAN_HIGHDANGER("Professor DUMMY should only be used for teaching medical personnel, exclusively done by the [JOB_CMO] or the [JOB_SEA]. Do not abuse it."))
+		visible_message(SPAN_HIGHDANGER("Professor DUMMY should only be used for teaching medical personnel, exclusively done by the [JOB_CMO] or the [JOB_DI]. Do not abuse it."))
 	return ..()
 
 /obj/structure/closet/secure_closet/professor_dummy/close()

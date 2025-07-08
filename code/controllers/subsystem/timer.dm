@@ -426,6 +426,7 @@ SUBSYSTEM_DEF(timer)
 
 /datum/timedevent/Destroy()
 	..()
+
 	if (flags & TIMER_UNIQUE && hash)
 		timer_subsystem.hashes -= hash
 

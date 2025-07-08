@@ -30,6 +30,12 @@
 /obj/item/ammo_box/magazine/shotgun/buckshot/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/shotgun/special_buck
+	name = "\improper shotgun shell box (Spc. Buckshot x 100)"
+	icon_state = "base_spcbuck"
+	overlay_content = "_buck"
+	magazine_type = /obj/item/ammo_magazine/shotgun/buckshot/special
+
 /obj/item/ammo_box/magazine/shotgun/flechette
 	name = "\improper shotgun shell box (Flechette x 100)"
 	icon_state = "base_flech"

@@ -65,6 +65,7 @@ em {font-style: normal; font-weight: bold;}
 .cryoradio {color: #4a4740;}
 .hcradio {color: #318779;}
 .pvstradio {color: #9b0612;}
+.ciaradio {color: #e6754c;}
 
 .medium { font-size: 2}
 .big { font-size: 2}
@@ -151,8 +152,12 @@ h1.alert, h2.alert {color: #000000;}
 .rough {font-family: trebuchet-ms, cursive, sans-serif;}
 .german {color: #858F1E; font-family: 'Times New Roman', Times, serif}
 .spanish {color: #CF982B;}
+.portuguese {color: #974c0e;}
+.french {color: #1b3272;}
+.filipino {color: #551d6e;}
 .ruspatois {color: #258687}
 .japanese {color: #0047A0}
+.polish {color: #FF8DA1}
 .commando {color: #FE9B24; font-style: bold;}
 .say_quote {font-family: Georgia, Verdana, sans-serif;}
 

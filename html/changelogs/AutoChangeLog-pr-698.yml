@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "M13 fighting knife as standard boot knife, Bowie and KA-BAR fighting knives."
+  - rscdel: "M5 bayonet as standard boot knife."

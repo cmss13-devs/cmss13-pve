@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "Everyone can hang bodies."
+  - qol: "Easier to utilize flaying."

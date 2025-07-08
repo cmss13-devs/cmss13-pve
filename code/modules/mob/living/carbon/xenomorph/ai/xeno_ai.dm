@@ -30,6 +30,9 @@
 	/// Cooldown declaration for delaying finding a new path if no path was found
 	COOLDOWN_DECLARE(no_path_found_cooldown)
 
+	var/ai_active_intent = INTENT_HARM
+	var/target_unconscious = FALSE
+
 /mob/living/carbon/xenomorph/proc/init_movement_handler()
 	return new /datum/xeno_ai_movement(src)
 
@@ -43,7 +46,7 @@
 	if(distance > max_travel_distance)
 		return
 
-	SSxeno_pathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
+	SSpathfinding.calculate_path(src, P.firer, distance, src, CALLBACK(src, PROC_REF(set_path)), list(src, P.firer))
 
 /mob/living/carbon/xenomorph/proc/register_ai_action(datum/action/xeno_action/XA)
 	if(XA.owner != src)
@@ -63,14 +66,14 @@
 
 	var/datum/component/ai_behavior_override/behavior_override = check_overrides()
 
-	if(behavior_override?.process_override_behavior(src, delta_time))
-		return TRUE
-
-	if(is_mob_incapacitated(TRUE))
+	if(is_mob_incapacitated(TRUE)) ///If they are incapacitated, the rest doesn't matter.
 		current_path = null
 		return TRUE
 
-	if(QDELETED(current_target) || !current_target.ai_check_stat() || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
+	if(behavior_override?.process_override_behavior(src, delta_time))
+		return TRUE
+
+	if(QDELETED(current_target) || !current_target.ai_check_stat(src) || get_dist(current_target, src) > ai_range || COOLDOWN_FINISHED(src, forced_retarget_cooldown))
 		current_target = get_target(ai_range)
 		COOLDOWN_START(src, forced_retarget_cooldown, forced_retarget_time)
 		if(QDELETED(src))
@@ -81,7 +84,7 @@
 			if(prob(5))
 				emote("hiss")
 
-	a_intent = INTENT_HARM
+	a_intent = ai_active_intent
 
 	if(!current_target)
 		ai_move_idle(delta_time)
@@ -133,7 +136,7 @@
 		return 0
 	return INFINITY
 
-/atom/proc/ai_check_stat()
+/atom/proc/ai_check_stat(mob/living/carbon/xenomorph/X)
 	return TRUE // So we aren't trying to find a new target on attack override
 
 // Called whenever an obstacle is encountered but xeno_ai_obstacle returned something else than infinite
@@ -165,12 +168,12 @@
 		return FALSE
 
 	if((!current_path || (next_path_generation < world.time && current_target_turf != T)) && COOLDOWN_FINISHED(src, no_path_found_cooldown))
-		if(!XENO_CALCULATING_PATH(src) || current_target_turf != T)
-			SSxeno_pathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
+		if(!CALCULATING_PATH(src) || current_target_turf != T)
+			SSpathfinding.calculate_path(src, T, max_range, src, CALLBACK(src, PROC_REF(set_path)), list(src, current_target))
 			current_target_turf = T
 		next_path_generation = world.time + path_update_period
 
-	if(XENO_CALCULATING_PATH(src))
+	if(CALCULATING_PATH(src))
 		return TRUE
 
 	// No possible path to target.
@@ -192,8 +195,8 @@
 		return TRUE
 
 	var/turf/next_turf = current_path[current_path.len]
-	var/list/L = LinkBlocked(src, loc, next_turf, list(src, current_target), TRUE)
-	L += SSxeno_pathfinding.check_special_blockers(src, next_turf)
+	var/list/L = LinkBlocked(src, loc, next_turf, list(src), TRUE)
+	L += SSpathfinding.check_special_blockers(src, next_turf)
 	for(var/a in L)
 		var/atom/A = a
 		if(A.xeno_ai_obstacle(src, get_dir(loc, next_turf)) == INFINITY)
@@ -267,28 +270,6 @@
 
 #undef EXTRA_CHECK_DISTANCE_MULTIPLIER
 
-/mob/living/carbon/proc/ai_can_target(mob/living/carbon/xenomorph/X)
-	if(!ai_check_stat(X))
-		return FALSE
-
-	if(X.can_not_harm(src))
-		return FALSE
-
-	if(alpha <= 45 && get_dist(X, src) > 2)
-		return FALSE
-
-	if(isfacehugger(X))
-		if(status_flags & XENO_HOST)
-			return FALSE
-
-		if(istype(wear_mask, /obj/item/clothing/mask/facehugger))
-			return FALSE
-
-	else if(HAS_TRAIT(src, TRAIT_NESTED))
-		return FALSE
-
-	return TRUE
-
 /mob/living/carbon/xenomorph/proc/make_ai()
 	SHOULD_CALL_PARENT(TRUE)
 	create_hud()
@@ -343,3 +324,7 @@
 				if(cycled_turf.x == min_x_value)
 					min_x_turfs += cycled_turf
 			return min_x_turfs
+
+/// Override as necessary to check for more specific triggers for an ability activation.
+/mob/living/carbon/xenomorph/proc/check_additional_ai_activation()
+	return TRUE

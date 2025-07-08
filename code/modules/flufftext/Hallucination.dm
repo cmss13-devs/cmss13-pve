@@ -214,7 +214,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 
 			var/button_txt = pick(possible_txt)
 
-			mocktxt += "<a href='?src=\ref[src];[button]'>[button_txt]</a><br>"
+			mocktxt += "<a href='byond://?src=\ref[src];[button]'>[button_txt]</a><br>"
 
 			buttons -= button
 			possible_txt -= button_txt
@@ -343,7 +343,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 
 GLOBAL_LIST_INIT(non_fakeattack_weapons, list(/obj/item/device/aicard,\
 	/obj/item/clothing/shoes/magboots, /obj/item/disk/nuclear,\
-	/obj/item/clothing/suit/space/uscm, /obj/item/tank))
+	/obj/item/clothing/head/helmet/space/odyssey, /obj/item/tank))
 
 /proc/fake_attack(mob/living/target)
 // var/list/possible_clones = new/list()

@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscdel: "Coffee only makes a human jittery at a critical-OD threshold, not from a consecutive > 20 units."

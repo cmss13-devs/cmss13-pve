@@ -1,0 +1,9 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "PMC armor can hold a greater variety of things, namely holster belts & the general belt"
+  - bugfix: "Fixes the M39 holster-belt overlaying the stored gun icon above everything"
+  - bugfix: "Corrects the PLU lamp rig name & slowdown"
+  - bugfix: "The ADM is now goop-proof"
+  - spellcheck: "Fixes the lore-description of the M39B/3 and the M39 duplex magazines description"
+  - imageadd: "Adds the missing icon-states & renames a few incorrect ones for water bottles"

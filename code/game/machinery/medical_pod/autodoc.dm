@@ -692,7 +692,7 @@
 			dat += "Damage: [SET_CLASS("[damageOxy]", INTERFACE_BLUE)] - [SET_CLASS("[damageTox]", INTERFACE_GREEN)] - [SET_CLASS("[damageFire]", INTERFACE_ORANGE)] - [SET_CLASS("[damageBrute]", INTERFACE_RED)]<br>"
 			dat += "The patient is [t1]. <br>"
 			dat += "[operating]<br>"
-			dat += "<a href='?src=\ref[src];ejectify=1'>Eject Patient</a>"
+			dat += "<a href='byond://?src=\ref[src];ejectify=1'>Eject Patient</a>"
 			dat += "<hr><b>Surgery Queue:</b><br>"
 
 			var/list/surgeryqueue = list()
@@ -755,45 +755,45 @@
 
 					dat += "<br>"
 
-			dat += "<hr><a href='?src=\ref[src];surgery=1'>Begin Surgery</a> - <a href='?src=\ref[src];refresh=1'>Refresh Menu</a> - <a href='?src=\ref[src];clear=1'>Clear Queue</a><hr>"
+			dat += "<hr><a href='byond://?src=\ref[src];surgery=1'>Begin Surgery</a> - <a href='byond://?src=\ref[src];refresh=1'>Refresh Menu</a> - <a href='byond://?src=\ref[src];clear=1'>Clear Queue</a><hr>"
 			if(!connected.surgery)
 				dat += "<b>Trauma Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["brute"]))
-					dat += "<a href='?src=\ref[src];brute=1'>Brute Damage Treatment</a><br>"
+					dat += "<a href='byond://?src=\ref[src];brute=1'>Brute Damage Treatment</a><br>"
 				if(isnull(surgeryqueue["burn"]))
-					dat += "<a href='?src=\ref[src];burn=1'>Burn Damage Treatment</a><br>"
+					dat += "<a href='byond://?src=\ref[src];burn=1'>Burn Damage Treatment</a><br>"
 				dat += "<b>Orthopedic Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["broken"]))
-					dat += "<a href='?src=\ref[src];broken=1'>Broken Bone Surgery</a><br>"
+					dat += "<a href='byond://?src=\ref[src];broken=1'>Broken Bone Surgery</a><br>"
 				if(isnull(surgeryqueue["internal"]))
-					dat += "<a href='?src=\ref[src];internal=1'>Internal Bleeding Surgery</a><br>"
+					dat += "<a href='byond://?src=\ref[src];internal=1'>Internal Bleeding Surgery</a><br>"
 				if(isnull(surgeryqueue["open"]))
-					dat += "<a href='?src=\ref[src];open=1'>Close Open Incisions</a><br>"
+					dat += "<a href='byond://?src=\ref[src];open=1'>Close Open Incisions</a><br>"
 				if(isnull(surgeryqueue["object"]))
-					dat += "<a href='?src=\ref[src];object=1'>Foreign Object Removal Surgery</a><br>"
+					dat += "<a href='byond://?src=\ref[src];object=1'>Foreign Object Removal Surgery</a><br>"
 				dat += "<b>Organ Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["eyes"]))
-					dat += "<a href='?src=\ref[src];eyes=1'>Corrective Eye Surgery</a><br>"
+					dat += "<a href='byond://?src=\ref[src];eyes=1'>Corrective Eye Surgery</a><br>"
 				if(isnull(surgeryqueue["organdamage"]))
-					dat += "<a href='?src=\ref[src];organdamage=1'>Organ Damage Treatment</a><br>"
+					dat += "<a href='byond://?src=\ref[src];organdamage=1'>Organ Damage Treatment</a><br>"
 				dat += "<b>Hematology Treatments</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["blood"]))
-					dat += "<a href='?src=\ref[src];blood=1'>Emergency Blood Transfusion</a><br>"
+					dat += "<a href='byond://?src=\ref[src];blood=1'>Emergency Blood Transfusion</a><br>"
 				if(isnull(surgeryqueue["dialysis"]))
-					dat += "<a href='?src=\ref[src];dialysis=1'>Dialysis</a><br>"
+					dat += "<a href='byond://?src=\ref[src];dialysis=1'>Dialysis</a><br>"
 				if(isnull(surgeryqueue["toxin"]))
-					dat += "<a href='?src=\ref[src];toxin=1'>Bloodstream Toxin Removal</a><br>"
+					dat += "<a href='byond://?src=\ref[src];toxin=1'>Bloodstream Toxin Removal</a><br>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["missing"]))
-					dat += "<a href='?src=\ref[src];missing=1'>Limb Replacement Surgery</a><hr>"
+					dat += "<a href='byond://?src=\ref[src];missing=1'>Limb Replacement Surgery</a><hr>"
 		else
 			dat += "The autodoc is empty."
-	dat += text("<a href='?src=\ref[];mach_close=sleeper'>Close</a>", user)
-	show_browser(user, dat, "Auto-Doc Medical System", "sleeper", "size=300x400")
+	dat += text("<a href='byond://?src=\ref[];mach_close=sleeper'>Close</a>", user)
+	show_browser(user, dat, "Auto-Doc Medical System", "sleeper", width = 300, height = 400)
 	onclose(user, "sleeper")
 
 /obj/structure/machinery/autodoc_console/Topic(href, href_list)

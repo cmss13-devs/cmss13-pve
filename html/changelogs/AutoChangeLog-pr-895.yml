@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - bugfix: "HIMAT correctly deafens people around it."

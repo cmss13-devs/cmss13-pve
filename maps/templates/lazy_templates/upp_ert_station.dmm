@@ -400,20 +400,20 @@
 "gN" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/trash/plate,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/green3/east,
 /area/adminlevel/ert_station/upp_station)
 "gR" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/food/snacks/upp{
+/obj/item/storage/box/mre/upp{
 	pixel_y = 1;
 	pixel_x = -3
 	},
-/obj/item/reagent_container/food/snacks/upp{
+/obj/item/storage/box/mre/upp{
 	pixel_y = 10;
 	pixel_x = 2
 	},
-/obj/item/reagent_container/food/snacks/upp{
+/obj/item/storage/box/mre/upp{
 	pixel_y = 4;
 	pixel_x = 3
 	},
@@ -1148,7 +1148,7 @@
 "vy" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/trash/plate,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/green3/west,
 /area/adminlevel/ert_station/upp_station)
 "vz" = (
@@ -1504,7 +1504,7 @@
 /area/adminlevel/ert_station/upp_station)
 "BN" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/red3/north,
 /area/adminlevel/ert_station/upp_station)
 "BW" = (
@@ -1800,8 +1800,8 @@
 /area/adminlevel/ert_station/upp_station)
 "HD" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
 /turf/open/floor/strata/multi_tiles/west,
 /area/adminlevel/ert_station/upp_station)
 "HE" = (
@@ -2102,9 +2102,6 @@
 /turf/open/floor/strata/damaged3,
 /area/adminlevel/ert_station/upp_station)
 "NQ" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
 	},

@@ -10,9 +10,9 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("Anti-Materiel Sniper Set", 0, /obj/item/storage/box/spec/sniper/anti_materiel, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 
 		list("EXTRA SCOUT AMMUNITION", 0, null, null, null),
-		list("A19 High Velocity Impact Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom/impact, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Incendiary Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Impact Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/impact, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Incendiary Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA SNIPER AMMUNITION", 0, null, null, null),
 		list("M42A Flak Magazine (10x28mm)", 40, /obj/item/ammo_magazine/sniper/flak, null, VENDOR_ITEM_REGULAR),
@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/almayer/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
-		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
+		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
@@ -259,4 +259,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/explosive/grenade/sebb,
 		/obj/item/explosive/grenade/sebb,
 		/obj/item/explosive/grenade/sebb,
+	)
+
+/obj/effect/essentials_set/m15_4_pack
+	spawned_gear_list = list(
+		/obj/item/explosive/grenade/high_explosive/m15,
+		/obj/item/explosive/grenade/high_explosive/m15,
+		/obj/item/explosive/grenade/high_explosive/m15,
+		/obj/item/explosive/grenade/high_explosive/m15,
 	)

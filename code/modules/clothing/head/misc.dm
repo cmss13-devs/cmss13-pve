@@ -291,3 +291,13 @@
 	siemens_coefficient = 2
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	anti_hug = 10 //Lel
+
+/obj/item/clothing/head/santa
+	name = "\improper santa hat"
+	icon_state = "santa_hat_red"
+	item_state = "santa_hat_red"
+	desc = "Ho ho ho. Merry Christmas!"
+
+/obj/item/clothing/head/santa/green
+	icon_state = "santa_hat_green"
+	item_state = "santa_hat_green"

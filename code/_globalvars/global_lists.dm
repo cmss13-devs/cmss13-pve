@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(language_keys, setup_language_keys()) //table of say codes for 
 
 // Origins
 GLOBAL_REFERENCE_LIST_INDEXED(origins, /datum/origin, name)
-GLOBAL_LIST_INIT(player_origins, USCM_ORIGINS)
+GLOBAL_LIST_INIT(player_origins, FACTION_ORIGINS)
 
 //Xeno hives
 GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
@@ -417,9 +417,7 @@ GLOBAL_LIST_INIT(hj_emotes, setup_hazard_joe_emotes())
 	var/list/language_keys = list()
 	for (var/language_name in subtypesof(/datum/language))
 		var/datum/language/L = language_name
-		language_keys[":[lowertext(initial(L.key))]"] = initial(L.name)
-		language_keys[".[lowertext(initial(L.key))]"] = initial(L.name)
-		language_keys["#[lowertext(initial(L.key))]"] = initial(L.name)
+		language_keys["![lowertext(initial(L.key))]"] = initial(L.name)
 	return language_keys
 
 //Comb Sort. This works apparently, so we're keeping it that way

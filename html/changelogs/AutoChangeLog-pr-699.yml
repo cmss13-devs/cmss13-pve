@@ -1,0 +1,5 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Brain damage no longer causes movements while the human is grabbed."
+  - bugfix: "Brain damage no longer causes movements in Critical Pain."

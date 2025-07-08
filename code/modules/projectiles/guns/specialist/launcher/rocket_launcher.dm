@@ -3,8 +3,8 @@
 //M5 RPG
 
 /obj/item/weapon/gun/launcher/rocket
-	name = "\improper M5 RPG"
-	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+	name = "\improper rocket launcher"
+	desc = "Modelled after the iconic Carl Gustaf recoilless rifle, this heavy piece of kit can still kill things just as well as its forefather could hundreds of years ago."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m5"
 	item_state = "m5"
@@ -16,12 +16,10 @@
 	flags_equip_slot = NO_FLAGS
 	w_class = SIZE_HUGE
 	force = 15
-	wield_delay = WIELD_DELAY_HORRIBLE
+	wield_delay = WIELD_DELAY_SLOW
 	delay_style = WEAPON_DELAY_NO_FIRE
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	attachable_allowed = list(
-		/obj/item/attachable/magnetic_harness,
-	)
+	attachable_allowed = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
 
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 	var/datum/effect_system/smoke_spread/smoke
@@ -39,10 +37,14 @@
 	QDEL_NULL(smoke)
 	return ..()
 
-
 /obj/item/weapon/gun/launcher/rocket/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
 
+/obj/item/weapon/gun/launcher/rocket/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 70, GLOB.damage_boost_vehicles),
+	))
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_config_values()
 	..()
@@ -204,9 +206,22 @@
 		mob.emote("pain")
 
 //-------------------------------------------------------
-//Army version, just reflavoured description
+//Marine M5 RPG, comes with baked in scope unlike the colony-made launcher
+/obj/item/weapon/gun/launcher/rocket/marine
+	name = "\improper M5 RPG"
+	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
-/obj/item/weapon/gun/launcher/rocket/army
+/obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/army/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+
+//-------------------------------------------------------
+//Army version, just reflavoured description
+/obj/item/weapon/gun/launcher/rocket/marine/army
 	desc = "The M5 RPG is a common squad-level anti-armor weapon used by the US Army. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
 
 //-------------------------------------------------------
@@ -323,7 +338,7 @@
 	user.visible_message(SPAN_NOTICE("[user] begins to unfold \the [src]."), SPAN_NOTICE("You start to unfold and expand \the [src]."))
 	playsound(src, 'sound/items/component_pickup.ogg', 20, TRUE, 5)
 
-	if(!do_after(user, 4 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 		to_chat(user, SPAN_NOTICE("You stop unfolding \the [src]"))
 		return
 
@@ -388,3 +403,9 @@
 			C.apply_effect(4, STUN) //For good measure
 			C.apply_effect(6, STUTTER)
 			C.emote("pain")
+
+/obj/item/weapon/gun/launcher/rocket/upp/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
+	))

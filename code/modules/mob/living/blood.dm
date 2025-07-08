@@ -261,7 +261,6 @@
 
 	if(!T.can_bloody)
 		return
-
 	if(small_drip)
 		// Only a certain number of drips (or one large splatter) can be on a given turf.
 		var/obj/effect/decal/cleanable/blood/drip/drop = locate() in T
@@ -310,3 +309,85 @@
 	var/obj/effect/decal/cleanable/blood/oil/O = locate() in T.contents
 	if(!O)
 		O = new(T)
+
+/mob/living/carbon/human/proc/spray_blood(spray_angle_offset, limb)
+	var/angle = 0
+	var/obj/limb/O = limb
+	var/newdir = src.dir
+
+	if(O.body_part == BODY_FLAG_ARM_LEFT || O.body_part == BODY_FLAG_LEG_LEFT || O.body_part == BODY_FLAG_HAND_LEFT || O.body_part == BODY_FLAG_FOOT_LEFT)
+		newdir = turn(dir, 90) // Turn left
+	else if(O.body_part == BODY_FLAG_ARM_RIGHT || O.body_part == BODY_FLAG_LEG_RIGHT || O.body_part == BODY_FLAG_HAND_RIGHT || O.body_part == BODY_FLAG_FOOT_RIGHT)
+		newdir = turn(dir, -90) // Turn right
+
+	angle = ((dir2angle(newdir)+90)+spray_angle_offset) % 360
+	newdir = angle2dir(angle)
+
+	visible_message(\
+			SPAN_WARNING("You see a gush of blood spray from [src]'s [O.display_name]!"),
+			SPAN_HIGHDANGER("Blood sprays from your [O.display_name]!"),
+			SPAN_HIGHDANGER("You hear something fleshy gush!"))
+	for(var/i = 1 to (floor(src.blood_volume / 160)))
+		var/reverse_odd_numbered_decals
+		if(i % 2 != 0)
+			reverse_odd_numbered_decals = 1
+		else
+			reverse_odd_numbered_decals = -1
+		// total pixel shift
+		var/decal_pixel_y = 32 * sin(angle) * (i)
+		var/decal_pixel_x = (((32 * cos(angle)) * reverse_odd_numbered_decals * (i)) * reverse_odd_numbered_decals) * -1
+
+		// it gets weird if it is at 31.1 or so pixels, goes a tile more than needed // fix later
+		var/tile_offset_x = 0
+		if( abs(decal_pixel_x) > 31 )
+			tile_offset_x = (decal_pixel_x >= 0 ? floor(decal_pixel_x / world.icon_size) : ceil(decal_pixel_x / world.icon_size))
+
+		var/tile_offset_y = 0
+		if( abs(decal_pixel_y) > 31 )
+			tile_offset_y = (decal_pixel_y >= 0 ? floor(decal_pixel_y / world.icon_size) : ceil(decal_pixel_y / world.icon_size))
+
+		var/turf/new_turf = get_turf(locate(src.x + tile_offset_x, src.y + tile_offset_y, src.z))
+
+		if(new_turf.density)
+			break
+		for(var/mob/living/carbon/human/sprayed_with_blood in new_turf.contents)
+			if(ishuman_strict(sprayed_with_blood))
+				if(sprayed_with_blood != src)
+					if(!sprayed_with_blood.body_position == LYING_DOWN)
+						sprayed_with_blood.add_mob_blood(src)
+						if(sprayed_with_blood.dir in get_related_directions(get_dir(sprayed_with_blood, src)))
+							var/total_eye_protection = 0
+							for(var/obj/item/clothing/glasses in list(sprayed_with_blood.glasses, sprayed_with_blood.wear_mask, sprayed_with_blood.head))
+								if(glasses && (glasses.flags_armor_protection & BODY_FLAG_EYES) || sprayed_with_blood.get_eye_protection())
+									total_eye_protection++
+							if(total_eye_protection)
+								to_chat(sprayed_with_blood, SPAN_HIGHDANGER("Blood sprays against your eyewear!"))
+								sprayed_with_blood.EyeBlur(2)
+							else
+								to_chat(sprayed_with_blood, SPAN_HIGHDANGER("You are sprayed in the eyes with blood!"))
+								sprayed_with_blood.EyeBlur(14)
+						sprayed_with_blood.visible_message(SPAN_WARNING("[sprayed_with_blood] is hit by the spray of blood!")	)
+						break
+
+		// remainder within the tile.
+		var/obj/effect/decal/cleanable/blood/squirt/blood_spraying = new /obj/effect/decal/cleanable/blood/squirt(new_turf)
+		blood_spraying.pixel_x = decal_pixel_x % world.icon_size
+		blood_spraying.pixel_y = decal_pixel_y % world.icon_size
+		blood_spraying.apply_transform(turn(transform, angle))
+
+		if(src.body_position == LYING_DOWN) // I don't know why it turns 90° when the human is down. Don't ask
+			blood_spraying.apply_transform(turn(transform, angle+90))
+
+		if(i == floor((src.blood_volume / 170)))
+			blood_spraying.icon_state = "spatter4"
+		else
+			blood_spraying.icon_state = "squirt4"
+		blood_spraying.color = get_blood_color()
+		blood_spraying.pixel_x = blood_spraying.pixel_x + rand(-1, 1)
+		blood_spraying.pixel_y = blood_spraying.pixel_y + rand(-1, 1)
+		playsound(src, 'sound/effects/blood_squirt.ogg', 40, TRUE)
+
+
+/obj/effect/decal/cleanable/blood/squirt
+	allow_this_to_overlap = TRUE
+

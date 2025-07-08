@@ -93,6 +93,12 @@
 		/obj/item/tool/extinguisher,
 	)
 
+/obj/item/storage/pouch/flamertank/weak
+
+/obj/item/storage/pouch/flamertank/weak/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/flamer_tank/weak(src)
+
 /obj/item/storage/pouch/general/large/m39ap
 	storage_slots = 1
 
@@ -190,7 +196,7 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "It contains, by default, autoinjectors. But it may also hold ointments, bandages, and pill packets."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, and pill packets."
 	icon_state = "firstaid"
 	storage_slots = 4
 	can_hold = list(
@@ -211,8 +217,8 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
 
 /obj/item/storage/pouch/firstaid/full/alternate/fill_preset_inventory()
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/bruise_pack(src)
 
@@ -375,7 +381,7 @@
 
 /obj/item/storage/pouch/pistol/command/attack_hand(mob/user, mods) //Mostly copied from gunbelt.
 	if(current_gun && ishuman(user) && loc == user)
-		if(mods && mods["alt"] && length(contents) > 1) //Withdraw the most recently inserted nongun item if possible.
+		if(mods && mods[ALT_CLICK] && length(contents) > 1) //Withdraw the most recently inserted nongun item if possible.
 			var/obj/item/I = contents[length(contents)]
 			if(isgun(I))
 				I = contents[length(contents) - 1]
@@ -405,6 +411,7 @@
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/storage/pouch/magazine/attackby(obj/item/W, mob/user)
@@ -470,6 +477,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 
+/obj/item/storage/pouch/magazine/pistol/m1911/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/pistol/m1911(src)
+
 /obj/item/storage/pouch/magazine/upp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71(src)
@@ -500,7 +511,7 @@
 
 /obj/item/storage/pouch/magazine/large/pmc_lmg/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/lmg(src)
+		new /obj/item/ammo_magazine/hpr_box(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sniper/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -604,8 +615,8 @@
 	)
 
 /obj/item/storage/pouch/explosive/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/nade_box))
-		var/obj/item/storage/box/nade_box/M = W
+	if(istype(W, /obj/item/ammo_box/magazine/nade_box))
+		var/obj/item/ammo_box/magazine/nade_box/M = W
 		dump_into(M,user)
 	else
 		return ..()
@@ -813,23 +824,22 @@
 	name = "engineer kit pouch"
 	storage_flags = STORAGE_FLAGS_POUCH
 	icon_state = "construction"
-	desc = "It's specifically made to hold engineering items. Requires engineering skills to use effectively."
+	desc = "It's specifically made to hold engineering items."
 	storage_slots = 6
-	can_hold_skill = list(
-		/obj/item/circuitboard = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/flashlight = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/clothing/glasses/welding = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/analyzer = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/demo_scanner = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/reagent_scanner = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/t_scanner = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/stack/cable_coil = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/cell = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/device/assembly = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/stock_parts = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
-		/obj/item/explosive/plastic = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
+	can_hold = list(
+		/obj/item/circuitboard,
+		/obj/item/device/flashlight,
+		/obj/item/clothing/glasses/welding,
+		/obj/item/device/analyzer,
+		/obj/item/device/demo_scanner,
+		/obj/item/device/reagent_scanner,
+		/obj/item/device/t_scanner,
+		/obj/item/stack/cable_coil,
+		/obj/item/cell,
+		/obj/item/device/assembly,
+		/obj/item/stock_parts,
+		/obj/item/explosive/plastic,
 	)
-	can_hold_skill_only = TRUE
 
 /obj/item/storage/pouch/engikit/full/fill_preset_inventory()
 	new /obj/item/explosive/plastic(src)
@@ -843,27 +853,26 @@
 	name = "medical kit pouch"
 	storage_flags = STORAGE_FLAGS_POUCH
 	icon_state = "medkit"
-	desc = "It's specifically made to hold medical items. Requires medical skills to use effectively."
+	desc = "It's specifically made to hold medical items."
 	storage_slots = 7
-	can_hold_skill = list(
-		/obj/item/device/healthanalyzer = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/dropper = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/pill = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/glass/bottle = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/syringe = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/pill_bottle = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/stack/medical = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/hypospray = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/syringe_case = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/storage/surgical_case = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/tool/surgery/surgical_line = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/tool/surgery/synthgraft = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/roller = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/bodybag = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/reagent_container/blood = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
-		/obj/item/tool/surgery/FixOVein = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/storage/surgical_case,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/roller,
+		/obj/item/bodybag,
+		/obj/item/reagent_container/blood,
+		/obj/item/tool/surgery/FixOVein,
 	)
-	can_hold_skill_only = TRUE
 
 /obj/item/storage/pouch/medkit/full/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer(src)
@@ -1154,8 +1163,8 @@
 	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/pouch/flare/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/storage/box/m94))
-		var/obj/item/storage/box/m94/M = W
+	if(istype(W, /obj/item/storage/box/flare))
+		var/obj/item/storage/box/flare/M = W
 		dump_into(M,user)
 	else
 		return ..()
@@ -1314,6 +1323,16 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+
+/obj/item/storage/pouch/tools/tactical/parajumper/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/nailgun/compact(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/circuitboard/apc(src)
+	new /obj/item/cell/high(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 

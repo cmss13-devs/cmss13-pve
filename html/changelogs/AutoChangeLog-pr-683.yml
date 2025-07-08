@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "If you examine a radio that is on your person it's menu listing all frequencies will now pop up."
+  - qol: "Dropship autopilot settings can be modified during refuel/recharge"
+  - qol: "You can now use the 'check status' verb and any stethoscope you might have attached to your uniform directly by examining an adjacent human."
+  - qol: "Toy mechs will now fit into small-item-limted storage."

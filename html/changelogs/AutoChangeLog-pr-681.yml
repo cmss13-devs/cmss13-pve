@@ -1,0 +1,5 @@
+author: "Amory"
+delete-after: True
+changes:
+  - rscadd: "New description to XM88 chambering text"
+  - qol: "Andro is made happy"

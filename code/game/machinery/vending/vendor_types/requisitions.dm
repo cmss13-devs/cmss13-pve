@@ -5,7 +5,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns
 	name = "\improper ColMarTech Automated Armaments Vendor"
 	desc = "An automated supply rack hooked up to a big storage of various firearms and explosives. Can be accessed by the Requisitions Officer and Cargo Techs."
-	icon_state = "req_guns"
+	icon_state = "prep"
 	req_access = list(ACCESS_MARINE_CARGO)
 	vendor_theme = VENDOR_THEME_USCM
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_LOAD_AMMO_BOXES
@@ -27,7 +27,7 @@
 		list("M37A2 Pump Shotgun", floor(scale * 30), /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("M39 Submachinegun", floor(scale * 60), /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", floor(scale * 60), /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
-		list("M4RA Battle Rifle", floor(scale * 20), /obj/item/weapon/gun/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Battle Rifle", floor(scale * 20), /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", floor(scale * 50), /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
@@ -50,7 +50,7 @@
 
 		list("EXPLOSIVES", -1, null, null),
 		list("M15 Fragmentation Grenade", floor(scale * 2), /obj/item/explosive/grenade/high_explosive/m15, VENDOR_ITEM_REGULAR),
-		list("M20 Claymore Anti-Personnel Mine", floor(scale * 4), /obj/item/explosive/mine, VENDOR_ITEM_REGULAR),
+		list("M20A2 Claymore Anti-Personnel Mine", floor(scale * 4), /obj/item/explosive/mine/strong, VENDOR_ITEM_REGULAR),
 		list("M40 HEDP Grenade", floor(scale * 25), /obj/item/explosive/grenade/high_explosive, VENDOR_ITEM_REGULAR),
 		list("M40 HIDP Incendiary Grenade", floor(scale * 4), /obj/item/explosive/grenade/incendiary, VENDOR_ITEM_REGULAR),
 		list("M40 CCDP Chemical Compound Smoke Grenade", floor(scale * 4), /obj/item/explosive/grenade/phosphorus, VENDOR_ITEM_REGULAR),
@@ -121,8 +121,8 @@
 		list("Combat Flashlight", floor(scale * 8), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool", floor(scale * 4), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
 		list("Gas Mask", floor(scale * 10), /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", floor(scale * 2), /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", floor(scale * 2), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", floor(scale * 6), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
 		list("MB-6 Folding Barricades (x3)", floor(scale * 3), /obj/item/stack/folding_barricade/three, VENDOR_ITEM_REGULAR),
 		list("Motion Detector", floor(scale * 4), /obj/item/device/motiondetector, VENDOR_ITEM_REGULAR),
@@ -145,21 +145,17 @@
 		list("EXPLOSIVES BOXES", -1, null, null),
 		list("M15 Fragmentation Grenade Packet", 0, /obj/item/storage/box/packet/m15, VENDOR_ITEM_REGULAR),
 		list("M40 HEDP Grenade Packet", 0, /obj/item/storage/box/packet/high_explosive, VENDOR_ITEM_REGULAR),
-		list("M40 HEDP Grenade Box", 0, /obj/item/storage/box/nade_box, VENDOR_ITEM_REGULAR),
-		list("M40 HIDP Grenade Packet", 0, /obj/item/storage/box/packet/incendiary, VENDOR_ITEM_REGULAR),
-		list("M40 HIDP Grenade Box", 0, /obj/item/storage/box/nade_box/incen, VENDOR_ITEM_REGULAR),
-		list("M40 CCDP Grenade Packet", 0, /obj/item/storage/box/packet/phosphorus/strong, VENDOR_ITEM_REGULAR),
-		list("M40 CCDP Grenade Box", 0, /obj/item/storage/box/nade_box/phophorus, VENDOR_ITEM_REGULAR),
-		list("M40 HSDP Grenade Packet", 0, /obj/item/storage/box/packet/smoke, VENDOR_ITEM_REGULAR),
-		list("M40 MFHS Grenade Packet", 0, /obj/item/storage/box/packet/foam, VENDOR_ITEM_REGULAR),
-		list("M40 HIRR Baton Slug Packet", 0, /obj/item/storage/box/packet/baton_slug, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-F Grenade Packet", 0, /obj/item/storage/box/packet/airburst_he, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-F Grenade box", 0, /obj/item/storage/box/nade_box/airburst, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-I Grenade Packet", 0, /obj/item/storage/box/packet/airburst_incen, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-I Grenade Box", 0, /obj/item/storage/box/nade_box/airburstincen, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-S Smoke Grenade Packet", 0, /obj/item/storage/box/packet/airburst_smoke, VENDOR_ITEM_REGULAR),
+		list("M40 HEDP Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box, VENDOR_ITEM_REGULAR),
+		list("M77 HIAM Grenade Packet", 0, /obj/item/storage/box/packet/incendiary, VENDOR_ITEM_REGULAR),
+		list("M77 HIAM Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/incen, VENDOR_ITEM_REGULAR),
+		list("M60 WPSI Grenade Packet", 0, /obj/item/storage/box/packet/phosphorus, VENDOR_ITEM_REGULAR),
+		list("M60 WPSI Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/phophorus, VENDOR_ITEM_REGULAR),
+		list("M47 HSDP Grenade Packet", 0, /obj/item/storage/box/packet/smoke, VENDOR_ITEM_REGULAR),
+		list("M230 LLRB Grenade Packet", 0, /obj/item/storage/box/packet/baton, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-F Grenade box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-I Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst/incen, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-S Smoke Grenade Box", 0, /obj/item/ammo_box/magazine/nade_box/fourtymil/airburst/smoke, VENDOR_ITEM_REGULAR),
 		list("M74 AGM-S Star Shell Packet", 0, /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-H Hornet Shell Packet", 0, /obj/item/storage/box/packet/hornet, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock grenade packet", 0, /obj/item/storage/box/packet/sebb, VENDOR_ITEM_REGULAR),
 		list("M20 mine box", 0, /obj/item/storage/box/explosive_mines, VENDOR_ITEM_REGULAR),
 
@@ -172,7 +168,7 @@
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/stock(obj/item/item_to_stock, mob/user)
-	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/m94) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
+	if(istype(item_to_stock, /obj/item/storage) && !istype(item_to_stock, /obj/item/storage/box/flare) && !istype(item_to_stock, /obj/item/storage/large_holster/machete))
 		to_chat(user, SPAN_WARNING("Can't restock \the [item_to_stock]."))
 		return
 
@@ -249,7 +245,7 @@
 		list("Box Of Flechette Shells", floor(scale * 56), /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
 		list("Box Of Shotgun Slugs", floor(scale * 56), /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
 		list("Box Of Breaching Slugs", floor(scale * 4), /obj/item/ammo_magazine/shotgun/light/breaching, VENDOR_ITEM_REGULAR),
-		list("M4RA Magazine (10x24mm)", floor(scale * 60), /obj/item/ammo_magazine/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Magazine (10x24mm)", floor(scale * 60), /obj/item/ammo_magazine/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M41A MK2 Magazine (10x24mm)", floor(scale * 100), /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 		list("M39 HV Magazine (10x20mm)", floor(scale * 100), /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M44 Speed Loader (.44)", floor(scale * 80), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
@@ -257,7 +253,7 @@
 		list("VP70 Magazine (9mm)", floor(scale * 50), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR-PIERCING AMMUNITION", -1, null, null),
-		list("M4RA AP Magazine (10x24mm)", floor(scale * 16), /obj/item/ammo_magazine/rifle/m4ra/ap, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", floor(scale * 16), /obj/item/ammo_magazine/rifle/m49a/ap, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", floor(scale * 12), /obj/item/ammo_magazine/smg/m39/ap, VENDOR_ITEM_REGULAR),
 		list("M41A MK2 AP Magazine (10x24mm)", floor(scale * 10), /obj/item/ammo_magazine/rifle/ap, VENDOR_ITEM_REGULAR),
 		list("M4A3 AP Magazine (9mm)", floor(scale * 2), /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
@@ -269,55 +265,25 @@
 		list("SPECIAL AMMUNITION", -1, null, null),
 		list("M56 DV9 Battery", 4, /obj/item/smartgun_battery, VENDOR_ITEM_REGULAR),
 		list("M56 Smartgun Drum", 4, /obj/item/ammo_magazine/smartgun, VENDOR_ITEM_REGULAR),
-		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, VENDOR_ITEM_REGULAR),
-		list("M44 Marksman Speed Loader (.44)", 6, /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
-		list("M4A3 HP Magazine (9mm)", floor(scale * 2), /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
-		list("M41AE2 Holo Target Rounds (10x24mm)", floor(scale * 2), /obj/item/ammo_magazine/rifle/lmg/holo_target, VENDOR_ITEM_REGULAR),
-		list("Box Of .458 SOCOM Rounds (.458 SOCOM)", floor(scale * 4), /obj/item/ammo_magazine/lever_action/xm88, VENDOR_ITEM_REGULAR),
+		list("M44 Heavy Speed Loader (.44)", round(scale * 10.5), /obj/item/ammo_magazine/revolver/heavy, VENDOR_ITEM_REGULAR),
+		list("M44 Marksman Speed Loader (.44)", round(scale * 5.7), /obj/item/ammo_magazine/revolver/marksman, VENDOR_ITEM_REGULAR),
+		list("M4A3 HP Magazine (9mm)", round(scale * 2), /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
+		list("M41AE2 Holo Target Rounds (10x24mm)", round(scale * 2), /obj/item/ammo_magazine/hpr_box/holo_target, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED FIREARM AMMUNITION", -1, null, null),
-		list("VP78 Magazine", 11, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
-		list("SU-6 Smartpistol Magazine (.45)", 13, /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
-		list("M240 Incinerator Tank", floor(scale * 3), /obj/item/ammo_magazine/flamer_tank, VENDOR_ITEM_REGULAR),
-		list("M41AE2 Box Magazine (10x24mm)", floor(scale * 3), /obj/item/ammo_magazine/rifle/lmg, VENDOR_ITEM_REGULAR),
-		list("M41A MK1 Magazine (10x24mm)", 4.5, /obj/item/ammo_magazine/rifle/m41aMK1, VENDOR_ITEM_REGULAR),
-		list("M41A MK1 AP Magazine (10x24mm)", floor(scale * 2), /obj/item/ammo_magazine/rifle/m41aMK1/ap, VENDOR_ITEM_REGULAR),
-		list("M56D Drum Magazine", floor(scale * 2), /obj/item/ammo_magazine/m56d, VENDOR_ITEM_REGULAR),
-		list("M2C Box Magazine", floor(scale * 2), /obj/item/ammo_magazine/m2c, VENDOR_ITEM_REGULAR),
-		list("XM51 Magazine (16g)", floor(scale * 3), /obj/item/ammo_magazine/rifle/xm51, VENDOR_ITEM_REGULAR),
+		list("VP78 Magazine", round(scale * 11.2), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("SU-6 Smartpistol Magazine (.45)", round(scale * 12,8), /obj/item/ammo_magazine/pistol/smart, VENDOR_ITEM_REGULAR),
+		list("M240 Incinerator Tank", round(scale * 3), /obj/item/ammo_magazine/flamer_tank, VENDOR_ITEM_REGULAR),
+		list("M41AE2 Box Magazine (10x24mm)", round(scale * 3), /obj/item/ammo_magazine/hpr_box, VENDOR_ITEM_REGULAR),
+		list("M41A MK1 Magazine (10x24mm)", round(scale * 4.5), /obj/item/ammo_magazine/rifle/m41aMK1, VENDOR_ITEM_REGULAR),
+		list("M41A MK1 AP Magazine (10x24mm)", round(scale * 2), /obj/item/ammo_magazine/rifle/m41aMK1/ap, VENDOR_ITEM_REGULAR),
+		list("M56D Drum Magazine", round(scale * 2), /obj/item/ammo_magazine/m56d, VENDOR_ITEM_REGULAR),
+		list("M2C Box Magazine", round(scale * 2), /obj/item/ammo_magazine/m2c, VENDOR_ITEM_REGULAR),
 
-		list("MAGAZINE BOXES", -1, null, null),
-		list("Magazine Box (M39 x 12)", 0, /obj/item/ammo_box/magazine/m39, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (AP M39 x 12)", 0, /obj/item/ammo_box/magazine/m39/ap, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (Ext M39 x 10)", 0, /obj/item/ammo_box/magazine/m39/ext, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M41A x 10)", 0, /obj/item/ammo_box/magazine, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (AP M41A x 10)", 0, /obj/item/ammo_box/magazine/ap, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (Ext M41A x 8)", 0, /obj/item/ammo_box/magazine/ext, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M4A3 x 16)", 0, /obj/item/ammo_box/magazine/m4a3, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (AP M4A3 x 16)", 0, /obj/item/ammo_box/magazine/m4a3/ap, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (HP M4A3 x 16)", 0, /obj/item/ammo_box/magazine/m4a3/hp, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M4RA x 16)", 0, /obj/item/ammo_box/magazine/m4ra, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (AP M4RA x 16)", 0, /obj/item/ammo_box/magazine/m4ra/ap, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M41AE2 x 8)", 0, /obj/item/ammo_box/magazine/m41ae2, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M41AE2 Holo-Target x 8)", 0, /obj/item/ammo_box/magazine/m41ae2/holo, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M41A MK1 x 10)", 0, /obj/item/ammo_box/magazine/mk1, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (M41A MK1 AP x 10)", 0, /obj/item/ammo_box/magazine/mk1/ap, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Box (Buckshot x 100)", 0, /obj/item/ammo_box/magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Box (Flechette x 100)", 0, /obj/item/ammo_box/magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Box (Slugs x 100)", 0, /obj/item/ammo_box/magazine/shotgun, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Box (16g) (Breaching x 120)", 0, /obj/item/ammo_box/magazine/shotgun/light/breaching, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (VP70 x 16)", 0, /obj/item/ammo_box/magazine/vp70, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (SU-6 x 16)", 0, /obj/item/ammo_box/magazine/su6, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (VP78 x 16)", 0, /obj/item/ammo_box/magazine/vp78, VENDOR_ITEM_REGULAR),
-		list("Magazine Box (XM51 x 8)", 0, /obj/item/ammo_box/magazine/xm51, VENDOR_ITEM_REGULAR),
-		list("Rounds Box (.458 SOCOM x 300)", 0, /obj/item/ammo_box/magazine/lever_action/xm88, VENDOR_ITEM_REGULAR),
-		list("Ammo Box (M2C x 8)", 0, /obj/item/ammo_box/magazine/m2c, VENDOR_ITEM_REGULAR),
-		list("Drum Box (M56B x 8)", 0, /obj/item/ammo_box/magazine/m56b, VENDOR_ITEM_REGULAR),
-		list("Drum Box (M56D x 8)", 0, /obj/item/ammo_box/magazine/m56d, VENDOR_ITEM_REGULAR),
-		list("Speed Loaders Box (M44 x 16)", 0, /obj/item/ammo_box/magazine/m44, VENDOR_ITEM_REGULAR),
-		list("Speed Loaders Box (Marksman M44 x 16)", 0, /obj/item/ammo_box/magazine/m44/marksman, VENDOR_ITEM_REGULAR),
-		list("Speed Loaders Box (Heavy M44 x 16)", 0, /obj/item/ammo_box/magazine/m44/heavy, VENDOR_ITEM_REGULAR),
-		list("Flamer Tank Box (UT-Napthal Fuel x 8)", 0, /obj/item/ammo_box/magazine/flamer, VENDOR_ITEM_REGULAR),
+		list("SHOTGUN SHELL BOXES", -1, null, null),
+		list("Shotgun Shell Box (Buckshot x 100)", round(scale * 2), /obj/item/ammo_box/magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Box (Flechette x 100)", round(scale * 2), /obj/item/ammo_box/magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Box (Slugs x 100)", round(scale * 2), /obj/item/ammo_box/magazine/shotgun, VENDOR_ITEM_REGULAR),
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_ammo/stock(obj/item/item_to_stock, mob/user)
@@ -559,14 +525,14 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad_prep/training/populate_product_list(scale)
 	listed_products = list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("M4RA Battle Rifle", floor(scale * 10), /obj/item/weapon/gun/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Battle Rifle", floor(scale * 10), /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M37A2 Pump Shotgun", floor(scale * 15), /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("M39 Submachine Gun", floor(scale * 30), /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", floor(scale * 30), /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_RECOMMENDED),
 
 		list("PRIMARY NONLETHAL AMMUNITION", -1, null, null),
 		list("Box of Beanbag Shells (12g)", floor(scale * 15), /obj/item/ammo_magazine/shotgun/beanbag, VENDOR_ITEM_REGULAR),
-		list("M4RA Rubber Magazine (10x24mm)", floor(scale * 15), /obj/item/ammo_magazine/rifle/m4ra/rubber, VENDOR_ITEM_REGULAR),
+		list("M49A Rubber Magazine (10x24mm)", floor(scale * 15), /obj/item/ammo_magazine/rifle/m49a/rubber, VENDOR_ITEM_REGULAR),
 		list("M39 Rubber Magazine (10x20mm)", floor(scale * 25), /obj/item/ammo_magazine/smg/m39/rubber, VENDOR_ITEM_REGULAR),
 		list("M41A Rubber Magazine (10x24mm)", floor(scale * 25), /obj/item/ammo_magazine/rifle/rubber, VENDOR_ITEM_REGULAR),
 
@@ -587,5 +553,5 @@
 		list("M07 Training Grenade", floor(scale * 15), /obj/item/explosive/grenade/high_explosive/training, VENDOR_ITEM_REGULAR),
 		list("M15 Rubber Pellet Grenade", floor(scale * 10), /obj/item/explosive/grenade/high_explosive/m15/rubber, VENDOR_ITEM_REGULAR),
 		list("M5 Bayonet", floor(scale * 25), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/m94, VENDOR_ITEM_RECOMMENDED)
+		list("M94 Marking Flare Pack", floor(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_RECOMMENDED)
 	)

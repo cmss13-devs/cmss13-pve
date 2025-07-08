@@ -1,0 +1,5 @@
+author: "sippykot"
+delete-after: True
+changes:
+  - rscdel: "skill checks for putting medkits and engineer kits in backpacks"
+  - rscdel: "skill checks for using medkit and engineer kit pouches"

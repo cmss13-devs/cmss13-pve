@@ -1,6 +1,6 @@
 /obj/item/storage/toolkit
 	name = "engineer kit"
-	desc = "An combat engineering toolkit intended to carry electrical and mechanical supplies into combat. With engineering training you can fit this in a backpack."
+	desc = "An combat engineering toolkit intended to carry electrical and mechanical supplies into combat."
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "toolkit"
 	item_state = "fulton"
@@ -23,8 +23,6 @@
 		/obj/item/explosive/plastic,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
-	required_skill_for_nest_opening = SKILL_ENGINEER
-	required_skill_level_for_nest_opening = SKILL_ENGINEER_TRAINED
 
 	///icon state to use when kit is full
 	var/icon_full
@@ -49,7 +47,7 @@
 	new /obj/item/circuitboard/apc(src)
 	new /obj/item/cell/high(src)
 	new /obj/item/cell/high(src)
-	new /obj/item/clothing/glasses/welding(src)
+	new /obj/item/explosive/plastic(src)
 
 
 /obj/item/storage/toolkit/empty/fill_preset_inventory()

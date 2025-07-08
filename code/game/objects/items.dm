@@ -65,6 +65,8 @@
 	flags_atom = FPRINT
 	/// flags for item stuff that isn't clothing/equipping specific.
 	var/flags_item = NO_FLAGS
+	/// flags for human AI to determine what this item does
+	var/flags_human_ai = NO_FLAGS
 	/// This is used to determine on which slots an item can fit.
 	var/flags_equip_slot = NO_FLAGS
 
@@ -166,6 +168,12 @@
 
 	/// Special storages this item prioritizes
 	var/list/preferred_storage
+
+	///HUD related stuff for radios, visors & cam-gear
+	///Whether it has a squad/medical HUD or not
+	var/has_hud = FALSE
+	///What HUD it will display if present
+	var/list/hud_type = null
 
 /obj/item/Initialize(mapload, ...)
 	. = ..()
@@ -1096,3 +1104,9 @@ cases. Override_icon_state should be a list.*/
 ///Called by /mob/living/carbon/swap_hand() when hands are swapped
 /obj/item/proc/hands_swapped(mob/living/carbon/swapper_of_hands)
 	return
+
+/obj/item/proc/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	return
+
+/obj/item/proc/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
+	return FALSE

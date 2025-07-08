@@ -389,13 +389,6 @@
 /obj/item/stack/rods,
 /turf/open/floor/platingdmg1,
 /area/bigredv2/outside/office_complex)
-"jv" = (
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock{
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. The IFF electronics appear to be non-functional.";
-	name = "battered M41A pulse rifle Mk2"
-	},
-/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
 "jK" = (
 /turf/open/floor/plating/panelscorched,
 /area/bigredv2/outside/office_complex)
@@ -593,14 +586,6 @@
 /area/bigredv2/outside/office_complex)
 "tr" = (
 /obj/item/weapon/gun/rifle/nsg23/no_lock,
-/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
-/area/bigredv2/outside/office_complex)
-"tU" = (
-/obj/effect/spawner/gibspawner/human,
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock{
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. The IFF electronics appear to be non-functional.";
-	name = "battered M41A pulse rifle Mk2"
-	},
 /turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/bigredv2/outside/office_complex)
 "tW" = (
@@ -1547,7 +1532,7 @@ zy
 kB
 GO
 Hf
-jv
+Ak
 Ak
 Iz
 Ak
@@ -1673,7 +1658,7 @@ aQ
 NU
 Ak
 Ak
-tU
+Iz
 Ak
 LQ
 Ak

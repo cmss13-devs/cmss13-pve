@@ -56,6 +56,8 @@ SUBSYSTEM_DEF(ticker)
 	var/totalPlayersReady = 0 //used for pregame stats on statpanel
 	var/tutorial_disabled = FALSE
 
+	var/intro_sequence = TRUE
+
 /datum/controller/subsystem/ticker/Initialize(timeofday)
 	load_mode()
 
@@ -365,7 +367,6 @@ SUBSYSTEM_DEF(ticker)
 		var/mob/M = J.spawn_in_player(player)
 		if(istype(M))
 			J.equip_job(M)
-			EquipCustomItems(M)
 
 			if(M.client)
 				var/client/C = M.client
@@ -395,7 +396,6 @@ SUBSYSTEM_DEF(ticker)
 				captainless = FALSE
 			if(player.job)
 				GLOB.RoleAuthority.equip_role(player, GLOB.RoleAuthority.roles_by_name[player.job], late_join = FALSE)
-				EquipCustomItems(player)
 			if(player.client)
 				var/client/C = player.client
 				if(C.player_data && C.player_data.playtime_loaded && length(C.player_data.playtimes) == 0)

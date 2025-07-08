@@ -1,0 +1,5 @@
+author: "nauticall"
+delete-after: True
+changes:
+  - rscadd: "Adds a PVE-style HPR gun case."
+  - imageadd: "Resprites the HPR and magazines to be more inline with PvE sprites."

@@ -1,0 +1,15 @@
+author: "Blundir, Crowford, Nauticall, Cuberound, Triiodine, LC4492"
+delete-after: True
+changes:
+  - rscadd: "added UPP, WY, PMC, TWE, WY emergency, Generic food rations, floor boxes for them"
+  - rscadd: "US Military MRE now has cheese spread in multiple variations, beverage bag in multiple variations (you need to pour water into it)"
+  - rscadd: "balaji imperial 4 packs and matches, matches added to WY vendor, both matches and cigs can appear in TWE ration"
+  - rscadd: "US Military MRE now has an iconic MRE spoon"
+  - rscadd: "added numerous new mains, sides, snacks and desserts to US Military MRE"
+  - rscadd: "all ration food now has unique descriptions and reagents inside them having custom reagents now displays food taste correctly"
+  - rscadd: "new rations to loadouts that should logically have them"
+  - rscadd: "The Rover vendors supply FSR ration packs instead of US-Mil Rations."
+  - rscdel: "WY brand MRE box got removed and replaced with an actual WY rations"
+  - rscdel: "USCM tray boxes got removed and replaced with an actual MREs"
+  - refactor: "mre backend changed severely and moved to separate .dm files"
+  - rscdel: "core nutrient reagent is no longer used for mre foods, apart from some exceptions"

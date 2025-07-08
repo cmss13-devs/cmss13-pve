@@ -1,0 +1,8 @@
+author: "Drathek HarryOB"
+delete-after: True
+changes:
+  - code_imp: "Update most tooling including changes to hooks, mapmerge, additional grep checks, additional maplints, and additional workflows"
+  - code_imp: "516 Compat"
+  - code_imp: "Added more OD pragmas and code fixes pertaining to them"
+  - maptweak: "Fixed duplicate platforms on several maps"
+  - maptweak: "Fixed plane edits on Golden Arrow and Almayer"

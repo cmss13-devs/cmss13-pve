@@ -23,10 +23,10 @@
 	muzzleflash_icon_state = "muzzle_flash_double"
 
 	muzzle_flash_pos = list(
-		"1" = list(1, 5),
-		"2" = list(1, -30),
-		"4" = list(17, 3),
-		"8" = list(-17, 3)
+		"1" = list(1, 11),
+		"2" = list(1, -36),
+		"4" = list(23, 3),
+		"8" = list(-23, 3)
 	)
 
 	scatter = 1

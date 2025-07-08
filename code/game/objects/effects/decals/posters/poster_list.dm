@@ -66,7 +66,7 @@ Template
 /datum/poster/poster_12
 	icon_state="poster12"
 	name = "'Miss January' pinup"
-	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Roxanne Straski. She was the January 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_13
 	icon_state="poster13"
@@ -86,12 +86,12 @@ Template
 /datum/poster/poster_16
 	icon_state="poster16"
 	name = "'Miss July' pinup"
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_17
 	icon_state="poster17"
 	name = "'Miss April' pinup"
-	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_18
 	icon_state="poster18"
@@ -151,7 +151,7 @@ Template
 /datum/poster/poster_29
 	icon_state="poster29"
 	name = "'Miss February' pinup"
-	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that."
+	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in Playboy Magazine. Don't ask how you know that."
 
 /datum/poster/poster_30
 	icon_state="poster30"
@@ -191,7 +191,7 @@ Template
 /datum/poster/poster_37
 	icon_state="poster37"
 	name = "Pepsi Cola"
-	desc = "This poster depicts the logo for Pepsi Cola. Pepsi is a soft drink that never really made it off of Earth. It's odd to see a poster advertising it way out here. Maybe someone just likes the logo. They've claimed to be the taste of a new generation for about 200 years."
+	desc = "This poster depicts the logo for Pepsi Cola."
 
 /datum/poster/poster_38
 	icon_state="poster38"
@@ -213,3 +213,54 @@ Template
 	icon_state="poster41"
 	name = "Falling Falcons"
 	desc = "Promotional material for the 2nd Company of the 2nd Battalion of the 4th Brigade, the Falling Falcons. Designed by an unknown artist and printed in an effort to bolster the ranks of the Falling Falcons."
+
+/datum/poster/upp_1
+	icon_state="upp_poster_1"
+	name = "The Stars Are Ours"
+	desc = "A giant man wearing an EVA suit holds fast with a waving flag of the UPP."
+
+/datum/poster/upp_2
+	icon_state="upp_poster_2"
+	name = "The Stars Are Ours"
+	desc = "A stylized depiction of the Solar System and the stars."
+
+/datum/poster/upp_3
+	icon_state="upp_poster_3"
+	name = "Trust in the Strength of the Union"
+	desc = "A stylized depiction of the UPP star."
+
+/datum/poster/upp_4
+	icon_state="upp_poster_4"
+	name = "Through the Union Our Power is Secured"
+	desc = "A stylized depiction of the UPP's flag and the words, 'Our Unity is the dream of all Peoples. Trust in the strength of the Union.'"
+
+/datum/poster/upp_5
+	icon_state="upp_poster_5"
+	name = "We Forge a Path into the Stars"
+	desc = "The head of a man in a UPPAC EVA suit smiles looking not at you, but up to the right of the poster."
+
+/datum/poster/upp_6
+	icon_state="upp_poster_6"
+	name = "Our Militaries Secures Our Future"
+	desc = "A UPPAC Ground Forces soldier stands, rifle at the ready with a defiant and steel-eyed look on his face. The UPP star is in the background."
+
+/datum/poster/upp_7
+	icon_state="upp_poster_7"
+	name = "The People's Armed Collective Is Our Backbone"
+	desc = "UPPAC Ground Forces soldiers, one of whom is a woman and none of whom have a clear race, stare forward stoically."
+
+/datum/poster/upp_7/written_8
+	icon_state="upp_poster_8"
+	name = "The People's Armed Collective Is Our Backbone"
+	desc = "UPPAC Ground Forces soldiers, one of whom is a woman and none of whom have a clear race, stare forward stoically. The poster reads, 'The People's Armed Collective represent us all in the sacred war of liberation and defense of the People's Union."
+
+/datum/poster/upp_9
+	icon_state="upp_poster_9"
+	name = "Ever Vigilant Against Capitalist Forces"
+	desc = "A decrepit and desiccated, near claw-like hand reaches towards a stylized solar star shaped into the UPP star. The poster reads, 'Even in its death throes, we must remain vigilant of the encroachment of capitalist forces."
+
+
+/datum/poster/upp_10
+	icon_state="upp_poster_10"
+	name = "Ever Vigilant Against the Stooges of Capitalism and Imperialism"
+	desc = "A warped screaming eagle made to look like a vulture bears its talons over Earth which has the UPP roundel super-imposed over it. The poster reads, 'The UA will not break the resolve of the people."

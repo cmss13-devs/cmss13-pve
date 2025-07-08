@@ -33,7 +33,7 @@
 	icon_living = "parrot_fly"
 	icon_dead = "parrot_dead"
 	mob_size = MOB_SIZE_SMALL
-
+	status_flags = parent_type::status_flags & ~CANPUSH
 	speak = list("Hi","Hello!","Cracker?","BAWWWWK george mellons griffing me")
 	speak_emote = list("squawks","says","yells")
 	emote_hear = list("squawks","bawks")
@@ -695,7 +695,7 @@
 		message = copytext(message,2)
 
 	if(length(message) >= 2)
-		var/channel_prefix = copytext(message, 1 ,3)
+		var/channel_prefix = lowertext(copytext(message, 1, 3))
 		message_mode = GLOB.department_radio_keys[channel_prefix]
 
 	if(copytext(message,1,2) == ":")

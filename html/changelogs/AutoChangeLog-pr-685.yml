@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Liquid bottle versions of IA, MB & KD are available in the corpsman advanced medications vendor"
+  - balance: "Hypospray vials upped from 30u capacity to 60u"

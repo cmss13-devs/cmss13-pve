@@ -1,0 +1,9 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Replaces the M46C with the XM46A, a sidegrade to the M41A that was too expensive for mainstream adoption."
+  - rscdel: "As above, the C version is gone"
+  - bugfix: "Ammends the items the small pouch can carry, so the MARSOC preset actually gets their spare shotgun shells on spawn-in"
+  - code_imp: "Gutted the CO ID-lock from the M46 rifle, leaving just the IFF system in place with adjustments"
+  - imageadd: "New sprites for the M46, bringing it in-line with the current pallete used by the M41A"
+  - imagedel: "Removes the old sprites for the M46"

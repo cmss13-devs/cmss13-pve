@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Stop Atom Narrates sticking around forever if the thing being narrated was destroy. Mostly turfs."

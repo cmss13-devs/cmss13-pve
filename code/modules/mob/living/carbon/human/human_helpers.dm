@@ -201,7 +201,7 @@
 	if(istype(brain))
 		return TRUE
 	return FALSE
-
+f
 /mob/living/carbon/human/has_eyes()
 	var/datum/internal_organ/eyes = LAZYACCESS(internal_organs_by_name, "eyes")
 	if(istype(eyes) && !eyes.cut_away)
@@ -210,7 +210,7 @@
 
 
 /mob/living/carbon/human/is_mob_restrained(check_grab = TRUE)
-	if(check_grab && pulledby && pulledby.grab_level >= GRAB_AGGRESSIVE)
+	if(check_grab && pulledby && pulledby.grab_level > GRAB_PASSIVE && pulledby.grab_level != GRAB_XENO)
 		return TRUE
 	if (handcuffed)
 		return TRUE

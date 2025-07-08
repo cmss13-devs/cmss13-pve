@@ -1,7 +1,7 @@
 
 /obj/item/storage/box/m56_system
 	name = "\improper M56 smartgun system case"
-	desc = "A large case containing an M56B Smartgun, M56 combat harness, head mounted sight and powerpack.\nDrag this sprite into you to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing an M56A2 Smartgun, M56 combat harness, head mounted sight and powerpack.\nDrag this sprite into you to open it up! NOTE: You cannot put items back inside this case."
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "kit_case"
 	w_class = SIZE_HUGE
@@ -14,7 +14,7 @@
 	. = ..()
 	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
 	new /obj/item/weapon/gun/smartgun(src)
-	new /obj/item/clothing/glasses/night/m56_goggles(src)
+	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
 	new /obj/item/smartgun_battery(src)
 	for(var/i in 1 to 3)
 		new /obj/item/ammo_magazine/smartgun(src)
@@ -84,3 +84,40 @@
 		overlays += image(icon, "smartgun")
 	else
 		icon_state = "kit_case_e"
+
+/obj/item/storage/box/personalcase
+	name = "personal weapon case"
+	desc = "A secure case with dactyle lock containing someone's valuable personal weapon."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "personalcase"
+	w_class = SIZE_HUGE
+	storage_slots = 4
+	slowdown = 1
+	can_hold = list()
+	foldable = FALSE
+	var/owner
+	var/locked = TRUE
+
+/obj/item/storage/box/personalcase/update_icon()
+	icon_state = "[initial(icon_state)][locked]"
+
+/obj/item/storage/box/personalcase/attackby(obj/item/W as obj, mob/user)
+	if(!locked)
+		..()
+	else
+		to_chat(user, SPAN_DANGER("[src] is locked!"))
+
+/obj/item/storage/box/personalcase/show_to(mob/user as mob)
+	if(!locked)
+		..()
+	else if(user.real_name == owner)
+		locked = FALSE
+		to_chat(user, SPAN_NOTICE("You unlock your personal weapon case."))
+		..()
+	else
+		to_chat(user, SPAN_DANGER("[src] is locked!"))
+
+/obj/item/storage/box/personalcase/proc/assign_owner(new_owner)
+	owner = new_owner
+	name = "\improper [owner]'s personal weapon case"
+	desc = "A secure case with dactyle lock containing [owner]'s valuable personal weapon."

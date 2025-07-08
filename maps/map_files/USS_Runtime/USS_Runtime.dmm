@@ -97,10 +97,6 @@
 /obj/effect/landmark/start/researcher,
 /turf/open/floor/almayer/plating,
 /area/event)
-"M" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
-/turf/open/floor/almayer/plating,
-/area/event)
 "N" = (
 /obj/effect/landmark/start/nurse,
 /turf/open/floor/almayer/plating,
@@ -229,7 +225,7 @@ a
 A
 l
 L
-M
+b
 b
 b
 b

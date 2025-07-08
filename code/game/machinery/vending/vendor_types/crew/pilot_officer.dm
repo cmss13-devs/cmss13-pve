@@ -10,7 +10,7 @@
 
 	listed_products = list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("M4RA Battle Rifle", 4, /obj/item/weapon/gun/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Battle Rifle", 4, /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M39 Submachine Gun", 4, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M37A2 Pump Shotgun", 4, /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
 		list("M41A Pulse Rifle MK2", 4, /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
@@ -19,7 +19,7 @@
 		list("Box Of Buckshot Shells (12g)", 12, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
 		list("Box Of Flechette Shells (12g)", 12, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
 		list("Box Of Shotgun Slugs (12g)", 12, /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
-		list("M4RA Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle/m4ra, VENDOR_ITEM_REGULAR),
+		list("M49A Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M39 HV Magazine (10x20mm)", 24, /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
 		list("M41A Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 
@@ -44,8 +44,8 @@
 		list("UTILITIES", -1, null, null),
 		list("Combat Flashlight", 4, /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("M5 Bayonet", 4, /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
-		list("M89-S Signal Flare Pack", 1, /obj/item/storage/box/m94/signal, VENDOR_ITEM_REGULAR),
-		list("M94 Marking Flare pack", 10, /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR)
+		list("M89-S Signal Flare Pack", 1, /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare pack", 10, /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/pilot_officer/populate_product_list(scale)
@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pilot_officer, list(
 		list("Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("M30 Tactical Helmet", 0, /obj/item/clothing/head/helmet/upp/marinepilot, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Leather Satchel", 0, /obj/item/storage/backpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
-		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
+		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("M70 Flak Jacket", 0, /obj/item/clothing/suit/armor/vest/pilot, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pilot_officer, list(
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M4RA AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m4ra/ap, null, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 Extended Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/extended, null, VENDOR_ITEM_REGULAR),
 		list("M41A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),
@@ -153,7 +153,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 		list("Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Patrol Cap", 0, /obj/item/clothing/head/cmcap, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Leather Satchel", 0, /obj/item/storage/backpack/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
-		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
+		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("M70 Flak Jacket", 0, /obj/item/clothing/suit/armor/vest/pilot, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_dropship_crew_chief, list(
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("AMMUNITION", 0, null, null, null),
-		list("M4RA AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m4ra/ap, null, VENDOR_ITEM_REGULAR),
+		list("M49A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 AP Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/ap, null, VENDOR_ITEM_REGULAR),
 		list("M39 Extended Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/extended, null, VENDOR_ITEM_REGULAR),
 		list("M41A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/ap, null, VENDOR_ITEM_REGULAR),

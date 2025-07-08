@@ -1,0 +1,5 @@
+author: "nauticall"
+delete-after: True
+changes:
+  - rscadd: "Added an ammo box of special buckshot ammo. Admin/GM spawn only."
+  - imageadd: "Made ammo boxes more distinguishable by adding stripes and recoloring some boxes."

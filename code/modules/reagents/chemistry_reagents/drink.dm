@@ -124,19 +124,19 @@
 	name = "Watermelon Juice"
 	id = "watermelonjuice"
 	description = "Delicious juice made from watermelon."
-	color = "#863333" // rgb: 134, 51, 51
+	color = "#a71d1d" // rgb: 167, 29, 29
 
 /datum/reagent/drink/lemonjuice
 	name = "Lemon Juice"
 	id = "lemonjuice"
 	description = "This juice is VERY sour."
-	color = "#863333" // rgb: 175, 175, 0
+	color = "#d1db42" // rgb: 209, 219, 66
 
 /datum/reagent/drink/banana
 	name = "Banana Juice"
 	id = "banana"
 	description = "The raw essence of a banana."
-	color = "#863333" // rgb: 175, 175, 0
+	color = "#e4c439" // rgb: 228, 196, 57
 
 /datum/reagent/drink/potato_juice
 	name = "Potato Juice"
@@ -187,11 +187,25 @@
 	description = "An opaque white liquid made from soybeans."
 	color = "#DFDFC7" // rgb: 223, 223, 199
 
+/datum/reagent/drink/milk/coconut
+	name = "Coconut Milk"
+	id = "coconutmilk"
+	description = "A very light, half opague milk from coconuts, barely has any taste on its own."
+	color = "#DFDFC7" // rgb: 223, 223, 199
+	chemclass = CHEM_CLASS_NONE
+	flags = REAGENT_NO_GENERATION
+
 /datum/reagent/drink/milk/cream
 	name = "Cream"
 	id = "cream"
 	description = "The fatty, still liquid part of milk. Why don't you mix this with sum scotch, eh?"
 	color = "#DFD7AF" // rgb: 223, 215, 175
+
+/datum/reagent/drink/milk/chocolate
+	name = "Chocolate Milk"
+	id = "chocolatemilk"
+	description = "An opaque brown liquid made with the produce of the mammary glands of mammals mixed with sugar, cocoa."
+	color = "#4b3b2f" // rgb: 223, 215, 175
 
 /datum/reagent/drink/milk/eggnog
 	name = "Eggnog"
@@ -295,8 +309,16 @@
 	adj_drowsy = -3
 
 /datum/reagent/drink/cold/space_cola
-	name = "Space Cola"
+	name = "Coca-Cola"
 	id = "cola"
+	description = "A refreshing beverage."
+	reagent_state = LIQUID
+	color = "#100800" // rgb: 16, 8, 0
+	adj_drowsy = -3
+
+/datum/reagent/drink/cold/pepsi
+	name = "Pepsi"
+	id = "pepsi"
 	description = "A refreshing beverage."
 	reagent_state = LIQUID
 	color = "#100800" // rgb: 16, 8, 0
@@ -325,28 +347,26 @@
 	M.drowsyness = 0
 
 /datum/reagent/drink/cold/spacemountainwind
-	name = "Mountain Wind"
+	name = "Mountain Dew"
 	id = "spacemountainwind"
-	description = "Blows right through you like a space wind."
+	description = "The favoured drink of all true keyboard warriors."
 	color = "#102000" // rgb: 16, 32, 0
 	adj_drowsy = -7
 	adj_sleepy = -1
 
 /datum/reagent/drink/cold/dr_gibb
-	name = "Dr. Gibb"
+	name = "Dr Pepper"
 	id = "dr_gibb"
-	description = "A delicious blend of 42 different flavours"
-	color = "#102000" // rgb: 16, 32, 0
+	description = "A delicious blend of 23 different flavours"
+	color = "#110b03" // rgb: 16, 32, 0
 	adj_drowsy = -6
 
 /datum/reagent/drink/cold/space_up
-	name = "Space-Up"
+	name = "7-UP"
 	id = "space_up"
-	description = "Tastes like a hull breach in your mouth."
-	color = "#202800" // rgb: 32, 40, 0
+	description = "Friend to many a cocktail."
+	color = "#677c12" // rgb: 32, 40, 0
 	adj_temp = 0
-
-
 
 //BEER//
 
@@ -376,7 +396,6 @@
 /datum/reagent/drink/coffee/on_mob_life(mob/living/M)
 	. = ..()
 	if(!.) return
-	M.make_jittery(5)
 	if(adj_temp > 0 && holder)
 		holder.remove_reagent("frostoil", 10*REAGENTS_METABOLISM)
 
@@ -456,7 +475,16 @@
 	color = "#104038" // rgb: 16, 64, 56
 	adj_temp = 0
 
-
+/datum/reagent/drink/tea_leaves
+	name = "Tea leaves"
+	id = "tea_leaves"
+	description = "Black tea leaves, freeze dried."
+	color = "#1a2b1c" // rgb: 16, 16, 0
+	adj_dizzy = -2
+	adj_drowsy = -1
+	adj_sleepy = -3
+	chemclass = CHEM_CLASS_NONE
+	flags = REAGENT_NO_GENERATION
 
 //OTHER//
 
@@ -666,4 +694,10 @@
 	chemclass = CHEM_CLASS_RARE
 	adj_temp = 5
 
-
+/datum/reagent/drink/bugjuice
+	name = "Bug Juice"
+	id = "bugjuice"
+	description = "Soda drink made from all kinds of insects, very nutritious."
+	nutriment_factor = 2 * FOOD_METABOLISM
+	color = "#2ca314" // rgb: 48, 32, 0
+	chemclass = CHEM_CLASS_RARE

@@ -1,0 +1,2 @@
+/obj/effect/decal/strata_decals/grime/grime4{plane=-6} : /obj/effect/decal/strata_decals/grime/grime4/game_plane{@OLD;plane=@SKIP;}
+/obj/@SUBTYPES{plane=@ANY} : /obj/@SUBTYPES{@OLD;plane=@SKIP;}

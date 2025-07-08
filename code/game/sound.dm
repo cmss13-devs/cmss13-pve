@@ -416,11 +416,11 @@
 			if("gun_silenced")
 				sound = pick('sound/weapons/gun_silenced_shot1.ogg','sound/weapons/gun_silenced_shot2.ogg')
 			if("gun_pulse")
+				sound = pick('sound/weapons/gun_m41a_1f.ogg','sound/weapons/gun_m41a_2f.ogg','sound/weapons/gun_m41a_3f.ogg','sound/weapons/gun_m41a_4f.ogg','sound/weapons/gun_m41a_5f.ogg','sound/weapons/gun_m41a_6f.ogg')
+			if("gun_oldpulse")
 				sound = pick('sound/weapons/gun_m41a_1.ogg','sound/weapons/gun_m41a_2.ogg','sound/weapons/gun_m41a_3.ogg','sound/weapons/gun_m41a_4.ogg','sound/weapons/gun_m41a_5.ogg','sound/weapons/gun_m41a_6.ogg')
 			if("gun_smartgun")
 				sound = pick('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')
-			if("gun_smartgun_rattle")
-				sound = pick('sound/weapons/gun_smartgun1_rattle.ogg', 'sound/weapons/gun_smartgun2_rattle.ogg', 'sound/weapons/gun_smartgun3_rattle.ogg', 'sound/weapons/gun_smartgun4_rattle.ogg')
 			if("gun_jam_rack")
 				sound = pick('sound/weapons/handling/gun_jam_rack_1.ogg', 'sound/weapons/handling/gun_jam_rack_2.ogg', 'sound/weapons/handling/gun_jam_rack_3.ogg')
 			//A:CM gun sounds
@@ -519,6 +519,8 @@
 				sound = pick('sound/effects/bone_break1.ogg','sound/effects/bone_break2.ogg','sound/effects/bone_break3.ogg','sound/effects/bone_break4.ogg','sound/effects/bone_break5.ogg','sound/effects/bone_break6.ogg','sound/effects/bone_break7.ogg')
 			if("plush")
 				sound = pick('sound/items/plush1.ogg', 'sound/items/plush2.ogg', 'sound/items/plush3.ogg')
+			if("whistle")
+				sound = pick('sound/misc/whistle1.ogg','sound/misc/whistle2.ogg','sound/misc/whistle3.ogg')
 			//misc mobs
 			if("cat_meow")
 				sound = pick('sound/voice/cat_meow_1.ogg','sound/voice/cat_meow_2.ogg','sound/voice/cat_meow_3.ogg','sound/voice/cat_meow_4.ogg','sound/voice/cat_meow_5.ogg','sound/voice/cat_meow_6.ogg','sound/voice/cat_meow_7.ogg')

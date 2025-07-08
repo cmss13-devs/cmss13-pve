@@ -1,0 +1,17 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds the M230 LLRB & M72A2 HIPF grenades and a WP mortar shell"
+  - rscadd: "UPP smoke grenades, along with a rifle-mounted grenade launcher & impact rounds for it."
+  - rscadd: "A new generic teargas grenade, along with a marine equiv"
+  - rscdel: "The old M66 teargas code has been removed"
+  - admin: "Added the WP mortar rounds to the fire support menu"
+  - qol: "Grenade packets can be folded flat once emptied"
+  - qol: "Packet sprites overhauled with overlays & such on a base sprite"
+  - balance: "The M60 WPSI & M77 HIAM now both have dual-fusing functionality. M60 WPSI generates shrapnel on detonation"
+  - balance: "Smoke effects from grenades and the new mortar shell linger much longer than they did previously"
+  - balance: "Frag mortar shells are no longer woefully shit"
+  - balance: "Many grenades had their blast radius & shrapnel radius adjusted to not be quite so hyperlethal in CQC"
+  - spellcheck: "'box of flashlight' -> 'box of flashlights' in gear vendor"
+  - imageadd: "Sprite for the M72A2 grenade, M66 teargas grenade & WP mortar shell"
+  - maptweak: "The Chapev recieves one rifle-GL per squad along with rounds for it in the vendors, & some boxes of smokes grenades in the cargo bay."

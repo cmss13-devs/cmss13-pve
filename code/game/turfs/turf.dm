@@ -63,6 +63,12 @@
 	///Lazylist of movable atoms providing opacity sources.
 	var/list/atom/movable/opacity_sources
 
+	/// Is fishing allowed on this turf
+	var/fishing_allowed = FALSE
+
+	///hybrid lights affecting this turf
+	var/tmp/list/atom/movable/lighting_mask/hybrid_lights_affecting
+
 /turf/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE) // this doesn't parent call for optimisation reasons
 	if(flags_atom & INITIALIZED)
@@ -104,6 +110,11 @@
 	return INITIALIZE_HINT_NORMAL
 
 /turf/Destroy(force)
+	if(hybrid_lights_affecting)
+		for(var/atom/movable/lighting_mask/mask as anything in hybrid_lights_affecting)
+			LAZYREMOVE(mask.affecting_turfs, src)
+		hybrid_lights_affecting.Cut()
+
 	. = QDEL_HINT_IWILLGC
 	if(!changing_turf)
 		stack_trace("Incorrect turf deletion")
@@ -581,6 +592,8 @@
 			return "It is underground. The ceiling above is made of thin metal. Doesn't look like it's going to stop much."
 		if(CEILING_UNDERGROUND_METAL_BLOCK_CAS)
 			return "It is underground. The ceiling above is made of metal.  Can probably stop most ordnance."
+		if(CEILING_HULL_METAL)
+			return "The ceiling above is thick, braced metal. It'll take some serious firepower to break through that."
 		if(CEILING_DEEP_UNDERGROUND)
 			return "It is deep underground. The cavern roof lies above. Nothing is getting through that."
 		if(CEILING_DEEP_UNDERGROUND_METAL)
@@ -861,4 +874,6 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	// T.update_atom_colour()
 	if(T.dir != dir)
 		T.setDir(dir)
+	if(T.name != name)
+		T.name = name
 	return T

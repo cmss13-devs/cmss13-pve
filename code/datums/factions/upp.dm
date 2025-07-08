@@ -96,14 +96,13 @@
 /datum/faction/upp/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),
-		list("Type 64 Submachinegun", 20, /obj/item/weapon/gun/smg/bizon/upp, null, VENDOR_ITEM_REGULAR),
+		list("AG80 Submachinegun", 20, /obj/item/weapon/gun/rifle/ag80, null, VENDOR_ITEM_REGULAR),
 		list("Type 71 Pulse Rifle", 30, /obj/item/weapon/gun/rifle/type71, null, VENDOR_ITEM_REGULAR),
-		list("Type 71 Pulse Rifle Carbine", 30, /obj/item/weapon/gun/rifle/type71/carbine, null, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", 0, null, null, null),
-		list("Type 64 Helical Magazine (7.62x19mm)", 5, /obj/item/ammo_magazine/smg/bizon, null, VENDOR_ITEM_REGULAR),
-		list("Type 71 AP Magazine (10x31mm)", 15, /obj/item/ammo_magazine/rifle/type71/ap, null, VENDOR_ITEM_REGULAR),
-		list("Type 71 Magazine (10x31mm)", 5, /obj/item/ammo_magazine/rifle/type71, null, VENDOR_ITEM_REGULAR),
+		list("AG80 Magazine (7.62x19mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
+		list("Type 71 AP Magazine (10x27mm)", 15, /obj/item/ammo_magazine/rifle/type71/ap, null, VENDOR_ITEM_REGULAR),
+		list("Type 71 Magazine (10x27mm)", 5, /obj/item/ammo_magazine/rifle/type71, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", 0, null, null, null),
 		list("Type 73 Pistol", 25, /obj/item/weapon/gun/pistol/t73, null, VENDOR_ITEM_REGULAR),
@@ -127,7 +126,7 @@
 		list("Vertical Grip", 15, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
-		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/m94, null, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 3, /obj/item/storage/box/flare, null, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 7, /obj/item/explosive/grenade/smokebomb, null, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", 3, /obj/item/attachable/bayonet/upp, null, VENDOR_ITEM_REGULAR),
 	)
@@ -135,14 +134,13 @@
 /datum/faction/upp/get_antag_guns_sorted_equipment()
 	return list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("Type 64 Submachinegun", 20, /obj/item/weapon/gun/smg/bizon/upp, VENDOR_ITEM_REGULAR),
+		list("AG80 Submachinegun", 20, /obj/item/weapon/gun/rifle/ag80, null, VENDOR_ITEM_REGULAR),
 		list("Type 71 Pulse Rifle", 20, /obj/item/weapon/gun/rifle/type71, VENDOR_ITEM_REGULAR),
-		list("Type 71 Pulse Rifle Carbine", 20, /obj/item/weapon/gun/rifle/type71/carbine, VENDOR_ITEM_REGULAR),
 
 		list("PRIMARY AMMUNITION", -1, null, null),
-		list("Type 64 Helical Magazine (7.62x19mm)", 60, /obj/item/ammo_magazine/smg/bizon, VENDOR_ITEM_REGULAR),
-		list("Type 71 AP Magazine (10x31mm)", 60, /obj/item/ammo_magazine/rifle/type71/ap, VENDOR_ITEM_REGULAR),
-		list("Type 71 Magazine (10x31mm)", 60, /obj/item/ammo_magazine/rifle/type71, VENDOR_ITEM_REGULAR),
+		list("AG80 Magazine (7.62x19mm)", 5, /obj/item/ammo_magazine/rifle/ag80, null, VENDOR_ITEM_REGULAR),
+		list("Type 71 AP Magazine (10x27mm)", 60, /obj/item/ammo_magazine/rifle/type71/ap, VENDOR_ITEM_REGULAR),
+		list("Type 71 Magazine (10x27mm)", 60, /obj/item/ammo_magazine/rifle/type71, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("Type 73 Pistol", 20, /obj/item/weapon/gun/pistol/t73, VENDOR_ITEM_REGULAR),
@@ -155,7 +153,7 @@
 		list("NP92 Magazine (9x18mm Makarov)", 40, /obj/item/ammo_magazine/pistol/np92, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", -1, null, null),
-		list("M94 Marking Flare Pack", 20, /obj/item/storage/box/m94, VENDOR_ITEM_RECOMMENDED),
+		list("M94 Marking Flare Pack", 20, /obj/item/storage/box/flare, VENDOR_ITEM_RECOMMENDED),
 		list("Smoke Grenade", 5, /obj/item/explosive/grenade/smokebomb, VENDOR_ITEM_REGULAR),
 		list("Type 80 Bayonet", 40, /obj/item/attachable/bayonet/upp, VENDOR_ITEM_REGULAR),
 	)

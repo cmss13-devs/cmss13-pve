@@ -1,7 +1,7 @@
 /datum/equipment_preset/usa
 	name = "US Army"
 	faction = FACTION_ARMY
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the soldiers their radios
@@ -58,55 +58,65 @@
 	skills = /datum/skills/trooper
 
 /datum/equipment_preset/usa/trooper/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/army(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
 
-/datum/equipment_preset/usa/trooper/grenadier
-	name = parent_type::name + " (grenadier)"
+/datum/equipment_preset/usa/grenadier
 	name = "Army Grenadier"
 	assignment = JOB_ARMY_PROPIPE
 	rank = JOB_ARMY_PROPIPE
-	role_comm_title = "GRNDR"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "GRDR"
+	skills = /datum/skills/trooper
 
-/datum/equipment_preset/usa/trooper/grenadier/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/army, WEAR_WAIST)
+/datum/equipment_preset/usa/grenadier/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/incendiary, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/incendiary, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/army(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/grenade/army(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/incendiary(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
-	..()
 
 
 /datum/equipment_preset/usa/marksman
@@ -114,36 +124,34 @@
 	assignment = JOB_ARMY_MARKSMAN
 	rank = JOB_ARMY_MARKSMAN
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "MRKMN"
+	role_comm_title = "DM"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//Trooper but with a scoped rifle
 
 /datum/equipment_preset/usa/marksman/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/poncho/green/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/poncho/green/army(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m4ra/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m4ra/incendiary, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ap(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/incendiary(new_human), WEAR_IN_R_STORE)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/marksman/lesser_rank
@@ -156,32 +164,30 @@
 	assignment = JOB_ARMY_GUNNER
 	rank = JOB_ARMY_GUNNER
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "LGNR"
+	role_comm_title = "L-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//trooper with a big gun, no fancy skills
 
 /datum/equipment_preset/usa/gunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/army(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41e2ap, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/army(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/folding_barricade/three, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/folding_barricade/three(new_human), WEAR_BACK)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/gunner/lesser_rank
@@ -194,29 +200,29 @@
 	assignment = JOB_ARMY_SMARTGUNNER
 	rank = JOB_ARMY_SMARTGUNNER
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "HGNR"
+	role_comm_title = "H-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/heavygunner
 
 /datum/equipment_preset/usa/heavygunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner/black, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner/black(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/army/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/army/full(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/heavygunner/lesser_rank
@@ -229,32 +235,33 @@
 	assignment = JOB_ARMY_ATFIRE
 	rank = JOB_ARMY_ATFIRE
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "AT GNR."
+	role_comm_title = "AT-Gnr"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper	//Trooper with a toob, nothing fancy needed
 
 /datum/equipment_preset/usa/ATgunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/army(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/army, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine/army(new_human), WEAR_BACK)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/ATgunner/loader
@@ -262,17 +269,16 @@
 	assignment = JOB_ARMY_ATLOAD
 	rank = JOB_ARMY_ATLOAD
 	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "AT LDR."
+	role_comm_title = "AT-Ldr"
 
 /datum/equipment_preset/usa/ATgunner/loader/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack/army, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/wp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack/army(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/wp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
 	..()
 
@@ -287,31 +293,32 @@
 	skills = /datum/skills/sapper
 
 /datum/equipment_preset/usa/sapper/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyalt(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/engikit/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
 
 
@@ -320,33 +327,63 @@
 	assignment = JOB_ARMY_MT
 	rank = JOB_ARMY_MT
 	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "T. Eng."
+	role_comm_title = "TechEng"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/mainttech
 
 /datum/equipment_preset/usa/mainttech/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/black, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/black(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/engikit/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full_barbed_wire(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool(new_human), WEAR_IN_BACK)
+
+
+/datum/equipment_preset/usa/cargotech
+	name = "Army Logistics Supply Specialist"
+	assignment = JOB_ARMY_CT
+	rank = JOB_ARMY_CT
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "LogiSpc"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/cargotech
+
+/datum/equipment_preset/usa/cargotech/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/cargo(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/fingerless(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/yellow(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 
 
 /datum/equipment_preset/usa/medic
@@ -359,36 +396,65 @@
 	skills = /datum/skills/medic
 
 /datum/equipment_preset/usa/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/intel/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/md/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/medic/army, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/medic/army(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
 
+/datum/equipment_preset/usa/tank
+	name = "Army Vehicle Crewman"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_ARMY_TANK_CREW
+	rank = JOB_ARMY_TANK_CREW
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "VeCr"
+	skills = /datum/skills/tank_crew
+
+/datum/equipment_preset/usa/tank/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyalt(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
+	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/nco
 	name = "Army Fireteam Leader"
@@ -400,27 +466,28 @@
 	skills = /datum/skills/nco
 
 /datum/equipment_preset/usa/nco/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army/masterkey(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large/buckshot, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/shotgun/large/buckshot(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/twohanded/breacher(new_human), WEAR_BACK)
 	spawn_army_fluff_items(new_human)
 
 
@@ -434,30 +501,31 @@
 	skills = /datum/skills/snco
 
 /datum/equipment_preset/usa/snco/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/army(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/army, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94/signal, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/first_responder/full(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto/army(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare/signal(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive(new_human), WEAR_IN_BACK)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/snco/lesser_rank
@@ -470,35 +538,31 @@
 	assignment = JOB_ARMY_LT
 	rank = JOB_ARMY_LT
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Plt. Off."
+	role_comm_title = "PltOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 
 /datum/equipment_preset/usa/lt/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/army(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/infantry(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/md/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
 	spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/usa/lt/lesser_rank
@@ -511,38 +575,35 @@
 	assignment = JOB_ARMY_INTEL
 	rank = JOB_ARMY_INTEL
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Intel Off."
+	role_comm_title = "IntelOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 
 /datum/equipment_preset/usa/intelofficer/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/fountain, WEAR_R_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/spook, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/fountain(new_human), WEAR_R_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	add_combat_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army/spook(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/medium/rto/intel/army, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/notepad, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/md/army(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/armyleader(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/socom, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/army(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/socom(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/ap, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig/army, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig/army(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/notepad(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/usa/intelofficer/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
@@ -554,31 +615,58 @@
 	assignment = JOB_ARMY_RESEARCHER
 	rank = JOB_ARMY_RESEARCHER
 	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "Science Off."
+	role_comm_title = "SciOff"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/lt
 	idtype = /obj/item/card/id/silver
 
 /datum/equipment_preset/usa/researcher/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap, WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/army/command(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/researcher, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/labcoat/researcher(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/commander, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 
 /datum/equipment_preset/usa/researcher/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
 
 
+/datum/equipment_preset/usa/cargoofficer
+	name = "Army Logistics Supply Officer"
+	assignment = JOB_ARMY_QM
+	rank = JOB_ARMY_QM
+	paygrades = list(PAY_SHORT_AO2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "LogiOff"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/cargoofficer
+
+/datum/equipment_preset/usa/cargoofficer/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/qm_suit(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/fingerless(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big/orange(new_human), WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/army(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing(new_human), WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/blue(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/army(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)

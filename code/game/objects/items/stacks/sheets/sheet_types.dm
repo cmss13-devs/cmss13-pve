@@ -12,8 +12,8 @@
  */
 GLOBAL_LIST_INIT_TYPED(metal_recipes, /datum/stack_recipe, list ( \
 	new/datum/stack_recipe("barbed wire", /obj/item/stack/barbed_wire, 1, 1, 20, time = 1 SECONDS, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED), \
-	new/datum/stack_recipe("metal barricade", /obj/structure/barricade/metal, 4, time = 2 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED, min_time = 1 SECONDS), \
-	new/datum/stack_recipe("folding metal barricade", /obj/structure/barricade/plasteel/metal, 6, time = 3 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, min_time = 1.5 SECONDS), \
+	new/datum/stack_recipe("metal barricade", /obj/structure/barricade/metal, 4, time = 2 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED, flags = CAN_MAKE_BARRICADE, min_time = 1 SECONDS), \
+	new/datum/stack_recipe("folding metal barricade", /obj/structure/barricade/plasteel/metal, 6, time = 3 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, flags = CAN_MAKE_BARRICADE, min_time = 1.5 SECONDS), \
 	new/datum/stack_recipe("handrail", /obj/structure/barricade/handrail, 2, time = 2 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_TRAINED, min_time = 1 SECONDS), \
 	null, \
 	new/datum/stack_recipe("apc frame", /obj/item/frame/apc, 2), \
@@ -96,8 +96,8 @@ GLOBAL_LIST_INIT_TYPED(metal_recipes, /datum/stack_recipe, list ( \
  * Plasteel
  */
 GLOBAL_LIST_INIT_TYPED(plasteel_recipes, /datum/stack_recipe, list ( \
-	new/datum/stack_recipe("folding plasteel barricade", /obj/structure/barricade/plasteel, 8, time = 4 SECONDS, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, min_time = 2 SECONDS),
-	new/datum/stack_recipe("plasteel barricade", /obj/structure/barricade/metal/plasteel, 6, time = 8 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, min_time = 2 SECONDS),
+	new/datum/stack_recipe("folding plasteel barricade", /obj/structure/barricade/plasteel, 8, time = 4 SECONDS, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, flags = CAN_MAKE_BARRICADE, min_time = 2 SECONDS),
+	new/datum/stack_recipe("plasteel barricade", /obj/structure/barricade/metal/plasteel, 6, time = 8 SECONDS, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI, flags = CAN_MAKE_BARRICADE, min_time = 2 SECONDS),
 	null, \
 	new/datum/stack_recipe("reinforced window frame", /obj/structure/window_frame/colony/reinforced, 5, time = 40, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1, skill_req = SKILL_CONSTRUCTION, skill_lvl = SKILL_CONSTRUCTION_ENGI),
 	null, \
@@ -151,13 +151,14 @@ GLOBAL_LIST_INIT_TYPED(wood_recipes, /datum/stack_recipe, list ( \
 	 */
 	new/datum/stack_recipe("campfire", /obj/structure/prop/brazier/frame/full/campfire, 5, time = 15, one_per_turf = ONE_TYPE_PER_TURF, on_floor = TRUE), \
 	new/datum/stack_recipe("wooden chair", /obj/structure/bed/chair/wood/normal, 1, time = 10, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
-	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 20, one_per_turf = ONE_TYPE_PER_BORDER, on_floor = 1), \
+	new/datum/stack_recipe("wooden barricade", /obj/structure/barricade/wooden, 5, time = 20, one_per_turf = ONE_TYPE_PER_BORDER, flags = CAN_MAKE_BARRICADE, on_floor = 1), \
 	new/datum/stack_recipe("wooden crate", /obj/structure/closet/coffin/woodencrate, 5, time = 15, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
 	new/datum/stack_recipe("wooden door", /obj/structure/mineral_door/wood, 10, time = 20, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
 	new/datum/stack_recipe("coffin", /obj/structure/closet/coffin, 5, time = 15, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
 	new/datum/stack_recipe("baseball bat", /obj/item/weapon/baseballbat, 10, time = 20, on_floor = 1), \
 	new/datum/stack_recipe("wooden cross", /obj/structure/prop/wooden_cross, 2, time = 10, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
-	new/datum/stack_recipe("wooden pole", /obj/item/weapon/pole, 3, time = 10, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1) \
+	new/datum/stack_recipe("wooden pole", /obj/item/weapon/pole, 3, time = 10, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1), \
+	new/datum/stack_recipe("fishing pole",/obj/item/fishing_pole, 25, time = 20, one_per_turf = ONE_TYPE_PER_TURF, on_floor = 1) \
 	))
 
 /obj/item/stack/sheet/wood
@@ -249,9 +250,9 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		new/datum/stack_recipe("empty magazine box (L42A Incen)", /obj/item/ammo_box/magazine/l42a/incen/empty), \
 		new/datum/stack_recipe("empty magazine box (L42A LE)", /obj/item/ammo_box/magazine/l42a/le/empty), \
 		null, \
-		new/datum/stack_recipe("empty magazine box (M4RA)", /obj/item/ammo_box/magazine/m4ra/empty), \
-		new/datum/stack_recipe("empty magazine box (M4RA AP)", /obj/item/ammo_box/magazine/m4ra/ap/empty), \
-		new/datum/stack_recipe("empty magazine box (M4RA Incen)", /obj/item/ammo_box/magazine/m4ra/incen/empty), \
+		new/datum/stack_recipe("empty magazine box (M49A)", /obj/item/ammo_box/magazine/m49a/empty), \
+		new/datum/stack_recipe("empty magazine box (M49A AP)", /obj/item/ammo_box/magazine/m49a/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (M49A Incen)", /obj/item/ammo_box/magazine/m49a/incen/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (M41A)", /obj/item/ammo_box/magazine/empty), \
 		new/datum/stack_recipe("empty magazine box (M41A AP)", /obj/item/ammo_box/magazine/ap/empty), \
@@ -317,6 +318,13 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		new/datum/stack_recipe("empty box of combat flashlights", /obj/item/ammo_box/magazine/misc/flashlight/combat/empty), \
 		new/datum/stack_recipe("empty box of High-Capacity Power Cells", /obj/item/ammo_box/magazine/misc/power_cell/empty), \
 		null, \
+		new/datum/stack_recipe("empty box of UPP rations", /obj/item/ammo_box/magazine/misc/mre/upp/empty), \
+		new/datum/stack_recipe("empty box of WY rations", /obj/item/ammo_box/magazine/misc/mre/wy/empty), \
+		new/datum/stack_recipe("empty box of WY emergency food packs", /obj/item/ammo_box/magazine/misc/mre/wy/empty), \
+		new/datum/stack_recipe("empty box of PMC rations", /obj/item/ammo_box/magazine/misc/mre/pmc/empty), \
+		new/datum/stack_recipe("empty box of FSR rations", /obj/item/ammo_box/magazine/misc/mre/fsr/empty), \
+		new/datum/stack_recipe("empty box of TWE rations", /obj/item/ammo_box/magazine/misc/mre/twe/empty), \
+		null, \
 		new/datum/stack_recipe("empty magazine box (Desert Eagle)", /obj/item/ammo_box/magazine/deagle/empty), \
 		new/datum/stack_recipe("empty magazine box (Desert Eagle Heavy)", /obj/item/ammo_box/magazine/deagle/super/empty), \
 		new/datum/stack_recipe("empty magazine box (Desert Eagle High-Impact)", /obj/item/ammo_box/magazine/deagle/super/highimpact/empty), \
@@ -370,8 +378,8 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		new/datum/stack_recipe("empty magazine box (Type73)", /obj/item/ammo_box/magazine/type73/empty), \
 		new/datum/stack_recipe("empty magazine box (Type73 High-Impact)", /obj/item/ammo_box/magazine/type73/impact/empty), \
 		null, \
-		new/datum/stack_recipe("empty rifle ammo box (10x31mm)", /obj/item/ammo_box/rounds/type71/empty), \
-		new/datum/stack_recipe("empty rifle ammo box (10x31mm AP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (10x27mm)", /obj/item/ammo_box/rounds/type71/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (10x27mm AP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
 
 
 		)) \

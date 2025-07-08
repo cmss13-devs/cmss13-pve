@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 27
+#define SAVEFILE_VERSION_MAX 28
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -172,6 +172,15 @@
 			preferred_armor = "Random"
 		S["preferred_armor"] << preferred_armor
 
+	if(savefile_version < 28)
+		// Removes TOGGLE_MIDDLE_MOUSE_CLICK (1<<2) and replaces it with a new pref
+		var/toggle_prefs = 0
+		S["toggle_prefs"] >> toggle_prefs
+		if(toggle_prefs & (1<<2))
+			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_MIDDLE
+		else
+			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_SHIFT
+
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
 
@@ -234,6 +243,7 @@
 	S["toggles_langchat"] >> toggles_langchat
 	S["toggles_sound"] >> toggles_sound
 	S["toggle_prefs"] >> toggle_prefs
+	S["xeno_ability_click_mode"] >> xeno_ability_click_mode
 	S["dual_wield_pref"] >> dual_wield_pref
 	S["toggles_flashing"] >> toggles_flashing
 	S["toggles_ert"] >> toggles_ert
@@ -305,6 +315,10 @@
 	S["tooltips"] >> tooltips
 	S["key_bindings"] >> key_bindings
 
+	S["tgui_lock"] >> tgui_lock
+	S["tgui_fancy"] >> tgui_fancy
+	S["window_scale"] >> window_scale
+
 	var/list/remembered_key_bindings
 	S["remembered_key_bindings"] >> remembered_key_bindings
 
@@ -321,6 +335,7 @@
 	toggles_langchat = sanitize_integer(toggles_langchat, 0, SHORT_REAL_LIMIT, initial(toggles_langchat))
 	toggles_sound = sanitize_integer(toggles_sound, 0, SHORT_REAL_LIMIT, initial(toggles_sound))
 	toggle_prefs = sanitize_integer(toggle_prefs, 0, SHORT_REAL_LIMIT, initial(toggle_prefs))
+	xeno_ability_click_mode = sanitize_integer(xeno_ability_click_mode, 1, XENO_ABILITY_CLICK_MAX, initial(xeno_ability_click_mode))
 	dual_wield_pref = sanitize_integer(dual_wield_pref, 0, 2, initial(dual_wield_pref))
 	toggles_flashing= sanitize_integer(toggles_flashing, 0, SHORT_REAL_LIMIT, initial(toggles_flashing))
 	toggles_ert = sanitize_integer(toggles_ert, 0, SHORT_REAL_LIMIT, initial(toggles_ert))
@@ -369,6 +384,11 @@
 	affiliation = sanitize_inlist(affiliation, FACTION_ALLEGIANCE_USCM_COMMANDER, initial(affiliation))
 	yautja_status = sanitize_inlist(yautja_status, GLOB.whitelist_hierarchy + list("Elder"), initial(yautja_status))
 	synth_status = sanitize_inlist(synth_status, GLOB.whitelist_hierarchy, initial(synth_status))
+
+	window_scale = sanitize_integer(window_scale, FALSE, TRUE, initial(window_scale))
+	tgui_lock = sanitize_integer(tgui_lock, FALSE, TRUE, initial(tgui_lock))
+	tgui_fancy = sanitize_integer(tgui_fancy, FALSE, TRUE, initial(tgui_fancy))
+
 	key_bindings = sanitize_keybindings(key_bindings)
 	remembered_key_bindings = sanitize_islist(remembered_key_bindings, null)
 	hotkeys = sanitize_integer(hotkeys, FALSE, TRUE, TRUE)
@@ -441,6 +461,7 @@
 	S["toggles_langchat"] << toggles_langchat
 	S["toggles_sound"] << toggles_sound
 	S["toggle_prefs"] << toggle_prefs
+	S["xeno_ability_click_mode"] << xeno_ability_click_mode
 	S["dual_wield_pref"] << dual_wield_pref
 	S["toggles_flashing"] << toggles_flashing
 	S["toggles_ert"] << toggles_ert
@@ -505,6 +526,10 @@
 	S["no_radials_preference"] << no_radials_preference
 	S["no_radial_labels_preference"] << no_radial_labels_preference
 	S["custom_cursors"] << custom_cursors
+
+	S["tgui_fancy"] << tgui_fancy
+	S["tgui_lock"] << tgui_lock
+	S["window_scale"] << window_scale
 
 	S.Unlock()
 
@@ -615,6 +640,9 @@
 
 	S["ds_camo"] >> dropship_camo
 	S["plat_name"] >> platoon_name
+	S["ds_name"] >> dropship_name
+
+	S["personal_weapon"] >> personal_weapon
 
 	S.Unlock()
 
@@ -667,6 +695,9 @@
 
 	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
+	dropship_name = dropship_name ? sanitize_text(dropship_name, initial(dropship_name)) : "Midway"
+
+	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list+"None", initial(personal_weapon))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -781,6 +812,9 @@
 
 	S["ds_camo"] << dropship_camo
 	S["plat_name"] << platoon_name
+	S["ds_name"] << dropship_name
+
+	S["personal_weapon"] << personal_weapon
 
 	S.Unlock()
 
@@ -818,7 +852,7 @@
 
 /datum/preferences/proc/announce_conflict(list/notadded)
 	to_chat(owner, SPAN_ALERTWARNING("<u>Keybinding Conflict</u>"))
-	to_chat(owner, SPAN_ALERTWARNING("There are new <a href='?_src_=prefs;preference=viewmacros'>keybindings</a> that default to keys you've already bound. The new ones will be unbound."))
+	to_chat(owner, SPAN_ALERTWARNING("There are new <a href='byond://?_src_=prefs;preference=viewmacros'>keybindings</a> that default to keys you've already bound. The new ones will be unbound."))
 	for(var/datum/keybinding/conflicted as anything in notadded)
 		to_chat(owner, SPAN_DANGER("[conflicted.category]: [conflicted.full_name] needs updating"))
 

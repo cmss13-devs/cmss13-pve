@@ -1,0 +1,6 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Adds the Soldier, a new xeno caste for GMs to use. A high lethality, fast xenomorph with crowd control abilities and the motivation to attack human characters in a critical condition."
+  - code_imp: "Swaps the order of sanity checks in the Headbite xeno ability"
+  - bugfix: "Stops flares shot into the sky with the Unique-Action from being able to be melted or destroyed."

@@ -186,6 +186,11 @@
 /// Cancels all running cloaking effects on target
 #define COMSIG_MOB_EFFECT_CLOAK_CANCEL "mob_effect_cloak_cancel"
 
+#define COMSIG_MOB_DROP_ITEM "mob_drop_item"
+
 #define COMSIG_MOB_END_TUTORIAL "mob_end_tutorial"
 
 #define COMSIG_MOB_NESTED "mob_nested"
+
+/// From /modules/animations/animations_library.dm and /code/modules/mob/mob.dm
+#define COMSIG_MOB_ANIMATING "mob_animating"

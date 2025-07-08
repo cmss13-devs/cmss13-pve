@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Corporal rank variant to the squad leader role"
+  - rscdel: "Squad sergeant as a USCM role title is gone in favour of the generalised Squad Leader instead. UPP retain it as their E4 equiv reads as 'Junior sergeant' or something to that effect"
+  - qol: "New players will automatically be set to the lower rank option on jobs until they change it. Existing players should be unaffected by this"
+  - ui: "References to Squad Sergeant in the UIs replaced with Squad Leader instead"
+  - code_imp: "Code for the above stuff added/edited as needed"

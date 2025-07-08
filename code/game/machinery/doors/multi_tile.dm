@@ -4,10 +4,11 @@
 	damage_cap = 2600 // Bigger = more endurable
 	assembly_type = /obj/structure/airlock_assembly/multi_tile
 
-/obj/structure/machinery/door/airlock/multi_tile/close() //Nasty as hell O(n^2) code but unfortunately necessary
+/obj/structure/machinery/door/airlock/multi_tile/close(forced = FALSE) //Nasty as hell O(n^2) code but unfortunately necessary
 	for(var/turf/turf_tile in locs)
 		for(var/obj/vehicle/multitile/vehicle_tile in turf_tile)
-			if(vehicle_tile) return 0
+			addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+			return FALSE
 
 	return ..()
 
@@ -279,10 +280,10 @@
 		return
 	..()
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock(forced=FALSE)
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock(forced = FALSE)
 	if(is_reserved_level(z) && !forced)
 		return // in orbit
-	..()
+	return ..()
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/attack_alien(mob/living/carbon/xenomorph/xeno)
 	if(xeno.hive_pos != XENO_QUEEN)
@@ -358,9 +359,17 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
 	name = "\improper Cyclone crew hatch"
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc
+	name = "\improper Cash Flow crew hatch"
+	icon = 'icons/obj/structures/doors/dropshippmc_side2.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
 	name = "\improper Akademia Nauk cargo door"
 	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc
+	name = "\improper Cash Flow cargo door"
+	icon = 'icons/obj/structures/doors/dropshippmc_cargo.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor
 	name = "bulkhead blast door"
@@ -395,7 +404,7 @@
 	open(TRUE)
 	lock(TRUE)
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/close()
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/close(forced = FALSE)
 	. = ..()
 	for(var/turf/self_turf as anything in locs)
 		var/turf/projected = get_ranged_target_turf(self_turf, throw_dir, 1)
@@ -645,3 +654,38 @@
 	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
 	opacity = FALSE
 	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/strata
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_2x1.dmi'
+	opacity = TRUE
+	glass = FALSE
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_green.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
+	glass = TRUE
+
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_grey.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_utility.dmi'
+	openspeed = 6

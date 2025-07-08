@@ -630,11 +630,6 @@
 	icon_state = "clothtable"
 	table_prefix = "cloth"
 
-/obj/structure/surface/table/reinforced/aicore
-	name = "AI interface table"
-	desc = "A rather fancy looking table for the ship's AI core."
-	icon_state = "aicoretable"
-
 /obj/structure/surface/table/reinforced/aicore/update_icon()
 	return
 

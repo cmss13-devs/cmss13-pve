@@ -58,8 +58,6 @@ GLOBAL_VAR_INIT(players_preassigned, 0)
 											/datum/job/antag,
 											/datum/job/special,
 											/datum/job/special/provost,
-											/datum/job/special/uaac,
-											/datum/job/special/uaac/tis,
 											/datum/job/special/uscm,
 											)
 	var/squads_all[] = typesof(/datum/squad) - /datum/squad
@@ -744,8 +742,12 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/predalien
 		if(XENO_CASTE_HELLHOUND)
 			M = /mob/living/carbon/xenomorph/hellhound
+		if(XENO_CASTE_SOLDIER)
+			M = /mob/living/carbon/xenomorph/soldier
 		if(XENO_CASTE_KING)
 			M = /mob/living/carbon/xenomorph/king
+		if(RUNNER_ACIDER)
+			M = /mob/living/carbon/xenomorph/runner/acider
 	return M
 
 

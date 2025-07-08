@@ -488,8 +488,8 @@
 /area/almayer/engineering/airmix)
 "ahc" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/almayer,
 /area/almayer/living/cafeteria_officer)
 "ahh" = (
@@ -5968,10 +5968,10 @@
 /obj/structure/closet/secure_closet{
 	name = "\improper Execution Firearms"
 	},
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/weapon/gun/rifle/m4ra,
-/obj/item/ammo_box/magazine/m4ra,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/weapon/gun/rifle/m49a,
+/obj/item/ammo_box/magazine/m49a,
 /turf/open/floor/almayer/plate,
 /area/almayer/shipboard/brig/execution_storage)
 "cnQ" = (
@@ -7206,7 +7206,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/hull/upper/u_f_s)
 "cMk" = (
-/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/machinery/cm_vending/clothing/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "cMl" = (
@@ -8550,8 +8550,8 @@
 /area/almayer/engineering/upper_engineering)
 "dkK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /obj/item/book/manual/chef_recipes,
 /obj/structure/sign/safety/coffee{
 	pixel_x = 15;
@@ -10651,7 +10651,7 @@
 	},
 /area/almayer/medical/containment/cell)
 "eap" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "eaz" = (
@@ -12217,8 +12217,8 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre,
-/obj/item/storage/box/uscm_mre,
+/obj/item/storage/box/mre,
+/obj/item/storage/box/mre,
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/squads/req)
 "eBE" = (
@@ -12337,7 +12337,7 @@
 	serial_number = 12
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	name = "'Miss July' Pinup";
 	serial_number = 16
@@ -12542,7 +12542,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/cm_vending/gear/sea,
+/obj/structure/machinery/cm_vending/gear/di,
 /turf/open/floor/almayer/plating/northeast,
 /area/almayer/shipboard/sea_office)
 "eHM" = (
@@ -14327,7 +14327,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/hallways/lower/port_midship_hallway)
 "fmt" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -18964,7 +18964,7 @@
 	pixel_y = 13
 	},
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -20646,7 +20646,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/upper/u_a_s)
 "hAn" = (
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle,
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -21100,7 +21100,7 @@
 /turf/open/floor/almayer,
 /area/almayer/hallways/lower/starboard_aft_hallway)
 "hIQ" = (
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle,
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/shipboard/brig/armory)
 "hIR" = (
@@ -21906,7 +21906,7 @@
 	pixel_x = 4;
 	pixel_y = 15
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 2
 	},
@@ -23789,8 +23789,7 @@
 "iDB" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
+	name = "\improper ARES Inner Chamber Shutters"
 	},
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/sign/safety/laser{
@@ -24126,7 +24125,7 @@
 /turf/open/floor/almayer/cargo,
 /area/almayer/living/offices)
 "iJF" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/starboard)
 "iJN" = (
@@ -24176,7 +24175,6 @@
 /turf/open/floor/wood/ship,
 /area/almayer/engineering/ce_room)
 "iKP" = (
-/obj/effect/landmark/start/pilot/cas_pilot,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/pilotbunks)
 "iKR" = (
@@ -24454,8 +24452,7 @@
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
 	id = "ARES JoeCryo";
-	name = "\improper ARES Synth Bay Shutters";
-	plane = -7
+	name = "\improper ARES Synth Bay Shutters"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply/no_boom{
 	dir = 4
@@ -24663,7 +24660,6 @@
 /turf/open/floor/almayer/test_floor4,
 /area/almayer/maint/upper/u_m_p)
 "iTD" = (
-/obj/effect/landmark/start/auxiliary_officer,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/living/bridgebunks)
 "iTI" = (
@@ -25451,8 +25447,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES StairsUpper";
-	name = "\improper ARES Core Shutters";
-	plane = -7
+	name = "\improper ARES Core Shutters"
 	},
 /obj/structure/disposalpipe/up/almayer{
 	dir = 2;
@@ -28428,9 +28423,9 @@
 /area/almayer/hallways/hangar)
 "kkT" = (
 /obj/structure/closet/coffin/woodencrate,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/item/stack/sheet/mineral/plastic/small_stack,
 /obj/item/frame/rack,
 /obj/item/frame/rack,
@@ -29259,7 +29254,7 @@
 /turf/open/floor/almayer_hull/outerhull_dir/east,
 /area/almayer/engineering/upper_engineering/starboard)
 "kzw" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -29271,7 +29266,7 @@
 /turf/open/floor/almayer/cargo,
 /area/almayer/squads/bravo)
 "kzC" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32
@@ -29719,8 +29714,7 @@
 "kJr" = (
 /obj/structure/surface/rack,
 /obj/effect/decal/cleanable/cobweb{
-	dir = 8;
-	plane = -6
+	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_container/spray/cleaner{
@@ -32057,7 +32051,7 @@
 /turf/open/floor/almayer/green/west,
 /area/almayer/hallways/lower/port_midship_hallway)
 "lxU" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/starboard_umbilical)
 "lxX" = (
@@ -33404,7 +33398,7 @@
 /area/almayer/living/briefing)
 "lUD" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/clothing/suit/space/compression/uscm,
+/obj/item/clothing/suit/space/pressure/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering/port)
 "lUP" = (
@@ -33498,8 +33492,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES ReceptStairs2";
-	name = "\improper ARES Reception Stairway Shutters";
-	plane = -7
+	name = "\improper ARES Reception Stairway Shutters"
 	},
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/almayer/command/airoom)
@@ -36928,7 +36921,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_a_s)
 "ncc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_x = 15;
 	pixel_y = -32
@@ -38305,7 +38298,7 @@
 	pixel_x = -3;
 	pixel_y = -5
 	},
-/obj/item/clothing/head/helmet/space/compression/uscm,
+/obj/item/clothing/head/helmet/space/pressure/uscm,
 /obj/item/cell/crap{
 	pixel_x = 7
 	},
@@ -39094,8 +39087,8 @@
 /turf/open/floor/almayer/sterile_green_side/northeast,
 /area/almayer/medical/medical_science)
 "nVr" = (
-/obj/item/storage/box/nade_box/tear_gas,
-/obj/item/storage/box/nade_box/tear_gas{
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas{
 	pixel_x = 3;
 	pixel_y = 5
 	},
@@ -39979,7 +39972,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "oju" = (
@@ -41264,7 +41257,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/engineering/upper_engineering)
 "oHm" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/hull/lower/l_f_p)
 "oHp" = (
@@ -42790,7 +42783,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/shipboard/brig/general_equipment)
 "pjT" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /turf/open/floor/almayer/plate,
 /area/almayer/hallways/lower/port_umbilical)
 "pkY" = (
@@ -43658,7 +43651,7 @@
 /turf/open/floor/carpet,
 /area/almayer/living/commandbunks)
 "pxK" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -43935,8 +43928,7 @@
 "pCT" = (
 /obj/structure/window/framed/almayer/aicore/hull/black/hijack_bustable,
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown{
-	dir = 4;
-	plane = -6
+	dir = 4
 	},
 /turf/open/floor/almayer/aicore/no_build,
 /area/almayer/command/airoom)
@@ -47947,8 +47939,7 @@
 /obj/structure/machinery/door/window/westright,
 /obj/structure/machinery/shower{
 	dir = 8;
-	layer = 3.10;
-	plane = -4
+	layer = 3.10
 	},
 /obj/item/tool/soap{
 	pixel_x = 2;
@@ -51837,7 +51828,7 @@
 /area/almayer/squads/alpha_bravo_shared)
 "spt" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/effect/spawner/random/tool,
 /obj/item/tool/hand_labeler,
 /obj/item/clipboard,
@@ -51969,9 +51960,7 @@
 	req_access = null;
 	req_one_access_txt = "91;92"
 	},
-/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore{
-	plane = -6
-	},
+/obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/almayer/command/airoom)
 "ssj" = (
@@ -55169,7 +55158,7 @@
 /turf/open/floor/almayer/orange,
 /area/almayer/engineering/lower)
 "tAl" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -55275,7 +55264,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/maint/upper/u_m_s)
 "tDc" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm{
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm{
 	isopen = 1;
 	starting_helmet_type = null;
 	starting_mask_type = null;
@@ -56718,7 +56707,7 @@
 /area/almayer/living/commandbunks)
 "uis" = (
 /obj/structure/sign/poster{
-	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in House Bunny Gentleman's Magazine. Don't ask how you know that.";
+	desc = "This poster features Audrey Rainwater standing in a jacuzzi. She was the July 2182 centerfold in Playboy Magazine. Don't ask how you know that.";
 	icon_state = "poster16";
 	layer = 3.3;
 	name = "'Miss July' Pinup";
@@ -57748,7 +57737,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/command/cic)
 "uyd" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
@@ -58266,7 +58255,7 @@
 /turf/open/floor/almayer/plate,
 /area/almayer/squads/bravo)
 "uHS" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/airlock{
 	pixel_y = -32
 	},
@@ -58400,8 +58389,7 @@
 /obj/effect/step_trigger/ares_alert/mainframe,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES Mainframe Left";
-	name = "\improper ARES Mainframe Shutters";
-	plane = -7
+	name = "\improper ARES Mainframe Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/almayer/no_build/test_floor4,
@@ -58656,7 +58644,7 @@
 /obj/structure/machinery/camera/autoname/almayer{
 	name = "ship-grade camera"
 	},
-/obj/structure/machinery/suit_storage_unit/compression_suit/uscm,
+/obj/structure/machinery/suit_storage_unit/pressure_suit/uscm,
 /obj/structure/sign/safety/hazard{
 	pixel_y = 32
 	},
@@ -61099,8 +61087,7 @@
 "vDP" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES StairsLower";
-	name = "\improper ARES Core Shutters";
-	plane = -7
+	name = "\improper ARES Core Shutters"
 	},
 /obj/effect/step_trigger/ares_alert/public{
 	alert_id = "AresStairs";
@@ -64134,8 +64121,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES StairsUpper";
-	name = "\improper ARES Core Shutters";
-	plane = -7
+	name = "\improper ARES Core Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown,
 /turf/open/floor/almayer/no_build/test_floor4,
@@ -65322,8 +65308,7 @@
 "xci" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
+	name = "\improper ARES Inner Chamber Shutters"
 	},
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
@@ -66004,8 +65989,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES ReceptStairs2";
-	name = "\improper ARES Reception Shutters";
-	plane = -7
+	name = "\improper ARES Reception Shutters"
 	},
 /turf/open/floor/almayer/no_build/test_floor4,
 /area/almayer/command/airoom)
@@ -66041,8 +66025,7 @@
 "xse" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES Interior";
-	name = "\improper ARES Inner Chamber Shutters";
-	plane = -7
+	name = "\improper ARES Inner Chamber Shutters"
 	},
 /obj/effect/step_trigger/ares_alert/core,
 /obj/structure/sign/safety/terminal{
@@ -66896,8 +66879,7 @@
 /obj/effect/step_trigger/ares_alert/mainframe,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "ARES Mainframe Right";
-	name = "\improper ARES Mainframe Shutters";
-	plane = -7
+	name = "\improper ARES Mainframe Shutters"
 	},
 /obj/structure/machinery/door/poddoor/almayer/blended/ai_lockdown/aicore,
 /turf/open/floor/almayer/no_build/test_floor4,

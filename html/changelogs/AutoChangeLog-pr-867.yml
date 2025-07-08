@@ -1,0 +1,4 @@
+author: "fira"
+delete-after: True
+changes:
+  - bugfix: "Fixed improper concurrent reading on map files, notably for Vans on Otogi."

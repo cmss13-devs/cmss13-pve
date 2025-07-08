@@ -489,6 +489,7 @@
 /obj/item/scalp
 	name = "scalp"
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	w_class = SIZE_TINY
 	icon_state = "scalp_1"
 	item_state = "scalp"
 	item_icons = list(

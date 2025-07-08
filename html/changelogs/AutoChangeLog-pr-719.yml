@@ -1,0 +1,18 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Smoke shell for the mortar"
+  - rscadd: "New smoke grenade subtypes with coloured smoke"
+  - rscadd: "Grenade boxes for the coloured smoke grenades & the HIPF starshell grenade"
+  - rscdel: "The starshell grenade packets in the squad gear vendor are gone"
+  - qol: "M5 RPG now has built-in limited view-boost miniscope"
+  - qol: "Type 71's GL module now uses the underbarrel slot, so the whiners can wheesht"
+  - qol: "WP smoke and normal smoke have differing shades"
+  - qol: "The M51A BFAB now 'detonates' on impact, giving a message about it jumping into the air before actually exploding"
+  - balance: "M5 RPG rockets adjusted in damage values & effect on target"
+  - balance: "UPP 40mm grenade rounds adjusted to make their single-shot nature worthwhile"
+  - balance: "M108 grenades are now viable to use in combat, rather than being purely utility"
+  - balance: "The M51A BFAB grenades have recieved tweaks to their damage to make them feel better to use. They still have a one second delay upon impact before detonation, so lead your shots well! Adjusted so hAI shouldn't be able to throw them back once they hit a tile too."
+  - balance: "Halve the range of the SADAR, so as to not result in some poor player being gibbed from 3 screens away from the firer should they miss their initial target"
+  - maptweak: "The garrow now has a box of starshell grenades in the armory, and one of the smoke grenade boxes in the cargo bay is swapped for a coloured smoke subtype"
+  - admin: "Smoke shell added to GM fire support menu"

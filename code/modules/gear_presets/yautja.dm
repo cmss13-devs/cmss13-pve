@@ -19,6 +19,8 @@
 	if(mob_client?.prefs)
 		new_human.h_style = mob_client.prefs.predator_h_style
 		new_human.skin_color = mob_client.prefs.predator_skin_color
+	if(new_human.get_ai_brain())
+		new_human.get_ai_brain().ignore_looting = TRUE
 
 /datum/equipment_preset/yautja/load_id(mob/living/carbon/human/new_human)
 	new_human.job = rank

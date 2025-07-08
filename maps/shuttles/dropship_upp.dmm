@@ -155,7 +155,7 @@
 	name = "\improper 'Akademia Nauk' weapons controls";
 	shuttle_tag = "dropship_upp";
 	faction = "UPP";
-	req_one_access = list(235,240)
+	req_one_access = list(230, 235,240)
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/strata/floor3/east,

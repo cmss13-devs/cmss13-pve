@@ -8,6 +8,7 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
 	attack_speed = 3
+	flags_human_ai = HEALING_ITEM
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/alien = FALSE
@@ -73,13 +74,33 @@
 				if(!do_after(user, 10, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					return 1
 
-
 		if(affecting.get_incision_depth())
 			to_chat(user, SPAN_NOTICE("[M]'s [affecting.display_name] is cut open, you'll need more than a bandage!"))
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+		//Packing Arterial Bleeding
+		var/time_to_take = 4 SECONDS
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				if(M == user)
+					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
+					time_to_take = 10 SECONDS
+				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+					if(I.has_been_bandaged)
+						return
+					possessive = "[user == M ? "your" : "\the [M]'s"]"
+					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+					user.affected_message(M,
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
+					I.has_been_bandaged = TRUE
+					use(1)
+					return FALSE
+
+
 		switch(affecting.bandage())
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -94,6 +115,16 @@
 			else
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
+
+/obj/item/stack/medical/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
 
 /obj/item/stack/medical/bruise_pack/two
 	amount = 2
@@ -175,6 +206,25 @@
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
 		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+		//Packing Arterial Bleeding
+		var/time_to_take = 2.5 SECONDS
+		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
+			if(!I.has_been_bandaged)
+				if(M == user)
+					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
+					time_to_take = 5 SECONDS
+				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
+					possessive = "[user == M ? "your" : "\the [M]'s"]"
+					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+					user.affected_message(M,
+					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
+					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
+					I.has_been_bandaged = TRUE
+					use(1)
+					return FALSE
+
+
 		switch(affecting.bandage(TRUE))
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -193,6 +243,45 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
+/obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			return TRUE
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BURN)
+				continue
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				return TRUE
+	return FALSE
+
+/obj/item/stack/medical/advanced/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
+			continue
+
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BURN)
+				continue
+
+			if(QDELETED(src))
+				return
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				user.zone_selected = limb.name
+				attack(target, user)
+				sleep(ai_brain.short_action_delay)
+
 /obj/item/stack/medical/advanced/bruise_pack/predator
 	name = "mending herbs"
 	singular_name = "mending herb"
@@ -202,6 +291,7 @@
 	heal_brute = 15
 	stack_id = "mending herbs"
 	alien = TRUE
+
 /obj/item/stack/medical/advanced/ointment/predator
 	name = "soothing herbs"
 	singular_name = "soothing herb"
@@ -211,6 +301,7 @@
 	heal_burn = 15
 	stack_id = "soothing herbs"
 	alien = TRUE
+
 /obj/item/stack/medical/advanced/ointment
 	name = "burn kit"
 	singular_name = "burn kit"
@@ -260,6 +351,33 @@
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
 
+/obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	if(issynth(target))
+		return FALSE
+
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BRUTE)
+				continue
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				return TRUE
+	return FALSE
+
+/obj/item/stack/medical/advanced/ointment/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		for(var/datum/wound/wound in limb.wounds)
+			if(wound.internal || wound.damage_type == BRUTE)
+				continue
+
+			if(QDELETED(src))
+				return
+
+			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
+				user.zone_selected = limb.name
+				attack(target, user)
+				sleep(ai_brain.short_action_delay)
+
 /obj/item/stack/medical/splint
 	name = "medical splints"
 	singular_name = "medical splint"
@@ -271,7 +389,7 @@
 
 	var/indestructible_splints = FALSE
 
-/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user)
+/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user, mob/living/carbon/target)
 	if(..()) return 1
 
 	if(user.action_busy)
@@ -317,3 +435,15 @@
 		if(affecting.apply_splints(src, user, M, indestructible_splints)) // Referenced in external organ helpers.
 			use(1)
 			playsound(user, 'sound/handling/splint1.ogg', 25, 1, 2)
+
+
+/obj/item/stack/medical/splint/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
+	for(var/obj/limb/limb as anything in target.limbs)
+		if(QDELETED(src))
+			return
+
+		if(limb.is_broken())
+			user.zone_selected = limb.name
+			attack(target, user)
+			sleep(ai_brain.short_action_delay)
+			continue

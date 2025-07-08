@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Dylovene autoinjector is now filled with the correct reagent"

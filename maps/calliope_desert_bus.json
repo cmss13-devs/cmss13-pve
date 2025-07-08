@@ -1,0 +1,14 @@
+{
+    "map_name": "Calliope Desert Bus",
+    "short_name": "Route 44",
+    "map_path": "map_files/Calliope_Desert_Bus",
+    "map_file": "Calliope_Desert_Bus.dmm",
+    "webmap_url": "Solaris",
+
+    "weather_holder": "/datum/weather_ss_map_holder/calliope_desert_bus",
+
+    "map_item_type": "/obj/item/map/big_red_map",
+
+    "camouflage": "desert"
+
+}

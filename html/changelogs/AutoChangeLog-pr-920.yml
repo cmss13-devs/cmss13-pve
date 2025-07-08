@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Incendiary buckshot has the correct pellet-spread type"
+  - balance: "Flechette now imparts a small knockback upon hit"
+  - balance: "Tweaks the incen buckshot projectile damage"

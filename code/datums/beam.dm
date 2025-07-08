@@ -155,9 +155,16 @@
 	if(! (prob(probability) && ishuman(AM)) )
 		return
 	var/mob/living/carbon/human/moving_human = AM
+	var/datum/internal_organ/eyes/E = moving_human.internal_organs_by_name["eyes"]
 	var/laser_protection = moving_human.get_eye_protection()
 	var/rand_laser_power = rand(EYE_PROTECTION_FLAVOR, strength)
 	if(rand_laser_power > laser_protection)
+		if(strength == EYE_PROTECTION_WELDING)
+			INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
+			moving_human.AdjustEyeBlur(12,20)
+			E.take_damage(rand(15, 25), TRUE)
+			visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] sears their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] flashes across your unprotected eyes for a split-second, blinding you!"))
+			return
 		//ouch!
 		INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
 		visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] moves across their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] moves across your unprotected eyes for a split-second!"))
@@ -180,6 +187,12 @@
 	alpha = 150
 	strength = EYE_PROTECTION_FLAVOR
 	probability = 5
+
+/obj/effect/ebeam/laser/plasma
+	name = "intense plasma beam"
+	alpha = 255
+	strength = EYE_PROTECTION_WELDING
+	probability = 80
 
 /obj/effect/ebeam/Destroy()
 	owner = null

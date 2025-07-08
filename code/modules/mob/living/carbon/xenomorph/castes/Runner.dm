@@ -106,7 +106,7 @@
 
 	add_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
 
-/mob/living/carbon/xenomorph/runner/stop_pulling()
+/mob/living/carbon/xenomorph/runner/stop_pulling(bumped_movement = FALSE)
 	. = ..()
 
 	remove_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
@@ -167,3 +167,15 @@
 	var/datum/action/xeno_action/onclick/xenohide/hide = get_action(bound_xeno, /datum/action/xeno_action/onclick/xenohide)
 	if(hide)
 		hide.post_attack()
+
+/mob/living/carbon/xenomorph/runner/acider
+	crit_health = 0
+
+/mob/living/carbon/xenomorph/runner/acider/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
+	. = ..()
+	playsound(src, 'sound/effects/acider.ogg', 100, TRUE, 30, falloff = 5)
+	var/datum/xeno_strain/strain_instance = new /datum/xeno_strain/acider()
+	strain_instance._add_to_xeno(src)
+
+/mob/living/carbon/xenomorph/runner/acider/init_movement_handler()
+	return new /datum/xeno_ai_movement(src)

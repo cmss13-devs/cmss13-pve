@@ -83,6 +83,16 @@
 	walltype = WALL_HULL
 	hull = 1 //Impossible to destroy or even damage. Used for outer walls that would breach into space, potentially some special walls
 
+/turf/closed/wall/almayer/outer/gear
+	icon_state = "almayer_elevator"
+	walltype = null
+	special_icon = 1
+
+/turf/closed/wall/almayer/outer/friegt
+	icon_state = "almayer_friegt"
+	walltype = null
+	special_icon = 1
+
 /turf/closed/wall/almayer/no_door_tile
 	tiles_with = list(/turf/closed/wall,/obj/structure/window/framed,/obj/structure/window_frame,/obj/structure/girder)
 
@@ -454,6 +464,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "bone_resin"
 	walltype = WALL_BONE_RESIN
 	hull = 1
+	unacidable = TRUE
 	desc = "A wall made of molted old resin. This place is more alive than you are."
 
 /turf/closed/wall/mineral/bone/is_weedable()
@@ -751,6 +762,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	blend_turfs = list(/turf/closed/wall/resin)
 	blend_objects = list(/obj/structure/mineral_door/resin)
 	repair_materials = list()
+	unacidable = TRUE
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/should_track_build = FALSE
 	var/datum/cause_data/construction_data
@@ -800,6 +812,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	damage_cap = HEALTH_WALL_XENO_THICK
 	icon_state = "thickresin"
 	walltype = WALL_THICKRESIN
+	unacidable = TRUE
 
 /turf/closed/wall/resin/tutorial
 	name = "tutorial resin wall"
@@ -1334,3 +1347,34 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	color = "#c5beb4"
 	desc = "Ancient beyond measure, these walls make up the hull of a vessel of non human origin. Despite this, they can be felled with plastic explosives like any other opaque blocker."
 	hull = 0
+
+/turf/closed/wall/upp_wall
+	name = "reinforced walls"
+	icon = 'icons/turf/walls/upp_green.dmi'
+	icon_state = "uppwall_interior"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	walltype = WALL_UPP_GREEN
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/upp_wall/hull
+	name = "ribbed hull walls"
+	icon = 'icons/turf/walls/upp_green.dmi'
+	icon_state = "uppwall_hull"
+	desc = "A thick and chunky metal wall covered in jagged ribs."
+	hull = 1
+
+/turf/closed/wall/upp_wall/grey
+	name = "reinforced walls"
+	icon = 'icons/turf/walls/upp_grey.dmi'
+	icon_state = "uppwall_interior"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	walltype = WALL_UPP_GREY
+	damage_cap = HEALTH_WALL_REINFORCED
+
+/turf/closed/wall/upp_wall/grey/hull
+	name = "ribbed hull walls"
+	icon = 'icons/turf/walls/upp_grey.dmi'
+	icon_state = "uppwall_hull"
+	desc = "A thick and chunky metal wall. The surface is barren and imposing."
+	hull = 1
+

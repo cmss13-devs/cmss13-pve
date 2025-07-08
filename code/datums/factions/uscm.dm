@@ -19,6 +19,8 @@
 			if(JOB_SQUAD_TEAM_LEADER) marine_rk = "tl"
 			if(JOB_SQUAD_MEDIC) marine_rk = "med"
 			if(JOB_SQUAD_SMARTGUN) marine_rk = "gun"
+			if(JOB_SQUAD_SPOTTER) marine_rk = "ass"
+			if(JOB_SQUAD_LOADER) marine_rk = "load"
 			if(JOB_XO) marine_rk = "xo"
 			if(JOB_CO) marine_rk = "co"
 			if(JOB_GENERAL) marine_rk = "general"
@@ -116,6 +118,10 @@
 				border_rk = "command"
 			if(JOB_CHIEF_REQUISITION)
 				marine_rk = "ro"
+			if(JOB_CARGO_CHIEF)
+				marine_rk = "cc"
+			if(JOB_ARMORER)
+				marine_rk = "armrr"
 			if(JOB_CARGO_TECH)
 				marine_rk = "ct"
 			if(JOB_CHIEF_ENGINEER)
@@ -136,7 +142,7 @@
 				border_rk = "command"
 			if(JOB_NURSE)
 				marine_rk = "nurse"
-			if(JOB_SEA)
+			if(JOB_DI)
 				marine_rk = "sea"
 				border_rk = "command"
 			if(JOB_SYNTH)
@@ -166,11 +172,9 @@
 			if(JOB_PROVOST_MARSHAL, JOB_PROVOST_CMARSHAL, JOB_PROVOST_SMARSHAL)
 				marine_rk = "pvm"
 				border_rk = "command"
-			// TIS
-			if(JOB_TIS_IO)
-				marine_rk = "tisio"
-			if(JOB_TIS_SA)
-				marine_rk = "tissa"
+			//CIA
+			if(JOB_CIA_LIAISON)
+				marine_rk = "cialo"
 			// Riot MPs
 			if(JOB_RIOT)
 				marine_rk = "rmp"
@@ -199,25 +203,13 @@
 				marine_rk = "wo_ro"
 			if(JOB_WO_PILOT)
 				marine_rk = "wo_mcrew"
-			// Colonial Marshals
-			if(JOB_CMB_TL)
-				marine_rk = "mar"
-				icon_prefix = "cmb_"
-			if(JOB_CMB)
-				marine_rk = "dep"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_SYN)
-				marine_rk = "syn"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_ICC)
-				marine_rk = "icc"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_OBS)
-				marine_rk = "obs"
-				icon_prefix = "cmb_"
 			// Check squad marines here too, for the unique ones
 			if(JOB_SQUAD_ENGI)
 				marine_rk = "engi"
+			if(JOB_SQUAD_SPOTTER)
+				marine_rk = "ass"
+			if(JOB_SQUAD_LOADER)
+				marine_rk = "load"
 			if(JOB_SQUAD_MEDIC)
 				marine_rk = "med"
 			if(JOB_SQUAD_SPECIALIST)

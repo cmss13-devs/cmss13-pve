@@ -71,6 +71,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///The generic "I'm a bad guy" access
 #define ACCESS_ILLEGAL_PIRATE 120
 
+//CIA-locked covert items
+#define ACCESS_CIA 125
+
 //=================================================
 
 //Weyland Yutani access levels (200-229)
@@ -86,6 +89,10 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///WY access given to field executives, like a marine liaison.
 #define ACCESS_WY_EXEC 207
 
+//theta
+#define ACCESS_PMC_SQUAD_ONE 208
+#define ACCESS_PMC_SQUAD_TWO 209
+
 #define ACCESS_WY_PMC 210
 #define ACCESS_WY_PMC_TL 211
 #define ACCESS_WY_ARMORY 212
@@ -95,6 +102,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_WY_LEADERSHIP 215
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
+
+#define ACCESS_PMC_GUNNER 217
+
 
 //=================================================
 

@@ -6,7 +6,9 @@
 
 /datum/ammo/bullet/smartgun
 	name = "smartgun bullet"
-	icon_state = "redbullet"
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	max_range = 12
@@ -43,6 +45,18 @@
 	penetration = ARMOR_PENETRATION_TIER_7
 	damage_armor_punch = 3
 
+/datum/ammo/bullet/smartgun/dirty/impdet
+	debilitate = list(0,0,0,3,0,0,0,1)
+
+	accurate_range = 22
+	accuracy = HIT_ACCURACY_TIER_3
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage_armor_punch = 5
+
+/datum/ammo/bullet/smartgun/dirty/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/smartgun/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks
 	name = "holo-targeting smartgun bullet"
 	damage = 30
@@ -67,9 +81,23 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	damage_armor_punch = 1
 
+/datum/ammo/bullet/smartgun/holo_target/impdet
+	name = "impact-detonating smartgun bullet"
+	icon_state = "bullet"
+
+	accurate_range = 12
+	accuracy = HIT_ACCURACY_TIER_2
+	damage = 25
+	penetration = ARMOR_PENETRATION_TIER_4
+
+/datum/ammo/bullet/smartgun/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/smartgun/m56_fpw
 	name = "\improper M56 FPW bullet"
-	icon_state = "redbullet"
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	max_range = 7
@@ -79,7 +107,9 @@
 
 /datum/ammo/bullet/smartgun/aa	//The base smartgun-bullet is kinda a woeful stand-in for AA cannon rounds, this should beef it up a bit more without being too OTT
 	name = "anti-aircraft bullet"
-	icon_state = "redbullet"
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
 	flags_ammo_behavior = AMMO_BALLISTIC
 
 	max_range = 18
@@ -89,7 +119,9 @@
 
 /datum/ammo/bullet/turret
 	name = "autocannon bullet"
-	icon_state = "redbullet" //Red bullets to indicate friendly fire restriction
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_COVER
 
 	accurate_range = 22
@@ -130,14 +162,19 @@
 
 /datum/ammo/bullet/machinegun/doorgun
 	flags_ammo_behavior = AMMO_BALLISTIC | AMMO_IGNORE_COVER
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 
 /datum/ammo/bullet/machinegun/auto // for M2C, automatic variant for M56D, stats for bullet should always be moderately overtuned to fulfill its ultra-offense + flank-push purpose
 	name = "heavy machinegun bullet"
 
+	icon_state = "bullet_large_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	accurate_range = 10
-	damage =  50
-	penetration = ARMOR_PENETRATION_TIER_6
-	accuracy = -HIT_ACCURACY_TIER_2 // 75 accuracy
+	damage =  80
+	penetration = ARMOR_PENETRATION_TIER_2
 	shell_speed = AMMO_SPEED_TIER_2
 	max_range = 15
 	effective_range_max = 7
@@ -150,12 +187,16 @@
 	name = "minigun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 	accuracy = -HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
 	accurate_range = 12
 	damage = 35
 	penetration = ARMOR_PENETRATION_TIER_6
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/minigun/New()
 	..()
@@ -169,9 +210,18 @@
 	if(MODE_HAS_FLAG(MODE_FACTION_CLASH))
 		damage = 15
 
+/datum/ammo/bullet/minigun/upp
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
 /datum/ammo/bullet/m60
 	name = "Mk70 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED //Red bullets to indicate friendly fire restriction
 
 	accuracy = HIT_ACCURACY_TIER_2
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
@@ -179,10 +229,14 @@
 	accurate_range = 12
 	damage = 45 //7.62x51 is scary
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/pkp
 	name = "machinegun bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
 
 	accuracy = HIT_ACCURACY_TIER_1
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8

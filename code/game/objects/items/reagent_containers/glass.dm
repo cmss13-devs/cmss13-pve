@@ -244,7 +244,7 @@
 	matter = list("metal" = 500)
 	attack_speed = 4
 	volume = 180
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 	splashable = FALSE
 	can_be_placed_into = list(
 		/obj/structure/machinery/chem_master/,
@@ -388,6 +388,14 @@
 /obj/item/reagent_container/glass/beaker/vial/sedative/Initialize()
 	. = ..()
 	reagents.add_reagent("chloralhydrate", 30)
+	update_icon()
+
+/obj/item/reagent_container/glass/beaker/vial/iron
+	name = "iron vial"
+
+/obj/item/reagent_container/glass/beaker/vial/iron/Initialize()
+	. = ..()
+	reagents.add_reagent("iron", 30)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/random
@@ -644,7 +652,7 @@
 	name = "janitorial bucket"
 	desc = "It's a large bucket that fits in a janitorial cart. Holds 500 units."
 	icon_state = "janibucket"
-	matter = list("metal" = 8000)	
+	matter = list("metal" = 8000)
 	w_class = SIZE_LARGE
 	volume = 500
 
@@ -657,6 +665,7 @@
 	icon_state = "rag"
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5)
+	splashable = FALSE
 	volume = 5
 	can_be_placed_into = null
 	flags_atom = FPRINT|OPENCONTAINER

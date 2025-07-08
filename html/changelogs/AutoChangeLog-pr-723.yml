@@ -1,0 +1,5 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Added employment record computers to the Golden Arrow, Chapaev and Rover. Added security record computers to the Chapeav and Rover."
+  - bugfix: "Fixed record length being truncated due to an oversight."

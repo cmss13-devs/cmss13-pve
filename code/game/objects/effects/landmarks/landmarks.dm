@@ -361,8 +361,6 @@
 	job = /datum/job/command/bridge/whiskey
 
 //****************************************** AUXILIARY - SUPPORT ************************************************/
-/obj/effect/landmark/start/whiskey/synthetic
-	job = /datum/job/civilian/synthetic/whiskey
 
 /obj/effect/landmark/start/whiskey/senior
 	job = /datum/job/command/senior  //Need to create a WO variant in the future
@@ -580,3 +578,17 @@
 /// Marks the bottom left of the tutorial zone.
 /obj/effect/landmark/tutorial_bottom_left
 	name = "tutorial bottom left"
+
+/obj/effect/landmark/personal_weapon
+	name = "personal weapon spawner"
+	desc = "Delete this pre-roundstart if you don't want marines to have any cool personal weapons!"
+	icon_state = "personal_weapon"
+	invisibility_value = INVISIBILITY_OBSERVER
+
+/obj/effect/landmark/personal_weapon/Initialize(mapload, ...)
+	. = ..()
+	GLOB.personal_weapon += src
+
+/obj/effect/landmark/personal_weapon/Destroy()
+	GLOB.personal_weapon -= src
+	return ..()

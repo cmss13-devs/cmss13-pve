@@ -75,10 +75,10 @@
 
 	empty = TRUE
 
-//-----------------------M39 Rifle Mag Boxes-----------------------
+//-----------------------Viper 9 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
-	name = "magazine box (M39 x 12)"
+	name = "magazine box (Viper 9 x 12)"
 	icon_state = "base_m39"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
@@ -91,7 +91,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/ap
-	name = "magazine box (AP M39 x 12)"
+	name = "magazine box (AP Viper 9 x 12)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/ap
@@ -100,7 +100,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/ext
-	name = "magazine box (Ext m39 x 10)"
+	name = "magazine box (Ext Viper 9 x 10)"
 	overlay_ammo_type = "_ext"
 	overlay_content = "_hv"
 	num_of_magazines = 10
@@ -110,7 +110,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/incen
-	name = "magazine box (Incen m39 x 12)"
+	name = "magazine box (Incen Viper 9 x 12)"
 	overlay_ammo_type = "_incen"
 	overlay_content = "_incen"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/incendiary
@@ -119,7 +119,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/le
-	name = "magazine box (LE m39 x 12)"
+	name = "magazine box (LE Viper 9 x 12)"
 	overlay_ammo_type = "_le"
 	overlay_content = "_le"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/le
@@ -128,7 +128,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/heap
-	name = "magazine box (HEAP m39 x 12)"
+	name = "magazine box (HEAP Viper 9 x 12)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/heap
@@ -136,53 +136,91 @@
 /obj/item/ammo_box/magazine/m39/heap/empty
 	empty = TRUE
 
-//-----------------------M4RA Battle Rifle Mag Boxes-----------------------
+//-----------------------M49A Battle Rifle Mag Boxes-----------------------
 
-/obj/item/ammo_box/magazine/m4ra
-	name = "magazine box (M4RA x 16)"
-	icon_state = "base_m4ra"
+/obj/item/ammo_box/magazine/m49a
+	name = "magazine box (M49A x 16)"
+	icon_state = "base_m49a"
 	flags_equip_slot = SLOT_BACK
-	overlay_gun_type = "_m4ra"
+	overlay_gun_type = "_m49a"
 	num_of_magazines = 16
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a
 
-/obj/item/ammo_box/magazine/m4ra/empty
+/obj/item/ammo_box/magazine/m49a/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/ap
-	name = "magazine box (AP M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/ap
+	name = "magazine box (AP M49A x 16)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/ap
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/ap
 
-/obj/item/ammo_box/magazine/m4ra/ap/empty
+/obj/item/ammo_box/magazine/m49a/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/ext
-	name = "magazine box (Ext M4RA x 12)"
+/obj/item/ammo_box/magazine/m49a/ext
+	name = "magazine box (Ext M49A x 12)"
 	overlay_ammo_type = "_ext"
 	num_of_magazines = 12
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/ext
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/ext
 
-/obj/item/ammo_box/magazine/m4ra/ext/empty
+/obj/item/ammo_box/magazine/m49a/ext/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/incen
-	name = "magazine box (Incen M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/incen
+	name = "magazine box (Incen M49A x 16)"
 	overlay_ammo_type = "_incen"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/incendiary
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/incendiary
 
-/obj/item/ammo_box/magazine/m4ra/incen/empty
+/obj/item/ammo_box/magazine/m49a/incen/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m4ra/heap
-	name = "magazine box (HEAP M4RA x 16)"
+/obj/item/ammo_box/magazine/m49a/heap
+	name = "magazine box (HEAP M49A x 16)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/m4ra/heap
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/heap
 
-/obj/item/ammo_box/magazine/m4ra/heap/empty
+/obj/item/ammo_box/magazine/m49a/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19
+	name = "magazine box (A19 HV M49A x 16)"
+	overlay_gun_type = "_a19"
+	overlay_ammo_type = "_hv"
+	overlay_content = "_hv"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom
+
+/obj/item/ammo_box/magazine/m49a/a19/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/impact
+	name = "magazine box (A19 Impact M49A x 16)"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/impact
+
+/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/incen
+	name = "magazine box (A19 Incen M49A x 16)"
+	overlay_ammo_type = "_incen"
+	overlay_content = "_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/incendiary
+
+/obj/item/ammo_box/magazine/m49a/a19/incen/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m49a/a19/pve
+	name = "magazine box (A19 DU M49A x 16)"
+	overlay_ammo_type = "_toxin"
+	overlay_content = "_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+
+/obj/item/ammo_box/magazine/m49a/a19/pve/empty
 	empty = TRUE
 
 //-----------------------XM51 Breaching Scattergun Mag Box-----------------------
@@ -430,6 +468,52 @@
 /obj/item/ammo_box/magazine/type71/heap/empty
 	empty = TRUE
 
+//-----------------------LARGE Type 71 Rifle Mag Boxes-----------------------
+/obj/item/ammo_box/magazine/type71/large
+	name = "magazine box (Type 71 x 32)"
+	icon_state = "base_upplarge"
+	overlay_ammo_type = null
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/type71
+	num_of_magazines = 32
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/type71/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/type71/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/type71/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/type71/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/type71/large/empty
+	empty = TRUE
+
+//-----------------------AG80 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/ag80
+	name = "magazine box (AG80 x 10)"
+	icon_state = "base_type64"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ag80"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 10
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80
+
+//-----------------------LARGE AG80 Rifle Mag Boxes-----------------------
+/obj/item/ammo_box/magazine/type71/large/ag80
+	name = "magazine box (AG80 x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80
+
 //-----------------------Nailgun Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/nailgun
@@ -451,7 +535,7 @@
 //-----------------------M56B Drum Box-----------------------
 
 /obj/item/ammo_box/magazine/m56b
-	name = "drum box (M56B x 8)"
+	name = "drum box (M56A2 x 8)"
 	icon_state = "base_m56b"
 	overlay_ammo_type = "_reg_heavy"
 	overlay_gun_type = "_sg"
@@ -520,7 +604,7 @@
 	overlay_ammo_type = "_reg_heavy"
 	overlay_gun_type = "_m41ae2"
 	overlay_content = "_m41ae2"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg
+	magazine_type = /obj/item/ammo_magazine/hpr_box
 	num_of_magazines = 8
 
 /obj/item/ammo_box/magazine/m41ae2/empty
@@ -530,7 +614,7 @@
 	name = "magazine box (M41AE2 Holo-Target x 8)"
 	overlay_ammo_type = "_holo_heavy"
 	overlay_content = "_m41ae2_holo"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg/holo_target
+	magazine_type = /obj/item/ammo_magazine/hpr_box/holo_target
 
 /obj/item/ammo_box/magazine/m41ae2/holo/empty
 	empty = TRUE
@@ -539,7 +623,7 @@
 	name = "magazine box (M41AE2 HEAP x 8)"
 	overlay_ammo_type = "_heap_heavy"
 	overlay_content = "_m41ae2_heap"
-	magazine_type = /obj/item/ammo_magazine/rifle/lmg/heap
+	magazine_type = /obj/item/ammo_magazine/hpr_box/heap
 
 /obj/item/ammo_box/magazine/m41ae2/heap/empty
 	empty = TRUE
@@ -582,13 +666,12 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/ap
-	name = "magazine box (M41A MK1 AP x 10)"
+	name = "magazine box (AP M41A MK1 x 10)"
 	overlay_ammo_type = "_ap_mk1"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/ap
 
 /obj/item/ammo_box/magazine/mk1/ap/empty
-	empty = TRUE
 
 /obj/item/ammo_box/magazine/mk1/heap
 	name = "magazine box (HEAP M41A MK1 X 10)"
@@ -606,6 +689,67 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
 
 /obj/item/ammo_box/magazine/mk1/rubber/empty
+	empty = TRUE
+
+//-----------------------LARGE M41A MK1 Rifle Mag Boxes-----------------------
+
+/obj/item/ammo_box/magazine/mk1/large
+	name = "magazine box (M41A MK1 x 32)"
+	icon_state = "base_large"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
+	num_of_magazines = 32
+	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/mk1/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/mk1/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/mk1/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/mk1/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/mk1/large/recon
+	name = "magazine box (M41A MK1 Recon x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/recon
+
+/obj/item/ammo_box/magazine/mk1/large/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/ap
+	name = "magazine box (AP M41A MK1 x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/ap
+
+/obj/item/ammo_box/magazine/mk1/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/heap
+	name = "magazine box (HEAP M41A MK1 x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/large/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/mk1/large/rubber
+	name = "magazine box (Rubber M41A MK1 x 32)"
+	overlay_ammo_type = "_rubberlarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/rubber
+
+/obj/item/ammo_box/magazine/mk1/large/rubber/empty
 	empty = TRUE
 
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------

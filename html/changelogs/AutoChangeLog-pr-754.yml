@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - balance: "Blood restoring medicine no longer depends on a minimum threshold of nutrition."

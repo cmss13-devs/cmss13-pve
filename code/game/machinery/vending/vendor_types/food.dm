@@ -1,9 +1,10 @@
 //------------CANTEEN MRE VENDOR---------------
 /obj/structure/machinery/cm_vending/sorted/marine_food
-	name = "\improper ColMarTech Food Vendor"
-	desc = "USCM Food Vendor, containing standard military Prepared Meals."
-	icon_state = "marine_food"
-	hackable = TRUE
+	name = "\improper NestleCo AutoChef"
+	desc = "An autochef food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need. Inedible-looking sludge is passed through a variety of heaters, re-shapers, and solidifiers before being artificially flavored to create something that looks and tastes mostly edible."
+	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
+	icon_state = "food"
+	hackable = FALSE
 	unacidable = FALSE
 	unslashable = FALSE
 	wrenchable = TRUE
@@ -23,6 +24,24 @@
 		list("Metal Flask", 10, /obj/item/reagent_container/food/drinks/flask, VENDOR_ITEM_REGULAR),
 		list("USCM Flask", 5, /obj/item/reagent_container/food/drinks/flask/marine, VENDOR_ITEM_REGULAR),
 		list("W-Y Flask", 5, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
+	)
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp
+	name = "\improper food dispenser"
+	desc = "An food dispenser, capable of distributing food containing all the essential vitamins and nutrients anyone could ever need."
+	icon_state = "uppfood"
+
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/populate_product_list(scale)
+	listed_products = list(
+		list("PREPARED MEALS", -1, null, null),
+		list("UPP Prepared Meal (Luncheon)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal6, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Shrimp)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal7, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Cuban Rice)", 15, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal8, VENDOR_ITEM_REGULAR),
+		list("UPP Prepared Meal (Meatballs)", 0, /obj/item/reagent_container/food/snacks/mre_pack/upp/meal9, VENDOR_ITEM_REGULAR),
+		list("UPP Survival Ration", 50, /obj/item/storage/box/mre/upp, VENDOR_ITEM_REGULAR),
+		list("DRINKS", -1, null, null),
+		list("Water", 10, /obj/item/reagent_container/food/drinks/water, VENDOR_ITEM_REGULAR),
+		list("Tea", 10, /obj/item/reagent_container/food/drinks/tea/upp, VENDOR_ITEM_REGULAR),
 	)
 
 /obj/structure/machinery/cm_vending/sorted/marine_food/tutorial
@@ -46,6 +65,7 @@
 		list("USCM Flask", 0, /obj/item/reagent_container/food/drinks/flask/marine, VENDOR_ITEM_REGULAR),
 		list("W-Y Flask", 0, /obj/item/reagent_container/food/drinks/flask/weylandyutani, VENDOR_ITEM_REGULAR)
 	)
+
 //------------BOOZE-O-MAT VENDOR---------------
 
 /obj/structure/machinery/cm_vending/sorted/boozeomat

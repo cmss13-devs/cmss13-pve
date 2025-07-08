@@ -27,24 +27,41 @@
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/demolitionist/fill_preset_inventory()
-	new /obj/item/clothing/suit/storage/marine/M3T(src)
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
+	new /obj/item/weapon/gun/launcher/rocket/marine(src)
+	new /obj/item/storage/backpack/marine/rocketpack(src)
+	new /obj/item/ammo_magazine/rocket(src)
+	new /obj/item/ammo_magazine/rocket(src)
+	new /obj/item/ammo_magazine/rocket/ap(src)
+	new /obj/item/ammo_magazine/rocket/wp(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	// loader
+	new /obj/item/storage/box/kit/loader(src)
+
+/obj/item/storage/box/kit/loader
+	name = "\improper Loader Kit"
+	desc = "A large kit containing all the supplies needed to turn a marine into the loading assistant for an M5 RPG operator.\
+	\nA little infographic series shows how reloading should be done:\
+	\nStep One: Grab the Rocket\
+	\nStep Two: Position yourself behind the M5 operator\
+	\nStep Three: Ensure the operator is wielding their Launcher\
+	\nStep Four: Load the Rocket into the Launcher\
+	\nStep Five: Stand clear of the back-blast"
+	pro_case_overlay = "loader"
+
+/obj/item/storage/box/kit/loader/fill_preset_inventory()
+	// wearables
 	new /obj/item/clothing/head/helmet/marine/M3T(src)
 	new /obj/item/storage/backpack/marine/rocketpack(src)
-	new /obj/item/storage/backpack/marine/rocketpack(src)
-	new /obj/item/weapon/gun/launcher/rocket(src)
+	// most the ammo
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/explosive/plastic(src)
-	new /obj/item/explosive/plastic(src)
-	new /obj/item/device/binoculars(src)
-
+	// skills
+	new /obj/item/pamphlet/skill/loader(src)
 
 /obj/item/storage/box/spec/sniper
 	name = "\improper Sniper equipment case"
@@ -62,9 +79,6 @@
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/ammo_magazine/sniper/flak(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/weapon/gun/rifle/sniper/M42A(src)
 	new /obj/item/facepaint/sniper(src)
 	// spotter
@@ -83,43 +97,34 @@
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/ammo_magazine/sniper/anti_materiel(src)
 	new /obj/item/storage/backpack/marine/smock(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/facepaint/sniper(src)
 	// spotter
 	new /obj/item/storage/box/kit/spotter(src)
 
 /obj/item/storage/box/spec/scout
 	name = "\improper Scout equipment case"
-	desc = "A large case containing an M4RA battle rifle, M3-S light armor and helmet, M4RA battle sight, M68 thermal cloak, V3 reactive thermal tarp, improved scout laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing an M49A battle rifle, M3-S light armor and helmet, M49A battle sight, M68 thermal cloak, V3 reactive thermal tarp, improved scout laser designator, ammunition and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "scout"
 
 /obj/item/storage/box/spec/scout/fill_preset_inventory()
 	new /obj/item/clothing/suit/storage/marine/M3S(src)
 	new /obj/item/clothing/head/helmet/marine/scout(src)
-	new /obj/item/clothing/glasses/night/M4RA(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/custom/impact(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/weapon/gun/rifle/m4ra_custom(src)
+	new /obj/item/clothing/glasses/night/M49A(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/impact(src)
+	new /obj/item/weapon/gun/rifle/m49a_custom(src)
 	new /obj/item/storage/backpack/marine/satchel/scout_cloak(src)
 	new /obj/item/bodybag/tarp/reactive/scout(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/device/encryptionkey/jtac(src)
-	if(SSmapping.configs[GROUND_MAP].map_name == MAP_WHISKEY_OUTPOST)
-		new /obj/item/device/binoculars/designator(src)
-	else
-		new /obj/item/device/binoculars/range/designator/scout(src)
+	new /obj/item/device/binoculars/range/designator/scout(src)
 
 
 /obj/item/storage/box/spec/pyro
@@ -135,30 +140,23 @@
 	new /obj/item/ammo_magazine/flamer_tank/large(src)
 	new /obj/item/storage/pouch/flamertank(src)
 	new /obj/item/tool/extinguisher(src)
-	new /obj/item/tool/extinguisher/mini(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/device/binoculars(src)
 
 
 /obj/item/storage/box/spec/heavy_grenadier
 	name = "\improper Heavy Grenadier equipment case"
-	desc = "A large case containing a heavy-duty multi-shot Armat Systems M92 grenade launcher, M3-G4 grenadier armor and helmet, significant amount of various M40 grenades and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a heavy-duty multi-shot Armat Systems M92 grenade launcher, M3-G4 grenadier armor and helmet, significant amount of various grenades and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "grenadier"
 
 /obj/item/storage/box/spec/heavy_grenadier/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m92(src)
 	new /obj/item/storage/belt/grenade/large/full(src)
 	new /obj/item/storage/backpack/marine/grenadepack(src)
-	new /obj/item/storage/backpack/marine/grenadepack(src)
+	new /obj/item/storage/box/packet/phosphorus(src)
+	new /obj/item/storage/box/packet/heap(src)
+	new /obj/item/storage/box/packet/canister(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
 	new /obj/item/clothing/suit/storage/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
-	new /obj/item/weapon/gun/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/ammo_magazine/pistol/vp78(src)
-	new /obj/item/device/binoculars(src)
 
 
 //maybe put in req for later use?
@@ -232,9 +230,6 @@
 
 	for(var/allowed_role in allowed_roles_list)
 		if(user.job == allowed_role)
-			if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_TRAINED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-				to_chat(user, SPAN_WARNING("You already have specialization, give this kit to someone else!"))
-				return FALSE
 			return TRUE
 
 /obj/item/spec_kit/rifleman/can_use(mob/living/carbon/human/user)
@@ -243,9 +238,6 @@
 
 	for(var/allowed_role in allowed_roles_list)
 		if(user.job == allowed_role)//Alternate check to normal kit as this is distributed to people without SKILL_SPEC_TRAINED.
-			if(skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_KITTED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-				to_chat(user, SPAN_WARNING("You already have specialization, give this kit to someone else!"))
-				return FALSE
 			return TRUE
 
 /obj/item/spec_kit/proc/select_and_spawn(mob/living/carbon/human/user)
@@ -257,9 +249,6 @@
 
 	var/selection = tgui_input_list(user, "Pick your specialist equipment type.", "Specialist Kit Selection", available_specialist_kits, 10 SECONDS)
 	if(!selection || QDELETED(src))
-		return FALSE
-	if(!skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_TRAINED) && !skillcheckexplicit(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL))
-		to_chat(user, SPAN_WARNING("You already unwrapped your [name], give this one to someone else!"))
 		return FALSE
 	if(!GLOB.specialist_set_name_dict[selection] || (GLOB.specialist_set_name_dict[selection].get_available_kit_num() <= 0))
 		to_chat(user, SPAN_WARNING("No more kits of this type may be chosen!"))
@@ -362,16 +351,16 @@
 
 
 /obj/item/storage/box/kit/mini_sniper
-	name = "\improper M4RA Marksman Kit"
+	name = "\improper M49A Marksman Kit"
 	pro_case_overlay = "sniper"
 
 /obj/item/storage/box/kit/mini_sniper/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/m4ra(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
 	new /obj/item/attachable/scope(src)
 	new /obj/item/attachable/suppressor(src)
 	new /obj/item/attachable/extended_barrel(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/ap(src)
-	new /obj/item/ammo_magazine/rifle/m4ra/ap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ap(src)
 
 /obj/item/storage/box/kit/m41a_kit
 	name = "\improper M41A Rifle Kit"
@@ -391,8 +380,9 @@
 
 /obj/item/storage/box/kit/heavy_support/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg(src)
-	new /obj/item/ammo_magazine/rifle/lmg/holo_target(src)
+	new /obj/item/ammo_magazine/hpr_box(src)
+	new /obj/item/ammo_magazine/hpr_box/holo_target(src)
+	new /obj/item/attachable/bipod(src)
 	new /obj/item/stack/folding_barricade/three(src)
 	new /obj/item/clothing/glasses/welding(src)
 	new /obj/item/tool/weldingtool(src)
@@ -446,8 +436,8 @@
 /obj/item/storage/box/kit/mini_jtac/fill_preset_inventory()
 	new /obj/item/weapon/gun/flare(src)
 	new /obj/item/storage/belt/gun/flaregun/full_nogun(src)
-	new /obj/item/storage/box/m94/signal(src)
-	new /obj/item/storage/box/m94/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
+	new /obj/item/storage/box/flare/signal(src)
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/device/encryptionkey/jtac(src)
 	new /obj/item/storage/backpack/marine/satchel/rto(src)
@@ -501,7 +491,7 @@
 	new /obj/item/weapon/gun/pistol/vp70/flashlight(src)
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/tool/crowbar/red(src)
-	new /obj/item/reagent_container/food/snacks/packaged_meal(src, pick("boneless pork ribs", "grilled chicken", "pizza square", "spaghetti chunks", "chicken tender"))
+	new /obj/item/mre_food_packet/entree/uscm(src)
 
 /obj/item/storage/box/kit/exp_trooper
 	name = "\improper Experimental Trooper Kit"

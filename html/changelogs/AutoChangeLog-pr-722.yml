@@ -1,0 +1,4 @@
+author: "Zonespace27"
+delete-after: True
+changes:
+  - admin: "Fixed the Human AI Squad Spawner occasionally not populating."

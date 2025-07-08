@@ -1,0 +1,4 @@
+author: "private-tristan"
+delete-after: True
+changes:
+  - rscadd: "GMs can now toggle barricade building, preventing anyone from making barricades or using sandbags."

@@ -174,9 +174,6 @@
 /turf/closed/wall/kutjevo/colony/reinforced,
 /area/kutjevo/interior/complex/med/operating)
 "amw" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/filtration/machine_32x64/indestructible{
 	bound_height = 32;
@@ -3109,7 +3106,7 @@
 /turf/open/floor/kutjevo/colors/orange/edge/northwest,
 /area/kutjevo/interior/foremans_office)
 "eCB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/machinery/light{
 	dir = 1
 	},
@@ -4127,7 +4124,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/complex_border/med_rec)
 "glU" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/sign/poster{
 	pixel_y = 32
 	},
@@ -5685,7 +5682,7 @@
 /turf/open/floor/kutjevo/colors/cyan/edge/west,
 /area/kutjevo/interior/complex/med/triage)
 "iRk" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1
 	},
@@ -6703,7 +6700,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/colony_central)
 "kkB" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/kutjevo/colors/cyan,
 /area/kutjevo/interior/complex/med)
 "kkH" = (
@@ -12518,7 +12515,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge/west,
 /area/kutjevo/interior/complex/Northwest_Dorms)
 "tdG" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/kutjevo/colors/green,
 /area/kutjevo/interior/complex/botany)
 "tdT" = (
@@ -13571,7 +13568,7 @@
 /area/kutjevo/interior/power)
 "uAl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
 /turf/open/floor/kutjevo/colors/purple/inner_corner/west,
 /area/kutjevo/interior/construction)
 "uAz" = (

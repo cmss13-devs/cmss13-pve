@@ -14,20 +14,54 @@ if (!String.prototype.trim) {
 	};
 }
 
+// Storage.js stuff ------------------------------------------------
+function testHubStorage() {
+	try {
+		return Boolean(window.hubStorage && window.hubStorage.getItem);
+	} catch (error) {
+		return false;
+	}
+}
+
+function loadFontSize() {
+	current_fontsize = parseInt(window.hubStorage.getItem("fontsize"));
+	if (isNaN(current_fontsize) || current_fontsize <= 0) {
+		current_fontsize = 14;
+	}
+	statcontentdiv.style.fontSize = current_fontsize + "px";
+	tab_change(current_tab, true); // Redraw the current tab
+}
+
+function onByondStorageLoad(event) {
+	document.removeEventListener('byondstorageupdated', onByondStorageLoad);
+	setTimeout(loadFontSize, 0); // Unfortunately its STILL not ready yet
+}
+
 // Status panel implementation ------------------------------------------------
 var status_tab_parts = ["Loading..."];
 var current_tab = null;
-var local_fontsize;
+var current_fontsize = 14; // in px, also determines line height and category header sizes for the verb menus
 // Per `storage.js` for tgui:
 // Localstorage can sometimes throw an error, even if DOM storage is not
 // disabled in IE11 settings.
 // See: https://superuser.com/questions/1080011
 try {
-	local_fontsize = localStorage.getItem("fontsize");
+	if (!Byond.TRIDENT) {
+		// Unfortunately byond storage isn't available immediately
+		if (!testHubStorage()) {
+			document.addEventListener('byondstorageupdated', onByondStorageLoad);
+		} else {
+			current_fontsize = parseInt(window.hubStorage.getItem("fontsize"));
+		}
+	} else { // TODO: Remove with 516
+		current_fontsize = parseInt(window.localStorage.getItem("fontsize"));
+	}
 } catch (error) {
-	local_fontsize = 12;
+	current_fontsize = 14;
 }
-var current_fontsize = local_fontsize ? parseInt(local_fontsize) : 12; // in px, also determines line height and category header sizes for the verb menus
+if (isNaN(current_fontsize) || current_fontsize <= 0) {
+	current_fontsize = 14;
+}
 var mc_tab_parts = [["Loading...", ""]];
 var href_token = null;
 var spells = [];
@@ -375,7 +409,7 @@ function draw_debug() {
 }
 function draw_status() {
 	var status_tab_map_href_exception =
-		"<a href='?MapView=1'>View Tactical Map</a>";
+		"<a href='byond://?MapView=1'>View Tactical Map</a>";
 	if (!document.getElementById("Status")) {
 		createStatusTab("Status");
 		current_tab = "Status";
@@ -416,7 +450,7 @@ function draw_mc() {
 		if (part[2]) {
 			var a = document.createElement("a");
 			a.href =
-				"?_src_=vars;admin_token=" + href_token + ";Vars=" + part[2];
+				"byond://?_src_=vars;admin_token=" + href_token + ";Vars=" + part[2];
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -499,7 +533,7 @@ function draw_listedturf() {
 			// rather than every onmousedown getting the "part" of the last entry.
 			return function (e) {
 				e.preventDefault();
-				clickcatcher = "?src=" + part[1];
+				clickcatcher = "byond://?src=" + part[1];
 				switch (e.button) {
 					case 1:
 						clickcatcher += ";statpanel_item_click=middle";
@@ -555,7 +589,7 @@ function draw_sdql2() {
 		var td2 = document.createElement("td");
 		if (part[2]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[2] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[2] + ";statpanel_item_click=left";
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -583,7 +617,7 @@ function draw_tickets() {
 		if (part[2]) {
 			var a = document.createElement("a");
 			a.href =
-				"?_src_=admin_holder;admin_token=" +
+				"byond://?_src_=admin_holder;admin_token=" +
 				href_token +
 				";ahelp=" +
 				part[2] +
@@ -592,7 +626,7 @@ function draw_tickets() {
 			td2.appendChild(a);
 		} else if (part[3]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[3] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[3] + ";statpanel_item_click=left";
 			a.textContent = part[1];
 			td2.appendChild(a);
 		} else {
@@ -615,7 +649,7 @@ function draw_interviews() {
 	var manLink = document.createElement("a");
 	manLink.textContent = "Open Interview Manager Panel";
 	manLink.href =
-		"?_src_=admin_holder;admin_token=" +
+		"byond://?_src_=admin_holder;admin_token=" +
 		href_token +
 		";interview_man=1;statpanel_item_click=left";
 	manDiv.appendChild(manLink);
@@ -651,7 +685,7 @@ function draw_interviews() {
 		var a = document.createElement("a");
 		a.textContent = part["status"];
 		a.href =
-			"?_src_=admin_holder;admin_token=" +
+			"byond://?_src_=admin_holder;admin_token=" +
 			href_token +
 			";interview=" +
 			part["ref"] +
@@ -675,7 +709,7 @@ function draw_spells(cat) {
 		var td2 = document.createElement("td");
 		if (part[3]) {
 			var a = document.createElement("a");
-			a.href = "?src=" + part[3] + ";statpanel_item_click=left";
+			a.href = "byond://?src=" + part[3] + ";statpanel_item_click=left";
 			a.textContent = part[2];
 			td2.appendChild(a);
 		} else {
@@ -1069,7 +1103,11 @@ function openOptionsMenu() {
 
 Byond.subscribeTo("change_fontsize", function (new_fontsize) {
 	current_fontsize = parseInt(new_fontsize);
-	localStorage.setItem("fontsize", current_fontsize.toString());
+	if (!Byond.TRIDENT) {
+		window.hubStorage.setItem("fontsize", current_fontsize.toString());
+	} else { // TODO: Remove with 516
+		window.localStorage.setItem("fontsize", current_fontsize.toString());
+	}
 	statcontentdiv.style.fontSize = current_fontsize + "px";
 	tab_change(current_tab, true); // Redraw the current tab
 });

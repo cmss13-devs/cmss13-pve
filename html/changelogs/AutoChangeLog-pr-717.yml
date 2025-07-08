@@ -1,0 +1,17 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds the M1 Baker-patern fighting knife, a not-marine knife for the Army & USASF to spawn with in their boots. Also available through the loadout for those inclined. Named after Benjamin Baker, the designed of the old SOG fighting knife."
+  - rscadd: "The Colonial Companion Mk II, a swiss-army-knife analogue. Utility, but at a cost."
+  - rscadd: "Green-coloured eyepatch"
+  - rscadd: "New wristwatches based off the ones seen in the films"
+  - rscadd: "Fingerless gloves, in black & brown varieties. Won't protect you from electrical shocks though, so beware!"
+  - qol: "Eyepatches can now be toggled to cover the opposite eye"
+  - qol: "The jungle-boots option in the loadout has been swapped out with regular black boots, as the spawn lockers give everyone a pair of the jungle boots irregardless of surfaceside climate"
+  - qol: "The USCM service jacket is added back to the loadout"
+  - bugfix: "Bowie knives no longer fit into shoes"
+  - code_imp: "Wrist accessory code ported from PvP"
+  - code_imp: "Organised the loadout backend"
+  - balance: "Cigarette costs adjusted slightly"
+  - balance: "Loadout-option knives that were functionally the same as the basic knife have been reduced in points-cost to 2. Ones that are slightly better than the standard knife are now 3 points."
+  - imageadd: "New sprites for various things. BiMex shades, knife, fingerless gloves and eyepatches are the big additions. See above for credits."

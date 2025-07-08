@@ -22,10 +22,10 @@
 	muzzleflash_icon_state = "muzzle_flash_double"
 
 	muzzle_flash_pos = list(
-		"1" = list(1, 4),
-		"2" = list(1, -29),
-		"4" = list(16, 3),
-		"8" = list(-16, 3)
+		"1" = list(1, 10),
+		"2" = list(1, -35),
+		"4" = list(22, 3),
+		"8" = list(-22, 3)
 	)
 	gun_firemode = GUN_FIREMODE_BURSTFIRE
 	gun_firemode_list = list(
@@ -41,7 +41,7 @@
 	/// The range that this turret can shoot at the furthest
 	var/turret_range = 5
 	/// What factions this sentry is aligned with
-	var/faction_group = FACTION_LIST_MARINE
+	var/faction_group = FACTION_LIST_UA
 
 /obj/item/hardpoint/primary/arc_sentry/on_install(obj/vehicle/multitile/vehicle)
 	. = ..()

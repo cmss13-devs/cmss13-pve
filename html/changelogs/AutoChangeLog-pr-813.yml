@@ -1,0 +1,5 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Examining a human will show if they will be shot by the currently held weapon."
+  - bugfix: "SG can now fire while another IFF enabled human is directly on it's place."

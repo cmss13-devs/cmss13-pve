@@ -5,8 +5,13 @@ import { dragStartHandler } from 'tgui/drag';
 
 import { Channel, ChannelIterator } from './ChannelIterator';
 import { ChatHistory } from './ChatHistory';
-import { LINE_LENGTHS, RADIO_PREFIXES, WINDOW_SIZES } from './constants';
-import { windowClose, windowOpen, windowSet } from './helpers';
+import {
+  LANGUAGE_PREFIXES,
+  LineLength,
+  RADIO_PREFIXES,
+  WindowSize,
+} from './constants';
+import { getPrefix, windowClose, windowOpen, windowSet } from './helpers';
 import { byondMessages } from './timers';
 
 type ByondOpen = {
@@ -17,24 +22,29 @@ type ByondOpen = {
 type ByondProps = {
   maxLength: number;
   lightMode: BooleanLike;
+  scale: BooleanLike;
   extraChannels: Array<Channel>;
+  languages: Array<string>;
 };
 
 type State = {
   buttonContent: string | number;
-  size: WINDOW_SIZES;
+  size: WindowSize;
 };
-
-const CHANNEL_REGEX = /^[:.#]\w\s/;
 
 export class TguiSay extends Component<{}, State> {
   private channelIterator: ChannelIterator;
   private chatHistory: ChatHistory;
-  private currentPrefix: keyof typeof RADIO_PREFIXES | null;
+  private currentPrefix:
+    | keyof typeof RADIO_PREFIXES
+    | keyof typeof LANGUAGE_PREFIXES
+    | null;
   private innerRef: RefObject<HTMLTextAreaElement>;
   private lightMode: boolean;
+  private scale: boolean;
   private extraChannels: Array<Channel>;
   private maxLength: number;
+  private languages: Array<string>;
   private messages: typeof byondMessages;
   state: State;
 
@@ -48,9 +58,10 @@ export class TguiSay extends Component<{}, State> {
     this.lightMode = false;
     this.maxLength = 1024;
     this.messages = byondMessages;
+    this.languages = [];
     this.state = {
       buttonContent: '',
-      size: WINDOW_SIZES.small,
+      size: WindowSize.Small,
     };
 
     this.handleArrowKeys = this.handleArrowKeys.bind(this);
@@ -69,6 +80,8 @@ export class TguiSay extends Component<{}, State> {
   }
 
   componentDidMount() {
+    windowSet(WindowSize.Small, this.scale);
+
     Byond.subscribeTo('props', this.handleProps);
     Byond.subscribeTo('force', this.handleForceSay);
     Byond.subscribeTo('open', this.handleOpen);
@@ -137,7 +150,7 @@ export class TguiSay extends Component<{}, State> {
     this.chatHistory.reset();
     this.channelIterator.reset();
     this.currentPrefix = null;
-    windowClose();
+    windowClose(this.scale);
   }
 
   handleEnter() {
@@ -165,7 +178,7 @@ export class TguiSay extends Component<{}, State> {
       ? prefix + currentValue
       : currentValue;
 
-    this.messages.forceSayMsg(grunt);
+    this.messages.forceSayMsg(grunt, this.channelIterator.current());
     this.reset();
   }
 
@@ -199,22 +212,45 @@ export class TguiSay extends Component<{}, State> {
       return;
     }
 
-    if (!CHANNEL_REGEX.test(typed)) {
-      return;
+    const newPrefix = getPrefix(typed) || this.currentPrefix;
+
+    if (this.canChangePrefix(newPrefix)) {
+      if (RADIO_PREFIXES[newPrefix!]) {
+        this.setState({ buttonContent: RADIO_PREFIXES[newPrefix!]?.label });
+      } else if (LANGUAGE_PREFIXES[newPrefix!]) {
+        this.setState({ buttonContent: LANGUAGE_PREFIXES[newPrefix!]?.label });
+      }
+      this.currentPrefix = newPrefix;
+      this.setValue(typed.slice(3));
+      this.channelIterator.set('Say');
+    }
+  }
+
+  canChangePrefix(newPrefix: string | null) {
+    if (!newPrefix || newPrefix === this.currentPrefix) {
+      return false;
     }
 
-    // Is it a valid prefix?
-    const prefix = typed
-      .slice(0, 3)
-      ?.toLowerCase() as keyof typeof RADIO_PREFIXES;
-    if (!RADIO_PREFIXES[prefix] || prefix === this.currentPrefix) {
-      return;
+    if (RADIO_PREFIXES[newPrefix]) {
+      return true;
     }
 
-    this.channelIterator.set('Say');
-    this.currentPrefix = prefix;
-    this.setState({ buttonContent: RADIO_PREFIXES[prefix]?.label });
-    this.setValue(typed.slice(3));
+    const newLanguage = LANGUAGE_PREFIXES[newPrefix];
+    if (newLanguage) {
+      // Do we know this language?
+      if (!this.languages.includes(newLanguage.id)) {
+        return false;
+      }
+      // Are we on the default channel with no prefix?
+      if (
+        !this.channelIterator.isSay() ||
+        (this.currentPrefix && RADIO_PREFIXES[this.currentPrefix])
+      ) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   handleKeyDown(event) {
@@ -262,14 +298,22 @@ export class TguiSay extends Component<{}, State> {
     }
     this.setState({ buttonContent: this.channelIterator.current() });
 
-    windowOpen(this.channelIterator.current());
+    windowOpen(this.channelIterator.current(), this.scale);
   };
 
   handleProps = (data: ByondProps) => {
-    const { maxLength, lightMode, extraChannels } = data;
+    const { maxLength, lightMode, extraChannels, scale, languages } = data;
     this.maxLength = maxLength;
     this.lightMode = !!lightMode;
+    this.scale = !!scale;
     this.extraChannels = extraChannels;
+    this.languages = languages;
+
+    if (!this.scale) {
+      window.document.body.style['zoom'] = `${100 / window.devicePixelRatio}%`;
+    } else {
+      window.document.body.style['zoom'] = null;
+    }
   };
 
   reset() {
@@ -281,19 +325,19 @@ export class TguiSay extends Component<{}, State> {
   }
 
   setSize(length = 0) {
-    let newSize: WINDOW_SIZES;
+    let newSize: WindowSize;
 
-    if (length > LINE_LENGTHS.medium) {
-      newSize = WINDOW_SIZES.large;
-    } else if (length <= LINE_LENGTHS.medium && length > LINE_LENGTHS.small) {
-      newSize = WINDOW_SIZES.medium;
+    if (length > LineLength.Medium) {
+      newSize = WindowSize.Large;
+    } else if (length <= LineLength.Medium && length > LineLength.Small) {
+      newSize = WindowSize.Medium;
     } else {
-      newSize = WINDOW_SIZES.small;
+      newSize = WindowSize.Small;
     }
 
     if (this.state.size !== newSize) {
       this.setState({ size: newSize });
-      windowSet(newSize);
+      windowSet(newSize, this.scale);
     }
   }
 

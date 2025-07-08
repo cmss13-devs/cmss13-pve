@@ -1,0 +1,4 @@
+author: "mesnomer"
+delete-after: True
+changes:
+  - qol: "Headgear accessory slots can now contain most glasses and goggles"

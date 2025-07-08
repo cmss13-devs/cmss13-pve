@@ -182,7 +182,7 @@
 
 /obj/item/clothing/head/headset
 	name = "\improper USCM headset"
-	desc = "A headset typically found in use by radio-operators and officers. This one appears to be malfunctioning."
+	desc = "A large headset used in conjunction with the standard one. Large enough that it doesn't fit with any other headwear. Typically found in use by radio-operators and officers."
 	icon_state = "headset"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
@@ -408,6 +408,7 @@
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "flapcap_jungle"
 	flags_marine_hat = HAT_GARB_OVERLAY
+
 /obj/item/clothing/head/cmcap/flap/desert
 	name = "\improper desert expedition cap"
 	icon_state = "flapcap_desert"
@@ -422,6 +423,12 @@
 	desc = "A faithful cap for any terrain war correspondents may find themselves in."
 	icon_state = "cc_flagcap"
 	item_state = "cc_flagcap"
+
+/obj/item/clothing/head/cmcap/weyyu
+	name = "\improper Weyland-Yutani cap"
+	desc = "An offwhite cap worn by Weyland-Yutani security personnel."
+	icon_state = "pmc_hat"
+	flags_marine_hat = HAT_GARB_OVERLAY
 
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
@@ -490,11 +497,6 @@
 /obj/item/clothing/head/beret/marine/mp/provost/chief
 	name = "\improper USCM provost command beret"
 	icon_state = "pvciberet"
-
-/obj/item/clothing/head/beret/marine/mp/tis
-	name = "\improper UAAC-TIS Special Agent Beret"
-	icon_state = "berettis"
-	desc = "A beret with the UAAC-TIS insignia emblazoned on it. A mark of a TIS Special Agent, these berets are one of the only pieces of equipment that the TIS actually manufactures for itself and earning one is one of the rare signs of achievement the Three Eyes allows."
 
 /obj/item/clothing/head/beret/marine/commander
 	name = "marine commanding officer beret"
@@ -667,22 +669,12 @@
 
 /obj/item/clothing/head/CMB
 	name = "\improper Colonial Marshal Bureau cap"
-	desc = "A black cap boldly presenting the acronym 'CMB'. Made using durable fabric, it might stop a very low caliber round from penetrating it, or a stab from piercing it. That isn't to say you won't have a dent in your head."
+	desc = "A black cap boldly presenting the acronym 'CMB'."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 	icon_state = "cmbcap"
-	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_LOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_cold_protection = BODY_FLAG_HEAD
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = NO_FLAGS
 
 /obj/item/clothing/head/freelancer
@@ -775,9 +767,16 @@
 	desc = "An improvised head wrap made out of a black neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 
-/obj/item/clothing/head/durag/Initialize(mapload, ...)
-	. = ..()
-	select_gamemode_skin(/obj/item/clothing/head/durag)
+/obj/item/clothing/head/skullcap
+	name = "skullcap"
+	desc = "A head wrap. Great for keeping the sweat out of your eyes and protecting your hair."
+	icon_state = "skullcap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_atom = NO_SNOW_TYPE
+	flags_inv_hide = HIDETOPHAIR
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
 
 /obj/item/clothing/head/drillhat
 	name = "\improper USCM drill hat"
