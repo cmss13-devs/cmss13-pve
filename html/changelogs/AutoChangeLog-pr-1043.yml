@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - balance: "Player role corpsman now have medical 3 instead of 2. Potential oversight."

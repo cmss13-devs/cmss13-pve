@@ -157,6 +157,12 @@
 	color = "cyan"
 	desc_lore = "https://github.com/user-attachments/assets/bfe1a3dd-f737-4b89-a030-ff819e320dea"
 
+/obj/item/map/oread_map
+	name = "\improper Oread Garrison map"
+	desc = "A distorted orbital scan of the Oread Garrison"
+	html_link = ""
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -186,6 +192,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
 		MAP_TAIPAI = new /obj/item/map/taipei(),
 	)
 

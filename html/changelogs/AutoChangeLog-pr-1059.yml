@@ -1,0 +1,4 @@
+author: "Private Tristan, TyeAgg"
+delete-after: True
+changes:
+  - rscadd: "waking up from cryo fullscreen animation"

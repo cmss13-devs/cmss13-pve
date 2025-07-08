@@ -94,3 +94,6 @@ endmap
 
 map calliope_desert_bus
 endmap
+
+map oread_garrison
+endmap
