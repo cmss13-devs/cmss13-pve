@@ -1108,7 +1108,7 @@
 	var/arms_exposed = 1
 	var/legs_exposed = 1
 	var/hands_exposed = 1
-	var/feet_exposed = 1
+	var/armor_on = 0
 
 	for(var/obj/item/clothing/C in equipment)
 		if(C.flags_armor_protection & BODY_FLAG_HEAD)
@@ -1125,14 +1125,12 @@
 			hands_exposed = 0
 		if(C.flags_armor_protection & BODY_FLAG_LEGS)
 			legs_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_FEET)
-			feet_exposed = 0
 
 	flavor_text = flavor_texts["general"]
 	flavor_text += "\n\n"
 	for(var/T in flavor_texts)
 		if(flavor_texts[T] && flavor_texts[T] != "")
-			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "feet" && feet_exposed))
+			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "armor" && armor_on))
 				flavor_text += flavor_texts[T]
 				flavor_text += "\n\n"
 	return ..()
@@ -1591,8 +1589,8 @@
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=legs'>Legs:</a> "
 	HTML += TextPreview(flavor_texts["legs"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Feet:</a> "
-	HTML += TextPreview(flavor_texts["feet"])
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=armor'>Armor:</a> "
+	HTML += TextPreview(flavor_texts["armor"])
 	HTML += "<br>"
 	HTML += "<hr />"
 	HTML +="<a href='byond://?src=\ref[src];flavor_change=done'>\[Done\]</a>"

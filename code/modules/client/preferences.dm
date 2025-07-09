@@ -921,8 +921,32 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=general'>General:</a> "
 	HTML += TextPreview(flavor_texts["general"])
 	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=head'>Head:</a> "
+	HTML += TextPreview(flavor_texts["head"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=face'>Face:</a> "
+	HTML += TextPreview(flavor_texts["face"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=eyes'>Eyes:</a> "
+	HTML += TextPreview(flavor_texts["eyes"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=torso'>Body:</a> "
+	HTML += TextPreview(flavor_texts["torso"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=arms'>Arms:</a> "
+	HTML += TextPreview(flavor_texts["arms"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=hands'>Hands:</a> "
+	HTML += TextPreview(flavor_texts["hands"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=legs'>Legs:</a> "
+	HTML += TextPreview(flavor_texts["legs"])
+	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=armor'>Armor:</a> "
+	HTML += TextPreview(flavor_texts["armor"])
+	HTML += "<br>"
 	HTML += "<hr />"
-	HTML +="<a href='byond://?src=\ref[user];preference=flavor_text;task=done'>Done</a>"
+	HTML +="<a href='byond://?src=\ref[user];preference=flavor_text;task=done'>\[Done\]</a>"
 	HTML += "<tt>"
 	close_browser(user, "preferences")
 	show_browser(user, HTML, "Set Flavor Text", "flavor_text", width = 400, height = 430)
@@ -2188,7 +2212,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		character.flavor_texts["arms"] = flavor_texts["arms"]
 		character.flavor_texts["hands"] = flavor_texts["hands"]
 		character.flavor_texts["legs"] = flavor_texts["legs"]
-		character.flavor_texts["feet"] = flavor_texts["feet"]
+		character.flavor_texts["armor"] = flavor_texts["armor"]
 
 	if(!be_random_name)
 		character.med_record = strip_html(med_record, MAX_RECORDS_MESSAGE_LEN)
