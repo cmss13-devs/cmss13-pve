@@ -268,6 +268,17 @@ Defined in conflicts.dm of the #defines folder.
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
 
+/obj/item/attachable/suppressor/superduty_integral
+	name = "Wraith Manufacturing 9SD-WM integral silencer"
+	desc = "An integral reflex silencer that shouldn't be removed from the firearm."
+	icon_state = "suppressor"
+	attach_icon = "superduty_integral_a"
+
+/obj/item/attachable/suppressor/superduty_integral/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_7
+
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"
 	icon_state = "m40sd_suppressor"

@@ -70,10 +70,23 @@
 	icon_state = "m39_HV_extended"
 	bonus_overlay = "m39_ex"
 
+//mags for the viper 9 superduty.
 /obj/item/ammo_magazine/smg/m39/subsonic
 	name = "Viper 9 JHP subsonic magazine"
-	desc = "A 9x19mm "
+	desc = "A 9x19mm SMG magazine. Loaded with 156gr jacketed hollowpoint subsonic ammunition, with exceptional terminal ballistics."
+	max_rounds = 54
+	w_class = SIZE_SMALL
+	gun_type = /obj/item/weapon/gun/smg/m39/superduty
+	default_ammo = /datum/ammo/bullet/smg/subsonic
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
+/obj/item/ammo_magazine/smg/m39/subsonic/ap
+	name = "Viper 9 AP subsonic magazine"
+	desc = "A 9x19mm SMG magazine. Loaded with 120gr armor piercing subsonic ammunition, with significant armor piercing capability."
+	default_ammo = /datum/ammo/bullet/smg/subsonic/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+//duplex smg mag
 /obj/item/ammo_magazine/smg/m39/pve
 	name = "\improper Viper 9 duplex magazine (9mm)"
 	desc = "A 9mm submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
