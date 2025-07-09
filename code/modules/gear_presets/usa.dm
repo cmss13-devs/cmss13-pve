@@ -437,7 +437,7 @@
 	rank = JOB_ARMY_TANK_CREW
 	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "VeCr"
-	skills = /datum/skills/tank_crew
+	skills = /datum/skills/mainttech
 
 /datum/equipment_preset/usa/tank/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
@@ -464,6 +464,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tank(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/welder_chestrig(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	spawn_army_mask_items(new_human)
 
 /datum/equipment_preset/usa/nco
