@@ -1151,6 +1151,19 @@
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box/ap,
+		/obj/item/ammo_magazine/hpr_box/heap,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
+	)
 	current_mag = /obj/item/ammo_magazine/hpr_box
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
