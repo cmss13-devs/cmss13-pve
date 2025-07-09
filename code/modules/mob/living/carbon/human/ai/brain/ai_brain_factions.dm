@@ -1344,6 +1344,25 @@
 		FACTION_SURVIVOR,
 	)
 
+/datum/human_ai_faction/wy/pmc
+	faction = FACTION_PMC
+	friendly_factions = list(
+		FACTION_COLONIST,
+		FACTION_TWE,
+		FACTION_WY,
+		FACTION_WY_DEATHSQUAD,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_MERCENARY,
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_MARSHAL,
+		FACTION_SURVIVOR,
+	)
+
 /datum/human_ai_faction/wy_deathsquad
 	faction = FACTION_WY_DEATHSQUAD
 	friendly_factions = list(
