@@ -61,7 +61,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 9
 	max_range = 11
-	damage = 250
+	damage = 150
 	shrapnel_chance = 5
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
@@ -137,8 +137,8 @@
 
 /datum/ammo/rocket/ap/anti_tank
 	name = "anti-tank rocket"
-	damage = 1000
-	damage_var_high = 100
+	damage = 200
+	damage_var_high = 25
 	vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
@@ -167,19 +167,34 @@
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
-	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
 	damage = 200
 	shell_speed = AMMO_SPEED_TIER_3
+	var/vehicle_slowdown_time = 10 SECONDS
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/mob, obj/projectile/projectile)
+	if(mob.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/alivent = mob
+		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
 	cell_explosion(get_turf(mob), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	cell_explosion(get_turf(mob), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/on_hit_obj(obj/object, obj/projectile/projectile)
+	if(istype(object, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = object
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Anti-Tank Rocket"))
+		mob.interior_crash_effect()
+		var/turf/turf = get_turf(mob.loc)
+		mob.ex_act(150, projectile.dir, projectile.weapon_cause_data, 100)
+		smoke.set_up(1, turf)
+		smoke.start()
+		return
 	cell_explosion(get_turf(object), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	cell_explosion(get_turf(object), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 

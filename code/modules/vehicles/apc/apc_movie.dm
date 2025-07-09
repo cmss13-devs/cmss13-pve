@@ -31,6 +31,19 @@
 		VEHICLE_GUNNER = null,
 	)
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 2.6,
+		"slash" = 0.5,
+		"bullet" = 0.7,
+		"explosive" = 0.9,
+		"blunt" = 0.5,
+		"abstract" = 1,
+	)
+
+	wall_ram_damage = 150
+	vehicle_ram_multiplier = 10
+
 /obj/vehicle/multitile/apc/movie/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return

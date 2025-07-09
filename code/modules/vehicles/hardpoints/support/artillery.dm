@@ -11,7 +11,7 @@
 	activatable = TRUE
 
 	var/is_active = 0
-	var/view_buff = 10 //This way you can VV for more or less fun
+	var/view_buff = 12 //This way you can VV for more or less fun
 	var/view_tile_offset = 7
 
 /obj/item/hardpoint/support/artillery_module/handle_fire(atom/target, mob/living/user, params)
@@ -54,10 +54,11 @@
 	var/obj/vehicle/multitile/C = owner
 	for(var/seat in C.seats)
 		if(!ismob(C.seats[seat]))
-			continue
+			return
 		var/mob/user = C.seats[seat]
-		if(!user.client) continue
-		user.client.change_view(GLOB.world_view_size, owner)
+		if(user.client)
+			return
+		user.client.change_view(7, owner)
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 	is_active = FALSE

@@ -28,10 +28,11 @@
 	)
 
 	scatter = 0
-	fire_delay = 10.0 SECONDS
+	fire_delay = 3.0 SECONDS
 
 /obj/item/hardpoint/primary/cannon/set_bullet_traits()
 	..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 350, GLOB.damage_boost_vehicles),
 	))

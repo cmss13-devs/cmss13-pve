@@ -37,6 +37,9 @@
 
 	light_range = 4
 
+	wall_ram_damage = 350
+	vehicle_ram_multiplier = 20 //Big heavy chunk of metal cares not for crunchies
+
 	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/holder/tank_turret,
@@ -64,11 +67,11 @@
 
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 0.5,
-		"slash" = 1.6,
+		"acid" = 3.5,
+		"slash" = 0.3,
 		"bullet" = 0.4,
-		"explosive" = 0.8,
-		"blunt" = 0.8,
+		"explosive" = 0.6,
+		"blunt" = 0.3,
 		"abstract" = 1
 	)
 

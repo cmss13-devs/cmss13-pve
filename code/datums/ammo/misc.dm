@@ -50,7 +50,9 @@
 
 /datum/ammo/flamethrower/tank_flamer
 	flamer_reagent_id = "highdamagenapalm"
-	max_range = 8
+	max_range = 10
+	damage = 80
+	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
 	if(!istype(turf))
@@ -64,7 +66,7 @@
 	landingsmoke.start()
 	landingsmoke = null
 
-	max_range = 8
+	max_range = 10
 
 /datum/ammo/flamethrower/sentry_flamer
 	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME
