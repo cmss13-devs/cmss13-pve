@@ -31,6 +31,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/atom/movable/screen/rotate/alt/rotate_left
 	var/atom/movable/screen/rotate/rotate_right
 
+	var/static/datum/flavor_text_editor/flavor_text_editor = new
+
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1 //Holder so it doesn't default to slot 1, rather the last one used
@@ -915,43 +917,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	show_browser(user, HTML, "Set Records", "records", width = 350, height = 300)
 	return
 
-/datum/preferences/proc/SetFlavorText(mob/user)
-	var/HTML = "<body>"
-	HTML += "<tt>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=general'>General:</a> "
-	HTML += TextPreview(flavor_texts["general"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=head'>Head:</a> "
-	HTML += TextPreview(flavor_texts["head"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=face'>Face:</a> "
-	HTML += TextPreview(flavor_texts["face"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=eyes'>Eyes:</a> "
-	HTML += TextPreview(flavor_texts["eyes"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=torso'>Body:</a> "
-	HTML += TextPreview(flavor_texts["torso"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=arms'>Arms:</a> "
-	HTML += TextPreview(flavor_texts["arms"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=hands'>Hands:</a> "
-	HTML += TextPreview(flavor_texts["hands"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=legs'>Legs:</a> "
-	HTML += TextPreview(flavor_texts["legs"])
-	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=armor'>Armor:</a> "
-	HTML += TextPreview(flavor_texts["armor"])
-	HTML += "<br>"
-	HTML += "<hr />"
-	HTML +="<a href='byond://?src=\ref[user];preference=flavor_text;task=done'>\[Done\]</a>"
-	HTML += "<tt>"
-	close_browser(user, "preferences")
-	show_browser(user, HTML, "Set Flavor Text", "flavor_text", width = 400, height = 430)
-	return
-
 /datum/preferences/proc/SetJob(mob/user, role, priority)
 	var/datum/job/job = GLOB.RoleAuthority.roles_by_name[role]
 	if(!job)
@@ -1149,27 +1114,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					gear.Cut()
 
 		if("flavor_text")
-			switch(href_list["task"])
-				if("open")
-					SetFlavorText(user)
-					return
-				if("done")
-					close_browser(user, "flavor_text")
-					ShowChoices(user)
-					return
-				if("general")
-					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing. Character limit is [MAX_FLAVOR_MESSAGE_LEN]","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-				else
-					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-			SetFlavorText(user)
+			flavor_text_editor.tgui_interact(user)
 			return
 
 		if("records")
