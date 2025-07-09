@@ -117,7 +117,6 @@
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 
@@ -140,7 +139,6 @@
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 //Called when players try to move vehicle

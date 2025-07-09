@@ -26,6 +26,9 @@
 
 	passengers_slots = 15
 
+	move_max_momentum = 2.2 //No turret and autoloader systems, saves on overall weight so moves quicker
+	move_momentum_build_factor = 1.5
+	move_turn_momentum_loss_factor = 0.6
 	wall_ram_damage = 600
 
 /obj/vehicle/multitile/tank/aev/initialize_cameras(change_tag = FALSE)
