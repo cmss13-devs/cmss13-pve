@@ -3183,7 +3183,7 @@ Defined in conflicts.dm of the #defines folder.
 		if(in_chamber) //eject the chambered round
 			var/obj/item/explosive/grenade/new_grenade = in_chamber
 			in_chamber = null
-			new_grenade.forceMove(get_turf(src))
+			user.put_in_hands(new_grenade)
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
 		playsound(src, open_sound, 15, 1)
 	update_icon()
