@@ -133,13 +133,17 @@
 
 	next_move = world.time
 	if(A.Adjacent(src)) // If standing next to the atom clicked.
-		if (!istype(W, /obj/item/weapon/gun) || istype(W, /obj/item/weapon/gun/shotgun)) //Exception for shotguns cause they don't suck for PBing
+		if(get_turf(A) == src.loc && ismob(A))
 			click_adjacent(A, W, mods)
 			return
 		else
-			if (src.a_intent != INTENT_HARM) //Force normal gunfire on harm intent.
+			if (!istype(W, /obj/item/weapon/gun) || istype(W, /obj/item/weapon/gun/shotgun)) //Exception for shotguns cause they don't suck for PBing
 				click_adjacent(A, W, mods)
 				return
+			else
+				if (src.a_intent != INTENT_HARM) //Force normal gunfire on harm intent.
+					click_adjacent(A, W, mods)
+					return
 	// If not standing next to the atom clicked.
 	if(W)
 		W.afterattack(A, src, 0, mods)
