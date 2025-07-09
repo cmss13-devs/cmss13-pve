@@ -1933,3 +1933,7 @@
 
 /obj/item/weapon/gun/rifle/fn107/marksman
 	starting_attachment_types = list(/obj/item/attachable/stock/fn107, /obj/item/attachable/scope/mini)
+
+/obj/item/weapon/gun/rifle/fn107/commando
+	current_mag = /obj/item/ammo_magazine/rifle/fn107/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/fn107, /obj/item/attachable/scope/mini, /obj/item/attachable/lasersight)

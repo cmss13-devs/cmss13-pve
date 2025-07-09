@@ -40,3 +40,23 @@
 	name = "FAAMI Radioman"
 	desc = "A higher ranking FAAMI Operator, equipped with a radiopack for communication between platoons and to Command."
 	path = /datum/equipment_preset/faami/rifleman/scout/radio
+
+/datum/human_ai_equipment_preset/faami/rifle/lt
+	name = "FAAMI Field Officer"
+	desc = "Commonly in-charge of larger FAAMI operations within an area, the FAAMI Field Officer is given slightly better equipment and the authority to lead."
+	path = /datum/equipment_preset/faami/officer
+
+/datum/human_ai_equipment_preset/faami/rifle/sniper
+	name = "FAAMI Marksman"
+	desc = "A FAAMI Marksman, given a basic scope and some better training on recon and marksmanship."
+	path = /datum/equipment_preset/faami/rifleman/sniper
+
+/datum/human_ai_equipment_preset/faami/rifle/commando
+	name = "FAAMI Drop Commando"
+	desc = "The FAAMI's most veteran units, equipped to lead air-to-ground assaults into rural locations, often using VTOLs and similar vehicles to fufill such operations."
+	path = /datum/equipment_preset/faami/rifleman/commando
+
+/datum/human_ai_equipment_preset/faami/rifle/commando/sl
+	name = "FAAMI Drop Commando Lead"
+	desc = "The FAAMI's most veteran units, equipped to lead air-to-ground assaults into rural locations, often using VTOLs and similar vehicles to fufill such operations. This one is a Squad Leader."
+	path = /datum/equipment_preset/faami/rifleman/commando/sl
