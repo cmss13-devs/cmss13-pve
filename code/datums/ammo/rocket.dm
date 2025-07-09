@@ -74,6 +74,9 @@
 	mob.apply_effect(3, PARALYZE)
 	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
 		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
+	if(mob.mob_size >= MOB_SIZE_BIG) // Bonus vs BIG things
+		var/mob/living/alivent = mob
+		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
 	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
