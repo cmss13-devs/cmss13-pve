@@ -1,0 +1,4 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "TGUI will recognise the polish prefix which is p again \"!p\". Also fixes TSL and Rus Patois not being recognised by TGUI, also removes and extra space no one would ever actually notice from Radio Menu."
