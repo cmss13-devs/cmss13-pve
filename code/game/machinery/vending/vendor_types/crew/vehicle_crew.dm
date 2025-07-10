@@ -1,8 +1,8 @@
 //------------VEHICLE MODULES VENDOR---------------
 
 /obj/structure/machinery/cm_vending/gear/vehicle_crew
-	name = "ColMarTech Vehicle Parts Delivery System"
-	desc = "An automated delivery system unit hooked up to the underbelly of the ship. Allows the crewmen to choose one set of free equipment for their vehicle at the start of operation and order more spare parts if provided with additional budget by Command. Can be accessed only by the Vehicle Crewmen."
+	name = "Vehicle Parts Delivery System"
+	desc = "An automated delivery system unit hooked up to the underbelly of the ship. Gives vehicle crew access to additional equipment for their vehicles."
 	icon = 'icons/obj/structures/machinery/vending_64x32.dmi'
 	icon_state = "vehicle_gear"
 
@@ -196,46 +196,29 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
 //------------WEAPONS RACK---------------
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/vehicle_crew
-	name = "\improper ColMarTech Vehicle Crewman Weapons Rack"
-	desc = "An automated weapon rack hooked up to a small storage of standard-issue weapons. Can be accessed only by the Vehicle Crewmen."
+	name = "\improper Vehicle Crewman Weapons Rack"
+	desc = "A weapon rack containing a small selection of weapons and ammunition for armor crew use."
 	icon_state = "guns"
 	req_access = list(ACCESS_MARINE_CREWMAN)
 	vendor_role = list(JOB_TANK_CREW)
 	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND
 
 	listed_products = list(
-		list("PRIMARY FIREARMS", -1, null, null),
-		list("M49A Battle Rifle", 2, /obj/item/weapon/gun/rifle/m49a, VENDOR_ITEM_REGULAR),
-		list("M37A2 Pump Shotgun", 2, /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
-		list("M39 Submachine Gun", 2, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
-		list("M41A Pulse Rifle MK2", 2, /obj/item/weapon/gun/rifle/m41a, VENDOR_ITEM_REGULAR),
+		list("SELF DEFENSE EQUIPMENT", -1, null, null),
+		list("XM43 Pulse Carbine", 2, /obj/item/weapon/gun/rifle/m41aMK1/carbine, VENDOR_ITEM_REGULAR),
+		list("M41A Pulse Rifle", 4, /obj/item/weapon/gun/rifle/m41aMK1, VENDOR_ITEM_REGULAR),
+		list("VP70 Combat Pistol", 4, /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("M4A3 Service Pistol", 4, /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", 4, /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
-		list("PRIMARY AMMUNITION", -1, null, null),
-		list("Box of Buckshot Shells (12g)", 6, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
-		list("Box of Flechette Shells (12g)", 6, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
-		list("Box of Shotgun Slugs (12g)", 6, /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
-		list("M49A Magazine (10x24mm)", 12, /obj/item/ammo_magazine/rifle/m49a, VENDOR_ITEM_REGULAR),
-		list("M39 HV Magazine (10x20mm)", 12, /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
-		list("M41A Magazine (10x24mm)", 12, /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
-
-		list("SIDEARMS", -1, null, null),
-		list("VP70 Combat Pistol", 2, /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
-		list("M44 Combat Revolver", 2, /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
-		list("M4A3 Service Pistol", 2, /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
-		list("M82F Flare Gun", 2, /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
-
-		list("SIDEARM AMMUNITION", -1, null, null),
-		list("VP70 Magazine (9mm)", 10, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
-		list("M44 Speedloader (.44)", 10, /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
-		list("M4A3 Magazine (9mm)", 10, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("M4A3 AP Magazine (9mm)", 6, /obj/item/ammo_magazine/pistol/ap, VENDOR_ITEM_REGULAR),
-		list("M4A3 HP Magazine (9mm)", 6, /obj/item/ammo_magazine/pistol/hp, VENDOR_ITEM_REGULAR),
-		list("VP78 Magazine (9mm)", 8, /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("AMMUNITION", -1, null, null),
+		list("M41A Magazine (10x24mm)", 24, /obj/item/ammo_magazine/rifle/m41aMK1, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", 20, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9mm)", 20, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 
 		list("ATTACHMENTS", -1, null, null),
-		list("Magnetic Harness", 2, /obj/item/attachable/magnetic_harness, VENDOR_ITEM_REGULAR),
+		list("Two-Point Sling", 4, /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", 4, /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
-		list("Underbarrel Flashlight Grip", 4, /obj/item/attachable/flashlight/grip, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", -1, null, null),
 		list("Combat Flashlight", 2, /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
@@ -251,7 +234,7 @@ GLOBAL_LIST_INIT(cm_vending_vehicle_crew_arc, list(
 //------------CLOTHING RACK---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
-		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
+		list("STANDARD EQUIPMENT", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/yellow, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Tanker Armor", 0, /obj/item/clothing/suit/storage/marine/tanker, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
 		list("M50 Tanker Helmet", 0, /obj/item/clothing/head/helmet/marine/tech/tanker, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
@@ -259,11 +242,11 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("Welding Kit", 0, /obj/item/tool/weldpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
-		list("PERSONAL SIDEARM (CHOOSE 1)", 0, null, null, null),
-		list("VP70 Combat Pistol", 0, /obj/item/weapon/gun/pistol/vp70, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
-		list("VP78 Pistol", 0, /obj/item/weapon/gun/pistol/vp78, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+		list("PERSONAL SIDEARM", 0, null, null, null),
+		list("VP70 Pistol", 0, /obj/item/weapon/gun/pistol/vp70, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+		list("M4A3 Pistol", 0, /obj/item/weapon/gun/pistol/m4a3, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
 
-		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("BELT", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M103 Vehicle-Ammo Rig", 0, /obj/item/storage/belt/tank, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
@@ -298,29 +281,10 @@ GLOBAL_LIST_INIT(cm_vending_clothing_vehicle_crew, list(
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 
-		list("ATTACHMENTS", 0, null, null, null),
-		list("Angled Grip", 10, /obj/item/attachable/angledgrip, null, VENDOR_ITEM_REGULAR),
-		list("Extended Barrel", 10, /obj/item/attachable/extended_barrel, null, VENDOR_ITEM_REGULAR),
-		list("Gyroscopic Stabilizer", 10, /obj/item/attachable/gyro, null, VENDOR_ITEM_REGULAR),
-		list("Laser Sight", 10, /obj/item/attachable/lasersight, null, VENDOR_ITEM_REGULAR),
-		list("Masterkey Shotgun", 10, /obj/item/attachable/attached_gun/shotgun, null, VENDOR_ITEM_REGULAR),
-		list("M37 Wooden Stock", 10, /obj/item/attachable/stock/shotgun, null, VENDOR_ITEM_REGULAR),
-		list("M39 Stock", 10, /obj/item/attachable/stock/smg, null, VENDOR_ITEM_REGULAR),
-		list("M41A Solid Stock", 10, /obj/item/attachable/stock/rifle, null, VENDOR_ITEM_REGULAR),
-		list("Recoil Compensator", 10, /obj/item/attachable/compensator, null, VENDOR_ITEM_REGULAR),
-		list("Red-Dot Sight", 10, /obj/item/attachable/reddot, null, VENDOR_ITEM_REGULAR),
-		list("Reflex Sight", 10, /obj/item/attachable/reflex, null, VENDOR_ITEM_REGULAR),
-		list("Suppressor", 10, /obj/item/attachable/suppressor, null, VENDOR_ITEM_REGULAR),
-		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, null, VENDOR_ITEM_REGULAR),
-
-		list("AMMUNITION", 0, null, null, null),
-		list("M49A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/m49a/ap, null, VENDOR_ITEM_REGULAR),
-		list("M39 AP Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/ap , null, VENDOR_ITEM_REGULAR),
-		list("M39 Extended Magazine (10x20mm)", 10, /obj/item/ammo_magazine/smg/m39/extended , null, VENDOR_ITEM_REGULAR),
-		list("M40 HEDP Grenade", 10, /obj/item/explosive/grenade/high_explosive, null, VENDOR_ITEM_REGULAR),
-		list("M41A AP Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/ap , null, VENDOR_ITEM_REGULAR),
-		list("M41A Extended Magazine (10x24mm)", 10, /obj/item/ammo_magazine/rifle/extended , null, VENDOR_ITEM_REGULAR),
-		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, null, VENDOR_ITEM_REGULAR),
+		list("AMMUNITION", -1, null, null),
+		list("M41A Magazine (10x24mm)", 8, /obj/item/ammo_magazine/rifle/m41aMK1, VENDOR_ITEM_REGULAR),
+		list("VP70 Magazine (9mm)", 8, /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
+		list("M4A3 Magazine (9mm)", 8, /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 
 		list("UTILITIES", 0, null, null, null),
 		list("Binoculars", 10, /obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
