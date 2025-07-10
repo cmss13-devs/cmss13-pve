@@ -2367,7 +2367,6 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
-	flags_attach_features = NO_FLAGS
 	hud_offset_mod = 4
 	size_mod = 2
 	melee_mod = 5
