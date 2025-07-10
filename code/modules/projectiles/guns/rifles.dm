@@ -525,6 +525,7 @@
 
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
@@ -1157,6 +1158,8 @@
 		/obj/item/ammo_magazine/hpr_box/heap,
 		/obj/item/ammo_magazine/hpr_box/holo_target,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
