@@ -105,8 +105,8 @@ export const RADIO_PREFIXES = {
     label: 'Charl.',
   },
   '#c ': {
-    id: 'clf-cmd',
-    label: 'CLF Cmd.',
+    id: 'cia',
+    label: 'CIA',
   },
   ':d ': {
     id: 'delta',
@@ -420,7 +420,7 @@ export const LANGUAGE_PREFIXES = {
     label: 'Chinese',
   },
   '!9 ': {
-    id: 'ruspatois',
+    id: 'russian patois',
     label: 'Russian patois',
   },
   '!f ': {
@@ -432,12 +432,16 @@ export const LANGUAGE_PREFIXES = {
     label: 'Hellhound',
   },
   '!l ': {
-    id: 'tatical',
+    id: 'tactical sign language',
     label: 'Tacitical Sign',
   },
   '!m ': {
     id: 'primitive',
     label: 'Primitive',
+  },
+  '!p ': {
+    id: 'polish',
+    label: 'Polish',
   },
   '!s ': {
     id: 'sainja',
