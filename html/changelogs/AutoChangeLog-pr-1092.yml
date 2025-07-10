@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - qol: "UBGLs now eject grenades into your offhand if it is open."
