@@ -334,13 +334,10 @@
 	flags_atom = FPRINT|OPENCONTAINER
 	flags_equip_slot = SLOT_WAIST
 
-
-
 /obj/item/tool/pen/sleepypen/Initialize()
 	. = ..()
-	create_reagents(30)
-	reagents.add_reagent("chloralhydrate", 22)
-
+	create_reagents(25)
+	reagents.add_reagent("chloralhydrate", 25)
 
 /obj/item/tool/pen/sleepypen/attack(mob/M as mob, mob/user as mob)
 	if(!(istype(M,/mob)))
@@ -349,7 +346,6 @@
 	if(reagents.total_volume)
 		if(M.reagents) reagents.trans_to(M, 50)
 	return
-
 
 /*
  * Parapens
