@@ -1125,6 +1125,8 @@
 			hands_exposed = 0
 		if(C.flags_armor_protection & BODY_FLAG_LEGS)
 			legs_exposed = 0
+		if(src.wear_suit == /obj/item/clothing/suit/marine)
+			armor_on = 1
 
 	flavor_text = flavor_texts["general"]
 	flavor_text += "\n\n"

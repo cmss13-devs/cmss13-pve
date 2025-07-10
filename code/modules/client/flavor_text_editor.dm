@@ -6,13 +6,13 @@
 		return
 
 	.["general"] = prefs.flavor_texts["general"]
-	/*prefs.flavor_texts["head"]
-	prefs.flavor_texts["face"]
-	prefs.flavor_texts["eyes"]
-	prefs.flavor_texts["torso"]
-	prefs.flavor_texts["arms"]
-	prefs.flavor_texts["hands"]
-	prefs.flavor_texts["legs"]*/
+	.["head"] = prefs.flavor_texts["head"]
+	.["face"] = prefs.flavor_texts["face"]
+	.["eyes"] = prefs.flavor_texts["eyes"]
+	.["torso"] = prefs.flavor_texts["torso"]
+	.["arms"] = prefs.flavor_texts["arms"]
+	.["hands"] = prefs.flavor_texts["hands"]
+	.["legs"] = prefs.flavor_texts["legs"]
 	.["armor"] = prefs.flavor_texts["armor"]
 
 /datum/flavor_text_editor/tgui_interact(mob/user, datum/tgui/ui)
@@ -37,10 +37,8 @@
 	switch(action)
 		if("set_flavor_text")
 			if(!params["category"])
-				to_chat(ui.user, "no parameters")
 				return
 			prefs.flavor_texts[params["category"]] = params["text"]
-			to_chat(ui.user, "it worked")
 			return TRUE
 
 	return TRUE
