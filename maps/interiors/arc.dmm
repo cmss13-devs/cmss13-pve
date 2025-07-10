@@ -14,7 +14,10 @@
 	},
 /area/space)
 "r" = (
-/obj/effect/landmark/interior/spawn/telephone{
+/obj/structure/phone_base{
+	name = "ARC reciever";
+	phone_category = "Vehicles";
+	phone_id = "M540 Armoured Recon Carrier";
 	pixel_x = -13;
 	pixel_y = 15;
 	layer = 2.9
