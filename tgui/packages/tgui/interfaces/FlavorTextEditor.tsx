@@ -137,15 +137,3 @@ export const FlavorTextEditor = (props) => {
     </Window>
   );
 };
-
-const TextInput = ({ buffer, setBuffer }) => {
-  return (
-    <TextArea
-      scrollbar
-      height="100%"
-      fontSize="13px"
-      value={buffer}
-      onChange={(e, value) => setBuffer(value)}
-    />
-  );
-};
