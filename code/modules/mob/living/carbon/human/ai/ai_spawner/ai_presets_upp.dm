@@ -64,21 +64,21 @@
 	path = /datum/equipment_preset/upp/officer
 
 /datum/human_ai_equipment_preset/upp/officer/kapitan
-	name = "UPP - Officer Kapitan"
-	desc = "UPP Kapitan, functionally similar to the officer"
+	name = "UPP - Officer Captain"
+	desc = "UPP Captain, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/kapitan
 
 /datum/human_ai_equipment_preset/upp/officer/kolonel
-	name = "UPP - Officer Kolonel"
-	desc = "UPP Kolonel, functionally similar to the officer"
+	name = "UPP - Officer Colonel"
+	desc = "UPP Colonel, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/kolonel
 
 /datum/human_ai_equipment_preset/upp/officer/lt_kolonel
-	name = "UPP - Officer Lt Kolonel"
-	desc = "UPP LT Kolonel, functionally similar to the officer"
+	name = "UPP - Officer Lt Colonel"
+	desc = "UPP LT Colonel, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/lt_kolonel
 
-/datum/human_ai_equipment_preset/upp/officer/mjaor
+/datum/human_ai_equipment_preset/upp/officer/major
 	name = "UPP - Officer Major"
 	desc = "UPP Major, functionally similar to the officer"
 	path = /datum/equipment_preset/upp/officer/major

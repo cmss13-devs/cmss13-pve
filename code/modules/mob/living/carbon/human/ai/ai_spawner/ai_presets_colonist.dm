@@ -33,12 +33,12 @@
 
 /datum/human_ai_equipment_preset/colonist/security/colonial
 	name = "Colonist - US Colonial Guard"
-	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with M20"
+	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with an M20"
 	path = /datum/equipment_preset/colonist/security/guard
 
 /datum/human_ai_equipment_preset/colonist/security/colonial/spanish
 	name = "Colonist - US Colonial Guard Spanish"
-	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with M20, spanish"
+	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with an M20, spanish"
 	path = /datum/equipment_preset/colonist/security/guard/spanish
 
 /datum/human_ai_equipment_preset/colonist/bluecollar

@@ -8,12 +8,12 @@
 
 /datum/human_ai_equipment_preset/elite_merc/engineer
 	name = "Elite Merc - Engineer"
-	desc = "A simiarly outfitted generic 'elite' merc this one should spawn only with shotguns and engineering gear"
+	desc = "A simiarly outfitted generic 'elite' merc, this one should spawn only with shotguns and engineering gear"
 	path = /datum/equipment_preset/other/elite_merc/engineer
 
 /datum/human_ai_equipment_preset/elite_merc/heavy
 	name = "Elite Merc - Heavy"
-	desc = "A generic 'elite' merc be warned this one has a minigun"
+	desc = "A generic 'elite' merc, be warned this one has a minigun"
 	path = /datum/equipment_preset/other/elite_merc/heavy
 
 /datum/human_ai_equipment_preset/elite_merc/leader
