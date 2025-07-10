@@ -375,7 +375,7 @@
 	name = "\improper modified M79 grenade launcher"
 	desc = "A heavy, low-angle grenade launcher. It's been in use since the Vietnam War, though this version has been modified to fire standard USCM 30mm grenades. The wooden furniture is, in fact, an attempt at modernization and is made of painted hardened polykevlon."
 	valid_munitions = list(/obj/item/explosive/grenade/high_explosive, /obj/item/explosive/grenade/high_explosive/impact/tmfrag, /obj/item/explosive/grenade/high_explosive/impact/heap, /obj/item/explosive/grenade/high_explosive/impact/flare, /obj/item/explosive/grenade/incendiary, /obj/item/explosive/grenade/smokebomb, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
-	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/handle_starting_attachment()
 	..()
