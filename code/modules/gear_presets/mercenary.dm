@@ -165,6 +165,44 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/mercenary/pilot/driver
+	name = "Black Dragoons Driver"
+	paygrades = list(PAY_SHORT_BD_P = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Driver"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Black Dragoons Driver"
+	rank = JOB_MERCENARY_PILOT
+	skills = /datum/skills/tank_crew
+	faction = FACTION_MERCENARY
+
+/datum/equipment_preset/mercenary/pilot/driver/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/merc, WEAR_L_EAR)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/merc/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/holobadge/cord, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/M3T, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles, WEAR_EYES)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/b92fs, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/b92fs, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/b92fs, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/b92fs, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new 	/obj/item/ammo_magazine/pistol/b92fs, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/pfc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/mercenary/sentinel
 	name = "Black Dragoons Sentinel (Patrol, SMG)"
 	paygrades = list(PAY_SHORT_BD_S = JOB_PLAYTIME_TIER_0)

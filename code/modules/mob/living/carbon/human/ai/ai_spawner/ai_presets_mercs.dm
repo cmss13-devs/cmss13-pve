@@ -16,6 +16,11 @@
 	desc = "A pilot for the Black Dragoons mercenary company, who drives/flies most of their vehicles."
 	path = /datum/equipment_preset/mercenary/pilot
 
+/datum/human_ai_equipment_preset/mercenaries/pilot/driver
+	name = "Black Dragoons Driver"
+	desc = "A vehicle crewman for the Black Dragoons. Often rather rare due to the lack of larger vehicles within the Dragoon's range."
+	path = /datum/equipment_preset/mercenary/pilot/driver
+
 /datum/human_ai_equipment_preset/mercenaries/sentinel
 	name = "Black Dragoons Sentinel (Patrol, SMG)"
 	desc = "The primary infantryman for the Black Dragoons, equipped with a modified FP9000 SMG and pistol."
