@@ -12,12 +12,14 @@ type Data = {
   arms: string;
   hands: string;
   legs: string;
+  helmet: string;
   armor: string;
 };
 
 export const FlavorTextEditor = (props) => {
   const { act, data } = useBackend<Data>();
-  const { general, head, face, eyes, torso, arms, hands, legs, armor } = data;
+  const { general, head, face, eyes, torso, arms, hands, legs, helmet, armor } =
+    data;
   const [category, setCategory] = useState('general');
   const [flavorText, setFlavorText] = useState(general);
   const [buffer, setBuffer] = useState(general);
@@ -38,7 +40,7 @@ export const FlavorTextEditor = (props) => {
   return (
     <Window width={800} height={500} theme="crtblue">
       <Window.Content>
-        <Stack fill vertical height="40px">
+        <Stack fill vertical>
           <Stack.Item>
             <Tabs fluid pr="0" pl="0" mb="0" fontSize="16px">
               <Tabs.Tab
@@ -90,6 +92,12 @@ export const FlavorTextEditor = (props) => {
                 Legs
               </Tabs.Tab>
               <Tabs.Tab
+                selected={category === 'helmet'}
+                onClick={() => changeCategory('helmet', helmet)}
+              >
+                Helmet
+              </Tabs.Tab>
+              <Tabs.Tab
                 selected={category === 'armor'}
                 onClick={() => changeCategory('armor', armor)}
               >
@@ -97,25 +105,34 @@ export const FlavorTextEditor = (props) => {
               </Tabs.Tab>
             </Tabs>
           </Stack.Item>
+          <Section
+            fill
+            title={
+              'Edit ' + category + ' flavor text (Shift+Enter for new line)'
+            }
+            buttons={
+              <>
+                <Button
+                  icon="floppy-disk"
+                  onClick={() => save(buffer, category, flavorText)}
+                >
+                  Save
+                </Button>
+                <Button icon="undo" onClick={() => setBuffer(flavorText)}>
+                  Revert
+                </Button>
+              </>
+            }
+          >
+            <TextArea
+              scrollbar
+              height="100%"
+              fontSize="13px"
+              value={buffer}
+              onChange={(e, value) => setBuffer(value)}
+            />
+          </Section>
         </Stack>
-        <Section
-          title={'Edit ' + category + ' flavor text (Shift+Enter for new line)'}
-          buttons={
-            <>
-              <Button
-                icon="floppy-disk"
-                onClick={() => save(buffer, category, flavorText)}
-              >
-                Save
-              </Button>
-              <Button icon="undo" onClick={() => setBuffer(flavorText)}>
-                Revert
-              </Button>
-            </>
-          }
-        >
-          <TextInput buffer={buffer} setBuffer={setBuffer} />
-        </Section>
       </Window.Content>
     </Window>
   );
@@ -125,8 +142,7 @@ const TextInput = ({ buffer, setBuffer }) => {
   return (
     <TextArea
       scrollbar
-      width="100%"
-      height="350px"
+      height="100%"
       fontSize="13px"
       value={buffer}
       onChange={(e, value) => setBuffer(value)}

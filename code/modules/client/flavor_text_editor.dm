@@ -13,6 +13,7 @@
 	.["arms"] = prefs.flavor_texts["arms"]
 	.["hands"] = prefs.flavor_texts["hands"]
 	.["legs"] = prefs.flavor_texts["legs"]
+	.["helmet"] = prefs.flavor_texts["helmet"]
 	.["armor"] = prefs.flavor_texts["armor"]
 
 /datum/flavor_text_editor/tgui_interact(mob/user, datum/tgui/ui)

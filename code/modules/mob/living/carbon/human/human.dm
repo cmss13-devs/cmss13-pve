@@ -1109,6 +1109,7 @@
 	var/legs_exposed = 1
 	var/hands_exposed = 1
 	var/armor_on = 0
+	var/helmet_on = 0
 
 	for(var/obj/item/clothing/C in equipment)
 		if(C.flags_armor_protection & BODY_FLAG_HEAD)
@@ -1125,14 +1126,16 @@
 			hands_exposed = 0
 		if(C.flags_armor_protection & BODY_FLAG_LEGS)
 			legs_exposed = 0
-		if(src.wear_suit == /obj/item/clothing/suit/marine)
+		if(istype(C, /obj/item/clothing/suit/marine))
 			armor_on = 1
+		if(istype(C, /obj/item/clothing/head/helmet/marine))
+			helmet_on = 1
 
 	flavor_text = flavor_texts["general"]
 	flavor_text += "\n\n"
 	for(var/T in flavor_texts)
 		if(flavor_texts[T] && flavor_texts[T] != "")
-			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "armor" && armor_on))
+			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "armor" && armor_on) || (T == "helmet" && helmet_on))
 				flavor_text += flavor_texts[T]
 				flavor_text += "\n\n"
 	return ..()

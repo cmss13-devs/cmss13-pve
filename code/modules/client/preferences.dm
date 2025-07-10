@@ -2157,6 +2157,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		character.flavor_texts["arms"] = flavor_texts["arms"]
 		character.flavor_texts["hands"] = flavor_texts["hands"]
 		character.flavor_texts["legs"] = flavor_texts["legs"]
+		character.flavor_texts["helmet"] = flavor_texts["helmet"]
 		character.flavor_texts["armor"] = flavor_texts["armor"]
 
 	if(!be_random_name)
