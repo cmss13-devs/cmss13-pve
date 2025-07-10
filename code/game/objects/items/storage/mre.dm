@@ -10,9 +10,9 @@
 	icon_state = "mealpack"
 	item_state = "mealpack"
 	w_class = SIZE_SMALL
-	can_hold = list()
+	can_hold = list(/obj/item/mre_food_packet, /obj/item/reagent_container/food/drinks/cans/spread, /obj/item/reagent_container/food/drinks/beverage_drink, /obj/item/storage/fancy/cigarettes/wypacket_4, /obj/item/storage/fancy/cigarettes/balaji_4, /obj/item/storage/fancy/cigarettes/lucky_strikes_4, /obj/item/storage/fancy/cigarettes/blackpack_4, /obj/item/storage/fancy/cigar/matchbook, /obj/item/tool/kitchen/utensil, /obj/item/reagent_container/food/snacks/fortunecookie, /obj/item/reagent_container/food/drinks/cans/soylent, /obj/item/reagent_container/food/drinks/cans/coconutmilk, /obj/item/reagent_container/food/snacks/wrapped/twe_bar, /obj/item/storage/box/lemondrop, /obj/item/reagent_container/pill/teabag, /obj/item/reagent_container/food/drinks/cans/tube, /obj/item/reagent_container/food/drinks/sillycup, /obj/item/reagent_container/food/drinks/cans/food/upp, /obj/item/reagent_container/food/snacks/wrapped/upp_biscuits)
 	storage_slots = 4
-	max_w_class = 0
+	max_w_class = 2
 	use_sound = "rip"
 	var/trash_item = /obj/item/trash/uscm_mre
 	var/icon_closed = "mealpack"
@@ -285,6 +285,7 @@
 	icon_closed = "wy_mealpack"
 	icon_opened = "wy_mealpackopened"
 	item_state = "wy_mealpack"
+	can_hold = list(/obj/item/reagent_container/food/snacks/microwavable/packaged_burger, /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito, /obj/item/reagent_container/food/snacks/eat_bar, /obj/item/reagent_container/food/snacks/wrapped/booniebars, /obj/item/reagent_container/food/snacks/wrapped/barcardine, /obj/item/reagent_container/food/snacks/wrapped/chunk, /obj/item/reagent_container/food/drinks/cans/bugjuice)
 	trash_item = /obj/item/trash/wy_mre
 	entree = /obj/item/mre_food_packet/entree/wy_colonist
 	side = null
