@@ -14,12 +14,24 @@ type Data = {
   legs: string;
   helmet: string;
   armor: string;
+  categories: Array<string>;
 };
 
 export const FlavorTextEditor = (props) => {
   const { act, data } = useBackend<Data>();
-  const { general, head, face, eyes, torso, arms, hands, legs, helmet, armor } =
-    data;
+  const {
+    general,
+    head,
+    face,
+    eyes,
+    torso,
+    arms,
+    hands,
+    legs,
+    helmet,
+    armor,
+    categories,
+  } = data;
   const [category, setCategory] = useState('general');
   const [flavorText, setFlavorText] = useState(general);
   const [buffer, setBuffer] = useState(general);
@@ -43,66 +55,20 @@ export const FlavorTextEditor = (props) => {
         <Stack fill vertical>
           <Stack.Item>
             <Tabs fluid pr="0" pl="0" mb="0" fontSize="16px">
-              <Tabs.Tab
-                selected={category === 'general'}
-                onClick={() => changeCategory('general', general)}
-              >
-                General
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'head'}
-                onClick={() => changeCategory('head', head)}
-              >
-                Head
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'face'}
-                onClick={() => changeCategory('face', face)}
-              >
-                Face
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'eyes'}
-                onClick={() => changeCategory('eyes', eyes)}
-              >
-                Eyes
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'torso'}
-                onClick={() => changeCategory('torso', torso)}
-              >
-                Torso
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'arms'}
-                onClick={() => changeCategory('arms', arms)}
-              >
-                Arms
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'hands'}
-                onClick={() => changeCategory('hands', hands)}
-              >
-                Hands
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'legs'}
-                onClick={() => changeCategory('legs', legs)}
-              >
-                Legs
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'helmet'}
-                onClick={() => changeCategory('helmet', helmet)}
-              >
-                Helmet
-              </Tabs.Tab>
-              <Tabs.Tab
-                selected={category === 'armor'}
-                onClick={() => changeCategory('armor', armor)}
-              >
-                Armor
-              </Tabs.Tab>
+              {data.categories.map((iterateCategory, index) => {
+                return (
+                  <Tabs.Tab
+                    key={index}
+                    selected={category === categories[index]}
+                    onClick={() =>
+                      changeCategory(categories[index], data[categories[index]])
+                    }
+                  >
+                    {categories[index][0].toUpperCase() +
+                      categories[index].slice(1)}
+                  </Tabs.Tab>
+                );
+              })}
             </Tabs>
           </Stack.Item>
           <Section

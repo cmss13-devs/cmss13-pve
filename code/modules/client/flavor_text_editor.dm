@@ -5,16 +5,11 @@
 	if(!prefs)
 		return
 
-	.["general"] = prefs.flavor_texts["general"]
-	.["head"] = prefs.flavor_texts["head"]
-	.["face"] = prefs.flavor_texts["face"]
-	.["eyes"] = prefs.flavor_texts["eyes"]
-	.["torso"] = prefs.flavor_texts["torso"]
-	.["arms"] = prefs.flavor_texts["arms"]
-	.["hands"] = prefs.flavor_texts["hands"]
-	.["legs"] = prefs.flavor_texts["legs"]
-	.["helmet"] = prefs.flavor_texts["helmet"]
-	.["armor"] = prefs.flavor_texts["armor"]
+	.["categories"] = list()
+
+	for (var/category in prefs.flavor_texts)
+		.["categories"] += category
+		.[category] = prefs.flavor_texts[category]
 
 /datum/flavor_text_editor/tgui_interact(mob/user, datum/tgui/ui)
 	. = ..()
