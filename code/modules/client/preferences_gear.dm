@@ -87,6 +87,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/glasses/sunglasses/big/orange
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/eyewear/bimex_shades_classic
+	display_name = "BiMex Classic Shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/classic
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
@@ -398,6 +403,38 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/beret_black
 	display_name = "Beret, black"
 	path = /obj/item/clothing/head/beret/black
+
+/datum/gear/headwear/uscm/beret_white
+	display_name = "Beret, white"
+	path = /obj/item/clothing/head/beret/cm/white
+
+/datum/gear/headwear/uscm/beret_alpha
+	display_name = "Beret, red flash"
+	path = /obj/item/clothing/head/beret/cm/alpha
+
+/datum/gear/headwear/uscm/beret_bravo
+	display_name = "Beret, yellow flash"
+	path = /obj/item/clothing/head/beret/cm/bravo
+
+/datum/gear/headwear/uscm/beret_charlie
+	display_name = "Beret, purple flash"
+	path = /obj/item/clothing/head/beret/cm/charlie
+
+/datum/gear/headwear/uscm/beret_delta
+	display_name = "Beret, blue flash"
+	path = /obj/item/clothing/head/beret/cm/delta
+
+/datum/gear/headwear/uscm/beret_echo
+	display_name = "Beret, green flash"
+	path = /obj/item/clothing/head/beret/cm/echo
+
+/datum/gear/headwear/uscm/beret_foxtrot
+	display_name = "Beret, brown flash"
+	path = /obj/item/clothing/head/beret/cm/foxtrot
+
+/datum/gear/headwear/uscm/beret_intel
+	display_name = "Beret, black flash"
+	path = /obj/item/clothing/head/beret/cm/intel
 
 /*
 //================================================
