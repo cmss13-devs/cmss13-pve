@@ -515,7 +515,7 @@
 
 /obj/item/storage/pouch/magazine/large/pmc_sniper/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/sniper/elite(src)
+		new /obj/item/ammo_magazine/sniper/elite/basic(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_rifle/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
