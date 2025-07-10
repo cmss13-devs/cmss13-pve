@@ -1025,6 +1025,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/weapon/burst_stock
 display_name = VP70 burst stock
 path = /obj/item/attachable/stock/vp70
+cost = 4
 
 /datum/gear/weapon/kabar
 
