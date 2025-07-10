@@ -782,8 +782,8 @@
 
 
 /obj/item/storage/box/guncase/xm51
-	name = "\improper XM51 breaching scattergun case"
-	desc = "A gun case containing the XM51 Breaching Scattergun. Comes with two spare magazines, two spare shell boxes, an optional stock and a belt to holster the weapon."
+	name = "\improper M1771 shotgun case"
+	desc = "A gun case containing the Model 1771 Cobra Max Tactical shotgun. Comes with two spare magazines, two spare shell boxes, an optional stock and a belt to holster the weapon."
 	storage_slots = 7
 	can_hold = list(/obj/item/weapon/gun/rifle/xm51, /obj/item/ammo_magazine/rifle/xm51, /obj/item/storage/belt/gun/xm51, /obj/item/attachable/stock/xm51)
 
@@ -792,8 +792,8 @@
 	new /obj/item/weapon/gun/rifle/xm51(src)
 	new /obj/item/ammo_magazine/rifle/xm51(src)
 	new /obj/item/ammo_magazine/rifle/xm51(src)
-	new /obj/item/ammo_magazine/shotgun/light/breaching(src)
-	new /obj/item/ammo_magazine/shotgun/light/breaching(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot/light(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot/light(src)
 	new /obj/item/storage/belt/gun/xm51(src)
 
 //Handgun case for Military police vendor three mag , a railflashligh and the handgun.

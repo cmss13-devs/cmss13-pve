@@ -169,6 +169,12 @@
 	/// Special storages this item prioritizes
 	var/list/preferred_storage
 
+	///HUD related stuff for radios, visors & cam-gear
+	///Whether it has a squad/medical HUD or not
+	var/has_hud = FALSE
+	///What HUD it will display if present
+	var/list/hud_type = null
+
 /obj/item/Initialize(mapload, ...)
 	. = ..()
 
