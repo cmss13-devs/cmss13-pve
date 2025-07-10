@@ -1003,21 +1003,21 @@
 	visible_message("<b>[src]</b> points to [target_atom]", null, null, 5)
 
 /datum/action/xeno_action/onclick/screech/ai
-    default_ai_action = TRUE
-    ai_prob_chance = 70
-    xeno_cooldown = 30 SECONDS
+	default_ai_action = TRUE
+	ai_prob_chance = 70
+	xeno_cooldown = 30 SECONDS
 
 /datum/action/xeno_action/onclick/screech/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-    /// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
-    /// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
-    return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 6)
+	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
+	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
+	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 6)
 
 /datum/action/xeno_action/activable/xeno_spit/queen_macro/ai
-    default_ai_action = TRUE
-    ai_prob_chance = 70
-    xeno_cooldown = 8 SECONDS
+	default_ai_action = TRUE
+	ai_prob_chance = 70
+	xeno_cooldown = 8 SECONDS
 
 /datum/action/xeno_action/activable/xeno_spit/queen_macro/ai/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
-    /// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
-    /// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
-    return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/toxin/queen])
+	/// Short-circuit. Will return the last thing checked or FALSE if it fails at any step.
+	/// We do not need to check for distance here as the tailstab itself will do that; that distance being 2.
+	return DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target) && (get_dist(parent, parent.current_target) <= 7) && !check_for_obstacles_projectile(parent, parent.current_target, GLOB.ammo_list[/datum/ammo/xeno/toxin/queen])
