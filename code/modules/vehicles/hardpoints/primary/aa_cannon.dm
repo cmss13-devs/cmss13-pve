@@ -16,7 +16,7 @@
 	allowed_seat = VEHICLE_GUNNER
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon
-	max_clips = 1
+	max_clips = 2
 
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE

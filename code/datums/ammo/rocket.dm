@@ -141,7 +141,6 @@
 /datum/ammo/rocket/ap/anti_tank
 	name = "anti-tank rocket"
 	damage = 200
-	damage_var_high = 25
 	vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
@@ -159,11 +158,10 @@
 	return ..()
 
 /datum/ammo/rocket/ap/tank_towlauncher
-	max_range = 8
+	max_range = 16
 
 /datum/ammo/rocket/ap/tank_towlauncher/aa
 	name = "hypervelocity missile"
-	damage = 200
 	max_range = 16
 	shell_speed = AMMO_SPEED_TIER_8
 
@@ -180,11 +178,13 @@
 	var/vehicle_slowdown_time = 10 SECONDS
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/mob, obj/projectile/projectile)
+	if(iscarbon(mob)) // Tank beats everything.
+		mob.ex_act(350, null, projectile.weapon_cause_data, 150)
 	if(mob.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/alivent = mob
 		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
-	cell_explosion(get_turf(mob), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(mob), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/on_hit_obj(obj/object, obj/projectile/projectile)
 	if(istype(object, /obj/vehicle/multitile))
@@ -198,16 +198,16 @@
 		smoke.set_up(1, turf)
 		smoke.start()
 		return
-	cell_explosion(get_turf(object), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(object), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/on_hit_turf(turf/turf, obj/projectile/projectile)
-	cell_explosion(get_turf(turf), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(turf), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/do_at_max_range(obj/projectile/projectile)
-	cell_explosion(get_turf(projectile), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(projectile), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/wp
 	name = "white phosphorous rocket"

@@ -19,7 +19,7 @@
 		return
 
 	if(is_active)
-		user.client.change_view(8, owner)
+		user.client.change_view(10, owner)
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 		is_active = FALSE
@@ -58,7 +58,7 @@
 		var/mob/user = C.seats[seat]
 		if(user.client)
 			return
-		user.client.change_view(7, owner)
+		user.client.change_view(GLOB.world_view_size, owner)
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
 	is_active = FALSE

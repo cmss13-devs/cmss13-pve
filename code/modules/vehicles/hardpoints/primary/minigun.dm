@@ -1,6 +1,6 @@
 /obj/item/hardpoint/primary/minigun
 	name = "\improper LTAA-AP Minigun"
-	desc = "A primary weapon for tanks that spews bullets"
+	desc = "A primary LTAA Minigun utelizing AP ammo for tanks. Its six barrels are heavy and take a bit to fully spin up."
 
 	icon_state = "ltaaap_minigun"
 	disp_icon = "tank"
@@ -10,7 +10,7 @@
 	firing_arc = 90
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/ltaaap_minigun
-	max_clips = 2
+	max_clips = 4
 
 	px_offsets = list(
 		"1" = list(0, 21),

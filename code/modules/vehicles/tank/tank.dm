@@ -35,7 +35,9 @@
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.6
 
-	light_range = 4
+	light_range = 5
+
+	var/view_boost = 10 //VV as needed to increase or decrease the tank crew's view range
 
 	wall_ram_damage = 350
 	vehicle_ram_multiplier = 20 //Big heavy chunk of metal cares not for crunchies
@@ -72,7 +74,7 @@
 		"bullet" = 0.4,
 		"explosive" = 0.6,
 		"blunt" = 0.3,
-		"abstract" = 1
+		"abstract" = 1,
 	)
 
 	explosive_resistance = 500
@@ -99,44 +101,50 @@
 /obj/vehicle/multitile/tank/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
 
-/obj/vehicle/multitile/tank/add_seated_verbs(mob/living/M, seat)
-	if(!M.client)
+/obj/vehicle/multitile/tank/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
 		return
-	add_verb(M.client, list(
+	add_verb(user.client, list(
 		/obj/vehicle/multitile/proc/switch_hardpoint,
 		/obj/vehicle/multitile/proc/get_status_info,
 		/obj/vehicle/multitile/proc/open_controls_guide,
 		/obj/vehicle/multitile/proc/name_vehicle,
 	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
 	if(seat == VEHICLE_DRIVER)
-		add_verb(M.client, list(
+		add_verb(user.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
-		add_verb(M.client, list(
+		add_verb(user.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 		))
 
 
-/obj/vehicle/multitile/tank/remove_seated_verbs(mob/living/M, seat)
-	if(!M.client)
+/obj/vehicle/multitile/tank/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
 		return
-	remove_verb(M.client, list(
+	remove_verb(user.client, list(
 		/obj/vehicle/multitile/proc/get_status_info,
 		/obj/vehicle/multitile/proc/open_controls_guide,
 		/obj/vehicle/multitile/proc/name_vehicle,
 		/obj/vehicle/multitile/proc/switch_hardpoint,
 	))
-	SStgui.close_user_uis(M, src)
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
 	if(seat == VEHICLE_DRIVER)
-		remove_verb(M.client, list(
+		remove_verb(user.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
-		remove_verb(M.client, list(
+		remove_verb(user.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 		))
@@ -145,6 +153,9 @@
 //Another wrapper for try_move()
 /obj/vehicle/multitile/tank/relaymove(mob/user, direction)
 	if(user == seats[VEHICLE_DRIVER])
+		// Double checking if treads are installed
+		if(!(locate(/obj/item/hardpoint/locomotion/treads) in hardpoints))
+			return FALSE
 		return ..()
 
 	if(user != seats[VEHICLE_GUNNER])
