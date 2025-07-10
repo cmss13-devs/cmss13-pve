@@ -336,7 +336,7 @@
 		sleep(-1)
 		var/datum/autodoc_surgery/S = surgery_todo_list[currentsurgery]
 		if(automatic_mode)
-			surgery_mod = 1.5 // automatic mode takes longer
+			surgery_mod = 2.5 // automatic mode takes longer
 		else
 			surgery_mod = 1 // might need tweaking
 
