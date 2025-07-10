@@ -147,7 +147,7 @@
 	if(!isturf(loc))
 		return
 
-	if(locate(/obj/item/mre_food_packet) in src)
+	if(locate(/obj/item/mre_food_packet || /obj/item/reagent_container/food/drinks/cans || /obj/item/reagent_container/food/snacks) in src)
 		return
 
 	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
