@@ -108,7 +108,10 @@
 /obj/structure/surface/table/reinforced/toc/east{
 	pixel_y = -7
 	},
-/obj/effect/landmark/interior/spawn/telephone/toc{
+/obj/structure/phone_base{
+	name = "APC reciever";
+	phone_category = "Vehicles";
+	phone_id = "M577A3 Armoured Personnel Carrier";
 	pixel_y = 11;
 	pixel_x = 11
 	},
