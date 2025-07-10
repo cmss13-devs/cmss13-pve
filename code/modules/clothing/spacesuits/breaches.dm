@@ -95,14 +95,14 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 
 		if (existing.class < 5 || existing.patched)
 			if(existing.patched)
-				playsound(loc, 'sound/effects/hull_bang.ogg', 40+(amount*5), TRUE, falloff = 3)
+				playsound(loc, 'sound/effects/hull_bang.ogg', 35+(amount*5), TRUE, falloff = 3)
 				sound_already_played = TRUE
 				if (existing.damtype == BRUTE)
 					var/message = "\The [existing.descriptor] on \the [src] gapes wider[existing.patched ? ", tearing the patch" : ""]!"
-					T.visible_message(SPAN_WARNING(message))
+					T.visible_message(SPAN_WARNING(message), max_distance = 1)
 				else if (existing.damtype == BURN)
 					var/message = "\The [existing.descriptor] on \the [src] widens[existing.patched ? ", ruining the patch" : ""]!"
-					T.visible_message(SPAN_WARNING(message))
+					T.visible_message(SPAN_WARNING(message), max_distance = 1)
 				existing.patched = FALSE
 				existing.update_descriptor()
 				amount -= existing.class/2
@@ -135,9 +135,9 @@ GLOBAL_LIST_INIT(breach_burn_descriptors, list(
 		B.holder = src
 
 		if(B.damtype == BRUTE)
-			T.visible_message(SPAN_WARNING("\A [B.descriptor] opens up on [src]!"))
+			T.visible_message(SPAN_WARNING("\A [B.descriptor] opens up on [src]!"), max_distance = 1)
 		else if(B.damtype == BURN)
-			T.visible_message(SPAN_WARNING("\A [B.descriptor] marks the surface of [src]!"))
+			T.visible_message(SPAN_WARNING("\A [B.descriptor] marks the surface of [src]!"), max_distance = 1)
 
 	calc_breach_damage()
 

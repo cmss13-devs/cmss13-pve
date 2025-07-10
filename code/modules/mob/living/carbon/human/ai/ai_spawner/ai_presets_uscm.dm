@@ -6,6 +6,16 @@
 	desc = "Armed with a M41A rifle, carries a simple IFAK with gauze, ointment, splints and an injector."
 	path = /datum/equipment_preset/uscm/private_equipped
 
+/datum/human_ai_equipment_preset/uscm/rifleman/battlerifle
+	name = "USCM Squad Sniper (M49A6)"
+	desc = "Armed with a M49A6 rifle with DU magazines, carries a simple IFAK with gauze, ointment, splints and an injector."
+	path = /datum/equipment_preset/uscm/private_equipped/battlerifle
+
+/datum/human_ai_equipment_preset/uscm_eva/rifleman/grenade
+	name = "USCM Squad Grenadier (M92 HEFA)"
+	desc = "Armed with a M4A3 AP-loaded Pistol and a M92 grenade launcher loaded with 30mm HEFA."
+	path = /datum/equipment_preset/uscm/private_equipped/grenade
+
 /datum/human_ai_equipment_preset/uscm/smartgunner
 	name = "USCM Squad Smartgunner"
 	desc = "Armed with a M56A2 smartgun, carries a simple IFAK with gauze, ointment, splints and an injector."

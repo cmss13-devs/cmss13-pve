@@ -266,7 +266,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
-	if(prob(60))
+	if(prob(80))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_WAIST)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/atmostech, WEAR_WAIST)

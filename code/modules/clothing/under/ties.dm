@@ -1495,6 +1495,17 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
+/obj/item/clothing/accessory/storage/webbing/m3/m40/frag_smoke
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/frag_smoke
+
+/obj/item/storage/internal/accessory/black_vest/m3grenade/frag_smoke/fill_preset_inventory()
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/smokebomb(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
+	new /obj/item/explosive/grenade/high_explosive/frag(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon
 	name = "\improper M3-R Pattern Magazine Webbing"
