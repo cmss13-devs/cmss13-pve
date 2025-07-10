@@ -1556,6 +1556,13 @@
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_leader,
 /turf/open/floor/corsat/plate,
 /area/firefly/cryo_cell)
+"aeA" = (
+/obj/structure/machinery/door/poddoor/almayer/blended,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/space)
+"aeB" = (
+/turf/open/floor/corsat/arrow_south,
+/area/space)
 "aeC" = (
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/medic/pmc,
@@ -1579,6 +1586,14 @@
 "aeF" = (
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/briefing)
+"aeG" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "hanger_w_s_s";
+	name = "hangar blast door control";
+	req_one_access_txt = "19;12"
+	},
+/turf/open/space/basic,
+/area/space)
 "aeH" = (
 /obj/structure/machinery/faxmachine/corporate{
 	layer = 10
@@ -1642,6 +1657,24 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
+"aeR" = (
+/turf/open/floor/corsat/arrow_north,
+/area/space)
+"aeS" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 4;
+	light_power = 0.7
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/hangar)
+"aeT" = (
+/obj/structure/machinery/door_control/brbutton{
+	id = "frange_w_s_s";
+	name = "hangar blast door control";
+	req_one_access_txt = "19;12"
+	},
+/turf/open/space/basic,
+/area/space)
 "aeU" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/training,
@@ -2347,6 +2380,11 @@
 "agQ" = (
 /obj/structure/platform_decoration{
 	dir = 8
+	},
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 28;
+	id = "briefing_stair";
+	name = "hangar blast door control"
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/briefing)
@@ -5442,6 +5480,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
+"apc" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	dir = 1;
+	name = "\improper Epsilon Wing Firing Range"
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "F-range2";
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/cafeteria)
 "apd" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -7832,8 +7882,11 @@
 /turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
 "auV" = (
-/obj/structure/machinery/door/poddoor/almayer/blended,
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "hanger_w_s_s"
+	},
+/turf/open/floor/corsat/marked,
 /area/firefly/hangar)
 "auW" = (
 /obj/structure/sign/safety/ladder{
@@ -7842,6 +7895,10 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/hangar)
 "auX" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "auY" = (
@@ -12031,6 +12088,11 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "F-range2";
+	dir = 4
+	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
 "ebX" = (
@@ -12339,7 +12401,10 @@
 /turf/open/floor/corsat/cargo,
 /area/firefly/hangar)
 "exG" = (
-/obj/structure/machinery/door/poddoor/almayer/blended,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "Blast Door";
+	id = "frange_w_s_s"
+	},
 /turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
 "exW" = (
@@ -27550,11 +27615,13 @@
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = 5;
-	pixel_x = -6
+	pixel_x = -6;
+	id = "F-range2"
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
 	pixel_y = 5;
-	pixel_x = 8
+	pixel_x = 8;
+	id = "F-range2"
 	},
 /turf/open/floor/corsat/red/southwest,
 /area/firefly/cafeteria)
@@ -50376,8 +50443,8 @@ acQ
 acQ
 acQ
 acQ
-fDZ
-fDZ
+iQk
+iQk
 fDZ
 fDZ
 fDZ
@@ -50567,9 +50634,9 @@ jOD
 anc
 amX
 exG
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -50759,9 +50826,9 @@ anq
 and
 asH
 exG
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -50951,9 +51018,9 @@ amZ
 ane
 amZ
 exG
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -51136,7 +51203,7 @@ acQ
 acQ
 acQ
 eab
-bYI
+apc
 acQ
 acQ
 acQ
@@ -51144,8 +51211,8 @@ acQ
 acQ
 acQ
 acQ
-fDZ
-fDZ
+iQk
+iQk
 fDZ
 fDZ
 fDZ
@@ -51336,7 +51403,7 @@ aGJ
 jpD
 sNb
 acQ
-fDZ
+aeT
 fDZ
 fDZ
 fDZ
@@ -54415,7 +54482,7 @@ auX
 acW
 acW
 acW
-fDZ
+aeG
 fDZ
 fDZ
 fDZ
@@ -54607,9 +54674,9 @@ amr
 amo
 auW
 acW
-fDZ
-fDZ
-fDZ
+iQk
+iQk
+iQk
 fDZ
 fDZ
 fDZ
@@ -54799,9 +54866,9 @@ ams
 amp
 ang
 auV
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -54991,9 +55058,9 @@ ams
 amq
 ang
 auV
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -55183,9 +55250,9 @@ adn
 adg
 ang
 auV
-fDZ
-fDZ
-fDZ
+aeR
+aeB
+aeA
 fDZ
 fDZ
 fDZ
@@ -55375,9 +55442,9 @@ amt
 gNf
 auW
 acW
-fDZ
-fDZ
-fDZ
+iQk
+iQk
+iQk
 fDZ
 fDZ
 fDZ
@@ -55562,8 +55629,8 @@ adi
 add
 acW
 acW
-auX
-auX
+aeS
+aeS
 acW
 acW
 acW

@@ -370,7 +370,7 @@
 		list("Liaison's Tan Suit", 15, /obj/item/clothing/under/liaison_suit, VENDOR_ITEM_REGULAR),
 		list("Liaison's Charcoal Suit", 15, /obj/item/clothing/under/liaison_suit/charcoal, VENDOR_ITEM_REGULAR),
 		list("Liaison's White Suit", 15, /obj/item/clothing/under/liaison_suit/formal, VENDOR_ITEM_REGULAR),
-		list("Liaison's Blue Blazer", 0, /obj/item/clothing/under/liaison_suit/blazer, VENDOR_ITEM_REGULAR),
+		list("Liaison's Blue Blazer", 15, /obj/item/clothing/under/liaison_suit/blazer, VENDOR_ITEM_REGULAR),
 		list("Liaison's Suspenders", 15, /obj/item/clothing/under/liaison_suit/suspenders, VENDOR_ITEM_REGULAR),
 		list("Liaison's Skirt", 15, /obj/item/clothing/under/blackskirt, VENDOR_ITEM_REGULAR),
 		list("Trainee's Uniform", 15, /obj/item/clothing/under/suit_jacket/trainee, VENDOR_ITEM_REGULAR),
