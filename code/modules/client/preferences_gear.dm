@@ -1022,11 +1022,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M5 bayonet"
 	path = 	/obj/item/attachable/bayonet
 
-/datum/gear/weapon/burst_stock
-display_name = VP70 burst stock
-path = /obj/item/attachable/stock/vp70
-cost = 4
-
 /datum/gear/weapon/kabar
 
 	display_name = "KA-BAR utility knife"
@@ -1056,6 +1051,11 @@ cost = 4
 	display_name = "M8 Cartridge Bayonet"
 	path = /obj/item/storage/box/loadout/co2_knife
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/burst_stock
+	display_name = VP70 burst stock
+	path = /obj/item/attachable/stock/vp70
+	cost = 4
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
