@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - spellcheck: "Changes the name of the armor attachments in the vendor UI to be the same as the item."
