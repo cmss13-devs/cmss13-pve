@@ -2375,8 +2375,8 @@ Defined in conflicts.dm of the #defines folder.
 	hud_offset_mod = 2
 
 /obj/item/attachable/stock/xm51
-	name = "\improper XM51 stock"
-	desc = "A specialized stock designed for XM51 breaching shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. Integrated mechanisms inside the stock allow use of a devastating two-shot burst. This comes at a cost of the gun becoming too unwieldy to holster, worse handling and mobility."
+	name = "\improper M1771 stock"
+	desc = "A specialized stock designed for M1771 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
 	icon_state = "xm51_stock"
 	attach_icon = "xm51_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2385,14 +2385,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/xm51/Initialize(mapload, ...)
 	. = ..()
-	select_gamemode_skin(type)
 	//it makes stuff much better when two-handed
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	recoil_mod = -RECOIL_AMOUNT_TIER_4
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
-	//and allows for burst-fire
-	burst_mod = BURST_AMOUNT_TIER_2
 	//but it makes stuff much worse when one handed
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_5
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
@@ -2400,16 +2397,11 @@ Defined in conflicts.dm of the #defines folder.
 	//and makes you slower
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
-/obj/item/attachable/stock/xm51/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+/obj/item/attachable/stock/xm51/military
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
+	icon_state = "xm51_military_stock"
+	attach_icon = "xm51_military_stock_a"
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"
@@ -3238,7 +3230,7 @@ Defined in conflicts.dm of the #defines folder.
 		if(in_chamber) //eject the chambered round
 			var/obj/item/explosive/grenade/new_grenade = in_chamber
 			in_chamber = null
-			new_grenade.forceMove(get_turf(src))
+			user.put_in_hands(new_grenade)
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
 		playsound(src, open_sound, 15, 1)
 	update_icon()

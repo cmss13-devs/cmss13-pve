@@ -215,6 +215,7 @@
 	force = 30
 	throwforce = 2
 	w_class = SIZE_LARGE
+	sharp = IS_SHARP_ITEM_BIG
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	dirt_overlay = "etool_overlay"
