@@ -63,6 +63,8 @@
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
+	var/linger_range = 5
+	var/linger_deviation = 1
 
 /datum/action/xeno_action/activable/xeno_spit/ai
 	default_ai_action = TRUE
@@ -91,9 +93,6 @@
 				break
 
 	return blocked
-
-var/linger_range = 5
-var/linger_deviation = 1
 
 /mob/living/carbon/xenomorph/spitter/init_movement_handler()
 	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
