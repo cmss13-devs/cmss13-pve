@@ -517,6 +517,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/sniper/elite/basic(src)
 
+/obj/item/storage/pouch/magazine/large/pmc_sniper/heap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/elite(src)
+
 /obj/item/storage/pouch/magazine/large/pmc_rifle/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/ap(src)

@@ -500,6 +500,9 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
+/obj/item/weapon/gun/rifle/sniper/elite/heap
+	current_mag = /obj/item/ammo_magazine/sniper/elite
+
 //Type 88 //Based on the actual Dragunov DMR rifle.
 
 /obj/item/weapon/gun/rifle/sniper/svd
