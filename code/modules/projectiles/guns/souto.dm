@@ -131,7 +131,7 @@
 	icon_state = "pmc_armor_elite"
 	storage_slots = 2
 	slowdown = SLOWDOWN_ARMOR_LIGHT
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE|SMARTGUN_HARNESS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -204,6 +204,13 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "pmc_armor_elite_leader")
 
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/four
+	icon_state = "pmc_engineer_armor"
+	item_state_slots = list(WEAR_JACKET = "pmc_engineer_armor")
+
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/five
+	icon_state = "guard_armor_spec"
+	item_state_slots = list(WEAR_JACKET = "guard_armor_spec")
 
 //Helmets
 
@@ -238,6 +245,12 @@
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/temp/five
 	icon_state = "pmc_helmet_elite_leader"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/six
+	icon_state = "pmc_engineer_helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/seven
+	icon_state = "guard_heavy_helmet"
 
 //Backpacks
 /obj/item/storage/backpack/pmc/temp
@@ -279,3 +292,11 @@
 /obj/item/clothing/under/marine/veteran/pmc/temp/two
 	icon_state = "invis_android_uniform"
 	worn_state = "invis_android_uniform"
+
+/obj/item/clothing/under/marine/veteran/pmc/temp/three
+	icon_state = "commando_leader"
+	worn_state = "commando_leader"
+
+/obj/item/clothing/under/marine/veteran/pmc/temp/four
+	icon_state = "engineer_jumpsuit"
+	worn_state = "engineer_jumpsuit"
