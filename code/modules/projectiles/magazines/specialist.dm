@@ -65,12 +65,20 @@
 	default_ammo = /datum/ammo/bullet/sniper/upp
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/sniper/svd
+	ammo_band_icon = "+type88_band"
+	ammo_band_icon_empty = "+m41a_band_e"
 
-/obj/item/ammo_magazine/sniper/svd/penetrating_flak
+/obj/item/ammo_magazine/sniper/svd/heap
+	name = "\improper Type-88 HV Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with HV rounds, that provide some additonal force and body armor penetration.."
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+	default_ammo = /datum/ammo/bullet/sniper/upp/flak
+
+/obj/item/ammo_magazine/sniper/svd/flak
 	name = "\improper Type-88 penetrating flak Magazine (7.62x54mmR)"
-	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with wall-penetrating flak rounds."
-	color = "#0000FF"
-	default_ammo = /datum/ammo/bullet/sniper/upp/penetrating_flak
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds."
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+	default_ammo = /datum/ammo/bullet/sniper/upp/flak
 
 /obj/item/ammo_magazine/sniper/svd/pve
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"

@@ -42,19 +42,19 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
-/datum/ammo/bullet/sniper/upp/penetrating_flak
-	name = "wall-penetrating flak sniper bullet"
-	damage = 80
-	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
+/datum/ammo/bullet/sniper/upp/heap
+	name = "high velocity armor-piercing sniper bullet"
+	damage = 100
+	penetration = ARMOR_PENETRATION_TIER_7 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
-/datum/ammo/bullet/sniper/upp/penetrating_flak/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
+/datum/ammo/bullet/sniper/upp/flak
+	name = "flak sniper bullet"
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
-/datum/ammo/bullet/sniper/upp/penetrating_flak/on_hit_mob(mob/M,obj/projectile/P)
+/datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
 	burst(get_turf(M),P,damage_type, 2 , 2)
 	burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 

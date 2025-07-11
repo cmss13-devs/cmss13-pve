@@ -399,6 +399,64 @@
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff
+	name = "\improper Type 88-I sniper case"
+	desc = "A case for storing a Type 88-I sniper rifle."
+	icon_state = "t88case"
+	storage_slots = 7
+	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
+
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcasealt_lid_open")
+	else
+		overlays += image(icon, "t88case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/sniper/svd) in contents)
+		overlays += image(icon, "+t88")
+	if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
+		overlays += image(icon, "+t88_mag")
+
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap
+	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
+
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
+	new /obj/item/ammo_magazine/sniper/svd/heap(src)
+	new /obj/item/ammo_magazine/sniper/svd/heap(src)
+	new /obj/item/ammo_magazine/sniper/svd/heap(src)
+	new /obj/item/ammo_magazine/sniper/svd/heap(src)
+	new /obj/item/ammo_magazine/sniper/svd/flak(src)
+	new /obj/item/ammo_magazine/sniper/svd/flak(src)
+	new /obj/item/ammo_magazine/sniper/svd/flak(src)
+	new /obj/item/ammo_magazine/sniper/svd/flak(src)
+
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcasealt_lid_open")
+	else
+		overlays += image(icon, "t88case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/sniper/svd) in contents)
+		overlays += image(icon, "+t88")
+	if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
+		overlays += image(icon, "+t88_flak_mag")
+
+
 /obj/item/storage/box/guncase/heavy/XM99
 	name = "\improper XM99A plasma rifle case"
 	desc = "A heavy case for storing an XM99A phased plasma pulse rifle, an experimental and deadly energy weapon system."
@@ -582,9 +640,9 @@
 /obj/item/storage/box/guncase/heavy/uppfuel/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "case_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
-		overlays += image(icon, "fuelcase_lid")
+		overlays += image(icon, "uppfuelcase_lid")
 		return
 
 	if(length(contents) >= 1)
@@ -629,10 +687,11 @@
 
 /obj/item/storage/box/guncase/heavy/fuel/gellied/update_icon()
 	overlays.Cut()
+	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "case_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
-		overlays += image(icon, "fuelcase_lid")
+		overlays += image(icon, "uppfuelcase_lid")
 		return
 
 	if(length(contents) >= 1)

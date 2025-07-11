@@ -568,5 +568,26 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
 
+/obj/item/weapon/gun/rifle/sniper/svd/iff
+	name = "\improper Type 88-I designated marksman rifle"
+	desc = /obj/item/weapon/gun/rifle/sniper/svd::desc + " This one is outfitted with an IFF system, and has been refitted to allow an increased rate of fire."
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/handle_starting_attachment()
+	var/obj/item/attachable/attachie = new /obj/item/attachable/type88_barrel(src)
+	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
+	attachie.Attach(src)
+	update_attachable(attachie.slot)
+
+	var/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/type88sight = new(src)
+	type88sight.flags_attach_features &= ~ATTACH_REMOVABLE
+	type88sight.hidden = FALSE //cagged out
+	type88sight.Attach(src)
+	update_attachable(type88sight.slot)
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/sniper/svd/iff::flags_gun_features | GUN_TRIGGER_SAFETY
+
+
 /obj/item/weapon/gun/rifle/sniper/svd/pve
 	current_mag = /obj/item/ammo_magazine/sniper/svd/pve

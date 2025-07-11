@@ -144,6 +144,7 @@
 	icon_state = "LPO80"
 	item_state = "LPO80"
 	ammo_band_icon = "+LPO80_strip"
+	ammo_band_icon_empty = "+LPO80_strip_e"
 
 /obj/item/ammo_magazine/flamer_tank/upp/gellied
 	name = "incinerator tank (B-Gel)"
