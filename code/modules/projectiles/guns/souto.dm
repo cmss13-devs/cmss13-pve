@@ -230,13 +230,13 @@
 /obj/item/clothing/head/helmet/marine/veteran/pmc/temp/two
 	icon_state = "invis_android_helmet_on"
 
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/two
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/three
 	icon_state = "pmc_helmet_elite"
 
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/three
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/four
 	icon_state = "pmc_helmet_elite_sg"
 
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/three
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/five
 	icon_state = "pmc_helmet_elite_leader"
 
 //Backpacks
