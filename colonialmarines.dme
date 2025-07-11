@@ -1649,7 +1649,6 @@
 #include "code\modules\clothing\clothing_accessories.dm"
 #include "code\modules\clothing\clothing_helpers.dm"
 #include "code\modules\clothing\officer_stuff.dm"
-#include "code\modules\clothing\placeholder_commando.dm"
 #include "code\modules\clothing\glasses\glasses.dm"
 #include "code\modules\clothing\glasses\hud.dm"
 #include "code\modules\clothing\glasses\meson.dm"
