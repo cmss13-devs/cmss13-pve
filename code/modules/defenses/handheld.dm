@@ -161,7 +161,7 @@
 	deployment_time = 10 SECONDS
 
 /obj/item/defenses/handheld/sentry/pmc_platoon
-	name = "handheld WY 201-GMA1 smart sentry"
+	name = "handheld UA 571-C-WY sentry gun"
 	desc = "A compact version of the Weyland-Yutani defenses. Designed for deployment in the field."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	icon_state = "Normal wy_sentry_handheld"

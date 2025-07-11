@@ -8772,17 +8772,6 @@
 	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/supply)
-"awV" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/smartgun_battery{
-	pixel_y = -5
-	},
-/obj/item/smartgun_battery{
-	pixel_y = 5;
-	pixel_x = -9
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "awW" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -8851,6 +8840,7 @@
 	dir = 8;
 	light_power = 0.7
 	},
+/obj/item/smartgun_battery,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axe" = (
@@ -9215,6 +9205,7 @@
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/storage/belt/marine/smartgunner,
+/obj/item/smartgun_battery,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayk" = (
@@ -17773,8 +17764,17 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/obj/item/clothing/mask/gas/pmc,
-/obj/item/clothing/mask/gas/pmc,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/mask/gas/pmc/leader,
 /turf/open/floor/corsat/brown/southeast,
 /area/firefly/briefing)
 "jNJ" = (
@@ -55488,7 +55488,7 @@ asS
 qpN
 anu
 adG
-awV
+adJ
 adJ
 aod
 adv

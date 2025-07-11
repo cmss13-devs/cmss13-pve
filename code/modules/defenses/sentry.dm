@@ -593,7 +593,7 @@
 	fire(target)
 
 /obj/structure/machinery/defenses/sentry/platoon_pmc
-	name = "WY 201-GMA1 Sentry Turret"
+	name = "\improper UA 571-C-WY sentry gun"
 	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
 	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
 	faction_group = list(FACTION_WY, FACTION_PMC)

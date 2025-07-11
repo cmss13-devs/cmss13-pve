@@ -214,8 +214,8 @@
 		overlays += image(icon, "+sentrycomp")
 
 /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
-	name = "\improper WY 201-GMA1 sentry gun case"
-	desc = "A gun case containing the WY 201-GMA1 sentry unit, a spare drum, and a sentry laptop."
+	name = "\improper UA 571-C-WY sentry guncase"
+	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
 	icon_state = "sentrycase"
 	storage_slots = 3
 	can_hold = list(/obj/item/defenses/handheld/sentry/pmc_platoon, /obj/item/ammo_magazine/sentry, /obj/item/device/sentry_computer)
