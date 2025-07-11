@@ -93,3 +93,6 @@ endmap
 
 map oread_garrison
 endmap
+
+map jungle_delta
+endmap
