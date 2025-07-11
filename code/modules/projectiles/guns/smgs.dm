@@ -40,8 +40,8 @@
 //M39 SMG
 
 /obj/item/weapon/gun/smg/m39
-	name = "\improper Viper 9 submachinegun"
-	desc = "Made popular through their use by the United States Secret Service, the Armat Battlefield Systems Model-39 submachinegun, marketed as the 'Viper 9', is a common firearm utilized by private security firms. Chambered in 9x19mm."
+	name = "\improper M39 submachinegun"
+	desc = "Made popular through their use by the United States Secret Service, the Armat Battlefield Systems Model-39 submachinegun, marketed as the 'M39', is a common firearm utilized by private security firms, law enforcement, the civillian market and most importantly the USCM. Chambered in 9x19mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m39"
 	item_state = "m39"
