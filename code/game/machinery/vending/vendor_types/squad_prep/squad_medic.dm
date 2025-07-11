@@ -191,7 +191,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 
 /obj/effect/essentials_set/medic
 	spawned_gear_list = list(
-		/obj/item/device/helmet_visor/medical/advanced,
 		/obj/item/storage/firstaid/adv,
 		/obj/item/storage/firstaid/adv,
 		/obj/item/device/healthanalyzer,
