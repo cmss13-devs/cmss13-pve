@@ -1562,6 +1562,14 @@
 "aeB" = (
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
+"aeC" = (
+/obj/item/storage/backpack/pmc/temp/two,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"aeD" = (
+/obj/item/storage/backpack/pmc/temp/one,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "aeE" = (
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/medical)
@@ -1639,6 +1647,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
+"aeR" = (
+/obj/item/storage/backpack/pmc/temp/three,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "aeS" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -8065,20 +8077,12 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
-"avm" = (
-/obj/item/clothing/shoes/marine/rmc/knife,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "avn" = (
 /obj/item/clothing/under/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avo" = (
 /obj/item/storage/backpack/commando,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avp" = (
-/obj/item/clothing/under/marine/veteran/pmc,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avq" = (
@@ -8094,15 +8098,15 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avt" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc,
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avu" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/temp,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avv" = (
-/obj/item/clothing/gloves/marine/veteran/pmc,
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/three,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avw" = (
@@ -8114,15 +8118,15 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avy" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avz" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/four,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avA" = (
-/obj/item/clothing/mask/gas/pmc/leader,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/five,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avB" = (
@@ -8559,6 +8563,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"awz" = (
+/obj/item/clothing/under/marine/veteran/pmc/temp/two,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "awA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8675,6 +8683,22 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
+"awO" = (
+/obj/item/clothing/under/marine/veteran/pmc/temp,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"awP" = (
+/obj/item/storage/backpack/pmc/temp,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"awQ" = (
+/obj/item/storage/backpack/pmc/temp/four,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"awR" = (
+/obj/item/storage/backpack/pmc/temp/five,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "awS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8810,6 +8834,10 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
+"axd" = (
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/temptwo,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "axe" = (
 /obj/structure/closet/secure_closet{
 	name = "team leader locker";
@@ -9134,6 +9162,26 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
+"axR" = (
+/obj/item/device/radio/headset/distress/commando,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"axS" = (
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/two,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"axT" = (
+/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/one,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"axU" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/two,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
+"axV" = (
+/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/one,
+/turf/open/floor/corsat/squares,
+/area/firefly/cafeteria)
 "ayc" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 8
@@ -47382,13 +47430,13 @@ fDZ
 fDZ
 "}
 (89,1,1) = {"
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 fDZ
 fDZ
 fDZ
@@ -47574,13 +47622,13 @@ fDZ
 fDZ
 "}
 (90,1,1) = {"
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+avw
+avs
+avr
+avn
+avo
+acQ
 fDZ
 fDZ
 fDZ
@@ -47766,13 +47814,13 @@ fDZ
 fDZ
 "}
 (91,1,1) = {"
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+adk
+adk
+adk
+avq
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -47958,13 +48006,13 @@ fDZ
 fDZ
 "}
 (92,1,1) = {"
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
-fDZ
+acQ
+avx
+axR
+adk
+adk
+adk
+acQ
 fDZ
 fDZ
 fDZ
@@ -48157,8 +48205,8 @@ acQ
 acQ
 acQ
 acQ
-acQ
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -48343,14 +48391,14 @@ fDZ
 "}
 (94,1,1) = {"
 acQ
+axU
+axS
 adk
-avq
-avm
+awz
+aeC
 acQ
-adk
-adk
-adk
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -48535,14 +48583,14 @@ fDZ
 "}
 (95,1,1) = {"
 acQ
-avw
-avr
-avn
+axV
+axT
+adk
+awO
+aeD
 acQ
-adk
-adk
-adk
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -48727,14 +48775,14 @@ fDZ
 "}
 (96,1,1) = {"
 acQ
-avx
-avs
-avo
-acQ
+adk
+adk
 adk
 adk
 adk
 acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -48925,8 +48973,8 @@ acQ
 acQ
 acQ
 acQ
-acQ
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -49113,12 +49161,12 @@ fDZ
 acQ
 avy
 avt
-avm
-acQ
 adk
-adk
+awP
 adk
 acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -49305,12 +49353,12 @@ fDZ
 acQ
 avz
 avu
-avp
-acQ
 adk
-adk
+awQ
 adk
 acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -49497,12 +49545,12 @@ fDZ
 acQ
 avA
 avv
-adk
+axd
+awR
+aeR
 acQ
-adk
-adk
-adk
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
@@ -49693,8 +49741,8 @@ acQ
 acQ
 acQ
 acQ
-acQ
-acQ
+fDZ
+fDZ
 fDZ
 fDZ
 fDZ
