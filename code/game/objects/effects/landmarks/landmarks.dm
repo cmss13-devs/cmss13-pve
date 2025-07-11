@@ -467,6 +467,9 @@
 	name = "forecon late join"
 	squad = SQUAD_LRRP
 
+/obj/effect/landmark/late_join/small_pmc
+	name = "small pmc late join"
+	squad = SQUAD_PMC_PLT_SMALL
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()

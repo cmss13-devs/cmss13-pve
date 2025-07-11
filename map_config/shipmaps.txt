@@ -35,3 +35,6 @@ endmap
 
 map uscss_obsidian_falk
 endmap
+
+map uscss_obsidian_falk_small
+endmap
