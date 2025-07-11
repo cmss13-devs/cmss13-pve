@@ -75,7 +75,7 @@
 	default_ammo = /datum/ammo/bullet/sniper/upp/flak
 
 /obj/item/ammo_magazine/sniper/svd/flak
-	name = "\improper Type-88 penetrating flak Magazine (7.62x54mmR)"
+	name = "\improper Type-88 flak Magazine (7.62x54mmR)"
 	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds."
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 	default_ammo = /datum/ammo/bullet/sniper/upp/flak

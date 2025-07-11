@@ -278,7 +278,7 @@
 	desc = "A case for storing a KS29 combat shotgun."
 	icon_state = "ks29case"
 	storage_slots = 2
-	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
+	can_hold = list(/obj/item/weapon/gun/shotgun/type23, /obj/item/attachable/stock/type23)
 	max_w_class = SIZE_HUGE
 /obj/item/storage/box/guncase/heavy/shotgun/type23/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/type23/unloaded/stored(src)
@@ -403,7 +403,7 @@
 	name = "\improper Type 88-I sniper case"
 	desc = "A case for storing a Type 88-I sniper rifle."
 	icon_state = "t88case"
-	storage_slots = 7
+	storage_slots = 9
 	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
 	max_w_class = SIZE_HUGE
 
