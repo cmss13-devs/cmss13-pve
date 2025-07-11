@@ -12,6 +12,7 @@ type Data = {
   arms: string;
   hands: string;
   legs: string;
+  feet: string;
   helmet: string;
   armor: string;
   categories: Array<string>;
@@ -28,6 +29,7 @@ export const FlavorTextEditor = (props) => {
     arms,
     hands,
     legs,
+    feet,
     helmet,
     armor,
     categories,

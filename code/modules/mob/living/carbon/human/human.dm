@@ -1108,6 +1108,7 @@
 	var/arms_exposed = 1
 	var/legs_exposed = 1
 	var/hands_exposed = 1
+	var/feet_exposed = 1
 	var/armor_on = 0
 	var/helmet_on = 0
 
@@ -1126,6 +1127,8 @@
 			hands_exposed = 0
 		if(C.flags_armor_protection & BODY_FLAG_LEGS)
 			legs_exposed = 0
+		if(C.flags_armor_protection & BODY_FLAG_FEET)
+			feet_exposed = 0
 		if(istype(C, /obj/item/clothing/suit/marine))
 			armor_on = 1
 		if(istype(C, /obj/item/clothing/head/helmet/marine))
@@ -1135,7 +1138,7 @@
 	flavor_text += "\n\n"
 	for(var/T in flavor_texts)
 		if(flavor_texts[T] && flavor_texts[T] != "")
-			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "armor" && armor_on) || (T == "helmet" && helmet_on))
+			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "feet" && feet_exposed) || (T == "armor" && armor_on) || (T == "helmet" && helmet_on))
 				flavor_text += "[capitalize(T)]: "
 				flavor_text += "\n\n"
 				flavor_text += flavor_texts[T]
