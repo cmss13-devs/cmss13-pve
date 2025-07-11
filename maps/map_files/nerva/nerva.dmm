@@ -168,11 +168,7 @@
 /turf/open/floor/plating,
 /area/nerva/second/cic)
 "aeh" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -1515,6 +1511,7 @@
 	once = o;
 	message = "WATCH YOUR STEP!!"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer/plating,
 /area/nerva/second/hallway)
 "aFq" = (
@@ -1949,6 +1946,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "aPa" = (
@@ -3106,11 +3104,7 @@
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "bfR" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/cable{
 	d2 = 4;
 	icon_state = "0-4"
@@ -3329,11 +3323,7 @@
 /turf/open/floor/grimy,
 /area/nerva/third/officerbunkfore)
 "bjv" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/psych)
@@ -3399,13 +3389,7 @@
 /area/nerva/second/medical)
 "bkY" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000;
-	name = "unbreakable window";
-	color = "#B2BEB5"
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "blQ" = (
@@ -4092,6 +4076,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "bAo" = (
@@ -4538,11 +4523,8 @@
 /turf/open/floor/almayer/plating,
 /area/nerva/third/brig)
 "bKs" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/first/hallway)
 "bKx" = (
@@ -5592,8 +5574,9 @@
 /turf/closed/wall/sulaco,
 /area/nerva/first/research)
 "cev" = (
-/obj/effect/spawner/random/trash,
 /obj/item/trash/cigbutt,
+/obj/structure/curtain/red,
+/obj/structure/bed,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
 "ceA" = (
@@ -5990,6 +5973,7 @@
 	dir = 4;
 	icon_state = "map-scrubbers"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "cnA" = (
@@ -6267,11 +6251,7 @@
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/nerva/first/research)
 "cuG" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
@@ -7211,11 +7191,7 @@
 /turf/open/floor/almayer/research,
 /area/nerva/second/sec)
 "cNj" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/laundry)
@@ -7281,13 +7257,7 @@
 /area/nerva/third/commonbunks)
 "cOl" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000;
-	name = "unbreakable window";
-	color = "#B2BEB5"
-	},
+/obj/structure/window/framed/bunker,
 /turf/closed/wall/almayer/reinforced,
 /area/nerva/fourth/maint)
 "cOz" = (
@@ -7402,13 +7372,7 @@
 	dir = 9
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000;
-	name = "unbreakable window";
-	color = "#B2BEB5"
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
 "cQC" = (
@@ -8148,11 +8112,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
 "dgo" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer,
 /area/nerva/first/hallway)
@@ -8884,11 +8844,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/almayer_hull,
 /area/nerva/first/research)
 "dvE" = (
@@ -9044,6 +9000,7 @@
 	vector_x = -122;
 	vector_y = -95
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/nerva/second/hallway)
 "dyb" = (
@@ -9631,11 +9588,7 @@
 /turf/open/floor/almayer/plating,
 /area/almayer/squads/req)
 "dJT" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
@@ -9860,6 +9813,7 @@
 /obj/structure/machinery/door/airlock/almayer/generic{
 	name = "Bar"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/nerva/second/bar)
 "dQF" = (
@@ -10168,11 +10122,7 @@
 /turf/open/floor/kutjevo/colors/cyan,
 /area/almayer/squads/req)
 "dYI" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
@@ -11142,6 +11092,7 @@
 	dir = 8;
 	icon_state = "map-scrubbers"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "etN" = (
@@ -12923,11 +12874,7 @@
 /turf/open/floor/almayer/plating,
 /area/nerva/first/maint)
 "fbv" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	d2 = 2;
@@ -13282,7 +13229,6 @@
 /obj/item/storage/belt/utility,
 /obj/structure/surface/rack,
 /obj/item/clothing/shoes/black,
-/obj/effect/spawner/random/goggles/highchance,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "fiT" = (
@@ -14196,11 +14142,7 @@
 /turf/open/floor/plating,
 /area/nerva/first/maint)
 "fDY" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/poddoor/shutters/almayer,
 /turf/open/floor/plating,
@@ -14712,11 +14654,7 @@
 /turf/open/floor/plating/catwalk,
 /area/almayer/squads/req)
 "fNx" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
@@ -15049,11 +14987,7 @@
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/almayer/squads/req)
 "fVc" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/chapel)
@@ -16198,11 +16132,7 @@
 "gug" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	density = 0;
 	icon_state = "pdoor0";
@@ -16251,6 +16181,7 @@
 	name = "Bar";
 	dir = 2
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/nerva/second/bar)
 "gwB" = (
@@ -17282,6 +17213,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "gQv" = (
@@ -18056,7 +17988,9 @@
 	density = 0;
 	pixel_y = 0;
 	pixel_x = -16;
-	battery_duration = 12000000
+	battery_duration = 12000000;
+	choice_categories = list("IFF STATUS" = list("WY","HUMAN","UPP"));
+	faction_group = list("Colonist","Survivor")
 	},
 /turf/open/floor/almayer/plating,
 /area/nerva/fourth/core)
@@ -18965,11 +18899,7 @@
 /area/nerva/second/sec)
 "hwy" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "hwz" = (
@@ -19030,6 +18960,10 @@
 /obj/structure/cable,
 /turf/open/floor/almayer/plating,
 /area/almayer/squads/req)
+"hxS" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer/plating,
+/area/nerva/second/hallway)
 "hxV" = (
 /obj/structure/surface/table{
 	name = "plastic table frame"
@@ -19047,6 +18981,7 @@
 "hye" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "hyr" = (
@@ -19220,11 +19155,7 @@
 /turf/open/floor/almayer/plating,
 /area/nerva/second/cic)
 "hBJ" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
 "hBQ" = (
@@ -20099,11 +20030,7 @@
 /area/nerva/first/hanger/port)
 "hXg" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/almayer/squads/req)
 "hXD" = (
@@ -20842,6 +20769,23 @@
 	},
 /turf/open/void,
 /area/nerva/second/hallway)
+"ilc" = (
+/obj/effect/projector{
+	vector_x = 10;
+	vector_y = 94
+	},
+/obj/effect/projector{
+	vector_x = 121;
+	vector_y = 94;
+	name = "projector to fourth floor"
+	},
+/obj/effect/projector{
+	vector_x = 121;
+	vector_y = 94;
+	name = "projector to fourth floor"
+	},
+/turf/open/floor/plating,
+/area/nerva/first/hallway)
 "ilh" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -20968,11 +20912,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/almayer_hull,
 /area/nerva/first/research)
 "inl" = (
@@ -21572,6 +21512,12 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
+"izt" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/window/framed/bunker,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/nerva/second/bar)
 "izM" = (
 /turf/closed/wall/sulaco,
 /area/nerva/first/escapepods)
@@ -21640,6 +21586,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "iCe" = (
@@ -22126,11 +22073,7 @@
 /turf/closed/wall/almayer/white,
 /area/nerva/first/maint)
 "iLV" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/first/research)
 "iLX" = (
@@ -22339,6 +22282,25 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/almayer/squads/req)
+"iPB" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4;
+	icon_state = "intact-supply"
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4;
+	icon_state = "intact-scrubbers"
+	},
+/obj/structure/catwalk{
+	color = "#dddddd"
+	},
+/turf/open/floor/plating,
+/area/nerva/first/hanger/aft)
 "iQf" = (
 /obj/structure/pipes/standard/manifold/hidden{
 	dir = 4;
@@ -22439,11 +22401,7 @@
 /turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
 "iSz" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable,
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
@@ -24238,6 +24196,10 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/nerva/third/brig)
+"jDg" = (
+/obj/structure/girder,
+/turf/open/floor/plating,
+/area/nerva/fourth/maint)
 "jDh" = (
 /obj/structure/cable,
 /obj/structure/cable{
@@ -24652,6 +24614,7 @@
 /area/nerva/second/medical)
 "jJV" = (
 /obj/structure/machinery/light,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer/plating,
 /area/nerva/second/hallway)
 "jJY" = (
@@ -25704,6 +25667,7 @@
 	name = "Bar";
 	dir = 2
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/nerva/second/bar)
 "kgO" = (
@@ -25880,11 +25844,7 @@
 /turf/open/floor/kutjevo/colors/cyan,
 /area/nerva/second/hallway)
 "kjp" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	d2 = 2;
@@ -26754,6 +26714,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/third/officerbunkfore)
+"kBq" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "kBr" = (
 /obj/structure/surface/rack{
 	dir = 1
@@ -28778,6 +28742,7 @@
 	once = o;
 	message = "WATCH YOUR STEP!!"
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/nerva/second/hallway)
 "lpb" = (
@@ -29072,13 +29037,7 @@
 	icon_state = "intact"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000;
-	name = "unbreakable window";
-	color = "#B2BEB5"
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
 "luC" = (
@@ -29576,6 +29535,11 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
+"lCR" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/window/framed/almayer/white,
+/turf/closed/wall/almayer/outer,
+/area/nerva/first/research)
 "lDg" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/engineering/colony{
@@ -29754,6 +29718,7 @@
 	once = o;
 	message = "WATCH YOUR STEP!!"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
 "lGB" = (
@@ -30023,6 +29988,12 @@
 /obj/item/folder/white,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/almayer/living/pilotbunks)
+"lNV" = (
+/obj/structure/machinery/door/airlock/engineering/colony{
+	name = "Bluespace Drive"
+	},
+/turf/open/floor/plating,
+/area/nerva/fourth/maint)
 "lOo" = (
 /obj/structure/cable{
 	d2 = 4;
@@ -30311,14 +30282,8 @@
 /turf/open/floor/almayer,
 /area/nerva/second/hallway)
 "lUi" = (
-/obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
-/turf/open/floor/plating,
-/area/nerva/fourth/maint)
+/turf/closed/wall,
+/area/nerva/first/maint)
 "lUr" = (
 /obj/structure/surface/table,
 /obj/item/storage/box/syringes,
@@ -30369,6 +30334,7 @@
 	vector_x = -135;
 	vector_y = -4
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/nerva/second/hallway)
 "lVY" = (
@@ -31541,11 +31507,7 @@
 /turf/open/floor/plating/catwalk,
 /area/nerva/first/hanger/port)
 "mtY" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
@@ -32138,6 +32100,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "mEC" = (
@@ -32332,7 +32295,9 @@
 	density = 0;
 	pixel_y = 0;
 	pixel_x = -16;
-	battery_duration = 12000000
+	battery_duration = 12000000;
+	choice_categories = list("IFF STATUS" = list("WY","HUMAN","UPP"));
+	faction_group = list("Colonist","Survivor")
 	},
 /turf/open/floor/bluegrid,
 /area/nerva/fourth/core)
@@ -32607,11 +32572,7 @@
 	name = "containment blast door";
 	opacity = 0
 	},
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/almayer_hull,
 /area/nerva/first/research)
 "mNE" = (
@@ -32657,6 +32618,11 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/nerva/third/thruster)
+"mPn" = (
+/obj/structure/window/framed/bunker,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/nerva/second/hallway)
 "mPA" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /turf/open/floor/carpet,
@@ -33314,11 +33280,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
 "nhF" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "nhJ" = (
@@ -33527,6 +33489,9 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/plating,
 /area/nerva/third/chapel)
+"nmb" = (
+/turf/closed/wall,
+/area/nerva/fourth/maint)
 "nmo" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -34054,11 +34019,7 @@
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
 "nvI" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer/plating,
 /area/nerva/third/brig)
@@ -34797,6 +34758,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "nLE" = (
@@ -34910,11 +34872,7 @@
 /area/nerva/third/officerbunkfore)
 "nNC" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/third/chapel)
 "nNM" = (
@@ -36738,11 +36696,7 @@
 /turf/open/floor/almayer/plating,
 /area/nerva/second/sec)
 "oCf" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -36774,12 +36728,9 @@
 	id = "barcurtains";
 	name = "black curtain"
 	},
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "oDa" = (
@@ -37217,6 +37168,7 @@
 	vector_x = -10;
 	vector_y = -95
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void,
 /area/nerva/second/hallway)
 "oKp" = (
@@ -37374,11 +37326,7 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "oMY" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/plating,
 /area/nerva/first/research)
@@ -38339,6 +38287,15 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/third/commonbunks)
+"peu" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = -135;
+	vector_y = -4
+	},
+/obj/structure/lattice,
+/obj/structure/prop/invuln/darkness,
+/turf/open/void,
+/area/nerva/second/hallway)
 "peG" = (
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4;
@@ -38435,7 +38392,8 @@
 /obj/structure/pipes/standard/simple/visible/universal,
 /obj/item/pipe_meter,
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
-	name = "Air Supply Maintenance"
+	name = "Air Supply Maintenance";
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
@@ -39149,11 +39107,7 @@
 /turf/closed/wall/almayer/white,
 /area/nerva/second/medical)
 "pvv" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/plating,
 /area/nerva/first/research)
@@ -41570,6 +41524,10 @@
 "qwz" = (
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/third/officerbunkfore)
+"qwG" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/hangar,
+/area/nerva/second/hallway)
 "qwL" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -41735,11 +41693,7 @@
 /turf/open/floor/plating/airless,
 /area/space)
 "qzy" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/third/brig)
@@ -42211,11 +42165,7 @@
 /turf/open/floor/almayer_hull,
 /area/nerva/second/sec/armory)
 "qHs" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/second/hallway)
 "qHv" = (
@@ -43022,6 +42972,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "qVV" = (
@@ -44463,11 +44414,7 @@
 	name = "containment blast door";
 	opacity = 0
 	},
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/almayer_hull,
 /area/nerva/first/research)
 "rwK" = (
@@ -44603,6 +44550,24 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/third/air)
+"ryO" = (
+/obj/effect/projector{
+	vector_x = 10;
+	vector_y = 94
+	},
+/obj/effect/projector{
+	vector_x = 134;
+	vector_y = 12;
+	name = "projector to second floor"
+	},
+/obj/effect/projector{
+	vector_x = 134;
+	vector_y = 3;
+	color = "#eeeeee";
+	name = "projector to fourth floor"
+	},
+/turf/open/floor/plating,
+/area/nerva/first/hallway)
 "rza" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9;
@@ -48177,6 +48142,10 @@
 /obj/structure/machinery/recycler,
 /turf/open/floor/plating,
 /area/almayer/squads/req)
+"sLc" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/hangar,
+/area/nerva/second/bar)
 "sLm" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/device/flashlight/lamp/green,
@@ -48913,11 +48882,7 @@
 /area/nerva/first/maint)
 "sYb" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/third/reporter)
 "sYd" = (
@@ -49479,14 +49444,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "tii" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer/plating,
 /area/almayer/squads/req)
@@ -50644,6 +50606,10 @@
 /obj/item/tool/pen,
 /turf/open/floor/almayer/plating,
 /area/nerva/second/engineering)
+"tEr" = (
+/obj/structure/window/framed/bunker,
+/turf/open/floor/plating,
+/area/nerva/first/hallway)
 "tEt" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -50813,11 +50779,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/nerva/second/bar)
 "tHU" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/almayer/squads/req)
@@ -51512,6 +51474,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/bar)
 "tVP" = (
@@ -51994,11 +51957,7 @@
 /turf/open/floor/plating,
 /area/nerva/third/laundry)
 "ufv" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/first/escapepods)
 "ufB" = (
@@ -52389,6 +52348,10 @@
 	},
 /turf/open/floor/almayer,
 /area/nerva/third/air)
+"upN" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer,
+/area/nerva/first/hallway)
 "upT" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 5;
@@ -53010,6 +52973,10 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/first/maint)
+"uCa" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/hangar,
+/area/nerva/first/hallway)
 "uCe" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4;
@@ -54335,11 +54302,7 @@
 /area/nerva/fourth/maint)
 "vdn" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/third/psych)
 "vdw" = (
@@ -55745,11 +55708,7 @@
 /turf/open/floor/plating,
 /area/almayer/living/pilotbunks)
 "vGD" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -57025,6 +56984,10 @@
 	},
 /turf/closed/wall/almayer/reinforced,
 /area/nerva/second/maint)
+"wiw" = (
+/obj/structure/sign/warning/lethal_turrets,
+/turf/closed/wall/almayer/outer,
+/area/nerva/fourth/maint)
 "wiO" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -57615,11 +57578,7 @@
 /turf/open/floor/almayer_hull,
 /area/nerva/third/air)
 "wtK" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/cable{
 	d2 = 8;
 	icon_state = "0-8"
@@ -57746,12 +57705,8 @@
 /turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
 "wuW" = (
-/obj/structure/bed,
-/obj/structure/curtain/red,
-/obj/item/trash/cigbutt,
-/obj/item/trash/cigbutt,
-/turf/open/floor/plating,
-/area/nerva/first/maint)
+/turf/closed/wall,
+/area/nerva/second/maint)
 "wuZ" = (
 /obj/structure/cable/cyan,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -57935,11 +57890,7 @@
 /turf/open/floor/plating,
 /area/nerva/first/maint)
 "wAi" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/first/hallway)
@@ -58693,6 +58644,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "wNs" = (
@@ -59129,6 +59081,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/nerva/second/bar)
 "wWT" = (
@@ -60695,6 +60648,20 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "xyK" = (
+/obj/effect/projector{
+	vector_x = 10;
+	vector_y = 94
+	},
+/obj/effect/projector{
+	vector_x = 134;
+	vector_y = 12;
+	name = "projector to second floor"
+	},
+/obj/effect/projector{
+	vector_x = 121;
+	vector_y = 94;
+	name = "projector to fourth floor"
+	},
 /turf/open/floor/plating,
 /area/nerva/first/hallway)
 "xzh" = (
@@ -61057,11 +61024,7 @@
 /area/nerva/second/sec)
 "xDH" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "xDZ" = (
@@ -61618,6 +61581,15 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/nerva/second/engineering/burn)
+"xPn" = (
+/obj/structure/sign/deck/second{
+	dir = 4;
+	icon_state = "deck-2";
+	pixel_x = -32
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "xPB" = (
 /obj/structure/machinery/autolathe/full,
 /obj/structure/machinery/alarm{
@@ -62517,11 +62489,7 @@
 /turf/open/floor/plating,
 /area/nerva/second/maint)
 "yjb" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/second/cryopods)
@@ -62620,12 +62588,11 @@
 	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/almayer/living/pilotbunks)
+"ykQ" = (
+/turf/open/floor/plating,
+/area/nerva/first/thrusters)
 "ylg" = (
-/obj/structure/window/framed/bunker{
-	not_damageable = 1;
-	not_deconstructable = 1;
-	health = 9000
-	},
+/obj/structure/window/framed/bunker,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -67563,25 +67530,25 @@ hQw
 lwY
 pZU
 pZU
-pZU
-pZU
-pZU
-pZU
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-cSw
-pZU
-pZU
-pZU
-pZU
+ykQ
+ykQ
+ykQ
+ykQ
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+nrG
+ykQ
+ykQ
+ykQ
+ykQ
 pZU
 pZU
 lwY
@@ -67977,10 +67944,10 @@ lWr
 cSw
 cSw
 cXs
-hHN
-hHN
-hHN
-hHN
+nrG
+nrG
+nrG
+nrG
 oZo
 cSw
 cSw
@@ -68176,8 +68143,8 @@ cJC
 hjT
 tVw
 hHN
-cyn
-cGw
+hHN
+hHN
 hHN
 oZo
 nrG
@@ -68375,7 +68342,7 @@ cSw
 kaz
 hHN
 cev
-wuW
+cGw
 hHN
 qVa
 cSw
@@ -68385,7 +68352,7 @@ cSw
 lEf
 cSw
 nrG
-cSw
+nrG
 dkl
 dkl
 dkl
@@ -68583,10 +68550,10 @@ cSw
 nrG
 cSw
 lEf
-cSw
-cSw
-cSw
-cSw
+nrG
+nrG
+nrG
+nrG
 nrG
 nrG
 nrG
@@ -68781,10 +68748,10 @@ bqb
 tPL
 cSw
 nrG
-cSw
-cSw
-cSw
-cSw
+nrG
+nrG
+lUi
+nrG
 nrG
 nrG
 nrG
@@ -68981,7 +68948,7 @@ cSw
 nrG
 nrG
 nrG
-nrG
+lUi
 nrG
 nrG
 nrG
@@ -71733,12 +71700,12 @@ iDX
 iDX
 qvU
 gEt
-cLL
+uCa
 bKs
-qvU
+upN
 bKs
-cLL
-nqd
+uCa
+iPB
 wdi
 wdi
 wdi
@@ -71931,11 +71898,11 @@ spI
 iDX
 aCi
 wLS
-cLL
+uCa
 xyK
 xyK
-xyK
-cLL
+ryO
+uCa
 aeR
 dtO
 dtO
@@ -72129,11 +72096,11 @@ aBf
 iDX
 piQ
 wJD
-cLL
+uCa
 xyK
+ilc
 xyK
-xyK
-cLL
+uCa
 din
 oAW
 oAW
@@ -72327,11 +72294,11 @@ gCn
 qwS
 oKT
 eCv
-cLL
+uCa
 xyK
 xyK
 xyK
-cLL
+uCa
 iEm
 oAW
 pKS
@@ -72514,7 +72481,7 @@ mZx
 ola
 nrG
 paA
-hHN
+nbX
 aiJ
 ffH
 pdx
@@ -72525,11 +72492,11 @@ iDX
 iDX
 rAZ
 kdD
-cLL
+uCa
+tEr
+upN
 bKs
-qvU
-bKs
-cLL
+uCa
 din
 oAW
 cHo
@@ -72912,7 +72879,7 @@ hHN
 lAF
 hHN
 hHN
-hHN
+nbX
 hHN
 hHN
 ijq
@@ -73146,7 +73113,7 @@ fjE
 uZj
 uZj
 wAc
-cSw
+lUi
 lEf
 dkl
 dkl
@@ -73294,7 +73261,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 hHN
@@ -73344,7 +73311,7 @@ iLd
 tIi
 uZj
 wAc
-cSw
+lUi
 iGz
 dkl
 iZc
@@ -73421,11 +73388,11 @@ akj
 fau
 rCD
 xMQ
-xMQ
-xMQ
+hxS
+hxS
 aFi
 jJV
-rhS
+qwG
 iax
 rhS
 fUh
@@ -73492,7 +73459,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 dmj
@@ -73542,7 +73509,7 @@ aSD
 pCk
 uZj
 wAc
-cSw
+lUi
 nrG
 dkl
 iZc
@@ -73619,11 +73586,11 @@ kUc
 awu
 rhS
 nEX
-rhS
+qwG
 qHs
 kZL
 qHs
-rhS
+qwG
 iax
 rhS
 qzK
@@ -73740,7 +73707,7 @@ miU
 hxp
 uZj
 wAc
-cSw
+lUi
 lEf
 dkl
 iZc
@@ -73817,11 +73784,11 @@ hbi
 fau
 tyg
 iax
-rhS
+qwG
 oKl
 oKl
 oKl
-rhS
+qwG
 iax
 rhS
 fau
@@ -73888,7 +73855,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -73938,7 +73905,7 @@ lsg
 gXu
 uZj
 wAc
-cSw
+lUi
 nrG
 dkl
 nKY
@@ -74015,11 +73982,11 @@ hwB
 wgF
 rhS
 iax
-rhS
+qwG
 oKl
 oKl
 oKl
-rhS
+qwG
 iax
 rhS
 oPG
@@ -74086,7 +74053,7 @@ iZc
 iZc
 dkl
 cyn
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -74136,7 +74103,7 @@ dEO
 uZj
 uZj
 wAc
-cSw
+lUi
 lEf
 dkl
 dkl
@@ -74213,11 +74180,11 @@ hEr
 qfB
 rhS
 iax
-rhS
+qwG
 oKl
 oKl
 oKl
-rhS
+qwG
 iax
 rhS
 hCL
@@ -74334,7 +74301,7 @@ ddI
 pfC
 uZj
 qZd
-cSw
+lUi
 nrG
 hBB
 dkl
@@ -74411,11 +74378,11 @@ mrT
 fau
 rhS
 nEX
-rhS
+qwG
 qHs
 kZL
 qHs
-rhS
+qwG
 nEX
 rhS
 fzy
@@ -74532,7 +74499,7 @@ xtI
 vHL
 eRy
 wAc
-cSw
+lUi
 lEf
 hpo
 dkl
@@ -74609,11 +74576,11 @@ qgS
 fau
 urs
 fau
-fau
+kBq
 fau
 lGr
-fau
-uYv
+kBq
+xPn
 fau
 urs
 fau
@@ -74730,7 +74697,7 @@ rmt
 rmt
 eRy
 qZd
-cSw
+lUi
 nrG
 wkx
 dkl
@@ -74878,7 +74845,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -74928,7 +74895,7 @@ pVs
 pVs
 eRy
 wAc
-cSw
+lUi
 nbX
 dkl
 dkl
@@ -75076,7 +75043,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -75274,7 +75241,7 @@ iZc
 iZc
 dkl
 kiJ
-cSw
+jrC
 nrG
 hHN
 waA
@@ -75324,8 +75291,8 @@ wnr
 xqK
 pFl
 lBQ
-cSw
-cSw
+lUi
+lUi
 dkl
 dkl
 dkl
@@ -75472,7 +75439,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 qpx
@@ -75670,7 +75637,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 mSq
 hHN
 sbr
@@ -75782,10 +75749,10 @@ dGs
 ssN
 ssN
 ssN
-eUB
+wuW
 qRI
-eUB
-eUB
+wuW
+wuW
 pwA
 hDt
 icJ
@@ -75868,7 +75835,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -75983,7 +75950,7 @@ ssN
 lCu
 kOa
 xTR
-eUB
+wuW
 qRI
 cwc
 gDG
@@ -76066,7 +76033,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 sbr
@@ -76178,10 +76145,10 @@ dGs
 dGs
 hoP
 ssN
-eUB
+wuW
 hmc
-eUB
-eUB
+wuW
+wuW
 qRI
 hDt
 emg
@@ -76296,7 +76263,7 @@ sFm
 qFu
 iGq
 otW
-dqH
+lCR
 hxf
 hxf
 vbl
@@ -76379,7 +76346,7 @@ ssN
 gJf
 aqV
 uBg
-eUB
+wuW
 xFY
 hDt
 tmu
@@ -76577,7 +76544,7 @@ ssN
 qRI
 eVo
 aIO
-eUB
+wuW
 qRI
 kkP
 kkP
@@ -76775,7 +76742,7 @@ ssN
 xWu
 gis
 mqd
-eUB
+wuW
 qRI
 qRI
 qRI
@@ -76970,10 +76937,10 @@ dGs
 dGs
 ssN
 ssN
-eUB
+wuW
 qRI
 gzA
-eUB
+wuW
 kkP
 wJi
 kkP
@@ -77056,7 +77023,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 xTK
@@ -77169,9 +77136,9 @@ dGs
 dGs
 ssN
 ssN
-eUB
-eUB
-eUB
+wuW
+wuW
+wuW
 xAk
 mkx
 soX
@@ -77254,7 +77221,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 gYK
@@ -77367,7 +77334,7 @@ dGs
 dGs
 dGs
 ssN
-eUB
+wuW
 oYY
 umz
 ojD
@@ -77452,7 +77419,7 @@ iZc
 iZc
 dkl
 kiJ
-cSw
+jrC
 nrG
 hHN
 rKf
@@ -77565,7 +77532,7 @@ dGs
 dGs
 dGs
 ssN
-eUB
+wuW
 jEn
 hIg
 vpA
@@ -77650,7 +77617,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 vxV
@@ -77848,7 +77815,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 lWr
 vxV
@@ -78046,7 +78013,7 @@ iZc
 iZc
 dkl
 nrG
-cSw
+jrC
 nrG
 hHN
 ppZ
@@ -78848,7 +78815,7 @@ nbX
 cyn
 qMi
 sYt
-cSw
+jrC
 xzV
 hHN
 nrG
@@ -79046,7 +79013,7 @@ cSw
 mHt
 nsk
 owt
-cSw
+jrC
 nrG
 hHN
 nrG
@@ -79244,7 +79211,7 @@ dkl
 cSw
 dyG
 lEf
-cSw
+jrC
 nrG
 hHN
 lEf
@@ -79442,7 +79409,7 @@ dkl
 dkl
 dkl
 xzV
-cSw
+jrC
 nrG
 nrG
 nrG
@@ -79640,9 +79607,9 @@ iZc
 dkl
 dkl
 owt
-cSw
+jrC
 isR
-cSw
+jrC
 nrG
 sjk
 sjk
@@ -80036,9 +80003,9 @@ iZc
 dkl
 dkl
 isR
-cSw
+jrC
 jSC
-cSw
+jrC
 lEf
 nrG
 sjk
@@ -80234,9 +80201,9 @@ iZc
 dkl
 dkl
 xzV
-cSw
+jrC
 nHW
-cSw
+jrC
 cSw
 lEf
 sjk
@@ -80432,7 +80399,7 @@ iZc
 dkl
 dkl
 nrG
-cSw
+jrC
 uaA
 sKE
 cSw
@@ -80630,10 +80597,10 @@ iZc
 iZc
 dkl
 mYt
-cSw
+jrC
 lEf
 nrG
-cSw
+jrC
 nrG
 sjk
 sjk
@@ -80828,10 +80795,10 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 cyn
 qmE
-cSw
+jrC
 nrG
 sjk
 pKR
@@ -81026,10 +80993,10 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 lEf
 cyn
-cSw
+jrC
 nrG
 qif
 oFr
@@ -81224,10 +81191,10 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 nrG
 cyn
-cSw
+jrC
 nrG
 sjk
 oFr
@@ -81422,10 +81389,10 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 xzV
-cSw
-cSw
+jrC
+jrC
 nrG
 sjk
 xDh
@@ -81620,9 +81587,9 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 xzV
-cSw
+jrC
 cSw
 nrG
 sjk
@@ -81818,10 +81785,10 @@ iZc
 iZc
 dkl
 cSw
-cSw
+jrC
 nrG
 nrG
-hHN
+jrC
 xgN
 ufB
 ufB
@@ -82042,6 +82009,7 @@ uQP
 uQP
 cSw
 dRn
+nAY
 hHN
 hHN
 iTv
@@ -82049,7 +82017,6 @@ hHN
 umb
 hHN
 hHN
-dkl
 dkl
 iZc
 iZc
@@ -82240,6 +82207,7 @@ jNK
 uQP
 cSw
 dRn
+nAY
 hHN
 noV
 nrG
@@ -82247,7 +82215,6 @@ hHN
 nrG
 nCL
 ijq
-dkl
 dkl
 iZc
 iZc
@@ -82329,7 +82296,7 @@ qRI
 kkP
 wHS
 iax
-hwy
+izt
 mEB
 bAf
 qVT
@@ -82337,7 +82304,7 @@ wWJ
 wNc
 gQh
 nLB
-mjT
+sLc
 fau
 aRh
 sLM
@@ -82438,6 +82405,7 @@ ugh
 uQP
 cSw
 dRn
+nAY
 hHN
 eqy
 nrG
@@ -82445,7 +82413,6 @@ hHN
 xsQ
 owt
 mVm
-dkl
 dkl
 iZc
 iZc
@@ -82527,7 +82494,7 @@ qRI
 kkP
 wHS
 hQc
-mjT
+sLc
 qfk
 qfk
 qfk
@@ -82535,7 +82502,7 @@ qfk
 qfk
 qfk
 qfk
-mjT
+sLc
 fau
 aRh
 cuG
@@ -82636,6 +82603,7 @@ eff
 uQP
 cSw
 dRn
+nAY
 hHN
 hyX
 fGw
@@ -82643,7 +82611,6 @@ hHN
 aQs
 cyn
 qcF
-dkl
 dkl
 iZc
 iZc
@@ -82725,7 +82692,7 @@ qRI
 kkP
 gSm
 tLK
-hwy
+izt
 qfk
 qfk
 qfk
@@ -82733,7 +82700,7 @@ qfk
 qfk
 qfk
 qfk
-hwy
+izt
 qzK
 vcS
 cuG
@@ -82834,15 +82801,15 @@ uQP
 uQP
 uQP
 dRn
-cSw
+nAY
+hHN
+hHN
+hHN
 dkl
 dkl
 dkl
 dkl
 dkl
-dkl
-dkl
-iZc
 iZc
 iZc
 iZc
@@ -82923,7 +82890,7 @@ qRI
 kkP
 wHS
 iax
-hwy
+izt
 qfk
 qfk
 qfk
@@ -82931,7 +82898,7 @@ qfk
 qfk
 qfk
 qfk
-hwy
+izt
 fau
 fau
 cuG
@@ -83032,10 +82999,10 @@ obE
 jmq
 uQP
 dRn
-cSw
+nAY
+nAY
 nrG
-dkl
-dkl
+nrG
 dkl
 dkl
 dkl
@@ -83121,7 +83088,7 @@ qRI
 kkP
 wHS
 iax
-mjT
+sLc
 geR
 qfk
 qfk
@@ -83129,7 +83096,7 @@ qfk
 qfk
 qfk
 arO
-mjT
+sLc
 fau
 lqS
 kkP
@@ -83230,10 +83197,10 @@ uQP
 uQP
 uQP
 dRn
+nAY
+nAY
+nrG
 cSw
-cSw
-dkl
-dkl
 dkl
 iZc
 iZc
@@ -83319,15 +83286,15 @@ qRI
 kkP
 ruV
 guW
-mjT
-mjT
-mjT
-mjT
-mjT
-mjT
-mjT
-mjT
-mjT
+sLc
+sLc
+sLc
+sLc
+sLc
+sLc
+sLc
+sLc
+sLc
 uqz
 uVH
 kkP
@@ -84412,11 +84379,11 @@ rHf
 lXh
 nGw
 cSw
-cSw
-cSw
-cSw
-cSw
-cSw
+jrC
+jrC
+jrC
+jrC
+jrC
 jWb
 eTv
 cSw
@@ -94804,11 +94771,11 @@ rhS
 bgL
 lqS
 qxX
-lUi
-lUi
+bkY
+bkY
 iKL
-lUi
-lUi
+bkY
+bkY
 iKL
 iKL
 iKL
@@ -95597,11 +95564,11 @@ ltE
 fau
 rhS
 nEX
-rhS
-qHs
+qwG
+mPn
 lGr
-qHs
-rhS
+mPn
+qwG
 eHl
 iKL
 xln
@@ -95795,11 +95762,11 @@ fau
 fau
 tyg
 iax
-rhS
+qwG
 dxo
 loZ
 dxo
-rhS
+qwG
 eHl
 iKL
 wYY
@@ -95818,7 +95785,7 @@ nWJ
 buo
 wDQ
 iKL
-xeF
+cyf
 iKL
 sss
 dGs
@@ -95993,11 +95960,11 @@ fau
 lqS
 rhS
 ane
-rhS
+qwG
 dxo
 dxo
 dxo
-rhS
+qwG
 eHl
 iKL
 aWK
@@ -96191,11 +96158,11 @@ fau
 pce
 rhS
 iax
-rhS
+qwG
 dxo
 dxo
 dxo
-rhS
+qwG
 eHl
 iKL
 tfJ
@@ -96389,11 +96356,11 @@ uqz
 uVH
 rhS
 nEX
-rhS
-qHs
+qwG
+mPn
 lGr
-qHs
-rhS
+mPn
+qwG
 vRI
 qxX
 qxX
@@ -97400,8 +97367,8 @@ aWW
 iKL
 buo
 erM
-iKL
-xeF
+nmb
+cyf
 sss
 nKY
 iZc
@@ -97598,7 +97565,7 @@ oqC
 iKL
 buo
 erM
-iKL
+nmb
 cyf
 sss
 dGs
@@ -97789,14 +97756,14 @@ uMv
 uMv
 aOz
 iKL
-xeF
+lNV
 iKL
 iKL
 iKL
 iKL
 buo
 erM
-iKL
+nmb
 cyf
 sss
 dGs
@@ -97994,7 +97961,7 @@ rPA
 jeE
 eaG
 dvQ
-iKL
+nmb
 tfz
 sss
 dGs
@@ -98186,13 +98153,13 @@ iKL
 iKL
 iKL
 brK
-iKL
+cyf
 iov
 hCr
 dOB
 hnD
 aDq
-iKL
+nmb
 cyf
 sss
 dGs
@@ -98262,11 +98229,11 @@ lvL
 gdX
 lqS
 rhS
-rhS
-qHs
+qwG
+mPn
 lGr
-qHs
-rhS
+mPn
+qwG
 rhS
 fau
 edI
@@ -98384,13 +98351,13 @@ xeF
 cyf
 cyf
 brK
-iKL
-iKL
-iKL
-iKL
-iKL
-iKL
-iKL
+nmb
+nmb
+nmb
+nmb
+cyf
+nmb
+nmb
 cyf
 sss
 iZc
@@ -98460,11 +98427,11 @@ prO
 qcJ
 fau
 tEI
-rhS
+qwG
 lVx
+peu
 lVx
-lVx
-rhS
+qwG
 ssV
 fau
 udo
@@ -98575,7 +98542,7 @@ wbz
 sRm
 tPZ
 xUU
-xeF
+cyf
 clo
 cyf
 xeF
@@ -98658,11 +98625,11 @@ prO
 qcJ
 fau
 itL
-rhS
+qwG
 lVx
+peu
 lVx
-lVx
-rhS
+qwG
 xBO
 fau
 udo
@@ -98780,8 +98747,8 @@ xeF
 vuB
 jeE
 tUw
-iKL
-iKL
+nmb
+nmb
 cyf
 bYy
 xUq
@@ -98856,11 +98823,11 @@ hrW
 qcJ
 fau
 kdF
-rhS
+qwG
 lVx
 lVx
-lVx
-rhS
+peu
+qwG
 suR
 xTG
 aad
@@ -98969,7 +98936,7 @@ iKL
 iKL
 xGV
 xeF
-xeF
+cyf
 xeF
 xeF
 oWR
@@ -99054,11 +99021,11 @@ rGm
 gdX
 lqS
 rhS
-rhS
-qHs
+qwG
+mPn
 lGr
-qHs
-rhS
+mPn
+qwG
 rjX
 cqj
 iMN
@@ -99359,8 +99326,8 @@ nQb
 jBd
 iKL
 iKL
-iKL
-iKL
+cyf
+cyf
 iKL
 iKL
 xGV
@@ -103333,7 +103300,7 @@ sss
 sss
 xGV
 xeF
-xeF
+jDg
 xeF
 bqJ
 cyf
@@ -105115,8 +105082,8 @@ sss
 vmY
 xGV
 xeF
-xeF
-xeF
+jDg
+jDg
 xeF
 cyf
 sss
@@ -105710,7 +105677,7 @@ hCr
 eSz
 iKL
 gaR
-sss
+nmb
 sss
 dGs
 dGs
@@ -107170,7 +107137,7 @@ sPS
 sjk
 xzR
 bdz
-mjT
+sLc
 raO
 sxm
 azg
@@ -107275,7 +107242,7 @@ eit
 uUU
 aay
 sss
-sss
+wiw
 sss
 bGO
 bGO
@@ -107284,14 +107251,14 @@ cMl
 kuM
 bGO
 bGO
-sss
+wiw
 cYu
 hoT
 awz
-iKL
+nmb
 fNr
 bgB
-iKL
+nmb
 sss
 dGs
 dGs
@@ -107486,7 +107453,7 @@ dtF
 dtF
 dtF
 xZP
-iKL
+nmb
 wMf
 bgB
 lfa
@@ -107684,10 +107651,10 @@ iKL
 iKL
 iKL
 wAK
-iKL
-iKL
+nmb
+nmb
 xJd
-iKL
+nmb
 sss
 sss
 dGs
@@ -107962,15 +107929,15 @@ nKM
 nKM
 qBq
 uVH
-mjT
+sLc
 oCY
 oCY
-mjT
+sLc
 dQs
-mjT
+sLc
 oCY
 oCY
-mjT
+sLc
 uqz
 noe
 rYf

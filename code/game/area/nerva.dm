@@ -194,6 +194,10 @@
 	icon_state = "lowerhull"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
+/area/nerva/first/thrusters
+	name = "\improper First Deck Thruster Rooms"
+	icon_state = "selfdestruct"
+
 /area/nerva/first/hanger/port
 	icon_state = "dropship"
 
