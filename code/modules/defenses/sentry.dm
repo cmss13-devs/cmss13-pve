@@ -592,6 +592,17 @@
 
 	fire(target)
 
+/obj/structure/machinery/defenses/sentry/platoon_pmc
+	name = "WY 201-GMA1 Sentry Turret"
+	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	faction_group = list(FACTION_WY, FACTION_PMC)
+	handheld_type = /obj/item/defenses/handheld/sentry/pmc_platoon
+	sentry_type = "wy_sentry"
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
 /obj/structure/machinery/defenses/sentry/premade
 	name = "\improper UA-577 Gauss Turret"
 	immobile = TRUE

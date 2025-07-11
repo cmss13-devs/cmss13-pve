@@ -96,6 +96,7 @@
 
 
 /obj/item/weapon/gun/rifle/nsg23/no_lock/pve
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/extended
 
 /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/set_gun_config_values()
 	..()
@@ -112,6 +113,9 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_7
 
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
 
 //
 

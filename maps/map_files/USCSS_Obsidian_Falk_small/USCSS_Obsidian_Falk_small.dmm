@@ -662,6 +662,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/squares,
 /area/firefly/supply)
+"abC" = (
+/obj/structure/machinery/door/airlock/almayer/security/reinforced/colony{
+	req_one_access = null
+	},
+/turf/open/floor/corsat/marked,
+/area/firefly/cafeteria)
 "abD" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -795,16 +801,6 @@
 "abX" = (
 /turf/open/space/basic,
 /area/firefly/supply)
-"abY" = (
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
-/turf/open/floor/corsat/red/east,
-/area/firefly/cafeteria)
 "abZ" = (
 /obj/structure/machinery/door_control/brbutton{
 	id = "sci_west_3"
@@ -833,6 +829,10 @@
 "ace" = (
 /turf/open/floor/corsat/purple,
 /area/firefly/supply)
+"acf" = (
+/obj/item/lightstick/red/planted,
+/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
+/area/firefly/squad_omega)
 "acg" = (
 /turf/open/floor/corsat/purplecorner/west,
 /area/firefly/supply)
@@ -881,6 +881,31 @@
 "acp" = (
 /turf/open/floor/corsat/marked,
 /area/firefly/engineer)
+"acq" = (
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/metal{
+	dir = 8;
+	pixel_x = -1;
+	pixel_y = 9
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 9
+	},
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/structure/tent_curtain,
+/turf/open/floor/plating/plating_catwalk,
+/area/firefly/cafeteria)
 "acr" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -1172,6 +1197,27 @@
 "adt" = (
 /turf/open/floor/corsat/yellow/northwest,
 /area/firefly/hangar)
+"adu" = (
+/obj/structure/machinery/shower{
+	dir = 1
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 4;
+	pixel_y = 13
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 8;
+	pixel_y = 13
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/structure/tent_curtain,
+/turf/open/floor/plating/plating_catwalk,
+/area/firefly/cafeteria)
 "adv" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
@@ -1374,12 +1420,11 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 7
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
+	pixel_y = 5
 	},
-/obj/item/weapon/gun/smg/m39/elite/pve,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = -6
+/obj/item/ammo_box/magazine/nade_box/smoke/green{
+	pixel_y = 11
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
@@ -1416,11 +1461,6 @@
 /obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
-"aem" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "aen" = (
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
@@ -1483,9 +1523,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"aeu" = (
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
 "aev" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
@@ -1706,6 +1743,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/ptsgt)
+"afi" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel/pmc,
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc{
+	pixel_y = 7
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "afj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double/blue/golden_arrow{
@@ -2099,6 +2144,17 @@
 "agg" = (
 /turf/open/floor/corsat/whitecorner,
 /area/firefly/hangar)
+"agh" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_y = -2
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "agi" = (
 /turf/closed/shuttle/elevator{
 	dir = 10
@@ -3303,6 +3359,20 @@
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/corsat/yellow,
 /area/firefly/supply)
+"ajy" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 6;
+	layer = 3.2
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 12;
+	layer = 3.2;
+	pixel_x = 3
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "ajz" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
@@ -4018,6 +4088,36 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
+"alt" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/ammo/alt,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = -3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "alu" = (
 /obj/structure/bed/chair/office/dark,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4065,6 +4165,38 @@
 	},
 /turf/open/floor/corsat/yellow/east,
 /area/firefly/engineer)
+"alB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/ammo/alt,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = -3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = 3
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	current_mag = null;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
+"alC" = (
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "alD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -4758,6 +4890,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/arrow_north,
 /area/firefly/hangar)
+"anv" = (
+/obj/structure/machinery/light/double/blue/golden_arrow,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "anw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/arrow_south,
@@ -5052,20 +5188,6 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
-"aoo" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "aop" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 1;
@@ -5274,16 +5396,6 @@
 	},
 /turf/open/floor/corsat/red/west,
 /area/firefly/cafeteria)
-"aoO" = (
-/obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 4;
-	light_power = 0.7
-	},
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/turf/open/floor/corsat/red/east,
-/area/firefly/cafeteria)
 "aoP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
@@ -5359,17 +5471,8 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
-"aoY" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
 "aoZ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
-"apa" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "apb" = (
@@ -5509,8 +5612,10 @@
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
 "apr" = (
-/obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
 /turf/open/floor/strata/faux_wood,
 /area/firefly/cafeteria)
 "aps" = (
@@ -5843,6 +5948,11 @@
 	},
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
+"aqf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "aqg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
@@ -6496,6 +6606,18 @@
 	},
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/cafeteria)
+"arN" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box/flare{
+	pixel_x = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "arO" = (
 /obj/structure/machinery/light/double/blue/golden_arrow,
 /obj/effect/decal/cleanable/dirt,
@@ -6941,11 +7063,10 @@
 /turf/open/floor/corsat/arrow_west,
 /area/firefly/cafeteria)
 "asU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/platform_decoration{
-	dir = 4
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
-/turf/open/floor/corsat/red/west,
+/turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "asV" = (
 /obj/effect/decal/warning_stripes{
@@ -7011,9 +7132,6 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "ate" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/black,
 /obj/item/reagent_container/food/drinks/coffeecup/wy{
@@ -7023,9 +7141,6 @@
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "atf" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/black,
 /obj/item/folder/white{
@@ -7035,16 +7150,10 @@
 /obj/item/folder/white,
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
-"atg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/bed/chair/office/light{
-	dir = 8
-	},
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/corsat/squares,
-/area/firefly/ptsgt)
 "ath" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "ati" = (
@@ -7053,6 +7162,7 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
+/obj/structure/bed/chair/office/light,
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "atj" = (
@@ -7220,6 +7330,14 @@
 	},
 /turf/open/floor/corsat/purple/east,
 /area/firefly/ares)
+"atG" = (
+/obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 8;
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "atH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out"
@@ -7247,6 +7365,14 @@
 	},
 /turf/open/floor/corsat/purple/northeast,
 /area/firefly/ares)
+"atK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
+"atL" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/corsat/squares,
+/area/firefly/squad_omega)
 "atM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -7861,13 +7987,6 @@
 /area/firefly/cafeteria)
 "avf" = (
 /obj/structure/pipes/vents/pump,
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avg" = (
@@ -7884,13 +8003,14 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
 /turf/open/floor/corsat/red/southwest,
 /area/firefly/cafeteria)
 "avi" = (
 /obj/structure/platform,
-/obj/structure/closet/crate/ammo/alt{
-	name = "camera gear crate"
-	},
+/obj/structure/closet/crate/ammo/alt,
 /obj/item/storage/box/explosive_mines/pmc,
 /obj/item/storage/box/explosive_mines/pmc,
 /turf/open/floor/corsat/brown,
@@ -8447,7 +8567,7 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "awC" = (
 /obj/effect/decal/warning_stripes{
@@ -8583,15 +8703,6 @@
 	},
 /turf/open/floor/corsat/yellow/southwest,
 /area/firefly/supply)
-"awU" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 8;
-	pixel_x = 7
-	},
-/obj/item/ammo_box/rounds/smartgun,
-/turf/open/floor/corsat/squares,
-/area/firefly/hangar)
 "awV" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/smartgun_battery{
@@ -8613,40 +8724,20 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/m39/heap{
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/m39/heap,
-/obj/item/ammo_box/magazine/m39/heap{
-	pixel_y = 16
-	},
-/obj/item/ammo_box/magazine/m39/heap{
-	pixel_y = 9
-	},
+/obj/item/ammo_box/magazine/m39/ext,
+/obj/item/ammo_box/magazine/m39/ext,
+/obj/item/ammo_box/magazine/m39/ext,
+/obj/item/ammo_box/magazine/m39/ext,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "awY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/nsg23/ex{
-	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/nsg23/ex{
-	pixel_y = -2
-	},
-/obj/item/ammo_box/magazine/nsg23/ex{
-	pixel_y = 15
-	},
-/obj/item/ammo_box/magazine/nsg23/ex{
-	pixel_y = 7
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_y = 9;
+	pixel_x = 2
 	},
 /turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
-"awZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double/blue/golden_arrow,
-/obj/structure/surface/table/reinforced/almayer_B,
-/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axa" = (
 /obj/structure/surface/rack{
@@ -8670,31 +8761,12 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axb" = (
-/obj/structure/closet/secure_closet{
-	name = "heavy weapons specialist locker";
-	req_access_txt = "209;217"
-	},
-/obj/item/weapon/gun/smartgun/dirty,
-/obj/item/smartgun_battery,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/storage/belt/marine/smartgunner,
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
-"axc" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 8;
 	light_power = 0.7
 	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axd" = (
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/temptwo,
@@ -8718,7 +8790,7 @@
 /area/firefly/supply)
 "axg" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5
+	dir = 4
 	},
 /turf/open/floor/corsat/arrow_east,
 /area/firefly/squad_omega)
@@ -8728,22 +8800,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
-"axi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/pipes/vents/pump,
-/turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
-"axj" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/flamer_tank/EX{
-	pixel_x = -2
-	},
-/obj/item/ammo_magazine/flamer_tank/EX{
-	pixel_y = 7;
-	pixel_x = 7
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "axk" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -8754,7 +8810,7 @@
 "axl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 1;
+	dir = 8;
 	light_power = 0.7
 	},
 /obj/item/ammo_box/magazine/mk1/large{
@@ -8788,19 +8844,6 @@
 "axo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/firefly/squad_omega)
-"axp" = (
-/obj/structure/gun_rack/m41/elite/unloaded/platoon{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/flamer/unloaded{
-	pixel_y = 43;
-	density = 0;
-	pixel_x = 7
-	},
-/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axq" = (
 /obj/structure/surface/table/reinforced/black,
@@ -8974,56 +9017,25 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/cafeteria)
 "axN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 7
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve,
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = -6
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 4;
-	pixel_x = 16;
-	layer = 3.03
-	},
+/obj/item/ammo_box/magazine/nsg23/ex,
+/obj/item/ammo_box/magazine/nsg23/ex,
+/obj/item/ammo_box/magazine/nsg23/ex,
+/obj/item/ammo_box/magazine/nsg23/ex,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axO" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/obj/item/ammo_magazine/smg/m39/pve,
-/turf/open/floor/corsat/plate,
+/obj/structure/closet/crate/ammo/alt,
+/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axP" = (
 /obj/structure/platform,
-/obj/structure/closet/crate/ammo/alt{
-	name = "camera gear crate"
-	},
+/obj/structure/closet/crate/ammo/alt,
 /turf/open/floor/corsat/brown,
 /area/firefly/briefing)
-"axQ" = (
-/obj/structure/gun_rack/m41/elite/unloaded/platoon{
-	pixel_y = 16;
-	density = 0
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41/elite/unloaded/platoon{
-	pixel_y = 43;
-	density = 0
-	},
-/turf/open/floor/corsat/cargo,
-/area/firefly/squad_omega)
 "axR" = (
 /obj/item/device/radio/headset/distress/commando,
 /turf/open/floor/corsat/squares,
@@ -9092,6 +9104,34 @@
 /obj/item/clothing/head/helmet/marine/veteran/pmc/temp/seven,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
+"ayf" = (
+/obj/structure/closet/secure_closet{
+	name = "heavy weapons specialist locker";
+	req_access_txt = "208;217"
+	},
+/obj/item/weapon/gun/smartgun/dirty,
+/obj/item/smartgun_battery,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
+/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/ammo_magazine/smartgun,
+/obj/item/storage/belt/marine/smartgunner,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
+"ayg" = (
+/obj/structure/gun_rack/m41/elite/unloaded/platoon,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/gun_rack/m41/elite/unloaded/platoon{
+	pixel_y = 27
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "azd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -10516,14 +10556,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
-/turf/open/floor/corsat/red/northwest,
+/turf/open/floor/corsat/arrow_west,
 /area/firefly/cafeteria)
 "caX" = (
 /obj/structure/cargo_container/wy/mid,
@@ -10606,15 +10639,6 @@
 	},
 /turf/open/floor/tdome/tcomms,
 /area/firefly/ares)
-"chl" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/corsat/red/east,
-/area/firefly/cafeteria)
 "chr" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor{
 	req_one_access = null
@@ -11704,29 +11728,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/cafeteria)
-"dCz" = (
-/obj/structure/machinery/shower{
-	pixel_y = 16
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 4;
-	pixel_y = 13
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 8;
-	pixel_y = 13
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 8
-	},
-/obj/structure/window/reinforced/tinted{
-	dir = 4
-	},
-/obj/structure/curtain/open/shower{
-	pixel_y = -3
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/firefly/cafeteria)
 "dCE" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	icon = 'icons/obj/structures/props/almayer_props.dmi';
@@ -12686,6 +12687,9 @@
 /obj/structure/stairs/perspective{
 	dir = 8;
 	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
 /turf/open/floor/strata/faux_wood,
 /area/firefly/cafeteria)
@@ -15730,13 +15734,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/corsat/greenwhite/west,
 /area/firefly/supply)
-"hGh" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
 "hGq" = (
 /obj/item/tool/weldpack{
 	pixel_x = 7
@@ -19960,6 +19957,7 @@
 	dir = 8;
 	light_power = 0.7
 	},
+/obj/structure/pipes/vents/pump,
 /turf/open/floor/corsat/squares,
 /area/firefly/ptsgt)
 "muS" = (
@@ -23636,13 +23634,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
 /turf/open/floor/corsat/redcorner/north,
 /area/firefly/cafeteria)
 "qtq" = (
@@ -24996,16 +24987,6 @@
 "scY" = (
 /turf/open/floor/corsat/sterileplate,
 /area/firefly/supply)
-"sdx" = (
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
-/turf/closed/wall/r_wall/biodome/biodome_unmeltable,
-/area/firefly/cafeteria)
 "sdC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -25444,18 +25425,22 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/supply)
 "sHJ" = (
-/obj/structure/sink{
-	pixel_y = 20;
-	layer = 3.1;
-	pixel_x = 1
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = -9
 	},
-/obj/structure/mirror{
-	pixel_y = 32
+/obj/structure/gun_rack/flamer/empty{
+	pixel_x = -9;
+	pixel_y = 27
 	},
-/obj/structure/pipes/vents/pump,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
+/obj/structure/gun_rack/flamer/empty{
+	pixel_x = 9
+	},
+/obj/structure/gun_rack/flamer/empty{
+	pixel_x = 9;
+	pixel_y = 27
+	},
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "sHY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/brown,
@@ -26032,19 +26017,6 @@
 	},
 /turf/open/floor/wood,
 /area/firefly/briefing)
-"tiO" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
-	icon_state = "wallpipe_2";
-	pixel_y = 2;
-	dir = 8;
-	pixel_x = -13
-	},
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "tiW" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/condiment/peppermill{
@@ -26463,13 +26435,15 @@
 /turf/open/floor/corsat/lightplate,
 /area/firefly/cafeteria)
 "tMQ" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
+/obj/structure/sink{
+	pixel_y = 19;
+	layer = 3.1
 	},
-/obj/structure/platform{
-	dir = 4
+/obj/structure/mirror{
+	pixel_y = 29;
+	pixel_x = -1
 	},
-/turf/open/floor/corsat/red/northeast,
+/turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "tOt" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -28391,13 +28365,9 @@
 /turf/open/floor/corsat/yellow/west,
 /area/firefly/supply)
 "vXG" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/floor/corsat/red/west,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "vXI" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -28498,13 +28468,9 @@
 /turf/closed/wall/almayer/aicore/hull,
 /area/firefly/ares)
 "wcI" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/floor/corsat/red/northwest,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer/dark_sterile,
 /area/firefly/cafeteria)
 "wcZ" = (
 /obj/structure/machinery/disposal,
@@ -29351,7 +29317,10 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/engineer)
 "xcm" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/machinery/light/double/blue/golden_arrow,
 /turf/open/floor/corsat/red,
 /area/firefly/cafeteria)
 "xcu" = (
@@ -29382,13 +29351,6 @@
 "xdD" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/red/east,
-/area/firefly/cafeteria)
-"xdU" = (
-/obj/structure/machinery/door/airlock/almayer/security/reinforced/colony{
-	dir = 2;
-	req_one_access = null
-	},
-/turf/open/floor/corsat/marked,
 /area/firefly/cafeteria)
 "xdX" = (
 /obj/structure/surface/table/reinforced/black,
@@ -30014,28 +29976,8 @@
 /turf/open/floor/corsat/purple,
 /area/firefly/medical)
 "xNL" = (
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1
-	},
-/obj/structure/barricade/metal{
-	dir = 8;
-	pixel_x = -1;
-	pixel_y = 9
-	},
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1
-	},
-/obj/structure/barricade/metal{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 9
-	},
-/obj/structure/toilet,
-/obj/structure/curtain/red,
-/turf/open/floor/almayer/dark_sterile,
-/area/firefly/cafeteria)
+/turf/closed/wall/r_wall/biodome,
+/area/firefly/squad_omega)
 "xOU" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 1;
@@ -51752,11 +51694,11 @@ hgh
 asX
 asX
 apr
-acQ
+wkz
 wcI
 vXG
 asU
-anh
+acq
 acQ
 huQ
 idV
@@ -51944,14 +51886,14 @@ kXe
 nlu
 asX
 eBl
-acQ
+adm
 tMQ
-chl
-aoO
-asH
-xdU
+aoZ
+asU
+adu
+acQ
 aoz
-hHS
+rDb
 uoZ
 dHO
 asL
@@ -52136,14 +52078,14 @@ gjk
 gjk
 gjk
 avh
+adm
+tMQ
+aoZ
+asU
+adu
 acQ
 acQ
-acQ
-acQ
-acQ
-acQ
-acQ
-acQ
+abC
 acQ
 acQ
 aob
@@ -52328,12 +52270,12 @@ aoW
 azS
 mGU
 xcm
-wkz
-hGh
-aoY
-acQ
-acQ
-acQ
+aeg
+aeg
+aeg
+aeg
+aeg
+acf
 acQ
 caD
 aog
@@ -52520,12 +52462,12 @@ hkg
 hrd
 vbd
 gBh
-adm
+aeg
 sHJ
-aoZ
-acQ
-acQ
-acQ
+atG
+arN
+afi
+aeg
 kZG
 qti
 dSx
@@ -52712,14 +52654,14 @@ aXi
 adm
 qaQ
 aoU
-adm
+aeg
 xNL
-aoZ
-acQ
-acQ
-acQ
+apb
+awn
+agh
+aeg
 aoA
-aoo
+apX
 vzj
 vzj
 adk
@@ -52904,14 +52846,14 @@ afd
 asY
 vwG
 aoU
-adm
-dCz
-aeu
-acQ
-acQ
-acQ
+xNL
+alC
+awt
+awn
+ajy
+aeg
 kgp
-aoo
+apX
 adk
 adk
 adk
@@ -53096,14 +53038,14 @@ apL
 asY
 vvF
 aps
-adm
-dCz
-apa
-acQ
-acQ
-acQ
+xNL
+alC
+awt
+awn
+alt
+aeg
 gwE
-tiO
+aeq
 avc
 avc
 adk
@@ -53283,17 +53225,17 @@ atl
 ath
 ate
 atb
-asY
-asY
-asY
-acQ
-acQ
-adm
-acQ
-acQ
-acQ
-acQ
-acQ
+xNL
+xNL
+xNL
+aeg
+aeg
+xNL
+alC
+awt
+awp
+alB
+aeg
 enr
 avf
 ave
@@ -53477,17 +53419,17 @@ atf
 axq
 aeg
 axl
-axj
-aeg
 axe
+ayf
+alC
 axb
-aeg
-aem
-awZ
-aeg
+awt
+awt
+awp
+alC
 aeg
 ejr
-abY
+hHS
 qSS
 pND
 auY
@@ -53665,21 +53607,21 @@ aqM
 afz
 atm
 atj
-atg
+afh
 aeg
 axo
 axm
 awt
-aeg
-apb
-apb
-aeg
 awt
 apb
+apb
+awt
+awt
+apb
+anv
 aeg
 aeg
 acQ
-sdx
 acQ
 acQ
 acQ
@@ -53857,20 +53799,20 @@ aqM
 afz
 atm
 atj
-afh
-aeg
-axp
+axo
+ayg
 axn
 awp
-axc
+awp
+awt
 awn
 awp
-axc
+awt
 awp
 awn
-awn
+aqf
 awX
-acQ
+aeg
 avb
 avb
 avb
@@ -54049,20 +53991,20 @@ aqM
 afz
 afd
 nKy
-afh
-aeg
-axQ
+axo
+ayg
 axn
+awp
 awn
 awt
-awp
+atL
 awp
 awt
 awn
 awn
 awn
 axN
-acW
+aeg
 amJ
 amJ
 amJ
@@ -54241,20 +54183,20 @@ aqg
 afz
 afd
 atk
-afh
-aeg
-axQ
+axo
+ayg
 njp
+alC
 awB
-axi
+atK
 axg
 aww
-apb
+atK
 axO
 axa
 awY
 aee
-acW
+aeg
 aop
 amJ
 amJ
@@ -54433,20 +54375,20 @@ aei
 afz
 afd
 afd
-afd
 aeg
 aeg
 aeg
 aeg
-fPS
+aeg
+aeg
 gcw
 fPS
-fPS
 aeg
 aeg
 aeg
 aeg
-acW
+aeg
+aeg
 rRy
 lzR
 eHc
@@ -54637,8 +54579,8 @@ grn
 fSo
 muS
 nvR
-acW
-acW
+aeg
+aeg
 mOf
 lAv
 uYd
@@ -55025,7 +54967,7 @@ oiV
 wvs
 aof
 adJ
-awU
+adJ
 adF
 xnS
 oiV

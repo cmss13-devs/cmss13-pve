@@ -213,6 +213,19 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
+	name = "\improper WY 201-GMA1 sentry gun case"
+	desc = "A gun case containing the WY 201-GMA1 sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/pmc_platoon, /obj/item/ammo_magazine/sentry, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/pmc_platoon(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/device/sentry_computer(src)
+
+
 /obj/item/storage/box/guncase/heavy/sentryupp
 	name = "\improper UPPAC 32-H sentry gun case"
 	desc = "A gun case containing the UPPAC 32-H sentry unit, a spare drum, and a sentry laptop."
@@ -407,6 +420,20 @@
 		source_image.pixel_x = 18
 		overlays += source_image
 
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc
+	name = "\improper motion detectors case"
+	desc = "A case containing four individual handheld motion detectors."
+	icon_state = "mdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/hacked/pmc)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc/fill_preset_inventory()
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+
+
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
@@ -493,6 +520,21 @@
 		var/image/source_image = image(icon, "+fuel")
 		source_image.pixel_x = 16
 		overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc
+	name = "\improper M240A1 fuel canister case"
+	desc = "A heavy case containing six fuel canisters for the M240A1 incinerator unit."
+	icon_state = "fuelcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/EX)
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
 
 /obj/item/storage/box/guncase/heavy/uppfuel
 	name = "\improper LPO80 fuel canister case"
@@ -669,6 +711,21 @@
 	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap
+	name = "\improper NSG-23 assault rifle case"
+	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+
 
 /obj/item/storage/box/guncase/m3717
 	name = "\improper M37-17 pump shotgun case"
