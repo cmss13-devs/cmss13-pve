@@ -2032,13 +2032,10 @@
 	icon_state = "upp_machinegun_pistol"
 	storage_slots = 7
 	can_hold = list(
-		/obj/item/weapon/gun/pistol/t73,
-		/obj/item/ammo_magazine/pistol/t73,
-		/obj/item/ammo_magazine/pistol/t73_impact,
-		/obj/item/weapon/gun/pistol/np92,
-		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/weapon/gun/revolver/upp,
-		/obj/item/ammo_magazine/revolver/upp,
+		/obj/item/weapon/gun/pistol,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/weapon/gun/revolver,
+		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pkp,
 	)
 	has_gamemode_skin = FALSE

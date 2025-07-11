@@ -444,10 +444,27 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
+/datum/ammo/bullet/rifle/upp/rubber
+	name = "rubber 10x27 bullet"
+	damage = 10
+	stamina_damage = 20
+	shrapnel_chance = 0
+
 /datum/ammo/bullet/rifle/upp/ap
 	name = "armor-piercing 10x27 bullet"
-	damage = 45
+	damage = 43
 	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/upp/ap/penetrating
+	name = "wall-penerating 10x27 bullet"
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/bullet/rifle/upp/ap/penetrating/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
 
 /datum/ammo/bullet/rifle/upp/heap
 	name = "high-explosive armor-piercing 10x27 bullet"
@@ -460,6 +477,22 @@
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/upp/heap/mg/penetrating
+	name = "wall-penerating 10x27 bullet"
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_10
+	icon_state = "bullet_blue"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_CYAN
+	//damage_falloff = DAMAGE_FALLOFF_TIER_4
+	//max_range = /datum/ammo/bullet/rifle/upp/heap/mg::max_range*2
+
+/datum/ammo/bullet/rifle/upp/heap/mg/penetrating/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak/pkp)
+	))
 
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
@@ -501,22 +534,18 @@
 
 /datum/ammo/bullet/rifle/ag80/ap
 	name = "armor-piercing 9.7x16 bullet"
-	damage = 35
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_7 // not as good as 10x24 AP but still impressive for calibre size
 
-/datum/ammo/bullet/rifle/ag80/ap/tracer
-	icon_state = "bullet_green"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_RED
+/datum/ammo/bullet/rifle/ag80/rubber
+	name = "rubber 9.7x16 bullet"
+	damage = 4
+	stamina_damage = 12
+	shrapnel_chance = 0
 
 /datum/ammo/bullet/rifle/ag80/heap
 	name = "high-explosive armor-piercing 9.7x16 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	damage = 50 //big damage, doesn't actually blow up because thats stupid.
+	damage = 45 //big damage, doesn't actually blow up because thats stupid.
 	penetration = ARMOR_PENETRATION_TIER_7
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2 //thinner round should have less shrap potential vs the 10x24, no?
-
-/datum/ammo/bullet/rifle/ag80/heap/tracer
-	icon_state = "bullet_green"
-	ammo_glowing = TRUE
-	bullet_light_color = COLOR_SOFT_GREEN

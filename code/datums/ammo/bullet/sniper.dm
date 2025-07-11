@@ -42,6 +42,22 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
+/datum/ammo/bullet/sniper/upp/penetrating_flak
+	name = "wall-penetrating flak sniper bullet"
+	damage = 80
+	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
+/datum/ammo/bullet/sniper/upp/penetrating_flak/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/sniper/upp/penetrating_flak/on_hit_mob(mob/M,obj/projectile/P)
+	burst(get_turf(M),P,damage_type, 2 , 2)
+	burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
 	damage = 60

@@ -66,6 +66,12 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/sniper/svd
 
+/obj/item/ammo_magazine/sniper/svd/penetrating_flak
+	name = "\improper Type-88 penetrating flak Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with wall-penetrating flak rounds."
+	color = "#0000FF"
+	default_ammo = /datum/ammo/bullet/sniper/upp/penetrating_flak
+
 /obj/item/ammo_magazine/sniper/svd/pve
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
 	default_ammo = /datum/ammo/bullet/sniper/upp_pve

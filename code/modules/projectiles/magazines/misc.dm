@@ -88,6 +88,29 @@
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
 
+/obj/item/ammo_magazine/pkp
+	name = "QYJ-72 ammo box (10x27mm HEAP)"
+	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "qjy72"
+	ammo_band_icon = "+qjy72_band"
+	ammo_band_icon_empty = "+qjy72_band_e"
+	matter = list("metal" = 10000)
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
+	max_rounds = 250
+	reload_delay = 12
+	gun_type = /obj/item/weapon/gun/pkp
+
+/obj/item/ammo_magazine/pkp/penetrating
+	name = "QYJ-72 ammo box (10x27mm wall-penetrating)"
+	desc = "A 250 round box of wall-penetrating ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	caliber = "10x27mm"
+	matter = list("metal" = 10000)
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg/penetrating
+	reload_delay = 6
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
 //rocket launchers
 
 /obj/item/ammo_magazine/rifle/grenadespawner
