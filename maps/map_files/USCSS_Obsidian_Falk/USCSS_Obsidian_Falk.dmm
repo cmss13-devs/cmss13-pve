@@ -1661,6 +1661,37 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
+"aeR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = 7
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -6
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = 4;
+	pixel_x = -17;
+	layer = 3.03
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -2;
+	pixel_x = -17;
+	layer = 3.03
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -8;
+	pixel_x = -17;
+	layer = 3.03
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -6
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "aeS" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -9135,17 +9166,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 12
+	pixel_y = 7;
+	pixel_x = -6
 	},
 /obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 7
+	pixel_x = -6
 	},
-/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -6;
+	pixel_x = -6
+	},
 /obj/item/weapon/gun/smg/m39/elite/pve{
 	pixel_y = -6
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = -12
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
@@ -54413,7 +54445,7 @@ apb
 axO
 axa
 awY
-axN
+aeR
 acW
 aop
 amJ

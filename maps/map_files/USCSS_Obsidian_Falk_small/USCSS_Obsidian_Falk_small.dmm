@@ -1403,6 +1403,19 @@
 /obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
+"aee" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = 7
+	},
+/obj/item/weapon/gun/smg/m39/elite/pve,
+/obj/item/weapon/gun/smg/m39/elite/pve{
+	pixel_y = -6
+	},
+/turf/open/floor/corsat/plate,
+/area/firefly/squad_omega)
 "aef" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1436,6 +1449,11 @@
 /obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
+"aem" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/corsat/cargo,
+/area/firefly/squad_omega)
 "aen" = (
 /obj/item/device/radio/headset/distress/pmc/platoon,
 /obj/item/clothing/under/marine/veteran/pmc,
@@ -8739,24 +8757,9 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "awZ" = (
-/obj/structure/closet/secure_closet{
-	name = "heavy weapons specialist locker";
-	req_access_txt = "208;217"
-	},
-/obj/item/weapon/gun/smartgun/dirty,
-/obj/item/smartgun_battery,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
-/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/ammo_magazine/smartgun,
-/obj/item/storage/belt/marine/smartgunner,
 /obj/structure/machinery/light/double/blue/golden_arrow,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axa" = (
@@ -8806,16 +8809,6 @@
 	light_power = 0.7
 	},
 /turf/open/floor/corsat/plate,
-/area/firefly/squad_omega)
-"axd" = (
-/obj/structure/closet/secure_closet{
-	name = "team leader locker";
-	req_access_txt = "209;211"
-	},
-/obj/item/device/binoculars/range/designator,
-/obj/item/device/whistle,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axe" = (
 /obj/structure/closet/secure_closet{
@@ -9095,9 +9088,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = 12
-	},
-/obj/item/weapon/gun/smg/m39/elite/pve{
 	pixel_y = 7
 	},
 /obj/item/weapon/gun/smg/m39/elite/pve,
@@ -9105,7 +9095,9 @@
 	pixel_y = -6
 	},
 /obj/item/weapon/gun/smg/m39/elite/pve{
-	pixel_y = -12
+	pixel_y = 4;
+	pixel_x = 16;
+	layer = 3.03
 	},
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
@@ -53590,9 +53582,9 @@ axl
 axj
 aeg
 axe
-axd
-aeg
 axb
+aeg
+aem
 awZ
 aeg
 aeg
@@ -54363,7 +54355,7 @@ apb
 axO
 axa
 awY
-axN
+aee
 acW
 aop
 amJ
