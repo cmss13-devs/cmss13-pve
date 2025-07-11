@@ -6,6 +6,11 @@
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
 	path = /datum/equipment_preset/upp/rifleman
 
+/datum/human_ai_equipment_preset/upp/machinegunner/not_heap
+	name = "UPP Squad Machinegunner (Non-HEAP)"
+	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily. This one shoots standard 10x27mm."
+	path = /datum/equipment_preset/upp/machinegunner/not_heap
+
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
 	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily."
