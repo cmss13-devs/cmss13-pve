@@ -38,32 +38,51 @@
 			nutrition -= HUNGER_FACTOR/5
 
 /mob/living/carbon/relaymove(mob/user, direction)
-	if(user.is_mob_incapacitated(TRUE))
-		return
-	if(!chestburst && (status_flags & XENO_HOST) && islarva(user))
-		var/mob/living/carbon/xenomorph/larva/larva_burst = user
-		larva_burst.chest_burst(src)
+	if(user.is_mob_incapacitated(TRUE)) return
+	if(user in src.stomach_contents)
+		if(user.client)
+			user.client.next_movement = world.time + 20
+		if(prob(30))
+			for(var/mob/M in hearers(4, src))
+				if(M.client)
+					M.show_message(SPAN_DANGER("You hear something rumbling inside [src]'s stomach..."), SHOW_MESSAGE_AUDIBLE)
+		var/obj/item/I = user.get_active_hand()
+		if(I && I.force)
+			var/d = rand(floor(I.force / 4), I.force)
+			if(istype(src, /mob/living/carbon/human))
+				var/mob/living/carbon/human/H = src
+				var/organ = H.get_limb("chest")
+				if(istype(organ, /obj/limb))
+					var/obj/limb/temp = organ
+					if(temp.take_damage(d, 0))
+						H.UpdateDamageIcon()
+				H.updatehealth()
+			else
+				src.take_limb_damage(d)
+			for(var/mob/M as anything in viewers(user, null))
+				if(M.client)
+					M.show_message(text(SPAN_DANGER("<B>[user] attacks [src]'s stomach wall with the [I.name]!")), SHOW_MESSAGE_AUDIBLE)
+			user.track_hit(initial(I.name))
+			playsound(user.loc, 'sound/effects/attackblob.ogg', 25, 1)
+
+			if(prob(max(4*(100*getBruteLoss()/maxHealth - 75),0))) //4% at 24% health, 80% at 5% health
+				last_damage_data = create_cause_data("chestbursting", user)
+				gib(last_damage_data)
+	else if(!chestburst && (status_flags & XENO_HOST) && islarva(user))
+		var/mob/living/carbon/xenomorph/larva/L = user
+		L.chest_burst(src)
 
 /mob/living/carbon/ex_act(severity, direction, datum/cause_data/cause_data)
-	last_damage_data = istype(cause_data) ? cause_data : create_cause_data(cause_data)
-	var/gibbing = FALSE
-
-	if(severity >= health && severity >= EXPLOSION_THRESHOLD_GIB)
-		gibbing = TRUE
 
 	if(body_position == LYING_DOWN && direction)
 		severity *= EXPLOSION_PRONE_MULTIPLIER
-
-	if(HAS_TRAIT(src, TRAIT_HAULED) && !gibbing) // We still probably wanna gib them as well if they were supposed to be gibbed by the explosion in the first place
-		visible_message(SPAN_WARNING("[src] is shielded from the blast!"), SPAN_WARNING("You are shielded from the blast!"))
-		return
 
 	if(severity >= 30)
 		flash_eyes()
 
 	last_damage_data = istype(cause_data) ? cause_data : create_cause_data(cause_data)
 
-	if(gibbing)
+	if(severity >= health && severity >= EXPLOSION_THRESHOLD_GIB)
 		gib(last_damage_data)
 		return
 
@@ -79,19 +98,20 @@
 	if(legcuffed)
 		drop_inv_item_on_ground(legcuffed)
 
-	for(var/atom/movable/bursting_out in stomach_contents)
-		stomach_contents.Remove(bursting_out)
-		bursting_out.forceMove(get_turf(loc))
-		bursting_out.acid_damage = 0 //Reset the acid damage
-		if(ismob(bursting_out))
-			visible_message(SPAN_DANGER("[bursting_out] bursts out of [src]!"))
+	for(var/atom/movable/A in stomach_contents)
+		stomach_contents.Remove(A)
+		A.forceMove(get_turf(loc))
+		A.acid_damage = 0 //Reset the acid damage
+		if(ismob(A))
+			visible_message(SPAN_DANGER("[A] bursts out of [src]!"))
 
-	for(var/atom/movable/possible_object in contents_recursive())
-		if(isobj(possible_object))
-			var/obj/bursting_object = possible_object
-			if(bursting_object.unacidable)
-				bursting_object.forceMove(get_turf(loc))
-				bursting_object.throw_atom(pick(range(1, get_turf(loc))), 1, SPEED_FAST)
+	for(var/atom/movable/A in contents_recursive())
+		if(isobj(A))
+			var/obj/O = A
+			if(O.unacidable)
+				O.forceMove(get_turf(loc))
+				O.throw_atom(pick(range(1, get_turf(loc))), 1, SPEED_FAST)
+
 	. = ..(cause)
 
 /mob/living/carbon/revive()
@@ -105,92 +125,59 @@
 	recalculate_move_delay = TRUE
 	..()
 
-/mob/living/carbon/human/attackby(obj/item/weapon, mob/living/user)
+/mob/living/carbon/human/attackby(obj/item/W, mob/living/user)
 	if(user.mob_flags & SURGERY_MODE_ON)
 		switch(user.a_intent)
 			if(INTENT_HELP)
 				//Attempt to dig shrapnel first, if any. dig_out_shrapnel_check() will fail if user is not human, which may be possible in future.
-				if(weapon.flags_item & CAN_DIG_SHRAPNEL && (locate(/obj/item/shard) in src.embedded_items) && weapon.dig_out_shrapnel_check(src, user))
+				if(W.flags_item & CAN_DIG_SHRAPNEL && (locate(/obj/item/shard) in src.embedded_items) && W.dig_out_shrapnel_check(src, user))
 					return TRUE
 				var/datum/surgery/current_surgery = active_surgeries[user.zone_selected]
 				if(current_surgery)
-					if(current_surgery.attempt_next_step(user, weapon))
+					if(current_surgery.attempt_next_step(user, W))
 						return TRUE //Cancel attack.
 				else
 					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
-					if(initiate_surgery_moment(weapon, src, affecting, user))
+					if(initiate_surgery_moment(W, src, affecting, user))
 						return TRUE
 
 			if(INTENT_DISARM) //Same as help but without the shrapnel dig attempt.
 				var/datum/surgery/current_surgery = active_surgeries[user.zone_selected]
 				if(current_surgery)
-					if(current_surgery.attempt_next_step(user, weapon))
+					if(current_surgery.attempt_next_step(user, W))
 						return TRUE
 				else
 					var/obj/limb/affecting = get_limb(check_zone(user.zone_selected))
-					if(initiate_surgery_moment(weapon, src, affecting, user))
+					if(initiate_surgery_moment(W, src, affecting, user))
 						return TRUE
 
-	else if(weapon.flags_item & CAN_DIG_SHRAPNEL && weapon.dig_out_shrapnel_check(src, user))
+	else if(W.flags_item & CAN_DIG_SHRAPNEL && W.dig_out_shrapnel_check(src, user))
 		return TRUE
 
 	. = ..()
 
-/mob/living/carbon/human/proc/handle_haul_resist()
-	if(world.time <= next_haul_resist)
-		return
+/mob/living/carbon/attack_hand(mob/M as mob)
+	if(!istype(M, /mob/living/carbon)) return
 
-	if(is_mob_incapacitated())
-		return
-
-	var/mob/living/carbon/xenomorph/xeno = hauling_xeno
-	next_haul_resist = world.time + 1.4 SECONDS
-	if(istype(get_active_hand(), /obj/item))
-		var/obj/item/item = get_active_hand()
-		if(item.force)
-			var/damage_of_item = rand(floor(item.force / 4), item.force)
-			xeno.take_limb_damage(damage_of_item)
-			for(var/mob/mobs_in_view as anything in viewers(src, null))
-				if(mobs_in_view.client)
-					mobs_in_view.show_message(text(SPAN_DANGER("<B>[src] attacks [xeno]'s carapace with the [item.name]!")), SHOW_MESSAGE_AUDIBLE)
-			track_hit(initial(item.name))
-			if(item.sharp)
-				playsound(loc, 'sound/weapons/slash.ogg', 25, 1)
-			else
-				var/hit_sound = pick('sound/weapons/genhit1.ogg', 'sound/weapons/genhit2.ogg', 'sound/weapons/genhit3.ogg')
-				playsound(loc, hit_sound, 25, 1)
-			if(prob(max(4*(100*xeno.getBruteLoss()/xeno.maxHealth - 75),0))) //4% at 24% health, 80% at 5% health
-				xeno.last_damage_data = create_cause_data("scuffling", src)
-				xeno.gib(last_damage_data)
-		else
-			for(var/mob/mobs_can_hear in hearers(4, xeno))
-				if(mobs_can_hear.client)
-					mobs_can_hear.show_message(SPAN_DANGER("You hear [src] struggling against [xeno]'s grip..."), SHOW_MESSAGE_AUDIBLE)
-	return
-
-/mob/living/carbon/attack_hand(mob/target_mob as mob)
-	if(!istype(target_mob, /mob/living/carbon))
-		return
-
-	if(target_mob.mob_flags & SURGERY_MODE_ON && target_mob.a_intent & (INTENT_HELP|INTENT_DISARM))
-		var/datum/surgery/current_surgery = active_surgeries[target_mob.zone_selected]
+	if(M.mob_flags & SURGERY_MODE_ON && M.a_intent & (INTENT_HELP|INTENT_DISARM))
+		var/datum/surgery/current_surgery = active_surgeries[M.zone_selected]
 		if(current_surgery)
-			if(current_surgery.attempt_next_step(target_mob, null))
+			if(current_surgery.attempt_next_step(M, null))
 				return TRUE
 		else
-			var/obj/limb/affecting = get_limb(check_zone(target_mob.zone_selected))
-			if(affecting && initiate_surgery_moment(null, src, affecting, target_mob))
+			var/obj/limb/affecting = get_limb(check_zone(M.zone_selected))
+			if(affecting && initiate_surgery_moment(null, src, affecting, M))
 				return TRUE
 
-	for(var/datum/disease/virus in viruses)
-		if(virus.spread_by_touch())
-			target_mob.contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
+	for(var/datum/disease/D in viruses)
+		if(D.spread_by_touch())
+			M.contract_disease(D, 0, 1, CONTACT_HANDS)
 
-	for(var/datum/disease/virus in target_mob.viruses)
-		if(virus.spread_by_touch())
-			contract_disease(virus, FALSE, TRUE, CONTACT_HANDS)
+	for(var/datum/disease/D in M.viruses)
+		if(D.spread_by_touch())
+			contract_disease(D, 0, 1, CONTACT_HANDS)
 
-	target_mob.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
+	M.next_move += 7 //Adds some lag to the 'attack'. Adds up to 11 in combination with click_adjacent.
 	return
 
 /mob/living/carbon/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null)
@@ -345,8 +332,8 @@
 		return
 	if(stat || !target)
 		return
-	if(!istype(loc, /turf) || HAS_TRAIT(src, TRAIT_HAULED)) // In some mob/object (i.e. hauled or tank)
-		to_chat(src, SPAN_WARNING("You cannot throw anything right now."))
+	if(!istype(loc, /turf)) // In some mob/object (i.e. devoured or tank)
+		to_chat(src, SPAN_WARNING("You cannot throw anything while inside of \the [loc.name]."))
 		return
 	if(target.type == /atom/movable/screen)
 		return
@@ -491,55 +478,15 @@
 			if(!HAS_TRAIT(src, TRAIT_FLOORED)) // just watch this break in the most horrible way possible
 				break
 
-// Adding traits, etc after xeno restrains and hauls us
-/mob/living/carbon/human/proc/handle_haul(mob/living/carbon/xenomorph/xeno)
-	ADD_TRAIT(src, TRAIT_FLOORED, TRAIT_SOURCE_XENO_HAUL)
-	ADD_TRAIT(src, TRAIT_HAULED, TRAIT_SOURCE_XENO_HAUL)
-	ADD_TRAIT(src, TRAIT_NO_STRAY, TRAIT_SOURCE_XENO_HAUL)
 
-	hauling_xeno = xeno
-	RegisterSignal(xeno, COMSIG_MOB_DEATH, PROC_REF(release_haul_death))
-	RegisterSignal(src, COMSIG_ATTEMPT_MOB_PULL, PROC_REF(haul_grab_attempt))
-	RegisterSignal(src, COMSIG_LIVING_PREIGNITION, PROC_REF(haul_fire_shield))
-	RegisterSignal(src, list(COMSIG_LIVING_FLAMER_CROSSED, COMSIG_LIVING_FLAMER_FLAMED), PROC_REF(haul_fire_shield_callback))
-	layer = LYING_BETWEEN_MOB_LAYER
-	add_filter("hauled_shadow", 1, color_matrix_filter(rgb(95, 95, 95)))
-	pixel_y = -7
-	next_haul_resist = 0
 
-/mob/living/carbon/human/proc/release_haul_death()
-	SIGNAL_HANDLER
-	handle_unhaul()
-
-/mob/living/carbon/human/proc/haul_grab_attempt()
-	SIGNAL_HANDLER
-	return COMPONENT_CANCEL_MOB_PULL
-
-/mob/living/carbon/human/proc/haul_fire_shield(mob/living/burning_mob) //Stealing it from the pyro spec armor, xenos shield us from fire
-	SIGNAL_HANDLER
-	return COMPONENT_CANCEL_IGNITION
-
-/mob/living/carbon/human/proc/haul_fire_shield_callback(mob/living/burning_mob)
-	SIGNAL_HANDLER
-	return COMPONENT_NO_IGNITE|COMPONENT_NO_BURN
-
-// Removing traits and other stuff after xeno releases us from haul
-/mob/living/carbon/human/proc/handle_unhaul()
-	var/location = get_turf(loc)
-	remove_traits(list(TRAIT_HAULED, TRAIT_NO_STRAY, TRAIT_FLOORED, TRAIT_IMMOBILIZED), TRAIT_SOURCE_XENO_HAUL)
-	pixel_y = 0
-	UnregisterSignal(src, list(COMSIG_ATTEMPT_MOB_PULL, COMSIG_LIVING_PREIGNITION, COMSIG_LIVING_FLAMER_CROSSED, COMSIG_LIVING_FLAMER_FLAMED))
-	if(!isnull(hauling_xeno)) // Check because if the xeno gets gibbed for some reason we throw a null into the following
-		UnregisterSignal(hauling_xeno, COMSIG_MOB_DEATH)
-		hauling_xeno = null
-	layer = MOB_LAYER
-	remove_filter("hauled_shadow")
-	forceMove(location)
-	for(var/obj/object in location)
-		if(istype(object, /obj/effect/alien/resin/trap) || istype(object, /obj/effect/alien/egg))
-			object.HasProximity(src)
-	next_haul_resist = 0
-
+/mob/living/carbon/on_stored_atom_del(atom/movable/AM)
+	..()
+	if(length(stomach_contents) && ismob(AM))
+		for(var/X in stomach_contents)
+			if(AM == X)
+				stomach_contents -= AM
+				break
 
 /mob/living/carbon/proc/extinguish_mob(mob/living/carbon/C)
 	adjust_fire_stacks(-5, min_stacks = 0)

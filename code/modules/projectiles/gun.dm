@@ -611,7 +611,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 
 	if(!(flags_gun_features & (GUN_INTERNAL_MAG|GUN_UNUSUAL_DESIGN))) //Internal mags and unusual guns have their own stuff set.
 		if(current_mag && current_mag.current_rounds > 0)
-			if(flags_gun_features & GUN_AMMO_COUNTER) dat += "Ammo counter shows [current_mag.current_rounds] round\s remaining.<br>"
+			if(flags_gun_features & GUN_AMMO_COUNTER) dat += "Ammo counter shows [in_chamber ? "[current_mag.current_rounds+1]" : "[current_mag.current_rounds]"] round\s remaining.<br>"
 			else dat += "It's loaded[in_chamber?" and has a round chambered":""].<br>"
 		else dat += "It's unloaded[in_chamber?" but has a round chambered":""].<br>"
 	if(!(flags_gun_features & GUN_UNUSUAL_DESIGN))
@@ -1621,8 +1621,6 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	if(flags_gun_features & GUN_BURST_FIRING)
 		return TRUE
 	if(user.is_mob_incapacitated())
-		return
-	if(HAS_TRAIT(user, TRAIT_HAULED))
 		return
 	if(world.time < guaranteed_delay_time)
 		return
