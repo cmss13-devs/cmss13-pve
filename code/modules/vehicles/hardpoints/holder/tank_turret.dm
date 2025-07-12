@@ -124,7 +124,7 @@
 	var/list/data = list()
 
 	data += list(list( // turret smokescreen data
-		"name" = "M34A2-A Turret Smoke Screen",
+		"name" = "M34A2-A Turret Flare Mortar",
 		"health" = health <= 0 ? null : floor(get_integrity_percent()),
 		"uses_ammo" = TRUE,
 		"current_rounds" = ammo.current_rounds / 2,
