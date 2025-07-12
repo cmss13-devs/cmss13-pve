@@ -91,6 +91,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/open_human_squad_spawner_panel,
 	/client/proc/open_human_ai_spawner_panel,
 	/client/proc/toggle_barricade_creation, // Stops cades from being built
+	/client/proc/game_master_toggle_light,
 	))
 
 
@@ -358,6 +359,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	if(CLIENT_HAS_RIGHTS(src, R_BUILDMODE))
 		add_verb(src, /client/proc/togglebuildmodeself)
 		add_verb(src, /client/proc/toggle_game_master)
+		add_verb(src, /client/proc/set_xeno_amount)
 		add_verb(src, /client/proc/open_resin_panel)
 		add_verb(src, /client/proc/open_sound_panel)
 		add_verb(src, /client/proc/toggle_join_xeno)
@@ -375,6 +377,9 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_ai_xeno_weeding)
 		add_verb(src, /client/proc/toggle_rappel_menu)
 		add_verb(src, /client/proc/toggle_fire_support_menu)
+		add_verb(src, /client/proc/blackshift)
+		add_verb(src, /client/proc/skeletify)
+		add_verb(src, /client/proc/xenos_target_synths)
 		add_verb(src, /client/proc/gm_lighting)
 	if(CLIENT_HAS_RIGHTS(src, R_SERVER))
 		add_verb(src, GLOB.admin_verbs_server)
@@ -402,6 +407,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		GLOB.admin_verbs_default,
 		/client/proc/togglebuildmodeself,
 		/client/proc/toggle_game_master,
+		/client/proc/set_xeno_amount,
 		/client/proc/open_resin_panel,
 		/client/proc/open_sound_panel,
 		/client/proc/toggle_join_xeno,
@@ -410,6 +416,9 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		/client/proc/toggle_ai_xeno_weeding,
 		/client/proc/toggle_rappel_menu,
 		/client/proc/toggle_fire_support_menu,
+		/client/proc/xenos_target_synths,
+		/client/proc/blackshift,
+		/client/proc/skeletify,
 		/client/proc/admin_marine_announcement,
 		/client/proc/screen_alert_menu,
 		/client/proc/enable_fire_support,

@@ -670,6 +670,9 @@
 	misc_tracking = TRUE
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/support
+	frequency = BRAVO_FREQ
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
 	desc = "Issued exclusively to Marine Raiders and members of the USCM's Force Reconnaissance."

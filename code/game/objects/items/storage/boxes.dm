@@ -695,6 +695,7 @@
 	else
 		icon_state = "r52"
 
+
 //ITEMS-----------------------------------//
 /obj/item/storage/box/lightstick
 	name = "box of lightsticks"

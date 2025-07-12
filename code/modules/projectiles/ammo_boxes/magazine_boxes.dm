@@ -752,6 +752,9 @@
 /obj/item/ammo_box/magazine/mk1/large/rubber/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/mk1/large/m20
+	name = "magazine box (M20A x 32)"
+	magazine_type = /obj/item/ammo_magazine/rifle/m20a
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23
