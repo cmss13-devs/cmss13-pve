@@ -749,7 +749,7 @@
 /datum/equipment_preset/colonist/security/weyland
 	name = "US Civilian Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
+	faction = FACTION_WY
 	faction_group = FACTION_LIST_WY_COLONY
 	assignment = "Weyland-Yutani Corporate Security Officer"
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_SECURITY)

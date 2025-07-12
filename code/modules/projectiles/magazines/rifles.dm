@@ -566,12 +566,12 @@
 //XM51 BREACHING SHOTGUN
 
 /obj/item/ammo_magazine/rifle/xm51
-	name = "\improper XM51 magazine (16g)"
+	name = "\improper M1771 magazine (16g)"
 	desc = "A 16 gauge pump-action shotgun magazine."
 	icon_state = "xm51"
 	caliber = "16g"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6

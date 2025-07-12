@@ -55,13 +55,24 @@
 	name = "TWE Rebel Cell Commander"
 	desc = "Armed with a M56B smartgun."
 	path = /datum/equipment_preset/clf/commander
+	faction = FACTION_UA_REBEL
 
 //UA Rebels
+
+/datum/human_ai_equipment_preset/clf/ua/guerilla
+	name = "UA Rebel, Soldier (Pistol)"
+	desc = "UA Rebel soldier with a random pistol."
+	path = /datum/equipment_preset/rebel/guerilla
 
 /datum/human_ai_equipment_preset/clf/ua/soldier
 	name = "UA Rebel, Soldier (Rifle)"
 	desc = "Armed with a M20A, L42A or very rarely a M41A. Even more rarely, will only be equipped with a M1911, M4A3 or VP70."
 	path = /datum/equipment_preset/rebel/soldier
+
+/datum/human_ai_equipment_preset/clf/ua/machinegunner
+	name = "UA Rebel, Soldier (Machinegunner)"
+	desc = "Armed with a HPR."
+	path = /datum/equipment_preset/rebel/soldier/machinegunner
 
 /datum/human_ai_equipment_preset/clf/ua/shotgunner
 	name = "UA Rebel, Soldier (Shotgunner)"
@@ -93,3 +104,7 @@
 	desc = "Armed with a M56A2 smartgun."
 	path = /datum/equipment_preset/rebel/commander
 
+/datum/human_ai_equipment_preset/clf/ua/security_android
+	name = "UA Rebel Combat Android"
+	desc = "An illegal combat android for the UA rebel faction. Use this sparingly."
+	path = /datum/equipment_preset/synth/working_joe/security_android/ua_rebel
