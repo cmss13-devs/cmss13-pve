@@ -408,8 +408,12 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
 	//waist
 	var/random_belt = rand(1,3)
 	switch(random_belt)
@@ -461,8 +465,12 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags(new_human), WEAR_ACCESSORY)
 	//waist
 	var/random_belt = rand(1,3)
 	switch(random_belt)
@@ -529,8 +537,7 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
 	//waist
 	var/random_belt = rand(1,2)
 	switch(random_belt)
@@ -576,8 +583,7 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
 	//waist
 	var/random_belt = rand(1,2)
 	switch(random_belt)
@@ -660,7 +666,12 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
+	var/random_webbing = rand(1,3)
+	switch(random_webbing)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small(new_human), WEAR_ACCESSORY)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall(new_human), WEAR_ACCESSORY)
 	//waist
 	var/random_belt = rand(1,3)
 	switch(random_belt)
@@ -753,9 +764,9 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon(new_human), WEAR_ACCESSORY)
 	//waist
-	var/random_belt = rand(1,3)
+	var/random_belt = rand(1,4)
 	switch(random_belt)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)

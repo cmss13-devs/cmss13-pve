@@ -358,6 +358,24 @@
 	. = ..()
 	MD.iff_signal = FACTION_MARINE
 
+/obj/item/clothing/suit/space/pressure/uscm/armband/Initialize()
+	. = ..()
+	if(prob(50))
+		var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband, /obj/item/clothing/accessory/armband/science, /obj/item/clothing/accessory/armband/mpsec))
+		attach_accessory(null, new new_band)
+
+/obj/item/clothing/suit/space/pressure/uscm/armband_medical/Initialize()
+	. = ..()
+	if(prob(50))
+		var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband/med, /obj/item/clothing/accessory/armband/medgreen, /obj/item/clothing/accessory/armband/hydro))
+		attach_accessory(null, new new_band)
+
+/obj/item/clothing/suit/space/pressure/uscm/armband_engie/Initialize()
+	. = ..()
+	if(prob(50))
+		var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband/engine, /obj/item/clothing/accessory/armband/cargo))
+		attach_accessory(null, new new_band)
+
 /obj/item/clothing/head/helmet/marine/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the Sokol-KV2 pressure suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
@@ -387,6 +405,13 @@
 /obj/item/clothing/suit/space/pressure/upp/Initialize()
 	. = ..()
 	MD.iff_signal = FACTION_UPP
+
+/obj/item/clothing/suit/space/pressure/upp/armband/Initialize()
+	. = ..()
+	if(prob(50))
+		var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
+		var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
+		attach_accessory(src, new_band)
 // Souto man
 
 /obj/item/clothing/suit/space/souto

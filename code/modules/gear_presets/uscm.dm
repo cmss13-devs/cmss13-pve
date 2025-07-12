@@ -633,10 +633,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -674,10 +675,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver(new_human), WEAR_R_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/frag(new_human), WEAR_J_STORE)
@@ -712,10 +714,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/pve/with_scope(new_human), WEAR_J_STORE)
@@ -750,10 +753,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a(new_human), WEAR_J_STORE)
@@ -788,10 +792,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer(new_human), WEAR_J_STORE)
@@ -882,7 +887,7 @@
 	add_uscm_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun(new_human), WEAR_J_STORE)
@@ -993,7 +998,7 @@
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -1100,7 +1105,7 @@
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_medical(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -1197,7 +1202,7 @@
 	//uniform
 	add_uscm_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -1307,7 +1312,7 @@
 	add_uscm_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/sapper, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
@@ -1353,7 +1358,7 @@
 	add_uscm_uniform(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/sapper, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)

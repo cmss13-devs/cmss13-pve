@@ -933,7 +933,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/clothing/head/helmet/space/odyssey)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
-	if(prob(60))
+	if(prob(80))
 		spawn_army_fluff_items(new_human)
 
 /datum/equipment_preset/proc/add_terrible_rebel_eva_suit(mob/living/carbon/human/new_human)
@@ -957,7 +957,8 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/suit/space/pressure/yellow,
 
 		)
-	new_human.equip_to_slot_or_del(new suitpath, WEAR_JACKET)
+	var/obj/item/clothing/suit/spacesuit = new suitpath
+	new_human.equip_to_slot_or_del(spacesuit, WEAR_JACKET)
 	var/random_paint = rand(1,3)
 	switch(random_paint)
 		if(1)
@@ -965,16 +966,19 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint/uaflag(new_human), WEAR_ACCESSORY)
 			//You get nothing, good day sir
+	if(prob(50))
+		var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
+		var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
+		spacesuit.attach_accessory(src, new new_band)
 
 /datum/equipment_preset/proc/add_eva_suit_accessory(mob/living/carbon/human/new_human)
 	if(prob(50))
 		var/list/possible_paints = subtypesof(/obj/item/clothing/accessory/paint)
 		var/obj/item/clothing/accessory/armband/new_paint = pick(possible_paints)
 		new_human.equip_to_slot_or_del(new new_paint, WEAR_ACCESSORY)
-	if(prob(50))
-		var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
-		var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
-		new_human.equip_to_slot_or_del(new new_band, WEAR_ACCESSORY)
+	var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
+	var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
+	new_human.equip_to_slot_or_del(new new_band, WEAR_ACCESSORY)
 
 
 //*****************************************************************************************************/

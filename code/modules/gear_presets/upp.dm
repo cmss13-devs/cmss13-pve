@@ -228,7 +228,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ag80/preloaded, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_WAIST)
@@ -263,7 +263,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
 	if(prob(80))
@@ -302,7 +302,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/svd/pve, WEAR_J_STORE)
 	if(prob(60))
@@ -345,7 +345,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/frag, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92, WEAR_WAIST)
 	//limbs
@@ -377,7 +377,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/slug, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_WAIST)
@@ -410,7 +410,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/arnold/weak, WEAR_WAIST)
@@ -459,7 +459,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_HELMET)
 	//uniform
 	add_upp_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/ag80/preloaded, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/upp/partial/liquid, WEAR_WAIST)
@@ -498,7 +498,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/upp, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92, WEAR_WAIST)
@@ -546,7 +546,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/cell/high(new_human), WEAR_IN_BELT)
@@ -586,7 +586,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/upp, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92, WEAR_WAIST)
 	//limbs
@@ -796,7 +796,7 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
 	//limbs
