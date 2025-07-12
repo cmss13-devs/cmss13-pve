@@ -320,3 +320,72 @@
 
 /datum/ammo/rocket/custom/do_at_max_range(obj/projectile/projectile)
 	prime(null, projectile)
+
+// UPP ROCKETS/MISSILES
+/datum/ammo/rocket/ap/hj35_launcher
+	icon_state = "hj35_missile"
+	max_range = 8
+
+// TANK CANNON
+/datum/ammo/rocket/ltb/p17702
+	name = "93mmm round"
+	icon_state = "p17702"
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
+
+	accuracy = HIT_ACCURACY_TIER_3
+	accurate_range = 32
+	max_range = 32
+	damage = 200
+	shell_speed = AMMO_SPEED_TIER_3
+
+// RAILGUN CANNON
+/datum/ammo/rocket/ap/railgun
+	name = "railgun round"
+	icon_state = "railgun"
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
+
+	accuracy = HIT_ACCURACY_TIER_5
+	accurate_range = 32
+	max_range = 32
+	damage = 2500
+	damage_var_high = 120
+	shell_speed = AMMO_SPEED_TIER_3
+	vehicle_slowdown_time = 5 SECONDS
+	penetration= ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/rocket/ap/railgun/do_at_max_range(obj/projectile/projectile)
+	var/turf/turf = get_turf(projectile)
+	var/hit_something = 0
+	for(var/mob/mob in turf)
+		mob.ex_act(450, projectile.dir, projectile.weapon_cause_data, 40)
+		mob.apply_effect(3, WEAKEN)
+		mob.apply_effect(3, PARALYZE)
+		hit_something = 1
+		break
+	if(!hit_something)
+		for(var/obj/object in turf)
+			if(object.density)
+				object.ex_act(250, projectile.dir, projectile.weapon_cause_data, 200)
+				hit_something = 1
+				break
+	if(!hit_something)
+		turf.ex_act(150, projectile.dir, projectile.weapon_cause_data)
+	cell_explosion(turf, 550, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	smoke.set_up(1, turf)
+	smoke.start()
+
+/datum/ammo/rocket/ap/railgun/on_hit_obj(obj/object, obj/projectile/projectile)
+	if(istype(object, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = object
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("railgun round"))
+		mob.interior_crash_effect()
+		var/turf/turf = get_turf(mob.loc)
+		mob.ex_act(50, projectile.dir, projectile.weapon_cause_data, 50)
+		cell_explosion(get_turf(mob), 100, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+		smoke.set_up(1, turf)
+		smoke.start()
+
+		return
+	return ..()
