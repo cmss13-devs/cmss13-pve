@@ -606,7 +606,7 @@
 	new_human.allow_gun_usage = TRUE
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
@@ -671,7 +671,7 @@
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_night_goggles/upp, WEAR_EYES)
 	//head
@@ -1245,6 +1245,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/pen/clicky, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")
 	//back
 	//face
 	//head

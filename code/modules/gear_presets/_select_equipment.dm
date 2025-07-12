@@ -314,6 +314,7 @@
 		new_human.mind.name = new_human.real_name
 		// Bank account details handled in generate_money_account()
 	new_human.job = rank
+	new_human.title = assignment
 	new_human.comm_title = role_comm_title
 
 /datum/equipment_preset/proc/get_assignment(mob/living/carbon/human/new_human)
@@ -857,6 +858,7 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 	/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
 	/obj/item/weapon/gun/shotgun/pump = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 	/obj/item/weapon/gun/shotgun/pump = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/weapon/gun/rifle/xm51/withstock = /obj/item/ammo_magazine/rifle/xm51,
 	))
 
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(

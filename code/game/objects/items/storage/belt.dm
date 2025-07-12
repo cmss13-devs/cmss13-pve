@@ -1020,9 +1020,8 @@
 		WEAR_L_HAND = "s_marinebelt",
 		WEAR_R_HAND = "s_marinebelt")
 	w_class = SIZE_LARGE
-	storage_slots = 12
+	storage_slots = 14
 	max_w_class = SIZE_MEDIUM
-	max_storage_space = 24
 	can_hold = list(/obj/item/explosive/grenade)
 
 
@@ -1457,8 +1456,8 @@
 	var/magazines = 0
 
 /obj/item/storage/belt/gun/xm51/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/shotgun/light/breaching))
-		var/obj/item/ammo_magazine/shotgun/light/breaching/ammo_box = item
+	if(istype(item, /obj/item/ammo_magazine/shotgun/buckshot/light))
+		var/obj/item/ammo_magazine/shotgun/buckshot/light/ammo_box = item
 		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
 	else
 		return ..()

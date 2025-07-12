@@ -14404,7 +14404,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	name = "\improper Hypersleep Bay"
+	name = "\improper Medical Bay"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -14980,7 +14980,7 @@
 	dir = 1;
 	light_power = 0.7
 	},
-/obj/item/clothing/glasses/hud/health{
+/obj/item/clothing/glasses/night/medhud/no_nvg{
 	pixel_y = 5;
 	pixel_x = 7
 	},
@@ -17671,15 +17671,20 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 13;
-	layer = 3.2
-	},
 /obj/item/storage/box/guncase/heavy/sentry{
 	pixel_y = 13
 	},
 /obj/item/storage/box/guncase/heavy/sentry,
 /obj/structure/machinery/power/apc/almayer/east,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 13;
+	layer = 3.2
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 20;
+	layer = 3.2;
+	pixel_x = 3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "kDp" = (
@@ -18862,9 +18867,9 @@
 "olG" = (
 /obj/structure/phone_base{
 	pixel_y = 6;
-	name = "supply bay receiver";
+	name = "medical bay receiver";
 	phone_category = "Golden Arrow";
-	phone_id = "Supply Bay";
+	phone_id = "Medical Bay";
 	pixel_x = 23;
 	dir = 8
 	},
