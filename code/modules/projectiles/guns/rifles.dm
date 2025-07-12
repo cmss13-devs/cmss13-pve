@@ -516,8 +516,8 @@
 	name = "M20A4 GRIP II pulse rifle"
 	desc = "The final evolution of the old M20. A last ditch attempt to modernize the weapon, General Rifle Improvement Program II provides an FA/5RB hyperburst firegroup, and updates the feed mechanisms. The overbarrel grenade launcher has been given some level of parts compatibility with the PN 30mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
-	icon_state = "m20a"
-	item_state = "m20a"
+	icon_state = "m20marshal"
+	item_state = "m20marshal"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 	fire_sound = "gun_oldpulse"
@@ -529,10 +529,10 @@
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/m20a,
-		/obj/item/attachable/attached_gun/grenade/harrington,
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_NORMAL
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	starting_attachment_types = list(
