@@ -55,7 +55,7 @@
 
 /obj/item/ammo_magazine/sniper/elite/basic
 	name = "\improper M42C magazine (10x28mm)"
-	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt."
 	default_ammo = /datum/ammo/bullet/rifle/heavy
 	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
 	caliber = "10x28mm"
@@ -65,7 +65,7 @@
 
 /obj/item/ammo_magazine/sniper/elite/incin
 	name = "\improper M42C incendiary magazine (10x28mm)"
-	desc = "A magazine of M254 incendiary match-grade 10x28mm ammo. An aimed shot with it will temporarily blind the targe and kindle the blaze further."
+	desc = "A magazine of M254 incendiary match-grade 10x28mm ammo. An aimed shot with it will temporarily blind the target and kindle the blaze further."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/incendiary
 	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
 	caliber = "10x28mm"
@@ -85,7 +85,7 @@
 
 /obj/item/ammo_magazine/sniper/elite/overkill
 	name = "\improper M42C super-sonic magazine (10x28mm)"
-	desc = "A magazine of M252A1 HEAPSS match-grade 10x28mm ammo. capable of penetrating through most infantry-level materiel. Depending on what you hit, it might even have enough energy to wound anything behind the target."
+	desc = "A magazine of M252A1 HEAPSS match-grade 10x28mm ammo. Capable of penetrating through most infantry-level materiel. Depending on what you hit, it might even have enough energy to wound anything behind the target."
 	default_ammo = /datum/ammo/bullet/sniper/elite
 	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
 	caliber = "10x28mm"
