@@ -2375,11 +2375,10 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"
-	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
+	desc = "Common aftermarket attachment for the VP70. Increases the fire rate and burst amount."
 	icon_state = "mod88_stock"
 	attach_icon = "mod88_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
-	flags_attach_features = NO_FLAGS
 	hud_offset_mod = 4
 	size_mod = 2
 	melee_mod = 5
