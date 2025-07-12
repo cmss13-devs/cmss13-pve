@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Reworked XM51 breaching scattergun into M1771 16 gauge shotgun."

@@ -15,10 +15,16 @@
 	var/mob/living/carbon/human/connected_to
 	var/mob/living/carbon/human/connected_from
 	var/blood_type = null
+	var/bag_initial_reagents = null
 	var/datum/beam/current_beam
 
 /obj/item/reagent_container/blood/Initialize()
 	. = ..()
+	if(bag_initial_reagents)
+		for(var/reagent in bag_initial_reagents)
+			reagents.add_reagent(reagent, bag_initial_reagents[reagent])
+		update_icon()
+		return
 	if(blood_type != null)
 		name = "[blood_type] blood pack"
 		reagents.add_reagent("blood", initial(volume), list("viruses" = null, "blood_type" = blood_type, "resistances" = null))
@@ -54,7 +60,7 @@
 	if(current_beam)
 		QDEL_NULL(current_beam)
 	else if(connected_from && connected_to)
-		current_beam = connected_from.beam(connected_to, "iv_tube")
+		current_beam = connected_from.beam(connected_to, "iv_tube", color = mix_color_from_reagents(reagents.reagent_list), extra_x_offset_at_target = 0, extra_y_offset_at_target = 5)
 
 /obj/item/reagent_container/blood/attack(mob/attacked_mob, mob/user)
 	. = ..()
@@ -107,16 +113,24 @@
 		bad_disconnect()
 		return PROCESS_KILL
 
-	//if we're further than 1 tile away or we're not on a turf stop doing stuff
-	if(!(get_dist(src, connected_to) <= 1 && isturf(connected_to.loc)))
+	//if we're further than 3 tile away or we're not on a turf stop doing stuff
+	if(!(get_dist(src, connected_to) <= 3 && isturf(connected_to.loc)))
 		bad_disconnect()
 		return PROCESS_KILL
 
 	//give blood
 	if(mode == BLOOD_BAG_INJECTING)
 		if(volume > 0)
-			var/transfer_amount = REAGENTS_METABOLISM * 30
+			item_state = initial(item_state)
+			var/transfer_amount = (REAGENTS_METABOLISM * 30)/max(reagents.reagent_list.len, 1)
 			connected_to.inject_blood(src, transfer_amount)
+			for(var/datum/reagent/other_reagent in reagents.reagent_list)
+				if(other_reagent.id != "blood")
+					reagents.trans_id_to(connected_to, other_reagent.id, transfer_amount/2)
+			if(!reagents.total_volume)
+				item_state = "bloodpack_empty"
+				update_beam()
+				update_beam()
 			return
 
 	// Take blood
@@ -146,7 +160,7 @@
 	if(connected_to.pain.feels_pain)
 		connected_to.emote("pain")
 	connected_to.active_transfusions -= src
-	connected_to.base_pixel_x = 0
+	//connected_to.base_pixel_x = 0
 	connected_to = null
 	connected_from = null
 	update_beam()
@@ -187,6 +201,16 @@
 /obj/item/reagent_container/blood/empty
 	name = "empty blood pack"
 	desc = "An empty blood pack. Sorry, vampires, no luck here."
+
+/obj/item/reagent_container/blood/saline
+	name = "saline solution pack"
+	volume = 100
+	bag_initial_reagents = 	list("saline" = 100)
+	item_state = "bloodpack_saline"
+
+/obj/item/reagent_container/blood/saline/Initialize()
+	. = ..()
+	desc = "A basic first aid solution of water, sodium chloride and glucose made to treat " + SPAN_HELPFUL("blood loss, the symptoms of minor poisoning and hyperthermia.") + "While it does not have any lasting negative effects when overdosed on, " + SPAN_WARNING("adminstering more than half a bag at a time causes temporary blurred vision and disorientation.")
 
 #undef BLOOD_BAG_INJECTING
 #undef BLOOD_BAG_TAKING
