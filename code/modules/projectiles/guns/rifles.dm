@@ -537,7 +537,7 @@
 	aim_slowdown = SLOWDOWN_ADS_RIFLE
 	starting_attachment_types = list(
 		/obj/item/attachable/stock/m20a,
-		/obj/item/attachable/attached_gun/shotgun/m20a
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington
 	)
 	map_specific_decoration = FALSE
 
@@ -563,10 +563,9 @@
 	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 
-/obj/item/weapon/gun/rifle/m20a/unloaded
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+/obj/item/weapon/gun/rifle/m20_marshal/unloaded
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
-	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
