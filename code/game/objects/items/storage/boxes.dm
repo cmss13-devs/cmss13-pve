@@ -335,7 +335,7 @@
 	icon_state = "lemon_drop_box"
 	item_state = "lemon_drop_box"
 	can_hold = list(/obj/item/reagent_container/food/snacks/lemondrop)
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY //because otherwise it won't go back into MREs, it's not like people are minmaxing with lemon drops anyway
 	storage_slots = 8
 
 /obj/item/storage/box/lemondrop/fill_preset_inventory()
