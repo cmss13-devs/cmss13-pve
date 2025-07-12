@@ -192,7 +192,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
-		MAP_TAIPAI = new /obj/item/map/taipei(),
+		MAP_TAIPEI = new /obj/item/map/taipei(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
@@ -222,4 +222,36 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /obj/effect/landmark/map_item/Destroy()
 	GLOB.map_items -= src
+	return ..()
+
+// Tac-map showing map, for those groundmaps which haven't got a proper map(item) made
+/obj/item/tacmap_map
+	name = "\improper sat-scan tablet"
+	desc = "A handheld electronic device which displays an orbital scan of the local area of operations."
+	icon = 'icons/obj/items/devices.dmi'
+	icon_state = "maptablet"
+	item_state = "Cotablet"
+	throw_speed = SPEED_FAST
+	throw_range = 5
+	w_class = SIZE_TINY
+	var/datum/tacmap/map
+	///flags that we want to be shown when you interact with this table
+	var/minimap_type = MINIMAP_FLAG_USCM
+	///The faction that is intended to use this structure (determines type of tacmap used)
+	var/faction = FACTION_MARINE
+
+/obj/item/tacmap_map/Initialize(mapload, ...)
+	. = ..()
+	map = new(src, minimap_type)
+
+/obj/item/tacmap_map/attack_self(mob/user) //Open the map
+	..()
+	user.visible_message(SPAN_NOTICE("[user] looks closely at the [src.name]. "))
+	map.tgui_interact(user)
+
+/obj/item/tacmap_map/attack()
+	return
+
+/obj/item/tacmap_map/Destroy()
+	QDEL_NULL(map)
 	return ..()
