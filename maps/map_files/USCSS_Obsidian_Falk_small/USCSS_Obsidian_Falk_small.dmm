@@ -6616,6 +6616,7 @@
 /obj/item/ammo_box/magazine/nade_box/flare{
 	pixel_x = 1
 	},
+/obj/item/weapon/gun/launcher/grenade/m92,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "arO" = (
@@ -7148,6 +7149,7 @@
 	pixel_x = 3
 	},
 /obj/item/folder/white,
+/obj/item/attachable/scope/pve,
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
 "ath" = (
