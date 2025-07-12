@@ -61,10 +61,6 @@
 		if(src.occupant)
 			to_chat(usr, SPAN_NOTICE("\The [src] is already occupied!"))
 			return
-	if(skilllock)
-		if(!skillcheck(usr, SKILL_SURGERY, skilllock))
-			to_chat(usr, SPAN_WARNING("You're going to need someone trained in the use of \the [src] to help you get into it."))
-			return
 	go_in(usr)
 	add_fingerprint(usr)
 
@@ -88,10 +84,6 @@
 		return
 	if(!ishuman(usr))
 		return
-	if(skilllock)
-		if(!skillcheck(usr, SKILL_SURGERY, skilllock))
-			to_chat(usr, SPAN_WARNING("You don't have the training to use this."))
-			return
 
 	if(!extra_eject_checks())
 		return
@@ -187,10 +179,6 @@
 			to_put_in = G.grabbed_thing
 		else
 			return
-		if(skilllock)
-			if(!skillcheck(usr, SKILL_SURGERY, skilllock))
-				to_chat(usr, SPAN_WARNING("You don't have the training to use \the [src]!"))
-				return
 		if(occupant)
 			to_chat(user, SPAN_WARNING("\The [src] is already occupied!"))
 			return
