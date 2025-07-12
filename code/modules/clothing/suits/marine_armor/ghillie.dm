@@ -106,7 +106,7 @@
 	REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
 	H.alpha = 255
 	H.FF_hit_evade = initial(H.FF_hit_evade)
-	slowdown = SLOWDOWN_ARMOR_LIGHT //Back to schmoving quick
+	slowdown = initial(slowdown) //Back to schmoving quick
 
 	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.add_to_hud(H)

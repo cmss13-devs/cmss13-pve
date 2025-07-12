@@ -1,5 +1,3 @@
-#define FIRE_SHIELD_CD 150
-
 /obj/item/clothing/suit/storage/marine/M35
 	name = "\improper M35 pyrotechnician armor"
 	desc = "A custom set of M35 armor designed for use by USCM Pyrotechnicians. Prototype cooling and heat dissipation systems ensure the wearer is effectively fireproof."
@@ -15,8 +13,7 @@
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
 	specialty = "M35 pyrotechnician"
 	unacidable = TRUE
-	var/fire_shield_on = TRUE
-	var/can_activate = FALSE
+	var/shields_from_fire = TRUE
 
 /obj/item/clothing/suit/storage/marine/M35/equipped(mob/user, slot)
 	if(slot == WEAR_JACKET)
@@ -24,22 +21,22 @@
 	..()
 
 /// This proc is solely so that IgniteMob() fails
-/obj/item/clothing/suit/storage/marine/M35/proc/fire_shield_is_on(mob/living/L)
+/obj/item/clothing/suit/storage/marine/M35/proc/fire_shield_is_on(mob/living/user)
 	SIGNAL_HANDLER
 
-	if(L.fire_reagent?.fire_penetrating)
+	if(user.fire_reagent?.fire_penetrating)
 		return
 
 	return COMPONENT_CANCEL_IGNITION
 
-/obj/item/clothing/suit/storage/marine/M35/proc/flamer_fire_callback(mob/living/L, datum/reagent/R)
+/obj/item/clothing/suit/storage/marine/M35/proc/flamer_fire_callback(mob/living/user, datum/reagent/burnystuff)
 	SIGNAL_HANDLER
 
-	if(R.fire_penetrating)
+	if(burnystuff.fire_penetrating)
 		return
 
 	. = COMPONENT_NO_IGNITE
-	if(fire_shield_on)
+	if(shields_from_fire)
 		. |= COMPONENT_NO_BURN
 
 /obj/item/clothing/suit/storage/marine/M35/dropped(mob/user)
@@ -51,37 +48,3 @@
 		COMSIG_LIVING_FLAMER_FLAMED,
 	))
 	..()
-
-#undef FIRE_SHIELD_CD
-/*
-/datum/action/item_action/specialist/fire_shield
-	ability_primacy = SPEC_PRIMARY_ACTION_2
-
-/datum/action/item_action/specialist/fire_shield/New(mob/living/user, obj/item/holder)
-	..()
-	name = "Activate Fire Shield"
-	button.name = name
-	button.overlays.Cut()
-	var/image/IMG = image('icons/obj/items/clothing/cm_suits.dmi', button, "pyro_armor")
-	button.overlays += IMG
-
-/datum/action/item_action/specialist/fire_shield/action_cooldown_check()
-	var/obj/item/clothing/suit/storage/marine/M35/armor = holder_item
-	if (!istype(armor))
-		return FALSE
-
-	return !armor.can_activate
-
-/datum/action/item_action/specialist/fire_shield/can_use_action()
-	var/mob/living/carbon/human/H = owner
-	if(istype(H) && !H.is_mob_incapacitated() && H.wear_suit == holder_item)
-		return TRUE
-
-/datum/action/item_action/specialist/fire_shield/action_activate()
-	. = ..()
-	var/obj/item/clothing/suit/storage/marine/M35/armor = holder_item
-	if (!istype(armor))
-		return
-
-	armor.fire_shield()
-*/
