@@ -937,6 +937,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+	built_in_visors = list(new /obj/item/device/helmet_visor)
 	specialty = "M30 tactical"
 
 /obj/item/clothing/head/helmet/upp/marinepilot/tex
