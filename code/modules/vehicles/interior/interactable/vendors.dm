@@ -62,6 +62,7 @@
 		list("Ointment", floor(scale * 5), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Roll of Gauze", floor(scale * 5), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Splints", floor(scale * 5), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Saline IV bag", floor(scale * 2), /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("LIQUID BOTTLES", -1, null, null),
 		list("Bottle (Bicaridine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/bicaridine, VENDOR_ITEM_REGULAR),
@@ -77,9 +78,9 @@
 		list("MEDICAL UTILITIES", -1, null, null),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
-		list("Health Analyzer", floor(scale * 4), /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Equipment", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 5), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
+		list("Syringe", floor(scale * 3), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
 //MED APC version of Blood Dispenser, much more limited stock than the baseline vendor. Encourages matching blood types rather than using universal all the time
