@@ -381,7 +381,7 @@
 //*****************************************************************************************************/
 //They get "TWE" rebel guns because those on average have higher AP. Spacesuits have a little more bullet protection overall.
 /datum/equipment_preset/rebel/soldier/eva
-	name = "TWE Rebel, Soldier (Rifle, EVA)"
+	name = "UA Rebel, Soldier (Rifle, EVA)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
@@ -434,7 +434,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/rebel/soldier/eva/machine_gun
-	name = "TWE Rebel, Soldier (Machine Gun, EVA)"
+	name = "UA Rebel, Soldier (Machine Gun, EVA)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
@@ -502,7 +502,7 @@
 
 //*****************************************************************************************************/
 /datum/equipment_preset/rebel/soldier/eva/grenade
-	name = "TWE Rebel, Grenadier (M92 HE IED, EVA)"
+	name = "UA Rebel, Grenadier (M92 HE IED, EVA)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
@@ -548,8 +548,55 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary
+	name = "UA Rebel, Grenadier (M92 Incend IED, EVA)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/dogtag
+	assignment = "Revolutionary Guardsman"
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
+
+/datum/equipment_preset/rebel/soldier/eva/grenade/incendiary/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	add_rebel_eva_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_eva_suit(new_human)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40(new_human), WEAR_ACCESSORY)
+	//waist
+	var/random_belt = rand(1,2)
+	switch(random_belt)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp70(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/l54(new_human), WEAR_WAIST)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	//nade lancher
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary, WEAR_J_STORE)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/rebel/soldier/shotgun/eva
-	name = "TWE Rebel, Soldier (Shotgun, EVA)"
+	name = "UA Rebel, Soldier (Shotgun, EVA)"
 
 /datum/equipment_preset/rebel/soldier/shotgun/eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -590,7 +637,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/rebel/soldier/flamer/eva
-	name = "TWE Rebel, Soldier (Incinerator, EVA)"
+	name = "UA Rebel, Soldier (Incinerator, EVA)"
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/rebel/soldier/flamer/eva/load_gear(mob/living/carbon/human/new_human)
@@ -635,7 +682,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/rebel/soldier/bolt/eva
-	name = "TWE Rebel, Sniper (Basira-Armstrong, EVA)"
+	name = "UA Rebel, Sniper (Basira-Armstrong, EVA)"
 	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/rebel/soldier/bolt/eva/load_gear(mob/living/carbon/human/new_human)
@@ -683,7 +730,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/rebel/sniper/eva
-	name = "TWE Rebel, Sniper (Type-88, EVA)"
+	name = "UA Rebel, Sniper (Type-88, EVA)"
 	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/rebel/soldier/sniper/eva/load_gear(mob/living/carbon/human/new_human)

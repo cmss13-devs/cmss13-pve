@@ -297,6 +297,9 @@
 /obj/item/weapon/gun/launcher/grenade/m92/ied_he
 	preload = /obj/item/explosive/grenade/custom/large/ied_he
 
+/obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
+	preload = /obj/item/explosive/grenade/custom/incendiary_plus
+
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 

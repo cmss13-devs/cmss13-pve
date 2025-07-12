@@ -58,6 +58,11 @@
 	desc = "Will shoot improvised HE grenades wih a M92 grenade launcher. Has a two second delay."
 	path = /datum/equipment_preset/rebel/soldier/eva/grenade
 
+/datum/human_ai_equipment_preset/eva_clf/grenade_incendiary
+	name = "UA Rebel, Grenadier (M92 Incendiary IED, EVA)"
+	desc = "Will shoot improvised incendiary grenades wih a M92 grenade launcher. Has a two second delay."
+	path = /datum/equipment_preset/rebel/soldier/eva/grenade/incendiary
+
 /datum/human_ai_equipment_preset/eva_clf/shotgunner_eva
 	name = "UA Rebel, Soldier (Shotgunner, EVA)"
 	desc = "Armed with an HG-37 shotgun."
