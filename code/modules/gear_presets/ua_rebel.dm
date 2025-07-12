@@ -465,7 +465,7 @@
 	add_rebel_twe_uniform(new_human)
 	//jacket
 	add_rebel_eva_suit(new_human)
-	var/random_webbing = rand(1,3)
+	var/random_webbing = rand(1,2)
 	switch(random_webbing)
 		if(1)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag(new_human), WEAR_ACCESSORY)
