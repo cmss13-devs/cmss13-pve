@@ -513,7 +513,7 @@
 //M20A4, the last of a long extinct breed.
 
 /obj/item/weapon/gun/rifle/m20_marshal
-	name = "\improper M20A4 GRIP II pulse rifle"
+	name = "M20A4 GRIP II pulse rifle"
 	desc = "The final evolution of the old M20. A last ditch attempt to modernize the weapon, General Rifle Improvement Program II provides an FA/5RB hyperburst firegroup, and updates the feed mechanisms. The overbarrel grenade launcher has been given some level of parts compatibility with the PN 30mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m20a"

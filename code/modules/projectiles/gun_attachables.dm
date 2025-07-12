@@ -3376,7 +3376,7 @@ Defined in conflicts.dm of the #defines folder.
 //semi auto GL
 /obj/item/attachable/attached_gun/rapid_grenade
 	name = "semi automatic underslung grenade launcher"
-	desc = "A reloadable multi shot USGL."
+	desc = "A reloadable multi shot USGL. Motorized feed assembly allows for fire as fast as it cycles."
 	icon_state = "grenade-mk1" //filler, nobodys gonna see this
 	attach_icon = "grenade-mk1_a"
 	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
@@ -3389,80 +3389,37 @@ Defined in conflicts.dm of the #defines folder.
 	var/caliber = "30mm"
 	var/grenade_pass_flags
 	var/list/loaded_grenades //list of grenade types loaded in the UGL
-	var/breech_open = FALSE // is the UGL open for loading?
-	var/cocked = TRUE // has the UGL been cocked via opening and closing the breech?
-	var/open_sound = 'sound/weapons/handling/ugl_open.ogg'
-	var/close_sound = 'sound/weapons/handling/ugl_close.ogg'
-	var/has_breech = TRUE
 
 /obj/item/attachable/attached_gun/rapid_grenade/Initialize()
 	. = ..()
 	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
 
-/obj/item/attachable/attached_gun/grenade/New()
+/obj/item/attachable/attached_gun/rapid_grenade/New()
 	..()
 	attachment_firing_delay = FIRE_DELAY_TIER_4 * 3
 	loaded_grenades = list()
 
-/obj/item/attachable/attached_gun/grenade/get_examine_text(mob/user)
+/obj/item/attachable/attached_gun/rapid_grenade/get_examine_text(mob/user)
 	. = ..()
 	if(current_rounds) . += "It has [current_rounds] grenade\s left."
 	else . += "It's empty."
 
-/obj/item/attachable/attached_gun/grenade/unique_action(mob/user)
-	if(!has_breech)
-		return
-	if(!ishuman(usr))
-		return
-	if(user.is_mob_incapacitated() || !isturf(usr.loc))
-		to_chat(user, SPAN_WARNING("Not right now."))
-		return
-
-	var/obj/item/weapon/gun/G = user.get_held_item()
-	if(!istype(G))
-		G = user.get_inactive_hand()
-	if(!istype(G) && G != null)
-		G = user.get_active_hand()
-	if(!G)
-		to_chat(user, SPAN_WARNING("You need to hold \the [src] to do that"))
-		return
-
-	pump(user)
-
-/obj/item/attachable/attached_gun/grenade/update_icon()
+/obj/item/attachable/attached_gun/rapid_grenade/update_icon()
 	. = ..()
 	attach_icon = initial(attach_icon)
 	icon_state = initial(icon_state)
-	if(breech_open)
-		attach_icon += "-open"
-		icon_state += "-open"
 	if(istype(loc, /obj/item/weapon/gun))
 		var/obj/item/weapon/gun/gun = loc
 		gun.update_attachable(slot)
 
-/obj/item/attachable/attached_gun/grenade/proc/pump(mob/user) //for want of a better proc name
-	if(breech_open) // if it was ALREADY open
-		breech_open = FALSE
-		cocked = TRUE // by closing the gun we have cocked it and readied it to fire
-		to_chat(user, SPAN_NOTICE("You close \the [src]'s breech, cocking it!"))
-		playsound(src, close_sound, 15, 1)
-	else
-		breech_open = TRUE
-		cocked = FALSE
-		to_chat(user, SPAN_NOTICE("You open \the [src]'s breech!"))
-		playsound(src, open_sound, 15, 1)
-	update_icon()
 
-/obj/item/attachable/attached_gun/grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
-	if(has_breech && !breech_open)
-		to_chat(user, SPAN_WARNING("\The [src]'s breech must be open to load grenades! (use unique-action)"))
-		return
+/obj/item/attachable/attached_gun/rapid_grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
 	if(!istype(G) || (G.caliber != caliber))
-		to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
+		to_chat(user, SPAN_WARNING("[src] doesn't accept that caliber of grenade."))
 		return
 	if(!G.active) //can't load live grenades
 		if(!G.underslug_launchable)
-			to_chat(user, SPAN_WARNING("[src] doesn't accept that type of grenade."))
+			to_chat(user, SPAN_WARNING("[src] can't be loaded with an activated grenade."))
 			return
 		if(current_rounds >= max_rounds)
 			to_chat(user, SPAN_WARNING("[src] is full."))
@@ -3473,11 +3430,8 @@ Defined in conflicts.dm of the #defines folder.
 			to_chat(user, SPAN_NOTICE("You load \the [G] into \the [src]."))
 			user.drop_inv_item_to_loc(G, src)
 
-/obj/item/attachable/attached_gun/grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
+/obj/item/attachable/attached_gun/rapid_grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
 	. = TRUE //Always uses special unloading.
-	if(has_breech && !breech_open)
-		to_chat(user, SPAN_WARNING("\The [src] is closed! You must open it to take out grenades!"))
-		return
 	if(!current_rounds)
 		to_chat(user, SPAN_WARNING("It's empty!"))
 		return
@@ -3495,30 +3449,16 @@ Defined in conflicts.dm of the #defines folder.
 	SPAN_NOTICE("You unload \a [nade] from \the [src]."), null, 4, CHAT_TYPE_COMBAT_ACTION)
 	playsound(user, unload_sound, 30, 1)
 
-/obj/item/attachable/attached_gun/grenade/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
-	if(!(gun.flags_item & WIELDED))
-		if(user)
-			to_chat(user, SPAN_WARNING("You must hold [gun] with two hands to use \the [src]."))
-		return
-	if(has_breech && breech_open)
-		if(user)
-			to_chat(user, SPAN_WARNING("You must close the breech to fire \the [src]!"))
-			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
-		return
-	if(has_breech && !cocked)
-		if(user)
-			to_chat(user, SPAN_WARNING("You must cock \the [src] to fire it! (open and close the breech)"))
-			playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
-		return
+/obj/item/attachable/attached_gun/rapid_grenade/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
 	if(get_dist(user,target) > max_range)
-		to_chat(user, SPAN_WARNING("Too far to fire the attachment!"))
+		to_chat(user, SPAN_WARNING("Out of range."))
 		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
 		return
 
 	if(current_rounds > 0 && ..() || in_chamber && ..())
 		prime_grenade(target,gun,user)
 
-/obj/item/attachable/attached_gun/grenade/proc/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+/obj/item/attachable/attached_gun/rapid_grenade/proc/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
 	set waitfor = 0
 	var/obj/item/explosive/grenade/G = loaded_grenades[1]
 

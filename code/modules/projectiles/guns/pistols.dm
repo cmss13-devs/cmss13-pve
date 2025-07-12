@@ -71,7 +71,6 @@
 /obj/item/weapon/gun/pistol/m4a3/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 21, "under_x" = 21, "under_y" = 17, "stock_x" = 21, "stock_y" = 17, "side_rail_x" = 19, "side_rail_y" = 15)
 
-
 /obj/item/weapon/gun/pistol/m4a3/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_12)
@@ -770,6 +769,37 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	icon_state = "g_deagle"
 	item_state = "g_deagle"
 	base_gun_icon = "g_deagle"
+
+//-------------------------------------------------------
+//A slightly less janky taser. Slightly.
+/obj/item/weapon/gun/pistol/taserpistol
+	name = "electrode gun"
+	desc = "A less-lethal electrode gun. Shoots a single electrode cartridge propelled by gas charge."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "taser"
+	item_state = "taser"
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
+	flags_equip_slot = SLOT_WAIST|SLOT_SUIT_STORE
+	fire_sound = 'sound/weapons/flash.ogg'
+	gun_category = GUN_CATEGORY_HANDGUN
+	current_mag = /obj/item/ammo_magazine/pistol/taser
+
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+	)
+
+/obj/item/weapon/gun/pistol/taserpistol/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_6)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_7
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+
 
 //-------------------------------------------------------
 //The first rule of monkey pistol is we don't talk about monkey pistol.

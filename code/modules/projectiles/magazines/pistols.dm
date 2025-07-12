@@ -336,7 +336,18 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	max_rounds = 50
 	gun_type = /obj/item/weapon/gun/pistol/auto9
 
-
+//-------------------------------------------------------
+//Taser singleshot magazine.
+/obj/item/ammo_magazine/pistol/taser
+	name = "electrode cartridge"
+	desc = "A small plastic shelled cartridge for an electrode gun. Oneshot."
+	caliber = "electrode block"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/cmb_tac.dmi'
+	icon_state = "taser_cartridge"
+	max_rounds = 1
+	w_class = SIZE_SMALL
+	default_ammo = /datum/ammo/bullet/pistol/taser_round
+	gun_type = /obj/item/weapon/gun/pistol/taserpistol
 
 //-------------------------------------------------------
 //The first rule of monkey pistol is we don't talk about monkey pistol.
