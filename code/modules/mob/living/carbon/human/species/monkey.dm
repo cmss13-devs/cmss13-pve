@@ -81,6 +81,29 @@
 	. = ..()
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
 
+/datum/species/monkey/penguin
+	name = "Penguin"
+	name = "Penguins"
+
+	icobase = 'icons/mob/humans/species/monkeys/r_penguin.dmi'
+	deform = 'icons/mob/humans/species/monkeys/r_penguin.dmi'
+	pain_type = null
+	death_message = "falls down dead, directly."
+	unarmed_type = /datum/unarmed_attack/punch/strong
+
+	cold_level_1 = -1
+	cold_level_2 = -1
+	cold_level_3 = -1
+	knock_down_reduction = 2
+	stun_reduction = 2
+	weed_slowdown_mult = 0.5
+	darksight = 100
+	brute_mod = 0.5
+	burn_mod = 0.5
+
+	tail = null
+	eyes = "blank_s"
+
 /datum/species/monkey/yiren
 	name = "Yiren"
 	name_plural = "Yiren"
@@ -179,4 +202,42 @@
 		WEAR_HEAD = list("[NORTH]" = list("x" = 0, "y" = -3), "[EAST]" = list("x" = -2, "y" = -3), "[SOUTH]" = list("x" = 0, "y" = -3), "[WEST]" = list("x" = 2, "y" = -3)),
 		WEAR_BACK = list("[NORTH]" = list("x" = 0, "y" = 0), "[EAST]" = list("x" = -5, "y" = 0), "[SOUTH]" = list("x" = 0, "y" = 0), "[WEST]" = list("x" = 5, "y" = 0)),
 		WEAR_FACE = list("[NORTH]" = list("x" = 0, "y" = -3), "[EAST]" = list("x" = -1, "y" = -3), "[SOUTH]" = list("x" = 0, "y" = -3), "[WEST]" = list("x" = 1, "y" = -3))
+	)
+
+/datum/species/monkey/gromit
+	name = "Gromit"
+	name_plural = "Gromits"
+	icobase = 'icons/mob/humans/species/r_gromit.dmi'
+	deform = 'icons/mob/humans/species/r_gromit.dmi'
+	brute_mod = 0.5
+	burn_mod = 0.5
+	unarmed_type = /datum/unarmed_attack/punch/strong
+	secondary_unarmed_type = /datum/unarmed_attack/bite/strong
+	pain_type = /datum/pain/human_hero
+	darksight = 5
+	cold_level_1 = 220
+	cold_level_2 = 180
+	cold_level_3 = 80
+	heat_level_1 = 390
+	heat_level_2 = 480
+	heat_level_3 = 1100
+	knock_down_reduction = 2
+	stun_reduction = 2
+	weed_slowdown_mult = 0.5
+	tail = null
+	eyes = "blank_s"
+	flesh_color = "#afa59e"
+	base_color = "#333333"
+
+/datum/species/monkey/gromit/New()
+	..()
+	equip_adjust = list(
+		WEAR_R_HAND = list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -2), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -2)),
+		WEAR_L_HAND = list("[NORTH]" = list("x" = 0, "y" = -1), "[EAST]" = list("x" = 0, "y" = -2), "[SOUTH]" = list("x" = 0, "y" = -1), "[WEST]" = list("x" = 0, "y" = -2)),
+		WEAR_WAIST = list("[NORTH]" = list("x" = 1, "y" = -3), "[EAST]" = list("x" = 1, "y" = -3), "[SOUTH]" = list("x" = 1, "y" = -3), "[WEST]" = list("x" = -1, "y" = -3)),
+		WEAR_EYES = list("[NORTH]" = list("x" = 1, "y" = -8), "[EAST]" = list("x" = 1, "y" = -8), "[SOUTH]" = list("x" = 1, "y" = -8), "[WEST]" = list("x" = -1, "y" = -8)),
+		WEAR_FEET = list("[NORTH]" = list("x" = 1, "y" = -3), "[EAST]" = list("x" = 1, "y" = -3), "[SOUTH]" = list("x" = 1, "y" = -3), "[WEST]" = list("x" = -1, "y" = -3)),
+		WEAR_HEAD = list("[NORTH]" = list("x" = 1, "y" = -4), "[EAST]" = list("x" = 1, "y" = -4), "[SOUTH]" = list("x" = 1, "y" = -4), "[WEST]" = list("x" = 1, "y" = -4)),
+		WEAR_BACK = list("[NORTH]" = list("x" = 1, "y" = -3), "[EAST]" = list("x" = 1, "y" = -3), "[SOUTH]" = list("x" = 1, "y" = -3), "[WEST]" = list("x" = -1, "y" = -3)),
+		WEAR_FACE = list("[NORTH]" = list("x" = 1, "y" = -3), "[EAST]" = list("x" = 1, "y" = -3), "[SOUTH]" = list("x" = 1, "y" = -3), "[WEST]" = list("x" = -1, "y" = -3))
 	)
