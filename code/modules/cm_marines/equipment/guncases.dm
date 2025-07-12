@@ -310,7 +310,6 @@
 	new /obj/item/ammo_magazine/smg/bizon(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64/update_icon()
 	overlays.Cut()
@@ -357,14 +356,13 @@
 		var/image/source_image = image(icon, "+t64_heap_mag")
 		source_image.pixel_x = 0
 		overlays += source_image
-	if(mag_tally > 6)
+	if(mag_tally > 5)
 		var/image/source_image = image(icon, "+t64_heap_mag")
 		source_image.pixel_x = 6
 		overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/smg/type64/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
-	new /obj/item/ammo_magazine/smg/bizon/heap(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)

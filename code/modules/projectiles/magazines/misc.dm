@@ -81,16 +81,30 @@
 	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "qjy72"
-
+	ammo_band_icon = "+qjy72_band"
+	ammo_band_icon = "+qjy72_band_e"
 	matter = list("metal" = 10000)
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
 	max_rounds = 250
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
 
+/obj/item/ammo_magazine/pkp/verb/turn_into_regular()
+	set name = "Turn into a 10x27mm HEAP box"
+	set category = "Object"
+	set src in usr
+	if(current_rounds < 1)
+		var/obj/item/ammo_magazine/pkp/empty_mag = new /obj/item/ammo_magazine/pkp(usr.loc)
+		empty_mag.current_rounds = 0
+		empty_mag.update_icon()
+		qdel(src)
+		to_chat(usr, "You configure the springs inside the [src] for reloading with HEAP 10x27mm rounds")
+	else
+		to_chat(usr, "The [src] needs to be empty before you can configure it for reloading with HEAP 10x27mm rounds")
+
 /obj/item/ammo_magazine/pkp/super_tracer
-	name = "QYJ-72 ammo box (10x27mm zirconium tracer HEAP)"
-	desc = "A 250 round box of HEAP ammunition with zirconium tracers for the UPP's standard GPMG, the QYJ-72. Leaves a lingering light source where the bullet hits. Chambered in 10x27mm."
+	name = "QYJ-72 ammo box (10x27mm magnesium tracer HEAP)"
+	desc = "A 250 round box of HEAP ammunition with magnesium tracers for the UPP's standard GPMG, the QYJ-72. Leaves a lingering light source where the bullet hits. Chambered in 10x27mm."
 	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg/super_tracer
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
