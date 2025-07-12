@@ -967,13 +967,8 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/weapon/gun/smg/mac15 = /obj/item/ammo_magazine/smg/mac15/extended)
 
 	var/list/merc_firearms = list(
-		/obj/item/weapon/gun/shotgun/merc = /obj/item/ammo_magazine/handful/shotgun/slug,
-		/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
-		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
-		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
 		/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/weapon/gun/smg/fp9000 = /obj/item/ammo_magazine/smg/fp9000,
 		/obj/item/weapon/gun/smg/bizon = /obj/item/ammo_magazine/smg/bizon,
@@ -1008,7 +1003,6 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/list/merc_rifles = list(
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
-		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
 		/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/weapon/gun/smg/fp9000 = /obj/item/ammo_magazine/smg/fp9000,
 		/obj/item/weapon/gun/rifle/m16 = /obj/item/ammo_magazine/rifle/m16)
@@ -1679,6 +1673,66 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		if(2)
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+
+/datum/equipment_preset/proc/add_canc_rifle(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/random_canc_rifle = rand(1,5)
+	switch(random_canc_rifle)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+		if(3,4,5)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+
+/datum/equipment_preset/proc/add_canc_rifle_newblood(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/random_canc_rifle_newblood = rand(1,4)
+	switch(random_canc_rifle_newblood)
+		if(1,2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+		if(3,4)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BELT)
+
+/datum/equipment_preset/proc/add_rebel_upp_helmet(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/helmet/construction,
+		/obj/item/clothing/head/headband/red,
+		/obj/item/clothing/head/headband/red,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/uppcap/beret/guerilla,
+		/obj/item/clothing/head/helmet/marine/veteran/UPP/old,
+		)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
 
 /datum/equipment_preset/proc/add_army_helmet_accessory(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
