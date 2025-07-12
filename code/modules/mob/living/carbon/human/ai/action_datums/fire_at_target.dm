@@ -197,7 +197,6 @@
 		if(istype(brain.primary_weapon, /obj/item/weapon/gun/shotgun/pump))
 			var/obj/item/weapon/gun/shotgun/pump/shotgun = brain.primary_weapon
 			addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, pump_shotgun), tied_human), shotgun.pump_delay)
-			//addtimer(CALLBACK(shotgun, TYPE_PROC_REF(/obj/item/weapon/gun/shotgun/pump, start_fire), null, brain.current_target, null, null, null, TRUE), max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1) // max with fire delay
 			COOLDOWN_START(brain, stop_fire_cooldown, max(shotgun.pump_delay, shotgun.get_fire_delay()) + 1)
 			stop_firing(brain)
 			qdel(src)
@@ -210,12 +209,20 @@
 			qdel(src)
 			return
 
+	else if(istype(brain.primary_weapon, /obj/item/weapon/gun/rifle/xm51))
+		currently_firing = FALSE
+		var/obj/item/weapon/gun/rifle/xm51/scattergun = brain.primary_weapon
+		addtimer(CALLBACK(scattergun, TYPE_PROC_REF(/obj/item/weapon/gun/rifle/xm51, unique_action), tied_human), scattergun.pump_delay)
+		COOLDOWN_START(brain, stop_fire_cooldown, max(scattergun.pump_delay, scattergun.get_fire_delay()) + 1)
+		stop_firing(brain)
+		qdel(src)
+		return
+
 	else if(istype(brain.primary_weapon, /obj/item/weapon/gun/boltaction))
 		var/obj/item/weapon/gun/boltaction/bolt = brain.primary_weapon
 		currently_firing = FALSE
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), 1)
 		addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, unique_action), tied_human), bolt.bolt_delay + 1)
-		//addtimer(CALLBACK(bolt, TYPE_PROC_REF(/obj/item/weapon/gun/boltaction, start_fire), null, brain.current_target, null, null, null, TRUE), (bolt.bolt_delay * 2) + 1)
 		COOLDOWN_START(brain, stop_fire_cooldown, max(bolt.bolt_delay * 2, bolt.get_fire_delay()) + 1)
 		stop_firing(brain)
 		qdel(src)
