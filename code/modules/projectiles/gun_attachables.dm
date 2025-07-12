@@ -579,6 +579,26 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "silenced_smartgun"
 	gun_traits = list(TRAIT_GUN_SILENCED)
 
+/obj/item/attachable/simbarrel
+	name = "SIM-118 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "fim_barrel"
+	desc = "The very end of an SIM 118 launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
+
+/obj/item/attachable/emblrbarrel
+	name = "EMBLR 92 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "emblr_barrel"
+	desc = "The very end of an EMBLR surface-to-air missile launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
+
 // Mateba barrels
 
 /obj/item/attachable/mateba
