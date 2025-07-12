@@ -2811,15 +2811,6 @@
 /obj/structure/machinery/recycler,
 /turf/open/floor/corsat,
 /area/louise/maintenance)
-"hr" = (
-/obj/structure/gun_rack/m20a/unloaded,
-/obj/item/ammo_box/magazine/shotgun/light{
-	layer = 3.1;
-	pixel_x = 5;
-	pixel_y = 20
-	},
-/turf/open/floor/almayer/plate,
-/area/louise/armory)
 "hG" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/microwave{
@@ -2851,10 +2842,7 @@
 	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/ammo_box/magazine/shotgun/beanbag{
-	pixel_x = -2;
-	pixel_y = 0
-	},
+/obj/item/ammo_box/magazine/shotgun/light,
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
 "iH" = (
@@ -15663,7 +15651,7 @@ fQ
 cb
 fG
 fG
-hr
+bV
 fr
 fr
 TR
