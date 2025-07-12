@@ -495,8 +495,14 @@
 	..()
 	if(!COOLDOWN_FINISHED(src, last_hug_time))
 		return
-	user.visible_message(SPAN_NOTICE("[user] hugs [src] tightly!"), SPAN_NOTICE("You hug [src]."))
-	playsound(user, "plush", 25, TRUE)
+	var/W
+	W = src
+	if(istype(W,/obj/item/toy/plush/tank))
+		user.visible_message(SPAN_NOTICE("[user] hugs [src] cautiously..."), SPAN_NOTICE("You hug [src]. Careful!"))
+		playsound(user, pick("plush", prob(20); 'sound/items/plushexplode.ogg'), 25, TRUE)
+	else
+		user.visible_message(SPAN_NOTICE("[user] hugs [src] tightly!"), SPAN_NOTICE("You hug [src]."))
+		playsound(user, "plush", 25, TRUE)
 	COOLDOWN_START(src, last_hug_time, 2.5 SECONDS)
 
 /obj/item/toy/plush/farwa
@@ -520,6 +526,11 @@
 	name = "bee plush"
 	desc = "A cute toy that awakens the warrior spirit in the most reserved marine."
 	icon_state = "bee"
+
+/obj/item/toy/plush/tank
+	name = "welding tank plush"
+	desc = "A plush doll of a welding fuel tank. Try not to stand next to it."
+	icon_state = "tank"
 
 /obj/item/toy/plush/moth
 	name = "moth plush"
@@ -603,6 +614,7 @@
 		/obj/item/toy/plush/farwa,
 		/obj/item/toy/plush/barricade,
 		/obj/item/toy/plush/bee,
+		/obj/item/toy/plush/tank,
 		/obj/item/toy/plush/shark,
 		/obj/item/toy/plush/moth,
 		/obj/item/toy/plush/rock,

@@ -944,6 +944,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Bee plush"
 	path = /obj/item/toy/plush/bee
 
+/datum/gear/plush/tank
+	display_name = "Welding tank plush"
+	path = /obj/item/toy/plush/tank
+
 /datum/gear/plush/shark
 	display_name = "Shark plush"
 	path = /obj/item/toy/plush/shark
