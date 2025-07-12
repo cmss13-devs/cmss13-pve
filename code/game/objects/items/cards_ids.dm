@@ -148,6 +148,8 @@
 	set src in usr
 
 	to_chat(usr, "[icon2html(src, usr)] [name]: The current assignment on the card is [assignment]")
+	if(blood_type in GLOB.blood_type_choices)
+		return
 	to_chat(usr, "The blood type on the card is [blood_type].")
 
 /obj/item/card/id/proc/check_biometrics(mob/living/carbon/human/target)
@@ -376,7 +378,7 @@
 /obj/item/card/id/dogtag/get_examine_text(mob/user)
 	. = ..()
 	if(ishuman(user))
-		. += SPAN_NOTICE("It reads \"[registered_name] - [assignment] - [blood_type]\"")
+		. += SPAN_NOTICE("It reads \"[registered_name] - [assignment][blood_type in GLOB.blood_type_choices ? " - [blood_type]\"":"\""]")
 
 /obj/item/dogtag
 	name = "information dog tag"

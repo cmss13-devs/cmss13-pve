@@ -302,6 +302,8 @@
 	ID.registered_name = new_human.real_name
 	ID.registered_ref = WEAKREF(new_human)
 	ID.registered_gid = new_human.gid
+	if(issynth(new_human))
+		ID.blood_type = "N/A"
 	ID.blood_type = new_human.blood_type
 	ID.paygrade = load_rank(new_human, mob_client) || ID.paygrade
 	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
