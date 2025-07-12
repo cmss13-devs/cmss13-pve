@@ -16,6 +16,7 @@
 	icon_state = "oxygen"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 	gas_type = GAS_TYPE_OXYGEN
+	w_class = SIZE_LARGE
 
 
 
@@ -46,6 +47,7 @@
 	name = "air tank"
 	desc = "Mixed anyone?"
 	icon_state = "oxygen"
+	gas_type = GAS_TYPE_AIR
 
 /*
  * Emergency Oxygen
@@ -59,27 +61,39 @@
 	w_class = SIZE_TINY
 	force = 4
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-	volume = 2 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
+	volume = 1.3 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
 	gas_type = GAS_TYPE_OXYGEN
 	pressure = 3*ONE_ATMOSPHERE
 	pressure_full = 3*ONE_ATMOSPHERE
 
-/obj/item/tank/emergency_oxygen/get_examine_text(mob/user)
+/obj/item/tank/emergency_oxygen/attack(mob/M as mob, mob/user as mob)
 	. = ..()
-	if(pressure < 50 && loc==user)
-		. += SPAN_DANGER("The meter on \the [src] indicates you are almost out of air!")
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+
+	//Address the integrated tank on Spacesuit on the person being targeted
+		var/obj/item/clothing/suit/space/pressure/tank_to_replace = H.wear_suit
+		if((istype(H.wear_suit, /obj/item/clothing/suit/space/pressure)))
+			tank_to_replace.attackby(src, user)
+			return
+
+/obj/item/tank/emergency_oxygen/empty
+	pressure = 33
 
 /obj/item/tank/emergency_oxygen/engi
 	name = "extended-capacity emergency oxygen tank"
 	icon_state = "emergency_engi"
-	volume = 6
+	w_class = SIZE_SMALL
+	volume = 3
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
 
 /obj/item/tank/emergency_oxygen/double
-	name = "double emergency oxygen tank"
+	name = "Compact oxygen tank"
+	desc = "Capable of sustaining a short EVA, but should not be solely depended on."
 	icon_state = "emergency_double"
-	volume = 10
+	w_class = SIZE_MEDIUM
+	volume = 7
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
 
