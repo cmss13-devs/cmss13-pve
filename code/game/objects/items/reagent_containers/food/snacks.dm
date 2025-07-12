@@ -2471,7 +2471,7 @@
 		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
 		to_chat(user, SPAN_NOTICE("You pull the wrapping off of the 'cheese' slice!"))
 		reagents.remove_reagent("plasticide", 2)
-		package = 0
+		package = FALSE
 		icon_state = "kruft_single-o"
 
 /obj/item/reagent_container/food/snacks/sliceable/cheesewheel/verymature
