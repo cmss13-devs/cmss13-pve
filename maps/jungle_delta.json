@@ -9,7 +9,5 @@
 
     "traits": [{ "Ground": true }],
 
-	"map_item_type": "/obj/item/map/big_red_map",
-
     "camouflage": "jungle"
 }
