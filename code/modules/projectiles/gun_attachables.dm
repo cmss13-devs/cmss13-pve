@@ -3479,6 +3479,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "You shouldn't ever see this detached from the rifle."
 	icon_state = "m20-osgl"
 	attach_icon = "m20-osgl"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
