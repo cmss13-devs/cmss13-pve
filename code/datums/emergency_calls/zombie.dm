@@ -18,7 +18,7 @@
 	var/mob/living/carbon/human/H = new(T)
 	M.transfer_to(H, TRUE)
 
-	arm_equipment(H, /datum/equipment_preset/other/zombie, TRUE, TRUE)
+	arm_equipment(H, /datum/equipment_preset/zombie/generic, TRUE, TRUE)
 
 	sleep(20)
 	if(H && H.loc)
