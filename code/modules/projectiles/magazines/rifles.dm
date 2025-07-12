@@ -440,6 +440,36 @@
 	w_class = SIZE_MEDIUM
 	ammo_band_icon = "+m20a_band"
 	ammo_band_icon_empty = "+m20a_band_e"
+
+//M20A4
+/obj/item/ammo_magazine/rifle/m20_marshal
+	name = "M20A4 JSP magazine (5.56x30mm)"
+	desc = "A time-worn magazine produced by Langport Machining. Jacketed Soft Point M302 5.56mm caseless offers a reliable general duty anti-personnel load. 70gr bi-metallic copper alloy core."
+	caliber = "5.56x30mm"
+	icon_state = "m20a"
+	default_ammo = /datum/ammo/bullet/light_rifle
+	max_rounds = 72
+	gun_type = /obj/item/weapon/gun/rifle/m20_marshal
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+m20a_band"
+	ammo_band_icon_empty = "+m20a_band_e"
+
+/obj/item/ammo_magazine/rifle/m20_marshal/sap
+	name = "M20A4 SAP magazine (5.56x30mm)"
+	desc = "A time-worn magazine produced by Langport Machining. Semi Armor Piercing M304 5.56mm caseless can defeat light ballistic armor and cover, but its overpenetration risk makes it ill-suited to sensitive environments. 61gr with hardened steel penetrator."
+	default_ammo = /datum/ammo/bullet/light_rifle/sap
+	gun_type = /obj/item/weapon/gun/rifle/m20_marshal
+	w_class = SIZE_MEDIUM
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_VELOCITY
+
+/obj/item/ammo_magazine/rifle/m20_marshal/llc
+	name = "M20A4 SAP magazine (5.56x30mm)"
+	desc = "A time-worn magazine produced by Langport Machining. Less Lethal Composite M207 5.56mm caseless offers a quick takedown against suspects wanted alive. Emphasis on less."
+	default_ammo = /datum/ammo/bullet/light_rifle/llc
+	gun_type = /obj/item/weapon/gun/rifle/m20_marshal
+	w_class = SIZE_MEDIUM
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
 //-------------------------------------------------------
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 

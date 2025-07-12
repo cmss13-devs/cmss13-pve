@@ -344,16 +344,45 @@
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/chips
-	name = "chips"
-	desc = "Commander Riker's What-The-Crisps"
+	name = "regular potato chips"
+	desc = "Standard potato chips."
 	icon_state = "chips"
 	trash = /obj/item/trash/chips
 	filling_color = "#E8C31E"
 
 /obj/item/reagent_container/food/snacks/chips/Initialize()
 	. = ..()
-	reagents.add_reagent("bread", 3)
-	reagents.add_reagent("blackpepper", 1)
+	reagents.add_reagent("potato", 4)
+	reagents.add_reagent("sodiumchloride", 2)
+	bitesize = 4
+
+/obj/item/reagent_container/food/snacks/chips/pepper
+	name = "cracked pepper and salt potato chips"
+	desc = "Potato chips with black pepper for spice and salt for flavor."
+	icon_state = "saltandpepper"
+	trash = /obj/item/trash/chips
+	filling_color = "#E8C31E"
+
+/obj/item/reagent_container/food/snacks/chips/pepper/Initialize()
+	. = ..()
+	reagents.add_reagent("potato", 4)
+	reagents.add_reagent("sodiumchloride", 1)
+	reagents.add_reagent("blackpepper", 2)
+	bitesize = 4
+
+/obj/item/reagent_container/food/snacks/chips/barbecue
+	name = "cracked pepper and salt potato chips"
+	desc = "Potato chips with black pepper for spice and salt for flavor."
+	icon_state = "barbecuechips"
+	trash = /obj/item/trash/chips
+	filling_color = "#E8C31E"
+
+/obj/item/reagent_container/food/snacks/chips/barbecue/Initialize()
+	. = ..()
+	reagents.add_reagent("potato", 4)
+	reagents.add_reagent("sodiumchloride", 1)
+	reagents.add_reagent("blackpepper", 2)
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/wy_chips/pepper
 	name = "Weyland-Yutani Pepper Chips"

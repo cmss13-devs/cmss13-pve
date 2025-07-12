@@ -268,6 +268,17 @@ Defined in conflicts.dm of the #defines folder.
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
 
+/obj/item/attachable/suppressor/superduty_integral
+	name = "Wraith Manufacturing 9SD-WM integral silencer"
+	desc = "An integral reflex silencer that shouldn't be removed from the firearm."
+	icon_state = "suppressor"
+	attach_icon = "superduty_integral_a"
+
+/obj/item/attachable/suppressor/superduty_integral/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_7
+
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"
 	icon_state = "m40sd_suppressor"
@@ -3136,6 +3147,17 @@ Defined in conflicts.dm of the #defines folder.
 		else
 			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
 	return handle_pre_break_attachment_description(base_attachment_desc) + "<br>"
+
+//evil M20A4 semi auto GL
+/obj/item/attachable/attached_gun/grenade/harrington
+	name = "M20 overslung grenade launcher"
+	desc = "You shouldn't ever see this detached from the rifle."
+	icon_state = "m20-osgl"
+	attach_icon = "m20-osgl"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = FIRE_DELAY_TIER_6
 
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1
