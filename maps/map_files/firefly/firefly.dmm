@@ -298,6 +298,7 @@
 "el" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/helmet_visor/medical/advanced,
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/corsat/green/northeast,
 /area/firefly/medical)
 "em" = (

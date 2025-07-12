@@ -794,6 +794,7 @@ GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
 
 GLOBAL_LIST_INIT(rebel_twe_smgs, list(
 	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
+	/obj/item/weapon/gun/smg/bizon/upp = /obj/item/ammo_magazine/smg/bizon,
 	/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
@@ -865,6 +866,8 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 	))
 
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(
+	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
+	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 	/obj/item/weapon/gun/smg/m39 = /obj/item/ammo_magazine/smg/m39,
@@ -948,7 +951,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/weapon/gun/shotgun/merc = /obj/item/ammo_magazine/handful/shotgun/slug,
 		/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
 		/obj/item/weapon/gun/shotgun/double/with_stock = /obj/item/ammo_magazine/handful/shotgun/buckshot,
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/incendiary,
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun,
 		/obj/item/weapon/gun/rifle/mar40 = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40,
 		/obj/item/weapon/gun/rifle/mar40/lmg = /obj/item/ammo_magazine/rifle/mar40/lmg,
@@ -968,10 +971,10 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	if(!M) return
 
 	var/list/merc_shotguns = list(
-		/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g),
-		/obj/item/weapon/gun/shotgun/combat = pick(GLOB.shotgun_handfuls_12g),
-		/obj/item/weapon/gun/shotgun/double/with_stock = pick(GLOB.shotgun_handfuls_12g),
-		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = pick(GLOB.shotgun_handfuls_12g))
+		/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g_reasonable),
+		/obj/item/weapon/gun/shotgun/combat = pick(GLOB.shotgun_handfuls_12g_reasonable),
+		/obj/item/weapon/gun/shotgun/double/with_stock = pick(GLOB.shotgun_handfuls_12g_reasonable),
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = pick(GLOB.shotgun_handfuls_12g_reasonable))
 
 	var/gunpath = pick(merc_shotguns)
 	var/ammopath = merc_shotguns[gunpath]
@@ -1000,12 +1003,12 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/list/elite_merc_rifles = list(
 	/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/ap,
 	/obj/item/weapon/gun/rifle/m41aMK1 = /obj/item/ammo_magazine/rifle/m41aMK1,
-	/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/ap)
+	/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/m41aMK1)
 
 	var/list/elite_merc_shotguns = list(
-	/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g),
-	/obj/item/weapon/gun/shotgun/combat = pick(GLOB.shotgun_handfuls_12g),
-	/obj/item/weapon/gun/shotgun/type23 = pick(GLOB.shotgun_handfuls_8g))
+	/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g_reasonable),
+	/obj/item/weapon/gun/shotgun/combat = pick(GLOB.shotgun_handfuls_12g_reasonable),
+	/obj/item/weapon/gun/shotgun/type23 = pick(GLOB.shotgun_handfuls_8g_reasonable))
 
 	if(prob(shotgun_chance))
 		var/gunpath = pick(elite_merc_shotguns)
