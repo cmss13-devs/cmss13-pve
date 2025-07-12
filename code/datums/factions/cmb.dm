@@ -23,3 +23,9 @@
 			hud_icon_state = "mar"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "cmb_[hud_icon_state]")
+
+
+//UACG included
+/datum/faction/uacg
+	name = "United Americas Colonial Guard"
+	faction_tag = FACTION_UACG
