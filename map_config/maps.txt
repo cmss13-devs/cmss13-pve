@@ -82,6 +82,9 @@ endmap
 map canyon_32b
 endmap
 
+map lv624_long_snow
+endmap
+
 map taipei_station
 endmap
 
