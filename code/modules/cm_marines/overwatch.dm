@@ -659,7 +659,7 @@
 		return TRUE
 	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 		return TRUE
-	if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
+	if(istype(marine.glasses, /obj/item/clothing/glasses/night))
 		return TRUE
 	return FALSE
 /// returns the overwatch camera the human is wearing
@@ -679,10 +679,10 @@
 			if(istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 				cam_gear = marine.wear_r_ear
 				return cam_gear.camera
-			var/obj/item/clothing/glasses/night/m56_goggles/m56_cam
-			if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
-				m56_cam = marine.glasses
-				return m56_cam.camera
+			var/obj/item/clothing/glasses/night/hms_cam
+			if(istype(marine.glasses, /obj/item/clothing/glasses/night))
+				hms_cam = marine.glasses
+				return hms_cam.camera
 
 // Alerts all groundside marines about the incoming OB
 /obj/structure/machinery/computer/overwatch/proc/alert_ob(turf/target)
