@@ -59,6 +59,7 @@
 	if(!hit_wall.hull)
 		return COMPONENT_BULLET_PASS_THROUGH
 
+//UPP machinegun special ammo
 /datum/element/bullet_trait_penetrating/weak/pkp
 	damage_percent_lost_per_hit = 2
 
