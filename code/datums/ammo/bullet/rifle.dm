@@ -478,6 +478,30 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
 
+/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer
+	name = "high-explosive armor-piercing zirconium tracer 10x27 bullet"
+
+/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, stacks = 1, reagent = /datum/reagent/lithium)
+	))
+
+/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_mob(mob/M, obj/projectile/P)
+	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(get_turf(M), 35)
+	light.light_color = COLOR_GREEN
+
+/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_turf(turf/T, obj/projectile/P)
+	. = ..()
+	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(T, 35)
+	light.light_color = COLOR_GREEN
+
+/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_obj(obj/O, obj/projectile/P)
+	. = ..()
+	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(get_turf(O), 35)
+	light.light_color = COLOR_GREEN
+
+
 /datum/ammo/bullet/rifle/upp/heap/mg/penetrating
 	name = "wall-penerating 10x27 bullet"
 	damage = 40
