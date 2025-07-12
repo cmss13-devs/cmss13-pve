@@ -357,7 +357,7 @@
 		var/image/source_image = image(icon, "+t64_heap_mag")
 		source_image.pixel_x = 0
 		overlays += source_image
-	if(mag_tally > 5)
+	if(mag_tally > 6)
 		var/image/source_image = image(icon, "+t64_heap_mag")
 		source_image.pixel_x = 6
 		overlays += source_image

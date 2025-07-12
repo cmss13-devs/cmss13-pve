@@ -424,6 +424,7 @@
 		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/stock/rifle/collapsible,
@@ -1261,6 +1262,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/upp,
