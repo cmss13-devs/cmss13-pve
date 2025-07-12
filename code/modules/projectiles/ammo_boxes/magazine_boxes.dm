@@ -75,10 +75,10 @@
 
 	empty = TRUE
 
-//-----------------------Viper 9 Rifle Mag Boxes-----------------------
+//-----------------------M39 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m39
-	name = "magazine box (Viper 9 x 12)"
+	name = "magazine box (M39 x 12)"
 	icon_state = "base_m39"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_reg"
@@ -91,7 +91,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/ap
-	name = "magazine box (AP Viper 9 x 12)"
+	name = "magazine box (M39 x 12)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/ap
@@ -100,7 +100,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/ext
-	name = "magazine box (Ext Viper 9 x 10)"
+	name = "magazine box (Ext M39 x 10)"
 	overlay_ammo_type = "_ext"
 	overlay_content = "_hv"
 	num_of_magazines = 10
@@ -110,7 +110,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/incen
-	name = "magazine box (Incen Viper 9 x 12)"
+	name = "magazine box (Incen M39 x 12)"
 	overlay_ammo_type = "_incen"
 	overlay_content = "_incen"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/incendiary
@@ -119,7 +119,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/le
-	name = "magazine box (LE Viper 9 x 12)"
+	name = "magazine box (LE M39 x 12)"
 	overlay_ammo_type = "_le"
 	overlay_content = "_le"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/le
@@ -128,7 +128,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/heap
-	name = "magazine box (HEAP Viper 9 x 12)"
+	name = "magazine box (HEAP M39 x 12)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/heap

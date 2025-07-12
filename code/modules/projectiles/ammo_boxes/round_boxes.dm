@@ -55,7 +55,7 @@
 /obj/item/ammo_box/rounds/smartgun/empty
 	empty = TRUE
 
-//----------------9mm Ammunition Boxes (for Viper 9 SMG)------------------
+//----------------9mm Ammunition Boxes (for M39 SMG)------------------
 
 /obj/item/ammo_box/rounds/smg
 	name = "\improper SMG ammunition box (9mm)"
