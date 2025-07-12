@@ -2811,11 +2811,12 @@
 /obj/structure/machinery/recycler,
 /turf/open/floor/corsat,
 /area/louise/maintenance)
-"hq" = (
-/obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = 6;
-	pixel_y = 52;
-	layer = 3.1
+"hr" = (
+/obj/structure/gun_rack/m20a/unloaded,
+/obj/item/ammo_box/magazine/shotgun/light{
+	layer = 3.1;
+	pixel_x = 5;
+	pixel_y = 20
 	},
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
@@ -2845,15 +2846,15 @@
 /area/louise/northeasthall)
 "hY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = 4;
-	pixel_y = 8
+/obj/structure/machinery/light/small,
+/obj/item/ammo_box/magazine/shotgun/light{
+	pixel_x = 1;
+	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/shotgun/beanbag{
 	pixel_x = -2;
 	pixel_y = 0
 	},
-/obj/structure/machinery/light/small,
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
 "iH" = (
@@ -2873,13 +2874,10 @@
 /area/louise/engineering)
 "jb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717{
+/obj/item/weapon/gun/rifle/xm51/military/withstock,
+/obj/item/weapon/gun/rifle/xm51/military/withstock{
 	pixel_x = 0;
-	pixel_y = -6
+	pixel_y = 9
 	},
 /turf/open/floor/almayer/plate,
 /area/louise/armory)
@@ -15665,8 +15663,8 @@ fQ
 cb
 fG
 fG
-bV
-hq
+hr
+fr
 fr
 TR
 qS
