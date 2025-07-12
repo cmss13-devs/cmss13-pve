@@ -1190,6 +1190,8 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
+	bonus_overlay_x = -1
+	bonus_overlay_y = -1
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 27, "side_rail_y" = 18)
