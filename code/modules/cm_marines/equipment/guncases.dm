@@ -165,6 +165,32 @@
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 
+/obj/item/storage/box/guncase/m42c
+	desc = "A gun case containing a M42C Scoped Rifle."
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/m42c/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+
+/obj/item/storage/box/guncase/m42c/heap
+	desc = "A gun case containing a M42C Scoped Rifle."
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/m42c/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite/heap(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+
 //------------ heavy cases
 
 /obj/item/storage/box/guncase/heavy
