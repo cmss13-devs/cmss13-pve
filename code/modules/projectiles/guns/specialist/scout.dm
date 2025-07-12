@@ -12,7 +12,6 @@
 	indestructible = 1
 	force = 26
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	//map_specific_decoration = TRUE
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	flags_item = TWOHANDED|NO_CRYO_STORE
 

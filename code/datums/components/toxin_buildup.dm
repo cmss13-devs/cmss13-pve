@@ -7,7 +7,7 @@
 	var/max_alpha = 35
 	var/glow_color = "#00ff00"
 
-/datum/component/status_effect/toxic_buildup/Initialize(toxic_buildup = 15, toxic_buildup_dissipation = AMOUNT_PER_TIME(3, 10 SECONDS), max_buildup = 75)
+/datum/component/status_effect/toxic_buildup/Initialize(toxic_buildup, toxic_buildup_dissipation, max_buildup)
 	. = ..()
 	src.toxic_buildup = toxic_buildup
 	src.toxic_buildup_dissipation = toxic_buildup_dissipation

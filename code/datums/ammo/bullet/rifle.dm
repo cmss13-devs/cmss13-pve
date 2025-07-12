@@ -425,7 +425,7 @@
 	))
 
 /datum/ammo/bullet/rifle/heavy/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/status_effect/toxic_buildup)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
 	knockback(target, fired_proj, max_range = 2)
 
 
