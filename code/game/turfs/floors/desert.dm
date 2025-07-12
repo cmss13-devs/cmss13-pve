@@ -353,9 +353,19 @@
 	icon_state = "shallow"
 	icon_overlay = "_shallow"
 
+/turf/open/gm/river/desert/shallow/no_overlay
+	icon_state = "shallow"
+	icon_overlay = "_shallow"
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow/covered
 	covered = TRUE
 	icon = 'icons/turf/floors/desert_water_covered.dmi'
+
+/turf/open/gm/river/desert/shallow/covered/no_overlay
+	covered = TRUE
+	icon = 'icons/turf/floors/desert_water_covered.dmi'
+	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow/toxic
 	icon = 'icons/turf/floors/desert_water_toxic.dmi'
@@ -368,26 +378,59 @@
 	icon_state = "shallow_edge"
 	icon_overlay = "shallow_edge_overlay"
 
+/turf/open/gm/river/desert/shallow_edge/no_overlay
+	icon_state = "shallow_edge"
+	icon_overlay = "shallow_edge_overlay"
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_edge/southwest
 	dir = SOUTHWEST
+
+/turf/open/gm/river/desert/shallow_edge/southwest/no_overlay
+	dir = SOUTHWEST
+	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/north
 	dir = NORTH
 
+/turf/open/gm/river/desert/shallow_edge/north/no_overlay
+	dir = NORTH
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_edge/east
 	dir = EAST
+
+/turf/open/gm/river/desert/shallow_edge/east/no_overlay
+	dir = EAST
+	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/northeast
 	dir = NORTHEAST
 
+/turf/open/gm/river/desert/shallow_edge/northeast/no_overlay
+	dir = NORTHEAST
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_edge/southeast
 	dir = SOUTHEAST
+
+/turf/open/gm/river/desert/shallow_edge/southeast/no_overlay
+	dir = SOUTHEAST
+	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/west
 	dir = WEST
 
+/turf/open/gm/river/desert/shallow_edge/west/no_overlay
+	dir = WEST
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_edge/northwest
 	dir = NORTHWEST
+
+/turf/open/gm/river/desert/shallow_edge/northwest/no_overlay
+	dir = NORTHWEST
+	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/covered
 	covered = TRUE
@@ -410,6 +453,11 @@
 	icon_state = "shallow_c"
 	icon_overlay = "shallow_c_overlay"
 
+/turf/open/gm/river/desert/shallow_corner/no_overlay
+	icon_state = "shallow_c"
+	icon_overlay = "shallow_c_overlay"
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_corner/covered
 	covered = TRUE
 	icon = 'icons/turf/floors/desert_water_covered.dmi'
@@ -417,17 +465,35 @@
 /turf/open/gm/river/desert/shallow_corner/north
 	dir = NORTH
 
+/turf/open/gm/river/desert/shallow_corner/north/no_overlay
+	dir = NORTH
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_corner/east
 	dir = EAST
 
+/turf/open/gm/river/desert/shallow_corner/east/no_overlay
+	dir = EAST
+	no_overlay = TRUE
+
 /turf/open/gm/river/desert/shallow_corner/west
 	dir = WEST
+
+/turf/open/gm/river/desert/shallow_corner/west/no_overlay
+	dir = WEST
+	no_overlay = TRUE
 
 
 //deep water
 /turf/open/gm/river/desert/deep
 	icon_state = "deep"
 	icon_overlay = "_deep"
+
+/turf/open/gm/river/desert/deep/no_overlay
+	icon_state = "deep"
+	icon_overlay = "_deep"
+	no_overlay = TRUE
+	supports_fishing = TRUE
 
 /turf/open/gm/river/desert/deep/no_slowdown
 	base_river_slowdown = 0
