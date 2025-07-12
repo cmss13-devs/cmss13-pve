@@ -405,11 +405,6 @@
 	power_use = 0
 	visor_glows = FALSE
 
-/obj/item/device/helmet_visor/night_vision/marine_raider/rmc/can_attach_to(obj/item/clothing/head/helmet/target_helmet)
-	if(!istype(target_helmet, /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc || /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc))
-		return FALSE
-	return TRUE
-
 /////////////////////// PO VISOR ///////////////////////
 
 /obj/item/device/helmet_visor/po_visor
