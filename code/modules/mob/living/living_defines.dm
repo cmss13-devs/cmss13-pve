@@ -83,6 +83,7 @@
 	var/flags_emote
 	//ventcrawl
 	var/list/canEnterVentWith = list(
+		/atom/movable/emissive_blocker,
 		/obj/item/implant,
 		/obj/item/clothing/mask/facehugger,
 		/obj/item/device/radio,
