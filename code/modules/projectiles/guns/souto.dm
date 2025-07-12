@@ -124,6 +124,8 @@
 /obj/item/clothing/suit/storage/marine/veteran/pmc/temp
 	icon = 'icons/obj/items/clothing/pmc_commando_temp.dmi'
 	contained_sprite = 1
+	icon_state = "pmc_armor_elite"
+	item_state_slots = list(WEAR_JACKET = "pmc_armor_elite")
 
 /obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite
 	name = "\improper WY tactical armor"
