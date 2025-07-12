@@ -461,7 +461,7 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
-/datum/ammo/bullet/rifle/upp/heap/mg
+/datum/ammo/bullet/rifle/upp/heap/tracer
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN

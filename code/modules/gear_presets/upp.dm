@@ -304,7 +304,7 @@
 	skills = /datum/skills/smartgunner
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
-/datum/equipment_preset/upp/machinegunner/not_heap/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/machinegunner/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//face
