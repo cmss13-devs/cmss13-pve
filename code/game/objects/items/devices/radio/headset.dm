@@ -742,6 +742,13 @@
 	frequency = CLF_FREQ
 	has_hud = FALSE //Until we get CANC stuff, this'll do
 
+/obj/item/device/radio/headset/almayer/cia
+	name = "radio headset"
+	desc = "A radio headset."
+	frequency = CIA_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/cia, /obj/item/device/encryptionkey/soc, /obj/item/device/encryptionkey/listening_bug/freq_a)
+
+
 //############################## ALPHA ###############################
 /obj/item/device/radio/headset/almayer/marine/alpha
 	name = "marine alpha radio headset"
@@ -1337,7 +1344,7 @@
 	icon_state = "generic_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/guard)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_MARSHAL //More likely to be working alongside marshals than marines if responding to crap
+	hud_type = list(MOB_HUD_FACTION_MARSHAL) //More likely to be working alongside marshals than marines if responding to crap
 
 /obj/item/device/radio/headset/distress/rebel_ua
 	name = "colony headset"

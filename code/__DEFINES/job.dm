@@ -325,23 +325,23 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
 
 //-------- UPP --------//
-#define JOB_UPP "Rifleman"
-#define JOB_UPP_ENGI "Sapper"
-#define JOB_UPP_MEDIC "Sanitar"
-#define JOB_UPP_SPECIALIST "Serzhant"
-#define JOB_UPP_SNIPER "Marksman"
-#define JOB_UPP_LEADER "Master Serzhant"
+#define JOB_UPP "Naval Infantry Rifleman"
+#define JOB_UPP_ENGI "Naval Infantry Sapper"
+#define JOB_UPP_MEDIC "Naval Infantry Sanitar"
+#define JOB_UPP_SPECIALIST "Naval Infantry Sergeant"
+#define JOB_UPP_SNIPER "Naval Infantry Marksman"
+#define JOB_UPP_LEADER "Naval Infantry Platoon Sergeant"
 #define JOB_UPP_POLICE "Politsiya"
 #define JOB_UPP_SUPPLY "Logistics Technician"
-#define JOB_UPP_LT_OFFICER "Leytenant"
-#define JOB_UPP_LT_DOKTOR "Leytenant Doktor"
-#define JOB_UPP_SRLT_OFFICER "Senior Leytenant"
-#define JOB_UPP_KPT_OFFICER "Kapitan"
-#define JOB_UPP_MAY_OFFICER "Mayjor"
-#define JOB_UPP_LTKOL_OFFICER "Leytenant Kolonel"
-#define JOB_UPP_KOL_OFFICER "Kolonel"
-#define JOB_UPP_MAY_GENERAL "Mayjor General"
-#define JOB_UPP_LT_GENERAL "Leytenant General"
+#define JOB_UPP_LT_OFFICER "Junior Lieutenant"
+#define JOB_UPP_LT_DOKTOR "Lieutenant Doctor"
+#define JOB_UPP_SRLT_OFFICER "Senior Lieutenant"
+#define JOB_UPP_KPT_OFFICER "Captain"
+#define JOB_UPP_MAY_OFFICER "Major"
+#define JOB_UPP_LTKOL_OFFICER "Lieutenant Colonel"
+#define JOB_UPP_KOL_OFFICER "Colonel"
+#define JOB_UPP_MAY_GENERAL "Major General"
+#define JOB_UPP_LT_GENERAL "Lieutenant General"
 #define JOB_UPP_GENERAL "General"
 
 #define JOB_UPP_COMBAT_SYNTH "Combat Synthetic"
@@ -417,9 +417,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_RIOT_CHIEF "Chief Riot Control"
 
 #define RIOT_JOB_LIST list(JOB_RIOT, JOB_RIOT_CHIEF)
-//-------- UAAC --------//
-#define JOB_TIS_IO "UAAC-TIS Intelligence Officer"
-#define JOB_TIS_SA "UAAC-TIS Special Agent"
+//-------- CIA --------//
+#define JOB_CIA "Intelligence Analyst"
+#define JOB_CIA_LIAISON "Intelligence Liaison Officer"
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
 //-------- DUTCH'S DOZEN --------//
