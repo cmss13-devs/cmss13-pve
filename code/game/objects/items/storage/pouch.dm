@@ -664,7 +664,7 @@
 	)
 
 /obj/item/storage/pouch/medical/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -759,7 +759,7 @@
 	)
 
 /obj/item/storage/pouch/first_responder/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/oxy(src)
 	new /obj/item/roller(src)
 	new /obj/item/tool/extinguisher/mini(src)
 	new /obj/item/bodybag/cryobag(src)
@@ -879,7 +879,7 @@
 	)
 
 /obj/item/storage/pouch/medkit/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -897,7 +897,7 @@
 	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/pouch/medkit/full/toxin/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/pill_bottle/spaceacillin(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/roller(src)
@@ -906,7 +906,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 
 /obj/item/storage/pouch/medkit/full/army/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/roller(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/surgical_line(src)
