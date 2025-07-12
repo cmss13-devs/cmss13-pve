@@ -96,3 +96,6 @@ endmap
 
 map jungle_delta
 endmap
+
+map prospector_canyon
+endmap

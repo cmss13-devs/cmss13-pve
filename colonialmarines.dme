@@ -2649,4 +2649,5 @@
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
 #include "maps\map_files\jungle_delta\jungle_delta.dmm"
+#include "maps\map_files\prospector_canyon\prospector_canyon.dmm"
 // END_INCLUDE

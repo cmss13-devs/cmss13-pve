@@ -1,4 +1,11 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/blocker/fog,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/river/ocean/deep_water,
+/area/lv624/ground/jungle/central_jungle)
 "ae" = (
 /turf/open/gm/coast{
 	dir = 4
@@ -23,9 +30,10 @@
 /turf/open/auto_turf/strata_grass/layer0,
 /area/lv624/ground/jungle/central_jungle)
 "aT" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
 	},
+/obj/structure/blocker/fog,
 /turf/open/gm/river/ocean/deep_water,
 /area/lv624/ground/jungle/central_jungle)
 "bk" = (
@@ -36,7 +44,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
 "ci" = (
-/obj/effect/landmark/lv624/fog_blocker,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/ocean/deep_water,
 /area/lv624/ground/jungle/central_jungle)
 "cy" = (
@@ -56,7 +64,7 @@
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
 "db" = (
-/obj/effect/landmark/lv624/fog_blocker,
+/obj/structure/blocker/fog,
 /turf/open/gm/coast{
 	dir = 4
 	},
@@ -211,7 +219,7 @@
 	},
 /area/lv624/ground/jungle/central_jungle)
 "pj" = (
-/obj/effect/landmark/lv624/fog_blocker,
+/obj/structure/blocker/fog,
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
 "pV" = (
@@ -401,15 +409,15 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/jungle/central_jungle)
 "Cw" = (
-/obj/effect/landmark/lv624/fog_blocker,
+/obj/structure/blocker/fog,
 /turf/open/gm/coast{
 	dir = 1
 	},
 /area/lv624/ground/jungle/central_jungle)
 "CF" = (
-/obj/effect/landmark/lv624/fog_blocker,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
+/obj/structure/blocker/fog,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
 	},
 /turf/open/gm/river/ocean/deep_water,
 /area/lv624/ground/jungle/central_jungle)
@@ -465,9 +473,9 @@
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
 "Fl" = (
-/obj/effect/landmark/lv624/fog_blocker,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 8
+/obj/structure/blocker/fog,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
 	},
 /turf/open/gm/river/ocean/deep_water,
 /area/lv624/ground/jungle/central_jungle)
@@ -635,10 +643,8 @@
 /turf/open/gm/river,
 /area/lv624/ground/jungle/central_jungle)
 "TO" = (
-/obj/effect/landmark/lv624/fog_blocker,
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
+/obj/structure/blocker/fog,
+/obj/structure/platform/kutjevo/rock,
 /turf/open/gm/river/ocean/deep_water,
 /area/lv624/ground/jungle/central_jungle)
 "TP" = (
@@ -41334,7 +41340,7 @@ AV
 AV
 iw
 iw
-iw
+AU
 iw
 JI
 iw
@@ -41585,8 +41591,8 @@ jE
 AV
 iw
 iw
-iw
-iw
+AU
+AU
 iw
 iw
 AV
@@ -41837,9 +41843,9 @@ jE
 AV
 iw
 iw
-iw
-JI
-iw
+AU
+YD
+AU
 iw
 AV
 jE
@@ -42088,10 +42094,10 @@ jE
 AV
 AV
 JI
-iw
-iw
-iw
-iw
+AU
+AU
+AU
+AU
 iw
 AV
 jE
@@ -42340,10 +42346,10 @@ jE
 AV
 iw
 iw
-iw
-iw
-iw
-iw
+AU
+AU
+AU
+AU
 iw
 AV
 jE
@@ -42591,11 +42597,11 @@ jE
 jE
 AV
 iw
-iw
-iw
-iw
-iw
-iw
+AU
+AU
+AU
+AU
+AU
 iw
 AV
 jE
@@ -42843,11 +42849,11 @@ jE
 AV
 AV
 iw
+AU
 iw
 iw
-iw
-iw
-iw
+AU
+AU
 iw
 AV
 jE
@@ -43099,7 +43105,7 @@ iw
 iw
 iw
 JI
-iw
+AU
 iw
 AV
 jE
@@ -43351,7 +43357,7 @@ iw
 yd
 iw
 iw
-iw
+AU
 iw
 AV
 jE
@@ -63406,7 +63412,7 @@ yd
 yd
 yd
 yd
-CF
+aa
 ci
 ci
 ci
@@ -63453,7 +63459,7 @@ yd
 yd
 yd
 yd
-CF
+aa
 ci
 ci
 ci
