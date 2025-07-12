@@ -323,10 +323,15 @@
 /datum/equipment_preset/proc/load_languages(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_languages(languages)
 
+// if you want to change the spawn "method" somehow, e.g. paradropping
+/datum/equipment_preset/proc/spawn_specifics(mob/living/carbon/human/new_human, client/mob_client)
+	return
+
 /datum/equipment_preset/proc/load_preset(mob/living/carbon/human/new_human, randomise = FALSE, count_participant = FALSE, client/mob_client, show_job_gear = TRUE, late_join)
 	if(!new_human.hud_used)
 		new_human.create_hud()
 
+	spawn_specifics(new_human, mob_client)
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)

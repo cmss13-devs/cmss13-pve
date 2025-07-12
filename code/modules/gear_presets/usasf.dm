@@ -168,6 +168,13 @@
 	flags = null
 	skills = /datum/skills/para_tech
 	idtype = /obj/item/card/id/dogtag
+	var/paradropping = FALSE
+
+/datum/equipment_preset/usasf/helljumper/spawn_specifics(mob/living/carbon/human/new_human, client/mob_client)
+	if(paradropping)
+		var/turf/deploying_turf = get_turf(new_human)
+		deploying_turf.ceiling_debris_check(2)
+		new_human.handle_paradrop(deploying_turf)
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
 //Head
@@ -203,6 +210,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/parajumper(new_human), WEAR_R_STORE)
 	..()
 
+/datum/equipment_preset/usasf/helljumper/technical/paradropped
+	name = "USASF Para-Rescue Support Technician (Engineering, Paradropped)"
+	paradropping = TRUE
+
 /datum/equipment_preset/usasf/helljumper/medical
 	name = "USASF Para-Rescue Support Technician (Medical)"
 	role_comm_title = "PJ-MED"
@@ -225,6 +236,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/not_op(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full/army(new_human), WEAR_R_STORE)
 	..()
+
+/datum/equipment_preset/usasf/helljumper/medical/paradropped
+	name = "USASF Para-Rescue Support Technician (Medical, Paradropped)"
+	paradropping = TRUE
 
 //*****************************************************************************************************/
 
