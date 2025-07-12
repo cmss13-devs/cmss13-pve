@@ -861,6 +861,7 @@ GLOBAL_LIST_INIT(rebel_ua_shotguns, list(
 	/obj/item/weapon/gun/shotgun/combat = /obj/item/ammo_magazine/handful/shotgun/slug,
 	/obj/item/weapon/gun/shotgun/pump = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 	/obj/item/weapon/gun/shotgun/pump = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/weapon/gun/rifle/xm51/withstock = /obj/item/ammo_magazine/rifle/xm51,
 	))
 
 GLOBAL_LIST_INIT(rebel_ua_rifles, list(
