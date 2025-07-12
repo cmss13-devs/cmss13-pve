@@ -479,7 +479,6 @@
 	flick("grenade", O)
 	QDEL_IN(O, 7)
 
-
 /datum/ammo/sentry_grenade
 	name = "M74 AGM-F 40mm grenade"
 	icon_state = "sentry_grenade"
@@ -518,3 +517,25 @@
 	O.icon = 'icons/effects/explosion.dmi'
 	flick("grenade", O)
 	QDEL_IN(O, 7)
+
+/datum/ammo/anti_air
+	name = "anti-air missile"
+	ping = null //no bounce off.
+	damage_type = CLONE //Shouldn't ever hit anyone
+	flags_ammo_behavior = AMMO_MP //As above, ensures it'll miss if it ever travels any distance
+	icon_state = "flare"
+	damage = 0
+	max_range = 1
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+
+/datum/ammo/anti_air/on_hit_mob(mob/mob, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_obj(obj/object, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
+	return
