@@ -1023,7 +1023,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = 	/obj/item/attachable/bayonet
 
 /datum/gear/weapon/kabar
-
 	display_name = "KA-BAR utility knife"
 	path = 	/obj/item/weapon/knife/marine/kabar
 
