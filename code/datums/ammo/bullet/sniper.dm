@@ -45,7 +45,7 @@
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
 	damage = 100
-	penetration = ARMOR_PENETRATION_TIER_7 //Instant deletion isn't fun.
+	penetration = ARMOR_PENETRATION_TIER_7
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak

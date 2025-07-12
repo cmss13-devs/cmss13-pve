@@ -72,7 +72,7 @@
 	name = "\improper Type-88 HV Magazine (7.62x54mmR)"
 	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with HV rounds, that provide some additonal force and body armor penetration.."
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
-	default_ammo = /datum/ammo/bullet/sniper/upp/flak
+	default_ammo = /datum/ammo/bullet/sniper/upp/heap
 
 /obj/item/ammo_magazine/sniper/svd/flak
 	name = "\improper Type-88 flak Magazine (7.62x54mmR)"
