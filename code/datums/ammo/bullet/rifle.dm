@@ -444,7 +444,7 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
-/datum/ammo/bullet/rifle/upp/mg
+/datum/ammo/bullet/rifle/upp/tracer
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
