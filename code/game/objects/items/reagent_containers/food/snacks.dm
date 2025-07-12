@@ -2456,7 +2456,7 @@
 	desc = "A slice what legally has to be called 'cheese-product'. Not the nicest thing to eat, but can work in recipes in place of proper cheese. Ensure wrapper removal before consumption."
 	icon_state = "kruft_single"
 	bitesize = 2
-	package = 1
+	package = TRUE
 
 /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft/Initialize()
 	. = ..()
