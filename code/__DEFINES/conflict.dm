@@ -111,6 +111,8 @@
 #define AMMUNITION_CANNOT_REMOVE_BULLETS (1<<4)
 /// If this magazine can transfer to other magazines of the same type by slapping one with the other
 #define AMMUNITION_SLAP_TRANSFER (1<<5)
+/// If you can see what ammo type is loaded on examine
+#define AMMUNITION_CANT_CHECK_AMMO_TYPE (1<<6)
 //Slowdown from various armors.
 
 /// How much shoes slow you down by default. Negative values speed you up
