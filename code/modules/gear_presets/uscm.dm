@@ -628,7 +628,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
@@ -640,12 +640,20 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
 	add_eva_suit_accessory(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	if(prob(70))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
+		//waist
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a(new_human), WEAR_J_STORE)
+		//waist
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BELT)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
@@ -664,7 +672,7 @@
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/hefa(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/sebb(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/canister(new_human), WEAR_IN_BACK)
@@ -693,7 +701,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
 //*****************************************************************************************************/
-//*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/private_equipped/eva/battlerifle
 	name = "USCM Squad Sniper (Equipped, M49A6, EVA)"
@@ -707,7 +714,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/pve(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/pve(new_human), WEAR_IN_BACK)
 	//face
@@ -731,46 +738,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/uscm/private_equipped/eva/normalbattlerifle
-	name = "USCM Squad Sniper (Equipped, M49A, EVA)"
-
-/datum/equipment_preset/uscm/private_equipped/eva/normalbattlerifle/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
-	add_uscm_cover(new_human)
-	//uniform
-	add_uscm_uniform(new_human)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband(new_human), WEAR_JACKET)
-	add_eva_suit_accessory(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full/ap(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
-
-
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/private_equipped/eva/flamer
@@ -785,7 +752,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	//face
@@ -880,7 +847,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_HELMET)
 	add_uscm_cover(new_human)
 	//uniform
@@ -989,7 +956,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
@@ -1177,10 +1144,9 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 //*****************************************************************************************************/
-//*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/leader_equipped/eva
-	name = "USCM Section Sergeant (Equipped, Eva)"
+	name = "USCM Section Sergeant (Equipped, EVA)"
 
 /datum/equipment_preset/uscm/leader_equipped/eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -1191,7 +1157,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_BACK)
 	//face
@@ -1290,7 +1256,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/engineer_equipped/eva_flamer
-	name = "USCM Squad Combat Engineer (Equipped, Incinerator, Eva)"
+	name = "USCM Squad Combat Engineer (Equipped, EVA, Incinerator)"
 
 
 /datum/equipment_preset/uscm/engineer_equipped/eva_flamer/load_gear(mob/living/carbon/human/new_human)
@@ -1306,7 +1272,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin(new_human), WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_HELMET)
 	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
@@ -1336,7 +1302,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/engineer_equipped/eva_sadar
-	name = "USCM Squad Combat Engineer (Equipped, SADAR, Eva)"
+	name = "USCM Squad Combat Engineer (Equipped, EVA, SADAR)"
 
 
 /datum/equipment_preset/uscm/engineer_equipped/eva_sadar/load_gear(mob/living/carbon/human/new_human)
@@ -1352,7 +1318,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot(new_human), WEAR_L_EAR)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/dexalin(new_human), WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_HELMET)
 	add_uscm_cover(new_human)
 	//uniform
 	add_uscm_uniform(new_human)
@@ -1476,6 +1442,44 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/uscm/specialist_equipped/eva
+	name = "USCM Specialized Weapons Operator, M5 RPG (Equipped, EVA)"
+
+/datum/equipment_preset/uscm/specialist_equipped/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.underwear = "Marine Boxers"
+	new_human.undershirt = "Marine Undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine(new_human), WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
+	add_eva_suit_accessory(new_human)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/uscm/specialist_equipped/loader
 	name = "USCM Specialized Weapons Operator, M5 RPG Loader(Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
@@ -1517,6 +1521,54 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/kneepads(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/neckguard(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_BELT)
+
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	add_combat_gloves(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+	GLOB.character_traits[/datum/character_trait/skills/loader].apply_trait(new_human)
+
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+//*****************************************************************************************************/
+
+/datum/equipment_preset/uscm/specialist_equipped/loader/eva
+	name = "USCM Specialized Weapons Operator, M5 RPG Loader(Equipped)"
+
+/datum/equipment_preset/uscm/specialist_equipped/loader/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.underwear = "Marine Boxers"
+	new_human.undershirt = "Marine Undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/rocketpack(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/wp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils(new_human), WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/uscm(new_human), WEAR_HEAD)
+	add_uscm_cover(new_human)
+	add_eva_suit_accessory(new_human)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm/armband_engie(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/greaves(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/kneepads(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/neckguard(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/small/space(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)

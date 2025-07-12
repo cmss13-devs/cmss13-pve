@@ -18,15 +18,24 @@
 	gas_type = GAS_TYPE_OXYGEN
 	w_class = SIZE_LARGE
 
+/obj/item/tank/oxygen/empty
+	partially_empty = TRUE
+
 
 
 /obj/item/tank/oxygen/yellow
 	desc = "A tank of oxygen, this one is yellow."
 	icon_state = "oxygen_f"
 
+/obj/item/tank/oxygen/yellow/empty
+	partially_empty = TRUE
+
 /obj/item/tank/oxygen/red
 	desc = "A tank of oxygen, this one is red."
 	icon_state = "oxygen_fr"
+
+/obj/item/tank/oxygen/red/empty
+	partially_empty = TRUE
 
 
 /*
@@ -48,6 +57,9 @@
 	desc = "Mixed anyone?"
 	icon_state = "oxygen"
 	gas_type = GAS_TYPE_AIR
+
+/obj/item/tank/air/empty
+	partially_empty = TRUE
 
 /*
  * Emergency Oxygen
@@ -78,7 +90,7 @@
 			return
 
 /obj/item/tank/emergency_oxygen/empty
-	pressure = 33
+	partially_empty = TRUE
 
 /obj/item/tank/emergency_oxygen/engi
 	name = "extended-capacity emergency oxygen tank"
@@ -88,6 +100,9 @@
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
 
+/obj/item/tank/emergency_oxygen/engi/empty
+	partially_empty = TRUE
+
 /obj/item/tank/emergency_oxygen/double
 	name = "Compact oxygen tank"
 	desc = "Capable of sustaining a short EVA, but should not be solely depended on."
@@ -96,6 +111,9 @@
 	volume = 7
 	pressure = 5*ONE_ATMOSPHERE
 	pressure_full = 5*ONE_ATMOSPHERE
+
+/obj/item/tank/emergency_oxygen/double/empty
+	partially_empty = TRUE
 
 /*
  * Nitrogen

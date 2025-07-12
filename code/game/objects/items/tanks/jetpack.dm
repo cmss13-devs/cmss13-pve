@@ -94,6 +94,7 @@
 	icon_state = "jetpack-white"
 	item_state = "jetpack-white"
 	gas_type = GAS_TYPE_AIR
+	volume = 30
 	pressure = ONE_ATMOSPHERE*5
 
 /obj/item/tank/jetpack/oxygen

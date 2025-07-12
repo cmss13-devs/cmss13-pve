@@ -1462,8 +1462,8 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/space
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/space/fill_preset_inventory()
-	new /obj/item/storage/box/mre(src)
-	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tank/emergency_oxygen/engi(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalin(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/nutriment(src)

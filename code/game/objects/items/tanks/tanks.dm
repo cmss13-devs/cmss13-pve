@@ -14,6 +14,7 @@
 	var/pressure = ONE_ATMOSPHERE*5
 	var/gas_type = GAS_TYPE_AIR
 	var/temperature = T20C
+	var/partially_empty = FALSE
 
 	force = 5
 	throwforce = 10
@@ -223,3 +224,9 @@
 
 
 	return removed*10000
+
+/obj/item/tank/Initialize(mapload, ...)
+	. = ..()
+	if(partially_empty)
+		pressure = pressure/rand(6, 12)
+		name = "dented " + name

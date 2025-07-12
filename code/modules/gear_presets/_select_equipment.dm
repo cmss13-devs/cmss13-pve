@@ -972,7 +972,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		spacesuit.attach_accessory(src, new new_band)
 
 /datum/equipment_preset/proc/add_eva_suit_accessory(mob/living/carbon/human/new_human)
-	if(prob(50))
+	if(prob(40))
 		var/list/possible_paints = subtypesof(/obj/item/clothing/accessory/paint)
 		var/obj/item/clothing/accessory/armband/new_paint = pick(possible_paints)
 		new_human.equip_to_slot_or_del(new new_paint, WEAR_ACCESSORY)

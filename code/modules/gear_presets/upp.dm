@@ -1306,6 +1306,62 @@
 		if(7)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
+/datum/equipment_preset/upp/colonist/eva
+	name = "UPP Civilian (Space Rescuee)"
+
+/datum/equipment_preset/upp/colonist/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	var/random_tank_back = rand(1,8)
+	switch(random_tank_back)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/empty(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/red/empty(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/yellow/empty(new_human), WEAR_WAIST)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/air/empty(new_human), WEAR_WAIST)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space(new_human), WEAR_HEAD)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
+	//uniform
+	add_civilian_uniform(new_human)
+	//jacket
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space(new_human), WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/emergency(new_human), WEAR_JACKET)
+	//belt
+	var/random_tank_waist = rand(1,5)
+	switch(random_tank_waist)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/empty(new_human), WEAR_WAIST)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi/empty(new_human), WEAR_WAIST)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double/empty(new_human), WEAR_WAIST)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/double/empty(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/skillless(new_human), WEAR_IN_L_STORE)
+	//hand
+	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/flare(new_human), WEAR_R_HAND)
+	//limbs
+	var/random_civilian_shoe = rand(1,7)
+	switch(random_civilian_shoe)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown(new_human), WEAR_FEET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown(new_human), WEAR_FEET)
+		if(6)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
+		if(7)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 /datum/equipment_preset/upp/researcher
 	name = "UPP Civilian Researcher"
 	flags = EQUIPMENT_PRESET_EXTRA
