@@ -337,14 +337,6 @@
 
 /datum/equipment_preset/upp/machinegunner/heap
 	name = "UPP Squad Machinegunner (Equipped, HEAP)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	assignment = "Machinegunner"
-	role_comm_title = "MG"
-	rank = JOB_SQUAD_SMARTGUN_UPP
-	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/smartgunner
-/datum/equipment_preset/upp/machinegunner/heap
-	name = "UPP Squad Machinegunner (Equipped, HEAP)"
 
 /datum/equipment_preset/upp/machinegunner/heap/load_gear(mob/living/carbon/human/new_human)
 
