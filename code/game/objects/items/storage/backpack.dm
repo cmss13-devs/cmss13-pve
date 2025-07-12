@@ -1197,3 +1197,35 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/intel/chestrig/army
 	name = "\improper Army expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+
+//----------CMB crisis intervention unit section.----------
+
+/obj/item/storage/backpack/cmb_daypack
+	name = "combat daypack"
+	desc = "A ruggedized fighting load carrier for the longest days. Features all the pockets and compartments for long missions."
+	icon_state = "engiepack"
+	max_storage_space = 21
+
+/// Tactical asspack
+/obj/item/storage/backpack/general_belt/cmb
+	name = "CMB buttpack"
+	desc = "A small, lightweight pouch that can be clipped onto Armat Systems M3 Pattern armor to provide additional storage. The newer G8-A model, while uncomfortable, can also be clipped around the waist."
+	max_storage_space = 10
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_MEDIUM
+	flags_equip_slot = SLOT_WAIST
+	icon = 'icons/obj/items/clothing/belts.dmi'
+	icon_state = "g8pouch"
+	item_state = "g8pouch"
+	has_gamemode_skin = FALSE
+	can_hold_skill = list()
+
+/obj/item/storage/backpack/general_belt/equipped(mob/user, slot)
+	switch(slot)
+		if(WEAR_WAIST, WEAR_J_STORE) //The G8 can be worn on several armors.
+			mouse_opacity = MOUSE_OPACITY_OPAQUE //so it's easier to click when properly equipped.
+	..()
+
+/obj/item/storage/backpack/general_belt/dropped(mob/user)
+	mouse_opacity = initial(mouse_opacity)
+	..()

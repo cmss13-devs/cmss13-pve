@@ -642,6 +642,8 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make them keep their original name.
 	black_market_value = 25
 
+////// Civilians but actually this time /////////
+
 /obj/item/clothing/under/pizza
 	name = "pizza delivery uniform"
 	desc = "An ill-fitting, slightly stained uniform for a pizza delivery pilot. Smells of cheese."
