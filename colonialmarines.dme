@@ -2087,6 +2087,7 @@
 #include "code\modules\mob\living\carbon\human\ai\order_datums\order.dm"
 #include "code\modules\mob\living\carbon\human\ai\order_datums\order_patrol.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\revanchists.dm"
+#include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_civ.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_spawner.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_breath.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_chemicals_in_body.dm"
