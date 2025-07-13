@@ -365,6 +365,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 		add_verb(src, /client/proc/toggle_join_xeno)
 		add_verb(src, /client/proc/admin_marine_announcement)
 		add_verb(src, /client/proc/screen_alert_menu)
+		add_verb(src, /client/proc/bald_guy_alert)
 		add_verb(src, /client/proc/enable_fire_support)
 		add_verb(src, /client/proc/disable_fire_support)
 		add_verb(src, /client/proc/set_fire_support_points)

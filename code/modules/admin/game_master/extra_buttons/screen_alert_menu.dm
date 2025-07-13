@@ -76,3 +76,17 @@
 			mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(title)]</u></span><br>" + text, new /atom/movable/screen/text/screen_text/potrait(null, null, name, icon_choice, icon_choice_state))
 	message_admins("[key_name_admin(src)] has made an admin screen alert.")
 	log_admin("[key_name_admin(src)] made an admin screen alert: [text]")
+
+/client/proc/bald_guy_alert()
+	set name = "Bald Guy Alert"
+	set category = "Game Master.Extras"
+	var/text = tgui_input_text(src, "Enter the body text for the screen alert.", title = "Announcement Body", multiline = TRUE, encode = FALSE)
+	if(!text)
+		return
+	var/list/alert_receivers = list()
+	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+		if(FACTION_UPP == human.faction)
+			alert_receivers += human
+	alert_receivers += GLOB.observer_list
+	for(var/mob/mob_receiver in alert_receivers)
+		mob_receiver.play_screen_text("<span class='langchat' style=font-size:24pt;text-align:left valign='top'><u>[uppertext("Incoming Message")]</u></span><br>" + text, new /atom/movable/screen/text/screen_text/potrait(null, null, "Col. Shilov", 'icons/ui_icons/screen_alert_images.dmi', "overwatch_2_red"))
