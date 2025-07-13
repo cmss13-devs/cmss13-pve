@@ -143,8 +143,6 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "LPO80"
 	item_state = "LPO80"
-	ammo_band_icon = "+LPO80_strip"
-	ammo_band_icon_empty = "+LPO80_strip_e"
 
 /obj/item/ammo_magazine/flamer_tank/upp/gellied
 	name = "incinerator tank (B-Gel)"
@@ -158,7 +156,6 @@
 
 	max_range = 7
 	max_duration = 50
-	ammo_band_color = COLOR_GREEN
 
 // This is gellie fuel. Green Flames.
 /obj/item/ammo_magazine/flamer_tank/gellied
