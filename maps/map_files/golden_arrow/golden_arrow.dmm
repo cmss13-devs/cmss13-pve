@@ -11410,6 +11410,11 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
+/mob/living/simple_animal/parrot{
+	desc = A decorated and lethal warfighter;
+	emote_hear = list("shouts","commands");
+	name = "Parrot A.W Parrot"
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aMq" = (
