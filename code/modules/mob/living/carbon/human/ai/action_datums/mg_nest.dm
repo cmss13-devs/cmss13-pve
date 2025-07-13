@@ -82,7 +82,7 @@
 		/datum/equipment_preset/uscm/smartgunner_equipped::name = /datum/equipment_preset/uscm/smartgunner_equipped,
 		/datum/equipment_preset/usa/gunner::name = /datum/equipment_preset/usa/gunner,
 		/datum/equipment_preset/usa/heavygunner::name = /datum/equipment_preset/usa/heavygunner,
-		/datum/equipment_preset/twe/royal_marine/spec/machinegun::name = /datum/equipment_preset/twe/royal_marine/spec/machinegun,
+		/datum/equipment_preset/royal_marine/machinegun::name = /datum/equipment_preset/royal_marine/machinegun,
 		/datum/equipment_preset/contractor/covert/heavy::name = /datum/equipment_preset/contractor/covert/heavy,
 		/datum/equipment_preset/other/freelancer/machinegunner::name = /datum/equipment_preset/other/freelancer/machinegunner,
 		/datum/equipment_preset/other/elite_merc/heavy::name = /datum/equipment_preset/other/elite_merc/heavy,

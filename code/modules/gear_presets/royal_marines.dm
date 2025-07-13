@@ -12,7 +12,7 @@
 //Royal Marine Commandos & RMC specialisations
 //*****************************************************************************************************/
 
-/datum/equipment_preset/twe/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	var/obj/item/clothing/under/uniform = new_human.w_uniform
 	if(istype(uniform))
 		uniform.has_sensor = UNIFORM_HAS_SENSORS
