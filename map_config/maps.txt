@@ -13,7 +13,7 @@ Format:
 endmap
 
 map lv624
-
+	default
 endmap
 
 map lv624_repaired
@@ -98,5 +98,4 @@ map jungle_delta
 endmap
 
 map prospector_canyon
-	default
 endmap
