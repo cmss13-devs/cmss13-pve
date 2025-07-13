@@ -8,12 +8,15 @@
 
 /datum/equipment_preset/colonist/load_status(mob/living/carbon/human/new_human, client/mob_client)
 	..()
-	if(prob(75))
+	if(prob(25))
 		add_survivor_weapon_pistol(new_human)
-	else if(prob(65))
+	else if(prob(75))
 		add_rebel_ua_rifle(new_human)
 	else
 		add_rebel_ua_shotgun(new_human)
+	var/random_suit = pick(/obj/item/clothing/suit/armor/vest, /obj/item/clothing/suit/armor/vest/ballistic, /obj/item/clothing/suit/marine/guard)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new random_suit, WEAR_JACKET)
 
 /datum/equipment_preset/colonist/bluecollar
 

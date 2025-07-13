@@ -118,7 +118,7 @@
 		FACTION_TWE_REBEL,
 		FACTION_UA_REBEL,
 	)
-/*
+
 	enter_combat_lines = list(
 		"PLEASE! HELP ME!",
 		"HELP ME!",
@@ -133,6 +133,9 @@
 		"HELP!",
 		"*cry",
 		"I CAN'T CONTROL MY BODY!",
+		"BIODOME OMEGA! PLEASE! IT'S IN THERE!",
+		"OMEGA! BIODOME OMEGA!",
+		"OMEGA BIODOME! DESTROY IT!"
 	)
 	exit_combat_lines = list(
 		"*cry",
@@ -146,6 +149,7 @@
 		"WE DON'T WANT THIS!",
 		"WE CAN'T CONTROL OURSELVES!",
 		"SPARE ME!",
+		"BIODOME-- OMEGA!"
 	)
 	grenade_thrown_lines = list(
 		"PLEASE! HELP ME!",
@@ -173,7 +177,7 @@
 		"NO-NO-NO!",
 		"PLEASE!",
 	)
-*/
+
 
 /datum/human_ai_faction/contractor
 	faction = FACTION_CONTRACTOR
