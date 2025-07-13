@@ -550,9 +550,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/clothing
 	category = "Non-standard clothing"
 
-/datum/gear/clothing/black_boots
-	display_name = "black combat boots"
-	path = /obj/item/clothing/shoes/marine/civilian
+/datum/gear/clothing/jungle_boots
+	display_name = "jungle combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/jungle
 
 /datum/gear/clothing/brown_boots
 	display_name = "brown combat boots"
