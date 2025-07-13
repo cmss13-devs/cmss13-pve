@@ -3971,8 +3971,7 @@ Defined in conflicts.dm of the #defines folder.
 	if(!actually_moving && (specific_direction & initial_mob_dir)) // if you're facing north, but you're shooting north-east and end up facing east, you won't lose your bipod
 		return
 	undeploy_bipod(loc, mover)
-	mover.apply_effect(1, SUPERSLOW)
-	mover.apply_effect(2, SLOW)
+	mover.apply_effect(1, SLOW)
 
 
 //when user fires the gun, we check if they have something to support the gun's bipod.
@@ -4034,7 +4033,7 @@ Defined in conflicts.dm of the #defines folder.
 	delay_mod = 0
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	scatter_mod = SCATTER_AMOUNT_TIER_9
 	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/m60
