@@ -4,7 +4,7 @@
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
-#define SQUAD_MARINE_2 "Bravo"
+#define SQUAD_MARINE_2 "Sierra Rodeo"
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
@@ -44,6 +44,12 @@
 #define JOB_SQUAD_RTO "Recon Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
+
+#define JOB_SQUAD_MARINE_GUARD "Guardsman"
+#define JOB_SQUAD_LEADER_GUARD "Guard Section Sergeant"
+#define JOB_SQUAD_MEDIC_GUARD "Medic"
+#define JOB_SQUAD_TEAM_LEADER_GUARD "Guard Squad Leader"
+#define JOB_SQUAD_SMARTGUN_GUARD "Guard Automatic Rifleman"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 

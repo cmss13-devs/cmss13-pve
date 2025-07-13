@@ -117,6 +117,11 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/smartgunner/ai/guard
+	title = JOB_SQUAD_SMARTGUN_GUARD
+	gear_preset = /datum/equipment_preset/uscm/sg/guard
+	job_options = null
+
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
@@ -135,6 +140,11 @@
 	name = JOB_SQUAD_SMARTGUN_FORECON
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
+
+/obj/effect/landmark/start/marine/smartgunner/guard
+	name = JOB_SQUAD_SMARTGUN_GUARD
+	job = JOB_SQUAD_SMARTGUN_GUARD
+	squad = "Colonial Guard"
 
 #undef SGT_VARIANT
 #undef JSGT_VARIANT

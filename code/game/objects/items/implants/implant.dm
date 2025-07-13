@@ -512,6 +512,12 @@ the implant may become unstable and either pre-maturely inject the subject or si
 /obj/item/implant/compressed/islegal()
 	return 0
 
+/obj/item/implant/gmb
+	name = "weird implant"
+	desc = "It seems to pulse, transmitting and receiving data from somewhere..."
+	sharp = TRUE
+	edge = TRUE
+
 /obj/item/implant/poison_tooth
 	name = "tooth"
 	desc = "This one seems particularly clean."

@@ -1,0 +1,9 @@
+{
+    "map_name": "Camp Louise",
+    "map_path": "map_files/louise",
+    "map_file": "louise.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/golden_arrow_classic/",
+    "platoon": "/datum/squad/marine/guard"
+}

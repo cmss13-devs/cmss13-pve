@@ -87,6 +87,9 @@
 	light_color = LIGHT_COLOR_TUNGSTEN
 	light_system = MOVABLE_LIGHT
 
+	var/custom_light_range = 4
+	var/custom_light_power = 3
+
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 	var/locate_cooldown = 0 //Cooldown for SL locator
 	var/armor_overlays[]
@@ -126,6 +129,9 @@
 		/obj/item/ammo_magazine/sniper,
 	)
 	pockets.max_storage_space = 8
+
+	if(GLOB.blackshift)
+		custom_light_range = 1
 
 	light_holder = new(src)
 
@@ -188,8 +194,12 @@
 	. = ..()
 	if(. != CHECKS_PASSED)
 		return
-	set_light_range(initial(light_range))
-	set_light_power(floor(initial(light_power) * 0.5))
+	if(!GLOB.blackshift)
+		set_light_range(initial(light_range))
+		set_light_power(floor(initial(light_power) * 0.5))
+	else
+		set_light_range(custom_light_range)
+		set_light_power(floor(custom_light_power) * 0.5)
 	set_light_on(toggle_on)
 	flags_marine_armor ^= ARMOR_LAMP_ON
 
@@ -950,11 +960,6 @@
 	name = "\improper M3 pattern armor"
 	specialty = "M3 pattern"
 
-/obj/item/clothing/suit/marine/guard/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/groin/uacg/crotchplate = new()
-	src.attach_accessory(null, crotchplate, TRUE)
-
 //Army & USASF custom-armors\\
 
 /obj/item/clothing/suit/marine/medium/rto/navy
@@ -1012,3 +1017,21 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	time_to_unequip = 10
 	time_to_equip = 10
+
+/obj/item/clothing/suit/marine/random_parts/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	attach_accessory(null, shinguards, TRUE)
+	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	attach_accessory(null, shoulderpads, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/kneepads/knees = new()
+		attach_accessory(null, knees, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/bracers/armguards = new()
+		attach_accessory(null, armguards, TRUE)
+	if(prob(50))
+		var/obj/item/clothing/accessory/pads/neckguard/neck = new()
+		attach_accessory(null, neck, TRUE)
