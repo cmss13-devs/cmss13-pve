@@ -19,15 +19,24 @@
 		var/image/I = H.get_hardpoint_image()
 		overlays += I
 
-/obj/item/hardpoint/holder/get_examine_text(mob/user)
-	. = ..()
+/obj/item/hardpoint/holder/get_examine_text(mob/user, integrity_only = FALSE)
+	var/msg = ""
+
+	if(!integrity_only)
+		..()
+	else
+		for(var/obj/item/hardpoint/attachment in hardpoints)
+			msg += "There is a [attachment] installed on \the [src].\n"
+			msg += attachment.examine(user, TRUE)
+		return msg
 	if(health <= 0)
-		. += "It's busted!"
+		msg += "It's busted!\n"
 	else if(isobserver(user) || (ishuman(user) && (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE) || skillcheck(user, SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN))))
-		. += "It's at [round(get_integrity_percent(), 1)]% integrity!"
-	for(var/obj/item/hardpoint/H in hardpoints)
-		. += "There is \a [H] module installed on [src]."
-		. += H.get_examine_text(user, TRUE)
+		msg += "It's at [round(get_integrity_percent(), 1)]% integrity!\n"
+	for(var/obj/item/hardpoint/attachment in hardpoints)
+		msg += "There is a [attachment] installed on \the [src].\n"
+		msg += attachment.examine(user, TRUE)
+	to_chat(user, msg)
 
 /obj/item/hardpoint/holder/get_tgui_info()
 	var/list/data = list()

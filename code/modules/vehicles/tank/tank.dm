@@ -45,6 +45,8 @@
 	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/holder/tank_turret,
+		/obj/item/hardpoint/holder/tank_turret/desert,
+		/obj/item/hardpoint/holder/tank_turret/jungle,
 		/obj/item/hardpoint/support/weapons_sensor,
 		/obj/item/hardpoint/support/overdrive_enhancer,
 		/obj/item/hardpoint/support/artillery_module,
@@ -161,17 +163,17 @@
 	if(user != seats[VEHICLE_GUNNER])
 		return FALSE
 
-	var/obj/item/hardpoint/holder/tank_turret/T = null
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in hardpoints)
-		T = TT
+	var/obj/item/hardpoint/holder/tank_turret/turret = null
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in hardpoints)
+		turret = tonkturret
 		break
-	if(!T)
+	if(!turret)
 		return FALSE
 
-	if(direction == GLOB.reverse_dir[T.dir] || direction == T.dir)
+	if(direction == GLOB.reverse_dir[turret.dir] || direction == turret.dir)
 		return FALSE
 
-	T.user_rotation(user, turning_angle(T.dir, direction))
+	turret.user_rotation(user, turning_angle(turret.dir, direction))
 	update_icon()
 
 	return TRUE
@@ -209,6 +211,19 @@
 
 	user.forceMove(current_turf)
 	to_chat(user, SPAN_XENO("We jump to the other side of [src]."))
+
+/obj/vehicle/multitile/tank/desert
+	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back. Painted in an arid-environment camo scheme."
+	icon_state = "tank_base_d"
+
+/obj/vehicle/multitile/tank/jungle
+	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back. Painted in a lush-environment camo scheme."
+	icon_state = "tank_base_j"
+
+/obj/vehicle/multitile/tank/night
+	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back. Painted in a dark-environment camo scheme."
+	icon_state = "tank_base_n"
+
 /*
 ** PRESETS SPAWNERS
 */
@@ -235,16 +250,16 @@
 
 	return TANK
 
-/obj/effect/vehicle_spawner/tank/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+/obj/effect/vehicle_spawner/tank/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
 
 //PRESET: turret, treads installed
-/obj/effect/vehicle_spawner/tank/plain/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+/obj/effect/vehicle_spawner/tank/plain/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 
 //PRESET: no hardpoints
-/obj/effect/vehicle_spawner/tank/hull/load_hardpoints(obj/vehicle/multitile/tank/V)
+/obj/effect/vehicle_spawner/tank/hull/load_hardpoints(obj/vehicle/multitile/tank/vic)
 	return
 
 //Just the hull and it's broken TOO, you get the full experience
@@ -263,56 +278,233 @@
 	load_damage(TANK)
 	TANK.update_icon()
 
-/obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+/obj/effect/vehicle_spawner/tank/decrepit/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
 		break
 
 //PRESET: default hardpoints
-/obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+/obj/effect/vehicle_spawner/tank/fixed/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
 		break
 
 //PRESET: minigun kit
-/obj/effect/vehicle_spawner/tank/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
+/obj/effect/vehicle_spawner/tank/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
 		break
 
 //PRESET: dragon flamer kit
-/obj/effect/vehicle_spawner/tank/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
+/obj/effect/vehicle_spawner/tank/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
 		break
 
 //PRESET: autocannon kit
-/obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/V)
-	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
-	V.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
-	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
-	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
-		TT.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
-		TT.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
+/obj/effect/vehicle_spawner/tank/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
+		break
+
+//DESERT CAMO PRESET: turret, treads installed
+/obj/effect/vehicle_spawner/tank/desert/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/desert/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+/obj/effect/vehicle_spawner/tank/desert/load_hardpoints(obj/vehicle/multitile/tank/desert/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/desert)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+
+//DESERT CAMO PRESET: default hardpoints
+/obj/effect/vehicle_spawner/tank/desert/fixed/load_hardpoints(obj/vehicle/multitile/tank/desert/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/desert)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		break
+
+//DESERT CAMO PRESET: minigun kit
+/obj/effect/vehicle_spawner/tank/desert/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/desert/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/desert)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
+		break
+
+//DESERT CAMO PRESET: dragon flamer kit
+/obj/effect/vehicle_spawner/tank/desert/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/desert/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/desert)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
+		break
+
+//DESERT CAMO PRESET: autocannon kit
+/obj/effect/vehicle_spawner/tank/desert/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/desert/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/desert)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
+		break
+
+//JUNGLE CAMO PRESET: turret, treads installed
+/obj/effect/vehicle_spawner/tank/jungle/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/jungle/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+/obj/effect/vehicle_spawner/tank/jungle/load_hardpoints(obj/vehicle/multitile/tank/jungle/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/jungle)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+
+//JUNGLE CAMO PRESET: default hardpoints
+/obj/effect/vehicle_spawner/tank/jungle/fixed/load_hardpoints(obj/vehicle/multitile/tank/jungle/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/jungle)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		break
+
+//JUNGLE CAMO PRESET: minigun kit
+/obj/effect/vehicle_spawner/tank/jungle/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/jungle/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/jungle)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
+		break
+
+//JUNGLE CAMO PRESET: dragon flamer kit
+/obj/effect/vehicle_spawner/tank/jungle/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/jungle/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/jungle)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
+		break
+
+//JUNGLE CAMO PRESET: autocannon kit
+/obj/effect/vehicle_spawner/tank/jungle/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/jungle/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/jungle)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
+		break
+
+//NIGHT/URBAN CAMO PRESET: turret, treads installed
+/obj/effect/vehicle_spawner/tank/night/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/night/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+/obj/effect/vehicle_spawner/tank/night/load_hardpoints(obj/vehicle/multitile/tank/night/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/night)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+
+//NIGHT/URBAN CAMO PRESET: default hardpoints
+/obj/effect/vehicle_spawner/tank/night/fixed/load_hardpoints(obj/vehicle/multitile/tank/night/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/night)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		break
+
+//NIGHT/URBAN CAMO PRESET: minigun kit
+/obj/effect/vehicle_spawner/tank/night/fixed/minigun/load_hardpoints(obj/vehicle/multitile/tank/night/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/night)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/minigun)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/small_flamer)
+		break
+
+//NIGHT/URBAN CAMO PRESET: dragon flamer kit
+/obj/effect/vehicle_spawner/tank/night/fixed/flamer/load_hardpoints(obj/vehicle/multitile/tank/night/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/night)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/flamer)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/grenade_launcher)
+		break
+
+//NIGHT/URBAN CAMO PRESET: autocannon kit
+/obj/effect/vehicle_spawner/tank/night/fixed/autocannon/load_hardpoints(obj/vehicle/multitile/tank/night/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/ballistic)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/night)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
 		break

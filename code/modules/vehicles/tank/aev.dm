@@ -46,6 +46,18 @@
 /obj/vehicle/multitile/tank/aev/load_hardpoints()
 	return
 
+/obj/vehicle/multitile/tank/aev/desert
+	desc = "A giant piece of armor with a plow, you know what to do. Entrance in the back. Painted in an arid-environment camo scheme."
+	icon_state = "aev_base_d"
+
+/obj/vehicle/multitile/tank/aev/jungle
+	desc = "A giant piece of armor with a plow, you know what to do. Entrance in the back. Painted in a lush-environment camo scheme."
+	icon_state = "aev_base_j"
+
+/obj/vehicle/multitile/tank/aev/night
+	desc = "A giant piece of armor with a plow, you know what to do. Entrance in the back. Painted in a night-environment camo scheme."
+	icon_state = "aev_base_n"
+
 /obj/effect/vehicle_spawner/aev
 	name = "AEV Spawner"
 	icon = 'icons/obj/vehicles/tank.dmi'
@@ -81,3 +93,52 @@
 	load_hardpoints(AEV)
 	load_damage(AEV)
 	AEV.update_icon()
+
+//DESERT CAMO PRESET
+/obj/effect/vehicle_spawner/aev/desert/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/aev/desert/AEV = new(loc)
+
+	load_misc(AEV)
+	load_hardpoints(AEV)
+	handle_direction(AEV)
+	AEV.update_icon()
+
+	return AEV
+
+/obj/effect/vehicle_spawner/aev/desert/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
+	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+
+//JUNGLE CAMO PRESET
+/obj/effect/vehicle_spawner/aev/jungle/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/aev/jungle/AEV = new(loc)
+
+	load_misc(AEV)
+	load_hardpoints(AEV)
+	handle_direction(AEV)
+	AEV.update_icon()
+
+	return AEV
+
+/obj/effect/vehicle_spawner/aev/jungle/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
+	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+
+//NIGHT/URBAN CAMO PRESET
+/obj/effect/vehicle_spawner/aev/night/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/aev/night/AEV = new(loc)
+
+	load_misc(AEV)
+	load_hardpoints(AEV)
+	handle_direction(AEV)
+	AEV.update_icon()
+
+	return AEV
+
+/obj/effect/vehicle_spawner/aev/night/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
+	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+
