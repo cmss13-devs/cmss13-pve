@@ -2,233 +2,233 @@
 "aa" = (
 /obj/structure/window_frame/kutjevo,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ab" = (
 /obj/structure/girder,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ac" = (
 /obj/structure/prop/static_tank/water,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ad" = (
 /obj/structure/flora/grass/desert/heavygrass_4,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ae" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "af" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -5;
 	pixel_y = 6
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ag" = (
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ah" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ai" = (
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aj" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_4"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ak" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_8"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "al" = (
 /obj/structure/prop/dam/large_boulder/boulder1,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "am" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "an" = (
 /obj/item/tool/warning_cone{
 	pixel_y = 9
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ao" = (
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ap" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aq" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ar" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "as" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "at" = (
 /obj/structure/girder,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "au" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/corsat/marked,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "av" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aw" = (
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ax" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ay" = (
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "az" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aA" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aB" = (
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aC" = (
 /obj/structure/platform_decoration/kutjevo,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aD" = (
 /obj/structure/platform/kutjevo,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aE" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aF" = (
 /obj/structure/platform/kutjevo,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aG" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aH" = (
 /obj/structure/prop/dam/large_boulder/boulder1,
 /turf/open/desert/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aI" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aJ" = (
 /obj/structure/flora/bush/desert,
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aK" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aL" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aM" = (
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aN" = (
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aO" = (
 /obj/item/reagent_container/food/drinks/flask/canteen/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aQ" = (
 /obj/structure/prop/structure_lattice,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aR" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aS" = (
 /obj/structure/bed/bedroll{
 	dir = 4
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aT" = (
 /obj/item/trash/cigbutt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aU" = (
 /obj/item/trash/wy_mre,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aV" = (
 /obj/item/storage/firstaid/regular/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aW" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 15;
@@ -236,14 +236,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aX" = (
 /obj/structure/bed/bedroll{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aY" = (
 /obj/item/prop/colony/usedbandage{
 	dir = 5;
@@ -254,21 +254,21 @@
 	dir = 4
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "aZ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/ammo_box/magazine/misc/mre/emergency/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ba" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bb" = (
 /obj/structure/surface/table/almayer,
 /obj/item/reagent_container/food/drinks/flask/canteen/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bc" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 10;
@@ -277,13 +277,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bd" = (
 /obj/structure/bed/bedroll{
 	dir = 1
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "be" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 10;
@@ -291,7 +291,7 @@
 	randpixel = 0
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bf" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 5;
@@ -299,80 +299,80 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bg" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/prop/dam/drill{
 	layer = 3.1
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bh" = (
 /obj/structure/prop/server_equipment/broken,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bi" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 5;
 	pixel_x = 4
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bj" = (
 /obj/structure/largecrate/random/secure{
 	fill_from_loc = 1
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bk" = (
 /obj/structure/largecrate/random/case/small{
 	fill_from_loc = 1
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bl" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bm" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bp" = (
 /obj/structure/prop/server_equipment/yutani_server/broken,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bq" = (
 /obj/structure/prop/dam/van/damaged,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "br" = (
 /obj/structure/desertdam/decals/road_stop{
 	icon_state = "stop_decal5"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bs" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bt" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bu" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
@@ -382,7 +382,7 @@
 	pixel_y = -18
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bv" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 1;
@@ -392,7 +392,7 @@
 	dir = 1
 	},
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bw" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 1;
@@ -400,29 +400,29 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bx" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "by" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/buritto,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bz" = (
 /obj/structure/bed/bedroll{
 	dir = 5
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bA" = (
 /obj/item/prop/colony/usedbandage{
 	dir = 10;
 	pixel_y = 13
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bB" = (
 /obj/item/prop/colony/usedbandage{
 	dir = 5;
@@ -431,12 +431,12 @@
 	},
 /obj/item/storage/firstaid/regular/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/prop/colony/used_flare,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bD" = (
 /obj/effect/decal/ammo_casing{
 	pixel_y = 3;
@@ -452,70 +452,53 @@
 	pixel_y = -5
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bE" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bF" = (
 /obj/item/cell/apc/empty,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bG" = (
 /obj/item/trash/burger,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bH" = (
 /obj/structure/prop/dam/truck/damaged{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
-"bI" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill2_north";
-	vector_y = 5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bJ" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
-"bK" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill2_north";
-	vector_y = 5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bL" = (
 /obj/structure/prop/cash_register/broken,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bM" = (
 /obj/item/weapon/twohanded/folded_metal_chair{
 	pixel_y = 18
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/burger,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/hdr_mre,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bP" = (
 /obj/item/frame/table,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bQ" = (
 /obj/structure/prop/dam/van/damaged{
 	layer = 3.1;
@@ -523,7 +506,7 @@
 	pixel_y = -4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/broken_glass{
@@ -532,18 +515,18 @@
 	},
 /obj/structure/prop/server_equipment/broken,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bS" = (
 /obj/item/weapon/twohanded/folded_metal_chair{
 	pixel_x = -4;
 	pixel_y = 4
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bT" = (
 /obj/item/trash/hdr_mre,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/broken_glass{
@@ -551,191 +534,140 @@
 	pixel_y = -11
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bV" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bW" = (
 /obj/item/weapon/broken_bottle,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bX" = (
 /obj/item/trash/cigbutt,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bY" = (
 /obj/structure/largecrate/supply/supplies,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bZ" = (
 /obj/item/weapon/broken_glass,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ca" = (
 /obj/item/trash/buritto,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/broken_glass,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cc" = (
 /obj/item/weapon/twohanded/folded_metal_chair{
 	pixel_y = 20
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cd" = (
 /obj/item/trash/hdr_mre,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ce" = (
 /obj/item/trash/cigbutt,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/kutjevo/colony,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cg" = (
 /obj/item/trash/cheesie,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ch" = (
 /obj/item/trash/candy,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ci" = (
 /obj/item/trash/hdr_mre,
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cj" = (
 /obj/item/trash/chips,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ck" = (
 /obj/structure/platform_decoration/kutjevo,
 /obj/item/weapon/broken_bottle,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cl" = (
 /obj/structure/prop/dam/truck/damaged{
 	pixel_y = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/cigbutt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cn" = (
 /obj/item/trash/chips,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "co" = (
 /obj/item/trash/cigbutt,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cp" = (
 /obj/item/weapon/twohanded/folded_metal_chair,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/barcardine,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cr" = (
 /obj/item/weapon/broken_glass,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cs" = (
 /obj/item/trash/barcardine,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
-"ct" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_south";
-	vector_y = -5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
-"cu" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_east";
-	vector_x = 5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
-"cv" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_west";
-	vector_x = -5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
-"cw" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 8
-	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_west";
-	vector_x = -5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
-"cx" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 4
-	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_east";
-	vector_x = 5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
-"cy" = (
-/obj/structure/platform_decoration/kutjevo/rock{
-	dir = 1
-	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_east";
-	vector_x = 5
-	},
-/turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cC" = (
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cF" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "du" = (
 /obj/structure/platform/kutjevo/rock,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "dC" = (
 /obj/structure/prop/dam/truck/cargo{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "dM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "eP" = (
 /obj/structure/machinery/door_control{
 	pixel_x = -26;
@@ -744,73 +676,74 @@
 	name = "Shutters"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "eT" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "eU" = (
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill2_east";
-	vector_x = 5
+	name = "fall damage hill1_west";
+	affect_ghosts = 0;
+	vector_x = -5
 	},
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "eY" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_east";
-	vector_x = -4
+	vector_x = -5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "fg" = (
 /obj/item/tool/warning_cone{
 	pixel_y = 9
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "fi" = (
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	layer = 2.4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "fm" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill2_north";
-	vector_y = -4
+	vector_y = -5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "fD" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_south";
-	vector_y = 4
+	vector_y = 5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "fU" = (
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "gB" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill2_north";
-	vector_y = -4
+	vector_y = -5
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "hk" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "hl" = (
 /turf/closed/shuttle{
 	dir = 1;
@@ -820,19 +753,20 @@
 "hN" = (
 /obj/structure/prop/almayer/computers/sensor_computer1,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "in" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage hill1_west";
+	affect_ghosts = 0;
 	vector_x = -5
 	},
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ju" = (
 /obj/structure/prop/ice_colony/surveying_device,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "jw" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
@@ -841,69 +775,70 @@
 	icon_state = "6-9"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "jT" = (
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "kg" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_4"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "kK" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "kN" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "kR" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "lQ" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_south";
-	vector_y = -5
+	name = "fall damage hill1_west";
+	affect_ghosts = 0;
+	vector_x = -5
 	},
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "lW" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "WestRoad";
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ma" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "me" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mh" = (
 /turf/closed/wall/kutjevo/colony,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mi" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -912,13 +847,13 @@
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mx" = (
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mD" = (
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mJ" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -926,7 +861,7 @@
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mN" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -936,22 +871,22 @@
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "mT" = (
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "no" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "nq" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /turf/open/desert/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "nx" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -960,91 +895,91 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ny" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "nG" = (
 /obj/structure/window_frame/kutjevo,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "nO" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ok" = (
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
 	dir = 8
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ot" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_east";
-	vector_x = -4
+	vector_x = -5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "oE" = (
 /obj/structure/desertdam/decals/road_stop{
 	icon_state = "stop_decal5"
 	},
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "pg" = (
 /obj/item/tool/warning_cone,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "po" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "pv" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "pI" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill2_east";
-	vector_x = -4
+	vector_x = -5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "pN" = (
 /obj/structure/desertdam/decals/road_stop{
 	dir = 1;
 	icon_state = "stop_decal5"
 	},
 /turf/open/asphalt/cement_sunbleached,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "qe" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "qK" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "qP" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "qY" = (
 /obj/structure/machinery/door_control{
 	pixel_x = 26;
@@ -1054,79 +989,80 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "re" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ru" = (
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "sh" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "sP" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "th" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "tY" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_west";
-	vector_x = 4
+	vector_x = 5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "uA" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "vd" = (
 /obj/structure/cable/green{
 	icon_state = "8-10"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "vy" = (
 /turf/open/desert/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "vU" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "wm" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "wQ" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_south";
-	vector_y = -5
+	name = "fall damage hill1_west";
+	affect_ghosts = 0;
+	vector_x = -5
 	},
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "wX" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "Hill2Garage";
@@ -1134,13 +1070,13 @@
 	pixel_x = -2
 	},
 /turf/open/floor/corsat/marked,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "xe" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "xy" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -1148,116 +1084,116 @@
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "xH" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /obj/structure/bed/chair,
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "xI" = (
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "xK" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill2_north";
-	vector_y = -4
+	vector_y = -5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "yp" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "yX" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "zK" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "zU" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "As" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Ba" = (
 /obj/structure/prop/dam/drill,
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "BC" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /obj/structure/cable/green,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Fp" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_south";
-	vector_y = 4
+	vector_y = 5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "FM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Go" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
 /obj/effect/spawner/random/tool,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Gu" = (
 /obj/structure/cable/green{
 	icon_state = "8-10"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Hf" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Ib" = (
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Ie" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_west";
-	vector_x = 4
+	vector_x = 5
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "IF" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "JB" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
@@ -1266,21 +1202,21 @@
 	icon_state = "1-4"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "JS" = (
 /turf/closed/wall/kutjevo/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Kv" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
 /turf/open/floor/yellowfull,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Kx" = (
 /obj/structure/powerloader_wreckage/ft,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "KC" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -1288,26 +1224,26 @@
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "KO" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "LR" = (
 /obj/structure/prop/dam/drill{
 	layer = 3.1
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Mj" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "MF" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 4
@@ -1317,24 +1253,24 @@
 	pixel_y = 3
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "ML" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "NB" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -3;
 	pixel_y = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "NF" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "OB" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
@@ -1343,73 +1279,74 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "OJ" = (
 /obj/structure/prop/ice_colony/surveying_device/measuring_device{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Qp" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "QD" = (
 /obj/item/tool/warning_cone{
 	pixel_x = -4;
 	pixel_y = 23
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "QJ" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "QN" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill2_east";
-	vector_x = 5
+	name = "fall damage hill1_west";
+	affect_ghosts = 0;
+	vector_x = -5
 	},
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "QW" = (
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	layer = 2.4
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Sl" = (
 /obj/structure/prop/dam/crane/damaged,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Sy" = (
 /obj/structure/cable/green{
 	icon_state = "1-2";
 	layer = 2.4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "SX" = (
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Tc" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "TX" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -1419,7 +1356,7 @@
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/void,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Us" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -1428,48 +1365,48 @@
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "UE" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
 /turf/open/gm/dirt2,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "UQ" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
 /obj/item/prop/almayer/handheld1,
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "WL" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Xr" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "XD" = (
 /obj/structure/platform_decoration/kutjevo/rock,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Yv" = (
 /turf/open/floor/corsat,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "YG" = (
 /obj/structure/prop/ice_colony/ground_wire{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 "Zk" = (
 /turf/open/asphalt/cement,
-/area/lv624/ground/barrens/central_barrens)
+/area/desert_dam/exterior/valley/valley_wilderness)
 
 (1,1,1) = {"
 hl
@@ -3942,8 +3879,8 @@ xK
 fm
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -4194,8 +4131,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -4446,8 +4383,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -4698,8 +4635,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -4950,8 +4887,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 Mj
@@ -5202,8 +5139,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -5455,8 +5392,8 @@ xK
 xK
 JS
 JS
-bK
-bI
+eU
+QN
 KC
 fU
 qK
@@ -5707,8 +5644,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 as
@@ -5959,8 +5896,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 qK
@@ -6211,8 +6148,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 as
@@ -6463,8 +6400,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 as
@@ -6716,8 +6653,8 @@ xK
 xK
 JS
 JS
-bK
-bI
+eU
+QN
 KC
 as
 mD
@@ -6968,8 +6905,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 mD
 aq
@@ -7220,8 +7157,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 mD
 mD
@@ -7472,8 +7409,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 mD
@@ -7724,8 +7661,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -7976,8 +7913,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -8229,8 +8166,8 @@ xK
 xK
 JS
 JS
-bK
-bI
+eU
+QN
 KC
 fU
 fU
@@ -8481,8 +8418,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -8733,8 +8670,8 @@ xK
 xK
 JS
 JS
-bK
-bK
+eU
+eU
 sP
 fU
 fU
@@ -8985,9 +8922,9 @@ xK
 xK
 JS
 JS
-bK
-bK
-bI
+eU
+eU
+QN
 JS
 fU
 fU
@@ -20650,9 +20587,9 @@ JS
 JS
 JS
 JS
-cv
-cv
-cv
+eU
+eU
+eU
 JS
 JS
 JS
@@ -20660,14 +20597,14 @@ JS
 JS
 JS
 JS
-cv
-cv
-cv
+eU
+eU
+eU
 JS
 JS
-cv
-cv
-cv
+eU
+eU
+eU
 JS
 JS
 JS
@@ -20890,7 +20827,7 @@ JS
 JS
 JS
 JS
-cv
+eU
 JS
 mD
 mT
@@ -20898,30 +20835,30 @@ mT
 mT
 fU
 JS
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
-cv
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
 JS
 JS
 fU
@@ -21139,10 +21076,10 @@ JS
 JS
 JS
 JS
-cv
-cv
-cv
-cv
+eU
+eU
+eU
+eU
 JS
 pv
 mT
@@ -21150,30 +21087,30 @@ mT
 mT
 fU
 JS
-cv
-cv
-cv
+eU
+eU
+eU
 in
 eT
 eT
 eT
-cw
-cv
-cv
-cv
-cv
-cv
+wQ
+eU
+eU
+eU
+eU
+eU
 in
 eT
 eT
 eT
-cw
+wQ
 in
 eT
 eT
 eT
-cw
-cv
+wQ
+eU
 JS
 fU
 fU
@@ -21389,10 +21326,10 @@ JS
 JS
 JS
 JS
-cv
-cv
-cv
-cv
+eU
+eU
+eU
+eU
 in
 eT
 JS
@@ -21641,7 +21578,7 @@ JS
 JS
 JS
 JS
-cv
+eU
 in
 eT
 eT
@@ -22189,8 +22126,8 @@ JS
 JS
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -22442,7 +22379,7 @@ fU
 fU
 TX
 wQ
-ct
+eU
 JS
 JS
 fD
@@ -22694,8 +22631,8 @@ fU
 fU
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -22946,8 +22883,8 @@ JS
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -23198,8 +23135,8 @@ fU
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -23450,7 +23387,7 @@ fU
 fU
 mN
 lQ
-ct
+eU
 JS
 JS
 fD
@@ -23701,8 +23638,8 @@ mD
 mD
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -23954,7 +23891,7 @@ mD
 fU
 TX
 wQ
-ct
+eU
 JS
 JS
 fD
@@ -24206,8 +24143,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -24458,8 +24395,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -24710,8 +24647,8 @@ mD
 mD
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -24962,7 +24899,7 @@ fU
 fU
 mN
 lQ
-ct
+eU
 JS
 JS
 Fp
@@ -25213,8 +25150,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -25465,8 +25402,8 @@ mD
 ak
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -25718,7 +25655,7 @@ mD
 fU
 TX
 wQ
-ct
+eU
 JS
 JS
 fD
@@ -25970,8 +25907,8 @@ mD
 mD
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -26222,8 +26159,8 @@ mD
 mD
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -26474,8 +26411,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -26726,8 +26663,8 @@ ah
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -26978,8 +26915,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -27230,8 +27167,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -27482,8 +27419,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -27734,8 +27671,8 @@ mD
 fU
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -27986,7 +27923,7 @@ mD
 fU
 mN
 lQ
-ct
+eU
 JS
 JS
 fD
@@ -28238,7 +28175,7 @@ mD
 fU
 TX
 wQ
-ct
+eU
 JS
 JS
 fD
@@ -28490,8 +28427,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 Fp
@@ -28742,8 +28679,8 @@ fU
 aj
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 Fp
@@ -28994,7 +28931,7 @@ mD
 fU
 mN
 lQ
-ct
+eU
 JS
 JS
 fD
@@ -29245,8 +29182,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -29497,8 +29434,8 @@ ae
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -29749,8 +29686,8 @@ ae
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -30001,8 +29938,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -30254,7 +30191,7 @@ mD
 fU
 TX
 wQ
-ct
+eU
 JS
 JS
 fD
@@ -30506,8 +30443,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -30758,8 +30695,8 @@ fU
 aj
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -31010,8 +30947,8 @@ fU
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -31262,8 +31199,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -31514,8 +31451,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -31766,8 +31703,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -32018,8 +31955,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -32270,8 +32207,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -32522,8 +32459,8 @@ mD
 fU
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -32774,7 +32711,7 @@ mD
 fU
 mN
 lQ
-ct
+eU
 JS
 JS
 fD
@@ -33025,8 +32962,8 @@ mD
 mD
 aj
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -33277,8 +33214,8 @@ mD
 mD
 fU
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -33529,8 +33466,8 @@ mD
 mD
 mD
 re
-ct
-ct
+eU
+eU
 JS
 JS
 fD
@@ -33781,7 +33718,7 @@ JS
 mD
 mD
 re
-ct
+eU
 JS
 JS
 JS
@@ -34033,7 +33970,7 @@ JS
 mD
 fU
 re
-ct
+eU
 JS
 JS
 JS
@@ -34240,9 +34177,9 @@ JS
 JS
 JS
 JS
-cu
-cu
-cy
+eU
+eU
+QN
 vU
 mJ
 mD
@@ -34492,11 +34429,11 @@ JS
 JS
 JS
 JS
-cu
-cu
-cu
-cu
-cy
+eU
+eU
+eU
+eU
+QN
 vU
 vU
 vU
@@ -34747,25 +34684,25 @@ JS
 JS
 JS
 JS
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cy
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+QN
 vU
 vU
 vU
-cx
-cu
-cu
-cu
-cu
-cy
+lQ
+eU
+eU
+eU
+eU
+QN
 vU
 vU
 JS
@@ -34779,10 +34716,10 @@ JS
 vU
 vU
 vU
-cx
-cu
-cu
-cu
+lQ
+eU
+eU
+eU
 JS
 JS
 JS
@@ -35001,25 +34938,25 @@ JS
 JS
 JS
 JS
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
-cu
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
 JS
 fU
 mD
@@ -35028,11 +34965,11 @@ mD
 mD
 mD
 JS
-cu
-cu
-cu
-cu
-cu
+eU
+eU
+eU
+eU
+eU
 JS
 JS
 JS
@@ -35261,17 +35198,17 @@ JS
 JS
 JS
 JS
-cu
-cu
-cu
+eU
+eU
+eU
 JS
 JS
 JS
 JS
 JS
 JS
-cu
-cu
+eU
+eU
 JS
 fU
 fU
@@ -35280,9 +35217,9 @@ mD
 wm
 wm
 JS
-cu
-cu
-cu
+eU
+eU
+eU
 JS
 JS
 JS
