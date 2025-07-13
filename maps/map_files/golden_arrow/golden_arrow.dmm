@@ -11413,7 +11413,7 @@
 /mob/living/simple_animal/parrot{
 	desc = "A decorated and lethal warfighter, BAWWK!"
 	emote_hear = list("shouts","commands");
-	name = "Parrot A.W Parrot"
+	name = "Parrot A.W Parrott"
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
