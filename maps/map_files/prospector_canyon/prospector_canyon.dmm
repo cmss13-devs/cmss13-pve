@@ -471,9 +471,28 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/desert_dam/exterior/valley/valley_wilderness)
+"bI" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill2_east";
+	affect_ghosts = 0;
+	vector_x = 5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
 "bJ" = (
 /obj/item/prop/colony/used_flare,
 /turf/open/auto_turf/sand/layer1,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"bK" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill2_north";
+	affect_ghosts = 0;
+	vector_y = 5
+	},
+/turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "bL" = (
 /obj/structure/prop/cash_register/broken,
@@ -641,6 +660,63 @@
 "cs" = (
 /obj/item/trash/barcardine,
 /turf/open/floor/yellowfull,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"ct" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill2_north";
+	affect_ghosts = 0;
+	vector_y = 5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cu" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_south";
+	affect_ghosts = 0;
+	vector_y = -5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cv" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_south";
+	affect_ghosts = 0;
+	vector_y = -5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cw" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_east";
+	affect_ghosts = 0;
+	vector_x = 5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cx" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_east";
+	affect_ghosts = 0;
+	vector_x = 5
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cy" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_east";
+	affect_ghosts = 0;
+	vector_x = 5
+	},
+/turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cC" = (
 /obj/structure/prop/static_tank/fuel,
@@ -810,9 +886,9 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_west";
+	name = "fall damage hill1_south";
 	affect_ghosts = 0;
-	vector_x = -5
+	vector_y = -5
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -1311,9 +1387,9 @@
 	dir = 1
 	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage hill1_west";
+	name = "fall damage hill2_east";
 	affect_ghosts = 0;
-	vector_x = -5
+	vector_x = 5
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -3879,8 +3955,8 @@ xK
 fm
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -4131,8 +4207,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -4383,8 +4459,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -4635,8 +4711,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -4887,8 +4963,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 Mj
@@ -5139,8 +5215,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -5392,8 +5468,8 @@ xK
 xK
 JS
 JS
-eU
-QN
+ct
+bK
 KC
 fU
 qK
@@ -5644,8 +5720,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 as
@@ -5896,8 +5972,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 qK
@@ -6148,8 +6224,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 as
@@ -6400,8 +6476,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 as
@@ -6653,8 +6729,8 @@ xK
 xK
 JS
 JS
-eU
-QN
+ct
+bK
 KC
 as
 mD
@@ -6905,8 +6981,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 mD
 aq
@@ -7157,8 +7233,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 mD
 mD
@@ -7409,8 +7485,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 mD
@@ -7661,8 +7737,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -7913,8 +7989,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -8166,8 +8242,8 @@ xK
 xK
 JS
 JS
-eU
-QN
+ct
+bK
 KC
 fU
 fU
@@ -8418,8 +8494,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -8670,8 +8746,8 @@ xK
 xK
 JS
 JS
-eU
-eU
+ct
+ct
 sP
 fU
 fU
@@ -8922,9 +8998,9 @@ xK
 xK
 JS
 JS
-eU
-eU
-QN
+ct
+ct
+bK
 JS
 fU
 fU
@@ -11707,7 +11783,7 @@ fU
 fU
 fU
 JS
-eU
+bI
 QN
 vU
 vU
@@ -11959,11 +12035,11 @@ fU
 fU
 JS
 JS
-eU
-eU
-eU
-eU
-eU
+bI
+bI
+bI
+bI
+bI
 QN
 vU
 vU
@@ -12211,16 +12287,16 @@ wm
 wm
 JS
 JS
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
 QN
 vU
 vU
@@ -12469,19 +12545,19 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
 JS
 JS
 JS
@@ -12726,14 +12802,14 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
+bI
+bI
+bI
+bI
+bI
+bI
+bI
+bI
 JS
 JS
 JS
@@ -22126,8 +22202,8 @@ JS
 JS
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -22378,8 +22454,8 @@ JS
 fU
 fU
 TX
-wQ
-eU
+cv
+cu
 JS
 JS
 fD
@@ -22631,8 +22707,8 @@ fU
 fU
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -22883,8 +22959,8 @@ JS
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -23135,8 +23211,8 @@ fU
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -23387,7 +23463,7 @@ fU
 fU
 mN
 lQ
-eU
+cu
 JS
 JS
 fD
@@ -23638,8 +23714,8 @@ mD
 mD
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -23890,8 +23966,8 @@ ao
 mD
 fU
 TX
-wQ
-eU
+cv
+cu
 JS
 JS
 fD
@@ -24143,8 +24219,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -24395,8 +24471,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -24647,8 +24723,8 @@ mD
 mD
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -24899,7 +24975,7 @@ fU
 fU
 mN
 lQ
-eU
+cu
 JS
 JS
 Fp
@@ -25150,8 +25226,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -25402,8 +25478,8 @@ mD
 ak
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -25654,8 +25730,8 @@ mD
 mD
 fU
 TX
-wQ
-eU
+cv
+cu
 JS
 JS
 fD
@@ -25907,8 +25983,8 @@ mD
 mD
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -26159,8 +26235,8 @@ mD
 mD
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -26411,8 +26487,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -26663,8 +26739,8 @@ ah
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -26915,8 +26991,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -27167,8 +27243,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -27419,8 +27495,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -27671,8 +27747,8 @@ mD
 fU
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -27923,7 +27999,7 @@ mD
 fU
 mN
 lQ
-eU
+cu
 JS
 JS
 fD
@@ -28174,8 +28250,8 @@ mD
 mD
 fU
 TX
-wQ
-eU
+cv
+cu
 JS
 JS
 fD
@@ -28427,8 +28503,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 Fp
@@ -28679,8 +28755,8 @@ fU
 aj
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 Fp
@@ -28931,7 +29007,7 @@ mD
 fU
 mN
 lQ
-eU
+cu
 JS
 JS
 fD
@@ -29182,8 +29258,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -29434,8 +29510,8 @@ ae
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -29686,8 +29762,8 @@ ae
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -29938,8 +30014,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -30190,8 +30266,8 @@ mD
 mD
 fU
 TX
-wQ
-eU
+cv
+cu
 JS
 JS
 fD
@@ -30443,8 +30519,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -30695,8 +30771,8 @@ fU
 aj
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -30947,8 +31023,8 @@ fU
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -31199,8 +31275,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -31451,8 +31527,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -31703,8 +31779,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -31955,8 +32031,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -32207,8 +32283,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -32459,8 +32535,8 @@ mD
 fU
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -32711,7 +32787,7 @@ mD
 fU
 mN
 lQ
-eU
+cu
 JS
 JS
 fD
@@ -32962,8 +33038,8 @@ mD
 mD
 aj
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -33214,8 +33290,8 @@ mD
 mD
 fU
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -33466,8 +33542,8 @@ mD
 mD
 mD
 re
-eU
-eU
+cu
+cu
 JS
 JS
 fD
@@ -33718,7 +33794,7 @@ JS
 mD
 mD
 re
-eU
+cu
 JS
 JS
 JS
@@ -33970,7 +34046,7 @@ JS
 mD
 fU
 re
-eU
+cu
 JS
 JS
 JS
@@ -34177,9 +34253,9 @@ JS
 JS
 JS
 JS
-eU
-eU
-QN
+cw
+cw
+cy
 vU
 mJ
 mD
@@ -34429,11 +34505,11 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
-QN
+cw
+cw
+cw
+cw
+cy
 vU
 vU
 vU
@@ -34684,25 +34760,25 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-QN
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cy
 vU
 vU
 vU
-lQ
-eU
-eU
-eU
-eU
-QN
+cx
+cw
+cw
+cw
+cw
+cy
 vU
 vU
 JS
@@ -34716,10 +34792,10 @@ JS
 vU
 vU
 vU
-lQ
-eU
-eU
-eU
+cx
+cw
+cw
+cw
 JS
 JS
 JS
@@ -34938,25 +35014,25 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
+cw
 JS
 fU
 mD
@@ -34965,11 +35041,11 @@ mD
 mD
 mD
 JS
-eU
-eU
-eU
-eU
-eU
+cw
+cw
+cw
+cw
+cw
 JS
 JS
 JS
@@ -35198,17 +35274,17 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
+cw
+cw
+cw
 JS
 JS
 JS
 JS
 JS
 JS
-eU
-eU
+cw
+cw
 JS
 fU
 fU
@@ -35217,9 +35293,9 @@ mD
 wm
 wm
 JS
-eU
-eU
-eU
+cw
+cw
+cw
 JS
 JS
 JS
@@ -45673,7 +45749,7 @@ fU
 fU
 mD
 mD
-ah
+mD
 mD
 ag
 mD
@@ -56996,7 +57072,7 @@ mD
 JS
 mD
 JS
-mD
+JS
 mD
 mD
 mD
