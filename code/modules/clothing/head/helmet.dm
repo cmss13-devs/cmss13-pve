@@ -814,8 +814,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "M10 combat helmet issued to marine hospital corpsmen. Has a red cross painted on its front for attracting the injured and snipers' attentions alike."
 	icon_state = "med_helmet"
 	specialty = "M10 pattern medic"
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
 
 /obj/item/clothing/head/helmet/marine/medic/white
 	name = "\improper M10 white corpsman helmet"
@@ -928,8 +927,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	unacidable = TRUE
 
 /obj/item/clothing/head/helmet/upp/marinepilot //just so it uses the wide overlay for garbs
-	name = "\improper Mk30 tactical helmet"
-	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time."
+	name = "\improper MK30 tactical helmet"
+	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Drop-down polarized visor allows for augmented reality effects, giving relevant data in real time."
 	icon_state = "helmetp"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
@@ -937,13 +936,15 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
-	specialty = "M30 tactical"
+	built_in_visors = list(new /obj/item/device/helmet_visor/po_visor)
+	specialty = "MK30 tactical"
 
 /obj/item/clothing/head/helmet/upp/marinepilot/tex
 	name = "\improper custom Mk30 tactical helmet"
-	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Eyepiece allows for augmented reality effects, giving relevant data in real time. This one has the Texan flag painted on it."
+	desc = "Standard flight helmet of the UA treaty forces. Probably one of the few good things that came out of the Joint Procurement Office. Drop-down polarized visor allows for augmented reality effects, giving relevant data in real time. This one has the Texan flag painted on it."
 	icon_state = "helmetp_tex"
 	item_state = "helmetp_tex"
+	built_in_visors = list(new /obj/item/device/helmet_visor/po_visor/lightblue)
 
 /obj/item/clothing/head/helmet/marine/ghillie
 	name = "\improper M10 ghillie helmet"
@@ -976,7 +977,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "mp_helmet"
 	item_state = "mp_helmet"
 	specialty = "M10 pattern military police"
-	built_in_visors = list(new /obj/item/device/helmet_visor)
+	built_in_visors = list(new /obj/item/device/helmet_visor/security)
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/head/helmet/marine/MP/WO
@@ -1352,7 +1353,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			return
 
 		inserted_visors += new_visor
-		to_chat(user, SPAN_NOTICE("You connect [new_visor] to [src]."))
+		to_chat(user, SPAN_NOTICE("You connect [new_visor] to the [src]."))
 		new_visor.forceMove(src)
 		if(!(locate(/datum/action/item_action/cycle_helmet_huds) in actions))
 			var/datum/action/item_action/cycle_helmet_huds/new_action = new(src)
@@ -1921,15 +1922,15 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
 	name = "\improper MK25 para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/navy
 	name = "\improper M12 pattern naval-deployment helmet"
-	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
-	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical
+	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship."
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/army
