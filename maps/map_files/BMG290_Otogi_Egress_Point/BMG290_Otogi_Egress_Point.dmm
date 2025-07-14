@@ -1,4 +1,20 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/lz_sign/otogi,
+/turf/open/asphalt/cement,
+/area/bmg290/wilderness/colony_exterior)
+"aab" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/lz_sign/otogi/blacksite{
+	pixel_y = 12;
+	density = 0
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/bmg290/keppitz/hangar)
+"aac" = (
+/obj/structure/inflatable,
+/turf/open/floor/cult/cult_engineer,
+/area/bmg290/caverns/site_caves)
 "aan" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/prison/floor_plate,
@@ -4084,7 +4100,7 @@
 "bXV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/asphalt/cement,
 /area/bmg290/wilderness/road)
 "bXW" = (
@@ -14446,7 +14462,7 @@
 	pixel_x = -6;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -15170,7 +15186,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/surface/table/holotable{
 	color = "#424a50"
 	},
@@ -17294,7 +17310,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iaQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 6;
 	pixel_y = 0
 	},
@@ -18995,7 +19011,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "iOX" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = 5;
 	pixel_y = 6
 	},
@@ -19570,7 +19586,7 @@
 	pixel_x = 9;
 	pixel_y = -1
 	},
-/obj/item/storage/box/wy_mre{
+/obj/item/storage/box/mre/wy{
 	pixel_x = -2;
 	pixel_y = -14
 	},
@@ -20624,7 +20640,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/maintenance_jack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/keppitz/entry_pub)
 "jCX" = (
@@ -21829,17 +21845,17 @@
 /turf/open/floor/prison,
 /area/bmg290/colony/logistics)
 "khN" = (
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
 	name = "long-life foodstuff storage"
 	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
 /obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
@@ -23938,7 +23954,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/bmg290/caverns/cave_west)
 "lkY" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -27818,7 +27834,7 @@
 /obj/structure/machinery/door/window{
 	dir = 8
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics)
 "neT" = (
@@ -33513,17 +33529,6 @@
 	},
 /turf/open/floor/white,
 /area/bmg290/colony/complex)
-"pJN" = (
-/obj/structure/stairs/perspective{
-	color = "#5f5b54";
-	icon_state = "p_stair_full";
-	dir = 4
-	},
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 1;
-	color = "#5f5b54"
-	},
-/area/bmg290/site/discovered)
 "pJV" = (
 /obj/structure/machinery/computer/cameras/wooden_tv{
 	desc = "An old TV hooked up to a video cassette recorder, you can even use it to time shift WOW.";
@@ -33541,25 +33546,25 @@
 	pixel_x = 2;
 	pixel_y = 17
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -7;
 	pixel_y = -5;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -11;
 	pixel_y = 7;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = 10;
 	pixel_y = 0;
 	name = "token";
 	desc = "Something to lead you riches. By 0.34% chance at a time!"
 	},
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -9;
 	pixel_y = 10;
 	name = "token";
@@ -39549,6 +39554,7 @@
 /area/bmg290/wilderness/colony_exterior)
 "sBg" = (
 /obj/structure/inflatable,
+/turf/open/floor/kutjevo/grey,
 /area/bmg290/caverns/site_caves)
 "sBj" = (
 /obj/structure/largecrate/random/barrel/true_random{
@@ -39690,17 +39696,6 @@
 "sGc" = (
 /turf/open/floor/almayer/empty,
 /area/bmg290/site/undiscovered)
-"sGd" = (
-/obj/structure/stairs/perspective{
-	color = "#5f5b54";
-	icon_state = "p_stair_full";
-	dir = 8
-	},
-/obj/structure/platform/mineral/sandstone/runed{
-	dir = 1;
-	color = "#5f5b54"
-	},
-/area/bmg290/site/discovered)
 "sGh" = (
 /turf/open/auto_turf/shale/layer0_plate,
 /area/bmg290/site/discovered)
@@ -41492,7 +41487,7 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/misc/mre/empty,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/strata/fake_wood,
 /area/bmg290/wilderness/beach)
 "tCN" = (
@@ -45277,7 +45272,7 @@
 	density = 0;
 	pixel_y = 18
 	},
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/prison/floor_plate,
 /area/bmg290/colony/logistics_hub)
 "vCB" = (
@@ -45286,7 +45281,7 @@
 "vCO" = (
 /obj/structure/surface/table/almayer,
 /obj/item/trash/USCMtray,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /turf/open/floor/interior/wood/alt,
 /area/bmg290/wilderness/beach)
 "vCR" = (
@@ -47872,7 +47867,7 @@
 /area/bmg290/wilderness/road)
 "wIM" = (
 /obj/item/weapon/gun/launcher/grenade/m81,
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
 /obj/item/clothing/mask/gas,
@@ -70190,7 +70185,7 @@ nTn
 nTn
 mny
 mny
-sBg
+aac
 clS
 clS
 rbo
@@ -91022,7 +91017,7 @@ xFj
 xFj
 xFj
 etT
-sGd
+iGT
 dsS
 dsS
 dsS
@@ -93740,7 +93735,7 @@ xFj
 xFj
 xFj
 etT
-pJN
+gpw
 iVz
 wBG
 rxd
@@ -97488,7 +97483,7 @@ uwg
 ojO
 lqy
 ojO
-bqK
+aab
 akS
 epS
 ojO
@@ -120263,7 +120258,7 @@ gSN
 bED
 ujG
 ujG
-pCj
+aaa
 lWz
 jbL
 jbL

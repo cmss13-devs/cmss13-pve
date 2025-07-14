@@ -323,7 +323,7 @@
 /area/fiorina/station/security)
 "nf" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "nl" = (
@@ -392,7 +392,7 @@
 /turf/closed/wall/r_wall/prison,
 /area/fiorina/station/security)
 "pp" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/prison,
 /area/fiorina/station/security)
 "pE" = (
@@ -895,7 +895,7 @@
 /turf/open/floor/prison/cell_stripe/west,
 /area/fiorina/lz/near_lzII)
 "JR" = (
-/obj/item/ammo_casing,
+/obj/effect/decal/ammo_casing,
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "Kb" = (

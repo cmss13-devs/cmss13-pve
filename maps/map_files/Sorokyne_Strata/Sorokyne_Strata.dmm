@@ -482,7 +482,7 @@
 "adm" = (
 /obj/structure/bed/nest,
 /obj/effect/decal/cleanable/blood/gibs/core,
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/ag/interior/outpost/gen/bball/nest)
 "adn" = (
@@ -9100,7 +9100,7 @@
 /area/strata/ag/interior/disposals)
 "bAA" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/administration)
 "bAM" = (
@@ -10074,7 +10074,7 @@
 /turf/open/floor/interior/plastic,
 /area/strata/ag/interior/outpost/canteen)
 "bZc" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/floor/strata/floor2,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "bZe" = (
@@ -16324,7 +16324,7 @@
 	dir = 8
 	},
 /obj/item/stack/folding_barricade,
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "hAc" = (
@@ -16341,7 +16341,7 @@
 /turf/open/floor/strata/white_cyan1/east,
 /area/strata/ag/interior/dorms/canteen)
 "hAF" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/strata/white_cyan1/east,
 /area/strata/ag/interior/outpost/canteen/bar)
@@ -20768,7 +20768,7 @@
 /turf/open/floor/strata/orange_tile,
 /area/strata/ag/interior/dorms)
 "lHI" = (
-/obj/item/storage/box/nade_box/tear_gas,
+/obj/item/ammo_box/magazine/nade_box/ltl/tear_gas,
 /obj/structure/closet/secure_closet/security/soro,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
@@ -25062,7 +25062,7 @@
 /area/strata/ag/exterior/nearlz2)
 "pKy" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
@@ -25184,7 +25184,7 @@
 /area/strata/ug/interior/jungle/platform/east/scrub)
 "pQO" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/wy_mre,
+/obj/item/storage/box/mre/wy,
 /obj/item/tool/crowbar,
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -26548,7 +26548,7 @@
 /turf/open/floor/strata/purp2,
 /area/strata/ug/interior/jungle/deep/structures/engi)
 "qYZ" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/auto_turf/ice/layer1,
 /area/strata/ag/exterior/paths/southresearch)
@@ -29824,7 +29824,7 @@
 /obj/effect/landmark/wo_supplies/storage/belts/medical,
 /obj/item/dogtag,
 /obj/item/clothing/suit/armor/riot,
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/ag/interior/outpost/admin)
 "udB" = (
@@ -31963,8 +31963,8 @@
 /area/strata/ag/interior/nearlz1)
 "wex" = (
 /obj/structure/surface/rack,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot/upp,
 /turf/open/floor/strata/floor3,
 /area/strata/ag/interior/outpost/engi)
@@ -32098,7 +32098,7 @@
 /turf/open/floor/strata/white_cyan2/west,
 /area/strata/ag/interior/outpost/admin)
 "wjs" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /obj/structure/surface/rack,
 /obj/item/ammo_magazine/rifle/type71,
 /obj/item/ammo_magazine/rifle/type71,
@@ -32313,7 +32313,7 @@
 "wuD" = (
 /obj/structure/surface/rack,
 /obj/item/stack/folding_barricade,
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /turf/open/floor/strata/red1,
 /area/strata/ag/interior/outpost/security)
 "wuI" = (
@@ -33846,7 +33846,7 @@
 /turf/open/auto_turf/snow/brown_base/layer0,
 /area/strata/ag/interior/outpost/gen/bball/nest)
 "xSI" = (
-/obj/item/weapon/gun/rifle/type71/carbine,
+/obj/item/weapon/gun/rifle/type71,
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/strata/ag/interior/outpost/gen/bball/nest)

@@ -687,6 +687,7 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	name = "Mk-214 Tactical Atomic Demolition Munition"
 	desc = "A packed-up TADM awaiting deployment to bring some serious pain. Includes the console and arming keys for the warhead."
 	w_class = SIZE_LARGE
+	unacidable = TRUE
 	flags_equip_slot = SLOT_BACK
 	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
 	icon_state = "admpacked"

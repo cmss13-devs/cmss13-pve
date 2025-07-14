@@ -104,7 +104,7 @@
 /datum/supply_packs/explosives_hedp
 	name = "M40 HEDP blast grenade box crate (x25)"
 	contains = list(
-		/obj/item/storage/box/nade_box,
+		/obj/item/ammo_box/magazine/nade_box,
 	)
 	cost = 100
 	containertype = /obj/structure/closet/crate/explosives
@@ -125,7 +125,7 @@
 /datum/supply_packs/explosives_M40_CCDP_crate
 	name = "M40 WPDP chemical compund grenade box crate (x25)"
 	contains = list(
-		/obj/item/storage/box/nade_box/phophorus,
+		/obj/item/ammo_box/magazine/nade_box/phophorus,
 	)
 	cost = 100
 	containertype = /obj/structure/closet/crate/explosives
@@ -141,14 +141,4 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/explosives
 	containername = "\improper explosive M40 HEFA grenades crate (WARNING)"
-	group = "Explosives"
-
-/datum/supply_packs/explosives_hefa
-	name = "M40 HEFA fragmentation grenade box crate (x25)"
-	contains = list(
-		/obj/item/storage/box/nade_box/frag,
-	)
-	cost = 100
-	containertype = /obj/structure/closet/crate/explosives
-	containername = "\improper explosive HEFA grenade crate (WARNING)"
 	group = "Explosives"

@@ -393,6 +393,12 @@
 				if("Xeno Status HUD")
 					H = GLOB.huds[MOB_HUD_XENO_STATUS]
 					H.add_hud_to(src, src)
+				if("Faction US Army HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_ARMY]
+					H.add_hud_to(src, src)
+				if("Faction USASF HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_NAVY]
+					H.add_hud_to(src, src)
 				if("Faction UPP HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_UPP]
 					H.add_hud_to(src, src)
@@ -866,7 +872,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	var/dat = GLOB.data_core.get_manifest()
 
-	show_browser(src, dat, "Crew Manifest", "manifest", "size=450x750")
+	show_browser(src, dat, "Crew Manifest", "manifest", width = 450, height = 750)
 
 /mob/dead/verb/hive_status()
 	set name = "Hive Status"

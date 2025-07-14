@@ -1,0 +1,17 @@
+author: "Drathek Harry Kashargul ItsMeow Nivrak"
+delete-after: True
+changes:
+  - code_imp: "TGUI topics are now chunked for 516"
+  - code_imp: "Chat saving to indexdb is reworked"
+  - rscadd: "there's now a new tgui scale option in settings for people with high dpi monitors using windows scaling that allows you to toggle between having windows be larger but their contents the correct size, or having windows be the normal size but their contents shrunk down"
+  - bugfix: "people with a different windows scaling option than 100% on 516 can drag windows normally again"
+  - bugfix: "numberInput works properly again with mouse movement"
+  - bugfix: "the chat will no longer init before settings are loaded"
+  - qol: "chat settings can be in / exported"
+  - qol: "chat tabs can be reordered"
+  - bugfix: "chat export"
+  - qol: "people with window scaling that is greater or less than 100% will now have windows scale, appropriate to the \"window scaling\" option in settings"
+  - bugfix: "Fixed TGUI assets and icons sometimes not showing up until you refreshed the page on 516 clients"
+  - bugfix: "Fixed browsers sometimes not handling a mob passed instead of a client (VV bitfields & tickets atleast)"
+  - rscadd: "Chat Reliability Layer"
+  - code_imp: "TGUI chat messages now track their sequence and will be resent if the client notices a discrepenency"

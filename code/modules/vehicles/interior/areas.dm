@@ -33,8 +33,28 @@
 	name = "\improper M579 ADS-C interior"
 	icon_state = "apc_aa"
 
+/area/interior/vehicle/apc/movie/med
+	name = "\improper M577A5 ATV interior"
+	icon_state = "apc_medical"
+
 /area/interior/vehicle/van
 	name = "van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/box_van
+	name = "box-van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/pizza_van
+	name = "pizza-van interior"
+	icon_state = "van"
+
+/area/interior/vehicle/ambulance
+	name = "ambulance interior"
+	icon_state = "van"
+
+/area/interior/vehicle/copcar
+	name = "cop-car interior"
 	icon_state = "van"
 
 /area/interior/vehicle/arc

@@ -21,11 +21,11 @@
 	listed_products = list(
 
 			list("FOOD AND BEVERAGE", -1, null, null),
-			list("MRE", 25, /obj/item/storage/box/MRE, VENDOR_ITEM_REGULAR),
+			list("MRE", 25, /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
 			list("Water Bottle", 25, /obj/item/reagent_container/food/drinks/cans/waterbottle, VENDOR_ITEM_REGULAR),
 
 			list("UTILITY", -1, null, null),
-			list("M94 Marking Flare Pack", 5, /obj/item/storage/box/m94, VENDOR_ITEM_REGULAR),
+			list("M94 Marking Flare Pack", 5, /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 			list("M5 Bayonet", 8, /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 			list("Handheld Radio", 5, /obj/item/device/radio, VENDOR_ITEM_REGULAR),
 			list("deck of UNO cards", 5, /obj/item/toy/deck/uno, VENDOR_ITEM_REGULAR),

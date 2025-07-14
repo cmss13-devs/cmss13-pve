@@ -464,6 +464,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	icon_state = "bone_resin"
 	walltype = WALL_BONE_RESIN
 	hull = 1
+	unacidable = TRUE
 	desc = "A wall made of molted old resin. This place is more alive than you are."
 
 /turf/closed/wall/mineral/bone/is_weedable()
@@ -761,6 +762,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	blend_turfs = list(/turf/closed/wall/resin)
 	blend_objects = list(/obj/structure/mineral_door/resin)
 	repair_materials = list()
+	unacidable = TRUE
 	var/hivenumber = XENO_HIVE_NORMAL
 	var/should_track_build = FALSE
 	var/datum/cause_data/construction_data
@@ -810,6 +812,7 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	damage_cap = HEALTH_WALL_XENO_THICK
 	icon_state = "thickresin"
 	walltype = WALL_THICKRESIN
+	unacidable = TRUE
 
 /turf/closed/wall/resin/tutorial
 	name = "tutorial resin wall"

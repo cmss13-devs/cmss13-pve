@@ -17,37 +17,6 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 
 
 /////////////////////////////
-//         OBJECTS         //
-/////////////////////////////
-/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
-	. = ..()
-	if(!.)
-		return
-
-	if(!density)
-		return 0
-
-	if((unslashable || isfacehugger(X)) && !climbable)
-		return
-
-	return OBJECT_PENALTY
-
-/obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(unslashable || indestructible || (climbable && islurker(X)))
-		if(!X.action_busy)
-			do_climb(X)
-		return
-
-	return ..()
-
-/obj/structure/machinery/xeno_ai_act(mob/living/carbon/xenomorph/X)
-	if(stat & TIPPED_OVER)
-		return
-
-	return ..()
-
-
-/////////////////////////////
 //       MINERAL DOOR      //
 /////////////////////////////
 /obj/structure/mineral_door/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
@@ -153,7 +122,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
 //	if(X.target_unconscious)
 //		return TRUE
-	return X.target_unconscious || stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
+	return stat == CONSCIOUS && (!(locate(/datum/effects/crit) in effects_list) || !(status_flags & CANKNOCKOUT))
 
 /////////////////////////////
 //         CARBON          //
@@ -270,6 +239,25 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /////////////////////////////
 //       STRUCTURE         //
 /////////////////////////////
+/obj/structure/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	if(!density)
+		return 0
+
+	if((unslashable || isfacehugger(X)) && !climbable)
+		return
+
+	return OBJECT_PENALTY
+
+/obj/structure/machinery/xeno_ai_act(mob/living/carbon/xenomorph/X)
+	if(stat & TIPPED_OVER)
+		return
+
+	return ..()
+
 /// Allows this xenomorph to climb most structures that can be climbed, if they are capable of it.
 /obj/structure/xeno_ai_act(mob/living/carbon/xenomorph/X)
 	if(X.ai_movement_handler.do_climb_structures && can_climb(X))

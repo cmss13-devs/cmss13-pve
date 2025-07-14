@@ -158,6 +158,11 @@
 	color = "#8B9490";
 	pixel_x = 3
 	},
+/obj/item/device/multitool/upp,
+/obj/item/device/multitool/upp{
+	pixel_x = 6;
+	pixel_y = -2
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "az" = (
@@ -1385,20 +1390,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Section Sergeant";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1443,21 +1443,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/prop/magazine/book/littleredbook,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1555,16 +1550,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Corpsman";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -1573,6 +1559,10 @@
 	dir = 4;
 	pixel_y = 10;
 	pixel_x = -13
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -7;
+	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1611,15 +1601,6 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Sergeant";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -1628,6 +1609,10 @@
 	dir = 4;
 	pixel_y = 10;
 	pixel_x = 11
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1679,20 +1664,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Squad Sergeant";
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1727,21 +1707,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	job = "Smartgunner";
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -1828,15 +1803,11 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/prop/magazine/book/littleredbook,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "ep" = (
@@ -1844,14 +1815,10 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = 8;
-	can_block_movement = 0
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
 "eq" = (
@@ -1878,10 +1845,10 @@
 /obj/item/reagent_container/food/drinks/dry_ramen{
 	randpixel = 12
 	},
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
-/obj/item/reagent_container/food/snacks/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
+/obj/item/storage/box/mre/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10;
@@ -2032,19 +1999,15 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = -7;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -2060,24 +2023,16 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "eF" = (
-/obj/structure/closet/secure_closet/marine_personal{
-	pixel_y = 14;
-	job = "Platoon Commander";
-	can_block_movement = 0;
-	has_cryo_gear = 0
-	},
-/obj/item/clothing/accessory/patch/upp/naval,
-/obj/item/clothing/accessory/patch/upp,
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
-/obj/item/clothing/under/marine/veteran/UPP/naval,
-/obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
 /obj/structure/pipes/standard/manifold/visible/supply{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
+	can_block_movement = 0;
+	pixel_y = 10
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
@@ -2104,20 +2059,16 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
-/obj/structure/closet/secure_closet/marine_personal{
-	has_cryo_gear = 0;
-	pixel_x = 8;
-	can_block_movement = 0
-	},
-/obj/item/clothing/shoes/marine/upp,
-/obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/weapon/butterfly,
-/obj/item/device/radio/headset/almayer/marine/solardevils/upp,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/cryo_cells)
@@ -2527,6 +2478,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/vending/cigarette/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/canteen)
 "fO" = (
@@ -4036,7 +3988,6 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/platoon_commander_rooms)
 "jg" = (
-/obj/item/clothing/suit/storage/marine/veteran/lamp,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
 	req_one_access_txt = "240";
@@ -4051,6 +4002,7 @@
 	faction = "UPP"
 	},
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "ji" = (
@@ -4439,28 +4391,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
-"kb" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/obj/item/device/overwatch_camera,
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "kc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -4500,6 +4430,10 @@
 	light_range = 5
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/misc/mre/upp{
+	pixel_y = 10;
+	pixel_x = 3
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "ke" = (
@@ -4869,10 +4803,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ld" = (
@@ -4919,10 +4853,10 @@
 	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/storage/marine/smartgunner/upp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ll" = (
@@ -4988,6 +4922,7 @@
 	color = "#8B9490"
 	},
 /obj/item/roller,
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "lu" = (
@@ -5092,43 +5027,19 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/medical)
 "lG" = (
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/structure/closet/crate/secure/upp,
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp{
-	color = "#8B795C"
-	},
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lH" = (
@@ -5192,22 +5103,10 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "lN" = (
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
-/obj/item/storage/box/packet/high_explosive/upp/impact{
-	color = "#8B795C"
-	},
 /obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "lP" = (
@@ -5226,9 +5125,10 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
-/obj/item/storage/box/packet/high_explosive/upp/smoke,
+/obj/item/ammo_box/magazine/nade_box/upp/smoke,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lT" = (
@@ -8130,6 +8030,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
+/obj/item/storage/box/flare/upp,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "CN" = (
@@ -20810,7 +20711,7 @@ kl
 kl
 kx
 kn
-kb
+jY
 jU
 jI
 jw

@@ -1,32 +1,28 @@
 #define M2C_SETUP_TIME (0.2 SECONDS)
-#define M2C_OVERHEAT_CRITICAL 25
-#define M2C_OVERHEAT_BAD 14
-#define M2C_OVERHEAT_OK 4
 #define M2C_OVERHEAT_DAMAGE 30
 #define M2C_LOW_COOLDOWN_ROLL 0.3
 #define M2C_HIGH_COOLDOWN_ROLL 0.45
 #define M2C_PASSIVE_COOLDOWN_AMOUNT 4
-#define M2C_OVERHEAT_OVERLAY 14
 #define M2C_CRUSHER_STUN 3 //amount in ticks (roughly 3 seconds)
 
 /*M2C HEAVY MACHINEGUN AND ITS COMPONENTS */
 // AMMO
 /obj/item/ammo_magazine/m2c
-	name = "M2C Ammunition Box (10x28mm tungsten rounds)"
-	desc = "A box of 125, 10x28mm tungsten rounds for the M2 Heavy Machinegun System. Click the heavy machinegun while there's no ammo box loaded to reload the M2C."
-	caliber = "10x28mm"
+	name = "M2C Ammunition Box (.50 BMG rounds)"
+	desc = "A box of 150 .50 BMG rounds for the M2 Heavy Machinegun System. Click the heavy machinegun while there's no ammo box loaded to reload the M2C."
+	caliber = ".50"
 	w_class = SIZE_LARGE
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "m56de"
 	item_state = "m56de"
-	max_rounds = 125
+	max_rounds = 150
 	default_ammo = /datum/ammo/bullet/machinegun/auto
 	gun_type = null
 
 //STORAGE BOX FOR THE MACHINEGUN
 /obj/item/storage/box/m56d/m2c
 	name = "\improper M2C Assembly-Supply Crate"
-	desc = "A large case labelled 'M2C, 10x28mm caliber heavy machinegun', seems to be fairly heavy to hold. contains a deadly M2C Heavy Machinegun System and its ammunition."
+	desc = "A large case labelled 'M2C, .50 BMG caliber heavy machinegun', seems to be fairly heavy to hold. Contains a deadly M2C Heavy Machinegun System and its ammunition."
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56D_case"
 	w_class = SIZE_HUGE
@@ -44,6 +40,7 @@
 /obj/item/device/m2c_gun
 	name = "\improper M2C heavy machine gun"
 	desc = "The disassembled M2C HMG, with its telescopic tripods folded up and unable to fire."
+	desc_lore = "Initially requested by the Department of Defense to substantially reinforce Colonial Guard units with high-caliber weaponry for a cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ole' corruption. If you're a marine and somehow found it and for some reason decided to use it... well, you better reconsider, since this thing has NO place on the modern battlefield. It requires being in a static position, takes up valuable kit space and isn't really much better than modern 10x28 caliber machineguns. Seriously, its 2182, just use a smartgun."
 	w_class = SIZE_HUGE
 	flags_equip_slot = SLOT_BACK
 	icon = 'icons/turf/whiskeyoutpost.dmi'
@@ -72,7 +69,7 @@
 
 	icon_state = icon_name
 
-/obj/item/device/m2c_gun/proc/check_can_setup(mob/user, turf/rotate_check, turf/open/OT, list/ACR)
+/obj/item/device/m2c_gun/proc/check_can_setup(mob/user, turf/rotate_check, turf/open/OT)
 	if(!ishuman(user) && !HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
 		return FALSE
 	if(broken_gun)
@@ -91,9 +88,7 @@
 		if(potential_blocker.density)
 			to_chat(user, SPAN_WARNING("You can't set up \the [src] that way, there's \a [potential_blocker] behind you!"))
 			return FALSE
-	if((locate(/obj/structure/barricade) in ACR) || (locate(/obj/structure/window_frame) in ACR) || (locate(/obj/structure/window) in ACR) || (locate(/obj/structure/windoor_assembly) in ACR))
-		to_chat(user, SPAN_WARNING("There are barriers nearby, you can't set up \the [src] here!"))
-		return FALSE
+
 	var/fail = FALSE
 	for(var/obj/X in OT.contents - src)
 		if(istype(X, /obj/structure/machinery/defenses))
@@ -109,10 +104,6 @@
 		to_chat(user, SPAN_WARNING("You can't install \the [src] here, something is in the way."))
 		return FALSE
 
-
-	if(!(user.alpha > 60))
-		to_chat(user, SPAN_WARNING("You can't set this up while cloaked!"))
-		return FALSE
 	return TRUE
 
 
@@ -120,15 +111,14 @@
 	..()
 	var/turf/rotate_check = get_step(user.loc, turn(user.dir, 180))
 	var/turf/open/OT = usr.loc
-	var/list/ACR = range(anti_cadehugger_range, user.loc)
 
-	if(!check_can_setup(user, rotate_check, OT, ACR))
+	if(!check_can_setup(user, rotate_check, OT))
 		return
 
 	if(!do_after(user, M2C_SETUP_TIME, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 		return
 
-	if(!check_can_setup(user, rotate_check, OT, ACR))
+	if(!check_can_setup(user, rotate_check, OT))
 		return
 
 	var/obj/structure/machinery/m56d_hmg/auto/HMG = new(user.loc)
@@ -182,14 +172,15 @@
 // MACHINEGUN, AUTOMATIC
 /obj/structure/machinery/m56d_hmg/auto
 	name = "\improper M2C Heavy Machinegun"
-	desc = "A deployable, heavy machine gun. The M2C 'Chimp' HB is a modified M2 HB reconfigured to fire 10x28 Caseless Tungsten rounds for USCM use. It is capable of recoilless fire and fast-rotating. However it has a debilitating overheating issue due to the poor quality of metals used in the parts, forcing it to be used in decisive, crushing engagements as a squad support weapon. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines."
+	desc = "A deployable, heavy machine gun. The M2C is a modified M2 HB made with contemporary materials. It is capable of recoilless fire and fast-rotating. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>"
+	desc_lore = "Initially requested by DOD to substantially reinforce Colonial Guard units with high-caliber weaponry for cheap price, this mean killing machine soon found its way into hands of mercenaries, colonists and rebels by the means of warehouse raiding or plain ol' corruption. If you're a marine and somehow found it and for some reason decided to use it... better reconsider, since this thing has NO place on the modern battlefield, requiring static position, taking up valuable kit space and not really being much better than modern 10x28 caliber machineguns. Seriously, its 2182, just let it go."
 	icon = 'icons/turf/whiskeyoutpost.dmi'
 	icon_state = "M56DE"
 	icon_full = "M56DE"
 	icon_empty = "M56DE_e"
-	rounds_max = 125
+	rounds_max = 150
 	ammo = /datum/ammo/bullet/machinegun/auto
-	fire_delay = 0.1 SECONDS
+	fire_delay = 2.5
 	var/grip_dir = null
 	var/fold_time = 1.5 SECONDS
 	var/repair_time = 5 SECONDS
@@ -197,8 +188,7 @@
 	health = 230
 	health_max = 230
 	display_ammo = FALSE
-	var/list/cadeblockers = list()
-	var/cadeblockers_range = 1
+	iff_allowed = FALSE
 
 	var/static/image/barrel_overheat_image
 	var/has_barrel_overlay = FALSE
@@ -208,7 +198,7 @@
 
 	// OVERHEAT MECHANIC VARIABLES
 	var/overheat_value = 0
-	var/overheat_threshold = 40
+	var/overheat_threshold = 200
 	var/emergency_cooling = FALSE
 	var/overheat_text_cooldown = 0
 	var/force_cooldown_timer = 10
@@ -225,39 +215,18 @@
 	west_x_offset = 0
 	west_y_offset = 12
 
-// ANTI-CADE EFFECT, CREDIT TO WALTERMELDRON
+// ANTI-CADE EFFECT, CREDIT TO WALTERMELDRON //your services are no longer needed
 
 /obj/structure/machinery/m56d_hmg/auto/Initialize()
 	. = ..()
-	for(var/turf/T in range(cadeblockers_range, src))
-		var/obj/structure/blocker/anti_cade/CB = new(T)
-		CB.hmg = src
-
-		cadeblockers.Add(CB)
-
 	if(!barrel_overheat_image)
 		barrel_overheat_image = image('icons/turf/whiskeyoutpost.dmi', "+m56de_overheat")
 
-/obj/structure/machinery/m56d_hmg/auto/Destroy()
-	QDEL_NULL_LIST(cadeblockers)
-	return ..()
-
 /obj/structure/machinery/m56d_hmg/auto/process()
-
-	var/mob/user = operator
 	overheat_value -= M2C_PASSIVE_COOLDOWN_AMOUNT
 	if(overheat_value <= 0)
 		overheat_value = 0
 		STOP_PROCESSING(SSobj, src)
-
-	if(overheat_value >= M2C_OVERHEAT_CRITICAL)
-		to_chat(user, SPAN_HIGHDANGER("[src]'s barrel is critically hot, it might start melting at this rate."))
-	else if(overheat_value >= M2C_OVERHEAT_BAD)
-		to_chat(user, SPAN_DANGER("[src]'s barrel is terribly hot, but is still able to fire."))
-	else if(overheat_value  >= M2C_OVERHEAT_OK)
-		to_chat(user, SPAN_DANGER("[src]'s barrel is pretty hot, although it's still stable."))
-	else if (overheat_value > 0)
-		to_chat(user, SPAN_WARNING("[src]'s barrel is mildly warm."))
 
 	update_icon()
 
@@ -287,7 +256,6 @@
 
 /obj/structure/blocker/anti_cade/Destroy()
 	if(hmg)
-		hmg.cadeblockers.Remove(src)
 		hmg = null
 
 	return ..()
@@ -298,7 +266,7 @@
 	else
 		icon_state = "[icon_full]"
 
-	if(overheat_value >= M2C_OVERHEAT_OVERLAY)
+	if(overheat_value >= (overheat_threshold / 2))
 		if(has_barrel_overlay)
 			return
 		overlays += barrel_overheat_image
@@ -435,7 +403,7 @@
 // TOGGLE MODE
 
 /obj/structure/machinery/m56d_hmg/auto/clicked(mob/user, list/mods, atom/A)
-	if (mods["ctrl"])
+	if (mods[CTRL_CLICK])
 		if(operator != user)
 			return ..()
 		if(!CAN_PICKUP(user, src))
@@ -589,13 +557,9 @@
 		rotate_to(user, target)
 		return TRUE
 
-#undef M2C_OVERHEAT_CRITICAL
-#undef M2C_OVERHEAT_BAD
-#undef M2C_OVERHEAT_OK
 #undef M2C_SETUP_TIME
 #undef M2C_OVERHEAT_DAMAGE
 #undef M2C_LOW_COOLDOWN_ROLL
 #undef M2C_HIGH_COOLDOWN_ROLL
 #undef M2C_PASSIVE_COOLDOWN_AMOUNT
-#undef M2C_OVERHEAT_OVERLAY
 #undef M2C_CRUSHER_STUN

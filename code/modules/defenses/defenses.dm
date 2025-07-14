@@ -52,7 +52,13 @@
 	connect()
 
 /obj/structure/machinery/defenses/Destroy()
-	if(!QDESTROYING(HD))
+	GLOB.all_active_defenses -= src
+	owner_mob = null
+	HD = null // FIXME: Might also need to delete. Unsure.
+	if(linked_laptop)
+		linked_laptop.unpair_sentry(src)
+		linked_laptop = null
+	if(!QDELETED(HD))
 		QDEL_NULL(HD)
 	return ..()
 
@@ -150,7 +156,7 @@
 /obj/structure/machinery/defenses/proc/handle_iff(selection)
 	switch(selection)
 		if(FACTION_MARINE)
-			faction_group = FACTION_LIST_MARINE
+			faction_group = FACTION_LIST_UA
 		if(SENTRY_FACTION_HUMAN)
 			faction_group = FACTION_LIST_HUMANOID
 		if(SENTRY_FACTION_COLONY)
@@ -161,8 +167,12 @@
 			faction_group = FACTION_LIST_WY
 		if(FACTION_UPP)
 			faction_group = FACTION_LIST_UPP
-		if(FACTION_CLF)
-			faction_group = FACTION_LIST_CLF
+		if(FACTION_UA_REBEL)
+			faction_group = FACTION_LIST_UA_REBEL
+		if(FACTION_TWE_REBEL)
+			faction_group = FACTION_LIST_TWE_REBEL
+		if(FACTION_CANC)
+			faction_group = FACTION_LIST_CANC
 		if(FACTION_FREELANCER)
 			faction_group = FACTION_LIST_FREELANCER
 		if(FACTION_TWE)
@@ -492,17 +502,6 @@
 //Fixes a bug with power changes in the area.
 /obj/structure/machinery/defenses/power_change()
 	return
-
-/obj/structure/machinery/defenses/Destroy()
-	GLOB.all_active_defenses -= src
-
-	if(owner_mob)
-		owner_mob = null
-	HD = null // FIXME: Might also need to delete. Unsure.
-	if(linked_laptop)
-		linked_laptop.unpair_sentry(src)
-		linked_laptop = null
-	. = ..()
 
 /obj/structure/machinery/defenses/verb/toggle_turret_locks_verb()
 	set name = "Toggle Turret Lock"

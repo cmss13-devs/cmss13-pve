@@ -31,6 +31,8 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	// fuck interiors
 	ignore += typesof(/obj/vehicle)
 	ignore += typesof(/obj/effect/vehicle_spawner)
+	//Screen objects don't play nicely when spawned manually.
+	ignore += typesof(/atom/movable/screen)
 	// Always ought to have an associated escape menu. Any references it could possibly hold would need one regardless.
 	ignore += subtypesof(/atom/movable/screen/escape_menu)
 

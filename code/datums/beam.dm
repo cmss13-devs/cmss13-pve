@@ -29,14 +29,23 @@
 	var/obj/effect/ebeam/visuals
 	///will the origin object always turn to face the target?
 	var/always_turn = FALSE
+	//add a colour var to the beam
+	var/color
 
-/datum/beam/New(origin, target, icon='icons/effects/beam.dmi', icon_state="b_beam", time=BEAM_INFINITE_DURATION, max_distance=INFINITY, beam_type = /obj/effect/ebeam)
+	var/extra_x_offset_at_target
+
+	var/extra_y_offset_at_target
+
+/datum/beam/New(origin, target, icon='icons/effects/beam.dmi', icon_state="b_beam", time=BEAM_INFINITE_DURATION, max_distance=INFINITY, beam_type = /obj/effect/ebeam, always_turn = TRUE, color = null, extra_x_offset_at_target, extra_y_offset_at_target)
 	src.origin = origin
 	src.target = target
 	src.max_distance = max_distance
 	src.icon = icon
 	src.icon_state = icon_state
 	src.beam_type = beam_type
+	src.color = color
+	src.extra_x_offset_at_target = extra_x_offset_at_target
+	src.extra_y_offset_at_target = extra_y_offset_at_target
 	elements = list()
 	if(time > BEAM_INFINITE_DURATION)
 		QDEL_IN(src, time)
@@ -76,13 +85,20 @@
 	origin = null
 	return ..()
 
+/proc/Get_Pixel_Angle(x1, y1, x2, y2)
+	return arctan(y2 - y1, x2 - x1)
 /**
  * Creates the beam effects and places them in a line from the origin to the target. Sets their rotation to make the beams face the target, too.
  */
 /datum/beam/proc/Draw()
 	if(always_turn)
 		origin.setDir(get_dir(origin, target)) //Causes the source of the beam to rotate to continuosly face the BeamTarget.
-	var/Angle = floor(Get_Angle(origin,target))
+	var/origin_x = get_pixel_position_x(origin)
+	var/origin_y = get_pixel_position_y(origin)
+	var/target_x = get_pixel_position_x(target) + extra_x_offset_at_target
+	var/target_y = get_pixel_position_y(target) + extra_y_offset_at_target
+
+	var/Angle = floor(Get_Pixel_Angle(origin_x, origin_y, target_x, target_y))
 	var/matrix/rot_matrix = matrix()
 	var/turf/origin_turf = get_turf(origin)
 	rot_matrix.Turn(Angle)
@@ -97,6 +113,7 @@
 		if(QDELETED(src))
 			break
 		var/obj/effect/ebeam/X = new beam_type(origin_turf)
+		X.color = src.color
 		X.owner = src
 		elements += X
 
@@ -155,9 +172,16 @@
 	if(! (prob(probability) && ishuman(AM)) )
 		return
 	var/mob/living/carbon/human/moving_human = AM
+	var/datum/internal_organ/eyes/E = moving_human.internal_organs_by_name["eyes"]
 	var/laser_protection = moving_human.get_eye_protection()
 	var/rand_laser_power = rand(EYE_PROTECTION_FLAVOR, strength)
 	if(rand_laser_power > laser_protection)
+		if(strength == EYE_PROTECTION_WELDING)
+			INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
+			moving_human.AdjustEyeBlur(12,20)
+			E.take_damage(rand(15, 25), TRUE)
+			visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] sears their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] flashes across your unprotected eyes for a split-second, blinding you!"))
+			return
 		//ouch!
 		INVOKE_ASYNC(moving_human, /mob/proc/emote, "pain")
 		visible_message(SPAN_DANGER("[moving_human] screams out in pain as \the [src] moves across their eyes!"), SPAN_NOTICE("Aurgh!!! \The [src] moves across your unprotected eyes for a split-second!"))
@@ -180,6 +204,12 @@
 	alpha = 150
 	strength = EYE_PROTECTION_FLAVOR
 	probability = 5
+
+/obj/effect/ebeam/laser/plasma
+	name = "intense plasma beam"
+	alpha = 255
+	strength = EYE_PROTECTION_WELDING
+	probability = 80
 
 /obj/effect/ebeam/Destroy()
 	owner = null
@@ -209,8 +239,8 @@
  * maxdistance: how far the beam will go before stopping itself. Used mainly for two things: preventing lag if the beam may go in that direction and setting a range to abilities that use beams.
  * beam_type: The type of your custom beam. This is for adding other wacky stuff for your beam only. Most likely, you won't (and shouldn't) change it.
  */
-/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon='icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE)
-	var/datum/beam/newbeam = new(src, BeamTarget, icon, icon_state, time, maxdistance, beam_type, always_turn)
+/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon='icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE, color = null, extra_x_offset_at_target, extra_y_offset_at_target)
+	var/datum/beam/newbeam = new(src, BeamTarget, icon, icon_state, time, maxdistance, beam_type, always_turn, color, extra_x_offset_at_target, extra_y_offset_at_target)
 	INVOKE_ASYNC(newbeam, TYPE_PROC_REF(/datum/beam, Start))
 	return newbeam
 

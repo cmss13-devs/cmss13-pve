@@ -1683,8 +1683,8 @@
 /area/golden_arrow/squad_two)
 "lI" = (
 /obj/structure/closet/crate/supply,
-/obj/item/storage/box/m94,
-/obj/item/storage/box/m94,
+/obj/item/storage/box/flare,
+/obj/item/storage/box/flare,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/squad_one)
 "lL" = (
@@ -4393,6 +4393,7 @@
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
+/obj/effect/landmark/personal_weapon,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ey" = (

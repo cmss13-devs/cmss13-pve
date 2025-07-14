@@ -7,7 +7,7 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_atom = NO_NAME_OVERRIDE
 	unacidable = TRUE
@@ -31,8 +31,6 @@
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
 		name = "M56 snow combat harness"
-	else
-		name = "M56 combat harness"
 	//select_gamemode_skin(type)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)
@@ -85,7 +83,7 @@
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_atom = NO_NAME_OVERRIDE
 	unacidable = TRUE
@@ -104,15 +102,33 @@
 		/obj/item/storage/large_holster/machete/smartgunner,
 		/obj/item/weapon/gun/smartgun,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_MEDAL,
+		ACCESSORY_SLOT_SGPAINT,
+		ACCESSORY_SLOT_M56UTILITY,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_PONCHO,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORSHIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORGROIN,
+	)
+	restricted_accessory_slots = list(
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_SGPAINT,
+		ACCESSORY_SLOT_M56UTILITY,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORSHIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORGROIN,
+	)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD] && name == "\improper M56 combat harness" && !(flags_atom & NO_SNOW_TYPE))
 		name = "\improper M56 snow combat harness"
-	else
-		name = "\improper M56 combat harness"
 	//select_gamemode_skin(type)
 
 /obj/item/clothing/suit/marine/smartgunner/mob_can_equip(mob/equipping_mob, slot, disable_warning = FALSE)

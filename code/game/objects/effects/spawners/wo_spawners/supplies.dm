@@ -133,7 +133,7 @@
 	amount = list(0,2)
 	icon_state = "nade_placeholder"
 	icon = 'icons/obj/items/storage/packets.dmi'
-	stuff = list(/obj/item/storage/box/nade_box)
+	stuff = list(/obj/item/ammo_box/magazine/nade_box)
 
 /obj/effect/landmark/wo_supplies/storage/m37holster
 	icon_state = "m37_holster"

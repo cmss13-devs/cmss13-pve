@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Human Ai being unable to shoot guns set to burst fire mode."

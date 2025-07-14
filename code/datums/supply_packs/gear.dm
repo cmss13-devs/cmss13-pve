@@ -41,10 +41,10 @@
 /datum/supply_packs/signal_flares
 	name = "signal flare packs crate (x4)"
 	contains = list(
-		/obj/item/storage/box/m94/signal,
-		/obj/item/storage/box/m94/signal,
-		/obj/item/storage/box/m94/signal,
-		/obj/item/storage/box/m94/signal,
+		/obj/item/storage/box/flare/signal,
+		/obj/item/storage/box/flare/signal,
+		/obj/item/storage/box/flare/signal,
+		/obj/item/storage/box/flare/signal,
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/ammo

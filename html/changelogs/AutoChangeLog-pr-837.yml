@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscdel: "VP78's and non-special binocs from spec-kits"
+  - qol: "Specialist equipment loses the last of the skill-checks preventing the average player from using it."
+  - balance: "GL spec kit gets some packets of fancy grenades"

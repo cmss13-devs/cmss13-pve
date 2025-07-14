@@ -81,8 +81,8 @@
 	)
 
 /obj/item/clothing/mask/gas/pmc
-	name = "\improper M8 pattern armored balaclava"
-	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter."
+	name = "\improper tactical filtration mask"
+	desc = "A sophisticated filtration mask being tested for the military market but presently limited to Weyland-Yutani tactical teams."
 	item_state = "helmet"
 	icon_state = "pmc_mask"
 	anti_hug = 3
@@ -96,7 +96,7 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inv_hide = HIDEFACE
 	flags_equip_slot = SLOT_FACE
 
 /obj/item/clothing/mask/gas/pmc/marsoc
@@ -143,6 +143,10 @@
 	icon_state = "swat"
 	siemens_coefficient = 0.7
 	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_EYES
+
+/obj/item/clothing/mask/gas/swat/navy
+	name = "\improper flight mask"
+	desc = "A close-fitting mask used by pilots who might end up exposed to the vacuum of space during sorties."
 
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"

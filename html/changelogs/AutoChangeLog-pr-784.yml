@@ -1,0 +1,8 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - rscadd: "Koorlander and W-Y cigarette vendors"
+  - rscadd: "Balaji cigarettes"
+  - maptweak: "replaces most template cigarette vendors with Koorlander brand vendors, some with W-Y, and keeps basic cigarette vendors as a rarity"
+  - maptweak: "USS Golden Arrow cafeteria vendors moved around a bit"
+  - maptweak: "adds a single basic snack vendor to LV-624 maps for more diversity in the Nexus vendors"

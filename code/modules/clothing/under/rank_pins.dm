@@ -207,27 +207,27 @@
 /obj/item/clothing/accessory/ranks/navy/w1
 	name = "rank boards"
 	rank_short = PAY_SHORT_NW1
-	icon_state = "ranks_officer"
+	icon_state = "ranks_juniorwarrant"
 
 /obj/item/clothing/accessory/ranks/navy/w2
 	name = "rank boards"
 	rank_short = PAY_SHORT_NW2
-	icon_state = "ranks_officer"
+	icon_state = "ranks_juniorwarrant"
 
 /obj/item/clothing/accessory/ranks/navy/w3
 	name = "rank boards"
 	rank_short = PAY_SHORT_NW3
-	icon_state = "ranks_officer"
+	icon_state = "ranks_warrant"
 
 /obj/item/clothing/accessory/ranks/navy/w4
 	name = "rank boards"
 	rank_short = PAY_SHORT_NW4
-	icon_state = "ranks_officer"
+	icon_state = "ranks_warrant"
 
 /obj/item/clothing/accessory/ranks/navy/w5
 	name = "rank boards"
 	rank_short = PAY_SHORT_NW5
-	icon_state = "ranks_officer"
+	icon_state = "ranks_seniorwarrant"
 
 //OFFICERS
 /obj/item/clothing/accessory/ranks/navy/o1
@@ -352,27 +352,27 @@
 /obj/item/clothing/accessory/ranks/army/w1
 	name = "rank boards"
 	rank_short = PAY_SHORT_AW1
-	icon_state = "ranks_officer"
+	icon_state = "ranks_juniorwarrant"
 
 /obj/item/clothing/accessory/ranks/army/w2
 	name = "rank boards"
 	rank_short = PAY_SHORT_AW2
-	icon_state = "ranks_officer"
+	icon_state = "ranks_juniorwarrant"
 
 /obj/item/clothing/accessory/ranks/army/w3
 	name = "rank boards"
 	rank_short = PAY_SHORT_AW3
-	icon_state = "ranks_officer"
+	icon_state = "ranks_warrant"
 
 /obj/item/clothing/accessory/ranks/army/w4
 	name = "rank boards"
 	rank_short = PAY_SHORT_AW4
-	icon_state = "ranks_officer"
+	icon_state = "ranks_warrant"
 
 /obj/item/clothing/accessory/ranks/army/w5
 	name = "rank boards"
 	rank_short = PAY_SHORT_AW5
-	icon_state = "ranks_officer"
+	icon_state = "ranks_seniorwarrant"
 
 //OFFICERS
 /obj/item/clothing/accessory/ranks/army/o1
@@ -447,3 +447,23 @@
 	name = "rank boards"
 	rank_short = "PvI"
 	icon_state = "ranks_pvstofficer"
+
+/obj/item/clothing/accessory/ranks/canc
+	name = "CANC collar tabs"
+	rank_short = null
+	icon_state = "ranks_canc"
+
+/obj/item/clothing/accessory/ranks/canc/e1
+	rank_short = PAY_SHORT_CA1
+
+/obj/item/clothing/accessory/ranks/canc/e2
+	rank_short = PAY_SHORT_CA2
+
+/obj/item/clothing/accessory/ranks/canc/e3
+	rank_short = PAY_SHORT_CA3
+
+/obj/item/clothing/accessory/ranks/canc/e4
+	rank_short = PAY_SHORT_CA4
+
+/obj/item/clothing/accessory/ranks/canc/e5
+	rank_short = PAY_SHORT_CA5

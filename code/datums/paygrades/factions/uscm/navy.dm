@@ -2,30 +2,30 @@
 	name = "Navy Paygrade"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy
 	pay_multiplier = 1.8	//Less members but also more technical work, paid a bit better across the board
-	default_faction = FACTION_MARINE
+	default_faction = FACTION_NAVY
 
 // ENLISTED PAYGRADES
 
 /datum/paygrade/navy/e1
 	paygrade = PAY_SHORT_NE1
-	name = "Seaman Recruit"
-	prefix = "SR"
+	name = "Crewman Recruit"
+	prefix = "CR"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e1
 	ranking = 0
 	pay_multiplier = 1.8
 
 /datum/paygrade/navy/e2
 	paygrade = PAY_SHORT_NE2
-	name = "Seaman Apprentice"
-	prefix = "SA"
+	name = "Crewman Apprentice"
+	prefix = "CA"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e2
 	ranking = 1
 	pay_multiplier = 1.9
 
 /datum/paygrade/navy/e3
 	paygrade = PAY_SHORT_NE3
-	name = "Seaman"
-	prefix = "SN"
+	name = "Crewman"
+	prefix = "CMN"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/e3
 	ranking = 2
 	pay_multiplier = 2.1
@@ -249,8 +249,8 @@
 
 /datum/paygrade/navy/o10c
 	paygrade = PAY_SHORT_NO10C
-	name = "Chief of Naval Operations"
-	prefix = "CNO"
+	name = "Chief of Aerospace Operations"
+	prefix = "CAO"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy/o10c
 	ranking = 28
 	pay_multiplier = 8.5

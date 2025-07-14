@@ -1,4 +1,12 @@
 macro "default"
+	elem ".winset :map.right-click=false"
+		name = "SHIFT+Shift"
+	elem "Shift"
+		name = "SHIFT"
+		command = ".winset :map.right-click=false"
+	elem "ShiftUp"
+		name = "SHIFT+UP"
+		command = ".winset :map.right-click=true"
 
 menu "menu"
 	elem
@@ -419,19 +427,13 @@ window "preferencewindow"
  	elem "preferencewindow"
  		type = MAIN
  		pos = 281,0
- 		size = 1000x1250
- 		anchor1 = none
- 		anchor2 = none
  		background-color = none
  		is-visible = false
- 		saved-params = "pos;size;is-minimized;is-maximized"
  		statusbar = false
- 		outer-size = 676x839
- 		inner-size = 660x800
  	elem "preferencebrowser"
  		type = BROWSER
  		pos = 0,240
- 		size = 1000x1000
+		size = 0x0
  		anchor1 = 0,0
  		anchor2 = 100,100
  		background-color = none
@@ -439,11 +441,9 @@ window "preferencewindow"
  	elem "preview"
  		type = MAP
  		pos = 0,-10
- 		size = 1000x250
+ 		size = 0x250
  		anchor1 = 0,0
  		anchor2 = 100,0
- 		right-click = true
- 		saved-params = "zoom;letterbox;zoom-mode"
 
 window "statwindow"
 	elem "statwindow"

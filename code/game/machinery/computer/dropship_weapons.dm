@@ -39,6 +39,11 @@
 
 	var/registered = FALSE
 
+/obj/structure/machinery/computer/dropship_weapons/New()
+	..()
+	if(firemission_envelope)
+		firemission_envelope.linked_console = src
+
 /obj/structure/machinery/computer/dropship_weapons/Initialize()
 	. = ..()
 	simulation = new()
@@ -50,17 +55,14 @@
 	AddComponent(/datum/component/camera_manager)
 	SEND_SIGNAL(src, COMSIG_CAMERA_CLEAR)
 
-/obj/structure/machinery/computer/dropship_weapons/New()
-	..()
-	if(firemission_envelope)
-		firemission_envelope.linked_console = src
+/obj/structure/machinery/computer/dropship_weapons/Destroy()
+	. = ..()
+	QDEL_NULL(firemission_envelope)
+	QDEL_NULL(tacmap)
+	UnregisterSignal(src, COMSIG_CAMERA_MAPNAME_ASSIGNED)
 
 /obj/structure/machinery/computer/dropship_weapons/proc/camera_mapname_update(source, value)
 	camera_map_name = value
-
-/obj/structure/machinery/computer/dropship_weapons/Destroy()
-	. = ..()
-	UnregisterSignal(src, COMSIG_CAMERA_MAPNAME_ASSIGNED)
 
 /obj/structure/machinery/computer/dropship_weapons/attack_hand(mob/user)
 	if(..())
@@ -881,25 +883,25 @@
 
 /obj/structure/machinery/computer/dropship_weapons/dropship1
 	name = "\improper 'Alamo' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_ALAMO
 
 /obj/structure/machinery/computer/dropship_weapons/dropship2
 	name = "\improper 'Normandy' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_NORMANDY
 
 /obj/structure/machinery/computer/dropship_weapons/dropship3
 	name = "\improper 'Saipan' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_SAIPAN
 
 /obj/structure/machinery/computer/dropship_weapons/midway
 	name = "\improper 'Midway' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_MIDWAY
 
@@ -910,7 +912,7 @@
 
 /obj/structure/machinery/computer/dropship_weapons/cyclone
 	name = "\improper 'Cyclone' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_CYCLONE
 
@@ -921,7 +923,7 @@
 
 /obj/structure/machinery/computer/dropship_weapons/tornado
 	name = "\improper 'Tornado' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_TORNADO
 
@@ -932,7 +934,7 @@
 
 /obj/structure/machinery/computer/dropship_weapons/typhoon
 	name = "\improper 'Typhoon' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_TYPHOON
 
@@ -943,7 +945,7 @@
 
 /obj/structure/machinery/computer/dropship_weapons/tripoli
 	name = "\improper 'Tripoli' weapons controls"
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP, ACCESS_WY_FLIGHT, ACCESS_MARINE_PREP)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_TRIPOLI
 
@@ -952,13 +954,7 @@
 	icon_state = "cameras"
 	density = FALSE
 
-/obj/structure/machinery/computer/dropship_weapons/Destroy()
-	. = ..()
-	QDEL_NULL(firemission_envelope)
-	QDEL_NULL(tacmap)
-
 /obj/structure/machinery/computer/dropship_weapons/proc/simulate_firemission(mob/living/user)
-
 	if(!configuration)
 		to_chat(user, SPAN_WARNING("Configure a firemission before attempting to run the simulation"))
 		return

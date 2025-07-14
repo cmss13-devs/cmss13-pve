@@ -1,0 +1,5 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - bugfix: "UPP PLTCO can now use OW console and see cameras."
+  - bugfix: "UPP SCTSGT and Corpsman now get their assigned closets."

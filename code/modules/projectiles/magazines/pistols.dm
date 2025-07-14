@@ -47,6 +47,19 @@
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
+/obj/item/ammo_magazine/pistol/l54
+	name = "\improper L54 magazine (9mm)"
+	desc = "A pistol magazine."
+	caliber = "9mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "l54"
+	max_rounds = 12
+	w_class = SIZE_SMALL
+	default_ammo = /datum/ammo/bullet/pistol
+	gun_type = /obj/item/weapon/gun/pistol/l54
+	ammo_band_icon = "+m4a3_band"
+	ammo_band_icon_empty = "+m4a3_band_e"
+
 //-------------------------------------------------------
 //M4A3 45 //Inspired by the 1911
 
@@ -114,7 +127,7 @@
 
 /obj/item/ammo_magazine/pistol/es4
 	name = "\improper ES-4 stun magazine (9x19mm)"
-	default_ammo = /datum/ammo/bullet/pistol/rubber/stun
+	default_ammo = /datum/ammo/bullet/pistol/electrostatic
 	caliber = "9x19mm"
 	desc = "Holds 19 rounds of specialized Conductive 9x19mm. Electrostatic propulsion in the ES-4 functions by propelling an cV9x19mm round, at a proportionally slower velocity to maintain a higher kinetic energy transfer rate. All this turns a penetrative round into a less-than-lethal round."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
@@ -289,7 +302,7 @@
 
 /obj/item/ammo_magazine/pistol/highpower
 	name = "\improper HG-45 'Aguila' magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"

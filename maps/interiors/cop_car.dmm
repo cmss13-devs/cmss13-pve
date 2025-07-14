@@ -1,0 +1,231 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"c" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "back_1"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"e" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "back_3"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"f" = (
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "front_2"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"h" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/pizza_van/backright;
+	name = "back right entrance marker";
+	pixel_x = -32;
+	tag = "back_right"
+	},
+/obj/structure/closet/crate/secure/weapon{
+	anchored = 1;
+	desc = "A secure weapons crate. There's a label on the side that say's 'CLOSE DURING TRANSPORT.'"
+	},
+/obj/item/storage/box/zipcuffs,
+/obj/item/reagent_container/spray/cleaner,
+/obj/item/reagent_container/spray/pepper,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/copcar)
+"i" = (
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "front_1"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"j" = (
+/obj/structure/interior_wall/pizza_van,
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "roof_4"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"o" = (
+/obj/effect/landmark/interior/spawn/interior_viewport/simple{
+	pixel_y = 30;
+	pixel_x = -1
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	layer = 3.21;
+	pixel_x = 10;
+	pixel_y = 24
+	},
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "roof_3"
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/copcar)
+"p" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "background_3";
+	pixel_y = 32;
+	layer = 5.2;
+	alpha = 50
+	},
+/turf/open/void/vehicle,
+/area/space)
+"r" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "exterior_3"
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "roof_5"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"s" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "back_2"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"t" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 1;
+	exit_type = /obj/structure/interior_exit/vehicle/pizza_van/left;
+	name = "left entrance marker";
+	pixel_y = 32;
+	tag = "left"
+	},
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat{
+	dir = 4;
+	icon_state = "comfychair_beige"
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport/simple/windshield{
+	icon_state = "windshield_viewport_bottom";
+	icon = 'icons/obj/vehicles/interiors/pizza_van_interior.dmi'
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "front_roof_2"
+	},
+/turf/open/shuttle/vehicle/floor_3_11,
+/area/interior/vehicle/copcar)
+"v" = (
+/obj/effect/landmark/interior/spawn/interior_viewport/simple/windshield{
+	icon = 'icons/obj/vehicles/interiors/pizza_van_interior.dmi'
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "interior_door"
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "front_roof_1"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"w" = (
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "front_3"
+	},
+/turf/open/void/vehicle,
+/area/space)
+"x" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "background_2";
+	pixel_y = 32;
+	layer = 5.2;
+	alpha = 50
+	},
+/turf/open/void/vehicle,
+/area/space)
+"y" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	alpha = 50;
+	exit_type = /obj/structure/interior_exit/vehicle/pizza_van/right;
+	name = "right entrance marker";
+	tag = "right"
+	},
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_12,
+/area/interior/vehicle/copcar)
+"G" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/copcar)
+"I" = (
+/obj/structure/interior_wall/pizza_van{
+	icon_state = "exterior_door";
+	pixel_y = 32;
+	layer = 5.2;
+	alpha = 50
+	},
+/turf/open/void/vehicle,
+/area/space)
+"M" = (
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/pizza_van/backleft;
+	name = "back left entrance marker";
+	pixel_x = -32;
+	tag = "back_left"
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	layer = 3.21;
+	pixel_y = 32
+	},
+/obj/effect/vehicle_roof/pizza_van{
+	icon_state = "roof_2"
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/copcar)
+"O" = (
+/turf/open/void/vehicle,
+/area/space)
+
+(1,1,1) = {"
+O
+O
+O
+O
+O
+"}
+(2,1,1) = {"
+O
+e
+s
+c
+O
+"}
+(3,1,1) = {"
+O
+j
+M
+h
+x
+"}
+(4,1,1) = {"
+O
+r
+o
+G
+p
+"}
+(5,1,1) = {"
+O
+v
+t
+y
+I
+"}
+(6,1,1) = {"
+O
+w
+f
+i
+O
+"}

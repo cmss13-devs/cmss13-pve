@@ -28,22 +28,14 @@
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/weapon/straight_razor,
 		/obj/item/weapon/knife/marine,
-		/obj/item/weapon/knife/marine/sas,
-		/obj/item/weapon/knife/marine/kabar,
 	)
 	drop_sound = "armorequip"
 
 /obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		icon_state = initial(icon_state)
-
-/obj/item/clothing/shoes/marine/update_icon()
-	if(stored_item && !armor_stage)
-		icon_state = "[initial(icon_state)]-1"
-	else
-		if(!armor_stage)
+	if(!armor_stage)
+		if(stored_item)
+			icon_state = "[initial(icon_state)]-1"
+		else
 			icon_state = initial(icon_state)
 
 /obj/item/clothing/shoes/marine/knife
@@ -68,7 +60,7 @@
 	desc = "A pair of standard issue black United States Army combat boots."
 
 /obj/item/clothing/shoes/marine/army/knife
-	spawn_item_type = /obj/item/weapon/knife/marine
+	spawn_item_type = /obj/item/weapon/knife/marine/baker
 
 /obj/item/clothing/shoes/marine/upp
 	name = "\improper UPP combat boots"
@@ -79,6 +71,9 @@
 	desc = "A pair of standard issue brown UPP Territorial Guard combat boots."
 	icon_state = "marine_brown"
 	spawn_item_type = /obj/item/attachable/bayonet/upp
+
+/obj/item/clothing/shoes/marine/upp/guard/canc
+	spawn_item_type = /obj/item/weapon/knife/marine/chinese
 
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
@@ -92,17 +87,24 @@
 	name = "\improper RMC combat boots"
 	desc = "A pair of standard issue black Royal Marine Commando combat boots."
 	icon_state = "marine"
+
 /obj/item/clothing/shoes/marine/rmc/knife
 	spawn_item_type = /obj/item/weapon/knife/marine/sas
-
 
 /obj/item/clothing/shoes/marine/civilian
 	name = "rugged boots"
 	desc = "A pair of black boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
+/obj/item/clothing/shoes/marine/civilian/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
 	desc = "A pair of brown boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
+/obj/item/clothing/shoes/marine/civilian/jungle
+	icon_state = "marine_jungle"
+	desc = "A pair of jungle boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
 /obj/item/clothing/shoes/marine/joe
 	name = "biohazard boots"

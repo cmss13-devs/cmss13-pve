@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "The XM99A Phased Plasma Pulse Rifle and it's corresponding ammo"
+  - code_imp: "Various things changed behind the curtain for the above weapon system"
+  - soundadd: "Firing, reloading and unloading sounds for the XM99A, taken from Aliens: Colonial Marines"
+  - imageadd: "Sprites for the XM99A in various camos, along with the battery cell, done by Triiodine"
+  - imageadd: "Guncase sprite for the weapon"

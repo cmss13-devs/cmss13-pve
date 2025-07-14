@@ -110,6 +110,12 @@
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
 
+/datum/ammo/flamethrower/pve/drop_flame(turf/T, datum/cause_data/cause_data)
+	if(!istype(T))
+		return
+	var/datum/reagent/reagent = GLOB.chemical_reagents_list[flamer_reagent_id]
+	new /obj/flamer_fire(T, cause_data, reagent, 1)
+
 /datum/ammo/flamethrower/sentry_flamer/wy
 	name = "sticky fire"
 	flamer_reagent_id = "stickynapalm"
@@ -291,6 +297,10 @@
 	nade_type = /obj/item/explosive/grenade/smokebomb
 	icon_state = "smoke_shell"
 
+/datum/ammo/grenade_container/incen
+	name = "incendiary smoke grenade shell"
+	nade_type = /obj/item/explosive/grenade/phosphorus
+
 /datum/ammo/grenade_container/tank_glauncher
 	max_range = 8
 
@@ -468,3 +478,25 @@
 	O.icon = 'icons/effects/explosion.dmi'
 	flick("grenade", O)
 	QDEL_IN(O, 7)
+
+/datum/ammo/anti_air
+	name = "anti-air missile"
+	ping = null //no bounce off.
+	damage_type = CLONE //Shouldn't ever hit anyone
+	flags_ammo_behavior = AMMO_MP //As above, ensures it'll miss if it ever travels any distance
+	icon_state = "flare"
+	damage = 0
+	max_range = 1
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+
+/datum/ammo/anti_air/on_hit_mob(mob/mob, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_obj(obj/object, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
+	return

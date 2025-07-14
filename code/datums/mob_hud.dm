@@ -12,11 +12,14 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_XENO_HOSTILE = new /datum/mob_hud/xeno_hostile(),
 	MOB_HUD_FACTION_MARINE = new /datum/mob_hud/faction(),
 	MOB_HUD_FACTION_OBSERVER = new /datum/mob_hud/faction/observer(),
+	MOB_HUD_FACTION_ARMY = new /datum/mob_hud/faction/army(),
+	MOB_HUD_FACTION_NAVY = new /datum/mob_hud/faction/navy(),
 	MOB_HUD_FACTION_UPP = new /datum/mob_hud/faction/upp(),
 	MOB_HUD_FACTION_WY = new /datum/mob_hud/faction/wy(),
 	MOB_HUD_FACTION_TWE = new /datum/mob_hud/faction/twe(),
 	MOB_HUD_FACTION_CLF = new /datum/mob_hud/faction/clf(),
 	MOB_HUD_FACTION_PMC = new /datum/mob_hud/faction/pmc(),
+	MOB_HUD_FACTION_MARSHAL = new /datum/mob_hud/faction/cmb(),
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
 	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
@@ -197,6 +200,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	if(faction == faction_to_check || isobserver(user) || isyautja(user))
 		..()
 
+/datum/mob_hud/faction/army
+	faction_to_check = FACTION_ARMY
+
+/datum/mob_hud/faction/navy
+	faction_to_check = FACTION_NAVY
+
 /datum/mob_hud/faction/upp
 	faction_to_check = FACTION_UPP
 
@@ -211,6 +220,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 
 /datum/mob_hud/faction/pmc
 	faction_to_check = FACTION_PMC
+
+/datum/mob_hud/faction/cmb
+	faction_to_check = FACTION_MARSHAL
 
 /datum/mob_hud/faction/observer
 	hud_icons = list(FACTION_HUD, ORDER_HUD, HUNTER_CLAN, HOLOCARD_HUD)

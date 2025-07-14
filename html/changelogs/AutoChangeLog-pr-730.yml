@@ -1,0 +1,8 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "Descriptions for Army and Tactical versions"
+  - balance: "Bipods no longer have an RPM effect. This creates its own issues probably, but it means full auto has no more weird interactions."
+  - bugfix: "Gave Army and Tactical their attachments properly"
+  - bugfix: "Full Auto doesn't have weird interactions with the bipod anymore."
+  - code_imp: "Tore out the fire rate modifications of the bipod"

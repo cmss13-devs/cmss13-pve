@@ -183,6 +183,10 @@
 	///Chance for random spawn to give this gun a underbarrel attachment.
 	var/random_under_chance = 100
 	///Used when a gun will have a chance to spawn with attachments.
+	var/list/random_spawn_siderail = list()
+	///Chance for random spawn to give this gun a side rail attachment.
+	var/random_siderail_chance = 100
+	///Used when a gun will have a chance to spawn with attachments.
 	var/list/random_spawn_under = list()
 	///Chance for random spawn to give this gun a stock attachment.
 	var/random_stock_chance = 100
@@ -193,7 +197,7 @@
 	///What attachments this gun starts with THAT CAN BE REMOVED. Important to avoid nuking the attachments on restocking! Added on New()
 	var/list/starting_attachment_types = null
 
-	var/flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	var/flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	///Only guns of the same category can be fired together while dualwielding.
 	var/gun_category
 
@@ -250,10 +254,14 @@
 	VAR_PROTECTED/start_semiauto = TRUE
 	/// If this gun should spawn with automatic fire. Protected due to it never needing to be edited.
 	VAR_PROTECTED/start_automatic = FALSE
+	/// If this gun should spawn with burst fire. Protected due to it never needing to be edited.
+	VAR_PROTECTED/start_burstfire = FALSE
 	/// The type of projectile that this gun should shoot
 	var/projectile_type = /obj/projectile
 	/// The multiplier for how much slower this should fire in automatic mode. 1 is normal, 1.2 is 20% slower, 2 is 100% slower, etc. Protected due to it never needing to be edited.
 	VAR_PROTECTED/autofire_slow_mult = 1
+	/// How many empty shell casings are in the gun?
+	var/empty_casings = 0
 
 /**
  * An assoc list where the keys are fire delay group string defines
@@ -272,7 +280,7 @@
 /obj/item/weapon/gun/Initialize(mapload, spawn_empty) //You can pass on spawn_empty to make the sure the gun has no bullets or mag or anything when created.
 	. = ..() //This only affects guns you can get from vendors for now. Special guns spawn with their own things regardless.
 	base_gun_icon = icon_state
-	attachable_overlays = list("muzzle" = null, "rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
+	attachable_overlays = list("muzzle" = null, "rail" = null, "side_rail" = null, "under" = null, "stock" = null, "mag" = null, "special" = null)
 	muzzle_flash = new(src, muzzleflash_iconstate)
 
 	LAZYSET(item_state_slots, WEAR_BACK, item_state)
@@ -497,6 +505,14 @@
 			update_attachable(S.slot)
 			attachmentchoice = FALSE
 
+	var/siderailchance = random_siderail_chance
+	if(prob(siderailchance) && !attachments["side_rail"]) // Side Rail
+		attachmentchoice = SAFEPICK(random_spawn_siderail)
+		if(attachmentchoice)
+			var/obj/item/attachable/X = new attachmentchoice(src)
+			X.Attach(src)
+			update_attachable(X.slot)
+			attachmentchoice = FALSE
 
 /obj/item/weapon/gun/proc/handle_starting_attachment()
 	if(LAZYLEN(starting_attachment_types))
@@ -595,7 +611,7 @@ As sniper rifles have both and weapon mods can change them as well. ..() deals w
 
 	if(!(flags_gun_features & (GUN_INTERNAL_MAG|GUN_UNUSUAL_DESIGN))) //Internal mags and unusual guns have their own stuff set.
 		if(current_mag && current_mag.current_rounds > 0)
-			if(flags_gun_features & GUN_AMMO_COUNTER) dat += "Ammo counter shows [current_mag.current_rounds] round\s remaining.<br>"
+			if(flags_gun_features & GUN_AMMO_COUNTER) dat += "Ammo counter shows [in_chamber ? "[current_mag.current_rounds+1]" : "[current_mag.current_rounds]"] round\s remaining.<br>"
 			else dat += "It's loaded[in_chamber?" and has a round chambered":""].<br>"
 		else dat += "It's unloaded[in_chamber?" but has a round chambered":""].<br>"
 	if(!(flags_gun_features & GUN_UNUSUAL_DESIGN))
@@ -1131,7 +1147,7 @@ and you're good to go.
 	if(active_attachable?.flags_attach_features & ATTACH_WEAPON) //Attachment activated and is a weapon.
 		check_for_attachment_fire = TRUE
 		if(!(active_attachable.flags_attach_features & ATTACH_PROJECTILE)) //If it's unique projectile, this is where we fire it.
-			if((active_attachable.current_rounds <= 0) && !(active_attachable.flags_attach_features & ATTACH_IGNORE_EMPTY))
+			if((active_attachable.current_rounds <= 0) && !(active_attachable.flags_attach_features & ATTACH_IGNORE_EMPTY) && !active_attachable.in_chamber)
 				click_empty(user) //If it's empty, let them know.
 				to_chat(user, SPAN_WARNING("[active_attachable] is empty!"))
 				to_chat(user, SPAN_NOTICE("You disable [active_attachable]."))
@@ -1205,15 +1221,15 @@ and you're good to go.
 	var/bullet_velocity = projectile_to_fire?.ammo?.shell_speed + velocity_add
 
 	if(params) // Apply relative clicked position from the mouse info to offset projectile
-		if(!params["click_catcher"])
-			if(params["vis-x"])
-				projectile_to_fire.p_x = text2num(params["vis-x"])
-			else if(params["icon-x"])
-				projectile_to_fire.p_x = text2num(params["icon-x"])
-			if(params["vis-y"])
-				projectile_to_fire.p_y = text2num(params["vis-y"])
-			else if(params["icon-y"])
-				projectile_to_fire.p_y = text2num(params["icon-y"])
+		if(!params[CLICK_CATCHER])
+			if(params[VIS_X])
+				projectile_to_fire.p_x = text2num(params[VIS_X])
+			else if(params[ICON_X])
+				projectile_to_fire.p_x = text2num(params[ICON_X])
+			if(params[VIS_Y])
+				projectile_to_fire.p_y = text2num(params[VIS_Y])
+			else if(params[ICON_Y])
+				projectile_to_fire.p_y = text2num(params[ICON_Y])
 			var/atom/movable/clicked_target = original_target
 			if(istype(clicked_target))
 				projectile_to_fire.p_x -= clicked_target.bound_width / 2
@@ -1255,6 +1271,10 @@ and you're good to go.
 		projectile_to_fire.def_zone = user.zone_selected
 
 	play_firing_sounds(projectile_to_fire, user)
+
+	empty_casings++
+	if(flags_gun_features & GUN_AUTO_EJECT_CASINGS)
+		eject_casing()
 
 	if(targloc != curloc)
 		simulate_recoil(dual_wield, user, target)
@@ -1999,6 +2019,10 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 /obj/item/weapon/gun/proc/get_fire_delay(value)
 	return fire_delay
 
+/// getter for burst_delay
+/obj/item/weapon/gun/proc/get_burst_fire_delay(value)
+	return burst_delay
+
 /// setter for burst_amount
 /obj/item/weapon/gun/proc/set_burst_amount(value, mob/user)
 	burst_amount = value
@@ -2076,7 +2100,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 	SIGNAL_HANDLER
 
 	var/list/modifiers = params2list(params)
-	if(modifiers["shift"] || modifiers["middle"] || modifiers["right"])
+	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
 		return FALSE
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.
@@ -2150,3 +2174,27 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		return FALSE
 
 	return TRUE
+
+/// For ejecting the spent casing from corresponding guns
+/obj/item/weapon/gun/proc/eject_casing()
+	if(empty_casings == 0)
+		return
+	if(!ammo)
+		return
+	if(ammo.shell_casing)
+		var/turf/ejection_turf = get_turf(src)
+		if(!ejection_turf)
+			return
+
+		var/obj/effect/decal/ammo_casing/found_casings = null
+		for(var/obj/effect/decal/ammo_casing/C in ejection_turf)
+			if(C.type == ammo.shell_casing)
+				found_casings = C
+				break
+		if(!found_casings)
+			found_casings = new ammo.shell_casing(ejection_turf)
+			found_casings.current_casings = 0
+
+		found_casings.current_casings += empty_casings
+		found_casings.update_icon()
+	empty_casings = 0

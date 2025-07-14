@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Squad 3 & 4 can now be assigned by section leads"
+  - imageadd: "Icon for squad/fireteam 4"

@@ -123,17 +123,17 @@
 	)
 
 	/// Chance that an AI says a voiceline when entering combat
-	var/in_combat_line_chance = 40
+	var/in_combat_line_chance = 100
 	/// Chance that an AI says a voiceline when exiting combat
-	var/exit_combat_line_chance = 40
+	var/exit_combat_line_chance = 100
 	/// Chance that an AI says a voiceline when a squadmember dies
-	var/squad_member_death_line_chance = 20
+	var/squad_member_death_line_chance = 100
 	/// Chance that an AI says a voiceline when they throw a grenade
-	var/grenade_thrown_line_chance = 60
+	var/grenade_thrown_line_chance = 100
 	/// Chance that an AI says a voiceline when they reload a gun
-	var/reload_line_chance = 40
+	var/reload_line_chance = 100
 	/// Currently unused
-	var/need_healing_line_chance = 90
+	var/need_healing_line_chance = 100
 
 /datum/human_ai_brain/proc/say_in_combat_line(chance = in_combat_line_chance)
 	if(!length(enter_combat_lines) || !prob(chance) || (tied_human.health < HEALTH_THRESHOLD_CRIT))

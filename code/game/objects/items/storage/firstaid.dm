@@ -8,7 +8,7 @@
 //---------FIRST AID KITS---------
 /obj/item/storage/firstaid
 	name = "first-aid kit"
-	desc = "It's an emergency medical kit for those serious boo-boos. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
 	var/open_state = "kit_empty"
@@ -34,8 +34,7 @@
 		/obj/item/reagent_container/blood,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
-	required_skill_for_nest_opening = SKILL_MEDICAL
-	required_skill_level_for_nest_opening = SKILL_MEDICAL_MEDIC
+	max_w_class = SIZE_SMALL
 
 	var/icon_full //icon state to use when kit is full
 	var/possible_icons_full
@@ -66,17 +65,17 @@
 
 /obj/item/storage/firstaid/fire
 	name = "fire first-aid kit"
-	desc = "It's an emergency medical kit for when the dropship ammo storage <i>-spontaneously-</i> burns down. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit for when the dropship ammo storage <i>-spontaneously-</i> burns down."
 	icon_state = "ointment"
 	item_state = "firstaid-ointment"
 	possible_icons_full = list("ointment","firefirstaid")
 
 
 /obj/item/storage/firstaid/fire/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
@@ -86,10 +85,10 @@
 
 /obj/item/storage/firstaid/regular
 	icon_state = "firstaid"
-	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit containing basic medication and equipment."
 
 /obj/item/storage/firstaid/regular/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -101,15 +100,17 @@
 	return
 
 /obj/item/storage/firstaid/regular/response
-	desc = "It's an emergency medical kit containing basic medication and equipment. No training required to use. This one is simpler and requires no training to store."
-	required_skill_for_nest_opening = SKILL_MEDICAL
-	required_skill_level_for_nest_opening = SKILL_MEDICAL_DEFAULT
+	desc = "It's an emergency medical kit containing basic medication and equipment."
+
 
 /obj/item/storage/firstaid/robust
 	icon_state = "firstaid"
+	max_w_class = SIZE_MEDIUM
+	storage_slots = 8
 
 /obj/item/storage/firstaid/robust/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
@@ -122,34 +123,37 @@
 
 /obj/item/storage/firstaid/toxin
 	name = "toxin first-aid kit"
-	desc = "It's an emergency medical kit containing lifesaving anti-toxic medication. With medical training you can fit this in a backpack."
+	desc = "It's an emergency medical kit containing lifesaving anti-toxic medication."
 	icon_state = "antitoxin"
 	item_state = "firstaid-toxin"
 	possible_icons_full = list("antitoxin","antitoxfirstaid","antitoxfirstaid2","antitoxfirstaid3")
 
+
 /obj/item/storage/firstaid/toxin/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/reagent_container/pill/nitrogenwater(src)
+	new /obj/item/reagent_container/pill/carbon(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/pill/antitox(src)
-	new /obj/item/reagent_container/pill/antitox(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/ethylredoxrazine(src)
 
 /obj/item/storage/firstaid/toxin/empty/fill_preset_inventory()
 	return
 
 /obj/item/storage/firstaid/o2
 	name = "oxygen deprivation first-aid kit"
-	desc = "A box full of reoxygenating goodies. With medical training you can fit this in a backpack."
+	desc = "A box full of reoxygenating goodies."
 	icon_state = "o2"
 	item_state = "firstaid-o2"
 
 /obj/item/storage/firstaid/o2/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/pill/peridaxon(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 
 /obj/item/storage/firstaid/o2/empty/fill_preset_inventory()
@@ -157,7 +161,7 @@
 
 /obj/item/storage/firstaid/adv
 	name = "advanced first-aid kit"
-	desc = "Contains more effective methods of medical treatment than a basic first-aid kit, such as burn and trauma kits. With medical training you can fit this in a backpack."
+	desc = "Contains more effective methods of medical treatment than a basic first-aid kit, such as burn and trauma kits."
 	icon_state = "advfirstaid"
 	item_state = "firstaid-advanced"
 
@@ -165,7 +169,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
@@ -175,7 +179,7 @@
 
 /obj/item/storage/firstaid/synth
 	name = "synthetic repair kit"
-	desc = "Contains equipment to repair a damaged synthetic. A tag on the back reads: 'Does not contain a shocking tool to repair disabled synthetics, nor a scanning device to detect specific damage; pack separately.' With medical training you can fit this in a backpack."
+	desc = "Contains equipment to repair a damaged synthetic. A tag on the back reads: 'Does not contain a shocking tool to repair disabled synthetics, nor a scanning device to detect specific damage; pack separately.'"
 	icon_state = "bezerk"
 	item_state = "firstaid-advanced"
 	can_hold = list(
@@ -209,15 +213,15 @@
 
 /obj/item/storage/firstaid/rad
 	name = "radiation first-aid kit"
-	desc = "Contains treatment for radiation exposure. With medical training you can fit this in a backpack."
+	desc = "Contains treatment for radiation exposure."
 	icon_state = "purplefirstaid"
 
 /obj/item/storage/firstaid/rad/fill_preset_inventory()
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/reagent_container/pill/imidazoline(src)
+	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/rad/empty/fill_preset_inventory()
@@ -225,8 +229,9 @@
 
 /obj/item/storage/firstaid/surgical
 	name = "basic field surgery kit"
-	desc = "Contains a surgical line, cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically. With medical training you can fit this in a backpack."
+	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically."
 	icon_state = "bezerk"
+	storage_slots = 8
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
@@ -241,12 +246,13 @@
 	)
 
 /obj/item/storage/firstaid/surgical/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/cautery(src)
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 
 /obj/item/storage/firstaid/surgical/empty/fill_preset_inventory()
@@ -278,7 +284,7 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/softpack/burn
@@ -288,7 +294,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/kilodermlipo(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
@@ -297,12 +303,13 @@
 	icon_state = "softpack_green"
 
 /obj/item/storage/firstaid/softpack/toxin/fill_preset_inventory()
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/nitrogenwater(src)
+	new /obj/item/storage/pill_bottle/russianRed/skillless(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 
 
 //---------SYRINGE CASE---------
@@ -323,6 +330,7 @@
 		/obj/item/paper,
 		/obj/item/reagent_container/syringe,
 		/obj/item/reagent_container/hypospray/autoinjector,
+		/obj/item/reagent_container/glass/beaker/vial,
 	)
 
 /obj/item/storage/syringe_case/regular
@@ -556,7 +564,7 @@
 	if(loc != user)
 		return ..()
 
-	if(!mods || !mods["alt"])
+	if(!mods || !mods[ALT_CLICK])
 		return ..()
 
 	if(!ishuman(user))

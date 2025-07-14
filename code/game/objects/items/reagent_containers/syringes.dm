@@ -69,8 +69,8 @@
 
 	if (user.a_intent == INTENT_HARM && ismob(target))
 		var/mob/M = target
-		if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-			user.apply_effect(3, WEAKEN)
+		if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+			user.apply_effect(0.5, WEAKEN)
 			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 			msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
@@ -226,6 +226,12 @@
 		overlays += injoverlay
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
+	if(istype(loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/person = loc
+		if(person.r_hand == src)
+			person.update_inv_r_hand()
+		if(person.l_hand == src)
+			person.update_inv_l_hand()
 
 	if(reagents.total_volume)
 		var/image/filling = image('icons/obj/items/reagentfillings.dmi', src, "syringe10")
@@ -454,6 +460,16 @@
 	mode = SYRINGE_INJECT
 	update_icon()
 
+/obj/item/reagent_container/syringe/oxycodone
+	name = "syringe (oxycodone)"
+	desc = "Contains a small dose of potent painkiller."
+
+/obj/item/reagent_container/syringe/oxycodone/Initialize()
+	. = ..()
+	reagents.add_reagent("oxycodone",  5)
+	mode = SYRINGE_INJECT
+	update_icon()
+
 /obj/item/reagent_container/ld50_syringe/choral
 
 /obj/item/reagent_container/ld50_syringe/choral/Initialize()
@@ -493,5 +509,16 @@
 	. = ..()
 	reagents.add_reagent("inaprovaline", 7)
 	reagents.add_reagent("anti_toxin", 8)
+	mode = SYRINGE_INJECT
+	update_icon()
+
+/obj/item/reagent_container/syringe/leporazine_dermaline
+	name = "syringe (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature, and dermaline - used to rapidly heal burns"
+
+/obj/item/reagent_container/syringe/leporazine_dermaline/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 5)
+	reagents.add_reagent("dermaline", 10)
 	mode = SYRINGE_INJECT
 	update_icon()

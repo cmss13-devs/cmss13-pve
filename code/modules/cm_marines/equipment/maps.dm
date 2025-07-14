@@ -9,7 +9,6 @@
 	// color = ... (Colors can be names - "red, green, grey, cyan" or a HEX color code "#FF0000")
 	var/dat // Page content
 	var/html_link = ""
-	var/window_size = "1280x720"
 
 /obj/item/map/attack_self(mob/user) //Open the map
 	..()
@@ -54,7 +53,7 @@
 
 				</html>
 			"}
-	show_browser(usr, dat, name, "papermap", "size=[window_size]")
+	show_browser(usr, dat, name, "papermap", width = 1280, height = 720)
 
 /obj/item/map/lazarus_landing_map
 	name = "\improper Lazarus Landing Map"
@@ -145,6 +144,25 @@
 	html_link = "images/5/54/USS_Almayer.png"
 	color = "cyan"
 
+/obj/item/map/canyon_32b
+	name = "\improper Blank Map"
+	desc = "A blank map, or at least you THINK there should be a map on this piece of laminated paper."
+	html_link = ""
+	color = "white"
+
+/obj/item/map/taipei
+	name = "\improper Taipei Way-Station map"
+	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
+	html_link = ""
+	color = "cyan"
+	desc_lore = "https://github.com/user-attachments/assets/bfe1a3dd-f737-4b89-a030-ff819e320dea"
+
+/obj/item/map/oread_map
+	name = "\improper Oread Garrison map"
+	desc = "A distorted orbital scan of the Oread Garrison"
+	html_link = ""
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -168,7 +186,13 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
 		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
 		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
+		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
+		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
+		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
+		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
+		MAP_TAIPAI = new /obj/item/map/taipei(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
@@ -183,6 +207,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		return // "Maps" we don't have maps for so we don't need to throw a runtime for (namely in unit_testing)
 	name = map.name
 	desc = map.desc
+	desc_lore = map.desc_lore
 	html_link = map.html_link
 	color = map.color
 

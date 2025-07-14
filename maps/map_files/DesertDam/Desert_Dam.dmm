@@ -4887,7 +4887,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison,
 /area/desert_dam/building/water_treatment_two/hallway)
 "baM" = (
@@ -8973,7 +8973,7 @@
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/bar/bar)
 "ceH" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/bar/bar)
 "ceJ" = (
@@ -16795,7 +16795,7 @@
 "enc" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreen/northeast,
 /area/desert_dam/building/medical/treatment_room)
 "enf" = (
@@ -18908,7 +18908,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/desert_dam/exterior/valley/valley_civilian)
 "fyj" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/white,
 /area/desert_dam/building/administration/meetingrooom)
 "fyz" = (
@@ -19197,7 +19197,7 @@
 /turf/open/floor/prison/blue/northeast,
 /area/desert_dam/interior/dam_interior/tech_storage)
 "fFb" = (
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreen/north,
 /area/desert_dam/building/medical/east_wing_hallway)
 "fFk" = (
@@ -19571,7 +19571,7 @@
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/interior/caves/central_caves)
 "fQD" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/hydroponics/hydroponics_breakroom)
 "fRa" = (
@@ -20388,7 +20388,7 @@
 /area/desert_dam/interior/dam_interior/hangar_storage)
 "gob" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreencorner,
 /area/desert_dam/building/medical/lobby)
 "goh" = (
@@ -26148,7 +26148,7 @@
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/interior/dam_interior/central_tunnel)
 "jKN" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /turf/open/floor/dark2,
 /area/desert_dam/building/administration/hallway)
 "jLd" = (
@@ -27734,7 +27734,7 @@
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/west_wing_hallway)
 "kMb" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/darkyellow2/north,
 /area/desert_dam/building/warehouse/breakroom)
 "kMi" = (
@@ -31548,7 +31548,7 @@
 /turf/open/floor/cult,
 /area/desert_dam/building/security/courtroom)
 "nbu" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/whiteyellow/north,
 /area/desert_dam/interior/dam_interior/break_room)
 "nby" = (
@@ -35448,8 +35448,8 @@
 /area/desert_dam/building/security/prison)
 "psW" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/machinery/power/apc/no_power/east,
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/west_wing_hallway)
@@ -38204,7 +38204,7 @@
 /turf/open/desert/dirt/dirt2,
 /area/desert_dam/exterior/river_mouth/southern)
 "reW" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/loading)
 "rfm" = (
@@ -40776,7 +40776,7 @@
 /turf/open/gm/river/desert/shallow_edge/west,
 /area/desert_dam/exterior/river/riverside_central_north)
 "sDC" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/sterile_white,
 /area/desert_dam/building/cafeteria/cafeteria)
 "sDJ" = (
@@ -49741,7 +49741,7 @@
 /turf/open/floor/prison/southwest,
 /area/desert_dam/interior/dam_interior/north_tunnel_entrance)
 "xPX" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/koorlander,
 /turf/open/floor/prison/greenfull/northwest,
 /area/desert_dam/building/dorms/hallway_northwing)
 "xQc" = (

@@ -45,14 +45,53 @@
 //M42C magazine
 
 /obj/item/ammo_magazine/sniper/elite
-	name = "\improper M42C marksman magazine (10x99mm)"
-	desc = "A magazine of specialized supersonic 10x99mm anti-tank rounds."
-	default_ammo = /datum/ammo/bullet/sniper/elite
+	name = "\improper M42C marksman magazine (10x28mm)"
+	desc = "A magazine of M252 HEAP match-grade 10x28mm ammo. An aimed shot with it will deal significant damage."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/sniper
 	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
-	caliber = "10x99mm"
+	caliber = "10x28mm"
 	icon_state = "m42c"
 	max_rounds = 6
 
+/obj/item/ammo_magazine/sniper/elite/basic
+	name = "\improper M42C magazine (10x28mm)"
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt."
+	default_ammo = /datum/ammo/bullet/rifle/heavy
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+/obj/item/ammo_magazine/sniper/elite/incin
+	name = "\improper M42C incendiary magazine (10x28mm)"
+	desc = "A magazine of M254 incendiary match-grade 10x28mm ammo. An aimed shot with it will temporarily blind the target and kindle the blaze further."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/incendiary
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/sniper/elite/flak
+	name = "\improper M42C flak magazine (10x28mm)"
+	desc = "A magazine of M257 HEFA match-grade 10x28mm ammo. An aimed shot with it will temporarily slow the target and minimize the backlash."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/flak
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/sniper/elite/overkill
+	name = "\improper M42C super-sonic magazine (10x28mm)"
+	desc = "A magazine of M252A1 HEAPSS match-grade 10x28mm ammo. Capable of penetrating through most infantry-level materiel. Depending on what you hit, it might even have enough energy to wound anything behind the target."
+	default_ammo = /datum/ammo/bullet/sniper/elite
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 //Type 88 //Based on the actual Dragunov designated marksman rifle.
 
@@ -395,6 +434,62 @@
 	default_ammo = /datum/ammo/rocket/wp/upp
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
+
+//-------------------------------------------------------
+//AA Missiles
+
+/obj/item/ammo_magazine/rocket/anti_air
+	name = "\improper 70mm 'Hornet' hypervelocity anti-air missile"
+	desc = "A thin missile designed to be fired by M579 ADS-C vehicles or launched from the SIM-118 MANPAD. A no-frills hypervelocity missile, the hornet relies on the kinetic energy it imparts on impact to take down targets."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon_state = "hornet"
+	default_ammo = /datum/ammo/rocket/ap/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/uscm
+
+/obj/item/ammo_magazine/rocket/anti_air/update_icon()
+	if(current_rounds <= 0)
+		qdel(src)
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/ammo_magazine/rocket/anti_air/upp
+	name = "\improper 92mm 'Goose' anti-air missile canister"
+	desc = "A squat missile canister for the EMBLR surface-to-air weapons system. Unlike it's USCM counterpart, the Goose carries a small but powerful warhead designed to spread a cloud of flechettes around it's target."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "emblr"
+	default_ammo = /datum/ammo/rocket/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/upp
+
+/obj/item/ammo_magazine/rocket/anti_air/upp/update_icon()
+	..()
+	if(current_rounds <= 0)
+		name = "\improper spent 92mm missile canister"
+		desc = "A spent canister assembly for the EMBLR anti-air missile launcher."
+		icon_state = "emblr_e"
+
+//-------------------------------------------------------
+// XM99 power/fuel cells
+
+/obj/item/ammo_magazine/plasma
+	name = "\improper XM99A1 battery drum"
+	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture or put in a microwave."
+	caliber = "40W"
+	icon_state = "xm99a_cell"
+	w_class = SIZE_MEDIUM
+	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
+	max_rounds = 4
+	default_ammo = /datum/ammo/energy/plasma
+	gun_type = /obj/item/weapon/gun/XM99
+
+// The "round-remover" power/fuel cell for the XM99
+/obj/item/ammo_magazine/plasma/gibber
+	name = "\improper XM99A1 lithium battery drum"
+	desc = "A hybrid battery cell and LiTe-pellet magazine designed to fit the XM99A series of phased plasma pulse rifles. Do not puncture, put in a microwave, submerge in water or look at funny. Highly volatile."
+	icon_state = "xm99a_lcell"
+	max_rounds = 2
+	default_ammo = /datum/ammo/energy/plasma/heavy
 
 //-------------------------------------------------------
 //P9 SHARP Rifle

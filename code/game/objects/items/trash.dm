@@ -105,8 +105,44 @@
 /obj/item/trash/uscm_mre
 	name = "\improper crumbled USCM MRE"
 	desc = "It has done its part for the USCM. Have you?"
-	icon = 'icons/obj/items/trash.dmi'
+	icon = 'icons/obj/items/storage/mre.dmi'
 	icon_state = "mealpackempty"
+
+/obj/item/trash/upp_mre
+	name = "\improper crumbled UPP IRP"
+	desc = "Hungry soldier is a dead soldier."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "upp_mealpackempty"
+
+/obj/item/trash/twe_mre
+	name = "\improper crumbled TWE ORP"
+	desc = "Hunger never sets on the Empire..."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "twe_mealpackempty"
+
+/obj/item/trash/pmc_mre
+	name = "\improper crumbled PMC CFR"
+	desc = "For a piece of crumbled wrapper, it sure has a high market cost."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "pmc_mealpackempty"
+
+/obj/item/trash/wy_mre
+	name = "\improper crumbled W-Y ration"
+	desc = "Reminder, trashing on a workplace is punished with a cut in your daily ration."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "wy_mealpackempty"
+
+/obj/item/trash/merc_mre
+	name = "\improper crumbled FSR ration"
+	desc = "Who left it in here? Civillians? Hikers? Military collectors? Undercover mercenaries?"
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "mealpackempty"
+
+/obj/item/trash/hdr_mre
+	name = "\improper crumbled HDR"
+	desc = "Someone is going to live another day."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "hdr_mealpackempty"
 
 /obj/item/trash/waffles
 	name = "Waffles"
@@ -237,3 +273,16 @@
 	clockwise = pick(TRUE, FALSE)
 	angular_offset = rand(360)
 	return ..()
+
+/obj/item/trash/tooth
+	name = "tooth"
+	desc = "Has seen heavy use, that's for sure."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "tooth"
+	w_class = SIZE_TINY
+
+/obj/item/trash/tooth/Initialize()
+	. = ..()
+	pixel_x = rand(-10,10)
+	pixel_y = rand(-10,10)
+	apply_transform(turn(transform,rand(0,360)))

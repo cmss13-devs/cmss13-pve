@@ -36,7 +36,8 @@
 /// Whether or not the bullet hits the target that was clicked or if it keeps travelling
 #define AMMO_HITS_TARGET_TURF (1<<17)
 #define AMMO_ALWAYS_FF (1<<18)
-//                              (1<<19) unused, previously was AMMO_HOMING
+// This one is for ammo that ignores prone. Includes landmine shrapnel and BFAB. previously was AMMO_HOMING
+#define AMMO_PRONETARGET (1<<19)
 /// Can't be deflected
 #define AMMO_NO_DEFLECT (1<<20)
 ///Can only hit people with criminal status
@@ -77,6 +78,8 @@
 #define GUN_SUPPORT_PLATFORM (1<<16)
 /// No gun description, only base desc
 #define GUN_NO_DESCRIPTION (1<<17)
+/// Automatically eject shell casings
+#define GUN_AUTO_EJECT_CASINGS (1<<18)
 // NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
 
 #define USES_STREAKS (1<<0)
@@ -130,6 +133,7 @@
 #define SLOWDOWN_ADS_RIFLE 1
 #define SLOWDOWN_AMT_GREENFIRE 1.5
 #define SLOWDOWN_ADS_SCOPE 1.20
+#define SLOWDOWN_ADS_SMARTGUN 1.55 //accounting for light-to-med slowdown change on armor
 #define SLOWDOWN_ADS_LMG 1.75
 #define SLOWDOWN_ADS_INCINERATOR 1.75
 #define SLOWDOWN_ADS_SPECIALIST 1.75

@@ -1,0 +1,7 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "New holsters"
+  - rscdel: "Unneeded black market variant of ICC"
+  - qol: "CMB uniform typepath updated"
+  - bugfix: "MP typepath fixed"

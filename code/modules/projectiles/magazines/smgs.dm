@@ -17,26 +17,26 @@
 	max_rounds = 48
 	w_class = SIZE_MEDIUM
 	gun_type = /obj/item/weapon/gun/smg/m39
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/smg
 	ammo_band_icon = "+m39_band"
 	ammo_band_icon_empty = "+m39_band_e"
 
 /obj/item/ammo_magazine/smg/m39/ap
 	name = "\improper Viper 9 AP magazine (9mm)"
 	desc = "A 9mm armor-piercing submachinegun magazine."
-	default_ammo = /datum/ammo/bullet/pistol/ap
+	default_ammo = /datum/ammo/bullet/smg/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/smg/m39/le
 	name = "\improper Viper 9 LE magazine (9mm)"
 	desc = "A 9mm light-explosive submachinegun magazine."
-	default_ammo = /datum/ammo/bullet/pistol/le
+	default_ammo = /datum/ammo/bullet/smg/le
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
 /obj/item/ammo_magazine/smg/m39/rubber
 	name = "\improper Viper 9 rubber magazine (9mm)"
 	desc = "A 9mm rubber bullet submachinegun magazine/"
-	default_ammo = /datum/ammo/bullet/pistol/rubber
+	default_ammo = /datum/ammo/bullet/smg/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 /obj/item/ammo_magazine/smg/m39/heap
@@ -48,19 +48,19 @@
 /obj/item/ammo_magazine/smg/m39/penetrating
 	name = "\improper Viper 9 wall-penetrating magazine (9mm)"
 	desc = "A 9mm wall-penetrating bullet submachinegun magazine."
-	default_ammo = /datum/ammo/bullet/pistol/ap/penetrating
+	default_ammo = /datum/ammo/bullet/smg/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/smg/m39/toxin
 	name = "\improper Viper 9 toxin magazine (9mm)"
 	desc = "A 9mm toxin bullet submachinegun magazine."
-	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
+	default_ammo = /datum/ammo/bullet/smg/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 /obj/item/ammo_magazine/smg/m39/incendiary
 	name = "\improper Viper 9 incendiary magazine (9mm)"
 	desc = "A 9mm incendiary submachinegun magazine."
-	default_ammo = /datum/ammo/bullet/pistol/incendiary
+	default_ammo = /datum/ammo/bullet/smg/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/smg/m39/extended
@@ -69,6 +69,13 @@
 	max_rounds = 72
 	icon_state = "m39_HV_extended"
 	bonus_overlay = "m39_ex"
+
+/obj/item/ammo_magazine/smg/m39/pve
+	name = "\improper Viper 9 duplex magazine (9mm)"
+	desc = "A 9mm submachinegun magazine containing special duplex rounds, designed to increase your overall firepower per pull. Reduced bullet velocity due to two slugs per bullet."
+	max_rounds = 54
+	default_ammo = /datum/ammo/bullet/smg/pve
+	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.
@@ -104,7 +111,7 @@
 	if(random_magazine)
 		var/capacity = pick(20, 30, 40)
 		name = "\improper MP27 [capacity]-round magazine (4.6x30mm)"
-		desc = "A [capacity]-round 4.6mm magazine for the MP27. Fires large, heavy bullets that have noticeable punch for an SMG but also have equally noticeable scatter and a loss of accuracy. Due to a factory blueprint mixup, 20, 30, and 40-round magazines were all manufactured and sold in the same boxes, leading to a class act lawsuit that bankrupted the company."
+		desc = "A [capacity]-round 4.6mm magazine for the MP27. Fires small, but heavy bullets that have noticeable punch for an SMG but also have equally noticeable scatter and a loss of accuracy. Due to a factory blueprint mixup, 20, 30, and 40-round magazines were all manufactured and sold in the same boxes, leading to a class act lawsuit that bankrupted the company."
 		caliber = "4.6x30mm"
 		base_mag_icon = "mp7_[capacity]"
 		icon_state = "mp7_[capacity]"

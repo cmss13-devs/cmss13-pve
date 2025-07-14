@@ -44,7 +44,7 @@ interface SquadProps {
   squad: string;
   partial_squad_ref: string;
   squad_color: string;
-  is_lead: 'sctsgt' | 'SQ1' | 'SQ2' | 0;
+  is_lead: 'sctsgt' | 'SQ1' | 'SQ2' | 'SQ3' | 'SQ4' | 0;
   objective: { primary?: string; secondary?: string };
 }
 
@@ -199,6 +199,8 @@ const FireTeamMember = (props: {
   const { data, act } = useBackend<SquadProps>();
   const assignFT1 = { target_ft: 'SQ1', target_marine: props.member.name };
   const assignFT2 = { target_ft: 'SQ2', target_marine: props.member.name };
+  const assignFT3 = { target_ft: 'SQ3', target_marine: props.member.name };
+  const assignFT4 = { target_ft: 'SQ4', target_marine: props.member.name };
 
   const promote = () => {
     const teamlead = props.fireteam?.sqldr;
@@ -245,6 +247,12 @@ const FireTeamMember = (props: {
                 <Stack.Item>
                   <Button onClick={() => act('assign_ft', assignFT2)}>2</Button>
                 </Stack.Item>
+                <Stack.Item>
+                  <Button onClick={() => act('assign_ft', assignFT3)}>3</Button>
+                </Stack.Item>
+                <Stack.Item>
+                  <Button onClick={() => act('assign_ft', assignFT4)}>4</Button>
+                </Stack.Item>
               </>
             )}
             {props.team !== 'Unassigned' && (
@@ -282,10 +290,10 @@ const SquadObjectives = (props) => {
 
 export const SquadInfo = () => {
   const { config, data } = useBackend<SquadProps>();
-  const fireteams = ['SQ1', 'SQ2', 'Unassigned'];
+  const fireteams = ['SQ1', 'SQ2', 'SQ3', 'SQ4', 'Unassigned'];
 
   return (
-    <Window theme="usmc" width={680} height={675}>
+    <Window theme="usmc" width={710} height={675}>
       <Window.Content className="SquadInfo">
         <Flex fill={1} justify="space-around" direction="column">
           <Flex.Item>
@@ -299,7 +307,7 @@ export const SquadInfo = () => {
           </Flex.Item>
           <Flex.Item>
             <Section title="Squads">
-              <Box className="ftlFlex">
+              <Box width="100%" className="ftlFlex" fillPositionedParent>
                 {fireteams.map((x) => (
                   <FireTeam sqldr={x} key={x} />
                 ))}
