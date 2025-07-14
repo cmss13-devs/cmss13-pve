@@ -10,9 +10,9 @@
 	icon_state = "mealpack"
 	item_state = "mealpack"
 	w_class = SIZE_SMALL
-	can_hold = list(/obj/item/mre_food_packet, /obj/item/reagent_container/food/drinks/cans/spread, /obj/item/reagent_container/food/drinks/beverage_drink, /obj/item/storage/fancy/cigarettes/wypacket_4, /obj/item/storage/fancy/cigarettes/balaji_4, /obj/item/storage/fancy/cigarettes/lucky_strikes_4, /obj/item/storage/fancy/cigarettes/blackpack_4, /obj/item/storage/fancy/cigar/matchbook, /obj/item/tool/kitchen/utensil, /obj/item/reagent_container/food/snacks/fortunecookie, /obj/item/reagent_container/food/drinks/cans/soylent, /obj/item/reagent_container/food/drinks/cans/coconutmilk, /obj/item/reagent_container/food/snacks/wrapped/twe_bar, /obj/item/storage/box/lemondrop, /obj/item/reagent_container/pill/teabag, /obj/item/reagent_container/food/drinks/cans/tube, /obj/item/reagent_container/food/drinks/sillycup, /obj/item/reagent_container/food/drinks/cans/food/upp, /obj/item/reagent_container/food/snacks/wrapped/upp_biscuits, /obj/item/reagent_container/food/snacks/mre_food, /obj/item/reagent_container/food/snacks/lemondrop)
+	can_hold = list()
 	storage_slots = 4
-	max_w_class = 2
+	max_w_class = SIZE_SMALL
 	use_sound = "rip"
 	var/trash_item = /obj/item/trash/uscm_mre
 	var/icon_closed = "mealpack"
@@ -139,6 +139,7 @@
 	. = ..()
 	isopened = FALSE
 	icon_state = icon_closed
+	set_can_hold()
 	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))
 
 /obj/item/storage/box/mre/proc/try_forced_folding(datum/source, mob/user)
@@ -147,7 +148,11 @@
 	if(!isturf(loc))
 		return
 
-	if(locate(/obj/item/mre_food_packet || /obj/item/reagent_container/food/drinks/cans || /obj/item/reagent_container/food/snacks) in src)
+	if(locate(/obj/item/mre_food_packet) in src)
+		return
+	if(locate(/obj/item/reagent_container/food/snacks) in src)
+		return
+	if(locate(/obj/item/reagent_container/food/drinks/cans) in src)
 		return
 
 	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
@@ -155,6 +160,14 @@
 	to_chat(user, SPAN_NOTICE("You throw away [src]."))
 	new trash_item(user.loc)
 	qdel(src)
+
+/obj/item/storage/box/mre/proc/set_can_hold()
+	for(var/item in contents)
+		can_hold += item
+		if(istype(item, /obj/item/mre_food_packet))
+			var/obj/item/mre_food_packet/food_packet = item
+			if(food_packet.contents_food)
+				can_hold += food_packet.contents_food
 
 /obj/item/storage/box/mre/update_icon()
 	if(!isopened)
@@ -285,7 +298,6 @@
 	icon_closed = "wy_mealpack"
 	icon_opened = "wy_mealpackopened"
 	item_state = "wy_mealpack"
-	can_hold = list(/obj/item/reagent_container/food/snacks/microwavable/packaged_burger, /obj/item/reagent_container/food/snacks/microwavable/packaged_burrito, /obj/item/reagent_container/food/snacks/eat_bar, /obj/item/reagent_container/food/snacks/wrapped/booniebars, /obj/item/reagent_container/food/snacks/wrapped/barcardine, /obj/item/reagent_container/food/snacks/wrapped/chunk, /obj/item/reagent_container/food/drinks/cans/bugjuice)
 	trash_item = /obj/item/trash/wy_mre
 	entree = /obj/item/mre_food_packet/entree/wy_colonist
 	side = null
@@ -297,7 +309,7 @@
 	should_have_spread = FALSE
 	should_have_cookie = FALSE
 	should_have_utencil = FALSE
-	should_have_drink = FALSE
+	should_have_drink = TRUE
 
 /obj/item/storage/box/mre/wy/choose_drink()
 	new /obj/item/reagent_container/food/drinks/cans/bugjuice(src)
