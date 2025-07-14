@@ -789,6 +789,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 //TWE GUNS
 GLOBAL_LIST_INIT(rebel_twe_shotguns, list(
 	/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb = /obj/item/ammo_magazine/handful/shotgun/buckshot,
+	/obj/item/weapon/gun/shotgun/double/upp = /obj/item/ammo_magazine/handful/shotgun/buckshot,
 	))
 
 GLOBAL_LIST_INIT(rebel_twe_smgs, list(
