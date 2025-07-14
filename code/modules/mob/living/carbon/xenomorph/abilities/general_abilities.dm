@@ -60,12 +60,12 @@
 	if(X && !X.buckled && !X.is_mob_incapacitated())
 		return TRUE
 
-// release_haul
-/datum/action/xeno_action/onclick/release_haul
-	name = "Release"
-	action_icon_state = "release_haul"
+// Regurgitate
+/datum/action/xeno_action/onclick/regurgitate
+	name = "Regurgitate"
+	action_icon_state = "regurgitate"
 	plasma_cost = 0
-	macro_path = /datum/action/xeno_action/verb/verb_release_haul
+	macro_path = /datum/action/xeno_action/verb/verb_regurgitate
 	action_type = XENO_ACTION_CLICK
 
 // Choose Resin

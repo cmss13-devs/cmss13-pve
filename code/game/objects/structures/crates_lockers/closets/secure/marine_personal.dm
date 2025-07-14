@@ -36,7 +36,7 @@
 
 /obj/structure/closet/secure_closet/marine_personal/proc/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/rifleman
@@ -60,10 +60,13 @@
 /obj/structure/closet/secure_closet/marine_personal/platoon_commander/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
 	new /obj/item/clothing/under/marine/officer/boiler(src)
-	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/head/cmcap/bridge(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/service(src)
+	new /obj/item/clothing/under/marine/officer/bridge(src)
+	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/clothing/head/marine/peaked/service(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
@@ -99,7 +102,7 @@
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()
 	new /obj/item/clothing/under/marine/standard(src)
-	new /obj/item/clothing/shoes/marine/jungle/knife(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon/rifleman
