@@ -335,7 +335,7 @@
 	icon_state = "ag80"
 	ammo_band_icon = "+ag80_band"
 	ammo_band_icon_empty = "+ag80_band_e"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/ag80 //need to reference the actual ammo designed for the carbine
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 
@@ -555,12 +555,12 @@
 //XM51 BREACHING SHOTGUN
 
 /obj/item/ammo_magazine/rifle/xm51
-	name = "\improper XM51 magazine (16g)"
+	name = "\improper M1771 magazine (16g)"
 	desc = "A 16 gauge pump-action shotgun magazine."
 	icon_state = "xm51"
 	caliber = "16g"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6

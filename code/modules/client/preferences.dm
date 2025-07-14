@@ -259,6 +259,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	/// Dropship name used when spawning as LT
 	var/dropship_name = "Midway"
 
+	/// Personal weapon that spawns randomly roundstart
+	var/personal_weapon = "Ithaca 37 shotgun"
+
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
 	macros = new(C, src)
@@ -282,8 +285,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/client_reconnected(client/C)
 	owner = C
 	macros.owner = C
-
-	C.tgui_say?.load()
 
 /datum/preferences/Del()
 	. = ..()
@@ -404,6 +405,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<br><br>"
 
 			dat += "<h2><b><u>Marine Gear:</u></b></h2>"
+			dat += "<b>Personal Weapon:</b> <a href ='byond://?_src_=prefs;preference=personalweapon;task=input'><b>[personal_weapon]</b></a><br>"
 			dat += "<b>Underwear:</b> <a href ='byond://?_src_=prefs;preference=underwear;task=input'><b>[underwear]</b></a><br>"
 			dat += "<b>Undershirt:</b> <a href='byond://?_src_=prefs;preference=undershirt;task=input'><b>[undershirt]</b></a><br>"
 
@@ -1712,6 +1714,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/new_f_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in valid_facialhairstyles
 					if(new_f_style)
 						f_style = new_f_style
+
+				if("personalweapon")
+					var/new_weapon = tgui_input_list(user, "Choose your character's personal weapon:", "Character Preference (USCM Only)", GLOB.personal_weapons_list+"None")
+					if(new_weapon)
+						personal_weapon = new_weapon
+					ShowChoices(user)
 
 				if("underwear")
 					var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f

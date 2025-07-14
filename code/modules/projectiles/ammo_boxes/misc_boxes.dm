@@ -125,6 +125,16 @@
 /obj/item/ammo_box/magazine/misc/mre/fsr/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/misc/mre/hdr
+	name = "\improper box of HDR rations"
+	desc = "A box of Humanitarian Daily Rations. Give these out to hungry colonist kids, will you?"
+	icon_state = "hdr_food_crate"
+	magazine_type = /obj/item/storage/box/mre/hdr
+	overlay_content = "_hdr_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/hdr/empty
+	empty = TRUE
+
 //------------------------M94 Marking Flare Packs Box--------------------------
 
 /obj/item/ammo_box/magazine/misc/flares

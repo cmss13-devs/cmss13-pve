@@ -180,6 +180,7 @@
 	siemens_coefficient = 0.9
 	w_class = SIZE_MEDIUM
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_0.dmi')
+	var/has_light = FALSE
 
 /obj/item/clothing/suit/update_clothing_icon()
 	if (ismob(src.loc))

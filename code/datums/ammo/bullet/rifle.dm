@@ -470,10 +470,12 @@
 /datum/ammo/bullet/rifle/mar40
 	name = "8.8x29 rifle bullet"
 	damage = 45
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16
 	name = "5.56x45 rifle bullet"
 	damage = 35
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/rifle/m16/ap
 	name = "armor-piercing 5.56x45 rifle bullet"
@@ -483,13 +485,14 @@
 /datum/ammo/bullet/rifle/ar10
 	name = "7.62x51 rifle bullet"
 	damage = 55
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 //9.7x16 AG80
 
 /datum/ammo/bullet/rifle/ag80
 	name = "9.7x16 bullet"
 	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_1 // shouldn't be higher pen than 10x24
 
 /datum/ammo/bullet/rifle/ag80/tracer
 	icon_state = "bullet_green"
@@ -499,7 +502,7 @@
 /datum/ammo/bullet/rifle/ag80/ap
 	name = "armor-piercing 9.7x16 bullet"
 	damage = 35
-	penetration = ARMOR_PENETRATION_TIER_9
+	penetration = ARMOR_PENETRATION_TIER_7 // not as good as 10x24 AP but still impressive for calibre size
 
 /datum/ammo/bullet/rifle/ag80/ap/tracer
 	icon_state = "bullet_green"
@@ -510,8 +513,8 @@
 	name = "high-explosive armor-piercing 9.7x16 bullet"
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 50 //big damage, doesn't actually blow up because thats stupid.
-	penetration = ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_9
+	penetration = ARMOR_PENETRATION_TIER_7
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2 //thinner round should have less shrap potential vs the 10x24, no?
 
 /datum/ammo/bullet/rifle/ag80/heap/tracer
 	icon_state = "bullet_green"

@@ -23,7 +23,7 @@
 				return 1
 
 			// If unconscious with oxygen damage, do CPR. If dead, we do CPR
-			if(!((stat == UNCONSCIOUS || (locate(/datum/effects/crit) in effects_list)) && getOxyLoss() > 0) && !(stat == DEAD))
+			if(!((stat == UNCONSCIOUS || ((locate(/datum/effects/crit) in effects_list) && (status_flags & CANKNOCKOUT))) && getOxyLoss() > 0) && !(stat == DEAD))
 				help_shake_act(attacking_mob)
 				return 1
 
@@ -294,6 +294,10 @@
 			postscript += " <b>(NANOSPLINTED)</b>"
 		else if(org.status & LIMB_SPLINTED)
 			postscript += " <b>(SPLINTED)</b>"
+		for(var/datum/effects/bleeding/internal/I in org.bleeding_effects_list)
+			postscript += " <b>It is bleeding pulsatilely.</b> "
+			if(I.has_been_bandaged)
+				postscript += " <b>(PACKED)</b> "
 
 		if(postscript)
 			limb_message += "\t My [org.display_name] is [SPAN_WARNING("[english_list(status, final_comma_text = ",")].[postscript]")]"

@@ -47221,7 +47221,7 @@
 /turf/open/floor/wood/ship,
 /area/almayer/living/commandbunks)
 "rJZ" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/plating/plating_catwalk,
 /area/almayer/maint/hull/lower/l_f_p)
 "rKp" = (
@@ -54189,9 +54189,9 @@
 	pixel_y = 3
 	},
 /obj/item/storage/firstaid/adv,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/almayer/sterile_green,
 /area/almayer/medical/lockerroom)

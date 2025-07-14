@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Color of phone displayed in the phone menu
 	var/phone_color = "white"
 
-	/// The id of our phone which shows up when we talk
+	/// The id of our phone which shows up when we talk. Recommended to make unique. Do not include "(#:".
 	var/phone_id = "Telephone"
 
 	/// Our phone icon that is displayed in the phone menu TGUI
@@ -49,7 +49,9 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	/// Whether the phone is able to be called or not
 	var/enabled = TRUE
 
-/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+	///If the phone is activated by COMSIG_PHONE_BUTTON_USE or not. And if true Will only allow COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND if recieving a call.
+	var/overlay_interactable = FALSE
+/datum/component/phone/Initialize(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, overlay_interactable)
 	. = ..()
 
 	if(!istype(parent, /atom))
@@ -80,7 +82,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	return ..()
 
 /// Handles all of our variables usually set in Initialize(), needs to be a proc so virtual phones don't get incorrect signals or a handset
-/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder)
+/datum/component/phone/proc/handle_initial_variables(phone_category, phone_color, phone_id, phone_icon, do_not_disturb, list/networks_receive, list/networks_transmit, holder, overlay_interactable)
 	src.phone_category = isnull(phone_category) ? src.phone_category : phone_category
 	src.phone_color = isnull(phone_color) ? src.phone_color : phone_color
 	src.phone_id = isnull(phone_id) ? src.phone_id : phone_id
@@ -89,13 +91,19 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	src.networks_receive = isnull(networks_receive) ? src.networks_receive : networks_receive.Copy()
 	src.networks_transmit = isnull(networks_transmit) ? src.networks_transmit : networks_transmit.Copy()
 	src.holder = holder ? holder : parent
+	src.overlay_interactable = isnull(overlay_interactable) ? src.overlay_interactable : overlay_interactable
+
+	//Makes sure all phone IDs are Unique... Hopefully.
+	src.phone_id = force_unique_ids(phone_id, initializing=TRUE)
 
 	phone_handset = new(null, src, src.holder)
 	RegisterSignal(phone_handset, COMSIG_PARENT_PREQDELETED, PROC_REF(override_delete))
 
 	RegisterSignal(src.holder, COMSIG_ATOM_MOB_ATTACKBY, PROC_REF(item_used_on_phone))
-	RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
-
+	if(!src.overlay_interactable)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
+	else
+		RegisterSignal(src.holder, COMSIG_ATOM_PHONE_BUTTON_USE, PROC_REF(use_phone))
 	if(istype(src.holder, /obj/item))
 		RegisterSignal(src.holder, COMSIG_ITEM_PICKUP, PROC_REF(holder_picked_up))
 		RegisterSignal(src.holder, COMSIG_ITEM_DROPPED, PROC_REF(holder_dropped))
@@ -139,6 +147,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		return
 
 	picked_up_call(user)
+	if(src.overlay_interactable)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	calling_phone.other_phone_picked_up_call()
 
 	return COMPONENT_CANCEL_HUMAN_ATTACK_HAND
@@ -213,7 +223,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 
 	for(var/possible_phone in GLOB.phones)
 		var/datum/component/phone/target_phone = possible_phone
-
+		target_phone.phone_id = force_unique_ids(target_phone.phone_id)
 		if(!target_phone.phone_available())
 			continue
 
@@ -225,14 +235,7 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		if(!net_link)
 			continue
 
-		var/id = target_phone.phone_id
-		var/num_id = 1
-		while(id in phone_list)
-			id = "[target_phone.phone_id] [num_id]"
-			num_id++
-
-		target_phone.phone_id = id
-		phone_list[id] = target_phone
+		phone_list[target_phone.phone_id] += target_phone
 
 	return phone_list
 
@@ -301,6 +304,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 	calling_phone = incoming_call
 	last_caller = incoming_call.phone_id
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_RINGING)
+	if(src.overlay_interactable)
+		RegisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND, PROC_REF(use_phone))
 	ringing_loop.start()
 
 /// What we do after our call is set up from call_phone()
@@ -325,7 +330,8 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 		calling_phone.reset_call(timeout, recursed = TRUE)
 
 	SEND_SIGNAL(holder, COMSIG_ATOM_PHONE_STOPPED_RINGING)
-
+	if(src.overlay_interactable)
+		UnregisterSignal(src.holder, COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND)
 	ringing_loop?.stop()
 
 	handle_reset_call_message(timeout, recursed)
@@ -425,6 +431,24 @@ GLOBAL_LIST_EMPTY_TYPED(phones, /datum/component/phone)
 /datum/component/phone/proc/get_user()
 	return ismob(phone_handset.loc) ? phone_handset.loc : null
 
+///Handles ensuring unique phone_id for each phone, use Inititializing if the phone isn't in GLOB.phones yet.
+/datum/component/phone/proc/force_unique_ids(id_to_unique, initializing=FALSE)
+	var/id = id_to_unique
+	var/num_id
+	if(initializing)
+		num_id = 2
+	else
+		num_id = 1
+	for(var/possible_phone in GLOB.phones) //Go through extra times to make sure.
+		for(var/dupe_phone in GLOB.phones) //Safety check all phones for duplicate IDs
+			var/datum/component/phone/possible_duplicate_id = dupe_phone
+			if(id == possible_duplicate_id.phone_id)
+				if(num_id > 1) //Account for first instance
+					if(findtext(id, " (#:")) //Already a duplicate?
+						id = copytext(id, 1, findtext(id, " (#:"))
+					id = "[id] (#:[num_id])"
+					num_id++
+	return id
 //TGUI section
 
 /datum/component/phone/ui_status(mob/user, datum/ui_state/state)

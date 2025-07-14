@@ -138,6 +138,12 @@
 	icon = 'icons/obj/items/storage/mre.dmi'
 	icon_state = "mealpackempty"
 
+/obj/item/trash/hdr_mre
+	name = "\improper crumbled HDR"
+	desc = "Someone is going to live another day."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "hdr_mealpackempty"
+
 /obj/item/trash/waffles
 	name = "Waffles"
 	gender = PLURAL
@@ -267,3 +273,16 @@
 	clockwise = pick(TRUE, FALSE)
 	angular_offset = rand(360)
 	return ..()
+
+/obj/item/trash/tooth
+	name = "tooth"
+	desc = "Has seen heavy use, that's for sure."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "tooth"
+	w_class = SIZE_TINY
+
+/obj/item/trash/tooth/Initialize()
+	. = ..()
+	pixel_x = rand(-10,10)
+	pixel_y = rand(-10,10)
+	apply_transform(turn(transform,rand(0,360)))

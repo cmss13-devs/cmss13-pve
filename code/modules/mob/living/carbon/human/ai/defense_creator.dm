@@ -410,3 +410,72 @@
 	desc = /obj/structure/barricade/metal/plasteel/wired::desc
 	icon_state = "plasteel_wired"
 	path_to_spawn = /obj/structure/barricade/metal/plasteel/wired
+
+/datum/human_ai_defense/barricade/deployable
+	name = "Portable Barricade"
+	desc = /obj/structure/barricade/deployable::desc
+	icon_state = "folding_0"
+	path_to_spawn = /obj/structure/barricade/deployable
+
+/datum/human_ai_defense/misc_defences
+	uses_turned_on = FALSE
+	uses_faction = FALSE
+	category = "Miscellaneous Defenses"
+
+/datum/human_ai_defense/misc_defences/spawn_object(turf/loc_to_spawn, dir_to_spawn, faction, turned_on)
+	var/obj/structure/barricade/defense = new path_to_spawn(loc_to_spawn)
+	defense.setDir(dir_to_spawn)
+
+/datum/human_ai_defense/misc_defences/barrier
+	name = "Deployable Barrier"
+	desc = /obj/structure/machinery/deployable/barrier::desc
+	icon_state = "barrier0"
+	path_to_spawn = /obj/structure/machinery/deployable/barrier
+
+/datum/human_ai_defense/misc_defences/table
+	name = "Table Barricade"
+	desc = /obj/structure/barricade/table::desc
+	icon_state = "metalflip"
+	path_to_spawn = /obj/structure/barricade/table
+
+/datum/human_ai_defense/misc_defences/table/wood
+	name = "Wooden Table Barricade"
+	desc = /obj/structure/barricade/table/wood::desc
+	icon_state = "woodflip"
+	path_to_spawn = /obj/structure/barricade/table/wood
+
+/datum/human_ai_defense/misc_defences/table/poor
+	name = "Poor Table Barricade"
+	desc = /obj/structure/barricade/table/wood/poor::desc
+	icon_state = "pwoodflip"
+	path_to_spawn = /obj/structure/barricade/table/wood/poor
+
+/datum/human_ai_defense/misc_defences/table/gambling
+	name = "Gambling Table Barricade"
+	desc = /obj/structure/barricade/table/wood/gambling::desc
+	icon_state = "gameflip"
+	path_to_spawn = /obj/structure/barricade/table/wood/gambling
+
+/datum/human_ai_defense/misc_defences/table/reinforced
+	name = "Reinforced Table Barricade"
+	desc = /obj/structure/barricade/table/reinforced::desc
+	icon_state = "reinfflip"
+	path_to_spawn = /obj/structure/barricade/table/reinforced
+
+/datum/human_ai_defense/misc_defences/table/almayer
+	name = "Almayer Table Barricade"
+	desc = /obj/structure/barricade/table/almayer::desc
+	icon_state = "almflip"
+	path_to_spawn = /obj/structure/barricade/table/almayer
+
+/datum/human_ai_defense/misc_defences/table/prison
+	name = "Prison Table Barricade"
+	desc = /obj/structure/barricade/table/prison::desc
+	icon_state = "prisonflip"
+	path_to_spawn = /obj/structure/barricade/table/prison
+
+/datum/human_ai_defense/misc_defences/razorwire
+	name = "Razorwire"
+	desc = /obj/structure/barricade/razorwire::desc
+	icon_state = "barbed_wire"
+	path_to_spawn = /obj/structure/barricade/razorwire

@@ -12,7 +12,7 @@
 	deactive_state = "degoggles"
 	flags_armor_protection = 0
 	toggleable = TRUE
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_MEDIC
@@ -110,7 +110,7 @@
 	deactive_state = "sensorhud_d"
 	flags_armor_protection = 0
 	toggleable = TRUE
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_DEFAULT
@@ -127,7 +127,7 @@
 	deactive_state = "degoggles"
 	toggleable = TRUE
 	flags_armor_protection = 0
-	hud_type = MOB_HUD_SECURITY_ADVANCED
+	hud_type = list(MOB_HUD_SECURITY_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/glasses/hud/security/prescription

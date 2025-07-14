@@ -198,8 +198,8 @@
 			return 0
 		if(!M.Adjacent(user))
 			return 0
-	if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-		user.apply_effect(3, WEAKEN)
+	if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+		user.apply_effect(0.5, WEAKEN)
 		M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 		msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
@@ -248,3 +248,8 @@
 /obj/item/reagent_container/hypospray/sedative
 	name = "Sedative Hypospray"
 	starting_vial = /obj/item/reagent_container/glass/beaker/vial/sedative
+
+/obj/item/reagent_container/hypospray/kilodermlipo
+	name = "Hypospray (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature, kelotane and dermaline - used to rapidly heal burns. Filled in a 1:3:2 ratio."
+	starting_vial = /obj/item/reagent_container/glass/beaker/vial/kilodermlipo

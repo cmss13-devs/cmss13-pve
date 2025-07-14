@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Advanced Build Mode copy now respects copying to where you click rather than the copied objects original location."

@@ -244,7 +244,7 @@
 	matter = list("metal" = 500)
 	attack_speed = 4
 	volume = 180
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_SMALL
 	splashable = FALSE
 	can_be_placed_into = list(
 		/obj/structure/machinery/chem_master/,
@@ -388,6 +388,17 @@
 /obj/item/reagent_container/glass/beaker/vial/sedative/Initialize()
 	. = ..()
 	reagents.add_reagent("chloralhydrate", 30)
+	update_icon()
+
+/obj/item/reagent_container/glass/beaker/vial/kilodermlipo
+	name = "vial (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature, kelotane and dermaline - used to rapidly heal burns. Filled in a 1:2:3 ratio."
+
+/obj/item/reagent_container/glass/beaker/vial/kilodermlipo/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 5)
+	reagents.add_reagent("kelotane", 10)
+	reagents.add_reagent("dermaline", 15)
 	update_icon()
 
 /obj/item/reagent_container/glass/beaker/vial/random
@@ -657,6 +668,7 @@
 	icon_state = "rag"
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = list(5)
+	splashable = FALSE
 	volume = 5
 	can_be_placed_into = null
 	flags_atom = FPRINT|OPENCONTAINER

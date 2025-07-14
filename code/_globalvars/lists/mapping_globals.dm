@@ -60,4 +60,6 @@ GLOBAL_LIST_EMPTY(ship_areas)
 GLOBAL_LIST_EMPTY(comm_tower_landmarks_net_one)
 GLOBAL_LIST_EMPTY(comm_tower_landmarks_net_two)
 
+GLOBAL_LIST_EMPTY(personal_weapon)
+
 GLOBAL_LIST_EMPTY(landmarks_list) //list of all landmarks created

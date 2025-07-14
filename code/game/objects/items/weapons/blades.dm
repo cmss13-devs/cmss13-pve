@@ -176,8 +176,12 @@
 	. = ..()
 	create_reagents(5)
 
-/obj/item/weapon/swiss_army_knife/attack_self(mob/user)
-	. = ..()
+/obj/item/weapon/swiss_army_knife/attack_hand(mob/user)
+	if(!ishuman(user))
+		return ..()
+	var/mob/living/carbon/human/human = user
+	if(human.l_hand != src && human.r_hand != src)
+		return ..()
 	if(mode != "swiss_stock")
 		switch_tool("swiss_stock")
 	else
@@ -540,7 +544,10 @@
 	icon_state = disabled_icon
 
 /obj/item/weapon/straight_razor/attack_hand(mob/user)
-	if(loc != user) //Only do unique stuff if you are holding it
+	if(!ishuman(user))
+		return ..()
+	var/mob/living/carbon/human/human = user
+	if(human.l_hand != src && human.r_hand != src) //Only do unique stuff if you are holding it
 		return ..()
 
 	playsound(user, 'sound/weapons/flipblade.ogg', 15, 1)
@@ -719,3 +726,9 @@
 	icon_state = "knife_fairbairn"
 	item_state = "knife_gerber"
 	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
+
+/obj/item/weapon/knife/marine/chinese
+	name = "\improper Type 4 bayonet"
+	icon_state = "knife_chinese"
+	item_state = "knife_chinese"
+	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPAAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty QBZ-67 rifles..."

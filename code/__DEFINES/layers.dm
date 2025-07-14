@@ -11,6 +11,7 @@
 
 //#define AREA_LAYER 1
 
+#define LASER_LAYER 1 //For fire support binocs laser
 #define DISPLACEMENT_PLATE_RENDER_LAYER 1
 #define DISPLACEMENT_PLATE_RENDER_TARGET "*DISPLACEMENT_PLATE_RENDER_TARGET"
 
@@ -173,6 +174,7 @@
 
 #define INTRO_PLANE 2001
 #define INTRO_LAYER 26
+#define ABOVE_INTRO_LAYER 27
 
 /// for areas, so they appear above everything else on map file.
 #define AREAS_LAYER 999

@@ -10,7 +10,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
 
 	accuracy_mult = 1.15
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SHOTGUN
 	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
 	wield_delay = WIELD_DELAY_NORMAL //Shotguns are as hard to pull up as a rifle. They're quite bulky afterall
@@ -284,7 +284,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/m120, /obj/item/attachable/stock/tactical)
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/m120, /obj/item/attachable/stock/tactical)
 
 /obj/item/weapon/gun/shotgun/combat/get_examine_text(mob/user)
 	. = ..()
@@ -309,7 +309,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/marsoc
 
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	auto_retrieval_slot = WEAR_J_STORE
 	start_automatic = TRUE
 
@@ -374,7 +374,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/stock/type23, // Stock
 		/obj/item/attachable/flashlight, // Side Rail
 		)
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23)
@@ -572,6 +572,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	if (current_mag.chamber_closed)
 		playsound(user, break_sound, 25, 1)
+		eject_casing()
 	else
 		playsound(user, seal_sound, 25, 1)
 
@@ -1117,6 +1118,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	ready_shotgun_tube()
 
 	playsound(user, pump_sound, 10, 1)
+	eject_casing()
 	recent_pump = world.time
 	if (in_chamber)
 		pumped = TRUE
@@ -1142,6 +1144,9 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
+
+/obj/item/weapon/gun/shotgun/pump/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 
 //-------------------------------------------------------
 
@@ -1245,3 +1250,120 @@ can cause issues with ammo types getting mixed up during the burst.
 	starting_attachment_types = list(/obj/item/attachable/stock/hg3712/m3717)
 
 //-------------------------------------------------------
+
+
+//-------------------------------------------------------
+//XM51, Breaching Scattergun, PVE Edition: civilian magfed shotgun
+
+/obj/item/weapon/gun/rifle/xm51
+	name = "\improper M1771 shotgun"
+	desc = "Full designation: Model 1771 Cobra Max Tactical. Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems meant for civilian and law-enforcement use. Failed its short USCM trials due to unreliability and was ridiculed heavily for having a 'tryhard' name."
+	icon_state = "xm51"
+	item_state = "xm51"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
+	current_mag = /obj/item/ammo_magazine/rifle/xm51
+	attachable_allowed = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/stock/xm51,
+		/obj/item/attachable/stock/xm51/military,
+	)
+	flags_equip_slot = SLOT_BACK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
+	map_specific_decoration = FALSE
+
+	var/pump_delay //How long we have to wait before we can pump the shotgun again.
+	var/pump_sound = "shotgunpump"
+	var/message_delay = 1 SECONDS //To stop message spam when trying to pump the gun constantly.
+	var/burst_count = 0 //To detect when the burst fire is near its end.
+	COOLDOWN_DECLARE(allow_message)
+	COOLDOWN_DECLARE(allow_pump)
+
+/obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
+
+/obj/item/weapon/gun/rifle/xm51/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	accuracy_mult = BASE_ACCURACY_MULT + 2*HIT_ACCURACY_MULT_TIER_8
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_6
+
+/obj/item/weapon/gun/rifle/xm51/Initialize(mapload, spawn_empty)
+	. = ..()
+	pump_delay = FIRE_DELAY_TIER_8
+	additional_fire_group_delay += pump_delay
+	remove_firemode(GUN_FIREMODE_BURSTFIRE)
+
+/obj/item/weapon/gun/rifle/xm51/unique_action(mob/user)
+	if(!COOLDOWN_FINISHED(src, allow_pump))
+		return
+	if(in_chamber)
+		if(COOLDOWN_FINISHED(src, allow_message))
+			to_chat(usr, SPAN_WARNING("<i>[src] already has a shell in the chamber!<i>"))
+			COOLDOWN_START(src, allow_message, message_delay)
+		return
+
+	playsound(user, pump_sound, 10, 1)
+	COOLDOWN_START(src, allow_pump, pump_delay)
+	ready_in_chamber()
+	burst_count = 0 //Reset the count for burst mode.
+
+/obj/item/weapon/gun/rifle/xm51/load_into_chamber(mob/user)
+	return in_chamber
+
+/obj/item/weapon/gun/rifle/xm51/reload_into_chamber(mob/user) //Don't chamber bullets after firing.
+	if(!current_mag)
+		update_icon()
+		return
+
+	in_chamber = null
+	if(current_mag.current_rounds <= 0 && flags_gun_features & GUN_AUTO_EJECTOR)
+		if (user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_OFF))
+			update_icon()
+	return 1
+
+/obj/item/weapon/gun/rifle/xm51/replace_magazine(mob/user, obj/item/ammo_magazine/magazine) //Don't chamber a round when reloading.
+	user.drop_inv_item_to_loc(magazine, src) //Click!
+	current_mag = magazine
+	replace_ammo(user,magazine)
+	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
+		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
+	if(reload_sound)
+		playsound(user, reload_sound, 25, 1, 5)
+
+/obj/item/weapon/gun/rifle/xm51/cock_gun(mob/user)
+	return
+
+/obj/item/weapon/gun/rifle/xm51/cock(mob/user) //Stops the "You cock the gun." message where nothing happens.
+	return
+
+/obj/item/weapon/gun/rifle/xm51/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51)
+
+/obj/item/weapon/gun/rifle/xm51/military
+	name = "\improper XM51 shotgun"
+	desc = "Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems, also known as M1771 Cobra Max Tactical. This one is painted with a fresh coat of Humbrol 170."
+	icon_state = "xm51_military"
+	item_state = "xm51_military"
+
+/obj/item/weapon/gun/rifle/xm51/military/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)

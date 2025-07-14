@@ -1,0 +1,11 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "9mm on the whole has slightly higher AP than before in both pistol & SMG form. Damage equalised between the two forms too"
+  - balance: ".45 has lost it's positive AP, now having (slightly) worse than 9mm but with more damage to make up for it"
+  - balance: "The hipower/HG-45 has lost it's insane AP value of 25, now dialled back to a more reasonable 10 for the lesser damage it dealt per bullet"
+  - balance: ".44 rounds deal slightly less damage but have AP on par with the HG-45's rounds, .357 does less damage but has slightly higher AP & bullet-speed"
+  - balance: "The nagant-revolver calibre used by the UPP revolver has been adjusted, sitting between ,44 & .357 in terms of damage & AP"
+  - balance: "The MP7's rounds do less damage but have AP now"
+  - balance: "The PPSH type rounds have been brought closer together in terms of stats"
+  - balance: "The Viper 9/M39 once more uses the actual SMG rounds in it's magazines"
