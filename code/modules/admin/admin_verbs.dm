@@ -83,6 +83,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/fortify_room,
 	/client/proc/make_human_ai,
 	/datum/admins/proc/create_human_ai_sniper,
+	/datum/admins/proc/create_human_ai_machinegunner,
 	/client/proc/quick_order_ai_approach,
 	/client/proc/quick_order_ai_hold_position,
 	/client/proc/place_plastic_explosives,
@@ -207,6 +208,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
+	/datum/admins/proc/toggle_intro,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug, list(
