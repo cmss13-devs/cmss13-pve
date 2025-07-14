@@ -11,6 +11,11 @@
 	desc = "A lesser trained and equipped operator for FAAMI, often responsible for security and garrison work rather than frontline combat."
 	path = /datum/equipment_preset/faami/rifleman/auxiliary
 
+/datum/human_ai_equipment_preset/faami/rifle/auxiliary/lead
+	name = "FAAMI Auxiliary Operator"
+	desc = "A lesser trained and equipped operator for FAAMI, often responsible for security and garrison work rather than frontline combat. This one is a squad leader."
+	path = /datum/equipment_preset/faami/rifleman/auxiliary/lead
+
 /datum/human_ai_equipment_preset/faami/rifle/mg
 	name = "FAAMI Machinegun Operator"
 	desc = "A higher ranking FAAMI Operator, equipped with a machinegun and training to lay down suppressive fire."
@@ -60,3 +65,8 @@
 	name = "FAAMI Drop Commando Lead"
 	desc = "The FAAMI's most veteran units, equipped to lead air-to-ground assaults into rural locations, often using VTOLs and similar vehicles to fufill such operations. This one is a Squad Leader."
 	path = /datum/equipment_preset/faami/rifleman/commando/sl
+
+/datum/human_ai_equipment_preset/faami/rifle/lt/co
+	name = "FAAMI Commanding Officer"
+	desc = "The main leader of the Operation, whilst not equipped for combat they take a more strategic approach to an overall operation compared to the common field officer."
+	path = /datum/equipment_preset/faami/officer/co

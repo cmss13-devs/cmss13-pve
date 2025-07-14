@@ -661,3 +661,35 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/faami/officer/co
+	name = "FAAMI Commander"
+	paygrades = list(PAY_SHORT_FO4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "CO"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "FAAMI Commanding Officer"
+	rank = JOB_FAAMI_CO
+	skills = /datum/skills/lt
+	faction = FACTION_FAAMI
+
+/datum/equipment_preset/faami/officer/co/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/five_slot(new_human), WEAR_BACK)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/red(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/charcoal(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/small, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/small, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/small, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup/brown, WEAR_FEET)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+
+
+//*****************************************************************************************************/
+

@@ -2,6 +2,8 @@
 
 // FAAMI Mercenaries
 
+// ------------- INFANTRY ---------------
+
 /// FA1 - Soldat
 #define PAY_SHORT_FA1 "FA1"
 
@@ -20,11 +22,15 @@
 /// FA6 - Soldat Chief Sergeant
 #define PAY_SHORT_FA6 "FA6"
 
+// ------------- COMMANDOS ---------------
+
 /// FE1 - Commando Soldat
 #define PAY_SHORT_FE1 "FE1"
 
 /// FE1 - Commando Soldat Sergeant
 #define PAY_SHORT_FE2 "FE2"
+
+// ------------- OFFICERS ---------------
 
 /// FO1 - Adjundant Secondary
 #define PAY_SHORT_FO1 "FO1"
