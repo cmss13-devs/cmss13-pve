@@ -1002,7 +1002,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	var/list/elite_merc_shotguns = list(
 	/obj/item/weapon/gun/shotgun/merc = pick(GLOB.shotgun_handfuls_12g),
 	/obj/item/weapon/gun/shotgun/combat = pick(GLOB.shotgun_handfuls_12g),
-	/obj/item/weapon/gun/shotgun/type23 = pick(GLOB.shotgun_handfuls_8g))
+	/obj/item/weapon/gun/shotgun/ks29 = pick(GLOB.shotgun_handfuls_8g))
 
 	if(prob(shotgun_chance))
 		var/gunpath = pick(elite_merc_shotguns)

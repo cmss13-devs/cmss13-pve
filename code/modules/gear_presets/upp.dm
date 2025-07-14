@@ -667,7 +667,7 @@
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/ks29, WEAR_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/synth, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
@@ -1187,7 +1187,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_R_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/riot, WEAR_R_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/ks29/riot, WEAR_R_HAND)
 
 /datum/equipment_preset/upp/prisoner
 	name = "UPP Prisoner"

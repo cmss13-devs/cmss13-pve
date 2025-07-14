@@ -1949,15 +1949,15 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
 
-/obj/item/attachable/stock/type23
-	name = "\improper Type 23 standard stock"
+/obj/item/attachable/stock/ks29
+	name = "\improper KS-29 standard stock"
 	desc = "A stamped metal stock with internal recoil springs designed to absorb the ridiculous kick the 8 Gauge shotgun causes when fired. Not recommended to remove."
-	icon_state = "type23_stock"
+	icon_state = "ks29_stock"
 	pixel_shift_x = 15
 	pixel_shift_y = 15
 	hud_offset_mod = 2
 
-/obj/item/attachable/stock/type23/New()
+/obj/item/attachable/stock/ks29/New()
 	..()
 	//2h
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4
@@ -1969,18 +1969,18 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
 
-/obj/item/attachable/stock/type23/wood
+/obj/item/attachable/stock/ks29/wood
 	name = "\improper KS-29 wooden stock"
 	desc = "A standard heavy wooden stock for the KS-29 riot shotgun. Allegedly makes a pretty good club in a fight too."
 	slot = "stock"
-	icon_state = "type23_wood"
+	icon_state = "ks29_wood"
 	wield_delay_mod = WIELD_DELAY_FAST
 	pixel_shift_x = 32
 	pixel_shift_y = 15
 	hud_offset_mod = 6 //*Very* long sprite.
 	flags_attach_features = NO_FLAGS
 
-/obj/item/attachable/stock/type23/wood/New()
+/obj/item/attachable/stock/ks29/wood/New()
 	..()
 	//it makes stuff much better when two-handed
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_4

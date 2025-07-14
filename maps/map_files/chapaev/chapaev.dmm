@@ -5259,10 +5259,10 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
 "mj" = (
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
+/obj/item/storage/box/guncase/heavy/shotgun/ks29{
 	pixel_y = 6
 	},
-/obj/item/storage/box/guncase/heavy/shotgun/type23{
+/obj/item/storage/box/guncase/heavy/shotgun/ks29{
 	pixel_y = 13;
 	pixel_x = 1;
 	layer = 3.03

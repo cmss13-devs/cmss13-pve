@@ -738,7 +738,7 @@
 
 /obj/item/storage/belt/marine/smartgunner/upp
 	name = "\improper Type 90 pattern machinegunner belt"
-	desc = "Recently adopted by UPP military, this belt allows machinegunners to carry more ammo boxes into battle. It also found use with SOF breachers using Type 23 shotguns."
+	desc = "Recently adopted by UPP military, this belt allows machinegunners to carry more ammo boxes into battle. It also found use with SOF breachers using KS-29 shotguns."
 	icon_state = "upp_machinegun"
 	item_state = "upp_machinegun"
 	storage_slots = 7
@@ -864,7 +864,7 @@
 
 /obj/item/storage/belt/shotgun/upp
 	name = "\improper Type 42 pattern shotgun shell loading rig"
-	desc = "An ammunition belt designed to hold shotgun shells, primarily for the Type 23 shotgun."
+	desc = "An ammunition belt designed to hold shotgun shells, primarily for the KS-29 shotgun."
 	icon_state = "shotgunbelt" //placeholder
 	item_state = "marinebelt"
 	storage_slots = 10

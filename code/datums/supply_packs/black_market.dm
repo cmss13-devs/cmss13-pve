@@ -151,7 +151,7 @@ Non-USCM items, from CLF, UPP, colonies, etc. Mostly combat-related.
 					new /obj/item/ammo_magazine/smg/mac15(src)
 					new /obj/item/ammo_magazine/smg/mac15(src)
 		if(4) //upp
-			new /obj/item/weapon/gun/shotgun/pump/type23(src)
+			new /obj/item/weapon/gun/shotgun/pump/ks29(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 			new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
