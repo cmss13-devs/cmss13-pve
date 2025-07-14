@@ -235,6 +235,16 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/pistol/taser_round
+	name = "charged electrode"
+	ping = null //nobounce
+	damage = 5//funny
+	stamina_damage = 105
+	penetration = -ARMOR_PENETRATION_TIER_1
+	shrapnel_chance = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_TEAL
 
 /datum/ammo/bullet/pistol/mankey
 	name = "live monkey"

@@ -268,6 +268,17 @@ Defined in conflicts.dm of the #defines folder.
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
 
+/obj/item/attachable/suppressor/superduty_integral
+	name = "Wraith Manufacturing 9SD-WM integral silencer"
+	desc = "An integral reflex silencer that shouldn't be removed from the firearm."
+	icon_state = "suppressor"
+	attach_icon = "superduty_integral_a"
+
+/obj/item/attachable/suppressor/superduty_integral/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_7
+
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"
 	icon_state = "m40sd_suppressor"
@@ -3361,6 +3372,115 @@ Defined in conflicts.dm of the #defines folder.
 	. = ..()
 	current_rounds = 1
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
+
+//semi auto GL
+/obj/item/attachable/attached_gun/rapid_grenade
+	name = "semi automatic underslung grenade launcher"
+	desc = "A reloadable multi shot USGL. Motorized feed assembly allows for fire as fast as it cycles."
+	icon_state = "grenade-mk1" //filler, nobodys gonna see this
+	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = FIRE_DELAY_TIER_6
+
+	fire_sound = 'sound/weapons/gun_m92_attachable.ogg'
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	var/caliber = "30mm"
+	var/grenade_pass_flags
+	var/list/loaded_grenades //list of grenade types loaded in the UGL
+
+/obj/item/attachable/attached_gun/rapid_grenade/Initialize()
+	. = ..()
+	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
+
+/obj/item/attachable/attached_gun/rapid_grenade/New()
+	..()
+	attachment_firing_delay = FIRE_DELAY_TIER_4 * 3
+	loaded_grenades = list()
+
+/obj/item/attachable/attached_gun/rapid_grenade/get_examine_text(mob/user)
+	. = ..()
+	if(current_rounds) . += "It has [current_rounds] grenade\s left."
+	else . += "It's empty."
+
+/obj/item/attachable/attached_gun/rapid_grenade/update_icon()
+	. = ..()
+	attach_icon = initial(attach_icon)
+	icon_state = initial(icon_state)
+	if(istype(loc, /obj/item/weapon/gun))
+		var/obj/item/weapon/gun/gun = loc
+		gun.update_attachable(slot)
+
+
+/obj/item/attachable/attached_gun/rapid_grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
+	if(!istype(G) || (G.caliber != caliber))
+		to_chat(user, SPAN_WARNING("[src] doesn't accept that caliber of grenade."))
+		return
+	if(!G.active) //can't load live grenades
+		if(!G.underslug_launchable)
+			to_chat(user, SPAN_WARNING("[src] can't be loaded with an activated grenade."))
+			return
+		if(current_rounds >= max_rounds)
+			to_chat(user, SPAN_WARNING("[src] is full."))
+		else
+			playsound(user, 'sound/weapons/grenade_insert.wav', 25, 1)
+			current_rounds++
+			loaded_grenades += G
+			to_chat(user, SPAN_NOTICE("You load \the [G] into \the [src]."))
+			user.drop_inv_item_to_loc(G, src)
+
+/obj/item/attachable/attached_gun/rapid_grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
+	. = TRUE //Always uses special unloading.
+	if(!current_rounds)
+		to_chat(user, SPAN_WARNING("It's empty!"))
+		return
+
+	var/obj/item/explosive/grenade/nade = loaded_grenades[length(loaded_grenades)] //Grab the last-inserted one. Or the only one, as the case may be.
+	loaded_grenades.Remove(nade)
+	current_rounds--
+
+	if(drop_override || !user)
+		nade.forceMove(get_turf(src))
+	else
+		user.put_in_hands(nade)
+
+	user.visible_message(SPAN_NOTICE("[user] unloads \a [nade] from \the [src]."),
+	SPAN_NOTICE("You unload \a [nade] from \the [src]."), null, 4, CHAT_TYPE_COMBAT_ACTION)
+	playsound(user, unload_sound, 30, 1)
+
+/obj/item/attachable/attached_gun/rapid_grenade/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	if(get_dist(user,target) > max_range)
+		to_chat(user, SPAN_WARNING("Out of range."))
+		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+
+	if(current_rounds > 0 && ..() || in_chamber && ..())
+		prime_grenade(target,gun,user)
+
+/obj/item/attachable/attached_gun/rapid_grenade/proc/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	set waitfor = 0
+	var/obj/item/explosive/grenade/G = loaded_grenades[1]
+
+	if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
+		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
+		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
+		return
+
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
+
+	playsound(user.loc, fire_sound, 50, 1)
+
+
+/obj/item/attachable/attached_gun/rapid_grenade/harrington
+	name = "M20 overslung grenade launcher"
+	desc = "You shouldn't ever see this detached from the rifle."
+	icon_state = "m20-osgl"
+	attach_icon = "m20-osgl"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+
 
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
