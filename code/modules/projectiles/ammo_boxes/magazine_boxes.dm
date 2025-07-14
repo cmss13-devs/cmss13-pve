@@ -91,7 +91,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m39/ap
-	name = "magazine box (M39 x 12)"
+	name = "magazine box (M39 AP x 12)"
 	overlay_ammo_type = "_ap"
 	overlay_content = "_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/m39/ap
