@@ -381,7 +381,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/bayonet/canc
 	name = "\improper Type 4 bayonet"
-	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPAAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
+	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPPAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
 	icon_state = "knife_chinese"
 	item_state = "knife_chinese"
 	attach_icon = "canc_bayonet_a"
