@@ -69,6 +69,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
 
+<<<<<<< HEAD
 /datum/equipment_preset/other/freelancer/standard/shotgunner
 	name = "Freelancer (Shotgunner)"
 
@@ -117,6 +118,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
 
+=======
+>>>>>>> 5b953381c7b9fd6046eab3c6b9b6e6d5b4ba5c92
 /datum/equipment_preset/other/freelancer/medic/ai
 	name = "Freelancer (Medic) (AI)"
 
