@@ -562,6 +562,7 @@
 
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
@@ -1188,6 +1189,21 @@
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box/ap,
+		/obj/item/ammo_magazine/hpr_box/heap,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
+	)
 	current_mag = /obj/item/ammo_magazine/hpr_box
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -1211,18 +1227,20 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
+	bonus_overlay_x = -1
+	bonus_overlay_y = -1
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 27, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	//hopefully, this will give it some reason to not just hold down trigger? Long lethal bursts.
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
-	fa_max_scatter = SCATTER_AMOUNT_NEURO
+	fa_max_scatter = SCATTER_AMOUNT_TIER_1
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_4

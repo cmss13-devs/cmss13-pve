@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "The SIM-118 Hornet & EMBLR-92 Goose anti air weapons"
+  - imageadd: "Sprites for the above, along with a UPP rocket-bag (currently unused)"
