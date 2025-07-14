@@ -591,6 +591,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "olympiets"
 	item_state = "olympiets"
+	flags_equip_slot = SLOT_BACK
 	fire_sound = 'sound/weapons/gun_olympia.ogg'
 	attachable_allowed = list(
 		/obj/item/attachable/stock/olympiets,

@@ -100,6 +100,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	var/random_storage = pick(/obj/item/clothing/accessory/storage/webbing, /obj/item/clothing/accessory/storage/droppouch)
 	new_human.equip_to_slot_or_del(new random_storage, WEAR_ACCESSORY)
+	//jacket
+	var/random_jacket= rand(1,5)
+	switch(random_jacket)
+		if(1 to 2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/jacket, WEAR_JACKET)
+		if(3 to 4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light, WEAR_JACKET)
 	if(prob(80))
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71, WEAR_IN_ACCESSORY)
@@ -110,15 +119,6 @@
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
 		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/double/upp, WEAR_J_STORE)
-	//jacket
-	var/random_jacket= rand(1,5)
-	switch(random_jacket)
-		if(1 to 2)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/jacket, WEAR_JACKET)
-		if(3 to 4)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
-		if(5)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light, WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard, WEAR_FEET)
 	//waist
