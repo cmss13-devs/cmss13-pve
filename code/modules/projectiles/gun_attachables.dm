@@ -1194,6 +1194,12 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "huntingscope"
 	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
 
+/obj/item/attachable/scope/mini/hunting/upp
+	name = "POS-3 hunting mini-scope"
+	icon_state = "upphuntingscope"
+	attach_icon = "upphuntingscope"
+	desc = "Simple Union-made civilian hunting/sport scope."
+
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
 	desc = "An ARMAT S4 telescoping eye piece, revised by W-Y scientists to be much more ergonomic."

@@ -587,7 +587,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/double/upp
 	name = "\improper MP-122 'Olympiets' hunting shotgun"
-	desc = "A double barrel over-under shotgun produced by BaikalMech Factory. Mostly issued to colonists for protection against hostile fauna or hunting."
+	desc = "A double barrel over-under shotgun produced by BaikalMech Factory. Mostly issued to colonists for protection against hostile fauna or hunting. Has a single scope mounting point right behind the barrel."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "olympiets"
 	item_state = "olympiets"
@@ -596,7 +596,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	attachable_allowed = list(
 		/obj/item/attachable/stock/olympiets,
 		/obj/item/attachable/olympiets_barrel,
-		/obj/item/attachable/scope/mini/hunting,
+		/obj/item/attachable/scope/mini/hunting/upp,
 	)
 
 /obj/item/weapon/gun/shotgun/double/upp/handle_starting_attachment()
