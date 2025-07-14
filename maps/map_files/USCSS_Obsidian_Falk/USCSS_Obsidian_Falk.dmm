@@ -6007,7 +6007,7 @@
 "aqf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/m42c,
+/obj/item/storage/box/guncase/m42c/heap,
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "aqg" = (
