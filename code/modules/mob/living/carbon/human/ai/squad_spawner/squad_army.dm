@@ -71,7 +71,7 @@
 
 /datum/human_ai_squad_preset/army/usasf
 	name = "USASF Patrol Team"
-	desc = "A US Aerospace Force Marine patrol team of 2 riflemen and 1 squad leader."
+	desc = "A US Aerospace Force Security Forces patrol team of 2 riflemen and 1 squad leader."
 	ai_to_spawn = list(
 		/datum/equipment_preset/usasf/crew/infantry/nco = 1,
 		/datum/equipment_preset/usasf/crew/infantry = 2,
