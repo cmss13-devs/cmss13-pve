@@ -1920,7 +1920,7 @@
 
 /obj/item/weapon/gun/rifle/masm55
 	name = "\improper MASM55 Medium Machinegun"
-	desc = "Though many groups and factions throughout modern day have switched to either Smartguns or LMGs, the MASM55 is still used for heavy suppression and are commonly found within the hands of Mercenaries such as the FAAMI PMC group."
+	desc = "Though many groups and factions throughout modern day have switched to either Smartguns or LMGs, the MASM55 is still used for heavy suppression and are commonly found within the hands of Mercenaries such as the FAAMI PMC group. Created by Saint Etienne during 2155 due to the older French MGs were subpar, it has a radiator cooler for more stable fire."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "masm"
 	item_state = "masm"
