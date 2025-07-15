@@ -663,6 +663,15 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/mateba/short/dark
 	icon_state = "mateba_short_a"
 
+/obj/item/attachable/masm_barrel
+	name = "MASM55 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "masm_barrel"
+	desc = "Barrel of the MASM55, how did that get here?"
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -6
+
 // ======== Rail attachments ======== //
 
 /obj/item/attachable/reddot
@@ -4077,6 +4086,26 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 		if("urban")
 			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+
+/obj/item/attachable/bipod/masm
+	name = "MASM55 bipod"
+	desc = "An integrated bipod for the MASM55 Medium Machinegun."
+	icon_state = "masm_bipod"
+	attach_icon = "masm_bipod"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/masm/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15
 
 /obj/item/attachable/burstfire_assembly
 	name = "burst fire assembly"

@@ -531,7 +531,14 @@
 	penetration = -ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
-/datum/ammo/bullet/rifle/fn107/ap
-	name = "armor piercing 7.5x28 bullet"
+/datum/ammo/bullet/rifle/fn107/commando
+	name = "armor piercing tracer 7.5x28 bullet"
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/masm
+	name = "12x28 bullet"
+	damage = 50 //Medium machinegun, high damage
+	penetration = ARMOR_PENETRATION_TIER_2 //Tiny bit of AP just because the others don't have AP. And it's a god damn MMG
