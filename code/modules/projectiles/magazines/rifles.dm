@@ -589,7 +589,7 @@
 
 /obj/item/ammo_magazine/rifle/fn107/commando
 	name = "\improper FN107 AP Tracer magazine (7.5x28mm)"
-	desc = "An 7.5mm AP magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	desc = "An 7.5mm AP Tracer magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
 	default_ammo = /datum/ammo/bullet/rifle/fn107/commando
 	ammo_band_icon = "+fn107_band"
 	ammo_band_icon_empty = "+fn107_band_e"
@@ -599,7 +599,7 @@
 //MASM55 Medium Machinegun
 
 /obj/item/ammo_magazine/rifle/masm
-	name = "\improper MASM55 box magazine (12x28mm)"
+	name = "\improper MASM55 box magazine (12x30mm)"
 	desc = "A large 12mm box magazine for the MASM55, commonly used by the FAAMI military group."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "masm"
