@@ -68,3 +68,38 @@
 		/datum/equipment_preset/usa/snco = 1,
 		/datum/equipment_preset/usa/trooper = 2,
 	)
+
+/datum/human_ai_squad_preset/army/usasf
+	name = "USASF Patrol Team"
+	desc = "A US Aerospace Force Marine patrol team of 2 riflemen and 1 squad leader."
+	ai_to_spawn = list(
+		/datum/equipment_preset/usasf/crew/infantry/nco = 1,
+		/datum/equipment_preset/usasf/crew/infantry = 2,
+	)
+
+/datum/human_ai_squad_preset/army/usasf/maa
+	name = "USASF Master-At-Arms Squad"
+	desc = "A US Aerospace Force armed Master-At-Arms Squad. Specialized in close-quarters-environment in spaceships. Comes with 2 shotgunners and 1 rifleman."
+	ai_to_spawn = list(
+		/datum/equipment_preset/usasf/crew/armsman/armed = 1,
+		/datum/equipment_preset/usasf/crew/armsman/armed_shotgun = 2,
+	)
+
+/datum/human_ai_squad_preset/army/usasf/helljumper
+	name = "USASF Para-Rescue Squad"
+	desc = "A US Aerospace Force Para-Rescue Jumper ('PJs' or 'Helljumpers') Squad. A special unit which conducts operations deep behind hostile lines to support injured or stranded personnel. Comes with 1 Squad leader, 2 Technicians and 1 Corpsman."
+	ai_to_spawn = list(
+		/datum/equipment_preset/usasf/helljumper/squadlead = 1,
+		/datum/equipment_preset/usasf/helljumper/technical = 2,
+		/datum/equipment_preset/usasf/helljumper/medical = 1,
+	)
+
+/datum/human_ai_squad_preset/army/usasf/jtac
+	name = "USASF JTAC Team"
+	desc = "A US Aerospace Force infantry Squad which provides Forward Air Control, spotting enemy positions for Close Air Support and Orbital bombardment. Composed by 1 officer, 1 aide and 2 escorts."
+	ai_to_spawn = list(
+		/datum/equipment_preset/usasf/jtac = 1,
+		/datum/equipment_preset/usasf/jtac/lesser_rank = 1,
+		/datum/equipment_preset/usasf/crew/infantry/nco = 1,
+		/datum/equipment_preset/usasf/crew/infantry = 1,
+	)
