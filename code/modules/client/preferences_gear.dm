@@ -1577,3 +1577,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Compact can opener"
 	path = /obj/item/tool/kitchen/can_opener/compact
 	cost = 2
+
+/datum/gear/misc/eye_drops
+
+	display_name = "Eye drops"
+	path = /obj/item/prop/helmetgarb/eye_drops
+	cost = 1
