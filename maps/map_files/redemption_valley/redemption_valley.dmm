@@ -4809,12 +4809,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/redemptionvalley/valleyroof/company)
-"fbe" = (
-/obj/structure/machinery/light/blue{
-	dir = 1
-	},
-/turf/open/floor/kutjevo/multi_tiles/east,
-/area/redemptionvalley/outpost/brief)
 "fbs" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -5212,6 +5206,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/machinery/light/blue,
 /turf/open/floor/plating/plating_catwalk,
 /area/redemptionvalley/outpost/elevlow)
 "fzJ" = (
@@ -6682,12 +6677,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison,
 /area/redemptionvalley/valleyroof/engi)
-"hyq" = (
-/obj/structure/machinery/light/blue{
-	dir = 1
-	},
-/turf/open/floor,
-/area/redemptionvalley/outpost/elevlow)
 "hyu" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -7769,10 +7758,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt,
 /area/redemptionvalley/valley/checkpoint)
-"iPk" = (
-/obj/structure/machinery/light/blue,
-/turf/open/floor/kutjevo/multi_tiles/east,
-/area/redemptionvalley/outpost/brief)
 "iPl" = (
 /obj/structure/sink{
 	dir = 1;
@@ -14393,7 +14378,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/structure/machinery/light/blue,
 /turf/open/floor,
 /area/redemptionvalley/outpost/elevlow)
 "qBK" = (
@@ -15466,6 +15450,9 @@
 	icon_state = "p_stair_ew_full_cap";
 	layer = 3.5;
 	color = "#8B7B5B"
+	},
+/obj/structure/machinery/light/blue{
+	dir = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/redemptionvalley/outpost/brief)
@@ -19007,6 +18994,7 @@
 	layer = 3.5;
 	color = "#8B7B5B"
 	},
+/obj/structure/machinery/light/blue,
 /turf/open/floor/kutjevo/multi_tiles/west,
 /area/redemptionvalley/outpost/brief)
 "wbg" = (
@@ -39303,8 +39291,8 @@ wsK
 mfU
 mfU
 mxG
-hBN
-hBN
+dkr
+cUP
 jxW
 jxW
 mxG
@@ -39554,9 +39542,9 @@ wsK
 wsK
 mfU
 mxG
+dkr
 hBN
-hBN
-mxG
+pkJ
 jxW
 jxW
 mxG
@@ -39791,8 +39779,8 @@ mxG
 mBh
 mxG
 mxG
-hBN
-hBN
+dkr
+cUP
 mxG
 jxW
 mxG
@@ -39805,9 +39793,9 @@ wsK
 wsK
 mxG
 mxG
+dkr
 hBN
-hBN
-mxG
+pkJ
 mxG
 jxW
 mxG
@@ -40056,9 +40044,9 @@ wsK
 wsK
 mxG
 mxG
+dkr
 hBN
-hBN
-hBN
+pkJ
 nko
 mxG
 mxG
@@ -40294,9 +40282,9 @@ ejm
 mxG
 oTd
 mxG
+dkr
 hBN
-hBN
-hBN
+pkJ
 jxW
 jxW
 mxG
@@ -40307,9 +40295,9 @@ wsK
 wsK
 mxG
 mxG
-mxG
+dkr
 hBN
-hBN
+pkJ
 nko
 nko
 mxG
@@ -40545,9 +40533,9 @@ ejm
 mxG
 mxG
 mxG
+dkr
 hBN
-hBN
-hBN
+pkJ
 mxG
 jxW
 mxG
@@ -40559,7 +40547,7 @@ wsK
 wsK
 mxG
 oTd
-mxG
+hBN
 hBN
 mxG
 nko
@@ -40796,9 +40784,9 @@ ejm
 ejm
 ejm
 mxG
+dkr
 hBN
-hBN
-hBN
+pkJ
 mxG
 mxG
 mxG
@@ -40811,8 +40799,8 @@ mfU
 mfU
 mxG
 mxG
-mxG
-mxG
+fgN
+pkJ
 mxG
 hAJ
 hAJ
@@ -41048,8 +41036,8 @@ ejm
 ejm
 mxG
 mxG
-mxG
-mxG
+fgN
+pkJ
 jxW
 jxW
 mxG
@@ -43073,8 +43061,8 @@ mxG
 jxW
 mxG
 mxG
-hBN
-hBN
+dkr
+cUP
 mxG
 mxG
 jxW
@@ -43324,7 +43312,7 @@ mxG
 mxG
 jxW
 mxG
-hBN
+dkr
 hBN
 hBN
 mxG
@@ -43575,7 +43563,7 @@ wsK
 mxG
 mxG
 mxG
-hBN
+dkr
 hBN
 hBN
 hBN
@@ -43830,7 +43818,7 @@ mxG
 hBN
 hBN
 hBN
-hBN
+pkJ
 jxW
 jxW
 mxG
@@ -44078,10 +44066,10 @@ wsK
 mxG
 mxG
 mxG
+dkr
 hBN
 hBN
-hBN
-hBN
+pkJ
 mxG
 mxG
 mxG
@@ -44329,10 +44317,10 @@ wsK
 nko
 nko
 mxG
+dkr
 hBN
 hBN
-hBN
-hBN
+pkJ
 mxG
 mxG
 mxG
@@ -44580,9 +44568,9 @@ wsK
 mxG
 nko
 mxG
+dkr
 hBN
-hBN
-hBN
+pkJ
 mxG
 nko
 mxG
@@ -44832,8 +44820,8 @@ mxG
 nko
 mxG
 mxG
-mxG
-mxG
+fgN
+pkJ
 mxG
 nko
 nko
@@ -54333,11 +54321,11 @@ vhN
 cZx
 paq
 bAA
-fbe
+flH
 kfb
 fev
 flH
-iPk
+flH
 fKZ
 clk
 wnL
@@ -57365,8 +57353,8 @@ uqx
 eOR
 lxr
 lxr
-lxr
 xEs
+lxr
 vhN
 fKb
 qAE
@@ -57619,7 +57607,7 @@ nGv
 odf
 oyR
 oyR
-hyq
+lGF
 atr
 jKj
 oyR
