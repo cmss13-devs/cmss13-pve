@@ -43,6 +43,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
 	)
 
 	var/obj/item/smartgun_battery/battery = null
@@ -69,6 +70,7 @@
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
+	var/armbrace = FALSE
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -257,6 +259,23 @@
 	else
 		button.icon_state = "template"
 
+/datum/action/item_action/smartgun/toggle_armbrace/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Armbrace"
+	action_icon_state = "armbrace"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_armbrace/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	G.toggle_armbrace(usr)
+	if(G.armbrace)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
 /datum/action/item_action/smartgun/toggle_recoil_compensation/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle Recoil Compensation"
@@ -393,6 +412,22 @@
 		drain -= 10
 		MD.iff_signal = null
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
+
+/obj/item/weapon/gun/smartgun/proc/toggle_armbrace(mob/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human = user
+	if(!human.wear_suit || !(human.wear_suit.flags_inventory & SMARTGUN_HARNESS))
+		to_chat(user, "[icon2html(src, usr)] You can't actuate the armbrace without a harness.")
+		return
+
+	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>deactuate</b>" : "<B>actuate</b>"] \the [src]'s armbrace.")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	armbrace = !armbrace
+	if(armbrace)
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+	else
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if(!requires_battery)
