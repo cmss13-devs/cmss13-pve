@@ -121,8 +121,8 @@
 	..()
 
 /datum/equipment_preset/usasf/crew/infantry
-	name = "USASF Aerospace Marine (Rifleman)"
-	assignment = "USASF Aerospace Marine Rifleman"
+	name = "USASF Rifleman"
+	assignment = "USASF Aerospace Infantry Rifleman"
 	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MAR"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -160,7 +160,7 @@
 /datum/equipment_preset/usasf/crew/infantry/nco
 	name = parent_type::name + " (Team Lead)"
 	paygrades = list(PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_0)
-	assignment = "USASF Aerospace Marine Team Leader"
+	assignment = "USASF Aerospace Infantry Team Leader"
 
 /datum/equipment_preset/usasf/crew/flight
 	name = "USASF Flight-Deck Crewman"
