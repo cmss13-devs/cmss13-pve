@@ -738,3 +738,11 @@
 	gender = NEUTER
 	desc = "Flash-resistant goggles with inbuilt combat and security information."
 	icon_state = "swatgoggles"
+
+/obj/item/clothing/glasses/canc_monoscope
+	name = "'Yaoguai' monoscope"
+	desc = "A single-tube HUD, developed alongside a line of CANC smartscopes with a miniature processing unit that goes on the back of your head. Most smartscope features can not be used without it."
+	icon_state = "monoscope"
+	item_state = "monoscope"
+	flags_armor_protection = 0
+	flags_equip_slot = SLOT_EYES
