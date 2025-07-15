@@ -42,7 +42,9 @@
 		if(sq.type in squad_limit)
 			GLOB.main_platoon_name = sq.name
 			GLOB.main_platoon_initial_name = sq.name
-
+	squad_limit += USCM_AUXILIARY_PLATOON
+	squad_limit += FORECON_AUXILIARY_PLATOON
+	squad_limit += UPP_AUXILIARY_PLATOON
 
 	for(var/datum/squad/squad in GLOB.RoleAuthority.squads)
 		if(squad.type in squad_limit)
@@ -50,6 +52,12 @@
 		GLOB.RoleAuthority.squads -= squad
 		GLOB.RoleAuthority.squads_by_type -= squad.type
 
+	GLOB.RoleAuthority.squads += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += FORECON_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += UPP_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += FORECON_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += UPP_AUXILIARY_PLATOON
 
 	. = ..()
 
@@ -84,15 +92,15 @@
 GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/job/command/bridge/ai = JOB_SO,\
 		/datum/job/marine/leader/ai = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai = JOB_SQUAD_MEDIC,\
-		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/tl/ai = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/standard/ai = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/upp = list(/datum/job/command/bridge/ai/upp = JOB_SO,\
 		/datum/job/marine/leader/ai/upp = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
-		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,
+		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),
+		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
@@ -111,9 +119,12 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON))
 
-GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded, "Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
+GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded,\
+											"Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
 											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\
-											"Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff, "4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack))
+											"Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff,\
+											"4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack))
+
 
 /datum/game_mode/colonialmarines/ai/proc/spawn_personal_weapon()
 	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads
