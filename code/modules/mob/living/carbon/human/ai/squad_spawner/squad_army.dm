@@ -78,8 +78,8 @@
 	)
 
 /datum/human_ai_squad_preset/army/usasf/maa
-	name = "USASF Master-At-Arms Squad"
-	desc = "A US Aerospace Force armed Master-At-Arms Squad. Specialized in close-quarters-environment in spaceships. Comes with 2 shotgunners and 1 rifleman."
+	name = "USASF Master-At-Arms Team"
+	desc = "A US Aerospace Force armed Master-At-Arms Team. Specialized in close-quarters-environment in spaceships. Comes with 2 shotgunners and 1 rifleman."
 	ai_to_spawn = list(
 		/datum/equipment_preset/usasf/crew/armsman/armed = 1,
 		/datum/equipment_preset/usasf/crew/armsman/armed_shotgun = 2,
@@ -95,7 +95,7 @@
 	)
 
 /datum/human_ai_squad_preset/army/usasf/jtac
-	name = "USASF JTAC Team"
+	name = "USASF JTAC Squad"
 	desc = "A US Aerospace Force infantry Squad which provides Forward Air Control, spotting enemy positions for Close Air Support and Orbital bombardment. Composed by 1 officer, 1 aide and 2 escorts."
 	ai_to_spawn = list(
 		/datum/equipment_preset/usasf/jtac = 1,
