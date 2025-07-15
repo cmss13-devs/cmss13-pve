@@ -1367,4 +1367,4 @@
 	icon_state = "vai_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/faami)
 	has_hud = TRUE
-	hud_type = MOB_HUD_FACTION_FAAMI
+	hud_type = list(MOB_HUD_FACTION_FAAMI)

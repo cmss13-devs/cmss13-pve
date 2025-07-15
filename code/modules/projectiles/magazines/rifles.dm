@@ -590,8 +590,8 @@
 //FN107 Rifle
 
 /obj/item/ammo_magazine/rifle/fn107
-	name = "\improper FN107 magazine (7.5x28mm)"
-	desc = "An 7.5mm magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	name = "\improper CAMAS61/79 magazine (7.5x28mm)"
+	desc = "An 7.5mm magazine for the CAMAS61/79 Carbine, commonly used by FAAMI and similar groups."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "fn107"
 	item_state = "fn107"
@@ -601,16 +601,16 @@
 	gun_type = /obj/item/weapon/gun/rifle/fn107
 
 /obj/item/ammo_magazine/rifle/fn107/hollowpoint
-	name = "\improper FN107 hollowpoint magazine (7.5x28mm)"
-	desc = "An 7.5mm hollowpoint magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	name = "\improper CAMAS61/79 hollowpoint magazine (7.5x28mm)"
+	desc = "An 7.5mm hollowpoint magazine for the CAMAS61/79 Carbine, commonly used by FAAMI and similar groups."
 	default_ammo = /datum/ammo/bullet/rifle/fn107/hollowpoint
 	ammo_band_icon = "+fn107_band"
 	ammo_band_icon_empty = "+fn107_band_e"
 	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
 
 /obj/item/ammo_magazine/rifle/fn107/commando
-	name = "\improper FN107 AP Tracer magazine (7.5x28mm)"
-	desc = "An 7.5mm AP Tracer magazine for the FN107 Carbine, commonly used by FAAMI and similar groups."
+	name = "\improper CAMAS61/79 AP Tracer magazine (7.5x28mm)"
+	desc = "An 7.5mm AP Tracer magazine for the CAMAS61/79 Carbine, commonly used by FAAMI and similar groups."
 	default_ammo = /datum/ammo/bullet/rifle/fn107/commando
 	ammo_band_icon = "+fn107_band"
 	ammo_band_icon_empty = "+fn107_band_e"
