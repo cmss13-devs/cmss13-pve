@@ -3,7 +3,7 @@
 /area/lv522_l_l
 	icon_state = "lv-626"
 	can_build_special = TRUE
-	powernet_name = "ground"
+	powernet_name = "LV522_Lukes_Landing"
 	minimap_color = MINIMAP_AREA_COLONY
 
 //parent types
@@ -25,6 +25,7 @@
 	name = "Lukes Landing - Underground"
 	icon_state = "cliff_blocked"
 	ceiling = CEILING_REINFORCED_METAL
+	powernet_name = "LV522_LL_Colony Underground"
 
 //Colony
 

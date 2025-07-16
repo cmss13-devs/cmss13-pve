@@ -13,6 +13,7 @@
 	icon_state = "cliff_blocked" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
 	ceiling = CEILING_METAL
 	soundscape_playlist = SCAPE_PL_LV522_INDOORS
+	powernet_name = "LV522 Chances Claim"
 
 
 /area/lv522/outdoors
@@ -20,6 +21,7 @@
 	icon_state = "cliff_blocked" //because this is a PARENT TYPE and you should not be using it and should also be changing the icon!!!
 	ceiling = CEILING_NONE
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
+	powernet_name = "LV522 Chances Claim"
 
 /area/lv522/oob
 	name = "LV522 - Out Of Bounds"
@@ -403,6 +405,7 @@
 	ceiling = CEILING_REINFORCED_METAL
 	ambience_exterior = AMBIENCE_SHIP
 	minimap_color = MINIMAP_AREA_ENGI
+	powernet_name = "LV-522 Reactor"
 
 /area/lv522/atmos/outdoor
 	name = "Atmospheric Processor - Outdoors"
@@ -470,11 +473,13 @@
 	name = "Atmospheric Processor - Sewer"
 	icon_state = "red"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+	powernet_name = "LV-522 Reactor"
 
 /area/lv522/atmos/reactor_garage
 	name = "Atmospheric Processor - Garage"
 	icon_state = "green"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
+	powernet_name = "LV-522 Reactor"
 
 /area/lv522/atmos/sewer/primary
 	name = "Atmospheric Processor - Primary Heat Exchanger - Eastern Lower Reactor"
@@ -490,6 +495,7 @@
 /area/lv522/indoors/garrison
 	name = "LV522 - Colonial Garrison Canteen"
 	icon_state = "green"
+	powernet_name = "LV522_Colonial Garrison"
 
 /area/lv522/indoors/garrison/storage
 	name = "LV522 - Colonial Garrison Storage"
@@ -502,6 +508,7 @@
 /area/lv522/indoors/garrison/gas
 	name = "LV522 - Barrens Gas Station"
 	icon_state = "blue"
+	powernet_name = "LV522_Gas Station"
 
 /area/lv522/indoors/garrison/engi
 	name = "LV522 - Colonial Garrison Engineering Prefab"
@@ -510,18 +517,20 @@
 /area/lv522/outdoors/garrison/
 	name = "LV522 - Colonial Garrison Comms Relay"
 	icon_state = "yellow"
+	powernet_name = "LV522_Colonial Garrison"
 
 /area/lv522/basement
 	name = "Chances Claim - Underground"
 	icon_state = "cliff_blocked"
 	ceiling = CEILING_REINFORCED_METAL
+	powernet_name = "LV522_CC_Colony Underground"
 
 /area/lv522/basement/colony
 	name = "Chances Claim - Colony Sublevel"
 	icon_state = "red"
 	requires_power = FALSE
 
-//Elevators 
+//Elevators
 /area/lv522/elevator
 	name = "\improper Elevator shuttle"
 	icon_state = "red"
@@ -543,3 +552,9 @@
 //
 /area/lv522/elevator/five
 	name = "\improper Reactor 2"
+
+/area/lv522/hiddenlab
+	name = "Chances Claim - Unknown Lab"
+	icon_state = "red"
+	powernet_name = "LV522_Unknown Lab"
+	ceiling = CEILING_METAL
