@@ -379,6 +379,15 @@ Defined in conflicts.dm of the #defines folder.
 	item_state = ""
 	w_class = SIZE_TINY
 
+/obj/item/attachable/bayonet/canc
+	name = "\improper Type 4 bayonet"
+	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPPAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
+	icon_state = "knife_chinese"
+	item_state = "knife_chinese"
+	attach_icon = "canc_bayonet_a"
+	pixel_shift_x = 17
+	pixel_shift_y = 20
+
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
 	desc = "Longer barrel reduces unburnt powder, improving muzzle velocity and accuracy."
@@ -578,6 +587,26 @@ Defined in conflicts.dm of the #defines folder.
 	name = "suppressed smartgun barrel"
 	icon_state = "silenced_smartgun"
 	gun_traits = list(TRAIT_GUN_SILENCED)
+
+/obj/item/attachable/simbarrel
+	name = "SIM-118 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "fim_barrel"
+	desc = "The very end of an SIM 118 launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
+
+/obj/item/attachable/emblrbarrel
+	name = "EMBLR 92 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "emblr_barrel"
+	desc = "The very end of an EMBLR surface-to-air missile launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
 
 // Mateba barrels
 
@@ -1119,6 +1148,31 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A civilian-grade scope that can be switched between short and long range magnification, intended for use in extraterrestrial scouting. Looks ridiculous on a pistol."
 	aim_speed_mod = 0
 
+/obj/item/attachable/scope/variable_zoom/canc
+	name = "LMR-72 4x smartscope"
+	desc = "Outdated CANC scope."
+	icon_state = "canc_scope"
+	attach_icon = "canc_scope"
+	pixel_shift_x = 13
+	pixel_shift_y = 15
+
+/obj/item/attachable/scope/variable_zoom/canc/toggle_zoom_level()
+	if(ishuman(usr))
+		var/mob/living/carbon/human/human = usr
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			to_chat(human, SPAN_WARNING("You can not use high-resolution magnification of this sight without a monoscope!"))
+			return
+	..()
+
+/obj/item/attachable/scope/variable_zoom/canc/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			zoom_level = ZOOM_LEVEL_2X
+			zoom_offset = 6
+			zoom_viewsize = 7
+			allows_movement = 1
+	..()
 #undef ZOOM_LEVEL_2X
 #undef ZOOM_LEVEL_4X
 
@@ -3962,8 +4016,7 @@ Defined in conflicts.dm of the #defines folder.
 	if(!actually_moving && (specific_direction & initial_mob_dir)) // if you're facing north, but you're shooting north-east and end up facing east, you won't lose your bipod
 		return
 	undeploy_bipod(loc, mover)
-	mover.apply_effect(1, SUPERSLOW)
-	mover.apply_effect(2, SLOW)
+	mover.apply_effect(1, SLOW)
 
 
 //when user fires the gun, we check if they have something to support the gun's bipod.
@@ -4025,7 +4078,7 @@ Defined in conflicts.dm of the #defines folder.
 	delay_mod = 0
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	scatter_mod = SCATTER_AMOUNT_TIER_9
 	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/m60
@@ -4088,3 +4141,15 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
+
+/obj/item/attachable/lw317barrel
+	name = "LW-317 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "lw317_dmr_barrel"
+	attach_icon = "lw317_dmr_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0

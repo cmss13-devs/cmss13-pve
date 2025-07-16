@@ -460,14 +460,14 @@
 */
 
 /obj/item/weapon/gun/rifle/sniper/elite
-	name = "\improper M42C anti-tank sniper rifle"
-	desc = "A high-end superheavy magrail sniper rifle from Weyland-Armat chambered in a specialized variant of the heaviest ammo available, 10x99mm Caseless. This weapon requires a specialized armor rig for recoil mitigation in order to be used effectively."
+	name = "\improper M42C scoped rifle"
+	desc = "A high-end, compact, marksman rifle from Weyland-Armat chambered in 10x28mm Caseless. Near exclusively seen in use by corporate PMCs, this weapon is the bougie reflection of its cousin, the M42A. The desired aim of this weapon's development was to bridge the gap between sniper rifle and marksman rifle, via an increased fire rate combined with the utilization of a smaller frame."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "m42c"
 	item_state = "m42c" //NEEDS A TWOHANDED STATE
 
 	fire_sound = 'sound/weapons/sniper_heavy.ogg'
-	current_mag = /obj/item/ammo_magazine/sniper/elite
+	current_mag = /obj/item/ammo_magazine/sniper/elite/basic
 	force = 17
 	zoomdevicename = "scope"
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
@@ -475,42 +475,32 @@
 	sniper_beam_type = /obj/effect/ebeam/laser/intense
 	sniper_beam_icon = "laser_beam_intense"
 	sniper_lockon_icon = "sniper_lockon_intense"
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
 
 /obj/item/weapon/gun/rifle/sniper/elite/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/scope/S = new(src)
-	S.icon_state = "pmcscope"
-	S.attach_icon = "pmcscope"
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
-/obj/item/weapon/gun/rifle/sniper/elite/set_bullet_traits()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
-	))
+	var/obj/item/attachable/scope/variable_zoom/PMC_Scope = new(src)
+	PMC_Scope.icon_state = "pmcscope"
+	PMC_Scope.attach_icon = "pmcscope"
+	PMC_Scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	PMC_Scope.Attach(src)
+	update_attachable(PMC_Scope.slot)
 
 /obj/item/weapon/gun/rifle/sniper/elite/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 15, "rail_y" = 19, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15)
 
 /obj/item/weapon/gun/rifle/sniper/elite/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_SNIPER*3) //BIG damage, but we want it to have a correspondingly long delay between shots for a modicum of fairness. Fires slower than the marine AMR
-	set_burst_amount(BURST_AMOUNT_TIER_1)
-	accuracy_mult = BASE_ACCURACY_MULT * 3 //Was previously BAM + HAMT10, similar to the XM42B, and coming out to 1.5? Changed to be consistent with M42A. -Kaga
-	scatter = SCATTER_AMOUNT_TIER_10 //Was previously 8, changed to be consistent with the XM42B.
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_1
+	set_fire_delay(FIRE_DELAY_TIER_2)
+	set_burst_amount(0)
+	accuracy_mult = BASE_ACCURACY_MULT * 3
+	scatter = SCATTER_AMOUNT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/rifle/sniper/elite/simulate_recoil(total_recoil = 0, mob/user, atom/target)
-	. = ..()
-	if(.)
-		var/mob/living/carbon/human/PMC_sniper = user
-		if(PMC_sniper.body_position == STANDING_UP && !istype(PMC_sniper.wear_suit,/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc) && !istype(PMC_sniper.wear_suit,/obj/item/clothing/suit/storage/marine/veteran))
-			PMC_sniper.visible_message(SPAN_WARNING("[PMC_sniper] is blown backwards from the recoil of the [src.name]!"),SPAN_HIGHDANGER("You are knocked prone by the blowback!"))
-			step(PMC_sniper,turn(PMC_sniper.dir,180))
-			PMC_sniper.KnockDown(5)
-			PMC_sniper.Stun(5)
+/obj/item/weapon/gun/rifle/sniper/elite/heap
+	current_mag = /obj/item/ammo_magazine/sniper/elite
 
 //Type 88 //Based on the actual Dragunov DMR rifle.
 
