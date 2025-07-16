@@ -416,7 +416,7 @@
 	icon_state = "p_stair_full"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "akt" = (
 /obj/structure/bed/sofa/south/grey/left{
@@ -469,7 +469,7 @@
 	dir = 6;
 	pixel_x = 10
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "amU" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -846,7 +846,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "aID" = (
 /obj/structure/platform/kutjevo/rock,
@@ -1126,7 +1126,7 @@
 	color = "#999999"
 	},
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "aYs" = (
 /obj/structure/platform/shiva/catwalk{
@@ -1234,7 +1234,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bde" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1439,7 +1439,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bnS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1464,7 +1464,7 @@
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bpB" = (
 /obj/structure/platform/strata/metal{
@@ -1712,14 +1712,14 @@
 	icon_state = "leafybush_2"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bEt" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bEG" = (
 /obj/structure/machinery/power/apc/power/south,
@@ -1794,7 +1794,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "bJg" = (
 /obj/structure/machinery/light/small{
@@ -1815,7 +1815,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "leafybush_2"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bJB" = (
 /obj/structure/machinery/door_control{
@@ -1982,19 +1982,19 @@
 /obj/structure/prop/rock/brown{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bRO" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bSi" = (
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "bUm" = (
 /obj/structure/platform/kutjevo/rock{
@@ -2052,7 +2052,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "bWv" = (
 /obj/structure/platform/strata/metal{
@@ -2185,7 +2185,7 @@
 /area/redemptionvalley/caverns/entry)
 "cfr" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "cfu" = (
 /obj/effect/decal/warning_stripes{
@@ -2333,7 +2333,7 @@
 	health_max = 1500;
 	health = 1500
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "cmL" = (
 /obj/structure/platform/kutjevo/rock{
@@ -2568,7 +2568,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "cBQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2628,7 +2628,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "cFv" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -2940,7 +2940,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "cVy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3106,7 +3106,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "dhP" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3205,13 +3205,13 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "dkr" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "dkJ" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -3317,7 +3317,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "dpv" = (
 /turf/open/floor/prison/greenblue/east,
@@ -3451,7 +3451,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "dvq" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3745,7 +3745,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "dPx" = (
 /obj/structure/surface/rack,
@@ -3798,7 +3798,7 @@
 	color = "#999999"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "dSb" = (
 /obj/structure/machinery/vending/coffee{
@@ -3811,7 +3811,7 @@
 	icon_state = "fullgrass_1"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "dSq" = (
 /obj/structure/platform/kutjevo/rock{
@@ -3853,7 +3853,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "dTN" = (
 /turf/closed/wall/hangar,
@@ -4026,7 +4026,7 @@
 /area/redemptionvalley/valley/proper)
 "eeI" = (
 /obj/structure/machinery/colony_floodlight,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "eeK" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4181,7 +4181,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "eqd" = (
 /obj/structure/bed/chair{
@@ -4303,7 +4303,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "brflowers_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "eBa" = (
 /obj/structure/platform{
@@ -4326,7 +4326,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "eCl" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4366,7 +4366,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "leafybush_2"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "eFQ" = (
 /obj/structure/largecrate/random/secure{
@@ -4406,7 +4406,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "eKJ" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -4451,7 +4451,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "eMr" = (
 /obj/structure/bed/chair{
@@ -4765,7 +4765,7 @@
 	dir = 1;
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "eZp" = (
 /obj/structure/machinery/power/apc/power/north,
@@ -4779,7 +4779,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 6
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "eZI" = (
 /obj/structure/machinery/door/airlock/almayer/generic{
@@ -4817,7 +4817,7 @@
 /area/redemptionvalley/valleyroof/security)
 "fbC" = (
 /obj/structure/prop/static_tank/water,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fbQ" = (
 /obj/effect/decal/warning_stripes{
@@ -4889,7 +4889,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "fhq" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -5120,7 +5120,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fvo" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -5251,7 +5251,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fCM" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -5307,7 +5307,7 @@
 /area/redemptionvalley/valleyroof/storage)
 "fGC" = (
 /obj/structure/prop/dam/gravestone,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fHf" = (
 /turf/closed/wall/rock/brown,
@@ -5342,7 +5342,7 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/valley/proper)
 "fJt" = (
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/caverns/east)
 "fKb" = (
 /obj/effect/decal/warning_stripes{
@@ -5432,7 +5432,7 @@
 	icon_state = "p_stair_sn_full_cap";
 	pixel_x = 16
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fNK" = (
 /obj/structure/sign/ROsign{
@@ -5445,7 +5445,7 @@
 /area/redemptionvalley/outpost/halls)
 "fNZ" = (
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fOw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5593,7 +5593,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "fVi" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -5867,7 +5867,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "brflowers_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "gtT" = (
 /obj/structure/window/framed/strata/reinforced,
@@ -5889,11 +5889,11 @@
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "gvO" = (
 /mob/living/simple_animal/chick,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "gwV" = (
 /obj/structure/closet/secure_closet/personal{
@@ -6039,7 +6039,7 @@
 "gDX" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "gEu" = (
 /obj/structure/platform/kutjevo{
@@ -6149,7 +6149,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "gSc" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -6223,7 +6223,7 @@
 /area/redemptionvalley/outpost/barracks)
 "gWr" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "gWU" = (
 /obj/structure/filingcabinet{
@@ -6325,7 +6325,7 @@
 	pixel_x = -8;
 	pixel_y = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "hdR" = (
 /obj/structure/surface/table/holotable,
@@ -6529,7 +6529,7 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hpc" = (
 /obj/structure/gun_rack/m20a/unloaded,
@@ -6671,7 +6671,7 @@
 	pixel_x = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hyc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6710,7 +6710,7 @@
 "hzj" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hzz" = (
 /obj/structure/surface/rack,
@@ -6738,7 +6738,7 @@
 /area/redemptionvalley/valleyroof/housefour)
 "hBN" = (
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "hCF" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -6762,13 +6762,13 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "hDu" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hEc" = (
 /obj/effect/decal/warning_stripes{
@@ -7008,7 +7008,7 @@
 /area/redemptionvalley/valleyroof/security)
 "hOL" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hON" = (
 /obj/structure/platform/strata/metal,
@@ -7027,7 +7027,7 @@
 	dir = 6;
 	icon_state = "p_stair_full"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "hQM" = (
 /obj/structure/machinery/chem_dispenser/medbay,
@@ -7514,7 +7514,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "iBB" = (
 /obj/item/ammo_box/rounds,
@@ -7731,7 +7731,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "iNC" = (
 /obj/structure/machinery/vending/coffee,
@@ -7778,7 +7778,7 @@
 "iPy" = (
 /mob/living/simple_animal/cow,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "iPH" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
@@ -7804,7 +7804,7 @@
 "iQy" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "iRi" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7837,7 +7837,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "iTs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8182,7 +8182,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jkL" = (
 /obj/structure/barricade/handrail/type_b{
@@ -8380,7 +8380,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "jyA" = (
 /turf/closed/wall/hangar,
@@ -8532,7 +8532,7 @@
 "jIo" = (
 /obj/structure/prop/fishing/pole_interactive,
 /obj/structure/surface/table/holotable,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jIt" = (
 /obj/structure/barricade/handrail/kutjevo,
@@ -8654,7 +8654,7 @@
 /obj/structure/barricade/sandbags/wired{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "jRl" = (
 /obj/effect/decal/warning_stripes{
@@ -8672,7 +8672,7 @@
 /area/redemptionvalley/valleyroof/store)
 "jRG" = (
 /obj/structure/platform,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jSl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8702,7 +8702,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jWr" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8767,7 +8767,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "jZW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -8961,7 +8961,7 @@
 /area/redemptionvalley/valleyroof/hydro)
 "kot" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kqI" = (
 /obj/structure/platform/kutjevo/rock{
@@ -9025,7 +9025,7 @@
 	dir = 1;
 	layer = 2.98
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "ksx" = (
 /obj/structure/stairs/perspective{
@@ -9110,7 +9110,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fernybush_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "kwO" = (
 /obj/structure/stairs/perspective{
@@ -9280,14 +9280,14 @@
 /area/redemptionvalley/valleyroof/server)
 "kDK" = (
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kEh" = (
 /mob/living/simple_animal/cow,
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kEr" = (
 /obj/structure/largecrate{
@@ -9345,7 +9345,7 @@
 	layer = 2.98
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kNc" = (
 /obj/structure/platform{
@@ -9360,7 +9360,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kOe" = (
 /obj/structure/pipes/vents/pump{
@@ -9478,7 +9478,7 @@
 /area/redemptionvalley/valleyroof/housetwo)
 "kTd" = (
 /obj/structure/prop/ice_colony/soil_net,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "kTf" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -9566,7 +9566,7 @@
 	pixel_x = -4;
 	pixel_y = 23
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "kZN" = (
 /obj/structure/filingcabinet{
@@ -9806,7 +9806,7 @@
 "lqo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "lqp" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -10081,7 +10081,7 @@
 /area/redemptionvalley/valleyroof/housesix)
 "lLl" = (
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "lMQ" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -10416,7 +10416,7 @@
 	pixel_y = -6;
 	build_stage = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "mek" = (
 /obj/structure/platform/strata/metal{
@@ -10534,7 +10534,7 @@
 	pixel_y = 7;
 	pixel_x = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mjH" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor{
@@ -10729,7 +10729,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mrZ" = (
 /obj/structure/platform{
@@ -10790,7 +10790,7 @@
 /turf/closed/wall/strata_outpost/reinforced,
 /area/redemptionvalley/valleyroof/store)
 "mxG" = (
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "mxS" = (
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -10821,7 +10821,7 @@
 /area/redemptionvalley/outpost/canteen)
 "mBh" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "mCm" = (
 /obj/structure/barricade/handrail/type_b{
@@ -10892,7 +10892,7 @@
 	pixel_x = 20
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mHf" = (
 /obj/effect/decal/warning_stripes{
@@ -10917,7 +10917,7 @@
 /area/redemptionvalley/outpost/ops)
 "mIa" = (
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mIc" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -11131,7 +11131,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "mUr" = (
 /obj/effect/decal/warning_stripes{
@@ -11179,7 +11179,7 @@
 /area/redemptionvalley/shuttles/drop2)
 "mUT" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mWh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11227,7 +11227,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "mXK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -11241,7 +11241,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "nad" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -11378,7 +11378,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "njX" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -11386,7 +11386,7 @@
 /area/redemptionvalley/caverns/east)
 "nko" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "nlM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11512,7 +11512,7 @@
 "ntc" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "ntX" = (
 /obj/structure/machinery/light{
@@ -11677,7 +11677,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "nAR" = (
 /obj/structure/machinery/landinglight/ds1/spoke,
@@ -12495,7 +12495,7 @@
 /area/redemptionvalley/valley/cliff)
 "oBZ" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "oCg" = (
 /obj/effect/decal/cleanable/dirt,
@@ -12797,7 +12797,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "leafybush_2"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "oTU" = (
 /turf/open/floor/prison,
@@ -12867,7 +12867,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "oXL" = (
 /turf/open/floor/prison/greenblue,
@@ -13034,7 +13034,7 @@
 	dir = 8;
 	network = list("Redemption Outpost")
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "pfl" = (
 /obj/structure/barricade/sandbags/wired{
@@ -13151,7 +13151,7 @@
 	color = "#999999";
 	layer = 3.02
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "pkF" = (
 /obj/structure/surface/table/holotable,
@@ -13162,7 +13162,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 9
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "pkP" = (
 /obj/structure/largecrate/guns/russian,
@@ -13237,7 +13237,7 @@
 /area/redemptionvalley/valleyroof/engi)
 "ppY" = (
 /obj/structure/girder,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "pqj" = (
 /obj/structure/blocker/invisible_wall,
@@ -13281,7 +13281,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "psZ" = (
 /turf/closed/wall/biodome,
@@ -13586,7 +13586,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "pIx" = (
 /obj/structure/platform_decoration/strata/metal{
@@ -14010,7 +14010,7 @@
 /turf/open/floor/prison,
 /area/redemptionvalley/outpost/engi)
 "qgO" = (
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qgP" = (
 /obj/effect/decal/warning_stripes{
@@ -14121,7 +14121,7 @@
 	pixel_x = -5;
 	pixel_y = 6
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "qnE" = (
 /obj/structure/platform/kutjevo/rock,
@@ -14163,7 +14163,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "brflowers_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "qpx" = (
 /obj/structure/surface/table/holotable,
@@ -14323,7 +14323,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qzg" = (
 /obj/structure/prop/rock/brown{
@@ -14537,7 +14537,7 @@
 /area/redemptionvalley/valleyroof/engi)
 "qIO" = (
 /obj/structure/platform_decoration/strata/metal,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qJv" = (
 /obj/structure/machinery/light/blue,
@@ -14581,7 +14581,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qKx" = (
 /turf/open/floor/kutjevo/multi_tiles/west,
@@ -14640,7 +14640,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qRj" = (
 /obj/structure/closet/wardrobe/medic_white{
@@ -14809,7 +14809,7 @@
 /area/redemptionvalley/caverns/west)
 "qZq" = (
 /obj/structure/fence,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "qZv" = (
 /obj/structure/machinery/vending/generic{
@@ -14841,7 +14841,7 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "raW" = (
 /turf/open/floor/prison/redcorner/east,
@@ -15037,7 +15037,7 @@
 	layer = 2.99
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "rlJ" = (
 /obj/structure/toilet{
@@ -15087,7 +15087,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "rtd" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -15340,7 +15340,7 @@
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "rKb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -15353,7 +15353,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "rKS" = (
 /obj/effect/decal/warning_stripes{
@@ -15519,7 +15519,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "rRu" = (
 /obj/structure/filingcabinet/medical{
@@ -15554,7 +15554,7 @@
 /obj/item/tool/warning_cone{
 	pixel_x = -8
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "rUM" = (
 /obj/structure/pipes/vents/pump{
@@ -15586,7 +15586,7 @@
 /area/redemptionvalley/outpost/bunkwest)
 "rWK" = (
 /obj/structure/flora/bush/ausbushes/genericbush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "rXa" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -15599,7 +15599,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "rXi" = (
 /obj/structure/filingcabinet{
@@ -16132,7 +16132,7 @@
 /area/redemptionvalley/valley/proper)
 "suF" = (
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "suU" = (
 /obj/structure/barricade/sandbags/wired{
@@ -16177,7 +16177,7 @@
 	health = 1500
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "sxS" = (
 /obj/structure/platform/shiva/catwalk,
@@ -16251,7 +16251,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "sDf" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -16533,7 +16533,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "sWs" = (
 /turf/open/floor/prison/cell_stripe/north,
@@ -16653,7 +16653,7 @@
 "teJ" = (
 /obj/structure/flora/grass/tallgrass/jungle,
 /obj/structure/flora/grass/tallgrass/jungle,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "teO" = (
 /obj/structure/window/framed/corsat,
@@ -16811,7 +16811,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 10
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "tsx" = (
 /obj/structure/platform/kutjevo/rock{
@@ -16929,7 +16929,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "tzE" = (
 /turf/closed/wall/rock/brown,
@@ -17621,7 +17621,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "ura" = (
 /obj/structure/platform/kutjevo/rock{
@@ -17700,7 +17700,7 @@
 /turf/open/floor/prison/greenblue/west,
 /area/redemptionvalley/valleyroof/laundro)
 "uvh" = (
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "uvE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18162,7 +18162,7 @@
 /area/redemptionvalley/valley/proper)
 "uZD" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "vak" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -18294,7 +18294,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fernybush_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "vgg" = (
 /obj/structure/cargo_container/wy/left,
@@ -18312,7 +18312,7 @@
 /area/redemptionvalley/valleyroof/storage)
 "vgN" = (
 /obj/structure/prop/ice_colony/flamingo,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "vgZ" = (
 /obj/structure/machinery/light/blue,
@@ -18577,7 +18577,7 @@
 	health_max = 1500;
 	health = 1500
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vyt" = (
 /turf/open/floor/prison/whitegreen/north,
@@ -18641,7 +18641,7 @@
 /area/redemptionvalley/valleyroof/hydro)
 "vCE" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vDf" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -18811,7 +18811,7 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vPH" = (
 /obj/structure/bed/sofa/vert/grey/bot,
@@ -18825,7 +18825,7 @@
 /area/redemptionvalley/valleyroof/housefour)
 "vPR" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vPW" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerempty2,
@@ -18865,7 +18865,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fernybush_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vSY" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -18947,7 +18947,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 5
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "vYg" = (
 /obj/structure/desertdam/decals/road_edge,
@@ -18969,7 +18969,7 @@
 /obj/structure/platform/kutjevo/rock{
 	color = "#999999"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "vYY" = (
 /obj/structure/cargo_container/grant/left,
@@ -19087,7 +19087,7 @@
 "whG" = (
 /obj/structure/platform,
 /obj/item/device/flashlight/lamp/tripod,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "wia" = (
 /obj/structure/surface/rack{
@@ -19159,7 +19159,7 @@
 /area/redemptionvalley/caverns/east)
 "wkI" = (
 /obj/item/tool/warning_cone,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "wlE" = (
 /obj/structure/platform{
@@ -19537,7 +19537,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "wGO" = (
 /obj/structure/machinery/power/apc/power/east,
@@ -19557,7 +19557,7 @@
 /obj/structure/prop/rock/brown{
 	dir = 1
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "wIo" = (
 /obj/structure/platform/shiva/catwalk{
@@ -19772,7 +19772,7 @@
 	dir = 1;
 	layer = 2.98
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "wVQ" = (
 /obj/structure/prop/rock/brown{
@@ -19797,7 +19797,7 @@
 /obj/structure/flora/bush/ausbushes/grassybush{
 	icon_state = "fullgrass_1"
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
 "wXw" = (
 /obj/structure/machinery/door/airlock/almayer/generic,
@@ -19978,7 +19978,7 @@
 	layer = 2.99
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "xiY" = (
 /turf/open/gm/dirt2,
@@ -20063,7 +20063,7 @@
 /area/redemptionvalley/valleyroof/cafe)
 "xnu" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "xog" = (
 /obj/structure/sign/safety/conference_room{
@@ -20330,7 +20330,7 @@
 	dir = 4
 	},
 /obj/structure/platform/strata/metal,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "xIW" = (
 /obj/structure/stairs/perspective{
@@ -20387,7 +20387,7 @@
 	icon_state = "fullgrass_1"
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/checkpoint)
 "xLV" = (
 /obj/structure/reagent_dispensers/water_cooler{
@@ -20592,7 +20592,7 @@
 /area/redemptionvalley/shuttles/drop2)
 "xWN" = (
 /mob/living/simple_animal/cow,
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "xWO" = (
 /turf/open/floor/plating,
@@ -20742,7 +20742,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/auto_turf/strata_grass,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/proper)
 "yjL" = (
 /turf/open/gm/river/shallow_ocean_shallow_ocean,
