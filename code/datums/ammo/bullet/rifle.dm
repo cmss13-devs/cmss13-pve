@@ -545,3 +545,13 @@
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/lw317
+	name = "6x38 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
+
+/datum/ammo/bullet/rifle/lw317/ap
+	name = "armor-piercing 6x38 bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_5

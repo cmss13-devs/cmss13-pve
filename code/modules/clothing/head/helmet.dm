@@ -1602,6 +1602,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_boonie"
 
+/obj/item/clothing/head/uppcap/boonie/canc
+	name = "\improper boonie hat"
+	desc = "A boonie hat in CANC uniform colors."
+	icon_state = "canc_boonie"
+
 /obj/item/clothing/head/uppcap/beret/naval
 	name = "\improper UL4 Naval Infantry beret"
 	desc = "A black beret worn by the UPP's Naval Infantry. Wear it with pride."
