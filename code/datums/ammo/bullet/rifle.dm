@@ -535,12 +535,6 @@
 	name = "7.5x28 bullet"
 	damage = 35
 
-/datum/ammo/bullet/rifle/fn107/hollowpoint
-	name = "hollowpoint 7.5x28 bullet"
-	damage = 55
-	penetration = -ARMOR_PENETRATION_TIER_3
-	damage_falloff = DAMAGE_FALLOFF_TIER_6
-
 /datum/ammo/bullet/rifle/fn107/commando
 	name = "armor piercing tracer 7.5x28 bullet"
 	damage = 30
