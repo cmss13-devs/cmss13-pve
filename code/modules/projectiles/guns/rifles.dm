@@ -1937,7 +1937,8 @@
 	starting_attachment_types = list(/obj/item/attachable/masm_barrel, /obj/item/attachable/bipod/masm)
 	map_specific_decoration = FALSE
 	start_automatic = TRUE
-	w_class = SIZE_LARGE
+	w_class = SIZE_HUGE
+	gun_category = GUN_CATEGORY_HEAVY
 
 /obj/item/weapon/gun/rifle/masm55/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 32, "under_y" = 12, "stock_x" = 18, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 16)
