@@ -1,6 +1,7 @@
 //-------------------------------------------------------
 //SMARTGUN
-
+#define LYING_DOWN_SG_ROF_DEBUFF 0.5
+#define KNOCKDOWN_SG_FAILSOUND_COOLDOWN 0.5
 //Come get some.
 /obj/item/weapon/gun/smartgun
 	name = "\improper M56A2 smartgun"
@@ -71,6 +72,7 @@
 	var/recycletime = 120
 	var/cover_open = FALSE
 	var/armbrace = FALSE
+	COOLDOWN_DECLARE(knockdown_halt_sound_cooldown)
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -430,6 +432,18 @@
 		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	if(user.IsKnockDown())
+		if(COOLDOWN_FINISHED(src, knockdown_halt_sound_cooldown))
+			COOLDOWN_START(src, knockdown_halt_sound_cooldown, KNOCKDOWN_SG_FAILSOUND_COOLDOWN)
+			playsound(loc,"smartgun_knockdown", 25, 0)
+			return
+	if(user.body_position == LYING_DOWN)
+		set_gun_config_values()
+		modify_fire_delay(LYING_DOWN_SG_ROF_DEBUFF)
+		scatter += 1
+		fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_5
+	else
+		set_gun_config_values()
 	if(!requires_battery)
 		return ..()
 
