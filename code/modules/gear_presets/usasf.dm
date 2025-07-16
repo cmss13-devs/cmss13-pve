@@ -1,7 +1,7 @@
 /datum/equipment_preset/usasf
 	name = "USASF"
 	faction = FACTION_NAVY
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	minimum_age = 20
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
@@ -133,7 +133,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human), WEAR_IN_BACK)
 
 //*****************************************************************************************************/
 

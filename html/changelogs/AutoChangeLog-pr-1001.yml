@@ -1,0 +1,7 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Added options for USCM Rifleman to pick Lance Corporal (ME3) rank. FORECON Rifleman the Corporal (ME4) rank. UPP Rifleman their Corporal (UE3) rank."
+  - qol: "Role preference now accurately shows the rank of the character you picked rather than \"PVT\" for a PFC FORECON Rifleman and so on."
+  - qol: "Removed rank selection from PMCs because it did not do anything."
+  - bugfix: "FORECON SGs can no longer be Privates."

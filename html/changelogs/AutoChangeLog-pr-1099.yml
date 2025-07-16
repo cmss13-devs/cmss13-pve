@@ -1,0 +1,5 @@
+author: "BisLordLoko"
+delete-after: True
+changes:
+  - rscadd: "Added a few cosmetic hats to the FORECON uniform vendor"
+  - bugfix: "Removed duplicated cosmetic items from the FORECON vendors"
