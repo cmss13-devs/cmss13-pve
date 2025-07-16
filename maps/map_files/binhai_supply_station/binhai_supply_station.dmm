@@ -493,21 +493,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/binhai/other/mainlower)
-"abn" = (
-/obj/structure/platform/kutjevo/rock{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/rock{
-	dir = 8
-	},
-/turf/open/auto_turf/sand_white/layer0,
-/area/binhai/caves/main)
 "abo" = (
 /obj/structure/platform/mineral{
 	color = "#464847"
@@ -78539,7 +78524,7 @@ xnw
 ufk
 qBi
 kRz
-abn
+kRz
 xnw
 xnw
 xnw
