@@ -1135,7 +1135,7 @@ and you're good to go.
 /obj/item/weapon/gun/proc/Fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield)
 	set waitfor = FALSE
 
-	if(!able_to_fire(user) || !target || !get_turf(user) || !get_turf(target))
+	if(!able_to_fire(user) || !target || !get_turf(user) || !get_turf(target) || user.contains(target))
 		return NONE
 
 	/*
@@ -1193,90 +1193,90 @@ and you're good to go.
 	if(loc != user || (flags_gun_features & GUN_WIELDED_FIRING_ONLY && !(flags_item & WIELDED)))
 		return TRUE
 
-	//The gun should return the bullet that it already loaded from the end cycle of the last Fire().
-	var/obj/projectile/projectile_to_fire = load_into_chamber(user) //Load a bullet in or check for existing one.
-	if(!projectile_to_fire) //If there is nothing to fire, click.
-		click_empty(user)
-		flags_gun_features &= ~GUN_BURST_FIRING
-		return NONE
+	if(targloc != curloc) //This case should be handled by attack code.
+		//The gun should return the bullet that it already loaded from the end cycle of the last Fire().
+		var/obj/projectile/projectile_to_fire = load_into_chamber(user) //Load a bullet in or check for existing one.
+		if(!projectile_to_fire) //If there is nothing to fire, click.
+			click_empty(user)
+			flags_gun_features &= ~GUN_BURST_FIRING
+			return NONE
 
-	var/original_scatter = projectile_to_fire.scatter
-	var/original_accuracy = projectile_to_fire.accuracy
-	apply_bullet_scatter(projectile_to_fire, user, reflex, dual_wield) //User can be passed as null.
+		var/original_scatter = projectile_to_fire.scatter
+		var/original_accuracy = projectile_to_fire.accuracy
+		apply_bullet_scatter(projectile_to_fire, user, reflex, dual_wield) //User can be passed as null.
 
-	curloc = get_turf(user)
-	if(QDELETED(original_target)) //If the target's destroyed, shoot at where it was last.
-		target = targloc
-	else
-		target = original_target
-		targloc = get_turf(target)
+		curloc = get_turf(user)
+		if(QDELETED(original_target)) //If the target's destroyed, shoot at where it was last.
+			target = targloc
+		else
+			target = original_target
+			targloc = get_turf(target)
 
-	projectile_to_fire.original = target
+		projectile_to_fire.original = target
 
-	// turf-targeted projectiles are fired without scatter, because proc would raytrace them further away
-	var/ammo_flags = projectile_to_fire.ammo.flags_ammo_behavior | projectile_to_fire.projectile_override_flags
-	if(!(ammo_flags & AMMO_HITS_TARGET_TURF))
-		target = simulate_scatter(projectile_to_fire, target, curloc, targloc, user)
+		// turf-targeted projectiles are fired without scatter, because proc would raytrace them further away
+		var/ammo_flags = projectile_to_fire.ammo.flags_ammo_behavior | projectile_to_fire.projectile_override_flags
+		if(!(ammo_flags & AMMO_HITS_TARGET_TURF))
+			target = simulate_scatter(projectile_to_fire, target, curloc, targloc, user)
 
-	var/bullet_velocity = projectile_to_fire?.ammo?.shell_speed + velocity_add
+		var/bullet_velocity = projectile_to_fire?.ammo?.shell_speed + velocity_add
 
-	if(params) // Apply relative clicked position from the mouse info to offset projectile
-		if(!params[CLICK_CATCHER])
-			if(params[VIS_X])
-				projectile_to_fire.p_x = text2num(params[VIS_X])
-			else if(params[ICON_X])
-				projectile_to_fire.p_x = text2num(params[ICON_X])
-			if(params[VIS_Y])
-				projectile_to_fire.p_y = text2num(params[VIS_Y])
-			else if(params[ICON_Y])
-				projectile_to_fire.p_y = text2num(params[ICON_Y])
-			var/atom/movable/clicked_target = original_target
-			if(istype(clicked_target))
-				projectile_to_fire.p_x -= clicked_target.bound_width / 2
-				projectile_to_fire.p_y -= clicked_target.bound_height / 2
+		if(params) // Apply relative clicked position from the mouse info to offset projectile
+			if(!params[CLICK_CATCHER])
+				if(params[VIS_X])
+					projectile_to_fire.p_x = text2num(params[VIS_X])
+				else if(params[ICON_X])
+					projectile_to_fire.p_x = text2num(params[ICON_X])
+				if(params[VIS_Y])
+					projectile_to_fire.p_y = text2num(params[VIS_Y])
+				else if(params[ICON_Y])
+					projectile_to_fire.p_y = text2num(params[ICON_Y])
+				var/atom/movable/clicked_target = original_target
+				if(istype(clicked_target))
+					projectile_to_fire.p_x -= clicked_target.bound_width / 2
+					projectile_to_fire.p_y -= clicked_target.bound_height / 2
+				else
+					projectile_to_fire.p_x -= world.icon_size / 2
+					projectile_to_fire.p_y -= world.icon_size / 2
 			else
 				projectile_to_fire.p_x -= world.icon_size / 2
 				projectile_to_fire.p_y -= world.icon_size / 2
-		else
-			projectile_to_fire.p_x -= world.icon_size / 2
-			projectile_to_fire.p_y -= world.icon_size / 2
 
-	//Finally, make with the pew pew!
-	if(QDELETED(projectile_to_fire) || !isobj(projectile_to_fire))
-		to_chat(user, "ERROR CODE I1: Gun malfunctioned due to invalid chambered projectile, clearing it. AHELP if this persists.")
-		log_debug("ERROR CODE I1: projectile malfunctioned while firing. User: <b>[user]</b> Weapon: <b>[src]</b> Magazine: <b>[current_mag]</b>")
-		flags_gun_features &= ~GUN_BURST_FIRING
-		in_chamber = null
-		click_empty(user)
-		return NONE
-
-	var/before_fire_cancel = SEND_SIGNAL(src, COMSIG_GUN_BEFORE_FIRE, projectile_to_fire, target, user)
-	if(before_fire_cancel)
-
-		//yeah we revert these since we are not going to shoot anyway
-		projectile_to_fire.scatter = original_scatter
-		projectile_to_fire.accuracy = original_accuracy
-
-		if(before_fire_cancel & COMPONENT_CANCEL_GUN_BEFORE_FIRE)
-			return TRUE
-
-		if(before_fire_cancel & COMPONENT_HARD_CANCEL_GUN_BEFORE_FIRE)
+		//Finally, make with the pew pew!
+		if(QDELETED(projectile_to_fire) || !isobj(projectile_to_fire))
+			to_chat(user, "ERROR CODE I1: Gun malfunctioned due to invalid chambered projectile, clearing it. AHELP if this persists.")
+			log_debug("ERROR CODE I1: projectile malfunctioned while firing. User: <b>[user]</b> Weapon: <b>[src]</b> Magazine: <b>[current_mag]</b>")
+			flags_gun_features &= ~GUN_BURST_FIRING
+			in_chamber = null
+			click_empty(user)
 			return NONE
 
-	apply_bullet_effects(projectile_to_fire, user, reflex, dual_wield) //User can be passed as null.
-	SEND_SIGNAL(projectile_to_fire, COMSIG_BULLET_USER_EFFECTS, user)
+		var/before_fire_cancel = SEND_SIGNAL(src, COMSIG_GUN_BEFORE_FIRE, projectile_to_fire, target, user)
+		if(before_fire_cancel)
 
-	projectile_to_fire.firer = user
-	if(isliving(user))
-		projectile_to_fire.def_zone = user.zone_selected
+			//yeah we revert these since we are not going to shoot anyway
+			projectile_to_fire.scatter = original_scatter
+			projectile_to_fire.accuracy = original_accuracy
 
-	play_firing_sounds(projectile_to_fire, user)
+			if(before_fire_cancel & COMPONENT_CANCEL_GUN_BEFORE_FIRE)
+				return TRUE
 
-	empty_casings++
-	if(flags_gun_features & GUN_AUTO_EJECT_CASINGS)
-		eject_casing()
+			if(before_fire_cancel & COMPONENT_HARD_CANCEL_GUN_BEFORE_FIRE)
+				return NONE
 
-	if(targloc != curloc)
+		apply_bullet_effects(projectile_to_fire, user, reflex, dual_wield) //User can be passed as null.
+		SEND_SIGNAL(projectile_to_fire, COMSIG_BULLET_USER_EFFECTS, user)
+
+		projectile_to_fire.firer = user
+		if(isliving(user))
+			projectile_to_fire.def_zone = user.zone_selected
+
+		play_firing_sounds(projectile_to_fire, user)
+
+		empty_casings++
+		if(flags_gun_features & GUN_AUTO_EJECT_CASINGS)
+			eject_casing()
+
 		simulate_recoil(dual_wield, user, target)
 
 		//This is where the projectile leaves the barrel and deals with projectile code only.
@@ -2117,7 +2117,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		if(gun_user.throw_mode)
 			return FALSE
 
-		if(gun_user.Adjacent(object) && gun_user.a_intent != INTENT_HARM) //Dealt with by attack code
+		if(gun_user.Adjacent(object) && gun_user.a_intent != INTENT_HARM || gun_user.loc == get_turf(object)) //Dealt with by attack code
 			return FALSE
 
 	if(QDELETED(object))
