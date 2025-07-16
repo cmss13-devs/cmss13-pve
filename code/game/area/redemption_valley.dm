@@ -9,7 +9,7 @@
 /area/redemptionvalley/valley
 	name = "Outside"
 	ceiling = CEILING_NONE
-	owernet_name = "outpost"
+	powernet_name = "outpost"
 /area/redemptionvalley/valleyroof
 	name = "Sheltered"
 	ceiling = CEILING_METAL
