@@ -126,7 +126,8 @@
 	var/message = "[rounds ? "Ammo counter shows [rounds] round\s remaining." : "It's dry."]"
 	. += message
 	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
-
+	var/message_armbrace = "[armbrace ? SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.") : SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")]"
+	. += message_armbrace
 	if(battery && get_dist(user, src) <= 1)
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
 
