@@ -4,16 +4,17 @@
 	name = "Redemption Valley"
 	icon_state = "lv-626"
 	can_build_special = TRUE
-	powernet_name = "ground"
 	minimap_color = MINIMAP_AREA_COLONY
 //=============================================================================================PARENT
 /area/redemptionvalley/valley
 	name = "Outside"
 	ceiling = CEILING_NONE
+	owernet_name = "outpost"
 /area/redemptionvalley/valleyroof
 	name = "Sheltered"
 	ceiling = CEILING_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
+	powernet_name = "settlement"
 /area/redemptionvalley/caverns
 	name = "Caves"
 	ceiling = CEILING_DEEP_UNDERGROUND
@@ -24,6 +25,7 @@
 	name = "Redemption Outpost"
 	ceiling = CEILING_DEEP_UNDERGROUND_METAL
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
+	powernet_name = "outpost"
 /area/redemptionvalley/oob
 	name = "OOB"
 	ceiling = CEILING_NO_PROTECTION
@@ -35,6 +37,7 @@
 	icon = 'icons/turf/area_varadero.dmi'
 	is_landing_zone = TRUE
 	minimap_color = MINIMAP_AREA_LZ
+	powernet_name = "settlement"
 /area/redemptionvalley/shuttles/drop2
 	name = "Military Base - Clifftop Landing Pad"
 	icon_state = "shuttle2"
@@ -42,10 +45,12 @@
 	minimap_color = MINIMAP_AREA_LZ
 	is_landing_zone = TRUE
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
+	powernet_name = "outpost"
 //=============================================================================================VALLEY
 /area/redemptionvalley/valley/proper
 	name = "Redemption Valley Main Road"
 	icon_state = "south"
+	powernet_name = "settlement"
 /area/redemptionvalley/valley/checkpoint
 	name = "Redemption Valley Checkpoint"
 	icon_state = "central"
@@ -117,6 +122,7 @@
 	name = "Clifftop - T-Comms"
 	icon_state = "yellow"
 	soundscape_playlist = SCAPE_PL_LV522_OUTDOORS
+	powernet_name = "outpost"
 //=============================================================================================CAVERNS
 /area/redemptionvalley/caverns/north
 	name = "Redemption Valley - Caves Upper"
