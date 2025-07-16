@@ -207,8 +207,8 @@
 	)
 
 /obj/item/clothing/head/cmcap
-	name = "patrol cap"
-	desc = "A patrol cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
+	name = "utility cap"
+	desc = "A utility cap issued as part of the non-combat uniform. While it only protects from the sun, it's much more comfortable than a helmet."
 	icon_state = "cap"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	flags_atom = FPRINT|NO_SNOW_TYPE
@@ -388,18 +388,18 @@
 	icon_state = "cap_khaki"
 
 /obj/item/clothing/head/cmcap/snow
-	name = "\improper coldweather patrol cap"
-	desc = "A patrol cap worn in cold weather environments."
+	name = "\improper coldweather utility cap"
+	desc = "A utility cap worn in cold weather environments."
 	icon_state = "cap_snow"
 
 /obj/item/clothing/head/cmcap/desert
-	name = "\improper desert patrol cap"
-	desc = "A desert BDU patrol cap."
+	name = "\improper desert utility cap"
+	desc = "A desert BDU utility cap."
 	icon_state = "cap_desert"
 
 /obj/item/clothing/head/cmcap/bridge
 	name = "\improper USCM operations cap"
-	desc = "A hat usually worn by officers in the USCM. While it provides no protection, some officers wear it in the field to make themselves more recognisable."
+	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in OD green, the letters 'USCM' are boldy placed in black letters on the front."
 	icon_state = "cap_operations"
 
 /obj/item/clothing/head/cmcap/flap

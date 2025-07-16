@@ -320,6 +320,10 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM cap, snow"
 	path = /obj/item/clothing/head/cmcap/snow
 
+/datum/gear/headwear/uscm/cap_operations
+	display_name = "USCM Operations Cap"
+	path = /obj/item/clothing/head/cmcap/bridge
+
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
 	path = /obj/item/clothing/head/sulacocap
