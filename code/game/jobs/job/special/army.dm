@@ -47,6 +47,10 @@
 	title = JOB_ARMY_MEDIC
 	gear_preset = /datum/equipment_preset/usa/medic
 
+/datum/job/tropper/tank
+	title = JOB_ARMY_TANK_CREW
+	gear_preset = /datum/equipment_preset/usa/tank
+
 /datum/job/trooper/nco
 	title = JOB_ARMY_NCO
 	gear_preset = /datum/equipment_preset/usa/nco
