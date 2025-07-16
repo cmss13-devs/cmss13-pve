@@ -340,6 +340,27 @@
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 
 //-------------------------------------------------------
+//CANC LW-317 RIFLE
+
+/obj/item/ammo_magazine/rifle/lw317
+	name = "\improper LW-317 magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading magazine for the LW-317 carbine."
+	caliber = "6x38mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "lw317"
+	ammo_band_icon = "+lw317_band"
+	ammo_band_icon_empty = "+lw317_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/lw317
+	max_rounds = 55
+	gun_type = /obj/item/weapon/gun/rifle/lw317
+
+/obj/item/ammo_magazine/rifle/lw317/ap
+	name = "\improper LW-317 AP magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading armor-piercing magazine for the LW-317 carbine."
+	default_ammo = /datum/ammo/bullet/rifle/lw317/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+	bonus_overlay = "lw317apoverlay"
+//-------------------------------------------------------
 //L42A Battle Rifle
 
 /obj/item/ammo_magazine/rifle/l42a
@@ -555,12 +576,12 @@
 //XM51 BREACHING SHOTGUN
 
 /obj/item/ammo_magazine/rifle/xm51
-	name = "\improper XM51 magazine (16g)"
+	name = "\improper M1771 magazine (16g)"
 	desc = "A 16 gauge pump-action shotgun magazine."
 	icon_state = "xm51"
 	caliber = "16g"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6

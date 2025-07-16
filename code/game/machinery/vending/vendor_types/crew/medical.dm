@@ -243,7 +243,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_researcher, list(
 	spawned_gear_list = list(
 		/obj/item/device/defibrillator,
 		/obj/item/storage/firstaid/adv,
-		/obj/item/device/healthanalyzer,
+		/obj/item/device/healthanalyzer/soul,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
 		/obj/item/storage/syringe_case,
@@ -258,7 +258,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_researcher, list(
 	spawned_gear_list = list(
 		/obj/item/device/defibrillator,
 		/obj/item/storage/firstaid/adv,
-		/obj/item/device/healthanalyzer,
+		/obj/item/device/healthanalyzer/soul,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
 		/obj/item/clothing/accessory/stethoscope,
