@@ -1924,9 +1924,9 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "masm"
 	item_state = "masm"
-	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
-	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = "gun_oldpulse"
+	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
+	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
+	fire_sound = "gun_pulse"
 	current_mag = /obj/item/ammo_magazine/rifle/masm
 	attachable_allowed = list(
 		/obj/item/attachable/masm_barrel,
