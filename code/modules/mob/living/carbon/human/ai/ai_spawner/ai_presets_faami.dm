@@ -12,7 +12,7 @@
 	path = /datum/equipment_preset/faami/rifleman/auxiliary
 
 /datum/human_ai_equipment_preset/faami/rifle/auxiliary/lead
-	name = "FAAMI Auxiliary Leader
+	name = "FAAMI Auxiliary Leader"
 	desc = "A lesser trained and equipped operator for FAAMI, often responsible for security and garrison work rather than frontline combat. This one is a squad leader."
 	path = /datum/equipment_preset/faami/rifleman/auxiliary/lead
 
