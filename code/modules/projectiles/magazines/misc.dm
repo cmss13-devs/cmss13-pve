@@ -62,6 +62,7 @@
 
 /obj/item/ammo_magazine/hpr_box/recon
 	icon_state = "m41ae2_recon"
+	bonus_overlay = "m41ae2_recon_overlay"
 
 //M60
 

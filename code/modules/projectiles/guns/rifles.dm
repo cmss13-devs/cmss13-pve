@@ -1157,6 +1157,7 @@
 		/obj/item/ammo_magazine/hpr_box/ap,
 		/obj/item/ammo_magazine/hpr_box/heap,
 		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
