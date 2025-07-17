@@ -916,13 +916,13 @@
 		)
 	storage_flags = NONE //no verb, no quick draw, no tile gathering
 
-/obj/item/clothing/accessory/storage/smallpouch
+/obj/item/clothing/accessory/storage/leg_pouch
 	name = "small pouch"
-	desc = "A small pouch to carry a few items, typically the contents of an IFAK."
-	icon_state = "pouch"
+	desc = "A small legpouch to carry a few items, typically the contents of an IFAK."
+	icon_state = "leg_pouch"
 	hold = /obj/item/storage/internal/accessory/smallpouch
 
-/obj/item/clothing/accessory/storage/smallpouch/upp
+/obj/item/clothing/accessory/storage/leg_pouch/upp
 	icon_state = "upp_pouch_alt"
 
 /obj/item/storage/internal/accessory/smallpouch
