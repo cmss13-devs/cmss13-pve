@@ -315,7 +315,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/headwear/uscm/cap_desert
 	display_name = "USCM cap, desert"
-	path = /obj/item/clothing/head/cmcap/khaki
+	path = /obj/item/clothing/head/cmcap/desert
 	cost = 2
 
 /datum/gear/headwear/uscm/cap_snow
