@@ -961,8 +961,6 @@
 	accessory_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
 	)
-	var/has_variation = FALSE
-
 
 /obj/item/storage/internal/accessory/leg_pouch
 	w_class = SIZE_LARGE
