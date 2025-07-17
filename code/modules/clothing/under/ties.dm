@@ -934,7 +934,7 @@
 		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
 		update_icon()
 
-/obj/item/clothing/accessory/storage/black_vest/leg_pouch/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+/obj/item/clothing/accessory/storage/leg_pouch/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
 	. = ..()
 	if(!(flags_atom & NO_SNOW_TYPE))
 		return
@@ -953,7 +953,7 @@
 /obj/item/clothing/accessory/storage/leg_pouch/upp
 	icon_state = "upp_pouch_alt"
 
-/obj/item/clothing/accessory/storage/black_vest/black_leg_pouch
+/obj/item/clothing/accessory/storage/leg_pouch/black_leg_pouch
 	name = "Black Leg Pouch"
 	desc = "A black leg pouch usually worn by hunters, military and people who dream of being military."
 	icon = 'icons/obj/items/clothing/accessory/legpouch.dmi'
