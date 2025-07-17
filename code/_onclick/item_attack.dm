@@ -1,7 +1,9 @@
 
 // Called when the item is in the active hand, and clicked; alternately, there is an 'activate held object' verb or you can hit pagedown.
 /obj/item/proc/attack_self(mob/user)
-	SHOULD_CALL_PARENT(TRUE)
+	SHOULD_CALL_PARENT(TRUE) //Lets not break linters, this needs to be at the top or something.
+//	if(HAS_TRAIT(user, TRAIT_HAULED)) - Haul sovlening - This is going to explode something probably.
+//		return
 	SEND_SIGNAL(src, COMSIG_ITEM_ATTACK_SELF, user)
 	SEND_SIGNAL(user, COMSIG_MOB_ITEM_ATTACK_SELF, src)
 
@@ -22,6 +24,7 @@
 			visible_message(SPAN_DANGER("[src] has been hit by [user] with [W]."), null, null, 5, CHAT_TYPE_MELEE_HIT)
 			user.animation_attack_on(src)
 			user.flick_attack_overlay(src, "punch")
+			return ATTACKBY_HINT_UPDATE_NEXT_MOVE
 
 /mob/living/attackby(obj/item/I, mob/user)
 	/* Commented surgery code, proof of concept. Would need to tweak human attackby to prevent duplication; mob/living don't have separate limb objects.
@@ -34,6 +37,8 @@
 		else if(initiate_surgery_moment(I, src, null, user))
 			return TRUE
 	*/
+	if(HAS_TRAIT(user, TRAIT_HAULED))
+		return
 	if(istype(I) && ismob(user))
 		return I.attack(src, user)
 
@@ -77,9 +82,9 @@
 		return FALSE
 
 	/////////////////////////
-	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
-	M.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by  [key_name(user)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
-	msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
+	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)])</font>"
+	M.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by  [key_name(user)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)])</font>"
+	msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 
 	/////////////////////////
 
@@ -121,5 +126,5 @@
 		var/hit = H.attacked_by(src, user)
 		if (hit && hitsound)
 			playsound(loc, hitsound, 25, 1)
-		return hit
-	return TRUE
+		return (hit|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
+	return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
