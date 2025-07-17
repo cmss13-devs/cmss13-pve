@@ -573,3 +573,18 @@
 	damage = 45 //big damage, doesn't actually blow up because thats stupid.
 	penetration = ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2 //thinner round should have less shrap potential vs the 10x24, no?
+
+/datum/ammo/bullet/rifle/ag80/heap/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
+/datum/ammo/bullet/rifle/lw317
+	name = "6x38 bullet"
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
+
+/datum/ammo/bullet/rifle/lw317/ap
+	name = "armor-piercing 6x38 bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_5
