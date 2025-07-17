@@ -917,15 +917,54 @@
 	storage_flags = NONE //no verb, no quick draw, no tile gathering
 
 /obj/item/clothing/accessory/storage/leg_pouch
-	name = "small pouch"
-	desc = "A small legpouch to carry a few items, typically the contents of an IFAK."
+	name = "Leg Pouch"
+	desc = "A camo conforming leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/accessory/legpouch.dmi'
 	icon_state = "leg_pouch"
-	hold = /obj/item/storage/internal/accessory/smallpouch
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
+	)
+	var/has_variation = TRUE
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/storage/leg_pouch/Initialize()
+	. = ..()
+	if(has_variation)
+		select_gamemode_skin(/obj/item/clothing/accessory/storage/leg_pouch)
+		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+		update_icon()
+
+/obj/item/clothing/accessory/storage/black_vest/leg_pouch/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon_state = "j_leg_pouch"
+		if("classic")
+			icon_state = "c_leg_pouch"
+		if("desert")
+			icon_state = "d_leg_pouch"
+		if("snow")
+			icon_state = "s_leg_pouch"
+		if("urban")
+			icon_state = "u_leg_pouch"
 
 /obj/item/clothing/accessory/storage/leg_pouch/upp
 	icon_state = "upp_pouch_alt"
 
-/obj/item/storage/internal/accessory/smallpouch
+/obj/item/clothing/accessory/storage/black_vest/black_leg_pouch
+	name = "Black Leg Pouch"
+	desc = "A black leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/accessory/legpouch.dmi'
+	icon_state = "leg_pouch_black"
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
+	)
+	var/has_variation = FALSE
+
+
+/obj/item/storage/internal/accessory/leg_pouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
