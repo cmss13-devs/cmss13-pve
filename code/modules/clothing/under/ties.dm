@@ -957,7 +957,7 @@
 	icon = 'icons/obj/items/clothing/legpouch.dmi'
 	icon_state = "leg_pouch_black"
 	accessory_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
+		WEAR_BODY = 'icons/obj/items/clothing/ties_overlay.dmi',
 	)
 
 /obj/item/storage/internal/accessory/leg_pouch
