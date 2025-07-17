@@ -921,9 +921,8 @@
 	desc = "A camo conforming leg pouch usually worn by hunters, military and people who dream of being military."
 	icon = 'icons/obj/items/clothing/legpouch.dmi'
 	icon_state = "leg_pouch"
-	accessory_icons = list(WEAR_BODY = 'icons/obj/items/clothing/ties_overlay.dmi',)
+	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',)
 	var/has_variation = TRUE
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/storage/leg_pouch/Initialize()
 	. = ..()
@@ -949,16 +948,22 @@
 			icon_state = "u_leg_pouch"
 
 /obj/item/clothing/accessory/storage/leg_pouch/upp
-	icon_state = "upp_pouch_alt"
+	icon_state = "leg_pouch_upp"
+	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',)
+	item_state_slots = list(WEAR_BODY = "leg_pouch_upp")
+	flags_atom = NO_SNOW_TYPE
+	has_variation = FALSE
 
-/obj/item/clothing/accessory/storage/leg_pouch/black_leg_pouch
+/obj/item/clothing/accessory/storage/leg_pouch/black
 	name = "Black Leg Pouch"
 	desc = "A black leg pouch usually worn by hunters, military and people who dream of being military."
 	icon = 'icons/obj/items/clothing/legpouch.dmi'
 	icon_state = "leg_pouch_black"
 	accessory_icons = list(
-		WEAR_BODY = 'icons/obj/items/clothing/ties_overlay.dmi',
+		WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',
 	)
+	flags_atom = NO_SNOW_TYPE
+	has_variation = FALSE
 
 /obj/item/storage/internal/accessory/leg_pouch
 	w_class = SIZE_LARGE
