@@ -16054,7 +16054,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/lower_hangar)
 "LE" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/rmc,
 /turf/open/floor/kutjevo/tan/multi_tiles/west,
 /area/hms_brynhild/canteen)
 "LF" = (
@@ -16121,7 +16121,7 @@
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/lower_cargo)
 "LN" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/rmc,
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
 	light_color = "#dae2ff"
