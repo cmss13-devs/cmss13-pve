@@ -921,7 +921,7 @@
 	desc = "A camo conforming leg pouch usually worn by hunters, military and people who dream of being military."
 	icon = 'icons/obj/items/clothing/legpouch.dmi'
 	icon_state = "leg_pouch"
-	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',)
+	accessory_icons = list(WEAR_BODY = 'icons/obj/items/clothing/ties_overlay.dmi',)
 	var/has_variation = TRUE
 	flags_atom = NO_SNOW_TYPE
 
