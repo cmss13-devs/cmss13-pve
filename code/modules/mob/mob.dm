@@ -460,6 +460,9 @@
 	if(throwing || is_mob_incapacitated())
 		return
 
+	if(HAS_TRAIT(src, TRAIT_HAULED))
+		return
+
 	if(pulling)
 		// Are we pulling the same thing twice? Just stop pulling.
 		if(pulling == AM)

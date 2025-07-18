@@ -146,25 +146,29 @@
 	SEND_SIGNAL(src, COMSIG_MOB_POST_CLICK, A, mods)
 	return
 
-/mob/proc/click_adjacent(atom/A, obj/item/W, mods)
-	if(W)
-		if(W.attack_speed && !src.contains(A)) //Not being worn or carried in the user's inventory somewhere, including internal storages.
-			next_move += W.attack_speed
-
-		if(SEND_SIGNAL(A, COMSIG_ATOM_MOB_ATTACKBY, W, src) & COMPONENT_CANCEL_ATTACKBY)
-			return
-
-		if(!A.attackby(W, src, mods) && A && !QDELETED(A))
+/mob/proc/click_adjacent(atom/targeted_atom, obj/item/used_item, mods)
+//	if(HAS_TRAIT(src, TRAIT_HAULED)) - Haul sovlening - This is going to explode something probably.
+//		if(!isstorage(targeted_atom) && !isclothing(targeted_atom) && !isweapon(targeted_atom) && !isgun(targeted_atom))
+//			return
+	if(used_item)
+		var/attackby_result = targeted_atom.attackby(used_item, src, mods)
+		var/afterattack_result
+		if(!QDELETED(targeted_atom) && !(attackby_result & ATTACKBY_HINT_NO_AFTERATTACK))
 			// in case the attackby slept
-			if(!W)
-				UnarmedAttack(A, 1, mods)
+			if(!used_item)
+				if(!isitem(targeted_atom) && !issurface(targeted_atom))
+					next_move += 4
+				UnarmedAttack(targeted_atom, 1, mods)
 				return
 
-			W.afterattack(A, src, 1, mods)
+			afterattack_result = used_item.afterattack(targeted_atom, src, 1, mods)
+
+		if(used_item.attack_speed && !src.contains(targeted_atom) && (attackby_result & ATTACKBY_HINT_UPDATE_NEXT_MOVE) || (afterattack_result & ATTACKBY_HINT_UPDATE_NEXT_MOVE))
+			next_move += used_item.attack_speed
 	else
-		if(!isitem(A) && !issurface(A))
+		if(!isitem(targeted_atom) && !issurface(targeted_atom))
 			next_move += 4
-		UnarmedAttack(A, 1, mods)
+		UnarmedAttack(targeted_atom, 1, mods)
 
 /mob/proc/check_click_intercept(params,A)
 	//Client level intercept
