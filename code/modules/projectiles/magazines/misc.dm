@@ -91,15 +91,7 @@
 /obj/item/ammo_magazine/pkp/standard_fmj
 	name = "QYJ-72 ammo box (10x27mm)"
 	desc = "A 250 round box of ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
-	caliber = "10x27mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
-	icon_state = "qjy72"
-
-	matter = list("metal" = 10000)
 	default_ammo = /datum/ammo/bullet/rifle/upp/tracer
-	max_rounds = 250
-	reload_delay = 12
-	gun_type = /obj/item/weapon/gun/pkp
 
 //rocket launchers
 
