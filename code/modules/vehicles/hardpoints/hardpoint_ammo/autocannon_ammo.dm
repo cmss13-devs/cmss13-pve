@@ -1,7 +1,7 @@
 /obj/item/ammo_magazine/hardpoint/ace_autocannon
-	name = "Tank Autocannon Magazine"
-	desc = "A primary armament autocannon magazine"
-	caliber = "20mm"
+	name = "AC3-E Autocannon Magazine"
+	desc = "A 100 round magazine holding 40mm telescoped shells for the AC3-E autocannon."
+	caliber = "40mm"
 	icon_state = "ace_autocannon"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/tank/flak

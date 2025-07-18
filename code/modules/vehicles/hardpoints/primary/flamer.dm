@@ -1,6 +1,6 @@
 /obj/item/hardpoint/primary/flamer
 	name = "\improper DRG-N Offensive Flamer Unit"
-	desc = "A primary weapon for the tank that spews out high-combustion napalm in a wide radius. The fuel burns intensely and quickly, which allows for it to be used offensively by armoured vehicles."
+	desc = "A primary weapon for the tank that spews out ultra-thick napthal in a wide radius. The fuel burns intensely and relatively quickly, which allows for it to be used offensively by armoured vehicles."
 
 	icon_state = "drgn_flamer"
 	disp_icon = "tank"
@@ -11,7 +11,7 @@
 	firing_arc = 90
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary_flamer
-	max_clips = 1
+	max_clips = 3
 
 	px_offsets = list(
 		"1" = list(0, 21),
@@ -23,7 +23,7 @@
 	use_muzzle_flash = FALSE
 
 	scatter = 5
-	fire_delay = 2.0 SECONDS
+	fire_delay = 1.5 SECONDS
 
 /obj/item/hardpoint/primary/flamer/set_bullet_traits()
 	..()

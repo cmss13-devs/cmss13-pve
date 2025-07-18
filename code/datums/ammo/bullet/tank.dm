@@ -18,10 +18,10 @@
 	scatter = 0
 	damage = 150
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_7
 	accurate_range = 32
 	max_range = 32
-	shell_speed = AMMO_SPEED_TIER_6
+	shell_speed = AMMO_SPEED_TIER_7
 
 /datum/ammo/bullet/tank/flak/on_hit_mob(mob/M,obj/projectile/P)
 	burst(get_turf(M),P,damage_type, 2 , 3)
