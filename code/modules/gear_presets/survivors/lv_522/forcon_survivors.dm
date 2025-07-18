@@ -6,7 +6,7 @@
 	role_comm_title = "FORECON"
 	rank = JOB_SURVIVOR
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_SURVIVOR_UA
+	faction_group = FACTION_LIST_UA
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(
 		ACCESS_CIVILIAN_PUBLIC,
@@ -23,7 +23,6 @@
 /datum/equipment_preset/survivor/forecon/load_gear(mob/living/carbon/human/new_human)
 	//uniform and drop-pouch contents
 	add_forecon_surv_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e5(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/marine(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/fsr(new_human), WEAR_IN_ACCESSORY)
 	//pouches
@@ -47,7 +46,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/recon(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/recon(new_human), WEAR_IN_BACK)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/tactical(new_human), WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/forecon(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ext(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ext(new_human), WEAR_IN_BACK)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/heap(new_human), WEAR_IN_BACK) //Basic model is not great with basic rounds, some HEAP makes it not quite as bad.
@@ -123,6 +122,7 @@
 
 /datum/equipment_preset/survivor/forecon/standard/load_gear(mob/living/carbon/human/new_human)
 	..()
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e5(new_human), WEAR_ACCESSORY)
 	add_forecon_surv_weapon_pistol(new_human)
 	add_forecon_surv_weapon(new_human)
 	spawn_random_headgear(new_human)
@@ -260,12 +260,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(new_human), WEAR_JACKET)
 	..()
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/o4(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/cmateba(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/mateba/cmateba(new_human), WEAR_R_HAND)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/forecon_officer(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/cigarette/cigar(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/lighter/zippo/gold(new_human), WEAR_IN_BACK)
@@ -278,7 +273,7 @@
 	assignment = JOB_FORECON_SYN
 	rank = JOB_SYNTH
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_SURVIVOR_UA
+	faction_group = FACTION_LIST_UA
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/gold
 

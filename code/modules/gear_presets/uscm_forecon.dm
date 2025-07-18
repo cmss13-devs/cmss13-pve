@@ -4,7 +4,7 @@
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/dogtag
 	role_comm_title = "FORECON"
-	faction_group = list(FACTION_MARINE)
+	faction_group = FACTION_LIST_UA
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	auto_squad_name = SQUAD_FORECON
 
@@ -26,7 +26,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/recon(new_human), WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1/recon(new_human), WEAR_IN_ACCESSORY)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/tactical(new_human), WEAR_L_HAND)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m49a/forecon(new_human), WEAR_L_HAND)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ext(new_human), WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/ext(new_human), WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m49a/heap(new_human), WEAR_IN_ACCESSORY)
@@ -146,16 +146,8 @@
 	skills = /datum/skills/military/survivor/forecon_marksman
 
 /datum/equipment_preset/uscm/forecon/marksman/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/marine/standard/uniform = new()
-	var/obj/item/clothing/accessory/storage/droppouch/pouch = new()
-	var/obj/item/clothing/accessory/ranks/marine/e5/pin = new()
-	var/obj/item/clothing/accessory/patch/patch_uscm = new()
-	var/obj/item/clothing/accessory/patch/forecon/patch_forecon = new()
-	uniform.attach_accessory(new_human,pouch)
-	uniform.attach_accessory(new_human,patch_uscm)
-	uniform.attach_accessory(new_human,pin)
-	uniform.attach_accessory(new_human,patch_forecon)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	add_forecon_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e5(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/M3S, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_JACKET)
@@ -190,16 +182,8 @@
 	skills = /datum/skills/military/survivor/forecon_smartgunner
 
 /datum/equipment_preset/uscm/forecon/smartgunner/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/marine/standard/uniform = new()
-	var/obj/item/clothing/accessory/storage/droppouch/pouch = new()
-	var/obj/item/clothing/accessory/ranks/marine/e5/pin = new()
-	var/obj/item/clothing/accessory/patch/patch_uscm = new()
-	var/obj/item/clothing/accessory/patch/forecon/patch_forecon = new()
-	uniform.attach_accessory(new_human,pouch)
-	uniform.attach_accessory(new_human,patch_uscm)
-	uniform.attach_accessory(new_human,pin)
-	uniform.attach_accessory(new_human,patch_forecon)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	add_forecon_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e5(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/smartgunner(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_R_STORE)
@@ -237,17 +221,8 @@
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover/officer)
 
 /datum/equipment_preset/uscm/forecon/squad_leader/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/marine/standard/uniform = new()
-	var/obj/item/clothing/accessory/storage/droppouch/pouch = new()
-	var/obj/item/clothing/accessory/ranks/marine/o1/pin = new()
-	var/obj/item/clothing/accessory/patch/patch_uscm = new()
-	var/obj/item/clothing/accessory/patch/forecon/patch_forecon = new()
-	uniform.attach_accessory(new_human,pouch)
-	uniform.attach_accessory(new_human,patch_uscm)
-	uniform.attach_accessory(new_human,pin)
-	uniform.attach_accessory(new_human,patch_forecon)
-
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	add_forecon_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/o1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/tactical(new_human), WEAR_R_HAND)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
@@ -284,18 +259,10 @@
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
 
 /datum/equipment_preset/uscm/forecon/major/load_gear(mob/living/carbon/human/new_human)
-	var/obj/item/clothing/under/marine/standard/uniform = new()
-	var/obj/item/clothing/accessory/storage/droppouch/pouch = new()
-	var/obj/item/clothing/accessory/ranks/marine/o4/pin = new()
-	var/obj/item/clothing/accessory/patch/patch_uscm = new()
-	var/obj/item/clothing/accessory/patch/forecon/patch_forecon = new()
-	uniform.attach_accessory(new_human,pouch)
-	uniform.attach_accessory(new_human,patch_uscm)
-	uniform.attach_accessory(new_human,pin)
-	uniform.attach_accessory(new_human,patch_forecon)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	add_forecon_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/o4(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/cmateba/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/forecon_officer(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_R_STORE)

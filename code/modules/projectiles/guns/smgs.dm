@@ -93,8 +93,8 @@
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
 /obj/item/weapon/gun/smg/m39/forecon
-	name = "\improper Model-39 submachinegun"
-	desc = "Fielded in limited numbers by elements of United States Colonial Marine Force-Reconnaissance units, the M39 is often used as a high-capacity sidearm rather than an offensive weapon. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and comes chambered in 9x19mm."
+	name = "\improper M39 submachinegun"
+	desc = "Fielded in limited numbers by elements of United States Colonial Marine Force-Reconnaissance units, the M39 is often used as a high-capacity sidearm or backup weapon rather than an offensive weapon. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and comes chambered in 9x19mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
 	current_mag = /obj/item/ammo_magazine/smg/m39/extended
 	item_icons = list(
