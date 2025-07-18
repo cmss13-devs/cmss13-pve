@@ -163,6 +163,8 @@
 	..()
 	if(client)
 		playsound_client(client, 'sound/items/fulton.ogg', src, 50, 1) //for some reason you don't hear the sound while dropping, maybe because of force move?
+	Stun(999)
+	addtimer(CALLBACK(src, PROC_REF(SetStun), 0, TRUE), 3.5 SECONDS)
 
 /atom/movable/proc/clear_parachute(image/cables, image/chute)
 	if(QDELETED(src))
