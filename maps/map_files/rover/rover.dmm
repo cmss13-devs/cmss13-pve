@@ -4234,7 +4234,7 @@
 /area/golden_arrow/synthcloset)
 "BX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/hpr{
+/obj/item/storage/box/guncase/heavy/hpr/recon{
 	pixel_y = 5
 	},
 /obj/item/storage/box/guncase/heavy/fuel{
