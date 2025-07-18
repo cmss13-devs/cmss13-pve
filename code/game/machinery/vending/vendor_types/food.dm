@@ -71,7 +71,7 @@
 /obj/structure/machinery/cm_vending/sorted/marine_food/rmc/populate_product_list(scale)
 	listed_products = list(
 		list("PREPARED MEALS", -1, null, null),
-		list("Prepared Meal (Beef Wellington)", 15, /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1, VENDOR_ITEM_REGULAR),
+		list("Prepared Meal (Roast Beef)", 15, /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1, VENDOR_ITEM_REGULAR),
 		list("Prepared Meal (Tikka Curry)", 15, /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal2, VENDOR_ITEM_REGULAR),
 		list("Prepared Meal (Katsu Curry)", 15, /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal3, VENDOR_ITEM_REGULAR),
 		list("Prepared Meal (Sausage & Eggs)", 15, /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal4, VENDOR_ITEM_REGULAR),

@@ -3874,7 +3874,7 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/medical)
 "hD" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/emcloset/legacy,
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
 "hE" = (
@@ -5758,10 +5758,10 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
 "ly" = (
-/obj/structure/closet/emcloset,
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
+/obj/structure/closet/emcloset/legacy,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
 "lz" = (
@@ -6453,10 +6453,6 @@
 /area/hms_brynhild/lower_hangar)
 "mV" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/firstaid{
-	pixel_x = 8;
-	pixel_y = 3
-	},
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
 	pixel_y = 8;
 	pixel_x = -12
@@ -6464,6 +6460,10 @@
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
 	pixel_y = 1;
 	pixel_x = -7
+	},
+/obj/item/device/healthanalyzer/soul{
+	pixel_y = 6;
+	pixel_x = 15
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/medical)
@@ -9720,7 +9720,7 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
 "tI" = (
-/obj/structure/closet/emcloset,
+/obj/structure/closet/emcloset/legacy,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/lower_hangar)
 "tJ" = (
@@ -10213,13 +10213,13 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/armoury_station)
 "uQ" = (
-/obj/structure/closet/emcloset,
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/closet/emcloset/legacy,
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/supply)
 "uR" = (
@@ -16725,10 +16725,6 @@
 /area/hms_brynhild/motor_pool)
 "NJ" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/storage/firstaid/regular{
-	pixel_x = -5;
-	pixel_y = 9
-	},
 /obj/item/storage/firstaid/o2{
 	pixel_x = 8;
 	pixel_y = 2

@@ -365,7 +365,7 @@
 	reagents.add_reagent("nutriment", 15)
 
 /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1
-	name = "\improper RMC Prepared Meal (Beef Wellington)"
+	name = "\improper RMC Prepared Meal (Roast Beef)"
 	desc = "A slab of imitation beef drenched in too-salty gravy, with a portion of undercooked peas, soggy carrots and oddly dry mashed potatoes."
 	icon_state = "rmc_meat"
 
@@ -386,7 +386,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/rmc/meal5
 	name = "\improper RMC Prepared Meal (Seafood Platter)"
-	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop steaming-hot rice."
+	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop cold, boiled rice."
 	icon_state = "rmc_fish"
 
 /obj/item/storage/box/pizza
