@@ -261,6 +261,12 @@
 		return
 	tgui_interact(user)
 
+
+/obj/structure/machinery/chem_dispenser/yauja
+
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
+
 /obj/structure/machinery/chem_dispenser/soda
 	icon_state = "soda_dispenser"
 	name = "soda fountain"
@@ -301,6 +307,10 @@
 		"soymilk",
 	)
 
+/obj/structure/machinery/chem_dispenser/soda/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
+
 /obj/structure/machinery/chem_dispenser/soda/beer
 	icon_state = "booze_dispenser"
 	name = "booze dispenser"
@@ -332,6 +342,10 @@
 		"patron",
 		"absinthe",
 	)
+
+/obj/structure/machinery/chem_dispenser/soda/beer/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
 
 /obj/structure/machinery/chem_dispenser/canteen
 	name = "NestleCo AutoDrink"

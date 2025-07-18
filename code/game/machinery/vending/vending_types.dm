@@ -651,6 +651,15 @@
 		/obj/item/reagent_container/food/condiment/enzyme = 1,
 	)
 
+/obj/structure/machinery/vending/dinnerware/yautja
+	name = "dinnerplate dispenser"
+	desc = "A kitchen and restaurant equipment vendor."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	hacking_safety = TRUE
+
+/obj/structure/machinery/vending/dinnerware/yautja/checking_id()
+	return FALSE
+
 /obj/structure/machinery/vending/sovietsoda
 	name = "\improper BODA"
 	desc = "An old sweet water vending machine, how did this end up here?"
