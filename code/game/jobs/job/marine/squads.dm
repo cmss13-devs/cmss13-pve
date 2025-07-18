@@ -24,27 +24,6 @@
 	sub_squad = "Strike Team"
 	sub_leader = "Strike Leader"
 
-/datum/squad_type/forecon_squad
-	name = "Squad"
-	lead_name = "Squad Leader"
-	lead_icon = "leader"
-	sub_squad = "Fireteam"
-	sub_leader = "Fireteam Leader"
-
-/datum/squad_type/upp_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
-	lead_icon = "leader"
-	sub_squad = "Squad"
-	sub_leader = "Squad Sergeant"
-
-/datum/squad_type/pmc_squad
-	name = "Taskforce"
-	lead_name = "Operations Leader"
-	lead_icon = "leader"
-	sub_squad = "Team"
-	sub_leader = "Team Leader"
-
 /datum/squad
 	/// Name of the squad
 	var/name
@@ -91,7 +70,7 @@
 	var/faction = FACTION_MARINE
 
 	/// What will the assistant squad leader be called
-	var/squad_type = "Section" //Referenced for aSL details. Squad/Team/Cell etc.
+	var/squad_type = "Platoon" //Referenced for aSL details. Squad/Team/Cell etc.
 	/// Squad leaders icon
 	var/lead_icon //Referenced for SL's 'L' icon. If nulled, won't override icon for aSLs.
 
@@ -166,7 +145,6 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 	faction = FACTION_UPP
-	squad_type = "Platoon"
 	squad_one_access = ACCESS_UPP_SQUAD_ONE
 	squad_two_access = ACCESS_UPP_SQUAD_TWO
 
@@ -174,12 +152,6 @@
 	. = ..()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
-
-/datum/squad/marine/upp/secondary
-	name = SQUAD_UPP_2
-	equipment_color = "#dfab1c"
-	chat_color = "#e0c31a"
-	usable = TRUE
 
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
@@ -189,7 +161,6 @@
 	equipment_color = "#32CD32"
 	chat_color = "#32CD32"
 	minimap_color = "#32CD32"
-	squad_type = "Squad"
 	usable = TRUE
 
 /datum/squad/marine/bravo
@@ -273,16 +244,6 @@
 	active = FALSE
 	roundstart = FALSE
 	locked = TRUE
-
-/datum/squad/marine/sof/forecon
-	name = SQUAD_LRRP_2
-	use_stripe_overlay = FALSE
-	equipment_color = "#8f5e30"
-	chat_color = "#8f5e30"
-	minimap_color = "#8f5e30"
-	squad_type = "Squad"
-	usable = TRUE
-	locked = FALSE
 
 /datum/squad/marine/cbrn
 	name = SQUAD_CBRN
@@ -373,7 +334,6 @@
 	minimap_color = MINIMAP_SQUAD_PMC
 	use_stripe_overlay = FALSE
 	usable = TRUE
-	squad_type = "Taskforce"
 	squad_one_access = ACCESS_PMC_SQUAD_ONE
 	squad_two_access = ACCESS_PMC_SQUAD_TWO
 	faction = FACTION_PMC

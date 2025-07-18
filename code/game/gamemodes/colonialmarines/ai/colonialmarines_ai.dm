@@ -42,22 +42,12 @@
 		if(sq.type in squad_limit)
 			GLOB.main_platoon_name = sq.name
 			GLOB.main_platoon_initial_name = sq.name
-	squad_limit += USCM_AUXILIARY_PLATOON
-	squad_limit += FORECON_AUXILIARY_PLATOON
-	squad_limit += UPP_AUXILIARY_PLATOON
 
 	for(var/datum/squad/squad in GLOB.RoleAuthority.squads)
 		if(squad.type in squad_limit)
 			continue
 		GLOB.RoleAuthority.squads -= squad
 		GLOB.RoleAuthority.squads_by_type -= squad.type
-
-	GLOB.RoleAuthority.squads += USCM_AUXILIARY_PLATOON
-	GLOB.RoleAuthority.squads += FORECON_AUXILIARY_PLATOON
-	GLOB.RoleAuthority.squads += UPP_AUXILIARY_PLATOON
-	GLOB.RoleAuthority.squads_by_type += USCM_AUXILIARY_PLATOON
-	GLOB.RoleAuthority.squads_by_type += FORECON_AUXILIARY_PLATOON
-	GLOB.RoleAuthority.squads_by_type += UPP_AUXILIARY_PLATOON
 
 	. = ..()
 
