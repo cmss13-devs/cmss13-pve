@@ -164,6 +164,22 @@
 	max_range = 16
 	shell_speed = AMMO_SPEED_TIER_8
 
+//USCM Hornet AA missile
+/datum/ammo/rocket/ap/anti_air
+	name = "hypervelocity anti-air missile"
+	damage = 250
+	max_range = 16
+	vehicle_slowdown_time = 4 SECONDS
+	shell_speed = AMMO_SPEED_TIER_8
+
+//UPP Goose AA missile
+/datum/ammo/rocket/anti_air
+	name = "anti-air missile"
+	icon_state = "emblr"
+	damage = 100
+	max_range = 14
+	shell_speed = AMMO_SPEED_TIER_6
+
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
