@@ -572,6 +572,7 @@
 	S["skin_color"] >> skin_color
 	S["body_type"] >> body_type
 	S["body_size"] >> body_size
+	S["blood_type"] >> blood_type
 	S["language"] >> language
 	S["spawnpoint"] >> spawnpoint
 
@@ -661,6 +662,7 @@
 	skin_color = sanitize_skin_color(skin_color)
 	body_type = sanitize_body_type(body_type)
 	body_size = sanitize_body_size(body_size)
+	blood_type = sanitize_blood_type(blood_type)
 	r_hair = sanitize_integer(r_hair, 0, 255, initial(r_hair))
 	g_hair = sanitize_integer(g_hair, 0, 255, initial(g_hair))
 	b_hair = sanitize_integer(b_hair, 0, 255, initial(b_hair))
@@ -748,6 +750,7 @@
 	S["skin_color"] << skin_color
 	S["body_type"] << body_type
 	S["body_size"] << body_size
+	S["blood_type"] << blood_type
 	S["language"] << language
 	S["hair_red"] << r_hair
 	S["hair_green"] << g_hair
