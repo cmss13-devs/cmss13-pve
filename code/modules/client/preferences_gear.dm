@@ -760,17 +760,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
 	path = /obj/item/prop/magazine/dirty
 
-/datum/gear/toy/mags/boots_magazine_one
+/datum/gear/toy/mags/boots
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/toy/mags/boots/boots_magazine_one
 	display_name = "Boots Issue No.117"
 	path = /obj/item/prop/magazine/boots/n117
 
-/datum/gear/toy/mags/boots_magazine_two
+/datum/gear/toy/mags/boots/boots_magazine_two
 	display_name = "Boots Issue No.150"
 	path = /obj/item/prop/magazine/boots/n150
 
@@ -778,11 +780,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Boots Issue No.160"
 	path = /obj/item/prop/magazine/boots/n160
 
-/datum/gear/toy/mags/boots_magazine_four
+/datum/gear/toy/mags/boots/boots_magazine_four
 	display_name = "Boots Issue No.54"
 	path = /obj/item/prop/magazine/boots/n054
 
-/datum/gear/toy/mags/boots_magazine_five
+/datum/gear/toy/mags/boots/boots_magazine_five
 	display_name = "Boots Issue No.55"
 	path = /obj/item/prop/magazine/boots/n055
 
@@ -1577,3 +1579,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Compact can opener"
 	path = /obj/item/tool/kitchen/can_opener/compact
 	cost = 2
+
+/datum/gear/misc/eye_drops
+
+	display_name = "Eye drops"
+	path = /obj/item/prop/helmetgarb/eye_drops
+	cost = 1

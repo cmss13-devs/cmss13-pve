@@ -1,0 +1,5 @@
+author: "Generalcamo"
+delete-after: True
+changes:
+  - bugfix: "USCM Corpsman sight selection no longer conflicts with backpacks"
+  - bugfix: "USCM Forecon Corpsman sight selection no longer conflicts with backpacks"
