@@ -46066,9 +46066,9 @@
 	name = "officer langley trustee";
 	desc = "Developed by Trustee's for the hit-show series  of Jane Langley adventures as a detective on the frontier. She never taken off this holster until now!"
 	},
-/obj/item/clothing/accessory/storage/smallpouch,
-/obj/item/clothing/accessory/storage/smallpouch,
-/obj/item/clothing/accessory/storage/smallpouch,
+/obj/item/clothing/accessory/storage/leg_pouch,
+/obj/item/clothing/accessory/storage/leg_pouch,
+/obj/item/clothing/accessory/storage/leg_pouch,
 /obj/item/clothing/accessory/storage/black_vest/brown_vest,
 /obj/item/clothing/accessory/storage/droppouch,
 /obj/item/storage/wallet,

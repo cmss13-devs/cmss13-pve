@@ -916,16 +916,56 @@
 		)
 	storage_flags = NONE //no verb, no quick draw, no tile gathering
 
-/obj/item/clothing/accessory/storage/smallpouch
-	name = "small pouch"
-	desc = "A small pouch to carry a few items, typically the contents of an IFAK."
-	icon_state = "pouch"
-	hold = /obj/item/storage/internal/accessory/smallpouch
+/obj/item/clothing/accessory/storage/leg_pouch
+	name = "Leg Pouch"
+	desc = "A camo conforming leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/legpouch.dmi'
+	icon_state = "leg_pouch"
+	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',)
+	var/has_variation = TRUE
 
-/obj/item/clothing/accessory/storage/smallpouch/upp
-	icon_state = "upp_pouch_alt"
+/obj/item/clothing/accessory/storage/leg_pouch/Initialize()
+	. = ..()
+	if(has_variation)
+		select_gamemode_skin(/obj/item/clothing/accessory/storage/leg_pouch)
+		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
+		update_icon()
 
-/obj/item/storage/internal/accessory/smallpouch
+/obj/item/clothing/accessory/storage/leg_pouch/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	if(!(flags_atom & NO_SNOW_TYPE))
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon_state = "j_leg_pouch"
+		if("classic")
+			icon_state = "c_leg_pouch"
+		if("desert")
+			icon_state = "d_leg_pouch"
+		if("snow")
+			icon_state = "s_leg_pouch"
+		if("urban")
+			icon_state = "u_leg_pouch"
+
+/obj/item/clothing/accessory/storage/leg_pouch/upp
+	icon_state = "leg_pouch_upp"
+	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',)
+	item_state_slots = list(WEAR_BODY = "leg_pouch_upp")
+	flags_atom = NO_SNOW_TYPE
+	has_variation = FALSE
+
+/obj/item/clothing/accessory/storage/leg_pouch/black
+	name = "Black Leg Pouch"
+	desc = "A black leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/legpouch.dmi'
+	icon_state = "leg_pouch_black"
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/legpouch.dmi',
+	)
+	flags_atom = NO_SNOW_TYPE
+	has_variation = FALSE
+
+/obj/item/storage/internal/accessory/leg_pouch
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE

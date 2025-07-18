@@ -1226,7 +1226,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/marsoc/M = new()
-	var/obj/item/clothing/accessory/storage/smallpouch/W = new()
+	var/obj/item/clothing/accessory/storage/leg_pouch/W = new()
 	M.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(M, WEAR_BODY)
 	for(var/i in 1 to W.hold.storage_slots)
