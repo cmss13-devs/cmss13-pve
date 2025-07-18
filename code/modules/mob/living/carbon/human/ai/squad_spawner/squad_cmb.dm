@@ -10,14 +10,14 @@
 
 /datum/human_ai_squad_preset/cmb/smg
 	name = "CMB, Colony Emergency"
-	desc = "CMB team armed with Viper 9 SMGs or M41A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
+	desc = "CMB team armed with M39 SMGs or M41A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/cmb/deputy/emergency = 2,
 	)
 
 /datum/human_ai_squad_preset/cmb/breach
 	name = "CMB, Breach Team"
-	desc = "CMB team armed with a HG-37 pump-shotgun and a Viper 9 SMG or M41A rifle and carrying IFAKs containing gauze, ointment, splints and an injector."
+	desc = "CMB team armed with a HG-37 pump-shotgun and a M39 SMG or M41A rifle and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/cmb/deputy/emergency/shotgunner = 1,
 		/datum/equipment_preset/cmb/deputy/emergency = 1,
@@ -25,7 +25,7 @@
 
 /datum/human_ai_squad_preset/cmb/lead
 	name = "CMB, Marshal Team"
-	desc = "CMB team armed with Viper 9 SMGs or M41A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
+	desc = "CMB team armed with M39 SMGs or M41A rifles and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/cmb/marshal = 1,
 		/datum/equipment_preset/cmb/deputy/emergency = 2,
