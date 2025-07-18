@@ -1,6 +1,7 @@
 //-------------------------------------------------------
 //SMARTGUN
-
+#define LYING_DOWN_SG_ROF_DEBUFF 0.5
+#define KNOCKDOWN_SG_FAILSOUND_COOLDOWN 0.5
 //Come get some.
 /obj/item/weapon/gun/smartgun
 	name = "\improper M56A2 smartgun"
@@ -43,6 +44,7 @@
 		/datum/action/item_action/smartgun/toggle_lethal_mode,
 		///datum/action/item_action/smartgun/toggle_motion_detector,
 		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_armbrace,
 	)
 
 	var/obj/item/smartgun_battery/battery = null
@@ -69,6 +71,8 @@
 	var/long_range_cooldown = 2
 	var/recycletime = 120
 	var/cover_open = FALSE
+	var/armbrace = FALSE
+	COOLDOWN_DECLARE(knockdown_halt_sound_cooldown)
 
 /obj/item/weapon/gun/smartgun/Initialize(mapload, ...)
 	ammo_primary = GLOB.ammo_list[ammo_primary] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -122,7 +126,8 @@
 	var/message = "[rounds ? "Ammo counter shows [rounds] round\s remaining." : "It's dry."]"
 	. += message
 	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
-
+	var/message_armbrace = "[armbrace ? SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.") : SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")]"
+	. += message_armbrace
 	if(battery && get_dist(user, src) <= 1)
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
 
@@ -253,6 +258,23 @@
 	var/obj/item/weapon/gun/smartgun/G = holder_item
 	G.toggle_accuracy_improvement(usr)
 	if(G.accuracy_improvement)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
+
+/datum/action/item_action/smartgun/toggle_armbrace/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Armbrace"
+	action_icon_state = "armbrace"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_armbrace/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	G.toggle_armbrace(usr)
+	if(G.armbrace)
 		button.icon_state = "template_on"
 	else
 		button.icon_state = "template"
@@ -394,7 +416,35 @@
 		MD.iff_signal = null
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/smartgun/proc/toggle_armbrace(mob/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human = user
+	if(!human.wear_suit || !(human.wear_suit.flags_inventory & SMARTGUN_HARNESS))
+		to_chat(user, "[icon2html(src, usr)] You can't actuate the armbrace without a harness.")
+		return
+
+	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>deactuate</b>" : "<B>actuate</b>"] \the [src]'s armbrace.")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	armbrace = !armbrace
+	if(armbrace)
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+	else
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	if(user.IsKnockDown())
+		if(COOLDOWN_FINISHED(src, knockdown_halt_sound_cooldown))
+			COOLDOWN_START(src, knockdown_halt_sound_cooldown, KNOCKDOWN_SG_FAILSOUND_COOLDOWN)
+			playsound(loc,"smartgun_knockdown", 25, 0)
+			return
+	if(user.body_position == LYING_DOWN)
+		set_gun_config_values()
+		modify_fire_delay(LYING_DOWN_SG_ROF_DEBUFF)
+		scatter += 1
+		fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_5
+	else
+		set_gun_config_values()
 	if(!requires_battery)
 		return ..()
 
