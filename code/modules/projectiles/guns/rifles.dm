@@ -1854,3 +1854,108 @@
 	f90_shotgun_barrel.Attach(src)
 	update_attachable(f90_shotgun.slot)
 	update_attachable(f90_shotgun_barrel.slot)
+
+
+//FN107 Rifle
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/fn107
+	name = "\improper CAMAS61/78 pulse carbine"
+	desc = "To facilitate newer French military development, the CAMAS61/78 was created by Saint etienne in 2159. This was later modified in 2178 for privatized use. It is quite a well known pulse carbine within military circles, commonly being used by many different mercenary and security groups, notably the FAAMI PMCs for rural combat."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "fn107"
+	item_state = "fn107"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/fn107
+	attachable_allowed = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/stock/fn107,
+		/obj/item/attachable/scope/mini,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	starting_attachment_types = list(/obj/item/attachable/stock/fn107)
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/fn107/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 14, "stock_x" = 18, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/fn107/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_10
+	burst_amount = BURST_AMOUNT_TIER_3
+	burst_delay = FIRE_DELAY_TIER_10
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+
+/obj/item/weapon/gun/rifle/fn107/unloaded
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
+
+/obj/item/weapon/gun/rifle/fn107/marksman
+	starting_attachment_types = list(/obj/item/attachable/stock/fn107, /obj/item/attachable/scope/mini)
+
+/obj/item/weapon/gun/rifle/fn107/commando
+	current_mag = /obj/item/ammo_magazine/rifle/fn107/commando
+	starting_attachment_types = list(/obj/item/attachable/stock/fn107, /obj/item/attachable/scope/mini, /obj/item/attachable/lasersight)
+
+
+//MASM55 Medium Machinegun
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/masm55
+	name = "\improper MASM55 Medium Machinegun"
+	desc = "Though many groups and factions throughout modern day have switched to either Smartguns or LMGs, the MASM55 is still used for heavy suppression and are commonly found within the hands of Mercenaries such as the FAAMI PMC group. Created by Saint Etienne during 2155 due to the older French MGs were subpar, it has a radiator cooler for more stable fire."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "masm"
+	item_state = "masm"
+	reload_sound = 'sound/weapons/handling/hpr_reload.ogg'
+	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
+	fire_sound = "gun_pulse"
+	current_mag = /obj/item/ammo_magazine/rifle/masm
+	attachable_allowed = list(
+		/obj/item/attachable/masm_barrel,
+		/obj/item/attachable/bipod/masm,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_SLOW
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	starting_attachment_types = list(/obj/item/attachable/masm_barrel, /obj/item/attachable/bipod/masm)
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
+	w_class = SIZE_HUGE
+	gun_category = GUN_CATEGORY_HEAVY
+
+/obj/item/weapon/gun/rifle/masm55/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 38, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 32, "under_y" = 12, "stock_x" = 18, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/masm55/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_11
+	burst_amount = BURST_AMOUNT_TIER_4
+	burst_delay = FIRE_DELAY_TIER_10
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	recoil = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+
+/obj/item/weapon/gun/rifle/masm55/unloaded
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
