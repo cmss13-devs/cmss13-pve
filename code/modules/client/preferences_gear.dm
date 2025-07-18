@@ -87,6 +87,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/glasses/sunglasses/big/orange
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/eyewear/bimex_shades_classic
+	display_name = "BiMex Classic Shades"
+	path = /obj/item/clothing/glasses/sunglasses/big/classic
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
@@ -306,14 +311,25 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap, jungle"
 	path = /obj/item/clothing/head/cmcap
+	cost = 2
 
 /datum/gear/headwear/uscm/cap_desert
 	display_name = "USCM cap, desert"
-	path = /obj/item/clothing/head/cmcap/khaki
+	path = /obj/item/clothing/head/cmcap/desert
+	cost = 2
 
 /datum/gear/headwear/uscm/cap_snow
 	display_name = "USCM cap, snow"
 	path = /obj/item/clothing/head/cmcap/snow
+	cost = 2
+
+/datum/gear/headwear/uscm/cap_operations
+	display_name = "USCM Operations Cap, Green"
+	path = /obj/item/clothing/head/cmcap/bridge
+
+/datum/gear/headwear/uscm/cap_operations2
+	display_name = "USCM Operations Cap, Tan"
+	path = /obj/item/clothing/head/cmcap/khaki
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
@@ -545,9 +561,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/clothing
 	category = "Non-standard clothing"
 
-/datum/gear/clothing/black_boots
-	display_name = "black combat boots"
-	path = /obj/item/clothing/shoes/marine/civilian
+/datum/gear/clothing/jungle_boots
+	display_name = "jungle combat boots"
+	path = /obj/item/clothing/shoes/marine/civilian/jungle
 
 /datum/gear/clothing/brown_boots
 	display_name = "brown combat boots"
@@ -755,17 +771,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
 	path = /obj/item/prop/magazine/dirty
 
-/datum/gear/toy/mags/boots_magazine_one
+/datum/gear/toy/mags/boots
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/toy/mags/boots/boots_magazine_one
 	display_name = "Boots Issue No.117"
 	path = /obj/item/prop/magazine/boots/n117
 
-/datum/gear/toy/mags/boots_magazine_two
+/datum/gear/toy/mags/boots/boots_magazine_two
 	display_name = "Boots Issue No.150"
 	path = /obj/item/prop/magazine/boots/n150
 
@@ -773,11 +791,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Boots Issue No.160"
 	path = /obj/item/prop/magazine/boots/n160
 
-/datum/gear/toy/mags/boots_magazine_four
+/datum/gear/toy/mags/boots/boots_magazine_four
 	display_name = "Boots Issue No.54"
 	path = /obj/item/prop/magazine/boots/n054
 
-/datum/gear/toy/mags/boots_magazine_five
+/datum/gear/toy/mags/boots/boots_magazine_five
 	display_name = "Boots Issue No.55"
 	path = /obj/item/prop/magazine/boots/n055
 
@@ -1032,7 +1050,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/chinese
 	display_name = "Type 4 bayonet"
-	path = 	/obj/item/weapon/knife/marine/chinese
+	path = 	/obj/item/attachable/bayonet/canc
 	allowed_origins = UPP_ORIGINS
 
 /datum/gear/weapon/type_80_Bayonet
@@ -1572,3 +1590,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Compact can opener"
 	path = /obj/item/tool/kitchen/can_opener/compact
 	cost = 2
+
+/datum/gear/misc/eye_drops
+
+	display_name = "Eye drops"
+	path = /obj/item/prop/helmetgarb/eye_drops
+	cost = 1
