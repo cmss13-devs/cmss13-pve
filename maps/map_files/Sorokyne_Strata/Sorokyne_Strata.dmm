@@ -9327,7 +9327,7 @@
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
-/obj/item/weapon/gun/shotgun/type23,
+/obj/item/weapon/gun/shotgun/ks29,
 /turf/open/floor/strata,
 /area/strata/ag/interior/disposals)
 "bFi" = (

@@ -204,19 +204,19 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/merc
 	max_rounds = 5
 
-/obj/item/ammo_magazine/internal/shotgun/type23
+/obj/item/ammo_magazine/internal/shotgun/ks29
 	caliber = "8g"
 	max_rounds = 4
 	current_rounds = 4
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot
 
-/obj/item/ammo_magazine/internal/shotgun/type23/slug
+/obj/item/ammo_magazine/internal/shotgun/ks29/slug
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/slug
 
-/obj/item/ammo_magazine/internal/shotgun/type23/riot
+/obj/item/ammo_magazine/internal/shotgun/ks29/riot
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 
-/obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+/obj/item/ammo_magazine/internal/shotgun/ks29/unloaded
 	current_rounds = 0
 
 /obj/item/ammo_magazine/internal/shotgun/cmb

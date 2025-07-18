@@ -273,25 +273,25 @@
 	if(locate(/obj/item/attachable/stock/shotgun) in contents)
 		overlays += image(icon, "+stock")
 
-/obj/item/storage/box/guncase/heavy/shotgun/type23
+/obj/item/storage/box/guncase/heavy/shotgun/ks29
 	name = "\improper KS29 shotgun case"
 	desc = "A case for storing a KS29 combat shotgun."
 	icon_state = "ks29case"
 	storage_slots = 2
-	can_hold = list(/obj/item/weapon/gun/shotgun/type23)
+	can_hold = list(/obj/item/weapon/gun/shotgun/ks29)
 	max_w_class = SIZE_HUGE
-/obj/item/storage/box/guncase/heavy/shotgun/type23/fill_preset_inventory()
-	new /obj/item/weapon/gun/shotgun/type23/unloaded/stored(src)
-	new /obj/item/attachable/stock/type23(src)
+/obj/item/storage/box/guncase/heavy/shotgun/ks29/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/ks29/unloaded/stored(src)
+	new /obj/item/attachable/stock/ks29(src)
 
-/obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
+/obj/item/storage/box/guncase/heavy/shotgun/ks29/update_icon()
 	overlays.Cut()
 	if(opened)
 		overlays += image(icon, "uppbigcasealt_lid_open")
 	else
 		overlays += image(icon, "ks29case_lid")
 		return
-	if(locate(/obj/item/weapon/gun/shotgun/type23) in contents)
+	if(locate(/obj/item/weapon/gun/shotgun/ks29) in contents)
 		overlays += image(icon, "+ks29")
 
 /obj/item/storage/box/guncase/heavy/m49a_pve

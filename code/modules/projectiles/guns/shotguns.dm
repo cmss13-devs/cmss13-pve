@@ -343,16 +343,16 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 //-------------------------------------------------------
-//TYPE 23. SEMI-AUTO UPP SHOTGUN, BASED ON KS-23
+//KS-29. SEMI-AUTO UPP SHOTGUN, BASED ON KS-23
 
-/obj/item/weapon/gun/shotgun/type23
+/obj/item/weapon/gun/shotgun/ks29
 	name = "\improper KS-29/4 combat shotgun"
 	desc = "A contemporary semi-automatic design based off of the KS-23, a Soviet-era pump-action riot shotgun chambered in 6 gauge shells. Updated for the UPP's Naval Infantry as a boarding gun, it was downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "type23_tactical"
-	item_state = "type23_tactical"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	icon_state = "ks29_tactical"
+	item_state = "ks29_tactical"
+	fire_sound = 'sound/weapons/gun_ks29.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reddot/upp,
@@ -371,18 +371,18 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/stock/type23, // Stock
+		/obj/item/attachable/stock/ks29, // Stock
 		/obj/item/attachable/flashlight, // Side Rail
 		)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
-	starting_attachment_types = list(/obj/item/attachable/stock/type23)
+	starting_attachment_types = list(/obj/item/attachable/stock/ks29)
 
-/obj/item/weapon/gun/shotgun/type23/set_gun_attachment_offsets()
+/obj/item/weapon/gun/shotgun/ks29/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17, "side_rail_x" = 25, "side_rail_y" = 18)
 
-/obj/item/weapon/gun/shotgun/type23/set_gun_config_values()
+/obj/item/weapon/gun/shotgun/ks29/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_8)
 	accuracy_mult = BASE_ACCURACY_MULT
@@ -393,37 +393,37 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/shotgun/type23/unloaded
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+/obj/item/weapon/gun/shotgun/ks29/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/unloaded
 
-/obj/item/weapon/gun/shotgun/type23/unloaded/stored
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+/obj/item/weapon/gun/shotgun/ks29/unloaded/stored
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/unloaded
 	starting_attachment_types = null
 
-/obj/item/weapon/gun/shotgun/type23/slug
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+/obj/item/weapon/gun/shotgun/ks29/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/slug
 
-/obj/item/weapon/gun/shotgun/type23/riot
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
+/obj/item/weapon/gun/shotgun/ks29/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/riot
 
-/obj/item/weapon/gun/shotgun/pump/type23
+/obj/item/weapon/gun/shotgun/pump/ks29
 	name = "\improper KS-29 riot shotgun"
 	desc = "A contemporary pump-action design based off of the KS-23, a Soviet-era riot shotgun chambered in 6 gauge shells. Like its Naval Infantry sibling, it is downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "type23_wood"
-	item_state = "type23_wood"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
-	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
+	icon_state = "ks29_wood"
+	item_state = "ks29_wood"
+	fire_sound = 'sound/weapons/gun_ks29.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29
+	attachable_allowed = list(/obj/item/attachable/stock/ks29/wood)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 	flags_equip_slot = SLOT_BACK
 	gauge = "8g"
-	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
+	starting_attachment_types = list(/obj/item/attachable/stock/ks29/wood)
 
-/obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
+/obj/item/weapon/gun/shotgun/pump/ks29/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18)
 
-/obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
+/obj/item/weapon/gun/shotgun/pump/ks29/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_8)
 	accuracy_mult = BASE_ACCURACY_MULT
@@ -434,14 +434,14 @@ can cause issues with ammo types getting mixed up during the burst.
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/shotgun/pump/type23/unloaded
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+/obj/item/weapon/gun/shotgun/pump/ks29/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/unloaded
 
-/obj/item/weapon/gun/shotgun/pump/type23/slug
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+/obj/item/weapon/gun/shotgun/pump/ks29/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/slug
 
-/obj/item/weapon/gun/shotgun/pump/type23/riot
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
+/obj/item/weapon/gun/shotgun/pump/ks29/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/ks29/riot
 
 //-------------------------------------------------------
 //DOUBLE SHOTTY

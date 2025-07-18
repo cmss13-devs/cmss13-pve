@@ -1761,7 +1761,7 @@
 /turf/open/floor/plating,
 /area/shiva/interior/valley_huts/disposals)
 "asT" = (
-/obj/item/weapon/gun/shotgun/type23,
+/obj/item/weapon/gun/shotgun/ks29,
 /obj/effect/decal/cleanable/blood{
 	layer = 3
 	},
