@@ -549,3 +549,9 @@
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	valid_accessory_slots = list(ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMBAND)
+
+/obj/item/clothing/suit/storage/wallace
+	name = "Wallace's Vest"
+	item_icons = list(WEAR_JACKET ='icons/mob/humans/onmob/suit_1.dmi')
+	item_state = "wallace_vest"
+	icon_state = "wallace_vest"

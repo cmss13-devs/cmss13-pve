@@ -144,6 +144,11 @@
 	name = "brown laceup shoes"
 	icon_state = "laceups_brown"
 
+/obj/item/clothing/shoes/wallace
+	name = "Wallace's Shoes"
+	item_state = "wallace_shoes"
+	icon_state = "wallace_shoes"
+
 /obj/item/clothing/shoes/swimmingfins
 	desc = "Help you swim good."
 	name = "swimming fins"
