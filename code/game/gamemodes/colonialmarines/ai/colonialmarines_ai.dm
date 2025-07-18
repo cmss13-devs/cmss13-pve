@@ -93,8 +93,8 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),
-		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_MARINE,\
-		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_TEAM_LEADER,\
+		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
 		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
@@ -104,12 +104,18 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN)))
+		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN,\
+		/datum/squad/marine/pmc/small = list(/datum/job/marine/tl/ai/pmc/small = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/standard/ai/pmc/small =  JOB_SQUAD_MARINE,\
+		/datum/job/marine/medic/ai/pmc/small = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/pmc/small = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER))))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
-												/datum/squad/marine/forecon = ROLES_AI_FORECON))
+												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL))
 
 GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun" = /obj/item/weapon/gun/shotgun/pump/unloaded, "Sawn-off double barrel shotgun" = /obj/item/weapon/gun/shotgun/double/sawn,\
 											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\
