@@ -506,9 +506,12 @@
 		list("Large General Pouch", floor(scale * 5), /obj/item/storage/pouch/general/large, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
-		list("Construction Pouch", floor(scale * 2), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", floor(scale * 2), /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
+//Commented out as part of a test to see how this affects letting the sapper handle engi tasks first. Will remove or un-comment after testing
+/*
+		list("Construction Pouch", floor(scale * 2), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch", floor(scale * 1), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+*/
 		list("Sling Pouch", floor(scale * 2), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
@@ -900,6 +903,9 @@
 		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
 		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
 
+//Testing to see if this improves the emphasis on letting the sapper handle engineering tasks, rather than rattish gits gobbling up all the tech-y work
+//If this works, I'll axe the whole code-block rather than leaving it commented out
+/*
 		list("TOOLS", -1, null, null),
 		list("2155 Pattern Entrenching Tool", round(scale * 1), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
 		list("Screwdriver", round(scale * 1), /obj/item/tool/screwdriver/tactical, VENDOR_ITEM_REGULAR),
@@ -908,6 +914,7 @@
 		list("Wrench", round(scale * 1), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+*/
 
 		list("EXPLOSIVES", -1, null, null),
 		list("Plastic Explosives", round(scale * 1), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
@@ -926,6 +933,7 @@
 		list("Fire Extinguisher (Portable)", round(scale * 2), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
 		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
+		list("2155 Pattern Entrenching Tool", round(scale * 2), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
 		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 1), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
