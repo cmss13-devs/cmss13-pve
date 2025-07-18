@@ -25,7 +25,7 @@
 	var/list/smartgun_back = list(
 		/obj/item/storage/large_holster/machete/smartgunner,
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_MASK, ACCESSORY_SLOT_PATCH)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/Initialize()
 	. = ..()
@@ -113,16 +113,8 @@
 		ACCESSORY_SLOT_DECORSHIN,
 		ACCESSORY_SLOT_DECORKNEE,
 		ACCESSORY_SLOT_DECORGROIN,
-	)
-	restricted_accessory_slots = list(
-		ACCESSORY_SLOT_PAINT,
-		ACCESSORY_SLOT_SGPAINT,
-		ACCESSORY_SLOT_M56UTILITY,
-		ACCESSORY_SLOT_DECORNECK,
-		ACCESSORY_SLOT_DECORBRACER,
-		ACCESSORY_SLOT_DECORSHIN,
-		ACCESSORY_SLOT_DECORKNEE,
-		ACCESSORY_SLOT_DECORGROIN,
+		ACCESSORY_SLOT_MASK,
+		ACCESSORY_SLOT_PATCH,
 	)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
