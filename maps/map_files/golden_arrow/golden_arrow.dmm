@@ -2318,17 +2318,17 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "ahm" = (
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
 	name = "long-life foodstuff storage"
 	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
 /obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
@@ -3525,10 +3525,6 @@
 /obj/item/weapon/straight_razor{
 	pixel_x = -5;
 	pixel_y = -5
-	},
-/obj/item/clothing/head/cmcap/bridge{
-	pixel_y = 6;
-	pixel_x = 5
 	},
 /turf/open/floor/almayer/edge/smooth/southwest,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14404,7 +14400,7 @@
 	layer = 2.52
 	},
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
-	name = "\improper Hypersleep Bay"
+	name = "\improper Medical Bay"
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/medical)
@@ -14980,7 +14976,7 @@
 	dir = 1;
 	light_power = 0.7
 	},
-/obj/item/clothing/glasses/hud/health{
+/obj/item/clothing/glasses/night/medhud/no_nvg{
 	pixel_y = 5;
 	pixel_x = 7
 	},
@@ -15700,11 +15696,15 @@
 /area/golden_arrow/cargo_shuttle/upper)
 "cUK" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
-	pixel_y = 8;
-	pixel_x = 3
+	pixel_x = 5;
+	pixel_y = 10
 	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = 13;
+	pixel_x = -5
+	},
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "cWH" = (
@@ -17667,15 +17667,20 @@
 /area/golden_arrow/synthcloset)
 "kBG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 13;
-	layer = 3.2
-	},
 /obj/item/storage/box/guncase/heavy/sentry{
 	pixel_y = 13
 	},
 /obj/item/storage/box/guncase/heavy/sentry,
 /obj/structure/machinery/power/apc/almayer/east,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 13;
+	layer = 3.2
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_y = 20;
+	layer = 3.2;
+	pixel_x = 3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "kDp" = (
@@ -18858,9 +18863,9 @@
 "olG" = (
 /obj/structure/phone_base{
 	pixel_y = 6;
-	name = "supply bay receiver";
+	name = "medical bay receiver";
 	phone_category = "Golden Arrow";
-	phone_id = "Supply Bay";
+	phone_id = "Medical Bay";
 	pixel_x = 23;
 	dir = 8
 	},

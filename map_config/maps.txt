@@ -82,10 +82,16 @@ endmap
 map canyon_32b
 endmap
 
+map taipei_station
+endmap
+
 map calliope_highway
 endmap
 
 map calliope_desert_bus
+endmap
+
+map oread_garrison
 endmap
 
 map lv671

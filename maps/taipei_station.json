@@ -1,0 +1,18 @@
+{
+    "map_name": "Taipei Way-Station",
+    "short_name": "Taipei Station",
+    "map_path": "map_files/taipei_station",
+    "map_file": "taipei_station.dmm",
+    "map_item_type": "/obj/item/map/taipei",
+    "traits": [{ "ground": true}],
+    "camouflage": "jungle",
+    "environment_traits": {},
+    "announce_text": "Taipei Station, An unassuming waystation from the not-so-distant past of the colony-rush, now defunct.",
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

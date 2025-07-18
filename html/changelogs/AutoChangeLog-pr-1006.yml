@@ -1,0 +1,6 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "Reduced AG80 rounds armor pen (2->1 for normal, 9->7 for AP) and shrapnel chance for HEAP (9->2)"
+  - balance: "updated the AG80 description a tad to clarify its role as a carbine"
+  - bugfix: "AG80 actually references the right bullet type now"

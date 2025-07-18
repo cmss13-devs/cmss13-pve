@@ -150,6 +150,19 @@
 	html_link = ""
 	color = "white"
 
+/obj/item/map/taipei
+	name = "\improper Taipei Way-Station map"
+	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
+	html_link = ""
+	color = "cyan"
+	desc_lore = "https://github.com/user-attachments/assets/bfe1a3dd-f737-4b89-a030-ff819e320dea"
+
+/obj/item/map/oread_map
+	name = "\improper Oread Garrison map"
+	desc = "A distorted orbital scan of the Oread Garrison"
+	html_link = ""
+	color = "cyan"
+
 /obj/item/map/lv_671
 	name = "\improper LV-671 Map"
 	desc = "An orbital scan printout of the LV-671 colony."
@@ -196,6 +209,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
+		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
+		MAP_TAIPAI = new /obj/item/map/taipei(),
 		MAP_LV_671 = new /obj/item/map/lv_671(),
 		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
 		MAP_DERELICT_ALMAYER_INFESTED = new /obj/item/map/almayer/infested(),
@@ -213,6 +228,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		return // "Maps" we don't have maps for so we don't need to throw a runtime for (namely in unit_testing)
 	name = map.name
 	desc = map.desc
+	desc_lore = map.desc_lore
 	html_link = map.html_link
 	color = map.color
 

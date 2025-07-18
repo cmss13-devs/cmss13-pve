@@ -697,7 +697,7 @@
 	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
 	dropship_name = dropship_name ? sanitize_text(dropship_name, initial(dropship_name)) : "Midway"
 
-	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list, initial(personal_weapon))
+	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list+"None", initial(personal_weapon))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
