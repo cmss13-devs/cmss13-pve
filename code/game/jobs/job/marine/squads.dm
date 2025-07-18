@@ -275,6 +275,18 @@
 	roundstart = FALSE
 	locked = TRUE
 
+/datum/squad/army
+	name = SQUAD_ARMY
+	equipment_color = "#349c30"
+	chat_color = "#349c30"
+	radio_freq = ARM_FREQ
+	minimap_color = "#349c30"
+	use_stripe_overlay = FALSE
+	faction = FACTION_ARMY
+	active = TRUE
+	roundstart = FALSE
+	usable = TRUE
+	locked = TRUE
 
 //############################### UPP Squads
 /datum/squad/upp
