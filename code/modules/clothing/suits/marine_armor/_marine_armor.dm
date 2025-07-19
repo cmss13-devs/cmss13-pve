@@ -613,7 +613,7 @@
 
 //==================USASF & ARMY==================\\
 
-/obj/item/clothing/suit/marine/medium/rto/navy
+/obj/item/clothing/suit/storage/marine/medium/rto/navy
 	name = "\improper M4 pattern shore-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
 	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
@@ -965,7 +965,7 @@
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 
 /obj/item/clothing/suit/marine/medium/rto/navy
-	name = "\improper M4 pattern shore-deployment armor"
+	name = "\improper M4-N pattern armor"
 	desc = "A set of USASF acquired M4 armor, with slight modifications to better suite ship-side usage. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
 	icon_state = "navy"
 	item_state = "navy"
@@ -973,7 +973,7 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/medium/rto/navy/heavy
-	name = "\improper M4 pattern shore-deployment armor"
+	name = "\improper M4-N pattern shore-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
 
 /obj/item/clothing/suit/marine/medium/rto/navy/heavy/Initialize(mapload)
