@@ -188,6 +188,21 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/monocular(new_human), WEAR_IN_BACK)
 	..()
 
+/datum/equipment_preset/usasf/crew/infantry/eva
+	name = parent_type::name + " (EVA)"
+	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
+	assignment = "USASF Security Forces EVA Specialist"
+	role_comm_title = "SF-EVA"
+
+/datum/equipment_preset/usasf/crew/infantry/eva/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/red(new_human), WEAR_BACK) //placeholder until the spacesuits projects adds back the jetpacks
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/uscm(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/pressure/uscm(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/navy/tactical(new_human), WEAR_J_STORE)
+	..()
+
 /datum/equipment_preset/usasf/crew/flight
 	name = "USASF Flight-Deck Crewman"
 	assignment = JOB_NAVY_SKITTLE
