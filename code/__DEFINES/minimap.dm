@@ -32,6 +32,7 @@ GLOBAL_LIST_INIT(all_minimap_flags, bitfield2list(MINIMAP_FLAG_ALL))
 #define MINIMAP_SOLID "#ebe5e5ee"
 #define MINIMAP_DOOR "#451e5eb8"
 #define MINIMAP_FENCE "#8d2294ad"
+#define MINIMAP_ROAD "#a1a1a1"
 #define MINIMAP_LAVA "#db4206ad"
 #define MINIMAP_DIRT "#9c906dc2"
 #define MINIMAP_SNOW "#c4e3e9c7"

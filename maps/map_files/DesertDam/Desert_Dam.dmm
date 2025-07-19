@@ -16795,7 +16795,7 @@
 "enc" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreen/northeast,
 /area/desert_dam/building/medical/treatment_room)
 "enf" = (
@@ -19197,7 +19197,7 @@
 /turf/open/floor/prison/blue/northeast,
 /area/desert_dam/interior/dam_interior/tech_storage)
 "fFb" = (
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreen/north,
 /area/desert_dam/building/medical/east_wing_hallway)
 "fFk" = (
@@ -20388,7 +20388,7 @@
 /area/desert_dam/interior/dam_interior/hangar_storage)
 "gob" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/prison/whitegreencorner,
 /area/desert_dam/building/medical/lobby)
 "goh" = (
@@ -35448,8 +35448,8 @@
 /area/desert_dam/building/security/prison)
 "psW" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/machinery/power/apc/no_power/east,
 /turf/open/floor/prison/whitegreen/east,
 /area/desert_dam/building/medical/west_wing_hallway)
