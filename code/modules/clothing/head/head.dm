@@ -445,8 +445,8 @@
 	)
 
 /obj/item/clothing/head/cmcap/corrections
-	name = "dark blue patrol cap"
-	desc = "A dark blue patrol cap."
+	name = "dark blue utility cap"
+	desc = "A dark blue utility cap."
 	icon_state = "corrections"
 	item_state = "corrections"
 
