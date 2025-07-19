@@ -957,14 +957,6 @@
 
 //Army & USASF custom-armors\\
 
-/obj/item/clothing/suit/marine/light/navy
-	name = "\improper M4-L naval pattern armor"
-	desc = "Standard USASF issue M4-L Pattern Personal Armor to be used onboard spaceships and space stations. It is lightweight, yet surprisingly robust. With Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
-	icon_state = "navy"
-	item_state = "navy"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-
 /obj/item/clothing/suit/marine/medium/rto/navy
 	name = "\improper M4-N pattern armor"
 	desc = "A set of USASF acquired M4 armor, with slight modifications to better suite ship-side usage. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
