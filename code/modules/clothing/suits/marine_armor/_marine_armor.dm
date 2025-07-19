@@ -942,7 +942,7 @@
 	specialty = "B12 pattern marine"
 
 /obj/item/clothing/suit/marine/guard
-	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp"
+	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
 	icon_state = "uacg"
 	item_state = "uacg"
 	flags_atom = NO_SNOW_TYPE
