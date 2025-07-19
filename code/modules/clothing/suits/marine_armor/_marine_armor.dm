@@ -951,11 +951,11 @@
 	specialty = "B12 pattern marine"
 
 /obj/item/clothing/suit/marine/guard
-	desc = "Standard UASAF issue M3 Pattern Personal Armor to be used by their Men-At-Arms onboard spaceships and spacestations. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp"
 	icon_state = "uacg"
 	item_state = "uacg"
 	flags_atom = NO_SNOW_TYPE
-	name = "\improper M4-L pattern armor"
+	name = "\improper M3 pattern armor"
 	specialty = "M3 pattern"
 
 /obj/item/clothing/suit/marine/guard/Initialize(mapload)
