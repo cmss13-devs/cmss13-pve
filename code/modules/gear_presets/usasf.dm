@@ -95,9 +95,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear/marine(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/light/navy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/m41amk1(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
@@ -117,11 +119,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear/marine(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/light/navy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/xm51(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/xm51/military(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/xm51(new_human), WEAR_IN_BELT)
@@ -136,11 +139,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full(new_human), WEAR_L_STORE)
 	..()
 
-/datum/equipment_preset/usasf/crew/infantry
+/datum/equipment_preset/usasf/crew/infantry/
 	name = "USASF Rifleman"
-	assignment = "USASF Aerospace Infantry Rifleman"
+	assignment = "USASF Security Forces Rifleman"
 	paygrades = list(PAY_SHORT_NE3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "MAR"
+	role_comm_title = "SF"
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	skills = /datum/skills/pfc
@@ -178,7 +181,8 @@
 /datum/equipment_preset/usasf/crew/infantry/nco
 	name = parent_type::name + " (Team Lead)"
 	paygrades = list(PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_0)
-	assignment = "USASF Aerospace Infantry Team Leader"
+	assignment = "USASF Security Forces Team Leader"
+	role_comm_title = "SF-TL"
 
 /datum/equipment_preset/usasf/crew/infantry/nco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/monocular(new_human), WEAR_IN_BACK)

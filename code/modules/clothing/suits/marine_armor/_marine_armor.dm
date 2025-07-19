@@ -619,6 +619,14 @@
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/marine/navy
+	desc = "Standard USASF issue M4-L Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	icon_state = "uacg"
+	item_state = "uacg"
+	flags_atom = NO_SNOW_TYPE
+	name = "\improper M4-L pattern naval-deployment armor"
+	specialty = "M3 pattern"
+
 /obj/item/clothing/suit/storage/marine/medium/rto/army
 	name = "\improper M4 pattern trooper armor"
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
@@ -943,11 +951,11 @@
 	specialty = "B12 pattern marine"
 
 /obj/item/clothing/suit/marine/guard
-	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	desc = "Standard UASAF issue M3 Pattern Personal Armor to be used by their Men-At-Arms onboard spaceships and spacestations. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
 	icon_state = "uacg"
 	item_state = "uacg"
 	flags_atom = NO_SNOW_TYPE
-	name = "\improper M3 pattern armor"
+	name = "\improper M4-L pattern armor"
 	specialty = "M3 pattern"
 
 /obj/item/clothing/suit/marine/guard/Initialize(mapload)
@@ -962,6 +970,14 @@
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
 	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/suit/marine/light/navy
+	name = "\improper M4-L naval pattern armor"
+	desc = "Standard USASF issue M4-L Pattern Personal Armor to be used by their Men-At-Arms onboard spaceships and space stations. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
+	icon_state = "uacg"
+	item_state = "uacg"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	slowdown = SLOWDOWN_ARMOR_LIGHT
 
 /obj/item/clothing/suit/marine/medium/rto/navy/Initialize(mapload)
 	. = ..()
