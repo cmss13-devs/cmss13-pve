@@ -113,6 +113,7 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 
 GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun-stakeout"= /obj/item/storage/large_holster/m37/full, Sawn-off double barrel shotgun"= /obj/item/weapon/gun/shotgun/double/sawn,\
 											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\ "Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff,\
+											"4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack, "Ithaca 37 shotgun-stock" = /obj/item/weapon/gun/shotgun/pump/stock)
 
 /datum/game_mode/colonialmarines/ai/proc/spawn_personal_weapon()
 	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads
