@@ -468,7 +468,7 @@
 	return
 
 /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp //something that better fits for the USCM
-	name = "old M1 multispectrum visor"
+	name = "old M1 multi-spectrum visor"
 	desc = "A failed prototype for next generation HUD optics for the Colonial Marines that was surpased by the current issue integrated IR optic, this flip down visor offers a full visor suite with multi-spectrum capabilities. A really cool piece until you realize you are one headbang away from losing night capability."
 	icon_state = "larp"
 	active_powered_icon_state = "larp_down_powered"
