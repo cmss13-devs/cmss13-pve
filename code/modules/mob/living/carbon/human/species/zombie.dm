@@ -1,6 +1,8 @@
 // DEFINES
 ///Time until a zombie rises from the dead
-#define ZOMBIE_REVIVE_TIME 3 MINUTES
+#define ZOMBIE_REVIVE_TIME 1.5 MINUTES
+///Amount of Heart + Brain Damage that will stop a zombie rising again
+#define ZOMBIE_ORGAN_DAMAGE_THRESHOLD 150
 
 /datum/species/zombie
 	group = SPECIES_HUMAN
@@ -27,7 +29,7 @@
 	knock_down_reduction = 10
 	stun_reduction = 10
 	knock_out_reduction = 5
-	has_organ = list()
+	has_organ = list("brain" = /datum/internal_organ/brain, "heart" = /datum/internal_organ/heart)
 
 	has_species_tab_items = TRUE
 
@@ -93,19 +95,17 @@
 
 	if(zombie)
 		var/obj/limb/head/head = zombie.get_limb("head")
-		if(!QDELETED(head) && !(head.status & LIMB_DESTROYED))
+		if(!QDELETED(head) && !(head.status & LIMB_DESTROYED) && (can_rise_again(zombie)))
 			if(zombie.client)
 				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You will rise again in three minutes.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(zombie, SPAN_XENOWARNING("You fall... but your body is slowly regenerating itself."))
 			var/weak_ref = WEAKREF(zombie)
 			to_revive[weak_ref] = addtimer(CALLBACK(src, PROC_REF(revive_from_death), zombie, "[REF(zombie)]"), ZOMBIE_REVIVE_TIME, TIMER_STOPPABLE|TIMER_OVERRIDE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
-			revive_times[weak_ref] = world.time + 3 MINUTES
+			revive_times[weak_ref] = world.time + ZOMBIE_REVIVE_TIME
 		else
 			if(zombie.client)
-				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You lost your head. No reviving for you.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
-			to_chat(zombie, SPAN_XENOWARNING("You fall... headless, you will no longer rise."))
-			zombie.undefibbable = TRUE // really only for weed_food
-			SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
+				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>No reviving for you.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
+			to_chat(zombie, SPAN_XENOWARNING("You fall... too damaged, you will no longer rise."))
 
 /datum/species/zombie/handle_dead_death(mob/living/carbon/human/zombie, gibbed)
 	if(gibbed)
@@ -113,16 +113,17 @@
 
 /datum/species/zombie/proc/revive_from_death(mob/living/carbon/human/zombie)
 	if(zombie && zombie.loc && zombie.stat == DEAD)
-		zombie.revive(TRUE)
-		zombie.apply_effect(4, STUN)
+		if(can_rise_again(zombie))
+			zombie.visible_message(SPAN_WARNING("[zombie] rises from the ground!"))
+			zombie.revive(TRUE, TRUE)
+			zombie.apply_effect(4, STUN)
 
-		zombie.make_jittery(500)
-		zombie.visible_message(SPAN_WARNING("[zombie] rises from the ground!"))
+			zombie.make_jittery(500)
+
+			handle_alert_ghost(zombie)
+
+			addtimer(CALLBACK(zombie, TYPE_PROC_REF(/mob, remove_jittery)), 3 SECONDS)
 		remove_from_revive(zombie)
-
-		handle_alert_ghost(zombie)
-
-		addtimer(CALLBACK(zombie, TYPE_PROC_REF(/mob, remove_jittery)), 3 SECONDS)
 
 /datum/species/zombie/proc/handle_alert_ghost(mob/living/carbon/human/zombie)
 	var/mob/dead/observer/ghost = zombie.get_ghost()
@@ -160,3 +161,22 @@
 		if(receiving_client)
 			receiving_client.mob.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>Beheaded...</u></span><br>Your corpse will no longer rise.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
+
+///Check if the zombie can be revived, if not: calls handle_perma_dead
+/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie)
+	var/accumalated_organ_damage = 0
+	accumalated_organ_damage += zombie.getBrainLoss()
+
+	var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
+	accumalated_organ_damage += heart.damage
+	if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD)
+		return TRUE
+	else
+		handle_perma_dead(zombie)
+		return FALSE
+
+/datum/species/zombie/proc/handle_perma_dead(mob/living/carbon/human/zombie)
+	if(!zombie.undefibbable)
+		zombie.visible_message(SPAN_WARNING("It doesn't look like [zombie] will be getting up again."))
+		zombie.undefibbable = TRUE
+		SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
