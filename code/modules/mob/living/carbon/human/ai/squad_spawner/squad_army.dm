@@ -87,7 +87,7 @@
 
 /datum/human_ai_squad_preset/army/usasf/helljumper
 	name = "USASF Para-Rescue Squad"
-	desc = "A US Aerospace Force Para-Rescue Jumper ('PJs' or 'Helljumpers') Squad. A special unit which conducts operations deep behind hostile lines to support injured or stranded personnel. Comes with 1 Squad leader, 2 Technicians and 1 Corpsman."
+	desc = "A US Aerospace Force Para-Rescue Jumper ('PJs' or 'Helljumpers') Squad. A special unit which conducts operations deep behind hostile lines to support injured or stranded personnel. Comes with 1 Squad leader, 2 Eng-Techs and 1 Med-Tech."
 	ai_to_spawn = list(
 		/datum/equipment_preset/usasf/helljumper/squadlead = 1,
 		/datum/equipment_preset/usasf/helljumper/technical = 2,
