@@ -624,6 +624,8 @@
 		return FALSE
 	if(HAS_TRAIT(affected_mob, TRAIT_NESTED) && affected_mob.status_flags & XENO_HOST)
 		return FALSE
+	if(HAS_TRAIT(affected_mob, TRAIT_INSIDE_VEHICLE))
+		return FALSE
 
 	affected_mob.last_damage_data = cause_data
 	affected_mob.apply_damage(3, OXY) //Basic oxyloss from "can't breathe"
@@ -680,6 +682,8 @@
 	if(isyautja(moob))
 		return FALSE
 	if(HAS_TRAIT(moob, TRAIT_NESTED) && moob.status_flags & XENO_HOST)
+		return FALSE
+	if(HAS_TRAIT(moob, TRAIT_INSIDE_VEHICLE))
 		return FALSE
 
 	var/mob/living/carbon/human/human_moob
@@ -738,6 +742,8 @@
 	if(isyautja(moob) && prob(75))
 		return FALSE
 	if(HAS_TRAIT(moob, TRAIT_NESTED) && moob.status_flags & XENO_HOST)
+		return FALSE
+	if(HAS_TRAIT(moob, TRAIT_INSIDE_VEHICLE))
 		return FALSE
 
 	var/mob/living/carbon/human/human_moob
