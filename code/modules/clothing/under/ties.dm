@@ -464,6 +464,17 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
 
+/obj/item/clothing/accessory/patch/cmb/brazil_police
+	name = "Brazilian Colonial Military Police patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
+	icon_state = "brazilpolicepatch"
+
+/obj/item/clothing/accessory/patch/flag/brazil
+
+	name = "Brazilian flag patch"
+	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
+	icon_state = "brazilpatch"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"

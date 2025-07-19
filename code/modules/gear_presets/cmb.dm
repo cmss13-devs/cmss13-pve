@@ -100,6 +100,8 @@
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/flag/brazil, WEAR_ACCESSORY)
 	if(prob(60))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
 	else
@@ -168,13 +170,15 @@
 	name = "CMB - Brazilian Colonial Marshals Deputy (Emergency, SMG)"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
-	assignment = "Brazilian Colonial Military Police Patrolman"
+	assignment = "Brazilian Colonial Military Police Responder"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/emergency/brazilian/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/flag/brazil, WEAR_ACCESSORY)
 	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
@@ -248,13 +252,15 @@
 	name = "CMB - Brazilian Colonial Marshals Deputy (Emergency, Shotgun)"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
-	assignment = "Brazilian Colonial Military Police Patrolman"
+	assignment = "Brazilian Colonial Military Police Responder"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/flag/brazil, WEAR_ACCESSORY)
 	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
@@ -315,13 +321,15 @@
 	name = "CMB - Brazilian Colonial Marshal"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
-	assignment = "Brazilian Colonial Military Police Officer" //despite the name, they're a law enforcement force and subject to the CMBs
+	assignment = "Brazilian Colonial Military Police Marshal" //despite the name, they're a law enforcement force and subject to the CMBs
 	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/marshal/brazilian/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/o3, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/flag/brazil, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
 	..()
