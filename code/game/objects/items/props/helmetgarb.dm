@@ -467,6 +467,15 @@
 /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/break_nvg(mob/living/carbon/human/user, list/slashdata, mob/living/carbon/xenomorph/Xeno)
 	return
 
+/obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp //something that better fits for the USCM
+	name = "old M1 multispectrum visor"
+	desc = "A failed prototype for next generation HUD optics for the Colonial Marines that was surpased by the current issue integrated IR optic, this flip down visor offers a full visor suite with multi-spectrum capabilities. A really cool piece until you realize you are one headbang away from losing night capability."
+	icon_state = "larp"
+	active_powered_icon_state = "larp_down_powered"
+	active_icon_state = "larp_down"
+	inactive_icon_state = "larp"
+
+
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
