@@ -1,0 +1,4 @@
+author: "CometBlaze, MistChristmas"
+delete-after: True
+changes:
+  - qol: "RTO Packs use a button now, meaning you can left-click open your bag, unless you're being called"

@@ -295,6 +295,7 @@ const ObservableContent = () => {
     marines = [],
     survivors = [],
     xenos = [],
+    infected = [],
     ert_members = [],
     upp = [],
     clf = [],
@@ -335,6 +336,7 @@ const ObservableContent = () => {
         splitter={xenoSplitter}
       />
       <ObservableSection color="good" section={survivors} title="Survivors" />
+      <ObservableSection color="red" section={infected} title="Infected" />
       <ObservableSection
         color="average"
         section={ert_members}

@@ -464,6 +464,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
 
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"
@@ -1233,8 +1238,8 @@
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
-	name = "\improper M3 Shoulder Pads"
-	desc = "A set shoulder pads attachable to the M3 armor set worn by the USCM."
+	name = "\improper M3 Pauldrons"
+	desc = "Attachable supplementary armor for the M3 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
 	icon_state = "pads"
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
@@ -1246,49 +1251,57 @@
 	update_icon()
 
 /obj/item/clothing/accessory/pads/bracers
-	name = "\improper M3 Arm Bracers"
-	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCMC."
+	name = "\improper M3 Vambraces"
+	desc = "Attachable supplementary armor for the M3 armor system. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
 	icon_state = "bracers"
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
+/obj/item/clothing/accessory/pads/bracers/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/neckguard
-	name = "\improper M3 Neck Guard"
-	desc = "An attachable neck guard option for the M3 armor set worn by the USCMC."
+	name = "\improper M3 Gorget"
+	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard"
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
 /obj/item/clothing/accessory/pads/neckguard/uacg
-	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard_uacg"
 	item_state = "neckguard_uacg"
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/pads/greaves
-	name = "\improper M3 Shin Guards"
-	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Greaves"
+	desc = "Attachable supplementary armor for the M3 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
 	icon_state = "shinguards"
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
+/obj/item/clothing/accessory/pads/greaves/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/kneepads
-	name = "\improper M3 Knee Guards"
-	desc = "A set knee guards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Kneepads"
+	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
 
+/obj/item/clothing/accessory/pads/kneepads/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/groin
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the USCMC often seen worn than not."
+	name = "\improper M3 Lap Panel"
+	desc = "Attachable supplementary armor for the M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate"
 	item_state = "groinplate"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
 /obj/item/clothing/accessory/pads/groin/uacg
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the UACG often seen worn than not."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
@@ -1417,7 +1430,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/small
 	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -1431,6 +1444,9 @@
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
+	name = "\improper PBAS Webbing"
+	desc = "A sturdy set of webbing designed to fit on the US Army's standard body armor system. Fully outfitted with pouches and pockets to carry a whole array of small items."
+	icon_state = "armywebbing"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
@@ -1439,7 +1455,7 @@
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
@@ -1449,7 +1465,7 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
