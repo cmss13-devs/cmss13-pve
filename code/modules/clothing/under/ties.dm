@@ -470,9 +470,9 @@
 	icon_state = "armorpatch"
 
 /obj/item/clothing/accessory/patch/ua
-    name = "UA flag patch"
-    desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
-    icon_state = "uaflagpatch"
+	name = "UA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
+	icon_state = "uaflagpatch"
 
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
