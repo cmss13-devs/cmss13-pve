@@ -989,7 +989,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 
@@ -1028,7 +1028,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l42a, WEAR_J_STORE)
 	//storage
@@ -1084,7 +1084,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/with_defib_and_analyzer, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
@@ -1143,7 +1143,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
@@ -1202,7 +1202,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
@@ -1247,7 +1247,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 	//storage
