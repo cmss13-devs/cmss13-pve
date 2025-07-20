@@ -14,6 +14,10 @@
 #define HUMAN_STRIP_DELAY 5
 #define POCKET_STRIP_DELAY 5
 
+///////////////////ZOMBIE///////////////////
+
+#define ZOMBIE_DECAP_DELAY 10 SECONDS
+
 ///////////////////LIMB FLAGS///////////////////
 
 #define LIMB_ORGANIC (1<<0)

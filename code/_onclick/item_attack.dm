@@ -55,9 +55,9 @@
 		return FALSE
 
 	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(!H.melee_allowed)
-			to_chat(H, SPAN_DANGER("You are currently unable to attack."))
+		var/mob/living/carbon/human/human_user = user
+		if(!human_user.melee_allowed)
+			to_chat(human_user, SPAN_DANGER("You are currently unable to attack."))
 			return FALSE
 
 	var/showname = "."
@@ -77,22 +77,29 @@
 		return FALSE
 	if(iszombie(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
 		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
-			if(target.pulledby != user && target.pulledby?.grab_level >= GRAB_AGGRESSIVE)
+			if(target.pulledby != user || target.pulledby?.grab_level < GRAB_AGGRESSIVE)
 				to_chat(user, SPAN_NOTICE("You need to get a secure grip to do this!"))
 				return FALSE
+
 			var/mob/living/carbon/human/zombie = target
 			var/obj/limb/limb = zombie.get_limb("head")
+
 			to_chat(user, SPAN_WARNING("You start to cut off [target]'s head!"))
 			zombie.add_splatter_floor()
 			playsound(zombie, 'sound/effects/blood_squirt.ogg', 40, TRUE)
-			if(do_after(user, 10 SECONDS * user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
-				user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
-				zombie.spray_blood(rand(0, 181), limb)
-				limb.droplimb(0,0, user)
-				return TRUE
-			else
-				to_chat(user, SPAN_WARNING("You were interrupted!"))
-				return FALSE
+
+			if(do_after(user, (ZOMBIE_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				zombie.add_splatter_floor()
+				playsound(zombie, 'sound/effects/bone_break2.ogg', 25, TRUE)
+
+				if(do_after(user, (ZOMBIE_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+					user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
+					zombie.spray_blood(rand(0, 181), limb)
+					limb.droplimb(0,0, user)
+					return TRUE
+
+			to_chat(user, SPAN_WARNING("You were interrupted!"))
+			return FALSE
 		else
 			to_chat(user, SPAN_NOTICE("You hack away uselessly at [target]."))
 			to_chat(user, SPAN_HELPFUL("You should find a better weapon."))
