@@ -252,6 +252,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(istype(entering, /obj/projectile))
 		var/obj/projectile/bullet = entering
 
+		if(bullet.silent)
+			return
+
 		enter_combat()
 
 		if(length(neutral_factions))

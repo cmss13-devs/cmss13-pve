@@ -18,6 +18,7 @@
 
 	///The overlay name for when our visor is active, in 'icons/mob/humans/onmob/helmet_garb.dmi'
 	var/helmet_overlay = "hud_sight_right"
+	var/inactive_helmet_overlay
 
 /obj/item/device/helmet_visor/Destroy(force)
 	if(!istype(loc, /obj/item/clothing/head/helmet/marine))
@@ -253,6 +254,7 @@
 
 	/// Whether or not the sight uses on_light and produces light
 	var/visor_glows = TRUE
+	var/matrix_color = "#ceffce"
 
 /obj/item/device/helmet_visor/night_vision/Initialize(mapload, ...)
 	. = ..()
@@ -270,8 +272,7 @@
 /obj/item/device/helmet_visor/night_vision/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
 
-	user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string("#7aff7a")))
-	user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
+	user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string(matrix_color)))
 	user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
 	user.update_sight()
 	if(visor_glows)
@@ -282,7 +283,6 @@
 
 /obj/item/device/helmet_visor/night_vision/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	user.remove_client_color_matrix("nvg_visor", 1 SECONDS)
-	user.clear_fullscreen("nvg_visor", 0.5 SECONDS)
 	user.clear_fullscreen("nvg_visor_blur", 0.5 SECONDS)
 
 	if(visor_glows)
@@ -363,7 +363,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider
 	name = "advanced night vision optic"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in special forces units."
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
 	visor_glows = FALSE
@@ -388,6 +388,15 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/twe
 	desc = "A high-tech visor often seen used by the Royal Marine Commando forces of the TWE. Offers various tactical readouts as well as providing night-vision capabilities."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
+
+/obj/item/device/helmet_visor/night_vision/marine_raider/upp
+	name = "KKV-18 \"Aufseher\""
+	desc = "An advanced tube-type HUD with night-vision capabilities developed in Germany for special forces use."
+	icon_state = "upp_visor"
+	hud_type = list(MOB_HUD_FACTION_UPP)
+	helmet_overlay = "upp_visor_left"
+	inactive_helmet_overlay = "upp_visor_left_inactive"
+	matrix_color = "#ffcece"
 
 /////////////////////// PO VISOR ///////////////////////
 

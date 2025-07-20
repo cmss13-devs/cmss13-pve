@@ -207,9 +207,6 @@
 		/obj/item/stack/medical/splint,
 	)
 
-/obj/item/storage/pouch/firstaid/full
-	desc = "Contains a painkiller autoinjector, first-aid autoinjector, some ointment, and some bandages."
-
 /obj/item/storage/pouch/firstaid/full/fill_preset_inventory()
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
@@ -227,6 +224,24 @@
 	new /obj/item/storage/pill_bottle/packet/kelotane(src)
 	new /obj/item/storage/pill_bottle/packet/tramadol(src)
 	new /obj/item/storage/pill_bottle/packet/tramadol(src)
+
+/obj/item/storage/pouch/firstaid/full/prop/fill_preset_inventory()
+	if(prob(50))
+		new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	else
+		new /obj/item/storage/pill_bottle/packet/bicaridine(src)
+	if(prob(50))
+		new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	else
+		new /obj/item/storage/pill_bottle/packet/kelotane(src)
+	if(prob(50))
+		new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
+	else
+		new /obj/item/storage/pill_bottle/packet/tramadol(src)
+	if(prob(50))
+		new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+	else
+		new /obj/item/stack/medical/bruise_pack(src)
 
 /obj/item/storage/pouch/firstaid/ert
 	desc = "It can contain autoinjectors, ointments, and bandages. This one has some extra stuff."
@@ -489,6 +504,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71(src)
 
+/obj/item/storage/pouch/magazine/upp/ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/ap(src)
+
 /obj/item/storage/pouch/magazine/large/upp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71(src)
@@ -672,6 +691,12 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
+
+/obj/item/storage/pouch/medical/full/alt/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/pouch/medical/full/pills/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/tramadol(src)
@@ -1295,6 +1320,13 @@
 	new /obj/item/device/multitool(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/stack/cable_coil(src)
+
+/obj/item/storage/pouch/tools/full/alt/fill_preset_inventory()
+	new /obj/item/tool/screwdriver(src)
+	new /obj/item/tool/wirecutters(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool(src)
 
 /obj/item/storage/pouch/tools/pfc/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)

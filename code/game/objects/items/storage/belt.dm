@@ -805,11 +805,16 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/heap(src)
+
+/obj/item/storage/belt/marine/upp/ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/ap(src)
+
+/obj/item/storage/belt/marine/upp/heavybuck/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
@@ -1440,7 +1445,6 @@
 			"icon_x" = -11,
 			"icon_y" = -5))
 
-#define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"
@@ -1460,39 +1464,6 @@
 			"icon_x" = 10,
 			"icon_y" = -1))
 
-	//Keep a track of how many magazines are inside the belt.
-	var/magazines = 0
-
-/obj/item/storage/belt/gun/xm51/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/shotgun/buckshot/light))
-		var/obj/item/ammo_magazine/shotgun/buckshot/light/ammo_box = item
-		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
-	else
-		return ..()
-
-/obj/item/storage/belt/gun/xm51/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
-	. = ..()
-	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/rifle/xm51))
-		if(!stop_messages)
-			to_chat(usr, SPAN_WARNING("[src] can't hold any more magazines."))
-		return FALSE
-
-/obj/item/storage/belt/gun/xm51/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
-	. = ..()
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
-		magazines++
-
-/obj/item/storage/belt/gun/xm51/remove_from_storage(obj/item/item as obj, atom/new_location)
-	. = ..()
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
-		magazines--
-
-//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
-/obj/item/storage/belt/gun/xm51/on_stored_atom_del(atom/movable/item)
-	if(istype(item, /obj/item/ammo_magazine/rifle/xm51))
-		magazines--
-
-#undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/m44
 	name = "\improper M276 pattern general revolver holster rig"
