@@ -58,6 +58,14 @@
 	burst(get_turf(M),P,damage_type, 2 , 2)
 	burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 
+/datum/ammo/bullet/sniper/upp/flak/on_hit_obj(obj/O, obj/projectile/P)
+	burst(get_turf(O),P,damage_type, 2 , 2)
+	burst(get_turf(O),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/sniper/upp/flak/on_hit_turf(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 2)
+	burst(T,P,damage_type, 1 , 2 , 0)
+
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
 	damage = 60
