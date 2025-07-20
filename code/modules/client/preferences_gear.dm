@@ -771,6 +771,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
@@ -1073,13 +1074,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Type 73 Pistol"
 	path = /obj/item/storage/box/loadout/T73_loadout
 	cost = 4
-	allowed_origins = UPP_ORIGINS
 
 /datum/gear/weapon/zhnk72
 	display_name = "ZHNK-72 Revolver"
 	path = /obj/item/storage/box/loadout/ZHNK72_loadout
 	cost = 4
-	allowed_origins = UPP_ORIGINS
 
 /datum/gear/weapon/m4a3_custom
 	display_name = "Custom M4A3 Pistol"
