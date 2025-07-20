@@ -75,7 +75,7 @@
 		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
 		current_mob_hud.remove_hud_from(user, attached_helmet)
 		var/obj/item/device/radio/headset/radio
-		if(user.has_item_in_ears(radio))
+		if(user.has_item_in_ears(radio) && radio.has_hud)
 			radio.toggle_hudicons()
 
 /obj/item/device/helmet_visor/process(delta_time)

@@ -937,11 +937,6 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
-/obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/greaves/greaves = new()
-	src.attach_accessory(null, greaves, TRUE)
-
 /obj/item/clothing/suit/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
@@ -965,6 +960,7 @@
 /obj/item/clothing/suit/marine/medium/rto/navy
 	name = "\improper M4 pattern shore-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
+	icon_state = "io"
 	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
@@ -978,11 +974,27 @@
 	src.attach_accessory(null, shoulderpads, TRUE)
 
 /obj/item/clothing/suit/marine/medium/rto/army
-	name = "\improper M4 pattern trooper armor"
-	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor. At least it's compatible with attachable components of the M3 series."
+	name = "\improper Personal Body Armor System"
+	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board under the PBAS program. Surprisingly uncomfortable, even compared to the old M3 series armor. At least it's compatible with attachable suplementary armor components of the M3 series."
+	icon_state = "io"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
-/obj/item/clothing/suit/marine/medium/rto/army/Initialize(mapload)
+/obj/item/clothing/suit/marine/medium/rto/army/medium
+
+/obj/item/clothing/suit/marine/medium/rto/army/medium/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	src.attach_accessory(null, crotchplate, TRUE)
+	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	src.attach_accessory(null, shinguards, TRUE)
+	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	src.attach_accessory(null, shoulderpads, TRUE)
+
+/obj/item/clothing/suit/marine/medium/rto/army/heavy
+
+/obj/item/clothing/suit/marine/medium/rto/army/heavy/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
