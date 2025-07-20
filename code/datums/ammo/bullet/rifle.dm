@@ -479,7 +479,7 @@
 	bullet_light_color = COLOR_SOFT_GREEN
 
 /datum/ammo/bullet/rifle/upp/heap/mg/super_tracer
-	name = "high-explosive armor-piercing zirconium tracer 10x27 bullet"
+	name = "high-explosive armor-piercing magnesium tracer 10x27 bullet"
 
 /datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/set_bullet_traits()
 	. = ..()
