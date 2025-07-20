@@ -1302,6 +1302,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			if(cycle_action)
 				cycle_action.set_action_overlay(active_visor)
 
+	update_icon()
+
 /obj/item/clothing/head/helmet/upp/Destroy(force)
 	helmet_overlays = null
 	QDEL_NULL(camera)
@@ -1430,6 +1432,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	if(active_visor)
 		helmet_overlays += active_visor.helmet_overlay
+	else
+		for(var/obj/item/device/helmet_visor/visor in contents)
+			if(visor.inactive_helmet_overlay)
+				helmet_overlays += visor.inactive_helmet_overlay
 
 	if(ismob(loc))
 		var/mob/M = loc
@@ -1569,6 +1575,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
 
+/obj/item/clothing/head/helmet/upp/mss
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/upp)
+
 /obj/item/clothing/head/helmet/upp/black
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is black, meant for urban/night ops."
 	icon_state = "upp_helmet_naval_black"
@@ -1614,6 +1623,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/uppcap/beret/guerilla
 	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_beret_revolution"
+
+/obj/item/clothing/head/uppcap/beret/mss
+	name = "\improper MSS beret"
+	desc = "A red beret popular often worn by members of MSS's combat units."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
 
@@ -1924,6 +1939,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/cag
+	name = "\improper RAM ballistic helmet"
+	desc = "Recon-Assault Module, ARMAT's licensed modification of L5A3 helmet developed by Lindenthal-Ehrenfeld Militärindustrie for TWE's Royal Marines. Built with a lightweight ballistic composite shell, it offers high levels of protection without compromising mobility. A limited number of these helmets was supplied to UA special forces."
+	icon_state = "cag"
+	item_state = "cag"
+	flags_marine_helmet = HELMET_GARB_OVERLAY
+
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/cag/nv
+	built_in_visors = list(/obj/item/device/helmet_visor/night_vision/marine_raider)
 
 #undef HELMET_GARB_RELAY_ICON_STATE
 

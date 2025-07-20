@@ -243,6 +243,9 @@
 	icon_state = "npz92tranqmag"
 	max_rounds = 12
 
+/obj/item/ammo_magazine/pistol/np92/ap
+	name = "\improper NP92 armor-piercing magazine (9x18mm Makarov)"
+	default_ammo = /datum/ammo/bullet/pistol/ap
 //-------------------------------------------------------
 //Type 73 pistol. //A TT
 

@@ -549,6 +549,13 @@
 	sensor_faction = FACTION_CANC
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
+/obj/item/clothing/under/marine/veteran/UPP/mss
+	name = "\improper MSS field uniform"
+	desc = "Some black suit pants and a black jacket, reinforced with some venlar inserts."
+	icon_state = "upp_uniform_mss"
+	worn_state = "upp_uniform_mss"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
 //=========================//Freelancer\\================================\\
 
 /obj/item/clothing/under/marine/veteran/freelancer

@@ -381,6 +381,8 @@
 /obj/item/weapon/gun/pistol/np92/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/pistol/np92/suppressed/ap
+	current_mag = /obj/item/ammo_magazine/pistol/np92/ap
 //-------------------------------------------------------
 //Type 73 pistol
 //Its a TT

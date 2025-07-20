@@ -795,3 +795,158 @@
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/grizzly(new_human), WEAR_IN_ACCESSORY)
 			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/grizzly(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/paint(new_human), WEAR_ACCESSORY)
+
+/datum/equipment_preset/upp/police/mss/goon
+	name = "UPP MSS Goon (Carbine)"
+	assignment = "Ministry of Space Security Spetsnaz"
+	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
+	idtype = /obj/item/card/id/silver
+
+/datum/equipment_preset/upp/police/mss/goon/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Interior Forces Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/kdo, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/mss, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/mss, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/upp/e6, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/waist(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92/suppressed/ap(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92/ap(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92/ap(new_human), WEAR_IN_ACCESSORY)
+	//jacket
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	var/obj/item/clothing/suit/marine/faction/UPP/light/suit = new()
+	new /obj/item/explosive/grenade/high_explosive/upp(webbing.hold)
+	new /obj/item/explosive/grenade/high_explosive/upp(webbing.hold)
+	new /obj/item/explosive/grenade/phosphorus/upp(webbing.hold)
+	new /obj/item/explosive/grenade/phosphorus/upp(webbing.hold)
+	new /obj/item/explosive/grenade/smokebomb/upp(webbing.hold)
+	suit.attach_accessory(new_human, webbing)
+	new_human.equip_to_slot_or_del(suit, WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/brute, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/mss, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine/ap, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/ap, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full/alt, WEAR_L_STORE)
+
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/threehole, WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")
+
+/datum/equipment_preset/upp/police/mss/goon/shotgun
+	name = "UPP MSS Goon (Shotgun)"
+
+/datum/equipment_preset/upp/police/mss/goon/shotgun/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Interior Forces Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine/ap, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/kdo, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/mss, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/mss, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/upp/e6, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/shotgun/buckshot/heavy(new_human), WEAR_IN_ACCESSORY)
+
+	//jacket
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	var/obj/item/clothing/suit/marine/faction/UPP/light/suit = new()
+	new /obj/item/tool/crowbar/tactical(webbing.hold)
+	new /obj/item/storage/box/mre/upp(webbing.hold)
+	new /obj/item/clothing/head/uppcap/beret/mss(webbing.hold)
+	new /obj/item/explosive/plastic/breaching_charge(webbing.hold)
+	new /obj/item/explosive/plastic/breaching_charge(webbing.hold)
+	suit.attach_accessory(new_human, webbing)
+	new_human.equip_to_slot_or_del(suit, WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/type23, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/heavybuck, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/upp/ap, WEAR_L_STORE)
+
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/threehole, WEAR_FACE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")
+
+/datum/equipment_preset/upp/police/mss/goon/leader
+	name = "UPP MSS Goon (Leader)"
+	paygrades = list(PAY_SHORT_UO3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/upp/police/mss/goon/leader/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Interior Forces Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/carbine/ap, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP/kdo, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/mss, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/mss, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/upp/o3, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/mss(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/upp(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus/upp(new_human), WEAR_IN_ACCESSORY)
+
+	//jacket
+	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
+	var/obj/item/clothing/suit/marine/faction/UPP/light/suit = new()
+	new /obj/item/tool/crowbar/tactical(webbing.hold)
+	new /obj/item/storage/box/mre/upp(webbing.hold)
+	new /obj/item/device/binoculars/range/designator/upp(webbing.hold)
+	new /obj/item/explosive/plastic/breaching_charge(webbing.hold)
+	new /obj/item/explosive/plastic/breaching_charge(webbing.hold)
+	suit.attach_accessory(new_human, webbing)
+	new_human.equip_to_slot_or_del(suit, WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/revolver, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/ap, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/alt, WEAR_L_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator(new_human), WEAR_EYES)
+
+	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
+	implant.do_implant(new_human, "head")

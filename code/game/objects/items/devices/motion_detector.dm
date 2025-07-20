@@ -350,5 +350,79 @@
 	desc = "A device that usually picks up non-USCM signals, but this one's been modified with after-market IFF sensors to detect all non-Vanguard's Arrow Incorporated movement instead. Fight fire with fire!"
 	iff_signal = FACTION_CONTRACTOR
 
+/obj/item/device/motiondetector/heartbeat
+	name = "heartbeat sensor"
+	desc = "An experimental device that is specifically tuned to detect living human's heartbeat frequencies."
+	icon_state = "heartbeat"
+	w_class = SIZE_SMALL
+	long_range_locked = TRUE
+	detector_range = 8
+	blip_type = "heartbeat"
+
+/obj/item/device/motiondetector/heartbeat/scan()
+	set waitfor = 0
+	if(scanning)
+		return
+	scanning = TRUE
+	var/mob/living/carbon/human/human_user = get_user()
+
+	ping_count = 0
+
+	var/turf/cur_turf = get_turf(src)
+	if(!istype(cur_turf))
+		return
+
+	range_bounds.set_shape(cur_turf.x, cur_turf.y, detector_range * 2)
+
+	var/list/ping_receivers = list()
+	for(var/mob/living/carbon/human/humans in range(1, human_user))
+		ping_receivers += humans
+
+	var/list/ping_candidates = SSquadtree.players_in_range(range_bounds, cur_turf.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
+
+	for(var/A in ping_candidates)
+		var/mob/living/M = A //do this to skip the unnecessary istype() check; everything in ping_candidate is a mob already
+		if(M == loc) continue //device user isn't detected
+		if(issynth(M) || isxeno(M)) //just to be safe
+			continue
+		if(!M.pulse)
+			continue
+		if(M.get_target_lock(iff_signal))
+			continue
+
+		apply_debuff(M)
+		ping_count++
+		if(human_user)
+			for(var/mob/living/carbon/human/show_ping_to as anything in ping_receivers)
+				show_blip(show_ping_to, M)
+
+	if(ping_count > 0)
+		playsound(loc, 'sound/items/tick.ogg', 60, 0, 7, 2)
+	else
+		playsound(loc, 'sound/items/detector.ogg', 60, 0, 7, 2)
+
+	update_icon()
+	scanning = FALSE
+
+	return ping_count
+
+/obj/item/device/motiondetector/heartbeat/update_icon()
+	//clear overlays
+	if(overlays)
+		overlays.Cut()
+	else
+		overlays = list()
+
+	if(blood_overlay)
+		overlays += blood_overlay
+	//add ping overlay
+	if(active)
+		icon_state = "heartbeat_on"
+	else
+		icon_state = "heartbeat"
+	if(ping_count > 0)
+		icon_state = "heartbeat_on_1"
+
+
 #undef MOTION_DETECTOR_RANGE_LONG
 #undef MOTION_DETECTOR_RANGE_SHORT

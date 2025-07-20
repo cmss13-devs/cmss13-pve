@@ -805,11 +805,16 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/heap(src)
+
+/obj/item/storage/belt/marine/upp/ap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/ap(src)
+
+/obj/item/storage/belt/marine/upp/heavybuck/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c

@@ -1259,6 +1259,12 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
 
+/obj/item/attachable/scope/mini/cag
+	name = "AN/PVS-50 CCD television sight system"
+	desc = "An earlier model of low-light weapon 2x magnification weapon sight."
+	icon_state = "vulture_scope_cag"
+	attach_icon = "vulture_scope_cag"
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
@@ -4188,3 +4194,57 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
+
+/obj/item/attachable/attached_gun/tactical
+	name = "TN/PEQ-2 tactical module"
+	icon_state = "extinguisher"
+	attach_icon = "extinguisher_a"
+	desc = "Rare tactical module sometimes issued to UA special forces."
+	slot = "side_rail"
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_WEAPON|ATTACH_MELEE
+	var/obj/item/device/binoculars/range/designator/binocs
+	current_rounds = 1 //This has to be done to pass the fire_attachment check.
+
+/obj/item/attachable/attached_gun/tactical/New()
+	..()
+	binocs = new /obj/item/device/binoculars/range/designator(src)
+
+/obj/item/attachable/attached_gun/tactical/fire_attachment(atom/target, obj/item/weapon/gun/gun, mob/living/user)
+	if(!binocs)
+		return
+	if(..())
+		if(user.stat != CONSCIOUS)
+			to_chat(user, SPAN_WARNING("You cannot use [src] while incapacitated."))
+			return FALSE
+		if(user.z != target.z && !binocs.coord)
+			to_chat(user, SPAN_WARNING("You cannot get a direct laser from where you are."))
+			return FALSE
+		if(user.sight & SEE_TURFS)
+			var/list/turf/path = get_line(user, target, include_start_atom = FALSE)
+			for(var/turf/T in path)
+				if(T.opacity)
+					to_chat(user, SPAN_WARNING("There is something in the way of the laser!"))
+					return FALSE
+		binocs.acquire_target(target, user)
+
+/obj/item/attachable/attached_gun/tactical/activate_attachment(obj/item/weapon/gun/G, mob/living/user, turn_off)
+	. = ..()
+	if(G.active_attachable == src)
+		for(var/datum/action/action in binocs.actions_types)
+			remove_action(user, action)
+	else
+		for(var/datum/action/action in binocs.actions_types)
+			give_action(user, action, src, G)
+
+/datum/action/item_action/toggle_binocs
+
+/datum/action/item_action/toggle_zoom_level/New()
+	..()
+	name = "Toggle Zoom Level"
+	button.name = name
+
+/datum/action/item_action/toggle_zoom_level/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/G = holder_item
+	var/obj/item/attachable/scope/variable_zoom/S = G.attachments["rail"]
+	S.toggle_zoom_level()
