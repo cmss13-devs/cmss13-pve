@@ -590,8 +590,10 @@
 	max_storage_space = 20
 	can_hold = list(
 		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
 		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/revolver,
@@ -2035,6 +2037,8 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 
+#define MAXIMUM_MAGAZINE_COUNT 4
+
 /obj/item/storage/belt/gun/smartgunner/upp
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
@@ -2051,6 +2055,29 @@
 	item_state_slots = list(
 		WEAR_L_HAND = "upp_belt",
 		WEAR_R_HAND = "upp_belt")
+
+	//Keep a track of how many magazines are inside the belt.
+	var/magazines = 0
+
+/obj/item/storage/belt/gun/smartgunner/upp/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(magazines >= MAXIMUM_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/pkp))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more ammo boxes."))
+		return FALSE
+
+
+/obj/item/storage/belt/gun/smartgunner/upp/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/pkp))
+		magazines++
+
+/obj/item/storage/belt/gun/smartgunner/upp/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/pkp))
+		magazines--
+#undef MAXIMUM_MAGAZINE_COUNT
+
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"
