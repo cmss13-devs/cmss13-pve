@@ -1317,6 +1317,9 @@
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
+/obj/item/clothing/accessory/pads/bracers/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/neckguard
 	name = "\improper M3 Gorget"
 	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
@@ -1337,12 +1340,18 @@
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
+/obj/item/clothing/accessory/pads/greaves/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/kneepads
 	name = "\improper M3 Kneepads"
 	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
+
+/obj/item/clothing/accessory/pads/kneepads/standard
+	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/pads/groin
 	name = "\improper M3 Lap Panel"
