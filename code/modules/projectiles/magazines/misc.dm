@@ -60,6 +60,10 @@
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/hpr_box/recon
+	icon_state = "m41ae2_recon"
+	bonus_overlay = "m41ae2_recon_overlay"
+
 //M60
 
 /obj/item/ammo_magazine/m60
