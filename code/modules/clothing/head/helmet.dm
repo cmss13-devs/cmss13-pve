@@ -1933,6 +1933,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/rto/navy
 	name = "\improper M12 pattern naval-deployment helmet"
 	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship."
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/army
