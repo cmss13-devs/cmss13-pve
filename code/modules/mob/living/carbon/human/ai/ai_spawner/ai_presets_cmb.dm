@@ -41,7 +41,7 @@
 	desc = "A better equipped deputy with a shotgun, Hispanic"
 	path = /datum/equipment_preset/cmb/deputy/emergency/shotgunner/spanish
 
-datum/human_ai_equipment_preset/marshal/deputy/emergency/shotgunner/brazilian
+/datum/human_ai_equipment_preset/marshal/deputy/emergency/shotgunner/brazilian
 	name = "CMB Marshals - Deputy Emergency Shotgunner Brazilian"
 	desc = "A better equipped deputy with a shotgun, Brazilian"
 	path = /datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian
