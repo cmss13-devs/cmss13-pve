@@ -1106,6 +1106,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/brazilian
+	name = "Brazilian Colonial Guard"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/security/guard/marksman
 	name = "US Colonial Guard (Marksman)"
 
@@ -1146,6 +1151,11 @@
 	name = "LatAm Colonial Guard Marksman"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/marksman/brazilian
+	name = "Brazilian Colonial Guard Marksman"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/security/guard/medic
 	name = "US Colonial Guard Medic"
@@ -1202,6 +1212,11 @@
 	name = "LatAm Colonial Guard Medic"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/medic/brazilian
+	name = "Brazilian Colonial Guard Medic"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 
 /datum/equipment_preset/colonist/security/guard/tech
@@ -1264,6 +1279,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/tech/brazilian
+	name = "Brazilian Colonial Guard Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/security/guard/nco
 	name = "US Colonial Guard Unit Leader"
 	assignment = "Colonial Militiaman Unit Leader"
@@ -1321,6 +1341,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/nco/brazilian
+	name = "Brazilian Colonial Guard Unit Leader"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/security/guard/co
 	name = "US Colonial Guard Officer"
 	assignment = "Colonial Militiaman Officer"
@@ -1364,6 +1389,11 @@
 	name = "LatAm Colonial Guard Officer"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/co/brazilian
+	name = "Brazilian Colonial Guard Officer"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 #undef AMERICAN_ETHNICITY
 #undef LATIN_AMERICAN_ETHNICITY
