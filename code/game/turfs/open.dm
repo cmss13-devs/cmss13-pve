@@ -817,8 +817,7 @@
 	if(world.time % 5)
 		if(ismob(AM))
 			var/mob/rivermob = AM
-			if(!HAS_TRAIT(rivermob, TRAIT_HAULED))
-				to_chat(rivermob, SPAN_WARNING("Moving through the incredibly deep ocean slows you down a lot!"))
+			to_chat(rivermob, SPAN_WARNING("Moving through the incredibly deep ocean slows you down a lot!"))
 
 /turf/open/gm/coast
 	name = "coastline"
@@ -942,6 +941,7 @@
 	icon = 'icons/turf/floors/asphalt.dmi'
 	icon_state = "sunbleached_asphalt"
 	baseturfs = /turf/open/asphalt
+	minimap_color = MINIMAP_ROAD
 
 /turf/open/asphalt/tile
 	icon_state = "tile"

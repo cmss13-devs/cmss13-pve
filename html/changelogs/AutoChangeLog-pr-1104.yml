@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New cheese-slice items and a box full of them"
+  - rscdel: "Universal Enzyme from the long-life foodstuff locker and galley vendors main stock"
+  - imageadd: "New sprites for the kruft slices"
