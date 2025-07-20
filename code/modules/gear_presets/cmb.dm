@@ -253,12 +253,12 @@
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
 	assignment = "Brazilian Colonial Military Police Responder"
-	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e5, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
 	if(prob(65))
@@ -321,7 +321,7 @@
 	name = "CMB - Brazilian Colonial Marshal"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
-	assignment = "Brazilian Colonial Military Police Marshal" //despite the name, they're a law enforcement force and subject to the CMBs
+	assignment = "Brazilian Colonial Military Police Marshal" //despite the name, they're a law enforcement force and have the same authority as the CMBs
 	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/marshal/brazilian/load_gear(mob/living/carbon/human/new_human)

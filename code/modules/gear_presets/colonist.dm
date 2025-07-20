@@ -1114,7 +1114,6 @@
 /datum/equipment_preset/colonist/security/guard/marksman
 	name = "US Colonial Guard (Marksman)"
 
-
 /datum/equipment_preset/colonist/security/guard/marksman/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -1217,7 +1216,6 @@
 	name = "Brazilian Colonial Guard Medic"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE)
-
 
 /datum/equipment_preset/colonist/security/guard/tech
 	name = "US Colonial Guard Technician"
