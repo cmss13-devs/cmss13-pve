@@ -1599,6 +1599,9 @@
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=legs'>Legs:</a> "
 	HTML += TextPreview(flavor_texts["legs"])
 	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Feet:</a> "
+	HTML += TextPreview(flavor_texts["feet"])
+	HTML += "<br>"
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=armor'>Armor:</a> "
 	HTML += TextPreview(flavor_texts["armor"])
 	HTML += "<br>"
