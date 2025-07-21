@@ -75,26 +75,26 @@
 			SPAN_NOTICE("You poke [target == user ? "yourself":target] with [src]."), null, 4)
 
 		return FALSE
-	if(iszombie(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
+	if(ishuman(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
 		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
 			if(target.pulledby != user || target.pulledby?.grab_level < GRAB_AGGRESSIVE)
 				to_chat(user, SPAN_NOTICE("You need to get a secure grip to do this!"))
 				return FALSE
 
-			var/mob/living/carbon/human/zombie = target
-			var/obj/limb/limb = zombie.get_limb("head")
+			var/mob/living/carbon/human/humant_target = target
+			var/obj/limb/limb = humant_target.get_limb("head")
 
 			to_chat(user, SPAN_WARNING("You start to cut off [target]'s head!"))
-			zombie.add_splatter_floor()
-			playsound(zombie, 'sound/effects/blood_squirt.ogg', 40, TRUE)
+			humant_target.add_splatter_floor()
+			playsound(humant_target, 'sound/effects/blood_squirt.ogg', 40, TRUE)
 
-			if(do_after(user, (ZOMBIE_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
-				zombie.add_splatter_floor()
-				playsound(zombie, 'sound/effects/bone_break2.ogg', 25, TRUE)
+			if(do_after(user, (HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				humant_target.add_splatter_floor()
+				playsound(humant_target, 'sound/effects/bone_break2.ogg', 25, TRUE)
 
-				if(do_after(user, (ZOMBIE_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				if(do_after(user, (HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
 					user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
-					zombie.spray_blood(rand(0, 181), limb)
+					humant_target.spray_blood(rand(0, 181), limb)
 					limb.droplimb(0,0, user)
 					return TRUE
 
