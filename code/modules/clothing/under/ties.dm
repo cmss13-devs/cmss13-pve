@@ -1323,6 +1323,30 @@
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
 
+
+//===========================//USASF CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/pads/navy
+	name = "\improper M4 Pauldrons"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
+	icon_state = "u_pads"
+	item_state = "u_pads"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/greaves/navy
+	name = "\improper M4 Greaves"
+	desc = "Attachable supplementary armor for the M4 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
+	icon_state = "u_shinguards"
+	item_state = "u_shinguards"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/groin/navy
+	name = "\improper M4 Lap Panel"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
+	icon_state = "u_groinplate"
+	item_state = "u_groinplate"
+	slot = ACCESSORY_SLOT_DECORGROIN
+
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
 /obj/item/clothing/accessory/upppads
