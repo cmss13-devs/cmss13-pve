@@ -340,11 +340,18 @@
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
 
-/obj/item/weapon/gun/rifle/m41aMK1/navy
+/obj/item/weapon/gun/rifle/m41aMK1/navy //m41amk1_navy
 	name = "\improper GUU-71/A pulse rifle"
+	desc = "A variant of the M41A pulse rifle adopted for use by USASF Security Forces personnel and Master-At-Arms. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
+	icon_state = "m41amk1_navy"
+	item_state = "m41amk1_navy"
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+
+/obj/item/weapon/gun/rifle/m41aMK1/navy/tactical
+	name = "\improper GUU-71/B pulse rifle"
 	desc = "A variant of the M41A pulse rifle adopted for use by USASF personnel whose duties take them off ships frequently. Features an integrated 30mm grenade launcher, flash & sound suppressor, and a carry-handle mounted mag-clamp."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
