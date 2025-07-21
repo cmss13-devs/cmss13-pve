@@ -80,6 +80,7 @@
 		/datum/equipment_preset/upp/sniper::name = /datum/equipment_preset/upp/sniper,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
+		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
 		/datum/equipment_preset/faami/rifleman/sniper::name = /datum/equipment_preset/faami/rifleman/sniper,
 	)
 

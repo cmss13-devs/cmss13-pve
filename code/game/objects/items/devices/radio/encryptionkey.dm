@@ -335,7 +335,7 @@
 
 /obj/item/device/encryptionkey/clf/engi
 	name = "\improper CLF Engineering Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE)
 
 /obj/item/device/encryptionkey/clf/medic
 	name = "\improper CLF Medical Radio Encryption Key"
@@ -343,7 +343,7 @@
 
 /obj/item/device/encryptionkey/clf/command
 	name = "\improper CLF Command Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE)
 //---------------------------------------------------
 /obj/item/device/encryptionkey/highcom
 	name = "\improper USCM High Command Radio Encryption Key"
