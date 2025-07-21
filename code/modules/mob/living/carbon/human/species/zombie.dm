@@ -174,7 +174,7 @@
 		var/obj/limb/right_hand	= locate(/obj/limb/hand/r_hand) in zombie.limbs
 		var/obj/limb/left_hand = locate(/obj/limb/hand/l_hand) in zombie.limbs
 
-		if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD && !(right_hand.status == LIMB_DESTROYED && left_hand.status == LIMB_DESTROYED))
+		if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD || !(right_hand.status == LIMB_DESTROYED && left_hand.status == LIMB_DESTROYED))
 			return TRUE
 		handle_perma_dead(zombie)
 	return FALSE
