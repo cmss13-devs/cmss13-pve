@@ -359,11 +359,22 @@
 	//If limb was damaged before and took enough damage, try to cut or tear it off
 	var/no_perma_damage = owner.status_flags & NO_PERMANENT_DAMAGE
 	var/no_bone_break = owner.chem_effect_flags & CHEM_EFFECT_RESIST_FRACTURE
-	if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
-		if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
-			var/cut_prob = brute/max_damage * 5
-			if(prob(cut_prob))
-				limb_delimb(damage_source)
+
+	if(iszombie(owner)) //Zombie? Made of paper clearly. No Threshold before we move on
+		var/obj/limb/limb = src
+		if(body_part == BODY_FLAG_CHEST || body_part == BODY_FLAG_GROIN)
+			limb = pick(owner.limbs - list("chest","groin")) //Targetting something that can't pop off? Not any more.
+
+		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
+			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
+			if(prob(zombie_cut_prob))
+				limb.limb_delimb(damage_source)
+	else
+		if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
+			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
+				var/cut_prob = brute/max_damage * 5
+				if(prob(cut_prob))
+					limb_delimb(damage_source)
 
 	SEND_SIGNAL(src, COMSIG_LIMB_TAKEN_DAMAGE, is_ff, previous_brute, previous_burn)
 	owner.updatehealth()
