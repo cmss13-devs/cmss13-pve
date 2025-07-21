@@ -630,13 +630,6 @@
 "abk" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
-"abl" = (
-/obj/structure/disposaloutlet,
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -25848,7 +25841,7 @@ aMQ
 aHk
 aWM
 aaY
-abl
+aEG
 aEG
 aEG
 aEG
