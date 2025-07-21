@@ -175,6 +175,11 @@
 			if(structure_blocker.opacity)
 				blocked = TRUE
 				break
+
+		for(var/obj/vehicle/rx47_mech/mech in temp)
+			blocked = TRUE
+			break
+
 		if(blocked)
 			break
 
