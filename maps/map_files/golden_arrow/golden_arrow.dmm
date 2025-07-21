@@ -630,6 +630,13 @@
 "abk" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
+"abl" = (
+/obj/structure/disposaloutlet,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3093,6 +3100,9 @@
 	icon_state = "0-8";
 	layer = 2.36
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "ajA" = (
@@ -3830,6 +3840,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -11587,9 +11600,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aMi" = (
@@ -25837,7 +25848,7 @@ aMQ
 aHk
 aWM
 aaY
-aEG
+abl
 aEG
 aEG
 aEG
