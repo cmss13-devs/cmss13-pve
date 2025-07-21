@@ -435,6 +435,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define BD_MERCS_JOB_LIST list(JOB_MERCENARY_GRUNT, JOB_MERCENARY_PILOT, JOB_MERCENARY_SENTINEL, JOB_MERCENARY_SUPERVISOR, JOB_MERCENARY_BULWARK, JOB_MERCENARY_SYNTH, JOB_MERCENARY_INFILTRATOR, JOB_MERCENARY_OFFICER)
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
+//-------- UACG -------//
+#define JOB_UACG_RIFLE "Colonial Militiaman"
+#define JOB_UACG_TECH "Colonial Militiaman Technician"
+#define JOB_UACG_MEDIC "Colonial Militiaman Medic"
+#define JOB_UACG_LEAD "Colonial Militiaman Unit Leader"
+#define JOB_UACG_OFFICER "Colonial Militiaman Officer"
+
+#define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_LEAD, JOB_UACG_OFFICER)
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
 #define JOB_DUTCH_RIFLEMAN "Dutch's Dozen - Rifleman"
