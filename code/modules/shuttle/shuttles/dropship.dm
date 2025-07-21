@@ -203,6 +203,16 @@
 /obj/docking_port/mobile/marine_dropship/pmc/get_transit_path_type()
 	return /turf/open/space/transit/dropship/pmc
 
+/obj/docking_port/mobile/marine_dropship/wallace_and_gromit
+	name = "Wallace and Gromit"
+	id = DROPSHIP_WALLACE_AND_GROMIT
+
+	width = 11
+	height = 18
+
+	dwidth = 5
+	dheight = 9
+
 /obj/docking_port/mobile/marine_dropship/alamo
 	name = "Alamo"
 	id = DROPSHIP_ALAMO
@@ -246,7 +256,7 @@
 
 /obj/docking_port/mobile/marine_dropship/proc/automated_check()
 	var/obj/structure/machinery/computer/shuttle/dropship/flight/root_console = getControlConsole()
-	if(root_console.dropship_control_lost)
+	if(root_console?.dropship_control_lost)
 		automated_hangar_id = null
 		automated_lz_id = null
 		automated_delay = null
@@ -447,3 +457,7 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
+
+/datum/map_template/shuttle/wallace_and_gromit
+	name = "Wallace and Gromit"
+	shuttle_id = DROPSHIP_WALLACE_AND_GROMIT
