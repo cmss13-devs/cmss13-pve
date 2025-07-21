@@ -436,17 +436,9 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/junction{
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/prep_hallway)
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -468,15 +460,15 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaS" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/machinery/disposal{
+	pixel_x = 6;
+	pixel_y = -3
 	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -515,39 +507,18 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "aaX" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
-"aaY" = (
-/obj/structure/disposalpipe/segment,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/dorms)
-"aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"aba" = (
-/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/machinery/disposal{
-	pixel_x = 6;
-	pixel_y = -3
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
-"abb" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/almayer,
-/area/golden_arrow/engineering)
-"abc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/prep_hallway)
+"aaY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -556,7 +527,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/cryo_cells)
-"abd" = (
+"aaZ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"aba" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
@@ -565,12 +542,33 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"abe" = (
+"abb" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"abc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
+"abd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
+"abe" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoonprep)
 "abf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -579,12 +577,14 @@
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
 "abg" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/turf/open/floor/almayer/mono,
-/area/golden_arrow/cryo_cells)
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoonprep)
 "abh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -25291,11 +25291,11 @@ aWh
 awS
 alP
 atN
-abd
-abe
+aba
+abc
 axN
-abd
-abd
+aba
+aba
 apV
 atM
 aBk
@@ -25474,7 +25474,7 @@ aFK
 aTS
 aQd
 ase
-abc
+aaY
 aqd
 abx
 aeL
@@ -25643,7 +25643,7 @@ aEG
 aEG
 aWh
 aog
-abg
+abd
 anC
 aQr
 aog
@@ -25840,7 +25840,7 @@ alw
 aMQ
 aHk
 aWM
-aaY
+aaP
 aEG
 aEG
 aEG
@@ -28663,7 +28663,7 @@ aLz
 aDS
 azx
 aQb
-aaP
+aaX
 aCm
 acs
 aIR
@@ -30242,8 +30242,8 @@ ahl
 ahl
 ahl
 aMS
-aaX
-aaS
+abg
+abe
 alW
 aun
 agE
@@ -30433,7 +30433,7 @@ aVC
 auU
 aiq
 ayw
-aaP
+aaX
 aCm
 aEo
 aEo
@@ -32028,7 +32028,7 @@ aeW
 aZm
 aEt
 aoz
-aba
+aaS
 akb
 akb
 akb
