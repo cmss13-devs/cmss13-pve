@@ -163,16 +163,20 @@
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
 
 ///Check if the zombie can be revived, if not: calls handle_perma_dead
-/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie)
-	var/accumalated_organ_damage = 0
-	accumalated_organ_damage += zombie.getBrainLoss()
+/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie, check_only = FALSE)
+	if(!zombie.undefibbable)
+		var/accumalated_organ_damage = 0
+		accumalated_organ_damage += zombie.getBrainLoss()
 
-	var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
-	accumalated_organ_damage += heart.damage
-	if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD)
-		if(locate(/obj/limb/hand/) in zombie.limbs && locate(/obj/limb/head/) in zombie.limbs)
+		var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
+		accumalated_organ_damage += heart.damage
+
+		var/obj/limb/right_hand	= locate(/obj/limb/hand/r_hand) in zombie.limbs
+		var/obj/limb/left_hand = locate(/obj/limb/hand/l_hand) in zombie.limbs
+
+		if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD && !(right_hand.status == LIMB_DESTROYED && left_hand.status == LIMB_DESTROYED))
 			return TRUE
-	handle_perma_dead(zombie)
+		handle_perma_dead(zombie)
 	return FALSE
 
 /datum/species/zombie/proc/handle_perma_dead(mob/living/carbon/human/zombie)

@@ -170,7 +170,9 @@
 	if(iszombie(tied_human))
 		var/cur_hand = tied_human.get_active_hand()
 		if(isnull(cur_hand)) //Check if we have a hand. If not try the other one? Claws are stuck to hands so if this is null we've lost the hand
-			if(locate(/obj/limb/hand/) in tied_human.limbs) //We have hands?
+			var/obj/limb/right_hand	= locate(/obj/limb/hand/r_hand) in tied_human.limbs
+			var/obj/limb/left_hand = locate(/obj/limb/hand/l_hand) in tied_human.limbs
+			if(left_hand.status != LIMB_DESTROYED || right_hand.status != LIMB_DESTROYED) //We have hands?
 				tied_human.swap_hand()
 				cur_hand = tied_human.get_active_hand()
 			else
