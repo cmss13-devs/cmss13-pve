@@ -95,7 +95,7 @@
 
 	if(zombie)
 		var/obj/limb/head/head = zombie.get_limb("head")
-		if(!QDELETED(head) && !(head.status & LIMB_DESTROYED) && (can_rise_again(zombie)))
+		if(!QDELETED(head) && (can_rise_again(zombie)))
 			if(zombie.client)
 				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You will rise again in three minutes.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(zombie, SPAN_XENOWARNING("You fall... but your body is slowly regenerating itself."))
@@ -171,12 +171,16 @@
 		var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
 		accumalated_organ_damage += heart.damage
 
-		var/obj/limb/right_hand	= locate(/obj/limb/hand/r_hand) in zombie.limbs
-		var/obj/limb/left_hand = locate(/obj/limb/hand/l_hand) in zombie.limbs
+		var/obj/limb/hand/r_hand/right_hand	= zombie.get_limb("r_hand")
+		var/obj/limb/hand/l_hand/left_hand = zombie.get_limb("l_hand")
+		var/obj/limb/head/head = zombie.get_limb("head")
 
-		if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD || !(right_hand.status == LIMB_DESTROYED && left_hand.status == LIMB_DESTROYED))
+		if(accumalated_organ_damage > ZOMBIE_ORGAN_DAMAGE_THRESHOLD || ((right_hand.status & LIMB_DESTROYED) && (left_hand.status & LIMB_DESTROYED)) || (head.status & LIMB_DESTROYED))
+			if(zombie.stat == DEAD)
+				handle_perma_dead(zombie)
+			return FALSE
+		else
 			return TRUE
-		handle_perma_dead(zombie)
 	return FALSE
 
 /datum/species/zombie/proc/handle_perma_dead(mob/living/carbon/human/zombie)

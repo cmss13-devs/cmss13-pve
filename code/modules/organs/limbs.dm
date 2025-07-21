@@ -259,6 +259,10 @@
 							no_limb_loss, damage_source = create_cause_data("amputation"),\
 							mob/attack_source = null,\
 							brute_reduced_by = -1, burn_reduced_by = -1)
+	if(iszombie(owner)) //Check Here incase we're a limb that's destroyed or something
+		var/datum/species/zombie/zombie = owner.species
+		zombie.can_rise_again(owner)
+
 	if((brute <= 0) && (burn <= 0))
 		return 0
 
@@ -361,8 +365,6 @@
 	var/no_bone_break = owner.chem_effect_flags & CHEM_EFFECT_RESIST_FRACTURE
 
 	if(iszombie(owner)) //Zombie? Made of paper clearly. No Threshold before we move on
-		var/datum/species/zombie/zombie = owner.species
-		zombie.can_rise_again(owner)
 		var/obj/limb/limb = src
 		if(body_part == BODY_FLAG_CHEST || body_part == BODY_FLAG_GROIN)
 			limb = pick(owner.limbs - list("chest","groin")) //Targetting something that can't pop off? Not any more.
