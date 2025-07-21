@@ -170,7 +170,7 @@
 	var/datum/internal_organ/heart/heart = zombie.internal_organs_by_name["heart"]
 	accumalated_organ_damage += heart.damage
 	if(accumalated_organ_damage < ZOMBIE_ORGAN_DAMAGE_THRESHOLD)
-		if(locate(locate(/obj/limb/hand/) in tied_human.limbs))
+		if(locate(locate(/obj/limb/hand/) in zombie.limbs))
 			return TRUE
 	handle_perma_dead(zombie)
 	return FALSE
