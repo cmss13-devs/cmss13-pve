@@ -1188,7 +1188,7 @@
 
 /obj/item/device/radio/headset/distress/CLF/cct
 	name = "CLF-CCT headset"
-	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #d - combat controller, #b - engineering"
+	desc = "A special headset used by small groups of trained operatives. Or terrorists. Channels are as follows: :o - colony, #b - engineering"
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/clf/engi)
 
 /obj/item/device/radio/headset/distress/CLF/medic
@@ -1354,12 +1354,12 @@
 
 /obj/item/device/radio/headset/distress/guard
 	name = "\improper Colonial Guard radio headset"
-	desc = "A robust headset used by members of the UA's Colonial Guard. Built to outlast those it's issued to. Featured channels include: ; - Colonial Guard, :o - Colony."
+	desc = "A robust headset used by members of the UA's Colonial Guard. Built to outlast those it's issued to. Featured channels include: #d - Colonial Guard, :o - Colony."
 	frequency = GRD_FREQ
 	icon_state = "generic_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/guard)
 	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_MARSHAL) //More likely to be working alongside marshals than marines if responding to crap
+	hud_type = list(MOB_HUD_FACTION_MARSHAL, MOB_HUD_FACTION_UACG)
 
 /obj/item/device/radio/headset/distress/rebel_ua
 	name = "colony headset"

@@ -1070,6 +1070,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/storage/box/loadout/co2_knife
 	allowed_origins = USCM_ORIGINS
 
+/datum/gear/weapon/butterfly_knife
+	display_name = "Butterfly Knife"
+	path = /obj/item/weapon/butterfly
+	cost = 3
+
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
 	path = /obj/item/storage/box/loadout/CLF_loadout

@@ -474,6 +474,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
+/obj/item/clothing/accessory/patch/ua
+	name = "UA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
+	icon_state = "uaflagpatch"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"
@@ -1375,6 +1380,30 @@
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
+
+
+//===========================//USASF CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/pads/navy
+	name = "\improper M4 Pauldrons"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
+	icon_state = "u_pads"
+	item_state = "u_pads"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/greaves/navy
+	name = "\improper M4 Greaves"
+	desc = "Attachable supplementary armor for the M4 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
+	icon_state = "u_shinguards"
+	item_state = "u_shinguards"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/groin/navy
+	name = "\improper M4 Lap Panel"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
+	icon_state = "u_groinplate"
+	item_state = "u_groinplate"
+	slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
