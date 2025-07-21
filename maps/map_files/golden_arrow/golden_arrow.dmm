@@ -516,6 +516,10 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/platoonprep)
+"aaY" = (
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
 "aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -25647,7 +25651,7 @@ alw
 aMQ
 aHk
 aWM
-avb
+aaY
 aEG
 aEG
 aEG
