@@ -680,6 +680,12 @@
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
 
+/obj/item/storage/pouch/medical/full/surgery/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
 	desc = "A heavy pouch containing everything one needs to get themselves back on their feet. Quite the selection."
