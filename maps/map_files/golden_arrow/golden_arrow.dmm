@@ -436,9 +436,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "aaP" = (
-/obj/structure/disposalpipe/segment,
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/dorms)
+/obj/structure/disposalpipe/down/almayer{
+	id = "rubbish";
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/space)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -460,15 +463,9 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
 "aaS" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/structure/machinery/disposal{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
+/obj/structure/disposalpipe/segment,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/dorms)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -507,6 +504,16 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
 "aaX" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/machinery/disposal{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"aaY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -518,7 +525,13 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/prep_hallway)
-"aaY" = (
+"aaZ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"aba" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -527,26 +540,14 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/cryo_cells)
-"aaZ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"aba" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "abb" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "abc" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
@@ -554,21 +555,17 @@
 /area/golden_arrow/cryo_cells)
 "abd" = (
 /obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
+"abe" = (
+/obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
-"abe" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
 "abf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -581,7 +578,8 @@
 	layer = 2.52
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 1
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/platoonprep)
@@ -616,6 +614,18 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/platoonprep)
+"abk" = (
+/turf/closed/wall/almayer,
+/area/golden_arrow/platoonarmory)
+"abl" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
@@ -627,16 +637,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoonprep)
-"abk" = (
-/turf/closed/wall/almayer,
-/area/golden_arrow/platoonarmory)
-"abl" = (
-/obj/structure/disposalpipe/down/almayer{
-	id = "rubbish";
-	dir = 1
-	},
-/turf/open/space/basic,
-/area/space)
 "abm" = (
 /obj/structure/disposalpipe/junction{
 	dir = 2;
@@ -25319,11 +25319,11 @@ aWh
 awS
 alP
 atN
-aba
 abc
+abd
 axN
-aba
-aba
+abc
+abc
 apV
 atM
 aBk
@@ -25502,7 +25502,7 @@ aFK
 aTS
 aQd
 ase
-aaY
+aba
 aqd
 abx
 aeL
@@ -25671,7 +25671,7 @@ aEG
 aEG
 aWh
 aog
-abd
+abe
 anC
 aQr
 aog
@@ -25868,8 +25868,8 @@ alw
 aMQ
 aHk
 aWM
+aaS
 aaP
-abl
 aEG
 aEG
 aEG
@@ -28691,7 +28691,7 @@ aLz
 aDS
 azx
 aQb
-aaX
+aaY
 aCm
 acs
 aIR
@@ -30270,8 +30270,8 @@ ahl
 ahl
 ahl
 aMS
+abj
 abg
-abe
 alW
 aun
 agE
@@ -30461,7 +30461,7 @@ aVC
 auU
 aiq
 ayw
-aaX
+aaY
 aCm
 aEo
 aEo
@@ -30978,7 +30978,7 @@ gry
 bfK
 azW
 aXt
-abj
+abl
 aoq
 aDQ
 aiD
@@ -32056,7 +32056,7 @@ aeW
 aZm
 aEt
 aoz
-aaS
+aaX
 akb
 akb
 akb
