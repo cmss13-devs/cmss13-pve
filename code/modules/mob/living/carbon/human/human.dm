@@ -1113,21 +1113,21 @@
 	var/helmet_on = 0
 
 	for(var/obj/item/clothing/C in equipment)
-		if(C.flags_armor_protection & BODY_FLAG_HEAD)
+		if(C.flags_bodypart_hidden & BODY_FLAG_HEAD)
 			head_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_FACE)
+		if(C.flags_inv_hide & HIDEFACE)
 			face_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_EYES)
+		if(C.flags_inv_hide & HIDEEYES)
 			eyes_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_CHEST)
+		if(C.flags_bodypart_hidden & BODY_FLAG_CHEST)
 			torso_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_ARMS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_ARMS)
 			arms_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_HANDS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_HANDS)
 			hands_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_LEGS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_LEGS)
 			legs_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_FEET)
+		if(C.flags_bodypart_hidden & BODY_FLAG_FEET)
 			feet_exposed = 0
 		if(istype(C, /obj/item/clothing/suit/marine))
 			armor_on = 1
