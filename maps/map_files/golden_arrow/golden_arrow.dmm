@@ -630,6 +630,27 @@
 "abk" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
+"abl" = (
+/obj/structure/disposalpipe/down/almayer{
+	dir = 1;
+	id = rubbish
+	},
+/turf/open/space/basic,
+/area/space)
+"abm" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/open/space/basic,
+/area/space)
+"abn" = (
+/obj/structure/disposalpipe/up/almayer{
+	id = rubbish;
+	dir = 8
+	},
+/turf/open/space/basic,
+/area/space)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -8209,6 +8230,9 @@
 	pixel_x = 16;
 	pixel_y = -10
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/dorms)
 "aAI" = (
@@ -10960,6 +10984,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aJS" = (
@@ -11733,8 +11760,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
@@ -25841,7 +25869,7 @@ aMQ
 aHk
 aWM
 aaP
-aEG
+abl
 aEG
 aEG
 aEG
@@ -28782,7 +28810,7 @@ aUO
 tNi
 aaw
 aOK
-aOK
+abm
 aTv
 aNx
 aPh
@@ -28959,7 +28987,7 @@ qRO
 aVX
 aXB
 aEG
-aEG
+abn
 aDh
 aPh
 aPh
