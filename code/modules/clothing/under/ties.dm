@@ -1413,8 +1413,8 @@
 /obj/item/clothing/accessory/paint/wonderbread
 	name = "wonderbread armor paint"
 	desc = "A set of paint tones to etch the brand logo of Wonderbread into a Marine's armor...wait, what?"
-	icon_state = "wonderbead"
-	item_state = "wonderbead"
+	icon_state = "wonderbread"
+	item_state = "wonderbread"
 
 /obj/item/clothing/accessory/paint/cross
 	name = "cross armor paint"
