@@ -787,7 +787,7 @@
 
 /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
 	name = "\improper Kestrel GPMG harness"
-	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. This version features the support armature for the L56A2 weapons system. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
+	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. This version features the support armature for the L58A3 weapons system. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
 	icon_state = "rmc_smartgun"
 	item_state = "rmc_smartgun"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE

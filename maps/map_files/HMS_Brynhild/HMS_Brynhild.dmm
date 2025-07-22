@@ -9028,8 +9028,8 @@
 /area/hms_brynhild/hangar)
 "so" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/roller_holder,
-/obj/item/roller_holder{
+/obj/item/roller,
+/obj/item/roller{
 	pixel_x = 6;
 	pixel_y = 12
 	},
@@ -20730,7 +20730,7 @@
 	pixel_x = 6;
 	pixel_y = 11
 	},
-/obj/item/roller_holder{
+/obj/item/roller{
 	pixel_x = 11;
 	pixel_y = 2
 	},
