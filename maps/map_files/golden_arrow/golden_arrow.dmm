@@ -632,8 +632,8 @@
 /area/golden_arrow/platoonarmory)
 "abl" = (
 /obj/structure/disposalpipe/down/almayer{
-	dir = 1;
-	id = rubbish
+	id = "rubbish";
+	dir = 1
 	},
 /turf/open/space/basic,
 /area/space)
@@ -646,7 +646,7 @@
 /area/space)
 "abn" = (
 /obj/structure/disposalpipe/up/almayer{
-	id = rubbish;
+	id = "rubbish";
 	dir = 8
 	},
 /turf/open/space/basic,
