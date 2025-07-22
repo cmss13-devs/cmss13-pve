@@ -269,12 +269,9 @@
 				smoke = new(car_turf)
 			smoke.time_to_live = rand(7, 12)
 
-/obj/effect/particle_effect/smoke/miasma/affect(mob/living/carbon/affected_mob)
-	. = ..()
-	if(!.)
-		return FALSE
-	if(affected_mob.stat == DEAD)
-		return FALSE
+/obj/effect/particle_effect/smoke/miasma/contact_skin(mob/living/carbon/affected_mob)
+	if (..())
+		return
 
 	var/active = world.time > active_time
 	var/damage = active ? burn_damage : 0 // A little buffer time to get out of it
@@ -285,21 +282,24 @@
 			return FALSE
 		damage *= xeno_yautja_multiplier
 
-	affected_mob.apply_damage(damage, BURN)
-	affected_mob.AdjustEyeBlur(0.75)
-	affected_mob.last_damage_data = cause_data
+	if(ishuman(affected_mob)) //Humans only to avoid issues
+		if(issynth(affected_mob))
+			affected_mob.visible_message(SPAN_DANGER("[affected_mob]'s skin is sloughing off!"),\
+			SPAN_DANGER("Your skin is sloughing off!"))
 
+	affected_mob.apply_damage(damage, BURN)
+	affected_mob.last_damage_data = cause_data
+/obj/effect/particle_effect/smoke/miasma/contact_eyes(mob/living/carbon/affected_mob)
+	affected_mob.AdjustEyeBlur(0.75)
+
+/obj/effect/particle_effect/smoke/miasma/inhalation(mob/living/carbon/affected_mob)
 	if(affected_mob.coughedtime < world.time && !affected_mob.stat)
 		affected_mob.coughedtime = world.time + 2 SECONDS
 		if(ishuman(affected_mob)) //Humans only to avoid issues
-			if(issynth(affected_mob))
-				affected_mob.visible_message(SPAN_DANGER("[affected_mob]'s skin is sloughing off!"),\
-				SPAN_DANGER("Your skin is sloughing off!"))
+			if(prob(50))
+				affected_mob.emote("cough")
 			else
-				if(prob(50))
-					affected_mob.emote("cough")
-				else
-					affected_mob.emote("gasp")
+				affected_mob.emote("gasp")
 			if(prob(20))
 				affected_mob.drop_held_item()
 		to_chat(affected_mob, SPAN_DANGER("Something is not right here..."))
@@ -352,14 +352,6 @@
 	next_cough = 5 SECONDS
 	applied_fire_stacks = 6
 
-//WP mortar-shell smoke
-/obj/effect/particle_effect/smoke/phosphorus/strong
-	time_to_live = 40
-	spread_speed = 0.5
-	smokeranking = SMOKE_RANK_HIGH
-	next_cough = 5 SECONDS
-	applied_fire_stacks = 6
-
 /obj/effect/particle_effect/smoke/phosphorus/weak
 	time_to_live = 15
 	smokeranking = SMOKE_RANK_MED
@@ -381,11 +373,7 @@
 		creature.updatehealth()
 		creature.coughedtime = world.time + next_cough
 		if(creature.coughedtime < world.time)
-			if(issynth(creature))
-				creature.visible_message(SPAN_DANGER("[creature]'s skin is sloughing off!"),\
-				SPAN_DANGER("Your skin is sloughing off!"))
-			else
-				creature.emote("cough")
+			creature.emote("cough")
 
 /obj/effect/particle_effect/smoke/phosphorus/contact_skin(mob/living/carbon/creature)
 	/*if (..())
@@ -394,6 +382,11 @@
 	creature.last_damage_data = cause_data
 	if(isyautja(creature) || isxeno(creature))
 		burn_damage *= xeno_yautja_reduction
+	creature.coughedtime = world.time + next_cough
+	if(creature.coughedtime < world.time)
+		if(issynth(creature))
+			creature.visible_message(SPAN_DANGER("[creature]'s skin is sloughing off!"),\
+			SPAN_DANGER("Your skin is sloughing off!"))
 	var/reagent = new /datum/reagent/napalm/blue()
 	creature.burn_skin(burn_damage)
 	creature.adjust_fire_stacks(applied_fire_stacks, reagent)
