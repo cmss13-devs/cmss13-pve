@@ -1425,14 +1425,14 @@
 /obj/item/clothing/accessory/paint/pandora
 	name = "semicolon three armor paint"
 	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
-	icon_state = "cross"
-	item_state = "cross"
+	icon_state = "pandora"
+	item_state = "pandora"
 
 /obj/item/clothing/accessory/paint/fire
 	name = "fire armor paint"
 	desc = "A set of paint tones to etch a flames into a Marine's armor."
-	icon_state = "flames"
-	item_state = "flames"
+	icon_state = "flame"
+	item_state = "flame"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
