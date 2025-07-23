@@ -229,6 +229,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 /datum/mob_hud/faction/guard
 	faction_to_check = FACTION_UACG
 
+/datum/mob_hud/faction/faami
+	faction_to_check = FACTION_FAAMI
+
 /datum/mob_hud/faction/observer
 	hud_icons = list(FACTION_HUD, ORDER_HUD, HUNTER_CLAN, HOLOCARD_HUD)
 
