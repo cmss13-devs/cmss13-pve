@@ -450,6 +450,7 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	undershirt = TRUE
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
