@@ -438,7 +438,7 @@
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)
-	new /obj/item/ammo_magazine/sniper/svd/heap(src)
+	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
