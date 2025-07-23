@@ -15,6 +15,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "ae" = (
@@ -24,6 +25,7 @@
 	req_one_access_txt = "230"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "af" = (
@@ -44,6 +46,7 @@
 /obj/structure/machinery/power/terminal{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "ai" = (
@@ -66,6 +69,7 @@
 	can_block_movement = 0;
 	pixel_x = -8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "ak" = (
@@ -135,6 +139,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "aq" = (
@@ -219,6 +224,7 @@
 /area/golden_arrow/engineering)
 "aw" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "ax" = (
@@ -231,6 +237,7 @@
 	light_range = 4;
 	pixel_x = 16
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "ay" = (
@@ -249,6 +256,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "az" = (
@@ -269,6 +277,7 @@
 	can_block_movement = 0;
 	pixel_x = 7
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "aB" = (
@@ -280,6 +289,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "aC" = (
@@ -288,10 +298,12 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "aD" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "aE" = (
@@ -304,12 +316,14 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "aF" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "chapaev_engi"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "aG" = (
@@ -364,6 +378,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "aJ" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "aK" = (
@@ -375,6 +390,7 @@
 	pixel_x = 13;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "aL" = (
@@ -452,6 +468,7 @@
 	pixel_y = -15;
 	layer = 6
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "aQ" = (
@@ -483,12 +500,14 @@
 	icon_state = "E"
 	},
 /obj/structure/reagent_dispensers/watertank,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "aT" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_x = -6
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "aU" = (
@@ -512,6 +531,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "aW" = (
@@ -553,6 +573,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "ba" = (
@@ -561,6 +582,7 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bb" = (
@@ -572,6 +594,7 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "bc" = (
@@ -584,6 +607,7 @@
 	dir = 4;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bd" = (
@@ -631,6 +655,7 @@
 	pixel_x = 4;
 	pixel_y = -5
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bg" = (
@@ -642,6 +667,7 @@
 	dir = 1;
 	pixel_y = 3
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "bh" = (
@@ -663,6 +689,7 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = 32
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bi" = (
@@ -792,6 +819,14 @@
 	pixel_y = -15;
 	layer = 6
 	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = 12
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "bv" = (
@@ -1059,6 +1094,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "bX" = (
@@ -1113,6 +1149,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "cc" = (
@@ -1211,6 +1248,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "cl" = (
@@ -1230,10 +1268,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "cm" = (
-/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
-	can_block_movement = 0;
-	pixel_x = -7
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
@@ -1244,6 +1278,10 @@
 	light_power = 0.8;
 	light_range = 4;
 	pixel_x = 16
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
@@ -1293,6 +1331,7 @@
 	can_block_movement = 0;
 	pixel_y = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "ct" = (
@@ -1462,6 +1501,7 @@
 	light_range = 4;
 	pixel_x = -16
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "cI" = (
@@ -1470,6 +1510,21 @@
 	pixel_y = -26
 	},
 /turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/engineering)
+"cJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"cK" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"cL" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "cM" = (
 /obj/structure/disposalpipe/segment,
@@ -8427,6 +8482,7 @@
 /area/golden_arrow/engineering)
 "LP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "Mi" = (
@@ -8502,6 +8558,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "SJ" = (
@@ -21674,7 +21731,7 @@ aV
 af
 YA
 aI
-wO
+cJ
 ad
 af
 at
@@ -21829,9 +21886,9 @@ aK
 aD
 aw
 aF
-wO
-wO
-wO
+cJ
+cJ
+cJ
 wO
 af
 ac
@@ -21978,11 +22035,11 @@ aX
 af
 wO
 aL
-wO
+cJ
 Sj
 af
-at
-al
+cL
+cK
 al
 al
 af
