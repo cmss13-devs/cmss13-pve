@@ -1,0 +1,5 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - rscadd: "Adds butterfly knives to loadout item selection."
+  - maptweak: "UPP loadout lockers no longer have items you didn't select in them. UPP berets also now spawn in said lockers instead of on heads."
