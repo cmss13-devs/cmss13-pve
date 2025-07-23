@@ -884,3 +884,6 @@
 	name = "XM56A4 smartgun"
 	desc = "An experimental smartgun variant currently undergoing field testing. This model is outfitted with integrated suppressor and modified internal mechanism."
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
+
+#undef LYING_DOWN_SG_ROF_DEBUFF
+#undef KNOCKDOWN_SG_FAILSOUND_COOLDOWN

@@ -286,6 +286,10 @@
 	var/iff_enabled = TRUE
 	var/requires_harness = TRUE
 	var/armbrace = FALSE
+	COOLDOWN_DECLARE(knockdown_halt_sound_cooldown)
+
+#define LYING_DOWN_SG_ROF_DEBUFF 0.5
+#define KNOCKDOWN_SG_FAILSOUND_COOLDOWN 0.5
 
 /obj/item/weapon/gun/pkp/iff/able_to_fire(mob/living/user)
 	. = ..()
@@ -297,6 +301,27 @@
 			if(!H.wear_suit || !(H.wear_suit.flags_inventory & SMARTGUN_HARNESS))
 				balloon_alert(user, "harness required")
 				return FALSE
+
+
+/obj/item/weapon/gun/pkp/iff/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	if(user.IsKnockDown())
+		if(COOLDOWN_FINISHED(src, knockdown_halt_sound_cooldown))
+			COOLDOWN_START(src, knockdown_halt_sound_cooldown, KNOCKDOWN_SG_FAILSOUND_COOLDOWN)
+			playsound(loc,"smartgun_knockdown", 25, 0)
+			return
+	if(user.body_position == LYING_DOWN)
+		set_gun_config_values()
+		modify_fire_delay(LYING_DOWN_SG_ROF_DEBUFF)
+		modify_burst_delay(LYING_DOWN_SG_ROF_DEBUFF, user)
+		set_burst_amount(burst_amount, user)
+		scatter += 1
+	else
+		set_gun_config_values()
+		set_fire_delay(fire_delay)
+		set_burst_delay(burst_delay)
+	return ..()
+#undef LYING_DOWN_SG_ROF_DEBUFF
+#undef KNOCKDOWN_SG_FAILSOUND_COOLDOWN
 
 /obj/item/weapon/gun/pkp/iff/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
