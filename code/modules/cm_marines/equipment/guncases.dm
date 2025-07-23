@@ -104,6 +104,43 @@
 /obj/item/storage/box/guncase/m79/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m81/m79(src)
 
+/obj/item/storage/box/guncase/heavy/m92_upp
+	name = "\improper OG-60 grenade launcher case"
+	desc = "A case for storing a OG-60 grenade launcher."
+	icon_state = "m92uppcase"
+	storage_slots = 2
+	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m92/upp, /obj/item/storage/pouch/explosive, /obj/item/storage/box/packet/high_explosive/upp)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/m92_upp/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp/stored(src)
+	new /obj/item/storage/pouch/explosive(src)
+
+/obj/item/storage/box/guncase/heavy/m92_upp/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcasealt_lid_open")
+	else
+		overlays += image(icon, "m92uppcase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/launcher/grenade/m92/upp) in contents)
+		overlays += image(icon, "+m92_upp")
+	var/obj/item/storage/pouch/explosive/nade_pouch = locate(/obj/item/storage/pouch/explosive) in contents
+	if(nade_pouch)
+		if(!nade_pouch.contents.len)
+			overlays += image(icon, "+nade_pouch")
+		else
+			overlays += image(icon, "+nade_pouch_full")
+
+/obj/item/storage/box/guncase/heavy/m92_upp/preloaded
+	storage_slots = 5
+
+/obj/item/storage/box/guncase/heavy/m92_upp/preloaded/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp/stored(src)
+	new /obj/item/storage/pouch/explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)
 //------------
 //R4T lever action rifle
 /obj/item/storage/box/guncase/r4t_scout

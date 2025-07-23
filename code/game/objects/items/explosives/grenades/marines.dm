@@ -383,10 +383,10 @@
 	caliber = "40x103mm"
 	explosion_power = 0
 	explosion_falloff = 25
-	shrapnel_count = 27
+	shrapnel_count = 33
 	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
-	direct_hit_shrapnel = 20
-	dispersion_angle = 20//a little big and forgiving
+	direct_hit_shrapnel = 33
+	dispersion_angle = 25//a little big and forgiving
 
 /obj/item/explosive/grenade/incendiary/impact/upp
 	name = "\improper VTBG-44 Thermobaric Grenade"
@@ -396,7 +396,7 @@
 	burn_level = BURN_LEVEL_TIER_4
 
 /obj/item/explosive/grenade/incendiary/impact/upp/launch_impact(atom/hit_atom)
-	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR)
+	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
 	..()
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
