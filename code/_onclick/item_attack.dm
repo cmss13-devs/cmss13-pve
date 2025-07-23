@@ -134,7 +134,7 @@
 				return FALSE
 		else
 			to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
-				return FALSE
+			return FALSE
 
 	/////////////////////////
 	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(target)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
