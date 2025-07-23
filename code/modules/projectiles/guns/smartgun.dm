@@ -59,7 +59,7 @@
 	var/datum/ammo/ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer //Toggled ammo type
 	var/datum/ammo/ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet //Toggled ammo type
 	var/iff_enabled = TRUE //Begin with the safety on.
-	var/recoil_compensation = 0
+	var/recoil_compensation = TRUE
 	var/accuracy_improvement = 0
 	var/auto_fire = 0
 	var/motion_detector = 0
@@ -82,8 +82,6 @@
 	MD = new(src)
 	battery = new /obj/item/smartgun_battery(src)
 	. = ..()
-	var/datum/action/item_action/smartgun/toggle_recoil_compensation/recoil_comp = locate(/datum/action/item_action/smartgun/toggle_recoil_compensation) in actions
-	recoil_comp.action_activate()
 	update_icon()
 
 /obj/item/weapon/gun/smartgun/Destroy()
@@ -290,6 +288,9 @@
 	button.name = name
 	button.overlays.Cut()
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+	var/obj/item/weapon/gun/smartgun/G = holder_item
+	if(G.recoil_compensation)
+		button.icon_state = "template_on"
 
 /datum/action/item_action/smartgun/toggle_recoil_compensation/action_activate()
 	. = ..()
@@ -445,6 +446,15 @@
 		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
 		armbrace_action.button.icon_state = "template"
 
+/obj/item/weapon/gun/smartgun/proc/force_on_armbrace(mob/user)
+	if(!armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>actuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/machines/click.ogg', 25, 1)
+		armbrace = FALSE
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
+		armbrace_action.button.icon_state = "template_on"
+
 /obj/item/weapon/gun/smartgun/unequipped(mob/user, slot)
 	. = ..()
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user), 0) //yeah
@@ -455,7 +465,9 @@
 			var/mob/living/carbon/human/armbrace_human = user
 			if(isitem(armbrace_human.get_item_by_slot(auto_retrieval_slot)))
 				if(istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner) || istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner))
+					force_on_armbrace()
 					armbrace_human.put_in_hands(src, drop_on_fail = TRUE)
+					return
 		force_off_armbrace(user)
 
 

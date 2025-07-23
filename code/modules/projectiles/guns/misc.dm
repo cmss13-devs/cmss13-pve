@@ -281,10 +281,11 @@
 /obj/item/weapon/gun/pkp/iff
 	name = "\improper QYJ-72-I General Purpose Machine Gun"
 	desc = "The QYJ-72-I is an experimental variant of common UPP GPMG featuring IFF capabilities which were developed by reverse-engineering USCM smartweapons. Aside from that, not much has been done to this machinegun: it's still heavy, overheats rather quickly and is able to lay down range unprecedented amounts of lead. \n<b>Alt-click it to open the feed cover and allow for reloading.</b>"
-	actions_types = list(/datum/action/item_action/toggle_iff_pkp)
+	actions_types = list(/datum/action/item_action/toggle_iff_pkp, /datum/action/item_action/toggle_armbrace_pkp)
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	var/iff_enabled = TRUE
 	var/requires_harness = TRUE
+	var/armbrace = FALSE
 
 /obj/item/weapon/gun/pkp/iff/able_to_fire(mob/living/user)
 	. = ..()
@@ -302,6 +303,80 @@
 		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
 	))
 	AddComponent(/datum/component/iff_fire_prevention)
+
+/obj/item/weapon/gun/pkp/iff/get_examine_text(mob/user)
+	. = ..()
+	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
+	if(armbrace)
+		. += SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.")
+	else
+		. += SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")
+
+/obj/item/weapon/gun/pkp/iff/proc/toggle_armbrace(mob/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/human = user
+	if(!human.wear_suit || !(human.wear_suit.flags_inventory & SMARTGUN_HARNESS))
+		to_chat(user, "[icon2html(src, usr)] You can't actuate the armbrace without a harness.")
+		return
+
+	to_chat(user, "[icon2html(src, usr)] You [armbrace ? "<B>deactuate</b>" : "<B>actuate</b>"] \the [src]'s armbrace.")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	armbrace = !armbrace
+	if(armbrace)
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+	else
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+
+/obj/item/weapon/gun/pkp/iff/proc/force_off_armbrace(mob/user)
+	if(armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>deactuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/machines/click.ogg', 25, 1)
+		armbrace = FALSE
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/toggle_armbrace_pkp) in actions
+		armbrace_action.button.icon_state = "template"
+
+/obj/item/weapon/gun/pkp/iff/proc/force_on_armbrace(mob/user)
+	if(!armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>actuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/machines/click.ogg', 25, 1)
+		armbrace = TRUE
+		flags_item |= NODROP|FORCEDROP_CONDITIONAL
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/toggle_armbrace_pkp) in actions
+		armbrace_action.button.icon_state = "template_on"
+
+/obj/item/weapon/gun/pkp/iff/unequipped(mob/user, slot)
+	. = ..()
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/weapon/gun/pkp/iff, emergency_snap_back), user), 0) //yeah
+
+/obj/item/weapon/gun/pkp/iff/proc/emergency_snap_back(mob/user)
+	if(ishuman(user))
+		if(!ishuman(loc))
+			var/mob/living/carbon/human/armbrace_human = user
+			if(isitem(armbrace_human.get_item_by_slot(WEAR_J_STORE)))
+				if(istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner) || istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner))
+					force_on_armbrace()
+					armbrace_human.put_in_hands(src, drop_on_fail = TRUE)
+					return
+		force_off_armbrace(user)
+
+/datum/action/item_action/toggle_armbrace_pkp/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Armbrace"
+	action_icon_state = "armbrace"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/toggle_armbrace_pkp/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/pkp/iff/G = holder_item
+	G.toggle_armbrace(usr)
+	if(G.armbrace)
+		button.icon_state = "template_on"
+	else
+		button.icon_state = "template"
 
 /datum/action/item_action/toggle_iff_pkp/New(Target, obj/item/holder)
 	. = ..()

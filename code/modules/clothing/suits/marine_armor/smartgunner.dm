@@ -173,6 +173,9 @@
 	for(var/obj/item/weapon/gun/smartgun/smartgun_armbrace in user.contents)
 		smartgun_armbrace.force_off_armbrace(user)
 		user.drop_inv_item_on_ground(smartgun_armbrace)
+	for(var/obj/item/weapon/gun/pkp/iff/pkp_armbrace in user.contents)
+		pkp_armbrace.force_off_armbrace(user)
+		user.drop_inv_item_on_ground(pkp_armbrace)
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 /obj/item/clothing/suit/marine/smartgunner/standard
