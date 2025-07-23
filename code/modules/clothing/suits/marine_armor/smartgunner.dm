@@ -72,8 +72,6 @@
 		user.drop_inv_item_on_ground(pkp_armbrace)
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
-	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
-
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
