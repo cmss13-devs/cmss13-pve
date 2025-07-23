@@ -457,7 +457,8 @@
 
 /obj/item/weapon/gun/smartgun/unequipped(mob/user, slot)
 	. = ..()
-	INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user) //yeah
+	if(!gc_destroyed)
+		INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user) //yeah
 
 /obj/item/weapon/gun/smartgun/proc/emergency_snap_back(mob/user)
 	if(ishuman(user))
