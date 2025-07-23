@@ -604,35 +604,44 @@
 /obj/item/storage/box/guncase/heavy/fuel/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "case_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
-		overlays += image(icon, "fuelcase_lid")
+		overlays += image(icon, "uppfuelcase_lid")
 		return
-
-	if(length(contents) >= 1)
-		var/image/source_image = image(icon, "+fuel_bottom")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 2)
-		var/image/source_image = image(icon, "+fuel_bottom")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 3)
-		var/image/source_image = image(icon, "+fuel_bottom")
-		source_image.pixel_x = 16
-		overlays += source_image
-	if(length(contents) >= 4)
-		var/image/source_image = image(icon, "+fuel")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 5)
-		var/image/source_image = image(icon, "+fuel")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 6)
-		var/image/source_image = image(icon, "+fuel")
-		source_image.pixel_x = 16
-		overlays += source_image
+	var/tank_tally = 0
+	for(var/obj/item/ammo_magazine/flamer_tank/tank in contents)
+		tank_tally++
+		if(tank_tally > initial(storage_slots))
+			return
+		if(istype(tank, /obj/item/ammo_magazine/flamer_tank/upp/gellied))
+			if(tank_tally <= 3)
+				var/image/source_image = image(icon, "+uppfuel_g_bottom")
+				source_image.pixel_x = tank_tally*8-8
+				overlays += source_image
+			else
+				var/image/source_image = image(icon, "+uppfuel_g")
+				source_image.pixel_x = tank_tally*8-8-(24)
+				overlays += source_image
+		else
+			if(istype(tank, /obj/item/ammo_magazine/flamer_tank/upp))
+				if(tank_tally <= 3)
+					var/image/source_image = image(icon, "+uppfuel_bottom")
+					source_image.pixel_x = tank_tally*8-8
+					overlays += source_image
+				else
+					var/image/source_image = image(icon, "+uppfuel")
+					source_image.pixel_x = tank_tally*8-8-(24)
+					overlays += source_image
+			else
+				if(istype(tank, /obj/item/ammo_magazine/flamer_tank))
+					if(tank_tally <= 3)
+						var/image/source_image = image(icon, "+fuel_bottom")
+						source_image.pixel_x = tank_tally*8-8
+						overlays += source_image
+					else
+						var/image/source_image = image(icon, "+fuel")
+						source_image.pixel_x = tank_tally*8-8-(24)
+						overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/uppfuel
 	name = "\improper LPO80 fuel canister case"
@@ -648,31 +657,40 @@
 	else
 		overlays += image(icon, "uppfuelcase_lid")
 		return
-
-	if(length(contents) >= 1)
-		var/image/source_image = image(icon, "+uppfuel_bottom")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 2)
-		var/image/source_image = image(icon, "+uppfuel_bottom")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 3)
-		var/image/source_image = image(icon, "+uppfuel_bottom")
-		source_image.pixel_x = 16
-		overlays += source_image
-	if(length(contents) >= 4)
-		var/image/source_image = image(icon, "+uppfuel")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 5)
-		var/image/source_image = image(icon, "+uppfuel")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 6)
-		var/image/source_image = image(icon, "+uppfuel")
-		source_image.pixel_x = 16
-		overlays += source_image
+	var/tank_tally = 0
+	for(var/obj/item/ammo_magazine/flamer_tank/tank in contents)
+		tank_tally++
+		if(tank_tally > initial(storage_slots))
+			return
+		if(istype(tank, /obj/item/ammo_magazine/flamer_tank/upp/gellied))
+			if(tank_tally <= 3)
+				var/image/source_image = image(icon, "+uppfuel_g_bottom")
+				source_image.pixel_x = tank_tally*8-8
+				overlays += source_image
+			else
+				var/image/source_image = image(icon, "+uppfuel_g")
+				source_image.pixel_x = tank_tally*8-8-(24)
+				overlays += source_image
+		else
+			if(istype(tank, /obj/item/ammo_magazine/flamer_tank/upp))
+				if(tank_tally <= 3)
+					var/image/source_image = image(icon, "+uppfuel_bottom")
+					source_image.pixel_x = tank_tally*8-8
+					overlays += source_image
+				else
+					var/image/source_image = image(icon, "+uppfuel")
+					source_image.pixel_x = tank_tally*8-8-(24)
+					overlays += source_image
+			else
+				if(istype(tank, /obj/item/ammo_magazine/flamer_tank))
+					if(tank_tally <= 3)
+						var/image/source_image = image(icon, "+fuel_bottom")
+						source_image.pixel_x = tank_tally*8-8
+						overlays += source_image
+					else
+						var/image/source_image = image(icon, "+fuel")
+						source_image.pixel_x = tank_tally*8-8-(24)
+						overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/uppfuel/fill_preset_inventory()
 	new /obj/item/ammo_magazine/flamer_tank/upp(src)
@@ -688,40 +706,6 @@
 	icon_state = "uppfuelcase"
 	storage_slots = 6
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank)
-
-/obj/item/storage/box/guncase/heavy/fuel/gellied/update_icon()
-	overlays.Cut()
-	overlays.Cut()
-	if(opened)
-		overlays += image(icon, "uppbigcase_lid_open")
-	else
-		overlays += image(icon, "uppfuelcase_lid")
-		return
-
-	if(length(contents) >= 1)
-		var/image/source_image = image(icon, "+uppfuel_g_bottom")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 2)
-		var/image/source_image = image(icon, "+uppfuel_g_bottom")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 3)
-		var/image/source_image = image(icon, "+uppfuel_g_bottom")
-		source_image.pixel_x = 16
-		overlays += source_image
-	if(length(contents) >= 4)
-		var/image/source_image = image(icon, "+uppfuel_g")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(length(contents) >= 5)
-		var/image/source_image = image(icon, "+uppfuel_g")
-		source_image.pixel_x = 8
-		overlays += source_image
-	if(length(contents) >= 6)
-		var/image/source_image = image(icon, "+uppfuel_g")
-		source_image.pixel_x = 16
-		overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/uppfuel/gellied/fill_preset_inventory()
 	new /obj/item/ammo_magazine/flamer_tank/upp/gellied(src)
