@@ -129,7 +129,7 @@
 				to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
 				return FALSE
 		else
-			to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you?"))
+			to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you? They're on your side!"))
 			return FALSE
 
 	/////////////////////////
