@@ -641,6 +641,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_bodypart_hidden = BODY_FLAG_CHEST
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROT
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	blood_overlay_type = "armor"
