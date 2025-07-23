@@ -826,11 +826,19 @@
 	can_hold = list(/obj/item/weapon/gun/shotgun/pump/type23/unloaded, /obj/item/storage/pouch/shotgun/heavyslug, /obj/item/weapon/gun/pistol/skorpion, /obj/item/storage/pouch/magazine/pistol,/obj/item/weapon/gun/rifle/lw317 , /obj/item/weapon/gun/smg/pps43/extended_mag,  /obj/item/storage/pouch/magazine )
 
 /obj/item/storage/box/guncase/random_old_upp_gun/fill_preset_inventory()
-	var/random_weapon = rand(1,4)
+	var/random_weapon = rand(1,3)
 	switch(random_weapon)
 		if(1)
-			new /obj/item/weapon/gun/shotgun/pump/type23/unloaded(src)
-			new /obj/item/storage/pouch/shotgun/heavyslug(src)
+			storage_slots = 3
+			new /obj/item/weapon/gun/shotgun/double/upp(src)
+			var/obj/item/storage/pouch/shotgun/pouch = new /obj/item/storage/pouch/shotgun(src)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
+			new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+
 		if(2)
 			new /obj/item/weapon/gun/smg/pps43/extended_mag(src)
 			var/obj/item/storage/pouch/magazine/pouch = new /obj/item/storage/pouch/magazine(src)
@@ -845,13 +853,6 @@
 			new /obj/item/ammo_magazine/pistol/skorpion(pouch)
 			new /obj/item/ammo_magazine/pistol/skorpion(pouch)
 			new /obj/item/ammo_magazine/pistol/skorpion(pouch)
-			pouch.update_icon()
-		if(4)
-			new /obj/item/weapon/gun/rifle/lw317(src)
-			var/obj/item/storage/pouch/magazine/pouch = new /obj/item/storage/pouch/magazine(src)
-			new /obj/item/ammo_magazine/rifle/lw317(pouch)
-			new /obj/item/ammo_magazine/rifle/lw317(pouch)
-			new /obj/item/ammo_magazine/rifle/lw317/ap(pouch)
 			pouch.update_icon()
 	var/obj/item/weapon/gun/safety = locate(/obj/item/weapon/gun) in contents
 	safety.flags_gun_features ^= GUN_TRIGGER_SAFETY
