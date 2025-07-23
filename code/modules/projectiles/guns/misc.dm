@@ -302,12 +302,14 @@
 				balloon_alert(user, "harness required")
 				return FALSE
 
-
 /obj/item/weapon/gun/pkp/iff/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if(user.IsKnockDown())
 		if(COOLDOWN_FINISHED(src, knockdown_halt_sound_cooldown))
 			COOLDOWN_START(src, knockdown_halt_sound_cooldown, KNOCKDOWN_SG_FAILSOUND_COOLDOWN)
-			playsound(loc,"smartgun_knockdown", 25, 0)
+			if(flags_item & WIELDED)
+				playsound(loc,"smartgun_knockdown", 25, 0)
+				if((locate(/datum/effects/crit) in user.effects_list))
+					unwield(user)
 			return
 	if(user.body_position == LYING_DOWN)
 		set_gun_config_values()
