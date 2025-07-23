@@ -190,6 +190,5 @@
 
 /obj/item/proc/remove_throat_slit_stun(mob/living/target)
 	target.anchored = FALSE
-	target.layer = MOB_LAYER
 	REMOVE_TRAIT(target, TRAIT_IMMOBILIZED, THROATSLIT_TRAIT)
 	REMOVE_TRAIT(target, TRAIT_UNDENSE, THROATSLIT_TRAIT)
