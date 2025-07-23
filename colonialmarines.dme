@@ -2664,5 +2664,4 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
-#include "maps\map_files\binhai_supply_station\binhai_supply_station.dmm"
 // END_INCLUDE
