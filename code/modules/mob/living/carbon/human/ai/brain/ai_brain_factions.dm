@@ -553,7 +553,6 @@
 		FACTION_COLONIST,
 		FACTION_MARSHAL,
 		FACTION_UACG,
-		FACTION_UACG,
 	)
 	neutral_factions = list(
 		FACTION_TWE,
@@ -758,7 +757,6 @@
 		FACTION_COLONIST,
 		FACTION_MARSHAL,
 		FACTION_UACG,
-		FACTION_UACG,
 	)
 	neutral_factions = list(
 		FACTION_TWE,
@@ -962,7 +960,6 @@
 		FACTION_ARMY,
 		FACTION_COLONIST,
 		FACTION_MARSHAL,
-		FACTION_UACG,
 		FACTION_UACG,
 	)
 	neutral_factions = list(
@@ -1338,7 +1335,6 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_WY_DEATHSQUAD,
-		FACTION_UACG,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
