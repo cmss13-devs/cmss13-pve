@@ -105,7 +105,7 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/sniper/svd
 	ammo_band_icon = "+type88_band"
-	ammo_band_icon_empty = "+m41a_band_e"
+	ammo_band_icon_empty = "+type88_band_e"
 
 /obj/item/ammo_magazine/sniper/svd/heap
 	name = "\improper Type-88 HV Magazine (7.62x54mmR)"

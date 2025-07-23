@@ -696,6 +696,123 @@
 		icon_state = "r52"
 
 //ITEMS-----------------------------------//
+
+/obj/item/storage/box/upp_radio_key
+	name = "box of UPP millitary encryption keys"
+	desc = "Contains radio encryption keys."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "uppkeycase"
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_TINY
+	storage_slots = 4
+	can_hold = list(/obj/item/device/encryptionkey)
+
+/obj/item/storage/box/upp_radio_key/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+
+/obj/item/storage/box/upp_radio_key/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppkeycase_lid_open")
+	else
+		overlays += image(icon, "uppkeycase_lid")
+		return
+	var/key_tally = -1
+	for(var/obj/item/device/encryptionkey/radio_key in contents)
+		key_tally++
+		if(key_tally+1 > initial(storage_slots))
+			return
+		if(istype(radio_key, /obj/item/device/encryptionkey/upp))
+			var/image/source_image = image(icon, "+upp_engi")
+			source_image.pixel_x = key_tally*4
+			overlays += source_image
+		else
+			if(istype(radio_key, /obj/item/device/encryptionkey/colony))
+				var/image/source_image = image(icon, "+colony_key")
+				source_image.pixel_x = key_tally*4
+				overlays += source_image
+			else
+				if(istype(radio_key, /obj/item/device/encryptionkey))
+					var/image/source_image = image(icon, "+generic_key")
+					source_image.pixel_x = key_tally*4
+					overlays += source_image
+
+/obj/item/storage/box/upp_radio_key/colony
+	name = "box of UPP civilian radio keys"
+
+
+/obj/item/storage/box/upp_radio_key/colony/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+
+/obj/item/storage/box/upp_radio_key/colony/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppkeycase_lid_open")
+	else
+		overlays += image(icon, "uppkeycaseciv_lid")
+		return
+	var/key_tally = -1
+	for(var/obj/item/device/encryptionkey/radio_key in contents)
+		key_tally++
+		if(key_tally+1 > initial(storage_slots))
+			return
+		if(istype(radio_key, /obj/item/device/encryptionkey/upp))
+			var/image/source_image = image(icon, "+upp_engi")
+			source_image.pixel_x = key_tally*4
+			overlays += source_image
+		else
+			if(istype(radio_key, /obj/item/device/encryptionkey/colony))
+				var/image/source_image = image(icon, "+colony_key")
+				source_image.pixel_x = key_tally*4
+				overlays += source_image
+			else
+				if(istype(radio_key, /obj/item/device/encryptionkey))
+					var/image/source_image = image(icon, "+generic_key")
+					source_image.pixel_x = key_tally*4
+					overlays += source_image
+
+/obj/item/storage/box/upp_radio_key/engi
+	name = "box of UPP Engineering Encryption Keys"
+
+/obj/item/storage/box/upp_radio_key/engi/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+
+/obj/item/storage/box/upp_radio_key/engi/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppkeycase_lid_open")
+	else
+		overlays += image(icon, "uppkeycaseengi_lid")
+		return
+	var/key_tally = -1
+	for(var/obj/item/device/encryptionkey/radio_key in contents)
+		key_tally++
+		if(key_tally+1 > initial(storage_slots))
+			return
+		if(istype(radio_key, /obj/item/device/encryptionkey/upp))
+			var/image/source_image = image(icon, "+upp_engi")
+			source_image.pixel_x = key_tally*4
+			overlays += source_image
+		else
+			if(istype(radio_key, /obj/item/device/encryptionkey/colony))
+				var/image/source_image = image(icon, "+colony_key")
+				source_image.pixel_x = key_tally*4
+				overlays += source_image
+			else
+				if(istype(radio_key, /obj/item/device/encryptionkey))
+					var/image/source_image = image(icon, "+generic_key")
+					source_image.pixel_x = key_tally*4
+					overlays += source_image
+
 /obj/item/storage/box/lightstick
 	name = "box of lightsticks"
 	desc = "Contains blue lightsticks."

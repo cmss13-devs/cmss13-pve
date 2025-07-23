@@ -2086,12 +2086,23 @@
 	holster_slots = list("1" = list("icon_x" = 11))
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/revolver,
 		/obj/item/weapon/gun/flare,
 		/obj/item/mortar_shell,
 	)
-	bypass_w_limit = list(/obj/item/mortar_shell)
+	bypass_w_limit = list(/obj/item/mortar_shell, /obj/item/device/binoculars)
 	has_gamemode_skin = FALSE
+	storage_slots = 8
+
+/obj/item/storage/belt/gun/mortarbelt/full_upp/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/np92/unloaded())
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
 
 /obj/item/storage/belt/gun/utility
 	name = "\improper M276 pattern combat toolbelt rig"
