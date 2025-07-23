@@ -11,6 +11,21 @@
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"ad" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3,
+/area/golden_arrow/engineering)
+"ae" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 1;
+	req_one_access_txt = "230"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
 "af" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
@@ -31,9 +46,60 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"ai" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -6;
+	pixel_y = 26
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/engineering)
+"aj" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
+"ak" = (
+/obj/structure/machinery/light/small{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = -16
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
 "al" = (
 /obj/structure/machinery/power/terminal{
 	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"am" = (
+/obj/structure/sign{
+	desc = "Comrade! Don't forget to return your state-issued items to your assigned locker before returning to hypersleep!";
+	icon_state = "securearea";
+	name = "Vnimanie! 注意!";
+	pixel_y = -34;
+	layer = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 27;
+	pixel_y = -15
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
@@ -127,13 +193,15 @@
 	color = "#8B9490";
 	pixel_x = -3
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/clothing/mask/gas/military/upp{
 	pixel_x = -8;
 	pixel_y = 2
 	},
 /obj/item/clothing/mask/gas/military/upp{
 	pixel_y = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
@@ -144,11 +212,26 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
 "aw" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"ax" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -6
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = 16
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/engineering)
 "ay" = (
 /obj/effect/decal/warning_stripes{
@@ -163,6 +246,9 @@
 	pixel_x = 6;
 	pixel_y = -2
 	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "az" = (
@@ -174,6 +260,27 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"aA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
+"aB" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -8;
+	can_block_movement = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
 "aC" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -256,6 +363,9 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"aJ" = (
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
 "aK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -334,6 +444,16 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"aP" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 27;
+	pixel_y = -15;
+	layer = 6
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
 "aQ" = (
 /obj/structure/machinery/recharge_station{
 	pixel_y = 13
@@ -365,6 +485,12 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"aT" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -6
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
 "aU" = (
 /obj/structure/machinery/body_scanconsole{
 	dir = 1;
@@ -383,6 +509,9 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "aV" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "aW" = (
@@ -413,6 +542,16 @@
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
+"aZ" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
@@ -466,10 +605,18 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
-"bf" = (
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_y = 30
+"be" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = -7
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
+"bf" = (
 /obj/item/prop/magazine/book{
 	desc = "A science fiction novel of Russian origin. You should probably actually read it instead of passing off your knowledge of the movie as knowlege of the book.";
 	name = "Roadside Picnic";
@@ -477,11 +624,23 @@
 	pixel_x = -3
 	},
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/item/device/flashlight{
+	pixel_x = 4;
+	pixel_y = -5
+	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
 "bg" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 3
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
@@ -500,6 +659,9 @@
 	pixel_x = 16;
 	pixel_y = -15;
 	layer = 6
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = 32
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
@@ -607,6 +769,12 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
+"bs" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/engineering)
 "bt" = (
 /obj/structure/prop/invuln/overhead_pipe,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -614,6 +782,16 @@
 	icon_state = "exposed01-supply"
 	},
 /obj/structure/disposalpipe/segment,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
+"bu" = (
+/obj/structure/pipes/standard/manifold/fourway/visible/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 27;
+	pixel_y = -15;
+	layer = 6
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
 "bv" = (
@@ -794,6 +972,15 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"bN" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -6
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/engineering)
 "bO" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_x = -9;
@@ -864,6 +1051,16 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/cryo_cells)
+"bW" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
 "bX" = (
 /obj/structure/machinery/computer/cryopod{
 	pixel_x = -6;
@@ -907,6 +1104,17 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"cb" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
 "cc" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
@@ -995,6 +1203,16 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"ck" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
 "cl" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -1011,6 +1229,24 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
+"cm" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = 16
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
 "cn" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -1052,6 +1288,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"cs" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
+	can_block_movement = 0;
+	pixel_y = 10
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/engineering)
 "ct" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1098,6 +1341,26 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
+"cx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 3
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 27;
+	pixel_y = -15;
+	layer = 6
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 27;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/engineering)
 "cy" = (
 /obj/structure/machinery/shower{
 	dir = 4
@@ -1184,6 +1447,30 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"cH" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = -16
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/engineering)
+"cI" = (
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_x = -6;
+	pixel_y = -26
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/engineering)
 "cM" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/decal/warning_stripes{
@@ -3353,7 +3640,6 @@
 	},
 /obj/item/tool/pen/clicky{
 	desc = "It's a normal black ink pen.";
-	name = "pen";
 	layer = 3
 	},
 /obj/item/device/flashlight/lamp{
@@ -3376,7 +3662,6 @@
 	},
 /obj/item/tool/pen/clicky{
 	desc = "It's a normal black ink pen.";
-	name = "pen";
 	layer = 3
 	},
 /obj/item/device/flashlight/lamp{
@@ -4028,8 +4313,7 @@
 	pixel_x = -6
 	},
 /obj/item/tool/pen/clicky{
-	desc = "It's a normal black ink pen.";
-	name = "pen"
+	desc = "It's a normal black ink pen."
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
@@ -5785,8 +6069,7 @@
 	pixel_y = -1
 	},
 /obj/item/tool/pen/clicky{
-	desc = "It's a normal black ink pen.";
-	name = "pen"
+	desc = "It's a normal black ink pen."
 	},
 /obj/item/device/flashlight/lamp{
 	light_power = 0.8;
@@ -7944,8 +8227,7 @@
 "ze" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/pen/clicky{
-	desc = "It's a normal black ink pen.";
-	name = "pen"
+	desc = "It's a normal black ink pen."
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -8216,6 +8498,9 @@
 /obj/structure/machinery/door_control{
 	id = "chapaev_engi";
 	pixel_y = -23
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
@@ -20766,12 +21051,12 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20918,13 +21203,13 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -21070,14 +21355,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
+af
+af
+af
+af
+af
+af
 af
 af
 af
@@ -21222,14 +21507,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
+af
+cm
+cb
+be
+aB
+aj
 af
 af
 aY
@@ -21374,14 +21659,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
+af
+cs
+aJ
+bs
+aJ
+ak
 af
 bf
 ba
@@ -21390,7 +21675,7 @@ af
 YA
 aI
 wO
-wO
+ad
 af
 at
 ah
@@ -21526,15 +21811,15 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
 bi
+cx
+aP
+bu
+aP
+am
+ae
 bg
 bb
 aW
@@ -21678,15 +21963,15 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
-af
+cI
+aT
+aT
+bN
+aT
+ax
+ai
 bh
 bc
 aX
@@ -21830,14 +22115,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
 ac
+af
+cH
+ck
+bW
+aZ
+aA
 af
 af
 bd
@@ -21846,7 +22131,7 @@ af
 ug
 aM
 wO
-wO
+ad
 af
 Fg
 as
@@ -21982,14 +22267,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
-ac
+ab
+af
+af
+af
+af
+af
+af
 af
 af
 af
@@ -22134,14 +22419,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 aa
-ab
+ac
+ac
+ac
+ac
+ac
+ac
+ac
 ac
 ac
 ac
@@ -22286,12 +22571,12 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
