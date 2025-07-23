@@ -823,10 +823,10 @@
 	desc = "A scratched up wooden crate. What is inside?"
 	icon_state = "kit_case"
 	storage_slots = 2
-	can_hold = list(/obj/item/weapon/gun/shotgun/pump/type23/unloaded, /obj/item/storage/pouch/shotgun/heavyslug, /obj/item/weapon/gun/pistol/skorpion, /obj/item/storage/pouch/magazine/pistol,/obj/item/weapon/gun/rifle/lw317 , /obj/item/weapon/gun/smg/pps43/extended_mag,  /obj/item/storage/pouch/magazine )
+	can_hold = list(/obj/item/weapon/gun/shotgun/double/upp, /obj/item/storage/pouch/shotgun, /obj/item/weapon/gun/pistol/skorpion, /obj/item/storage/pouch/magazine/pistol,/obj/item/ammo_magazine/handful/shotgun/buckshot)
 
 /obj/item/storage/box/guncase/random_old_upp_gun/fill_preset_inventory()
-	var/random_weapon = rand(1,3)
+	var/random_weapon = rand(1,2)
 	switch(random_weapon)
 		if(1)
 			storage_slots = 3
@@ -838,15 +838,8 @@
 			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
 			new /obj/item/ammo_magazine/handful/shotgun/buckshot(pouch)
 			new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
-
-		if(2)
-			new /obj/item/weapon/gun/smg/pps43/extended_mag(src)
-			var/obj/item/storage/pouch/magazine/pouch = new /obj/item/storage/pouch/magazine(src)
-			new /obj/item/ammo_magazine/smg/ppsh/extended(pouch)
-			new /obj/item/ammo_magazine/smg/ppsh/extended(pouch)
-			new /obj/item/ammo_magazine/smg/ppsh/extended(pouch)
 			pouch.update_icon()
-		if(3)
+		if(2)
 			new /obj/item/weapon/gun/pistol/skorpion(src)
 			var/obj/item/storage/pouch/magazine/pistol/pouch = new /obj/item/storage/pouch/magazine/pistol(src)
 			new /obj/item/ammo_magazine/pistol/skorpion(pouch)
