@@ -481,6 +481,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/m1911(src)
 
+/obj/item/storage/pouch/magazine/canc/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/lw317(src)
+
 /obj/item/storage/pouch/magazine/upp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71(src)
@@ -674,6 +678,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/full/surgery/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
