@@ -76,61 +76,65 @@
 
 		return FALSE
 
-	if(ishuman(user) && ishuman_strict(target) && user.a_intent == INTENT_GRAB && user.zone_selected == "mouth" && force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
+	if(ishuman(user) && ishuman_strict(target) && user.a_intent == INTENT_GRAB && user.zone_selected == "mouth")
 		var/mob/living/carbon/human/human_target = target
 		var/mob/living/carbon/human/human_user = user
-		if(!user.get_target_lock(target.faction_group))
-			if(human_target.pulledby == human_user)
-				if(target.dir == user.dir && target.loc == get_step(user, user.dir))
-					user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
-					to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
+		if(force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
+			if(!user.get_target_lock(target.faction_group))
+				if(human_target.pulledby == human_user)
+					if(target.dir == user.dir && target.loc == get_step(user, user.dir))
+						user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
+						to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
 
-					throat_slit_stun(target, user)
-					switch(target.dir)
-						if(NORTH)
-							human_target.pixel_y -= 12
-						if(EAST)
-							human_target.pixel_x -= 12
-						if(SOUTH)
-							human_target.pixel_y += 12
-						if(WEST)
-							human_target.pixel_x += 12
+						throat_slit_stun(target, user)
+						switch(target.dir)
+							if(NORTH)
+								human_target.pixel_y -= 12
+							if(EAST)
+								human_target.pixel_x -= 12
+							if(SOUTH)
+								human_target.pixel_y += 12
+							if(WEST)
+								human_target.pixel_x += 12
 
-					if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
-						remove_throat_slit_stun(target)
+						if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
+							remove_throat_slit_stun(target)
+							human_target.pixel_y = 0
+							human_target.pixel_x = 0
+							return FALSE
+
+						target.visible_message(SPAN_DANGER("[user] slit open [target]'s throat! They made quite a bloody mess!"), SPAN_HIGHDANGER("[user] slits your throat! Oh god!"))
+						to_chat(user, SPAN_DANGER("You slit open their throat. No getting up from that."))
+						playsound(target, 'sound/weapons/slice.ogg', 25, 1)
+						target.apply_damage(100, BRUTE, "head")
+						target.apply_damage(300, OXYLOSS)
+
+						var/obj/limb/head/head = human_target.get_limb("head")
+						ADD_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
+						human_target.spray_blood(rand(0,181), head)
 						human_target.pixel_y = 0
 						human_target.pixel_x = 0
+
+						if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
+							target.death(create_cause_data("throat slit"))
+							REMOVE_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
+							human_target.spray_blood(rand(0,181), head)
+
+						remove_throat_slit_stun(target)
+						return TRUE
+
+					else
+						to_chat(user, SPAN_WARNING("You must be behind your target!"))
 						return FALSE
-
-					target.visible_message(SPAN_DANGER("[user] slit open [target]'s throat! They made quite a bloody mess!"), SPAN_HIGHDANGER("[user] slits your throat! Oh god!"))
-					to_chat(user, SPAN_DANGER("You slit open their throat. No getting up from that."))
-					playsound(target, 'sound/weapons/slice.ogg', 25, 1)
-					target.apply_damage(100, BRUTE, "head")
-					target.apply_damage(300, OXYLOSS)
-
-					var/obj/limb/head/head = human_target.get_limb("head")
-					ADD_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
-					human_target.spray_blood(rand(0,181), head)
-					human_target.pixel_y = 0
-					human_target.pixel_x = 0
-
-					if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
-						target.death(create_cause_data("throat slit"))
-						REMOVE_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
-						human_target.spray_blood(rand(0,181), head)
-
-					remove_throat_slit_stun(target)
-					return TRUE
-
 				else
-					to_chat(user, SPAN_WARNING("You must be behind your target!"))
+					to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
 					return FALSE
 			else
-				to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
+				to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you? They're on your side!"))
 				return FALSE
 		else
-			to_chat(user, SPAN_WARNING("Why would you think to do this? What is wrong with you? They're on your side!"))
-			return FALSE
+			to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
+				return FALSE
 
 	/////////////////////////
 	user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(target)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
