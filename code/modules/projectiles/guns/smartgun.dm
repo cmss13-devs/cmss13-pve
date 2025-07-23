@@ -82,6 +82,8 @@
 	MD = new(src)
 	battery = new /obj/item/smartgun_battery(src)
 	. = ..()
+	var/datum/action/item_action/smartgun/toggle_recoil_compensation/recoil_comp = locate(/datum/action/item_action/smartgun/toggle_recoil_compensation) in actions
+	recoil_comp.action_activate()
 	update_icon()
 
 /obj/item/weapon/gun/smartgun/Destroy()
@@ -126,8 +128,10 @@
 	var/message = "[rounds ? "Ammo counter shows [rounds] round\s remaining." : "It's dry."]"
 	. += message
 	. += "The restriction system is [iff_enabled ? "<B>on</b>" : "<B>off</b>"]."
-	var/message_armbrace = "[armbrace ? SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.") : SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")]"
-	. += message_armbrace
+	if(armbrace)
+		. += SPAN_HELPFUL("The articulation arm is locked to your side, allowing it to be fired while lying down.")
+	else
+		. += SPAN_ORANGE("The articulation arm is not locked to your side, it can be knocked out of your hands.")
 	if(battery && get_dist(user, src) <= 1)
 		. += "A small gauge on [battery] reads: Power: [battery.power_cell.charge] / [battery.power_cell.maxcharge]."
 
@@ -431,6 +435,29 @@
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL
 	else
 		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+
+/obj/item/weapon/gun/smartgun/proc/force_off_armbrace(mob/user)
+	if(armbrace)
+		to_chat(user, "[icon2html(src, usr)] You <B>deactuate</b> \the [src]'s armbrace.")
+		playsound(loc,'sound/machines/click.ogg', 25, 1)
+		armbrace = FALSE
+		flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
+		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
+		armbrace_action.button.icon_state = "template"
+
+/obj/item/weapon/gun/smartgun/unequipped(mob/user, slot)
+	. = ..()
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user), 0) //yeah
+
+/obj/item/weapon/gun/smartgun/proc/emergency_snap_back(mob/user)
+	if(ishuman(user))
+		if(!ishuman(loc))
+			var/mob/living/carbon/human/armbrace_human = user
+			if(isitem(armbrace_human.get_item_by_slot(auto_retrieval_slot)))
+				if(istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner) || istype(armbrace_human.wear_suit, /obj/item/clothing/suit/marine/smartgunner))
+					armbrace_human.put_in_hands(src, drop_on_fail = TRUE)
+		force_off_armbrace(user)
+
 
 /obj/item/weapon/gun/smartgun/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
 	if(user.IsKnockDown())
