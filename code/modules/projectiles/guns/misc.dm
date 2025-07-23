@@ -375,7 +375,7 @@
 
 /obj/item/weapon/gun/pkp/iff/unequipped(mob/user, slot)
 	. = ..()
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/weapon/gun/pkp/iff, emergency_snap_back), user), 0) //yeah
+	INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/weapon/gun/pkp/iff, emergency_snap_back), user) //yeah
 
 /obj/item/weapon/gun/pkp/iff/proc/emergency_snap_back(mob/user)
 	if(ishuman(user))

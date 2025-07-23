@@ -450,14 +450,14 @@
 	if(!armbrace)
 		to_chat(user, "[icon2html(src, usr)] You <B>actuate</b> \the [src]'s armbrace.")
 		playsound(loc,'sound/machines/click.ogg', 25, 1)
-		armbrace = FALSE
+		armbrace = TRUE
 		flags_item |= NODROP|FORCEDROP_CONDITIONAL
 		var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in actions
 		armbrace_action.button.icon_state = "template_on"
 
 /obj/item/weapon/gun/smartgun/unequipped(mob/user, slot)
 	. = ..()
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user), 0) //yeah
+	INVOKE_NEXT_TICK(src, TYPE_PROC_REF(/obj/item/weapon/gun/smartgun, emergency_snap_back), user) //yeah
 
 /obj/item/weapon/gun/smartgun/proc/emergency_snap_back(mob/user)
 	if(ishuman(user))
