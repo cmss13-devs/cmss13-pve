@@ -65,13 +65,12 @@
 /obj/item/clothing/suit/storage/marine/smartgunner/unequipped(mob/user, slot)
 	. = ..()
 	for(var/obj/item/weapon/gun/smartgun/smartgun_armbrace in user.contents)
-		if(smartgun_armbrace.armbrace)
-			to_chat(user, "[icon2html(src, usr)] You <B>deactuate</b> \the [src]'s armbrace.")
-			playsound(smartgun_armbrace.loc,'sound/machines/click.ogg', 25, 1)
-			smartgun_armbrace.armbrace = FALSE
-			smartgun_armbrace.flags_item &= ~(NODROP|FORCEDROP_CONDITIONAL)
-			var/datum/action/item_action/armbrace_action = locate(/datum/action/item_action/smartgun/toggle_armbrace) in smartgun_armbrace.actions
-			armbrace_action.button.icon_state = "template"
+		smartgun_armbrace.force_off_armbrace(user)
+		user.drop_inv_item_on_ground(smartgun_armbrace)
+	for(var/obj/item/weapon/gun/pkp/iff/pkp_armbrace in user.contents)
+		pkp_armbrace.force_off_armbrace(user)
+		user.drop_inv_item_on_ground(pkp_armbrace)
+	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
