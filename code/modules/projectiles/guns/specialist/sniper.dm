@@ -576,6 +576,11 @@
 	type88sight.Attach(src)
 	update_attachable(type88sight.slot)
 
+/obj/item/weapon/gun/rifle/sniper/svd/iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
+	))
+
 /datum/action/item_action/toggle_iff_svd/New(Target, obj/item/holder)
 	. = ..()
 	name = "Toggle IFF"

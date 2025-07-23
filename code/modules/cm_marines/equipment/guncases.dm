@@ -401,12 +401,13 @@
 	name = "\improper Type 88-I sniper case"
 	desc = "A case for storing a Type 88-I sniper rifle."
 	icon_state = "t88case"
-	storage_slots = 9
+	storage_slots = 10
 	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
 	max_w_class = SIZE_HUGE
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
+	new /obj/item/ammo_magazine/sniper/svd(src)
 	new /obj/item/ammo_magazine/sniper/svd(src)
 	new /obj/item/ammo_magazine/sniper/svd(src)
 	new /obj/item/ammo_magazine/sniper/svd(src)
@@ -433,6 +434,7 @@
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
+	new /obj/item/ammo_magazine/sniper/svd/heap(src)
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)
 	new /obj/item/ammo_magazine/sniper/svd/heap(src)

@@ -44,13 +44,13 @@
 
 /datum/ammo/bullet/sniper/upp/heap
 	name = "high velocity armor-piercing sniper bullet"
-	damage = 100
-	penetration = ARMOR_PENETRATION_TIER_7
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_8
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/upp/flak
 	name = "flak sniper bullet"
-	damage = 50
+	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
