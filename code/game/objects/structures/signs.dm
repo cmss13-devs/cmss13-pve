@@ -167,7 +167,7 @@
 /obj/structure/sign/banners/brazil_worn
 	name = "\improper Worn Brazil flag"
 	desc = "A flag of the Brazil. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
-	icon_state = "brazilflagworn"
+	icon_state = "brazilflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
