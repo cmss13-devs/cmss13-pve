@@ -34,9 +34,10 @@
 			. += shoes.slowdown
 
 		var/zombie_limb_slowdown = 0
-		for(var/organ_name in list("l_foot","r_foot","l_leg","r_leg","chest","groin","head"))
-			var/obj/limb/check_limb = get_limb(organ_name)
-			if(!iszombie(src))
+		if(!iszombie(src))
+			for(var/organ_name in list("l_foot","r_foot","l_leg","r_leg","chest","groin","head"))
+				var/obj/limb/check_limb = get_limb(organ_name)
+
 				if(!check_limb || !check_limb.is_usable())
 					. += MOVE_REDUCTION_LIMB_DESTROYED
 				// Splinted limbs are not as punishing
@@ -44,12 +45,13 @@
 					. += MOVE_REDUCTION_LIMB_SPLINTED
 				else if(check_limb.status & LIMB_BROKEN)
 					. += MOVE_REDUCTION_LIMB_BROKEN
-			else
+		else
+			for(var/obj/limb/check_limb in limbs)
 				if(!check_limb || !check_limb.is_usable()) //Zombies might be made of paper, but they care less about losing limbs
 					zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_DESTROYED
 				else if(check_limb.status & LIMB_BROKEN)
 					zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_BROKEN
-		. += min(zombie_limb_slowdown, ZOMBIE_MOVE_REDUCTION_LIMB_DESTROYED*3) //Only care up to the third limb lost
+		. += min(zombie_limb_slowdown, ZOMBIE_MOVE_REDUCTION_CAP) //Only care up to a point
 
 	var/hungry = (500 - nutrition)/5 // So overeat would be 100 and default level would be 80
 	if(hungry >= 50 && !iszombie(src)) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under

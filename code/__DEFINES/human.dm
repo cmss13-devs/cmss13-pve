@@ -13,7 +13,7 @@
 
 #define HUMAN_STRIP_DELAY 5
 #define POCKET_STRIP_DELAY 5
-#define HUMAN_DEAD_DECAP_DELAY 10 SECONDS
+#define HUMAN_DEAD_DECAP_DELAY 8 SECONDS
 
 ///////////////////LIMB FLAGS///////////////////
 

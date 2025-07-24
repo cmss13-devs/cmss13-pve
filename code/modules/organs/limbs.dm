@@ -188,7 +188,10 @@
 
 	var/damage = armor_damage_reduction(GLOB.marine_organ_damage, brute, armor, sharp ? ARMOR_SHARP_INTERNAL_PENETRATION : 0, 0, 0, max_damage ? (100*(max_damage-brute_dam) / max_damage) : 100)
 
-	if(internal_organs && prob(damage*DMG_ORGAN_DAM_PROB_MULT + brute_dam*BRUTE_ORGAN_DAM_PROB_MULT))
+	var/chance_multi = DMG_ORGAN_DAM_PROB_MULT
+	if(iszombie(owner))
+		chance_multi = ZOMBIE_ORGAN_DAM_PROB_MULT
+	if(internal_organs && prob(damage*chance_multi + brute_dam*BRUTE_ORGAN_DAM_PROB_MULT))
 		//Damage an internal organ
 		var/datum/internal_organ/I = pick(internal_organs)
 		I.take_damage(brute / 2)
