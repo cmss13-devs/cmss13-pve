@@ -5,6 +5,7 @@
 	icon_state = "lv-626"
 	can_build_special = TRUE
 	minimap_color = MINIMAP_AREA_COLONY
+	powernet_name = "station"
 //======================================================================================PARENT
 /area/binhai/basemil
 	name = "MSS & UPP Base"
@@ -18,19 +19,16 @@
 	ambience_exterior = AMBIENCE_CAVE
 	soundscape_playlist = SCAPE_PL_CAVE
 	base_muffle = MUFFLE_HIGH
-	powernet_name = "station"
 /area/binhai/hab
 	name = "Binhai Habitation Block"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
 	soundscape_playlist = AMBIENCE_SHIP
-	powernet_name = "station"
 /area/binhai/main
 	name = "Binhai Main Block"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	sound_environment = SOUND_ENVIRONMENT_AUDITORIUM
 	soundscape_playlist = AMBIENCE_SHIP
-	powernet_name = "station"
 /area/binhai/oob
 	name = "OOB"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
@@ -38,14 +36,12 @@
 /area/binhai/other
 	name = "Binhai Other"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
-	powernet_name = "station"
 //=============================================================================SHUTTLES
 /area/binhai/shuttles/drop1
 	name = "Hangar Block - Supply Pad"
 	icon_state = "shuttle"
 	icon = 'icons/turf/area_varadero.dmi'
 	minimap_color = MINIMAP_AREA_LZ
-	powernet_name = "station"
 /area/binhai/shuttles/drop2
 	name = "Military Block - Landing Pad"
 	icon_state = "shuttle2"

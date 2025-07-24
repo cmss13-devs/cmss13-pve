@@ -493,6 +493,12 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/binhai/other/mainlower)
+"abn" = (
+/obj/structure/sign/safety/ladder{
+	pixel_x = 15
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/binhai/basemil/lower)
 "abo" = (
 /obj/structure/platform/mineral{
 	color = "#464847"
@@ -8748,9 +8754,6 @@
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "hrU" = (
-/obj/structure/sign/safety/ladder{
-	pixel_x = 15
-	},
 /obj/structure/sign/safety/one,
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/binhai/other/mineprep)
@@ -21521,7 +21524,7 @@
 	pixel_y = 1
 	},
 /obj/structure/machinery/door_control/brbutton/alt{
-	name = "Main Block Lockdown";
+	name = "Research Lockdown";
 	id = "ResearchSh";
 	req_access_txt = 240;
 	pixel_y = 7;
@@ -40743,7 +40746,7 @@ iJV
 iJV
 iJV
 iJV
-rsD
+tux
 rPj
 mAr
 pJL
@@ -42438,7 +42441,7 @@ tvl
 rsD
 tux
 tux
-tux
+abn
 hhC
 mAr
 eSS
@@ -49207,7 +49210,7 @@ qBi
 qBi
 qBi
 fBE
-hBz
+qBi
 vjN
 ufk
 ufk
@@ -62661,7 +62664,7 @@ xYx
 lCV
 hrU
 sjx
-lCV
+qTe
 qTe
 oEK
 hpi
