@@ -163,7 +163,7 @@
 			to_chat(receiving_client, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("You've been beheaded! Your body will no longer rise.")))
 
 ///Check if the zombie can be revived, if not: calls handle_perma_dead
-/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie, check_only = FALSE)
+/datum/species/zombie/proc/can_rise_again(mob/living/carbon/human/zombie)
 	if(!zombie.undefibbable)
 		var/accumalated_organ_damage = 0
 		accumalated_organ_damage += zombie.getBrainLoss()
