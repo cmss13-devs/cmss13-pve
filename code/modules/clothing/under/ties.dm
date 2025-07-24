@@ -1344,7 +1344,7 @@
 	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "u_groinplate"
 	item_state = "u_groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
@@ -1472,7 +1472,6 @@
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(
@@ -1667,7 +1666,6 @@
 	icon_state = "upp_webbing_magazine"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	storage_slots = 4
@@ -1685,7 +1683,6 @@
 	icon_state = "upp_webbing_small"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"
@@ -1693,4 +1690,3 @@
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY

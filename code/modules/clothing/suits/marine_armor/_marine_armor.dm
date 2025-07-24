@@ -968,8 +968,6 @@
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board under the PBAS program. Surprisingly uncomfortable, even compared to the old M3 series armor. At least it's compatible with attachable suplementary armor components of the M3 series."
 	icon_state = "io"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/medium/rto/army/medium
 
