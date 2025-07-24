@@ -1064,7 +1064,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
 	icon_state = "heavy_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
@@ -1922,34 +1922,30 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
-#undef HELMET_GARB_RELAY_ICON_STATE
-
 //=USASF & ARMY=\\
 
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
 	name = "\improper MK25 para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/navy
 	name = "\improper M12 pattern naval-deployment helmet"
 	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship."
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/army
-	name = "\improper M12 pattern helmet"
-	desc = "Despite it failing to be procured by the USCMC, the Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
+	name = "\improper Personal Head Armor System helmet"
+	desc = "Despite it failing to be procured by the USCMC, the US Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time under the PHAS program, a complementary program to the PBAS."
+	icon_state = "army_helmet"
+	item_state = "army_helmet"
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/army)
-	start_down_visor_type = /obj/item/device/helmet_visor/medical/army
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers
-
 
 /obj/item/clothing/head/helmet/construction
 	name = "utility helmet"
