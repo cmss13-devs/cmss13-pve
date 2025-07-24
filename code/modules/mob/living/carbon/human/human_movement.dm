@@ -52,7 +52,7 @@
 		. += min(zombie_limb_slowdown, ZOMBIE_MOVE_REDUCTION_LIMB_DESTROYED*3) //Only care up to the third limb lost
 
 	var/hungry = (500 - nutrition)/5 // So overeat would be 100 and default level would be 80
-	if(hungry >= 50) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under
+	if(hungry >= 50 && !iszombie(src)) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under
 		reducible_tally += hungry/50 //Goes from a slowdown of 1 all the way to 2 for total starvation
 
 	//Equipment slowdowns
