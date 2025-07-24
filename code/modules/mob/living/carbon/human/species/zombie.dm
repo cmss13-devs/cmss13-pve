@@ -8,7 +8,7 @@
 	group = SPECIES_HUMAN
 	name = SPECIES_ZOMBIE
 	name_plural = "Zombies"
-	slowdown = -0.5 //Zombies don't care about shoes now. shoes is usually -1. So if they lose a foot they're not eating a 1 slowdown.
+	slowdown = -0.25 //Zombies don't care about shoes now. shoes is usually -1. So if they lose a foot they're not eating a 1 slowdown.
 	blood_color = BLOOD_COLOR_ZOMBIE
 	icobase = 'icons/mob/humans/species/r_goo_zed.dmi'
 	deform = 'icons/mob/humans/species/r_goo_zed.dmi'
