@@ -257,7 +257,7 @@
 
 /obj/item/clothing/glasses/night/m56_goggles/upp
 	name = "\improper RADIO head rig"
-	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
+	desc = "Developed for use with the RFVS-37, the Integrated Auto-Rifleman Optronic Device enables the riflemen of the UPP SOF to visually search for targets in low-visibility conditions, while also enabling safe use of the weapon itself."
 	icon_state = "radio_head_rig"
 	deactive_state = "radio_head_rig_0"
 	hud_type = list(MOB_HUD_FACTION_UPP)

@@ -584,8 +584,6 @@
 	throwforce = 25 //pretty aerodynamic
 	throw_range = 7
 
-
-
 /obj/item/weapon/gun/smartgun/rmc
 	name = "\improper L56A2 smartgun"
 	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
