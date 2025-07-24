@@ -255,6 +255,19 @@
 	vision_flags = SEE_TURFS|SEE_MOBS
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE)
 
+/obj/item/clothing/glasses/night/m56_goggles/upp
+	name = "\improper RADIO head rig"
+	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
+	icon_state = "radio_head_rig"
+	deactive_state = "radio_head_rig_0"
+	hud_type = list(MOB_HUD_FACTION_UPP)
+
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = 255
+
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
 	gender = NEUTER

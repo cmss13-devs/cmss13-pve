@@ -162,6 +162,25 @@
 	icon_state = "m56_drum"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
+
+/obj/item/ammo_magazine/smartgun/holo_targetting
+	name = "holotargetting smartgun drum"
+	desc = "Holotargetting rounds for use in the royal marines commando L56A2 smartgun."
+	icon_state = "m56_drum"
+	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
+	gun_type = /obj/item/weapon/gun/smartgun/rmc
+
+/obj/item/ammo_magazine/smartgun/upp
+	name = "automated machinegun drum"
+	caliber = "12.7x40mm"
+	max_rounds = 250
+	desc = "Simple high-caliber 250 round machinegun drum."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "rfvs37"
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	gun_type = /obj/item/weapon/gun/smartgun/upp
+
+
 //-------------------------------------------------------
 //Flare gun. Close enough?
 /obj/item/ammo_magazine/internal/flare

@@ -286,6 +286,47 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
 	slowdown(entity, bullet)
 
+/datum/ammo/bullet/rifle/heavy/upp
+	name = "12.7x40 bullet"
+	damage = 90 //giant fuck off bullet
+	damage_falloff = 0
+
+/datum/ammo/bullet/rifle/heavy/upp/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	knockback(target, fired_proj, max_range = 5)
+
+/datum/ammo/bullet/rifle/heavy/upp/ap
+	name = "12.7x40 armor-piercing bullet"
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/upp/flak
+	name = "12.7x40 flak bullet" //the gun makes the round detonate really early or something
+	damage = 20
+	penetration = -ARMOR_PENETRATION_TIER_2
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	damage_var_low = PROJECTILE_VARIANCE_TIER_8
+	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	bonus_projectiles_type = /datum/ammo/bullet/rifle/heavy/upp/flak_spread
+
+/datum/ammo/bullet/rifle/heavy/upp/flak/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	knockback(target, fired_proj, max_range = 3)
+
+/datum/ammo/bullet/rifle/heavy/upp/flak_spread
+	name = "12.7x40 flak"
+	damage = 15
+	penetration = -ARMOR_PENETRATION_TIER_2
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	damage_var_low = PROJECTILE_VARIANCE_TIER_8
+	damage_var_high = PROJECTILE_VARIANCE_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_2
+
+/datum/ammo/bullet/rifle/heavy/upp/flak_spread/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	knockback(target, fired_proj, max_range = 3)
+
+
 // Specialist M42A rounds
 
 /datum/ammo/bullet/rifle/heavy/heap/sniper
