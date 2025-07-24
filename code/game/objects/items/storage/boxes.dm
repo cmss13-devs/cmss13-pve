@@ -335,7 +335,7 @@
 	icon_state = "lemon_drop_box"
 	item_state = "lemon_drop_box"
 	can_hold = list(/obj/item/reagent_container/food/snacks/lemondrop)
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY //because otherwise it won't go back into MREs, it's not like people are minmaxing with lemon drops anyway
 	storage_slots = 8
 
 /obj/item/storage/box/lemondrop/fill_preset_inventory()
@@ -942,3 +942,12 @@
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+
+/obj/item/storage/box/cheeseslices
+	name = "box of 'cheese-product' slices"
+	desc = "Smells like plastic."
+	icon_state = "cheese_kit"
+
+/obj/item/storage/box/cheeseslices/fill_preset_inventory()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft(src)

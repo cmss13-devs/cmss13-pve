@@ -174,7 +174,7 @@
 					marshal += list(serialized)
 				else if(human.faction in FACTION_LIST_DUTCH)
 					dutch += list(serialized)
-				else if(human.faction in FACTION_LIST_MARINE)
+				else if(human.faction in FACTION_LIST_UA)
 					marines += list(serialized)
 				else if(issurvivorjob(human.job))
 					survivors += list(serialized)

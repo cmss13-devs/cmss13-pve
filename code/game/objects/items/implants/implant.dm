@@ -13,6 +13,18 @@
 	var/allow_reagents = 0
 	var/malfunction = 0
 
+/obj/item/implant/proc/do_implant(mob/living/carbon/implantee, target_limb)
+	implanted(implantee)
+	forceMove(implantee)
+	imp_in = implantee
+	implanted = TRUE
+	if(ishuman(implantee))
+		var/mob/living/carbon/human/human = implantee
+		var/obj/limb/affected = human.get_limb(target_limb)
+		affected.implants += src
+		part = affected
+
+
 /obj/item/implant/proc/trigger(emote, source as mob)
 	return
 
@@ -499,3 +511,77 @@ the implant may become unstable and either pre-maturely inject the subject or si
 
 /obj/item/implant/compressed/islegal()
 	return 0
+
+/obj/item/implant/poison_tooth
+	name = "tooth"
+	desc = "This one seems particularly clean."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "tooth"
+	w_class = SIZE_TINY
+	var/activation_emote
+	var/poison_reagent = "cyanide"
+	var/poison_amount = 50
+
+/obj/item/implant/poison_tooth/meltdown()
+	return
+
+/obj/item/implant/poison_tooth/trigger(emote, mob/source)
+	if (emote == activation_emote)
+		activate()
+
+/obj/item/implant/poison_tooth/activate()
+	if(iscarbon(imp_in))
+		var/mob/living/carbon/mob = imp_in
+		if(!mob.reagents)
+			return
+		to_chat(mob, SPAN_WARNING("You feel your poison tooth shatter, sprinkling some liquid into your mouth..."))
+		mob.reagents.add_reagent(poison_reagent, poison_amount)
+		playsound(imp_in, 'sound/items/poison_tooth.ogg', 15, TRUE)
+	qdel(src)
+
+/obj/item/implant/poison_tooth/implanted(mob/source)
+	activation_emote = tgui_input_list(usr, "Choose activation emote:", "Emote", list("grin", "smile"))
+	if (source.mind)
+		source.mind.store_memory("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it.", 0, 0)
+	to_chat(source, SPAN_NOTICE("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it"))
+	return TRUE
+
+/obj/item/implant/poison_tooth/islegal()
+	return FALSE
+
+/obj/item/implant/poison_tooth/preset/implanted(mob/source)
+	activation_emote = pick("grin", "smile")
+	if (source.mind)
+		source.mind.store_memory("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it.", 0, 0)
+	to_chat(source, SPAN_NOTICE("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it"))
+	return TRUE
+
+/obj/item/implant/poison_tooth/cia
+	poison_reagent = "cia_toxin"
+
+/obj/item/implant/poison_tooth/preset/cia
+	poison_reagent = "cia_toxin"
+
+/obj/item/implant/poison_tooth/mss
+	poison_reagent = "mss_toxin"
+
+/obj/item/implant/poison_tooth/preset/mss
+	poison_reagent = "mss_toxin"
+
+
+/obj/item/storage/syringe_case/poison_tooth
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/implant/poison_tooth,
+		/obj/item/tool/surgery/hemostat/miniature,
+		/obj/item/paper,
+		/obj/item/reagent_container/syringe,
+	)
+
+/obj/item/storage/syringe_case/poison_tooth/fill_preset_inventory()
+	new /obj/item/implant/poison_tooth(src)
+	new /obj/item/tool/surgery/hemostat/miniature(src)
+	new /obj/item/reagent_container/syringe/oxycodone(src)
+	var/obj/item/paper/paper = new(src)
+	paper.info = "1. Inject a dose of oxycodone.\n2. Remove one of your molars from your <b>mouth</b> using a <b>hemostat</b>\n3. Carefully insert the tooth."
+	paper.update_icon()
