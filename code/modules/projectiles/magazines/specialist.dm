@@ -115,9 +115,13 @@
 
 /obj/item/ammo_magazine/sniper/svd/flak
 	name = "\improper Type-88 flak Magazine (7.62x54mmR)"
-	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds."
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds, which explode into spall on impact."
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 	default_ammo = /datum/ammo/bullet/sniper/upp/flak
+
+/obj/item/ammo_magazine/sniper/svd/flak/Initialize(mapload, spawn_empty)
+	. = ..()
+	desc = desc + SPAN_WARNING(" Be careful of collateral damage to friendlies caused by the spall.")
 
 /obj/item/ammo_magazine/sniper/svd/pve
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"

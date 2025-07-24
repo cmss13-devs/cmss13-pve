@@ -1477,7 +1477,7 @@
 	name = "\improper M3 Pattern Small Pouch Webbing"
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load For Army Props

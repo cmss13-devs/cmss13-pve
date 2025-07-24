@@ -331,6 +331,23 @@
 	if(locate(/obj/item/weapon/gun/shotgun/type23) in contents)
 		overlays += image(icon, "+ks29")
 
+/obj/item/storage/box/guncase/heavy/smg
+	name = "\improper M39 submachinegun case"
+	desc = "A case for storing a M39 submachinegun and accompanying magazines."
+	icon_state = "guncase"
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/smg/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+
 /obj/item/storage/box/guncase/heavy/smg/type64
 	name = "\improper Type 64 submachinegun case"
 	desc = "A case for storing a Type 64 submachinegun."
@@ -339,14 +356,6 @@
 	can_hold = list(/obj/item/weapon/gun/smg/bizon, /obj/item/ammo_magazine/smg/bizon)
 	max_w_class = SIZE_HUGE
 
-/obj/item/storage/box/guncase/heavy/smg/type64/fill_preset_inventory()
-	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
-	new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64/update_icon()
 	overlays.Cut()
@@ -360,43 +369,34 @@
 	var/mag_tally = 0
 	for(var/obj/item/ammo_magazine/smg/bizon/mag in contents)
 		mag_tally++
-	if(mag_tally >= 2)
-		var/image/source_image = image(icon, "+t64_mag")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(mag_tally > 5)
-		var/image/source_image = image(icon, "+t64_mag")
-		source_image.pixel_x = 6
-		overlays += source_image
+		if(mag_tally >= 2)
+			if(istype(mag, /obj/item/ammo_magazine/smg/bizon/heap))
+				var/image/source_image = image(icon, "+t64_heap_mag")
+				source_image.pixel_x = 0
+				overlays += source_image
+			else
+				var/image/source_image = image(icon, "+t64_mag")
+				source_image.pixel_x = 0
+				overlays += source_image
+		if(mag_tally > 5)
+			if(istype(mag, /obj/item/ammo_magazine/smg/bizon/heap))
+				var/image/source_image = image(icon, "+t64_heap_mag")
+				source_image.pixel_x = 6
+				overlays += source_image
+			else
+				var/image/source_image = image(icon, "+t64_mag")
+				source_image.pixel_x = 6
+				overlays += source_image
 
-/obj/item/storage/box/guncase/heavy/smg/type64/heap
-	name = "\improper Type 64 submachinegun case"
-	desc = "A case for storing a Type 64 submachinegun."
-	icon_state = "t64case"
-	storage_slots = 8
-	can_hold = list(/obj/item/weapon/gun/smg/bizon, /obj/item/ammo_magazine/smg/bizon)
-	max_w_class = SIZE_HUGE
 
-/obj/item/storage/box/guncase/heavy/smg/type64/heap/update_icon()
-	overlays.Cut()
-	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
-	else
-		overlays += image(icon, "t64case_lid")
-		return
-	if(locate(/obj/item/weapon/gun/smg/bizon) in contents)
-		overlays += image(icon, "+t64")
-	var/mag_tally = 0
-	for(var/obj/item/ammo_magazine/smg/bizon/mag in contents)
-		mag_tally++
-	if(mag_tally >= 2)
-		var/image/source_image = image(icon, "+t64_heap_mag")
-		source_image.pixel_x = 0
-		overlays += source_image
-	if(mag_tally > 5)
-		var/image/source_image = image(icon, "+t64_heap_mag")
-		source_image.pixel_x = 6
-		overlays += source_image
+/obj/item/storage/box/guncase/heavy/smg/type64/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
+	new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
@@ -434,6 +434,21 @@
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
+/obj/item/storage/box/guncase/heavy/sniper
+	name = "\improper M42A sniper case"
+	desc = "A case for storing a M42A sniper rifle."
+	icon_state = "guncase"
+	storage_slots = 5
+	can_hold = list(/obj/item/weapon/gun/rifle/sniper/M42A, /obj/item/ammo_magazine/sniper)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/sniper/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/M42A(src)
+	new /obj/item/ammo_magazine/sniper/basic(src)
+	new /obj/item/ammo_magazine/sniper/basic(src)
+	new /obj/item/ammo_magazine/sniper/basic(src)
+	new /obj/item/ammo_magazine/sniper/basic(src)
+
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff
 	name = "\improper Type 88-I sniper case"
 	desc = "A case for storing a Type 88-I sniper rifle."
@@ -463,11 +478,11 @@
 		return
 	if(locate(/obj/item/weapon/gun/rifle/sniper/svd) in contents)
 		overlays += image(icon, "+t88")
-	if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
-		overlays += image(icon, "+t88_mag")
-
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap
-	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
+	if(locate(/obj/item/ammo_magazine/sniper/svd/flak) in contents)
+		overlays += image(icon, "+t88_flak_mag")
+	else
+		if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
+			overlays += image(icon, "+t88_mag")
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
@@ -480,19 +495,6 @@
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
-
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/update_icon()
-	overlays.Cut()
-	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
-	else
-		overlays += image(icon, "t88case_lid")
-		return
-	if(locate(/obj/item/weapon/gun/rifle/sniper/svd) in contents)
-		overlays += image(icon, "+t88")
-	if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
-		overlays += image(icon, "+t88_flak_mag")
-
 
 /obj/item/storage/box/guncase/heavy/XM99
 	name = "\improper XM99A plasma rifle case"
@@ -643,9 +645,9 @@
 /obj/item/storage/box/guncase/heavy/fuel/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcase_lid_open")
+		overlays += image(icon, "bigcase_lid_open")
 	else
-		overlays += image(icon, "uppfuelcase_lid")
+		overlays += image(icon, "fuelcase_lid")
 		return
 	var/tank_tally = 0
 	for(var/obj/item/ammo_magazine/flamer_tank/tank in contents)

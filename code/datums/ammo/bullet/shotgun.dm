@@ -321,7 +321,7 @@
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/special
-	name = "special heavy buckshot shell"
+	name = "superheavy buckshot shell"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	accurate_range = 8

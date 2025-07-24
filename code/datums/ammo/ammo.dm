@@ -211,10 +211,6 @@
 	for(var/mob/living/carbon/M in orange(range,target))
 		if(P.firer == M)
 			continue
-		if(ishuman(M))
-			var/mob/living/carbon/human/hit_human = M
-			if(hit_human.get_target_lock(P.runtime_iff_group))
-				continue
 		if(show_message)
 			var/msg = "You are hit by backlash from \a </b>[P.name]</b>!"
 			M.visible_message(SPAN_DANGER("[M] is hit by backlash from \a [P.name]!"),isxeno(M) ? SPAN_XENODANGER("[msg]"):SPAN_HIGHDANGER("[msg]"))
