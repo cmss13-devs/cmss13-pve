@@ -270,7 +270,20 @@
 		return 0
 
 	if(status & LIMB_DESTROYED)
-		return 0
+		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
+			var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
+			var/list/potential_limbs = owner.limbs - list(src)
+			while(!random_limb_found || potential_limbs.len < 1)
+				var/obj/limb/check_limb = pick(potential_limbs)
+				if(!(check_limb.status & LIMB_DESTROYED))
+					random_limb_found = TRUE
+					check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
+					return
+				else
+					potential_limbs -= check_limb
+			return 0
+		else
+			return 0
 
 	var/previous_brute = brute_dam
 	var/previous_burn = burn_dam
