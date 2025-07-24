@@ -166,7 +166,7 @@
 	icon_state = "brazilflag"
 /obj/structure/sign/banners/brazil_worn
 	name = "\improper Worn Brazil flag"
-	desc = "A flag of the Brazil. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	desc = "A flag of the Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
 	icon_state = "brazilflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
