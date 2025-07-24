@@ -246,11 +246,20 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /obj/item/tacmap_map/attack_self(mob/user) //Open the map
 	..()
-	user.visible_message(SPAN_NOTICE("[user] looks closely at the [src.name]. "))
+	user.visible_message(SPAN_NOTICE("[user] looks closely at the [src.name]."))
 	map.tgui_interact(user)
 
-/obj/item/tacmap_map/attack()
-	return
+/obj/item/tacmap_map/attack(mob/attacked_mob, mob/user)
+	. = ..()
+
+	if(attacked_mob == user)
+		return
+
+	if(ishuman(attacked_mob))
+		user.visible_message(SPAN_NOTICE("[user] shows [attacked_mob] the [src.name]."),SPAN_NOTICE("You show [attacked_mob] the screen of the [src.name]"))
+		attacked_mob.visible_message(SPAN_NOTICE("[user] shows you the screen of the [src.name]."))
+		map.tgui_interact(attacked_mob)
+		return
 
 /obj/item/tacmap_map/Destroy()
 	QDEL_NULL(map)
