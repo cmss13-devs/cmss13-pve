@@ -225,6 +225,7 @@
 	name = "suit"
 	var/fire_resist = T0C+100
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	allowed = list(
 		/obj/item/device/flashlight,
 		/obj/item/device/healthanalyzer,
@@ -285,6 +286,7 @@
 	var/wired = 0
 	var/obj/item/cell/cell = 0
 	flags_armor_protection = BODY_FLAG_HANDS
+	flags_bodypart_hidden = BODY_FLAG_HANDS
 	flags_equip_slot = SLOT_HANDS
 	attack_verb = list("challenged")
 	valid_accessory_slots = list(ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R)
@@ -410,6 +412,7 @@
 	gender = PLURAL //Carn: for grammarically correct text-parsing
 	siemens_coefficient = 0.9
 	flags_armor_protection = BODY_FLAG_FEET
+	flags_bodypart_hidden = BODY_FLAG_FEET
 	flags_equip_slot = SLOT_FEET
 	permeability_coefficient = 0.50
 	slowdown = SHOES_SLOWDOWN
