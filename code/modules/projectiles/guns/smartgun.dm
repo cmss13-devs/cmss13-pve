@@ -625,6 +625,9 @@
 	starting_attachment_types = list(/obj/item/attachable/upp_smartgun)
 	auto_retrieval_slot = WEAR_BACK
 	battery_type = /obj/item/smartgun_battery/upp
+	attachable_allowed = list(
+		/obj/item/attachable/upp_smartgun,
+	)
 
 /obj/item/weapon/gun/smartgun/upp/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 36, "muzzle_y" = 16,"rail_x" = 17, "rail_y" = 18, "under_x" = 22, "under_y" = 14, "stock_x" = 22, "stock_y" = 14, , "side_rail_x" = 17, "side_rail_y" = 18)
