@@ -1552,43 +1552,7 @@
 	storage_slots = 4
 
 
-//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppmags
-	name = "\improper Type 90 Pattern Magazine Webbing"
-	desc = "A set of UPP magazine webbing that can carry four magazines."
-	icon_state = "upp_webbing_magazine"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	flags_atom = NO_SNOW_TYPE
-	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/ammo_magazine/rifle/type71,
-		/obj/item/ammo_magazine/rifle/ag80,
-		/obj/item/ammo_magazine/pistol/t73,
-		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/handful/shotgun/heavy,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
-	name = "\improper Type 78 Pattern Small Pouch Webbing"
-	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
-	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	flags_atom = NO_SNOW_TYPE
-	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
-	name = "\improper Type 78 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
-	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	flags_atom = NO_SNOW_TYPE
-	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
-
-//Partial Pre-load For Props
+//Pre-load For Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
@@ -1597,6 +1561,14 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/recon/m49
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/m49
+
+/obj/item/storage/internal/accessory/webbing/m3mag/recon/m49/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
@@ -1686,3 +1658,39 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
+
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/handful/shotgun/heavy,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
