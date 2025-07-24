@@ -193,7 +193,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type64mag"
 	ammo_band_icon = "+type64mag_band"
-	ammo_band_icon = "+type64mag_band_e"
+	ammo_band_icon_empty = "+type64mag_band_e"
 	max_rounds = 64
 	gun_type = /obj/item/weapon/gun/smg/bizon
 
