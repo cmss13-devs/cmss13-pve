@@ -19,7 +19,7 @@
 		/obj/item/attachable/magnetic_harness,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SMG
 	start_automatic = TRUE
 
@@ -71,7 +71,7 @@
 		/obj/item/attachable/stock/smg/collapsible/brace,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
 	map_specific_decoration = FALSE
 
@@ -91,6 +91,18 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
+
+/obj/item/weapon/gun/smg/m39/forecon
+	name = "\improper M39 submachinegun"
+	desc = "Fielded in limited numbers by elements of United States Colonial Marine Force-Reconnaissance units, the M39 is often used as a high-capacity sidearm or backup weapon rather than an offensive weapon. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and comes chambered in 9x19mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	current_mag = /obj/item/ammo_magazine/smg/m39/extended
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi',
+		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/jungle/suit_slot.dmi'
+	)
 
 /obj/item/weapon/gun/smg/m39/training
 	current_mag = /obj/item/ammo_magazine/smg/m39/rubber
@@ -113,7 +125,7 @@
 	icon_state = "m39b2"
 	item_state = "m39b2"
 	current_mag = /obj/item/ammo_magazine/smg/m39/ap
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
 
@@ -193,7 +205,7 @@
 		/obj/item/attachable/flashlight,
 		)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE|GUN_AUTO_EJECT_CASINGS
 
 
 
@@ -251,7 +263,7 @@
 		/obj/item/attachable/flashlight,
 		)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	aim_slowdown = SLOWDOWN_ADS_NONE
 
 
@@ -285,7 +297,7 @@
 
 	fire_sound = 'sound/weapons/smg_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/ppsh
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE|GUN_AUTO_EJECT_CASINGS
 	starting_attachment_types = list(/obj/item/attachable/stock/ppsh)
 	var/jammed = FALSE
 
@@ -381,7 +393,7 @@
 
 	fire_sound = 'sound/weapons/smg_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/pps43
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
@@ -425,7 +437,7 @@
 
 	fire_sound = 'sound/weapons/smg_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/bizon
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_MIN
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 
@@ -464,7 +476,7 @@
 
 	fire_sound = 'sound/weapons/gun_mac15.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/mac15
-	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
+	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AUTO_EJECT_CASINGS //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -512,7 +524,7 @@
 	flags_equip_slot = SLOT_WAIST
 	fire_sound = 'sound/weapons/gun_uzi.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/uzi
-	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
+	flags_gun_features = GUN_ANTIQUE|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AUTO_EJECT_CASINGS //|GUN_HAS_FULL_AUTO|GUN_FULL_AUTO_ON|GUN_FULL_AUTO_ONLY commented out until better fullauto code
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -610,7 +622,7 @@
 		/obj/item/attachable/extended_barrel,
 	)
 
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/fp9000/handle_starting_attachment()
 	..()

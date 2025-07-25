@@ -236,6 +236,9 @@
 		/obj/item/reagent_container/blood,
 	)
 
+/obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
+
 /obj/item/storage/belt/medical/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
@@ -247,6 +250,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/verb/toggle_mode() //A verb that can (should) only be used if in hand/equipped
 	set category = "Object"
@@ -259,7 +263,7 @@
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer/fill_preset_inventory()
 	. = ..()
 	new /obj/item/device/defibrillator(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/medical/full/with_suture_and_graft/fill_preset_inventory()
 	. = ..()
@@ -287,6 +291,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
@@ -330,6 +335,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -346,6 +352,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/dutch/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -363,9 +370,10 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
 	new /obj/item/storage/pill_bottle/imidazoline(src)
 	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/forecon/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -388,7 +396,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp
 	name = "\improper Type 41 pattern lifesaver bag"
@@ -418,6 +426,7 @@
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/partial/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -453,7 +462,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
@@ -1019,9 +1028,8 @@
 		WEAR_L_HAND = "s_marinebelt",
 		WEAR_R_HAND = "s_marinebelt")
 	w_class = SIZE_LARGE
-	storage_slots = 12
+	storage_slots = 14
 	max_w_class = SIZE_MEDIUM
-	max_storage_space = 24
 	can_hold = list(/obj/item/explosive/grenade)
 
 
@@ -1152,7 +1160,7 @@
 /obj/item/storage/belt/gun/attack_hand(mob/user, mods)
 	if(length(holstered_guns) && ishuman(user) && loc == user)
 		var/obj/item/I
-		if(mods && mods["alt"] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
+		if(mods && mods[ALT_CLICK] && length(contents) > length(holstered_guns)) //Withdraw the most recently inserted magazine, if possible.
 			var/list/magazines = contents - holstered_guns
 			I = magazines[length(magazines)]
 		else //Otherwise find and draw the last-inserted gun.
@@ -1339,6 +1347,15 @@
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 
+/obj/item/storage/belt/gun/m4a3/m1911/forecon_officer/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/officer())
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+
 /obj/item/storage/belt/gun/m4a3/m1911/socom/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/equipped())
 	new /obj/item/ammo_magazine/pistol/m1911(src)
@@ -1395,21 +1412,10 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
 
-/obj/item/storage/belt/gun/m4a3/nailgun
-	name = "customized nailgun holster"
-	desc = "Combination of a M276 pistol holster and engineering toolbelt that have been cannibalized into a unique belt that can holster a compact nailgun and two spare nailgun magazines."
-	icon_state = "nailgun_holster"
-	storage_slots = 3
-	can_hold = list(
-		/obj/item/weapon/gun/smg/nailgun/compact,
-		/obj/item/ammo_magazine/smg/nailgun,
-	)
-	has_gamemode_skin = FALSE
-
-/obj/item/storage/belt/gun/m4a3/nailgun/prefilled/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact())
+/obj/item/storage/belt/gun/m4a3/army/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
 	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/nailgun(src)
+		new /obj/item/ammo_magazine/pistol/b92fs(src)
 
 /obj/item/storage/belt/gun/m4a3/nailgun
 	name = "customized nailgun holster"
@@ -1443,6 +1449,11 @@
 			"icon_x" = -11,
 			"icon_y" = -5))
 
+/obj/item/storage/belt/gun/m39/forecon/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/forecon())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/extended(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/xm51
@@ -1467,8 +1478,8 @@
 	var/magazines = 0
 
 /obj/item/storage/belt/gun/xm51/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/shotgun/light/breaching))
-		var/obj/item/ammo_magazine/shotgun/light/breaching/ammo_box = item
+	if(istype(item, /obj/item/ammo_magazine/shotgun/buckshot/light))
+		var/obj/item/ammo_magazine/shotgun/buckshot/light/ammo_box = item
 		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
 	else
 		return ..()
@@ -1646,11 +1657,12 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
 /obj/item/storage/belt/gun/mateba/cmateba/special
@@ -1925,9 +1937,9 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/smartgunner/army/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3())
-	new /obj/item/ammo_magazine/pistol(src)
-	new /obj/item/ammo_magazine/pistol(src)
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
+	new /obj/item/ammo_magazine/pistol/b92fs(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 

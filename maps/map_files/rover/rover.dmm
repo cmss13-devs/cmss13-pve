@@ -1192,6 +1192,11 @@
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
+"cG" = (
+/obj/effect/landmark/personal_weapon,
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer/pod_landing_floor,
+/area/golden_arrow/platoonarmory)
 "cH" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2083,6 +2088,11 @@
 	dir = 8;
 	pixel_y = -14
 	},
+/obj/item/device/flashlight/pen{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
 "jv" = (
@@ -3056,20 +3066,19 @@
 /area/golden_arrow/hangar)
 "sf" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/device/flashlight/pen{
-	pixel_y = 6;
-	pixel_x = -5
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /obj/structure/sign/safety/terminal{
 	layer = 2.96;
 	pixel_x = 10;
 	pixel_y = -24
+	},
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 11;
+	pixel_y = 14
+	},
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 8;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
@@ -4225,7 +4234,7 @@
 /area/golden_arrow/synthcloset)
 "BX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/hpr{
+/obj/item/storage/box/guncase/heavy/hpr/recon{
 	pixel_y = 5
 	},
 /obj/item/storage/box/guncase/heavy/fuel{
@@ -4891,11 +4900,12 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "Iy" = (
-/obj/structure/machinery/camera/autoname/golden_arrow{
-	dir = 1
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 8;
+	name = "ship-grade camera"
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoonarmory)
@@ -6006,7 +6016,6 @@
 	pixel_x = 4;
 	pixel_y = -3
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow,
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 2;
 	pixel_y = 25
@@ -6124,17 +6133,17 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "Tp" = (
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
 	name = "long-life foodstuff storage"
 	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
 /obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
@@ -14145,7 +14154,7 @@ wB
 wB
 md
 Iy
-iS
+cG
 Pw
 Pw
 Pw

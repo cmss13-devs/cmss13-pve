@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Heirloom weapon preference to character creation. At the start of the round, one of the marines (not counting pltco) will have their gun spawn in the armory."

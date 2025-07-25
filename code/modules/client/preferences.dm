@@ -31,6 +31,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/atom/movable/screen/rotate/alt/rotate_left
 	var/atom/movable/screen/rotate/rotate_right
 
+	var/static/datum/flavor_text_editor/flavor_text_editor = new
+
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1 //Holder so it doesn't default to slot 1, rather the last one used
@@ -52,7 +54,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/lastchangelog = "" // Saved changlog filesize to detect if there was a change
 	var/ooccolor
 	var/be_special = 0 // Special role selection
-	var/toggle_prefs = TOGGLE_MIDDLE_MOUSE_CLICK|TOGGLE_DIRECTIONAL_ATTACK|TOGGLE_MEMBER_PUBLIC|TOGGLE_AMBIENT_OCCLUSION|TOGGLE_VEND_ITEM_TO_HAND // flags in #define/mode.dm
+	var/toggle_prefs = TOGGLE_DIRECTIONAL_ATTACK|TOGGLE_MEMBER_PUBLIC|TOGGLE_AMBIENT_OCCLUSION|TOGGLE_VEND_ITEM_TO_HAND // flags in #define/mode.dm
+	var/xeno_ability_click_mode = XENO_ABILITY_CLICK_MIDDLE
 	var/auto_fit_viewport = FALSE
 	var/adaptive_zoom = 0
 	var/UI_style = "midnight"
@@ -258,6 +261,9 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	/// Dropship name used when spawning as LT
 	var/dropship_name = "Midway"
 
+	/// Personal weapon that spawns randomly roundstart
+	var/personal_weapon = "Ithaca 37 shotgun"
+
 /datum/preferences/New(client/C)
 	key_bindings = deep_copy_list(GLOB.hotkey_keybinding_list_by_key) // give them default keybinds and update their movement keys
 	macros = new(C, src)
@@ -281,8 +287,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/client_reconnected(client/C)
 	owner = C
 	macros.owner = C
-
-	C.tgui_say?.load()
 
 /datum/preferences/Del()
 	. = ..()
@@ -403,6 +407,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<br><br>"
 
 			dat += "<h2><b><u>Marine Gear:</u></b></h2>"
+			dat += "<b>Personal Weapon:</b> <a href ='byond://?_src_=prefs;preference=personalweapon;task=input'><b>[personal_weapon]</b></a><br>"
 			dat += "<b>Underwear:</b> <a href ='byond://?_src_=prefs;preference=underwear;task=input'><b>[underwear]</b></a><br>"
 			dat += "<b>Undershirt:</b> <a href='byond://?_src_=prefs;preference=undershirt;task=input'><b>[undershirt]</b></a><br>"
 
@@ -627,6 +632,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 			dat += "<b>Play Lobby Music:</b> <a href='byond://?_src_=prefs;preference=lobby_music'><b>[(toggles_sound & SOUND_LOBBY) ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Play VOX Announcements:</b> <a href='byond://?_src_=prefs;preference=sound_vox'><b>[(hear_vox) ? "Yes" : "No"]</b></a><br>"
 			dat += "<b>Default Ghost Night Vision Level:</b> <a href='byond://?_src_=prefs;preference=ghost_vision_pref;task=input'><b>[ghost_vision_pref]</b></a><br>"
+			dat += "<b>Button To Activate Xenomorph Abilities:</b> <a href='byond://?_src_=prefs;preference=mouse_button_activation;task=input'><b>[xeno_ability_mouse_pref_to_string(xeno_ability_click_mode)]</b></a><br>"
 			dat += "<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/receive_random_tip'>Read Random Tip of the Round</a><br>"
 			if(CONFIG_GET(flag/allow_Metadata))
 				dat += "<b>OOC Notes:</b> <a href='byond://?_src_=prefs;preference=metadata;task=input'> Edit </a>"
@@ -638,8 +644,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_IGNORE_SELF]'><b>[toggle_prefs & TOGGLE_IGNORE_SELF ? "Off" : "On"]</b></a><br>"
 			dat += "<b>Toggle Help Intent Safety: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_HELP_INTENT_SAFETY]'><b>[toggle_prefs & TOGGLE_HELP_INTENT_SAFETY ? "On" : "Off"]</b></a><br>"
-			dat += "<b>Toggle Middle Mouse Ability Activation: \
-					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_MIDDLE_MOUSE_CLICK]'><b>[toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Ability Deactivation: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_ABILITY_DEACTIVATION_OFF]'><b>[toggle_prefs & TOGGLE_ABILITY_DEACTIVATION_OFF ? "Off" : "On"]</b></a><br>"
 			dat += "<b>Toggle Directional Assist: \
@@ -913,19 +917,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	show_browser(user, HTML, "Set Records", "records", width = 350, height = 300)
 	return
 
-/datum/preferences/proc/SetFlavorText(mob/user)
-	var/HTML = "<body>"
-	HTML += "<tt>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=general'>General:</a> "
-	HTML += TextPreview(flavor_texts["general"])
-	HTML += "<br>"
-	HTML += "<hr />"
-	HTML +="<a href='byond://?src=\ref[user];preference=flavor_text;task=done'>Done</a>"
-	HTML += "<tt>"
-	close_browser(user, "preferences")
-	show_browser(user, HTML, "Set Flavor Text", "flavor_text", width = 400, height = 430)
-	return
-
 /datum/preferences/proc/SetJob(mob/user, role, priority)
 	var/datum/job/job = GLOB.RoleAuthority.roles_by_name[role]
 	if(!job)
@@ -1123,27 +1114,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					gear.Cut()
 
 		if("flavor_text")
-			switch(href_list["task"])
-				if("open")
-					SetFlavorText(user)
-					return
-				if("done")
-					close_browser(user, "flavor_text")
-					ShowChoices(user)
-					return
-				if("general")
-					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing. Character limit is [MAX_FLAVOR_MESSAGE_LEN]","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-				else
-					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-			SetFlavorText(user)
+			flavor_text_editor.tgui_interact(user)
 			return
 
 		if("records")
@@ -1318,7 +1289,31 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					if(!choice)
 						return
 					ghost_vision_pref = choice
-
+				if("mouse_button_activation")
+					var/static/list/mouse_button_list = list(
+						xeno_ability_mouse_pref_to_string(XENO_ABILITY_CLICK_MIDDLE) = XENO_ABILITY_CLICK_MIDDLE,
+						xeno_ability_mouse_pref_to_string(XENO_ABILITY_CLICK_SHIFT) = XENO_ABILITY_CLICK_SHIFT,
+						xeno_ability_mouse_pref_to_string(XENO_ABILITY_CLICK_RIGHT) = XENO_ABILITY_CLICK_RIGHT
+					)
+					var/choice = tgui_input_list(user, "Choose how you will activate your xenomorph and human abilities.", "Mouse Activation Button", mouse_button_list)
+					if(!choice)
+						return
+					xeno_ability_click_mode = mouse_button_list[choice]
+					// This isn't that great of a way to do it, but ability code is already not that modular considering
+					// the fact that we have two datums for xeno/human abilities. Might need to refactor abilities as a whole in the future
+					// so that the `activable` type is the parent of both xeno/human abilities - it would get rid of this headache in an instant.
+					if(isxeno(user))
+						var/mob/living/carbon/xenomorph/xeno = user
+						if(xeno.selected_ability)
+							var/datum/action/xeno_action/activable/ability = xeno.selected_ability
+							xeno.set_selected_ability(null)
+							xeno.set_selected_ability(ability)
+					if(ishuman(user))
+						var/mob/living/carbon/human/human = user
+						if(human.selected_ability)
+							var/datum/action/human_action/activable/ability = human.selected_ability
+							human.set_selected_ability(null)
+							human.set_selected_ability(ability)
 				if("plat_name")
 					var/raw_name = input(user, "Choose your Platoon's name:", "Character Preference")  as text|null
 					if(length(raw_name) > 16 || !length(raw_name)) // Check to ensure that the user entered text (rather than cancel.)
@@ -1688,6 +1683,12 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					var/new_f_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in valid_facialhairstyles
 					if(new_f_style)
 						f_style = new_f_style
+
+				if("personalweapon")
+					var/new_weapon = tgui_input_list(user, "Choose your character's personal weapon:", "Character Preference (USCM Only)", GLOB.personal_weapons_list+"None")
+					if(new_weapon)
+						personal_weapon = new_weapon
+					ShowChoices(user)
 
 				if("underwear")
 					var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
@@ -2157,6 +2158,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		character.flavor_texts["hands"] = flavor_texts["hands"]
 		character.flavor_texts["legs"] = flavor_texts["legs"]
 		character.flavor_texts["feet"] = flavor_texts["feet"]
+		character.flavor_texts["helmet"] = flavor_texts["helmet"]
+		character.flavor_texts["armor"] = flavor_texts["armor"]
 
 	if(!be_random_name)
 		character.med_record = strip_html(med_record, MAX_RECORDS_MESSAGE_LEN)

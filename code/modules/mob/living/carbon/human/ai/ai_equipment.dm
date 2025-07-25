@@ -1,10 +1,3 @@
-/// Every AI with a preset should appraise inventory on spawn
-/datum/equipment_preset/load_preset(mob/living/carbon/human/new_human, randomise, count_participant, client/mob_client, show_job_gear)
-	. = ..()
-	var/datum/human_ai_brain/ai_brain = new_human.get_ai_brain()
-	if(ai_brain)
-		ai_brain.appraise_inventory()
-
 /datum/equipment_preset/upp/sniper
 	name = "UPP Marksman"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -75,54 +68,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
-
-/datum/equipment_preset/other/freelancer/standard/shotgunner
-	name = "Freelancer (Shotgunner)"
-
-/datum/equipment_preset/other/freelancer/standard/shotgunner/load_gear(mob/living/carbon/human/new_human)
-	//generic clothing
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/freelancer, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/freelancer, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
-	add_merc_helmet(new_human)
-	//storage and specific stuff, they all get an ERT medpouch.
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/dutch, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
-	//storage items
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/shotgun, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	spawn_weapon(/obj/item/weapon/gun/shotgun/type23, pick(GLOB.shotgun_handfuls_8g_reasonable), new_human, 0, 14) //shotgunner mini-spec
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied_incendiary, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/custom/ied_incendiary, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb, WEAR_IN_BACK)
-
-/datum/equipment_preset/other/freelancer/standard/machinegunner
-	name = "Freelancer (Machinegunner)"
-
-/datum/equipment_preset/other/freelancer/standard/machinegunner/load_gear(mob/living/carbon/human/new_human)
-	//generic clothing
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/freelancer, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/faction/freelancer, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
-	add_merc_helmet(new_human)
-	//storage and specific stuff, they all get an ERT medpouch.
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/dutch, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/ert, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	add_merc_weapon(new_human,1,6)
-	spawn_weapon(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box, new_human, 0, 5) //HPR mini-spec
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box/holo_target, WEAR_IN_BACK)
 
 /datum/equipment_preset/other/freelancer/medic/ai
 	name = "Freelancer (Medic) (AI)"

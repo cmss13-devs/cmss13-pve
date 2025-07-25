@@ -1,0 +1,4 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - bugfix: "adds size property for a box of zip cuffs (Medium)"

@@ -603,3 +603,18 @@
 	icon = 'icons/obj/items/spray.dmi'
 	icon_state = "pestspray"
 	w_class = SIZE_SMALL
+
+/obj/item/prop/helmetgarb/eye_drops
+	name = "eye drops"
+	desc = "A small bottle of lubricating eye drops. Keeps your peepers wet and working."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "eye_drops"
+	COOLDOWN_DECLARE(last_eye_drops)
+
+/obj/item/prop/helmetgarb/eye_drops/attack_self(mob/user)
+	. = ..()
+	if(!COOLDOWN_FINISHED(src, last_eye_drops))
+		return
+	user.visible_message(SPAN_NOTICE("[user] squeezes a few drops into their eye."), SPAN_NOTICE("You squeeze a few drops into your eye."))
+	user.apply_effect(5, EYE_BLUR)
+	COOLDOWN_START(src, last_eye_drops, 2.5 SECONDS)

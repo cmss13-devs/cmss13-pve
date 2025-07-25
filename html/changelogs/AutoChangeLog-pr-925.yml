@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Casing ejection for weapons that use cased ammo"

@@ -44,8 +44,18 @@
 		return
 
 /obj/item/clothing/attack_hand(mob/user as mob)
-	if(drag_unequip && ishuman(usr) && src.loc == user) //make it harder to accidentally undress yourself
+	//only forward to the attached accessory if the clothing is equipped (not in a storage)
+	if(LAZYLEN(accessories) && loc == user)
+		var/delegated //So that accessories don't block attack_hands unless they actually did something. Specifically meant for armor vests with medals, but can't hurt in general.
+		for(var/obj/item/clothing/accessory/A in accessories)
+			if(A.attack_hand(user))
+				delegated = TRUE
+		if(delegated)
+			return
+
+	if(drag_unequip && ishuman(usr) && loc == user) //make it harder to accidentally undress yourself
 		return
+
 	..()
 
 /obj/item/clothing/hear_talk(mob/M, msg)
@@ -150,6 +160,7 @@
 	name = "suit"
 	var/fire_resist = T0C+100
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	allowed = list(
 		/obj/item/device/flashlight,
 		/obj/item/device/healthanalyzer,
@@ -170,6 +181,7 @@
 	siemens_coefficient = 0.9
 	w_class = SIZE_MEDIUM
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_0.dmi')
+	var/has_light = FALSE
 
 /obj/item/clothing/suit/update_clothing_icon()
 	if (ismob(src.loc))
@@ -209,6 +221,7 @@
 	var/wired = 0
 	var/obj/item/cell/cell = 0
 	flags_armor_protection = BODY_FLAG_HANDS
+	flags_bodypart_hidden = BODY_FLAG_HANDS
 	flags_equip_slot = SLOT_HANDS
 	attack_verb = list("challenged")
 	valid_accessory_slots = list(ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R)
@@ -334,6 +347,7 @@
 	gender = PLURAL //Carn: for grammarically correct text-parsing
 	siemens_coefficient = 0.9
 	flags_armor_protection = BODY_FLAG_FEET
+	flags_bodypart_hidden = BODY_FLAG_FEET
 	flags_equip_slot = SLOT_FEET
 	permeability_coefficient = 0.50
 	slowdown = SHOES_SLOWDOWN
@@ -451,8 +465,13 @@
 	return null
 
 /obj/item/clothing/clicked(mob/user, list/mods)
+	if(mods[ALT_CLICK] && loc == user && !user.get_active_hand()) //To pass quick-draw attempts to storage. See storage.dm for explanation.
+		for(var/V in verbs)
+			if(V == /obj/item/clothing/suit/storage/verb/toggle_draw_mode) //So that alt-clicks are only intercepted for clothing items with internal storage and toggleable draw modes.
+				return
+
 	var/obj/item/storage/internal/pockets = get_pockets()
-	if(pockets && !mods["shift"] && mods["middle"] && CAN_PICKUP(user, src))
+	if(pockets && !mods[SHIFT_CLICK] && mods[MIDDLE_CLICK] && CAN_PICKUP(user, src))
 		pockets.open(user)
 		return TRUE
 

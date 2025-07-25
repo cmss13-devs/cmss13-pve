@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "L54, M9 & VP78 added as loadout options"
+  - rscadd: "Various army presets have had their M4A3 swapped for an M9 instead"

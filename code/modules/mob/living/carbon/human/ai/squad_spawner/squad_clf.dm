@@ -53,7 +53,7 @@
 /datum/human_ai_squad_preset/clf/ua/at
 	name = "UA Rebel, Anti-Tank Team"
 	ai_to_spawn = list(
-/datum/equipment_preset/rebel/at = 1,
+		/datum/equipment_preset/rebel/at = 1,
 		/datum/equipment_preset/rebel/soldier = 1,
 	)
 
@@ -61,7 +61,7 @@
 	name = "UA Rebel, Flamethrower Team"
 	ai_to_spawn = list(
 		/datum/equipment_preset/rebel/soldier = 2,
-	/datum/equipment_preset/rebel/soldier/flamer = 1,
+		/datum/equipment_preset/rebel/soldier/flamer = 1,
 		/datum/equipment_preset/rebel/medic = 1,
 	)
 
@@ -73,7 +73,7 @@
 		/datum/equipment_preset/rebel/medic = 1,
 	)
 
-/datum/human_ai_squad_preset/clf/ua/leader_escort
+/datum/human_ai_squad_preset/clf/ua/support
 	name = "UA Rebel, Medic Element"
 	ai_to_spawn = list(
 		/datum/equipment_preset/rebel/medic = 2,
@@ -91,6 +91,6 @@
 /datum/human_ai_squad_preset/clf/canc
 	name = "CANC Rebel, Patrol"
 	ai_to_spawn = list(
-		/datum/equipment_preset/canc/remnant = 2,
 		/datum/equipment_preset/canc/remnant/leader = 1,
+		/datum/equipment_preset/canc/remnant = 2,
 	)

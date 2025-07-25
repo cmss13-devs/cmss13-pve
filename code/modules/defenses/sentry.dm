@@ -597,7 +597,7 @@
 	immobile = TRUE
 	turned_on = TRUE
 	icon_state = "premade" //for the map editor only
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	static = TRUE
 	fire_delay = 5
 	burst = 1
@@ -634,7 +634,7 @@
 	name = "\improper UA-633 Static Gauss Turret"
 	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed."
 	density = TRUE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	fire_delay = 1
 	ammo = new /obj/item/ammo_magazine/sentry/premade
 	var/obj/structure/machinery/sentry_holder/deployment_system
@@ -756,7 +756,7 @@
 //the turret inside the shuttle sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/dropship
 	density = TRUE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	omni_directional = TRUE
 	choice_categories = list()
 	selected_categories = list()
@@ -821,7 +821,7 @@
 	name = "\improper UA 571-O sentry post"
 	desc = "A deployable, omni-directional automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
 	ammo = new /obj/item/ammo_magazine/sentry/dropped
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	omni_directional = TRUE
 	additional_rounds_stored = TRUE
 	immobile = TRUE
@@ -911,6 +911,25 @@
 		new /obj/item/stack/sheet/metal/medium_stack(loc)
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
+
+/obj/structure/machinery/defenses/sentry/launchable/upp
+	name = "\improper UPPA 32-O rapid deploy sentry"
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
+	)
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+	faction_group = FACTION_LIST_UPP
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_type71.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp/dropped
 
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"

@@ -123,6 +123,7 @@ GLOBAL_LIST_INIT(RESTRICTED_CAMERA_NETWORKS, list( //Those networks can only be 
 	/obj/item/weapon/knife/marine/kabar,\
 	/obj/item/weapon/knife/marine/bowie,\
 	/obj/item/weapon/knife/marine/sas,\
+	/obj/item/attachable/bayonet/canc,\
 	/obj/item/tool/kitchen/knife,\
 	/obj/item/tool/kitchen/knife/butcher,\
 	/obj/item/weapon/sword,\
