@@ -459,6 +459,8 @@ GLOBAL_LIST(trait_name_map)
 #define XENO_NEST_TRAIT "xeno_nest"
 ///Status trait from a generic throw by xeno abilities
 #define XENO_THROW_TRAIT "xeno_throw_trait"
+///Status traits from paradropping
+#define TRAIT_SOURCE_PARADROPPING "t_s_paradropping"
 //-- structure traits --
 ///Status trait coming from being flipped or unflipped.
 #define TRAIT_SOURCE_FLIP_TABLE "t_s_flip_table"

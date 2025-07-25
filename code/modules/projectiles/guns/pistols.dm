@@ -159,6 +159,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/vp70,
 	)
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/pistol/vp70/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 27, "muzzle_y" = 21,"rail_x" = 8, "rail_y" = 22, "under_x" = 21, "under_y" = 18, "stock_x" = 11, "stock_y" = 14, "side_rail_x" = 19, "side_rail_y" = 16)
@@ -231,6 +232,12 @@
 
 /obj/item/weapon/gun/pistol/m1911/socom/equipped
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/m1911/socom/officer
+	name = "\improper M48A5 pistol"
+	desc = "A timeless classic since the first World War, the M1911A1 has limited use with the USCM, and is often used as a sidearm by non-governmental bodies due to its reliability. An adaptation of the M48A4, with a reinforced chamber, barrel and slide to handle higher pressure loads, designated the M48A5. Chambered in .45 Super, but can load normal .45 ACP also."
+	starting_attachment_types = list(/obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/pistol/m1911/super
 
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
 // rebalanced - singlefire, very strong bullets but slow to fire and heavy recoil

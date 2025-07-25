@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "Health HUD making -100 crit people look dead."
+  - imageadd: "Used the -50 HUD to make a -100 that's just blinking faster"
