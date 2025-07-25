@@ -3,6 +3,7 @@
 	name = "head"
 	icon = 'icons/obj/items/clothing/hats.dmi'
 	flags_armor_protection = BODY_FLAG_HEAD
+	flags_bodypart_hidden = BODY_FLAG_HEAD
 	flags_equip_slot = SLOT_HEAD
 	w_class = SIZE_SMALL
 	blood_overlay_type = "helmet"
@@ -445,8 +446,8 @@
 	)
 
 /obj/item/clothing/head/cmcap/corrections
-	name = "dark blue patrol cap"
-	desc = "A dark blue patrol cap."
+	name = "dark blue utility cap"
+	desc = "A dark blue utility cap."
 	icon_state = "corrections"
 	item_state = "corrections"
 
