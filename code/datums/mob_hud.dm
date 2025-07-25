@@ -363,9 +363,9 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 		var/percentage = round(health*100/species.total_health, 10)
 		if(percentage > -1)
 			holder.icon_state = "hudhealth[percentage]"
-		else if(percentage > -49)
-			holder.icon_state = "hudhealth-0"
 		else if(percentage > -99)
+			holder.icon_state = "hudhealth-0"
+		else if(percentage > -199)
 			holder.icon_state = "hudhealth-50"
 		else
 			holder.icon_state = "hudhealth-100"
