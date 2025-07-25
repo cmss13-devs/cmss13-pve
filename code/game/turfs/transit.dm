@@ -145,12 +145,14 @@
 		COMSIG_LIVING_PREIGNITION
 	), PROC_REF(cancel_fire))
 	var/image/cables = image('icons/obj/structures/droppod_32x64.dmi', src, "chute_cables_static")
+	cables.appearance_flags = KEEP_APART|RESET_TRANSFORM
 	overlays += cables
 	var/image/chute = image('icons/obj/structures/droppod_64x64.dmi', src, "chute_static")
 
 	chute.pixel_x -= 16
 	chute.pixel_y += 16
-
+	chute.appearance_flags = KEEP_APART|RESET_TRANSFORM
+	ADD_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
 	overlays += chute
 	pixel_z = 360
 	forceMove(target)
@@ -183,6 +185,7 @@
 		if(atom == src)
 			continue
 		atom.Cross(src)
+	REMOVE_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
 
 /atom/movable/proc/clear_active_explosives()
 	for(var/obj/item/explosive/explosive in contents)

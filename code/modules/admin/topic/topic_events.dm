@@ -233,8 +233,12 @@
 			if(paradropping)
 				spawn_turf.ceiling_debris_check(2)
 				spawned_human.handle_paradrop(spawn_turf)
-				spawned_human.equip_to_slot_or_del(spawned_human.back, WEAR_R_HAND)
+				var/obj/item/to_move = spawned_human.back
+				spawned_human.temp_drop_inv_item(to_move, 0)
+				spawned_human.equip_to_slot_or_del(to_move, WEAR_R_HAND)
 				spawned_human.equip_to_slot_or_del(new /obj/item/parachute(spawned_human), WEAR_BACK)
+				if(make_hai) //have to do this again because slot swapping fucks with hAI
+					spawned_human.get_ai_brain().appraise_inventory(armor = TRUE)
 
 			humans += spawned_human
 

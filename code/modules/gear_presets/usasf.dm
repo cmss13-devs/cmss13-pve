@@ -168,7 +168,6 @@
 	flags = null
 	skills = /datum/skills/para_tech
 	idtype = /obj/item/card/id/dogtag
-	var/paradropping = FALSE
 
 /datum/equipment_preset/usasf/helljumper/load_gear(mob/living/carbon/human/new_human)
 //Head
