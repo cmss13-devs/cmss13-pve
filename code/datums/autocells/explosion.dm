@@ -63,8 +63,14 @@
 
 	var/obj/effect/particle_effect/shockwave/shockwave = null
 
+	//for making the explosion give up if it has been running longer than a certain amount of time seconds
+	var/creation_time
+
+	var/time_to_emergency_delete = 150
+
 // If we're on a fake z teleport, teleport over
 /datum/automata_cell/explosion/birth()
+	creation_time = world.time
 	shockwave = new(in_turf)
 
 	var/obj/effect/step_trigger/teleporter_vector/V = locate() in in_turf
@@ -138,6 +144,11 @@
 	return
 
 /datum/automata_cell/explosion/update_state(list/turf/neighbors)
+	if (world.time - creation_time > time_to_emergency_delete/2)
+		log_debug("An explosion is taking too long to process and will be deleted soon, [(world.time - creation_time)/10] seconds, at ([in_turf.x],[in_turf.y],[in_turf.z]) [ADMIN_JMP(in_turf)] [ADMIN_VV(src)]")
+		if (world.time - creation_time > time_to_emergency_delete)
+			log_debug("An explosion HAS taken long to process and HAS been DELETED after [(world.time - creation_time)/10] seconds, at ([in_turf.x],[in_turf.y],[in_turf.z]) [ADMIN_JMP(in_turf)]")
+			qdel(src)
 	if(delay > 0)
 		delay--
 		return
