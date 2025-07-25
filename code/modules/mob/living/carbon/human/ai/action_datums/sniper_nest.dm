@@ -84,6 +84,7 @@
 		/datum/equipment_preset/uscm/private_equipped/eva/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/eva/battlerifle,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
+		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
 	)
 
 	if(!check_rights(R_DEBUG))

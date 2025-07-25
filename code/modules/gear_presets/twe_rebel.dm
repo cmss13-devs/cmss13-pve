@@ -281,7 +281,7 @@
 	add_rebel_twe_shoes(new_human)
 	if(prob(75))
 		add_rebel_twe_smg(new_human)
-	else if(prob(85))
+	else
 		add_rebel_twe_rifle(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)

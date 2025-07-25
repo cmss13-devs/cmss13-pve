@@ -450,6 +450,7 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	undershirt = TRUE
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
@@ -1284,6 +1285,14 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
+
+/obj/item/clothing/under/marine/standard/navy
+	name = "\improper USASF combat uniform"
+	icon_state = "navy_jumpsuit"
+	item_state = "navy_jumpsuit"
+	worn_state = "navy_jumpsuit"
+	desc = "Standard-issue USASF Security Forces uniform in a distintive blue steel color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/engi/OT/navy
 	name = "\improper damage-control crew uniform"
