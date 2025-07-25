@@ -779,7 +779,7 @@
 	name = "UA Rebel, Sniper (Type-88, EVA)"
 	skills = /datum/skills/clf/sniper
 
-/datum/equipment_preset/rebel/soldier/sniper/eva/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/sniper/eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
