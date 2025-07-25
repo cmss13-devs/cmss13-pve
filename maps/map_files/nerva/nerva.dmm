@@ -38918,6 +38918,18 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer,
 /area/almayer/squads/req)
+"qps" = (
+/obj/effect/step_trigger/message{
+	once = o;
+	message = "WATCH YOUR STEP!!"
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/obj/structure/machinery/door/airlock/glass/colony{
+	name = "Central Access";
+	req_one_access = null
+	},
+/turf/open/floor/almayer,
+/area/nerva/second/hallway)
 "qpx" = (
 /obj/structure/catwalk/prison,
 /obj/structure/cable{
@@ -92233,7 +92245,7 @@ rhS
 nEX
 tav
 chs
-lGr
+qps
 chs
 tav
 eHl
@@ -93025,7 +93037,7 @@ rhS
 nEX
 tav
 chs
-lGr
+qps
 chs
 tav
 vRI
@@ -94898,7 +94910,7 @@ lqS
 rhS
 tav
 chs
-lGr
+qps
 chs
 tav
 rhS
@@ -95690,7 +95702,7 @@ lqS
 rhS
 tav
 chs
-lGr
+qps
 chs
 tav
 rjX
