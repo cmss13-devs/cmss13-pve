@@ -196,7 +196,7 @@
 	path = /datum/equipment_preset/synth/working_joe/upp
 
 /datum/human_ai_equipment_preset/upp/eva
-	faction = /datum/human_ai_equipment_preset/upp::name + " (EVA)"
+	faction = "UPP (EVA)"
 
 /datum/human_ai_equipment_preset/upp/eva/rifleman_eva
 	name = "EVA UPP Squad Rifleman (AG 80)"

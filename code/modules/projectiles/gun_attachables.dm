@@ -2837,6 +2837,48 @@ Defined in conflicts.dm of the #defines folder.
 	G.recalculate_attachment_bonuses()
 	G.update_overlays(src, "stock")
 
+/obj/item/attachable/stock/smg/collapsible/siegson
+	name = "pan submachinegun folding stock"
+	desc = "The stock, when extended, reduces recoil and improves accuracy, but at a reduction to handling and agility. This stock can collapse in, removing all positive and negative effects."
+	slot = "stock"
+	size_mod = 1
+	icon_state = "sieg_smg_folding"
+	attach_icon = "sieg_smg_folding"
+
+/obj/item/attachable/stock/smg/collapsible/siegson/apply_on_weapon(obj/item/weapon/gun/gun)
+	if(stock_activated)
+		accuracy_mod = HIT_ACCURACY_MULT_TIER_3
+		recoil_mod = -RECOIL_AMOUNT_TIER_4
+		scatter_mod = -SCATTER_AMOUNT_TIER_8
+		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
+		size_mod = 1
+		aim_speed_mod = CONFIG_GET(number/slowdown_low)
+		wield_delay_mod = WIELD_DELAY_FAST
+		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
+		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
+		hud_offset_mod = 5
+		icon_state = "sieg_smg_folding_on"
+		attach_icon = "sieg_smg_folding_on"
+
+	else
+		accuracy_mod = 0
+		recoil_mod = 0
+		scatter_mod = 0
+		scatter_unwielded_mod = 0
+		size_mod = 0
+		aim_speed_mod = 0
+		wield_delay_mod = 0
+		movement_onehanded_acc_penalty_mod = 0
+		accuracy_unwielded_mod = 0
+		recoil_unwielded_mod = 0
+		hud_offset_mod = 3
+		icon_state = "sieg_smg_folding"
+		attach_icon = "sieg_smg_folding"
+
+	gun.recalculate_attachment_bonuses()
+	gun.update_overlays(src, "stock")
+
 /obj/item/attachable/stock/revolver
 	name = "\improper M44 magnum sharpshooter stock"
 	desc = "A wooden stock modified for use on a 44-magnum. Increases accuracy and reduces recoil at the expense of handling and agility. Less effective in melee as well."
