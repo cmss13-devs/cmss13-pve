@@ -1498,8 +1498,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/misc/pdt_kit
 	display_name = "PDT/L kit"
-	path = /obj/item/storage/box/pdt_kit/advanced
-	cost = 1 // it's in the vendors anyway.
+	path = /obj/item/storage/box/pdt_kit
+	cost = 3
 
 /datum/gear/misc/watch
 	display_name = "Seiko Pulsemeter wristwatch"
