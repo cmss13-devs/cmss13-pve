@@ -269,6 +269,10 @@
 	if((brute <= 0) && (burn <= 0))
 		return 0
 
+	if(forbidden_limbs.len >= 11)
+		debug_log("Possible Runaway limb take_damage recursion!")
+		return 0
+
 	if(status & LIMB_DESTROYED)
 		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
 			var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
