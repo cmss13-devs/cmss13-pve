@@ -1060,7 +1060,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
 	icon_state = "heavy_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando

@@ -65,6 +65,8 @@
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 	toggleable = TRUE
 	fullscreen_vision = null
+	req_skill = SKILL_MEDICAL
+	req_skill_level = SKILL_MEDICAL_MEDIC
 	actions_types = list(/datum/action/item_action/toggle)
 	headcam = TRUE
 

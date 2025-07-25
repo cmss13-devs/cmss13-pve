@@ -128,7 +128,6 @@
 
 /datum/equipment_preset/uscm/pfc/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/pfc/upp/private
 	name = parent_type::name + " (E1 Rank)"
@@ -188,31 +187,18 @@
 
 /datum/equipment_preset/uscm/sg/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/upp/corporal
 	name = parent_type::name + " (E3 Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/sg/upp/corporal/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-
 /datum/equipment_preset/uscm/sg/upp/senior_private
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/sg/upp/senior_private/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-
 /datum/equipment_preset/uscm/sg/upp/private
 	name = parent_type::name + " (E1 Rank)"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/sg/upp/private/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/sg/forecon
 	name = "FORECON Squad Smartgunner"
@@ -296,32 +282,18 @@
 
 /datum/equipment_preset/uscm/medic/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/medic/upp/corporal
 	name = parent_type::name + " (E3 Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/medic/upp/corporal/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-
 /datum/equipment_preset/uscm/medic/upp/senior_private
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/medic/upp/senior_private/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-
 /datum/equipment_preset/uscm/medic/upp/private
 	name = parent_type::name + " (E1 Rank)"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/medic/upp/private/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
-
 
 /datum/equipment_preset/uscm/medic/forecon
 	name = "FORECON Squad Corpsman"
@@ -371,15 +343,10 @@
 
 /datum/equipment_preset/uscm/tl/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/upp/junior_sergeant
 	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/tl/upp/junior_sergeant/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
@@ -451,15 +418,10 @@
 
 /datum/equipment_preset/uscm/leader/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/upp/senior_sergeant
 	name = parent_type::name + " (E6 Rank)"
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm/leader/upp/senior_sergeant/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm/leader/forecon
 	name = "FORECON Squad Leader"
@@ -1051,7 +1013,7 @@
 	name = "USCM Scout Sniper, Shooter (Equipped)"
 	assignment = "Scout Sniper"
 	role_comm_title = "SctSnpr"
-	skills = /datum/skills/nco
+	skills = /datum/skills/tl/recon
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper/load_gear(mob/living/carbon/human/new_human)
@@ -1101,7 +1063,7 @@
 	assignment = "Scout Sniper"
 	role_comm_title = "SctSnpr"
 	rank = JOB_SQUAD_SPOTTER
-	skills = /datum/skills/nco
+	skills = /datum/skills/tl/recon
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/spotter/load_gear(mob/living/carbon/human/new_human)
