@@ -277,7 +277,7 @@
 				var/obj/limb/check_limb = pick(potential_limbs)
 				if(!(check_limb.status & LIMB_DESTROYED))
 					random_limb_found = TRUE
-					check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
+					check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs + src, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
 					return
 				else
 					potential_limbs -= check_limb

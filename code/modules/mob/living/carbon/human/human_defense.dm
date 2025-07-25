@@ -288,7 +288,7 @@ Contains most of the procs that are called when a mob is attacked by something
 	var/impact_damage = (1 + O.throwforce*THROWFORCE_COEFF)*O.throwforce*THROW_SPEED_IMPACT_COEFF*O.cur_speed
 
 	var/zone
-	if (istype(LM.thrower, /mob/living))
+	if (!isnull(LM) && istype(LM.thrower, /mob/living))
 		var/mob/living/L = LM.thrower
 		zone = check_zone(L.zone_selected)
 	else
@@ -299,7 +299,7 @@ Contains most of the procs that are called when a mob is attacked by something
 		return
 	O.throwing = FALSE //it hit, so stop moving
 
-	if ((LM.thrower != src) && check_shields(impact_damage, "[O]"))
+	if (!isnull(LM) &&(LM.thrower != src) && check_shields(impact_damage, "[O]"))
 		return
 
 	var/obj/limb/affecting = get_limb(zone)
@@ -326,7 +326,7 @@ Contains most of the procs that are called when a mob is attacked by something
 		else
 			playsound(loc, 'sound/effects/thud.ogg', 25, TRUE, 5, falloff = 2)
 
-	if (ismob(LM.thrower))
+	if (!isnull(LM) && ismob(LM.thrower))
 		var/mob/M = LM.thrower
 		var/client/assailant = M.client
 		if (damage > 5)
