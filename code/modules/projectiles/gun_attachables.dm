@@ -2539,6 +2539,26 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/m49a_barrel/forecon
+	name = "M49A2 barrel"
+	icon_state = "m49a_barrel_a"
+	attach_icon = "m49a_barrel_a"
+
+/* /obj/item/attachable/m49a_barrel/New()
+	..()
+	select_gamemode_skin(type)
+
+/obj/item/attachable/m49a_barrel/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
+
 /obj/item/attachable/m49a_barrel_custom
 	name = "custom M49A barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
