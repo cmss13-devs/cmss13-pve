@@ -1,0 +1,4 @@
+author: "CactusMouth"
+delete-after: True
+changes:
+  - rscadd: "Adds the Razorwire, new defensive tool."

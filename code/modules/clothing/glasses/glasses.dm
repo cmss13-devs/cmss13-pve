@@ -23,7 +23,6 @@
 	var/req_skill
 	var/req_skill_level
 	var/req_skill_explicit = FALSE
-	var/hud_type //hud type the glasses gives
 
 /obj/item/clothing/glasses/Initialize(mapload, ...)
 	. = ..()
@@ -70,13 +69,14 @@
 			update_clothing_icon()
 
 			if(hud_type)
-				var/datum/mob_hud/MH = GLOB.huds[hud_type]
-				if(active)
-					MH.add_hud_to(H, src)
-					playsound(H, 'sound/handling/hud_on.ogg', 25, 1)
-				else
-					MH.remove_hud_from(H, src)
-					playsound(H, 'sound/handling/hud_off.ogg', 25, 1)
+				for(var/type in hud_type)
+					var/datum/mob_hud/MH = GLOB.huds[type]
+					if(active)
+						MH.add_hud_to(H, src)
+						playsound(H, 'sound/handling/hud_on.ogg', 25, 1)
+					else
+						MH.remove_hud_from(H, src)
+						playsound(H, 'sound/handling/hud_off.ogg', 25, 1)
 			if(active) //turning it on? then add the traits
 				for(var/trait in clothing_traits)
 					ADD_TRAIT(H, trait, TRAIT_SOURCE_EQUIPMENT(flags_equip_slot))
@@ -126,18 +126,20 @@
 			to_chat(user, SPAN_WARNING("You have no idea what any of the data means and power it off before it makes you nauseated."))
 
 		else if(hud_type)
-			var/datum/mob_hud/MH = GLOB.huds[hud_type]
-			MH.add_hud_to(user, src)
+			for(var/type in hud_type)
+				var/datum/mob_hud/MH = GLOB.huds[type]
+				MH.add_hud_to(user, src)
 	user.update_sight()
 	..()
 
 /obj/item/clothing/glasses/dropped(mob/living/carbon/human/user)
 	if(hud_type && active && istype(user))
 		if(src == user.glasses) //dropped is called before the inventory reference is updated.
-			var/datum/mob_hud/H = GLOB.huds[hud_type]
-			H.remove_hud_from(user, src)
-			user.glasses = null
-			user.update_inv_glasses()
+			for(var/type in hud_type)
+				var/datum/mob_hud/H = GLOB.huds[type]
+				H.remove_hud_from(user, src)
+				user.glasses = null
+				user.update_inv_glasses()
 	user.update_sight()
 	return ..()
 
@@ -666,6 +668,7 @@
 	item_state = "sunglasses"
 	darkness_view = -1
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
+	flags_inv_hide = HIDEEYES
 	eye_protection = EYE_PROTECTION_FLAVOR
 
 /obj/item/clothing/glasses/sunglasses/blindfold
@@ -696,6 +699,12 @@
 	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
 	icon_state = "bimex_orange"
 	item_state = "bimex_orange"
+
+/obj/item/clothing/glasses/sunglasses/big/classic
+	name = "BiMex classic ballistic sunglasses"
+	desc = "Formerly in limited issue with the USCMC, these sunglasses have a rugged frame and metamaterial lenses. Automatic polarization factor can resist light from sniping lasers to atomic glare, while composite construction defeats splinter impacts and prevents shattering. Old, but never obsolete."
+	icon_state = "bigsunglasses"
+	item_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"
@@ -730,3 +739,11 @@
 	gender = NEUTER
 	desc = "Flash-resistant goggles with inbuilt combat and security information."
 	icon_state = "swatgoggles"
+
+/obj/item/clothing/glasses/canc_monoscope
+	name = "'Yaoguai' monoscope"
+	desc = "A single-tube HUD, developed alongside a line of CANC smartscopes with a miniature processing unit that goes on the back of your head. Most smartscope features can not be used without it."
+	icon_state = "monoscope"
+	item_state = "monoscope"
+	flags_armor_protection = 0
+	flags_equip_slot = SLOT_EYES
