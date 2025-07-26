@@ -291,13 +291,13 @@
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
 /datum/ammo/bullet/sniper/fr2
-	name = "sniper bullet"
+	name = "sniper bullet" //Bolt action, high damage but less penetration
 	damage = 80
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
 /datum/ammo/bullet/sniper/fr2/penetrating
-	name = "sniper penetration bullet"
+	name = "sniper penetration bullet" //Far less damage obv but still very strong
 	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_10
 
@@ -308,11 +308,11 @@
 	))
 
 /datum/ammo/bullet/sniper/fr2/ap
-	name = "sniper AP bullet"
-	damage = 75
+	name = "sniper AP bullet" //Much higher AP, lower base damage but still strong
+	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/sniper/fr2/hp
-	name = "sniper HP bullet"
+	name = "sniper HP bullet" //Higher base damage, lower AP.
 	damage = 110
 	penetration = ARMOR_PENETRATION_TIER_1
