@@ -33,28 +33,28 @@
 	faction = FACTION_PMC
 
 /obj/item/tool/signal_tracker
-	name = "Signal Tracker"
-	desc = "A tool used to track signals and the user's distance to them."
-	icon = 'icons/obj/items/experimental_tools.dmi'
-	icon_state = "crew_monitor"
-	flags_equip_slot = SLOT_WAIST
-	w_class = SIZE_SMALL
-	var/datum/radar/signal_tracker/radar
+    name = "Signal Tracker"
+    desc = "A tool used to track signals and the user's distance to them."
+    icon = 'icons/obj/items/experimental_tools.dmi'
+    icon_state = "crew_monitor"
+    flags_equip_slot = SLOT_WAIST
+    w_class = SIZE_SMALL
+    var/datum/radar/signal_tracker/radar
 
-/obj/item/tool/signal_tracker/Initialize(mapload, GLOB.game_master_objectives)
-	. = ..()
-	radar = new /datum/radar/signal_tracker(src)
+/obj/item/tool/signal_tracker/Initialize(mapload, ...)
+    . = ..()
+    radar = new /datum/radar/signal_tracker(src)
 
 /obj/item/tool/signal_tracker/Destroy()
-	QDEL_NULL(radar)
-	. = ..()
+    QDEL_NULL(radar)
+    . = ..()
 
-/obj/item/tool/signal_tracker/handle_signal_deletion()
-	. = ..()
-	SStgui.close_uis(radar)
+/obj/item/tool/signal_tracker/proc/handle_signal_deletion()
+    SStgui.close_uis(radar)
 
-/obj/item/tool/signal_tracker/advanced/locate_signal(GLOB.game_master_objectives)
-	radar.tgui_interact(user)
+/obj/item/tool/signal_tracker/attack_self(mob/user)
+    . = ..()
+    radar.tgui_interact(user)
 
 /obj/item/clothing/suit/auto_cpr
 	name = "autocompressor" //autocompressor

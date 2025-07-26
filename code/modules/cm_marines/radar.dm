@@ -187,25 +187,26 @@
 
 //A program that tracks GM objectives
 /datum/radar/signal_tracker
-	var/obj/item/tool/signal_tracker/typed_holder
+    var/obj/item/tool/signal_tracker/typed_holder
 
 /datum/radar/signal_tracker/New(atom/holder)
-	. = ..()
-	typed_holder = holder
+    . = ..()
+    typed_holder = holder
 
 /datum/radar/signal_tracker/find_atom()
-	return typed_holder.game_master_objectives
+    for(var/list/cycled_objective in GLOB.game_master_objectives)
+        if(cycled_objective["object_ref"] == selected)
+            return locate(cycled_objective["object_ref"])
 
 /datum/radar/signal_tracker/scan()
-	. = ..()
-	objects = list()
-	GLOB.game_master_objectives = typed_holder.game_master_objectives
-	if(!game_master_objectives)
-		return
-	GLOB.game_master_objectives += list(list(
-		ref = REF(object_ref),
-		name = (objective_info || ""),
-		))
+    . = ..()
+    objects = list()
+    for(var/list/cycled_objective in GLOB.game_master_objectives)
+        var/list/crewinfo = list(
+                ref = cycled_objective["object_ref"],
+                name = cycled_objective["objective_info"]
+                )
+        objects += list(crewinfo)
 
 ///A program that tracks crew members via suit sensors
 /datum/radar/lifeline
