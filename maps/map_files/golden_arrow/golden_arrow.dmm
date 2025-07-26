@@ -428,15 +428,6 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
-"aaP" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "aaQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -457,11 +448,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/hangar)
-"aaS" = (
-/obj/structure/surface/table/almayer,
-/obj/item/pizzabox/mystery/stack,
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "aaT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -499,44 +485,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
-"aaX" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffeecup{
-	pixel_x = -6
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
-"aaY" = (
-/obj/structure/bed/chair/comfy{
-	dir = 4
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "aaZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aba" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/bed/chair/comfy,
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "abb" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"abc" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/bed/chair/comfy,
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "abf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -2393,6 +2351,13 @@
 	},
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
+"aht" = (
+/obj/structure/bed/chair/comfy,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "ahw" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -6293,9 +6258,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/bed/chair/comfy{
-	dir = 1
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "avH" = (
@@ -6391,8 +6353,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/surface/table/almayer,
-/obj/item/pizzabox/mystery/stack,
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "avY" = (
@@ -8622,14 +8585,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
-/obj/item/reagent_container/food/condiment/peppermill{
-	pixel_x = -11;
-	pixel_y = 5
-	},
-/obj/item/reagent_container/food/condiment/saltshaker{
-	pixel_x = -7;
-	pixel_y = 13
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aCC" = (
@@ -8666,7 +8621,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "node"
 	},
-/mob/living/simple_animal/cat/kitten,
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/prep_hallway)
 "aCM" = (
@@ -10869,8 +10823,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/surface/table/almayer,
-/obj/item/pizzabox/mystery/stack,
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aKi" = (
@@ -11174,59 +11129,6 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
 /turf/open/floor/almayer/edge/west,
 /area/golden_arrow/platoonarmory)
 "aLs" = (
@@ -11261,11 +11163,11 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "aLw" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
-	},
-/obj/structure/bed/chair/comfy{
-	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
@@ -11781,6 +11683,12 @@
 	},
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/supply)
+"aNn" = (
+/obj/structure/bed/chair/comfy{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/golden_arrow/cryo_cells)
 "aNp" = (
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer,
@@ -12779,6 +12687,18 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/hangar)
+"aRo" = (
+/obj/structure/surface/table/almayer,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = -11;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/cryo_cells)
 "aRp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -13153,19 +13073,6 @@
 /obj/item/storage/box/guncase/heavy/motiondetectors{
 	pixel_y = 2;
 	pixel_x = -3
-	},
-/obj/item/ammo_box/magazine/mk1/large/heap,
-/obj/item/ammo_box/magazine/mk1/large/heap,
-/obj/item/ammo_box/magazine/mk1/large/heap,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 15;
-	layer = 3.2;
-	pixel_x = -4
-	},
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_y = 15;
-	layer = 3.2;
-	pixel_x = -4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -14320,7 +14227,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/structure/surface/table/almayer,
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aWI" = (
@@ -26916,9 +26825,9 @@ aog
 aog
 aFX
 aBk
-aLz
-aBk
-aBk
+aht
+aRo
+aQm
 aQr
 aBw
 atm
@@ -27093,9 +27002,9 @@ aog
 fSy
 azv
 aNp
-aBk
-aBk
-aQr
+aKk
+ahK
+aNn
 aAs
 agh
 aUh
@@ -27270,8 +27179,8 @@ aog
 ajq
 asL
 aBk
-aaY
-aaY
+aKk
+ahK
 aLw
 aBk
 aBw
@@ -27446,11 +27355,11 @@ aWh
 aWh
 aIQ
 asS
-aKk
-arj
+aBk
+aht
 aCB
-aaS
 aQm
+aBk
 aaH
 aog
 aaG
@@ -27623,11 +27532,11 @@ aEG
 aWh
 arr
 asS
-aba
-aaS
-aZr
-aaX
+aLz
+aKk
+aCB
 aQm
+aBk
 aBd
 aog
 aog
@@ -27800,11 +27709,11 @@ aEG
 aWh
 aBD
 asS
-aba
-arj
-ahK
-aaS
-aaP
+aLz
+aLz
+aBk
+aBk
+aLz
 axK
 aOM
 aog
@@ -27977,7 +27886,7 @@ aEG
 aWh
 ouD
 aqB
-abc
+avE
 aKd
 aWH
 avW
@@ -28154,11 +28063,11 @@ aEG
 aWh
 arr
 alD
-aKk
+aBk
 aaf
 aZr
 arj
-aQm
+aBk
 aBk
 ama
 aJB

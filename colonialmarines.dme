@@ -757,7 +757,6 @@
 #include "code\datums\weather\weather_map_holders\lv295_blacksite.dm"
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_map_holders\lv624.dm"
-#include "code\datums\weather\weather_map_holders\lv624_long_snow.dm"
 #include "code\datums\weather\weather_map_holders\new_varadero.dm"
 #include "code\datums\weather\weather_map_holders\shivas_snowball.dm"
 #include "code\datums\weather\weather_map_holders\sorokyne.dm"
