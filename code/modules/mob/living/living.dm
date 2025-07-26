@@ -700,3 +700,7 @@
 	if(body_position == LYING_DOWN)
 		return
 	return ..()
+
+/mob/living/set_submerge_level(turf/new_loc, turf/old_loc, submerge_icon = 'icons/turf/alpha_64.dmi', submerge_icon_state = "liquid_alpha", duration = move_delay + next_move_slowdown)
+	return ..()
+

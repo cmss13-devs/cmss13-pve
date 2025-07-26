@@ -374,7 +374,7 @@
 /area/kutjevo/interior/colony_South/power2)
 "awx" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/runoff_river)
 "axK" = (
 /obj/item/trash/cigbutt/bcigbutt,
@@ -508,7 +508,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "aJy" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -586,7 +586,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "aQg" = (
 /obj/item/weapon/gun/rifle/mar40,
@@ -624,7 +624,7 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "aSu" = (
 /obj/effect/landmark/yautja_teleport,
@@ -752,7 +752,7 @@
 /turf/closed/wall/kutjevo/rock,
 /area/kutjevo/interior/power/comms)
 "bfj" = (
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/lz_river)
 "bhg" = (
 /obj/structure/platform/kutjevo/rock{
@@ -779,7 +779,7 @@
 "biK" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "biZ" = (
 /turf/open/auto_turf/sand/layer1,
@@ -798,7 +798,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "bkR" = (
 /turf/open/auto_turf/sand/layer1,
@@ -880,7 +880,7 @@
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/interior/complex/botany)
 "bsb" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "bsl" = (
 /turf/open/auto_turf/sand/layer1,
@@ -925,7 +925,7 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "bxX" = (
 /obj/structure/flora/bush/ausbushes/reedbush{
@@ -981,7 +981,7 @@
 /area/kutjevo/interior/complex/med/operating)
 "bBL" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/lz_river)
 "bBO" = (
 /obj/structure/prop/brazier/frame/full/campfire,
@@ -1000,7 +1000,7 @@
 /area/kutjevo/exterior/runoff_bridge)
 "bCg" = (
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/shallow_corner/west,
+/turf/open/liquid/water/river/desert/shallow/corner/west,
 /area/kutjevo/exterior/lz_river)
 "bCJ" = (
 /obj/structure/closet,
@@ -1014,7 +1014,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "bDl" = (
 /obj/structure/surface/table/almayer,
@@ -1235,7 +1235,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "bRF" = (
 /obj/item/stack/sheet/metal,
@@ -1340,7 +1340,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "bZU" = (
 /turf/open/floor/kutjevo/tan/grey_edge/northwest,
@@ -1519,7 +1519,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "cqX" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -1670,12 +1670,12 @@
 /turf/open/floor/kutjevo/colors/cyan/edge,
 /area/kutjevo/interior/complex/med/auto_doc)
 "cCa" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_north)
 "cCo" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "cCJ" = (
 /obj/structure/surface/table/almayer,
@@ -1769,7 +1769,7 @@
 /area/kutjevo/exterior/lz_dunes)
 "cIO" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_corner/north,
+/turf/open/liquid/water/river/desert/shallow/corner/north,
 /area/kutjevo/interior/oob)
 "cIZ" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -1833,7 +1833,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "cNE" = (
 /obj/structure/filtration/machine_96x96/indestructible{
@@ -1848,7 +1848,7 @@
 /turf/open/floor/kutjevo/colors/green,
 /area/kutjevo/interior/complex/botany)
 "cOt" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_dunes)
 "cOP" = (
 /turf/open/desert/desert_shore/desert_shore1/west,
@@ -1990,7 +1990,7 @@
 /turf/open/floor/kutjevo/colors/purple,
 /area/kutjevo/interior/construction)
 "cWA" = (
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/runoff_river)
 "cWL" = (
 /obj/effect/decal/cleanable/blood/xeno{
@@ -2082,7 +2082,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/interior/colony_South)
 "dcl" = (
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/runoff_river)
 "dcA" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -2166,7 +2166,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/exterior/construction)
 "dhm" = (
 /obj/structure/platform_decoration/kutjevo,
@@ -2176,7 +2176,7 @@
 /turf/open/floor/almayer/research/containment/floor1,
 /area/kutjevo/exterior/Northwest_Colony)
 "dib" = (
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/runoff_river)
 "dic" = (
 /turf/open/auto_turf/sand/layer1,
@@ -2254,7 +2254,7 @@
 /turf/open/desert/desert_shore/shore_corner2,
 /area/kutjevo/exterior/lz_river)
 "dqc" = (
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/spring)
 "dql" = (
 /obj/structure/prop/dam/wide_boulder/boulder1,
@@ -2361,7 +2361,7 @@
 /turf/open/desert/desert_shore/desert_shore1/east,
 /area/kutjevo/exterior/scrubland)
 "dyS" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "dzd" = (
 /obj/item/storage/briefcase,
@@ -2428,7 +2428,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/interior/construction)
 "dCP" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
@@ -2513,7 +2513,7 @@
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/interior/complex/botany)
 "dJs" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/scrubland)
 "dJT" = (
 /obj/structure/window/framed/kutjevo,
@@ -2540,7 +2540,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/construction)
 "dLR" = (
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/runoff_bridge)
 "dLY" = (
 /obj/structure/largecrate/random/case/small,
@@ -2612,7 +2612,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "dUw" = (
 /obj/structure/flora/bush/ausbushes/grassybush{
@@ -2623,7 +2623,7 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/runoff_river)
 "dUE" = (
 /obj/structure/flora/grass/desert/lightgrass_10,
@@ -2878,7 +2878,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/colony_South/power2)
 "eot" = (
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/lz_river)
 "eoA" = (
 /obj/structure/machinery/chem_dispenser/medbay,
@@ -2912,13 +2912,13 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/scrubland)
 "eqN" = (
-/turf/open/gm/river/desert/shallow_corner,
+/turf/open/liquid/water/river/desert/shallow/corner,
 /area/kutjevo/exterior/spring)
 "eqP" = (
 /turf/open/floor/kutjevo/colors/orange/edge/northeast,
 /area/kutjevo/interior/power_pt2_electric_boogaloo)
 "eqS" = (
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/spring)
 "era" = (
 /obj/structure/closet/crate/freezer/rations,
@@ -2954,13 +2954,13 @@
 /area/kutjevo/interior/colony_central)
 "esi" = (
 /obj/item/weapon/gun/rifle/mar40,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/power/comms)
 "esU" = (
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/exterior/construction)
 "etm" = (
 /obj/structure/largecrate/random/case,
@@ -2996,7 +2996,7 @@
 /turf/open/floor/almayer/research/containment/floor2,
 /area/kutjevo/interior/power)
 "ewc" = (
-/turf/open/gm/river/desert/shallow_corner/north,
+/turf/open/liquid/water/river/desert/shallow/corner/north,
 /area/kutjevo/exterior/spring)
 "ewC" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -3055,7 +3055,7 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/spring)
 "ezm" = (
 /obj/structure/largecrate/random/case/double,
@@ -3070,7 +3070,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/power/comms)
 "eAw" = (
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/runoff_river)
 "eAE" = (
 /turf/open/desert/desert_shore/shore_edge1/east,
@@ -3303,7 +3303,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/red,
+/turf/open/liquid/water/red,
 /area/kutjevo/interior/oob)
 "eSs" = (
 /turf/open/floor/kutjevo/colors/orange/edge/north,
@@ -3380,7 +3380,7 @@
 /area/kutjevo/exterior/Northwest_Colony)
 "fbI" = (
 /obj/item/weapon/gun/revolver/spearhead,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/power/comms)
 "fbV" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -3521,7 +3521,7 @@
 /area/kutjevo/interior/complex/med/operating)
 "fkP" = (
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/exterior/lz_river)
 "flc" = (
 /turf/open/floor/kutjevo/multi_tiles/east,
@@ -3574,7 +3574,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/interior/colony_central)
 "fpM" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -3672,7 +3672,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/interior/power)
 "fuR" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/exterior/spring)
 "fwD" = (
 /turf/open/auto_turf/sand/layer2,
@@ -3894,7 +3894,7 @@
 /area/kutjevo/interior/colony_north)
 "fQB" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "fQJ" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -3984,7 +3984,7 @@
 /obj/structure/blocker/invisible_wall,
 /obj/structure/flora/bush/ausbushes/reedbush,
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "fWL" = (
 /obj/structure/prop/dam/gravestone,
@@ -3992,7 +3992,7 @@
 /area/kutjevo/interior/colony_N_East)
 "fWZ" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/red_pool,
+/turf/open/liquid/water/red_pool,
 /area/kutjevo/interior/oob)
 "fXs" = (
 /obj/structure/machinery/landinglight/ds2/delayone,
@@ -4018,7 +4018,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/interior/oob)
 "gbl" = (
 /turf/open/floor/kutjevo/colors/orange/inner_corner/west,
@@ -4111,7 +4111,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/exterior/construction)
 "gjr" = (
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/exterior/runoff_dunes)
 "gjt" = (
 /obj/structure/platform/kutjevo,
@@ -4169,7 +4169,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/complex_border/botany_medical_cave)
 "gpk" = (
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/exterior/spring)
 "gqI" = (
 /obj/structure/surface/table/almayer,
@@ -4384,7 +4384,7 @@
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/kutjevo/interior/power)
 "gIp" = (
-/turf/open/gm/river/desert/shallow_corner/west,
+/turf/open/liquid/water/river/desert/shallow/corner/west,
 /area/kutjevo/exterior/runoff_river)
 "gJy" = (
 /obj/structure/bed/roller,
@@ -4471,7 +4471,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/construction)
 "gOA" = (
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/lz_river)
 "gOV" = (
 /obj/structure/platform/kutjevo{
@@ -4558,7 +4558,7 @@
 	dir = 1
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/complex/med/operating)
 "gUF" = (
 /obj/structure/machinery/light/small,
@@ -4597,7 +4597,7 @@
 /turf/open/floor/kutjevo/colors/cyan/tile,
 /area/kutjevo/interior/complex/med/operating)
 "gWd" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/lz_river)
 "gWF" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -4651,7 +4651,7 @@
 /turf/open/floor/kutjevo/colors/red,
 /area/kutjevo/interior/complex/botany)
 "gYK" = (
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/lz_river)
 "gZj" = (
 /obj/structure/flora/grass/desert/lightgrass_4,
@@ -4662,14 +4662,14 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/kutjevo/exterior/complex_border/med_park)
 "gZx" = (
-/turf/open/gm/river/desert/shallow_corner/east,
+/turf/open/liquid/water/river/desert/shallow/corner/east,
 /area/kutjevo/exterior/spring)
 "han" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "haz" = (
 /obj/item/storage/donut_box,
@@ -4725,7 +4725,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "hhb" = (
 /obj/structure/barricade/wooden{
@@ -4778,7 +4778,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/complex/Northwest_Dorms)
 "hmk" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/kutjevo/interior/power_pt2_electric_boogaloo)
 "hnw" = (
 /turf/open/floor/coagulation/icon8_8,
@@ -4827,7 +4827,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "hpB" = (
 /turf/open/floor/kutjevo/grey/plate,
@@ -4945,7 +4945,7 @@
 /area/kutjevo/exterior/complex_border/botany_medical_cave)
 "hxS" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/interior/oob)
 "hyJ" = (
 /obj/structure/cable/heavyduty{
@@ -4977,7 +4977,7 @@
 /area/kutjevo/exterior/runoff_bridge)
 "hBj" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "hBm" = (
 /mob/living/simple_animal/hostile/retaliate/clown{
@@ -4997,7 +4997,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/interior/colony_central)
 "hCc" = (
-/turf/open/gm/river/desert/shallow_corner,
+/turf/open/liquid/water/river/desert/shallow/corner,
 /area/kutjevo/exterior/runoff_river)
 "hCh" = (
 /obj/structure/bed,
@@ -5142,7 +5142,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/stonyfields)
 "hMa" = (
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/runoff_dunes)
 "hMd" = (
 /turf/open/desert/desert_shore/shore_edge1/west,
@@ -5170,7 +5170,7 @@
 "hPp" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/red_pool,
+/turf/open/liquid/water/red_pool,
 /area/kutjevo/interior/power)
 "hPD" = (
 /obj/item/storage/toolbox/syndicate,
@@ -5308,7 +5308,7 @@
 	pixel_x = -10;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "hZq" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -5381,7 +5381,7 @@
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/kutjevo/interior/colony_South/power2)
 "iim" = (
-/turf/open/gm/river/desert/shallow_corner/west,
+/turf/open/liquid/water/river/desert/shallow/corner/west,
 /area/kutjevo/exterior/lz_river)
 "iin" = (
 /turf/open/auto_turf/sand/layer2,
@@ -5394,7 +5394,7 @@
 /turf/open/floor/almayer/research/containment/floor2,
 /area/kutjevo/exterior/lz_pad)
 "ijO" = (
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/runoff_river)
 "inR" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -5403,7 +5403,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/construction)
 "inV" = (
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/runoff_dunes)
 "ips" = (
 /obj/item/bodybag/tarp/reactive,
@@ -5496,7 +5496,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/kutjevo/interior/power)
 "ixP" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/exterior/runoff_river)
 "izF" = (
 /turf/open/floor/kutjevo/multi_tiles/southeast,
@@ -5569,7 +5569,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/runoff_dunes)
 "iIt" = (
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/spring)
 "iJo" = (
 /obj/structure/platform/kutjevo{
@@ -5633,7 +5633,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/red_pool,
+/turf/open/liquid/water/red_pool,
 /area/kutjevo/interior/oob)
 "iMw" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
@@ -5743,7 +5743,7 @@
 /area/kutjevo/interior/colony_S_East)
 "iUn" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/runoff_river)
 "iUD" = (
 /obj/structure/barricade/wooden{
@@ -6115,7 +6115,7 @@
 /turf/closed/wall/kutjevo/rock,
 /area/kutjevo/exterior/lz_dunes)
 "jrh" = (
-/turf/open/gm/river/desert/shallow_corner/east,
+/turf/open/liquid/water/river/desert/shallow/corner/east,
 /area/kutjevo/exterior/lz_river)
 "jrp" = (
 /obj/structure/tunnel,
@@ -6145,7 +6145,7 @@
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/foremans_office)
 "jrX" = (
-/turf/open/gm/river/desert/shallow_corner/east,
+/turf/open/liquid/water/river/desert/shallow/corner/east,
 /area/kutjevo/exterior/runoff_river)
 "jrY" = (
 /obj/structure/inflatable/popped,
@@ -6245,7 +6245,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/complex/med/operating)
 "jwA" = (
 /turf/open/floor/kutjevo/multi_tiles,
@@ -6335,7 +6335,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/darkred,
+/turf/open/liquid/water/darkred,
 /area/kutjevo/interior/oob)
 "jEN" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -6389,7 +6389,7 @@
 /area/kutjevo/interior/colony_north)
 "jIP" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/interior/oob)
 "jIR" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -6573,7 +6573,7 @@
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "jYS" = (
 /turf/open/auto_turf/sand/layer2,
@@ -6630,7 +6630,7 @@
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "keX" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -6914,7 +6914,7 @@
 	pixel_x = -8;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/spring)
 "kxt" = (
 /obj/structure/barricade/metal{
@@ -6963,10 +6963,10 @@
 /turf/closed/wall/kutjevo/colony,
 /area/kutjevo/interior/complex/med/pano)
 "kCf" = (
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/lz_river)
 "kCJ" = (
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/runoff_dunes)
 "kDl" = (
 /obj/structure/bed/chair/office/light,
@@ -6988,7 +6988,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/exterior/scrubland)
 "kDQ" = (
 /turf/open/floor/kutjevo/tan/grey_edge/east,
@@ -7057,7 +7057,7 @@
 /area/kutjevo/interior/colony_central)
 "kGC" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/darkred,
+/turf/open/liquid/water/darkred,
 /area/kutjevo/interior/oob)
 "kGU" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
@@ -7096,7 +7096,7 @@
 /obj/structure/barricade/wooden{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/power/comms)
 "kKc" = (
 /obj/effect/decal/cleanable/blood{
@@ -7179,7 +7179,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/exterior/construction)
 "kPa" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717,
@@ -7283,7 +7283,7 @@
 /area/kutjevo/interior/complex/botany)
 "kZm" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "kZt" = (
 /obj/structure/sign/safety/hazard{
@@ -7316,7 +7316,7 @@
 /turf/open/floor/kutjevo/colors/orange/tile,
 /area/kutjevo/interior/power_pt2_electric_boogaloo)
 "lav" = (
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/scrubland)
 "lax" = (
 /turf/open/desert/desert_shore/shore_edge1/west,
@@ -7471,7 +7471,7 @@
 "loe" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "loD" = (
 /obj/item/device/radio{
@@ -7582,7 +7582,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/interior/oob)
 "lyD" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -7606,19 +7606,19 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "lzD" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/runoff_river)
 "lAk" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/runoff_bridge)
 "lAn" = (
 /obj/structure/machinery/light{
@@ -7669,7 +7669,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "lDi" = (
 /obj/item/stack/sheet/wood,
@@ -7722,7 +7722,7 @@
 /turf/open/floor/kutjevo/multi_tiles/east,
 /area/kutjevo/interior/colony_South/power2)
 "lGc" = (
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/complex/med)
 "lGj" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -7827,7 +7827,7 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/darkred,
+/turf/open/liquid/water/darkred,
 /area/kutjevo/interior/power)
 "lOr" = (
 /obj/structure/machinery/vending/coffee,
@@ -7901,7 +7901,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_corner,
+/turf/open/liquid/water/river/desert/shallow/corner,
 /area/kutjevo/interior/oob)
 "lVt" = (
 /obj/effect/decal/cleanable/blood,
@@ -7935,7 +7935,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "lYW" = (
 /obj/effect/landmark/survivor_spawner,
@@ -8031,7 +8031,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/kutjevo/exterior/Northwest_Colony)
 "mfT" = (
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/exterior/lz_river)
 "mgn" = (
 /turf/open/floor/kutjevo/multi_tiles,
@@ -8257,7 +8257,7 @@
 	pixel_x = -4;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/spring)
 "mvt" = (
 /obj/effect/decal/cleanable/blood/xeno,
@@ -8287,7 +8287,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "mwV" = (
 /obj/structure/machinery/disposal,
@@ -8405,7 +8405,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_bridge)
 "mDL" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -8435,7 +8435,7 @@
 /turf/open/floor/kutjevo/colors/orange,
 /area/kutjevo/interior/colony_South/power2)
 "mEE" = (
-/turf/open/gm/river/desert/shallow_corner/north,
+/turf/open/liquid/water/river/desert/shallow/corner/north,
 /area/kutjevo/exterior/runoff_river)
 "mEX" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -8542,7 +8542,7 @@
 /area/kutjevo/interior/colony_South/power2)
 "mMd" = (
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/lz_river)
 "mMf" = (
 /turf/open/auto_turf/sand/layer2,
@@ -8555,7 +8555,7 @@
 /area/kutjevo/exterior/telecomm/lz2_north)
 "mNz" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/runoff_river)
 "mNM" = (
 /turf/closed/wall/kutjevo/colony,
@@ -8596,7 +8596,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "mSm" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
@@ -8641,7 +8641,7 @@
 /turf/open/desert/desert_shore/desert_shore1/west,
 /area/kutjevo/exterior/runoff_river)
 "mVe" = (
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/spring)
 "mVC" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -8682,7 +8682,7 @@
 /turf/open/floor/kutjevo/tan/grey_edge/east,
 /area/kutjevo/interior/complex/Northwest_Dorms)
 "mZi" = (
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/runoff_dunes)
 "mZt" = (
 /obj/structure/prop/dam/boulder/boulder3,
@@ -8714,7 +8714,7 @@
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/exterior/runoff_river)
 "nbR" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_central)
 "nbV" = (
 /turf/open/floor/plating/kutjevo,
@@ -8753,7 +8753,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow_edge/southeast,
+/turf/open/liquid/water/river/desert/shallow/edge/southeast,
 /area/kutjevo/exterior/runoff_bridge)
 "ngX" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -8963,7 +8963,7 @@
 	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "nyL" = (
 /obj/structure/machinery/power/apc/no_power/north,
@@ -9235,7 +9235,7 @@
 "nNl" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/red,
+/turf/open/liquid/water/red,
 /area/kutjevo/interior/oob)
 "nOx" = (
 /obj/structure/sign/safety/hazard{
@@ -9254,7 +9254,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/kutjevo/exterior/runoff_bridge)
 "nPf" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_South/power2)
 "nPl" = (
 /obj/structure/platform/kutjevo/rock{
@@ -9285,7 +9285,7 @@
 /area/kutjevo/interior/complex/Northwest_Flight_Control)
 "nPL" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/interior/oob)
 "nPO" = (
 /obj/structure/machinery/iv_drip,
@@ -9388,7 +9388,7 @@
 /turf/open/floor/kutjevo/colors/orange/inner_corner,
 /area/kutjevo/interior/foremans_office)
 "nXr" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/construction)
 "nXX" = (
 /obj/structure/machinery/power/terminal{
@@ -9437,7 +9437,7 @@
 /turf/open/floor/kutjevo/tan/alt_inner_edge,
 /area/kutjevo/interior/complex/Northwest_Flight_Control)
 "oaR" = (
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/lz_river)
 "ocd" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -9485,7 +9485,7 @@
 /turf/open/floor/kutjevo/colors/green/tile,
 /area/kutjevo/interior/complex/botany)
 "ofA" = (
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/spring)
 "ofR" = (
 /obj/structure/machinery/light{
@@ -9711,7 +9711,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/exterior/runoff_river)
 "oum" = (
 /obj/item/storage/toolbox/antag,
@@ -9754,10 +9754,10 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "ovG" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_bridge)
 "ovV" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -9851,7 +9851,7 @@
 "oGw" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/machinery/light,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_South/power2)
 "oIb" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -9880,7 +9880,7 @@
 /turf/open/floor/kutjevo/colors/purple/edge/north,
 /area/kutjevo/interior/construction)
 "oIR" = (
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/exterior/construction)
 "oJV" = (
 /obj/structure/machinery/light{
@@ -10030,7 +10030,7 @@
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/interior/oob)
 "oVO" = (
 /obj/structure/machinery/light{
@@ -10245,7 +10245,7 @@
 /area/kutjevo/interior/construction)
 "ppM" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_corner,
+/turf/open/liquid/water/river/desert/shallow/corner,
 /area/kutjevo/interior/oob)
 "ppX" = (
 /turf/open/floor/plating/kutjevo,
@@ -10350,7 +10350,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/colony_South)
 "pyp" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
@@ -10383,7 +10383,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/scrubland)
 "pBA" = (
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/runoff_dunes)
 "pBJ" = (
 /obj/structure/cable/heavyduty{
@@ -10397,7 +10397,7 @@
 /area/kutjevo/interior/power)
 "pCj" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_dunes)
 "pCy" = (
 /obj/item/frame/rack,
@@ -10542,7 +10542,7 @@
 "pJX" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/filtration/coagulation_arm,
-/turf/open/gm/river/darkred,
+/turf/open/liquid/water/darkred,
 /area/kutjevo/interior/oob)
 "pKn" = (
 /obj/structure/extinguisher_cabinet,
@@ -10574,7 +10574,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/complex/botany)
 "pNq" = (
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/spring)
 "pNC" = (
 /obj/structure/tunnel,
@@ -10586,7 +10586,7 @@
 /area/kutjevo/exterior/stonyfields)
 "pOh" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "pOi" = (
 /obj/structure/machinery/door/airlock/almayer/maint/colony/autoname{
@@ -10599,7 +10599,7 @@
 /turf/open/floor/kutjevo/colors/cyan,
 /area/kutjevo/interior/complex/med)
 "pPJ" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/lz_dunes)
 "pQN" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -10690,7 +10690,7 @@
 /area/kutjevo/exterior/complex_border/med_park)
 "pVO" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/red,
+/turf/open/liquid/water/red,
 /area/kutjevo/interior/oob)
 "pWe" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -10722,7 +10722,7 @@
 /turf/open/gm/grass/grass1/weedable,
 /area/kutjevo/exterior/complex_border/med_park)
 "pYZ" = (
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/complex/botany)
 "pZb" = (
 /obj/structure/closet/firecloset/full,
@@ -10783,10 +10783,10 @@
 /area/kutjevo/interior/complex/botany)
 "qhb" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "qhi" = (
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/lz_river)
 "qhw" = (
 /obj/structure/window/framed/kutjevo,
@@ -10854,7 +10854,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "qoL" = (
 /turf/closed/wall/kutjevo/colony/reinforced/hull,
@@ -10993,7 +10993,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "qBN" = (
 /turf/open/floor/kutjevo/colors/cyan,
@@ -11046,7 +11046,7 @@
 	},
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "qHH" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -11187,7 +11187,7 @@
 /turf/open/floor/kutjevo/multi_tiles,
 /area/kutjevo/exterior/lz_dunes)
 "qVg" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/exterior/scrubland)
 "qVs" = (
 /obj/effect/decal/cleanable/blood/xeno{
@@ -11220,7 +11220,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/interior/power_pt2_electric_boogaloo)
 "qZN" = (
-/turf/open/gm/river/desert/shallow_edge/southwest,
+/turf/open/liquid/water/river/desert/shallow/edge/southwest,
 /area/kutjevo/exterior/spring)
 "qZO" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
@@ -11365,7 +11365,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/red_pool,
+/turf/open/liquid/water/red_pool,
 /area/kutjevo/interior/power)
 "rky" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -11374,7 +11374,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_central)
 "rkO" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -11392,7 +11392,7 @@
 /obj/structure/blocker/invisible_wall,
 /obj/item/toy/inflatable_duck,
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "rmo" = (
 /obj/structure/platform/kutjevo/rock,
@@ -11510,7 +11510,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/power)
 "rwz" = (
-/turf/open/gm/river/desert/shallow_edge/west,
+/turf/open/liquid/water/river/desert/shallow/edge/west,
 /area/kutjevo/exterior/runoff_river)
 "rwL" = (
 /obj/item/frame/table/almayer,
@@ -11550,14 +11550,14 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/shallow_corner/east,
+/turf/open/liquid/water/river/desert/shallow/corner/east,
 /area/kutjevo/exterior/lz_river)
 "ryY" = (
 /obj/effect/landmark/monkey_spawn,
 /turf/open/floor/kutjevo/grey/plate,
 /area/kutjevo/interior/construction)
 "rzc" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/exterior/runoff_dunes)
 "rzh" = (
 /turf/closed/wall/kutjevo/colony,
@@ -11573,7 +11573,7 @@
 /area/kutjevo/interior/colony_South)
 "rzE" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/runoff_river)
 "rzL" = (
 /obj/structure/machinery/light,
@@ -11839,7 +11839,7 @@
 "rYM" = (
 /obj/structure/platform/kutjevo,
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "rYS" = (
 /turf/closed/wall/kutjevo/colony/reinforced/hull,
@@ -11924,7 +11924,7 @@
 /turf/open/floor/kutjevo/multi_tiles/north,
 /area/kutjevo/exterior/complex_border/med_rec)
 "sge" = (
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/runoff_river)
 "sgF" = (
 /obj/structure/noticeboard{
@@ -12050,7 +12050,7 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/complex/med/operating)
 "soQ" = (
 /obj/structure/surface/table/almayer,
@@ -12128,7 +12128,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "svB" = (
 /obj/structure/platform_decoration/kutjevo/rock,
@@ -12158,7 +12158,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/interior/colony_N_East)
 "syV" = (
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/exterior/runoff_dunes)
 "szC" = (
 /obj/structure/blocker/invisible_wall,
@@ -12216,7 +12216,7 @@
 /turf/open/floor/kutjevo/colors/purple/edge,
 /area/kutjevo/interior/construction)
 "sDG" = (
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/exterior/lz_river)
 "sDN" = (
 /obj/structure/tunnel,
@@ -12237,7 +12237,7 @@
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "sGs" = (
 /turf/closed/wall/kutjevo/colony,
@@ -12340,11 +12340,11 @@
 /turf/open/auto_turf/sand/layer2,
 /area/kutjevo/interior/colony_N_East)
 "sOJ" = (
-/turf/open/gm/river/desert/shallow_corner,
+/turf/open/liquid/water/river/desert/shallow/corner,
 /area/kutjevo/exterior/lz_river)
 "sPp" = (
 /obj/structure/platform/kutjevo/smooth,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_South/power2)
 "sPE" = (
 /turf/open/auto_turf/sand/layer0,
@@ -12423,14 +12423,14 @@
 /area/kutjevo/exterior/complex_border/med_rec)
 "sUs" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/colony_central)
 "sUy" = (
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer0,
 /area/kutjevo/exterior/lz_pad)
 "sVx" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/complex/botany)
 "sVy" = (
 /obj/structure/bed/sofa/vert/white/bot,
@@ -12438,7 +12438,7 @@
 /area/kutjevo/interior/complex/med)
 "sVC" = (
 /obj/structure/barricade/handrail/kutjevo,
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/complex/botany)
 "sVF" = (
 /turf/open/auto_turf/sand/layer1,
@@ -12472,7 +12472,7 @@
 /turf/open/floor/coagulation/icon0_5,
 /area/kutjevo/interior/construction)
 "sXN" = (
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/lz_pad)
 "sXR" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
@@ -12505,7 +12505,7 @@
 /turf/open/floor/kutjevo/tan,
 /area/kutjevo/exterior/lz_pad)
 "tax" = (
-/turf/open/gm/river/desert/shallow_edge,
+/turf/open/liquid/water/river/desert/shallow/edge,
 /area/kutjevo/exterior/runoff_dunes)
 "tbb" = (
 /obj/structure/tunnel,
@@ -12729,7 +12729,7 @@
 	dir = 8
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "trU" = (
 /obj/structure/machinery/shower{
@@ -12789,7 +12789,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "txH" = (
 /obj/structure/machinery/light,
@@ -12940,7 +12940,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "tGm" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -12958,7 +12958,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "tHk" = (
 /obj/structure/flora/bush/desert{
@@ -13013,7 +13013,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "tKY" = (
 /turf/open/auto_turf/sand/layer0,
@@ -13041,7 +13041,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/red_pool,
+/turf/open/liquid/water/red_pool,
 /area/kutjevo/interior/oob)
 "tMe" = (
 /obj/structure/flora/grass/tallgrass/desert,
@@ -13171,7 +13171,7 @@
 /area/kutjevo/exterior/spring)
 "tUh" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/gm/river/desert/shallow_edge/east,
+/turf/open/liquid/water/river/desert/shallow/edge/east,
 /area/kutjevo/exterior/runoff_river)
 "tVs" = (
 /obj/effect/landmark/hunter_primary,
@@ -13181,7 +13181,7 @@
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kutjevo/interior/power/comms)
 "tXm" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/power/comms)
 "tXK" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -13210,7 +13210,7 @@
 	dir = 1
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/oob)
 "ubm" = (
 /obj/structure/machinery/light{
@@ -13363,7 +13363,7 @@
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_bridge)
 "ulJ" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -13489,7 +13489,7 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/runoff_river)
 "utY" = (
 /obj/structure/extinguisher_cabinet,
@@ -13515,7 +13515,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/runoff_river)
 "uwA" = (
 /obj/effect/decal/cleanable/blood/xeno,
@@ -13550,7 +13550,7 @@
 /area/kutjevo/exterior/scrubland)
 "uxZ" = (
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "uzp" = (
 /obj/structure/window/framed/kutjevo,
@@ -13642,7 +13642,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/darkred,
+/turf/open/liquid/water/darkred,
 /area/kutjevo/interior/oob)
 "uFI" = (
 /turf/open/floor/kutjevo/tan/grey_edge/north,
@@ -13735,7 +13735,7 @@
 /area/kutjevo/interior/complex/botany)
 "uLi" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/interior/oob)
 "uLt" = (
 /turf/open/floor/kutjevo/tan/grey_edge/southwest,
@@ -13818,7 +13818,7 @@
 "uQC" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_dunes)
 "uQJ" = (
 /obj/structure/flora/grass/desert/lightgrass_2,
@@ -13829,13 +13829,13 @@
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "uRa" = (
 /turf/open/floor/kutjevo/colors/cyan/inner_corner/west,
 /area/kutjevo/interior/complex/med/triage)
 "uRm" = (
-/turf/open/gm/river/desert/deep/covered,
+/turf/open/liquid/water/river/desert/deep/covered,
 /area/kutjevo/interior/oob)
 "uRt" = (
 /obj/structure/flora/bush/desert{
@@ -13917,7 +13917,7 @@
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "uYK" = (
 /obj/structure/blocker/invisible_wall,
@@ -13984,7 +13984,7 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/colony_central)
 "vdl" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -14170,7 +14170,7 @@
 "vqY" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/filtration/coagulation_arm,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/oob)
 "vre" = (
 /obj/structure/platform/kutjevo{
@@ -14265,7 +14265,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/deep,
+/turf/open/liquid/water/river/desert/deep,
 /area/kutjevo/interior/complex/botany/east_tech)
 "vBr" = (
 /obj/structure/prop/dam/gravestone{
@@ -14617,7 +14617,7 @@
 /area/kutjevo/exterior/runoff_river)
 "vZh" = (
 /obj/structure/machinery/light,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/exterior/construction)
 "wae" = (
 /obj/structure/flora/grass/tallgrass/desert/corner{
@@ -14634,7 +14634,7 @@
 /turf/open/floor/kutjevo/colors/orange,
 /area/kutjevo/exterior/lz_pad)
 "waO" = (
-/turf/open/gm/river/desert/shallow_corner/west,
+/turf/open/liquid/water/river/desert/shallow/corner/west,
 /area/kutjevo/exterior/spring)
 "waP" = (
 /obj/structure/stairs/perspective/kutjevo{
@@ -14695,7 +14695,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge/northwest,
+/turf/open/liquid/water/river/desert/shallow/edge/northwest,
 /area/kutjevo/exterior/runoff_river)
 "wff" = (
 /turf/open/auto_turf/sand/layer0,
@@ -14841,7 +14841,7 @@
 /area/kutjevo/interior/power/comms)
 "wpq" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/interior/oob/dev_room)
 "wqk" = (
 /obj/structure/machinery/camera/autoname/lz_camera,
@@ -14882,7 +14882,7 @@
 /obj/structure/platform/kutjevo{
 	dir = 1
 	},
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "wuH" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_core,
@@ -15326,7 +15326,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/colony_S_East)
 "xlr" = (
-/turf/open/gm/river/desert/shallow_corner/north,
+/turf/open/liquid/water/river/desert/shallow/corner/north,
 /area/kutjevo/exterior/lz_river)
 "xlt" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
@@ -15371,7 +15371,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/runoff_river)
 "xoE" = (
 /obj/structure/flora/grass/tallgrass/desert/corner,
@@ -15446,7 +15446,7 @@
 /area/kutjevo/exterior/scrubland)
 "xsm" = (
 /obj/structure/blocker/invisible_wall,
-/turf/open/gm/river/desert/shallow_edge/northeast,
+/turf/open/liquid/water/river/desert/shallow/edge/northeast,
 /area/kutjevo/interior/oob)
 "xtb" = (
 /obj/item/weapon/gun/revolver/spearhead,
@@ -15527,11 +15527,11 @@
 "xyQ" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/platform/kutjevo,
-/turf/open/gm/river/desert/deep/toxic,
+/turf/open/liquid/water/river/desert/deep/toxic,
 /area/kutjevo/interior/power)
 "xzd" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river/desert/shallow,
+/turf/open/liquid/water/river/desert/shallow,
 /area/kutjevo/exterior/runoff_river)
 "xze" = (
 /obj/structure/platform_decoration/kutjevo/rock{
@@ -15918,7 +15918,7 @@
 /turf/open/floor/plating/kutjevo,
 /area/kutjevo/interior/colony_central/mine_elevator)
 "ygR" = (
-/turf/open/gm/river/desert/shallow_edge/north,
+/turf/open/liquid/water/river/desert/shallow/edge/north,
 /area/kutjevo/exterior/runoff_river)
 "yhm" = (
 /obj/structure/bed/chair,

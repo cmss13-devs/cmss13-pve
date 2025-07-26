@@ -445,3 +445,6 @@
 
 /atom/movable/vehicle_light
 	light_system = DIRECTIONAL_LIGHT
+
+/obj/vehicle/multitile/set_submerge_level(turf/new_loc, turf/old_loc, submerge_icon = 'icons/turf/alpha_128.dmi', submerge_icon_state = "multitile", duration = move_delay)
+	return ..()

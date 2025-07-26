@@ -513,3 +513,9 @@ GLOBAL_LIST(trait_name_map)
 #define CHLOROFORM_TRAIT "chloroform"
 /// traits from wall hiding
 #define WALL_HIDING_TRAIT "wallhiding"
+///AM is currently submerged
+#define TRAIT_SUBMERGED "trait_submerged"
+///AM will not be submerged. Trait must ALWAYS be added via the add_nosubmerge_trait proc for correct behavior
+#define TRAIT_NOSUBMERGE "trait_nosubmerge"
+#define SUBMERGED_TRAIT "submerged_trait"
+#define TRAIT_GENERIC "generic"

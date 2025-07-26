@@ -4595,7 +4595,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "bUR" = (
 /turf/open/mars_cave/mars_cave_8,
@@ -5117,7 +5117,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "cpM" = (
 /obj/effect/decal/warning_stripes{
@@ -6065,7 +6065,7 @@
 /area/bigredv2/caves_north)
 "diU" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/c)
 "djc" = (
 /obj/structure/machinery/light{
@@ -6454,7 +6454,7 @@
 /obj/structure/platform_decoration{
 	dir = 6
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "dyS" = (
 /obj/structure/machinery/door/airlock/almayer/research/glass/colony{
@@ -8275,7 +8275,7 @@
 /area/bigredv2/caves/mining)
 "ffk" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/item/clothing/head/det_hat,
+/obj/item/clothing/head/fedora/brown,
 /turf/open/floor/wood,
 /area/bigredv2/outside/marshal_office)
 "ffB" = (
@@ -8592,7 +8592,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "frS" = (
 /obj/structure/barricade/wooden,
@@ -9784,7 +9784,7 @@
 /turf/open/floor/carpet,
 /area/bigredv2/outside/library)
 "gpR" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/c)
 "gqp" = (
 /turf/open/mars_cave/mars_cave_3,
@@ -11071,7 +11071,7 @@
 /obj/structure/platform_decoration{
 	dir = 5
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "hpD" = (
 /obj/structure/closet/crate,
@@ -12738,7 +12738,7 @@
 /area/bigredv2/caves/eta/research)
 "iQw" = (
 /obj/item/ore,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/filtration_plant)
 "iQE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14281,7 +14281,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "kgY" = (
 /obj/structure/surface/table,
@@ -14611,7 +14611,7 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "kvs" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -18488,7 +18488,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "nGd" = (
 /turf/open/mars_cave/mars_cave_9,
@@ -22367,7 +22367,7 @@
 /obj/structure/platform_decoration{
 	dir = 10
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "qXt" = (
 /obj/structure/machinery/camera/autoname,
@@ -23051,7 +23051,7 @@
 /area/bigredv2/caves/lambda/xenobiology)
 "rHA" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/filtration_plant)
 "rHB" = (
 /obj/item/folder/yellow,
@@ -25661,7 +25661,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "tPj" = (
 /obj/item/trash/chips,
@@ -25878,7 +25878,7 @@
 /turf/open/floor/delivery,
 /area/bigredv2/outside/marshal_office)
 "uaG" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "ubG" = (
 /obj/structure/bed/stool,
@@ -27246,7 +27246,7 @@
 /area/bigredv2/outside/bar)
 "vko" = (
 /obj/structure/platform,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "vkz" = (
 /obj/structure/pipes/vents/pump{
@@ -28344,7 +28344,7 @@
 /turf/open/mars_cave/mars_cave_2,
 /area/bigredv2/caves/mining)
 "wcw" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/filtration_plant)
 "wcx" = (
 /obj/structure/machinery/light,
@@ -30482,7 +30482,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/bigredv2/outside/engineering)
 "xOR" = (
 /obj/structure/bed,

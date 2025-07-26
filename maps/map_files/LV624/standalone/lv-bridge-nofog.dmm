@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/central_river)
 "ab" = (
 /obj/structure/fence,
@@ -60,7 +60,7 @@
 /area/lv624/ground/river/central_river)
 "km" = (
 /obj/effect/landmark/lv624/fog_blocker,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/central_river)
 "lS" = (
 /turf/open/gm/dirtgrassborder/south,

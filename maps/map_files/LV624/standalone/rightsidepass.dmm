@@ -50,7 +50,7 @@
 "lD" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /obj/effect/landmark/lv624/fog_blocker,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/east_river)
 "lJ" = (
 /turf/open/gm/coast/beachcorner2/north_east,
@@ -83,7 +83,7 @@
 /area/lv624/ground/barrens/south_eastern_jungle_barrens)
 "rP" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/east_river)
 "sa" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
@@ -128,11 +128,11 @@
 /turf/open/gm/dirtgrassborder/east,
 /area/lv624/ground/jungle/east_jungle)
 "Ek" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/east_river)
 "El" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/east_river)
 "Fj" = (
 /obj/structure/flora/jungle/alienplant1,
@@ -210,7 +210,7 @@
 /area/lv624/ground/jungle/east_jungle)
 "TQ" = (
 /obj/effect/landmark/lv624/fog_blocker,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/ground/river/east_river)
 "VF" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
