@@ -110,7 +110,7 @@
 	return DOOR_PENALTY
 
 /obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if( welded || (locked ||isElectrified() && !iszombie(ai_human)))
+	if((welded || locked ||isElectrified() && !iszombie(ai_human)))
 		return ..()
 
 	if(!(arePowerSystemsOn() || !panel_open))
