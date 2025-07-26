@@ -475,8 +475,8 @@
 	icon_state = "uaflagpatch"
 
 /obj/item/clothing/accessory/patch/france
-	name = "French flag patch"
-	desc = "A fire-resistant shoulder patch, worn by those within the French Armed Forces, though equally as common along French-based PMCs."
+	name = "FAAMI insignia patch"
+	desc = "A fire-resistant shoulder patch, worn by FAAMI Operatives in the field."
 	icon_state = "french"
 
 //Ribbons
