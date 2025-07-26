@@ -401,32 +401,6 @@
 	icon_state = "provost_marshal"
 	worn_state = "provost_marshal"
 
-//==================//UNITED AMERICAS ALLIED COMMAND\\===================\\
-//=======================================================================\\
-
-/obj/item/clothing/under/uaac/tis
-	name = "\improper UAAC-TIS Special Agent Uniform"
-	desc = "A modified USCM Provost uniform, with its original insignia replaced by those of the UAAC-TIS Intelligence Service. TIS Special Agents are often recruited from the upper echelons of law enforcement agencies in various UA armed forces. These recruits often take all their gear, uniform included with them and later modify them to include TIS and UAAC insignia."
-	flags_jumpsuit = FALSE
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	siemens_coefficient = 0.9
-	icon_state = "tis"
-	worn_state = "tis"
-	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_LOW
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_LOW
-
-/obj/item/clothing/under/uaac/tis/io
-	name = "\improper UAAC-TIS Intelligence Officer uniform"
-	desc = "Originally a USCM officer uniform, all insignia have been carefully removed and replaced by a simple TIS pin worn over the right breast. Like their Special Agent counterparts, TIS Intel Officers are typically transplants from UA aligned armed forces, often initially recruited on a temporary basis then transferred permanently. As such, officers are often forced to adapt their original uniforms."
-	icon_state = "service_uniform"
-	worn_state = "service_uniform"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 //=========================//USCM Survivors\\================================\\
 //=======================================================================\\
 
@@ -475,6 +449,7 @@
 	worn_state = "pmc_jumpsuit"
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	undershirt = TRUE
 
 /obj/item/clothing/under/marine/veteran/pmc/leader
 	name = "\improper PMC command fatigues"
@@ -1308,6 +1283,14 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	item_state_slots = list(WEAR_BODY = "mt_jumpsuit")
+
+/obj/item/clothing/under/marine/standard/navy
+	name = "\improper USASF combat uniform"
+	icon_state = "navy_jumpsuit"
+	item_state = "navy_jumpsuit"
+	worn_state = "navy_jumpsuit"
+	desc = "Standard-issue USASF Security Forces uniform in a distintive blue steel color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/officer/engi/OT/navy
 	name = "\improper damage-control crew uniform"
