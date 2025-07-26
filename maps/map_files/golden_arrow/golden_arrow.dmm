@@ -537,21 +537,6 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
-"abd" = (
-/turf/open/floor/almayer,
-/area/golden_arrow/platoonprep)
-"abe" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/platoonprep)
 "abf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -559,18 +544,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
-"abg" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
 "abh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -595,52 +568,9 @@
 	},
 /turf/open/floor/almayer/edge,
 /area/golden_arrow/cryo_cells)
-"abj" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/golden_arrow/platoonprep)
 "abk" = (
 /turf/closed/wall/almayer,
 /area/golden_arrow/platoonarmory)
-"abl" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
-	},
-/turf/open/floor/almayer/edge/smooth/west,
-/area/golden_arrow/platoonprep)
-"abm" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
-	},
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory";
-	name = "\improper Gear Lockers"
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoonprep)
-"abn" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad{
-	req_one_access_txt = "8;12;39;40";
-	req_one_access = list()
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/platoonprep)
 "abo" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -5168,10 +5098,6 @@
 	id = "squadarmory";
 	name = "\improper Gear Lockers"
 	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
-	},
 /turf/open/floor/almayer/edge/smooth/endcap_right/west,
 /area/golden_arrow/platoonprep)
 "aqD" = (
@@ -8131,10 +8057,6 @@
 	id = "squadarmory";
 	name = "\improper Gear Lockers"
 	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep{
-	req_one_access_txt = "8;12;39;40";
-	req_access = list()
-	},
 /turf/open/floor/almayer/edge/smooth/endcap_left/east,
 /area/golden_arrow/platoonprep)
 "aAs" = (
@@ -8863,6 +8785,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "node"
 	},
+/mob/living/simple_animal/cat/kitten,
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/prep_hallway)
 "aCM" = (
@@ -9950,15 +9873,8 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 21;
+	pixel_y = 10;
 	pixel_x = 0
-	},
-/obj/item/storage/box/spec/scout{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/storage/box/spec/sniper{
-	pixel_y = 6
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -14537,7 +14453,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/surface/table/almayer,
-/mob/living/simple_animal/cat/kitten,
 /turf/open/floor/almayer,
 /area/golden_arrow/cryo_cells)
 "aWI" = (
@@ -30669,10 +30584,10 @@ azW
 aXt
 abL
 aYp
-abm
+aDQ
 avU
-abj
-abe
+aSk
+aSk
 aSk
 aAr
 aDQ
@@ -30846,11 +30761,11 @@ tNo
 aHV
 aPv
 aYI
-abn
-abd
+aDQ
+aQF
 afO
 aQF
-abd
+afO
 aQF
 aDQ
 ace
@@ -31023,10 +30938,10 @@ azW
 aXt
 aTX
 aoq
-abm
+aDQ
 aiD
-abl
-abg
+aRC
+aRC
 aRC
 aqC
 aDQ
