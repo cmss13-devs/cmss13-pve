@@ -99,3 +99,6 @@ endmap
 
 map prospector_canyon
 endmap
+
+map arctic_valley
+endmap
