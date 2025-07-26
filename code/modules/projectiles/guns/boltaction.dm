@@ -296,8 +296,8 @@
 	bypass_trait = TRUE
 
 /obj/item/weapon/gun/boltaction/fr2
-	name = "\improper FR2 AMR"
-	desc = "FR2 AMR, used by FAAMI"
+	name = "\improper FR F20 bolt action marksman rifle"
+	desc = "Fusil à Répétition modèle F20 or repeating rifle model F20 is a bolt-action marksman rifle a very hardened old model of the French Military. Originally made by FAN in 2149 to give military and private arsenals. Used to take out targets in the old fashioned way by having more traditional mechanism and a variable zoom scope to land their target. Loaded with 10x50mm caseful calibere."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "fr2"
 	item_state = "fr2"
@@ -311,34 +311,29 @@
 	current_mag = /obj/item/ammo_magazine/rifle/boltaction/fr2
 	attachable_allowed = list(
 		/obj/item/attachable/sniperbarrel/fr2,
-		/obj/item/attachable/fr2_scope,
+		/obj/item/attachable/scope/variable_zoom/fr2,
 		/obj/item/attachable/bipod/fr2,
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/sniperbarrel/fr2,
-		/obj/item/attachable/fr2_scope,
+		/obj/item/attachable/scope/variable_zoom/fr2,
 		/obj/item/attachable/bipod/fr2,
 	)
+	civilian_usable_override = FALSE
+	has_openbolt_icon = TRUE
 
 	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
 	fire_sound = 'sound/weapons/gun_sniper.ogg'
+	open_bolt_sound ='sound/weapons/handling/gun_vulture_bolt_eject.ogg'
+	close_bolt_sound ='sound/weapons/handling/gun_vulture_bolt_close.ogg'
 
 /obj/item/weapon/gun/boltaction/fr2/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 5, "rail_y" = 18, "under_x" = 25, "under_y" = 14, "stock_x" = 20, "stock_y" = 9)
+	attachable_offset = list("muzzle_x" = 41, "muzzle_y" = 17,"rail_x" = 25, "rail_y" = 22, "under_x" = 30, "under_y" = 14, "stock_x" = 28, "stock_y" = 9)
 
 /obj/item/weapon/gun/boltaction/fr2/Initialize(mapload, spawn_empty)
 	. = ..()
 	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
-	bolt_delay = FIRE_DELAY_TIER_4
-
-/obj/item/weapon/gun/boltaction/fr2/update_icon() // needed for bolt action sprites
-	..()
-
-	new_icon_state = icon_state
-	if(!bolted && has_openbolt_icon)
-		new_icon_state += "_o"
-
-	icon_state = new_icon_state
+	bolt_delay = FIRE_DELAY_TIER_3
 
 /obj/item/weapon/gun/boltaction/fr2/set_gun_config_values()
 	..()
@@ -352,49 +347,3 @@
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
-
-/obj/item/weapon/gun/boltaction/fr2/unique_action(mob/M)
-	if(world.time < (recent_cycle + bolt_delay) )
-		to_chat(M, SPAN_DANGER("You can't cycle the bolt again right now."))
-		return
-
-	bolted = !bolted
-
-	if(bolted)
-		to_chat(M, SPAN_DANGER("You close the bolt of [src]!"))
-		playsound(get_turf(src), open_bolt_sound, 15, TRUE, 1)
-		ready_in_chamber()
-		recent_cycle = world.time
-	else
-		to_chat(M, SPAN_DANGER("You open the bolt of [src]!"))
-		playsound(get_turf(src), close_bolt_sound, 65, TRUE, 1)
-		eject_casing()
-		unload_chamber(M)
-
-	update_icon()
-
-/obj/item/weapon/gun/boltaction/fr2/able_to_fire(mob/user)
-	. = ..()
-
-	if(. && !bolted)
-		to_chat(user, SPAN_WARNING("The bolt is still open, you can't fire [src]."))
-		return FALSE
-
-/obj/item/weapon/gun/boltaction/fr2/load_into_chamber(mob/user)
-	return in_chamber
-
-/obj/item/weapon/gun/boltaction/fr2/reload_into_chamber(mob/user)
-	in_chamber = null
-	return TRUE
-
-/obj/item/weapon/gun/boltaction/fr2/cock(mob/user)
-	return
-
-/obj/item/weapon/gun/boltaction/fr2/replace_magazine(mob/user, obj/item/ammo_magazine/magazine)
-	user.drop_inv_item_to_loc(magazine, src)
-	current_mag = magazine
-	replace_ammo(user,magazine)
-	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
-		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
-	if(reload_sound)
-		playsound(user, reload_sound, 25, 1, 5)

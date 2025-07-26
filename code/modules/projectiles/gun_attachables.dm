@@ -1147,13 +1147,14 @@ Defined in conflicts.dm of the #defines folder.
 
 //other variable zoom scopes
 
-/obj/item/attachable/scope/variable_zoom/integrated
-	name = "FR2 variable zoom scope"
-	icon_state = "fr2_scope"
-	attach_icon = "fr2_scope_a"
 
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
+
+/obj/item/attachable/scope/variable_zoom/fr2
+	name = "FR2 variable zoom scope"
+	icon_state = "fr2_scope"
+	attach_icon = "fr2_scope_a"
 
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"

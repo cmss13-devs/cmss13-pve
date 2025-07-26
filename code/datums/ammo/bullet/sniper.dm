@@ -311,3 +311,8 @@
 	name = "sniper AP bullet"
 	damage = 75
 	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/sniper/fr2/hp
+	name = "sniper HP bullet"
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_1

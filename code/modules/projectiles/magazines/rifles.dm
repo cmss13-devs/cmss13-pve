@@ -531,29 +531,35 @@
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
 /obj/item/ammo_magazine/rifle/boltaction/fr2
-	name = "\improper FR2 Caseless(20x102mm)"
-	desc = "A magazine for the FR2."
-	caliber = "18x82mm"
+	name = "\improper FR F20 magazine (10x50mm)"
+	desc = "A magazine for the FR F20 marksman rifle."
+	caliber = "10x55mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "fr2"
 	default_ammo = /datum/ammo/bullet/sniper/fr2
-	max_rounds = 6
+	max_rounds = 10
 	gun_type = /obj/item/weapon/gun/boltaction/fr2
 	w_class = SIZE_MEDIUM
 	ammo_band_icon = "+fr2_band"
 	ammo_band_icon_empty = "+fr2_band_e"
 
 /obj/item/ammo_magazine/rifle/boltaction/fr2/penetrating
-	name = "\improper FR2 wall-penetrating (20x102mm)"
-	desc = "A magazine for the FR2."
+	name = "\improper FR F20 wall-penetration magazine (10x50mm)"
+	desc = "A wall-penetration magazine for the FR F20 marksman rifle."
 	default_ammo =  /datum/ammo/bullet/sniper/fr2/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/rifle/boltaction/fr2/ap
-	name = "\improper FR2 armor-piercing (20x102mm)"
-	desc = "A magazine for the FR2."
+	name = "\improper FR F20 armor-piercing magazine (10x50mm)"
+	desc = "An AP magazine for the FR F20 marksman rifle."
 	default_ammo =  /datum/ammo/bullet/sniper/fr2/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/boltaction/fr2/hp
+	name = "\improper FR F20 hollowpoint magazine (10x50mm)"
+	desc = "A hollowpoint magazine for the FR F20 marksman rifle."
+	default_ammo =  /datum/ammo/bullet/sniper/fr2/hp
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
 
 //=ROYAL MARINES=\\
 
@@ -615,8 +621,8 @@
 //FN107 Rifle
 
 /obj/item/ammo_magazine/rifle/fn107
-	name = "\improper CAMAS61/79 magazine (7.5x28mm)"
-	desc = "An 7.5mm magazine for the CAMAS61/79 Carbine, commonly used by FAAMI and similar groups."
+	name = "\improper CAMAS61/78 magazine (7.5x28mm)"
+	desc = "An 7.5mm magazine for the CAMAS61/78 Carbine, commonly used by FAAMI and similar groups."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "fn107"
 	item_state = "fn107"
@@ -626,8 +632,8 @@
 	gun_type = /obj/item/weapon/gun/rifle/fn107
 
 /obj/item/ammo_magazine/rifle/fn107/commando
-	name = "\improper CAMAS61/79 AP Tracer magazine (7.5x28mm)"
-	desc = "An 7.5mm AP Tracer magazine for the CAMAS61/79 Carbine, commonly used by FAAMI and similar groups."
+	name = "\improper CAMAS61/78 AP Tracer magazine (7.5x28mm)"
+	desc = "An 7.5mm AP Tracer magazine for the CAMAS61/78 Carbine, commonly used by FAAMI and similar groups."
 	default_ammo = /datum/ammo/bullet/rifle/fn107/commando
 	ammo_band_icon = "+fn107_band"
 	ammo_band_icon_empty = "+fn107_band_e"
