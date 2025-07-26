@@ -177,7 +177,7 @@
 	desc = "Simple high-caliber 250 round machinegun drum."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "rfvs37"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/upp
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp_smartgun
 	gun_type = /obj/item/weapon/gun/smartgun/upp
 
 

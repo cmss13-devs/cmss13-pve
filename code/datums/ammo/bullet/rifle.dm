@@ -286,20 +286,20 @@
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
 	slowdown(entity, bullet)
 
-/datum/ammo/bullet/rifle/heavy/upp
+/datum/ammo/bullet/rifle/heavy/upp_smartgun
 	name = "12.7x40 bullet"
 	damage = 90 //giant fuck off bullet
 	damage_falloff = 0
 
-/datum/ammo/bullet/rifle/heavy/upp/on_hit_mob(mob/target, obj/projectile/fired_proj)
+/datum/ammo/bullet/rifle/heavy/upp_smartgun/on_hit_mob(mob/target, obj/projectile/fired_proj)
 	knockback(target, fired_proj, max_range = 5)
 
-/datum/ammo/bullet/rifle/heavy/upp/ap
+/datum/ammo/bullet/rifle/heavy/upp_smartgun/ap
 	name = "12.7x40 armor-piercing bullet"
 	damage = 75
 	penetration = ARMOR_PENETRATION_TIER_8
 
-/datum/ammo/bullet/rifle/heavy/upp/flak
+/datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
 	name = "12.7x40 flak bullet" //the gun makes the round detonate really early or something
 	damage = 20
 	penetration = -ARMOR_PENETRATION_TIER_2

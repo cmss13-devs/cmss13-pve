@@ -608,25 +608,34 @@
 	starting_attachment_types = list(/obj/item/attachable/smartbarrel/suppressed)
 
 /obj/item/weapon/gun/smartgun/upp
-	name = "\improper RFVS-37 automated machinegun"
-	desc = "A Russian-led project with input from the ground forces of Vietnam and Spain, the RFVS-37 \"Canyon\" is the near peer response to the venerable M56 Smartgun."
+	name = "\improper RVS-37 automated machinegun"
+	desc = "A Russian-led project with input from the ground forces of Vietnam and Spain, the RVS-37 \"Canyon\" is the near peer response to the venerable M56 Smartgun."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "rfvs37"
 	item_state = "rfvs37"
 	fire_sound = 'sound/weapons/gun_m56d_auto.ogg'
+	mouse_pointer = 'icons/effects/mouse_pointer/upp_smartgun_mouse.dmi'
 	current_mag = /obj/item/ammo_magazine/smartgun/upp
 	ammo = /obj/item/ammo_magazine/smartgun/upp
-	ammo_primary = /datum/ammo/bullet/rifle/heavy/upp //Toggled ammo type
-	ammo_secondary = /datum/ammo/bullet/rifle/heavy/upp/ap ///Toggled ammo type
-	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/upp/flak
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/upp_smartgun //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/upp_smartgun/ap ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/upp_smartgun/flak
 	flags_equip_slot = SLOT_BACK|SLOT_BLOCK_SUIT_STORE
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
 	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	starting_attachment_types = list(/obj/item/attachable/upp_smartgun)
 	auto_retrieval_slot = WEAR_BACK
+	start_semiauto = TRUE
 	battery_type = /obj/item/smartgun_battery/upp
 	attachable_allowed = list(
 		/obj/item/attachable/upp_smartgun,
+	)
+	actions_types = list(
+		/datum/action/item_action/smartgun/toggle_accuracy_improvement,
+		/datum/action/item_action/smartgun/toggle_ammo_type,
+		/datum/action/item_action/smartgun/toggle_lethal_mode,
+		/datum/action/item_action/smartgun/toggle_recoil_compensation,
+		/datum/action/item_action/smartgun/toggle_retrieval,
 	)
 
 /obj/item/weapon/gun/smartgun/upp/set_gun_attachment_offsets()
@@ -650,13 +659,15 @@
 		ammo = ammo_primary
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s ammo preparation procedures. You now fire highly precise rounds. These rounds are accurate and cost less power to operate.")
 		balloon_alert(user, "firing highly precise")
-		drain -= 60
+		drain -= 150
 	playsound(loc,'sound/machines/click.ogg', 25, 1)
 	var/datum/action/item_action/smartgun/toggle_ammo_type/TAT = locate(/datum/action/item_action/smartgun/toggle_ammo_type) in actions
 	TAT.update_icon()
 
 /obj/item/weapon/gun/smartgun/upp/set_gun_config_values()
 	..()
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_8)
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_8
 	fa_max_scatter = SCATTER_AMOUNT_TIER_9
@@ -671,3 +682,25 @@
 		scatter = SCATTER_AMOUNT_TIER_6
 		recoil = RECOIL_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+
+/datum/action/item_action/smartgun/toggle_retrieval/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Retrieval"
+	action_icon_state = "retrieve_1"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/smartgun/toggle_retrieval/action_activate()
+	. = ..()
+	var/obj/item/weapon/gun/smartgun/gun = holder_item
+	if(gun.auto_retrieval_slot)
+		gun.auto_retrieval_slot = null
+		gun.RemoveElement(/datum/element/drop_retrieval/gun, WEAR_BACK)
+		action_icon_state = "retrieve_0"
+	else
+		gun.auto_retrieval_slot = WEAR_BACK
+		gun.AddElement(/datum/element/drop_retrieval/gun, WEAR_BACK)
+		action_icon_state = "retrieve_1"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
