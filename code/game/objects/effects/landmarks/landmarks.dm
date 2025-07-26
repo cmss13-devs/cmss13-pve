@@ -361,8 +361,6 @@
 	job = /datum/job/command/bridge/whiskey
 
 //****************************************** AUXILIARY - SUPPORT ************************************************/
-/obj/effect/landmark/start/whiskey/synthetic
-	job = /datum/job/civilian/synthetic/whiskey
 
 /obj/effect/landmark/start/whiskey/senior
 	job = /datum/job/command/senior  //Need to create a WO variant in the future
@@ -555,7 +553,7 @@
 	var/mob/living/carbon/human/zombie = new /mob/living/carbon/human(loc)
 	if(!zombie.hud_used)
 		zombie.create_hud()
-	arm_equipment(zombie, /datum/equipment_preset/other/zombie, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
+	arm_equipment(zombie, /datum/equipment_preset/zombie/generic, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
 	observer.client.eye = zombie
 	observer.mind.transfer_to(zombie)
 	if(spawns_left <= 0)

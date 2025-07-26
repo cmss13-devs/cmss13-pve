@@ -379,6 +379,15 @@ Defined in conflicts.dm of the #defines folder.
 	item_state = ""
 	w_class = SIZE_TINY
 
+/obj/item/attachable/bayonet/canc
+	name = "\improper Type 4 bayonet"
+	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPPAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
+	icon_state = "knife_chinese"
+	item_state = "knife_chinese"
+	attach_icon = "canc_bayonet_a"
+	pixel_shift_x = 17
+	pixel_shift_y = 20
+
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
 	desc = "Longer barrel reduces unburnt powder, improving muzzle velocity and accuracy."
@@ -578,6 +587,26 @@ Defined in conflicts.dm of the #defines folder.
 	name = "suppressed smartgun barrel"
 	icon_state = "silenced_smartgun"
 	gun_traits = list(TRAIT_GUN_SILENCED)
+
+/obj/item/attachable/simbarrel
+	name = "SIM-118 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "fim_barrel"
+	desc = "The very end of an SIM 118 launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
+
+/obj/item/attachable/emblrbarrel
+	name = "EMBLR 92 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "emblr_barrel"
+	desc = "The very end of an EMBLR surface-to-air missile launcher. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	pixel_shift_x = 14
+	hud_offset_mod = -4
 
 // Mateba barrels
 
@@ -1119,6 +1148,31 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A civilian-grade scope that can be switched between short and long range magnification, intended for use in extraterrestrial scouting. Looks ridiculous on a pistol."
 	aim_speed_mod = 0
 
+/obj/item/attachable/scope/variable_zoom/canc
+	name = "LMR-72 4x smartscope"
+	desc = "Outdated CANC scope."
+	icon_state = "canc_scope"
+	attach_icon = "canc_scope"
+	pixel_shift_x = 13
+	pixel_shift_y = 15
+
+/obj/item/attachable/scope/variable_zoom/canc/toggle_zoom_level()
+	if(ishuman(usr))
+		var/mob/living/carbon/human/human = usr
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			to_chat(human, SPAN_WARNING("You can not use high-resolution magnification of this sight without a monoscope!"))
+			return
+	..()
+
+/obj/item/attachable/scope/variable_zoom/canc/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			zoom_level = ZOOM_LEVEL_2X
+			zoom_offset = 6
+			zoom_viewsize = 7
+			allows_movement = 1
+	..()
 #undef ZOOM_LEVEL_2X
 #undef ZOOM_LEVEL_4X
 
@@ -1173,6 +1227,12 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
 	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
+
+/obj/item/attachable/scope/mini/hunting/upp
+	name = "POS-3 hunting mini-scope"
+	icon_state = "upphuntingscope"
+	attach_icon = "upphuntingscope"
+	desc = "Simple Union-made civilian hunting/sport scope."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
@@ -2037,6 +2097,22 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/stock/olympiets
+	name = "Olympiets 'wooden' stock"
+	desc = "Shouldn't be seeing this."
+	icon_state = "olympiets_stock"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 6
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
 /obj/item/attachable/stock/hg3712
 	name = "hg3712 stock"
 	desc = "The non-detachable stock of a HG 37-12 pump shotgun."
@@ -2325,8 +2401,8 @@ Defined in conflicts.dm of the #defines folder.
 	hud_offset_mod = 2
 
 /obj/item/attachable/stock/xm51
-	name = "\improper XM51 stock"
-	desc = "A specialized stock designed for XM51 breaching shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. Integrated mechanisms inside the stock allow use of a devastating two-shot burst. This comes at a cost of the gun becoming too unwieldy to holster, worse handling and mobility."
+	name = "\improper M1771 stock"
+	desc = "A specialized stock designed for M1771 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
 	icon_state = "xm51_stock"
 	attach_icon = "xm51_stock_a"
 	wield_delay_mod = WIELD_DELAY_FAST
@@ -2335,14 +2411,11 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/xm51/Initialize(mapload, ...)
 	. = ..()
-	select_gamemode_skin(type)
 	//it makes stuff much better when two-handed
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	recoil_mod = -RECOIL_AMOUNT_TIER_4
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
-	//and allows for burst-fire
-	burst_mod = BURST_AMOUNT_TIER_2
 	//but it makes stuff much worse when one handed
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_5
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_5
@@ -2350,16 +2423,11 @@ Defined in conflicts.dm of the #defines folder.
 	//and makes you slower
 	aim_speed_mod = CONFIG_GET(number/slowdown_med)
 
-/obj/item/attachable/stock/xm51/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+/obj/item/attachable/stock/xm51/military
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter."
+	icon_state = "xm51_military_stock"
+	attach_icon = "xm51_military_stock_a"
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"
@@ -2462,6 +2530,11 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/m49a_barrel/forecon
+	name = "M49A2 barrel"
+	icon_state = "m49a_barrel_a"
+	attach_icon = "m49a_barrel_a"
+
 /* /obj/item/attachable/m49a_barrel/New()
 	..()
 	select_gamemode_skin(type)
@@ -2507,6 +2580,17 @@ Defined in conflicts.dm of the #defines folder.
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
 	attach_icon = "pve_m49a_barrel"
+
+/obj/item/attachable/olympiets_barrel
+	name = "Olympiets barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "olympiets_barrel"
+	attach_icon = "olympiets_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
@@ -3171,7 +3255,7 @@ Defined in conflicts.dm of the #defines folder.
 		if(in_chamber) //eject the chambered round
 			var/obj/item/explosive/grenade/new_grenade = in_chamber
 			in_chamber = null
-			new_grenade.forceMove(get_turf(src))
+			user.put_in_hands(new_grenade)
 		to_chat(user, SPAN_NOTICE("You bring \the [src]'s pump back!"))
 		playsound(src, open_sound, 15, 1)
 	update_icon()
@@ -3957,8 +4041,7 @@ Defined in conflicts.dm of the #defines folder.
 	if(!actually_moving && (specific_direction & initial_mob_dir)) // if you're facing north, but you're shooting north-east and end up facing east, you won't lose your bipod
 		return
 	undeploy_bipod(loc, mover)
-	mover.apply_effect(1, SUPERSLOW)
-	mover.apply_effect(2, SLOW)
+	mover.apply_effect(1, SLOW)
 
 
 //when user fires the gun, we check if they have something to support the gun's bipod.
@@ -4020,7 +4103,7 @@ Defined in conflicts.dm of the #defines folder.
 	delay_mod = 0
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = -SCATTER_AMOUNT_TIER_9
+	scatter_mod = SCATTER_AMOUNT_TIER_9
 	fa_scatter_peak_mod = 15 //fifteen more shots until you hit max scatter
 
 /obj/item/attachable/bipod/m60
@@ -4083,3 +4166,15 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
+
+/obj/item/attachable/lw317barrel
+	name = "LW-317 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "lw317_dmr_barrel"
+	attach_icon = "lw317_dmr_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
