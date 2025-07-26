@@ -530,6 +530,31 @@
 	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+/obj/item/ammo_magazine/rifle/boltaction/fr2
+	name = "\improper FR2 Caseless(20x102mm)"
+	desc = "A magazine for the FR2."
+	caliber = "18x82mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "fr2"
+	default_ammo = /datum/ammo/bullet/sniper/fr2
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/boltaction/fr2
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+fr2_band"
+	ammo_band_icon_empty = "+fr2_band_e"
+
+/obj/item/ammo_magazine/rifle/boltaction/fr2/penetrating
+	name = "\improper FR2 wall-penetrating (20x102mm)"
+	desc = "A magazine for the FR2."
+	default_ammo =  /datum/ammo/bullet/sniper/fr2/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/boltaction/fr2/ap
+	name = "\improper FR2 armor-piercing (20x102mm)"
+	desc = "A magazine for the FR2."
+	default_ammo =  /datum/ammo/bullet/sniper/fr2/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
 //=ROYAL MARINES=\\
 
 /obj/item/ammo_magazine/rifle/rmc_f90

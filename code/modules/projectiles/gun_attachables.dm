@@ -545,6 +545,11 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "vulture_barrel"
 	hud_offset_mod = -1
 
+/obj/item/attachable/sniperbarrel/fr2
+	name = "\improper FR2 barrel"
+	icon_state = "fr2_barrel"
+	hud_offset_mod = -1
+
 /obj/item/attachable/m60barrel
 	name = "M60 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
@@ -1141,6 +1146,11 @@ Defined in conflicts.dm of the #defines folder.
 	S.toggle_zoom_level()
 
 //other variable zoom scopes
+
+/obj/item/attachable/scope/variable_zoom/integrated
+	name = "FR2 variable zoom scope"
+	icon_state = "fr2_scope"
+	attach_icon = "fr2_scope_a"
 
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
@@ -4219,3 +4229,14 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0
 	size_mod = 0
+
+/obj/item/attachable/bipod/fr2
+	name = "FR2 bipod"
+	desc = "An integrated bipod for the FR2 AMR."
+	icon_state = "fr2_bipod"
+	attach_icon = "fr2_bipod"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle

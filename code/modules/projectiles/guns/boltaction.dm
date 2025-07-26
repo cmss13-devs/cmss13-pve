@@ -294,3 +294,107 @@
 
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/fr2
+	name = "\improper FR2 AMR"
+	desc = "FR2 AMR, used by FAAMI"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "fr2"
+	item_state = "fr2"
+
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+	w_class = SIZE_LARGE
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_RIFLE
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_SLOW
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/fr2
+	attachable_allowed = list(
+		/obj/item/attachable/sniperbarrel/fr2,
+		/obj/item/attachable/fr2_scope,
+		/obj/item/attachable/bipod/fr2,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/sniperbarrel/fr2,
+		/obj/item/attachable/fr2_scope,
+		/obj/item/attachable/bipod/fr2,
+	)
+
+	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	fire_sound = 'sound/weapons/gun_sniper.ogg'
+
+/obj/item/weapon/gun/boltaction/fr2/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 5, "rail_y" = 18, "under_x" = 25, "under_y" = 14, "stock_x" = 20, "stock_y" = 9)
+
+/obj/item/weapon/gun/boltaction/fr2/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
+	bolt_delay = FIRE_DELAY_TIER_4
+
+/obj/item/weapon/gun/boltaction/fr2/update_icon() // needed for bolt action sprites
+	..()
+
+	new_icon_state = icon_state
+	if(!bolted && has_openbolt_icon)
+		new_icon_state += "_o"
+
+	icon_state = new_icon_state
+
+/obj/item/weapon/gun/boltaction/fr2/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_AMR)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+
+/obj/item/weapon/gun/boltaction/fr2/unique_action(mob/M)
+	if(world.time < (recent_cycle + bolt_delay) )
+		to_chat(M, SPAN_DANGER("You can't cycle the bolt again right now."))
+		return
+
+	bolted = !bolted
+
+	if(bolted)
+		to_chat(M, SPAN_DANGER("You close the bolt of [src]!"))
+		playsound(get_turf(src), open_bolt_sound, 15, TRUE, 1)
+		ready_in_chamber()
+		recent_cycle = world.time
+	else
+		to_chat(M, SPAN_DANGER("You open the bolt of [src]!"))
+		playsound(get_turf(src), close_bolt_sound, 65, TRUE, 1)
+		eject_casing()
+		unload_chamber(M)
+
+	update_icon()
+
+/obj/item/weapon/gun/boltaction/fr2/able_to_fire(mob/user)
+	. = ..()
+
+	if(. && !bolted)
+		to_chat(user, SPAN_WARNING("The bolt is still open, you can't fire [src]."))
+		return FALSE
+
+/obj/item/weapon/gun/boltaction/fr2/load_into_chamber(mob/user)
+	return in_chamber
+
+/obj/item/weapon/gun/boltaction/fr2/reload_into_chamber(mob/user)
+	in_chamber = null
+	return TRUE
+
+/obj/item/weapon/gun/boltaction/fr2/cock(mob/user)
+	return
+
+/obj/item/weapon/gun/boltaction/fr2/replace_magazine(mob/user, obj/item/ammo_magazine/magazine)
+	user.drop_inv_item_to_loc(magazine, src)
+	current_mag = magazine
+	replace_ammo(user,magazine)
+	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
+		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
+	if(reload_sound)
+		playsound(user, reload_sound, 25, 1, 5)

@@ -582,7 +582,7 @@
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/hoverpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/faami, WEAR_BACK)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
@@ -628,7 +628,7 @@
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/hoverpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/faami, WEAR_BACK)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
