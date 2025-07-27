@@ -234,7 +234,7 @@
 		return
 
 	if(iszombie(ai_human))
-		return
+		return OPEN_TURF_PENALTY
 
 	if(ai_human.on_fire)
 		return FIRE_PENALTY

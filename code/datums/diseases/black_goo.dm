@@ -186,6 +186,8 @@
 	if(!.)
 		return FALSE
 	playsound(loc, 'sound/weapons/bladeslice.ogg', 25, 1, 5)
+	if(user.on_fire)
+		target.apply_armoured_damage(rand(3,16), ARMOR_MELEE, BURN, null, 25)
 
 	if(ishuman_strict(target))
 		var/mob/living/carbon/human/human = target
