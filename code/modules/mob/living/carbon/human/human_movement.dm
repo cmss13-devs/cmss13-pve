@@ -46,6 +46,8 @@
 				else if(check_limb.status & LIMB_BROKEN)
 					. += MOVE_REDUCTION_LIMB_BROKEN
 		else
+			if(src.on_fire)
+				zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_BROKEN
 			for(var/obj/limb/check_limb in limbs)
 				if(!check_limb || !check_limb.is_usable()) //Zombies might be made of paper, but they care less about losing limbs
 					zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_DESTROYED

@@ -233,6 +233,9 @@
 	if(!.)
 		return
 
+	if(iszombie(ai_human))
+		return
+
 	if(ai_human.on_fire)
 		return FIRE_PENALTY
 
