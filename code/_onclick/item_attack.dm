@@ -77,27 +77,46 @@
 		return FALSE
 	if(ishuman(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
 		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
-			if(target.pulledby != user || target.pulledby?.grab_level < GRAB_AGGRESSIVE)
-				to_chat(user, SPAN_NOTICE("You need to get a secure grip to do this!"))
+			if(target.pulledby != user || (target.pulledby?.grab_level < GRAB_AGGRESSIVE && !iszombie(target)))
+				to_chat(user, SPAN_NOTICE(iszombie(target) ? "You need to grab hold to do this!" : "You need to get a secure grip to do this!"))
 				return FALSE
 
-			var/mob/living/carbon/human/humant_target = target
-			var/obj/limb/limb = humant_target.get_limb("head")
+			var/mob/living/carbon/human/human_target = target
+			var/obj/limb/limb = human_target.get_limb("head")
+			var/time_to_decap = HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC)
+			if(iszombie(target))
+				time_to_decap /= 2
+			human_target.pixel_y = 0
+			human_target.pixel_x = 0
+			switch(user.dir)
+				if(NORTH)
+					human_target.pixel_y -= 14
+				if(EAST)
+					human_target.pixel_x -= 14
+				if(SOUTH)
+					human_target.pixel_y += 14
+				if(WEST)
+					human_target.pixel_x += 14
 
-			to_chat(user, SPAN_WARNING("You start to cut off [target]'s head!"))
-			humant_target.add_splatter_floor()
-			playsound(humant_target, 'sound/effects/blood_squirt.ogg', 40, TRUE)
+			to_chat(user, SPAN_WARNING(iszombie(target) ? "Your [src.name] easily starts to cut through [target]'s neck!" : "You start to cut off [target]'s head!"))
+			human_target.add_splatter_floor()
+			playsound(human_target, 'sound/effects/blood_squirt.ogg', 40, TRUE)
 
-			if(do_after(user, (HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
-				humant_target.add_splatter_floor()
-				playsound(humant_target, 'sound/effects/bone_break2.ogg', 25, TRUE)
+			if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				human_target.add_splatter_floor()
+				playsound(human_target, 'sound/effects/bone_break2.ogg', 25, TRUE)
 
-				if(do_after(user, (HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC))/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
 					user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
-					humant_target.spray_blood(rand(0, 181), limb)
+					human_target.spray_blood(rand(0, 181), limb)
 					limb.droplimb(0,0, user)
+					human_target.pixel_y = 0
+					human_target.pixel_x = 0
+					if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
+						human_target.spray_blood(rand(0, 181), limb)
 					return TRUE
-
+			human_target.pixel_y = 0
+			human_target.pixel_x = 0
 			to_chat(user, SPAN_WARNING("You were interrupted!"))
 			return FALSE
 		else
