@@ -391,7 +391,7 @@
 	damage_armor_punch = 5
 
 /datum/ammo/bullet/rifle/heavy/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 16) // Can knockback out to 2/3rds-range
+	knockback(M, P, 6) // Can knockback out to 1/4th-range
 	var/slow_duration = 7
 	var/mob/living/L = M
 	if(isxeno(M))
@@ -406,7 +406,7 @@
 		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
 
 /datum/ammo/bullet/rifle/heavy/spec/explosive/on_near_target(turf/T, obj/projectile/P)
-	burst(T,P,damage_type, 2 , 2)
+	burst(T,P,damage_type, 2 , 4)
 	burst(T,P,damage_type, 1 , 2, 0)
 	return 1
 
@@ -426,8 +426,10 @@
 
 /datum/ammo/bullet/rifle/heavy/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
 	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
-	knockback(target, fired_proj, max_range = 2)
-
+	knockback(target, fired_proj, 16) // Can knockback out to 2/3rds-range
+	if(target.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = target
+		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 /datum/ammo/bullet/rifle/heavy/iff/set_bullet_traits()
 	. = ..()

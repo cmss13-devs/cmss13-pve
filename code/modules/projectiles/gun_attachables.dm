@@ -3568,6 +3568,7 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
 	slot = "under"
+	pixel_shift_y = 18
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
