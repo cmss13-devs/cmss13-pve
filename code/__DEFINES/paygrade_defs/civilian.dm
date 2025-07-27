@@ -7,9 +7,6 @@
 /// CNUR, Nurse
 #define PAY_SHORT_CNUR "CNUR"
 
-///CPARA, Paramedic
-#define PAY_SHORT_CPARA "CPARA"
-
 /// CDOC, Doctor
 #define PAY_SHORT_CDOC "CDOC"
 

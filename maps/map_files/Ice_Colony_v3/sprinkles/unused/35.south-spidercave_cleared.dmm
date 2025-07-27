@@ -34,7 +34,7 @@
 /obj/structure/platform/strata{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/shiva/interior/caves/left_spiders)
 "fd" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -92,7 +92,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/shiva/interior/caves/left_spiders)
 "lz" = (
 /obj/structure/barricade/handrail/wire{
@@ -274,7 +274,7 @@
 /obj/structure/platform/strata{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/shiva/interior/caves/left_spiders)
 "MY" = (
 /obj/effect/spider/stickyweb{
@@ -350,7 +350,7 @@
 	pixel_x = -16;
 	pixel_y = 13
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/shiva/interior/caves/left_spiders)
 "Yi" = (
 /obj/item/lightstick/planted,

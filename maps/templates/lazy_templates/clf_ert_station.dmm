@@ -690,7 +690,7 @@
 /area/adminlevel/ert_station/clf_station)
 "qy" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/adminlevel/ert_station/clf_station)
 "qW" = (
 /obj/structure/closet/crate,
@@ -991,7 +991,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/adminlevel/ert_station/clf_station)
 "yU" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/adminlevel/ert_station/clf_station)
 "yW" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -1555,7 +1555,7 @@
 /area/adminlevel/ert_station/clf_station)
 "OG" = (
 /obj/item/storage/belt/shotgun/full/quackers,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/adminlevel/ert_station/clf_station)
 "OK" = (
 /obj/structure/stairs/perspective{
@@ -1670,7 +1670,7 @@
 	icon_state = "alienplant1";
 	light_range = 2
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/adminlevel/ert_station/clf_station)
 "Sc" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -1759,7 +1759,7 @@
 /area/adminlevel/ert_station/clf_station)
 "Uo" = (
 /obj/structure/flora/bush/ausbushes/var3,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/adminlevel/ert_station/clf_station)
 "UW" = (
 /turf/open/gm/coast/east,

@@ -79,7 +79,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "abS" = (
 /obj/effect/acid_hole,
@@ -134,7 +134,7 @@
 /obj/structure/platform_decoration{
 	dir = 6
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "adh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -175,7 +175,7 @@
 /obj/structure/platform_decoration{
 	dir = 10
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "adP" = (
 /obj/structure/machinery/light{
@@ -239,7 +239,7 @@
 /area/lv522/indoors/c_block/mining)
 "afp" = (
 /obj/structure/platform,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "afr" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -420,7 +420,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "ajz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -3149,7 +3149,7 @@
 	pixel_x = -2;
 	pixel_y = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "bBN" = (
 /obj/item/clothing/mask/facehugger{
@@ -3414,7 +3414,7 @@
 	density = 0;
 	pixel_y = 16
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "bJK" = (
 /obj/structure/barricade/wooden,
@@ -3648,7 +3648,7 @@
 	dir = 1;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "bQG" = (
 /obj/effect/decal/warning_stripes{
@@ -4045,7 +4045,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "bZJ" = (
 /obj/effect/spawner/gibspawner/xeno,
@@ -4373,7 +4373,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "cgO" = (
 /obj/structure/barricade/handrail{
@@ -5470,7 +5470,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel)
 "cMc" = (
 /obj/item/clothing/head/hardhat,
@@ -6573,7 +6573,7 @@
 	dir = 1;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "dpJ" = (
 /obj/structure/machinery/light{
@@ -6609,7 +6609,7 @@
 	dir = 8;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "dqu" = (
 /turf/open/floor/prison/floor_plate,
@@ -7483,7 +7483,7 @@
 	dir = 4
 	},
 /obj/effect/spawner/gibspawner/xeno,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "dMt" = (
 /turf/open/floor/corsat/marked,
@@ -7821,7 +7821,7 @@
 	pixel_x = -6;
 	pixel_y = 8
 	},
-/obj/item/clothing/head/fedora/brown,
+/obj/item/clothing/head/det_hat,
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
@@ -8057,7 +8057,7 @@
 	pixel_x = 1;
 	pixel_y = -7
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "egy" = (
 /obj/structure/bed/chair/comfy{
@@ -8364,7 +8364,7 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "epU" = (
 /turf/open/floor/corsat/squares,
@@ -8511,7 +8511,7 @@
 /turf/open/floor/strata/cyan2/east,
 /area/lv522/indoors/a_block/medical)
 "etx" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "etB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8923,7 +8923,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/outdoors/colony_streets/south_street)
 "eDt" = (
 /obj/structure/curtain/red,
@@ -12058,7 +12058,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/outdoors/colony_streets/south_street)
 "gmv" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -13995,7 +13995,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "hkz" = (
 /obj/structure/machinery/vending/hydroseeds,
@@ -14384,7 +14384,7 @@
 /area/lv522/atmos/cargo_intake)
 "hvh" = (
 /obj/structure/platform,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "hvD" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -14946,7 +14946,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "hNR" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -15137,7 +15137,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/lv522/indoors/c_block/cargo)
 "hTe" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel)
 "hTC" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16033,7 +16033,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen)
 "itJ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -17449,7 +17449,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "jjG" = (
 /obj/structure/prop/ice_colony/ground_wire,
@@ -18588,7 +18588,7 @@
 /turf/open/floor/prison/blue/north,
 /area/lv522/indoors/a_block/admin)
 "jHb" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "jHg" = (
 /obj/structure/platform,
@@ -18658,7 +18658,7 @@
 /area/lv522/landing_zone_1/ceiling)
 "jIR" = (
 /obj/effect/decal/cleanable/greenglow,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "jIU" = (
 /obj/structure/bed/chair/comfy,
@@ -19264,7 +19264,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "jZJ" = (
 /obj/structure/surface/rack,
@@ -19322,7 +19322,7 @@
 /obj/structure/filtration/collector_pipes{
 	icon_state = "lower_2"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/oob)
 "kbb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -20777,7 +20777,7 @@
 	dir = 1;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "kHY" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
@@ -21828,7 +21828,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "ljK" = (
 /obj/structure/ore_box,
@@ -22356,7 +22356,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "lvH" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -22604,7 +22604,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "lBw" = (
 /obj/structure/stairs/perspective{
@@ -22904,7 +22904,7 @@
 /area/lv522/indoors/a_block/dorms)
 "lJl" = (
 /obj/structure/platform_decoration,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "lJn" = (
 /obj/structure/surface/table/almayer,
@@ -23547,7 +23547,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "lYR" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -23748,7 +23748,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "mdp" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -24178,7 +24178,7 @@
 /turf/open/floor/wood,
 /area/lv522/indoors/a_block/fitness/glass)
 "mqx" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "mqA" = (
 /obj/structure/stairs/perspective{
@@ -24973,7 +24973,7 @@
 	desc = "A Farwa plush doll. Once soft and comforting now just really wet.";
 	name = "Soaked farwa plush doll"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "mKJ" = (
 /obj/structure/powerloader_wreckage,
@@ -25283,7 +25283,7 @@
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "mQx" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -25394,7 +25394,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "mSs" = (
 /obj/structure/surface/rack,
@@ -25669,13 +25669,13 @@
 /area/lv522/outdoors/colony_streets/north_west_street)
 "mZW" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "mZX" = (
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "nab" = (
 /obj/structure/machinery/computer/crew/colony{
@@ -25718,13 +25718,13 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "nbj" = (
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "nbn" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -26411,7 +26411,7 @@
 	dir = 4;
 	pixel_y = 16
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "nuH" = (
 /obj/structure/surface/table/almayer,
@@ -26715,7 +26715,7 @@
 	pixel_y = 6
 	},
 /obj/structure/platform,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "nBs" = (
 /obj/structure/largecrate/random/barrel/green,
@@ -26924,7 +26924,7 @@
 /area/lv522/indoors/c_block/t_comm)
 "nGc" = (
 /obj/effect/alien/resin/sticky,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "nGB" = (
 /obj/structure/cargo_container/kelland/right,
@@ -28312,7 +28312,7 @@
 /area/lv522/atmos/way_in_command_centre)
 "opT" = (
 /obj/structure/platform_decoration,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "oqg" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -28463,7 +28463,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/outdoors/colony_streets/south_street)
 "ouu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28479,7 +28479,7 @@
 	pixel_x = 6;
 	pixel_y = 19
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "ovA" = (
 /obj/item/shard{
@@ -30092,7 +30092,7 @@
 	dir = 8;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "pnb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -31191,7 +31191,7 @@
 /turf/open/auto_turf/sand/layer1,
 /area/lv522/indoors/b_block/bridge)
 "pKx" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "pKN" = (
 /obj/structure/prop/invuln/minecart_tracks,
@@ -32519,7 +32519,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "qsY" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -32691,7 +32691,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel)
 "qxm" = (
 /obj/structure/largecrate/random/case/double,
@@ -34753,7 +34753,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel)
 "rwx" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -35569,7 +35569,7 @@
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "rSd" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -37601,7 +37601,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel)
 "sRP" = (
 /obj/structure/largecrate/random,
@@ -37859,7 +37859,7 @@
 /turf/open/floor/corsat/plate,
 /area/lv522/atmos/east_reactor/south)
 "sZq" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "sZr" = (
 /obj/structure/blocker/forcefield/vehicles,
@@ -38249,7 +38249,7 @@
 	pixel_x = -7;
 	pixel_y = 35
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/kitchen/damage)
 "tje" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -38919,7 +38919,7 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "tyc" = (
 /obj/structure/surface/rack,
@@ -39060,7 +39060,7 @@
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "tBQ" = (
 /obj/structure/prop/ice_colony/ground_wire{
@@ -40123,7 +40123,7 @@
 	dir = 1;
 	icon_state = "p_stair_full"
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "tYg" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -42133,7 +42133,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "van" = (
 /obj/structure/prop/turbine_extras,
@@ -42416,7 +42416,7 @@
 /obj/structure/platform{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "vgb" = (
 /obj/structure/platform,
@@ -43264,7 +43264,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "vDr" = (
 /obj/structure/largecrate/random,
@@ -43363,7 +43363,7 @@
 	dir = 10;
 	layer = 3.51
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/sewer)
 "vFF" = (
 /obj/effect/landmark/monkey_spawn,
@@ -44730,7 +44730,7 @@
 /obj/structure/platform_decoration{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/atmos/filt)
 "woS" = (
 /obj/structure/surface/table/almayer,
@@ -47182,7 +47182,7 @@
 /turf/open/floor/prison,
 /area/lv522/indoors/c_block/garage)
 "xAO" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/indoors/a_block/fitness/glass)
 "xAP" = (
 /obj/vehicle/train/cargo/engine,
@@ -47735,7 +47735,7 @@
 /obj/structure/platform_decoration{
 	dir = 1
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv522/landing_zone_1/tunnel/far)
 "xOF" = (
 /obj/structure/surface/table/almayer,

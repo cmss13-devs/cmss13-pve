@@ -1,5 +1,5 @@
 /obj/item/hardpoint/locomotion/van_wheels
-	name = "vehicle wheels"
+	name = "Van wheels"
 	desc = "Integral to the movement of the van"
 	icon = 'icons/obj/vehicles/hardpoints/van.dmi'
 

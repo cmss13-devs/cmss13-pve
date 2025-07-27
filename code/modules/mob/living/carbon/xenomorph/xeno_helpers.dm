@@ -76,6 +76,3 @@
 
 /mob/living/carbon/xenomorph/alter_ghost(mob/dead/observer/ghost)
 	ghost.icon_state = "[get_strain_icon()] [caste.caste_type] Running"
-
-/mob/living/carbon/xenomorph/get_liquid_slowdown()
-	return XENO_WATER_SLOWDOWN

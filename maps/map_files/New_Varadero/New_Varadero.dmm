@@ -305,7 +305,7 @@
 	layer = 2.991
 	},
 /obj/structure/platform,
-/turf/open/liquid/water/river/desert/deep/covered,
+/turf/open/gm/river/desert/deep/covered,
 /area/varadero/interior/maintenance/north)
 "alI" = (
 /mob/living/simple_animal/cat{
@@ -425,7 +425,7 @@
 	density = 0;
 	layer = 2.1
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "aph" = (
 /obj/structure/disposalpipe/segment{
@@ -511,7 +511,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "atw" = (
 /obj/vehicle/train/cargo/trolley,
@@ -733,7 +733,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "aFB" = (
 /obj/structure/sink{
@@ -1167,7 +1167,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "aVM" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -1237,7 +1237,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "aXb" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
@@ -1339,7 +1339,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "bdk" = (
 /obj/structure/machinery/disposal,
@@ -1639,7 +1639,7 @@
 	layer = 3.01
 	},
 /obj/structure/catwalk,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "bqF" = (
 /obj/structure/surface/table,
@@ -1660,7 +1660,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "brT" = (
 /turf/closed/wall/huntership/destructible,
@@ -1715,7 +1715,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "btP" = (
 /obj/structure/bed/chair{
@@ -1733,7 +1733,7 @@
 "btV" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/item/lightstick/variant/planted,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "buh" = (
 /obj/structure/machinery/autolathe,
@@ -1785,7 +1785,7 @@
 /area/varadero/interior/records)
 "bxL" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/lz2_near)
 "byq" = (
 /turf/open/floor/shiva/green,
@@ -1975,7 +1975,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/comms2)
 "bEF" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/monsoon)
 "bEU" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -2375,7 +2375,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "bXv" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
@@ -2440,7 +2440,7 @@
 "cah" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "cak" = (
 /obj/structure/bed/chair{
@@ -2746,7 +2746,7 @@
 	layer = 2.99
 	},
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "clX" = (
 /turf/closed/wall/r_wall,
@@ -2782,7 +2782,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "coa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -2815,7 +2815,7 @@
 /area/varadero/interior/technical_storage)
 "cpM" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves/central)
 "cqa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -3017,7 +3017,7 @@
 /area/varadero/interior/cargo)
 "cwr" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "cwB" = (
 /obj/structure/surface/rack,
@@ -3121,7 +3121,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "cBl" = (
 /obj/structure/machinery/vending/cigarette/koorlander,
@@ -3468,7 +3468,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/chapel)
 "cOZ" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "cPt" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
@@ -3598,7 +3598,7 @@
 /obj/structure/prop/ice_colony/dense/planter_box/hydro{
 	density = 0
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "cWW" = (
 /obj/item/reagent_container/food/snacks/eat_bar,
@@ -3884,7 +3884,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "dgU" = (
 /obj/structure/reagent_dispensers/water_cooler{
@@ -4085,7 +4085,7 @@
 /area/varadero/interior/research)
 "doi" = (
 /obj/structure/pipes/binary/passive_gate,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "dos" = (
 /obj/item/clothing/head/helmet,
@@ -4458,7 +4458,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "dCD" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -4581,7 +4581,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "dHY" = (
 /obj/structure/desertdam/decals/road_edge{
@@ -4679,7 +4679,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/monsoon)
 "dLB" = (
 /obj/structure/largecrate/random/barrel/red,
@@ -4754,7 +4754,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "dPJ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4988,7 +4988,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "eae" = (
 /obj/item/device/mass_spectrometer,
@@ -5147,7 +5147,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "efy" = (
 /turf/closed/wall/rock/brown,
@@ -5156,7 +5156,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "ege" = (
 /obj/effect/landmark/lv624/fog_blocker{
@@ -5166,7 +5166,7 @@
 	time_to_dispel = 25000
 	},
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "egj" = (
 /obj/effect/landmark/hunter_secondary,
@@ -5502,7 +5502,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "epI" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -5599,7 +5599,7 @@
 	density = 0;
 	climb_delay = 0
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "etE" = (
 /obj/structure/filingcabinet{
@@ -6090,7 +6090,7 @@
 /area/varadero/interior/hall_SE)
 "ePH" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "eQm" = (
 /obj/structure/window/framed/wood,
@@ -6310,7 +6310,7 @@
 /area/varadero/exterior/monsoon)
 "eXS" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "eYx" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -6594,7 +6594,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/vessel)
 "fjY" = (
 /obj/structure/surface/rack,
@@ -6678,11 +6678,11 @@
 /area/varadero/interior/hall_SE)
 "fnU" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/monsoon)
 "foa" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "foi" = (
 /obj/structure/machinery/landinglight/ds2,
@@ -6695,7 +6695,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "fon" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -6888,7 +6888,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "fvd" = (
 /obj/structure/filingcabinet{
@@ -7180,7 +7180,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "fKC" = (
 /obj/structure/closet/secure_closet/cargotech,
@@ -7306,7 +7306,7 @@
 	icon_state = "lattice12";
 	pixel_y = -3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/maintenance/south)
 "fQK" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass{
@@ -7481,7 +7481,7 @@
 /turf/open/floor/asteroidfloor/north,
 /area/varadero/exterior/lz1_near)
 "fYp" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "fYu" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -7526,7 +7526,7 @@
 	},
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "fZX" = (
 /obj/structure/platform_decoration/kutjevo,
@@ -7724,7 +7724,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/exterior/eastbeach)
 "gfE" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/eastocean)
 "gfT" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -8114,7 +8114,7 @@
 /area/varadero/exterior/pontoon_beach)
 "guA" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/eastocean)
 "gvg" = (
 /obj/structure/surface/rack,
@@ -8134,7 +8134,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "gvo" = (
 /obj/item/ore/diamond,
@@ -8142,7 +8142,7 @@
 /area/varadero/exterior/lz1_near)
 "gvs" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "gvN" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -8292,7 +8292,7 @@
 	dir = 8;
 	pixel_x = 3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "gBP" = (
 /obj/structure/blocker/invisible_wall/water,
@@ -8387,7 +8387,7 @@
 /turf/open/floor/shiva/floor3,
 /area/varadero/interior/medical)
 "gDG" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/lz2_near)
 "gDI" = (
 /obj/structure/bed/chair{
@@ -8723,7 +8723,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "gRQ" = (
 /obj/structure/machinery/chem_master,
@@ -8896,7 +8896,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "gXf" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -9072,7 +9072,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "hhc" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
@@ -9652,7 +9652,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "hGZ" = (
 /turf/open/gm/dirt/desert2,
@@ -9779,7 +9779,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "hMe" = (
 /obj/structure/bed/chair/office/light{
@@ -9866,7 +9866,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "hPI" = (
 /obj/structure/largecrate/random,
@@ -9942,7 +9942,7 @@
 /area/varadero/exterior/lz1_near)
 "hTh" = (
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "hTo" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -9991,7 +9991,7 @@
 /area/varadero/interior/hall_N)
 "hVR" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "hWv" = (
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass{
@@ -10041,7 +10041,7 @@
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "hYh" = (
 /obj/effect/landmark/hunter_primary,
@@ -10105,7 +10105,7 @@
 /obj/structure/machinery/storm_siren{
 	pixel_y = 5
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "ibs" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
@@ -10213,7 +10213,7 @@
 "idI" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "idZ" = (
 /obj/structure/closet/crate/secure,
@@ -10371,7 +10371,7 @@
 /obj/item/shard{
 	icon_state = "medium"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "ioc" = (
 /obj/structure/surface/table/woodentable,
@@ -10459,7 +10459,7 @@
 /turf/open/floor/shiva/redcorners/west,
 /area/varadero/interior/security)
 "isy" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "isN" = (
 /obj/structure/noticeboard{
@@ -10857,7 +10857,7 @@
 	indestructible = 1;
 	unacidable = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "iIc" = (
 /obj/item/device/flashlight/slime{
@@ -10993,7 +10993,7 @@
 "iNw" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "iNz" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -11110,7 +11110,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "iQI" = (
 /obj/structure/prop/invuln/minecart_tracks{
@@ -11235,7 +11235,7 @@
 /obj/structure/catwalk{
 	indestructible = 1
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "iWX" = (
 /obj/structure/machinery/floodlight{
@@ -11313,7 +11313,7 @@
 	layer = 2.99
 	},
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "jaF" = (
 /turf/open/gm/coast/east,
@@ -11604,7 +11604,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "jqd" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -11798,7 +11798,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "jzZ" = (
 /turf/open/floor/carpet,
@@ -11885,7 +11885,7 @@
 	desc = "A high-power hydroelectric generator.";
 	name = "hydroelectric generator"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "jEv" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -12072,7 +12072,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "jLs" = (
 /turf/open/floor/shiva/multi_tiles/west,
@@ -12105,7 +12105,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/varadero/exterior/eastbeach)
 "jNI" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "jNT" = (
 /obj/structure/pipes/vents/pump,
@@ -12185,7 +12185,7 @@
 "jPL" = (
 /obj/structure/prop/rock/brown,
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "jPM" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -12246,7 +12246,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "jRY" = (
 /turf/open/floor/asteroidfloor/north,
@@ -12405,7 +12405,7 @@
 /turf/open/floor/shiva/red/southwest,
 /area/varadero/interior/security)
 "jXN" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/monsoon)
 "jYm" = (
 /obj/structure/bed/chair{
@@ -12499,7 +12499,7 @@
 /area/varadero/interior/maintenance/north)
 "kax" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "kaS" = (
 /obj/structure/machinery/light/small,
@@ -12548,7 +12548,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "kef" = (
 /obj/item/shard{
@@ -12590,7 +12590,7 @@
 	unacidable = 1;
 	layer = 4.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "keR" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -12687,14 +12687,14 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "khG" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
 /obj/structure/pipes/binary/passive_gate,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "khS" = (
 /obj/structure/pipes/vents/pump{
@@ -12802,7 +12802,7 @@
 	name = "sturdy rock(s)";
 	desc = "A solidified collection of local minerals. When melted, becomes a substance best known as lava. These look particularly durable."
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "knu" = (
 /obj/structure/window/framed/colony/reinforced,
@@ -12962,7 +12962,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "ksu" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -13131,7 +13131,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "kxW" = (
 /obj/structure/window/reinforced{
@@ -13394,7 +13394,7 @@
 	icon_state = "lattice12";
 	pixel_y = -3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/maintenance/security)
 "kHA" = (
 /obj/structure/machinery/alarm{
@@ -13465,7 +13465,7 @@
 	indestructible = 1;
 	unacidable = 1
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "kIM" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -13552,7 +13552,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "kMf" = (
 /obj/structure/window/framed/colony/reinforced/tinted,
@@ -13703,7 +13703,7 @@
 /area/varadero/interior/hall_N)
 "kRG" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "kRH" = (
 /turf/open/gm/coast/beachcorner/north_west,
@@ -13978,7 +13978,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/eastocean)
 "lck" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/lz2_near)
 "lcn" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -14510,7 +14510,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river/desert/deep/covered,
+/turf/open/gm/river/desert/deep/covered,
 /area/varadero/interior/maintenance/north)
 "lEY" = (
 /obj/structure/machinery/alarm{
@@ -14551,7 +14551,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "lFY" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -14591,7 +14591,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/river/desert/deep/covered,
+/turf/open/gm/river/desert/deep/covered,
 /area/varadero/interior/maintenance/north)
 "lGV" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -14634,7 +14634,7 @@
 	desc = "A high-power hydroelectric generator.";
 	name = "hydroelectric generator"
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "lJU" = (
 /obj/structure/surface/table,
@@ -14666,7 +14666,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "lKP" = (
 /obj/item/weapon/harpoon/yautja{
@@ -14759,7 +14759,7 @@
 /turf/open/floor/carpet,
 /area/varadero/interior/research)
 "lNI" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "lNJ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -14833,11 +14833,11 @@
 	layer = 2.99
 	},
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "lRw" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "lRz" = (
 /obj/effect/decal/ammo_casing{
@@ -14887,7 +14887,7 @@
 /area/varadero/interior_protected/caves/digsite)
 "lVh" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "lVB" = (
 /obj/item/device/camera,
@@ -14954,7 +14954,7 @@
 	pixel_x = -17;
 	pixel_y = -19
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "lXB" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -14971,7 +14971,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "lXQ" = (
 /turf/open/gm/dirt/desert_dug,
@@ -15119,7 +15119,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/hall_SE)
 "mel" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "meG" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -15140,7 +15140,7 @@
 	indestructible = 1;
 	unacidable = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "meR" = (
 /obj/structure/pipes/vents/pump/on,
@@ -15191,7 +15191,7 @@
 /area/varadero/interior/comms1)
 "mgh" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "mgl" = (
 /obj/structure/pipes/vents/pump{
@@ -15282,7 +15282,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "mkz" = (
 /obj/item/stack/sheet/metal,
@@ -15765,7 +15765,7 @@
 	pixel_x = 1;
 	pixel_y = -2
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "mEs" = (
 /obj/structure/machinery/light/small,
@@ -15885,7 +15885,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "mKg" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -15897,7 +15897,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "mLu" = (
 /turf/open/floor/shiva/red/northwest,
@@ -15954,7 +15954,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "mOo" = (
 /obj/structure/bed/chair{
@@ -16156,7 +16156,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "mXj" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -16265,7 +16265,7 @@
 /area/varadero/exterior/farocean)
 "nay" = (
 /obj/structure/prop/fishing/line/long/part2,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "naZ" = (
 /obj/structure/closet/radiation,
@@ -16345,7 +16345,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "nds" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -16410,7 +16410,7 @@
 "ngJ" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "ngR" = (
 /obj/structure/machinery/storm_siren{
@@ -16464,7 +16464,7 @@
 /turf/open/gm/dirt,
 /area/varadero/exterior/monsoon)
 "nhO" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "nhX" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -16568,7 +16568,7 @@
 /obj/item/shard{
 	icon_state = "medium"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "nkF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -16617,7 +16617,7 @@
 "nlG" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/item/lightstick/variant/planted,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "nms" = (
 /turf/open/floor/shiva/floor3,
@@ -16776,7 +16776,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "nsN" = (
 /turf/open/gm/coast/south,
@@ -16864,7 +16864,7 @@
 /area/varadero/interior/electrical)
 "nxG" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "nxM" = (
 /turf/open/floor/shiva/snow_mat/west,
@@ -16900,7 +16900,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "nAq" = (
 /turf/open/shuttle/elevator,
@@ -16934,7 +16934,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "nBL" = (
 /obj/structure/largecrate/random,
@@ -16946,7 +16946,7 @@
 /area/varadero/interior/hall_SE)
 "nCf" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "nCu" = (
 /obj/structure/machinery/light{
@@ -17073,7 +17073,7 @@
 	unacidable = 1;
 	layer = 4.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "nGS" = (
 /obj/structure/bed/chair{
@@ -17248,7 +17248,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "nNe" = (
 /obj/structure/window/framed/colony/reinforced,
@@ -17380,7 +17380,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "nSP" = (
 /obj/structure/sign/safety/airlock{
@@ -17510,7 +17510,7 @@
 	indestructible = 1;
 	alpha = 0
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "nZL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -17553,7 +17553,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "obg" = (
 /obj/structure/filingcabinet,
@@ -17583,11 +17583,11 @@
 	pixel_x = -1;
 	pixel_y = 12
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "ocE" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/monsoon)
 "ocM" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -17679,7 +17679,7 @@
 /obj/structure/flora/bush/ausbushes/var3/stalkybush{
 	pixel_y = 9
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "ogB" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -17772,7 +17772,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "olU" = (
 /obj/structure/machinery/door/airlock/almayer/security/glass{
@@ -17891,7 +17891,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "oqx" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -18324,7 +18324,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "oEK" = (
 /obj/structure/barricade/handrail/wire{
@@ -18386,7 +18386,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "oGv" = (
 /turf/open/gm/dirt,
@@ -18404,7 +18404,7 @@
 /area/varadero/interior/maintenance/research)
 "oGX" = (
 /obj/item/lightstick/variant/planted,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "oHb" = (
 /obj/item/stool{
@@ -18453,7 +18453,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "oHT" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -18497,7 +18497,7 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.01
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "oJX" = (
 /obj/item/stack/sheet/metal,
@@ -18610,7 +18610,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "oOa" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -18631,7 +18631,7 @@
 /area/varadero/interior/research)
 "oOQ" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "oOR" = (
 /obj/structure/window/reinforced{
@@ -18906,7 +18906,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "oXC" = (
 /obj/structure/surface/table,
@@ -18930,7 +18930,7 @@
 /area/varadero/interior/hall_SE)
 "oYg" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "oYm" = (
 /obj/item/book/manual/detective,
@@ -19063,7 +19063,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "pdN" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -19097,7 +19097,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/lz2_near)
 "pfV" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -19202,7 +19202,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "pkj" = (
 /obj/item/tool/weldingtool,
@@ -19402,7 +19402,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "psa" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -19436,7 +19436,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "psK" = (
 /obj/structure/machinery/door/window/brigdoor/westleft{
@@ -19480,7 +19480,7 @@
 /area/varadero/interior_protected/caves/digsite)
 "puv" = (
 /obj/item/toy/beach_ball,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "puE" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -19513,7 +19513,7 @@
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "pwJ" = (
 /obj/structure/closet/emcloset,
@@ -19760,7 +19760,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "pIy" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -19806,7 +19806,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "pJM" = (
 /obj/structure/flora/pottedplant{
@@ -19938,7 +19938,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "pNR" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -19965,7 +19965,7 @@
 	name = "support struts"
 	},
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "pPb" = (
 /obj/structure/disposalpipe/junction{
@@ -19996,7 +19996,7 @@
 /area/varadero/exterior/lz2_near)
 "pQl" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "pQp" = (
 /turf/closed/wall/r_wall,
@@ -20058,7 +20058,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "pRV" = (
 /turf/open/gm/coast/beachcorner2/north_east,
@@ -20146,7 +20146,7 @@
 /turf/open/floor/plating/icefloor/asteroidplating,
 /area/varadero/interior/maintenance/north)
 "pVD" = (
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "pVN" = (
 /obj/structure/window/framed/colony,
@@ -20311,7 +20311,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "pZb" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -20393,7 +20393,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "qdL" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -20453,7 +20453,7 @@
 /area/varadero/interior/bunks)
 "qey" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/lz2_near)
 "qeE" = (
 /obj/structure/machinery/light{
@@ -20740,7 +20740,7 @@
 /area/varadero/interior/security)
 "qrv" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "qrO" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -21173,7 +21173,7 @@
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "qGR" = (
 /obj/structure/machinery/landinglight/ds1/spoke{
@@ -21240,7 +21240,7 @@
 	layer = 2.99
 	},
 /obj/item/clothing/under/shorts/grey,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "qIF" = (
 /turf/open/gm/dirt,
@@ -21293,7 +21293,7 @@
 "qMx" = (
 /obj/structure/blocker/invisible_wall/water,
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "qMW" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -21301,7 +21301,7 @@
 /area/varadero/interior_protected/maintenance/south)
 "qNA" = (
 /obj/item/storage/belt/marine/quackers,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "qNX" = (
 /turf/open/gm/coast/beachcorner/north_west,
@@ -21376,7 +21376,7 @@
 	},
 /obj/structure/blocker/invisible_wall/water,
 /obj/item/lightstick/variant/planted,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "qQr" = (
 /obj/structure/disposalpipe/segment{
@@ -21462,7 +21462,7 @@
 /area/varadero/interior/administration)
 "qTP" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "qTR" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -21518,7 +21518,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "qVk" = (
 /obj/structure/filingcabinet{
@@ -21678,7 +21678,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "rbU" = (
 /turf/open/floor/wood,
@@ -21743,7 +21743,7 @@
 /area/varadero/interior/hall_N)
 "rdH" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "rdN" = (
 /obj/item/weapon/gun/revolver/spearhead,
@@ -21895,7 +21895,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 8
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "rkQ" = (
 /obj/structure/prop/invuln/minecart_tracks{
@@ -22021,7 +22021,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "rpT" = (
 /obj/effect/decal/ammo_casing/redshell{
@@ -22050,7 +22050,7 @@
 /area/varadero/interior/cargo)
 "rqJ" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "rqQ" = (
 /turf/open/floor/shiva/yellowfull/west,
@@ -22159,7 +22159,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "rwl" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -22429,7 +22429,7 @@
 	icon_state = "ladder10";
 	name = "ladder"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "rIj" = (
 /turf/open/floor/shiva/purple/east,
@@ -22480,7 +22480,7 @@
 /area/varadero/exterior/lz2_near)
 "rKq" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "rKB" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -22584,7 +22584,7 @@
 /area/varadero/interior/research)
 "rNx" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "rOv" = (
 /obj/structure/pipes/standard/simple/hidden/green,
@@ -22634,7 +22634,7 @@
 	unacidable = 1;
 	layer = 4.1
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "rQG" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -22914,7 +22914,7 @@
 "sbH" = (
 /obj/structure/catwalk,
 /obj/structure/largecrate/random,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "sbI" = (
 /obj/effect/landmark/yautja_teleport,
@@ -23042,7 +23042,7 @@
 /area/varadero/interior/maintenance)
 "sgg" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "sgk" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
@@ -23077,7 +23077,7 @@
 	name = "barge float";
 	desc = "A supportive lattice connected to two floating pontoons."
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/farocean)
 "shM" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
@@ -23197,7 +23197,7 @@
 /area/varadero/exterior/lz1_near)
 "smB" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/monsoon)
 "smL" = (
 /obj/structure/reagent_dispensers/watertank,
@@ -23275,7 +23275,7 @@
 /area/varadero/interior/maintenance/security)
 "spz" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "spV" = (
 /obj/structure/closet/secure_closet/engineering_welding,
@@ -23398,7 +23398,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "svi" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -23495,7 +23495,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "sxl" = (
 /obj/structure/closet/secure_closet/security,
@@ -23503,7 +23503,7 @@
 /area/varadero/interior/security)
 "sxt" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "sxK" = (
 /obj/structure/surface/rack,
@@ -23594,7 +23594,7 @@
 /area/varadero/interior/maintenance)
 "sCe" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "sCf" = (
 /obj/item/tool/shovel,
@@ -24136,7 +24136,7 @@
 	icon_state = "lattice12";
 	pixel_y = -3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/hall_SE)
 "sVH" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -24234,7 +24234,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "tbG" = (
 /obj/structure/window/reinforced{
@@ -24495,7 +24495,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "tmg" = (
 /obj/structure/disposalpipe/segment,
@@ -24571,7 +24571,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "tqg" = (
 /obj/structure/pipes/vents/pump/on,
@@ -24719,7 +24719,7 @@
 	pixel_x = -4;
 	pixel_y = 9
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "tAb" = (
 /obj/structure/surface/rack,
@@ -24796,7 +24796,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/caves/north_research)
 "tEF" = (
 /obj/structure/prop/rock/brown,
@@ -25543,7 +25543,7 @@
 	icon_state = "lattice12";
 	pixel_y = -3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior/cargo)
 "umT" = (
 /turf/open/floor/carpet,
@@ -25581,7 +25581,7 @@
 /turf/open/gm/dirt/desert_dug,
 /area/varadero/exterior/lz1_near)
 "uod" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach)
 "uoJ" = (
 /obj/effect/landmark/ert_spawns/groundside_xeno,
@@ -25913,7 +25913,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "uBo" = (
 /obj/structure/machinery/light{
@@ -25926,7 +25926,7 @@
 /area/varadero/interior/court)
 "uBN" = (
 /obj/structure/blocker/invisible_wall/water,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "uBQ" = (
 /obj/structure/disposalpipe/junction{
@@ -26004,7 +26004,7 @@
 	dir = 4
 	},
 /obj/structure/platform,
-/turf/open/liquid/water/river/desert/deep/covered,
+/turf/open/gm/river/desert/deep/covered,
 /area/varadero/interior/maintenance/north)
 "uEQ" = (
 /obj/structure/closet/emcloset,
@@ -26421,7 +26421,7 @@
 	density = 0;
 	layer = 2.1
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "uWA" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -26648,7 +26648,7 @@
 /area/varadero/interior/court)
 "vfo" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vfO" = (
 /obj/structure/blocker/invisible_wall/water,
@@ -26657,7 +26657,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "vfQ" = (
 /obj/structure/machinery/light{
@@ -26788,7 +26788,7 @@
 	icon_state = "hr_kutjevo";
 	name = "support struts"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vjz" = (
 /obj/structure/machinery/firealarm{
@@ -26828,7 +26828,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "vkK" = (
 /obj/structure/surface/rack,
@@ -27002,7 +27002,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "vsO" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
@@ -27100,7 +27100,7 @@
 	name = "sturdy rock(s)";
 	desc = "A solidified collection of local minerals. When melted, becomes a substance best known as lava. These look particularly durable."
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "vxr" = (
 /obj/structure/pipes/vents/pump{
@@ -27142,7 +27142,7 @@
 	pixel_x = 17;
 	pixel_y = 16
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "vzq" = (
 /obj/structure/machinery/storm_siren{
@@ -27500,7 +27500,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vKv" = (
 /obj/structure/window/framed/colony/reinforced/hull{
@@ -27603,7 +27603,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "vNP" = (
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access/dormatory,
@@ -28197,7 +28197,7 @@
 /area/varadero/interior/records)
 "wmz" = (
 /obj/structure/blocker/fog,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/farocean)
 "wmE" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -28460,7 +28460,7 @@
 	pixel_x = 4;
 	pixel_y = -6
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "wxE" = (
 /obj/structure/machinery/door/airlock/almayer/engineering/glass{
@@ -28493,7 +28493,7 @@
 /area/varadero/interior/research)
 "wzS" = (
 /obj/structure/prop/rock/brown,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "wAe" = (
 /obj/structure/machinery/landinglight/ds2/delaythree{
@@ -28583,7 +28583,7 @@
 /turf/open/shuttle/elevator,
 /area/varadero/interior/records)
 "wDw" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "wDZ" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -28621,7 +28621,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "wFP" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -28755,7 +28755,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "wME" = (
 /obj/structure/machinery/light,
@@ -28765,7 +28765,7 @@
 /obj/item/shard{
 	icon_state = "medium"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pool)
 "wNc" = (
 /obj/structure/machinery/computer/card{
@@ -28852,7 +28852,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/comms4)
 "wPH" = (
 /obj/structure/platform_decoration/kutjevo{
@@ -28872,7 +28872,7 @@
 /obj/effect/landmark/lv624/fog_blocker{
 	time_to_dispel = 25000
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/eastocean)
 "wRP" = (
 /obj/structure/dispenser,
@@ -29172,7 +29172,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "xct" = (
 /obj/structure/machinery/light{
@@ -29347,7 +29347,7 @@
 /area/varadero/interior/medical)
 "xkL" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/exterior/eastocean)
 "xkP" = (
 /obj/structure/disposalpipe/segment{
@@ -29453,7 +29453,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "xqt" = (
 /turf/open/gm/dirt/desert0,
@@ -29493,7 +29493,7 @@
 /turf/open/floor/shiva/multi_tiles,
 /area/varadero/interior/medical)
 "xrZ" = (
-/turf/open/liquid/water/ocean/deep_ocean,
+/turf/open/gm/river/ocean/deep_ocean,
 /area/varadero/interior/oob)
 "xst" = (
 /turf/open/floor/shiva/multi_tiles,
@@ -29685,7 +29685,7 @@
 /area/varadero/interior/maintenance)
 "xzO" = (
 /obj/structure/catwalk,
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "xAg" = (
 /turf/closed/wall/r_wall/unmeltable,
@@ -29780,7 +29780,7 @@
 /area/varadero/interior_protected/maintenance/south)
 "xFk" = (
 /obj/structure/platform_decoration/kutjevo,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/comms4)
 "xFn" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -29944,7 +29944,7 @@
 	layer = 2.1;
 	name = "lattice"
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/vessel)
 "xLE" = (
 /obj/structure/noticeboard{
@@ -30003,7 +30003,7 @@
 	dir = 4;
 	pixel_x = -3
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "xQl" = (
 /obj/structure/catwalk,
@@ -30013,7 +30013,7 @@
 	density = 0;
 	climb_delay = 0
 	},
-/turf/open/liquid/water/river/desert/deep/no_slowdown,
+/turf/open/gm/river/desert/deep/no_slowdown,
 /area/varadero/interior/maintenance/north)
 "xQw" = (
 /obj/effect/overlay/palmtree_r{
@@ -30141,7 +30141,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "xWd" = (
 /obj/structure/disposalpipe/segment{
@@ -30237,7 +30237,7 @@
 	layer = 2.99
 	},
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/interior_protected/caves)
 "ybl" = (
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
@@ -30291,7 +30291,7 @@
 	climb_delay = 1;
 	layer = 2.99
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach)
 "ycY" = (
 /obj/item/trash/ceramic_plate{
@@ -30363,7 +30363,7 @@
 /obj/structure/platform_decoration/kutjevo{
 	dir = 4
 	},
-/turf/open/liquid/water/shallow_ocean_shallow_ocean,
+/turf/open/gm/river/shallow_ocean_shallow_ocean,
 /area/varadero/exterior/pontoon_beach/lz)
 "yeR" = (
 /obj/structure/pipes/standard/simple/hidden/green,

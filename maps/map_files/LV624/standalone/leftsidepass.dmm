@@ -8,11 +8,11 @@
 /area/lv624/ground/river/west_river)
 "ae" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "af" = (
 /obj/effect/landmark/lv624/fog_blocker,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "ag" = (
 /obj/effect/alien/weeds/node,
@@ -22,7 +22,7 @@
 "ah" = (
 /obj/structure/flora/jungle/alienplant1,
 /obj/effect/landmark/lv624/fog_blocker,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "ai" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
@@ -30,15 +30,15 @@
 /area/lv624/ground/river/west_river)
 "aj" = (
 /obj/structure/flora/bush/ausbushes/var3/ywflowers,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "al" = (
 /obj/structure/flora/bush/ausbushes/palebush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "am" = (
 /obj/structure/flora/bush/ausbushes/var3/sunnybush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "ao" = (
 /turf/open/gm/coast/beachcorner2/south_west,
@@ -73,7 +73,7 @@
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/lv624/ground/river/west_river)
 "bc" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "bf" = (
 /obj/structure/flora/bush/ausbushes/grassybush,
@@ -104,7 +104,7 @@
 /area/lv624/ground/river/west_river)
 "bN" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "bV" = (
 /turf/open/gm/dirt,
@@ -121,7 +121,7 @@
 /area/lv624/ground/river/west_river)
 "ve" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/jungle/west_jungle)
 "zW" = (
 /turf/open/gm/coast/west,
@@ -134,20 +134,20 @@
 /area/lv624/ground/river/west_river)
 "FJ" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "JC" = (
 /turf/closed/wall/rock/brown,
 /area/lv624/ground/caves/south_west_caves)
 "KD" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/jungle/west_jungle)
 "Ms" = (
 /turf/open/gm/coast/south,
 /area/lv624/ground/jungle/west_jungle)
 "Ok" = (
 /obj/structure/flora/jungle/alienplant1,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/west_river)
 "Oz" = (
 /turf/closed/wall/rock/brown,

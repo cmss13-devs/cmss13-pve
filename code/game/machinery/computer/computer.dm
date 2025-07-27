@@ -121,7 +121,7 @@
 		src.attack_hand(user)
 	return ..()
 
-/obj/structure/machinery/computer/attack_hand(mob/living/user)
+/obj/structure/machinery/computer/attack_hand()
 	. = ..()
 	if(!.) //not broken or unpowered
 		if(ishuman(usr))

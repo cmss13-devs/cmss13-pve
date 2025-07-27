@@ -582,7 +582,7 @@
 /turf/open/floor/plating,
 /area/bigredv2/outside/engineering)
 "cS" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "cT" = (
 /turf/open/mars/mars_dirt_13,
@@ -631,7 +631,7 @@
 /area/bigredv2/outside/engineering)
 "dj" = (
 /obj/effect/decal/cleanable/dirt/greenglow,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "dk" = (
 /obj/structure/girder,
@@ -759,7 +759,7 @@
 /area/bigredv2/outside/engineering)
 "ec" = (
 /obj/structure/catwalk/bigred,
-/turf/open/liquid/water/river/desert/shallow/edge/covered,
+/turf/open/gm/river/desert/shallow/covered,
 /area/bigredv2/outside/engineering)
 "ee" = (
 /obj/effect/decal/cleanable/molten_item,
@@ -769,7 +769,7 @@
 /obj/structure/machinery/light_construct{
 	dir = 4
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "eh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -801,7 +801,7 @@
 /obj/structure/machinery/light_construct{
 	dir = 8
 	},
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "em" = (
 /obj/structure/machinery/light_construct{
@@ -909,7 +909,7 @@
 "eK" = (
 /obj/effect/decal/cleanable/molten_item,
 /obj/effect/decal/cleanable/dirt/greenglow,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "eL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -918,7 +918,7 @@
 "eM" = (
 /obj/effect/decal/cleanable/dirt/greenglow,
 /obj/effect/decal/cleanable/molten_item,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/bigredv2/outside/engineering)
 "eN" = (
 /obj/effect/decal/cleanable/dirt/greenglow,

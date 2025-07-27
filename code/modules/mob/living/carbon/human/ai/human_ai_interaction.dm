@@ -271,8 +271,13 @@
 /////////////////////////////
 //          RIVER          //
 /////////////////////////////
-/turf/open/liquid/water/river/desert/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
-	if(toxic)
+/turf/open/gm/river/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	. = ..()
+	if(. && !covered)
+		. += base_river_slowdown
+
+/turf/open/gm/river/desert/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	if(toxic && !covered)
 		return FIRE_PENALTY
 
 	return ..()

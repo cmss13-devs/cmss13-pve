@@ -10,13 +10,7 @@
 	var/list/fingerprintshidden
 	var/fingerprintslast = null
 
-	/// determines whether or not the object can be destroyed by xeno acid
 	var/unacidable = FALSE
-	/// determines whether or not the object can be destroyed by an explosion
-	var/explo_proof = FALSE
-	/// determines whether or not the object can be affected by EMPs
-	var/emp_proof = FALSE
-
 	var/last_bumped = 0
 
 	// The cached datum for the permanent pass flags for any given atom
@@ -218,9 +212,6 @@ directive is properly returned.
 /atom/proc/emp_act(severity)
 	SHOULD_CALL_PARENT(TRUE)
 
-	if(emp_proof)
-		return FALSE
-
 	SEND_SIGNAL(src, COMSIG_ATOM_EMP_ACT, severity)
 
 /atom/proc/in_contents_of(container)//can take class or object instance as argument
@@ -282,9 +273,6 @@ directive is properly returned.
 		A.ex_act(severity)
 
 /atom/proc/ex_act(severity)
-	if(explo_proof)
-		return
-
 	contents_explosion(severity)
 
 /atom/proc/fire_act()
@@ -403,9 +391,6 @@ Parameters are passed from New.
 	if(isturf(loc) && opacity)
 		var/turf/opaque_turf = loc
 		opaque_turf.directional_opacity = ALL_CARDINALS // No need to recalculate it in this case, it's guaranteed to be on afterwards anyways.
-
-	if(loc)
-		SEND_SIGNAL(loc, COMSIG_ATOM_INITIALIZED_ON, src) //required since spawning something doesn't call Move hence it doesn't call Entered.
 
 	pass_flags = GLOB.pass_flags_cache[type]
 	if (isnull(pass_flags))
@@ -849,14 +834,3 @@ Parameters are passed from New.
 	var/refid = REF(src)
 	. += "[VV_HREF_TARGETREF(refid, VV_HK_AUTO_RENAME, "<b id='name'>[src]</b>")]"
 	. += "<br><font size='1'><a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='byond://?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir' id='dir'>[dir2text(dir) || dir]</a> <a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
-
-/atom/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
-	SEND_SIGNAL(src, COMSIG_ATOM_ENTERED, arrived, old_loc, old_locs)
-
-/atom/Exited(atom/movable/AM, direction)
-	SEND_SIGNAL(src, COMSIG_ATOM_EXITED, AM, direction)
-
-///Effects of lava. Return true where we want the lava to keep processing
-/atom/proc/lava_act()
-	fire_act(LAVA_BURN_LEVEL)
-	return TRUE

@@ -616,10 +616,6 @@ GLOBAL_LIST_INIT(limb_types_by_name, list(
 	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	sync_lighting_plane_alpha()
 
-///Returns the slowdown applied to the mob when moving through liquids like water
-/mob/proc/get_liquid_slowdown()
-	return MOB_WATER_SLOWDOWN
-
 /mob/proc/get_ability_mouse_key()
 	if(!client)
 		return XENO_ABILITY_CLICK_MIDDLE

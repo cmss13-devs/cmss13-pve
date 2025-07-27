@@ -8,13 +8,10 @@
 	if (!screen || screen.type != type)
 		// needs to be recreated
 		clear_fullscreen(category, FALSE)
-		fullscreens[category] = screen = type ? new type() : null
+		fullscreens[category] = screen = new type()
 	else if ((!severity || severity == screen.severity) && (!client || screen.screen_loc != "CENTER-7,CENTER-7" || screen.fs_view == client.view))
 		// doesn't need to be updated
 		return screen
-
-	if(!screen)
-		return
 
 	screen.icon_state = "[initial(screen.icon_state)][severity]"
 	screen.severity = severity
@@ -62,7 +59,7 @@
 		var/atom/movable/screen/fullscreen/screen
 		for(var/category in fullscreens)
 			screen = fullscreens[category]
-			if(screen?.should_show_to(src))
+			if(screen.should_show_to(src))
 				screen.update_for_view(client.view)
 				client.add_to_screen(screen)
 			else

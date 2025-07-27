@@ -734,7 +734,6 @@
 			if(istype(SM))
 				SM.track_shot_hit(weapon_cause_data.cause_name)
 
-	AddComponent(/datum/component/submerge_modifier, 10)
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(update_in_weather_status))
 
 /obj/flamer_fire/Destroy()

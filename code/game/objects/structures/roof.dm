@@ -1,6 +1,6 @@
 /obj/structure/roof
 	name = "roof"
-	desc = "null"
+	desc = "A roof"
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "plating_catwalk"
 	density = FALSE

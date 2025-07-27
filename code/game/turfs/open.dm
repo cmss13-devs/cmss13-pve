@@ -624,6 +624,201 @@
 /turf/open/gm/dirtgrassborder2/wall3
 	icon_state = "wall3"
 
+/turf/open/gm/river
+	name = "river"
+	icon_state = "seashallow"
+	can_bloody = FALSE
+	fishing_allowed = TRUE
+	var/icon_overlay = "riverwater"
+	var/covered = 0
+	var/covered_name = "grate"
+	var/cover_icon = 'icons/turf/floors/filtration.dmi'
+	var/cover_icon_state = "grate"
+	var/default_name = "river"
+	var/no_overlay = FALSE
+	var/base_river_slowdown = 1.75
+	baseturfs = /turf/open/gm/river
+	supports_surgery = FALSE
+	minimap_color = MINIMAP_WATER
+
+/turf/open/gm/river/pool
+	fishing_allowed = 0
+
+/turf/open/gm/river/Initialize(mapload, ...)
+	. = ..()
+	update_icon()
+
+/turf/open/gm/river/update_icon()
+	..()
+	update_overlays()
+
+/turf/open/gm/river/proc/update_overlays()
+	if(no_overlay)
+		return
+	overlays.Cut()
+	if(covered)
+		name = covered_name
+		overlays += image("icon"=src.cover_icon,"icon_state"=cover_icon_state,"layer"=CATWALK_LAYER,"dir" = dir)
+	else
+		name = default_name
+		overlays += image("icon"=src.icon,"icon_state"=icon_overlay,"layer"=ABOVE_MOB_LAYER,"dir" = dir)
+
+/turf/open/gm/river/ex_act(severity)
+	if(covered & severity >= EXPLOSION_THRESHOLD_LOW)
+		covered = 0
+		update_icon()
+		spawn(10)
+			for(var/atom/movable/AM in src)
+				src.Entered(AM)
+				for(var/atom/movable/AM1 in src)
+					if(AM == AM1)
+						continue
+					AM1.Crossed(AM)
+	if(!covered && supports_fishing && prob(5))
+		var/obj/item/caught_item = get_fishing_loot(src, get_area(src), 15, 35, 10, 2)
+		caught_item.sway_jitter(3, 6)
+
+/turf/open/gm/river/Entered(atom/movable/AM)
+	..()
+
+	SEND_SIGNAL(AM, COMSIG_MOVABLE_ENTERED_RIVER, src, covered)
+
+	if(!iscarbon(AM) || AM.throwing)
+		return
+
+	if(!covered)
+		var/mob/living/carbon/C = AM
+		var/river_slowdown = base_river_slowdown
+
+		if(ishuman(C))
+			var/mob/living/carbon/human/H = AM
+			cleanup(H)
+			if(H.gloves && rand(0,100) < 60)
+				if(istype(H.gloves,/obj/item/clothing/gloves/yautja/hunter))
+					var/obj/item/clothing/gloves/yautja/hunter/Y = H.gloves
+					if(Y && istype(Y) && HAS_TRAIT(H, TRAIT_CLOAKED))
+						to_chat(H, SPAN_WARNING(" Your bracers hiss and spark as they short out!"))
+						Y.decloak(H, TRUE, DECLOAK_SUBMERGED)
+
+		else if(isxeno(C))
+			river_slowdown -= 0.7
+			if(isboiler(C))
+				river_slowdown -= 1
+
+		var/new_slowdown = C.next_move_slowdown + river_slowdown
+		C.next_move_slowdown = new_slowdown
+
+	if(ishuman(AM))
+		var/mob/living/carbon/human/H = AM
+		if(H.bloody_footsteps)
+			SEND_SIGNAL(H, COMSIG_HUMAN_CLEAR_BLOODY_FEET)
+
+
+/turf/open/gm/river/proc/cleanup(mob/living/carbon/human/M)
+	if(!M || !istype(M)) return
+
+	if(M.back)
+		if(M.back.clean_blood())
+			M.update_inv_back(0)
+	if(M.wear_suit)
+		if(M.wear_suit.clean_blood())
+			M.update_inv_wear_suit(0)
+	if(M.w_uniform)
+		if(M.w_uniform.clean_blood())
+			M.update_inv_w_uniform(0)
+	if(M.gloves)
+		if(M.gloves.clean_blood())
+			M.update_inv_gloves(0)
+	if(M.shoes)
+		if(M.shoes.clean_blood())
+			M.update_inv_shoes(0)
+	M.clean_blood()
+
+
+/turf/open/gm/river/stop_crusher_charge()
+	return !covered
+
+
+/turf/open/gm/river/poison/Initialize(mapload, ...)
+	. = ..()
+	overlays += image("icon"='icons/effects/effects.dmi',"icon_state"="greenglow","layer"=MOB_LAYER+0.1)
+
+/turf/open/gm/river/poison/Entered(mob/living/M)
+	..()
+	if(istype(M)) M.apply_damage(55,TOX)
+
+/turf/open/gm/river/darkred_pool
+	color = "#990000"
+	name = "pool"
+
+/turf/open/gm/river/darkred
+	color = "#990000"
+
+/turf/open/gm/river/red_pool
+	color = "#995555"
+	name = "pool"
+
+/turf/open/gm/river/dark_water
+	color = "#4d4d4d"
+	name = "fuel"
+
+/turf/open/gm/river/dark_water/no_overlay
+	no_overlay = TRUE
+
+/turf/open/gm/river/red
+	color = "#995555"
+
+/turf/open/gm/river/pool
+	name = "pool"
+
+/turf/open/gm/river/shallow_ocean_shallow_ocean
+	name = "shallow ocean"
+	default_name = "shallow ocean"
+/turf/open/gm/river/beach_water
+	name = "shallow water"
+	supports_fishing = TRUE
+	no_overlay = TRUE
+
+/turf/open/gm/river/ocean
+	color = "#dae3e2"
+	base_river_slowdown = 4 // VERY. SLOW.
+
+/turf/open/gm/river/ocean/deep_water
+	name = "deep water"
+
+/turf/open/gm/river/ocean/no_overlay
+	no_overlay = TRUE
+
+/turf/open/gm/river/ocean/deep_ocean
+	name = "deep ocean"
+	default_name = "deep ocean"
+
+/turf/open/gm/river/ocean/deep_ocean/no_overlay
+	no_overlay = TRUE
+
+/turf/open/gm/river/ocean/Entered(atom/movable/AM)
+	. = ..()
+	if(prob(20)) // fuck you
+		if(!ismob(AM))
+			return
+		var/mob/unlucky_mob = AM
+		var/turf/target_turf = get_random_turf_in_range(AM.loc, 3, 0)
+		var/datum/launch_metadata/LM = new()
+		LM.target = target_turf
+		LM.range = get_dist(AM.loc, target_turf)
+		LM.speed = SPEED_FAST
+		LM.thrower = unlucky_mob
+		LM.spin = TRUE
+		LM.pass_flags = NO_FLAGS
+		to_chat(unlucky_mob, SPAN_WARNING("The ocean currents sweep you off your feet and throw you away!"))
+		unlucky_mob.launch_towards(LM)
+		return
+
+	if(world.time % 5)
+		if(ismob(AM))
+			var/mob/rivermob = AM
+			to_chat(rivermob, SPAN_WARNING("Moving through the incredibly deep ocean slows you down a lot!"))
+
 /turf/open/gm/coast
 	name = "coastline"
 	icon_state = "beach"
@@ -671,6 +866,29 @@
 
 /turf/open/gm/coast/beachcorner2/south_east
 	dir = 8
+
+/turf/open/gm/riverdeep
+	name = "river"
+	icon_state = "seadeep"
+	can_bloody = FALSE
+	baseturfs = /turf/open/gm/riverdeep
+	supports_surgery = FALSE
+	minimap_color = MINIMAP_WATER
+	is_groundmap_turf = FALSE // Not real ground
+	fishing_allowed = TRUE
+
+
+/turf/open/gm/riverdeep/Initialize(mapload, ...)
+	. = ..()
+	overlays += image("icon"='icons/turf/ground_map.dmi',"icon_state"="water","layer"=MOB_LAYER+0.1)
+
+/turf/open/gm/river/no_overlay
+	no_overlay = TRUE
+	supports_surgery = FALSE
+
+/turf/open/gm/river/no_overlay_lighted
+	no_overlay = TRUE
+	supports_surgery = FALSE
 
 
 
@@ -1068,9 +1286,6 @@
 
 /turf/open/shuttle/dropship/light_grey_middle
 	icon_state = "rasputin13"
-
-/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right
-	icon_state = "rasputin14"
 
 /turf/open/shuttle/dropship/can_surgery
 	icon_state = "rasputin1"

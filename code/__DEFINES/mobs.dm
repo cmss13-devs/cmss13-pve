@@ -394,10 +394,3 @@ GLOBAL_LIST_INIT(default_xeno_onmob_icons, list(
 		var/mob/sleep_check_death_mob = A; \
 		if(sleep_check_death_mob.stat == DEAD) return; \
 	}
-
-//slowdown defines for liquid turfs
-
-///Default slowdown for mobs moving through liquid
-#define MOB_WATER_SLOWDOWN 1.75
-///Slowdown for xenos moving through liquid
-#define XENO_WATER_SLOWDOWN 1.3

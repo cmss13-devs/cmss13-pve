@@ -294,7 +294,6 @@
 	// Let explosions know that the atom entered
 	for(var/datum/automata_cell/explosion/E in autocells)
 		E.on_turf_entered(A)
-	return ..()
 
 /turf/proc/is_plating()
 	return 0
@@ -629,6 +628,9 @@
 /turf/open/gm/dirtgrassborder/is_weedable()
 	return SEMI_WEEDABLE
 
+/turf/open/gm/river/is_weedable()
+	return NOT_WEEDABLE
+
 /turf/open/gm/coast/is_weedable()
 	return NOT_WEEDABLE
 
@@ -656,6 +658,9 @@
 
 /turf/open/gm/can_dig_xeno_tunnel()
 	return TRUE
+
+/turf/open/gm/river/can_dig_xeno_tunnel()
+	return FALSE
 
 /turf/open/snow/can_dig_xeno_tunnel()
 	return TRUE
@@ -872,17 +877,3 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(T.name != name)
 		T.name = name
 	return T
-
-///Returns the number that represents how submerged an AM is by a turf and its contents
-/turf/proc/get_submerge_height(turf_only = FALSE)
-	. = 0
-	if(turf_only)
-		return
-	var/list/submerge_list = list()
-	SEND_SIGNAL(src, COMSIG_TURF_SUBMERGE_CHECK, submerge_list)
-	for(var/i in submerge_list)
-		. += i
-
-///Returns the number that shows how far an AM is offset when submerged in this turf
-/turf/proc/get_submerge_depth()
-	return 0
