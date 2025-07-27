@@ -503,16 +503,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
-"aaX" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/structure/machinery/disposal{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/hangar)
 "aaY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -668,6 +658,20 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
+"abq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
+"abr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/hangar)
 "abs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -678,6 +682,13 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"abt" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
 "abu" = (
 /obj/effect/decal/cleanable/dirt{
@@ -691,6 +702,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"abv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
 "abw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1569,10 +1587,6 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
-	},
-/obj/structure/machinery/firealarm{
-	dir = 4;
-	pixel_x = 21
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4574,6 +4588,9 @@
 	},
 /obj/structure/machinery/photocopier{
 	pixel_y = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -12911,8 +12928,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/platoon_commander_rooms)
@@ -14724,9 +14740,9 @@
 	icon_state = "1-2";
 	pixel_x = 2
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/platoon_commander_rooms)
@@ -32056,7 +32072,7 @@ aeW
 aZm
 aEt
 aoz
-aaX
+akb
 akb
 akb
 akb
@@ -32232,8 +32248,8 @@ arP
 aTD
 adz
 adz
-adz
-adz
+abt
+abq
 akb
 akb
 akb
@@ -32409,8 +32425,8 @@ acP
 aEM
 akt
 adz
-ayX
-adz
+abv
+abr
 akb
 akb
 akb
