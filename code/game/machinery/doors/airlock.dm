@@ -578,10 +578,10 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 		if(!zombie_pry.attempting_pry)
 			zombie_pry.attempting_pry = TRUE
 			user.visible_message(SPAN_NOTICE("[user] starts tearing into the door on [src]!"), \
-				SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 30 seconds."), \
+				SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 15 seconds."), \
 				SPAN_NOTICE("You hear tearing noises!"))
 
-			if(do_after(user, 300, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			if(do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				user.visible_message(SPAN_NOTICE("[user] slams the door open [src]!"), \
 				SPAN_NOTICE("You slam the door open!"), \
 				SPAN_NOTICE("You hear metal screeching!"))

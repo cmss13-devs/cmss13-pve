@@ -185,6 +185,5 @@
 
 /datum/species/zombie/proc/handle_perma_dead(mob/living/carbon/human/zombie)
 	if(!zombie.undefibbable)
-		zombie.visible_message(SPAN_WARNING("It doesn't look like [zombie] will be getting up again."))
 		zombie.undefibbable = TRUE
 		SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
