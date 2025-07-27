@@ -503,13 +503,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonprep)
-"aaX" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/closed/wall/almayer/outer,
-/area/golden_arrow/hangar)
 "aaY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -524,9 +517,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aba" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/hangar)
@@ -534,13 +527,6 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
-"abc" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/open/floor/plating,
-/area/golden_arrow/hangar)
 "abd" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -709,6 +695,13 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"abv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/closed/wall/almayer,
+/area/golden_arrow/hangar)
 "abw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4589,8 +4582,9 @@
 /obj/structure/machinery/photocopier{
 	pixel_y = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/golden_arrow/platoon_commander_rooms)
@@ -32072,7 +32066,7 @@ aeW
 aZm
 aEt
 aoz
-akb
+abv
 akb
 akb
 akb
@@ -32249,7 +32243,7 @@ aTD
 adz
 adz
 aba
-aaX
+aaY
 akb
 akb
 akb
@@ -32425,8 +32419,8 @@ acP
 aEM
 akt
 adz
-abc
-aaY
+ayX
+adz
 akb
 akb
 akb
