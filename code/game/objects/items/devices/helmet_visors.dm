@@ -445,3 +445,17 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow"
+
+/obj/item/device/helmet_visor/po_visor/fluff
+	name = "MK30 flight visor, black"
+	desc = "A standard issue snap-on visor used by USCM dropship pilots. Polarized to reduce glare and protect the eyes during atmospheric re-entry and orbital deployment. This one seems to be slightly modified in order to fit into most modern helmets."
+	hud_type = list()
+
+/obj/item/device/helmet_visor/po_visor/fluff/can_attach_to(obj/item/clothing/head/helmet/target_helmet)
+	return TRUE
+
+/obj/item/device/helmet_visor/po_visor/fluff/yellow
+	name = "MK30 flight visor, yellow"
+	icon_state = "po_visor_yellow"
+	action_icon_string = "po_visor_yellow_down"
+	helmet_overlay = "po_visor_yellow"
