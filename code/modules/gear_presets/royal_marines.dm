@@ -5,7 +5,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/twe/royal_marine/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick_weight(list(MALE = 80, FEMALE = 20,))
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/placeholder_pref = new()
 	placeholder_pref.randomize_appearance(new_human)
 	var/random_name
@@ -23,13 +23,17 @@
 	new_human.g_eyes = colors[eye_color][2]
 	new_human.b_eyes = colors[eye_color][3]
 	idtype = /obj/item/card/id/dogtag
-	if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
-		new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top",)
-		new_human.f_style = pick("5 O'clock Shadow", "Shaved", "Full Beard", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
-	else
-		random_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
-		new_human.h_style = pick("Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
+	switch(new_human.gender)
+		if(FEMALE)
+			random_name = "[pick(GLOB.first_names_female)] [pick(GLOB.last_names)]"
+			new_human.h_style = pick("Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
+		if(MALE)
+			random_name = "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
+			new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top",)
+			new_human.f_style = pick("5 O'clock Shadow", "Shaved", "Full Beard", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+		if(PLURAL)
+			random_name = "[pick(pick(GLOB.first_names_female), pick(GLOB.first_names_male))] [pick(GLOB.last_names)]"
+			new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top", "Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top")
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,45)
 	new_human.r_hair = rand(15,35)

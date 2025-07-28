@@ -13,22 +13,17 @@
 	var/first_name
 	var/last_name
 	//gender checks
-	switch(new_human.gender)
-		if(MALE)
-			if(prob(40))
-				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-			else
-				first_name = "[pick(GLOB.first_names_male_upp)]"
-			new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
-		if(FEMALE)
-			if(prob(40))
-				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-			else
+	if(prob(40))
+		first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+	else
+		switch(new_human.gender)
+			if(FEMALE)
 				first_name = "[pick(GLOB.first_names_female_upp)]"
-		if(PLURAL)
-			if(prob(40))
-				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-			first_name = pick(pick(GLOB.first_names_male_upp), pick(GLOB.first_names_female_upp))
+			if(MALE)
+				first_name = "[pick(GLOB.first_names_male_upp)]"
+				new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+			if(PLURAL)
+				first_name = pick(pick(GLOB.first_names_female_upp), pick(GLOB.first_names_male_upp))
 	//surname
 	if(prob(35))
 		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"

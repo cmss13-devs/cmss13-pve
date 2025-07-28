@@ -20,12 +20,12 @@
 	var/random_name
 	switch(new_human.gender)
 		if(FEMALE)
-			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+			random_name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 		if(MALE)
 			new_human.f_style = "5 O'clock Shadow"
-			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+			random_name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
 		if(PLURAL)
-			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
+			random_name = capitalize(pick(pick(GLOB.first_names_female), pick(GLOB.first_names_male))) + " " + capitalize(pick(GLOB.last_names))
 
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(25,35)

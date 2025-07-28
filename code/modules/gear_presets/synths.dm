@@ -780,10 +780,13 @@
 	var/last_name
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
-	if(new_human.gender == MALE)
-		first_name = "[pick(GLOB.first_names_male_colonist)]"
-	else
-		first_name ="[pick(GLOB.first_names_female_colonist)]"
+	switch(new_human.gender)
+		if(FEMALE)
+			first_name = "[pick(GLOB.first_names_female_colonist)]"
+		if(MALE)
+			first_name = "[pick(GLOB.first_names_male_colonist)]"
+		if(PLURAL)
+			first_name = "[pick(pick(GLOB.first_names_female_colonist), pick(GLOB.first_names_male_colonist))]"
 
 	last_name ="[pick(GLOB.last_names_colonist)]"
 	random_name = "[first_name] [last_name]"

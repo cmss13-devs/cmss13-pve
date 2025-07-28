@@ -22,15 +22,10 @@
 	new_human.f_style = "Shaved"
 
 /datum/equipment_preset/pmc/w_y_whiteout/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE)
+	new_human.gender = MALE
 	//var/datum/preferences/A = new()
 	//A.randomize_appearance(mob)
-	var/random_name
-	if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.greek_letters)]"
-	else
-		random_name = "[pick(GLOB.greek_letters)]"
-	new_human.change_real_name(new_human, random_name)
+	new_human.change_real_name(new_human, pick(GLOB.greek_letters))
 	new_human.age = rand(17,45)
 
 /datum/equipment_preset/pmc/w_y_whiteout/load_gear(mob/living/carbon/human/new_human)
