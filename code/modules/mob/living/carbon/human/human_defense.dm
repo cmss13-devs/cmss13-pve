@@ -23,10 +23,10 @@ Contains most of the procs that are called when a mob is attacked by something
 
 				drop_inv_item_on_ground(c_hand)
 				if (affected.status & (LIMB_ROBOT|LIMB_SYNTHSKIN))
-					emote("me", 1, "drops what they were holding, their [affected.display_name] malfunctioning!")
+					src.visible_message("[src.name]'s [affected.display_name] malfunctions! And they drop what they were holding!", "Your [affected.display_name] and you drop what you were holding!")
 				else
 					var/emote_scream = pick("screams in pain and", "lets out a sharp cry and", "cries out and")
-					emote("me", 1, "[(!pain.feels_pain) ? "" : emote_scream ] drops what they were holding in their [affected.display_name]!")
+					src.visible_message("[src.name] [(!pain.feels_pain) ? "" : emote_scream ]drops what they were holding in their [affected.display_name]!", "You[(!pain.feels_pain) ? "" : "'re over come by pain! You cry out and" ] drop what you were holding in your [affected.display_name]!")
 
 	..(stun_amount, agony_amount, def_zone)
 
