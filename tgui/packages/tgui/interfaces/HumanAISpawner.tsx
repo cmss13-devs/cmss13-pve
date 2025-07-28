@@ -46,6 +46,9 @@ export const HumanAISpawner = (props) => {
       setRandomHelmetChecked(true);
     }
   };
+  const numberToTwoDP = (value) => {
+    setZombieDelimbMulti(value.toFixed(2));
+  };
   return (
     <Window title="Human AI Spawner" width={800} height={900}>
       <Window.Content>
@@ -109,7 +112,7 @@ export const HumanAISpawner = (props) => {
                             step={0.01}
                             minValue={0}
                             maxValue={20}
-                            onChange={(value) => setZombieDelimbMulti(value)}
+                            onChange={(value) => numberToTwoDP(value)}
                             width="75px"
                           />
                           <Button
