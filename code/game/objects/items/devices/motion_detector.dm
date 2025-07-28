@@ -423,6 +423,9 @@
 	if(ping_count > 0)
 		icon_state = "heartbeat_on_1"
 
+/obj/item/device/motiondetector/heartbeat/turn_off(mob/user, forced = FALSE)
+	ping_count = 0
+	..()
 
 #undef MOTION_DETECTOR_RANGE_LONG
 #undef MOTION_DETECTOR_RANGE_SHORT

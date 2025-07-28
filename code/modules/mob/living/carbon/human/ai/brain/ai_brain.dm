@@ -338,6 +338,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(tied_human.client)
 		return
 
+	if(bullet.silent)
+		return
+
 	enter_combat()
 
 	if(length(neutral_factions))
