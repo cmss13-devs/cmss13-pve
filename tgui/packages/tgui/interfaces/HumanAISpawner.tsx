@@ -102,7 +102,7 @@ export const HumanAISpawner = (props) => {
                       <Stack.Item>
                         <Stack.Item align="center" textAlign="center">
                           <Box>Zombie Delimbing Multiplier:</Box>
-                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is defualt. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probabilty as a percentage chance.">
+                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is defualt. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probabilty as a percentage chance. Values beyond 0.5 and 1.5 Aren't recommended.">
                             ?
                           </Button>
                           <NumberInput
