@@ -59,6 +59,7 @@
 
 	/datum/behavior_delegate/giant_lizard/melee_attack_additional_effects_target(mob/living/carbon/A)
 		if(prob(50))
+			A.apply_damage(5, OXY)
 			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with teeth that drip with shimmering saliva!"))
 			A.sway_jitter(times = 5, steps = 3)
 			A.apply_effect(4, PARALYZE)
