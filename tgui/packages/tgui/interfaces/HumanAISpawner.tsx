@@ -123,7 +123,7 @@ export const HumanAISpawner = (props) => {
                             Random <i>Zombie Helmet</i> Chance?
                           </Button.Checkbox>
 
-                          <Button tooltip="This value will change the chance for a zombie to spawn with head protection in 0-100%.">
+                          <Button tooltip="This value will change the chance for a zombie to spawn with head protection in 0-100%. Helmets give One expendable decap protection, and these will have hands and feet protection baked in, rest of the body should be covered by armoured presets.">
                             ?
                           </Button>
                           <NumberInput
