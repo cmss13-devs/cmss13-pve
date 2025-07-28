@@ -2235,6 +2235,7 @@
 #include "code\modules\mob\living\carbon\xenomorph\castes\Defender.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Drone.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Facehugger.dm"
+#include "code\modules\mob\living\carbon\xenomorph\castes\Giant_Lizard.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Hellhound.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\Hivelord.dm"
 #include "code\modules\mob\living\carbon\xenomorph\castes\king.dm"

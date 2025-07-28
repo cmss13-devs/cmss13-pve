@@ -26,6 +26,7 @@
 #define isspiderguard(A) (istype(A, /mob/living/carbon/xenomorph/spider_guard))
 #define isspidernurse(A) (istype(A, /mob/living/carbon/xenomorph/spider_nurse))
 #define isspiderhunter(A) (istype(A, /mob/living/carbon/xenomorph/spider_hunter))
+#define islizard(A) (istype(A, /mob/living/carbon/xenomorph/giant_lizard))
 
 #define isxeno_builder(A) (isdrone(A) || ishivelord(A) || iscarrier(A) || isburrower(A) || isqueen(A))
 #define isspider(A) (isspiderguard(A) || isspidernurse(A) || isspiderhunter(A))

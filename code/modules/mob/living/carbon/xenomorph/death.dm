@@ -81,6 +81,8 @@
 			playsound(loc, 'sound/voice/alien_facehugger_dies.ogg', 25, TRUE)
 		else if (isspider(src))
 			playsound(loc, 'sound/voice/pred_click2.ogg', 25, TRUE)
+		else if (islizard(src))
+			playsound(loc, 'sound/effects/giant_lizard_death.ogg', 25, TRUE)
 		else
 			playsound(loc, prob(50) == 1 ? 'sound/voice/alien_death.ogg' : 'sound/voice/alien_death2.ogg', 25, 1)
 		var/area/A = get_area(src)

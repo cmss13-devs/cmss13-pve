@@ -5,6 +5,7 @@
 	var/predalien_sound
 	var/larva_sound
 	var/spider_sound
+	var/lizard_sound
 
 /datum/emote/living/carbon/xeno/get_sound(mob/living/user)
 	. = ..()
@@ -18,12 +19,16 @@
 	if(isspider(user) && spider_sound)
 		. = spider_sound
 
+	if(islizard(user) && lizard_sound)
+		. = lizard_sound
+
 /datum/emote/living/carbon/xeno/growl
 	key = "growl"
 	message = "growls."
 	sound = "alien_growl"
 	predalien_sound = 'sound/voice/predalien_growl.ogg'
 	spider_sound = 'sound/voice/pred_click3.ogg'
+	lizard_sound = 'sound/effects/giant_lizard_growl1.ogg'
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/xeno/hiss
@@ -32,6 +37,7 @@
 	sound = "alien_hiss"
 	predalien_sound = 'sound/voice/predalien_hiss.ogg'
 	spider_sound = 'sound/voice/pred_click4.ogg'
+	lizard_sound = 'sound/effects/giant_lizard_hiss2.ogg'
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/xeno/needshelp
@@ -39,6 +45,7 @@
 	message = "needs help!"
 	sound = "alien_help"
 	spider_sound = 'sound/voice/pred_click1.ogg'
+	lizard_sound = 'sound/effects/giant_lizard_hiss1.ogg'
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/xeno/roar
@@ -50,6 +57,7 @@
 	predalien_sound = 'sound/voice/predalien_roar.ogg'
 	larva_sound = "alien_roar_larva"
 	spider_sound = 'sound/voice/pred_click5.ogg'
+	lizard_sound = 'sound/effects/giant_lizard_growl2.ogg'
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/xeno/tail
