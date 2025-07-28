@@ -4,12 +4,12 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_3
 	melee_damage_upper = XENO_DAMAGE_TIER_4
 	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = XENO_HEALTH_TIER_1
+	max_health = XENO_HEALTH_SPIDER
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
-	evasion = XENO_EVASION_HIGH
+	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_HELLHOUND
 	fire_vulnerability_mult = FIRE_MULTIPLIER_EXTREME //v weak to fire
 
@@ -99,7 +99,7 @@
 
 /datum/behavior_delegate/spider_hunter/melee_attack_additional_effects_target(mob/living/carbon/A)
 	if(prob(80))
-		A.apply_damage(20, TOX)
+		A.apply_damage(15, TOX)
 		to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
 		A.sway_jitter(times = 5, steps = 3)
 		A.apply_effect(5, DAZE)

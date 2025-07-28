@@ -4,12 +4,12 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_2
 	melee_damage_upper = XENO_DAMAGE_TIER_3
 	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = XENO_HEALTH_TIER_1
+	max_health = XENO_HEALTH_SPIDER
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
-	evasion = XENO_EVASION_MEDIUM
+	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_SPIDER
 	fire_vulnerability_mult = FIRE_MULTIPLIER_EXTREME //v weak to fire
 
@@ -17,11 +17,9 @@
 	evolves_to = list(XENO_CASTE_SPIDER_NURSE, XENO_CASTE_SPIDER_HUNTER)
 	deevolves_to = list()
 
-	tackle_min = 2
+	tackle_min = 1
 	tackle_max = 3
-	tackle_chance = 30
-	tacklestrength_min = 3
-	tacklestrength_max = 3
+	tackle_chance = 10
 
 	heal_resting = 2
 	heal_standing = 1
@@ -59,13 +57,16 @@
 	claw_type = CLAW_TYPE_SHARP
 	pull_multiplier = 0.8
 
+	/datum/action/xeno_action/activable/pounce
+		ai_prob_chance = 50
+		distance = 4
+
 	/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
 		if(prob(40))
-			A.apply_damage(10, TOX)
+			A.apply_damage(5, TOX)
 			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
 			A.sway_jitter(times = 2, steps = 1)
 			A.apply_effect(3, DAZE)
-
 
 	acid_blood_damage = 0 /// it's a spider innit
 	acid_blood_spatter = FALSE /// We dont want that for these guys
