@@ -222,8 +222,6 @@
 		msg = replacetext(msg, "them", user.p_them())
 	if(findtext(msg, "they"))
 		msg = replacetext(msg, "they", user.p_they())
-	if(findtext(msg, "was"))
-		msg = replacetext(msg, "was", user.p_were())
 	if(findtext(msg, "%s"))
 		msg = replacetext(msg, "%s", user.p_s())
 	return msg
