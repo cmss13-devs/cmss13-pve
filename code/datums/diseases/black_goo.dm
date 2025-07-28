@@ -304,6 +304,7 @@
 	item_state = "BLANK"
 	w_class = SIZE_SMALL
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FEET|BODY_FLAG_HANDS
 
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
