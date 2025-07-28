@@ -10,36 +10,38 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_HELLHOUND
+	speed = XENO_SPEED_SPIDER
+	fire_vulnerability_mult = FIRE_MULTIPLIER_EXTREME //v weak to fire
 
 	caste_desc = "A guard of the cluster."
-	evolves_to = list() //XENO_CASTE_SPIDER_NURSE, XENO_CASTE_SPIDER_HUNTER
+	evolves_to = list(XENO_CASTE_SPIDER_NURSE, XENO_CASTE_SPIDER_HUNTER)
 	deevolves_to = list()
 
-	tackle_min = 3
-	tackle_max = 4
-	tackle_chance = 40
-	tacklestrength_min = 4
-	tacklestrength_max = 4
+	tackle_min = 2
+	tackle_max = 3
+	tackle_chance = 30
+	tacklestrength_min = 3
+	tacklestrength_max = 3
 
 	heal_resting = 2
 	heal_standing = 1
 	heal_knocked_out = 1.5
 	innate_healing = TRUE
 
+	behavior_delegate_type = /datum/behavior_delegate/spider_guard
 	minimap_icon = "xeno"
 
 /mob/living/carbon/xenomorph/spider_guard
 	caste_type = XENO_CASTE_SPIDER_GUARD
 	name = XENO_CASTE_SPIDER_GUARD
-	desc = "A giant arachnoid, furry and black. It makes you shudder to look at it. This one has deep red eyes."
+	desc = "A giant arachnoid, furry and brown. It makes you shudder to look at it. This one has deep red eyes."
 	icon = 'icons/mob/xenos/spider_guard.dmi'
 	icon_size = 48
 	icon_state = "Spider Guard Running"
 	plasma_types = list(PLASMA_CHITIN)
 	tier = 1
 
-	speaking_noise = "hiss_talk"
+	speaking_noise = "click_talk"
 
 	slash_verb = "bite"
 	slashes_verb = "bites"
@@ -47,16 +49,23 @@
 
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/regurgitate,
-
-		/datum/action/xeno_action/activable/pounce/runner,
+		/datum/action/xeno_action/onclick/plant_webs,
+		/datum/action/xeno_action/activable/pounce,
 	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
-	gib_chance = 50
+	gib_chance = 1
 	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 0.4 /// Pretty much no pull delay, for those quick drags.
+	pull_multiplier = 0.8
+
+	/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
+		if(prob(40))
+			A.apply_damage(10, TOX)
+			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
+			A.sway_jitter(times = 2, steps = 1)
+			A.apply_effect(3, DAZE)
+
 
 	acid_blood_damage = 0 /// it's a spider innit
 	acid_blood_spatter = FALSE /// We dont want that for these guys
@@ -69,11 +78,9 @@
 	weed_food_states_flipped = list("Hellhound_1","Hellhound_2","Hellhound_3")
 
 /mob/living/carbon/xenomorph/spider_guard/death(cause, gibbed)
-	var/msg = "lets out a rattle as it collapses, legs siezing up..."
-	. = ..(cause, gibbed, msg)
+	. = ..(cause, gibbed, "lets out a rattle as it collapses, legs siezing up.")
 	if(!.)
 		return
-	playsound(loc,'sound/voice/pred_click1.ogg', 25, TRUE)
 
 /mob/living/carbon/xenomorph/spider_guard/handle_blood_splatter(splatter_dir)
 	new /obj/effect/temp_visual/dir_setting/bloodsplatter/yautjasplatter(loc, splatter_dir)
