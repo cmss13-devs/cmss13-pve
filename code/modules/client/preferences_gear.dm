@@ -1280,7 +1280,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_sweet
 	category = "Food (sweets)"
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/snack_sweet/candy
 	display_name = "Bar of candy"
@@ -1323,7 +1322,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged
 	category = "Food (packaged)"
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/snack_packaged/beef_jerky
 	display_name = "Beef jerky"
