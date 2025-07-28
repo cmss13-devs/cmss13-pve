@@ -257,7 +257,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 	if(ishuman(attacked_mob))
 		user.visible_message(SPAN_NOTICE("[user] shows [attacked_mob] [src]."),SPAN_NOTICE("You show [attacked_mob] the screen of [src]"))
-		attacked_mob.visible_message(SPAN_NOTICE("[user] shows you the screen of [src]."))
+		to_chat(attacked_mob, SPAN_NOTICE("[user] shows you the screen of [src]."))
 		map.tgui_interact(attacked_mob)
 		return
 
