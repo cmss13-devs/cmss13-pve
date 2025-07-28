@@ -6,24 +6,29 @@
 	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
 	var/first_name
 	var/last_name
 	//gender checks
-	if(new_human.gender == MALE)
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_male_upp)]"
-		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
-	else
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_female_upp)]"
+	switch(new_human.gender)
+		if(MALE)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			else
+				first_name = "[pick(GLOB.first_names_male_upp)]"
+			new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+		if(FEMALE)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			else
+				first_name = "[pick(GLOB.first_names_female_upp)]"
+		if(PLURAL)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			first_name = pick(pick(GLOB.first_names_male_upp), pick(GLOB.first_names_female_upp))
 	//surname
 	if(prob(35))
 		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
@@ -639,7 +644,7 @@
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/upp/synth/commando/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 

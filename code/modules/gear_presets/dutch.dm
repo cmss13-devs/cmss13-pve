@@ -14,15 +14,18 @@
 	rank = assignment
 
 /datum/equipment_preset/dutch/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/human = new()
 	human.randomize_appearance(new_human)
 	var/random_name
-	if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male_dutch)] [pick(GLOB.last_names)]"
-		new_human.f_style = "5 O'clock Shadow"
-	else
-		random_name = "[pick(GLOB.first_names_female_dutch)] [pick(GLOB.last_names)]"
+	switch(new_human.gender)
+		if(FEMALE)
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			new_human.f_style = "5 O'clock Shadow"
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(25,35)

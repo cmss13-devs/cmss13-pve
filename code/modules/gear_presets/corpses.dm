@@ -46,10 +46,17 @@
 	new_human.pulse = PULSE_NONE
 
 /datum/equipment_preset/corpse/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	var/random_name
+	switch(new_human.gender)
+		if(FEMALE)
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
 	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
@@ -418,24 +425,29 @@
 
 //UPP
 /datum/equipment_preset/corpse/upp/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
 	var/first_name
 	var/last_name
 	//gender checks
-	if(new_human.gender == MALE)
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_male_upp)]"
-		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
-	else
-		if(prob(40))
-			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-		else
-			first_name = "[pick(GLOB.first_names_female_upp)]"
+	switch(new_human.gender)
+		if(MALE)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			else
+				first_name = "[pick(GLOB.first_names_male_upp)]"
+			new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+		if(FEMALE)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			else
+				first_name = "[pick(GLOB.first_names_female_upp)]"
+		if(PLURAL)
+			if(prob(40))
+				first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+			first_name = pick(pick(GLOB.first_names_male_upp), pick(GLOB.first_names_female_upp))
 	//surname
 	if(prob(35))
 		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"

@@ -15,11 +15,17 @@
 
 
 /datum/equipment_preset/contractor/load_name(mob/living/carbon/human/new_human)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
-	random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	switch(new_human.gender)
+		if(FEMALE)
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 	new_human.change_real_name(new_human, random_name)
 	new_human.name = new_human.real_name
 	new_human.age = rand(22,45)
@@ -356,14 +362,17 @@
 		new_human.allow_gun_usage = FALSE
 
 /datum/equipment_preset/contractor/duty/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
-	if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male)]"
-	else
-		random_name = "[pick(GLOB.first_names_female)]"
+	switch(new_human.gender)
+		if(FEMALE)
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 
 	if(new_human.gender == MALE)
 		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
@@ -723,14 +732,17 @@
 		new_human.allow_gun_usage = FALSE
 
 /datum/equipment_preset/contractor/covert/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
-	if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male)]"
-	else
-		random_name = "[pick(GLOB.first_names_female)]"
+	switch(new_human.gender)
+		if(FEMALE)
+			return capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			return capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			return capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 
 	if(new_human.gender == MALE)
 		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")

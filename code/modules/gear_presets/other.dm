@@ -41,7 +41,7 @@
 	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE) //ACCESS_COME_BACK_TO_ME
 
 /datum/equipment_preset/other/freelancer/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -262,7 +262,7 @@
 	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
 /datum/equipment_preset/other/elite_merc/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(70;MALE,30;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -607,7 +607,7 @@
 	faction = FACTION_GLADIATOR
 
 /datum/equipment_preset/other/gladiator/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
 	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_gladiator : GLOB.first_names_female_gladiator))
@@ -784,7 +784,7 @@
 	uses_special_name = TRUE
 
 /datum/equipment_preset/other/professor_dummy/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	new_human.real_name = "Alex the Medical Mannequin"
 	new_human.name = new_human.real_name
 	new_human.age = rand(1,5)

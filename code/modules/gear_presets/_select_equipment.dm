@@ -92,11 +92,18 @@
 	var/random_name
 	var/first_name
 	var/last_name
-	new_human.gender = pick(60;MALE,40;FEMALE)
+	new_human.gender = pick(MALE, FEMALE, PLURAL)
 	switch(ethnicity)
 		if(LATIN_AMERICAN_ETHNICITY)
 			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
 			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male_spanish : GLOB.first_names_female_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
+			switch(new_human.gender)
+				if(FEMALE)
+					random_name = capitalize(pick(GLOB.first_names_female_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
+				if(MALE)
+					random_name = capitalize(pick(GLOB.first_names_male_spanish)) + " " + capitalize(pick(GLOB.last_names_spanish))
+				if(PLURAL)
+					random_name = capitalize(pick(pick(GLOB.first_names_male_spanish), pick(GLOB.first_names_female_spanish))) + " " + capitalize(pick(GLOB.last_names_spanish))
 			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
 			var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 			var/hair_color = pick(hair_colors)
@@ -132,19 +139,26 @@
 			new_human.g_eyes = colors[eye_color][2]
 			new_human.b_eyes = colors[eye_color][3]
 			//gender checks
-			if(new_human.gender == MALE)
-				if(prob(90))
-					first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-				else
-					first_name = "[pick(GLOB.first_names_male_clf)]"
-				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
-				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
-			else
-				if(prob(90))
-					first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-				else
-					first_name = "[pick(GLOB.first_names_female_clf)]"
-				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
+			switch(new_human.gender)
+				if(FEMALE)
+					if(prob(90))
+						first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
+					else
+						first_name = "[pick(GLOB.first_names_female_clf)]"
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
+				if(MALE)
+					if(prob(90))
+						first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
+					else
+						first_name = "[pick(GLOB.first_names_male_clf)]"
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
+					new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+				if(PLURAL)
+					if(prob(90))
+						first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
+					else
+						first_name = "[pick(pick(GLOB.first_names_female_clf), pick(GLOB.first_names_male_clf))]"
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
 			//surname
 			if(prob(90))
 				last_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))]"
@@ -153,7 +167,13 @@
 			random_name = "[first_name] [last_name]"
 			new_human.change_real_name(new_human, random_name)
 		if(AMERICAN_ETHNICITY)
-			random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+			switch(new_human.gender)
+				if(FEMALE)
+					random_name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+				if(MALE)
+					random_name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+				if(PLURAL)
+					random_name = capitalize(pick(pick(GLOB.first_names_male), pick(GLOB.first_names_female))) + " " + capitalize(pick(GLOB.last_names))
 			var/datum/preferences/A = new
 			A.randomize_appearance(new_human)
 			var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
@@ -178,17 +198,22 @@
 			var/datum/preferences/A = new()
 			A.randomize_appearance(new_human)
 			//gender checks
-			if(new_human.gender == MALE)
-				if(prob(40))
-					first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-				else
-					first_name = "[pick(GLOB.first_names_male_upp)]"
-				new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
-			else
-				if(prob(40))
-					first_name = "[capitalize(randomly_generate_chinese_word(1))]"
-				else
-					first_name = "[pick(GLOB.first_names_female_upp)]"
+			switch(new_human.gender)
+				if(FEMALE)
+					if(prob(40))
+						first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+					else
+						first_name = "[pick(GLOB.first_names_female_upp)]"
+				if(MALE)
+					if(prob(40))
+						first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+					else
+						first_name = "[pick(GLOB.first_names_male_upp)]"
+					new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
+				if(PLURAL)
+					if(prob(40))
+						first_name = "[capitalize(randomly_generate_chinese_word(1))]"
+					first_name = pick(pick(GLOB.first_names_male_upp), pick(GLOB.first_names_female_upp))
 			//surname
 			if(prob(35))
 				last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
@@ -231,14 +256,16 @@
 			new_human.g_eyes = colors[eye_color][2]
 			new_human.b_eyes = colors[eye_color][3]
 			//gender checks
-			if(new_human.gender == MALE)
-				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
-				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
-				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
-			else
-				first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
-				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
+			switch(new_human.gender)
+				if(FEMALE)
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
+				if(MALE)
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
+					new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+				if(PLURAL)
+					new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
 			//surname
+			first_name = "[capitalize(randomly_generate_chinese_word(rand(1, 3)))]"
 			last_name = "[capitalize(randomly_generate_chinese_word(rand(1, 4)))]"
 			random_name = "[first_name] [last_name]"
 			new_human.change_real_name(new_human, random_name)
