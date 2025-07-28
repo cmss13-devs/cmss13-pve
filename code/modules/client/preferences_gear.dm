@@ -101,6 +101,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses/prescription
 
+/datum/gear/eyewear/pilot_visor_black
+	display_name = "Pilot visor, black"
+	path = /obj/item/device/helmet_visor/po_visor/marine
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/eyewear/pilot_visor_yellow
+	display_name = "Pilot visor, yellow"
+	path = /obj/item/device/helmet_visor/po_visor/marine/yellow
+	allowed_origins = USCM_ORIGINS
 /*
 //================================================
 				Masks & Scarves
