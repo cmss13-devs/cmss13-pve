@@ -296,6 +296,23 @@
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 
+/obj/item/clothing/head/helmet/zombie
+	name = "thick armoured skin"
+	gender = PLURAL
+	icon = 'icons/obj/items/clothing/glasses.dmi'
+	icon_state = "stub"
+	item_state = "BLANK"
+	w_class = SIZE_SMALL
+	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
+
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 
 /obj/item/storage/fancy/blackgoo
 	icon = 'icons/obj/items/black_goo_stuff.dmi'

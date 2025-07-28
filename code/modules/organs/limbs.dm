@@ -391,6 +391,8 @@
 
 		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
 			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
+			zombie_cut_prob *= owner.zombie_delimb_chance_multi ? owner.zombie_delimb_chance_multi : 1
+			zombie_cut_prob = min(zombie_cut_prob, 100)
 			if(prob(zombie_cut_prob))
 				limb.limb_delimb(damage_source)
 	else
@@ -1229,12 +1231,12 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 	if(is_broken())
 		if(prob(15))
 			owner.drop_inv_item_on_ground(c_hand)
-			var/emote_scream = pick("screams in pain and", "lets out a sharp cry and", "cries out and")
-			owner.emote("me", 1, "[(!owner.pain.feels_pain) ? "" : emote_scream ] drops what they were holding in their [hand_name]!")
+			var/emote_scream = pick("screams in pain and ", "lets out a sharp cry and ", "cries out and ")
+			owner.emote("me", 1, "[(!owner.pain.feels_pain) ? "" : emote_scream ]drops what they was holding in their [hand_name]!")
 	if(is_malfunctioning())
 		if(prob(10))
 			owner.drop_inv_item_on_ground(c_hand)
-			owner.emote("me", 1, "drops what they were holding, their [hand_name] malfunctioning!")
+			owner.emote("me", 1, "drops what they was holding, their [hand_name] malfunctioning!")
 			var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread()
 			spark_system.set_up(5, 0, owner)
 			spark_system.attach(owner)
@@ -1551,8 +1553,11 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	if(owner_helmet.flags_inventory & FULL_DECAP_PROTECTION)
 		return
-
-	owner.visible_message("[owner]'s [owner_helmet] goes flying off from the impact!", SPAN_USERDANGER("Your [owner_helmet] goes flying off from the impact!"))
 	owner.drop_inv_item_on_ground(owner_helmet)
+	if(iszombie(owner))
+		owner.visible_message("[owner]'s [owner_helmet] gives way and cracks from the impact!", SPAN_USERDANGER("Your [owner_helmet] has broken and your head is vunlerable!"))
+		playsound(owner, 'sound/effects/helmet_noise.ogg', 100)
+		return
+	owner.visible_message("[owner]'s [owner_helmet] goes flying off from the impact!", SPAN_USERDANGER("Your [owner_helmet] goes flying off from the impact!"))
 	INVOKE_ASYNC(owner_helmet, TYPE_PROC_REF(/atom/movable, throw_atom), pick(range(1, get_turf(loc))), 1, SPEED_FAST)
 	playsound(owner, 'sound/effects/helmet_noise.ogg', 100)

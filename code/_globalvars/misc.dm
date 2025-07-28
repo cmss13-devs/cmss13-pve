@@ -137,3 +137,9 @@ GLOBAL_VAR(obfs_x)
 GLOBAL_VAR(obfs_y)
 
 GLOBAL_VAR_INIT(ai_xeno_weeding, TRUE)
+/// Multiplier added on to the chance to delimb a zombie
+GLOBAL_VAR(gm_set_zombie_delimb_multi)
+/// Zombies have a chance to get helmets
+GLOBAL_VAR_INIT(gm_set_zombie_random_helmet, FALSE)
+/// Zombies chance to get "helmets"
+GLOBAL_VAR_INIT(gm_set_zombie_helmet_chance, 25)
