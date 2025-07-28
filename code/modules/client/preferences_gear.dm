@@ -1322,6 +1322,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged
 	category = "Food (packaged)"
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/snack_packaged/beef_jerky
 	display_name = "Beef jerky"
@@ -1359,7 +1360,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_grown
 	category = "Food (healthy)"
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/snack_grown/apple
 	display_name = "Apple"
