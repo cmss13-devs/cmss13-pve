@@ -2117,7 +2117,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		if(gun_user.throw_mode)
 			return FALSE
 
-		if(gun_user.Adjacent(object) && gun_user.a_intent != INTENT_HARM || gun_user.loc == get_turf(object)) //Dealt with by attack code
+		if(gun_user.Adjacent(object) && (istype(src, /obj/item/weapon/gun/shotgun) || gun_user.a_intent != INTENT_HARM || gun_user.client && gun_user.client.prefs && !(gun_user.client.prefs.toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE)) || gun_user.loc == get_turf(object)) //Dealt with by attack code
 			return FALSE
 
 	if(QDELETED(object))
