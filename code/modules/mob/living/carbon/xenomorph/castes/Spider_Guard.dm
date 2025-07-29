@@ -27,7 +27,7 @@
 	innate_healing = TRUE
 
 	behavior_delegate_type = /datum/behavior_delegate/spider_guard
-	minimap_icon = "xeno"
+	minimap_icon = "drone"
 
 /mob/living/carbon/xenomorph/spider_guard
 	caste_type = XENO_CASTE_SPIDER_GUARD
@@ -62,7 +62,7 @@
 		distance = 4
 
 	/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
-		if(prob(40))
+		if(prob(50))
 			A.apply_damage(5, TOX)
 			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
 			A.sway_jitter(times = 2, steps = 1)

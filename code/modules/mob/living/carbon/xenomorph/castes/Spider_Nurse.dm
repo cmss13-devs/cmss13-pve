@@ -27,7 +27,7 @@
 	innate_healing = TRUE
 
 	behavior_delegate_type = /datum/behavior_delegate/spider_nurse
-	minimap_icon = "xeno"
+	minimap_icon = "spitter"
 
 /mob/living/carbon/xenomorph/spider_nurse
 	caste_type = XENO_CASTE_SPIDER_NURSE

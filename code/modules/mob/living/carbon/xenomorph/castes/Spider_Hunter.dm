@@ -29,7 +29,7 @@
 	innate_healing = TRUE
 
 	behavior_delegate_type = /datum/behavior_delegate/spider_hunter
-	minimap_icon = "xeno"
+	minimap_icon = "lurker"
 
 /mob/living/carbon/xenomorph/spider_hunter
 	caste_type = XENO_CASTE_SPIDER_HUNTER
@@ -98,7 +98,7 @@
 	var/invis_duration = 20 SECONDS // so we can display how long the spider_hunter is invisible to it
 
 /datum/behavior_delegate/spider_hunter/melee_attack_additional_effects_target(mob/living/carbon/A)
-	if(prob(80))
+	if(prob(75))
 		A.apply_damage(15, TOX)
 		to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
 		A.sway_jitter(times = 5, steps = 3)
