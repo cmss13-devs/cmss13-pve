@@ -2979,6 +2979,18 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 15
 	size_mod = 0
 
+/obj/item/attachable/stock/fpsa
+	name = "FPSA DMR Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "fpsa_stock"
+	attach_icon = "fpsa_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
 // ======== Underbarrel Attachments ======== //
 
 

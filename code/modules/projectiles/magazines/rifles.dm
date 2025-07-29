@@ -618,7 +618,7 @@
 	transfer_handful_amount = 6
 
 //------------------------------------------------------
-//FN107 Rifle
+//FN107 Carbine
 
 /obj/item/ammo_magazine/rifle/fn107
 	name = "\improper CAMAS61/78 magazine (7.5x28mm)"
@@ -652,3 +652,25 @@
 	default_ammo = /datum/ammo/bullet/rifle/masm
 	max_rounds = 120
 	gun_type = /obj/item/weapon/gun/rifle/masm55
+
+//------------------------------------------------------
+//FPSA DMR
+
+/obj/item/ammo_magazine/rifle/fpsa
+	name = "\improper FPSA DMR magazine (7.5x28mm)"
+	desc = "Enter text."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "fpsa"
+	item_state = "fpsa"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/rifle/fpsa
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/fpsa
+
+/obj/item/ammo_magazine/rifle/fpsa/commando
+	name = "\improper FPSA DMR magazine (7.5x28mm)"
+	desc = "Enter text."
+	default_ammo = /datum/ammo/bullet/rifle/fpsa/commando
+	ammo_band_icon = "+fpsa_band"
+	ammo_band_icon_empty = "+fpsa_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_AP

@@ -2023,3 +2023,51 @@
 /obj/item/weapon/gun/rifle/masm55/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
+
+
+//FPSA DMR
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/fpsa
+	name = "\improper FPSA Pulse DMR"
+	desc = "TBA"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "fpsa"
+	item_state = "fpsa"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/fpsa
+	attachable_allowed = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/stock/fpsa,
+		/obj/item/attachable/scope/mini,
+	)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+	starting_attachment_types = list(/obj/item/attachable/stock/fpsa)
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/fpsa/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 14, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/fpsa/set_gun_config_values()
+	..()
+	fire_delay = FIRE_DELAY_TIER_8
+	burst_amount = BURST_AMOUNT_TIER_3
+	burst_delay = FIRE_DELAY_TIER_8
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+
+/obj/item/weapon/gun/rifle/fpsa/unloaded
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
