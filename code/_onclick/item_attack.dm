@@ -82,7 +82,7 @@
 		if(force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
 			if(!user.get_target_lock(target.faction_group))
 				if(human_target.pulledby == human_user)
-					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN)
+					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN || target.buckled)
 						user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
 						to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
 
