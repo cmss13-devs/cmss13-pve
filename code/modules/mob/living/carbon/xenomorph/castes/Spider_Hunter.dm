@@ -11,7 +11,7 @@
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_HELLHOUND
-	fire_vulnerability_mult = FIRE_MULTIPLIER_EXTREME //v weak to fire
+	fire_vulnerability_mult = FIRE_MULTIPLIER_DEADLY //v weak to fire
 
 	caste_desc = "An ambusher from the dark."
 	evolves_to = list() //XENO_CASTE_SPIDER_NURSE, XENO_CASTE_SPIDER_HUNTER

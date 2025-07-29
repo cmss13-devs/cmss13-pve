@@ -11,7 +11,7 @@
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_LOW
 	speed = XENO_SPEED_SPIDER
-	fire_vulnerability_mult = FIRE_MULTIPLIER_EXTREME //v weak to fire
+	fire_vulnerability_mult = FIRE_MULTIPLIER_DEADLY //v weak to fire
 
 	caste_desc = "A guard of the cluster."
 	evolves_to = list(XENO_CASTE_SPIDER_NURSE, XENO_CASTE_SPIDER_HUNTER)
@@ -58,8 +58,8 @@
 	pull_multiplier = 0.8
 
 	/datum/action/xeno_action/activable/pounce
-		ai_prob_chance = 50
-		distance = 4
+		ai_prob_chance = 30
+		distance = 3
 
 	/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
 		if(prob(50))
