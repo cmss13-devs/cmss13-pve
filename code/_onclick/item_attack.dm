@@ -82,12 +82,12 @@
 		if(force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
 			if(!user.get_target_lock(target.faction_group))
 				if(human_target.pulledby == human_user)
-					if(target.dir == user.dir && target.loc == get_step(user, user.dir))
+					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN)
 						user.visible_message(SPAN_DANGER("[user] grabs [target] and is about to slit their throat with [src]."), SPAN_HIGHDANGER("You grab [target]'s head and prepare to slice open their throat with [src]."))
 						to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
 
 						throat_slit_stun(target, user)
-						switch(target.dir)
+						switch(get_dir(user, target))
 							if(NORTH)
 								human_target.pixel_y -= 12
 							if(EAST)
@@ -95,6 +95,18 @@
 							if(SOUTH)
 								human_target.pixel_y += 12
 							if(WEST)
+								human_target.pixel_x += 12
+							if(NORTHEAST)
+								human_target.pixel_x -= 12
+								human_target.pixel_y -= 12
+							if(NORTHWEST)
+								human_target.pixel_y -= 12
+								human_target.pixel_x += 12
+							if(SOUTHEAST)
+								human_target.pixel_y += 12
+								human_target.pixel_x -= 12
+							if(SOUTHWEST)
+								human_target.pixel_y += 12
 								human_target.pixel_x += 12
 
 						if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
@@ -124,7 +136,7 @@
 						return TRUE
 
 					else
-						to_chat(user, SPAN_WARNING("You must be behind your target!"))
+						to_chat(user, SPAN_WARNING("You must be behind your target! Or they must be on the ground!"))
 						return FALSE
 				else
 					to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
