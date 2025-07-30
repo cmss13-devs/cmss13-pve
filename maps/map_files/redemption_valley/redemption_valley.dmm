@@ -2892,7 +2892,7 @@
 /area/redemptionvalley/valleyroof/storage)
 "cSS" = (
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 6.1;
 	id = "central_cave_left";
 	name = "cable rope";
 	pixel_y = -34
@@ -6098,7 +6098,7 @@
 "gMD" = (
 /obj/structure/ladder/rope{
 	pixel_y = -34;
-	layer = 3.1;
+	layer = 6.1;
 	id = "western_cave_up";
 	height = 1;
 	name = "cable rope"
@@ -6827,7 +6827,7 @@
 /area/redemptionvalley/outpost/medical)
 "hGv" = (
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 6.1;
 	id = "south_western_cave_left";
 	name = "cable rope";
 	pixel_y = -34
@@ -9641,7 +9641,7 @@
 /area/redemptionvalley/outpost/entry)
 "lex" = (
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 6.1;
 	id = "redemption_western_cave_down";
 	name = "cable rope";
 	pixel_y = -34
@@ -12088,7 +12088,7 @@
 "ocf" = (
 /obj/structure/ladder/rope{
 	pixel_y = -34;
-	layer = 3.1;
+	layer = 6.1;
 	id = "northern_cave";
 	height = 1;
 	name = "cable rope"
@@ -16606,7 +16606,7 @@
 /area/redemptionvalley/valleyroof/cafe)
 "tdb" = (
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 6.1;
 	id = "central_cave_right";
 	name = "cable rope";
 	pixel_y = -34
@@ -18441,7 +18441,7 @@
 "vpv" = (
 /obj/structure/ladder/rope{
 	pixel_y = -34;
-	layer = 3.1;
+	layer = 6.1;
 	id = "north_eastern_cave_down";
 	name = "cable rope"
 	},
@@ -19688,7 +19688,7 @@
 /area/redemptionvalley/valleyroof/laundro)
 "wQg" = (
 /obj/structure/ladder/rope{
-	layer = 3.1;
+	layer = 6.1;
 	id = "south_western_cave_right";
 	name = "cable rope";
 	pixel_y = -34
@@ -20424,7 +20424,7 @@
 "xOC" = (
 /obj/structure/ladder/rope{
 	pixel_y = -34;
-	layer = 3.1;
+	layer = 6.1;
 	id = "north_eastern_cave_up";
 	height = 1;
 	name = "cable rope"
