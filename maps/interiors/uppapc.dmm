@@ -107,11 +107,6 @@
 	pixel_y = 19;
 	pixel_x = 16
 	},
-/obj/effect/landmark/interior/spawn/interior_camera{
-	dir = 10;
-	pixel_x = -14;
-	pixel_y = 38
-	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	dir = 4;
 	pixel_x = -6;
@@ -145,6 +140,11 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
 	pixel_y = 30;
 	pixel_x = -6
+	},
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 5;
+	pixel_x = -18;
+	pixel_y = 38
 	},
 /turf/open/shuttle/vehicle/floor_1_5,
 /area/interior/vehicle/uppapc)
@@ -270,32 +270,32 @@ z
 J
 "}
 (2,1,1) = {"
-k
+z
 k
 r
 M
-z
+k
 "}
 (3,1,1) = {"
-k
+z
 l
 v
 L
-z
+k
 "}
 (4,1,1) = {"
-k
+z
 h
 d
 c
-z
+k
 "}
 (5,1,1) = {"
 z
 k
 E
 O
-z
+k
 "}
 (6,1,1) = {"
 z
@@ -309,17 +309,17 @@ z
 k
 a
 i
-z
+k
 "}
 (8,1,1) = {"
-k
+z
 I
 y
 x
-z
+k
 "}
 (9,1,1) = {"
-k
+z
 z
 z
 z
