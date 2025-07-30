@@ -23,7 +23,7 @@
 	accepted_hardpoints = list(
 		// secondaries
 		/obj/item/hardpoint/secondary/t60p3m,
-    )
+	)
 	hdpt_layer = HDPT_LAYER_TURRET
 	px_offsets = list(
 		"1" = list(0, 8),

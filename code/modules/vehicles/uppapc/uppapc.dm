@@ -37,7 +37,7 @@
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/holder/apc_turret,
 		/obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels,
-        /obj/item/hardpoint/support/flare_launcher/upp,
+		/obj/item/hardpoint/support/flare_launcher/upp,
 	)
 
 

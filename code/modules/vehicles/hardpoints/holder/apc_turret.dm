@@ -33,7 +33,7 @@
 		// primaries
 		/obj/item/hardpoint/primary/gshk_minigun,
 		// secondaries
-        /obj/item/hardpoint/secondary/hj35launcher,
+		/obj/item/hardpoint/secondary/hj35launcher,
 	)
 
 	hdpt_layer = HDPT_LAYER_TURRET
