@@ -9,6 +9,12 @@
 /turf/open/void/vehicle,
 /area/space)
 "f" = (
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 10;
+	layer = 3.2;
+	pixel_x = -14;
+	pixel_y = 33
+	},
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	dir = 1;
 	pixel_y = -11
@@ -19,12 +25,6 @@
 	icon_state = "handrail_strata";
 	indestructible = 1
 	},
-/obj/effect/landmark/interior/spawn/interior_camera{
-	dir = 10;
-	layer = 3.2;
-	pixel_x = -14;
-	pixel_y = 33
-	},
 /turf/open/shuttle/vehicle/floor_1_14,
 /area/interior/vehicle/upptank)
 "v" = (
@@ -33,9 +33,6 @@
 	},
 /turf/open/void/vehicle,
 /area/space)
-"E" = (
-/turf/open/void/vehicle,
-/area/interior/vehicle/upptank)
 "H" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
@@ -58,9 +55,7 @@
 /turf/open/shuttle/vehicle/floor_1_13,
 /area/interior/vehicle/upptank)
 "M" = (
-/turf/open/void/vehicle{
-	opacity = 0
-	},
+/turf/open/void/vehicle/unopacity,
 /area/interior/vehicle/upptank)
 "Q" = (
 /obj/effect/landmark/interior/spawn/weapons_loader{
@@ -98,6 +93,9 @@
 	},
 /turf/open/shuttle/vehicle/floor_3_12,
 /area/interior/vehicle/upptank)
+"S" = (
+/turf/open/void/vehicle,
+/area/interior/vehicle/upptank)
 
 (1,1,1) = {"
 b
@@ -115,14 +113,14 @@ b
 "}
 (3,1,1) = {"
 b
-E
+S
 Q
 f
 b
 "}
 (4,1,1) = {"
 b
-E
+S
 a
 R
 b
