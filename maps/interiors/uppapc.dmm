@@ -112,9 +112,7 @@
 	pixel_x = -6;
 	pixel_y = 25
 	},
-/turf/open/shuttle/vehicle/floor_3_9_1{
-	icon_state = "floor_1_10"
-	},
+/turf/open/shuttle/vehicle/floor_1_10,
 /area/interior/vehicle/uppapc)
 "x" = (
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
@@ -237,9 +235,7 @@
 	},
 /area/interior/vehicle/uppapc)
 "R" = (
-/turf/open/shuttle/vehicle/floor_1_8{
-	icon_state = "floor_1_8_1"
-	},
+/turf/open/shuttle/vehicle/floor_1_8,
 /area/interior/vehicle/uppapc)
 "S" = (
 /obj/effect/landmark/interior/spawn/interior_viewport{
