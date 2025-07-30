@@ -11,11 +11,9 @@
 "f" = (
 /obj/effect/landmark/interior/spawn/interior_viewport{
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -11
 	},
 /obj/structure/bed/chair/dropship{
-	dir = 2;
 	name = "handrail seat";
 	icon = 'icons/obj/structures/handrail.dmi';
 	icon_state = "handrail_strata";
@@ -31,11 +29,13 @@
 /area/interior/vehicle/upptank)
 "v" = (
 /obj/structure/prop/vehicle/upptank{
-	pixel_x = 16;
-	pixel_y = 0
+	pixel_x = 16
 	},
 /turf/open/void/vehicle,
 /area/space)
+"E" = (
+/turf/open/void/vehicle,
+/area/interior/vehicle/upptank)
 "H" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
@@ -98,9 +98,6 @@
 	},
 /turf/open/shuttle/vehicle/floor_3_12,
 /area/interior/vehicle/upptank)
-"S" = (
-/turf/open/void/vehicle,
-/area/interior/vehicle/upptank)
 
 (1,1,1) = {"
 b
@@ -118,14 +115,14 @@ b
 "}
 (3,1,1) = {"
 b
-S
+E
 Q
 f
 b
 "}
 (4,1,1) = {"
 b
-S
+E
 a
 R
 b

@@ -32,7 +32,6 @@
 /area/interior/vehicle/uppapc)
 "h" = (
 /obj/structure/surface/table/reinforced/toc/east{
-	pixel_x = 0;
 	pixel_y = -5
 	},
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -65,11 +64,9 @@
 /area/space)
 "l" = (
 /obj/structure/surface/table/reinforced/toc/west{
-	pixel_x = 0;
 	pixel_y = -5
 	},
 /obj/structure/machinery/computer/overwatch/upp/toc{
-	pixel_x = 0;
 	pixel_y = 14
 	},
 /obj/structure/machinery/computer/shuttle/dropship/flight/toc/upp{
@@ -81,8 +78,7 @@
 "r" = (
 /obj/structure/vehicle_locker/movie{
 	pixel_y = 31;
-	layer = 2.9;
-	pixel_x = 0
+	layer = 2.9
 	},
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
@@ -181,7 +177,6 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
-	pixel_x = 0;
 	pixel_y = 20;
 	anchored = 1
 	},
@@ -214,7 +209,6 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
-	pixel_x = 0;
 	pixel_y = 20;
 	anchored = 1;
 	dir = 8
