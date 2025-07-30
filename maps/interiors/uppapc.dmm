@@ -9,9 +9,7 @@
 	pixel_x = 8;
 	pixel_y = 14
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_7"
-	},
+/turf/open/shuttle/vehicle/floor_3_7,
 /area/interior/vehicle/uppapc)
 "c" = (
 /obj/structure/bed/chair/vehicle{
@@ -27,9 +25,7 @@
 	pixel_x = 8;
 	pixel_y = -11
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/uppapc)
 "d" = (
 /turf/open/shuttle/vehicle/floor_1_1_3,
@@ -60,9 +56,7 @@
 /obj/effect/landmark/interior/spawn/weapons_loader{
 	icon = 'icons/obj/vehicles/interiors/uppapc.dmi'
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_10"
-	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
 /area/interior/vehicle/uppapc)
 "k" = (
 /turf/open/void/vehicle{
@@ -131,17 +125,13 @@
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
 	dir = 4
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_9"
-	},
+/turf/open/shuttle/vehicle/floor_3_9,
 /area/interior/vehicle/uppapc)
 "y" = (
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
 	dir = 4
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_8"
-	},
+/turf/open/shuttle/vehicle/floor_3_8,
 /area/interior/vehicle/uppapc)
 "z" = (
 /turf/open/void/vehicle,
@@ -208,9 +198,7 @@
 	dir = 1;
 	pixel_x = -8
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
-	icon_state = "floor_3_5"
-	},
+/turf/open/shuttle/vehicle/floor_3_5,
 /area/interior/vehicle/uppapc)
 "M" = (
 /obj/structure/bed/chair/vehicle{
@@ -233,9 +221,7 @@
 	anchored = 1;
 	dir = 8
 	},
-/turf/open/shuttle/vehicle/floor_3_9_1{
-	icon_state = "floor_3_10_1"
-	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
 /area/interior/vehicle/uppapc)
 "O" = (
 /obj/structure/bed/chair/vehicle{
@@ -246,7 +232,7 @@
 	dir = 1;
 	pixel_x = -8
 	},
-/turf/open/shuttle/vehicle/floor_1_10{
+/turf/open/shuttle/vehicle/floor_3_13{
 	icon_state = "floor_3_14"
 	},
 /area/interior/vehicle/uppapc)

@@ -23,7 +23,7 @@
 	icon = 'icons/obj/vehicles/interiors/uppvan.dmi';
 	pixel_x = -1
 	},
-/turf/open/shuttle/vehicle/floor_3_7,
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/uppvant)
 "f" = (
 /obj/effect/landmark/interior/spawn/entrance{
@@ -59,9 +59,7 @@
 	icon = 'icons/obj/vehicles/interiors/uppvan.dmi';
 	pixel_x = -1
 	},
-/turf/open/shuttle/vehicle/floor_3_7{
-	icon_state = "floor_3_8"
-	},
+/turf/open/shuttle/vehicle/floor_3_4,
 /area/interior/vehicle/uppvant)
 "I" = (
 /obj/structure/bed/chair/vehicle{
@@ -92,9 +90,7 @@
 	anchored = 1;
 	dir = 8
 	},
-/turf/open/shuttle/vehicle/floor_2{
-	icon_state = "floor_3_10"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/uppvant)
 "M" = (
 /obj/effect/landmark/interior/spawn/weapons_loader{
@@ -145,9 +141,7 @@
 	icon = 'icons/obj/vehicles/interiors/uppvan.dmi';
 	pixel_x = -1
 	},
-/turf/open/shuttle/vehicle/floor_3_7{
-	icon_state = "floor_3_9"
-	},
+/turf/open/shuttle/vehicle/floor_3_4,
 /area/interior/vehicle/uppvant)
 "W" = (
 /obj/effect/landmark/interior/spawn/entrance{

@@ -3,7 +3,7 @@
 /obj/structure/prop/tank{
 	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
 	},
-/turf/open/shuttle/vehicle/floor_3_5,
+/turf/open/shuttle/vehicle/floor_3_8_1,
 /area/interior/vehicle/upptank)
 "b" = (
 /turf/open/void/vehicle,
@@ -101,7 +101,7 @@
 /obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
 	dir = 4
 	},
-/turf/open/shuttle/vehicle/floor_3_13,
+/turf/open/shuttle/vehicle/floor_3_12,
 /area/interior/vehicle/upptank)
 "S" = (
 /turf/closed/void,

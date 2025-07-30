@@ -33,7 +33,7 @@
 	dir = 8;
 	health = 1000
 	},
-/turf/open/shuttle/vehicle/floor_3_7,
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/uppvan/prisoner)
 "f" = (
 /obj/effect/landmark/interior/spawn/entrance{
@@ -86,9 +86,7 @@
 	dir = 1;
 	anchored = 1
 	},
-/turf/open/shuttle/vehicle/floor_3_7{
-	icon_state = "floor_3_8"
-	},
+/turf/open/shuttle/vehicle/floor_3_4,
 /area/interior/vehicle/uppvan/prisoner)
 "I" = (
 /obj/structure/bed/chair/vehicle{
@@ -120,9 +118,7 @@
 	dir = 8;
 	health = 1000
 	},
-/turf/open/shuttle/vehicle/floor_2{
-	icon_state = "floor_3_10"
-	},
+/turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/uppvan/prisoner)
 "M" = (
 /obj/effect/landmark/interior/spawn/interior_viewport/simple/uppvanfront{
@@ -181,9 +177,7 @@
 	color = "#E10600";
 	anchored = 1
 	},
-/turf/open/shuttle/vehicle/floor_3_7{
-	icon_state = "floor_3_9"
-	},
+/turf/open/shuttle/vehicle/floor_3_4,
 /area/interior/vehicle/uppvan/prisoner)
 "V" = (
 /obj/structure/barricade/handrail{
