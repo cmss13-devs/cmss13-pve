@@ -548,12 +548,15 @@
 	penetration = ARMOR_PENETRATION_TIER_2 //Tiny bit of AP just because the others don't have AP. And it's a god damn MMG
 
 /datum/ammo/bullet/rifle/fpsa
-	name = "DMR bullet"
+	name = "7.5x50mm bullet"
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_2
+	effective_range_max = 16
+	accurate_range = 24
+	max_range = 32
 
 /datum/ammo/bullet/rifle/fpsa/commando
-	name = "armor piercing tracer DMR bullet"
+	name = "armor piercing tracer 7.5x50mm bullet"
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_5
 	ammo_glowing = TRUE

@@ -657,8 +657,8 @@
 //FPSA DMR
 
 /obj/item/ammo_magazine/rifle/fpsa
-	name = "\improper FPSA DMR magazine (7.5x28mm)"
-	desc = "Enter text."
+	name = "\improper FPSA/76 DMR magazine (7.5x50mm)"
+	desc = "A standard caseless magazine for the FPSA/76 Pulse DMR, often used by mercenary and french armed forces."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "fpsa"
 	item_state = "fpsa"
@@ -668,8 +668,8 @@
 	gun_type = /obj/item/weapon/gun/rifle/fpsa
 
 /obj/item/ammo_magazine/rifle/fpsa/commando
-	name = "\improper FPSA DMR magazine (7.5x28mm)"
-	desc = "Enter text."
+	name = "\improper FPSA/76 DMR AP Tracer magazine (7.5x50mm)"
+	desc = "A standard caseless AP tracer magazine for the FPSA/76 Pulse DMR, often used by FAAMI special forces."
 	default_ammo = /datum/ammo/bullet/rifle/fpsa/commando
 	ammo_band_icon = "+fpsa_band"
 	ammo_band_icon_empty = "+fpsa_band_e"

@@ -2025,13 +2025,13 @@
 	current_mag = null
 
 
-//FPSA DMR
+//FPSA/76 DMR
 //=================================================
 //=================================================
 
 /obj/item/weapon/gun/rifle/fpsa
-	name = "\improper FPSA Pulse DMR"
-	desc = "TBA"
+	name = "\improper FPSA/76 Pulse DMR"
+	desc = "A french dedicated marksman rifle used by the more modernized French Armed Forces and others. An effective medium to long range rifle able to shoot targets around effective range of 1000 meters. Made in 2176 a recently new rifle manufactured by Saint Etienne."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "fpsa"
 	item_state = "fpsa"
@@ -2044,6 +2044,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/fpsa,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/variable_zoom/integrated,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -2051,10 +2052,10 @@
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	starting_attachment_types = list(/obj/item/attachable/stock/fpsa)
 	map_specific_decoration = FALSE
-	start_automatic = TRUE
+	start_automatic = FALSE
 
 /obj/item/weapon/gun/rifle/fpsa/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 14, "stock_x" = 18, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 23,"rail_x" = 12, "rail_y" = 21, "under_x" = 16, "under_y" = 18, "stock_x" = 14, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/rifle/fpsa/set_gun_config_values()
 	..()

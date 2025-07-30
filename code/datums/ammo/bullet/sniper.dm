@@ -292,7 +292,7 @@
 
 /datum/ammo/bullet/sniper/fr2
 	name = "sniper bullet" //Bolt action, high damage but less penetration
-	damage = 80
+	damage = 75
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
@@ -309,7 +309,7 @@
 
 /datum/ammo/bullet/sniper/fr2/ap
 	name = "sniper AP bullet" //Much higher AP, lower base damage but still strong
-	damage = 70
+	damage = 65
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/sniper/fr2/hp
