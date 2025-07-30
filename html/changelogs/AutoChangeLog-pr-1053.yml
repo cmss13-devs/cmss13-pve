@@ -1,0 +1,5 @@
+author: "CactusMouth"
+delete-after: True
+changes:
+  - rscadd: "Insurgent/UACG Armored Van"
+  - imageadd: "Added sprites for Armored Van"

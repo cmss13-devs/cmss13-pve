@@ -1364,6 +1364,15 @@
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 
+/obj/item/storage/belt/gun/m4a3/m1911/forecon_officer/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/officer())
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+
 /obj/item/storage/belt/gun/m4a3/m1911/socom/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/equipped())
 	new /obj/item/ammo_magazine/pistol/m1911(src)
@@ -1456,6 +1465,11 @@
 		"1" = list(
 			"icon_x" = -11,
 			"icon_y" = -5))
+
+/obj/item/storage/belt/gun/m39/forecon/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/forecon())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
 #define MAXIMUM_MAGAZINE_COUNT 2
 
@@ -1660,11 +1674,12 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
 /obj/item/storage/belt/gun/mateba/cmateba/special
