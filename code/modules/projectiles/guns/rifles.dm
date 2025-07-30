@@ -2031,7 +2031,7 @@
 
 /obj/item/weapon/gun/rifle/fpsa
 	name = "\improper FPSA/76 Pulse DMR"
-	desc = "A french dedicated marksman rifle used by the more modernized French Armed Forces and others. An effective medium to long range rifle able to shoot targets around effective range of 1000 meters. Made in 2176 a recently new rifle manufactured by Saint Etienne."
+	desc = "A domestically produced rifle developed and manufactured by Saint Etienne, 2176. Primarily meant for use by French Armed Forces, it has nonetheless made an impressive impact on the foreign market. The rifle boasts an effective engagement range of over a 1000m, and is chambered in 7.5x50mm high-velocity caseless."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "fpsa"
 	item_state = "fpsa"
