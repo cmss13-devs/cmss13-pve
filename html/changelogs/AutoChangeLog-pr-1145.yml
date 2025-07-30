@@ -1,0 +1,4 @@
+author: "lordloko"
+delete-after: True
+changes:
+  - bugfix: "fixed LatAm Marshals subtypes spawning with English names"

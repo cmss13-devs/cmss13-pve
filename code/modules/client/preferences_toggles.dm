@@ -443,8 +443,7 @@
 	var/picked_type = tgui_alert(src, "What kind of tip?", "Tip Type", list("Marine", "Meta")) //no memetips for them joker imp
 	var/message
 	var/static/list/types_to_pick = list(
-		"Marine" = "strings/marinetips.txt",
-		"Meta" = "strings/metatips.txt"
+		"Marine" = "strings/pvetips.txt"
 	)
 	var/list/tip_list = file2list(types_to_pick[picked_type])
 	if(length(types_to_pick[picked_type]))
@@ -691,6 +690,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_TWE]
 		if("Faction CLF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_CLF]
+		if("Faction UACG HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_UACG]
 
 	observer_user.HUD_toggled[hud_choice] = prefs.observer_huds[hud_choice]
 	if(observer_user.HUD_toggled[hud_choice])
