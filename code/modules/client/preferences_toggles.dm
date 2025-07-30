@@ -369,7 +369,7 @@
 /client/proc/toggle_clickdrag_override() //Toggle whether mousedown clicks immediately when on disarm or harm intent to prevent click-dragging from 'eating' attacks.
 	prefs.toggle_prefs ^= TOGGLE_COMBAT_CLICKDRAG_OVERRIDE
 	if(prefs.toggle_prefs & TOGGLE_COMBAT_CLICKDRAG_OVERRIDE)
-		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on any intent other than help intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
+		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on Harm or Disarm intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
 	else
 		to_chat(src,SPAN_BOLDNOTICE( "Click-dragging now blocks clicks from going through."))
 	prefs.save_preferences()
@@ -377,7 +377,7 @@
 /client/proc/toggle_pb_override() //Toggle gun attacks on an adjacent target go to autofire or PB.
 	prefs.toggle_prefs ^= TOGGLE_COMBAT_POINTBLANK_OVERRIDE
 	if(prefs.toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE)
-		to_chat(src,SPAN_BOLDNOTICE( "Using Harm Intent with a gun on an target you sprite click next to you will now ensure you are autofiring instead of Point-Blanking. Grab Intent will still have Point-Blanking."))
+		to_chat(src,SPAN_BOLDNOTICE( "Using Harm Intent with a gun on an target you sprite click next to you will now ensure you are autofiring instead of Point-Blanking. Disarm Intent will still have Point-Blanking."))
 	else
 		to_chat(src,SPAN_BOLDNOTICE( "You will point blank targets next to you on sprite click."))
 	prefs.save_preferences()
