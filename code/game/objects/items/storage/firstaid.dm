@@ -11,6 +11,7 @@
 	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
+	w_class = SIZE_LARGE
 	var/open_state = "kit_empty"
 	throw_speed = SPEED_FAST
 	throw_range = 8
@@ -263,6 +264,7 @@
 	name = "first-aid pack"
 	desc = "A soft first aid kit typically containing essential medical supplies for use in the field."
 	icon_state = "softpack"
+	w_class = SIZE_MEDIUM
 	open_state = "softpack_empty"
 	use_sound = 'sound/items/zip.ogg'
 
