@@ -55,9 +55,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 		if("create_ai")
 			if(!params["path"])
 				return
-			var/delimb_multi = params["zombieDelimbMulti"]
-			if(delimb_multi < 0)
-				delimb_multi *= -1
+			var/delimb_multi = clamp(params["zombieDelimbMulti"], 0, 20)
 			if(delimb_multi == 1)
 				delimb_multi = null
 			GLOB.gm_set_zombie_delimb_multi = delimb_multi
@@ -70,23 +68,35 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			else
 				GLOB.gm_set_zombie_random_helmet = FALSE
 
-			var/helmet_chance = params["helmetChance"]
-			if(100 < helmet_chance < 0)
-				helmet_chance = 25
+			var/helmet_chance = clamp(params["helmetChance"], 1, 100)
 			GLOB.gm_set_zombie_helmet_chance = helmet_chance
 			var/datum/human_ai_equipment_preset/gotten_path = text2path(params["path"])
 			if(!gotten_path)
 				return
 
-			var/mob/living/carbon/human/ai_human = new()
-			ai_human.AddComponent(/datum/component/human_ai)
+			var/ai_amount = clamp(params["aiAmount"], 1, 10)
+			var/list/viable_turfs = list()
+			for(var/turf/open/floor_tile in range(1, ui.user.loc))
+				viable_turfs += floor_tile
 
-			arm_equipment(ai_human, gotten_path::path, TRUE)
+			if(!length(viable_turfs))
+				to_chat(ui.user, SPAN_BOLDNOTICE("No viable turfs found!"))
+				return
+			var/list/reducing_viable_turfs = list() + viable_turfs
+			for(var/i in 1 to ai_amount)
+				var/selected_turf = pick(viable_turfs)
+				if(!length(reducing_viable_turfs) < 1)
+					selected_turf = pick(reducing_viable_turfs)
+					reducing_viable_turfs -= selected_turf
 
-			ai_human.face_dir(ui.user.dir)
-			ai_human.forceMove(get_turf(ui.user))
+				var/mob/living/carbon/human/ai_human = new(pick(selected_turf))
+				ai_human.AddComponent(/datum/component/human_ai)
 
-			ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
+				arm_equipment(ai_human, gotten_path::path, TRUE)
+
+				ai_human.face_dir(ui.user.dir)
+
+				ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 			return TRUE
 
 /client/proc/open_human_ai_spawner_panel()

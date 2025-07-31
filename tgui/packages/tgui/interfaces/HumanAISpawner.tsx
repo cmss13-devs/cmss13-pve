@@ -38,6 +38,7 @@ export const HumanAISpawner = (props) => {
   const { helmetChance } = data;
   const [newHelmetChance, setNewHelmetChance] = useState<number>(helmetChance);
   const { presets } = data;
+  const [aiAmount, setAiAmount] = useState<number>(1);
 
   const flipRandomHelmetChecked = () => {
     if (randomHelmetChecked) {
@@ -92,11 +93,27 @@ export const HumanAISpawner = (props) => {
                             zombieDelimbMulti: newZombieDelimbMulti,
                             randomHelmet: randomHelmetChecked,
                             helmetChance: newHelmetChance,
+                            aiAmount: aiAmount,
                           })
                         }
                       >
                         Spawn
                       </Button>
+                    </Stack.Item>
+                    <Stack.Item width="100%" align="center" textAlign="center">
+                      <Box>Number to spawn:</Box>
+                      <Button tooltip="The number of a selected preset to spawn, from 1 to 10. It will only spawn on open tiles, and attempt not to reuse already spawned on tiles during this instance of spawning.">
+                        ?
+                      </Button>
+                      <NumberInput
+                        value={aiAmount}
+                        step={1}
+                        minValue={1}
+                        maxValue={10}
+                        onChange={(value) => setAiAmount(value)}
+                        width="50%"
+                      />
+                      <Button icon="undo" onClick={() => setAiAmount(1)} />
                     </Stack.Item>
                     {chosenPreset.path.match('zombie') !== null ? (
                       <Stack.Item>
@@ -113,7 +130,7 @@ export const HumanAISpawner = (props) => {
                             minValue={0}
                             maxValue={20}
                             onChange={(value) => numberToTwoDP(value)}
-                            width="75px"
+                            width="50%"
                           />
                           <Button
                             icon="undo"
@@ -135,7 +152,7 @@ export const HumanAISpawner = (props) => {
                             minValue={0}
                             maxValue={100}
                             onChange={(value) => setNewHelmetChance(value)}
-                            width="75px"
+                            width="50%"
                           />
                           <Button
                             icon="undo"
