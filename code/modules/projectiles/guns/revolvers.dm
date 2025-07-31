@@ -789,7 +789,7 @@
 	force = 8
 	attachable_allowed = list(
 		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/bipod
+		/obj/item/attachable/bipod,
 		/obj/item/attachable/flashlight,
 		)
 

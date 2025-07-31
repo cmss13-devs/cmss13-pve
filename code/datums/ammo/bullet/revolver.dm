@@ -185,7 +185,7 @@
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_2
 
-/datum/ammo/bullet/revolver/small
+/datum/ammo/bullet/revolver/rmr6
 	name = ".357 magnum revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 55
