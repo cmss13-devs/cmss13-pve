@@ -170,19 +170,27 @@
 
 	var/free_the_humans = FALSE
 	var/offer_as_ert = FALSE
+	var/make_hai = FALSE
 	if(href_list["spawn_as"] == "freed")
 		free_the_humans = TRUE
 
 	else if(href_list["spawn_as"] == "ert")
 		offer_as_ert = TRUE
 
+	if(href_list["spawn_as"] == "hai")
+		make_hai = TRUE
+
 	var/strip_the_humans = FALSE
 	var/strip_weapons = FALSE
+	var/paradropping = FALSE
 	if(href_list["equip_with"] == "no_weapons")
 		strip_weapons = TRUE
 
 	if(href_list["equip_with"] == "no_equipment")
 		strip_the_humans = TRUE
+
+	if(href_list["equip_with"] == "parachute")
+		paradropping = TRUE
 
 	var/kill_the_humans = FALSE
 	var/burst_the_humans = FALSE
@@ -214,14 +222,23 @@
 		for(var/i = 0 to humans_to_spawn-1)
 			spawn_turf = pick(turfs)
 			spawned_human = new(spawn_turf)
-
+			arm_equipment(spawned_human, job_name, TRUE, FALSE)
 			if(!spawned_human.hud_used)
 				spawned_human.create_hud()
-
 			if(free_the_humans)
 				owner.free_for_ghosts(spawned_human)
-
-			arm_equipment(spawned_human, job_name, TRUE, FALSE)
+			if(make_hai)
+				spawned_human.AddComponent(/datum/component/human_ai)
+				spawned_human.get_ai_brain().appraise_inventory(armor = TRUE)
+			if(paradropping)
+				spawn_turf.ceiling_debris_check(2)
+				spawned_human.handle_paradrop(spawn_turf)
+				var/obj/item/to_move = spawned_human.back
+				spawned_human.temp_drop_inv_item(to_move, 0)
+				spawned_human.equip_to_slot_or_del(to_move, WEAR_R_HAND)
+				spawned_human.equip_to_slot_or_del(new /obj/item/parachute(spawned_human), WEAR_BACK)
+				if(make_hai) //have to do this again because slot swapping fucks with hAI
+					spawned_human.get_ai_brain().appraise_inventory(armor = TRUE)
 
 			humans += spawned_human
 
