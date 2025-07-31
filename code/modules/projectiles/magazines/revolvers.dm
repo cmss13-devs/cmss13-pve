@@ -95,6 +95,16 @@
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	icon_state = "cmb_hp"
 
+/obj/item/ammo_magazine/revolver/rmr6
+	name = "\improper RMR-6 speed loader (.357 Magnum)"
+	desc = "A speedloader of 6 Magnum .357 bullets for the RMR-6 and similar brands of revolver."
+	default_ammo = /datum/ammo/bullet/revolver/rmr6
+	caliber = ".357"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "rmr6"
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/revolver/rmr6
+
 /**
  * MATEBA REVOLVER
  */
@@ -222,3 +232,11 @@
 	caliber = ".455"
 	default_ammo = /datum/ammo/bullet/revolver/webley
 	gun_type = /obj/item/weapon/gun/revolver/m44/custom/webley
+
+
+//-------------------------------------------------------
+//RMR-6 Revolver
+/obj/item/ammo_magazine/internal/revolver/rmr6
+	default_ammo = /datum/ammo/bullet/revolver/rmr6
+	caliber = ".357"
+	gun_type = /obj/item/weapon/gun/revolver/rmr6
