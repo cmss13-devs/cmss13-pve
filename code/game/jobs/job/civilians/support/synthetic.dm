@@ -50,3 +50,13 @@
 	name = JOB_SYNTH
 	icon_state = "syn_spawn"
 	job = /datum/job/civilian/synthetic
+
+/datum/job/civilian/synthetic/ai
+	total_positions = 1
+	spawn_positions = 1
+
+/datum/job/civilian/synthetic/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/civilian/synthetic/ai/get_total_positions(latejoin=0)
+	return latejoin ? total_positions : spawn_positions
