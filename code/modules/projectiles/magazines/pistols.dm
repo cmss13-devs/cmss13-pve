@@ -386,7 +386,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 //PA76 PISTOL
 
 /obj/item/ammo_magazine/pistol/pa76
-	name = "\improper M4A3 magazine (9x19mm)"
+	name = "\improper PA76 magazine (9x19mm)"
 	desc = "A pistol magazine used by the PA76 pistol."
 	caliber = "7.62x20mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
@@ -398,7 +398,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	ammo_band_icon_empty = "+pa76_band_e"
 
 /obj/item/ammo_magazine/pistol/pa76/ap
-	name = "\improper PA76 hollowpoint magazine (9x19mm)"
+	name = "\improper PA76 armor piercing magazine (9x19mm)"
 	desc = "A pistol magazine. This one contains armor piercing bullets."
 	default_ammo = /datum/ammo/bullet/pistol/pa76/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP

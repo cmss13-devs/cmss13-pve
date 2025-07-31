@@ -282,7 +282,7 @@
 /datum/ammo/bullet/pistol/pa76
 	name = "7.62x20mm bullet"
 
-	damage = 50 //High damage
+	damage = 45 //High damage
 	penetration = -ARMOR_PENETRATION_TIER_2 //Low AP
 
 /datum/ammo/bullet/pistol/pa76/ap
