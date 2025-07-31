@@ -262,9 +262,6 @@
 							no_limb_loss, damage_source = create_cause_data("amputation"),\
 							mob/attack_source = null,\
 							brute_reduced_by = -1, burn_reduced_by = -1)
-	if(iszombie(owner)) //Check Here incase we're a limb that's destroyed or something
-		var/datum/species/zombie/zombie = owner.species
-		zombie.can_rise_again(owner)
 
 	if((brute <= 0) && (burn <= 0))
 		return 0
@@ -275,19 +272,37 @@
 
 	if(status & LIMB_DESTROYED)
 		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
-			var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
-			var/list/potential_limbs = owner.limbs - list(src)
-			while(!random_limb_found || potential_limbs.len < 1)
-				var/obj/limb/check_limb = pick(potential_limbs)
-				if(!(check_limb.status & LIMB_DESTROYED))
-					random_limb_found = TRUE
-					check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs + src, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
-					return
-				else
-					potential_limbs -= check_limb
+			var/datum/species/zombie/zombie = owner.species
+			if(!zombie.can_rise_again(owner))
+				var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
+				var/list/potential_limbs = owner.limbs - list(src)
+				while(!random_limb_found || potential_limbs.len < 1)
+					var/obj/limb/check_limb = pick(potential_limbs)
+					if(!(check_limb.status & LIMB_DESTROYED))
+						random_limb_found = TRUE
+						check_limb.take_damage(brute, burn, sharp, edge, used_weapon, forbidden_limbs + src, no_limb_loss, damage_source, attack_source, brute_reduced_by, burn_reduced_by)
+						return
+					else
+						potential_limbs -= check_limb
 			return 0
 		else
 			return 0
+
+	if(iszombie(owner)) //Zombie? Made of paper clearly. No Threshold before we move on
+		var/datum/species/zombie/zombie = owner.species
+		var/obj/limb/limb = src
+		if(body_part == BODY_FLAG_CHEST || body_part == BODY_FLAG_GROIN)
+			limb = pick(owner.limbs - list("chest","groin")) //Targetting something that can't pop off? Not any more.
+
+		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
+			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
+			zombie_cut_prob *= owner.zombie_delimb_chance_multi ? owner.zombie_delimb_chance_multi : 1
+			zombie_cut_prob = min(zombie_cut_prob, 100)
+			if(prob(zombie_cut_prob))
+				limb.limb_delimb(damage_source)
+				return
+		if(!zombie.can_rise_again(owner)) //This will also check and handle if the zombie is perma.
+			return
 
 	var/previous_brute = brute_dam
 	var/previous_burn = burn_dam
@@ -384,18 +399,7 @@
 	var/no_perma_damage = owner.status_flags & NO_PERMANENT_DAMAGE
 	var/no_bone_break = owner.chem_effect_flags & CHEM_EFFECT_RESIST_FRACTURE
 
-	if(iszombie(owner)) //Zombie? Made of paper clearly. No Threshold before we move on
-		var/obj/limb/limb = src
-		if(body_part == BODY_FLAG_CHEST || body_part == BODY_FLAG_GROIN)
-			limb = pick(owner.limbs - list("chest","groin")) //Targetting something that can't pop off? Not any more.
-
-		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
-			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
-			zombie_cut_prob *= owner.zombie_delimb_chance_multi ? owner.zombie_delimb_chance_multi : 1
-			zombie_cut_prob = min(zombie_cut_prob, 100)
-			if(prob(zombie_cut_prob))
-				limb.limb_delimb(damage_source)
-	else
+	if(!iszombie(owner))
 		if(previous_brute > 0 && !is_ff && body_part != BODY_FLAG_CHEST && body_part != BODY_FLAG_GROIN && !no_limb_loss && !no_perma_damage && !no_bone_break)
 			if(CONFIG_GET(flag/limbs_can_break) && brute_dam >= max_damage * CONFIG_GET(number/organ_health_multiplier) && (status & LIMB_BROKEN))
 				var/cut_prob = brute/max_damage * 5
@@ -988,6 +992,9 @@ This function completely restores a damaged organ to perfect condition.
 				//Throw organs around
 				var/lol = pick(GLOB.cardinals)
 				step(organ,lol)
+			if(iszombie(owner))
+				var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-21,21) SECONDS)
+				addtimer(CALLBACK(organ, TYPE_PROC_REF(/obj/item/limb/, zombie_clean_up), owner), time_til_clean)
 
 		owner.update_body() //Among other things, this calls update_icon() and updates our visuals.
 		owner.update_med_icon()

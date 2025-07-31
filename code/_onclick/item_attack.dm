@@ -83,20 +83,35 @@
 
 			var/mob/living/carbon/human/human_target = target
 			var/obj/limb/limb = human_target.get_limb("head")
+			if(limb.status & LIMB_DESTROYED)
+				to_chat(user, SPAN_NOTICE("What head?"))
+				return FALSE
 			var/time_to_decap = HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC)
 			if(iszombie(target))
 				time_to_decap /= 2
 			human_target.pixel_y = 0
 			human_target.pixel_x = 0
-			switch(user.dir)
+			switch(get_dir(user, target))
 				if(NORTH)
-					human_target.pixel_y -= 14
+					human_target.pixel_y -= 12
 				if(EAST)
-					human_target.pixel_x -= 14
+					human_target.pixel_x -= 12
 				if(SOUTH)
-					human_target.pixel_y += 14
+					human_target.pixel_y += 12
 				if(WEST)
-					human_target.pixel_x += 14
+					human_target.pixel_x += 12
+				if(NORTHEAST)
+					human_target.pixel_x -= 12
+					human_target.pixel_y -= 12
+				if(NORTHWEST)
+					human_target.pixel_y -= 12
+					human_target.pixel_x += 12
+				if(SOUTHEAST)
+					human_target.pixel_y += 12
+					human_target.pixel_x -= 12
+				if(SOUTHWEST)
+					human_target.pixel_y += 12
+					human_target.pixel_x += 12
 
 			to_chat(user, SPAN_WARNING(iszombie(target) ? "Your [src.name] easily starts to cut through [target]'s neck!" : "You start to cut off [target]'s head!"))
 			human_target.add_splatter_floor()
