@@ -1,6 +1,6 @@
 /obj/structure/interior_exit/vehicle/tank/upp
 	name = "tank hatch"
-	icon = 'icons/obj/vehicles/interiors/uppapc.dmi'
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
 	icon_state = "hatch"
 
 /obj/structure/prop/vehicle/upptank
