@@ -193,8 +193,8 @@
 		addtimer(CALLBACK(src, PROC_REF(clean_up_zombie), zombie), time_til_clean)
 
 /datum/species/zombie/proc/clean_up_zombie(mob/living/carbon/human/zombie)
-	if(prob(15))
-		zombie.visible_message("[src.name] falls apart! Practically melting away, rotted to nothing quicker than you can blink.")
+	if(prob(35))
+		zombie.visible_message("[src.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
 
 	zombie.add_splatter_floor()
 	zombie.add_splatter_floor()
