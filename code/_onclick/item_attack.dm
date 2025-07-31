@@ -82,7 +82,7 @@
 		if(force >= MELEE_FORCE_NORMAL && !isnull(sharp) && sharp == IS_SHARP_ITEM_ACCURATE)
 			if(!user.get_target_lock(target.faction_group))
 				if(human_target.pulledby == human_user)
-					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN || target.buckled)
+					if(target.dir == user.dir && target.loc == get_step(user, user.dir) || target.body_position == LYING_DOWN || human_target.handcuffed)
 						if(target.stat == DEAD)
 							to_chat(target, SPAN_WARNING("They're already dead. What's the point?"))
 							return FALSE
