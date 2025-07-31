@@ -32,7 +32,7 @@
 		"8" = list(5, 19)
 	)
 
-/obj/item/hardpoint/holder/tank_turret/uppturret/get_tgui_info()
+/obj/item/hardpoint/holder/tank_turret/uppvanturret/get_tgui_info()
 	var/list/data = list()
 
 	data += list(list( // turret smokescreen data

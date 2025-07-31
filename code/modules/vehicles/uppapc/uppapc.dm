@@ -135,18 +135,6 @@
 			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
-/obj/vehicle/multitile/apc/uppapc/initialize_cameras(change_tag = FALSE)
-	if(!camera)
-		camera = new /obj/structure/machinery/camera/vehicle(src)
-	if(change_tag)
-		camera.c_tag = "#[rand(1,100)] XSL-68 \"[nickname]\""
-		if(camera_int)
-			camera_int.c_tag = camera.c_tag + " interior"
-	else
-		camera.c_tag = "#[rand(1,100)] XSL-68"
-		if(camera_int)
-			camera_int.c_tag = camera.c_tag + " interior"
-
 //Called when players try to move vehicle
 //Another wrapper for try_move()
 /obj/vehicle/multitile/apc/uppapc/relaymove(mob/user, direction)

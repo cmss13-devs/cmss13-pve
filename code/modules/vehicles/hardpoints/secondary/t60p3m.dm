@@ -32,7 +32,7 @@
 	)
 	fire_delay = 0.1 SECONDS
 
-/obj/item/hardpoint/secondary/m56cupola/set_bullet_traits()
+/obj/item/hardpoint/secondary/t60p3m/set_bullet_traits()
 	..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
