@@ -194,7 +194,7 @@
 
 /datum/species/zombie/proc/clean_up_zombie(mob/living/carbon/human/zombie)
 	if(prob(35))
-		zombie.visible_message("[src.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+		zombie.visible_message("[zombie.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
 
 	zombie.add_splatter_floor()
 	zombie.add_splatter_floor()
