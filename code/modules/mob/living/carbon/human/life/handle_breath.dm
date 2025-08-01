@@ -50,6 +50,12 @@
 		losebreath--
 	handle_breath(air_info)
 
+#define OXYGEN_SLOW_ALARM_PERCENT 0.3
+#define OXYGEN_FAST_ALARM_PERCENT 0.1
+
+#define BASE_FREQ_SOUND 44100
+#define MAX_DEVIATION_FREQ 22000
+
 /mob/living/carbon/human/proc/get_breath_from_internal()
 	if(internal)
 		if(istype(buckled,/obj/structure/machinery/optable))
@@ -64,6 +70,25 @@
 			internal = null
 			playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		if(internal)
+			if(internal.pressure < internal.pressure_full/OXYGEN_SLOW_ALARM_PERCENT)
+				if(locate(/obj/item/clothing/head/helmet/space) in contents)
+					var/obj/item/clothing/head/helmet/space/beeper = locate(/obj/item/clothing/head/helmet/space) in contents
+					if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+						var scale = 1 - (internal.pressure / internal.pressure_full)
+						var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+						beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+						beeper.beep_loop.start()
+					else
+						beeper.beep_loop.stop()
+				else if (locate(/obj/item/clothing/head/helmet/marine/pressure) in contents)
+					var/obj/item/clothing/head/helmet/marine/pressure/beeper = locate(/obj/item/clothing/head/helmet/marine/pressure) in contents
+					if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+						var scale = 1 - (internal.pressure / internal.pressure_full)
+						var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+						beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+						beeper.beep_loop.start()
+					else
+						beeper.beep_loop.stop()
 			return internal.take_air()
 	return null
 

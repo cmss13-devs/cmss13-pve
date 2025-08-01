@@ -2837,29 +2837,30 @@ Defined in conflicts.dm of the #defines folder.
 	G.recalculate_attachment_bonuses()
 	G.update_overlays(src, "stock")
 
-/obj/item/attachable/stock/smg/collapsible/siegson
+/obj/item/attachable/stock/smg/collapsible/seegson
 	name = "pan submachinegun folding stock"
 	desc = "The stock, when extended, reduces recoil and improves accuracy, but at a reduction to handling and agility. This stock can collapse in, removing all positive and negative effects."
 	slot = "stock"
 	size_mod = 1
 	icon_state = "sieg_smg_folding"
 	attach_icon = "sieg_smg_folding"
+	stock_activated = FALSE
 
-/obj/item/attachable/stock/smg/collapsible/siegson/apply_on_weapon(obj/item/weapon/gun/gun)
+/obj/item/attachable/stock/smg/collapsible/seegson/apply_on_weapon(obj/item/weapon/gun/gun)
 	if(stock_activated)
 		accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 		recoil_mod = -RECOIL_AMOUNT_TIER_4
 		scatter_mod = -SCATTER_AMOUNT_TIER_8
 		scatter_unwielded_mod = SCATTER_AMOUNT_TIER_10
 		size_mod = 1
-		aim_speed_mod = CONFIG_GET(number/slowdown_low)
+		aim_speed_mod = CONFIG_GET(number/slowdown_med)
 		wield_delay_mod = WIELD_DELAY_FAST
 		movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 		accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_3
 		recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 		hud_offset_mod = 5
-		icon_state = "sieg_smg_folding_on"
-		attach_icon = "sieg_smg_folding_on"
+		icon_state = "sieg_smg_folding_a"
+		attach_icon = "sieg_smg_folding_a"
 
 	else
 		accuracy_mod = 0
@@ -2872,7 +2873,7 @@ Defined in conflicts.dm of the #defines folder.
 		movement_onehanded_acc_penalty_mod = 0
 		accuracy_unwielded_mod = 0
 		recoil_unwielded_mod = 0
-		hud_offset_mod = 3
+		hud_offset_mod = 0
 		icon_state = "sieg_smg_folding"
 		attach_icon = "sieg_smg_folding"
 

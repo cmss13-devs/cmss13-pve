@@ -423,6 +423,8 @@
 				sound = pick('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')
 			if("gun_jam_rack")
 				sound = pick('sound/weapons/handling/gun_jam_rack_1.ogg', 'sound/weapons/handling/gun_jam_rack_2.ogg', 'sound/weapons/handling/gun_jam_rack_3.ogg')
+			if("gun_seig_smg")
+				sound = pick('sound/weapons/sieg_smg_1.ogg', 'sound/weapons/sieg_smg_2.ogg', 'sound/weapons/sieg_smg_3.ogg', 'sound/weapons/sieg_smg_4.ogg')
 			//A:CM gun sounds
 			if("gun_shotgun_tactical")
 				sound = pick('sound/weapons/gun_shotgun_tactical_1.ogg','sound/weapons/gun_shotgun_tactical_2.ogg','sound/weapons/gun_shotgun_tactical_3.ogg','sound/weapons/gun_shotgun_tactical_4.ogg')

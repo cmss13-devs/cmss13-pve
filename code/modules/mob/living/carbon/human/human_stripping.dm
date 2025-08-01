@@ -47,11 +47,20 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
 		return
 
-	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
 
-	//Automatically select tank, maybe manually select later
-	sourcehuman.toggle_internals(user)
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
+		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
 
 
 /datum/strippable_item/mob_item_slot/back
@@ -80,11 +89,21 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 		to_chat(user, SPAN_WARNING("You can't toggle internals of a crit or dead member of another faction!"))
 		return
 
-	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals toggled by [key_name(user)]</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to toggle [key_name(src)]'s' internals</font>")
+	var/list/internal_tanks = sourcehuman.get_contents()
+	for(var/thing in internal_tanks)
+		if(!istype(thing, /obj/item/tank))
+			internal_tanks.Remove(thing)
+		else
+			var/obj/item/tank/is_traditonal_tank = thing
+			if(is_traditonal_tank.ignore_by_auto_toggle)
+				internal_tanks.Remove(is_traditonal_tank)
 
-	//Automatically select tank, maybe manually select later
-	sourcehuman.toggle_internals(user)
+	var/tank_choice = tgui_input_list(usr, "Choose an internals tank from [sourcehuman]", "ACTIVE TANK: [sourcehuman.internal ? sourcehuman.internal : "NONE"]", internal_tanks	)
+	if(!tank_choice)
+		return
+	var/obj/item/tank/tgui_tank = tank_choice
+	tgui_tank.tgui_interact(user)
+	//sourcehuman.toggle_internals(user, tank_choice)
 
 
 

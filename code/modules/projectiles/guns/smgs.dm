@@ -740,24 +740,33 @@
 	w_class = SIZE_SMALL
 	material_per_repair = 2
 
-/obj/item/weapon/gun/smg/siegson
+/obj/item/weapon/gun/smg/seegson
 
 	name = "\improper pan fed submachinegun"
 	desc = "A pan fed submachinegun with a folding wire stock. Chambered in 9x19mm."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "sieg_smg"
 	item_state = "sieg_smg"
-	fire_sound = "m4a3"
+	fire_sound = "gun_seig_smg"
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/sieg_smg
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
+	random_spawn_chance = 38
+	random_spawn_siderail = list(
+		/obj/item/attachable/flashlight,
+	)
+	random_spawn_under = list(
+		/obj/item/attachable/angledgrip,
+	)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
+		/obj/item/attachable/sling,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/stock/smg/collapsible,
+		/obj/item/attachable/stock/smg/collapsible/seegson,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight,
@@ -772,22 +781,25 @@
 		/obj/item/attachable/gyro,
 	)
 
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible/siegson)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible/seegson, /obj/item/attachable/sling)
 	map_specific_decoration = FALSE
 
-/obj/item/weapon/gun/smg/siegson/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 30, "muzzle_y" = 20,"rail_x" = 14, "rail_y" = 22, "under_x" = 21, "under_y" = 16, "stock_x" = 24, "stock_y" = 15, , "side_rail_x" = 25, "side_rail_y" = 19)
+/obj/item/weapon/gun/smg/seegson/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 23, "rail_y" = 18, "under_x" = 22, "under_y" = 15, "stock_x" = 34, "stock_y" = 6, "side_rail_x" = 25, "side_rail_y" = 19)
 
-/obj/item/weapon/gun/smg/siegson/set_gun_config_values()
+/obj/item/weapon/gun/smg/seegson/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_delay(FIRE_DELAY_TIER_SMG)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_5
-	scatter = SCATTER_AMOUNT_TIER_4
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_3
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
+
+/obj/item/weapon/gun/smg/seegson/ap
+	current_mag = /obj/item/ammo_magazine/sieg_smg/ap

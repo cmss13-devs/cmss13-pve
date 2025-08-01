@@ -304,6 +304,8 @@
 /obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
 	preload = /obj/item/explosive/grenade/custom/incendiary_plus
 
+/obj/item/weapon/gun/launcher/grenade/m92/tmfrag
+	preload = /obj/item/explosive/grenade/high_explosive/impact/tmfrag
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 

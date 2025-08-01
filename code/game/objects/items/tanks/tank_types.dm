@@ -93,7 +93,8 @@
 	partially_empty = TRUE
 
 /obj/item/tank/emergency_oxygen/engi
-	name = "extended-capacity emergency oxygen tank"
+	name = "E-C emergency oxygen tank"
+	desc = "An extended-capacity emergency oxygen tank. Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it."
 	icon_state = "emergency_engi"
 	w_class = SIZE_SMALL
 	volume = 3
@@ -104,7 +105,7 @@
 	partially_empty = TRUE
 
 /obj/item/tank/emergency_oxygen/double
-	name = "Compact oxygen tank"
+	name = "double E-C oxygen tank"
 	desc = "Capable of sustaining a short EVA, but should not be solely depended on."
 	icon_state = "emergency_double"
 	w_class = SIZE_MEDIUM

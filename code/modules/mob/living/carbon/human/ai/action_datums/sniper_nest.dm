@@ -82,6 +82,7 @@
 		/datum/equipment_preset/upp/rifleman/eva_sniper::name = /datum/equipment_preset/upp/rifleman/eva_sniper,
 		/datum/equipment_preset/uscm/private_equipped/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/battlerifle,
 		/datum/equipment_preset/uscm/private_equipped/eva/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/eva/battlerifle,
+		/datum/equipment_preset/other/seegson/standard/battlerifle::name = /datum/equipment_preset/other/seegson/standard/battlerifle,
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
 		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,

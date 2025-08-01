@@ -15,7 +15,7 @@
 	armor_bio = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_LOW
-	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|ALLOWINTERNALS
+	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|ALLOWINTERNALS|BLOCKGASEFFECT
 	flags_inv_hide = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEALLHAIR
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_cold_protection = BODY_FLAG_HEAD
@@ -23,6 +23,20 @@
 	siemens_coefficient = 0.9
 	eye_protection = EYE_PROTECTION_WELDING
 	drag_unequip = TRUE
+	var/datum/looping_sound/eva_oxygen/beep_loop
+
+/obj/item/clothing/head/helmet/space/Initialize()
+	. = ..()
+	beep_loop = new(src)
+
+/obj/item/clothing/head/helmet/space/Destroy()
+	QDEL_NULL(beep_loop)
+	return ..()
+
+/obj/item/clothing/head/helmet/space/unequipped(mob/user, slot)
+	. = ..()
+	if(beep_loop)
+		beep_loop.stop()
 
 /obj/item/clothing/suit/space
 	name = "Space suit"
@@ -35,6 +49,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	allowed = list(/obj/item/device/flashlight,/obj/item/tank/emergency_oxygen,/obj/item/tool/crowbar)
 	slowdown = 2
+	movement_compensation = SLOWDOWN_ARMOR_LOWHEAVY
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -116,14 +131,13 @@
 /obj/item/clothing/suit/space/emergency
 	name = "Emergency SoftSuit™"
 	desc = "An off-brand emergency compression suit made from flexible material and tubing apart from the plastic chestplate, which sits a 16x2 LCD monochrome screen you have to crane your neck to see. Is quite fragile, does not offer protection against high heat, high pressure and sharp objects. Lacks equipment clippings."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
 	icon_state = "softsuit_emergency"
-	icon = 'icons/mob/humans/onmob/spacesuits.dmi'
 	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/spacesuits_onmob.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
 	gas_transfer_coefficient = 0.05
 	permeability_coefficient = 0.04
-	slowdown = 3
 	breach_vulnerability = SPACESUIT_BREACH_CIVILIAN
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
@@ -136,10 +150,6 @@
 	name = "\improper emergency spacesuit and helmet (folded)"
 	desc = "An off-brand emergency spacesuit and helmet, vacuum packed so that they can fit into a backpack. Not a proper substitue for pressure suits like the MK.35, and only protects you from the cold of space. Does not include an oxygen tank."
 	icon = 'icons/obj/items/misc.dmi'
-	item_icons = list(
-		WEAR_R_HAND = 'icons/mob/humans/onmob/spacesuits.dmi',
-		WEAR_L_HAND = 'icons/mob/humans/onmob/spacesuits_onmob.dmi',
-	)
 	icon_state = "spacesuit_bag"
 	w_class = SIZE_MEDIUM
 	garbage = FALSE

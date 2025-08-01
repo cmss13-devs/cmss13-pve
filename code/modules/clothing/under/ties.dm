@@ -1698,6 +1698,9 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/space
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/space
+
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."

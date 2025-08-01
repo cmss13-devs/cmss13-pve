@@ -95,7 +95,7 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Tank", name)
-		ui.keep_open_if_on_same_loc = TRUE
+		ui.keep_open_if_within_distance = 1
 		ui.open()
 
 /obj/item/tank/ui_state(mob/user)
@@ -168,12 +168,22 @@
 				var/mob/living/carbon/human/location = get_atom_on_turf(loc)
 				if(location.internal == src)
 					location.internal = null
-					to_chat(usr, SPAN_NOTICE("You close the tank release valve."))
+					if(location != usr)
+						location.visible_message(SPAN_NOTICE("[usr] closes [src] release valve on [location]."), SPAN_NOTICE("You close the [src] release valve on [location]."), SPAN_NOTICE("You hear a small valve being opened."), max_distance = 2)
+						location.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals, a [src] closed by [key_name(usr)]</font>")
+						usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Has closed [key_name(src)]'s' internals, a [src].</font>")
+					else
+						to_chat(usr, SPAN_NOTICE("You close the [src] release valve."))
 					playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 				else
 					if(location.check_for_oxygen_mask())
 						location.internal = src
-						to_chat(usr, SPAN_NOTICE("You open \the [src]'s valve."))
+						if(location != usr)
+							location.visible_message(SPAN_NOTICE("[usr] opens [src] release valve on [location]."), SPAN_NOTICE("You open the [src] release valve on [location]."), SPAN_NOTICE("You hear a small valve being closed."), max_distance = 2)
+							location.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has had their internals, a [src], opened by [key_name(usr)]</font>")
+							usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Has opened [key_name(src)]'s' internals, a [src].</font>")
+						else
+							to_chat(usr, SPAN_NOTICE("You close the [src] release valve."))
 						playsound(src, 'sound/effects/internals.ogg', 60, TRUE)
 					else
 						to_chat(usr, SPAN_NOTICE("You need something to connect to \the [src]."))

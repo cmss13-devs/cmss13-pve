@@ -138,11 +138,11 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-	add_terrible_rebel_eva_helmet(new_human)
+	add_rebel_eva_helmet(new_human)
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
-	add_terrible_rebel_eva_suit(new_human)
+	add_rebel_eva_suit(new_human)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_WAIST)
 	//limbs

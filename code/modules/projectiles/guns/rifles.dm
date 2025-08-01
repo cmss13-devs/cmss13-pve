@@ -703,6 +703,10 @@
 	starting_attachment_types = list(/obj/item/attachable/angledgrip, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
+/obj/item/weapon/gun/rifle/mar40/tactical/sling_masterkey_shotgun
+	current_mag = /obj/item/ammo_magazine/rifle/mar40/extended
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/shotgun, /obj/item/attachable/sling)
+
 /obj/item/weapon/gun/rifle/mar40/carbine
 	name = "\improper MAR-30 battle carbine"
 	desc = "A cheap, reliable carbine chambered in 8.8x29mm. Commonly found in the hands of criminals or mercenaries."
@@ -803,6 +807,9 @@
 	desc = "A cheap, reliable  chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/bipod, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AUTO_EJECT_CASINGS
+
+/obj/item/weapon/gun/rifle/mar40/lmg/tactical/sling
+	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/sling)
 //-------------------------------------------------------
 //M16 RIFLE
 

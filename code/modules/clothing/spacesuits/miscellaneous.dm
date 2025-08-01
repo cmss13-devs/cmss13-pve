@@ -39,7 +39,7 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS
+	flags_inventory = COVEREYES|COVERMOUTH|NOPRESSUREDMAGE|BLOCKSHARPOBJ|PROTECTFROMWEATHER|BYPASSFORINJECTOR|ALLOWINTERNALS|BLOCKGASEFFECT
 	flags_inv_hide = HIDETOPHAIR
 	flags_atom = FPRINT|CONDUCT|NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
@@ -56,16 +56,24 @@
 	var/can_be_broken = TRUE
 	var/breaking_sound = 'sound/handling/click_2.ogg'
 	var/atom/movable/marine_light/light_holder
-	light
+	var/datum/looping_sound/eva_oxygen/beep_loop
 
+/datum/looping_sound/eva_oxygen
+	start_sound = list('sound/items/eva_oxygen.ogg' = 1)
+	mid_sounds = list('sound/items/eva_oxygen.ogg' = 1)
+	mid_length = 1 SECONDS
+	volume = 10
+	extra_range = 3
 
 /obj/item/clothing/head/helmet/marine/pressure/Initialize()
 	. = ..()
 	update_icon()
 	light_holder = new(src)
+	beep_loop = new(src)
 
 /obj/item/clothing/head/helmet/marine/pressure/Destroy()
 	QDEL_NULL(light_holder)
+	QDEL_NULL(beep_loop)
 	return ..()
 
 /obj/item/clothing/head/helmet/marine/pressure/update_icon()
@@ -130,6 +138,11 @@
 		return
 
 	playsound(loc, breaking_sound, 25, 1)
+
+/obj/item/clothing/head/helmet/marine/pressure/unequipped(mob/user, slot)
+	. = ..()
+	if(beep_loop)
+		beep_loop.stop()
 
 /obj/item/clothing/suit/space/pressure
 	name = "\improper pressure suit"
@@ -244,7 +257,7 @@
 //Delay of long mode with range of short mode
 /obj/item/device/motiondetector/spacesuit
 	detector_mode = MOTION_DETECTOR_LONG
-	detector_range = 8
+	detector_range = 7
 	blip_type = "tracker"
 	idle_sound_volume = 15
 
@@ -332,6 +345,82 @@
 	new /obj/item/clothing/head/helmet/space/pressure(loc)
 	qdel(src)
 
+/obj/item/clothing/head/helmet/marine/pressure/seegson
+	name = "\improper Seegson custom pressure helmet"
+	desc = "A custom manufactured pressure helmet for Seegson private security, or perhaps someone pretending to be them. Gives you the confidence of being backed by the company and their three week long firearm course."
+	item_state = "mercs_helmet"
+	icon_state = "mercs_helmet"
+	helmet_color = null
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	light_color = "#ffff00"
+
+/obj/item/clothing/head/helmet/marine/pressure/seegson/update_icon()
+	. = ..()
+	icon_state = initial(icon_state)
+	item_state = initial(item_state)
+
+/obj/item/clothing/head/helmet/marine/pressure/seegson/scout
+	name = "\improper Seegson light pressure helmet"
+	item_state = "scout_mercs_helmet"
+	icon_state = "scout_mercs_helmet"
+
+/obj/item/clothing/head/helmet/marine/pressure/seegson/heavy
+	name = "\improper Seegson heavy gunner pressure helmet"
+	item_state = "heavy_mercs_helmet"
+	icon_state = "heavy_mercs_helmet"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/suit/space/pressure/seegson
+	name = "\improper Seegson custom pressure suit"
+	desc = "A custom manufactured pressure suit for Seegson private security, or perhaps someone pretending to be them. Gives you the confidence of being backed by the company and their three week long firearm course."
+	item_state = "mercs_suit"
+	icon_state = "mercs_suit"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
+	breach_vulnerability = SPACESUIT_BREACH_COMBAT
+
+/obj/item/clothing/suit/space/pressure/seegson/Initialize()
+	. = ..()
+	MD.iff_signal = FACTION_FREELANCER
+
+/obj/item/clothing/suit/space/pressure/seegson/scout
+	name = "\improper Seegson light pressure suit"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY + 0.35
+	item_state = "scout_mercs_suit"
+	icon_state = "scout_mercs_suit"
+
+/obj/item/clothing/suit/space/pressure/seegson/scout/medic_armband/Initialize()
+	. = ..()
+	var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband/med, /obj/item/clothing/accessory/armband/medgreen, /obj/item/clothing/accessory/armband/hydro))
+	attach_accessory(null, new new_band)
+
+/obj/item/clothing/suit/space/pressure/seegson/scout
+	name = "\improper Seegson light pressure suit"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY + 0.35
+	item_state = "scout_mercs_suit"
+	icon_state = "scout_mercs_suit"
+
+/obj/item/clothing/suit/space/pressure/seegson/scout/engie_armband/Initialize()
+	. = ..()
+	var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband/engine, /obj/item/clothing/accessory/armband/cargo))
+	attach_accessory(null, new new_band)
+
+/obj/item/clothing/suit/space/pressure/seegson/heavy
+	name = "\improper Seegson heavy gunner pressure suit"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	item_state = "heavy_mercs_suit"
+	icon_state = "heavy_mercs_suit"
+
 /obj/item/clothing/head/helmet/marine/pressure/uscm
 	name = "\improper USCM MK.35 pressure helmet"
 	desc = "A heavy space helmet, designed to be coupled with the MK.35 pressure suit utilized by the United States Colonial Marines and a few other American or UA organizations. Feels like you could hotbox in here."
@@ -340,11 +429,10 @@
 	helmet_color = "uscm"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 
 /obj/item/clothing/suit/space/pressure/uscm
 	name = "\improper USCM MK.35 pressure suit"
-	desc = "A heavy, bulky military-grade space suit utilized by the United States Colonial Marines and a few other American or UA organizations."
+	desc = "A heavy, bulky military-grade space suit utilized by the United States Colonial Marines and a few other American or UA organizations. This has a mounting point for the actuation arm of a tracking gun system."
 	item_state = "pressure_uscm"
 	icon_state = "pressure_uscm"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
@@ -392,7 +480,7 @@
 
 /obj/item/clothing/suit/space/pressure/upp
 	name = "\improper UPPAC Sokol-KV2 pressure suit"
-	desc = "A heavy, bulky military-grade space suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations."
+	desc = "A heavy, bulky military-grade space suit utilized by the Union of Progressive Peoples Armed Collective and a few other UPP organizations. This has a mounting point for the actuation arm of a tracking gun system."
 	item_state = "pressure_upp"
 	icon_state = "pressure_upp"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH

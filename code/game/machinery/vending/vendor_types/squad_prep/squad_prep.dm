@@ -830,13 +830,6 @@
 		list("Nutrition Autoinjector", floor(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/nutriment, VENDOR_ITEM_RECOMMENDED),
 
 		list("MEDICAL", -1, null, null),
-		list("Gauze", round(scale * 0), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Ointment", round(scale * 0), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
-		list("Emergency Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
-		list("Bicaridine Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
-		list("Kelotane Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
-		list("Tricordrazine Autoinjector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
-		list("Tramadol Injector", round(scale * 0), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
 		list("Dexalin and Inaprovaline Injector", round(scale * 12), /obj/item/reagent_container/hypospray/autoinjector/dexalin, VENDOR_ITEM_REGULAR),
 
 		list("SUIT REPAIR", -1, null, null),
@@ -847,21 +840,18 @@
 		list("Folded Emergency Spacesuit", round(scale * 12), /obj/item/prop/folded_emergency_spacesuit, VENDOR_ITEM_REGULAR),
 		list("Magnetic Boots", round(scale * 3), /obj/item/clothing/shoes/marine/magboots, VENDOR_ITEM_RECOMMENDED),
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
-		list("M40 MFHS Metal Foam Grenade", round(scale * 4), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
+		list("M40 MFHS Metal Foam Grenade", round(scale * 5), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
 
-		list("WEBBINGS", -1, null, null),
-		list("M3 Pattern Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Magazine Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/mag, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Shotgun Shell Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/shotgun, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern M40 Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/m40, VENDOR_ITEM_REGULAR),
-		list("M3 Pattern Small Pouch Webbing", 0, /obj/item/clothing/accessory/storage/webbing/m3/small, VENDOR_ITEM_REGULAR),
+		list("TOOLBELTS (ATTACH TO SUIT)", -1, null, null),
+		list("M276 Pattern Toolbelt Rig", 2, /obj/item/storage/belt/utility/full, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern Combat Toolbelt Rig", 2, /obj/item/storage/belt/gun/utility/full/minus_pistol, VENDOR_ITEM_REGULAR),
 
 		list("AIR SUPPLY", -1, null, null),
 		list("Breath Mask", round(scale * 5), /obj/item/clothing/mask/breath, VENDOR_ITEM_REGULAR),
 		list("Medium Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/double, VENDOR_ITEM_RECOMMENDED),
 		list("Small Oxygen Tank", round(scale * 4), /obj/item/tank/emergency_oxygen/engi, VENDOR_ITEM_REGULAR),
 		list("Emergency Oxygen Tank", round(scale * 10), /obj/item/tank/emergency_oxygen, VENDOR_ITEM_REGULAR),
-		list("Jetpack (Oxygen Internals)", round(scale * 2), /obj/item/tank/jetpack/oxygen, VENDOR_ITEM_REGULAR),
+//		list("Jetpack (Oxygen Internals)", round(scale * 2), /obj/item/tank/jetpack/oxygen, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 2), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
@@ -869,7 +859,6 @@
 		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
 		list("M94 Marking Flare Pack", round(scale * 2), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
 		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
-		list("M72A2 HIPF Starshell Grenade Packet", round(scale * 2), /obj/item/storage/box/packet/flare, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
@@ -889,6 +878,8 @@
 		list("Green Armband", round(scale * 12), /obj/item/clothing/accessory/armband/hydro, VENDOR_ITEM_REGULAR),
 		list("White Armband", round(scale * 12), /obj/item/clothing/accessory/armband/med, VENDOR_ITEM_REGULAR),
 		list("White and Green Armband", round(scale * 12), /obj/item/clothing/accessory/armband/medgreen, VENDOR_ITEM_REGULAR),
+		list("Solar Devils Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/devils, VENDOR_ITEM_REGULAR),
+		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------
