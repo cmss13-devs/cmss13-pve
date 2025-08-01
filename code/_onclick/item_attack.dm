@@ -139,7 +139,7 @@
 						return TRUE
 
 					else
-						to_chat(user, SPAN_WARNING("You must be behind your target! Or they must be on the ground!"))
+						to_chat(user, SPAN_WARNING("You must be directly behind your target! Or they must be on the ground!"))
 						return FALSE
 				else
 					to_chat(user, SPAN_WARNING("You need a grab a hold of them to do this!"))
