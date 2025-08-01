@@ -1990,3 +1990,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+/obj/item/clothing/head/helmet/marine/crysis
+	name = "XM27 enhanced-performance armored helmet"
+	desc = "A pinnacle of personal armor technology, this helmet combines cutting-edge protective materials, visors and optical camouflage to provide its wearer with incredible tactical versatility."
+	icon_state = "crysis"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()

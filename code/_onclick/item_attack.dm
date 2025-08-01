@@ -86,6 +86,8 @@
 	add_fingerprint(user)
 
 	var/power = force
+	if(HAS_TRAIT(user, TRAIT_SUPER_STRONG))
+		power = force*2
 	if(user.skills)
 		power = floor(power * (1 + 0.25 * user.skills.get_skill_level(SKILL_MELEE_WEAPONS))) //25% bonus per melee level
 	if(!ishuman(M))
@@ -110,6 +112,10 @@
 			if("fire")
 				M.apply_damage(power,BURN)
 				to_chat(M, SPAN_WARNING("It burns!"))
+		if(HAS_TRAIT(user, TRAIT_SUPER_STRONG && !edge || !sharp && living_mob.mob_size < MOB_SIZE_BIG))
+			var/direction = get_dir(user, M)
+			var/turf/target_destination = get_ranged_target_turf(target, direction, rand(1, 3))
+			M.throw_atom(target_destination, distance, speed, src, spin = TRUE, end_throw_callbacks = end_throw_callbacks)
 		if(power > 5)
 			M.last_damage_data = create_cause_data(initial(name), user)
 			user.track_hit(initial(name))

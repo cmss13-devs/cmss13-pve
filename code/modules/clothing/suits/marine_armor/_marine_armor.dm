@@ -1047,3 +1047,178 @@
 	if(prob(50))
 		var/obj/item/clothing/accessory/pads/neckguard/neck = new()
 		attach_accessory(null, neck, TRUE)
+
+/obj/item/clothing/suit/marine/crysis
+	name = "XM27 enhanced-performance armored suit"
+	desc = "A pinnacle of personal armor technology, this suit combines cutting-edge protective materials, active exoskeleton and optical camouflage to provide its wearer with incredible tactical versatility."
+	icon_state = "crysis"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
+	specialty = "XM27 enhanced-performance"
+	actions_types = list(/datum/action/item_action/toggle_armor_mode)
+	slowdown = SLOWDOWN_ARMOR_NONE
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	var/current_mode = "armor"
+	var/allow_gun_usage = FALSE
+	var/camo_active
+
+/obj/item/clothing/suit/marine/crysis/proc/update_mode(mode, mob/user)
+	var/mob/living/carbon/human/H = user
+	switch(mode)
+		if("armor")
+			slowdown = SLOWDOWN_ARMOR_MEDIUM
+			armor_melee = CLOTHING_ARMOR_HIGHPLUS
+			armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+			armor_laser = CLOTHING_ARMOR_HIGHPLUS
+			armor_energy = CLOTHING_ARMOR_HIGHPLUS
+			armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+			armor_bio = CLOTHING_ARMOR_HIGHPLUS
+			armor_rad = CLOTHING_ARMOR_HIGHPLUS
+			deactivate_camouflage(user, TRUE, FALSE)
+			REMOVE_TRAIT(user, TRAIT_SUPER_STRONG, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
+		if("strength")
+			slowdown = SLOWDOWN_ARMOR_MEDIUM
+			armor_melee = CLOTHING_ARMOR_MEDIUM
+			armor_bullet = CLOTHING_ARMOR_MEDIUM
+			armor_laser = CLOTHING_ARMOR_MEDIUM
+			armor_energy = CLOTHING_ARMOR_MEDIUM
+			armor_bomb = CLOTHING_ARMOR_MEDIUM
+			armor_bio = CLOTHING_ARMOR_MEDIUM
+			armor_rad = CLOTHING_ARMOR_MEDIUM
+			ADD_TRAIT(user, TRAIT_SUPER_STRONG, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
+			deactivate_camouflage(user, TRUE, FALSE)
+		if("speed")
+			slowdown = -0.5
+			armor_melee = CLOTHING_ARMOR_MEDIUM
+			armor_bullet = CLOTHING_ARMOR_MEDIUM
+			armor_laser = CLOTHING_ARMOR_MEDIUM
+			armor_energy = CLOTHING_ARMOR_MEDIUM
+			armor_bomb = CLOTHING_ARMOR_MEDIUM
+			armor_bio = CLOTHING_ARMOR_MEDIUM
+			armor_rad = CLOTHING_ARMOR_MEDIUM
+			deactivate_camouflage(user, TRUE, FALSE)
+			REMOVE_TRAIT(user, TRAIT_SUPER_STRONG, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
+		if("invisibility")
+			slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
+			armor_melee = CLOTHING_ARMOR_LOW
+			armor_bullet = CLOTHING_ARMOR_LOW
+			armor_laser = CLOTHING_ARMOR_LOW
+			armor_energy = CLOTHING_ARMOR_LOW
+			armor_bomb = CLOTHING_ARMOR_LOW
+			armor_bio = CLOTHING_ARMOR_LOW
+			armor_rad = CLOTHING_ARMOR_LOW
+			camouflage(user)
+			REMOVE_TRAIT(user, TRAIT_SUPER_STRONG, TRAIT_SOURCE_EQUIPMENT(WEAR_JACKET))
+	if(istype(H.head, /obj/item/clothing/head/helmet/marine/crysis))
+		var/obj/item/clothing/head/helmet/marine/crysis/helmet = H.head
+		helmet.armor_melee = armor_melee
+		helmet.armor_bullet = armor_bullet
+		helmet.armor_laser = armor_laser
+		helmet.armor_energy = armor_energy
+		helmet.armor_bomb = armor_bomb
+		helmet.armor_bio = armor_bio
+		helmet.armor_rad = armor_rad
+	user.update_inv_wear_suit()
+	user.update_inv_head()
+
+/obj/item/clothing/suit/marine/crysis/proc/cloak_grenade_callback(mob/user)
+	SIGNAL_HANDLER
+	var/mob/wearer = loc
+	deactivate_camouflage(wearer, TRUE, TRUE)
+
+/obj/item/clothing/suit/marine/crysis/proc/camouflage(mob/user)
+	var/mob/living/carbon/human/H = user
+	RegisterSignal(H, COMSIG_GRENADE_PRE_PRIME, PROC_REF(cloak_grenade_callback))
+	RegisterSignal(H, COMSIG_HUMAN_EXTINGUISH, PROC_REF(wrapper_fizzle_camouflage))
+	RegisterSignal(H, COMSIG_MOB_EFFECT_CLOAK_CANCEL, PROC_REF(deactivate_camouflage))
+
+	ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+	H.visible_message(SPAN_DANGER("[H] vanishes into thin air!"), SPAN_NOTICE("You activate your cloak's camouflage."), max_distance = 4)
+	playsound(H.loc, 'sound/effects/cloak_scout_on.ogg', 15, TRUE)
+	H.unset_interaction()
+
+	H.alpha = 10
+	H.FF_hit_evade = 1000
+	H.allow_gun_usage = allow_gun_usage
+
+	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
+	SA.remove_from_hud(H)
+
+/obj/item/clothing/suit/marine/crysis/proc/wrapper_fizzle_camouflage()
+	SIGNAL_HANDLER
+	var/mob/wearer = src.loc
+	wearer.visible_message(SPAN_DANGER("[wearer]'s camouflage fizzles out!"), SPAN_DANGER("Your camouflage fizzles out!"))
+	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
+	sparks.set_up(5, 4, src)
+	sparks.start()
+	deactivate_camouflage(wearer, TRUE, TRUE)
+
+/obj/item/clothing/suit/marine/crysis/proc/deactivate_camouflage(mob/living/carbon/human/H, anim = TRUE, forced)
+	SIGNAL_HANDLER
+	if(!istype(H))
+		return FALSE
+	if(!HAS_TRAIT(H, TRAIT_CLOAKED))
+		return FALSE
+
+	UnregisterSignal(H, list(
+	COMSIG_GRENADE_PRE_PRIME,
+	COMSIG_HUMAN_EXTINGUISH,
+	COMSIG_MOB_EFFECT_CLOAK_CANCEL,
+	))
+
+	REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+	H.visible_message(SPAN_DANGER("[H] shimmers into existence!"), SPAN_WARNING("Your camouflage has deactivated!"), max_distance = 4)
+	playsound(H.loc, 'sound/effects/cloak_scout_off.ogg', 15, TRUE)
+
+	H.alpha = initial(H.alpha)
+	H.FF_hit_evade = initial(H.FF_hit_evade)
+
+	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
+	SA.add_to_hud(H)
+
+	if(anim)
+		anim(H.loc, H,'icons/mob/mob.dmi', null, "uncloak", null, H.dir)
+
+	addtimer(CALLBACK(src, PROC_REF(allow_shooting), H), 1.5 SECONDS)
+
+/obj/item/clothing/suit/marine/crysis/proc/allow_shooting(mob/living/carbon/human/H)
+	if(camo_active && !allow_gun_usage)
+		return
+	H.allow_gun_usage = TRUE
+
+/datum/action/item_action/toggle_armor_mode/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle Mode"
+	action_icon_state = "crysis_armor"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/toggle_armor_mode/action_activate()
+	. = ..()
+	var/mob/living/carbon/human/H = usr
+	var/obj/item/clothing/suit/marine/crysis/suit = holder_item
+	var/list/choices = list("armor" = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_armor"), "strength"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_strength"), "invisibility"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_invisibility"), "speed"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_speed"))
+	var/choice = show_radial_menu(usr, usr, choices, require_near = TRUE)
+	if(choice == "invisibility" && !istype(H.head, /obj/item/clothing/head/helmet/marine/crysis))
+		to_chat(usr, SPAN_WARNING("Unable to engage cloak mode without a helmet.")
+		choice = "armor"
+	if(!choice)
+		choice = "armor"
+	suit.current_mode = choice
+	if(choice == "invisibility")
+		to_chat(usr, SPAN_NOTICE("Cloak engaged.")
+		playsound_client(H.client, 'sound/voice/cloak_engaged.ogg')
+	else
+		to_chat(usr, SPAN_NOTICE("Maximum [suit.current_mode].")
+	suit.update_mode(suit.current_mode, usr)
+	action_icon_state = "crysis_[suit.current_mode]"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
