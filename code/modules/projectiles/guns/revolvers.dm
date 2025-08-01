@@ -773,7 +773,7 @@
 
 /obj/item/weapon/gun/revolver/rmr6
 	name = "\improper RMR-6 revolver"
-	desc = "TBA"
+	desc = "Revolver Manuhrin model 6 a rather more interesting design by Manuhrin the only one who made revolvers. This one is used by both military and police forces for it's powerful force, versatibility, and tradition. Chambered in .357 magnum."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "rmr6"
 	item_state = "rmr6"

@@ -1511,7 +1511,7 @@
 /obj/item/storage/pouch/machete/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
 
-/obj/item/storage/pouch/machete/fammi/fill_preset_inventory()
+/obj/item/storage/pouch/machete/faami/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete/faami(src)
 
 /obj/item/storage/pouch/etool

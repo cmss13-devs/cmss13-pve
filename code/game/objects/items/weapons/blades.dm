@@ -61,8 +61,8 @@
 	force = MELEE_FORCE_STRONG
 
 /obj/item/weapon/sword/machete/faami
-	name = "\improper CSAM utility machete"
-	desc = "A lesser known utility machete used within military circles, normally around France and it's accompanying regions. As such, it's commonly used by mercenaries from said region."
+	name = "\improper CSAM machete"
+	desc = "A French design made for to slice and cut. Especially heavily designed for cutting down vegetation and combat melee weapon with more power. This particular model is big enough to cut a tree down."
 	icon_state = "csam"
 
 /obj/item/weapon/sword/hefa
@@ -735,4 +735,4 @@
 /obj/item/weapon/knife/marine/faami
 	name = "\improper FMB51 combat knife"
 	icon_state = "knife_fmb51"
-	desc = "A relitively modern combat knife utilised by French Armed Forces and those correlated with them, like the FAAMI PMC group."
+	desc = "A relitively modern combat knife, which whilst failed testing for the French Armed Forces, are commonly used by correlated groups, such as the FAAMI PMC company."

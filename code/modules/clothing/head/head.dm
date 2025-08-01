@@ -451,6 +451,18 @@
 	icon_state = "corrections"
 	item_state = "corrections"
 
+/obj/item/clothing/head/cmcap/kepi
+	name = "french officer's kepi"
+	desc = "An elegant black and red kepi commonly used by french officers within their armed forces. Also seen use by french mercenaries and groups."
+	icon_state = "kepi"
+	item_state = "kepi"
+
+/obj/item/clothing/head/cmcap/kepi/auxiliary
+	name = "field kepi"
+	desc = "A far less elegant green kepi used by french field troops when they cannot afford a decent helmet. They're often also seen use by mercenaries that also cannot afford a helmet."
+	icon_state = "kepi_flap"
+	item_state = "kepi_flap"
+
 //============================//BERETS\\=================================\\
 //=======================================================================\\
 //Berets DO NOT have armor, so they have their own category. PMC caps are helmets, so they're in helmets.dm.

@@ -280,13 +280,13 @@
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/pa76
-	name = "7.62x20mm bullet"
+	name = "7.65x20mm bullet"
 
 	damage = 45 //High damage
 	penetration = -ARMOR_PENETRATION_TIER_2 //Low AP
 
 /datum/ammo/bullet/pistol/pa76/ap
-	name = "7.62x20mm bullet"
+	name = "7.65x20mm bullet"
 
 	damage = 35 //Reduced damage
 	penetration = ARMOR_PENETRATION_TIER_4 //High AP

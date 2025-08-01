@@ -889,7 +889,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 
 /obj/item/weapon/gun/pistol/pa76
 	name = "\improper PA76 pistol"
-	desc = "TBA"
+	desc = "Pistolete automatique model 76, is a French pistol model made from SACM engineering company. A rather bit archaic but reliable pistol that is chambered in 7.65mm longue."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "pa76"
 	item_state = "pa76"
