@@ -577,8 +577,8 @@
 /datum/action/item_action/bomb/activate/action_activate()
 	. = ..()
 	var/mob/living/carbon/human/H = owner
-	H.visible_message(SPAN_DANGER("[H] activates the bomb vest! GET DOWN!"), SPAN_NOTICE("You activate the bomb vest! WITNESS ME!"))
-	playsound(H, 'sound/items/bomb_vest.ogg', 50, 1)
+	H.visible_message(SPAN_ALERTWARNING("[H] activates the bomb vest! GET DOWN!"), SPAN_ALERTWARNING("You activate the bomb vest! WITNESS ME!"))
+	playsound(H, 'sound/items/bomb_vest.ogg', 100, 1)
 	activated = TRUE
 
 	addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 3 SECONDS)
