@@ -401,6 +401,9 @@
 		drain -= 50
 	recalculate_attachment_bonuses()
 
+/obj/item/weapon/gun/smartgun/empty
+	current_mag = null
+
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
 	name = "\improper M56C 'Cavalier' smartgun"

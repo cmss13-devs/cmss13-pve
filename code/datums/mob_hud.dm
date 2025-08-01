@@ -358,17 +358,20 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 /mob/living/carbon/human/med_hud_set_health()
 	var/image/holder = hud_list[HEALTH_HUD]
 	if(stat == DEAD || status_flags & FAKEDEATH)
-		holder.icon_state = "hudhealth-100"
+		holder.icon_state = "hudhealth-200"
 	else
-		var/percentage = round(health*100/species.total_health, 10)
+		var/percentage = round(health*100/species.total_health, 1)
+		var/percentage_in_10 = round(percentage, 10)
 		if(percentage > -1)
-			holder.icon_state = "hudhealth[percentage]"
+			holder.icon_state = "hudhealth[percentage_in_10]" //We have only some 5 states but not all
 		else if(percentage > -49)
 			holder.icon_state = "hudhealth-0"
 		else if(percentage > -99)
 			holder.icon_state = "hudhealth-50"
-		else
+		else if(percentage > -199)
 			holder.icon_state = "hudhealth-100"
+		else
+			holder.icon_state = "hudhealth-200"
 
 
 /mob/proc/med_hud_set_status() //called when mob stat changes, or get a virus/xeno host, etc
