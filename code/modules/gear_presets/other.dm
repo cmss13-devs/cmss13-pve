@@ -1025,7 +1025,7 @@
 	prefix = "SEG"
 	paygrade = PAY_SHORT_SEG
 /datum/equipment_preset/other/seegson/standard
-	name = "Seegson Private Security (SMG)"
+	name = "Seegson Private Security (SMG, EVA)"
 	skills = /datum/skills/private_sec
 	assignment = "Seegson Private Security"
 	paygrades = list(PAY_SHORT_SEG = JOB_PLAYTIME_TIER_0)
@@ -1101,7 +1101,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/standard/battlerifle
-	name = "Seegson Private Security (M49A)"
+	name = "Seegson Private Security (M49A, EVA)"
 
 /datum/equipment_preset/other/seegson/standard/battlerifle/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -1173,7 +1173,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/heavy
-	name = "Seegson Private Security (Machine Gun)"
+	name = "Seegson Private Security (Machine Gun, EVA)"
 	skills = /datum/skills/private_sec
 	paygrades = list(PAY_SHORT_SEG = JOB_PLAYTIME_TIER_0)
 
@@ -1235,7 +1235,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/heavy/shotgun/light_buck
-	name = "Seegson Private Security (16G Shotgun)"
+	name = "Seegson Private Security (16G Shotgun, EVA)"
 	skills = /datum/skills/private_sec
 
 /datum/equipment_preset/other/seegson/heavy/shotgun/light_buck/load_gear(mob/living/carbon/human/new_human)
@@ -1288,7 +1288,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/heavy/shotgun
-	name = "Seegson Private Security (Slug Shotgun)"
+	name = "Seegson Private Security (Slug Shotgun, EVA)"
 	skills = /datum/skills/private_sec
 
 /datum/equipment_preset/other/seegson/heavy/shotgun/load_gear(mob/living/carbon/human/new_human)
@@ -1343,7 +1343,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/heavy/grenade
-	name = "Seegson Private Security (BFAB M92-)"
+	name = "Seegson Private Security (BFAB M92-, EVA)"
 	skills = /datum/skills/private_sec
 
 /datum/equipment_preset/other/seegson/heavy/grenade/load_gear(mob/living/carbon/human/new_human)
@@ -1395,7 +1395,7 @@
 	paygrade = PAY_SHORT_SEG_MED
 
 /datum/equipment_preset/other/seegson/standard/support
-	name = "Seegson Private Security (Medic)"
+	name = "Seegson Private Security (Medic, EVA)"
 	skills = /datum/skills/private_sec_support
 	assignment = "Seegson Hazardous Medical Technician"
 	paygrades = list(PAY_SHORT_SEG_MED = JOB_PLAYTIME_TIER_0)
@@ -1467,7 +1467,7 @@
 	paygrade = PAY_SHORT_SEG_TEC
 
 /datum/equipment_preset/other/seegson/standard/support/engineer
-	name = "Seegson Private Security (Engineer)"
+	name = "Seegson Private Security (Engineer, EVA)"
 	skills = /datum/skills/private_sec_support
 	assignment = "Seegson Hazardous Engineering Technician"
 	paygrades = list(PAY_SHORT_SEG_TEC = JOB_PLAYTIME_TIER_0)

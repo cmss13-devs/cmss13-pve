@@ -234,6 +234,9 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/roughneck/eva
+	name = "US Civilian Colonist, Blue-Collar (Roughneck, EVA)"
+
 /datum/equipment_preset/colonist/roughneck/eva/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -256,12 +259,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/cell, WEAR_IN_BELT)
 
 /datum/equipment_preset/colonist/roughneck/eva/japanese
-	name = "TWE Colonist, Blue-Collar (Roughneck)"
+	name = "TWE Colonist, Blue-Collar (Roughneck, EVA)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/colonist/roughneck/eva/spanish
-	name = "LatAm Colonist, Blue-Collar (Roughneck)"
+	name = "LatAm Colonist, Blue-Collar (Roughneck, EVA)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
@@ -576,6 +579,9 @@
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
+/datum/equipment_preset/colonist/doctor/scrubs/eva
+	name = "US Civilian Doctor, EVA."
+
 /datum/equipment_preset/colonist/doctor/scrubs/eva/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -608,12 +614,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
 
 /datum/equipment_preset/colonist/doctor/scrubs/eva/spanish
-	name = "LatAm Civilian Doctor, Scrubs"
+	name = "LatAm Civilian Doctor, EVA"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/doctor/scrubs/eva/japanese
-	name = "TWE Civilian Doctor, Scrubs"
+	name = "TWE Civilian Doctor, EVA"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
 
