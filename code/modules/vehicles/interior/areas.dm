@@ -57,6 +57,10 @@
 	name = "cop-car interior"
 	icon_state = "van"
 
+/area/interior/vehicle/van/armored
+	name = "armored van interior"
+	icon_state = "van"
+
 /area/interior/vehicle/arc
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
