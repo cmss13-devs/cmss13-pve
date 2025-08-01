@@ -340,11 +340,18 @@
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
 
-/obj/item/weapon/gun/rifle/m41aMK1/navy
+/obj/item/weapon/gun/rifle/m41aMK1/navy //m41amk1_navy
 	name = "\improper GUU-71/A pulse rifle"
+	desc = "A variant of the M41A pulse rifle adopted for use by USASF Security Forces personnel and Master-At-Arms. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
+	icon_state = "m41amk1_navy"
+	item_state = "m41amk1_navy"
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+
+/obj/item/weapon/gun/rifle/m41aMK1/navy/tactical
+	name = "\improper GUU-71/B pulse rifle"
 	desc = "A variant of the M41A pulse rifle adopted for use by USASF personnel whose duties take them off ships frequently. Features an integrated 30mm grenade launcher, flash & sound suppressor, and a carry-handle mounted mag-clamp."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
@@ -1340,12 +1347,12 @@
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_9)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	set_burst_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
@@ -1552,9 +1559,39 @@
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
 /obj/item/weapon/gun/rifle/m49a/army
-	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
+	desc = "The M49A battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
+
+/obj/item/weapon/gun/rifle/m49a/forecon
+	name = "\improper M49A2 battle rifle"
+	desc = "An early modification of the M49A marksman rifle, the A2 has a tweaked gas-system and fire-control-group, giving it better cyclic rate and a two round burst-fire mode. Fielded almost exclusively by FORECON units in the USCM. This one is painted in a fresh coat of the newer Humbrol 76 camouflage."
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/extended_barrel, /obj/item/attachable/verticalgrip)
+	map_specific_decoration = FALSE
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
+	)
+
+/obj/item/weapon/gun/rifle/m49a/forecon/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_8)
+
+/obj/item/weapon/gun/rifle/m49a/forecon/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m49a_barrel/forecon/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
+	if(old_barrel)
+		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
+		qdel(old_barrel)
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
 
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m49a/pve

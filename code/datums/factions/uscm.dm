@@ -34,6 +34,16 @@
 			if(JOB_MARINE_RAIDER_SL) marine_rk = "soctl"
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
 			if(JOB_SQUAD_TECH) marine_rk = "tech"
+
+			if(JOB_FORECON_SL) marine_rk = "leader"
+			if(JOB_FORECON_SNIPER) marine_rk = "spec"
+			if(JOB_FORECON_SYN) marine_rk = "syn"
+			if(JOB_FORECON_SUPPORT) marine_rk = "tech"
+			if(JOB_FORECON_SMARTGUNNER) marine_rk = "gun"
+			if(JOB_FORECON_MARKSMAN) marine_rk = "ass"
+			if(JOB_FORECON_RIFLEMAN) marine_rk = null
+			if(JOB_FORECON_CO) marine_rk = "co"
+
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
 				if("Platoon") marine_rk = "leader_a"
@@ -220,6 +230,23 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
+			// FORECON surv specific stuff
+			if(JOB_FORECON_SL)
+				marine_rk = "leader"
+			if(JOB_FORECON_SNIPER)
+				marine_rk = "spec"
+			if(JOB_FORECON_SYN)
+				marine_rk = "syn"
+			if(JOB_FORECON_SUPPORT)
+				marine_rk = "tech"
+			if(JOB_FORECON_SMARTGUNNER)
+				marine_rk = "gun"
+			if(JOB_FORECON_MARKSMAN)
+				marine_rk = "ass"
+			if(JOB_FORECON_RIFLEMAN)
+				marine_rk = null
+			if(JOB_FORECON_CO)
+				marine_rk = "co"
 
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
