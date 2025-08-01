@@ -598,6 +598,10 @@
 		if(!auto_fire)
 			STOP_PROCESSING(SSobj, src)
 */
+
+/obj/item/weapon/gun/smartgun/empty
+	current_mag = null
+
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
 	name = "\improper M56C 'Cavalier' smartgun"
