@@ -452,14 +452,14 @@
 	item_state = "corrections"
 
 /obj/item/clothing/head/cmcap/kepi
-	name = "french officer's kepi"
-	desc = "An elegant black and red kepi commonly used by french officers within their armed forces. Also seen use by french mercenaries and groups."
+	name = "french kepi"
+	desc = "An old traditional cap made by from the French military since the 19th century and still used by current French officers as a high old tradition and significance to the French military."
 	icon_state = "kepi"
 	item_state = "kepi"
 
 /obj/item/clothing/head/cmcap/kepi/auxiliary
-	name = "field kepi"
-	desc = "A far less elegant green kepi used by french field troops when they cannot afford a decent helmet. They're often also seen use by mercenaries that also cannot afford a helmet."
+	name = "french expeditionary kepi "
+	desc = "The more comfortable and long range Kepi use either for the desert or jungle. Among favorite for foreign legionaires and other groups in France."
 	icon_state = "kepi_flap"
 	item_state = "kepi_flap"
 
