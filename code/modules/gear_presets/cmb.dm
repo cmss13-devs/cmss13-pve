@@ -76,6 +76,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
 	if(prob(60))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
 	else
@@ -235,6 +236,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e5, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
 	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
@@ -306,6 +308,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
 	..()
 
 //*****************************************************************************************************/

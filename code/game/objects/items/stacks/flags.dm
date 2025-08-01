@@ -325,7 +325,7 @@
 
 /obj/item/flag/plantable/brazil
 	name = "\improper Brazil flag"
-	desc = "The flag of the Brazil. This one looks ready to be planted into the ground."
+	desc = "The flag of Brazil. This one looks ready to be planted into the ground."
 	icon = 'icons/obj/structures/plantable_flag.dmi'
 	icon_state = "flag_brazil"
 	flag_type = /obj/structure/flag/plantable/brazil
@@ -333,6 +333,6 @@
 
 /obj/structure/flag/plantable/brazil
 	name = "\improper Brazil flag"
-	desc = "The flag of the Brazil."
+	desc = "The flag of Brazil."
 	icon_state = "flag_brazil_planted"
 	flag_type = /obj/item/flag/plantable/brazil
