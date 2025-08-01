@@ -394,7 +394,7 @@
 		proportion_is_oxygen = O2STANDARD
 	else if(gas_type == GAS_TYPE_OXYGEN)
 		proportion_is_oxygen = TRUE
-	return list(gas_type, temperature, pressure, proportion_is_oxygen)
+	return list(gas_type, temperature, 0.1, proportion_is_oxygen, pressure)
 
 /area/return_pressure()
 	return pressure

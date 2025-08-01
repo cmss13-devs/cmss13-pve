@@ -20,10 +20,11 @@
 #define ONE_ATMOSPHERE 101.325 //kPa
 
 // Pressure limits.
+#define MIN_BREATH_PRESSURE 16
 #define HAZARD_HIGH_PRESSURE 550 // not used right now
 #define WARNING_HIGH_PRESSURE 325 // not used right now
-#define WARNING_LOW_PRESSURE  70  // This is when the yellow oxygen icon is displayed
-#define HAZARD_LOW_PRESSURE  20  // This is when the red oxygen icon is displayed
+#define WARNING_LOW_PRESSURE  80  // This is when the yellow oxygen icon is displayed
+#define HAZARD_LOW_PRESSURE  50  // This is when the red oxygen icon is displayed
 #define ARMSTRONG_LIMIT 6.25 //assume same as space
 #define R_IDEAL_GAS_EQUATION 8.31 // kPa*L/(K*mol).
 #define STD_BREATH_VOLUME 12 //litres if it matters

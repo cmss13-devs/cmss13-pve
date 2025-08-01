@@ -1444,7 +1444,6 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full/liquid(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BELT)
 	//limbs
 	add_rebel_twe_shoes(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
@@ -1453,7 +1452,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/surgery, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/surgery/roller, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen/engi, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/nutriment, WEAR_IN_R_STORE)

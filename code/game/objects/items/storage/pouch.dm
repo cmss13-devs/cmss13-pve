@@ -690,6 +690,12 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
+/obj/item/storage/pouch/medical/full/surgery/roller/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/roller(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
 	desc = "A heavy pouch containing everything one needs to get themselves back on their feet. Quite the selection."

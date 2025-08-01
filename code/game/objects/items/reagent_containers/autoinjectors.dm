@@ -244,17 +244,17 @@
 /obj/item/reagent_container/hypospray/autoinjector/dexalin
 	name = "stablization autoinjector"
 	chemname = "dexalinp"
+	volume = 60
+	amount_per_transfer_from_this = 20
 	desc = "An autoinjector loaded with 3 uses of Dexalin and Inaprovaline, designed to gradually oxygenate the entire body."
-	amount_per_transfer_from_this = (REAGENTS_OVERDOSE * INJECTOR_PERCENTAGE_OF_OD)*2
-	volume = (REAGENTS_OVERDOSE*2 * INJECTOR_PERCENTAGE_OF_OD) * INJECTOR_USES
 	display_maptext = TRUE
 	maptext_label = "Dx"
 	mixed_chem = TRUE
 
 /obj/item/reagent_container/hypospray/autoinjector/dexalin/Initialize()
 	. = ..()
-	reagents.add_reagent("dexalin", 45)
-	reagents.add_reagent("inaprovaline", 45)
+	reagents.add_reagent("dexalin", 30)
+	reagents.add_reagent("inaprovaline", 30)
 	update_icon()
 
 /obj/item/reagent_container/hypospray/autoinjector/emergency

@@ -2844,7 +2844,12 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 1
 	icon_state = "sieg_smg_folding"
 	attach_icon = "sieg_smg_folding"
-	stock_activated = FALSE
+	stock_activated = TRUE
+
+/obj/item/attachable/stock/smg/collapsible/seegson/Initialize(mapload, ...)
+	. = ..()
+	if(prob(20))
+		stock_activated = FALSE
 
 /obj/item/attachable/stock/smg/collapsible/seegson/apply_on_weapon(obj/item/weapon/gun/gun)
 	if(stock_activated)

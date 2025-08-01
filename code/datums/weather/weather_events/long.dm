@@ -51,7 +51,6 @@
 	name = "GM slow snow"
 	length = INFINITY
 	turf_overlay_icon_state = "msnow"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 0
 
@@ -59,7 +58,6 @@
 	name = "GM medium snow"
 	length = INFINITY
 	turf_overlay_icon_state = "fsnow"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5
 
@@ -67,14 +65,12 @@
 	name = "GM fast snow"
 	length = INFINITY
 	turf_overlay_icon_state = "bsnow"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	lightning_chance = 10
 
 /datum/weather_event/blizzard/infinite/fog
 	name = "GM fog"
 	length = INFINITY
 	turf_overlay_icon_state = "fog"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5
 	turf_overlay_alpha = 200
@@ -83,7 +79,6 @@
 	name = "GM smooth rain"
 	length = INFINITY
 	turf_overlay_icon_state = "rain"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5
 
@@ -91,6 +86,5 @@
 	name = "GM rain drops"
 	length = INFINITY
 	turf_overlay_icon_state = "splash"
-	turf_overlay_icon = 'icons/effects/weather_spacesuit.dmi'
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5

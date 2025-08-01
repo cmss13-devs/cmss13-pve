@@ -24,7 +24,8 @@
 	if(!air_info)
 		var/turf/T = get_turf(loc)
 		if((get_ai_brain() && GLOB.human_ai_breathe_space) || GLOB.all_human_breathe_space)
-			air_info = list("air", T20C, ONE_ATMOSPHERE, O2STANDARD)
+			//list(gas_type, temperature, moles, proportion_is_oxygen, pressure)
+			air_info = list("air", T20C, 0.1, O2STANDARD, ONE_ATMOSPHERE)
 		else
 			air_info = T.return_air()
 
@@ -46,8 +47,6 @@
 					smoke.reagents.reaction(src, INGEST)
 					smoke.reagents.copy_to(src, 10) //I dunno, maybe the reagents enter the blood stream through the lungs?
 					break //If they breathe in the nasty stuff once, no need to continue checking
-	if(losebreath > 0) //lung damage is a little weird, leaving this here
-		losebreath--
 	handle_breath(air_info)
 
 #define OXYGEN_SLOW_ALARM_PERCENT 0.3
@@ -64,33 +63,45 @@
 				return O.anes_tank.return_air()
 			return null
 		if(get_dist(internal.loc, loc) > 1)
+			eva_oxygen_beeping(force_off = TRUE)
 			internal = null
 			playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		if(!(check_for_oxygen_mask()))
+			eva_oxygen_beeping(force_off = TRUE)
 			internal = null
 			playsound(src, 'sound/effects/internals_close.ogg', 60, TRUE)
 		if(internal)
-			if(internal.pressure < internal.pressure_full/OXYGEN_SLOW_ALARM_PERCENT)
-				if(locate(/obj/item/clothing/head/helmet/space) in contents)
-					var/obj/item/clothing/head/helmet/space/beeper = locate(/obj/item/clothing/head/helmet/space) in contents
-					if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
-						var scale = 1 - (internal.pressure / internal.pressure_full)
-						var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
-						beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
-						beeper.beep_loop.start()
-					else
-						beeper.beep_loop.stop()
-				else if (locate(/obj/item/clothing/head/helmet/marine/pressure) in contents)
-					var/obj/item/clothing/head/helmet/marine/pressure/beeper = locate(/obj/item/clothing/head/helmet/marine/pressure) in contents
-					if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
-						var scale = 1 - (internal.pressure / internal.pressure_full)
-						var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
-						beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
-						beeper.beep_loop.start()
-					else
-						beeper.beep_loop.stop()
+			eva_oxygen_beeping()
 			return internal.take_air()
 	return null
+
+/mob/living/carbon/human/proc/eva_oxygen_beeping(force_off = FALSE)
+	if(internal.pressure < internal.pressure_full/OXYGEN_SLOW_ALARM_PERCENT)
+		if(locate(/obj/item/clothing/head/helmet/space) in contents)
+			var/obj/item/clothing/head/helmet/space/beeper = locate(/obj/item/clothing/head/helmet/space) in contents
+			if(force_off)
+				beeper.beep_loop.stop()
+				return
+			if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+				var scale = 1 - (internal.pressure / internal.pressure_full)
+				var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+				beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+				beeper.beep_loop.start()
+			else
+				beeper.beep_loop.stop()
+		else if (locate(/obj/item/clothing/head/helmet/marine/pressure) in contents)
+			var/obj/item/clothing/head/helmet/marine/pressure/beeper = locate(/obj/item/clothing/head/helmet/marine/pressure) in contents
+			if(force_off)
+				beeper.beep_loop.stop()
+				return
+			if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+				var scale = 1 - (internal.pressure / internal.pressure_full)
+				var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+				beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+				beeper.beep_loop.start()
+			else
+				beeper.beep_loop.stop()
+
 
 /// Easier than programming AI to setup their internals
 GLOBAL_VAR_INIT(human_ai_breathe_space, TRUE)
@@ -116,32 +127,36 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 	GLOB.all_human_breathe_space = !GLOB.all_human_breathe_space
 	message_admins("[src] has [GLOB.all_human_breathe_space ? "enabled" : "disabled"] ALL Humans will now ignore the cold and lack of air in space.")
 
+//list(gas_type, temperature, moles, proportion_is_oxygen, pressure)
 /mob/living/carbon/human/proc/handle_breath(list/air_info)
 	oxygen_alert = 0 // so unless no air info is returned (which happens only when gasping or lack of atmosphere) it'll always be 0
 	if(status_flags & GODMODE)
 		return
 	var/oxygen_pressure = air_info[3]*air_info[4]
-	if(losebreath) //lung damage reduces effective oxygen, so you can compensate by being in oxygen rich atmosphere
-		oxygen_pressure = oxygen_pressure*0.2
-	if(!air_info || oxygen_pressure < ARMSTRONG_LIMIT*O2STANDARD)
-		apply_damage(HUMAN_MAX_OXYLOSS, OXY)
-		oxygen_alert = max(oxygen_alert, 1)
-		if(prob(20)) //Gasp per 5 ticks? Sounds about right.
-			spawn emote(pick("gasps for air", "gasps"))
-		return 0
+	var/breath_fail_ratio
+	var/safe_pressure_min = species.breath_pressure // Minimum safe partial pressure of breathable gas in kPa
+	var/datum/internal_organ/lungs =  internal_organs_by_name["lungs"]
+	// Lung damage increases the minimum safe pressure.
+	safe_pressure_min *= 1 + rand(1,5) * (lungs.damage/lungs.min_broken_damage * (reagents.has_reagent("inaprovaline") ? 0.5 : 1))
+	var/inhale_efficiency
+	if(air_info[3] == 0 || air_info[5] == 0) //stop divide by zero runtime
+		inhale_efficiency = 0
+	else
+		inhale_efficiency = ((oxygen_pressure/air_info[3])*air_info[5])/safe_pressure_min
+	// Not enough to breathe
+	if(inhale_efficiency < 1)
+		breath_fail_ratio = 1 - inhale_efficiency
+		if(prob(30*breath_fail_ratio))
+			if(inhale_efficiency < 0.8)
+				emote("gasp")
+			if(prob(20))
+				to_chat(src, SPAN_WARNING("It's hard to breathe..."))
+	else
+		breath_fail_ratio = 0
+	apply_damage(round(HUMAN_MAX_OXYLOSS*breath_fail_ratio, 0.1 ), OXY)
 
-	if(air_info[1] == "air" || air_info[1] == "oxygen")
-		if(oxygen_pressure < HAZARD_LOW_PRESSURE*O2STANDARD)
-			apply_damage(2, OXY)
-			oxygen_alert = max(oxygen_alert, 1)
-			if(prob(20)) //Gasp per 5 ticks? Sounds about right.
-				spawn emote(pick("gasps for air", "gasps"))
-			return 0
-		else if(oxygen_pressure < WARNING_LOW_PRESSURE*O2STANDARD)
-			oxygen_alert = max(oxygen_alert, 0.5)
-			return 0
-		apply_damage(-2 * ((oxygen_pressure) / 100) * (100 / 21), OXY) //21 oxygen_pressure keeps it at original value of 2
-		return 0
+	apply_damage(-2*(max(1, inhale_efficiency-0.3)), OXY) //-2 oxy healing is baseline
+	//return 0
 
 	switch(air_info[1])
 		if(GAS_TYPE_N2O)

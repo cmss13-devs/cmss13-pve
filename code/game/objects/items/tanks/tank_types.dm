@@ -73,10 +73,10 @@
 	w_class = SIZE_TINY
 	force = 4
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-	volume = 1.3 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
+	volume = 25 //Tiny. Real life equivalents only have 21 breaths of oxygen in them. They're EMERGENCY tanks anyway -errorage (dangercon 2011)
 	gas_type = GAS_TYPE_OXYGEN
-	pressure = 3*ONE_ATMOSPHERE
-	pressure_full = 3*ONE_ATMOSPHERE
+	pressure = 10*ONE_ATMOSPHERE
+	pressure_full = 10*ONE_ATMOSPHERE
 
 /obj/item/tank/emergency_oxygen/attack(mob/M as mob, mob/user as mob)
 	. = ..()
@@ -97,9 +97,9 @@
 	desc = "An extended-capacity emergency oxygen tank. Used for emergencies. Contains very little oxygen, so try to conserve it until you actually need it."
 	icon_state = "emergency_engi"
 	w_class = SIZE_SMALL
-	volume = 3
-	pressure = 5*ONE_ATMOSPHERE
-	pressure_full = 5*ONE_ATMOSPHERE
+	volume = 60
+	pressure = 10*ONE_ATMOSPHERE
+	pressure_full = 10*ONE_ATMOSPHERE
 
 /obj/item/tank/emergency_oxygen/engi/empty
 	partially_empty = TRUE
@@ -109,9 +109,9 @@
 	desc = "Capable of sustaining a short EVA, but should not be solely depended on."
 	icon_state = "emergency_double"
 	w_class = SIZE_MEDIUM
-	volume = 7
-	pressure = 5*ONE_ATMOSPHERE
-	pressure_full = 5*ONE_ATMOSPHERE
+	volume = 135
+	pressure = 10*ONE_ATMOSPHERE
+	pressure_full = 10*ONE_ATMOSPHERE
 
 /obj/item/tank/emergency_oxygen/double/empty
 	partially_empty = TRUE

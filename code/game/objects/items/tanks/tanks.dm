@@ -9,9 +9,9 @@
 	flags_equip_slot = SLOT_BACK
 	w_class = SIZE_MEDIUM
 
-	var/pressure_full = ONE_ATMOSPHERE*5
+	var/pressure_full = ONE_ATMOSPHERE*6
 
-	var/pressure = ONE_ATMOSPHERE*5
+	var/pressure = ONE_ATMOSPHERE*6
 	var/gas_type = GAS_TYPE_AIR
 	var/temperature = T20C
 	var/partially_empty = FALSE
@@ -23,12 +23,10 @@
 
 	var/distribute_pressure = ONE_ATMOSPHERE
 	var/integrity = 3
-	var/volume = 50
+	var/volume = 180
 	var/ignore_by_auto_toggle = FALSE
 	var/manipulated_by = null //Used by _onclick/hud/screen_objects.dm internals to determine if someone has messed with our tank or not.
-						//If they have and we haven't scanned it with the PDA or gas analyzer then we might just breath whatever they put in it.
-	//Location of the overlay that gets applied
-	var/overlay_location = 'icons/mob/humans/onmob/belt.dmi'
+	//If they have and we haven't scanned it with the PDA or gas analyzer then we might just breath whatever they put in it.
 	pickup_sound = 'sound/effects/metal_drum_pickup.ogg'
 	drop_sound = 'sound/effects/metal_drum_drop.ogg'
 
@@ -36,8 +34,8 @@
 	. = ..()
 	if(pressure < 100 && loc==user)
 		. += SPAN_DANGER("The meter on \the [src] indicates you are almost out of air!")
-	var/standard_breath_rate = STD_BREATH_VOLUME / 10 // Air taken every cycle
-	var/air_removal_rate = initial(distribute_pressure)*standard_breath_rate/(R_IDEAL_GAS_EQUATION*temperature)/5
+	var/standard_breath_rate = STD_BREATH_VOLUME // Air taken every cycle
+	var/air_removal_rate = initial(distribute_pressure)*standard_breath_rate/(R_IDEAL_GAS_EQUATION*temperature)
 	var/moles_in_tank = (pressure_full * src.volume) / (R_IDEAL_GAS_EQUATION * temperature)
 	if(gas_type == GAS_TYPE_AIR)
 		moles_in_tank = moles_in_tank*O2STANDARD
@@ -167,6 +165,7 @@
 			if(istype(get_atom_on_turf(loc),/mob/living/carbon/human))
 				var/mob/living/carbon/human/location = get_atom_on_turf(loc)
 				if(location.internal == src)
+					location.eva_oxygen_beeping(force_off = TRUE)
 					location.internal = null
 					if(location != usr)
 						location.visible_message(SPAN_NOTICE("[usr] closes [src] release valve on [location]."), SPAN_NOTICE("You close the [src] release valve on [location]."), SPAN_NOTICE("You hear a small valve being opened."), max_distance = 2)
@@ -198,13 +197,13 @@
 	return list(gas_type, temperature, pressure, proportion_is_oxygen)
 
 /obj/item/tank/proc/take_air()
-	var/returned_pressure = remove_air_volume()
+	var/returned_moles = remove_air_volume()
 	var/proportion_is_oxygen = 0
 	if(gas_type == GAS_TYPE_AIR)
 		proportion_is_oxygen = O2STANDARD
 	else if(gas_type == GAS_TYPE_OXYGEN)
 		proportion_is_oxygen = TRUE
-	return list(gas_type, temperature, returned_pressure, proportion_is_oxygen)
+	return list(gas_type, temperature, returned_moles, proportion_is_oxygen, distribute_pressure)
 
 /obj/item/tank/return_pressure()
 	return pressure
@@ -215,25 +214,27 @@
 /obj/item/tank/return_gas()
 	return gas_type
 
-/obj/item/tank/proc/remove_air_volume(volume_to_return = STD_BREATH_VOLUME/10)
-
+/obj/item/tank/proc/remove_air_volume(volume_to_return = STD_BREATH_VOLUME)
 	if(pressure < distribute_pressure)
 		distribute_pressure = pressure
 
-	var/removed = distribute_pressure*volume_to_return/(R_IDEAL_GAS_EQUATION*temperature)/5
+	// Calculate actual moles removed using ideal gas law
+	var/removed = distribute_pressure * volume_to_return / (R_IDEAL_GAS_EQUATION * temperature)
 
 	var/volume_litres = src.volume
 
-	// moles in tank
+	// Total moles currently in the tank
 	var/moles_in_tank = (pressure * volume_litres) / (R_IDEAL_GAS_EQUATION * temperature)
-	moles_in_tank -= removed*GLOB.spacesuit_config.oxygen_usage_multiplier // Remove the amount taken out
 
+	// Subtract removed moles, adjusted by spacesuit config multiplier
+	moles_in_tank -= removed * GLOB.spacesuit_config.oxygen_usage_multiplier
 
-	// Recalculate the new pressure
-	pressure = (max(0 , moles_in_tank) * R_IDEAL_GAS_EQUATION * temperature) / volume_litres
+	// Recalculate pressure from new mole count
+	pressure = (max(0, moles_in_tank) * R_IDEAL_GAS_EQUATION * temperature) / volume_litres
 
+	// Return actual moles removed (no arbitrary scaling)
+	return removed
 
-	return removed*10000
 
 /obj/item/tank/Initialize(mapload, ...)
 	. = ..()

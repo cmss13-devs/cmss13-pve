@@ -753,10 +753,20 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 	random_spawn_chance = 38
 	random_spawn_siderail = list(
-		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
 	)
 	random_spawn_under = list(
+		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/verticalgrip,
+	)
+	random_spawn_muzzle = list(
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/bayonet/co2,
 	)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -766,6 +776,8 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/stock/smg/collapsible/seegson,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/lasersight,

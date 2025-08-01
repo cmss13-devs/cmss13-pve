@@ -25,9 +25,11 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
+	item_state_slots = list(
+		WEAR_L_HAND = "atmos_helm",
+		WEAR_R_HAND = "atmos_helm")
 	light_range = 5
 	light_power = 1
-	var/emergency_var_edit_light_boost_in_increments_of_zero_and_a_half = 0
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
 	blood_overlay_type = "helmet"
@@ -107,8 +109,8 @@
 	set_light_power(0)
 	set_light_on(toggle_on)
 	light_holder.set_light_flags(LIGHT_ATTACHED)
-	light_holder.set_light_range(initial(light_range)+(emergency_var_edit_light_boost_in_increments_of_zero_and_a_half))
-	light_holder.set_light_power(initial(light_power)+(emergency_var_edit_light_boost_in_increments_of_zero_and_a_half*0.25))
+	light_holder.set_light_range(initial(light_range))
+	light_holder.set_light_power(initial(light_power))
 	light_holder.set_light_on(light_on)
 	light_holder.set_light_color(light_color)
 
@@ -151,6 +153,9 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
+	item_state_slots = list(
+		WEAR_L_HAND = "atmos_hardsuit",
+		WEAR_R_HAND = "atmos_hardsuit")
 	item_state = "pressure_white"
 	icon_state = "pressure_white"
 	blood_overlay_type = "suit"

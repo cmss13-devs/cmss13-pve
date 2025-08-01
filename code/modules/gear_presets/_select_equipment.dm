@@ -935,7 +935,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 
 /datum/equipment_preset/proc/add_colonist_eva_suit_set(mob/living/carbon/human/new_human)
 	if(!istype(new_human)) return
-	var/random_colour = rand(1,4)
+	var/random_colour = rand(1,6)
 	var/helmetpath
 	var/suitpath
 	switch(random_colour)

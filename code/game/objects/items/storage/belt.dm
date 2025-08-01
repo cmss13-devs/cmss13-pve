@@ -284,6 +284,7 @@
 	new /obj/item/reagent_container/glass/bottle/inaprovaline(src)
 	new /obj/item/reagent_container/glass/bottle/tramadol(src)
 	new /obj/item/reagent_container/glass/bottle/peridaxon(src)
+	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray(src)
 	new /obj/item/reagent_container/syringe(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
