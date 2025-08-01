@@ -49,8 +49,7 @@
 					break //If they breathe in the nasty stuff once, no need to continue checking
 	handle_breath(air_info)
 
-#define OXYGEN_SLOW_ALARM_PERCENT 0.3
-#define OXYGEN_FAST_ALARM_PERCENT 0.1
+#define OXYGEN_SLOW_ALARM_PERCENT 0.15
 
 #define BASE_FREQ_SOUND 44100
 #define MAX_DEVIATION_FREQ 22000
@@ -76,31 +75,30 @@
 	return null
 
 /mob/living/carbon/human/proc/eva_oxygen_beeping(force_off = FALSE)
-	if(internal.pressure < internal.pressure_full/OXYGEN_SLOW_ALARM_PERCENT)
-		if(locate(/obj/item/clothing/head/helmet/space) in contents)
-			var/obj/item/clothing/head/helmet/space/beeper = locate(/obj/item/clothing/head/helmet/space) in contents
-			if(force_off)
-				beeper.beep_loop.stop()
-				return
-			if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
-				var scale = 1 - (internal.pressure / internal.pressure_full)
-				var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
-				beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
-				beeper.beep_loop.start()
-			else
-				beeper.beep_loop.stop()
-		else if (locate(/obj/item/clothing/head/helmet/marine/pressure) in contents)
-			var/obj/item/clothing/head/helmet/marine/pressure/beeper = locate(/obj/item/clothing/head/helmet/marine/pressure) in contents
-			if(force_off)
-				beeper.beep_loop.stop()
-				return
-			if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
-				var scale = 1 - (internal.pressure / internal.pressure_full)
-				var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
-				beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
-				beeper.beep_loop.start()
-			else
-				beeper.beep_loop.stop()
+	if(locate(/obj/item/clothing/head/helmet/space) in contents)
+		var/obj/item/clothing/head/helmet/space/beeper = locate(/obj/item/clothing/head/helmet/space) in contents
+		if(force_off)
+			beeper.beep_loop.stop()
+			return
+		if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+			var scale = 1 - (internal.pressure / internal.pressure_full)
+			var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+			beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+			beeper.beep_loop.start()
+		else
+			beeper.beep_loop.stop()
+	else if (locate(/obj/item/clothing/head/helmet/marine/pressure) in contents)
+		var/obj/item/clothing/head/helmet/marine/pressure/beeper = locate(/obj/item/clothing/head/helmet/marine/pressure) in contents
+		if(force_off)
+			beeper.beep_loop.stop()
+			return
+		if(internal.pressure < internal.pressure_full*OXYGEN_SLOW_ALARM_PERCENT)
+			var scale = 1 - (internal.pressure / internal.pressure_full)
+			var deviation = (scale ** 3) * MAX_DEVIATION_FREQ
+			beeper.beep_loop.vary =	BASE_FREQ_SOUND + deviation
+			beeper.beep_loop.start()
+		else
+			beeper.beep_loop.stop()
 
 
 /// Easier than programming AI to setup their internals
@@ -134,7 +132,7 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 		return
 	var/oxygen_pressure = air_info[3]*air_info[4]
 	var/breath_fail_ratio
-	var/safe_pressure_min = species.breath_pressure // Minimum safe partial pressure of breathable gas in kPa
+	var/safe_pressure_min = species.breath_pressure
 	var/datum/internal_organ/lungs =  internal_organs_by_name["lungs"]
 	// Lung damage increases the minimum safe pressure.
 	safe_pressure_min *= 1 + rand(1,5) * (lungs.damage/lungs.min_broken_damage * (reagents.has_reagent("inaprovaline") ? 0.5 : 1))

@@ -218,21 +218,19 @@
 	if(pressure < distribute_pressure)
 		distribute_pressure = pressure
 
-	// Calculate actual moles removed using ideal gas law
 	var/removed = distribute_pressure * volume_to_return / (R_IDEAL_GAS_EQUATION * temperature)
 
 	var/volume_litres = src.volume
 
-	// Total moles currently in the tank
+	// moles currently in the tank
 	var/moles_in_tank = (pressure * volume_litres) / (R_IDEAL_GAS_EQUATION * temperature)
 
-	// Subtract removed moles, adjusted by spacesuit config multiplier
 	moles_in_tank -= removed * GLOB.spacesuit_config.oxygen_usage_multiplier
 
 	// Recalculate pressure from new mole count
 	pressure = (max(0, moles_in_tank) * R_IDEAL_GAS_EQUATION * temperature) / volume_litres
 
-	// Return actual moles removed (no arbitrary scaling)
+	// legit moles
 	return removed
 
 
