@@ -60,6 +60,11 @@
 	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
 	force = MELEE_FORCE_STRONG
 
+/obj/item/weapon/sword/machete/faami
+	name = "\improper CSAM utility machete"
+	desc = "A lesser known utility machete used within military circles, normally around France and it's accompanying regions. As such, it's commonly used by mercenaries from said region."
+	icon_state = "csam"
+
 /obj/item/weapon/sword/hefa
 	name = "HEFA sword"
 	icon_state = "hefasword"
@@ -726,3 +731,8 @@
 	icon_state = "knife_fairbairn"
 	item_state = "knife_gerber"
 	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
+
+/obj/item/weapon/knife/marine/faami
+	name = "\improper FMB51 combat knife"
+	icon_state = "knife_fmb51"
+	desc = "A relitively modern combat knife utilised by French Armed Forces and those correlated with them, like the FAAMI PMC group."
