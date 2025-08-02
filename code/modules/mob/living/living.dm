@@ -694,9 +694,11 @@
 // legacy procs
 /mob/living/put_in_l_hand(obj/item/W)
 	if(body_position == LYING_DOWN)
-		return
+		if(!(W.flags_item & NODROP))
+			return
 	return ..()
 /mob/living/put_in_r_hand(obj/item/W)
 	if(body_position == LYING_DOWN)
-		return
+		if(!(W.flags_item & NODROP))
+			return
 	return ..()
