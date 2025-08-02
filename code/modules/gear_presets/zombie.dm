@@ -26,6 +26,11 @@
 /datum/equipment_preset/zombie/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species(SPECIES_HUMAN) // Set back, so that we can get our claws again
 	new_human.set_species(SPECIES_ZOMBIE)
+	new_human.zombie_delimb_chance_multi = GLOB.gm_set_zombie_delimb_multi ? GLOB.gm_set_zombie_delimb_multi : null
+	if(GLOB.gm_set_zombie_random_helmet)
+		GLOB.gm_set_zombie_helmet_chance = clamp(GLOB.gm_set_zombie_helmet_chance,0, 100)
+		if(prob(GLOB.gm_set_zombie_helmet_chance))
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/zombie(new_human), WEAR_HEAD)
 
 // Zombies
 /datum/equipment_preset/zombie/generic
@@ -41,7 +46,6 @@
 
 /datum/equipment_preset/zombie/ua_marine
 	name = "Zombie - USCM Marine"
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/ua_marine/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -67,7 +71,6 @@
 
 /datum/equipment_preset/zombie/ua_marine_eva
 	name = "Zombie - USCM EVA Marine"
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/ua_marine_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -92,7 +95,6 @@
 /datum/equipment_preset/zombie/bluecollar
 	name = "Zombie - Blue-Collar"
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/bluecollar/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
@@ -118,7 +120,6 @@
 /datum/equipment_preset/zombie/upp_rifleman
 	name = "Zombie - UPP Squad Rifleman"
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/upp_rifleman/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
@@ -163,7 +164,6 @@
 /datum/equipment_preset/zombie/upp_colonist
 	name = "Zombie - UPP Civilian"
 	idtype = /obj/item/card/id
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/upp_colonist/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -193,7 +193,6 @@
 
 /datum/equipment_preset/zombie/pmc_standard
 	name = "Zombie - PMC"
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/pmc_standard/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -226,7 +225,6 @@
 
 /datum/equipment_preset/zombie/researcher
 	name = "Zombie - Researcher"
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/researcher/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -264,7 +262,6 @@
 
 /datum/equipment_preset/zombie/cmb
 	name = "Zombie - CMB"
-	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/cmb/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"

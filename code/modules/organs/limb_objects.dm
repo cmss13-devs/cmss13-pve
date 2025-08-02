@@ -209,6 +209,14 @@
 	else
 		..()
 
+/obj/item/limb/proc/zombie_clean_up(mob/living/carbon/human/zombie)
+	if(prob(15))
+		src.visible_message("The [src.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
+	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
+	if(prob(35))
+		new /obj/effect/decal/cleanable/blood/gibs/zombie(src.loc)
+	qdel(src)
 
 //synthetic head, allowing brain mob inside to talk
 /obj/item/limb/head/synth
