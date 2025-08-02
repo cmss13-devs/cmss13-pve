@@ -431,6 +431,24 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UACG_OFFICER "Colonial Militiaman Officer"
 
 #define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_LEAD, JOB_UACG_OFFICER)
+
+
+//-------- FAAMI --------//
+#define JOB_FAAMI_RIFLE "FAAMI Rifleman"
+#define JOB_FAAMI_MEDIC "FAAMI Field Medic"
+#define JOB_FAAMI_TECH "FAAMI Field Technician"
+#define JOB_FAAMI_MG "FAAMI Machinegunner"
+#define JOB_FAAMI_TL "FAAMI Team Leader"
+#define JOB_FAAMI_SL "FAAMI Squad Leader"
+#define JOB_FAAMI_LT "FAAMI Field Officer"
+#define JOB_FAAMI_SCOUT "FAAMI Scout"
+#define JOB_FAAMI_CO "FAAMI Commanding Officer"
+#define JOB_FAAMI_SNIPER "FAAMI Marksman"
+#define JOB_FAAMI_ELITE "FAAMI Paratrooper"
+#define JOB_FAAMI_ELITE_SL "FAAMI Squad Lead Paratrooper"
+
+#define FAAMI_JOB_LIST list(JOB_FAAMI_RIFLE, JOB_FAAMI_MEDIC, JOB_FAAMI_TECH, JOB_FAAMI_MG, JOB_FAAMI_SL, JOB_FAAMI_LT, JOB_FAAMI_SCOUT, JOB_FAAMI_CO, JOB_FAAMI_SNIPER, JOP_FAAMI_ELITE, JOB_FAAMI_ELITE_SL)
+
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
 #define JOB_DUTCH_RIFLEMAN "Dutch's Dozen - Rifleman"
