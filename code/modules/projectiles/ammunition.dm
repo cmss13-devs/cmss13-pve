@@ -102,6 +102,9 @@ They're all essentially identical when it comes to getting the job done.
 		log_debug("ERROR CODE R1: negative current_rounds on examine. User: <b>[usr]</b> Magazine: <b>[src]</b>")
 	else
 		. += "[src] has <b>[current_rounds]</b> [description_ammo] out of <b>[max_rounds]</b>."
+		if(!flags_magazine & AMMUNITION_CANT_CHECK_AMMO_TYPE)
+			var/datum/ammo/bullet/bullet = default_ammo
+			. += "It is loaded with [bullet.name]."
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
 	if(flags_magazine & AMMUNITION_REFILLABLE) //actual refillable magazine, not just a handful of bullets or a fuel tank.
@@ -124,11 +127,8 @@ They're all essentially identical when it comes to getting the job done.
 			if(flags_magazine & AMMUNITION_REFILLABLE) //and a refillable magazine
 				var/obj/item/ammo_magazine/handful/transfer_from = I
 				if(src == user.get_inactive_hand() || bypass_hold_check) //It has to be held.
-					if(default_ammo == transfer_from.default_ammo)
-						if(transfer_ammo(transfer_from,user,transfer_from.current_rounds)) // This takes care of the rest.
-							to_chat(user, SPAN_NOTICE("You transfer rounds to [src] from [transfer_from]."))
-					else
-						to_chat(user, SPAN_NOTICE("Those aren't the same rounds. Better not mix them up."))
+					if(transfer_ammo(transfer_from,user,transfer_from.current_rounds)) // This takes care of the rest.
+						to_chat(user, SPAN_NOTICE("You transfer rounds to [src] from [transfer_from]."))
 				else
 					to_chat(user, SPAN_NOTICE("Try holding [src] before you attempt to restock it."))
 
@@ -141,7 +141,11 @@ They're all essentially identical when it comes to getting the job done.
 	if(source.caliber != caliber) //Are they the same caliber?
 		to_chat(user, "The rounds don't match up. Better not mix them up.")
 		return
-
+	if(source.default_ammo != default_ammo && current_rounds)
+		to_chat(user, "The rounds don't match up. Better not mix them up.")
+		return
+	if(current_rounds <= 0)
+		default_ammo = source.default_ammo
 	var/S = min(transfer_amount, max_rounds - current_rounds)
 	source.current_rounds -= S
 	current_rounds += S
@@ -153,7 +157,6 @@ They're all essentially identical when it comes to getting the job done.
 
 	if(!istype(src, /obj/item/ammo_magazine/internal) && !istype(src, /obj/item/ammo_magazine/shotgun) && !istype(source, /obj/item/ammo_magazine/shotgun)) //if we are shotgun or revolver or whatever not using normal mag system
 		playsound(loc, pick('sound/weapons/handling/mag_refill_1.ogg', 'sound/weapons/handling/mag_refill_2.ogg', 'sound/weapons/handling/mag_refill_3.ogg'), 25, 1)
-
 	update_icon(S)
 	return S // We return the number transferred if it was successful.
 
@@ -254,7 +257,7 @@ bullets/shells. ~N
 	current_rounds = 1 // So it doesn't get autofilled for no reason.
 	max_rounds = 5 // For shotguns, though this will be determined by the handful type when generated.
 	flags_atom = FPRINT|CONDUCT
-	flags_magazine = AMMUNITION_HANDFUL
+	flags_magazine = AMMUNITION_HANDFUL | AMMUNITION_CANT_CHECK_AMMO_TYPE
 	flags_human_ai = NONE
 	attack_speed = 3 // should make reloading less painful
 
