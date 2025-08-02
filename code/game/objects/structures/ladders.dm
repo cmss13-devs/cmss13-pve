@@ -284,3 +284,8 @@
 
 /obj/structure/ladder/rope/update_icon()
 	return
+
+/obj/structure/ladder/yautja
+	name = "ladder"
+	desc = "A sturdy metal ladder, made from an unknown metal, adorned with glowing runes."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'

@@ -64,6 +64,9 @@
 	weed_food_states = list("Drone_1","Drone_2","Drone_3")
 	weed_food_states_flipped = list("Drone_1","Drone_2","Drone_3")
 
+	skull = /obj/item/skull/lurker
+	pelt = /obj/item/pelt/lurker
+
 	forced_retarget_time = (2 SECONDS)
 	var/pull_direction
 
