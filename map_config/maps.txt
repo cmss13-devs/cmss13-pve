@@ -93,3 +93,12 @@ endmap
 
 map oread_garrison
 endmap
+
+map jungle_delta
+endmap
+
+map prospector_canyon
+endmap
+
+map arctic_valley
+endmap
