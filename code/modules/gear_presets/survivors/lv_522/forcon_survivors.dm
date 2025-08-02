@@ -142,7 +142,7 @@
 /datum/equipment_preset/survivor/forecon/tech/load_gear(mob/living/carbon/human/new_human)
 	//Back and other stuff we don't want missed
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/big(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
@@ -290,7 +290,7 @@
 	preset_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(preset_human), WEAR_FEET)
 	preset_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/utility_vest(preset_human), WEAR_JACKET)
 	preset_human.equip_to_slot_or_del(new /obj/item/device/motiondetector(preset_human), WEAR_IN_J_STORE)
-	preset_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(preset_human), WEAR_IN_BACK)
+	preset_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(preset_human), WEAR_IN_BACK)
 	preset_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(preset_human), WEAR_IN_BACK)
 	preset_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(preset_human), WEAR_IN_BACK)
 	preset_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(preset_human), WEAR_R_STORE)
