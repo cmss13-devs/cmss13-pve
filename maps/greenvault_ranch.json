@@ -1,0 +1,13 @@
+
+
+{
+    "map_name": "Greenvault Ranch",
+    "map_path": "map_files/Greenvault_Ranch",
+    "map_file": "Greenvault_Ranch.dmm",
+
+    "map_item_type": "/obj/item/map/greenvault_ranch",
+    "weather_holder": "/datum/weather_ss_map_holder/Greenvault_Ranch",
+    "traits": [{ "Ground": true }],
+    "camouflage": "jungle"
+}
+
