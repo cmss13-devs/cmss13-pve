@@ -295,6 +295,17 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
+/obj/item/weapon/gun/launcher/grenade/m92/frag
+	preload = /obj/item/explosive/grenade/high_explosive/frag
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_he
+	preload = /obj/item/explosive/grenade/custom/large/ied_he
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
+	preload = /obj/item/explosive/grenade/custom/incendiary_plus
+
+/obj/item/weapon/gun/launcher/grenade/m92/tmfrag
+	preload = /obj/item/explosive/grenade/high_explosive/impact/tmfrag
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
