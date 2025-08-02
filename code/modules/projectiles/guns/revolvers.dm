@@ -792,7 +792,7 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/flashlight,
-		)
+	)
 
 /obj/item/weapon/gun/revolver/rmr6/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 21, "under_y" = 19, "stock_x" = 24, "stock_y" = 19, "side_rail_x" = 19, "side_rail_y" = 17)
