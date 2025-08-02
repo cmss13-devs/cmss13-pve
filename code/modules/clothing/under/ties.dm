@@ -1392,6 +1392,48 @@
 	icon_state = "usflag"
 	item_state = "usflag"
 
+/obj/item/clothing/accessory/paint/target
+	name = "target armor paint"
+	desc = "A set of paint tones to etch a target sign into a Marine's armor. Wasn't this a store brand at one point?"
+	icon_state = "target"
+	item_state = "target"
+
+/obj/item/clothing/accessory/paint/smiley
+	name = "smiley face armor paint"
+	desc = "A set of paint tones to etch the universal sign of happiness into a Marine's armor."
+	icon_state = "alcohol"
+	item_state = "alcohol"
+
+/obj/item/clothing/accessory/paint/neutral
+	name = "neutral face armor paint"
+	desc = "A set of paint tones to etch indifference into a Marine's armor."
+	icon_state = "verbs"
+	item_state = "verbs"
+
+/obj/item/clothing/accessory/paint/wonderbread
+	name = "wonderbread armor paint"
+	desc = "A set of paint tones to etch the brand logo of Wonderbread into a Marine's armor...wait, what?"
+	icon_state = "wonderbread"
+	item_state = "wonderbread"
+
+/obj/item/clothing/accessory/paint/cross
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a cross into a Marine's armor."
+	icon_state = "cross"
+	item_state = "cross"
+
+/obj/item/clothing/accessory/paint/pandora
+	name = "semicolon three armor paint"
+	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
+	icon_state = "pandora"
+	item_state = "pandora"
+
+/obj/item/clothing/accessory/paint/fire
+	name = "fire armor paint"
+	desc = "A set of paint tones to etch a flames into a Marine's armor."
+	icon_state = "flame"
+	item_state = "flame"
+
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
 	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
