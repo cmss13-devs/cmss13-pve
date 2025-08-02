@@ -706,6 +706,9 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
+/obj/item/weapon/gun/pistol/b92fs/modded
+	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
+
 
 //-------------------------------------------------------
 //DEAGLE //This one is obvious.
