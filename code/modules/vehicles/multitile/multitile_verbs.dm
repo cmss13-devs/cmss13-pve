@@ -261,6 +261,14 @@
 		return
 	T.toggle_gyro(usr)
 
+	var/obj/item/hardpoint/holder/apc_turret/A = null
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		A = AT
+		break
+	if(!A)
+		return
+	A.toggle_gyro(usr)
+
 //single use verb that allows VCs to add a nickname in "" at the end of their vehicle name
 /obj/vehicle/multitile/proc/name_vehicle()
 	set name = "Name Vehicle"
@@ -381,3 +389,4 @@
 			return
 
 	to_chat(user, SPAN_WARNING("Warning. No FPW for [seat] found, tell a dev!"))
+

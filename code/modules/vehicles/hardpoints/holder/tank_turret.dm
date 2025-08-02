@@ -218,3 +218,61 @@
 		target = L
 
 	return ..()
+
+//UPP TURRET
+/obj/item/hardpoint/holder/tank_turret/uppturret
+	name = "\improper VT/CZ 'Condor' Turret"
+	desc = "VT/CZ 'Condor' Turret complex, developed in the Czech Republic with assistance from Austria and Slovakia. Produced as part of the 'A' upgrade package for the Cheetah 2, the VT/CZ follows the familiar philosophy of most UPP equipment: Modularity. Its' ability to mount a wide array of weapon systems both quickly and easily has allowed the vehicle to see wide application from its' intended air-assault role, to indirect fire, anti-air missions and tank hunting."
+
+	icon = 'icons/obj/vehicles/upptank.dmi'
+	icon_state = "tank_turret_0"
+	disp_icon = "tank"
+	disp_icon_state = "tank_turret"
+	activation_sounds = list('sound/weapons/vehicles/smokelauncher_fire.ogg')
+	pixel_x = -48
+	pixel_y = -48
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/uppapc
+	max_clips = 5
+	use_muzzle_flash = FALSE
+
+	// big beefy chonk of metal
+	health = 1500
+	damage_multiplier = 0.05
+
+	accepted_hardpoints = list(
+		// primaries
+		/obj/item/hardpoint/primary/cannon/p17702,
+		/obj/item/hardpoint/primary/cannon/railgun,
+		// secondaries
+		/obj/item/hardpoint/secondary/t60p3m,
+		/obj/item/hardpoint/secondary/hj35launcher/upptank,
+		// support
+		/obj/item/hardpoint/support/flare_launcher/upptank,
+	)
+
+	hdpt_layer = HDPT_LAYER_TURRET
+	px_offsets = list(
+		"1" = list(0, 3),
+		"2" = list(0, 0),
+		"4" = list(0, 0),
+		"8" = list(0, 0)
+	)
+
+/obj/item/hardpoint/holder/tank_turret/uppturret/get_tgui_info()
+	var/list/data = list()
+
+	data += list(list( // turret smokescreen data
+		"name" = "VT/CZ Turret Smoke Screen",
+		"health" = health <= 0 ? null : floor(get_integrity_percent()),
+		"uses_ammo" = TRUE,
+		"current_rounds" = ammo.current_rounds / 2,
+		"max_rounds"= ammo.max_rounds / 2,
+		"mags" = LAZYLEN(backup_clips),
+		"max_mags" = max_clips,
+	))
+
+	for(var/obj/item/hardpoint/H in hardpoints)
+		data += list(H.get_tgui_info())
+
+	return data
