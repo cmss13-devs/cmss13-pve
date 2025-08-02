@@ -444,6 +444,11 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
+/datum/ammo/bullet/rifle/upp/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
 /datum/ammo/bullet/rifle/upp/ap
 	name = "armor-piercing 10x27 bullet"
 	damage = 45
@@ -456,7 +461,7 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
-/datum/ammo/bullet/rifle/upp/heap/mg
+/datum/ammo/bullet/rifle/upp/heap/tracer
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
