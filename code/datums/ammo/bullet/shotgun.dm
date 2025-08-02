@@ -321,13 +321,14 @@
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/special
+	name = "superheavy buckshot shell"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	accurate_range = 8
 	max_range = 8
-	damage = 75
-	penetration = 0
+	damage = 100
 	shell_speed = AMMO_SPEED_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_3
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
@@ -336,6 +337,7 @@
 	accurate_range = 8
 	max_range = 8
 	damage = 100
+	penetration = ARMOR_PENETRATION_TIER_3
 
 //basically the same
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath

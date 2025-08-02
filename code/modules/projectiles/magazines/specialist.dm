@@ -104,6 +104,24 @@
 	default_ammo = /datum/ammo/bullet/sniper/upp
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/sniper/svd
+	ammo_band_icon = "+type88_band"
+	ammo_band_icon_empty = "+type88_band_e"
+
+/obj/item/ammo_magazine/sniper/svd/heap
+	name = "\improper Type-88 HV Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with HV rounds, that provide some additonal force and body armor penetration.."
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+	default_ammo = /datum/ammo/bullet/sniper/upp/heap
+
+/obj/item/ammo_magazine/sniper/svd/flak
+	name = "\improper Type-88 flak Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds, which explode into spall on impact."
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+	default_ammo = /datum/ammo/bullet/sniper/upp/flak
+
+/obj/item/ammo_magazine/sniper/svd/flak/Initialize(mapload, spawn_empty)
+	. = ..()
+	desc = desc + SPAN_WARNING(" Be careful of collateral damage to friendlies caused by the spall.")
 
 /obj/item/ammo_magazine/sniper/svd/pve
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
