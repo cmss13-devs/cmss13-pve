@@ -34,7 +34,7 @@
 
 /obj/item/bodybag/tarp/reactive/scout
 	name = "\improper V3 reactive thermal tarp (folded)"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training."
+	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster."
 	icon_state = "scouttarp_folded"
 	w_class = SIZE_SMALL
 	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive/scout
@@ -83,21 +83,15 @@
 /obj/structure/closet/bodybag/tarp/reactive/scout
 	name = "\improper V3 reactive thermal tarp (folded)"
 	bag_name = "\improper V3 reactive thermal tarp"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
+	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
 	icon_state = "scouttarp_closed"
 	icon_closed = "scouttarp_closed"
 	icon_opened = "scouttarp_open"
 	item_path = /obj/item/bodybag/tarp/reactive/scout
 	cloak_time = 5
-	closed_alpha = 10 //same as scout cloak alpha
+	closed_alpha = 10 //Between scout & ghillie camo alphas
 	exit_stun = 1
 	can_store_dead = TRUE
-
-/obj/structure/closet/bodybag/tarp/reactive/scout/close(mob/user)
-	if(!skillcheck(usr, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && usr.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
-		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
-	. = ..()
 
 /obj/structure/closet/bodybag/tarp/store_mobs(stored_units)//same as stasis bag proc
 	var/list/mobs_can_store = list()
@@ -149,6 +143,7 @@
 		return FALSE
 	. = ..()
 	handle_cloaking()
+
 /obj/structure/broken_apc
 	name = "\improper M577 armored personnel carrier"
 	desc = "A large, armored behemoth capable of ferrying marines around. \nThis one is sitting nonfunctional."
