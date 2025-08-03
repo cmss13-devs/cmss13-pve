@@ -277,7 +277,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 
 /obj/item/storage/firstaid/softpack/regular
-	name = "regular first-aid pack"
+	name = "general first-aid pack"
 	desc = "A soft first-aid pack containing basic medication and equipment for use in the field."
 
 /obj/item/storage/firstaid/softpack/regular/fill_preset_inventory()
@@ -332,7 +332,6 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 
 /obj/item/storage/firstaid/softpack/burn
-
 	name = "burn first-aid pack"
 	desc = "A soft first-aid pack containing equipment for burns treatment in the field."
 	icon_state = "softpack_darkorange"
@@ -347,7 +346,6 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 
 /obj/item/storage/firstaid/softpack/toxin
-
 	name = "toxin first-aid pack"
 	desc = "A soft first-aid pack containing equipment for toxin treatment in the field."
 	icon_state = "softpack_green"
@@ -362,7 +360,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 
 /obj/item/storage/firstaid/softpack/o2
-	name = "oxygen first-aid pack"
+	name = "oxygen deprivation first-aid pack"
 	desc = "A soft first-aid pack containing equipment for reoxygenating treatment in the field."
 	icon_state = "softpack_blue"
 
