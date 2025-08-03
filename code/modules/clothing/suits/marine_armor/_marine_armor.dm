@@ -641,6 +641,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_bodypart_hidden = BODY_FLAG_CHEST
 	min_cold_protection_temperature = HELMET_MIN_COLD_PROT
 	max_heat_protection_temperature = HELMET_MAX_HEAT_PROT
 	blood_overlay_type = "armor"
@@ -927,11 +928,6 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 
-/obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
-	. = ..()
-	var/obj/item/clothing/accessory/pads/greaves/greaves = new()
-	src.attach_accessory(null, greaves, TRUE)
-
 /obj/item/clothing/suit/marine/leader
 	name = "\improper B12 pattern marine armor"
 	desc = "Semi-experimental body armor system similar to M3, incorporating primarily carbon fiber instead of boron carbide. \nDesigned in a lovely olive green, slightly improved protection against blunt impact and biological hazards."
@@ -958,19 +954,24 @@
 //Army & USASF custom-armors\\
 
 /obj/item/clothing/suit/marine/medium/rto/navy
-	name = "\improper M4 pattern shore-deployment armor"
-	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
-	icon_state = "io"
-	slowdown = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
+	name = "\improper M4-N pattern armor"
+	desc = "A set of USASF acquired M4 armor, with slight modifications to better suite ship-side usage. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
+	icon_state = "navy"
+	item_state = "navy"
+	slowdown = SLOWDOWN_ARMOR_LIGHT    //carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-/obj/item/clothing/suit/marine/medium/rto/navy/Initialize(mapload)
+/obj/item/clothing/suit/marine/medium/rto/navy/heavy
+	name = "\improper M4-N pattern shore-deployment armor"
+	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches. Compatible with attachable components of the M3-pattern armor system."
+
+/obj/item/clothing/suit/marine/medium/rto/navy/heavy/Initialize(mapload)
 	. = ..()
-	var/obj/item/clothing/accessory/pads/groin/crotchplate = new()
+	var/obj/item/clothing/accessory/pads/groin/navy/crotchplate = new()
 	src.attach_accessory(null, crotchplate, TRUE)
-	var/obj/item/clothing/accessory/pads/greaves/shinguards = new()
+	var/obj/item/clothing/accessory/pads/greaves/navy/shinguards = new()
 	src.attach_accessory(null, shinguards, TRUE)
-	var/obj/item/clothing/accessory/pads/shoulderpads = new()
+	var/obj/item/clothing/accessory/pads/navy/shoulderpads = new()
 	src.attach_accessory(null, shoulderpads, TRUE)
 
 /obj/item/clothing/suit/marine/medium/rto/army
