@@ -508,8 +508,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/prop/helmetgarb/lucky_feather/blue
 
 /datum/gear/helmet_garb/broken_nvgs
-	display_name = "Night vision goggles, broken"
-	path = /obj/item/prop/helmetgarb/helmet_nvg/cosmetic
+	display_name = "M1 Multispectrum Visor"
+	path = /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/helmet_garb/prescription_bottle
 	display_name = "Prescription bottle"
