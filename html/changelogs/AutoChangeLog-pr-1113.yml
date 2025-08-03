@@ -1,0 +1,5 @@
+author: "SpartanBobby"
+delete-after: True
+changes:
+  - balance: "Changed M42C from AT rifle into a more AVP2010 Accuracte DMR"
+  - balance: "Added more ammo choices for M42C, Basic, flak, incin, HEAP, Overkill (How it used to work)"

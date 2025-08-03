@@ -11,7 +11,6 @@
 	mouse_pointer = 'icons/effects/mouse_pointer/smartgun_mouse.dmi'
 
 	fire_sound = "gun_smartgun"
-	fire_rattle = "gun_smartgun_rattle"
 	reload_sound = 'sound/weapons/handling/gun_sg_reload.ogg'
 	unload_sound = 'sound/weapons/handling/gun_sg_unload.ogg'
 
@@ -20,7 +19,7 @@
 	w_class = SIZE_HUGE
 	force = 20
 	wield_delay = WIELD_DELAY_FAST
-	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
+	aim_slowdown = SLOWDOWN_ADS_SMARTGUN
 	unacidable = 1
 	indestructible = 1
 
@@ -599,6 +598,10 @@
 		if(!auto_fire)
 			STOP_PROCESSING(SSobj, src)
 */
+
+/obj/item/weapon/gun/smartgun/empty
+	current_mag = null
+
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
 	name = "\improper M56C 'Cavalier' smartgun"

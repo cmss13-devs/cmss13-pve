@@ -42,7 +42,7 @@
 		/obj/item/bodybag/cryobag,
 		/obj/item/device/defibrillator,
 		/obj/item/storage/firstaid/adv,
-		/obj/item/device/healthanalyzer,
+		/obj/item/device/healthanalyzer/soul,
 		/obj/item/roller,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,

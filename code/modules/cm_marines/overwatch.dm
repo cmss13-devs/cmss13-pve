@@ -216,7 +216,7 @@
 				if(DEAD)
 					mob_state = "Dead"
 
-			if(mob_state == "Conscious" && (locate(/datum/effects/crit) in marine_human.effects_list))
+			if(mob_state == "Conscious" && ((locate(/datum/effects/crit) in marine_human.effects_list) && !(marine_human.status_flags & CANKNOCKOUT)))
 				mob_state = "Incapacitated"
 
 			if(!marine_has_camera(marine_human))
@@ -659,7 +659,7 @@
 		return TRUE
 	if(istype(marine.wear_l_ear, /obj/item/device/overwatch_camera) || istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 		return TRUE
-	if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
+	if(istype(marine.glasses, /obj/item/clothing/glasses/night))
 		return TRUE
 	return FALSE
 /// returns the overwatch camera the human is wearing
@@ -679,10 +679,10 @@
 			if(istype(marine.wear_r_ear, /obj/item/device/overwatch_camera))
 				cam_gear = marine.wear_r_ear
 				return cam_gear.camera
-			var/obj/item/clothing/glasses/night/m56_goggles/m56_cam
-			if(istype(marine.glasses, /obj/item/clothing/glasses/night/m56_goggles))
-				m56_cam = marine.glasses
-				return m56_cam.camera
+			var/obj/item/clothing/glasses/night/hms_cam
+			if(istype(marine.glasses, /obj/item/clothing/glasses/night))
+				hms_cam = marine.glasses
+				return hms_cam.camera
 
 // Alerts all groundside marines about the incoming OB
 /obj/structure/machinery/computer/overwatch/proc/alert_ob(turf/target)
@@ -949,6 +949,16 @@
 	name = "TOC Overwatch Console"
 	desc = "The Tactical Operations Center overwatch console. Many different screens make up the display."
 	icon = 'icons/obj/structures/machinery/toc.dmi'
+	icon_state = "toc"
+	bound_width = 64
+	bound_height = 32
+	layer = ABOVE_TABLE_LAYER
+	density = TRUE
+
+/obj/structure/machinery/computer/overwatch/upp/toc
+	name = "TOC Overwatch Console"
+	desc = "The Tactical Operations Center overwatch console. Many different screens make up the display."
+	icon = 'icons/obj/structures/machinery/toc_upp.dmi'
 	icon_state = "toc"
 	bound_width = 64
 	bound_height = 32
