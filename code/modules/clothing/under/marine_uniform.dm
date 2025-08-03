@@ -1333,9 +1333,9 @@
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
-/obj/item/clothing/under/marine/veteran/faami
-	name = "\improper faami combat uniform"
-	icon_state = "faami_jumpsuit"
-	item_state = "faami_jumpsuit"
-	desc = "Standard-issue FAAMI uniform, given out to most if not all of their operators in the field.."
+/obj/item/clothing/under/marine/veteran/fil
+	name = "\improper french combat uniform"
+	icon_state = "fil_jumpsuit"
+	item_state = "fil_jumpsuit"
+	desc = "Standard-issue french military uniform, given out to most if not all of their soldiers in the field."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE

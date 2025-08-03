@@ -596,8 +596,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/satchel/rto/merc
 	name = "\improper Mercenary Radio Telephone Pack"
-	networks_receive = list(FACTION_FAAMI)
-	networks_transmit = list(FACTION_FAAMI)
+	networks_receive = list(FACTION_FIL)
+	networks_transmit = list(FACTION_FIL)
 	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/io

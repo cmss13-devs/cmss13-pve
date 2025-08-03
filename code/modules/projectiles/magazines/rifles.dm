@@ -622,7 +622,7 @@
 
 /obj/item/ammo_magazine/rifle/fn107
 	name = "\improper CAMAS61/78 magazine (7.5x28mm)"
-	desc = "An 7.5mm magazine for the CAMAS61/78 Carbine, commonly used by FAAMI and similar groups."
+	desc = "An 7.5mm magazine for the CAMAS61/78 Carbine, commonly used by FIL."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "fn107"
 	item_state = "fn107"
@@ -633,7 +633,7 @@
 
 /obj/item/ammo_magazine/rifle/fn107/commando
 	name = "\improper CAMAS61/78 AP Tracer magazine (7.5x28mm)"
-	desc = "An 7.5mm AP Tracer magazine for the CAMAS61/78 Carbine, commonly used by FAAMI and similar groups."
+	desc = "An 7.5mm AP Tracer magazine for the CAMAS61/78 Carbine, commonly used by FIL."
 	default_ammo = /datum/ammo/bullet/rifle/fn107/commando
 	ammo_band_icon = "+fn107_band"
 	ammo_band_icon_empty = "+fn107_band_e"
@@ -644,7 +644,7 @@
 
 /obj/item/ammo_magazine/rifle/masm
 	name = "\improper MASM55 box magazine (12x30mm)"
-	desc = "A large 12mm box magazine for the MASM55, commonly used by the FAAMI military group."
+	desc = "A large 12mm box magazine for the MASM55, commonly used by the FIL."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "masm"
 	item_state = "masm"
@@ -669,7 +669,7 @@
 
 /obj/item/ammo_magazine/rifle/fpsa/commando
 	name = "\improper FPSA/76 DMR AP Tracer magazine (7.5x50mm)"
-	desc = "A standard caseless AP tracer magazine for the FPSA/76 Pulse DMR, often used by FAAMI special forces."
+	desc = "A standard caseless AP tracer magazine for the FPSA/76 Pulse DMR, often used by FIL special forces."
 	default_ammo = /datum/ammo/bullet/rifle/fpsa/commando
 	ammo_band_icon = "+fpsa_band"
 	ammo_band_icon_empty = "+fpsa_band_e"

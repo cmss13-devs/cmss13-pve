@@ -60,7 +60,7 @@
 	desc = "An older issue USCM machete, never left testing. Designed in the Central African Republic. The notching made it hard to clean, and as such the USCM refused to adopt it - despite the superior bludgeoning power offered. This one has been poorly maintained and as such can't really outperform adopted M2132 machete."
 	force = MELEE_FORCE_STRONG
 
-/obj/item/weapon/sword/machete/faami
+/obj/item/weapon/sword/machete/fil
 	name = "\improper CSAM machete"
 	desc = "A French design made for to slice and cut. Especially heavily designed for cutting down vegetation and combat melee weapon with more power. This particular model is big enough to cut a tree down."
 	icon_state = "csam"
@@ -733,7 +733,7 @@
 	item_state = "knife_gerber"
 	desc = "This isn't for dressing game or performing camp chores. It's for killing men and has done so successfully for a number of centuries. When all else has failed you, this knife will be in your hand, ready to execute its grim task."
 
-/obj/item/weapon/knife/marine/faami
+/obj/item/weapon/knife/marine/fil
 	name = "\improper FMB51 combat knife"
 	icon_state = "knife_fmb51"
-	desc = "A relitively modern combat knife, which whilst failed testing for the French Armed Forces, are commonly used by correlated groups, such as the FAAMI PMC company."
+	desc = "A relitively modern combat knife, which is utilised by French Armed Forces and those correlated to them."

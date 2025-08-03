@@ -1,19 +1,19 @@
-/datum/equipment_preset/faami
-	name = "FAAMI Operator"
-	faction = FACTION_FAAMI
-	rank = JOB_FAAMI_RIFLE
+/datum/equipment_preset/fil
+	name = "FIL Operator"
+	faction = FACTION_FIL
+	rank = JOB_fil_RIFLE
 	idtype = /obj/item/card/id/dogtag
-	faction = FACTION_FAAMI
-	faction_group = list(FACTION_LIST_CONTRACTOR)
+	faction = FACTION_FIL
+	faction_group = list(FACTION_LIST_FIL)
 	languages = list(LANGUAGE_FRENCH, LANGUAGE_ENGLISH)
 	var/human_versus_human = FALSE
-	var/headset_type = /obj/item/device/radio/headset/distress/faami
+	var/headset_type = /obj/item/device/radio/headset/distress/fil
 
-/datum/equipment_preset/faami/New()
+/datum/equipment_preset/fil/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
-/datum/equipment_preset/faami/load_name(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/load_name(mob/living/carbon/human/new_human)
 	new_human.gender = pick(40;MALE,60;FEMALE)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
@@ -48,27 +48,27 @@
 	new_human.g_hair = rand(15,35)
 	new_human.b_hair = rand(25,45)
 
-/datum/equipment_preset/faami/load_id(mob/living/carbon/human/new_human, client/mob_client)
+/datum/equipment_preset/fil/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(human_versus_human)
 		var/obj/item/clothing/under/uniform = new_human.w_uniform
 		if(istype(uniform))
 			uniform.has_sensor = UNIFORM_HAS_SENSORS
-			uniform.sensor_faction = FACTION_FAAMI
+			uniform.sensor_faction = FACTION_FIL
 	return ..()
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman
-	name = "FAAMI Operator"
+/datum/equipment_preset/fil/rifleman
+	name = "FIL Operator"
 	paygrades = list(PAY_SHORT_FA2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Soldat"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Operator"
-	rank = JOB_FAAMI_RIFLE
+	assignment = "FIL Operator"
+	rank = JOB_FIL_RIFLE
 	skills = /datum/skills/pfc/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -78,17 +78,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/m15, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/m15, WEAR_IN_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -98,26 +98,26 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/faami, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/fil, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/auxiliary
-	name = "FAAMI Auxiliary"
+/datum/equipment_preset/fil/rifleman/auxiliary
+	name = "FIL Auxiliary"
 	paygrades = list(PAY_SHORT_FA1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Auxiliary"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Auxiliary Operator"
-	rank = JOB_FAAMI_RIFLE
+	assignment = "FIL Auxiliary Operator"
+	rank = JOB_FIL_RIFLE
 	skills = /datum/skills/pfc
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/auxiliary/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/auxiliary/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -128,10 +128,10 @@
 	if(prob(25))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/green(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown, WEAR_FEET)
@@ -146,17 +146,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/auxiliary/lead
-	name = "FAAMI Auxiliary Lead"
+/datum/equipment_preset/fil/rifleman/auxiliary/lead
+	name = "FIL Auxiliary Lead"
 	paygrades = list(PAY_SHORT_FA3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Auxiliary Lead"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Auxiliary Lead"
-	rank = JOB_FAAMI_RIFLE
+	assignment = "FIL Auxiliary Lead"
+	rank = JOB_FIL_RIFLE
 	skills = /datum/skills/tl
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/auxiliary/lead/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/auxiliary/lead/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -168,11 +168,11 @@
 	if(prob(25))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/green(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown, WEAR_FEET)
@@ -187,17 +187,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/tech
-	name = "FAAMI Field Technician"
+/datum/equipment_preset/fil/rifleman/tech
+	name = "FIL Field Technician"
 	paygrades = list(PAY_SHORT_FA3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Technician"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Field Technician"
-	rank = JOB_FAAMI_TECH
+	assignment = "FIL Field Technician"
+	rank = JOB_FIL_TECH
 	skills = /datum/skills/combat_engineer
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/tech/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/tech/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -207,15 +207,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/med_large_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/med_small_stack, WEAR_IN_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -225,7 +225,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/C4, WEAR_R_STORE)
@@ -233,17 +233,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/medic
-	name = "FAAMI Field Medic"
+/datum/equipment_preset/fil/rifleman/medic
+	name = "FIL Field Medic"
 	paygrades = list(PAY_SHORT_FA3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Field Medic"
-	rank = JOB_FAAMI_MEDIC
+	assignment = "FIL Field Medic"
+	rank = JOB_FIL_MEDIC
 	skills = /datum/skills/combat_medic/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/medic/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/medic/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -255,11 +255,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/compact, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/medhud/no_nvg, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/OMinus, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/OMinus, WEAR_IN_ACCESSORY)
@@ -268,12 +268,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
@@ -285,32 +285,32 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/mg
-	name = "FAAMI Machinegun Operator"
+/datum/equipment_preset/fil/rifleman/mg
+	name = "FIL Machinegun Operator"
 	paygrades = list(PAY_SHORT_FA4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Soldat"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Machinegun Operator"
-	rank = JOB_FAAMI_MG
+	assignment = "FIL Machinegun Operator"
+	rank = JOB_FIL_MG
 	skills = /datum/skills/pfc/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/mg/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/mg/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/masm55, WEAR_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_JACKET)
 	//waist
@@ -321,26 +321,26 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/masm(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/masm(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/faami, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/fil, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/squadlead
-	name = "FAAMI Squad Leader"
+/datum/equipment_preset/fil/rifleman/squadlead
+	name = "FIL Squad Leader"
 	paygrades = list(PAY_SHORT_FA6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SL"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Squad Leader"
-	rank = JOB_FAAMI_SL
+	assignment = "FIL Squad Leader"
+	rank = JOB_FIL_SL
 	skills = /datum/skills/SL
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/squadlead/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/squadlead/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -352,9 +352,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/civ, WEAR_IN_BACK)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/black(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
@@ -362,7 +362,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fpsa, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -372,7 +372,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fpsa(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fpsa(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
@@ -380,17 +380,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/scout
-	name = "FAAMI Scout"
+/datum/equipment_preset/fil/rifleman/scout
+	name = "FIL Scout"
 	paygrades = list(PAY_SHORT_FA4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Scout"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Scout"
-	rank = JOB_FAAMI_SCOUT
+	assignment = "FIL Scout"
+	rank = JOB_FIL_SCOUT
 	skills = /datum/skills/tl/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/scout/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/scout/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -399,17 +399,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/civ, WEAR_IN_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fpsa, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -419,7 +419,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fpsa(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fpsa(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
@@ -428,17 +428,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/scout/radio
-	name = "FAAMI Radioman"
+/datum/equipment_preset/fil/rifleman/scout/radio
+	name = "FIL Radioman"
 	paygrades = list(PAY_SHORT_FA4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Radioman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Radioman"
-	rank = JOB_FAAMI_SCOUT
+	assignment = "FIL Radioman"
+	rank = JOB_FIL_SCOUT
 	skills = /datum/skills/tl/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/scout/radio/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/scout/radio/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -447,17 +447,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/civ, WEAR_IN_BACK)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -467,7 +467,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
@@ -476,17 +476,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/officer
-	name = "FAAMI Officer"
+/datum/equipment_preset/fil/officer
+	name = "FIL Officer"
 	paygrades = list(PAY_SHORT_FO2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Officer"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Officer"
-	rank = JOB_FAAMI_LT
+	assignment = "FIL Officer"
+	rank = JOB_FIL_LT
 	skills = /datum/skills/lt
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/officer/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/officer/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -497,14 +497,14 @@
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -514,7 +514,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/fn107(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
@@ -523,17 +523,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/sniper
-	name = "FAAMI Marksman"
+/datum/equipment_preset/fil/rifleman/sniper
+	name = "FIL Marksman"
 	paygrades = list(PAY_SHORT_FA4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Soldat"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Marksman"
-	rank = JOB_FAAMI_SNIPER
+	assignment = "FIL Marksman"
+	rank = JOB_FIL_SNIPER
 	skills = /datum/skills/pfc/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/sniper/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/sniper/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
@@ -543,10 +543,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/civ, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/facepaint/green, WEAR_IN_BACK)
 	//Head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/faami(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/green(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76, WEAR_IN_ACCESSORY)
@@ -554,7 +554,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/poncho/green, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction/fr2, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
@@ -564,43 +564,43 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction/fr2/ap(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction/fr2/ap(new_human), WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/faami, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/machete/fil, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/commando
-	name = "FAAMI Drop Commando"
+/datum/equipment_preset/fil/rifleman/commando
+	name = "FIL Drop Commando"
 	paygrades = list(PAY_SHORT_FE1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Commando"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Drop Commando"
-	rank = JOB_FAAMI_ELITE
+	assignment = "FIL Drop Commando"
+	rank = JOB_FIL_ELITE
 	skills = /datum/skills/pfc/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/commando/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/commando/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/faami, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/fil, WEAR_BACK)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107/commando, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
@@ -611,7 +611,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
@@ -624,34 +624,34 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/rifleman/commando/sl
-	name = "FAAMI Drop Commando Leader"
+/datum/equipment_preset/fil/rifleman/commando/sl
+	name = "FIL Drop Commando Leader"
 	paygrades = list(PAY_SHORT_FE2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Commando"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Drop Commando Leader"
-	rank = JOB_FAAMI_ELITE_SL
+	assignment = "FIL Drop Commando Leader"
+	rank = JOB_FIL_ELITE_SL
 	skills = /datum/skills/tl/recon
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/rifleman/commando/sl/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/rifleman/commando/sl/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/faami, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/hoverpack/fil, WEAR_BACK)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/sec/hos(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/faami(new_human), WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
 	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/faami(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/rmr6, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/faami/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/light(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/fn107/commando, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
@@ -662,7 +662,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BELT)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/faami, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large, WEAR_R_STORE)
@@ -675,17 +675,17 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/faami/officer/co
-	name = "FAAMI Commander"
+/datum/equipment_preset/fil/officer/co
+	name = "FIL Commander"
 	paygrades = list(PAY_SHORT_FO4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CO"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "FAAMI Commanding Officer"
-	rank = JOB_FAAMI_CO
+	assignment = "FIL Commanding Officer"
+	rank = JOB_FIL_CO
 	skills = /datum/skills/lt
-	faction = FACTION_FAAMI
+	faction = FACTION_FIL
 
-/datum/equipment_preset/faami/officer/co/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/fil/officer/co/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	//back

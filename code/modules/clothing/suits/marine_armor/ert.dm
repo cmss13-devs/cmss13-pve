@@ -229,10 +229,10 @@
 		/obj/item/storage/belt/shotgun/van_bandolier,
 	)
 
-/obj/item/clothing/suit/storage/marine/veteran/faami
+/obj/item/clothing/suit/storage/marine/veteran/fil
 	name = "\improper QT-9 Standard armor"
 	desc = "The standard body armor system of the French Armed Forces. Composed of a shell of hard-wearing weatherproof inflammable polymer, aluminum oxide strike face, and ultra high molecular weight polyethylene backer. Integrated mounting brackets for the LBE system are included. Thermal camouflage patterns have been applied to the polymer shell, though radar absorbing properties are poor."
-	icon_state = "faami"
+	icon_state = "fil"
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_LOW
@@ -267,17 +267,17 @@
 		/obj/item/storage/belt/gun/m39,
 		/obj/item/storage/belt/gun/xm51,
 	)
-	item_state_slots = list(WEAR_JACKET = "faami")
+	item_state_slots = list(WEAR_JACKET = "fil")
 
-/obj/item/clothing/suit/storage/marine/veteran/faami/light
+/obj/item/clothing/suit/storage/marine/veteran/fil/light
 	name = "\improper QT-7 Light armor"
-	icon_state = "faami_aux"
+	icon_state = "fil_aux"
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
-	item_state_slots = list(WEAR_JACKET = "faami_aux")
+	item_state_slots = list(WEAR_JACKET = "fil_aux")
 
 //===========================//U.P.P\\================================\\
 //=====================================================================\\

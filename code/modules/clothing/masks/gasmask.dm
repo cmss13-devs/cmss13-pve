@@ -206,10 +206,10 @@
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
-//--FAAMI--\\
+//--FIL--\\
 
-/obj/item/clothing/mask/gas/pmc/faami
+/obj/item/clothing/mask/gas/pmc/fil
 	name = "\improper ARP F3 gasmask"
 	desc = "The ARP F3 gas mask, often used by the French Armed Forces and French aligned mercenaries."
-	icon_state = "faami_mask"
+	icon_state = "fil_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE

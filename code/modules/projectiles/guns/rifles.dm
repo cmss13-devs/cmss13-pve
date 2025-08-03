@@ -1926,7 +1926,7 @@
 
 /obj/item/weapon/gun/rifle/fn107
 	name = "\improper CAMAS61/78 pulse carbine"
-	desc = "To facilitate newer French military development, the CAMAS61/78 was created by Saint etienne in 2159. This was later modified in 2178 for privatized use. It is quite a well known pulse carbine within military circles, commonly being used by many different mercenary and security groups, notably the FAAMI PMCs for rural combat."
+	desc = "To facilitate newer French military development, the CAMAS61/78 was created by Saint etienne in 2159. This was later modified in 2178 for privatized use. It is quite a well known pulse carbine within military circles, commonly being used by many different mercenary and security groups."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "fn107"
 	item_state = "fn107"
@@ -1981,7 +1981,7 @@
 
 /obj/item/weapon/gun/rifle/masm55
 	name = "\improper MASM55 Medium Machinegun"
-	desc = "Though many groups and factions throughout modern day have switched to either Smartguns or LMGs, the MASM55 is still used for heavy suppression and are commonly found within the hands of Mercenaries such as the FAAMI PMC group. Created by Saint Etienne during 2155 due to the older French MGs were subpar, it has a radiator cooler for more stable fire."
+	desc = "Though many groups and factions throughout modern day have switched to either Smartguns or LMGs, the MASM55 is still used for heavy suppression and are commonly found within the hands of Mercenaries. Created by Saint Etienne during 2155 due to the older French MGs were subpar, it has a radiator cooler for more stable fire."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "masm"
 	item_state = "masm"

@@ -1,6 +1,6 @@
 // Paygrade shorthand defines, to allow clearer designation.
 
-// FAAMI Mercenaries
+// Foreign Interstellar Legion
 
 // ------------- INFANTRY ---------------
 

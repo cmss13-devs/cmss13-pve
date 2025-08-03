@@ -75,7 +75,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define DUT_FREQ 1210
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
-#define FAAMI_FREQ 1219
+#define FIL_FREQ 1219
 #define CMB_FREQ 1220
 #define ASF_FREQ 1224
 #define CIA_FREQ 1225
@@ -157,7 +157,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_YAUTJA = YAUT_FREQ,
 	RADIO_CHANNEL_VAI = VAI_FREQ,
 	RADIO_CHANNEL_CMB = CMB_FREQ,
-	RADIO_CHANNEL_FAAMI = FAAMI_FREQ,
+	RADIO_CHANNEL_FIL = FIL_FREQ,
 	RADIO_CHANNEL_USASF = ASF_FREQ,
 	RADIO_CHANNEL_US_ARMY = ARM_FREQ,
 	RADIO_CHANNEL_UA_GUARD = GRD_FREQ,
@@ -223,7 +223,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 ))
 
 // Response Teams
-#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, FAAMI_FREQ)
+#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, FIL_FREQ)
 
 // UPP Frequencies
 #define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
@@ -293,7 +293,7 @@ SUBSYSTEM_DEF(radio)
 		"[RMC_FREQ]" = "rmcradio",
 		"[CIA_FREQ]" = "ciaradio",
 		"[CMB_FREQ]" = "cmbradio",
-		"[FAAMI_FREQ]" = "opformerc",
+		"[FIL_FREQ]" = "opformerc",
 		"[ASF_FREQ]" = "usasfradio",
 		"[ARM_FREQ]" = "armyradio",
 		"[GRD_FREQ]" = "guardradio",

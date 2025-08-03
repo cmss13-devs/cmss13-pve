@@ -433,21 +433,21 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_LEAD, JOB_UACG_OFFICER)
 
 
-//-------- FAAMI --------//
-#define JOB_FAAMI_RIFLE "FAAMI Rifleman"
-#define JOB_FAAMI_MEDIC "FAAMI Field Medic"
-#define JOB_FAAMI_TECH "FAAMI Field Technician"
-#define JOB_FAAMI_MG "FAAMI Machinegunner"
-#define JOB_FAAMI_TL "FAAMI Team Leader"
-#define JOB_FAAMI_SL "FAAMI Squad Leader"
-#define JOB_FAAMI_LT "FAAMI Field Officer"
-#define JOB_FAAMI_SCOUT "FAAMI Scout"
-#define JOB_FAAMI_CO "FAAMI Commanding Officer"
-#define JOB_FAAMI_SNIPER "FAAMI Marksman"
-#define JOB_FAAMI_ELITE "FAAMI Paratrooper"
-#define JOB_FAAMI_ELITE_SL "FAAMI Squad Lead Paratrooper"
+//------- FIL --------//
+#define JOB_FIL_RIFLE "FIL Rifleman"
+#define JOB_FIL_MEDIC "FIL Field Medic"
+#define JOB_FIL_TECH "FIL Field Technician"
+#define JOB_FIL_MG "FIL Machinegunner"
+#define JOB_FIL_TL "FIL Team Leader"
+#define JOB_FIL_SL "FIL Squad Leader"
+#define JOB_FIL_LT "FIL Field Officer"
+#define JOB_FIL_SCOUT "FIL Scout"
+#define JOB_FIL_CO "FIL Commanding Officer"
+#define JOB_FIL_SNIPER "FIL Marksman"
+#define JOB_FIL_ELITE "FIL Paratrooper"
+#define JOB_FIL_ELITE_SL "FIL Squad Lead Paratrooper"
 
-#define FAAMI_JOB_LIST list(JOB_FAAMI_RIFLE, JOB_FAAMI_MEDIC, JOB_FAAMI_TECH, JOB_FAAMI_MG, JOB_FAAMI_SL, JOB_FAAMI_LT, JOB_FAAMI_SCOUT, JOB_FAAMI_CO, JOB_FAAMI_SNIPER, JOP_FAAMI_ELITE, JOB_FAAMI_ELITE_SL)
+#define FIL_JOB_LIST list(JOB_FIL_RIFLE, JOB_FIL_MEDIC, JOB_FIL_TECH, JOB_FIL_MG, JOB_FIL_SL, JOB_FIL_LT, JOB_FIL_SCOUT, JOB_FIL_CO, JOB_FIL_SNIPER, JOP_FIL_ELITE, JOB_FIL_ELITE_SL)
 
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"

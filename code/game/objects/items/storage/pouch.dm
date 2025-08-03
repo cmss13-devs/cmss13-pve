@@ -1511,8 +1511,8 @@
 /obj/item/storage/pouch/machete/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
 
-/obj/item/storage/pouch/machete/faami/fill_preset_inventory()
-	new /obj/item/weapon/sword/machete/faami(src)
+/obj/item/storage/pouch/machete/fil/fill_preset_inventory()
+	new /obj/item/weapon/sword/machete/fil(src)
 
 /obj/item/storage/pouch/etool
 	name = "Type 50 entrenching tool pouch"

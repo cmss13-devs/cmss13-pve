@@ -5,7 +5,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	":+" = RADIO_CHANNEL_SPECIAL, ".+" = RADIO_CHANNEL_SPECIAL, "#+" = RADIO_CHANNEL_SPECIAL, //activate radio-specific special functions
 
-	":a" = SQUAD_MARINE_1, ".a" = SQUAD_MARINE_1, "#a" = RADIO_CHANNEL_FAAMI,
+	":a" = SQUAD_MARINE_1, ".a" = SQUAD_MARINE_1, "#a" = RADIO_CHANNEL_fil,
 	":b" = SQUAD_MARINE_2, ".b" = SQUAD_MARINE_2, "#b" = RADIO_CHANNEL_CLF_ENGI,
 	":c" = SQUAD_MARINE_3, ".c" = SQUAD_MARINE_3, "#c" = RADIO_CHANNEL_CIA,
 	":d" = SQUAD_MARINE_4, ".d" = SQUAD_MARINE_4, "#d" = RADIO_CHANNEL_CLF_ENGI,

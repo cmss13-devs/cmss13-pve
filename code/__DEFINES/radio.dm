@@ -75,7 +75,7 @@
 #define RADIO_CHANNEL_CMB "CMB"
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
 #define RADIO_CHANNEL_CIA "CIA"
-#define RADIO_CHANNEL_FAAMI "FAAMI"
+#define RADIO_CHANNEL_fil "FIL"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 

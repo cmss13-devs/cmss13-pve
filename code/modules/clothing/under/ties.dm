@@ -481,8 +481,8 @@
 	icon_state = "usaflagpatch"
 
 /obj/item/clothing/accessory/patch/france
-	name = "FAAMI insignia patch"
-	desc = "A fire-resistant shoulder patch, worn by FAAMI Operatives in the field."
+	name = "french insignia patch"
+	desc = "A fire-resistant shoulder patch with the flag of France, an independant nation found on Earth and their minor interstellar colonies."
 	icon_state = "french"
 
 //Ribbons

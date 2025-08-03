@@ -254,9 +254,9 @@
 	volume = 90
 	amount_per_transfer_from_this = 10
 
-/obj/item/hoverpack/faami
+/obj/item/hoverpack/fil
 	name = "IMP-09 jump pack"
-	desc = "The IMP-09 jump pack is an experimental hoverpack used rarely by mercenary and corporate forces for extreme terrain manuvability, most notably the FAAMI PMC group use considerable amounts for their 'Drop Commando' branch."
+	desc = "The IMP-09 jump pack is an experimental hoverpack used by French Foreign International Legion Drop Commandos for infiltration and inner atmosphere para-dropping onto hostile territory."
 
 #undef NO_FUEL
 #undef FUELED

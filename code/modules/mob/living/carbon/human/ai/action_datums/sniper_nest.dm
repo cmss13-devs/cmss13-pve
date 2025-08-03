@@ -81,7 +81,7 @@
 		/datum/equipment_preset/uscm/specialist_equipped/sniper::name = /datum/equipment_preset/uscm/specialist_equipped/sniper,
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
 		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
-		/datum/equipment_preset/faami/rifleman/sniper::name = /datum/equipment_preset/faami/rifleman/sniper,
+		/datum/equipment_preset/fil/rifleman/sniper::name = /datum/equipment_preset/fil/rifleman/sniper,
 	)
 
 	if(!check_rights(R_DEBUG))

@@ -425,7 +425,7 @@
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_UA_GUARD = TRUE, RADIO_CHANNEL_COLONY = TRUE)
 
-/obj/item/device/encryptionkey/faami
-	name = "\improper French FAAMI Radio Encryption Key"
+/obj/item/device/encryptionkey/fil
+	name = "\improper French FIL Radio Encryption Key"
 	icon_state = "stripped_key"
-	channels = list(RADIO_CHANNEL_FAAMI = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+	channels = list(RADIO_CHANNEL_FIL = TRUE, RADIO_CHANNEL_COLONY = TRUE)
