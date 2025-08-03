@@ -303,7 +303,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
 
 /datum/equipment_preset/zombie/canc
-	name = "Zombie CANC"
+	name = "Zombie - CANC"
 	assignment = "Rifleman"
 
 /datum/equipment_preset/zombie/canc/load_gear(mob/living/carbon/human/new_human)
