@@ -378,8 +378,14 @@
 	else
 		overlays += image(src.icon, "hprcase_lid")
 		return
-	if(locate(/obj/item/weapon/gun/rifle/lmg) in src.contents)
-		overlays += image(src.icon, "+hpr")
+	var/obj/item/weapon/gun/rifle/lmg/lmg = locate() in contents
+	if(lmg)
+		overlays += image(src.icon, "+[lmg.base_gun_icon]")
+
+/obj/item/storage/box/guncase/heavy/hpr/recon/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg/recon(src)
+	new /obj/item/ammo_magazine/hpr_box/recon(src)
+	new /obj/item/ammo_magazine/hpr_box/recon(src)
 
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
@@ -784,8 +790,8 @@
 
 
 /obj/item/storage/box/guncase/xm51
-	name = "\improper XM51 breaching scattergun case"
-	desc = "A gun case containing the XM51 Breaching Scattergun. Comes with two spare magazines, two spare shell boxes, an optional stock and a belt to holster the weapon."
+	name = "\improper M1771 shotgun case"
+	desc = "A gun case containing the Model 1771 Cobra Max Tactical shotgun. Comes with two spare magazines, two spare shell boxes, an optional stock and a belt to holster the weapon."
 	storage_slots = 7
 	can_hold = list(/obj/item/weapon/gun/rifle/xm51, /obj/item/ammo_magazine/rifle/xm51, /obj/item/storage/belt/gun/xm51, /obj/item/attachable/stock/xm51)
 
@@ -794,8 +800,8 @@
 	new /obj/item/weapon/gun/rifle/xm51(src)
 	new /obj/item/ammo_magazine/rifle/xm51(src)
 	new /obj/item/ammo_magazine/rifle/xm51(src)
-	new /obj/item/ammo_magazine/shotgun/light/breaching(src)
-	new /obj/item/ammo_magazine/shotgun/light/breaching(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot/light(src)
+	new /obj/item/ammo_magazine/shotgun/buckshot/light(src)
 	new /obj/item/storage/belt/gun/xm51(src)
 
 //Handgun case for Military police vendor three mag , a railflashligh and the handgun.

@@ -1,0 +1,17 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Added a Health Analyzer stylized after the portable ECG in the Aliens(1986) film. The \"health diagnostic equipment\"/HD-E automatically records and can print scan results, makes heart monitor sounds according to the health of the human it is connected to, requires connecting ECG leads like blood bags and is larger."
+  - rscadd: "Replaced the space left by the OG HF2 in first aid kits with medical items related to the kits purpose. Blood bags in Advanced first aid kits. Dermaline injectors in fire first aid kits. Etc"
+  - rscadd: "Add saline bags. The first aid equivalent to blood bags. They very slowly restore blood and reduce toxin damage."
+  - rscadd: "Blood bags can now inject all reagents when connected."
+  - rscadd: "Blood bag IV lines are coloured according to their contents."
+  - rscadd: "Gas masks to most medical vendors."
+  - rscdel: "Most spawns of OG HF2 from regular, not powerful equipment presets."
+  - rscdel: "Spawns of OG HF2 from first aid kits and Nanomeds."
+  - balance: "Reduce spawns of the HD-E in medical item vendors."
+  - ui: "Updated the setting of the health analyser to print the scan readout to be in parity with the TGUI dialog."
+  - ui: "Ported Minimal HUD for health analyser."
+  - soundadd: "Added sounds for the HD-E. Five increments of heart monitor beeping and an oxygen saturation alarm."
+  - imageadd: "Added icons for the HD-E by dimdach. Onmob sprites for various medical stacks and items."
+  - maptweak: "Replace OG HF2 spawns with the HD-E"

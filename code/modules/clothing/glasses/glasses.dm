@@ -668,6 +668,7 @@
 	item_state = "sunglasses"
 	darkness_view = -1
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
+	flags_inv_hide = HIDEEYES
 	eye_protection = EYE_PROTECTION_FLAVOR
 
 /obj/item/clothing/glasses/sunglasses/blindfold
@@ -698,6 +699,12 @@
 	desc = "An expensive pair of BiMex branded, orange-tinted sunglasses. Largely produced for members of the US Army to protect their eyes from dust during range-time, but some pairs find their way onto the private market."
 	icon_state = "bimex_orange"
 	item_state = "bimex_orange"
+
+/obj/item/clothing/glasses/sunglasses/big/classic
+	name = "BiMex classic ballistic sunglasses"
+	desc = "Formerly in limited issue with the USCMC, these sunglasses have a rugged frame and metamaterial lenses. Automatic polarization factor can resist light from sniping lasers to atomic glare, while composite construction defeats splinter impacts and prevents shattering. Old, but never obsolete."
+	icon_state = "bigsunglasses"
+	item_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/sunglasses/aviator
 	name = "aviator shades"
@@ -732,3 +739,11 @@
 	gender = NEUTER
 	desc = "Flash-resistant goggles with inbuilt combat and security information."
 	icon_state = "swatgoggles"
+
+/obj/item/clothing/glasses/canc_monoscope
+	name = "'Yaoguai' monoscope"
+	desc = "A single-tube HUD, developed alongside a line of CANC smartscopes with a miniature processing unit that goes on the back of your head. Most smartscope features can not be used without it."
+	icon_state = "monoscope"
+	item_state = "monoscope"
+	flags_armor_protection = 0
+	flags_equip_slot = SLOT_EYES
