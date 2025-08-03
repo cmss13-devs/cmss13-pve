@@ -17,6 +17,7 @@
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_CMBTAC "Hotel-Baker"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

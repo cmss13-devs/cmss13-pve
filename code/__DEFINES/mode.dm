@@ -264,14 +264,17 @@ DEFINE_BITFIELD(whitelist_status, list(
 //=================================================
 
 // Faction names
+//organized into main, minor, and joke.
 #define FACTION_NEUTRAL "Neutral"
 #define FACTION_MARINE "USCM"
 #define FACTION_ARMY "USA"
 #define FACTION_NAVY "USASF"
-#define FACTION_SURVIVOR "Survivor"
 #define FACTION_UPP "UPP"
 #define FACTION_TWE "TWE"
 #define FACTION_WY "Wey-Yu"
+
+//minor
+#define FACTION_SURVIVOR "Survivor"
 #define FACTION_CLF "CLF"
 #define FACTION_TWE_REBEL "TWE Rebel"
 #define FACTION_UA_REBEL "UA Rebel"
@@ -282,6 +285,8 @@ DEFINE_BITFIELD(whitelist_status, list(
 #define FACTION_WY_DEATHSQUAD "WY Death Squad"
 #define FACTION_MERCENARY "Mercenary"
 #define FACTION_FREELANCER "Freelancer"
+
+//joke
 #define FACTION_HEFA "HEFA Order"
 #define FACTION_DUTCH "Dutch's Dozen"
 #define FACTION_PIRATE "Pirate"

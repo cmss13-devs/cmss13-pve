@@ -1209,7 +1209,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /// Tactical asspack
 /obj/item/storage/backpack/general_belt/cmb
 	name = "CMB buttpack"
-	desc = "A small, lightweight pouch that can be clipped onto Armat Systems M3 Pattern armor to provide additional storage. The newer G8-A model, while uncomfortable, can also be clipped around the waist."
+	desc = "Combat buttpack. Can be worn over the haunches or at the side, rigged to the beltline."
 	max_storage_space = 10
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
@@ -1229,3 +1229,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/general_belt/dropped(mob/user)
 	mouse_opacity = initial(mouse_opacity)
 	..()
+
+//breaching equipment pack
+/obj/item/storage/backpack/satchel/cmb_breacherpack
+	name = "breaching equipment backpack"
+	desc = "Satchel intended to accessibly store equipment intended to break open doors and obstacles. Includes an optional chest-line with quick access pouches."
+	icon_state = "engiepack"
+	max_storage_space = 21
