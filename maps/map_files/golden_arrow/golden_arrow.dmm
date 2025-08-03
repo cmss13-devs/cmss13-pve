@@ -21054,11 +21054,6 @@
 	pixel_x = -9;
 	pixel_y = -3
 	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/small/blue/golden_arrow{
-	pixel_y = -1
-	},
-/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "vPN" = (
