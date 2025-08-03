@@ -24,7 +24,7 @@
 	if(announce)
 		marine_announcement("Abnormal activity detected in the ship power system. As a precaution, power must be shut down for an indefinite duration.", "Critical Power Failure", 'sound/AI/poweroff.ogg')
 
-/proc/power_restore(announce = 1)
+/proc/power_restore(announce = 0)
 	for(var/obj/structure/machinery/power/smes/S in GLOB.machines)
 		if(!is_mainship_level(S.z))
 			continue
@@ -42,7 +42,7 @@
 	if(announce)
 		marine_announcement("Power has been restored. Reason: Unknown.", "Power Systems Nominal", 'sound/AI/poweron.ogg')
 
-/proc/power_restore_quick(announce = 1)
+/proc/power_restore_quick(announce = 0)
 
 	for(var/obj/structure/machinery/power/smes/S in GLOB.machines)
 		if(!is_mainship_level(S.z)) // Ship only
@@ -57,7 +57,7 @@
 	if(announce)
 		marine_announcement("Power has been restored. Reason: Unknown.", "Power Systems Nominal", 'sound/AI/poweron.ogg')
 
-/proc/power_restore_everything(announce = 1)
+/proc/power_restore_everything(announce = 0)
 
 	for(var/obj/structure/machinery/power/smes/S in GLOB.machines)
 		S.charge = S.capacity

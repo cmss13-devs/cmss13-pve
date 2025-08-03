@@ -162,6 +162,10 @@
 	density = TRUE
 	opacity = TRUE
 
+/turf/open/void/vehicle/unopacity
+	density = TRUE
+	opacity = FALSE
+
 /turf/open/void/is_weedable()
 	return NOT_WEEDABLE
 
@@ -941,6 +945,7 @@
 	icon = 'icons/turf/floors/asphalt.dmi'
 	icon_state = "sunbleached_asphalt"
 	baseturfs = /turf/open/asphalt
+	minimap_color = MINIMAP_ROAD
 
 /turf/open/asphalt/tile
 	icon_state = "tile"

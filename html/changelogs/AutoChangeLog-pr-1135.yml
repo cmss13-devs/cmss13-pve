@@ -1,0 +1,8 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "Slight improvement to Type71 ROF"
+  - balance: "Reduced Type71 scatter"
+  - spellcheck: "Formatting text in pkp aka gpmg description to align it with other weapon descriptions"
+  - balance: "Slight improvement to pkp aka gpmg full auto max scatter"
+  - rscadd: "introduced full auto scatter peak to pkp aka gpmg (40 rounds which is x10 default)"

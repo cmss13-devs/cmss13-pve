@@ -379,7 +379,7 @@
 	icon_state = "mpacket"
 	item_state = "zippo"
 	storage_slots = 6
-	can_hold = list()
+	can_hold = list(/obj/item/tool/match)
 	icon_type = "match"
 	default_cigar_type = /obj/item/tool/match/paper
 	w_class = SIZE_TINY
@@ -387,22 +387,24 @@
 	var/burn_chance = 20 //how likely you are to burn yourself once you light it
 	plural = "es"
 
-/obj/item/storage/fancy/cigar/matchbook/attackby(obj/item/tool/match/W as obj, mob/living/carbon/human/user as mob)
+/obj/item/storage/fancy/cigar/matchbook/attackby(obj/item/tool/match/match as obj, mob/living/carbon/human/user as mob)
+	if(!istype(match))
+		return ..()
 	if(!istype(user))
 		return
 	if(prob(light_chance))
-		if(istype(W) && !W.heat_source && !W.burnt)
+		if(!match.heat_source && !match.burnt)
 			if(prob(burn_chance))
-				to_chat(user, SPAN_WARNING("\The [W] lights, but you burn your hand in the process! Ouch!"))
+				to_chat(user, SPAN_WARNING("\The [match] lights, but you burn your hand in the process! Ouch!"))
 				user.apply_damage(3, BURN, pick("r_hand", "l_hand"))
 				if((user.pain.feels_pain) && prob(25))
 					user.emote("scream")
-				W.light_match()
+				match.light_match()
 			else
-				W.light_match()
-				to_chat(user, SPAN_NOTICE("You light \the [W] on \the [src]."))
+				match.light_match()
+				to_chat(user, SPAN_NOTICE("You light \the [match] on \the [src]."))
 	else
-		to_chat(user, SPAN_NOTICE("\The [W] fails to light."))
+		to_chat(user, SPAN_NOTICE("\The [match] fails to light."))
 
 /obj/item/storage/fancy/cigar/matchbook/brown
 	name = "brown matchbook"

@@ -181,6 +181,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "lG" = (
@@ -533,9 +536,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
+/obj/structure/disposalpipe/junction,
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "Ft" = (
@@ -682,6 +683,9 @@
 /obj/item/trash/crushed_cup{
 	layer = 3.3;
 	pixel_y = 3
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)

@@ -443,8 +443,7 @@
 	var/picked_type = tgui_alert(src, "What kind of tip?", "Tip Type", list("Marine", "Meta")) //no memetips for them joker imp
 	var/message
 	var/static/list/types_to_pick = list(
-		"Marine" = "strings/marinetips.txt",
-		"Meta" = "strings/metatips.txt"
+		"Marine" = "strings/pvetips.txt"
 	)
 	var/list/tip_list = file2list(types_to_pick[picked_type])
 	if(length(types_to_pick[picked_type]))
@@ -656,7 +655,7 @@
 	set category = "Preferences.Ghost"
 	set desc = "Use to change which HUDs you want to have by default when you become an observer."
 
-	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction RESS HUD", "Faction CLF HUD"))
+	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction US Army HUD", "Faction USASF HUD", "Faction CMB HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction CLF HUD"))
 	if(!hud_choice)
 		return
 	prefs.observer_huds[hud_choice] = !prefs.observer_huds[hud_choice]
@@ -681,6 +680,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_ARMY]
 		if("Faction USASF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_NAVY]
+		if("Faction CMB HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_MARSHAL]
 		if("Faction UPP HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_UPP]
 		if("Faction Wey-Yu HUD")
@@ -689,6 +690,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_TWE]
 		if("Faction CLF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_CLF]
+		if("Faction UACG HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_UACG]
 
 	observer_user.HUD_toggled[hud_choice] = prefs.observer_huds[hud_choice]
 	if(observer_user.HUD_toggled[hud_choice])
