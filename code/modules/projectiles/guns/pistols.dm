@@ -298,6 +298,7 @@
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_3
 
 /obj/item/weapon/gun/pistol/highpower/automag/tactical
 	name = "\improper HG 44 'Automag' pistol"
@@ -393,7 +394,7 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 
 /obj/item/weapon/gun/pistol/t73/unloaded
 	current_mag = null
@@ -435,7 +436,7 @@
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 
 //-------------------------------------------------------
 //KT-42 //Inspired by the .44 Auto Mag pistol

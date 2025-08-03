@@ -213,7 +213,7 @@
 
 /obj/item/ammo_magazine/pistol/np92
 	name = "\improper NP92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "np92mag"
@@ -222,7 +222,7 @@
 
 /obj/item/ammo_magazine/pistol/np92/suppressed
 	name = "\improper NPZ92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92mag"
