@@ -83,7 +83,7 @@
 	name = "QYJ-72 ammo box (10x27mm HEAP)"
 	desc = "A 250 round box of HEAP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
 	caliber = "10x27mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/temp_1120.dmi'
 	icon_state = "qjy72"
 	ammo_band_icon = "+qjy72_band"
 	ammo_band_icon = "+qjy72_band_e"

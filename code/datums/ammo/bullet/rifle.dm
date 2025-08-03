@@ -506,6 +506,7 @@
 	name = "wall-penerating 10x27 bullet"
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
+	icon = 'icons/obj/items/weapons/temp_1120.dmi'
 	icon_state = "bullet_blue"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_CYAN

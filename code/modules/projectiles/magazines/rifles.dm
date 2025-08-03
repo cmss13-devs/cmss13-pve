@@ -343,7 +343,7 @@
 	name = "\improper AG80 magazine (9.7x16mm)"
 	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
 	caliber = "9.7x16mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/temp_1120.dmi'
 	icon_state = "ag80"
 	ammo_band_icon = "+ag80_band"
 	ammo_band_icon_empty = "+ag80_band_e"

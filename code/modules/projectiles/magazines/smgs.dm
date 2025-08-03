@@ -190,7 +190,7 @@
 	name = "\improper Type 64 Helical Magazine (7.62x19mm)"
 	desc = "A 64 round magazine for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
 	caliber = "7.62x19mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/temp_1120.dmi'
 	icon_state = "type64mag"
 	ammo_band_icon = "+type64mag_band"
 	ammo_band_icon_empty = "+type64mag_band_e"

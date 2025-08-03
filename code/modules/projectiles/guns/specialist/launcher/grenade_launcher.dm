@@ -300,7 +300,7 @@
 /obj/item/weapon/gun/launcher/grenade/m92/upp
 	name = "\improper OG-60 grenade launcher"
 	desc = "A heavy, 6-shot grenade launcher used by the UPP armed collective."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/temp_1120.dmi'
 	icon_state = "m92_upp"
 	item_state = "m92_upp"
 	flags_item = TWOHANDED
