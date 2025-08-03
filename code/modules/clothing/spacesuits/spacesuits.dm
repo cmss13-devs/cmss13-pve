@@ -78,17 +78,17 @@
 	var/mob/living/carbon/human/wearer = loc
 	var/loc_temp = loc.return_temperature()
 	if (loc_temp < wearer.bodytemperature) // Place is colder than we are
-		var/thermal_protection = max(0, 1 - ((min_cold_protection_temperature + damage*SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER) - loc_temp) / 40) // Scales between 1 and 0 over 40K
+		var/thermal_protection = max(0, 1 - ((min_cold_protection_temperature + damage*SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER) - loc_temp) / 40)
 		if (thermal_protection < 1)
-			wearer.bodytemperature += (1 - thermal_protection) * ((loc_temp - wearer.bodytemperature) / 30) // Smaller, more linear scaling
+			wearer.bodytemperature += (1 - thermal_protection) * ((loc_temp - wearer.bodytemperature) / 30)
 
 /obj/item/clothing/suit/space/equipped(mob/M, put_into_slot)
 	if(flags_equip_slot && slotdefine2slotbit(put_into_slot))
-		addtimer(CALLBACK(src, PROC_REF(check_limb_support), FALSE,	 M), 0)
+		INVOKE_NEXT_TICK(src, PROC_REF(check_limb_support), FALSE, M)
 	..()
 
 /obj/item/clothing/suit/space/unequipped(mob/M, slot)
-	addtimer(CALLBACK(src, PROC_REF(check_limb_support), TRUE, M), 0)
+	INVOKE_NEXT_TICK(src, PROC_REF(check_limb_support), TRUE, M)
 	..()
 
 // Some space suits are equipped with reactive membranes that support
@@ -152,7 +152,6 @@
 	icon = 'icons/obj/items/misc.dmi'
 	icon_state = "spacesuit_bag"
 	w_class = SIZE_MEDIUM
-	garbage = FALSE
 
 /obj/item/prop/folded_emergency_spacesuit/attack_self(mob/user)
 	user.visible_message(SPAN_NOTICE("[user] begins to unfold \the [src]."), SPAN_NOTICE("You start to unfold and expand \the [src]."))

@@ -6,7 +6,7 @@
 #define SPACESUIT_BREACH_STANDARD 1.5
 #define SPACESUIT_BREACH_COMBAT 1.1
 #define SPACESUIT_BREACH_THRESHOLD_CONSTANT 6 // to be made smaller by breach_vulnerability, inversely
-#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2.1
+#define SPACESUIT_COOLING_WHEN_DAMAGED_MULTIPLIER 2
 
 /datum/spacesuit_configuration
 	var/breach_probabability_scale = 13 //Log scale based on damage after armour reduced it is used to prob if a breach should happen

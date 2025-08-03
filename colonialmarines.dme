@@ -1617,6 +1617,7 @@
 #include "code\modules\buildmode\buttons.dm"
 #include "code\modules\buildmode\submodes\advanced.dm"
 #include "code\modules\buildmode\submodes\area_edit.dm"
+#include "code\modules\buildmode\submodes\atmos_edit.dm"
 #include "code\modules\buildmode\submodes\basic.dm"
 #include "code\modules\buildmode\submodes\boom.dm"
 #include "code\modules\buildmode\submodes\copy.dm"

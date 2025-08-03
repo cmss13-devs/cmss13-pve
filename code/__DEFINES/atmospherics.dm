@@ -33,6 +33,7 @@
 
 #define T0C 273.15 // 0degC
 #define T20C 293.15 // 20degC
+#define T37C 310// 20degC
 #define T90C 363.15 // 90degC
 #define T120C 393.15 // 120degC
 #define TCMB 2.7 // -270.3degC
@@ -46,6 +47,7 @@
 #define GAS_TYPE_N2O "anesthetic"
 #define GAS_TYPE_PHORON "phoron"
 #define GAS_TYPE_CO2 "carbon dioxyde"
+#define AVAILABLE_GASES list(GAS_TYPE_AIR, GAS_TYPE_OXYGEN, GAS_TYPE_N2O, GAS_TYPE_NITROGEN)
 
 /// Used in /obj/structure/pipes/vents/proc/create_gas
 #define VENT_GAS_SMOKE "Smoke"
