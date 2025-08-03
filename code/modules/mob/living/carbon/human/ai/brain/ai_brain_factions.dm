@@ -110,6 +110,7 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_PMC,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -133,6 +134,7 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_PMC,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -155,6 +157,7 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_PMC,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -177,6 +180,7 @@
 		FACTION_TWE,
 		FACTION_WY,
 		FACTION_PMC,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_CONTRACTOR,
@@ -477,6 +481,7 @@
 		FACTION_MARINE,
 		FACTION_WY,
 		FACTION_UACG,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -562,6 +567,7 @@
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
+		FACTION_FIL,
 	)
 	enter_combat_lines = list(
 		"CONTACT!",
@@ -766,6 +772,7 @@
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
+		FACTION_FIL,
 	)
 	enter_combat_lines = list(
 		"CONTACT!",
@@ -970,6 +977,7 @@
 		FACTION_CONTRACTOR,
 		FACTION_MERCENARY,
 		FACTION_SURVIVOR,
+		FACTION_FIL,
 	)
 	enter_combat_lines = list(
 		"CONTACT!",
@@ -1335,6 +1343,7 @@
 		FACTION_MARSHAL,
 		FACTION_UACG,
 		FACTION_SURVIVOR,
+		FACTION_FIL,
 	)
 
 /datum/human_ai_faction/wy/pmc
@@ -1355,6 +1364,7 @@
 		FACTION_MARSHAL,
 		FACTION_UACG,
 		FACTION_SURVIVOR,
+		FACTION_FIL,
 	)
 
 /datum/human_ai_faction/wy_deathsquad
@@ -1392,6 +1402,7 @@
 	friendly_factions = list(
 		FACTION_COLONIST,
 		FACTION_WY,
+		FACTION_FIL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
@@ -1564,6 +1575,63 @@
 		"GET DOC OVER HERE!",
 		"DOC!",
 		"MEDIC!",
+	)
+
+/datum/human_ai_faction/fil
+	faction = FACTION_FIL
+	friendly_factions = list(
+		FACTION_COLONIST,
+		FACTION_WY,
+		FACTION_TWE,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+		FACTION_MARINE,
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_MARSHAL,
+		FACTION_UACG,
+	)
+	enter_combat_lines = list(
+		"Contact! Enemy forces approaching!",
+		"Visual confirmed, open fire!",
+		"Hostile forces detected - prepare to fire!",
+		"They've found us - return fire!",
+		"Open up!",
+		"Form up, enemy sighted ahead!",
+		"On les voit. Fire on my mark!",
+		"Squad Alpha, contact spotted! Suppress and flank!",
+		"This is not a drill, hostile presence confirmed!",
+		"Maintain formation, enemy incoming!",
+		"They face the République now!",
+		"Let's show them how France handles war!",
+		"They fight on this soil - that was their last mistake.",
+		"Pour la patrie! Open fire!",
+		"Combat has begun, remember your training.",
+		"Orders are clear - no survivors.",
+		"Legion, prepare to strike!",
+		"They've seen us, move now!",
+		"Cibles en vue. Feu à volonté!",
+		"This isn't our first hellhole, let's go!",
+		"They never learn, we never forget.",
+		"Viva la France!",
+		"Verdun on ne passe pas!",
+		"Guns up! They're right infront of us!",
+		"Ne reculez pas! Tenez bon!",
+		"*warcry",
+		"Ils veulent la guerre? Donnos-la.",
+		"Aux armes! Ils sont là!",
+		"You hear that? Another mistake walking in.",
+		"How many today, mon frére?",
+		"They shoot, we bury them.",
+		"We bleed for worlds we don't belong to.",
+		"Close contact, drop them fast!",
+		"No retreat, we end this now!",
+		"Move to intercept! Break their lines!",
+		"VIVA LA FRANCE!",
 	)
 
 /datum/human_ai_faction/xeno_cultist
