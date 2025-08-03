@@ -5,6 +5,8 @@
 	languages = list("Zombie")
 	skills = null //no restrictions
 	faction = FACTION_ZOMBIE
+	paygrades = PAY_NONE
+	assignment = JOB_COLONIST
 
 /datum/equipment_preset/zombie/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(MALE, FEMALE)
@@ -46,6 +48,7 @@
 
 /datum/equipment_preset/zombie/ua_marine
 	name = "Zombie - USCM Marine"
+	assignment = JOB_SQUAD_MARINE
 
 /datum/equipment_preset/zombie/ua_marine/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -71,6 +74,7 @@
 
 /datum/equipment_preset/zombie/ua_marine_eva
 	name = "Zombie - USCM EVA Marine"
+	assignment = JOB_SQUAD_MARINE
 
 /datum/equipment_preset/zombie/ua_marine_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Marine Undershirt"
@@ -94,7 +98,6 @@
 
 /datum/equipment_preset/zombie/bluecollar
 	name = "Zombie - Blue-Collar"
-	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/zombie/bluecollar/get_assignment(mob/living/carbon/human/new_human)
 	if(prob(50))
@@ -119,7 +122,7 @@
 
 /datum/equipment_preset/zombie/upp_rifleman
 	name = "Zombie - UPP Squad Rifleman"
-	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
+	assignment = JOB_SQUAD_MARINE_UPP
 
 /datum/equipment_preset/zombie/upp_rifleman/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
@@ -138,6 +141,7 @@
 
 /datum/equipment_preset/zombie/upp_eva
 	name = "Zombie - UPP EVA Marine"
+	assignment = JOB_SQUAD_MARINE_UPP
 
 /datum/equipment_preset/zombie/upp_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
@@ -193,6 +197,7 @@
 
 /datum/equipment_preset/zombie/pmc_standard
 	name = "Zombie - PMC"
+	assignment = JOB_PMC_STANDARD
 
 /datum/equipment_preset/zombie/pmc_standard/load_gear(mob/living/carbon/human/new_human)
 	//back
@@ -225,6 +230,7 @@
 
 /datum/equipment_preset/zombie/researcher
 	name = "Zombie - Researcher"
+	assignment = JOB_RESEARCHER
 
 /datum/equipment_preset/zombie/researcher/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -262,6 +268,7 @@
 
 /datum/equipment_preset/zombie/cmb
 	name = "Zombie - CMB"
+	assignment = JOB_CMB
 
 /datum/equipment_preset/zombie/cmb/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -281,6 +288,7 @@
 
 /datum/equipment_preset/zombie/guard
 	name = "Zombie - US Colonial Guard"
+	assignment = JOB_UACG_RIFLE
 
 /datum/equipment_preset/zombie/guard/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -296,6 +304,7 @@
 
 /datum/equipment_preset/zombie/canc
 	name = "Zombie CANC"
+	assignment = "Rifleman"
 
 /datum/equipment_preset/zombie/canc/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -318,6 +327,7 @@
 
 /datum/equipment_preset/zombie/cbrn
 	name = "Zombie - USCM CBRN"
+	assignment = JOB_SQUAD_MARINE_UPP
 
 /datum/equipment_preset/zombie/cbrn/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/cbrn(new_human), WEAR_L_EAR)

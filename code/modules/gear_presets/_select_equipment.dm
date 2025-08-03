@@ -249,6 +249,8 @@
 		new_human.age = minimum_age
 
 /datum/equipment_preset/proc/load_rank(mob/living/carbon/human/new_human, client/mob_client)//Beagle-Code
+	if(isnull(paygrades))
+		return null
 	if(paygrades.len == 1)
 		return paygrades[1]
 	var/playtime
@@ -303,9 +305,10 @@
 	ID.registered_ref = WEAKREF(new_human)
 	ID.registered_gid = new_human.gid
 	ID.blood_type = new_human.blood_type
-	ID.paygrade = load_rank(new_human, mob_client) || ID.paygrade
-	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
-	ID.associated_account_number = acct.account_number
+	ID.paygrade = load_rank(new_human, mob_client)
+	if(ID.paygrade != "???" && !isnull(ID.paygrade))
+		var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
+		ID.associated_account_number = acct.account_number
 	ID.uniform_sets = uniform_sets
 	new_human.equip_to_slot_or_del(ID, WEAR_ID)
 	new_human.faction = faction
