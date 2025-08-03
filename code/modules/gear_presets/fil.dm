@@ -1,7 +1,7 @@
 /datum/equipment_preset/fil
 	name = "FIL Operator"
 	faction = FACTION_FIL
-	rank = JOB_fil_RIFLE
+	rank = JOB_FIL_RIFLE
 	idtype = /obj/item/card/id/dogtag
 	faction = FACTION_FIL
 	faction_group = list(FACTION_LIST_FIL)
