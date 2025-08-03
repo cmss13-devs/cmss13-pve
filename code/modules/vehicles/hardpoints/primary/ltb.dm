@@ -28,7 +28,7 @@
 	)
 
 	scatter = 0
-	fire_delay = 3.0 SECONDS
+	fire_delay = 3 SECONDS
 
 /obj/item/hardpoint/primary/cannon/set_bullet_traits()
 	..()

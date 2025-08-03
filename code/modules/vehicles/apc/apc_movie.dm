@@ -41,7 +41,7 @@
 		"abstract" = 1,
 	)
 
-	wall_ram_damage = 150
+	wall_ram_damage = 100
 	vehicle_ram_multiplier = 10
 
 /obj/vehicle/multitile/apc/movie/add_seated_verbs(mob/living/M, seat)

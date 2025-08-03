@@ -358,19 +358,14 @@
 // UPP ROCKETS/MISSILES
 /datum/ammo/rocket/ap/hj35_launcher
 	icon_state = "hj35_missile"
-	max_range = 8
+	max_range = 16
 
 // TANK CANNON
 /datum/ammo/rocket/ltb/p17702
 	name = "93mmm round"
 	icon_state = "p17702"
-	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
 
-	accuracy = HIT_ACCURACY_TIER_3
-	accurate_range = 32
-	max_range = 32
-	damage = 200
-	shell_speed = AMMO_SPEED_TIER_3
+	shell_speed = AMMO_SPEED_TIER_4
 
 // RAILGUN CANNON
 /datum/ammo/rocket/ap/railgun
@@ -381,10 +376,10 @@
 	accuracy = HIT_ACCURACY_TIER_5
 	accurate_range = 32
 	max_range = 32
-	damage = 2500
+	damage = 250
 	damage_var_high = 120
-	shell_speed = AMMO_SPEED_TIER_3
-	vehicle_slowdown_time = 5 SECONDS
+	shell_speed = AMMO_SPEED_TIER_6
+	vehicle_slowdown_time = 15 SECONDS
 	penetration= ARMOR_PENETRATION_TIER_10
 
 /datum/ammo/rocket/ap/railgun/do_at_max_range(obj/projectile/projectile)

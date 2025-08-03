@@ -29,8 +29,8 @@
 /datum/element/proc/Detach(datum/source, force)
 	SIGNAL_HANDLER
 
-	SEND_SIGNAL(source, COMSIG_ELEMENT_DETACH, src)
 	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(source, COMSIG_ELEMENT_DETACH, src)
 	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
 
 /datum/element/Destroy(force)

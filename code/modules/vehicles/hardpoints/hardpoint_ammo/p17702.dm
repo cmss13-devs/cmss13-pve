@@ -1,6 +1,6 @@
 /obj/item/ammo_magazine/hardpoint/p17702
 	name = "P-177-02 93mm Cannon Magazine"
-	desc = "A primary armament cannon magazine"
+	desc = "A magazine of high-explosive, anti-tank cannon rounds."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	caliber = "93mm" //Making this unique on purpose
 	icon_state = "p17702_8"

@@ -1,7 +1,7 @@
 /obj/item/ammo_magazine/hardpoint/towlauncher
 	name = "TOW Launcher Magazine"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/event.dmi'
-	desc = "A secondary armament rocket magazine"
+	desc = "A magazine of laser-guided missiles used in the UA TOW launcher weapon-system."
 	caliber = "rocket" //correlates to any rocket mags
 	icon_state = "quad_rocket"
 	w_class = SIZE_LARGE
@@ -25,7 +25,7 @@
 /obj/item/ammo_magazine/hardpoint/hj35launcher
 	name = "HJ-35 Launcher Magazine"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
-	desc = "A secondary armament rocket magazine"
+	desc = "A magazine of laser-guided missiles used in the UPP HJ-35 launcher weapon-system."
 	caliber = "rocket" //correlates to any rocket mags
 	icon_state = "hj35"
 	w_class = SIZE_LARGE
