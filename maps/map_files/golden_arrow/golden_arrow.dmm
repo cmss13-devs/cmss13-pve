@@ -276,7 +276,8 @@
 	},
 /obj/item/card/id/dogtag{
 	layer = 3.001;
-	pixel_x = 2
+	pixel_x = 2;
+	pixel_y = 0
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
@@ -688,19 +689,6 @@
 	light_color = "#dae2ff"
 	},
 /turf/open/floor/almayer/plate,
-/area/golden_arrow/hangar)
-"abt" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 13;
-	pixel_x = 5
-	},
-/turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "abu" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3444,6 +3432,7 @@
 /area/golden_arrow/dorms)
 "akL" = (
 /obj/structure/machinery/cryopod/big{
+	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -4329,6 +4318,7 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
+	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -8273,6 +8263,7 @@
 /area/golden_arrow/hangar)
 "aAK" = (
 /obj/structure/machinery/cryopod/big{
+	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -9961,7 +9952,8 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 0
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -10681,6 +10673,7 @@
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
 	pixel_y = 40
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food,
@@ -11152,6 +11145,7 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
+	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -12591,10 +12585,6 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/cobweb2,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 9;
-	pixel_x = -4
-	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aPE" = (
@@ -15717,7 +15707,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/computer/ares_console/large,
+/obj/structure/machinery/computer/ares_console/large{
+	pixel_x = -16;
+	pixel_y = -8
+	},
 /obj/structure/bed/chair/comfy/ai_interface{
 	buckling_y = 2
 	},
@@ -17100,12 +17093,12 @@
 	},
 /obj/item/ammo_box/magazine/m4a3{
 	pixel_y = 11;
-	pixel_x = -8;
+	pixel_x = -7;
 	layer = 2.98
 	},
 /obj/item/ammo_box/magazine/mk1{
 	pixel_y = 12;
-	pixel_x = 13;
+	pixel_x = 16;
 	layer = 2.98
 	},
 /turf/open/floor/almayer,
@@ -19198,6 +19191,7 @@
 "ouD" = (
 /obj/structure/machinery/chem_dispenser/canteen,
 /obj/structure/machinery/light/double/blue/golden_arrow{
+	dir = 2;
 	pixel_y = 40
 	},
 /turf/open/floor/almayer/plate,
@@ -21038,22 +21032,11 @@
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_y = 4;
-	pixel_x = -9
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13;
+	pixel_x = 7
 	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_x = 9;
-	pixel_y = 4
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_x = 9;
-	pixel_y = -3
-	},
-/obj/item/ammo_magazine/smartgun{
-	pixel_x = -9;
-	pixel_y = -3
-	},
+/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "vPN" = (
@@ -32969,7 +32952,7 @@ aZy
 adz
 ayX
 adz
-abt
+aza
 vRh
 aVD
 akZ
