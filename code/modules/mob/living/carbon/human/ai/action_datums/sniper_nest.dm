@@ -82,6 +82,7 @@
 		/datum/equipment_preset/other/freelancer/marksman::name = /datum/equipment_preset/other/freelancer/marksman,
 		/datum/equipment_preset/jovian/sniper::name = /datum/equipment_preset/jovian/sniper,
 		/datum/equipment_preset/other/ecoterrorist/sniper::name = /datum/equipment_preset/other/ecoterrorist/sniper,
+		/datum/equipment_preset/colonist/security/guard/marksman::name = /datum/equipment_preset/colonist/security/guard/marksman,
 	)
 
 	if(!check_rights(R_DEBUG))

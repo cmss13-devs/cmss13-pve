@@ -585,6 +585,63 @@ can cause issues with ammo types getting mixed up during the burst.
 	S.Attach(src)
 	update_attachable(S.slot)
 
+/obj/item/weapon/gun/shotgun/double/upp
+	name = "\improper MP-122 'Olympiets' hunting shotgun"
+	desc = "A double barrel over-under shotgun produced by BaikalMech Factory. Mostly issued to colonists for protection against hostile fauna or hunting. Has a single scope mounting point right behind the barrel."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "olympiets"
+	item_state = "olympiets"
+	flags_equip_slot = SLOT_BACK
+	fire_sound = 'sound/weapons/gun_olympia.ogg'
+	attachable_allowed = list(
+		/obj/item/attachable/stock/olympiets,
+		/obj/item/attachable/olympiets_barrel,
+		/obj/item/attachable/scope/mini/hunting/upp,
+	)
+
+/obj/item/weapon/gun/shotgun/double/upp/handle_starting_attachment()
+	. = ..()
+	var/obj/item/attachable/stock/olympiets/stock = new(src)
+	stock.flags_attach_features &= ~ATTACH_REMOVABLE
+	stock.Attach(src)
+	update_attachable(stock.slot)
+
+	var/obj/item/attachable/olympiets_barrel/barrel = new(src)
+	barrel.flags_attach_features &= ~ATTACH_REMOVABLE
+	barrel.Attach(src)
+	update_attachable(barrel.slot)
+
+/obj/item/weapon/gun/shotgun/double/upp/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/shotgun/double/upp/open_chamber(mob/user, override)
+	..()
+	var/obj/item/attachable/olympiets_barrel/barrel = attachments["special"]
+	if(!barrel)
+		return
+	if(current_mag.chamber_closed)
+		attachable_offset["special_x"] = 35
+		attachable_offset["special_y"] = 17
+		barrel.attach_icon = "olympiets_barrel"
+	else
+		attachable_offset["special_x"] = 33
+		attachable_offset["special_y"] = 7
+		barrel.attach_icon = "olympiets_barrel_o"
+	update_icon()
+
+/obj/item/weapon/gun/shotgun/double/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 9, "rail_y" = 22, "under_x" = 15, "under_y" = 14, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 17, "special_x" = 35, "special_y" = 17)
+
 /obj/item/weapon/gun/shotgun/double/damaged
 	name = "semi-sawn-off Spearhead Rival 78"
 	desc = "A double barrel shotgun produced by Spearhead. Archaic, sturdy, affordable. For some reason it seems that someone tried to saw through the barrel and gave up halfway through. This probably isn't going to be the greatest gun for combat.."

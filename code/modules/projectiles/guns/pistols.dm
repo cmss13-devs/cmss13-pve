@@ -233,6 +233,12 @@
 /obj/item/weapon/gun/pistol/m1911/socom/equipped
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
 
+/obj/item/weapon/gun/pistol/m1911/socom/officer
+	name = "\improper M48A5 pistol"
+	desc = "A timeless classic since the first World War, the M1911A1 has limited use with the USCM, and is often used as a sidearm by non-governmental bodies due to its reliability. An adaptation of the M48A4, with a reinforced chamber, barrel and slide to handle higher pressure loads, designated the M48A5. Chambered in .45 Super, but can load normal .45 ACP also."
+	starting_attachment_types = list(/obj/item/attachable/lasersight)
+	current_mag = /obj/item/ammo_magazine/pistol/m1911/super
+
 /obj/item/weapon/gun/pistol/grizzly
 	name = "\improper Mark-V pistol"
 	desc = "Essentially an over-sized Colt 1911 chambered in .50AE, a few batches of Mark Five pistols were produced by some enterpreneurs around the colonies and marketed as supreme solution to wildlife and crime problem. At least it's not as cliche as the Desert Eagle."
@@ -319,6 +325,7 @@
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_3
 
 /obj/item/weapon/gun/pistol/highpower/automag/tactical
 	name = "\improper HG 44 'Automag' pistol"
@@ -416,7 +423,7 @@
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 
 /obj/item/weapon/gun/pistol/t73/unloaded
 	current_mag = null
@@ -458,7 +465,7 @@
 	scatter = SCATTER_AMOUNT_TIER_7
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 
 //-------------------------------------------------------
 //KT-42 //Inspired by the .44 Auto Mag pistol

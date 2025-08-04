@@ -165,20 +165,9 @@
 	sharp = 0
 	throw_range = 6
 	w_class = SIZE_SMALL  // Size for all modes
-	var/mode = "swiss_stock"
+	var/mode = "Closed"
 	attack_verb = list("hit")
 	var/loaded
-
-// The tool modes list
-	var/list/tool_modes = list(
-	"swiss_stock",
-	"swiss_knife",
-	"swiss_screwdriver",
-	"swiss_cutters",
-	"swiss_spoon",
-	"swiss_opener",
-	"swiss_corkscrew"
-)
 
 /obj/item/weapon/swiss_army_knife/Initialize(mapload, ...)
 	. = ..()
@@ -190,13 +179,20 @@
 	var/mob/living/carbon/human/human = user
 	if(human.l_hand != src && human.r_hand != src)
 		return ..()
-	if(mode != "swiss_stock")
-		switch_tool("swiss_stock")
-	else
-		switch_tool(pick(tool_modes))
+	var/list/tool_modes = list(
+	"Closed" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_stock"),
+	"Knife" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_knife"),
+	"Screwdriver" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_screwdriver"),
+	"Cutters" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_cutters"),
+	"Spoon" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_spoon"),
+	"Can Opener" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_opener"),
+	"Corkscrew" = image(icon = 'icons/obj/items/weapons/weapons.dmi', icon_state = "swiss_corkscrew")
+	)
+	var/use_radials = user.client.prefs?.no_radials_preference ? FALSE : TRUE
+	switch_tool(use_radials ? show_radial_menu(user, user, tool_modes, require_near = FALSE) : tgui_input_list(user, "Select a tool", "Remove accessory", tool_modes))
 
 /obj/item/weapon/swiss_army_knife/attack(mob/living/carbon/mob as mob, mob/living/carbon/user as mob)
-	if(mode == "swiss_cutters")
+	if(mode == "Cutters")
 		if((mob.handcuffed) && (istype(mob.handcuffed, /obj/item/restraint/adjustable/cable)))
 			user.visible_message("\The [usr] cuts \the [mob]'s restraints with \the [src]!",\
 			"You cut \the [mob]'s restraints with \the [src]!",\
@@ -206,7 +202,7 @@
 			return
 		else
 			..()
-	if(mode == "swiss_spoon")
+	if(mode == "Spoon")
 		if(!istype(mob))
 			return ..()
 		if(user.a_intent != INTENT_HELP)
@@ -234,7 +230,7 @@
 
 /obj/item/weapon/swiss_army_knife/proc/switch_tool(new_state)
 	switch(new_state)
-		if("swiss_stock")
+		if("Closed")
 			desc = initial(desc)
 			force = initial(force)
 			throwforce = initial(throwforce)
@@ -245,8 +241,9 @@
 			attack_speed = initial(attack_speed)
 			flags_atom = initial(flags_atom)
 			REMOVE_TRAITS_IN(src,src)
-		if("swiss_knife")
+		if("Knife")
 			desc = "A sharp knife for cutting things."
+			icon_state = "swiss_knife"
 			sharp = IS_SHARP_ITEM_ACCURATE
 			force = MELEE_FORCE_NORMAL
 			throwforce = MELEE_FORCE_NORMAL
@@ -256,8 +253,9 @@
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 			attack_speed = 9
 			flags_item = CAN_DIG_SHRAPNEL
-		if("swiss_screwdriver")
+		if("Screwdriver")
 			desc = "A trusty screwdriver for all your fastening needs."
+			icon_state = "swiss_screwdriver"
 			force = 2
 			throwforce = 0
 			flags_atom = FPRINT|CONDUCT
@@ -265,8 +263,9 @@
 			attack_verb = list("stabbed")
 			flags_item = CAN_DIG_SHRAPNEL
 			ADD_TRAIT(src,TRAIT_TOOL_SCREWDRIVER,src)
-		if("swiss_cutters")
+		if("Cutters")
 			desc = "Cutters for cutting through wires and various materials."
+			icon_state = "swiss_cutters"
 			attack_verb = list("pinched", "nipped")
 			force = 5
 			throwforce = 0
@@ -274,14 +273,16 @@
 			sharp = IS_SHARP_ITEM_SIMPLE
 			edge = 1
 			ADD_TRAIT(src,TRAIT_TOOL_WIRECUTTERS,src)
-		if("swiss_spoon")
+		if("Spoon")
 			desc = "A simple spoon."
+			icon_state = "swiss_spoon"
 			attack_verb = list("scoop", "stir")
 			force = 0
 			throwforce = 0
 			sharp = 0
-		if("swiss_opener")
+		if("Can Opener")
 			desc = "A simple can opener, can be used as a knife, although weaker."
+			icon_state = "swiss_opener"
 			sharp = IS_SHARP_ITEM_ACCURATE
 			force = MELEE_FORCE_WEAK
 			throwforce = MELEE_FORCE_WEAK
@@ -291,15 +292,15 @@
 			attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 			attack_speed = 9
 			flags_item = CAN_DIG_SHRAPNEL
-		if("swiss_corkscrew")
+		if("Corkscrew")
 			desc = "A simple corkscrew."
+			icon_state = "swiss_corkscrew"
 			force = 2
 			throwforce = 0
 			flags_atom = FPRINT|CONDUCT
 			attack_verb = list("stabbed")
 			flags_item = CAN_DIG_SHRAPNEL
 	mode = new_state
-	icon_state = new_state
 	update_icon()
 
 

@@ -382,6 +382,9 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
 
+/obj/item/weapon/gun/rifle/sniper/M42A/basic
+	current_mag = /obj/item/ammo_magazine/sniper/basic
+
 /obj/item/weapon/gun/rifle/sniper/M42A/silenced
 	name = "\improper M42A2 SSR"
 	desc = "The M42A2 Suppressed Scoped Rifle (SSR for short), is a heavy sniper rifle manufactured by Armat Systems. Modified with an integral suppressor, it has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"

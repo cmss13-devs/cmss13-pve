@@ -323,6 +323,7 @@
 	chat_color = "#c47a50"
 	squad_type = "Team"
 	locked = TRUE
+
 //###############################
 /datum/squad/pmc
 	name = "Root"

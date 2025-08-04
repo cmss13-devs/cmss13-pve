@@ -126,7 +126,6 @@
 
 /datum/game_mode/colonialmarines/ds_first_landed(obj/docking_port/stationary/marine_dropship)
 	. = ..()
-	clear_lz_hazards() // This shouldn't normally do anything, but is here just in case
 
 	/*
 	// Assumption: Shuttle origin is its center
@@ -216,29 +215,6 @@
 	warhead.double_explosion_delay = 6
 	warhead.warhead_impact(target) // This is a blocking call
 	playsound(target, 'sound/effects/smoke.ogg', vol=50, vary=1, sound_range=75)
-
-///Spawns miasma smoke in landing zones
-/datum/game_mode/colonialmarines/proc/spawn_lz_hazards()
-	var/datum/cause_data/new_cause_data = create_cause_data("CN20-X miasma")
-	for(var/area/area in GLOB.all_areas)
-		if(!area.is_landing_zone)
-			continue
-		if(!is_ground_level(area.z))
-			continue
-		for(var/turf/turf in area)
-			if(turf.density)
-				if(!istype(turf, /turf/closed/wall))
-					continue
-				var/turf/closed/wall/wall = turf
-				if(wall.hull)
-					continue
-			lz_smoke += new /obj/effect/particle_effect/smoke/miasma(turf, null, new_cause_data)
-
-///Clears miasma smoke in landing zones
-/datum/game_mode/colonialmarines/proc/clear_lz_hazards()
-	for(var/obj/effect/particle_effect/smoke/miasma/smoke as anything in lz_smoke)
-		smoke.time_to_live = rand(1, 5)
-	lz_smoke.Cut()
 
 #define MONKEYS_TO_TOTAL_RATIO 1/32
 
@@ -403,7 +379,6 @@
 /datum/game_mode/colonialmarines/ds_first_drop(obj/docking_port/mobile/marine_dropship)
 	addtimer(CALLBACK(src, PROC_REF(intro_sequence)), DROPSHIP_DROP_MSG_DELAY)
 	add_current_round_status_to_end_results("First Drop")
-	clear_lz_hazards()
 
 /datum/game_mode/colonialmarines/proc/intro_sequence()
 	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
