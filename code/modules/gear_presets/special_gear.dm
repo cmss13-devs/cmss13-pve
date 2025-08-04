@@ -950,3 +950,39 @@
 
 	var/obj/item/implant/poison_tooth/preset/mss/implant = new()
 	implant.do_implant(new_human, "head")
+
+/datum/equipment_preset/upp/revanchist/conscript
+	name = "Revanchist (Conscript)"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	assignment = JOB_SQUAD_MARINE
+	role_comm_title = "CNS"
+	rank = JOB_SQUAD_MARINE
+	paygrades = list(PAY_SHORT_UE0 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/pfc
+	access = list(ACCESS_UPP_GENERAL)
+
+/datum/equipment_preset/upp/revanchist/conscript/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//face
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/territorial, WEAR_L_EAR)
+	//head
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/old/black, WEAR_HEAD)
+	//uniform
+	add_upp_uniform(new_human)
+	//jacket
+	var/pocket_item = pick(/obj/item/device/radio, /obj/item/tool/crowbar/red, /obj/item/stack/medical/ointment, /obj/item/device/binoculars/range/designator/upp, /obj/item/explosive/grenade/smokebomb/upp)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/black, WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/black, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/scarce, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new pocket_item, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/prop, WEAR_L_STORE)

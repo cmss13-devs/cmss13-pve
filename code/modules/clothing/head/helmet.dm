@@ -1213,6 +1213,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	specialty = "6B68 helmet"
 
+/obj/item/clothing/head/helmet/marine/veteran/UPP/old/black
+	icon_state = "upp_helmet_68_black"
+
 //==========================//UPP\\=================================\\
 //=======================================================================\\
 
