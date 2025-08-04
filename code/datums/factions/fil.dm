@@ -13,6 +13,10 @@
 	switch(_role)
 		if(JOB_FIL_RIFLE)
 			hud_icon_state = "rifle"
+		if(JOB_FIL_AUX)
+			hud_icon_state = "aux"
+		if(JOB_FIL_AUX_SL)
+			hud_icon_state = "aux_sl"
 		if(JOB_FIL_MEDIC)
 			hud_icon_state = "medic"
 		if(JOB_FIL_MG)

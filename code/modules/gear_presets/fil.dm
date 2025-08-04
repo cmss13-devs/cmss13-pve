@@ -113,7 +113,7 @@
 	role_comm_title = "Auxiliary"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "FIL Auxiliary Operator"
-	rank = JOB_FIL_RIFLE
+	rank = JOB_FIL_AUX
 	skills = /datum/skills/pfc
 	faction = FACTION_FIL
 
@@ -152,7 +152,7 @@
 	role_comm_title = "Auxiliary Lead"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "FIL Auxiliary Lead"
-	rank = JOB_FIL_RIFLE
+	rank = JOB_FIL_AUX_SL
 	skills = /datum/skills/tl
 	faction = FACTION_FIL
 

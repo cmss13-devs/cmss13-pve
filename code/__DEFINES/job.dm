@@ -435,6 +435,8 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //------- FIL --------//
 #define JOB_FIL_RIFLE "FIL Rifleman"
+#define JOB_FIL_AUX "FIL Auxiliary"
+#define JOB_FIL_AUX_SL "FIL Auxiliary Squad Leader"
 #define JOB_FIL_MEDIC "FIL Field Medic"
 #define JOB_FIL_TECH "FIL Field Technician"
 #define JOB_FIL_MG "FIL Machinegunner"
@@ -447,7 +449,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_FIL_ELITE "FIL Paratrooper"
 #define JOB_FIL_ELITE_SL "FIL Squad Lead Paratrooper"
 
-#define FIL_JOB_LIST list(JOB_FIL_RIFLE, JOB_FIL_MEDIC, JOB_FIL_TECH, JOB_FIL_MG, JOB_FIL_SL, JOB_FIL_LT, JOB_FIL_SCOUT, JOB_FIL_CO, JOB_FIL_SNIPER, JOP_FIL_ELITE, JOB_FIL_ELITE_SL)
+#define FIL_JOB_LIST list(JOB_FIL_RIFLE, JOB_FIL_AUX, JOB_FIL_AUX_SL, JOB_FIL_MEDIC, JOB_FIL_TECH, JOB_FIL_MG, JOB_FIL_SL, JOB_FIL_LT, JOB_FIL_SCOUT, JOB_FIL_CO, JOB_FIL_SNIPER, JOP_FIL_ELITE, JOB_FIL_ELITE_SL)
 
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
