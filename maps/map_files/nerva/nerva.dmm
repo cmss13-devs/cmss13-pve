@@ -603,11 +603,8 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/cic)
 "aor" = (
-/obj/structure/lattice,
-/obj/structure/anti_air_cannon{
-	shipid = "nerva"
-	},
-/turf/open/space,
+/obj/structure/prop/almayer/missile_tube,
+/turf/open/floor/plating,
 /area/space)
 "aox" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -1344,7 +1341,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 4
 	},
-/turf/open/void,
+/turf/open/floor/plating,
 /area/nerva/second/engineering)
 "aDq" = (
 /obj/structure/surface/rack,
@@ -19213,6 +19210,9 @@
 /area/nerva/third/air)
 "icj" = (
 /obj/structure/machinery/power/apc/power/north,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_solo_cap"
+	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/nerva/first/research)
 "icJ" = (
@@ -20777,6 +20777,13 @@
 /obj/structure/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
 /area/nerva/second/engineering)
+"iJC" = (
+/obj/structure/ladder{
+	id = "dock_ladder";
+	height = 3
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "iJK" = (
 /obj/structure/machinery/door/airlock/engineering/colony{
 	name = "Engineering Access"
@@ -24473,7 +24480,14 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/nerva/second/medical)
 "kjV" = (
-/turf/open/void,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -136;
+	vector_y = -4
+	},
+/turf/open/floor/plating,
 /area/nerva/first/research)
 "kkC" = (
 /obj/structure/machinery/requests_console{
@@ -30710,7 +30724,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/machinery/door/airlock/almayer/command,
-/obj/structure/machinery/door/airlock/almayer/command/colony,
 /turf/open/floor/almayer/plating,
 /area/nerva/second/cic)
 "mJs" = (
@@ -31559,6 +31572,13 @@
 	},
 /turf/open/floor/bluegrid,
 /area/nerva/first/hanger/port)
+"niN" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_half_cap";
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/nerva/first/research)
 "niO" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4;
@@ -39343,6 +39363,13 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/maint)
+"qxs" = (
+/obj/structure/ladder{
+	height = 4;
+	id = "dock_ladder"
+	},
+/turf/open/floor/plating,
+/area/nerva/fourth/maint)
 "qxx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash,
@@ -40861,7 +40888,6 @@
 /obj/structure/machinery/door/airlock/almayer/research{
 	dir = 1
 	},
-/obj/structure/window/framed/almayer/white,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/nerva/first/research)
 "raO" = (
@@ -50740,6 +50766,13 @@
 /area/nerva/first/hanger/port)
 "uQc" = (
 /obj/structure/machinery/light,
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_half_cap"
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -136;
+	vector_y = -4
+	},
 /turf/open/void,
 /area/nerva/first/research)
 "uQd" = (
@@ -51532,7 +51565,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
-/turf/open/void,
+/turf/open/floor/plating,
 /area/nerva/second/bar)
 "vgj" = (
 /obj/structure/cable{
@@ -73222,7 +73255,7 @@ sFl
 ssN
 qRI
 eVo
-aIO
+iJC
 nij
 qRI
 kkP
@@ -73541,7 +73574,7 @@ exi
 sbs
 qAy
 cnA
-hxf
+niN
 pQy
 oDf
 hxf
@@ -80360,7 +80393,7 @@ qHk
 qRI
 vKL
 wHS
-rCW
+iax
 dOA
 fau
 tzl
@@ -92742,7 +92775,7 @@ kCH
 jjg
 xzO
 aCY
-jjg
+jCv
 kTQ
 fhg
 iRn
@@ -95200,7 +95233,7 @@ jhV
 jHD
 xyu
 sss
-nAs
+qxs
 tVr
 hAG
 gDY
@@ -108167,7 +108200,7 @@ nRg
 nRg
 nRg
 noR
-aor
+noR
 noR
 dGs
 dGs
@@ -108363,7 +108396,7 @@ gLZ
 oBF
 nRg
 nnU
-nnU
+aor
 iZc
 iZc
 iZc
@@ -108561,7 +108594,7 @@ uuc
 uuc
 nRg
 nnU
-nnU
+aor
 iZc
 iZc
 iZc
@@ -108759,7 +108792,7 @@ uuc
 uuc
 nRg
 nnU
-nnU
+aor
 iZc
 iZc
 iZc
