@@ -34,6 +34,17 @@
 	if(health <= 0)
 		return FALSE
 
+	// Checking if treads/wheels are installed
+	if(!(locate(/obj/item/hardpoint/locomotion) in hardpoints))
+		return FALSE
+
+	var/obj/item/hardpoint/locomotion/mover
+	if(locate(mover) in hardpoints)
+		if(mover.health >= 1)
+			return TRUE
+		else
+			return FALSE
+
 	return pre_movement(direction)
 
 // This determines what type of movement to execute

@@ -11,7 +11,7 @@
 	health = 1500
 
 	//with this settings, takes 3 tiles to reach top speed
-	move_delay = 2.0
+	move_delay = VEHICLE_SPEED_FASTER
 	move_max_momentum = 3
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.6

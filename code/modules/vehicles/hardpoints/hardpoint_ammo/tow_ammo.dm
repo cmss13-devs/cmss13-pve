@@ -29,6 +29,6 @@
 	caliber = "rocket" //correlates to any rocket mags
 	icon_state = "hj35"
 	w_class = SIZE_LARGE
-	default_ammo = /datum/ammo/rocket/ap/hj35_launcher
+	default_ammo = /datum/ammo/rocket/ap/tank_towlauncher/hj35_launcher
 	max_rounds = 3
 	gun_type = /obj/item/hardpoint/secondary/hj35launcher

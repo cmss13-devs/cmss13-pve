@@ -12,6 +12,6 @@
 	health = 500
 
 	move_delay = VEHICLE_SPEED_SUPERFAST
-	move_max_momentum = 2
-	move_momentum_build_factor = 1.5
+	move_max_momentum = 3
+	move_momentum_build_factor = 1.8
 	move_turn_momentum_loss_factor = 0.5
