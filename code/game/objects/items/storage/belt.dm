@@ -1915,8 +1915,6 @@
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 
-#define MAXIMUM_MAGAZINE_COUNT 2
-
 /obj/item/storage/belt/gun/smartgunner/garrow
 	name = "\improper M802 pattern smartgunner sidearm rig"
 	desc = "The M802 is a limited-issue mark of USCM load-bearing equipment, designed to carry a limited quantity of smartgun and pistol ammunition, along with a sidearm."
