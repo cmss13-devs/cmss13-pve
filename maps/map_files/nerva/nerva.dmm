@@ -603,9 +603,12 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/nerva/second/cic)
 "aor" = (
-/obj/structure/prop/almayer/missile_tube,
-/turf/open/floor/plating,
-/area/space)
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_half_cap";
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/nerva/first/research)
 "aox" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -6333,7 +6336,7 @@
 /obj/structure/pipes/standard/cap/visible/supply{
 	dir = 8
 	},
-/turf/open/void,
+/turf/open/floor/plating,
 /area/nerva/third/engineerrnr)
 "cDV" = (
 /obj/structure/cable,
@@ -7160,6 +7163,13 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/nerva/fourth/maint)
+"cTh" = (
+/obj/structure/ladder{
+	id = "dock_ladder";
+	height = 3
+	},
+/turf/open/floor/plating,
+/area/nerva/second/maint)
 "cTj" = (
 /obj/structure/machinery/alarm{
 	pixel_y = 25
@@ -10481,7 +10491,7 @@
 	pixel_y = 1;
 	use_power = 1
 	},
-/turf/open/void,
+/turf/open/floor/plating,
 /area/nerva/third/air)
 "etG" = (
 /obj/structure/disposalpipe/segment,
@@ -20777,13 +20787,6 @@
 /obj/structure/machinery/portable_atmospherics/canister/nitrogen,
 /turf/open/floor/plating,
 /area/nerva/second/engineering)
-"iJC" = (
-/obj/structure/ladder{
-	id = "dock_ladder";
-	height = 3
-	},
-/turf/open/floor/plating,
-/area/nerva/second/maint)
 "iJK" = (
 /obj/structure/machinery/door/airlock/engineering/colony{
 	name = "Engineering Access"
@@ -31572,13 +31575,6 @@
 	},
 /turf/open/floor/bluegrid,
 /area/nerva/first/hanger/port)
-"niN" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_ew_half_cap";
-	dir = 4
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/nerva/first/research)
 "niO" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4;
@@ -32298,6 +32294,13 @@
 	},
 /turf/open/floor/plating/catwalk,
 /area/nerva/second/hallway)
+"nxe" = (
+/obj/structure/ladder{
+	height = 4;
+	id = "dock_ladder"
+	},
+/turf/open/floor/plating,
+/area/nerva/fourth/maint)
 "nxh" = (
 /obj/effect/decal/warning_stripes/asteroid,
 /obj/structure/cable/orange{
@@ -36337,6 +36340,10 @@
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/almayer/redfull,
 /area/nerva/second/sec)
+"pgd" = (
+/obj/structure/prop/almayer/missile_tube,
+/turf/open/floor/plating,
+/area/space)
 "pgz" = (
 /obj/structure/bed,
 /obj/structure/curtain/red,
@@ -39363,13 +39370,6 @@
 	},
 /turf/open/floor/plating,
 /area/nerva/second/maint)
-"qxs" = (
-/obj/structure/ladder{
-	height = 4;
-	id = "dock_ladder"
-	},
-/turf/open/floor/plating,
-/area/nerva/fourth/maint)
 "qxx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/random/trash,
@@ -50099,10 +50099,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/ladder{
-	height = 3;
-	id = "thirdladder"
-	},
 /turf/open/floor/almayer/plating,
 /area/nerva/third/engineerrnr)
 "uAX" = (
@@ -56766,7 +56762,7 @@
 /obj/structure/machinery/airlock_sensor{
 	id_tag = "co2_sensor"
 	},
-/turf/open/void,
+/turf/open/floor/plating,
 /area/nerva/third/air)
 "xkW" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -73255,7 +73251,7 @@ sFl
 ssN
 qRI
 eVo
-iJC
+cTh
 nij
 qRI
 kkP
@@ -73574,7 +73570,7 @@ exi
 sbs
 qAy
 cnA
-niN
+aor
 pQy
 oDf
 hxf
@@ -77641,7 +77637,7 @@ nQf
 elb
 muO
 lZz
-ssN
+kkP
 gjb
 wMM
 ssN
@@ -77839,7 +77835,7 @@ kkP
 kkP
 wqD
 rcl
-ssN
+kkP
 rJR
 rzj
 ssN
@@ -78037,7 +78033,7 @@ aru
 kkP
 cMh
 gNG
-ssN
+kkP
 ssN
 ssN
 ssN
@@ -78234,8 +78230,8 @@ nFI
 sbE
 kkP
 cMh
-ssN
-ssN
+kkP
+kkP
 ssN
 dGs
 dGs
@@ -78432,8 +78428,8 @@ voH
 rvF
 kkP
 cMh
-ssN
-ssN
+kkP
+kkP
 ssN
 ssN
 qUk
@@ -78829,7 +78825,7 @@ hNz
 kkP
 qRI
 xVs
-ssN
+kkP
 ssN
 ssN
 mgi
@@ -79026,8 +79022,8 @@ luP
 tCg
 kkP
 qRI
-ssN
-ssN
+kkP
+kkP
 ssN
 nKY
 dGs
@@ -81593,7 +81589,7 @@ fRD
 fRD
 mUw
 fRD
-fII
+fRD
 gzA
 qRI
 bQV
@@ -81791,7 +81787,7 @@ rfk
 bPZ
 kMK
 raW
-fII
+fRD
 qRI
 qRI
 nMb
@@ -81989,9 +81985,9 @@ fRD
 gXg
 uSJ
 jgb
-fII
+fRD
 ptU
-ssN
+kkP
 kkP
 kkP
 kkP
@@ -82187,9 +82183,9 @@ fRD
 fPE
 nNA
 raW
-fII
-ssN
-ssN
+fRD
+kkP
+kkP
 vJE
 mxW
 mxW
@@ -95233,7 +95229,7 @@ jhV
 jHD
 xyu
 sss
-qxs
+nxe
 tVr
 hAG
 gDY
@@ -108396,7 +108392,7 @@ gLZ
 oBF
 nRg
 nnU
-aor
+pgd
 iZc
 iZc
 iZc
@@ -108594,7 +108590,7 @@ uuc
 uuc
 nRg
 nnU
-aor
+pgd
 iZc
 iZc
 iZc
@@ -108792,7 +108788,7 @@ uuc
 uuc
 nRg
 nnU
-aor
+pgd
 iZc
 iZc
 iZc
