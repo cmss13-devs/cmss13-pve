@@ -704,7 +704,6 @@
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/rifle/mar40/tactical/sling_masterkey_shotgun
-	current_mag = /obj/item/ammo_magazine/rifle/mar40/extended
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/shotgun, /obj/item/attachable/sling)
 
 /obj/item/weapon/gun/rifle/mar40/carbine

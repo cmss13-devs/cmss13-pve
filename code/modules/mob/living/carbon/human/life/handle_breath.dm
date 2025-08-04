@@ -13,9 +13,9 @@
 
 	var/list/air_info
 
-		/*if(istype(loc, /atom/movable))
-			var/atom/movable/container = loc
-			container.handle_internal_lifeform(src)*/
+	/*if(istype(loc, /atom/movable))
+		var/atom/movable/container = loc
+		container.handle_internal_lifeform(src)*/
 
 	//First, check for air from internal atmosphere (using an air tank and mask generally)
 	air_info = get_breath_from_internal()
@@ -135,7 +135,7 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 	var/safe_pressure_min = species.breath_pressure
 	var/datum/internal_organ/lungs =  internal_organs_by_name["lungs"]
 	// Lung damage increases the minimum safe pressure.
-	safe_pressure_min *= 1 + rand(1,5) * (lungs.damage/lungs.min_broken_damage * (reagents.has_reagent("inaprovaline") ? 0.5 : 1))
+	safe_pressure_min *= 1 + rand(1,5) * (min(3,lungs.damage/lungs.min_broken_damage) * (reagents.has_reagent("inaprovaline") ? 0.33 : 1))
 	var/inhale_efficiency
 	if(air_info[3] == 0 || air_info[5] == 0) //stop divide by zero runtime
 		inhale_efficiency = 0
@@ -143,9 +143,10 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 		inhale_efficiency = ((oxygen_pressure/air_info[3])*air_info[5])/safe_pressure_min
 	// Not enough to breathe
 	if(inhale_efficiency < 1)
-		breath_fail_ratio = 1 - inhale_efficiency
-		if(prob(30*breath_fail_ratio))
-			if(inhale_efficiency < 0.8)
+		breath_fail_ratio = 1 - inhale_efficiency //handle_regular_hud_updates.dm
+		oxygen_alert = breath_fail_ratio
+		if(inhale_efficiency < 0.8)
+			if(prob(30*breath_fail_ratio))
 				emote("gasp")
 			if(prob(20))
 				to_chat(src, SPAN_WARNING("It's hard to breathe..."))
@@ -159,7 +160,7 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 	switch(air_info[1])
 		if(GAS_TYPE_N2O)
 			if(!isyautja(src)) // Prevent Predator anesthetic memes
-				var/SA_pp = air_info[3]
+				var/SA_pp = air_info[5]
 				if(SA_pp > 20) // Enough to make us paralysed for a bit
 					apply_effect(3, PARALYZE) // 3 gives them one second to wake up and run away a bit!
 					//Enough to make us sleep as well

@@ -201,7 +201,7 @@
 	var/proportion_is_oxygen = 0
 	if(gas_type == GAS_TYPE_AIR)
 		proportion_is_oxygen = O2STANDARD
-	else if(gas_type == GAS_TYPE_OXYGEN)
+	else if(gas_type == GAS_TYPE_OXYGEN || gas_type == GAS_TYPE_N2O)
 		proportion_is_oxygen = TRUE
 	return list(gas_type, temperature, returned_moles, proportion_is_oxygen, distribute_pressure)
 
