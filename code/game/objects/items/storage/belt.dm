@@ -672,8 +672,8 @@
 	//doing the same thing as xm51
 	var/main_magazines = 0
 	var/secondary_magazines = 0
-#define MAIN_MAGAZINE_COUNT = 4
-#define SECONDARY_MAGAZINE_COUNT  = 2
+#define MAIN_MAGAZINE_COUNT 4
+#define SECONDARY_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/cmbtac/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()
@@ -731,8 +731,8 @@
 	//ditto
 	main_magazines = 0
 	secondary_magazines = 0
-#define MAIN_MAGAZINE_COUNT = 5
-#define SECONDARY_MAGAZINE_COUNT  = 2
+#define MAIN_MAGAZINE_COUNT 5
+#define SECONDARY_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/cmbtac/smgbelt/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()
@@ -790,8 +790,8 @@
 	//ditto
 	main_magazines = 0
 	secondary_magazines = 0
-#define MAIN_MAGAZINE_COUNT = 3
-#define SECONDARY_MAGAZINE_COUNT  = 7
+#define MAIN_MAGAZINE_COUNT 3
+#define SECONDARY_MAGAZINE_COUNT 7
 
 /obj/item/storage/belt/cmbtac/mixed/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()
@@ -854,7 +854,7 @@
 
 	//ditto
 	main_magazines = 0
-#define MAIN_MAGAZINE_COUNT = 2
+#define MAIN_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/cmbtac/utility/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
 	. = ..()

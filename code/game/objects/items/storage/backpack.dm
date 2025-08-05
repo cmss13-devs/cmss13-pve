@@ -1220,13 +1220,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	has_gamemode_skin = FALSE
 	can_hold_skill = list()
 
-/obj/item/storage/backpack/general_belt/equipped(mob/user, slot)
+/obj/item/storage/backpack/general_belt/cmb/equipped(mob/user, slot)
 	switch(slot)
 		if(WEAR_WAIST, WEAR_J_STORE) //The G8 can be worn on several armors.
 			mouse_opacity = MOUSE_OPACITY_OPAQUE //so it's easier to click when properly equipped.
 	..()
 
-/obj/item/storage/backpack/general_belt/dropped(mob/user)
+/obj/item/storage/backpack/general_belt/cmb/dropped(mob/user)
 	mouse_opacity = initial(mouse_opacity)
 	..()
 
