@@ -1212,7 +1212,7 @@
 	name = "USCM Marine Raider Team Lead"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Raider Team Lead"
-	rank = JOB_MARINE_RAIDER
+	rank = JOB_MARINE_RAIDER_SL
 	role_comm_title = "RTL"
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	skills = /datum/skills/commando/deathsquad
