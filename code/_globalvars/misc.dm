@@ -11,7 +11,7 @@ GLOBAL_VAR_INIT(enter_allowed, TRUE)
 GLOBAL_LIST_EMPTY(admin_log)
 GLOBAL_LIST_EMPTY(asset_log)
 
-GLOBAL_VAR_INIT(looc_cooldown_time, 60 SECONDS)
+GLOBAL_VAR_INIT(looc_cooldown_time, 30 SECONDS)
 
 // multiplier for watts per tick <> cell storage (eg: 0.02 means if there is a load of 1000 watts, 20 units will be taken from a cell per second)
 //It's a conversion constant. power_used*CELLRATE = charge_provided, or charge_used/CELLRATE = power_provided
