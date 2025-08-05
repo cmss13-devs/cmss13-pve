@@ -444,6 +444,12 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
+/datum/ammo/bullet/rifle/upp/rubber
+	name = "rubber 10x27 bullet"
+	damage = 10
+	stamina_damage = 20
+	shrapnel_chance = 0
+
 /datum/ammo/bullet/rifle/upp/tracer
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
