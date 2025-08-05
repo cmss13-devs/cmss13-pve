@@ -1514,7 +1514,7 @@
 	icon_state = "shotgunholster"
 	has_gamemode_skin = FALSE
 	gun_has_gamemode_skin = FALSE
-	storage_slots = 8
+	storage_slots = 4
 	max_w_class = 5
 	can_hold = list(
 		/obj/item/ammo_magazine/handful,
