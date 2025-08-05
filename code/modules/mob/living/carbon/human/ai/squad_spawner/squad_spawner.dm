@@ -108,7 +108,10 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 			var/selected_turf = pick(viable_turfs)
 			if(!length(reducing_viable_turfs) < 1)
 				selected_turf = pick(reducing_viable_turfs)
+				if(ui.user.loc in reducing_viable_turfs)
+					selected_turf = ui.user.loc
 				reducing_viable_turfs -= selected_turf
+
 			var/mob/living/carbon/human/ai_human = new(selected_turf)
 			var/datum/component/human_ai/ai_comp = ai_human.AddComponent(/datum/component/human_ai)
 			arm_equipment(ai_human, ai_equipment, TRUE)

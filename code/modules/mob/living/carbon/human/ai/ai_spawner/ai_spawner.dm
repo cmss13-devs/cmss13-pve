@@ -87,15 +87,14 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 				var/selected_turf = pick(viable_turfs)
 				if(!length(reducing_viable_turfs) < 1)
 					selected_turf = pick(reducing_viable_turfs)
+					if(ui.user.loc in reducing_viable_turfs)
+						selected_turf = ui.user.loc
 					reducing_viable_turfs -= selected_turf
 
 				var/mob/living/carbon/human/ai_human = new(pick(selected_turf))
 				ai_human.AddComponent(/datum/component/human_ai)
-
 				arm_equipment(ai_human, gotten_path::path, TRUE)
-
 				ai_human.face_dir(ui.user.dir)
-
 				ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 			return TRUE
 
