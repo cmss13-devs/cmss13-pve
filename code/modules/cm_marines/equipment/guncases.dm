@@ -340,13 +340,13 @@
 	max_w_class = SIZE_HUGE
 
 /obj/item/storage/box/guncase/heavy/smg/fill_preset_inventory()
-	new /obj/item/weapon/gun/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
-	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/weapon/gun/smg/m39/forecon(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
+	new /obj/item/ammo_magazine/smg/m39/extended(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64
 	name = "\improper Type 64 submachinegun case"
@@ -438,8 +438,8 @@
 	name = "\improper M42A sniper case"
 	desc = "A case for storing a M42A sniper rifle."
 	icon_state = "guncase"
-	storage_slots = 5
-	can_hold = list(/obj/item/weapon/gun/rifle/sniper/M42A, /obj/item/ammo_magazine/sniper)
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/rifle/sniper/M42A, /obj/item/ammo_magazine/sniper, /obj/item/device/binoculars)
 	max_w_class = SIZE_HUGE
 
 /obj/item/storage/box/guncase/heavy/sniper/fill_preset_inventory()
@@ -448,13 +448,14 @@
 	new /obj/item/ammo_magazine/sniper/basic(src)
 	new /obj/item/ammo_magazine/sniper/basic(src)
 	new /obj/item/ammo_magazine/sniper/basic(src)
+	new /obj/item/device/binoculars/range/designator/spotter(src)
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff
 	name = "\improper Type 88-I sniper case"
 	desc = "A case for storing a Type 88-I sniper rifle."
 	icon_state = "t88case"
 	storage_slots = 10
-	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd)
+	can_hold = list(/obj/item/weapon/gun/rifle/sniper/svd, /obj/item/ammo_magazine/sniper/svd, /obj/item/device/binoculars)
 	max_w_class = SIZE_HUGE
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/fill_preset_inventory()
@@ -467,7 +468,7 @@
 	new /obj/item/ammo_magazine/sniper/svd(src)
 	new /obj/item/ammo_magazine/sniper/svd(src)
 	new /obj/item/ammo_magazine/sniper/svd(src)
-	new /obj/item/ammo_magazine/sniper/svd(src)
+	new /obj/item/device/binoculars/range/designator/spotter(src)
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/update_icon()
 	overlays.Cut()
@@ -483,6 +484,8 @@
 	else
 		if(locate(/obj/item/ammo_magazine/sniper/svd) in contents)
 			overlays += image(icon, "+t88_mag")
+	if(locate(/obj/item/device/binoculars) in contents)
+		overlays += image(icon, "+bino")
 
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/sniper/svd/iff/stored(src)
@@ -494,7 +497,7 @@
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
 	new /obj/item/ammo_magazine/sniper/svd/flak(src)
-	new /obj/item/ammo_magazine/sniper/svd/flak(src)
+	new /obj/item/device/binoculars/range/designator/spotter(src)
 
 /obj/item/storage/box/guncase/heavy/XM99
 	name = "\improper XM99A plasma rifle case"
