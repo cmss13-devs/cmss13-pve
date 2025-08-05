@@ -106,7 +106,7 @@
 
 /obj/item/storage/box/guncase/heavy/m92_upp
 	name = "\improper OG-60 grenade launcher case"
-	desc = "A case for storing a OG-60 grenade launcher."
+	desc = "A case for storing an OG-60 grenade launcher."
 	icon_state = "m92uppcase"
 	storage_slots = 2
 	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m92/upp, /obj/item/storage/pouch/explosive, /obj/item/storage/box/packet/high_explosive/upp)
@@ -333,7 +333,7 @@
 
 /obj/item/storage/box/guncase/heavy/smg
 	name = "\improper M39 submachinegun case"
-	desc = "A case for storing a M39 submachinegun and accompanying magazines."
+	desc = "A case for storing an M39 submachinegun and accompanying magazines."
 	icon_state = "guncase"
 	storage_slots = 8
 	can_hold = list(/obj/item/weapon/gun/smg/m39, /obj/item/ammo_magazine/smg/m39)
@@ -436,7 +436,7 @@
 
 /obj/item/storage/box/guncase/heavy/sniper
 	name = "\improper M42A sniper case"
-	desc = "A case for storing a M42A sniper rifle."
+	desc = "A case for storing an M42A sniper rifle."
 	icon_state = "guncase"
 	storage_slots = 6
 	can_hold = list(/obj/item/weapon/gun/rifle/sniper/M42A, /obj/item/ammo_magazine/sniper, /obj/item/device/binoculars)
