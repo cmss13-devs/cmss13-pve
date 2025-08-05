@@ -428,7 +428,7 @@
 	storage_slots = 3
 	icon_state = "ammo_pack_0"
 	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade)
-	max_w_class = SIZE_MASSIVE
+	max_w_class = SIZE_HUGE
 	throw_range = 0
 	xeno_types = null
 	var/base_icon_state = "ammo_pack"
@@ -644,9 +644,23 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A backpack specifically designed to hold ammunition for the M402 mortar."
 	icon_state = "mortarpack"
 	max_w_class = SIZE_HUGE
-	storage_slots = 8
-	can_hold = list(/obj/item/mortar_shell)
+	storage_slots = 12
+	can_hold = list(/obj/item/mortar_shell, /obj/item/device/binoculars)
 	xeno_types = null
+
+/obj/item/storage/backpack/marine/mortarpack/full/fill_preset_inventory()
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
 
 /// G-8-a general pouch belt
 /obj/item/storage/backpack/general_belt

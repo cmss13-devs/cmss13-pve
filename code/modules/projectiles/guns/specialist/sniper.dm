@@ -560,5 +560,69 @@
 	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
 
+/obj/item/weapon/gun/rifle/sniper/svd/iff
+	name = "\improper Type 88-I designated marksman rifle"
+	desc = /obj/item/weapon/gun/rifle/sniper/svd::desc + " This one is outfitted with an IFF system, and has been refitted to allow an increased rate of fire."
+	actions_types = list(/datum/action/item_action/toggle_iff_svd)
+	var/iff_enabled = TRUE
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/handle_starting_attachment()
+	var/obj/item/attachable/attachie = new /obj/item/attachable/type88_barrel(src)
+	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
+	attachie.Attach(src)
+	update_attachable(attachie.slot)
+
+	var/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/type88sight = new(src)
+	type88sight.flags_attach_features &= ~ATTACH_REMOVABLE
+	type88sight.hidden = FALSE //cagged out
+	type88sight.Attach(src)
+	update_attachable(type88sight.slot)
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
+	))
+
+/datum/action/item_action/toggle_iff_svd/New(Target, obj/item/holder)
+	. = ..()
+	name = "Toggle IFF"
+	action_icon_state = "iff_toggle_on"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/datum/action/item_action/toggle_iff_svd/action_activate()
+	. = ..()
+
+	var/obj/item/weapon/gun/rifle/sniper/svd/iff/G = holder_item
+	if(!ishuman(owner))
+		return
+	var/mob/living/carbon/human/H = owner
+	if(H.is_mob_incapacitated() || G.get_active_firearm(H, FALSE) != holder_item)
+		return
+
+	G.toggle_lethal_mode(usr)
+	if(G.iff_enabled)
+		action_icon_state = "iff_toggle_on"
+	else
+		action_icon_state = "iff_toggle_off"
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/proc/toggle_lethal_mode(mob/user)
+	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
+	playsound(loc,'sound/machines/click.ogg', 25, 1)
+	iff_enabled = !iff_enabled
+	if(iff_enabled)
+		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
+	if(!iff_enabled)
+		remove_bullet_trait("iff")
+	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
+
+/obj/item/weapon/gun/rifle/sniper/svd/iff/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/sniper/svd/iff::flags_gun_features | GUN_TRIGGER_SAFETY
+
+
 /obj/item/weapon/gun/rifle/sniper/svd/pve
 	current_mag = /obj/item/ammo_magazine/sniper/svd/pve
