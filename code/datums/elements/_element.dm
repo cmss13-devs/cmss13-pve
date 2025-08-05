@@ -27,9 +27,9 @@
 
 /// Deactivates the functionality defines by the element on the given datum
 /datum/element/proc/Detach(datum/source, force)
+	SHOULD_CALL_PARENT(TRUE)
 	SIGNAL_HANDLER
 
-	SHOULD_CALL_PARENT(TRUE)
 	SEND_SIGNAL(source, COMSIG_ELEMENT_DETACH, src)
 	UnregisterSignal(source, COMSIG_PARENT_QDELETING)
 
