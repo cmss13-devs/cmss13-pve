@@ -702,10 +702,12 @@
 	desc = "Contains radio encryption keys. They can be inserted into a radio headset."
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "uppkeycase"
+	var/icon_lid = "uppkeycase_lid"
 	w_class = SIZE_SMALL
 	max_w_class = SIZE_TINY
 	storage_slots = 4
 	can_hold = list(/obj/item/device/encryptionkey)
+	use_sound = "toolbox"
 
 /obj/item/storage/box/upp_radio_key/fill_preset_inventory()
 	new /obj/item/device/encryptionkey/upp(src)
@@ -718,7 +720,7 @@
 	if(opened)
 		overlays += image(icon, "uppkeycase_lid_open")
 	else
-		overlays += image(icon, "uppkeycase_lid")
+		overlays += image(icon, icon_lid)
 		return
 	var/key_tally = -1
 	for(var/obj/item/device/encryptionkey/radio_key in contents)
@@ -742,6 +744,7 @@
 
 /obj/item/storage/box/upp_radio_key/colony
 	name = "box of UPP civilian radio keys"
+	icon_lid = "uppkeycaseciv_lid"
 
 /obj/item/storage/box/upp_radio_key/colony/fill_preset_inventory()
 	new /obj/item/device/encryptionkey/colony(src)
@@ -751,6 +754,7 @@
 
 /obj/item/storage/box/upp_radio_key/engi
 	name = "box of UPP Engineering Encryption Keys"
+	icon_lid = "uppkeycaseengi_lid"
 
 /obj/item/storage/box/upp_radio_key/engi/fill_preset_inventory()
 	new /obj/item/device/encryptionkey/upp/engi(src)
