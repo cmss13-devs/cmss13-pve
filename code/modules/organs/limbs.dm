@@ -273,7 +273,7 @@
 	if(status & LIMB_DESTROYED)
 		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
 			var/datum/species/zombie/zombie = owner.species
-			if(!zombie.can_rise_again(owner))
+			if(zombie.can_rise_again(owner)) //Only want this if the zombie is potentially still a threat, otherwise it's w/e
 				var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
 				var/list/potential_limbs = owner.limbs - list(src)
 				while(!random_limb_found || potential_limbs.len < 1)
