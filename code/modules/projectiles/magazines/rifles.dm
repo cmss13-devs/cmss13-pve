@@ -195,6 +195,7 @@
 	name = "\improper M49A depleted uranium magazine (10x28mm)"
 	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x28mm rounds for use in the M49A-R2 battle rifle."
 	icon_state = "m49a"
+	caliber = "10x28mmDU"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/du
 	gun_type = /obj/item/weapon/gun/rifle/m49a/pve
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
