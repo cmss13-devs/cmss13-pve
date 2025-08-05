@@ -463,7 +463,21 @@
 	current_mag = /obj/item/ammo_magazine/smg/bizon
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_MIN
-	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor, // Barrel
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/lasersight, // Under
+		/obj/item/attachable/lasersight/upp,
+		/obj/item/attachable/burstfire_assembly,
+		)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 27, "side_rail_y" = 18)
@@ -487,6 +501,11 @@
 	desc_lore = "The Type 64 finds its way into the hands of more than just UPP soldiers, it has an active life with rebel groups, corporate security forces, mercenaries, less well-armed militaries, and just about everything or everyone in between."
 	icon_state = "type64_u"
 	item_state = "type64"
+
+/obj/item/weapon/gun/smg/bizon/upp/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/smg/bizon/upp::flags_gun_features | GUN_TRIGGER_SAFETY
+	starting_attachment_types = list(/obj/item/attachable/reflex/upp, /obj/item/attachable/flashlight)
 
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.
