@@ -464,6 +464,22 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
 
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
+//Flag patches
+/obj/item/clothing/accessory/patch/ua
+	name = "UA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
+	icon_state = "uaflagpatch"
+
+/obj/item/clothing/accessory/patch/usa
+	name = "USA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
+	icon_state = "usaflagpatch"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"
