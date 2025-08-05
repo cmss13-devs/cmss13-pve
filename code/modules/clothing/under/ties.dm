@@ -1650,6 +1650,12 @@
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 
+/obj/item/storage/internal/accessory/black_vest/m3generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
+	)
+
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6
 	can_hold = list(
