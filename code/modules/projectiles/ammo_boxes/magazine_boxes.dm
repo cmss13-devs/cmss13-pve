@@ -479,7 +479,8 @@
 	flags_equip_slot = null
 	magazine_type = /obj/item/ammo_magazine/rifle/type71
 	num_of_magazines = 32
-	var/move_delay_mult = 2
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
 
 /obj/item/ammo_box/magazine/type71/large/pickup(mob/user, silent)
 	. = ..()
@@ -704,7 +705,8 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
 	num_of_magazines = 32
 	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
-	var/move_delay_mult = 2
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
 
 /obj/item/ammo_box/magazine/mk1/large/pickup(mob/user, silent)
 	. = ..()
