@@ -58,3 +58,41 @@
 
 	if(!hit_wall.hull)
 		return COMPONENT_BULLET_PASS_THROUGH
+
+//UPP machinegun special ammo
+/datum/element/bullet_trait_penetrating/weak/pkp
+	damage_percent_lost_per_hit = 2
+
+/datum/element/bullet_trait_penetrating/weak/pkp/handle_passthrough_turf(obj/projectile/bullet, turf/closed/wall/hit_wall)
+	var/slow_mult = 2
+
+	// Better penetration against Membranes to still be able to counter Boilers at most ranges. Still loses 4 tiles of range and 25 damage per.
+	if(istype(hit_wall, /turf/closed/wall/resin/membrane))
+		if(istype(hit_wall, /turf/closed/wall/resin/membrane/thick))
+			slow_mult = 1.5
+		else
+			slow_mult = 1
+
+
+	bullet.distance_travelled += (distance_loss_per_hit * slow_mult)
+
+	bullet.damage *= (1 - (damage_percent_lost_per_hit * slow_mult * 0.01))
+
+	if(!istype(hit_wall))
+		return COMPONENT_BULLET_PASS_THROUGH
+
+	if(!hit_wall.hull)
+		return COMPONENT_BULLET_PASS_THROUGH
+
+/datum/element/bullet_trait_penetrating/weak/pkp/handle_passthrough_movables(obj/projectile/bullet, atom/movable/hit_movable, did_hit)
+	if(did_hit)
+		var/slow_mult = 0.6
+		if(ismob(hit_movable))
+			var/mob/mob = hit_movable
+			if(mob.mob_size >= MOB_SIZE_BIG) // Big Xenos (including fortified Defender) can soak hits and greatly reduce penetration.
+				slow_mult = 1.2 // 8 tiles of range lost per Big hit. At point blank, this comes out to only 3 targets. At sniping ranges, even a single one can stop the bullet dead.
+
+		bullet.distance_travelled += (distance_loss_per_hit * slow_mult)
+		bullet.damage -= (damage_percent_lost_per_hit * slow_mult)
+
+	return COMPONENT_BULLET_PASS_THROUGH
