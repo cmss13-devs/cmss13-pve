@@ -236,6 +236,9 @@
 		/obj/item/reagent_container/blood,
 	)
 
+/obj/item/storage/belt/medical/only_scanner/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
+
 /obj/item/storage/belt/medical/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
@@ -247,6 +250,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/verb/toggle_mode() //A verb that can (should) only be used if in hand/equipped
 	set category = "Object"
@@ -259,7 +263,7 @@
 /obj/item/storage/belt/medical/full/with_defib_and_analyzer/fill_preset_inventory()
 	. = ..()
 	new /obj/item/device/defibrillator(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(get_turf(src))
 
 /obj/item/storage/belt/medical/full/with_suture_and_graft/fill_preset_inventory()
 	. = ..()
@@ -287,6 +291,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
@@ -330,6 +335,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -346,6 +352,7 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/dutch/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -363,9 +370,10 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/splint(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
 	new /obj/item/storage/pill_bottle/imidazoline(src)
 	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/full/forecon/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -388,7 +396,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp
 	name = "\improper Type 41 pattern lifesaver bag"
@@ -418,6 +426,7 @@
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp/partial/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -453,7 +462,7 @@
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
@@ -1338,6 +1347,15 @@
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 	new /obj/item/ammo_magazine/pistol/m1911(src)
 
+/obj/item/storage/belt/gun/m4a3/m1911/forecon_officer/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/officer())
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+	new /obj/item/ammo_magazine/pistol/m1911/super(src)
+
 /obj/item/storage/belt/gun/m4a3/m1911/socom/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911/socom/equipped())
 	new /obj/item/ammo_magazine/pistol/m1911(src)
@@ -1431,6 +1449,11 @@
 			"icon_x" = -11,
 			"icon_y" = -5))
 
+/obj/item/storage/belt/gun/m39/forecon/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/forecon())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/m39/extended(src)
+
 #define MAXIMUM_MAGAZINE_COUNT 2
 
 /obj/item/storage/belt/gun/xm51
@@ -1455,8 +1478,8 @@
 	var/magazines = 0
 
 /obj/item/storage/belt/gun/xm51/attackby(obj/item/item, mob/user)
-	if(istype(item, /obj/item/ammo_magazine/shotgun/light/breaching))
-		var/obj/item/ammo_magazine/shotgun/light/breaching/ammo_box = item
+	if(istype(item, /obj/item/ammo_magazine/shotgun/buckshot/light))
+		var/obj/item/ammo_magazine/shotgun/buckshot/light/ammo_box = item
 		dump_ammo_to(ammo_box, user, ammo_box.transfer_handful_amount)
 	else
 		return ..()
@@ -1484,6 +1507,24 @@
 		magazines--
 
 #undef MAXIMUM_MAGAZINE_COUNT
+
+/obj/item/storage/belt/gun/shotgunholster
+	name = "\improper M276 pattern shotgun holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is a jury rigged shotgun holster using a cannibalized l44 shotgun scabbard and a shell pouch"
+	icon_state = "shotgunholster"
+	has_gamemode_skin = FALSE
+	gun_has_gamemode_skin = FALSE
+	storage_slots = 4
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/ammo_magazine/handful,
+		/obj/item/weapon/gun/shotgun/pump,
+		/obj/item/weapon/gun/shotgun/combat,
+	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = 10,
+			"icon_y" = -1))
 
 /obj/item/storage/belt/gun/m44
 	name = "\improper M276 pattern general revolver holster rig"
@@ -1634,11 +1675,12 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/mateba/cmateba/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba/cmateba())
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/mateba())
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
+	new /obj/item/ammo_magazine/revolver/mateba(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact(src)
-	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 	new /obj/item/ammo_magazine/revolver/mateba/highimpact/ap(src)
 
 /obj/item/storage/belt/gun/mateba/cmateba/special

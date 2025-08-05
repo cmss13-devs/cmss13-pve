@@ -1,0 +1,4 @@
+author: "Ducky-Momo"
+delete-after: True
+changes:
+  - rscadd: "added new SG sounds, removed rattle/low ammo sound"

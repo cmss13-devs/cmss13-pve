@@ -37,6 +37,33 @@
 	chemclass = CHEM_CLASS_UNCOMMON
 	properties = list(PROPERTY_PAINKILLING = 2)
 
+/datum/reagent/medical/saline
+	name = "Saline Solution"
+	id = "saline"
+	description = "A mixture of water, sodium chloride and glucose made to treat blood loss, the symptoms of minor poisoning or hyperthermia."
+	reagent_state = LIQUID
+	color = COLOR_SILVER
+	chemfiresupp = TRUE
+	intensitymod = 0.1
+	burncolor = "#ffff00"
+	burncolormod = 2
+	overdose = 999
+	overdose_critical = 999 //customlife
+	chemclass = CHEM_CLASS_COMMON
+	properties = list(PROPERTY_HYPOTHERMIC = 0.5, PROPERTY_HEMOGENIC = 1, PROPERTY_ANTITOXIC = 1, PROPERTY_OXYGENATING = 1)
+
+/datum/reagent/medical/saline/on_mob_life(mob/living/M)
+	. = ..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/human = M
+		if(volume >= 40 && prob(25))
+			human.EyeBlur(3)
+		if(volume >= 60 && prob(25))
+			human.EyeBlur(9)
+			M.make_dizzy(3)
+		if(volume >= 100 && prob(25))
+			human.vomit()
+
 /datum/reagent/medical/tramadol
 	name = "Tramadol"
 	id = "tramadol"
@@ -211,7 +238,7 @@
 	custom_metabolism = AMOUNT_PER_TIME(1, 2 SECONDS)
 	overdose = MED_REAGENTS_OVERDOSE
 	overdose_critical = MED_REAGENTS_OVERDOSE_CRITICAL
-	properties = list(PROPERTY_ANTITOXIC = 1, PROPERTY_BIOCIDIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 4, PROPERTY_AIDING = 1, PROPERTY_BIOCIDIC = 2, PROPERTY_OCULOTOXIC = 0.5)
 
 /datum/reagent/medical/alkysine
 	name = "Alkysine"
@@ -293,7 +320,7 @@
 	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 10 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_PAINKILLING = 1.5, PROPERTY_ELECTROGENETIC = 4, PROPERTY_REVITALIZING = 1, PROPERTY_HYPOXEMIC = 2.5, PROPERTY_INTRAVENOUS = 1, PROPERTY_CARDIOTOXIC = 1.5)
+	properties = list(PROPERTY_PAINKILLING = 10, PROPERTY_ELECTROGENETIC = 6, PROPERTY_OXYGENATING = 3, PROPERTY_REVITALIZING = 1, PROPERTY_INTRAVENOUS = 1, PROPERTY_CARDIOTOXIC = 2.5)
 	flags = REAGENT_TYPE_MEDICAL | REAGENT_SCANNABLE
 
 /datum/reagent/medical/ultrazine

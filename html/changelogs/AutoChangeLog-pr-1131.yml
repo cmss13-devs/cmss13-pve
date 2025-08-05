@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - bugfix: "Non-USCM factions can now pick the \"magazine\" item."

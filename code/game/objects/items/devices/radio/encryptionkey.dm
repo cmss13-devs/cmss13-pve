@@ -335,7 +335,7 @@
 
 /obj/item/device/encryptionkey/clf/engi
 	name = "\improper CLF Engineering Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE)
 
 /obj/item/device/encryptionkey/clf/medic
 	name = "\improper CLF Medical Radio Encryption Key"
@@ -343,7 +343,7 @@
 
 /obj/item/device/encryptionkey/clf/command
 	name = "\improper CLF Command Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_MED = TRUE, RADIO_CHANNEL_CLF_CCT = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_MED = TRUE)
 //---------------------------------------------------
 /obj/item/device/encryptionkey/highcom
 	name = "\improper USCM High Command Radio Encryption Key"
@@ -365,6 +365,10 @@
 	name = "\improper Royal Marine Radio Encryption Key"
 	icon_state = "sl_key"
 	channels = list("Command" = TRUE, "Almayer" = TRUE,)
+
+/obj/item/device/encryptionkey/cia
+	icon_state = "sl_key"
+	channels = list(RADIO_CHANNEL_CIA = TRUE, RADIO_CHANNEL_COMMAND = TRUE, RADIO_CHANNEL_MP = TRUE, SQUAD_MARINE_1 = FALSE, SQUAD_MARINE_2 = FALSE, SQUAD_MARINE_3 = FALSE, SQUAD_MARINE_4 = FALSE, SQUAD_MARINE_5 = FALSE, SQUAD_MARINE_CRYO = FALSE, RADIO_CHANNEL_ENGI = TRUE, RADIO_CHANNEL_MEDSCI = TRUE, RADIO_CHANNEL_REQ = TRUE, RADIO_CHANNEL_JTAC = FALSE, RADIO_CHANNEL_INTEL = TRUE)
 
 /obj/item/device/encryptionkey/cmb
 	name = "\improper Colonial Marshal Bureau Radio Encryption Key"
