@@ -202,18 +202,22 @@
 	desc = "A 64 round magazine of armor piercing rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
 	default_ammo = /datum/ammo/bullet/smg/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
+	bonus_overlay = "type64_ap"
 
 /obj/item/ammo_magazine/smg/bizon/ap/penetrating
 	name = "\improper Type 64 wall-penetrating Helical Magazine (7.62x19mm)"
 	desc = "A 64 round magazine of wall-penetrating rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
 	default_ammo = /datum/ammo/bullet/smg/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+	bonus_overlay = "type64_pen"
+
 
 /obj/item/ammo_magazine/smg/bizon/heap
 	name = "\improper Type 64 HEAP Helical Magazine (7.62x19mm)"
 	desc = "A 64 round magazine of high explosive armor piercing rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
 	default_ammo = /datum/ammo/bullet/smg/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+	bonus_overlay = "type64_heap"
 
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.
