@@ -1,0 +1,5 @@
+author: "Merrgear"
+delete-after: True
+changes:
+  - rscadd: "Adds shotgun holster belt to loadout"
+  - balance: "Tweaks XM51 belt to fit the m120 and Ithica"
