@@ -26,6 +26,11 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one leads the entire bundle of disorganised troops into battle."
 	path = /datum/equipment_preset/upp/militia/nco
 
+/datum/human_ai_equipment_preset/upp/militia/officer
+	name = "UPP People's Territorial Guardsman Officer"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one manages the whole operation around the UPP Territorial Guard."
+	path = /datum/equipment_preset/upp/militia/officer
+
 /datum/human_ai_equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman"
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
