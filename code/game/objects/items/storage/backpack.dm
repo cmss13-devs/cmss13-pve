@@ -428,7 +428,7 @@
 	storage_slots = 3
 	icon_state = "ammo_pack_0"
 	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade)
-	max_w_class = SIZE_MASSIVE
+	max_w_class = SIZE_HUGE
 	throw_range = 0
 	xeno_types = null
 	var/base_icon_state = "ammo_pack"

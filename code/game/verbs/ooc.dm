@@ -121,7 +121,9 @@
 			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
 			message_admins("[key_name_admin(src)] has attempted to advertise in LOOC: [msg]")
 			return
-
+		if(!COOLDOWN_FINISHED(src, looc_cooldown))
+			to_chat(usr, SPAN_DANGER("You can't send messages in LOOC for [COOLDOWN_SECONDSLEFT(src, looc_cooldown)] more seconds."))
+			return
 	if(!attempt_talking(msg))
 		return
 
@@ -166,6 +168,8 @@
 			if (C.mob in heard)
 				prefix = "LOOC"
 			to_chat(C, "<font color='#f557b8'><span class='ooc linkify'><span class='prefix'>[prefix]:</span> <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></font>")
+
+	COOLDOWN_START(src, looc_cooldown, GLOB.looc_cooldown_time)
 
 /client/verb/round_info()
 	set name = "Current Map" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite

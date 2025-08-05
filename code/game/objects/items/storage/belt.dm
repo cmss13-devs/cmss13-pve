@@ -464,6 +464,23 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
+/obj/item/storage/belt/medical/lifesaver/upp/lesser/fill_preset_inventory()
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This configuration is commonly seen among USCM Military Police and peacekeepers, though it can hold some light munitions."
@@ -1509,6 +1526,24 @@
 		magazines--
 
 #undef MAXIMUM_MAGAZINE_COUNT
+
+/obj/item/storage/belt/gun/shotgunholster
+	name = "\improper M276 pattern shotgun holster rig"
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is a jury rigged shotgun holster using a cannibalized l44 shotgun scabbard and a shell pouch"
+	icon_state = "shotgunholster"
+	has_gamemode_skin = FALSE
+	gun_has_gamemode_skin = FALSE
+	storage_slots = 4
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/ammo_magazine/handful,
+		/obj/item/weapon/gun/shotgun/pump,
+		/obj/item/weapon/gun/shotgun/combat,
+	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = 10,
+			"icon_y" = -1))
 
 /obj/item/storage/belt/gun/m44
 	name = "\improper M276 pattern general revolver holster rig"
