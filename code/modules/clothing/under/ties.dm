@@ -1411,10 +1411,10 @@
 	item_state = "smileyface"
 
 /obj/item/clothing/accessory/paint/melancholy
-	name = "smileyface armor paint"
+	name = "neutralface armor paint"
 	desc = "A set of paint tones to etch a happy face into a Marine's armor, though this one carries indifferent energy."
-	icon_state = "neutral"
-	item_state = "neutral"
+	icon_state = "neutralface"
+	item_state = "neutralface"
 
 /obj/item/clothing/accessory/paint/cross
 	name = "cross armor paint"
