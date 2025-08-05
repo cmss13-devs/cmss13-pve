@@ -386,7 +386,6 @@
 	scope.hidden = FALSE
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	scope.Attach(src)
-	scope.hidden = TRUE
 	update_attachable(scope.slot)
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff

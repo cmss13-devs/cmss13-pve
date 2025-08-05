@@ -1537,6 +1537,24 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"cN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/weapon/butterfly,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/cryo_cells)
 "cO" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1786,6 +1804,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/item/prop/magazine/book/littleredbook,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
@@ -1892,6 +1911,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/item/weapon/butterfly,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10
@@ -2126,6 +2146,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
+/obj/item/prop/magazine/book/littleredbook,
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
 	pixel_x = -7
@@ -2381,6 +2402,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/item/weapon/butterfly,
 /obj/structure/machinery/light/small{
 	dir = 4;
 	light_color = "#e7c0a4";
@@ -3294,7 +3316,6 @@
 /obj/item/book/manual/chef_recipes,
 /obj/item/book/manual/barman_recipes,
 /obj/item/book/manual/engineering_hacking,
-/obj/item/prop/magazine/book/littleredbook,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
 "gR" = (
@@ -3332,10 +3353,6 @@
 	},
 /obj/structure/prop/ice_colony/hula_girl{
 	pixel_x = -10
-	},
-/obj/item/weapon/butterfly{
-	pixel_x = 9;
-	pixel_y = -5
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/dorms)
@@ -22128,7 +22145,7 @@ eT
 bF
 eI
 ep
-dr
+cN
 dM
 dr
 bF

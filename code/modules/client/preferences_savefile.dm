@@ -613,9 +613,6 @@
 	S["flavor_texts_hands"] >> flavor_texts["hands"]
 	S["flavor_texts_legs"] >> flavor_texts["legs"]
 	S["flavor_texts_feet"] >> flavor_texts["feet"]
-	S["flavor_texts_helmet"] >> flavor_texts["helmet"]
-	S["flavor_texts_armor"] >> flavor_texts["armor"]
-
 
 	//Miscellaneous
 	S["med_record"] >> med_record
@@ -790,8 +787,6 @@
 	S["flavor_texts_hands"] << flavor_texts["hands"]
 	S["flavor_texts_legs"] << flavor_texts["legs"]
 	S["flavor_texts_feet"] << flavor_texts["feet"]
-	S["flavor_texts_helmet"] << flavor_texts["helmet"]
-	S["flavor_texts_armor"] << flavor_texts["armor"]
 
 	//Miscellaneous
 	S["med_record"] << med_record
