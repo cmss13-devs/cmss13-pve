@@ -1575,7 +1575,7 @@
 	icon_state = "upp_webbing_magazine"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	storage_slots = 4
@@ -1606,7 +1606,7 @@
 	icon_state = "upp_webbing_small"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"
@@ -1614,7 +1614,7 @@
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===
