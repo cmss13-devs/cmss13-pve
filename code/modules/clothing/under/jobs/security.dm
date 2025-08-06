@@ -130,6 +130,9 @@
 	armor_bio = CLOTHING_ARMOR_NONE
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/detective/neutral
 	name = "brown suit pants"
@@ -139,6 +142,9 @@
 	desc = "A washed out white shirt with a red tie and black slacks."
 	icon_state = "detective_grey"
 	worn_state = "detective_grey"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/warden/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."

@@ -664,6 +664,9 @@
 	icon_state = "colonist"
 	worn_state = "colonist"
 	has_sensor = UNIFORM_HAS_SENSORS
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/colonist/workwear
 	name = "grey workwear"
@@ -973,24 +976,36 @@
 	icon_state = "green_utility"
 	worn_state = "green_utility"
 	displays_id = FALSE
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/yellow
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
 	icon_state = "yellow_utility"
 	worn_state = "yellow_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/red
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with red suspenders and blue jeans, the sign of a veteran laborer, or someone not paid by the hour."
 	icon_state = "red_utility"
 	worn_state = "red_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/utility/blue
 	name = "\improper utility uniform"
 	desc = "A blue utility uniform with teal suspenders and rugged pants."
 	icon_state = "blue_utility"
 	worn_state = "blue_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
 
 /obj/item/clothing/under/rank/synthetic/councillor
 	name = "\improper USCM Pristine Support Uniform"
@@ -1360,3 +1375,6 @@
 	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
 	icon_state = "yellow_utility"
 	worn_state = "yellow_utility"
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
+	)
