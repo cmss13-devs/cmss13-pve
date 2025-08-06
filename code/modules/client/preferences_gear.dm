@@ -591,6 +591,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
+/datum/gear/clothing/shotgun_holster_belt
+	display_name = "shotgun holster belt"
+	path = /obj/item/storage/belt/gun/xm51
+	cost = 3
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/clothing/flak
 	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
@@ -1559,6 +1565,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
+
+/datum/gear/misc/patch_uscm/ua
+	display_name = "United Americas flag shoulder patch"
+	path = /obj/item/clothing/accessory/patch/ua
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/misc/patch_uscm/usa
+	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
+	path = /obj/item/clothing/accessory/patch/usa
+	cost = 1
+	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/misc/patch_upp
 	display_name = "UPPAC shoulder patch"
