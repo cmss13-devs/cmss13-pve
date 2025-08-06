@@ -276,6 +276,10 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 
+	/obj/item/storage/firstaid/softpack/upp
+		icon_state = "softpack_upp"
+		open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/regular
 	name = "general first-aid pack"
 	desc = "A soft first-aid pack containing basic medication and equipment for use in the field."
@@ -288,6 +292,10 @@
 	new /obj/item/stack/medical/bruise_pack(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/splint(src)
+
+	/obj/item/storage/firstaid/softpack/regular/upp
+		icon_state = "softpack_upp"
+		open_state = "softpack_empty_upp"
 
 /obj/item/storage/firstaid/softpack/adv
 	name = "advanced first-aid pack"
@@ -303,6 +311,10 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
 
+	/obj/item/storage/firstaid/softpack/adv/upp
+		icon_state = "softpack_darkred_upp"
+		open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/brute
 	name = "brute first-aid pack"
 	desc = "A soft first-aid pack containing equipment for physical treatment in the field."
@@ -316,6 +328,10 @@
 	new /obj/item/tool/surgery/surgical_line(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+
+	/obj/item/storage/firstaid/softpack/brute/upp
+		icon_state = "softpack_purple_upp"
+		open_state = "softpack_empty_upp"
 
 /obj/item/storage/firstaid/softpack/fire
 	name = "fire first-aid pack"
@@ -331,6 +347,10 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 
+	/obj/item/storage/firstaid/softpack/fire/upp
+		icon_state = "softpack_orange_upp"
+		open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/burn
 	name = "burn first-aid pack"
 	desc = "A soft first-aid pack containing equipment for burns treatment in the field."
@@ -344,6 +364,10 @@
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+
+	/obj/item/storage/firstaid/softpack/burn/upp
+		icon_state = "softpack_darkorange_upp"
+		open_state = "softpack_empty_upp"
 
 /obj/item/storage/firstaid/softpack/toxin
 	name = "toxin first-aid pack"
@@ -359,6 +383,10 @@
 	new /obj/item/storage/pill_bottle/imidazoline(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 
+	/obj/item/storage/firstaid/softpack/toxin/upp
+		icon_state = "softpack_green_upp"
+		open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/o2
 	name = "oxygen deprivation first-aid pack"
 	desc = "A soft first-aid pack containing equipment for reoxygenating treatment in the field."
@@ -372,6 +400,10 @@
 	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/pill/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
+
+	/obj/item/storage/firstaid/softpack/o2/upp
+		icon_state = "softpack_blue_upp"
+		open_state = "softpack_empty_upp"
 
 /obj/item/storage/firstaid/softpack/synth
 	name = "synthetic repair pack"
@@ -403,6 +435,10 @@
 	new /obj/item/stack/cable_coil/white(src)
 	new /obj/item/tool/weldingtool(src)
 
+	/obj/item/storage/firstaid/softpack/synth/upp
+		icon_state = "softpack_gray_upp"
+		open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/rad
 	name = "radiation first-aid pack"
 	desc = "A soft first-aid pack containing equipment to treat radiation exposure in the field."
@@ -415,6 +451,10 @@
 	new /obj/item/reagent_container/pill/imidazoline(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+
+	/obj/item/storage/firstaid/softpack/rad/upp
+		icon_state = "softpack_darkgreen_upp"
+		open_state = "softpack_empty_upp"
 
 /obj/item/storage/firstaid/softpack/surgical
 	name = "basic field surgery pack"
@@ -443,6 +483,10 @@
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+
+	/obj/item/storage/firstaid/softpack/surgical/upp
+		icon_state = "softpack_gray_upp"
+		open_state = "softpack_empty_upp"
 
 //---------SYRINGE CASE---------
 
