@@ -273,7 +273,7 @@
 	if(status & LIMB_DESTROYED)
 		if(iszombie(owner)) //To make sure you're not mag dumbing into limbs that don't exist we just move the damage to a random limb
 			var/datum/species/zombie/zombie = owner.species
-			if(zombie.can_rise_again(owner)) //Only want this if the zombie is potentially still a threat, otherwise it's w/e
+			if(zombie.can_rise_again(owner) || owner.stat != DEAD) //Only want this if the zombie is potentially still a threat, otherwise it's w/e
 				var/random_limb_found = FALSE //Could apply this to just any human but Eeeeeeh.
 				var/list/potential_limbs = owner.limbs - list(src)
 				while(!random_limb_found || potential_limbs.len < 1)
@@ -301,7 +301,7 @@
 			if(prob(zombie_cut_prob))
 				limb.limb_delimb(damage_source)
 				return
-		if(!zombie.can_rise_again(owner)) //This will also check and handle if the zombie is perma.
+		if(!zombie.can_rise_again(owner) && owner.stat == DEAD) //This will also check and handle if the zombie is perma.
 			return
 
 	var/previous_brute = brute_dam
@@ -1560,7 +1560,7 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	if(owner_helmet.flags_inventory & FULL_DECAP_PROTECTION)
 		return
-	owner.drop_inv_item_on_ground(owner_helmet)
+	qdel(owner_helmet)
 	if(iszombie(owner))
 		owner.visible_message("[owner]'s [owner_helmet] gives way and cracks from the impact!", SPAN_USERDANGER("Your [owner_helmet] has broken and your head is vunlerable!"))
 		playsound(owner, 'sound/effects/helmet_noise.ogg', 100)
