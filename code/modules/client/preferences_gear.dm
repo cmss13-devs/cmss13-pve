@@ -593,7 +593,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/clothing/shotgun_holster_belt
 	display_name = "shotgun holster belt"
-	path = /obj/item/storage/belt/gun/xm51
+	path = /obj/item/storage/belt/gun/shotgunholster
 	cost = 3
 	allowed_origins = USCM_ORIGINS
 
