@@ -27,7 +27,7 @@
 	)
 
 	scatter = 2
-	fire_delay = 4.0 SECONDS
+	fire_delay = 8.0 SECONDS
 
 /obj/item/hardpoint/secondary/towlauncher/set_bullet_traits()
 	..()

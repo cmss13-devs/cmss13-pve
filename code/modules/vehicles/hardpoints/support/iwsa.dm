@@ -9,6 +9,6 @@
 	health = 2000
 
 	buff_multipliers = list(
-		"cooldown" = 0.67,
+		"cooldown" = 0.8,
 		"accuracy" = 1.67
 	)
