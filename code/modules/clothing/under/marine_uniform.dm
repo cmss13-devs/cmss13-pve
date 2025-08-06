@@ -664,9 +664,6 @@
 	icon_state = "colonist"
 	worn_state = "colonist"
 	has_sensor = UNIFORM_HAS_SENSORS
-	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
-	)
 
 /obj/item/clothing/under/colonist/workwear
 	name = "grey workwear"
