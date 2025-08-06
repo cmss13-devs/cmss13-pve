@@ -117,6 +117,12 @@
 	storage_slots = 3
 	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
 
+/obj/item/clothing/suit/storage/marine/veteran/pmc/corporate
+	name = "\improper M1 pattern PMC leader armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
+	icon_state = "officer_armor"
+	item_state_slots = list(WEAR_JACKET = "officer_armor")
+
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth/Initialize()
 	flags_atom |= NO_NAME_OVERRIDE
 	flags_marine_armor |= SYNTH_ALLOWED
@@ -893,4 +899,5 @@
 	slowdown = SLOWDOWN_ARMOR_HEAVY
 	time_to_unequip = 20
 	time_to_equip = 20
+
 
