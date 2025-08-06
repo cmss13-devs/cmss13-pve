@@ -42,3 +42,7 @@
 
 	if(!T.hull)
 		return COMPONENT_BULLET_PASS_THROUGH
+
+/datum/element/bullet_trait_penetrating/pkp
+	distance_loss_per_hit = 6
+
