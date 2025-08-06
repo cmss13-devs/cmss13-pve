@@ -306,6 +306,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/trimmed_wire = "trimmed_wire",
 	/obj/item/prop/helmetgarb/helmet_nvg = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/helmet_nvg/marsoc = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/flair_initech = "flair_initech",
 	/obj/item/prop/helmetgarb/flair_io = "flair_io",
@@ -1076,7 +1077,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
 	icon_state = "heavy_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
@@ -1890,7 +1891,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	force = 0 //"The M3 MOPP mask would be a normal weapon if you were to hit someone with it."
 	throwforce = 0
-	flags_inventory = BLOCKSHARPOBJ
+	flags_inventory = BLOCKSHARPOBJ|BLOCKGASEFFECT
 	flags_marine_helmet = NO_FLAGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR

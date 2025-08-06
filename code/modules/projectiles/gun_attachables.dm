@@ -1136,6 +1136,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
 
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff
+	name = "variable IFF enabled zoom scope"
+
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/New()
+	..()
+	delay_mod = -FIRE_DELAY_TIER_2
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+/*
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+*/
+
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"
 	attach_icon = "slavicscope"
@@ -2530,6 +2544,26 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/m49a_barrel/forecon
+	name = "M49A2 barrel"
+	icon_state = "m49a_barrel_a"
+	attach_icon = "m49a_barrel_a"
+
+/* /obj/item/attachable/m49a_barrel/New()
+	..()
+	select_gamemode_skin(type)
+
+/obj/item/attachable/m49a_barrel/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	var/new_attach_icon
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("snow")
+			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
+		if("desert")
+			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
+		if("classic")
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
+
 /obj/item/attachable/m49a_barrel_custom
 	name = "custom M49A barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
@@ -3398,7 +3432,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/type71/ag80
 	name = "\improper GP-45 grenade launcher"
-	desc = "Integrated grenade launcher yipee"
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
 	has_breech = TRUE

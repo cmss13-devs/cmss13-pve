@@ -536,3 +536,10 @@
 
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
 	name = "co-pilot seat"
+
+// GUNNER VAN Seat
+/obj/structure/bed/chair/comfy/vehicle/van_gunner
+	name = "gunner's seat"
+	desc = "Comfortable seat for a gunner."
+	seat = VEHICLE_GUNNER
+	required_skill = SKILL_VEHICLE_DEFAULT
