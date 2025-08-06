@@ -117,7 +117,9 @@
 		return
 
 	if(iszombie(ai_human))
-		ai_human.do_click(src, "", list())
+		if(locked || welded || isElectrified())
+			ai_human.a_intent_change(INTENT_DISARM)
+			ai_human.do_click(src, "", list())
 		return
 
 	brain.holster_primary()
@@ -141,10 +143,11 @@
 		return TRUE
 
 	if(brain.faction_check(src))
-		var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
-		ai_human.a_intent = random_intent
-		if(get_ai_brain())
-			a_intent = random_intent
+		if(!iszombie(ai_human))
+			var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
+			ai_human.a_intent = random_intent
+			if(get_ai_brain())
+				a_intent = random_intent
 		return TRUE
 
 	if((body_position == LYING_DOWN) && (brain.current_target != src))
