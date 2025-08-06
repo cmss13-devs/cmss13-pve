@@ -1213,16 +1213,16 @@
 	var/list/choices = list("armor" = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_armor"), "strength"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_strength"), "invisibility"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_invisibility"), "speed"  = image(icon = 'icons/mob/hud/actions.dmi', icon_state = "crysis_speed"))
 	var/choice = show_radial_menu(usr, usr, choices, require_near = TRUE)
 	if(choice == "invisibility" && !istype(H.head, /obj/item/clothing/head/helmet/marine/crysis))
-		to_chat(usr, SPAN_WARNING("Unable to engage cloak mode without a helmet.")
+		to_chat(usr, SPAN_WARNING("Unable to engage cloak mode without a helmet."))
 		choice = "armor"
 	if(!choice)
 		choice = "armor"
 	suit.current_mode = choice
 	if(choice == "invisibility")
-		to_chat(usr, SPAN_NOTICE("Cloak engaged.")
-		playsound_client(H.client, 'sound/voice/cloak_engaged.ogg')
+		to_chat(usr, SPAN_NOTICE("Cloak engaged."))
+		//playsound_client(H.client, 'sound/voice/cloak_engaged.ogg')
 	else
-		to_chat(usr, SPAN_NOTICE("Maximum [suit.current_mode].")
+		to_chat(usr, SPAN_NOTICE("Maximum [suit.current_mode]."))
 	suit.update_mode(suit.current_mode, usr)
 	action_icon_state = "crysis_[suit.current_mode]"
 	button.name = name

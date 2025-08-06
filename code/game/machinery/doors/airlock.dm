@@ -446,14 +446,14 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 
 	if(user.a_intent == INTENT_HARM && HAS_TRAIT(user, TRAIT_SUPER_STRONG))
 		if(heavy) //Unopenable
-			to_chat(usr, SPAN_DANGER("You cannot force [attacked_door] open."))
+			to_chat(usr, SPAN_DANGER("You cannot force [src] open."))
 			return
 		if(user.action_busy)
 			return
-		if(!attacked_door.density && arePowerSystemsOn()) //If its open and unpowered
-			attacked_door.close(TRUE)
+		if(!density && arePowerSystemsOn()) //If its open and unpowered
+			close(TRUE)
 			return
-		if(attacked_door.density && arePowerSystemsOn()) // if its closed and unpowered
+		if(density && arePowerSystemsOn()) // if its closed and unpowered
 			open(TRUE)
 			return
 		if(density) //If its open
@@ -465,16 +465,16 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			return
 
-		if(!attacked_door.density)
+		if(!density)
 			return
-		if(attacked_door.locked)
-			user.visible_message(SPAN_DANGER("[user] fails to force [attacked_door] open with [src]."),
-			SPAN_DANGER("You fail to force [attacked_door] open with [src]."))
+		if(locked)
+			user.visible_message(SPAN_DANGER("[user] fails to force [src] open!"),
+			SPAN_DANGER("You fail to force [src]!"))
 			return
 
-		user.visible_message(SPAN_DANGER("[user] forces [attacked_door] open with [src]."),
-		SPAN_DANGER("You force [attacked_door] open with [src]."))
-		attacked_door.open(TRUE)
+		user.visible_message(SPAN_DANGER("[user] forces [src] open!"),
+		SPAN_DANGER("You force [src] open!."))
+		open(TRUE)
 		return
 
 	if(panel_open)

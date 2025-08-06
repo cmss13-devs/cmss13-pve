@@ -961,6 +961,24 @@
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
 
+/datum/equipment_preset/upp/revanchist/conscript/add_upp_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/random_boilersuit = pick(/obj/item/clothing/under/colonist/boilersuit/khaki, /obj/item/clothing/under/colonist/boilersuit/cyan, /obj/item/clothing/under/colonist/boilersuit/grey,\
+								/obj/item/clothing/under/colonist/workwear, /obj/item/clothing/under/colonist/prison_boiler, /obj/item/clothing/under/liaison_suit/brown,\
+								/obj/item/clothing/under/liaison_suit/blue, /obj/item/clothing/under/liaison_suit/black)
+	var/random_shoes = pick(/obj/item/clothing/shoes/laceup, /obj/item/clothing/shoes/laceup/brown, /obj/item/clothing/shoes/marine/civilian, /obj/item/clothing/shoes/marine/civilian/brown, /obj/item/clothing/shoes/white)
+	new_human.equip_to_slot_or_del(new random_boilersuit(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new random_shoes(new_human), WEAR_FEET)
+	var/random_civilian_satchel= rand(1,3)
+	switch(random_civilian_satchel)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel(new_human), WEAR_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
+
 /datum/equipment_preset/upp/revanchist/conscript/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "undershirt"
@@ -973,16 +991,24 @@
 	//uniform
 	add_upp_uniform(new_human)
 	//jacket
-	var/pocket_item = pick(/obj/item/device/radio, /obj/item/tool/crowbar/red, /obj/item/stack/medical/ointment, /obj/item/device/binoculars/range/designator/upp, /obj/item/explosive/grenade/smokebomb/upp)
-	if(prob(25))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/black, WEAR_JACKET)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/black, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71/preloaded, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/scarce, WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	var/pocket_item = pick(/obj/item/device/radio, /obj/item/tool/crowbar/red, /obj/item/stack/medical/ointment)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/black, WEAR_JACKET)
+	var/random_gun = rand(1,3)
+	switch(random_gun)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/carbine, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40, WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40, WEAR_IN_BACK)
 	//pockets
 	new_human.equip_to_slot_or_del(new pocket_item, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/prop, WEAR_L_STORE)
