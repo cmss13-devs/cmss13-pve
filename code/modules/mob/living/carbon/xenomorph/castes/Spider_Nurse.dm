@@ -45,31 +45,6 @@
 	slashes_verb = "bites"
 	slash_sound = 'sound/weapons/bite.ogg'
 
-	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/plant_webs,
-		/datum/action/xeno_action/activable/pounce,
-		/datum/action/xeno_action/activable/slowing_spit/ai, //first macro
-	)
-	inherent_verbs = list(
-		/mob/living/carbon/xenomorph/proc/vent_crawl,
-	)
-	gib_chance = 1
-	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 1
-
-	/datum/action/xeno_action/activable/pounce
-		ai_prob_chance = 30
-		distance = 3
-
-	/datum/behavior_delegate/spider_nurse/melee_attack_additional_effects_target(mob/living/carbon/A)
-		if(prob(60))
-			A.apply_damage(10, TOX)
-			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
-			A.sway_jitter(times = 3, steps = 2)
-			A.apply_effect(4, DAZE)
-
-
 	acid_blood_damage = 0 /// it's a spider innit
 	acid_blood_spatter = FALSE /// We dont want that for these guys
 
@@ -82,6 +57,28 @@
 	var/linger_range = 5
 	var/linger_deviation = 1
 
+	base_actions = list(
+		/datum/action/xeno_action/onclick/xeno_resting,
+		/datum/action/xeno_action/onclick/plant_webs,
+		/datum/action/xeno_action/activable/slowing_spit/ai, //first macro
+	)
+	inherent_verbs = list(
+		/mob/living/carbon/xenomorph/proc/vent_crawl,
+	)
+	gib_chance = 1
+	claw_type = CLAW_TYPE_SHARP
+	pull_multiplier = 1
+
+	target_unconscious = FALSE
+
+/datum/behavior_delegate/spider_nurse/melee_attack_additional_effects_target(mob/living/carbon/A)
+	if(prob(60))
+		A.apply_damage(10, TOX)
+		to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
+		A.sway_jitter(times = 3, steps = 2)
+		A.apply_effect(5, DAZE)
+		A.apply_effect(10, EYE_BLUR)
+
 /mob/living/carbon/xenomorph/spider_nurse/death(cause, gibbed)
 	. = ..(cause, gibbed, "lets out a rattle as it collapses, legs siezing up.")
 	if(!.)
@@ -89,8 +86,6 @@
 
 /mob/living/carbon/xenomorph/spider_nurse/handle_blood_splatter(splatter_dir)
 	new /obj/effect/temp_visual/dir_setting/bloodsplatter/yautjasplatter(loc, splatter_dir)
-
-	target_unconscious = FALSE
 
 /datum/behavior_delegate/spider_nurse
 	name = "Spider Nurse Behavior Delegate"

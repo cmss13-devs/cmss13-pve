@@ -45,29 +45,6 @@
 	slashes_verb = "bites"
 	slash_sound = 'sound/weapons/bite.ogg'
 
-	base_actions = list(
-		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/plant_webs,
-		/datum/action/xeno_action/activable/pounce,
-	)
-	inherent_verbs = list(
-		/mob/living/carbon/xenomorph/proc/vent_crawl,
-	)
-	gib_chance = 1
-	claw_type = CLAW_TYPE_SHARP
-	pull_multiplier = 0.8
-
-	/datum/action/xeno_action/activable/pounce
-		ai_prob_chance = 30
-		distance = 3
-
-	/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
-		if(prob(50))
-			A.apply_damage(5, TOX)
-			to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
-			A.sway_jitter(times = 2, steps = 1)
-			A.apply_effect(3, DAZE)
-
 	acid_blood_damage = 0 /// it's a spider innit
 	acid_blood_spatter = FALSE /// We dont want that for these guys
 
@@ -77,6 +54,25 @@
 	weed_food_icon = 'icons/mob/xenos/weeds.dmi'
 	weed_food_states = list("Hellhound_1","Hellhound_2","Hellhound_3")
 	weed_food_states_flipped = list("Hellhound_1","Hellhound_2","Hellhound_3")
+
+	base_actions = list(
+		/datum/action/xeno_action/onclick/xeno_resting,
+		/datum/action/xeno_action/onclick/plant_webs,
+	)
+	inherent_verbs = list(
+		/mob/living/carbon/xenomorph/proc/vent_crawl,
+	)
+	gib_chance = 1
+	claw_type = CLAW_TYPE_SHARP
+	pull_multiplier = 0.8
+
+/datum/behavior_delegate/spider_guard/melee_attack_additional_effects_target(mob/living/carbon/A)
+	if(prob(50))
+		A.apply_damage(5, TOX)
+		to_chat(A, SPAN_XENOHIGHDANGER("Your muscles sieze, as the [bound_xeno] bites into you with fangs that drip with venom!"))
+		A.sway_jitter(times = 2, steps = 1)
+		A.apply_effect(3, DAZE)
+		A.apply_effect(3, ROOT)
 
 /mob/living/carbon/xenomorph/spider_guard/death(cause, gibbed)
 	. = ..(cause, gibbed, "lets out a rattle as it collapses, legs siezing up.")

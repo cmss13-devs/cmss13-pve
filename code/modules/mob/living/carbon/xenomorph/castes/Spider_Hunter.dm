@@ -10,7 +10,7 @@
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_1
 	armor_deflection = XENO_ARMOR_TIER_1
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_HELLHOUND
+	speed = XENO_SPEED_FASTSPIDER
 	fire_vulnerability_mult = FIRE_MULTIPLIER_DEADLY //v weak to fire
 
 	caste_desc = "An ambusher from the dark."
@@ -47,6 +47,18 @@
 	slashes_verb = "bites"
 	slash_sound = 'sound/weapons/bite.ogg'
 
+	acid_blood_damage = 0 /// it's a spider innit
+	acid_blood_spatter = FALSE /// We dont want that for these guys
+
+	icon_xeno = 'icons/mob/xenos/spider_hunter.dmi'
+	icon_xenonid = 'icons/mob/xenos/spider_hunter.dmi'
+
+	weed_food_icon = 'icons/mob/xenos/weeds.dmi'
+	weed_food_states = list("Hellhound_1","Hellhound_2","Hellhound_3")
+	weed_food_states_flipped = list("Hellhound_1","Hellhound_2","Hellhound_3")
+
+	target_unconscious = FALSE
+
 	base_actions = list(
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/onclick/plant_webs,
@@ -60,21 +72,6 @@
 	gib_chance = 1
 	claw_type = CLAW_TYPE_SHARP
 	pull_multiplier = 0.5
-
-
-
-
-	acid_blood_damage = 0 /// it's a spider innit
-	acid_blood_spatter = FALSE /// We dont want that for these guys
-
-	icon_xeno = 'icons/mob/xenos/spider_hunter.dmi'
-	icon_xenonid = 'icons/mob/xenos/spider_hunter.dmi'
-
-	weed_food_icon = 'icons/mob/xenos/weeds.dmi'
-	weed_food_states = list("Hellhound_1","Hellhound_2","Hellhound_3")
-	weed_food_states_flipped = list("Hellhound_1","Hellhound_2","Hellhound_3")
-
-	target_unconscious = FALSE
 
 /mob/living/carbon/xenomorph/spider_hunter/death(cause, gibbed)
 	. = ..(cause, gibbed, "lets out a rattle as it collapses, legs siezing up.")
@@ -103,6 +100,7 @@
 		to_chat(A, SPAN_XENOHIGHDANGER("You feel woozy, as the [bound_xeno] bites into you with fangs that drip with venom!"))
 		A.sway_jitter(times = 5, steps = 3)
 		A.apply_effect(5, DAZE)
+		A.apply_effect(20, EYE_BLUR)
 
 	return
 
