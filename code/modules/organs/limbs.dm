@@ -1560,8 +1560,9 @@ treat_grafted var tells it to apply to grafted but unsalved wounds, for burn kit
 
 	if(owner_helmet.flags_inventory & FULL_DECAP_PROTECTION)
 		return
-	qdel(owner_helmet)
+	owner.drop_inv_item_on_ground(owner_helmet)
 	if(iszombie(owner))
+		qdel(owner_helmet)
 		owner.visible_message("[owner]'s [owner_helmet] gives way and cracks from the impact!", SPAN_USERDANGER("Your [owner_helmet] has broken and your head is vunlerable!"))
 		playsound(owner, 'sound/effects/helmet_noise.ogg', 100)
 		return
