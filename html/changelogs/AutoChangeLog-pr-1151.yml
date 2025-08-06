@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - maptweak: "GArrow - Disposals should all be piped properly, and not spit at you. Phone + Airlock consistency across nightmare inserts"
+  - bugfix: "Disposals losing icon_state with nightmare inserts"
