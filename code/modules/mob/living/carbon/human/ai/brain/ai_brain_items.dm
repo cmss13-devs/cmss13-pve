@@ -286,7 +286,11 @@
 			equipment_map[id] -= item
 
 	RegisterSignal(storage_suit, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-	item_slot_appraisal_loop(storage_suit.pockets, "armor")
+	for(var/obj/item/clothing/accessory/storage/armour_webbing in storage_suit.accessories)
+		item_slot_appraisal_loop(armour_webbing, "armor")
+		return
+	if(storage_suit.get_pockets())
+		item_slot_appraisal_loop(storage_suit.pockets, "armor")
 
 /datum/human_ai_brain/proc/appraise_uniform()
 	var/obj/item/clothing/accessory/storage/located_storage = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories
