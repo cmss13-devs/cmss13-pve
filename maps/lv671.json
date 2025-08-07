@@ -1,8 +1,8 @@
 {
 	"map_name": "LV-671 Ark Borealis",
     "short_name": "Ark Borealis",
-	"map_path": "map_files/LV671_Ark",
-	"map_file": "LV671.dmm",
+	"map_path": "map_files/lv671",
+	"map_file": "lv671.dmm",
     "webmap_url": "LV671",
 
     "weather_holder": "/datum/weather_ss_map_holder/sorokyne",
