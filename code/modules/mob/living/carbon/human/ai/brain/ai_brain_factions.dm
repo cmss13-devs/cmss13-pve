@@ -468,7 +468,7 @@
 		"ALL THREATS; FOREIGN *AND* DOMESTIC!",
 	)
 
-/datum/human_ai_faction/ua_colonial_forces //CMB & UACG mostly
+/datum/human_ai_faction/ua_colonial_forces //CMB
 	faction = FACTION_MARSHAL
 	friendly_factions = list(
 		FACTION_ARMY,
@@ -477,6 +477,83 @@
 		FACTION_MARINE,
 		FACTION_WY,
 		FACTION_UACG,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_TWE,
+		FACTION_PMC,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"Woah, woah!",
+		"Taking fire!",
+		"Shots fired!",
+		"Unit taking fire!",
+		"Don't do it!",
+		"Shit! Shots fired!",
+		"Gun! Gun!",
+		"Time to cowboy up!",
+		"You're gonna wish you stayed at home.",
+		"Never should have come here!",
+	)
+	exit_combat_lines = list(
+		"Sweep and clear.",
+		"Stay sharp.",
+		"Make sure that's the last of them",
+		"Stay sharp!",
+		"Glad that's done with...",
+		"I need a smoke...",
+		"Is that all of them?",
+		"What the hell am I doing here...",
+		"Clear? We clear? Sound off!",
+		"Jesus Christ...",
+		"Put 'em on safe and let them hang, guys.",
+	)
+	squad_member_death_lines = list(
+		"Man down!",
+		"We got a man down here!",
+		"Shit! They're wasted!",
+		"Oh shit, shit, shit...",
+		"Get back! Get back!",
+		"I got a bad feeling about this...",
+		"Shit! This can't be happening...",
+		"They're down, get a medic up here now!",
+		"Oh fuck! It's fucked!",
+		"This was just supposed to be civil disturbances!",
+		"Jesus, I didn't sign up for this!",
+		"Oh god... What am I gonna tell their family..?",
+	)
+	reload_lines = list(
+		"Reloading!",
+		"I'm out!",
+		"Cover me, down to harsh language here!",
+		"New mag going in.",
+		"Changing mag!",
+		"I'm dry! Reloading!",
+		"Reloadi- Oops, dropped my mag there.",
+		"Dammit, I'm dry!",
+		"Should've spent more time on the range..!",
+	)
+	grenade_thrown_lines = list(
+		"Grenade!",
+		"Throwing grenade!",
+		"Frag, frag!",
+		"Banger, out!",
+		"Suck on this!",
+		"Hope I don't blow myself up with this!",
+	)
+
+/datum/human_ai_faction/uacg //UACG
+	faction = FACTION_UACG
+	friendly_factions = list(
+		FACTION_ARMY,
+		FACTION_NAVY,
+		FACTION_COLONIST,
+		FACTION_MARINE,
+		FACTION_WY,
+		FACTION_MARSHAL,
 	)
 	neutral_factions = list(
 		FACTION_FREELANCER,
