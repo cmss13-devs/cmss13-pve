@@ -12,8 +12,8 @@
 	name = "Territorial Guard, AT Patrol"
 	desc = "Territorial Guard tank hunter patrol armed with Type 71 rifles or KS29 pump-shotguns, alongside their anti-tank launcher and carrying IFAKs containing gauze, ointment and injectors."
 	ai_to_spawn = list(
+		/datum/equipment_preset/upp/militia/at = 1,
 		/datum/equipment_preset/upp/militia = 1,
-		/datum/equipment_preset/upp/militia/sadar = 1,
 	)
 
 /datum/human_ai_squad_preset/upp/militia/squad
@@ -38,6 +38,14 @@
 	desc = "Naval Infantry patrol armed with a AG80 rifle and a Type 71 rifle, and carrying IFAKs containing gauze, ointment, splints and an injector."
 	ai_to_spawn = list(
 		/datum/equipment_preset/upp/squadlead = 1,
+		/datum/equipment_preset/upp/rifleman/ag80 = 1,
+	)
+
+/datum/human_ai_squad_preset/upp/AT
+	name = "Naval Infantry, AT Team"
+	desc = "Naval Infantry patrol armed with a AG80 rifle and an anti-tank launcher, and carrying IFAKs containing gauze, ointment, splints and an injector."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/rifleman/at = 1,
 		/datum/equipment_preset/upp/rifleman/ag80 = 1,
 	)
 
