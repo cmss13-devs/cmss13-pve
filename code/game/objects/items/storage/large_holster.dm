@@ -75,7 +75,7 @@
 	new /obj/item/weapon/gun/shotgun/pump(src)
 
 /obj/item/storage/large_holster/m37/full/noammo/fill_preset_inventory()
-new /obj/item/weapon/gun/shotgun/pump/unloaded (src)
+    new /obj/item/weapon/gun/shotgun/pump/unloaded (src)
 
 /obj/item/storage/large_holster/machete
 	name = "\improper H5 pattern M2132 machete scabbard"
