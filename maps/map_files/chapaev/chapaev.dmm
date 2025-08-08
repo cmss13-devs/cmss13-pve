@@ -701,9 +701,7 @@
 "bl" = (
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "bm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -1556,9 +1554,7 @@
 	on = 1
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "cO" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1605,9 +1601,7 @@
 	pixel_y = -10
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "cS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1635,9 +1629,7 @@
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
 /obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "cU" = (
 /obj/structure/prop{
 	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
@@ -1721,9 +1713,7 @@
 /area/golden_arrow/briefing)
 "cZ" = (
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/space)
@@ -3136,9 +3126,7 @@
 /area/golden_arrow/dorms)
 "gt" = (
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "gu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -3467,9 +3455,7 @@
 "gZ" = (
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ha" = (
 /obj/structure/bed/chair/comfy,
 /obj/structure/prop/invuln/lattice_prop{
@@ -3592,9 +3578,7 @@
 	light_color = "#e7c0a4"
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hp" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
@@ -3603,9 +3587,7 @@
 	c_tag = "Sergeants Room"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hq" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/secure_data/noaccess{
@@ -3613,9 +3595,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hr" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
@@ -3626,17 +3606,13 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hs" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = 32
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ht" = (
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/strata/floor3,
@@ -3823,17 +3799,13 @@
 	icon_state = "pipe-c"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "hZ" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -3842,9 +3814,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ia" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3855,9 +3825,7 @@
 	pixel_x = 2
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ib" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 8;
@@ -3868,9 +3836,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ic" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4
@@ -3958,30 +3924,22 @@
 	pixel_y = 3
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "in" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "io" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
 	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "iq" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ir" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 4;
@@ -4018,9 +3976,7 @@
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "iw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/hand_labeler{
@@ -4050,9 +4006,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "ix" = (
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
@@ -4165,9 +4119,7 @@
 /area/golden_arrow/briefing)
 "iM" = (
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "iN" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
@@ -4175,9 +4127,7 @@
 	req_one_access_txt = "240;241"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "iQ" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -4236,9 +4186,7 @@
 "jd" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/floor3,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jf" = (
 /obj/structure/machinery/power/apc/almayer/east,
 /obj/effect/decal/warning_stripes{
@@ -4246,22 +4194,16 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/floor3,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jj" = (
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jk" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jl" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -4289,9 +4231,7 @@
 	pixel_x = 11
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jp" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/light/small{
@@ -4310,9 +4250,7 @@
 	anchored = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/door_control{
@@ -4358,24 +4296,18 @@
 	pixel_y = 3
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jw" = (
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jx" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Platoon Commander's Office";
 	req_one_access_txt = "241"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jy" = (
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/briefing)
@@ -4394,9 +4326,7 @@
 	pixel_y = -5
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jD" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -4418,14 +4348,10 @@
 	pixel_x = 8
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jF" = (
 /turf/open/floor/strata/floor3,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/phone_base/upp_net{
@@ -4450,9 +4376,7 @@
 	light_power = 0.7
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jJ" = (
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = 7;
@@ -4464,9 +4388,7 @@
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "jK" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -5385,9 +5307,7 @@
 /area/golden_arrow/medical)
 "lU" = (
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "lW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6601,9 +6521,7 @@
 	name = "\improper Other Sections"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "oT" = (
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
@@ -6615,22 +6533,16 @@
 	name = "\improper Maintenance Tunnels"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "oU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "oW" = (
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "oY" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6640,9 +6552,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "oZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6654,9 +6564,7 @@
 	light_color = "#78adc7"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pa" = (
 /obj/structure/machinery/light/double{
 	light_color = "#832121"
@@ -6666,9 +6574,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pb" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -6685,9 +6591,7 @@
 /obj/item/clothing/mask/gas/military/upp,
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6699,9 +6603,7 @@
 /obj/item/device/flashlight/tnr,
 /obj/item/device/flashlight/tnr,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pd" = (
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = -4
@@ -6717,23 +6619,17 @@
 	color = "#8B9490"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pe" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = 15;
 	pixel_y = -32
 	},
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pg" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pj" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6745,9 +6641,7 @@
 	icon_state = "E"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pk" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1;
@@ -6755,22 +6649,16 @@
 	layer = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pl" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pm" = (
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "po" = (
 /obj/structure/machinery/medical_pod/sleeper{
 	dir = 8;
@@ -6795,9 +6683,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pr" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6816,9 +6702,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "ps" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6834,17 +6718,13 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pt" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pu" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -6858,9 +6738,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pv" = (
 /obj/structure/platform/strata/metal,
 /obj/effect/decal/warning_stripes{
@@ -6871,9 +6749,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pw" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -6882,9 +6758,7 @@
 	layer = 2.5
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "px" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -6893,9 +6767,7 @@
 	layer = 2.5
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pA" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -6909,22 +6781,16 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pB" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pF" = (
 /turf/open/floor/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pG" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6940,9 +6806,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pH" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -6955,9 +6819,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pI" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/warning_stripes{
@@ -6987,9 +6849,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pL" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7005,9 +6865,7 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pM" = (
 /obj/structure/machinery/computer/crew/upp{
 	light_power = 0.5;
@@ -7015,9 +6873,7 @@
 	light_color = "#78adc7"
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pO" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -7031,14 +6887,10 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pP" = (
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -7052,9 +6904,7 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pR" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7070,24 +6920,18 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pS" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Astronavigational Deck";
 	req_one_access_txt = "240;241"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pT" = (
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pU" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/decal/warning_stripes{
@@ -7098,22 +6942,16 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pV" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pY" = (
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "pZ" = (
 /obj/structure/machinery/disposal,
 /obj/structure/machinery/light/double{
@@ -7129,17 +6967,13 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qa" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qb" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -7155,9 +6989,7 @@
 /obj/item/clothing/mask/gas/military/upp,
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qc" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7172,25 +7004,19 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qd" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 8
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qe" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qf" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7205,27 +7031,21 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qh" = (
 /obj/structure/stairs{
 	dir = 4;
 	icon_state = "ramptop"
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qj" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -7240,9 +7060,7 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qk" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7252,9 +7070,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "ql" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -7291,9 +7107,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qo" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -7306,9 +7120,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qp" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -7324,9 +7136,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qr" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -7334,9 +7144,7 @@
 	layer = 2.5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qs" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/junction{
@@ -7362,9 +7170,7 @@
 	layer = 2.5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qu" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -7380,9 +7186,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qx" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7398,15 +7202,11 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qA" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -7421,9 +7221,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qB" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7433,9 +7231,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qC" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 4
@@ -7448,9 +7244,7 @@
 	color = "#8B9490"
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qD" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7459,9 +7253,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -7517,9 +7309,7 @@
 "qK" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qM" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7530,9 +7320,7 @@
 	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/cameras/almayer_network{
@@ -7543,18 +7331,14 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	layer = 2
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/magazine/book/uppbooklet{
@@ -7567,9 +7351,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qQ" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7580,9 +7362,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qR" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/briefing)
@@ -7592,24 +7372,18 @@
 	layer = 2.5
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qT" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qV" = (
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 8;
@@ -7622,18 +7396,14 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qX" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Combat Information Center";
 	req_one_access_txt = "240;241"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qY" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4;
@@ -7644,9 +7414,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "qZ" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7664,18 +7432,14 @@
 	icon_state = "exposed01-supply"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rc" = (
 /obj/structure/machinery/prop/almayer/CICmap/upp{
 	light_color = "#67bb94";
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "re" = (
 /obj/structure/machinery/faxmachine{
 	target_department = "UPP High Command";
@@ -7685,9 +7449,7 @@
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rf" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7704,9 +7466,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rg" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
@@ -7716,9 +7476,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rh" = (
 /obj/structure/sign/safety/terminal{
 	pixel_x = 38
@@ -7729,15 +7487,11 @@
 	light_color = "#78adc7"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rj" = (
 /obj/structure/window/framed/upp/grey,
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rm" = (
 /obj/structure/barricade/handrail/strata{
 	dir = 1;
@@ -7745,9 +7499,7 @@
 	layer = 4
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rn" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -7762,9 +7514,7 @@
 	layer = 4
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "ro" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/overwatch/upp{
@@ -7774,18 +7524,14 @@
 	light_range = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rq" = (
 /obj/structure/machinery/computer/crew/upp{
 	light_power = 0.5;
@@ -7793,9 +7539,7 @@
 	light_color = "#78adc7"
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rr" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -7810,9 +7554,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rs" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -7822,9 +7564,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rt" = (
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
@@ -7834,9 +7574,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rv" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/cable/heavyduty{
@@ -7846,9 +7584,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -7865,9 +7601,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rA" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/platform/strata/metal{
@@ -7877,9 +7611,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rC" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -7896,9 +7628,7 @@
 	pixel_x = -1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rD" = (
 /obj/structure/machinery/disposal,
 /obj/structure/sign/safety/distribution_pipes{
@@ -7911,9 +7641,7 @@
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rE" = (
 /obj/structure/machinery/prop/almayer/computer{
 	dir = 8;
@@ -7928,27 +7656,21 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rF" = (
 /obj/structure/stairs/perspective,
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -7961,9 +7683,7 @@
 	light_power = 0.7
 	},
 /turf/open/floor/corsat/squares,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap/upp{
@@ -7976,9 +7696,7 @@
 	light_power = 0.7
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -7988,9 +7706,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -8001,9 +7717,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/corsat/plate,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -8014,9 +7728,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rO" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -8028,9 +7740,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rP" = (
 /obj/structure/platform/strata/metal{
 	dir = 1
@@ -8039,9 +7749,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rQ" = (
 /obj/structure/platform/strata/metal{
 	dir = 4
@@ -8053,9 +7761,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rR" = (
 /obj/structure/prop/almayer/computers/sensor_computer3{
 	density = 0;
@@ -8070,9 +7776,7 @@
 	buckling_x = 16
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rU" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -8087,29 +7791,21 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rV" = (
 /obj/structure/machinery/photocopier,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "rY" = (
 /obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sb" = (
 /obj/structure/prop/almayer/computers/mission_planning_system{
 	pixel_y = -3;
@@ -8118,9 +7814,7 @@
 	light_range = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sd" = (
 /obj/structure/prop/almayer/computers/mission_planning_system{
 	pixel_y = -3;
@@ -8129,9 +7823,7 @@
 	light_range = 1
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "se" = (
 /obj/structure/closet{
 	name = "emergency closet";
@@ -8148,17 +7840,13 @@
 /obj/item/clothing/mask/gas/military/upp,
 /obj/item/clothing/mask/gas/military/upp,
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sj" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -8170,9 +7858,7 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sk" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	light_color = "#218724";
@@ -8182,9 +7868,7 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sl" = (
 /obj/structure/prop/almayer/computers/sensor_computer2{
 	light_color = "#218724";
@@ -8198,9 +7882,7 @@
 	light_color = "#832121"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sm" = (
 /obj/structure/prop/almayer/computers/sensor_computer3{
 	name = "weapon targetting computer";
@@ -8211,9 +7893,7 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "so" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -8222,9 +7902,7 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sq" = (
 /obj/structure/closet/secure_closet/cmdcabinet{
 	pixel_y = 24;
@@ -8234,18 +7912,14 @@
 	icon_state = "S"
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sr" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = 15;
 	pixel_y = 32
 	},
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "ss" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/paper_bin{
@@ -8253,15 +7927,11 @@
 	},
 /obj/item/tool/pen/clicky,
 /turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "su" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sv" = (
 /obj/structure/machinery/door/airlock/prison_hatch{
 	color = "#8B9490";
@@ -8273,9 +7943,7 @@
 	name = "\improper Other Sections"
 	},
 /turf/open/floor/corsat/marked,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "sV" = (
 /obj/structure/machinery/power/reactor{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
@@ -8389,9 +8057,7 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "wO" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/engineering)
@@ -8412,9 +8078,7 @@
 /obj/structure/foamed_metal/iron,
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "yb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -8423,9 +8087,7 @@
 /area/golden_arrow/hangar)
 "yH" = (
 /turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "yK" = (
 /obj/structure/machinery/recharge_station{
 	pixel_y = 13
@@ -8558,9 +8220,7 @@
 /area/golden_arrow/dorms)
 "Go" = (
 /turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "GC" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -8611,9 +8271,7 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "Jf" = (
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -8670,9 +8328,7 @@
 /area/golden_arrow/dorms)
 "Om" = (
 /turf/closed/wall/upp_wall/grey,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "On" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -8695,9 +8351,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant{
-	name = "\improper Sergeant Office"
-	})
+/area/golden_arrow/platoon_sergeant)
 "PV" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -8806,9 +8460,7 @@
 /obj/structure/foamed_metal/iron,
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms{
-	name = "\improper Platoon Commander's Office"
-	})
+/area/golden_arrow/platoon_commander_rooms)
 "Za" = (
 /obj/structure/pipes/vents/pump{
 	dir = 8
