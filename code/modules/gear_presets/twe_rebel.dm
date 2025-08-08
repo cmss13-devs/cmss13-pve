@@ -13,7 +13,7 @@
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE, 50;FEMALE)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	new_human.skin_color = "Pale 1"
 	var/random_name
 	var/first_name
@@ -32,19 +32,20 @@
 	new_human.g_eyes = colors[eye_color][2]
 	new_human.b_eyes = colors[eye_color][3]
 	//gender checks
-	if(new_human.gender == MALE)
-		if(prob(90))
-			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-		else
-			first_name = "[pick(GLOB.first_names_male_clf)]"
-		new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
-		new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+	if(prob(90))
+		first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
 	else
-		if(prob(90))
-			first_name = "[capitalize(randomly_generate_japanese_word(rand(1, 3)))]"
-		else
-			first_name = "[pick(GLOB.first_names_female_clf)]"
-		new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right","Bun", "Short Bangs")
+		switch(new_human.gender)
+			if(FEMALE)
+				first_name = "[pick(GLOB.first_names_female_clf)]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
+			if(MALE)
+				first_name = "[pick(GLOB.first_names_male_clf)]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right")
+				new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "5 O'clock Shadow", "7 O'clock Shadow",)
+			if(PLURAL)
+				first_name = "[pick(pick(GLOB.first_names_female_clf), pick(GLOB.first_names_male_clf))]"
+				new_human.h_style = pick("CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Short Bangs")
 	//surname
 	if(prob(90))
 		last_name = "[capitalize(randomly_generate_japanese_word(rand(1, 4)))]"

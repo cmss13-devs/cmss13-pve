@@ -14,10 +14,17 @@
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/pmc/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(75;MALE,25;FEMALE)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
-	var/random_name = capitalize(pick(new_human.gender == MALE ? GLOB.first_names_male : GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	var/random_name
+	switch(new_human.gender)
+		if(FEMALE)
+			random_name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+		if(MALE)
+			random_name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+		if(PLURAL)
+			random_name = capitalize(pick(pick(GLOB.first_names_female), pick(GLOB.first_names_male))) + " " + capitalize(pick(GLOB.last_names))
 	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
 	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
 	var/hair_color = pick(hair_colors)
@@ -683,16 +690,20 @@
 	role_comm_title = "WY Syn"
 
 /datum/equipment_preset/pmc/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(50;MALE,50;FEMALE)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
 	if(prob(10))
 		random_name = "[capitalize(randomly_generate_japanese_word(rand(2, 3)))]"
-	else if(new_human.gender == MALE)
-		random_name = "[pick(GLOB.first_names_male_pmc)]"
 	else
-		random_name = "[pick(GLOB.first_names_female_pmc)]"
+		switch(new_human.gender)
+			if(FEMALE)
+				random_name = "[pick(GLOB.first_names_female_pmc)]"
+			if(MALE)
+				random_name = "[pick(GLOB.first_names_male_pmc)]"
+			if(PLURAL)
+				random_name = "[pick(pick(GLOB.first_names_female_pmc), pick(GLOB.first_names_male_pmc))]"
 
 	if(new_human.gender == MALE)
 		new_human.f_style = "5 O'clock Shadow"
