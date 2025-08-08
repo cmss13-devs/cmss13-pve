@@ -698,10 +698,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
-"bl" = (
-/obj/structure/foamed_metal/iron,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/platoon_commander_rooms)
 "bm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -1536,24 +1532,11 @@
 /area/golden_arrow/cryo_cells)
 "cN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper_bin{
-	pixel_y = 6;
-	pixel_x = 3
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 4;
+	pixel_y = 4
 	},
-/obj/item/tool/pen/clicky{
-	desc = "It's a normal black ink pen.";
-	layer = 3
-	},
-/obj/item/device/flashlight/lamp{
-	light_power = 0.8;
-	light_color = "#e7c0a4";
-	light_range = 4;
-	anchored = 1;
-	pixel_y = -9;
-	pixel_x = 5;
-	on = 1
-	},
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
 "cO" = (
 /obj/structure/pipes/vents/pump{
@@ -1613,22 +1596,9 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
 "cT" = (
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = -7;
-	name = "equipment locker";
-	pixel_x = 27
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/tool/crew_monitor{
-	faction = "UPP"
-	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/marine/lamp,
-/turf/open/floor/strata/floor2,
+/obj/structure/foamed_metal/iron,
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/platoon_commander_rooms)
 "cU" = (
 /obj/structure/prop{
@@ -1712,7 +1682,22 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "cZ" = (
-/turf/open/floor/strata/multi_tiles,
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = -7;
+	name = "equipment locker";
+	pixel_x = 27
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/tool/crew_monitor{
+	faction = "UPP"
+	},
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
+/turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
@@ -3579,20 +3564,12 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
-"hp" = (
+"hq" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
 	name = "ship-grade camera";
 	network = list("Chapaev");
 	c_tag = "Sergeants Room"
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant)
-"hq" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/secure_data/noaccess{
-	dir = 4;
-	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_sergeant)
@@ -3720,6 +3697,27 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"hK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/obj/item/tool/pen/clicky{
+	desc = "It's a normal black ink pen.";
+	layer = 3
+	},
+/obj/item/device/flashlight/lamp{
+	light_power = 0.8;
+	light_color = "#e7c0a4";
+	light_range = 4;
+	anchored = 1;
+	pixel_y = -9;
+	pixel_x = 5;
+	on = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/platoon_sergeant)
 "hL" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
@@ -4117,6 +4115,10 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"iK" = (
+/obj/structure/foamed_metal/iron,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/platoon_commander_rooms)
 "iM" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4183,6 +4185,9 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
+"iY" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/platoon_commander_rooms)
 "jd" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/strata/floor3,
@@ -8218,9 +8223,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/dorms)
-"Go" = (
-/turf/closed/wall/upp_wall/grey/hull,
-/area/golden_arrow/platoon_commander_rooms)
 "GC" = (
 /obj/structure/machinery/light/double{
 	dir = 4;
@@ -8457,9 +8459,7 @@
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "YU" = (
-/obj/structure/foamed_metal/iron,
-/obj/structure/foamed_metal/iron,
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "Za" = (
 /obj/structure/pipes/vents/pump{
@@ -19626,8 +19626,8 @@ jS
 jS
 jS
 jS
-Go
-Go
+iY
+iY
 mV
 mV
 yH
@@ -19778,8 +19778,8 @@ jT
 jT
 jT
 jT
-bl
-Go
+iK
+iY
 mV
 mV
 yH
@@ -19788,7 +19788,7 @@ Om
 iv
 in
 hX
-cN
+hK
 ho
 ec
 ec
@@ -19930,8 +19930,8 @@ jU
 jU
 jU
 jU
-bl
-Go
+iK
+iY
 mV
 mV
 yH
@@ -19941,7 +19941,7 @@ IT
 gt
 hY
 gt
-hp
+hq
 ec
 gr
 eg
@@ -20082,18 +20082,18 @@ ku
 kj
 jU
 jU
-bl
-Go
-Go
-Go
-Go
+iK
+iY
+iY
+iY
+iY
 xL
 Om
 wr
 gt
 hY
 cR
-hq
+cN
 ec
 gs
 eg
@@ -20234,12 +20234,12 @@ kk
 kk
 jW
 jU
-bl
-bl
-bl
-bl
-bl
-YU
+iK
+iK
+iK
+iK
+iK
+cT
 Om
 iw
 io
@@ -20389,9 +20389,9 @@ jU
 iM
 iM
 iM
-bl
-bl
-bl
+iK
+iK
+iK
 Om
 IT
 iq
@@ -20691,7 +20691,7 @@ km
 ka
 jV
 jD
-cZ
+YU
 jF
 jj
 jd
@@ -20995,9 +20995,9 @@ uF
 kc
 jU
 jJ
-cZ
+YU
 jp
-cT
+cZ
 jf
 iN
 iF
@@ -30063,7 +30063,7 @@ mV
 mV
 iM
 sd
-cZ
+YU
 oW
 oW
 qz
