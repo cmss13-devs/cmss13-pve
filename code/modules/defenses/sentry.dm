@@ -1073,9 +1073,10 @@
 	accuracy_mult = 0.6
 	health = 200
 	health_max = 200
-	disassemble_time = 2 SECONDS
-	sentry_range = 3
-	omni_directional = TRUE
+	disassemble_time = 0.75 SECONDS
+	sentry_range = 5
+	omni_directional = FALSE
+	density = FALSE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
 	ammo = new /obj/item/ammo_magazine/sentry/upp/mini
 

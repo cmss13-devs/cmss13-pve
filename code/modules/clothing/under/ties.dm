@@ -469,10 +469,16 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
+//Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
 	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
 	icon_state = "uaflagpatch"
+
+/obj/item/clothing/accessory/patch/usa
+	name = "USA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
+	icon_state = "usaflagpatch"
 
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
@@ -1430,8 +1436,24 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag
 	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
+		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
 
@@ -1463,12 +1485,6 @@
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/black_vest/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/plasma,
-	)
 
 //Pre-load For Army Props
 //===
@@ -1555,11 +1571,24 @@
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	storage_slots = 4
 	can_hold = list(
-		/obj/item/ammo_magazine/rifle/type71,
-		/obj/item/ammo_magazine/rifle/ag80,
-		/obj/item/ammo_magazine/pistol/t73,
-		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/handful/shotgun/heavy,
+		/obj/item/attachable/bayonet,
+		/obj/item/device/flashlight/flare,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall
@@ -1587,6 +1616,14 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/recon/m49
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/m49
+
+/obj/item/storage/internal/accessory/webbing/m3mag/recon/m49/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
@@ -1612,6 +1649,12 @@
 	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
+	)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6
@@ -1676,3 +1719,39 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
+
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/type71,
+		/obj/item/ammo_magazine/rifle/ag80,
+		/obj/item/ammo_magazine/pistol/t73,
+		/obj/item/ammo_magazine/pistol/np92,
+		/obj/item/ammo_magazine/handful/shotgun/heavy,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
