@@ -407,6 +407,9 @@
 /obj/item/rappel_harness/extract/midway
 	shuttle_id = DROPSHIP_MIDWAY
 
+/obj/item/rappel_harness/extract/inchon
+	shuttle_id = DROPSHIP_INCHON
+
 /obj/item/rappel_harness/extract/cyclone
 	shuttle_id = DROPSHIP_CYCLONE
 
