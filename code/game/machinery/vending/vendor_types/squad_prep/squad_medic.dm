@@ -130,7 +130,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		list("M10 Helmet (Plain)", 0, /obj/item/clothing/head/helmet/marine/medic/plain, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 
 		list("OVERWATCH & HUD EQUIPMENT (CHOOSE 1)", 0, null, null, null),
-		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -248,8 +248,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
 		list("Red Cross Paint", 0, /obj/item/clothing/accessory/paint/medic, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
-		list("HUD EYEPIECE (CHOOSE 1)", 0, null, null, null),
-		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("OVERWATCH & HUD EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR (CHOOSE 1)", 0, null, null, null),
 		list("M3-R Armor", 0, /obj/item/clothing/suit/marine/rto/forecon, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
@@ -333,19 +333,22 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 // Chemical vendor
 
 GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
+
+		list("ESSENTIAL MEDICATION (CHOOSE 1)", 0, null, null, null),
+		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
+		list("Liquid Bottle (Imidazoline-Alkysine)", 0, /obj/item/reagent_container/glass/bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
+
 		list("PILL BOTTLES", 0, null, null, null),
-		list("Pill Bottle (Imidazoline-Alkysine)", 40, /obj/item/storage/pill_bottle/imialk, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Meralyne-Bicardine)", 40, /obj/item/storage/pill_bottle/merabica, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Kelotane-Dermaline)", 40, /obj/item/storage/pill_bottle/keloderm, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Nitrogen-Water)", 40, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Dexalin+)", 40, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Iron)", 40, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Meralyne-Bicardine)", 60, /obj/item/storage/pill_bottle/merabica, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane-Dermaline)", 60, /obj/item/storage/pill_bottle/keloderm, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Nitrogen-Water)", 30, /obj/item/storage/pill_bottle/nitrogenwater, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin+)", 30, /obj/item/storage/pill_bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Iron)", 30, /obj/item/storage/pill_bottle/iron, null, VENDOR_ITEM_REGULAR),
 
 		list("LIQUID BOTTLES", 0, null, null, null),
-		list("Liquid Bottle (Imidazoline-Alkysine)", 40, /obj/item/reagent_container/glass/bottle/imialk, null, VENDOR_ITEM_REGULAR),
 		list("Liquid Bottle (Meralyne-Bicardine)", 40, /obj/item/reagent_container/glass/bottle/merabica, null, VENDOR_ITEM_REGULAR),
 		list("Liquid Bottle (Kelotane-Dermaline)", 40, /obj/item/reagent_container/glass/bottle/keloderm, null, VENDOR_ITEM_REGULAR),
-		list("Liquid Bottle (Dexalin+)", 40, /obj/item/reagent_container/glass/bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
+		list("Liquid Bottle (Dexalin+)", 30, /obj/item/reagent_container/glass/bottle/dexalinplus, null, VENDOR_ITEM_REGULAR),
 
 		list("INJECTORS", 0, null, null, null),
 		list("Smart Refill Tank", 40, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),

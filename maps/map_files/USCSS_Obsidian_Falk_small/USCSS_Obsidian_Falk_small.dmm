@@ -1566,14 +1566,6 @@
 "aeB" = (
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
-"aeC" = (
-/obj/item/storage/backpack/pmc/temp/two,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"aeD" = (
-/obj/item/storage/backpack/pmc/temp/one,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "aeE" = (
 /turf/closed/wall/r_wall/biodome,
 /area/firefly/medical)
@@ -1651,10 +1643,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
-"aeR" = (
-/obj/item/storage/backpack/pmc/temp/three,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "aeS" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	dir = 4;
@@ -8082,36 +8070,12 @@
 /obj/item/clothing/suit/storage/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
-"avt" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avu" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/temp,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avv" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/three,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "avw" = (
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avx" = (
 /obj/item/device/encryptionkey/commando,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avy" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avz" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/four,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"avA" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/five,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avB" = (
@@ -8548,10 +8512,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
-"awz" = (
-/obj/item/clothing/under/marine/veteran/pmc/temp/two,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "awA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -8668,22 +8628,6 @@
 	},
 /turf/open/floor/corsat/white,
 /area/firefly/hangar)
-"awO" = (
-/obj/item/clothing/under/marine/veteran/pmc/temp,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"awP" = (
-/obj/item/storage/backpack/pmc/temp,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"awQ" = (
-/obj/item/storage/backpack/pmc/temp/four,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"awR" = (
-/obj/item/storage/backpack/pmc/temp/five,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "awS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out"
@@ -8760,10 +8704,6 @@
 	},
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
-"axd" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/temptwo,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "axe" = (
 /obj/structure/closet/secure_closet{
 	name = "team leader locker";
@@ -9032,48 +8972,12 @@
 /obj/item/device/radio/headset/distress/commando,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
-"axS" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/two,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"axT" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/one,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"axU" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/two,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"axV" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/one,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "axW" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "Blast Door";
 	id = "Omga_elevator_uns"
 	},
 /turf/open/floor/corsat/marked,
-/area/firefly/cafeteria)
-"axX" = (
-/obj/item/clothing/under/marine/veteran/pmc/temp/three,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"axY" = (
-/obj/item/clothing/under/marine/veteran/pmc/temp/four,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"axZ" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/four,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"aya" = (
-/obj/item/clothing/suit/storage/marine/veteran/pmc/temp/armor_elite/five,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"ayb" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/three,
-/turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "ayc" = (
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -9087,14 +8991,6 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/green/east,
-/area/firefly/cafeteria)
-"ayd" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/six,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
-"aye" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/temp/seven,
-/turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "ayf" = (
 /obj/structure/closet/secure_closet{
@@ -47435,11 +47331,11 @@ fDZ
 fDZ
 fDZ
 acQ
-axU
-axS
 adk
-awz
-aeC
+adk
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -47627,11 +47523,11 @@ fDZ
 fDZ
 fDZ
 acQ
-axV
-axT
 adk
-awO
-aeD
+adk
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -48203,11 +48099,11 @@ fDZ
 fDZ
 fDZ
 acQ
-avy
-avt
 adk
 adk
-awP
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -48395,11 +48291,11 @@ fDZ
 fDZ
 fDZ
 acQ
-ayb
-avu
 adk
 adk
-awQ
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -48587,7 +48483,7 @@ fDZ
 fDZ
 fDZ
 acQ
-avz
+adk
 adk
 adk
 adk
@@ -48779,11 +48675,11 @@ fDZ
 fDZ
 fDZ
 acQ
-avA
-avv
-axd
-axX
-awR
+adk
+adk
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -48971,11 +48867,11 @@ fDZ
 fDZ
 fDZ
 acQ
-ayd
-axZ
 adk
-axY
-aeR
+adk
+adk
+adk
+adk
 acQ
 adk
 adk
@@ -49163,8 +49059,8 @@ fDZ
 fDZ
 fDZ
 acQ
-aye
-aya
+adk
+adk
 adk
 adk
 adk
@@ -50174,7 +50070,7 @@ axw
 anq
 anq
 anq
-adk
+amY
 afj
 amY
 aeN

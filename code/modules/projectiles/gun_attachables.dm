@@ -379,6 +379,15 @@ Defined in conflicts.dm of the #defines folder.
 	item_state = ""
 	w_class = SIZE_TINY
 
+/obj/item/attachable/bayonet/canc
+	name = "\improper Type 4 bayonet"
+	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPPAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
+	icon_state = "knife_chinese"
+	item_state = "knife_chinese"
+	attach_icon = "canc_bayonet_a"
+	pixel_shift_x = 17
+	pixel_shift_y = 20
+
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
 	desc = "Longer barrel reduces unburnt powder, improving muzzle velocity and accuracy."
@@ -1127,6 +1136,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
 
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff
+	name = "variable IFF enabled zoom scope"
+
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/New()
+	..()
+	delay_mod = -FIRE_DELAY_TIER_2
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+/*
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+*/
+
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"
 	attach_icon = "slavicscope"
@@ -1139,6 +1162,31 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A civilian-grade scope that can be switched between short and long range magnification, intended for use in extraterrestrial scouting. Looks ridiculous on a pistol."
 	aim_speed_mod = 0
 
+/obj/item/attachable/scope/variable_zoom/canc
+	name = "LMR-72 4x smartscope"
+	desc = "Outdated CANC scope."
+	icon_state = "canc_scope"
+	attach_icon = "canc_scope"
+	pixel_shift_x = 13
+	pixel_shift_y = 15
+
+/obj/item/attachable/scope/variable_zoom/canc/toggle_zoom_level()
+	if(ishuman(usr))
+		var/mob/living/carbon/human/human = usr
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			to_chat(human, SPAN_WARNING("You can not use high-resolution magnification of this sight without a monoscope!"))
+			return
+	..()
+
+/obj/item/attachable/scope/variable_zoom/canc/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
+			zoom_level = ZOOM_LEVEL_2X
+			zoom_offset = 6
+			zoom_viewsize = 7
+			allows_movement = 1
+	..()
 #undef ZOOM_LEVEL_2X
 #undef ZOOM_LEVEL_4X
 
@@ -1193,6 +1241,12 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
 	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
+
+/obj/item/attachable/scope/mini/hunting/upp
+	name = "POS-3 hunting mini-scope"
+	icon_state = "upphuntingscope"
+	attach_icon = "upphuntingscope"
+	desc = "Simple Union-made civilian hunting/sport scope."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
@@ -2057,6 +2111,22 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/stock/olympiets
+	name = "Olympiets 'wooden' stock"
+	desc = "Shouldn't be seeing this."
+	icon_state = "olympiets_stock"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 6
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
 /obj/item/attachable/stock/hg3712
 	name = "hg3712 stock"
 	desc = "The non-detachable stock of a HG 37-12 pump shotgun."
@@ -2474,6 +2544,11 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/m49a_barrel/forecon
+	name = "M49A2 barrel"
+	icon_state = "m49a_barrel_a"
+	attach_icon = "m49a_barrel_a"
+
 /* /obj/item/attachable/m49a_barrel/New()
 	..()
 	select_gamemode_skin(type)
@@ -2519,6 +2594,17 @@ Defined in conflicts.dm of the #defines folder.
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
 	attach_icon = "pve_m49a_barrel"
+
+/obj/item/attachable/olympiets_barrel
+	name = "Olympiets barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "olympiets_barrel"
+	attach_icon = "olympiets_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
@@ -3346,7 +3432,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/type71/ag80
 	name = "\improper GP-45 grenade launcher"
-	desc = "Integrated grenade launcher yipee"
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
 	has_breech = TRUE
@@ -4094,3 +4179,15 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
+
+/obj/item/attachable/lw317barrel
+	name = "LW-317 Barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "lw317_dmr_barrel"
+	attach_icon = "lw317_dmr_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
