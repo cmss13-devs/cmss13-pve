@@ -76,6 +76,7 @@ endmap
 
 map lv295_blacksite
 endmap
+
 map bmg290_otogi_egress_point
 endmap
 
@@ -85,6 +86,8 @@ endmap
 map taipei_station
 endmap
 
+map bosenmori_basho
+endmap
 map calliope_highway
 endmap
 
