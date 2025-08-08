@@ -93,6 +93,12 @@
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
 
+
+/obj/item/ammo_magazine/pkp/ap
+	name = "QYJ-72 ammo box (10x27mm AP)"
+	desc = "A 250 round box of AP ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/tracer
+
 /obj/item/ammo_magazine/pkp/verb/turn_into_regular()
 	set name = "Turn into a 10x27mm HEAP box"
 	set category = "Object"
@@ -119,6 +125,7 @@
 	reload_delay = 6
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
+2b8d52e8156ad638cf7071
 //rocket launchers
 
 /obj/item/ammo_magazine/rifle/grenadespawner

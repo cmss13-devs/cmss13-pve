@@ -157,7 +157,9 @@
 	if(!istype(A,/obj) && !istype(A,/mob)) //mobs and objects only.
 		return
 
-	if(istype(A,/obj/effect) || A.anchored)
+	if(istype(A,/obj/effect))
+		return
+	if(A.anchored && !istype(A, /obj/vehicle))
 		return
 	var/mob/User = A
 	var/mob/M

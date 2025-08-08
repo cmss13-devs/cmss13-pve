@@ -43,11 +43,14 @@
 			else if(E.status & LIMB_BROKEN)
 				. += MOVE_REDUCTION_LIMB_BROKEN
 
-
+	var/turf/turf = get_turf(src)
 	var/hungry = (500 - nutrition)/5 // So overeat would be 100 and default level would be 80
 	if(hungry >= 50) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under
 		reducible_tally += hungry/50 //Goes from a slowdown of 1 all the way to 2 for total starvation
 
+	if(turf)
+		var/area/area = turf.loc
+		reducible_tally += area.gravity_slowdown
 	//Equipment slowdowns
 	if(w_uniform)
 		reducible_tally += w_uniform.slowdown

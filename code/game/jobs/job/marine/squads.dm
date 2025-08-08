@@ -135,6 +135,16 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/guard
+	name = "Colonial Guard"
+	equipment_color = "#996633"
+	chat_color = "#996633"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = GRD_FREQ
+	minimap_color = "#996633"
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/upp
 	name = SQUAD_UPP
 	equipment_color = "#8B0000"

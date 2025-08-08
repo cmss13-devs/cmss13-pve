@@ -142,9 +142,16 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/pfc/guard
+	name = "Colonial Guard Guardsman"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+	assignment = "Guardsman"
+	role_comm_title = "GM"
+
 /datum/equipment_preset/uscm/pfc/forecon/corporal
 	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
 
 //*****************************************************************************************************/
 
@@ -216,6 +223,12 @@
 /datum/equipment_preset/uscm/sg/forecon/pfc
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/guard
+	name = "Guard Automatic Rifleman"
+	assignment = "Automatic Rifleman"
+	role_comm_title = "AR"
+	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 
@@ -313,6 +326,12 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/medic/guard
+	name = "Guard Medic"
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	assignment = "Medic"
+	role_comm_title = "Med"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -358,6 +377,10 @@
 /datum/equipment_preset/uscm/tl/forecon/sergeant
 	name = parent_type::name + " (E5 Rank)"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/tl/guard
+	name = "Guard Squad Leader"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -432,6 +455,13 @@
 /datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
 	name = parent_type::name + " (E7 Rank)"
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/guard
+	name = "Guard Unit Leader"
+	assignment = "Unit Leader"
+	role_comm_title = "UL"
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
+	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
