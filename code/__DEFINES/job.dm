@@ -19,7 +19,7 @@
 #define SQUAD_UPP_2 "Golden Embers"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_LRRP "Snake Eaters"
-#define SQUAD_LRRP_2 "Monkey Hunters"
+#define SQUAD_LRRP_2 "Ocelot Grapplers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

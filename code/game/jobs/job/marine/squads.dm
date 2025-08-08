@@ -28,8 +28,8 @@
 	name = "Squad"
 	lead_name = "Squad Leader"
 	lead_icon = "leader"
-	sub_squad = "Fireteam"
-	sub_leader = "Fireteam Leader"
+	sub_squad = "Team"
+	sub_leader = "Team Leader"
 
 /datum/squad_type/upp_squad
 	name = "Platoon"
@@ -179,7 +179,7 @@
 	name = SQUAD_UPP_2
 	equipment_color = "#dfab1c"
 	chat_color = "#e0c31a"
-	usable = TRUE
+	usable = FALSE
 
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
@@ -199,7 +199,7 @@
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
-	usable = TRUE
+	usable = FALSE
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
@@ -281,7 +281,7 @@
 	chat_color = "#8f5e30"
 	minimap_color = "#8f5e30"
 	squad_type = "Squad"
-	usable = TRUE
+	usable = FALSE
 	locked = FALSE
 
 /datum/squad/marine/cbrn
