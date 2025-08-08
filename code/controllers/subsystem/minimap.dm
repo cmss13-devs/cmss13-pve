@@ -726,6 +726,8 @@ SUBSYSTEM_DEF(minimaps)
 	var/allowed_flags = MINIMAP_FLAG_USCM
 	/// by default the ground map - this picks the first level matching the trait. if it exists
 	var/targeted_ztrait = ZTRAIT_GROUND
+	/// the current z level within the z stack
+	var/target_z = 1
 	var/atom/owner
 
 	/// tacmap holder for holding the minimap
@@ -783,9 +785,9 @@ SUBSYSTEM_DEF(minimaps)
 /datum/tacmap/tgui_interact(mob/user, datum/tgui/ui)
 	if(!map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)
-		if(!level[1])
+		if(!level[target_z])
 			return
-		map_holder = SSminimaps.fetch_tacmap_datum(level[1], allowed_flags)
+		map_holder = SSminimaps.fetch_tacmap_datum(level[target_z], allowed_flags)
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -814,9 +816,9 @@ SUBSYSTEM_DEF(minimaps)
 
 	if(use_live_map && !map_holder)
 		var/level = SSmapping.levels_by_trait(targeted_ztrait)
-		if(!level[1])
+		if(!level[target_z])
 			return
-		map_holder = SSminimaps.fetch_tacmap_datum(level[1], allowed_flags)
+		map_holder = SSminimaps.fetch_tacmap_datum(level[target_z], allowed_flags)
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -841,6 +843,11 @@ SUBSYSTEM_DEF(minimaps)
 		ui = new(user, src, "TacticalMap")
 		ui.open()
 
+/datum/tacmap/ui_data(mob/user)
+	. = ..()
+
+	.["mapRef"] = map_holder?.map_ref
+
 /datum/tacmap/drawing/ui_data(mob/user)
 	var/list/data = list()
 
@@ -862,15 +869,16 @@ SUBSYSTEM_DEF(minimaps)
 
 	data["lastUpdateTime"] = last_update_time
 	data["tacmapReady"] = world.time > tacmap_ready_time
+	data["mapRef"] = map_holder?.map_ref
 
 	return data
 
 /datum/tacmap/ui_static_data(mob/user)
 	var/list/data = list()
 
-	data["mapRef"] = map_holder?.map_ref
 	data["canDraw"] = FALSE
 	data["canViewTacmap"] = TRUE
+	data["canChangeZ"] = FALSE
 	data["canViewCanvas"] = FALSE
 	data["isxeno"] = FALSE
 
@@ -880,9 +888,9 @@ SUBSYSTEM_DEF(minimaps)
 	var/list/data = list()
 
 	data["canvasCooldownDuration"] = CANVAS_COOLDOWN_TIME
-	data["mapRef"] = map_holder?.map_ref
 	data["canDraw"] = FALSE
 	data["mapFallback"] = wiki_map_fallback
+	data["canChangeZ"] = TRUE
 
 	var/mob/living/carbon/xenomorph/xeno = user
 	var/is_xeno = istype(xeno)
@@ -987,6 +995,31 @@ SUBSYSTEM_DEF(minimaps)
 
 		if("onDraw")
 			updated_canvas = FALSE
+
+		if("changeZ")
+			var/amount = params["amount"]
+			var/level = SSmapping.levels_by_trait(targeted_ztrait)
+			if(target_z+amount < 1 || target_z+amount > length(level) || !SSmapping.same_z_map(level[target_z], level[target_z+amount]))
+				return
+
+			target_z += amount
+
+			if(!level[target_z])
+				return
+
+			if(user.client)
+				user.client.clear_map(map_holder.map.name)
+			map_holder = SSminimaps.fetch_tacmap_datum(level[target_z], allowed_flags)
+			resend_current_map_png(user)
+			if(user.client)
+				user.client.register_map_obj(map_holder.map)
+
+			distribute_current_map_png(faction)
+			last_update_time = world.time
+
+			new_current_map = get_unannounced_tacmap_data_png(faction)
+			old_map = get_tacmap_data_png(faction)
+			current_svg = get_tacmap_data_svg(faction)
 
 		if("selectAnnouncement")
 			if(!drawing_allowed)
