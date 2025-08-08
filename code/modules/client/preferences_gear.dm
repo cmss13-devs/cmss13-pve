@@ -671,6 +671,30 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M3 Pattern US Flag Paint"
 	path = /obj/item/clothing/accessory/paint/usflag
 
+/datum/gear/paint/target
+	display_name = "M3 Pattern Target Paint"
+	path = /obj/item/clothing/accessory/paint/target
+
+/datum/gear/paint/smiley
+	display_name = "M3 Pattern Smiley-Face Paint"
+	path = /obj/item/clothing/accessory/paint/alcoholism
+
+/datum/gear/paint/neutral
+	display_name = "M3 Pattern Neutral-Face Paint"
+	path = /obj/item/clothing/accessory/paint/melancholy
+
+/datum/gear/paint/cross
+	display_name = "M3 Pattern Cross Paint"
+	path = /obj/item/clothing/accessory/paint/cross
+
+/datum/gear/paint/pandora
+	display_name = "M3 Pattern Inscription Paint"
+	path = /obj/item/clothing/accessory/paint/inscription
+
+/datum/gear/paint/flames
+	display_name = "M3 Pattern Fire Paint"
+	path = /obj/item/clothing/accessory/paint/fire
+
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
 	path = /obj/item/facepaint/green
