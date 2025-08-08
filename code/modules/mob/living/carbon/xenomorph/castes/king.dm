@@ -63,6 +63,9 @@
 
 	bubble_icon = "alienroyal"
 
+	skull = /obj/item/skull/king
+	pelt = /obj/item/pelt/king
+
 /mob/living/carbon/xenomorph/king/Destroy()
 	UnregisterSignal(src, COMSIG_MOVABLE_PRE_MOVE)
 

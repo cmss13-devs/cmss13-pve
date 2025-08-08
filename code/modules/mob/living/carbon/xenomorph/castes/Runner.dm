@@ -73,6 +73,10 @@
 	weed_food_states = list("Runner_1","Runner_2","Runner_3")
 	weed_food_states_flipped = list("Runner_1","Runner_2","Runner_3")
 
+	skull = /obj/item/skull/runner
+	pelt = /obj/item/pelt/runner
+
+
 	var/linger_range = 5
 	var/linger_deviation = 1
 	var/pull_direction
