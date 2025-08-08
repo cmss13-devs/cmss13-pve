@@ -276,8 +276,7 @@
 	},
 /obj/item/card/id/dogtag{
 	layer = 3.001;
-	pixel_x = 2;
-	pixel_y = 0
+	pixel_x = 2
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/supply)
@@ -3432,7 +3431,6 @@
 /area/golden_arrow/dorms)
 "akL" = (
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -4318,7 +4316,6 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -8263,7 +8260,6 @@
 /area/golden_arrow/hangar)
 "aAK" = (
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	layer = 3.1;
 	pixel_x = -5
 	},
@@ -9952,8 +9948,7 @@
 "aGm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_y = 10;
-	pixel_x = 0
+	pixel_y = 10
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
@@ -10554,6 +10549,10 @@
 	pixel_x = -9;
 	layer = 3.01
 	},
+/obj/item/storage/firstaid/softpack{
+	pixel_y = -5;
+	pixel_x = -11
+	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "aIv" = (
@@ -10673,7 +10672,6 @@
 /area/golden_arrow/vehicle_shuttle/upper)
 "aIQ" = (
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 2;
 	pixel_y = 40
 	},
 /obj/structure/machinery/cm_vending/sorted/marine_food,
@@ -11145,7 +11143,6 @@
 	pixel_x = -10
 	},
 /obj/structure/machinery/cryopod/big{
-	dir = 4;
 	pixel_y = 11;
 	layer = 3.2;
 	pixel_x = -5
@@ -15707,10 +15704,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/machinery/computer/ares_console/large{
-	pixel_x = -16;
-	pixel_y = -8
-	},
+/obj/structure/machinery/computer/ares_console/large,
 /obj/structure/bed/chair/comfy/ai_interface{
 	buckling_y = 2
 	},
@@ -19191,7 +19185,6 @@
 "ouD" = (
 /obj/structure/machinery/chem_dispenser/canteen,
 /obj/structure/machinery/light/double/blue/golden_arrow{
-	dir = 2;
 	pixel_y = 40
 	},
 /turf/open/floor/almayer/plate,
