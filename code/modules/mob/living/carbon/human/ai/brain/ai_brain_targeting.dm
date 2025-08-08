@@ -3,6 +3,8 @@
 /datum/human_ai_brain
 	/// At how far out the AI can see cloaked enemies
 	var/cloak_visible_range = 3
+	/// Rear view distance, used for the rear view penalty
+	var/rear_view_distance = 5
 	/// Ref to the currently focused (and shooting at) target
 	var/atom/movable/current_target
 	/// Last turf our target was seen at
@@ -24,7 +26,7 @@
 
 	/// FOV dirs for if our target is out of base world.view range
 	var/list/dir_cone = reverse_nearby_direction(reverse_direction(tied_human.dir))
-	var/rear_view_penalty = scope_vision ? view_distance / 7 - 1 : 0
+	var/rear_view_penalty = scope_vision ? view_distance / rear_view_distance : 0
 
 	var/list/view_list = list()
 	for(var/mob/living/viewing_mob in view(view_distance, tied_human))
