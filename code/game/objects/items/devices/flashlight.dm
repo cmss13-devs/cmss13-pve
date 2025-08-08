@@ -535,7 +535,7 @@
 	name = "chemical light"
 	light_range = 0
 
-/obj/item/device/flashlight/flare/on/illumination/chemical/Initialize(mapload, amount)
+/obj/item/device/flashlight/flare/on/illumination/chemical/Initialize(mapload, amount, color)
 	. = ..()
 	light_range = floor(amount * 0.04)
 	if(!light_range)
