@@ -280,7 +280,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	if(!ooccolor)
 		ooccolor = CONFIG_GET(string/ooc_color_normal)
-	gender = pick(MALE, FEMALE, PLURAL)
+	gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	real_name = random_name(gender)
 	gear = list()
 

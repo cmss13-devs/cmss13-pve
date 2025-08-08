@@ -13,7 +13,7 @@
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
 /datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	new_human.skin_color = "Pale 1"
 	var/random_name
 	var/first_name

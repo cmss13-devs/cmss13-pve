@@ -14,7 +14,7 @@
 	access = get_access(ACCESS_LIST_WY_PMC)
 
 /datum/equipment_preset/pmc/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -690,7 +690,7 @@
 	role_comm_title = "WY Syn"
 
 /datum/equipment_preset/pmc/synth/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name

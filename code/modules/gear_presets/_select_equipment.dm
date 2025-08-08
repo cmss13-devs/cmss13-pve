@@ -92,7 +92,7 @@
 	var/random_name
 	var/first_name
 	var/last_name
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	switch(ethnicity)
 		if(LATIN_AMERICAN_ETHNICITY)
 			new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")

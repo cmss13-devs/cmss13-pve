@@ -6,7 +6,7 @@
 	origin_override = ORIGIN_UPP
 
 /datum/equipment_preset/upp/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 	var/random_name
@@ -964,7 +964,7 @@
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/upp/synth/commando/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/A = new()
 	A.randomize_appearance(new_human)
 

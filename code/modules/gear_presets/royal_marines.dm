@@ -5,7 +5,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
 
 /datum/equipment_preset/twe/royal_marine/load_name(mob/living/carbon/human/new_human, randomise)
-	new_human.gender = pick(MALE, FEMALE, PLURAL)
+	new_human.gender = pick(47.5;MALE, 47.5;FEMALE, 5;PLURAL)
 	var/datum/preferences/placeholder_pref = new()
 	placeholder_pref.randomize_appearance(new_human)
 	var/random_name
