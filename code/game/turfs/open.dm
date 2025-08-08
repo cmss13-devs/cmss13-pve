@@ -162,6 +162,10 @@
 	density = TRUE
 	opacity = TRUE
 
+/turf/open/void/vehicle/unopacity
+	density = TRUE
+	opacity = FALSE
+
 /turf/open/void/is_weedable()
 	return NOT_WEEDABLE
 
