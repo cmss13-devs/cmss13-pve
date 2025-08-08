@@ -93,3 +93,7 @@ endmap
 
 map oread_garrison
 endmap
+
+map greenvault_ranch
+endmap
+g
