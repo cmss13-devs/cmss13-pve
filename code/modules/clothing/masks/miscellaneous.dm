@@ -69,6 +69,13 @@
 	icon_state = "swatclava"
 	item_state = "swatclava"
 
+/obj/item/clothing/mask/balaclava/threehole
+	name = "three-hole balaclava"
+	desc = "The preferred mask of every proper henchman, goon, thug, or villain worth their salt."
+	icon_state = "balaclava_threehole"
+	item_state = "balaclava_threehole"
+	flags_inventory = ALLOWREBREATH|ALLOWCPR
+
 /obj/item/clothing/mask/luchador
 	name = "Luchador Mask"
 	desc = "Worn by robust fighters, flying high to defeat their foes!"
