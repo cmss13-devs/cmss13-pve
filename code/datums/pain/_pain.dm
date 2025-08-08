@@ -194,7 +194,9 @@
 				activate_horrible()
 
 	if(new_level >= PAIN_LEVEL_SEVERE && feels_pain)
-		RegisterSignal(source_mob, COMSIG_MOB_DEVOURED, PROC_REF(handle_devour), override = TRUE)
+		RegisterSignal(source_mob, COMSIG_MOB_DRAGGED, PROC_REF(oxyloss_drag), override = TRUE)
+		RegisterSignal(source_mob, COMSIG_MOB_HAULED, PROC_REF(handle_haul), override = TRUE)
+		RegisterSignal(source_mob, COMSIG_MOVABLE_PRE_THROW, PROC_REF(oxy_kill), override = TRUE)
 
 	last_level = new_level
 	addtimer(CALLBACK(src, PROC_REF(before_update)), PAIN_UPDATE_FREQUENCY)
@@ -228,7 +230,11 @@
 				activate_severe()
 
 	if(new_level < PAIN_LEVEL_SEVERE)
-		UnregisterSignal(source_mob, COMSIG_MOB_DEVOURED)
+		UnregisterSignal(source_mob, list(
+			COMSIG_MOB_DRAGGED,
+			COMSIG_MOB_HAULED,
+			COMSIG_MOVABLE_PRE_THROW
+		))
 
 	last_level = new_level
 	addtimer(CALLBACK(src, PROC_REF(before_update)), PAIN_UPDATE_FREQUENCY)
@@ -277,12 +283,25 @@
 	pain_slowdown = PAIN_SPEED_VERYSLOW
 	new /datum/effects/pain/human/horrible(source_mob)
 
-/datum/pain/proc/handle_devour(mob/living/source)
+/datum/pain/proc/oxyloss_drag(mob/living/source, mob/puller)
+	SIGNAL_HANDLER
+	if(isxeno(puller) && source.stat == UNCONSCIOUS)
+		var/mob/living/carbon/xenomorph/xeno_puller = puller
+		if(source.ally_of_hivenumber(xeno_puller.hivenumber))
+			return
+		if(source.get_species())
+			var/mob/living/carbon/human/H = source
+			if(H.species.flags & HAS_HARDCRIT)
+				source.apply_damage(20, OXY)
+
+/datum/pain/proc/handle_haul(mob/living/source, mob/living/carbon/xenomorph/hauler)
 	SIGNAL_HANDLER
 	if(source.chestburst)
 		return
+	if(source.ally_of_hivenumber(hauler.hivenumber))
+		return
 	oxy_kill(source)
-	return COMPONENT_CANCEL_DEVOUR
+	return COMPONENT_CANCEL_HAUL
 
 /datum/pain/proc/oxy_kill(mob/living/source)
 	INVOKE_ASYNC(source, TYPE_PROC_REF(/mob, death), source.last_damage_data)
