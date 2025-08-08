@@ -390,6 +390,12 @@
 	faction = FACTION_PMC
 	squad_type = "Taskforce"
 
+/datum/squad/marine/pmc/secondary
+	name = SQUAD_PMCPLT_2
+	chat_color = "#0fc777"
+	minimap_color = MINIMAP_SQUAD_ECHO
+	usable = FALSE
+
 //###############################
 /datum/squad/clf
 	name = "Root"

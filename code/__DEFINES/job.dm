@@ -18,6 +18,7 @@
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_UPP_2 "Golden Embers"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_PMCPLT_2 "VIRIDIAN-22"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 
