@@ -545,6 +545,11 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "vulture_barrel"
 	hud_offset_mod = -1
 
+/obj/item/attachable/sniperbarrel/fr2
+	name = "\improper FR2 barrel"
+	icon_state = "fr2_barrel"
+	hud_offset_mod = -1
+
 /obj/item/attachable/m60barrel
 	name = "M60 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
@@ -671,6 +676,15 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/mateba/short/dark
 	icon_state = "mateba_short_a"
+
+/obj/item/attachable/masm_barrel
+	name = "MASM55 barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "masm_barrel"
+	desc = "Barrel of the MASM55, how did that get here?"
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -6
 
 // ======== Rail attachments ======== //
 
@@ -1133,6 +1147,7 @@ Defined in conflicts.dm of the #defines folder.
 
 //other variable zoom scopes
 
+
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
 
@@ -1149,6 +1164,11 @@ Defined in conflicts.dm of the #defines folder.
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 */
+
+/obj/item/attachable/scope/variable_zoom/fr2
+	name = "FR2 variable zoom scope"
+	icon_state = "fr2_scope"
+	attach_icon = "fr2_scope_a"
 
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"
@@ -2961,6 +2981,30 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 20
 	hud_offset_mod = 2
 
+/obj/item/attachable/stock/fn107
+	name = "FN107 Carbine Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "fn107_stock"
+	attach_icon = "fn107_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
+/obj/item/attachable/stock/fpsa
+	name = "FPSA DMR Stock"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/stock.dmi'
+	icon_state = "fpsa_stock"
+	attach_icon = "fpsa_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 15
+	size_mod = 0
+
 // ======== Underbarrel Attachments ======== //
 
 
@@ -4151,6 +4195,26 @@ Defined in conflicts.dm of the #defines folder.
 		if("urban")
 			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
 
+/obj/item/attachable/bipod/masm
+	name = "MASM55 bipod"
+	desc = "An integrated bipod for the MASM55 Medium Machinegun."
+	icon_state = "masm_bipod"
+	attach_icon = "masm_bipod"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle
+
+/obj/item/attachable/bipod/masm/New()
+	..()
+
+	delay_mod = 0
+	wield_delay_mod = WIELD_DELAY_FAST
+	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = SCATTER_AMOUNT_TIER_9
+	fa_scatter_peak_mod = 15
+
 /obj/item/attachable/burstfire_assembly
 	name = "burst fire assembly"
 	desc = "A small angled piece of fine machinery that increases the burst count on some weapons, and grants the ability to others. \nIncreases weapon scatter."
@@ -4191,3 +4255,14 @@ Defined in conflicts.dm of the #defines folder.
 	flags_attach_features = NO_FLAGS
 	melee_mod = 0
 	size_mod = 0
+
+/obj/item/attachable/bipod/fr2
+	name = "FR2 bipod"
+	desc = "An integrated bipod for the FR2 AMR."
+	icon_state = "fr2_bipod"
+	attach_icon = "fr2_bipod"
+	slot = "under"
+	size_mod = 0
+	melee_mod = 0
+	flags_attach_features = ATTACH_ACTIVATION
+	attachment_action_type = /datum/action/item_action/toggle

@@ -294,3 +294,56 @@
 
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/fr2
+	name = "\improper FR F20 bolt action marksman rifle"
+	desc = "Fusil à Répétition modèle F20 or repeating rifle model F20 is a bolt-action marksman rifle a very hardened old model of the French Military. Originally made by FAN in 2149 to give military and private arsenals. Used to take out targets in the old fashioned way by having more traditional mechanism and a variable zoom scope to land their target. Loaded with 10x50mm caseful calibere."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "fr2"
+	item_state = "fr2"
+
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+	w_class = SIZE_LARGE
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_RIFLE
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_SLOW
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/fr2
+	attachable_allowed = list(
+		/obj/item/attachable/sniperbarrel/fr2,
+		/obj/item/attachable/scope/variable_zoom/fr2,
+		/obj/item/attachable/bipod/fr2,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/sniperbarrel/fr2,
+		/obj/item/attachable/scope/variable_zoom/fr2,
+		/obj/item/attachable/bipod/fr2,
+	)
+	civilian_usable_override = FALSE
+	has_openbolt_icon = TRUE
+
+	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	fire_sound = 'sound/weapons/gun_sniper.ogg'
+	open_bolt_sound ='sound/weapons/handling/gun_vulture_bolt_eject.ogg'
+	close_bolt_sound ='sound/weapons/handling/gun_vulture_bolt_close.ogg'
+
+/obj/item/weapon/gun/boltaction/fr2/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 41, "muzzle_y" = 17,"rail_x" = 25, "rail_y" = 22, "under_x" = 30, "under_y" = 14, "stock_x" = 28, "stock_y" = 9)
+
+/obj/item/weapon/gun/boltaction/fr2/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
+	bolt_delay = FIRE_DELAY_TIER_3
+
+/obj/item/weapon/gun/boltaction/fr2/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_AMR)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0

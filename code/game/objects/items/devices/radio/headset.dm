@@ -380,6 +380,8 @@
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
 			marker_flags = MINIMAP_FLAG_CLF
+		else if(hud_type == MOB_HUD_FACTION_FIL)
+			marker_flags = MINIMAP_FLAG_CLF
 
 	if(wearer.undefibbable)
 		set_undefibbable_on_minimap(z_level, marker_flags)
@@ -1358,3 +1360,11 @@
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
+/obj/item/device/radio/headset/distress/fil
+	name = "military headset"
+	desc = "A military headset, used by the French Foreign Interstellar Legion."
+	frequency = FIL_FREQ
+	icon_state = "vai_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/fil)
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_FIL)
