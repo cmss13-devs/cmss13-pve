@@ -287,7 +287,13 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 18,
+		"rail_x" = 12, "rail_y" = 23,
+		"under_x" = 23, "under_y" = 13,
+		"stock_x" = 24, "stock_y" = 14,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
 
 
 /obj/item/weapon/gun/rifle/m41aMK1/set_gun_config_values()
@@ -518,6 +524,57 @@
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
+//-------------------------------------------------------
+//XM43, a cut down official carbine modification of the M41A. Y'know,  a space XM177 or whatever.
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine
+	name = "XM43 pulse carbine"
+	desc = "Pulse action 10x24mm caseless carbine, semi-experimental. Exchanges the firepower of a grenade launcher and some modularity for handling."
+	icon_state = "xm43"
+	item_state = "xm43"
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
+	wield_delay = WIELD_DELAY_MIN
+	attachable_allowed = list(
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+		/obj/item/attachable/suppressor,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/lasersight/carbine,
+	)
+	start_semiauto = FALSE
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	set_burst_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 30, "muzzle_y" = 19,
+		"rail_x" = 12, "rail_y" = 22,
+		"under_x" = 22, "under_y" = 16,
+		"stock_x" = 24, "stock_y" = 14,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
+
+/obj/item/weapon/gun/rifle/m41aMK1/carbine/unloaded
+	current_mag = null
+
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
@@ -579,7 +636,13 @@
 	AddComponent(/datum/component/iff_fire_prevention)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17, "rail_x" = 11, "rail_y" = 19, "under_x" = 24, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 26, "side_rail_y" = 17)
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 17,
+		"rail_x" = 11, "rail_y" = 19,
+		"under_x" = 24, "under_y" = 12,
+		"stock_x" = 24, "stock_y" = 13,
+		"side_rail_x" = 26, "side_rail_y" = 17
+	)
 
 /obj/item/weapon/gun/rifle/m46c/set_gun_config_values()
 	..()
