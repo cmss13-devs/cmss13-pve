@@ -324,8 +324,7 @@ can cause issues with ammo types getting mixed up during the burst.
 			return TRUE
 	return ..()
 
-/*obj/item/weapon/gun/shotgun/combat/marsoc/handle_starting_attachment()
-	return */ //we keep the UGL
+/obj/item/weapon/gun/shotgun/combat/marsoc/handle_starting_attachment()
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 18)
