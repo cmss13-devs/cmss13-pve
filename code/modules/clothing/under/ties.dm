@@ -6,7 +6,6 @@
 	w_class = SIZE_SMALL
 	var/image/inv_overlay = null //overlay used when attached to clothing.
 	var/obj/item/clothing/has_suit = null //the suit the tie may be attached to
-	var/slot = ACCESSORY_SLOT_DECOR
 	var/list/mob_overlay = list()
 	var/overlay_state = null
 	var/list/accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/ties.dmi', WEAR_JACKET = 'icons/mob/humans/onmob/ties.dmi')
@@ -15,7 +14,15 @@
 	var/high_visibility //if it should appear on examine without detailed view
 	var/removable = TRUE
 	flags_equip_slot = SLOT_ACCESSORY
+	worn_accessory_slot = ACCESSORY_SLOT_TIE
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/ties_monkey.dmi')
+	var/original_item_path = /obj/item/clothing/accessory
+
+/obj/item/clothing/accessory/attack_self(mob/user)
+	if(can_become_accessory)
+		revert_from_accessory(user)
+		return
+	return ..()
 
 /obj/item/clothing/accessory/Initialize()
 	. = ..()
@@ -168,7 +175,8 @@
 	var/recipient_name //name of the person this is awarded to.
 	var/recipient_rank
 	var/medal_citation
-	slot = ACCESSORY_SLOT_MEDAL
+	worn_accessory_slot = ACCESSORY_SLOT_MEDAL
+	worn_accessory_limit = 10
 	high_visibility = TRUE
 	jumpsuit_hide_states = UNIFORM_JACKET_REMOVED
 
@@ -347,7 +355,7 @@
 	name = "red armband"
 	desc = "A fancy red armband!"
 	icon_state = "red"
-	slot = ACCESSORY_SLOT_ARMBAND
+	worn_accessory_slot = ACCESSORY_SLOT_ARMBAND
 	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
 
 /obj/item/clothing/accessory/armband/cargo
@@ -389,7 +397,7 @@
 	name = "military police armband"
 	desc = "An armband used by military police officers to denote their position."
 	icon_state = "armband_mp"
-	slot = ACCESSORY_SLOT_ARMBAND
+	worn_accessory_slot = ACCESSORY_SLOT_ARMBAND
 	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
 
 //patches
@@ -397,7 +405,9 @@
 	name = "USCM patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Colonial Marines."
 	icon_state = "uscmpatch"
+	worn_accessory_slot = ACCESSORY_SLOT_PATCH
 	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+	worn_accessory_limit = 2
 
 /obj/item/clothing/accessory/patch/falcon
 	name = "USCM Falling Falcons patch"
@@ -497,13 +507,13 @@
 	name = "Attachable Dogtags"
 	desc = "A robust pair of dogtags to be worn around the neck of the United States Colonial Marines, however due to a combination of budget reallocation, Marines losing their dogtags, and multiple incidents of marines swallowing their tags, they now attach to the uniform or armor."
 	icon_state = "dogtag"
-	slot = ACCESSORY_SLOT_MEDAL
+	worn_accessory_slot = ACCESSORY_SLOT_MEDAL
 
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
 	icon_state = "poncho"
-	slot = ACCESSORY_SLOT_PONCHO
+	worn_accessory_slot = ACCESSORY_SLOT_PONCHO
 	var/has_variation = TRUE
 
 /obj/item/clothing/accessory/poncho/Initialize()
@@ -548,7 +558,7 @@
 	icon_state = "webbing"
 	w_class = SIZE_LARGE //too big to store in other pouches
 	var/obj/item/storage/internal/hold = /obj/item/storage/internal/accessory
-	slot = ACCESSORY_SLOT_UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_UTILITY
 	high_visibility = TRUE
 
 /obj/item/clothing/accessory/storage/Initialize()
@@ -1139,13 +1149,13 @@
 	desc = "A simple bracelet made from a strip of fabric."
 	icon_state = "bracelet"
 	item_state = null
-	slot = ACCESSORY_SLOT_WRIST_L
+	worn_accessory_slot = ACCESSORY_SLOT_WRIST_L
 	var/which_wrist = "left wrist"
 
 /obj/item/clothing/accessory/wrist/get_examine_text(mob/user)
 	. = ..()
 
-	switch(slot)
+	switch(worn_accessory_slot)
 		if(ACCESSORY_SLOT_WRIST_L)
 			which_wrist = "left wrist"
 		if(ACCESSORY_SLOT_WRIST_R)
@@ -1158,12 +1168,12 @@
 /obj/item/clothing/accessory/wrist/attack_self(mob/user)
 	..()
 
-	switch(slot)
+	switch(worn_accessory_slot)
 		if(ACCESSORY_SLOT_WRIST_L)
-			slot = ACCESSORY_SLOT_WRIST_R
+			worn_accessory_slot = ACCESSORY_SLOT_WRIST_R
 			to_chat(user, SPAN_NOTICE("[src] will be worn on the right wrist."))
 		if(ACCESSORY_SLOT_WRIST_R)
-			slot = ACCESSORY_SLOT_WRIST_L
+			worn_accessory_slot = ACCESSORY_SLOT_WRIST_L
 			to_chat(user, SPAN_NOTICE("[src] will be worn on the left wrist."))
 
 /obj/item/clothing/accessory/wrist/watch
@@ -1253,7 +1263,7 @@
 	desc = "Attachable supplementary armor for the M3 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
 	icon_state = "pads"
 	item_state = "pads"
-	slot = ACCESSORY_SLOT_DECORARMOR
+	worn_accessory_slot = ACCESSORY_SLOT_DECORARMOR
 
 /obj/item/clothing/accessory/pads/Initialize(mapload)
 	. = ..()
@@ -1266,7 +1276,7 @@
 	desc = "Attachable supplementary armor for the M3 armor system. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
 	icon_state = "bracers"
 	item_state = "bracers"
-	slot = ACCESSORY_SLOT_DECORBRACER
+	worn_accessory_slot = ACCESSORY_SLOT_DECORBRACER
 
 /obj/item/clothing/accessory/pads/bracers/standard
 	flags_atom = NO_SNOW_TYPE
@@ -1276,7 +1286,7 @@
 	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard"
 	item_state = "neckguard"
-	slot = ACCESSORY_SLOT_DECORNECK
+	worn_accessory_slot = ACCESSORY_SLOT_DECORNECK
 
 /obj/item/clothing/accessory/pads/neckguard/uacg
 	desc = "Attachable supplementary armor for the UACG's M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
@@ -1289,7 +1299,7 @@
 	desc = "Attachable supplementary armor for the M3 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
 	icon_state = "shinguards"
 	item_state = "shinguards"
-	slot = ACCESSORY_SLOT_DECORSHIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORSHIN
 
 /obj/item/clothing/accessory/pads/greaves/standard
 	flags_atom = NO_SNOW_TYPE
@@ -1299,7 +1309,7 @@
 	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
-	slot = ACCESSORY_SLOT_DECORKNEE
+	worn_accessory_slot = ACCESSORY_SLOT_DECORKNEE
 
 /obj/item/clothing/accessory/pads/kneepads/standard
 	flags_atom = NO_SNOW_TYPE
@@ -1309,13 +1319,13 @@
 	desc = "Attachable supplementary armor for the M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate"
 	item_state = "groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORGROIN
 
 /obj/item/clothing/accessory/pads/groin/uacg
 	desc = "Attachable supplementary armor for the UACG's M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
-	slot = ACCESSORY_SLOT_DECORGROIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
 
 
@@ -1340,7 +1350,7 @@
 	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "u_groinplate"
 	item_state = "u_groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
@@ -1349,21 +1359,21 @@
 	desc = "A set of arm plates designed for the 6B90 armor system."
 	icon_state = "upp_arms"
 	item_state = "upp_arms"
-	slot = ACCESSORY_SLOT_DECORARMOR
+	worn_accessory_slot = ACCESSORY_SLOT_DECORARMOR
 
 /obj/item/clothing/accessory/upppads/legs
 	name = "\improper 6B90 Leg Guards"
 	desc = "A set of leg greaves designed for the 6B90 armor system."
 	icon_state = "upp_greaves"
 	item_state = "upp_greaves"
-	slot = ACCESSORY_SLOT_DECORSHIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORSHIN
 
 /obj/item/clothing/accessory/upppads/crotch
 	name = "\improper 6B90 Crotch Guard"
 	desc = "A crotch plate designed for the 6B90 armor system."
 	icon_state = "upp_crotch"
 	item_state = "upp_crotch"
-	slot = ACCESSORY_SLOT_DECORGROIN
+	worn_accessory_slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
@@ -1372,7 +1382,7 @@
 	desc = "A set of paint tones to etch a skull into a Marine's armor."
 	icon_state = "skull"
 	item_state = "skull"
-	slot = ACCESSORY_SLOT_PAINT
+	worn_accessory_slot = ACCESSORY_SLOT_PAINT
 
 /obj/item/clothing/accessory/paint/heart
 	name = "heart armor paint"
@@ -1403,7 +1413,7 @@
 	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
 	icon_state = "blacksg"
 	item_state = "blacksg"
-	slot = ACCESSORY_SLOT_SGPAINT
+	worn_accessory_slot = ACCESSORY_SLOT_SGPAINT
 
 //===========================//CUSTOM ARMOR WEBBING\\================================\\
 
@@ -1412,7 +1422,7 @@
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to the M3 Pattern Marine armor standard for the USCMC. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
@@ -1484,7 +1494,6 @@
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load For Army Props
 //===
@@ -1566,7 +1575,7 @@
 	icon_state = "upp_webbing_magazine"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	storage_slots = 4
@@ -1597,7 +1606,7 @@
 	icon_state = "upp_webbing_small"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"
@@ -1605,7 +1614,7 @@
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M3UTILITY
 
 //Partial Pre-load For Props
 //===
@@ -1671,7 +1680,7 @@
 	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."
 	icon_state = "m56pouch"
 	hold = /obj/item/storage/internal/accessory/black_vest/m56
-	slot = ACCESSORY_SLOT_M56UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_M56UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m56/Initialize(mapload)
 	. = ..()
@@ -1728,7 +1737,6 @@
 	icon_state = "upp_webbing_magazine"
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/storage/internal/accessory/webbing/m3mag/upp
 	storage_slots = 4
@@ -1746,7 +1754,6 @@
 	icon_state = "upp_webbing_small"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
 	name = "\improper Type 78 Pattern Webbing"
@@ -1754,4 +1761,3 @@
 	icon_state = "upp_webbing_large"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
