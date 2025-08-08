@@ -170,6 +170,7 @@
 	new /obj/item/device/radio(src)
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/stack/medical/splint(src)
+
 /obj/item/storage/pouch/survival/synth
 	name = "synth survival pouch"
 	desc = "An emergency pouch given to synthetics in the event of an emergency."
@@ -196,7 +197,7 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, and pill packets."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets."
 	icon_state = "firstaid"
 	storage_slots = 4
 	can_hold = list(
@@ -208,7 +209,7 @@
 	)
 
 /obj/item/storage/pouch/firstaid/full
-	desc = "Contains a painkiller autoinjector, first-aid autoinjector, some ointment, and some bandages."
+	desc = "Contains some basic first aid supplies."
 
 /obj/item/storage/pouch/firstaid/full/fill_preset_inventory()
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
@@ -229,7 +230,7 @@
 	new /obj/item/storage/pill_bottle/packet/tramadol(src)
 
 /obj/item/storage/pouch/firstaid/ert
-	desc = "It can contain autoinjectors, ointments, and bandages. This one has some extra stuff."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets. This one has some extra stuff."
 	icon_state = "firstaid"
 	storage_slots = 5
 
@@ -399,18 +400,25 @@
 	icon_state = "medium_ammo_mag"
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg/m39,
-	)
 	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
+		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
 
@@ -637,6 +645,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/high_explosive/upp(src)
 
+/obj/item/storage/pouch/explosive/upp/impact/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+
 /obj/item/storage/pouch/explosive/C4/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/plastic(src)
@@ -678,6 +690,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/full/surgery/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"

@@ -4,6 +4,7 @@
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	permeability_coefficient = 0.90
 	flags_equip_slot = SLOT_ICLOTHING
 	armor_melee = CLOTHING_ARMOR_NONE
@@ -31,6 +32,7 @@
 	var/removed_parts = 0
 	var/worn_state = null
 	var/hood_state //for uniforms with hoods.
+	var/undershirt = FALSE
 	drag_unequip = TRUE
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER, ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER)
@@ -193,9 +195,11 @@
 				to_chat(user, SPAN_NOTICE("You roll the jacket's sleeves in your hands.")) //visual representation that the sleeves have been rolled while jacket has been removed.
 		else if(flags_jumpsuit & UNIFORM_SLEEVE_ROLLED)
 			LAZYSET(item_state_slots, WEAR_BODY, "[worn_state]_d")
+			flags_bodypart_hidden &= ~(BODY_FLAG_ARMS)
 			update_clothing_icon()
 		else
 			LAZYSET(item_state_slots, WEAR_BODY, worn_state)
+			flags_bodypart_hidden |= BODY_FLAG_ARMS
 			update_clothing_icon()
 	else if(show_message)
 		to_chat(user, SPAN_WARNING("You cannot roll your sleeves!"))
@@ -206,15 +210,21 @@
 		flags_jumpsuit ^= UNIFORM_JACKET_REMOVED
 		if(flags_jumpsuit & UNIFORM_JACKET_REMOVED)
 			LAZYSET(item_state_slots, WEAR_BODY, "[worn_state]_dj")
+			if(!undershirt)
+				flags_bodypart_hidden &= ~(BODY_FLAG_CHEST)
+			flags_bodypart_hidden &= ~(BODY_FLAG_ARMS)
 			if(ismob(loc))
 				var/mob/M = loc
 				M.update_inv_wear_id()
 		else if(flags_jumpsuit & UNIFORM_SLEEVE_CUT)
 			LAZYSET(item_state_slots, WEAR_BODY, "[worn_state]_df")
+			flags_bodypart_hidden |= BODY_FLAG_CHEST
 		else if(flags_jumpsuit & UNIFORM_SLEEVE_ROLLED)
 			LAZYSET(item_state_slots, WEAR_BODY, "[worn_state]_d")
+			flags_bodypart_hidden |= BODY_FLAG_CHEST
 		else
 			LAZYSET(item_state_slots, WEAR_BODY, worn_state)
+			flags_bodypart_hidden |= BODY_FLAG_ARMS|BODY_FLAG_CHEST
 		update_clothing_icon()
 	else if(show_message)
 		to_chat(user, SPAN_WARNING("\The [src] doesn't have a removable jacket!"))
@@ -235,6 +245,7 @@
 			return
 	else
 		flags_jumpsuit &= ~(UNIFORM_SLEEVE_ROLLABLE|UNIFORM_SLEEVE_CUTTABLE)
+		flags_bodypart_hidden &= ~(BODY_FLAG_ARMS)
 		flags_jumpsuit |= UNIFORM_SLEEVE_CUT
 		LAZYSET(item_state_slots, WEAR_BODY, "[worn_state]_df")
 		update_clothing_icon()
