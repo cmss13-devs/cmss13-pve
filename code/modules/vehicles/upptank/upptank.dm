@@ -1,39 +1,12 @@
 /obj/vehicle/multitile/tank/upptank
 	name = "Cheetah 2A Light Tank"
-	desc = "The Cheetah 2A is an assault tank designed to be rapidly deployed from light dropcraft in daring raids and first strike operations. The Cheetah 2A is relatively new in comparison to most UPP vehicles seen on the Frontier, but has already earned a fair reputation as a reliable workhorse, that is able to bring some cutting edge technology to the fight. While the project was based in Germany, the Cheetah 2A has a truly progressive development history, seeing influences from nearly all UPP member states."
+	desc = "A giant piece of state-approved armor with a big gun, you know what to do. Entrance in the back."
+	desc_lore = "The Cheetah 2A is an assault tank designed to be rapidly deployed from light dropcraft in daring raids and first strike operations. The Cheetah 2A is relatively new in comparison to most UPP vehicles seen on the Frontier, but has already earned a fair reputation as a reliable workhorse, that is able to bring some cutting edge technology to the fight. While the project was based in Germany, the Cheetah 2A has a truly progressive development history, seeing influences from nearly all UPP member states."
 
 	icon = 'icons/obj/vehicles/upptank.dmi'
 	icon_state = "tank_base"
-	pixel_x = -48
-	pixel_y = -48
-
-	bound_width = 96
-	bound_height = 96
-
-	bound_x = -32
-	bound_y = -32
 
 	interior_map = /datum/map_template/interior/upptank
-
-	passengers_slots = 4
-	//this is done in case VCs die inside the tank, so that someone else can come in and take them out.
-	revivable_dead_slots = 2
-	xenos_slots = 4
-
-	entrances = list(
-		"back" = list(0, 2)
-	)
-
-	movement_sound = 'sound/vehicles/tank_driving.ogg'
-	honk_sound = 'sound/vehicles/honk_3_ambulence.ogg'
-
-	required_skill = SKILL_VEHICLE_LARGE
-
-	vehicle_flags = VEHICLE_CLASS_MEDIUM
-
-	move_max_momentum = 2
-	move_momentum_build_factor = 1.5
-	move_turn_momentum_loss_factor = 0.6
 
 	light_range = 4
 
@@ -48,27 +21,15 @@
 		/obj/item/hardpoint/locomotion/treads/robust,
 	)
 
-	seats = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-	)
-
-	active_hp = list(
-		VEHICLE_DRIVER = null,
-		VEHICLE_GUNNER = null,
-	)
-
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 0.5,
-		"slash" = 1.6,
-		"bullet" = 0.4,
-		"explosive" = 0.8,
-		"blunt" = 0.8,
+		"acid" = 4,
+		"slash" = 0.35,
+		"bullet" = 0.45,
+		"explosive" = 0.65,
+		"blunt" = 0.4,
 		"abstract" = 1
 	)
-
-	explosive_resistance = 500
 
 /obj/vehicle/multitile/tank/upptank/initialize_cameras(change_tag = FALSE)
 	if(!camera)

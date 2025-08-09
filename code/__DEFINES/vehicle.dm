@@ -23,9 +23,9 @@
 #define VEHICLE_SPEED_NORMAL 10 //default 1 second per tile
 #define VEHICLE_SPEED_FASTNORMAL 7
 #define VEHICLE_SPEED_FAST 5 //half a second per tile
-#define VEHICLE_SPEED_FASTER 4
-#define VEHICLE_SPEED_VERYFAST   3
-#define VEHICLE_SPEED_SUPERFAST  2
+#define VEHICLE_SPEED_FASTER 3
+#define VEHICLE_SPEED_VERYFAST   2
+#define VEHICLE_SPEED_SUPERFAST  1.5
 #define VEHICLE_SPEED_DEBUGFAST  1
 
 #define VEHICLE_TRAMPLE_DAMAGE_TIER_1  22.5
@@ -44,9 +44,6 @@
 #define INTERIOR_BOUND_SIZE 25 //How big we want each vehicle interior instance to be, including padding
 
 #define HDPT_OFFSET_EMPTY list(NORTH = list(0, 0), SOUTH = list(0, 0), EAST = list(0, 0), WEST = list(0, 0))
-
-/// Toggle between Shift click and MMB click for gunner
-#define VEHICLE_TOGGLE_SHIFT_CLICK_GUNNER (1<<0)
 
 /// Vehicle Classes (for future)
 #define VEHICLE_CLASS_WEAK (1<<1) //light unarmored vehicles like colony vehicles/trucks/vans

@@ -1,6 +1,6 @@
 /obj/item/ammo_magazine/hardpoint/t60p3m
 	name = "T6OP-3M Magazine (10x27mm)"
-	desc = "A secondary armament MG magazine"
+	desc = "A box of 500, 10x27mm caseless rounds for use in the T6OP-3M heavy machine gun system."
 	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "t60p3m"

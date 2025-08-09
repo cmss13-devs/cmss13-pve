@@ -1,6 +1,6 @@
 /obj/item/hardpoint/secondary/m56cupola
 	name = "\improper M56 Cupola"
-	desc = "A secondary weapon for tanks that shoots bullets"
+	desc = "A secondary remotely-controlled weapon system for tanks using a modified M56."
 
 	icon_state = "m56_cupola"
 	disp_icon = "tank"
@@ -11,7 +11,7 @@
 	firing_arc = 120
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola
-	max_clips = 1
+	max_clips = 3
 
 	muzzle_flash_pos = list(
 		"1" = list(8, -7),
