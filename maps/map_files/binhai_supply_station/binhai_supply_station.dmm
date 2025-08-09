@@ -668,6 +668,79 @@
 	},
 /turf/open/floor/corsat,
 /area/binhai/other/mainlower)
+"abS" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abU" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abV" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abW" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abX" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"abY" = (
+/obj/structure/machinery/door/airlock/upp_grey{
+	dir = 2;
+	name = "\improper Testing Airlock"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "ResearchLock";
+	name = "\improper Shutter";
+	color = "#8B9490";
+	dir = 2;
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/marked,
+/area/binhai/other/research)
+"abZ" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_power = 0.9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/sterile_white,
+/area/binhai/other/research)
+"aca" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/bright_clean,
+/area/binhai/other/research)
+"acb" = (
+/obj/structure/prop/almayer/whiteboard{
+	pixel_y = 19;
+	density = 0;
+	pixel_x = -1
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/binhai/main/hall)
 "acY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -1802,12 +1875,6 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/basemil/lower)
 "bim" = (
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/structure/closet/crate,
 /turf/open/floor/corsat/plate,
 /area/binhai/other/Engineeringlower)
 "biC" = (
@@ -1822,6 +1889,7 @@
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "biI" = (
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/other/research)
 "bjq" = (
@@ -4085,6 +4153,7 @@
 	pixel_y = 7;
 	anchored = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "dnr" = (
@@ -4095,6 +4164,7 @@
 	dir = 8;
 	light_power = 0.9
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "dnu" = (
@@ -5754,9 +5824,7 @@
 /turf/open/floor/corsat,
 /area/binhai/main/engineering)
 "eKf" = (
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/depths)
 "eKu" = (
@@ -6540,6 +6608,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "foB" = (
@@ -7098,6 +7167,7 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "fOz" = (
@@ -8304,6 +8374,7 @@
 	pixel_x = 5;
 	pixel_y = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/other/research)
 "gZh" = (
@@ -8727,9 +8798,7 @@
 /area/binhai/other/mainlower)
 "hpi" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/floor/corsat,
 /area/binhai/caves/main)
 "hqe" = (
@@ -9523,6 +9592,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 28
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "ibe" = (
@@ -10140,15 +10210,6 @@
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/obj/structure/closet/crate,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
 /turf/open/floor/corsat/plate,
 /area/binhai/other/powerstation)
 "iGc" = (
@@ -11331,9 +11392,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "jHI" = (
@@ -12199,6 +12258,7 @@
 /area/binhai/other/minelower)
 "kwF" = (
 /obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "kyr" = (
@@ -12528,11 +12588,6 @@
 /turf/open/floor/corsat,
 /area/binhai/main/hangar)
 "kNf" = (
-/obj/structure/prop/almayer/whiteboard{
-	pixel_y = 19;
-	density = 0;
-	pixel_x = -1
-	},
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 1
 	},
@@ -13575,9 +13630,7 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/binhai/other/hablower)
 "lDG" = (
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/gm/dirt2,
 /area/binhai/caves/main)
 "lDS" = (
@@ -14077,9 +14130,7 @@
 /area/binhai/main/bar)
 "mfT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/floor/corsat,
 /area/binhai/caves/depths)
 "mhn" = (
@@ -14745,6 +14796,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "mNc" = (
@@ -15053,6 +15105,7 @@
 /obj/item/clothing/mask/gas/military/upp{
 	pixel_y = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "ndI" = (
@@ -16726,6 +16779,7 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean,
 /area/binhai/other/research)
 "oBN" = (
@@ -17894,9 +17948,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /area/binhai/hab/south)
 "pDM" = (
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "pEp" = (
@@ -18003,6 +18055,7 @@
 /obj/structure/noticeboard{
 	pixel_y = 28
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/binhai/other/research)
 "pIl" = (
@@ -19194,9 +19247,7 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/other/mainlower)
 "qEX" = (
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/floor/corsat,
 /area/binhai/caves/main)
 "qFv" = (
@@ -19594,6 +19645,7 @@
 /area/binhai/other/research)
 "qTi" = (
 /obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "qTt" = (
@@ -20271,6 +20323,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/binhai/other/research)
 "rzL" = (
@@ -20599,9 +20653,7 @@
 /area/binhai/hab/west)
 "rNX" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/floodlight{
-	name = "Floodlight"
-	},
+/obj/structure/machinery/colony_floodlight,
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "rOg" = (
@@ -21530,6 +21582,7 @@
 	pixel_y = 7;
 	pixel_x = 11
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/other/research)
 "sBy" = (
@@ -22111,6 +22164,7 @@
 /obj/structure/machinery/light/small{
 	light_power = 0.9
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "tcl" = (
@@ -23849,25 +23903,18 @@
 /turf/closed/wall/shiva/prefabricated/reinforced,
 /area/binhai/other/mainlower)
 "urz" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
 /obj/structure/barricade/handrail/wire{
 	layer = 3.5;
 	dir = 1;
 	pixel_y = 10
 	},
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath{
-	pixel_x = 8;
-	pixel_y = 6
-	},
-/obj/item/clothing/mask/breath{
-	pixel_x = -7;
-	pixel_y = -10
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
 /turf/open/floor/corsat/plate,
 /area/binhai/other/Engineeringlower)
 "urP" = (
@@ -26030,6 +26077,15 @@
 	light_power = 0.25
 	},
 /obj/structure/machinery/power/apc/power/south,
+/obj/structure/closet/crate,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
 /turf/open/floor/greengrid,
 /area/binhai/other/powerstation)
 "vYI" = (
@@ -26218,6 +26274,7 @@
 	icon_state = "cargo";
 	pixel_x = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/binhai/other/research)
 "wdy" = (
@@ -27689,6 +27746,7 @@
 	pixel_y = 31;
 	layer = 3.01
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "xvd" = (
@@ -28063,6 +28121,15 @@
 	pixel_x = -6
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/mask/breath{
+	pixel_x = -7;
+	pixel_y = -10
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /turf/open/floor/corsat/plate,
 /area/binhai/other/Engineeringlower)
 "xHS" = (
@@ -47340,7 +47407,7 @@ cMh
 plx
 umm
 dkq
-umm
+aca
 fNW
 vqZ
 oem
@@ -48066,7 +48133,7 @@ cMh
 oem
 bXY
 pJO
-umm
+aca
 dnr
 xcn
 oem
@@ -48565,7 +48632,7 @@ eDZ
 gSe
 epO
 ufk
-ufk
+xnw
 xnw
 ufk
 ufk
@@ -49294,7 +49361,7 @@ epO
 ufk
 ufk
 ufk
-xnw
+ufk
 ufk
 ufk
 xnw
@@ -49779,7 +49846,7 @@ fdY
 fdY
 epO
 epO
-ufk
+xnw
 xnw
 xnw
 xnw
@@ -50965,7 +51032,7 @@ qCn
 vvH
 qOd
 soj
-wfz
+acb
 tFQ
 fzy
 wfz
@@ -50993,7 +51060,7 @@ ufk
 xnw
 ufk
 xnw
-ufk
+xnw
 xnw
 xnw
 xnw
@@ -51234,7 +51301,7 @@ cMh
 ufk
 ufk
 ufk
-ufk
+xnw
 xnw
 xnw
 xnw
@@ -51968,7 +52035,7 @@ ufk
 ufk
 ufk
 xnw
-ufk
+xnw
 xnw
 xnw
 ufk
@@ -52457,7 +52524,7 @@ kWZ
 ufk
 ufk
 ufk
-ufk
+xnw
 xnw
 xnw
 xnw
@@ -79541,8 +79608,8 @@ oem
 oem
 ekZ
 fih
-iRN
-udG
+abX
+abT
 udG
 kNR
 udG
@@ -79787,7 +79854,7 @@ qTi
 hhU
 hhU
 wPH
-hhU
+abV
 tbY
 oem
 oem
@@ -80266,13 +80333,13 @@ ycc
 ycc
 wCL
 udG
-udG
-wCL
+abT
+abY
 iRN
 cEc
 oem
 afH
-uqd
+abU
 oem
 pIi
 sBw
@@ -80508,7 +80575,7 @@ ycc
 lyn
 oem
 ehB
-sgj
+abS
 oem
 kjY
 udG
@@ -80753,7 +80820,7 @@ gRm
 jlj
 oem
 qQu
-pvc
+abW
 pvc
 pvc
 fYR
@@ -80995,7 +81062,7 @@ oem
 oem
 oem
 xuu
-udG
+abT
 oem
 pVo
 fom
@@ -81230,9 +81297,9 @@ xnw
 ufk
 oem
 iaT
-kRZ
-udG
-udG
+abZ
+abT
+abT
 udG
 udG
 kGA
@@ -81240,11 +81307,11 @@ kRZ
 udG
 oem
 jUq
+abT
+abT
 udG
 udG
-udG
-udG
-sgj
+abS
 oem
 ufk
 qBi
@@ -81486,7 +81553,7 @@ udG
 rpx
 rjH
 nOF
-udG
+abT
 oem
 ufk
 qBi
@@ -81724,11 +81791,11 @@ xnw
 xnw
 oem
 ygb
-udG
+abT
 whv
 ulV
 qbb
-udG
+abT
 oem
 ufk
 ufk
@@ -81949,7 +82016,7 @@ qBi
 qBi
 ufk
 xnw
-ufk
+xnw
 ufk
 xnw
 ufk
@@ -81966,10 +82033,10 @@ xnw
 xnw
 oem
 udG
-udG
-udG
-udG
-udG
+abT
+abT
+abT
+abT
 sgj
 oem
 ufk
@@ -82210,7 +82277,7 @@ oem
 qTh
 vwE
 udG
-udG
+abT
 xmu
 hmf
 oem
@@ -82935,7 +83002,7 @@ xnw
 xnw
 ufk
 ktf
-lfx
+wsg
 lfx
 mTr
 qBi
@@ -83177,8 +83244,8 @@ ufk
 ufk
 ufk
 tSd
-lfx
-lfx
+wsg
+wsg
 rJX
 qBi
 qBi
@@ -83420,7 +83487,7 @@ uwc
 uwc
 oiK
 lfx
-lfx
+wsg
 tZu
 uwc
 uwc
@@ -83661,9 +83728,9 @@ szE
 lfx
 lfx
 lfx
-lfx
-lfx
-lfx
+wsg
+wsg
+wsg
 lfx
 wsg
 wsg
@@ -83905,7 +83972,7 @@ wsg
 wsg
 lfx
 lfx
-lfx
+wsg
 lfx
 wsg
 lfx
