@@ -437,14 +437,14 @@
 	name = "Second Deck Central Hallway"
 	icon_state = "hallC2"
 
-/area/torch/seconddeck/maintenance/hallway/center
+area/torch/seconddeck/hallway/center
 	name = "\improper Second Deck Stairwell"
 
-/area/torch/seconddeck/elevator
+/area/torch/seconddeck/hallway/elevator
 	name = "Second Deck Elevator Landing"
 	icon_state = "hallC2_e"
 
-/area/torch/seconddeck/maintenance/hallway/fore
+/area/torch/seconddeck/hallway/fore
 	name = "Second Deck Fore Hallway"
 	icon_state = "hallF2"
 
@@ -570,6 +570,449 @@
 	name = "\improper Fore Starboard Solar Array"
 	icon_state = "panelsA"
 
+/area/torch/seconddeck/auxsolarport
+	name = "Solar Maintenance - Port"
+	icon_state = "SolarcontrolP"
+
 /area/torch/seconddeck/chapel
 	name = "\improper Unused Chapel"
 	icon_state = "chapel"
+
+/area/torch/thirddeck/hallway/fore
+	name = "\improper Third Deck Fore Hallway"
+	icon_state = "hallF"
+
+/area/torch/thirddeck/hallway/center
+	name = "\improper Third Deck Central Hallway"
+	icon_state = "hallC3"
+
+/area/torch/thirddeck/hallway/aft
+	name = "\improper Third Deck Aft Hallway"
+	icon_state = "hallA"
+
+/area/torch/thirddeck/maintenance
+	name = "Third Deck Maintenance"
+	icon_state = "maintcentral"
+
+/area/torch/thirddeck/maintenance/foreport
+	name = "Third Deck Fore Port Maintenance"
+	icon_state = "fpmaint"
+
+/area/torch/thirddeck/maintenance/forestarboard
+	name = "Third Deck Fore Starboard Maintenance"
+	icon_state = "fsmaint"
+
+/area/torch/thirddeck/maintenance/starboard
+	name = "Third Deck Starboard Maintenance"
+	icon_state = "smaint"
+
+/area/torch/thirddeck/maintenance/port
+	name = "Third Deck Port Maintenance"
+	icon_state = "pmaint"
+
+/area/torch/thirddeck/maintenance/aftstarboard
+	name = "Third Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/torch/thirddeck/maintenance/aftport
+	name = "Third Deck Aft Port Maintenance"
+	icon_state = "apmaint"
+
+/area/torch/thirddeck/teleporter
+	name = "\improper Third Deck Teleporter"
+	icon_state = "teleporter"
+
+/area/torch/thirddeck/maintenance/substation
+	name = "Third Deck Substation"
+
+/area/torch/thirddeck/cryo
+	name = "\improper Third Deck Cryogenic Storage"
+	icon_state = "Sleep"
+
+/area/torch/thirddeck/cryo/bunk
+	name = "\improper Bunk Room"
+	icon_state = "Sleep"
+
+/area/torch/thirddeck/bathroom
+	icon_state = "head_quarters"
+
+/area/torch/thirddeck/bathroom/sauna
+	name = "\improper Sauna"
+	icon_state = "sauna"
+
+/area/torch/thirddeck/cryo/locker
+	name = "\improper Cryogenic Storage Wardrobe"
+	icon_state = "locker"
+
+/area/torch/thirddeck/habcheck
+	name = "\improper Third Deck Security Checkpoint"
+	icon_state = "checkpoint"
+
+/area/torch/thirddeck/safe_room
+	name = "\improper Third Deck Safe Room"
+
+/area/torch/thirddeck/teleporter
+	name = "\improper Third Deck Teleporter"
+	icon_state = "teleporter"
+
+/area/torch/thirddeck/recreation
+	name = "\improper Recreation"
+	icon_state = "crew_quarters"
+
+/area/torch/thirddeck/observation
+	name = "\improper Observation"
+	icon_state = "fitness"
+
+/area/torch/thirddeck/service_break_room
+	name = "\improper Service Break Room"
+	icon_state = "fitness"
+
+/area/torch/thirddeck/janitor
+	name = "\improper Custodial Storage Closet"
+
+/area/torch/thirddeck/chief_steward
+	name = "\improper Chief Steward's Office"
+	icon_state = "kitchen"
+
+/area/torch/thirddeck/commissary
+	name = "\improper Commissary"
+	icon_state = "crew_quarters"
+
+/area/torch/thirddeck/gym
+	name = "\improper Gym"
+	icon_state = "fitness"
+
+/area/torch/thirddeck/atmos
+	name = "\improper Auxiliary Atmospherics"
+	icon_state = "atmos"
+
+/area/torch/thirddeck/cabin
+	name = "\improper Vacant Cabins"
+	icon_state = "crew_quarters"
+
+/area/torch/thirddeck/chapel/main
+	name = "\improper Chapel"
+	icon_state = "chapel"
+
+/area/torch/thirddeck/chapel/office
+	name = "\improper Chaplain's Office"
+
+/area/torch/thirddeck/chapel/memorial
+	name = "\improper Memorial Room"
+
+/area/torch/thirddeck/office
+	name = "\improper Computer Lab"
+	icon_state = "conference"
+
+/area/torch/thirddeck/tools
+	name = "Auxiliary Tool Storage"
+	icon_state = "auxstorage"
+
+/area/torch/thirddeck/hydroponics
+	name = "\improper Hydroponics"
+	icon_state = "hydro"
+
+/area/torch/thirddeck/alphadeck
+	name = "\improper Holodeck Alpha"
+
+/area/torch/thirddeck/mess
+	name = "\improper Old Mess"
+	icon_state = "bar"
+
+/area/torch/thirddeck/hardstorage
+	name = "\improper Engineering Hard Storage"
+	icon_state = "engineering_storage"
+
+/area/torch/thirddeck/d3port
+	name = "\improper Third Deck Port Nacelle"
+
+/area/torch/thirddeck/d3starboard
+	name = "\improper Third Deck Starboard Nacelle"
+
+/area/torch/thirddeck/brig
+	name = "\improper Permanent Brig"
+	icon_state = "brig"
+
+/area/torch/thirddeck/mess
+	name = "\improper Mess Hall"
+	icon_state = "cafeteria"
+
+/area/torch/thirddeck/mess/galley
+	name = "\improper Galley"
+	icon_state = "kitchen"
+
+/area/torch/thirddeck/mess/galleybackroom
+	name = "\improper Galley Cold Storage"
+	icon_state = "kitchen"
+
+/area/torch/thirddeck/disperser
+	name = "\improper Obstruction Field Disperser"
+	icon_state = "disperser"
+
+/area/torch/thirddeck/old_mess
+	name = "\improper Old Mess"
+	icon_state = "bar"
+
+/area/torch/fourthdeck
+
+/area/torch/fourthdeck/hallway/fore
+	name = "\improper Fourth Deck Fore Hallway"
+	icon_state = "hallF"
+
+
+/area/torch/fourthdeck/hallway/aft
+	name = "\improper Fourth Deck Aft Hallway"
+	icon_state = "hallA"
+
+/area/torch/fourthdeck/maintenance
+	name = "Fourth Deck Maintenance"
+	icon_state = "maintcentral"
+
+/area/torch/fourthdeck/maintenance/aft
+	name = "Fourth Deck Aft Maintenance"
+	icon_state = "amaint"
+
+/area/torch/fourthdeck/maintenance/foreport
+	name = "Fourth Deck Fore Port Maintenance"
+	icon_state = "fpmaint"
+
+/area/torch/fourthdeck/maintenance/forestarboard
+	name = "Fourth Deck Fore Starboard Maintenance"
+	icon_state = "fsmaint"
+
+/area/torch/fourthdeck/maintenance/starboard
+	name = "Fourth Deck Starboard Maintenance"
+	icon_state = "smaint"
+
+/area/torch/fourthdeck/maintenance/port
+	name = "Fourth Deck Port Maintenance"
+	icon_state = "pmaint"
+
+/area/torch/fourthdeck/teleporter
+	name = "\improper Fourth Deck Teleporter"
+	icon_state = "teleporter"
+
+/area/torch/fourthdeck/maintenance/substation
+	name = "Fourth Deck Substation"
+
+/area/torch/fourthdeck/catwalks
+	name = "\improper Upper Hangar Deck"
+	icon_state = "hangar_catwalk_p"
+
+/area/torch/fourthdeck/pathfinder
+	name = "\improper Pathfinder's Office"
+	icon_state = "pathfinder_office"
+
+/area/torch/fourthdeck/hangcheck
+	name = "\improper Fourth Deck Security Checkpoint"
+	icon_state = "checkpoint"
+
+/area/torch/fourthdeck/monitoring
+	name = "\improper Auxiliary Monitoring Room"
+	icon_state = "engine_monitoring"
+
+/area/torch/fourthdeck/port_storage
+	name = "Port Auxillary Storage"
+	icon_state = "auxstorage"
+
+/area/torch/fourthdeck/starboard_storage
+	name = "Starboard Auxillary Storage"
+	icon_state = "auxstorage"
+
+/area/torch/fourthdeck/eva
+	name = "\improper EVA Storage"
+	icon_state = "eva"
+
+
+/area/torch/fourthdeck/diplomatic_office
+	name = "\improper Diplomatic Meeting Room"
+	icon_state = "crew_quarters"
+
+/area/torch/fourthdeck/tools
+	name = "Primary Tool Storage"
+	icon_state = "primarystorage"
+
+/area/torch/fourthdeck/lounge
+	name = "\improper Lounge"
+	icon_state = "crew_quarters"
+
+/area/torch/fourthdeck/quartermaster/office
+	name = "\improper Supply Office"
+	icon_state = "quartoffice"
+
+/area/torch/fourthdeck/quartermaster/sorting
+	name ="\improper Supply Sorting"
+	icon_state = "quartstorage"
+
+/area/torch/fourthdeck/quartermaster/storage/upper
+	name = "\improper Supply Upper Warehouse"
+
+/area/torch/fourthdeck/quartermaster/deckchief
+	name = "\improper Deck Chief's Office"
+	icon_state = "quart"
+
+/area/torch/fourthdeck/laundry
+	name = "\improper Laundry Room"
+	icon_state = "Sleep"
+
+/area/torch/fourthdeck/bathroom
+	name = "\improper Fourth Deck Head"
+
+/area/torch/fourthdeck/maintenance/waterstore
+	name = "\improper Cistern"
+	icon_state = "disposal"
+
+/area/torch/fourthdeck/captainmess
+	name = "Officer's Mess"
+	icon_state = "bar"
+
+/area/torch/fourthdeck/adherent
+	name = "\improper Adherent Maintenence"
+	icon_state = "robotics"
+
+/area/torch/fourthdeck/tcommsat/chamber
+	name = "\improper Telecoms Central Compartment"
+	icon_state = "tcomsatcham"
+
+/area/torch/fourthdeck/tcommsat/computer
+	name = "\improper Telecoms Control Room"
+	icon_state = "tcomsatcomp"
+
+/area/torch/fifthdeck/hallway/fore
+	name = "\improper Fifth Deck Fore Hallway"
+	icon_state = "hallF"
+
+/area/torch/fifthdeck/hallway/aft
+	name = "\improper Fifth Deck Aft Hallway"
+	icon_state = "hallA"
+
+/area/torch/fifthdeck/maintenance/fifthdeck
+	name = "Fifth Deck Maintenance"
+	icon_state = "maintcentral"
+
+/area/torch/fifthdeck/maintenance/aftport
+	name = "Fifth Deck Aft Port Maintenance"
+	icon_state = "apmaint"
+
+/area/torch/fifthdeck/maintenance/aftstarboard
+	name = "Fifth Deck Aft Starboard Maintenance"
+	icon_state = "asmaint"
+
+/area/torch/fifthdeck/maintenance/fore
+	name = "Fifth Deck Fore Maintenance"
+	icon_state = "fmaint"
+
+/area/torch/fifthdeck/maintenance/substation
+	name = "Fifth Deck Substation"
+
+/area/torch/fifthdeck/maintenance/substation_hanger
+	name = "Hangar Substation"
+
+/area/torch/fifthdeck/hangar
+	name = "\improper Hangar Deck"
+	icon_state = "hangar"
+
+/area/torch/fifthdeck/expedition
+	name = "\improper Expedition Preparation"
+	icon_state = "mining"
+
+/area/torch/fifthdeck/expedition/eva
+	name = "\improper Expedition EVA"
+	icon_state = "mining"
+
+/area/torch/fifthdeck/expedition_storage
+	name = "\improper Hangar Expedition Storage"
+	icon_state = "mining"
+
+/area/torch/fifthdeck/storage
+	name = "\improper Supply Warehouse"
+	icon_state = "quartstorage"
+
+/area/torch/fifthdeck/shuttlefuel
+	name = "\improper Shuttle Fuel Bay"
+	icon_state = "toxstorage"
+
+/area/torch/fifthdeck/exploration
+	name = "\improper Exploration Equipment"
+	icon_state = "exploration"
+
+/area/torch/fifthdeck/pilot
+	name = "\improper Pilot's Lounge"
+	icon_state = "pilot_lounge"
+
+/area/torch/fifthdeck/bar
+	name = "\improper Hidden Bar"
+	icon_state = "bar"
+
+/area/torch/petrov
+	name = "\improper SRV Petrov"
+
+/area/torch/petrov/cell1
+	name = "\improper SRV Petrov - Isolation Cell 1"
+	icon_state = "shuttle"
+/area/torch/petrov/cell2
+	name = "\improper SRV Petrov - Isolation Cell 2"
+	icon_state = "shuttlegrn"
+/area/torch/petrov/cell3
+	name = "\improper SRV Petrov - Isolation Cell 3"
+	icon_state = "shuttle"
+
+/area/torch/petrov/hallwaya
+	name = "\improper SRV Petrov - Lower Hallway"
+	icon_state = "hallA"
+
+/area/torch/petrov/control
+	name = "\improper SRV Petrov - Control Room"
+	icon_state = "checkpoint1"
+
+/area/torch/petrov/rd
+	icon_state = "heads_rd"
+	name = "\improper SRV Petrov - CSO's Office"
+	icon_state = "head_quarters"
+/area/torch/petrov/cockpit
+	name = "\improper SRV Petrov - Cockpit"
+	icon_state = "shuttlered"
+
+/area/torch/petrov/maint
+	name = "\improper SRV Petrov - Maintenance"
+	icon_state = "engine"
+
+/area/torch/petrov/analysis
+	name = "\improper SRV Petrov - Analysis Lab"
+	icon_state = "devlab"
+
+/area/torch/petrov/toxins
+	name = "\improper SRV Petrov - Toxins Lab"
+	icon_state = "toxstorage"
+
+/area/torch/petrov/rnd
+	name = "\improper SRV Petrov - Fabricator Lab"
+	icon_state = "devlab"
+
+/area/torch/petrov/isolation
+	name = "\improper SRV Petrov - Isolation Lab"
+	icon_state = "xeno_lab"
+
+/area/torch/petrov/phoron
+	name = "\improper SRV Petrov - Sublimation Lab"
+	icon_state = "toxstorage"
+
+/area/torch/petrov/custodial
+	name = "\improper SRV Petrov - Custodial"
+	icon_state = "decontamination"
+
+/area/torch/petrov/equipment
+	name = "\improper SRV Petrov - Equipment Storage"
+	icon_state = "locker"
+
+/area/torch/petrov/eva
+	name = "\improper SRV Petrov - EVA Storage"
+	icon_state = "locker"
+
+/area/torch/fifthdeck/canister
+	name = "\improper Canister Storage"
+	icon_state = "toxstorage"
+
+/area/torch/guppy_hangar
+	name = "\improper Guppy"
+	icon_state = "shuttlered"
