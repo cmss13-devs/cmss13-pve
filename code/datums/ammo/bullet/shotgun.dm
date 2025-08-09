@@ -126,7 +126,7 @@
 	scatter = SCATTER_AMOUNT_TIER_5
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
-	damage = 60
+	damage = 85
 
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
