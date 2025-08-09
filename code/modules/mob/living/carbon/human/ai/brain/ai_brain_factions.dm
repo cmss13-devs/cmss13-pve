@@ -578,7 +578,7 @@
 	exit_combat_lines = list(
 		"Sweep and clear.",
 		"Stay sharp.",
-		"Make sure that's the last of them",
+		"Make sure that's the last of them!",
 		"Stay sharp!",
 		"Glad that's done with...",
 		"I need a smoke...",
