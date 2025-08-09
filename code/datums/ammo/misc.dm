@@ -468,7 +468,7 @@
 	create_flechette(P.loc, P)
 
 /datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/P)
-	var/shrapnel_count = 15
+	var/shrapnel_count = 12
 	var/dispersion_angle = 20
 	create_shrapnel(loc, shrapnel_count, P.dir, dispersion_angle, shrapnel_type, P.weapon_cause_data, FALSE, 100)
 	apply_explosion_overlay(loc)
