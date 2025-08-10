@@ -7,6 +7,15 @@
 		install_hardpoint(HP, user)
 		return
 
+	if(istype(O, /obj/item/weapon/zombie_claws))
+		var/mob/living/carbon/zombie_user = user
+		var/damage = O.force
+		if(zombie_user.on_fire)
+			damage *= 1.15
+
+		playsound(user.loc, 'sound/effects/metalhit.ogg', 25)
+		take_damage_type(max(damage + rand(-20,-10),5), "slash", user)
+
 	if(ispowerclamp(O))
 		var/obj/item/powerloader_clamp/PC = O
 		if(PC.linked_powerloader && PC.loaded && istype(PC.loaded, /obj/item/hardpoint))

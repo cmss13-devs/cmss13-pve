@@ -81,6 +81,17 @@
 		if(faction_check(potential_vehicle_target))
 			continue
 
+		if(iszombie(tied_human))
+			var/list/valid_targets = list()
+			for(var/mob/living/carbon/potential_target in potential_vehicle_target.interior.get_passengers())
+				if(!can_target(potential_target))
+					continue
+
+				valid_targets += potential_target
+
+			if(!length(valid_targets))
+				continue
+
 		viable_targets += potential_vehicle_target
 
 		if(smallest_distance <= distance)
