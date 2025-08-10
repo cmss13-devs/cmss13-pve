@@ -412,7 +412,17 @@
 	hardpoint.start_fire(source, object, location, control, params)
 
 /obj/vehicle/multitile/proc/handle_player_entrance(mob/M)
-	if(!M || M.client == null) return
+	if(ishuman(M))
+		var/mob/living/carbon/human/user = M
+		if(!M || M.client == null && !user.get_ai_brain())
+			return
+	else if(isxeno(M))
+		var/mob/living/carbon/xenomorph/xeno_user = M
+		if(!M || M.client == null && !(xeno_user.mob_flags & AI_CONTROLLED))
+			return
+	else
+		if(!M || M.client == null)
+			return
 
 	var/mob_x = M.x - src.x
 	var/mob_y = M.y - src.y
