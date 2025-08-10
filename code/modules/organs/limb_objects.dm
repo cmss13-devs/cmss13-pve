@@ -210,7 +210,7 @@
 		..()
 
 /obj/item/limb/proc/zombie_clean_up(mob/living/carbon/human/zombie)
-	if(prob(100))
+	if(prob(5))
 		src.visible_message("The [initial(src.name)] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
 	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
 	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
