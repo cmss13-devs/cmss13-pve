@@ -117,9 +117,8 @@
 		return
 
 	if(iszombie(ai_human))
-		if(locked || welded || isElectrified() || panel_open || !arePowerSystemsOn())
-			ai_human.a_intent_change(INTENT_DISARM)
-			ai_human.do_click(src, "", list())
+		ai_human.a_intent_change(INTENT_DISARM)
+		ai_human.do_click(src, "", list())
 		return
 
 	brain.holster_primary()
