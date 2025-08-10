@@ -348,3 +348,21 @@
 	overlay_model_type = "model_vpg"
 	overlay_icon_type = "40mmap"
 	overlay_grenade_type = "upp_40mm_ap"
+
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister
+	name = "\improper VShG-80 Assault-Grenade grenade box"
+	desc = "A secure box holding 15 VShG-80 grenades. Don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/airburst/upp
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/airburst/upp)
+	overlay_model_type = "model_vsgh"
+	overlay_icon_type = "40mmbuck"
+	overlay_grenade_type = "upp_40mm_buck"
+
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen
+	name = "\improper VTBG-44 Thermobaric grenade box"
+	desc = "A secure box holding 15 VTBG-44 grenades. Don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/incendiary/impact/upp
+	allowed_magazines = list( /obj/item/explosive/grenade/incendiary/impact/upp)
+	overlay_model_type = "model_vtbg"
+	overlay_icon_type = "40mmincend"
+	overlay_grenade_type = "upp_40mm_hiam"
