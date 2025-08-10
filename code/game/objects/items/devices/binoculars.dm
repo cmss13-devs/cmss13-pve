@@ -403,6 +403,9 @@
 /datum/action/item_action/switch_himat/action_activate()
 	. = ..()
 	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	if(!length(desig.connected_himats))
+		to_chat(usr, SPAN_NOTICE("No HIMAT IDs found! Please connect to a HIMAT."))
+		return
 	desig.himat_id++
 	if(desig.himat_id > desig.connected_himats.len)
 		desig.himat_id = 1
