@@ -75,9 +75,6 @@
 		if(scope_vision && (distance > 7) && !(get_dir(tied_human, potential_vehicle_target) in dir_cone))
 			continue
 
-		if(potential_vehicle_target.health <= 0)
-			continue
-
 		if(faction_check(potential_vehicle_target))
 			continue
 
@@ -90,6 +87,10 @@
 				valid_targets += potential_target
 
 			if(!length(valid_targets))
+				continue
+
+		else
+			if(potential_vehicle_target.health <= 0)
 				continue
 
 		viable_targets += potential_vehicle_target
