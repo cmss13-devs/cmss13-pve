@@ -4,7 +4,7 @@
 ///Amount of Heart + Brain Damage that will stop a zombie rising again
 #define ZOMBIE_ORGAN_DAMAGE_THRESHOLD 80 //Will usually reach delimbing before getting here. Usually.
 
-#define ZOMBIE_CLEAN_UP_TIME 60 SECONDS
+#define ZOMBIE_CLEAN_UP_TIME 90 SECONDS
 
 /datum/species/zombie
 	group = SPECIES_HUMAN
@@ -188,11 +188,11 @@
 	if(!zombie.undefibbable)
 		zombie.undefibbable = TRUE
 		SEND_SIGNAL(zombie, COMSIG_HUMAN_SET_UNDEFIBBABLE)
-		var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-21,21) SECONDS)
+		var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-41,41) SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(clean_up_zombie), zombie), time_til_clean)
 
 /datum/species/zombie/proc/clean_up_zombie(mob/living/carbon/human/zombie)
-	if(prob(35))
+	if(prob(25))
 		zombie.visible_message("[zombie.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
 
 	zombie.add_splatter_floor()

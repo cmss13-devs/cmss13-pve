@@ -993,7 +993,7 @@ This function completely restores a damaged organ to perfect condition.
 				var/lol = pick(GLOB.cardinals)
 				step(organ,lol)
 			if(iszombie(owner))
-				var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-21,21) SECONDS)
+				var/time_til_clean = ZOMBIE_CLEAN_UP_TIME + (rand(-41,41) SECONDS)
 				addtimer(CALLBACK(organ, TYPE_PROC_REF(/obj/item/limb/, zombie_clean_up), owner), time_til_clean)
 
 		owner.update_body() //Among other things, this calls update_icon() and updates our visuals.
