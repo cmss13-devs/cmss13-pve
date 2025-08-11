@@ -43,6 +43,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 	data["zombieDelimbMulti"] = GLOB.gm_set_zombie_delimb_multi ? GLOB.gm_set_zombie_delimb_multi : 1
 	data["randomHelmet"] = GLOB.gm_set_zombie_random_helmet
 	data["helmetChance"] = GLOB.gm_set_zombie_helmet_chance
+	data["autoClean"] = GLOB.gm_set_zombie_disable_auto_clean
 
 	return data
 
@@ -67,6 +68,14 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 				GLOB.gm_set_zombie_random_helmet = TRUE
 			else
 				GLOB.gm_set_zombie_random_helmet = FALSE
+
+			var/auto_clean = params["disableAutoClean"]
+			if(auto_clean != 1 && auto_clean != 0)
+				auto_clean = 0
+			if(auto_clean)
+				GLOB.gm_set_zombie_disable_auto_clean= TRUE
+			else
+				GLOB.gm_set_zombie_disable_auto_clean = FALSE
 
 			var/helmet_chance = clamp(params["helmetChance"], 1, 100)
 			GLOB.gm_set_zombie_helmet_chance = helmet_chance

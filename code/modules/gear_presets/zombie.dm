@@ -33,6 +33,8 @@
 		GLOB.gm_set_zombie_helmet_chance = clamp(GLOB.gm_set_zombie_helmet_chance,0, 100)
 		if(prob(GLOB.gm_set_zombie_helmet_chance))
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/zombie(new_human), WEAR_HEAD)
+	if(GLOB.gm_set_zombie_disable_auto_clean)
+		new_human.zombie_disable_auto_clean = TRUE
 
 // Zombies
 /datum/equipment_preset/zombie/generic

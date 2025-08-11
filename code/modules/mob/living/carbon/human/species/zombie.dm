@@ -3,7 +3,7 @@
 #define ZOMBIE_REVIVE_TIME 1.5 MINUTES
 ///Amount of Heart + Brain Damage that will stop a zombie rising again
 #define ZOMBIE_ORGAN_DAMAGE_THRESHOLD 80 //Will usually reach delimbing before getting here. Usually.
-
+///Base time until Zombies rise again. RNGed later to give it variation.
 #define ZOMBIE_CLEAN_UP_TIME 90 SECONDS
 
 /datum/species/zombie
@@ -192,13 +192,16 @@
 		addtimer(CALLBACK(src, PROC_REF(clean_up_zombie), zombie), time_til_clean)
 
 /datum/species/zombie/proc/clean_up_zombie(mob/living/carbon/human/zombie)
-	if(prob(25))
-		zombie.visible_message("[zombie.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+	if(!zombie.zombie_disable_auto_clean)
+		if(prob(25))
+			zombie.visible_message("[zombie.name] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+		if(prob(15))
+			playsound(src, 'sound/effects/blood_squirt.ogg', 30, TRUE)
+		zombie.add_splatter_floor()
+		zombie.add_splatter_floor()
+		zombie.add_splatter_floor()
+		zombie.add_splatter_floor()
 
-	zombie.add_splatter_floor()
-	zombie.add_splatter_floor()
-	zombie.add_splatter_floor()
-	zombie.add_splatter_floor()
+		new /obj/effect/decal/cleanable/blood/gibs/zombie(zombie.loc)
 
-	new /obj/effect/decal/cleanable/blood/gibs/zombie(zombie.loc)
-	qdel(zombie)
+		qdel(zombie)

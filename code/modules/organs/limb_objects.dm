@@ -209,9 +209,11 @@
 	else
 		..()
 
-/obj/item/limb/proc/zombie_clean_up(mob/living/carbon/human/zombie)
+/obj/item/limb/proc/zombie_clean_up(mob/living/carbon/human/zombie, zombie_disable_auto_clean = FALSE)
 	if(prob(5))
 		src.visible_message("The [initial(src.name)] falls apart! Practically melting away, rotted to nothing, leaving only a mess of vicious blood.")
+	if(prob(15))
+		playsound(src, 'sound/effects/blood_squirt.ogg', 30, TRUE)
 	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
 	zombie.add_splatter_floor(src.loc, b_color=BLOOD_COLOR_ZOMBIE)
 	if(prob(35))

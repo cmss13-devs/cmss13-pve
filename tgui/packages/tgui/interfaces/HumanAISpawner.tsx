@@ -22,6 +22,7 @@ type BackendContext = {
   presets: { [key: string]: AIEquipmentPreset[] };
   zombieDelimbMulti: number;
   randomHelmet: boolean;
+  autoClean: boolean;
   helmetChance: number;
 };
 
@@ -39,12 +40,21 @@ export const HumanAISpawner = (props) => {
   const [newHelmetChance, setNewHelmetChance] = useState<number>(helmetChance);
   const { presets } = data;
   const [aiAmount, setAiAmount] = useState<number>(1);
+  const { autoClean } = data;
+  const [disableAutoClean, setDisableAutoClean] = useState<boolean>(autoClean);
 
   const flipRandomHelmetChecked = () => {
     if (randomHelmetChecked) {
       setRandomHelmetChecked(false);
     } else {
       setRandomHelmetChecked(true);
+    }
+  };
+  const flipDisableAutoClean = () => {
+    if (disableAutoClean) {
+      setDisableAutoClean(false);
+    } else {
+      setDisableAutoClean(true);
     }
   };
   const numberToTwoDP = (value) => {
@@ -94,6 +104,7 @@ export const HumanAISpawner = (props) => {
                             randomHelmet: randomHelmetChecked,
                             helmetChance: newHelmetChance,
                             aiAmount: aiAmount,
+                            disableAutoClean: disableAutoClean,
                           })
                         }
                       >
@@ -111,7 +122,7 @@ export const HumanAISpawner = (props) => {
                         minValue={1}
                         maxValue={10}
                         onChange={(value) => setAiAmount(value)}
-                        width="50%"
+                        width="55%"
                       />
                       <Button icon="undo" onClick={() => setAiAmount(1)} />
                     </Stack.Item>
@@ -130,19 +141,22 @@ export const HumanAISpawner = (props) => {
                             minValue={0}
                             maxValue={20}
                             onChange={(value) => numberToTwoDP(value)}
-                            width="50%"
+                            width="55%"
                           />
                           <Button
                             icon="undo"
                             onClick={() => setZombieDelimbMulti(null)}
                           />
+                        </Stack.Item>
+                        <Stack.Item align="center" textAlign="center">
                           <Button.Checkbox
                             checked={randomHelmetChecked}
                             onClick={() => flipRandomHelmetChecked()}
                           >
                             Random <i>Zombie Helmet</i> Chance?
                           </Button.Checkbox>
-
+                        </Stack.Item>
+                        <Stack.Item align="center" textAlign="center">
                           <Button tooltip="This value will change the chance for a zombie to spawn with head protection in 0-100%. Helmets give One expendable decap protection, and these will have hands and feet protection baked in, rest of the body should be covered by armoured presets.">
                             ?
                           </Button>
@@ -152,11 +166,35 @@ export const HumanAISpawner = (props) => {
                             minValue={0}
                             maxValue={100}
                             onChange={(value) => setNewHelmetChance(value)}
-                            width="50%"
+                            width="55%"
                           />
                           <Button
                             icon="undo"
                             onClick={() => setNewHelmetChance(25)}
+                          />
+                        </Stack.Item>
+                        <Stack.Item align="center" textAlign="center">
+                          <Button.Checkbox
+                            checked={disableAutoClean}
+                            onClick={() => flipDisableAutoClean()}
+                          >
+                            Disable Auto-Clean?
+                          </Button.Checkbox>
+                        </Stack.Item>
+                        <Stack.Item align="center" textAlign="center">
+                          <Button tooltip="This setting, if enabled will set the variable [zombie_disable_auto_clean] to True, stopping and limbs and the body from decaying. Use it sparingly and definitely not for any defense styled Ops where zombie bodies will pile up. Variable can be var editted to affect the body but not any lost limbs, from about 50-130 Seconds after the zombie checks itself as Perma.">
+                            ?
+                          </Button>
+                          <Button
+                            textAlign="center"
+                            width="55%"
+                            onClick={() => flipDisableAutoClean()}
+                          >
+                            Toggle Auto-Clean
+                          </Button>
+                          <Button
+                            icon="undo"
+                            onClick={() => setDisableAutoClean(false)}
                           />
                         </Stack.Item>
                       </Stack.Item>
