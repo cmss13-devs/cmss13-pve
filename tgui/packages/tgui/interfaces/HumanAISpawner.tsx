@@ -182,7 +182,7 @@ export const HumanAISpawner = (props) => {
                           </Button.Checkbox>
                         </Stack.Item>
                         <Stack.Item align="center" textAlign="center">
-                          <Button tooltip="This setting, if enabled will set the variable [zombie_disable_auto_clean] to True, stopping and limbs and the body from decaying. Use it sparingly and definitely not for any defense styled Ops where zombie bodies will pile up. Variable can be var editted to affect the body but not any lost limbs, from about 50-130 Seconds after the zombie checks itself as Perma.">
+                          <Button tooltip="It is recommended to only use this setting for a LIMITED number of zombies. And it does not turn itself off, so please do so manually when you next need to spawn Zombie. This setting, if enabled will set the variable [zombie_disable_auto_clean] to True, stopping and limbs and the body from decaying. Use it sparingly and definitely not for any defense styled Ops where zombie bodies will pile up. Variable can be var editted to affect the body but not any lost limbs, from about 50-130 Seconds after the zombie checks itself as Perma.">
                             ?
                           </Button>
                           <Button
