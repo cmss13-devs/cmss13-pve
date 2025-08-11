@@ -516,7 +516,7 @@ GLOBAL_LIST_INIT(roundstart_mod_verbs, list(
 	set category = "Admin.Fun"
 	set name = "Remove All Diseases"
 	set desc = "Removes All Diseases from a mob."
-	QDEL_NULL_LIST(target.viruses)
+	QDEL_LIST(target.viruses)
 
 	message_admins("[key_name_admin(usr)] removed all disease from [key_name(target)].")
 
