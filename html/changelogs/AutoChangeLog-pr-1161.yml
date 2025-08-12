@@ -1,0 +1,4 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "PDT power draw has dropped from 10+50 to 1+4"
