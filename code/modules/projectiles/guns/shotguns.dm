@@ -1204,6 +1204,10 @@ can cause issues with ammo types getting mixed up during the burst.
 /obj/item/weapon/gun/shotgun/pump/unloaded
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
 
+/obj/item/weapon/gun/shotgun/pump/stock
+	starting_attachment_types = list(/obj/item/attachable/stock/shotgun)
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
+
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube
