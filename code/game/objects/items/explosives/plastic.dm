@@ -359,9 +359,26 @@
 	cell_explosion(target_turf, explosion_strength, explosion_strength, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data)
 	qdel(src)
 
+
 /obj/item/explosive/plastic/breaching_charge/less_lethal //yes, the X17 exists. I'm absolutely not going to use that because I want lethality considerations.
 	name = "explosive breaching charge"
 	desc = "A generic brick of plastic explosive for a violent and aggressive entry without generating too much extra fragmentation. Use with caution in mixed or uncertain environments."
+	item_state = "custom_plastic_explosive_locked"
+	deploying_time = 5
+	timer = 10
+	min_timer = 5
+	overlay_image = "custom_plastic_explosive_active"
+	angle = 120
+	shrapnel_volume = 120
+	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber/shock
+	explosion_strength = 70
+
+/obj/item/explosive/plastic/breaching_charge/less_lethal/handle_explosion(turf/target_turf, dir, cause_data)
+	var/explosion_target = get_step(target_turf, dir)
+	create_shrapnel(explosion_target, shrapnel_volume, dir, angle, shrapnel_type, cause_data)
+	cell_explosion(target_turf, explosion_strength, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+	cell_explosion(target_turf, 80, 60, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	addtimer(CALLBACK(src, PROC_REF(trigger_explosion), target_turf, dir, cause_data), 1)
 
 
 /obj/item/explosive/plastic/breaching_charge/rubber

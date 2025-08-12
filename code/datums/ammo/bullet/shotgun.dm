@@ -186,6 +186,9 @@
 /datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P)
 
+/datum/ammo/bullet/shotgun/buckshot/steel
+	name "Steel"
+
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
 	handful_state = "special_buck"

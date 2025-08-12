@@ -133,7 +133,8 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
-
+/obj/item/weapon/gun/pistol/barracuda/unloaded
+	current_mag = null
 
 //VP70 - Counterpart to M1911, offers burst and capacity ine exchange of low accuracy and damage.
 

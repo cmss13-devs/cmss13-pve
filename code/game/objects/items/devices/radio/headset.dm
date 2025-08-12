@@ -1358,3 +1358,12 @@
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
+//ALTFACTION
+/obj/item/device/radio/headset/cmbtac
+	name = "CRG-X Radio Headset/Hearing Protection"
+	desc = "A radio headset incorporating electronic hearing protection and encrypted radio transceiver. Overpriced and overbuilt, manufactured by Combat Strike Group LLC."
+	frequency = CIU_FREQ
+	initial_keys = list(
+		/obj/item/device/encryptionkey/cmbtac,
+	)
+

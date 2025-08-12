@@ -228,8 +228,8 @@
 	var/storage_max_w_class = SIZE_TINY // can hold tiny items only, EXCEPT for glasses & metal flask.
 	var/storage_max_storage_space = 2
 
-/obj/item/clothing/head/helmet/marine/has_garb_overlay()
-	return flags_marine_helmet & HELMET_GARB_OVERLAY
+/obj/item/clothing/head/helmet/generic_combat/has_garb_overlay()
+	return flags_of_helmet & HELMET_GARB_OVERLAY
 
 /obj/item/clothing/head/helmet/generic_combat/get_pockets()
 	if(pockets)

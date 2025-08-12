@@ -34,11 +34,17 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/shrapnel/rubber/shock
+	name = "overpressure shockwave"
+	icon_state = "spark"
+	flags_ammo_behavior = AMMO_EXPLOSIVE
+	damage = 20
+	stamina_damage = 20
+
 /datum/ammo/bullet/shrapnel/rubber/grenade
 	name = "rubber pellets"
 	icon_state = "rubber_pellets"
 	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
-
 	damage = 2
 	stamina_damage = 20
 	shrapnel_chance = 1 //Don't get unlucky.

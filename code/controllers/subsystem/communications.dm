@@ -75,7 +75,12 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define DUT_FREQ 1210
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
+
+//cmb
 #define CMB_FREQ 1220
+#define CIU_FREQ 1222
+
+//misc continued
 #define ASF_FREQ 1224
 #define CIA_FREQ 1225
 #define ARM_FREQ 1228

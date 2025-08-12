@@ -246,7 +246,7 @@ also doesn't really matter. You can only reload them with handfuls.
 	max_rounds = 5
 
 /obj/item/ammo_magazine/internal/shotgun/short
-	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/steel
 	caliber = "12g"
 	max_rounds = 2
 	current_rounds = 2

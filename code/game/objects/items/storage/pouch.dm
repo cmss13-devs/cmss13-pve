@@ -663,7 +663,13 @@
 
 /obj/item/storage/pouch/explosive/grenade
 	name = "grenade pouch"
-	desc = "Five slot grenade pouch."
+	desc = "Eight slot grenade pouch. Can also hold breaching charges."
+	storage_slots = 8
+	can_hold = list(
+		/obj/item/explosive/plastic/breaching_charge,
+		/obj/item/explosive/plastic/breaching_charge/less_lethal,
+		/obj/item/explosive/grenade,
+	)
 
 /obj/item/storage/pouch/medical
 	name = "medical pouch"
