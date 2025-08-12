@@ -151,10 +151,6 @@
 			to_chat(user, SPAN_HELPFUL("You'd need a more suitable weapon for this!"))
 			return FALSE
 
-		user.visible_message(SPAN_NOTICE("[target] has been poked with [src][showname]"),\
-			SPAN_NOTICE("You poke [target == user ? "yourself":target] with [src]."), null, 4)
-
-		return FALSE
 	if(ishuman(target) && target.stat == DEAD && user.a_intent == INTENT_DISARM && user.zone_selected == "mouth" )
 		if(!isnull(sharp) && sharp >= IS_SHARP_ITEM_ACCURATE)
 			if(target.pulledby != user || (target.pulledby?.grab_level < GRAB_AGGRESSIVE && !iszombie(target)))
