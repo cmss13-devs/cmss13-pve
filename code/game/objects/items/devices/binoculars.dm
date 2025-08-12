@@ -327,15 +327,17 @@
 			is_outside = TRUE
 	switch(user_area.ceiling)
 		if(CEILING_NONE)
-			is_outside = TRUE
+			if(targ_area.ceiling <= CEILING_PROTECTION_TIER_3)
+				is_outside = TRUE
 		if(CEILING_GLASS)
-			is_outside = TRUE
+			if(targ_area.ceiling <= CEILING_PROTECTION_TIER_3)
+				is_outside = TRUE
 
 	if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
 		is_outside = FALSE
 
 	if(!is_outside && !range_mode) //rangefinding works regardless of ceiling
-		to_chat(user, SPAN_WARNING("INVALID TARGET: target or user must be visible from high altitude."))
+		to_chat(user, SPAN_WARNING("INVALID TARGET: target or user must be visible and engageable from high altitude."))
 		return
 	if(user.action_busy)
 		return
