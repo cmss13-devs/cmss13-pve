@@ -5246,10 +5246,6 @@
 	},
 /obj/item/roller,
 /obj/item/storage/belt/medical/only_scanner,
-/obj/item/storage/firstaid/softpack{
-	pixel_y = 7;
-	pixel_x = -3
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "lu" = (
