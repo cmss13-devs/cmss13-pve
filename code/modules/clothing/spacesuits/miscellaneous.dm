@@ -195,8 +195,6 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
-		/obj/item/storage/belt/utility,
-		/obj/item/storage/belt/gun/utility,
 	)
 	var/obj/item/device/motiondetector/spacesuit/MD
 	var/obj/item/tank/emergency_oxygen/integrated_tank

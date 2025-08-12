@@ -842,9 +842,8 @@
 		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_RECOMMENDED),
 		list("M40 MFHS Metal Foam Grenade", round(scale * 5), /obj/item/explosive/grenade/metal_foam, VENDOR_ITEM_REGULAR),
 
-		list("TOOLBELTS (ATTACH TO SUIT)", -1, null, null),
+		list("TOOLBELTS", -1, null, null),
 		list("M276 Pattern Toolbelt Rig", 2, /obj/item/storage/belt/utility/full, VENDOR_ITEM_REGULAR),
-		list("M276 Pattern Combat Toolbelt Rig", 2, /obj/item/storage/belt/gun/utility/full/minus_pistol, VENDOR_ITEM_REGULAR),
 
 		list("AIR SUPPLY", -1, null, null),
 		list("Breath Mask", round(scale * 5), /obj/item/clothing/mask/breath, VENDOR_ITEM_REGULAR),
