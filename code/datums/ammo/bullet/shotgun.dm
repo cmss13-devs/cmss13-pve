@@ -52,7 +52,7 @@
 	damage_var_high = PROJECTILE_VARIANCE_TIER_10
 	damage_armor_punch = 0
 
-/datum/ammo/bullet/shotgun/steel/set_bullet_traits()
+/datum/ammo/bullet/shotgun/slug/breaching/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_turfs),
