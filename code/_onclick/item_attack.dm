@@ -90,32 +90,13 @@
 						to_chat(target, SPAN_HIGHDANGER("[user] grabs you and pins you and pulls your head back exposing your throat."))
 
 						throat_slit_stun(target, user)
-						switch(get_dir(user, target))
-							if(NORTH)
-								human_target.pixel_y -= 12
-							if(EAST)
-								human_target.pixel_x -= 12
-							if(SOUTH)
-								human_target.pixel_y += 12
-							if(WEST)
-								human_target.pixel_x += 12
-							if(NORTHEAST)
-								human_target.pixel_x -= 12
-								human_target.pixel_y -= 12
-							if(NORTHWEST)
-								human_target.pixel_y -= 12
-								human_target.pixel_x += 12
-							if(SOUTHEAST)
-								human_target.pixel_y += 12
-								human_target.pixel_x -= 12
-							if(SOUTHWEST)
-								human_target.pixel_y += 12
-								human_target.pixel_x += 12
+						human_target.reset_pixel_shift()
+						human_user.pixel_shift_target_mob(target, 12)
 
 						if(!do_after(user, 4 SECONDS * human_user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
 							remove_throat_slit_stun(target)
-							human_target.pixel_y = 0
-							human_target.pixel_x = 0
+							human_target.reset_pixel_shift()
+							to_chat(user, SPAN_WARNING("You were interrupted!"))
 							return FALSE
 
 						target.visible_message(SPAN_DANGER("[user] slit open [target]'s throat! They made quite a bloody mess!"), SPAN_HIGHDANGER("[user] slits your throat! Oh god!"))
@@ -127,8 +108,7 @@
 						var/obj/limb/head/head = human_target.get_limb("head")
 						ADD_TRAIT(target, TRAIT_FLOORED, THROATSLIT_TRAIT)
 						human_target.spray_blood(rand(0,181), head)
-						human_target.pixel_y = 0
-						human_target.pixel_x = 0
+						human_target.reset_pixel_shift()
 
 						if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
 							target.death(create_cause_data("throat slit"))
@@ -158,6 +138,7 @@
 				return FALSE
 
 			var/mob/living/carbon/human/human_target = target
+			var/mob/living/carbon/human/human_user = user
 			var/obj/limb/limb = human_target.get_limb("head")
 			if(limb.status & LIMB_DESTROYED)
 				to_chat(user, SPAN_NOTICE("What head?"))
@@ -165,29 +146,8 @@
 			var/time_to_decap = HUMAN_DEAD_DECAP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC)
 			if(iszombie(target))
 				time_to_decap /= 2
-			human_target.pixel_y = 0
-			human_target.pixel_x = 0
-			switch(get_dir(user, target))
-				if(NORTH)
-					human_target.pixel_y -= 12
-				if(EAST)
-					human_target.pixel_x -= 12
-				if(SOUTH)
-					human_target.pixel_y += 12
-				if(WEST)
-					human_target.pixel_x += 12
-				if(NORTHEAST)
-					human_target.pixel_x -= 12
-					human_target.pixel_y -= 12
-				if(NORTHWEST)
-					human_target.pixel_y -= 12
-					human_target.pixel_x += 12
-				if(SOUTHEAST)
-					human_target.pixel_y += 12
-					human_target.pixel_x -= 12
-				if(SOUTHWEST)
-					human_target.pixel_y += 12
-					human_target.pixel_x += 12
+			human_target.reset_pixel_shift()
+			human_user.pixel_shift_target_mob(target, 12)
 
 			to_chat(user, SPAN_WARNING(iszombie(target) ? "Your [src.name] easily starts to cut through [target]'s neck!" : "You start to cut off [target]'s head!"))
 			human_target.add_splatter_floor()
@@ -201,13 +161,11 @@
 					user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
 					human_target.spray_blood(rand(0, 181), limb)
 					limb.droplimb(0,0, user)
-					human_target.pixel_y = 0
-					human_target.pixel_x = 0
+					human_target.reset_pixel_shift()
 					if(do_after(target, 2 SECONDS, INTERRUPT_NONE))
 						human_target.spray_blood(rand(0, 181), limb)
 					return TRUE
-			human_target.pixel_y = 0
-			human_target.pixel_x = 0
+			human_target.reset_pixel_shift()
 			to_chat(user, SPAN_WARNING("You were interrupted!"))
 			return FALSE
 		else
