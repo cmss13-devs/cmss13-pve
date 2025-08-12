@@ -1313,7 +1313,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 
 /obj/item/weapon/gun/shotgun/pump/super_short/unloaded
-	urrent_mag = /obj/item/ammo_magazine/internal/shotgun/short/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/short/unloaded
 
 //-------------------------------------------------------
 //XM51, Breaching Scattergun, PVE Edition: civilian magfed shotgun

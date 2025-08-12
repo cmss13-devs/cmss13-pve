@@ -39,6 +39,27 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/slug/breaching
+	name = "frangible shotgun slug"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+	icon_state = "beanbag"
+	handful_state = "beanbag_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
+	flags_ammo_behavior = AMMO_BALLISTIC
+	damage = 40
+	penetration = -ARMOR_PENETRATION_TIER_1
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_10
+	damage_armor_punch = 0
+
+/datum/ammo/bullet/shotgun/steel/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_pylons)
+	))
+
 /datum/ammo/bullet/shotgun/beanbag
 	name = "beanbag slug"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT //It's not meant to kill people... but if you put it in your mouth, it will.
@@ -186,8 +207,34 @@
 /datum/ammo/bullet/shotgun/buckshot/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P)
 
+/datum/ammo/bullet/shotgun/buckshot/rubber
+	name = "rubbershot"
+	damage = 10
+	stamina_damage = 20
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/rubber
+	shrapnel_chance = 0
+
 /datum/ammo/bullet/shotgun/buckshot/steel
-	name "Steel"
+	name = "steel shot"
+	damage = 40
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/spread/steel
+
+/datum/ammo/bullet/shotgun/steel/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 3)
+/datum/ammo/bullet/shotgun/steel/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	living_mob.KnockDown(2)
+	living_mob.Stun(2)
+	living_mob.Slow(5)
+	to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off your feet!"))
+
+/datum/ammo/bullet/shotgun/steel/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 4, GLOB.damage_boost_pylons)
+	))
+
 
 /datum/ammo/bullet/shotgun/buckshot/special
 	name = "buckshot shell, USCM special type"
@@ -264,6 +311,33 @@
 
 /datum/ammo/bullet/shotgun/spread/incendiary/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P)
+
+/datum/ammo/bullet/shotgun/spread/rubber
+	name = "additional rubbershot"
+	damage = 10
+	stamina_damage = 20
+	shrapnel_chance = 0
+
+/datum/ammo/bullet/shotgun/spread/steel
+	name = "additional steel shot"
+	damage = 40
+
+/datum/ammo/bullet/shotgun/spread/steel/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 3)
+/datum/ammo/bullet/shotgun/spread/steel/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
+	living_mob.KnockDown(2)
+	living_mob.Stun(2)
+	living_mob.Slow(5)
+	to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off your feet!"))
+
+
+/datum/ammo/bullet/shotgun/spread/steel/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 4, GLOB.damage_boost_pylons)
+	))
 
 /*
 					8 GAUGE SHOTGUN AMMO

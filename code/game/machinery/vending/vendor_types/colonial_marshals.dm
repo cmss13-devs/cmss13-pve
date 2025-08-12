@@ -85,6 +85,7 @@
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/cmb_tac/populate_product_list(scale)
 	listed_products = list(
 		list("Sidearms", -1, null, null),
+		list("Electrode Gun", 5, /obj/item/weapon/gun/pistol/taserpistol/unloaded, VENDOR_ITEM_REGULAR),
 		list("Harbin Barracuda", 5, /obj/item/weapon/gun/pistol/barracuda/unloaded, VENDOR_ITEM_REGULAR),
 		list("Vanguard Autorevolver", 3, /obj/item/weapon/gun/pistol/m4a3/unloaded, VENDOR_ITEM_REGULAR),
 		list("Compact Shotgun", 3, /obj/item/weapon/gun/shotgun/pump/super_short/unloaded, VENDOR_ITEM_REGULAR),

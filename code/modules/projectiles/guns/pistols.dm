@@ -832,6 +832,8 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
+/obj/item/weapon/gun/pistol/taserpistol/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //The first rule of monkey pistol is we don't talk about monkey pistol.
