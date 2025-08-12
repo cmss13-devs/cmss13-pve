@@ -181,6 +181,11 @@
 	chat_color = "#e0c31a"
 	usable = FALSE
 
+/datum/squad/marine/upp/secondary/New()
+	. = ..()
+	//To stop this being renamed to the first-spawned-in unit and breaking things
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE)
+
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
 	access = list(ACCESS_MARINE_ALPHA)
