@@ -1530,6 +1530,14 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"cN" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/platoon_sergeant)
 "cO" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1560,6 +1568,23 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"cR" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin{
+	pixel_y = 6;
+	pixel_x = -3
+	},
+/obj/item/tool/pen/clicky{
+	desc = "It's a normal black ink pen.";
+	layer = 3;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/food/drinks/coffeecup{
+	pixel_x = 1;
+	pixel_y = -10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/platoon_sergeant)
 "cS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1570,6 +1595,24 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
+"cT" = (
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	pixel_y = -7;
+	name = "equipment locker";
+	pixel_x = 27
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/tool/crew_monitor{
+	faction = "UPP"
+	},
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
+/turf/open/floor/strata/floor2,
+/area/golden_arrow/platoon_commander_rooms)
 "cU" = (
 /obj/structure/prop{
 	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
@@ -1651,14 +1694,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
-"cZ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer/secure_data/noaccess{
-	dir = 4;
-	pixel_y = 4
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/platoon_sergeant)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/space)
@@ -1924,23 +1959,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/cryo_cells)
-"dK" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/paper_bin{
-	pixel_y = 6;
-	pixel_x = -3
-	},
-/obj/item/tool/pen/clicky{
-	desc = "It's a normal black ink pen.";
-	layer = 3;
-	pixel_x = -5
-	},
-/obj/item/reagent_container/food/drinks/coffeecup{
-	pixel_x = 1;
-	pixel_y = -10
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/platoon_sergeant)
 "dL" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
@@ -3674,24 +3692,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
-"hJ" = (
-/obj/item/storage/belt/gun/type47/np92,
-/obj/structure/closet/secure_closet/guncabinet{
-	req_one_access_txt = "240";
-	req_access = null;
-	can_block_movement = 0;
-	pixel_y = -7;
-	name = "equipment locker";
-	pixel_x = 27
-	},
-/obj/item/storage/backpack/lightpack/upp,
-/obj/item/tool/crew_monitor{
-	faction = "UPP"
-	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
-/obj/item/clothing/suit/marine/lamp,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/platoon_commander_rooms)
 "hK" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -12222,8 +12222,8 @@ Om
 wr
 gt
 hY
-dK
-cZ
+cR
+cN
 ec
 gs
 eg
@@ -13127,7 +13127,7 @@ jU
 jJ
 YU
 jp
-hJ
+cT
 jf
 iN
 iF
