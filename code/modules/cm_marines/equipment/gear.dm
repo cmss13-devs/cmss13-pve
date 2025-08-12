@@ -252,7 +252,7 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
 	name = "\improper mechanically prepared meal (chicken)"
-	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
+	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified dubious sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
 	icon_state = "mar_tray_menu5"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
