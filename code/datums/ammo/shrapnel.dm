@@ -34,6 +34,15 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/shrapnel/rubber/grenade
+	name = "rubber pellets"
+	icon_state = "rubber_pellets"
+	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
+
+	damage = 2
+	stamina_damage = 20
+	shrapnel_chance = 1 //Don't get unlucky.
+
 /datum/ammo/bullet/shrapnel/canister
 	name = "low velocity canister shot"
 	icon_state = "buckshot"

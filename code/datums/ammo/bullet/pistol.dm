@@ -167,6 +167,17 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+// Used by M4A2
+/datum/ammo/bullet/pistol/fmj
+	name = "full metal jacket pistol bullet"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+	accuracy = HIT_ACCURACY_TIER_4
+	damage = 40
+	penetration= 0
+	shrapnel_chance = 0
+	shell_speed = AMMO_SPEED_TIER_3
+	shell_casing = /obj/effect/decal/ammo_casing
+
 // Used by the hipower
 // I know that the 'high power' in the name is supposed to mean its 'impressive' magazine capacity
 // but this is CM, half our guns have baffling misconceptions and mistakes (how do you grab the type-71?) so it's on-brand.

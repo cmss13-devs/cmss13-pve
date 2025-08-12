@@ -47,6 +47,24 @@
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
+//-------------------------------------------------------
+//Barracuda Pistol
+
+/obj/item/ammo_magazine/pistol/barracuda
+	name = "Barracuda jacketed hollowpoint magazine (9x19mm)"
+	desc = "A magazine for the M4A2 Barracuda made by Harbin Machine and Tool. 145gr bimetallic copper-bismuth lead-free JHP ammunition has excellent terminal ballistics."
+	default_ammo = /datum/ammo/bullet/pistol/hollow
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/pistol/barracuda/fmj
+	name = "Barracuda full metal jacket magazine (9x19mm)"
+	desc = "A magazine for the M4A2 Barracuda made by Harbin Machine and Tool. 100gr copper plated mild steel core lead-free FMJ ammunition improves velocity and penetration depth."
+	default_ammo = /datum/ammo/bullet/pistol
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+//-------------------------------------------------------
+//TWE pistol
+
 /obj/item/ammo_magazine/pistol/l54
 	name = "\improper L54 magazine (9mm)"
 	desc = "A pistol magazine."

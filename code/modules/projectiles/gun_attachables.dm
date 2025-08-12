@@ -3937,6 +3937,19 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 15
 	pixel_shift_y = 18
 
+/obj/item/attachable/cosmetic/lasersight
+	name = "laser sight"
+	desc = "A regular laser sight off the shelf."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "lasersight"
+	attach_icon = "lasersight_a"
+	slot = "side_rail"
+	pixel_shift_x = 17
+	pixel_shift_y = 17
+
+/obj/item/attachable/cosmetic/lasersight/integral
+	flags_attach_features = NO_FLAGS
+
 /obj/item/attachable/bipod
 	name = "bipod"
 	desc = "A simple set of telescopic poles to keep a weapon stabilized during firing. \nGreatly increases accuracy and reduces recoil when properly placed, but also increases weapon size and slows firing speed."

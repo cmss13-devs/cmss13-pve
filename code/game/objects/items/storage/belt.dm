@@ -881,20 +881,30 @@
 		if(!stop_messages)
 			to_chat(usr, SPAN_WARNING("[src] can't hold any more rifle magazines."))
 		return FALSE
+	else if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smg))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more SMG magazines."))
+		return FALSE
 
 /obj/item/storage/belt/cmbtac/utility/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
 	. = ..()
 	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines++
+	else if(istype(item, /obj/item/ammo_magazine/smg))
 		main_magazines++
 
 /obj/item/storage/belt/cmbtac/utility/remove_from_storage(obj/item/item as obj, atom/new_location)
 	. = ..()
 	if(istype(item, /obj/item/ammo_magazine/rifle))
 		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines--
 
 //If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
 /obj/item/storage/belt/cmbtac/utility/on_stored_atom_del(atom/movable/item)
 	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/smg))
 		main_magazines--
 
 #undef MAIN_MAGAZINE_COUNT

@@ -359,6 +359,11 @@
 	cell_explosion(target_turf, explosion_strength, explosion_strength, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, dir, cause_data)
 	qdel(src)
 
+/obj/item/explosive/plastic/breaching_charge/less_lethal //yes, the X17 exists. I'm absolutely not going to use that because I want lethality considerations.
+	name = "explosive breaching charge"
+	desc = "A generic brick of plastic explosive for a violent and aggressive entry without generating too much extra fragmentation. Use with caution in mixed or uncertain environments."
+
+
 /obj/item/explosive/plastic/breaching_charge/rubber
 	name = "X17 riot charge"
 	desc = "An explosive device used to break into areas while protecting the user from the blast. Unlike the standard breaching charge, the X17 deploys a cone spray of rubber pellets to incapacitate rather than kill."

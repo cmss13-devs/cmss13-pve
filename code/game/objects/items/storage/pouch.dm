@@ -307,6 +307,15 @@
 /obj/item/storage/pouch/pistol/alt
 		icon_state = "pistol_alt"
 
+/obj/item/storage/pouch/pistol/shotgun
+	name = "shotgun sheath"
+	desc = "A specialized pouch to hold a shorter shotgun."
+	icon_state = "shotgun"
+	max_w_class = SIZE_HUGE
+	can_hold = list(
+		/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/tactical,
+	)
+
 ///CO pouch. This pouch can hold only 1 of each type of item: 1 sidearm, 1 pair of binoculars, 1 CO tablet
 /obj/item/storage/pouch/pistol/command
 	name = "command pouch"
@@ -651,6 +660,10 @@
 /obj/item/storage/pouch/explosive/emp_dutch/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/empgrenade/dutch(src)
+
+/obj/item/storage/pouch/explosive/grenade
+	name = "grenade pouch"
+	desc = "Five slot grenade pouch."
 
 /obj/item/storage/pouch/medical
 	name = "medical pouch"

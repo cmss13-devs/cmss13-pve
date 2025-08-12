@@ -245,6 +245,16 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	max_rounds = 5
 
+/obj/item/ammo_magazine/internal/shotgun/short
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	caliber = "12g"
+	max_rounds = 2
+	current_rounds = 2
+	chamber_closed = 0
+
+/obj/item/ammo_magazine/internal/shotgun/short/unloaded
+	current_rounds = 0
+
 //-------------------------------------------------------
 
 /*

@@ -198,6 +198,21 @@
 	return
 
 /*
++//================================================
++				Less-Lethal Grenades
++//================================================
++*/
+//stingers are just frags that deal stamdam shrap.
+/obj/item/explosive/grenade/high_explosive/stinger
+	name = "less-lethal rubber grenade"
+	desc = "A less-lethal hand grenade which throws out a ton of rubber 'fragments'."
+	icon_state = "rubber_grenade"
+	item_state = "rubber_grenade"
+	explosion_power = 20
+	explosion_falloff = 10
+	shrapnel_count = 36
+	shrapnel_type = /datum/ammo/bullet/shrapnel/rubber/grenade
+/*
 //================================================
 				Airburst Grenades
 //================================================

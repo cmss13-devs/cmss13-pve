@@ -160,6 +160,27 @@
 		if (M.ear_damage >= 5)
 			to_chat(M, SPAN_WARNING("Your ears start to ring!"))
 
+/obj/item/explosive/grenade/flashbang/pve
+	name = "combined concussive grenade"
+	desc = "A flash and concussion grenade. Powerful for making breaching actions."
+	strength = 20
+
+/obj/item/explosive/grenade/flashbang/pve/prime()
+	..()
+
+	var/turf/T = get_turf(src)
+	for(var/obj/structure/closet/L in hear(4, T))
+		SEND_SIGNAL(L, COMSIG_CLOSET_FLASHBANGED, src)
+
+	for(var/mob/living/carbon/M in hear(4, T))
+		bang(T, M)
+
+	playsound(src.loc, 'sound/effects/bang.ogg', 50, 1)
+
+	new/obj/effect/particle_effect/smoke/flashbang(T)
+	qdel(src)
+	return
+
 //Created by Polymorph, fixed by Sieve
 /obj/item/explosive/grenade/flashbang/cluster
 	name = "cluster flashbang"

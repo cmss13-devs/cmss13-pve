@@ -28,7 +28,7 @@
 
 /datum/ammo/bullet/smg/subsonic
 	name = "jacketed hollowpoint subsonic pistol bullet"
-	damage = 45
+	damage = 55
 	penetration = -ARMOR_PENETRATION_TIER_3
 	shrapnel_chance = 5
 

@@ -2,44 +2,125 @@
 
 //------------UNIFORM VENDOR---------------
 
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/wo
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/cmb_tac
+	name = "CMB Crisis Intervention Unit Equipment Rack"
+	desc = "Rack full of CMB tactical team equipment."
 	req_access = list()
 	req_one_access = list()
+	listed_products = list()
+	hackable = TRUE
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_LIMITED_INVENTORY | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/cmb_tac/ui_state(mob/user)
+	return GLOB.not_incapacitated_and_adjacent_strict_state
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/cmb_tac/populate_product_list(scale)
+	listed_products = list(
+		list("Standard Issue Equipment", -1, null, null, null),
+		list("Duty Uniform", 0, /obj/item/clothing/under/cmb), VENDOR_ITEM_REGULAR),
+		list("Deployment Area Map", 0, /obj/item/map/current_map, VENDOR_ITEM_REGULAR),
+
+		list("Field Equipment", -1, null, null),
+		list("Patrol Jacket", 10, /obj/item/clothing/suit/armor/patrolcoat, VENDOR_ITEM_REGULAR),
+		list("GX-30 Combat Helmet", 10, /obj/item/clothing/head/helmet/generic_combat, VENDOR_ITEM_REGULAR),
+		list("Radio Headset", 10, /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
+		list("Gas Mask", 5, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", 10, /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
+		list("Combat Boots", 10, /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
+
+		list("Primary Load Bearing Equipment", -1, null, null),
+		list("Rifle Magazine Configuration", 10, /obj/item/storage/backpack/cmb_daypack, VENDOR_ITEM_REGULAR),
+		list("Submachine Gun Configuration", 10, /obj/item/storage/backpack/general_belt/cmb, VENDOR_ITEM_REGULAR),
+		list("Mixed Munitions Configuration", 5, /obj/item/storage/belt/cmbtac/mixed, VENDOR_ITEM_REGULAR),
+		list("Utility/Magazine Configuration", 5, /obj/item/storage/belt/cmbtac/utility, VENDOR_ITEM_REGULAR),
+
+		list("Auxillary Load Bearing Equipment", -1, null, null),
+		list("Pistol Pouch", 10, /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("Shotgun Sheath", 10, /obj/item/storage/pouch/pistol/shotgun, VENDOR_ITEM_REGULAR),
+		list("Magazine Pouch", 10, /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
+		list("Pistol Magazine Pouch", 10, /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", 5, /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
+		list("Medium General Pouch", 10, /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
+		list("First-Aid Pouch", 10, /obj/item/storage/pouch/firstaid, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch", 5, /obj/item/storage/pouch/flare, VENDOR_ITEM_RECOMMENDED),
+		list("Sling Pouch", 5, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+		list("Grenade Pouch", 5, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+
+		list("Special Storage Equipment", -1, null, null),
+		list("Drop Pouch", 10, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 5, /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 4, /obj/item/clothing/accessory/storage/smallpouch, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES", -1, null, null, null),
+		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
+		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
+		list("Medium General Pouch", floor(scale * 15), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
+		list("Pistol Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Pistol Pouch", floor(scale * 15), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+
+		list("RESTRICTED POUCHES", -1, null, null, null),
+		list("Construction Pouch", 1.25, /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
+		list("Explosive Pouch", 1.25, /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
+		list("First Responder Pouch", 2.5, /obj/item/storage/pouch/first_responder, VENDOR_ITEM_REGULAR),
+		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
+
+		list("MASK", -1, null, null, null),
+		list("M5 Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
+		list("Heat Absorbent Coif", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null, null),
+		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
+		list("Ballistic goggles, sun-shaded", round(scale * 10), /obj/item/clothing/glasses/mgoggles/black, VENDOR_ITEM_REGULAR),
+		list("Ballistic goggles, laser-shaded (brown)", round(scale * 10), /obj/item/clothing/glasses/mgoggles/orange, VENDOR_ITEM_REGULAR),
+		list("Ballistic goggles, laser-shaded (green)", round(scale * 10), /obj/item/clothing/glasses/mgoggles/green, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet Jungle Cover", round(scale * 10), /obj/item/prop/helmetgarb/camocover, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet Snow Cover", round(scale * 10), /obj/item/prop/helmetgarb/camocover/snow, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet Desert Cover", round(scale * 10), /obj/item/prop/helmetgarb/camocover/desert, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet Netting", round(scale * 10), /obj/item/prop/helmetgarb/netting, VENDOR_ITEM_REGULAR),
+		list("M10 Helmet Rain Cover", round(scale * 10), /obj/item/prop/helmetgarb/raincover, VENDOR_ITEM_REGULAR),
+		list("Solar Devils Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/devils, VENDOR_ITEM_REGULAR),
+		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
+		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
+		list("LRRP Bedroll", round(scale * 15), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
+		list("Marine Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		)
 
 //------------ Gear Vendor ---------------
+/obj/structure/machinery/cm_vending/cmb_tac/gear
 
 GLOBAL_LIST_INIT(cm_vending_clothing_marshaltac, list(
-		list("Standard Issue Equipment", 0, null, null, null),
+		list("Standard Issue Equipment", -1, null, null, null),
 		list("Duty Uniform", 0, /obj/item/clothing/under/cmb), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_REGULAR),
-		list("Deployment Area Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
-		list("Patrol Jacket", 0, /obj/item/clothing/suit/armor/patrolcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("Deployment Area Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_REGULAR),
+		list("Patrol Jacket", 10, /obj/item/clothing/suit/armor/patrolcoat, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("Backpacks", 0, null, null, null),
-		list("Combat Daypack", 0, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Satchel", 0, /obj/item/storage/backpack/marine/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Combat Daypack", 10, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Satchel", 10, /obj/item/storage/backpack/marine/satchel, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Breacherpack", 5, /obj/item/storage/backpack/satchel/cmb_breacherpack, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 
-		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Knife Rig (Full)", 0, /obj/item/storage/belt/knifepouch, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 M39 Holster Rig", 0, /obj/item/storage/belt/gun/m39, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 M40 Grenade Rig (Empty)", 0, /obj/item/storage/belt/grenade, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Primary Load Bearing Equipment", 0, null, null, null),
+		list("Rifle Magazine Configuration", 10, /obj/item/storage/backpack/cmb_daypack, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Submachine Gun Configuration", 10, /obj/item/storage/backpack/general_belt/cmb, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Mixed Munitions Configuration", 5, /obj/item/storage/belt/cmbtac/mixed, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("Utility/Magazine Configuration", 5, /obj/item/storage/belt/cmbtac/utility, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
-		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Bayonet Sheath (Full)", 0, /obj/item/storage/pouch/bayonet, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("Magazine Pouch", 0, /obj/item/storage/pouch/magazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medium General Pouch", 0, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Pistol Pouch", 0, /obj/item/storage/pouch/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Auxillary Load Bearing Equipment", 0, null, null, null),
+		list("Pistol Pouch", 10, /obj/item/storage/pouch/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Shotgun Sheath", 10, /obj/item/storage/pouch/pistol/shotgun, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Magazine Pouch", 10, /obj/item/storage/pouch/magazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Pistol Magazine Pouch", 10, /obj/item/storage/pouch/magazine/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", 5, /obj/item/storage/pouch/shotgun, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medium General Pouch", 10, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("First-Aid Pouch", 10, /obj/item/storage/pouch/firstaid, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch", 5, /obj/item/storage/pouch/flare, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Sling Pouch", 5, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("MASK (CHOOSE 1)", 0, null, null, null),
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),

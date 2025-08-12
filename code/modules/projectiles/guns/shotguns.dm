@@ -1252,8 +1252,65 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	starting_attachment_types = list(/obj/item/attachable/stock/hg3712/m3717)
 
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/tactical
+	name = "HG-78 combat shotgun"
+	desc = "A modification of the HG-37 for better reliability, assisted cycling mechanism, and a hair trigger. Can feed lower pressure ammunition without fear of stoppage. Stockless."
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+	)
+
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/tactical/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_7
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_3
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
 //-------------------------------------------------------
 
+/obj/item/weapon/gun/shotgun/pump/super_short
+	name = "short barrel pump-action shotgun"
+	desc = "Short barreled tool for breaching and close combat. Standard twelve gauge."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/cmb_tac.dmi'
+	icon_state = "super_short"
+	item_state = "super_short"
+	w_class = SIZE_MEDIUM
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/short
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/compensator,
+	)
+
+/obj/item/weapon/gun/shotgun/pump/super_short/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 16,
+		"rail_x" = 12, "rail_y" = 20,
+		"under_x" = 20, "under_y" = 14,
+		"stock_x" = 20, "stock_y" = 14,
+		"side_rail_x" = 25, "side_rail_y" = 18,
+		)
+
+/obj/item/weapon/gun/shotgun/pump/super_short/set_gun_config_values()
+	..()
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_3
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	aim_slowdown = SLOWDOWN_ADS_QUICK
 
 //-------------------------------------------------------
 //XM51, Breaching Scattergun, PVE Edition: civilian magfed shotgun
