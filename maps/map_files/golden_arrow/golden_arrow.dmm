@@ -689,6 +689,19 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
+"abt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_y = 13;
+	pixel_x = 7
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
 "abu" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -12582,6 +12595,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/cobweb2,
+/obj/item/ammo_box/rounds/smartgun,
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "aPE" = (
@@ -21025,11 +21039,22 @@
 /obj/structure/machinery/light/small/blue/golden_arrow{
 	pixel_y = -1
 	},
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 13;
-	pixel_x = 7
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = 4
 	},
-/obj/item/ammo_box/rounds/smartgun,
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = -3
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoonarmory)
 "vPN" = (
@@ -32945,7 +32970,7 @@ aZy
 adz
 ayX
 adz
-aza
+abt
 vRh
 aVD
 akZ

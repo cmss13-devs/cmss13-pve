@@ -3186,6 +3186,10 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
 "sL" = (
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = -6;
+	pixel_y = -8
+	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
 "sO" = (
@@ -6009,17 +6013,6 @@
 /area/golden_arrow/hangar)
 "St" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 4
-	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = -10;
-	pixel_y = 1
-	},
-/obj/item/smartgun_battery{
-	pixel_x = 4;
-	pixel_y = -3
-	},
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 2;
 	pixel_y = 25
@@ -6027,6 +6020,22 @@
 /obj/structure/sign/safety/hazard{
 	pixel_x = 14;
 	pixel_y = 25
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/item/smartgun_battery{
+	pixel_x = 4;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -10;
+	pixel_y = 1
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
