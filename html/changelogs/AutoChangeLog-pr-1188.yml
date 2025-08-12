@@ -1,0 +1,7 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - rscadd: " UPP Naval Inf AT team to squad preset"
+  - balance: "Naval Inf and TG AT loadouts edited to account for using pistol secondary & some other fluff kit being accounted for in storage"
+  - balance: "TG AT loadout no longer has a Type71 so they prioritise using their launcher"
+  - bugfix: "TG AT Squad team now has AT as lead"
