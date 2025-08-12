@@ -90,6 +90,16 @@
 		list("Vanguard Autorevolver", 3, /obj/item/weapon/gun/pistol/m4a3/unloaded, VENDOR_ITEM_REGULAR),
 		list("Compact Shotgun", 3, /obj/item/weapon/gun/shotgun/pump/super_short/unloaded, VENDOR_ITEM_REGULAR),
 
+		list("Medical", -1, null, null),
+		list("Gauze", 15, /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", 15, /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Splints", 15, /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", 15, /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", 15, /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", 10, /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", 10, /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", 10, /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
+
 		list("Tools", -1, null, null),
 		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
 		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
@@ -97,5 +107,8 @@
 		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+
+		list("Breaching Equipment", -1, null, null),
+
 )
 

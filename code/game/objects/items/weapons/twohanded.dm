@@ -316,6 +316,30 @@
 	attack_verb = list("pulverized", "smashed", "thwacked", "crushed", "hammered", "wrecked")
 	var/really_heavy = FALSE
 
+/obj/item/weapon/twohanded/breacher/tactical
+	name = "breaching sledgehammer"
+	desc = "A cold forged steel alloy breaching hammer with vibration/shock reducing grip. Can break down walls and doors."
+	icon = 'icons/obj/items/experimental_tools.dmi'
+	icon_state = "d2_breacher"
+	item_state = "d2_breacher"
+	force = MELEE_FORCE_TIER_4
+	force_wielded = MELEE_FORCE_TIER_11
+	w_class = SIZE_LARGE
+	flags_item = TWOHANDED
+	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
+	attack_verb = list("crushed", "battered", "slammed", "broken", "brutalized", "smashed")
+	var/really_heavy = FALSE
+
+/obj/item/weapon/twohanded/breacher/tactical/wield(mob/user)
+	. = ..()
+	if(!.) return
+	pry_capable = IS_PRY_CAPABLE_SIMPLE
+
+/obj/item/weapon/twohanded/breacher/tactical/unwield(mob/user)
+	. = ..()
+	if(!.) return
+	pry_capable = 0
+
 /obj/item/weapon/twohanded/breacher/synth
 	name = "\improper B5 Breaching Hammer"
 	desc = "This 100-pound monstrosity of a sledgehammer is made of solid tungsten carbide, and packs enough force in its swing to take down walls with ease. It can punch through steel and concrete, hit like a truck, and is utterly unusable by anyone who isn't superhuman."
