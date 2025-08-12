@@ -110,7 +110,6 @@
 	playsound(loc, 'sound/machines/hiss.ogg', 25, 1)
 	if(violent)
 		visible_message("[src] rapidly deflates!")
-		density = FALSE
 		flick("wall_popping", src)
 		sleep(10)
 		deconstruct(FALSE)

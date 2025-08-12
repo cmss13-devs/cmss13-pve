@@ -815,9 +815,9 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space
 	name = "\improper ColMarTech Automated EVA Equipment"
-	desc = "An automated supply rack hooked up to a small storage of various utilities and tools, specifically for use in space enviroments. Can be accessed by any Marine Rifleman."
+	desc = "An automated supply rack hooked up to a small storage of various utilities and tools, specifically for use in space enviroments.."
 	req_access = list()
-	req_one_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_SPECPREP, ACCESS_MARINE_RO, ACCESS_MARINE_PREP)
+	req_one_access = list()
 	hackable = TRUE
 	icon_state = "spec_gear"
 	vend_x_offset = 2

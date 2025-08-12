@@ -172,7 +172,7 @@
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
-	siemens_coefficient = 0.1
+	siemens_coefficient = 0
 	breach_vulnerability = SPACESUIT_BREACH_STANDARD
 	actions_types = list(/datum/action/item_action/spacesuit/toggle_motion_detector, /datum/action/item_action/toggle)
 	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_ARMBAND)
