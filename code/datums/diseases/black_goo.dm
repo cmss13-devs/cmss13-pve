@@ -202,21 +202,16 @@
 		return
 	if(istype(O, /obj/structure/machinery/door/airlock))
 		var/obj/structure/machinery/door/airlock/D = O
-		if(!D.density)
-			return
 		if(D.heavy)
 			to_chat(usr, SPAN_DANGER("[D] is too heavy to be forced open."))
 			return FALSE
-		if(user.action_busy || user.a_intent == INTENT_HARM)
+		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
 		attempting_pry = TRUE
 		user.visible_message(SPAN_DANGER("[user] jams their [name] into [O] and strains to rip it open."),
 		SPAN_DANGER("You jam your [name] into [O] and strain to rip it open."))
 		playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, 1)
-		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !(get_dist(src, O) > 1))
-			if(!D.density)
-				return
-
+		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !(get_dist(src, O) > 1) && D.density)
 			user.visible_message(SPAN_DANGER("[user] forces [O] open with their [name]."),
 			SPAN_DANGER("You force [O] open with your [name]."))
 			D.open(1)
@@ -226,7 +221,8 @@
 
 	else if(istype(O, /obj/structure/mineral_door/resin))
 		var/obj/structure/mineral_door/resin/D = O
-		if(D.isSwitchingStates) return
+		if(D.isSwitchingStates)
+			return
 		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
 		attempting_pry = TRUE

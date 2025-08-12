@@ -297,7 +297,7 @@
 		if(limb.body_part != BODY_FLAG_CHEST && limb.body_part != BODY_FLAG_GROIN) //Just incase we have no other parts to pick from
 			var/zombie_cut_prob = 5 + brute/limb.max_damage * 10 //flat 5% + whatever doubled usually results in ~8-13%
 			zombie_cut_prob *= owner.zombie_delimb_chance_multi ? owner.zombie_delimb_chance_multi : 1
-			zombie_cut_prob = min(zombie_cut_prob, 100)
+			zombie_cut_prob = clamp(zombie_cut_prob, 0, 100)
 			if(prob(zombie_cut_prob))
 				limb.limb_delimb(damage_source)
 				return
