@@ -33,6 +33,7 @@
 	desc = "A support module for AEVs that shoots M60 incendiary smoke grenades to deter hitchhikers."
 	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
 
+	icon_state = "slauncher_0"
 	disp_icon = "tank"
 
 	firing_arc = 150
