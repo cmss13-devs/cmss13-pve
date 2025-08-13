@@ -57,8 +57,12 @@ export const HumanAISpawner = (props) => {
       setDisableAutoClean(true);
     }
   };
-  const numberToTwoDP = (value) => {
-    setZombieDelimbMulti(value.toFixed(2));
+  const processNumber = (value) => {
+    if (value <= 0) {
+      setZombieDelimbMulti(-1);
+    } else {
+      setZombieDelimbMulti(value.toFixed(2));
+    }
   };
   return (
     <Window title="Human AI Spawner" width={800} height={900}>
@@ -130,7 +134,7 @@ export const HumanAISpawner = (props) => {
                       <Stack.Item>
                         <Stack.Item align="center" textAlign="center">
                           <Box>Zombie Delimbing Multiplier:</Box>
-                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is defualt. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probabilty as a percentage chance. Values beyond 0.5 and 1.5 Aren't recommended.">
+                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is defualt. -1 turns delimbing off. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probabilty as a percentage chance. Values beyond 0.5 and 1.5 Aren't recommended.">
                             ?
                           </Button>
                           <NumberInput
@@ -138,9 +142,9 @@ export const HumanAISpawner = (props) => {
                               newZombieDelimbMulti ? newZombieDelimbMulti : 1
                             }
                             step={0.01}
-                            minValue={0}
+                            minValue={-1}
                             maxValue={20}
-                            onChange={(value) => numberToTwoDP(value)}
+                            onChange={(value) => processNumber(value)}
                             width="55%"
                           />
                           <Button

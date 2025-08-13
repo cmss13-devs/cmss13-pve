@@ -56,10 +56,10 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 		if("create_ai")
 			if(!params["path"])
 				return
-			var/delimb_multi = clamp(text2num(params["zombieDelimbMulti"]), 0, 20)
+			var/delimb_multi = clamp(text2num(params["zombieDelimbMulti"]), -1, 20)
 			if(delimb_multi == 1)
 				delimb_multi = null
-			if(delimb_multi == 0)
+			if(delimb_multi <= 0)
 				delimb_multi = -1
 			GLOB.gm_set_zombie_delimb_multi = delimb_multi
 
