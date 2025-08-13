@@ -328,7 +328,6 @@
 	flags_item = TWOHANDED
 	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	attack_verb = list("crushed", "battered", "slammed", "broken", "brutalized", "smashed")
-	var/really_heavy = FALSE
 
 /obj/item/weapon/twohanded/breacher/tactical/wield(mob/user)
 	. = ..()

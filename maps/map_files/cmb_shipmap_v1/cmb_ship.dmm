@@ -1,189 +1,6850 @@
-"ae" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"af" = (/obj/structure/pipes/vents/scrubber{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"ao" = (/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
-"aA" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"aO" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
-"aR" = (/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"aY" = (/obj/structure/bed/chair{can_buckle = 0; dir = 4},/turf/open/floor/freezerfloor,/area/space)
-"br" = (/obj/structure/machinery/vending/generic,/turf/open/floor/freezerfloor,/area/space)
-"cs" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"ct" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/cryopod{pixel_x = 6; pixel_y = -2},/turf/open/floor/freezerfloor,/area/space)
-"cI" = (/turf/open/floor/plating,/area/space)
-"cZ" = (/obj/structure/bed/chair{dir = 8; pixel_y = 3},/turf/open/floor/freezerfloor,/area/space)
-"dx" = (/obj/structure/surface/table/almayer,/obj/structure/vehicle_locker/cabinet/utensils{pixel_x = -7; pixel_y = 27},/obj/structure/vehicle_locker/cabinet/utensils/flip{pixel_x = 8; pixel_y = 27},/turf/open/floor/freezerfloor,/area/space)
-"dA" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/pipes/vents/pump,/turf/open/floor/almayer/silverfull,/area/space)
-"dI" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"ee" = (/turf/open/floor/almayer,/area/space)
-"fb" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
-"fg" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"gn" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/turf/open/floor/freezerfloor,/area/space)
-"gB" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"hA" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"iG" = (/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"je" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"jg" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"jB" = (/obj/structure/machinery/landinglight/ds1,/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"jM" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"kh" = (/obj/structure/pipes/standard/manifold/hidden/supply{dir = 1},/turf/closed/wall/almayer/outer,/area/space)
-"kG" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"lb" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"lk" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"lL" = (/obj/structure/surface/table,/turf/open/floor/freezerfloor,/area/space)
-"mJ" = (/obj/structure/machinery/landinglight/ds1{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"nf" = (/obj/structure/bed/chair,/turf/open/floor/freezerfloor,/area/space)
-"nk" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
-"nw" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"nC" = (/obj/structure/machinery/chem_dispenser/canteen,/turf/open/floor/freezerfloor,/area/space)
-"nG" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"nN" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"ow" = (/obj/structure/pipes/standard/manifold/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
-"pv" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"pz" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/almayer/silverfull,/area/space)
-"pC" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
-"qa" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1,/turf/open/floor/almayer/plate,/area/space)
-"qh" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"rb" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"ro" = (/obj/structure/machinery/cryopod/big/flipped{pixel_y = 0; pixel_x = -17},/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
-"rK" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"sr" = (/obj/structure/machinery/cm_vending/sorted/marine_food,/turf/open/floor/freezerfloor,/area/space)
-"tS" = (/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = -7},/obj/structure/closet/secure_closet/marine_personal/rifleman{pixel_x = 7},/turf/open/floor/freezerfloor,/area/space)
-"tV" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/turf/open/floor/freezerfloor,/area/space)
-"uf" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer/reinforced,/area/space)
-"uE" = (/obj/structure/machinery/door/airlock/almayer/maint{req_one_access = null; req_one_access_txt = "2;30;34"},/turf/open/floor/freezerfloor,/area/space)
-"uH" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"uN" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"vo" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"vQ" = (/obj/effect/decal/warning_stripes{icon_state = "E"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"wA" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"wR" = (/obj/structure/machinery/light{dir = 8; invisibility = 101},/turf/open/floor/freezerfloor,/area/space)
-"xb" = (/turf/closed/wall/almayer/reinforced,/area/space)
-"xr" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/machinery/light,/turf/open/floor/freezerfloor,/area/space)
-"yp" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer,/area/space)
-"zJ" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"zV" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"An" = (/obj/structure/machinery/power/reactor{name = "\improper S-52 fusion reactor 17"},/turf/open/floor/almayer,/area/space)
-"At" = (/obj/structure/machinery/light{dir = 1},/turf/open/floor/freezerfloor,/area/space)
-"Au" = (/obj/item/stack/catwalk{pixel_x = 4},/obj/item/stack/catwalk{pixel_x = -3; pixel_y = 6},/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Bv" = (/turf/closed/wall/almayer,/area/space)
-"BU" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"Ca" = (/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"Cy" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Dk" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1},/obj/structure/machinery/power/apc,/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer,/area/space)
-"DA" = (/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
-"EJ" = (/obj/structure/machinery/landinglight/ds1/delayone,/turf/open/floor/almayer/plate,/area/space)
-"EP" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Fu" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"Fy" = (/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,/turf/open/floor/plating,/area/space)
-"Ge" = (/obj/structure/machinery/light,/obj/structure/cable/heavyduty{icon_state = "4-8"},/turf/open/floor/freezerfloor,/area/space)
-"Gj" = (/obj/structure/machinery/landinglight/ds1/delayone{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"Gp" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/item/stack/catwalk{pixel_x = 2; pixel_y = -9},/obj/structure/machinery/landinglight/ds1/delayone{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"HW" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Ih" = (/obj/structure/bed/chair{dir = 1},/turf/open/floor/freezerfloor,/area/space)
-"IO" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/machinery/light{dir = 8; invisibility = 101},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
-"KB" = (/turf/closed/wall/almayer/outer,/area/space)
-"KJ" = (/obj/structure/machinery/landinglight/ds1/delaythree,/turf/open/floor/almayer/plate,/area/space)
-"KK" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/almayer/silverfull,/area/space)
-"ML" = (/obj/structure/machinery/light{unacidable = 1; unslashable = 1},/turf/open/floor/freezerfloor,/area/space)
-"Ns" = (/obj/structure/machinery/landinglight/ds1/delaythree{dir = 8},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"OI" = (/obj/effect/landmark/observer_start,/obj/structure/pipes/standard/simple/hidden/supply,/obj/structure/cable/heavyduty{icon_state = "1-4-8"},/turf/open/floor/freezerfloor,/area/space)
-"OQ" = (/obj/structure/machinery/light{dir = 1},/obj/structure/pipes/standard/simple/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
-"OV" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_y = 1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"Qc" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_x = 1; pixel_y = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_x = -1; pixel_y = -1},/turf/open/floor/freezerfloor,/area/space)
-"QK" = (/obj/effect/decal/warning_stripes{icon_state = "NW-out"; layer = 2.5; pixel_y = 1; pixel_x = -1},/obj/effect/decal/warning_stripes{icon_state = "SW-out"; layer = 2.5; pixel_y = -1; pixel_x = -1},/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"QU" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/open/floor/freezerfloor,/area/space)
-"Rj" = (/obj/structure/machinery/light{dir = 4; invisibility = 101},/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/effect/decal/warning_stripes{icon_state = "S"; pixel_y = -1},/obj/structure/pipes/vents,/turf/open/floor/almayer/silverfull,/area/space)
-"Rk" = (/obj/structure/pipes/standard/simple/hidden/supply{dir = 8},/turf/open/floor/freezerfloor,/area/space)
-"Rt" = (/obj/effect/decal/cleanable/dirt{layer = 2.52},/obj/structure/machinery/landinglight/ds1/delaythree{dir = 1},/turf/open/floor/almayer/plate,/area/space)
-"RI" = (/turf/open/space/basic,/area/space)
-"SD" = (/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{name = "\improper Hypersleep Bay"},/turf/open/floor/freezerfloor,/area/space)
-"Tu" = (/obj/structure/machinery/telecomms/relay/preset/tower,/turf/open/floor/almayer,/area/space)
-"Tw" = (/obj/structure/machinery/cryopod/big,/turf/open/floor/plating/plating_catwalk/aicore,/area/space)
-"Ut" = (/obj/structure/machinery/landinglight/ds1{dir = 8},/turf/open/floor/almayer/plate,/area/space)
-"Vl" = (/obj/effect/decal/warning_stripes{icon_state = "W"; pixel_x = -1; pixel_y = 1},/turf/open/floor/freezerfloor,/area/space)
-"Wq" = (/obj/structure/pipes/standard/simple/hidden/supply,/turf/closed/wall/almayer/outer,/area/space)
-"WB" = (/obj/effect/decal/warning_stripes{icon_state = "N"; pixel_y = 1},/obj/structure/machinery/computer/crew/alt{dir = 4; pixel_x = -10},/turf/open/floor/freezerfloor,/area/space)
-"Xi" = (/obj/structure/pipes/vents/pump{dir = 4},/turf/open/floor/freezerfloor,/area/space)
-"Xo" = (/turf/open/floor/freezerfloor,/area/space)
-"Xs" = (/obj/structure/machinery/landinglight/ds1/delaytwo,/turf/open/floor/almayer/plate,/area/space)
-"XI" = (/obj/structure/machinery/landinglight/ds1/delaytwo{dir = 4},/turf/open/floor/almayer/plate,/area/space)
-"Ya" = (/obj/effect/decal/warning_stripes{icon_state = "SE-out"; pixel_y = -1},/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{dir = 2},/turf/open/floor/freezerfloor,/area/space)
-"Zk" = (/obj/effect/decal/warning_stripes{icon_state = "NE-out"; pixel_x = 1; pixel_y = 1},/obj/structure/machinery/floodlight/landing/floor{color = "#dae2ff"; light_color = "#dae2ff"},/turf/open/floor/almayer/plate,/area/space)
-"ZP" = (/obj/structure/cable/heavyduty{icon_state = "4-8"},/turf/open/floor/freezerfloor,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/closet/crate/trashcart{
+	pixel_y = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"ab" = (
+/obj/structure/machinery/disposal,
+/turf/open/floor/freezerfloor,
+/area/space)
+"ac" = (
+/obj/structure/surface/table/gamblingtable,
+/turf/open/floor/freezerfloor,
+/area/space)
+"ad" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4;
+	name = "\improper Other Sections"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"ae" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_y = -1;
+	pixel_x = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"af" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"ag" = (
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	dir = 2
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"ah" = (
+/obj/structure/surface/rack,
+/turf/open/floor/freezerfloor,
+/area/space)
+"ai" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 8;
+	layer = 2.7
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"aj" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"ak" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"al" = (
+/obj/structure/platform,
+/turf/open/floor/freezerfloor,
+/area/space)
+"am" = (
+/obj/structure/platform_decoration{
+	dir = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"an" = (
+/obj/structure/platform_decoration,
+/turf/open/floor/freezerfloor,
+/area/space)
+"ao" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/almayer/plate,
+/area/space)
+"ap" = (
+/turf/open/floor/delivery,
+/area/space)
+"aq" = (
+/turf/open/floor/almayer/floor,
+/area/space)
+"ar" = (
+/obj/structure/machinery/gear{
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"as" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"at" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Vehicle Bay One Blast Door";
+	id = "vehiclebay1"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"au" = (
+/turf/open/floor/almayer/cargo_arrow/west,
+/area/space)
+"av" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"aw" = (
+/obj/docking_port/stationary/trijent_elevator/shipmap_elevator/one{
+	id = "garrow_vehicle_elevator_one";
+	elevator_network = "ArrowVehicleOne";
+	name = "Vehicle Elevator One Upper";
+	airlock_area = /area/golden_arrow/vehicle_shuttle/upper
+	},
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
+/area/space)
+"ax" = (
+/turf/open/floor/almayer/empty/golden_arrow/vehicle_one,
+/area/space)
+"ay" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 8;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"az" = (
+/obj/structure/prop/almayer/whiteboard,
+/turf/open/floor/freezerfloor,
+/area/space)
+"aA" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"aB" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 2;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"aC" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call{
+	dockId = "garrow_vehicle_elevator_one";
+	shuttleId = "garrow_vehicle_elevator_one";
+	pixel_y = 35;
+	name = "\improper vehicle elevator one control panel"
+	},
+/turf/open/floor/delivery,
+/area/space)
+"aD" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 28;
+	id = "vehiclebay2";
+	name = "vehicle bay blast door control"
+	},
+/turf/open/floor/almayer/floor,
+/area/space)
+"aE" = (
+/obj/structure/machinery/door/poddoor/railing{
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/damaged5,
+/area/space)
+"aF" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4;
+	name = "\improper Storage Bay Three Blast Door";
+	id = "cargobay3"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"aG" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/damaged5,
+/area/space)
+"aH" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/damaged4,
+/area/space)
+"aI" = (
+/obj/structure/machinery/door/poddoor/railing{
+	dir = 4;
+	id = "garrow_vehicle_elevator_one"
+	},
+/turf/open/floor/damaged2,
+/area/space)
+"aJ" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 28;
+	id = "vehiclebay2";
+	name = "vehicle bay blast door control"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"aO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"aR" = (
+/obj/structure/machinery/light,
+/turf/open/floor/freezerfloor,
+/area/space)
+"aY" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"br" = (
+/obj/structure/machinery/vending/generic,
+/turf/open/floor/freezerfloor,
+/area/space)
+"cs" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"ct" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"cI" = (
+/turf/open/floor/plating,
+/area/space)
+"cZ" = (
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_y = 3
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"dx" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/vehicle_locker/cabinet/utensils{
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 8;
+	pixel_y = 27
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"dA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"dI" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"ee" = (
+/turf/open/floor/almayer,
+/area/space)
+"fb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1;
+	pixel_x = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"fg" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"gn" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_y = -1;
+	pixel_x = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"gB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"hA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"iG" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"je" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"jg" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"jB" = (
+/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"jM" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"kh" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/closed/wall/almayer/outer,
+/area/space)
+"kG" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"lb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"lk" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"lL" = (
+/obj/structure/surface/table,
+/turf/open/floor/freezerfloor,
+/area/space)
+"mJ" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"nf" = (
+/obj/structure/bed/chair,
+/turf/open/floor/freezerfloor,
+/area/space)
+"nk" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer/plate,
+/area/space)
+"nw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"nC" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/turf/open/floor/freezerfloor,
+/area/space)
+"nG" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"nN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"ow" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/turf/open/floor/freezerfloor,
+/area/space)
+"pv" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"pz" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"pC" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer/plate,
+/area/space)
+"qa" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/almayer/plate,
+/area/space)
+"qh" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"rb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/freezerfloor,
+/area/space)
+"ro" = (
+/obj/structure/machinery/cryopod/big/flipped{
+	pixel_y = 0;
+	pixel_x = -17
+	},
+/turf/open/floor/plating/plating_catwalk/aicore,
+/area/space)
+"rK" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"sr" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/freezerfloor,
+/area/space)
+"tS" = (
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/rifleman{
+	pixel_x = 7
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"tV" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"uf" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/closed/wall/almayer/reinforced,
+/area/space)
+"uE" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	req_one_access = null;
+	req_one_access_txt = "2;30;34"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"uH" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"uN" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"vo" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"vQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"wA" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"wR" = (
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"xb" = (
+/turf/closed/wall/almayer/reinforced,
+/area/space)
+"xr" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light,
+/turf/open/floor/freezerfloor,
+/area/space)
+"yp" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/closed/wall/almayer,
+/area/space)
+"zJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"zV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"An" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/space)
+"At" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Au" = (
+/obj/item/stack/catwalk{
+	pixel_x = 4
+	},
+/obj/item/stack/catwalk{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Bv" = (
+/turf/closed/wall/almayer,
+/area/space)
+"BU" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Ca" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Cy" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Dk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1
+	},
+/obj/structure/machinery/power/apc,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/closed/wall/almayer,
+/area/space)
+"DA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 2
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"EJ" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/almayer/plate,
+/area/space)
+"EP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Fu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Fy" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/turf/open/floor/plating,
+/area/space)
+"Ge" = (
+/obj/structure/machinery/light,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Gj" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Gp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/stack/catwalk{
+	pixel_x = 2;
+	pixel_y = -9
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"HW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Ih" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"IO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/machinery/light{
+	dir = 8;
+	invisibility = 101
+	},
+/obj/structure/pipes/vents,
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"KB" = (
+/turf/closed/wall/almayer/outer,
+/area/space)
+"KJ" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/almayer/plate,
+/area/space)
+"KK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"ML" = (
+/obj/structure/machinery/light{
+	unacidable = 1;
+	unslashable = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Ns" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"OI" = (
+/obj/effect/landmark/observer_start,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"OQ" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/freezerfloor,
+/area/space)
+"OV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Qc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"QK" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 1;
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	layer = 2.5;
+	pixel_y = -1;
+	pixel_x = -1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"QU" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/freezerfloor,
+/area/space)
+"Rj" = (
+/obj/structure/machinery/light{
+	dir = 4;
+	invisibility = 101
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/obj/structure/pipes/vents,
+/turf/open/floor/almayer/silverfull,
+/area/space)
+"Rk" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Rt" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"RI" = (
+/turf/open/space/basic,
+/area/space)
+"SD" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "\improper Hypersleep Bay"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Tu" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/space)
+"Tw" = (
+/obj/structure/machinery/cryopod/big,
+/turf/open/floor/plating/plating_catwalk/aicore,
+/area/space)
+"Ut" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Vl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Wq" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/closed/wall/almayer/outer,
+/area/space)
+"WB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/computer/crew/alt{
+	dir = 4;
+	pixel_x = -10
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Xi" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Xo" = (
+/turf/open/floor/freezerfloor,
+/area/space)
+"Xs" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/almayer/plate,
+/area/space)
+"XI" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"Ya" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_y = -1
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 2
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
+"Zk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plate,
+/area/space)
+"ZP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/freezerfloor,
+/area/space)
 
 (1,1,1) = {"
-AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-AnAnTuAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-AnAnAnAnAnRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIFuEJaonkXsEJjBKJXspCqaKJCyRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIvocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIcscIcIcIcIcIcIcIcIcIcIcInwRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIrKcIcIcIcIcIcIcIcIcIcIcIGpRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIjgcIcIcIcIcIcIcIcIcIcIcIAuRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRInNcIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRImJcIcIcIcIcIFycIcIcIcIcIqhRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIwAcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXovocIcIcIcIcIcIcIcIcIcIcIuNRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXogBcIcIcIcIcIcIcIcIcIcIcINsRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXIcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoZkiGGjBURtjelkBUuHiGiGGjhARIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoKBKBKBKBKBKBKBKBKBKBKBKBKBKBKBRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvBvBvBvBvBvBvBvBvXoXoXoXoXoXoXoXoXoXoXoKBXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoAtsrdxnCAtbrBvXoXoXoXoXoXoXoXoXoXoXoKBXoeeeeeeeeeeeeeeeeeeeeeeeeeeRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXoFuEJaonkXsEJjBKJXspCqaKJCyRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvwRXonfnfnfXotVBvXoXoXoXoXoXoXoXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoaYlLlLlLcZXoXoXoXoXoXoXoXoXoXoXoXoXoKBXocscIcIcIcIcIcIcIcIcIcIcInwRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoXoIhIhIhXoXoXoXoXoXoXoXoXoXoXoXoXoXoKBXonGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvwRXonfnfnfXotVBvXoXoXoXoXoXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoaYlLlLlLcZXoBvXoXoXoXoXoXoXoXoXoXoXoKBXorKcIcIcIcIcIcIcIcIcIcIcIGpRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoXoBvXoXoIhIhIhXoXoBvXoXoXoXoXoXoXoXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIAuRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoQUBvXoMLXoXoXoMLXoBvQUXoXoXoXoXoXoXoXoXoXoKBXonGcIcIcIcIcIcIcIcIcIcIcIEPRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbxbSDXoufxbxbxbxbxbxbxbxbxbufSDXoxbxbXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoXoXoXoXoypXoXoBvtStStSBvXoXoypXoXoXoXoXoXoXoXoXoXoKBXonNcIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoYaCaCapvOQXoXoAtXoXoXoAtXoXoOQlbCaCaDAXoXoXoXoXoXoKBXomJcIcIcIcIcIFycIcIcIcIcIqhRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXolbCaCaQcCaCagnXoQUvQXoroxbXoXoXoXoXoXoKBXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXovQXoroKBTwXoVlXoQUvQXoroxbXoXoXoXoXoXoKBXowAcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlQUXovQXoroKBTwXoVlXoQUvQXoroxbXoXoXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIuNRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbIOKKQKowRkfgpzdAkhaOKKaeRkowOVKKRjxbXoXoXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlXoXovQXoroWqTwXoVlXoXovQXoroxbXoXoXoXoXoXoKBXogBcIcIcIcIcIcIcIcIcIcIcINsRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoXoXoxbTwXoVlXoXovQXoroWqTwXoVlXoXovQXoroxbXoXoXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIHWRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoxbxbxbTwXoVlXoXozVzJctDkWBzJfbXoXovQXoroxbxbxbXoXoXoXoKBXovocIcIcIcIcIcIcIcIcIcIcIjMRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXouEzJzJrbXoXoXoaRXoOIZPGeZPZPXoxrzJzJuEXoBvXoXoXoXoKBXojgcIcIcIcIcIcIcIcIcIcIcIUtRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXoxbxbxbxbxbxbxbxbxbufxbxbxbxbxbxbxbxbxbXoBvXoXoXoXoKBXoaAcIcIcIcIcIcIcIcIcIcIcIdIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvXoXoXoXoXoXoafRkRkRkowRkRkRkXiXoXoXoXoXoXoBvXoXoXoXoKBXoXIcIcIcIcIcIcIcIcIcIcIcIkGRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIXoXoXoXoXoXoXoBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvBvXoXoXoXoXoXoZkiGGjBURtjelkBUuHiGiGGjhARIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
-RIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRIRI
+An
+An
+An
+An
+An
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(2,1,1) = {"
+An
+An
+An
+An
+An
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(3,1,1) = {"
+An
+Tu
+An
+An
+An
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(4,1,1) = {"
+An
+An
+An
+An
+An
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(5,1,1) = {"
+An
+An
+An
+An
+An
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(6,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(7,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(8,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(9,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(10,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(11,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(12,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(13,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(14,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+KB
+ad
+ad
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(15,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+KB
+Xo
+Xo
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(16,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+KB
+Xo
+Xo
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(17,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+KB
+Xo
+Xo
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(18,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+ad
+ad
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(19,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+wR
+wR
+Xo
+Xo
+Xo
+Xo
+wR
+wR
+Xo
+Xo
+Xo
+Xo
+wR
+wR
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(20,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(21,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(22,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+ac
+ac
+ac
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(23,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+ac
+Xo
+Xo
+Xo
+Xo
+ab
+Xo
+Xo
+Xo
+Bv
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(24,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Xo
+Xo
+Bv
+xb
+xb
+xb
+xb
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(25,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+xb
+Xo
+Xo
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(26,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+xb
+Xo
+Xo
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(27,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+xb
+Xo
+Ya
+xb
+xb
+xb
+xb
+xb
+xb
+xb
+uE
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(28,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+al
+Xo
+Bv
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+xb
+Xo
+Ca
+Tw
+Tw
+Tw
+IO
+Tw
+Tw
+Tw
+zJ
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(29,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+am
+ai
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Bv
+Bv
+Xo
+Xo
+SD
+Xo
+Ca
+Xo
+Xo
+Xo
+KK
+Xo
+Xo
+Xo
+zJ
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(30,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+az
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+aj
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+pv
+Vl
+Vl
+Vl
+QK
+Vl
+Vl
+Vl
+rb
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(31,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+aj
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+QU
+uf
+yp
+OQ
+QU
+QU
+QU
+ow
+Xo
+Xo
+Xo
+Xo
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(32,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+an
+ak
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+xb
+Xo
+Xo
+Xo
+Xo
+Xo
+Rk
+Xo
+Xo
+Xo
+Xo
+xb
+af
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(33,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+al
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+wR
+Xo
+Xo
+wR
+Xo
+Xo
+ab
+xb
+Xo
+Xo
+lb
+vQ
+vQ
+fg
+vQ
+vQ
+zV
+Xo
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(34,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Bv
+At
+Xo
+Xo
+Xo
+aY
+Xo
+Xo
+aY
+Xo
+ML
+xb
+Bv
+At
+Ca
+Xo
+Xo
+pz
+Xo
+Xo
+zJ
+aR
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(35,1,1) = {"
+RI
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+sr
+Xo
+Xo
+nf
+lL
+Ih
+nf
+lL
+Ih
+Xo
+xb
+tS
+Xo
+Ca
+ro
+ro
+dA
+ro
+ro
+ct
+Xo
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(36,1,1) = {"
+KB
+KB
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+dx
+Xo
+Xo
+nf
+lL
+Ih
+nf
+lL
+Ih
+Xo
+xb
+tS
+Xo
+Qc
+KB
+KB
+kh
+Wq
+Wq
+Dk
+OI
+uf
+ow
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(37,1,1) = {"
+KB
+Bv
+Xo
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+nC
+Xo
+Xo
+nf
+lL
+Ih
+nf
+lL
+Ih
+Xo
+xb
+tS
+Xo
+Ca
+Tw
+Tw
+aO
+Tw
+Tw
+WB
+ZP
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(38,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+ar
+aI
+aI
+aH
+av
+aG
+ap
+ap
+Bv
+ap
+ar
+av
+av
+av
+av
+av
+ar
+ap
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+At
+Xo
+Xo
+Xo
+cZ
+Xo
+Xo
+cZ
+Xo
+ML
+xb
+Bv
+At
+Ca
+Xo
+Xo
+KK
+Xo
+Xo
+zJ
+Ge
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(39,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+aw
+as
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+aw
+as
+ap
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+br
+Xo
+Xo
+tV
+Xo
+Xo
+tV
+Xo
+Xo
+ab
+xb
+Xo
+Xo
+gn
+Vl
+Vl
+ae
+Vl
+Vl
+fb
+ZP
+xb
+Rk
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(40,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+xb
+Xo
+Xo
+Xo
+Xo
+Xo
+Rk
+Xo
+Xo
+Xo
+ZP
+xb
+Xi
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(41,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+QU
+uf
+yp
+OQ
+QU
+QU
+QU
+ow
+Xo
+Xo
+Xo
+Xo
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(42,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+ah
+Xo
+Xo
+Xo
+ag
+Xo
+Xo
+Xo
+SD
+Xo
+lb
+vQ
+vQ
+vQ
+OV
+vQ
+vQ
+vQ
+xr
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(43,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+aE
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Ca
+Xo
+Xo
+Xo
+KK
+Xo
+Xo
+Xo
+zJ
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(44,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+ap
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+xb
+Xo
+Ca
+ro
+ro
+ro
+Rj
+ro
+ro
+ro
+zJ
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(45,1,1) = {"
+KB
+Bv
+Xo
+Bv
+aC
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+aC
+aB
+ax
+ax
+ax
+ax
+ax
+as
+ap
+Bv
+Xo
+Xo
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+xb
+Xo
+DA
+xb
+xb
+xb
+xb
+xb
+xb
+xb
+uE
+xb
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(46,1,1) = {"
+KB
+Bv
+Xo
+Bv
+ap
+ar
+ay
+ay
+ay
+ay
+ay
+ap
+ap
+Bv
+ap
+ar
+ay
+ay
+ay
+ay
+ay
+ar
+ap
+Bv
+Xo
+Xo
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+xb
+Xo
+Xo
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(47,1,1) = {"
+KB
+Bv
+Xo
+Bv
+Bv
+aF
+aF
+aF
+aF
+aF
+aF
+aF
+Bv
+Bv
+Bv
+at
+at
+at
+at
+at
+at
+at
+Bv
+Bv
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+xb
+aa
+Xo
+Xo
+Xo
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(48,1,1) = {"
+KB
+Bv
+Xo
+Bv
+aJ
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+aD
+au
+au
+au
+au
+au
+au
+au
+aq
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+xb
+xb
+xb
+xb
+xb
+xb
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(49,1,1) = {"
+KB
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(50,1,1) = {"
+KB
+Bv
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(51,1,1) = {"
+KB
+KB
+RI
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+Xo
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(52,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(53,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+KB
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(54,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+Fu
+XI
+vo
+cs
+nG
+wA
+rK
+jg
+nG
+wA
+nN
+mJ
+aA
+wA
+vo
+jg
+gB
+XI
+vo
+jg
+aA
+XI
+Zk
+ee
+ee
+KB
+ee
+ee
+Fu
+XI
+vo
+cs
+nG
+wA
+rK
+jg
+nG
+wA
+nN
+mJ
+aA
+wA
+vo
+jg
+gB
+XI
+vo
+jg
+aA
+XI
+Zk
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(55,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+EJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+ee
+ee
+KB
+ee
+ee
+EJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(56,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+ao
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Gj
+ee
+ee
+KB
+ee
+ee
+ao
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Gj
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(57,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+nk
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+BU
+ee
+ee
+KB
+ee
+ee
+nk
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+BU
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(58,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+Xs
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Rt
+ee
+ee
+KB
+ee
+ee
+Xs
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Rt
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(59,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+EJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+je
+ee
+ee
+KB
+ee
+ee
+EJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+je
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(60,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+jB
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Fy
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+lk
+ee
+ee
+KB
+ee
+ee
+jB
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Fy
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+lk
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(61,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+KJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+BU
+ee
+ee
+KB
+ee
+ee
+KJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+BU
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(62,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+Xs
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+uH
+ee
+ee
+KB
+ee
+ee
+Xs
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+uH
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(63,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+pC
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+ee
+ee
+KB
+ee
+ee
+pC
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(64,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+qa
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+ee
+ee
+KB
+ee
+ee
+qa
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+iG
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(65,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+KJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Gj
+ee
+ee
+KB
+ee
+ee
+KJ
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+cI
+Gj
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(66,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+Cy
+kG
+jM
+nw
+EP
+kG
+Gp
+Au
+EP
+kG
+jM
+qh
+dI
+HW
+uN
+Ut
+Ns
+HW
+jM
+Ut
+dI
+kG
+hA
+ee
+ee
+KB
+ee
+ee
+Cy
+kG
+jM
+nw
+EP
+kG
+Gp
+Au
+EP
+kG
+jM
+qh
+dI
+HW
+uN
+Ut
+Ns
+HW
+jM
+Ut
+dI
+kG
+hA
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(67,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(68,1,1) = {"
+RI
+KB
+RI
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+ee
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(69,1,1) = {"
+RI
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(70,1,1) = {"
+RI
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(71,1,1) = {"
+RI
+KB
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(72,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(73,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(74,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+"}
+(75,1,1) = {"
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
+RI
 "}
