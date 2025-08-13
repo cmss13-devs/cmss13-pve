@@ -7,6 +7,8 @@
 
 	hardpoints_allowed = list(
 		/obj/item/hardpoint/support/overdrive_enhancer,
+		/obj/item/hardpoint/support/smoke_launcher/aev,
+		/obj/item/hardpoint/secondary/m56cupola/aev,
 		/obj/item/hardpoint/armor/ballistic,
 		/obj/item/hardpoint/armor/caustic,
 		/obj/item/hardpoint/armor/concussive,
@@ -15,7 +17,6 @@
 		/obj/item/hardpoint/locomotion/treads,
 		/obj/item/hardpoint/locomotion/treads/robust,
 	)
-
 
 	required_skill = SKILL_VEHICLE_LARGE
 	interior_map = /datum/map_template/interior/aev
@@ -42,6 +43,45 @@
 		camera.c_tag = "#[rand(1,100)] M34E1 AEV"
 		if(camera_int)
 			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+
+/obj/vehicle/multitile/tank/aev/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	add_verb(user.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	if(seat == VEHICLE_DRIVER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+		))
+
+/obj/vehicle/multitile/tank/aev/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	remove_verb(user.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/name_vehicle,
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+	))
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
+	if(seat == VEHICLE_DRIVER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+		))
 
 /obj/vehicle/multitile/tank/aev/load_hardpoints()
 	return
@@ -84,6 +124,8 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
 	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/aev)
+	V.add_hardpoint(new /obj/item/hardpoint/support/smoke_launcher/aev)
 
 /obj/effect/vehicle_spawner/aev/decrepit/spawn_vehicle()
 	var/obj/vehicle/multitile/tank/aev/AEV = new(loc)
@@ -109,6 +151,8 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
 	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/aev)
+	V.add_hardpoint(new /obj/item/hardpoint/support/smoke_launcher/aev)
 
 //JUNGLE CAMO PRESET
 /obj/effect/vehicle_spawner/aev/jungle/spawn_vehicle()
@@ -125,6 +169,8 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
 	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/aev)
+	V.add_hardpoint(new /obj/item/hardpoint/support/smoke_launcher/aev)
 
 //NIGHT/URBAN CAMO PRESET
 /obj/effect/vehicle_spawner/aev/night/spawn_vehicle()
@@ -141,4 +187,5 @@
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
 	V.add_hardpoint(new /obj/item/hardpoint/armor/snowplow)
 	V.add_hardpoint(new /obj/item/hardpoint/support/overdrive_enhancer)
-
+	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/aev)
+	V.add_hardpoint(new /obj/item/hardpoint/support/smoke_launcher/aev)
