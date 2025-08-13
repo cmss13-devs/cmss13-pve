@@ -42,8 +42,10 @@ export const AresInterface = (props) => {
 
   return (
     <Window theme={themecolor} width={800} height={725}>
-      <Window.Content scrollable>
-        <PageComponent />
+      <Window.Content>
+        <Section pl="6px" pt="6px" fill scrollable>
+          <PageComponent />
+        </Section>
       </Window.Content>
     </Window>
   );
