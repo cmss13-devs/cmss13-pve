@@ -254,6 +254,10 @@ $background-radial-opacity: 0.2 !default;
     margin-bottom: 1px;
     justify-content: center;
   }
+
+  .BorederedStack {
+    border: 2px solid base.$color-fg;
+  }
 }
 
 @keyframes flicker {
