@@ -96,7 +96,7 @@
 	var/seat = V.get_mob_seat(M)
 	if(!seat)
 		return
-	if(seat != VEHICLE_DRIVER)
+	if(seat == VEHICLE_GUNNER) //Driver and Commander (if present) can control this
 		return
 
 	V.door_locked = !V.door_locked

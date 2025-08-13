@@ -127,7 +127,6 @@
 			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
 		))
 
-
 /obj/vehicle/multitile/tank/remove_seated_verbs(mob/living/user, seat)
 	if(!user.client)
 		return
@@ -210,6 +209,10 @@
 	user.forceMove(current_turf)
 	to_chat(user, SPAN_XENO("We jump to the other side of [src]."))
 
+/*
+** CAMO TANKS
+*/
+
 /obj/vehicle/multitile/tank/desert
 	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back. Painted in an arid-environment camo scheme."
 	icon_state = "tank_base_d"
@@ -223,8 +226,103 @@
 	icon_state = "tank_base_n"
 
 /*
+** COMMAND TANK
+*/
+/obj/vehicle/multitile/tank/command
+	name = "M34A3 Hampton Light Command Tank"
+	desc = "A giant piece of armor with a big gun and enhanced comms equipment, you know what to do. Entrance in the back."
+	desc_lore = "Developed and deployed recently, the A3 model of the M34 light tank is a command variant of the Longstreet. The Hampton fields a bigger fighting compartment to facilitate a 'commander' station, and more robust connections to the command & control network compared to the more commonly seen version."
+
+	interior_map = /datum/map_template/interior/tank_command
+
+	passengers_slots = 5
+	//this is done in case VCs die inside the tank, so that someone else can come in and take them out.
+	revivable_dead_slots = 3
+	xenos_slots = 4
+
+	seats = list(
+		VEHICLE_DRIVER = null,
+		VEHICLE_GUNNER = null,
+		VEHICLE_COMMANDER = null,
+	)
+
+	active_hp = list(
+		VEHICLE_DRIVER = null,
+		VEHICLE_GUNNER = null,
+		VEHICLE_COMMANDER = null,
+	)
+
+/obj/vehicle/multitile/tank/command/initialize_cameras(change_tag = FALSE)
+	if(!camera)
+		camera = new /obj/structure/machinery/camera/vehicle(src)
+	if(change_tag)
+		camera.c_tag = "#[rand(1,100)] M34A3 \"[nickname]\" Command Tank" //this fluff allows it to be at the start of cams list
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+	else
+		camera.c_tag = "#[rand(1,100)] M34A3 Command Tank"
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+
+/obj/vehicle/multitile/tank/command/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	add_verb(user.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	if(seat == VEHICLE_DRIVER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		))
+	else if(seat == VEHICLE_COMMANDER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/name_vehicle,
+		))
+
+/obj/vehicle/multitile/tank/command/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	remove_verb(user.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+	))
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
+	if(seat == VEHICLE_DRIVER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		))
+	else if(seat == VEHICLE_COMMANDER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/name_vehicle,
+		))
+
+/*
 ** PRESETS SPAWNERS
 */
+
 /obj/effect/vehicle_spawner/tank
 	name = "Tank Spawner"
 	icon = 'icons/obj/vehicles/tank.dmi'
@@ -505,4 +603,30 @@
 	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/autocannon)
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/towlauncher)
+		break
+
+//COMMAND TANK PRESET: no armor, guns or module
+/obj/effect/vehicle_spawner/tank/command/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/command/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+/obj/effect/vehicle_spawner/tank/command/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+
+//COMMAND TANK ARMED PRESET: LTB, cupola gun & artillery module
+/obj/effect/vehicle_spawner/tank/command/fixed/load_hardpoints(obj/vehicle/multitile/tank/vic)
+	vic.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	vic.add_hardpoint(new /obj/item/hardpoint/armor/paladin)
+	vic.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	vic.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/tonkturret in vic.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
 		break

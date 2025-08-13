@@ -46,6 +46,63 @@
 /obj/vehicle/multitile/tank/upptank/load_hardpoints()
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
 
+
+/obj/vehicle/multitile/tank/command/upptank
+	name = "Cheetah 2B Light Command Tank"
+	desc = "A giant piece of state-approved armor with a big gun and enhanced comms equipment, you know what to do. Entrance in the back."
+
+	icon = 'icons/obj/vehicles/upptank.dmi'
+	icon_state = "tank_base"
+
+	interior_map = /datum/map_template/interior/upptank_command
+
+	light_range = 4
+
+	// Rest (all the guns) is handled by the tank turret hardpoint
+	hardpoints_allowed = list(
+		/obj/item/hardpoint/holder/tank_turret/uppturret,
+		/obj/item/hardpoint/support/weapons_sensor,
+		/obj/item/hardpoint/support/overdrive_enhancer,
+		/obj/item/hardpoint/support/artillery_module,
+		/obj/item/hardpoint/armor/reactive,
+		/obj/item/hardpoint/locomotion/treads,
+		/obj/item/hardpoint/locomotion/treads/robust,
+	)
+
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 4,
+		"slash" = 0.35,
+		"bullet" = 0.45,
+		"explosive" = 0.65,
+		"blunt" = 0.4,
+		"abstract" = 1
+	)
+
+	seats = list(
+		VEHICLE_DRIVER = null,
+		VEHICLE_GUNNER = null,
+		VEHICLE_COMMANDER = null,
+	)
+
+	active_hp = list(
+		VEHICLE_DRIVER = null,
+		VEHICLE_GUNNER = null,
+		VEHICLE_COMMANDER = null,
+	)
+
+/obj/vehicle/multitile/tank/command/upptank/initialize_cameras(change_tag = FALSE)
+	if(!camera)
+		camera = new /obj/structure/machinery/camera/vehicle(src)
+	if(change_tag)
+		camera.c_tag = "#[rand(1,100)] Cheetah 2B \"[nickname]\" Command Tank" //this fluff allows it to be at the start of cams list
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+	else
+		camera.c_tag = "#[rand(1,100)] Cheetah 2B Command Tank"
+		if(camera_int)
+			camera_int.c_tag = camera.c_tag + " interior" //this fluff allows it to be at the start of cams list
+
 /*
 ** PRESETS SPAWNERS
 */
@@ -168,6 +225,39 @@
 	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
 	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/railgun)
+		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m)
+		break
+
+/*
+** UPP COMMAND TANK PRESET
+*/
+/obj/effect/vehicle_spawner/upptank/Command
+	name = "Command Tank Spawner"
+	icon = 'icons/obj/vehicles/upptank.dmi'
+	icon_state = "tank_base"
+	pixel_x = -48
+	pixel_y = -48
+
+//PRESET: turret, no hardpoints (not the one without turret for convenience, you still expect to have turret when you spawn "no hardpoints tank")
+/obj/effect/vehicle_spawner/upptank/command/spawn_vehicle()
+	var/obj/vehicle/multitile/tank/command/upptank/TANK = new (loc)
+
+	load_misc(TANK)
+	load_hardpoints(TANK)
+	handle_direction(TANK)
+	TANK.update_icon()
+
+	return TANK
+
+//PRESET: default hardpoints, MG secondaries, arty module
+/obj/effect/vehicle_spawner/upptank/command/fixed/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	V.add_hardpoint(new /obj/item/hardpoint/armor/reactive)
+	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
+	for(var/obj/item/hardpoint/holder/tank_turret/uppturret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon/p17702)
 		TT.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher/upptank)
 		TT.add_hardpoint(new /obj/item/hardpoint/secondary/t60p3m)
 		break

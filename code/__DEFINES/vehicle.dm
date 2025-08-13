@@ -13,10 +13,11 @@
 #define HDPT_LAYER_TURRET   4
 #define HDPT_LAYER_MAX   4
 
-#define VEHICLE_DRIVER   "driver"
+#define VEHICLE_DRIVER "driver"
 #define VEHICLE_GUNNER "primary gunner"
 #define VEHICLE_SUPPORT_GUNNER_ONE  "1st support gunner"
 #define VEHICLE_SUPPORT_GUNNER_TWO  "2nd support gunner"
+#define VEHICLE_COMMANDER "commander"
 
 #define VEHICLE_SPEED_STATIC 5000 //500 seconds per tile, while not actually static, it's much better than adding check for each movement attempt.
 #define VEHICLE_SPEED_SLOW   30 //3 seconds per tile
