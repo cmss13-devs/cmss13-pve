@@ -1036,7 +1036,7 @@
 		. = TRUE
 		apply_damage(damage_result, P.ammo.damage_type, P.def_zone, firer = P.firer)
 
-		if(P.ammo.shrapnel_chance > 0 && prob(P.ammo.shrapnel_chance + floor(damage / 10)))
+		if(P.ammo.shrapnel_chance > 0 && damage_result > 3 && prob(P.ammo.shrapnel_chance + floor(damage / 10))) //weirdass number to choose but ok. I'm just taking from the above example.
 			if(ammo_flags & AMMO_SPECIAL_EMBED)
 				P.ammo.on_embed(src, organ)
 
