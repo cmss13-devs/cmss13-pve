@@ -46,6 +46,14 @@
 #define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
 
+#define JOB_CIU_TAC_SPEC "Tactical Specialist"
+#define JOB_CIU_TAC_MEDTECH "Emergency Medical Technician"
+#define JOB_CIU_POINT "Entry Specialist"
+#define JOB_CIU_ELECTRONICS "Technical Support Specialist"
+#define JOB_CIU_SQUAD_LEAD "Squad Leader"
+#define JOB_CIU_PLATOON_LEAD "Platoon Leader"
+#define JOB_CIU_PLATOON_CONTROL "Situation Control"
+
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
 #define JOB_COLONIST "Colonist"

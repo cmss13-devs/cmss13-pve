@@ -74,6 +74,7 @@
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 
+//UPP
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman
 	job = JOB_SQUAD_MARINE
 
@@ -100,6 +101,7 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
 
+//FORECON
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()
 	new /obj/item/clothing/under/marine/standard(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
@@ -123,7 +125,7 @@
 /obj/structure/closet/secure_closet/marine_personal/forecon/rto
 	job = JOB_SQUAD_RTO
 
-
+//PMC
 /obj/structure/closet/secure_closet/marine_personal/pmc/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/pmc(src)
 	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
@@ -146,3 +148,30 @@
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
+
+//Crisis Intervention
+
+/obj/structure/closet/secure_closet/marine_personal/crisis_intervention/spawn_gear()
+	new /obj/item/clothing/under/cmb(src)
+	new /obj/item/clothing/shoes/tactical(src)
+
+/obj/structure/closet/secure_closet/marine_personal/tactical_specialist
+	job = JOB_CIU_TAC_SPEC
+
+/obj/structure/closet/secure_closet/marine_personal/tac_squad_lead
+	job = JOB_CIU_SQUAD_LEAD
+
+/obj/structure/closet/secure_closet/marine_personal/entry_specialist
+	job = JOB_CIU_POINT
+
+/obj/structure/closet/secure_closet/marine_personal/tac_electronics_specialist
+	job = JOB_CIU_ELECTRONICS
+
+/obj/structure/closet/secure_closet/marine_personal/tac_medical_technician
+	job = JOB_CIU_TAC_MEDTECH
+
+/obj/structure/closet/secure_closet/marine_personal/tac_platoon_lead
+	job = JOB_CIU_PLATOON_LEAD
+
+/obj/structure/closet/secure_closet/marine_personal/tac_situation_control
+	job = JOB_CIU_PLATOON_CONTROL

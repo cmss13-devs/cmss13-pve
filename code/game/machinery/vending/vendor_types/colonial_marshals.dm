@@ -25,7 +25,7 @@
 		list("GX-30 Combat Helmet", 10, /obj/item/clothing/head/helmet/generic_combat, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", 10, /obj/item/device/radio/headset/cmbtac, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", 10, /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Combat Boots", 10, /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
+		list("Combat Boots", 10, /obj/item/clothing/shoes/tactical, VENDOR_ITEM_REGULAR),
 
 		list("Primary Load Bearing Equipment", -1, null, null),
 		list("Rifle Magazine Configuration", 10, /obj/item/storage/backpack/cmb_daypack, VENDOR_ITEM_REGULAR),
