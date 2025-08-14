@@ -411,8 +411,8 @@
 	burn_level = BURN_LEVEL_TIER_4
 
 /obj/item/explosive/grenade/incendiary/impact/upp/launch_impact(atom/hit_atom)
-	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
 	..()
+	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"

@@ -288,7 +288,7 @@
 /datum/ammo/bullet/shrapnel/himat
 	accurate_range = 8
 	max_range = 8
-	damage = 75
+	damage = 95
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	accuracy = HIT_ACCURACY_TIER_MAX
 	icon_state = "shrapnel_light"
