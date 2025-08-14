@@ -437,10 +437,12 @@
 		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/attached_gun/grenade/type71/ag80,
+		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -1376,6 +1378,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/upp,
@@ -1396,6 +1399,7 @@
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/grenade/type71,
+		/obj/item/attachable/attached_gun/grenade/type71/preloaded,
 		/obj/item/attachable/lasersight, // Side Rail
 		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/flashlight,

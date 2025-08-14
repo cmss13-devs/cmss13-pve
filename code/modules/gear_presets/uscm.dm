@@ -1162,12 +1162,12 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Raider"
 	rank = JOB_MARINE_RAIDER
-	role_comm_title = "OPR"
+	role_comm_title = "CSO"
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	skills = /datum/skills/commando/deathsquad
 	auto_squad_name = SQUAD_SOF
 	ert_squad = TRUE
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 	minimap_icon = "sof_sg"
 
@@ -1180,7 +1180,59 @@
 
 /datum/equipment_preset/uscm/marsoc/load_gear(mob/living/carbon/human/new_human)
 	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smock, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
+	//uniform
+	var/obj/item/clothing/under/marine/veteran/marsoc/M = new()
+	var/obj/item/clothing/accessory/storage/smallpouch/W = new()
+	M.attach_accessory(new_human, W)
+	new_human.equip_to_slot_or_del(M, WEAR_BODY)
+	for(var/i in 1 to W.hold.storage_slots)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
+	add_marsoc_weapon(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/combat/marsoc, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/marsoclead
+	name = "USCM Marine Raider Team Lead"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Raider Team Lead"
+	rank = JOB_MARINE_RAIDER_SL
+	role_comm_title = "RTL"
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/marsoclead/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/marsoclead/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/marsoclead/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
