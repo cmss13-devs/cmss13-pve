@@ -373,11 +373,12 @@
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/ui_data(mob/user)
 	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(shuttleId)
+	var/obj/structure/machinery/computer/shuttle/console = shuttle.getControlConsole()
 	. = list()
 	.["shuttle_id"] = shuttle?.id
 	.["shuttle_mode"] = shuttle?.mode
 	.["flight_time"] = shuttle?.timeLeft(0)
-	.["is_disabled"] = disabled
+	.["is_disabled"] = console.is_disabled() || disabled
 	if(shuttle?.is_hijacked)
 		.["is_disabled"] = TRUE
 	.["locked_down"] = FALSE

@@ -1,0 +1,4 @@
+author: "CactusMouth"
+delete-after: True
+changes:
+  - code_imp: "Fixed UACG Faction dynamic"
