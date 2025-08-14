@@ -312,11 +312,23 @@
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
+/obj/item/ammo_magazine/rifle/type71/rubber
+	name = "\improper Type 71 rubber magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing less-than-lethal rubber rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/rubber
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
 /obj/item/ammo_magazine/rifle/type71/ap
 	name = "\improper Type 71 AP magazine (10x27mm)"
 	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
 	default_ammo = /datum/ammo/bullet/rifle/upp/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/type71/ap/penetrating
+	name = "\improper Type 71 AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
 /obj/item/ammo_magazine/rifle/type71/heap
 	name = "\improper Type 71 HEAP magazine (10x27mm)"
@@ -339,6 +351,44 @@
 	max_rounds = 99
 	gun_type = /obj/item/weapon/gun/rifle/ag80
 
+/obj/item/ammo_magazine/rifle/ag80/ap
+	name = "\improper AG80 AP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with steelcore armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ag80/heap
+	name = "\improper AG80 HEAP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with high-explosive armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/ag80/rubber
+	name = "\improper AG80 rubber magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with less-than lethal rubber rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/rubber //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+//-------------------------------------------------------
+//CANC LW-317 RIFLE
+
+/obj/item/ammo_magazine/rifle/lw317
+	name = "\improper LW-317 magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading magazine for the LW-317 carbine."
+	caliber = "6x38mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "lw317"
+	ammo_band_icon = "+lw317_band"
+	ammo_band_icon_empty = "+lw317_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/lw317
+	max_rounds = 55
+	gun_type = /obj/item/weapon/gun/rifle/lw317
+
+/obj/item/ammo_magazine/rifle/lw317/ap
+	name = "\improper LW-317 AP magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading armor-piercing magazine for the LW-317 carbine."
+	default_ammo = /datum/ammo/bullet/rifle/lw317/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+	bonus_overlay = "lw317apoverlay"
 //-------------------------------------------------------
 //L42A Battle Rifle
 
@@ -555,12 +605,12 @@
 //XM51 BREACHING SHOTGUN
 
 /obj/item/ammo_magazine/rifle/xm51
-	name = "\improper XM51 magazine (16g)"
+	name = "\improper M1771 magazine (16g)"
 	desc = "A 16 gauge pump-action shotgun magazine."
 	icon_state = "xm51"
 	caliber = "16g"
 	w_class = SIZE_MEDIUM
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6

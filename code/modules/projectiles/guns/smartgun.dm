@@ -19,7 +19,7 @@
 	w_class = SIZE_HUGE
 	force = 20
 	wield_delay = WIELD_DELAY_FAST
-	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
+	aim_slowdown = SLOWDOWN_ADS_SMARTGUN
 	unacidable = 1
 	indestructible = 1
 
@@ -598,6 +598,10 @@
 		if(!auto_fire)
 			STOP_PROCESSING(SSobj, src)
 */
+
+/obj/item/weapon/gun/smartgun/empty
+	current_mag = null
+
 //CO SMARTGUN
 /obj/item/weapon/gun/smartgun/co
 	name = "\improper M56C 'Cavalier' smartgun"

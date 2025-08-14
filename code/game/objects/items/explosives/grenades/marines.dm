@@ -308,7 +308,7 @@
 			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, target)
 		else
 			//Not stellar, but if we can't find a direction, fall back to HIDP behaviour.
-			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, FLAMESHAPE_DEFAULT, target)
+			INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flame_radius), cause_data, radius, get_turf(src), flame_level, burn_level, flameshape, target)
 		playsound(src, 'sound/weapons/gun_flamethrower2.ogg', 35, 1, 4)
 		qdel(src)
 
@@ -374,6 +374,30 @@
 	explosion_falloff = 900 //But no blast to speak of
 	shrapnel_count = 0
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL
+
+/obj/item/explosive/grenade/high_explosive/airburst/upp
+	name = "\improper VShG-80 Assault-Grenade"
+	desc = "This is a caseless 40mm airbursting cannister round, designed for use in urban environments and close quarters combat, favoured by assault troops and sappers. Fires low velocity buckshot on impact in a wide cone."
+	icon_state = "grenade_40mm_buckshot"
+	item_state = "grenade_hornet_active"
+	caliber = "40x103mm"
+	explosion_power = 0
+	explosion_falloff = 25
+	shrapnel_count = 33
+	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
+	direct_hit_shrapnel = 33
+	dispersion_angle = 25//a little big and forgiving
+
+/obj/item/explosive/grenade/incendiary/impact/upp
+	name = "\improper VTBG-44 Thermobaric Grenade"
+	desc = "This is a caseless incendiary 40mm grenade, developed for use in dense foliage or against hardened positions. Has an explosive punch."
+	caliber = "40x103mm"
+	flame_level = BURN_TIME_TIER_5
+	burn_level = BURN_LEVEL_TIER_4
+
+/obj/item/explosive/grenade/incendiary/impact/upp/launch_impact(atom/hit_atom)
+	..()
+	cell_explosion(get_turf(hit_atom), 80, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, cause_data)
 
 /obj/item/explosive/grenade/high_explosive/airburst/buckshot
 	name = "\improper 40mm Buckshot Shell"
@@ -971,7 +995,7 @@
 
 /obj/item/explosive/grenade/nerve_gas/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 6)
+	nerve_gas.set_up(nerve_gas_radius, 0, get_turf(src), null, 20)
 	nerve_gas.start()
 	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
@@ -1010,7 +1034,7 @@
 
 /obj/item/explosive/grenade/LSD/prime()
 	playsound(src.loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 6)
+	LSD_gas.set_up(LSD_gas_radius, 0, get_turf(src), null, 20)
 	LSD_gas.start()
 	new /obj/item/trash/grenade/gas(get_turf(src))
 	qdel(src)
