@@ -1319,6 +1319,12 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "vulture_scope_cag"
 	attach_icon = "vulture_scope_cag"
 
+/obj/item/attachable/scope/mini/buzzard
+	name = "AN/PVS-400 CCD sight system"
+	desc = "Weapon sight developed alongside XM400 TAWS."
+	icon_state = "vulture_scope_cqb"
+	attach_icon = "vulture_scope_cqb"
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve

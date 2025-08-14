@@ -559,6 +559,13 @@
 	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+/obj/item/ammo_magazine/rifle/boltaction/vulture/extended
+	name = "\improper XM400 \"Buzzard\" magazine (20x102mm)"
+	desc = "A magazine for the XM400 \"Buzzard\" TAWS, compatible with M707 AMR. Contains up to 19! massively oversized rounds."
+	max_rounds = 19
+	icon_state = "vulture_extended"
+	bonus_overlay = "vulture_extended_overlay"
+
 /obj/item/ammo_magazine/rifle/boltaction/mk41
 	name = "\improper Mk41 magazine (10x24)"
 	desc = "A magazine for the Mk41A rifle. Compliant with the 15-cartridge limit on civilian hunting rifles."

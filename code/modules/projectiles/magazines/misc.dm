@@ -125,7 +125,6 @@
 	reload_delay = 6
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
-2b8d52e8156ad638cf7071
 //rocket launchers
 
 /obj/item/ammo_magazine/rifle/grenadespawner

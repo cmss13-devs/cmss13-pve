@@ -185,7 +185,7 @@
 	icon_state = new_icon_state
 
 	if(!bolted)
-		overlays += "vulture_bolt_open"
+		overlays += "[base_gun_icon]_bolt_open"
 
 
 /obj/item/weapon/gun/boltaction/vulture/set_gun_config_values()
@@ -230,8 +230,14 @@
 		to_chat(current_mob, SPAN_HIGHDANGER("You hear a massive boom coming from [final_dir ? "the [final_dir]" : "nearby"]!"))
 		if(current_mob.client)
 			playsound_client(current_mob.client, 'sound/weapons/gun_vulture_report.ogg', src, 25)
-
-	if(!HAS_TRAIT(src, TRAIT_GUN_BIPODDED))
+	var/mob/living/carbon/human/human = user
+	var/wearing_harness = (human.wear_suit && human.wear_suit.flags_inventory & SMARTGUN_HARNESS)
+	var/get_messed_up = TRUE
+	if(wearing_harness)
+		get_messed_up = FALSE
+	if(HAS_TRAIT(src, TRAIT_GUN_BIPODDED))
+		get_messed_up = FALSE
+	if(get_messed_up)
 		fired_without_bipod(user)
 	else
 		shake_camera(user, 3, 4) // equivalent to getting hit with a heavy round
@@ -296,6 +302,45 @@
 
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/vulture/cqb
+	name = "XM400 'Buzzard' TAWS"
+	desc = "Tactical anti-armor weapon system, a deep modification of M707 Vulture anti-materiel rifle utilizing smartgun-type stablizier arm principle. Initially made to provide marines light and medium anti-armor capabilities in close quarters, but proved to be too costy for mass production. Besides, you're not even supposed to be in CQC with armored vehicles! Who thought of this?"
+	desc_lore = "As you further examine the gun, you notice how light the bolt is and a few modification bulking the gun up, that supposedly allow to function it as a recoil operated semi-auto rifle."
+	icon_state = "buzzard"
+	item_state = "buzzard"
+	bypass_trait = TRUE
+	bolt_delay = 0.5 SECONDS
+	map_specific_decoration = FALSE
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/vulture/extended
+	attachable_allowed = list(
+		/obj/item/attachable/scope/mini/buzzard,
+		/obj/item/attachable/sniperbarrel/vulture,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/buzzard,
+		/obj/item/attachable/sniperbarrel/vulture,
+	)
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
+	)
+
+/obj/item/weapon/gun/boltaction/vulture/cqb/set_gun_config_values()
+	..()
+	set_fire_delay(10)
+
+/obj/item/weapon/gun/boltaction/vulture/cqb/Fire(atom/target, mob/living/carbon/user, params, reflex, dual_wield)
+	. = ..()
+	if(!.)
+		return .
+
+	unique_action(user)
+	addtimer(CALLBACK(src, PROC_REF(unique_action), user), bolt_delay)
+
+	return .
 
 /obj/item/weapon/gun/boltaction/mk41
 	name = "\improper Mk41A pulse rifle"
