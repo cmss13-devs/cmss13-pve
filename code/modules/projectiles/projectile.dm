@@ -1028,7 +1028,7 @@
 		return
 
 	P.play_hit_effect(src)
-	if(damage || (ammo_flags & AMMO_SPECIAL_EMBED))
+	if(damage_result > 0 || (ammo_flags & AMMO_SPECIAL_EMBED))
 
 		var/splatter_dir = get_dir(P.starting, loc)
 		handle_blood_splatter(splatter_dir)
