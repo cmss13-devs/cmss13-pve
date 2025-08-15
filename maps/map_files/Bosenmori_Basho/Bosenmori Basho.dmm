@@ -6570,7 +6570,9 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/item/storage/medicomp/full,
+/obj/item/storage/medicomp/full{
+	anchored = 1
+	},
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bosenmori/mountain/unknown_level_temple)
 "dCi" = (
@@ -6599,7 +6601,8 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/gun/energy/yautja/plasma_caster{
 	desc = "A powerful, shoulder-mounted energy weapon. This one is damaged beyond use.";
-	name = "damaged plasma caster"
+	name = "damaged plasma caster";
+	anchored = 1
 	},
 /turf/open/floor/kutjevo/multi_tiles,
 /area/bosenmori/mountain/unknown_level_temple)
@@ -8279,7 +8282,6 @@
 /area/bosenmori/mountain/mining)
 "evR" = (
 /obj/structure/safe/cl_office,
-/obj/item/weapon/gun/flamer,
 /obj/item/disk/nuclear,
 /turf/open/floor/wood/ship,
 /area/bosenmori/interior_heavy/Mai_corpo)
@@ -15418,7 +15420,6 @@
 	pixel_y = 9
 	},
 /obj/effect/spawner/random/pills/highchance,
-/obj/item/weapon/gun/pill,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "hYM" = (
@@ -20100,7 +20101,6 @@
 	light_color = "#C02526";
 	color = "#C02526"
 	},
-/obj/item/weapon/gun/smartgun/rmc,
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/Mai_secure_arm)
 "kyg" = (
@@ -23308,7 +23308,6 @@
 /obj/structure/largecrate/random/case/double{
 	fill_from_loc = 1
 	},
-/obj/item/storage/box/explosive_mines/pmc,
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_hall)
 "mgG" = (
@@ -26443,7 +26442,6 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/accessory/storage/surg_vest,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_marked,
 /area/bosenmori/interior_glass/cargo)
@@ -28380,10 +28378,6 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/bosenmori/mountain/field_post)
-"oTk" = (
-/obj/item/device/defibrillator/compact,
-/turf/open/floor/plating/plating_catwalk/shiva,
-/area/bosenmori/interior_heavy/Mai_hall)
 "oTq" = (
 /obj/item/storage/fancy/vials/empty{
 	pixel_x = 0;
@@ -29151,9 +29145,6 @@
 	pixel_y = 12
 	},
 /obj/item/weapon/gun/pistol/vp70/unloaded,
-/obj/item/clothing/accessory/health/research_plate{
-	desc = "Some sort of device meant to attach to uniforms although this one doesn't seem to work."
-	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "pnN" = (
@@ -31540,21 +31531,13 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/ammo_magazine/pistol/vp78/toxin{
-	pixel_x = 4;
-	pixel_y = 0
+/obj/item/weapon/gun/smg/m39/solidstock{
+	pixel_x = 0;
+	pixel_y = -9
 	},
-/obj/item/ammo_magazine/pistol/vp78/penetrating{
-	pixel_x = 3;
-	pixel_y = 10
-	},
-/obj/item/ammo_magazine/pistol/vp78/incendiary{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/vp78{
-	pixel_x = -7;
-	pixel_y = 10
+/obj/item/weapon/gun/smg/m39/solidstock{
+	pixel_x = 0;
+	pixel_y = 6
 	},
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
@@ -33834,9 +33817,9 @@
 	dir = 1;
 	pixel_y = 0
 	},
-/obj/item/ammo_magazine/pistol/vp70/rubber{
+/obj/item/ammo_magazine/pistol/vp70{
 	pixel_x = 10;
-	pixel_y = 5
+	pixel_y = 2
 	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_regular/research)
@@ -38272,7 +38255,9 @@
 	},
 /obj/item/device/binoculars/civ{
 	pixel_x = 1;
-	pixel_y = 0
+	pixel_y = 0;
+	desc = "A pair of binoculars, with lower magnification power than other models.";
+	view_range = 9
 	},
 /obj/item/storage/box/pdt_kit{
 	pixel_x = 2;
@@ -39793,13 +39778,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_heavy/Mai_nexus)
-"uCN" = (
-/obj/structure/surface/rack{
-	color = "#8B7B5B"
-	},
-/obj/item/ammo_magazine/smartgun/dirty,
-/turf/open/floor/corsat,
-/area/bosenmori/interior_heavy/Mai_secure_arm)
 "uDi" = (
 /obj/structure/closet/crate/freezer/cooler,
 /obj/item/storage/beer_pack,
@@ -45088,10 +45066,6 @@
 	pixel_x = 0;
 	pixel_y = 9
 	},
-/obj/item/engi_upgrade_kit{
-	pixel_x = -7;
-	pixel_y = 1
-	},
 /obj/item/book/manual/engineering_construction{
 	pixel_x = 8;
 	pixel_y = 0
@@ -45163,7 +45137,10 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
-/obj/item/weapon/twohanded/yautja/glaive,
+/obj/item/weapon/twohanded/yautja/glaive/damaged{
+	icon_state = "glaive";
+	item_state = "glaive"
+	},
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
 "xHf" = (
@@ -45380,13 +45357,6 @@
 	},
 /turf/open/floor/strata/faux_wood,
 /area/bosenmori/interior_glass/living)
-"xLL" = (
-/obj/structure/surface/rack{
-	color = "#8B7B5B"
-	},
-/obj/item/weapon/gun/rifle/sniper/elite,
-/turf/open/floor/corsat,
-/area/bosenmori/interior_heavy/Mai_secure_arm)
 "xLT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/ad{
@@ -46447,11 +46417,19 @@
 	},
 /obj/item/ammo_magazine/rifle/rmc_f90/marksman/heap{
 	pixel_x = 7;
-	pixel_y = 3
+	pixel_y = -8
 	},
 /obj/item/ammo_magazine/rifle/rmc_f90/marksman{
 	pixel_x = -5;
-	pixel_y = -7
+	pixel_y = -8
+	},
+/obj/item/ammo_magazine/pistol/vp78{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/item/ammo_magazine/pistol/vp78{
+	pixel_x = 5;
+	pixel_y = 14
 	},
 /turf/open/floor/corsat,
 /area/bosenmori/interior_heavy/secured_armory)
@@ -121695,7 +121673,7 @@ aBK
 pdV
 pdV
 pdV
-uCN
+gtO
 gPp
 pHD
 pHD
@@ -121921,7 +121899,7 @@ eNW
 dAK
 gPp
 gtO
-xLL
+gtO
 gtO
 gPp
 gPp
@@ -145595,7 +145573,7 @@ jly
 jly
 qJb
 cow
-oTk
+iFk
 qJb
 jly
 qJb
