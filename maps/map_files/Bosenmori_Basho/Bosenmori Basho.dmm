@@ -41429,14 +41429,6 @@
 	pixel_x = -3;
 	pixel_y = -2
 	},
-/obj/item/ammo_box/magazine/misc/flashlight{
-	pixel_x = 1;
-	pixel_y = 9
-	},
-/obj/item/ammo_box/magazine/misc/flashlight/combat/empty{
-	pixel_x = 4;
-	pixel_y = 2
-	},
 /obj/structure/surface/table/reinforced{
 	dir = 1;
 	color = "#8B7B5B"
