@@ -32,3 +32,9 @@ endmap
 
 map golden_arrow_classic
 endmap
+
+map uscss_obsidian_falk
+endmap
+
+map uscss_obsidian_falk_small
+endmap
