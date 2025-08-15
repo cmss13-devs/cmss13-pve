@@ -18,6 +18,6 @@
 		return TRUE
 	return FALSE
 
-/datum/weather_ss_map_holder/sorokyne/weather_warning()
+/datum/weather_ss_map_holder/kleschers/weather_warning()
 	for (var/obj/structure/machinery/weather_siren/WS in GLOB.weather_notify_objects)
 		WS.weather_warning()

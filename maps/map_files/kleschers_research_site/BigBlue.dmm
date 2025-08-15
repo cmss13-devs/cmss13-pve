@@ -3128,10 +3128,6 @@
 	pixel_x = 8;
 	pixel_y = 16
 	},
-/obj/item/device/healthanalyzer{
-	pixel_x = -4;
-	pixel_y = 21
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/phone_base/colony_net/rotary{
 	phone_category = "Klescher Research Facility";
@@ -8360,19 +8356,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
 /area/kleschers/int_heavy/lambda_north_wing)
-"eCu" = (
-/obj/structure/largecrate{
-	name = "Variety armor crate (x6)"
-	},
-/obj/item/clothing/suit/storage/militia/vest,
-/obj/item/clothing/suit/storage/militia/vest,
-/obj/item/clothing/suit/storage/militia/vest,
-/obj/item/clothing/suit/storage/militia/partial,
-/obj/item/clothing/suit/storage/militia/brace,
-/obj/item/clothing/suit/storage/militia/smartgun,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/shiva/yellowcorners,
-/area/kleschers/int_heavy/eta)
 "eCJ" = (
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_reg/clinic)
@@ -12875,14 +12858,6 @@
 	pixel_x = 16;
 	pixel_y = 0
 	},
-/obj/item/storage/syringe_case{
-	pixel_x = -6;
-	pixel_y = -3
-	},
-/obj/item/storage/syringe_case{
-	pixel_x = -8;
-	pixel_y = 5
-	},
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/clinic)
 "gWx" = (
@@ -14512,11 +14487,8 @@
 /area/kleschers/int_reg/clinic)
 "hOD" = (
 /obj/structure/closet/secure_closet/bar,
-/obj/item/storage/firstaid/softpack/toxin{
-	pixel_x = -5;
-	pixel_y = -4
-	},
 /obj/item/reagent_container/spray/pepper,
+/obj/item/storage/firstaid/toxin,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
 "hOQ" = (
@@ -21406,10 +21378,6 @@
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -3;
 	pixel_y = 9
-	},
-/obj/item/device/binoculars/civ{
-	pixel_x = 0;
-	pixel_y = 5
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/roofed_spaceport)
@@ -30217,7 +30185,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/explosive/plastic/breaching_charge,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/buildings)
@@ -31475,21 +31442,12 @@
 "qto" = (
 /obj/structure/closet/cabinet,
 /obj/item/storage/box/pdt_kit,
-/obj/item/pamphlet/skill/medical,
-/obj/item/device/defibrillator/compact,
 /obj/item/device/flash,
 /obj/item/reagent_container/food/drinks/golden_cup{
 	desc = "A golden cup for excellence in medical"
 	},
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_reg/clinic)
-"qtu" = (
-/obj/structure/surface/table/reinforced/prison{
-	color = "#ffe6e6"
-	},
-/obj/item/device/binoculars/civ,
-/turf/open/floor/shiva/floor3,
-/area/kleschers/int_reg/buildings)
 "qtw" = (
 /obj/structure/machinery/cm_vending/sorted/walkman,
 /obj/effect/decal/cleanable/dirt,
@@ -36188,7 +36146,8 @@
 /obj/structure/surface/table/reinforced,
 /obj/item/clothing/gloves/marine/veteran/pmc/commando{
 	name = "M4X gauntlets prototype";
-	desc = "A somewhat old model of the M4X exoskeleton armor series originally used by private military contractors in the Tientsin Campaign."
+	desc = "A somewhat old model of the M4X exoskeleton armor series originally used by private military contractors in the Tientsin Campaign.";
+	anchored = 1
 	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/lambda_north_wing)
@@ -41465,7 +41424,6 @@
 	pixel_y = 9
 	},
 /obj/effect/spawner/random/pills/highchance,
-/obj/item/weapon/gun/pill,
 /turf/open/floor/shiva,
 /area/kleschers/int_heavy/lambda_virology)
 "vHK" = (
@@ -44284,14 +44242,6 @@
 	},
 /turf/open/floor/shiva/multi_tiles,
 /area/kleschers/int_heavy/lambda_virology)
-"xfz" = (
-/obj/structure/surface/rack{
-	color = "#6b675e";
-	layer = 2.79
-	},
-/obj/item/weapon/gun/boltaction/vulture/holo_target/skillless,
-/turf/open/floor/shiva/multi_tiles/west,
-/area/kleschers/int_heavy/eta)
 "xfR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -44703,11 +44653,6 @@
 	light_color = "#C02526";
 	color = "#C02526";
 	dir = 4
-	},
-/obj/item/weapon/gun/rifle/sharp,
-/obj/item/ammo_magazine/rifle/sharp/track{
-	pixel_x = 6;
-	pixel_y = -8
 	},
 /turf/open/floor/shiva/multi_tiles/west,
 /area/kleschers/int_heavy/eta)
@@ -50856,7 +50801,7 @@ tDE
 aZV
 aZV
 pRx
-qtu
+aXm
 vqb
 vBW
 vBW
@@ -68527,7 +68472,7 @@ srb
 oiN
 koz
 xvr
-xfz
+koz
 oiN
 xDc
 ccf
@@ -71364,7 +71309,7 @@ pIL
 rGY
 mxn
 yip
-eCu
+xAv
 mrR
 vBp
 iMG
