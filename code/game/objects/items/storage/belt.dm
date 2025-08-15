@@ -111,7 +111,7 @@
 		/obj/item/device/analyzer,
 		/obj/item/explosive/plastic,
 		/obj/item/device/lightreplacer,
-		/obj/item/tank/emergency_oxygen
+		/obj/item/tank/emergency_oxygen,
 	)
 	cant_hold = list(/obj/item/tank/emergency_oxygen/double)
 	bypass_w_limit = list(
