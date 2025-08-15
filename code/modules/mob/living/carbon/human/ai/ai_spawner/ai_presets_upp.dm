@@ -236,7 +236,7 @@
 /datum/human_ai_equipment_preset/upp/eva/rifleman_eva_sniper
 	name = "EVA UPP Squad Sniper (Type 88)"
 	desc = "The standard UPP soldier armed with a Non-AP Type 88 SVD."
-	path = /datum/equipment_preset/upp/rifleman/eva_sniper
+	path = /datum/equipment_preset/upp/rifleman/eva/sniper
 
 /datum/human_ai_equipment_preset/upp/eva/shotgun_eva
 	name = "EVA UPP Squad Shotgunner"

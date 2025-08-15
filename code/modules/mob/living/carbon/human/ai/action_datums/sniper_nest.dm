@@ -79,7 +79,7 @@
 		/datum/equipment_preset/canc/remnant/marksman::name = /datum/equipment_preset/canc/remnant/marksman,
 		/datum/equipment_preset/pmc/sniper::name = /datum/equipment_preset/pmc/sniper,
 		/datum/equipment_preset/upp/sniper::name = /datum/equipment_preset/upp/sniper,
-		/datum/equipment_preset/upp/rifleman/eva_sniper::name = /datum/equipment_preset/upp/rifleman/eva_sniper,
+		/datum/equipment_preset/upp/rifleman/eva/sniper::name = /datum/equipment_preset/upp/rifleman/eva/sniper,
 		/datum/equipment_preset/uscm/private_equipped/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/battlerifle,
 		/datum/equipment_preset/uscm/private_equipped/eva/battlerifle::name = /datum/equipment_preset/uscm/private_equipped/eva/battlerifle,
 		/datum/equipment_preset/other/seegson/standard/battlerifle::name = /datum/equipment_preset/other/seegson/standard/battlerifle,

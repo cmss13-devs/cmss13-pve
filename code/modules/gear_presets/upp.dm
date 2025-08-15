@@ -598,10 +598,10 @@
 //*****************************************************************************************************/
 //*****************************************************************************************************/
 
-/datum/equipment_preset/upp/rifleman/eva_sniper
+/datum/equipment_preset/upp/rifleman/eva/sniper
 	name = "UPP Squad Sniper (Equipped, Sniper, EVA)"
 
-/datum/equipment_preset/upp/rifleman/eva_sniper/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/rifleman/eva/sniper/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back
