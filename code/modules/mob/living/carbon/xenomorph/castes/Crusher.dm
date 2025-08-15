@@ -93,6 +93,9 @@
 		var/relative_dir = get_dir(current_mob, src)
 		var/final_dir = dir2text(relative_dir)
 		to_chat(current_mob, SPAN_HIGHDANGER("You hear a terrible roar coming from [final_dir ? "the [final_dir]" : "nearby"] as the ground shakes!"))
+		for(var/turf/closed/wall/wall in orange(1, src))
+			wall.ex_act(1000 * 1.5)
+
 
 /mob/living/carbon/xenomorph/crusher/death(cause, gibbed)
 	. = ..()

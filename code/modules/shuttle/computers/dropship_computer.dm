@@ -371,11 +371,12 @@
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/ui_data(mob/user)
 	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(shuttleId)
+	var/obj/structure/machinery/computer/shuttle/console = shuttle.getControlConsole()
 	. = list()
 	.["shuttle_id"] = shuttle?.id
 	.["shuttle_mode"] = shuttle?.mode
 	.["flight_time"] = shuttle?.timeLeft(0)
-	.["is_disabled"] = disabled
+	.["is_disabled"] = console.is_disabled() || disabled
 	if(shuttle?.is_hijacked)
 		.["is_disabled"] = TRUE
 	.["locked_down"] = FALSE
@@ -625,6 +626,14 @@
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "toc_shuttle"
 	shuttleId = DROPSHIP_MIDWAY
+	is_remote = TRUE
+
+/obj/structure/machinery/computer/shuttle/dropship/flight/toc/upp
+	name = "dropship control screen"
+	desc = "A screen on the TOC computer for controlling the dropship linked to it. Has an abbreviated version of the flight controls and data."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "toc_shuttle"
+	shuttleId = DROPSHIP_UPP
 	is_remote = TRUE
 
 /obj/structure/machinery/computer/shuttle/dropship/flight/small
