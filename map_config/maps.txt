@@ -92,6 +92,9 @@ endmap
 map taipei_station
 endmap
 
+map bosenmori_basho
+endmap
+
 map calliope_highway
 endmap
 
