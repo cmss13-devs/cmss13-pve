@@ -598,7 +598,7 @@
 //*****************************************************************************************************/
 //*****************************************************************************************************/
 
-/datum/equipment_preset/upp/rifleman/eva_sniper
+/datum/equipment_preset/upp/rifleman/eva/sniper
 	name = "UPP Squad Sniper (Equipped, Sniper, EVA)"
 
 /datum/equipment_preset/upp/rifleman/eva_sniper/load_gear(mob/living/carbon/human/new_human)
@@ -1090,8 +1090,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/upp/squadlead_eva
-	name = "UPP Squad Sergeant (Equipped)"
+/datum/equipment_preset/upp/squadlead/eva
+	name = "UPP Squad Sergeant (EVA, Equipped)"
 
 /datum/equipment_preset/upp/squadlead_eva/load_gear(mob/living/carbon/human/new_human)
 

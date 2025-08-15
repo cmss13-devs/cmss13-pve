@@ -1505,7 +1505,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/specialist_equipped/loader_eva
-	name = "USCM Specialized Weapons Operator, M5 RPG Loader(Equipped)"
+	name = "USCM Specialized Weapons Operator, M5 RPG Loader(EVA, Equipped)"
 
 /datum/equipment_preset/uscm/specialist_equipped/loader_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.underwear = "Marine Boxers"

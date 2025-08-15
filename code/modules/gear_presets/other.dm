@@ -1241,11 +1241,11 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/other/seegson/shotgun/light_buck
+/datum/equipment_preset/other/seegson/light_buck
 	name = "Seegson Private Security (16G Shotgun, EVA)"
 	skills = /datum/skills/private_sec
 
-/datum/equipment_preset/other/seegson/shotgun/light_buck/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/other/seegson/light_buck/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/xm51/withstock, WEAR_BACK)
