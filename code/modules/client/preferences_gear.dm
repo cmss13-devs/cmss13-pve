@@ -593,7 +593,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/clothing/shotgun_holster_belt
 	display_name = "shotgun holster belt"
-	path = /obj/item/storage/belt/gun/xm51
+	path = /obj/item/storage/belt/gun/shotgunholster
 	cost = 3
 	allowed_origins = USCM_ORIGINS
 
@@ -670,6 +670,30 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/paint/usflag
 	display_name = "M3 Pattern US Flag Paint"
 	path = /obj/item/clothing/accessory/paint/usflag
+
+/datum/gear/paint/target
+	display_name = "M3 Pattern Target Paint"
+	path = /obj/item/clothing/accessory/paint/target
+
+/datum/gear/paint/smiley
+	display_name = "M3 Pattern Smiley-Face Paint"
+	path = /obj/item/clothing/accessory/paint/alcoholism
+
+/datum/gear/paint/neutral
+	display_name = "M3 Pattern Neutral-Face Paint"
+	path = /obj/item/clothing/accessory/paint/melancholy
+
+/datum/gear/paint/cross
+	display_name = "M3 Pattern Cross Paint"
+	path = /obj/item/clothing/accessory/paint/cross
+
+/datum/gear/paint/pandora
+	display_name = "M3 Pattern Inscription Paint"
+	path = /obj/item/clothing/accessory/paint/inscription
+
+/datum/gear/paint/flames
+	display_name = "M3 Pattern Fire Paint"
+	path = /obj/item/clothing/accessory/paint/fire
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"

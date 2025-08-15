@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - ui: "Dropship Control, Ares Interface/Other Ares Interface and Tactical Map touch ups."
+  - bugfix: "Disables Dropships/Shuttles on the Flight Control UI if they are disabled from something like Shuttle Manipulator"
