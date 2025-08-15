@@ -51,6 +51,9 @@
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
+#define MAP_JUNGLE_DELTA "Jungle Delta" //Featureless Jungle
+#define MAP_PROSPECTOR_CANYON "Prospector Canyon"//Mostly Featureless Desert canyon
+#define MAP_ARCTIC_VALLEY "Arctic Valley"//Featureless Arctic
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
