@@ -53,3 +53,17 @@
 			cooldown = world.time
 	else
 		..()
+
+
+/obj/item/weapon/shield/riot/yautja/ancient
+	name = "ancient shield"
+	desc = "A large, ancient shield made from an unknown golden alloy, gleaming with a luminous brilliance. Its worn surface and masterful craftsmanship hint at a forgotten purpose and a history lost to time."
+	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon_state = "ancient_shield"
+	base_icon_state = "ancient_shield"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+	)
+	item_state = "ancient_shield"

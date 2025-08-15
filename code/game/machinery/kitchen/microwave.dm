@@ -377,3 +377,8 @@
 			dispose()
 
 	return TRUE
+
+/obj/structure/machinery/microwave/yautja
+	name = "alien microwave"
+	desc = "Dark alloy sinister machine that heats up cold food."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
