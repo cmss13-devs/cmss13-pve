@@ -1,4 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/structure/surface/table/holotable{
+	color = "#424a50"
+	},
+/obj/item/device/flashlight{
+	pixel_x = 2;
+	pixel_y = 10
+	},
+/turf/open/floor/carpet,
+/area/kleschers/int_reg/dorms)
 "aaF" = (
 /obj/structure/barricade/metal{
 	dir = 8;
@@ -6819,18 +6829,18 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/item/explosive/grenade/nerve_gas/xeno{
-	pixel_x = 6;
-	pixel_y = 11
-	},
-/obj/item/explosive/grenade/nerve_gas/xeno{
-	pixel_x = 10;
-	pixel_y = 3
-	},
 /obj/item/ammo_magazine/smg/m39/toxin,
 /obj/item/ammo_magazine/smg/m39/toxin{
 	pixel_x = -7;
 	pixel_y = -5
+	},
+/obj/item/explosive/grenade/nerve_gas{
+	pixel_x = 11;
+	pixel_y = -4
+	},
+/obj/item/explosive/grenade/nerve_gas{
+	pixel_x = 7;
+	pixel_y = 10
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_heavy/eta)
@@ -6843,11 +6853,11 @@
 	color = "#424a50"
 	},
 /obj/item/device/flashlight/tnr,
-/obj/item/ammo_box/magazine/misc/flashlight{
-	pixel_x = -3;
-	pixel_y = 11
-	},
 /obj/effect/spawner/random/toolbox,
+/obj/item/device/flashlight{
+	pixel_x = 0;
+	pixel_y = 10
+	},
 /turf/open/floor/shiva/multi_tiles/southeast,
 /area/kleschers/int_heavy/eta)
 "dME" = (
@@ -7969,11 +7979,11 @@
 	pixel_x = 16;
 	pixel_y = -22
 	},
-/obj/item/ammo_box/magazine/misc/flashlight{
-	pixel_x = 13;
+/obj/item/storage/backpack,
+/obj/item/device/flashlight{
+	pixel_x = 16;
 	pixel_y = 11
 	},
-/obj/item/storage/backpack,
 /turf/open/floor/carpet,
 /area/kleschers/int_reg/dorms)
 "euP" = (
@@ -10278,10 +10288,6 @@
 	dir = 8
 	},
 /obj/item/device/megaphone,
-/obj/item/device/healthanalyzer{
-	pixel_x = 23;
-	pixel_y = 0
-	},
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kleschers/int_glass/fitness)
 "fFT" = (
@@ -16117,13 +16123,6 @@
 	name = "Radio Telephone Pack";
 	desc = "Military Surplus bag of the USCM radio technician pack complete with a working radio network. This seems to have a completely redone network."
 	},
-/obj/item/storage/backpack/marine/satchel/rto{
-	phone_category = "Klescher Research Facility";
-	networks_receive = list("Colonist");
-	networks_transmit = list("Colonist");
-	name = "Radio Telephone Pack";
-	desc = "Military Surplus bag of the USCM radio technician pack complete with a working radio network. This seems to have a completely redone network."
-	},
 /turf/open/floor/shiva,
 /area/kleschers/int_reg/cargo)
 "iJr" = (
@@ -16303,10 +16302,6 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
-	},
-/obj/item/ammo_box/magazine/misc/flashlight{
-	pixel_x = 0;
-	pixel_y = 1
 	},
 /turf/open/floor/shiva/floor3,
 /area/kleschers/int_reg/cargo)
@@ -30693,20 +30688,20 @@
 /area/kleschers/int_reg/roofed_spaceport)
 "qjR" = (
 /obj/item/ammo_box/magazine/nailgun{
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/nailgun{
-	pixel_x = 3;
-	pixel_y = 13
-	},
-/obj/item/ammo_box/magazine/nailgun{
-	pixel_x = 0;
-	pixel_y = -2
+	pixel_x = 6;
+	pixel_y = 11
 	},
 /obj/structure/surface/rack{
 	color = "#6b675e";
 	layer = 2.79
+	},
+/obj/item/ammo_box/magazine/nailgun/empty{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/nailgun/empty{
+	pixel_x = -1;
+	pixel_y = -3
 	},
 /obj/item/weapon/gun/smg/nailgun,
 /obj/item/maintenance_jack,
@@ -33090,6 +33085,10 @@
 	pixel_x = 5;
 	pixel_y = -2
 	},
+/obj/item/device/healthanalyzer/soul{
+	pixel_x = -12;
+	pixel_y = 5
+	},
 /turf/open/floor/kutjevo/tan/multi_tiles,
 /area/kleschers/int_glass/fitness)
 "rtl" = (
@@ -34240,12 +34239,13 @@
 	pixel_x = 4;
 	pixel_y = 13
 	},
-/obj/effect/spawner/random/powercell,
-/obj/effect/spawner/random/powercell,
-/obj/item/ammo_box/magazine/misc/flashlight{
+/obj/item/device/flashlight,
+/obj/item/device/flashlight{
 	pixel_x = -1;
-	pixel_y = -1
+	pixel_y = -8
 	},
+/obj/effect/spawner/random/powercell,
+/obj/effect/spawner/random/powercell,
 /turf/open/floor/shiva/multi_tiles/north,
 /area/kleschers/int_heavy/lambda_north_wing)
 "rUZ" = (
@@ -36637,13 +36637,17 @@
 	pixel_x = -5;
 	pixel_y = -12
 	},
-/obj/item/ammo_box/magazine/misc/flashlight{
-	pixel_x = -2;
-	pixel_y = 7
-	},
 /obj/structure/machinery/light{
 	light_power = 0.7;
 	dir = 8
+	},
+/obj/item/device/flashlight{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/device/flashlight{
+	pixel_x = 0;
+	pixel_y = 1
 	},
 /turf/open/floor/shiva/wredfull,
 /area/kleschers/int_reg/filtration)
@@ -39525,7 +39529,6 @@
 	pixel_x = -2;
 	pixel_y = 7
 	},
-/obj/item/ammo_box/magazine/misc/flashlight,
 /obj/item/stack/sheet/cardboard/medium_stack{
 	pixel_x = 5;
 	pixel_y = -8
@@ -68018,7 +68021,7 @@ uPr
 ium
 oRq
 bJL
-ahV
+aaa
 xGz
 ahV
 jnP
