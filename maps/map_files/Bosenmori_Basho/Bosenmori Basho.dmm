@@ -3862,6 +3862,10 @@
 	pixel_x = -5;
 	pixel_y = 4
 	},
+/obj/item/book/manual/surgery{
+	pixel_x = 13;
+	pixel_y = -3
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
 "cca" = (
@@ -26389,19 +26393,22 @@
 /area/bosenmori/interior_heavy/Mai_food)
 "nQw" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/device/healthanalyzer{
-	pixel_x = 5;
-	pixel_y = 16
-	},
 /obj/structure/prop/server_equipment/laptop/closed{
 	pixel_x = -1;
 	pixel_y = 17
 	},
 /obj/item/tool/surgery/scalpel/laser/improved{
-	pixel_x = -6;
-	pixel_y = -2
+	pixel_x = -1;
+	pixel_y = -8
 	},
-/obj/item/tool/surgery/circular_saw,
+/obj/item/tool/surgery/circular_saw{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/device/healthanalyzer/soul{
+	pixel_x = 6;
+	pixel_y = 10
+	},
 /turf/open/floor/prison/floor_plate,
 /area/bosenmori/interior_regular/research)
 "nQx" = (
@@ -33205,7 +33212,7 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/item/tool/portadialysis{
-	pixel_x = 7;
+	pixel_x = 8;
 	pixel_y = 1
 	},
 /obj/structure/machinery/recharger{
@@ -33216,10 +33223,9 @@
 	dir = 4
 	},
 /obj/item/tool/surgery/bonegel{
-	pixel_x = -9;
-	pixel_y = 0
+	pixel_x = -8;
+	pixel_y = -3
 	},
-/obj/item/tool/surgery/bonegel,
 /obj/structure/machinery/light/small/blue{
 	light_color = "#dae2ff";
 	dir = 1
@@ -39660,14 +39666,6 @@
 	pixel_x = -9;
 	pixel_y = 5
 	},
-/obj/item/storage/syringe_case{
-	pixel_x = -6;
-	pixel_y = -10
-	},
-/obj/item/storage/syringe_case{
-	pixel_x = -6;
-	pixel_y = -5
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/box/bodybags{
 	pixel_x = 11;
@@ -43812,21 +43810,23 @@
 /turf/open/auto_turf/strata_grass,
 /area/bosenmori/mountain/field_post)
 "wVw" = (
-/obj/item/clothing/glasses/eyepatch,
 /obj/item/clothing/glasses/eyepatch{
-	pixel_x = 8;
-	pixel_y = -5
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/obj/item/clothing/glasses/eyepatch{
+	pixel_x = 14;
+	pixel_y = -9
 	},
 /obj/structure/surface/table/almayer,
-/obj/item/book/manual/surgery{
-	pixel_x = -4;
-	pixel_y = -1
-	},
 /obj/item/book/manual/medical_diagnostics_manual{
-	pixel_x = 10;
-	pixel_y = 8
+	pixel_x = 15;
+	pixel_y = 11
 	},
-/obj/item/device/defibrillator/compact,
+/obj/item/device/defibrillator{
+	pixel_x = -6;
+	pixel_y = 7
+	},
 /turf/open/floor/prison/sterile_white,
 /area/bosenmori/interior_glass/hospital)
 "wVK" = (
