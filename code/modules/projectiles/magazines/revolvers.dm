@@ -95,6 +95,18 @@
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	icon_state = "cmb_hp"
 
+/obj/item/ammo_magazine/revolver/vanguard
+	name = "Vanguard speedloader (.357 +P)"
+	desc = "An eight round speedloader of .357 +P ammunition. 180gr bimetallic copper-alloy lead-free JHP with increased powder. Causes violent expansion with strong stopping power."
+	default_ammo = /datum/ammo/bullet/revolver/small/jacketedhollow
+	max_rounds = 8
+
+/obj/item/ammo_magazine/revolver/vanguard/fullmetal
+	name = "Vanguard speedloader (.357 +P)"
+	desc = "An eight round speedloader of .357 +P ammunition. 120gr mild steel core lead-free FMJ with increased powder. High velocity and deeper penetration."
+	default_ammo = /datum/ammo/bullet/revolver/small/fullmetal
+	max_rounds = 8
+
 /**
  * MATEBA REVOLVER
  */
@@ -215,6 +227,18 @@
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	caliber = ".357"
 	gun_type = /obj/item/weapon/gun/revolver/spearhead
+
+//-------------------------------------------------------
+//Vanguard Autorevolver
+/obj/item/ammo_magazine/internal/revolver/vanguard
+	default_ammo = /datum/ammo/bullet/revolver/small/jacketedhollow
+	caliber = ".357"
+	max_rounds = 8
+	current_rounds = 8
+	gun_type = /obj/item/weapon/gun/revolver/spearhead/vanguard
+
+/obj/item/ammo_magazine/internal/revolver/vanguard/unloaded
+	current_rounds = 0
 
 //-------------------------------------------------------
 //BIG GAME HUNTER'S REVOLVER

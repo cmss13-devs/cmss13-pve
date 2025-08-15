@@ -26,6 +26,33 @@
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
+/datum/ammo/bullet/smg/subsonic
+	name = "jacketed hollowpoint subsonic pistol bullet"
+	damage = 55
+	penetration = -ARMOR_PENETRATION_TIER_3
+	shrapnel_chance = 5
+
+	accurate_range = 5
+	effective_range_max = 5
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
+	shell_speed = AMMO_SPEED_TIER_2 //soobsoonik
+	scatter = SCATTER_AMOUNT_TIER_8
+	accuracy = HIT_ACCURACY_TIER_8
+	shell_casing = /obj/effect/decal/ammo_casing
+
+/datum/ammo/bullet/smg/subsonic/ap
+	name = "armor piercing subsonic pistol bullet"
+	damage = 22
+	penetration = ARMOR_PENETRATION_TIER_1
+	shrapnel_chance = 0
+
+	accurate_range = 3
+	effective_range_max = 4
+	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	shell_speed = AMMO_SPEED_TIER_3
+	scatter = SCATTER_AMOUNT_TIER_5
+	accuracy = HIT_ACCURACY_TIER_7
+
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
 	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't

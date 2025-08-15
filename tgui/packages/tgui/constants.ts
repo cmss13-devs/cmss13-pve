@@ -222,9 +222,9 @@ export const RADIO_CHANNELS = [
     color: '#159e73',
   },
   {
-    name: 'GUARD',
+    name: 'CLF CCT',
     freq: 1275,
-    color: '7ec837',
+    color: '#b3222e',
   },
   {
     name: 'PFA',

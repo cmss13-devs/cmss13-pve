@@ -47,6 +47,24 @@
 	default_ammo = /datum/ammo/bullet/pistol/ap/toxin
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
+//-------------------------------------------------------
+//Barracuda Pistol
+
+/obj/item/ammo_magazine/pistol/barracuda
+	name = "Barracuda jacketed hollowpoint magazine (9x19mm)"
+	desc = "A magazine for the M4A2 Barracuda made by Harbin Machine and Tool. 145gr bimetallic copper-bismuth lead-free JHP ammunition has excellent terminal ballistics."
+	default_ammo = /datum/ammo/bullet/pistol/hollow
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/pistol/barracuda/fmj
+	name = "Barracuda full metal jacket magazine (9x19mm)"
+	desc = "A magazine for the M4A2 Barracuda made by Harbin Machine and Tool. 100gr copper plated mild steel core lead-free FMJ ammunition improves velocity and penetration depth."
+	default_ammo = /datum/ammo/bullet/pistol
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+//-------------------------------------------------------
+//TWE pistol
+
 /obj/item/ammo_magazine/pistol/l54
 	name = "\improper L54 magazine (9mm)"
 	desc = "A pistol magazine."
@@ -67,17 +85,10 @@
 	name = "\improper M1911 magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
-	icon_state = "m1911"
+	icon_state = "m4a345"//rename later
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
-	ammo_band_icon = "+m1911_band"
-	ammo_band_icon_empty = "+m1911_band_e"
 
-/obj/item/ammo_magazine/pistol/m1911/super
-	name = "\improper M1911 magazine (.45 Super)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy/special
-	gun_type = /obj/item/weapon/gun/pistol/m1911/socom/officer
-	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 //-------------------------------------------------------
 //vp70 based off VP70
@@ -343,7 +354,18 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	max_rounds = 50
 	gun_type = /obj/item/weapon/gun/pistol/auto9
 
-
+//-------------------------------------------------------
+//Taser singleshot magazine.
+/obj/item/ammo_magazine/pistol/taser
+	name = "electrode cartridge"
+	desc = "A small plastic shelled cartridge for an electrode gun. Oneshot."
+	caliber = "electrode block"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/cmb_tac.dmi'
+	icon_state = "taser_cartridge"
+	max_rounds = 1
+	w_class = SIZE_SMALL
+	default_ammo = /datum/ammo/bullet/pistol/taser_round
+	gun_type = /obj/item/weapon/gun/pistol/taserpistol
 
 //-------------------------------------------------------
 //The first rule of monkey pistol is we don't talk about monkey pistol.

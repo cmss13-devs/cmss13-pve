@@ -1268,9 +1268,6 @@
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
-/obj/item/clothing/accessory/pads/bracers/standard
-	flags_atom = NO_SNOW_TYPE
-
 /obj/item/clothing/accessory/pads/neckguard
 	name = "\improper M3 Gorget"
 	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
@@ -1291,18 +1288,12 @@
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
-/obj/item/clothing/accessory/pads/greaves/standard
-	flags_atom = NO_SNOW_TYPE
-
 /obj/item/clothing/accessory/pads/kneepads
 	name = "\improper M3 Kneepads"
 	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
-
-/obj/item/clothing/accessory/pads/kneepads/standard
-	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/pads/groin
 	name = "\improper M3 Lap Panel"
@@ -1317,30 +1308,6 @@
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
-
-
-//===========================//USASF CUSTOM ARMOR PLATES\\================================\\
-
-/obj/item/clothing/accessory/pads/navy
-	name = "\improper M4 Pauldrons"
-	desc = "Attachable supplementary armor for the USASF M4 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
-	icon_state = "u_pads"
-	item_state = "u_pads"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/greaves/navy
-	name = "\improper M4 Greaves"
-	desc = "Attachable supplementary armor for the M4 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
-	icon_state = "u_shinguards"
-	item_state = "u_shinguards"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/groin/navy
-	name = "\improper M4 Lap Panel"
-	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
-	icon_state = "u_groinplate"
-	item_state = "u_groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
@@ -1517,7 +1484,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/small
 	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
+	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a while array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
@@ -1525,9 +1492,6 @@
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
-	name = "\improper PBAS Webbing"
-	desc = "A sturdy set of webbing designed to fit on the US Army's standard body armor system. Fully outfitted with pouches and pockets to carry a whole array of small items."
-	icon_state = "armywebbing"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
@@ -1536,7 +1500,7 @@
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
@@ -1546,7 +1510,7 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
+/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
@@ -1652,14 +1616,6 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/recon/m49
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/m49
-
-/obj/item/storage/internal/accessory/webbing/m3mag/recon/m49/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
-	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
-	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
-	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
@@ -1755,39 +1711,3 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
-
-//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppmags
-	name = "\improper Type 90 Pattern Magazine Webbing"
-	desc = "A set of UPP magazine webbing that can carry four magazines."
-	icon_state = "upp_webbing_magazine"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/ammo_magazine/rifle/type71,
-		/obj/item/ammo_magazine/rifle/ag80,
-		/obj/item/ammo_magazine/pistol/t73,
-		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/handful/shotgun/heavy,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
-	name = "\improper Type 78 Pattern Small Pouch Webbing"
-	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
-	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
-	name = "\improper Type 78 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
-	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY

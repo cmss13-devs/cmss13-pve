@@ -170,7 +170,6 @@
 	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
 	minimap_color = MINIMAP_SQUAD_BRAVO
-	usable = TRUE
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
@@ -267,18 +266,6 @@
 	roundstart = FALSE
 	locked = TRUE
 
-/datum/squad/army
-	name = SQUAD_ARMY
-	equipment_color = "#349c30"
-	chat_color = "#349c30"
-	radio_freq = ARM_FREQ
-	minimap_color = "#349c30"
-	use_stripe_overlay = FALSE
-	faction = FACTION_ARMY
-	active = TRUE
-	roundstart = FALSE
-	usable = TRUE
-	locked = TRUE
 
 //############################### UPP Squads
 /datum/squad/upp
@@ -313,7 +300,6 @@
 	chat_color = "#c47a50"
 	squad_type = "Team"
 	locked = TRUE
-
 //###############################
 /datum/squad/pmc
 	name = "Root"

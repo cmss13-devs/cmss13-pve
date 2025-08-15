@@ -171,6 +171,14 @@
 	initial_stored = 5
 	populate_type = /obj/item/weapon/gun/rifle/m20a/unloaded
 
+/obj/structure/gun_rack/m20a/marshal
+	name = "M20A4 pulse rifle rack"
+	icon_state = "m20a"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m20_marshal/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m20_marshal/unloaded
+
 /obj/structure/gun_rack/m41/elite
 	name = "M41A2 pulse rifle rack"
 	icon_state = "m41a_elite"

@@ -584,63 +584,6 @@ can cause issues with ammo types getting mixed up during the burst.
 	S.Attach(src)
 	update_attachable(S.slot)
 
-/obj/item/weapon/gun/shotgun/double/upp
-	name = "\improper MP-122 'Olympiets' hunting shotgun"
-	desc = "A double barrel over-under shotgun produced by BaikalMech Factory. Mostly issued to colonists for protection against hostile fauna or hunting. Has a single scope mounting point right behind the barrel."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "olympiets"
-	item_state = "olympiets"
-	flags_equip_slot = SLOT_BACK
-	fire_sound = 'sound/weapons/gun_olympia.ogg'
-	attachable_allowed = list(
-		/obj/item/attachable/stock/olympiets,
-		/obj/item/attachable/olympiets_barrel,
-		/obj/item/attachable/scope/mini/hunting/upp,
-	)
-
-/obj/item/weapon/gun/shotgun/double/upp/handle_starting_attachment()
-	. = ..()
-	var/obj/item/attachable/stock/olympiets/stock = new(src)
-	stock.flags_attach_features &= ~ATTACH_REMOVABLE
-	stock.Attach(src)
-	update_attachable(stock.slot)
-
-	var/obj/item/attachable/olympiets_barrel/barrel = new(src)
-	barrel.flags_attach_features &= ~ATTACH_REMOVABLE
-	barrel.Attach(src)
-	update_attachable(barrel.slot)
-
-/obj/item/weapon/gun/shotgun/double/upp/set_gun_config_values()
-	..()
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_fire_delay(FIRE_DELAY_TIER_11)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
-	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-
-/obj/item/weapon/gun/shotgun/double/upp/open_chamber(mob/user, override)
-	..()
-	var/obj/item/attachable/olympiets_barrel/barrel = attachments["special"]
-	if(!barrel)
-		return
-	if(current_mag.chamber_closed)
-		attachable_offset["special_x"] = 35
-		attachable_offset["special_y"] = 17
-		barrel.attach_icon = "olympiets_barrel"
-	else
-		attachable_offset["special_x"] = 33
-		attachable_offset["special_y"] = 7
-		barrel.attach_icon = "olympiets_barrel_o"
-	update_icon()
-
-/obj/item/weapon/gun/shotgun/double/upp/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 9, "rail_y" = 22, "under_x" = 15, "under_y" = 14, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 17, "special_x" = 35, "special_y" = 17)
-
 /obj/item/weapon/gun/shotgun/double/damaged
 	name = "semi-sawn-off Spearhead Rival 78"
 	desc = "A double barrel shotgun produced by Spearhead. Archaic, sturdy, affordable. For some reason it seems that someone tried to saw through the barrel and gave up halfway through. This probably isn't going to be the greatest gun for combat.."
@@ -1309,8 +1252,68 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	starting_attachment_types = list(/obj/item/attachable/stock/hg3712/m3717)
 
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/tactical
+	name = "HG-78 combat shotgun"
+	desc = "A modification of the HG-37 for better reliability, assisted cycling mechanism, and a hair trigger. Can feed lower pressure ammunition without fear of stoppage. Stockless."
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+	)
+
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/tactical/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_7
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_3
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
 //-------------------------------------------------------
 
+/obj/item/weapon/gun/shotgun/pump/super_short
+	name = "short barrel pump-action shotgun"
+	desc = "Short barreled tool for breaching and close combat. Standard twelve gauge."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/cmb_tac.dmi'
+	icon_state = "super_short"
+	item_state = "super_short"
+	w_class = SIZE_MEDIUM
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/short
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/compensator,
+	)
+
+/obj/item/weapon/gun/shotgun/pump/super_short/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 16,
+		"rail_x" = 12, "rail_y" = 20,
+		"under_x" = 20, "under_y" = 14,
+		"stock_x" = 20, "stock_y" = 14,
+		"side_rail_x" = 25, "side_rail_y" = 18,
+		)
+
+/obj/item/weapon/gun/shotgun/pump/super_short/set_gun_config_values()
+	..()
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_4
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_3
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	aim_slowdown = SLOWDOWN_ADS_QUICK
+
+/obj/item/weapon/gun/shotgun/pump/super_short/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/short/unloaded
 
 //-------------------------------------------------------
 //XM51, Breaching Scattergun, PVE Edition: civilian magfed shotgun

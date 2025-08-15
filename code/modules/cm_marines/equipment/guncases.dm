@@ -544,14 +544,8 @@
 	else
 		overlays += image(src.icon, "hprcase_lid")
 		return
-	var/obj/item/weapon/gun/rifle/lmg/lmg = locate() in contents
-	if(lmg)
-		overlays += image(src.icon, "+[lmg.base_gun_icon]")
-
-/obj/item/storage/box/guncase/heavy/hpr/recon/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/lmg/recon(src)
-	new /obj/item/ammo_magazine/hpr_box/recon(src)
-	new /obj/item/ammo_magazine/hpr_box/recon(src)
+	if(locate(/obj/item/weapon/gun/rifle/lmg) in src.contents)
+		overlays += image(src.icon, "+hpr")
 
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"

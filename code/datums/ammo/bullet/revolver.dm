@@ -132,9 +132,25 @@
 	penetration = -ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
+/datum/ammo/bullet/revolver/small/jacketedhollow
+	name = "jacketed hollowpoint magnum handgun bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 60
+	penetration = -ARMOR_PENETRATION_TIER_4
+	shell_speed = AMMO_SPEED_TIER_2
+
+/datum/ammo/bullet/revolver/small/jacketedhollow/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+
+/datum/ammo/bullet/revolver/small/fullmetal
+	name = "full metal jacket magnum handgun bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_3
+
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
-
 	damage = 60
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -146,17 +162,17 @@
 	penetration = ARMOR_PENETRATION_TIER_1
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-/datum/ammo/bullet/revolver/mateba/highimpact/ap
-	name = ".454 heavy high-impact armor piercing revolver bullet"
-	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 45
-
 /datum/ammo/bullet/revolver/mateba/highimpact/New()
 	..()
 	RegisterSignal(src, COMSIG_AMMO_POINT_BLANK, PROC_REF(handle_battlefield_execution))
 
 /datum/ammo/bullet/revolver/mateba/highimpact/on_hit_mob(mob/M, obj/projectile/P)
 	knockback(M, P, 4)
+
+/datum/ammo/bullet/revolver/mateba/highimpact/ap
+	name = ".454 heavy high-impact armor piercing revolver bullet"
+	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 45
 
 /datum/ammo/bullet/revolver/mateba/highimpact/explosive //if you ever put this in normal gameplay, i am going to scream
 	name = ".454 heavy explosive revolver bullet"

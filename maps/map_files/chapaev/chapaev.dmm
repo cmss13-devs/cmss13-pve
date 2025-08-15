@@ -1537,6 +1537,29 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/cryo_cells)
+"cN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/prop/magazine/book/littleredbook,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "cO" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -1567,6 +1590,36 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
+"cR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/item/weapon/butterfly,
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	dir = 4;
+	pixel_y = 10;
+	pixel_x = -13
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -7;
+	can_block_movement = 0
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "cS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -1577,6 +1630,29 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/briefing)
+"cT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/weapon/butterfly,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "cU" = (
 /obj/structure/prop{
 	desc = "A sturdy metal ladder that leads to lower deck of Chapaev which houses CIC and Brig. The hatch is closed, for now.";
@@ -1658,6 +1734,23 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"cZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/item/prop/magazine/book/littleredbook,
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -7
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/space)
@@ -1671,12 +1764,79 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"dc" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/item/weapon/butterfly,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 7
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
+"dd" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/bookcase{
+	density = 0;
+	icon_state = "book-5";
+	pixel_y = 18;
+	can_block_movement = 0
+	},
+/obj/item/book/manual/chef_recipes,
+/obj/item/book/manual/barman_recipes,
+/obj/item/book/manual/engineering_hacking,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "de" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
+"df" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	pixel_y = 22;
+	pixel_x = -14;
+	layer = 3
+	},
+/obj/structure/machinery/computer/cameras/wooden_tv/prop{
+	pixel_y = 10;
+	layer = 3
+	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_x = -10
+	},
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/turf/open/space/basic,
+/area/space)
 "dg" = (
 /obj/structure/largecrate/random/barrel/red{
 	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
@@ -19380,7 +19540,7 @@ mV
 mV
 mV
 mV
-mV
+dd
 mV
 mV
 mV
@@ -19684,7 +19844,7 @@ mV
 mV
 mV
 mV
-mV
+df
 mV
 mV
 mV
@@ -21519,7 +21679,9 @@ mV
 mV
 mV
 mV
+cZ
 mV
+cR
 mV
 mV
 mV
@@ -21589,6 +21751,8 @@ mV
 mV
 mV
 mV
+"}
+(86,1,1) = {"
 mV
 mV
 "}
@@ -21741,6 +21905,8 @@ mV
 mV
 mV
 mV
+"}
+(87,1,1) = {"
 mV
 mV
 "}
@@ -21893,6 +22059,8 @@ mV
 mV
 mV
 mV
+"}
+(88,1,1) = {"
 mV
 mV
 "}
@@ -22045,6 +22213,8 @@ mV
 mV
 mV
 mV
+"}
+(89,1,1) = {"
 mV
 mV
 "}
@@ -22124,8 +22294,11 @@ mV
 mV
 mV
 mV
+dc
 mV
+cT
 mV
+cN
 mV
 mV
 mV

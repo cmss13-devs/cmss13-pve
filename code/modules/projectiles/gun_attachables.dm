@@ -268,6 +268,17 @@ Defined in conflicts.dm of the #defines folder.
 	damage_falloff_mod = 0.1
 	attach_icon = pick("suppressor_a","suppressor2_a")
 
+/obj/item/attachable/suppressor/superduty_integral
+	name = "Wraith Manufacturing 9SD-WM integral silencer"
+	desc = "An integral reflex silencer that shouldn't be removed from the firearm."
+	icon_state = "suppressor"
+	attach_icon = "superduty_integral_a"
+
+/obj/item/attachable/suppressor/superduty_integral/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_7
+
 /obj/item/attachable/suppressor/xm40_integral
 	name = "\improper XM40 integral suppressor"
 	icon_state = "m40sd_suppressor"
@@ -378,15 +389,6 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "co2_cartridge"
 	item_state = ""
 	w_class = SIZE_TINY
-
-/obj/item/attachable/bayonet/canc
-	name = "\improper Type 4 bayonet"
-	desc = "A relic of bygone era, this once-CANC-produced bayonet is no longer in service of any army since Cooperative's dissolution. Despite not being adopted by any UPPAC formations, it can still be found on flea markets, in the hands of former CANC servicemembers or current CANC restoration fanatics. Too bad it only fits on their shitty LW-317 carbines..."
-	icon_state = "knife_chinese"
-	item_state = "knife_chinese"
-	attach_icon = "canc_bayonet_a"
-	pixel_shift_x = 17
-	pixel_shift_y = 20
 
 /obj/item/attachable/extended_barrel
 	name = "extended barrel"
@@ -1162,31 +1164,6 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "A civilian-grade scope that can be switched between short and long range magnification, intended for use in extraterrestrial scouting. Looks ridiculous on a pistol."
 	aim_speed_mod = 0
 
-/obj/item/attachable/scope/variable_zoom/canc
-	name = "LMR-72 4x smartscope"
-	desc = "Outdated CANC scope."
-	icon_state = "canc_scope"
-	attach_icon = "canc_scope"
-	pixel_shift_x = 13
-	pixel_shift_y = 15
-
-/obj/item/attachable/scope/variable_zoom/canc/toggle_zoom_level()
-	if(ishuman(usr))
-		var/mob/living/carbon/human/human = usr
-		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
-			to_chat(human, SPAN_WARNING("You can not use high-resolution magnification of this sight without a monoscope!"))
-			return
-	..()
-
-/obj/item/attachable/scope/variable_zoom/canc/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
-	if(ishuman(user))
-		var/mob/living/carbon/human/human = user
-		if(!istype(human.glasses, /obj/item/clothing/glasses/canc_monoscope))
-			zoom_level = ZOOM_LEVEL_2X
-			zoom_offset = 6
-			zoom_viewsize = 7
-			allows_movement = 1
-	..()
 #undef ZOOM_LEVEL_2X
 #undef ZOOM_LEVEL_4X
 
@@ -1241,12 +1218,6 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
 	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
-
-/obj/item/attachable/scope/mini/hunting/upp
-	name = "POS-3 hunting mini-scope"
-	icon_state = "upphuntingscope"
-	attach_icon = "upphuntingscope"
-	desc = "Simple Union-made civilian hunting/sport scope."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
@@ -2111,22 +2082,6 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 
-/obj/item/attachable/stock/olympiets
-	name = "Olympiets 'wooden' stock"
-	desc = "Shouldn't be seeing this."
-	icon_state = "olympiets_stock"
-	flags_attach_features = NO_FLAGS
-	hud_offset_mod = 6
-	accuracy_mod = 0
-	recoil_mod = 0
-	scatter_mod = 0
-	movement_onehanded_acc_penalty_mod = 0
-	accuracy_unwielded_mod = 0
-	recoil_unwielded_mod = 0
-	scatter_unwielded_mod = 0
-	aim_speed_mod = 0
-	wield_delay_mod = WIELD_DELAY_NONE
-
 /obj/item/attachable/stock/hg3712
 	name = "hg3712 stock"
 	desc = "The non-detachable stock of a HG 37-12 pump shotgun."
@@ -2544,11 +2499,6 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m49a_barrel/forecon
-	name = "M49A2 barrel"
-	icon_state = "m49a_barrel_a"
-	attach_icon = "m49a_barrel_a"
-
 /* /obj/item/attachable/m49a_barrel/New()
 	..()
 	select_gamemode_skin(type)
@@ -2594,17 +2544,6 @@ Defined in conflicts.dm of the #defines folder.
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
 	attach_icon = "pve_m49a_barrel"
-
-/obj/item/attachable/olympiets_barrel
-	name = "Olympiets barrel"
-	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
-	icon_state = "olympiets_barrel"
-	attach_icon = "olympiets_barrel"
-	slot = "special"
-	wield_delay_mod = WIELD_DELAY_NONE
-	flags_attach_features = NO_FLAGS
-	melee_mod = 0
-	size_mod = 0
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
@@ -3447,6 +3386,115 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 1
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
 
+//semi auto GL
+/obj/item/attachable/attached_gun/rapid_grenade
+	name = "semi automatic underslung grenade launcher"
+	desc = "A reloadable multi shot USGL. Motorized feed assembly allows for fire as fast as it cycles."
+	icon_state = "grenade-mk1" //filler, nobodys gonna see this
+	attach_icon = "grenade-mk1_a"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	max_rounds = 3
+	max_range = 10
+	attachment_firing_delay = FIRE_DELAY_TIER_6
+
+	fire_sound = 'sound/weapons/gun_m92_attachable.ogg'
+	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	var/caliber = "30mm"
+	var/grenade_pass_flags
+	var/list/loaded_grenades //list of grenade types loaded in the UGL
+
+/obj/item/attachable/attached_gun/rapid_grenade/Initialize()
+	. = ..()
+	grenade_pass_flags = PASS_HIGH_OVER|PASS_MOB_THRU|PASS_OVER
+
+/obj/item/attachable/attached_gun/rapid_grenade/New()
+	..()
+	attachment_firing_delay = FIRE_DELAY_TIER_4 * 3
+	loaded_grenades = list()
+
+/obj/item/attachable/attached_gun/rapid_grenade/get_examine_text(mob/user)
+	. = ..()
+	if(current_rounds) . += "It has [current_rounds] grenade\s left."
+	else . += "It's empty."
+
+/obj/item/attachable/attached_gun/rapid_grenade/update_icon()
+	. = ..()
+	attach_icon = initial(attach_icon)
+	icon_state = initial(icon_state)
+	if(istype(loc, /obj/item/weapon/gun))
+		var/obj/item/weapon/gun/gun = loc
+		gun.update_attachable(slot)
+
+
+/obj/item/attachable/attached_gun/rapid_grenade/reload_attachment(obj/item/explosive/grenade/G, mob/user)
+	if(!istype(G) || (G.caliber != caliber))
+		to_chat(user, SPAN_WARNING("[src] doesn't accept that caliber of grenade."))
+		return
+	if(!G.active) //can't load live grenades
+		if(!G.underslug_launchable)
+			to_chat(user, SPAN_WARNING("[src] can't be loaded with an activated grenade."))
+			return
+		if(current_rounds >= max_rounds)
+			to_chat(user, SPAN_WARNING("[src] is full."))
+		else
+			playsound(user, 'sound/weapons/grenade_insert.wav', 25, 1)
+			current_rounds++
+			loaded_grenades += G
+			to_chat(user, SPAN_NOTICE("You load \the [G] into \the [src]."))
+			user.drop_inv_item_to_loc(G, src)
+
+/obj/item/attachable/attached_gun/rapid_grenade/unload_attachment(mob/user, reload_override = FALSE, drop_override = FALSE, loc_override = FALSE)
+	. = TRUE //Always uses special unloading.
+	if(!current_rounds)
+		to_chat(user, SPAN_WARNING("It's empty!"))
+		return
+
+	var/obj/item/explosive/grenade/nade = loaded_grenades[length(loaded_grenades)] //Grab the last-inserted one. Or the only one, as the case may be.
+	loaded_grenades.Remove(nade)
+	current_rounds--
+
+	if(drop_override || !user)
+		nade.forceMove(get_turf(src))
+	else
+		user.put_in_hands(nade)
+
+	user.visible_message(SPAN_NOTICE("[user] unloads \a [nade] from \the [src]."),
+	SPAN_NOTICE("You unload \a [nade] from \the [src]."), null, 4, CHAT_TYPE_COMBAT_ACTION)
+	playsound(user, unload_sound, 30, 1)
+
+/obj/item/attachable/attached_gun/rapid_grenade/fire_attachment(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	if(get_dist(user,target) > max_range)
+		to_chat(user, SPAN_WARNING("Out of range."))
+		playsound(user, 'sound/weapons/gun_empty.ogg', 50, TRUE, 5)
+		return
+
+	if(current_rounds > 0 && ..() || in_chamber && ..())
+		prime_grenade(target,gun,user)
+
+/obj/item/attachable/attached_gun/rapid_grenade/proc/prime_grenade(atom/target,obj/item/weapon/gun/gun,mob/living/user)
+	set waitfor = 0
+	var/obj/item/explosive/grenade/G = loaded_grenades[1]
+
+	if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
+		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
+		msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
+		return
+
+	if(G.dual_purpose != FALSE)
+		G.fuse_type = IMPACT_FUSE
+	G.arm_sound = null
+
+	playsound(user.loc, fire_sound, 50, 1)
+
+
+/obj/item/attachable/attached_gun/rapid_grenade/harrington
+	name = "M20 overslung grenade launcher"
+	desc = "You shouldn't ever see this detached from the rifle."
+	icon_state = "m20-osgl"
+	attach_icon = "m20-osgl"
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+
+
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
 	name = "mini flamethrower"
@@ -3889,6 +3937,19 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 15
 	pixel_shift_y = 18
 
+/obj/item/attachable/cosmetic/lasersight
+	name = "laser sight"
+	desc = "A regular laser sight off the shelf."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "lasersight"
+	attach_icon = "lasersight_a"
+	slot = "side_rail"
+	pixel_shift_x = 17
+	pixel_shift_y = 17
+
+/obj/item/attachable/cosmetic/lasersight/integral
+	flags_attach_features = NO_FLAGS
+
 /obj/item/attachable/bipod
 	name = "bipod"
 	desc = "A simple set of telescopic poles to keep a weapon stabilized during firing. \nGreatly increases accuracy and reduces recoil when properly placed, but also increases weapon size and slows firing speed."
@@ -4179,15 +4240,3 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_5
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_5
 	damage_mod -= BULLET_DAMAGE_MULT_TIER_4
-
-/obj/item/attachable/lw317barrel
-	name = "LW-317 Barrel"
-	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
-	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
-	icon_state = "lw317_dmr_barrel"
-	attach_icon = "lw317_dmr_barrel"
-	slot = "muzzle"
-	wield_delay_mod = WIELD_DELAY_NONE
-	flags_attach_features = NO_FLAGS
-	melee_mod = 0
-	size_mod = 0

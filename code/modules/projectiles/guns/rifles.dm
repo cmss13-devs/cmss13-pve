@@ -340,18 +340,11 @@
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
 
-/obj/item/weapon/gun/rifle/m41aMK1/navy //m41amk1_navy
+/obj/item/weapon/gun/rifle/m41aMK1/navy
 	name = "\improper GUU-71/A pulse rifle"
-	desc = "A variant of the M41A pulse rifle adopted for use by USASF Security Forces personnel and Master-At-Arms. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
-	icon_state = "m41amk1_navy"
-	item_state = "m41amk1_navy"
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
-
-/obj/item/weapon/gun/rifle/m41aMK1/navy/tactical
-	name = "\improper GUU-71/B pulse rifle"
 	desc = "A variant of the M41A pulse rifle adopted for use by USASF personnel whose duties take them off ships frequently. Features an integrated 30mm grenade launcher, flash & sound suppressor, and a carry-handle mounted mag-clamp."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
@@ -517,6 +510,64 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
+
+//----------------------------------------------
+//M20A4, the last of a long extinct breed.
+
+/obj/item/weapon/gun/rifle/m20_marshal
+	name = "M20A4 GRIP II pulse rifle"
+	desc = "The final evolution of the old M20. A last ditch attempt to modernize the weapon, General Rifle Improvement Program II provides an FA/5RB hyperburst firegroup, and updates the feed mechanisms. The overbarrel grenade launcher has been given some level of parts compatibility with the PN 30mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m20marshal"
+	item_state = "m20marshal"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/m20_marshal
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington,
+	)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington
+	)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m20_marshal/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 19,
+		"rail_x" = 12, "rail_y" = 20,
+		"under_x" = 18, "under_y" = 15,
+		"stock_x" = 22, "stock_y" = 15,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
+
+/obj/item/weapon/gun/rifle/m20_marshal/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+
+/obj/item/weapon/gun/rifle/m20_marshal/unloaded
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
 
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
@@ -1166,7 +1217,6 @@
 		/obj/item/ammo_magazine/hpr_box/ap,
 		/obj/item/ammo_magazine/hpr_box/heap,
 		/obj/item/ammo_magazine/hpr_box/holo_target,
-		/obj/item/ammo_magazine/hpr_box/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1,
 		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
@@ -1268,32 +1318,6 @@
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
-
-/obj/item/weapon/gun/rifle/lmg/recon
-	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units, while sporting a vertical grip in place of an integrated bipod."
-	icon_state = "m41ae2_recon"
-	item_state = "m41ae2_recon"
-	attachable_allowed = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/sling,
-	)
-	starting_attachment_types = list(
-		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/verticalgrip,
-	)
-
-/obj/item/weapon/gun/rifle/lmg/recon/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 24, "under_y" = 11, "stock_x" = 24, "stock_y" = 13)
 //-------------------------------------------------------
 
 
@@ -1351,12 +1375,12 @@
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_8)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	set_burst_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
@@ -1405,84 +1429,6 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
-
-/obj/item/weapon/gun/rifle/lw317
-	name = "\improper LW-317 pulse carbine"
-	desc = "Light Weapon, Type 317. Originating from Norcomm before the CANC's absorption, the Type 317 served the CANC's arsenals for close quarters battle. Also preferred for its ease of use among former CANC soldiers."
-	desc_lore = "Despite UPP's best efforts to destroy leftover CANC weapon caches from the Dog War, Chinese weaponry frequently comes up on the black market, which makes it a solid choice for any rebel and even more so for revanchist CANC restoration supporters."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "lw317"
-	item_state = "lw317"
-	fire_sound = 'sound/weapons/gun_lw317.ogg'
-	current_mag = /obj/item/ammo_magazine/rifle/lw317
-	attachable_allowed = list(
-		/obj/item/attachable/scope, // Rail
-		/obj/item/attachable/scope/upp,
-		/obj/item/attachable/scope/mini,
-		/obj/item/attachable/scope/mini/upp,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot/upp,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/reflex/upp,
-		/obj/item/attachable/suppressor, // Muzzle
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/bayonet/canc,
-		/obj/item/attachable/verticalgrip, // Underbarrel
-		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/flashlight/grip/upp,
-		)
-
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	flags_equip_slot = SLOT_BACK
-	start_automatic = TRUE
-
-/obj/item/weapon/gun/rifle/lw317/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_10)
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	scatter = SCATTER_AMOUNT_TIER_6
-	scatter_unwielded = SCATTER_AMOUNT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_3
-
-/obj/item/weapon/gun/rifle/lw317/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 16, "rail_y" = 23, "under_x" = 25, "under_y" = 12, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
-
-/obj/item/weapon/gun/rifle/lw317/dmr
-	name = "\improper LW/RS-317 pulse carbine"
-	desc = "Light Weapon, Rifle, Sniper, Type 317. Modification of Type 317 carbine, this unorthodox DMR was developed in order to provide long-range support to guerilla fighting groups. Modified internal mechanism allows for improved accuracy, but because of that rate of fire is impeded severely."
-	current_mag = /obj/item/ammo_magazine/rifle/lw317/ap
-	start_automatic = FALSE
-	attachable_allowed = list(
-		/obj/item/attachable/scope/variable_zoom/canc,
-		/obj/item/attachable/lw317barrel,
-		/obj/item/attachable/verticalgrip, // Underbarrel
-		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/flashlight/grip/upp,
-		)
-
-/obj/item/weapon/gun/rifle/lw317/dmr/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_SNIPER)
-	set_burst_amount(BURST_AMOUNT_TIER_1)
-	accuracy_mult = BASE_ACCURACY_MULT * 3
-	scatter = SCATTER_AMOUNT_TIER_8
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_5
-	damage_falloff_mult = 0
-
-/obj/item/weapon/gun/rifle/lw317/dmr/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/barrel = new /obj/item/attachable/lw317barrel(src)
-	barrel.flags_attach_features &= ~ATTACH_REMOVABLE
-	barrel.Attach(src)
-	update_attachable(barrel.slot)
-
-	var/obj/item/attachable/scope/variable_zoom/canc/scope = new(src)
-	scope.flags_attach_features &= ~ATTACH_REMOVABLE
-	scope.Attach(src)
-	update_attachable(scope.slot)
 
 	//-------------------------------------------------------
 
@@ -1563,39 +1509,9 @@
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
 /obj/item/weapon/gun/rifle/m49a/army
-	desc = "The M49A battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams."
+	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
-
-/obj/item/weapon/gun/rifle/m49a/forecon
-	name = "\improper M49A2 battle rifle"
-	desc = "An early modification of the M49A marksman rifle, the A2 has a tweaked gas-system and fire-control-group, giving it better cyclic rate and a two round burst-fire mode. Fielded almost exclusively by FORECON units in the USCM. This one is painted in a fresh coat of the newer Humbrol 76 camouflage."
-	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
-	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/extended_barrel, /obj/item/attachable/verticalgrip)
-	map_specific_decoration = FALSE
-	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
-	item_icons = list(
-		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
-		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
-		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
-	)
-
-/obj/item/weapon/gun/rifle/m49a/forecon/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
-	set_burst_amount(BURST_AMOUNT_TIER_2)
-	set_burst_delay(FIRE_DELAY_TIER_8)
-
-/obj/item/weapon/gun/rifle/m49a/forecon/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/m49a_barrel/forecon/integrated = new(src)
-	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
-	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
-	if(old_barrel)
-		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
-		qdel(old_barrel)
-	integrated.Attach(src)
-	update_attachable(integrated.slot)
 
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m49a/pve
