@@ -188,21 +188,21 @@
 /obj/item/ammo_box/magazine/m49a/a19
 	name = "magazine box (A19 HV M49A x 16)"
 	overlay_gun_type = "_a19"
-	overlay_ammo_type = "_hv"
-	overlay_content = "_hv"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
 	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom
 
 /obj/item/ammo_box/magazine/m49a/a19/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m49a/a19/impact
-	name = "magazine box (A19 Impact M49A x 16)"
-	overlay_ammo_type = "_impact"
-	overlay_content = "_impact"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/impact
+/obj/item/ammo_box/magazine/m49a/a19/explosive
+	name = "magazine box (A19 Explosive M49A x 16)"
+	overlay_ammo_type = "_expl"
+	overlay_content = "_expl"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/explosive
 
-/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+/obj/item/ammo_box/magazine/m49a/a19/explosive/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m49a/a19/incen
@@ -218,7 +218,7 @@
 	name = "magazine box (A19 DU M49A x 16)"
 	overlay_ammo_type = "_toxin"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 /obj/item/ammo_box/magazine/m49a/a19/pve/empty
 	empty = TRUE
