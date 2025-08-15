@@ -319,3 +319,37 @@
 	desc = "The flag of the Union of Progressive Peoples. Unity through Strength, Freedom through Unity."
 	icon_state = "flag_upp_planted"
 	flag_type = /obj/item/flag/plantable/upp
+
+
+/obj/item/flag/plantable/gbm
+	name = "\improper Green Banner Movement flag"
+	desc = "A simple green flag. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_gbm"
+	flag_type = /obj/structure/flag/plantable/gbm
+	faction = FACTION_ECOTERROR
+
+/obj/structure/flag/plantable/gbm
+	name = "\improper Green Banner Movement flag"
+	desc = "The flag of the Green Banner Movement - radical ecoterrorist cell that went quiet a few years ago but suddenly re-emerged more violent than ever."
+	icon_state = "flag_gbm_planted"
+	flag_type = /obj/item/flag/plantable/gbm
+
+
+
+/obj/item/flag/plantable/revanchist
+	name = "\improper black UPP flag"
+	desc = "Black flag bearing a white Union of Progressive Peoples' seal. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_revanchists"
+	flag_type = /obj/structure/flag/plantable/revanchist
+	faction = FACTION_REVANCHISTS
+	play_warcry = TRUE
+	warcry_sound = 'sound/effects/flag_upp_warcry.ogg'
+	warcry_extra_sound = 'sound/effects/flag_upp_warcry_extra.ogg'
+
+/obj/structure/flag/plantable/revanchist
+	name = "\improper black UPP flag"
+	desc = "Black flag bearing a white Union of Progressive Peoples' seal."
+	icon_state = "flag_revanchists_planted"
+	flag_type = /obj/item/flag/plantable/revanchist

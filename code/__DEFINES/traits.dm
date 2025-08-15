@@ -415,7 +415,7 @@ GLOBAL_LIST(trait_name_map)
 			var/val = GLOB.traits_by_type[key][tname]
 			.[val] = tname
 
-
+#define TRAIT_PHEROMONES_COVERED "t_pheromones_covered"
 
 //trait SOURCES
 /// Example trait source
