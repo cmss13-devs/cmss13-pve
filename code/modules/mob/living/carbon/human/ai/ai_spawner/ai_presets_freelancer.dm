@@ -57,7 +57,7 @@
 /datum/human_ai_equipment_preset/freelancer_eva/shotgunner/light_buck
 	name = "Seegson Private Standard (EVA, 16G Shotgun)"
 	desc = "Equipped for EVA, with a pump action M1771 loaded with light buckshot."
-	path = /datum/equipment_preset/other/seegson/shotgun/light_buck
+	path = /datum/equipment_preset/other/seegson/light_buck
 
 /datum/human_ai_equipment_preset/freelancer_eva/medic
 	name = "Seegson Private Standard (EVA, Medic)"
