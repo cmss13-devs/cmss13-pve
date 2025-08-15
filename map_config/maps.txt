@@ -77,14 +77,17 @@ endmap
 map lv295_blacksite
 endmap
 
+map si391_sekhmet_swamp
+endmap
+
 map bmg290_otogi_egress_point
 endmap
 
 map canyon_32b
 endmap
 
-Kleschers-Research-Site
 map kleschers_research_site
+endmap
 
 map taipei_station
 endmap
