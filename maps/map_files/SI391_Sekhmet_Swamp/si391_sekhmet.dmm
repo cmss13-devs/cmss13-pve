@@ -15,10 +15,6 @@
 /obj/structure/largecrate/random/case/double,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_gen)
-"aaP" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/strata,
-/area/space)
 "abe" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/red1,
@@ -109,13 +105,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/warehouse)
-"adn" = (
-/obj/item/prop/colony/canister,
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/turf/open/floor/strata/floor3,
-/area/space)
 "adG" = (
 /obj/structure/platform/strata{
 	dir = 1;
@@ -1498,8 +1487,8 @@
 	color = "#aeaeae"
 	},
 /obj/item/storage/pouch/syringe{
-	pixel_x = 2;
-	pixel_y = 10
+	pixel_x = 5;
+	pixel_y = -4
 	},
 /obj/item/storage/pouch/medical{
 	pixel_x = -8;
@@ -1761,10 +1750,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/east_jungle)
-"aYg" = (
-/obj/structure/barricade/handrail/wire,
-/turf/open/floor/kutjevo/multi_tiles/southeast,
-/area/space)
 "aYy" = (
 /obj/structure/stairs,
 /turf/open/floor/plating/kutjevo,
@@ -2089,9 +2074,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
-"bmW" = (
-/turf/closed/wall/shiva/prefabricated,
-/area/space)
 "bno" = (
 /obj/structure/mirror{
 	pixel_x = 0;
@@ -2133,13 +2115,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/southeast_road)
-"bpr" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/item/weapon/gun/pill,
-/turf/open/floor/carpet,
-/area/sekhmet/int_heavy/low_level_rsr)
 "bpy" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -2446,9 +2421,6 @@
 	color = "#a39e99"
 	},
 /area/sekhmet/outside/swamp)
-"bzL" = (
-/turf/open/floor/kutjevo/multi_tiles/west,
-/area/space)
 "bzV" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -2981,14 +2953,6 @@
 "bRC" = (
 /obj/structure/surface/table/almayer{
 	color = "#aeaeae"
-	},
-/obj/item/storage/syringe_case{
-	pixel_x = -6;
-	pixel_y = -2
-	},
-/obj/item/storage/syringe_case{
-	pixel_x = -4;
-	pixel_y = 9
 	},
 /obj/item/storage/pouch/first_responder,
 /obj/structure/machinery/camera{
@@ -3707,11 +3671,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/int_glass/complex_generic)
-"coH" = (
-/turf/closed/wall/strata_ice/jungle{
-	color = "#ffcc33"
-	},
-/area/space)
 "coQ" = (
 /obj/structure/machinery/vending/coffee,
 /obj/structure/machinery/light{
@@ -3814,14 +3773,6 @@
 /obj/structure/platform_decoration/mineral/sandstone/runed,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/temple_outer)
-"csx" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2;
-	pixel_y = 0
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "csz" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
@@ -4859,9 +4810,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/southwest_complex)
-"dal" = (
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "daO" = (
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	color = "#999900";
@@ -4872,18 +4820,6 @@
 "dbj" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/water_filters)
-"dbo" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2;
-	pixel_y = 0
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "dbF" = (
 /obj/structure/platform/shiva/catwalk,
 /obj/effect/decal/cleanable/dirt,
@@ -6064,12 +6000,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
-"dMx" = (
-/obj/structure/platform_decoration/kutjevo/smooth{
-	dir = 4
-	},
-/turf/open/gm/dirt,
-/area/space)
 "dNg" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/auto_turf/strata_grass/layer1,
@@ -7262,9 +7192,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/research)
-"eDu" = (
-/turf/open/gm/river/no_overlay,
-/area/space)
 "eDx" = (
 /obj/structure/machinery/deployable/barrier,
 /turf/open/floor/strata/floor2,
@@ -7547,9 +7474,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
-"eNd" = (
-/turf/open/gm/dirt2,
-/area/space)
 "eNl" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -8628,18 +8552,6 @@
 "fse" = (
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/outside/east_jungle)
-"fsn" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = 2;
-	pixel_y = 0
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "fsF" = (
 /obj/structure/prop/invuln/darkness,
 /turf/closed/wall/upp_wall,
@@ -8848,16 +8760,9 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/tool/crew_monitor,
+/obj/item/tool/crew_monitor/upp,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/complex_operation)
-"fAX" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "fBb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -9220,14 +9125,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/southroad)
-"fKS" = (
-/obj/vehicle/powerloader/jd{
-	name = "\improper CosmosStal 12 Bogatyr Power Loader";
-	color = "#A2B4AC";
-	desc = "The CosmosStal 12 Bogatyr Power Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects based on the Caterpillar P-5000, first designed in January 29, 2025 by the Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere."
-	},
-/turf/open/floor/strata,
-/area/space)
 "fKU" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -9758,14 +9655,21 @@
 "fYr" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/surgical_tray,
-/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope{
+	pixel_x = 5;
+	pixel_y = -4
+	},
 /obj/item/tool/surgery/drapes{
 	pixel_x = -7;
 	pixel_y = 9
 	},
 /obj/item/device/flashlight/pen{
-	pixel_x = -5;
-	pixel_y = 8
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/clothing/gloves/latex{
+	pixel_x = 4;
+	pixel_y = 10
 	},
 /turf/open/floor/almayer/silverfull,
 /area/sekhmet/int_glass/hosptial)
@@ -10037,11 +9941,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/military_hangar)
-"ghy" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/portadialysis,
-/turf/open/floor/kutjevo/grey,
-/area/sekhmet/int_heavy/low_level_rsr)
 "ghB" = (
 /obj/structure/platform_decoration/shiva/catwalk{
 	dir = 8
@@ -10271,7 +10170,6 @@
 	layer = 2.79
 	},
 /obj/item/clothing/gloves/brown,
-/obj/item/clothing/accessory/storage/black_vest/brown_vest,
 /obj/item/clothing/accessory/storage/droppouch/upp,
 /obj/item/clothing/accessory/storage/webbing,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -10774,10 +10672,6 @@
 	color = "#ffcc33"
 	},
 /area/sekhmet/int_heavy/low_level_rsr)
-"gxb" = (
-/obj/structure/window/framed/upp/green,
-/turf/open/floor/plating/kutjevo,
-/area/space)
 "gxu" = (
 /obj/structure/largecrate/random/barrel/true_random,
 /obj/effect/decal/cleanable/dirt,
@@ -12069,10 +11963,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
-"hmY" = (
-/obj/structure/prop/broken_ladder,
-/turf/open/floor/corsat/marked,
-/area/space)
 "hnk" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
 /turf/open/auto_turf/sand_white/layer1,
@@ -12320,9 +12210,6 @@
 /obj/item/storage/beer_pack,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
-"huR" = (
-/turf/open/gm/coast/north,
-/area/space)
 "hva" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -12470,9 +12357,6 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/central_road)
-"hyX" = (
-/turf/open/floor/strata/multi_tiles/west,
-/area/space)
 "hzc" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1
@@ -13519,17 +13403,6 @@
 	},
 /turf/open/floor/carpet,
 /area/sekhmet/int_heavy/low_level_gen)
-"ieX" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "ify" = (
 /obj/structure/platform_decoration/strata/metal,
 /turf/open/gm/dirt,
@@ -15056,20 +14929,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/complex_operation)
-"jdL" = (
-/obj/structure/barricade/handrail/kutjevo{
-	density = 0;
-	name = "supports";
-	desc = "a series of metal shafts in a pattern meant for holding stuff up including you, fatty.";
-	pixel_y = 12;
-	layer = 2.5
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1;
-	layer = 2.98
-	},
-/turf/open/gm/dirt,
-/area/space)
 "jdV" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -15120,10 +14979,6 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/storage/pouch/tools/tactical{
-	pixel_x = -3;
-	pixel_y = -2
-	},
 /obj/item/storage/pouch/etool{
 	pixel_x = 6;
 	pixel_y = 5
@@ -15131,11 +14986,9 @@
 /obj/item/storage/pouch/construction,
 /obj/item/clothing/accessory/storage/webbing,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/pouch/tools,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
-"jeZ" = (
-/turf/open/floor/strata,
-/area/space)
 "jfe" = (
 /obj/item/storage/backpack/marine/ammo_rack{
 	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
@@ -15149,25 +15002,6 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_reg/warehouse)
-"jfg" = (
-/obj/structure/barricade/handrail/kutjevo{
-	density = 0;
-	name = "supports";
-	desc = "a series of metal shafts in a pattern meant for holding stuff up including you, fatty.";
-	pixel_y = 12;
-	layer = 2.5
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1;
-	layer = 2.98
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/turf/open/gm/dirt,
-/area/space)
 "jfF" = (
 /turf/closed/wall/upp_wall,
 /area/sekhmet/int_reg/warehouse)
@@ -15183,9 +15017,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/garage)
-"jfQ" = (
-/turf/open/auto_turf/strata_grass/layer1,
-/area/space)
 "jfR" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/chef/classic,
@@ -15285,10 +15116,6 @@
 "jjR" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/warehouse)
-"jkl" = (
-/obj/structure/largecrate/random/case/double,
-/turf/open/floor/strata/floor3,
-/area/space)
 "jky" = (
 /obj/structure/bed{
 	icon_state = "abed";
@@ -15300,9 +15127,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/complex_operation)
-"jkS" = (
-/turf/closed/wall/upp_wall/hull,
-/area/space)
 "jkU" = (
 /obj/structure/machinery/cm_vending/sorted/medical/marinemed/antag,
 /turf/open/floor/strata/floor2,
@@ -15310,10 +15134,6 @@
 "jkY" = (
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_glass/complex_generic)
-"jld" = (
-/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
 "jlA" = (
 /obj/structure/platform/shiva/catwalk{
 	dir = 1
@@ -15488,20 +15308,6 @@
 /obj/effect/spawner/random/toy,
 /turf/open/floor/cmo,
 /area/sekhmet/int_heavy/low_level_gen)
-"jpj" = (
-/obj/structure/barricade/handrail/kutjevo{
-	density = 0;
-	name = "supports";
-	desc = "a series of metal shafts in a pattern meant for holding stuff up including you, fatty.";
-	pixel_y = 12;
-	layer = 2.5
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1;
-	layer = 2.98
-	},
-/turf/open/auto_turf/strata_grass/layer1,
-/area/space)
 "jpn" = (
 /obj/structure/platform/kutjevo/smooth{
 	layer = 2.98
@@ -15660,9 +15466,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_gen)
-"juc" = (
-/turf/open/gm/coast/south,
-/area/space)
 "jue" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -15859,9 +15662,6 @@
 "jAR" = (
 /turf/open/auto_turf/sand_white/layer0,
 /area/sekhmet/caves/temple)
-"jBj" = (
-/turf/open/auto_turf/strata_grass/layer0_mud,
-/area/space)
 "jBt" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 8
@@ -16114,10 +15914,6 @@
 	dir = 8
 	},
 /area/sekhmet/int_reg/comms_lower)
-"jJa" = (
-/obj/vehicle/train/cargo/trolley,
-/turf/open/floor/strata,
-/area/space)
 "jJo" = (
 /obj/structure/filingcabinet/chestdrawer{
 	pixel_y = 16;
@@ -17732,9 +17528,6 @@
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_reg/yard)
-"kHA" = (
-/turf/open/gm/coast/beachcorner/north_west,
-/area/space)
 "kHD" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -17764,10 +17557,6 @@
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
-"kJG" = (
-/obj/structure/fence,
-/turf/open/floor/strata/floor3,
-/area/space)
 "kJY" = (
 /obj/structure/flora/bush/ausbushes/var3/fernybush,
 /turf/open/gm/coast/beachcorner2/north_west,
@@ -18386,10 +18175,6 @@
 	},
 /turf/open/floor/interior/tatami,
 /area/sekhmet/int_heavy/low_level_gen)
-"lfr" = (
-/obj/vehicle/train/cargo/engine,
-/turf/open/floor/strata,
-/area/space)
 "lfE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -18869,13 +18654,15 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/device/binoculars/civ{
-	pixel_x = 5;
-	pixel_y = 2
-	},
 /obj/item/weapon/gun/pistol/np92/unloaded{
 	pixel_x = -5;
 	pixel_y = 7
+	},
+/obj/item/device/binoculars/civ{
+	pixel_x = 8;
+	pixel_y = 2;
+	view_range = 9;
+	desc = "A pair of binoculars with lower magnification that other models."
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/military_hangar)
@@ -19262,14 +19049,6 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/sekhmet/int_heavy/research)
-"lHo" = (
-/obj/structure/barricade/handrail/wire,
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 4
-	},
-/turf/open/floor/kutjevo/plate,
-/area/space)
 "lHt" = (
 /obj/structure/barricade/handrail/type_b{
 	layer = 3.01;
@@ -20465,9 +20244,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/military_hangar)
-"mpm" = (
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
 "mpB" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor/kutjevo/grey,
@@ -20513,10 +20289,6 @@
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/plating/warnplate/northwest,
 /area/sekhmet/shuttles/drop3)
-"mrL" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/strata/floor3,
-/area/space)
 "mrO" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/drinkingglasses{
@@ -20716,9 +20488,6 @@
 /obj/item/prop/rock,
 /turf/open/gm/dirt2,
 /area/sekhmet/caves/south_cave)
-"mzb" = (
-/turf/open/gm/coast/beachcorner/north_east,
-/area/space)
 "mzM" = (
 /obj/structure/cargo_container/hd/right,
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -21228,9 +20997,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/southwest_complex)
-"mQs" = (
-/turf/open/gm/dirt,
-/area/space)
 "mQx" = (
 /obj/structure/bed/chair{
 	buckling_y = 18;
@@ -21392,13 +21158,6 @@
 /obj/structure/flora/bush/ausbushes/reedbush,
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/sekhmet/outside/swamp)
-"mWZ" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "mXe" = (
 /obj/structure/flora/jungle/vines/light_1,
 /turf/closed/wall/rock{
@@ -21853,9 +21612,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/low_level_rsr)
-"nlG" = (
-/turf/open/floor/prison/bright_clean2,
-/area/space)
 "nlN" = (
 /obj/structure/prop/almayer/computers/sensor_computer1{
 	name = "colonial operations terminal";
@@ -22176,10 +21932,6 @@
 /area/sekhmet/int_glass/south_complex)
 "ntM" = (
 /obj/structure/machinery/optable,
-/obj/item/device/defibrillator/compact{
-	pixel_x = 0;
-	pixel_y = -6
-	},
 /turf/open/floor/almayer/silverfull,
 /area/sekhmet/int_glass/hosptial)
 "nud" = (
@@ -22472,9 +22224,6 @@
 /obj/structure/machinery/seed_extractor,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_glass/complex_generic)
-"nBW" = (
-/turf/open/gm/coast/beachcorner/south_west,
-/area/space)
 "nCg" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -22681,9 +22430,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/southwest_complex)
-"nJz" = (
-/turf/open/gm/river,
-/area/space)
 "nJI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/computer/PC{
@@ -24291,7 +24037,6 @@
 	color = "#5c5c3d"
 	},
 /obj/item/clothing/under/blackskirt,
-/obj/item/clothing/under/navy/officer,
 /obj/item/clothing/suit/storage/jacket/marine/corporate/grey,
 /obj/item/clothing/suit/storage/jacket/marine/corporate,
 /obj/item/clothing/under/colonist/workwear/blue,
@@ -24392,9 +24137,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/military_hangar)
-"oGG" = (
-/turf/open/floor/kutjevo/grey,
-/area/space)
 "oHr" = (
 /obj/structure/surface/rack{
 	color = "#6b675e";
@@ -24422,9 +24164,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/outside/southroad)
-"oHP" = (
-/turf/open/gm/coast/beachcorner2/south_west,
-/area/space)
 "oIk" = (
 /obj/structure/stairs{
 	dir = 8
@@ -25017,9 +24756,6 @@
 /obj/structure/flora/bush/ausbushes/palebush,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/sekhmet/outside/east_jungle)
-"pgK" = (
-/turf/open/floor/kutjevo/plate,
-/area/space)
 "phh" = (
 /obj/structure/closet{
 	pixel_x = -8;
@@ -25185,13 +24921,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor2,
 /area/sekhmet/int_glass/complex_generic)
-"pkH" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "plt" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader";
@@ -26168,17 +25897,6 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/sekhmet/int_heavy/low_level_rsr)
-"pWI" = (
-/obj/structure/platform/strata/metal{
-	dir = 8
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5;
-	pixel_x = 6
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "pWQ" = (
 /obj/structure/stairs{
 	dir = 4
@@ -26620,9 +26338,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
 /area/sekhmet/outside/temple_outer)
-"qlA" = (
-/turf/open/floor/corsat/marked,
-/area/space)
 "qlF" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_21";
@@ -27004,17 +26719,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
 /area/sekhmet/int_heavy/low_level_rsr)
-"qwa" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/turf/open/gm/dirt,
-/area/space)
-"qwp" = (
-/turf/open/floor/strata/fake_wood,
-/area/space)
 "qwF" = (
 /obj/structure/stairs,
 /turf/open/floor/plating/kutjevo,
@@ -27320,10 +27024,6 @@
 	},
 /turf/open/floor/strata/fake_wood,
 /area/sekhmet/int_glass/offices)
-"qIx" = (
-/obj/structure/largecrate,
-/turf/open/floor/strata/floor3,
-/area/space)
 "qIJ" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -27505,10 +27205,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/research)
-"qNh" = (
-/obj/structure/largecrate/random/barrel/true_random,
-/turf/open/floor/strata/floor3,
-/area/space)
 "qPd" = (
 /obj/vehicle/train/cargo/trolley,
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -27735,17 +27431,6 @@
 	},
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
-"qUE" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "W";
-	layer = 2.5
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "qVB" = (
 /obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
@@ -29131,10 +28816,6 @@
 	},
 /turf/open/floor/kutjevo/grey,
 /area/sekhmet/int_heavy/low_level_rsr)
-"rLn" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/strata/floor3,
-/area/space)
 "rLE" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/box/syringes{
@@ -29364,9 +29045,6 @@
 "rSm" = (
 /turf/open/floor/strata/floor3/east,
 /area/sekhmet/int_reg/warehouse)
-"rSt" = (
-/turf/open/gm/coast/beachcorner2/north_west,
-/area/space)
 "rSL" = (
 /obj/structure/platform/strata/metal,
 /obj/structure/prop/invuln/darkness,
@@ -29802,15 +29480,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_rsr)
-"sgA" = (
-/obj/structure/bed/chair{
-	buckling_y = 18;
-	dir = 8;
-	pixel_x = -3;
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/space)
 "sgE" = (
 /obj/structure/platform/kutjevo/smooth{
 	layer = 2.98
@@ -30584,14 +30253,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_reg/southwest_complex)
-"sEO" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 2;
-	pixel_x = 0
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "sES" = (
 /turf/open/floor/corsat/marked,
 /area/sekhmet/int_heavy/research)
@@ -31375,14 +31036,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/sekhmet/int_reg/military_hangar)
-"tfe" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "tfg" = (
 /obj/structure/machinery/photocopier,
 /turf/open/floor/strata/fake_wood,
@@ -31891,10 +31544,6 @@
 "twx" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/window/reinforced,
-/obj/item/storage/syringe_case{
-	pixel_x = 4;
-	pixel_y = 9
-	},
 /obj/item/storage/pouch/chem,
 /obj/item/tool/stamp{
 	pixel_x = -13;
@@ -32120,14 +31769,6 @@
 "tES" = (
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_heavy/low_level_rsr)
-"tFy" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/turf/open/gm/coast/beachcorner/north_west,
-/area/space)
 "tFR" = (
 /obj/structure/phone_base/colony_net{
 	phone_category = "Sekhmet Net";
@@ -32146,9 +31787,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_heavy/low_level_rsr)
-"tGW" = (
-/turf/open/gm/coast/east,
-/area/space)
 "tGX" = (
 /obj/structure/largecrate/supply/weapons{
 	pixel_x = -13;
@@ -32409,9 +32047,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_heavy/low_level_gen)
-"tNS" = (
-/turf/closed/wall/upp_wall,
-/area/space)
 "tNX" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -32749,13 +32384,6 @@
 /obj/structure/flora/jungle/vines/light_1,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/sekhmet/outside/east_jungle)
-"uaU" = (
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 4
-	},
-/turf/open/floor/kutjevo/multi_tiles/west,
-/area/space)
 "ubf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -33039,17 +32667,6 @@
 /obj/item/fuel_cell,
 /turf/open/floor/prison/bright_clean2,
 /area/sekhmet/int_heavy/low_level_gen)
-"ukB" = (
-/obj/structure/prop/structure_lattice{
-	dir = 4
-	},
-/obj/structure/prop/structure_lattice{
-	dir = 4;
-	pixel_y = 13;
-	layer = 3.02
-	},
-/turf/open/floor/strata/floor3,
-/area/space)
 "ukC" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	req_one_access = list(233)
@@ -33383,16 +33000,6 @@
 /obj/structure/stairs,
 /turf/open/floor/prison/bright_clean,
 /area/sekhmet/int_heavy/low_level_rsr)
-"uvT" = (
-/obj/structure/platform/strata/metal{
-	dir = 4
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "E";
-	pixel_x = -4
-	},
-/turf/open/floor/strata/multi_tiles/southwest,
-/area/space)
 "uwn" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.25
@@ -33426,17 +33033,17 @@
 	color = "#6b675e";
 	layer = 2.79
 	},
-/obj/item/weapon/knife/marine/kabar{
-	pixel_x = -1;
-	pixel_y = -2
-	},
-/obj/item/weapon/knife/marine/kabar{
-	pixel_x = 6;
-	pixel_y = -3
-	},
 /obj/item/weapon/knife/marine/bowie{
 	pixel_x = -3;
 	pixel_y = 4
+	},
+/obj/item/attachable/bayonet/canc{
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/obj/item/attachable/bayonet/canc{
+	pixel_x = 7;
+	pixel_y = -4
 	},
 /turf/open/floor/cmo,
 /area/sekhmet/int_heavy/low_level_gen)
@@ -34617,9 +34224,6 @@
 "vhq" = (
 /turf/open/gm/coast/south,
 /area/sekhmet/outside/temple_outer)
-"vhS" = (
-/turf/open/floor/plating/kutjevo,
-/area/space)
 "vih" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light{
@@ -34909,14 +34513,6 @@
 	},
 /turf/open/auto_turf/sand_white/layer0,
 /area/sekhmet/caves/west_cave)
-"vqA" = (
-/obj/structure/barricade/handrail/wire,
-/obj/structure/barricade/handrail/wire{
-	dir = 8;
-	layer = 2.991
-	},
-/turf/open/floor/kutjevo/plate,
-/area/space)
 "vqZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -35322,13 +34918,6 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
 /area/sekhmet/int_reg/ship1)
-"vFF" = (
-/obj/structure/barricade/handrail/wire{
-	dir = 8;
-	layer = 2.991
-	},
-/turf/open/floor/kutjevo/multi_tiles/west,
-/area/space)
 "vGM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -36476,12 +36065,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/sekhmet/int_glass/hosptial)
-"woJ" = (
-/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass{
-	dir = 1
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
 "wps" = (
 /obj/structure/stairs{
 	dir = 1
@@ -36635,7 +36218,12 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/device/binoculars/civ,
+/obj/item/device/binoculars/civ{
+	pixel_x = -7;
+	pixel_y = 3;
+	view_range = 9;
+	desc = "A pair of binoculars with lower magnification that other models."
+	},
 /turf/open/floor/carpet,
 /area/sekhmet/int_heavy/low_level_rsr)
 "wuu" = (
@@ -37053,17 +36641,6 @@
 /obj/structure/stairs,
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/garage)
-"wHB" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/obj/structure/machinery/prop/almayer/computer/PC{
-	dir = 4;
-	pixel_x = 5;
-	layer = 2.98
-	},
-/turf/open/floor/strata/floor3,
-/area/space)
 "wJm" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
@@ -37328,12 +36905,6 @@
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
-"wQV" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/turf/open/floor/strata/floor3,
-/area/space)
 "wQY" = (
 /obj/structure/platform/strata{
 	dir = 8;
@@ -37359,14 +36930,6 @@
 "wRx" = (
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/sekhmet/int_reg/military_hangar)
-"wRM" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/turf/open/gm/coast/west,
-/area/space)
 "wRQ" = (
 /obj/structure/bed/stool,
 /turf/open/floor/strata/fake_wood,
@@ -37573,6 +37136,10 @@
 /obj/structure/machinery/recharger{
 	pixel_x = -1;
 	pixel_y = 6
+	},
+/obj/item/device/defibrillator{
+	pixel_x = 0;
+	pixel_y = -13
 	},
 /turf/open/floor/almayer/silverfull,
 /area/sekhmet/int_glass/hosptial)
@@ -37901,9 +37468,6 @@
 	},
 /turf/open/floor/bcircuit,
 /area/sekhmet/int_heavy/low_level_rsr)
-"xgm" = (
-/turf/open/floor/strata/multi_tiles/southeast,
-/area/space)
 "xgx" = (
 /obj/structure/closet/crate/secure/upp,
 /turf/open/floor/prison/bright_clean2,
@@ -38561,7 +38125,9 @@
 	},
 /obj/item/device/binoculars/civ{
 	pixel_x = 3;
-	pixel_y = -9
+	pixel_y = -9;
+	view_range = 9;
+	desc = "A pair of binoculars with lower magnification that other models."
 	},
 /obj/item/weapon/gun/flare{
 	pixel_x = 1;
@@ -38669,12 +38235,6 @@
 	},
 /turf/open/floor/plating/kutjevo,
 /area/sekhmet/int_reg/warehouse)
-"xGq" = (
-/obj/structure/surface/table/almayer{
-	color = "#8B9490"
-	},
-/turf/open/floor/strata/floor3,
-/area/space)
 "xGv" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -39460,11 +39020,6 @@
 "yhs" = (
 /turf/open/gm/coast/east,
 /area/sekhmet/outside/temple_outer)
-"yhv" = (
-/obj/structure/machinery/optable,
-/obj/item/clothing/gloves/latex,
-/turf/open/floor/almayer/silverfull,
-/area/sekhmet/int_glass/hosptial)
 "yhG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -50398,7 +49953,7 @@ xvx
 lIn
 uEY
 cFu
-yhv
+ntM
 wlK
 mxU
 bQm
@@ -85425,16 +84980,16 @@ hCs
 hCs
 "}
 (284,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-jkS
-jkS
-jkS
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -85587,16 +85142,16 @@ gAD
 gAD
 "}
 (285,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -85749,16 +85304,16 @@ gAD
 gAD
 "}
 (286,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -85911,16 +85466,16 @@ gAD
 gAD
 "}
 (287,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86073,16 +85628,16 @@ gAD
 gAD
 "}
 (288,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86235,16 +85790,16 @@ gAD
 gAD
 "}
 (289,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86397,19 +85952,19 @@ gAD
 gAD
 "}
 (290,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-jkS
-jkS
-jkS
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86559,19 +86114,19 @@ gAD
 gAD
 "}
 (291,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-qlA
-wQV
-wQV
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86721,19 +86276,19 @@ gAD
 gAD
 "}
 (292,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-qlA
-wQV
-wQV
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -86883,19 +86438,19 @@ gAD
 gAD
 "}
 (293,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-jkS
-nlG
-hyX
-nlG
-qlA
-wQV
-wQV
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87045,19 +86600,19 @@ gAD
 gAD
 "}
 (294,1,1) = {"
-coH
-coH
-coH
-jkS
-jkS
-jkS
-nlG
-hyX
-nlG
-jkS
-jkS
-jkS
-jkS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87207,19 +86762,6 @@ gAD
 gAD
 "}
 (295,1,1) = {"
-coH
-jkS
-jkS
-jkS
-nlG
-nlG
-nlG
-hyX
-nlG
-nlG
-nlG
-nlG
-nlG
 gAD
 gAD
 gAD
@@ -87243,14 +86785,27 @@ gAD
 gAD
 gAD
 gAD
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-vFF
-vqA
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87369,13 +86924,6 @@ gAD
 gAD
 "}
 (296,1,1) = {"
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-nlG
 gAD
 gAD
 gAD
@@ -87405,14 +86953,21 @@ gAD
 gAD
 gAD
 gAD
-qIx
-tNS
-tNS
-tNS
-tNS
-tNS
-qwp
-aYg
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87531,16 +87086,6 @@ gAD
 gAD
 "}
 (297,1,1) = {"
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-nlG
-nlG
-nlG
-nlG
 gAD
 gAD
 gAD
@@ -87566,15 +87111,25 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-jeZ
-jkl
-qNh
-kkf
-kkf
-gxb
-qwp
-aYg
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87693,16 +87248,6 @@ gAD
 gAD
 "}
 (298,1,1) = {"
-coH
-jkS
-jkS
-mpm
-mpm
-vhS
-vhS
-tNS
-tNS
-tNS
 gAD
 gAD
 gAD
@@ -87728,15 +87273,25 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jld
-qwp
-aYg
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -87855,14 +87410,6 @@ gAD
 gAD
 "}
 (299,1,1) = {"
-coH
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -87890,21 +87437,29 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-fKS
-jeZ
-jeZ
-jeZ
-jeZ
-mpm
-qwp
-pgK
-vFF
-vFF
-vFF
-vFF
-vqA
-jpj
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88017,14 +87572,6 @@ gAD
 gAD
 "}
 (300,1,1) = {"
-coH
-jkS
-jkS
-nlG
-nlG
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -88052,21 +87599,29 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-jeZ
-kkf
-kkf
-mpm
-mpm
-vhS
-qwp
-qwp
-qwp
-qwp
-qwp
-qwp
-aYg
-jpj
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88179,14 +87734,6 @@ gAD
 gAD
 "}
 (301,1,1) = {"
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -88213,22 +87760,30 @@ gAD
 gAD
 gAD
 gAD
-fAX
-fAX
-qUE
-jkS
-jkS
-uvT
-uvT
-tNS
-qwp
-qwp
-qwp
-qwp
-qwp
-tNS
-pgK
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88341,14 +87896,6 @@ gAD
 gAD
 "}
 (302,1,1) = {"
-coH
-jkS
-jkS
-nlG
-nlG
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -88375,22 +87922,30 @@ gAD
 gAD
 gAD
 gAD
-tfe
-dal
-dal
-hmY
-jkS
-kJG
-kJG
-tNS
-tNS
-tNS
-bzL
-bzL
-bzL
-tNS
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88503,14 +88058,6 @@ gAD
 gAD
 "}
 (303,1,1) = {"
-coH
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -88537,22 +88084,30 @@ gAD
 gAD
 gAD
 gAD
-mWZ
-dal
-pkH
-jkS
-jkS
-pWI
-pWI
-tNS
-ukB
-tNS
-oGG
-oGG
-oGG
-tNS
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88665,14 +88220,6 @@ gAD
 gAD
 "}
 (304,1,1) = {"
-coH
-jkS
-jkS
-nlG
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -88699,22 +88246,30 @@ gAD
 gAD
 gAD
 gAD
-dbo
-csx
-fsn
-kkf
-kkf
-mpm
-mpm
-kkf
-dal
-dal
-dal
-dal
-dal
-tNS
-mpm
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88827,14 +88382,6 @@ gAD
 gAD
 "}
 (305,1,1) = {"
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -88861,22 +88408,30 @@ gAD
 gAD
 gAD
 gAD
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-qlA
-oGG
-qlA
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -88989,14 +88544,6 @@ gAD
 gAD
 "}
 (306,1,1) = {"
-coH
-jkS
-jkS
-nlG
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -89023,22 +88570,30 @@ gAD
 gAD
 gAD
 gAD
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-qlA
-oGG
-qlA
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89151,14 +88706,6 @@ gAD
 gAD
 "}
 (307,1,1) = {"
-coH
-coH
-jkS
-nlG
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -89185,22 +88732,30 @@ gAD
 gAD
 gAD
 gAD
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-xgm
-qlA
-oGG
-qlA
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89313,14 +88868,6 @@ gAD
 gAD
 "}
 (308,1,1) = {"
-jkS
-jkS
-jkS
-tNS
-nlG
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -89347,22 +88894,30 @@ gAD
 gAD
 gAD
 gAD
-ieX
-fAX
-qUE
-kkf
-kkf
-mpm
-mpm
-kkf
-dal
-dal
-dal
-dal
-dal
-tNS
-mpm
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89475,14 +89030,6 @@ gAD
 gAD
 "}
 (309,1,1) = {"
-jkS
-qwp
-qwp
-tNS
-tNS
-nlG
-nlG
-gxb
 gAD
 gAD
 gAD
@@ -89509,22 +89056,30 @@ gAD
 gAD
 gAD
 gAD
-mWZ
-dal
-pkH
-jkS
-jkS
-uvT
-uvT
-tNS
-ukB
-tNS
-gxb
-gxb
-gxb
-tNS
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89637,14 +89192,6 @@ gAD
 gAD
 "}
 (310,1,1) = {"
-jkS
-qwp
-qwp
-qwp
-vhS
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -89671,22 +89218,30 @@ gAD
 gAD
 gAD
 gAD
-sEO
-dal
-dal
-ukB
-jkS
-kJG
-kJG
-tNS
-tNS
-tNS
-bzL
-bzL
-bzL
-tNS
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89799,14 +89354,6 @@ gAD
 gAD
 "}
 (311,1,1) = {"
-jkS
-qwp
-qwp
-qwp
-mpm
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -89833,21 +89380,29 @@ gAD
 gAD
 gAD
 gAD
-csx
-csx
-fsn
-jkS
-jkS
-pWI
-pWI
-tNS
-qwp
-qwp
-qwp
-qwp
-qwp
-tNS
-pgK
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -89961,14 +89516,6 @@ gAD
 gAD
 "}
 (312,1,1) = {"
-jkS
-qwp
-qwp
-qwp
-vhS
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -89995,21 +89542,29 @@ gAD
 gAD
 gAD
 gAD
-mpm
-mpm
-kkf
-adn
-wHB
-mpm
-mpm
-gxb
-qwp
-qwp
-qwp
-qwp
-qwp
-qwp
-aYg
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90123,14 +89678,6 @@ gAD
 gAD
 "}
 (313,1,1) = {"
-jkS
-qwp
-qwp
-qwp
-vhS
-nlG
-nlG
-tNS
 gAD
 gAD
 gAD
@@ -90139,39 +89686,47 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-oGG
-hyX
-hyX
-oGG
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jJa
-jJa
-jJa
-mpm
-dal
-dal
-dal
-dal
-mpm
-xgm
-xgm
-sgA
-xgm
-xgm
-jld
-qwp
-pgK
-uaU
-uaU
-uaU
-uaU
-lHo
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90285,55 +89840,55 @@ gAD
 gAD
 "}
 (314,1,1) = {"
-jkS
-jkS
-jkS
-jkS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
 gAD
 gAD
 gAD
 gAD
 gAD
 gAD
-jeZ
-mpm
-hyX
-hyX
-mpm
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-lfr
-jeZ
-jeZ
-mpm
-dal
-dal
-dal
-dal
-mpm
-xgm
-xgm
-xgm
-xgm
-xgm
-mpm
-qwp
-aYg
-jfg
-qwa
-tFy
-wRM
-wRM
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90463,39 +90018,39 @@ gAD
 gAD
 gAD
 gAD
-jeZ
-mpm
-hyX
-hyX
-mpm
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-aaP
-jeZ
-mpm
-dal
-dal
-dal
-dal
-mpm
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-gxb
-qwp
-aYg
-jdL
-kHA
-rSt
-eDu
-eDu
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90625,39 +90180,39 @@ gAD
 gAD
 gAD
 gAD
-ukB
-kkf
-hyX
-hyX
-kkf
-ukB
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-jeZ
-ukB
-oGG
-hyX
-hyX
-oGG
-rLn
-mrL
-mrL
-xGq
-xGq
-xGq
-tNS
-qwp
-aYg
-jdL
-huR
-eDu
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90787,39 +90342,39 @@ gAD
 gAD
 gAD
 gAD
-tNS
-kkf
-hyX
-hyX
-kkf
-tNS
-kkf
-kkf
-kkf
-kkf
-ukB
-xGq
-xGq
-xGq
-tNS
-oGG
-hyX
-hyX
-oGG
-tNS
-tNS
-gxb
-gxb
-gxb
-gxb
-tNS
-qwp
-aYg
-jdL
-huR
-eDu
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -90933,55 +90488,55 @@ gAD
 gAD
 "}
 (318,1,1) = {"
-coH
-coH
 gAD
 gAD
 gAD
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-gxb
-mpm
-mpm
-gxb
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-tNS
-gxb
-mpm
-woJ
-gxb
-tNS
-tNS
-qwp
-qwp
-qwp
-qwp
-qwp
-qwp
-aYg
-jdL
-huR
-eDu
-eDu
-eDu
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91095,55 +90650,55 @@ gAD
 gAD
 "}
 (319,1,1) = {"
-coH
-coH
 gAD
 gAD
 gAD
-jBj
-jfQ
-tNS
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-tNS
-bzL
-bzL
-bzL
-bzL
-tNS
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-bmW
-tNS
-bzL
-bzL
-bzL
-bzL
-tNS
-tNS
-uaU
-uaU
-uaU
-uaU
-uaU
-uaU
-lHo
-jdL
-mzb
-tGW
-tGW
-tGW
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91257,55 +90812,55 @@ gAD
 gAD
 "}
 (320,1,1) = {"
-coH
-coH
 gAD
 gAD
 gAD
-jBj
-jBj
-tNS
-tNS
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-jfQ
-eNd
-eNd
-jfQ
-tNS
-tNS
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-jfQ
-eNd
-eNd
-jfQ
-tNS
-tNS
-qwa
-qwa
-qwa
-qwa
-qwa
-qwa
-qwa
-dMx
-mQs
-mQs
-mQs
-mQs
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91419,55 +90974,55 @@ gAD
 gAD
 "}
 (321,1,1) = {"
-coH
-coH
 gAD
 gAD
 gAD
-jBj
-jBj
-jBj
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-jfQ
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91581,55 +91136,55 @@ gAD
 gAD
 "}
 (322,1,1) = {"
-coH
-coH
-coH
-coH
-jfQ
-jBj
-jBj
-jBj
-jBj
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-mQs
-tNS
-tNS
-mQs
-mQs
-mQs
-mQs
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91743,55 +91298,55 @@ gAD
 gAD
 "}
 (323,1,1) = {"
-coH
-coH
-coH
-coH
-jfQ
-tNS
-tNS
-jBj
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-tNS
-tNS
-jfQ
-mQs
-mQs
-mQs
-tNS
-tNS
-mQs
-mQs
-mQs
-mQs
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -91905,55 +91460,55 @@ gAD
 gAD
 "}
 (324,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-tNS
-tNS
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-tNS
-tNS
-jfQ
-mQs
-mQs
-mQs
-tNS
-tNS
-mQs
-mQs
-mQs
-mQs
-tNS
-tNS
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92067,55 +91622,55 @@ gAD
 gAD
 "}
 (325,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-coH
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92229,55 +91784,55 @@ gAD
 gAD
 "}
 (326,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-coH
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92391,55 +91946,55 @@ gAD
 gAD
 "}
 (327,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-mQs
-coH
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92553,55 +92108,55 @@ gAD
 gAD
 "}
 (328,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-mQs
-jfQ
-jfQ
-jfQ
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92715,55 +92270,55 @@ gAD
 gAD
 "}
 (329,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-tNS
-tNS
-jfQ
-jfQ
-mQs
-mQs
-mQs
-jfQ
-jfQ
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -92877,55 +92432,55 @@ gAD
 gAD
 "}
 (330,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-vhS
-vhS
-tNS
-tNS
-jfQ
-kHA
-nBW
-mQs
-mQs
-jfQ
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -93039,55 +92594,55 @@ gAD
 gAD
 "}
 (331,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-vhS
-vhS
-tNS
-tNS
-mQs
-huR
-juc
-mQs
-mQs
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -93201,55 +92756,55 @@ gAD
 gAD
 "}
 (332,1,1) = {"
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-coH
-jfQ
-jfQ
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-tNS
-tNS
-tNS
-tNS
-jfQ
-mQs
-huR
-oHP
-nBW
-mQs
-mQs
-jfQ
-eNd
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -93363,55 +92918,55 @@ gAD
 gAD
 "}
 (333,1,1) = {"
-jkS
-jkS
-jkS
-jkS
-jkS
-coH
-tNS
-tNS
-tNS
-tNS
-tNS
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-mQs
-huR
-nJz
-oHP
-nBW
-mQs
-jfQ
-jfQ
-eNd
-eNd
-eNd
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-jfQ
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
-eNd
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
+gAD
 gAD
 gAD
 gAD
@@ -109047,7 +108602,7 @@ wiC
 knq
 kLQ
 kLQ
-bpr
+jAl
 wrU
 hBn
 ooK
@@ -111156,7 +110711,7 @@ bhx
 ihr
 ocP
 vXh
-ghy
+hHP
 hHP
 nSN
 ldY
