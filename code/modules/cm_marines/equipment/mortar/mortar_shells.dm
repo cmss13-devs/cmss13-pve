@@ -229,9 +229,9 @@
 /obj/item/mortar_shell/himat/antipersonnel/detonate(turf/T)
 	var/list/turf_list = RANGE_TURFS(7, T)
 	for(var/i = 1 to number_of_airburst)
-		sleep(1)
+		sleep(0.5 SECONDS)
 		var/turf/impact_tile = pick(turf_list)
-		create_shrapnel(impact_tile, 60, shrapnel_type = /datum/ammo/bullet/shrapnel/himat, cause_data = cause_data)
+		create_shrapnel(impact_tile, 16, shrapnel_type = /datum/ammo/bullet/shrapnel/himat, cause_data = cause_data)
 		cell_explosion(impact_tile, 20, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 /obj/item/mortar_shell/incendiary/himat
