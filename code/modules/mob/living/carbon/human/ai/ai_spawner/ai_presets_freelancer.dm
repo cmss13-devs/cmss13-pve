@@ -40,8 +40,8 @@
 	path = /datum/equipment_preset/other/seegson/standard
 
 /datum/human_ai_equipment_preset/freelancer_eva/grenade
-	name = "Seegson Private Standard (EVA, Canister M92)"
-	desc = "Equipped for EVA, with six shots of canister, 'buckshot' grenades."
+	name = "Seegson Private Standard (EVA, HEFA M92)"
+	desc = "Equipped for EVA, with six shots of fragmentation grenades."
 	path = /datum/equipment_preset/other/seegson/heavy/grenade
 
 /datum/human_ai_equipment_preset/freelancer_eva/machinegunner

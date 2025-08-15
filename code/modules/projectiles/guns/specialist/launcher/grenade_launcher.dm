@@ -304,9 +304,6 @@
 /obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
 	preload = /obj/item/explosive/grenade/custom/incendiary_plus
 
-/obj/item/weapon/gun/launcher/grenade/m92/canister
-	preload = /obj/item/explosive/grenade/high_explosive/airburst/canister
-
 //UPP DEDICATED GL
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp

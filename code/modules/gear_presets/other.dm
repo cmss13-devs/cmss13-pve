@@ -1384,7 +1384,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40/frag_smoke(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/canister(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/frag(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
 	var/random_belt = rand(1,3)
