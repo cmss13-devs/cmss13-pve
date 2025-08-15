@@ -349,6 +349,10 @@
 	new /obj/item/clothing/head/helmet/space/pressure(loc)
 	qdel(src)
 
+/obj/item/clothing/head/helmet/space/pressure/upp/New()
+	new /obj/item/clothing/head/helmet/marine/pressure/upp(loc)
+	qdel(src)
+
 /obj/item/clothing/head/helmet/marine/pressure/seegson
 	name = "\improper Seegson custom pressure helmet"
 	desc = "A custom manufactured pressure helmet for Seegson private security, or perhaps someone pretending to be them. Gives you the confidence of being backed by the company and their three week long firearm course."
