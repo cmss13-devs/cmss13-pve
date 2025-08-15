@@ -661,7 +661,7 @@
 	add_upp_uniform(new_human)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/upp/armband, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/frag, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/upp/frag, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/type47/np92, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)

@@ -1202,7 +1202,7 @@ and you're good to go.
 			var/datum/human_ai_brain/brain = check_if_ai.get_ai_brain()
 			if(brain)
 				if(istype(brain.primary_weapon, /obj/item/weapon/gun/launcher/grenade))
-					COOLDOWN_START(brain, stop_fire_cooldown, get_fire_delay()*2)
+					COOLDOWN_START(brain, stop_fire_cooldown, 40)
 			afterattack(target, user, params) //Special case for grenade launchers.
 			flags_gun_features &= ~GUN_BURST_FIRING
 			return NONE

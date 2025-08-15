@@ -245,7 +245,7 @@
 
 /datum/human_ai_equipment_preset/upp/eva/machinegunner_eva
 	name = "EVA UPP Squad Machinegunner"
-	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily."
+	desc = "The UPP’s answer to the USCM’s smartgunner. Shoots HEAP 10x27mm."
 	path = /datum/equipment_preset/upp/machinegunner/eva
 
 /datum/human_ai_equipment_preset/upp/eva/flamethrower_eva

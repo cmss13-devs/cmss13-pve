@@ -35,37 +35,37 @@
 	faction = "Freelancer (Seegson Private Security EVA)"
 
 /datum/human_ai_equipment_preset/freelancer_eva/rifleman
-	name = "Seegson Private Standard (SMG)"
-	desc = "Equipped for EVA, with a high capacity SMG."
+	name = "Seegson Private Standard (EVA, AP SMG)"
+	desc = "Equipped for EVA, with a high capacity AP SMG."
 	path = /datum/equipment_preset/other/seegson/standard
 
 /datum/human_ai_equipment_preset/freelancer_eva/grenade
-	name = "Seegson Private Standard (BFAB M92)"
-	desc = "Equipped for EVA, with six shots of bouncing fragmentation grenades."
+	name = "Seegson Private Standard (EVA, Canister M92)"
+	desc = "Equipped for EVA, with six shots of canister, 'buckshot' grenades."
 	path = /datum/equipment_preset/other/seegson/heavy/grenade
 
 /datum/human_ai_equipment_preset/freelancer_eva/machinegunner
-	name = "Seegson Private Standard (Slug Shotgun)"
+	name = "Seegson Private Standard (EVA, Machine Gun)"
 	desc = "Equipped for EVA, with a MAR-50 LMG."
 	path = /datum/equipment_preset/other/seegson/heavy
 
 /datum/human_ai_equipment_preset/freelancer_eva/shotgunner
-	name = "Seegson Private Standard (Slug Shotgun)"
+	name = "Seegson Private Standard (EVA, Slug Shotgun)"
 	desc = "Equipped for EVA, with a pump action shotgun loaded with slugs."
 	path = /datum/equipment_preset/other/seegson/heavy/shotgun
 
 /datum/human_ai_equipment_preset/freelancer_eva/shotgunner/light_buck
-	name = "Seegson Private Standard (16G Shotgun)"
+	name = "Seegson Private Standard (EVA, 16G Shotgun)"
 	desc = "Equipped for EVA, with a pump action M1771 loaded with light buckshot."
-	path = /datum/equipment_preset/other/seegson/heavy/shotgun/light_buck
+	path = /datum/equipment_preset/other/seegson/shotgun/light_buck
 
 /datum/human_ai_equipment_preset/freelancer_eva/medic
-	name = "Seegson Private Standard (Medic)"
+	name = "Seegson Private Standard (EVA, Medic)"
 	desc = "Equipped for EVA, with a high capacity SMG. Given a baseline of all medical gear."
 	path = /datum/equipment_preset/other/seegson/standard/support
 
 /datum/human_ai_equipment_preset/freelancer_eva/engineer
-	name = "Seegson Private Standard (Enginner)"
+	name = "Seegson Private Standard (EVA, Enginner)"
 	desc = "Equipped for EVA, with a MAR 40 rifle. Given a baseline of almost all engineering gear."
 	path = /datum/equipment_preset/other/seegson/standard/support/engineer
 

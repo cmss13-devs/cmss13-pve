@@ -927,6 +927,7 @@
 	rank = FACTION_FREELANCER
 	idtype = /obj/item/card/id/guest
 	faction = FACTION_FREELANCER
+	faction_group = list(FACTION_COLONIST, FACTION_FREELANCER)
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/civilian
 	assignment = "Seegson Employee"
@@ -1060,7 +1061,10 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_J_STORE)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	var/random_webbing = rand(1,6)
 	switch(random_webbing)
 		if(1)
@@ -1195,7 +1199,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_J_STORE)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	var/random_webbing = rand(1,6)
 	switch(random_webbing)
 		if(1)
@@ -1234,11 +1241,11 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/other/seegson/heavy/shotgun/light_buck
+/datum/equipment_preset/other/seegson//shotgun/light_buck
 	name = "Seegson Private Security (16G Shotgun, EVA)"
 	skills = /datum/skills/private_sec
 
-/datum/equipment_preset/other/seegson/heavy/shotgun/light_buck/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/other/seegson/shotgun/light_buck/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/xm51/withstock, WEAR_BACK)
@@ -1248,7 +1255,12 @@
 	if(prob(65))
 		add_facewrap(new_human)
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/heavy(new_human), WEAR_HEAD)
+	var/random_helmet = rand(1,2)
+	switch(random_helmet)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson(new_human), WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/pressure/seegson/scout(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector(new_human), WEAR_IN_HELMET)
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/spent_buckshot(new_human), WEAR_IN_HELMET)
@@ -1258,9 +1270,12 @@
 	add_boilersuit(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_J_STORE)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
 	var/random_belt = rand(1,3)
@@ -1313,7 +1328,10 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/on, WEAR_J_STORE)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
 	var/random_belt = rand(1,3)
@@ -1343,7 +1361,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/other/seegson/heavy/grenade
-	name = "Seegson Private Security (BFAB M92-, EVA)"
+	name = "Seegson Private Security (Canister M92, EVA)"
 	skills = /datum/skills/private_sec
 
 /datum/equipment_preset/other/seegson/heavy/grenade/load_gear(mob/living/carbon/human/new_human)
@@ -1360,13 +1378,13 @@
 	//uniform
 	add_boilersuit(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3/ap, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/ap, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/highpower, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/highpower, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/m40/frag_smoke(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/tmfrag(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/canister(new_human), WEAR_J_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist/seegson(new_human), WEAR_WAIST)
 	var/random_belt = rand(1,3)

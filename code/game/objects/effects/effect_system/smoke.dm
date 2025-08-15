@@ -284,7 +284,7 @@
 	if (..())
 		return
 	if(ishuman(creature))
-		var/mob/living/carbon/human/check_for_protection = affected_mob
+		var/mob/living/carbon/human/check_for_protection = creature
 		if(check_for_protection.get_flags_heat_protection(500) < 1) //This returns a 0 - 1 value, which corresponds to the percentage of protection based on what you're wearing and what you're exposed to.
 			return FALSE
 		if(prob(20))

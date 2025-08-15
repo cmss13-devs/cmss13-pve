@@ -299,7 +299,7 @@
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "sieg_smg"
-	max_rounds = 133
+	max_rounds = 86
 	reload_delay = 10
 	w_class = SIZE_MEDIUM
 	gun_type = /obj/item/weapon/gun/smg/seegson
