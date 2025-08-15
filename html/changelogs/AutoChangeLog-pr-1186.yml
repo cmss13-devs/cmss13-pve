@@ -1,0 +1,4 @@
+author: "Merrgear"
+delete-after: True
+changes:
+  - bugfix: "fixed loadout shotgun belt"
