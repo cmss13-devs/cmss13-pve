@@ -100,3 +100,12 @@ endmap
 
 map oread_garrison
 endmap
+
+map lv671
+endmap
+
+map oil_depot
+endmap
+
+map derelict_almayer_infested
+endmap
