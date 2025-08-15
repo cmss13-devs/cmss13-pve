@@ -469,10 +469,16 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
+//Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
 	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
 	icon_state = "uaflagpatch"
+
+/obj/item/clothing/accessory/patch/usa
+	name = "USA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
+	icon_state = "usaflagpatch"
 
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
@@ -1392,6 +1398,42 @@
 	icon_state = "usflag"
 	item_state = "usflag"
 
+/obj/item/clothing/accessory/paint/target
+	name = "target armor paint"
+	desc = "A set of paint tones to etch a target pattern into a Marine's armor."
+	icon_state = "target"
+	item_state = "target"
+
+/obj/item/clothing/accessory/paint/alcoholism
+	name = "smileyface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor."
+	icon_state = "smileyface"
+	item_state = "smileyface"
+
+/obj/item/clothing/accessory/paint/melancholy
+	name = "neutralface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor, though this one carries indifferent energy."
+	icon_state = "neutralface"
+	item_state = "neutralface"
+
+/obj/item/clothing/accessory/paint/cross
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a religious symbol into a Marine's armor."
+	icon_state = "cross"
+	item_state = "cross"
+
+/obj/item/clothing/accessory/paint/inscription
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
+	icon_state = "inscription"
+	item_state = "inscription"
+
+/obj/item/clothing/accessory/paint/fire
+	name = "flames armor paint"
+	desc = "A set of paint tones to etch straight heat into a Marine's armor."
+	icon_state = "mixtape"
+	item_state = "mixtape"
+
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
 	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
@@ -1430,8 +1472,24 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag
 	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
+		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
 
@@ -1463,12 +1521,6 @@
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/black_vest/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/plasma,
-	)
 
 //Pre-load For Army Props
 //===
@@ -1563,7 +1615,56 @@
 	storage_slots = 4
 
 
-//Pre-load For Props
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/device/flashlight/flare,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+//Partial Pre-load For Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
@@ -1605,6 +1706,12 @@
 	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
+	)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6

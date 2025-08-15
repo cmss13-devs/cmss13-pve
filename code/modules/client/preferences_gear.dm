@@ -591,6 +591,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
+/datum/gear/clothing/shotgun_holster_belt
+	display_name = "shotgun holster belt"
+	path = /obj/item/storage/belt/gun/shotgunholster
+	cost = 3
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/clothing/flak
 	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
@@ -664,6 +670,30 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/paint/usflag
 	display_name = "M3 Pattern US Flag Paint"
 	path = /obj/item/clothing/accessory/paint/usflag
+
+/datum/gear/paint/target
+	display_name = "M3 Pattern Target Paint"
+	path = /obj/item/clothing/accessory/paint/target
+
+/datum/gear/paint/smiley
+	display_name = "M3 Pattern Smiley-Face Paint"
+	path = /obj/item/clothing/accessory/paint/alcoholism
+
+/datum/gear/paint/neutral
+	display_name = "M3 Pattern Neutral-Face Paint"
+	path = /obj/item/clothing/accessory/paint/melancholy
+
+/datum/gear/paint/cross
+	display_name = "M3 Pattern Cross Paint"
+	path = /obj/item/clothing/accessory/paint/cross
+
+/datum/gear/paint/pandora
+	display_name = "M3 Pattern Inscription Paint"
+	path = /obj/item/clothing/accessory/paint/inscription
+
+/datum/gear/paint/flames
+	display_name = "M3 Pattern Fire Paint"
+	path = /obj/item/clothing/accessory/paint/fire
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -1559,6 +1589,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/patch_uscm/devils
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
+
+/datum/gear/misc/patch_uscm/ua
+	display_name = "United Americas flag shoulder patch"
+	path = /obj/item/clothing/accessory/patch/ua
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/misc/patch_uscm/usa
+	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
+	path = /obj/item/clothing/accessory/patch/usa
+	cost = 1
+	slot = WEAR_IN_ACCESSORY
 
 /datum/gear/misc/patch_upp
 	display_name = "UPPAC shoulder patch"

@@ -1138,6 +1138,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
 
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff
+	name = "variable IFF enabled zoom scope"
+
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/New()
+	..()
+	delay_mod = -FIRE_DELAY_TIER_2
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+/*
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+*/
+
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"
 	attach_icon = "slavicscope"
@@ -3468,7 +3482,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/type71/ag80
 	name = "\improper GP-45 grenade launcher"
-	desc = "Integrated grenade launcher yipee"
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
 	has_breech = TRUE
