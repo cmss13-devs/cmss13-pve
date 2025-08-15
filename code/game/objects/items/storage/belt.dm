@@ -88,11 +88,6 @@
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version lacks any combat functionality, and is commonly used by engineers to transport important tools."
 	icon_state = "utilitybelt"
 	item_state = "utility"
-	item_icons = list(
-		WEAR_J_STORE = 'icons/mob/humans/onmob/belt.dmi'
-	)
-	item_state_slots = list(
-		WEAR_J_STORE = "utility")
 	max_w_class = SIZE_MEDIUM
 	can_hold = list(
 		/obj/item/tool/crowbar,
@@ -123,7 +118,7 @@
 		/obj/item/tool/shovel/etool,
 		/obj/item/device/lightreplacer,
 	)
-	storage_slots = 11
+	storage_slots = 10
 
 	//Keep a track of how many tanks are inside the belt.
 	var/tanks = 0
@@ -182,7 +177,7 @@
 		/obj/item/tool/weldingtool,
 		/obj/item/tool/wirecutters,
 		/obj/item/tool/wrench,
-		/obj/item/tool/extinguisher,
+		/obj/item/tool/extinguisher/mini,
 		/obj/item/tool/shovel/etool,
 		/obj/item/stack/cable_coil,
 		/obj/item/weapon/gun/smg/nailgun/compact,
@@ -216,7 +211,6 @@
 		/obj/item/stack/sandbags_empty,
 		/obj/item/stack/sandbags,
 		/obj/item/defenses/handheld/sentry,
-		/obj/item/tool/extinguisher,
 	)
 
 /obj/item/storage/belt/utility/construction/full/fill_preset_inventory()
@@ -2318,7 +2312,6 @@
 	icon_state = "combatutility"
 	item_state= "utility"
 	item_icons = list(
-		WEAR_J_STORE = 'icons/mob/humans/onmob/belt.dmi',
 		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_1.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_1.dmi'
 	)
@@ -2389,13 +2382,6 @@
 
 /obj/item/storage/belt/gun/utility/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp70())
-	new /obj/item/tool/screwdriver(src)
-	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/weldingtool(src)
-	new /obj/item/tool/wirecutters(src)
-	new /obj/item/device/multitool(src)
-
-/obj/item/storage/belt/gun/utility/full/minus_pistol/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/tool/weldingtool(src)

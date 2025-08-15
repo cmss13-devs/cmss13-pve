@@ -1305,7 +1305,6 @@
 		/obj/item/device/analyzer,
 		/obj/item/explosive/plastic,
 		/obj/item/device/lightreplacer,
-		/obj/item/device/sentry_computer,
 		/obj/item/tank/emergency_oxygen,
 	)
 	cant_hold = list(/obj/item/tank/emergency_oxygen/double, /obj/item/tank/emergency_oxygen/engi)

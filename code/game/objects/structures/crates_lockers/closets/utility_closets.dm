@@ -35,6 +35,7 @@
 			new /obj/item/clothing/mask/breath(src)
 			new /obj/item/clothing/mask/gas(src)
 			new /obj/item/clothing/suit/space(src)
+			new /obj/item/storage/toolbox/emergency(src)
 			new /obj/item/clothing/head/helmet/space(src)
 			new /obj/item/tank/emergency_oxygen/engi(src)
 		if ("aid")
@@ -78,7 +79,7 @@
 	. = ..()
 
 	new /obj/item/clothing/suit/fire/firefighter(src)
-	new /obj/item/reagent_container/glass/canister/oxygen(src)
+	new /obj/item/tank/oxygen/yellow(src)
 	new /obj/item/tool/extinguisher(src)
 	new /obj/item/clothing/head/hardhat/red(src)
 

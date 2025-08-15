@@ -169,6 +169,7 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	time_to_unequip = 50
 	time_to_equip = 50
+	slowdown = 1.5
 	flags_inventory = BLOCKSHARPOBJ|NOPRESSUREDMAGE|BYPASSFORINJECTOR|PROTECTFROMWEATHER
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROT
@@ -395,7 +396,7 @@
 	name = "\improper Seegson light pressure suit"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY + 0.35
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
 	item_state = "scout_mercs_suit"
 	icon_state = "scout_mercs_suit"
 
@@ -403,14 +404,6 @@
 	. = ..()
 	var/obj/item/clothing/accessory/armband/new_band = pick(list(/obj/item/clothing/accessory/armband/med, /obj/item/clothing/accessory/armband/medgreen, /obj/item/clothing/accessory/armband/hydro))
 	attach_accessory(null, new new_band)
-
-/obj/item/clothing/suit/space/pressure/seegson/scout
-	name = "\improper Seegson light pressure suit"
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
-	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY + 0.35
-	item_state = "scout_mercs_suit"
-	icon_state = "scout_mercs_suit"
 
 /obj/item/clothing/suit/space/pressure/seegson/scout/engie_armband/Initialize()
 	. = ..()
