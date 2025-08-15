@@ -96,4 +96,4 @@
 /datum/human_ai_equipment_preset/eva_clf/bolt_eva
 	name = "UA Rebel, Sniper (Bolt, EVA)"
 	desc = "Armed with a bolt-action rifle."
-	path = /datum/equipment_preset/rebel/soldier/bolt/eva
+	path = /datum/equipment_preset/rebel/soldier/bolt_eva

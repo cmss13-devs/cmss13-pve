@@ -727,11 +727,11 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/rebel/soldier/bolt/eva
+/datum/equipment_preset/rebel/soldier/bolt_eva
 	name = "UA Rebel, Sniper (Basira-Armstrong, EVA)"
 	skills = /datum/skills/clf/sniper
 
-/datum/equipment_preset/rebel/soldier/bolt/eva/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/rebel/soldier/bolt_eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)

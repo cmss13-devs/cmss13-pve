@@ -1241,7 +1241,7 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/other/seegson//shotgun/light_buck
+/datum/equipment_preset/other/seegson/shotgun/light_buck
 	name = "Seegson Private Security (16G Shotgun, EVA)"
 	skills = /datum/skills/private_sec
 

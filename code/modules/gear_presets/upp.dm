@@ -1090,10 +1090,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 
 //*****************************************************************************************************/
-/datum/equipment_preset/upp/squadlead/eva
+/datum/equipment_preset/upp/squadlead_eva
 	name = "UPP Squad Sergeant (Equipped)"
 
-/datum/equipment_preset/upp/squadlead/eva/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/squadlead_eva/load_gear(mob/living/carbon/human/new_human)
 
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	//back

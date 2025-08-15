@@ -271,7 +271,7 @@
 /datum/human_ai_equipment_preset/upp/eva/sergeant
 	name = "EVA UPP Squad Sergeant"
 	desc = "The leader of a UPP squad. Functionally very similar to squad riflemen."
-	path = /datum/equipment_preset/upp/squadlead/eva
+	path = /datum/equipment_preset/upp/squadlead_eva
 
 //
 
