@@ -1094,7 +1094,7 @@
 	add_rebel_twe_shoes(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg/hp, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/simple, WEAR_IN_ACCESSORY)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -1465,7 +1465,7 @@
 	//limbs
 	add_rebel_twe_shoes(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg/hp, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/scalpel, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/emergency_oxygen, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sieg_smg, WEAR_IN_ACCESSORY)

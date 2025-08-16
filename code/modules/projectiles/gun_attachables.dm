@@ -2856,14 +2856,16 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "The stock, when extended, reduces recoil and improves accuracy, but at a reduction to handling and agility. This stock can collapse in, removing all positive and negative effects."
 	slot = "stock"
 	size_mod = 1
-	icon_state = "sieg_smg_folding"
-	attach_icon = "sieg_smg_folding"
+	icon_state = "sieg_smg_folding_a"
+	attach_icon = "sieg_smg_folding_a"
 	stock_activated = TRUE
 
-/obj/item/attachable/stock/smg/collapsible/seegson/Initialize(mapload, ...)
+/obj/item/attachable/stock/smg/collapsible/seegson/New()
 	. = ..()
-	if(prob(20))
+	if(prob(50))
 		stock_activated = FALSE
+		icon_state = "sieg_smg_folding"
+		attach_icon = "sieg_smg_folding"
 
 /obj/item/attachable/stock/smg/collapsible/seegson/apply_on_weapon(obj/item/weapon/gun/gun)
 	if(stock_activated)

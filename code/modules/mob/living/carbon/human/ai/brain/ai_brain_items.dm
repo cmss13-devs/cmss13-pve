@@ -24,6 +24,7 @@
 		"right_pocket" = null,
 		"armor" = null,
 		"uniform" = null,
+		"suit_store_pocket" = null,
 	)
 
 	/// Static list of storage slots that the AI pays attention to for inventory appraisal
@@ -130,6 +131,8 @@
 
 	if(!primary_weapon && isgun(equipment) && (slot == WEAR_J_STORE))
 		set_primary_weapon(equipment)
+	if(isstorage(equipment) && (slot == WEAR_J_STORE))
+		item_slot_appraisal_loop(equipment, "suit_slot_pocket")
 
 	if(istype(equipment, /obj/item/clothing/glasses/night) && (slot == WEAR_EYES))
 		has_nightvision = TRUE
@@ -158,6 +161,8 @@
 		container_refs["left_pocket"] = tied_human.l_store
 	if(isstorage(tied_human.r_store))
 		container_refs["right_pocket"] = tied_human.r_store
+	if(isstorage(tied_human.r_store))
+		container_refs["suit_slot_pocket"] = tied_human.s_store
 	if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
 		var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
 		container_refs["armor"] = storage_suit.pockets

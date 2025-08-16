@@ -309,12 +309,12 @@
 
 /obj/item/ammo_magazine/sieg_smg/ap
 	name = "\improper pan AP magazine (9mm)"
-	desc = "A 9mm armor-piercing submachinegun pan magazine."
+	desc = "A 9mm armor-piercing submachinegun pan magazine. The shape prevents it from fitting into magazine webbings."
 	default_ammo = /datum/ammo/bullet/pistol/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/sieg_smg/hp
 	name = "\improper pan hollowpoint magazine (9mm)"
-	desc = "A 9mm hollowpoint submachinegun pan magazine."
+	desc = "A 9mm hollowpoint submachinegun pan magazine. The shape prevents it from fitting into magazine webbings."
 	default_ammo = /datum/ammo/bullet/pistol/hollow
 	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
