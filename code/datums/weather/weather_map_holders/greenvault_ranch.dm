@@ -1,4 +1,4 @@
-/datum/weather_ss_map_holder/Greenvault_Ranch
+/datum/weather_ss_map_holder/greenvault_ranch
 	name = "Greenvault Ranch Map Holder"
 
 	min_time_between_events = 20 MINUTES
@@ -9,8 +9,8 @@
 		/datum/weather_event/heavy_rain,
 	)
 
-/datum/weather_ss_map_holder/Greenvault_Ranch/should_affect_area(area/A)
+/datum/weather_ss_map_holder/greenvault_ranch/should_affect_area(area/A)
 	return !CEILING_IS_PROTECTED(A.ceiling, CEILING_GLASS)
 
-/datum/weather_ss_map_holder/Greenvault_Ranch/should_start_event()
+/datum/weather_ss_map_holder/greenvault_ranch/should_start_event()
 	return TRUE
