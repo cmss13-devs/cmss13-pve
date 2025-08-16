@@ -1522,6 +1522,9 @@
 /obj/item/storage/pouch/machete/full/fill_preset_inventory()
 	new /obj/item/weapon/sword/machete(src)
 
+/obj/item/storage/pouch/machete/fil/fill_preset_inventory()
+	new /obj/item/weapon/sword/machete/fil(src)
+
 /obj/item/storage/pouch/etool
 	name = "Type 50 entrenching tool pouch"
 	desc = "A pouch designed to carry the Type 50 entrenching tool. Sadly, not good for much else."

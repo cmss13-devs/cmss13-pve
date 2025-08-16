@@ -102,6 +102,12 @@
 	icon_state = "marine_brown"
 	desc = "A pair of brown boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
+/obj/item/clothing/shoes/marine/civilian/brown/knife
+	spawn_item_type = /obj/item/attachable/bayonet
+
+/obj/item/clothing/shoes/marine/civilian/brown/knife/fil
+	spawn_item_type = /obj/item/weapon/knife/marine/fil
+
 /obj/item/clothing/shoes/marine/civilian/jungle
 	icon_state = "marine_jungle"
 	desc = "A pair of jungle boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."

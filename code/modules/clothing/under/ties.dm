@@ -480,6 +480,11 @@
 	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
 	icon_state = "usaflagpatch"
 
+/obj/item/clothing/accessory/patch/france
+	name = "french insignia patch"
+	desc = "A fire-resistant shoulder patch with the flag of France, an independant nation found on Earth and their minor interstellar colonies."
+	icon_state = "french"
+
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
 	name = "USCM Topography Ribbon"

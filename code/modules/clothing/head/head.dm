@@ -451,6 +451,18 @@
 	icon_state = "corrections"
 	item_state = "corrections"
 
+/obj/item/clothing/head/cmcap/kepi
+	name = "french kepi"
+	desc = "An old traditional cap made by from the French military since the 19th century and still used by current French officers as a high old tradition and significance to the French military."
+	icon_state = "kepi"
+	item_state = "kepi"
+
+/obj/item/clothing/head/cmcap/kepi/auxiliary
+	name = "french expeditionary kepi "
+	desc = "The more comfortable and long range Kepi use either for the desert or jungle. Among favorite for foreign legionaires and other groups in France."
+	icon_state = "kepi_flap"
+	item_state = "kepi_flap"
+
 //============================//BERETS\\=================================\\
 //=======================================================================\\
 //Berets DO NOT have armor, so they have their own category. PMC caps are helmets, so they're in helmets.dm.
