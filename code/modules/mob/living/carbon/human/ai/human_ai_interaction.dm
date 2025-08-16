@@ -116,6 +116,9 @@
 	if(!(arePowerSystemsOn() || !panel_open))
 		return
 
+	if(layer == DOOR_OPEN_LAYER)
+		return
+
 	if(iszombie(ai_human))
 		ai_human.a_intent_change(INTENT_DISARM)
 		ai_human.do_click(src, "", list())

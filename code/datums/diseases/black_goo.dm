@@ -195,45 +195,49 @@
 		if(locate(/datum/disease/black_goo) in human.viruses)
 			to_chat(user, SPAN_XENOWARNING("<b>You sense your target is infected.</b>"))
 
-/obj/item/weapon/zombie_claws/afterattack(obj/O as obj, mob/user as mob, proximity)
+/obj/item/weapon/zombie_claws/afterattack(obj/possible_door as obj, mob/user as mob, proximity)
 	if(attempting_pry)
 		return
-	if(get_dist(src, O) > 1)
+	if(get_dist(src, possible_door) > 1)
 		return
-	if(istype(O, /obj/structure/machinery/door/airlock))
-		var/obj/structure/machinery/door/airlock/D = O
-		if(D.heavy)
-			to_chat(usr, SPAN_DANGER("[D] is too heavy to be forced open."))
+	if(istype(possible_door, /obj/structure/machinery/door/airlock))
+		var/obj/structure/machinery/door/airlock/door = possible_door
+		if(door.layer == DOOR_OPEN_LAYER)
 			return FALSE
-		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
+		if(door.heavy)
+			to_chat(usr, SPAN_DANGER("[door] is too heavy to be forced open."))
+			return FALSE
+		if(!door.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
 		attempting_pry = TRUE
-		user.visible_message(SPAN_DANGER("[user] jams their [name] into [O] and strains to rip it open."),
-		SPAN_DANGER("You jam your [name] into [O] and strain to rip it open."))
+		user.visible_message(SPAN_DANGER("[user] jams their [name] into [possible_door] and strains to rip it open."),
+		SPAN_DANGER("You jam your [name] into [possible_door] and strain to rip it open."))
 		playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, 1)
-		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE) && !(get_dist(src, O) > 1) && D.density)
-			user.visible_message(SPAN_DANGER("[user] forces [O] open with their [name]."),
-			SPAN_DANGER("You force [O] open with your [name]."))
-			D.open(1)
+		if(do_after(user, 3 SECONDS, INTERRUPT_INCAPACITATED|INTERRUPT_MOVED, BUSY_ICON_HOSTILE) && !(get_dist(src, possible_door) > 1) && door.density)
+			user.visible_message(SPAN_DANGER("[user] forces [possible_door] open with their [name]."),
+			SPAN_DANGER("You force [possible_door] open with your [name]."))
+			door.open(1)
 			attempting_pry = FALSE
 		else
 			attempting_pry = FALSE
 
-	else if(istype(O, /obj/structure/mineral_door/resin))
-		var/obj/structure/mineral_door/resin/D = O
-		if(D.isSwitchingStates)
+	else if(istype(possible_door, /obj/structure/mineral_door/resin))
+		var/obj/structure/mineral_door/resin/door = possible_door
+		if(door.layer == DOOR_OPEN_LAYER)
+			return FALSE
+		if(door.isSwitchingStates)
 			return
-		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
+		if(!door.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
 		attempting_pry = TRUE
-		user.visible_message(SPAN_DANGER("[user] jams their [name] into [D] and strains to rip it open."),
-		SPAN_DANGER("You jam your [name] into [D] and strain to rip it open."))
+		user.visible_message(SPAN_DANGER("[user] jams their [name] into [door] and strains to rip it open."),
+		SPAN_DANGER("You jam your [name] into [door] and strain to rip it open."))
 		playsound(user, 'sound/weapons/wristblades_hit.ogg', 15, TRUE)
-		if(do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE && !(get_dist(src, O) > 1)) && D.density)
+		if(do_after(user, 3 SECONDS, INTERRUPT_INCAPACITATED|INTERRUPT_MOVED, BUSY_ICON_HOSTILE && !(get_dist(src, possible_door) > 1)) && door.density)
 			attempting_pry = FALSE
-			user.visible_message(SPAN_DANGER("[user] forces [D] open with their [name]."),
-			SPAN_DANGER("You force [D] open with your [name]."))
-			D.open()
+			user.visible_message(SPAN_DANGER("[user] forces [door] open with their [name]."),
+			SPAN_DANGER("You force [door] open with your [name]."))
+			door.open()
 		else
 			attempting_pry = FALSE
 

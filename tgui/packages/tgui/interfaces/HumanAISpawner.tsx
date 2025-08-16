@@ -149,7 +149,7 @@ export const HumanAISpawner = (props) => {
                           />
                           <Button
                             icon="undo"
-                            onClick={() => setZombieDelimbMulti(null)}
+                            onClick={() => setZombieDelimbMulti(1)}
                           />
                         </Stack.Item>
                         <Stack.Item align="center" textAlign="center">

@@ -156,7 +156,7 @@
 	if(HAS_TRAIT(target, TRAIT_CLOAKED) && get_dist(tied_human, target) > cloak_visible_range)
 		return FALSE
 
-	if(!friendly_check(target))
+	if(!friendly_check(target) && !iszombie(tied_human))
 		return FALSE
 
 	return TRUE

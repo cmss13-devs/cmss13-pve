@@ -573,7 +573,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 
 	add_fingerprint(user)
 
-	if(istype(attacking_item, /obj/item/weapon/zombie_claws) && (welded || locked))
+	if(istype(attacking_item, /obj/item/weapon/zombie_claws) && (welded || locked) && layer == DOOR_CLOSED_LAYER)
 		var/obj/item/weapon/zombie_claws/zombie_pry = attacking_item
 		if(!zombie_pry.attempting_pry)
 			zombie_pry.attempting_pry = TRUE
@@ -581,7 +581,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 				SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 15 seconds."), \
 				SPAN_NOTICE("You hear tearing noises!"))
 
-			if(do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			if(do_after(user, 15 SECONDS, INTERRUPT_INCAPACITATED|INTERRUPT_MOVED, BUSY_ICON_HOSTILE))
 				user.visible_message(SPAN_NOTICE("[user] slams the door open [src]!"), \
 				SPAN_NOTICE("You slam the door open!"), \
 				SPAN_NOTICE("You hear metal screeching!"))
