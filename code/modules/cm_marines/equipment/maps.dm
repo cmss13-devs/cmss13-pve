@@ -149,7 +149,11 @@
 	desc = "A blank map, or at least you THINK there should be a map on this piece of laminated paper."
 	html_link = ""
 	color = "white"
-
+/obj/item/map/greenvault_ranch
+	name = "\improper Greenvault Ranch map"
+	desc = "They gave you the wrong maps. Again."
+	html_link = "images/0/0d/Kutjevo_a1.jpg"
+	color = "grey"
 /obj/item/map/taipei
 	name = "\improper Taipei Way-Station map"
 	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
@@ -175,6 +179,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_ICE_COLONY_V3 = new /obj/item/map/ice_colony_map_v3(),
 		MAP_WHISKEY_OUTPOST = new /obj/item/map/whiskey_outpost_map(),
 		MAP_BIG_RED = new /obj/item/map/big_red_map(),
+		MAP_GREENVAULT_RANCH = new /obj/item/map/greenvault_ranch(),
 		MAP_PRISON_STATION = new /obj/item/map/FOP_map(),
 		MAP_PRISON_STATION_V3 = new /obj/item/map/FOP_map_v3(),
 		MAP_DESERT_DAM = new /obj/item/map/desert_dam(),
