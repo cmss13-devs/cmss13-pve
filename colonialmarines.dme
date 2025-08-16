@@ -759,6 +759,7 @@
 #include "code\datums\weather\weather_map_holders\calliope_desert_bus.dm"
 #include "code\datums\weather\weather_map_holders\calliope_highway.dm"
 #include "code\datums\weather\weather_map_holders\faction_clash.dm"
+#include "code\datums\weather\weather_map_holders\Greenvault_Ranch.dm"
 #include "code\datums\weather\weather_map_holders\kleschers_research_site.dm"
 #include "code\datums\weather\weather_map_holders\lv295_blacksite.dm"
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
