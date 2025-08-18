@@ -12,7 +12,6 @@
 	indestructible = 1
 	force = 26
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	map_specific_decoration = TRUE
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	flags_item = TWOHANDED|NO_CRYO_STORE
 
@@ -26,7 +25,7 @@
 		/obj/item/ammo_magazine/rifle/m49a/penetrating,
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
 	)
 
 	fire_sound = 'sound/weapons/gun_m49a.ogg'
@@ -67,7 +66,7 @@
 	update_attachable(integrated.slot)
 
 /obj/item/weapon/gun/rifle/m49a_custom/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 21, "under_x" = 30, "under_y" = 11, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 31, "side_rail_y" = 18, "special_x" = 37, "special_y" = 16)
+	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 21, "under_x" = 30, "under_y" = 12, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 31, "side_rail_y" = 18, "special_x" = 37, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m49a_custom/set_gun_config_values()
 	..()
