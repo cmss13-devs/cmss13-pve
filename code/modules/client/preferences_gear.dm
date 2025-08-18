@@ -811,14 +811,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
 	path = /obj/item/prop/magazine/dirty
 
 /datum/gear/toy/mags/boots
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/mags/boots/boots_magazine_one
 	display_name = "Boots Issue No.117"
@@ -847,7 +847,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/card
 	cost = 1
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/card/ace_of_spades
 	display_name = "Card, ace of spades"
@@ -1157,7 +1157,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
@@ -1173,7 +1173,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/l54
 	display_name = "L54 Pistol"
@@ -1205,7 +1205,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink
 	category = "Canned drinks"
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/drink/water
 	display_name = "Bottled water"
@@ -1256,7 +1256,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink/alcohol
 	cost = 3 //Illegal in military.
-	allowed_origins = USCM_ORIGINS // UPP stricter on enforcement, I figure
+	allowed_origins = NON_UPP_ORIGINS // UPP stricter on enforcement, I figure
 
 /datum/gear/drink/alcohol/ale
 	display_name = "Weyland-Yutani IPA Ale"
@@ -1315,7 +1315,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/flask/wy
 	display_name = "WY flask"
 	path = /obj/item/reagent_container/food/drinks/flask/weylandyutani
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /*
 //================================================
@@ -1367,7 +1367,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged
 	category = "Food (packaged)"
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/snack_packaged/beef_jerky
 	display_name = "Beef jerky"
@@ -1442,7 +1442,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/smoking
 	category = "Smoking"
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/smoking/cigarette
 	display_name = "Cigarette"
