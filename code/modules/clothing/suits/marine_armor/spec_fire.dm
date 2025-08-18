@@ -1,10 +1,11 @@
 /obj/item/clothing/suit/storage/marine/M35
 	name = "\improper M35 pyrotechnician armor"
-	desc = "A custom set of M35 armor designed for use by USCM Pyrotechnicians. Prototype cooling and heat dissipation systems ensure the wearer is effectively fireproof."
+	desc = "A custom set of M35 armor designed for use by USCM Pyrotechnicians. Prototype cooling and heat dissipation systems ensure the wearer is effectively fireproof, but leaves them more susceptible to overpressure waves."
 	icon_state = "pyro_armor"
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_LOW
 	light_range = 5
 	fire_intensity_resistance = BURN_LEVEL_TIER_1
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
