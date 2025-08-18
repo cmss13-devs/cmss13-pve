@@ -158,6 +158,9 @@
 	can_bloody = FALSE
 	supports_surgery = FALSE
 
+/turf/open/void/show_pipes
+	intact_tile = FALSE
+
 /turf/open/void/vehicle
 	density = TRUE
 	opacity = TRUE

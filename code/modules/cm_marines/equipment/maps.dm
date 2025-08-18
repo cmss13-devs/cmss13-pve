@@ -163,6 +163,12 @@
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/bay_torch
+	name = "\improper SS Torch deck layout map"
+	desc = "A large fold out diagram of the six decks of the SS Torch"
+	html_link = ""
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()

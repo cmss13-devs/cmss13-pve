@@ -4,6 +4,7 @@
 /area/torch/bridgedeck/maintenance
 	name = "Bridge Maintenance"
 	icon_state = "maintcentral"
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/bridgedeck/maintenance/bridge
 	name = "\improper Bridge Shield Generator"
@@ -24,6 +25,10 @@
 	name = "Bridge Fore Port Maintenance"
 	icon_state = "fpmaint"
 
+/area/torch/bridgedeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
+
+
 /area/torch/bridgedeck/hallway/fore
 	name = "\improper Bridge Fore Hallway"
 	icon_state = "hallF"
@@ -38,17 +43,21 @@
 
 /area/torch/bridgedeck/maintenance/substation // First Deck (Z-4)
 	name = "Bridge Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/bridgedeck/safe_room
 	name = "\improper Bridge Safe Room"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/bridgedeck/bridge
 	name = "\improper SEV Torch Bridge"
 	icon_state = "bridge"
+	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/torch/bridgedeck/bridge_hallway
 	name = "\improper Bridge Access Hallway"
 	icon_state = "bridge_hallway"
+	minimap_color = MINIMAP_AREA_JUNGLE
 
 /area/torch/bridgedeck/bridge_hallway/port
 	name = "\improper Bridge Port Access Hallway"
@@ -58,13 +67,16 @@
 
 /area/torch/bridgedeck/storage
 	name = "\improper Bridge Storage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/bridgedeck/aux_eva
 	name = "\improper Command EVA Storage"
 	icon_state = "eva"
+	minimap_color = MINIMAP_SQUAD_BRAVO
 
 /area/torch/bridgedeck/disciplinary_board_room
 	name = "\improper Disciplinary Board Room"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/bridgedeck/disciplinary_board_room/deliberation
 	name = "\improper Deliberation Room"
@@ -72,22 +84,27 @@
 /area/torch/bridgedeck/meeting_room
 	name = "\improper Command Meeting Room"
 	icon_state = "bridge_meeting"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/bridgedeck/sea
 	icon_state = "heads_sea"
 	name = "\improper Command - SEA's Office"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/bridgedeck/co
 	icon_state = "heads_cap"
 	name = "\improper Command - CO's Office"
+	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/torch/bridgedeck/co_bed
 	icon_state = "heads_cap"
 	name = "\improper Command - CO's Quarters"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/bridgedeck/cl
 	icon_state = "heads_cl"
 	name = "\improper Command - CL's Office"
+	minimap_color = MINIMAP_SQUAD_PMC
 
 /area/torch/bridgedeck/cl/backroom
 	icon_state = "heads_cl"
@@ -96,38 +113,48 @@
 /area/torch/bridgedeck/rd
 	icon_state = "heads_rd"
 	name = "\improper Command - CSO's Office"
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/torch/bridgedeck/sgr
 	icon_state = "heads_sr"
 	name = "\improper Command - SCGR's Office"
+	minimap_color = MINIMAP_SQUAD_PMC
+
 
 /area/torch/bridgedeck/maintenance/auxsolarbridge
 	name = "Solar Maintenance - Bridge"
 	icon_state = "SolarcontrolS"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/bridgedeck/cmo
 	icon_state = "heads_cmo"
 	name = "\improper Command - CMO's Office"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/bridgedeck/ce
 	icon_state = "heads_ce"
 	name = "\improper Engineering - CE's Office"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/bridgedeck/cos
 	icon_state = "heads_hos"
 	name = "\improper Command - CoS' Office"
+	minimap_color = MINIMAP_AREA_SEC
 
 /area/torch/bridgedeck/xo
 	icon_state = "heads_hop"
 	name = "\improper Command - XO's Office"
+	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/torch/bridgedeck/bridgecheck
 	name = "\improper Bridge Deck Security Checkpoint"
 	icon_state = "checkpoint"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/firstdeck/maintenance
 	name = "First Deck Maintenance"
 	icon_state = "maintcentral"
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/firstdeck/maintenance/aftstarboard
 	name = "First Deck Aft Starboard Maintenance"
@@ -157,6 +184,9 @@
 	name = "\improper First Deck Teleporter"
 	icon_state = "teleporter"
 
+/area/torch/firstdeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
+
 /area/torch/firstdeck/hallway/fore
 	name = "\improper First Deck Fore Hallway"
 	icon_state = "hallF"
@@ -174,20 +204,27 @@
 
 /area/torch/firstdeck/safe_room/medical
 	name = "\improper Medical Safe Room"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/firstdeck/maintenance/substation // First Deck (Z-4)
 	name = "First Deck Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/firstdeck/fuelbay
 	name = "\improper Auxiliary Fuel Bay"
 	icon_state = "engineering"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/firstdeck/nuke_storage
 	name = "\improper Vault"
 	icon_state = "nuke_storage"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/firstdeck/bathroom
 	name = "\improper First Deck Head"
+
+/area/torch/firstdeck/security
+	minimap_color = MINIMAP_AREA_SEC
 
 /area/torch/firstdeck/security/wing
 	name = "\improper Security Wing"
@@ -236,20 +273,29 @@
 /area/torch/firstdeck/cryo
 	name = "\improper First Deck Cryogenic Storage"
 	icon_state = "Sleep"
+	minimap_color = MINIMAP_AREA_CELL_LOW
 
 /area/torch/firstdeck/chargebay
 	name = "\improper Mech Bay"
 	icon_state = "mechbay"
+	minimap_color = MINIMAP_AREA_RESEARCH_CAVE
+
 
 /area/torch/firstdeck/laboratory
 	name = "\improper Robotics Laboratory"
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/torch/firstdeck/robotics_office
 	name = "\improper Robotics Office"
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/torch/firstdeck/auxpower
 	name = "\improper Auxiliary Power Storage"
 	icon_state = "engine_smes"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
+
+/area/torch/firstdeck/medical
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/firstdeck/medical/hallway
 	name = "\improper Medical Public Hallway"
@@ -290,10 +336,12 @@
 /area/torch/firstdeck/medical/locker
 	name = "\improper Medical Locker Room"
 	icon_state = "locker"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/firstdeck/medical/equipstorage
 	name = "\improper Medical Equipment Storage"
 	icon_state = "medbay4"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/firstdeck/medical/foyer
 	name = "\improper Medical Foyer"
@@ -302,14 +350,17 @@
 /area/torch/firstdeck/medical/foyer/storeroom
 	name = "\improper Medical Storeroom"
 	icon_state = "medbay"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/firstdeck/medical/morgue/autopsy
 	name = "\improper Autopsy"
 	icon_state = "autopsy"
+	minimap_color = COLOR_BLACK
 
 /area/torch/firstdeck/counselor
 	name = "\improper Counselor's Office"
 	icon_state = "medbay3"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/firstdeck/counselor/therapy
 	name = "\improper Counselor's Therapy Room"
@@ -318,12 +369,18 @@
 /area/torch/firstdeck/hardstorage
 	name = "\improper Auxiliary Engineering Hard Storage"
 	icon_state = "engineering_storage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/firstdeck/thruster/d1port
 	name = "\improper First Deck Port Nacelle"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/firstdeck/thruster/d1starboard
 	name = "\improper First Deck Starboard Nacelle"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
+
+/area/torch/firstdeck/research
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/torch/firstdeck/research/entry
 	name = "\improper Research and Development Access"
@@ -332,6 +389,7 @@
 /area/torch/firstdeck/research/locker
 	name = "\improper Research Locker Room"
 	icon_state = "locker"
+	minimap_color = MINIMAP_AREA_RESEARCH_CAVE
 
 /area/torch/firstdeck/research/hallway
 	name = "\improper Research Hallway"
@@ -341,9 +399,6 @@
 	name = "\improper Research Paperwork Office"
 	icon_state = "devlab"
 
-/area/torch/firstdeck/research/locker
-	name = "\improper Research Locker Room"
-	icon_state = "locker"
 
 /area/torch/firstdeck/research/misc_lab
 	name = "\improper Miscellaneous Research"
@@ -356,6 +411,7 @@
 /area/torch/firstdeck/research/xenoflora_storage
 	name = "\improper Xenoflora Storage"
 	icon_state = "xeno_f_store"
+	minimap_color = MINIMAP_AREA_RESEARCH_CAVE
 
 /area/torch/firstdeck/research/development
 	name = "\improper Fabricator Lab"
@@ -388,10 +444,12 @@
 /area/torch/firstdeck/opscheck
 	name = "\improper First Deck Security Checkpoint"
 	icon_state = "checkpoint"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/firstdeck/armoury
 	name = "\improper Emergency Armory"
 	icon_state = "Warden"
+	minimap_color = MINIMAP_AREA_SEC
 
 /area/torch/firstdeck/armoury/access
 	name = "\improper Emergency Armory - Access"
@@ -399,19 +457,23 @@
 /area/torch/firstdeck/armoury/tactical
 	name = "\improper Emergency Armory - Tactical"
 	icon_state = "Tactical"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/firstdeck/conference
 	name = "Briefing Room"
 	icon_state = "briefing_room"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/firstdeck/safe_room
 	name = "\improper First Deck Safe Room"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/seconddeck
 
 /area/torch/seconddeck/maintenance
 	name = "Second Deck Maintenance"
 	icon_state = "maintcentral"
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/seconddeck/maintenance/aftstarboard
 	name = "Second Deck Aft Starboard Maintenance"
@@ -433,11 +495,11 @@
 	name = "Second Deck Central Maintenance"
 	icon_state = "maintcentral"
 
-/area/torch/seconddeck/hallway/seconddeck
-	name = "Second Deck Central Hallway"
-	icon_state = "hallC2"
+/area/torch/seconddeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
 
-area/torch/seconddeck/hallway/center
+
+/area/torch/seconddeck/hallway/center
 	name = "\improper Second Deck Stairwell"
 
 /area/torch/seconddeck/hallway/elevator
@@ -454,18 +516,22 @@ area/torch/seconddeck/hallway/center
 
 /area/torch/seconddeck/maintenance/substation
 	name = "Second Deck Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/prototype/engine
 	name = "\improper Prototype Fusion Reactor Chamber"
 	icon_state = "rust_reactor"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/seconddeck/prototype/control
 	name = "\improper Prototype Fusion Reactor Control Room"
 	icon_state = "engine_monitoring"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/seconddeck/armory
 	name = "\improper Vacant Armory"
 	icon_state = "Tactical"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/seconddeck/bluespace
 	name = "Bluespace Drive Containment"
@@ -482,41 +548,54 @@ area/torch/seconddeck/hallway/center
 /area/torch/seconddeck/atmos/storage
 	name = "\improper Atmospherics Storage"
 	icon_state = "atmos_storage"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/shieldbay
 	name = "Shield Bay"
 	icon_state = "engineering"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/borg_upload
 	name = "\improper Cyborg Upload Chamber"
 	icon_state = "ai_upload"
+	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/torch/seconddeck/robotics/surgery
 	name = "\improper Robotics Operating Theatre"
+	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/torch/seconddeck/cargo
 	name = "\improper Requisitions Office"
 	icon_state = "quart"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/seconddeck/maintenance/auxsolarport
 	name = "Solar Maintenance - Port"
 	icon_state = "SolarcontrolP"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/cargo
 	name = "Cargo Storage"
 	icon_state = "quartstorage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/seconddeck/research
 	name = "Research Storage"
 	icon_state = "toxstorage"
+	minimap_color = MINIMAP_AREA_RESEARCH_CAVE
 
 /area/torch/seconddeck/fuelbay/wastetank
 	name = "\improper Waste Tank"
 	icon_state = "engineering"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/fuelbay
 	name = "\improper Fuel Bay"
 	icon_state = "engineering"
+	minimap_color = MINIMAP_AREA_ENGI
+
+/area/torch/seconddeck/engineering
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/seconddeck/engineering/atmos
 	name = "\improper Atmospherics"
@@ -549,18 +628,22 @@ area/torch/seconddeck/hallway/center
 /area/torch/seconddeck/engineering/storage
 	name = "\improper Engineering Storage"
 	icon_state = "engineering_storage"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/medical
 	name = "Medical Storage"
 	icon_state = "medbay4"
+	minimap_color = MINIMAP_AREA_MEDBAY
 
 /area/torch/seconddeck/medical/morgue
 	name = "\improper Morgue"
 	icon_state = "morgue"
+	minimap_color = COLOR_BLACK
 
 /area/torch/seconddeck/tech
 	name = "Technical Storage"
 	icon_state = "storage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/seconddeck/maintenance/disposal
 	name = "Waste Disposal"
@@ -569,14 +652,19 @@ area/torch/seconddeck/hallway/center
 /area/torch/seconddeck/auxstarboard
 	name = "\improper Fore Starboard Solar Array"
 	icon_state = "panelsA"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/auxsolarport
 	name = "Solar Maintenance - Port"
 	icon_state = "SolarcontrolP"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/seconddeck/chapel
 	name = "\improper Unused Chapel"
 	icon_state = "chapel"
+
+/area/torch/thirddeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
 
 /area/torch/thirddeck/hallway/fore
 	name = "\improper Third Deck Fore Hallway"
@@ -593,6 +681,7 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/maintenance
 	name = "Third Deck Maintenance"
 	icon_state = "maintcentral"
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/thirddeck/maintenance/foreport
 	name = "Third Deck Fore Port Maintenance"
@@ -624,10 +713,12 @@ area/torch/seconddeck/hallway/center
 
 /area/torch/thirddeck/maintenance/substation
 	name = "Third Deck Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/thirddeck/cryo
 	name = "\improper Third Deck Cryogenic Storage"
 	icon_state = "Sleep"
+	minimap_color = MINIMAP_AREA_CELL_LOW
 
 /area/torch/thirddeck/cryo/bunk
 	name = "\improper Bunk Room"
@@ -643,13 +734,16 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/cryo/locker
 	name = "\improper Cryogenic Storage Wardrobe"
 	icon_state = "locker"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/thirddeck/habcheck
 	name = "\improper Third Deck Security Checkpoint"
 	icon_state = "checkpoint"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/thirddeck/safe_room
 	name = "\improper Third Deck Safe Room"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/thirddeck/teleporter
 	name = "\improper Third Deck Teleporter"
@@ -658,37 +752,49 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/recreation
 	name = "\improper Recreation"
 	icon_state = "crew_quarters"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/observation
 	name = "\improper Observation"
 	icon_state = "fitness"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/service_break_room
 	name = "\improper Service Break Room"
 	icon_state = "fitness"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/janitor
 	name = "\improper Custodial Storage Closet"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/thirddeck/chief_steward
 	name = "\improper Chief Steward's Office"
 	icon_state = "kitchen"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/commissary
 	name = "\improper Commissary"
 	icon_state = "crew_quarters"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/gym
 	name = "\improper Gym"
 	icon_state = "fitness"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/atmos
 	name = "\improper Auxiliary Atmospherics"
 	icon_state = "atmos"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/thirddeck/cabin
 	name = "\improper Vacant Cabins"
 	icon_state = "crew_quarters"
+	minimap_color = MINIMAP_AREA_CELL_VIP
+
+/area/torch/thirddeck/chapel
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/chapel/main
 	name = "\improper Chapel"
@@ -703,14 +809,19 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/office
 	name = "\improper Computer Lab"
 	icon_state = "conference"
+	minimap_color = MINIMAP_AREA_CELL_VIP
+
 
 /area/torch/thirddeck/tools
 	name = "Auxiliary Tool Storage"
 	icon_state = "auxstorage"
+	minimap_color = MINIMAP_AREA_ENGI
+
 
 /area/torch/thirddeck/hydroponics
 	name = "\improper Hydroponics"
 	icon_state = "hydro"
+	minimap_color = MINIMAP_SQUAD_ECHO
 
 /area/torch/thirddeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -718,24 +829,30 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/mess
 	name = "\improper Old Mess"
 	icon_state = "bar"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/hardstorage
 	name = "\improper Engineering Hard Storage"
 	icon_state = "engineering_storage"
+	minimap_color = MINIMAP_SQUAD_BRAVO
 
 /area/torch/thirddeck/d3port
 	name = "\improper Third Deck Port Nacelle"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/thirddeck/d3starboard
 	name = "\improper Third Deck Starboard Nacelle"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/thirddeck/brig
 	name = "\improper Permanent Brig"
 	icon_state = "brig"
+	minimap_color = MINIMAP_AREA_SEC
 
 /area/torch/thirddeck/mess
 	name = "\improper Mess Hall"
 	icon_state = "cafeteria"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/thirddeck/mess/galley
 	name = "\improper Galley"
@@ -748,12 +865,17 @@ area/torch/seconddeck/hallway/center
 /area/torch/thirddeck/disperser
 	name = "\improper Obstruction Field Disperser"
 	icon_state = "disperser"
+	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/thirddeck/old_mess
 	name = "\improper Old Mess"
 	icon_state = "bar"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/fourthdeck
+
+/area/torch/fourthdeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
 
 /area/torch/fourthdeck/hallway/fore
 	name = "\improper Fourth Deck Fore Hallway"
@@ -767,6 +889,7 @@ area/torch/seconddeck/hallway/center
 /area/torch/fourthdeck/maintenance
 	name = "Fourth Deck Maintenance"
 	icon_state = "maintcentral"
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/fourthdeck/maintenance/aft
 	name = "Fourth Deck Aft Maintenance"
@@ -794,62 +917,77 @@ area/torch/seconddeck/hallway/center
 
 /area/torch/fourthdeck/maintenance/substation
 	name = "Fourth Deck Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/fourthdeck/catwalks
 	name = "\improper Upper Hangar Deck"
 	icon_state = "hangar_catwalk_p"
+	minimap_color = MINIMAP_ICE
 
 /area/torch/fourthdeck/pathfinder
 	name = "\improper Pathfinder's Office"
 	icon_state = "pathfinder_office"
+	minimap_color = MINIMAP_SQUAD_INTEL
 
 /area/torch/fourthdeck/hangcheck
 	name = "\improper Fourth Deck Security Checkpoint"
 	icon_state = "checkpoint"
+	minimap_color = MINIMAP_AREA_SEC_CAVE
 
 /area/torch/fourthdeck/monitoring
 	name = "\improper Auxiliary Monitoring Room"
 	icon_state = "engine_monitoring"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/fourthdeck/port_storage
 	name = "Port Auxillary Storage"
 	icon_state = "auxstorage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/starboard_storage
 	name = "Starboard Auxillary Storage"
 	icon_state = "auxstorage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/eva
 	name = "\improper EVA Storage"
 	icon_state = "eva"
+	minimap_color = MINIMAP_SQUAD_BRAVO
 
 
 /area/torch/fourthdeck/diplomatic_office
 	name = "\improper Diplomatic Meeting Room"
 	icon_state = "crew_quarters"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/torch/fourthdeck/tools
 	name = "Primary Tool Storage"
 	icon_state = "primarystorage"
+	minimap_color = MINIMAP_AREA_ENGI
 
 /area/torch/fourthdeck/lounge
 	name = "\improper Lounge"
 	icon_state = "crew_quarters"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/fourthdeck/quartermaster/office
 	name = "\improper Supply Office"
 	icon_state = "quartoffice"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/quartermaster/sorting
 	name ="\improper Supply Sorting"
 	icon_state = "quartstorage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/quartermaster/storage/upper
 	name = "\improper Supply Upper Warehouse"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/quartermaster/deckchief
 	name = "\improper Deck Chief's Office"
 	icon_state = "quart"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fourthdeck/laundry
 	name = "\improper Laundry Room"
@@ -865,6 +1003,7 @@ area/torch/seconddeck/hallway/center
 /area/torch/fourthdeck/captainmess
 	name = "Officer's Mess"
 	icon_state = "bar"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/fourthdeck/adherent
 	name = "\improper Adherent Maintenence"
@@ -873,10 +1012,14 @@ area/torch/seconddeck/hallway/center
 /area/torch/fourthdeck/tcommsat/chamber
 	name = "\improper Telecoms Central Compartment"
 	icon_state = "tcomsatcham"
+	minimap_color = MINIMAP_AREA_COMMAND
 
 /area/torch/fourthdeck/tcommsat/computer
 	name = "\improper Telecoms Control Room"
 	icon_state = "tcomsatcomp"
+
+/area/torch/fifthdeck/hallway
+	minimap_color = MINIMAP_AREA_JUNGLE
 
 /area/torch/fifthdeck/hallway/fore
 	name = "\improper Fifth Deck Fore Hallway"
@@ -885,6 +1028,9 @@ area/torch/seconddeck/hallway/center
 /area/torch/fifthdeck/hallway/aft
 	name = "\improper Fifth Deck Aft Hallway"
 	icon_state = "hallA"
+
+/area/torch/fifthdeck/maintenance
+	minimap_color = MINIMAP_MARS_DIRT
 
 /area/torch/fifthdeck/maintenance/fifthdeck
 	name = "Fifth Deck Maintenance"
@@ -904,48 +1050,60 @@ area/torch/seconddeck/hallway/center
 
 /area/torch/fifthdeck/maintenance/substation
 	name = "Fifth Deck Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/fifthdeck/maintenance/substation_hanger
 	name = "Hangar Substation"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/fifthdeck/hangar
 	name = "\improper Hangar Deck"
 	icon_state = "hangar"
+	minimap_color = MINIMAP_SQUAD_INTEL
 
 /area/torch/fifthdeck/expedition
 	name = "\improper Expedition Preparation"
 	icon_state = "mining"
+	minimap_color = MINIMAP_SQUAD_INTEL
 
 /area/torch/fifthdeck/expedition/eva
 	name = "\improper Expedition EVA"
 	icon_state = "mining"
+	minimap_color = MINIMAP_SQUAD_BRAVO
 
 /area/torch/fifthdeck/expedition_storage
 	name = "\improper Hangar Expedition Storage"
 	icon_state = "mining"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fifthdeck/storage
 	name = "\improper Supply Warehouse"
 	icon_state = "quartstorage"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fifthdeck/shuttlefuel
 	name = "\improper Shuttle Fuel Bay"
 	icon_state = "toxstorage"
+	minimap_color = MINIMAP_AREA_ENGI_CAVE
 
 /area/torch/fifthdeck/exploration
 	name = "\improper Exploration Equipment"
 	icon_state = "exploration"
+	minimap_color = MINIMAP_AREA_CELL_HIGH
 
 /area/torch/fifthdeck/pilot
 	name = "\improper Pilot's Lounge"
 	icon_state = "pilot_lounge"
+	minimap_color = MINIMAP_SQUAD_INTEL
 
 /area/torch/fifthdeck/bar
 	name = "\improper Hidden Bar"
 	icon_state = "bar"
+	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/petrov
 	name = "\improper SRV Petrov"
+	minimap_color = MINIMAP_AREA_SHIP
 
 /area/torch/petrov/cell1
 	name = "\improper SRV Petrov - Isolation Cell 1"
@@ -1016,3 +1174,13 @@ area/torch/seconddeck/hallway/center
 /area/torch/guppy_hangar
 	name = "\improper Guppy"
 	icon_state = "shuttlered"
+
+/area/torch/fifthdeck/maintenance/infirmary
+	name = "\improper Auxiliary Infirmary"
+	icon_state = "medbay"
+	minimap_color = MINIMAP_AREA_MEDBAY
+
+/area/space/minimap_show
+	minimap_color = MINIMAP_SOLID
+	icon = 'icons/turf/torch.dmi'
+	icon_state = "bluenew"

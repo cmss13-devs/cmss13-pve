@@ -887,6 +887,13 @@
 	pill_type_to_fill = /obj/item/reagent_container/pill/tricordrazine
 	maptext_label = "Ti"
 
+/obj/item/storage/pill_bottle/citalopram
+	name = "\improper Citalopram pill bottle"
+	icon_state = "pill_canister7"
+	pill_type_to_fill = /obj/item/reagent_container/pill/citalopram
+	maptext_label = "Ci"
+	skilllock = SKILL_MEDICAL_DEFAULT
+
 //---------PILL PACKETS---------
 /obj/item/storage/pill_bottle/packet
 	name = "\improper pill packet"
