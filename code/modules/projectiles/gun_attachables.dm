@@ -3089,7 +3089,7 @@ Defined in conflicts.dm of the #defines folder.
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
-	max_range = 7
+	max_range = 11
 	slot = "under"
 	fire_sound = 'sound/weapons/gun_m92_attachable.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
