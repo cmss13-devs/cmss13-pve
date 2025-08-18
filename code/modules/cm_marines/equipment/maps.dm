@@ -190,6 +190,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_SI391_SEKHMET = new /obj/item/map/lazarus_landing_map(),
 		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
 		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
+		MAP_BOSENMORI_BASHO = new /obj/item/map/lazarus_landing_map(),
 		MAP_BIG_BLUE = new/obj/item/map/big_red_map(),
 		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
