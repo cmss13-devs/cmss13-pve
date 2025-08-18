@@ -113,12 +113,6 @@
 	},
 /turf/open/floor/corsat,
 /area/binhai/other/mainlower)
-"aap" = (
-/obj/structure/sign/safety/bathunisex{
-	pixel_x = 15
-	},
-/turf/open/floor/strata/multi_tiles/west,
-/area/binhai/other/mainlower)
 "aaq" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -10848,6 +10842,10 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/upperss)
 "jjR" = (
@@ -11135,9 +11133,6 @@
 	icon_state = "cargo"
 	},
 /obj/structure/cargo_container/upp/tan/mid,
-/obj/structure/machinery/light/small{
-	light_power = 0.9
-	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/lobby)
 "jsZ" = (
@@ -13277,6 +13272,8 @@
 	pixel_x = 2;
 	pixel_y = -3
 	},
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
 /turf/open/floor/corsat,
 /area/binhai/basemil/maint)
 "lrN" = (
@@ -14877,9 +14874,6 @@
 	icon_state = "cargo"
 	},
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/machinery/light/small{
-	light_power = 0.9
-	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/lobby)
 "mQP" = (
@@ -14981,6 +14975,7 @@
 /obj/effect/spawner/random/toolbox{
 	pixel_x = 2
 	},
+/obj/item/fuel_cell,
 /turf/open/floor/corsat,
 /area/binhai/basemil/maint)
 "mYz" = (
@@ -17270,6 +17265,11 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/upperss)
 "oYc" = (
@@ -18418,10 +18418,19 @@
 /turf/open/floor/prison/sterile_white,
 /area/binhai/other/research)
 "pVO" = (
+/obj/effect/spawner/random/toolbox{
+	pixel_x = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/structure/closet/crate,
+/obj/structure/machinery/power/apc/power/east,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/effect/decal/cleanable/dirt,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/upperss)
 "pWT" = (
@@ -18625,12 +18634,11 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_x = 1;
-	pixel_y = 1
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/upperss)
 "qeR" = (
@@ -19758,8 +19766,9 @@
 	icon_state = "S";
 	pixel_y = -1
 	},
-/obj/structure/closet/secure_closet/engineering_welding{
-	pixel_x = -10
+/obj/structure/machinery/power/monitor{
+	name = "Base Power Grid Monitoring";
+	pixel_x = -5
 	},
 /turf/open/floor/corsat/plate,
 /area/binhai/basemil/upperss)
@@ -24532,7 +24541,8 @@
 /area/binhai/basemil/hallway)
 "uTt" = (
 /obj/structure/sign/safety/ammunition{
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = 8
 	},
 /turf/closed/wall/upp_wall,
 /area/binhai/basemil/upperarmory)
@@ -26160,18 +26170,12 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "waP" = (
-/obj/effect/spawner/random/toolbox{
-	pixel_x = 2
-	},
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 1
-	},
 /obj/effect/decal/cleanable/dirt,
-/obj/item/fuel_cell,
-/obj/item/fuel_cell,
-/obj/structure/closet/crate,
-/turf/open/floor/corsat/plate,
+/obj/structure/machinery/power/reactor{
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
+	},
+/turf/open/floor/corsat/marked,
 /area/binhai/basemil/upperss)
 "waS" = (
 /obj/structure/surface/rack{
@@ -39082,7 +39086,7 @@ ipE
 ezU
 ipE
 bxx
-uTt
+bxx
 xGQ
 eYP
 uTt
@@ -45621,7 +45625,7 @@ aKG
 nEv
 sbb
 sbb
-sbb
+oPU
 hMk
 ass
 bUI
@@ -53218,7 +53222,7 @@ eFn
 eFn
 eFn
 eFn
-aap
+eFn
 eFn
 eFn
 eFn
