@@ -833,6 +833,12 @@
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE)
 
+/datum/equipment_preset/colonist/security/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/grey(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
+
 /datum/equipment_preset/colonist/security/weyland
 	name = "US Civilian Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -1043,6 +1049,13 @@
 	name = "Brazilian Federal Prison Guard"
 	ethnicity = BRAZILIAN_ETHNICITY
 	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/prison/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
+
 
 //UACG
 
