@@ -2600,21 +2600,6 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m49a_barrel_custom/New()
-	..()
-	select_gamemode_skin(type)
-
-/obj/item/attachable/m49a_barrel_custom/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
-
 /obj/item/attachable/m49a_barrel/pve
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
@@ -3641,6 +3626,7 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
 	slot = "under"
+	pixel_shift_y = 18
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
