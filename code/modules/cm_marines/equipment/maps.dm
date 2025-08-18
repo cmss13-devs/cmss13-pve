@@ -235,7 +235,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 	item_state = "Cotablet"
 	throw_speed = SPEED_FAST
 	throw_range = 5
-	w_class = SIZE_TINY
+	w_class = SIZE_NORMAL
 	var/datum/tacmap/map
 	///flags that we want to be shown when you interact with this table
 	var/minimap_type = MINIMAP_FLAG_USCM
