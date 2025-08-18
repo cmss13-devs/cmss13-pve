@@ -1136,6 +1136,20 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/variable_zoom/integrated
 	name = "variable zoom scope"
 
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff
+	name = "variable IFF enabled zoom scope"
+
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/New()
+	..()
+	delay_mod = -FIRE_DELAY_TIER_2
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+/*
+/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
+*/
+
 /obj/item/attachable/scope/variable_zoom/slavic
 	icon_state = "slavicscope"
 	attach_icon = "slavicscope"
@@ -1227,6 +1241,12 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "huntingscope"
 	attach_icon = "huntingscope"
 	desc = "Generic fixed-magnification 2x optic. Common just about everywhere in civil hands, and sometimes used by law enforcement too."
+
+/obj/item/attachable/scope/mini/hunting/upp
+	name = "POS-3 hunting mini-scope"
+	icon_state = "upphuntingscope"
+	attach_icon = "upphuntingscope"
+	desc = "Simple Union-made civilian hunting/sport scope."
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
@@ -2091,6 +2111,22 @@ Defined in conflicts.dm of the #defines folder.
 	recoil_unwielded_mod = RECOIL_AMOUNT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/stock/olympiets
+	name = "Olympiets 'wooden' stock"
+	desc = "Shouldn't be seeing this."
+	icon_state = "olympiets_stock"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 6
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
 /obj/item/attachable/stock/hg3712
 	name = "hg3712 stock"
 	desc = "The non-detachable stock of a HG 37-12 pump shotgun."
@@ -2508,6 +2544,11 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/m49a_barrel/forecon
+	name = "M49A2 barrel"
+	icon_state = "m49a_barrel_a"
+	attach_icon = "m49a_barrel_a"
+
 /* /obj/item/attachable/m49a_barrel/New()
 	..()
 	select_gamemode_skin(type)
@@ -2534,25 +2575,21 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m49a_barrel_custom/New()
-	..()
-	select_gamemode_skin(type)
-
-/obj/item/attachable/m49a_barrel_custom/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
-
 /obj/item/attachable/m49a_barrel/pve
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
 	attach_icon = "pve_m49a_barrel"
+
+/obj/item/attachable/olympiets_barrel
+	name = "Olympiets barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "olympiets_barrel"
+	attach_icon = "olympiets_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
 
 /obj/item/attachable/upp_rpg_breech
 	name = "HJRA-12 Breech"
@@ -3380,7 +3417,6 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/grenade/type71/ag80
 	name = "\improper GP-45 grenade launcher"
-	desc = "Integrated grenade launcher yipee"
 	icon_state = "grenade-ag80"
 	attach_icon = "grenade-ag80_a"
 	has_breech = TRUE
@@ -3565,6 +3601,7 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
 	slot = "under"
+	pixel_shift_y = 18
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
