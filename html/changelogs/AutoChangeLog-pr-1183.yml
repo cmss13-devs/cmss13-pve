@@ -1,0 +1,5 @@
+author: "Merrgear"
+delete-after: True
+changes:
+  - rscadd: "Adds a new raider team leader preset and changes team members to be lower rank"
+  - bugfix: "The XM38 raider shotgun no longer comes with attachments it shouldn't have"
