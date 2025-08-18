@@ -124,7 +124,7 @@
 			handle_alert_ghost(zombie)
 
 			addtimer(CALLBACK(zombie, TYPE_PROC_REF(/mob, remove_jittery)), 3 SECONDS)
-			zombie.update_layer() //Band-aid to stop zombies being in Dead_lying Layer whilst they're actually just crawling around.
+			zombie.update_layer() //Band-aid to stop zombies being in LYING_DEAD_MOB_LAYER whilst they're actually just alive crawling around.
 		remove_from_revive(zombie)
 
 /datum/species/zombie/proc/handle_alert_ghost(mob/living/carbon/human/zombie)
