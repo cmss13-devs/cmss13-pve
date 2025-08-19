@@ -270,7 +270,6 @@
 	reagents.add_reagent("nutriment", 9)
 	bitesize = 3
 
-/* gotta get a sprite for this thing
 /obj/item/reagent_container/food/snacks/mre_pack/meal7
 	name = "\improper mechanically prepared meal (macaroni and cheese)"
 	desc = "An autochef prepared meal of concerningly viscous macaroni and cheese. On the side is sautee'd broccoli with some freezer burn, a tube of cherry-and-vitamin flavor jelly, and a packet of mixed nuts trail mix."
@@ -280,7 +279,6 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 9)
 	bitesize = 3
-*/
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
 	name = "\improper mechanically prepared meal (sugar cookies)"
