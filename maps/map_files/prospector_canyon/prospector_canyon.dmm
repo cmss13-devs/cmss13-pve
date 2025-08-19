@@ -477,6 +477,9 @@
 	affect_ghosts = 0;
 	vector_x = 5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "bJ" = (
@@ -491,6 +494,9 @@
 	name = "fall damage hill2_north";
 	affect_ghosts = 0;
 	vector_y = 5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -667,6 +673,9 @@
 	affect_ghosts = 0;
 	vector_y = 5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cu" = (
@@ -674,6 +683,9 @@
 	name = "fall damage hill1_south";
 	affect_ghosts = 0;
 	vector_y = -5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -686,6 +698,9 @@
 	affect_ghosts = 0;
 	vector_y = -5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cw" = (
@@ -693,6 +708,9 @@
 	name = "fall damage hill1_east";
 	affect_ghosts = 0;
 	vector_x = 5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -705,6 +723,9 @@
 	affect_ghosts = 0;
 	vector_x = 5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cy" = (
@@ -716,15 +737,186 @@
 	affect_ghosts = 0;
 	vector_x = 5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cz" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_east";
+	vector_x = -5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cA" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cB" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/boulder/boulder2,
+/turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "cC" = (
 /obj/structure/prop/static_tank/fuel,
 /turf/open/floor/corsat,
 /area/desert_dam/exterior/valley/valley_wilderness)
+"cD" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/boulder/boulder3,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cE" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_north";
+	vector_y = -5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/desert_dam/exterior/valley/valley_wilderness)
 "cF" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /turf/open/gm/dirt2,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cG" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_north";
+	vector_y = -5
+	},
+/obj/structure/prop/dam/boulder/boulder3,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cH" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_north";
+	vector_y = -5
+	},
+/obj/structure/prop/dam/boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cI" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill2_north";
+	vector_y = -5
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cJ" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_south";
+	vector_y = 5
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cK" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_south";
+	vector_y = 5
+	},
+/obj/structure/prop/dam/boulder/boulder2,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cL" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_south";
+	vector_y = 5
+	},
+/obj/structure/prop/dam/boulder/boulder3,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cM" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_south";
+	vector_y = 5
+	},
+/obj/structure/prop/dam/boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cN" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage hill1_west";
+	affect_ghosts = 0;
+	vector_x = -5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cO" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/turf/open/void,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cP" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_west";
+	vector_x = 5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cQ" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/boulder/boulder3,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cR" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_east";
+	vector_x = -5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cS" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_west";
+	vector_x = 5
+	},
+/obj/structure/prop/dam/boulder/boulder2,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cT" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/large_boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cU" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_west";
+	vector_x = 5
+	},
+/obj/structure/prop/dam/boulder/boulder3,
+/turf/open/auto_turf/sand/layer0,
+/area/desert_dam/exterior/valley/valley_wilderness)
+"cV" = (
+/obj/effect/projector{
+	name = "prospector_canyon_hill1_east";
+	vector_x = -5
+	},
+/obj/structure/prop/dam/boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "du" = (
 /obj/structure/platform/kutjevo/rock,
@@ -768,14 +960,6 @@
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
-"eY" = (
-/obj/effect/projector{
-	name = "prospector_canyon_hill1_east";
-	vector_x = -5
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer1,
-/area/desert_dam/exterior/valley/valley_wilderness)
 "fg" = (
 /obj/item/tool/warning_cone{
 	pixel_y = 9
@@ -789,21 +973,12 @@
 	},
 /turf/open/auto_turf/sand/layer1,
 /area/desert_dam/exterior/valley/valley_wilderness)
-"fm" = (
-/obj/effect/projector{
-	name = "prospector_canyon_hill2_north";
-	vector_y = -5
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer1,
-/area/desert_dam/exterior/valley/valley_wilderness)
 "fD" = (
 /obj/effect/projector{
 	name = "prospector_canyon_hill1_south";
 	vector_y = 5
 	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer0,
+/turf/open/auto_turf/sand/layer1,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "fU" = (
 /turf/open/auto_turf/sand/layer0,
@@ -814,8 +989,7 @@
 	vector_y = -5
 	},
 /obj/effect/step_trigger/clone_cleaner,
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer0,
+/turf/open/auto_turf/sand/layer1,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "hk" = (
 /turf/closed/wall/kutjevo/colony/reinforced,
@@ -836,6 +1010,9 @@
 	name = "fall damage hill1_west";
 	affect_ghosts = 0;
 	vector_x = -5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -890,6 +1067,9 @@
 	affect_ghosts = 0;
 	vector_y = -5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "lW" = (
@@ -936,6 +1116,9 @@
 	},
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "mN" = (
@@ -946,6 +1129,9 @@
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "mT" = (
@@ -1001,7 +1187,6 @@
 	name = "prospector_canyon_hill1_east";
 	vector_x = -5
 	},
-/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "oE" = (
@@ -1032,7 +1217,6 @@
 	name = "prospector_canyon_hill2_east";
 	vector_x = -5
 	},
-/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "pN" = (
@@ -1071,6 +1255,9 @@
 	dir = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "ru" = (
@@ -1086,6 +1273,9 @@
 "sP" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "th" = (
@@ -1093,14 +1283,6 @@
 	icon_state = "1-4"
 	},
 /turf/open/gm/dirt2,
-/area/desert_dam/exterior/valley/valley_wilderness)
-"tY" = (
-/obj/effect/projector{
-	name = "prospector_canyon_hill1_west";
-	vector_x = 5
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer1,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "uA" = (
 /obj/effect/step_trigger/clone_cleaner,
@@ -1120,6 +1302,9 @@
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "wm" = (
@@ -1136,6 +1321,9 @@
 	name = "fall damage hill1_west";
 	affect_ghosts = 0;
 	vector_x = -5
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
 	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
@@ -1159,6 +1347,9 @@
 	},
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "xH" = (
@@ -1177,7 +1368,6 @@
 	name = "prospector_canyon_hill2_north";
 	vector_y = -5
 	},
-/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "yp" = (
@@ -1221,14 +1411,6 @@
 /obj/structure/cable/green,
 /turf/open/gm/dirt2,
 /area/desert_dam/exterior/valley/valley_wilderness)
-"Fp" = (
-/obj/effect/projector{
-	name = "prospector_canyon_hill1_south";
-	vector_y = 5
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/auto_turf/sand/layer1,
-/area/desert_dam/exterior/valley/valley_wilderness)
 "FM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
@@ -1261,7 +1443,6 @@
 	name = "prospector_canyon_hill1_west";
 	vector_x = 5
 	},
-/obj/structure/prop/invuln/darkness,
 /turf/open/auto_turf/sand/layer0,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "IF" = (
@@ -1299,6 +1480,9 @@
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "KO" = (
@@ -1391,6 +1575,9 @@
 	affect_ghosts = 0;
 	vector_x = 5
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "QW" = (
@@ -1431,6 +1618,9 @@
 	dir = 4
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /turf/open/void,
 /area/desert_dam/exterior/valley/valley_wilderness)
 "Us" = (
@@ -3952,7 +4142,7 @@ mD
 uA
 xK
 xK
-fm
+xK
 JS
 JS
 ct
@@ -4959,7 +5149,7 @@ mD
 mD
 sh
 xK
-xK
+cH
 xK
 JS
 JS
@@ -5210,7 +5400,7 @@ ag
 mD
 mD
 sh
-xK
+cE
 xK
 xK
 JS
@@ -5462,7 +5652,7 @@ mD
 mD
 mD
 sh
-uA
+sh
 gB
 xK
 xK
@@ -5967,7 +6157,7 @@ ae
 mD
 fU
 uA
-gB
+cI
 xK
 xK
 JS
@@ -6219,7 +6409,7 @@ ae
 mD
 fU
 uA
-gB
+cI
 xK
 xK
 JS
@@ -6471,7 +6661,7 @@ mD
 mD
 mD
 uA
-gB
+cI
 xK
 xK
 JS
@@ -6724,7 +6914,7 @@ mD
 mD
 sh
 Hf
-xK
+cE
 xK
 xK
 JS
@@ -6975,8 +7165,8 @@ ah
 mD
 mD
 mD
-uA
-xK
+sh
+cE
 xK
 xK
 JS
@@ -7227,8 +7417,8 @@ mD
 ae
 ae
 mD
-uA
-xK
+sh
+cE
 xK
 xK
 JS
@@ -7733,7 +7923,7 @@ ae
 mD
 uA
 xK
-xK
+cG
 xK
 JS
 JS
@@ -8488,7 +8678,7 @@ mD
 ag
 ag
 mD
-uA
+sh
 xK
 xK
 xK
@@ -8740,9 +8930,9 @@ mD
 mD
 ag
 mD
-uA
-xK
-xK
+sh
+cE
+cE
 xK
 JS
 JS
@@ -8993,8 +9183,8 @@ mD
 mD
 ag
 sh
-xK
-xK
+cE
+cE
 xK
 JS
 JS
@@ -13044,7 +13234,7 @@ ad
 mD
 uA
 pI
-pI
+cD
 pI
 pI
 pI
@@ -13299,7 +13489,7 @@ pI
 pI
 pI
 pI
-pI
+cz
 pI
 pI
 pI
@@ -13547,6 +13737,12 @@ mD
 mD
 mD
 uA
+cz
+cz
+pI
+pI
+cz
+cz
 pI
 pI
 pI
@@ -13557,13 +13753,7 @@ pI
 pI
 pI
 pI
-pI
-pI
-pI
-pI
-pI
-pI
-pI
+cA
 pI
 pI
 JS
@@ -13799,19 +13989,19 @@ ag
 ag
 ag
 sh
+sh
 uA
 uA
 uA
 uA
-uA
-uA
+sh
 pI
 pI
+cB
 pI
 pI
-pI
-pI
-pI
+cz
+cz
 pI
 pI
 pI
@@ -14056,20 +14246,20 @@ fU
 fU
 fU
 fU
-uA
-uA
-uA
+sh
 sh
 uA
-uA
+sh
+sh
+sh
+cz
+cz
+cz
+cz
 pI
 pI
-pI
-pI
-pI
-pI
-pI
-pI
+cz
+cz
 sh
 mD
 mD
@@ -14313,15 +14503,15 @@ mD
 mD
 mD
 mD
-uA
-uA
-uA
-uA
-uA
-uA
-uA
-uA
-uA
+sh
+sh
+sh
+sh
+sh
+sh
+sh
+sh
+sh
 sh
 mD
 mD
@@ -14568,9 +14758,9 @@ ae
 mD
 mD
 mD
-fU
-fU
-fU
+mD
+mD
+mD
 mD
 mD
 fU
@@ -14821,7 +15011,7 @@ ae
 mD
 mD
 mD
-fU
+mD
 mD
 mD
 mD
@@ -19151,8 +19341,8 @@ mD
 mD
 mD
 sh
-uA
-uA
+sh
+sh
 uA
 uA
 ai
@@ -19391,8 +19581,8 @@ mD
 fU
 fU
 uA
-uA
-uA
+sh
+sh
 mD
 mT
 mD
@@ -19402,25 +19592,25 @@ uA
 uA
 uA
 uA
+sh
+cP
+cP
+Ie
 uA
+uA
+uA
+sh
+sh
+sh
+sh
 Ie
 Ie
 Ie
 uA
-uA
-uA
-uA
-uA
-uA
-uA
-Ie
-Ie
-Ie
-uA
-uA
-Ie
-Ie
-Ie
+sh
+cP
+cP
+cP
 uA
 uA
 uA
@@ -19638,40 +19828,40 @@ JS
 JS
 JS
 mD
-fU
-uA
-uA
-uA
-uA
-Ie
+mD
+sh
+sh
+sh
+sh
+cP
 uA
 mD
 mD
 mD
 mT
 mD
-uA
+sh
+cP
+cP
+cP
+cP
+cP
 Ie
 Ie
 Ie
 Ie
 Ie
 Ie
+cP
+cP
+cP
+Ie
+Ie
+cS
 Ie
 Ie
 Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
+cP
 Ie
 Ie
 Ie
@@ -19893,8 +20083,8 @@ uA
 uA
 uA
 Ie
-Ie
-Ie
+cP
+cP
 Ie
 uA
 mD
@@ -19905,12 +20095,12 @@ mD
 uA
 Ie
 Ie
+cP
+cP
 Ie
 Ie
 Ie
 Ie
-Ie
-tY
 Ie
 Ie
 Ie
@@ -20143,7 +20333,7 @@ JS
 JS
 uA
 Ie
-Ie
+cU
 Ie
 Ie
 Ie
@@ -20162,7 +20352,7 @@ Ie
 JS
 JS
 JS
-tY
+Ie
 Ie
 Ie
 Ie
@@ -20664,8 +20854,8 @@ JS
 JS
 JS
 eU
-eU
-eU
+cN
+cN
 JS
 JS
 JS
@@ -20673,14 +20863,14 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
+cN
+cN
+cN
 JS
 JS
-eU
-eU
-eU
+cN
+cN
+cN
 JS
 JS
 JS
@@ -20903,7 +21093,7 @@ JS
 JS
 JS
 JS
-eU
+cN
 JS
 mD
 mT
@@ -20911,30 +21101,30 @@ mT
 mT
 fU
 JS
+cN
+cN
+cN
+cN
 eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
 JS
 JS
 fU
@@ -21152,10 +21342,10 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
+cN
+cN
+cN
+cN
 JS
 pv
 mT
@@ -21163,30 +21353,30 @@ mT
 mT
 fU
 JS
-eU
-eU
-eU
+cN
+cN
+cN
 in
 eT
-eT
-eT
+cO
+cO
 wQ
-eU
-eU
-eU
-eU
-eU
+cN
+cN
+cN
+cN
+cN
 in
-eT
-eT
-eT
+cO
+cO
+cO
 wQ
 in
-eT
-eT
-eT
+cO
+cO
+cO
 wQ
-eU
+cN
 JS
 fU
 fU
@@ -21402,12 +21592,12 @@ JS
 JS
 JS
 JS
-eU
-eU
-eU
-eU
+cN
+cN
+cN
+cN
 in
-eT
+cO
 JS
 fU
 mT
@@ -21415,19 +21605,19 @@ mT
 mT
 fU
 JS
-eT
-eT
-eT
+cO
+cO
+cO
 xy
 fU
 fU
 fU
 TX
-eT
-eT
-eT
-eT
-eT
+cO
+cO
+cO
+cO
+cO
 xy
 fU
 fU
@@ -21438,7 +21628,7 @@ fU
 fU
 fU
 TX
-eT
+cO
 JS
 fU
 mD
@@ -21654,10 +21844,10 @@ JS
 JS
 JS
 JS
-eU
+cN
 in
-eT
-eT
+cO
+cO
 xy
 fU
 fU
@@ -21906,7 +22096,7 @@ JS
 JS
 JS
 JS
-eT
+cO
 xy
 fU
 fU
@@ -22206,10 +22396,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 ag
 ag
 aj
@@ -22458,10 +22648,10 @@ cv
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 sh
 ag
 mD
@@ -22711,8 +22901,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cM
+cJ
 fD
 sh
 mD
@@ -22963,9 +23153,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 sh
 mD
 ag
@@ -23215,8 +23405,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 sh
 mD
@@ -23466,10 +23656,10 @@ lQ
 cu
 JS
 JS
-fD
-fD
-fD
-uA
+cJ
+cJ
+cJ
+sh
 sh
 mD
 mD
@@ -23718,10 +23908,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 mD
 ae
 mD
@@ -23970,9 +24160,9 @@ cv
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 uA
 mD
@@ -24223,9 +24413,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -24475,9 +24665,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cK
 uA
 mD
 ah
@@ -24727,9 +24917,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -24978,9 +25168,9 @@ lQ
 cu
 JS
 JS
-Fp
-fD
-fD
+cJ
+cJ
+cJ
 uA
 uA
 mD
@@ -25230,8 +25420,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 uA
 fU
@@ -25482,10 +25672,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 fU
 mD
 ae
@@ -25734,12 +25924,12 @@ cv
 cu
 JS
 JS
-fD
-fD
-fD
-uA
-uA
-fU
+cJ
+cJ
+cJ
+sh
+sh
+mD
 mD
 ae
 mD
@@ -25987,11 +26177,11 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
-uA
-fU
+cJ
+cJ
+cJ
+sh
+mD
 mD
 mD
 mD
@@ -26239,10 +26429,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 fU
 mD
 mD
@@ -26491,8 +26681,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cM
+cJ
 fD
 uA
 fU
@@ -26743,9 +26933,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
 mD
@@ -26995,9 +27185,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -27247,8 +27437,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 uA
 mD
@@ -27499,7 +27689,7 @@ cu
 cu
 JS
 JS
-fD
+cJ
 fD
 fD
 uA
@@ -27751,10 +27941,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 mD
 ae
 mD
@@ -28002,11 +28192,11 @@ lQ
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
-uA
+sh
+sh
 mD
 mD
 aK
@@ -28254,9 +28444,9 @@ cv
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 uA
 mD
@@ -28507,9 +28697,9 @@ cu
 cu
 JS
 JS
-Fp
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -28759,9 +28949,9 @@ cu
 cu
 JS
 JS
-Fp
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 ah
@@ -29010,8 +29200,8 @@ lQ
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 uA
 uA
@@ -29262,8 +29452,8 @@ cu
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 uA
 fU
@@ -29514,10 +29704,10 @@ cu
 cu
 JS
 JS
+cJ
 fD
 fD
-fD
-uA
+sh
 fU
 mD
 ae
@@ -29766,10 +29956,10 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
-uA
+cJ
+cJ
+cJ
+sh
 mD
 mD
 ad
@@ -30018,9 +30208,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -30270,9 +30460,9 @@ cv
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 sh
 mD
@@ -30523,9 +30713,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 mD
@@ -30775,9 +30965,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
 mD
@@ -31027,9 +31217,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cL
+cJ
 uA
 fU
 mD
@@ -31279,9 +31469,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
 mD
@@ -31531,9 +31721,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 mD
 ao
@@ -31783,9 +31973,9 @@ cu
 cu
 JS
 JS
+cJ
 fD
-fD
-fD
+cJ
 uA
 mD
 mD
@@ -32035,10 +32225,10 @@ cu
 cu
 JS
 JS
+cJ
+cJ
 fD
-fD
-fD
-uA
+sh
 mD
 mD
 mD
@@ -32287,10 +32477,10 @@ cu
 cu
 JS
 JS
+cJ
 fD
 fD
-fD
-uA
+sh
 mD
 mD
 mD
@@ -32539,11 +32729,11 @@ cu
 cu
 JS
 JS
+cJ
 fD
 fD
-fD
-uA
-fU
+sh
+mD
 mD
 ae
 mD
@@ -32790,8 +32980,8 @@ lQ
 cu
 JS
 JS
-fD
-fD
+cJ
+cJ
 fD
 uA
 uA
@@ -33042,12 +33232,12 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
-mD
+fU
 mD
 mD
 mD
@@ -33294,9 +33484,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
 mD
@@ -33546,9 +33736,9 @@ cu
 cu
 JS
 JS
-fD
-fD
-fD
+cJ
+cJ
+cJ
 uA
 fU
 mD
@@ -33798,8 +33988,8 @@ cu
 JS
 JS
 JS
-fD
-fD
+cJ
+cJ
 uA
 sh
 mD
@@ -34050,8 +34240,8 @@ cu
 JS
 JS
 JS
-fD
-fD
+cJ
+cJ
 uA
 mD
 mD
@@ -35262,7 +35452,7 @@ JS
 JS
 JS
 ot
-ot
+cV
 ot
 JS
 JS
@@ -35773,7 +35963,7 @@ ot
 ot
 ot
 ot
-ot
+cT
 ot
 ot
 ot
@@ -35781,7 +35971,7 @@ ot
 JS
 JS
 JS
-eY
+ot
 ot
 ot
 ot
@@ -35800,7 +35990,7 @@ JS
 JS
 JS
 JS
-ot
+cQ
 ot
 ot
 ot
@@ -36020,7 +36210,7 @@ JS
 uA
 uA
 sh
-eY
+cR
 ot
 ot
 ot
@@ -36279,18 +36469,18 @@ ot
 ot
 ot
 ot
+cR
+cR
 ot
 ot
 ot
 ot
 ot
 ot
-ot
-ot
-ot
-ot
-ot
-ot
+cR
+cR
+cR
+cR
 ot
 ot
 uA
@@ -36302,7 +36492,7 @@ mD
 mD
 uA
 ot
-ot
+cR
 ot
 ot
 ot
@@ -36532,18 +36722,18 @@ sh
 sh
 sh
 sh
-uA
-uA
+sh
+sh
+cR
+cR
 ot
-ot
-ot
-uA
-uA
 uA
 sh
 sh
-uA
-ot
+sh
+sh
+sh
+cR
 ot
 uA
 ad
@@ -36552,11 +36742,11 @@ mD
 ag
 mD
 mD
-uA
-ot
-ot
-ot
-uA
+sh
+cR
+cR
+cR
+sh
 uA
 uA
 mD
@@ -36786,8 +36976,8 @@ mD
 mD
 mD
 uA
-uA
-uA
+sh
+sh
 sh
 sh
 mD
