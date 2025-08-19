@@ -18,6 +18,7 @@
 		list("Menu 4: Pizza", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal4, VENDOR_ITEM_REGULAR),
 		list("Menu 5: Chicken", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal5, VENDOR_ITEM_REGULAR),
 		list("Menu 6: Vegetarian Tofu", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal6, VENDOR_ITEM_REGULAR),
+		list("Menu 7: Vegetarian Macaroni & Cheese", 15, /obj/item/reagent_container/food/snacks/mre_pack/meal7, VENDOR_ITEM_REGULAR),
 		// these spaces are purely for readability. Preemptive Action is an unsubtle reference to First Strike Bars.
 		list("PREEMPTIVE ACTION BARS", -1, null, null),
 		list("Chocolate Flavor", 50, /obj/item/reagent_container/food/snacks/protein_pack, VENDOR_ITEM_REGULAR),
