@@ -148,6 +148,9 @@
 	name = "Redemption Valley - Caves Lower"
 	icon_state = "cave"
 	minimap_color = MINIMAP_SOLID
+/area/redemptionvalley/caverns/ruin
+	name = "Valley Ruins"
+	icon_state = "cave"
 //=============================================================================================OUTPOST
 /area/redemptionvalley/outpost/elevup
 	name = "Military Base - Elevator Upper"
