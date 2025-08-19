@@ -158,11 +158,11 @@
 				human_target.add_splatter_floor()
 				playsound(human_target, 'sound/effects/blood_squirt.ogg', 40, TRUE)
 
-				if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+				if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED ) && target.stat == DEAD)
 					human_target.add_splatter_floor()
 					playsound(human_target, 'sound/effects/bone_break2.ogg', 25, TRUE)
 
-					if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED || target.stat != DEAD))
+					if(do_after(user, (time_to_decap)/2, INTERRUPT_ALL, BUSY_ICON_HOSTILE, target, INTERRUPT_MOVED) && target.stat == DEAD)
 						user.visible_message(SPAN_WARNING(SPAN_BOLD("[user] brutally decapitates [target]!")), SPAN_WARNING(SPAN_BOLD("You decapitate [target]! What a mess!")), null)
 						human_target.spray_blood(rand(0, 181), limb)
 						limb.droplimb(0,0, user)
