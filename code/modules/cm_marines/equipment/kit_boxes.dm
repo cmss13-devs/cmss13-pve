@@ -23,7 +23,7 @@
 
 /obj/item/storage/box/spec/rocketeer
 	name = "\improper Rocketeer equipment case"
-	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M3-T light armor, three spare 84mm rockets, loader equipment and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	desc = "A large case containing a heavy-caliber anti-tank M5 RPG rocket launcher, M10-R bombardier helmet, three spare 84mm rockets, loader equipment and additional pieces of equipment.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "demo"
 
 /obj/item/storage/box/spec/rocketeer/fill_preset_inventory()
@@ -73,6 +73,7 @@
 	new /obj/item/clothing/suit/storage/marine/ghillie(src)
 	new /obj/item/clothing/head/helmet/marine/ghillie(src)
 	new /obj/item/clothing/glasses/night/ghillie_goggles(src)
+	new /obj/item/ammo_magazine/sniper(src)
 	new /obj/item/ammo_magazine/sniper(src)
 	new /obj/item/ammo_magazine/sniper/incendiary(src)
 	new /obj/item/ammo_magazine/sniper/incendiary(src)

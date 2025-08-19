@@ -1282,25 +1282,18 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/mini/scout
 	name = "M49A targeting relay"
 	desc = "An ARMAT M49A5 optical interface, type designation AN/PVX-56. Wirelessly links to the operators M49A eyepiece to give a one-to-one boresighted picture of where the rifle is aiming. Includes a Computer-Calculated-Impact-Point system for precision shooting."
-	icon_state = "vulture_scope"
-	attach_icon = "vulture_scope"
+	icon_state = "m49a_custom_scope"
+	attach_icon = "m49a_custom_scope"
 	zoom_offset = 7
 	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
 
-/obj/item/attachable/scope/mini/scout/New()
+/obj/item/attachable/scope/mini/scout/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!istype(human.glasses, /obj/item/clothing/glasses/night/M49A))
+			to_chat(human, SPAN_WARNING("You can't use the targeting relay without the battle-sight eyepiece!"))
+			return
 	..()
-	select_gamemode_skin(type)
-
-/obj/item/attachable/scope/mini/scout/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
 
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
