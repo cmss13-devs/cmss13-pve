@@ -531,7 +531,7 @@
 	name = "XM43 pulse carbine"
 	desc = "Pulse action 10x24mm caseless carbine, semi-experimental. In low-rate procurement as a self defense weapon for crew and other confined spaces operation. Exchanges the firepower of a grenade launcher and some modularity for handling."
 	icon_state = "xm43"
-	item_state = "xm43"
+	item_state = "m41amk1"//filler
 	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 	aim_slowdown = SLOWDOWN_ADS_QUICK_MINUS
 	wield_delay = WIELD_DELAY_MIN
