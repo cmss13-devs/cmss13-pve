@@ -472,19 +472,24 @@
 
 
 /obj/effect/alien/weeds/node
-	name = "weed node"
-	desc = "A weird, pulsating node."
-	icon_state = "weednode"
+	desc = "Weird black weeds, slightly thicker than the rest..."
 	// Weed nodes start out with normal weed health and become stronger once they've stopped spreading
 	health = NODE_HEALTH_GROWING
 	flags_atom = OPENCONTAINER
 	layer = ABOVE_BLOOD_LAYER
 	plane = FLOOR_PLANE
 	var/static/staticnode
-	var/overlay_node = TRUE
+	var/overlay_node = FALSE
 
 	// Which weeds are being kept alive by this node?
 	var/list/obj/effect/alien/weeds/children = list()
+
+	/// Icon file for the nodes as game masters will see it
+	var/node_overlay_icon = 'icons/mob/xenos/weeds.dmi'
+	/// Specific icon state for the nodes as game masters will see it
+	var/node_overlay_icon_state = "weednode"
+	/// The actual image holder that sits on parent for game masters
+	var/image/node_image
 
 /obj/effect/alien/weeds/node/proc/add_child(obj/effect/alien/weeds/weed)
 	if(!weed || !istype(weed))
@@ -511,7 +516,7 @@
 
 /obj/effect/alien/weeds/node/proc/trap_destroyed()
 	SIGNAL_HANDLER
-	overlay_node = TRUE
+	overlay_node = FALSE
 	overlays += staticnode
 
 /obj/effect/alien/weeds/node/Initialize(mapload, hive, mob/living/carbon/xenomorph/xeno)
@@ -551,6 +556,11 @@
 		if(weed_strength >= WEED_LEVEL_HIVE)
 			name = "hive node sac"
 
+	node_image = new(node_overlay_icon, src, node_overlay_icon_state, layer = ABOVE_FLY_LAYER)
+
+	for(var/client/game_master in GLOB.game_masters)
+		game_master.images |= node_image
+
 	create_reagents(30)
 	reagents.add_reagent(PLASMA_PURPLE, 30)
 
@@ -568,6 +578,8 @@
 		var/obj/effect/alien/weeds/W = X
 		remove_child(W)
 		addtimer(CALLBACK(W, PROC_REF(avoid_orphanage)), WEED_BASE_DECAY_SPEED + rand(0, 1 SECONDS)) // Slight variation whilst decaying
+	for(var/client/game_master in GLOB.game_masters)
+		game_master.images -= node_image
 
 	. = ..()
 
