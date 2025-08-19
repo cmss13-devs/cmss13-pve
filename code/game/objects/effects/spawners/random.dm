@@ -571,6 +571,62 @@
 	spawn_nothing_percentage = 20
 	icon_state = "claymore_80"
 
+/obj/effect/spawner/random/medical
+	name = "Random Medical equipment"
+	desc = "This is a random medical item."
+	icon_state = "intel_med"
+
+/obj/effect/spawner/random/medical/spawn_item()
+	var/list/medical_weights = list(
+		/obj/effect/spawner/random/medical/lite = 21,
+		/obj/item/bodybag = 2,
+		/obj/item/reagent_container/glass/bottle/inaprovaline = 2,
+		/obj/item/reagent_container/glass/bottle/antitoxin = 2,
+		/obj/item/storage/pill_bottle = 2,
+		/obj/item/storage/pill_bottle/tramadol = 1,
+		/obj/item/storage/pill_bottle/citalopram = 2,
+		/obj/item/storage/pill_bottle/dexalinplus = 1,
+		/obj/item/storage/pill_bottle/keloderm = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
+		/obj/item/reagent_container/syringe/antitoxin = 2,
+		/obj/item/reagent_container/syringe/antiviral = 1,
+		/obj/item/reagent_container/syringe/inaprovaline = 2,
+//		/obj/item/storage/box/freezer = 1,
+		/obj/item/stack/nanopaste = 1
+	)
+
+	var/build_type = pick_weight(medical_weights)
+
+	new build_type(src.loc)
+	return
+
+/obj/effect/spawner/random/medical/lite
+	name = "Random Medical equipment"
+	desc = "This is a random medical item."
+	icon_state = "intel_med"
+	spawn_nothing_percentage = 25
+
+/obj/effect/spawner/random/medical/lite/spawn_item()
+	var/list/medical_weights = list(/obj/item/stack/medical/bruise_pack = 4,
+				/obj/item/stack/medical/ointment = 4,
+				///obj/item/storage/pill_bottle/antidexafen = 2,
+				/obj/item/storage/pill_bottle/paracetamol = 2,
+				/obj/item/stack/medical/advanced/bruise_pack = 2,
+				/obj/item/stack/medical/advanced/ointment = 2,
+				/obj/item/stack/medical/splint = 1,
+				/obj/item/reagent_container/hypospray/autoinjector/inaprovaline = 3,
+				/obj/item/storage/pill_bottle/kelotane = 2,
+				/obj/item/storage/pill_bottle/antitox = 2,
+				/obj/item/storage/firstaid/regular = 2,
+				/obj/item/storage/firstaid/fire = 2,
+				/obj/item/storage/firstaid/toxin = 2,
+				/obj/item/storage/firstaid/rad = 2,
+				/obj/item/storage/firstaid/o2 = 2)
+
+	var/build_type = pick_weight(medical_weights)
+
+	new build_type(src.loc)
+	return
 
 /*
 // OB spawners

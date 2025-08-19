@@ -174,6 +174,10 @@
 	set waitfor = 0
 	last_fired = world.time
 
+	// Safety check - prevent targeting atoms in containers (notably your equipment/inventory), stolen from the laser designator
+	if(target.z == 0)
+		return
+
 	var/to_firer = "You fire the [name]!"
 	if(internal_slots > 1)
 		to_firer += " [length(cylinder.contents)-1]/[internal_slots] grenades remaining."
@@ -291,6 +295,41 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
+//UPP DEDICATED GL
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp
+	name = "\improper OG-60 grenade launcher"
+	desc = "A heavy, 6-shot grenade launcher used by the UPP armed collective."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "m92_upp"
+	item_state = "m92_upp"
+	flags_item = TWOHANDED
+	map_specific_decoration = FALSE
+	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_1)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/sling/scope = new(src)
+	scope.hidden = FALSE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+	var/obj/item/attachable/verticalgrip/upp/grip = new(src)
+	grip.hidden = FALSE
+	grip.Attach(src)
+	update_attachable(grip.slot)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/stored
+	preload = null
+	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
+
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
@@ -375,6 +414,7 @@
 	name = "\improper modified M79 grenade launcher"
 	desc = "A heavy, low-angle grenade launcher. It's been in use since the Vietnam War, though this version has been modified to fire standard USCM 30mm grenades. The wooden furniture is, in fact, an attempt at modernization and is made of painted hardened polykevlon."
 	valid_munitions = list(/obj/item/explosive/grenade/high_explosive, /obj/item/explosive/grenade/high_explosive/impact/tmfrag, /obj/item/explosive/grenade/high_explosive/impact/heap, /obj/item/explosive/grenade/high_explosive/impact/flare, /obj/item/explosive/grenade/incendiary, /obj/item/explosive/grenade/smokebomb, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/handle_starting_attachment()
 	..()
@@ -382,6 +422,7 @@
 	scope.hidden = FALSE
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	scope.Attach(src)
+	scope.hidden = TRUE
 	update_attachable(scope.slot)
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff

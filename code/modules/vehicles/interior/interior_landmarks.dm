@@ -11,7 +11,6 @@
 
 /obj/effect/landmark/interior/spawn
 	name = "interior interactable spawner"
-
 // Interiors will call this when they're created
 /obj/effect/landmark/interior/spawn/on_load(datum/interior/I)
 	qdel(src)
@@ -231,32 +230,6 @@
 
 	qdel(src)
 
-/obj/effect/landmark/interior/spawn/telephone
-	name = "telephone spawner"
-	icon = 'icons/obj/vehicles/interiors/general.dmi'
-	icon_state = "wall_phone"
-	color = "yellow"
-
-/obj/effect/landmark/interior/spawn/telephone/toc
-	icon = 'icons/obj/vehicles/interiors/movie.dmi'
-	icon_state = "wall_phone"
-
-/obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/phone_base/Phone = new(loc)
-
-	Phone.icon = icon
-	Phone.icon_state = icon_state
-	Phone.layer = layer
-	Phone.setDir(dir)
-	Phone.alpha = alpha
-	Phone.update_icon()
-	Phone.pixel_x = pixel_x
-	Phone.pixel_y = pixel_y
-	Phone.phone_category = "Vehicles"
-	Phone.phone_id = replacetext(Phone.phone_id, "\improper", "") // this has to be done because phone IDs need to be the same as their display name (\improper doesn't display, obviously)
-
-	qdel(src)
-
 // Landmark for spawning the reloader
 /obj/effect/landmark/interior/spawn/weapons_loader
 	name = "vehicle weapons reloader spawner"
@@ -359,5 +332,28 @@
 	V.alpha = alpha
 	V.layer = layer
 	V.update_icon()
+
+	qdel(src)
+
+// UPP VAN Gunner without skill
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van
+	name = "armor gunner's seat spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "armor_chair"
+	color = "yellow"
+
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/van_gunner/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
 
 	qdel(src)

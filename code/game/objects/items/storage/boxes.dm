@@ -335,7 +335,7 @@
 	icon_state = "lemon_drop_box"
 	item_state = "lemon_drop_box"
 	can_hold = list(/obj/item/reagent_container/food/snacks/lemondrop)
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY //because otherwise it won't go back into MREs, it's not like people are minmaxing with lemon drops anyway
 	storage_slots = 8
 
 /obj/item/storage/box/lemondrop/fill_preset_inventory()
@@ -696,6 +696,72 @@
 		icon_state = "r52"
 
 //ITEMS-----------------------------------//
+
+/obj/item/storage/box/upp_radio_key
+	name = "box of UPP millitary encryption keys"
+	desc = "Contains radio encryption keys. They can be inserted into a radio headset."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "uppkeycase"
+	var/icon_lid = "uppkeycase_lid"
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_TINY
+	storage_slots = 4
+	can_hold = list(/obj/item/device/encryptionkey)
+	use_sound = "toolbox"
+
+/obj/item/storage/box/upp_radio_key/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+
+/obj/item/storage/box/upp_radio_key/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppkeycase_lid_open")
+	else
+		overlays += image(icon, icon_lid)
+		return
+	var/key_tally = -1
+	for(var/obj/item/device/encryptionkey/radio_key in contents)
+		key_tally++
+		if(key_tally+1 > initial(storage_slots))
+			return
+		if(istype(radio_key, /obj/item/device/encryptionkey/upp))
+			var/image/source_image = image(icon, "+upp_engi")
+			source_image.pixel_x = key_tally*4
+			overlays += source_image
+		else
+			if(istype(radio_key, /obj/item/device/encryptionkey/colony))
+				var/image/source_image = image(icon, "+colony_key")
+				source_image.pixel_x = key_tally*4
+				overlays += source_image
+			else
+				if(istype(radio_key, /obj/item/device/encryptionkey))
+					var/image/source_image = image(icon, "+generic_key")
+					source_image.pixel_x = key_tally*4
+					overlays += source_image
+
+/obj/item/storage/box/upp_radio_key/colony
+	name = "box of UPP civilian radio keys"
+	icon_lid = "uppkeycaseciv_lid"
+
+/obj/item/storage/box/upp_radio_key/colony/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+
+/obj/item/storage/box/upp_radio_key/engi
+	name = "box of UPP Engineering Encryption Keys"
+	icon_lid = "uppkeycaseengi_lid"
+
+/obj/item/storage/box/upp_radio_key/engi/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+
 /obj/item/storage/box/lightstick
 	name = "box of lightsticks"
 	desc = "Contains blue lightsticks."
@@ -942,3 +1008,148 @@
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+
+/obj/item/storage/box/cheeseslices
+	name = "box of 'cheese-product' slices"
+	desc = "Smells like plastic."
+	icon_state = "cheese_kit"
+
+/obj/item/storage/box/cheeseslices/fill_preset_inventory()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft(src)
+
+/obj/item/storage/box/m4a3_mag/rubber
+	name = "box of pistol magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+
+/obj/item/storage/box/m4a3_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+	new /obj/item/ammo_magazine/pistol/rubber(src)
+
+/obj/item/storage/box/m4a3_mag
+	name = "box of pistol magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/m4a3_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/box/vp78_mag
+	name = "box of doublestack magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/vp78_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/box/mar40_mag
+	name = "box of light bullpup magazines"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/pistol)
+
+/obj/item/storage/box/mar40_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+	new /obj/item/ammo_magazine/rifle/mar40(src)
+
+/obj/item/storage/box/mp5_mag/rubber
+	name = "box of SMG magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 16
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/smg)
+
+/obj/item/storage/box/m39_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+
+/obj/item/storage/box/mp5_mag
+	name = "box of SMG magazines - lethal"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	storage_slots = 8
+	w_class = SIZE_MEDIUM
+	can_hold = list(/obj/item/ammo_magazine/smg)
+
+/obj/item/storage/box/mp5_mag/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+	new /obj/item/ammo_magazine/smg/mp5(src)
+
+/obj/item/storage/box/mp5_mag/rubber
+	name = "box of SMG magazines - rubber"
+	desc = "A sturdy metal box with several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+
+/obj/item/storage/box/mp5_mag/rubber/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+	new /obj/item/ammo_magazine/smg/mp5/rubber(src)
+
+/obj/item/storage/box/bloodpacks
+	name = "blood packs box"
+	desc = "This box contains empty blood packs."
+	storage_slots = 8
+	w_class = SIZE_SMALL
+	can_hold = list(/obj/item/reagent_container/blood)
+
+/obj/item/storage/box/bloodpacks/fill_preset_inventory()
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+	new /obj/item/reagent_container/blood/empty(src)
+
+/obj/item/storage/box/bloodpacks/saline
+	name = "glucose box"
+	desc = "This box contains glucose IV bags."
+
+/obj/item/storage/box/bloodpacks/saline/fill_preset_inventory()
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/blood/saline(src)

@@ -700,11 +700,12 @@
 	icon = 'icons/obj/structures/props/catclock.dmi'
 	icon_state = "cat_clock_motion"
 
-//nerva, legacy looking SS13
+//torch
 
 /obj/structure/sign/double/map
 	name = "map"
 	desc = "A framed map."
+
 
 /obj/structure/sign/double/map/left
 	icon_state = "map-left"
@@ -747,6 +748,10 @@
 
 /obj/structure/sign/warning/caution
 	name = "\improper CAUTION"
+
+/obj/structure/sign/warning/toxic_material
+	name = "\improper TOXIC MATERIAL"
+	icon_state = "toxic_material"
 
 /obj/structure/sign/warning/compressed_gas
 	name = "\improper COMPRESSED GAS"
@@ -1040,10 +1045,6 @@
 	name = "\improper Infirmary"
 	icon_state = "direction_infirm"
 
-/obj/structure/sign/directions/virology
-	name = "\improper Virology"
-	icon_state = "direction_viro"
-
 /obj/structure/sign/directions/examroom
 	name = "\improper Exam Room"
 	icon_state = "examroom"
@@ -1079,88 +1080,3 @@
 /obj/structure/sign/deck/fifth
 	name = "\improper Fifth Deck"
 	icon_state = "deck-5"
-
-/obj/structure/sign/osha/radiationsignyellow
-	name = "RADIATION WARNING!"
-	desc = "A warning sign advising you of a radioactive area."
-	icon_state = "radiationsign"
-
-/obj/structure/sign/osha/secureareasign
-	name = "SECURE AREA"
-	desc = "A warning sign against tresspassing."
-	icon_state = "securesign"
-
-/obj/structure/sign/osha/electricalsign
-	name = "DANGER HIGH-VOLTAGE!"
-	desc = "A warning sign that displays a large bolt. Underneath you can read 'BEWARE OF ELECTRIC SHOCK'."
-	icon_state = "electricalsign"
-
-/obj/structure/sign/osha/cyrogenicsign
-	name = "WARNING COLD TEMPERATURES."
-	desc = "A warning sign which suggests this environment may contain sub-zero elements."
-	icon_state = "cyrogenicsign"
-
-/obj/structure/sign/osha/containernotice
-	name = "USE SAFETY CONTAINERS"
-	desc = "A sign that advises the use of safety containers such as beakers."
-	icon_state = "containersign"
-
-/obj/structure/sign/osha/highflame
-	name = "CAUTION HIGHLY FLAMMABLE!"
-	desc = "A warning sign that suggests this area contains highly flammable materials."
-	icon_state = "oxidizersign"
-
-/obj/structure/sign/osha/biohazardous
-	name = "DANGER BIOHAZARDOUS MATERIALS."
-	desc = "A warning sign that tells you this area contains biohazardous materials. It advises wearing internals."
-	icon_state = "biohazardous"
-
-/obj/structure/sign/osha/commonsenseplease
-	name = "USE COMMON SENSE."
-	desc = "A stark-yellow sign showing a brain. Underneath it states to use common sense, who would do that?"
-	icon_state = "commonsense"
-
-/obj/structure/sign/osha/biohazardsigns
-	name = "BIOHAZARD PRESENT!"
-	desc = "A sign which warns you that biohazardous material may be in use."
-	icon_state = "biohazardsign"
-
-/obj/structure/sign/osha/dangercorrosive
-	name = "CORROSIVE MATERIALS PRESENT!"
-	desc = "A sign warning that corrosive reagents may be present. It advises wearing gloves to prevent chemical burns."
-	icon_state = "corrosivematerial"
-
-/obj/structure/sign/osha/explosivematsign
-	name = "DANGER! EXPLOSIVE MATERIAL!"
-	desc = "A sign warning that highly explosive material may be used."
-	icon_state = "explosives"
-
-/obj/structure/sign/osha/alertlasersign
-	name = "WEAR EYE-PROTECTION, LASERS IN USE."
-	desc = "A warning sign advising you to wear eye protection."
-	icon_state = "laserssign"
-
-/obj/structure/sign/osha/poisonsign
-	name = "RESPIRATOR REQUIRED BEFORE ENTRY."
-	desc = "A warning sign stating that respirators are needed due to poisonous materials being handled."
-	icon_state = "poisonous"
-
-/obj/structure/sign/osha/magneticsign
-	name = "MAGNETIC MATERIALS PRESENT."
-	desc = "A warning sign which reads 'MAGNETIC MATERIALS PRESENT'."
-	icon_state = "magnetic"
-
-/obj/structure/sign/osha/opticssign
-	name = "WEAR EYE-PROTECTION BEFORE ENTRY"
-	desc = "A warning sign which advises wearing equipment to prevent eye damage."
-	icon_state = "optics"
-
-/obj/structure/sign/osha/vigilsign
-	name = "REMAIN VIGILANT."
-	desc = "A sign that advises you to remain vigilant to your surrondings. Someone has scratched out 'Trust No-one' at the bottom of the sign."
-	icon_state = "awaresign"
-
-/obj/structure/sign/osha/ssdhelpsign
-	name = "SECURE SLEEPING CREW."
-	desc = "A sign advising you to return crew suffering from Sleep Sickness Disorder (SSD) to the Cyrogenics or Dorm area."
-	icon_state = "ssdsign"

@@ -1,7 +1,7 @@
 /datum/equipment_preset/wo
 	name = "WO"
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	languages = list(LANGUAGE_ENGLISH)
 	idtype = /obj/item/card/id/dogtag
 
@@ -421,8 +421,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/pen(new_human), WEAR_J_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(new_human.back), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator(new_human.back), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated(new_human.back), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human.back), WEAR_IN_BACK)
 
 //*****************************************************************************************************/
 
@@ -461,7 +461,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/surgery/green(new_human), WEAR_HEAD)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer(new_human.back), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human.back), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator(new_human.back), WEAR_IN_BACK)
 
 //*****************************************************************************************************/
@@ -769,7 +769,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/surgical(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)

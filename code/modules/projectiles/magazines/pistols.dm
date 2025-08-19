@@ -67,10 +67,17 @@
 	name = "\improper M1911 magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
-	icon_state = "m4a345"//rename later
+	icon_state = "m1911"
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
+	ammo_band_icon = "+m1911_band"
+	ammo_band_icon_empty = "+m1911_band_e"
 
+/obj/item/ammo_magazine/pistol/m1911/super
+	name = "\improper M1911 magazine (.45 Super)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy/special
+	gun_type = /obj/item/weapon/gun/pistol/m1911/socom/officer
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 //-------------------------------------------------------
 //vp70 based off VP70
@@ -213,7 +220,7 @@
 
 /obj/item/ammo_magazine/pistol/np92
 	name = "\improper NP92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "np92mag"
@@ -222,7 +229,7 @@
 
 /obj/item/ammo_magazine/pistol/np92/suppressed
 	name = "\improper NPZ92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92mag"
@@ -302,7 +309,7 @@
 
 /obj/item/ammo_magazine/pistol/highpower
 	name = "\improper HG-45 'Aguila' magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"

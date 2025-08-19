@@ -15,7 +15,6 @@
 	role_mappings = list(
 		/datum/job/command/commander/whiskey = JOB_CO,
 		/datum/job/command/executive/whiskey = JOB_XO,
-		/datum/job/civilian/synthetic/whiskey = JOB_SYNTH,
 		/datum/job/command/warrant/whiskey = JOB_CHIEF_POLICE,
 		/datum/job/command/bridge/whiskey = JOB_SO,
 		/datum/job/command/tank_crew/whiskey = JOB_TANK_CREW,
@@ -756,7 +755,7 @@
 			spawnitems = list(/obj/item/ammo_magazine/rifle/m49a/custom,
 							/obj/item/ammo_magazine/rifle/m49a/custom,
 							/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-							/obj/item/ammo_magazine/rifle/m49a/custom/impact)
+							/obj/item/ammo_magazine/rifle/m49a/custom/explosive)
 	crate.storage_capacity = 60
 	for(var/path in spawnitems)
 		new path(crate)
