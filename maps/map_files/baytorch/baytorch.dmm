@@ -407,7 +407,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "afa" = (
 /obj/structure/sign/directions/science{
 	dir = 1
@@ -688,7 +688,7 @@
 "aim" = (
 /obj/structure/pipes/vents/pump/high_volume,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod14)
 "aip" = (
 /obj/structure/machinery/power/apc{
 	dir = 8;
@@ -1556,7 +1556,7 @@
 	},
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod2)
 "auu" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
@@ -1589,7 +1589,7 @@
 	},
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "auU" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -1660,7 +1660,9 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "avs" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /turf/open/floor/vault2/north,
 /area/torch/seconddeck/cargo)
 "avJ" = (
@@ -2124,7 +2126,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "aCF" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/noticeboard{
@@ -2157,6 +2159,9 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
+"aCH" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod18)
 "aCX" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
@@ -2951,6 +2956,17 @@
 	},
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/tech)
+"aLA" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod17)
 "aLE" = (
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/vault2/west,
@@ -3085,6 +3101,10 @@
 /obj/structure/machinery/light/small,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/maintenance/central)
+"aNy" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden,
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "aNL" = (
 /obj/structure/machinery/status_display,
 /turf/closed/wall,
@@ -3643,7 +3663,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "aUj" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	dir = 4;
@@ -3688,7 +3708,7 @@
 	dir = 4
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "aVn" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 4
@@ -3737,6 +3757,20 @@
 	map_airless = 1
 	},
 /area/space)
+"aVy" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod17)
+"aVH" = (
+/obj/structure/pipes/standard/manifold/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
+"aVV" = (
+/obj/structure/pipes/standard/tank/air{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod7)
 "aWc" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4400,7 +4434,7 @@
 "bgq" = (
 /obj/structure/machinery/recharge_station,
 /turf/open/floor,
-/area/space)
+/area/torch/guppy_hangar)
 "bgr" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 6
@@ -4758,7 +4792,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "blB" = (
 /obj/structure/catwalk,
 /obj/structure/ladder{
@@ -4792,7 +4826,8 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden,
 /obj/structure/dispenser/oxygen{
-	pixel_x = 32
+	pixel_x = 32;
+	density = 0
 	},
 /obj/structure/machinery/light{
 	dir = 4
@@ -4871,7 +4906,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /obj/structure/catwalk,
 /turf/open/floor/plating,
@@ -4886,7 +4922,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "bne" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -6125,7 +6161,7 @@
 	name = "Escape Pod Two Hatch"
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "bEF" = (
 /turf/closed/wall/wood,
 /area/torch/bridgedeck/co_bed)
@@ -6299,7 +6335,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "bGv" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -6442,7 +6478,7 @@
 	name = "Escape Pod One Hatch"
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/space)
+/area/almayer/evacuation/pod7)
 "bIg" = (
 /obj/structure/sign/directions/engineering,
 /obj/structure/sign/directions/supply{
@@ -6490,7 +6526,7 @@
 	dir = 10
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "bKn" = (
 /obj/structure/pipes/vents/pump/siphon/on{
 	internal_pressure_bound = 35000;
@@ -6543,6 +6579,9 @@
 /obj/structure/machinery/status_display,
 /turf/closed/wall,
 /area/torch/thirddeck/cryo)
+"bLn" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod17)
 "bLq" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 8
@@ -6698,6 +6737,13 @@
 /obj/structure/bed/chair/comfy/blue,
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/sea)
+"bNn" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod12)
 "bNt" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -6981,7 +7027,7 @@
 "bRJ" = (
 /obj/structure/cable/cyan,
 /turf/open/floor/warning,
-/area/space)
+/area/torch/guppy_hangar)
 "bRU" = (
 /obj/structure/machinery/newscaster{
 	pixel_y = 32
@@ -7328,7 +7374,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "bWM" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -7556,7 +7602,8 @@
 	dir = 1
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /obj/structure/pipes/vents/pump/high_volume,
 /turf/open/floor/almayer_hull/blackfull,
@@ -8092,6 +8139,12 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/maintenance/incinerator)
+"cgR" = (
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod18)
 "cgS" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -8109,7 +8162,7 @@
 	pixel_x = 21
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod15)
 "chv" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -8126,14 +8179,15 @@
 /area/torch/fourthdeck/maintenance/waterstore)
 "chE" = (
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /obj/structure/barricade/handrail,
 /obj/structure/pipes/standard/manifold/hidden{
 	dir = 8
 	},
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "chI" = (
 /obj/structure/ladder{
 	id = "2to1_aftportmaint_1_a";
@@ -8336,6 +8390,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/fifthdeck/maintenance/fore)
+"clj" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod1)
 "clo" = (
 /obj/structure/machinery/portable_atmospherics/canister/air/airlock,
 /obj/structure/pipes/portables_connector{
@@ -8535,6 +8593,13 @@
 "cnE" = (
 /turf/closed/wall,
 /area/torch/seconddeck/bluespace)
+"cnO" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "cnU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -9007,7 +9072,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "ctT" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9122,7 +9187,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "cvG" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
@@ -9483,7 +9548,7 @@
 	dir = 5
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "cAH" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -10379,7 +10444,9 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/seconddeck/engineering/engineering_bay)
 "cLu" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 20
@@ -10805,6 +10872,12 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/fourthdeck/tools)
+"cRD" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 4
+	},
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod11)
 "cRN" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
@@ -11194,7 +11267,7 @@
 	pixel_x = -21
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod14)
 "cXD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11267,7 +11340,7 @@
 	req_access = list(list("ACCESS_TORCH_AQUILA_HELM"))
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "cZu" = (
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/hallway/aft)
@@ -11530,7 +11603,7 @@
 /obj/structure/pipes/vents,
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "deh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -12114,7 +12187,7 @@
 	dir = 6
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "dmO" = (
 /obj/structure/machinery/firealarm{
 	dir = 4;
@@ -12167,7 +12240,8 @@
 /obj/structure/machinery/optable,
 /obj/structure/dispenser/oxygen{
 	pixel_x = -32;
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/shiva/blue,
 /area/torch/firstdeck/medical/surgery2)
@@ -12616,7 +12690,7 @@
 	dir = 1
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "dtW" = (
 /obj/structure/pipes/unary/outlet_injector{
 	dir = 1;
@@ -13773,7 +13847,7 @@
 	name = "Escape Pod Three Hatch"
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/space)
+/area/almayer/evacuation/pod15)
 "dIh" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /turf/open/floor/vault2/west,
@@ -13940,7 +14014,7 @@
 	dir = 4
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "dLo" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -14882,7 +14956,8 @@
 /obj/structure/machinery/optable,
 /obj/structure/dispenser/oxygen{
 	pixel_x = -32;
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/shiva/yellow,
 /area/torch/seconddeck/robotics/surgery)
@@ -15256,7 +15331,9 @@
 /turf/open/floor/shiva/purple,
 /area/torch/firstdeck/research/hallway)
 "eda" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /turf/open/floor/almayer_hull,
 /area/torch/bridgedeck/maintenance/forestarboard)
 "edy" = (
@@ -15423,7 +15500,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "efP" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -16419,7 +16496,8 @@
 /area/torch/fourthdeck/lounge)
 "euT" = (
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -16446,7 +16524,7 @@
 	dir = 10
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "eva" = (
 /obj/structure/machinery/conveyor{
 	id = "garbage2"
@@ -16560,7 +16638,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "ewj" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/shiva/blue/north,
@@ -16578,7 +16656,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "ewF" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16743,7 +16821,7 @@
 	dir = 5
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "ezz" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -16821,11 +16899,12 @@
 /area/torch/fourthdeck/pathfinder)
 "eAZ" = (
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /obj/structure/barricade/handrail,
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "eBb" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -17587,7 +17666,7 @@
 	dir = 1
 	},
 /turf/closed/wall/almayer/white/outer_tile,
-/area/space)
+/area/almayer/evacuation/pod15)
 "eMo" = (
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
 	name = "Xenoflora Lab Maintenance";
@@ -18441,6 +18520,13 @@
 /obj/structure/pipes/standard/manifold/fourway/visible/green,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/seconddeck/engineering/engine_room)
+"eWy" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "eWF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18521,7 +18607,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "eXk" = (
 /obj/structure/bedsheetbin,
 /turf/open/floor/plating,
@@ -19056,6 +19142,15 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/forestarboard)
+"fcl" = (
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
+"fcm" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod14)
 "fcs" = (
 /turf/open/floor/shiva/yellowcorners/east,
 /area/torch/fifthdeck/hallway/fore)
@@ -19266,7 +19361,7 @@
 "feo" = (
 /obj/structure/pipes/standard/tank/air,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "feq" = (
 /obj/structure/pipes/standard/manifold/visible{
 	dir = 8
@@ -19631,7 +19726,7 @@
 	name = "Escape Pod Seven Hatch"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod12)
 "fiZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -19754,7 +19849,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "fkI" = (
 /obj/structure/lattice,
 /obj/structure/pipes/standard/simple/visible/supply,
@@ -19943,7 +20038,8 @@
 /area/torch/petrov/equipment)
 "fmW" = (
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /obj/structure/pipes/vents/pump/high_volume{
 	dir = 4;
@@ -19957,7 +20053,7 @@
 	name = "Escape Pod Seven"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod13)
 "fne" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -20052,6 +20148,12 @@
 /obj/structure/surface/rack,
 /turf/open/floor/bluegrid/bcircuitoff,
 /area/torch/seconddeck/tech)
+"fov" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod15)
 "foz" = (
 /obj/structure/pipes/standard/simple/hidden,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -20170,7 +20272,7 @@
 "fpV" = (
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod15)
 "fpX" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -20289,6 +20391,10 @@
 /obj/structure/barricade/handrail,
 /turf/open/void/show_pipes,
 /area/torch/bridgedeck/maintenance/foreport)
+"frA" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod14)
 "frB" = (
 /obj/structure/machinery/access_button{
 	name = "Deck One Starboard Chamber Vent";
@@ -20792,7 +20898,7 @@
 	pixel_x = 21
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "fwt" = (
 /obj/structure/closet/hydrant{
 	pixel_x = 32
@@ -20883,7 +20989,8 @@
 	icon_state = "4-8"
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /obj/structure/catwalk,
 /turf/open/floor/plating,
@@ -20917,7 +21024,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "fym" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -21327,7 +21434,8 @@
 	dir = 8
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /obj/structure/pipes/vents/pump/high_volume{
 	id_tag = "solar_starboard_pump"
@@ -21577,7 +21685,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "fGE" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -21933,7 +22041,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "fLD" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/cell_charger,
@@ -21948,6 +22056,9 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/maintenance/starboard)
+"fLP" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod13)
 "fLS" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 1
@@ -22421,7 +22532,7 @@
 	},
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "fRt" = (
 /obj/structure/sign/warning/toxic_material,
 /turf/closed/wall,
@@ -22481,6 +22592,10 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer,
 /area/torch/fourthdeck/hallway/fore)
+"fSk" = (
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "fSv" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -23059,7 +23174,7 @@
 "fZV" = (
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "fZX" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -23407,6 +23522,13 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/hallway/aft)
+"gdU" = (
+/obj/structure/pipes/vents,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod11)
 "geb" = (
 /obj/structure/pipes/standard/simple/visible/supply{
 	dir = 4
@@ -23686,6 +23808,11 @@
 /obj/structure/closet/l3closet/janitor,
 /turf/open/floor/shiva/snow_mat,
 /area/torch/thirddeck/janitor)
+"giV" = (
+/obj/structure/pipes/vents,
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod11)
 "gjb" = (
 /obj/structure/machinery/light,
 /obj/structure/machinery/flasher/portable,
@@ -23958,7 +24085,7 @@
 	pixel_y = 22
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "gmY" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 4
@@ -24373,7 +24500,7 @@
 	pixel_y = 24
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "grF" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 32
@@ -24566,6 +24693,10 @@
 "gtR" = (
 /turf/closed/wall,
 /area/torch/bridgedeck/meeting_room)
+"gtZ" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/kutjevo/colors/red/tile,
+/area/almayer/evacuation/pod7)
 "guc" = (
 /obj/docking_port/stationary/marine_dropship/lz1{
 	name = "Fifth Deck - Hanger Bay"
@@ -24892,7 +25023,7 @@
 	pixel_y = 22
 	},
 /turf/open/floor/shiva/yellow/east,
-/area/space)
+/area/torch/guppy_hangar)
 "gyC" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/shiva/floor3,
@@ -24952,7 +25083,9 @@
 /obj/structure/pipes/standard/simple/visible{
 	dir = 6
 	},
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/forestarboard)
 "gzn" = (
@@ -25129,7 +25262,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor,
-/area/space)
+/area/torch/guppy_hangar)
 "gBt" = (
 /obj/structure/cable/cyan{
 	d2 = 8;
@@ -25206,7 +25339,7 @@
 "gCp" = (
 /obj/structure/closet/secure_closet/guncabinet/red/armory_m4a3_pistol,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "gCv" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -25250,7 +25383,7 @@
 "gDn" = (
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "gDp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -25290,7 +25423,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod6)
 "gDI" = (
 /obj/structure/surface/rack,
 /obj/structure/window/reinforced,
@@ -25318,7 +25451,7 @@
 "gDU" = (
 /obj/structure/pipes/standard/manifold/hidden,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod14)
 "gDY" = (
 /obj/structure/machinery/firealarm{
 	dir = 1;
@@ -25355,7 +25488,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "gEi" = (
 /obj/structure/machinery/light_switch{
 	pixel_x = -24;
@@ -25561,6 +25694,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/prototype/engine)
+"gGj" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "gGu" = (
 /obj/structure/machinery/power/apc{
 	dir = 4;
@@ -25635,7 +25772,10 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
+"gHv" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod12)
 "gHA" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/window{
@@ -25722,7 +25862,7 @@
 "gJf" = (
 /obj/structure/surface/rack,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "gJz" = (
 /obj/structure/machinery/firealarm{
 	dir = 8;
@@ -25906,6 +26046,12 @@
 "gLg" = (
 /turf/open/floor/plating,
 /area/torch/seconddeck/chapel)
+"gLi" = (
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
 "gLl" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/tech_supply,
@@ -26556,7 +26702,8 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden,
 /obj/structure/dispenser/oxygen{
-	pixel_x = 32
+	pixel_x = 32;
+	density = 0
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk/prison,
@@ -26677,7 +26824,7 @@
 "gVV" = (
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "gWs" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 6
@@ -26947,7 +27094,7 @@
 /obj/effect/spawner/random/powercell,
 /obj/effect/spawner/random/powercell,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "gZa" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -27067,7 +27214,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "gZY" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -27591,7 +27738,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "hik" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 6
@@ -27668,7 +27815,7 @@
 "hju" = (
 /obj/structure/machinery/light/small,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "hjC" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -27690,7 +27837,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "hjN" = (
 /turf/closed/wall,
 /area/torch/firstdeck/medical/surgery2)
@@ -28037,7 +28184,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "how" = (
 /obj/structure/machinery/autolathe/full,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -28255,7 +28402,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "hrA" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/bomb_supply,
@@ -28531,6 +28678,17 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/safe_room)
+"hvG" = (
+/obj/structure/machinery/medical_pod/sleeper{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	dir = 4;
+	name = "Emergency NanoMed";
+	pixel_x = -30
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod14)
 "hvS" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/marine{
@@ -29436,7 +29594,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "hGT" = (
 /obj/structure/bed/chair/vehicle,
 /turf/open/floor/almayer/aicore,
@@ -29836,6 +29994,9 @@
 	},
 /turf/closed/wall/almayer/reinforced,
 /area/torch/fourthdeck/maintenance/port)
+"hMF" = (
+/turf/closed/wall/almayer/reinforced,
+/area/almayer/evacuation/pod12)
 "hNs" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
@@ -30064,7 +30225,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "hPY" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -30134,6 +30295,10 @@
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/safe_room)
+"hRL" = (
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
 "hRQ" = (
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/research)
@@ -30361,7 +30526,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "hVi" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer/dark_sterile,
@@ -30996,6 +31161,10 @@
 /obj/structure/prop/server_equipment/laptop,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/safe_room/medical)
+"idw" = (
+/obj/structure/window/reinforced/full,
+/turf/open/floor/almayer_hull,
+/area/almayer/evacuation/pod13)
 "idx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31440,6 +31609,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/maintenance/waterstore)
+"ijB" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod14)
 "ijC" = (
 /obj/structure/pipes/standard/manifold/visible/cyan{
 	dir = 8
@@ -31854,7 +32027,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "ipR" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 10
@@ -32317,6 +32490,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/fifthdeck/storage)
+"iwh" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod14)
 "iwi" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
@@ -32925,7 +33102,7 @@
 	dir = 10
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod15)
 "iEw" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -32948,7 +33125,7 @@
 	start_pressure = 1900
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "iEJ" = (
 /obj/structure/machinery/lapvend,
 /turf/open/floor/shiva/purple,
@@ -33518,7 +33695,7 @@
 	dir = 1
 	},
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "iMA" = (
 /obj/structure/machinery/alarm{
 	dir = 8;
@@ -34032,6 +34209,13 @@
 "iTs" = (
 /turf/open/floor/plating/catwalk,
 /area/torch/fourthdeck/catwalks)
+"iTB" = (
+/obj/structure/dispenser/oxygen{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/shiva/green/west,
+/area/torch/fourthdeck/hallway/aft)
 "iUb" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -34607,7 +34791,7 @@
 /area/torch/bridgedeck/disciplinary_board_room)
 "jaL" = (
 /turf/closed/wall/almayer/white/outer_tile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "jaO" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -34866,6 +35050,16 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3starboard)
+"jer" = (
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod12)
 "jev" = (
 /obj/structure/machinery/light,
 /turf/open/floor/almayer_hull,
@@ -34995,7 +35189,8 @@
 /obj/structure/machinery/optable,
 /obj/structure/dispenser/oxygen{
 	pixel_x = -32;
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/shiva/blue,
 /area/torch/firstdeck/medical/surgery)
@@ -35126,7 +35321,7 @@
 /area/torch/thirddeck/observation)
 "jib" = (
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod14)
 "jiq" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -35598,7 +35793,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "jnQ" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -35712,7 +35907,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "jph" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8
@@ -35841,7 +36036,7 @@
 /turf/open/floor/plating{
 	map_airless = 1
 	},
-/area/space)
+/area/torch/guppy_hangar)
 "jrL" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -36558,7 +36753,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "jBE" = (
 /obj/structure/pipes/standard/simple/visible/cyan,
 /turf/open/floor/almayer_hull,
@@ -36875,7 +37070,7 @@
 	},
 /obj/structure/cable/yellow,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "jFY" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /turf/open/floor/vault2/west,
@@ -37507,7 +37702,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod1)
 "jOz" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -37527,7 +37722,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod7)
 "jOU" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/eva)
@@ -37675,7 +37870,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "jRM" = (
 /obj/item/disk,
 /obj/item/disk,
@@ -37774,7 +37969,7 @@
 	},
 /obj/structure/pipes/vents/pump/high_volume,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod14)
 "jSr" = (
 /turf/closed/wall/sulaco,
 /area/torch/petrov/isolation)
@@ -37947,7 +38142,7 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "jTQ" = (
 /turf/open/floor/shiva/blue/east,
 /area/torch/firstdeck/hallway/fore)
@@ -38415,6 +38610,17 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/incinerator)
+"jZX" = (
+/obj/structure/machinery/medical_pod/sleeper{
+	dir = 8
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	dir = 8;
+	name = "Emergency NanoMed";
+	pixel_x = 28
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod15)
 "kaa" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	density = 0;
@@ -38428,6 +38634,13 @@
 	map_airless = 1
 	},
 /area/torch/seconddeck/maintenance/forestarboard)
+"kag" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod14)
 "kah" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -38494,6 +38707,15 @@
 /obj/structure/closet/secure_closet/pilot_officer,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/pilot)
+"kbv" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod11)
 "kbA" = (
 /obj/structure/airlock_assembly,
 /turf/open/floor/plating,
@@ -38514,6 +38736,17 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/aftstarboard)
+"kbI" = (
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod18)
 "kbL" = (
 /turf/open/floor/almayer_hull{
 	map_airless = 1
@@ -38777,6 +39010,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/medical/surgery2)
+"keZ" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod2)
 "kfd" = (
 /obj/structure/cable/cyan{
 	d2 = 4;
@@ -38905,6 +39142,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/mono,
 /area/torch/fifthdeck/storage)
+"khj" = (
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "khl" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -38974,7 +39214,7 @@
 /obj/effect/spawner/random/medical,
 /obj/effect/spawner/random/medical,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "khP" = (
 /obj/structure/pipes/standard/simple/hidden/universal,
 /obj/structure/barricade/handrail,
@@ -39489,7 +39729,8 @@
 	id_tag = "bridgeport_pump"
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/maintenance/foreport)
@@ -39684,7 +39925,7 @@
 /obj/effect/spawner/random/tech_supply,
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "kqk" = (
 /turf/open/floor/shiva/bluecorners{
 	dir = 4
@@ -40070,7 +40311,7 @@
 "kux" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/yellow,
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "kuB" = (
 /obj/structure/catwalk/prison,
 /obj/effect/projector{
@@ -40124,6 +40365,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
+"kvr" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod11)
 "kvs" = (
 /obj/structure/closet/crate/internals{
 	name = "solar pack crate"
@@ -40669,7 +40914,7 @@
 "kBk" = (
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "kBl" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -41064,7 +41309,7 @@
 	dir = 1
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "kHQ" = (
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
@@ -41569,7 +41814,7 @@
 	pixel_x = 32
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod7)
 "kOT" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 5
@@ -42207,7 +42452,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "kWa" = (
 /turf/open/floor/corsat/sterileplate,
 /area/torch/petrov/equipment)
@@ -42388,7 +42633,7 @@
 	dir = 8
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "kZE" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -42493,7 +42738,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "lbj" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 5
@@ -43513,7 +43758,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod15)
 "lqy" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -43747,7 +43992,7 @@
 /obj/structure/pipes/vents,
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "ltc" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/plating/almayer,
@@ -44860,7 +45105,7 @@
 	pixel_y = -24
 	},
 /turf/open/floor/shiva/yellow/west,
-/area/space)
+/area/torch/guppy_hangar)
 "lHi" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -45580,6 +45825,16 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/hallway/aft)
+"lRm" = (
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = -28
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod11)
 "lRo" = (
 /obj/structure/sign/warning/compressed_gas,
 /turf/closed/wall/almayer/reinforced,
@@ -45665,7 +45920,7 @@
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/gloves/latex,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "lSm" = (
 /obj/structure/machinery/alarm{
 	dir = 4;
@@ -45687,6 +45942,14 @@
 	map_airless = 1
 	},
 /area/torch/petrov/toxins)
+"lSx" = (
+/obj/structure/machinery/cryopod,
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 21
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "lSy" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -45892,7 +46155,7 @@
 	dir = 1
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod7)
 "lVe" = (
 /obj/structure/machinery/light_switch{
 	pixel_x = 28
@@ -45908,7 +46171,7 @@
 	pixel_y = -28
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "lVt" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -46315,6 +46578,10 @@
 	},
 /turf/open/floor/shiva/purple/north,
 /area/torch/bridgedeck/rd)
+"max" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "may" = (
 /turf/open/floor/shiva/redcorners,
 /area/torch/thirddeck/hallway/fore)
@@ -46614,7 +46881,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "mec" = (
 /obj/structure/pipes/standard/manifold/hidden{
 	dir = 4
@@ -46831,7 +47098,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "mgy" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment{
@@ -46924,7 +47191,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "mie" = (
 /obj/structure/pipes/vents/scrubber/on,
 /turf/open/floor/shiva,
@@ -47246,7 +47513,7 @@
 	name = "Escape Pod Eight"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod12)
 "mmo" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -47739,7 +48006,7 @@
 	},
 /obj/structure/machinery/computer/turbine_computer,
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "mtH" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -47875,7 +48142,7 @@
 	dir = 9
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "mxc" = (
 /obj/structure/pipes/portables_connector{
 	dir = 8
@@ -48090,6 +48357,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/aft)
+"mAn" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod15)
 "mAw" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/catwalk,
@@ -48670,7 +48941,7 @@
 "mKB" = (
 /obj/structure/machinery/mech_bay_recharge_port,
 /turf/open/floor/warning,
-/area/space)
+/area/torch/guppy_hangar)
 "mKC" = (
 /obj/structure/machinery/door/airlock/external/colony{
 	frequency = 1380;
@@ -48936,7 +49207,7 @@
 "mNe" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden,
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "mNi" = (
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/thirddeck/hallway/center)
@@ -49168,6 +49439,12 @@
 /obj/structure/pipes/valve/digital,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
+"mQD" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod14)
 "mQE" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -49560,6 +49837,13 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/equipment)
+"mUB" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod14)
 "mUN" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/bridgedeck/safe_room)
@@ -49578,7 +49862,9 @@
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/maintenance/forestarboard)
 "mVa" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition/eva)
 "mVd" = (
@@ -49723,6 +50009,12 @@
 	},
 /turf/open/floor/cmo,
 /area/torch/thirddeck/mess)
+"mWW" = (
+/obj/structure/pipes/standard/simple/hidden{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod1)
 "mWX" = (
 /obj/structure/girder/displaced,
 /turf/open/floor/plating,
@@ -49802,7 +50094,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod6)
 "mYH" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
@@ -49933,12 +50225,12 @@
 	},
 /obj/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod15)
 "naR" = (
 /obj/structure/surface/table,
 /obj/item/device/defibrillator/compact,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "naV" = (
 /obj/structure/machinery/status_display,
 /turf/closed/wall,
@@ -50027,6 +50319,16 @@
 "nci" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/quartermaster/deckchief)
+"ncr" = (
+/obj/structure/machinery/cryopod{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "ncA" = (
 /obj/structure/pipes/standard/simple/visible/cyan,
 /turf/open/floor/vault2/west,
@@ -50409,6 +50711,12 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/gym)
+"nhp" = (
+/obj/structure/pipes/standard/simple/hidden{
+	dir = 4
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "nhE" = (
 /obj/structure/machinery/vending/dinnerware,
 /turf/open/floor/holofloor,
@@ -50879,7 +51187,8 @@
 /obj/structure/machinery/door/poddoor/almayer/open{
 	icon_state = "pdoor0";
 	id_tag = "bsdwindow";
-	name = "Drive Containment"
+	name = "Drive Containment";
+	id = "drive_box"
 	},
 /turf/open/floor/almayer,
 /area/torch/seconddeck/bluespace)
@@ -51059,6 +51368,14 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/chapel)
+"nnQ" = (
+/obj/structure/machinery/light/small,
+/obj/structure/pipes/vents,
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "nob" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -51146,6 +51463,9 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/hallway/center)
+"npt" = (
+/turf/open/floor/shiva/floor3,
+/area/torch/guppy_hangar)
 "npA" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/pink{
@@ -51837,7 +52157,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "nys" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating,
@@ -52363,7 +52683,7 @@
 	dir = 5
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "nFX" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/surface/rack,
@@ -52642,7 +52962,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/warning,
-/area/space)
+/area/torch/guppy_hangar)
 "nJT" = (
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/forestarboard)
@@ -52672,7 +52992,7 @@
 	},
 /obj/structure/machinery/microwave,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "nKv" = (
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/floor/grass,
@@ -52777,6 +53097,13 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/co_bed)
+"nLM" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
 "nLS" = (
 /obj/structure/window/reinforced,
 /obj/structure/machinery/light{
@@ -53197,7 +53524,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "nRh" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -53422,7 +53749,7 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "nUr" = (
 /obj/structure/closet/emcloset,
 /obj/structure/machinery/light/small{
@@ -54027,7 +54354,7 @@
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "obv" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 5
@@ -54216,6 +54543,14 @@
 /obj/structure/machinery/computer,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/central)
+"oeM" = (
+/obj/structure/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/pipes/vents,
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod11)
 "oeQ" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -54348,6 +54683,12 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/almayer/test_floor4,
 /area/torch/bridgedeck/hallway/fore)
+"ohn" = (
+/obj/structure/pipes/standard/simple/hidden{
+	dir = 10
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod11)
 "ohp" = (
 /obj/structure/bed,
 /obj/item/bedsheet,
@@ -54389,7 +54730,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "ohL" = (
 /obj/structure/machinery/access_button{
 	name = "Armory Lockdown Shutter Control";
@@ -54439,6 +54780,10 @@
 	},
 /turf/open/floor/freezerfloor,
 /area/torch/seconddeck/maintenance/forestarboard)
+"oim" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "oir" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -55195,7 +55540,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "oty" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -55240,7 +55585,7 @@
 	dir = 9
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "otS" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/generic/glass{
@@ -55428,7 +55773,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "owE" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -55829,7 +56174,8 @@
 	id_tag = "bridge_eva_pump"
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/bridgedeck/hallway/aft)
@@ -55898,7 +56244,7 @@
 /area/torch/firstdeck/bathroom)
 "oDt" = (
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "oDw" = (
 /obj/effect/spawner/random/tech_supply,
 /obj/effect/decal/cleanable/blackgoo,
@@ -56016,7 +56362,7 @@
 	name = "Escape Pod Six Hatch"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/almayer/evacuation/pod1)
 "oEY" = (
 /obj/structure/machinery/deployable/barrier,
 /obj/structure/machinery/deployable/barrier,
@@ -56049,7 +56395,7 @@
 	pixel_y = 24
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "oFD" = (
 /obj/item/frame/apc,
 /obj/structure/machinery/light/small{
@@ -56133,7 +56479,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "oGl" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -56286,7 +56632,8 @@
 	pixel_y = 12
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/petrov/hallwaya)
@@ -56383,7 +56730,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "oKk" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/fifthdeck/maintenance/aftstarboard)
@@ -56682,6 +57029,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/isolation)
+"oNS" = (
+/obj/structure/pipes/standard/manifold/hidden{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "oNX" = (
 /obj/structure/machinery/medical_pod/sleeper{
 	dir = 8
@@ -56692,7 +57045,7 @@
 	pixel_x = 28
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod7)
 "oOl" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
@@ -56853,7 +57206,7 @@
 "oQY" = (
 /obj/structure/window/reinforced/full,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/almayer/evacuation/pod12)
 "oRA" = (
 /obj/structure/sign/warning/high_voltage,
 /turf/closed/wall,
@@ -56895,6 +57248,20 @@
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/hallway/fore)
+"oTc" = (
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/landing_zone{
+	density = 0;
+	battery_duration = 12000000;
+	choice_categories = list("IFF STATUS" = list("WY","HUMAN","UPP"));
+	faction_group = list("Colonist","Survivor")
+	},
+/obj/structure/window/reinforced/ultra{
+	dir = 4
+	},
+/turf/open/floor/plating{
+	map_airless = 1
+	},
+/area/torch/guppy_hangar)
 "oTx" = (
 /obj/structure/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -57020,7 +57387,7 @@
 	pixel_y = 23
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "oVu" = (
 /obj/structure/disposalpipe/up{
 	dir = 8
@@ -57195,7 +57562,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod6)
 "oYl" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -57588,6 +57955,10 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/blue,
 /area/torch/bridgedeck/hallway/fore)
+"pec" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod12)
 "peg" = (
 /obj/structure/machinery/power/apc{
 	name = "south bump";
@@ -57707,7 +58078,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "pfr" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -58286,7 +58657,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "plQ" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/vault2/west,
@@ -58382,7 +58753,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod7)
 "pnc" = (
 /turf/closed/wall/sulaco,
 /area/torch/petrov/maint)
@@ -58772,7 +59143,7 @@
 	pixel_y = 24
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "ppU" = (
 /obj/item/reagent_container/spray/cleaner{
 	pixel_x = -6;
@@ -58948,7 +59319,7 @@
 	},
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "prA" = (
 /obj/effect/decal/cleanable/blackgoo,
 /turf/open/floor/plating,
@@ -59947,7 +60318,8 @@
 "pFy" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	dir = 4;
-	id_tag = "fusion_observation"
+	id_tag = "fusion_observation";
+	id = "prototype_chamber_obs"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
@@ -61160,7 +61532,7 @@
 "pVK" = (
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "pVR" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -61492,7 +61864,7 @@
 /area/torch/thirddeck/safe_room)
 "qbv" = (
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "qbw" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -61584,7 +61956,7 @@
 "qcK" = (
 /obj/structure/pipes/binary/pump,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "qcL" = (
 /obj/structure/noticeboard{
 	pixel_y = 32
@@ -61607,7 +61979,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod1)
 "qcR" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -62012,6 +62384,10 @@
 	},
 /turf/open/floor/shiva/purple/east,
 /area/torch/firstdeck/research/hallway)
+"qip" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod7)
 "qiC" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -62555,13 +62931,15 @@
 	name = "Drive Lockdown";
 	pixel_x = 6;
 	pixel_y = 26;
-	req_access = list("ACCESS_AI_UPLOAD")
+	req_access = list("ACCESS_AI_UPLOAD");
+	command = "lockdown_drive"
 	},
 /obj/structure/machinery/access_button{
 	desc = "A remote control-switch for the observation shutters.";
 	name = "Chamber Observation";
 	pixel_x = -7;
-	pixel_y = 26
+	pixel_y = 26;
+	command = "drive_box"
 	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/bluespacebay)
@@ -63246,11 +63624,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "qwV" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "qxd" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 4
@@ -63568,6 +63946,9 @@
 	},
 /turf/closed/wall/almayer/reinforced,
 /area/torch/firstdeck/thruster/d1port)
+"qBt" = (
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "qBL" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -63614,7 +63995,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "qCB" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 8
@@ -63734,7 +64115,7 @@
 	name = "plastic table frame"
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "qDI" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -63988,7 +64369,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "qHi" = (
 /obj/structure/surface/table,
 /obj/item/paper_bin{
@@ -64108,9 +64489,8 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/fore)
 "qHV" = (
-/obj/structure/sign/warning/pods/south,
-/turf/closed/wall/almayer/reinforced,
-/area/space)
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod14)
 "qIg" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/access_button{
@@ -64158,7 +64538,7 @@
 /obj/item/device/radio,
 /obj/structure/machinery/recharger,
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "qIu" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 4
@@ -64224,7 +64604,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "qJa" = (
 /obj/structure/pipes/standard/simple/visible/green{
 	dir = 6
@@ -64376,7 +64756,7 @@
 	name = "Escape Pod Eight Hatch"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod13)
 "qLK" = (
 /obj/structure/closet/crate/medical,
 /obj/item/storage/firstaid/fire{
@@ -65086,7 +65466,7 @@
 	pixel_y = -28
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "qUO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -65368,7 +65748,7 @@
 	},
 /obj/structure/barricade/handrail,
 /turf/open/floor,
-/area/space)
+/area/torch/guppy_hangar)
 "qYV" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 5
@@ -65403,7 +65783,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "qZv" = (
 /turf/open/floor/freezerfloor,
 /area/torch/thirddeck/mess/galleybackroom)
@@ -66473,7 +66853,7 @@
 /obj/item/reagent_container/blood/OMinus,
 /obj/item/reagent_container/blood/OMinus,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "rmI" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -66571,6 +66951,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/aftstarboard)
+"roc" = (
+/obj/structure/pipes/standard/manifold/fourway/hidden,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "rod" = (
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -66702,7 +67086,9 @@
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/exploration)
 "rpy" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/hardstorage)
@@ -67140,7 +67526,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "rvR" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/seconddeck/prototype/engine)
@@ -67270,7 +67656,8 @@
 	pixel_x = -24
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_y = 32
+	pixel_y = 32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/fifthdeck/hallway/aft)
@@ -67416,7 +67803,9 @@
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/central)
 "ryT" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
@@ -67495,6 +67884,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/fourthdeck/captainmess)
+"rzz" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod13)
 "rzH" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -67644,6 +68037,16 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/evidence)
+"rBU" = (
+/obj/structure/surface/table{
+	name = "plastic table frame"
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/item/storage/firstaid/regular,
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod6)
 "rBX" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -68320,7 +68723,7 @@
 	},
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "rJN" = (
 /obj/structure/machinery/alarm{
 	dir = 1;
@@ -68584,7 +68987,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "rOJ" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -68618,7 +69021,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "rPb" = (
 /turf/closed/wall,
 /area/torch/seconddeck/maintenance/substation)
@@ -68935,6 +69338,13 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/cl)
+"rTG" = (
+/obj/structure/shuttle/engine/heater,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod7)
 "rTI" = (
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/plating,
@@ -69352,7 +69762,8 @@
 /area/torch/fourthdeck/tcommsat/chamber)
 "rXQ" = (
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -69607,7 +70018,7 @@
 /area/torch/firstdeck/maintenance/aftstarboard)
 "sbg" = (
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "sbo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -69644,7 +70055,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "sch" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -70961,7 +71372,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "ssp" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
@@ -71123,7 +71534,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "suO" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
@@ -71261,7 +71672,7 @@
 	pixel_x = -30
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "swQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -71918,7 +72329,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "sEN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -72404,7 +72815,7 @@
 	pixel_x = 21
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "sLl" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -72493,7 +72904,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "sMI" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
@@ -72525,6 +72936,9 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/isolation)
+"sNd" = (
+/turf/open/floor/shiva,
+/area/torch/guppy_hangar)
 "sNh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -72646,7 +73060,8 @@
 	id_tag = "bridgestarboard_pump"
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/maintenance/forestarboard)
@@ -72818,6 +73233,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/test_floor4,
 /area/torch/seconddeck/engineering/foyer)
+"sQl" = (
+/obj/structure/machinery/cryopod,
+/obj/structure/machinery/computer/cryopod{
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "sQt" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/vault2/west,
@@ -73068,7 +73490,7 @@
 	req_access = list("ACCESS_TORCH_CREW")
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "sTl" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/structure/machinery/firealarm{
@@ -73284,7 +73706,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "sVO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -73408,7 +73830,8 @@
 	},
 /obj/structure/machinery/light/small,
 /obj/structure/dispenser/oxygen{
-	pixel_y = -32
+	pixel_y = -32;
+	density = 0
 	},
 /obj/structure/machinery/embedded_controller/radio/simple_docking_controller{
 	id_tag = "solar_bridge_airlock";
@@ -73894,7 +74317,7 @@
 /obj/structure/machinery/light,
 /obj/structure/closet/crate/freezer/rations,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "tdu" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -74001,6 +74424,16 @@
 /obj/structure/bed/chair/office/dark,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
+"tey" = (
+/obj/structure/surface/table{
+	name = "plastic table frame"
+	},
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/item/storage/firstaid/regular,
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod15)
 "teM" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -74042,6 +74475,10 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/torch/thirddeck/office)
+"teW" = (
+/obj/structure/pipes/standard/simple/hidden,
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod14)
 "tfg" = (
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
@@ -74262,7 +74699,7 @@
 "thn" = (
 /obj/structure/machinery/suit_storage_unit/standard_unit,
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "tho" = (
 /obj/item/tool/minihoe,
 /turf/open/floor/plating,
@@ -74292,7 +74729,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "thP" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -74530,7 +74967,7 @@
 	name = "Escape Pod Four Hatch"
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
-/area/space)
+/area/almayer/evacuation/pod14)
 "tkH" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -74752,6 +75189,16 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
+"toA" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod17)
 "toJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -75144,7 +75591,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "tvt" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -75424,10 +75871,13 @@
 	choice_categories = list("IFF STATUS" = list("WY","HUMAN","UPP"));
 	faction_group = list("Colonist","Survivor")
 	},
+/obj/structure/window/reinforced/ultra{
+	dir = 8
+	},
 /turf/open/floor/plating{
 	map_airless = 1
 	},
-/area/space)
+/area/torch/guppy_hangar)
 "tyf" = (
 /obj/structure/closet/wardrobe/science_white,
 /turf/open/floor/shiva/purplefull/west,
@@ -75475,7 +75925,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "tzf" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 1
@@ -75615,7 +76065,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "tCp" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -75662,6 +76112,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/hardstorage)
+"tDa" = (
+/obj/structure/machinery/cryopod{
+	dir = 4
+	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "tDe" = (
 /obj/structure/machinery/alarm{
 	pixel_y = 24
@@ -75732,7 +76191,7 @@
 	icon_state = "1-2"
 	},
 /turf/closed/wall/sulaco,
-/area/space)
+/area/torch/guppy_hangar)
 "tDP" = (
 /obj/structure/closet/crate,
 /obj/structure/machinery/light/small{
@@ -75764,6 +76223,18 @@
 /obj/item/pipe_meter,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/foreport)
+"tEo" = (
+/obj/structure/machinery/status_display{
+	pixel_x = 32
+	},
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod13)
 "tEx" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -76574,7 +77045,7 @@
 /area/torch/seconddeck/engineering/foyer)
 "tPu" = (
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "tPF" = (
 /obj/structure/machinery/door/airlock/external/colony{
 	id_tag = "escape_pod_7_berth_hatch";
@@ -76598,7 +77069,7 @@
 "tQo" = (
 /obj/structure/pipes/standard/tank/air,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "tQr" = (
 /obj/structure/machinery/access_button{
 	desc = "A remote control-switch for the prototype exhaust.";
@@ -76618,7 +77089,7 @@
 	name = "Chamber Observation";
 	pixel_x = 11;
 	pixel_y = 29;
-	command = "prototype_chamber_blast"
+	command = "prototype_chamber_obs"
 	},
 /turf/open/floor/shiva/yellow/north,
 /area/torch/seconddeck/prototype/control)
@@ -76907,7 +77378,7 @@
 "tTi" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "tTz" = (
 /turf/closed/wall,
 /area/torch/firstdeck/nuke_storage)
@@ -77191,7 +77662,7 @@
 "tXz" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "tXB" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/suit/armor/bulletproof,
@@ -78145,7 +78616,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "ulc" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -78274,6 +78745,12 @@
 	},
 /turf/open/floor/shiva/blue/north,
 /area/torch/bridgedeck/hallway/fore)
+"umx" = (
+/obj/structure/pipes/standard/tank/air{
+	dir = 8
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod14)
 "umD" = (
 /obj/structure/machinery/floodlight,
 /turf/open/floor/shiva/floor3,
@@ -78380,7 +78857,7 @@
 "uoz" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/closed/wall/almayer/white/outer_tile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "uoF" = (
 /obj/structure/barricade/handrail{
 	dir = 1
@@ -78708,7 +79185,7 @@
 	dir = 4
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "usA" = (
 /turf/closed/wall,
 /area/torch/bridgedeck/maintenance/aftport)
@@ -78718,7 +79195,7 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "usD" = (
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 1;
@@ -78807,7 +79284,7 @@
 	},
 /obj/structure/pipes/vents/pump/high_volume,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod7)
 "utI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -78827,7 +79304,7 @@
 	},
 /obj/structure/barricade/handrail,
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "utW" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -78998,6 +79475,9 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
+"uvD" = (
+/turf/open/floor/almayer/mono,
+/area/almayer/evacuation/pod1)
 "uvS" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/alarm{
@@ -79417,6 +79897,9 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
+"uzJ" = (
+/turf/closed/wall/almayer/reinforced,
+/area/almayer/evacuation/pod13)
 "uzP" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/cell_charger,
@@ -80092,8 +80575,8 @@
 /turf/open/floor/shiva/blue/north,
 /area/torch/bridgedeck/hallway/aft)
 "uIY" = (
-/turf/closed/wall/sulaco,
-/area/space)
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod6)
 "uJb" = (
 /obj/structure/pipes/standard/simple/visible/yellow{
 	dir = 4
@@ -80193,7 +80676,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "uKO" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 1
@@ -80427,6 +80910,16 @@
 	},
 /turf/open/floor/shiva/snow_mat,
 /area/torch/thirddeck/commissary)
+"uMW" = (
+/obj/structure/machinery/status_display{
+	pixel_x = -32
+	},
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/obj/structure/bed/chair/dropship/passenger,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod18)
 "uNj" = (
 /obj/structure/surface/rack,
 /obj/item/storage/box/matches,
@@ -80434,6 +80927,12 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
+"uNs" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod14)
 "uNy" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -80454,7 +80953,9 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/bridgedeck/maintenance/foreport)
 "uNB" = (
-/obj/structure/dispenser/oxygen,
+/obj/structure/dispenser/oxygen{
+	density = 0
+	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/bridgedeck/aux_eva)
 "uNH" = (
@@ -80725,7 +81226,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "uRK" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -80913,11 +81414,11 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod13)
 "uUT" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "uUW" = (
 /obj/structure/surface/table,
 /turf/open/floor/almayer/dark_sterile,
@@ -81029,7 +81530,7 @@
 	},
 /obj/structure/bed/chair/dropship/passenger,
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod2)
 "uWg" = (
 /turf/open/floor/shiva/blue/west,
 /area/torch/bridgedeck/bridge_hallway/port)
@@ -81549,7 +82050,7 @@
 	},
 /obj/structure/machinery/light/small,
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "vdE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -81601,7 +82102,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod13)
 "veK" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -82138,7 +82639,7 @@
 	pixel_y = -26
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "vlj" = (
 /obj/structure/machinery/alarm{
 	dir = 4;
@@ -82204,7 +82705,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod14)
 "vmp" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -82350,7 +82851,7 @@
 	dir = 9
 	},
 /turf/open/floor/warning,
-/area/space)
+/area/torch/guppy_hangar)
 "voQ" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -82392,7 +82893,7 @@
 	dir = 6
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod14)
 "vpq" = (
 /turf/open/floor/strata/multi_tiles,
 /area/torch/firstdeck/brig)
@@ -82513,7 +83014,7 @@
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "vsj" = (
 /obj/structure/sign/safety/hazard{
 	dir = 4
@@ -82571,7 +83072,8 @@
 	dir = 8
 	},
 /obj/structure/dispenser/oxygen{
-	pixel_x = -32
+	pixel_x = -32;
+	density = 0
 	},
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/auxstarboard)
@@ -82735,7 +83237,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "vtX" = (
 /obj/item/storage/firstaid/adv,
 /obj/structure/surface/table/reinforced,
@@ -82920,7 +83422,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod12)
 "vxj" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -83043,7 +83545,7 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "vyJ" = (
 /turf/open/floor/shiva/red/southwest,
 /area/torch/firstdeck/hallway/fore)
@@ -83234,7 +83736,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "vAJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -83494,7 +83996,7 @@
 	name = "Escape Pod Six Hatch"
 	},
 /turf/open/space/basic,
-/area/space)
+/area/almayer/evacuation/pod11)
 "vDS" = (
 /obj/structure/closet/secure_closet/brig,
 /obj/structure/machinery/alarm{
@@ -83846,7 +84348,7 @@
 	dir = 9
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "vIE" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -84232,6 +84734,10 @@
 	map_airless = 1
 	},
 /area/torch/firstdeck/maintenance/foreport)
+"vPI" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod7)
 "vPW" = (
 /obj/structure/pipes/binary/pump/high_power/on{
 	dir = 8;
@@ -84361,7 +84867,7 @@
 	pixel_x = 24
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "vRo" = (
 /turf/closed/wall,
 /area/space)
@@ -84653,6 +85159,13 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/hallway/fore)
+"vVH" = (
+/obj/structure/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod7)
 "vVL" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -84965,6 +85478,9 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/hallwaya)
+"waA" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod7)
 "waH" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -85170,6 +85686,9 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"wcN" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod2)
 "wcR" = (
 /obj/structure/pipes/vents/pump/on,
 /turf/open/floor/shiva,
@@ -85333,7 +85852,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/cyan,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "weq" = (
 /obj/structure/machinery/conveyor{
 	dir = 8;
@@ -85581,7 +86100,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod15)
 "wgT" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 8
@@ -85615,6 +86134,10 @@
 "whL" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/bridgedeck/storage)
+"whN" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod15)
 "whQ" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/window/framed/colony/reinforced,
@@ -85662,7 +86185,7 @@
 	dir = 1
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "wjr" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -86032,6 +86555,9 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/hallway/fore)
+"wmE" = (
+/turf/open/floor/almayer_hull,
+/area/torch/guppy_hangar)
 "wmL" = (
 /obj/structure/prop/almayer{
 	icon = 'icons\obj\structures\machinery\particle_accelerator2.dmi';
@@ -86113,7 +86639,7 @@
 	dir = 4
 	},
 /turf/closed/wall/almayer/white/outer_tile,
-/area/space)
+/area/almayer/evacuation/pod1)
 "wnV" = (
 /turf/closed/wall,
 /area/torch/thirddeck/maintenance/starboard)
@@ -86314,7 +86840,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/almayer/evacuation/pod2)
 "wqR" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/door/firedoor/border_only,
@@ -86521,7 +87047,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "wtB" = (
 /obj/structure/machinery/status_display,
 /turf/closed/wall,
@@ -86619,7 +87145,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "wus" = (
 /obj/structure/surface/rack{
 	dir = 8
@@ -86780,7 +87306,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/space)
+/area/torch/guppy_hangar)
 "wwl" = (
 /obj/structure/surface/rack,
 /obj/item/clothing/glasses/meson,
@@ -86968,6 +87494,9 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/shiva,
 /area/torch/thirddeck/hallway/center)
+"wyV" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod15)
 "wyY" = (
 /turf/open/floor/shiva/blue/northeast,
 /area/torch/firstdeck/conference)
@@ -87095,7 +87624,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "wAp" = (
 /turf/open/floor/plating,
 /area/torch/thirddeck/disperser)
@@ -87790,7 +88319,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "wKi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -88104,7 +88633,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "wOO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -88193,7 +88722,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer_hull,
-/area/space)
+/area/torch/guppy_hangar)
 "wPu" = (
 /obj/structure/machinery/light,
 /obj/effect/decal/warning_stripes/asteroid,
@@ -88476,6 +89005,10 @@
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/torch/firstdeck/research/development)
+"wSL" = (
+/obj/structure/window/framed/colony/reinforced,
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod18)
 "wSR" = (
 /obj/structure/machinery/light{
 	dir = 4
@@ -88516,6 +89049,12 @@
 	},
 /turf/open/floor/shiva/blue/east,
 /area/torch/bridgedeck/bridge)
+"wTw" = (
+/obj/structure/machinery/cryopod{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/almayer/evacuation/pod17)
 "wTB" = (
 /obj/structure/machinery/access_button{
 	command = "cycle_interior";
@@ -88789,7 +89328,8 @@
 	dir = 4;
 	icon_state = "pdoor0";
 	id_tag = "bsd_access";
-	name = "Drive Containment"
+	name = "Drive Containment";
+	id = "lockdown_drive"
 	},
 /obj/structure/machinery/door/airlock/hatch/colony{
 	name = "Drive Containment Chamber";
@@ -88931,7 +89471,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod6)
 "wYc" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -89026,7 +89566,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "wYW" = (
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	density = 0;
@@ -89079,7 +89619,7 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/bluegrid,
-/area/space)
+/area/torch/guppy_hangar)
 "wZL" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced,
@@ -89246,7 +89786,7 @@
 "xbx" = (
 /obj/item/pipe_meter,
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "xbz" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
@@ -89652,7 +90192,7 @@
 	pixel_y = -28
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "xfY" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/item/device/defibrillator/compact,
@@ -90137,6 +90677,12 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/fore)
+"xlP" = (
+/obj/structure/pipes/standard/manifold/hidden{
+	dir = 1
+	},
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "xmg" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -90268,7 +90814,7 @@
 	dir = 8
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/torch/guppy_hangar)
 "xnz" = (
 /obj/structure/machinery/cell_charger{
 	pixel_y = 24
@@ -90516,7 +91062,7 @@
 "xqx" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/almayer/evacuation/pod15)
 "xqD" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -90901,7 +91447,7 @@
 	},
 /obj/structure/machinery/recharger,
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "xuV" = (
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
@@ -91147,7 +91693,7 @@
 	dir = 1
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "xzc" = (
 /obj/structure/barricade/handrail{
 	dir = 4
@@ -91447,6 +91993,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/firstdeck/medical/foyer)
+"xEV" = (
+/obj/structure/pipes/standard/simple/hidden{
+	dir = 9
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/almayer/evacuation/pod7)
 "xFd" = (
 /obj/structure/pipes/standard/simple/visible/cyan,
 /turf/open/floor/vault2/west,
@@ -91479,7 +92031,7 @@
 	dir = 4
 	},
 /turf/open/floor/shiva/floor3,
-/area/space)
+/area/torch/guppy_hangar)
 "xFq" = (
 /obj/docking_port/stationary/torch_elevator/deck4{
 	airlock_exit = "elevator";
@@ -91541,7 +92093,7 @@
 	pixel_x = -23
 	},
 /turf/open/floor/shiva,
-/area/space)
+/area/torch/guppy_hangar)
 "xHd" = (
 /obj/structure/pipes/binary/passive_gate{
 	dir = 8
@@ -91616,7 +92168,7 @@
 "xHC" = (
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "xHD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -92005,6 +92557,13 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/central)
+"xLw" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod15)
 "xLz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/item/tool/candle{
@@ -92115,7 +92674,7 @@
 	dir = 1
 	},
 /turf/open/floor/almayer/mono,
-/area/space)
+/area/almayer/evacuation/pod11)
 "xOi" = (
 /obj/structure/sign/directions/science{
 	dir = 1
@@ -92285,7 +92844,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/dark_sterile,
-/area/space)
+/area/almayer/evacuation/pod11)
 "xQi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -92665,6 +93224,13 @@
 	},
 /turf/open/floor/shiva/greencorners,
 /area/torch/thirddeck/hallway/center)
+"xUU" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod14)
 "xVe" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
@@ -93042,6 +93608,9 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/torch/thirddeck/office)
+"xZg" = (
+/turf/closed/wall/almayer/white/outer_tile,
+/area/almayer/evacuation/pod1)
 "xZj" = (
 /obj/item/device/radio/intercom{
 	pixel_y = 26
@@ -93147,7 +93716,7 @@
 	pixel_y = -26
 	},
 /turf/open/floor/kutjevo/colors/cyan,
-/area/space)
+/area/torch/guppy_hangar)
 "ybu" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -93523,6 +94092,10 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/alphadeck)
+"yhf" = (
+/obj/structure/pipes/vents/pump/high_volume,
+/turf/open/floor/shiva/floor3,
+/area/almayer/evacuation/pod6)
 "yhi" = (
 /obj/structure/surface/table,
 /obj/structure/closet/medical_wall{
@@ -93818,7 +94391,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/space)
+/area/torch/guppy_hangar)
 "ylo" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -99896,11 +100469,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
-jaL
-mYO
-jaL
-jaL
+xZg
+xZg
+clj
+xZg
+xZg
 rvR
 jHl
 epT
@@ -99916,7 +100489,7 @@ jow
 rvR
 jaL
 jaL
-mYO
+kvr
 jaL
 jaL
 wJJ
@@ -100152,11 +100725,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
-owB
-sbg
+xZg
+sQl
+uvD
 lVg
-jaL
+xZg
 rvR
 rvR
 rvR
@@ -100173,7 +100746,7 @@ rvR
 jaL
 owB
 sbg
-lVg
+lRm
 jaL
 wJJ
 wJJ
@@ -100408,11 +100981,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 lsS
-aeW
-tva
-jaL
+oNS
+nnQ
+xZg
 rvR
 rvR
 rvR
@@ -100427,7 +101000,7 @@ rvR
 rvR
 rvR
 jaL
-lsS
+oeM
 aeW
 tva
 jaL
@@ -100664,11 +101237,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 gDn
-aCx
+nhp
 gZV
-jaL
+xZg
 fSE
 rvR
 rvR
@@ -100920,11 +101493,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 def
-mNe
+aNy
 qcP
-jaL
+xZg
 fSE
 iKc
 rvR
@@ -100939,9 +101512,9 @@ rvR
 fKI
 wJJ
 jaL
-def
+giV
 mNe
-qcP
+gdU
 jaL
 wJJ
 wJJ
@@ -101176,10 +101749,10 @@ jNY
 fSE
 fSE
 fSE
-jaL
-sbg
-aCx
-sbg
+xZg
+uvD
+nhp
+uvD
 oEH
 vbl
 cKm
@@ -101432,11 +102005,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 qHh
-xQe
+mWW
 nyp
-jaL
+xZg
 fSE
 cKm
 cUK
@@ -101688,11 +102261,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 feo
 vIx
 ctR
-jaL
+xZg
 fSE
 cKm
 cUK
@@ -101708,7 +102281,7 @@ cKf
 wJJ
 jaL
 hrw
-iEk
+ohn
 wYU
 jaL
 wJJ
@@ -101944,11 +102517,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 jOw
 jOw
 jOw
-jaL
+xZg
 fSE
 cKm
 cUK
@@ -101963,9 +102536,9 @@ cUK
 cKf
 wJJ
 jaL
-jOw
-jOw
-jOw
+kbv
+kbv
+kbv
 jaL
 wJJ
 wJJ
@@ -102200,11 +102773,11 @@ jNY
 fSE
 fSE
 fSE
-jaL
+xZg
 wnQ
 wnQ
 wnQ
-jaL
+xZg
 fSE
 cKm
 cUK
@@ -102219,9 +102792,9 @@ cUK
 cKf
 wJJ
 jaL
-wnQ
-wnQ
-wnQ
+cRD
+cRD
+cRD
 jaL
 wJJ
 wJJ
@@ -109041,16 +109614,16 @@ aVx
 aCo
 faM
 aCo
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
 olV
 iIy
 vhC
@@ -109290,19 +109863,19 @@ olV
 olV
 olV
 olV
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
 aUY
-uIY
+fCo
 tyq
 auQ
-uIY
+fCo
 bgq
 mKB
 kBk
-olV
-olV
+wmE
+wmE
 wPm
 kqb
 dmC
@@ -109546,7 +110119,7 @@ olV
 olV
 olV
 olV
-uIY
+fCo
 thn
 thn
 bKa
@@ -109560,9 +110133,9 @@ wtz
 bmU
 evW
 mhZ
-olV
+wmE
 dLm
-uIY
+fCo
 olV
 iIy
 vhC
@@ -109802,14 +110375,14 @@ olV
 olV
 olV
 olV
-uIY
+fCo
 utL
 dtS
-uIY
+fCo
 tTi
 qbv
 iMu
-uIY
+fCo
 qYJ
 voP
 aTW
@@ -110058,14 +110631,14 @@ olV
 olV
 olV
 tyd
-uIY
+fCo
 nUk
 vdz
-uIY
+fCo
 eAZ
 qbv
 wZB
-uIY
+fCo
 gyB
 bRJ
 sLf
@@ -110074,7 +110647,7 @@ fkr
 jFX
 dmC
 otL
-uIY
+fCo
 olV
 iIy
 vhC
@@ -110311,23 +110884,23 @@ olV
 olV
 olV
 olV
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
 uRI
-uIY
-uIY
+fCo
+fCo
 sSJ
 yln
-uIY
+fCo
 oGj
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
 dLm
 olV
 olV
@@ -110564,28 +111137,28 @@ eSh
 ylT
 iIy
 olV
-uIY
+fCo
 auQ
 auQ
-uIY
+fCo
 vlf
-uIY
+fCo
 grD
 rvL
 hog
 ohG
-uIY
+fCo
 wOK
 wKg
 usC
 lHh
-uIY
+fCo
 pVK
 xnr
 scb
 lSi
 dLm
-uIY
+fCo
 olV
 olV
 iIy
@@ -110825,17 +111398,17 @@ cZl
 xHC
 mtB
 xyN
-uIY
+fCo
 usy
 tPu
 hog
 sVL
-uIY
+fCo
 ppR
 fGv
-jdE
+sNd
 xFp
-uIY
+fCo
 uUT
 oDt
 jnG
@@ -111079,7 +111652,7 @@ olV
 rJD
 tPu
 wjj
-jdE
+sNd
 otu
 ukW
 nRf
@@ -111097,7 +111670,7 @@ vAC
 eXc
 khH
 dLm
-uIY
+fCo
 olV
 olV
 iIy
@@ -111337,17 +111910,17 @@ tPu
 xHC
 tPu
 wAl
-uIY
+fCo
 cvA
 tPu
 tPu
 usy
-uIY
+fCo
 qIY
 kZA
 hGS
 xfW
-uIY
+fCo
 uUT
 oDt
 pfn
@@ -111588,28 +112161,28 @@ eSh
 ylT
 iIy
 olV
-uIY
+fCo
 auQ
 auQ
-uIY
+fCo
 qIm
-uIY
+fCo
 vRn
 sMA
 thN
 fLy
-uIY
+fCo
 jTG
-uIY
-uIY
+fCo
+fCo
 jBz
-uIY
+fCo
 efK
 tBY
 fwr
 naR
 dLm
-uIY
+fCo
 olV
 olV
 iIy
@@ -111847,23 +112420,23 @@ olV
 olV
 olV
 olV
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
 oVr
 bWI
-uIY
+fCo
 oFl
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
 dLm
 olV
 olV
@@ -112105,15 +112678,15 @@ olV
 olV
 olV
 olV
-tyd
-uIY
-uIY
+oTc
+fCo
+fCo
 tQo
 wed
 qCp
 vsf
 ybr
-uIY
+fCo
 gmT
 vtU
 xGY
@@ -112122,7 +112695,7 @@ wOK
 gJf
 euX
 ezr
-uIY
+fCo
 olV
 iIy
 vhC
@@ -112375,7 +112948,7 @@ kVN
 wuk
 hjK
 nFT
-olV
+wmE
 tdp
 kHP
 jrG
@@ -112618,23 +113191,23 @@ olV
 olV
 olV
 olV
-uIY
-uIY
+fCo
+fCo
 tQo
 fZV
 mwT
 gHu
 obr
-uIY
+fCo
 joS
 ipA
-jdE
-jdE
+sNd
+sNd
 blA
-olV
+wmE
 tXz
 dLm
-uIY
+fCo
 olV
 iIy
 vhC
@@ -112874,20 +113447,20 @@ olV
 olV
 olV
 olV
-uIY
-uIY
+fCo
+fCo
 auQ
 auQ
 auQ
 auQ
 prz
-uIY
+fCo
 nKn
 hPV
 xuT
 gEh
-jib
-olV
+npt
+wmE
 gCp
 euX
 jrG
@@ -113137,16 +113710,16 @@ olV
 olV
 olV
 rCc
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
-uIY
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
+fCo
 olV
 iIy
 vhC
@@ -116612,16 +117185,16 @@ vBe
 crX
 cxk
 vBe
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
+waA
+waA
+waA
+waA
+waA
+waA
+waA
+waA
+waA
+waA
 oVo
 fGm
 fGm
@@ -116637,16 +117210,16 @@ jkw
 iUv
 kBe
 dwd
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
+wyV
+wyV
+wyV
+wyV
+wyV
+wyV
+wyV
+wyV
+wyV
+wyV
 wIN
 uwV
 bsU
@@ -116868,16 +117441,16 @@ vBe
 dQC
 bGV
 vBe
-jaL
-lqx
+waA
+tDa
 utD
-jib
-aim
-jib
+khj
+fSk
+khj
 jOR
-wgR
-oXV
-uoz
+aVV
+rTG
+vPI
 oVo
 qPl
 hqD
@@ -116896,13 +117469,13 @@ dwd
 eMh
 naM
 wgR
-jOR
-jib
-aim
-jib
-utD
+fov
+fcl
+hRL
+fcl
+xLw
 lqx
-jaL
+wyV
 wIN
 uwV
 bsU
@@ -117124,16 +117697,16 @@ vBe
 mlC
 bGV
 vBe
-qwV
-jib
+gtZ
+khj
 lUS
-fpV
-xqx
-fpV
-gVV
-vIx
-oXV
-uoz
+gGj
+roc
+gGj
+qip
+xEV
+rTG
+vPI
 oVo
 fGm
 fGm
@@ -117152,13 +117725,13 @@ dwd
 eMh
 naM
 iEk
-gVV
+mAn
 fpV
 xqx
 fpV
-gDU
-jib
-mYO
+aVH
+fcl
+whN
 wIN
 uwV
 bsU
@@ -117380,16 +117953,16 @@ vBe
 uVJ
 bGV
 vBe
-jaL
-cgX
-jSq
+waA
+lSx
+vVH
 kOI
-aim
-jib
+fSk
+khj
 pmX
 oNX
-oXV
-uoz
+rTG
+vPI
 oVo
 xXk
 csh
@@ -117407,14 +117980,14 @@ hiz
 rGJ
 eMh
 naM
-oNX
-pmX
-jib
-aim
-kOI
-jSq
+jZX
+tey
+fcl
+hRL
+gLi
+nLM
 cgX
-jaL
+wyV
 wIN
 uwV
 bsU
@@ -117636,16 +118209,16 @@ vBe
 yfM
 bGV
 vBe
-jaL
-jaL
-jaL
-jaL
-jaL
+waA
+waA
+waA
+waA
+waA
 bIf
-jaL
-jaL
-jaL
-jaL
+waA
+waA
+waA
+waA
 oVo
 faC
 csh
@@ -117661,16 +118234,16 @@ fIP
 fIP
 bxD
 rGJ
-jaL
-jaL
-jaL
-jaL
+wyV
+wyV
+wyV
+wyV
 dIe
-jaL
-jaL
-jaL
-jaL
-jaL
+wyV
+wyV
+wyV
+wyV
+wyV
 wIN
 uwV
 lsk
@@ -118157,7 +118730,7 @@ xvK
 xKx
 xvK
 xvK
-xap
+iTB
 xvK
 xvK
 xvK
@@ -118916,16 +119489,16 @@ ghC
 qbw
 dNQ
 ghC
-jaL
-jaL
-jaL
-jaL
-jaL
+uIY
+uIY
+uIY
+uIY
+uIY
 bEz
-jaL
-jaL
-jaL
-jaL
+uIY
+uIY
+uIY
+uIY
 dnY
 hJJ
 gKl
@@ -118941,16 +119514,16 @@ sjH
 fne
 mJy
 dnY
-jaL
-jaL
-jaL
-jaL
+qHV
+qHV
+qHV
+qHV
 tkF
-jaL
-jaL
-jaL
-jaL
-jaL
+qHV
+qHV
+qHV
+qHV
+qHV
 ghC
 lVT
 gxT
@@ -119172,13 +119745,13 @@ ghC
 rEh
 jZu
 ghC
-jaL
-cXC
-utD
+uIY
+ncr
+eWy
 mYx
-aim
-jib
-vme
+yhf
+qBt
+rBU
 swN
 oXV
 uoz
@@ -119197,16 +119770,16 @@ sjH
 fne
 mJy
 dnY
-eMh
-naM
-swN
+fcm
+mUB
+hvG
 vme
 jib
 aim
-mYx
-utD
+mQD
+xUU
 cXC
-jaL
+qHV
 ghC
 lVT
 rHd
@@ -119429,11 +120002,11 @@ ifJ
 cAH
 ghC
 qwV
-jib
-lUS
-fpV
-xqx
-fpV
+qBt
+xlP
+oim
+max
+oim
 gVV
 cAC
 oXV
@@ -119453,16 +120026,16 @@ sjH
 fne
 mJy
 dnY
-eMh
-naM
+fcm
+mUB
 vpl
-gVV
-fpV
-xqx
-fpV
+teW
+iwh
+frA
+iwh
 gDU
 jib
-mYO
+ijB
 ghC
 lVT
 sQt
@@ -119684,12 +120257,12 @@ ghC
 tsR
 ton
 ghC
-jaL
+uIY
 gDC
-jSq
-jib
-aim
-jib
+cnO
+qBt
+yhf
+qBt
 wXY
 plO
 oXV
@@ -119709,16 +120282,16 @@ tib
 fne
 mJy
 dnY
-eMh
-naM
-plO
-wXY
+fcm
+mUB
+umx
+uNs
 jib
 aim
 jib
 jSq
-gDC
-jaL
+kag
+qHV
 ghC
 lVT
 hJJ
@@ -119940,16 +120513,16 @@ ghC
 tsR
 ton
 ghC
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
+uIY
+uIY
+uIY
+uIY
+uIY
+uIY
+uIY
+uIY
+uIY
+uIY
 dnY
 ltV
 hJJ
@@ -119965,16 +120538,16 @@ izS
 hZC
 awS
 dnY
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
-jaL
+qHV
+qHV
+qHV
+qHV
+qHV
+qHV
+qHV
+qHV
+qHV
+qHV
 ghC
 lVT
 hJJ
@@ -139737,12 +140310,12 @@ jNY
 jNY
 jNY
 jNY
-jaL
-jaL
-jaL
-jaL
-uoz
-sVQ
+gHv
+gHv
+gHv
+gHv
+pec
+hMF
 hbU
 cDq
 ePZ
@@ -139778,10 +140351,10 @@ cVy
 tiJ
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+wcN
+wcN
+wcN
+wcN
 jNY
 jNY
 jNY
@@ -139994,9 +140567,9 @@ jNY
 jNY
 jNY
 oQY
-veJ
+bNn
 vxf
-uUS
+jer
 fiW
 mmn
 lug
@@ -140037,7 +140610,7 @@ mzF
 uWd
 auj
 wqM
-mYO
+keZ
 jNY
 jNY
 jNY
@@ -140249,12 +140822,12 @@ jNY
 jNY
 jNY
 jNY
-jaL
-jaL
-jaL
-jaL
-uoz
-sVQ
+gHv
+gHv
+gHv
+gHv
+pec
+hMF
 lug
 aSG
 hDf
@@ -140290,10 +140863,10 @@ cVy
 llH
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+wcN
+wcN
+wcN
+wcN
 jNY
 jNY
 jNY
@@ -140505,12 +141078,12 @@ jNY
 jNY
 jNY
 jNY
-sVQ
-sVQ
-sVQ
-sVQ
-sVQ
-qHV
+hzn
+hzn
+hzn
+hzn
+hzn
+pBe
 lug
 wdp
 hDf
@@ -140761,12 +141334,12 @@ jNY
 jNY
 jNY
 jNY
-jaL
-jaL
-jaL
-jaL
-uoz
-sVQ
+fLP
+fLP
+fLP
+fLP
+rzz
+uzJ
 lug
 gFu
 hDf
@@ -140802,10 +141375,10 @@ cVy
 tiJ
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+aCH
+aCH
+aCH
+aCH
 jNY
 jNY
 jNY
@@ -141017,9 +141590,9 @@ jNY
 jNY
 jNY
 jNY
-oQY
+idw
 veJ
-vxf
+tEo
 uUS
 qLr
 fna
@@ -141058,10 +141631,10 @@ cVy
 tiJ
 mzF
 mzF
-uWd
-auj
-wqM
-mYO
+kbI
+uMW
+cgR
+wSL
 jNY
 jNY
 jNY
@@ -141273,12 +141846,12 @@ jNY
 jNY
 jNY
 jNY
-jaL
-jaL
-jaL
-jaL
-uoz
-sVQ
+fLP
+fLP
+fLP
+fLP
+rzz
+uzJ
 esI
 aSG
 ePZ
@@ -141314,10 +141887,10 @@ cVy
 tiJ
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+aCH
+aCH
+aCH
+aCH
 jNY
 jNY
 jNY
@@ -141826,10 +142399,10 @@ cVy
 tiJ
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+bLn
+bLn
+bLn
+bLn
 jNY
 jNY
 jNY
@@ -142082,10 +142655,10 @@ cVy
 tiJ
 mzF
 mzF
-uWd
-auj
-wqM
-mYO
+aLA
+toA
+wTw
+aVy
 jNY
 jNY
 jNY
@@ -142338,10 +142911,10 @@ cVy
 tiJ
 fyN
 iqG
-jaL
-jaL
-jaL
-jaL
+bLn
+bLn
+bLn
+bLn
 jNY
 jNY
 jNY

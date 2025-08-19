@@ -1,6 +1,9 @@
 /area/torch
 	icon = 'icons/turf/torch.dmi'
 
+/area/torch/bridgedeck
+	fake_zlevel = 6
+
 /area/torch/bridgedeck/maintenance
 	name = "Bridge Maintenance"
 	icon_state = "maintcentral"
@@ -150,6 +153,9 @@
 	name = "\improper Bridge Deck Security Checkpoint"
 	icon_state = "checkpoint"
 	minimap_color = MINIMAP_AREA_SEC_CAVE
+
+/area/torch/firstdeck
+	fake_zlevel = 5
 
 /area/torch/firstdeck/maintenance
 	name = "First Deck Maintenance"
@@ -469,6 +475,7 @@
 	minimap_color = MINIMAP_AREA_CONTESTED_ZONE
 
 /area/torch/seconddeck
+	fake_zlevel = 4
 
 /area/torch/seconddeck/maintenance
 	name = "Second Deck Maintenance"
@@ -662,6 +669,9 @@
 /area/torch/seconddeck/chapel
 	name = "\improper Unused Chapel"
 	icon_state = "chapel"
+
+/area/torch/thirddeck
+	fake_zlevel = 3
 
 /area/torch/thirddeck/hallway
 	minimap_color = MINIMAP_AREA_JUNGLE
@@ -873,6 +883,7 @@
 	minimap_color = MINIMAP_AREA_CELL_VIP
 
 /area/torch/fourthdeck
+	fake_zlevel = 2
 
 /area/torch/fourthdeck/hallway
 	minimap_color = MINIMAP_AREA_JUNGLE
@@ -1017,6 +1028,9 @@
 /area/torch/fourthdeck/tcommsat/computer
 	name = "\improper Telecoms Control Room"
 	icon_state = "tcomsatcomp"
+
+/area/torch/fifthdeck
+	fake_zlevel = 1
 
 /area/torch/fifthdeck/hallway
 	minimap_color = MINIMAP_AREA_JUNGLE

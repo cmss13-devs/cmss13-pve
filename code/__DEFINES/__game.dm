@@ -51,6 +51,8 @@
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
+#define MAP_NERVA "SS Nerva"
+#define MAP_TORCH "SS Torch"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

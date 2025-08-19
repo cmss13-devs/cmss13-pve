@@ -163,6 +163,12 @@
 	html_link = ""
 	color = "cyan"
 
+/obj/item/map/nerva
+	name = "\improper SS Nerva deck layout map"
+	desc = "A large fold out diagram of the six decks of the SS Nerva"
+	html_link = ""
+	color = "cyan"
+
 /obj/item/map/bay_torch
 	name = "\improper SS Torch deck layout map"
 	desc = "A large fold out diagram of the six decks of the SS Torch"
@@ -202,6 +208,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
 		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
 		MAP_TAIPAI = new /obj/item/map/taipei(),
+		MAP_TORCH = new /obj/item/map/bay_torch(),
+		MAP_NERVA = new /obj/item/map/nerva(),
 	)
 
 //used by marine equipment machines to spawn the correct map.
