@@ -230,10 +230,6 @@
 "add" = (
 /turf/open/floor/shiva/green,
 /area/torch/thirddeck/commissary)
-"adg" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/bridgedeck/maintenance/foreport)
 "adl" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	dir = 8;
@@ -750,6 +746,7 @@
 /obj/structure/ladder{
 	id = "5to4expedstorage_1"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "aiY" = (
@@ -2421,6 +2418,7 @@
 	pixel_y = 4
 	},
 /obj/item/stack/nanopaste,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "aFi" = (
@@ -3563,6 +3561,10 @@
 	icon_state = "bcarpet05"
 	},
 /area/torch/fourthdeck/captainmess)
+"aSS" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/vault2/west,
+/area/torch/thirddeck/maintenance/aftport)
 "aSW" = (
 /obj/structure/pipes/unary/outlet_injector{
 	frequency = 1441;
@@ -3642,6 +3644,16 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
+"aTK" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fourthdeck/maintenance/starboard)
 "aTN" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4557,11 +4569,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer/test_floor4,
 /area/torch/fourthdeck/quartermaster/sorting)
-"bhO" = (
-/obj/structure/barricade/handrail,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "bhP" = (
 /obj/structure/machinery/light_switch{
 	pixel_y = -24
@@ -4772,6 +4779,10 @@
 "bkx" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/quartermaster/storage/upper)
+"bkN" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/thirddeck/maintenance/aftstarboard)
 "bkU" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -4907,6 +4918,7 @@
 	id = "3to2_foreportmaint_1";
 	height = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "bmT" = (
@@ -5516,10 +5528,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/research/xenobiology/entry)
-"buG" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/fourthdeck/bathroom)
 "buI" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/command/autoname{
@@ -6111,6 +6119,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "bDO" = (
@@ -6131,6 +6140,7 @@
 /turf/open/floor/shiva/blue,
 /area/torch/bridgedeck/bridge_hallway/port)
 "bDX" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/maintenance/starboard)
 "bEg" = (
@@ -6174,6 +6184,11 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/evidence)
+"bEx" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/firstdeck/maintenance/foreport)
 "bEz" = (
 /obj/structure/machinery/door/airlock/external/colony{
 	frequency = 1380;
@@ -6525,6 +6540,7 @@
 /obj/item/paper_bin,
 /obj/item/paper_bin,
 /obj/structure/closet/crate,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "bJD" = (
@@ -6579,10 +6595,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/equipment)
-"bKX" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/fourthdeck/hangcheck)
 "bLe" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/device/mmi,
@@ -6756,6 +6768,7 @@
 	id_tag = "guppy_window";
 	name = "blast shield"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
 "bMY" = (
@@ -7053,6 +7066,10 @@
 /obj/structure/cable/cyan,
 /turf/open/floor/warning,
 /area/torch/guppy_hangar)
+"bRO" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/wood,
+/area/torch/thirddeck/bathroom/sauna)
 "bRU" = (
 /obj/structure/machinery/newscaster{
 	pixel_y = 32
@@ -7326,6 +7343,7 @@
 /obj/effect/spawner/random/bomb_supply,
 /obj/effect/spawner/random/bomb_supply,
 /obj/effect/spawner/random/bomb_supply,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "bVX" = (
@@ -7746,6 +7764,10 @@
 /obj/item/reagent_container/food/snacks/toastedsandwich,
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/security/armoury)
+"caY" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/aftstarboard)
 "caZ" = (
 /obj/structure/surface/table,
 /obj/item/storage/box/cups{
@@ -8406,10 +8428,6 @@
 "ckL" = (
 /turf/open/floor/dark,
 /area/torch/thirddeck/chapel/main)
-"ckN" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/bridgedeck/maintenance/forestarboard)
 "ckS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8936,6 +8954,7 @@
 "crX" = (
 /obj/structure/pipes/standard/cap/visible/supply,
 /obj/structure/pipes/standard/cap/visible/scrubbers,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/starboard)
 "csa" = (
@@ -9359,6 +9378,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/starboard)
 "cxo" = (
@@ -9385,6 +9405,7 @@
 /obj/structure/barricade/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "cxJ" = (
@@ -10047,6 +10068,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "cGy" = (
@@ -10349,6 +10371,10 @@
 "cJw" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/bridgedeck/maintenance/substation)
+"cJB" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/thirddeck/mess/galleybackroom)
 "cJC" = (
 /obj/structure/bed/stool,
 /turf/open/floor/warning,
@@ -10470,16 +10496,6 @@
 /obj/structure/closet/emcloset,
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/torch/fourthdeck/hallway/fore)
-"cLo" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/fourthdeck/maintenance/starboard)
 "cLp" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -32
@@ -10917,6 +10933,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/fourthdeck/tools)
+"cRC" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/brig)
 "cRD" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 4
@@ -11447,8 +11467,14 @@
 	dir = 5
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
+"dag" = (
+/obj/structure/prop/dam/drill,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/shiva/floor3,
+/area/torch/fifthdeck/expedition_storage)
 "dak" = (
 /obj/structure/closet/crate/freezer,
 /obj/item/reagent_container/food/drinks/cans/cola,
@@ -11527,6 +11553,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/forestarboard)
+"dbQ" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/maintenance/aftstarboard)
 "dbZ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11920,10 +11950,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
-"diy" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/fourthdeck/maintenance/forestarboard)
 "diC" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden,
@@ -12050,6 +12076,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/fourthdeck/captainmess)
+"djY" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "djZ" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/decal/warning_stripes,
@@ -12156,6 +12186,7 @@
 "dkQ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/safe_room)
 "dkW" = (
@@ -12489,6 +12520,22 @@
 	},
 /turf/closed/wall,
 /area/torch/fourthdeck/hallway/aft)
+"dqz" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/firstdeck/maintenance/aftport)
 "dqF" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -13106,6 +13153,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/aftport)
+"dyB" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/bridgedeck/xo)
 "dyC" = (
 /turf/open/floor/shiva/green/north,
 /area/torch/fourthdeck/hallway/aft)
@@ -13718,6 +13769,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
+"dGb" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fifthdeck/exploration)
 "dGc" = (
 /obj/structure/machinery/light/spot,
 /obj/structure/closet/crate,
@@ -13829,6 +13884,10 @@
 "dHm" = (
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/storage)
+"dHs" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fifthdeck/maintenance/aftstarboard)
 "dHt" = (
 /obj/effect/projector{
 	vector_x = -116;
@@ -14030,6 +14089,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "dKH" = (
@@ -14057,6 +14117,8 @@
 /area/torch/firstdeck/thruster/d1port)
 "dKZ" = (
 /obj/structure/curtain/red,
+/obj/effect/step_trigger/clone_cleaner,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/safe_room)
 "dLm" = (
@@ -14251,6 +14313,7 @@
 /area/torch/fifthdeck/hallway/fore)
 "dOD" = (
 /obj/structure/window/framed/colony,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/waterstore)
 "dOG" = (
@@ -14258,10 +14321,6 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/aftstarboard)
-"dOP" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/seconddeck/maintenance/aftstarboard)
 "dOW" = (
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/almayer/mono,
@@ -14393,6 +14452,10 @@
 /obj/effect/spawner/random/tool,
 /turf/open/floor/almayer/aicore,
 /area/torch/fourthdeck/starboard_storage)
+"dQt" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/maintenance/aftport)
 "dQu" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8
@@ -14440,10 +14503,6 @@
 "dRm" = (
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/analysis)
-"dRn" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/space)
 "dRq" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -14568,6 +14627,22 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralport)
+"dST" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/port)
 "dSY" = (
 /obj/structure/sign/warning/high_voltage,
 /turf/closed/wall,
@@ -14934,6 +15009,10 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/torch/bridgedeck/hallway/aft)
+"dWC" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/forestarboard)
 "dWH" = (
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -15493,6 +15572,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "eeZ" = (
@@ -15613,6 +15693,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/counselor/therapy)
+"egu" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/wood,
+/area/torch/fourthdeck/captainmess)
 "egz" = (
 /obj/structure/machinery/light/spot{
 	dir = 8
@@ -15627,11 +15711,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
-"egI" = (
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "egN" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -16120,22 +16199,6 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/hardstorage)
-"enZ" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/firstdeck/maintenance/aftport)
 "eoi" = (
 /obj/structure/pipes/portables_connector,
 /obj/structure/machinery/light_switch{
@@ -16782,6 +16845,7 @@
 /area/torch/bridgedeck/disciplinary_board_room)
 "exq" = (
 /obj/structure/reagent_dispensers/fueltank,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/storage)
 "exr" = (
@@ -16830,6 +16894,13 @@
 /obj/structure/pipes/valve/open,
 /turf/open/floor/plating,
 /area/torch/seconddeck/fuelbay)
+"eyC" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hangar)
 "eyF" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -17416,6 +17487,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "eGu" = (
@@ -17440,6 +17512,25 @@
 "eGS" = (
 /turf/open/floor/shiva/purplecorners/west,
 /area/torch/fifthdeck/hallway/fore)
+"eHs" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/forestarboard)
 "eHw" = (
 /obj/structure/closet/crate,
 /obj/structure/cable/green{
@@ -17533,6 +17624,10 @@
 	},
 /turf/open/floor/plating,
 /area/shuttle/torch_elevator/seconddeck)
+"eJe" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/aftport)
 "eJm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18262,6 +18357,19 @@
 	},
 /turf/open/space,
 /area/space)
+"eRS" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden,
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/maintenance/aftstarboard)
 "eRU" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -18832,6 +18940,10 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk/prison,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hangar)
+"eYP" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
 "eYV" = (
@@ -19562,6 +19674,7 @@
 	},
 /obj/structure/catwalk/prison,
 /obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
 "fgy" = (
@@ -19831,6 +19944,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "fjk" = (
@@ -19912,6 +20026,25 @@
 "fjO" = (
 /turf/open/floor/shiva/purplecorners/west,
 /area/torch/firstdeck/research/hallway)
+"fke" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/maintenance/forestarboard)
 "fki" = (
 /turf/open/floor/plating/almayer,
 /area/torch/fourthdeck/hangcheck)
@@ -20037,6 +20170,10 @@
 	},
 /turf/open/floor/corsat/sterileplate,
 /area/torch/petrov/toxins)
+"flr" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fourthdeck/maintenance/forestarboard)
 "flz" = (
 /obj/item/clothing/under/rank/psych/turtleneck,
 /obj/item/clothing/under/rank/psych,
@@ -21426,6 +21563,10 @@
 	},
 /turf/open/floor/almayer,
 /area/torch/seconddeck/engineering/engineering_bay)
+"fBO" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/bridgedeck/maintenance/forestarboard)
 "fBX" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/window/phoronreinforced/full,
@@ -21782,6 +21923,28 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/sea)
+"fGM" = (
+/obj/structure/pipes/standard/simple/visible{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/firstdeck/maintenance/foreport)
 "fGR" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 4
@@ -22425,6 +22588,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "fPs" = (
@@ -22817,6 +22981,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "fTV" = (
@@ -24066,6 +24231,7 @@
 /area/torch/fourthdeck/maintenance/forestarboard)
 "glQ" = (
 /obj/structure/disposalpipe/up,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "glZ" = (
@@ -24187,6 +24353,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "gne" = (
@@ -24628,6 +24795,11 @@
 "grY" = (
 /turf/open/floor/asteroidplating,
 /area/shuttle/torch_elevator/bridge)
+"gsd" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "gsn" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -24816,6 +24988,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "gur" = (
@@ -25119,6 +25292,7 @@
 /area/torch/guppy_hangar)
 "gyC" = (
 /obj/structure/machinery/light/small,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "gyG" = (
@@ -25191,6 +25365,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/red/north,
 /area/torch/firstdeck/security/armoury)
+"gzq" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/shiva/north,
+/area/torch/fifthdeck/storage)
 "gzt" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -25816,6 +25999,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "gGP" = (
@@ -26227,6 +26411,7 @@
 	name = "bridgedeck";
 	vector_x = -125
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "gMo" = (
@@ -26583,6 +26768,11 @@
 "gPG" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/hangcheck)
+"gPT" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/forestarboard)
 "gPV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -26784,6 +26974,7 @@
 /area/torch/seconddeck/maintenance/central)
 "gTM" = (
 /obj/structure/pipes/vents/pump/on,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
 "gTP" = (
@@ -26920,6 +27111,13 @@
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/almayer/dark_sterile,
 /area/almayer/evacuation/pod6)
+"gWj" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/aftstarboard)
 "gWs" = (
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 6
@@ -27040,6 +27238,12 @@
 	icon_state = "bcarpet05"
 	},
 /area/torch/bridgedeck/cl/backroom)
+"gXz" = (
+/obj/structure/catwalk,
+/obj/structure/pipes/standard/simple/visible/cyan,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/aftport)
 "gXH" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -27536,22 +27740,6 @@
 /obj/structure/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
-"hds" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/thirddeck/maintenance/port)
 "hdw" = (
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = 125;
@@ -27593,6 +27781,7 @@
 /obj/structure/disposalpipe/up{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "heh" = (
@@ -28094,6 +28283,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "hlo" = (
@@ -28110,6 +28300,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "hlJ" = (
@@ -28349,11 +28540,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/aftport)
-"hoV" = (
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/bridgedeck/maintenance/forestarboard)
 "hpp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -28435,6 +28621,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftport)
 "hqq" = (
@@ -28613,6 +28800,10 @@
 "hsW" = (
 /turf/closed/wall/mineral/phoron,
 /area/torch/thirddeck/d3port)
+"hte" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/quartermaster/storage/upper)
 "htn" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
 	dir = 1
@@ -28830,6 +29021,12 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/test_floor4,
 /area/torch/fourthdeck/maintenance/aft)
+"hwC" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/window/framed/colony/reinforced,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/exploration)
 "hwJ" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/firstdeck/cryo)
@@ -29075,10 +29272,6 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
-"hAC" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/seconddeck/maintenance/aftstarboard)
 "hAL" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/reagent_container/food/drinks/bottle/wine,
@@ -29547,6 +29740,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/tan,
 /area/torch/thirddeck/mess/galleybackroom)
 "hFA" = (
@@ -29691,6 +29885,7 @@
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "hGB" = (
@@ -29953,18 +30148,6 @@
 	},
 /turf/open/floor/shiva/yellow/north,
 /area/torch/fourthdeck/hallway/aft)
-"hKj" = (
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/thirddeck/maintenance/port)
 "hKl" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -30589,6 +30772,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "hUj" = (
@@ -30610,6 +30794,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "hUn" = (
@@ -30847,6 +31032,13 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/foreport)
+"hXE" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/maintenance/aftstarboard)
 "hXN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -30994,6 +31186,10 @@
 /obj/structure/pipes/standard/manifold/visible/cyan,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/engineering/engine_room)
+"ial" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fifthdeck/exploration)
 "ian" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/shutters{
@@ -31108,10 +31304,6 @@
 /obj/structure/machinery/cryobag_recycler,
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/hardstorage)
-"ibB" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/thirddeck/maintenance/port)
 "ibC" = (
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -32009,10 +32201,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/shiva/green/north,
 /area/torch/thirddeck/hallway/center)
-"imz" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/fourthdeck/hallway/fore)
 "imP" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/maintenance/starboard)
@@ -32181,6 +32369,11 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/guppy_hangar)
+"ipI" = (
+/obj/structure/surface/rack,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/vault2/west,
+/area/torch/thirddeck/maintenance/port)
 "ipR" = (
 /obj/structure/pipes/standard/simple/visible{
 	dir = 10
@@ -32212,6 +32405,25 @@
 /obj/item/storage/firstaid/adv,
 /turf/open/floor/shiva/bluefull/west,
 /area/torch/firstdeck/medical/locker)
+"iqo" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/firstdeck/maintenance/foreport)
 "iqs" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -32887,6 +33099,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/starboard)
 "iAk" = (
@@ -33514,6 +33727,7 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "iIj" = (
@@ -34210,6 +34424,10 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/nuke_storage)
+"iQX" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/thirddeck/maintenance/port)
 "iRd" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 1
@@ -34429,6 +34647,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
 "iUC" = (
@@ -34984,6 +35203,14 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/firstdeck/research/misc_lab)
+"jbr" = (
+/obj/structure/machinery/light/spot{
+	dir = 8
+	},
+/obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hangar)
 "jby" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury)
@@ -35731,6 +35958,10 @@
 "jkw" = (
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/quartermaster/deckchief)
+"jky" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/bridgedeck/disciplinary_board_room)
 "jkD" = (
 /obj/item/tool/candle,
 /turf/open/floor/plating,
@@ -36128,11 +36359,6 @@
 /obj/structure/surface/rack,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/maintenance/foreport)
-"jqe" = (
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/fourthdeck/maintenance/port)
 "jqr" = (
 /obj/item/stool,
 /turf/open/floor/kutjevo/fake_wood,
@@ -38311,14 +38537,6 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/guppy_hangar)
-"jTL" = (
-/obj/structure/lattice,
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/void/show_pipes,
-/area/torch/fourthdeck/maintenance/starboard)
 "jTQ" = (
 /turf/open/floor/shiva/blue/east,
 /area/torch/firstdeck/hallway/fore)
@@ -38416,6 +38634,10 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/shiva/blue/northwest,
 /area/torch/bridgedeck/disciplinary_board_room)
+"jVa" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/bridgedeck/maintenance/aftport)
 "jVe" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -38426,6 +38648,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "jVh" = (
@@ -39448,6 +39671,7 @@
 /area/torch/petrov/rnd)
 "kiO" = (
 /obj/structure/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "kiW" = (
@@ -39808,6 +40032,7 @@
 "kmG" = (
 /obj/structure/closet/crate/internals,
 /obj/effect/spawner/random/tech_supply,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "kmJ" = (
@@ -40175,6 +40400,7 @@
 /area/torch/firstdeck/nuke_storage)
 "krE" = (
 /obj/structure/ore_box,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "ksf" = (
@@ -40978,14 +41204,6 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/detectives_office)
-"kAc" = (
-/obj/structure/lattice,
-/obj/structure/disposalpipe/down{
-	dir = 4
-	},
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/void/show_pipes,
-/area/torch/bridgedeck/maintenance/aftport)
 "kAk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -41102,6 +41320,12 @@
 	},
 /turf/open/floor/shiva/yellow,
 /area/torch/fourthdeck/quartermaster/deckchief)
+"kBf" = (
+/obj/structure/catwalk,
+/obj/structure/barricade/handrail,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/bridgedeck/maintenance/forestarboard)
 "kBk" = (
 /obj/structure/foamed_metal/iron,
 /turf/open/floor/plating,
@@ -41264,11 +41488,6 @@
 	},
 /turf/open/floor/shiva/red/east,
 /area/torch/bridgedeck/sea)
-"kDS" = (
-/obj/structure/window/framed/colony/reinforced,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/fourthdeck/maintenance/port)
 "kDU" = (
 /obj/structure/catwalk,
 /obj/structure/disposalpipe/sortjunction{
@@ -41356,10 +41575,6 @@
 "kFJ" = (
 /turf/open/floor/freezerfloor,
 /area/torch/thirddeck/gym)
-"kFV" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/bridgedeck/disciplinary_board_room)
 "kFY" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -41882,10 +42097,6 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/bridgedeck/maintenance/aftport)
-"kNj" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/seconddeck/maintenance/aftport)
 "kNu" = (
 /obj/structure/pipes/portables_connector{
 	dir = 4
@@ -43111,6 +43322,10 @@
 /obj/structure/window/phoronreinforced/full,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/thruster/d1starboard)
+"leW" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/bridgedeck/maintenance/foreport)
 "leX" = (
 /obj/structure/surface/rack{
 	dir = 8
@@ -43266,6 +43481,11 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/fore)
+"lhk" = (
+/obj/structure/largecrate,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/vault2/west,
+/area/torch/thirddeck/maintenance/port)
 "lhu" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -44037,6 +44257,11 @@
 "lrC" = (
 /turf/closed/wall,
 /area/torch/firstdeck/hallway/fore)
+"lrH" = (
+/obj/structure/machinery/message_server,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/bluegrid,
+/area/torch/fourthdeck/tcommsat/chamber)
 "lrJ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -44115,6 +44340,7 @@
 	dir = 1
 	},
 /obj/structure/pipes/vents/pump/high_volume,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
 "lsi" = (
@@ -44824,10 +45050,6 @@
 /obj/item/storage/box/bodybags,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/aftstarboard)
-"lAw" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/wood,
-/area/torch/seconddeck/chapel)
 "lAy" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 4
@@ -45739,14 +45961,6 @@
 "lMh" = (
 /turf/open/floor/plating,
 /area/shuttle/torch_elevator/firstdeck)
-"lMv" = (
-/obj/structure/catwalk,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "lMC" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -46223,6 +46437,7 @@
 /turf/open/floor/plating,
 /area/torch/fourthdeck/monitoring)
 "lTn" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/closed/wall/sulaco,
 /area/torch/fifthdeck/hangar)
 "lTC" = (
@@ -47245,6 +47460,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/shiva/blue/north,
 /area/torch/firstdeck/hallway/center)
+"mfu" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/maintenance/port)
 "mfD" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
@@ -47529,11 +47748,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/seconddeck/engineering/engine_room)
-"mjo" = (
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/seconddeck/maintenance/aftport)
 "mjy" = (
 /obj/structure/bed/chair/comfy/blue,
 /obj/structure/closet/medical_wall{
@@ -47568,10 +47782,6 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/hardstorage)
-"mjI" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/bridgedeck/xo)
 "mjS" = (
 /obj/structure/sign/directions/security{
 	pixel_y = -7;
@@ -47696,6 +47906,7 @@
 /area/torch/fifthdeck/storage)
 "mlC" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/maintenance/starboard)
 "mlI" = (
@@ -47731,6 +47942,7 @@
 	},
 /obj/effect/spawner/random/bomb_supply,
 /obj/effect/spawner/random/bomb_supply,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "mmk" = (
@@ -47800,6 +48012,11 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/aft)
+"mng" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/maintenance/forestarboard)
 "mnk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -47853,6 +48070,15 @@
 /obj/structure/machinery/status_display,
 /turf/closed/wall,
 /area/torch/firstdeck/hallway/aft)
+"mnG" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/port)
+"mnJ" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/tcommsat/chamber)
 "mnQ" = (
 /obj/structure/pipes/standard/manifold/hidden{
 	dir = 4
@@ -48378,6 +48604,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
+"mxa" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fourthdeck/hangcheck)
 "mxc" = (
 /obj/structure/pipes/portables_connector{
 	dir = 8
@@ -48659,10 +48889,6 @@
 	},
 /turf/open/floor/shiva/greencorners,
 /area/torch/thirddeck/commissary)
-"mBC" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/bridgedeck/maintenance/foreport)
 "mBJ" = (
 /obj/structure/cable/green,
 /obj/structure/window/framed/colony/reinforced,
@@ -48811,10 +49037,6 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/maintenance/foreport)
-"mEA" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/bridgedeck/maintenance/aftport)
 "mEB" = (
 /obj/effect/projector{
 	vector_x = -116;
@@ -48934,6 +49156,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden,
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "mGE" = (
@@ -49078,10 +49301,6 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/torch/seconddeck/engineering/engine_monitoring)
-"mIx" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/seconddeck/maintenance/forestarboard)
 "mID" = (
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/plating,
@@ -49438,6 +49657,19 @@
 	},
 /turf/open/floor/plating,
 /area/torch/bridgedeck/bridgecheck)
+"mMO" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/maintenance/aftport)
 "mMP" = (
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
@@ -49687,6 +49919,7 @@
 /area/torch/thirddeck/d3port)
 "mQv" = (
 /obj/structure/pipes/valve/digital,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "mQD" = (
@@ -50381,6 +50614,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralport)
+"mYZ" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/sulaco,
+/area/torch/guppy_hangar)
 "mZf" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced{
@@ -50889,6 +51126,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "nhc" = (
@@ -52744,6 +52982,11 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/evidence)
+"nDJ" = (
+/obj/structure/sign/warning/high_voltage,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/substation)
 "nEh" = (
 /turf/closed/wall/wood,
 /area/torch/thirddeck/cryo/bunk)
@@ -53404,6 +53647,7 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/sgr)
 "nMR" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
 "nMS" = (
@@ -53826,6 +54070,10 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/wing)
+"nSb" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/foreport)
 "nSe" = (
 /obj/structure/machinery/power/apc{
 	dir = 8;
@@ -56183,6 +56431,11 @@
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge/stationary,
 /turf/open/floor/corsat/sterileplate,
 /area/torch/petrov/toxins)
+"oza" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/bridgedeck/maintenance/forestarboard)
 "ozg" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8
@@ -56596,6 +56849,7 @@
 /area/torch/firstdeck/maintenance/centralstarboard)
 "oEr" = (
 /obj/structure/disposalpipe/up,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "oEw" = (
@@ -56856,6 +57110,10 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/petrov/cell1)
+"oJa" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/maintenance/starboard)
 "oJb" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 1
@@ -57649,6 +57907,7 @@
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "oVw" = (
@@ -57713,6 +57972,14 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/questioning)
+"oWC" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down{
+	dir = 4
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/void/show_pipes,
+/area/torch/bridgedeck/maintenance/aftport)
 "oXg" = (
 /obj/item/device/radio/intercom{
 	dir = 1;
@@ -58379,6 +58646,11 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/seconddeck/hallway/fore)
+"pfU" = (
+/obj/structure/girder/displaced,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/chapel)
 "pga" = (
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/expedition)
@@ -59582,6 +59854,10 @@
 /obj/effect/decal/cleanable/blackgoo,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/foreport)
+"prC" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/vault2/west,
+/area/torch/thirddeck/maintenance/aftstarboard)
 "prD" = (
 /obj/structure/flora/pottedplant/random/unanchored,
 /turf/open/floor/shiva/blue/east,
@@ -59693,6 +59969,10 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/fifthdeck/bar)
+"psA" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/vault2/west,
+/area/torch/firstdeck/maintenance/foreport)
 "psE" = (
 /obj/structure/machinery/light/small{
 	dir = 4
@@ -60076,6 +60356,12 @@
 	},
 /turf/closed/wall,
 /area/torch/fourthdeck/adherent)
+"pxy" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/window/framed/colony/reinforced,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fourthdeck/hallway/fore)
 "pxC" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -60187,6 +60473,7 @@
 /area/torch/firstdeck/conference)
 "pAc" = (
 /obj/structure/machinery/space_heater,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "pAe" = (
@@ -60556,10 +60843,6 @@
 /obj/effect/spawner/random/medical/lite,
 /turf/open/floor/shiva/bluefull/west,
 /area/torch/firstdeck/medical/equipstorage)
-"pEQ" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/fourthdeck/quartermaster/storage/upper)
 "pFq" = (
 /obj/structure/machinery/firealarm{
 	dir = 4;
@@ -60617,6 +60900,10 @@
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/hallway/aft)
+"pGh" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fifthdeck/maintenance/aftport)
 "pGF" = (
 /obj/structure/closet/emcloset,
 /turf/open/floor/shiva/purple{
@@ -62083,6 +62370,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "qaS" = (
@@ -62257,6 +62545,7 @@
 /obj/structure/grille{
 	destroyed = 1
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "qdp" = (
@@ -62797,6 +63086,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralstarboard)
+"qjQ" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/bridgedeck/maintenance/aftport)
 "qjU" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -62808,6 +63101,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "qke" = (
@@ -63490,6 +63784,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "qsb" = (
@@ -63503,6 +63798,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3starboard)
+"qsd" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/thirddeck/maintenance/forestarboard)
 "qsj" = (
 /obj/structure/lattice,
 /obj/structure/pipes/standard/cap/visible/supply,
@@ -63690,6 +63989,10 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/tools)
+"quB" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/fore)
 "quD" = (
 /obj/structure/sign/directions/science,
 /obj/structure/sign/directions/infirmary{
@@ -63991,6 +64294,10 @@
 /obj/item/bedsheet/medical,
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/fifthdeck/maintenance/infirmary)
+"qyy" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/bridgedeck/maintenance/foreport)
 "qyz" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -64554,12 +64861,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/starboard)
-"qGy" = (
-/obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/colony/reinforced,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/fourthdeck/hallway/fore)
 "qGD" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -65326,6 +65627,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
 "qPu" = (
@@ -65354,6 +65656,10 @@
 /obj/structure/bookcase/manuals/research_and_development,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/centralport)
+"qPF" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/thirddeck/maintenance/port)
 "qPL" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 4
@@ -65465,13 +65771,9 @@
 /turf/open/floor/shiva/yellow,
 /area/torch/bridgedeck/hallway/fore)
 "qQK" = (
-/obj/effect/projector{
-	vector_x = 124;
-	vector_y = 80;
-	name = "deck4"
-	},
-/turf/open/space,
-/area/space)
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/shiva/floor3,
+/area/torch/fifthdeck/hangar)
 "qQQ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -66000,6 +66302,7 @@
 /turf/open/floor/shiva/greencorners/east,
 /area/torch/fourthdeck/hallway/aft)
 "qYE" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "qYF" = (
@@ -66561,6 +66864,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/isolation)
+"rgg" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/shiva,
+/area/torch/fourthdeck/tcommsat/chamber)
 "rgk" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -66690,6 +66997,7 @@
 /area/torch/petrov/rnd)
 "rhs" = (
 /obj/structure/closet/crate,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/storage)
 "rhB" = (
@@ -66747,6 +67055,10 @@
 /obj/structure/pipes/vents/pump/high_volume,
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
+"rhW" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/bridgedeck/maintenance/foreport)
 "rhX" = (
 /obj/structure/pipes/unary/outlet_injector{
 	id = "rust_injector";
@@ -66873,6 +67185,10 @@
 /obj/item/pipe_meter,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
+"rjE" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/wood,
+/area/torch/seconddeck/chapel)
 "rjF" = (
 /obj/structure/noticeboard{
 	pixel_y = 30
@@ -67702,6 +68018,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/fifthdeck/maintenance/aftport)
+"ruM" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/firstdeck/maintenance/foreport)
 "ruP" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/bed/chair/comfy/lime{
@@ -67809,10 +68129,6 @@
 "rvR" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/seconddeck/prototype/engine)
-"rvY" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/space)
 "rvZ" = (
 /obj/structure/pipes/standard/simple/visible/scrubbers{
 	dir = 4
@@ -67932,6 +68248,11 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/firstdeck/counselor/therapy)
+"rxc" = (
+/obj/structure/window/framed/colony/reinforced,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fourthdeck/maintenance/port)
 "rxo" = (
 /obj/structure/machinery/airlock_sensor{
 	frequency = 1380;
@@ -68023,10 +68344,6 @@
 	},
 /turf/open/floor/redyellowfull,
 /area/torch/firstdeck/medical/hallway)
-"ryu" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/bridgedeck/maintenance/foreport)
 "ryv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -68188,6 +68505,7 @@
 	dir = 6
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "rzT" = (
@@ -69095,6 +69413,19 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/thirddeck/bathroom/sauna)
+"rLy" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/bridgedeck/maintenance/aftport)
 "rLI" = (
 /obj/structure/pipes/standard/tank/air{
 	dir = 4
@@ -69711,6 +70042,10 @@
 /obj/structure/machinery/door/airlock/almayer/command/autoname,
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/sgr)
+"rUr" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fourthdeck/maintenance/waterstore)
 "rUv" = (
 /obj/structure/surface/rack{
 	dir = 8
@@ -69722,19 +70057,6 @@
 /obj/structure/pipes/standard/simple/visible,
 /turf/closed/wall/mineral/phoron,
 /area/torch/petrov/toxins)
-"rUC" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/bridgedeck/maintenance/aftport)
 "rUH" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
 	dir = 1
@@ -70573,6 +70895,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "sfe" = (
@@ -70936,6 +71259,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "sjv" = (
@@ -71028,6 +71352,12 @@
 "sks" = (
 /turf/open/floor/shiva/purple/north,
 /area/torch/fourthdeck/hallway/fore)
+"skt" = (
+/obj/structure/catwalk,
+/obj/structure/machinery/light,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "sku" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -71398,6 +71728,7 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "spB" = (
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/nostromowater,
 /area/torch/fourthdeck/maintenance/waterstore)
 "spC" = (
@@ -71654,11 +71985,6 @@
 	},
 /turf/open/floor/shiva/redfull/west,
 /area/torch/bridgedeck/bridgecheck)
-"srZ" = (
-/obj/structure/machinery/message_server,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/bluegrid,
-/area/torch/fourthdeck/tcommsat/chamber)
 "ssg" = (
 /obj/structure/machinery/light{
 	dir = 8
@@ -72109,10 +72435,6 @@
 	},
 /turf/open/floor/carpet,
 /area/torch/thirddeck/chapel/office)
-"syf" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/fourthdeck/maintenance/port)
 "syo" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -72510,10 +72832,28 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/fuelbay/wastetank)
-"sDf" = (
+"sDh" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/fourthdeck/tcommsat/chamber)
+/turf/open/floor/plating,
+/area/torch/fourthdeck/maintenance/starboard)
 "sDA" = (
 /obj/structure/machinery/computer/crew/colony,
 /obj/structure/machinery/alarm{
@@ -72750,6 +73090,7 @@
 /obj/structure/barricade/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "sGA" = (
@@ -73221,11 +73562,6 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/guppy_hangar)
-"sMC" = (
-/obj/structure/girder/displaced,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/seconddeck/chapel)
 "sMI" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
@@ -73602,6 +73938,7 @@
 /obj/structure/machinery/door/airlock/almayer/marine{
 	name = "Expediation Storage"
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/fifthdeck/expedition_storage)
 "sRj" = (
@@ -73878,6 +74215,10 @@
 /obj/structure/sign/warning/fall,
 /turf/closed/wall/almayer/reinforced,
 /area/torch/fourthdeck/tcommsat/chamber)
+"sTV" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating/warnplate/east,
+/area/torch/fifthdeck/hangar)
 "sUb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -74432,6 +74773,11 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/starboard)
+"taL" = (
+/obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/maintenance/starboard)
 "taN" = (
 /obj/structure/bed/stool,
 /obj/structure/cable/green{
@@ -74913,6 +75259,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "tgA" = (
@@ -75162,6 +75509,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "tiX" = (
@@ -75474,10 +75822,6 @@
 "tnQ" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/thirddeck/hallway/fore)
-"tnS" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall/almayer/reinforced,
-/area/torch/seconddeck/maintenance/aftport)
 "toc" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 1
@@ -75979,6 +76323,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden,
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "tvT" = (
@@ -76810,13 +77155,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/hallwaya)
-"tHl" = (
-/obj/structure/barricade/handrail{
-	dir = 1
-	},
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "tHr" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/generic/glass,
@@ -77714,6 +78052,13 @@
 /obj/structure/barricade/handrail,
 /turf/open/floor/bluegrid,
 /area/torch/guppy_hangar)
+"tTy" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "tTz" = (
 /turf/closed/wall,
 /area/torch/firstdeck/nuke_storage)
@@ -77746,6 +78091,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "tUd" = (
@@ -77777,6 +78123,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/hallway/center)
+"tUt" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/forestarboard)
 "tUv" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -77988,6 +78338,7 @@
 	dir = 8;
 	pixel_x = 21
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
 "tXx" = (
@@ -78134,6 +78485,10 @@
 	},
 /turf/open/floor/shiva/yellowcorners/north,
 /area/torch/thirddeck/hallway/center)
+"tYD" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fourthdeck/bathroom)
 "tYM" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 1
@@ -78272,6 +78627,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/surface/rack,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/forestarboard)
 "ubj" = (
@@ -78508,6 +78864,7 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "ufu" = (
@@ -78707,12 +79064,6 @@
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/hallway/fore)
-"uiZ" = (
-/obj/structure/catwalk,
-/obj/structure/barricade/handrail,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/bridgedeck/maintenance/forestarboard)
 "ujd" = (
 /obj/structure/pipes/standard/simple/hidden/purple,
 /obj/structure/window/reinforced,
@@ -79349,6 +79700,7 @@
 /area/torch/fourthdeck/quartermaster/storage/upper)
 "uqy" = (
 /obj/structure/machinery/computer/arcade,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "uqB" = (
@@ -79467,12 +79819,6 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hallway/aft)
-"urP" = (
-/obj/structure/catwalk,
-/obj/structure/machinery/light,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "usa" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -79822,6 +80168,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "uvD" = (
@@ -80237,6 +80584,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/forestarboard)
 "uzE" = (
@@ -80721,6 +81069,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
+"uFw" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/shiva/floor3,
+/area/torch/fifthdeck/expedition_storage)
 "uFx" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 5
@@ -80880,6 +81232,7 @@
 "uIe" = (
 /obj/structure/surface/rack,
 /obj/effect/spawner/random/bomb_supply,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "uIk" = (
@@ -81457,6 +81810,14 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/seconddeck/engineering/atmos)
+"uPL" = (
+/obj/structure/catwalk,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "uPP" = (
 /obj/structure/machinery/computer/arcade,
 /turf/open/floor/cmo,
@@ -81944,6 +82305,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "uWZ" = (
@@ -82874,6 +83236,10 @@
 	},
 /turf/open/floor/freezerfloor,
 /area/torch/firstdeck/bathroom)
+"vjU" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fifthdeck/expedition_storage)
 "vjV" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -83252,6 +83618,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/almayer/evacuation/pod14)
+"vpo" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/space)
 "vpq" = (
 /turf/open/floor/strata/multi_tiles,
 /area/torch/firstdeck/brig)
@@ -83283,6 +83653,14 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/bo)
+"vpR" = (
+/obj/structure/lattice,
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/void/show_pipes,
+/area/torch/fourthdeck/maintenance/starboard)
 "vpV" = (
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/central)
@@ -83354,6 +83732,10 @@
 	},
 /turf/closed/wall,
 /area/torch/firstdeck/hallway/fore)
+"vrT" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/space)
 "vsd" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -83523,10 +83905,6 @@
 /obj/item/device/aicard,
 /turf/open/floor/bluegrid/bcircuitoff,
 /area/torch/seconddeck/tech)
-"vtv" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/almayer_hull,
-/area/torch/fourthdeck/catwalks)
 "vty" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -83652,6 +84030,10 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/sgr)
+"vuz" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/safe_room)
 "vuA" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -83740,6 +84122,18 @@
 	},
 /turf/open/floor/shiva/bluecorners,
 /area/torch/bridgedeck/hallway/fore)
+"vwF" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/thirddeck/maintenance/port)
 "vwL" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -83978,6 +84372,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/bo)
+"vzv" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/thirddeck/maintenance/aftport)
 "vzx" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/shutters{
@@ -84434,6 +84832,7 @@
 /area/torch/thirddeck/disperser)
 "vEN" = (
 /obj/structure/machinery/floodlight,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "vEW" = (
@@ -84610,6 +85009,11 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/hallway/center)
+"vGV" = (
+/obj/structure/barricade/handrail,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/almayer_hull,
+/area/torch/fourthdeck/catwalks)
 "vHl" = (
 /obj/structure/surface/rack{
 	dir = 8
@@ -85214,6 +85618,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "vRn" = (
@@ -85329,6 +85734,11 @@
 /obj/effect/spawner/random/bomb_supply,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/cargo)
+"vTb" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fourthdeck/maintenance/port)
 "vTh" = (
 /obj/structure/lattice,
 /obj/item/pipe_meter,
@@ -86072,6 +86482,7 @@
 /obj/item/device/flashlight,
 /obj/item/device/flashlight,
 /obj/item/device/flashlight,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/storage)
 "wdh" = (
@@ -86211,6 +86622,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/foreport)
+"wdV" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall,
+/area/torch/fifthdeck/storage)
 "wed" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -87141,6 +87556,15 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/hallway/fore)
+"wpu" = (
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
+/obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hangar)
 "wpA" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -87494,6 +87918,7 @@
 /obj/structure/pipes/standard/simple/hidden/cyan{
 	dir = 6
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
 "wug" = (
@@ -87664,19 +88089,6 @@
 /obj/structure/bookcase,
 /turf/open/floor/shiva/bluefull/west,
 /area/torch/bridgedeck/sea)
-"wwb" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/plating,
-/area/torch/seconddeck/maintenance/aftport)
 "wwd" = (
 /obj/structure/machinery/light,
 /turf/open/floor/shiva/green,
@@ -87749,6 +88161,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/forestarboard)
 "wyd" = (
@@ -88447,10 +88860,6 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
-"wGT" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/bridgedeck/maintenance/aftport)
 "wHd" = (
 /obj/structure/machinery/conveyor{
 	dir = 8;
@@ -88841,6 +89250,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/foreport)
 "wMA" = (
@@ -88899,6 +89309,11 @@
 	icon_state = "bcarpet05"
 	},
 /area/torch/bridgedeck/sgr)
+"wNc" = (
+/obj/effect/decal/warning_stripes,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/storage)
 "wNf" = (
 /obj/structure/pipes/vents/pump/on{
 	dir = 8
@@ -89270,6 +89685,10 @@
 	},
 /turf/open/floor/corsat/sterileplate,
 /area/torch/petrov/hallwaya)
+"wRk" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating/warnplate/west,
+/area/torch/fifthdeck/hangar)
 "wRl" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
@@ -89699,10 +90118,6 @@
 /obj/structure/surface/rack,
 /turf/open/floor/shiva/snow_mat,
 /area/torch/thirddeck/commissary)
-"wWx" = (
-/obj/effect/step_trigger/clone_cleaner,
-/turf/open/floor/shiva,
-/area/torch/fourthdeck/tcommsat/chamber)
 "wWN" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -90053,11 +90468,6 @@
 "xar" = (
 /turf/open/floor/shiva/bluefull,
 /area/torch/firstdeck/medical/medpaperworkoffice)
-"xav" = (
-/obj/structure/sign/warning/high_voltage,
-/obj/effect/step_trigger/clone_cleaner,
-/turf/closed/wall,
-/area/torch/firstdeck/maintenance/substation)
 "xax" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -90775,6 +91185,11 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralstarboard)
+"xiy" = (
+/obj/structure/catwalk,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/maintenance/aftport)
 "xiW" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/cable{
@@ -90885,6 +91300,7 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "xjK" = (
@@ -91361,6 +91777,7 @@
 /area/torch/fourthdeck/starboard_storage)
 "xpb" = (
 /obj/item/storage/box/lights/mixed,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/aftstarboard)
 "xpp" = (
@@ -92691,6 +93108,7 @@
 	dir = 4
 	},
 /obj/effect/decal/warning_stripes,
+/obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/aftport)
 "xIC" = (
@@ -92907,6 +93325,16 @@
 	},
 /turf/open/floor/shiva/green/west,
 /area/torch/fourthdeck/hallway/aft)
+"xKP" = (
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/seconddeck/maintenance/forestarboard)
 "xKR" = (
 /turf/open/floor/vault2/west,
 /area/torch/fifthdeck/canister)
@@ -93241,6 +93669,10 @@
 	},
 /turf/open/floor/shiva/blue/west,
 /area/torch/bridgedeck/hallway/fore)
+"xPU" = (
+/obj/effect/step_trigger/clone_cleaner,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/maintenance/foreport)
 "xQe" = (
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4
@@ -94083,6 +94515,11 @@
 /obj/structure/closet,
 /turf/open/floor/almayer_hull,
 /area/torch/bridgedeck/maintenance/foreport)
+"xZU" = (
+/obj/structure/catwalk/prison,
+/obj/effect/step_trigger/clone_cleaner,
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hangar)
 "yaB" = (
 /turf/open/floor/shiva,
 /area/torch/thirddeck/hydroponics)
@@ -100015,9 +100452,9 @@ sRT
 sRT
 sRT
 tSv
-uiZ
-ckN
-mjI
+kBf
+fBO
+dyB
 bkV
 qnj
 kkk
@@ -100271,9 +100708,9 @@ sRT
 sRT
 sRT
 fmk
-uiZ
+kBf
 nLk
-mjI
+dyB
 vXJ
 jaV
 wPF
@@ -100307,9 +100744,9 @@ uUq
 kWS
 rzt
 rzt
-ryu
-ryu
-adg
+qyy
+qyy
+leW
 pPs
 pPs
 jNY
@@ -100527,9 +100964,9 @@ sRT
 sRT
 sRT
 ulK
-uiZ
+kBf
 nLk
-mjI
+dyB
 adF
 oan
 oan
@@ -100565,7 +101002,7 @@ rzt
 sCR
 kXO
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -100783,9 +101220,9 @@ sRT
 sRT
 sRT
 ulK
-uiZ
+kBf
 nLk
-mjI
+dyB
 mzd
 xxU
 opz
@@ -100821,7 +101258,7 @@ mUN
 mUN
 mza
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -101039,9 +101476,9 @@ sRT
 sRT
 sRT
 ulK
-uiZ
+kBf
 nLk
-mjI
+dyB
 tFT
 fNY
 oan
@@ -101077,7 +101514,7 @@ qlR
 mUN
 qUp
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -101295,9 +101732,9 @@ sRT
 sRT
 sRT
 ulK
-uiZ
+kBf
 nLk
-mjI
+dyB
 jfn
 spl
 oan
@@ -101333,7 +101770,7 @@ xcA
 cpl
 oMc
 otp
-adg
+leW
 pPs
 pPs
 olV
@@ -101551,9 +101988,9 @@ sRT
 sRT
 sRT
 ulK
-hoV
+oza
 kbO
-mjI
+dyB
 chW
 oan
 oan
@@ -101588,8 +102025,8 @@ oXw
 qwh
 mUN
 kcG
-ryu
-adg
+qyy
+leW
 pPs
 pPs
 olV
@@ -102865,11 +103302,11 @@ fak
 prv
 qDw
 fXT
-mBC
+rhW
 hKo
 wEP
 hKo
-adg
+leW
 pPs
 pPs
 olV
@@ -103125,7 +103562,7 @@ gfp
 otp
 cNc
 bqM
-adg
+leW
 pPs
 pPs
 jNY
@@ -103381,7 +103818,7 @@ gfp
 otp
 cNc
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -103637,7 +104074,7 @@ gfp
 otp
 cNc
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -103893,7 +104330,7 @@ gfp
 otp
 cNc
 otp
-adg
+leW
 pPs
 pPs
 jNY
@@ -104148,8 +104585,8 @@ dLW
 frz
 mKe
 thT
-adg
-adg
+leW
+leW
 pPs
 pPs
 jNY
@@ -105481,10 +105918,10 @@ dwl
 gLg
 oWb
 vqo
-sMC
-lAw
-lAw
-lAw
+pfU
+rjE
+rjE
+rjE
 cGb
 fQi
 vIE
@@ -106331,10 +106768,10 @@ jNY
 bqA
 bqA
 iYs
-diy
-diy
-diy
-diy
+flr
+flr
+flr
+flr
 jGO
 jGO
 jGO
@@ -106446,9 +106883,9 @@ fsO
 uIF
 iKA
 iKA
-kFV
-kFV
-kFV
+jky
+jky
+jky
 aGs
 wQq
 wQq
@@ -106505,9 +106942,9 @@ doV
 fQi
 qIk
 fQi
-mIx
-mIx
-mIx
+dWC
+dWC
+dWC
 vdk
 sHu
 aid
@@ -106702,12 +107139,12 @@ usA
 usA
 usA
 nMl
-kAc
+oWC
 skg
 imc
 uMv
-mEA
-mEA
+qjQ
+qjQ
 wQq
 wQq
 jNY
@@ -106956,15 +107393,15 @@ kUA
 weF
 gJH
 woe
-wGT
+jVa
 wdH
 pum
 xYN
 xYN
 plC
 skg
-mEA
-mEA
+qjQ
+qjQ
 wQq
 wQq
 jNY
@@ -107018,9 +107455,9 @@ fQi
 fQi
 jfy
 dNr
-fQi
-qIk
-veh
+dWC
+mng
+fke
 sHu
 aid
 aid
@@ -107220,7 +107657,7 @@ skg
 mLd
 skg
 skg
-mEA
+qjQ
 wQq
 wQq
 jNY
@@ -107274,9 +107711,9 @@ cfC
 fQi
 fQi
 fQi
-fQi
+dWC
 cDS
-veh
+fke
 sHu
 aid
 aid
@@ -107355,7 +107792,7 @@ jNY
 bqA
 bqA
 wav
-rvY
+vrT
 qSg
 nGy
 eMe
@@ -107468,7 +107905,7 @@ usA
 usA
 qgZ
 kwa
-rUC
+rLy
 jtQ
 uwP
 coB
@@ -107476,7 +107913,7 @@ coB
 vtE
 ilR
 wll
-mEA
+qjQ
 wQq
 wQq
 olV
@@ -107530,9 +107967,9 @@ opd
 hGn
 hGn
 vXU
-vXU
+xKP
 veY
-veh
+fke
 sHu
 aid
 aid
@@ -107786,9 +108223,9 @@ fQi
 fQi
 fQi
 niG
-fQi
+dWC
 mHY
-veh
+fke
 sHu
 sHu
 sHu
@@ -107881,12 +108318,12 @@ uyy
 bgu
 cUu
 bgu
-bKX
+mxa
 xrR
 jSx
-bKX
-bKX
-bKX
+mxa
+mxa
+mxa
 hBK
 xeS
 ibX
@@ -108042,7 +108479,7 @@ eyF
 bUQ
 eyF
 bvK
-fQi
+dWC
 bVq
 uWV
 hGn
@@ -108137,7 +108574,7 @@ orL
 sks
 hBf
 bgu
-imz
+quB
 tlo
 tlo
 tlo
@@ -108393,7 +108830,7 @@ the
 cdP
 wMJ
 bgu
-imz
+quB
 tlo
 tlo
 tlo
@@ -108649,12 +109086,12 @@ orL
 mVZ
 mzh
 bQh
-qGy
+pxy
 tlo
 tlo
-vtv
-vtv
-bhO
+djY
+djY
+vGV
 vkB
 xeS
 fnO
@@ -108905,10 +109342,10 @@ nvK
 bgu
 mYS
 bgu
-qGy
-vtv
-vtv
-vtv
+pxy
+djY
+djY
+djY
 sog
 ojU
 hxx
@@ -111718,13 +112155,13 @@ fNl
 sog
 sog
 sog
-vtv
-vtv
-vtv
-vtv
-vtv
-vtv
-vtv
+djY
+djY
+djY
+djY
+djY
+djY
+djY
 sog
 ojU
 hxx
@@ -111969,21 +112406,21 @@ mXL
 hGp
 ozv
 hwO
-lMv
-tHl
-vtv
-vtv
-vtv
-vtv
+uPL
+tTy
+djY
+djY
+djY
+djY
 tlo
 tlo
 tlo
 tlo
 tlo
-vtv
-vtv
-bhO
-urP
+djY
+djY
+vGV
+skt
 cIQ
 aIU
 vBd
@@ -111994,8 +112431,8 @@ iBf
 rOq
 drx
 kNL
-jqe
-syf
+vTb
+mfu
 drx
 jNY
 jNY
@@ -112251,7 +112688,7 @@ vnY
 jhA
 bSl
 fjp
-syf
+mfu
 drx
 jNY
 jNY
@@ -112507,7 +112944,7 @@ pUw
 jhA
 uMw
 gNY
-syf
+mfu
 drx
 jNY
 jNY
@@ -112673,9 +113110,9 @@ fSF
 wSt
 eMT
 eMT
-wwb
+mMO
 rXh
-kNj
+eJe
 oZc
 oZc
 qKD
@@ -112763,7 +113200,7 @@ isa
 jhA
 suO
 gNY
-syf
+mfu
 drx
 jNY
 jNY
@@ -112931,7 +113368,7 @@ eMT
 xzE
 iAZ
 vor
-mjo
+xiy
 rjA
 hye
 mmG
@@ -112989,16 +113426,16 @@ hwO
 hwO
 hwO
 hwO
-hwO
-hwO
-hwO
-hwO
-omM
-omM
-lMv
-tHl
-vtv
-vtv
+egu
+egu
+egu
+egu
+rUr
+rUr
+uPL
+tTy
+djY
+djY
 tlo
 tlo
 tlo
@@ -113018,8 +113455,8 @@ fHd
 drx
 drx
 kwp
-kDS
-syf
+rxc
+mfu
 drx
 jNY
 jNY
@@ -113245,16 +113682,16 @@ sSD
 qYh
 fLM
 fLD
-omM
+rUr
 oKb
 oKb
 oKb
 oKb
-omM
+rUr
 hxx
 fNl
 sog
-vtv
+djY
 tlo
 tlo
 tlo
@@ -113501,16 +113938,16 @@ imP
 gCj
 nQj
 tGF
-omM
+rUr
 spB
 oKb
 oKb
 oKb
-omM
+rUr
 hxx
 fNl
 sog
-vtv
+djY
 tlo
 tlo
 tlo
@@ -113762,11 +114199,11 @@ dOD
 dOD
 dOD
 dOD
-omM
+rUr
 hxx
 fNl
 sog
-vtv
+djY
 tlo
 tlo
 tlo
@@ -114004,9 +114441,9 @@ jNY
 akd
 akd
 akd
-sDf
+mnJ
 kMM
-sDf
+mnJ
 sTU
 xSR
 hXa
@@ -114022,7 +114459,7 @@ omM
 hxx
 fNl
 sog
-vtv
+djY
 tlo
 tlo
 tlo
@@ -114261,9 +114698,9 @@ akd
 akd
 knT
 jXu
-wWx
-srZ
-sDf
+rgg
+lrH
+mnJ
 vGy
 rTM
 bFa
@@ -114275,10 +114712,10 @@ ijy
 wfr
 cCl
 rVK
-egI
-tHl
-vtv
-vtv
+gsd
+tTy
+djY
+djY
 tlo
 tlo
 tlo
@@ -116343,7 +116780,7 @@ eUt
 xzc
 cNk
 qiC
-rvY
+vrT
 aDD
 bsU
 eBe
@@ -116577,10 +117014,10 @@ pbu
 xrY
 wkB
 wkB
-cLo
-cLo
-cLo
-cLo
+aTK
+aTK
+aTK
+aTK
 eLB
 aiQ
 cQJ
@@ -116599,7 +117036,7 @@ pQY
 kBY
 jSo
 jSo
-rvY
+vrT
 llk
 bsU
 nRh
@@ -116833,10 +117270,10 @@ kGn
 cIN
 hfZ
 gzS
-jTL
+vpR
 iHC
 iHC
-jTL
+vpR
 imP
 liV
 gnp
@@ -117074,7 +117511,7 @@ hnq
 hnq
 jNY
 rYi
-rYi
+oJa
 bDX
 iAg
 bGK
@@ -117089,10 +117526,10 @@ bIh
 iEg
 imP
 fGm
-buG
-buG
-buG
-buG
+tYD
+tYD
+tYD
+tYD
 fGm
 oCW
 xvg
@@ -117111,7 +117548,7 @@ gXQ
 kBY
 jSo
 kJW
-rvY
+vrT
 llk
 bsU
 uwV
@@ -117330,9 +117767,9 @@ hnq
 hnq
 jNY
 rYi
-rYi
+oJa
 dQC
-bGV
+sDh
 rYi
 rYi
 rYi
@@ -117363,11 +117800,11 @@ xca
 xca
 xca
 xca
-pEQ
-pEQ
-pEQ
-pEQ
-dRn
+hte
+hte
+hte
+hte
+vpo
 drx
 drx
 uwV
@@ -117586,7 +118023,7 @@ hnq
 hnq
 jNY
 gON
-vBe
+taL
 crX
 cxk
 vBe
@@ -117842,9 +118279,9 @@ hnq
 hnq
 jNY
 gON
-vBe
+taL
 dQC
-bGV
+sDh
 vBe
 waA
 tDa
@@ -118098,9 +118535,9 @@ hnq
 hnq
 jNY
 gON
-vBe
+taL
 mlC
-bGV
+sDh
 vBe
 gtZ
 khj
@@ -120356,7 +120793,7 @@ pLw
 rYZ
 mlL
 gjs
-kNj
+eJe
 iDv
 unD
 bxk
@@ -120582,8 +121019,8 @@ lAG
 lAG
 kww
 aIe
-dOP
-dOP
+caY
+caY
 tYv
 ykB
 xLS
@@ -120612,7 +121049,7 @@ xxQ
 wKR
 gjs
 gjs
-kNj
+eJe
 eCw
 oAB
 qTF
@@ -120836,9 +121273,9 @@ jNY
 lAG
 lAG
 lAG
-hAC
+dbQ
 xoV
-dOP
+caY
 opt
 xLS
 xLS
@@ -120868,10 +121305,10 @@ iCD
 xOv
 rjA
 chI
-kNj
+eJe
 lbw
-tnS
-tnS
+dQt
+dQt
 mmG
 mmG
 jNY
@@ -121092,9 +121529,9 @@ jNY
 lAG
 lAG
 lAG
-hAC
-hAC
-hAC
+dbQ
+dbQ
+dbQ
 lAG
 lAG
 ukw
@@ -132016,7 +132453,7 @@ cVe
 cVe
 ksx
 dKZ
-ksx
+vuz
 dKZ
 ksx
 lNL
@@ -132307,9 +132744,9 @@ hlo
 umK
 rXE
 wOG
-tNo
+bEx
 pAc
-asj
+xPU
 asj
 asj
 jNY
@@ -132527,9 +132964,9 @@ cVe
 cVe
 cVe
 ksx
-ksx
+vuz
 uEp
-ksx
+vuz
 ksx
 oCh
 tDo
@@ -132565,7 +133002,7 @@ wOG
 wOG
 rzL
 pwh
-asj
+xPU
 asj
 asj
 jNY
@@ -132821,7 +133258,7 @@ vCI
 wOG
 vRj
 mQn
-asj
+xPU
 asj
 asj
 jNY
@@ -133077,7 +133514,7 @@ fLg
 wOG
 vRj
 fpf
-asj
+xPU
 asj
 asj
 jNY
@@ -133333,7 +133770,7 @@ rXE
 wOG
 gGI
 xdK
-asj
+xPU
 asj
 asj
 asj
@@ -133552,8 +133989,8 @@ cVe
 cVe
 dki
 uzq
-dki
-dki
+tUt
+tUt
 ksx
 ksx
 oBQ
@@ -133588,8 +134025,8 @@ wOG
 wOG
 wOG
 gmY
-nZS
-asj
+nSb
+xPU
 asj
 asj
 asj
@@ -134866,10 +135303,10 @@ jMZ
 jUh
 pPS
 uIe
-ptv
-bob
-ptv
-asj
+psA
+fGM
+psA
+xPU
 asj
 asj
 asj
@@ -135121,11 +135558,11 @@ cxe
 sMI
 eYs
 pPS
-ptv
+psA
 buR
 hUj
 irH
-asj
+xPU
 asj
 asj
 jNY
@@ -135381,7 +135818,7 @@ mlW
 eqa
 hll
 nPB
-asj
+xPU
 asj
 asj
 jNY
@@ -135637,7 +136074,7 @@ uqy
 iJA
 fPm
 gNf
-asj
+xPU
 asj
 asj
 jNY
@@ -135889,11 +136326,11 @@ jUh
 ofa
 jUh
 pPS
-pPS
+cRC
 gtb
 fPm
 jSc
-asj
+xPU
 asj
 asj
 jNY
@@ -136027,10 +136464,10 @@ bvM
 rad
 nzU
 nzU
-nzU
+vjU
 sRc
-nzU
-nzU
+vjU
+vjU
 cOF
 cOF
 cOF
@@ -136145,11 +136582,11 @@ jUh
 kdp
 npb
 fQy
-pPS
+cRC
 wMq
 qjU
-asj
-asj
+xPU
+xPU
 asj
 asj
 jNY
@@ -136539,10 +136976,10 @@ khP
 psu
 nzU
 eUu
-eUu
+dag
 bwa
 wfh
-mpd
+uFw
 cOF
 hxK
 hxK
@@ -136795,7 +137232,7 @@ tEI
 qmn
 nzU
 mpd
-mpd
+uFw
 bwa
 nXr
 krE
@@ -137229,7 +137666,7 @@ tdW
 qaR
 mQv
 wxY
-rdH
+eHs
 vgX
 vgX
 vgX
@@ -137577,13 +138014,13 @@ vGn
 wEB
 inj
 wEB
-mzL
-mzL
-gQp
-gQp
-gQp
-ohw
-ohw
+dGb
+dGb
+hwC
+hwC
+hwC
+ial
+ial
 gQp
 jny
 gQp
@@ -137738,8 +138175,8 @@ rdH
 tdW
 vgX
 ekw
-vgX
-vgX
+qsd
+qsd
 oVu
 aSe
 ovA
@@ -137833,13 +138270,13 @@ tfg
 tfg
 tfg
 tfg
-lIL
+eYP
 egz
 uoL
 uoL
 uoL
 uoL
-gEN
+jbr
 tfg
 tfg
 tfg
@@ -137997,7 +138434,7 @@ tXQ
 ubh
 tBC
 rdg
-ovA
+gPT
 ovA
 hfx
 hfx
@@ -138089,13 +138526,13 @@ mIP
 mIP
 mIP
 mIP
-mIP
+qQK
 wSn
 wSn
 wSn
 wSn
 wSn
-mIP
+qQK
 mIP
 mIP
 mIP
@@ -138250,10 +138687,10 @@ rdH
 vgX
 nXJ
 nXJ
-nXJ
-nXJ
+cJB
+cJB
 hFy
-nXJ
+cJB
 nXJ
 hfx
 gYp
@@ -138345,13 +138782,13 @@ lIL
 lIL
 lIL
 lIL
-lIL
+eYP
 uoL
 uoL
-lIL
-lIL
-lIL
-lIL
+eYP
+eYP
+eYP
+eYP
 lIL
 lIL
 mIP
@@ -138446,10 +138883,10 @@ bZF
 glp
 oDe
 nZS
-nZS
-nZS
-nZS
-oNM
+nSb
+nSb
+nSb
+iqo
 asj
 asj
 asj
@@ -138601,10 +139038,10 @@ lIL
 lIL
 lIL
 lIL
-lIL
-lIL
-lIL
-lIL
+eYP
+eYP
+eYP
+eYP
 lIL
 lIL
 lIL
@@ -138958,7 +139395,7 @@ oDe
 oDe
 oDe
 wkR
-mMP
+ruM
 cGv
 bmR
 tgv
@@ -139217,7 +139654,7 @@ ktW
 eub
 gMn
 buR
-ptv
+psA
 yil
 dDX
 asj
@@ -139446,7 +139883,7 @@ bVn
 bNR
 evi
 eIQ
-xav
+nDJ
 dPQ
 hDC
 szP
@@ -139472,8 +139909,8 @@ nZS
 klz
 utq
 qdk
-mMP
-mMP
+ruM
+ruM
 iUC
 mZh
 asj
@@ -141414,13 +141851,13 @@ lIL
 lIL
 lIL
 lIL
-lIL
-lIL
-lIL
-lIL
-lIL
-lIL
-lIL
+eYP
+eYP
+eYP
+eYP
+eYP
+eYP
+eYP
 lIL
 lIL
 lIL
@@ -141665,21 +142102,21 @@ lIL
 lIL
 lIL
 lIL
-lIL
-lIL
-lIL
-lIL
-lIL
-lIL
+eYP
+eYP
+eYP
+eYP
+eYP
+eYP
 uoL
 uoL
 uoL
 uoL
 uoL
-lIL
-lIL
-lIL
-lIL
+eYP
+eYP
+eYP
+eYP
 lIL
 lIL
 mIP
@@ -141691,7 +142128,7 @@ siS
 siS
 eeJ
 bDA
-vRW
+pGh
 vRW
 jNY
 jNY
@@ -141921,7 +142358,7 @@ mIP
 umD
 umD
 umD
-mIP
+qQK
 wSn
 wSn
 wSn
@@ -141935,7 +142372,7 @@ wSn
 wSn
 wSn
 wSn
-mIP
+qQK
 mIP
 mIP
 mIP
@@ -141947,7 +142384,7 @@ pfI
 siS
 oEr
 uSB
-vRW
+pGh
 vRW
 jNY
 jNY
@@ -142191,7 +142628,7 @@ cPK
 cPK
 cPK
 cPK
-hCA
+eyC
 hCA
 hCA
 hCA
@@ -142203,7 +142640,7 @@ jYE
 siS
 wuf
 gKk
-vRW
+pGh
 vRW
 jNY
 jNY
@@ -142433,7 +142870,7 @@ mIP
 mIP
 mIP
 dwa
-mIP
+qQK
 hbl
 hbl
 wSn
@@ -142447,7 +142884,7 @@ wSn
 wSn
 wSn
 wSn
-mIP
+qQK
 mIP
 mIP
 mIP
@@ -142459,7 +142896,7 @@ wEq
 siS
 hdS
 cVn
-vRW
+pGh
 vRW
 jNY
 jNY
@@ -142690,10 +143127,10 @@ fCo
 fCo
 rhN
 lsd
-fCo
-fCo
-fCo
-fCo
+mYZ
+mYZ
+mYZ
+mYZ
 nMR
 wSn
 wbv
@@ -142703,7 +143140,7 @@ eKC
 eKC
 eKC
 eKC
-iXS
+wRk
 iXS
 iXS
 pLP
@@ -142715,7 +143152,7 @@ siS
 siS
 qrV
 fiZ
-vRW
+pGh
 vRW
 jNY
 jNY
@@ -142950,7 +143387,7 @@ fCo
 nee
 orv
 fCo
-fCo
+mYZ
 wSn
 wbv
 wSn
@@ -142958,8 +143395,8 @@ xLL
 uoL
 uoL
 uoL
-lIL
-lIL
+eYP
+eYP
 lIL
 lIL
 jXY
@@ -143214,7 +143651,7 @@ xLL
 uoL
 uoL
 uoL
-lIL
+eYP
 lIL
 lIL
 lIL
@@ -143397,12 +143834,12 @@ pWu
 lzy
 kKp
 sKI
-hKj
-hKj
-hKj
+vwF
+vwF
+vwF
 kJP
 aLH
-ibB
+iQX
 ftV
 ftV
 jNY
@@ -143469,8 +143906,8 @@ wSn
 xLL
 uoL
 uoL
-lIL
-lIL
+eYP
+eYP
 lIL
 lIL
 lIL
@@ -143656,9 +144093,9 @@ qRh
 caC
 ica
 xqp
-hds
+dST
 rOw
-ibB
+iQX
 ftV
 ftV
 jNY
@@ -143718,14 +144155,14 @@ aqr
 chQ
 csw
 fCo
-fCo
+mYZ
 wSn
 wbv
 wSn
 xLL
 uoL
 uoL
-lIL
+eYP
 lIL
 lIL
 lIL
@@ -143914,7 +144351,7 @@ jaf
 eFa
 kTT
 wlr
-ibB
+iQX
 ftV
 ftV
 jNY
@@ -143971,17 +144408,17 @@ eik
 cFX
 cFX
 fCo
-fCo
-fCo
+mYZ
+mYZ
 lTn
-lIL
+eYP
 wSn
 wbv
 wSn
 mIp
 bMU
 bMU
-kUj
+sTV
 kUj
 kUj
 kUj
@@ -144227,7 +144664,7 @@ mIP
 mIP
 mIP
 mIP
-mIP
+qQK
 wSn
 wSn
 wSn
@@ -144237,7 +144674,7 @@ wSn
 wSn
 wSn
 wSn
-mIP
+qQK
 mIP
 mIP
 mIP
@@ -144419,9 +144856,9 @@ nCS
 kPE
 aFC
 wbm
-nCS
-qRh
-omF
+bRO
+mnG
+ipI
 bhb
 esv
 pQy
@@ -144429,7 +144866,7 @@ wLY
 ftV
 ftV
 ftV
-qQK
+jNY
 jNY
 jNY
 jNY
@@ -144483,17 +144920,17 @@ tJs
 tfg
 tfg
 tfg
-tfg
-wbv
-wbv
-wbv
-wbv
+xZU
+wpu
+wpu
+wpu
+wpu
 fgo
-wbv
-wbv
-wbv
-wbv
-tfg
+wpu
+wpu
+wpu
+wpu
+xZU
 tfg
 tJs
 tfg
@@ -144675,9 +145112,9 @@ iLH
 rLr
 wbm
 gPx
-nCS
+bRO
 kcQ
-beV
+lhk
 bhb
 smj
 pQy
@@ -144931,9 +145368,9 @@ ubj
 tdT
 thR
 uLz
-nCS
-qRh
-bhb
+bRO
+mnG
+qPF
 bhb
 bhb
 lLo
@@ -146036,10 +146473,10 @@ dHm
 pMI
 jTe
 ggL
-hOG
-tCv
-tCv
-kHf
+gzq
+wNc
+wNc
+wdV
 gAJ
 pOB
 xpN
@@ -146295,7 +146732,7 @@ exq
 aTN
 vMn
 vMn
-kHf
+wdV
 gAJ
 pOB
 skz
@@ -146529,10 +146966,10 @@ eDL
 eDL
 eDL
 eDL
-eDL
-eDL
-eDL
-eDL
+dHs
+dHs
+dHs
+dHs
 uaI
 jtC
 nsX
@@ -146548,10 +146985,10 @@ tbm
 kHf
 vVN
 rhs
-hOG
+gzq
 kiO
 aFe
-kHf
+wdV
 qNc
 vin
 rAr
@@ -146785,7 +147222,7 @@ vDe
 xrt
 pGU
 pGU
-pGU
+hXE
 lWF
 njB
 jVe
@@ -146807,7 +147244,7 @@ wcY
 gGu
 ccR
 otA
-kHf
+wdV
 pNY
 siS
 vRW
@@ -147041,7 +147478,7 @@ ejS
 mPG
 xrp
 vsX
-vsX
+eRS
 xjG
 mGC
 tvQ
@@ -147059,11 +147496,11 @@ ydK
 uUA
 kHf
 kHf
-kHf
-kHf
-kHf
-kHf
-kHf
+wdV
+wdV
+wdV
+wdV
+wdV
 pNY
 vRW
 vRW
@@ -151817,7 +152254,7 @@ eDn
 guq
 sGz
 dad
-tSf
+gWj
 kMQ
 cMy
 cMy
@@ -152102,10 +152539,10 @@ tYq
 eBc
 sZL
 ylk
-ylk
+aSS
 xIx
-ylk
-guD
+aSS
+vzv
 hVU
 aUW
 hVU
@@ -152277,7 +152714,7 @@ sxo
 jRP
 pIx
 uOB
-enZ
+dqz
 nin
 tyo
 nin
@@ -152358,10 +152795,10 @@ sEJ
 lku
 xcx
 gaD
-xcx
+gXz
 hpR
 fGf
-guD
+vzv
 hVU
 aUW
 hVU
@@ -152582,7 +153019,7 @@ eKf
 lAy
 eKf
 lGg
-dku
+prC
 iMQ
 hGy
 wFH
@@ -152614,10 +153051,10 @@ sEJ
 eBc
 ylk
 kzs
-ylk
+aSS
 hqf
-ylk
-guD
+aSS
+vzv
 hVU
 aUW
 hVU
@@ -152838,7 +153275,7 @@ eKf
 msL
 eKf
 lGg
-lGg
+bkN
 xpb
 ufm
 fRP
