@@ -1,0 +1,14 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "A19 explosive; a replacement for the now-removed A19 impact rounds, which will knockback and slow targets whilst also dealing splash damage"
+  - qol: "Moves the A19 DU ammunition & magazines to be subtypes of the specialist A19 ammo"
+  - balance: "The M49A6 has recieved a _slight_ baseline boost to damage, along with the ability to load all kinds of A19 ammo."
+  - balance: "The A6 guncase comes with a mix of A19 magazines now, rather than being purely DU"
+  - balance: "The A19 DU rounds now deal toxin damage over time, capping at 15 tox per hit currently"
+  - balance: "The A19 incen rounds have had their fire reagent swapped to a high-damage low-burntime compound instead of typical UT-napthal"
+  - bugfix: "Fixes an issue with the A6 guncase overlays"
+  - spellcheck: "Caught a few R2 references left in the code, they now properly reference the A6 instead"
+  - imageadd: "Redone sprite for the M49A5 custom battle rifle"
+  - maptweak: "The Rover has gotten a table with an A6 guncase in place of the wooden crate containing the rifle & mags it had prior."
+  - maptweak: "The classic Garrow's DU mags have been replaced with the new typepath'd version"
