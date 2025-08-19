@@ -130,7 +130,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/mask/balaclava_threehole
 	display_name = "Balaclava, three-hole"
-	path = /obj/item/clothing/mask/balaclava/tactical
+	path = /obj/item/clothing/mask/balaclava/threehole
 	allowed_origins = UPP_ORIGINS
 
 /datum/gear/mask/coif
