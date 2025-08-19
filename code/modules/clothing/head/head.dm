@@ -384,8 +384,8 @@
 	icon_state = "co_formalhat_black"
 
 /obj/item/clothing/head/cmcap/khaki
-	name = "\improper khaki USCM operations cap"
-	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in desert tan, the letters 'USCM' are boldy placed in black letters on the front."
+	name = "\improper khaki utility cap"
+	desc = "A khaki utility cap"
 	icon_state = "cap_khaki"
 
 /obj/item/clothing/head/cmcap/snow
@@ -402,6 +402,11 @@
 	name = "\improper green USCM operations cap"
 	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in OD green, the letters 'USCM' are boldy placed in black letters on the front."
 	icon_state = "cap_operations"
+
+/obj/item/clothing/head/cmcap/bridge/tan
+	name = "\improper khaki USCM operations cap"
+	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in desert tan, the letters 'USCM' are boldy placed in black letters on the front."
+	icon_state = "cap_khaki"
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper jungle expedition cap"
