@@ -43269,10 +43269,6 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/sign/osha/biohazardous{
-	pixel_x = -32;
-	icon_state = "bio"
-	},
 /turf/open/floor/plating/plating_catwalk/aicore/white,
 /turf/open/floor/plating,
 /area/nerva/second/medical)
