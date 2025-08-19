@@ -464,21 +464,14 @@
 	cas_laser_overlay = "adv_laser_cas"
 	uses_camo = FALSE
 
-
-//IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
-/obj/item/device/binoculars/range/designator/scout
-	name = "scout laser designator"
-	desc = "An improved laser designator, issued to USCM scouts, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+//IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in spotter spec kit
+/obj/item/device/binoculars/range/designator/spotter
+	name = "spotter's laser designator"
+	desc = "A specially-designed laser designator, issued to spotters in a USCM scout-sniper team, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."
 	unacidable = TRUE
 	indestructible = TRUE
 	cooldown_duration = 80
 	target_acquisition_delay = 30
-
-/obj/item/device/binoculars/range/designator/spotter
-	name = "spotter's laser designator"
-	desc = "A specially-designed laser designator, issued to USCM spotters, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."
-	unacidable = TRUE
-	indestructible = TRUE
 	var/is_spotting = FALSE
 	var/spotting_time = 10 SECONDS
 	var/spotting_cooldown_delay = 5 SECONDS
