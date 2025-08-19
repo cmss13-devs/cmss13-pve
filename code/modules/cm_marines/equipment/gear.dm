@@ -410,7 +410,8 @@
 
 /obj/item/reagent_container/food/snacks/mre_pack/rmc
 	name = "\improper generic MRE pack"
-	icon = 'icons/obj/items/food.dmi'
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
 	trash = /obj/item/trash/RMCtray
 	w_class = SIZE_SMALL
 	bitesize = 5

@@ -233,7 +233,7 @@
 	name = "\improper RMC Meal Tray"
 	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
 	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "bento"
+	icon_state = "rmc_tray_empty"
 
 
 //////////
