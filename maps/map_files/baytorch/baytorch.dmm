@@ -87073,6 +87073,12 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/gym)
+"wzY" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/torch/fourthdeck/captainmess)
 "wAi" = (
 /turf/closed/wall,
 /area/torch/firstdeck/security/locker)
@@ -111495,7 +111501,7 @@ tKo
 tKo
 vDE
 luj
-gZR
+wzY
 hwO
 tdz
 pvN
