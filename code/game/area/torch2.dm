@@ -38,7 +38,7 @@
 	icon_state = "hallA"
 
 /area/torch/bridgedeck/maintenance/aftstarboard
-	name = "Fifth Deck Aft Starboard Maintenance"
+	name = "Bridge Deck Aft Starboard Maintenance"
 	icon_state = "asmaint"
 
 /area/torch/bridgedeck/maintenance/substation // First Deck (Z-4)

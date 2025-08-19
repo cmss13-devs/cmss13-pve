@@ -597,7 +597,7 @@
 
 	var/build_type = pick_weight(medical_weights)
 
-	var/obj/item/M = new build_type(src.loc)
+	new build_type(src.loc)
 	return
 
 /obj/effect/spawner/random/medical/lite
@@ -625,7 +625,7 @@
 
 	var/build_type = pick_weight(medical_weights)
 
-	var/obj/item/M = new build_type(src.loc)
+	new build_type(src.loc)
 	return
 
 /*

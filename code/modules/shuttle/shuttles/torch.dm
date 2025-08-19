@@ -43,7 +43,7 @@
 	// Shuttle timings
 	callTime = 30 SECONDS
 	rechargeTime = 30 SECONDS
-	ignitionTime = 4 SECONDS
+	ignitionTime = 8 SECONDS
 	ambience_flight = 'sound/vehicles/tank_driving.ogg'
 	ignition_sound = 'sound/mecha/powerup.ogg'
 
@@ -90,11 +90,13 @@
 	// open elevator doors
 	if(istype(arriving_shuttle, /obj/docking_port/mobile/torch_elevator))
 		var/obj/docking_port/mobile/torch_elevator/elevator = arriving_shuttle
+		elevator.door_control.control_doors("unlock", airlock_exit)
 		elevator.door_control.control_doors("open", airlock_exit)
 
 	// open dock doors
 	var/datum/door_controller/single/door_control = new()
 	door_control.doors = get_doors()
+	door_control.control_doors("unlock", FALSE, FALSE)
 	door_control.control_doors("open", FALSE, FALSE)
 	qdel(door_control)
 
@@ -189,3 +191,35 @@
 		if(shuttle.elevator_network == elev.elevator_network)
 			. += list(elev)
 			continue
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call
+	name = "\improper Elevator Call"
+	desc = "Control panel for the elevator"
+	shuttleId = MOBILE_TORCH_ELEVATOR
+	is_call = TRUE
+	var/dockId
+	var/datum/elevator/destination/site
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/get_landing_zones()
+	return list(SSshuttle.getDock(dockId))
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/occupied
+	dockId = STAT_TORCH_OCCUPIED
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/empty
+	dockId = STAT_TORCH_EMPTY
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck1
+	dockId = STAT_TORCH_DECK1
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck2
+	dockId = STAT_TORCH_DECK2
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck3
+	dockId = STAT_TORCH_DECK3
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck4
+	dockId = STAT_TORCH_DECK4
+
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck5
+	dockId = STAT_TORCH_DECK5

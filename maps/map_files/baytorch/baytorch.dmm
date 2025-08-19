@@ -79,6 +79,9 @@
 	id = "nerva_medbay_pubhall";
 	dir = 4
 	},
+/obj/structure/sign/directions/infm{
+	pixel_y = 32
+	},
 /turf/open/floor/redyellowfull,
 /area/torch/firstdeck/medical/sleeper)
 "abl" = (
@@ -142,6 +145,12 @@
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/torch/firstdeck/security/wing)
+"abU" = (
+/obj/structure/sign/deck/fifth{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/aft)
 "abW" = (
 /obj/structure/disposalpipe/trunk,
 /obj/structure/machinery/disposal,
@@ -239,6 +248,10 @@
 /obj/structure/barricade/handrail,
 /turf/open/void/show_pipes,
 /area/torch/thirddeck/maintenance/starboard)
+"adD" = (
+/obj/structure/sign/nosmoking_2,
+/turf/closed/wall,
+/area/torch/firstdeck/medical/equipstorage)
 "adF" = (
 /obj/structure/machinery/alarm{
 	pixel_y = 24
@@ -395,6 +408,20 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/space)
+"afa" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck4{
+	pixel_x = 10;
+	pixel_y = 19
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/fore)
 "afh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
@@ -898,6 +925,13 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/isolation)
+"alC" = (
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/fore)
 "alI" = (
 /obj/structure/pipes/portables_connector{
 	dir = 8
@@ -1268,6 +1302,10 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/vault2/west,
 /area/torch/guppy_hangar)
+"aqE" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/fifthdeck/maintenance/substation_hanger)
 "aqL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -2069,7 +2107,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/greenfull/west,
 /area/torch/firstdeck/hallway/center)
 "aCu" = (
 /obj/structure/machinery/light_switch{
@@ -2372,10 +2410,6 @@
 	pixel_y = 4
 	},
 /obj/item/stack/nanopaste,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "aFi" = (
@@ -3075,6 +3109,13 @@
 /area/torch/firstdeck/conference)
 "aOP" = (
 /obj/structure/window/framed/colony/reinforced,
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/center)
 "aPb" = (
@@ -3571,12 +3612,17 @@
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
 "aTN" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
-/turf/closed/wall,
-/area/torch/fifthdeck/exploration)
+/turf/open/floor/shiva/north,
+/area/torch/fifthdeck/storage)
 "aTO" = (
 /obj/structure/pipes/standard/simple/visible/green{
 	dir = 10
@@ -4202,8 +4248,8 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
-	vector_y = 3
+	vector_x = 126;
+	vector_y = -2
 	},
 /turf/open/void/show_pipes,
 /area/torch/seconddeck/engineering/engineering_bay)
@@ -4599,6 +4645,16 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/incinerator)
+"bjx" = (
+/obj/structure/sign/warning/pods/east{
+	dir = 4
+	},
+/obj/structure/sign/warning/pods/west{
+	dir = 4;
+	pixel_x = -11
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/prototype/control)
 "bjy" = (
 /obj/structure/machinery/alarm{
 	dir = 4;
@@ -5189,6 +5245,9 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/machinery/door/airlock/almayer/maint/reinforced{
+	dir = 2
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/firstdeck/hallway/center)
 "brT" = (
@@ -5516,6 +5575,10 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
 	},
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
@@ -6067,7 +6130,9 @@
 /turf/closed/wall/wood,
 /area/torch/bridgedeck/co_bed)
 "bER" = (
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/sign/warning/compressed_gas{
+	dir = 4
+	},
 /turf/closed/wall/almayer/reinforced,
 /area/torch/seconddeck/engineering/atmos)
 "bES" = (
@@ -6378,6 +6443,13 @@
 	},
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/space)
+"bIg" = (
+/obj/structure/sign/directions/engineering,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/research/development)
 "bIh" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -6557,6 +6629,15 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/engineering/engine_room)
+"bMp" = (
+/obj/structure/sign/directions/security{
+	pixel_y = -7
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/elevator)
 "bMq" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/cell_charger,
@@ -6601,7 +6682,7 @@
 /area/torch/firstdeck/fuelbay)
 "bMU" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating/warnplate/east,
@@ -7357,6 +7438,12 @@
 	},
 /turf/open/floor/vault2/north,
 /area/torch/seconddeck/medical/morgue)
+"bYo" = (
+/obj/structure/sign/warning/vacuum{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/auxstarboard)
 "bYC" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -7492,7 +7579,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "bZU" = (
 /obj/structure/disposalpipe/segment{
@@ -7735,6 +7822,10 @@
 /area/torch/thirddeck/d3port)
 "ccR" = (
 /obj/structure/dispenser,
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "ccW" = (
@@ -8279,6 +8370,12 @@
 /obj/effect/spawner/random/tech_supply,
 /turf/open/floor/almayer/aicore,
 /area/torch/fourthdeck/port_storage)
+"clK" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/tools)
 "clP" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -9509,6 +9606,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/barricade/handrail{
+	dir = 8
+	},
+/obj/structure/barricade/handrail{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/waterstore)
 "cCt" = (
@@ -9650,6 +9753,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/fore)
+"cEW" = (
+/obj/structure/sign/warning/airlock,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/forestarboard)
 "cEX" = (
 /obj/structure/pipes/standard/simple/visible,
 /obj/item/pipe_meter,
@@ -9668,6 +9775,12 @@
 "cEZ" = (
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/teleporter)
+"cFb" = (
+/obj/structure/sign/deck/third{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/cryo/bunk)
 "cFi" = (
 /obj/structure/prop/almayer{
 	icon = 'icons\obj\structures\machinery\particle_accelerator2.dmi';
@@ -9773,7 +9886,7 @@
 /area/torch/thirddeck/commissary)
 "cGa" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -10000,6 +10113,16 @@
 /obj/structure/machinery/computer/cameras,
 /turf/open/floor/shiva/bluefull/west,
 /area/torch/bridgedeck/bridge)
+"cHN" = (
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/evac{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/aft)
 "cHO" = (
 /obj/structure/machinery/power/apc{
 	dir = 8;
@@ -10271,6 +10394,12 @@
 /obj/structure/machinery/power/smes/buildable,
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
+"cLK" = (
+/obj/structure/sign/deck/fifth{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/aft)
 "cLP" = (
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/forestarboard)
@@ -10521,7 +10650,7 @@
 /area/torch/fourthdeck/quartermaster/office)
 "cPK" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -11099,7 +11228,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "cYo" = (
 /obj/structure/cable/green{
@@ -11244,7 +11373,9 @@
 /obj/structure/pipes/standard/simple/visible/yellow{
 	dir = 9
 	},
-/obj/structure/window/phoronreinforced/full,
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8
+	},
 /turf/closed/wall/almayer/reinforced,
 /area/torch/seconddeck/engineering/atmos)
 "dbi" = (
@@ -11523,6 +11654,11 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/fifthdeck/shuttlefuel)
 "dfY" = (
+/obj/structure/barricade/handrail{
+	dir = 8;
+	pixel_x = -1
+	},
+/obj/structure/barricade/handrail,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/hallway/fore)
 "dgb" = (
@@ -12132,8 +12268,8 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
-	vector_y = 3
+	vector_x = 126;
+	vector_y = -2
 	},
 /turf/open/void/show_pipes,
 /area/torch/seconddeck/engineering/engineering_bay)
@@ -12220,6 +12356,16 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/d3port)
+"dqn" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/aft)
 "dqF" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -12264,6 +12410,10 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/seconddeck/robotics/surgery)
+"dra" = (
+/obj/structure/sign/thera,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/safe_room/medical)
 "drf" = (
 /obj/structure/pipes/valve/digital{
 	dir = 4
@@ -12336,6 +12486,12 @@
 "drT" = (
 /turf/open/space,
 /area/torch/fourthdeck/eva)
+"drZ" = (
+/obj/structure/sign/warning/vacuum{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/auxstarboard)
 "dsb" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/recharger,
@@ -13551,7 +13707,7 @@
 /area/torch/fifthdeck/storage)
 "dHt" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -13633,6 +13789,12 @@
 /obj/structure/machinery/light/spot,
 /turf/open/floor/shiva/green,
 /area/torch/thirddeck/observation)
+"dIn" = (
+/obj/structure/sign/warning/docking_area{
+	name = "\improper ESCAPE POD LAUNCH PATHWAY"
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/maintenance/aft)
 "dIp" = (
 /obj/structure/machinery/power/apc{
 	dir = 1;
@@ -13964,6 +14126,7 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hallway/fore)
 "dOD" = (
+/obj/structure/window/framed/colony,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/waterstore)
 "dOG" = (
@@ -14032,6 +14195,16 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/engineering/engine_room)
+"dPO" = (
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/engineering/engineering_bay)
 "dPQ" = (
 /obj/effect/step_trigger/teleporter_vector/damage{
 	vector_x = -125;
@@ -14207,6 +14380,12 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/detectives_office)
+"dSg" = (
+/obj/structure/sign/directions/med{
+	pixel_y = 32
+	},
+/turf/open/floor/shiva/blue/north,
+/area/torch/firstdeck/hallway/center)
 "dSj" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -14257,6 +14436,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralport)
+"dSY" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/seconddeck/shieldbay)
 "dSZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -14301,6 +14484,10 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	name = "Waterstore";
+	dir = 2
+	},
 /turf/open/floor/bluegrid,
 /area/torch/fourthdeck/maintenance/waterstore)
 "dTD" = (
@@ -15108,6 +15295,11 @@
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/ce)
 "edZ" = (
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = 116;
+	name = "deck4"
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/space)
 "eef" = (
@@ -15252,6 +15444,12 @@
 	},
 /turf/closed/wall/sulaco,
 /area/torch/petrov/toxins)
+"egb" = (
+/obj/structure/sign/warning/pods/west{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/cryo)
 "egj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -15287,9 +15485,8 @@
 	dir = 8;
 	pixel_x = -24
 	},
-/obj/structure/catwalk/prison,
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating,
@@ -15806,6 +16003,12 @@
 	},
 /turf/open/floor/shiva/yellow/north,
 /area/torch/fourthdeck/hallway/aft)
+"eos" = (
+/obj/structure/sign/warning/pods/west{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/adherent)
 "eoM" = (
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -16141,6 +16344,15 @@
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/research/misc_lab)
+"etf" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/center)
 "ety" = (
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 32
@@ -17255,7 +17467,7 @@
 /area/torch/seconddeck/engineering/foyer)
 "eKC" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating/warnplate/west,
@@ -17618,6 +17830,10 @@
 "ePk" = (
 /turf/closed/wall,
 /area/torch/bridgedeck/cl)
+"ePn" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/research/xenobiology/entry)
 "ePo" = (
 /obj/structure/pipes/unary/outlet_injector{
 	dir = 8;
@@ -19159,7 +19375,7 @@
 /area/torch/fourthdeck/hallway/fore)
 "fgo" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/catwalk/prison,
@@ -19409,6 +19625,13 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/fore)
+"fiW" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	id_tag = "escape_pod_6_berth_hatch";
+	name = "Escape Pod Seven Hatch"
+	},
+/turf/open/floor/plating,
+/area/space)
 "fiZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -19648,7 +19871,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "fmg" = (
 /obj/structure/bed,
@@ -19728,6 +19951,13 @@
 	},
 /turf/open/floor/bluegrid,
 /area/torch/bridgedeck/hallway/aft)
+"fna" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	id_tag = "escape_pod_6_berth_hatch";
+	name = "Escape Pod Seven"
+	},
+/turf/open/floor/plating,
+/area/space)
 "fne" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19984,14 +20214,14 @@
 	},
 /area/space)
 "frc" = (
-/obj/effect/step_trigger/teleporter_vector{
-	vector_x = -124;
-	vector_y = -81
-	},
-/obj/structure/prop/invuln/darkness,
 /obj/structure/stairs{
 	dir = 8
 	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -124;
+	vector_y = -80
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/thirddeck/mess)
 "frg" = (
@@ -20323,7 +20553,7 @@
 	dir = 4;
 	pixel_x = 24
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "fuq" = (
 /obj/item/device/radio/intercom{
@@ -21338,6 +21568,10 @@
 "fGm" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/bathroom)
+"fGs" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fifthdeck/hallway/aft)
 "fGv" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -21580,6 +21814,12 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/bridgedeck/maintenance/substation)
+"fJU" = (
+/obj/structure/sign/warning/pods/south{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/maintenance/centralport)
 "fJV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -22183,9 +22423,9 @@
 /turf/open/floor/almayer/mono,
 /area/space)
 "fRt" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/kutjevo/colors/red/tile,
-/area/torch/firstdeck/hallway/center)
+/obj/structure/sign/warning/toxic_material,
+/turf/closed/wall,
+/area/torch/fifthdeck/canister)
 "fRx" = (
 /turf/open/floor/vault2/west,
 /area/torch/fifthdeck/maintenance/aftport)
@@ -22491,6 +22731,12 @@
 /area/torch/firstdeck/thruster/d1starboard)
 "fWd" = (
 /obj/structure/pipes/standard/simple/visible,
+/obj/structure/machinery/door/airlock/external/colony{
+	frequency = 1379;
+	id_tag = "solar_starboard_inner";
+	locked = 1;
+	name = "Engineering External Access"
+	},
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/maintenance/forestarboard)
 "fWg" = (
@@ -22960,6 +23206,16 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/seconddeck/engineering/engine_room)
+"gbU" = (
+/obj/structure/sign/directions/science{
+	dir = 4
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 4
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/center)
 "gca" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -24650,6 +24906,16 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/wing)
+"gyH" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/tools)
 "gyJ" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /turf/open/floor/shiva/floor3,
@@ -24829,13 +25095,16 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "gBj" = (
-/obj/effect/decal/warning_stripes,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
+/obj/structure/barricade/handrail,
+/obj/structure/stairs{
+	dir = 4;
+	icon_state = "ramptop"
 	},
-/turf/open/floor/plating,
-/area/torch/fifthdeck/storage)
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -118
+	},
+/turf/open/floor/shiva/north,
+/area/torch/fifthdeck/hallway/fore)
 "gBm" = (
 /obj/structure/machinery/light/small{
 	dir = 1
@@ -25301,6 +25570,10 @@
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
 	},
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/storage)
@@ -26761,6 +27034,13 @@
 /turf/open/floor/almayer/test_floor4,
 /area/torch/fifthdeck/hallway/fore)
 "gZR" = (
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 123;
+	vector_y = 80
+	},
+/obj/structure/stairs{
+	dir = 4
+	},
 /turf/open/floor/wood,
 /area/torch/fourthdeck/captainmess)
 "gZU" = (
@@ -26896,7 +27176,7 @@
 /area/torch/thirddeck/maintenance/forestarboard)
 "hbl" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/vents/pump/on{
@@ -27012,6 +27292,13 @@
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
 "hdw" = (
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 125;
+	vector_y = 80
+	},
+/obj/structure/stairs/perspective{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/hardstorage)
 "hdF" = (
@@ -27140,6 +27427,10 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/centralport)
+"hfZ" = (
+/obj/structure/sign/warning/fall,
+/turf/closed/wall,
+/area/torch/fourthdeck/maintenance/starboard)
 "hgc" = (
 /obj/structure/machinery/portable_atmospherics/canister/oxygen,
 /obj/structure/barricade/handrail{
@@ -27455,6 +27746,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/foreport)
+"hkp" = (
+/obj/structure/sign/warning/pods,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/centralstarboard)
 "hkv" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/item/pipe_meter,
@@ -27699,9 +27994,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -27709,6 +28001,9 @@
 /obj/structure/machinery/alarm{
 	dir = 1;
 	pixel_y = -35
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/open/floor/shiva/yellowcorners,
 /area/torch/seconddeck/hallway/elevator)
@@ -27937,6 +28232,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/shieldbay)
+"hri" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/occupied,
+/turf/closed/wall,
+/area/torch/bridgedeck/hallway/aft)
 "hrs" = (
 /obj/structure/machinery/suit_storage_unit/pressure_suit,
 /turf/open/floor/shiva/floor3,
@@ -28492,6 +28791,10 @@
 	dir = 4;
 	pixel_x = -21
 	},
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
 "hAL" = (
@@ -28989,8 +29292,8 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
-	vector_y = 3
+	vector_x = 126;
+	vector_y = -2
 	},
 /turf/open/void/show_pipes,
 /area/torch/seconddeck/engineering/engineering_bay)
@@ -29049,12 +29352,6 @@
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/forestarboard)
 "hGp" = (
-/obj/structure/machinery/access_button{
-	id = "offmess_windows";
-	pixel_x = -4;
-	pixel_y = -24;
-	command = "offmess_windows"
-	},
 /obj/structure/machinery/light_switch{
 	pixel_x = 4;
 	pixel_y = -24
@@ -29533,6 +29830,12 @@
 	},
 /turf/open/floor/shiva/green/west,
 /area/torch/thirddeck/hallway/fore)
+"hMB" = (
+/obj/structure/sign/warning/docking_area{
+	name = "\improper ESCAPE POD LAUNCH PATHWAY"
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/maintenance/port)
 "hNs" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
@@ -29902,6 +30205,12 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/maintenance/starboard)
+"hTq" = (
+/obj/structure/sign/directions/bridge{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/medical/staging)
 "hTx" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/cell_charger,
@@ -30349,6 +30658,12 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/aft)
+"hZM" = (
+/obj/structure/sign/deck/third{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/center)
 "hZP" = (
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -31623,6 +31938,19 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/hallway/aft)
+"iqC" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = 7
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4
+	},
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/engineering/foyer)
 "iqG" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 1
@@ -31920,7 +32248,7 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
+	vector_x = -122;
 	vector_y = 3
 	},
 /turf/open/floor/kutjevo/colors/cyan,
@@ -32338,6 +32666,10 @@
 	},
 /turf/open/floor/shiva/blue/north,
 /area/torch/bridgedeck/hallway/aft)
+"iBB" = (
+/obj/structure/sign/deck/fifth,
+/turf/closed/wall,
+/area/torch/fifthdeck/expedition)
 "iBW" = (
 /obj/structure/pipes/vents/pump/on,
 /obj/structure/pipes/standard/simple/hidden{
@@ -33873,6 +34205,10 @@
 	},
 /turf/open/floor/shiva/bluefull/west,
 /area/torch/firstdeck/hallway/aft)
+"iWc" = (
+/obj/structure/barricade/handrail,
+/turf/open/void/show_pipes,
+/area/torch/fourthdeck/hallway/fore)
 "iWf" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -33976,7 +34312,7 @@
 /turf/open/floor/plating,
 /area/torch/bridgedeck/maintenance/substation)
 "iXo" = (
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "iXp" = (
 /obj/structure/cable/green,
@@ -34054,6 +34390,20 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/fifthdeck/maintenance/infirmary)
+"iYg" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck5{
+	pixel_x = 10;
+	pixel_y = 20
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/fore)
 "iYp" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -35348,7 +35698,7 @@
 	},
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -126;
-	vector_y = 3
+	vector_y = -80
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
@@ -35682,6 +36032,14 @@
 	},
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/torch/fourthdeck/captainmess)
+"juE" = (
+/obj/structure/machinery/access_button{
+	name = "Auxiliary Fuel Storage Vent Control";
+	pixel_y = 32;
+	req_access = list("ACCESS_CONSTRUCTION")
+	},
+/turf/open/space,
+/area/space)
 "juK" = (
 /turf/open/floor/almayer/mono,
 /area/torch/fifthdeck/storage)
@@ -36038,7 +36396,7 @@
 /area/torch/seconddeck/prototype/engine)
 "jzH" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating/icefloor/warnplate/northwest,
@@ -36582,6 +36940,12 @@
 	},
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/safe_room/medical)
+"jGJ" = (
+/obj/structure/pipes/valve/digital{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/torch/fifthdeck/maintenance/aftstarboard)
 "jGO" = (
 /turf/closed/wall,
 /area/torch/fourthdeck/hallway/fore)
@@ -36681,7 +37045,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/shiva,
 /area/torch/thirddeck/tools)
 "jIw" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
@@ -38665,10 +39029,6 @@
 /area/torch/petrov/rnd)
 "kiO" = (
 /obj/structure/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "kiW" = (
@@ -39077,6 +39437,16 @@
 "kna" = (
 /turf/open/floor/shiva/blue/east,
 /area/torch/thirddeck/disperser)
+"knb" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/aft)
 "kni" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/window/framed/colony/reinforced,
@@ -39704,7 +40074,7 @@
 "kuB" = (
 /obj/structure/catwalk/prison,
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating,
@@ -39831,10 +40201,10 @@
 /turf/open/floor/shiva/floor3,
 /area/torch/firstdeck/security/bo)
 "kwl" = (
-/obj/structure/shuttle/engine/router,
 /obj/structure/machinery/door/poddoor/almayer/planet_side_blastdoor{
 	id_tag = "auxfuelvent";
-	name = "Auxiliary Fuel Storage Vent"
+	name = "Auxiliary Fuel Storage Vent";
+	id = "auxfuelvent"
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/fuelbay)
@@ -40257,6 +40627,19 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/thirddeck/safe_room)
+"kAW" = (
+/obj/structure/barricade/handrail{
+	dir = 1
+	},
+/obj/structure/stairs/perspective{
+	dir = 4
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 119
+	},
+/obj/structure/prop/invuln/darkness,
+/turf/open/void/show_pipes,
+/area/torch/fourthdeck/hallway/fore)
 "kBc" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -41274,6 +41657,16 @@
 	},
 /turf/open/floor/holofloor,
 /area/torch/thirddeck/mess/galley)
+"kPQ" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/center)
 "kQi" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -41385,6 +41778,10 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
 	},
 /turf/open/floor/shiva,
 /area/torch/fifthdeck/expedition_storage)
@@ -42129,15 +42526,6 @@
 	dir = 1
 	},
 /area/torch/firstdeck/medical/surgery)
-"lbL" = (
-/obj/structure/machinery/door/firedoor/border_only,
-/obj/structure/window/framed/colony/reinforced,
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
-/turf/open/floor/plating,
-/area/torch/fifthdeck/exploration)
 "lbM" = (
 /obj/structure/bed/chair/office/light{
 	dir = 4
@@ -42215,6 +42603,12 @@
 	},
 /turf/open/floor/plating,
 /area/torch/firstdeck/maintenance/centralport)
+"ldo" = (
+/obj/structure/sign/deck/fifth{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/fore)
 "ldP" = (
 /obj/structure/machinery/alarm{
 	dir = 4;
@@ -43072,7 +43466,7 @@
 /area/torch/seconddeck/engineering/engine_room)
 "lpY" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/vault2/west,
@@ -43134,6 +43528,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/seconddeck/teleporter)
+"lqD" = (
+/obj/structure/sign/directions/security{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/tools)
+"lqI" = (
+/obj/structure/sign/warning/airlock,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/maintenance/forestarboard)
 "lqN" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -43683,17 +44087,6 @@
 	},
 /turf/open/floor/shiva/purple,
 /area/torch/firstdeck/research/hallway)
-"lwA" = (
-/obj/structure/stairs/perspective{
-	dir = 8
-	},
-/obj/effect/step_trigger/teleporter_vector{
-	vector_x = -125;
-	vector_y = 3
-	},
-/obj/structure/prop/invuln/darkness,
-/turf/open/void/show_pipes,
-/area/torch/thirddeck/hallway/fore)
 "lwC" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	dir = 4;
@@ -44126,7 +44519,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/shiva,
 /area/torch/thirddeck/tools)
 "lCh" = (
 /obj/structure/cable/green{
@@ -45023,6 +45416,10 @@
 "lNr" = (
 /turf/open/floor/bluegrid,
 /area/torch/fourthdeck/tcommsat/chamber)
+"lNJ" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/seconddeck/auxstarboard)
 "lNL" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -45183,6 +45580,10 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/hallway/aft)
+"lRo" = (
+/obj/structure/sign/warning/compressed_gas,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/engineering/atmos)
 "lRq" = (
 /obj/structure/closet/crate,
 /turf/open/floor/shiva/floor3,
@@ -45206,6 +45607,12 @@
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced,
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/maintenance/aftstarboard)
+"lRx" = (
+/obj/item/device/radio/intercom{
+	pixel_y = -32
+	},
+/turf/open/floor/shiva/blue/north,
+/area/torch/firstdeck/medical/staging)
 "lRD" = (
 /obj/structure/bed/chair/office/light{
 	dir = 8
@@ -45313,6 +45720,13 @@
 /turf/closed/wall/almayer/reinforced,
 /area/torch/thirddeck/service_break_room)
 "lTf" = (
+/obj/structure/stairs/perspective{
+	dir = 4
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -125;
+	vector_y = 2
+	},
 /turf/open/floor/almayer,
 /area/torch/thirddeck/hallway/fore)
 "lTh" = (
@@ -45599,6 +46013,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/barricade/handrail,
+/obj/effect/projector{
+	vector_x = -117;
+	name = "deck5"
+	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "lWG" = (
@@ -45960,7 +46378,7 @@
 /obj/item/device/radio/intercom{
 	pixel_y = 23
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "mbl" = (
 /turf/open/floor/shiva/bluecorners/west,
@@ -46141,6 +46559,17 @@
 /obj/structure/surface/table/reinforced/prison,
 /turf/open/floor/dark,
 /area/torch/thirddeck/mess/galley)
+"mdj" = (
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck1{
+	pixel_x = 10;
+	pixel_y = 20
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/center)
 "mdt" = (
 /turf/open/floor/shiva/red/east,
 /area/torch/firstdeck/medical/morgue/autopsy)
@@ -46210,6 +46639,12 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/hallway/fore)
+"meo" = (
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = -32
+	},
+/turf/open/floor/shiva/purple,
+/area/torch/firstdeck/hallway/center)
 "mep" = (
 /obj/structure/machinery/newscaster{
 	pixel_y = 32
@@ -46635,6 +47070,16 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/hardstorage)
+"mjS" = (
+/obj/structure/sign/directions/security{
+	pixel_y = -7;
+	dir = 8
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/mess/galley)
 "mjT" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -46795,6 +47240,13 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/incinerator)
+"mmn" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	id_tag = "escape_pod_6_berth_hatch";
+	name = "Escape Pod Eight"
+	},
+/turf/open/floor/plating,
+/area/space)
 "mmo" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -47364,8 +47816,8 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
-	vector_y = 3
+	vector_x = 126;
+	vector_y = -2
 	},
 /turf/open/void/show_pipes,
 /area/torch/seconddeck/engineering/engineering_bay)
@@ -47651,6 +48103,13 @@
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/research/entry)
 "mAF" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 114
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/quartermaster/storage/upper)
 "mAJ" = (
@@ -47843,7 +48302,7 @@
 /area/torch/seconddeck/maintenance/foreport)
 "mEB" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/cable/cyan{
@@ -48088,7 +48547,7 @@
 /area/torch/thirddeck/maintenance/foreport)
 "mIp" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating/warnplate/northeast,
@@ -49200,7 +49659,13 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/thirddeck/cryo)
 "mVR" = (
-/obj/structure/stairs/perspective,
+/obj/structure/stairs/perspective{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 126;
+	vector_y = 80
+	},
 /turf/open/floor/kutjevo/colors/red/tile,
 /area/torch/fourthdeck/hallway/fore)
 "mVW" = (
@@ -49223,7 +49688,7 @@
 /area/torch/thirddeck/teleporter)
 "mWx" = (
 /obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "mWz" = (
 /obj/structure/machinery/light,
@@ -49621,6 +50086,10 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/isolation)
+"ncS" = (
+/obj/structure/sign/warning/fall,
+/turf/closed/wall,
+/area/torch/thirddeck/maintenance/starboard)
 "ncV" = (
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/maintenance/foreport)
@@ -49950,6 +50419,12 @@
 	},
 /turf/open/floor/shiva/blue,
 /area/torch/firstdeck/medical/locker)
+"nhR" = (
+/obj/structure/sign/warning/pods/east{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/prototype/control)
 "nhV" = (
 /obj/structure/machinery/recharge_station{
 	dir = 4
@@ -49986,6 +50461,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/aftstarboard)
+"niG" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/forestarboard)
 "niJ" = (
 /obj/structure/bed/chair/comfy/blue,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -50060,6 +50539,9 @@
 	},
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4
+	},
+/obj/structure/sign/chemistry{
+	pixel_y = 32
 	},
 /turf/open/floor/shiva/blue,
 /area/torch/firstdeck/medical/hallway)
@@ -50145,6 +50627,10 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/catwalk,
+/obj/effect/projector{
+	vector_x = -117;
+	name = "deck5"
+	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "njD" = (
@@ -50597,6 +51083,10 @@
 /obj/structure/girder/displaced,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/foreport)
+"noy" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/centralstarboard)
 "noA" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/airlock/almayer/maint/autoname{
@@ -50848,6 +51338,16 @@
 "nrY" = (
 /turf/open/floor/shiva,
 /area/torch/fourthdeck/teleporter)
+"nsL" = (
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/evac{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/fore)
 "nsX" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -51012,6 +51512,10 @@
 	},
 /turf/open/floor/almayer,
 /area/torch/firstdeck/security/wing)
+"nuz" = (
+/obj/structure/sign/warning/compressed_gas,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/fuelbay)
 "nuB" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/machinery/door/poddoor/shutters{
@@ -51890,6 +52394,11 @@
 	dir = 4
 	},
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = 116;
+	name = "deck4"
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/space)
 "nGI" = (
@@ -52315,10 +52824,6 @@
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/bridgedeck/sgr)
 "nMR" = (
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
 /turf/open/floor/plating,
 /area/torch/guppy_hangar)
 "nMS" = (
@@ -52362,13 +52867,6 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/petrov/maint)
-"nNl" = (
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
-/turf/closed/wall/sulaco,
-/area/torch/guppy_hangar)
 "nNt" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -52773,6 +53271,12 @@
 /obj/structure/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/maintenance/forestarboard)
+"nSH" = (
+/obj/structure/sign/warning/compressed_gas{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/fuelbay/wastetank)
 "nSL" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -53155,6 +53659,14 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/seconddeck/engineering/atmos)
+"nXr" = (
+/obj/structure/ore_box,
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
+/turf/open/floor/shiva/floor3,
+/area/torch/fifthdeck/expedition_storage)
 "nXt" = (
 /obj/structure/girder/displaced,
 /turf/open/floor/plating,
@@ -53693,13 +54205,9 @@
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/starboard)
 "odV" = (
-/obj/effect/step_trigger/teleporter_vector/damage{
-	vector_x = -125;
-	name = "deck3";
-	vector_y = -85
-	},
-/turf/open/space,
-/area/space)
+/obj/structure/sign/warning/moving_parts,
+/turf/closed/wall,
+/area/torch/fourthdeck/quartermaster/sorting)
 "oeK" = (
 /obj/structure/cable/yellow{
 	d2 = 4;
@@ -54360,6 +54868,16 @@
 /obj/structure/pipes/standard/simple/visible/cyan,
 /turf/closed/wall/mineral/phoron,
 /area/torch/firstdeck/thruster/d1starboard)
+"onS" = (
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/evac{
+	pixel_y = -7;
+	dir = 4
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/aft)
 "ooa" = (
 /obj/structure/machinery/chem_storage/misc{
 	input_turf = 2;
@@ -54700,6 +55218,10 @@
 "otA" = (
 /obj/structure/closet/crate/freezer/rations,
 /obj/structure/machinery/light/spot,
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "otG" = (
@@ -54728,18 +55250,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/torch/thirddeck/cryo)
 "otT" = (
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
-/obj/structure/barricade/handrail{
-	dir = 8
-	},
+/obj/structure/sign/deck/third,
 /turf/closed/wall,
 /area/torch/thirddeck/hallway/center)
 "ouc" = (
@@ -55109,17 +55620,12 @@
 /turf/open/floor/shiva/blue/west,
 /area/torch/fourthdeck/hallway/fore)
 "ozv" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/machinery/door_control{
+	id = "offmess_windows";
+	name = "Officer Mess Windows"
 	},
-/obj/effect/projector{
-	vector_x = -117;
-	name = "deck5"
-	},
-/turf/open/floor/shiva/north,
-/area/torch/fifthdeck/storage)
+/turf/closed/wall/wood,
+/area/torch/fourthdeck/captainmess)
 "ozw" = (
 /obj/structure/machinery/light/spot,
 /turf/open/floor/shiva/blue/north,
@@ -55847,7 +56353,7 @@
 	vector_y = 80;
 	name = "deck4"
 	},
-/turf/open/floor/almayer_hull,
+/turf/open/nostromowater,
 /area/torch/fourthdeck/maintenance/waterstore)
 "oKh" = (
 /obj/structure/cable/green{
@@ -56289,6 +56795,11 @@
 /area/torch/seconddeck/maintenance/forestarboard)
 "oQb" = (
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = 116;
+	name = "deck4"
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/space)
 "oQh" = (
@@ -56339,6 +56850,14 @@
 /obj/structure/machinery/disposal,
 /turf/open/floor/shiva/purple,
 /area/torch/fifthdeck/exploration)
+"oQY" = (
+/obj/structure/window/reinforced/full,
+/turf/open/floor/almayer_hull,
+/area/space)
+"oRA" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/firstdeck/maintenance/substation)
 "oRJ" = (
 /obj/structure/catwalk,
 /obj/structure/machinery/light{
@@ -57345,6 +57864,16 @@
 	},
 /turf/open/floor/shiva/purplefull/north,
 /area/torch/firstdeck/research/misc_lab)
+"phm" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/center)
 "phn" = (
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -57622,14 +58151,16 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "pkL" = (
+/obj/structure/barricade/handrail,
 /obj/structure/stairs{
-	dir = 4
+	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -121;
-	vector_y = 3
+	vector_x = -125;
+	vector_y = -80
 	},
-/turf/open/floor/kutjevo/colors/cyan,
+/obj/structure/prop/invuln/darkness,
+/turf/open/void/show_pipes,
 /area/torch/thirddeck/hardstorage)
 "pkO" = (
 /obj/structure/machinery/alarm{
@@ -57689,6 +58220,10 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/processing)
+"plx" = (
+/obj/structure/sign/warning/airlock,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/fuelbay)
 "plA" = (
 /obj/structure/machinery/door/poddoor/shutters{
 	id = "hab_hallway_shutters";
@@ -58280,6 +58815,10 @@
 "pqq" = (
 /turf/open/floor/kutjevo/fake_wood,
 /area/torch/thirddeck/observation)
+"pqu" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/thirddeck/maintenance/substation)
 "pqG" = (
 /obj/structure/machinery/computer/turbine_computer,
 /turf/open/floor/shiva/yellow/north,
@@ -58815,7 +59354,8 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/airlock/engineering/colony{
-	name = "Robotics Workshop"
+	name = "Robotics Workshop";
+	dir = 2
 	},
 /turf/open/floor/bluegrid,
 /area/torch/seconddeck/robotics/surgery)
@@ -58844,6 +59384,16 @@
 /obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/catwalks)
+"pvR" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/aft)
 "pwh" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
@@ -58890,6 +59440,12 @@
 /obj/structure/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/vault2/west,
 /area/torch/fourthdeck/eva)
+"pwT" = (
+/obj/structure/sign/warning/pods/east{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/adherent)
 "pxC" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -59034,6 +59590,10 @@
 /obj/effect/decal/warning_stripes/asteroid,
 /turf/open/floor/shiva/purplefull/west,
 /area/torch/firstdeck/research/xenoflora)
+"pBe" = (
+/obj/structure/sign/warning/pods/south,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/maintenance/centralstarboard)
 "pBm" = (
 /obj/structure/bed/stool,
 /obj/structure/cable/green{
@@ -59314,7 +59874,7 @@
 /area/torch/thirddeck/maintenance/starboard)
 "pEy" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -59442,6 +60002,12 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/bridgedeck/maintenance/aftstarboard)
+"pGS" = (
+/obj/structure/sign/warning/compressed_gas{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/engineering/atmos)
 "pGT" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -59584,6 +60150,12 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/petrov/hallwaya)
+"pIr" = (
+/obj/structure/sign/warning/docking_area{
+	name = "\improper ESCAPE POD LAUNCH PATHWAY"
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/hallway/aft)
 "pIu" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/box/matches,
@@ -59618,7 +60190,7 @@
 /area/torch/fourthdeck/quartermaster/deckchief)
 "pIN" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -59735,6 +60307,12 @@
 	},
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/thruster/d1port)
+"pJV" = (
+/obj/structure/sign/deck/fourth{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/fore)
 "pJW" = (
 /turf/closed/wall,
 /area/torch/firstdeck/research/development)
@@ -59807,6 +60385,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/security/wing)
+"pLr" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/aft)
 "pLw" = (
 /obj/structure/machinery/airlock_sensor{
 	id_tag = "n2o_sensor"
@@ -60200,6 +60782,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/forestarboard)
+"pQQ" = (
+/obj/structure/sign/directions/janitor,
+/turf/closed/wall,
+/area/torch/thirddeck/observation)
 "pQY" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/cable/green{
@@ -60451,6 +61037,15 @@
 /obj/structure/window/framed/colony/reinforced,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/hallway/aft)
+"pTt" = (
+/obj/structure/sign/directions/infirmary{
+	dir = 4
+	},
+/obj/structure/sign/directions/engineering{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/fore)
 "pTA" = (
 /obj/structure/pipes/standard/manifold/hidden,
 /obj/item/pipe_meter,
@@ -60513,6 +61108,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/fore)
+"pUR" = (
+/obj/structure/sign/warning/mail_delivery,
+/turf/closed/wall,
+/area/torch/fourthdeck/quartermaster/sorting)
 "pUS" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/window/framed/colony/reinforced,
@@ -60775,6 +61374,10 @@
 	},
 /turf/open/floor/neutral,
 /area/torch/thirddeck/hardstorage)
+"pZS" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/firstdeck/brig)
 "qak" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -61424,8 +62027,7 @@
 	pixel_y = -26
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = 126;
-	vector_y = -2
+	vector_x = 126
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/floor/almayer,
@@ -61654,6 +62256,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury)
+"qkN" = (
+/obj/structure/sign/warning/secure_area/armory{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/security/armoury)
 "qkO" = (
 /obj/structure/machinery/power/apc{
 	dir = 4;
@@ -62170,6 +62778,16 @@
 	},
 /turf/open/floor/shiva/blue/north,
 /area/torch/bridgedeck/bridge_hallway/port)
+"qqE" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/fore)
 "qqH" = (
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/medical/morgue/autopsy)
@@ -62427,6 +63045,14 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fourthdeck/tools)
+"quD" = (
+/obj/structure/sign/directions/science,
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/elevator)
 "quJ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -62556,6 +63182,12 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/aftstarboard)
+"qvP" = (
+/obj/structure/sign/deck/fourth{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/quartermaster/deckchief)
 "qvX" = (
 /obj/structure/surface/table,
 /obj/structure/machinery/light{
@@ -63475,6 +64107,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/fore)
+"qHV" = (
+/obj/structure/sign/warning/pods/south,
+/turf/closed/wall/almayer/reinforced,
+/area/space)
 "qIg" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/structure/machinery/access_button{
@@ -63734,6 +64370,13 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/hallway/aft)
+"qLr" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	id_tag = "escape_pod_6_berth_hatch";
+	name = "Escape Pod Eight Hatch"
+	},
+/turf/open/floor/plating,
+/area/space)
 "qLK" = (
 /obj/structure/closet/crate/medical,
 /obj/item/storage/firstaid/fire{
@@ -64305,6 +64948,11 @@
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = 116;
+	name = "deck4"
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/space)
 "qSl" = (
@@ -65906,6 +66554,12 @@
 /obj/structure/machinery/door/airlock/almayer/maint/reinforced,
 /turf/open/floor/bluegrid,
 /area/torch/thirddeck/maintenance/aftport)
+"rnI" = (
+/obj/structure/sign/deck/second{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/bluespace)
 "rnN" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/thirddeck/hallway/aft)
@@ -66211,6 +66865,10 @@
 	},
 /turf/closed/wall/almayer/reinforced,
 /area/torch/firstdeck/maintenance/aftstarboard)
+"rrX" = (
+/obj/structure/sign/warning/docking_area,
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/aft)
 "rrY" = (
 /obj/structure/machinery/light/spot{
 	dir = 1
@@ -66651,6 +67309,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/hallway/fore)
+"rxz" = (
+/obj/structure/sign/nosmoking_2,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/safe_room/medical)
 "rxQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -67126,6 +67788,10 @@
 	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/aftstarboard)
+"rDh" = (
+/obj/structure/sign/directions/med,
+/turf/closed/wall,
+/area/torch/fifthdeck/maintenance/infirmary)
 "rDi" = (
 /obj/structure/pipes/standard/manifold/fourway/visible/cyan,
 /obj/item/pipe_meter,
@@ -68400,6 +69066,10 @@
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 1
 	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	pixel_y = -28
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/firstdeck/medical/staging)
 "rUS" = (
@@ -68500,6 +69170,10 @@
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "rVK" = (
 /obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/machinery/door/airlock/almayer/generic/glass{
+	name = "Cistern";
+	dir = 2
+	},
 /turf/open/floor/bluegrid,
 /area/torch/fourthdeck/maintenance/waterstore)
 "rVR" = (
@@ -69054,6 +69728,10 @@
 	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/hangar)
+"sdE" = (
+/obj/structure/sign/warning/server_room,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/tcommsat/computer)
 "sdS" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
 	dir = 8
@@ -69311,11 +69989,11 @@
 /obj/structure/stairs{
 	dir = 8
 	},
-/obj/structure/prop/invuln/darkness,
 /obj/effect/step_trigger/teleporter_vector{
 	vector_x = -126;
-	vector_y = -85
+	vector_y = -82
 	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/firstdeck/hallway/fore)
 "sha" = (
@@ -69958,6 +70636,12 @@
 "sov" = (
 /turf/closed/wall/almayer/reinforced,
 /area/torch/bridgedeck/sea)
+"sow" = (
+/obj/structure/sign/deck/first{
+	dir = 1
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/firstdeck/teleporter)
 "soB" = (
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -70002,7 +70686,7 @@
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftstarboard)
 "spB" = (
-/turf/open/floor/almayer_hull,
+/turf/open/nostromowater,
 /area/torch/fourthdeck/maintenance/waterstore)
 "spC" = (
 /obj/structure/sign/safety/distribution_pipes,
@@ -70322,7 +71006,8 @@
 "ssV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/engineering/colony{
-	name = "Port Solar Access"
+	name = "Port Solar Access";
+	dir = 2
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
@@ -71034,7 +71719,7 @@
 /obj/structure/machinery/firealarm{
 	pixel_y = 24
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "sBC" = (
 /turf/closed/wall/almayer/reinforced,
@@ -71148,7 +71833,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/shiva,
 /area/torch/thirddeck/tools)
 "sDS" = (
 /turf/open/floor/plating,
@@ -71433,6 +72118,16 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/thirddeck/cryo)
+"sHk" = (
+/obj/structure/sign/science_1{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	pixel_y = -7;
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/research/development)
 "sHq" = (
 /obj/structure/catwalk,
 /obj/structure/cable/green{
@@ -72431,6 +73126,15 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/opscheck)
+"sTU" = (
+/obj/effect/projector{
+	vector_x = 124;
+	vector_y = 80;
+	name = "deck4"
+	},
+/obj/structure/sign/warning/fall,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/fourthdeck/tcommsat/chamber)
 "sUb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -72834,7 +73538,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/shiva,
 /area/torch/thirddeck/tools)
 "sZh" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -73034,6 +73738,9 @@
 "tbm" = (
 /obj/structure/stairs/perspective{
 	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -114
 	},
 /turf/open/floor/almayer/mono,
 /area/torch/fifthdeck/storage)
@@ -73353,6 +74060,17 @@
 	map_airless = 1
 	},
 /area/torch/seconddeck/fuelbay/wastetank)
+"tfs" = (
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/center)
 "tfz" = (
 /obj/item/pipe_meter,
 /obj/structure/pipes/standard/manifold/fourway/visible/cyan,
@@ -74244,6 +74962,21 @@
 	},
 /turf/open/floor/holofloor,
 /area/torch/thirddeck/mess/galley)
+"tsI" = (
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck2{
+	pixel_x = 9;
+	pixel_y = 20
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/elevator)
 "tsR" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/plating,
@@ -74366,6 +75099,10 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/seconddeck/robotics)
+"tuC" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/central)
 "tuH" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 4
@@ -74777,6 +75514,10 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/thirddeck/hallway/fore)
+"tzV" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/fourthdeck/maintenance/substation)
 "tAb" = (
 /obj/structure/machinery/light{
 	dir = 1
@@ -75040,6 +75781,15 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/torch/firstdeck/research/xenobiology/entry)
+"tEC" = (
+/obj/structure/sign/deck/second{
+	pixel_y = 5
+	},
+/obj/structure/sign/warning/pods/west{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/hallway/center)
 "tEI" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -75231,7 +75981,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "tGY" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -75424,6 +76174,19 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/research/entry)
+"tKc" = (
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/evac{
+	pixel_y = -7
+	},
+/obj/structure/machinery/computer/shuttle/elevator_controller/torch/elevator_call/torch/deck3{
+	pixel_x = 9;
+	pixel_y = 19
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/center)
 "tKf" = (
 /obj/structure/closet/crate,
 /obj/effect/spawner/random/toy,
@@ -75725,8 +76488,8 @@
 "tOK" = (
 /obj/structure/barricade/handrail,
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = -127;
-	vector_y = -81
+	vector_x = -125;
+	vector_y = -80
 	},
 /obj/structure/stairs{
 	dir = 8
@@ -76658,6 +77421,10 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/chargebay)
+"uaI" = (
+/obj/structure/sign/warning/compressed_gas,
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/aft)
 "uaO" = (
 /turf/closed/wall,
 /area/torch/thirddeck/atmos)
@@ -77630,7 +78397,7 @@
 /area/torch/firstdeck/teleporter)
 "uoL" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating,
@@ -77715,6 +78482,13 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/meeting_room)
+"upK" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = 7
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/tools)
 "uqd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -78574,6 +79348,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/engineering/atmos)
+"uyy" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/pathfinder)
 "uyE" = (
 /obj/structure/pipes/standard/manifold/visible/scrubbers{
 	dir = 1
@@ -78915,6 +79699,12 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/firstdeck/hallway/center)
+"uDh" = (
+/obj/structure/sign/warning/compressed_gas{
+	dir = 8
+	},
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/engineering/atmos)
 "uDq" = (
 /obj/structure/pipes/unary/heat_exchanger{
 	dir = 9
@@ -80003,6 +80793,16 @@
 	},
 /turf/open/floor/plating,
 /area/torch/fifthdeck/maintenance/aftport)
+"uSP" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/fourthdeck/hallway/fore)
 "uSX" = (
 /obj/structure/pipes/standard/manifold/visible,
 /obj/structure/catwalk,
@@ -80104,6 +80904,16 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/bridgedeck/bridge_hallway/port)
+"uUS" = (
+/obj/item/device/radio/intercom{
+	dir = 8;
+	pixel_x = 21
+	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/space)
 "uUT" = (
 /obj/structure/barricade/handrail,
 /turf/open/floor/almayer/dark_sterile,
@@ -80638,6 +81448,12 @@
 /turf/open/floor/vault2/west,
 /area/torch/firstdeck/maintenance/foreport)
 "vcj" = (
+/obj/structure/machinery/door/airlock/external/colony{
+	frequency = 1379;
+	id_tag = "solar_starboard_inner";
+	locked = 1;
+	name = "Engineering External Access"
+	},
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/maintenance/forestarboard)
 "vco" = (
@@ -80689,6 +81505,18 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/disperser)
+"vdh" = (
+/obj/structure/machinery/door/firedoor/border_only,
+/obj/structure/window/framed/colony/reinforced,
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/torch/fifthdeck/hallway/aft)
 "vdk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -81275,6 +82103,12 @@
 /obj/structure/catwalk,
 /turf/open/space/basic,
 /area/torch/fourthdeck/catwalks)
+"vkI" = (
+/obj/structure/sign/warning/pods/south{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/center)
 "vkJ" = (
 /obj/structure/reagent_dispensers/water_cooler{
 	dir = 1
@@ -81379,6 +82213,10 @@
 /obj/structure/pipes/standard/simple/hidden,
 /turf/open/floor/shiva/north,
 /area/torch/fourthdeck/hallway/fore)
+"vmy" = (
+/obj/structure/sign/warning/vacuum,
+/turf/closed/wall/almayer/reinforced,
+/area/torch/seconddeck/maintenance/central)
 "vmH" = (
 /turf/open/floor/shiva/redcorners/north,
 /area/torch/firstdeck/hallway/fore)
@@ -81569,6 +82407,13 @@
 /obj/structure/machinery/firealarm{
 	pixel_y = 24
 	},
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 114
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/quartermaster/storage/upper)
 "vpB" = (
@@ -81640,6 +82485,16 @@
 	},
 /turf/open/floor/shiva/red,
 /area/torch/firstdeck/security/wing)
+"vrM" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	pixel_y = -7;
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/firstdeck/hallway/fore)
 "vsd" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -81663,6 +82518,7 @@
 /obj/structure/sign/safety/hazard{
 	dir = 4
 	},
+/obj/structure/sign/warning/secure_area,
 /turf/closed/wall,
 /area/torch/firstdeck/maintenance/foreport)
 "vsp" = (
@@ -82060,6 +82916,9 @@
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/bed/chair/dropship/passenger{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/space)
 "vxj" = (
@@ -82089,7 +82948,7 @@
 /area/torch/thirddeck/hallway/center)
 "vxo" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -82117,7 +82976,8 @@
 /obj/structure/machinery/access_button{
 	name = "Auxiliary Fuel Storage Vent Control";
 	pixel_y = 32;
-	req_access = list("ACCESS_CONSTRUCTION")
+	req_access = list("ACCESS_CONSTRUCTION");
+	command = "auxfuelvent"
 	},
 /turf/open/floor/almayer_hull,
 /area/torch/firstdeck/fuelbay)
@@ -82611,7 +83471,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "vDE" = (
 /obj/structure/pipes/vents/pump/on{
@@ -82770,6 +83630,10 @@
 	icon_state = "bcarpet05"
 	},
 /area/torch/fourthdeck/captainmess)
+"vFQ" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/seconddeck/engineering/engine_smes)
 "vFY" = (
 /obj/structure/closet/crate,
 /obj/item/prop/colony/canister,
@@ -82794,6 +83658,16 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/aftstarboard)
+"vGn" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/fifthdeck/hallway/fore)
 "vGo" = (
 /obj/structure/pipes/standard/simple/visible/cyan{
 	dir = 9
@@ -83156,6 +84030,10 @@
 /obj/structure/machinery/light,
 /turf/open/floor/shiva/north,
 /area/torch/fourthdeck/eva)
+"vLf" = (
+/obj/structure/sign/warning/pods/west,
+/turf/closed/wall,
+/area/torch/seconddeck/prototype/control)
 "vLq" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -83255,6 +84133,10 @@
 /area/torch/fourthdeck/pathfinder)
 "vMn" = (
 /obj/structure/machinery/floodlight,
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
 /turf/open/floor/kutjevo/colors/cyan,
 /area/torch/fifthdeck/storage)
 "vMO" = (
@@ -83664,6 +84546,12 @@
 	},
 /turf/open/floor/shiva/purple,
 /area/torch/firstdeck/research/hallway)
+"vUw" = (
+/obj/structure/sign/directions/janitor{
+	dir = 8
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/recreation)
 "vUB" = (
 /obj/structure/cable/pink{
 	name = "Powernet Sensor - Second Deck Subgrid";
@@ -83722,6 +84610,10 @@
 /obj/structure/machinery/photocopier,
 /turf/open/floor/shiva/floor3,
 /area/torch/firstdeck/security/bo)
+"vVa" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/firstdeck/auxpower)
 "vVb" = (
 /obj/structure/surface/table,
 /obj/item/clipboard,
@@ -83872,6 +84764,10 @@
 /obj/structure/pipes/vents/pump/on{
 	dir = 8
 	},
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/hangar)
 "vXm" = (
@@ -83982,6 +84878,14 @@
 /obj/effect/spawner/random/toy,
 /turf/open/floor/vault2/west,
 /area/torch/seconddeck/cargo)
+"vYJ" = (
+/obj/structure/window/framed/colony/reinforced,
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/open/floor/plating,
+/area/torch/thirddeck/hallway/center)
 "vYN" = (
 /obj/structure/machinery/light,
 /turf/open/floor/shiva/green/east,
@@ -84177,7 +85081,7 @@
 /area/torch/thirddeck/hallway/center)
 "wbv" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/catwalk/prison,
@@ -84521,6 +85425,13 @@
 	},
 /turf/open/floor/shiva,
 /area/torch/thirddeck/hallway/center)
+"wfh" = (
+/obj/effect/projector{
+	vector_x = -116;
+	name = "deck5"
+	},
+/turf/open/floor/shiva/floor3,
+/area/torch/fifthdeck/expedition_storage)
 "wfk" = (
 /obj/structure/pipes/standard/manifold/hidden/yellow,
 /obj/structure/cable/green{
@@ -84724,7 +85635,7 @@
 /obj/structure/machinery/alarm{
 	pixel_y = 24
 	},
-/turf/open/floor/kutjevo/colors/red/tile,
+/turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/tools)
 "wiV" = (
 /turf/open/floor/shiva,
@@ -85483,6 +86394,7 @@
 /obj/structure/sign/safety/hazard{
 	dir = 1
 	},
+/obj/structure/sign/warning/secure_area,
 /turf/closed/wall,
 /area/torch/firstdeck/security/armoury)
 "wrJ" = (
@@ -87513,7 +88425,7 @@
 /area/torch/fifthdeck/expedition/eva)
 "wSn" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/shiva/floor3,
@@ -87723,7 +88635,7 @@
 /area/torch/firstdeck/thruster/d1port)
 "wUw" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /obj/structure/pipes/vents/scrubber,
@@ -88375,7 +89287,13 @@
 /turf/open/floor/plating,
 /area/torch/fourthdeck/hallway/aft)
 "xbU" = (
-/obj/structure/stairs/perspective,
+/obj/structure/stairs/perspective{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 125;
+	vector_y = 80
+	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/hardstorage)
 "xbX" = (
@@ -88944,6 +89862,12 @@
 /obj/structure/catwalk/prison,
 /turf/open/floor/plating,
 /area/torch/fifthdeck/hangar)
+"xjj" = (
+/obj/structure/sign/deck/second{
+	dir = 4
+	},
+/turf/closed/wall,
+/area/torch/seconddeck/engineering/storage)
 "xjk" = (
 /obj/item/reagent_container/food/drinks/flask{
 	pixel_x = 8
@@ -89305,6 +90229,11 @@
 	dir = 8
 	},
 /obj/structure/barricade/handrail,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	vector_x = 116;
+	name = "deck4"
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/space)
 "xmR" = (
@@ -89919,8 +90848,7 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/teleporter_vector{
-	vector_x = 126;
-	vector_y = -2
+	vector_x = 126
 	},
 /obj/structure/prop/invuln/darkness,
 /turf/open/floor/almayer,
@@ -90453,6 +91381,13 @@
 /area/torch/firstdeck/maintenance/forestarboard)
 "xEh" = (
 /obj/structure/barricade/handrail,
+/obj/structure/stairs{
+	dir = 4;
+	icon_state = "ramptop"
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = -117
+	},
 /turf/open/floor/shiva/north,
 /area/torch/fifthdeck/hallway/fore)
 "xEk" = (
@@ -90755,6 +91690,15 @@
 	},
 /turf/open/floor/plating,
 /area/torch/thirddeck/maintenance/port)
+"xIk" = (
+/obj/structure/sign/directions/engineering{
+	dir = 1
+	},
+/obj/structure/sign/directions/supply{
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/fore)
 "xIl" = (
 /obj/structure/machinery/computer/teleporter_console{
 	dir = 8
@@ -90861,6 +91805,13 @@
 /area/torch/fourthdeck/maintenance/port)
 "xIV" = (
 /obj/structure/barricade/handrail,
+/obj/structure/stairs{
+	dir = 8
+	},
+/obj/effect/step_trigger/teleporter_vector{
+	vector_x = 114
+	},
+/obj/structure/prop/invuln/darkness,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/quartermaster/storage/upper)
 "xJf" = (
@@ -91058,7 +92009,7 @@
 /area/torch/thirddeck/chapel/memorial)
 "xLL" = (
 /obj/effect/projector{
-	vector_x = -117;
+	vector_x = -116;
 	name = "deck5"
 	},
 /turf/open/floor/plating/icefloor/warnplate/north,
@@ -91159,6 +92110,16 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/space)
+"xOi" = (
+/obj/structure/sign/directions/science{
+	dir = 1
+	},
+/obj/structure/sign/directions/infirmary{
+	pixel_y = -7;
+	dir = 1
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/fore)
 "xOn" = (
 /obj/structure/pipes/standard/simple/visible/cyan,
 /obj/structure/machinery/door/airlock/external/colony{
@@ -91348,6 +92309,10 @@
 /obj/effect/decal/warning_stripes,
 /turf/open/floor/shiva/floor3,
 /area/torch/thirddeck/hallway/fore)
+"xQm" = (
+/obj/structure/sign/emergonly,
+/turf/closed/wall,
+/area/torch/firstdeck/medical/staging)
 "xQo" = (
 /obj/structure/window/framed/colony/reinforced,
 /obj/structure/machinery/door/poddoor/shutters{
@@ -91732,6 +92697,16 @@
 	},
 /turf/open/floor/shiva/blue/east,
 /area/torch/bridgedeck/meeting_room)
+"xWh" = (
+/obj/structure/sign/directions/bridge{
+	dir = 1
+	},
+/obj/structure/sign/directions/security{
+	dir = 1;
+	pixel_y = -7
+	},
+/turf/closed/wall,
+/area/torch/thirddeck/hallway/fore)
 "xWi" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -91745,7 +92720,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/open/floor/almayer,
+/turf/open/floor/shiva,
 /area/torch/thirddeck/tools)
 "xWj" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -92752,6 +93727,10 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/firstdeck/security/bo)
+"ykB" = (
+/obj/structure/sign/warning/high_voltage,
+/turf/closed/wall,
+/area/torch/seconddeck/maintenance/aftstarboard)
 "ykI" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -101478,7 +102457,7 @@ fSE
 fSE
 fSE
 iKc
-cUK
+nhR
 nmc
 uyf
 bOX
@@ -101486,7 +102465,7 @@ cUK
 wug
 hzb
 iJL
-cUK
+vLf
 fKI
 wJJ
 wJJ
@@ -101734,7 +102713,7 @@ bbb
 fQi
 rUv
 cKm
-cUK
+bjx
 cUK
 cUK
 dpw
@@ -102502,9 +103481,9 @@ cGb
 fQi
 kUP
 goL
-goL
+tfs
 vUS
-goL
+phm
 goL
 rqd
 hYB
@@ -102584,8 +103563,8 @@ llD
 nmO
 ojr
 dVS
-jGO
-imQ
+uSP
+gyH
 imQ
 imQ
 kOd
@@ -102761,7 +103740,7 @@ goL
 tBW
 oBI
 uQy
-goL
+etf
 aPZ
 hYB
 rhJ
@@ -103013,7 +103992,7 @@ gLg
 aZI
 hTO
 vIE
-goL
+tEC
 wjw
 aeq
 xur
@@ -103096,9 +104075,9 @@ pQi
 nmO
 ohb
 hVm
+kAW
 dfY
-dfY
-aTp
+mVR
 fAV
 lzH
 ron
@@ -103352,8 +104331,8 @@ qUU
 sfU
 nBz
 laU
-dfY
-dfY
+kAW
+iWc
 mVR
 fAV
 lzH
@@ -103609,7 +104588,7 @@ nmO
 pos
 hVm
 jGO
-jGO
+pJV
 jGO
 imQ
 fAV
@@ -104212,7 +105191,7 @@ grY
 grY
 grY
 sfH
-ydx
+hri
 sCk
 gDp
 hCL
@@ -104297,7 +105276,7 @@ sHu
 sHu
 sHu
 sHu
-sHu
+bMp
 swQ
 bpU
 bpU
@@ -104376,7 +105355,7 @@ jGO
 jGO
 jGO
 jGO
-jGO
+pJV
 jGO
 jGO
 vwj
@@ -104552,10 +105531,10 @@ aid
 aid
 aid
 eJc
-sHu
+tsI
 rTX
 hnv
-bpU
+rnI
 jmX
 kLm
 gXT
@@ -104634,7 +105613,7 @@ pmO
 pmO
 pmO
 xFq
-jGO
+afa
 rQN
 rxv
 tKx
@@ -105822,7 +106801,7 @@ fQi
 fQi
 fQi
 fQi
-fQi
+niG
 fQi
 mHY
 veh
@@ -105833,7 +106812,7 @@ sHu
 sHu
 sHu
 sHu
-sHu
+quD
 mOu
 bpU
 bpU
@@ -105914,7 +106893,7 @@ nvK
 nvK
 nvK
 nvK
-nvK
+uyy
 bgu
 cUu
 bgu
@@ -106334,7 +107313,7 @@ fQi
 fQi
 fQi
 fQi
-fQi
+niG
 fQi
 fLe
 veh
@@ -108725,7 +109704,7 @@ fUd
 luj
 tES
 kni
-vkB
+hxx
 hxx
 fNl
 sog
@@ -108981,7 +109960,7 @@ cOr
 wDq
 okK
 kni
-vkB
+hxx
 uqB
 sog
 sog
@@ -109237,7 +110216,7 @@ abl
 aSM
 okK
 kni
-vkB
+hxx
 fNl
 sog
 sog
@@ -109493,7 +110472,7 @@ hEF
 aSM
 okK
 kni
-vkB
+hxx
 uoF
 sog
 sog
@@ -109677,7 +110656,7 @@ kvQ
 lcV
 elm
 gza
-gza
+dSY
 gza
 gza
 gza
@@ -109749,7 +110728,7 @@ okK
 qaQ
 okK
 kni
-vkB
+hxx
 hxx
 fNl
 sog
@@ -109911,7 +110890,7 @@ hIu
 hIu
 uvX
 uvX
-uvX
+vmy
 oeK
 fGi
 gKx
@@ -109945,11 +110924,11 @@ snn
 ues
 tCp
 xUl
-oZc
+lNJ
 mWO
 rDL
 eRF
-qKD
+drZ
 qKD
 qKD
 hIu
@@ -110004,7 +110983,7 @@ tKo
 tKo
 mXL
 hGp
-hwO
+ozv
 hwO
 orC
 fNl
@@ -110427,7 +111406,7 @@ uvX
 mGE
 fHM
 tOq
-smh
+tuC
 qpR
 rod
 oxP
@@ -110457,7 +111436,7 @@ jQd
 gXH
 wSc
 qSl
-oZc
+bYo
 jwn
 miJ
 sdi
@@ -112044,7 +113023,7 @@ akd
 akd
 kMM
 akd
-kMM
+sTU
 xSR
 hXa
 fvz
@@ -112074,7 +113053,7 @@ cPD
 mOa
 wqY
 xCP
-jIL
+pUR
 jpo
 qQi
 iJj
@@ -113006,7 +113985,7 @@ fZX
 lZQ
 fiH
 fiH
-fiH
+xjj
 fiH
 fiH
 oZJ
@@ -113086,7 +114065,7 @@ xhQ
 pTn
 cas
 pTn
-pTI
+pvR
 pTI
 pTI
 pTI
@@ -113260,7 +114239,7 @@ nce
 wKH
 elu
 mEn
-ftf
+iqC
 dFG
 xsM
 eKp
@@ -113342,7 +114321,7 @@ fxB
 dsB
 urn
 fil
-pTI
+onS
 poF
 sNR
 mzB
@@ -113354,7 +114333,7 @@ uQq
 txW
 jUB
 ibG
-jIL
+odV
 nqw
 qcR
 weq
@@ -113777,13 +114756,13 @@ ikn
 uCm
 uCm
 uCm
-xxQ
+pGS
 rzq
 wIG
 xxQ
 csa
 xeI
-xxQ
+lRo
 rDX
 wOx
 wOx
@@ -114284,7 +115263,7 @@ nce
 nce
 djE
 pfd
-nce
+dPO
 tBF
 gGd
 elc
@@ -114352,7 +115331,7 @@ rVn
 tQY
 aQm
 sjZ
-gFz
+sdE
 qKp
 kGn
 iEf
@@ -114366,7 +115345,7 @@ xhQ
 juQ
 ukh
 hOn
-pTI
+dqn
 nkJ
 fMb
 fMb
@@ -114624,7 +115603,7 @@ cQJ
 ftM
 nci
 nci
-nci
+qvP
 nci
 nci
 nci
@@ -114868,7 +115847,7 @@ gFz
 rPq
 kGn
 cIN
-imP
+hfZ
 gzS
 gzS
 iHC
@@ -115323,7 +116302,7 @@ nUs
 kde
 rYZ
 xmE
-kRy
+nSH
 kNE
 gwZ
 sCU
@@ -115409,7 +116388,7 @@ drx
 drx
 uwV
 bsU
-drx
+hMB
 drx
 jNY
 jNY
@@ -116320,11 +117299,11 @@ htI
 eNl
 dTE
 yjk
-uTo
+vFQ
 nHM
 tkd
 wdN
-uTo
+vFQ
 dBw
 eLb
 fbc
@@ -116942,7 +117921,7 @@ pTn
 pTn
 rGJ
 rGJ
-rGJ
+pIr
 rvb
 rGJ
 rGJ
@@ -117344,7 +118323,7 @@ gfS
 eNl
 qcE
 fNy
-uTo
+vFQ
 qgR
 uUz
 xcV
@@ -117690,15 +118669,15 @@ pTI
 pTI
 pTI
 tWk
-tWk
+eos
 oYG
 cIK
 oYG
-tWk
+pwT
 tWk
 pTI
 pdS
-pTI
+rrX
 cKs
 rGJ
 pTn
@@ -117710,7 +118689,7 @@ pTn
 pTn
 rGJ
 rGJ
-rGJ
+pIr
 spP
 rGJ
 rGJ
@@ -118131,7 +119110,7 @@ fkm
 dbb
 hkv
 ffw
-xxQ
+uDh
 hkv
 ffw
 uyg
@@ -118622,7 +119601,7 @@ aIe
 tYv
 tYv
 tYv
-tYv
+ykB
 xLS
 iCD
 iCD
@@ -119228,7 +120207,7 @@ pOn
 blI
 pLQ
 pLQ
-pLQ
+tzV
 pLQ
 pLQ
 ncM
@@ -119504,7 +120483,7 @@ qXQ
 teb
 teb
 mzY
-dnY
+dIn
 dnY
 dnY
 jNY
@@ -128551,7 +129530,7 @@ wrv
 igC
 kMB
 nbi
-sZE
+qkN
 nbi
 kMB
 qeX
@@ -129063,7 +130042,7 @@ wrv
 nbi
 qon
 nbi
-sZE
+qkN
 nbi
 qon
 nbi
@@ -131185,7 +132164,7 @@ bep
 wrd
 uhZ
 uhZ
-uhZ
+pQQ
 uhZ
 kuf
 kuf
@@ -131763,7 +132742,7 @@ ujw
 cuN
 xfY
 yhx
-xrK
+rDh
 wuO
 ksl
 lzM
@@ -131840,10 +132819,10 @@ jNY
 jNY
 cVe
 cVe
-cVe
+lqI
 nSy
 sNO
-dki
+cEW
 svb
 lrC
 rZg
@@ -132129,7 +133108,7 @@ rCb
 pPS
 iXR
 cbp
-jUh
+pZS
 gyG
 uxm
 vDS
@@ -132791,7 +133770,7 @@ ggV
 ksK
 qcN
 vCH
-cOF
+vGn
 xEh
 vVz
 xST
@@ -132898,7 +133877,7 @@ aRY
 bJJ
 gZK
 ecv
-jUh
+pZS
 jMZ
 jUh
 pPS
@@ -133047,8 +134026,8 @@ ryV
 ryV
 qnz
 qSf
-cOF
-xEh
+qqE
+gBj
 vVz
 uox
 wMi
@@ -133303,7 +134282,7 @@ bvM
 bvM
 dYC
 cOF
-cOF
+nsL
 hMa
 qDi
 cOF
@@ -134072,7 +135051,7 @@ cOF
 cOF
 cOF
 cOF
-cOF
+ldo
 cOF
 nXL
 fUm
@@ -134330,7 +135309,7 @@ hxK
 hxK
 hxK
 eie
-cOF
+iYg
 tUO
 hFh
 ktB
@@ -134421,7 +135400,7 @@ lrC
 kOr
 atw
 aBx
-qVl
+sow
 xnC
 maR
 jHN
@@ -134511,7 +135490,7 @@ sGT
 sGT
 leJ
 sGT
-sGT
+vUw
 cDE
 sUb
 cDE
@@ -134578,7 +135557,7 @@ nzU
 eUu
 eUu
 bwa
-mpd
+wfh
 mpd
 cOF
 hxK
@@ -134673,7 +135652,7 @@ tKV
 lrC
 bSk
 vhP
-lrC
+vrM
 mJo
 gWV
 sgL
@@ -134759,10 +135738,10 @@ uTQ
 vgX
 hPx
 rdH
-evn
+xIk
 lTf
 fPZ
-lwA
+joO
 olD
 mLy
 sqR
@@ -134834,7 +135813,7 @@ nzU
 mpd
 mpd
 bwa
-krE
+nXr
 krE
 cOF
 hxK
@@ -134929,7 +135908,7 @@ eyZ
 noA
 bSk
 vhP
-lrC
+alC
 mJo
 gWV
 sgL
@@ -135015,7 +135994,7 @@ dWk
 dWk
 dWk
 jyo
-evn
+xOi
 lTf
 noY
 joO
@@ -135090,7 +136069,7 @@ nzU
 uyN
 vEN
 bwa
-mpd
+wfh
 tiQ
 cOF
 hxK
@@ -135185,7 +136164,7 @@ pSk
 pSk
 seH
 vhP
-lrC
+pTt
 jTQ
 sws
 jTQ
@@ -135271,7 +136250,7 @@ vgX
 vgX
 vgX
 evn
-evn
+xWh
 jSR
 dhU
 vYN
@@ -135610,15 +136589,15 @@ cOF
 cOF
 cOF
 cOF
-cOF
+vGn
 wEB
 inj
 wEB
 mzL
-aTN
-lbL
-lbL
-lbL
+mzL
+gQp
+gQp
+gQp
 ohw
 ohw
 gQp
@@ -135870,12 +136849,12 @@ tfg
 tfg
 tfg
 tfg
-tfg
+lIL
 egz
-kuB
-kuB
-kuB
-tfg
+uoL
+uoL
+uoL
+uoL
 gEN
 tfg
 tfg
@@ -136040,7 +137019,7 @@ hfx
 hfx
 hfx
 hfx
-hfx
+hZM
 hfx
 hfx
 wRZ
@@ -136129,9 +137108,9 @@ mIP
 mIP
 wSn
 wSn
-mIP
-mIP
-mIP
+wSn
+wSn
+wSn
 mIP
 mIP
 mIP
@@ -136212,7 +137191,7 @@ lMh
 lMh
 lMh
 gGP
-szP
+mdj
 nQM
 bDr
 xYZ
@@ -136298,7 +137277,7 @@ gYp
 gYp
 gYp
 fOZ
-hfx
+tKc
 mxI
 ttd
 umT
@@ -136383,8 +137362,8 @@ lIL
 lIL
 lIL
 lIL
-lIL
-lIL
+uoL
+uoL
 lIL
 lIL
 lIL
@@ -137223,7 +138202,7 @@ hzn
 jCa
 oEo
 eIQ
-eIQ
+oRA
 eIQ
 eIQ
 eIQ
@@ -137483,7 +138462,7 @@ bVn
 bNR
 evi
 eIQ
-eIQ
+oRA
 dPQ
 hDC
 szP
@@ -137492,7 +138471,7 @@ szP
 szP
 szP
 szP
-szP
+gbU
 nQM
 tDj
 uDV
@@ -137578,7 +138557,7 @@ hfx
 hfx
 hfx
 hfx
-hfx
+kPQ
 ciA
 wVh
 rJN
@@ -137834,7 +138813,7 @@ ccG
 uiV
 sAq
 ylo
-kKg
+mjS
 dlJ
 rUH
 qkC
@@ -137991,7 +138970,7 @@ veR
 ePZ
 hEc
 eIQ
-eIQ
+oRA
 eIQ
 qNY
 eIQ
@@ -138003,13 +138982,13 @@ sAO
 ePZ
 xbd
 xHX
-ePZ
+hkp
 gAx
 nQM
 tUe
 uDV
 gAx
-szP
+vkI
 uFk
 roU
 sKz
@@ -138094,7 +139073,7 @@ kKg
 mxI
 hOR
 owu
-apN
+cFb
 apN
 apN
 apN
@@ -138504,7 +139483,7 @@ hzn
 hzn
 xbd
 hdL
-ePZ
+noy
 nuX
 sSH
 aRk
@@ -139008,17 +139987,17 @@ jNY
 jNY
 jNY
 jNY
-olV
+oQY
 veJ
 vxf
-sLf
-sZC
-sZC
+uUS
+fiW
+mmn
 lug
 voQ
 hDf
 hDf
-hDf
+vVa
 fvm
 bES
 sBW
@@ -139057,7 +140036,7 @@ jNY
 jNY
 jNY
 jNY
-odV
+jNY
 jNY
 jNY
 jNY
@@ -139525,7 +140504,7 @@ sVQ
 sVQ
 sVQ
 sVQ
-sVQ
+qHV
 lug
 wdp
 hDf
@@ -139559,7 +140538,7 @@ rBt
 aJG
 cVy
 fxQ
-fyN
+fJU
 fyN
 fyN
 fyN
@@ -139708,11 +140687,11 @@ lIL
 lIL
 lIL
 lIL
-lIL
-lIL
-lIL
-lIL
-lIL
+uoL
+uoL
+uoL
+uoL
+uoL
 lIL
 lIL
 lIL
@@ -139959,9 +140938,9 @@ umD
 umD
 umD
 mIP
-mIP
-mIP
-mIP
+wSn
+wSn
+wSn
 vXl
 vXl
 wSn
@@ -139969,9 +140948,9 @@ wSn
 mEB
 wSn
 wSn
-mIP
-mIP
-mIP
+wSn
+wSn
+wSn
 mIP
 mIP
 mIP
@@ -140032,12 +141011,12 @@ jNY
 jNY
 jNY
 jNY
-olV
+oQY
 veJ
 vxf
-sLf
-sZC
-sZC
+uUS
+qLr
+fna
 lug
 bmT
 hDf
@@ -140549,7 +141528,7 @@ hzn
 hzn
 hzn
 hzn
-hzn
+pBe
 aLb
 aSG
 ePZ
@@ -140583,7 +141562,7 @@ gwO
 kPk
 cVy
 fxQ
-fyN
+fJU
 fyN
 fyN
 fyN
@@ -140729,8 +141708,8 @@ rhN
 lsd
 fCo
 fCo
-nNl
-nNl
+fCo
+fCo
 nMR
 wSn
 wbv
@@ -141592,7 +142571,7 @@ uCf
 kZy
 teM
 kZy
-cVy
+egb
 cVy
 cVy
 cVy
@@ -141740,7 +142719,7 @@ oKk
 qQQ
 mJp
 jxQ
-jxQ
+aqE
 lLd
 jxQ
 tFn
@@ -142104,7 +143083,7 @@ uCf
 xcW
 tUe
 uDV
-fRt
+gAx
 szP
 uCz
 iej
@@ -142254,7 +143233,7 @@ kgd
 jxQ
 xXp
 ntb
-jxQ
+aqE
 tFn
 mIP
 mIP
@@ -142265,11 +143244,11 @@ mIP
 mIP
 mIP
 mIP
-mIP
-mIP
-mIP
 wSn
-wbv
+wSn
+wSn
+wSn
+kuB
 wSn
 wSn
 wSn
@@ -142507,7 +143486,7 @@ oKk
 oKk
 qQQ
 kgd
-jxQ
+aqE
 qBk
 wXE
 xaR
@@ -142764,7 +143743,7 @@ oKk
 qQQ
 kgd
 jxQ
-jxQ
+aqE
 eOh
 jxQ
 eDL
@@ -142785,7 +143764,7 @@ urM
 ctB
 ctB
 ctB
-ctB
+cLK
 ctB
 kHf
 kHf
@@ -142868,7 +143847,7 @@ stK
 nFK
 iwA
 rUQ
-uCf
+xQm
 nxr
 tUe
 uDV
@@ -143038,7 +144017,7 @@ whQ
 onG
 oab
 hFk
-ctB
+cHN
 ove
 nlo
 eSI
@@ -143294,7 +144273,7 @@ tgH
 qkF
 tja
 nVT
-urM
+vdh
 izY
 uUw
 xmn
@@ -143458,12 +144437,12 @@ wnV
 wnV
 wnV
 wnV
+ncS
 wnV
 wnV
 wnV
 wnV
-wnV
-wnV
+ncS
 wnV
 xXb
 hfx
@@ -143623,7 +144602,7 @@ dUo
 mjy
 cOw
 wab
-dUo
+rxz
 wNm
 eSH
 dHg
@@ -143636,7 +144615,7 @@ stK
 hRu
 ygP
 ozw
-uCf
+xQm
 nxr
 aZi
 sjo
@@ -143802,7 +144781,7 @@ kIa
 dPA
 lEj
 fPH
-tgH
+iBB
 neY
 nsX
 cZu
@@ -143875,7 +144854,7 @@ hzn
 hzn
 hzn
 vQG
-dUo
+dra
 beG
 gmH
 dEq
@@ -144062,7 +145041,7 @@ whQ
 qRY
 vuW
 ghH
-ctB
+knb
 rbE
 jDz
 hhb
@@ -144073,9 +145052,9 @@ dHm
 pMI
 jTe
 ggL
-ozv
-gBj
-gBj
+hOG
+tCv
+tCv
 kHf
 gAJ
 pOB
@@ -144128,7 +145107,7 @@ dFO
 qQZ
 qQZ
 qQZ
-qQZ
+nuz
 mxv
 xWL
 dUo
@@ -144320,7 +145299,7 @@ wYl
 nVT
 ctB
 ctB
-ctB
+abU
 ctB
 ctB
 kHf
@@ -144329,7 +145308,7 @@ tbm
 kHf
 vfJ
 exq
-hOG
+aTN
 vMn
 vMn
 kHf
@@ -144403,8 +145382,8 @@ fdt
 stK
 iDV
 ygP
-ltz
-uCf
+lRx
+hTq
 nxr
 vGJ
 muN
@@ -144570,7 +145549,7 @@ eDL
 eDL
 eDL
 eDL
-ctB
+uaI
 jtC
 nsX
 vJc
@@ -144585,7 +145564,7 @@ tbm
 kHf
 vVN
 rhs
-ozv
+hOG
 kiO
 aFe
 kHf
@@ -145011,7 +145990,7 @@ fvu
 gcN
 vja
 tcM
-nVW
+upK
 lBE
 jIo
 vDB
@@ -145152,7 +146131,7 @@ hiy
 qQZ
 jnh
 yho
-qQZ
+plx
 kdl
 xWL
 dUo
@@ -145173,7 +146152,7 @@ hET
 hET
 lpR
 uCf
-nxr
+dSg
 dGB
 gpD
 mAy
@@ -145199,7 +146178,7 @@ spS
 iIj
 myw
 nty
-eui
+ePn
 oqd
 bCJ
 gCU
@@ -145252,9 +146231,9 @@ qdN
 wTa
 gLo
 kvs
-tOK
 pkL
-pkL
+ivy
+ivy
 arV
 vSv
 mSf
@@ -145510,7 +146489,7 @@ ktS
 hXN
 tOK
 ivy
-pkL
+ivy
 rhl
 rhl
 vjB
@@ -145523,7 +146502,7 @@ jcv
 bPP
 bPP
 czb
-nVW
+clK
 sBB
 sDP
 cXM
@@ -145779,7 +146758,7 @@ bPP
 ves
 cDa
 bPP
-nVW
+lqD
 iXo
 sDP
 bZR
@@ -145837,7 +146816,7 @@ oKk
 oKk
 deL
 qQk
-qQk
+fRt
 obl
 qQk
 qQk
@@ -145850,7 +146829,7 @@ oKk
 oKk
 oKk
 oKk
-owL
+fGs
 uhE
 mnQ
 xbC
@@ -146030,7 +147009,7 @@ wTa
 woL
 gyt
 owu
-aOP
+vYJ
 dWH
 lUk
 lUk
@@ -146200,8 +147179,8 @@ ykS
 nxr
 vlC
 nBL
-pJW
-pJW
+sHk
+bIg
 iiQ
 fQA
 lkp
@@ -146421,7 +147400,7 @@ hnq
 hnq
 hnq
 jNY
-jNY
+juE
 qQZ
 qQZ
 dFO
@@ -146453,9 +147432,9 @@ mSa
 oOp
 oOp
 mSa
-nxr
+dSg
 dGB
-lmp
+meo
 pJW
 aks
 lqX
@@ -147116,7 +148095,7 @@ jNY
 oKk
 oKk
 deL
-qQk
+fRt
 xKR
 lKs
 jwg
@@ -147373,7 +148352,7 @@ oKk
 oKk
 usq
 qQk
-qQk
+fRt
 twk
 qQk
 wVo
@@ -147884,7 +148863,7 @@ jNY
 oKk
 oKk
 tke
-hFY
+jGJ
 apo
 otG
 prk
@@ -148571,7 +149550,7 @@ lGg
 lGg
 cmv
 aDE
-cpc
+pqu
 fYQ
 bcB
 bOk
@@ -150282,7 +151261,7 @@ dcp
 rgO
 npa
 pIH
-yhj
+adD
 vgw
 oSG
 qpq
@@ -150543,7 +151522,7 @@ yhj
 kCF
 ujq
 jMF
-yhj
+adD
 hbF
 ehd
 iZj
@@ -151827,13 +152806,13 @@ duX
 eWa
 xHJ
 bbX
-bbX
+pLr
 gDz
 hMf
 hMf
 hMf
 nvY
-bbX
+pLr
 bbX
 spS
 rFZ
