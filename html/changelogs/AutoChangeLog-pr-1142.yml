@@ -1,0 +1,9 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - rscadd: "added laika cig packet to loadout selection"
+  - balance: "UPP faction can't access all food and drinks from UA/TWE."
+  - balance: "single cigarette, cigar and classic cigar are all -1 cheaper loadout"
+  - balance: "UPP faction also can't access all the smoking stuff"
+  - balance: "PDT now costs 1 in loadout, down from 3 (they are in the vendors anyway)"
+  - balance: "Loadout PDT is using the advanced PDT which has the TGUI pop-up, not the basic version that posts it's tracking to chat"

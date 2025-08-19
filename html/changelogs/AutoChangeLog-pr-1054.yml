@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New map that opens a tacmap scan of the groundmap rather than a wiki-page image"
+  - spellcheck: "Sorted a few Taipei typos in the map code"
