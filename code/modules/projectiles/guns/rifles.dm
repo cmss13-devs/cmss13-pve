@@ -1663,7 +1663,7 @@
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m49a/pve
 	name = "\improper M49A6 battle rifle"
-	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
+	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with standard & regular HV ammo."
 	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The A6 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
 	icon_state = "m49a"
@@ -1672,7 +1672,21 @@
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
-	current_mag = /obj/item/ammo_magazine/rifle/m49a/pve
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/m49a,
+		/obj/item/ammo_magazine/rifle/m49a/ap,
+		/obj/item/ammo_magazine/rifle/m49a/ext,
+		/obj/item/ammo_magazine/rifle/m49a/rubber,
+		/obj/item/ammo_magazine/rifle/m49a/incendiary,
+		/obj/item/ammo_magazine/rifle/m49a/heap,
+		/obj/item/ammo_magazine/rifle/m49a/penetrating,
+		/obj/item/ammo_magazine/rifle/m49a/custom,
+		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+	)
+
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
@@ -1682,6 +1696,7 @@
 /obj/item/weapon/gun/rifle/m49a/pve/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1 //Chunky barrel for better muzzle velocity, but not as good as the custom one
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 	recoil = RECOIL_AMOUNT_TIER_3
 

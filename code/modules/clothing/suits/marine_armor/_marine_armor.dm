@@ -590,7 +590,6 @@
 	armor_bomb = CLOTHING_ARMOR_HIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	specialty = "M3-T light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	unacidable = TRUE
 
 /obj/item/clothing/suit/storage/marine/M3S
@@ -600,7 +599,6 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	specialty = "M3-S light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
 	unacidable = TRUE
 
 //==================Combat Correspondent==================\\
