@@ -284,7 +284,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/ammo_magazine/sniper/rmc,
 		/obj/item/ammo_magazine/sniper/rmc,
 		/obj/item/weapon/gun/rifle/sniper/rmc,
-		/obj/item/clothing/glasses/night/m42_night_goggles/rmc,
+		/obj/item/clothing/glasses/night/m42_hms/rmc,
 		/obj/item/attachable/bipod,
 	)
 
@@ -297,7 +297,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/weapon/gun/rifle/sniper/M42A/silenced,
-		/obj/item/clothing/glasses/night/m42_night_goggles/rmc,
+		/obj/item/clothing/glasses/night/m42_hms/rmc,
 		/obj/item/attachable/bipod,
 	)
 

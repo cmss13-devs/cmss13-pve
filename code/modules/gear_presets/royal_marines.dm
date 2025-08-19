@@ -199,7 +199,7 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m42_night_goggles/rmc(new_human), WEAR_EYES)
+	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m42_hms/rmc(new_human), WEAR_EYES)
 	//head
 	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
