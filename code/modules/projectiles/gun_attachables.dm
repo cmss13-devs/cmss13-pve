@@ -1297,6 +1297,24 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
 
+//Mini-scope for the scout rifle
+
+/obj/item/attachable/scope/mini/scout
+	name = "M49A targeting relay"
+	desc = "An ARMAT M49A5 optical interface, type designation AN/PVX-56. Wirelessly links to the operators M49A eyepiece to give a one-to-one boresighted picture of where the rifle is aiming. Includes a Computer-Calculated-Impact-Point system for precision shooting."
+	icon_state = "m49a_custom_scope"
+	attach_icon = "m49a_custom_scope"
+	zoom_offset = 7
+	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+
+/obj/item/attachable/scope/mini/scout/activate_attachment(obj/item/weapon/gun/G, mob/living/carbon/user, turn_off)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		if(!istype(human.glasses, /obj/item/clothing/glasses/night/M49A))
+			to_chat(human, SPAN_WARNING("You can't use the targeting relay without the battle-sight eyepiece!"))
+			return
+	..()
+
 // PVE tech-man compliant mini scope, planned to have togglable vision modes for shitty night-vision when scoped in
 
 /obj/item/attachable/scope/pve
@@ -2595,21 +2613,6 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/obj/item/attachable/m49a_barrel_custom/New()
-	..()
-	select_gamemode_skin(type)
-
-/obj/item/attachable/m49a_barrel_custom/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
-	. = ..()
-	var/new_attach_icon
-	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
-		if("snow")
-			attach_icon = new_attach_icon ? new_attach_icon : "s_" + attach_icon
-		if("desert")
-			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
-		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
-
 /obj/item/attachable/m49a_barrel/pve
 	name = "M49A6 muzzle break"
 	icon_state = "pve_m49a_barrel"
@@ -3660,6 +3663,7 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
 	slot = "under"
+	pixel_shift_y = 18
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
 	gun_activate_sound = 'sound/weapons/handling/gun_u7_activate.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
