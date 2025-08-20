@@ -815,21 +815,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper M10 corpsman helmet"
 	desc = "M10 combat helmet issued to marine hospital corpsmen. Has a red cross painted on its front for attracting the injured and snipers' attentions alike."
 	icon_state = "med_helmet"
-	specialty = "M10 pattern medic"
+	flags_atom = NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 
 /obj/item/clothing/head/helmet/marine/medic/white
 	name = "\improper M10 white corpsman helmet"
 	desc = "An M10 marine helmet version worn by marine hospital corpsmen. Painted in medical white and has white cross in a red square painted on its front."
 	icon_state = "med_helmet_white"
-	specialty = "M10 pattern medic white"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/medic/plain
 	desc = "M10 combat helmet issued to marine hospital corpsmen. Identical to the standard marine M10, with the exception of the integrated medical optic sight."
 	icon_state = "helmet"
-	specialty = "M10 pattern medic"
 
 /obj/item/clothing/head/helmet/marine/covert
 	name = "\improper M10 covert helmet"
@@ -842,15 +841,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	specialty = "M10 pattern covert"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/leader
 	name = "\improper M09 pattern helmet"
 	desc = "Back issue model of an older combat helmet. Uncomfortable, but the added protection is supposedly worth it. It's been wired up the same, so it still ties into the sensor matrix fine."
 	icon_state = "sl_helmet"
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "M11 pattern marine"
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto
 	name = "\improper M12 pattern helmet"
@@ -859,7 +857,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "io"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "M12 pattern"
+	flags_atom = NO_NAME_OVERRIDE
 	max_inserted_visors = 2
 
 /obj/item/clothing/head/helmet/marine/rto/intel
@@ -881,7 +879,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	unacidable = TRUE
 	anti_hug = 6
 	force = 20
-	specialty = "B18"
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"
@@ -897,25 +895,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	unacidable = TRUE
 	anti_hug = 6
-	specialty = "M3-G4 grenadier"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/scout
 	name = "\improper M10-S light helmet"
 	icon_state = "scout_helmet"
 	desc = "M10 fitted with thermal camouflage and improved radar absorbent shell. Issued to USCMC Scouts."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	specialty = "M3-S light"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/pyro
 	name = "\improper M10-P pyrotechnician helmet"
 	icon_state = "pyro_helmet"
 	desc = "M10 variant with complete facial coverage and internal breathing apparatus. Environmentally sealed with a full fitting of polymer compounds to resist burning."
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
-	specialty = "M35 pyrotechnician"
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/M3T
 	name = "\improper M10-R bombardier helmet"
@@ -923,7 +920,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "M10 combat helmet fitted with enhanced suspension liner and improved hearing protection, for firing high-concussion weapons like the M5 RPG. Also issued to Vehicle Crewmen."
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	armor_bomb = CLOTHING_ARMOR_HIGH
-	specialty = "M3-R bombardier"
+	flags_atom = NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	unacidable = TRUE
@@ -965,7 +962,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_GARB_OVERLAY
-	specialty = "M10 ghillie"
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/CO
 	name = "\improper M10 pattern commanding officer helmet"
@@ -985,7 +982,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A special variant of the M10 Pattern Helmet worn by the Military Police of the USCM. Whether you're facing a crime syndicate or a mutiny, this bucket will keep your brains intact."
 	icon_state = "mp_helmet"
 	item_state = "mp_helmet"
-	specialty = "M10 pattern military police"
+	flags_atom = NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor/security)
 	flags_atom = NO_SNOW_TYPE
 
@@ -994,14 +991,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A well-crafted variant of the M10 Helmet typically distributed to Chief MPs. Useful for letting your men know who is in charge."
 	icon_state = "cmp_helmet"
 	item_state = "cmp_helmet"
-	specialty = "M10 pattern chief MP"
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/MP/SO
-	name = "\improper M10 pattern Officer Helmet"
+	name = "\improper M10 pattern command helmet"
 	desc = "A special variant of the M10 Pattern Helmet worn by Officers of the USCM, attracting the attention of the grunts and sniper fire alike."
 	icon_state = "helmet"
 	item_state = "helmet"
-	specialty = "M10 pattern officer"
+	flags_atom = NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
 
 /obj/item/clothing/head/helmet/marine/MP/provost/marshal
@@ -1020,8 +1017,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
-	specialty = "M10 pattern SOF"
-	flags_atom = NO_SNOW_TYPE
+	flags_atom = NO_NAME_OVERRIDE
 	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/security)
 	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider
 
