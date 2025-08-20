@@ -1071,7 +1071,7 @@
 	var/obj/item/weapon/current_blade
 	var/sheatheSound = 'sound/handling/holsterin.ogg'
 	var/drawSound = 'sound/handling/holsterout.ogg'
-	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
+	storage_flags = STORAGE_ALLOW_QUICKDRAW
 	can_hold = list(
 		/obj/item/weapon/knife/marine/bowie,
 		/obj/item/weapon/knife/marine/bowie/kukri,
@@ -1088,6 +1088,7 @@
 	var/obj/item/storage/internal/accessory/sheath/S = hold
 	if(S.current_blade && ishuman(user) && (loc == user || has_suit))
 		S.current_blade.attack_hand(user)
+		return
 
 	..()
 

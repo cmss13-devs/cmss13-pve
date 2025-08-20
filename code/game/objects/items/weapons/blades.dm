@@ -726,6 +726,7 @@
 	name = "\improper Kukri utility knife"
 	icon_state = "knife_kukri"
 	desc = "A large, recurved fighting knife originating from the Indian subcontinent. Traditionally wielded by the Gurkhas of Nepal, it's rare to see one in the hands of outsiders."
+	flags_equip_slot = SLOT_WAIST
 
 /obj/item/weapon/knife/marine/sas
 	name = "\improper Fairbairn-Sykes fighting knife"

@@ -28,7 +28,7 @@
 
 /datum/ammo/bullet/smg/squash
 	name = "squash-head submachinegun bullet"
-	damage = 26
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_3
 	effective_range_max = 7
 	damage_falloff = DAMAGE_FALLOFF_TIER_3
