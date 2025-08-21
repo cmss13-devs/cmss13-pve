@@ -1207,9 +1207,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/ammo_box/magazine/misc/mre,
-		/obj/item/storage/firstaid/regular,
-		/obj/item/storage/firstaid/adv,
-		/obj/item/storage/firstaid/surgical,
+		/obj/item/storage/firstaid/softpack/regular,
+		/obj/item/storage/firstaid/softpack/adv,
+		/obj/item/storage/firstaid/softpack/surgical,
 		/obj/item/device/defibrillator/compact,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
