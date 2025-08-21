@@ -1,0 +1,5 @@
+author: "lordloko"
+delete-after: True
+changes:
+  - rscadd: "Added more lore tidbits. 63 in total."
+  - spellcheck: "Fixes some typos and wrong information from old tidbits"

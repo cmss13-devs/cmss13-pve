@@ -5338,10 +5338,12 @@
 "LB" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/secure_data{
-	pixel_x = -6
+	pixel_x = -6;
+	req_access = list()
 	},
 /obj/structure/machinery/computer/skills{
-	pixel_x = 11
+	pixel_x = 11;
+	req_one_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
