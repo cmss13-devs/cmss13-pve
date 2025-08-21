@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Weed nodes are no longer visible to players nor distinctly named"
