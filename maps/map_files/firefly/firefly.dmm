@@ -129,7 +129,6 @@
 	},
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/fancy/cigar{
-	pixel_x = 0;
 	pixel_y = 2
 	},
 /obj/item/clothing/head/beret/pmc,
@@ -299,6 +298,10 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/helmet_visor/medical/advanced,
 /obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/firstaid/softpack{
+	pixel_y = 12;
+	pixel_x = 7
+	},
 /turf/open/floor/corsat/green/northeast,
 /area/firefly/medical)
 "em" = (
@@ -1053,7 +1056,6 @@
 "qo" = (
 /obj/item/ammo_box/magazine/mk1/large,
 /obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = 0;
 	pixel_y = 6
 	},
 /turf/open/floor/corsat/plate,
