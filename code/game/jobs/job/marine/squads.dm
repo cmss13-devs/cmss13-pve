@@ -201,8 +201,9 @@
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
 	chat_color = "#ffe650"
-	access = list(ACCESS_MARINE_BRAVO)
+	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = BRAVO_FREQ
+	use_stripe_overlay = FALSE
 	minimap_color = MINIMAP_SQUAD_BRAVO
 	usable = FALSE
 
@@ -286,6 +287,7 @@
 	chat_color = "#8f5e30"
 	minimap_color = "#8f5e30"
 	squad_type = "Squad"
+	access = list(ACCESS_MARINE_ALPHA)
 	usable = FALSE
 	locked = FALSE
 
