@@ -128,6 +128,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Balaclava, green"
 	path = /obj/item/clothing/mask/balaclava/tactical
 
+/datum/gear/mask/balaclava_threehole
+	display_name = "Balaclava, three-hole"
+	path = /obj/item/clothing/mask/balaclava/threehole
+	allowed_origins = UPP_ORIGINS
+
 /datum/gear/mask/coif
 	display_name = "Coif"
 	path = /obj/item/clothing/mask/rebreather/scarf
@@ -338,7 +343,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/headwear/uscm/cap_operations2
 	display_name = "USCM Operations Cap, Tan"
-	path = /obj/item/clothing/head/cmcap/khaki
+	path = /obj/item/clothing/head/cmcap/bridge/tan
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
