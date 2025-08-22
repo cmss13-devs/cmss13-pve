@@ -469,11 +469,22 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
+/obj/item/clothing/accessory/patch/cmb/brazil_police
+	name = "Brazilian Colonial Military Police patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
+	icon_state = "brazilpolicepatch"
+
 //Flag patches
 /obj/item/clothing/accessory/patch/ua
 	name = "UA flag patch"
 	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
 	icon_state = "uaflagpatch"
+
+/obj/item/clothing/accessory/patch/brazil
+
+	name = "Brazilian flag patch"
+	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
+	icon_state = "brazilpatch"
 
 /obj/item/clothing/accessory/patch/usa
 	name = "USA flag patch"
@@ -1397,6 +1408,42 @@
 	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
 	icon_state = "usflag"
 	item_state = "usflag"
+
+/obj/item/clothing/accessory/paint/target
+	name = "target armor paint"
+	desc = "A set of paint tones to etch a target pattern into a Marine's armor."
+	icon_state = "target"
+	item_state = "target"
+
+/obj/item/clothing/accessory/paint/alcoholism
+	name = "smileyface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor."
+	icon_state = "smileyface"
+	item_state = "smileyface"
+
+/obj/item/clothing/accessory/paint/melancholy
+	name = "neutralface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor, though this one carries indifferent energy."
+	icon_state = "neutralface"
+	item_state = "neutralface"
+
+/obj/item/clothing/accessory/paint/cross
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a religious symbol into a Marine's armor."
+	icon_state = "cross"
+	item_state = "cross"
+
+/obj/item/clothing/accessory/paint/inscription
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
+	icon_state = "inscription"
+	item_state = "inscription"
+
+/obj/item/clothing/accessory/paint/fire
+	name = "flames armor paint"
+	desc = "A set of paint tones to etch straight heat into a Marine's armor."
+	icon_state = "mixtape"
+	item_state = "mixtape"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
