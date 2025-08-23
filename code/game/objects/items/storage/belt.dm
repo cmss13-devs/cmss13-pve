@@ -2324,7 +2324,7 @@
 			"icon_y" = -6))
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
-		/obj/item/weapon/gun/revolver/m44,
+		/obj/item/weapon/gun/revolver,
 		/obj/item/weapon/gun/flare,
 		/obj/item/mortar_shell,
 		/obj/item/storage/box/packet/rmc/mini,
