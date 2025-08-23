@@ -162,7 +162,7 @@
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_pkp"
 	overlay_content = "_type71_heap"
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer
 	bullet_amount = 1500
 	max_bullet_amount = 1500
 	caliber = "10x27mm"

@@ -4959,21 +4959,20 @@
 	pixel_x = -8;
 	can_block_movement = 0
 	},
+/obj/item/weapon/gun/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
-/obj/item/weapon/gun/pkp/iff{
-	current_mag = null
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/clothing/suit/marine/smartgunner/upp,
+/obj/item/smartgun_battery/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ld" = (
@@ -5015,15 +5014,14 @@
 	pixel_x = -8;
 	can_block_movement = 0
 	},
-/obj/item/weapon/gun/pkp/iff{
-	current_mag = null
-	},
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
-/obj/item/ammo_magazine/pkp,
+/obj/item/weapon/gun/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/storage/belt/gun/smartgunner/upp,
 /obj/item/clothing/suit/marine/smartgunner/upp,
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
+/obj/item/smartgun_battery/upp,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ll" = (
