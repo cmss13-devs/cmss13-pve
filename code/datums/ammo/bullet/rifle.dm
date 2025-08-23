@@ -496,6 +496,11 @@
 	stamina_damage = 20
 	shrapnel_chance = 0
 
+/datum/ammo/bullet/rifle/upp/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+
 /datum/ammo/bullet/rifle/upp/ap
 	name = "armor-piercing 10x27 bullet"
 	damage = 43
@@ -519,36 +524,36 @@
 	penetration = ARMOR_PENETRATION_TIER_8
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3
 
-/datum/ammo/bullet/rifle/upp/heap/mg
+/datum/ammo/bullet/rifle/upp/heap/tracer
 	icon_state = "bullet_green"
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_GREEN
 
-/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer
+/datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer
 	name = "high-explosive armor-piercing magnesium tracer 10x27 bullet"
 
-/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/set_bullet_traits()
+/datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, stacks = 1, reagent = /datum/reagent/lithium)
 	))
 
-/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer/on_hit_mob(mob/M, obj/projectile/P)
 	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(get_turf(M), 35)
 	light.light_color = COLOR_GREEN
 
-/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_turf(turf/T, obj/projectile/P)
+/datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer/on_hit_turf(turf/T, obj/projectile/P)
 	. = ..()
 	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(T, 35)
 	light.light_color = COLOR_GREEN
 
-/datum/ammo/bullet/rifle/upp/heap/mg/super_tracer/on_hit_obj(obj/O, obj/projectile/P)
+/datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer/on_hit_obj(obj/O, obj/projectile/P)
 	. = ..()
 	var/obj/item/device/flashlight/flare/on/illumination/chemical/light = new /obj/item/device/flashlight/flare/on/illumination/chemical(get_turf(O), 35)
 	light.light_color = COLOR_GREEN
 
 
-/datum/ammo/bullet/rifle/upp/heap/mg/penetrating
+/datum/ammo/bullet/rifle/upp/heap/tracer/penetrating
 	name = "wall-penerating 10x27 bullet"
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_10
@@ -559,7 +564,7 @@
 	//damage_falloff = DAMAGE_FALLOFF_TIER_4
 	//max_range = /datum/ammo/bullet/rifle/upp/heap/mg::max_range*2
 
-/datum/ammo/bullet/rifle/upp/heap/mg/penetrating/set_bullet_traits()
+/datum/ammo/bullet/rifle/upp/heap/tracer/penetrating/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak/pkp)
