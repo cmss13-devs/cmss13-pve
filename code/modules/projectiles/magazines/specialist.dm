@@ -163,13 +163,6 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
 
-/obj/item/ammo_magazine/smartgun/holo_targetting
-	name = "holotargetting smartgun drum"
-	desc = "Holotargetting rounds for use in the royal marines commando L56A2 smartgun."
-	icon_state = "m56_drum"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
-	gun_type = /obj/item/weapon/gun/smartgun/rmc
-
 /obj/item/ammo_magazine/smartgun/upp
 	name = "automated machinegun drum"
 	caliber = "12.7x40mm"
