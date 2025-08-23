@@ -52,6 +52,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/bluecollar/brazilian
+	name = "Brazilian Civilian Colonist, Blue-Collar"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 
 /datum/equipment_preset/colonist/bluecollar/japanese
 	name = "TWE Civilian Colonist, Blue-Collar"
@@ -89,6 +94,11 @@
 	languages = list(LANGUAGE_SPANISH)
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 
+/datum/equipment_preset/colonist/miner/brazilian
+	name = "Brazilian Civilian Colonist, Blue-Collar (Miner)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/miner/japanese
 	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_JAPANESE)
@@ -123,6 +133,11 @@
 	name = "LatAm Colonist, Blue-Collar (Construction)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/construction/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Construction)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/construction/japanese
 	name = "TWE Colonist, Blue-Collar (Construction)"
@@ -174,6 +189,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/roughneck/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Roughneck)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/roughneck/japanese
 	name = "TWE Colonist, Blue-Collar (Roughneck)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -209,6 +229,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/cook/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Cook)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/cook/japanese
 	name = "TWE Colonist, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -242,6 +267,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/chef/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Chef)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/chef/japanese
 	name = "TWE Colonist, Blue-Collar (Chef)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -274,6 +304,11 @@
 	name = "LatAm Colonist, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/priest/brazilian
+	name = "Brazilian Colonist, Priest"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/priest/japanese
 	name = "TWE Colonist, Priest"
@@ -317,6 +352,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/whitecollar/brazilian
+	name = "Brazilian Civilian Colonist, White-Collar"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/whitecollar/japanese
 	name = "TWE Civilian Colonist, White-Collar"
 	ethnicity = JAPANESE_ETHNICITY
@@ -358,7 +398,12 @@
 /datum/equipment_preset/colonist/whitecollar/exec/spanish
 	name = "LatAm Civilian Colonist, White-Collar (Corporate Exec)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
-	languages = list(LANGUAGE_SPANISH)
+	languages = list(LANGUAGE_SPANISH,LANGUAGE_ENGLISH, LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/whitecollar/exec/spanish
+	name = "Brazilian Civilian Colonist, White-Collar (Corporate Exec)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar/exec/japanese
 	name = "TWE Civilian Colonist, White-Collar (Corporate Exec)"
@@ -413,12 +458,17 @@
 /datum/equipment_preset/colonist/researcher/spanish
 	name = "LatAm Civilian Researcher"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
-	languages = list(LANGUAGE_SPANISH)
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/colonist/researcher/brazilian
+	name = "Brazilian Civilian Researcher"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/researcher/japanese
 	name = "TWE Civilian Researcher"
 	ethnicity = JAPANESE_ETHNICITY
-	languages = list(LANGUAGE_JAPANESE)
+	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/colonist/doctor
 	name = "US Civilian Doctor"
@@ -449,6 +499,11 @@
 	name = "LatAm Civilian Doctor"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/doctor/brazilian
+	name = "Brazilian Civilian Doctor"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/doctor/japanese
 	name = "TWE Civilian Doctor"
@@ -485,6 +540,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/doctor/scrubs/brazilian
+	name = "Brazilian Civilian Doctor, Scrubs"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/doctor/scrubs/japanese
 	name = "TWE Civilian Doctor, Scrubs"
 	ethnicity = JAPANESE_ETHNICITY
@@ -517,6 +577,11 @@
 	name = "LatAm Civilian Administrator"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/admin/brazilian
+	name = "Brazilian Civilian Administrator"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/admin/japanese
 	name = "TWE Civilian Administrator"
@@ -559,6 +624,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/cargo/brazilian
+	name = "Brazilian Logistics Worker"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/cargo/japanese
 	name = "TWE Logistics Worker"
 	ethnicity = JAPANESE_ETHNICITY
@@ -596,6 +666,11 @@
 	name = "LatAm Maintenance Technician"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/technician/brazilian
+	name = "Brazilian Maintenance Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/technician/japanese
 	name = "TWE Maintenance Technician"
@@ -648,6 +723,12 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+
+/datum/equipment_preset/colonist/engineer/brazilian
+	name = "Brazilian Civilian Engineer"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/engineer/japanese
 	name = "TWE Civilian Engineer"
 	ethnicity = JAPANESE_ETHNICITY
@@ -679,6 +760,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/operations/brazilian
+	name = "Brazilian Civilian Operations Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/operations/japanese
 	name = "TWE Civilian Operations Technician"
 	ethnicity = JAPANESE_ETHNICITY
@@ -706,6 +792,11 @@
 	name = "LatAm Prisoner"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/prisoner/brazilian
+	name = "Brazilian Prisoner"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/prisoner/japanese
 	name = "TWE Prisoner"
@@ -748,6 +839,17 @@
 	name = "LatAm Civilian Security Guard, Generic"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/brazilian
+	name = "Brazilian Civilian Security Guard, Generic"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/grey(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
 
 /datum/equipment_preset/colonist/security/weyland
 	name = "US Civilian Security Guard, Wey-Yu"
@@ -955,6 +1057,18 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/prison/brazilian
+	name = "Brazilian Federal Prison Guard"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/prison/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
+
+
 //UACG
 
 /datum/equipment_preset/colonist/security/guard
@@ -1127,9 +1241,18 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/brazilian
+	name = "Brazilian Colonial Guard"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
 /datum/equipment_preset/colonist/security/guard/marksman
 	name = "US Colonial Guard (Marksman)"
-
 
 /datum/equipment_preset/colonist/security/guard/marksman/load_gear(mob/living/carbon/human/new_human)
 
@@ -1167,6 +1290,16 @@
 	name = "LatAm Colonial Guard Marksman"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/marksman/brazilian
+	name = "Brazilian Colonial Guard Marksman"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/marksman/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
 
 /datum/equipment_preset/colonist/security/guard/medic
 	name = "US Colonial Guard Medic"
@@ -1224,6 +1357,15 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/medic/brazilian
+	name = "Brazilian Colonial Guard Medic"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/medic/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
 
 /datum/equipment_preset/colonist/security/guard/tech
 	name = "US Colonial Guard Technician"
@@ -1285,6 +1427,16 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/tech/brazilian
+	name = "Brazilian Colonial Guard Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/tech/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
 /datum/equipment_preset/colonist/security/guard/nco
 	name = "US Colonial Guard Unit Leader"
 	assignment = "Colonial Militiaman Unit Leader"
@@ -1341,6 +1493,16 @@
 	name = "LatAm Colonial Guard Unit Leader"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/nco/brazilian
+	name = "Brazilian Colonial Guard Unit Leader"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/nco/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
 
 /datum/equipment_preset/colonist/security/guard/co
 	name = "US Colonial Guard Officer"
@@ -1429,7 +1591,17 @@
 
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+/datum/equipment_preset/colonist/security/guard/co/brazilian
+	name = "Brazilian Colonial Guard Officer"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/co/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
 
 #undef AMERICAN_ETHNICITY
 #undef LATIN_AMERICAN_ETHNICITY
 #undef JAPANESE_ETHNICITY
+#undef BRAZILIAN_ETHNICITY

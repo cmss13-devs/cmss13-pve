@@ -71,10 +71,10 @@
 
 /obj/item/clothing/mask/balaclava/threehole
 	name = "three-hole balaclava"
-	desc = "A basic three-hole balaclava. You look like a total goon wearing this."
+	desc = "The preferred mask of every proper henchman, goon, thug, or villain worth their salt."
+	icon_state = "balaclava_threehole"
+	item_state = "balaclava_threehole"
 	flags_inventory = ALLOWREBREATH|ALLOWCPR
-	icon_state = "threehole"
-	item_state = "threehole"
 
 /obj/item/clothing/mask/luchador
 	name = "Luchador Mask"

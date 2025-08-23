@@ -215,24 +215,6 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
 
-/datum/ammo/bullet/rifle/heavy/du
-	name = "depleted uranium 10x28 bullet"
-
-	damage = 60
-	accurate_range_min = 4
-	penetration = ARMOR_PENETRATION_TIER_5
-	scatter = -SCATTER_AMOUNT_TIER_8
-
-/datum/ammo/bullet/rifle/heavy/du/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
-	))
-
-/datum/ammo/bullet/rifle/heavy/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
-	target.AddComponent(/datum/component/status_effect/toxic_buildup)
-	knockback(target, fired_proj, max_range = 2)
-
 // Terminator Smartgun
 
 /datum/ammo/bullet/rifle/heavy/dirty
@@ -381,7 +363,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accurate_range_min = 4
 
-	damage = 55
+	damage = 65
 	scatter = -SCATTER_AMOUNT_TIER_8
 	penetration= ARMOR_PENETRATION_TIER_7
 	shell_speed = AMMO_SPEED_TIER_7
@@ -390,41 +372,64 @@
 	name = "high velocity incendiary 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 40
-	accuracy = HIT_ACCURACY_TIER_4
+	damage = 50
 	penetration= ARMOR_PENETRATION_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/spec/incendiary/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/high_damage)
 	))
 
-/datum/ammo/bullet/rifle/heavy/spec/impact
-	name = "high velocity impact 10x28 bullet"
+/datum/ammo/bullet/rifle/heavy/spec/explosive
+	name = "high velocity explosive 10x28 bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC
 
-	damage = 40
-	accuracy = -HIT_ACCURACY_TIER_2
-	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 50
+	accuracy = HIT_ACCURACY_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_5
+	damage_armor_punch = 5
 
-/datum/ammo/bullet/rifle/heavy/spec/impact/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 32) // Can knockback basically at max range max range is 24 tiles...
-
-/datum/ammo/bullet/rifle/heavy/spec/impact/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
-	if(iscarbonsizexeno(living_mob))
-		var/mob/living/carbon/xenomorph/target = living_mob
-		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(0.5) // purely for visual effect, noone actually cares
-		target.Stun(0.5)
-		target.apply_effect(2, SUPERSLOW)
-		target.apply_effect(5, SLOW)
+/datum/ammo/bullet/rifle/heavy/spec/explosive/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 6) // Can knockback out to 1/4th-range
+	var/slow_duration = 7
+	var/mob/living/L = M
+	if(isxeno(M))
+		var/mob/living/carbon/xenomorph/target = M
+		if(target.mob_size >= MOB_SIZE_BIG)
+			slow_duration = 2 // Crushers & such are still a threat, recovering much quicker
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 	else
-		if(!isyautja(living_mob)) //Not predators.
-			living_mob.apply_effect(1, SUPERSLOW)
-			living_mob.apply_effect(2, SLOW)
-			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
-		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
+		M.adjust_effect(slow_duration, SUPERSLOW)
+		burst(get_turf(M),P,damage_type, 2 , 2)
+		burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/rifle/heavy/spec/explosive/on_near_target(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 4)
+	burst(T,P,damage_type, 1 , 2, 0)
+	return 1
+
+/datum/ammo/bullet/rifle/heavy/spec/du
+	name = "high velocity depleted uranium 10x28 bullet"
+
+	damage = 50 //Overall same damage as base rounds, but 15 tox DoT
+	penetration = ARMOR_PENETRATION_TIER_10 //DU's a heavy armour-piercing kind of material
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = -SCATTER_AMOUNT_TIER_8
+
+/datum/ammo/bullet/rifle/heavy/spec/du/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/rifle/heavy/spec/du/on_hit_mob(mob/target, obj/projectile/fired_proj)
+	target.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
+	knockback(target, fired_proj, 16) // Can knockback out to 2/3rds-range
+	if(target.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = target
+		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 /datum/ammo/bullet/rifle/heavy/iff/set_bullet_traits()
 	. = ..()
