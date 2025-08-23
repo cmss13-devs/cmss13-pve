@@ -188,21 +188,21 @@
 /obj/item/ammo_box/magazine/m49a/a19
 	name = "magazine box (A19 HV M49A x 16)"
 	overlay_gun_type = "_a19"
-	overlay_ammo_type = "_hv"
-	overlay_content = "_hv"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
 	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom
 
 /obj/item/ammo_box/magazine/m49a/a19/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m49a/a19/impact
-	name = "magazine box (A19 Impact M49A x 16)"
-	overlay_ammo_type = "_impact"
-	overlay_content = "_impact"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/impact
+/obj/item/ammo_box/magazine/m49a/a19/explosive
+	name = "magazine box (A19 Explosive M49A x 16)"
+	overlay_ammo_type = "_expl"
+	overlay_content = "_expl"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/explosive
 
-/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+/obj/item/ammo_box/magazine/m49a/a19/explosive/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m49a/a19/incen
@@ -218,7 +218,7 @@
 	name = "magazine box (A19 DU M49A x 16)"
 	overlay_ammo_type = "_toxin"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 /obj/item/ammo_box/magazine/m49a/a19/pve/empty
 	empty = TRUE
@@ -450,6 +450,15 @@
 /obj/item/ammo_box/magazine/type71/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/type71/rubber
+	name = "magazine box (Type71 Rubber x 14)"
+	overlay_ammo_type = "_type71_rubber"
+	overlay_content = "_type71_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/type71/rubber
+
+/obj/item/ammo_box/magazine/type71/rubber/empty
+	empty = TRUE
+
 /obj/item/ammo_box/magazine/type71/ap
 	name = "magazine box (Type71 AP x 10)"
 	overlay_ammo_type = "_type71_ap"
@@ -479,7 +488,8 @@
 	flags_equip_slot = null
 	magazine_type = /obj/item/ammo_magazine/rifle/type71
 	num_of_magazines = 32
-	var/move_delay_mult = 2
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
 
 /obj/item/ammo_box/magazine/type71/large/pickup(mob/user, silent)
 	. = ..()
@@ -497,6 +507,24 @@
 /obj/item/ammo_box/magazine/type71/large/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/type71/large/ap
+	name = "magazine box (Type 71 AP x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/type71/ap
+
+/obj/item/ammo_box/magazine/type71/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type71/large/heap
+	name = "magazine box (Type 71 HEAP x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/type71/heap
+
+/obj/item/ammo_box/magazine/type71/large/heap/empty
+	empty = TRUE
+
 //-----------------------AG80 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/ag80
@@ -509,10 +537,62 @@
 	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
 
+/obj/item/ammo_box/magazine/ag80/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ag80/rubber
+	name = "magazine box (AG80 Rubber x 10)"
+	overlay_ammo_type = "_type71_rubber"
+	overlay_content = "_type71_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/rubber
+
+/obj/item/ammo_box/magazine/ag80/rubber/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ag80/ap
+	name = "magazine box (AG80 AP x 10)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/ap
+
+/obj/item/ammo_box/magazine/ag80/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ag80/heap
+	name = "magazine box (AG80 HEAP x 10)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/heap
+
+/obj/item/ammo_box/magazine/ag80/heap/empty
+	empty = TRUE
+
+
 //-----------------------LARGE AG80 Rifle Mag Boxes-----------------------
 /obj/item/ammo_box/magazine/type71/large/ag80
 	name = "magazine box (AG80 x 32)"
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80
+
+/obj/item/ammo_box/magazine/type71/large/ag80/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type71/large/ag80/ap
+	name = "magazine box (AG80 AP x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/ap
+
+/obj/item/ammo_box/magazine/type71/large/ag80/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type71/large/ag80/heap
+	name = "magazine box (AG80 HEAP x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/ag80/heap
+
+/obj/item/ammo_box/magazine/type71/large/ag80/heap/empty
+	empty = TRUE
 
 //-----------------------Nailgun Mag Box-----------------------
 
@@ -704,7 +784,8 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1
 	num_of_magazines = 32
 	allowed_magazines = list(/obj/item/ammo_magazine/rifle/m41aMK1/recon)
-	var/move_delay_mult = 2
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
 
 /obj/item/ammo_box/magazine/mk1/large/pickup(mob/user, silent)
 	. = ..()
@@ -957,6 +1038,24 @@
 	magazine_type = /obj/item/ammo_magazine/smg/bizon
 
 /obj/item/ammo_box/magazine/type64/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type64/ap
+	name = "magazine box (Type64 AP Bizon x 10)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/smg/bizon/ap
+
+/obj/item/ammo_box/magazine/type64/ap
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/type64/heap
+	name = "magazine box (Type64 HEAP Bizon x 10)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/smg/bizon/heap
+
+/obj/item/ammo_box/magazine/type64/heap
 	empty = TRUE
 
 //-----------------------ZhNK-72 Revolver Speedloader Box-----------------------
