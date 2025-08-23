@@ -497,6 +497,17 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
+/obj/item/attachable/upp_smartgun
+	name = "RFVS-37 barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "rfvs37_barrel"
+	attach_icon = "rfvs37_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
 /obj/item/attachable/sniperbarrel
 	name = "sniper barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
