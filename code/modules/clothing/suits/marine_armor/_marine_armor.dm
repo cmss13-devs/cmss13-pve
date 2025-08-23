@@ -634,6 +634,13 @@
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/storage/marine/light/old
+	name = "M59 body armor"
+	desc = "Simple USCMC armored vest, featuring liquid-armor packs, made to protect the troops from incoming projectiles up to intermediate cartridges."
+	icon_state = "oldmarinevest"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
+
 //===========================//CUSTOM ARMOR\\================================\\
 //=======================================================================\\
 //base armor, copies everything from the storage armor for the same traits

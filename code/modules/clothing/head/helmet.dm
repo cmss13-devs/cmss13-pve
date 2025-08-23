@@ -854,6 +854,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M11 pattern marine"
 
+/obj/item/clothing/head/helmet/marine/old
+	name = "\improper M4 pattern helmet"
+	desc = "Older model of USCMC-issued helmet."
+	icon_state = "old_helmet"
+	flags_atom = NO_SNOW_TYPE
+	specialty = "M4 pattern marine"
+
 /obj/item/clothing/head/helmet/marine/rto
 	name = "\improper M12 pattern helmet"
 	desc = "Failed procurement, limited run successor to the old M10 Ballistic Helmet. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
