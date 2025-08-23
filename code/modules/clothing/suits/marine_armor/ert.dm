@@ -279,6 +279,39 @@
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	item_state_slots = list(WEAR_JACKET = "fil_aux")
 
+/obj/item/clothing/suit/storage/marine/veteran/fil/fire
+	name = "\improper QT-10-IF Heavy Incinerator armor"
+	desc = "The standard body armor system of the French Armed Forces. This one has been modded to have increased protection against most forms of damage, mainly towards fire and similar sources of heat."
+	icon_state = "fil_fire"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	fire_intensity_resistance = BURN_LEVEL_TIER_1
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	item_state_slots = list(WEAR_JACKET = "fil_fire")
+
+/obj/item/clothing/suit/storage/marine/veteran/fil/fire/equipped(mob/user, slot)
+	if(slot == WEAR_JACKET)
+		RegisterSignal(user, COMSIG_LIVING_FLAMER_CROSSED, PROC_REF(flamer_fire_crossed_callback))
+	..()
+
+/obj/item/clothing/suit/storage/marine/veteran/fil/fire/dropped(mob/user)
+	UnregisterSignal(user, COMSIG_LIVING_FLAMER_CROSSED)
+	..()
+
+/obj/item/clothing/suit/storage/marine/veteran/fil/fire/proc/flamer_fire_crossed_callback(mob/living/L, datum/reagent/R)
+	SIGNAL_HANDLER
+
+	if(R.fire_penetrating)
+		return
+
+	return COMPONENT_NO_IGNITE
+
 //===========================//U.P.P\\================================\\
 //=====================================================================\\
 

@@ -39,5 +39,9 @@
 			hud_icon_state = "elite"
 		if(JOB_FIL_ELITE_SL)
 			hud_icon_state = "elite_sl"
+		if(JOB_FIL_FLAME)
+			hud_icon_state = "flamer"
+		if(JOB_FIL_FLAME_SL)
+			hud_icon_state = "flamer_sl"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "fil_[hud_icon_state]")

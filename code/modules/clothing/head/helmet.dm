@@ -1214,6 +1214,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = NO_FLAGS
 	flags_marine_helmet = NO_FLAGS
 
+/obj/item/clothing/head/helmet/marine/veteran/fil/fire
+	name = "\improper Burgonet-Ri Incinerator Variant"
+	icon_state = "fil_fire"
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+
 //==========================//UPP\\=================================\\
 //=======================================================================\\
 

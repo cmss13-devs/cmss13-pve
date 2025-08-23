@@ -917,3 +917,6 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+
+/obj/item/weapon/gun/pistol/pa76/ap
+	current_mag = /obj/item/ammo_magazine/pistol/pa76/ap

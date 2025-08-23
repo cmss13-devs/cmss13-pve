@@ -30,6 +30,14 @@
 /// FE1 - Commando Soldat Sergeant
 #define PAY_SHORT_FE2 "FE2"
 
+// ------------- INCINERATORS ---------------
+
+/// FE1 - Incinerator Soldat
+#define PAY_SHORT_FI1 "FI1"
+
+/// FE1 - Incinerator Soldat Sergeant
+#define PAY_SHORT_FI2 "FI2"
+
 // ------------- OFFICERS ---------------
 
 /// FO1 - Adjundant Secondary

@@ -66,6 +66,16 @@
 	desc = "The french FIL's most veteran units, equipped to lead air-to-ground assaults into rural locations, often using VTOLs and similar vehicles to fufill such operations. This one is a Squad Leader."
 	path = /datum/equipment_preset/fil/rifleman/commando/sl
 
+/datum/human_ai_equipment_preset/fil/rifle/incinerator
+	name = "FIL Heavy Incinerator"
+	desc = "The french FIL's Heavy Incinerators are masters of clearing out emplacements, with long-range D60 flamethrowers and heavy armor, they can be the beach-head to any assault."
+	path = /datum/equipment_preset/fil/rifleman/incinerator
+
+/datum/human_ai_equipment_preset/fil/rifle/incinerator/sl
+	name = "FIL Heavy Incinerator Leader"
+	desc = "The french FIL's Heavy Incinerators are masters of clearing out emplacements, with long-range D60 flamethrowers and heavy armor, they can be the beach-head to any assault. This one seems to be the Leader of a unit."
+	path = /datum/equipment_preset/fil/rifleman/incinerator/sl
+
 /datum/human_ai_equipment_preset/fil/rifle/lt/co
 	name = "FIL Commanding Officer"
 	desc = "The main leader of the Operation, whilst not equipped for combat they take a more strategic approach to an overall operation compared to the common field officer."

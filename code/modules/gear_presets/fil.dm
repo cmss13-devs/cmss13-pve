@@ -675,6 +675,68 @@
 
 //*****************************************************************************************************/
 
+/datum/equipment_preset/fil/rifleman/incinerator
+	name = "FIL Heavy Incinerator"
+	paygrades = list(PAY_SHORT_FI1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Incinerator"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "FIL Heavy Incinerator"
+	rank = JOB_FIL_FLAME
+	skills = /datum/skills/pfc/recon
+	faction = FACTION_FIL
+
+/datum/equipment_preset/fil/rifleman/incinerator/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/flamethrower/d60, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/phosphorus, WEAR_IN_BACK)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/fil/fire(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/fil(new_human), WEAR_FACE)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/fil(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/pa76/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/pa76/ap, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/france, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/fil/fire(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/d60, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/incendiary, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/d60, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/brown/knife/fil, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flamertank, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/d60, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/d60, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/fil/rifleman/incinerator/sl
+	name = "FIL Heavy Incinerator Leader"
+	paygrades = list(PAY_SHORT_FI2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Incinerator Lead"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "FIL Heavy Incinerator Leader"
+	rank = JOB_FIL_FLAME_SL
+	skills = /datum/skills/tl/recon
+	faction = FACTION_FIL
+
+//*****************************************************************************************************/
+
 /datum/equipment_preset/fil/officer/co
 	name = "FIL Commander"
 	paygrades = list(PAY_SHORT_FO4 = JOB_PLAYTIME_TIER_0)

@@ -47,18 +47,30 @@
 	name = "Commando Lead"
 	prefix = "Commando Lead"
 	ranking = 6
+
+/datum/paygrade/fil/flamer
+	paygrade = PAY_SHORT_FI1
+	name = "Heavy Incinerator"
+	prefix = "Incinerator"
+	ranking = 7
 	pay_multiplier = 1.4
+
+/datum/paygrade/fil/flamer/sl
+	paygrade = PAY_SHORT_FI2
+	name = "Heavy Incinerator Lead"
+	prefix = "Incinerator Lead"
+	ranking = 8
 
 /datum/paygrade/fil/lt
 	paygrade = PAY_SHORT_FO2
 	name = "Adjundant"
 	prefix = "Adjundant"
-	ranking = 7
+	ranking = 9
 	pay_multiplier = 1.5
 
 /datum/paygrade/fil/co
 	paygrade = PAY_SHORT_FO4
 	name = "Major"
 	prefix = "Major"
-	ranking = 8
+	ranking = 10
 	pay_multiplier = 1.8

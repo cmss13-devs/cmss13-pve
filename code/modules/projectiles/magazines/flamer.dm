@@ -296,3 +296,16 @@
 	flamer_chem = null
 	custom = TRUE
 	max_rounds = 150
+
+/obj/item/ammo_magazine/flamer_tank/d60
+	name = "large D60 incinerator tank"
+	desc = "A large fuel tank for use in the D60 incinerator unit. This one has been modified with a pressure regulator and a large internal propellant tank. Must be manually attached."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "d60"
+	item_state = "d60"
+	gun_type = /obj/item/weapon/gun/flamer/d60
+	max_rounds = 250
+
+	max_intensity = 75
+	max_range = 10
+	max_duration = 40

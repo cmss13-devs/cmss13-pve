@@ -557,6 +557,22 @@
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	current_mag = /obj/item/ammo_magazine/flamer_tank/upp
 
+/obj/item/weapon/gun/flamer/d60
+	name = "\improper LFUIM-D60 heavy incinerator"
+	desc = "Lance-flammes à usage intensif Marianne Model De 60 is a French flamethrower based off of a design going back a decade. It has many modifications from the original design, especially with making the coolant system more sophisticated. High intensity flamethrower good for close quarters and encampments."
+	flags_item = TWOHANDED
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "d60"
+	item_state = "d60"
+	attachable_allowed = list(
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/magnetic_harness,
+	)
+	starting_attachment_types = list(/obj/item/attachable/magnetic_harness)
+	current_mag = /obj/item/ammo_magazine/flamer_tank/d60
+
+
 /obj/item/weapon/gun/flamer/upp/unloaded
 	current_mag = null
 
