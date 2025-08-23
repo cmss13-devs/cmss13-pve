@@ -1,0 +1,6 @@
+author: "CactusMouth"
+delete-after: True
+changes:
+  - rscadd: "Adds the Bomb Vest"
+  - soundadd: "added custom sound for the bomb vest going off"
+  - imageadd: "added the icons for the bomb vest"
