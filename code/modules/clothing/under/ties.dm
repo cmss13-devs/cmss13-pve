@@ -553,6 +553,66 @@
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
 
+/obj/item/clothing/accessory/bomb //Suicide vesst
+	name = "explosive vest"
+	desc = "Used by absolute madmen to cause terror and fear against others, haphazardly put together with C4 and a standard webbing vest."
+	icon_state = "bomb_vest"
+	var/datum/action/item_action/activation
+	var/mob/living/wearer
+	slot = ACCESSORY_SLOT_UTILITY
+
+/obj/item/clothing/accessory/bomb/Destroy()
+	wearer = null
+	if(!QDELETED(activation))
+		QDEL_NULL(activation)
+	. = ..()
+
+/obj/item/clothing/accessory/bomb/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
+	. = ..()
+	wearer = user
+	activation = new /datum/action/item_action/bomb/activate(src)
+	activation.give_to(wearer)
+
+/obj/item/clothing/accessory/bomb/on_removed(mob/living/user, obj/item/clothing/C)
+	. = ..()
+	QDEL_NULL(activation)
+
+/datum/action/item_action/bomb/activate
+	var/activated = FALSE
+
+/datum/action/item_action/bomb/activate/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Activate Bomb Vest"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/obj/items/clothing/ties.dmi', button, "bomb_vest")
+
+/datum/action/item_action/bomb/activate/can_use_action()
+	var/mob/living/carbon/human/H = owner
+	if(!H || H.is_mob_incapacitated(TRUE)) //Can't activate if incapacitated
+
+		return
+	if(activated) //don't detonate twice
+		return
+	return TRUE
+
+/datum/action/item_action/bomb/activate/action_activate()
+	. = ..()
+	var/mob/living/carbon/human/H = owner
+	H.visible_message(SPAN_ALERTWARNING("[H] activates the bomb vest! GET DOWN!"), SPAN_ALERTWARNING("You activate the bomb vest! WITNESS ME!"))
+	playsound(H, 'sound/items/bomb_vest.ogg', 100, 1)
+	activated = TRUE
+
+	addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 3 SECONDS)
+
+/datum/action/item_action/bomb/activate/proc/detonate()
+	var/mob/living/carbon/human/H = owner
+	var/turf/epicenter = get_turf(H)
+	target.ex_act(400, null, src, H, 100)
+	cell_explosion(epicenter, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), H))
+	H.gib()
+	qdel(src)
+
 //Ties that can store stuff
 
 /obj/item/storage/internal/accessory
