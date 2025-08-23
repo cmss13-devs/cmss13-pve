@@ -128,6 +128,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Balaclava, green"
 	path = /obj/item/clothing/mask/balaclava/tactical
 
+/datum/gear/mask/balaclava_threehole
+	display_name = "Balaclava, three-hole"
+	path = /obj/item/clothing/mask/balaclava/threehole
+	allowed_origins = UPP_ORIGINS
+
 /datum/gear/mask/coif
 	display_name = "Coif"
 	path = /obj/item/clothing/mask/rebreather/scarf
@@ -338,7 +343,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/headwear/uscm/cap_operations2
 	display_name = "USCM Operations Cap, Tan"
-	path = /obj/item/clothing/head/cmcap/khaki
+	path = /obj/item/clothing/head/cmcap/bridge/tan
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
@@ -593,7 +598,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/clothing/shotgun_holster_belt
 	display_name = "shotgun holster belt"
-	path = /obj/item/storage/belt/gun/xm51
+	path = /obj/item/storage/belt/gun/shotgunholster
 	cost = 3
 	allowed_origins = USCM_ORIGINS
 
@@ -670,6 +675,30 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/paint/usflag
 	display_name = "M3 Pattern US Flag Paint"
 	path = /obj/item/clothing/accessory/paint/usflag
+
+/datum/gear/paint/target
+	display_name = "M3 Pattern Target Paint"
+	path = /obj/item/clothing/accessory/paint/target
+
+/datum/gear/paint/smiley
+	display_name = "M3 Pattern Smiley-Face Paint"
+	path = /obj/item/clothing/accessory/paint/alcoholism
+
+/datum/gear/paint/neutral
+	display_name = "M3 Pattern Neutral-Face Paint"
+	path = /obj/item/clothing/accessory/paint/melancholy
+
+/datum/gear/paint/cross
+	display_name = "M3 Pattern Cross Paint"
+	path = /obj/item/clothing/accessory/paint/cross
+
+/datum/gear/paint/pandora
+	display_name = "M3 Pattern Inscription Paint"
+	path = /obj/item/clothing/accessory/paint/inscription
+
+/datum/gear/paint/flames
+	display_name = "M3 Pattern Fire Paint"
+	path = /obj/item/clothing/accessory/paint/fire
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -787,13 +816,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
 	path = /obj/item/prop/magazine/dirty
 
 /datum/gear/toy/mags/boots
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/mags/boots/boots_magazine_one
 	display_name = "Boots Issue No.117"
@@ -822,7 +852,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/card
 	cost = 1
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/card/ace_of_spades
 	display_name = "Card, ace of spades"
@@ -1132,7 +1162,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
@@ -1148,7 +1178,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/l54
 	display_name = "L54 Pistol"
@@ -1164,11 +1194,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "VP78 Pistol"
 	path = /obj/item/storage/box/loadout/VP78_loadout
 	cost = 4
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
 	cost = 4
+	allowed_origins = USCM_ORIGINS
 
 /*
 //================================================
@@ -1178,6 +1210,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink
 	category = "Canned drinks"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/drink/water
 	display_name = "Bottled water"
@@ -1220,6 +1253,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Boda Soda"
 	path = /obj/item/reagent_container/food/drinks/cans/boda
 	cost = 3 //Legally imported from UPP.
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/drink/boda/plus
 	display_name = "Boda Cola"
@@ -1227,7 +1261,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink/alcohol
 	cost = 3 //Illegal in military.
-	allowed_origins = USCM_ORIGINS // UPP stricter on enforcement, I figure
+	allowed_origins = NON_UPP_ORIGINS // UPP stricter on enforcement, I figure
 
 /datum/gear/drink/alcohol/ale
 	display_name = "Weyland-Yutani IPA Ale"
@@ -1286,7 +1320,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/flask/wy
 	display_name = "WY flask"
 	path = /obj/item/reagent_container/food/drinks/flask/weylandyutani
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /*
 //================================================
@@ -1338,6 +1372,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged
 	category = "Food (packaged)"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/snack_packaged/beef_jerky
 	display_name = "Beef jerky"
@@ -1412,27 +1447,35 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/smoking
 	category = "Smoking"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/smoking/cigarette
 	display_name = "Cigarette"
 	path = /obj/item/clothing/mask/cigarette
-	cost = 1
+	cost = 0
 	slot = WEAR_FACE
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/cigarette/cigar_classic
 	display_name = "Classic cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar/classic
-	cost = 3
+	cost = 2
 
 /datum/gear/smoking/cigarette/cigar_premium
 	display_name = "Premium cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar
-	cost = 2
+	cost = 1
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 	cost = 0
+
+/datum/gear/smoking/pack_laika
+	display_name = "Pack Of Laika"
+	path = /obj/item/storage/fancy/cigarettes/laika
+	allowed_origins = UPP_ORIGINS
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
@@ -1476,6 +1519,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Lighter, cheap"
 	path = /obj/item/tool/lighter/random
 	cost = 1
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/zippo
 	display_name = "Lighter, zippo"
@@ -1514,8 +1558,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/misc/pdt_kit
 	display_name = "PDT/L kit"
-	path = /obj/item/storage/box/pdt_kit
-	cost = 3
+	path = /obj/item/storage/box/pdt_kit/advanced
+	cost = 1 // it's in the vendors anyway.
+
 
 /datum/gear/misc/watch
 	display_name = "Seiko Pulsemeter wristwatch"

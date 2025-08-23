@@ -6,10 +6,10 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
 	path = /datum/equipment_preset/upp/militia
 
-/datum/human_ai_equipment_preset/upp/militia/sadar
-	name = "UPP People's Territorial Guardsman Designated Rocketeer"
+/datum/human_ai_equipment_preset/upp/militia/at
+	name = "UPP People's Territorial Guardsman Anti-Tank"
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
-	path = /datum/equipment_preset/upp/militia/sadar
+	path = /datum/equipment_preset/upp/militia/at
 
 /datum/human_ai_equipment_preset/upp/militia/medic
 	name = "UPP People's Territorial Guardsman Sanitar"
