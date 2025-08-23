@@ -1,7 +1,7 @@
 /obj/vehicle/multitile/tank
 	name = "M34A2 Longstreet Light Tank"
 	desc = "A giant piece of armor with a big gun, you know what to do. Entrance in the back."
-	desc_lore = "The Longstreet is a more recent addition to the Colonial-Marines arsenal, though it has served with distinction with Army units for over a decade. Designed as a fire-support and reconnaissance vehicle, with overall loaded mass permitting it be be carried in smaller drop-craft. \n The A2 variant was specially modified for Colonial-Marine use, featuring modular turret packages and enhanced environmental hardening to account for variable AOs. It has proven exceedingly popular thanks to more modern ergonomics and combat-computer systems."
+	desc_lore = "The Longstreet is a more recent addition to the Colonial Marines' arsenal, though it has served with distinction with Army units for over a decade. Designed as a fire-support and reconnaissance vehicle, with overall loaded mass permitting it be be carried in smaller drop-craft. \n The A2 variant was specially modified for USCM use, featuring modular turret packages and enhanced environmental hardening to account for variable AOs. It has proven exceedingly popular thanks to more modern ergonomics and combat-computer systems."
 
 	icon = 'icons/obj/vehicles/tank.dmi'
 	icon_state = "tank_base"
