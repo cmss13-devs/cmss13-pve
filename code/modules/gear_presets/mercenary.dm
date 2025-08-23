@@ -173,7 +173,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Black Dragoons Driver"
 	rank = JOB_MERCENARY_PILOT
-	skills = /datum/skills/tank_crew
+	skills = /datum/skills/mainttech
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/pilot/driver/load_gear(mob/living/carbon/human/new_human)

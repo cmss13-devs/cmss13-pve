@@ -40,16 +40,16 @@
 	name = "Sentinel Response Squad"
 	desc = "A squad of sentinels, better armed to respond to hostile action. With better armour and equipment, they're a tougher foe to go up against, with a squad leader with an M20CW Carbine as well."
 	ai_to_spawn = list(
-		/datum/equipment_preset/mercenary/sentinel/response = 3,
 		/datum/equipment_preset/mercenary/sentinel/response/carbine = 1,
+		/datum/equipment_preset/mercenary/sentinel/response = 3,
 	)
 
 /datum/human_ai_squad_preset/mercs/response/command
 	name = "Sentinel Response Command Team"
 	desc = "A sentinel and supervisor duo, alongside a Synthetic, responsible for the oversight of a sentinel response platoon."
 	ai_to_spawn = list(
-		/datum/equipment_preset/mercenary/sentinel/response/medic = 1,
 		/datum/equipment_preset/mercenary/supervisor/response = 1,
+		/datum/equipment_preset/mercenary/sentinel/response/medic = 1,
 		/datum/equipment_preset/mercenary/synth/response = 1,
 	)
 
