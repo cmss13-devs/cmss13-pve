@@ -97,6 +97,9 @@
 			wall.ex_act(1000 * 1.5)
 
 
+	for(var/turf/closed/wall/wall in orange(1, src))
+		wall.ex_act(1000 * 1.5)
+
 /mob/living/carbon/xenomorph/crusher/death(cause, gibbed)
 	. = ..()
 	playsound(src, 'sound/voice/alien_crusher_death.ogg', 50, FALSE, 15)
@@ -312,3 +315,20 @@
 	if(HAS_TRAIT(bound_xeno, TRAIT_CHARGING) && bound_xeno.body_position == STANDING_UP)
 		bound_xeno.icon_state = "[bound_xeno.get_strain_icon()] Crusher Charging"
 		return TRUE
+
+/mob/living/carbon/xenomorph/crusher/runner
+	base_actions = list(
+		/datum/action/xeno_action/onclick/xeno_resting,
+		/datum/action/xeno_action/watch_xeno,
+		/datum/action/xeno_action/activable/tail_stab/crusher,
+		/datum/action/xeno_action/onclick/charger_charge,
+		/datum/action/xeno_action/onclick/tacmap,
+	)
+
+/mob/living/carbon/xenomorph/crusher/runner/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
+	. = ..()
+	var/datum/xeno_strain/strain_instance = new /datum/xeno_strain/crusherrunner()
+	strain_instance._add_to_xeno(src)
+
+/mob/living/carbon/xenomorph/crusher/runner/init_movement_handler()
+	return new /datum/xeno_ai_movement/crusher(src)

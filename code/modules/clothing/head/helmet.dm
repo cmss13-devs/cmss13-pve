@@ -296,6 +296,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/raincover = "raincover",
 	/obj/item/prop/helmetgarb/camocover = "camocover",
 	/obj/item/prop/helmetgarb/camocover/desert = "d_camocover",
+	/obj/item/prop/helmetgarb/camocover/desert/nohole = "d_camocover_nohole",
 	/obj/item/prop/helmetgarb/camocover/snow = "s_camocover",
 	/obj/item/prop/helmetgarb/rabbitsfoot = "rabbitsfoot",
 	/obj/item/prop/helmetgarb/rosary = "helmet_rosary", // This one was already in the game for some reason, but never had an object
@@ -360,6 +361,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/attachable/flashlight = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/prop/helmetgarb/chaplain_patch = "chaplain_patch",
 	/obj/item/tool/pen/fountain = "fountainpen",
+	/obj/item/device/blinker = "blinker",
 
 	// MEDICAL
 	/obj/item/stack/medical/bruise_pack ="brutepack (bandages)",
@@ -850,6 +852,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_atom = NO_NAME_OVERRIDE
 
+/obj/item/clothing/head/helmet/marine/old
+	name = "\improper M4 pattern helmet"
+	desc = "Older model of USCMC-issued helmet."
+	icon_state = "old_helmet"
+	flags_atom = NO_SNOW_TYPE
+	specialty = "M4 pattern marine"
+
 /obj/item/clothing/head/helmet/marine/rto
 	name = "\improper M12 pattern helmet"
 	desc = "Failed procurement, limited run successor to the old M10 Ballistic Helmet. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
@@ -905,13 +914,14 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/pyro
-	name = "\improper M10-P pyrotechnician helmet"
+	name = "\improper XM13 environmental helmet"
 	icon_state = "pyro_helmet"
 	desc = "M10 variant with complete facial coverage and internal breathing apparatus. Environmentally sealed with a full fitting of polymer compounds to resist burning."
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	specialty = "XM13 environmental"
 	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/M3T
@@ -1112,6 +1122,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "ua_riot"
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/medical
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
 // KUTJEVO HELMET
 
 /obj/item/clothing/head/helmet/marine/veteran/kutjevo
@@ -1206,6 +1219,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	specialty = "6B68 helmet"
 
+/obj/item/clothing/head/helmet/marine/veteran/UPP/old/black
+	icon_state = "upp_helmet_68_black"
+
 //==========================//UPP\\=================================\\
 //=======================================================================\\
 
@@ -1294,6 +1310,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in actions
 			if(cycle_action)
 				cycle_action.set_action_overlay(active_visor)
+
+	update_icon()
 
 /obj/item/clothing/head/helmet/upp/Destroy(force)
 	helmet_overlays = null
@@ -1423,6 +1441,10 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 	if(active_visor)
 		helmet_overlays += active_visor.helmet_overlay
+	else
+		for(var/obj/item/device/helmet_visor/visor in contents)
+			if(visor.inactive_helmet_overlay)
+				helmet_overlays += visor.inactive_helmet_overlay
 
 	if(ismob(loc))
 		var/mob/M = loc
@@ -1562,6 +1584,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
 
+/obj/item/clothing/head/helmet/upp/mss
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/upp)
+
+/obj/item/clothing/head/helmet/upp/black
+	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is black, meant for urban/night ops."
+	icon_state = "upp_helmet_naval_black"
+
 /obj/item/clothing/head/uppcap
 	name = "\improper UL2 cap"
 	desc = "Standard issue patrol cap of the UPP's military."
@@ -1608,6 +1637,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/uppcap/beret/guerilla
 	name = "\improper red beret"
 	desc = "A red beret popular with communist revolutionaries."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "upp_beret_revolution"
+
+/obj/item/clothing/head/uppcap/beret/mss
+	name = "\improper MSS beret"
+	desc = "A red beret popular often worn by members of MSS's combat units."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
 	icon_state = "upp_beret_revolution"
 
@@ -1919,6 +1954,17 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/cag
+	name = "\improper RAM ballistic helmet"
+	desc = "Recon-Assault Module, ARMAT's licensed modification of L5A3 helmet developed by Lindenthal-Ehrenfeld Militärindustrie for TWE's Royal Marines. Built with a lightweight ballistic composite shell, it offers high levels of protection without compromising mobility. A limited number of these helmets was supplied to UA special forces."
+	icon_state = "cag"
+	item_state = "cag"
+	flags_marine_helmet = HELMET_GARB_OVERLAY
+
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/cag/nv
+	built_in_visors = list(/obj/item/device/helmet_visor/night_vision/marine_raider)
+
+#undef HELMET_GARB_RELAY_ICON_STATE
 //=USASF & ARMY=\\
 
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
@@ -1953,3 +1999,20 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+/obj/item/clothing/head/helmet/marine/crysis
+	name = "XM27 enhanced-performance armored helmet"
+	desc = "A pinnacle of personal armor technology, this helmet combines cutting-edge protective materials, visors and optical camouflage to provide its wearer with incredible tactical versatility."
+	icon_state = "crysis"
+	flags_armor_protection = BODY_FLAG_HEAD
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
+	built_in_visors = list()

@@ -121,6 +121,8 @@
 	if(reload_sound)
 		playsound(user, reload_sound, 25, 1, 5)
 
+/obj/item/weapon/gun/boltaction/noscope
+	starting_attachment_types = list(/obj/item/attachable/stock/hunting, /obj/item/attachable/bayonet)
 
 /obj/item/weapon/gun/boltaction/vulture
 	name = "\improper M707 \"Vulture\" anti-materiel rifle"
@@ -183,7 +185,7 @@
 	icon_state = new_icon_state
 
 	if(!bolted)
-		overlays += "vulture_bolt_open"
+		overlays += "[base_gun_icon]_bolt_open"
 
 
 /obj/item/weapon/gun/boltaction/vulture/set_gun_config_values()
@@ -228,8 +230,14 @@
 		to_chat(current_mob, SPAN_HIGHDANGER("You hear a massive boom coming from [final_dir ? "the [final_dir]" : "nearby"]!"))
 		if(current_mob.client)
 			playsound_client(current_mob.client, 'sound/weapons/gun_vulture_report.ogg', src, 25)
-
-	if(!HAS_TRAIT(src, TRAIT_GUN_BIPODDED))
+	var/mob/living/carbon/human/human = user
+	var/wearing_harness = (human.wear_suit && human.wear_suit.flags_inventory & SMARTGUN_HARNESS)
+	var/get_messed_up = TRUE
+	if(wearing_harness)
+		get_messed_up = FALSE
+	if(HAS_TRAIT(src, TRAIT_GUN_BIPODDED))
+		get_messed_up = FALSE
+	if(get_messed_up)
 		fired_without_bipod(user)
 	else
 		shake_camera(user, 3, 4) // equivalent to getting hit with a heavy round
@@ -294,3 +302,81 @@
 
 /obj/item/weapon/gun/boltaction/vulture/holo_target/skillless
 	bypass_trait = TRUE
+
+/obj/item/weapon/gun/boltaction/vulture/cqb
+	name = "XM400 'Buzzard' TAWS"
+	desc = "Tactical anti-armor weapon system, a deep modification of M707 Vulture anti-materiel rifle utilizing smartgun-type stablizier arm principle. Initially made to provide marines light and medium anti-armor capabilities in close quarters, but proved to be too costy for mass production. Besides, you're not even supposed to be in CQC with armored vehicles! Who thought of this?"
+	desc_lore = "As you further examine the gun, you notice how light the bolt is and a few modification bulking the gun up, that supposedly allow to function it as a recoil operated semi-auto rifle."
+	icon_state = "buzzard"
+	item_state = "buzzard"
+	bypass_trait = TRUE
+	bolt_delay = 0.5 SECONDS
+	map_specific_decoration = FALSE
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/vulture/extended
+	attachable_allowed = list(
+		/obj/item/attachable/scope/mini/buzzard,
+		/obj/item/attachable/sniperbarrel/vulture,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/buzzard,
+		/obj/item/attachable/sniperbarrel/vulture,
+	)
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
+	)
+
+/obj/item/weapon/gun/boltaction/vulture/cqb/set_gun_config_values()
+	..()
+	set_fire_delay(10)
+
+/obj/item/weapon/gun/boltaction/vulture/cqb/Fire(atom/target, mob/living/carbon/user, params, reflex, dual_wield)
+	. = ..()
+	if(!.)
+		return .
+
+	unique_action(user)
+	addtimer(CALLBACK(src, PROC_REF(unique_action), user), bolt_delay)
+
+	return .
+
+/obj/item/weapon/gun/boltaction/mk41
+	name = "\improper Mk41A pulse rifle"
+	desc = "With Japan and Great Britain both being founding members of Three World Empire, most of their strict gun control laws still apply to Imperial core worlds and even far-away colonies. This pump-action, 15 round, fixed stock abomination is a result of some civilian firearms manufacturer trying to live off the popularity of M41A design."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "mk41"
+	item_state = "m41amk1"
+	mouse_pointer = 'icons/effects/mouse_pointer/rifle_mouse.dmi'
+
+	flags_equip_slot = SLOT_BACK
+	w_class = SIZE_LARGE
+	force = 5
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY
+	gun_category = GUN_CATEGORY_RIFLE
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	current_mag = /obj/item/ammo_magazine/rifle/boltaction/mk41
+	attachable_allowed = list(
+		/obj/item/attachable/stock/rifle/mk41,
+	)
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/mk41)
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	civilian_usable_override = TRUE
+	indestructible = TRUE
+
+	cocked_sound = 'sound/weapons/gun_cocked2.ogg'
+	fire_sound = 'sound/weapons/gun_m39.ogg'
+	open_bolt_sound = 'sound/weapons/handling/ugl_open.ogg'
+	close_bolt_sound = 'sound/weapons/handling/ugl_close.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+
+/obj/item/weapon/gun/boltaction/mk41/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/boltaction/mk41/fake
+	name = "\improper M41A pulse rifle"
+	desc = "Pulse action 10x24mm caseless assault rifle of the USCMC, personal friend of any Marine. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."

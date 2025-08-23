@@ -39,3 +39,21 @@
 	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
 
 	fire_smothering_strength = 3
+
+/datum/weather_event/sand/strong
+	name = "Giga Sandstorm"
+	length = INFINITY
+	turf_overlay_icon_state = "gigadust"
+
+	effect_message = "You feel metallic dust scratch against your body, slowing you down!"
+
+
+	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
+	fullscreen_type = /atom/movable/screen/fullscreen/weather/sand
+
+/datum/weather_event/sand/strong/process_mob_effect(mob/living/carbon/affected_mob, delta_time = 1)
+	..()
+	if(prob(33))
+		var/new_slowdown = affected_mob.next_move_slowdown + rand(2,3)
+		affected_mob.next_move_slowdown = new_slowdown
+		to_chat(affected_mob, SPAN_WARNING("You stumble in the dust storm."))
