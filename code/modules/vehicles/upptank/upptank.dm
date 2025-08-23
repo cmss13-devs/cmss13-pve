@@ -47,7 +47,7 @@
 	add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/uppturret)
 
 
-/obj/vehicle/multitile/tank/command/upptank
+/obj/vehicle/multitile/tank/upptank/command
 	name = "Cheetah 2B Light Command Tank"
 	desc = "A giant piece of state-approved armor with a big gun and enhanced comms equipment, you know what to do. Entrance in the back."
 
@@ -56,7 +56,12 @@
 
 	interior_map = /datum/map_template/interior/upptank_command
 
-	light_range = 4
+	light_range = 5
+
+	passengers_slots = 5
+	//this is done in case VCs die inside the tank, so that someone else can come in and take them out.
+	revivable_dead_slots = 3
+	xenos_slots = 4
 
 	// Rest (all the guns) is handled by the tank turret hardpoint
 	hardpoints_allowed = list(
@@ -91,7 +96,62 @@
 		VEHICLE_COMMANDER = null,
 	)
 
-/obj/vehicle/multitile/tank/command/upptank/initialize_cameras(change_tag = FALSE)
+/obj/vehicle/multitile/tank/upptank/command/add_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	add_verb(user.client, list(
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+	))
+	user.client.change_view(view_boost, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	if(seat == VEHICLE_DRIVER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		))
+	else if(seat == VEHICLE_COMMANDER)
+		add_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/name_vehicle,
+		))
+
+/obj/vehicle/multitile/tank/upptank/command/remove_seated_verbs(mob/living/user, seat)
+	if(!user.client)
+		return
+	remove_verb(user.client, list(
+		/obj/vehicle/multitile/proc/get_status_info,
+		/obj/vehicle/multitile/proc/open_controls_guide,
+		/obj/vehicle/multitile/proc/switch_hardpoint,
+	))
+	user.client.change_view(GLOB.world_view_size, seat)
+	user.client.pixel_x = 0
+	user.client.pixel_y = 0
+	SStgui.close_user_uis(user, src)
+	if(seat == VEHICLE_DRIVER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/activate_horn,
+		))
+	if(seat == VEHICLE_GUNNER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		))
+	else if(seat == VEHICLE_COMMANDER)
+		remove_verb(user.client, list(
+			/obj/vehicle/multitile/proc/toggle_door_lock,
+			/obj/vehicle/multitile/proc/name_vehicle,
+		))
+
+/obj/vehicle/multitile/tank/upptank/command/initialize_cameras(change_tag = FALSE)
 	if(!camera)
 		camera = new /obj/structure/machinery/camera/vehicle(src)
 	if(change_tag)
@@ -241,7 +301,7 @@
 
 //PRESET: turret, no hardpoints (not the one without turret for convenience, you still expect to have turret when you spawn "no hardpoints tank")
 /obj/effect/vehicle_spawner/upptank/command/spawn_vehicle()
-	var/obj/vehicle/multitile/tank/command/upptank/TANK = new (loc)
+	var/obj/vehicle/multitile/tank/upptank/command/TANK = new (loc)
 
 	load_misc(TANK)
 	load_hardpoints(TANK)
