@@ -1,0 +1,5 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Added UPP Gunner hAi preset without HEAP loaded. It is now the default."
+  - bugfix: "hAi can reload the PKP/QYJ-72."
