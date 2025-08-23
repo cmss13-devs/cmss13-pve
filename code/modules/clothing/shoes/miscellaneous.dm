@@ -178,3 +178,22 @@
 	armor_internaldamage = CLOTHING_ARMOR_HARDCORE
 	flags_inventory = CANTSTRIP|NOSLIPPING
 	unacidable = TRUE
+
+/obj/item/clothing/shoes/tactical
+	name = "combat boots"
+	desc = "A pair of ruggedized combat boots, with reinforced insole to resist spikes. Solid grip in all conditions too."
+	icon_state = "swat"
+	item_state = "swat"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_VERYLOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_cold_protection = BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_FEET
+	min_cold_protection_temperature = SHOE_MIN_COLD_PROT
+	max_heat_protection_temperature = SHOE_MAX_HEAT_PROT
+	siemens_coefficient = 0.7

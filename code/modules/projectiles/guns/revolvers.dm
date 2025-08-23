@@ -768,3 +768,32 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead_black"
 	item_state = "spearhead_black"
+
+/obj/item/weapon/gun/revolver/spearhead/vanguard
+	name = "Vanguard autorevolver"
+	desc = "Deeply modified Spearhead revolver. Eight round cylinder uprated for high pressure .357 loads. Slowly losing favor, despite devout users."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/cmb_tac.dmi'
+	icon_state = "vanguard"
+	item_state = "vanguard"
+	current_mag = /obj/item/ammo_magazine/internal/revolver/vanguard
+	wield_delay = WIELD_DELAY_NORMAL
+
+/obj/item/weapon/gun/revolver/spearhead/vanguard/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
+/obj/item/weapon/gun/revolver/spearhead/vanguard/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 31, "muzzle_y" = 22,
+		"rail_x" = 11, "rail_y" = 25,
+		"under_x" = 20, "under_y" = 18,
+		"stock_x" = 19, "stock_y" = 18,
+		"side_rail_x" = 20, "side_rail_y" = 18
+	)

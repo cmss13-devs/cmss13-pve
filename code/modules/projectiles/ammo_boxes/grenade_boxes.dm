@@ -227,6 +227,20 @@
 	overlay_icon_type = "sebb"
 	overlay_grenade_type = "sebb"
 
+/obj/item/ammo_box/magazine/nade_box/ltl/stinger
+    name = "less-lethal rubber grenade box"
+    desc = "A box holding 25 less lethal rubber grenades"
+    icon_state = "base_uscm_ltl"
+
+    magazine_type = /obj/item/explosive/grenade/high_explosive/stinger
+    allowed_magazines = list(
+        /obj/item/explosive/grenade/high_explosive/stinger,
+    )
+
+    overlay_model_type = "model_stinger"
+    overlay_icon_type = "ltl"
+    overlay_grenade_type = "stinger"
+
 //--------------------40MM GRENADE BOXES
 
 /obj/item/ammo_box/magazine/nade_box/fourtymil

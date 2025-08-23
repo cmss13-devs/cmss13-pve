@@ -361,6 +361,32 @@
 /obj/item/ammo_box/magazine/m4a3/incen/empty
 	empty = TRUE
 
+//-----------------------Barracuda Pistol Magazine Box-----------------------
+
+/obj/item/ammo_box/magazine/m4a3/barracuda
+	name = "JHP magazine box (Barracuda x 16)"
+	icon_state = "base"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_hp"
+	overlay_gun_type = "_m4a3"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/barracuda
+
+/obj/item/ammo_box/magazine/m4a3/barracuda/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m4a3/barracuda/hollowpoint
+	name = "FMJ magazine box (Barracuda x 16)"
+	icon_state = "base"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_ap"
+	overlay_gun_type = "_m4a3"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/barracuda/fmj
+
+/obj/item/ammo_box/magazine/m4a3/barracuda/empty
+	empty = TRUE
+
 //-----------------------M44 Revolver Speed Loaders Box-----------------------
 
 /obj/item/ammo_box/magazine/m44

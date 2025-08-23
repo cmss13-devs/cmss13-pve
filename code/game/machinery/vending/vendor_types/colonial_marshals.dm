@@ -60,11 +60,12 @@
 		list("Auxillary Equipment", -1, null, null, null),
 		list("Gas Mask", 10, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
 		list("Tactical Wrap", 10, /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
-		list("Heat Absorbent Coif", 10, /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
+		list("Tactical Balaclava", 10, /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 		list("Ballistic goggles", 10, /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
 		list("Ballistic goggles, sun-shaded", 10, /obj/item/clothing/glasses/mgoggles/black, VENDOR_ITEM_REGULAR),
 		list("Ballistic goggles, laser-shaded (brown)", 10, /obj/item/clothing/glasses/mgoggles/orange, VENDOR_ITEM_REGULAR),
 		list("Ballistic goggles, laser-shaded (green)", 10, /obj/item/clothing/glasses/mgoggles/green, VENDOR_ITEM_REGULAR),
+		list("Ballistic Faceshield", 10, /obj/item/prop/helmetgarb/faceshield, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", 5, /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		)
 

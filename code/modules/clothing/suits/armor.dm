@@ -24,6 +24,27 @@
 			M.visible_message(SPAN_DANGER("Your programming prevents you from wearing this!"))
 			return 0
 
+//CMB armored clothing.
+
+/obj/item/clothing/suit/armor/patrolcoat
+    name = "Colonial Marshal Patrol Coat"
+    desc = "An armored longcoat for Colonial Marshals. Features a shear thickening armor layer which resists gunfire and cold weapons. Many pockets."
+    icon_state = "patrol_coat"
+    item_state = "patrol_coat"
+
+    time_to_unequip = 10
+    time_to_equip = 15
+    flags_armor_protection = BODY_FLAG_ARMS|BODY_FLAG_CHEST|BODY_FLAG_GROIN
+
+    armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+    armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+    armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+    armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+    armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+    armor_bio = CLOTHING_ARMOR_LOW
+    armor_rad = CLOTHING_ARMOR_LOW
+    armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+
 //armored vest
 
 /obj/item/clothing/suit/armor/vest

@@ -519,6 +519,64 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 //----------------------------------------------
+//M20A4, the last of a long extinct breed.
+
+/obj/item/weapon/gun/rifle/m20_marshal
+	name = "M20A4 GRIP II pulse rifle"
+	desc = "The final evolution of the old M20. A last ditch attempt to modernize the weapon, General Rifle Improvement Program II provides an FA/5RB hyperburst firegroup, and updates the feed mechanisms. The overbarrel grenade launcher has been given some level of parts compatibility with the PN 30mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m20marshal"
+	item_state = "m20marshal"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/m20_marshal
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington,
+	)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	wield_delay = WIELD_DELAY_NORMAL
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/m20a,
+		/obj/item/attachable/attached_gun/rapid_grenade/harrington
+	)
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/m20_marshal/set_gun_attachment_offsets()
+	attachable_offset = list(
+		"muzzle_x" = 32, "muzzle_y" = 19,
+		"rail_x" = 12, "rail_y" = 20,
+		"under_x" = 18, "under_y" = 15,
+		"stock_x" = 22, "stock_y" = 15,
+		"side_rail_x" = 23, "side_rail_y" = 16
+	)
+
+/obj/item/weapon/gun/rifle/m20_marshal/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
+	damage_falloff_mult = 0
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+
+/obj/item/weapon/gun/rifle/m20_marshal/unloaded
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	current_mag = null
+
+//----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
 /obj/item/weapon/gun/rifle/m46c
