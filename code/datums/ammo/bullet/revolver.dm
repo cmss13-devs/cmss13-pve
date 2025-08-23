@@ -132,6 +132,23 @@
 	penetration = -ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
+/datum/ammo/bullet/revolver/small/jacketedhollow
+	name = "jacketed hollowpoint magnum handgun bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 60
+	penetration = -ARMOR_PENETRATION_TIER_4
+	shell_speed = AMMO_SPEED_TIER_2
+
+/datum/ammo/bullet/revolver/small/jacketedhollow/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
+
+/datum/ammo/bullet/revolver/small/fullmetal
+	name = "full metal jacket magnum handgun bullet"
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
+	damage = 45
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_3
+
 /datum/ammo/bullet/revolver/mateba
 	name = ".454 heavy revolver bullet"
 

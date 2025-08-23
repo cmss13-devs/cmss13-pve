@@ -39,6 +39,27 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/slug/breaching
+	name = "frangible shotgun slug"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+	icon_state = "beanbag"
+	handful_state = "beanbag_slug"
+	shell_casing = /obj/effect/decal/ammo_casing/blueshell
+	flags_ammo_behavior = AMMO_BALLISTIC
+	damage = 40
+	penetration = -ARMOR_PENETRATION_TIER_1
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_10
+	damage_armor_punch = 0
+
+/datum/ammo/bullet/shotgun/slug/breaching/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 7, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_pylons)
+	))
+
 /datum/ammo/bullet/shotgun/beanbag
 	name = "beanbag slug"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT //It's not meant to kill people... but if you put it in your mouth, it will.

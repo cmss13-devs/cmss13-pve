@@ -2300,3 +2300,242 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/storage/belt/cmbtac
+	name = "rifle magazine belt rig"
+	desc = "Standard magazine setup holding four rifle and two pistol. Padded for comfort."
+	icon_state = "marinebelt" //placeholder
+	item_state = "marinebelt"
+	w_class = SIZE_LARGE
+	storage_slots = 5
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 20
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/pistol,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/pistol,
+	)
+
+	//doing the same thing as xm51
+	var/main_magazines = 0
+	var/secondary_magazines = 0
+#define MAIN_MAGAZINE_COUNT 4
+#define SECONDARY_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/cmbtac/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/rifle))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more rifle magazines."))
+		return FALSE
+	else if(secondary_magazines >= SECONDARY_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/pistol))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more handgun magazines."))
+		return FALSE
+
+/obj/item/storage/belt/cmbtac/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines++
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines++
+
+/obj/item/storage/belt/cmbtac/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/cmbtac/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines--
+
+#undef MAIN_MAGAZINE_COUNT
+#undef SECONDARY_MAGAZINE_COUNT
+
+/obj/item/storage/belt/cmbtac/smgbelt
+	name = "SMG magazine belt rig"
+	desc = "Standard magazine setup holding five SMG and two pistol. Padded for comfort."
+	icon_state = "marinebelt" //placeholder
+	item_state = "marinebelt"
+	w_class = SIZE_LARGE
+	storage_slots = 6
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 25
+	can_hold = list(
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+	)
+
+	//ditto
+	main_magazines = 0
+	secondary_magazines = 0
+#define MAIN_MAGAZINE_COUNT 5
+#define SECONDARY_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/cmbtac/smgbelt/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smg))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more submachine gun magazines."))
+		return FALSE
+	else if(secondary_magazines >= SECONDARY_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/pistol))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more handgun magazines."))
+		return FALSE
+
+/obj/item/storage/belt/cmbtac/smgbelt/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines++
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines++
+
+/obj/item/storage/belt/cmbtac/smgbelt/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/cmbtac/smgbelt/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/pistol))
+		secondary_magazines--
+
+#undef MAIN_MAGAZINE_COUNT
+#undef SECONDARY_MAGAZINE_COUNT
+
+/obj/item/storage/belt/cmbtac/mixed
+	name = "mixed munitions belt rig"
+	desc = "Breaching oriented ammunition rig. Three magazines, seven shotgun pouches."
+	icon_state = "marinebelt" //placeholder
+	item_state = "marinebelt"
+	w_class = SIZE_LARGE
+	storage_slots = 10
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 40
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/handful,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+	)
+
+	//ditto
+	main_magazines = 0
+	secondary_magazines = 0
+#define MAIN_MAGAZINE_COUNT 3
+#define SECONDARY_MAGAZINE_COUNT 7
+
+/obj/item/storage/belt/cmbtac/mixed/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/rifle))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more rifle magazines."))
+		return FALSE
+	else if(secondary_magazines >= SECONDARY_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/handful))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more loose ammunition."))
+		return FALSE
+
+/obj/item/storage/belt/cmbtac/mixed/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines++
+	else if(istype(item, /obj/item/ammo_magazine/handful))
+		secondary_magazines++
+
+/obj/item/storage/belt/cmbtac/mixed/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/handful))
+		secondary_magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/cmbtac/mixed/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/handful))
+		secondary_magazines--
+
+#undef MAIN_MAGAZINE_COUNT
+#undef SECONDARY_MAGAZINE_COUNT
+
+/obj/item/storage/belt/cmbtac/utility
+	name = "utility/magazine belt rig"
+	desc = "Less orthodox warbelt holding two SMG or rifle magazines, as well as hand grenades, handcuffs, and pepper spray."
+	icon_state = "marinebelt" //placeholder
+	item_state = "marinebelt"
+	w_class = SIZE_LARGE
+	storage_slots = 10
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 40
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/explosive/grenade,
+		/obj/item/restraint/handcuffs,
+		/obj/item/reagent_container/spray/pepper,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/restraint/handcuffs,
+		/obj/item/reagent_container/spray/pepper,
+	)
+
+	//ditto
+	main_magazines = 0
+#define MAIN_MAGAZINE_COUNT 2
+
+/obj/item/storage/belt/cmbtac/utility/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/rifle))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more rifle magazines."))
+		return FALSE
+	else if(main_magazines >= MAIN_MAGAZINE_COUNT && istype(item, /obj/item/ammo_magazine/smg))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more SMG magazines."))
+		return FALSE
+
+/obj/item/storage/belt/cmbtac/utility/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines++
+	else if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines++
+
+/obj/item/storage/belt/cmbtac/utility/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/cmbtac/utility/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/ammo_magazine/rifle))
+		main_magazines--
+	else if(istype(item, /obj/item/ammo_magazine/smg))
+		main_magazines--
+
+#undef MAIN_MAGAZINE_COUNT

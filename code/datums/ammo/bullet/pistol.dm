@@ -58,6 +58,17 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
+// Used by M4A2
+/datum/ammo/bullet/pistol/fmj
+	name = "full metal jacket pistol bullet"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+	accuracy = HIT_ACCURACY_TIER_4
+	damage = 35
+	penetration = 0
+	shrapnel_chance = 0
+	shell_speed = AMMO_SPEED_TIER_3
+	shell_casing = /obj/effect/decal/ammo_casing
+
 /datum/ammo/bullet/pistol/ap/toxin
 	name = "toxic 9x19 bullet"
 	var/acid_per_hit = 10
@@ -281,4 +292,15 @@
 	damage = 30
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
+/datum/ammo/bullet/pistol/taser_round
+	name = "charged electrode"
+	ping = null //nobounce
+	damage = 5//funny
+	stamina_damage = 105
+	penetration = -ARMOR_PENETRATION_TIER_1
+	shrapnel_chance = 0
+	shell_speed = AMMO_SPEED_TIER_2
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_TEAL
 

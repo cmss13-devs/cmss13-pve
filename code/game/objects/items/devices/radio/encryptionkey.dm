@@ -424,3 +424,10 @@
 	name = "\improper UA Colonial Guard Radio Encryption Key"
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_UA_GUARD = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
+/obj/item/device/encryptionkey/cmbtac
+	name = "Colonial Marshals Crisis Intervention Unit"
+	icon_state = "stripped_key"
+	channels = list(
+		RADIO_CHANNEL_CMBTAC = TRUE,
+	)

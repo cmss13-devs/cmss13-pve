@@ -155,6 +155,54 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+//====== 5.56x30mm Pulse Rifle
+/datum/ammo/bullet/light_rifle
+	name = "5.56x30mm jacketed soft point bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 45
+	penetration = -ARMOR_PENETRATION_TIER_2
+	accurate_range = 7
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_9
+	shell_speed = AMMO_SPEED_TIER_5
+	effective_range_max = 12
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+	max_range = 24
+
+/datum/ammo/bullet/light_rifle/sap
+	name = "5.56x30mm semi armor-piercing bullet"
+	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 34
+	penetration = ARMOR_PENETRATION_TIER_2
+	accurate_range = 7
+	accuracy = HIT_ACCURACY_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_9
+	shell_speed = AMMO_SPEED_TIER_5
+	effective_range_max = 12
+	damage_falloff = DAMAGE_FALLOFF_TIER_5
+	max_range = 24
+
+/datum/ammo/bullet/light_rifle/sap/set_bullet_traits()
+    . = ..()
+    LAZYADD(traits_to_give, list(
+        BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+    ))
+
+/datum/ammo/bullet/light_rifle/llc
+    name = "5.56x30mm less lethal composite bullet"
+    headshot_state = HEADSHOT_OVERLAY_LIGHT
+    damage = 5
+    stamina_damage = 20
+    penetration = -ARMOR_PENETRATION_TIER_1
+    accurate_range = 5
+    accuracy = HIT_ACCURACY_TIER_4
+    scatter = SCATTER_AMOUNT_TIER_9
+    shell_speed = AMMO_SPEED_TIER_5
+    effective_range_max = 12
+    damage_falloff = DAMAGE_FALLOFF_TIER_5
+    max_range = 24
+
 //====== 10X28 Smartgun
 
 /datum/ammo/bullet/rifle/heavy

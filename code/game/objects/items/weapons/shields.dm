@@ -96,6 +96,15 @@
 	else
 		..()
 
+/obj/item/weapon/shield/riot/marshal
+	name = "Colonial Marshals ballistic shield"
+	desc = "An antiballistic shield, used to resist gunfire and cold weapons. Ineffectual against explosions or fire. Stenciled across the front in bold off-white is CMB."
+	icon_state = "cmbshield"
+	item_state = "cmbshield"
+	base_icon_state = "cmbshield"
+	passive_block = 100
+	readied_block = 120
+
 /obj/item/weapon/shield/energy
 	name = "energy combat shield"
 	desc = "A shield capable of stopping most projectile and melee attacks. It can be retracted, expanded, and stored anywhere."

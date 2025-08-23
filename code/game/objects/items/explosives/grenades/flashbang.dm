@@ -214,6 +214,27 @@
 	playsound(src.loc, 'sound/weapons/armbomb.ogg', 25, 1, 6)
 	addtimer(CALLBACK(src, PROC_REF(prime)), rand(10,20))
 
+/obj/item/explosive/grenade/flashbang/pve
+	name = "combined concussive grenade"
+	desc = "A flash and concussion grenade. Powerful for making breaching actions."
+	strength = 20
+
+/obj/item/explosive/grenade/flashbang/pve/prime()
+	..()
+
+	var/turf/T = get_turf(src)
+	for(var/obj/structure/closet/L in hear(4, T))
+		SEND_SIGNAL(L, COMSIG_CLOSET_FLASHBANGED, src)
+
+	for(var/mob/living/carbon/M in hear(4, T))
+		bang(T, M)
+
+	playsound(src.loc, 'sound/effects/bang.ogg', 50, 1)
+
+	new/obj/effect/particle_effect/smoke/flashbang(T)
+	qdel(src)
+	return
+
 //special flashbang nade for events. Skills are not required neither affect the effect.
 //Knockdowns only within 3x3 area, causes temporary blindness, deafness and daze, depending on range and type of mob. Effects reduced when lying.
 //Makes it perfect support tool, but not an insta win.

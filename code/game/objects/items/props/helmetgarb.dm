@@ -517,6 +517,12 @@
 	icon_state = "helmet_riot_shield"
 	flags_obj = OBJ_NO_HELMET_BAND
 
+/obj/item/prop/helmetgarb/faceshield
+    name = "ballistic faceshield"
+    desc = "A transparent faceshield with strap and snap-button closure. Resists handgun ammunition and fragments, as well as cold weapons. Despite an aggressive cheek cut, it may still be best to flip it up for aimed fire."
+    icon_state = "helmet_faceshield"
+    flags_obj = OBJ_NO_HELMET_BAND
+
 /obj/item/prop/helmetgarb/trimmed_wire
 	name = "trimmed barbed wire"
 	desc = "It is a length of barbed wire that's had most of the sharp points filed down so that it is safe to handle."

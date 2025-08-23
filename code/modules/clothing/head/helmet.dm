@@ -199,6 +199,42 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	siemens_coefficient = 0.7
 
+/obj/item/clothing/head/helmet/generic_combat
+	name = "GX-30 combat helmet"
+	desc = "A venlar ballistic/riot helmet with accomodations for the removable ballistic visor. Built by Sokol Special Manufacturing."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "helmet"
+	item_state = "helmet"
+
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	force = 10
+	throwforce = 10
+	var/obj/structure/machinery/camera/camera
+	var/helmet_overlays[]
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = HIDETOPHAIR|HIDEEARS
+	var/flags_of_helmet = HELMET_GARB_OVERLAY
+
+	var/obj/item/storage/internal/headgear/pockets
+	var/storage_slots = 2 //rip bozo
+	var/storage_slots_reserved_for_garb = 2 // Cosmetic items & now cigarettes and lighters for RP
+	var/storage_max_w_class = SIZE_TINY // can hold tiny items only, EXCEPT for glasses & metal flask.
+	var/storage_max_storage_space = 2
+
+/obj/item/clothing/head/helmet/generic_combat/has_garb_overlay()
+	return flags_of_helmet & HELMET_GARB_OVERLAY
+
+/obj/item/clothing/head/helmet/generic_combat/get_pockets()
+	if(pockets)
+		return pockets
+	return ..()
 
 //===========================//MARINES HELMETS\\=================================\\
 //=======================================================================\\
