@@ -689,8 +689,6 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 							S.put_marine_in_squad(H) //fav squad has a spot for us.
 							return
 
-//Todo: Add RMC platoon jobs here. Gonna be messy
-
 						if(!lowest)
 							lowest = S
 		if(!lowest)

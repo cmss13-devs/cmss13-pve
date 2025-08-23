@@ -371,8 +371,12 @@
 	usable = TRUE
 	squad_one_access = ACCESS_TWE_SQUAD_ONE
 	squad_two_access = ACCESS_TWE_SQUAD_TWO
-	squad_three_access = ACCESS_TWE_SQUAD_THREE
 	faction = FACTION_TWE
+
+/datum/squad/marine/rmc/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
 
 //###############################
 /datum/squad/clf
@@ -906,8 +910,6 @@
 			id.access += squad_one_access
 		if(fireteam == "SQ2")
 			id.access += squad_two_access
-		if(fireteam == "SQ3")
-			id.access += squad_three_access
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Leader" in cycled_headset.tracking_options))
