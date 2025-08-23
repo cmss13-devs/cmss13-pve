@@ -514,11 +514,6 @@
 		list("Large Pistol Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
 		list("Explosive Pouch", floor(scale * 2), /obj/item/storage/pouch/explosive, VENDOR_ITEM_REGULAR),
-//Commented out as part of a test to see how this affects letting the sapper handle engi tasks first. Will remove or un-comment after testing
-/*
-		list("Construction Pouch", floor(scale * 2), /obj/item/storage/pouch/construction, VENDOR_ITEM_REGULAR),
-		list("Tools Pouch", floor(scale * 1), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
-*/
 		list("Sling Pouch", floor(scale * 2), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
@@ -899,8 +894,11 @@
 
 //Everyone has medical skill, so no need for the skillless injectors.
 //ATK & ABK's as standard so the little shits don't empty the medics vendor too, because I KNOW they will otherwise
+//Gauze & ointment are in there for handling low-damage wounds if they choose to pack them. 5-brute bleeding wounds, my beloathed.
 //Don't be gentle with them. >:3
 		list("MEDICAL", -1, null, null),
+		list("Gauze", round(scale * 10), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 10), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Trauma Treatment Pack", round(scale * 15), /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Burn Treatment Pack", round(scale * 15), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
@@ -909,19 +907,6 @@
 		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
 		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
 		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
-
-//Testing to see if this improves the emphasis on letting the sapper handle engineering tasks, rather than rattish gits gobbling up all the tech-y work
-//If this works, I'll axe the whole code-block rather than leaving it commented out
-/*
-		list("TOOLS", -1, null, null),
-		list("2155 Pattern Entrenching Tool", round(scale * 1), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
-		list("Screwdriver", round(scale * 1), /obj/item/tool/screwdriver/tactical, VENDOR_ITEM_REGULAR),
-		list("Wirecutters", round(scale * 1), /obj/item/tool/wirecutters/tactical, VENDOR_ITEM_REGULAR),
-		list("Crowbar", round(scale * 1), /obj/item/tool/crowbar/tactical, VENDOR_ITEM_REGULAR),
-		list("Wrench", round(scale * 1), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
-		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
-		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
-*/
 
 		list("EXPLOSIVES", -1, null, null),
 		list("Plastic Explosives", round(scale * 1), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
@@ -943,7 +928,7 @@
 		list("2155 Pattern Entrenching Tool", round(scale * 2), /obj/item/tool/shovel/etool/rmc/folded, VENDOR_ITEM_REGULAR),
 		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
-		list("Two-point Sling", round(scale * 1), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
+		list("Two-point Sling", round(scale * 2), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 
