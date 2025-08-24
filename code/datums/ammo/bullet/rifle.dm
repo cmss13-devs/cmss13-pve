@@ -32,7 +32,6 @@
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
-
 /datum/ammo/bullet/rifle/holo_target/hunting
 	name = "holo-targeting 10x24 bullet"
 	damage = 25

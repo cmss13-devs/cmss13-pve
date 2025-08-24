@@ -176,3 +176,8 @@
 	new /obj/item/clothing/under/colonist/boilersuit/khaki(src)
 	new /obj/item/clothing/shoes/marine/civilian(src)
 	new /obj/item/card/data/access/sergeant(src)
+
+/obj/structure/closet/secure_closet/marine_personal/old/spawn_gear()
+	new /obj/item/clothing/under/marine/standard/old(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)

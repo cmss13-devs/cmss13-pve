@@ -477,7 +477,7 @@
 	item_state = "m20a"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = "gun_oldpulse"
+	fire_sound = "gun_pulse"
 	current_mag = /obj/item/ammo_magazine/rifle/m20a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -503,7 +503,7 @@
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
@@ -511,14 +511,26 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 	damage_falloff_mult = 0
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 
 /obj/item/weapon/gun/rifle/m20a/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
+/obj/item/weapon/gun/rifle/m20a/old
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 30mm grenade launcher."
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/old/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attached_gun/grenade/m20a/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.hidden = TRUE
+	S.Attach(src)
+	update_attachable(S.slot)
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
@@ -1756,12 +1768,12 @@
 //L42A Battle Rifle
 
 /obj/item/weapon/gun/rifle/l42a
-	name = "\improper L42A pulse rifle"
-	desc = "The L42A pulse rifle, despite its age, remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
+	name = "\improper XM24A pulse rifle"
+	desc = "XM24A was developed by Lindenthal-Ehrenfeld Militärindustrie under the designation of L42. It is currently undergoing field-testing in the USCMC as a marskman rifle replacement."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
-	fire_sound = 'sound/weapons/gun_m39.ogg'
+	fire_sound = 'sound/weapons/gun_carbine.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/l42a
@@ -1807,6 +1819,10 @@
 
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
+
+/obj/item/weapon/gun/rifle/l42a/marine
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine, /obj/item/attachable/scope/mini)
+	map_specific_decoration = FALSE
 
 //-------------------------------------------------------
 //-------------------------------------------------------

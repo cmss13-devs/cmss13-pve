@@ -216,7 +216,7 @@
 	hand_throwable = FALSE
 	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
+	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
 	var/direct_hit_shrapnel = 5
 	var/dispersion_angle = 40
 

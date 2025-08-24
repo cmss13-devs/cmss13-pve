@@ -3555,6 +3555,20 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 1
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
 
+/obj/item/attachable/attached_gun/grenade/m20a
+	name = "\improper M20 integrated grenade launcher"
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
+	icon_state = "m20a"
+	attach_icon = "m20a"
+	caliber = "40x53mm"
+	current_rounds = 0
+	max_rounds = 3
+	max_range = 14
+	attachment_firing_delay = 5
+	pixel_shift_x = 20
+	pixel_shift_y = 13
+	has_breech = FALSE
+
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
 	name = "mini flamethrower"
