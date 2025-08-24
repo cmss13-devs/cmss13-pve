@@ -801,6 +801,11 @@
 "abX" = (
 /turf/open/space/basic,
 /area/firefly/supply)
+"abY" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/small_pmc,
+/turf/open/floor/plating/plating_catwalk,
+/area/firefly/cryo_cell)
 "abZ" = (
 /obj/structure/machinery/door_control/brbutton{
 	id = "sci_west_3"
@@ -1387,13 +1392,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "adU" = (
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "adV" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/leader/pmc/small,
 /obj/effect/landmark/late_join/small_pmc,
@@ -1447,7 +1448,6 @@
 /turf/open/floor/corsat/marked,
 /area/firefly/cryo_cell)
 "aed" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/pmc/small,
 /obj/effect/landmark/late_join/small_pmc,
@@ -1492,7 +1492,6 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "ael" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/smartgunner/pmc/small,
 /obj/effect/landmark/late_join/small_pmc,
@@ -1562,21 +1561,19 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
 "aew" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/tl/pmc/small,
 /obj/effect/landmark/late_join/small_pmc,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aex" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/late_join/small_pmc,
+/obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aey" = (
@@ -7042,8 +7039,9 @@
 /area/firefly/cryo_cell)
 "asN" = (
 /obj/structure/machinery/cryopod/big/flipped{
-	layer = 4.8;
-	pixel_x = -1
+	layer = 3.1;
+	pixel_x = -16;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -21933,7 +21931,6 @@
 /turf/open/floor/corsat/blue/northeast,
 /area/firefly/briefing)
 "oUH" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/medic/pmc/small,
 /obj/effect/landmark/late_join/small_pmc,
@@ -25562,9 +25559,9 @@
 /area/firefly/briefing)
 "sRA" = (
 /obj/structure/machinery/cryopod/big/flipped{
-	layer = 4.9;
+	layer = 3.2;
 	pixel_y = 8;
-	pixel_x = -1
+	pixel_x = -16
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -35115,7 +35112,7 @@ fDZ
 adw
 opK
 apo
-adU
+abY
 aew
 vSk
 ael

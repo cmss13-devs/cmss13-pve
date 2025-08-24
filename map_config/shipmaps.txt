@@ -16,6 +16,10 @@ map almayer
 	disabled
 endmap
 
+map firefly
+	disabled
+endmap
+
 map golden_arrow
 	default
 endmap

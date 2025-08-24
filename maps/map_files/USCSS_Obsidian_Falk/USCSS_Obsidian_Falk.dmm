@@ -1370,19 +1370,19 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
 "adU" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/bridge/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "adV" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/bridge/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -1437,19 +1437,19 @@
 /turf/open/floor/corsat/marked,
 /area/firefly/cryo_cell)
 "aed" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/smartgunner/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aee" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/marine/smartgunner/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -1480,19 +1480,19 @@
 /turf/open/floor/corsat/plate,
 /area/firefly/hangar)
 "ael" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/leader/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aem" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/marine/leader/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -1560,19 +1560,19 @@
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
 "aew" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/tl/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aex" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/marine/tl/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -1598,19 +1598,19 @@
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/cafeteria)
 "aeC" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/medic/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
 "aeD" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/marine/medic/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -7072,8 +7072,9 @@
 /area/firefly/cryo_cell)
 "asN" = (
 /obj/structure/machinery/cryopod/big/flipped{
-	layer = 4.8;
-	pixel_x = -1
+	layer = 3.1;
+	pixel_x = -16;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -22036,8 +22037,8 @@
 /turf/open/floor/corsat/blue/northeast,
 /area/firefly/briefing)
 "oUH" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -22339,13 +22340,13 @@
 /turf/open/floor/corsat/arrow_south,
 /area/firefly/supply)
 "pmB" = (
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
 	pixel_x = -1;
 	pixel_y = 1
 	},
 /obj/effect/landmark/start/marine/pmc,
+/obj/effect/landmark/late_join/pmc,
 /obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)
@@ -25692,9 +25693,9 @@
 /area/firefly/briefing)
 "sRA" = (
 /obj/structure/machinery/cryopod/big/flipped{
-	layer = 4.9;
+	layer = 3.2;
 	pixel_y = 8;
-	pixel_x = -1
+	pixel_x = -16
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/firefly/cryo_cell)

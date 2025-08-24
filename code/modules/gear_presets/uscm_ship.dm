@@ -735,11 +735,18 @@
 	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "OW"
 	assignment = JOB_PMCPLAT_OW
+	idtype = /obj/item/card/id/pmc
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	access_list = ACCESS_LIST_WY_SENIOR
 
-/datum/equipment_preset/uscm_ship/so/pmc/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm_ship/so/pmc/equipped
+	name = "PMC Overwatch (PltCo) (Equipped)"
+
+/datum/equipment_preset/uscm_ship/so/pmc/equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm_ship/so/pmc/equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/formal(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
