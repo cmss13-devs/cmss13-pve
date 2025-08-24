@@ -1,6 +1,6 @@
 /obj/item/ammo_magazine/hardpoint/m56_cupola
 	name = "M56 Cupola Magazine"
-	desc = "A secondary armament MG magazine"
+	desc = "A box of 500, 10x28mm caseless rounds for the M56 heavy machine gun system."
 	caliber = "10x28mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
 	icon_state = "cupola_1"
@@ -14,7 +14,9 @@
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
 	name = "RE-RE700 Frontal Cannon magazine"
-	desc = "A big box of bullets that looks suspiciously similar to the box you would use to refill a M56 Cupola. The Bleihagel logo sticker has peeled slightly and it looks like there's another logo underneath..."
+	desc = "A crate of belted caseless munitions for the RE-RE700 rotary cannon system. Lacks propellants, as it's to be used with the binary hypergolic principle."
+	caliber = "20mm"
+	max_rounds = 1700 //lore-compliant belt quantity
 	gun_type = /obj/item/hardpoint/secondary/frontalcannon
 	icon_state = "frontal_1"
 
@@ -24,10 +26,24 @@
 /obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon
 	name = "RE-RE965 Aerial-Defence System ammunition box"
 	desc = "A crate of belted caseless munitions for the ever-hungry RE-RE965 Aerial-Defence System. Comes loaded with a mix of HEI-T and AP rounds for combating aerial threats of all shapes and sizes. Lacks propellants, as it's to be used with the binary hypergolic principle."
+	caliber = "20mm"
 	default_ammo = /datum/ammo/bullet/smartgun/aa
 	gun_type = /obj/item/hardpoint/primary/aa_quadcannon
-	max_rounds = 2000
+	max_rounds = 3400
 	icon_state = "quad_1"
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon/update_icon()
 	icon_state = "quad_[current_rounds <= 0 ? "0" : "1"]"
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/aev
+	name = "M56 RWS Drum"
+	desc = "An expanded drum of 700, 10x28mm caseless rounds for the M56 heavy machine gun system."
+	icon_state = "m56d_drum"
+	max_rounds = 700
+	gun_type = /obj/item/hardpoint/secondary/m56cupola/aev
+
+/obj/item/ammo_magazine/hardpoint/m56_cupola/aev/update_icon()
+	if(current_rounds > 0)
+		icon_state = "m56d_drum"
+	else
+		icon_state = "m56d_drum_empty"
