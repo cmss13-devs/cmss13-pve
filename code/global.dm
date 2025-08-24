@@ -5,6 +5,11 @@
 
 #define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
 #define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
+#define USCM_AUXILIARY_PLATOON new /datum/squad/marine/bravo
+#define FORECON_AUXILIARY_PLATOON new /datum/squad/marine/sof/forecon
+#define UPP_AUXILIARY_PLATOON new /datum/squad/marine/upp/secondary
+#define PMC_AUXILIARY_PLATOON new /datum/squad/marine/pmc/secondary
+
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn
 //Admin Permissions
