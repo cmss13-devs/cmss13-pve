@@ -3776,7 +3776,9 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/binhai/basemil/lobby)
 "cUX" = (
-/obj/structure/machinery/gel_refiller,
+/obj/structure/machinery/gel_refiller{
+	pixel_x = 5
+	},
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
 "cVi" = (
@@ -9164,13 +9166,10 @@
 	color = "#424a50";
 	pixel_x = -5
 	},
-/obj/item/storage/firstaid/adv{
-	pixel_y = 3;
-	pixel_x = 4
-	},
-/obj/item/storage/firstaid/adv{
-	pixel_y = 9;
-	pixel_x = -7
+/obj/item/storage/firstaid/softpack/adv/upp,
+/obj/item/storage/firstaid/softpack/adv/upp{
+	pixel_x = -12;
+	pixel_y = 7
 	},
 /turf/open/floor/corsat,
 /area/binhai/basemil/upperarmory)
@@ -9311,6 +9310,10 @@
 /obj/item/storage/box/packet/high_explosive/upp,
 /obj/item/storage/box/packet/high_explosive/upp/smoke{
 	pixel_x = 3
+	},
+/obj/item/storage/firstaid/softpack/upp{
+	pixel_y = 8;
+	pixel_x = -4
 	},
 /turf/open/floor/corsat,
 /area/binhai/basemil/lowerarmory)
@@ -10020,7 +10023,9 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/hab/north)
 "iyy" = (
-/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
+	pixel_x = 5
+	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
@@ -14185,7 +14190,8 @@
 /area/binhai/other/mainlower)
 "mhR" = (
 /obj/structure/machinery/bioprinter{
-	name = "\improper MinZdrav synthetic limb printer 2000"
+	name = "\improper MinZdrav synthetic limb printer 2000";
+	pixel_x = 5
 	},
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
@@ -14900,7 +14906,10 @@
 	color = "#ffe6e6"
 	},
 /obj/item/storage/briefcase/inflatable,
-/obj/item/device/radio,
+/obj/item/device/radio{
+	pixel_x = 5;
+	pixel_y = 7
+	},
 /obj/structure/machinery/light/small{
 	dir = 1;
 	pixel_y = 20;
@@ -16934,7 +16943,7 @@
 /obj/item/prop/magazine/book/uppbooklet{
 	pixel_x = 7
 	},
-/obj/item/tool/crew_monitor{
+/obj/item/tool/crew_monitor/upp{
 	pixel_x = -8
 	},
 /obj/item/device/radio,
@@ -16990,6 +16999,9 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/noticeboard{
+	pixel_y = 28
+	},
 /turf/open/floor/corsat,
 /area/binhai/other/minelower)
 "oLf" = (
@@ -17263,7 +17275,8 @@
 /area/binhai/main/commissary)
 "oVM" = (
 /obj/structure/machinery/chem_master{
-	pixel_y = 3
+	pixel_y = 3;
+	pixel_x = -4
 	},
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
@@ -21546,7 +21559,9 @@
 /turf/open/floor/strata/floor3,
 /area/binhai/shuttles/drop2)
 "syw" = (
-/obj/structure/machinery/smartfridge/chemistry,
+/obj/structure/machinery/smartfridge/chemistry{
+	pixel_x = -7
+	},
 /obj/structure/machinery/light/small{
 	dir = 1;
 	pixel_y = 20;
@@ -24029,6 +24044,7 @@
 	name = "gun locker"
 	},
 /obj/item/weapon/gun/rifle/ag80/preloaded,
+/obj/item/ammo_magazine/rifle/ag80,
 /obj/item/ammo_magazine/rifle/ag80,
 /obj/item/ammo_magazine/rifle/ag80,
 /obj/item/ammo_magazine/rifle/ag80,
@@ -26659,7 +26675,9 @@
 /turf/open/floor/corsat/marked,
 /area/binhai/main/lobby)
 "wui" = (
-/obj/structure/machinery/chem_dispenser/medbay,
+/obj/structure/machinery/chem_dispenser/medbay{
+	pixel_x = -4
+	},
 /turf/open/floor/prison/sterile_white,
 /area/binhai/main/treatment)
 "wuu" = (
