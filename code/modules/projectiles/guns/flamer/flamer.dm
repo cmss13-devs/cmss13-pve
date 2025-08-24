@@ -15,6 +15,7 @@
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	fire_sound = ""
 	flags_equip_slot = SLOT_BACK
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	w_class = SIZE_LARGE
 	force = 15
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR

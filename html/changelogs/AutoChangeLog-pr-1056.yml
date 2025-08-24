@@ -1,0 +1,6 @@
+author: "AndroBetel, Dimdimich"
+delete-after: True
+changes:
+  - rscadd: "Replaced Type 71s with a new pulse carbine in CANC Grunt preset"
+  - rscadd: "Replaced Type 88s with the DMR version of a pulse carbine in CANC Sniper preset"
+  - rscadd: "Minor aesthetic adjustments for CANC presets"

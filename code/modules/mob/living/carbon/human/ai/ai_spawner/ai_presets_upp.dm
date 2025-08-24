@@ -2,9 +2,34 @@
 	faction = FACTION_UPP
 
 /datum/human_ai_equipment_preset/upp/militia
-	name = "UPP Guardsman"
-	desc = "Territorial Guardsman"
+	name = "UPP People's Territorial Guardsman"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
 	path = /datum/equipment_preset/upp/militia
+
+/datum/human_ai_equipment_preset/upp/militia/at
+	name = "UPP People's Territorial Guardsman Anti-Tank"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
+	path = /datum/equipment_preset/upp/militia/at
+
+/datum/human_ai_equipment_preset/upp/militia/medic
+	name = "UPP People's Territorial Guardsman Sanitar"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic medical supplies and training."
+	path = /datum/equipment_preset/upp/militia/medic
+
+/datum/human_ai_equipment_preset/upp/militia/tech
+	name = "UPP People's Territorial Guardsman Technician"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic technican supplies and training."
+	path = /datum/equipment_preset/upp/militia/tech
+
+/datum/human_ai_equipment_preset/upp/militia/nco
+	name = "UPP People's Territorial Guardsman Sergeant"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one leads the entire bundle of disorganised troops into battle."
+	path = /datum/equipment_preset/upp/militia/nco
+
+/datum/human_ai_equipment_preset/upp/militia/officer
+	name = "UPP People's Territorial Guardsman Officer"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one manages the whole operation around the UPP Territorial Guard."
+	path = /datum/equipment_preset/upp/militia/officer
 
 /datum/human_ai_equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman"
@@ -23,7 +48,7 @@
 
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
-	desc = "The UPP's answer to the USCM's smartgunner. About as strong, can gun down unaware marines easily."
+	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily. This one shoots standard 10x27mm."
 	path = /datum/equipment_preset/upp/machinegunner
 
 /datum/human_ai_equipment_preset/upp/at
