@@ -46,9 +46,11 @@
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
 #define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
 #define MAP_CANYON_32B "Canyon 32B"
+#define MAP_BIGRED_2016_PVE "Big Red 2016 PVE"
 #define MAP_BIG_BLUE "Kleschers Research Site"
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
+#define MAP_FOP_CLASSIC "FOP_V1_Classic"
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
