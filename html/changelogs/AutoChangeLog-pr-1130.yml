@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New FORECON gear presets for props, both light(survivor) and kitted(normal)"
+  - rscadd: "The M39 SMG returns as a military-service weapon, a subtype of the Viper 9 meant for use by Recon units as a sidearm/backup weapon"
+  - rscadd: "A FORECON-preset only variant of the M49A that sports a slightly better fire-rate & 2-shot burst fire, but fires slower than the A5 custom variant and can't chamber any of the A19 mags"
+  - rscadd: "New variant of the M48A modernized M1911 for the FORECON CO, chambered in .45 super. Still accepts .45 ACP mags too"
+  - rscdel: "Removed the old presets"
