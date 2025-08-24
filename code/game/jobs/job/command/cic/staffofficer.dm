@@ -94,9 +94,6 @@ OverrideTimelock(/datum/job/command/bridge, list(
 
 /datum/job/command/bridge/ai/pmc
 	title = JOB_PMCPLAT_OW
-// todo: funny AR goggles perma cyan 	gear_preset =
-// todo: above	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-
 	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc
 	job_options = null
 

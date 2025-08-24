@@ -403,6 +403,14 @@
 	minimap_color = MINIMAP_SQUAD_ECHO
 	usable = FALSE
 
+/datum/squad/marine/pmc/small
+	name = SQUAD_PMCPLT_SMALL
+
+/datum/squad/marine/pmc/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
 //###############################
 /datum/squad/clf
 	name = "Root"
