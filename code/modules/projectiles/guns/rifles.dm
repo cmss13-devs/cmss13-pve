@@ -187,6 +187,29 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
 	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/extended
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
+
+
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
