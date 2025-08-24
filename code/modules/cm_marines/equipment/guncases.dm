@@ -275,6 +275,16 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/grenade
+	name = "\improper UA 571-F AGL sentry gun case"
+	desc = "A gun case containing the UA 571-F AGL sentry unit, a spare drum, and a sentry laptop."
+	can_hold = list(/obj/item/defenses/handheld/sentry/grenade, /obj/item/ammo_magazine/sentry/grenade, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/grenade/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/grenade(src)
+	new /obj/item/ammo_magazine/sentry/grenade(src)
+	new /obj/item/device/sentry_computer(src)
+
 /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
 	name = "\improper UA 571-C-WY sentry guncase"
 	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
