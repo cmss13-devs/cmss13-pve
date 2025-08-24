@@ -106,3 +106,12 @@ endmap
 
 map redemption_valley
 endmap
+
+map jungle_delta
+endmap
+
+map prospector_canyon
+endmap
+
+map arctic_valley
+endmap
