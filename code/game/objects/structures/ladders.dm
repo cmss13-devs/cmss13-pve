@@ -284,3 +284,14 @@
 
 /obj/structure/ladder/rope/update_icon()
 	return
+
+/obj/structure/ladder/maintenance
+	name = "maintenance ladder"
+	desc = "The hatch itself is the door to the underground. Though it looks like it the hatch itself is light enough to not be an issue!"
+	icon = 'icons/obj/structures/structures.dmi'
+	icon_state = "hatchclosed"
+	color = "#666633"
+	pixel_y = 7
+
+/obj/structure/ladder/maintenance/update_icon()
+	return

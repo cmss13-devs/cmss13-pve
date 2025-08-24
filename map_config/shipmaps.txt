@@ -16,6 +16,10 @@ map almayer
 	disabled
 endmap
 
+map firefly
+	disabled
+endmap
+
 map golden_arrow
 	default
 endmap
@@ -23,11 +27,13 @@ endmap
 map chapaev
 endmap
 
-
-map firefly
+map rover
 endmap
 
-map rover
+map golden_arrow_classic
+endmap
+
+map uscss_obsidian_falk
 endmap
 
 map golden_arrow_classic
@@ -49,4 +55,7 @@ map lv522_firebase_charlie_charlie
 endmap
 
 map lv295_firebase_sierra_bravo
+endmap
+
+map uscss_onyx_karain
 endmap

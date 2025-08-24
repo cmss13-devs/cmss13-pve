@@ -42,6 +42,30 @@
 	penetration = ARMOR_PENETRATION_TIER_6 //Instant deletion isn't fun.
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
+/datum/ammo/bullet/sniper/upp/heap
+	name = "high velocity armor-piercing sniper bullet"
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_8
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
+/datum/ammo/bullet/sniper/upp/flak
+	name = "flak sniper bullet"
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
+/datum/ammo/bullet/sniper/upp/flak/on_hit_mob(mob/M,obj/projectile/P)
+	burst(get_turf(M),P,damage_type, 2 , 2)
+	burst(get_turf(M),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/sniper/upp/flak/on_hit_obj(obj/O, obj/projectile/P)
+	burst(get_turf(O),P,damage_type, 2 , 2)
+	burst(get_turf(O),P,damage_type, 1 , 2 , 0)
+
+/datum/ammo/bullet/sniper/upp/flak/on_hit_turf(turf/T, obj/projectile/P)
+	burst(T,P,damage_type, 2 , 2)
+	burst(T,P,damage_type, 1 , 2 , 0)
+
 /datum/ammo/bullet/sniper/upp_pve
 	name = "high-power sniper bullet" //Now used by hAI CLF type 88 users
 	damage = 60
@@ -52,9 +76,11 @@
 	name = "anti-materiel sniper bullet"
 
 	shrapnel_chance = 0 // This isn't leaving any shrapnel.
-	accuracy = HIT_ACCURACY_TIER_8
-	damage = 125
-	shell_speed = AMMO_SPEED_TIER_8
+	accuracy = HIT_ACCURACY_TIER_10
+	accurate_range = 48
+	max_range = 48 //Overpen through half a colony amuses me greatly
+	damage = 190
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	penetration = ARMOR_PENETRATION_TIER_10 + ARMOR_PENETRATION_TIER_5
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge //10x99 casing pipe implies this is actually cased, so...
 
@@ -215,7 +241,7 @@
 /datum/ammo/bullet/sniper/anti_materiel/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
 
 /datum/ammo/bullet/sniper/anti_materiel/vulture

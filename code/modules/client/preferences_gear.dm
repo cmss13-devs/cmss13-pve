@@ -101,6 +101,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Prescription sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses/prescription
 
+/datum/gear/eyewear/pilot_visor_black
+	display_name = "Pilot visor, black"
+	path = /obj/item/device/helmet_visor/po_visor/marine
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/eyewear/pilot_visor_yellow
+	display_name = "Pilot visor, yellow"
+	path = /obj/item/device/helmet_visor/po_visor/marine/yellow
+	allowed_origins = USCM_ORIGINS
 /*
 //================================================
 				Masks & Scarves
@@ -118,6 +127,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/mask/balaclava_green
 	display_name = "Balaclava, green"
 	path = /obj/item/clothing/mask/balaclava/tactical
+
+/datum/gear/mask/balaclava_threehole
+	display_name = "Balaclava, three-hole"
+	path = /obj/item/clothing/mask/balaclava/threehole
+	allowed_origins = UPP_ORIGINS
 
 /datum/gear/mask/coif
 	display_name = "Coif"
@@ -311,14 +325,25 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/cap
 	display_name = "USCM cap, jungle"
 	path = /obj/item/clothing/head/cmcap
+	cost = 2
 
 /datum/gear/headwear/uscm/cap_desert
 	display_name = "USCM cap, desert"
-	path = /obj/item/clothing/head/cmcap/khaki
+	path = /obj/item/clothing/head/cmcap/desert
+	cost = 2
 
 /datum/gear/headwear/uscm/cap_snow
 	display_name = "USCM cap, snow"
 	path = /obj/item/clothing/head/cmcap/snow
+	cost = 2
+
+/datum/gear/headwear/uscm/cap_operations
+	display_name = "USCM Operations Cap, Green"
+	path = /obj/item/clothing/head/cmcap/bridge
+
+/datum/gear/headwear/uscm/cap_operations2
+	display_name = "USCM Operations Cap, Tan"
+	path = /obj/item/clothing/head/cmcap/bridge/tan
 
 /datum/gear/headwear/uscm/cap/sulaco
 	display_name = "USS Golden Arrow cap"
@@ -488,8 +513,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/prop/helmetgarb/lucky_feather/blue
 
 /datum/gear/helmet_garb/broken_nvgs
-	display_name = "Night vision goggles, broken"
-	path = /obj/item/prop/helmetgarb/helmet_nvg/cosmetic
+	display_name = "M1 Multispectrum Visor"
+	path = /obj/item/prop/helmetgarb/helmet_nvg/cosmetic/larp
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/helmet_garb/prescription_bottle
 	display_name = "Prescription bottle"
@@ -570,6 +596,12 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "brown fingerless combat gloves"
 	path = /obj/item/clothing/gloves/marine/brown/fingerless
 
+/datum/gear/clothing/shotgun_holster_belt
+	display_name = "shotgun holster belt"
+	path = /obj/item/storage/belt/gun/shotgunholster
+	cost = 3
+	allowed_origins = USCM_ORIGINS
+
 /datum/gear/clothing/flak
 	display_name = "M67 flak jacket (Blue)"
 	path = /obj/item/clothing/accessory/flak
@@ -643,6 +675,30 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/paint/usflag
 	display_name = "M3 Pattern US Flag Paint"
 	path = /obj/item/clothing/accessory/paint/usflag
+
+/datum/gear/paint/target
+	display_name = "M3 Pattern Target Paint"
+	path = /obj/item/clothing/accessory/paint/target
+
+/datum/gear/paint/smiley
+	display_name = "M3 Pattern Smiley-Face Paint"
+	path = /obj/item/clothing/accessory/paint/alcoholism
+
+/datum/gear/paint/neutral
+	display_name = "M3 Pattern Neutral-Face Paint"
+	path = /obj/item/clothing/accessory/paint/melancholy
+
+/datum/gear/paint/cross
+	display_name = "M3 Pattern Cross Paint"
+	path = /obj/item/clothing/accessory/paint/cross
+
+/datum/gear/paint/pandora
+	display_name = "M3 Pattern Inscription Paint"
+	path = /obj/item/clothing/accessory/paint/inscription
+
+/datum/gear/paint/flames
+	display_name = "M3 Pattern Fire Paint"
+	path = /obj/item/clothing/accessory/paint/fire
 
 /datum/gear/paint/facepaint_green
 	display_name = "Facepaint, green"
@@ -760,17 +816,20 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/mags
 	cost = 1
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/mags/magazine_dirty
 	display_name = "Magazine"
 	path = /obj/item/prop/magazine/dirty
 
-/datum/gear/toy/mags/boots_magazine_one
+/datum/gear/toy/mags/boots
+	allowed_origins = NON_UPP_ORIGINS
+
+/datum/gear/toy/mags/boots/boots_magazine_one
 	display_name = "Boots Issue No.117"
 	path = /obj/item/prop/magazine/boots/n117
 
-/datum/gear/toy/mags/boots_magazine_two
+/datum/gear/toy/mags/boots/boots_magazine_two
 	display_name = "Boots Issue No.150"
 	path = /obj/item/prop/magazine/boots/n150
 
@@ -778,11 +837,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Boots Issue No.160"
 	path = /obj/item/prop/magazine/boots/n160
 
-/datum/gear/toy/mags/boots_magazine_four
+/datum/gear/toy/mags/boots/boots_magazine_four
 	display_name = "Boots Issue No.54"
 	path = /obj/item/prop/magazine/boots/n054
 
-/datum/gear/toy/mags/boots_magazine_five
+/datum/gear/toy/mags/boots/boots_magazine_five
 	display_name = "Boots Issue No.55"
 	path = /obj/item/prop/magazine/boots/n055
 
@@ -793,7 +852,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/toy/card
 	cost = 1
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/toy/card/ace_of_spades
 	display_name = "Card, ace of spades"
@@ -1037,7 +1096,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/chinese
 	display_name = "Type 4 bayonet"
-	path = 	/obj/item/weapon/knife/marine/chinese
+	path = 	/obj/item/attachable/bayonet/canc
 	allowed_origins = UPP_ORIGINS
 
 /datum/gear/weapon/type_80_Bayonet
@@ -1050,6 +1109,11 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "M8 Cartridge Bayonet"
 	path = /obj/item/storage/box/loadout/co2_knife
 	allowed_origins = USCM_ORIGINS
+
+/datum/gear/weapon/butterfly_knife
+	display_name = "Butterfly Knife"
+	path = /obj/item/weapon/butterfly
+	cost = 3
 
 /datum/gear/weapon/clfpistol
 	display_name = "Hummingbird Pistol"
@@ -1098,7 +1162,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "HG 45 'Marina' Pistol"
 	path = /obj/item/storage/box/loadout/HG45_marine_loadout
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/hg44
 	display_name = "HG 44 'Automag' Pistol"
@@ -1114,7 +1178,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Custom Spearhead Armoury Revolver"
 	path = /obj/item/storage/box/loadout/Spearhead_loadout/custom
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/l54
 	display_name = "L54 Pistol"
@@ -1130,11 +1194,13 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "VP78 Pistol"
 	path = /obj/item/storage/box/loadout/VP78_loadout
 	cost = 4
+	allowed_origins = USCM_ORIGINS
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
 	path = /obj/item/storage/large_holster/machete/arnold/weak
 	cost = 4
+	allowed_origins = USCM_ORIGINS
 
 /*
 //================================================
@@ -1144,6 +1210,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink
 	category = "Canned drinks"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/drink/water
 	display_name = "Bottled water"
@@ -1186,6 +1253,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Boda Soda"
 	path = /obj/item/reagent_container/food/drinks/cans/boda
 	cost = 3 //Legally imported from UPP.
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/drink/boda/plus
 	display_name = "Boda Cola"
@@ -1193,7 +1261,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/drink/alcohol
 	cost = 3 //Illegal in military.
-	allowed_origins = USCM_ORIGINS // UPP stricter on enforcement, I figure
+	allowed_origins = NON_UPP_ORIGINS // UPP stricter on enforcement, I figure
 
 /datum/gear/drink/alcohol/ale
 	display_name = "Weyland-Yutani IPA Ale"
@@ -1252,7 +1320,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/flask/wy
 	display_name = "WY flask"
 	path = /obj/item/reagent_container/food/drinks/flask/weylandyutani
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /*
 //================================================
@@ -1304,6 +1372,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/snack_packaged
 	category = "Food (packaged)"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/snack_packaged/beef_jerky
 	display_name = "Beef jerky"
@@ -1378,27 +1447,35 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/smoking
 	category = "Smoking"
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/smoking/cigarette
 	display_name = "Cigarette"
 	path = /obj/item/clothing/mask/cigarette
-	cost = 1
+	cost = 0
 	slot = WEAR_FACE
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/cigarette/cigar_classic
 	display_name = "Classic cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar/classic
-	cost = 3
+	cost = 2
 
 /datum/gear/smoking/cigarette/cigar_premium
 	display_name = "Premium cigar"
 	path = /obj/item/clothing/mask/cigarette/cigar
-	cost = 2
+	cost = 1
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/pack_lucky_strikes
 	display_name = "Pack Of Lucky Strikes"
 	path = /obj/item/storage/fancy/cigarettes/lucky_strikes
 	cost = 0
+
+/datum/gear/smoking/pack_laika
+	display_name = "Pack Of Laika"
+	path = /obj/item/storage/fancy/cigarettes/laika
+	allowed_origins = UPP_ORIGINS
 
 /datum/gear/smoking/pack_emeraldgreen
 	display_name = "Pack Of Emerald Greens"
@@ -1442,6 +1519,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Lighter, cheap"
 	path = /obj/item/tool/lighter/random
 	cost = 1
+	allowed_origins = FACTION_ORIGINS
 
 /datum/gear/smoking/zippo
 	display_name = "Lighter, zippo"
@@ -1480,8 +1558,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/misc/pdt_kit
 	display_name = "PDT/L kit"
-	path = /obj/item/storage/box/pdt_kit
-	cost = 3
+	path = /obj/item/storage/box/pdt_kit/advanced
+	cost = 1 // it's in the vendors anyway.
+
 
 /datum/gear/misc/watch
 	display_name = "Seiko Pulsemeter wristwatch"
@@ -1532,6 +1611,19 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Solar Devils shoulder patch"
 	path = /obj/item/clothing/accessory/patch/devils
 
+/datum/gear/misc/patch_uscm/ua
+	display_name = "United Americas flag shoulder patch"
+	path = /obj/item/clothing/accessory/patch/ua
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = USCM_ORIGINS
+
+/datum/gear/misc/patch_uscm/usa
+	display_name = "United States flag shoulder patch" //no limited allowed_origins, a non-USCM could have the patch to show their original country
+	path = /obj/item/clothing/accessory/patch/usa
+	cost = 1
+	slot = WEAR_IN_ACCESSORY
+
 /datum/gear/misc/patch_upp
 	display_name = "UPPAC shoulder patch"
 	path = /obj/item/clothing/accessory/patch/upp
@@ -1577,3 +1669,9 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Compact can opener"
 	path = /obj/item/tool/kitchen/can_opener/compact
 	cost = 2
+
+/datum/gear/misc/eye_drops
+
+	display_name = "Eye drops"
+	path = /obj/item/prop/helmetgarb/eye_drops
+	cost = 1

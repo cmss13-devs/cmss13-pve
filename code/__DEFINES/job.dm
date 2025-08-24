@@ -14,8 +14,10 @@
 #define SQUAD_CBRN "CBRN"
 #define SQUAD_FORECON "FORECON"
 #define SQUAD_SOLAR "Solar Devils"
+#define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -148,7 +150,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CMC "Commandant of the Marine Corps"
 #define JOB_PLT_MED "Platoon Corpsman"
 #define JOB_PLT_SL "Platoon Squad Leader"
-#define JOB_SQUAD_TECH "Reconnaissance Support Technician"
+#define JOB_SQUAD_TECH "Support Technician"
 
 // Used to add a timelock to a job. Will be passed onto derivatives
 #define AddTimelock(Path, timelockList) \
@@ -284,6 +286,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_SG "Heavy Weapons Specialist"
 #define JOB_PMCPLAT_STANDARD "Tactical Unit"
 #define JOB_PMCPLAT_MEDIC "Medical Specialist"
+
+///------ PMC SMALL ==== ///
+#define JOB_PMCPLAT_SMALL_LEADER "Strike Operations Leader"
+#define JOB_PMCPLAT_SMALL_FTL "Strike Team Leader"
+#define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
+#define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
+#define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
 
 
 //---- Contractors ----//
@@ -422,6 +431,14 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_CIA_LIAISON "Intelligence Liaison Officer"
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
+//-------- UACG -------//
+#define JOB_UACG_RIFLE "Colonial Militiaman"
+#define JOB_UACG_TECH "Colonial Militiaman Technician"
+#define JOB_UACG_MEDIC "Colonial Militiaman Medic"
+#define JOB_UACG_LEAD "Colonial Militiaman Unit Leader"
+#define JOB_UACG_OFFICER "Colonial Militiaman Officer"
+
+#define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_LEAD, JOB_UACG_OFFICER)
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
 #define JOB_DUTCH_RIFLEMAN "Dutch's Dozen - Rifleman"

@@ -70,6 +70,7 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret/naval(src)
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
@@ -93,8 +94,8 @@
 	job = JOB_SO
 
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander/spawn_gear()
+	new /obj/item/clothing/head/uppcap/beret/naval(src)
 	new /obj/item/clothing/under/marine/veteran/UPP/naval(src)
-	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
@@ -146,3 +147,10 @@
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander/spawn_gear()
+	new /obj/item/clothing/head/beret/pmc(src)
+	new /obj/item/clothing/under/liaison_suit/formal(src)
+	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)

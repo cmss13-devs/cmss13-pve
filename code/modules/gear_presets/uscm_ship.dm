@@ -696,15 +696,10 @@
 
 /datum/equipment_preset/uscm_ship/so/upp/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
-
-/datum/equipment_preset/uscm_ship/so/upp/lesser_rank/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
 
 /datum/equipment_preset/uscm_ship/so/upp/equipped
 	name = "UPP Platoon Commander (Equipped)"
@@ -740,11 +735,18 @@
 	paygrades = list("PMC-OW" = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "OW"
 	assignment = JOB_PMCPLAT_OW
+	idtype = /obj/item/card/id/pmc
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
 	access_list = ACCESS_LIST_WY_SENIOR
 
-/datum/equipment_preset/uscm_ship/so/pmc/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm_ship/so/pmc/equipped
+	name = "PMC Overwatch (PltCo) (Equipped)"
+
+/datum/equipment_preset/uscm_ship/so/pmc/equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm_ship/so/pmc/equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/formal(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
@@ -839,6 +841,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/boiler(new_human), WEAR_BODY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/rto/forecon(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/pads/greaves(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/forecon(new_human), WEAR_J_STORE)
 	//waist
