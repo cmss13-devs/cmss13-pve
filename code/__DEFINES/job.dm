@@ -17,7 +17,7 @@
 #define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
-#define SQUAD_PMC_PLT_SMALL "AZURE-16"
+#define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -288,11 +288,11 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_MEDIC "Medical Specialist"
 
 ///------ PMC SMALL ==== ///
-#define JOB_PMCPLAT_SMALL_LEADER "AZURE-16 Operations Leader"
-#define JOB_PMCPLAT_SMALL_FTL "AZURE-16 Team Leader"
-#define JOB_PMCPLAT_SMALL_SG "AZURE-16 Heavy Weapons Specialist"
-#define JOB_PMCPLAT_SMALL_STANDARD "AZURE-16 Tactical Unit"
-#define JOB_PMCPLAT_SMALL_MEDIC "AZURE-16 Medical Specialist"
+#define JOB_PMCPLAT_SMALL_LEADER "Strike Operations Leader"
+#define JOB_PMCPLAT_SMALL_FTL "Strike Team Leader"
+#define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
+#define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
+#define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
 
 
 //---- Contractors ----//

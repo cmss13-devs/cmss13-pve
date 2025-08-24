@@ -203,7 +203,8 @@
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 
 /obj/item/storage/box/guncase/m42c
-	desc = "A gun case containing a M42C Scoped Rifle."
+	name = "\improper M42C scoped rifle case"
+	desc = "A gun case containing an M42C Scoped Rifle and several magazines."
 	storage_slots = 7
 
 /obj/item/storage/box/guncase/m42c/fill_preset_inventory()
@@ -216,8 +217,6 @@
 	new /obj/item/ammo_magazine/sniper/elite/basic(src)
 
 /obj/item/storage/box/guncase/m42c/heap
-	desc = "A gun case containing a M42C Scoped Rifle."
-	storage_slots = 7
 
 /obj/item/storage/box/guncase/m42c/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/sniper/elite/heap(src)
@@ -742,7 +741,7 @@
 
 /obj/item/storage/box/guncase/heavy/fuel/pmc
 	name = "\improper M240A1 fuel canister case"
-	desc = "A heavy case containing six fuel canisters for the M240A1 incinerator unit."
+	desc = "A heavy case containing six EX-fuel canisters for the M240A1 incinerator unit."
 	icon_state = "fuelcase"
 	storage_slots = 6
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank/EX)
@@ -988,10 +987,6 @@
 	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/heap
-	name = "\improper NSG-23 assault rifle case"
-	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
-	storage_slots = 6
-	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/heap/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap(src)

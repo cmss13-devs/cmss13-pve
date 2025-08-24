@@ -140,7 +140,8 @@
 
 /obj/effect/landmark/start/marine/smartgunner/pmc/small
 	name = JOB_PMCPLAT_SMALL_SG
-	squad = SQUAD_PMCPLT
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/smartgunner/ai/pmc/small
 
 /obj/effect/landmark/start/marine/smartgunner/forecon
 	name = JOB_SQUAD_SMARTGUN_FORECON

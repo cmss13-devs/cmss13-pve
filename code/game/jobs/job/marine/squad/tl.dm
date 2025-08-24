@@ -99,8 +99,8 @@
 
 /obj/effect/landmark/start/marine/tl/pmc/small
 	name = JOB_PMCPLAT_SMALL_FTL
-	squad = SQUAD_PMCPLT
-	job = /datum/job/marine/tl/ai/pmc
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/tl/ai/pmc/small
 
 /obj/effect/landmark/start/marine/tl/forecon
 	name = JOB_SQUAD_TEAM_LEADER_FORECON

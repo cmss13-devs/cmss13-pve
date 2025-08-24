@@ -469,7 +469,7 @@
 
 /obj/effect/landmark/late_join/small_pmc
 	name = "small pmc late join"
-	squad = SQUAD_PMC_PLT_SMALL
+	squad = SQUAD_PMCPLT_SMALL
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()

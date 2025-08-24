@@ -131,8 +131,8 @@
 
 /obj/effect/landmark/start/marine/pmc/small
 	name = JOB_PMCPLAT_SMALL_STANDARD
-	squad = SQUAD_PMCPLT
-	job = /datum/job/marine/standard/ai/pmc
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/standard/ai/pmc/small
 
 /obj/effect/landmark/start/marine/forecon
 	name = JOB_SQUAD_MARINE_FORECON

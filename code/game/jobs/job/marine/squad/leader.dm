@@ -103,8 +103,8 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /obj/effect/landmark/start/marine/leader/pmc/small
 	name = JOB_PMCPLAT_SMALL_LEADER
-	squad = SQUAD_PMCPLT
-	job = /datum/job/marine/leader/ai/pmc
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/leader/ai/pmc/small
 
 /obj/effect/landmark/start/marine/leader/forecon
 	name = JOB_SQUAD_LEADER_FORECON

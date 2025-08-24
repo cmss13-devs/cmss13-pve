@@ -90,9 +90,6 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),
-		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
@@ -105,12 +102,12 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/leader/ai/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/forecon = JOB_SQUAD_TEAM_LEADER,\
-		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/smartgunner/ai/forecon = JOB_SQUAD_SMARTGUN),\
 		/datum/squad/marine/pmc/small = list(/datum/job/marine/tl/ai/pmc/small = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/pmc/small =  JOB_SQUAD_MARINE,\
 		/datum/job/marine/medic/ai/pmc/small = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/smartgunner/ai/pmc/small = JOB_SQUAD_SMARTGUN,\
-		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER))))
+		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
