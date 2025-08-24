@@ -771,3 +771,40 @@
 
 /obj/item/weapon/gun/revolver/spearhead/black/hollowpoint
 	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+
+//-------------------------------------------------------
+//RMR-6 Revolver
+
+/obj/item/weapon/gun/revolver/rmr6
+	name = "\improper RMR-6 revolver"
+	desc = "Revolver Manuhrin model 6 a rather more interesting design by Manuhrin the only one who made revolvers. This one is used by both military and police forces for it's powerful force, versatibility, and tradition. Chambered in .357 magnum."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "rmr6"
+	item_state = "rmr6"
+
+	fire_sound = null
+	fire_sounds = list('sound/weapons/gun_cmb_1.ogg', 'sound/weapons/gun_cmb_2.ogg')
+	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
+	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
+	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'
+	chamber_close_sound = 'sound/weapons/handling/pkd_close_chamber.ogg'
+	hand_reload_sound = 'sound/weapons/gun_revolver_load3.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/revolver/rmr6
+	force = 8
+	attachable_allowed = list(
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/flashlight,
+	)
+
+/obj/item/weapon/gun/revolver/rmr6/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 14, "rail_y" = 23, "under_x" = 21, "under_y" = 19, "stock_x" = 24, "stock_y" = 19, "side_rail_x" = 19, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/revolver/rmr6/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil = 0
+	recoil_unwielded = 0

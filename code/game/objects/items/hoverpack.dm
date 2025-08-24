@@ -254,6 +254,9 @@
 	volume = 90
 	amount_per_transfer_from_this = 10
 
+/obj/item/hoverpack/fil
+	name = "IMP-09 jump pack"
+	desc = "The IMP-09 jump pack is an experimental hoverpack used by French Foreign International Legion Drop Commandos for infiltration and inner atmosphere para-dropping onto hostile territory."
 
 #undef NO_FUEL
 #undef FUELED

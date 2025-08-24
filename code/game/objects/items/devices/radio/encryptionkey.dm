@@ -339,11 +339,11 @@
 
 /obj/item/device/encryptionkey/clf/medic
 	name = "\improper CLF Medical Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_MED = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_GEN = TRUE)
 
 /obj/item/device/encryptionkey/clf/command
 	name = "\improper CLF Command Radio Encryption Key"
-	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE, RADIO_CHANNEL_CLF_MED = TRUE)
+	channels = list(RADIO_CHANNEL_CLF_CMD = TRUE, RADIO_CHANNEL_CLF_GEN = TRUE, RADIO_CHANNEL_CLF_ENGI = TRUE)
 //---------------------------------------------------
 /obj/item/device/encryptionkey/highcom
 	name = "\improper USCM High Command Radio Encryption Key"
@@ -429,3 +429,8 @@
 	name = "\improper Mercenary Radio Encryption Key"
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_MERC = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
+/obj/item/device/encryptionkey/fil
+	name = "\improper French FIL Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_FIL = TRUE, RADIO_CHANNEL_COLONY = TRUE)

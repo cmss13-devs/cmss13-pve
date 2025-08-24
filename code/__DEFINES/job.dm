@@ -451,6 +451,28 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UACG_OFFICER "Colonial Militiaman Officer"
 
 #define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_LEAD, JOB_UACG_OFFICER)
+
+
+//------- FIL --------//
+#define JOB_FIL_RIFLE "FIL Rifleman"
+#define JOB_FIL_AUX "FIL Auxiliary"
+#define JOB_FIL_AUX_SL "FIL Auxiliary Squad Leader"
+#define JOB_FIL_MEDIC "FIL Field Medic"
+#define JOB_FIL_TECH "FIL Field Technician"
+#define JOB_FIL_MG "FIL Machinegunner"
+#define JOB_FIL_TL "FIL Team Leader"
+#define JOB_FIL_SL "FIL Squad Leader"
+#define JOB_FIL_LT "FIL Field Officer"
+#define JOB_FIL_SCOUT "FIL Scout"
+#define JOB_FIL_CO "FIL Commanding Officer"
+#define JOB_FIL_SNIPER "FIL Marksman"
+#define JOB_FIL_ELITE "FIL Drop Commando"
+#define JOB_FIL_ELITE_SL "FIL Squad Lead Drop Commando"
+#define JOB_FIL_FLAME "FIL Heavy Incinerator"
+#define JOB_FIL_FLAME_SL "FIL Squad Lead Heavy Incinerator"
+
+#define FIL_JOB_LIST list(JOB_FIL_RIFLE, JOB_FIL_AUX, JOB_FIL_AUX_SL, JOB_FIL_MEDIC, JOB_FIL_TECH, JOB_FIL_MG, JOB_FIL_SL, JOB_FIL_LT, JOB_FIL_SCOUT, JOB_FIL_CO, JOB_FIL_SNIPER, JOP_FIL_ELITE, JOB_FIL_ELITE_SL, JOP_FIL_FLAME, JOB_FIL_FLAME_SL)
+
 //-------- DUTCH'S DOZEN --------//
 #define JOB_DUTCH_ARNOLD "Dutch's Dozen - Dutch"
 #define JOB_DUTCH_RIFLEMAN "Dutch's Dozen - Rifleman"

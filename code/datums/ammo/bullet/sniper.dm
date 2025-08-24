@@ -315,3 +315,30 @@
 			L.apply_armoured_damage(damage, ARMOR_BULLET, BRUTE, null, penetration)
 		// 150% damage to runners (225), 300% against Big xenos (450), and 200% against all others (300). -Kaga
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
+
+/datum/ammo/bullet/sniper/fr2
+	name = "sniper bullet" //Bolt action, high damage but less penetration
+	damage = 75
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
+
+/datum/ammo/bullet/sniper/fr2/penetrating
+	name = "sniper penetration bullet" //Far less damage obv but still very strong
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/bullet/sniper/fr2/penetrating/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/sniper/fr2/ap
+	name = "sniper AP bullet" //Much higher AP, lower base damage but still strong
+	damage = 65
+	penetration = ARMOR_PENETRATION_TIER_8
+
+/datum/ammo/bullet/sniper/fr2/hp
+	name = "sniper HP bullet" //Higher base damage, lower AP.
+	damage = 110
+	penetration = ARMOR_PENETRATION_TIER_1

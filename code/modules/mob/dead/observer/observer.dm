@@ -414,6 +414,9 @@
 				if("Faction CLF HUD")
 					H = GLOB.huds[MOB_HUD_FACTION_CLF]
 					H.add_hud_to(src, src)
+				if("Faction FIL HUD")
+					H = GLOB.huds[MOB_HUD_FACTION_FIL]
+					H.add_hud_to(src, src)
 
 	see_invisible = INVISIBILITY_OBSERVER
 
