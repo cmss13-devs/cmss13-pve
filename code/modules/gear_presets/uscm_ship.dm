@@ -756,6 +756,18 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_L_HAND)
 
+/datum/equipment_preset/uscm_ship/so/rmc
+	name = "Royal Marine Commando, Troop Commander"
+	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
+	role_comm_title = "RM TC"
+	assignment = JOB_TWE_RMC_LIEUTENANT
+	rank = JOB_TWE_RMC_LIEUTENANT
+	skills = /datum/skills/rmc/officer
+	faction_group = FACTION_LIST_TWE
+	faction = FACTION_TWE
+	access_list = ACCESS_LIST_TWE_TROOP
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/so_equipped

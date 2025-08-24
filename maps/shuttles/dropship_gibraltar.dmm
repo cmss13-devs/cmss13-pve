@@ -1,0 +1,675 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ax" = (
+/obj/effect/attach_point/electronics/gibraltar,
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "85"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"aB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 2
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"aR" = (
+/obj/structure/platform_decoration{
+	dir = 8
+	},
+/obj/structure/platform_decoration{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"bI" = (
+/obj/structure/machinery/camera/autoname/golden_arrow/gibraltar{
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"bY" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/rmc{
+	dir = 2;
+	id = "port_door"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"dF" = (
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"fj" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "86b"
+	},
+/area/shuttle/gibraltar)
+"fy" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = 8
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	pixel_y = 27;
+	pixel_x = -4
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"hh" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "47"
+	},
+/area/shuttle/gibraltar)
+"in" = (
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "99"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"iv" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "8,4"
+	},
+/area/shuttle/gibraltar)
+"jy" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "48"
+	},
+/area/shuttle/gibraltar)
+"jE" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/rmc{
+	id = "aft_door"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/gibraltar)
+"jZ" = (
+/obj/structure/shuttle/part/gibraltar/transparent/nosecone{
+	icon_state = "102"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"kh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = -1
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right,
+/area/shuttle/gibraltar)
+"kW" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "97"
+	},
+/area/shuttle/gibraltar)
+"lH" = (
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot{
+	dir = 1;
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight/small{
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/obj/structure/phone_base{
+	dir = 8;
+	pixel_x = 19;
+	pixel_y = 12;
+	layer = 3.1;
+	phone_category = "Dropship";
+	name = "Gibraltar telephone receiver";
+	phone_id = "Gibraltar"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"mZ" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"nk" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"nO" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "42"
+	},
+/area/shuttle/gibraltar)
+"oo" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "1,5"
+	},
+/area/shuttle/gibraltar)
+"oY" = (
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"pR" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "1,4"
+	},
+/area/shuttle/gibraltar)
+"pS" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"qe" = (
+/obj/structure/machinery/light/double{
+	dir = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"rp" = (
+/obj/structure/shuttle/part/gibraltar/rightenginerear,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"sq" = (
+/turf/template_noop,
+/area/space)
+"tl" = (
+/obj/structure/stairs/perspective,
+/obj/structure/platform{
+	dir = 4;
+	layer = 2.7
+	},
+/obj/structure/platform{
+	dir = 8
+	},
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"tq" = (
+/obj/structure/vehicle_locker/movie{
+	pixel_y = 20;
+	layer = 2.9
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"vi" = (
+/obj/structure/shuttle/part/gibraltar/leftaftdivot,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"vD" = (
+/obj/structure/shuttle/part/gibraltar/righttailboom,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"vL" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -5
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"vU" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "75"
+	},
+/area/shuttle/gibraltar)
+"wF" = (
+/obj/structure/machinery/light/double{
+	dir = 4
+	},
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"xC" = (
+/obj/structure/shuttle/part/gibraltar/lefttailboom,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Ac" = (
+/obj/structure/shuttle/part/gibraltar/lefttailfin2,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"AI" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "77"
+	},
+/area/shuttle/gibraltar)
+"Bg" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "0,4"
+	},
+/area/shuttle/gibraltar)
+"Bp" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "8,7"
+	},
+/area/shuttle/gibraltar)
+"Bw" = (
+/obj/structure/shuttle/part/gibraltar/righttailfin3,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"BE" = (
+/obj/structure/machinery/door/airlock/hatch/cockpit/rmc,
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"Dt" = (
+/obj/structure/shuttle/part/gibraltar/lefttailfin,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"ET" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "89a"
+	},
+/area/shuttle/gibraltar)
+"Fj" = (
+/obj/structure/shuttle/part/gibraltar/righttailfin2,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"FY" = (
+/obj/structure/shuttle/part/gibraltar/transparent/nosecone{
+	icon_state = "100"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Gr" = (
+/obj/structure/shuttle/part/gibraltar,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"GA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 2
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"GC" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_y = 26;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"GQ" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "78"
+	},
+/area/shuttle/gibraltar)
+"GY" = (
+/obj/structure/shuttle/part/gibraltar/rightaftdivot,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Ic" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "43"
+	},
+/area/shuttle/gibraltar)
+"Ju" = (
+/obj/structure/shuttle/part/gibraltar/leftenginerear,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Jx" = (
+/obj/effect/attach_point/crew_weapon/gibraltar,
+/obj/docking_port/mobile/marine_dropship/gibraltar,
+/turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"JV" = (
+/obj/structure/shuttle/part/gibraltar/righttailfin,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Km" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "83"
+	},
+/area/shuttle/gibraltar)
+"Lu" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "7,5"
+	},
+/area/shuttle/gibraltar)
+"Ms" = (
+/obj/effect/attach_point/weapon/gibraltar/left_fore,
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "84"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Np" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/rmc{
+	dir = 1;
+	id = "starboard_door"
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"NO" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "103"
+	},
+/area/shuttle/gibraltar)
+"OX" = (
+/obj/structure/stairs/perspective{
+	dir = 1;
+	icon_state = "p_stair_full";
+	pixel_y = 22
+	},
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
+	dir = 1;
+	pixel_x = -8;
+	layer = 5
+	},
+/obj/structure/machinery/computer/dropship_weapons/gibraltar/small{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+"OY" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "89b"
+	},
+/area/shuttle/gibraltar)
+"PE" = (
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "95"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"RD" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "80"
+	},
+/area/shuttle/gibraltar)
+"RQ" = (
+/obj/structure/shuttle/part/gibraltar/leftenginefore,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Sk" = (
+/obj/structure/shuttle/part/midway/gunpod_prop,
+/obj/structure/shuttle/part/gibraltar/gunpod_prop,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Sm" = (
+/obj/structure/shuttle/part/gibraltar/rightenginefore,
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"SE" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "7,4"
+	},
+/area/shuttle/gibraltar)
+"TC" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "104"
+	},
+/area/shuttle/gibraltar)
+"Ut" = (
+/turf/closed/shuttle/gibraltar/transparent{
+	icon_state = "86a"
+	},
+/area/shuttle/gibraltar)
+"Uz" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "0,7"
+	},
+/area/shuttle/gibraltar)
+"Vq" = (
+/obj/effect/attach_point/weapon/gibraltar/right_fore,
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "91"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"Zh" = (
+/obj/effect/attach_point/electronics/gibraltar,
+/obj/structure/shuttle/part/gibraltar/transparent{
+	icon_state = "90"
+	},
+/turf/template_noop,
+/area/shuttle/gibraltar)
+"ZE" = (
+/turf/closed/shuttle/gibraltar{
+	icon_state = "81"
+	},
+/area/shuttle/gibraltar)
+"ZG" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = -5
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 8
+	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
+/area/shuttle/gibraltar)
+
+(1,1,1) = {"
+sq
+sq
+sq
+RQ
+Uz
+Bg
+Ju
+sq
+sq
+sq
+sq
+sq
+sq
+sq
+sq
+Gr
+"}
+(2,1,1) = {"
+sq
+sq
+sq
+Ms
+vU
+pR
+nO
+GA
+bY
+vi
+RQ
+Uz
+Bg
+Ju
+sq
+Dt
+"}
+(3,1,1) = {"
+sq
+sq
+sq
+ax
+AI
+fy
+qe
+dF
+dF
+hh
+nO
+oo
+pR
+NO
+xC
+Ac
+"}
+(4,1,1) = {"
+FY
+PE
+fj
+Ut
+GQ
+tq
+nk
+oY
+oY
+vL
+pS
+mZ
+oY
+jE
+sq
+sq
+"}
+(5,1,1) = {"
+Sk
+kW
+lH
+OX
+BE
+oY
+oY
+Jx
+oY
+tl
+aR
+dF
+dF
+kh
+sq
+sq
+"}
+(6,1,1) = {"
+jZ
+in
+OY
+ET
+RD
+tq
+nk
+oY
+oY
+bI
+pS
+wF
+oY
+kh
+sq
+sq
+"}
+(7,1,1) = {"
+sq
+sq
+sq
+Zh
+ZE
+GC
+ZG
+dF
+dF
+jy
+Ic
+Lu
+SE
+TC
+vD
+JV
+"}
+(8,1,1) = {"
+sq
+sq
+sq
+Vq
+Km
+SE
+Ic
+aB
+Np
+GY
+Sm
+Bp
+iv
+rp
+sq
+Fj
+"}
+(9,1,1) = {"
+sq
+sq
+sq
+Sm
+Bp
+iv
+rp
+sq
+sq
+sq
+sq
+sq
+sq
+sq
+sq
+Bw
+"}

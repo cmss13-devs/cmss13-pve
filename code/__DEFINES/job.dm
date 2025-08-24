@@ -18,6 +18,7 @@
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
 #define SQUAD_PMCPLT_SMALL "AZURE-16"
+#define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -385,27 +386,20 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- TWE --------//
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
 
-//RMC
-#define JOB_TWE_RMC_RIFLEMAN "RMC Rifleman"
-#define JOB_TWE_RMC_MARKSMAN "RMC Marksman"
-#define JOB_TWE_RMC_SMARTGUNNER "RMC Smartgunner"
-#define JOB_TWE_RMC_BREACHER "RMC Breacher"
-#define JOB_TWE_RMC_TEAMLEADER "RMC Team Leader"
-#define JOB_TWE_RMC_LIEUTENANT "RMC Lieutenant"
-#define JOB_TWE_RMC_COMMANDER "RMC Commander"
+//-------- RMC --------//
+#define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
+#define JOB_TWE_RMC_MEDIC "Medical Assistant"
+#define JOB_TWE_RMC_ENGI "Assault Engineer"
+#define JOB_TWE_RMC_MARKSMAN "Scout Sniper"
+#define JOB_TWE_RMC_SMARTGUNNER "GPMG Gunner"
+#define JOB_TWE_RMC_BREACHER "Bombardment Specialist"
+#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
+#define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
+#define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
+#define JOB_TWE_RMC_COMMANDER "Squadron Commander"
 
-#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER,JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER)
-
-#define JOB_TWE_SEAMAN "TWE Seaman"
-#define JOB_TWE_LSEAMAN "TWE Leading Seaman"
-#define JOB_TWE_SO "TWE Standing Officer"
-#define JOB_TWE_WO "TWE Warrant Officer"
-#define JOB_TWE_CPT "TWE Captain"
-#define JOB_TWE_ADM "TWE Admiral"
-#define JOB_TWE_GADM "TWE Grand Admiral"
-#define JOB_TWE_ER "TWE Emperor"
-
-#define TWE_OFFICER_JOB_LIST list(JOB_TWE_SEAMAN, JOB_TWE_LSEAMAN, JOB_TWE_SO, JOB_TWE_WO, JOB_TWE_CPT, JOB_TWE_ADM, JOB_TWE_GADM, JOB_TWE_ER)
+#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
 
 //-------- PROVOST --------//
 #define JOB_PROVOST_ENFORCER "Provost Enforcer"
