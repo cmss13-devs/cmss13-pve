@@ -180,7 +180,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/royal_marine/sniper
-	name = "Royal Marine Commando, Sniper (Equipped)" //Sniper until they get a proper DMR
+	name = "Royal Marine Commando, Scout Sniper (M42A2) (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM ScS" //Intended, going by current royal marine role/specialisation abbreviations
@@ -237,7 +237,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
 /datum/equipment_preset/royal_marine/sniper/light
-	name = "Royal Marine Commando, Marksman (Equipped)"
+	name = "Royal Marine Commando, Scout Sniper (DMR) (Equipped)"
 
 /datum/equipment_preset/royal_marine/sniper/light/load_gear(mob/living/carbon/human/new_human)
 	//uniform

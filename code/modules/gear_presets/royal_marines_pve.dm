@@ -70,7 +70,7 @@
 	skills = /datum/skills/rmc/engi
 
 /datum/equipment_preset/uscm/rmc/snp
-	name = "Royal Marine Commando, Sniper"
+	name = "Royal Marine Commando, Scout Sniper"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RM ScS"
 	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_SNIPERPREP)

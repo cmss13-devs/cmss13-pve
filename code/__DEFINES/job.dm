@@ -390,7 +390,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
 #define JOB_TWE_RMC_MEDIC "Medical Assistant"
 #define JOB_TWE_RMC_ENGI "Assault Engineer"
-#define JOB_TWE_RMC_MARKSMAN "Marksman"
+#define JOB_TWE_RMC_MARKSMAN "Scout Sniper"
 #define JOB_TWE_RMC_SMARTGUNNER "GPMG Gunner"
 #define JOB_TWE_RMC_BREACHER "Bombardment Specialist"
 #define JOB_TWE_RMC_TEAMLEADER "Team Leader"
