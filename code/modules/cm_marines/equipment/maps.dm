@@ -210,6 +210,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TORCH = new /obj/item/map/bay_torch(),
 		MAP_NERVA = new /obj/item/map/nerva(),
 		MAP_TAIPEI = new /obj/item/map/taipei(),
+		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
+		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

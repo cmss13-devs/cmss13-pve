@@ -104,6 +104,12 @@ endmap
 map oread_garrison
 endmap
 
+map redemption_valley
+endmap
+
+map binhai_supply_station
+endmap
+
 map baytorch
 endmap
 

@@ -160,6 +160,14 @@
 	name = "\improper Worn United States of America flag"
 	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "usaflag_worn"
+/obj/structure/sign/banners/brazil_flag
+	name = "\improper Brazil flag"
+	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
+	icon_state = "brazilflag"
+/obj/structure/sign/banners/brazil_worn
+	name = "\improper Worn Brazil flag"
+	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
+	icon_state = "brazilflag_worn"
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//

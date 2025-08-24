@@ -202,6 +202,31 @@
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 
+/obj/item/storage/box/guncase/m42c
+	name = "\improper M42C scoped rifle case"
+	desc = "A gun case containing an M42C Scoped Rifle and several magazines."
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/m42c/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+
+/obj/item/storage/box/guncase/m42c/heap
+
+/obj/item/storage/box/guncase/m42c/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite/heap(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+
 //------------ heavy cases
 
 /obj/item/storage/box/guncase/heavy
@@ -249,6 +274,19 @@
 		overlays += image(icon, "+sentrymag")
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
+
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
+	name = "\improper UA 571-C-WY sentry guncase"
+	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/pmc_platoon, /obj/item/ammo_magazine/sentry, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/pmc_platoon(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/device/sentry_computer(src)
+
 
 /obj/item/storage/box/guncase/heavy/sentryupp
 	name = "\improper UPPAC 32-H sentry gun case"
@@ -591,6 +629,20 @@
 		source_image.pixel_x = 18
 		overlays += source_image
 
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc
+	name = "\improper motion detectors case"
+	desc = "A case containing four individual handheld motion detectors."
+	icon_state = "mdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/hacked/pmc)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc/fill_preset_inventory()
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+
+
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
@@ -686,6 +738,21 @@
 						var/image/source_image = image(icon, "+fuel")
 						source_image.pixel_x = tank_tally*8-8-(24)
 						overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc
+	name = "\improper M240A1 fuel canister case"
+	desc = "A heavy case containing six EX-fuel canisters for the M240A1 incinerator unit."
+	icon_state = "fuelcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/EX)
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
 
 /obj/item/storage/box/guncase/heavy/uppfuel
 	name = "\improper LPO80 fuel canister case"
@@ -908,6 +975,27 @@
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+
 
 /obj/item/storage/box/guncase/m3717
 	name = "\improper M37-17 pump shotgun case"
