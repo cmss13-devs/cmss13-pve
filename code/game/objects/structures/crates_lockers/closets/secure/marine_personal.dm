@@ -34,6 +34,8 @@
 		return TRUE
 	return FALSE
 
+// ==USCM Standard== //
+
 /obj/structure/closet/secure_closet/marine_personal/proc/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
@@ -69,6 +71,8 @@
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
 
+// ==UPP== //
+
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
 	new /obj/item/clothing/head/uppcap/beret/naval(src)
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
@@ -101,6 +105,8 @@
 	new /obj/item/clothing/suit/storage/jacket/marine/upp/naval(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/upp(src)
 
+// ==USCM FORECON== //
+
 /obj/structure/closet/secure_closet/marine_personal/forecon/spawn_gear()
 	new /obj/item/clothing/under/marine/standard(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
@@ -124,6 +130,7 @@
 /obj/structure/closet/secure_closet/marine_personal/forecon/rto
 	job = JOB_SQUAD_RTO
 
+// ==WY PMC== //
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/spawn_gear()
 	new /obj/item/clothing/under/marine/veteran/pmc(src)
@@ -147,6 +154,15 @@
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander
 	job = JOB_SO
+
+/obj/structure/closet/secure_closet/marine_personal/pmc/platoon_commander/spawn_gear()
+	new /obj/item/clothing/head/beret/pmc(src)
+	new /obj/item/clothing/under/liaison_suit/formal(src)
+	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)
+
+// ==Royal Marines== //
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/spawn_gear()
 	new /obj/item/clothing/head/cmcap/royal_marine(src)

@@ -361,6 +361,82 @@
 		list("PMC Cap", round(scale * 15), /obj/item/clothing/head/cmcap/weyyu, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/suits
+	name = "\improper PMC Bussinesswear Vendor"
+	icon_state = "pmc_gear"
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/pmc/suits/populate_product_list(scale)
+	listed_products = list(
+		list("SUITS AND UNDERSHIRTS", 0, null, null, null),
+		list("Black Suit Pants", 15, /obj/item/clothing/under/liaison_suit/black, VENDOR_ITEM_RECOMMENDED),
+		list("Blue Suit Pants", 15, /obj/item/clothing/under/liaison_suit/blue, VENDOR_ITEM_REGULAR),
+		list("Brown Suit Pants", 15, /obj/item/clothing/under/liaison_suit/brown, VENDOR_ITEM_REGULAR),
+		list("White Suit Pants", 15, /obj/item/clothing/under/liaison_suit/corporate_formal, VENDOR_ITEM_REGULAR),
+		list("Liaison's Tan Suit", 15, /obj/item/clothing/under/liaison_suit, VENDOR_ITEM_REGULAR),
+		list("Liaison's Charcoal Suit", 15, /obj/item/clothing/under/liaison_suit/charcoal, VENDOR_ITEM_REGULAR),
+		list("Liaison's White Suit", 15, /obj/item/clothing/under/liaison_suit/formal, VENDOR_ITEM_REGULAR),
+		list("Liaison's Blue Blazer", 15, /obj/item/clothing/under/liaison_suit/blazer, VENDOR_ITEM_REGULAR),
+		list("Liaison's Suspenders", 15, /obj/item/clothing/under/liaison_suit/suspenders, VENDOR_ITEM_REGULAR),
+		list("Liaison's Skirt", 15, /obj/item/clothing/under/blackskirt, VENDOR_ITEM_REGULAR),
+		list("Trainee's Uniform", 15, /obj/item/clothing/under/suit_jacket/trainee, VENDOR_ITEM_REGULAR),
+		list("Country Club Outfit", 15, /obj/item/clothing/under/liaison_suit/ivy, VENDOR_ITEM_REGULAR),
+		list("Orange Outfit", 15, /obj/item/clothing/under/liaison_suit/orange, VENDOR_ITEM_REGULAR),
+		list("Corporate Casual", 15, /obj/item/clothing/under/liaison_suit/field, VENDOR_ITEM_REGULAR),
+		list("Grey Workwear", 15, /obj/item/clothing/under/colonist/workwear, VENDOR_ITEM_REGULAR),
+		list("Khaki Workwear", 15, /obj/item/clothing/under/colonist/workwear/khaki, VENDOR_ITEM_REGULAR),
+		list("Pink Workwear", 15, /obj/item/clothing/under/colonist/workwear/pink, VENDOR_ITEM_REGULAR),
+		list("Green Workwear", 15, /obj/item/clothing/under/colonist/workwear/green, VENDOR_ITEM_REGULAR),
+
+		list("SUIT", 0, null, null, null),
+		list("Black Suit Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/corporate/black, VENDOR_ITEM_RECOMMENDED),
+		list("Khaki Suit Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/corporate, VENDOR_ITEM_REGULAR),
+		list("Brown Suit Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/corporate/brown, VENDOR_ITEM_REGULAR),
+		list("Blue Suit Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/corporate/blue, VENDOR_ITEM_REGULAR),
+		list("Formal Suit Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/corporate/formal, VENDOR_ITEM_REGULAR),
+		list("Grey Bomber Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/bomber/grey, VENDOR_ITEM_REGULAR),
+		list("Red Bomber Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/bomber/red, VENDOR_ITEM_REGULAR),
+		list("Khaki Bomber Jacket", 15, /obj/item/clothing/suit/storage/jacket/marine/bomber, VENDOR_ITEM_REGULAR),
+		list("Brown Bomber Jacket", 15, /obj/item/clothing/suit/storage/bomber, VENDOR_ITEM_REGULAR),
+		list("Black Bomber Jacket", 15, /obj/item/clothing/suit/storage/bomber/alt, VENDOR_ITEM_REGULAR),
+		list("Liaison's Winter Coat", 15, /obj/item/clothing/suit/storage/snow_suit/liaison, VENDOR_ITEM_REGULAR),
+		list("Labcoat", 15, /obj/item/clothing/suit/storage/labcoat, VENDOR_ITEM_REGULAR),
+		list("Grey Vest", 15, /obj/item/clothing/suit/storage/jacket/marine/vest/grey, VENDOR_ITEM_REGULAR),
+		list("Brown Vest", 15, /obj/item/clothing/suit/storage/jacket/marine/vest, VENDOR_ITEM_REGULAR),
+		list("Tan Vest", 15, /obj/item/clothing/suit/storage/jacket/marine/vest/tan, VENDOR_ITEM_REGULAR),
+
+		list("TIES", 0, null, null, null),
+		list("Black Tie", 15, /obj/item/clothing/accessory/black, VENDOR_ITEM_RECOMMENDED),
+		list("Red Tie", 15, /obj/item/clothing/accessory/red, VENDOR_ITEM_REGULAR),
+		list("Purple Tie", 15, /obj/item/clothing/accessory/purple, VENDOR_ITEM_REGULAR),
+		list("Blue Tie", 15, /obj/item/clothing/accessory/blue, VENDOR_ITEM_REGULAR),
+		list("Green Tie", 15, /obj/item/clothing/accessory/green, VENDOR_ITEM_REGULAR),
+		list("Gold Tie", 15, /obj/item/clothing/accessory/gold, VENDOR_ITEM_REGULAR),
+		list("Special Tie", 15, /obj/item/clothing/accessory/horrible, VENDOR_ITEM_REGULAR),
+
+		list("GLASSES", 0, null, null, null),
+		list("BiMex Shades", 15, /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_RECOMMENDED),
+		list("Aviator Shades", 15, /obj/item/clothing/glasses/sunglasses/aviator, VENDOR_ITEM_REGULAR),
+		list("Sunglasses", 15, /obj/item/clothing/glasses/sunglasses, VENDOR_ITEM_REGULAR),
+		list("Prescription Sunglasses", 15, /obj/item/clothing/glasses/sunglasses/prescription, VENDOR_ITEM_REGULAR),
+		list("Prescription Glasses", 15, /obj/item/clothing/glasses/regular/hipster, VENDOR_ITEM_REGULAR),
+
+		list("GLOVES", 0, null, null, null),
+		list("Black Gloves", 15, /obj/item/clothing/gloves/black, VENDOR_ITEM_RECOMMENDED),
+		list("Dress Gloves", 15, /obj/item/clothing/gloves/marine/dress, VENDOR_ITEM_REGULAR),
+
+		list("SHOES", 0, null, null, null),
+		list("Laceup Shoes, Black", 15, /obj/item/clothing/shoes/laceup, VENDOR_ITEM_RECOMMENDED),
+		list("Laceup Shoes, Brown", 15, /obj/item/clothing/shoes/laceup/brown, VENDOR_ITEM_REGULAR),
+		list("Sneakers, Black", 15, /obj/item/clothing/shoes/black, VENDOR_ITEM_REGULAR),
+		list("Corporate Boots", 15, /obj/item/clothing/shoes/marine/civilian, VENDOR_ITEM_REGULAR),
+
+		list("HATS", 0, null, null, null),
+		list("Black Beret", 15, /obj/item/clothing/head/beret/cm/black/civilian, VENDOR_ITEM_REGULAR),
+		list("White Beret", 15, /obj/item/clothing/head/beret/cm/white/civilian, VENDOR_ITEM_REGULAR),
+		list("Fedora", 15, /obj/item/clothing/head/fedora, VENDOR_ITEM_REGULAR),
+
+)
+
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon
 	name = "\improper ColMarTech FORECON Uniform Vendor"
 	icon_state = "forecon_gear"

@@ -131,6 +131,18 @@
 	name = JOB_PMCPLAT_SG
 	squad = SQUAD_PMCPLT
 
+/datum/job/marine/smartgunner/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_SG
+	gear_preset = /datum/equipment_preset/uscm/pmc/sg
+	job_options = null
+	total_positions = 1
+	spawn_positions = 1
+
+/obj/effect/landmark/start/marine/smartgunner/pmc/small
+	name = JOB_PMCPLAT_SMALL_SG
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/smartgunner/ai/pmc/small
+
 /obj/effect/landmark/start/marine/smartgunner/forecon
 	name = JOB_SQUAD_SMARTGUN_FORECON
 	job = JOB_SQUAD_SMARTGUN_FORECON
