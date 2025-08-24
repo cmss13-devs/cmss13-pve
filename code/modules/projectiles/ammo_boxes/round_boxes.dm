@@ -58,7 +58,7 @@
 // RMC SG
 /obj/item/ammo_box/rounds/smartgun/holo_target
 	name = "\improper holo-targetting smartgun ammunition box (10x28mm)"
-	desc = "An ammunition box full of 10x28mm holo-targetting rounds. Used to refill L56A2 smartgun drums. It comes with a leather strap allowing to wear it on the back."
+	desc = "An ammunition box full of 10x28mm holo-targetting rounds. Used to refill L58A3 smartgun drums. It comes with a leather strap allowing to wear it on the back."
 	overlay_content = "_impact"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 

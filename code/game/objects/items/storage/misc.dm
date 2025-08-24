@@ -244,7 +244,7 @@
 		new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
 /obj/item/storage/box/loadout/L54_loadout
-	name = "A2 storage box"
+	name = "L54A2 storage box"
 	desc = "A slim storage case containing a loaded L54A2 pistol and additional magazines."
 	can_hold = list(/obj/item/weapon/gun/pistol/l54, /obj/item/ammo_magazine/pistol/l54)
 

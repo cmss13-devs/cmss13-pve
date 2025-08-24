@@ -107,8 +107,6 @@
 /obj/item/clothing/glasses/night/m42_hms/no_nvg
 	name = "\improper M42 head-mounted sight"
 	desc = "A standalone version of the HMS commonly seen attached to the M56 weapon system. Allows connection to the Command & Control network whilst also providing a HUD display. Click it to toggle."
-
-/obj/item/clothing/glasses/night/m42_hms/no_nvg
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 0
 	vision_flags = 0
@@ -255,8 +253,8 @@
 	lighting_alpha = 255
 
 /obj/item/clothing/glasses/night/m56_goggles/rmc
-	name = "\improper L56A2 head mounted gunsight interface"
-	desc = "A headset and optic system for the L56A2 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	name = "\improper L58A3 head mounted gunsight interface"
+	desc = "A headset and optic system for the L58A3 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
 	actions_types = list(/datum/action/item_action/toggle)
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 

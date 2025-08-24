@@ -1045,11 +1045,11 @@
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/heap
 

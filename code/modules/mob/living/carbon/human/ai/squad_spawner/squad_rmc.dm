@@ -11,7 +11,7 @@
 
 /datum/human_ai_squad_preset/twe/gunteam
 	name = "TWE, Fire Support Group"
-	desc = "TWE patrol armed with a NSG L23A1 rifle and an L56A2 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
+	desc = "TWE patrol armed with a NSG L23A1 rifle and an L58A3 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
 	ai_to_spawn = list(
 		/datum/equipment_preset/royal_marine/machinegun = 1,
 		/datum/equipment_preset/royal_marine/standard = 1,
@@ -19,7 +19,7 @@
 
 /datum/human_ai_squad_preset/twe/squad
 	name = "TWE, Section"
-	desc = "TWE patrol armed with 3 NSG L23A1 rifles and an L56A2 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
+	desc = "TWE patrol armed with 3 NSG L23A1 rifles and an L58A3 smartgun, and carrying IFAKs containing gauze, ointment and injectors."
 	ai_to_spawn = list(
 		/datum/equipment_preset/royal_marine/leader = 1,
 		/datum/equipment_preset/royal_marine/standard = 2,

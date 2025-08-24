@@ -575,7 +575,7 @@
 
 /obj/item/storage/surgical_case/rmc_surgical_case
 	name = "\improper RMC surgical case"
-	desc = "It's a medical case for storing basic surgical tools. This one was made specifically for Royal Marine Commandos, allowing them to suture their wounds during prolonged operations or perform emergency organ-repair surgeries."
+	desc = "It's a medical case for storing basic surgical tools. This one was made specifically for Royal Marine Commandos, allowing them to suture their wounds during prolonged operations or perform emergency surgeries. Given the lack of tools, non-standard methods may need to be employed for the latter."
 	icon_state = "rmc_surgical_case"
 	storage_slots = 5
 

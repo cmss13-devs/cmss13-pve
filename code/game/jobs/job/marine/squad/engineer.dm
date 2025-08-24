@@ -1,3 +1,6 @@
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+
 /datum/job/marine/engineer
 	title = JOB_SQUAD_ENGI
 	total_positions = 12
@@ -53,9 +56,16 @@
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
 
+//Having to add a /ai subtype before the /rmc one, might as well make it viable for use
 /datum/job/marine/engineer/ai
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/engineer
+	gear_preset_secondary = /datum/equipment_preset/uscm/engineer/pfc
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL")
+
+/obj/effect/landmark/start/marine/engineer/ai
+	job = /datum/job/marine/engineer/ai
 
 /datum/job/marine/engineer/ai/set_spawn_positions(count)
 	return spawn_positions
@@ -92,3 +102,6 @@
 	name = JOB_TWE_RMC_BREACHER
 	squad = SQUAD_RMC
 	job = /datum/job/marine/engineer/ai/rmcmortar
+
+#undef LCPL_VARIANT
+#undef PFC_VARIANT

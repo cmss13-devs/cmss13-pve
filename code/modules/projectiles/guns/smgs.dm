@@ -167,7 +167,7 @@
 	item_state = "m39"
 	fire_sound = 'sound/weapons/gun_m39.ogg'
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
 	current_mag = /obj/item/ammo_magazine/smg/m39/squash

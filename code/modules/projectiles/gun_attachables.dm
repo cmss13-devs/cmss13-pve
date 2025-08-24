@@ -487,7 +487,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/l56a2_smartgun
-	name = "L56A2 barrel"
+	name = "L58A3 barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "magsg_barrel_a"
 	attach_icon = "magsg_barrel_a"
@@ -1306,8 +1306,8 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "reflex"
 
 /obj/item/attachable/scope/mini/rmcsg
-	name = "L56A2 gunsight interface"
-	desc = "L56A2 gunsight interface. You shouldn't ever see this."
+	name = "L58A3 gunsight interface"
+	desc = "L58A3 gunsight interface. You shouldn't ever see this."
 	zoom_offset = 4
 	icon_state = "sgsight"
 

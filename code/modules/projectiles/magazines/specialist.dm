@@ -196,9 +196,9 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/dirty
 	gun_type = /obj/item/weapon/gun/smartgun
 
-/obj/item/ammo_magazine/smartgun/holo_targetting
-	name = "holotargetting smartgun drum"
-	desc = "Holotargetting rounds for use in the royal marines commando L56A2 smartgun. The drum itself is designed to only fit in L56A2 smartguns, and is marked with a blue X."
+/obj/item/ammo_magazine/smartgun/holo_targeting
+	name = "holotargeting smartgun drum"
+	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
 	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc

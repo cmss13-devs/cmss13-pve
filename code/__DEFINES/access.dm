@@ -158,16 +158,15 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 #define ACCESS_TWE_SQUAD_ONE 297
 #define ACCESS_TWE_SQUAD_TWO 298
-#define ACCESS_TWE_SQUAD_THREE 299
 
 #define ACCESS_TWE_COMMANDO 300
 #define ACCESS_TWE_LEADERSHIP 301
 
 #define ACCESS_TWE_MEDPREP 302
 #define ACCESS_TWE_ENGPREP 303
-#define ACCESS_TWE_HEVWEAPPREP 304 //Mortar- 297 + 304, SG, 299 + 304
+#define ACCESS_TWE_HEVWEAPPREP 304
 #define ACCESS_TWE_SNIPERPREP 305
-#define ACCESS_TWE_TLPREP 306 //Troop sarge, 297 + 306, Section lead, 298 + 206, Team lead, 299 + 306
+#define ACCESS_TWE_TLPREP 306
 
 ///Senior leadership, the highest ranks
 #define ACCESS_TWE_SENIOR_LEAD 310

@@ -147,19 +147,29 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_12)
+	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_9
+	scatter = SCATTER_AMOUNT_TIER_10
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
-	fa_max_scatter = SCATTER_AMOUNT_TIER_5
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
 
 /obj/item/weapon/gun/rifle/nsg23/no_lock
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+	)
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
 
 /obj/item/weapon/gun/rifle/nsg23/rmc
 	name = "\improper NSG L23A1 pulse rifle"
@@ -175,6 +185,21 @@
 		/obj/item/attachable/attached_gun/grenade/nsg,
 		/obj/item/attachable/stock/nsg23/rmc,
 	)
+
+/obj/item/weapon/gun/rifle/nsg23/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
 /obj/item/weapon/gun/rifle/nsg23/rmc/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -198,29 +223,6 @@
 		/obj/item/attachable/stock/nsg23/rmc,
 		/obj/item/attachable/suppressor,
 	)
-
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock/pve
-	current_mag = /obj/item/ammo_magazine/rifle/nsg23/extended
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_10)
-	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_10)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_10
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
-	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
-	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	damage_falloff_mult = 0
-	fa_max_scatter = SCATTER_AMOUNT_TIER_7
-
-
-/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
-	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
 
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
