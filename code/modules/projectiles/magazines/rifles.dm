@@ -191,14 +191,6 @@
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m49a/pve
-	name = "\improper M49A depleted uranium magazine (10x28mm)"
-	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x28mm rounds for use in the M49A-R2 battle rifle."
-	icon_state = "m49a"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/du
-	gun_type = /obj/item/weapon/gun/rifle/m49a/pve
-	ammo_band_color = AMMO_BAND_COLOR_TOXIN
-
 //-------------------------------------------------------
 //XM40 AKA SOF RIFLE FROM HELL (It's an EM-2, a prototype of the real world L85A1 way back from the 1940s. We've given it a blue plastic shell and an integral suppressor)
 /obj/item/ammo_magazine/rifle/xm40
@@ -614,3 +606,14 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6
+
+/obj/item/ammo_magazine/rifle/isr
+	name = "\improper ISR box magazine (9.2x34mm)"
+	desc = "A 9.2x34mm box magazine for the ISR LMG."
+	caliber = "9.2x34mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
+	default_ammo = /datum/ammo/bullet/rifle/isr
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/isr
