@@ -425,6 +425,11 @@
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_UA_GUARD = TRUE, RADIO_CHANNEL_COLONY = TRUE)
 
+/obj/item/device/encryptionkey/merc
+	name = "\improper Mercenary Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_MERC = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
 /obj/item/device/encryptionkey/fil
 	name = "\improper French FIL Radio Encryption Key"
 	icon_state = "stripped_key"

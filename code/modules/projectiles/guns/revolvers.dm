@@ -769,6 +769,9 @@
 	icon_state = "spearhead_black"
 	item_state = "spearhead_black"
 
+/obj/item/weapon/gun/revolver/spearhead/black/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+
 //-------------------------------------------------------
 //RMR-6 Revolver
 

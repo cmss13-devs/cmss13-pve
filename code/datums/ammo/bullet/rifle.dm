@@ -641,6 +641,13 @@
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
 
+/datum/ammo/bullet/rifle/isr
+	name = "heavy 9.2x34mm bullet"
+
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
+
+
 /datum/ammo/bullet/rifle/fn107
 	name = "7.5x28 bullet"
 	damage = 35
