@@ -31,6 +31,19 @@
 		VEHICLE_GUNNER = null,
 	)
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 2.6,
+		"slash" = 0.5,
+		"bullet" = 0.7,
+		"explosive" = 0.9,
+		"blunt" = 0.5,
+		"abstract" = 1,
+	)
+
+	wall_ram_damage = 100
+	vehicle_ram_multiplier = 10
+
 /obj/vehicle/multitile/apc/movie/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
@@ -44,14 +57,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/movie/remove_seated_verbs(mob/living/M, seat)
@@ -68,14 +79,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/movie/initialize_cameras(change_tag = FALSE)

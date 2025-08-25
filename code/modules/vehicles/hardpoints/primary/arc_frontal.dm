@@ -1,6 +1,6 @@
 /obj/item/hardpoint/primary/arc_frontalcannon
-	name = "Bleihagel RE-RE850 Frontal Rotary Cannon"
-	desc = "A peculiar turret with two rotary cannons strapped to the front of it. Normally equipped with an autonomous mode, this one curiously lacks the feature."
+	name = "\improper Bleihagel RE-RE850 Frontal Rotary Cannon"
+	desc = "A peculiar turret with two 20mm rotary cannons strapped to the front of it."
 	icon = 'icons/obj/vehicles/hardpoints/arc.dmi'
 
 	icon_state = "autocannon"
@@ -16,7 +16,7 @@
 	allowed_seat = VEHICLE_DRIVER
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
-	max_clips = 1
+	max_clips = 2
 
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE
