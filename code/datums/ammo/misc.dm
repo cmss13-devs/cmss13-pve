@@ -49,18 +49,21 @@
 	drop_flame(get_turf(P), P.weapon_cause_data)
 
 /datum/ammo/flamethrower/tank_flamer
-	flamer_reagent_id = "highdamagenapalm"
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
+	flamer_reagent_id = "utnapthal"
 	max_range = 8
+	damage = 50
+	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
 	if(!istype(turf))
 		return
 
-	var/datum/reagent/napalm/high_damage/reagent = new()
-	new /obj/flamer_fire(turf, cause_data, reagent, 1)
+	var/datum/reagent/napalm/ut/reagent = new()
+	new /obj/flamer_fire(turf, cause_data, reagent, 2)
 
 	var/datum/effect_system/smoke_spread/landingsmoke = new /datum/effect_system/smoke_spread
-	landingsmoke.set_up(1, 0, turf, null, 4, cause_data)
+	landingsmoke.set_up(1, 0, turf, null, 3, cause_data)
 	landingsmoke.start()
 	landingsmoke = null
 
@@ -267,7 +270,7 @@
 
 	damage = 15
 	accuracy = HIT_ACCURACY_TIER_3
-	max_range = 6
+	max_range = 9
 
 /datum/ammo/grenade_container/on_hit_mob(mob/M,obj/projectile/P)
 	drop_nade(P)
@@ -285,7 +288,7 @@
 	var/turf/T = get_turf(P)
 	var/obj/item/explosive/grenade/G = new nade_type(T)
 	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
-	G.det_time = 10
+	G.det_time = 0.5 SECONDS
 	G.cause_data = P.weapon_cause_data
 	G.activate()
 
