@@ -515,6 +515,10 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/void/show_pipes,
 /area/torch/fourthdeck/quartermaster/storage/upper)
+"agf" = (
+/obj/item/weapon/gun/energy/laz_uzi,
+/turf/closed/shuttle,
+/area/space)
 "agm" = (
 /obj/structure/machinery/door/airlock/atmos/colony{
 	name = "Auxiliary Atmospherics";
@@ -749,6 +753,10 @@
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/shiva/floor3,
 /area/torch/fifthdeck/expedition_storage)
+"aiV" = (
+/obj/item/weapon/gun/energy/laz_uzi,
+/turf/open/floor/almayer_hull/blackfull,
+/area/torch/firstdeck/armoury/tactical)
 "aiY" = (
 /turf/open/floor/chapel/north,
 /area/torch/thirddeck/chapel/main)
@@ -2821,6 +2829,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury)
 "aJe" = (
@@ -3098,6 +3107,10 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/seconddeck/maintenance/foreport)
+"aNo" = (
+/obj/item/weapon/gun/energy/laz_uzi,
+/turf/open/space/basic,
+/area/space)
 "aNq" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
@@ -12838,6 +12851,7 @@
 	vision_flags = 0;
 	desc = "A neat looking pair of civilian grade night vision goggles. Unfortunately, the batteries were left inside during storage and leaked into the sensitive internals."
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "duS" = (
@@ -16960,6 +16974,7 @@
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "ezn" = (
@@ -20297,6 +20312,19 @@
 /obj/structure/catwalk,
 /turf/open/floor/plating,
 /area/torch/fourthdeck/maintenance/aft)
+"fnC" = (
+/obj/structure/surface/rack,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/shoes/marine/civilian,
+/obj/item/clothing/suit/armor/vest/ballistic,
+/obj/item/clothing/glasses/night{
+	darkness_view = 0;
+	lighting_alpha = 255;
+	vision_flags = 0;
+	desc = "A neat looking pair of civilian grade night vision goggles. Unfortunately, the batteries were left inside during storage and leaked into the sensitive internals."
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/torch/firstdeck/armoury/tactical)
 "fnE" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 8
@@ -24954,6 +24982,7 @@
 /obj/structure/machinery/light{
 	dir = 1
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "gtP" = (
@@ -32264,6 +32293,7 @@
 /area/torch/seconddeck/engineering/engineering_bay)
 "iny" = (
 /obj/structure/machinery/suit_storage_unit/standard_unit,
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury)
 "ioa" = (
@@ -45686,6 +45716,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "lJg" = (
@@ -53384,6 +53415,13 @@
 	},
 /turf/open/floor/shiva/north,
 /area/torch/thirddeck/hallway/fore)
+"nII" = (
+/obj/structure/ladder{
+	height = 2;
+	id = "lon_lad"
+	},
+/turf/open/void/show_pipes,
+/area/torch/thirddeck/cryo)
 "nIN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63673,6 +63711,7 @@
 /obj/structure/machinery/door/airlock/vault/colony{
 	name = "\improper Security Armoury"
 	},
+/obj/item/weapon/gun/energy/laz_uzi,
 /turf/open/floor/bluegrid,
 /area/torch/firstdeck/armoury/tactical)
 "qqn" = (
@@ -75925,7 +75964,6 @@
 /obj/structure/machinery/light_switch{
 	pixel_x = -24
 	},
-/obj/structure/stairs/perspective,
 /obj/structure/barricade/handrail{
 	dir = 4
 	},
@@ -82238,9 +82276,12 @@
 /turf/open/floor/kutjevo/multi_tiles/southwest,
 /area/torch/thirddeck/office)
 "uVY" = (
-/obj/structure/stairs/perspective,
 /obj/structure/barricade/handrail{
 	dir = 4
+	},
+/obj/structure/ladder{
+	height = 1;
+	id = "lon_lad"
 	},
 /turf/open/floor/plating,
 /area/torch/fourthdeck/lounge)
@@ -83923,6 +83964,10 @@
 	},
 /turf/open/floor/shiva/redcorners/north,
 /area/torch/bridgedeck/hallway/fore)
+"vtz" = (
+/obj/item/weapon/gun/energy/laz_uzi,
+/turf/open/space,
+/area/space)
 "vtB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -142563,7 +142608,7 @@ xfd
 thm
 pyA
 hTE
-fVx
+nII
 fVx
 tgL
 lQk
@@ -155769,8 +155814,8 @@ olV
 hkV
 hkV
 gtB
-eQu
-eQu
+aiV
+aiV
 ezm
 hkV
 hTx
@@ -156025,8 +156070,8 @@ olV
 hkV
 hkV
 duK
-duK
-duK
+fnC
+fnC
 lJc
 hkV
 dFi
@@ -156536,9 +156581,9 @@ olV
 olV
 hkV
 hkV
-duK
-duK
-duK
+fnC
+fnC
+fnC
 wyL
 hkV
 wRI
@@ -158847,7 +158892,7 @@ hnq
 hnq
 hnq
 hnq
-hnq
+aNo
 hnq
 hnq
 hnq
@@ -159349,8 +159394,8 @@ jNY
 jNY
 jNY
 jNY
-jNY
-jNY
+vtz
+vtz
 jNY
 jNY
 jNY
@@ -159612,9 +159657,9 @@ rcI
 rcI
 rcI
 rcI
+agf
 rcI
-rcI
-rcI
+agf
 rcI
 rcI
 rcI
