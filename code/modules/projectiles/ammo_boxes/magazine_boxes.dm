@@ -136,6 +136,15 @@
 /obj/item/ammo_box/magazine/m39/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m39/pve
+	name = "magazine box (Duplex Viper 9 x 12)"
+	overlay_ammo_type = "_le"
+	overlay_content = "_le"
+	magazine_type = /obj/item/ammo_magazine/smg/m39/pve
+
+/obj/item/ammo_box/magazine/m39/pve/empty
+	empty = TRUE
+
 //-----------------------M49A Battle Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m49a

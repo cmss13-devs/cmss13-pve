@@ -187,6 +187,29 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
 	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
 
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/extended
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
+
+
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
 /obj/item/weapon/gun/rifle/m41aMK1/xm40
@@ -517,6 +540,43 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
+
+/obj/item/weapon/gun/rifle/m20a/merc
+	name = "\improper M20CW pulse carbine"
+	desc = "A heavily modified black market version of the M20A pulse rifle, often used for CQC scenarios where SMGs just aren't cutting it. Comes with an integrated grip instead of an underbarrel shotgun and downsized barrel, alongside the removed stock. It can also now shoot in automatic!"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "m20a_tactical"
+	item_state = "m20a_tactical"
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/sling,
+	)
+	starting_attachment_types = list(/obj/item/attachable/sling)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/merc/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 14, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/m20a/merc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_9
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
+
+/obj/item/weapon/gun/rifle/m20a/merc/tactical
+	starting_attachment_types = list(/obj/item/attachable/sling, /obj/item/attachable/suppressor, /obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/rifle/m20a/merc/unloaded
+	current_mag = null
 
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
@@ -1798,6 +1858,9 @@
 	random_under_chance = 50
 	random_spawn_under = list(/obj/item/attachable/flashlight/grip)
 
+/obj/item/weapon/gun/rifle/l42a/abr40/tactical/assassin
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/tactical, /obj/item/attachable/scope/mini/hunting, /obj/item/attachable/suppressor)
+
 //=ROYAL MARINES=\\
 
 /obj/item/weapon/gun/rifle/rmc_f90
@@ -1937,3 +2000,52 @@
 	f90_shotgun_barrel.Attach(src)
 	update_attachable(f90_shotgun.slot)
 	update_attachable(f90_shotgun_barrel.slot)
+
+//Intermediate Support Rifle
+//=================================================
+//=================================================
+
+/obj/item/weapon/gun/rifle/isr
+	name = "\improper MK.7 ISR LMG"
+	desc = "The Intermediate Support Rifle, or ISR, was developed after contractors operating the MAR platform of firearms complained about its deficiencies. Whilst it is technically just a step above the standard MAR... it's not by much."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/isr
+	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel)
+	attachable_allowed = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/isr_barrel,
+		/obj/item/attachable/stock/isr,
+	)
+
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AUTO_EJECT_CASINGS
+	wield_delay = WIELD_DELAY_NORMAL
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
+
+
+/obj/item/weapon/gun/rifle/isr/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 12, "rail_y" = 22, "under_x" = 24, "under_y" = 13, "stock_x" = 5, "stock_y" = 20, "side_rail_x" = 20, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/isr/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_5
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/rifle/isr/modded
+	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel, /obj/item/attachable/flashlight, /obj/item/attachable/reddot)
