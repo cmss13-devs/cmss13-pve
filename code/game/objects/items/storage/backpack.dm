@@ -594,6 +594,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	networks_transmit = list(FACTION_UPP)
 	phone_category = PHONE_UPP_SOLDIER
 
+/obj/item/storage/backpack/marine/satchel/rto/merc
+	name = "\improper Mercenary Radio Telephone Pack"
+	networks_receive = list(FACTION_FIL)
+	networks_transmit = list(FACTION_FIL)
+	max_storage_space = 10
+
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
@@ -1055,6 +1061,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	worn_accessible = TRUE
 	can_hold = list(/obj/item/ammo_magazine/flamer_tank, /obj/item/tool/extinguisher)
 	storage_flags = STORAGE_FLAGS_POUCH
+
+/obj/item/storage/backpack/marine/engineerpack/flamethrower/d60
+	name = "\improper D60-HI Heavy Fueltank"
+	desc = "A large fueltank used by French heavy incinerator units for their D60 flamethrowers."
+	icon_state = "flamethrower_french_backpack"
+	item_state = "flamethrower_french_backpack"
+	max_fuel = 750
+	max_storage_space = 8
 
 //----------OTHER FACTIONS AND ERTS----------
 

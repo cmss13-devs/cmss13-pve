@@ -1357,6 +1357,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 
+/obj/item/storage/belt/gun/m4a3/pa76/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/pa76/ap())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/pa76/ap(src)
+
 /obj/item/storage/belt/gun/m4a3/m1911/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911())
 	new /obj/item/ammo_magazine/pistol/m1911(src)

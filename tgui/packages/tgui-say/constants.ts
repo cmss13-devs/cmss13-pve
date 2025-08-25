@@ -81,8 +81,8 @@ export const RADIO_PREFIXES = {
     label: 'Alpha',
   },
   '#a ': {
-    id: 'clf-med',
-    label: 'CLF Med',
+    id: 'fil',
+    label: 'fil',
   },
   ':b ': {
     id: 'bravo',
