@@ -12832,7 +12832,12 @@
 /obj/item/clothing/head/helmet,
 /obj/item/clothing/shoes/marine/civilian,
 /obj/item/clothing/suit/armor/vest/ballistic,
-/obj/item/clothing/glasses/night,
+/obj/item/clothing/glasses/night{
+	darkness_view = 0;
+	lighting_alpha = 255;
+	vision_flags = 0;
+	desc = "A neat looking pair of civilian grade night vision goggles. Unfortunately, the batteries were left inside during storage and leaked into the sensitive internals."
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "duS" = (
@@ -53333,8 +53338,12 @@
 /area/torch/thirddeck/maintenance/aftstarboard)
 "nHW" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/energy/laser_top,
-/obj/item/weapon/gun/energy/laser_top,
+/obj/item/weapon/gun/energy/laser_top{
+	w_class = 2
+	},
+/obj/item/weapon/gun/energy/laser_top{
+	w_class = 2
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/torch/firstdeck/armoury/tactical)
 "nIb" = (
