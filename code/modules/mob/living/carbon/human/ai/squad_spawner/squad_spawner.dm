@@ -63,7 +63,7 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 				return
 
 			var/datum/human_ai_squad_preset/preset_squad = GLOB.human_ai_squad_presets[gotten_path]
-			preset_squad.spawn_ai(get_turf(ui.user), ui)
+			preset_squad.spawn_ai(get_turf(ui.user), ui.user)
 			return TRUE
 
 /client/proc/open_human_squad_spawner_panel()
@@ -91,13 +91,13 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 	/// First entry is marked as squad leader
 	var/list/ai_to_spawn = list()
 
-/datum/human_ai_squad_preset/proc/spawn_ai(turf/spawn_loc, datum/tgui/ui)
+/datum/human_ai_squad_preset/proc/spawn_ai(turf/spawn_loc, mob/user)
 	var/list/viable_turfs = list()
 	for(var/turf/open/floor_tile in range(1, spawn_loc))
 		viable_turfs += floor_tile
-	var/list/reducing_viable_turfs = list() + viable_turfs
+	var/list/reducing_viable_turfs = viable_turfs.Copy()
 	if(!length(viable_turfs))
-		to_chat(ui.user, SPAN_BOLDNOTICE("No viable turfs found!"))
+		to_chat(user, SPAN_BOLDNOTICE("No viable turfs found!"))
 		return
 
 	var/datum/human_ai_squad/new_squad = SShuman_ai.create_new_squad()
@@ -108,8 +108,8 @@ GLOBAL_LIST_EMPTY(human_ai_squad_presets)
 			var/selected_turf = pick(viable_turfs)
 			if(!length(reducing_viable_turfs) < 1)
 				selected_turf = pick(reducing_viable_turfs)
-				if(ui.user.loc in reducing_viable_turfs)
-					selected_turf = ui.user.loc
+				if(spawn_loc in reducing_viable_turfs)
+					selected_turf = spawn_loc
 				reducing_viable_turfs -= selected_turf
 
 			var/mob/living/carbon/human/ai_human = new(selected_turf)

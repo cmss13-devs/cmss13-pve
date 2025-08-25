@@ -1,3 +1,4 @@
+import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
@@ -21,27 +22,28 @@ type AIEquipmentPreset = {
 type BackendContext = {
   presets: { [key: string]: AIEquipmentPreset[] };
   zombieDelimbMulti: number;
-  randomHelmet: boolean;
-  autoClean: boolean;
+  randomHelmet: BooleanLike;
+  autoClean: BooleanLike;
   helmetChance: number;
 };
 
 export const HumanAISpawner = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const [chosenPreset, setPreset] = useState<AIEquipmentPreset | null>(null);
-  const { zombieDelimbMulti } = data;
   const [newZombieDelimbMulti, setZombieDelimbMulti] = useState<number | null>(
-    zombieDelimbMulti,
+    data.zombieDelimbMulti,
   );
-  const { randomHelmet } = data;
-  const [randomHelmetChecked, setRandomHelmetChecked] =
-    useState<boolean>(randomHelmet);
-  const { helmetChance } = data;
-  const [newHelmetChance, setNewHelmetChance] = useState<number>(helmetChance);
+  const [randomHelmetChecked, setRandomHelmetChecked] = useState<BooleanLike>(
+    data.randomHelmet,
+  );
+  const [newHelmetChance, setNewHelmetChance] = useState<number>(
+    data.helmetChance,
+  );
   const { presets } = data;
   const [aiAmount, setAiAmount] = useState<number>(1);
-  const { autoClean } = data;
-  const [disableAutoClean, setDisableAutoClean] = useState<boolean>(autoClean);
+  const [disableAutoClean, setDisableAutoClean] = useState<BooleanLike>(
+    data.autoClean,
+  );
 
   const flipRandomHelmetChecked = () => {
     if (randomHelmetChecked) {
@@ -134,7 +136,7 @@ export const HumanAISpawner = (props) => {
                       <Stack.Item>
                         <Stack.Item align="center" textAlign="center">
                           <Box>Zombie Delimbing Multiplier:</Box>
-                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is defualt. -1 turns delimbing off. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probabilty as a percentage chance. Values beyond 0.5 and 1.5 Aren't recommended.">
+                          <Button tooltip="This value will change a delimb modifier that is applied to the spawned zombie. 1 is default. -1 turns delimbing off. 0.5 would half the chance. 2 would double it. Understand that you're affecting the probability as a percentage chance. Values beyond 0.5 and 1.5 aren't recommended.">
                             ?
                           </Button>
                           <NumberInput
@@ -161,7 +163,7 @@ export const HumanAISpawner = (props) => {
                           </Button.Checkbox>
                         </Stack.Item>
                         <Stack.Item align="center" textAlign="center">
-                          <Button tooltip="This value will change the chance for a zombie to spawn with head protection in 0-100%. Helmets give One expendable decap protection, and these will have hands and feet protection baked in, rest of the body should be covered by armoured presets.">
+                          <Button tooltip="This value will change the chance for a zombie to spawn with head protection in 0-100%. Helmets give one expendable decap protection, and these will have hands and feet protection baked in, rest of the body should be covered by armoured presets.">
                             ?
                           </Button>
                           <NumberInput
@@ -186,7 +188,7 @@ export const HumanAISpawner = (props) => {
                           </Button.Checkbox>
                         </Stack.Item>
                         <Stack.Item align="center" textAlign="center">
-                          <Button tooltip="It is recommended to only use this setting for a LIMITED number of zombies. And it does not turn itself off, so please do so manually when you next need to spawn Zombie. This setting, if enabled will set the variable [zombie_disable_auto_clean] to True, stopping and limbs and the body from decaying. Use it sparingly and definitely not for any defense styled Ops where zombie bodies will pile up. Variable can be var editted to affect the body but not any lost limbs, from about 50-130 Seconds after the zombie checks itself as Perma.">
+                          <Button tooltip="It is recommended to only use this setting for a LIMITED number of zombies. And it does not turn itself off, so please do so manually when you next need to spawn zombie. This setting, if enabled will set the variable [zombie_disable_auto_clean] to true, stopping and limbs and the body from decaying. Use it sparingly and definitely not for any defense styled operations where zombie bodies will pile up. Variable can be var-edited to affect the body but not any lost limbs, from about 50-130 seconds after the zombie checks itself as 'Perma'.">
                             ?
                           </Button>
                           <Button

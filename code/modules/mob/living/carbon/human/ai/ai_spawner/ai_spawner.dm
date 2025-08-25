@@ -64,18 +64,18 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			GLOB.gm_set_zombie_delimb_multi = delimb_multi
 
 			var/random_helmet = params["randomHelmet"]
-			if(random_helmet != 1 && random_helmet != 0)
-				random_helmet = 0
+			if(random_helmet != TRUE && random_helmet != FALSE)
+				random_helmet = FALSE
 			if(random_helmet)
 				GLOB.gm_set_zombie_random_helmet = TRUE
 			else
 				GLOB.gm_set_zombie_random_helmet = FALSE
 
 			var/auto_clean = params["disableAutoClean"]
-			if(auto_clean != 1 && auto_clean != 0)
-				auto_clean = 0
+			if(auto_clean != TRUE && auto_clean != FALSE)
+				auto_clean = FALSE
 			if(auto_clean)
-				GLOB.gm_set_zombie_disable_auto_clean= TRUE
+				GLOB.gm_set_zombie_disable_auto_clean = TRUE
 			else
 				GLOB.gm_set_zombie_disable_auto_clean = FALSE
 
@@ -87,19 +87,20 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 
 			var/ai_amount = clamp(params["aiAmount"], 1, 10)
 			var/list/viable_turfs = list()
-			for(var/turf/open/floor_tile in range(1, ui.user.loc))
+			var/user_turf = get_turf(ui.user)
+			for(var/turf/open/floor_tile in range(1, user_turf))
 				viable_turfs += floor_tile
 
 			if(!length(viable_turfs))
 				to_chat(ui.user, SPAN_BOLDNOTICE("No viable turfs found!"))
 				return
-			var/list/reducing_viable_turfs = list() + viable_turfs
+			var/list/reducing_viable_turfs = viable_turfs.Copy()
 			for(var/i in 1 to ai_amount)
 				var/selected_turf = pick(viable_turfs)
 				if(!length(reducing_viable_turfs) < 1)
 					selected_turf = pick(reducing_viable_turfs)
-					if(ui.user.loc in reducing_viable_turfs)
-						selected_turf = ui.user.loc
+					if(user_turf in reducing_viable_turfs)
+						selected_turf = user_turf
 					reducing_viable_turfs -= selected_turf
 
 				var/mob/living/carbon/human/ai_human = new(pick(selected_turf))
