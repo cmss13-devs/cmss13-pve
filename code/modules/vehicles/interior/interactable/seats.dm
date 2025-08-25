@@ -551,6 +551,13 @@
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
 	name = "co-pilot seat"
 
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact
+	name = "pilot seat"
+	icon_state = "compact_dropship_seat"
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/compact/wizzo
+	name = "weapons-system operator seat"
+
 // GUNNER VAN Seat
 /obj/structure/bed/chair/comfy/vehicle/van_gunner
 	name = "gunner's seat"
