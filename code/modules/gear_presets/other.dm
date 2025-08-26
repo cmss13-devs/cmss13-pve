@@ -1062,7 +1062,7 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/scout(new_human), WEAR_JACKET)
 	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	var/random_webbing = rand(1,6)
@@ -1200,7 +1200,7 @@
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
 	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	var/random_webbing = rand(1,6)
@@ -1273,7 +1273,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
 	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	//waist
@@ -1329,7 +1329,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/space/pressure/seegson/heavy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/shotgun(new_human), WEAR_ACCESSORY)
 	if(prob(50))
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m44/spearhead/hollowpoint, WEAR_J_STORE)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/highpower, WEAR_J_STORE)
 	//waist

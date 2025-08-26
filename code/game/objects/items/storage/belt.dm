@@ -1729,6 +1729,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/spearhead(src)
 
+/obj/item/storage/belt/gun/m44/spearhead/hollowpoint/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/hollowpoint())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/spearhead/hollowpoint(src)
+
 /obj/item/storage/belt/gun/m44/gunslinger
 	name = "custom-tooled gunslinger's belt"
 	desc = "It's always high noon <i>somewhere</i>."
