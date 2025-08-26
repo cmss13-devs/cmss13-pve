@@ -1,6 +1,6 @@
 /obj/item/hardpoint/secondary/grenade_launcher
 	name = "\improper M92T Grenade Launcher"
-	desc = "A secondary weapon for tanks that shoots grenades."
+	desc = "A magazine fed secondary grenade launcher for tanks that shoots M40 grenades."
 
 	icon_state = "glauncher"
 	disp_icon = "tank"
@@ -11,7 +11,7 @@
 	firing_arc = 120
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/tank_glauncher
-	max_clips = 3
+	max_clips = 4
 
 	use_muzzle_flash = FALSE
 
@@ -23,7 +23,13 @@
 	)
 
 	scatter = 10
-	fire_delay = 3.0 SECONDS
+	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	gun_firemode_list = list(
+		GUN_FIREMODE_BURSTFIRE,
+	)
+	burst_amount = 2
+	burst_delay = 0.5 SECONDS
+	extra_delay = 0.5 SECONDS
 
 /obj/item/hardpoint/secondary/grenade_launcher/set_bullet_traits()
 	..()

@@ -27,3 +27,47 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/support/smoke_launcher/aev
+	name = "\improper M-39Q Smoke Discharger"
+	desc = "A support module for AEVs that shoots M60 incendiary smoke grenades to deter hitchhikers."
+	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
+
+	icon_state = "slauncher_0"
+	disp_icon = "tank"
+
+	firing_arc = 150
+	ammo = new /obj/item/ammo_magazine/hardpoint/turret_smoke/incen/aev
+	max_clips = 5
+
+	scatter = 3
+	gun_firemode = GUN_FIREMODE_BURSTFIRE
+	gun_firemode_list = list(
+		GUN_FIREMODE_BURSTFIRE,
+	)
+	burst_amount = 2
+	burst_delay = 1.0 SECONDS
+
+/obj/item/hardpoint/support/smoke_launcher/aev/try_fire(atom/target, mob/living/user, params)
+	var/turf/L
+	var/turf/R
+	switch(owner.dir)
+		if(NORTH)
+			L = locate(owner.x - 2, owner.y + 4, owner.z)
+			R = locate(owner.x + 2, owner.y + 4, owner.z)
+		if(SOUTH)
+			L = locate(owner.x + 2, owner.y - 4, owner.z)
+			R = locate(owner.x - 2, owner.y - 4, owner.z)
+		if(EAST)
+			L = locate(owner.x + 4, owner.y + 2, owner.z)
+			R = locate(owner.x + 4, owner.y - 2, owner.z)
+		else
+			L = locate(owner.x - 4, owner.y + 2, owner.z)
+			R = locate(owner.x - 4, owner.y - 2, owner.z)
+
+	if(shots_fired)
+		target = R
+	else
+		target = L
+
+	return ..()
