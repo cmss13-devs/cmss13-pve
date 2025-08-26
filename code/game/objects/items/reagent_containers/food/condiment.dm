@@ -250,7 +250,7 @@
 
 /obj/item/reagent_container/food/condiment/juice/orange
 	name = "Orange Juice Packet"
-	desc = "A small packet of dehydrated orange-juice powder. Mix with water for a 'tasty' beverage."
+	desc = "A small packet of orange flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
 	icon_state = "ojpowder"
 
 /obj/item/reagent_container/food/condiment/juice/orange/Initialize()
@@ -259,7 +259,7 @@
 
 /obj/item/reagent_container/food/condiment/juice/apple
 	name = "Apple Juice Packet"
-	desc = "A small packet of dehydrated apple-juice powder. Mix with water for a 'tasty' beverage."
+	desc = "A small packet of apple flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
 	icon_state = "ajpowder"
 
 /obj/item/reagent_container/food/condiment/juice/apple/Initialize()
@@ -268,7 +268,7 @@
 
 /obj/item/reagent_container/food/condiment/juice/watermelon
 	name = "Watermelon Juice Packet"
-	desc = "A small packet of dehydrated watermelon-juice powder. Mix with water for a 'tasty' beverage."
+	desc = "A small packet of watermelon flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
 	icon_state = "wjpowder"
 
 /obj/item/reagent_container/food/condiment/juice/watermelon/Initialize()
@@ -277,7 +277,7 @@
 
 /obj/item/reagent_container/food/condiment/juice/grape
 	name = "Grape Juice Packet"
-	desc = "A small packet of dehydrated grape-juice powder. Mix with water for a 'tasty' beverage."
+	desc = "A small packet of grape flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
 	icon_state = "gjpowder"
 
 /obj/item/reagent_container/food/condiment/juice/grape/Initialize()
@@ -286,7 +286,7 @@
 
 /obj/item/reagent_container/food/condiment/juice/pineapple
 	name = "Pineapple Juice Packet"
-	desc = "A small packet of dehydrated pineapple-juice powder. Mix with water for a 'tasty' beverage."
+	desc = "A small packet of pineapple flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
 	icon_state = "pjpowder"
 
 /obj/item/reagent_container/food/condiment/juice/pineapple/Initialize()

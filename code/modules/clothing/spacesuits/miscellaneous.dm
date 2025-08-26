@@ -319,6 +319,11 @@
 	icon_state = "pressure_yellow"
 	helmet_color = "yellow"
 
+/obj/item/clothing/head/helmet/space/pressure/dark
+	item_state = "pressure_dark"
+	icon_state = "pressure_dark"
+	helmet_color = "dark"
+
 /obj/item/clothing/suit/space/pressure/yellow
 	item_state = "pressure_yellow"
 	icon_state = "pressure_yellow"

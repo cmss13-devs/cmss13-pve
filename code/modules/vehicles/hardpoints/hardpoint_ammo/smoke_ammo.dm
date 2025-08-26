@@ -24,3 +24,7 @@
 	desc = "A magazine of modified M60 incendiary smoke grenades used by the ATVs discharger array."
 	default_ammo = /datum/ammo/grenade_container/incen
 	max_rounds = 8
+
+/obj/item/ammo_magazine/hardpoint/turret_smoke/incen/aev
+	desc = "A magazine of modified M60 incendiary smoke grenades used by the AEVs discharger array."
+	max_rounds = 12
