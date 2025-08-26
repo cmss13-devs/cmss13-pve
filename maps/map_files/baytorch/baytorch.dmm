@@ -10531,6 +10531,10 @@
 	icon_state = "0-8"
 	},
 /obj/structure/machinery/power/smes/buildable,
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
+	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "cLK" = (
@@ -27965,6 +27969,11 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
+	},
+/obj/structure/machinery/fuelcell_recycler,
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "hgN" = (
@@ -30163,6 +30172,10 @@
 	icon_state = "0-8"
 	},
 /obj/structure/machinery/power/smes/buildable,
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
+	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "hKa" = (
@@ -44113,6 +44126,10 @@
 	},
 /obj/structure/machinery/computer/atmos_alert,
 /obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
+	},
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "lpB" = (
@@ -53334,6 +53351,19 @@
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/storage/toolbox/electrical,
 /obj/item/clothing/gloves/yellow,
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
+	},
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
+/obj/item/fuel_cell/used,
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "nHO" = (
@@ -62872,12 +62902,11 @@
 /turf/open/floor/strata/multi_tiles,
 /area/torch/firstdeck/brig)
 "qgR" = (
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/structure/machinery/power/reactor,
+/obj/structure/machinery/power/reactor{
+	pixel_y = 29;
+	density = 0
 	},
-/obj/structure/machinery/constructable_frame,
 /turf/open/floor/plating,
 /area/torch/seconddeck/engineering/engine_smes)
 "qgT" = (
