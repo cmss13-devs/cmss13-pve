@@ -17,6 +17,7 @@
 #define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_LRRP "Snake Eaters"
 
 // Job name defines
@@ -286,6 +287,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_STANDARD "Tactical Unit"
 #define JOB_PMCPLAT_MEDIC "Medical Specialist"
 
+///------ PMC SMALL ==== ///
+#define JOB_PMCPLAT_SMALL_LEADER "Strike Operations Leader"
+#define JOB_PMCPLAT_SMALL_FTL "Strike Team Leader"
+#define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
+#define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
+#define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
+
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
@@ -433,6 +441,18 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- CIA --------//
 #define JOB_CIA "Intelligence Analyst"
 #define JOB_CIA_LIAISON "Intelligence Liaison Officer"
+
+//-------- BD MERCS --------//
+#define JOB_MERCENARY "BD Grunt"
+#define JOB_MERCENARY_PILOT "BD Pilot"
+#define JOB_MERCENARY_SENTINEL "BD Sentinel"
+#define JOB_MERCENARY_SUPERVISOR "BD Supervisor"
+#define JOB_MERCENARY_BULWARK "BD Bulwark"
+#define JOB_MERCENARY_SYNTH "BD Synth"
+#define JOB_MERCENARY_INFILTRATOR "BD Infiltrator"
+#define JOB_MERCENARY_OFFICER "BD Officer"
+
+#define BD_MERCS_JOB_LIST list(JOB_MERCENARY_GRUNT, JOB_MERCENARY_PILOT, JOB_MERCENARY_SENTINEL, JOB_MERCENARY_SUPERVISOR, JOB_MERCENARY_BULWARK, JOB_MERCENARY_SYNTH, JOB_MERCENARY_INFILTRATOR, JOB_MERCENARY_OFFICER)
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
 //-------- UACG -------//
