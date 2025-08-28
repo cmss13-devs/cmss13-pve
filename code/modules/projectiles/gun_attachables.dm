@@ -595,6 +595,11 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/m60barrel/m38
+	name = "M38 barrel"
+	icon_state = "m38_barrel"
+	hud_offset_mod = 0
+
 /obj/item/attachable/mar50barrel
 	name = "MAR-50 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
@@ -888,6 +893,16 @@ Defined in conflicts.dm of the #defines folder.
 		qdel(src) //Delete da old flashlight
 	else
 		. = ..()
+
+/obj/item/attachable/flashlight/m20a
+	name = "integrated flashlight"
+	desc = "shouldnt be seeing this. . ."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "m20a_flashlight"
+	slot = "special"
+	attach_icon = "m20a_flashlight_a"
+	original_state = "m20a_flashlight"
+	original_attach = "m20a_flashlight_a"
 
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
@@ -2752,6 +2767,9 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 15
 	size_mod = 0
 
+/obj/item/attachable/stock/m60/m38
+	icon_state = "m38_stock"
+	attach_icon = "m38_stock"
 
 /obj/item/attachable/stock/ppsh
 	name = "PPSh-17b stock"
@@ -4037,7 +4055,6 @@ Defined in conflicts.dm of the #defines folder.
 
 	wield_delay_mod = WIELD_DELAY_FAST
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
-	scatter_mod = SCATTER_AMOUNT_TIER_9
 	recoil_mod = RECOIL_AMOUNT_TIER_5
 
 /obj/item/attachable/bipod/Attach(obj/item/weapon/gun/gun, mob/user)
@@ -4099,7 +4116,6 @@ Defined in conflicts.dm of the #defines folder.
 	bipod_deployed = FALSE
 	accuracy_mod = -HIT_ACCURACY_MULT_TIER_5
 	scatter_mod = SCATTER_AMOUNT_TIER_9
-	recoil_mod = RECOIL_AMOUNT_TIER_5
 	burst_scatter_mod = 0
 	//if we are no longer on full auto, don't bother switching back to the old firemode
 	if(full_auto_switch && gun.gun_firemode == GUN_FIREMODE_AUTOMATIC && gun.gun_firemode != old_firemode)
@@ -4249,6 +4265,9 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "bipod_m60_a"
 
 	flags_attach_features = ATTACH_ACTIVATION
+
+/obj/item/attachable/bipod/m60/m38
+	attach_icon = "bipod_m38_a"
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"

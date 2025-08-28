@@ -245,3 +245,7 @@
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
+/datum/ammo/bullet/pkp/red
+	icon_state = "bullet_red"
+	bullet_light_color = COLOR_SOFT_RED

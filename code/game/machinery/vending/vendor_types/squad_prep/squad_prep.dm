@@ -257,7 +257,7 @@
 		list("Marine Combat Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
 		list("Marine Uniform", floor(scale * 15), /obj/item/clothing/under/marine/standard/old, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),,
+		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils, VENDOR_ITEM_REGULAR),
 		list("Utility Cap, Jungle", floor(scale * 15), /obj/item/clothing/head/cmcap, VENDOR_ITEM_REGULAR),
 		list("Utility Cap, Snow", floor(scale * 15), /obj/item/clothing/head/cmcap/snow, VENDOR_ITEM_REGULAR),
 		list("Utility Cap, Desert", floor(scale * 15), /obj/item/clothing/head/cmcap/desert, VENDOR_ITEM_REGULAR),
@@ -854,6 +854,61 @@
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
 		)
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/old/populate_product_list(scale)
+	listed_products = list(
+		list("FOOD", -1, null, null),
+		list("MRE", floor(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
+		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
+
+		list("MEDICAL", -1, null, null),
+		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 15), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
+
+		list("TOOLS", -1, null, null),
+		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
+		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
+		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
+		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
+		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
+		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+
+		list("EXPLOSIVES", -1, null, null),
+		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
+
+		list("FLARE AND LIGHT", -1, null, null),
+		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
+		list("Box of Flashlight", round(scale * 1), /obj/item/ammo_box/magazine/misc/flashlight, VENDOR_ITEM_REGULAR),
+		list("Box of Flares", round(scale * 1), /obj/item/ammo_box/magazine/misc/flares, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARMS", -1, null, null),
+		list("M44 Combat Revolver", round(scale * 2), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
+		list("M4A3 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/m4a3/unloaded, VENDOR_ITEM_REGULAR),
+		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null),
+		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
+		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
+		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
+		list("Tactical Monocular", round(scale * 2), /obj/item/device/binoculars/range/monocular, VENDOR_ITEM_REGULAR),
+		list("AN/PSQ-55 Sentry Console", round(scale * 1), /obj/item/device/sentry_computer, VENDOR_ITEM_REGULAR),
+		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
+		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		)
+
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp
 	name = "\improper UnTech Automated Utilities Squad Vendor"

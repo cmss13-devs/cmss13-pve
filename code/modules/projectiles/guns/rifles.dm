@@ -490,6 +490,8 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/m20a,
 		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/flashlight/m20a,
+		/obj/item/attachable/attached_gun/grenade/m20a,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -499,7 +501,7 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16, "special_x" = 16, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
@@ -520,7 +522,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 /obj/item/weapon/gun/rifle/m20a/old
-	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 30mm grenade launcher."
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 30mm grenade launcher and an integrated flashlight."
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
 	start_automatic = TRUE
 
@@ -530,7 +532,10 @@
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.hidden = TRUE
 	S.Attach(src)
-	update_attachable(S.slot)
+	var/obj/item/attachable/flashlight/m20a/flashlight = new(src)
+	flashlight.flags_attach_features &= ~ATTACH_REMOVABLE
+	flashlight.Attach(src)
+	update_attachable(flashlight.slot)
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
