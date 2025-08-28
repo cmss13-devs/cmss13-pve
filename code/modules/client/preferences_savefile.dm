@@ -181,6 +181,28 @@
 		else
 			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_SHIFT
 
+	if(savefile_version < 29) //Base UA origins tweaked alongside others
+		var/outdated_origins
+		var/origin
+		S["outdated_origins"] >> origin
+		switch(outdated_origins)
+			if("United Americas (Luna)")
+				origin = ORIGIN_USCM_LUNA
+			if("United Americas (Other)")
+				origin = ORIGIN_USCM_OTHER
+			if("Limited Service (Colony)")
+				origin = ORIGIN_USCM_COLONY
+			if("Convict (Minor Crimes)")
+				origin = ORIGIN_USCM_CONVICT_MINOR
+			if("Convict (Gang Affiliated)")
+				origin = ORIGIN_USCM_CONVICT_GANG
+			if("Convict (Smuggling)")
+				origin = ORIGIN_USCM_CONVICT_SMUGGLING
+			if("Green Card (Foreign)")
+				origin = ORIGIN_USCM_FOREIGN
+			if("Artificial-Womb")
+				origin = ORIGIN_USCM_AW
+
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
 

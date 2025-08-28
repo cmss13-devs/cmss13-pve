@@ -102,6 +102,9 @@
 	headcam = TRUE
 
 /obj/item/clothing/glasses/night/m42_hms/rmc
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m42_hms/no_nvg
@@ -256,6 +259,9 @@
 	name = "\improper L58A3 head mounted gunsight interface"
 	desc = "A headset and optic system for the L58A3 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
 	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m56_goggles/whiteout

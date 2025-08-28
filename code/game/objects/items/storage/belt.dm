@@ -2333,7 +2333,10 @@
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/handful,
 	)
-	bypass_w_limit = list(/obj/item/mortar_shell)
+	bypass_w_limit = list(
+		/obj/item/mortar_shell,
+		/obj/item/storage/box/packet/rmc/mini,
+	)
 
 	//Keep a track of how many mortar shells are inside the belt.
 	var/shells = 0
