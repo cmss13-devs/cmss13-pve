@@ -146,6 +146,9 @@
 		user.forceMove(src.loc)
 		user.visible_message(SPAN_HIGHDANGER("[user] climbs out of [src]."), SPAN_NOTICE("You climb out of [src]."))
 		playsound(user, pick('sound/effects/alien_ventpass1.ogg', 'sound/effects/alien_ventpass2.ogg'), 35, 1)
+		if(isskeleton(user))
+			var/obj/effect/particle_effect/smoke/smoke = new(get_turf(src))
+			smoke.color = "#000000"
 
 		return
 

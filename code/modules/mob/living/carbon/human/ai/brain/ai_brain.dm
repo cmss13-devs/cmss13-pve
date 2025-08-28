@@ -252,6 +252,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(istype(entering, /obj/projectile))
 		var/obj/projectile/bullet = entering
 
+		if(bullet.silent)
+			return
+
 		enter_combat()
 
 		if(length(neutral_factions))
@@ -333,6 +336,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/on_shot(datum/source, damage_result, ammo_flags, obj/projectile/bullet)
 	SIGNAL_HANDLER
 	if(tied_human.client)
+		return
+
+	if(bullet.silent)
 		return
 
 	enter_combat()

@@ -32,7 +32,6 @@
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
-
 /datum/ammo/bullet/rifle/holo_target/hunting
 	name = "holo-targeting 10x24 bullet"
 	damage = 25
@@ -506,6 +505,13 @@
 	damage = 43
 	penetration = ARMOR_PENETRATION_TIER_8
 
+
+/datum/ammo/bullet/rifle/upp/ap/tracer
+	icon_state = "bullet_green"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_GREEN
+	penetration = ARMOR_PENETRATION_TIER_5
+
 /datum/ammo/bullet/rifle/upp/ap/penetrating
 	name = "wall-penerating 10x27 bullet"
 	damage = 40
@@ -516,6 +522,7 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
 	))
+
 
 /datum/ammo/bullet/rifle/upp/heap
 	name = "high-explosive armor-piercing 10x27 bullet"

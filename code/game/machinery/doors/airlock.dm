@@ -444,6 +444,39 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, list(
 			if(shock(user, 100))
 				return
 
+	if(user.a_intent == INTENT_HARM && HAS_TRAIT(user, TRAIT_SUPER_STRONG))
+		if(heavy) //Unopenable
+			to_chat(usr, SPAN_DANGER("You cannot force [src] open."))
+			return
+		if(user.action_busy)
+			return
+		if(!density && arePowerSystemsOn()) //If its open and unpowered
+			close(TRUE)
+			return
+		if(density && arePowerSystemsOn()) // if its closed and unpowered
+			open(TRUE)
+			return
+		if(density) //If its open
+			return
+
+		user.visible_message(SPAN_DANGER("[user] \his fingers into [src] and starts to pry it open."),
+		SPAN_DANGER("You jam your fingers into [src] and start to pry it open."))
+		playsound(src, "pry", 15, TRUE)
+		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			return
+
+		if(!density)
+			return
+		if(locked)
+			user.visible_message(SPAN_DANGER("[user] fails to force [src] open!"),
+			SPAN_DANGER("You fail to force [src]!"))
+			return
+
+		user.visible_message(SPAN_DANGER("[user] forces [src] open!"),
+		SPAN_DANGER("You force [src] open!."))
+		open(TRUE)
+		return
+
 	if(panel_open)
 		if(ishuman(usr) && !skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 			to_chat(usr, SPAN_WARNING("You look into \the [src]'s access panel and can only see a jumbled mess of colored wires..."))

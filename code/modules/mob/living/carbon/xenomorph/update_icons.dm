@@ -248,6 +248,26 @@
 		shriekwaves_left--
 		new /obj/effect/shockwave(epicenter, 10.5, 0.6, easing, offset_y)
 
+/atom/var/stop_shockwaving = FALSE
+
+/atom/proc/create_shockwave(shriekwaves_left, offset_x, offset_y, timing)
+	if(stop_shockwaving)
+		return
+	var/easing = QUAD_EASING | EASE_OUT
+	//the shockwave center is updated eachtime shockwave is called and offset relative to the mob_size.
+	//due to the speed of the shockwaves, it isn't required to be tied to the exact mob movements
+	var/epicenter = loc //center of the shockwave, set at the center of the tile that the mob is currently standing on
+
+	//shockwaves are iterated, counting down once per shriekwave, with the total amount being determined on the respective xeno ability tile
+	if(shriekwaves_left)
+		new /obj/effect/shockwave(epicenter, 10.5, 0.5, easing, offset_y, offset_x)
+		addtimer(CALLBACK(src, PROC_REF(create_shockwave), shriekwaves_left, offset_x, offset_y, timing), timing)
+		shriekwaves_left--
+
+/obj/structure/showcase/create_shockwave(shriekwaves_left, offset_x, offset_y, timing)
+	..()
+	playsound(loc, 'sound/machines/evil_generator.ogg', 75, TRUE)
+
 /mob/living/carbon/xenomorph/proc/create_stomp()
 	remove_suit_layer()
 

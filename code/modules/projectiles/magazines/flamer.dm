@@ -144,6 +144,13 @@
 	icon_state = "LPO80"
 	item_state = "LPO80"
 
+
+/obj/item/ammo_magazine/flamer_tank/upp/weak
+	caliber = "Napalm Gel"
+	flamer_chem = "napalmgel"
+
+	max_range = 5
+
 /obj/item/ammo_magazine/flamer_tank/upp/gellied
 	name = "incinerator tank (B-Gel)"
 	desc = "A fuel tank full of specialized Ultra Thick Napthal Fuel type B-Gel. Unlike its liquid contemporaries, this gelled variant of napalm is easily extinguished, but shoots far and lingers on the ground in a viscous mess, while reacting with inorganic materials to break them down. Handle with exceptional care."
@@ -275,6 +282,14 @@
 	matter = list("metal" = 3750)
 	flamer_chem = null
 	custom = TRUE
+
+/obj/item/ammo_magazine/flamer_tank/smoke/acid
+	name = "custom incinerator smoke tank"
+	desc = "A tank holding powdered smoke that expands when exposed to an open flame and carries any chemicals along with it."
+	matter = list("metal" = 3750)
+	flamer_chem = "pacid"
+	custom = TRUE
+
 
 //tanks printable by the research biomass machine
 /obj/item/ammo_magazine/flamer_tank/custom/upgraded

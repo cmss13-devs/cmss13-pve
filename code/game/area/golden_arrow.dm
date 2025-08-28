@@ -93,6 +93,10 @@
 	name = "\improper Motor Pool"
 	icon_state = "workshop"
 
+/area/golden_arrow/maintenance
+	name = "\improper Maintenance Tunnels"
+	icon_state = "lowerhull"
+
 /area/golden_arrow/lower_cargo
 	name = "\improper Lower Cargo Bays"
 	icon_state = "req"
@@ -129,3 +133,10 @@
 /area/golden_arrow/vehicle_shuttle/two/upper
 	name = "\improper Vehicle Elevator Two Upper"
 
+/area/golden_arrow/vehicle_shuttle/two/upper
+	name = "\improper Vehicle Elevator Two Upper"
+
+/area/golden_arrow/outside
+	name = "\improper LV-624"
+	temperature = T40C
+	icon_state = "red2"

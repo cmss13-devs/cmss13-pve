@@ -467,3 +467,13 @@
 
 /obj/item/clothing/accessory/ranks/canc/e5
 	rank_short = PAY_SHORT_CA5
+
+/obj/item/clothing/accessory/ranks/upp/e6
+	name = "rank boards"
+	rank_short = PAY_SHORT_UE6
+	icon_state = "ranks_upp_srsrzht"
+
+/obj/item/clothing/accessory/ranks/upp/o3
+	name = "rank boards"
+	rank_short = PAY_SHORT_UO3
+	icon_state = "ranks_upp_capt"
