@@ -55,21 +55,21 @@
 
 	dmg_multipliers = list(
 		"all" = 1,
-		"acid" = 1.6,
-		"slash" = 1.8,
+		"acid" = 2.9,
+		"slash" = 0.6,
 		"bullet" = 0.6,
-		"explosive" = 0.7,
-		"blunt" = 0.7,
-		"abstract" = 1
+		"explosive" = 0.6,
+		"blunt" = 0.6,
+		"abstract" = 1,
 	)
 
 	explosive_resistance = 150
+	wall_ram_damage = 150
+	vehicle_ram_multiplier = 12
 
 	move_max_momentum = 2
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
-
-	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
 /obj/vehicle/multitile/apc/uppapc/initialize_cameras(change_tag = FALSE)
 	if(!camera)
@@ -111,7 +111,6 @@
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/uppapc/remove_seated_verbs(mob/living/M, seat)
@@ -132,7 +131,6 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 //Called when players try to move vehicle

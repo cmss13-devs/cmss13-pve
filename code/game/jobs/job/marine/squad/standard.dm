@@ -127,6 +127,18 @@
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/standard/ai/pmc
 
+/datum/job/marine/standard/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_STANDARD
+	gear_preset = /datum/equipment_preset/uscm/pmc
+	job_options = null
+	total_positions = 3
+	spawn_positions = 3
+
+/obj/effect/landmark/start/marine/pmc/small
+	name = JOB_PMCPLAT_SMALL_STANDARD
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/standard/ai/pmc/small
+
 /obj/effect/landmark/start/marine/forecon
 	name = JOB_SQUAD_MARINE_FORECON
 	squad = SQUAD_LRRP

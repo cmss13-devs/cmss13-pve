@@ -624,3 +624,14 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6
+
+/obj/item/ammo_magazine/rifle/isr
+	name = "\improper ISR box magazine (9.2x34mm)"
+	desc = "A 9.2x34mm box magazine for the ISR LMG."
+	caliber = "9.2x34mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
+	default_ammo = /datum/ammo/bullet/rifle/isr
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/isr

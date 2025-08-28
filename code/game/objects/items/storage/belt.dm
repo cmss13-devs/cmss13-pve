@@ -2063,13 +2063,14 @@
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
 	icon_state = "upp_machinegun_pistol"
-	storage_slots = 7
+	storage_slots = 6
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pkp,
+		/obj/item/ammo_magazine/smartgun/upp,
 	)
 	has_gamemode_skin = FALSE
 	item_state_slots = list(

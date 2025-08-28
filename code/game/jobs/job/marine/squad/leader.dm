@@ -101,6 +101,16 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/leader/ai/pmc
 
+/datum/job/marine/leader/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_LEADER
+	gear_preset = /datum/equipment_preset/uscm/pmc/sl
+	job_options = null
+
+/obj/effect/landmark/start/marine/leader/pmc/small
+	name = JOB_PMCPLAT_SMALL_LEADER
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/leader/ai/pmc/small
+
 /obj/effect/landmark/start/marine/leader/forecon
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP

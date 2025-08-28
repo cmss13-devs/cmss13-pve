@@ -371,6 +371,8 @@
 
 /obj/item/weapon/gun/pkp/ap
 	current_mag = /obj/item/ammo_magazine/pkp/ap
+/obj/item/weapon/gun/pkp/iff/standard_fmj
+	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
 
 /obj/effect/syringe_gun_dummy
 	name = ""

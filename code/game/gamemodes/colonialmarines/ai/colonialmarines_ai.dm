@@ -91,8 +91,8 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
-		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_MARINE,\
-		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_TEAM_LEADER,\
+		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
 		/datum/job/marine/medic/ai/pmc = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/smartgunner/ai/pmc = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc = JOB_SQUAD_LEADER,\
@@ -112,14 +112,20 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/guard = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/guard = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/guard = JOB_SQUAD_MARINE,\
-		/datum/job/marine/smartgunner/ai/guard = JOB_SQUAD_SMARTGUN)))
+		/datum/job/marine/smartgunner/ai/guard = JOB_SQUAD_SMARTGUN),\
+		/datum/squad/marine/pmc/small = list(/datum/job/marine/tl/ai/pmc/small = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/standard/ai/pmc/small =  JOB_SQUAD_MARINE,\
+		/datum/job/marine/medic/ai/pmc/small = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/smartgunner/ai/pmc/small = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/bravo = ROLES_AI_SUPPORT,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
-												/datum/squad/marine/guard = ROLES_AI_GUARD))
+												/datum/squad/marine/guard = ROLES_AI_GUARD),\
+												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL))
 
 
 GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun-stakeout" = /obj/item/storage/large_holster/m37/full/noammo,\

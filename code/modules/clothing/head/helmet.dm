@@ -955,6 +955,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "helmetp_tex"
 	built_in_visors = list(new /obj/item/device/helmet_visor/po_visor/lightblue)
 
+/obj/item/clothing/head/helmet/upp/marinepilot/merc //just so it uses the wide overlay for garbs
+	name = "\improper DP MK80-TAC aviation helmet"
+	desc = "Standard flight helmet of the UA treaty forces, presumably stolen or found and reproduced with cheaper materials by Davis Proprietary for extortionate amounts. Less comfortable but comes with some cool goggles that do absolutely nothing!"
+	icon_state = "pilot_merc"
+	item_state = "pilot_merc"
+
+
 /obj/item/clothing/head/helmet/marine/ghillie
 	name = "\improper M10 ghillie helmet"
 	desc = "M10 helmet fitted with thermal camouflage ghillie strips. Used and customized by USCMC Scout Snipers."
