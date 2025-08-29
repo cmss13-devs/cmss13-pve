@@ -588,14 +588,15 @@
 	throw_range = 7
 
 /obj/item/weapon/gun/smartgun/rmc
-	name = "\improper L56A2 smartgun"
-	desc = "The actual firearm in the 2-piece L56A2 Smartgun System. This Variant is used by the Three World Empires Royal Marines Commando units.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
-	current_mag = /obj/item/ammo_magazine/smartgun/holo_targetting
-	ammo = /obj/item/ammo_magazine/smartgun/holo_targetting
+	name = "\improper L58A3 smartgun"
+	desc = "The actual firearm in the L58A3 'Smart' General Purpose Machine Gun System. A heavily modified variant of the UA's M56 system, it is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	current_mag = /obj/item/ammo_magazine/smartgun/holo_targeting
+	ammo = /obj/item/ammo_magazine/smartgun/holo_targeting
 	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
 	ammo_secondary = /datum/ammo/bullet/rifle/heavy/holo_target/ap ///Toggled ammo type
 	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	flags_gun_features = GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY
+	zoomdevicename = "gunsight"
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "magsg"
 	item_state = "magsg"
@@ -604,6 +605,35 @@
 /obj/item/weapon/gun/smartgun/rmc/Initialize(mapload, ...)
 	. = ..()
 	MD.iff_signal = FACTION_TWE
+
+/obj/item/weapon/gun/smartgun/rmc/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/rmcsg/optic = new(src)
+	optic.hidden = TRUE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
+
+/obj/item/weapon/gun/smartgun/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_8
+	fa_max_scatter = SCATTER_AMOUNT_TIER_9
+	if(accuracy_improvement)
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_3
+	else
+		accuracy_mult += HIT_ACCURACY_MULT_TIER_1
+	if(recoil_compensation)
+		scatter = SCATTER_AMOUNT_TIER_10
+		recoil = RECOIL_OFF
+	else
+		scatter = SCATTER_AMOUNT_TIER_6
+		recoil = RECOIL_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+
+//For the RMC ship, giving them access to weapons early but no ammo
+/obj/item/weapon/gun/smartgun/rmc/unloaded
+	current_mag = null
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"
