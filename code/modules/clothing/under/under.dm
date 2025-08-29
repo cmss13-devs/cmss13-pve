@@ -117,6 +117,8 @@
 					if("l_hand")
 						if(usr.drop_inv_item_on_ground(src))
 							usr.put_in_l_hand(src)
+					else
+						..()
 				add_fingerprint(usr)
 
 
