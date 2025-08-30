@@ -56,24 +56,112 @@
 /obj/structure/machinery/light/double,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/canteen)
+"aj" = (
+/obj/structure/platform/strata/metal{
+	dir = 1
+	},
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"ak" = (
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = -8;
+	pixel_y = -2
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "al" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
+"am" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "an" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
 	},
 /turf/open/asphalt/cement/cement3,
 /area/lv522/outdoors/w_rockies)
+"ao" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/smartgunner{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
+"ap" = (
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"aq" = (
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/firebase_zulu/inside/dorms)
+"ar" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "as" = (
 /obj/structure/cargo_container/lockmart/right{
 	color = "#aeaeae"
 	},
 /turf/open/floor/prison,
 /area/lv522/outdoors/w_rockies)
+"at" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
+	pixel_x = 8
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "au" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -89,6 +177,23 @@
 /obj/structure/cargo_container/kelland/left,
 /turf/open/floor/prison,
 /area/lv522/outdoors/w_rockies)
+"aw" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "ax" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -113,6 +218,18 @@
 	pixel_y = 8
 	},
 /turf/open/asphalt/cement/cement3,
+/area/lv522/outdoors/w_rockies)
+"az" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	layer = 3.3;
+	dir = 8
+	},
+/turf/open/auto_turf/shale/layer1,
+/area/lv522/outdoors/w_rockies)
+"aA" = (
+/obj/structure/platform/strata/metal,
+/turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
 "aC" = (
 /obj/structure/machinery/floodlight/landing{
@@ -180,7 +297,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "ba" = (
 /obj/structure/barricade/handrail{
 	dir = 8
@@ -246,7 +363,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "bS" = (
 /obj/structure/machinery/portable_atmospherics/hydroponics,
 /turf/open/floor/prison,
@@ -1049,17 +1166,6 @@
 /obj/structure/machinery/door/airlock/almayer/secure,
 /turf/open/floor/corsat/marked,
 /area/firebase_zulu/inside/canteen)
-"kb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = -7;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = 8
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "kf" = (
 /turf/open/shuttle/escapepod/floor0,
 /area/firebase_zulu/inside/dorms)
@@ -1100,23 +1206,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/canteen)
-"kI" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = 6;
-	pixel_y = -1
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "kK" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -1627,9 +1716,6 @@
 	},
 /turf/open/floor/carpet,
 /area/firebase_zulu/inside/platoonprep)
-"qf" = (
-/turf/open/floor/prison/cell_stripe,
-/area/firebase_zulu/inside/platoonarmory)
 "qg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -1828,18 +1914,6 @@
 "se" = (
 /turf/open/floor/prison,
 /area/lv522/outdoors/w_rockies)
-"sl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = 6;
-	pixel_y = -1
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "sm" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -9
@@ -2251,12 +2325,17 @@
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/w_rockies)
 "vT" = (
-/obj/structure/platform/mineral{
-	color = "#464D4B";
-	dir = 8
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = -8;
+	pixel_y = -1
 	},
-/turf/open/auto_turf/shale/layer2,
-/area/lv522/outdoors/w_rockies)
+/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/turf/open/floor/prison,
+/area/firebase_zulu/inside/dorms)
 "wc" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
@@ -2272,9 +2351,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonprep)
-"wf" = (
-/turf/open/floor/prison/cell_stripe/west,
-/area/firebase_zulu/inside/platoonarmory)
 "wh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/almayer,
@@ -2321,7 +2397,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/lv522/outdoors/w_rockies)
 "wx" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double/blue,
 /obj/structure/closet/secure_closet/marine_personal/smartgunner{
 	pixel_x = -6;
 	pixel_y = -1
@@ -2331,7 +2407,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "wD" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_full";
@@ -2416,7 +2492,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "xJ" = (
 /obj/item/lightstick/red/spoke/planted,
 /turf/open/auto_turf/snow/layer0,
@@ -2495,10 +2571,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
-"yt" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/cell_stripe/north,
-/area/firebase_zulu/inside/platoonarmory)
 "yy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration/mineral{
@@ -2698,7 +2770,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Ai" = (
 /obj/structure/cargo_container/uscm/mid,
 /turf/open/auto_turf/shale/layer1,
@@ -2891,7 +2963,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Cp" = (
 /obj/structure/machinery/door/airlock/almayer/secure{
 	req_access = null
@@ -3255,23 +3327,6 @@
 	},
 /turf/open/asphalt/cement,
 /area/lv522/outdoors/w_rockies)
-"Ia" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = -6;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = 8;
-	pixel_y = -1
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "Ib" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B"
@@ -3506,18 +3561,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/firebase_zulu/inside/platoonarmory)
-"JU" = (
-/obj/structure/machinery/light/double/blue,
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = -6;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = 8;
-	pixel_y = -1
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "JV" = (
 /turf/open/floor/plating,
 /area/lv522/outdoors/w_rockies)
@@ -3551,7 +3594,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Km" = (
 /obj/structure/platform/strata/metal{
 	layer = 3.3;
@@ -3630,7 +3673,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "KY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3770,22 +3813,6 @@
 	},
 /turf/open/auto_turf/shale/layer1,
 /area/lv522/outdoors/w_rockies)
-"MA" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = -7;
-	pixel_y = -1
-	},
-/obj/structure/closet/secure_closet/marine_personal/platoon_commander{
-	pixel_x = 8
-	},
-/turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
 "MC" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
@@ -3927,9 +3954,6 @@
 "NN" = (
 /turf/open/shuttle/escapepod/floor1,
 /area/firebase_zulu/inside/dorms)
-"NO" = (
-/turf/open/floor/corsat/marked,
-/area/firebase_zulu/inside/platoonarmory)
 "NP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -4153,7 +4177,7 @@
 "Rf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/cell_stripe/west,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Rj" = (
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
 /obj/structure/flora/pottedplant{
@@ -4276,10 +4300,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement/cement4,
 /area/lv522/outdoors/w_rockies)
-"Sv" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/cell_stripe,
-/area/firebase_zulu/inside/platoonarmory)
 "SB" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_y = 4;
@@ -4442,7 +4462,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Ut" = (
 /obj/structure/stairs/perspective{
 	dir = 6;
@@ -4753,7 +4773,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/prison,
-/area/firebase_zulu/inside/platoonarmory)
+/area/firebase_zulu/inside/dorms)
 "Xz" = (
 /obj/structure/platform_decoration/mineral{
 	color = "#464D4B";
@@ -10303,14 +10323,14 @@ Dj
 (58,1,1) = {"
 Dj
 Ql
-Ql
-al
+Ib
+Jg
 Zd
 hk
 hk
 FE
+Jg
 Xo
-mY
 mY
 Pe
 mY
@@ -10395,14 +10415,14 @@ Dj
 (59,1,1) = {"
 Dj
 Ql
-al
-eu
-ag
-NO
+LM
+TI
+TI
+FC
 Kj
-ag
-pE
-Xo
+TI
+TI
+Qh
 mY
 Pe
 mY
@@ -10488,12 +10508,12 @@ Dj
 Dj
 Ql
 LM
-ag
-ag
+TI
+TI
 Rf
-wf
-ag
-ag
+mU
+TI
+TI
 Qh
 Pe
 Pe
@@ -10580,12 +10600,12 @@ Dj
 Dj
 Ql
 LM
-ag
+TI
 Us
-JX
-Sk
+rR
+mx
 Xr
-ag
+TI
 Qh
 mY
 Pe
@@ -10672,12 +10692,12 @@ Dj
 Dj
 Ql
 LM
-ag
+TI
 Cm
-yt
-qf
+Yc
+tv
 xv
-ag
+TI
 Qh
 mY
 Pe
@@ -10764,12 +10784,12 @@ Dj
 Dj
 Ql
 LM
-ag
+TI
 aW
-yt
-qf
+Yc
+tv
 xv
-ag
+TI
 Qh
 Pe
 Pe
@@ -10856,12 +10876,12 @@ Dj
 Dj
 Ql
 LM
-ag
+TI
 KO
-Sk
-Sk
+Wo
+tv
 Ab
-ag
+TI
 Qh
 Ti
 Pe
@@ -10948,12 +10968,12 @@ Dj
 Dj
 Ql
 LM
-ag
-Cm
-Sk
-Sk
-Ab
-ag
+TI
+ak
+aq
+aq
+ak
+TI
 Qh
 Ti
 Pe
@@ -11039,13 +11059,13 @@ Dj
 (66,1,1) = {"
 Dj
 Ql
-LM
-ag
-Cm
-wp
-qf
-Ab
-ag
+aA
+TI
+ak
+aq
+aq
+ak
+TI
 Qh
 Pe
 Pe
@@ -11131,13 +11151,13 @@ Dj
 (67,1,1) = {"
 Dj
 Ql
-LM
-ag
-bK
-wp
-qf
-JU
-ag
+aA
+TI
+ak
+Wo
+tv
+ak
+TI
 Qh
 mY
 Pe
@@ -11223,13 +11243,13 @@ Dj
 (68,1,1) = {"
 Dj
 Ql
-LM
-ag
-bK
-wp
-qf
-Ab
-ag
+aA
+TI
+ak
+aq
+aq
+ak
+TI
 Qh
 mY
 Pe
@@ -11315,13 +11335,13 @@ Dj
 (69,1,1) = {"
 Dj
 Ql
-LM
-ag
-bK
-Sk
-Sk
+aA
+TI
+Cm
+aq
+aq
 Ab
-ag
+TI
 Qh
 Pe
 Pe
@@ -11407,13 +11427,13 @@ Dj
 (70,1,1) = {"
 Dj
 Ql
-LM
-ag
-bK
-Sk
-Sk
+aA
+TI
+Cm
+Wo
+tv
 Ab
-ag
+TI
 Qh
 mY
 Pe
@@ -11499,13 +11519,13 @@ Dj
 (71,1,1) = {"
 Dj
 Ql
-LM
-ag
+aA
+TI
 bK
-wp
-qf
+Wo
+tv
 wx
-ag
+TI
 Qh
 mY
 Pe
@@ -11591,13 +11611,13 @@ Dj
 (72,1,1) = {"
 Dj
 Ql
-LM
-ag
-sl
-wp
-Sv
-wx
-ag
+aA
+TI
+bK
+Wo
+tv
+Ab
+TI
 Qh
 Pe
 Pe
@@ -11683,13 +11703,13 @@ Dj
 (73,1,1) = {"
 Dj
 Dj
-LM
-ag
-kI
-JX
-JX
-Ia
-ag
+aA
+TI
+bK
+aq
+aq
+Ab
+TI
 Qh
 mY
 Pe
@@ -11775,13 +11795,13 @@ Dj
 (74,1,1) = {"
 Dj
 Dj
-LM
-ag
-ag
-kb
-MA
-ag
-ag
+aA
+TI
+bK
+aq
+aq
+Ab
+TI
 Qh
 mY
 Pe
@@ -11867,14 +11887,14 @@ Dj
 (75,1,1) = {"
 Dj
 Dj
-Vx
-Gq
-ag
-ag
-ag
-ag
-vy
-tz
+aA
+TI
+bK
+Wo
+tv
+am
+TI
+Qh
 Pe
 Pe
 Pe
@@ -11959,14 +11979,14 @@ Dj
 (76,1,1) = {"
 Dj
 Dj
-Dj
-nC
+aA
+TI
 vT
-iy
-iy
-iy
-tz
-mY
+Wo
+AG
+am
+TI
+Qh
 Ti
 Pe
 Pe
@@ -12051,14 +12071,14 @@ Dj
 (77,1,1) = {"
 Dj
 Dj
-Dj
-Ql
-Ql
-mY
-mY
-mY
-mY
-mY
+aA
+TI
+aw
+rR
+rR
+ao
+TI
+Qh
 Ti
 Ti
 Pe
@@ -12143,14 +12163,14 @@ Dj
 (78,1,1) = {"
 Dj
 Dj
-Dj
-Dj
-Ql
-Ti
-mY
-mY
-mY
-mY
+aA
+TI
+TI
+at
+ar
+TI
+TI
+Qh
 mY
 Ti
 Ti
@@ -12235,14 +12255,14 @@ Dj
 (79,1,1) = {"
 Dj
 Dj
-Dj
-Dj
-Ql
-Ql
-mY
-mY
-mY
-mY
+Vx
+az
+TI
+TI
+TI
+TI
+aj
+tz
 mY
 mY
 mY
@@ -12327,13 +12347,13 @@ Dj
 (80,1,1) = {"
 Dj
 Dj
-Dj
-Dj
-Dj
-Ql
-Ql
-Ti
 mY
+Vx
+ap
+ap
+ap
+ap
+tz
 mY
 mY
 mY

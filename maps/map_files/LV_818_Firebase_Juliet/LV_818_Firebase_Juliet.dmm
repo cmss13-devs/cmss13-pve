@@ -3597,6 +3597,17 @@
 /obj/structure/machinery/iv_drip,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/firebase_zulu/outside/compound)
+"hP" = (
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = -8;
+	pixel_y = -2
+	},
+/obj/structure/closet/secure_closet/marine_personal/corpsman{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/firebase_zulu/inside/platoonarmory)
 "hS" = (
 /obj/structure/tent_curtain,
 /turf/open/floor/interior/plastic,
@@ -46885,10 +46896,10 @@ aD
 jw
 jw
 jw
-eK
+hP
 GM
 GM
-ey
+hP
 OD
 OD
 aD
@@ -47097,10 +47108,10 @@ aD
 jw
 jw
 jw
-eK
+hP
 GM
 GM
-eA
+hP
 OD
 OD
 aD
@@ -47309,10 +47320,10 @@ aD
 jw
 jw
 jw
-eL
+hP
 GM
 GM
-eA
+hP
 OD
 OD
 aD
@@ -47521,10 +47532,10 @@ aD
 jw
 jw
 jw
-eL
+hP
 GM
 GM
-eB
+hP
 OD
 OD
 aD
@@ -47732,11 +47743,11 @@ aD
 aD
 jw
 jw
-eO
+jw
+eK
 GM
 GM
-eD
-eB
+ey
 OD
 OD
 aD
@@ -47943,14 +47954,14 @@ aD
 (191,1,1) = {"
 aD
 jw
-OD
-eP
-VE
-eD
-eD
-eC
-OD
 jw
+jw
+eK
+GM
+GM
+eA
+OD
+OD
 aD
 aD
 aD
@@ -48155,14 +48166,14 @@ aD
 (192,1,1) = {"
 aD
 jw
-OD
-OD
-eM
-eF
-OD
-OD
-OD
 jw
+jw
+eL
+GM
+GM
+eA
+OD
+OD
 aD
 aD
 aD
@@ -48368,13 +48379,13 @@ aD
 aD
 jw
 jw
-OD
-OD
-OD
-OD
-OD
 jw
-jw
+eL
+GM
+GM
+eB
+OD
+OD
 aD
 aD
 aD
@@ -48580,13 +48591,13 @@ aD
 aD
 jw
 jw
-jw
-jw
-jw
-jw
-jw
-jw
-jw
+eO
+GM
+GM
+eD
+eB
+OD
+OD
 aD
 aD
 aD
@@ -48791,13 +48802,13 @@ aD
 (195,1,1) = {"
 aD
 jw
-jw
-jw
-jw
-jw
-jw
-jw
-jw
+OD
+eP
+VE
+eD
+eD
+eC
+OD
 jw
 aD
 aD
@@ -49003,13 +49014,13 @@ aD
 (196,1,1) = {"
 aD
 jw
-jw
-jw
-jw
-jw
-jw
-jw
-jw
+OD
+OD
+eM
+eF
+OD
+OD
+OD
 jw
 aD
 aD
@@ -49216,11 +49227,11 @@ aD
 aD
 jw
 jw
-jw
-jw
-jw
-jw
-jw
+OD
+OD
+OD
+OD
+OD
 jw
 jw
 aD
