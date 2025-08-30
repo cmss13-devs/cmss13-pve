@@ -53,6 +53,9 @@
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_LV_671 "LV-671 Ark Borealis"
+#define MAP_OIL_DEPOT "Oil Depot"
+#define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
