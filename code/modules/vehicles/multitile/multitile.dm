@@ -147,7 +147,7 @@
 	var/list/misc_multipliers = list(
 		"move" = 1.0,
 		"accuracy" = 1.0,
-		"cooldown" = 1
+		"cooldown" = 1,
 	)
 
 	//Changes how much damage the vehicle takes
@@ -158,7 +158,8 @@
 		"bullet" = 1.0,
 		"explosive" = 1.0,
 		"blunt" = 1.0,
-		"abstract" = 1.0) //abstract for when you just want to hurt it
+		"abstract" = 1.0,
+	) //abstract for when you just want to hurt it
 
 	// This is more important than you think.
 	// Explosive waves can propagate through the vehicle and hit it multiple times
@@ -259,15 +260,19 @@
 //Normal examine() but tells the player what is installed and if it's broken
 /obj/vehicle/multitile/get_examine_text(mob/user)
 	. = ..()
-	for(var/obj/item/hardpoint/H in hardpoints)
-		. += "There [H.p_are()] \a [H] module[H.p_s()] installed."
-		H.examine(user, TRUE)
+	for(var/obj/item/hardpoint/attachment in hardpoints)
+		. += "There [attachment.p_are()] \a [attachment] module[attachment.p_s()] installed."
+		if(health <= 0)
+			. += "It's busted!\n"
+		else if(isobserver(user) || (ishuman(user) && (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE) || skillcheck(user, SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN))))
+			. += "It's at [round(attachment.get_integrity_percent(), 1)]% integrity!\n"
+		attachment.examine(user, TRUE)
 	if(clamped)
 		. += "There is a vehicle clamp attached."
 	if(isxeno(user) && interior)
 		var/passengers_amount = interior.passengers_taken_slots
-		for(var/datum/role_reserved_slots/RRS in interior.role_reserved_slots)
-			passengers_amount += RRS.taken
+		for(var/datum/role_reserved_slots/role_slots in interior.role_reserved_slots)
+			passengers_amount += role_slots.taken
 		if(passengers_amount > 0)
 			. += "You can sense approximately [passengers_amount] host\s inside."
 

@@ -126,7 +126,7 @@
 	layer = FULLSCREEN_DAMAGE_LAYER
 
 /atom/movable/screen/fullscreen/flash/noise/nvg
-	alpha = 27.5
+	alpha = 5
 
 /atom/movable/screen/fullscreen/crit
 	icon_state = "passage"

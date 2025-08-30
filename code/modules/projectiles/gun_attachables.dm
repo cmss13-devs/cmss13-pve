@@ -487,7 +487,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/l56a2_smartgun
-	name = "l56a2 barrel"
+	name = "L58A3 barrel"
 	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
 	icon_state = "magsg_barrel_a"
 	attach_icon = "magsg_barrel_a"
@@ -682,6 +682,17 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/mateba/short/dark
 	icon_state = "mateba_short_a"
+
+/obj/item/attachable/isr_barrel
+	name = "ISR barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon_state = "isr_barrel"
+	attach_icon = "isr_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
+	size_mod = 0
 
 // ======== Rail attachments ======== //
 
@@ -890,7 +901,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Folding grip with an integrated flashlight. Reduces recoil and scatter marginally, boosts accuracy slightly. \nStatistically udentical to the underbarrel flashlight grip."
 
 /obj/item/attachable/flashlight/laser_light_combo //Unique attachment for the VP78 based on the fact it has a Laser-Light Module in AVP2010
-	name = "VP78 Laser-Light Module"
+	name = "Laser-Light Module"
 	desc = "A Laser-Light module for the VP78 Service Pistol which is currently undergoing limited field testing as part of the USCMs next generation pistol program. All VP78 pistols come equipped with the module."
 	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
 	icon_state = "vplaserlight"
@@ -1261,11 +1272,26 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/scope/mini/nsg23
 	name = "W-Y S4 2x advanced telescopic mini-scope"
-	desc = "An ARMAT S4 telescoping eye piece, revised by W-Y scientists to be much more ergonomic."
+	desc = "An ARMAT S4 telescoping eye piece, tweaked by a third-party contractor for ergonomics."
 	icon_state = "miniscope_nsg23"
 	attach_icon = "miniscope_nsg23_a"
-	zoom_offset = 7
+	zoom_offset = 4
 	dynamic_aim_slowdown = SLOWDOWN_ADS_NONE
+
+/obj/item/attachable/scope/mini/nsg23/rmc
+	name = "L4A5 SUMSA mini-scope" //Sight Unit, General Marine Armaments was a serious contender for the name instead of this
+	desc = "Sight Unit, Marine Small-Arms. A modified ARMAT S4 telescoping eye piece, adopted by the RMC for use on their L23A1 rifles. This one is has been coated in a coat of dark matte paint."
+	icon_state = "miniscope"
+	attach_icon = "miniscope_a"
+
+/obj/item/attachable/scope/mini/rmcdmr
+	name = "L5A2 SUMMR scope"
+	icon_state = "sniperscope"
+	attach_icon = "sniperscope_a"
+	desc = "Sight Unit, Marine Marksman Rifle. A 4x power optic commonly fielded on the Royal Marines L64A3 DMRs."
+	dynamic_aim_slowdown = SLOWDOWN_ADS_QUICK
+	zoom_offset = 8
+	zoom_viewsize = 9
 
 /obj/item/attachable/scope/mini/xm88
 	name = "XS-9 targeting relay"
@@ -1283,6 +1309,18 @@ Defined in conflicts.dm of the #defines folder.
 	name = "M83A2 SADAR sight assembly"
 	desc = "SADAR sight system."
 	zoom_offset = 3
+
+/obj/item/attachable/scope/mini/rmcgl
+	name = "L164A3 collimator sight assembly"
+	desc = "L164A3 sight system."
+	zoom_offset = 3
+	icon_state = "reflex"
+
+/obj/item/attachable/scope/mini/rmcsg
+	name = "L58A3 gunsight interface"
+	desc = "L58A3 gunsight interface. You shouldn't ever see this."
+	zoom_offset = 4
+	icon_state = "sgsight"
 
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
@@ -2184,6 +2222,29 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "The non-detachable stock of a M37-17 pump shotgun."
 	icon_state = "hg3717_stock"
 
+/obj/item/attachable/stock/rmcdmr
+	name = "L64A3 stock"
+	desc = "The non-detachable stock of a L64A3 DMR."
+	icon_state = "rmcdmr_stock"
+	pixel_shift_x = 40
+	pixel_shift_y = 10
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = 6
+
+/obj/item/attachable/stock/rmcdmr/New()
+	..()
+
+	//stock is purely aesthetics, any changes should be done to the gun itself
+	accuracy_mod = 0
+	recoil_mod = 0
+	scatter_mod = 0
+	movement_onehanded_acc_penalty_mod = 0
+	accuracy_unwielded_mod = 0
+	recoil_unwielded_mod = 0
+	scatter_unwielded_mod = 0
+	aim_speed_mod = 0
+	wield_delay_mod = WIELD_DELAY_NONE
+
 /obj/item/attachable/stock/rifle
 	name = "\improper M41A solid stock"
 	desc = "A rare stock distributed in small numbers to USCM forces. Compatible with the M41A, this stock reduces recoil and improves accuracy, but at a reduction to handling and agility. Also enhances the thwacking of things with the stock-end of the rifle."
@@ -2975,6 +3036,23 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_y = 20
 	hud_offset_mod = 2
 
+/obj/item/attachable/stock/nsg23/rmc
+	name = "NSG L23A1 stock"
+	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
+	icon_state = "rmc_nsg23_stock"
+
+/obj/item/attachable/stock/isr
+	name = "ISR stock"
+	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
+	icon_state = "isr_stock"
+	slot = "stock"
+	wield_delay_mod = WIELD_DELAY_NONE
+	melee_mod = 5
+	size_mod = 2
+	pixel_shift_x = 21
+	pixel_shift_y = 20
+	hud_offset_mod = 2
+
 // ======== Underbarrel Attachments ======== //
 
 
@@ -3063,7 +3141,7 @@ Defined in conflicts.dm of the #defines folder.
 	w_class = SIZE_MEDIUM
 	current_rounds = 0
 	max_rounds = 3
-	max_range = 7
+	max_range = 11
 	slot = "under"
 	fire_sound = 'sound/weapons/gun_m92_attachable.ogg'
 	flags_attach_features = ATTACH_REMOVABLE|ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
@@ -3256,6 +3334,18 @@ Defined in conflicts.dm of the #defines folder.
 		else
 			base_attachment_desc = "It has a [icon2html(src)] [name] attached."
 	return handle_pre_break_attachment_description(base_attachment_desc) + "<br>"
+
+//NSG L23 variant
+/obj/item/attachable/attached_gun/grenade/nsg
+	name = "\improper L34 30mm underslung grenade launcher"
+	desc = "Standard TWE pump action underslung grenade launcher. Fits the L23, two round tube, chambers one."
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded
+
+/obj/item/attachable/attached_gun/grenade/nsg/preloaded/New()
+	. = ..()
+	current_rounds = 2
+	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/rmc(src), new/obj/item/explosive/grenade/high_explosive/rmc(src))
 
 //For the Mk1
 /obj/item/attachable/attached_gun/grenade/mk1

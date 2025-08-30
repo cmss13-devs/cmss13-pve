@@ -334,12 +334,12 @@
 	return
 
 //examining a hardpoint
-/obj/item/hardpoint/get_examine_text(mob/user)
+/obj/item/hardpoint/get_examine_text(mob/user, integrity_only = FALSE)
 	. = ..()
 	if(health <= 0)
-		. += "It's busted!"
+		. += "It's busted!\n"
 	else if(isobserver(user) || (ishuman(user) && (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE) || skillcheck(user, SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN))))
-		. += "It's at [round(get_integrity_percent(), 1)]% integrity!"
+		. += "It's at [round(get_integrity_percent(), 1)]% integrity!\n"
 
 //reloading hardpoint - take mag from backup clips and replace current ammo with it. Will change in future. Called via weapons loader
 /obj/item/hardpoint/proc/reload(mob/user)

@@ -127,6 +127,22 @@
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
 	default_ammo = /datum/ammo/bullet/sniper/upp_pve
 
+//RMC DMR magazine
+
+/obj/item/ammo_magazine/sniper/rmc
+	name = "\improper L64A3 squash-head magazine (8.88x51mm Caseless)"
+	desc = "A magazine of L10A7 squash-head match-grade 8.88x51mm ammo. An aimed shot with it will deal significant damage."
+	caliber = "8.88x51mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "rmcdmr"
+	w_class = SIZE_MEDIUM
+	max_rounds = 25
+	default_ammo = /datum/ammo/bullet/rifle/heavy/rmcdmr
+	gun_type = /obj/item/weapon/gun/rifle/sniper/rmc
+	ammo_band_icon = "+rmcdmr_band"
+	ammo_band_icon_empty = "+rmcdmr_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
 //M49A magazines
 
 /obj/item/ammo_magazine/rifle/m49a/custom
@@ -180,10 +196,10 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/dirty
 	gun_type = /obj/item/weapon/gun/smartgun
 
-/obj/item/ammo_magazine/smartgun/holo_targetting
-	name = "holotargetting smartgun drum"
-	desc = "Holotargetting rounds for use in the royal marines commando L56A2 smartgun."
-	icon_state = "m56_drum"
+/obj/item/ammo_magazine/smartgun/holo_targeting
+	name = "holotargeting smartgun drum"
+	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
+	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
 

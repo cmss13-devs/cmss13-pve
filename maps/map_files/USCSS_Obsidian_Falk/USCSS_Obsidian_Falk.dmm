@@ -8008,7 +8008,7 @@
 	pixel_x = -4;
 	pixel_y = 9
 	},
-/obj/item/ammo_box/magazine/nsg23/ex/empty{
+/obj/item/ammo_box/magazine/nsg23/empty{
 	pixel_x = 2;
 	pixel_y = -2
 	},
@@ -9059,10 +9059,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nsg23/ex,
-/obj/item/ammo_box/magazine/nsg23/ex,
-/obj/item/ammo_box/magazine/nsg23/ex,
-/obj/item/ammo_box/magazine/nsg23/ex,
+/obj/item/ammo_box/magazine/nsg23,
+/obj/item/ammo_box/magazine/nsg23,
+/obj/item/ammo_box/magazine/nsg23,
+/obj/item/ammo_box/magazine/nsg23,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axO" = (

@@ -174,6 +174,14 @@
 		L.apply_armoured_damage(damage*2, ARMOR_BULLET, BRUTE, null, penetration)
 		to_chat(P.firer, SPAN_WARNING("Bullseye!"))
 
+/datum/ammo/bullet/rifle/heavy/rmcdmr
+	name = "8.88x51 squash-head bullet"
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_6
+	accuracy = HIT_ACCURACY_TIER_3
+	shell_speed = AMMO_SPEED_TIER_7
+	effective_range_max = 24
+
 /datum/ammo/bullet/rifle/heavy/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
@@ -235,37 +243,37 @@
 
 // RMC Smartgun
 
-/datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet has only diff between regular ammo is this one does holostacks and less damage
+/datum/ammo/bullet/rifle/heavy/holo_target //Royal marines smartgun bullet, less damage, holo-target effect & range-limited knock/pushback
 	name = "holo-targeting 10x28 bullet"
-	damage = 50
+	damage = 40
 	/// inflicts this many holo stacks per bullet hit
-	var/holo_stacks = 15
+	var/holo_stacks = 25
 	/// modifies the default cap limit of 100 by this amount
-	var/bonus_damage_cap_increase = 0
+	var/bonus_damage_cap_increase = 300
 	/// multiplies the default drain of 5 holo stacks per second by this amount
-	var/stack_loss_multiplier = 1
+	var/stack_loss_multiplier = 2
 
 /datum/ammo/bullet/rifle/heavy/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
+	knockback(hit_mob, bullet, max_range = 2)
 
 /datum/ammo/bullet/rifle/heavy/holo_target/ap
 	name = "holo-targetting armor-piercing 10x28 bullet"
 	icon_state = "bullet"
-
-	accuracy = HIT_ACCURACY_TIER_2
-	damage = 35
+	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_8
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet
 	name = "holo-targetting impact-detonating 10x28 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	holo_stacks = 25 //holo's all over targets, or something
-	damage = 35
+	holo_stacks = 50 //holo's all over targets, or something
+	damage = 30
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 
 /datum/ammo/bullet/rifle/heavy/holo_target/impdet/on_hit_mob(mob/entity, obj/projectile/bullet)
+	..()
 	slowdown(entity, bullet)
 
 /datum/ammo/bullet/rifle/heavy/upp_smartgun
@@ -596,6 +604,23 @@
 	damage = 55
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
+//NSG TWE RMC AMMO
+
+/datum/ammo/bullet/rifle/twe
+	name = "8.5x33 bullet"
+	damage = 36
+	penetration = ARMOR_PENETRATION_TIER_2
+	accurate_range = 20
+
+/datum/ammo/bullet/rifle/ap/twe
+	name = "armor-piercing 8.5x33 bullet"
+
+/datum/ammo/bullet/rifle/heap/twe
+	name = "high-explosive armor-piercing 8.5x33 bullet"
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_9
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_4
+
 //9.7x16 AG80
 
 /datum/ammo/bullet/rifle/ag80
@@ -640,3 +665,9 @@
 	name = "armor-piercing 6x38 bullet"
 	damage = 30
 	penetration = ARMOR_PENETRATION_TIER_5
+
+/datum/ammo/bullet/rifle/isr
+	name = "heavy 9.2x34mm bullet"
+
+	damage = 35
+	penetration = ARMOR_PENETRATION_TIER_1
