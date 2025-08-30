@@ -1,7 +1,7 @@
 /obj/item/ammo_magazine/hardpoint/ltb_cannon
 	name = "LTB Cannon Magazine"
-	desc = "A primary armament cannon magazine"
-	caliber = "86mm" //Making this unique on purpose
+	desc = "A magazine of high-explosive, anti-tank cannon rounds."
+	caliber = "85mm" //Making this unique on purpose
 	icon_state = "ltbcannon_4"
 	w_class = SIZE_LARGE //Heavy fucker
 	default_ammo = /datum/ammo/rocket/ltb

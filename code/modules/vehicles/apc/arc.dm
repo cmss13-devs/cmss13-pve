@@ -36,6 +36,23 @@
 		/obj/item/hardpoint/locomotion/apc_wheels/arc,
 	)
 
+	dmg_multipliers = list(
+		"all" = 1,
+		"acid" = 1.8,
+		"slash" = 0.7,
+		"bullet" = 0.8,
+		"explosive" = 0.9,
+		"blunt" = 0.7,
+		"abstract" = 1,
+	)
+
+	move_max_momentum = 3
+	move_momentum_build_factor = 1.8
+	move_turn_momentum_loss_factor = 0.5
+
+	wall_ram_damage = 75 //Supposedly super light? Still gonna do _some_ damage to walls though
+	vehicle_ram_multiplier = 2
+
 /obj/vehicle/multitile/apc/arc/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
 		return
@@ -49,14 +66,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/arc/remove_seated_verbs(mob/living/M, seat)
@@ -73,14 +88,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/arc/initialize_cameras(change_tag = FALSE)

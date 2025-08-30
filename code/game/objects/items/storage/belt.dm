@@ -2093,13 +2093,14 @@
 	name = "\improper Type 92 pattern machinegunner sidearm rig"
 	desc = "Type 92 is an experimental ammo-carrying rig issued to UPP machinegunners which combines a sidearm holster with box-shaped pouches for limited storage."
 	icon_state = "upp_machinegun_pistol"
-	storage_slots = 7
+	storage_slots = 6
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/weapon/gun/revolver,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/pkp,
+		/obj/item/ammo_magazine/smartgun/upp,
 	)
 	has_gamemode_skin = FALSE
 	item_state_slots = list(
@@ -2264,32 +2265,40 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	has_gamemode_skin = FALSE
 
-/obj/item/storage/belt/marine/rmc/rmc_f90_ammo/fill_preset_inventory()
+/obj/item/storage/belt/marine/rmc/nsg/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/rmc_f90(src)
-
-/obj/item/storage/belt/marine/rmc/rmc_f90_ammo/marksman/fill_preset_inventory()
-	for(var/i in 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/rmc_f90/marksman(src)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/belt/medical/rmc
 	name = "\improper L75 pattern medical storage rig"
-	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with various clips. This version is designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
+	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with spacious pouches attached that are designed to transport bulkier medical supplies. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
 	icon_state = "rmc_medical"
 	item_state = "rmc_medical"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 
+/obj/item/storage/belt/medical/rmc/full/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/merabica(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/keloderm(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+
 /obj/item/storage/belt/gun/l905
-	name = "\improper L905 gunbelt"
-	desc = "Finely-tooled leather, a L905, and six magazines. More than enough for the standard RMC commando."
+	name = "\improper L165 gunbelt"
+	desc = "A belt of finely-tooled leather, with holster & pouches for most kinds of sidearms and corresponding ammo."
 	icon_state = "rmc_pistol"
 	item_state = "rmc_pistol"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	storage_slots = 7
-	can_hold = list(
-		/obj/item/weapon/gun/pistol/vp78,
-		/obj/item/ammo_magazine/pistol/vp78,
-	)
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
@@ -2297,6 +2306,85 @@
 			"icon_y" = -3))
 
 /obj/item/storage/belt/gun/l905/full/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
 	for(var/i in 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/vp78(src)
+		new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+
+#define MAXIMUM_MORTARSHELL_COUNT 3
+
+/obj/item/storage/belt/gun/mortarbelt/rmc
+	name = "\improper L84 pattern ammo load rig"
+	desc = "An L84 pattern load-bearing rig configured to carry support ammunition for either the L53A1 light mortar or L164A3 multiple grenade launcher, along with a sidearm & magazine. Made of special rot-resistant fabric."
+	icon_state = "mortarutility"
+	item_state = "s_mortarbelt"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	has_gamemode_skin = FALSE
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -9,
+			"icon_y" = -6))
+	can_hold = list(
+		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/revolver,
+		/obj/item/weapon/gun/flare,
+		/obj/item/mortar_shell,
+		/obj/item/storage/box/packet/rmc/mini,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/handful,
+	)
+	bypass_w_limit = list(
+		/obj/item/mortar_shell,
+		/obj/item/storage/box/packet/rmc/mini,
+	)
+
+	//Keep a track of how many mortar shells are inside the belt.
+	var/shells = 0
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/can_be_inserted(obj/item/item, mob/user, stop_messages = FALSE)
+	. = ..()
+	if(shells >= MAXIMUM_MORTARSHELL_COUNT && istype(item, /obj/item/mortar_shell))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more mortar shells."))
+		return FALSE
+	else if(shells >= MAXIMUM_MORTARSHELL_COUNT && istype(item, /obj/item/storage/box/packet/rmc/mini))
+		if(!stop_messages)
+			to_chat(usr, SPAN_WARNING("[src] can't hold any more grenade packets."))
+		return FALSE
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/handle_item_insertion(obj/item/item, prevent_warning = FALSE, mob/user)
+	. = ..()
+	if(istype(item, /obj/item/mortar_shell))
+		shells++
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
+		shells++
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/remove_from_storage(obj/item/item as obj, atom/new_location)
+	. = ..()
+	if(istype(item, /obj/item/mortar_shell))
+		shells--
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
+		shells--
+
+//If a magazine disintegrates due to acid or something else while in the belt, remove it from the count.
+/obj/item/storage/belt/gun/mortarbelt/rmc/on_stored_atom_del(atom/movable/item)
+	if(istype(item, /obj/item/mortar_shell))
+		shells--
+	else if(istype(item, /obj/item/storage/box/packet/rmc/mini))
+		shells--
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/smoke(src)
+
+/obj/item/storage/belt/gun/mortarbelt/rmc/full/gl/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/storage/box/packet/rmc/mini(src)
+	new /obj/item/storage/box/packet/rmc/mini/frag(src)
+	new /obj/item/storage/box/packet/rmc/mini/holo(src)
+
+#undef MAXIMUM_MORTARSHELL_COUNT

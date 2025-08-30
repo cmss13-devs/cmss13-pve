@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 28
+#define SAVEFILE_VERSION_MAX 29
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -180,6 +180,28 @@
 			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_MIDDLE
 		else
 			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_SHIFT
+
+	if(savefile_version < 29) //Base UA origins tweaked alongside others
+		var/outdated_origin
+		S["origin"] >> outdated_origin
+		switch(outdated_origin)
+			if("United Americas (Luna)")
+				origin = ORIGIN_USCM_LUNA
+			if("United Americas (Other)")
+				origin = ORIGIN_USCM_OTHER
+			if("Limited Service (Colony)")
+				origin = ORIGIN_USCM_COLONY
+			if("Convict (Minor Crimes)")
+				origin = ORIGIN_USCM_CONVICT_MINOR
+			if("Convict (Gang Affiliated)")
+				origin = ORIGIN_USCM_CONVICT_GANG
+			if("Convict (Smuggling)")
+				origin = ORIGIN_USCM_CONVICT_SMUGGLING
+			if("Green Card (Foreign)")
+				origin = ORIGIN_USCM_FOREIGN
+			if("Artificial-Womb")
+				origin = ORIGIN_USCM_AW
+		S["origin"] << origin
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1

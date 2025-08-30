@@ -96,10 +96,34 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/leader/ai/pmc
 
+/datum/job/marine/leader/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_LEADER
+	gear_preset = /datum/equipment_preset/uscm/pmc/sl
+	job_options = null
+
+/obj/effect/landmark/start/marine/leader/pmc/small
+	name = JOB_PMCPLAT_SMALL_LEADER
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/leader/ai/pmc/small
+
 /obj/effect/landmark/start/marine/leader/forecon
 	name = JOB_SQUAD_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/leader/ai/forecon
+
+//-- RMC Platoon --//
+// Second-in-command under LT, handles the mortar calls //
+/datum/job/marine/leader/ai/rmc
+	title = JOB_TWE_RMC_TROOPLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/cs
+	job_options = null
+	supervisors = "the troop commander"
+	entry_message_body = "You are the second in command of the whole Troop, ensuring the orders of the Troop Commander are followed through. Make sure they are on task, working together, and adequately supplied. You are also in charge of communicating with the Bombardment Specialist and coordinating the fire support they provide. Keep out of harm's way. You report to the Troop Commander under normal circumstances, but may be required to take command should they die.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/leader/rmc
+	name = JOB_TWE_RMC_TROOPLEADER
+	squad = SQUAD_RMC
+	job = /datum/job/marine/leader/ai/rmc
 
 #undef MSSGT_VARIANT
 #undef GYSGT_VARIANT

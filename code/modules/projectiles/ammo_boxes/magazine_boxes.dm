@@ -136,6 +136,24 @@
 /obj/item/ammo_box/magazine/m39/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m39/pve
+	name = "magazine box (Duplex Viper 9 x 12)"
+	overlay_ammo_type = "_le"
+	overlay_content = "_le"
+	magazine_type = /obj/item/ammo_magazine/smg/m39/pve
+
+/obj/item/ammo_box/magazine/m39/pve/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/m39/squash
+	name = "magazine box (Squash-Head L6A2 x 12)"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
+	magazine_type = /obj/item/ammo_magazine/smg/m39/squash
+
+/obj/item/ammo_box/magazine/m39/squash/empty
+	empty = TRUE
+
 //-----------------------M49A Battle Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m49a
@@ -188,21 +206,21 @@
 /obj/item/ammo_box/magazine/m49a/a19
 	name = "magazine box (A19 HV M49A x 16)"
 	overlay_gun_type = "_a19"
-	overlay_ammo_type = "_hv"
-	overlay_content = "_hv"
+	overlay_ammo_type = "_impact"
+	overlay_content = "_impact"
 	num_of_magazines = 10
 	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom
 
 /obj/item/ammo_box/magazine/m49a/a19/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/m49a/a19/impact
-	name = "magazine box (A19 Impact M49A x 16)"
-	overlay_ammo_type = "_impact"
-	overlay_content = "_impact"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/impact
+/obj/item/ammo_box/magazine/m49a/a19/explosive
+	name = "magazine box (A19 Explosive M49A x 16)"
+	overlay_ammo_type = "_expl"
+	overlay_content = "_expl"
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/explosive
 
-/obj/item/ammo_box/magazine/m49a/a19/impact/empty
+/obj/item/ammo_box/magazine/m49a/a19/explosive/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/m49a/a19/incen
@@ -218,7 +236,7 @@
 	name = "magazine box (A19 DU M49A x 16)"
 	overlay_ammo_type = "_toxin"
 	overlay_content = "_incen"
-	magazine_type = /obj/item/ammo_magazine/rifle/m49a/pve
+	magazine_type = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 /obj/item/ammo_box/magazine/m49a/a19/pve/empty
 	empty = TRUE
@@ -433,6 +451,32 @@
 	magazine_type = /obj/item/ammo_magazine/pistol/vp78
 
 /obj/item/ammo_box/magazine/vp78/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/vp78/rmc
+	name = "magazine box (L165A1 x 16)"
+	icon_state = "base_vp78"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_impact"
+	overlay_gun_type = "_vp78"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/vp78/rmc
+
+/obj/item/ammo_box/magazine/vp78/rmc/empty
+	empty = TRUE
+
+//-----------------------L54 Pistol Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/l54
+	name = "magazine box (L54A2 x 16)"
+	icon_state = "base_vp78"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_reg"
+	overlay_gun_type = "_l54"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/pistol/l54
+
+/obj/item/ammo_box/magazine/l54/empty
 	empty = TRUE
 
 //-----------------------Type71 Rifle Mag Box-----------------------
@@ -857,15 +901,6 @@
 /obj/item/ammo_box/magazine/nsg23/ap/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/nsg23/ex
-	name = "magazine box (NSG 23 Extended x 8)"
-	overlay_ammo_type = "_ext"
-	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/extended
-	num_of_magazines = 8
-
-/obj/item/ammo_box/magazine/nsg23/ex/empty
-	empty = TRUE
-
 /obj/item/ammo_box/magazine/nsg23/heap
 	name = "magazine box (NSG 23 HEAP x 16)"
 	overlay_ammo_type = "_heap"
@@ -873,6 +908,54 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/heap
 
 /obj/item/ammo_box/magazine/nsg23/heap/empty
+	empty = TRUE
+
+//-----------------------LARGE NSG 23 Rifle Mag Boxes-----------------------
+
+/obj/item/ammo_box/magazine/nsg23/large
+	name = "magazine box (NSG L23A1 x 32)"
+	icon_state = "base_rmclarge"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23
+	num_of_magazines = 32
+	var/move_delay_mult = 2
+
+/obj/item/ammo_box/magazine/nsg23/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/nsg23/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/nsg23/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/nsg23/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/nsg23/large/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/nsg23/large/ap
+	name = "magazine box (AP NSG L23A1 x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/ap
+
+/obj/item/ammo_box/magazine/nsg23/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/nsg23/large/heap
+	name = "magazine box (HEAP NSG L23A1 x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/heap
+
+/obj/item/ammo_box/magazine/nsg23/large/heap/empty
 	empty = TRUE
 
 //-----------------------Spearhead Autorevolver Speed Loaders Box-----------------------
