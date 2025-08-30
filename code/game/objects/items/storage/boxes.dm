@@ -695,6 +695,22 @@
 	else
 		icon_state = "r52"
 
+/obj/item/storage/box/flare/rmc
+	name = "\improper L96 illumination flare pack"
+	desc = "A packet of fourteen L96 Illumination Flares. Carried by TWE soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
+	icon_state = "l96"
+	can_hold = list(/obj/item/device/flashlight/flare/rmc)
+
+/obj/item/storage/box/flare/rmc/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare/rmc(src)
+
+/obj/item/storage/box/flare/rmc/update_icon()
+	if(!length(contents))
+		icon_state = "l96_e"
+	else
+		icon_state = "l96"
+
 //ITEMS-----------------------------------//
 
 /obj/item/storage/box/upp_radio_key

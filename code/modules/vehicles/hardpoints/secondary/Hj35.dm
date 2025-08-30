@@ -1,6 +1,6 @@
 /obj/item/hardpoint/secondary/hj35launcher
 	name = "\improper HJ-35 Launcher"
-	desc = "A secondary weapon for upp apc that shoots rockets"
+	desc = "A secondary weapon for UPP armored vehicles that shoots rockets. It loads multiple rockets at once."
 	icon = 'icons/obj/vehicles/hardpoints/uppapc.dmi'
 
 	icon_state = "hj35launcher"
@@ -31,13 +31,14 @@
 		"8" = list(-5, -10)
 	)
 
-	scatter = 2
-	fire_delay = 7.0 SECONDS
+	scatter = 1.5
+	fire_delay = 5.0 SECONDS
 
 /obj/item/hardpoint/secondary/hj35launcher/set_bullet_traits()
 	..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 350, GLOB.damage_boost_vehicles),
 	))
 
 // for upp tank

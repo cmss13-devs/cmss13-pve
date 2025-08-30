@@ -204,6 +204,32 @@
 	. = ..()
 	new /obj/item/storage/box/guncase/vulture(src)
 
+/obj/structure/closet/crate/secure/rmcnvg
+	name = "secure RMC NVG visors crate"
+	desc = "A secure crate, containing multiple insertable visors for the Mk16 tactical helmet & Mk12 marksman helmets."
+	icon_state = "secure_locked_vulture"
+	icon_opened = "secure_open_vulture"
+	icon_locked = "secure_locked_vulture"
+	icon_unlocked = "secure_unlocked_vulture"
+
+/obj/structure/closet/crate/secure/rmcnvg/Initialize()
+	. = ..()
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
+
 //special version, able to store OB fuel and warheads only
 /obj/structure/closet/crate/secure/ob
 	name = "secure orbital bombardment ammunition crate"

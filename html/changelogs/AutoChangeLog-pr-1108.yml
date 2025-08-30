@@ -1,0 +1,14 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New command-variants of the Longstreet (M34A3 Hampton) and the Cheetah (2B model) added with functional commander seats"
+  - qol: "Keybinds can be assigned to various vehicle-related verbs"
+  - balance: "The maximum speeds of armored vehicles were adjusted, the ARC being the speediest, then the APC, with the AEV being just slightly faster than the tank."
+  - balance: "The AEV comes with a pintle M56 RWS & incen smoke discharger as standard now"
+  - balance: "Armored vehicles take less damage from clawing, bullets, brute and (to a lesser degree) explosions, but will take much more damage from acid sources such as boilers or acid-rounies"
+  - balance: "several tank weapons got a PvE-balance-pass to make them better suite the sandbox we typically have"
+  - balance: "AT-launchers have had their damage tweaked to be a bit less lethal to infantry whilst still presenting a threat to vehicles"
+  - balance: "Many of the vehicle weapons had their arcs of fire and maximum stored magazines/tanks/clips tweaked"
+  - bugfix: "Tanks shouldn't brick themselves when moving with broken tracks any longer"
+  - bugfix: "Tank artillery module no longer leaves you in a permanently zoomed-out view"
+  - mapadd: "interior maps for command-variant tanks"

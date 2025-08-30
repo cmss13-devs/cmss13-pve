@@ -255,6 +255,13 @@
 /obj/item/tool/shovel/etool/folded
 	folded = TRUE
 
+/obj/item/tool/shovel/etool/rmc
+	name = "2155 pattern entrenching tool"
+	desc = "A marine commando's best friend. Dually useful for digging foxholes and bashing in noggins. Folds in half for easier storage."
+
+/obj/item/tool/shovel/etool/rmc/folded
+	folded = TRUE
+
 /obj/item/tool/shovel/etool/upp
 	name = "Type 50 entrenching tool"
 	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."

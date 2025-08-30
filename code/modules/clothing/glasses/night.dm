@@ -101,7 +101,15 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	headcam = TRUE
 
+/obj/item/clothing/glasses/night/m42_hms/rmc
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
 /obj/item/clothing/glasses/night/m42_hms/no_nvg
+	name = "\improper M42 head-mounted sight"
+	desc = "A standalone version of the HMS commonly seen attached to the M56 weapon system. Allows connection to the Command & Control network whilst also providing a HUD display. Click it to toggle."
 	actions_types = list(/datum/action/item_action/toggle)
 	darkness_view = 0
 	vision_flags = 0
@@ -247,11 +255,20 @@
 	vision_flags = 0
 	lighting_alpha = 255
 
+/obj/item/clothing/glasses/night/m56_goggles/rmc
+	name = "\improper L58A3 head mounted gunsight interface"
+	desc = "A headset and optic system for the L58A3 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
 	vision_flags = SEE_TURFS|SEE_MOBS
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE)
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m56_goggles/upp
 	name = "\improper RADIO head rig"
