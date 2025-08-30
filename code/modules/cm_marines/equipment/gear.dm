@@ -400,6 +400,51 @@
 	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
 	icon_state = "upp_meatballs"
 
+//RMC Tray Food
+
+/obj/item/reagent_container/food/snacks/protein_pack/rmc
+	name = "Biscuits Brown snack bar"
+	desc = "The devil in disguise. Quick to eat, with a fairly pleasant taste and texture, but consuming more than one in a short span of time will ensure you won't be digging latrine holes out in the field for at least two weeks."
+	icon_state = "muesli"
+	filling_color = "#ED1169"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc
+	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
+	trash = /obj/item/trash/RMCtray
+	w_class = SIZE_SMALL
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1
+	name = "\improper RMC Prepared Meal (Roast Beef)"
+	desc = "A slab of imitation beef drenched in too-salty gravy, with a portion of undercooked peas, soggy carrots and oddly dry mashed potatoes."
+	icon_state = "rmc_meat"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal2
+	name = "\improper RMC Prepared Meal (Tikka Curry)"
+	desc = "Chunks of pork and potato submerged in a mass of mild Indian curry sauce, with a side of fluffy rice and a lukewarm bit of naan flatbread."
+	icon_state = "rmc_tikka"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal3
+	name = "\improper RMC Prepared Meal (Katsu Curry)"
+	desc = "Breaded chicken strips slathered in a Japanese style curry sauce. Comes with a helping of fluffy rice and an unidentifiable mound of overcooked veg as the side components."
+	icon_state = "rmc_katsu"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal4
+	name = "\improper RMC Prepared Meal (Sausage & Eggs)"
+	desc = "Several overdone sausages, a wodge of scrambled eggs, and a load of sweet potato fries & green beans fill this tray."
+	icon_state = "rmc_sausage"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal5
+	name = "\improper RMC Prepared Meal (Seafood Platter)"
+	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop cold, boiled rice."
+	icon_state = "rmc_fish"
+
 /obj/item/storage/box/pizza
 	name = "food delivery box"
 	desc = "A space-age food storage device, capable of keeping food extra fresh. Actually, it's just a box."
@@ -436,14 +481,11 @@
 	desc = "A camera and associated headgear designed to allow unit commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard combat helmets in use by UA forces."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "overwatch_gear"
+	item_state = "overwatch_gear"
 	item_icons = list(
 		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
 		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-	)
-	item_state_slots = list(
-		WEAR_L_EAR = "cam_gear",
-		WEAR_R_EAR = "cam_gear",
-	)
+		)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
 	has_hud = TRUE
@@ -478,13 +520,19 @@
 	name = "OOCUHM Cam-Gear"
 	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	icon_state = "rmc_overwatch_gear"
+	item_state = "rmc_overwatch_gear"
 
 /obj/item/device/overwatch_camera/pmc
 	name = "Mk3 TOCU headcam"
 	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
+	icon_state = "rmc_overwatch_gear"
+	item_state = "rmc_overwatch_gear"
 
 /obj/item/device/overwatch_camera/upp
 	name = "1PN77M \"Periskop\" camera unit"
 	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
 	hud_type = list(MOB_HUD_FACTION_UPP)
+	icon_state = "upp_overwatch_gear"
+	item_state = "upp_overwatch_gear"

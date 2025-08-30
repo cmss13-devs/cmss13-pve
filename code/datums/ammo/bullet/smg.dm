@@ -30,6 +30,18 @@
 	name = "high-velocity 10x12 bullet"
 	penetration = ARMOR_PENETRATION_TIER_1 //Throwing them a bone, they don't get neg AP
 
+/datum/ammo/bullet/smg/squash
+	name = "squash-head submachinegun bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_3
+	effective_range_max = 7
+	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	max_range = 14
+
+/datum/ammo/bullet/smg/squash/on_hit_mob(mob/entity, obj/projectile/bullet)
+	..()
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
 	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't

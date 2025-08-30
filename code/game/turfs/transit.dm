@@ -297,6 +297,10 @@
 	shuttle_tag = DROPSHIP_PMC
 	dir = SOUTH
 
+/turf/open/space/transit/dropship/gibraltar
+	shuttle_tag = DROPSHIP_GIBRALTAR
+	dir = SOUTH
+
 /turf/open/space/transit/dropship/upp
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
