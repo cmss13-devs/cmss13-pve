@@ -4,7 +4,7 @@
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
-#define SQUAD_MARINE_2 "Bravo"
+#define SQUAD_MARINE_2 "Sun Riders B-Sct"
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
@@ -16,10 +16,13 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_UPP_2 "Golden Embers"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_PMCPLT_2 "VIRIDIAN-22"
 #define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_LRRP_2 "Ocelot Grapplers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
