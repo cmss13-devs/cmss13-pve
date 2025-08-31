@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;xeno_ai_movement&#x2F;assault - byond</title>
+</head>
+<body>
+<header>
+    <a href="index.html">byond</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/xeno_ai_movement/assault.html#proc">Proc Details</a></header>
+<main>
+<h1>/<a href="datum.html">datum</a>/<a href="datum/xeno_ai_movement.html">xeno_ai_movement</a>/<a href="datum/xeno_ai_movement/assault.html">assault</a>
+        
+    
+            <a href="https://github.com/cmss13-devs/cmss13-pve/blob/84539b193c06481295fdd3c5626e580f81b79146/code/modules/mob/living/carbon/xenomorph/castes/Soldier.dm#L133">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;castes&#x2F;Soldier.dm 133"/></a></h1>
+
+<p>Let's see if the alien is pulling anyone.
+Our soldier is pulling someone.
+Swap hand to either tackle or harm.
+If we are pulling someone and are not too aggressive, switch to disarm.
+We have a target. We'll do more thorough checking in the main loop, for now we only need to know if they are being pulled by a hostile or friendly xeno.
+Are they being pulled by an alien?
+Need to make sure the alien dragging is friendly to us. If it is not friendly, or not a xeno, our alien will try to grab back.
+I had it set up for slightly faster assignment, but this is easier to read.
+Override harm or continue with the previous intent.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/xeno_ai_movement/assault.html#proc/ai_move_hive">ai_move_hive</a></th><td>Being idle drains aggression.</td></tr>
+            <tr><th><a href="datum/xeno_ai_movement/assault.html#proc/ai_move_idle">ai_move_idle</a></th><td>Moving toward target grows aggression.
+Fractions for a more gradual aggression gain/loss.</td></tr>
+            <tr><th><a href="datum/xeno_ai_movement/assault.html#proc/ai_strap_host">ai_strap_host</a></th><td>This will mean if the alien is pulling someone to the hive, they will keep tackling them with their free claw.</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/ai_move_hive">ai_move_hive<aside>(delta_time) 
+        
+    
+            <a href="https://github.com/cmss13-devs/cmss13-pve/blob/84539b193c06481295fdd3c5626e580f81b79146/code/modules/mob/living/carbon/xenomorph/castes/Soldier.dm#L167">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;castes&#x2F;Soldier.dm 167"/></a></aside>
+        </h3>
+        <p>Being idle drains aggression.</p><h3 id="proc/ai_move_idle">ai_move_idle<aside>(delta_time) 
+        
+    
+            <a href="https://github.com/cmss13-devs/cmss13-pve/blob/84539b193c06481295fdd3c5626e580f81b79146/code/modules/mob/living/carbon/xenomorph/castes/Soldier.dm#L160">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;castes&#x2F;Soldier.dm 160"/></a></aside>
+        </h3>
+        <p>Moving toward target grows aggression.
+Fractions for a more gradual aggression gain/loss.</p><h3 id="proc/ai_strap_host">ai_strap_host<aside>(/<a href="turf.html">turf</a>/closest_hive, hive_radius, delta_time) 
+        
+    
+            <a href="https://github.com/cmss13-devs/cmss13-pve/blob/84539b193c06481295fdd3c5626e580f81b79146/code/modules/mob/living/carbon/xenomorph/castes/Soldier.dm#L173">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;xenomorph&#x2F;castes&#x2F;Soldier.dm 173"/></a></aside>
+        </h3>
+        <p>This will mean if the alien is pulling someone to the hive, they will keep tackling them with their free claw.</p></main>
+<footer>
+    colonialmarines.dme
+    <a href="https://github.com/cmss13-devs/cmss13-pve/tree/84539b193c06481295fdd3c5626e580f81b79146">84539b1</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.8.0</a></footer>
+</body>
+</html>
