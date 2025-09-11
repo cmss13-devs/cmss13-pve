@@ -476,7 +476,7 @@
 		return
 
 	var/enter_time = 0
-	// door locks break when hull is destroyed. Xenos enter slower, but their speed is not affected by anything and they ignore locks
+	// door locks break when hull is destroyed. Xenos and zombies enter slower.
 
 	if(iszombie(M) || isxeno(M))
 		enter_time = 3 SECONDS
