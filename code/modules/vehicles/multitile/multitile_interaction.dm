@@ -469,28 +469,26 @@
 			entrance_used = entrance
 			break
 
-	var/enter_time = 0
-	// door locks break when hull is destroyed. Xenos enter slower, but their speed is not affected by anything and they ignore locks
-	if(isxeno(M))
-		enter_time = 3 SECONDS
-	else
-		if(door_locked && health > 0) //check if lock on and actually works
-			if(ishuman(M))
-				var/mob/living/carbon/human/user = M
-				if(!iszombie(M))
-					if(!allowed(user) || !get_target_lock(user.faction_group)) //if we are human, we check access and faction
-						to_chat(user, SPAN_WARNING("\The [src] is locked!"))
-						return
-			else
-				to_chat(M, SPAN_WARNING("\The [src] is locked!")) //animals are not allowed inside without supervision
-				return
-
-
-	// Only xenos can force their way in without doors, and only when the frame is completely broken
+	// Only xenos or zombies can force their way in without doors, and only when the frame is completely broken
 	if(!entrance_used && health > 0)
 		return
-	else if(!entrance_used && !isxeno(M))
+	else if(!entrance_used && (!isxeno(M) || !iszombie(M)))
 		return
+
+	var/enter_time = 0
+	// door locks break when hull is destroyed. Xenos enter slower, but their speed is not affected by anything and they ignore locks
+
+	if(iszombie(M) || isxeno(M))
+		enter_time = 3 SECONDS
+	if(door_locked && health > 0) //check if lock on and actually works
+		if(ishuman(M) && !iszombie(M))
+			var/mob/living/carbon/human/user = M
+			if(!allowed(user) || !get_target_lock(user.faction_group)) //if we are human, we check access and faction
+				to_chat(user, SPAN_WARNING("\The [src] is locked!"))
+				return
+		else
+			to_chat(M, SPAN_WARNING("\The [src] is locked!")) //animals are not allowed inside without supervision
+			return
 
 	var/enter_msg = "We start climbing into \the [src]..."
 	if(health <= 0 && (isxeno(M) || iszombie(M)))
