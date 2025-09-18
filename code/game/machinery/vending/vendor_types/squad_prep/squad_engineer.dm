@@ -213,3 +213,101 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
 	)
+
+// RMC engi-vendor
+
+/obj/effect/essentials_set/rmcengi
+	spawned_gear_list = list(
+		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
+		/obj/item/storage/pouch/tools/tactical/rmc,
+		/obj/item/defenses/handheld/tesla_coil/stun/rmc,
+		/obj/item/storage/toolkit/full,
+	)
+
+GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
+		list("ENGINEERING SET (MANDATORY)", 0, null, null, null),
+		list("Essential Engineering Set", 0, /obj/effect/essentials_set/rmcengi, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("HEAVY-DUTY BREACHING EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_REGULAR),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Engineering Backpack", 0, /obj/item/storage/backpack/marine/engineerpack/satchel/rmc, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+		list("Standard Backpack", 0, /obj/item/storage/backpack/rmc/medium, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Lightweight Backpack", 0, /obj/item/storage/backpack/rmc/light, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("L70 Pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L26 Pattern General Utility Belt", 0, /obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", 0, /obj/item/storage/belt/gun/l905, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/engi/rmc
+	name = "\improper WeyTech Section Engineering Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of standard-issue Engineering equipment."
+	icon_state = "eng_gear"
+	req_access = list(ACCESS_TWE_ENGPREP)
+	vendor_role = list(JOB_TWE_RMC_ENGI)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/engi/rmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_rmc_engi
+
+// Mortar/Fire Support vendor
+
+/obj/effect/essentials_set/rmcmortar
+	spawned_gear_list = list(
+		/obj/item/mortar_kit/rmc,
+		/obj/item/storage/belt/gun/mortarbelt/rmc,
+		/obj/item/device/binoculars/range,
+		/obj/item/tool/wrench,
+	)
+
+/obj/effect/essentials_set/rmcgl
+	spawned_gear_list = list(
+		/obj/item/weapon/gun/launcher/grenade/m92/rmc,
+		/obj/item/storage/belt/gun/mortarbelt/rmc,
+	)
+
+
+GLOBAL_LIST_INIT(cm_vending_mortar_gear, list(
+		list("FIRE SUPPORT SET (MANDATORY)", 0, null, null, null),
+		list("L53A1 light mortar kit", 0, /obj/effect/essentials_set/rmcmortar, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("L164A3 MGL kit", 0, /obj/effect/essentials_set/rmcgl, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("MORTAR SHELLS", 0, null, null, null),
+		list("High Explosive Mortar Shell", 15, /obj/item/mortar_shell/he, null, VENDOR_ITEM_REGULAR),
+		list("Fragmentation Mortar Shell", 10, /obj/item/mortar_shell/frag, null, VENDOR_ITEM_REGULAR),
+		list("Incendiary Mortar Shell", 15, /obj/item/mortar_shell/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("Smoke Mortar Shell", 10, /obj/item/mortar_shell/smoke, null, VENDOR_ITEM_REGULAR),
+		list("White Phosphorus Explosive Mortar Shell", 25, /obj/item/mortar_shell/phosphorus, null, VENDOR_ITEM_REGULAR),
+		list("Flare/Cam Mortar Shell", 10, /obj/item/mortar_shell/flare, null, VENDOR_ITEM_REGULAR),
+
+		list("20MM GRENADE PACKETS", 0, null, null, null),
+		list("L103A1 20mm HE", 20, /obj/item/storage/box/packet/rmc/mini, null, VENDOR_ITEM_REGULAR),
+		list("L104A1 20mm Fragmentation", 20, /obj/item/storage/box/packet/rmc/mini/frag, null, VENDOR_ITEM_REGULAR),
+		list("L103A1/I 20mm incendiary", 20, /obj/item/storage/box/packet/rmc/mini/incen, null, VENDOR_ITEM_REGULAR),
+		list("L108A1 20mm HESH", 30, /obj/item/storage/box/packet/rmc/mini/squash, null, VENDOR_ITEM_REGULAR),
+		list("L104A1/H 20mm holo-targetting", 20, /obj/item/storage/box/packet/rmc/mini/holo, null, VENDOR_ITEM_REGULAR),
+		list("L101A2 20mm nerve-agent", 30, /obj/item/storage/box/packet/rmc/mini/gas, null, VENDOR_ITEM_REGULAR),
+
+	))
+
+/obj/structure/machinery/cm_vending/gear/mortar_stuff
+	name = "\improper WeyTech Section OFS Gear Rack"
+	desc = "An automated gear rack filled with specialized fire support equipment for the bombardment specialist of an RMC troop."
+	icon_state = "mor_gear"
+	show_points = TRUE
+	use_snowflake_points = TRUE
+	req_access = list(ACCESS_TWE_HEVWEAPPREP)
+	vendor_theme = VENDOR_THEME_COMPANY
+	vendor_role = list(JOB_TWE_RMC_BREACHER)
+
+/obj/structure/machinery/cm_vending/gear/mortar_stuff/get_listed_products(mob/user)
+	return GLOB.cm_vending_mortar_gear

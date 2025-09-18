@@ -67,6 +67,7 @@
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/sling,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/stock/smg/collapsible/brace,
 	)
@@ -149,8 +150,6 @@
 		/obj/item/attachable/extended_barrel,
 	)
 
-
-
 /obj/item/weapon/gun/smg/m39/elite/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SMG)
@@ -161,10 +160,35 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult =  BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_7
 
+/obj/item/weapon/gun/smg/m39/elite/rmc
+	name = "\improper L6A2 submachinegun"
+	desc = "RMC adopted variant of the M-39 SMG, re-engineered for better weight, handling and accuracy. Typically used in CQB engagements such as building-clearance, where the L23A1 proved a tad too unwieldy. Sometimes referred to as the \"Little Armat\" by Royal Marines."
+	icon_state = "m39"
+	item_state = "m39"
+	fire_sound = 'sound/weapons/gun_m39.ogg'
+	current_mag = /obj/item/ammo_magazine/smg/m39/squash
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
+	map_specific_decoration = FALSE
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible)
+	current_mag = /obj/item/ammo_magazine/smg/m39/squash
+	random_spawn_chance = 0
+
+/obj/item/weapon/gun/smg/m39/elite/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG2)
+	set_burst_delay(FIRE_DELAY_TIER_SMG2)
+	set_burst_amount(BURST_AMOUNT_TIER_4)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult =  BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_7
+
 /obj/item/weapon/gun/smg/m39/elite/pve //duplex round
 	name = "\improper M39B/3 submachinegun"
 	desc = "An experimental M-39 capable of firing squash-head duplex rounds. A bit bulkier and more unwieldy than the average M39, with a thicker reciever and slower projectile. Still produced in small quantities."
-	desc_lore = "The Company recieved a rather unexpected windfall of revenue from the VP78. Squash-head small-arms rounds were rather popular among their clientelle. Initial testing with rifle-caliber HESH rounds presented a few problems. The least of which was that the required additional powder drove the chamber pressure up to dangerous levels, causing premature detonations and inaccurate fire. <BR> <BR> Thanks to Armat's overengineering, the M39 was rated for pressures well beyond that of even +P ammunition. It was simple for Weyland Yutani to iterate upon the problem by taking a step back. How do you fix rifle rounds being too pressurized? Make it a pistol round. How do you remedy its firepower? Make it a duplex."
+	desc_lore = "The Company recieved a rather unexpected windfall of revenue from the L165A1. Squash-head small-arms rounds were rather popular among their clientelle. Initial testing with rifle-caliber HESH rounds presented a few problems. The least of which was that the required additional powder drove the chamber pressure up to dangerous levels, causing premature detonations and inaccurate fire. <BR> <BR> Thanks to Armat's overengineering, the M39 was rated for pressures well beyond that of even +P ammunition. It was simple for Weyland Yutani to iterate upon the problem by taking a step back. How do you fix rifle rounds being too pressurized? Make it a pistol round. How do you remedy its firepower? Make it a duplex."
 	current_mag = /obj/item/ammo_magazine/smg/m39/pve
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
@@ -690,6 +714,28 @@
 	scatter = SCATTER_AMOUNT_TIER_9
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 
+/obj/item/weapon/gun/smg/fp9000/tactical
+	name = "\improper FN FP9000-X TAC Submachinegun"
+	desc = "A variation on the standard FP9000 design, with it's internal mechanisms improved and given a new color scheme to sell at extortionate prices by Highfire Manufacturing. Whilst not as good as the official FP9000/2, it's still able to hold it's own and has a much more managable spread."
+	icon_state = "fp9000_tactical"
+	item_state = "fp9000_tactical"
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+	)
+	random_spawn_siderail = list(
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight,
+	)
+
+/obj/item/weapon/gun/smg/fp9000/tactical/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
 //-------------------------------------------------------
 
 /obj/item/weapon/gun/smg/nailgun

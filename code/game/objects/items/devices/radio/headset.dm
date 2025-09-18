@@ -376,6 +376,8 @@
 			marker_flags = MINIMAP_FLAG_USCM
 		else if(hud_type == MOB_HUD_FACTION_UPP)
 			marker_flags = MINIMAP_FLAG_UPP
+		else if(hud_type == MOB_HUD_FACTION_TWE)
+			marker_flags = MINIMAP_FLAG_TWE
 		else if(hud_type == MOB_HUD_FACTION_PMC)
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
@@ -657,18 +659,22 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils
 	name = "marine radio headset"
 	desc = "A standard marine radio headset. When worn, grants access to Squad Leader tracker. Click tracker with empty hand to open Squad Info window."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_override = 'icons/mob/humans/onmob/head_1.dmi'
 	icon_state = "uscm_headset"
 	item_state = "uscm_headset"
 	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/head_1.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/head_1.dmi',
+		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
 		)
 	frequency = ALPHA_FREQ
 	has_tracker = TRUE
 	misc_tracking = TRUE
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/seclead
+	initial_keys = list(/obj/item/device/encryptionkey/squadlead)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/pltco
+	initial_keys = list(/obj/item/device/encryptionkey/bravo, /obj/item/device/encryptionkey/squadlead)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/forecon
 	name = "USCM SOF headset"
@@ -690,6 +696,21 @@
 		"Squad Leader" = TRACKER_ASL,
 		"Landing Zone" = TRACKER_LZ
 	)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc
+	name = "Royal Marine Commando headset"
+	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
+	minimap_type = MINIMAP_FLAG_TWE
+	frequency = RMC_FREQ
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	inbuilt_tracking_options = list(
+		"Troop Commander" = TRACKER_PLTCO,
+		"Section/Team Leader" = TRACKER_FTL,
+	)
+	locate_setting = TRACKER_PLTCO
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
@@ -726,7 +747,7 @@
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/medic
 	name = "UPP-MED headset"
 	desc = "A special headset used by UPP military. Channels are as follows: #m - medical."
-	frequency = UPP_GRD_FREQ
+	frequency = UPP_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/upp/medic)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/upp/command
@@ -1203,10 +1224,10 @@
 
 /obj/item/device/radio/headset/distress/royal_marine
 	name = "Royal Marine headset"
-	desc = "A sleek headset used by the Royal Marines Commando. Low profile enough to fit under their unique helmets."
+	desc = "A special headset used by the TWE's elite Royal Marine Commandos."
 	frequency = RMC_FREQ
 	icon_state = "vai_headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/royal_marine)
+	initial_keys = list(/obj/item/device/encryptionkey/royal_marine)
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	volume = RADIO_VOLUME_IMPORTANT
@@ -1358,3 +1379,9 @@
 	frequency = JSC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
+/obj/item/device/radio/headset/distress/merc
+	name = "mercenary headset"
+	desc = "A civilian commercial headset, modified to work as a military one. Featured channels include: ; - Mercenary,  :o - Colony."
+	frequency = MERC_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/colony)
+	ignore_z = TRUE

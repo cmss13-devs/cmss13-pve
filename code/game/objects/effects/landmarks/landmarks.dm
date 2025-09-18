@@ -433,6 +433,10 @@
 	name = "upp late join"
 	squad = SQUAD_UPP
 
+/obj/effect/landmark/late_join/rmc
+	name = "rmc late join"
+	squad = SQUAD_RMC
+
 /obj/effect/landmark/late_join/upp/Initialize(mapload, ...)
 	. = ..()
 
@@ -467,6 +471,13 @@
 	name = "forecon late join"
 	squad = SQUAD_LRRP
 
+/obj/effect/landmark/late_join/pmc
+	name = "pmc late join"
+	squad = SQUAD_PMCPLT
+
+/obj/effect/landmark/late_join/small_pmc
+	name = "small pmc late join"
+	squad = SQUAD_PMCPLT_SMALL
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()

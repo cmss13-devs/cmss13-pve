@@ -223,7 +223,7 @@
 	gun_type = /obj/item/weapon/gun/flamer/M240T
 
 	max_intensity = 80
-	max_range = 5
+	max_range = 6
 	max_duration = 50
 
 /obj/item/ammo_magazine/flamer_tank/large/empty
@@ -237,8 +237,9 @@
 	desc = "A large fuel tank of Ultra Thick Napthal Fuel type B, a special variant of napalm that is easily extinguished, but disperses over a wide area while burning slowly. The composition reacts with inorganic materials to break them down, causing severe damage. For use in the M240-T incinerator unit. Handle with care."
 	caliber = "Napalm B"
 	flamer_chem = "napalmb"
+	max_rounds = 300
 
-	max_range = 6
+	max_range = 7
 
 // This is the blue flamer fuel for the pyro.
 /obj/item/ammo_magazine/flamer_tank/large/X
@@ -247,7 +248,7 @@
 	caliber = "Napalm X"
 	flamer_chem = "napalmx"
 
-	max_range = 6
+	max_range = 7
 
 /obj/item/ammo_magazine/flamer_tank/large/EX
 	name = "large incinerator tank (EX)"

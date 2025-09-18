@@ -54,3 +54,28 @@
 /obj/effect/landmark/start/marine/spec/delta
 	icon_state = "spec_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/datum/job/marine/specialist/ai
+	total_positions = 0
+	spawn_positions = 0
+
+/datum/job/marine/specialist/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/specialist/ai/get_total_positions(latejoin=0)
+	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/specialist/ai/rmc
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_TWE_RMC_MARKSMAN
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/rmc/snp
+	job_options = null
+	supervisors = "the team leader and troop commander"
+	entry_message_body = "You are a specially trained scout-sniper in the Royal Marines Commando. Your task is to provide highly accurate fire support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/specialist/rmc
+	name = JOB_TWE_RMC_MARKSMAN
+	squad = SQUAD_RMC
+	job = /datum/job/marine/specialist/ai/rmc

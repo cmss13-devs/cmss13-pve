@@ -4,7 +4,7 @@
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Sun Riders"
-#define SQUAD_MARINE_2 "Bravo"
+#define SQUAD_MARINE_2 "Sun Riders B-Sct"
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
@@ -16,8 +16,13 @@
 #define SQUAD_SOLAR "Solar Devils"
 #define SQUAD_ARMY "US Army"
 #define SQUAD_UPP "Red Dawn"
+#define SQUAD_UPP_2 "Golden Embers"
 #define SQUAD_PMCPLT "AZURE-15"
+#define SQUAD_PMCPLT_2 "VIRIDIAN-22"
+#define SQUAD_PMCPLT_SMALL "AZURE-16"
+#define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_LRRP_2 "Ocelot Grapplers"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
@@ -286,6 +291,13 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_PMCPLAT_STANDARD "Tactical Unit"
 #define JOB_PMCPLAT_MEDIC "Medical Specialist"
 
+///------ PMC SMALL ==== ///
+#define JOB_PMCPLAT_SMALL_LEADER "Strike Operations Leader"
+#define JOB_PMCPLAT_SMALL_FTL "Strike Team Leader"
+#define JOB_PMCPLAT_SMALL_SG "Strike Heavy Weapons Specialist"
+#define JOB_PMCPLAT_SMALL_STANDARD "Strike Tactical Unit"
+#define JOB_PMCPLAT_SMALL_MEDIC "Strike Medical Specialist"
+
 
 //---- Contractors ----//
 #define JOB_CONTRACTOR "VAIPO Mercenary"
@@ -377,27 +389,20 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- TWE --------//
 #define JOB_TWE_REPRESENTATIVE "TWE Representative"
 
-//RMC
-#define JOB_TWE_RMC_RIFLEMAN "RMC Rifleman"
-#define JOB_TWE_RMC_MARKSMAN "RMC Marksman"
-#define JOB_TWE_RMC_SMARTGUNNER "RMC Smartgunner"
-#define JOB_TWE_RMC_BREACHER "RMC Breacher"
-#define JOB_TWE_RMC_TEAMLEADER "RMC Team Leader"
-#define JOB_TWE_RMC_LIEUTENANT "RMC Lieutenant"
-#define JOB_TWE_RMC_COMMANDER "RMC Commander"
+//-------- RMC --------//
+#define JOB_TWE_RMC_RIFLEMAN "Marine Commando"
+#define JOB_TWE_RMC_MEDIC "Medical Assistant"
+#define JOB_TWE_RMC_ENGI "Assault Engineer"
+#define JOB_TWE_RMC_MARKSMAN "Scout Sniper"
+#define JOB_TWE_RMC_SMARTGUNNER "GPMG Gunner"
+#define JOB_TWE_RMC_BREACHER "Bombardment Specialist"
+#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
+#define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
+#define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
+#define JOB_TWE_RMC_COMMANDER "Squadron Commander"
 
-#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER,JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER)
-
-#define JOB_TWE_SEAMAN "TWE Seaman"
-#define JOB_TWE_LSEAMAN "TWE Leading Seaman"
-#define JOB_TWE_SO "TWE Standing Officer"
-#define JOB_TWE_WO "TWE Warrant Officer"
-#define JOB_TWE_CPT "TWE Captain"
-#define JOB_TWE_ADM "TWE Admiral"
-#define JOB_TWE_GADM "TWE Grand Admiral"
-#define JOB_TWE_ER "TWE Emperor"
-
-#define TWE_OFFICER_JOB_LIST list(JOB_TWE_SEAMAN, JOB_TWE_LSEAMAN, JOB_TWE_SO, JOB_TWE_WO, JOB_TWE_CPT, JOB_TWE_ADM, JOB_TWE_GADM, JOB_TWE_ER)
+#define TWE_COMMANDO_JOB_LIST list(JOB_TWE_RMC_RIFLEMAN, JOB_TWE_RMC_MEDIC, JOB_TWE_RMC_ENGI, JOB_TWE_RMC_BREACHER, JOB_TWE_RMC_SMARTGUNNER, JOB_TWE_RMC_MARKSMAN ,JOB_TWE_RMC_TEAMLEADER, JOB_TWE_RMC_SECTIONLEADER, JOB_TWE_RMC_TROOPLEADER, JOB_TWE_RMC_LIEUTENANT, JOB_TWE_RMC_COMMANDER,)
 
 //-------- PROVOST --------//
 #define JOB_PROVOST_ENFORCER "Provost Enforcer"
@@ -421,6 +426,18 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- CIA --------//
 #define JOB_CIA "Intelligence Analyst"
 #define JOB_CIA_LIAISON "Intelligence Liaison Officer"
+
+//-------- BD MERCS --------//
+#define JOB_MERCENARY "BD Grunt"
+#define JOB_MERCENARY_PILOT "BD Pilot"
+#define JOB_MERCENARY_SENTINEL "BD Sentinel"
+#define JOB_MERCENARY_SUPERVISOR "BD Supervisor"
+#define JOB_MERCENARY_BULWARK "BD Bulwark"
+#define JOB_MERCENARY_SYNTH "BD Synth"
+#define JOB_MERCENARY_INFILTRATOR "BD Infiltrator"
+#define JOB_MERCENARY_OFFICER "BD Officer"
+
+#define BD_MERCS_JOB_LIST list(JOB_MERCENARY_GRUNT, JOB_MERCENARY_PILOT, JOB_MERCENARY_SENTINEL, JOB_MERCENARY_SUPERVISOR, JOB_MERCENARY_BULWARK, JOB_MERCENARY_SYNTH, JOB_MERCENARY_INFILTRATOR, JOB_MERCENARY_OFFICER)
 
 #define TIS_JOB_LIST list(JOB_TIS_SA, JOB_TIS_IO)
 //-------- UACG -------//
