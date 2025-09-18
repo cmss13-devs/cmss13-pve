@@ -1042,8 +1042,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
-	name = "\improper tactical helmet"
-	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This configuration lacks the iconic ballistic mask popularized by Soldier of Fortune magazine."
+	name = "\improper Kame combat helmet"
+	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
@@ -1056,20 +1056,18 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
 
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader
-	name = "\improper PMC beret"
-	desc = "The pinnacle of fashion for any aspiring mercenary leader. Designed to protect the head from light impacts."
-	icon_state = "officer_hat"
-
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
-	name = "\improper tactical sniper helmet"
-	desc = "A helmet worn by PMC Marksmen."
+	name = "\improper Mk12 marksman helmet"
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_sniper_hat"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	icon_state = "rmc_sniper_hat"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/leader
 	name = "\improper PMC beret"
@@ -1077,11 +1075,18 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "officer_hat"
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner
-	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries. This version features a high-tech sealed ballistic mask capable of providing tactical data via its eye-lenses."
-	icon_state = "heavy_helmet"
+	name = "\improper Mk16 tactical helmet"
+	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
+	icon_state = "heavy_wy"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
+	desc = "Standard issue high molecular density polymer combat helmet and ballistic mask of the RMC. Resistant to glancing hits from small arms and shrapnel, incorporates tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	icon_state = "heavy_rmc"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/commando
 	name = "\improper M5X helmet"

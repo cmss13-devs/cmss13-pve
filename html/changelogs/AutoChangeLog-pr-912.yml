@@ -1,0 +1,13 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Much better RMC across the board (updated armor, presets, guns, skills)"
+  - rscadd: "RMC Troop (playable unit)"
+  - rscadd: "New DMR for the RMC, sprites done by Dimdi"
+  - balance: "NSG buffed to be a viable weapon system"
+  - balance: "RMC skills tweaked so they're better at medical overall but worse at engineering compared to USCM (Their sapper is on par with CM Combat-Engi however)"
+  - rscdel: "Goodbye old TWE naval ranks"
+  - bugfix: "Preset previews now display proper portraits"
+  - mapadd: "The HMS Brynhild shipmap & the Gibraltar dropship"
+  - soundadd: "New NSG firing sounds, based off the L1A1 & L1A2 LMG"
+  - soundadd: "New sounds for the RMC DMR based off the JSDF Type 64"

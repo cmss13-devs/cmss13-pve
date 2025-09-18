@@ -303,7 +303,7 @@
 /obj/item/storage/box/guncase/heavy/sentryupp/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "uppsentrycase_lid")
 		return
@@ -362,7 +362,7 @@
 /obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "ks29case_lid")
 		return
@@ -591,6 +591,33 @@
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 
+/obj/item/storage/box/guncase/heavy/rmcsmg
+	name = "\improper L6A2 SMG CQWS case"
+	desc = "A heavy case for storing an L6A2 Close-Quarters-Weapon-System, along with several magazines of squad-head ammunition for it."
+	icon_state = "rmcsmgcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/smg/m39/elite/rmc, /obj/item/ammo_magazine/smg/m39/squash)
+
+/obj/item/storage/box/guncase/heavy/rmcsmg/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/m39/elite/rmc(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+
+/obj/item/storage/box/guncase/heavy/rmcsmg/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "rmcbigcase_lid_open")
+	else
+		overlays += image(icon, "rmcsmgcase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/smg/m39/elite/rmc) in contents)
+		overlays += image(icon, "+l6a2")
+	if(locate(/obj/item/ammo_magazine/smg/m39/squash) in contents)
+		overlays += image(icon, "+mags")
+
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
@@ -681,6 +708,44 @@
 		source_image.pixel_x = 18
 		overlays += source_image
 
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc
+	name = "\improper motion detectors case"
+	desc = "A case containing four L107 handheld motion detectors."
+	icon_state = "rmcmdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/hacked/twe)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc/fill_preset_inventory()
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "rmcbigcase_lid_open")
+	else
+		overlays += image(icon, "rmcmdcase_lid")
+		return
+
+	if(length(contents) >= storage_slots)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.75)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 6
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.5)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 12
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.25)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 18
+		overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/fuel
 	name = "\improper M240A1 fuel canister case"
@@ -964,14 +1029,14 @@
 
 /obj/item/storage/box/guncase/nsg23_marine
 	name = "\improper NSG-23 assault rifle case"
-	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
+	desc = "A gun case containing a NSG L23A1 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
 	storage_slots = 6
-	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
+	can_hold = /obj/item/ammo_magazine/rifle/nsg23
 
 /obj/item/storage/box/guncase/nsg23_marine/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/nsg23/no_lock(src)
+	new /obj/item/weapon/gun/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
@@ -980,11 +1045,11 @@
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/box/guncase/nsg23_marine/pve/heap
 

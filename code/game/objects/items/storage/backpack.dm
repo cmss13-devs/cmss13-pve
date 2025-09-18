@@ -14,6 +14,7 @@
 	max_storage_space = 21
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
+	var/bag_open_time = 2 SECONDS //How long it takes to open the bag
 	var/obj/item/card/id/locking_id = null
 	var/is_id_lockable = FALSE
 	var/lock_overridable = TRUE
@@ -128,7 +129,7 @@
 		if(!worn_accessible)
 			if(H.back == src && !user.action_busy) //Not doing any timed actions?
 				to_chat(H, SPAN_NOTICE("You begin to open [src], so you can check its contents."))
-				if(!do_after(user, 2 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+				if(!do_after(user, bag_open_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
 					to_chat(H, SPAN_WARNING("You were interrupted!"))
 					return FALSE
 				RegisterSignal(user, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(storage_close)) //Continue along the proc and allow opening if not locked; close on movement.
@@ -1189,15 +1190,32 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "The heavy-carry pack of the RMC forces. Designed to lug the most amount of gear into the battlefield."
 	icon_state = "backpack_large"
 	item_state = "backpack_large"
-	max_storage_space = 27
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/rmc/medic
+	name = "RMC medical backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by Medical Assistants to fit their needs better."
+	icon_state = "backpack_medium_medic"
+	item_state = "backpack_medium_medic"
+	worn_accessible = TRUE
+	max_storage_space = 21
 
 /obj/item/storage/backpack/rmc/medium
 	name = "standard RMC backpack"
 	desc = "A TWE military standard-carry RMC combat pack MK3."
 	icon_state = "backpack_medium"
 	item_state = "backpack_medium"
+	max_storage_space = 18
+
+/obj/item/storage/backpack/marine/engineerpack/satchel/rmc
+	name = "RMC engineering backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by ingenious Royal Engineers to better fit their requirements."
+	icon_state = "backpack_sapper"
+	item_state = "backpack_sapper"
+	max_storage_space = 18
+	max_fuel = 150
 	worn_accessible = TRUE
-	max_storage_space = 24
 
 /obj/item/storage/backpack/rmc/light
 	name = "lightweight RMC backpack"
@@ -1205,34 +1223,39 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_small"
 	item_state = "backpack_small"
 	worn_accessible = TRUE
-	max_storage_space = 21
+	max_storage_space = 15
 
 /obj/item/storage/backpack/rmc/frame //One sorry sod should have to lug this about spawns in their shuttle currently
 	name = "\improper RMC carry-frame"
 	desc = "A backpack specifically designed to hold equipment for commandos."
-	icon_state = "backpack_frame"
+	icon_state = "backpack_frame_0"
 	item_state = "backpack_frame"
 	max_w_class = SIZE_HUGE
 	storage_slots = 7
 	can_hold = list(
-		/obj/item/ammo_box/magazine/misc/mre,
-		/obj/item/storage/firstaid/softpack/regular,
-		/obj/item/storage/firstaid/softpack/adv,
-		/obj/item/storage/firstaid/softpack/surgical,
-		/obj/item/device/defibrillator/compact,
-		/obj/item/tool/surgery/surgical_line,
-		/obj/item/tool/surgery/synthgraft,
-		/obj/item/storage/box/packet/rmc/he,
-		/obj/item/storage/box/packet/rmc/incin,
+		/obj/item/storage/firstaid,
+		/obj/item/storage/box/packet,
+		/obj/item/ammo_box,
+		/obj/item/mortar_shell,
 	)
+	cant_hold = list(
+		/obj/item/ammo_box/magazine/nsg23/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		/obj/item/ammo_box/magazine/mk1/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		) //Jank, but amusing to think that the janitor can store these things in a frame pack whilst a marine commando can't
 
-/obj/item/storage/backpack/general_belt/rmc //the breachers belt
-	name = "\improper RMC general utility belt"
+	var/base_icon_state = "backpack_frame"
+
+/obj/item/storage/backpack/rmc/frame/update_icon()
+	. = ..()
+	icon_state = "[base_icon_state]_[length(contents)]"
+
+/obj/item/storage/backpack/general_belt/rmc
+	name = "\improper L26 pattern general utility belt"
 	desc = "A small, lightweight pouch that can be clipped onto armor to provide additional storage. This new RMC model, while uncomfortable, can also be clipped around the waist."
 	icon_state = "rmc_general"
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
-	max_storage_space = 15
+	max_storage_space = 10
 
 //----------USASF & ARMY SECTION----------
 

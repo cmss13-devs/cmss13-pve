@@ -30257,12 +30257,12 @@
 	dir = 4
 	},
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
-/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "xGm" = (
