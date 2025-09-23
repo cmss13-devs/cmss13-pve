@@ -124,7 +124,7 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/bravo = ROLES_AI_SUPPORT,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
-												/datum/squad/marine/guard = ROLES_AI_GUARD),\
+												/datum/squad/marine/guard = ROLES_AI_GUARD,\
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL))
 
 
