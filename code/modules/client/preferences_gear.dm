@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/eyewear/bimex_shades_classic
 	display_name = "BiMex Classic Shades"
 	path = /obj/item/clothing/glasses/sunglasses/big/classic
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/eyewear/sunglasses
 	display_name = "Sunglasses"
@@ -175,9 +175,8 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/mask/gas
 	display_name = "Gas mask"
-	path = /obj/item/clothing/mask/gas
+	path = /obj/item/clothing/mask/gas //Civ market gas-mask, no longer USCM locked
 	cost = 1
-	allowed_origins = USCM_ORIGINS
 
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
@@ -406,29 +405,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "USCM headset"
 	path = /obj/item/clothing/head/headset
 
-/datum/gear/headwear/upp
-	allowed_origins = UPP_ORIGINS
-
-/datum/gear/headwear/upp/cap
-	display_name = "UPP cap"
-	path = /obj/item/clothing/head/uppcap
-
-/datum/gear/headwear/upp/boonie
-	display_name = "UPP boonie"
-	path = /obj/item/clothing/head/uppcap/boonie
-
-/datum/gear/headwear/upp/ushanka
-	display_name = "UPP ushanka"
-	path = /obj/item/clothing/head/uppcap/ushanka
-
-/datum/gear/headwear/beret_red
-	display_name = "Beret, red"
-	path = /obj/item/clothing/head/beret
-
-/datum/gear/headwear/beret_black
-	display_name = "Beret, black"
-	path = /obj/item/clothing/head/beret/black
-
 /datum/gear/headwear/uscm/beret_white
 	display_name = "Beret, white"
 	path = /obj/item/clothing/head/beret/cm/white
@@ -460,6 +436,41 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/headwear/uscm/beret_intel
 	display_name = "Beret, black flash"
 	path = /obj/item/clothing/head/beret/cm/intel
+
+/datum/gear/headwear/upp
+	allowed_origins = UPP_ORIGINS
+
+/datum/gear/headwear/upp/cap
+	display_name = "UPP cap"
+	path = /obj/item/clothing/head/uppcap
+
+/datum/gear/headwear/upp/boonie
+	display_name = "UPP boonie"
+	path = /obj/item/clothing/head/uppcap/boonie
+
+/datum/gear/headwear/upp/ushanka
+	display_name = "UPP ushanka"
+	path = /obj/item/clothing/head/uppcap/ushanka
+
+/datum/gear/headwear/rmc
+	allowed_origins = TWE_ORIGINS
+
+/datum/gear/headwear/rmc/beanie
+	display_name = "RMC beanie"
+	path = /obj/item/clothing/head/beanie/royal_marine
+
+/datum/gear/headwear/rmc/turban
+	display_name = "RMC turban"
+	path = /obj/item/clothing/head/beanie/royal_marine/turban
+
+/datum/gear/headwear/beret_red
+	display_name = "Beret, red"
+	path = /obj/item/clothing/head/beret
+
+/datum/gear/headwear/beret_black
+	display_name = "Beret, black"
+	path = /obj/item/clothing/head/beret/black
+
 
 /*
 //================================================
@@ -638,7 +649,6 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/suit/storage/jacket/marine/upp/naval
 	cost = 3
 	allowed_origins = UPP_ORIGINS
-
 
 /datum/gear/clothing/shorts
 	display_name = "USCM PT Shorts"
@@ -1087,8 +1097,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/weapon/bowie
 	display_name = "Bowie fighting knife"
-	path = 	/obj/item/weapon/knife/marine/bowie
-	cost = 3
+	path = 	/obj/item/storage/box/loadout/bowie
+	cost = 4
+
+/datum/gear/weapon/kukri
+	display_name = "Kukri utility knife"
+	path = 	/obj/item/storage/box/loadout/bowie/kukri
+	cost = 4
+	allowed_origins = TWE_ORIGINS
 
 /datum/gear/weapon/baker
 	display_name = "Baker-pattern fighting knife"
@@ -1181,7 +1197,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	allowed_origins = NON_UPP_ORIGINS
 
 /datum/gear/weapon/l54
-	display_name = "L54 Pistol"
+	display_name = "L54A2 Pistol"
 	path = /obj/item/storage/box/loadout/L54_loadout
 	cost = 4
 
@@ -1194,7 +1210,7 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "VP78 Pistol"
 	path = /obj/item/storage/box/loadout/VP78_loadout
 	cost = 4
-	allowed_origins = USCM_ORIGINS
+	allowed_origins = USCM_ORIGINS //RMC get the better kind of VP78 on their ship, so they won't need to buy subpar civ-market models
 
 /datum/gear/weapon/m2100_machete
 	display_name = "M2100 Machete"
@@ -1634,6 +1650,17 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 /datum/gear/misc/patch_upp/sof
 	display_name = "Naval Infantry shoulder patch"
 	path = /obj/item/clothing/accessory/patch/upp/naval
+
+/datum/gear/misc/patch_rmc
+	display_name = "Royal Marines Commando shoulder patch"
+	path = /obj/item/clothing/accessory/patch/royal_marines
+	cost = 0
+	slot = WEAR_IN_ACCESSORY
+	allowed_origins = TWE_ORIGINS
+
+/datum/gear/misc/patch_rmc/twe
+	display_name = "Three World Empire shoulder patch"
+	path = /obj/item/clothing/accessory/patch/twe
 
 /datum/gear/misc/family_photo
 	display_name = "Family photo"
