@@ -956,7 +956,7 @@
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 
-<<<<<<< HEAD
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/space
 	name = "\improper ColMarTech Automated EVA Equipment"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools, specifically for use in space enviroments.."
@@ -1025,7 +1025,7 @@
 		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
 		)
 
-=======
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/rmc
 	name = "\improper WeyTech Automated Utilities Section Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any Royal Marine."
@@ -1077,8 +1077,6 @@
 		list("Two-point Sling", round(scale * 2), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
-
->>>>>>> upstream/master
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 
