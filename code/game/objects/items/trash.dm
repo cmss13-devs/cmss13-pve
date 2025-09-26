@@ -229,6 +229,12 @@
 	icon = 'icons/obj/items/food.dmi'
 	icon_state = "upp_tray"
 
+/obj/item/trash/RMCtray
+	name = "\improper RMC Meal Tray"
+	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
+
 
 //////////
 ///Misc///
@@ -263,6 +269,11 @@
 /obj/item/trash/grenade/gas/marine
 	name = "spent M66 tear gas grenade"
 	desc = "A used tear gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/gas/rmc
+	name = "spent R2175/CN20 gas grenade"
+	desc = "A used RMC CN20 gas grenade. This is trash."
 	icon_state = "grenade_spent"
 
 /obj/item/trash/grenade/Initialize()

@@ -87,6 +87,11 @@
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
+/obj/item/device/helmet_visor/twe
+	name = "squad optic"
+	desc = "An insertable visor HUD into a standard RMC helmet."
+	hud_type = list(MOB_HUD_FACTION_TWE)
+
 /obj/item/device/helmet_visor/medical
 	name = "AN/MPAV-71 visor"
 	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. Uncommon to see in use outside of US Army units."
@@ -110,8 +115,16 @@
 /obj/item/device/helmet_visor/medical/advanced/pmc
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
 
-/obj/item/device/helmet_visor/medical/advanced/twe
+/obj/item/device/helmet_visor/medical/advanced/rmc
+	name = "HBVS visor"
+	desc = "One of the few successful components from the otherwise disastrous Commando Upgrade Program ran in the mid 2170s, the head-mounted, biomonitor vision system comes as standard in all RMC helmets."
 	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	icon_state = "hud_sight"
+	action_icon_string = "hud_sight_down"
+	helmet_overlay = "hud_sight_full"
+
+/obj/item/device/helmet_visor/medical/advanced/rmc/alt
+	helmet_overlay = "hud_sight_right"
 
 /obj/item/device/helmet_visor/medical/advanced/upp
 	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_ADVANCED)
@@ -244,7 +257,7 @@
 	var/power_use = 33
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
-	var/lighting_alpha = 100
+	var/lighting_alpha = 140
 
 	/// A slight glowing green light while the NVG is activated, is initialized as in the attached_helmet's contents
 	var/atom/movable/nvg_light/on_light
@@ -382,9 +395,13 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
 
-/obj/item/device/helmet_visor/night_vision/marine_raider/twe
-	desc = "A high-tech visor often seen used by the Royal Marine Commando forces of the TWE. Offers various tactical readouts as well as providing night-vision capabilities."
+/obj/item/device/helmet_visor/night_vision/marine_raider/rmc
+	name = "HIBVS night-sight visor"
+	desc = "A heavily modified version of the standard HBVS, that offers infrared night-vision capabilities alongside the existent biomonitoring systems."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
+	helmet_overlay = "nvg_sight_rmc"
+	power_use = 0
+	visor_glows = FALSE
 
 /obj/item/device/helmet_visor/night_vision/marine_raider/upp
 	name = "KKV-18 \"Aufseher\""

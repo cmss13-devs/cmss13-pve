@@ -1965,7 +1965,7 @@
 	req_one_access = list(104,106);
 	req_access = null
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/corporate/lead,
 /turf/open/floor/vault2/north,
@@ -27838,8 +27838,8 @@
 	req_one_access = list(203);
 	req_access = null
 	},
-/obj/item/weapon/gun/rifle/nsg23/stripped,
-/obj/item/weapon/gun/rifle/nsg23/stripped,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/vault2/west,
@@ -40625,8 +40625,8 @@
 	req_one_access = list(203);
 	req_access = null
 	},
-/obj/item/weapon/gun/rifle/nsg23/stripped,
-/obj/item/weapon/gun/rifle/nsg23/stripped,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/structure/machinery/light/small{
