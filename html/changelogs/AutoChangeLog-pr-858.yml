@@ -1,0 +1,7 @@
+author: "SpartanBobby, Soullessmagpie"
+delete-after: True
+changes:
+  - mapadd: "USCSS Obsidian Falk PMC shipmap"
+  - mapadd: "USCSS Onyx Karain PMC shipmap (PMC lowpop)"
+  - rscadd: "Azure-16 PMC lowpop Strike Taskforce"
+  - rscadd: "NSG/PVE"

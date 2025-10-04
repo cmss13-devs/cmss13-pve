@@ -68,10 +68,10 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 		"bullet" = 0.6,
 		"explosive" = 0.7,
 		"blunt" = 0.7,
-		"abstract" = 1
+		"abstract" = 1,
 	)
 
-	move_max_momentum = 2
+	move_max_momentum = 2.5
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
 
@@ -116,7 +116,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/name_vehicle
 		))
 
@@ -145,7 +144,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/name_vehicle,
 		))
 	else if(seat == VEHICLE_SUPPORT_GUNNER_ONE || seat == VEHICLE_SUPPORT_GUNNER_TWO)
