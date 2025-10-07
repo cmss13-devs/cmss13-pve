@@ -80,6 +80,8 @@
 			playsound(loc,'sound/voice/predalien_death.ogg', 25, TRUE)
 		else if(isfacehugger(src))
 			playsound(loc, 'sound/voice/alien_facehugger_dies.ogg', 25, TRUE)
+		else if(HAS_TRAIT(src, TRAIT_XENONID))
+			playsound(loc, prob(50) == 1 ? 'sound/voice/xenonid_death1.ogg' : 'sound/voice/xenonid_death2.ogg', 25, 1)
 		else
 			playsound(loc, prob(50) == 1 ? 'sound/voice/alien_death.ogg' : 'sound/voice/alien_death2.ogg', 25, 1)
 		var/area/A = get_area(src)
@@ -132,10 +134,13 @@
 		icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
 	else
 		icon_path = 'icons/mob/xenos/xenomorph_48x48.dmi'
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		icon_path = 'icons/mob/xenos/xenonid_48x48.dmi'
 	switch(caste.caste_type)
 		if(XENO_CASTE_RUNNER)
-			icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
-			gib_state = "gibbed-a-corpse-runner"
+			if(!HAS_TRAIT(src, TRAIT_XENONID))
+				icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
+				gib_state = "gibbed-a-corpse-runner"
 		if(XENO_CASTE_BOILER)
 			var/mob/living/carbon/xenomorph/boiler/src_boiler = src
 			visible_message(SPAN_DANGER("[src] begins to bulge grotesquely, and explodes in a cloud of corrosive gas!"))
@@ -153,6 +158,8 @@
 
 /mob/living/carbon/xenomorph/gib_animation()
 	var/to_flick = "gibbed-a"
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		to_flick = "gibbed-xenonid-a"
 	var/icon_path
 	if(mob_size >= MOB_SIZE_BIG)
 		icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
@@ -162,6 +169,8 @@
 		if(XENO_CASTE_RUNNER)
 			icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
 			to_flick = "gibbed-a-runner"
+			if(HAS_TRAIT(src, TRAIT_XENONID))
+				to_flick = "gibbed-a-runner-xenonid"
 		if(XENO_CASTE_BOILER)
 			to_flick = "gibbed-a-boiler"
 		if(XENO_CASTE_LARVA, XENO_CASTE_PREDALIEN_LARVA)
@@ -170,7 +179,10 @@
 	new /obj/effect/overlay/temp/gib_animation/xeno(loc, src, to_flick, icon_path)
 
 /mob/living/carbon/xenomorph/spawn_gibs()
-	xgibs(get_turf(src))
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		gibs(get_turf(src))
+	else
+		xgibs(get_turf(src))
 
 /mob/living/carbon/xenomorph/dust_animation()
 	new /obj/effect/overlay/temp/dust_animation(loc, src, "dust-a")

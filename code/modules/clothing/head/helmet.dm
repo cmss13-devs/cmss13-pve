@@ -428,6 +428,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	///Designates a visor type that should start down when initialized
 	var/start_down_visor_type
 
+	var/has_camera = TRUE
+
 /obj/item/clothing/head/helmet/marine/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT))
 	. = ..()
 	if(!(flags_atom & NO_NAME_OVERRIDE))
@@ -444,8 +446,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	pockets.max_w_class = storage_max_w_class
 	pockets.bypass_w_limit = GLOB.allowed_helmet_items
 	pockets.max_storage_space = storage_max_storage_space
-
-	camera = new /obj/structure/machinery/camera/overwatch(src)
+	if(has_camera)
+		camera = new /obj/structure/machinery/camera/overwatch(src)
 
 	for(var/obj/visor as anything in built_in_visors)
 		visor.forceMove(src)
@@ -858,6 +860,16 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "old_helmet"
 	flags_atom = NO_SNOW_TYPE
 	specialty = "M4 pattern marine"
+	built_in_visors = list()
+	start_down_visor_type = null
+	has_camera = FALSE
+
+/obj/item/clothing/head/helmet/marine/old/sergeant
+	name = "\improper M4C pattern helmet"
+	desc = "Older model of USCMC-issued helmet. This one carries a camera connected to tactical network."
+	icon_state = "old_helmet_sl"
+	specialty = "M4C pattern marine"
+	has_camera = TRUE
 
 /obj/item/clothing/head/helmet/marine/rto
 	name = "\improper M12 pattern helmet"

@@ -5,6 +5,7 @@
 	var/predalien_sound
 	var/larva_sound
 	var/defiler_sound
+	var/xenonid_sound
 
 /datum/emote/living/carbon/xeno/get_sound(mob/living/user)
 	. = ..()
@@ -17,6 +18,9 @@
 
 	if(isdefiler(user) && defiler_sound)
 		. = defiler_sound
+
+	if(HAS_TRAIT(user, TRAIT_XENONID))
+		. = xenonid_sound
 
 /datum/emote/living/carbon/xeno/growl
 	key = "growl"
@@ -31,6 +35,7 @@
 	message = "hisses."
 	sound = "alien_hiss"
 	predalien_sound = 'sound/voice/predalien_hiss.ogg'
+	xenonid_sound = "defilerroar"
 	emote_type = EMOTE_AUDIBLE|EMOTE_VISIBLE
 
 /datum/emote/living/carbon/xeno/needshelp

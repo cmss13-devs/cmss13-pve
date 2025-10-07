@@ -628,3 +628,13 @@
 	default_ammo = /datum/ammo/bullet/rifle/isr
 	max_rounds = 80
 	gun_type = /obj/item/weapon/gun/rifle/isr
+
+/obj/item/ammo_magazine/rifle/type51
+	name = "\improper Type 51 magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the Type 51 rifle, holding 48 rounds."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "type51"
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	max_rounds = 48
+	gun_type = /obj/item/weapon/gun/rifle/type51

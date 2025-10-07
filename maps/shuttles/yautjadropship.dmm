@@ -1,0 +1,291 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/shuttle/engine/heater,
+/obj/item/device/flashlight/slime,
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 1;
+	icon_state = "phoronrwindow"
+	},
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"b" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/item/tool/surgery/FixOVein/predatorFixOVein,
+/obj/item/tool/surgery/bonegel/predatorbonegel,
+/obj/item/tool/surgery/bonesetter/predatorbonesetter,
+/obj/item/tool/surgery/surgicaldrill/predatorsurgicaldrill,
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"j" = (
+/turf/template_noop,
+/area/template_noop)
+"k" = (
+/obj/structure/closet/crate{
+	color = "#6b675e"
+	},
+/obj/item/storage/backpack/yautja,
+/obj/item/storage/backpack/yautja,
+/obj/item/reagent_container/food/snacks/flatbread,
+/obj/item/reagent_container/food/snacks/flatbread,
+/obj/item/reagent_container/food/snacks/flatbread,
+/obj/item/reagent_container/food/snacks/flatbread,
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"p" = (
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"s" = (
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"t" = (
+/obj/structure/window/framed/colony/reinforced/hull{
+	color = "#aba9a9"
+	},
+/turf/open/space/basic,
+/area/shuttle/ds_yautja)
+"u" = (
+/obj/structure/window/framed/colony/reinforced/hull{
+	color = "#aba9a9"
+	},
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"v" = (
+/obj/structure/machinery/door/airlock/yautja{
+	dir = 2
+	},
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"y" = (
+/obj/structure/bed/chair/hunter{
+	dir = 1
+	},
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"z" = (
+/obj/structure/machinery/prop/almayer/CICmap/yautja,
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"A" = (
+/obj/structure/bed/chair/hunter{
+	dir = 8
+	},
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"B" = (
+/obj/structure/surface/table/reinforced/prison{
+	color = "#6b675e"
+	},
+/obj/structure/machinery/computer/shuttle/dropship/flight{
+	icon = 'icons/obj/items/hunter/pred_gear.dmi';
+	icon_state = "bracer";
+	name = "weird control panel"
+	},
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"D" = (
+/obj/docking_port/mobile/marine_dropship/yautja,
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"F" = (
+/obj/structure/shuttle/engine/propulsion{
+	color = "#aba9a9"
+	},
+/turf/template_noop,
+/area/shuttle/ds_yautja)
+"J" = (
+/obj/structure/machinery/door/airlock/yautja,
+/turf/open/shuttle/predship,
+/area/shuttle/ds_yautja)
+"M" = (
+/obj/structure/closet/crate{
+	color = "#6b675e"
+	},
+/obj/item/storage/backpack/yautja,
+/obj/item/storage/backpack/yautja,
+/obj/item/reagent_container/food/snacks/flatbread,
+/obj/item/reagent_container/food/snacks/flatbread,
+/obj/item/reagent_container/food/snacks/flatbread,
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"R" = (
+/obj/structure/machinery/optable,
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+"W" = (
+/turf/closed/wall/huntership,
+/area/shuttle/ds_yautja)
+"Z" = (
+/obj/structure/bed/chair/hunter{
+	dir = 4
+	},
+/turf/open/floor/corsat/squareswood/north,
+/area/shuttle/ds_yautja)
+
+(1,1,1) = {"
+W
+W
+W
+W
+W
+W
+u
+u
+W
+F
+j
+j
+j
+"}
+(2,1,1) = {"
+j
+j
+W
+W
+W
+W
+R
+p
+W
+W
+W
+W
+j
+"}
+(3,1,1) = {"
+j
+j
+j
+j
+j
+W
+b
+p
+a
+W
+p
+W
+W
+"}
+(4,1,1) = {"
+j
+j
+j
+W
+W
+W
+W
+J
+W
+W
+p
+p
+W
+"}
+(5,1,1) = {"
+j
+j
+t
+t
+p
+Z
+Z
+s
+Z
+Z
+p
+s
+v
+"}
+(6,1,1) = {"
+j
+j
+t
+B
+y
+s
+D
+z
+s
+s
+s
+s
+W
+"}
+(7,1,1) = {"
+j
+j
+t
+t
+p
+A
+A
+s
+A
+A
+p
+s
+v
+"}
+(8,1,1) = {"
+j
+j
+j
+W
+W
+W
+W
+J
+W
+W
+p
+p
+W
+"}
+(9,1,1) = {"
+j
+j
+j
+j
+j
+W
+k
+p
+a
+W
+p
+W
+W
+"}
+(10,1,1) = {"
+j
+j
+W
+W
+W
+W
+M
+p
+W
+W
+W
+W
+j
+"}
+(11,1,1) = {"
+W
+W
+W
+W
+W
+W
+u
+u
+W
+F
+j
+j
+j
+"}

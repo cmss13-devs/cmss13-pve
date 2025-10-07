@@ -1085,6 +1085,8 @@
 		var/datum/reagent/D = GLOB.chemical_reagents_list[special_blood]
 		if(D)
 			color_override = D.color
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		color_override = "#8B0000"
 	new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(loc, splatter_dir, duration, color_override)
 
 /mob/living/carbon/xenomorph/Collide(atom/movable/movable_atom)

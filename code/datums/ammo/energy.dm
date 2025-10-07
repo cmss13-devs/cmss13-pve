@@ -268,7 +268,7 @@
 	max_range = 20
 
 	var/stun_range = 4 // Big
-	var/stun_time = 6
+	var/stun_time = 60
 
 /datum/ammo/energy/yautja/caster/sphere/stun/on_hit_mob(mob/M, obj/projectile/P)
 	do_area_stun(P)
@@ -288,12 +288,17 @@
 		var/stun_time = src.stun_time
 		log_attack("[key_name(M)] was stunned by a plasma immobilizer from [key_name(P.firer)] at [get_area(P)]")
 		if (isyautja(M))
-			stun_time -= 2
+			continue
 		if(ispredalien(M))
 			continue
-		to_chat(M, SPAN_DANGER("A powerful electric shock ripples through your body, freezing you in place!"))
+		to_chat(M, SPAN_DANGER("A powerful electric shock ripples through your body, overwhelming your senses!"))
 		M.apply_effect(stun_time, STUN)
 		M.apply_effect(stun_time, WEAKEN)
+		M.apply_effect(stun_time, PARALYZE)
+		var/obj/item/clothing/suit/suit = M.get_item_by_slot(WEAR_JACKET)
+		if(istype(suit, /obj/item/clothing/suit/marine))
+			var/obj/item/clothing/suit/marine/armour = suit
+			addtimer(CALLBACK(armour, TYPE_PROC_REF(/atom, turn_light), null, FALSE), 1 SECONDS)
 	FOR_DVIEW_END
 
 /datum/ammo/energy/yautja/rifle/bolt

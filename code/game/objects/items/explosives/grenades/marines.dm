@@ -197,6 +197,18 @@
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
 
+/obj/item/explosive/grenade/high_explosive/old
+	name = "\improper M74 20mm Grenade"
+	desc = "This grenade must be launched with a grenade launcher, and detonates once it reaches its destination."
+	icon_state = "grenade_m74_airburst_f"
+	item_state = "grenade_m74_airburst_f_active"
+	caliber = "20mm"
+	explosion_power = 75
+	shrapnel_count = 16
+	det_time = 0 // Unused, because we don't use prime.
+	hand_throwable = FALSE
+	dual_purpose = FALSE
+
 /*
 //================================================
 				Airburst Grenades
@@ -204,12 +216,12 @@
 */
 // M74 are the launcher-only variant. Flag with hand_throwable = FALSE.
 /obj/item/explosive/grenade/high_explosive/airburst
-	name = "\improper M74 AGM-F 40mm Grenade"
-	desc = "M74 - Airburst Grenade Munition - Fragmentation. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination. It disperses jagged shrapnel in a cone in front of itself, tearing through sinews and armor alike. Dispersion pattern is optimized against large target. Suffers from overpenetration on a direct hit."
+	name = "\improper M74 AGM-F 20mm Grenade"
+	desc = "M74 - Airburst Grenade Munition - Fragmentation. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination.."
 	icon_state = "grenade_m74_airburst_f"
 	item_state = "grenade_m74_airburst_f_active"
 	caliber = "40x53mm"
-	explosion_power = 0
+	explosion_power = 30
 	explosion_falloff = 25
 	shrapnel_count = 16
 	det_time = 0 // Unused, because we don't use prime.

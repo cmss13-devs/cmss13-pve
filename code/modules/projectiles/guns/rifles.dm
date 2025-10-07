@@ -561,7 +561,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
 /obj/item/weapon/gun/rifle/m20a/old
-	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 30mm grenade launcher and an integrated flashlight."
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 20mm grenade launcher and an integrated flashlight."
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
 	start_automatic = TRUE
 
@@ -2179,3 +2179,32 @@
 
 /obj/item/weapon/gun/rifle/isr/modded
 	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel, /obj/item/attachable/flashlight, /obj/item/attachable/reddot)
+
+/obj/item/weapon/gun/rifle/type51
+	name = "\improper Type 51 pulse rifle"
+	desc = "An aging UPP caseless pulse rifle, lacking many features of contemporary alternatives. Chambered in 10x27mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "type51"
+	item_state = "type51"
+	fire_sound = 'sound/weapons/gun_type71.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/type51
+	attachable_allowed = list()
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/type51/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 22, "under_x" = 21, "under_y" = 14, "stock_x" = 22, "stock_y" = 14)
+
+/obj/item/weapon/gun/rifle/type51/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4

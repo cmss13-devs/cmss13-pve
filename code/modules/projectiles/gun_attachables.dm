@@ -3679,7 +3679,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
 	icon_state = "m20a"
 	attach_icon = "m20a"
-	caliber = "40x53mm"
+	caliber = "20mm"
 	current_rounds = 0
 	max_rounds = 3
 	max_range = 14

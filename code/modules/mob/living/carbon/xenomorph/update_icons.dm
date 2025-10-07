@@ -346,6 +346,9 @@
 	if(!wound_icon_holder)
 		return
 
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		return
+
 	var/health_threshold
 	health_threshold = max(ceil((health * 4) / (maxHealth)), 0) //From 0 to 4, in 25% chunks
 	if(health > HEALTH_THRESHOLD_DEAD)
