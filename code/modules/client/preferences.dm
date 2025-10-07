@@ -335,7 +335,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	if(owner.check_whitelist_status(WHITELIST_COMMANDER))
 		dat += "<a[current_menu == MENU_CO ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_CO]\"><b>Commanding Officer</b></a> - "
 	dat += "<a[current_menu == MENU_SYNTHETIC ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_SYNTHETIC]\"><b>Synthetic</b></a> - "
-	if(owner.check_whitelist_status(WHITELIST_PREDATOR))
+	if(CLIENT_IS_STAFF(user.client))
 		dat += "<a[current_menu == MENU_YAUTJA ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_YAUTJA]\"><b>Yautja</b></a> - "
 	if(owner.check_whitelist_status(WHITELIST_MENTOR))
 		dat += "<a[current_menu == MENU_MENTOR ? " class='linkOff'" : ""] href=\"byond://?src=\ref[user];preference=change_menu;menu=[MENU_MENTOR]\"><b>Mentor</b></a> - "
