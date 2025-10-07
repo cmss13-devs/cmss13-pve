@@ -54,7 +54,8 @@
 /area/shuttle/ds_yautja)
 "v" = (
 /obj/structure/machinery/door/airlock/yautja{
-	dir = 2
+	dir = 2;
+	id = "aft_door"
 	},
 /turf/open/shuttle/predship,
 /area/shuttle/ds_yautja)
