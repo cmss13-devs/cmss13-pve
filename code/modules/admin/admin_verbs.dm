@@ -94,6 +94,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/client/proc/toggle_barricade_creation, // Stops cades from being built
 	/client/proc/game_master_toggle_light,
 	/client/proc/game_master_edit_screens,
+	/client/proc/make_filthy,
 	))
 
 

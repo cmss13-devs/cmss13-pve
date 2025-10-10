@@ -1132,7 +1132,7 @@
 	reporting_id = "mutated"
 	hivenumber = XENO_HIVE_MUTATED
 	prefix = "Mutated "
-	color = "#6abd99"
+	color = null
 	ui_color = "#6abd99"
 
 	hive_inherant_traits = list(TRAIT_XENONID, TRAIT_NO_COLOR)
