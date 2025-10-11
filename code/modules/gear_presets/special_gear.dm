@@ -1096,7 +1096,6 @@
 	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
 	idtype = /obj/item/card/id/dogtag
-	ai_disallow_looting = TRUE
 
 /datum/equipment_preset/upp/synth/security/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species("Terminator")
@@ -1106,6 +1105,8 @@
 	new_human.change_real_name(new_human, "Koshchei #[rand(250)]")
 	new_human.flavor_text = "It appears to be a Union-made synthetic of an ancient model, lacking synthflesh and human features in general. Looks like a metal skeleton, with most of the artificial organs protected by its ribcage."
 	new_human.flavor_texts = list("general" = new_human.flavor_text)
+	new_human.undershirt = null
+	new_human.underwear = null
 
 /datum/equipment_preset/upp/synth/security/load_gear(mob/living/carbon/human/new_human)
 
@@ -1175,6 +1176,7 @@
 
 /datum/equipment_preset/upp/synth/security/riot
 	name = "UPP Synthetic Secuirty (Riot)"
+	ai_disallow_looting = TRUE
 
 /datum/equipment_preset/upp/synth/security/riot/load_gear(mob/living/carbon/human/new_human)
 
@@ -1203,7 +1205,6 @@
 
 	//face
 	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
 
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
@@ -1211,7 +1212,7 @@
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-	var/possible_hat = list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka)
+	var/possible_hat = pick(list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka))
 	if(prob(50))
 		new_human.equip_to_slot_or_del(new possible_hat, WEAR_HEAD)
 	//pockets
@@ -1231,7 +1232,7 @@
 /datum/equipment_preset/upp/synth/security/sniper
 	name = "UPP Synthetic Secuirty (Sniper)"
 
-/datum/equipment_preset/upp/synth/security/shotgun/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/upp/synth/security/sniper/load_gear(mob/living/carbon/human/new_human)
 	var/possible_hat = list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka)
 	new_human.equip_to_slot_or_del(new possible_hat, WEAR_HEAD)
 
