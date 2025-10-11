@@ -1109,7 +1109,8 @@
 	new_human.underwear = null
 
 /datum/equipment_preset/upp/synth/security/load_gear(mob/living/carbon/human/new_human)
-
+	new_human.undershirt = null
+	new_human.underwear = null
 	//face
 	//head
 	var/helmetvariety = rand(1,2)
@@ -1149,7 +1150,8 @@
 	name = "UPP Synthetic Secuirty (Shotgun)"
 
 /datum/equipment_preset/upp/synth/security/shotgun/load_gear(mob/living/carbon/human/new_human)
-
+	new_human.undershirt = null
+	new_human.underwear = null
 	//face
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
@@ -1179,7 +1181,8 @@
 	ai_disallow_looting = TRUE
 
 /datum/equipment_preset/upp/synth/security/riot/load_gear(mob/living/carbon/human/new_human)
-
+	new_human.undershirt = null
+	new_human.underwear = null
 	//face
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
@@ -1202,7 +1205,8 @@
 	name = "UPP Synthetic Secuirty (Unarmored)"
 
 /datum/equipment_preset/upp/synth/security/unarmored/load_gear(mob/living/carbon/human/new_human)
-
+	new_human.undershirt = null
+	new_human.underwear = null
 	//face
 	//head
 
@@ -1233,9 +1237,10 @@
 	name = "UPP Synthetic Secuirty (Sniper)"
 
 /datum/equipment_preset/upp/synth/security/sniper/load_gear(mob/living/carbon/human/new_human)
-	var/possible_hat = list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka)
+	var/possible_hat = pick(list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka))
 	new_human.equip_to_slot_or_del(new possible_hat, WEAR_HEAD)
-
+	new_human.undershirt = null
+	new_human.underwear = null
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
 	//jacket
