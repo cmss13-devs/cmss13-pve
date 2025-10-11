@@ -315,7 +315,8 @@
 
 /obj/effect/alien/weeds/update_icon()
 	overlays.Cut()
-	icon = 'icons/mob/xenonids/weeds.dmi'
+	if(istype(linked_hive, /datum/hive_status/mutated))
+		icon = 'icons/mob/xenonids/weeds.dmi'
 	var/my_dir = 0
 	for(var/check_dir in GLOB.cardinals)
 		var/turf/check = get_step(src, check_dir)

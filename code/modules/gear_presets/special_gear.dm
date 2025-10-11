@@ -1085,3 +1085,172 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/prop, WEAR_L_STORE)
 	if(prob(25))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/threehole, WEAR_FACE)
+
+/datum/equipment_preset/upp/synth/security
+	name = "UPP Synthetic Secuirty (SMG)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	languages = ALL_SYNTH_LANGUAGES_UPP
+	skills = /datum/skills/synthetic
+	assignment = "Max Security Guard"
+	rank = "Security Synthetic"
+	paygrades = list(PAY_SHORT_SYN = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_SECURITY, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT, ACCESS_UPP_SQUAD_ONE, ACCESS_UPP_SQUAD_TWO, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_SENIOR_LEAD, ACCESS_UPP_MEDPREP, ACCESS_UPP_TLPREP)
+	idtype = /obj/item/card/id/dogtag
+	ai_disallow_looting = TRUE
+
+/datum/equipment_preset/upp/synth/security/load_race(mob/living/carbon/human/new_human)
+	new_human.set_species("Terminator")
+
+/datum/equipment_preset/upp/synth/security/load_name(mob/living/carbon/human/new_human, randomise)
+
+	new_human.change_real_name(new_human, "Koshchei #[rand(250)]")
+	new_human.flavor_text = "It appears to be a Union-made synthetic of an ancient model, lacking synthflesh and human features in general. Looks like a metal skeleton, with most of the artificial organs protected by its ribcage."
+	new_human.flavor_texts = list("general" = new_human.flavor_text)
+
+/datum/equipment_preset/upp/synth/security/load_gear(mob/living/carbon/human/new_human)
+
+	//face
+	//head
+	var/helmetvariety = rand(1,2)
+	switch(helmetvariety)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/old, WEAR_HEAD)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/pps43, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/pps43, WEAR_IN_BELT)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/mp5, WEAR_J_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5, WEAR_IN_BELT)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/mp5, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_R_STORE)
+
+/datum/equipment_preset/upp/synth/security/shotgun
+	name = "UPP Synthetic Secuirty (Shotgun)"
+
+/datum/equipment_preset/upp/synth/security/shotgun/load_gear(mob/living/carbon/human/new_human)
+
+	//face
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
+
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/standard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/shotgun/pump/type23/riot, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag, WEAR_IN_BELT)
+
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_R_STORE)
+
+/datum/equipment_preset/upp/synth/security/riot
+	name = "UPP Synthetic Secuirty (Riot)"
+
+/datum/equipment_preset/upp/synth/security/riot/load_gear(mob/living/carbon/human/new_human)
+
+	//face
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
+
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/standard, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot/metal, WEAR_L_HAND)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton/on, WEAR_R_HAND)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_R_STORE)
+
+
+/datum/equipment_preset/upp/synth/security/unarmored
+	name = "UPP Synthetic Secuirty (Unarmored)"
+
+/datum/equipment_preset/upp/synth/security/unarmored/load_gear(mob/living/carbon/human/new_human)
+
+	//face
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy, WEAR_HEAD)
+
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	//jacket
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	var/possible_hat = list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new possible_hat, WEAR_HEAD)
+	//pockets
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/np92, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92, WEAR_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/np92, WEAR_R_STORE)
+	else if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/upp, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/upp, WEAR_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/upp, WEAR_R_STORE)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_L_STORE)
+		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/t73, WEAR_R_STORE)
+
+/datum/equipment_preset/upp/synth/security/sniper
+	name = "UPP Synthetic Secuirty (Sniper)"
+
+/datum/equipment_preset/upp/synth/security/shotgun/load_gear(mob/living/carbon/human/new_human)
+	var/possible_hat = list(/obj/item/clothing/head/uppcap, /obj/item/clothing/head/uppcap/beret, /obj/item/clothing/head/uppcap/boonie, /obj/item/clothing/head/uppcap/ushanka)
+	new_human.equip_to_slot_or_del(new possible_hat, WEAR_HEAD)
+
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP/boiler, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/light/standard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/boltaction, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/boltaction, WEAR_IN_BELT)
+
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs/zip, WEAR_R_STORE)

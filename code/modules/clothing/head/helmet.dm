@@ -862,7 +862,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	specialty = "M4 pattern marine"
 	built_in_visors = list()
 	start_down_visor_type = null
-	has_camera = FALSE
+	has_camera = TRUE
 
 /obj/item/clothing/head/helmet/marine/old/sergeant
 	name = "\improper M4C pattern helmet"

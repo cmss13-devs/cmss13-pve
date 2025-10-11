@@ -193,6 +193,7 @@
 	var/reinforced = FALSE
 	var/datum/weakref/source_mob
 	var/randomize = TRUE
+	var/can_reinforce = TRUE
 
 /obj/structure/reagent_dispensers/fueltank/Initialize()
 	. = ..()
@@ -265,7 +266,7 @@
 
 		update_icon()
 
-	else if(istype(W,/obj/item/stack/sheet/plasteel))
+	else if(istype(W,/obj/item/stack/sheet/plasteel) && can_reinforce)
 		var/obj/item/stack/sheet/plasteel/M = W
 		if(M.get_amount() < STACK_10)
 			to_chat(user, SPAN_WARNING("You don't have enough of [M] to reinforce [src]."))
@@ -414,7 +415,6 @@
 	chemical = "oxygen"
 	randomize = FALSE
 
-
 /obj/structure/reagent_dispensers/fueltank/custom
 	name = "reagent tank"
 	desc = "A reagent tank, typically used to store large quantities of chemicals."
@@ -508,13 +508,13 @@
 	desc = "Some kind of reagent tank."
 	icon_state = "methanetank"
 	chemical = "pacid"
-	var/reagent_amount = 15
+	var/smoke_reagent_amount = 15
 
 /obj/structure/reagent_dispensers/fueltank/smoke/explode(force)
 	var/location = get_turf(src)
 	var/datum/effect_system/smoke_spread/chem/S = new /datum/effect_system/smoke_spread/chem
 	S.attach(location)
-	S.set_up(reagents, reagent_amount, 0, location)
+	S.set_up(reagents, smoke_reagent_amount, 0, location)
 	playsound(location, 'sound/effects/smoke.ogg', 25, 1)
 	INVOKE_ASYNC(S, TYPE_PROC_REF(/datum/effect_system/smoke_spread/chem, start))
 	reagents.clear_reagents()
@@ -523,3 +523,12 @@
 
 	exploding = FALSE
 	update_icon()
+
+/obj/structure/reagent_dispensers/fueltank/smoke/lithiumhydride
+	name = "lithium-hydride storage tank"
+	desc = "Heavy-duty storage tank, containing highly reactive fusion reactor fuel."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "lithiumhydridetank"
+	chemical = "lithiumhydride"
+	randomize = FALSE
+	can_reinforce = FALSE

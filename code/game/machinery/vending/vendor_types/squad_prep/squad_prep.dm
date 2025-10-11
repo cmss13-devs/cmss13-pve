@@ -323,6 +323,7 @@
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("LRRP Bedroll", round(scale * 15), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Marine Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
+		list("M5 Bayonet", round(scale * 15), /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
 		)
 
 

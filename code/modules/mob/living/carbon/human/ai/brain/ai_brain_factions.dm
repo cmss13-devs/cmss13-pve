@@ -11,14 +11,19 @@
 	VAR_PROTECTED/list/reload_lines = list()
 	VAR_PROTECTED/list/reload_internal_mag_lines = list()
 	VAR_PROTECTED/list/need_healing_lines = list()
+	VAR_PROTECTED/list/enter_combat_lines_synth = list()
+
 
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
 
 /// Given an AI brain, apply all the faction's data to the AI.
 /datum/human_ai_faction/proc/apply_faction_data(datum/human_ai_brain/brain)
-	if(length(enter_combat_lines))
+	if(length(enter_combat_lines) && !issynth(brain.tied_human))
 		brain.enter_combat_lines = enter_combat_lines
+
+	if(length(enter_combat_lines_synth) && issynth(brain.tied_human))
+		brain.enter_combat_lines = enter_combat_lines_synth
 
 	if(length(exit_combat_lines))
 		brain.exit_combat_lines = exit_combat_lines
@@ -1341,6 +1346,16 @@
 		"Uraaaa!",
 		"URAAAA!",
 	)
+	enter_combat_lines_synth = list(
+		"Contact.",
+		"Engaging.",
+		"Contact, engaging.",
+		"Enemy spotted.",
+		"Terminating.",
+		"Liquidating.",
+		"Open fire.",
+	)
+
 	exit_combat_lines = list(
 		"CEASE FIRE!",
 		"Cease fire!",

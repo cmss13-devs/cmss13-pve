@@ -1139,3 +1139,23 @@
 /datum/reagent/pheromones/reaction_obj(obj/O, volume)
 	ADD_TRAIT(O, TRAIT_PHEROMONES_COVERED, TRAIT_SOURCE_ADMIN)
 	O.color = COLOR_PURPLE
+
+/datum/reagent/lithiumhydride
+	name = "Lithium-hydride"
+	id = "lithiumhydride"
+	description = "A common source of fuel for military-grade ship fusion plants. Normally stored in fine crystalline powder form. Extremely dense and reactive, handle with care."
+	reagent_state = SOLID
+	color = "#B0E0E6" // rgb: 103, 57, 16
+	chemfiresupp = TRUE
+	burncolor = "#6495ED"
+	explosive = TRUE
+	power = 4
+	falloff_modifier = 1
+	chemclass = CHEM_CLASS_UNCOMMON
+	properties = list(PROPERTY_FUELING = 7, PROPERTY_OXIDIZING = 5, PROPERTY_VISCOUS = 4, PROPERTY_CORROSIVE = 2)
+
+/datum/reagent/lithiumhydride/on_mob_life(mob/living/M) // Not a good idea, instantly messes you up from the inside out.
+	. = ..()
+	M.adjust_fire_stacks(max(M.fire_stacks, 15))
+	M.IgniteMob(TRUE)
+	to_chat(M, SPAN_DANGER("It burns! It burns worse than you could ever have imagined!"))

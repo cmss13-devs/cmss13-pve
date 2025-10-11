@@ -205,7 +205,6 @@
 	caliber = "20mm"
 	explosion_power = 75
 	shrapnel_count = 16
-	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 	dual_purpose = FALSE
 
