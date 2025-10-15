@@ -168,12 +168,12 @@
 /// Tells the AI to unwield *something*, prioritizing melee
 /datum/human_ai_brain/proc/unholster_any_weapon()
 	if(unholster_melee())
-		tied_human.a_intent_change(INTENT_GRAB)
+		tied_human.a_intent_change(INTENT_HARM)
 		return TRUE
 	if(primary_weapon)
 		unholster_primary()
 		ensure_primary_hand(primary_weapon)
 		wield_primary()
-		tied_human.a_intent_change(INTENT_GRAB)
+		tied_human.a_intent_change(INTENT_HARM)
 		return TRUE
 	// insert any viable weapon slot macros in here
