@@ -117,6 +117,12 @@
 	storage_slots = 3
 	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
 
+/obj/item/clothing/suit/storage/marine/veteran/pmc/corporate
+	name = "\improper M1 pattern PMC leader armor"
+	desc = "A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer."
+	icon_state = "officer_armor"
+	item_state_slots = list(WEAR_JACKET = "officer_armor")
+
 /obj/item/clothing/suit/storage/marine/veteran/pmc/light/synth/Initialize()
 	flags_atom |= NO_NAME_OVERRIDE
 	flags_marine_armor |= SYNTH_ALLOWED
@@ -127,6 +133,7 @@
 	desc = "A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun."
 	icon_state = "heavy_armor"
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
@@ -372,6 +379,25 @@
 	. = ..()
 	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
 	src.attach_accessory(null, webbing, TRUE)
+
+/obj/item/clothing/suit/marine/smartgunner/upp/canc
+	name = "\improper Type 12 CANC harness"
+	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
+	icon_state = "canc"
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	specialty = "\improper Type 12 CANC harness"
 
 /obj/item/clothing/suit/marine/faction/UPP/jacket
 	name = "\improper UH4 camouflaged jacket"
@@ -692,43 +718,6 @@
 	item_state_slots = list(WEAR_JACKET = "pvlight_2")
 	storage_slots = 2
 
-//================//UNITED AMERICAS ALLIED COMMAND\\=====================\\
-//=======================================================================\\
-
-/obj/item/clothing/suit/storage/marine/uaac/tis/sa
-	name = "\improper M3 pattern UAAC-TIS Special Agent Armor"
-	desc = "A modified luxury armor, originally meant for a USCM Provost Marshall, modified to use the colors and insignia of the TIS. The Three Eyes is technically able to requisition any equipment or personnel to fulfill its mission and often uses this privilege to outfit their agents with high-quality gear from other UA military forces."
-	icon_state = "tis"
-	item_state_slots = list(WEAR_JACKET = "tis")
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_LOW
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
-	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_LIGHT
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-	allowed = list(
-		/obj/item/weapon/gun,
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/tool/lighter,
-		/obj/item/weapon/baton,
-		/obj/item/restraint/handcuffs,
-		/obj/item/explosive/grenade,
-		/obj/item/device/binoculars,
-		/obj/item/attachable/bayonet,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/hailer,
-		/obj/item/storage/belt/gun,
-		/obj/item/weapon/sword/ceremonial,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
-
 //================//UNITED AMERICAS RIOT CONTROL\\=====================\\
 //=======================================================================\\
 
@@ -767,12 +756,13 @@
 //================//=ROYAL MARINES=\\====================================\\
 //=======================================================================\\
 
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine
-	name = "kestrel armoured vest"
-	desc = "A customizable personal armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
-	icon_state = "rmc_light"
-	item_state = "rmc_light"
+/obj/item/clothing/suit/marine/veteran/royal_marine
+	name = "\improper Kestrel armoured cuirass"
+	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
+	icon_state = "rmc_standard"
+	item_state = "rmc_standard"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	allowed = list(
 		/obj/item/weapon/gun,
 		/obj/item/tank/emergency_oxygen,
@@ -788,43 +778,36 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
+		/obj/item/storage/belt/marine/rmc,
+		/obj/item/storage/belt/medical/rmc,
+		/obj/item/storage/belt/gun/l905,
+		/obj/item/storage/belt/gun/mortarbelt/rmc,
+		/obj/item/storage/backpack/general_belt/rmc,
+		/obj/item/storage/belt/gun/flaregun,
 	)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light //RMC Rifleman Armor
-	icon_state = "rmc_light"
-	item_state = "rmc_light"
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+/obj/item/clothing/suit/marine/veteran/royal_marine/heavy
+//Just the normal armor with attachies
 
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader //RMC TL & LT Armor
-	name = "kestrel armoured carry vest"
-	icon_state = "rmc_light_padded"
-	item_state = "rmc_light_padded"
-	storage_slots = 7
+/obj/item/clothing/suit/marine/veteran/royal_marine/heavy/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/twepads/shoulders = new()
+	src.attach_accessory(null, shoulders, TRUE)
+	var/obj/item/clothing/accessory/twepads/legs/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
 
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
-	name = "kestrel armoured smartgun harness"
+/obj/item/clothing/suit/marine/veteran/royal_marine/smartgun //Smartgun Spec Armor
+	name = "\improper Kestrel GPMG harness"
+	desc = "Standard RMC issue Kestrel Personal Armor designed by Weyland-Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie. This version features the support armature for the L58A3 weapons system, which significantly limits what additional storage equipment can be clipped to the armor. Advanced composite ballistic armor of the latest generation, integral biomonitoring system, and brackets for a load carrying system as well as the TNR Shoulder Lamp."
 	icon_state = "rmc_smartgun"
 	item_state = "rmc_smartgun"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
-
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman //Pointman Spec Armor
-	name = "kestrel pointman armour"
-	desc = "A heavier version of the armor system used by the Three World Empire's Royal Marines Commandos. Designers from a Weyland Yutani subsidary, Lindenthal-Ehrenfeld Militärindustrie, iterated on the USCMC's M3 pattern personal armor in their Tokonigara lab to create an armor systemed to suit the unique needs of the Three World Empire's smaller but better equipped Royal Marines."
-	icon_state = "rmc_pointman"
-	item_state = "rmc_pointman"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
-	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	storage_slots = 7
-	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
-	movement_compensation = SLOWDOWN_ARMOR_MEDIUM
+	allowed = list(
+		/obj/item/weapon/gun/smartgun/rmc,
+	)
 
 /atom/movable/marine_light
 	light_system = DIRECTIONAL_LIGHT
@@ -857,3 +840,58 @@
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+
+//Mercs
+/obj/item/clothing/suit/storage/marine/veteran/merc
+	name = "DP TAC-PACK Gen II armored vest"
+	desc = "A decent armored vest used by better funded insurgencies and mercenary groups, able to take some small arm hits before going down. Made by Davis Proprietary."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "merc_medium"
+	item_state = "merc_medium"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
+
+/obj/item/clothing/suit/storage/marine/veteran/merc/light
+	name = "DP TAC-PACK Gen I-L armored vest"
+	desc = "A slightly less armored vest which prioritises freedom of movement and mobility over actual armour. Made by Davis Proprietary."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "merc_light"
+	item_state = "merc_light"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	flags_armor_protection = BODY_FLAG_CHEST
+
+/obj/item/clothing/suit/storage/marine/veteran/merc/heavy
+	name = "DP TAC-PACK Gen IV-H armored vest"
+	desc = "A much heavier armored vest built off the other two previous versions under GEN II and GEN I, sporting much heavier armor plates and better coverage of parts, allowing users to resist a lot of damage before going down. Made by Davis Proprietary."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "merc_heavy"
+	item_state = "merc_heavy"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	flags_inventory = BLOCK_KNOCKDOWN
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
+	slowdown = SLOWDOWN_ARMOR_HEAVY
+	time_to_unequip = 20
+	time_to_equip = 20
+
+

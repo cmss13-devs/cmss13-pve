@@ -40,6 +40,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/bluecollar/brazilian
+	name = "Brazilian Civilian Colonist, Blue-Collar"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 
 /datum/equipment_preset/colonist/bluecollar/japanese
 	name = "TWE Civilian Colonist, Blue-Collar"
@@ -77,6 +82,11 @@
 	languages = list(LANGUAGE_SPANISH)
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 
+/datum/equipment_preset/colonist/miner/brazilian
+	name = "Brazilian Civilian Colonist, Blue-Collar (Miner)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/miner/japanese
 	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_JAPANESE)
@@ -111,6 +121,11 @@
 	name = "LatAm Colonist, Blue-Collar (Construction)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/construction/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Construction)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/construction/japanese
 	name = "TWE Colonist, Blue-Collar (Construction)"
@@ -162,6 +177,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/roughneck/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Roughneck)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/roughneck/japanese
 	name = "TWE Colonist, Blue-Collar (Roughneck)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -197,6 +217,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/cook/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Cook)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/cook/japanese
 	name = "TWE Colonist, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -230,6 +255,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/chef/brazilian
+	name = "Brazilian Colonist, Blue-Collar (Chef)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/chef/japanese
 	name = "TWE Colonist, Blue-Collar (Chef)"
 	ethnicity = JAPANESE_ETHNICITY
@@ -262,6 +292,11 @@
 	name = "LatAm Colonist, Priest"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/priest/brazilian
+	name = "Brazilian Colonist, Priest"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/priest/japanese
 	name = "TWE Colonist, Priest"
@@ -305,6 +340,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/whitecollar/brazilian
+	name = "Brazilian Civilian Colonist, White-Collar"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/whitecollar/japanese
 	name = "TWE Civilian Colonist, White-Collar"
 	ethnicity = JAPANESE_ETHNICITY
@@ -346,7 +386,12 @@
 /datum/equipment_preset/colonist/whitecollar/exec/spanish
 	name = "LatAm Civilian Colonist, White-Collar (Corporate Exec)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
-	languages = list(LANGUAGE_SPANISH)
+	languages = list(LANGUAGE_SPANISH,LANGUAGE_ENGLISH, LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/whitecollar/exec/spanish
+	name = "Brazilian Civilian Colonist, White-Collar (Corporate Exec)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/whitecollar/exec/japanese
 	name = "TWE Civilian Colonist, White-Collar (Corporate Exec)"
@@ -401,12 +446,17 @@
 /datum/equipment_preset/colonist/researcher/spanish
 	name = "LatAm Civilian Researcher"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
-	languages = list(LANGUAGE_SPANISH)
+	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/colonist/researcher/brazilian
+	name = "Brazilian Civilian Researcher"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 
 /datum/equipment_preset/colonist/researcher/japanese
 	name = "TWE Civilian Researcher"
 	ethnicity = JAPANESE_ETHNICITY
-	languages = list(LANGUAGE_JAPANESE)
+	languages = list(LANGUAGE_JAPANESE, LANGUAGE_ENGLISH)
 
 /datum/equipment_preset/colonist/doctor
 	name = "US Civilian Doctor"
@@ -437,6 +487,11 @@
 	name = "LatAm Civilian Doctor"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/doctor/brazilian
+	name = "Brazilian Civilian Doctor"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/doctor/japanese
 	name = "TWE Civilian Doctor"
@@ -473,6 +528,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/doctor/scrubs/brazilian
+	name = "Brazilian Civilian Doctor, Scrubs"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/doctor/scrubs/japanese
 	name = "TWE Civilian Doctor, Scrubs"
 	ethnicity = JAPANESE_ETHNICITY
@@ -505,6 +565,11 @@
 	name = "LatAm Civilian Administrator"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/admin/brazilian
+	name = "Brazilian Civilian Administrator"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/admin/japanese
 	name = "TWE Civilian Administrator"
@@ -547,6 +612,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/cargo/brazilian
+	name = "Brazilian Logistics Worker"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/cargo/japanese
 	name = "TWE Logistics Worker"
 	ethnicity = JAPANESE_ETHNICITY
@@ -584,6 +654,11 @@
 	name = "LatAm Maintenance Technician"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/technician/brazilian
+	name = "Brazilian Maintenance Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/technician/japanese
 	name = "TWE Maintenance Technician"
@@ -636,6 +711,12 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+
+/datum/equipment_preset/colonist/engineer/brazilian
+	name = "Brazilian Civilian Engineer"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/engineer/japanese
 	name = "TWE Civilian Engineer"
 	ethnicity = JAPANESE_ETHNICITY
@@ -667,6 +748,11 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/operations/brazilian
+	name = "Brazilian Civilian Operations Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
 /datum/equipment_preset/colonist/operations/japanese
 	name = "TWE Civilian Operations Technician"
 	ethnicity = JAPANESE_ETHNICITY
@@ -694,6 +780,11 @@
 	name = "LatAm Prisoner"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/prisoner/brazilian
+	name = "Brazilian Prisoner"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/colonist/prisoner/japanese
 	name = "TWE Prisoner"
@@ -737,10 +828,21 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/brazilian
+	name = "Brazilian Civilian Security Guard, Generic"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/liaison_suit/grey(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
+
 /datum/equipment_preset/colonist/security/weyland
 	name = "US Civilian Security Guard, Wey-Yu"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
+	faction = FACTION_WY
 	faction_group = FACTION_LIST_WY_COLONY
 	assignment = "Weyland-Yutani Corporate Security Officer"
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_GENERAL, ACCESS_WY_COLONIAL, ACCESS_WY_SECURITY)
@@ -918,6 +1020,7 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//head
@@ -942,14 +1045,29 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/prison/brazilian
+	name = "Brazilian Federal Prison Guard"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/prison/brazilian/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	..()
+
+
+//UACG
+
 /datum/equipment_preset/colonist/security/guard
 	name = "US Colonial Guard"
 	flags = EQUIPMENT_PRESET_EXTRA
-	faction = FACTION_COLONIST
+	faction = FACTION_UACG
 	faction_group = FACTION_LIST_UA_COLONY
 	assignment = "Colonial Militiaman"
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
-	skills = /datum/skills/civilian/survivor/marshal
+	role_comm_title = "UACG"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/trooper
 	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP)
 	idtype = /obj/item/card/id/dogtag
 
@@ -958,6 +1076,7 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
 	//head
@@ -977,13 +1096,14 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
 
@@ -999,6 +1119,324 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/brazilian
+	name = "Brazilian Colonial Guard"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
+/datum/equipment_preset/colonist/security/guard/marksman
+	name = "US Colonial Guard (Marksman)"
+
+/datum/equipment_preset/colonist/security/guard/marksman/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l42a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l42a/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l42a/ap, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l42a/ap, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/marksman/spanish
+	name = "LatAm Colonial Guard Marksman"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/marksman/brazilian
+	name = "Brazilian Colonial Guard Marksman"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/marksman/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
+/datum/equipment_preset/colonist/security/guard/medic
+	name = "US Colonial Guard Medic"
+	assignment = "Colonial Militiaman Medic"
+	paygrades = list(PAY_SHORT_AE4E = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "UACG-M"
+	skills = /datum/skills/medic
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_CIVILIAN_MEDBAY)
+
+/datum/equipment_preset/colonist/security/guard/medic/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	var/maybecap = rand(1,3)
+	switch(maybecap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/medic/white, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4e, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_BACK)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/full/surgery, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/medic/spanish
+	name = "LatAm Colonial Guard Medic"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/medic/brazilian
+	name = "Brazilian Colonial Guard Medic"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/medic/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
+/datum/equipment_preset/colonist/security/guard/tech
+	name = "US Colonial Guard Technician"
+	assignment = "Colonial Militiaman Technician"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "UACG-T"
+	skills = /datum/skills/sapper
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
+
+/datum/equipment_preset/colonist/security/guard/tech/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	var/maybecap = rand(1,3)
+	switch(maybecap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/medium_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_BACK)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/tech/spanish
+	name = "LatAm Colonial Guard Technician"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/tech/brazilian
+	name = "Brazilian Colonial Guard Technician"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/tech/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
+/datum/equipment_preset/colonist/security/guard/nco
+	name = "US Colonial Guard Unit Leader"
+	assignment = "Colonial Militiaman Unit Leader"
+	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "UACG-L"
+
+
+/datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	var/maybecap = rand(1,3)
+	switch(maybecap)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_IN_BACK)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e7, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/colonist, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/nco/spanish
+	name = "LatAm Colonial Guard Unit Leader"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/nco/brazilian
+	name = "Brazilian Colonial Guard Unit Leader"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/nco/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
+/datum/equipment_preset/colonist/security/guard/co
+	name = "US Colonial Guard Officer"
+	assignment = "Colonial Militiaman Officer"
+	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "UACG-CO"
+	skills = /datum/skills/nco
+	access = list(ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_MARINE_PREP, ACCESS_MARINE_COMMAND)
+
+/datum/equipment_preset/colonist/security/guard/co/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/o1, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/full, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+	//storage
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars, WEAR_IN_BACK)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/co/spanish
+	name = "LatAm Colonial Guard Officer"
+	ethnicity = LATIN_AMERICAN_ETHNICITY
+	languages = list(LANGUAGE_SPANISH)
+
+/datum/equipment_preset/colonist/security/guard/co/brazilian
+	name = "Brazilian Colonial Guard Officer"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE)
+
+/datum/equipment_preset/colonist/security/guard/co/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	..()
+
 #undef AMERICAN_ETHNICITY
 #undef LATIN_AMERICAN_ETHNICITY
 #undef JAPANESE_ETHNICITY
+#undef BRAZILIAN_ETHNICITY

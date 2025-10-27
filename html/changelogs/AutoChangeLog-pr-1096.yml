@@ -1,0 +1,5 @@
+author: "UntoldTactics"
+delete-after: True
+changes:
+  - rscadd: "Adds the M3-VL flak vest and M70 flak vest as choices to the synthetic clothing vendor."
+  - rscdel: "Removes the synthetic utility vests as choices from the synthetic clothing vendor."

@@ -62,7 +62,7 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/rifle,
 		/obj/item/attachable/stock/rifle/collapsible,
-		/obj/item/attachable/attached_gun/grenade,
+		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/shotgun,
@@ -71,7 +71,7 @@
 		/obj/item/attachable/scope/mini,
 	)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade, /obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1, /obj/item/attachable/stock/rifle/collapsible)
 	map_specific_decoration = TRUE
 	start_automatic = TRUE
 
@@ -106,56 +106,91 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/stock/rifle/collapsible)
 //-------------------------------------------------------
-//NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
+//NSG 23 ASSAULT RIFLE - RMC PRIMARY RIFLE
 
 /obj/item/weapon/gun/rifle/nsg23
-	name = "\improper NSG 23 assault rifle"
-	desc = "A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. Compared to the M41A MK2, it has noticeably improved handling and vastly improved performance at long and medium range, but compares similarly up close."
+	name = "\improper NSG 23 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle in use by various W-Y personnel. Comparable performance with the ARMAT M41A series of rifles, with slightly better handling."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
 	fire_sound = "gun_nsg23"
-	reload_sound = 'sound/weapons/handling/nsg23_reload.ogg'
-	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	cocked_sound = 'sound/weapons/handling/nsg23_cocked.ogg'
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	wield_delay = WIELD_DELAY_VERY_FAST
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
+	start_automatic = TRUE
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/rmc,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
-		/obj/item/attachable/bipod,
-		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/stock/nsg23,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/grenade,
+		/obj/item/attachable/stock/nsg23/rmc,
 		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/attached_gun/grenade/nsg,
 	)
-
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
 	starting_attachment_types = list(
 		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/stock/nsg23,
 	)
-	start_semiauto = FALSE
-	start_automatic = TRUE
-
-/obj/item/weapon/gun/rifle/nsg23/Initialize(mapload, spawn_empty)
-	. = ..()
-	update_icon()
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 22, "under_x" = 21, "under_y" = 10, "stock_x" = 5, "stock_y" = 17, "side_rail_x" = 24, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 13, "rail_y" = 20, "under_x" = 19, "under_y" = 11, "stock_x" = 5, "stock_y" = 17, "side_rail_x" = 24, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/rifle/nsg23/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_9)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+	)
+
+/obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
+	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
+
+/obj/item/weapon/gun/rifle/nsg23/rmc
+	name = "\improper NSG L23A1 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Comes with semi-auto and burst-fire firemodes and features an integrated 30mm grenade launcher that can hold two grenades on backup with one in the chamber."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmc_nsg23"
+	item_state = "rmc_nsg23"
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	start_automatic = FALSE
+	start_burstfire = TRUE
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23/rmc,
+		/obj/item/attachable/attached_gun/grenade/nsg,
+		/obj/item/attachable/stock/nsg23/rmc,
+	)
+
+/obj/item/weapon/gun/rifle/nsg23/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_12)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -166,26 +201,29 @@
 	damage_falloff_mult = 0
 	fa_max_scatter = SCATTER_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/nsg23/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/stock/nsg23/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
+/obj/item/weapon/gun/rifle/nsg23/rmc/Initialize(mapload, spawn_empty)
+	. = ..()
+	if(current_mag && current_mag.current_rounds > 0) load_into_chamber()
 
-//has no scope or underbarrel
-/obj/item/weapon/gun/rifle/nsg23/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
+/obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
+	current_mag = null
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
-/obj/item/weapon/gun/rifle/nsg23/no_lock
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+/obj/item/weapon/gun/rifle/nsg23/rmc/preloaded
 	starting_attachment_types = list(
-		/obj/item/attachable/scope/mini/nsg23,
-		/obj/item/attachable/attached_gun/flamer,//non-op flamer for normal spawns
+		/obj/item/attachable/scope/mini/nsg23/rmc,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23/rmc,
 	)
 
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped
-	starting_attachment_types = list() //starts with the stock anyways due to handle_starting_attachment()
+/obj/item/weapon/gun/rifle/nsg23/rmc/preloaded/tactical
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23/rmc,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23/rmc,
+		/obj/item/attachable/suppressor,
+	)
+
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
@@ -301,6 +339,7 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_falloff_mult = 0
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/m41aMK1/ap //for making it start with ap loaded
@@ -340,11 +379,18 @@
 	desc = "Pulse action 10x24mm caseless assault rifle of the US Army, personal friend of any Trooper. This one has a U7 underbarrel shotgun strapped to it."
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/reddot, /obj/item/attachable/attached_gun/shotgun)
 
-/obj/item/weapon/gun/rifle/m41aMK1/navy
+/obj/item/weapon/gun/rifle/m41aMK1/navy //m41amk1_navy
 	name = "\improper GUU-71/A pulse rifle"
+	desc = "A variant of the M41A pulse rifle adopted for use by USASF Security Forces personnel and Master-At-Arms. Features an integrated 30mm grenade launcher and ammo tube that can hold four grenades on backup."
+	icon_state = "m41amk1_navy"
+	item_state = "m41amk1_navy"
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/stock/rifle/collapsible)
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
+
+/obj/item/weapon/gun/rifle/m41aMK1/navy/tactical
+	name = "\improper GUU-71/B pulse rifle"
 	desc = "A variant of the M41A pulse rifle adopted for use by USASF personnel whose duties take them off ships frequently. Features an integrated 30mm grenade launcher, flash & sound suppressor, and a carry-handle mounted mag-clamp."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
@@ -411,7 +457,7 @@
 
 /obj/item/weapon/gun/rifle/ag80
 	name = "\improper AG80 pulse rifle"
-	desc = "Pulse action 9.7x16mm caseless assault rifle of the UPPAC Naval Infantry. Only recently entered service and has yet to see full integration."
+	desc = "Pulse action 9.7x16mm caseless assault rifle of the UPPAC Naval Infantry. Only recently entered service and has yet to see full integration. The design suggests that it is a carbine sibling to the Type-71's rifle role, rather than an outright replacement."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ag80"
 	item_state = "ag80"
@@ -424,10 +470,12 @@
 		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/attached_gun/grenade/type71/ag80,
+		/obj/item/attachable/attached_gun/grenade/type71/ag80/preloaded,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -509,6 +557,43 @@
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
 
+/obj/item/weapon/gun/rifle/m20a/merc
+	name = "\improper M20CW pulse carbine"
+	desc = "A heavily modified black market version of the M20A pulse rifle, often used for CQC scenarios where SMGs just aren't cutting it. Comes with an integrated grip instead of an underbarrel shotgun and downsized barrel, alongside the removed stock. It can also now shoot in automatic!"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "m20a_tactical"
+	item_state = "m20a_tactical"
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/sling,
+	)
+	starting_attachment_types = list(/obj/item/attachable/sling)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/merc/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 14, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/m20a/merc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_9
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
+
+/obj/item/weapon/gun/rifle/m20a/merc/tactical
+	starting_attachment_types = list(/obj/item/attachable/sling, /obj/item/attachable/suppressor, /obj/item/attachable/lasersight)
+
+/obj/item/weapon/gun/rifle/m20a/merc/unloaded
+	current_mag = null
+
 //----------------------------------------------
 //Experimental ARMAT side-grade to the M41A, not standard issue, only used by MARSOC
 
@@ -525,6 +610,7 @@
 
 	accepted_ammo = list(
 		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
 		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
 		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
 		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
@@ -1151,6 +1237,22 @@
 	unload_sound = 'sound/weapons/handling/hpr_unload.ogg'
 	fire_sound = "gun_pulse"
 	aim_slowdown = SLOWDOWN_ADS_LMG
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/hpr_box,
+		/obj/item/ammo_magazine/hpr_box/ap,
+		/obj/item/ammo_magazine/hpr_box/heap,
+		/obj/item/ammo_magazine/hpr_box/holo_target,
+		/obj/item/ammo_magazine/hpr_box/recon,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/rifle/m41aMK1/recon,
+		/obj/item/ammo_magazine/rifle/m41aMK1/rubber,
+		/obj/item/ammo_magazine/rifle/m41aMK1/ap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/incendiary,
+		/obj/item/ammo_magazine/rifle/m41aMK1/heap,
+		/obj/item/ammo_magazine/rifle/m41aMK1/toxin,
+		/obj/item/ammo_magazine/rifle/m41aMK1/penetrating,
+		/obj/item/ammo_magazine/rifle/m41aMK1/tracer,
+	)
 	current_mag = /obj/item/ammo_magazine/hpr_box
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -1174,18 +1276,20 @@
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	gun_category = GUN_CATEGORY_HEAVY
 	start_automatic = TRUE
+	bonus_overlay_x = -1
+	bonus_overlay_y = -1
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 27, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/rifle/lmg/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	//hopefully, this will give it some reason to not just hold down trigger? Long lethal bursts.
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_2
-	fa_max_scatter = SCATTER_AMOUNT_NEURO
+	fa_max_scatter = SCATTER_AMOUNT_TIER_1
 	accuracy_mult = BASE_ACCURACY_MULT
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_4
@@ -1240,6 +1344,32 @@
 /obj/item/weapon/gun/rifle/lmg/army/set_gun_config_values()
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
+
+/obj/item/weapon/gun/rifle/lmg/recon
+	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units, while sporting a vertical grip in place of an integrated bipod."
+	icon_state = "m41ae2_recon"
+	item_state = "m41ae2_recon"
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/verticalgrip,
+	)
+
+/obj/item/weapon/gun/rifle/lmg/recon/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 24, "under_y" = 11, "stock_x" = 24, "stock_y" = 13)
 //-------------------------------------------------------
 
 
@@ -1261,6 +1391,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/upp,
@@ -1281,6 +1412,7 @@
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/attached_gun/grenade/type71,
+		/obj/item/attachable/attached_gun/grenade/type71/preloaded,
 		/obj/item/attachable/lasersight, // Side Rail
 		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/flashlight,
@@ -1295,12 +1427,12 @@
 
 /obj/item/weapon/gun/rifle/type71/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_9)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
 	set_burst_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_8
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
@@ -1349,6 +1481,84 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/rifle/lw317
+	name = "\improper LW-317 pulse carbine"
+	desc = "Light Weapon, Type 317. Originating from Norcomm before the CANC's absorption, the Type 317 served the CANC's arsenals for close quarters battle. Also preferred for its ease of use among former CANC soldiers."
+	desc_lore = "Despite UPP's best efforts to destroy leftover CANC weapon caches from the Dog War, Chinese weaponry frequently comes up on the black market, which makes it a solid choice for any rebel and even more so for revanchist CANC restoration supporters."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "lw317"
+	item_state = "lw317"
+	fire_sound = 'sound/weapons/gun_lw317.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/lw317
+	attachable_allowed = list(
+		/obj/item/attachable/scope, // Rail
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/suppressor, // Muzzle
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/bayonet/canc,
+		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/flashlight/grip/upp,
+		)
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_equip_slot = SLOT_BACK
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/lw317/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+
+/obj/item/weapon/gun/rifle/lw317/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 16, "rail_y" = 23, "under_x" = 25, "under_y" = 12, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/rifle/lw317/dmr
+	name = "\improper LW/RS-317 pulse carbine"
+	desc = "Light Weapon, Rifle, Sniper, Type 317. Modification of Type 317 carbine, this unorthodox DMR was developed in order to provide long-range support to guerilla fighting groups. Modified internal mechanism allows for improved accuracy, but because of that rate of fire is impeded severely."
+	current_mag = /obj/item/ammo_magazine/rifle/lw317/ap
+	start_automatic = FALSE
+	attachable_allowed = list(
+		/obj/item/attachable/scope/variable_zoom/canc,
+		/obj/item/attachable/lw317barrel,
+		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/flashlight/grip/upp,
+		)
+
+/obj/item/weapon/gun/rifle/lw317/dmr/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SNIPER)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT * 3
+	scatter = SCATTER_AMOUNT_TIER_8
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	damage_falloff_mult = 0
+
+/obj/item/weapon/gun/rifle/lw317/dmr/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/barrel = new /obj/item/attachable/lw317barrel(src)
+	barrel.flags_attach_features &= ~ATTACH_REMOVABLE
+	barrel.Attach(src)
+	update_attachable(barrel.slot)
+
+	var/obj/item/attachable/scope/variable_zoom/canc/scope = new(src)
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
 
 	//-------------------------------------------------------
 
@@ -1429,14 +1639,44 @@
 	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom, /obj/item/attachable/extended_barrel)
 
 /obj/item/weapon/gun/rifle/m49a/army
-	desc = "The M4RA battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M4RA battle rifle is perfect for reconnaissance and fire support teams."
+	desc = "The M49A battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
+
+/obj/item/weapon/gun/rifle/m49a/forecon
+	name = "\improper M49A2 battle rifle"
+	desc = "An early modification of the M49A marksman rifle, the A2 has a tweaked gas-system and fire-control-group, giving it better cyclic rate and a two round burst-fire mode. Fielded almost exclusively by FORECON units in the USCM. This one is painted in a fresh coat of the newer Humbrol 76 camouflage."
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/ext
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/extended_barrel, /obj/item/attachable/verticalgrip)
+	map_specific_decoration = FALSE
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
+	)
+
+/obj/item/weapon/gun/rifle/m49a/forecon/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_8)
+
+/obj/item/weapon/gun/rifle/m49a/forecon/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m49a_barrel/forecon/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
+	if(old_barrel)
+		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
+		qdel(old_barrel)
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
 
 // pve - kinda weird icon usage, uses urban M49A sprite w/ custom attachie sprite
 /obj/item/weapon/gun/rifle/m49a/pve
 	name = "\improper M49A6 battle rifle"
-	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with non-HV ammo."
+	desc = "The M49A6 is a souped-up M49A, the result of an ARMAT upgrade program that didn't pan out in huge numbers. Its main attraction is the ability to chamber and fire devastating <b>A19 depleted uranium rounds,</b> infamous for their overpenetration abilities and toxic effects on anyone unfortunate enough to survive a hit. The thicker barrel, of course, also has no issue with standard & regular HV ammo."
 	desc_lore = "The USCMC was not terribly enthusiastic about unproven hand-held plasma weaponry. Before the XM99A was eventually adopted into use, the USCMC instead sought out a traditional squad-portable, precision, armor-piercing weapon, and contracted ARMAT to upgrade their M49A platform to be capable of firing advanced AP rounds. They succeeded- sort of. <BR> <BR>  The A6 was rejected for several reasons. It's a killer, but also a piece of junk. It kicks hard enough that precision sights simply don't stay zeroed, and its oversized muzzle-device extends an already long barrel-length. Additionally, A19 ammo, already expensive, was driven to absurd highs by the ammunition's specs. Depleted uranium is expensive...and cutting the service life of the M49A's barrel in half is even more expensive. <BR> <BR> Those that were made, however, are still service-ready and were issued where the XM99A was unavailable due to its production only just starting."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_obj.dmi'
 	icon_state = "m49a"
@@ -1445,7 +1685,21 @@
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 
-	current_mag = /obj/item/ammo_magazine/rifle/m49a/pve
+	accepted_ammo = list(
+		/obj/item/ammo_magazine/rifle/m49a,
+		/obj/item/ammo_magazine/rifle/m49a/ap,
+		/obj/item/ammo_magazine/rifle/m49a/ext,
+		/obj/item/ammo_magazine/rifle/m49a/rubber,
+		/obj/item/ammo_magazine/rifle/m49a/incendiary,
+		/obj/item/ammo_magazine/rifle/m49a/heap,
+		/obj/item/ammo_magazine/rifle/m49a/penetrating,
+		/obj/item/ammo_magazine/rifle/m49a/custom,
+		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+	)
+
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/custom/pve
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 	wield_delay = WIELD_DELAY_VERY_FAST
@@ -1455,6 +1709,7 @@
 /obj/item/weapon/gun/rifle/m49a/pve/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4)
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1 //Chunky barrel for better muzzle velocity, but not as good as the custom one
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 	recoil = RECOIL_AMOUNT_TIER_3
 
@@ -1619,11 +1874,14 @@
 	random_under_chance = 50
 	random_spawn_under = list(/obj/item/attachable/flashlight/grip)
 
-//=ROYAL MARINES=\\
+/obj/item/weapon/gun/rifle/l42a/abr40/tactical/assassin
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine/wood/tactical, /obj/item/attachable/scope/mini/hunting, /obj/item/attachable/suppressor)
+
+//=OLD ROYAL MARINES RIFLES=\\
 
 /obj/item/weapon/gun/rifle/rmc_f90
 	name = "\improper F903A1 Rifle"
-	desc = "The standard issue rifle of the royal marines. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "The old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "aug"
 	item_state = "aug"
@@ -1667,7 +1925,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/a_grip
 	name = "\improper F903A2 Rifle"
-	desc = "A non-standard issue rifle of the royal marines the F903A2 is currently being phased into the royal marines as their new mainline rifle but currently only sees use by unit leaders. Uniquely the royal marines are the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon_state = "aug_com"
 	item_state = "aug_com"
 	attachable_allowed = list(
@@ -1687,7 +1945,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/scope
 	name = "\improper F903A1 Marksman Rifle"
-	desc = "A variation of the F903 rifle used by the royal marines commando. This weapon only accepts the smaller 20 round magazines of 10x24mm."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Only accepts smaller 20-round magazines of 10x24mm caseless ammunition."
 	icon_state = "aug_dmr"
 	item_state = "aug_dmr"
 	attachable_allowed = null
@@ -1725,7 +1983,7 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/shotgun
 	name = "\improper F903A1/B 'Breacher' Rifle"
-	desc = "A variation of the F903 rifle used by the royal marines commando. Modified to be used in one hand with a shield. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines fitted with an underbarrel shotgun, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
 	icon_state = "aug_mkey"
 	item_state = "aug_mkey"
 	attachable_allowed = list(
@@ -1759,124 +2017,51 @@
 	update_attachable(f90_shotgun.slot)
 	update_attachable(f90_shotgun_barrel.slot)
 
-//-------------------------------------------------------
-//XM51, Breaching Scattergun
+//Intermediate Support Rifle
+//=================================================
+//=================================================
 
-/obj/item/weapon/gun/rifle/xm51
-	name = "\improper XM51 breaching scattergun"
-	desc = "An experimental shotgun model going through testing trials in the USCM. Based on the original civilian and CMB version, the XM51 is a mag-fed, pump-action shotgun. It utilizes special 16-gauge breaching rounds which are effective at breaching walls and doors. Users are advised not to employ the weapon against soft or armored targets due to low performance of the shells."
-	icon_state = "xm51"
-	item_state = "xm51"
-	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
-
-	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
+/obj/item/weapon/gun/rifle/isr
+	name = "\improper MK.7 ISR LMG"
+	desc = "The Intermediate Support Rifle, or ISR, was developed after contractors operating the MAR platform of firearms complained about its deficiencies. Whilst it is technically just a step above the standard MAR... it's not by much."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-
-	current_mag = /obj/item/ammo_magazine/rifle/xm51
+	fire_sound = "gun_oldpulse"
+	current_mag = /obj/item/ammo_magazine/rifle/isr
+	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel)
 	attachable_allowed = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/angledgrip,
-		/obj/item/attachable/gyro,
-		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/stock/xm51,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/isr_barrel,
+		/obj/item/attachable/stock/isr,
 	)
-	flags_equip_slot = SLOT_BACK
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	gun_category = GUN_CATEGORY_SHOTGUN
-	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
-	map_specific_decoration = TRUE
 
-	var/pump_delay //How long we have to wait before we can pump the shotgun again.
-	var/pump_sound = "shotgunpump"
-	var/message_delay = 1 SECONDS //To stop message spam when trying to pump the gun constantly.
-	var/burst_count = 0 //To detect when the burst fire is near its end.
-	COOLDOWN_DECLARE(allow_message)
-	COOLDOWN_DECLARE(allow_pump)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AUTO_EJECT_CASINGS
+	wield_delay = WIELD_DELAY_NORMAL
+	map_specific_decoration = FALSE
+	start_automatic = TRUE
 
-/obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
 
-/obj/item/weapon/gun/rifle/xm51/set_gun_config_values()
+/obj/item/weapon/gun/rifle/isr/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 12, "rail_y" = 22, "under_x" = 24, "under_y" = 13, "stock_x" = 5, "stock_y" = 20, "side_rail_x" = 20, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/rifle/isr/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4*2)
-	set_burst_amount(0)
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
-	accuracy_mult = BASE_ACCURACY_MULT + 2*HIT_ACCURACY_MULT_TIER_8
+	set_fire_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
-	recoil = RECOIL_AMOUNT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_5
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	scatter = SCATTER_AMOUNT_TIER_6
+	recoil = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/rifle/xm51/Initialize(mapload, spawn_empty)
-	. = ..()
-	pump_delay = FIRE_DELAY_TIER_8*3
-	additional_fire_group_delay += pump_delay
-
-/obj/item/weapon/gun/rifle/xm51/set_bullet_traits()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 30, GLOB.damage_boost_turfs), //2550, 2 taps colony walls, 4 taps reinforced walls
-		BULLET_TRAIT_ENTRY_ID("xeno turfs", /datum/element/bullet_trait_damage_boost, 0.23, GLOB.damage_boost_turfs_xeno), //2550*0.23 = 586, 2 taps resin walls, 3 taps thick resin
-		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 15, GLOB.damage_boost_breaching), //1275, enough to 1 tap airlocks
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_pylons) //510, 4 shots to take out a pylon
-	))
-
-/obj/item/weapon/gun/rifle/xm51/unique_action(mob/user)
-	if(!COOLDOWN_FINISHED(src, allow_pump))
-		return
-	if(in_chamber)
-		if(COOLDOWN_FINISHED(src, allow_message))
-			to_chat(usr, SPAN_WARNING("<i>[src] already has a shell in the chamber!<i>"))
-			COOLDOWN_START(src, allow_message, message_delay)
-		return
-
-	playsound(user, pump_sound, 10, 1)
-	COOLDOWN_START(src, allow_pump, pump_delay)
-	ready_in_chamber()
-	burst_count = 0 //Reset the count for burst mode.
-
-/obj/item/weapon/gun/rifle/xm51/load_into_chamber(mob/user)
-	return in_chamber
-
-/obj/item/weapon/gun/rifle/xm51/reload_into_chamber(mob/user) //Don't chamber bullets after firing.
-	if(!current_mag)
-		update_icon()
-		return
-
-	in_chamber = null
-	if(current_mag.current_rounds <= 0 && flags_gun_features & GUN_AUTO_EJECTOR)
-		if (user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_OFF))
-			update_icon()
-		else if (!(flags_gun_features & GUN_BURST_FIRING) || !in_chamber) // Magazine will only unload once burstfire is over
-			var/drop_to_ground = TRUE
-			if (user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_TO_HAND))
-				drop_to_ground = FALSE
-				unwield(user)
-				user.swap_hand()
-			unload(user, TRUE, drop_to_ground) // We want to quickly autoeject the magazine. This proc does the rest based on magazine type. User can be passed as null.
-			playsound(src, empty_sound, 25, 1)
-	if(gun_firemode == GUN_FIREMODE_BURSTFIRE & burst_count < burst_amount - 1) //Fire two (or more) shots in a burst without having to pump.
-		ready_in_chamber()
-		burst_count++
-		return in_chamber
-
-/obj/item/weapon/gun/rifle/xm51/replace_magazine(mob/user, obj/item/ammo_magazine/magazine) //Don't chamber a round when reloading.
-	user.drop_inv_item_to_loc(magazine, src) //Click!
-	current_mag = magazine
-	replace_ammo(user,magazine)
-	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
-		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
-	if(reload_sound)
-		playsound(user, reload_sound, 25, 1, 5)
-
-/obj/item/weapon/gun/rifle/xm51/cock_gun(mob/user)
-	return
-
-/obj/item/weapon/gun/rifle/xm51/cock(mob/user) //Stops the "You cock the gun." message where nothing happens.
-	return
+/obj/item/weapon/gun/rifle/isr/modded
+	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel, /obj/item/attachable/flashlight, /obj/item/attachable/reddot)

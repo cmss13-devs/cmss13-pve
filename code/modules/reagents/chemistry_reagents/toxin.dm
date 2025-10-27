@@ -198,7 +198,7 @@
 	overdose = REAGENTS_OVERDOSE/2
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL/2
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_SEDATIVE = 6, PROPERTY_TOXIC = 1)
+	properties = list(PROPERTY_SEDATIVE = 6)
 
 /datum/reagent/toxin/potassium_chloride
 	name = "Potassium Chloride"
@@ -283,3 +283,23 @@
 	reagent_state = LIQUID
 	chemclass = CHEM_CLASS_NONE
 	properties = list(PROPERTY_CORROSIVE = 2, PROPERTY_TOXIC = 1, PROPERTY_CROSSMETABOLIZING = 3)
+
+/datum/reagent/toxin/cia_toxin
+	name = "'Clear Snow'"
+	id = "cia_toxin"
+	description = "Potent haemotoxin, reportedly used by the CIA. But you can never be sure with these guys."
+	color = "#FF69B4"
+	reagent_state = LIQUID
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_TOXIC = 6)
+	flags = REAGENT_NO_GENERATION
+
+/datum/reagent/toxin/mss_toxin
+	name = "A-580"
+	id = "mss_toxin"
+	description = "Potent nerve agent, reportedly used by the MSS."
+	color = "#AFEEEE"
+	reagent_state = LIQUID
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_TOXIC = 3, PROPERTY_HYPOXEMIC = 4)
+	flags = REAGENT_NO_GENERATION

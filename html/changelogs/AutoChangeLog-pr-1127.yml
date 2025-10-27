@@ -1,0 +1,4 @@
+author: "Memefist"
+delete-after: True
+changes:
+  - rscadd: "Adds a new eye drops item to the loadout selection"

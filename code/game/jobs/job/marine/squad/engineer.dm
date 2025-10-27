@@ -1,3 +1,6 @@
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+
 /datum/job/marine/engineer
 	title = JOB_SQUAD_ENGI
 	total_positions = 12
@@ -52,3 +55,53 @@
 /obj/effect/landmark/start/marine/engineer/delta
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+//Having to add a /ai subtype before the /rmc one, might as well make it viable for use
+/datum/job/marine/engineer/ai
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/engineer
+	gear_preset_secondary = /datum/equipment_preset/uscm/engineer/pfc
+	job_options = list(PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL")
+
+/obj/effect/landmark/start/marine/engineer/ai
+	job = /datum/job/marine/engineer/ai
+
+/datum/job/marine/engineer/ai/set_spawn_positions(count)
+	return spawn_positions
+
+/datum/job/marine/engineer/ai/get_total_positions(latejoin=0)
+	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/engineer/ai/rmc
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_TWE_RMC_ENGI
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/rmc/eng
+	job_options = null
+	supervisors = "the section leader and troop commander"
+	entry_message_body = "You are a commando-trained member of the Royal Engineers serving with the Royal Marines Commando forces. You're given the equipment and responsibility amongst the Rifle Section to build fortifications, reroute power lines, and handle all things engineering related in the field of battle. <br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/engineer/rmc
+	name = JOB_TWE_RMC_ENGI
+	squad = SQUAD_RMC
+	job = /datum/job/marine/engineer/ai/rmc
+
+/datum/job/marine/engineer/ai/rmcmortar
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_TWE_RMC_BREACHER
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/rmc/mor
+	job_options = null
+	supervisors = "the troop commander and troop sergeant"
+	entry_message_body = "You are a commando-trained member of the Royal Artillery serving with the Royal Marines Commando forces. You're responsible for offering light fire support to the Troop via either a mortar or multiple-grenade-launcher weapon system. You will be working closely with the Troop Sergeant, who should be carrying your spare support-weapon ammo, and the Troop Commander as part of the Headquarters Section.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/engineer/rmcmortar
+	name = JOB_TWE_RMC_BREACHER
+	squad = SQUAD_RMC
+	job = /datum/job/marine/engineer/ai/rmcmortar
+
+#undef LCPL_VARIANT
+#undef PFC_VARIANT

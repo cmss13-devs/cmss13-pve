@@ -22,12 +22,12 @@
 		list("Tactical Prybar", 5, /obj/item/tool/crowbar/tactical, null, VENDOR_ITEM_REGULAR),
 
 		list("FIRSTAID KITS", 0, null, null, null),
-		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/adv, null, VENDOR_ITEM_REGULAR),
-		list("Firstaid Kit", 5, /obj/item/storage/firstaid/regular, null, VENDOR_ITEM_REGULAR),
-		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/fire, null, VENDOR_ITEM_REGULAR),
-		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/toxin, null, VENDOR_ITEM_REGULAR),
-		list("Oxygen Firstaid Kit", 6, /obj/item/storage/firstaid/o2, null, VENDOR_ITEM_REGULAR),
-		list("Radiation Firstaid Kit", 6, /obj/item/storage/firstaid/rad, null, VENDOR_ITEM_REGULAR),
+		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_REGULAR),
+		list("Firstaid Kit", 5, /obj/item/storage/firstaid/softpack/regular, null, VENDOR_ITEM_REGULAR),
+		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/fire, null, VENDOR_ITEM_REGULAR),
+		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/toxin, null, VENDOR_ITEM_REGULAR),
+		list("Oxygen Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/o2, null, VENDOR_ITEM_REGULAR),
+		list("Radiation Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/rad, null, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL SUPPLIES", 0, null, null, null),
 		list("Burn Kit", 2, /obj/item/stack/medical/advanced/ointment, null, VENDOR_ITEM_REGULAR),
@@ -53,7 +53,7 @@
 		list("Injector (Tramadol)", 1, /obj/item/reagent_container/hypospray/autoinjector/tramadol, null, VENDOR_ITEM_REGULAR),
 		list("Injector (Tricord)", 1, /obj/item/reagent_container/hypospray/autoinjector/tricord, null, VENDOR_ITEM_REGULAR),
 
-		list("Health Analyzer", 2, /obj/item/device/healthanalyzer, null, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, null, VENDOR_ITEM_REGULAR),
 		list("Surgical Line", 3, /obj/item/tool/surgery/surgical_line, null, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", 3, /obj/item/tool/surgery/synthgraft, null, VENDOR_ITEM_REGULAR),
 
@@ -111,13 +111,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_synth, list(
 		list("Welding Helmet", 0, /obj/item/clothing/head/welding, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
 
 		list("SUIT (CHOOSE 1)", 0, null, null, null),
-		list("M3A1 Pattern Synthetic Utility Vest (Mission-Specific Camo)", 0, /obj/item/clothing/suit/storage/marine/light/synvest, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
-		list("M3A1 Pattern Synthetic Utility Vest (UA Gray)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/grey, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("M3A1 Pattern Synthetic Utility Vest (UA Dark Grey)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/dgrey, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("M3A1 Pattern Synthetic Utility Vest (UA Jungle)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/jungle, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("M3A1 Pattern Synthetic Utility Vest (UA Snow)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/snow, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
-		list("M3A1 Pattern Synthetic Utility Vest (UA Desert)", 0, /obj/item/clothing/suit/storage/marine/light/synvest/desert, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("M3-VL Pattern Flak Vest", 0, /obj/item/clothing/suit/storage/marine/light/vest/dcc, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
 		list("M3-VL Pattern Ballistics Vest", 0, /obj/item/clothing/suit/storage/marine/light/vest, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
+		list("M70 Flak Jacket", 0, /obj/item/clothing/suit/armor/vest/pilot, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 		list("Shoulder-lamp Rig", 0, /obj/item/clothing/suit/marine/lamp, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_REGULAR),
 
 		list("GLOVES (CHOOSE 1)", 0, null, null, null),

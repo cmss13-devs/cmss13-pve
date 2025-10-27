@@ -218,16 +218,22 @@
 	icon_state = "tray"
 
 /obj/item/trash/USCMtray
-	name = "\improper USCM Tray"
-	desc = "Finished with its tour of duty."
+	name = "\improper empty meal tray"
+	desc = "An empty meal tray made of a space age plastoid. Commonly seen on the frontier and in military service."
 	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "tray"
+	icon_state = "mar_tray_empty"
 
 /obj/item/trash/UPPtray
 	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food.dmi'
 	icon_state = "upp_tray"
+
+/obj/item/trash/RMCtray
+	name = "\improper RMC Meal Tray"
+	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
 
 
 //////////
@@ -265,6 +271,11 @@
 	desc = "A used tear gas grenade. This is trash."
 	icon_state = "grenade_spent"
 
+/obj/item/trash/grenade/gas/rmc
+	name = "spent R2175/CN20 gas grenade"
+	desc = "A used RMC CN20 gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
 /obj/item/trash/grenade/Initialize()
 	. = ..()
 	animation_spin(5, 1,)
@@ -273,3 +284,16 @@
 	clockwise = pick(TRUE, FALSE)
 	angular_offset = rand(360)
 	return ..()
+
+/obj/item/trash/tooth
+	name = "tooth"
+	desc = "Has seen heavy use, that's for sure."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "tooth"
+	w_class = SIZE_TINY
+
+/obj/item/trash/tooth/Initialize()
+	. = ..()
+	pixel_x = rand(-10,10)
+	pixel_y = rand(-10,10)
+	apply_transform(turn(transform,rand(0,360)))

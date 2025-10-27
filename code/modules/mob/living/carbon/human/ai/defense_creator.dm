@@ -43,7 +43,7 @@
 	var/list/data = list()
 
 	data["defenses"] = lazy_ui_data
-	data["valid_factions"] = list(FACTION_MARINE, FACTION_UA_REBEL, FACTION_UPP, FACTION_CANC, FACTION_WY, FACTION_FREELANCER, FACTION_TWE, FACTION_TWE_REBEL)
+	data["valid_factions"] = list(FACTION_MARINE, FACTION_UA_REBEL, FACTION_UPP, FACTION_CANC, FACTION_WY, FACTION_FREELANCER, FACTION_TWE, FACTION_TWE_REBEL, FACTION_MERCENARY)
 
 	return data
 
@@ -473,3 +473,9 @@
 	desc = /obj/structure/barricade/table/prison::desc
 	icon_state = "prisonflip"
 	path_to_spawn = /obj/structure/barricade/table/prison
+
+/datum/human_ai_defense/misc_defences/razorwire
+	name = "Razorwire"
+	desc = /obj/structure/barricade/razorwire::desc
+	icon_state = "barbed_wire"
+	path_to_spawn = /obj/structure/barricade/razorwire

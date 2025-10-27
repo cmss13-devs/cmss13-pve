@@ -12,52 +12,6 @@
 	space_chance = 100 //uses a unique system
 
 // Galactic common languages (systemwide accepted standards).
-/datum/language/generated/japanese
-	name = LANGUAGE_JAPANESE
-	desc = "A notoriously complex language boasting an extensive grammatical system, three writing systems, and a new smattering of English loanwords. It has gained popularity due to high cultural contact in the 3WE, and finds use outside due to emigration."
-	speech_verb = "vocalizes"
-	color = "japanese"
-	key = "2"
-
-
-/datum/language/generated/chinese
-	name = LANGUAGE_CHINESE
-	desc = "The secondary language of the UPP, widespread around Asia and with a notable immigrant population in other parts of the world. The most spoken language in charted space."
-	speech_verb = "voices"
-	ask_verb = "questions"
-	exclaim_verb = "shouts"
-	color = "chinese"
-	key = "8"
-
-/datum/language/russian
-	name = LANGUAGE_RUSSIAN
-	desc = "An East Slavic language from Earth. The dominant tongue of the UPP and frequently used by Slavic minorities in the United Americas."
-	speech_verb = "enunciates"
-	color = "soghun"
-	key = "3"
-
-	syllables = list("al", "an", "bi", "vye", "vo", "go", "dye", "yel", "en", "yer", "yet", "ka", "ko", "la", "ly", "lo", "l", "na", "nye", "ny", "no", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "rye", "ro", "st", "ta", "tye", "to", "t", "at", "bil", "vyer", "yego", "yeny", "yenn", "yest", "kak", "ln", "ova", "ogo", "oro", "ost", "oto", "pry", "pro", "sta", "stv", "tor", "chto", "eto", "rus", "nar", "arya", "mol")
-
-/datum/language/patois
-	name = LANGUAGE_RUSPATOIS
-	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
-	speech_verb = "says"
-	color = "ruspatois"
-	key = "9"
-
-	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
-
-/datum/language/german
-	name = LANGUAGE_GERMAN
-	desc = "Standard High-German, a language spoken mostly in Central Europe, and by German immigrants elsewhere."
-	speech_verb = "proclaims"
-	ask_verb = "inquires"
-	exclaim_verb = "bellows"
-	color = "german"
-	key = "4"
-
-	syllables = list("die", "das", "wein", "mir", "und", "wir", "ein", "nein", "gen", "en", "sauen", "bin", "nein", "rhein", "deut", "der", "lieb", "en", "stein", "nein", "ja", "wolle", "sil", "bei", "der", "sie", "sch", "kein", "nur", "ach", "kann", "volk", "vau", "gelb", "grun", "macht", "zwei", "vier", "nacht", "tag")
-
 /datum/language/scandinavian
 	name = LANGUAGE_SCANDINAVIAN
 	desc = "While not technically one language, Scandinavian languages have grown similar and are nearly indistinguishable from one another unless you actually know the languages."
@@ -69,6 +23,32 @@
 
 	syllables = list("de", "vin", "meg", "og", "vi", "en", "nei", "ing", "gen", "et", "pur", "ke", "er", "nei", "hjort", "tysk", "de", "kjae", "en", "stein", "ja", "ull", "sil", "pa", "hun", "kjo", "erg", "ba", "re", "ol", "kyll", "menn", "esk", "gul", "gronn", "natt", "makt", "to", "fi", "re", "dag", "god", "jul", "ild", "fem", "jeg", "deg", "bjor", "en", "russ", "land", "sve", "rig", "nor", "ge", "dan", "is")
 
+/datum/language/generated/japanese
+	name = LANGUAGE_JAPANESE
+	desc = "A notoriously complex language boasting an extensive grammatical system, three writing systems, and a new smattering of English loanwords. It has gained popularity due to high cultural contact in the 3WE, and finds use outside due to emigration."
+	speech_verb = "vocalizes"
+	color = "japanese"
+	key = "2"
+
+/datum/language/russian
+	name = LANGUAGE_RUSSIAN
+	desc = "An East Slavic language from Earth. The dominant tongue of the UPP and frequently used by Slavic minorities in the United Americas."
+	speech_verb = "enunciates"
+	color = "soghun"
+	key = "3"
+
+	syllables = list("al", "an", "bi", "vye", "vo", "go", "dye", "yel", "en", "yer", "yet", "ka", "ko", "la", "ly", "lo", "l", "na", "nye", "ny", "no", "ov", "ol", "on", "or", "slog", "ot", "po", "pr", "ra", "rye", "ro", "st", "ta", "tye", "to", "t", "at", "bil", "vyer", "yego", "yeny", "yenn", "yest", "kak", "ln", "ova", "ogo", "oro", "ost", "oto", "pry", "pro", "sta", "stv", "tor", "chto", "eto", "rus", "nar", "arya", "mol")
+
+/datum/language/german
+	name = LANGUAGE_GERMAN
+	desc = "Standard High-German, a language spoken mostly in Central Europe, and by German immigrants elsewhere."
+	speech_verb = "proclaims"
+	ask_verb = "inquires"
+	exclaim_verb = "bellows"
+	color = "german"
+	key = "4"
+
+	syllables = list("die", "das", "wein", "mir", "und", "wir", "ein", "nein", "gen", "en", "sauen", "bin", "nein", "rhein", "deut", "der", "lieb", "en", "stein", "nein", "ja", "wolle", "sil", "bei", "der", "sie", "sch", "kein", "nur", "ach", "kann", "volk", "vau", "gelb", "grun", "macht", "zwei", "vier", "nacht", "tag")
 
 /datum/language/spanish
 	name = LANGUAGE_SPANISH
@@ -103,6 +83,24 @@
 
 	syllables = list("la", "là", "pou", "tu", "cou", "fou", "sous", "chou", "je", "ro", "po", "me", "âge", "île", "ni", "moi", "ami", "pâtes", "fromage", "vin", "coup", "grâce", "rôle", "et", "beau", "cuit", "clé", "eau", "lit", "pain", "plus", "trop", "agi", "bien", "songé", "cure", "vite", "dur", "vide", "cru", "bas", "ta", "pis", "pire", "mieux", "meilleur", "bien", "mauvais", "à", "belle", "mur", "sac", "chez", "ai", "pomme", "que", "longe", "genre", "mon", "gérée", "série", "erreur", "ira", "jeu", "jou", "pu", "puis", "qui", "que", "côté", "côte", "vie", "ville", "sur", "tard", "les", "des", "voix", "pluie", "pont", "pot", "roue", "peu", "sec", "vis", "où", "ou", "seul", "mienne", "os", "né", "mort", "trou", "pâle", "tue", "cher", "en", "incroyable", "on", "un", "eu", "au", "œil", "aide", "oui", "non", "si", "été", "nez", "près", "après", "mûr", "sûr", "croît", "ère", "lui", "tâche")
 
+/datum/language/generated/chinese
+	name = LANGUAGE_CHINESE
+	desc = "The secondary language of the UPP, widespread around Asia and with a notable immigrant population in other parts of the world. The most spoken language in charted space."
+	speech_verb = "voices"
+	ask_verb = "questions"
+	exclaim_verb = "shouts"
+	color = "chinese"
+	key = "8"
+
+/datum/language/ruspatois
+	name = LANGUAGE_RUSPATOIS
+	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
+	speech_verb = "says"
+	color = "ruspatois"
+	key = "9"
+
+	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
+
 /datum/language/filipino
 	name = LANGUAGE_FILIPINO
 	desc = "The fourth most common language spoken in the UA."
@@ -114,6 +112,28 @@
 
 	syllables = list("ako", "ito", "dito", "an", "paa", "lam", "kai", "tay", "saan", "taba", "hok", "kama", "ta", "opi", "oo", "dya", "ryo", "kas", "ngi", "nga", "asu", "kal", "lupa", "damo", "baho", "yon", "mari", "pak", "gan", "king", "atin", "ang", "ng", "sa", "nag", "kita", "han", "kan", "araw", "mala", "laba", "baka", "kay", "kina", "ni", "nina", "para", "tung", "kol", "hing", "gil", "ayon", "tungo", "bag", "ba", "bay")
 
+/datum/language/polish
+	name = LANGUAGE_POLISH
+	desc = "A West Slavic language spoken by Polish people. Currently the fifth most commonly spoken in the UPP."
+	speech_verb = "says"
+	ask_verb = "inquires"
+	exclaim_verb = "shouts"
+	color = "polish"
+	key = "p"
+
+	syllables = list("się", "w", "je", "na", "to", "nie", "że", "i", "z", "do", "tak", "jak", "o", "mnie", "za", "ja", "mi", "ale", "czy", "ty", "ci", "cię", "już", "ma", "mam", "pan", "coś", "dla", "dobrze", "szę", "być", "wię", "mogę", "są", "więc", "kurwa", "pierdole", "był", "moj", "chcę", "ją", "pęk", "gor", "żeb", "że", "źółć", "kto", "bo", "mu", "on", "ona", "tej", "ktoś", "sam", "ta", "czas", "raz", "daj", "kim", "przy", "nikt", "dwa", "cóż", "iść", "ile", "cały", "nią", "idź", "trzy", "rację", "chaj", "spójrz", "nasz", "lub", "kogo", "którą", "źle", "pew", "oto", "całą", "zrób", "wczor", "boga", "bog")
+
+/datum/language/hellhound
+	name = LANGUAGE_HELLHOUND
+	desc = "A growling, guttural method of communication, only Hellhounds seem to be capable of producing these sounds."
+	speech_verb = "growls"
+	ask_verb = "grumbles"
+	exclaim_verb = "snarls"
+	color = "monkey"
+	key = "h"
+
+/datum/language/hellhound/scramble(input)
+	return pick("Grrr...", "Grah!", "Gurrr...")
 
 /datum/language/commando
 	name = LANGUAGE_TSL
@@ -141,18 +161,6 @@
 	syllables = list("!", "?", ".", "@", "$", "%", "^", "&", "*", "-", "=", "+", "e", "b", "y", "p", "|", "z", "~", ">")
 	space_chance = 20
 
-/datum/language/hellhound
-	name = LANGUAGE_HELLHOUND
-	desc = "A growling, guttural method of communication, only Hellhounds seem to be capable of producing these sounds."
-	speech_verb = "growls"
-	ask_verb = "grumbles"
-	exclaim_verb = "snarls"
-	color = "monkey"
-	key = "h"
-
-/datum/language/hellhound/scramble(input)
-	return pick("Grrr...", "Grah!", "Gurrr...")
-
 /datum/language/primitive
 	name = LANGUAGE_MONKEY
 	desc = "Ook ook ook."
@@ -160,7 +168,7 @@
 	ask_verb = "chimpers"
 	exclaim_verb = "screeches"
 	color = "monkey"
-	key = "_"
+	key = "m"
 
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH

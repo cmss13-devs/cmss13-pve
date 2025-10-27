@@ -11,17 +11,20 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
-	penetration= -ARMOR_PENETRATION_TIER_2
+	penetration= -ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/pistol/tiny
 	name = "light pistol bullet"
 
+/datum/ammo/bullet/pistol/upp
+	name = "9x18 bullet"
+
 /datum/ammo/bullet/pistol/tranq
 	name = "tranquilizer bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
-	stamina_damage = 30
+	stamina_damage = 60
 	damage = 15
 
 //2020 rebalance: is supposed to counter runners and lurkers, dealing high damage to the only castes with no armor.
@@ -31,8 +34,8 @@
 	name = "hollowpoint 9x19 bullet"
 
 	damage = 55 //hollowpoint is strong
-	penetration = -ARMOR_PENETRATION_TIER_5 //hollowpoint can't pierce armor!
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3 //hollowpoint causes shrapnel
+	penetration = -ARMOR_PENETRATION_TIER_3 //hollowpoint can't pierce armor!
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5 //hollowpoint causes shrapnel
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
@@ -40,8 +43,7 @@
 
 	damage = 25
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_2
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	penetration= ARMOR_PENETRATION_TIER_3
 
 /datum/ammo/bullet/pistol/ap/penetrating
 	name = "wall-penetrating 9x19 bullet"
@@ -79,7 +81,7 @@
 	name = "armor-shredding 9x19 bullet"
 
 	damage = 15
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_5
 	pen_armor_punch = 3
 
 /datum/ammo/bullet/pistol/rubber
@@ -105,11 +107,22 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	damage = 45
-	penetration = ARMOR_PENETRATION_TIER_3
+	damage = 55
+	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
-/datum/ammo/bullet/pistol/heavy/super //Commander's variant
+/datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
+	name = "supersonic heavy pistol bullet"
+	shell_speed = AMMO_SPEED_TIER_5
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
+	. = ..()
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 2)
+
+/datum/ammo/bullet/pistol/heavy/super //Commander's variant //Not messing with this, it can retain The Funny Values
 	name = ".50 heavy pistol bullet"
 	damage = 60
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
@@ -147,7 +160,7 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
 
 /datum/ammo/bullet/pistol/incendiary
@@ -176,7 +189,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	damage = 36
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
 // Used by VP78 and Auto 9

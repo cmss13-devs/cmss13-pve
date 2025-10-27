@@ -85,6 +85,7 @@
 	var/delete
 	var/temphtml
 	var/datum/health_scan/last_health_display
+	var/paper_left = 20
 
 /obj/structure/machinery/body_scanconsole/Initialize()
 	. = ..()
@@ -111,6 +112,23 @@
 		connected.connected = null
 		QDEL_NULL(connected)
 	. = ..()
+
+/obj/structure/machinery/body_scanconsole/proc/print_report(mob/living/user)
+	if(!last_health_display)
+		to_chat(user, "There is no scan data to print.")
+		return
+	if(paper_left <= 0)
+		to_chat(user, "[src] ran out of paper, and cannot print a report")
+		return
+	var/obj/item/paper/print_report = new /obj/item/paper
+	var/last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_BODYSCAN)
+	print_report.info += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.info_links += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.update_icon()
+	print_report.name = "\improper scan print-out of " + last_scan["patient"]
+	user.put_in_hands(print_report)
+	paper_left--
+	visible_message("\The [src] spits out a piece of paper.")
 
 
 /obj/structure/machinery/body_scanconsole/ex_act(severity)
@@ -186,7 +204,7 @@
 	visible_message(SPAN_NOTICE("\The [src] pings as it stores the scan report of [H.real_name]"))
 	playsound(src.loc, 'sound/machines/screen_output1.ogg', 25)
 
-	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE)
+	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE, associated_equipment = src)
 
 	return
 

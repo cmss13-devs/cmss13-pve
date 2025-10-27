@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Last vestiges of anglicized UPP ranks/job titles should be handled now"
+  - bugfix: "UPP squad lead's lesser rank preset matches the naming standards of other ones now"
+  - bugfix: "gives the USCM pilot helmet the right visor-type"

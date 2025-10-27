@@ -14,6 +14,7 @@
 	max_storage_space = 21
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
+	var/bag_open_time = 2 SECONDS //How long it takes to open the bag
 	var/obj/item/card/id/locking_id = null
 	var/is_id_lockable = FALSE
 	var/lock_overridable = TRUE
@@ -128,7 +129,7 @@
 		if(!worn_accessible)
 			if(H.back == src && !user.action_busy) //Not doing any timed actions?
 				to_chat(H, SPAN_NOTICE("You begin to open [src], so you can check its contents."))
-				if(!do_after(user, 2 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+				if(!do_after(user, bag_open_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
 					to_chat(H, SPAN_WARNING("You were interrupted!"))
 					return FALSE
 				RegisterSignal(user, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(storage_close)) //Continue along the proc and allow opening if not locked; close on movement.
@@ -428,7 +429,7 @@
 	storage_slots = 3
 	icon_state = "ammo_pack_0"
 	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade)
-	max_w_class = SIZE_MASSIVE
+	max_w_class = SIZE_HUGE
 	throw_range = 0
 	xeno_types = null
 	var/base_icon_state = "ammo_pack"
@@ -540,14 +541,30 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone)
+
 /obj/item/storage/backpack/marine/satchel/rto/Initialize()
 	. = ..()
 
-	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit)
+	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE)
 	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_STOPPED_RINGING, PROC_REF(phone_stopped_ringing))
+
+/datum/action/item_action/rto_pack/use_phone/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
 
 /obj/item/storage/backpack/marine/satchel/rto/proc/phone_picked_up()
 	icon_state = PHONE_OFF_BASE_UNIT_ICON_STATE
@@ -628,9 +645,23 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A backpack specifically designed to hold ammunition for the M402 mortar."
 	icon_state = "mortarpack"
 	max_w_class = SIZE_HUGE
-	storage_slots = 8
-	can_hold = list(/obj/item/mortar_shell)
+	storage_slots = 12
+	can_hold = list(/obj/item/mortar_shell, /obj/item/device/binoculars)
 	xeno_types = null
+
+/obj/item/storage/backpack/marine/mortarpack/full/fill_preset_inventory()
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/flare(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/he(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
+	new /obj/item/mortar_shell/incendiary(src)
 
 /// G-8-a general pouch belt
 /obj/item/storage/backpack/general_belt
@@ -674,6 +705,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 		new /obj/item/ammo_magazine/hpr_box/ap (src)
 
+#define FULL_CAMO_ALPHA 15
+#define VISIBLE_CAMO_ALPHA 60
+
+#define FULL_PVE_CAMO_ALPHA 30
+#define VISIBLE_PVE_CAMO_ALPHA 75
+
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
@@ -683,9 +720,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	indestructible = TRUE
 	has_gamemode_skin = FALSE //same sprite for all gamemode.
 	var/camo_active = FALSE
-	var/camo_alpha = 10
-	var/allow_gun_usage = FALSE
+	var/full_camo_alpha = FULL_PVE_CAMO_ALPHA
+	var/incremental_shooting_camo_penalty = 30
+	var/current_camo = FULL_PVE_CAMO_ALPHA
+	var/visible_camo_alpha = VISIBLE_PVE_CAMO_ALPHA
+	var/camouflage_break = 8 SECONDS
 	var/cloak_cooldown
+	var/camo_message_delay = 2 SECONDS
 
 	actions_types = list(/datum/action/item_action/specialist/toggle_cloak)
 
@@ -723,9 +764,15 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		to_chat(H, SPAN_WARNING("Your cloak is malfunctioning and can't be enabled right now!"))
 		return
 
-	RegisterSignal(H, COMSIG_GRENADE_PRE_PRIME, PROC_REF(cloak_grenade_callback))
+	RegisterSignal(H,  list(
+		COMSIG_MOB_FIRED_GUN,
+		COMSIG_MOB_FIRED_GUN_ATTACHMENT)
+		, PROC_REF(fade_in))
 	RegisterSignal(H, COMSIG_HUMAN_EXTINGUISH, PROC_REF(wrapper_fizzle_camouflage))
-	RegisterSignal(H, COMSIG_MOB_EFFECT_CLOAK_CANCEL, PROC_REF(deactivate_camouflage))
+	RegisterSignal(H, list(
+		COMSIG_MOB_DEATH,
+		COMSIG_MOB_EFFECT_CLOAK_CANCEL
+	), PROC_REF(deactivate_camouflage))
 
 	camo_active = TRUE
 	ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
@@ -733,9 +780,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	playsound(H.loc, 'sound/effects/cloak_scout_on.ogg', 15, TRUE)
 	H.unset_interaction()
 
-	H.alpha = camo_alpha
+	H.alpha = full_camo_alpha
 	H.FF_hit_evade = 1000
-	H.allow_gun_usage = allow_gun_usage
 
 	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.remove_from_hud(H)
@@ -744,6 +790,29 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
 	return TRUE
+
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_in(mob/user)
+	SIGNAL_HANDLER
+	var/mob/living/carbon/human/H = user
+	if(camo_active)
+		if(current_camo < full_camo_alpha)
+			current_camo = full_camo_alpha
+		current_camo = clamp(current_camo + incremental_shooting_camo_penalty, full_camo_alpha, 255)
+		H.alpha = current_camo
+		if(current_camo > visible_camo_alpha)
+			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+			to_chat(H, SPAN_BOLDNOTICE("Your cloak can't keep you perfectly hidden anymore!"))
+		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
+		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_out_finish(mob/living/carbon/human/H)
+	if(camo_active && H.back == src)
+		ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
+		to_chat(H, SPAN_BOLDNOTICE("Your cloak shimmers, returning to it's perfectly camouflaged state!"))
+		animate(H, alpha = full_camo_alpha)
+		current_camo = full_camo_alpha
+
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/proc/wrapper_fizzle_camouflage()
 	SIGNAL_HANDLER
@@ -760,8 +829,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 		return FALSE
 
 	UnregisterSignal(H, list(
-	COMSIG_GRENADE_PRE_PRIME,
+	COMSIG_MOB_FIRED_GUN,
+	COMSIG_MOB_FIRED_GUN_ATTACHMENT,
 	COMSIG_HUMAN_EXTINGUISH,
+	COMSIG_MOB_DEATH,
 	COMSIG_MOB_EFFECT_CLOAK_CANCEL,
 	))
 
@@ -784,21 +855,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(anim)
 		anim(H.loc, H,'icons/mob/mob.dmi', null, "uncloak", null, H.dir)
 
-	addtimer(CALLBACK(src, PROC_REF(allow_shooting), H), 1.5 SECONDS)
-
-// This proc is to cancel priming grenades in /obj/item/explosive/grenade/attack_self()
-/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/cloak_grenade_callback(mob/user)
-	SIGNAL_HANDLER
-
-	to_chat(user, SPAN_WARNING("Your cloak prevents you from priming the grenade!"))
-
-	return COMPONENT_GRENADE_PRIME_CANCEL
-
-/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/allow_shooting(mob/living/carbon/human/H)
-	if(camo_active && !allow_gun_usage)
-		return
-	H.allow_gun_usage = TRUE
-
 /datum/action/item_action/specialist/toggle_cloak
 	ability_primacy = SPEC_PRIMARY_ACTION_1
 
@@ -819,6 +875,11 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	. = ..()
 	var/obj/item/storage/backpack/marine/satchel/scout_cloak/SC = holder_item
 	SC.camouflage()
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/invis
+	full_camo_alpha = FULL_CAMO_ALPHA
+	current_camo = FULL_CAMO_ALPHA
+	visible_camo_alpha = VISIBLE_CAMO_ALPHA
 
 // Welder Backpacks //
 
@@ -1093,13 +1154,17 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
-
 	max_storage_space = 21
-	camo_alpha = 10
 
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/weak
-	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This one is less effective than normal."
-	actions_types = null
+/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/invis
+	full_camo_alpha = FULL_CAMO_ALPHA
+	current_camo = FULL_CAMO_ALPHA
+	visible_camo_alpha = VISIBLE_CAMO_ALPHA
+
+#undef FULL_CAMO_ALPHA
+#undef VISIBLE_CAMO_ALPHA
+#undef FULL_PVE_CAMO_ALPHA
+#undef VISIBLE_PVE_CAMO_ALPHA
 
 //----------TWE SECTION----------
 /obj/item/storage/backpack/rmc
@@ -1110,15 +1175,32 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "The heavy-carry pack of the RMC forces. Designed to lug the most amount of gear into the battlefield."
 	icon_state = "backpack_large"
 	item_state = "backpack_large"
-	max_storage_space = 27
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/rmc/medic
+	name = "RMC medical backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by Medical Assistants to fit their needs better."
+	icon_state = "backpack_medium_medic"
+	item_state = "backpack_medium_medic"
+	worn_accessible = TRUE
+	max_storage_space = 21
 
 /obj/item/storage/backpack/rmc/medium
 	name = "standard RMC backpack"
 	desc = "A TWE military standard-carry RMC combat pack MK3."
 	icon_state = "backpack_medium"
 	item_state = "backpack_medium"
+	max_storage_space = 18
+
+/obj/item/storage/backpack/marine/engineerpack/satchel/rmc
+	name = "RMC engineering backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by ingenious Royal Engineers to better fit their requirements."
+	icon_state = "backpack_sapper"
+	item_state = "backpack_sapper"
+	max_storage_space = 18
+	max_fuel = 150
 	worn_accessible = TRUE
-	max_storage_space = 24
 
 /obj/item/storage/backpack/rmc/light
 	name = "lightweight RMC backpack"
@@ -1126,34 +1208,39 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_small"
 	item_state = "backpack_small"
 	worn_accessible = TRUE
-	max_storage_space = 21
+	max_storage_space = 15
 
 /obj/item/storage/backpack/rmc/frame //One sorry sod should have to lug this about spawns in their shuttle currently
 	name = "\improper RMC carry-frame"
 	desc = "A backpack specifically designed to hold equipment for commandos."
-	icon_state = "backpack_frame"
+	icon_state = "backpack_frame_0"
 	item_state = "backpack_frame"
 	max_w_class = SIZE_HUGE
 	storage_slots = 7
 	can_hold = list(
-		/obj/item/ammo_box/magazine/misc/mre,
-		/obj/item/storage/firstaid/regular,
-		/obj/item/storage/firstaid/adv,
-		/obj/item/storage/firstaid/surgical,
-		/obj/item/device/defibrillator/compact,
-		/obj/item/tool/surgery/surgical_line,
-		/obj/item/tool/surgery/synthgraft,
-		/obj/item/storage/box/packet/rmc/he,
-		/obj/item/storage/box/packet/rmc/incin,
+		/obj/item/storage/firstaid,
+		/obj/item/storage/box/packet,
+		/obj/item/ammo_box,
+		/obj/item/mortar_shell,
 	)
+	cant_hold = list(
+		/obj/item/ammo_box/magazine/nsg23/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		/obj/item/ammo_box/magazine/mk1/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
+		) //Jank, but amusing to think that the janitor can store these things in a frame pack whilst a marine commando can't
 
-/obj/item/storage/backpack/general_belt/rmc //the breachers belt
-	name = "\improper RMC general utility belt"
+	var/base_icon_state = "backpack_frame"
+
+/obj/item/storage/backpack/rmc/frame/update_icon()
+	. = ..()
+	icon_state = "[base_icon_state]_[length(contents)]"
+
+/obj/item/storage/backpack/general_belt/rmc
+	name = "\improper L26 pattern general utility belt"
 	desc = "A small, lightweight pouch that can be clipped onto armor to provide additional storage. This new RMC model, while uncomfortable, can also be clipped around the waist."
 	icon_state = "rmc_general"
 	item_state = "rmc_general"
 	has_gamemode_skin = FALSE
-	max_storage_space = 15
+	max_storage_space = 10
 
 //----------USASF & ARMY SECTION----------
 

@@ -76,14 +76,36 @@ endmap
 
 map lv295_blacksite
 endmap
+
+map si391_sekhmet_swamp
+endmap
+
 map bmg290_otogi_egress_point
 endmap
 
 map canyon_32b
 endmap
 
+map kleschers_research_site
+endmap
+
+map taipei_station
+endmap
+
+map bosenmori_basho
+endmap
+
 map calliope_highway
 endmap
 
 map calliope_desert_bus
+endmap
+
+map oread_garrison
+endmap
+
+map redemption_valley
+endmap
+
+map binhai_supply_station
 endmap

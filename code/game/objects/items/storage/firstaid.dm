@@ -11,6 +11,7 @@
 	desc = "It's an emergency medical kit for those serious boo-boos."
 	icon = 'icons/obj/items/storage/medical.dmi'
 	icon_state = "firstaid"
+	w_class = SIZE_LARGE
 	var/open_state = "kit_empty"
 	throw_speed = SPEED_FAST
 	throw_range = 8
@@ -34,6 +35,7 @@
 		/obj/item/reagent_container/blood,
 	)
 	storage_flags = STORAGE_FLAGS_BOX
+	max_w_class = SIZE_SMALL
 
 	var/icon_full //icon state to use when kit is full
 	var/possible_icons_full
@@ -71,10 +73,10 @@
 
 
 /obj/item/storage/firstaid/fire/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
@@ -87,7 +89,7 @@
 	desc = "It's an emergency medical kit containing basic medication and equipment."
 
 /obj/item/storage/firstaid/regular/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -101,11 +103,14 @@
 /obj/item/storage/firstaid/regular/response
 	desc = "It's an emergency medical kit containing basic medication and equipment."
 
+
 /obj/item/storage/firstaid/robust
 	icon_state = "firstaid"
+	storage_slots = 8
 
 /obj/item/storage/firstaid/robust/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/device/healthanalyzer/soul(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
@@ -123,12 +128,15 @@
 	item_state = "firstaid-toxin"
 	possible_icons_full = list("antitoxin","antitoxfirstaid","antitoxfirstaid2","antitoxfirstaid3")
 
+
 /obj/item/storage/firstaid/toxin/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/reagent_container/pill/nitrogenwater(src)
+	new /obj/item/reagent_container/pill/carbon(src)
 	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/pill/antitox(src)
-	new /obj/item/reagent_container/pill/antitox(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/ethylredoxrazine(src)
 
 /obj/item/storage/firstaid/toxin/empty/fill_preset_inventory()
 	return
@@ -140,12 +148,12 @@
 	item_state = "firstaid-o2"
 
 /obj/item/storage/firstaid/o2/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/reagent_container/pill/peridaxon(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/pill/dexalin(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
 
 /obj/item/storage/firstaid/o2/empty/fill_preset_inventory()
@@ -161,7 +169,7 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/blood/saline(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
@@ -212,8 +220,8 @@
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/reagent_container/pill/imidazoline(src)
+	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
 /obj/item/storage/firstaid/rad/empty/fill_preset_inventory()
@@ -221,8 +229,9 @@
 
 /obj/item/storage/firstaid/surgical
 	name = "basic field surgery kit"
-	desc = "Contains a surgical line, cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically."
+	desc = "Contains a health analyzer, surgical line, Synth-Graft cautery, scalpel, hemostat, retractor, drapes and an oxycodone injector for tending wounds surgically."
 	icon_state = "bezerk"
+	storage_slots = 8
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/reagent_container/dropper,
@@ -237,12 +246,13 @@
 	)
 
 /obj/item/storage/firstaid/surgical/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/cautery(src)
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 
 /obj/item/storage/firstaid/surgical/empty/fill_preset_inventory()
@@ -250,9 +260,10 @@
 
 //---------SOFT PACKS---------
 /obj/item/storage/firstaid/softpack
-	name = "first-aid pack"
-	desc = "A soft first aid kit typically containing essential medical supplies for use in the field."
+	name = "standard-issue first-aid pack"
+	desc = "A soft first-aid pack typically containing essential medical supplies for use in the field."
 	icon_state = "softpack"
+	w_class = SIZE_MEDIUM
 	open_state = "softpack_empty"
 	use_sound = 'sound/items/zip.ogg'
 
@@ -265,7 +276,48 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 
+/obj/item/storage/firstaid/softpack/upp
+	icon_state = "softpack_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/regular
+	name = "general first-aid pack"
+	desc = "A soft first-aid pack containing basic medication and equipment for use in the field."
+
+/obj/item/storage/firstaid/softpack/regular/fill_preset_inventory()
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
+	new /obj/item/stack/medical/bruise_pack(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+
+/obj/item/storage/firstaid/softpack/regular/upp
+	icon_state = "softpack_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/adv
+	name = "advanced first-aid pack"
+	desc = "A soft first-aid pack containing sophisticated equipment for all-around treatment in the field."
+	icon_state = "softpack_darkred"
+
+/obj/item/storage/firstaid/softpack/adv/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+
+/obj/item/storage/firstaid/softpack/adv/upp
+	icon_state = "softpack_darkred_upp"
+	open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/brute
+	name = "brute first-aid pack"
+	desc = "A soft first-aid pack containing equipment for physical treatment in the field."
 	icon_state = "softpack_purple"
 
 /obj/item/storage/firstaid/softpack/brute/fill_preset_inventory()
@@ -274,32 +326,167 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/tool/surgery/surgical_line(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
-/obj/item/storage/firstaid/softpack/burn
+/obj/item/storage/firstaid/softpack/brute/upp
+	icon_state = "softpack_purple_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/fire
+	name = "fire first-aid pack"
+	desc = "A soft first-aid pack containing basic equipment for light burns treatment in the field."
 	icon_state = "softpack_orange"
+
+/obj/item/storage/firstaid/softpack/fire/fill_preset_inventory()
+	new /obj/item/reagent_container/syringe/leporazine_dermaline(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
+
+/obj/item/storage/firstaid/softpack/fire/upp
+	icon_state = "softpack_orange_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/burn
+	name = "burn first-aid pack"
+	desc = "A soft first-aid pack containing equipment for burns treatment in the field."
+	icon_state = "softpack_darkorange"
 
 /obj/item/storage/firstaid/softpack/burn/fill_preset_inventory()
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/kilodermlipo(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
 
+/obj/item/storage/firstaid/softpack/burn/upp
+	icon_state = "softpack_darkorange_upp"
+	open_state = "softpack_empty_upp"
+
 /obj/item/storage/firstaid/softpack/toxin
+	name = "toxin first-aid pack"
+	desc = "A soft first-aid pack containing equipment for toxin treatment in the field."
 	icon_state = "softpack_green"
 
 /obj/item/storage/firstaid/softpack/toxin/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/nitrogenwater(src)
+	new /obj/item/storage/pill_bottle/russianRed/skillless(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
+
+/obj/item/storage/firstaid/softpack/toxin/upp
+	icon_state = "softpack_green_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/o2
+	name = "oxygen deprivation first-aid pack"
+	desc = "A soft first-aid pack containing equipment for reoxygenating treatment in the field."
+	icon_state = "softpack_blue"
+
+/obj/item/storage/firstaid/softpack/o2/fill_preset_inventory()
+	new /obj/item/reagent_container/pill/peridaxon(src)
+	new /obj/item/reagent_container/pill/dexalin(src)
+	new /obj/item/reagent_container/pill/dexalin(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/blood/saline(src)
+	new /obj/item/reagent_container/pill/iron(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
+
+/obj/item/storage/firstaid/softpack/o2/upp
+	icon_state = "softpack_blue_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/synth
+	name = "synthetic repair pack"
+	desc = "A soft first-aid pack containing equipment to repair a damaged synthetic in the field."
+	icon_state = "softpack_gray"
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/stack/nanopaste,
+		/obj/item/stack/cable_coil,
+		/obj/item/tool/weldingtool,
+	)
+
+/obj/item/storage/firstaid/softpack/synth/fill_preset_inventory()
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/nanopaste(src)
+	new /obj/item/stack/cable_coil/white(src)
+	new /obj/item/stack/cable_coil/white(src)
+	new /obj/item/tool/weldingtool(src)
+
+/obj/item/storage/firstaid/softpack/synth/upp
+	icon_state = "softpack_gray_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/rad
+	name = "radiation first-aid pack"
+	desc = "A soft first-aid pack containing equipment to treat radiation exposure in the field."
+	icon_state = "softpack_darkgreen"
+
+/obj/item/storage/firstaid/softpack/rad/fill_preset_inventory()
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
 	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/pill/russianRed(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
+	new /obj/item/reagent_container/pill/imidazoline(src)
+	new /obj/item/reagent_container/pill/antitox(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
 
+/obj/item/storage/firstaid/softpack/rad/upp
+	icon_state = "softpack_darkgreen_upp"
+	open_state = "softpack_empty_upp"
+
+/obj/item/storage/firstaid/softpack/surgical
+	name = "basic field surgery pack"
+	desc = "A soft first-aid pack containing tools and equipment necessary for surgically tending to wounds in the field."
+	icon_state = "softpack_gray"
+	storage_slots = 8
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/dropper,
+		/obj/item/reagent_container/pill,
+		/obj/item/reagent_container/glass/bottle,
+		/obj/item/reagent_container/syringe,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/tool/surgery,
+	)
+
+/obj/item/storage/firstaid/softpack/surgical/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/cautery(src)
+	new /obj/item/tool/surgery/scalpel(src)
+	new /obj/item/tool/surgery/hemostat(src)
+	new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+
+/obj/item/storage/firstaid/softpack/surgical/upp
+	icon_state = "softpack_gray_upp"
+	open_state = "softpack_empty_upp"
 
 //---------SYRINGE CASE---------
 
@@ -319,6 +506,7 @@
 		/obj/item/paper,
 		/obj/item/reagent_container/syringe,
 		/obj/item/reagent_container/hypospray/autoinjector,
+		/obj/item/reagent_container/glass/beaker/vial,
 	)
 
 /obj/item/storage/syringe_case/regular
@@ -372,9 +560,9 @@
 		/obj/item/tool/surgery/scalpel,
 		/obj/item/tool/surgery/hemostat,
 		/obj/item/tool/surgery/retractor,
-		/obj/item/tool/surgery/FixOVein,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
+		/obj/item/tool/surgery/FixOVein,
 	)
 
 /obj/item/storage/surgical_case/regular
@@ -383,6 +571,20 @@
 	new /obj/item/tool/surgery/scalpel(src)
 	new /obj/item/tool/surgery/hemostat(src)
 	new /obj/item/tool/surgery/retractor(src)
+
+
+/obj/item/storage/surgical_case/rmc_surgical_case
+	name = "\improper RMC surgical case"
+	desc = "It's a medical case for storing basic surgical tools. This one was made specifically for Royal Marine Commandos, allowing them to suture their wounds during prolonged operations or perform emergency surgeries. Given the lack of tools, non-standard methods may need to be employed for the latter."
+	icon_state = "rmc_surgical_case"
+	storage_slots = 5
+
+/obj/item/storage/surgical_case/rmc_surgical_case/full/fill_preset_inventory()
+	new /obj/item/tool/surgery/scalpel(src)
+	new /obj/item/tool/surgery/hemostat(src)
+	new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
 
 //---------PILL BOTTLES---------
 

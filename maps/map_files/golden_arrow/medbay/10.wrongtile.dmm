@@ -61,9 +61,9 @@
 "ff" = (
 /obj/structure/phone_base{
 	pixel_y = 6;
-	name = "supply bay receiver";
+	name = "medical bay receiver";
 	phone_category = "Golden Arrow";
-	phone_id = "Supply Bay";
+	phone_id = "Medical Bay";
 	pixel_x = 23;
 	dir = 8
 	},
@@ -314,11 +314,15 @@
 /area/golden_arrow/medical)
 "wx" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
-	pixel_y = 8;
-	pixel_x = 3
+	pixel_x = -5;
+	pixel_y = 13
 	},
+/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated{
+	pixel_y = 10;
+	pixel_x = 4
+	},
+/obj/item/storage/belt/medical/only_scanner,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/medical)
 "yh" = (

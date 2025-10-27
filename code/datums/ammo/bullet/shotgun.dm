@@ -126,7 +126,7 @@
 	scatter = SCATTER_AMOUNT_TIER_5
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
-	damage = 60
+	damage = 80
 
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"
@@ -321,13 +321,14 @@
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
 /datum/ammo/bullet/shotgun/heavy/buckshot/special
+	name = "superheavy buckshot shell"
 	bonus_projectiles_type = /datum/ammo/bullet/shotgun/heavy/buckshot/spread/special
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_8
 	accurate_range = 8
 	max_range = 8
-	damage = 75
-	penetration = 0
+	damage = 100
 	shell_speed = AMMO_SPEED_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_3
 	damage_armor_punch = 0
 	pen_armor_punch = 0
 
@@ -336,6 +337,7 @@
 	accurate_range = 8
 	max_range = 8
 	damage = 100
+	penetration = ARMOR_PENETRATION_TIER_3
 
 //basically the same
 /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
@@ -444,27 +446,27 @@
 					16 GAUGE SHOTGUN AMMO
 */
 
-/datum/ammo/bullet/shotgun/light/breaching
-	name = "light breaching shell"
-	icon_state = "flechette"
-	handful_state = "breaching_shell"
+/datum/ammo/bullet/shotgun/buckshot/light
+	name = "light buckshot"
+	handful_state = "lightshot_shell"
 	multiple_handful_name = TRUE
-	bonus_projectiles_type = /datum/ammo/bullet/shotgun/light/breaching/spread
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/buckshot/light/spread
 
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
-	damage = 55
-	max_range = 5
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_10
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_1
+	damage = 45
+	max_range = 7
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	penetration = ARMOR_PENETRATION_TIER_1
 
-/datum/ammo/bullet/shotgun/light/breaching/spread
-	name = "additional light breaching fragments"
+
+/datum/ammo/bullet/shotgun/buckshot/light/spread
+	name = "light buckshot spread"
 	bonus_projectiles_amount = 0
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_10
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_1
 	scatter = SCATTER_AMOUNT_TIER_3
-	damage = 10
+	damage = 20
 
 //Enormous shell for Van Bandolier's superheavy double-barreled hunting gun.
 /datum/ammo/bullet/shotgun/twobore

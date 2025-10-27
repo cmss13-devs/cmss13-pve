@@ -1,0 +1,7 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "FORECON HPR variant to their ship."
+  - rscadd: "Some armor accessories variation to FORECON vendors"
+  - rscdel: "Removed camo comforming uniform option from FORECON vendor"
+  - bugfix: "Fixed modified M79's scope attachment incorrectly appearing visible."

@@ -1,0 +1,149 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/structure/prop/tank{
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi';
+	icon_state = "prop1";
+	layer = 2.02
+	},
+/turf/open/shuttle/vehicle/floor_2,
+/area/interior/vehicle/upptank)
+"b" = (
+/turf/open/void/vehicle,
+/area/space)
+"f" = (
+/obj/effect/landmark/interior/spawn/interior_camera{
+	dir = 10;
+	layer = 3.2;
+	pixel_x = -14;
+	pixel_y = 33
+	},
+/turf/open/shuttle/vehicle/floor_1_14,
+/area/interior/vehicle/upptank)
+"v" = (
+/obj/structure/prop/vehicle/upptank/command{
+	pixel_x = 16
+	},
+/turf/open/void/vehicle,
+/area/space)
+"w" = (
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/vehicle{
+	pixel_y = 27;
+	pixel_x = -9
+	},
+/obj/structure/phone_base{
+	name = "Tank Telephone";
+	phone_id = "Cheetah 2A Light Tank";
+	phone_category = "Vehicles";
+	dir = 1;
+	pixel_x = -18;
+	pixel_y = -20
+	},
+/turf/open/shuttle/vehicle/floor_3_9_1,
+/area/interior/vehicle/upptank)
+"H" = (
+/obj/structure/vehicle_locker/tank/upp2{
+	pixel_x = 3;
+	pixel_y = 27
+	},
+/obj/structure/vehicle_locker/tank/upp2{
+	pixel_x = 11;
+	pixel_y = 27
+	},
+/obj/effect/landmark/interior/spawn/entrance{
+	dir = 8;
+	exit_type = /obj/structure/interior_exit/vehicle/tank;
+	name = "back entrance marker";
+	tag = "back"
+	},
+/obj/structure/extinguisher_cabinet/lifeboat{
+	icon = 'icons/obj/vehicles/interiors/general.dmi';
+	pixel_x = -8;
+	pixel_y = 27;
+	layer = 3.1
+	},
+/turf/open/shuttle/vehicle/floor_1_13,
+/area/interior/vehicle/upptank)
+"M" = (
+/turf/open/void/vehicle/unopacity,
+/area/interior/vehicle/upptank)
+"Q" = (
+/obj/effect/landmark/interior/spawn/weapons_loader{
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi';
+	pixel_x = -6;
+	pixel_y = 23
+	},
+/obj/structure/vehicle_locker/tank/upp1{
+	pixel_x = -25;
+	pixel_y = 16
+	},
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
+	},
+/turf/open/shuttle/vehicle/floor_3_13,
+/area/interior/vehicle/upptank)
+"R" = (
+/obj/structure/machinery/computer/cameras/almayer/vehicle/tank{
+	pixel_y = 20;
+	pixel_x = 10
+	},
+/obj/effect/landmark/interior/spawn/interior_viewport{
+	dir = 1;
+	pixel_y = -12;
+	pixel_x = 3
+	},
+/obj/effect/landmark/interior/spawn/vehicle_commander_seat/armor{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/shuttle/vehicle/floor_3_10_1,
+/area/interior/vehicle/upptank)
+"S" = (
+/turf/open/void/vehicle,
+/area/interior/vehicle/upptank)
+
+(1,1,1) = {"
+b
+b
+b
+b
+v
+"}
+(2,1,1) = {"
+b
+b
+M
+H
+b
+"}
+(3,1,1) = {"
+b
+S
+Q
+f
+b
+"}
+(4,1,1) = {"
+b
+S
+a
+R
+b
+"}
+(5,1,1) = {"
+b
+b
+b
+w
+b
+"}
+(6,1,1) = {"
+b
+b
+b
+b
+b
+"}

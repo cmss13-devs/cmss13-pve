@@ -122,7 +122,7 @@ At bare minimum, make sure the relevant checks from parent types gets copied in 
 /mob/living/ai_check_stat(mob/living/carbon/xenomorph/X)
 //	if(X.target_unconscious)
 //		return TRUE
-	return X.target_unconscious || stat == CONSCIOUS && !(locate(/datum/effects/crit) in effects_list)
+	return stat == CONSCIOUS && (!(locate(/datum/effects/crit) in effects_list) || !(status_flags & CANKNOCKOUT))
 
 /////////////////////////////
 //         CARBON          //

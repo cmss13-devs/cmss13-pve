@@ -129,7 +129,6 @@
 	},
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/storage/fancy/cigar{
-	pixel_x = 0;
 	pixel_y = 2
 	},
 /obj/item/clothing/head/beret/pmc,
@@ -298,6 +297,11 @@
 "el" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/helmet_visor/medical/advanced,
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/firstaid/softpack{
+	pixel_y = 12;
+	pixel_x = 7
+	},
 /turf/open/floor/corsat/green/northeast,
 /area/firefly/medical)
 "em" = (
@@ -1052,7 +1056,6 @@
 "qo" = (
 /obj/item/ammo_box/magazine/mk1/large,
 /obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = 0;
 	pixel_y = 6
 	},
 /turf/open/floor/corsat/plate,
@@ -2265,10 +2268,6 @@
 	},
 /turf/open/floor/wood/ship,
 /area/firefly/co)
-"JH" = (
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/closed/wall/almayer/white/hull,
-/area/firefly/cryo_cell)
 "JJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/corsat/plate,
@@ -2986,13 +2985,6 @@
 /area/firefly/briefing)
 "Vd" = (
 /turf/open/floor/corsat/arrow_west,
-/area/firefly/cryo_cell)
-"Vh" = (
-/obj/structure/machinery/cryopod{
-	dir = 4
-	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
-/turf/open/floor/almayer/plate,
 /area/firefly/cryo_cell)
 "Vv" = (
 /obj/structure/machinery/light{
@@ -15092,7 +15084,7 @@ mH
 mH
 DY
 py
-JH
+mH
 mH
 mH
 gR
@@ -15245,7 +15237,7 @@ aq
 oQ
 oQ
 jZ
-Vh
+hb
 mH
 gR
 gR
@@ -15397,7 +15389,7 @@ mH
 oQ
 oQ
 mH
-JH
+mH
 mH
 gR
 gR

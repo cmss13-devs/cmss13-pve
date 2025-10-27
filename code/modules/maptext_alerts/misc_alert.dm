@@ -36,6 +36,49 @@
 /atom/movable/screen/text/screen_text/picture/snake_eater
 	image_to_play = "snake_eater"
 
+/atom/movable/screen/text/screen_text/picture/gamma_troop
+	image_to_play = "gamma_troop"
+
+/atom/movable/screen/text/screen_text/picture/starting
+	layer = ABOVE_INTRO_LAYER
+	plane = FULLSCREEN_PLANE
+	maptext_height = 480
+	maptext_width = 480
+	screen_loc = "LEFT, TOP-3"
+	maptext_x = 0
+	maptext_y = -410
+	image_to_play = "uscm"
+	style_open = "<span style='font-size:12pt; text-align:center; color: #70D5E9; font-family: \"VCR OSD Mono\"' valign='top'>"
+	fade_out_delay = 1 SECONDS
+
+/atom/movable/screen/text/screen_text/picture/starting/Initialize(mapload, datum/hud/hud_owner)
+	. = ..()
+	add_filter("text_glow", 2, drop_shadow_filter(x = 0, y = 0, size = 3, color = "#70D5E9"))
+
+/atom/movable/screen/text/screen_text/picture/starting/wy
+	image_to_play = "wy"
+
+/atom/movable/screen/text/screen_text/picture/starting/upp
+	image_to_play = "upp"
+
+/atom/movable/screen/text/screen_text/picture/starting/twe
+	image_to_play = "twe"
+
+/atom/movable/screen/text/screen_text/hypersleep_status
+	maptext_height = 480
+	maptext_width = 480
+	maptext_x = 0
+	maptext_y = -500
+	screen_loc = "LEFT,TOP-3"
+	letters_per_update = 1
+	fade_out_delay = 1 SECONDS
+	style_open = "<span style='font-size:15pt; text-align:center; color: #c0f7ff; font-family: \"VCR OSD Mono\"' valign='top'>"
+	style_close = "</span>"
+
+/atom/movable/screen/text/screen_text/hypersleep_status/Initialize(mapload)
+	. = ..()
+	add_filter("text_glow", 2, drop_shadow_filter(x = 0, y = 0, size = 3, color = "#70D5E9"))
+
 /atom/movable/screen/text/screen_text/directed_by
 	layer = INTRO_LAYER
 	plane = INTRO_PLANE
@@ -81,6 +124,9 @@
 	holding_movable.overlays += mugshot_name
 
 	vis_contents += holding_movable
+
+/atom/movable/screen/text/screen_text/potrait/faster
+	fade_out_delay = 4 SECONDS
 
 /atom/movable/screen/text/screen_text/picture/potrait_custom_mugshot
 	image_to_play = "custom"

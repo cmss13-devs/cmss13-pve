@@ -1,0 +1,4 @@
+author: "ItsTisme"
+delete-after: True
+changes:
+  - rscadd: "Added new button for GM's to quickly add records based on certain mob"

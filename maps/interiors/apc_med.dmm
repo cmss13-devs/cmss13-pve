@@ -373,7 +373,10 @@
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
 	},
-/obj/effect/landmark/interior/spawn/telephone{
+/obj/structure/phone_base/toc{
+	name = "APC reciever";
+	phone_category = "Vehicles";
+	phone_id = "M577-MED Armoured Personnel Carrier";
 	pixel_x = 5;
 	pixel_y = 30
 	},

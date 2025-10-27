@@ -25,6 +25,8 @@ export const GameMaster = (props, context) => {
           <GameMasterObjectivePanel />
 
           <GameMasterCommunicationPanel />
+
+          <GameMasterRecordPanel />
         </Stack>
       </Window.Content>
     </Window>
@@ -253,6 +255,26 @@ export const GameMasterCommunicationPanel = (props, context) => {
           <Box fontFamily="monospace">{`"${data.radio_clarity_example}"`}</Box>
         </Stack.Item>
       </Stack>
+    </Section>
+  );
+};
+
+export const GameMasterRecordPanel = (props, context) => {
+  const { data, act } = useBackend();
+
+  return (
+    <Section title="Records">
+      <Stack.Item>
+        <Button
+          ml={1}
+          selected={data.record_create_click_intercept}
+          onClick={() => {
+            act('toggle_click_record_creation');
+          }}
+        >
+          Create record for person on click
+        </Button>
+      </Stack.Item>
     </Section>
   );
 };

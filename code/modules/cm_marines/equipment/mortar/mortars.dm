@@ -31,7 +31,7 @@
 	var/firing = FALSE
 	/// If set to 1, can't unanchor and move the mortar, used for map spawns and WO
 	var/fixed = FALSE
-	/// if true, blows up the shell immediately
+	/// if true, blows up the shell immediately, provided there's a ceiling overhead
 	var/ship_side = FALSE
 
 	var/obj/structure/machinery/computer/cameras/mortar/internal_camera
@@ -260,7 +260,8 @@
 				to_chat(user, SPAN_WARNING("You cannot bomb the landing zone!"))
 				return
 
-		if(ship_side)
+		var/area/our_area = get_area(src)
+		if(ship_side && (CEILING_IS_PROTECTED(our_area.ceiling, CEILING_PROTECTION_TIER_2)))
 			var/crash_occurred = (SSticker?.mode?.is_in_endgame)
 			if(crash_occurred)
 				var/turf/our_turf = get_turf(src)
@@ -347,8 +348,9 @@
 		firing = FALSE
 		return
 
-	if(ship_side)
-		var/turf/our_turf = get_turf(src)
+	var/area/our_area = get_area(src)
+	var/turf/our_turf = get_turf(src)
+	if(ship_side && (CEILING_IS_PROTECTED(our_area.ceiling, CEILING_PROTECTION_TIER_2)))
 		shell.detonate(our_turf)
 		return
 
@@ -387,9 +389,6 @@
 
 /obj/structure/mortar/proc/can_fire_at(mob/user, test_targ_x = targ_x, test_targ_y = targ_y, test_dial_x, test_dial_y)
 	var/dialing = test_dial_x || test_dial_y
-	if(ship_side)
-		to_chat(user, SPAN_WARNING("You cannot aim the mortar while on a ship."))
-		return FALSE
 	if(test_dial_x + test_targ_x > world.maxx || test_dial_x + test_targ_x < 0)
 		to_chat(user, SPAN_WARNING("You cannot [dialing ? "dial to" : "aim at"] this coordinate, it is outside of the area of operations."))
 		return FALSE
@@ -455,8 +454,12 @@
 		var/obj/structure/mortar/mortar = new mortar_type(deploy_turf)
 		if(!is_ground_level(deploy_turf.z))
 			mortar.ship_side = TRUE
-			user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
-				SPAN_NOTICE("You deploy [src]. This is a bad idea."))
+			if(CEILING_IS_PROTECTED(area.ceiling, CEILING_PROTECTION_TIER_2))
+				user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
+					SPAN_NOTICE("You deploy [src]. This is a bad idea."))
+			else
+				user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
+					SPAN_NOTICE("You deploy [src]."))
 		else
 			user.visible_message(SPAN_NOTICE("[user] deploys [src]."), \
 				SPAN_NOTICE("You deploy [src]."))
@@ -488,7 +491,8 @@
 			to_chat(user, SPAN_WARNING("Someone else is currently using [src]."))
 			return
 
-		if(ship_side)
+		var/area/our_area = get_area(src)
+		if(ship_side && (CEILING_IS_PROTECTED(our_area.ceiling, CEILING_PROTECTION_TIER_2)))
 			var/crash_occurred = (SSticker?.mode?.is_in_endgame)
 			if(crash_occurred)
 				travel_time = 0.5 SECONDS
@@ -607,4 +611,21 @@
 		WEAR_BACK = "himat",
 	)
 	mortar_type = /obj/structure/mortar/himat
+	has_camo = FALSE
+
+/obj/structure/mortar/rmc
+	name = "\improper L53A1 light mortar"
+	desc = "A manual, crew-operated light mortar system intended to provide mobile fire support for a troop of Royal Marines. Uses an advanced targeting computer. Insert round to fire."
+	icon_state = "mortar_l53a1"
+	travel_time = 3 SECONDS //Light mortar, quicker on target
+	has_camo = FALSE
+	kit_type = /obj/item/mortar_kit/rmc
+
+/obj/item/mortar_kit/rmc
+	name = "\improper L53A1 light mortar portable kit"
+	desc = "A manual, crew-operated light mortar system intended to provide mobile fire support for a troop of Royal Marines. Needs to be set down first"
+	icon_state = "mortar_l53a1_carry"
+	item_state = "mortar_l53a1_carry"
+	flags_equip_slot = SLOT_BACK
+	mortar_type = /obj/structure/mortar/rmc
 	has_camo = FALSE

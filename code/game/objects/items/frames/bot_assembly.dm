@@ -139,11 +139,11 @@
 	else
 		switch(build_step)
 			if(0)
-				if(istype(W, /obj/item/device/healthanalyzer))
+				if(istype(W, /obj/item/device/healthanalyzer/soul))
 					user.drop_held_item()
 					qdel(W)
 					src.build_step++
-					to_chat(user, SPAN_NOTICE("You add the health sensor to [src]."))
+					to_chat(user, SPAN_NOTICE("You add the health scanner to [src]."))
 					src.name = "First aid/robot arm/health analyzer assembly"
 					src.overlays += image('icons/obj/structures/machinery/aibots.dmi', "na_scanner")
 

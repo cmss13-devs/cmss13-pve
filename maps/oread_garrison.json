@@ -1,0 +1,14 @@
+{
+    "map_name": "OBW - Oread Garrison",
+    "short_name": "Oread Garrison",
+    "map_path": "map_files/Oread_Garrison",
+    "map_file": "oread_garrison.dmm",
+
+    "map_item_type": "/obj/item/map/oread_map",
+
+    "traits": [{ "Ground": true }],
+
+    "camouflage": "jungle",
+
+    "environment_traits": { "Fog": true }
+}

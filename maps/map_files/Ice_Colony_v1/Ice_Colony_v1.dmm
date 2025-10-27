@@ -7935,7 +7935,7 @@
 /area/ice_colony/surface/dorms)
 "por" = (
 /obj/structure/surface/table/holotable,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/engine,
 /area/ice_colony/underground/research/sample)
 "poB" = (

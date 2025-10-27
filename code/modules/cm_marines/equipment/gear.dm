@@ -34,7 +34,7 @@
 
 /obj/item/bodybag/tarp/reactive/scout
 	name = "\improper V3 reactive thermal tarp (folded)"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training."
+	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster."
 	icon_state = "scouttarp_folded"
 	w_class = SIZE_SMALL
 	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive/scout
@@ -83,21 +83,15 @@
 /obj/structure/closet/bodybag/tarp/reactive/scout
 	name = "\improper V3 reactive thermal tarp (folded)"
 	bag_name = "\improper V3 reactive thermal tarp"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
+	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
 	icon_state = "scouttarp_closed"
 	icon_closed = "scouttarp_closed"
 	icon_opened = "scouttarp_open"
 	item_path = /obj/item/bodybag/tarp/reactive/scout
 	cloak_time = 5
-	closed_alpha = 10 //same as scout cloak alpha
+	closed_alpha = 10 //Between scout & ghillie camo alphas
 	exit_stun = 1
 	can_store_dead = TRUE
-
-/obj/structure/closet/bodybag/tarp/reactive/scout/close(mob/user)
-	if(!skillcheck(usr, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && usr.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
-		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
-		return
-	. = ..()
 
 /obj/structure/closet/bodybag/tarp/store_mobs(stored_units)//same as stasis bag proc
 	var/list/mobs_can_store = list()
@@ -149,6 +143,7 @@
 		return FALSE
 	. = ..()
 	handle_cloaking()
+
 /obj/structure/broken_apc
 	name = "\improper M577 armored personnel carrier"
 	desc = "A large, armored behemoth capable of ferrying marines around. \nThis one is sitting nonfunctional."
@@ -161,8 +156,8 @@
 
 
 /obj/item/reagent_container/food/snacks/protein_pack
-	name = "stale USCM protein bar"
-	desc = "The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute."
+	name = "chocolate Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The chocolate tastes a bit artificial and the vitamins are barely covered up by the stevia sweetener."
 	icon_state = "yummers"
 	icon = 'icons/obj/items/food/mre_food/uscm.dmi'
 	filling_color = "#ED1169"
@@ -171,18 +166,48 @@
 /obj/item/reagent_container/food/snacks/protein_pack/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("coco", 8)
 	bitesize = 4
 
+/obj/item/reagent_container/food/snacks/protein_pack2
+	name = "strawberry Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The strawberry coating is definitely oversweetened."
+	//TODO: ACTUAL SPRITES
+	icon_state = "yummers2"
+	filling_color = "#ff00cc"
+	w_class = SIZE_TINY
+
+/obj/item/reagent_container/food/snacks/protein_pack2/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("strawberrypowder", 8)
+	bitesize = 4
+
+/obj/item/reagent_container/food/snacks/protein_pack3
+	name = "vanilla Preemptive Action nutrition bar"
+	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The vanilla is overpoweringly strong, but there's not enough sweetener to cover the bitter aftertaste of the filling."
+	//TODO: ACTUAL SPRITES
+	icon_state = "yummers3"
+	filling_color = "#e6e6e6"
+	w_class = SIZE_TINY
+
+/obj/item/reagent_container/food/snacks/protein_pack3/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 8)
+	reagents.add_reagent("vanilla", 8)
+	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "mar_tray_empty"
 	trash = /obj/item/trash/USCMtray
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
-	name = "\improper USCM Prepared Meal (cornbread)"
-	desc = "A tray of standard USCM food. Stale cornbread, tomato paste and some green goop fill this tray."
-	icon_state = "MREa"
+	name = "\improper mechanically prepared meal (chili and cornbread)"
+	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
+	icon_state = "mar_tray_menu1"
 	filling_color = "#ED1169"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
@@ -191,9 +216,9 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
-	name = "\improper USCM Prepared Meal (pork)"
-	desc = "A tray of standard USCM food. Partially raw pork, goopy corn and some watery mashed potatoes fill this tray."
-	icon_state = "MREb"
+	name = "\improper mechanically prepared meal (ham and potatoes)"
+	desc = "An autochef prepared meal of slightly undercooked ham, surprisingly good reconstituted potato wedges made with real potato powder, artificial fruit puree, and stale crackers."
+	icon_state = "mar_tray_menu2"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2/Initialize()
 	. = ..()
@@ -201,9 +226,9 @@
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3
-	name = "\improper USCM Prepared Meal (pasta)"
-	desc = "A tray of standard USCM food. Overcooked spaghetti, waterlogged carrots and two french fries fill this tray."
-	icon_state = "MREc"
+	name = "\improper mechanically prepared meal (spaghetti)"
+	desc = "An autochef prepared meal of oversalted spaghetti in sauce and square 'beef meatballs'. On the side are perfectly baked breadsticks, an unevenly warmed hotdog, and some bland applesauce."
+	icon_state = "mar_tray_menu3"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3/Initialize()
 	. = ..()
@@ -211,39 +236,49 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4
-	name = "\improper USCM Prepared Meal (pizza)"
-	desc = "A tray of standard USCM food. Cold pizza, wet green beans and a shitty egg fill this tray. Get something other than pizza, lardass."
-	icon_state = "MREd"
+	name = "\improper mechanically prepared meal (pizza)"
+	desc = "An autochef prepared meal of underseasoned cheese pizza dotted with little bits of sausage. On the side are some concerningly wet scrambled reconstituted eggs and sautee'd broccoli with a little freezer burn."
+	icon_state = "mar_tray_menu4"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 8)
-	bitesize = 1
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
-	name = "\improper USCM Prepared Meal (chicken)"
-	desc = "A tray of standard USCM food. Moist chicken, dry rice and a mildly depressed piece of broccoli fill this tray."
-	icon_state = "MREe"
+	name = "\improper mechanically prepared meal (chicken)"
+	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified dubious sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
+	icon_state = "mar_tray_menu5"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 10)
+	reagents.add_reagent("nutriment", 9)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
-	name = "\improper USCM Prepared Meal (tofu)"
-	desc = "The USCM doesn't serve tofu you grass sucking hippie. The flag signifies your defeat."
-	icon_state = "MREf"
+	name = "\improper mechanically prepared meal (vegetarian tofu)"
+	desc = "An autochef prepared meal of some surprisingly well fried tofu, stale crackers, and underseasoned breadsticks. On the side is a protein bar in mediocre strawberry."
+	icon_state = "mar_tray_menu6"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 2)
-	bitesize = 1
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
+
+/obj/item/reagent_container/food/snacks/mre_pack/meal7
+	name = "\improper mechanically prepared meal (macaroni and cheese)"
+	desc = "An autochef prepared meal of concerningly viscous macaroni and cheese. On the side is sautee'd broccoli with some freezer burn, a tube of cherry-and-vitamin flavor jelly, and a packet of mixed nuts trail mix."
+	icon_state = "mar_tray_menu7"
+
+/obj/item/reagent_container/food/snacks/mre_pack/meal7/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 9)
+	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
-	name = "\improper USCM M25 'X-MAS' Meal: Sugar Cookies"
-	desc = "The USCM M25 Sugar Cookies Meal was designed to give marines a feeling of Christmas joy. But to the bemusement of superior officers, the costs-savings measure of simply fabricating protein bars in the shape of cookies with chocolate substitute chips and the replacement of the expected milk with artificially colored water did not go over well with most marines."
-	icon_state = "mreCookies"
+	name = "\improper mechanically prepared meal (sugar cookies)"
+	desc = "An autochef prepared meal of overbaked sugar cookies, a packet of what claims to be cherry cobbler, and a spiced dipping sauce that's divisive as to whether or not it goes with the cookies. On the side is a moist fruit-swirl bread roll."
+	icon_state = "mar_tray_menuSC"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1/Initialize()
@@ -253,9 +288,9 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2
-	name = "\improper USCM M25 'X-MAS' Meal: Gingerbread Cookies"
-	desc = "The USCM M25 Gingerbread Cookies Meal was designed to give marines convenient and cheap access to gingerbread cookies as a replacement for annual gingerbread making classes due to rising expenses and comically low success rates for the Basic Holidays Festivities Course. However, due to cost saving measures, these cookies seldom inspire happiness, nor holiday spirit."
-	icon_state = "mreGingerbread"
+	name = "\improper mechanically prepared meal (gingerbread and vanilla cake)"
+	desc = "An autochef prepared meal of some oddly soft gingerbread cookies and a fairly undersweetened vanilla cake. There's a protein bar on the side and a tube of cherry flavored vitamin filled jelly."
+	icon_state = "mar_tray_menuGV"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2/Initialize()
@@ -265,9 +300,9 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3
-	name = "\improper USCM M25 'X-MAS' Meal: Fruitcake"
-	desc = "The USCM M25 Fruitcake Meal was the third meal designed by an officers' committee as part of the M25 Project; this shows through the terrible hardness and tartness of the bread and raisined fruits. It can be logically deduced that the people who vended this option are worse than the Grinch and the Miser combined, along with the people who designed and prepared this fruitcake."
-	icon_state = "mreFruitcake"
+	name = "\improper mechanically prepared meal (fruitcake)"
+	desc = "An autochef prepared meal of a fruitcake and applesauce. The fruitcake tastes of vitamins but is shockingly palatable even still, while the applesauce is... there?"
+	icon_state = "mar_tray_menuFC"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3/Initialize()
@@ -277,21 +312,41 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving
-	name = "\improper USCM Prepared Meal (turkey)"
-	desc = "A tray of standard USCM food. A few slices of turkey and some regenerated mashed potatos with a rather viscous gravy on top. A classic, if rather half-hearted, Thanksgiving meal."
-	icon_state = "MREe"
+	name = "\improper mechanically prepared meal (turkey and potato)"
+	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
+	icon_state = "mar_tray_menuTP"
 
 /obj/item/reagent_container/food/snacks/mre_pack/thanksgiving/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
 
-//UPP Tray Food
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
+	name = "\improper mechanically prepared meal (steak and potato)"
+	desc = "An autochef prepared meal of rare steak slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
+	icon_state = "mar_tray_menuSP"
 
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3
+	name = "\improper mechanically prepared meal (shrimp and rice)"
+	desc = "An autochef prepared meal of stir fried imitation shrimp and overcooked brown rice. Some mixed nuts trail mix and an unidentified sauce are on the side."
+	icon_state = "mar_tray_menuSR"
+
+/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 10)
+	bitesize = 3
+
+//UPP Tray Food
 
 /obj/item/reagent_container/food/snacks/mre_pack/upp
 	name = "\improper generic MRE pack"
 	icon = 'icons/obj/items/food.dmi'
+	icon_state = "upp_lid"
 	trash = /obj/item/trash/UPPtray
 	w_class = SIZE_SMALL
 	bitesize = 5
@@ -345,6 +400,51 @@
 	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
 	icon_state = "upp_meatballs"
 
+//RMC Tray Food
+
+/obj/item/reagent_container/food/snacks/protein_pack/rmc
+	name = "Biscuits Brown snack bar"
+	desc = "The devil in disguise. Quick to eat, with a fairly pleasant taste and texture, but consuming more than one in a short span of time will ensure you won't be digging latrine holes out in the field for at least two weeks."
+	icon_state = "muesli"
+	filling_color = "#ED1169"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc
+	name = "\improper generic MRE pack"
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
+	trash = /obj/item/trash/RMCtray
+	w_class = SIZE_SMALL
+	bitesize = 5
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/Initialize()
+	. = ..()
+	reagents.add_reagent("nutriment", 15)
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1
+	name = "\improper RMC Prepared Meal (Roast Beef)"
+	desc = "A slab of imitation beef drenched in too-salty gravy, with a portion of undercooked peas, soggy carrots and oddly dry mashed potatoes."
+	icon_state = "rmc_meat"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal2
+	name = "\improper RMC Prepared Meal (Tikka Curry)"
+	desc = "Chunks of pork and potato submerged in a mass of mild Indian curry sauce, with a side of fluffy rice and a lukewarm bit of naan flatbread."
+	icon_state = "rmc_tikka"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal3
+	name = "\improper RMC Prepared Meal (Katsu Curry)"
+	desc = "Breaded chicken strips slathered in a Japanese style curry sauce. Comes with a helping of fluffy rice and an unidentifiable mound of overcooked veg as the side components."
+	icon_state = "rmc_katsu"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal4
+	name = "\improper RMC Prepared Meal (Sausage & Eggs)"
+	desc = "Several overdone sausages, a wodge of scrambled eggs, and a load of sweet potato fries & green beans fill this tray."
+	icon_state = "rmc_sausage"
+
+/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal5
+	name = "\improper RMC Prepared Meal (Seafood Platter)"
+	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop cold, boiled rice."
+	icon_state = "rmc_fish"
+
 /obj/item/storage/box/pizza
 	name = "food delivery box"
 	desc = "A space-age food storage device, capable of keeping food extra fresh. Actually, it's just a box."
@@ -378,19 +478,18 @@
 
 /obj/item/device/overwatch_camera
 	name = "M5 Camera Gear"
-	desc = "A camera and associated headgear designed to allow marine commanders to see what their troops can see. A more robust version of this equipment is integrated into all standard USCM combat helmets."
+	desc = "A camera and associated headgear designed to allow unit commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard combat helmets in use by UA forces."
 	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "overwatch_gear"
+	item_state = "overwatch_gear"
 	item_icons = list(
 		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
 		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-	)
-	item_state_slots = list(
-		WEAR_L_EAR = "cam_gear",
-		WEAR_R_EAR = "cam_gear",
-	)
+		)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
@@ -401,11 +500,39 @@
 	return ..()
 
 /obj/item/device/overwatch_camera/equipped(mob/living/carbon/human/mob, slot)
-	if(camera)
+	if(mob.has_item_in_ears(src))
 		camera.c_tag = mob.name
+		for(var/type in hud_type)
+			var/datum/mob_hud/MH = GLOB.huds[type]
+			MH.add_hud_to(mob, src)
 	..()
 
 /obj/item/device/overwatch_camera/dropped(mob/user)
 	if(camera)
 		camera.c_tag = "Unknown"
+	if(hud_type)
+		for(var/type in hud_type)
+			var/datum/mob_hud/MH = GLOB.huds[type]
+			MH.remove_hud_from(user, src)
 	..()
+
+/obj/item/device/overwatch_camera/twe
+	name = "OOCUHM Cam-Gear"
+	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	icon_state = "rmc_overwatch_gear"
+	item_state = "rmc_overwatch_gear"
+
+/obj/item/device/overwatch_camera/pmc
+	name = "Mk3 TOCU headcam"
+	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
+	icon_state = "rmc_overwatch_gear"
+	item_state = "rmc_overwatch_gear"
+
+/obj/item/device/overwatch_camera/upp
+	name = "1PN77M \"Periskop\" camera unit"
+	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
+	hud_type = list(MOB_HUD_FACTION_UPP)
+	icon_state = "upp_overwatch_gear"
+	item_state = "upp_overwatch_gear"

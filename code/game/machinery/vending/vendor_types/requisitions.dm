@@ -244,7 +244,6 @@
 		list("Box Of Buckshot Shells", floor(scale * 56), /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
 		list("Box Of Flechette Shells", floor(scale * 56), /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
 		list("Box Of Shotgun Slugs", floor(scale * 56), /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
-		list("Box Of Breaching Slugs", floor(scale * 4), /obj/item/ammo_magazine/shotgun/light/breaching, VENDOR_ITEM_REGULAR),
 		list("M49A Magazine (10x24mm)", floor(scale * 60), /obj/item/ammo_magazine/rifle/m49a, VENDOR_ITEM_REGULAR),
 		list("M41A MK2 Magazine (10x24mm)", floor(scale * 100), /obj/item/ammo_magazine/rifle, VENDOR_ITEM_REGULAR),
 		list("M39 HV Magazine (10x20mm)", floor(scale * 100), /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),

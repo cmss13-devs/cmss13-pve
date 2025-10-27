@@ -23,14 +23,14 @@
 				return 1
 
 			// If unconscious with oxygen damage, do CPR. If dead, we do CPR
-			if(!((stat == UNCONSCIOUS || (locate(/datum/effects/crit) in effects_list)) && getOxyLoss() > 0) && !(stat == DEAD))
+			if(!((stat == UNCONSCIOUS || ((locate(/datum/effects/crit) in effects_list) && (status_flags & CANKNOCKOUT))) && getOxyLoss() > 0) && !(stat == DEAD))
 				help_shake_act(attacking_mob)
 				return 1
 
-			if(attacking_mob.head && (attacking_mob.head.flags_inventory & COVERMOUTH) || attacking_mob.wear_mask && (attacking_mob.wear_mask.flags_inventory & COVERMOUTH) && !(attacking_mob.wear_mask.flags_inventory & ALLOWCPR))
+			if(attacking_mob.head && (attacking_mob.head.flags_inventory & COVERMOUTH) && !(attacking_mob.head.flags_inventory & ALLOWCPR) || attacking_mob.wear_mask && (attacking_mob.wear_mask.flags_inventory & COVERMOUTH) && !(attacking_mob.wear_mask.flags_inventory & ALLOWCPR))
 				to_chat(attacking_mob, SPAN_NOTICE("<B>Remove your mask!</B>"))
 				return 0
-			if(head && (head.flags_inventory & COVERMOUTH) || wear_mask && (wear_mask.flags_inventory & COVERMOUTH) && !(wear_mask.flags_inventory & ALLOWCPR))
+			if(head && (head.flags_inventory & COVERMOUTH) && !(head.flags_inventory & ALLOWCPR) || wear_mask && (wear_mask.flags_inventory & COVERMOUTH) && !(wear_mask.flags_inventory & ALLOWCPR))
 				to_chat(attacking_mob, SPAN_NOTICE("<B>Remove [src.gender==MALE?"his":"her"] mask!</B>"))
 				return 0
 			if(cpr_attempt_timer >= world.time)

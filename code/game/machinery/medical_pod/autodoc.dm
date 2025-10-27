@@ -1,7 +1,7 @@
 //Autodoc
 /obj/structure/machinery/medical_pod/autodoc
 	name = "\improper autodoc emergency medical system"
-	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention. The interface is rather complex and would only be useful to trained Doctors however."
+	desc = "A fancy machine developed to be capable of operating on people with minimal human intervention. The interface is rather complex and would only be useful to trained Doctors, were it not for the big 'AUTOMATIC MODE' switch and 'START' button, which seem simple enough."
 	icon_state = "autodoc_open"
 
 	entry_timer = 2 SECONDS
@@ -16,6 +16,7 @@
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/heal_toxin = 0
+	var/automatic_mode = null
 
 	var/obj/structure/machinery/autodoc_console/connected
 
@@ -297,7 +298,11 @@
 		src.go_out() //kick them out too.
 		return
 
-	var/list/surgery_todo_list = N.fields["autodoc_manual"]
+	var/list/surgery_todo_list
+	if(automatic_mode)
+		surgery_todo_list = N.fields["autodoc_data"]
+	else
+		surgery_todo_list = N.fields["autodoc_manual"]
 
 	if(!length(surgery_todo_list))
 		visible_message("\The [src] buzzes, no surgical procedures were queued.")
@@ -330,7 +335,10 @@
 			break;
 		sleep(-1)
 		var/datum/autodoc_surgery/S = surgery_todo_list[currentsurgery]
-		surgery_mod = 1 // might need tweaking
+		if(automatic_mode)
+			surgery_mod = 2.5 // automatic mode takes longer
+		else
+			surgery_mod = 1 // might need tweaking
 
 		switch(S.type_of_surgery)
 			if(ORGAN_SURGERY)
@@ -669,9 +677,6 @@
 		dat += "This console is not connected to a Auto-Doc or the Auto-Doc is non-functional."
 		to_chat(user, "This console seems to be powered down.")
 	else
-		if(!skillcheck(user, SKILL_SURGERY, SKILL_SURGERY_NOVICE))
-			to_chat(user, SPAN_WARNING("You have no idea how to use this."))
-			return
 		var/mob/living/occupant = connected.occupant
 		dat += "<B>Overall Status:</B><BR>"
 		if(occupant)
@@ -692,6 +697,10 @@
 			dat += "Damage: [SET_CLASS("[damageOxy]", INTERFACE_BLUE)] - [SET_CLASS("[damageTox]", INTERFACE_GREEN)] - [SET_CLASS("[damageFire]", INTERFACE_ORANGE)] - [SET_CLASS("[damageBrute]", INTERFACE_RED)]<br>"
 			dat += "The patient is [t1]. <br>"
 			dat += "[operating]<br>"
+			if(connected.automatic_mode)
+				dat += "<hr><span class='notice'>Automatic Mode</span> | <a href='byond://?src=\ref[src];automatictoggle=1'>Manual Mode</a>"
+			else
+				dat += "<hr><a href='byond://?src=\ref[src];automatictoggle=1'>Automatic Mode</a> | <span class='notice'>Manual Mode</span>"
 			dat += "<a href='byond://?src=\ref[src];ejectify=1'>Eject Patient</a>"
 			dat += "<hr><b>Surgery Queue:</b><br>"
 
@@ -703,60 +712,67 @@
 					N = R
 			if(isnull(N))
 				N = create_medical_record(connected.occupant)
-
-			if(!isnull(N.fields["autodoc_manual"]))
-				for(var/datum/autodoc_surgery/A in N.fields["autodoc_manual"])
-					switch(A.type_of_surgery)
-						if(EXTERNAL_SURGERY)
-							switch(A.surgery_procedure)
-								if("brute")
-									surgeryqueue["brute"] = 1
-									dat += "Brute Damage Treatment"
-								if("burn")
-									surgeryqueue["burn"] = 1
-									dat += "Burn Damage Treatment"
-								if("toxin")
-									surgeryqueue["toxin"] = 1
-									dat += "Bloodstream Toxin Removal"
-								if("dialysis")
-									surgeryqueue["dialysis"] = 1
-									dat += "Dialysis"
-								if("blood")
-									surgeryqueue["blood"] = 1
-									dat += "Emergency Blood Transfusion"
-						if(ORGAN_SURGERY)
-							switch(A.surgery_procedure)
-								if("damage")
-									surgeryqueue["organdamage"] = 1
-									dat += "Organ Damage Treatment"
-								if("eyes")
-									surgeryqueue["eyes"] = 1
-									dat += "Corrective Eye Surgery"
-								if("larva")
-									surgeryqueue["larva"] = 1
-									dat += "Experimental Parasite Surgery"
-						if(LIMB_SURGERY)
-							switch(A.surgery_procedure)
-								if("internal")
-									surgeryqueue["internal"] = 1
-									dat += "Internal Bleeding Surgery"
-								if("broken")
-									surgeryqueue["broken"] = 1
-									dat += "Bone Repair Treatment"
-								if("missing")
-									surgeryqueue["missing"] = 1
-									dat += "Limb Replacement Surgery"
-								if("object")
-									surgeryqueue["object"] = 1
-									dat += "Foreign Object Removal Surgery"
-								if("open")
-									surgeryqueue["open"] = 1
-									dat += "Close Open Incisions"
+			N.fields["autodoc_data"] = generate_autodoc_surgery_list(connected.occupant)
+			var/list/autosurgeries = N.fields["autodoc_data"]
+			if(connected.automatic_mode)
+				if(autosurgeries.len)
+					dat += "<span class='danger'>Automatic Mode Ready.</span><br>"
+				else
+					dat += "<span class='danger'>Automatic Mode Unavaliable.</span><br>"
+			else
+				if(!isnull(N.fields["autodoc_manual"]))
+					for(var/datum/autodoc_surgery/A in N.fields["autodoc_manual"])
+						switch(A.type_of_surgery)
+							if(EXTERNAL_SURGERY)
+								switch(A.surgery_procedure)
+									if("brute")
+										surgeryqueue["brute"] = 1
+										dat += "Brute Damage Treatment"
+									if("burn")
+										surgeryqueue["burn"] = 1
+										dat += "Burn Damage Treatment"
+									if("toxin")
+										surgeryqueue["toxin"] = 1
+										dat += "Bloodstream Toxin Removal"
+									if("dialysis")
+										surgeryqueue["dialysis"] = 1
+										dat += "Dialysis"
+									if("blood")
+										surgeryqueue["blood"] = 1
+										dat += "Emergency Blood Transfusion"
+							if(ORGAN_SURGERY)
+								switch(A.surgery_procedure)
+									if("damage")
+										surgeryqueue["organdamage"] = 1
+										dat += "Organ Damage Treatment"
+									if("eyes")
+										surgeryqueue["eyes"] = 1
+										dat += "Corrective Eye Surgery"
+									if("larva")
+										surgeryqueue["larva"] = 1
+										dat += "Experimental Parasite Surgery"
+							if(LIMB_SURGERY)
+								switch(A.surgery_procedure)
+									if("internal")
+										surgeryqueue["internal"] = 1
+										dat += "Internal Bleeding Surgery"
+									if("broken")
+										surgeryqueue["broken"] = 1
+										dat += "Bone Repair Treatment"
+									if("missing")
+										surgeryqueue["missing"] = 1
+										dat += "Limb Replacement Surgery"
+									if("object")
+										surgeryqueue["object"] = 1
+										dat += "Foreign Object Removal Surgery"
+									if("open")
+										surgeryqueue["open"] = 1
+										dat += "Close Open Incisions"
 
 					dat += "<br>"
 
 			dat += "<hr><a href='byond://?src=\ref[src];surgery=1'>Begin Surgery</a> - <a href='byond://?src=\ref[src];refresh=1'>Refresh Menu</a> - <a href='byond://?src=\ref[src];clear=1'>Clear Queue</a><hr>"
-			if(!connected.surgery)
+			if(!connected.surgery && skillcheck(user, SKILL_SURGERY, connected.skilllock))
 				dat += "<b>Trauma Surgeries</b>"
 				dat += "<br>"
 				if(isnull(surgeryqueue["brute"]))
@@ -912,6 +928,9 @@
 			// The rest
 			if(href_list["clear"])
 				N.fields["autodoc_manual"] = list()
+				updateUsrDialog()
+			if(href_list["automatictoggle"])
+				connected.automatic_mode = !connected.automatic_mode
 				updateUsrDialog()
 		if(href_list["refresh"])
 			updateUsrDialog()

@@ -728,7 +728,7 @@
 	dir = 1;
 	flipped = 1
 	},
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/plating,
 /area/lv624/ground/barrens/central_barrens)
 "agi" = (
@@ -15334,8 +15334,8 @@
 /area/lv624/lazarus/quart)
 "qxu" = (
 /obj/structure/surface/rack,
-/obj/item/ammo_magazine/rifle/nsg23/extended,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/ammo_magazine/rifle/nsg23,
+/obj/item/weapon/gun/rifle/nsg23,
 /turf/open/shuttle/bright_red,
 /area/lv624/lazarus/crashed_ship_containers)
 "qxX" = (
@@ -20073,7 +20073,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 1
 	},
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/item/clothing/shoes/centcom,
 /turf/open/floor/purple/northwest,
 /area/lv624/lazarus/sleep_female)

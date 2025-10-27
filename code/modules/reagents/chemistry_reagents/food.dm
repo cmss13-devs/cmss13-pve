@@ -260,6 +260,26 @@
 	chemclass = CHEM_CLASS_RARE
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
+/datum/reagent/vanilla
+	name = "Vanilla Powder"
+	id = "vanilla"
+	description = "Vanilla from the vanilla bean. Now in dust form."
+	reagent_state = SOLID
+	nutriment_factor = 5 * REAGENTS_METABOLISM
+	color = "#ffecc6"
+	chemclass = CHEM_CLASS_RARE
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+
+/datum/reagent/strawberry
+	name = "Strawberry Powder"
+	id = "strawberrypowder"
+	description = "The flash frozen and ground elements of strawberry. Maybe."
+	reagent_state = SOLID
+	nutriment_factor = 5 * REAGENTS_METABOLISM
+	color = "#fc0065"
+	chemclass = CHEM_CLASS_RARE
+	properties = list(PROPERTY_NUTRITIOUS = 2)
+
 /datum/reagent/psilocybin
 	name = "Psilocybin"
 	id = "psilocybin"
@@ -374,6 +394,7 @@
 	description = "Honey is a natural sweet, viscous food substance composed of mainly fructose and glucose."
 	color = COLOR_YELLOW
 	chemclass = CHEM_CLASS_RARE
+	properties = list(PROPERTY_NUTRITIOUS = 2)
 	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/dehydrated_juice

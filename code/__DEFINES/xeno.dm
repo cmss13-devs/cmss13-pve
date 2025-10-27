@@ -314,7 +314,7 @@
 #define XENO_EVASION_HIGH 20
 
 // Speeds
-#define XENO_SPEED_QUEEN 0.6
+#define XENO_SPEED_QUEEN 0.5
 #define XENO_SPEED_TIER_1 0.4
 #define XENO_SPEED_TIER_2 0.2
 #define XENO_SPEED_TIER_3 0

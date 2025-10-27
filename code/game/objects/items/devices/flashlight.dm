@@ -531,7 +531,7 @@
 	name = "chemical light"
 	light_range = 0
 
-/obj/item/device/flashlight/flare/on/illumination/chemical/Initialize(mapload, amount)
+/obj/item/device/flashlight/flare/on/illumination/chemical/Initialize(mapload, amount, color)
 	. = ..()
 	light_range = floor(amount * 0.04)
 	if(!light_range)
@@ -544,6 +544,12 @@
 	desc = "A red UPPAC-issued flare."
 	icon_state = "upp_flare"
 	item_state = "upp_flare"
+
+/obj/item/device/flashlight/flare/rmc
+	name = "L96 flare"
+	desc = "An RMC issued flare that burns in both the visual and ultraviolet spectrum. There are instructions on the side, it reads 'pull cord, make light'."
+	flame_tint = "#d79be5"
+	flame_base_tint = "#6f00ff"
 
 /obj/item/device/flashlight/slime
 	gender = PLURAL

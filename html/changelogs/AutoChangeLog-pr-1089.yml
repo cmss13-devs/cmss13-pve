@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "Smartgun armor imparts a greater slowdown, but the aim slowdown when wielding the smartgun itself is lessened slightly"

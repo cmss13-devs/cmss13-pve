@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - balance: "All marines can now use the weapons console on the dropship. Primarily for the live tac map."

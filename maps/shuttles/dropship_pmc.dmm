@@ -25,12 +25,6 @@
 	},
 /turf/open/shuttle/dropship/light_grey_single_wide_up_to_down,
 /area/shuttle/pmc)
-"dE" = (
-/obj/structure/shuttle/part/dropshippmc/transparent/lower_right_wing{
-	icon_state = "70"
-	},
-/turf/open/space/basic,
-/area/shuttle/pmc)
 "eX" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "41"
@@ -240,7 +234,8 @@
 /obj/structure/machinery/computer/dropship_weapons/midway/small{
 	pixel_y = 8;
 	pixel_x = 8;
-	name = "\improper 'Cash Flow' weapons controls"
+	name = "\improper 'Cash Flow' weapons controls";
+	req_one_access = list(12,22,205, 200)
 	},
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot{
 	dir = 1;
@@ -412,7 +407,7 @@
 	icon_state = "97";
 	layer = 2.9
 	},
-/turf/open/space/basic,
+/turf/template_noop,
 /area/shuttle/pmc)
 "OO" = (
 /turf/closed/shuttle/pmc{
@@ -701,7 +696,7 @@ TN
 TN
 TN
 wR
-dE
+SG
 SG
 gG
 eX

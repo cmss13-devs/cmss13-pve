@@ -72,6 +72,9 @@
 	icon_state = "marine_brown"
 	spawn_item_type = /obj/item/attachable/bayonet/upp
 
+/obj/item/clothing/shoes/marine/upp/guard/canc
+	spawn_item_type = /obj/item/attachable/bayonet/canc
+
 /obj/item/clothing/shoes/marine/pve_mopp
 	name = "\improper M2 MOPP boots"
 	desc = "M2 MOPP boots excel at keeping viscera or other biological contaminants away from your feet."
@@ -98,6 +101,10 @@
 /obj/item/clothing/shoes/marine/civilian/brown
 	icon_state = "marine_brown"
 	desc = "A pair of brown boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
+
+/obj/item/clothing/shoes/marine/civilian/jungle
+	icon_state = "marine_jungle"
+	desc = "A pair of jungle boots not so dissimilar from military combat boots, a likely culprit for their inspiration. They'll get the job done, whether that's hiking, or kicking in teeth."
 
 /obj/item/clothing/shoes/marine/joe
 	name = "biohazard boots"

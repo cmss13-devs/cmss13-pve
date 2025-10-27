@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Projectiles, mainly shrapnel, now properly respects those who are vertically impaired (laying down), unless it has the AMMO_PRONETARGET flag"

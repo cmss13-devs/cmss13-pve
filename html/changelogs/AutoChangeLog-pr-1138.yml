@@ -1,0 +1,6 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - rscadd: "2 Operations cap entries into the preference screen, one for green and the other for tan"
+  - rscadd: "2 Operations cap entries into the squad prep machinery, ditto"
+  - rscadd: "Old patrol caps now properly are referenced as 'utility' caps."

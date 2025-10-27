@@ -421,8 +421,13 @@
 
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
-	icon_state = "commandopatch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
+	icon_state = "rmcpatch"
+
+/obj/item/clothing/accessory/patch/twe
+	name = "Three World Empire patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
+	icon_state = "twepatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
@@ -463,6 +468,33 @@
 	name = "Army Intelligence patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
 	icon_state = "spookpatch"
+
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
+/obj/item/clothing/accessory/patch/cmb/brazil_police
+	name = "Brazilian Colonial Military Police patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
+	icon_state = "brazilpolicepatch"
+
+//Flag patches
+/obj/item/clothing/accessory/patch/ua
+	name = "UA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
+	icon_state = "uaflagpatch"
+
+/obj/item/clothing/accessory/patch/brazil
+
+	name = "Brazilian flag patch"
+	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
+	icon_state = "brazilpatch"
+
+/obj/item/clothing/accessory/patch/usa
+	name = "USA flag patch"
+	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
+	icon_state = "usaflagpatch"
 
 //Ribbons
 /obj/item/clothing/accessory/patch/ribbon/topography
@@ -520,6 +552,66 @@
 /obj/item/clothing/accessory/poncho/green/army
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
+
+/obj/item/clothing/accessory/bomb //Suicide vesst
+	name = "explosive vest"
+	desc = "Used by absolute madmen to cause terror and fear against others, haphazardly put together with C4 and a standard webbing vest."
+	icon_state = "bomb_vest"
+	var/datum/action/item_action/activation
+	var/mob/living/wearer
+	slot = ACCESSORY_SLOT_UTILITY
+
+/obj/item/clothing/accessory/bomb/Destroy()
+	wearer = null
+	if(!QDELETED(activation))
+		QDEL_NULL(activation)
+	. = ..()
+
+/obj/item/clothing/accessory/bomb/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
+	. = ..()
+	wearer = user
+	activation = new /datum/action/item_action/bomb/activate(src)
+	activation.give_to(wearer)
+
+/obj/item/clothing/accessory/bomb/on_removed(mob/living/user, obj/item/clothing/C)
+	. = ..()
+	QDEL_NULL(activation)
+
+/datum/action/item_action/bomb/activate
+	var/activated = FALSE
+
+/datum/action/item_action/bomb/activate/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Activate Bomb Vest"
+	button.name = name
+	button.overlays.Cut()
+	button.overlays += image('icons/obj/items/clothing/ties.dmi', button, "bomb_vest")
+
+/datum/action/item_action/bomb/activate/can_use_action()
+	var/mob/living/carbon/human/H = owner
+	if(!H || H.is_mob_incapacitated(TRUE)) //Can't activate if incapacitated
+
+		return
+	if(activated) //don't detonate twice
+		return
+	return TRUE
+
+/datum/action/item_action/bomb/activate/action_activate()
+	. = ..()
+	var/mob/living/carbon/human/H = owner
+	H.visible_message(SPAN_ALERTWARNING("[H] activates the bomb vest! GET DOWN!"), SPAN_ALERTWARNING("You activate the bomb vest! WITNESS ME!"))
+	playsound(H, 'sound/items/bomb_vest.ogg', 100, 1)
+	activated = TRUE
+
+	addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 3 SECONDS)
+
+/datum/action/item_action/bomb/activate/proc/detonate()
+	var/mob/living/carbon/human/H = owner
+	var/turf/epicenter = get_turf(H)
+	target.ex_act(400, null, src, H, 100)
+	cell_explosion(epicenter, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), H))
+	H.gib()
+	qdel(src)
 
 //Ties that can store stuff
 
@@ -720,7 +812,7 @@
 /obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
 	new /obj/item/tool/screwdriver/tactical(src)
 	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/weldingtool(src)
+	new /obj/item/tool/weldingtool/largetank(src)
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src)
@@ -904,6 +996,9 @@
 /obj/item/clothing/accessory/storage/droppouch/upp
 	icon_state = "upp_drop_pouch_alt"
 
+/obj/item/clothing/accessory/storage/droppouch/rmc
+	icon_state = "rmc_drop_pouch_alt"
+
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
 	storage_slots = null
@@ -924,6 +1019,9 @@
 
 /obj/item/clothing/accessory/storage/smallpouch/upp
 	icon_state = "upp_pouch_alt"
+
+/obj/item/clothing/accessory/storage/smallpouch/rmc
+	icon_state = "rmc_pouch_alt"
 
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
@@ -1015,6 +1113,65 @@
 	desc = "A handgun holster."
 	icon_state = "holster_hip"
 	item_state = "holster_hip"
+
+//Knife sheath, for the really big kinds of knives you get in the loadout
+//Butchered holster code
+
+/obj/item/clothing/accessory/storage/sheath
+	name = "large knife sheath"
+	desc = "A well-made leather sheath, looks big enough to hold a proper knife in it, or even a machete at a push."
+	icon_state = "holster_knife"
+	high_visibility = TRUE
+	hold = /obj/item/storage/internal/accessory/sheath
+
+/obj/item/storage/internal/accessory/sheath
+	storage_slots = 1
+	w_class = SIZE_LARGE
+	max_w_class = SIZE_LARGE
+	var/obj/item/weapon/current_blade
+	var/sheatheSound = 'sound/handling/holsterin.ogg'
+	var/drawSound = 'sound/handling/holsterout.ogg'
+	storage_flags = STORAGE_ALLOW_QUICKDRAW
+	can_hold = list(
+		/obj/item/weapon/knife/marine/bowie,
+		/obj/item/weapon/knife/marine/bowie/kukri,
+		/obj/item/weapon/sword/machete,
+		/obj/item/weapon/sword/machete/arnold,
+		/obj/item/weapon/sword/machete/arnold/weak,
+	)
+
+/obj/item/storage/internal/accessory/sheath/on_stored_atom_del(atom/movable/AM)
+	if(AM == current_blade)
+		current_blade = null
+
+/obj/item/clothing/accessory/storage/sheath/attack_hand(mob/user, mods)
+	var/obj/item/storage/internal/accessory/sheath/S = hold
+	if(S.current_blade && ishuman(user) && (loc == user || has_suit))
+		S.current_blade.attack_hand(user)
+		return
+
+	..()
+
+/obj/item/storage/internal/accessory/sheath/can_be_inserted(obj/item/W, mob/user, stop_messages = FALSE)
+	if( ..() ) //If the parent did their thing, this should be fine. It pretty much handles all the checks.
+		if(isweapon(W))
+			if(current_blade)
+				if(!stop_messages)
+					to_chat(usr, SPAN_WARNING("[src] already holds \a [W]."))
+				return
+		return 1
+
+/obj/item/storage/internal/accessory/sheath/_item_insertion(obj/item/W)
+	if(isweapon(W))
+		current_blade = W //If there's no active gun, we want to make this our gun
+		playsound(src, sheatheSound, 15, TRUE)
+	. = ..()
+
+/obj/item/storage/internal/accessory/sheath/_item_removal(obj/item/W)
+	if(isweapon(W))
+		current_blade = null
+		playsound(src, drawSound, 15, TRUE)
+	. = ..()
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
@@ -1233,8 +1390,8 @@
 //===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
 
 /obj/item/clothing/accessory/pads
-	name = "\improper M3 Shoulder Pads"
-	desc = "A set shoulder pads attachable to the M3 armor set worn by the USCM."
+	name = "\improper M3 Pauldrons"
+	desc = "Attachable supplementary armor for the M3 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
 	icon_state = "pads"
 	item_state = "pads"
 	slot = ACCESSORY_SLOT_DECORARMOR
@@ -1246,53 +1403,85 @@
 	update_icon()
 
 /obj/item/clothing/accessory/pads/bracers
-	name = "\improper M3 Arm Bracers"
-	desc = "A set arm bracers worn in conjunction to the M3 armor set of the USCMC."
+	name = "\improper M3 Vambraces"
+	desc = "Attachable supplementary armor for the M3 armor system. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
 	icon_state = "bracers"
 	item_state = "bracers"
 	slot = ACCESSORY_SLOT_DECORBRACER
 
+/obj/item/clothing/accessory/pads/bracers/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/neckguard
-	name = "\improper M3 Neck Guard"
-	desc = "An attachable neck guard option for the M3 armor set worn by the USCMC."
+	name = "\improper M3 Gorget"
+	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard"
 	item_state = "neckguard"
 	slot = ACCESSORY_SLOT_DECORNECK
 
 /obj/item/clothing/accessory/pads/neckguard/uacg
-	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
 	icon_state = "neckguard_uacg"
 	item_state = "neckguard_uacg"
 	flags_atom = NO_SNOW_TYPE
 
 /obj/item/clothing/accessory/pads/greaves
-	name = "\improper M3 Shin Guards"
-	desc = "A set shinguards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Greaves"
+	desc = "Attachable supplementary armor for the M3 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
 	icon_state = "shinguards"
 	item_state = "shinguards"
 	slot = ACCESSORY_SLOT_DECORSHIN
 
+/obj/item/clothing/accessory/pads/greaves/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/kneepads
-	name = "\improper M3 Knee Guards"
-	desc = "A set knee guards designed to be worn in conjuction with M3 pattern armor."
+	name = "\improper M3 Kneepads"
+	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
 	icon_state = "thighguards"
 	item_state = "thighguards"
 	slot = ACCESSORY_SLOT_DECORKNEE
 
+/obj/item/clothing/accessory/pads/kneepads/standard
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/groin
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the USCMC often seen worn than not."
+	name = "\improper M3 Lap Panel"
+	desc = "Attachable supplementary armor for the M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate"
 	item_state = "groinplate"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
 /obj/item/clothing/accessory/pads/groin/uacg
-	name = "\improper M3 Groin Plate"
-	desc = "A plate designed to attach to M3 chestpiece to protect the babymakers of the Corps. Standardized protection of the UACG often seen worn than not."
+	desc = "Attachable supplementary armor for the UACG's M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
 	flags_atom = NO_SNOW_TYPE
+
+
+//===========================//USASF CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/pads/navy
+	name = "\improper M4 Pauldrons"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
+	icon_state = "u_pads"
+	item_state = "u_pads"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/greaves/navy
+	name = "\improper M4 Greaves"
+	desc = "Attachable supplementary armor for the M4 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
+	icon_state = "u_shinguards"
+	item_state = "u_shinguards"
+	flags_atom = NO_SNOW_TYPE
+
+/obj/item/clothing/accessory/pads/groin/navy
+	name = "\improper M4 Lap Panel"
+	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
+	icon_state = "u_groinplate"
+	item_state = "u_groinplate"
+	slot = ACCESSORY_SLOT_DECORGROIN
 
 //===========================//UPP CUSTOM ARMOR PLATES\\================================\\
 
@@ -1316,6 +1505,22 @@
 	icon_state = "upp_crotch"
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
+
+//===========================//TWE CUSTOM ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/twepads
+	name = "\improper Kestrel Shoulder Pads"
+	desc = "A set of ashoulder pads designed for the Kestrel armor system."
+	icon_state = "rmc_arms"
+	item_state = "rmc_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/twepads/legs
+	name = "\improper Kestrel Leg Guards"
+	desc = "A set of leg greaves designed for the Kestrel armor system."
+	icon_state = "rmc_greaves"
+	item_state = "rmc_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
@@ -1349,6 +1554,42 @@
 	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
 	icon_state = "usflag"
 	item_state = "usflag"
+
+/obj/item/clothing/accessory/paint/target
+	name = "target armor paint"
+	desc = "A set of paint tones to etch a target pattern into a Marine's armor."
+	icon_state = "target"
+	item_state = "target"
+
+/obj/item/clothing/accessory/paint/alcoholism
+	name = "smileyface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor."
+	icon_state = "smileyface"
+	item_state = "smileyface"
+
+/obj/item/clothing/accessory/paint/melancholy
+	name = "neutralface armor paint"
+	desc = "A set of paint tones to etch a happy face into a Marine's armor, though this one carries indifferent energy."
+	icon_state = "neutralface"
+	item_state = "neutralface"
+
+/obj/item/clothing/accessory/paint/cross
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a religious symbol into a Marine's armor."
+	icon_state = "cross"
+	item_state = "cross"
+
+/obj/item/clothing/accessory/paint/inscription
+	name = "cross armor paint"
+	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
+	icon_state = "inscription"
+	item_state = "inscription"
+
+/obj/item/clothing/accessory/paint/fire
+	name = "flames armor paint"
+	desc = "A set of paint tones to etch straight heat into a Marine's armor."
+	icon_state = "mixtape"
+	item_state = "mixtape"
 
 /obj/item/clothing/accessory/paint/sg
 	name = "camouflage paint"
@@ -1388,8 +1629,24 @@
 
 /obj/item/storage/internal/accessory/webbing/m3mag
 	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
+		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg/m39,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
 
@@ -1417,20 +1674,17 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/small
 	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
-/obj/item/storage/internal/accessory/black_vest/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/plasma,
-	)
-
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
+	name = "\improper PBAS Webbing"
+	desc = "A sturdy set of webbing designed to fit on the US Army's standard body armor system. Fully outfitted with pouches and pockets to carry a whole array of small items."
+	icon_state = "armywebbing"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
@@ -1439,7 +1693,7 @@
 	new /obj/item/tool/crowbar/tactical(src)
 	new /obj/item/tool/shovel/etool(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyalt
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
@@ -1449,7 +1703,7 @@
 	new /obj/item/tool/shovel/etool(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
-/obj/item/clothing/accessory/storage/webbing/m3/small/armyleader
+/obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
@@ -1496,44 +1750,7 @@
 /obj/item/storage/internal/accessory/webbing/m3mag/recon
 	storage_slots = 4
 
-
-//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppmags
-	name = "\improper Type 90 Pattern Magazine Webbing"
-	desc = "A set of UPP magazine webbing that can carry four magazines."
-	icon_state = "upp_webbing_magazine"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/ammo_magazine/rifle/type71,
-		/obj/item/ammo_magazine/rifle/ag80,
-		/obj/item/ammo_magazine/pistol/t73,
-		/obj/item/ammo_magazine/pistol/np92,
-		/obj/item/ammo_magazine/handful/shotgun/heavy,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
-	name = "\improper Type 78 Pattern Small Pouch Webbing"
-	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
-	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
-	name = "\improper Type 78 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
-	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-//Partial Pre-load For Props
+//Pre-load For Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
 	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
@@ -1542,6 +1759,14 @@
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
 
+/obj/item/clothing/accessory/storage/webbing/m3/recon/m49
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/m49
+
+/obj/item/storage/internal/accessory/webbing/m3mag/recon/m49/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
 //===
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/m40
@@ -1567,6 +1792,12 @@
 	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+/obj/item/storage/internal/accessory/black_vest/m3generic
+	cant_hold = list(
+		/obj/item/ammo_magazine/handful/shotgun,
+		/obj/item/ammo_magazine/plasma,
+	)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6
@@ -1631,3 +1862,86 @@
 		/obj/item/explosive/grenade/slug/baton,
 		/obj/item/explosive/grenade/tear/marine,
 	)
+
+//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags
+	name = "\improper Type 90 Pattern Magazine Webbing"
+	desc = "A set of UPP magazine webbing that can carry four magazines."
+	icon_state = "upp_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/storage/internal/accessory/webbing/m3mag/upp
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/device/flashlight/flare,
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/pistol,
+		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
+	name = "\improper Type 78 Pattern Small Pouch Webbing"
+	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
+	icon_state = "upp_webbing_small"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
+	name = "\improper Type 78 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
+	icon_state = "upp_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+//===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc
+	name = "\improper 67 Pattern Webbing"
+	icon_state = "rmc_webbing_small"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc
+	name = "\improper 82 Pattern Magazine Webbing"
+	desc = "A set of webbing pouches that can carry four magazines. Comes with clips to mount to the standard armor system in use by the Royal Marines."
+	icon_state = "rmc_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/rmc
+
+/obj/item/storage/internal/accessory/webbing/m3mag/rmc
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/pistol/vp78,
+		/obj/item/ammo_magazine/pistol/vp70,
+		/obj/item/ammo_magazine/smg/m39,
+	)
+
+//Partial Pre-load For Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/rmc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/rmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)

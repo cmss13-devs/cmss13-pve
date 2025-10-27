@@ -52,6 +52,7 @@
 	var/list/marines = list()
 	var/list/survivors = list()
 	var/list/xenos = list()
+	var/list/infected = list()
 	var/list/ert_members = list()
 	var/list/upp = list()
 	var/list/clf = list()
@@ -144,6 +145,9 @@
 				else
 					serialized["background_color"] = human.assigned_equipment_preset?.minimap_background
 
+				if(human.status_flags & XENO_HOST)
+					infected += list(serialized)
+
 				if(SSticker.mode.is_in_endgame == TRUE && !is_mainship_level(M.z) && !(human.faction in FACTION_LIST_ERT_ALL))
 					escaped += list(serialized)
 				else if(human.faction in FACTION_LIST_WY)
@@ -170,7 +174,7 @@
 					marshal += list(serialized)
 				else if(human.faction in FACTION_LIST_DUTCH)
 					dutch += list(serialized)
-				else if(human.faction in FACTION_LIST_MARINE)
+				else if(human.faction in FACTION_LIST_UA)
 					marines += list(serialized)
 				else if(issurvivorjob(human.job))
 					survivors += list(serialized)
@@ -184,6 +188,7 @@
 	data["marines"] = marines
 	data["survivors"] = survivors
 	data["xenos"] = xenos
+	data["infected"] = infected
 	data["ert_members"] = ert_members
 	data["upp"] = upp
 	data["clf"] = clf

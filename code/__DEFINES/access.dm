@@ -71,6 +71,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///The generic "I'm a bad guy" access
 #define ACCESS_ILLEGAL_PIRATE 120
 
+//CIA-locked covert items
+#define ACCESS_CIA 125
+
 //=================================================
 
 //Weyland Yutani access levels (200-229)
@@ -153,10 +156,20 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_TWE_FLIGHT 295
 #define ACCESS_TWE_RESEARCH 296
 
-#define ACCESS_TWE_COMMANDO 299
-#define ACCESS_TWE_LEADERSHIP 300
+#define ACCESS_TWE_SQUAD_ONE 297
+#define ACCESS_TWE_SQUAD_TWO 298
+
+#define ACCESS_TWE_COMMANDO 300
+#define ACCESS_TWE_LEADERSHIP 301
+
+#define ACCESS_TWE_MEDPREP 302
+#define ACCESS_TWE_ENGPREP 303
+#define ACCESS_TWE_HEVWEAPPREP 304
+#define ACCESS_TWE_SNIPERPREP 305
+#define ACCESS_TWE_TLPREP 306
+
 ///Senior leadership, the highest ranks
-#define ACCESS_TWE_SENIOR_LEAD 301
+#define ACCESS_TWE_SENIOR_LEAD 310
 
 //=================================================
 
@@ -201,6 +214,11 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_WY_SENIOR "Wey-Yu (Senior Lead)"
 ///All access levels associated with Weyland Yutani
 #define ACCESS_LIST_WY_ALL "Wey-Yu (ALL)"
+
+///Access levels for RMC platoon members
+#define ACCESS_LIST_TWE_TROOP "RMC (Troop)"
+///All access levels associated with the RMC & TWE
+#define ACCESS_LIST_TWE_ALL "TWE (ALL)"
 
 ///All the access levels in the civillian category, excluding Press.
 #define ACCESS_LIST_COLONIAL_ALL "Colonial (ALL)"

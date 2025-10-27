@@ -592,12 +592,23 @@
 
 	fire(target)
 
+/obj/structure/machinery/defenses/sentry/platoon_pmc
+	name = "\improper UA 571-C-WY sentry gun"
+	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	faction_group = list(FACTION_WY, FACTION_PMC)
+	handheld_type = /obj/item/defenses/handheld/sentry/pmc_platoon
+	sentry_type = "wy_sentry"
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = SENTRY_FACTION_WEYLAND,
+	)
+
 /obj/structure/machinery/defenses/sentry/premade
 	name = "\improper UA-577 Gauss Turret"
 	immobile = TRUE
 	turned_on = TRUE
 	icon_state = "premade" //for the map editor only
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	static = TRUE
 	fire_delay = 5
 	burst = 1
@@ -634,7 +645,7 @@
 	name = "\improper UA-633 Static Gauss Turret"
 	desc = "A fully-automated defence turret with mid-range targeting capabilities. Armed with a modified M32-S Autocannon and an internal belt feed."
 	density = TRUE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	fire_delay = 1
 	ammo = new /obj/item/ammo_magazine/sentry/premade
 	var/obj/structure/machinery/sentry_holder/deployment_system
@@ -756,7 +767,7 @@
 //the turret inside the shuttle sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/dropship
 	density = TRUE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	omni_directional = TRUE
 	choice_categories = list()
 	selected_categories = list()
@@ -821,7 +832,7 @@
 	name = "\improper UA 571-O sentry post"
 	desc = "A deployable, omni-directional automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a 100-round drum magazine with 500 rounds stored internally.  Due to the deployment method it is incapable of being moved."
 	ammo = new /obj/item/ammo_magazine/sentry/dropped
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_UA
 	omni_directional = TRUE
 	additional_rounds_stored = TRUE
 	immobile = TRUE
@@ -912,6 +923,25 @@
 		new /obj/item/stack/sheet/plasteel/medium_stack(loc)
 	return ..()
 
+/obj/structure/machinery/defenses/sentry/launchable/upp
+	name = "\improper UPPA 32-O rapid deploy sentry"
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_UPP, SENTRY_FACTION_HUMAN),
+	)
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_UPP,
+	)
+	faction_group = FACTION_LIST_UPP
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_type71.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp/dropped
+
 /obj/structure/machinery/defenses/sentry/wy
 	name = "WY 202-GMA1 Smart Sentry"
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the PMC."
@@ -990,12 +1020,14 @@
 /obj/structure/machinery/defenses/sentry/upp/light
 	name = "UPP SDS-R8 Light Sentry"
 	defense_type = "Light"
-	fire_delay = 0.3 SECONDS
+	fire_delay = 0.1 SECONDS
+	damage_mult = 0.3
 	health = 200
 	health_max = 200
-	disassemble_time = 2 SECONDS
-	sentry_range = 3
-	omni_directional = TRUE
+	disassemble_time = 0.75 SECONDS
+	sentry_range = 5
+	omni_directional = FALSE
+	density = FALSE
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
 
 #undef SENTRY_FIREANGLE

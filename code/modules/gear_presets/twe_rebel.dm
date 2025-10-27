@@ -4,7 +4,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	faction = FACTION_TWE_REBEL
 	faction_group = FACTION_LIST_TWE_REBEL
-	skills = /datum/skills/pfc
+	skills = /datum/skills/clf
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 	origin_override = ORIGIN_CIVILIAN
 
@@ -111,6 +111,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -151,7 +152,7 @@
 /datum/equipment_preset/clf/medic
 	name = "TWE Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/corpsman
+	skills = /datum/skills/clf/combat_medic
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guard Medic"
 
@@ -162,8 +163,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
@@ -197,7 +198,6 @@
 /datum/equipment_preset/clf/soldier
 	name = "TWE Rebel, Soldier (Rifle)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/pfc
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guardsman"
 
@@ -235,7 +235,7 @@
 	add_rebel_twe_shoes(new_human)
 	if(prob(75))
 		add_rebel_twe_smg(new_human)
-	else if(prob(85))
+	else
 		add_rebel_twe_rifle(new_human)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
@@ -278,8 +278,45 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 
+/datum/equipment_preset/clf/soldier/machinegunner
+	name = "TWE Rebel, Soldier (Machinegunner)"
+
+/datum/equipment_preset/clf/soldier/machinegunner/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_twe(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_facewrap(new_human)
+	//head
+	if(prob(85))
+		add_rebel_twe_helmet(new_human)
+	//uniform
+	add_rebel_twe_uniform(new_human)
+	//jacket
+	add_rebel_twe_suit(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/lmg, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40/lmg, WEAR_IN_BELT)
+	//limbs
+	add_rebel_twe_shoes(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+
 /datum/equipment_preset/clf/soldier/flamer
 	name = "TWE Rebel, Soldier (Incinerator)"
+	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -318,6 +355,7 @@
 
 /datum/equipment_preset/clf/soldier/bolt
 	name = "TWE Rebel, Sniper (Basira-Armstrong)"
+	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/bolt/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -360,6 +398,7 @@
 
 /datum/equipment_preset/clf/soldier/svd
 	name = "TWE Rebel, Sniper (Type-88)"
+	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/svd/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -406,7 +445,7 @@
 /datum/equipment_preset/clf/leader
 	name = "TWE Rebel, Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	skills = /datum/skills/sl_pve
+	skills = /datum/skills/clf/leader
 	idtype = /obj/item/card/id/dogtag
 	assignment = "Revolutionary Guard Team Leader"
 
@@ -440,7 +479,7 @@
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
 	//waist
 	if(prob(75))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
@@ -577,7 +616,7 @@
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun(new_human), WEAR_JACKET)
 	//waist
 	if(prob(75))
 		new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)

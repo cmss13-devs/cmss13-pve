@@ -75,6 +75,11 @@
 	applyable = TRUE
 	cost = 1
 
+/datum/character_trait/language/polish
+	language_name = LANGUAGE_POLISH
+	applyable = TRUE
+	cost = 1
+
 /datum/character_trait/language/english/New()
 	..()
 	trait_desc = "Can speak the language [language_name]. Not at all useful if you're in the Marine Corps."

@@ -1,0 +1,10 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "US Army squad datum"
+  - rscadd: "New descriptions & names for the US army armor & helmet"
+  - qol: "Army mobs will no longer have a chance to spawn with lamarr or MARSOC NVGs in their helmet garb"
+  - qol: "Made some of the gear preset equipping procs a little less naff"
+  - spellcheck: "Couple small typos caught and corrected as I worked on this"
+  - imageadd: "New armor brigade patch & army webbing sprites, revamped army helmet sprite"
+  - imageadd: "Recoloured army squad icons"

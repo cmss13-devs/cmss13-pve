@@ -78,15 +78,15 @@ GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 	default_ammo = /datum/ammo/bullet/shotgun/beanbag
 	handful_state = "beanbag_slug"
 
-/obj/item/ammo_magazine/shotgun/light/breaching
-	name = "box of breaching shells"
-	desc = "A box filled with breaching shotgun shells. 16 Gauge."
-	icon_state = "breaching"
-	item_state = "breaching"
+/obj/item/ammo_magazine/shotgun/buckshot/light
+	name = "box of light buckshot shells"
+	desc = "A box filled with buckshot shotgun shells. 16 Gauge."
+	icon_state = "lightbuckshot"
+	item_state = "buckshot"
 	max_rounds = 30 //6 handfuls of 6 shells, 12 rounds in a XM51 mag
 	transfer_handful_amount = 6
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
-	handful_state = "breaching_shell"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
+	handful_state = "lightshot_shell"
 	caliber = "16g"
 
 
@@ -122,6 +122,16 @@ GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "heavy_dragon"
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/buckshot/dragonsbreath
+	transfer_handful_amount = 4
+	max_rounds = 24
+	caliber = "8g"
+
+/obj/item/ammo_magazine/shotgun/flechette/heavy
+	name = "box of heavy flechette shells"
+	desc = "A box filled with flechette shotgun shells. 8 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "heavy_flechette"
+	default_ammo = /datum/ammo/bullet/shotgun/heavy/flechette
 	transfer_handful_amount = 4
 	max_rounds = 24
 	caliber = "8g"
@@ -382,14 +392,14 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g_reasonable, list(
 	handful_state = "heavy_beanbag"
 	default_ammo = /datum/ammo/bullet/shotgun/heavy/beanbag
 
-/obj/item/ammo_magazine/handful/shotgun/light/breaching
-	name = "handful of breaching shells (16g)"
-	icon_state = "breaching_shell_6"
-	handful_state = "breaching_shell"
+/obj/item/ammo_magazine/handful/shotgun/light
+	name = "handful of light buckshot shells (16g)"
+	icon_state = "lightshot_shell_6"
+	handful_state = "lightshot_shell"
 	max_rounds = 6 //XM51 magazines are 12 rounds total, two handfuls should be enough to reload a mag
 	current_rounds = 6
 	transfer_handful_amount = 6
-	default_ammo = /datum/ammo/bullet/shotgun/light/breaching
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
 	caliber = "16g"
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 

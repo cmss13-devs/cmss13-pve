@@ -361,8 +361,6 @@
 	job = /datum/job/command/bridge/whiskey
 
 //****************************************** AUXILIARY - SUPPORT ************************************************/
-/obj/effect/landmark/start/whiskey/synthetic
-	job = /datum/job/civilian/synthetic/whiskey
 
 /obj/effect/landmark/start/whiskey/senior
 	job = /datum/job/command/senior  //Need to create a WO variant in the future
@@ -435,6 +433,10 @@
 	name = "upp late join"
 	squad = SQUAD_UPP
 
+/obj/effect/landmark/late_join/rmc
+	name = "rmc late join"
+	squad = SQUAD_RMC
+
 /obj/effect/landmark/late_join/upp/Initialize(mapload, ...)
 	. = ..()
 
@@ -469,6 +471,13 @@
 	name = "forecon late join"
 	squad = SQUAD_LRRP
 
+/obj/effect/landmark/late_join/pmc
+	name = "pmc late join"
+	squad = SQUAD_PMCPLT
+
+/obj/effect/landmark/late_join/small_pmc
+	name = "small pmc late join"
+	squad = SQUAD_PMCPLT_SMALL
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()
@@ -555,7 +564,7 @@
 	var/mob/living/carbon/human/zombie = new /mob/living/carbon/human(loc)
 	if(!zombie.hud_used)
 		zombie.create_hud()
-	arm_equipment(zombie, /datum/equipment_preset/other/zombie, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
+	arm_equipment(zombie, /datum/equipment_preset/zombie/generic, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
 	observer.client.eye = zombie
 	observer.mind.transfer_to(zombie)
 	if(spawns_left <= 0)

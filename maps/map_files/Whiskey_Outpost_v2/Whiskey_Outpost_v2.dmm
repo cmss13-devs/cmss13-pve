@@ -82,7 +82,7 @@
 /area/whiskey_outpost/inside/living)
 "ap" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -876,12 +876,12 @@
 "dT" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/device/reagent_scanner,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
 /turf/open/floor/whitegreen/north,
 /area/whiskey_outpost/inside/hospital)
@@ -1136,7 +1136,7 @@
 /area/whiskey_outpost/outside/lane/four_north)
 "fh" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -7815,7 +7815,7 @@
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = -30
 	},
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/item/weapon/gun/pill{
 	pixel_y = 6
 	},
@@ -7870,7 +7870,7 @@
 	pixel_y = 9
 	},
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/closet/secure_closet/surgical{
 	pixel_x = 30
 	},

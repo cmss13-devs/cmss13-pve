@@ -1,0 +1,7 @@
+author: "Zenith"
+delete-after: True
+changes:
+  - rscadd: "Pilot helmet visors to the pilot helmet"
+  - bugfix: "Gives the pilot helmet the right kind of visor"
+  - spellcheck: "Small typo in pilot helmet specialization var"
+  - soundadd: "New opening & closing sounds for the pilot visors"

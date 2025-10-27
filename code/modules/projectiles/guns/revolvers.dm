@@ -44,7 +44,8 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
-	movement_onehanded_acc_penalty_mult = 3
+	movement_onehanded_acc_penalty_mult = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_3
+
 
 /obj/item/weapon/gun/revolver/get_examine_text(mob/user)
 	. = ..()
@@ -523,12 +524,12 @@
 /obj/item/weapon/gun/revolver/small/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
-	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_5
-	damage_mult = BASE_BULLET_DAMAGE_MULT * 2
-	recoil = 0
-	recoil_unwielded = 0
+	accuracy_mult = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_1
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_7
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+	recoil = RECOIL_AMOUNT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 
 /obj/item/weapon/gun/revolver/small/unique_action(mob/user)
 	var/result = revolver_trick(user)
@@ -767,3 +768,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead_black"
 	item_state = "spearhead_black"
+
+/obj/item/weapon/gun/revolver/spearhead/black/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint

@@ -9321,17 +9321,17 @@
 /turf/open/floor/prison/floor_plate,
 /area/calliope/bunker/barracks)
 "itd" = (
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
 	name = "long-life foodstuff storage"
 	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
 /obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,
@@ -20251,15 +20251,15 @@
 	pixel_x = -5;
 	pixel_y = -2
 	},
-/obj/item/ammo_magazine/rifle/m49a/pve{
+/obj/item/ammo_magazine/rifle/m49a/custom/pve{
 	pixel_x = 7;
 	pixel_y = 25
 	},
-/obj/item/ammo_magazine/rifle/m49a/pve{
+/obj/item/ammo_magazine/rifle/m49a/custom/pve{
 	pixel_x = 4;
 	pixel_y = 17
 	},
-/obj/item/ammo_box/magazine/m49a/a19/impact{
+/obj/item/ammo_box/magazine/m49a/a19/explosive{
 	pixel_x = -2;
 	pixel_y = 15
 	},
@@ -21297,11 +21297,11 @@
 /obj/structure/surface/table{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc{
 	pixel_x = 8;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc{
 	pixel_x = 5;
 	pixel_y = 10
 	},
@@ -21309,7 +21309,7 @@
 	pixel_x = 7;
 	pixel_y = 0
 	},
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light{
+/obj/item/clothing/suit/marine/veteran/royal_marine{
 	pixel_x = -8;
 	pixel_y = -2
 	},

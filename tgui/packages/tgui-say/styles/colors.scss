@@ -39,8 +39,18 @@ $cct: #4dc5ce;
 $intel: #027d02;
 $pmc: #4dc5ce;
 $clf: #8e83ca;
+$cia: #e6754c;
 $upp: #8f4a4b;
 $colony: #993399;
+$rmc: #e3580e;
+$guard: #7ec837;
+$us-army: #037741;
+$usasf: #2a1bb6;
+$uscg: #62a759;
+$pfa: #4a4dc9;
+$jsc: #8b3434;
+$yautja: #1ecc44;
+$provost: #9d0612;
 
 $_channel_map: (
   'say': $say,
@@ -72,15 +82,16 @@ $_channel_map: (
   'sof': $highcom,
   'ship': $comms,
   'colony': $colony,
+  'guard': $guard,
   'upp-med': $upp,
   'upp-engi': $upp,
   'upp-cmd': $upp,
   'upp-kdo': $upp,
+  'upp-cct': $upp,
   'upp': $upp,
   'clf-med': $clf,
   'clf-engi': $clf,
-  'clf-cmd': $clf,
-  'clf-cct': $clf,
+  'cia': $cia,
   'clf': $clf,
   'pmc-med': $pmc,
   'pmc-engi': $pmc,
@@ -88,6 +99,15 @@ $_channel_map: (
   'pmc-cmd': $pmc,
   'specops': $pmc,
   'pmc': $pmc,
+  'yautja': $yautja,
+  'provost': $provost,
+  'us-army': $us-army,
+  'usasf': $usasf,
+  'uscg': $uscg,
+  'rmc': $rmc,
+  'pfa': $pfa,
+  'jsc': $jsc,
+  'mercs': $security,
 );
 
 $channel_keys: map.keys($_channel_map) !default;

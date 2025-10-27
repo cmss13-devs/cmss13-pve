@@ -335,7 +335,7 @@
 	icon_state = "lemon_drop_box"
 	item_state = "lemon_drop_box"
 	can_hold = list(/obj/item/reagent_container/food/snacks/lemondrop)
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY //because otherwise it won't go back into MREs, it's not like people are minmaxing with lemon drops anyway
 	storage_slots = 8
 
 /obj/item/storage/box/lemondrop/fill_preset_inventory()
@@ -695,7 +695,89 @@
 	else
 		icon_state = "r52"
 
+/obj/item/storage/box/flare/rmc
+	name = "\improper L96 illumination flare pack"
+	desc = "A packet of fourteen L96 Illumination Flares. Carried by TWE soldiers to light dark areas that cannot be reached with the usual Shoulder Lamp."
+	icon_state = "l96"
+	can_hold = list(/obj/item/device/flashlight/flare/rmc)
+
+/obj/item/storage/box/flare/rmc/fill_preset_inventory()
+	for(var/i = 1 to max_storage_space)
+		new /obj/item/device/flashlight/flare/rmc(src)
+
+/obj/item/storage/box/flare/rmc/update_icon()
+	if(!length(contents))
+		icon_state = "l96_e"
+	else
+		icon_state = "l96"
+
 //ITEMS-----------------------------------//
+
+/obj/item/storage/box/upp_radio_key
+	name = "box of UPP millitary encryption keys"
+	desc = "Contains radio encryption keys. They can be inserted into a radio headset."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "uppkeycase"
+	var/icon_lid = "uppkeycase_lid"
+	w_class = SIZE_SMALL
+	max_w_class = SIZE_TINY
+	storage_slots = 4
+	can_hold = list(/obj/item/device/encryptionkey)
+	use_sound = "toolbox"
+
+/obj/item/storage/box/upp_radio_key/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+	new /obj/item/device/encryptionkey/upp(src)
+
+/obj/item/storage/box/upp_radio_key/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppkeycase_lid_open")
+	else
+		overlays += image(icon, icon_lid)
+		return
+	var/key_tally = -1
+	for(var/obj/item/device/encryptionkey/radio_key in contents)
+		key_tally++
+		if(key_tally+1 > initial(storage_slots))
+			return
+		if(istype(radio_key, /obj/item/device/encryptionkey/upp))
+			var/image/source_image = image(icon, "+upp_engi")
+			source_image.pixel_x = key_tally*4
+			overlays += source_image
+		else
+			if(istype(radio_key, /obj/item/device/encryptionkey/colony))
+				var/image/source_image = image(icon, "+colony_key")
+				source_image.pixel_x = key_tally*4
+				overlays += source_image
+			else
+				if(istype(radio_key, /obj/item/device/encryptionkey))
+					var/image/source_image = image(icon, "+generic_key")
+					source_image.pixel_x = key_tally*4
+					overlays += source_image
+
+/obj/item/storage/box/upp_radio_key/colony
+	name = "box of UPP civilian radio keys"
+	icon_lid = "uppkeycaseciv_lid"
+
+/obj/item/storage/box/upp_radio_key/colony/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+	new /obj/item/device/encryptionkey/colony(src)
+
+/obj/item/storage/box/upp_radio_key/engi
+	name = "box of UPP Engineering Encryption Keys"
+	icon_lid = "uppkeycaseengi_lid"
+
+/obj/item/storage/box/upp_radio_key/engi/fill_preset_inventory()
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+	new /obj/item/device/encryptionkey/upp/engi(src)
+
 /obj/item/storage/box/lightstick
 	name = "box of lightsticks"
 	desc = "Contains blue lightsticks."
@@ -942,3 +1024,12 @@
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
 	new /obj/item/reagent_container/food/condiment/juice/milk(src)
+
+/obj/item/storage/box/cheeseslices
+	name = "box of 'cheese-product' slices"
+	desc = "Smells like plastic."
+	icon_state = "cheese_kit"
+
+/obj/item/storage/box/cheeseslices/fill_preset_inventory()
+	for(var/i in 1 to 7)
+		new /obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft(src)

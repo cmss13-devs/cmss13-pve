@@ -4,6 +4,7 @@
 	name = "\improper TV1 night vision goggles"
 	gender = PLURAL
 	desc = "A neat looking pair of civilian grade night vision goggles."
+	icon = 'icons/obj/items/clothing/glasses.dmi' //Why wasn't this on the parent item before?
 	icon_state = "night"
 	item_state = "night"
 	deactive_state = "night_off"
@@ -16,6 +17,21 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_NEGATIVE
+	var/headcam = FALSE
+	var/obj/structure/machinery/camera/camera
+
+/obj/item/clothing/glasses/night/Initialize()
+	. = ..()
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+
+/obj/item/clothing/glasses/night/equipped(mob/living/carbon/human/mob, slot)
+	if(headcam && camera)
+		camera.c_tag = mob.name
+	..()
+
+/obj/item/clothing/glasses/night/Destroy()
+	QDEL_NULL(camera)
+	return ..()
 
 /obj/item/clothing/glasses/night/helmet //for the integrated NVGs that are in helmetgarb code
 	name = "\improper M2 night vision goggles"
@@ -29,55 +45,83 @@
 /obj/item/clothing/glasses/night/M49A
 	name = "\improper M49A Battle sight"
 	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the suit sensor health status readouts of other marines. Click it to toggle."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
+	desc = "A headset and night vision system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
 	icon_state = "m49a_goggles"
 	deactive_state = "m49a_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = MOB_HUD_MEDICAL_BASIC
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = MOB_LOCK_ON_EQUIP|NO_CRYO_STORE
+	headcam = TRUE
 
 /obj/item/clothing/glasses/night/medhud
 	name = "\improper Mark 4 Battle Medic sight"
 	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, as well as the ability to view the health statuses of others. Click it to toggle."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
+	desc = "A headset, night vision optic and biomonitor readout system. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
 	icon_state = "m4_goggles"
 	deactive_state = "m4_goggles_0"
 	vision_flags = SEE_TURFS
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
 	toggleable = TRUE
 	fullscreen_vision = null
+	req_skill = SKILL_MEDICAL
+	req_skill_level = SKILL_MEDICAL_MEDIC
 	actions_types = list(/datum/action/item_action/toggle)
+	headcam = TRUE
 
-/obj/item/clothing/glasses/night/m42_night_goggles
-	name = "\improper M42 scout sight"
-	gender = NEUTER
-	desc = "A headset and night vision goggles system for the M42 Scout Rifle. Allows highlighted imaging of surroundings. Click it to toggle."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "m56_goggles"
-	deactive_state = "m56_goggles_0"
+/obj/item/clothing/glasses/night/medhud/no_nvg
+	name = "\improper Mark 2 Battle Medic sight"
+	desc = "A headset and biomonitor readout system. Allows the ability to view the biofunction monitor readouts of other marines and linking to the Command & Control network. Click it to toggle."
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED) // Need to redefine or it won't work
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = 255
+
+/obj/item/clothing/glasses/night/ghillie_goggles
+	name = "\improper BiMex M3 day/night goggles"
+	desc = "A set of enhanced-vision goggles often issued to the marksman of USCM scout-sniper teams. Allows highlighted imaging of surroundings. Click it to toggle."
+	icon_state = "ghillie_goggles"
+	deactive_state = "ghillie_goggles_0"
 	vision_flags = SEE_TURFS
 	toggleable = TRUE
 	fullscreen_vision = null
 	actions_types = list(/datum/action/item_action/toggle)
-	flags_item = NO_CRYO_STORE
 
-/obj/item/clothing/glasses/night/m42_night_goggles/spotter
-	name = "\improper M42 spotter sight"
-	desc = "A companion headset and night vision goggles system for USCM spotters. Allows highlighted imaging of surroundings. Click it to toggle."
-
-/obj/item/clothing/glasses/night/m42_night_goggles/m42c
-	name = "\improper M42C special operations sight"
-	desc = "A specialized variation of the M42 scout sight system, intended for use with the high-power M42C anti-tank sniper rifle. Allows for highlighted imaging of surroundings, as well as detection of thermal signatures even from a great distance. Click it to toggle."
+/obj/item/clothing/glasses/night/m42_hms
+	name = "\improper M42 head mounted sight"
+	gender = NEUTER
+	desc = "A standalone version of the HMS commonly seen attached to the M56 weapon system. Allows highlighted imaging of surroundings and connects the wearer to the Command & Control network whilst also providing a HUD display. Click it to toggle."
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
-	vision_flags = SEE_TURFS|SEE_MOBS
+	vision_flags = SEE_TURFS
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
+	toggleable = TRUE
+	fullscreen_vision = null
+	actions_types = list(/datum/action/item_action/toggle)
+	headcam = TRUE
 
-/obj/item/clothing/glasses/night/m42_night_goggles/upp
+/obj/item/clothing/glasses/night/m42_hms/rmc
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
+/obj/item/clothing/glasses/night/m42_hms/no_nvg
+	name = "\improper M42 head-mounted sight"
+	desc = "A standalone version of the HMS commonly seen attached to the M56 weapon system. Allows connection to the Command & Control network whilst also providing a HUD display. Click it to toggle."
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = 255
+
+/obj/item/clothing/glasses/night/m42_hms/m42c
+	name = "\improper M42C special operations sight"
+	desc = "A specialized variation of the M42 scout sight system, intended for use with the high-power M42C anti-tank sniper rifle. Allows for highlighted imaging of surroundings, as well as detection of thermal signatures even from a great distance. Click it to toggle."
+	vision_flags = SEE_TURFS|SEE_MOBS
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
+/obj/item/clothing/glasses/night/m42_hms/upp
 	name = "\improper Type 9 commando goggles"
 	gender = PLURAL
 	desc = "A headset and night vision goggles system used by UPP forces. Allows highlighted imaging of surroundings. Click it to toggle."
@@ -85,30 +129,26 @@
 	deactive_state = "upp_goggles_0"
 	req_skill = null
 	req_skill_level = null
+	hud_type = list(MOB_HUD_FACTION_UPP)
 
 /obj/item/clothing/glasses/night/m56_goggles
 	name = "\improper M56 head mounted sight"
 	gender = NEUTER
 	desc = "A headset and optic system for the M56 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "m56_goggles"
 	deactive_state = "m56_goggles_0"
 	toggleable = TRUE
 	actions_types = list(/datum/action/item_action/toggle, /datum/action/item_action/m56_goggles/far_sight)
 	vision_flags = SEE_TURFS
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 	flags_inventory = SMARTGUN_OPTIC
 	fullscreen_vision = null
 	eye_protection = EYE_PROTECTION_FLAVOR
 	req_skill = SKILL_SPEC_WEAPONS
 	req_skill_level = SKILL_SPEC_SMARTGUN
-	var/obj/structure/machinery/camera/camera
-
+	headcam = TRUE
 	var/far_sight = FALSE
 	var/obj/item/weapon/gun/smartgun/linked_smartgun = null
-
-/obj/item/clothing/glasses/night/m56_goggles/Initialize(mapload)
-	. = ..()
-	camera = new /obj/structure/machinery/camera/overwatch(src)
 
 /obj/item/clothing/glasses/night/m56_goggles/Destroy()
 	QDEL_NULL(camera)
@@ -215,10 +255,33 @@
 	vision_flags = 0
 	lighting_alpha = 255
 
+/obj/item/clothing/glasses/night/m56_goggles/rmc
+	name = "\improper L58A3 head mounted gunsight interface"
+	desc = "A headset and optic system for the L58A3 Smartgun weapon system. Has a low-res short-range imager, allowing for view of terrain."
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
 /obj/item/clothing/glasses/night/m56_goggles/whiteout
 	name = "\improper M56T head mounted sight"
 	desc = "A headset and goggles system for the M56T 'Terminator' Smartgun. Has a low-light vision processor as well as a system allowing detection of thermal signatures though solid surfaces."
 	vision_flags = SEE_TURFS|SEE_MOBS
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+
+/obj/item/clothing/glasses/night/m56_goggles/upp
+	name = "\improper RADIO head rig"
+	desc = "Developed for use with the RFVS-37, the Integrated Auto-Rifleman Optronic Device enables the riflemen of the UPP SOF to visually search for targets in low-visibility conditions, while also enabling safe use of the weapon itself."
+	icon_state = "radio_head_rig"
+	deactive_state = "radio_head_rig_0"
+	hud_type = list(MOB_HUD_FACTION_UPP)
+
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision
+	actions_types = list(/datum/action/item_action/toggle)
+	darkness_view = 0
+	vision_flags = 0
+	lighting_alpha = 255
 
 /obj/item/clothing/glasses/night/yautja
 	name = "bio-mask nightvision"
@@ -253,7 +316,6 @@
 /obj/item/clothing/glasses/night/experimental_mesons
 	name = "\improper Experimental Meson Goggles"
 	desc = "An improved but experimental version of the standard issue meson goggles, due to increased complexity these can only be worn by synthetics. Allows for full night vision and viewing of the surroundings. Click it to toggle."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
 	icon_state = "refurb_meson"
 	deactive_state = "degoggles"
 	vision_flags = SEE_TURFS

@@ -49,18 +49,21 @@
 	drop_flame(get_turf(P), P.weapon_cause_data)
 
 /datum/ammo/flamethrower/tank_flamer
-	flamer_reagent_id = "highdamagenapalm"
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
+	flamer_reagent_id = "utnapthal"
 	max_range = 8
+	damage = 50
+	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
 	if(!istype(turf))
 		return
 
-	var/datum/reagent/napalm/high_damage/reagent = new()
-	new /obj/flamer_fire(turf, cause_data, reagent, 1)
+	var/datum/reagent/napalm/ut/reagent = new()
+	new /obj/flamer_fire(turf, cause_data, reagent, 2)
 
 	var/datum/effect_system/smoke_spread/landingsmoke = new /datum/effect_system/smoke_spread
-	landingsmoke.set_up(1, 0, turf, null, 4, cause_data)
+	landingsmoke.set_up(1, 0, turf, null, 3, cause_data)
 	landingsmoke.start()
 	landingsmoke = null
 
@@ -267,7 +270,7 @@
 
 	damage = 15
 	accuracy = HIT_ACCURACY_TIER_3
-	max_range = 6
+	max_range = 9
 
 /datum/ammo/grenade_container/on_hit_mob(mob/M,obj/projectile/P)
 	drop_nade(P)
@@ -285,7 +288,7 @@
 	var/turf/T = get_turf(P)
 	var/obj/item/explosive/grenade/G = new nade_type(T)
 	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
-	G.det_time = 10
+	G.det_time = 0.5 SECONDS
 	G.cause_data = P.weapon_cause_data
 	G.activate()
 
@@ -295,6 +298,11 @@
 /datum/ammo/grenade_container/smoke
 	name = "smoke grenade shell"
 	nade_type = /obj/item/explosive/grenade/smokebomb
+	icon_state = "smoke_shell"
+
+/datum/ammo/grenade_container/smoke/upp
+	name = "smoke grenade shell"
+	nade_type = /obj/item/explosive/grenade/smokebomb/upp
 	icon_state = "smoke_shell"
 
 /datum/ammo/grenade_container/incen
@@ -463,13 +471,9 @@
 	create_flechette(P.loc, P)
 
 /datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/P)
-	var/shrapnel_count = 15
-	var/direct_hit_shrapnel = 8
+	var/shrapnel_count = 12
 	var/dispersion_angle = 20
-	create_shrapnel(loc, min(direct_hit_shrapnel, shrapnel_count), P.dir, dispersion_angle, shrapnel_type, P.weapon_cause_data, FALSE, 100)
-	shrapnel_count -= direct_hit_shrapnel
-	if(shrapnel_count)
-		create_shrapnel(loc, shrapnel_count, P.dir, dispersion_angle ,shrapnel_type, P.weapon_cause_data, FALSE, 0)
+	create_shrapnel(loc, shrapnel_count, P.dir, dispersion_angle, shrapnel_type, P.weapon_cause_data, FALSE, 100)
 	apply_explosion_overlay(loc)
 
 /datum/ammo/rifle/sharp/flechette/proc/apply_explosion_overlay(turf/loc)
@@ -478,3 +482,25 @@
 	O.icon = 'icons/effects/explosion.dmi'
 	flick("grenade", O)
 	QDEL_IN(O, 7)
+
+/datum/ammo/anti_air
+	name = "anti-air missile"
+	ping = null //no bounce off.
+	damage_type = CLONE //Shouldn't ever hit anyone
+	flags_ammo_behavior = AMMO_MP //As above, ensures it'll miss if it ever travels any distance
+	icon_state = "flare"
+	damage = 0
+	max_range = 1
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+
+/datum/ammo/anti_air/on_hit_mob(mob/mob, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_obj(obj/object, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
+	return
+
+/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
+	return

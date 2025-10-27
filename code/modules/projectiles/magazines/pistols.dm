@@ -48,12 +48,12 @@
 	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 /obj/item/ammo_magazine/pistol/l54
-	name = "\improper L54 magazine (9mm)"
+	name = "\improper L54A2 magazine (9mm)"
 	desc = "A pistol magazine."
 	caliber = "9mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
 	icon_state = "l54"
-	max_rounds = 12
+	max_rounds = 13
 	w_class = SIZE_SMALL
 	default_ammo = /datum/ammo/bullet/pistol
 	gun_type = /obj/item/weapon/gun/pistol/l54
@@ -67,10 +67,17 @@
 	name = "\improper M1911 magazine (.45)"
 	default_ammo = /datum/ammo/bullet/pistol/heavy
 	caliber = ".45"
-	icon_state = "m4a345"//rename later
+	icon_state = "m1911"
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/pistol/m1911
+	ammo_band_icon = "+m1911_band"
+	ammo_band_icon_empty = "+m1911_band_e"
 
+/obj/item/ammo_magazine/pistol/m1911/super
+	name = "\improper M1911 magazine (.45 Super)"
+	default_ammo = /datum/ammo/bullet/pistol/heavy/special
+	gun_type = /obj/item/weapon/gun/pistol/m1911/socom/officer
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 //-------------------------------------------------------
 //vp70 based off VP70
@@ -139,14 +146,20 @@
 //VP78
 
 /obj/item/ammo_magazine/pistol/vp78
-	name = "\improper VP78 magazine (9x19mm)"
-	default_ammo = /datum/ammo/bullet/pistol/squash
+	name = "\improper VP78 +P magazine (9x19mm)"
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = "9x19mm"
-	icon_state = "vp78"
+	icon_state = "m4a3"
 	max_rounds = 18
 	gun_type = /obj/item/weapon/gun/pistol/vp78
-	ammo_band_icon = "+vp78_band"
-	ammo_band_icon_empty = "+vp78_band_e"
+	ammo_band_icon = "+m4a3_band"
+	ammo_band_icon_empty = "+m4a3_band_e"
+
+/obj/item/ammo_magazine/pistol/vp78/rmc
+	name = "\improper L165A1 Squash-Head magazine (9x19mm)"
+	default_ammo = /datum/ammo/bullet/pistol/squash
+	gun_type = /obj/item/weapon/gun/pistol/vp78/rmc
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 /obj/item/ammo_magazine/pistol/vp78/toxin
 	name = "\improper VP78 toxic magazine (9x19mm)"
@@ -213,7 +226,7 @@
 
 /obj/item/ammo_magazine/pistol/np92
 	name = "\improper NP92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "np92mag"
@@ -222,7 +235,7 @@
 
 /obj/item/ammo_magazine/pistol/np92/suppressed
 	name = "\improper NPZ92 magazine (9x18mm Makarov)"
-	default_ammo = /datum/ammo/bullet/pistol
+	default_ammo = /datum/ammo/bullet/pistol/upp
 	caliber = "9x18mm Makarov"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "npz92mag"
@@ -302,7 +315,7 @@
 
 /obj/item/ammo_magazine/pistol/highpower
 	name = "\improper HG-45 'Aguila' magazine (.45)"
-	default_ammo = /datum/ammo/bullet/pistol/heavy
+	default_ammo = /datum/ammo/bullet/pistol/highpower
 	caliber = ".45"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "highpower"

@@ -11,13 +11,13 @@
 //way too many people don't read the changelog, and after one or two months the changelog entry is all but archive, so there needs to be an ingame description of what the ammo does
 //in comparison to armor-piercing rounds.
 
-/datum/ammo/bullet/smg
+/datum/ammo/bullet/smg	//Same stats damage & AP wise as the pistol counterpart, but other stats are tweaked
 	name = "submachinegun bullet"
-	damage = 34
+	damage = 40
 	accurate_range = 4
 	effective_range_max = 4
-	penetration = -ARMOR_PENETRATION_TIER_2
-	shell_speed = AMMO_SPEED_TIER_6
+	penetration = -ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
@@ -25,6 +25,18 @@
 
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
+
+/datum/ammo/bullet/smg/squash
+	name = "squash-head submachinegun bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_3
+	effective_range_max = 7
+	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	max_range = 14
+
+/datum/ammo/bullet/smg/squash/on_hit_mob(mob/entity, obj/projectile/bullet)
+	..()
+	slowdown(entity, bullet)
 
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
@@ -40,8 +52,8 @@
 
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
-	damage = 26
-	penetration = ARMOR_PENETRATION_TIER_6
+	damage = 25
+	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/bullet/smg/heap
@@ -50,7 +62,7 @@
 	damage = 45
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_6
-	shell_speed = AMMO_SPEED_TIER_4
+	shell_speed = AMMO_SPEED_TIER_3
 
 /datum/ammo/bullet/smg/ap/toxin
 	name = "toxic submachinegun bullet"
@@ -125,36 +137,34 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
-	stamina_damage = 10
+	stamina_damage = 30
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/smg/mp27
 	name = "simple submachinegun bullet"
-	damage = 40
+	damage = 25
 	accurate_range = 5
 	effective_range_max = 7
-	penetration = 0
-	shell_speed = AMMO_SPEED_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_3
+	shell_speed = AMMO_SPEED_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_8
 	accuracy = HIT_ACCURACY_TIER_2
-
-// less damage than the m39, but better falloff, range, and AP
 
 /datum/ammo/bullet/smg/ppsh
 	name = "crude submachinegun bullet"
-	damage = 26
+	damage = 30
 	accurate_range = 7
 	effective_range_max = 7
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_5
+	scatter = SCATTER_AMOUNT_TIER_9
 
 /datum/ammo/bullet/smg/pps43
 	name = "simple submachinegun bullet"
 	damage = 35
 	accurate_range = 7
 	effective_range_max = 10
-	penetration = -ARMOR_PENETRATION_TIER_4
+	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_10

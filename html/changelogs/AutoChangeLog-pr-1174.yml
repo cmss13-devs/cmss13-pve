@@ -1,0 +1,12 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "regular firstaid storage is now weight class Large"
+  - balance: "soft pouch firstaid storage defined as (aka remains as) weight class Medium"
+  - rscadd: "regular, advanced, fire, o2, synth, rad and surgical softpouches with color variants for their icons based on the existing colorways"
+  - rscadd: "upp specific softpack sprites and the UPP gear presets reference this now"
+  - bugfix: "added names and descriptions to all softpack variants to make it clearer when examining them what their contents are (as there are only four color pixels available on the icon to denote their use)"
+  - bugfix: "Synth, Squad Leader and Medic vendors now dispense the softpacks (idk if the latter two are even relevant to us though)"
+  - bugfix: "references to storage devices that previously wouldn't allow FAKs now don't allow their softpack variant"
+  - bugfix: "all presets that referenced a FAK now reference their new softpack variant"
+  - maptweak: "Chapeav Medical Prep gets +2 standard-issue UPP sprited softpack first-aid kits (had none before)"

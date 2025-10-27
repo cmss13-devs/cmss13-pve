@@ -152,6 +152,7 @@
 	if(.)
 		if(!length(cylinder.contents))
 			to_chat(user, SPAN_WARNING("The [name] is empty."))
+			click_empty(user)
 			return FALSE
 		var/obj/item/explosive/grenade/G = cylinder.contents[1]
 		if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
@@ -173,6 +174,10 @@
 /obj/item/weapon/gun/launcher/grenade/proc/fire_grenade(atom/target, mob/user)
 	set waitfor = 0
 	last_fired = world.time
+
+	// Safety check - prevent targeting atoms in containers (notably your equipment/inventory), stolen from the laser designator
+	if(target.z == 0)
+		return
 
 	var/to_firer = "You fire the [name]!"
 	if(internal_slots > 1)
@@ -291,6 +296,88 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_4*4)
 
+//UPP DEDICATED GL
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp
+	name = "\improper OG-60 grenade launcher"
+	desc = "A heavy, 6-shot grenade launcher used by the UPP armed collective."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "m92_upp"
+	item_state = "m92_upp"
+	flags_item = TWOHANDED
+	map_specific_decoration = FALSE
+	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_1)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 14, "rail_y" = 22, "under_x" = 24, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/sling/scope = new(src)
+	scope.hidden = FALSE
+	scope.Attach(src)
+	update_attachable(scope.slot)
+	var/obj/item/attachable/verticalgrip/upp/grip = new(src)
+	grip.hidden = FALSE
+	grip.Attach(src)
+	update_attachable(grip.slot)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/stored
+	preload = null
+	flags_gun_features = /obj/item/weapon/gun/launcher/grenade/m92/upp::flags_gun_features | GUN_TRIGGER_SAFETY
+
+//-------------------------------------------------------
+//RMC GRENADE LAUNCHER
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc
+	name = "\improper L164A3 multi-shot grenade launcher"
+	desc = "A lightweight support weapon fielded by the Royal Marines. Chambered in small 20mm grenades, it lacks the punch of larger bore grenade launchers, but makes up for that in rate of fire."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "rmcgl"
+	item_state = "rmcgl"
+	fire_sound = 'sound/weapons/gun_ugl_fire.ogg'
+	reload_sound = 'sound/weapons/gun_shotgun_open2.ogg'
+	unload_sound = 'sound/weapons/gun_shotgun_shell_insert.ogg'
+	attachable_allowed = list()
+	flags_item = TWOHANDED
+	throw_speed = SPEED_VERY_FAST
+	force = 15
+	GL_has_empty_icon = FALSE
+	flags_equip_slot = SLOT_BACK
+	map_specific_decoration = FALSE
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_NORMAL
+	valid_munitions = list(
+		/obj/item/explosive/grenade/high_explosive/impact/rmc20mm,
+		/obj/item/explosive/grenade/high_explosive/airburst/rmc20mm,
+		/obj/item/explosive/grenade/incendiary/airburst/rmc20mm,
+		/obj/item/explosive/grenade/smokebomb/airburst/rmc20mm,
+		/obj/item/explosive/grenade/high_explosive/impact/rmc20mm/holo,
+		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm,
+	)
+	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+
+	is_lobbing = TRUE
+	internal_slots = 8
+	direct_draw = TRUE
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+
+/obj/item/weapon/gun/launcher/grenade/m92/rmc/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/rmcgl/optic = new(src)
+	optic.hidden = TRUE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
+
 //-------------------------------------------------------
 //M81 GRENADE LAUNCHER
 
@@ -375,6 +462,7 @@
 	name = "\improper modified M79 grenade launcher"
 	desc = "A heavy, low-angle grenade launcher. It's been in use since the Vietnam War, though this version has been modified to fire standard USCM 30mm grenades. The wooden furniture is, in fact, an attempt at modernization and is made of painted hardened polykevlon."
 	valid_munitions = list(/obj/item/explosive/grenade/high_explosive, /obj/item/explosive/grenade/high_explosive/impact/tmfrag, /obj/item/explosive/grenade/high_explosive/impact/heap, /obj/item/explosive/grenade/high_explosive/impact/flare, /obj/item/explosive/grenade/incendiary, /obj/item/explosive/grenade/smokebomb, /obj/item/explosive/grenade/high_explosive/airburst/buckshot)
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/handle_starting_attachment()
 	..()
@@ -382,6 +470,7 @@
 	scope.hidden = FALSE
 	scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	scope.Attach(src)
+	scope.hidden = TRUE
 	update_attachable(scope.slot)
 
 /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff

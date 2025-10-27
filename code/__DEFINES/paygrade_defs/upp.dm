@@ -4,25 +4,25 @@
 /// UE,
 #define PAY_SHORT_UEC "UEC"
 
-/// UE1, Ryadovoy
+/// UE1, Private
 #define PAY_SHORT_UE1 "UE1"
 
-/// UE2, Efreitor
+/// UE2, Senior Private
 #define PAY_SHORT_UE2 "UE2"
 
-/// UE3, Korporal
+/// UE3, Corporal
 #define PAY_SHORT_UE3 "UE3"
 
-/// UE4, Junior Serzhant
+/// UE4, Junior Sergeant
 #define PAY_SHORT_UE4 "UE4"
 
-/// UE5, Serzhant
+/// UE5, Sergeant
 #define PAY_SHORT_UE5 "UE5"
 
-/// UE6, Master Serzhant
+/// UE6, Senior Sergeant
 #define PAY_SHORT_UE6 "UE6"
 
-/// UE7, Starshina
+/// UE7, Sergeant Major
 #define PAY_SHORT_UE7 "UE7"
 
 /// UC1, Junior Kommando
@@ -34,31 +34,31 @@
 /// UC3, 1st Kommando
 #define PAY_SHORT_UK3 "UK3"
 
-/// UO1, Leytenant
+/// UO1, Junior Lieutenant
 #define PAY_SHORT_UO1 "UO1"
 
-/// UO2, Senior Leytenant
+/// UO2, Senior Lieutenant
 #define PAY_SHORT_UO2 "UO2"
 
-/// UO3, Kapitan
+/// UO3, Captain
 #define PAY_SHORT_UO3 "UO3"
 
-/// UO4, Mayjor
+/// UO4, Major
 #define PAY_SHORT_UO4 "UO4"
 
 /// UO4P, Political Commissar
 #define PAY_SHORT_UO4P "UO4P"
 
-/// UO5, Leytenant Kolonel
+/// UO5, Lieutenant Colonel
 #define PAY_SHORT_UO5 "UO5"
 
-/// UO6, Kolonel
+/// UO6, Colonel
 #define PAY_SHORT_UO6 "UO6"
 
-/// UO7, Mayjor General
+/// UO7, Major General
 #define PAY_SHORT_UO7 "UO7"
 
-/// UO8, Leytenant General
+/// UO8, Lieutenant General
 #define PAY_SHORT_UO8 "UO8"
 
 /// UO9, Army General

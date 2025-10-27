@@ -19,6 +19,8 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_FACTION_TWE = new /datum/mob_hud/faction/twe(),
 	MOB_HUD_FACTION_CLF = new /datum/mob_hud/faction/clf(),
 	MOB_HUD_FACTION_PMC = new /datum/mob_hud/faction/pmc(),
+	MOB_HUD_FACTION_MARSHAL = new /datum/mob_hud/faction/cmb(),
+	MOB_HUD_FACTION_UACG = new /datum/mob_hud/faction/guard(),
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
 	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
@@ -220,6 +222,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 /datum/mob_hud/faction/pmc
 	faction_to_check = FACTION_PMC
 
+/datum/mob_hud/faction/cmb
+	faction_to_check = FACTION_MARSHAL
+
+/datum/mob_hud/faction/guard
+	faction_to_check = FACTION_UACG
+
 /datum/mob_hud/faction/observer
 	hud_icons = list(FACTION_HUD, ORDER_HUD, HUNTER_CLAN, HOLOCARD_HUD)
 
@@ -350,17 +358,20 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 /mob/living/carbon/human/med_hud_set_health()
 	var/image/holder = hud_list[HEALTH_HUD]
 	if(stat == DEAD || status_flags & FAKEDEATH)
-		holder.icon_state = "hudhealth-100"
+		holder.icon_state = "hudhealth-200"
 	else
-		var/percentage = round(health*100/species.total_health, 10)
+		var/percentage = round(health*100/species.total_health, 1)
+		var/percentage_in_10 = round(percentage, 10)
 		if(percentage > -1)
-			holder.icon_state = "hudhealth[percentage]"
+			holder.icon_state = "hudhealth[percentage_in_10]" //We have only some 5 states but not all
 		else if(percentage > -49)
 			holder.icon_state = "hudhealth-0"
 		else if(percentage > -99)
 			holder.icon_state = "hudhealth-50"
-		else
+		else if(percentage > -199)
 			holder.icon_state = "hudhealth-100"
+		else
+			holder.icon_state = "hudhealth-200"
 
 
 /mob/proc/med_hud_set_status() //called when mob stat changes, or get a virus/xeno host, etc

@@ -209,13 +209,12 @@
 	name = "\improper FR-112 flight recorder"
 	desc = "A small red box that contains flight data from a dropship while it's on mission. Usually referred to as the black box, although this one comes in bloody red."
 	icon_state = "flight_recorder"
-	w_class = SIZE_LARGE
+	w_class = SIZE_MEDIUM
 
 /obj/item/prop/almayer/flight_recorder/colony
 	name = "\improper CIR-60 colony information recorder"
 	desc = "A small red box that records colony announcements, colonist flatlines and other key readouts. Usually refered to the black box, although this one comes in bloody red."
 	icon_state = "flight_recorder"
-	w_class = SIZE_LARGE
 
 /obj/item/prop/almayer/flare_launcher
 	name = "\improper MJU-77/C case"
@@ -275,6 +274,11 @@
 /obj/item/prop/magazine/dirty/torn/alt
 	icon_state = "poster3"
 
+/obj/item/prop/magazine/dropship
+	name = "Aerospace International Magazine: Issue August 2181"
+	desc = "A pretty cut and dry magazine about various aerospace craft that have just been put into service across multiple sectors. This one's got an article about the Three World Empire's latest acquisition."
+	desc_lore = "DAA.4 'Nimrod' dropship <BR> <BR> Dropship, Aerospace Assault mk.4 <BR> <BR> Purchased in limited numbers by the RMC, the Cheyenne (or 'Nimrod' as it was designated in TWE service) was extensively modified by the Augusta-Westland corporation before entering field trials, the twin F29-L-13 turbines being replaced with quad Rolls Royce RBZ.435 linear aerospikes. An extensive system of thrust-vectoring units improves manoeuvrability; handling is crisp in forward axes up to Mach 1.4 and below Mach 2.7 it remains agile. <BR> <BR> This, and a general mass reduction to accommodate the doctrinal emphasis on rapid force staging, has left the DAA.4 without the heavy weapons load as seen on the Cheyenne. <BR> <BR> While a sensor profile reduction effort has seen the Nimrod become significantly stealthier than the UD-4, in heavily defended AORs it regularly equips a large fitting of the Fencer TSAM for self protection. The rotary autocannon is retained."
+	icon_state = "poster26"
 
 //books
 /obj/item/prop/magazine/book

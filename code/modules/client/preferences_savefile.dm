@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 28
+#define SAVEFILE_VERSION_MAX 29
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -180,6 +180,28 @@
 			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_MIDDLE
 		else
 			S["xeno_ability_click_mode"] << XENO_ABILITY_CLICK_SHIFT
+
+	if(savefile_version < 29) //Base UA origins tweaked alongside others
+		var/outdated_origin
+		S["origin"] >> outdated_origin
+		switch(outdated_origin)
+			if("United Americas (Luna)")
+				origin = ORIGIN_USCM_LUNA
+			if("United Americas (Other)")
+				origin = ORIGIN_USCM_OTHER
+			if("Limited Service (Colony)")
+				origin = ORIGIN_USCM_COLONY
+			if("Convict (Minor Crimes)")
+				origin = ORIGIN_USCM_CONVICT_MINOR
+			if("Convict (Gang Affiliated)")
+				origin = ORIGIN_USCM_CONVICT_GANG
+			if("Convict (Smuggling)")
+				origin = ORIGIN_USCM_CONVICT_SMUGGLING
+			if("Green Card (Foreign)")
+				origin = ORIGIN_USCM_FOREIGN
+			if("Artificial-Womb")
+				origin = ORIGIN_USCM_AW
+		S["origin"] << origin
 
 	savefile_version = SAVEFILE_VERSION_MAX
 	return 1
@@ -613,6 +635,9 @@
 	S["flavor_texts_hands"] >> flavor_texts["hands"]
 	S["flavor_texts_legs"] >> flavor_texts["legs"]
 	S["flavor_texts_feet"] >> flavor_texts["feet"]
+	S["flavor_texts_helmet"] >> flavor_texts["helmet"]
+	S["flavor_texts_armor"] >> flavor_texts["armor"]
+
 
 	//Miscellaneous
 	S["med_record"] >> med_record
@@ -691,13 +716,14 @@
 	undershirt = sanitize_inlist(undershirt, gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f, initial(undershirt))
 	backbag = sanitize_integer(backbag, 1, length(GLOB.backbaglist), initial(backbag))
 	preferred_armor = sanitize_inlist(preferred_armor, GLOB.armor_style_list, "Random")
+	origin = sanitize_inlist(origin, FACTION_ORIGINS, ORIGIN_USCM)
 	//b_type = sanitize_text(b_type, initial(b_type))
 
 	platoon_name = platoon_name ? sanitize_text(platoon_name, initial(platoon_name)) : "Sun Riders"
 	dropship_camo = sanitize_inlist(dropship_camo, GLOB.dropship_camos, initial(dropship_camo))
 	dropship_name = dropship_name ? sanitize_text(dropship_name, initial(dropship_name)) : "Midway"
 
-	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list, initial(personal_weapon))
+	personal_weapon = sanitize_inlist(personal_weapon, GLOB.personal_weapons_list+"None", initial(personal_weapon))
 
 	alternate_option = sanitize_integer(alternate_option, 0, 2, initial(alternate_option))
 	if(!job_preference_list)
@@ -787,6 +813,8 @@
 	S["flavor_texts_hands"] << flavor_texts["hands"]
 	S["flavor_texts_legs"] << flavor_texts["legs"]
 	S["flavor_texts_feet"] << flavor_texts["feet"]
+	S["flavor_texts_helmet"] << flavor_texts["helmet"]
+	S["flavor_texts_armor"] << flavor_texts["armor"]
 
 	//Miscellaneous
 	S["med_record"] << med_record

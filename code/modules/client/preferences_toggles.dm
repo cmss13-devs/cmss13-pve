@@ -277,6 +277,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_automatic_punctuation'>Toggle Automatic Punctuation</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_ability_deactivation'>Toggle Ability Deactivation</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_clickdrag_override'>Toggle Combat Click-Drag Override</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_pb_override'>Toggle Combat Point-Blank Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_dualwield'>Toggle Alternate-Fire Dual Wielding</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_middle_mouse_swap_hands'>Toggle Middle Mouse Swapping Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_vend_item_to_hand'>Toggle Vendors Vending to Hands</a><br>",
@@ -368,9 +369,17 @@
 /client/proc/toggle_clickdrag_override() //Toggle whether mousedown clicks immediately when on disarm or harm intent to prevent click-dragging from 'eating' attacks.
 	prefs.toggle_prefs ^= TOGGLE_COMBAT_CLICKDRAG_OVERRIDE
 	if(prefs.toggle_prefs & TOGGLE_COMBAT_CLICKDRAG_OVERRIDE)
-		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on disarm or harm intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
+		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on Harm or Disarm intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
 	else
 		to_chat(src,SPAN_BOLDNOTICE( "Click-dragging now blocks clicks from going through."))
+	prefs.save_preferences()
+
+/client/proc/toggle_pb_override() //Toggle gun attacks on an adjacent target go to autofire or PB.
+	prefs.toggle_prefs ^= TOGGLE_COMBAT_POINTBLANK_OVERRIDE
+	if(prefs.toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE)
+		to_chat(src,SPAN_BOLDNOTICE( "Using Harm Intent with a gun on an target you sprite click next to you will now ensure you are autofiring instead of Point-Blanking. Disarm Intent will still have Point-Blanking."))
+	else
+		to_chat(src,SPAN_BOLDNOTICE( "You will point blank targets next to you on sprite click."))
 	prefs.save_preferences()
 
 ///Toggle whether dual-wielding fires both guns at once or swaps between them.
@@ -443,8 +452,7 @@
 	var/picked_type = tgui_alert(src, "What kind of tip?", "Tip Type", list("Marine", "Meta")) //no memetips for them joker imp
 	var/message
 	var/static/list/types_to_pick = list(
-		"Marine" = "strings/marinetips.txt",
-		"Meta" = "strings/metatips.txt"
+		"Marine" = "strings/pvetips.txt"
 	)
 	var/list/tip_list = file2list(types_to_pick[picked_type])
 	if(length(types_to_pick[picked_type]))
@@ -656,7 +664,7 @@
 	set category = "Preferences.Ghost"
 	set desc = "Use to change which HUDs you want to have by default when you become an observer."
 
-	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction RESS HUD", "Faction CLF HUD"))
+	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction US Army HUD", "Faction USASF HUD", "Faction CMB HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction CLF HUD"))
 	if(!hud_choice)
 		return
 	prefs.observer_huds[hud_choice] = !prefs.observer_huds[hud_choice]
@@ -681,6 +689,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_ARMY]
 		if("Faction USASF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_NAVY]
+		if("Faction CMB HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_MARSHAL]
 		if("Faction UPP HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_UPP]
 		if("Faction Wey-Yu HUD")
@@ -689,6 +699,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_TWE]
 		if("Faction CLF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_CLF]
+		if("Faction UACG HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_UACG]
 
 	observer_user.HUD_toggled[hud_choice] = prefs.observer_huds[hud_choice]
 	if(observer_user.HUD_toggled[hud_choice])

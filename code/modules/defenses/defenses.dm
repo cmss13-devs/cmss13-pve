@@ -156,7 +156,7 @@
 /obj/structure/machinery/defenses/proc/handle_iff(selection)
 	switch(selection)
 		if(FACTION_MARINE)
-			faction_group = FACTION_LIST_MARINE
+			faction_group = FACTION_LIST_UA
 		if(SENTRY_FACTION_HUMAN)
 			faction_group = FACTION_LIST_HUMANOID
 		if(SENTRY_FACTION_COLONY)
@@ -177,6 +177,9 @@
 			faction_group = FACTION_LIST_FREELANCER
 		if(FACTION_TWE)
 			faction_group = FACTION_LIST_TWE
+		if(FACTION_MERCENARY)
+			faction_group = FACTION_LIST_MERCENARY
+
 
 
 /obj/structure/machinery/defenses/start_processing()

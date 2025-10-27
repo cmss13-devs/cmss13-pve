@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Changes UPP rank titles to properly translated ones, rather than anglicized Russian titles"

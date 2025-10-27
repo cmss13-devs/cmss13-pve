@@ -57,7 +57,7 @@
 	storage_flags = STORAGE_FLAGS_DEFAULT
 	max_w_class = SIZE_MEDIUM
 	cant_hold = list( //Prevent inventory bloat
-		/obj/item/storage/firstaid,
+		/obj/item/storage/firstaid/softpack,
 		/obj/item/storage/bible,
 		/obj/item/storage/box,
 	)
@@ -170,6 +170,7 @@
 	new /obj/item/device/radio(src)
 	new /obj/item/attachable/bayonet(src)
 	new /obj/item/stack/medical/splint(src)
+
 /obj/item/storage/pouch/survival/synth
 	name = "synth survival pouch"
 	desc = "An emergency pouch given to synthetics in the event of an emergency."
@@ -196,7 +197,7 @@
 
 /obj/item/storage/pouch/firstaid
 	name = "first-aid pouch"
-	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, and pill packets."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets."
 	icon_state = "firstaid"
 	storage_slots = 4
 	can_hold = list(
@@ -208,7 +209,7 @@
 	)
 
 /obj/item/storage/pouch/firstaid/full
-	desc = "Contains a painkiller autoinjector, first-aid autoinjector, some ointment, and some bandages."
+	desc = "Contains some basic first aid supplies."
 
 /obj/item/storage/pouch/firstaid/full/fill_preset_inventory()
 	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
@@ -229,7 +230,7 @@
 	new /obj/item/storage/pill_bottle/packet/tramadol(src)
 
 /obj/item/storage/pouch/firstaid/ert
-	desc = "It can contain autoinjectors, ointments, and bandages. This one has some extra stuff."
+	desc = "A first aid pouch capable of storing a variety of basic medical supplies. It can hold ointments, bandages, injectors, splints and pill packets. This one has some extra stuff."
 	icon_state = "firstaid"
 	storage_slots = 5
 
@@ -399,18 +400,25 @@
 	icon_state = "medium_ammo_mag"
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 3
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg/m39,
-	)
 	can_hold = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/knife,
+		/obj/item/device/flashlight/flare,
 		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/m60,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/explosive/grenade,
+		/obj/item/explosive/mine,
+		/obj/item/reagent_container/food/snacks,
+		/obj/item/ammo_magazine/plasma,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/plasma,
 	)
 
@@ -477,6 +485,14 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/pistol/vp78(src)
 
+/obj/item/storage/pouch/magazine/pistol/m1911/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/pistol/m1911(src)
+
+/obj/item/storage/pouch/magazine/canc/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/lw317(src)
+
 /obj/item/storage/pouch/magazine/upp/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71(src)
@@ -495,7 +511,7 @@
 
 /obj/item/storage/pouch/magazine/large/nsg_ext/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/pouch/magazine/large/nsg_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -510,6 +526,10 @@
 		new /obj/item/ammo_magazine/hpr_box(src)
 
 /obj/item/storage/pouch/magazine/large/pmc_sniper/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/sniper/elite/basic(src)
+
+/obj/item/storage/pouch/magazine/large/pmc_sniper/heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/sniper/elite(src)
 
@@ -625,6 +645,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/high_explosive/upp(src)
 
+/obj/item/storage/pouch/explosive/upp/impact/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+
 /obj/item/storage/pouch/explosive/C4/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/plastic(src)
@@ -656,7 +680,7 @@
 	)
 
 /obj/item/storage/pouch/medical/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
@@ -666,6 +690,12 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/dexalin(src)
+
+/obj/item/storage/pouch/medical/full/surgery/fill_preset_inventory()
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
 /obj/item/storage/pouch/medical/socmed
 	name = "tactical medical pouch"
@@ -751,10 +781,24 @@
 	)
 
 /obj/item/storage/pouch/first_responder/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/oxy(src)
 	new /obj/item/roller(src)
 	new /obj/item/tool/extinguisher/mini(src)
 	new /obj/item/bodybag/cryobag(src)
+
+/obj/item/storage/pouch/first_responder/rmc
+	name = "advanced first aid pouch"
+	desc = "A pouch designed for carrying supplies to assist medical personnel and quickly respond to injuries on the battlefield without immediately treating them."
+	icon_state = "frt_med"
+	storage_slots = 5
+	can_hold = list(
+		/obj/item/device/healthanalyzer,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/reagent_container/blood,
+	)
 
 
 /obj/item/storage/pouch/vials
@@ -871,7 +915,7 @@
 	)
 
 /obj/item/storage/pouch/medkit/full/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/inaprovaline(src)
@@ -889,7 +933,7 @@
 	new /obj/item/stack/medical/splint(src)
 
 /obj/item/storage/pouch/medkit/full/toxin/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/pill_bottle/spaceacillin(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
 	new /obj/item/roller(src)
@@ -898,7 +942,7 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 
 /obj/item/storage/pouch/medkit/full/army/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
+	new /obj/item/storage/syringe_case/regular(src)
 	new /obj/item/roller(src)
 	new /obj/item/tool/surgery/synthgraft(src)
 	new /obj/item/tool/surgery/surgical_line(src)
@@ -1150,13 +1194,13 @@
 
 /obj/item/storage/pouch/flare
 	name = "flare pouch"
-	desc = "A pouch designed to hold flares. Refillable with an M94 flare pack."
+	desc = "A pouch designed to hold flares. Refillable with a flare pack."
 	max_w_class = SIZE_SMALL
 	storage_slots = 21
 	max_storage_space = 21
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_USING_DRAWING_METHOD
 	icon_state = "flare"
-	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/rmc,/obj/item/device/flashlight/flare/upp,/obj/item/device/flashlight/flare/signal)
 
 /obj/item/storage/pouch/flare/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/storage/box/flare))
@@ -1168,6 +1212,10 @@
 /obj/item/storage/pouch/flare/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/device/flashlight/flare(src)
+
+/obj/item/storage/pouch/flare/rmc/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/device/flashlight/flare/rmc(src)
 
 /obj/item/storage/pouch/radio
 	name = "radio pouch"
@@ -1331,6 +1379,16 @@
 	new /obj/item/cell/high(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
+
+/obj/item/storage/pouch/tools/tactical/rmc/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/nailgun/compact(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/rmc/folded(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
 
 /obj/item/storage/pouch/tools/tactical/upp
 	name = "synthetic tools pouch"

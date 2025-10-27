@@ -31,6 +31,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	var/atom/movable/screen/rotate/alt/rotate_left
 	var/atom/movable/screen/rotate/rotate_right
 
+	var/static/datum/flavor_text_editor/flavor_text_editor = new
+
 	//doohickeys for savefiles
 	var/path
 	var/default_slot = 1 //Holder so it doesn't default to slot 1, rather the last one used
@@ -285,8 +287,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 /datum/preferences/proc/client_reconnected(client/C)
 	owner = C
 	macros.owner = C
-
-	C.tgui_say?.load()
 
 /datum/preferences/Del()
 	. = ..()
@@ -658,6 +658,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_AUTOMATIC_PUNCTUATION]'><b>[toggle_prefs & TOGGLE_AUTOMATIC_PUNCTUATION ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Combat Click-Drag Override: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_COMBAT_CLICKDRAG_OVERRIDE]'><b>[toggle_prefs & TOGGLE_COMBAT_CLICKDRAG_OVERRIDE ? "On" : "Off"]</b></a><br>"
+			dat += "<b>Toggle Combat Point-Blank Override: \
+					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_COMBAT_POINTBLANK_OVERRIDE]'><b>[toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Middle-Click Swap Hands: \
 					</b> <a href='byond://?_src_=prefs;preference=toggle_prefs;flag=[TOGGLE_MIDDLE_MOUSE_SWAP_HANDS]'><b>[toggle_prefs & TOGGLE_MIDDLE_MOUSE_SWAP_HANDS ? "On" : "Off"]</b></a><br>"
 			dat += "<b>Toggle Vendors Vending to Hands: \
@@ -917,19 +919,6 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	show_browser(user, HTML, "Set Records", "records", width = 350, height = 300)
 	return
 
-/datum/preferences/proc/SetFlavorText(mob/user)
-	var/HTML = "<body>"
-	HTML += "<tt>"
-	HTML += "<a href='byond://?src=\ref[user];preference=flavor_text;task=general'>General:</a> "
-	HTML += TextPreview(flavor_texts["general"])
-	HTML += "<br>"
-	HTML += "<hr />"
-	HTML +="<a href='byond://?src=\ref[user];preference=flavor_text;task=done'>Done</a>"
-	HTML += "<tt>"
-	close_browser(user, "preferences")
-	show_browser(user, HTML, "Set Flavor Text", "flavor_text", width = 400, height = 430)
-	return
-
 /datum/preferences/proc/SetJob(mob/user, role, priority)
 	var/datum/job/job = GLOB.RoleAuthority.roles_by_name[role]
 	if(!job)
@@ -1127,27 +1116,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 					gear.Cut()
 
 		if("flavor_text")
-			switch(href_list["task"])
-				if("open")
-					SetFlavorText(user)
-					return
-				if("done")
-					close_browser(user, "flavor_text")
-					ShowChoices(user)
-					return
-				if("general")
-					var/msg = input(usr,"Give a physical description of your character. This will be shown regardless of clothing. Character limit is [MAX_FLAVOR_MESSAGE_LEN]","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-				else
-					var/msg = input(usr,"Set the flavor text for your [href_list["task"]].","Flavor Text",html_decode(flavor_texts[href_list["task"]])) as message
-					if(msg != null)
-						msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
-						msg = html_encode(msg)
-					flavor_texts[href_list["task"]] = msg
-			SetFlavorText(user)
+			flavor_text_editor.tgui_interact(user)
 			return
 
 		if("records")
@@ -2191,6 +2160,8 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 		character.flavor_texts["hands"] = flavor_texts["hands"]
 		character.flavor_texts["legs"] = flavor_texts["legs"]
 		character.flavor_texts["feet"] = flavor_texts["feet"]
+		character.flavor_texts["helmet"] = flavor_texts["helmet"]
+		character.flavor_texts["armor"] = flavor_texts["armor"]
 
 	if(!be_random_name)
 		character.med_record = strip_html(med_record, MAX_RECORDS_MESSAGE_LEN)

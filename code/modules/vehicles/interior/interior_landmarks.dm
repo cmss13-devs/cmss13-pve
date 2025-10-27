@@ -11,7 +11,6 @@
 
 /obj/effect/landmark/interior/spawn
 	name = "interior interactable spawner"
-
 // Interiors will call this when they're created
 /obj/effect/landmark/interior/spawn/on_load(datum/interior/I)
 	qdel(src)
@@ -83,9 +82,13 @@
 // Gunner's seat spawner
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat
 	name = "gunner's seat spawner"
+	color = "blue"
+
+/obj/effect/landmark/interior/spawn/vehicle_commander_seat
+	name = "commander's seat spawner"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "comfychair"
-	color = "blue"
+	color = "yellow"
 
 /obj/effect/landmark/interior/spawn/vehicle_gunner_seat/on_load(datum/interior/I)
 	var/obj/structure/bed/chair/comfy/vehicle/gunner/S = new(loc)
@@ -140,6 +143,28 @@
 	S.setDir(dir)
 	S.alpha = alpha
 	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
+
+	qdel(src)
+
+/obj/effect/landmark/interior/spawn/vehicle_commander_seat/armor
+	name = "armor commander's seat spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "armor_chair"
+	color = "yellow"
+
+/obj/effect/landmark/interior/spawn/vehicle_commander_seat/armor/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/commander/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.vehicle = I.exterior
+	S.required_skill = S.vehicle.required_skill
+	S.setDir(dir)
+	S.update_icon()
+	S.alpha = alpha
 	S.handle_rotation()
 	S.pixel_x = pixel_x
 	S.pixel_y = pixel_y
@@ -228,32 +253,6 @@
 	CAM.update_icon()
 	CAM.pixel_x = pixel_x
 	CAM.pixel_y = pixel_y
-
-	qdel(src)
-
-/obj/effect/landmark/interior/spawn/telephone
-	name = "telephone spawner"
-	icon = 'icons/obj/vehicles/interiors/general.dmi'
-	icon_state = "wall_phone"
-	color = "yellow"
-
-/obj/effect/landmark/interior/spawn/telephone/toc
-	icon = 'icons/obj/vehicles/interiors/movie.dmi'
-	icon_state = "wall_phone"
-
-/obj/effect/landmark/interior/spawn/telephone/on_load(datum/interior/I)
-	var/obj/structure/phone_base/Phone = new(loc)
-
-	Phone.icon = icon
-	Phone.icon_state = icon_state
-	Phone.layer = layer
-	Phone.setDir(dir)
-	Phone.alpha = alpha
-	Phone.update_icon()
-	Phone.pixel_x = pixel_x
-	Phone.pixel_y = pixel_y
-	Phone.phone_category = "Vehicles"
-	Phone.phone_id = replacetext(Phone.phone_id, "\improper", "") // this has to be done because phone IDs need to be the same as their display name (\improper doesn't display, obviously)
 
 	qdel(src)
 
@@ -359,5 +358,47 @@
 	V.alpha = alpha
 	V.layer = layer
 	V.update_icon()
+
+	qdel(src)
+
+//Tank commander fancy viewport spawner
+/obj/effect/landmark/interior/spawn/interior_viewport/terminal/tank_commander
+	name = "Tank-commander viewport console spawner"
+	layer = BELOW_MOB_LAYER
+
+/obj/effect/landmark/interior/spawn/interior_viewport/terminal/tank_commander/on_load(datum/interior/I)
+	var/obj/structure/interior_viewport/terminal/tank/V = new(loc)
+
+	V.dir = dir
+	V.vehicle = I.exterior
+	V.pixel_x = pixel_x
+	V.pixel_y = pixel_y
+	V.layer = layer
+	V.alpha = alpha
+	V.layer = layer
+	V.update_icon()
+
+	qdel(src)
+
+// UPP VAN Gunner without skill
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van
+	name = "armor gunner's seat spawner"
+	icon = 'icons/obj/vehicles/interiors/general.dmi'
+	icon_state = "armor_chair"
+	color = "yellow"
+
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor/van/on_load(datum/interior/I)
+	var/obj/structure/bed/chair/comfy/vehicle/van_gunner/S = new(loc)
+
+	S.icon = icon
+	S.icon_state = icon_state
+	S.layer = layer
+	S.vehicle = I.exterior
+	S.setDir(dir)
+	S.alpha = alpha
+	S.update_icon()
+	S.handle_rotation()
+	S.pixel_x = pixel_x
+	S.pixel_y = pixel_y
 
 	qdel(src)

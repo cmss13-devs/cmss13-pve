@@ -29,14 +29,23 @@
 	var/obj/effect/ebeam/visuals
 	///will the origin object always turn to face the target?
 	var/always_turn = FALSE
+	//add a colour var to the beam
+	var/color
 
-/datum/beam/New(origin, target, icon='icons/effects/beam.dmi', icon_state="b_beam", time=BEAM_INFINITE_DURATION, max_distance=INFINITY, beam_type = /obj/effect/ebeam)
+	var/extra_x_offset_at_target
+
+	var/extra_y_offset_at_target
+
+/datum/beam/New(origin, target, icon='icons/effects/beam.dmi', icon_state="b_beam", time=BEAM_INFINITE_DURATION, max_distance=INFINITY, beam_type = /obj/effect/ebeam, always_turn = TRUE, color = null, extra_x_offset_at_target, extra_y_offset_at_target)
 	src.origin = origin
 	src.target = target
 	src.max_distance = max_distance
 	src.icon = icon
 	src.icon_state = icon_state
 	src.beam_type = beam_type
+	src.color = color
+	src.extra_x_offset_at_target = extra_x_offset_at_target
+	src.extra_y_offset_at_target = extra_y_offset_at_target
 	elements = list()
 	if(time > BEAM_INFINITE_DURATION)
 		QDEL_IN(src, time)
@@ -76,13 +85,20 @@
 	origin = null
 	return ..()
 
+/proc/Get_Pixel_Angle(x1, y1, x2, y2)
+	return arctan(y2 - y1, x2 - x1)
 /**
  * Creates the beam effects and places them in a line from the origin to the target. Sets their rotation to make the beams face the target, too.
  */
 /datum/beam/proc/Draw()
 	if(always_turn)
 		origin.setDir(get_dir(origin, target)) //Causes the source of the beam to rotate to continuosly face the BeamTarget.
-	var/Angle = floor(Get_Angle(origin,target))
+	var/origin_x = get_pixel_position_x(origin)
+	var/origin_y = get_pixel_position_y(origin)
+	var/target_x = get_pixel_position_x(target) + extra_x_offset_at_target
+	var/target_y = get_pixel_position_y(target) + extra_y_offset_at_target
+
+	var/Angle = floor(Get_Pixel_Angle(origin_x, origin_y, target_x, target_y))
 	var/matrix/rot_matrix = matrix()
 	var/turf/origin_turf = get_turf(origin)
 	rot_matrix.Turn(Angle)
@@ -97,6 +113,7 @@
 		if(QDELETED(src))
 			break
 		var/obj/effect/ebeam/X = new beam_type(origin_turf)
+		X.color = src.color
 		X.owner = src
 		elements += X
 
@@ -222,8 +239,8 @@
  * maxdistance: how far the beam will go before stopping itself. Used mainly for two things: preventing lag if the beam may go in that direction and setting a range to abilities that use beams.
  * beam_type: The type of your custom beam. This is for adding other wacky stuff for your beam only. Most likely, you won't (and shouldn't) change it.
  */
-/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon='icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE)
-	var/datum/beam/newbeam = new(src, BeamTarget, icon, icon_state, time, maxdistance, beam_type, always_turn)
+/atom/proc/beam(atom/BeamTarget, icon_state="b_beam", icon='icons/effects/beam.dmi', time = BEAM_INFINITE_DURATION, maxdistance = INFINITY, beam_type=/obj/effect/ebeam, always_turn = TRUE, color = null, extra_x_offset_at_target, extra_y_offset_at_target)
+	var/datum/beam/newbeam = new(src, BeamTarget, icon, icon_state, time, maxdistance, beam_type, always_turn, color, extra_x_offset_at_target, extra_y_offset_at_target)
 	INVOKE_ASYNC(newbeam, TYPE_PROC_REF(/datum/beam, Start))
 	return newbeam
 

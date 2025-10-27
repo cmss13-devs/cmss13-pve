@@ -2088,6 +2088,11 @@
 	dir = 8;
 	pixel_y = -14
 	},
+/obj/item/device/flashlight/pen{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope,
 /turf/open/floor/almayer/sterile_green_side/east,
 /area/golden_arrow/medical)
 "jv" = (
@@ -3061,20 +3066,23 @@
 /area/golden_arrow/hangar)
 "sf" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/clothing/accessory/stethoscope,
-/obj/item/device/flashlight/pen{
-	pixel_y = 6;
-	pixel_x = -5
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	light_color = "#dae2ff";
-	light_power = 0.7
-	},
 /obj/structure/sign/safety/terminal{
 	layer = 2.96;
 	pixel_x = 10;
 	pixel_y = -24
+	},
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 11;
+	pixel_y = 14
+	},
+/obj/item/device/quiet_silent_healthanalyzer{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/softpack{
+	pixel_y = 5;
+	pixel_x = -7
 	},
 /turf/open/floor/almayer/sterile_green_corner/east,
 /area/golden_arrow/medical)
@@ -3178,6 +3186,10 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/prep_hallway)
 "sL" = (
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = -6;
+	pixel_y = -8
+	},
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
 "sO" = (
@@ -4230,7 +4242,7 @@
 /area/golden_arrow/synthcloset)
 "BX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/hpr{
+/obj/item/storage/box/guncase/heavy/hpr/recon{
 	pixel_y = 5
 	},
 /obj/item/storage/box/guncase/heavy/fuel{
@@ -5326,10 +5338,12 @@
 "LB" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/secure_data{
-	pixel_x = -6
+	pixel_x = -6;
+	req_access = list()
 	},
 /obj/structure/machinery/computer/skills{
-	pixel_x = 11
+	pixel_x = 11;
+	req_one_access = list()
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/briefing)
@@ -6001,17 +6015,6 @@
 /area/golden_arrow/hangar)
 "St" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_y = 4
-	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = -10;
-	pixel_y = 1
-	},
-/obj/item/smartgun_battery{
-	pixel_x = 4;
-	pixel_y = -3
-	},
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 2;
 	pixel_y = 25
@@ -6019,6 +6022,22 @@
 /obj/structure/sign/safety/hazard{
 	pixel_x = 14;
 	pixel_y = 25
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/item/smartgun_battery{
+	pixel_x = 4;
+	pixel_y = -3
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -10;
+	pixel_y = 1
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/golden_arrow/platoonarmory)
@@ -6129,17 +6148,17 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "Tp" = (
-/obj/item/reagent_container/food/condiment/sugar,
-/obj/item/reagent_container/food/condiment/enzyme,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
-/obj/item/reagent_container/food/snacks/flour,
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
 	name = "long-life foodstuff storage"
 	},
+/obj/item/reagent_container/food/condiment/sugar,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
 /obj/item/storage/box/powderedmilk,
+/obj/item/storage/box/cheeseslices,
 /obj/item/reagent_container/food/condiment/juice/egg,
 /obj/item/reagent_container/food/snacks/flour,
 /obj/item/reagent_container/food/snacks/flour,

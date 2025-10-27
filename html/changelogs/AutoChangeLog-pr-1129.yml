@@ -1,0 +1,7 @@
+author: "lordloko"
+delete-after: True
+changes:
+  - rscadd: "New USASF Infantry Presets and Human AI squads"
+  - rscadd: "New USASF combat uniform"
+  - rscadd: "New USASF rifle variant"
+  - rscadd: "New USASF armor variants"

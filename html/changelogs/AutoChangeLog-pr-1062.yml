@@ -1,0 +1,5 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - rscadd: "Readds autodoc automatic mode"
+  - qol: "You can now use autodocs regardless of surgical skill, however, you can only use automatic mode if you don't meet the skill requirements"

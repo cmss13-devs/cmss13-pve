@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - qol: "Ammo counters now count the round in the chamber."

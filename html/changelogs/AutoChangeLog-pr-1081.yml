@@ -1,0 +1,5 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - balance: "Concentrated Adrenaline now heals a large amount of oxygen damage instead of causing it, and acts as the strongest painkiller. The heart damage it causes has been increased."
+  - bugfix: "Concentrated Adrenaline now properly prevents knockouts and immobility due to critical health."

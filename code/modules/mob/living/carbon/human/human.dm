@@ -1109,30 +1109,38 @@
 	var/legs_exposed = 1
 	var/hands_exposed = 1
 	var/feet_exposed = 1
+	var/armor_on = 0
+	var/helmet_on = 0
 
 	for(var/obj/item/clothing/C in equipment)
-		if(C.flags_armor_protection & BODY_FLAG_HEAD)
+		if(C.flags_bodypart_hidden & BODY_FLAG_HEAD)
 			head_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_FACE)
+		if(C.flags_inv_hide & HIDEFACE)
 			face_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_EYES)
+		if(C.flags_inv_hide & HIDEEYES)
 			eyes_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_CHEST)
+		if(C.flags_bodypart_hidden & BODY_FLAG_CHEST)
 			torso_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_ARMS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_ARMS)
 			arms_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_HANDS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_HANDS)
 			hands_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_LEGS)
+		if(C.flags_bodypart_hidden & BODY_FLAG_LEGS)
 			legs_exposed = 0
-		if(C.flags_armor_protection & BODY_FLAG_FEET)
+		if(C.flags_bodypart_hidden & BODY_FLAG_FEET)
 			feet_exposed = 0
+		if(istype(C, /obj/item/clothing/suit/marine))
+			armor_on = 1
+		if(istype(C, /obj/item/clothing/head/helmet/marine))
+			helmet_on = 1
 
 	flavor_text = flavor_texts["general"]
 	flavor_text += "\n\n"
 	for(var/T in flavor_texts)
 		if(flavor_texts[T] && flavor_texts[T] != "")
-			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "feet" && feet_exposed))
+			if((T == "head" && head_exposed) || (T == "face" && face_exposed) || (T == "eyes" && eyes_exposed) || (T == "torso" && torso_exposed) || (T == "arms" && arms_exposed) || (T == "hands" && hands_exposed) || (T == "legs" && legs_exposed) || (T == "feet" && feet_exposed) || (T == "armor" && armor_on) || (T == "helmet" && helmet_on))
+				flavor_text += "[capitalize(T)]: "
+				flavor_text += "\n\n"
 				flavor_text += flavor_texts[T]
 				flavor_text += "\n\n"
 	return ..()
@@ -1594,6 +1602,9 @@
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Feet:</a> "
 	HTML += TextPreview(flavor_texts["feet"])
 	HTML += "<br>"
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=armor'>Armor:</a> "
+	HTML += TextPreview(flavor_texts["armor"])
+	HTML += "<br>"
 	HTML += "<hr />"
 	HTML +="<a href='byond://?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
@@ -1644,6 +1655,54 @@
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, regenerate_icons))
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_body), 1, 0)
 	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, update_hair))
+	INVOKE_ASYNC(target, TYPE_PROC_REF(/mob/living/carbon/human, play_opening_sequence))
+
+/mob/living/carbon/human/proc/play_opening_sequence()
+	if(SSticker.intro_sequence)
+		sleeping = 11
+		addtimer(CALLBACK(src, PROC_REF(play_screen_text), "HYPERSLEEP MONITOR<br><br>SYSTEM STATUS<br>LIFE SUPPORT:ONLINE<br>THAWING SYSTEMS:ONLINE<br>IMMUNIZATION:COMPLETE<br>OCCUPANT REM:NOMINAL", /atom/movable/screen/text/screen_text/hypersleep_status), 1.25 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(play_manifest)), 13 SECONDS)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstart1", /atom/movable/screen/fullscreen/black)
+		overlay_fullscreen_timer(13 SECONDS, 10, "roundstartcrt1", /atom/movable/screen/fullscreen/crt)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_intro.ogg', src, 90), 12 SECONDS)
+
+/mob/living/carbon/human/proc/play_manifest()
+	var/human_manifest
+	var/time_to_remove = 5 SECONDS
+	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+		if(human.z != ZTRAIT_GROUND)
+			if(human.faction == faction)
+				time_to_remove += 2.5 SECONDS
+				var/obj/item/card/id/card = human.get_idcard()
+				var/datum/paygrade/account_paygrade = "UNKWN"
+				if(card)
+					account_paygrade = GLOB.paygrades[card.paygrade]
+				human_manifest += "[human.name]...[account_paygrade.prefix]/A[rand(01,99)]/TQ[rand(0,10)].0.[rand(100000,999999)]<br>"
+	sleeping = (time_to_remove - 2 SECONDS)/10
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_beep.ogg', src, 80), time_to_remove - 2 SECONDS)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound_client), src.client, 'sound/effects/cryo_opening.ogg', src, 80), time_to_remove)
+	overlay_fullscreen_timer(time_to_remove, 10, "roundstart2", /atom/movable/screen/fullscreen/black)
+	overlay_fullscreen_timer(time_to_remove, 10, "roundstartcrt2", /atom/movable/screen/fullscreen/crt)
+	overlay_fullscreen_timer(time_to_remove + 2 SECONDS, 20, "roundstart_fade", /atom/movable/screen/fullscreen/spawning_in)
+	var/alert_type = /atom/movable/screen/text/screen_text/picture/starting
+	var/platoon = "3rd Bat. 'Solar Devils"
+	switch(faction)
+		if(FACTION_MARINE)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting
+			if(assigned_squad && assigned_squad.name == SQUAD_LRRP)
+				platoon = "Snake Eaters"
+			else
+				platoon = "3rd Bat. 'Solar Devils"
+		if(FACTION_UPP)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/upp
+			platoon = "Red Dawn"
+		if(FACTION_PMC)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
+			platoon = "Azure-15"
+		if(FACTION_TWE)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
+			platoon = "Gamma Troop"
+	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)
 	if(isitem(A))
