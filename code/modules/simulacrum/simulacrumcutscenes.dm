@@ -145,6 +145,9 @@
 	var/assembled_fatestring = ""
 	for(var/fate in GLOB.simulation_controller.fate_list)
 		assembled_fatestring += "[fate][fate == GLOB.simulation_controller.fate_list[length(GLOB.simulation_controller.fate_list)] ? "" : "<br>"]"
+	var/dead_string = english_list(GLOB.simulation_controller.dead_list)
+	if(length(GLOB.simulation_controller.dead_list))
+		assembled_fatestring += "<br>[dead_string] perished on the planet."
 	var/atom/movable/screen/text/screen_text/body3 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/fatelist()
 	body3.text_to_play = assembled_fatestring
 	body3.player = human.client
@@ -160,6 +163,8 @@
 	simulacrum_text_ending_good_2(human)
 
 /proc/simulacrum_text_ending_good_2(mob/living/carbon/human/human)
+	if(!GLOB.simulation_controller.next_simulation)
+		GLOB.simulation_controller.next_simulation = GLOB.simulation_controller.non_completed_simulations[1][1]
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "..."
 	text_box.player = human.client

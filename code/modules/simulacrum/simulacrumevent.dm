@@ -1,4 +1,4 @@
-// <h2>ARES Post-FTL Report</h2><br><p>The USS Rover has detected a distorted signal on the desert planet of LV-739. In accordance with standard procedure, ship has been taken out of FTL travel and crew awakened for possible distress signal. Signal is detected 73.8 meters at heading 98.6 degrees on a coordinate plane from landing zone.</p>
+//<h2>ARES Post-FTL Report</h2><br><p>The USS Rover has detected a distorted signal on the desert planet of LV-739. In accordance with standard procedure, ship has been taken out of FTL travel and crew awakened for possible distress signal. Signal is detected 73.8 meters at heading 98.6 degrees on a Cartesian plane from landing zone.</p>
 
 /turf/open/floor/void
 	name = "empty space"

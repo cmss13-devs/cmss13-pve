@@ -114,6 +114,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		"varadero" = list(list(24, 162, 3), list(58, 162, 3), list(92, 162, 3)),
 		"ice_colony" = list(list(19, 128, 3), list(55, 128, 3), list(91, 128, 3)),
 		"chances_claim" = list(list(23, 86, 3), list(61, 86, 3), list(99, 86, 3)),
+		"corsat" = list(list(58, 13, 3), list(119, 13, 3), list(152, 52, 3)),
 		"final" = list(list(19, 54, 3)),
 	)
 	var/list/next_simulation = list(24, 194, 3)
@@ -122,6 +123,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 	var/current_cutscene_completed = FALSE
 	var/everyone_already_koed
 	var/list/fate_list = list()
+	var/list/dead_list = list()
 
 /client/proc/pick_simulation_verb()
 	set name = "Pick Next Simulation"
@@ -161,6 +163,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 			"varadero" = list(),
 			"ice_colony" = list(),
 			"chances_claim" = list(),
+			"corsat" = list(),
 			"final" = list()
 		)
 		for(var/entry in GLOB.simulation_controller.non_completed_simulations)
@@ -262,9 +265,19 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 /client/proc/boss_finish_verb()
 	set name = "Boss Finished"
 	set category = "Admin.Simulation"
+	set waitfor = FALSE
 
 	if(!check_rights(R_EVENT))
 		return
+
+	for(var/savename in GLOB.simulacrum_playersaves)
+		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
+		to_chat(save.tied_human, SPAN_BOLDWARNING("With the destruction of the monolith, you feel yourself rejuvinate."))
+		save.tied_human.rejuvenate()
+
+	message_admins("Finish pt1 executed")
+
+	sleep(6 SECONDS)
 
 	for(var/savename in GLOB.simulacrum_playersaves)
 		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
@@ -272,6 +285,8 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 	for(var/turf/T as anything in block(56, 54, 3, 68, 54, 3))
 		T.ChangeTurf(/turf/open/floor/void)
+
+	message_admins("Finish pt2 executed")
 
 /client/proc/end_game_good()
 	set name = "Game End - Good"
@@ -338,12 +353,15 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		"- After retiring from the USCM %NAME% was employed as a shift manager at LockMart's Leo plant on Mars. Alongside 200 others, %NAME% was killed in the Leo explosion of 2187 on May 1st.",
 		"- %NAME% retired to colonial life on LV-522, Chance's Claim. A xenomorph outbreak would see %NAME% meet their fate in the xenomorph hive on August 23rd, 2192.",
 		"- Quiet and reserved after the incident, %NAME% retired from the USCM and served as the Chief Engineer on a LockMart & Welsun 3300B colony carrier, ferrying atmospheric processors to budding worlds. They passed on December 1st, 2210 in a vehicular accident.",
-		"- %NAME% never fully recovered from the stress experienced during the incident. %NAME% died on July 29th, 2182 of a heart attack.",
+		"- %NAME% never fully recovered from the stress experienced during the incident. %NAME% died on August 15th, 2182 of a heart attack.",
 	)
 	var/list/final_fates = list()
 	for(var/savename in GLOB.simulacrum_playersaves)
 		var/datum/simulacrum_humansave/save = GLOB.simulacrum_playersaves[savename]
-		human_names += save.tied_human.real_name
+		if(save.tied_human != DEAD)
+			human_names += save.tied_human.real_name
+		else
+			GLOB.simulation_controller.dead_list += save.tied_human.real_name
 
 	for(var/name in human_names)
 		var/fate_string = pick(fate_list_pre)
