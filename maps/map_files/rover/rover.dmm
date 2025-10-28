@@ -188,16 +188,38 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/gun_rack/m41/recon/unloaded,
-/obj/item/attachable/attached_gun/grenade/mk1{
-	pixel_y = 15;
-	pixel_x = 8
+/obj/structure/roof/cargocrane_tracks/horizontal,
+/turf/open/floor/almayer/edge/smooth/north,
+/area/golden_arrow/hangar)
+"au" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"av" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"aw" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
 	},
-/area/golden_arrow/squad_one)
-"ca" = (
+/turf/open/floor/almayer/plate,
+/area/golden_arrow/hangar)
+"ax" = (
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/cargo_shuttle/lower)
+"ay" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/forecon,
+/obj/effect/landmark/late_join,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -435,17 +457,22 @@
 	dir = 4;
 	name = "ship-grade camera"
 	},
-/area/golden_arrow/cryo_cells)
-"dv" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/prop/almayer/CICmap{
-	density = 0
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"aX" = (
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/almayer,
+/area/golden_arrow/hangar)
+"aY" = (
+/turf/open/floor/almayer/edge,
+/area/golden_arrow/hangar)
+"aZ" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.7
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
-/area/golden_arrow/squad_one)
-"dx" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -1909,15 +1936,19 @@
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap2,
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/hangar)
-"lp" = (
-/obj/structure/surface/table/almayer,
-/obj/item/folder/black_random{
-	pixel_x = -6;
-	pixel_y = 8
+"hS" = (
+/turf/open/floor/almayer/edge/smooth/west,
+/area/golden_arrow/hangar)
+"hT" = (
+/obj/structure/platform,
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med{
+	pixel_x = -27
 	},
-/obj/item/attachable/attached_gun/grenade/mk1{
-	pixel_y = -1;
-	pixel_x = 6
+/turf/open/floor/almayer/plating,
+/area/golden_arrow/squad_one)
+"hY" = (
+/obj/structure/closet/secure_closet/surgical{
+	pixel_x = -30
 	},
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)

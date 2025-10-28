@@ -75,7 +75,7 @@
 
 /obj/structure/machinery/prop/almayer/CICmap
 	name = "map table"
-	desc = "A table that displays a map of the current operation location."
+	desc = "A table that displays a map of the current operation location. Seems to be busted, though."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "maptable"
 	anchored = TRUE
@@ -101,11 +101,12 @@
 /obj/structure/machinery/prop/almayer/CICmap/attack_hand(mob/user)
 	. = ..()
 
-	map.tgui_interact(user)
+	//map.tgui_interact(user)
+	to_chat(user, SPAN_WARNING("As you tap the frozen screen, you recall that your Smartgunner accidentally dropped his armament on the table during some late-night festivities. Fuck."))
 
 /obj/structure/machinery/prop/almayer/CICmap/computer
 	name = "map terminal"
-	desc = "A terminal that displays a map of the current operation location."
+	desc = "A terminal that displays a map of the current operation location. Seems to be busted, though."
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "cicmap_computer"
 	density = FALSE
@@ -184,13 +185,6 @@
 	..()
 
 	overlays.Cut()
-
-	if(!(stat & NOPOWER))
-		var/image/source_image = image(src.icon, icon_state = "[icon_state]_e")
-		overlays += emissive_appearance(source_image.icon, source_image.icon_state)
-		overlays += mutable_appearance(source_image.icon, source_image.icon_state)
-		light_power = 1
-	else return
 
 /obj/structure/machinery/prop/almayer/CICmap/table/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'
