@@ -79,6 +79,7 @@
 	unacidable = TRUE
 	density = TRUE
 	opacity = TRUE
+	appearance_flags = parent_type::appearance_flags | PIXEL_SCALE
 	var/overlay_iconstate = ""
 	var/mutable_appearance/overlay_appearance
 
@@ -124,9 +125,11 @@
 	. = ..()
 	if(health > 3500)
 		. += SPAN_BOLDNOTICE("It looks undamaged.")
-	else if(health > 2500)
+	else if(health > 2000)
 		. += SPAN_BOLDWARNING("It looks fairly damaged.")
 	else if(health > 1000)
+		. += SPAN_BOLDWARNING("It looks very damaged!")
+	else if(health > 0)
 		. += SPAN_BOLDWARNING("It looks like it's falling apart!")
 
 /obj/structure/simulacrum_device/central/destructable/bullet_act(obj/projectile/P)

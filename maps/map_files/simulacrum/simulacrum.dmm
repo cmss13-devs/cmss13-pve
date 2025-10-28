@@ -678,7 +678,7 @@
 	},
 /area/simulacrum/interior)
 "eA" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "63"
 	},
 /area/simulacrum/interior)
@@ -732,7 +732,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
 "fq" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "83"
 	},
 /area/simulacrum/interior)
@@ -861,7 +861,7 @@
 	},
 /area/simulacrum/interior)
 "gk" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "62"
 	},
 /area/simulacrum/interior)
@@ -966,7 +966,7 @@
 	},
 /area/simulacrum/interior)
 "hd" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "99"
 	},
 /area/simulacrum/interior)
@@ -1009,12 +1009,12 @@
 /turf/open/auto_turf/shale/layer1,
 /area/simulacrum/interior/exterior)
 "ht" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "6"
 	},
 /area/simulacrum/interior/exterior)
 "hw" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "4"
 	},
 /area/simulacrum/interior/exterior)
@@ -1095,7 +1095,7 @@
 /turf/open/auto_turf/snow/layer3,
 /area/simulacrum/interior)
 "ig" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "30"
 	},
 /area/simulacrum/interior)
@@ -1333,7 +1333,7 @@
 	},
 /area/simulacrum/interior)
 "jD" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "27"
 	},
 /area/simulacrum/interior/exterior)
@@ -1514,7 +1514,7 @@
 	},
 /area/simulacrum/interior)
 "kP" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "25"
 	},
 /area/simulacrum/interior)
@@ -1647,7 +1647,7 @@
 	},
 /area/simulacrum/interior)
 "lK" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "26"
 	},
 /area/simulacrum/interior/exterior)
@@ -1687,7 +1687,7 @@
 /turf/closed/ice_rock/corners,
 /area/simulacrum/interior)
 "lX" = (
-/turf/closed/shuttle/dropship2/tornado,
+/turf/closed/shuttle/dropship3/tornado,
 /area/simulacrum/interior/exterior)
 "mg" = (
 /obj/structure/curtain/medical,
@@ -1741,7 +1741,7 @@
 	},
 /area/simulacrum/interior)
 "mA" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "70"
 	},
 /area/simulacrum/interior/exterior)
@@ -1801,7 +1801,7 @@
 	},
 /area/simulacrum/interior)
 "nd" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "67"
 	},
 /area/simulacrum/interior)
@@ -1922,7 +1922,7 @@
 	},
 /area/simulacrum/interior)
 "nR" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "9"
 	},
 /area/simulacrum/interior)
@@ -2029,17 +2029,17 @@
 	},
 /area/simulacrum/interior)
 "or" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "15"
 	},
 /area/simulacrum/interior)
 "ou" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "53"
 	},
 /area/simulacrum/interior)
 "ov" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "18"
 	},
 /area/simulacrum/interior)
@@ -2416,12 +2416,12 @@
 	},
 /area/simulacrum/interior)
 "rk" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "29"
 	},
 /area/simulacrum/interior/exterior)
 "rl" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "22"
 	},
 /area/simulacrum/interior/exterior)
@@ -2472,7 +2472,7 @@
 	},
 /area/simulacrum/interior)
 "rA" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "47"
 	},
 /area/simulacrum/interior)
@@ -2640,7 +2640,7 @@
 	},
 /area/simulacrum/interior)
 "th" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "3"
 	},
 /area/simulacrum/interior/exterior)
@@ -2734,7 +2734,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
 "tH" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "68"
 	},
 /area/simulacrum/interior)
@@ -3461,7 +3461,7 @@
 	},
 /area/simulacrum/interior)
 "yV" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "89"
 	},
 /area/simulacrum/interior)
@@ -3769,12 +3769,12 @@
 	},
 /area/simulacrum/interior)
 "Bb" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "40"
 	},
 /area/simulacrum/interior/exterior)
 "Bd" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "76"
 	},
 /area/simulacrum/interior)
@@ -3909,7 +3909,7 @@
 	},
 /area/simulacrum/interior)
 "Cm" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "24"
 	},
 /area/simulacrum/interior)
@@ -4058,7 +4058,7 @@
 	},
 /area/simulacrum/interior)
 "Dz" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "61"
 	},
 /area/simulacrum/interior/exterior)
@@ -4088,7 +4088,7 @@
 	},
 /area/simulacrum/interior)
 "DK" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "32"
 	},
 /area/simulacrum/interior/exterior)
@@ -4219,7 +4219,7 @@
 /turf/open/space/basic,
 /area/simulacrum/interior/exterior)
 "EL" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "95"
 	},
 /area/simulacrum/interior)
@@ -4253,7 +4253,7 @@
 	},
 /area/simulacrum/interior)
 "Fh" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "86"
 	},
 /area/simulacrum/interior)
@@ -4384,7 +4384,7 @@
 	},
 /area/simulacrum/interior)
 "Gh" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "77"
 	},
 /area/simulacrum/interior)
@@ -4630,7 +4630,7 @@
 	},
 /area/simulacrum/interior)
 "In" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "65"
 	},
 /area/simulacrum/interior/exterior)
@@ -4704,7 +4704,7 @@
 	},
 /area/simulacrum/interior)
 "IH" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "75"
 	},
 /area/simulacrum/interior)
@@ -4761,7 +4761,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
 "Jf" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "69"
 	},
 /area/simulacrum/interior)
@@ -4791,7 +4791,7 @@
 	},
 /area/simulacrum/interior)
 "Jj" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "66"
 	},
 /area/simulacrum/interior/exterior)
@@ -4840,7 +4840,7 @@
 	},
 /area/simulacrum/interior/exterior)
 "JB" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "100"
 	},
 /area/simulacrum/interior/exterior)
@@ -4893,7 +4893,7 @@
 	},
 /area/simulacrum/interior)
 "JS" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "74"
 	},
 /area/simulacrum/interior/exterior)
@@ -5002,7 +5002,7 @@
 	},
 /area/simulacrum/interior)
 "KO" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "45"
 	},
 /area/simulacrum/interior/exterior)
@@ -5073,7 +5073,7 @@
 	},
 /area/simulacrum/interior)
 "Ls" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "73"
 	},
 /area/simulacrum/interior)
@@ -5208,12 +5208,12 @@
 	pixel_x = -6;
 	pixel_y = 32
 	},
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "17"
 	},
 /area/simulacrum/interior/exterior)
 "MF" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "97"
 	},
 /area/simulacrum/interior)
@@ -5281,7 +5281,7 @@
 	},
 /area/simulacrum/interior)
 "No" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "23"
 	},
 /area/simulacrum/interior/exterior)
@@ -5393,7 +5393,7 @@
 /turf/open/auto_turf/sand_white/layer1,
 /area/simulacrum/interior/exterior)
 "On" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "16"
 	},
 /area/simulacrum/interior/exterior)
@@ -5402,7 +5402,7 @@
 /turf/open/desert/dirt,
 /area/simulacrum/interior/exterior)
 "Ou" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "5"
 	},
 /area/simulacrum/interior/exterior)
@@ -5441,7 +5441,7 @@
 	},
 /area/simulacrum/interior)
 "OV" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "48"
 	},
 /area/simulacrum/interior)
@@ -5459,7 +5459,7 @@
 /turf/open/floor/interior/wood,
 /area/simulacrum/interior)
 "Pn" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "102"
 	},
 /area/simulacrum/interior/exterior)
@@ -5634,7 +5634,7 @@
 	},
 /area/simulacrum/interior)
 "QP" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "101"
 	},
 /area/simulacrum/interior/exterior)
@@ -5814,7 +5814,7 @@
 	},
 /area/simulacrum/interior/exterior)
 "St" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "2"
 	},
 /area/simulacrum/interior/exterior)
@@ -5988,7 +5988,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/simulacrum/interior/exterior)
 "Uc" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "31"
 	},
 /area/simulacrum/interior)
@@ -6013,7 +6013,7 @@
 	},
 /area/simulacrum/interior)
 "Ur" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "19"
 	},
 /area/simulacrum/interior)
@@ -6202,7 +6202,7 @@
 	},
 /area/simulacrum/interior)
 "VA" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "33"
 	},
 /area/simulacrum/interior/exterior)
@@ -6437,7 +6437,7 @@
 /turf/open/floor/almayer/research/containment/floor2,
 /area/simulacrum/interior)
 "WW" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "17"
 	},
 /area/simulacrum/interior/exterior)
@@ -6473,7 +6473,7 @@
 /turf/open/auto_turf/snow/layer0,
 /area/simulacrum/interior/exterior)
 "Xi" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "28"
 	},
 /area/simulacrum/interior/exterior)
@@ -6535,7 +6535,7 @@
 /turf/open/floor/plating,
 /area/simulacrum/interior/exterior)
 "XE" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "71"
 	},
 /area/simulacrum/interior/exterior)
@@ -6587,7 +6587,7 @@
 	},
 /area/simulacrum/interior)
 "Yc" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "72"
 	},
 /area/simulacrum/interior)
@@ -6616,7 +6616,7 @@
 	},
 /area/simulacrum/interior)
 "Yl" = (
-/turf/closed/shuttle/dropship2/tornado{
+/turf/closed/shuttle/dropship3/tornado{
 	icon_state = "64"
 	},
 /area/simulacrum/interior)

@@ -6,12 +6,14 @@
 /// Get the number of days remaining to event, or -1 if not applicable
 /datum/game_decorator/halloween/proc/get_days_remaining()
 	. = -1
+	return // YOU SHOULD KILL YOURSELF NOW
+	/*
 	var/cur_day = text2num(time2text(world.timeofday, "DD"))
 	var/cur_mon = text2num(time2text(world.timeofday, "MM"))
 	if(cur_mon == 10)
 		return max(0, 31 - cur_day)
 	if(cur_mon == 11 && cur_day < 4)
-		return 0
+		return 0*/
 
 /// Pumpkins decorator: adds patches of carvable/wearable pumpkins around the ground level
 /datum/game_decorator/halloween/pumpkins

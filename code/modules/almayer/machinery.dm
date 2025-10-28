@@ -129,12 +129,12 @@
 
 /obj/structure/machinery/prop/almayer/CICmap/toc
 	name = "tactical map screen"
-	desc = "A screen on the TOC computer displaying the tactical map."
+	desc = "A screen on the TOC computer displaying the tactical map. Broken, though."
 	icon_state =  "toc_map"
 
 /obj/structure/machinery/prop/almayer/CICmap/table
 	name = "map table"
-	desc = "A large flat map table used for planning operations. It's large enough it can even be used as a proper table."
+	desc = "A large flat map table used for planning operations. It's large enough it can even be used as a proper table. Seems to be broken, however."
 	icon = 'icons/obj/structures/props/almayer_props96.dmi'
 	icon_state = "maptable"
 	layer = TABLE_LAYER

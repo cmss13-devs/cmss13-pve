@@ -5,7 +5,7 @@
 
 /client/proc/slow_everyone_verb()
 	set name = "Slow Everyone"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -19,7 +19,7 @@
 
 /client/proc/superslow_everyone_verb()
 	set name = "Superslow Everyone"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -32,7 +32,7 @@
 
 /client/proc/ko_everyone_verb()
 	set name = "KO Everyone"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -127,7 +127,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/pick_simulation_verb()
 	set name = "Pick Next Simulation"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -141,7 +141,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/decay_old_simulation_cutscene_verb()
 	set name = "Decay Old Simulation & Cutscene"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -180,7 +180,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/toggle_cutscene_verb()
 	set name = "Toggle Cutscene"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -199,7 +199,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/go_to_next_simulation_verb()
 	set name = "Advance Simulation"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -253,7 +253,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/boss_roar_verb()
 	set name = "Boss Roar"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -264,7 +264,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/boss_finish_verb()
 	set name = "Boss Finished"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 	set waitfor = FALSE
 
 	if(!check_rights(R_EVENT))
@@ -290,7 +290,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/end_game_good()
 	set name = "Game End - Good"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -318,7 +318,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/end_game_bad()
 	set name = "Game End - Bad"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -375,7 +375,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/close_all_inventories()
 	set name = "Close All Inventories"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Simulation"
 
 	if(!check_rights(R_EVENT))
 		return
