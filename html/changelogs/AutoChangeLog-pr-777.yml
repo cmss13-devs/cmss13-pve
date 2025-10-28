@@ -1,0 +1,6 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - rscadd: "adds pizza and box vans"
+  - rscadd: "adds ambulance and cop cars"
+  - rscadd: "four new barrel types (medical, black/WY, brown, pure white)"

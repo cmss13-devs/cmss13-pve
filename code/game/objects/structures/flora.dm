@@ -74,7 +74,7 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 
 /obj/structure/flora/proc/spread_fire()
 	SIGNAL_HANDLER
-	for(var/D in cardinal) //Spread fire
+	for(var/D in GLOB.cardinals) //Spread fire
 		var/turf/T = get_step(src.loc, D)
 		if(T)
 			for(var/obj/structure/flora/F in T)
@@ -369,6 +369,21 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	fire_flag = FLORA_BURN_SPREAD_ONCE
 
 /obj/structure/flora/grass/tallgrass/jungle/corner
+	icon_state = "tallgrass_corner"
+	overlay_type = "tallgrass_overlay_corner"
+	center = FALSE
+
+//REDEMPTION VALLEY//
+/obj/structure/flora/grass/tallgrass/crop
+	//color = COLOR_G_DES
+	name = "crop patch"
+	icon = 'icons/obj/structures/props/dam.dmi' //Override since the greyscale can't match
+	color = "#bfff00"
+	icon_state = "tallgrass"
+	desc = "A growing crop, it looks a lot like wheat"
+	fire_flag = FLORA_BURN_SPREAD_ALL
+
+/obj/structure/flora/grass/tallgrass/crop/corner
 	icon_state = "tallgrass_corner"
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
@@ -726,7 +741,7 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 			//this bush marks the edge of the map, you can't destroy it
 			to_chat(user, SPAN_DANGER("You chop at the undergrowth, but it's too thick here."))
 		else
-			user.visible_message(SPAN_DANGER("[user] chops at the  [src] with [I]."),SPAN_DANGER("You chop at the [src] with [I]."))
+			user.visible_message(SPAN_DANGER("[user] chops at [src] with [I]."), SPAN_DANGER("You chop at [src] with [I]."))
 			playsound(src.loc, 'sound/effects/vegetation_hit.ogg', 25, 1)
 			health -= damage
 			if(health < 0)
@@ -759,4 +774,3 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	desc = "Looks like some of that fruit might be edible."
 	icon_tag = "plant"
 	variations  = 7
-

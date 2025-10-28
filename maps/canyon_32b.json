@@ -1,0 +1,12 @@
+{
+    "map_name": "Canyon 32B",
+    "map_path": "map_files/Canyon_32B",
+    "map_file": "Canyon_32B.dmm",
+    "environment_traits": {
+        "COLD": true
+    },
+    "weather_holder": "/datum/weather_ss_map_holder/shivas_snowball",
+    "map_item_type": "/obj/item/map/canyon_32b",
+    "traits": [{ "Ground": true }],
+    "camouflage": "snow"
+}

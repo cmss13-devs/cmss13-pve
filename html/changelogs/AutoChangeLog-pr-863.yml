@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "RMC Med backpacks to PMC prep vendor, unloaded variant of electro and vp78 pistols"
+  - qol: "Reorganized PMC prep vendors"

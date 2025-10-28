@@ -1,0 +1,4 @@
+author: "Merrgear"
+delete-after: True
+changes:
+  - rscadd: "re-adds various berets to pointbuy"

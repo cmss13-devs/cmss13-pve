@@ -28,7 +28,8 @@
 	name = "synthetic meat"
 	desc = "A synthetic slab of flesh."
 
-/obj/item/reagent_container/food/snacks/meat/synthmeat/synthflesh //meat made from synthetics. Slightly toxic
+/// Meat made from synthetics. Slightly toxic
+/obj/item/reagent_container/food/snacks/meat/synthmeat/synthflesh
 	name = "synthetic flesh"
 	desc = "A slab of artificial, inorganic 'flesh' that resembles human meat. Probably came from a synth."
 	icon_state = "synthmeat"
@@ -57,8 +58,15 @@
 
 /obj/item/reagent_container/food/snacks/meat/xenomeat/Initialize()
 	. = ..()
-	reagents.add_reagent("xenoblood", 3)
+	reagents.add_reagent("xenoblood", 6)
 	src.bitesize = 6
+
+/obj/item/reagent_container/food/snacks/meat/xenomeat/processed
+	desc = "A slab of acrid smelling meat. This one has been processed to remove acid."
+
+/obj/item/reagent_container/food/snacks/meat/xenomeat/processed/Initialize()
+	. = ..()
+	reagents.remove_reagent("xenoblood", 6)
 
 //fishable atoms meat
 // todo: rewrite this into a procgen'ed item when gutting fish? May be incompatible with recipe code if done that way and not hardcoded.
@@ -89,3 +97,24 @@
 	desc = "Pink squishy meat from a squid or squid like creature. You're no marine biologist."
 	icon_state = "squid_meat_2"
 
+/obj/item/reagent_container/food/snacks/meat/fish/bass
+	name = "Bass meat"
+	desc = "Sizeable hunks of cooking fish!"
+	icon_state = "bass_meat"
+
+/obj/item/reagent_container/food/snacks/meat/fish/bluegill
+	name = "bluegill meat"
+	desc = "Small strips of pan frying meat!"
+	icon_state = "bluegill_meat"
+
+/obj/item/reagent_container/food/snacks/meat/fish/salmon
+
+	name = "salmon meat"
+	desc = "Considered a 'fancy' cut of fish!"
+	icon_state = "salmon_meat"
+
+/obj/item/reagent_container/food/snacks/meat/fish/white_perch
+
+	name = "white perch meat"
+	desc = "meat of an invasive fish, its oily.."
+	icon_state = "white_perch_meat"

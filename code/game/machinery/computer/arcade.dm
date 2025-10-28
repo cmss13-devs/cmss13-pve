@@ -15,12 +15,12 @@
 	var/enemy_mp = 25
 	var/gameover = 0
 	var/blocked = 0 //Player cannot attack/heal while set
-	var/list/prizes = list( /obj/item/storage/box/MRE = 3,
+	var/list/prizes = list( /obj/item/storage/box/mre = 3,
 							/obj/item/spacecash/c10 = 4,
 							/obj/item/ammo_magazine/flamer_tank = 1,
 							/obj/item/tool/lighter/zippo = 2,
 							/obj/item/tool/weldingtool = 1,
-							/obj/item/storage/box/uscm_mre = 2,
+							/obj/item/storage/box/mre = 2,
 							/obj/item/device/camera = 2,
 							/obj/item/device/camera_film = 4,
 							/obj/item/cell/crap/empty = 3,
@@ -122,8 +122,8 @@
 			src.gameover = 1
 			src.temp = "[src.enemy_name] has fallen! Rejoice!"
 
-			if(!contents.len)
-				var/prizeselect = pickweight(prizes)
+			if(!length(contents))
+				var/prizeselect = pick_weight(prizes)
 				new prizeselect(src.loc)
 
 				if(istype(prizeselect, /obj/item/toy/gun)) //Ammo comes with the gun
@@ -176,5 +176,5 @@
 		if(2)
 			num_of_prizes = rand(0,2)
 	for(num_of_prizes; num_of_prizes > 0; num_of_prizes--)
-		empprize = pickweight(prizes)
+		empprize = pick_weight(prizes)
 		new empprize(src.loc)

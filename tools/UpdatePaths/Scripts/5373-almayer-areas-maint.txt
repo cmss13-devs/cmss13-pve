@@ -1,0 +1,2 @@
+/area/almayer/hull/lower_hull/@SUBTYPES : /area/almayer/maint/hull/lower/@SUBTYPES{@OLD}
+/area/almayer/hull/upper_hull/@SUBTYPES : /area/almayer/maint/hull/upper/@SUBTYPES{@OLD}

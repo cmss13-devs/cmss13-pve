@@ -1,0 +1,6 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - rscadd: "Civilian Jungle Boots to loadout menu"
+  - rscadd: "Service cap, Operations cap, and laceup shoes to PltCo locker"
+  - balance: "Changes standard USCM boots to be the black variant, not jungle"

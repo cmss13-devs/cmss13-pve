@@ -31,6 +31,7 @@ em {font-style: normal; font-weight: bold;}
 .mentorstaff {color: #b5850d; font-weight: bold;}
 .staffsay {color: #b5850d; font-weight: bold;}
 .staff_ic {color: #000099;}
+.niche {color: #386aff; font-weight: bold;}
 
 .name { font-weight: bold;}
 
@@ -64,6 +65,7 @@ em {font-style: normal; font-weight: bold;}
 .cryoradio {color: #4a4740;}
 .hcradio {color: #318779;}
 .pvstradio {color: #9b0612;}
+.ciaradio {color: #e6754c;}
 
 .medium { font-size: 2}
 .big { font-size: 2}
@@ -122,6 +124,8 @@ h1.alert, h2.alert {color: #000000;}
 .xeno {color: #900090; font-style: italic;}
 .xenoleader {color: #730d73; font-style: italic; font-size: 3;}
 .xenoqueen {color: #730d73; font-style: italic; font-weight: bold; font-size: 3;}
+.psy_talk {color: #a70090; font-style: italic; font-weight: bold; font-size: 3;}
+
 .newscaster {color: #800000;}
 
 .role_header {color: #db0000 text-align: center; font-weight: bold; font-family: trebuchet-ms; font-size: 2;}
@@ -148,7 +152,12 @@ h1.alert, h2.alert {color: #000000;}
 .rough {font-family: trebuchet-ms, cursive, sans-serif;}
 .german {color: #858F1E; font-family: 'Times New Roman', Times, serif}
 .spanish {color: #CF982B;}
+.portuguese {color: #974c0e;}
+.french {color: #1b3272;}
+.filipino {color: #551d6e;}
+.ruspatois {color: #258687}
 .japanese {color: #0047A0}
+.polish {color: #FF8DA1}
 .commando {color: #FE9B24; font-style: bold;}
 .say_quote {font-family: Georgia, Verdana, sans-serif;}
 

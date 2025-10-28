@@ -1,7 +1,9 @@
 /datum/emergency_call/royal_marines
 	name = "Royal Marines Commando (Squad) (Friendly)"
 	mob_max = 7
-	probability = 0
+	probability = 15
+	home_base = /datum/lazy_template/ert/twe_station
+	shuttle_id = MOBILE_SHUTTLE_ID_ERT4
 	name_of_spawn = /obj/effect/landmark/ert_spawns/distress_twe
 	item_spawn = /obj/effect/landmark/ert_spawns/distress_twe/item
 	max_engineers =  0
@@ -26,23 +28,23 @@
 	if(!leader && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_LEADER) && check_timelock(mob.client, JOB_SQUAD_LEADER, time_required_for_job))
 		leader = mob
 		to_chat(mob, SPAN_ROLE_HEADER("You are an Officer in the Royal Marines Commando. Born in the Three World Empire."))
-		arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/team_leader, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/royal_marine/leader, TRUE, TRUE)
 	else if(heavies < max_heavies && HAS_FLAG(mob.client.prefs.toggles_ert, PLAY_HEAVY) && check_timelock(mob.client, JOB_SQUAD_SPECIALIST))
 		var/specialist_kit = pick("Sniper", "Smartgun", "Breach")
 		switch(specialist_kit)
 			if("Sniper")
 				to_chat(mob, SPAN_ROLE_HEADER("You are a skilled marksman in the Royal Marines Commando. Born in the Three World Empire."))
-				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/spec/marksman, TRUE, TRUE)
+				arm_equipment(mob, /datum/equipment_preset/royal_marine/standard, TRUE, TRUE)
 			if("Smartgun")
 				to_chat(mob, SPAN_ROLE_HEADER("You are a Smartgunner in the Royal Marines Commando. Born in the Three World Empire."))
-				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/spec/machinegun, TRUE, TRUE)
+				arm_equipment(mob, /datum/equipment_preset/royal_marine/machinegun, TRUE, TRUE)
 			if("Breach")
 				to_chat(mob, SPAN_ROLE_HEADER("You are a CQB Specialist in the Royal Marines Commando. Born in the Three World Empire."))
-				arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/spec/breacher, TRUE, TRUE)
+				arm_equipment(mob, /datum/equipment_preset/royal_marine/standard, TRUE, TRUE)
 		heavies++
 	else
 		to_chat(mob, SPAN_ROLE_HEADER("You are a member of the Royal Marines Commando. Born in the three world empire."))
-		arm_equipment(mob, /datum/equipment_preset/twe/royal_marine/standard, TRUE, TRUE)
+		arm_equipment(mob, /datum/equipment_preset/royal_marine/standard, TRUE, TRUE)
 
 	print_backstory(mob)
 

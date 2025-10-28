@@ -39,5 +39,6 @@
 //#define UNIT_TESTS //If this is uncommented, we do a single run though of the game setup and tear down process with unit tests in between
 
 // #define TESTING
+// #define HUMAN_AI_TESTING // For non-obtrusive (one million chat messages/colored tiles) human AI testing. uncomment the TESTING define for the full suite
 // #define REFERENCE_TRACKING
 // #define GC_FAILURE_HARD_LOOKUP

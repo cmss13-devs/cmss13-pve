@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - rscadd: "Scrolling to the GM Faction Manager"
+  - bugfix: "Sentry UI scrolling to use Section scrolling, allows the sentry tabs to be squished more in the case of a shit ton of sentries, otherwise cleans up a bunch of stuff in Faction Manager."

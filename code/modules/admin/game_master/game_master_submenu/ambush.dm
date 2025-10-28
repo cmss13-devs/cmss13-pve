@@ -1,6 +1,6 @@
 
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AMBUSH_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AMBUSH_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_FACEHUGGER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
@@ -197,7 +197,7 @@
 		log_debug("Ambush game master submenu unable to find turf of referenced atom. Referenced atom: [referenced_atom]")
 		return
 
-	var/xeno_type = RoleAuthority.get_caste_by_text(spawning_xeno_name)
+	var/xeno_type = GLOB.RoleAuthority.get_caste_by_text(spawning_xeno_name)
 
 	if(!xeno_type)
 		log_debug("Ambush game master submenu unable to find xeno type. Xeno type name: [spawning_xeno_name]")

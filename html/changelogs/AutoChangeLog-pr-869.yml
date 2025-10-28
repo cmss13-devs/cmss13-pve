@@ -1,0 +1,5 @@
+author: "DimDimich, Alming, AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "UPP AG80 pulse rifle and ammo, attachments"
+  - rscdel: "Type71 Carbine (made into UPP commando carbine), Type71 flamer"

@@ -105,8 +105,44 @@
 /obj/item/trash/uscm_mre
 	name = "\improper crumbled USCM MRE"
 	desc = "It has done its part for the USCM. Have you?"
-	icon = 'icons/obj/items/trash.dmi'
+	icon = 'icons/obj/items/storage/mre.dmi'
 	icon_state = "mealpackempty"
+
+/obj/item/trash/upp_mre
+	name = "\improper crumbled UPP IRP"
+	desc = "Hungry soldier is a dead soldier."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "upp_mealpackempty"
+
+/obj/item/trash/twe_mre
+	name = "\improper crumbled TWE ORP"
+	desc = "Hunger never sets on the Empire..."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "twe_mealpackempty"
+
+/obj/item/trash/pmc_mre
+	name = "\improper crumbled PMC CFR"
+	desc = "For a piece of crumbled wrapper, it sure has a high market cost."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "pmc_mealpackempty"
+
+/obj/item/trash/wy_mre
+	name = "\improper crumbled W-Y ration"
+	desc = "Reminder, trashing on a workplace is punished with a cut in your daily ration."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "wy_mealpackempty"
+
+/obj/item/trash/merc_mre
+	name = "\improper crumbled FSR ration"
+	desc = "Who left it in here? Civillians? Hikers? Military collectors? Undercover mercenaries?"
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "mealpackempty"
+
+/obj/item/trash/hdr_mre
+	name = "\improper crumbled HDR"
+	desc = "Someone is going to live another day."
+	icon = 'icons/obj/items/storage/mre.dmi'
+	icon_state = "hdr_mealpackempty"
 
 /obj/item/trash/waffles
 	name = "Waffles"
@@ -182,9 +218,23 @@
 	icon_state = "tray"
 
 /obj/item/trash/USCMtray
-	name = "\improper USCM Tray"
+	name = "\improper empty meal tray"
+	desc = "An empty meal tray made of a space age plastoid. Commonly seen on the frontier and in military service."
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "mar_tray_empty"
+
+/obj/item/trash/UPPtray
+	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
-	icon_state = "MREtray"
+	icon = 'icons/obj/items/food.dmi'
+	icon_state = "upp_tray"
+
+/obj/item/trash/RMCtray
+	name = "\improper RMC Meal Tray"
+	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
+
 
 //////////
 ///Misc///
@@ -204,3 +254,46 @@
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 5
+
+/obj/item/trash/grenade
+	name = "spent M47 smoke grenade"
+	desc = "A used-up smoke grenade canister. This is trash."
+	icon = 'icons/obj/items/weapons/grenade.dmi'
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/gas
+	name = "spent gas grenade"
+	desc = "A used gas grenade canister, no way to tell what was once inside it now. This is trash."
+	icon_state = "flashbang2_spent"
+
+/obj/item/trash/grenade/gas/marine
+	name = "spent M66 tear gas grenade"
+	desc = "A used tear gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/gas/rmc
+	name = "spent R2175/CN20 gas grenade"
+	desc = "A used RMC CN20 gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
+/obj/item/trash/grenade/Initialize()
+	. = ..()
+	animation_spin(5, 1,)
+
+/obj/item/trash/grenade/animation_spin(speed = 5, loop_amount = -1, clockwise = TRUE, sections = 3, angular_offset = 0, pixel_fuzz = 0)
+	clockwise = pick(TRUE, FALSE)
+	angular_offset = rand(360)
+	return ..()
+
+/obj/item/trash/tooth
+	name = "tooth"
+	desc = "Has seen heavy use, that's for sure."
+	icon = 'icons/obj/items/items.dmi'
+	icon_state = "tooth"
+	w_class = SIZE_TINY
+
+/obj/item/trash/tooth/Initialize()
+	. = ..()
+	pixel_x = rand(-10,10)
+	pixel_y = rand(-10,10)
+	apply_transform(turn(transform,rand(0,360)))

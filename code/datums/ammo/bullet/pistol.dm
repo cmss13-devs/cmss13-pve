@@ -6,44 +6,47 @@
 
 // Used by M4A3, M4A3 Custom and B92FS
 /datum/ammo/bullet/pistol
-	name = "pistol bullet"
+	name = "9x19 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
-	penetration= ARMOR_PENETRATION_TIER_2
+	penetration= -ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/pistol/tiny
 	name = "light pistol bullet"
 
+/datum/ammo/bullet/pistol/upp
+	name = "9x18 bullet"
+
 /datum/ammo/bullet/pistol/tranq
 	name = "tranquilizer bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
-	stamina_damage = 30
+	stamina_damage = 60
 	damage = 15
 
 //2020 rebalance: is supposed to counter runners and lurkers, dealing high damage to the only castes with no armor.
 //Limited by its lack of versatility and lower supply, so marines finally have an answer for flanker castes that isn't just buckshot.
 
 /datum/ammo/bullet/pistol/hollow
-	name = "hollowpoint pistol bullet"
+	name = "hollowpoint 9x19 bullet"
 
 	damage = 55 //hollowpoint is strong
-	penetration = 0 //hollowpoint can't pierce armor!
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3 //hollowpoint causes shrapnel
+	penetration = -ARMOR_PENETRATION_TIER_3 //hollowpoint can't pierce armor!
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5 //hollowpoint causes shrapnel
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
-	name = "armor-piercing pistol bullet"
+	name = "armor-piercing 9x19 bullet"
 
 	damage = 25
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_8
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	penetration= ARMOR_PENETRATION_TIER_3
 
 /datum/ammo/bullet/pistol/ap/penetrating
-	name = "wall-penetrating pistol bullet"
+	name = "wall-penetrating 9x19 bullet"
 	shrapnel_chance = 0
 
 	damage = 30
@@ -56,17 +59,17 @@
 	))
 
 /datum/ammo/bullet/pistol/ap/toxin
-	name = "toxic pistol bullet"
+	name = "toxic 9x19 bullet"
 	var/acid_per_hit = 10
 	var/organic_damage_mult = 3
 
 /datum/ammo/bullet/pistol/ap/toxin/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()
-	M.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, acid_per_hit)
 
 /datum/ammo/bullet/pistol/ap/toxin/on_hit_turf(turf/T, obj/projectile/P)
 	. = ..()
-	if(T.flags_turf & TURF_ORGANIC)
+	if(T.turf_flags & TURF_ORGANIC)
 		P.damage *= organic_damage_mult
 
 /datum/ammo/bullet/pistol/ap/toxin/on_hit_obj(obj/O, obj/projectile/P)
@@ -75,14 +78,14 @@
 		P.damage *= organic_damage_mult
 
 /datum/ammo/bullet/pistol/le
-	name = "armor-shredding pistol bullet"
+	name = "armor-shredding 9x19 bullet"
 
 	damage = 15
-	penetration = ARMOR_PENETRATION_TIER_4
+	penetration = ARMOR_PENETRATION_TIER_5
 	pen_armor_punch = 3
 
 /datum/ammo/bullet/pistol/rubber
-	name = "rubber pistol bullet"
+	name = "rubber 9x19 bullet"
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
@@ -90,9 +93,13 @@
 	shrapnel_chance = 0
 
 // Reskinned rubber bullet used for the ES-4 CL pistol.
-/datum/ammo/bullet/pistol/rubber/stun
-	name = "stun pistol bullet"
+/datum/ammo/bullet/pistol/electrostatic
+	name = "electrostatic pistol bullet"
 	sound_override = null
+	damage = 15
+
+/datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
+	slowdown(entity, bullet)
 
 // Used by M1911, Deagle and KT-42
 /datum/ammo/bullet/pistol/heavy
@@ -101,10 +108,21 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 55
-	penetration = ARMOR_PENETRATION_TIER_3
+	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
-/datum/ammo/bullet/pistol/heavy/super //Commander's variant
+/datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
+	name = "supersonic heavy pistol bullet"
+	shell_speed = AMMO_SPEED_TIER_5
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
+	. = ..()
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 2)
+
+/datum/ammo/bullet/pistol/heavy/super //Commander's variant //Not messing with this, it can retain The Funny Values
 	name = ".50 heavy pistol bullet"
 	damage = 60
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
@@ -142,7 +160,7 @@
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
 
 /datum/ammo/bullet/pistol/incendiary
@@ -171,7 +189,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	damage = 36
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
 // Used by VP78 and Auto 9
@@ -194,11 +212,11 @@
 
 /datum/ammo/bullet/pistol/squash/toxin/on_hit_mob(mob/M, obj/projectile/P)
 	. = ..()
-	M.AddComponent(/datum/component/toxic_buildup, acid_per_hit)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, acid_per_hit)
 
 /datum/ammo/bullet/pistol/squash/toxin/on_hit_turf(turf/T, obj/projectile/P)
 	. = ..()
-	if(T.flags_turf & TURF_ORGANIC)
+	if(T.turf_flags & TURF_ORGANIC)
 		P.damage *= organic_damage_mult
 
 /datum/ammo/bullet/pistol/squash/toxin/on_hit_obj(obj/O, obj/projectile/P)

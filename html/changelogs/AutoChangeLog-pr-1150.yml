@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "Battle-medic sight gets a skill-requirement to use"
+  - bugfix: "Visors no longer throw a runtime when toggled off"
+  - bugfix: "Army visors no longer keep their basic med-hud active despite visor's being toggled off"

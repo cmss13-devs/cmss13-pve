@@ -81,7 +81,7 @@
 /obj/item/large_shrapnel/proc/on_embedded_movement(mob/living/embedded_mob)
 	return
 
-/obj/item/large_shrapnel/proc/on_embed(mob/embedded_mob, obj/limb/target_organ)
+/obj/item/large_shrapnel/proc/on_embed(mob/embedded_mob, obj/limb/target_organ, silent = FALSE)
 	return
 
 /obj/item/large_shrapnel/at_rocket_dud
@@ -180,14 +180,14 @@
 	cell_explosion(get_turf(target), 200, 150, EXPLOSION_FALLOFF_SHAPE_LINEAR, direction, create_cause_data("[cause] UXO detonation", user))
 	qdel(src)
 
-/obj/item/large_shrapnel/at_rocket_dud/on_embed(mob/embedded_mob, obj/limb/target_organ)
+/obj/item/large_shrapnel/at_rocket_dud/on_embed(mob/embedded_mob, obj/limb/target_organ, silent = FALSE)
 	if(!ishuman(embedded_mob))
 		return
 	var/mob/living/carbon/human/H = embedded_mob
 	if(H.species.flags & NO_SHRAPNEL)
 		return
 	if(istype(target_organ))
-		target_organ.embed(src)
+		target_organ.embed(src, silent)
 
 /obj/item/large_shrapnel/at_rocket_dud/on_embedded_movement(mob/living/embedded_mob)
 	if(!ishuman(embedded_mob))
@@ -212,14 +212,14 @@
 	source_sheet_type = null
 	var/damage_on_move = 0.5
 
-/obj/item/shard/shrapnel/proc/on_embed(mob/embedded_mob, obj/limb/target_organ)
+/obj/item/shard/shrapnel/proc/on_embed(mob/embedded_mob, obj/limb/target_organ, silent = FALSE)
 	if(!ishuman(embedded_mob))
 		return
 	var/mob/living/carbon/human/H = embedded_mob
 	if(H.species.flags & NO_SHRAPNEL)
 		return
 	if(istype(target_organ))
-		target_organ.embed(src)
+		target_organ.embed(src, silent)
 
 /obj/item/shard/shrapnel/proc/on_embedded_movement(mob/living/embedded_mob)
 	if(!ishuman(embedded_mob))
@@ -228,7 +228,7 @@
 	if(H.species.flags & NO_SHRAPNEL)
 		return
 	var/obj/limb/organ = embedded_organ
-	if(istype(organ))
+	if(istype(organ) && damage_on_move)
 		organ.take_damage(damage_on_move * count, 0, 0, no_limb_loss = TRUE)
 		embedded_mob.pain.apply_pain(damage_on_move * count)
 
@@ -261,3 +261,60 @@
 	name = "alien bone fragments"
 	icon_state = "alienbonechips"
 	desc = "Sharp, jagged fragments of alien bone. Looks like the previous owner exploded violently..."
+
+/obj/item/sharp
+	name = "sharp dart shrapnel"
+	desc = "It looks like a used 9X-E Sticky Explosive Dart, useless now."
+	icon = 'icons/obj/items/weapons/projectiles.dmi'
+	icon_state = "sonicharpoon"
+	sharp = IS_SHARP_ITEM_BIG
+	w_class = SIZE_SMALL
+	edge = TRUE
+	force = 0
+	throwforce = 0
+	var/damage_on_move = 3
+	var/count = 1
+	garbage = TRUE
+
+/obj/item/sharp/Initialize(mapload, dir)
+	. = ..()
+	if(dir && dir <= 6)
+		turn_object(90)
+	else
+		turn_object(270)
+
+/obj/item/sharp/proc/on_embed(mob/embedded_mob, obj/limb/target_organ)
+	return
+
+/obj/item/sharp/proc/on_embedded_movement(mob/living/embedded_mob)
+	if(!ishuman(embedded_mob))
+		return
+	var/mob/living/carbon/human/H = embedded_mob
+	if(H.species.flags & NO_SHRAPNEL)
+		return
+	var/obj/limb/organ = embedded_organ
+	if(istype(organ))
+		organ.take_damage(damage_on_move * count, 0, 0, no_limb_loss = TRUE)
+
+		embedded_mob.pain.apply_pain(damage_on_move * count)
+
+/obj/item/sharp/proc/turn_object(amount)
+	var/matrix/initial_matrix = matrix(transform)
+	initial_matrix.Turn(amount)
+	apply_transform(initial_matrix)
+
+/obj/item/sharp/explosive
+	name = "\improper 9X-E sticky explosive dart"
+
+/obj/item/sharp/track
+	name = "\improper 9X-T sticky tracker dart"
+	desc = "It looks like a used 9X-T Sticky Tracker Dart, useless now."
+	icon_state = "sonicharpoon_tracker"
+
+/obj/item/sharp/flechette
+	name = "\improper 9X-F flechette dart"
+	desc = "It looks like a used 9X-F Flechette Dart, useless now."
+	icon_state = "sonicharpoon_flechette"
+/obj/item/shard/shrapnel/tutorial
+	damage_on_move = 0
+

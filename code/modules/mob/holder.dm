@@ -15,12 +15,13 @@
 
 /obj/item/holder/process()
 
-	if(istype(loc,/turf) || !(contents.len))
+	if(istype(loc,/turf) || !(length(contents)))
 
 		for(var/mob/M in contents)
 
 			var/atom/movable/mob_container
 			mob_container = M
+			M.invisibility = initial(invisibility)
 			mob_container.forceMove(get_turf(src))
 			M.reset_view()
 
@@ -33,6 +34,15 @@
 /obj/item/holder/proc/show_message(message, m_type)
 	for(var/mob/living/M in contents)
 		M.show_message(message,m_type)
+
+/obj/item/holder/get_examine_text(mob/user)
+	. = list()
+	. += "[icon2html(src, user)] That's \a [src]."
+	if(desc)
+		. += desc
+	if(desc_lore)
+		. += SPAN_NOTICE("This has an <a href='byond://?src=\ref[src];desc_lore=1'>extended lore description</a>.")
+
 
 //Mob procs and vars for scooping up
 /mob/living/var/holder_type
@@ -48,9 +58,12 @@
 		return
 
 	var/obj/item/holder/mob_holder = new holder_type(loc)
-	src.forceMove(mob_holder)
-	mob_holder.name = loc.name
+	forceMove(mob_holder)
+	mob_holder.name = name
+	mob_holder.desc = desc
+	mob_holder.gender = gender
 	mob_holder.attack_hand(grabber)
+	invisibility = INVISIBILITY_MAXIMUM
 
 	to_chat(grabber, "You scoop up [src].")
 	to_chat(src, "[grabber] scoops you up.")

@@ -1,7 +1,8 @@
 
-#define SECOND_LT_VARIANT "Second Lieutenant"
 #define FIRST_LT_VARIANT "First Lieutenant"
-
+#define SR_LT_VARIANT "Senior Lieutenant"
+#define SECOND_LT_VARIANT "Second Lieutenant"
+#define JR_LT_VARIANT "Junior Lieutenant"
 /datum/job/command/bridge
 	title = JOB_SO
 	total_positions = 4
@@ -13,7 +14,7 @@
 	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/lesser_rank
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job is to conduct the briefing for the platoon, monitor the operation, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and supported by your Company Command.<br>They will give your orders VIA the telephone in your office once they are ready.<br><b>You remember that you've stored your personal gear are located in your personal quarters.</b><br>Your job involves heavy roleplay and requires you to behave like an officer and to stay in character at all times."
 
-	job_options = list(FIRST_LT_VARIANT = "1stLt", SECOND_LT_VARIANT = "2ndLt")
+	job_options = list(SECOND_LT_VARIANT = "2ndLt", FIRST_LT_VARIANT = "1stLt")
 
 /datum/job/command/bridge/set_spawn_positions(count)
 	spawn_positions = so_slot_formula(count)
@@ -30,18 +31,26 @@
 		total_positions_so_far = positions
 	return positions
 
-/datum/job/command/bridge/generate_entry_message(mob/living/carbon/human/H)
-	return ..()
+
+/datum/job/command/bridge/generate_entry_conditions(mob/living/M, whitelist_status)
+	. = ..()
+	if(!islist(GLOB.marine_leaders[JOB_SO]))
+		GLOB.marine_leaders[JOB_SO] = list()
+	GLOB.marine_leaders[JOB_SO] += M
+	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
+
+/datum/job/command/bridge/proc/cleanup_leader_candidate(mob/M)
+	SIGNAL_HANDLER
+	GLOB.marine_leaders[JOB_SO] -= M
 
 /datum/job/command/bridge/handle_job_options(option)
-	if(option != FIRST_LT_VARIANT)
-		gear_preset = gear_preset_secondary
-	else
+	if(option != SECOND_LT_VARIANT)
 		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
-AddTimelock(/datum/job/command/bridge, list(
-	JOB_SQUAD_LEADER = 1 HOURS,
-	JOB_HUMAN_ROLES = 15 HOURS
+OverrideTimelock(/datum/job/command/bridge, list(
+	JOB_SQUAD_ROLES = 1 HOURS
 ))
 
 /obj/effect/landmark/start/bridge
@@ -63,21 +72,52 @@ AddTimelock(/datum/job/command/bridge, list(
 /datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
 	GLOB.marine_leaders[JOB_SO] = M
-	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(cleanup_leader_candidate))
 
-/datum/job/command/bridge/ai/proc/cleanup_leader_candidate(mob/M)
-	SIGNAL_HANDLER
+/datum/job/command/bridge/ai/cleanup_leader_candidate(mob/M)
 	GLOB.marine_leaders -= JOB_SO
 
 /datum/job/command/bridge/ai/upp
 	title = JOB_SO_UPP
 	gear_preset = /datum/equipment_preset/uscm_ship/so/upp
 	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
+	job_options = list(JR_LT_VARIANT = "JrLT", SR_LT_VARIANT = "SrLT")
+
+/datum/job/command/bridge/ai/upp/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == JR_LT_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/bridge/upp
 	name = JOB_SO_UPP
 	icon_state = "so_spawn"
 	job = /datum/job/command/bridge/ai/upp
 
-#undef SECOND_LT_VARIANT
+/datum/job/command/bridge/ai/pmc
+	title = JOB_PMCPLAT_OW
+	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc
+	job_options = null
+
+/obj/effect/landmark/start/bridge/pmc
+	name = JOB_PMCPLAT_OW
+	job = /datum/job/command/bridge/ai/pmc
+
+//-- RMC Platoon --//
+//Groundside command, no overwatch. Lead by example, chip chip cheerio and all that rubbish//
+
+/datum/job/command/bridge/ai/rmc
+	title = JOB_TWE_RMC_LIEUTENANT
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
+	job_options = null
+	supervisors = "the squadron commander and RMC high command"
+	entry_message_body = "Your job is to conduct the briefing for the troop, lead the operation, and listen to your superior officers.</a> You are in charge of the troop for the current operation and are supported by your Squadron Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Officers Quarters.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+
+/obj/effect/landmark/start/bridge/rmc
+	name = JOB_TWE_RMC_LIEUTENANT
+	squad = SQUAD_RMC
+	job = /datum/job/command/bridge/ai/rmc
+
 #undef FIRST_LT_VARIANT
+#undef SR_LT_VARIANT
+#undef SECOND_LT_VARIANT
+#undef JR_LT_VARIANT

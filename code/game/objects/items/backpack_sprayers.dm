@@ -78,8 +78,8 @@
 /obj/item/reagent_container/glass/watertank/attackby(obj/item/W, mob/user, params)
 	if(W == noz)
 		remove_noz()
-	else
-		. = ..()
+		return TRUE
+	return ..()
 
 /obj/item/reagent_container/glass/watertank/verb/toggle_mister_verb()
 	set name = "Toggle Mister"
@@ -104,13 +104,6 @@
 			usr.drop_inv_item_on_ground(src)
 			usr.put_in_l_hand(src)
 	add_fingerprint(usr)
-
-/obj/item/reagent_container/glass/watertank/attackby(obj/item/W, mob/user, params)
-	if(W == noz)
-		remove_noz()
-		return 1
-	else
-		return ..()
 
 /obj/item/reagent_container/glass/watertank/dropped(mob/user)
 	..()
@@ -333,7 +326,7 @@
 				return
 		//actually firing the launcher
 		if(tank.launcher_cooldown > world.time)
-			to_chat(user, SPAN_WARNING("\The [tank] cannot fire another foam ball just yet. Wait [round(tank.launcher_cooldown/10)] seconds."))
+			to_chat(user, SPAN_WARNING("\The [tank] cannot fire another foam ball just yet. Wait [floor(tank.launcher_cooldown/10)] seconds."))
 			return
 		if(tank.reagents.has_reagent("water", launcher_cost))
 			tank.reagents.remove_reagent("water", launcher_cost)

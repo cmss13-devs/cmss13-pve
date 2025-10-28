@@ -1,0 +1,5 @@
+author: "Zonespace27"
+delete-after: True
+changes:
+  - admin: "Human AI Spawner panel now isn't strangely spaced."
+  - admin: "Human AI Management panel's functionality is now fully restored."

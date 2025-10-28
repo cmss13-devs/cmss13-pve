@@ -1,0 +1,8 @@
+{
+    "map_name": "USCSS Onyx Karain",
+    "map_path": "map_files/USCSS_Onyx_Karain",
+    "map_file": "USCSS_Onyx_Karain.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/pmc/small"
+}

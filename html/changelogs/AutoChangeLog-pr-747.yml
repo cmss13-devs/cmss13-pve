@@ -1,0 +1,8 @@
+author: "tyeagg"
+delete-after: True
+changes:
+  - rscadd: "tracer projectile support"
+  - rscadd: "tracer magazine for m41amk1"
+  - rscadd: "tracers for smartgun and vehicle weapons"
+  - imageadd: "new bullet sprites"
+  - imageadd: "new muzzle flash sprites"

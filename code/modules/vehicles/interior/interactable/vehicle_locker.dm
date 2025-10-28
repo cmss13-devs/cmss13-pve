@@ -16,9 +16,11 @@
 	indestructible = TRUE
 
 	var/obj/item/storage/internal/container
+	var/base_icon
 
 /obj/structure/vehicle_locker/Initialize()
 	. = ..()
+	base_icon = icon_state
 	container = new(src)
 	container.storage_slots = null
 	container.max_w_class = SIZE_MEDIUM
@@ -33,7 +35,9 @@
 									/obj/item/device/motiondetector,
 									/obj/item/ammo_magazine/hardpoint,
 									/obj/item/tool/weldpack,
-									/obj/item/ammo_box/magazine
+									/obj/item/ammo_box,
+									/obj/item/storage/box,
+									/obj/item/storage/toolbox
 									)
 	flags_atom |= USES_HEARING
 
@@ -112,12 +116,12 @@
 //Cosmetically opens/closes the locker when its storage window is accessed or closed. Only makes sound when not already open/closed.
 /obj/structure/vehicle_locker/on_pocket_open(first_open)
 	if(first_open)
-		icon_state = "locker_open"
+		icon_state = "[initial(icon_state)]_open"
 		playsound(src.loc, 'sound/handling/hinge_squeak1.ogg', 25, TRUE, 3)
 
 /obj/structure/vehicle_locker/on_pocket_close(watchers)
 	if(!watchers)
-		icon_state = "locker"
+		icon_state = "[initial(icon_state)]"
 		playsound(src.loc, "toolbox", 25, TRUE, 3)
 
 /obj/structure/vehicle_locker/tank
@@ -125,6 +129,25 @@
 	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions or weaponry ammunition. Only vehicle crewmen can access these."
 	icon = 'icons/obj/vehicles/interiors/tank.dmi'
 	icon_state = "locker"
+
+/obj/structure/vehicle_locker/tank/upp
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "locker"
+
+/obj/structure/vehicle_locker/tank/upp1
+	name = "storage ammunition"
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "storage_ammo"
+
+/obj/structure/vehicle_locker/tank/upp2
+	name = "Locker"
+	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions. Only vehicle crewmen can access these."
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "small_locker"
+
+/obj/structure/vehicle_locker/tank/upp3
+	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
+	icon_state = "small_locker1"
 
 /obj/structure/vehicle_locker/movie
 	name = "storage compartment"
@@ -138,6 +161,11 @@
 	icon_state = "locker_med"
 
 	var/has_tray = TRUE
+
+/obj/structure/vehicle_locker/uppvan
+	name = "storage ammunition"
+	icon = 'icons/obj/vehicles/interiors/uppvan.dmi'
+	icon_state = "small_storage"
 
 /obj/structure/vehicle_locker/med/on_pocket_open(first_open)
 	if(first_open)
@@ -279,3 +307,47 @@
 	has_tray = TRUE
 	update_icon()
 	H.visible_message(SPAN_NOTICE("[H] installs \the [tray] into \the [src]."), SPAN_NOTICE("You install \the [tray] into \the [src]."))
+
+// canteen
+
+/obj/structure/vehicle_locker/cabinet
+	name = "cabinet"
+	desc = "A cabinet securely fastened to the wall, capable of storing a variety of smaller items."
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "cabinet"
+	layer = ABOVE_MOB_LAYER
+
+/obj/structure/vehicle_locker/cabinet/Initialize()
+	. = ..()
+	container = new(src)
+	container.storage_slots = 12
+	container.max_w_class = SIZE_TINY
+	container.w_class = SIZE_MASSIVE
+	container.use_sound = null
+	container.bypass_w_limit = list(
+		/obj/item/reagent_container/glass,
+		/obj/item/reagent_container/food,
+		/obj/item/tool/kitchen,
+	)
+
+/obj/structure/vehicle_locker/cabinet/cups
+	name = "cups cabinet"
+
+/obj/structure/vehicle_locker/cabinet/cups/Initialize()
+	. = ..()
+	for(var/i in 1 to 12)
+		new /obj/item/reagent_container/food/drinks/plasticcup(container)
+
+/obj/structure/vehicle_locker/cabinet/cups/flip
+	icon_state = "cabinet2"
+
+/obj/structure/vehicle_locker/cabinet/utensils
+	name = "utensils cabinet"
+
+/obj/structure/vehicle_locker/cabinet/utensils/Initialize()
+	. = ..()
+	for(var/i in 1 to 12)
+		new /obj/item/tool/kitchen/utensil/fork(container)
+
+/obj/structure/vehicle_locker/cabinet/utensils/flip
+	icon_state = "cabinet2"

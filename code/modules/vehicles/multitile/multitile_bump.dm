@@ -258,12 +258,6 @@
 /obj/structure/prop/dam/torii/handle_vehicle_bump(obj/vehicle/multitile/V)
 	return FALSE
 
-/obj/structure/prop/dam/large_boulder/handle_vehicle_bump(obj/vehicle/multitile/V)
-	return FALSE
-
-/obj/structure/prop/dam/wide_boulder/handle_vehicle_bump(obj/vehicle/multitile/V)
-	return FALSE
-
 /obj/structure/flora/tree/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
 		return FALSE
@@ -299,7 +293,8 @@
 	// Driver needs access
 		var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
 		if(!requiresID() || (driver && allowed(driver)))
-			open(TRUE)
+			if(operating != DOOR_OPERATING_OPENING)
+				open(TRUE)
 			return FALSE
 	if(!unacidable)
 		visible_message(SPAN_DANGER("\The [V] pushes [src] over!"))
@@ -341,10 +336,24 @@
 	return TRUE
 
 /obj/structure/machinery/m56d_post/handle_vehicle_bump(obj/vehicle/multitile/V)
-	new /obj/item/device/m56d_post(loc)
 	playsound(V, 'sound/effects/metal_crash.ogg', 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
-	qdel(src)
+
+	if(gun_mounted)
+		var/obj/item/device/m56d_gun/HMG = new(loc)
+		transfer_label_component(HMG)
+		HMG.rounds = gun_rounds
+		HMG.has_mount = TRUE
+		if(gun_health)
+			HMG.health = gun_health
+		HMG.update_icon()
+		qdel(src)
+	else
+		var/obj/item/device/m56d_post/post = new(loc)
+		post.health = health
+		transfer_label_component(post)
+		qdel(src)
+
 	return TRUE
 
 /obj/structure/machinery/m56d_hmg/handle_vehicle_bump(obj/vehicle/multitile/V)
@@ -352,7 +361,9 @@
 	HMG.name = name
 	HMG.rounds = rounds
 	HMG.has_mount = TRUE
+	HMG.health = health
 	HMG.update_icon()
+	transfer_label_component(HMG)
 	playsound(V, 'sound/effects/metal_crash.ogg', 20)
 	visible_message(SPAN_DANGER("\The [V] drives over \the [src]!"))
 	qdel(src)
@@ -368,7 +379,7 @@
 	var/obj/item/device/m2c_gun/HMG = new(loc)
 	HMG.name = name
 	HMG.rounds = rounds
-	HMG.overheat_value = round(0.5 * overheat_value)
+	HMG.overheat_value = floor(0.5 * overheat_value)
 	if(HMG.overheat_value <= 10)
 		HMG.overheat_value = 0
 	HMG.update_icon()
@@ -421,14 +432,6 @@
 	qdel(src)
 	return TRUE
 
-/obj/structure/machinery/hydro_floodlight/handle_vehicle_bump(obj/vehicle/multitile/V)
-	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
-		return FALSE
-	playsound(V, 'sound/effects/metal_crash.ogg', 20)
-	visible_message(SPAN_DANGER("\The [V] crushes \the [src]!"))
-	qdel(src)
-	return TRUE
-
 /obj/structure/machinery/floodlight/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
 		return FALSE
@@ -478,7 +481,7 @@
 
 /obj/vehicle/handle_vehicle_bump(obj/vehicle/multitile/V)
 	V.take_damage_type(5, "blunt", V)
-	health = health - Ceiling(maxhealth/2.8) //we destroy any simple vehicle in 3 crushes
+	health = health - ceil(maxhealth/2.8) //we destroy any simple vehicle in 3 crushes
 	healthcheck()
 
 	visible_message(SPAN_DANGER("\The [V] crushes into \the [src]!"))
@@ -516,7 +519,7 @@
 
 /mob/living/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(is_mob_incapacitated(1))
-		apply_damage(7 + rand(0, 5), BRUTE)
+		apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
 		return TRUE
 
 	var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
@@ -539,17 +542,17 @@
 			apply_effect(0.5, WEAKEN)
 		else
 			apply_effect(2, WEAKEN)
-			apply_damage(5 + rand(0, 10), BRUTE)
+			apply_damage((5 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 			dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM)
 		apply_effect(3, WEAKEN)
-		apply_damage(10 + rand(0, 10), BRUTE)
+		apply_damage((10 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 		dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		apply_effect(5, WEAKEN)
-		apply_damage(15 + rand(0, 10), BRUTE)
+		apply_damage((15 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 		dmg = TRUE
 
 	var/list/slots = V.get_activatable_hardpoints()
@@ -560,7 +563,7 @@
 		H.livingmob_interact(src)
 
 	apply_effect(3, WEAKEN)
-	apply_damage(7 + rand(0, 5), BRUTE)
+	apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
 	var/mob_moved = step(src, V.last_move_dir)
 
 	visible_message(SPAN_DANGER("\The [V] rams \the [src]!"), SPAN_DANGER("\The [V] rams you! Get out of the way!"))
@@ -639,7 +642,7 @@
 			//Check what dir they should be facing to be looking directly at the vehicle
 			else if(dir_between == dir) //front hit (facing the vehicle)
 				blocked = TRUE
-			else if(dir_between == reverse_dir[dir]) // rear hit (facing directly away from the vehicle)
+			else if(dir_between == GLOB.reverse_dir[dir]) // rear hit (facing directly away from the vehicle)
 				takes_damage = TRUE
 			//side hit
 			else if(caste.caste_type == XENO_CASTE_QUEEN) // queen blocks even with sides
@@ -710,7 +713,7 @@
 		//this adds more flexibility for trample damage
 		damage_percentage *= VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
-		damage_percentage -= round((armor_deflection*(armor_integrity/100)) / VEHICLE_TRAMPLE_DAMAGE_REDUCTION_ARMOR_MULT) // Ravager reduces percentage by ~50% by virtue of having very high armor.
+		damage_percentage -= floor((armor_deflection*(armor_integrity/100)) / VEHICLE_TRAMPLE_DAMAGE_REDUCTION_ARMOR_MULT) // Ravager reduces percentage by ~50% by virtue of having very high armor.
 
 		if(locate(/obj/item/hardpoint/support/overdrive_enhancer) in V)
 			damage_percentage += VEHICLE_TRAMPLE_DAMAGE_OVERDRIVE_BUFF
@@ -718,7 +721,7 @@
 		damage_percentage = max(VEHICLE_TRAMPLE_DAMAGE_OVERDRIVE_BUFF, max(0, damage_percentage))
 		damage_percentage = max(damage_percentage, VEHICLE_TRAMPLE_DAMAGE_MIN)
 
-		apply_damage(round((maxHealth / 100) * damage_percentage), BRUTE)
+		apply_damage(floor((maxHealth / 100) * damage_percentage), BRUTE)
 		last_damage_data = create_cause_data("[initial(V.name)] roadkill", V.seats[VEHICLE_DRIVER])
 		var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
 		log_attack("[key_name(src)] was rammed by [key_name(driver)] with [V].")
@@ -728,7 +731,7 @@
 		return TRUE
 	else if (mob_moved)
 		if(momentum_penalty)
-			V.move_momentum = Floor(V.move_momentum*0.8)
+			V.move_momentum = floor(V.move_momentum*0.8)
 			V.update_next_move()
 		playsound(loc, "punch", 25, 1)
 		return TRUE
@@ -753,7 +756,7 @@
 			visible_message(SPAN_DANGER("[src] digs it's claws into the ground, slowing [V]'s movement!"),
 			SPAN_DANGER("You dig your claws into the ground, slowing [V]'s movement!"))
 			var/mob_moved = step(src, V.last_move_dir)
-			V.move_momentum = Floor(V.move_momentum/3)
+			V.move_momentum = floor(V.move_momentum/3)
 			V.update_next_move()
 			return mob_moved
 

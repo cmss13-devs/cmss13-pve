@@ -1,7 +1,8 @@
 /datum/emergency_call/cbrn
 	name = "CBRN (Squad)"
-	arrival_message = "A CBRN squad has been dispatched to your ship. Stand by."
+	arrival_message = "Attention, this is the USS Kurtz, we have dispatched a CBRN squad to your ship per your distress call. Stand by for arrival."
 	objectives = "Handle the chemical, biological, radiological, or nuclear threat. Further orders may be provided."
+	home_base = /datum/lazy_template/ert/uscm_station
 	mob_min = 3
 	mob_max = 5
 	max_heavies = 0
@@ -40,7 +41,7 @@
 
 /datum/emergency_call/cbrn/ert
 	name = "CBRN (Distress)"
-	arrival_message = "Your distress signal has been received and we are dispatching the nearest CBRN squad to board with you now. Stand by."
+	arrival_message = "Attention, this is the USS Kurtz, we have dispatched a CBRN squad to your ship per your distress call. Stand by for arrival."
 	probability = 10
 
 /datum/emergency_call/cbrn/ert/New()
@@ -55,7 +56,7 @@
 	max_medics = 0
 
 /datum/emergency_call/cbrn/specialists/New()
-	var/cbrn_ship_name = "Unit [pick(nato_phonetic_alphabet)]-[rand(1, 99)]"
+	var/cbrn_ship_name = "Unit [pick(GLOB.nato_phonetic_alphabet)]-[rand(1, 99)]"
 	arrival_message = "[MAIN_SHIP_NAME], CBRN [cbrn_ship_name] has been dispatched. Follow all orders provided by [cbrn_ship_name]."
 	objectives = "You are a specialist team in [cbrn_ship_name] dispatched to quell a threat to [MAIN_SHIP_NAME]. Further orders may be provided."
 

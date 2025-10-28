@@ -18,8 +18,8 @@
 	icon_state = "tracker_blip"
 
 /obj/item/device/motiondetector
-	name = "motion detector"
-	desc = "A device that detects movement, but ignores marines. Can also be used to scan a vehicle interior from outside, but accuracy of such scanning is low and there is no way to differentiate friends from foes."
+	name = "M314 motion detector"
+	desc = "A military grade, hand-held motion detection device that can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with USCM IFF."
 	icon = 'icons/obj/items/marine-items.dmi'
 	icon_state = "detector"
 	item_state = "motion_detector"
@@ -35,9 +35,9 @@
 	var/recycletime = 120
 	var/blip_type = "detector"
 	var/iff_signal = FACTION_MARINE
-	actions_types = list(/datum/action/item_action)
+	actions_types = list(/datum/action/item_action/toggle)
 	var/scanning = FALSE // controls if MD is in process of scan
-	var/datum/shape/rectangle/range_bounds
+	var/datum/shape/rectangle/square/range_bounds
 	var/long_range_locked = FALSE //only long-range MD
 	var/ping_overlay
 
@@ -53,12 +53,17 @@
 
 /obj/item/device/motiondetector/Initialize()
 	. = ..()
-	range_bounds = new //Just creating a rectangle datum
+	range_bounds = new //Just creating a square datum
 	update_icon()
 
 /obj/item/device/motiondetector/Destroy()
-	. = ..()
+	STOP_PROCESSING(SSobj, src)
+	for(var/to_delete in blip_pool)
+		qdel(blip_pool[to_delete])
+		blip_pool.Remove(to_delete)
+	blip_pool = null
 	range_bounds = null
+	return ..()
 
 /obj/item/device/motiondetector/update_icon()
 	//clear overlays
@@ -109,7 +114,7 @@
 /obj/item/device/motiondetector/clicked(mob/user, list/mods)
 	if (isobserver(user) || isxeno(user)) return
 
-	if (mods["alt"])
+	if (mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		if(!long_range_locked)
@@ -153,14 +158,6 @@
 	playsound(loc, 'sound/items/detector_turn_off.ogg', 30, FALSE, 5, 2)
 	STOP_PROCESSING(SSfastobj, src)
 
-/obj/item/device/motiondetector/Destroy()
-	STOP_PROCESSING(SSfastobj, src)
-	for(var/to_delete in blip_pool)
-		qdel(blip_pool[to_delete])
-		blip_pool.Remove(to_delete)
-	blip_pool = null
-	return ..()
-
 /obj/item/device/motiondetector/process(delta_time)
 	if(isturf(loc))
 		toggle_active(null, TRUE)
@@ -199,6 +196,14 @@
 	if(ishuman(A.loc))
 		return A.loc
 
+/obj/item/device/motiondetector/xm4
+
+///Forces the blue blip to appear around the detected mob
+/obj/item/device/motiondetector/xm4/get_user()
+	var/atom/holder = loc
+	if(ishuman(holder.loc))
+		return holder.loc
+
 /obj/item/device/motiondetector/proc/apply_debuff(mob/M)
 	return
 
@@ -215,12 +220,11 @@
 	if(!istype(cur_turf))
 		return
 
-	if(!range_bounds)
-		range_bounds = new/datum/shape/rectangle
-	range_bounds.center_x = cur_turf.x
-	range_bounds.center_y = cur_turf.y
-	range_bounds.width = detector_range * 2
-	range_bounds.height = detector_range * 2
+	range_bounds.set_shape(cur_turf.x, cur_turf.y, detector_range * 2)
+
+	var/list/ping_receivers = list()
+	for(var/mob/living/carbon/human/humans in range(1, human_user))
+		ping_receivers += humans
 
 	var/list/ping_candidates = SSquadtree.players_in_range(range_bounds, cur_turf.z, QTREE_EXCLUDE_OBSERVER | QTREE_SCAN_MOBS)
 
@@ -228,14 +232,14 @@
 		var/mob/living/M = A //do this to skip the unnecessary istype() check; everything in ping_candidate is a mob already
 		if(M == loc) continue //device user isn't detected
 		if(world.time > M.l_move_time + 20) continue //hasn't moved recently
-		if(isrobot(M)) continue
 		if(M.get_target_lock(iff_signal))
 			continue
 
 		apply_debuff(M)
 		ping_count++
 		if(human_user)
-			show_blip(human_user, M)
+			for(var/mob/living/carbon/human/show_ping_to as anything in ping_receivers)
+				show_blip(show_ping_to, M)
 
 	for(var/mob/hologram/holo as anything in GLOB.hologram_list)
 		if(!holo.motion_sensed)
@@ -270,10 +274,10 @@
 		var/view_x_offset = 0
 		var/view_y_offset = 0
 		if(c_view > 7)
-			if(user.client.pixel_x >= 0) view_x_offset = round(user.client.pixel_x/32)
-			else view_x_offset = Ceiling(user.client.pixel_x/32)
-			if(user.client.pixel_y >= 0) view_y_offset = round(user.client.pixel_y/32)
-			else view_y_offset = Ceiling(user.client.pixel_y/32)
+			if(user.client.pixel_x >= 0) view_x_offset = floor(user.client.pixel_x/32)
+			else view_x_offset = ceil(user.client.pixel_x/32)
+			if(user.client.pixel_y >= 0) view_y_offset = floor(user.client.pixel_y/32)
+			else view_y_offset = ceil(user.client.pixel_y/32)
 
 		var/diff_dir_x = 0
 		var/diff_dir_y = 0
@@ -288,13 +292,22 @@
 			DB.icon_state = "[blip_icon]_blip"
 			DB.setDir(initial(DB.dir))
 
-		DB.screen_loc = "[Clamp(c_view + 1 - view_x_offset + (target.x - user.x), 1, 2*c_view+1)],[Clamp(c_view + 1 - view_y_offset + (target.y - user.y), 1, 2*c_view+1)]"
+		DB.screen_loc = "[clamp(c_view + 1 - view_x_offset + (target.x - user.x), 1, 2*c_view+1)],[clamp(c_view + 1 - view_y_offset + (target.y - user.y), 1, 2*c_view+1)]"
 		user.client.add_to_screen(DB)
 		addtimer(CALLBACK(src, PROC_REF(clear_pings), user, DB), 1 SECONDS)
 
 /obj/item/device/motiondetector/proc/clear_pings(mob/user, obj/effect/detector_blip/DB)
 	if(user.client)
 		user.client.remove_from_screen(DB)
+
+
+/obj/item/device/motiondetector/upp
+	name = "UDO-58 motion detector"
+	desc = "Ustroystvo Dalnego Obnaruzhenia/Long Range Detection Device. A military grade, hand-held motion detection device designed not long after its analogue in the USCM was developed. The device can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with UPPAC Naval Infantry IFF."
+	icon = 'icons/obj/items/upp-items.dmi'
+	icon_state = "detector"
+	item_state = "upp_motion_detector"
+	iff_signal = FACTION_UPP
 
 /obj/item/device/motiondetector/m717
 	name = "M717 pocket motion detector"
@@ -313,29 +326,34 @@
 	iff_signal = FACTION_CONTRACTOR
 
 /obj/item/device/motiondetector/hacked
-	name = "hacked motion detector"
+	name = "hacked M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-UPP movement instead. Fight fire with fire!"
 	iff_signal = FACTION_UPP
 
 /obj/item/device/motiondetector/hacked/elite_merc
-	name = "hacked motion detector"
+	name = "hacked M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-freelancer movement instead. Fight fire with fire!"
 	iff_signal = FACTION_MERCENARY
 
 /obj/item/device/motiondetector/hacked/pmc
-	name = "corporate motion detector"
+	name = "corporate M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been reprogrammed to detect all non-PMC movement instead. Very corporate."
 	iff_signal = FACTION_PMC
 
 /obj/item/device/motiondetector/hacked/dutch
-	name = "hacked motion detector"
+	name = "hacked M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-Dutch's Dozen movement instead. Fight fire with fire!"
 	iff_signal = FACTION_DUTCH
 
 /obj/item/device/motiondetector/hacked/contractor
-	name = "modified motion detector"
+	name = "modified M314 motion detector"
 	desc = "A device that usually picks up non-USCM signals, but this one's been modified with after-market IFF sensors to detect all non-Vanguard's Arrow Incorporated movement instead. Fight fire with fire!"
 	iff_signal = FACTION_CONTRACTOR
+
+/obj/item/device/motiondetector/hacked/twe
+	name = "L107 motion detector"
+	desc = "A military grade, hand-held motion detection device that can penetrate most anything and has an approximate range of 28 meters. Can also be utilized to scan vehicle interiors. This one is programmed to operate with RMC IFF."
+	iff_signal = FACTION_TWE
 
 #undef MOTION_DETECTOR_RANGE_LONG
 #undef MOTION_DETECTOR_RANGE_SHORT

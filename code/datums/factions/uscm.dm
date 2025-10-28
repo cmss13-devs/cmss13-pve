@@ -19,21 +19,38 @@
 			if(JOB_SQUAD_TEAM_LEADER) marine_rk = "tl"
 			if(JOB_SQUAD_MEDIC) marine_rk = "med"
 			if(JOB_SQUAD_SMARTGUN) marine_rk = "gun"
+			if(JOB_SQUAD_SPOTTER) marine_rk = "ass"
+			if(JOB_SQUAD_LOADER) marine_rk = "load"
 			if(JOB_XO) marine_rk = "xo"
 			if(JOB_CO) marine_rk = "co"
 			if(JOB_GENERAL) marine_rk = "general"
-			if(JOB_PILOT) marine_rk = "po"
+			if(JOB_CAS_PILOT) marine_rk = "gp"
+			if(JOB_DROPSHIP_PILOT) marine_rk = "dp"
+			if(JOB_TANK_CREW) marine_rk = "tc"
 			if(JOB_INTEL) marine_rk = "io"
 			if(JOB_DROPSHIP_CREW_CHIEF) marine_rk = "dcc"
-			if(JOB_CREWMAN) marine_rk = "tc"
 			if(JOB_SQUAD_RTO) marine_rk = "rto"
 			if(JOB_MARINE_RAIDER) marine_rk = "soc"
 			if(JOB_MARINE_RAIDER_SL) marine_rk = "soctl"
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
+			if(JOB_SQUAD_TECH) marine_rk = "tech"
+
+			if(JOB_FORECON_SL) marine_rk = "leader"
+			if(JOB_FORECON_SNIPER) marine_rk = "spec"
+			if(JOB_FORECON_SYN) marine_rk = "syn"
+			if(JOB_FORECON_SUPPORT) marine_rk = "tech"
+			if(JOB_FORECON_SMARTGUNNER) marine_rk = "gun"
+			if(JOB_FORECON_MARKSMAN) marine_rk = "ass"
+			if(JOB_FORECON_RIFLEMAN) marine_rk = null
+			if(JOB_FORECON_CO) marine_rk = "co"
+
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
-				if("Platoon") marine_rk = "leader_a"
+				if("Section") marine_rk = "leader_a"
 				if("Team") marine_rk = "soctl_a"
+				if("Platoon") marine_rk = "leader_a"
+				if("Squad") marine_rk = "leader_a"
+				if("Taskforce") marine_rk = "leader_a"
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
 		else if(squad.fireteam_leaders["SQ1"] == current_human || squad.fireteam_leaders["SQ2"] == current_human)
 			current_human.langchat_styles = "langchat_smaller_bolded"
@@ -76,6 +93,9 @@
 			if(JOB_CO)
 				marine_rk = "co"
 				border_rk = "command"
+			if(JOB_USCM_OBSV)
+				marine_rk = "vo"
+				border_rk = "command"
 			if(JOB_SO)
 				marine_rk = "wo_co"
 				border_rk = "command"
@@ -85,10 +105,18 @@
 			if(JOB_GENERAL, JOB_COLONEL, JOB_ACMC, JOB_CMC)
 				marine_rk = "general"
 				border_rk = "command"
+			if(JOB_PLT_MED)
+				marine_rk = "med"
+			if(JOB_PLT_SL)
+				marine_rk = "leader"
+			if(JOB_SQUAD_TECH)
+				marine_rk = "tech"
 			if(JOB_INTEL)
 				marine_rk = "io"
-			if(JOB_PILOT)
-				marine_rk = "po"
+			if(JOB_CAS_PILOT)
+				marine_rk = "gp"
+			if(JOB_DROPSHIP_PILOT)
+				marine_rk = "dp"
 			if(JOB_DROPSHIP_CREW_CHIEF)
 				marine_rk = "dcc"
 			if(JOB_CHIEF_POLICE)
@@ -96,11 +124,17 @@
 				border_rk = "command"
 			if(JOB_POLICE)
 				marine_rk = "mp"
+			if(JOB_TANK_CREW)
+				marine_rk = "tc"
 			if(JOB_WARDEN)
 				marine_rk = "warden"
 				border_rk = "command"
 			if(JOB_CHIEF_REQUISITION)
 				marine_rk = "ro"
+			if(JOB_CARGO_CHIEF)
+				marine_rk = "cc"
+			if(JOB_ARMORER)
+				marine_rk = "armrr"
 			if(JOB_CARGO_TECH)
 				marine_rk = "ct"
 			if(JOB_CHIEF_ENGINEER)
@@ -121,7 +155,7 @@
 				border_rk = "command"
 			if(JOB_NURSE)
 				marine_rk = "nurse"
-			if(JOB_SEA)
+			if(JOB_DI)
 				marine_rk = "sea"
 				border_rk = "command"
 			if(JOB_SYNTH)
@@ -136,17 +170,24 @@
 			if(JOB_PROVOST_INSPECTOR)
 				marine_rk = "pvi"
 				border_rk = "command"
+			if(JOB_PROVOST_UNDERCOVER)
+				marine_rk = "pvuc"
+				border_rk = "command"
+			if(JOB_PROVOST_CINSPECTOR)
+				marine_rk = "pvci"
+				border_rk = "command"
 			if(JOB_PROVOST_ADVISOR)
 				marine_rk = "pva"
+				border_rk = "command"
+			if(JOB_PROVOST_DMARSHAL)
+				marine_rk = "pvdm"
 				border_rk = "command"
 			if(JOB_PROVOST_MARSHAL, JOB_PROVOST_CMARSHAL, JOB_PROVOST_SMARSHAL)
 				marine_rk = "pvm"
 				border_rk = "command"
-			// TIS
-			if(JOB_TIS_IO)
-				marine_rk = "tisio"
-			if(JOB_TIS_SA)
-				marine_rk = "tissa"
+			//CIA
+			if(JOB_CIA_LIAISON)
+				marine_rk = "cialo"
 			// Riot MPs
 			if(JOB_RIOT)
 				marine_rk = "rmp"
@@ -175,25 +216,13 @@
 				marine_rk = "wo_ro"
 			if(JOB_WO_PILOT)
 				marine_rk = "wo_mcrew"
-			// Colonial Marshals
-			if(JOB_CMB_TL)
-				marine_rk = "mar"
-				icon_prefix = "cmb_"
-			if(JOB_CMB)
-				marine_rk = "dep"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_SYN)
-				marine_rk = "syn"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_ICC)
-				marine_rk = "icc"
-				icon_prefix = "cmb_"
-			if(JOB_CMB_OBS)
-				marine_rk = "obs"
-				icon_prefix = "cmb_"
 			// Check squad marines here too, for the unique ones
 			if(JOB_SQUAD_ENGI)
 				marine_rk = "engi"
+			if(JOB_SQUAD_SPOTTER)
+				marine_rk = "ass"
+			if(JOB_SQUAD_LOADER)
+				marine_rk = "load"
 			if(JOB_SQUAD_MEDIC)
 				marine_rk = "med"
 			if(JOB_SQUAD_SPECIALIST)
@@ -204,6 +233,23 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
+			// FORECON surv specific stuff
+			if(JOB_FORECON_SL)
+				marine_rk = "leader"
+			if(JOB_FORECON_SNIPER)
+				marine_rk = "spec"
+			if(JOB_FORECON_SYN)
+				marine_rk = "syn"
+			if(JOB_FORECON_SUPPORT)
+				marine_rk = "tech"
+			if(JOB_FORECON_SMARTGUNNER)
+				marine_rk = "gun"
+			if(JOB_FORECON_MARKSMAN)
+				marine_rk = "ass"
+			if(JOB_FORECON_RIFLEMAN)
+				marine_rk = null
+			if(JOB_FORECON_CO)
+				marine_rk = "co"
 
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")

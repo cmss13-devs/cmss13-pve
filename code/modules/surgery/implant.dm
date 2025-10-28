@@ -345,3 +345,96 @@
 			playsound(target, 'sound/items/countdown.ogg', 25, TRUE)
 			addtimer(CALLBACK(imp, TYPE_PROC_REF(/obj/item/implant, activate)), 2.5 SECONDS)
 	return FALSE
+
+/datum/surgery/implant_poison_tooth
+	name = "Poison Tooth Surgery"
+	priority = SURGERY_PRIORITY_LOW
+	possible_locs = list("mouth")
+	invasiveness = list(SURGERY_DEPTH_SURFACE)
+	pain_reduction_required = PAIN_REDUCTION_HEAVY
+	required_surgery_skill = SKILL_SURGERY_NOVICE
+	steps = list(
+		/datum/surgery_step/remove_tooth,
+		/datum/surgery_step/add_tooth,
+	)
+	lying_required = FALSE
+	self_operable = TRUE
+
+/datum/surgery/implant_poison_tooth/can_start(mob/user, mob/living/carbon/patient, obj/limb/L, obj/item/tool)
+	return !L.hidden
+
+/datum/surgery_step/remove_tooth
+	name = "Remove Tooth"
+	desc = "Remove the tooth!"
+	tools = list(
+		/obj/item/tool/surgery/hemostat = SURGERY_TOOL_MULT_IDEAL,
+		/obj/item/tool/wirecutters = SURGERY_TOOL_MULT_SUBSTITUTE,
+	)
+	time = 5 SECONDS
+	success_sound = 'sound/surgery/hemostat1.ogg'
+
+/datum/surgery_step/remove_tooth/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_NOTICE("You begin carefully removing [target]'s tooth with \the [tool]."),
+		SPAN_NOTICE("[user] begins to carefully remove one of your teeth with \the [tool]."),
+		SPAN_NOTICE("[user] begins to carefully remove one of [target]'s teeth with \the [tool]."))
+
+	target.custom_pain("[user] is tearing out one of your teeth!", 1)
+	log_interact(user, target, "[key_name(user)] started to remove a tooth with \the [tool].")
+
+/datum/surgery_step/remove_tooth/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_NOTICE("You carefully remove [target]'s tooth."),
+		SPAN_NOTICE("[user] carefully removes one of your teeth."),
+		SPAN_NOTICE("[user] carefully removes one of [target]'s teeth."))
+
+	log_interact(user, target, "[key_name(user)] removed [target]'s tooth \the [tool], beginning [surgery].")
+	new /obj/item/trash/tooth(get_turf(target))
+
+/datum/surgery_step/remove_tooth/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_WARNING("Your hand slips, scraping [target]'s gums with \the [tool]!"),
+		SPAN_WARNING("[user]'s hand slips, scraping your gums with \the [tool]!"),
+		SPAN_WARNING("[user]'s hand slips, scraping [target]'s gums with \the [tool]!"))
+
+	target.apply_damage(15, BRUTE, target_zone)
+	log_interact(user, target, "[key_name(user)] failed to remove [target]'s tooth with \the [tool], aborting [surgery].")
+	return FALSE
+
+/datum/surgery_step/add_tooth
+	name = "Add Tooth"
+	desc = "Add the poison tooth!"
+	tools = list(/obj/item/implant/poison_tooth = SURGERY_TOOL_MULT_IDEAL)
+	time = 2 SECONDS
+	success_sound = 'sound/surgery/retractor2.ogg'
+
+
+/datum/surgery_step/add_tooth/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_NOTICE("You begin carefully inserting a poison tooth into [target]'s gum."),
+		SPAN_NOTICE("[user] begins to carefully insert a poison tooth into your gum."),
+		SPAN_NOTICE("[user] begins to carefully insert a poison tooth into [target]'s gum."))
+
+	target.custom_pain("[user] pokes at your exposed nerves!", 1)
+	log_interact(user, target, "[key_name(user)] started implanting a tooth.")
+
+/datum/surgery_step/add_tooth/success(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_NOTICE("You carefully implant a poison tooth into [target]'s gum."),
+		SPAN_NOTICE("[user] carefully implants a poison tooth into your gum."),
+		SPAN_NOTICE("[user] implant a poison tooth into [target]'s gum."))
+
+	log_interact(user, target, "[key_name(user)] inserted a poison tooth into [target]'s gum.")
+	var/obj/item/implant/poison_tooth/tooth = tool
+	tooth.do_implant(target, "head")
+	user.drop_inv_item_to_loc(tooth, target)
+
+/datum/surgery_step/add_tooth/failure(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, tool_type, datum/surgery/surgery)
+	user.affected_message(target,
+		SPAN_WARNING("Your hand slips, scraping [target]'s gums  with \the [tool]!"),
+		SPAN_WARNING("[user]'s hand slips, scraping your gums with \the [tool]!"),
+		SPAN_WARNING("[user]'s hand slips, scraping [target]'s gums with \the [tool]!"))
+
+	target.apply_damage(5, BRUTE, target_zone)
+	log_interact(user, target, "[key_name(user)] failed to insert a tooth into [target]'s mouth.")
+	return FALSE

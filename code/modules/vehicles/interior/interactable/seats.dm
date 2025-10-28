@@ -43,7 +43,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 			M.reset_view()
@@ -56,7 +56,7 @@
 			M.client.change_view(8, vehicle)
 
 /obj/structure/bed/chair/comfy/vehicle/clicked(mob/user, list/mods) // If you're buckled, you can shift-click on the seat in order to return to camera-view
-	if(user == buckled_mob && mods["shift"] && !user.is_mob_incapacitated())
+	if(user == buckled_mob && mods[SHIFT_CLICK] && !user.is_mob_incapacitated())
 		user.client.change_view(8, vehicle)
 		vehicle.set_seated_mob(seat, user)
 		return TRUE
@@ -108,7 +108,7 @@
 				to_chat(user, SPAN_WARNING("You are unable to use heavy weaponry."))
 			return
 
-	for(var/obj/item/I in user.contents) //prevents shooting while zoomed in, but zoom can still be activated and used without shooting
+	for(var/obj/item/I in user.contents)		//prevents shooting while zoomed in, but zoom can still be activated and used without shooting
 		if(I.zoom)
 			I.zoom(user)
 
@@ -128,6 +128,27 @@
 	if(buckled_mob)
 		manual_unbuckle(X)
 		return
+
+// Commander's seat
+// Mirror of drivers stuff as it isn't much more than a LARP seat
+/obj/structure/bed/chair/comfy/vehicle/commander
+	name = "commanders's seat"
+	desc = "Military-grade seat for armored vehicle commander with some controls, switches and indicators."
+	var/image/over_image = null
+	seat = VEHICLE_COMMANDER
+	required_skill = SKILL_VEHICLE_CREWMAN
+
+/obj/structure/bed/chair/comfy/vehicle/commander/do_buckle(mob/target, mob/user)
+	required_skill = vehicle.required_skill
+	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
+		if(target == user)
+			to_chat(user, SPAN_WARNING("You have no idea how to command this thing!"))
+		return FALSE
+
+	if(vehicle)
+		vehicle.vehicle_faction = target.faction
+
+	return ..()
 
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
@@ -177,7 +198,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 	else
@@ -255,7 +276,7 @@
 		M.unset_interaction()
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
-			M.client.change_view(world_view_size, vehicle)
+			M.client.change_view(GLOB.world_view_size, vehicle)
 			M.client.pixel_x = 0
 			M.client.pixel_y = 0
 			M.reset_view()
@@ -479,3 +500,60 @@
 		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
 
 	handle_rotation()
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit
+	name = "cockpit seat"
+	desc = "A sturdy metal chair with a brace that lowers over your body. Holds you in place during high altitude drops."
+	icon_state = "vehicle_seat"
+	can_rotate = FALSE
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/afterbuckle(mob/M)
+	if(buckled_mob)
+		if(buckled_mob != M)
+			return
+		icon_state = initial(icon_state) + "_buckled"
+		overlays += chairbar
+
+		if(buckle_offset_x != 0)
+			mob_old_x = M.pixel_x
+			M.pixel_x = buckle_offset_x
+		if(buckle_offset_y != 0)
+			mob_old_y = M.pixel_y
+			M.pixel_y = buckle_offset_y
+
+		ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, BUCKLED_TRAIT)
+	else
+		icon_state = initial(icon_state)
+		overlays -= chairbar
+
+		if(buckle_offset_x != 0)
+			M.pixel_x = mob_old_x
+			mob_old_x = 0
+		if(buckle_offset_y != 0)
+			M.pixel_y = mob_old_y
+			mob_old_y = 0
+
+		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
+
+	handle_rotation()
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot
+	name = "pilot seat"
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot/handle_rotation()
+	if(dir == NORTH)
+		layer = ABOVE_MOB_LAYER
+	else
+		layer = BELOW_MOB_LAYER
+	if(buckled_mob)
+		buckled_mob.setDir(dir)
+
+/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
+	name = "co-pilot seat"
+
+// GUNNER VAN Seat
+/obj/structure/bed/chair/comfy/vehicle/van_gunner
+	name = "gunner's seat"
+	desc = "Comfortable seat for a gunner."
+	seat = VEHICLE_GUNNER
+	required_skill = SKILL_VEHICLE_DEFAULT

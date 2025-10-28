@@ -52,6 +52,7 @@ Similar to shotguns.dm but not exactly.
 	icon_state = "458-box"
 	item_state = "458-box"
 	default_ammo = /datum/ammo/bullet/lever_action/xm88
+	max_rounds = 100
 	caliber = ".458"
 	gun_type = /obj/item/weapon/gun/lever_action/xm88
 	handful_state = "boomslang_bullet"
@@ -91,6 +92,7 @@ Handfuls of lever_action rounds. For spawning directly on mobs in roundstart, ER
 	gun_type = /obj/item/weapon/gun/lever_action
 	handful_state = "lever_action_bullet"
 	transfer_handful_amount = 9
+	flags_human_ai = AMMUNITION_ITEM
 
 /obj/item/ammo_magazine/handful/lever_action/training
 	name = "handful of blanks (45-70)"

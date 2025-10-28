@@ -1,0 +1,5 @@
+author: "Warfan1815"
+delete-after: True
+changes:
+  - rscadd: "Adds the topographic ribbon and the topographic honor ribbon as in-game rewards for the 2025 mapjam"
+  - imageadd: "adds the topographic ribbon and the topographic honor ribbon as ties.dmi sprites"

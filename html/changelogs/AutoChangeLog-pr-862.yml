@@ -1,0 +1,17 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "reduced xeno death acid spray to radius 1 (was 2)"
+  - rscadd: "drone acid_blood_damage = 25 (it was default 15)"
+  - balance: "soldier acid_blood_damage = 30 (it was 35)"
+  - balance: "Aggression required for Fling is now 70, from 35."
+  - balance: "ai_prob_chance for Fling is now 25, from 70."
+  - balance: "cooldown for Fling is now 10 seconds, from 8."
+  - balance: "Aggression required for Tail Stab is now 50, from 70."
+  - balance: "ai_prob_chance for Tail Stab is now 40, from 65."
+  - balance: "cooldown for Tail Stab is now 15 seconds, from 11."
+  - bugfix: "The32bitguy's acid turf fixes, to stop shuttles melting to acid"
+  - bugfix: "Bone Resin Walls are now unacidable"
+  - balance: "reduced Soldier movement speed from -1 to -0.9"
+  - balance: "edited Soldier \"no hive\" aggression base from 50 to 40"
+  - balance: "edited Soldier pull_multiplier from 0.2 to 0.4"

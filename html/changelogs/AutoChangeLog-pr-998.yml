@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "Sanity for contributors: No marines no longer causes an Exception on roundstart. Personal Weapon preference of None loads correctly."
+  - code_imp: "Use a temporary list and iterate through the length of the marine list to find a heirloom weapon instead of just iterating 10 times."

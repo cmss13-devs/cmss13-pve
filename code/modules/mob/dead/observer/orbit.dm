@@ -52,7 +52,17 @@
 	var/list/marines = list()
 	var/list/survivors = list()
 	var/list/xenos = list()
+	var/list/infected = list()
 	var/list/ert_members = list()
+	var/list/upp = list()
+	var/list/clf = list()
+	var/list/wy = list()
+	var/list/twe = list()
+	var/list/freelancer = list()
+	var/list/contractor = list()
+	var/list/mercenary = list()
+	var/list/dutch = list()
+	var/list/marshal = list()
 	var/list/synthetics = list()
 	var/list/predators = list()
 	var/list/animals = list()
@@ -65,7 +75,7 @@
 
 	var/is_admin = FALSE
 	if(user && user.client)
-		is_admin = check_other_rights(user.client, R_ADMIN, FALSE)
+		is_admin = check_client_rights(user.client, R_ADMIN, FALSE)
 	var/list/pois = getpois(skip_mindless = !is_admin, specify_dead_role = FALSE)
 	for(var/name in pois)
 		var/list/serialized = list()
@@ -101,7 +111,7 @@
 
 		if(isliving(M))
 			var/mob/living/player = M
-			serialized["health"] = FLOOR((player.health / player.maxHealth * 100), 1)
+			serialized["health"] = floor(player.health / player.maxHealth * 100)
 
 			if(isxeno(player))
 				var/mob/living/carbon/xenomorph/xeno = player
@@ -109,6 +119,7 @@
 					var/datum/caste_datum/caste = xeno.caste
 					serialized["caste"] = caste.caste_type
 					serialized["icon"] = caste.minimap_icon
+					serialized["hivenumber"] = xeno.hivenumber
 				xenos += list(serialized)
 				continue
 
@@ -117,12 +128,16 @@
 				var/obj/item/card/id/id_card = human.get_idcard()
 				var/datum/species/human_species = human.species
 				var/max_health = human_species.total_health != human.maxHealth ? human_species.total_health : human.maxHealth
-				serialized["health"] = FLOOR((player.health / max_health * 100), 1)
+				serialized["health"] = floor(player.health / max_health * 100)
 
 				serialized["job"] = id_card?.assignment ? id_card.assignment : human.job
 				serialized["nickname"] = human.real_name
 
 				var/icon = human.assigned_equipment_preset?.minimap_icon
+				if(islist(icon))
+					for(var/key in icon)
+						icon = key
+						break
 				serialized["icon"] = icon ? icon : "private"
 
 				if(human.assigned_squad)
@@ -130,15 +145,36 @@
 				else
 					serialized["background_color"] = human.assigned_equipment_preset?.minimap_background
 
-				if(SSticker.mode.is_in_endgame == TRUE && !is_mainship_level(M.z) && !(human.faction in FACTION_LIST_ERT))
+				if(human.status_flags & XENO_HOST)
+					infected += list(serialized)
+
+				if(SSticker.mode.is_in_endgame == TRUE && !is_mainship_level(M.z) && !(human.faction in FACTION_LIST_ERT_ALL))
 					escaped += list(serialized)
+				else if(human.faction in FACTION_LIST_WY)
+					wy += list(serialized)
 				else if(issynth(human) && !isinfiltratorsynthetic(human))
 					synthetics += list(serialized)
 				else if(isyautja(human))
 					predators += list(serialized)
-				else if(human.faction in FACTION_LIST_ERT)
+				else if(human.faction in FACTION_LIST_ERT_OTHER)
 					ert_members += list(serialized)
-				else if(human.faction in FACTION_LIST_MARINE)
+				else if(human.faction in FACTION_LIST_UPP)
+					upp += list(serialized)
+				else if(human.faction in FACTION_LIST_CLF)
+					clf += list(serialized)
+				else if(human.faction in FACTION_LIST_TWE)
+					twe += list(serialized)
+				else if(human.faction in FACTION_LIST_FREELANCER)
+					freelancer += list(serialized)
+				else if(human.faction in FACTION_LIST_CONTRACTOR)
+					contractor += list(serialized)
+				else if(human.faction in FACTION_LIST_MERCENARY)
+					mercenary += list(serialized)
+				else if(human.faction in FACTION_LIST_MARSHAL)
+					marshal += list(serialized)
+				else if(human.faction in FACTION_LIST_DUTCH)
+					dutch += list(serialized)
+				else if(human.faction in FACTION_LIST_UA)
 					marines += list(serialized)
 				else if(issurvivorjob(human.job))
 					survivors += list(serialized)
@@ -148,14 +184,21 @@
 			if(isanimal(player))
 				animals += list(serialized)
 
-		else if(isAI(M))
-			humans += list(serialized)
-
 	data["humans"] = humans
 	data["marines"] = marines
 	data["survivors"] = survivors
 	data["xenos"] = xenos
+	data["infected"] = infected
 	data["ert_members"] = ert_members
+	data["upp"] = upp
+	data["clf"] = clf
+	data["wy"] = wy
+	data["twe"] = twe
+	data["freelancer"] = freelancer
+	data["contractor"] = contractor
+	data["mercenary"] = mercenary
+	data["dutch"] = dutch
+	data["marshal"] = marshal
 	data["synthetics"] = synthetics
 	data["predators"] = predators
 	data["animals"] = animals
@@ -166,6 +209,8 @@
 	data["vehicles"] = vehicles
 	data["escaped"] = escaped
 	data["icons"] = GLOB.minimap_icons
+
+	data["main_platoon_name"] = GLOB.main_platoon_name
 
 	return data
 

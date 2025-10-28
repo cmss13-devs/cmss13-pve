@@ -178,9 +178,6 @@
 
 	add_fingerprint(usr)
 
-/obj/structure/ladder/attack_robot(mob/user as mob)
-	return attack_hand(user)
-
 /obj/structure/ladder/ex_act(severity)
 	return
 
@@ -262,11 +259,8 @@
 
 /obj/structure/ladder/fragile_almayer/Initialize()
 	. = ..()
-	GLOB.hijack_bustable_ladders += src
-
-/obj/structure/ladder/fragile_almayer/Destroy()
-	GLOB.hijack_bustable_ladders -= src
-	return ..()
+	if(is_mainship_level(z))
+		RegisterSignal(SSdcs, COMSIG_GLOB_HIJACK_IMPACTED, PROC_REF(deconstruct))
 
 /obj/structure/ladder/fragile_almayer/deconstruct()
 	new /obj/structure/prop/broken_ladder(loc)
@@ -281,3 +275,23 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	layer = LADDER_LAYER
+
+/obj/structure/ladder/rope
+	name = "rope"
+	desc = "A sturdy rope."
+	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon_state = "rope"
+
+/obj/structure/ladder/rope/update_icon()
+	return
+
+/obj/structure/ladder/maintenance
+	name = "maintenance ladder"
+	desc = "The hatch itself is the door to the underground. Though it looks like it the hatch itself is light enough to not be an issue!"
+	icon = 'icons/obj/structures/structures.dmi'
+	icon_state = "hatchclosed"
+	color = "#666633"
+	pixel_y = 7
+
+/obj/structure/ladder/maintenance/update_icon()
+	return

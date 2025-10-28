@@ -90,9 +90,11 @@
 		return
 	GLOB.nightmare_landmarks[insert_tag] = get_turf(src)
 /obj/effect/landmark/nightmare/Destroy()
-	if(insert_tag && autoremove \
-	   && GLOB.nightmare_landmarks[insert_tag] == get_turf(src))
-		GLOB.nightmare_landmarks.Remove(insert_tag)
+	if(insert_tag)
+		var/turf/turf = get_turf(src)
+		if(autoremove && GLOB.nightmare_landmarks[insert_tag] == turf)
+			GLOB.nightmare_landmarks.Remove(insert_tag)
+		GLOB.nightmare_landmark_tags_removed += insert_tag
 	return ..()
 
 /obj/effect/landmark/ert_spawns/distress
@@ -118,6 +120,15 @@
 /obj/effect/landmark/monkey_spawn/Destroy()
 	GLOB.monkey_spawns -= src
 	return ..()
+
+/obj/effect/landmark/lizard_spawn
+	name = "lizard spawn"
+	icon_state = "lizard_spawn"
+
+/obj/effect/landmark/lizard_spawn/Initialize(mapload, ...)
+	. = ..()
+	if(prob(66))
+		new /mob/living/simple_animal/hostile/retaliate/giant_lizard(loc)
 
 /obj/effect/landmark/latewhiskey
 	name = "Whiskey Outpost Late join"
@@ -350,8 +361,6 @@
 	job = /datum/job/command/bridge/whiskey
 
 //****************************************** AUXILIARY - SUPPORT ************************************************/
-/obj/effect/landmark/start/whiskey/synthetic
-	job = /datum/job/civilian/synthetic/whiskey
 
 /obj/effect/landmark/start/whiskey/senior
 	job = /datum/job/command/senior  //Need to create a WO variant in the future
@@ -424,6 +433,10 @@
 	name = "upp late join"
 	squad = SQUAD_UPP
 
+/obj/effect/landmark/late_join/rmc
+	name = "rmc late join"
+	squad = SQUAD_RMC
+
 /obj/effect/landmark/late_join/upp/Initialize(mapload, ...)
 	. = ..()
 
@@ -433,10 +446,38 @@
 	name = "working joe late join"
 	job = JOB_WORKING_JOE
 
+
+/obj/effect/landmark/late_join/cmo
+	name = "Chief Medical Officer late join"
+	job = JOB_CMO
+
+/obj/effect/landmark/late_join/researcher
+	name = "Researcher late join"
+	job = JOB_RESEARCHER
+
+/obj/effect/landmark/late_join/doctor
+	name = "Doctor late join"
+	job = JOB_DOCTOR
+
+/obj/effect/landmark/late_join/nurse
+	name = "Nurse late join"
+	job = JOB_NURSE
+
+/obj/effect/landmark/late_join/intel
+	name = "Intelligence Officer late join"
+	job = JOB_INTEL
+
 /obj/effect/landmark/late_join/forecon
 	name = "forecon late join"
 	squad = SQUAD_LRRP
 
+/obj/effect/landmark/late_join/pmc
+	name = "pmc late join"
+	squad = SQUAD_PMCPLT
+
+/obj/effect/landmark/late_join/small_pmc
+	name = "small pmc late join"
+	squad = SQUAD_PMCPLT_SMALL
 
 /obj/effect/landmark/late_join/Initialize(mapload, ...)
 	. = ..()
@@ -523,7 +564,7 @@
 	var/mob/living/carbon/human/zombie = new /mob/living/carbon/human(loc)
 	if(!zombie.hud_used)
 		zombie.create_hud()
-	arm_equipment(zombie, /datum/equipment_preset/other/zombie, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
+	arm_equipment(zombie, /datum/equipment_preset/zombie/generic, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
 	observer.client.eye = zombie
 	observer.mind.transfer_to(zombie)
 	if(spawns_left <= 0)
@@ -544,3 +585,21 @@
 /// In landmarks.dm and not unit_test.dm so it is always active in the mapping tools.
 /obj/effect/landmark/unit_test_top_right
 	name = "unit test zone top right"
+
+/// Marks the bottom left of the tutorial zone.
+/obj/effect/landmark/tutorial_bottom_left
+	name = "tutorial bottom left"
+
+/obj/effect/landmark/personal_weapon
+	name = "personal weapon spawner"
+	desc = "Delete this pre-roundstart if you don't want marines to have any cool personal weapons!"
+	icon_state = "personal_weapon"
+	invisibility_value = INVISIBILITY_OBSERVER
+
+/obj/effect/landmark/personal_weapon/Initialize(mapload, ...)
+	. = ..()
+	GLOB.personal_weapon += src
+
+/obj/effect/landmark/personal_weapon/Destroy()
+	GLOB.personal_weapon -= src
+	return ..()

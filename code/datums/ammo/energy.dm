@@ -28,16 +28,16 @@
 	icon_state = "stun"
 	damage_type = OXY
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_IGNORE_RESIST|AMMO_ALWAYS_FF //Not that ignoring will do much right now.
-
 	stamina_damage = 45
 	accuracy = HIT_ACCURACY_TIER_8
 	shell_speed = AMMO_SPEED_TIER_1 // Slightly faster
 	hit_effect_color = "#FFFF00"
 
-/datum/ammo/energy/taser/on_hit_mob(mob/M, obj/projectile/P)
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		H.disable_special_items() // Disables scout cloak
+/datum/ammo/energy/taser/on_hit_mob(mob/mobs, obj/projectile/P)
+	if(ishuman(mobs))
+		var/mob/living/carbon/human/humanus = mobs
+		humanus.disable_special_items() // Disables scout cloak
+		humanus.make_jittery(40)
 
 /datum/ammo/energy/taser/precise
 	name = "precise taser bolt"
@@ -71,6 +71,86 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
+/datum/ammo/energy/plasma
+	name = "plasma bolt"
+	icon_state = "arcane_barrage"
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF|AMMO_ANTISTRUCT
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 150
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_8 //It's a freaking plasma beam
+	accurate_range = 20
+	effective_range_max = 11
+	max_range = 20
+	var/vehicle_slowdown_time = 2 SECONDS
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_PURPLE
+
+/datum/ammo/energy/plasma/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+	))
+
+/datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
+	burst(get_turf(M),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(M)
+
+/datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 5)
+	return 1
+
+/datum/ammo/energy/plasma/on_hit_obj(obj/O,obj/projectile/P)
+	if(istype(O, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = O
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Plasma Blast"))
+		mob.interior_crash_effect()
+		mob.ex_act(150, P.dir, P.weapon_cause_data, 100)
+		return
+	burst(get_turf(P),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(O)
+
+/datum/ammo/energy/plasma/on_hit_turf(turf/T,obj/projectile/P)
+	burst(get_turf(T),P,damage_type, 1 , 5)
+	new /obj/effect/overlay/temp/plasma_impact(T)
+
+/datum/ammo/energy/plasma/heavy
+	name = "heavy plasma bolt"
+	damage = 300
+	penetration = ARMOR_PENETRATION_TIER_10
+	accurate_range = 13
+	effective_range_max = 8
+	max_range = 13 // As far as a mini-scope will let them see
+	vehicle_slowdown_time = 5 SECONDS
+
+/datum/ammo/energy/plasma/heavy/on_hit_mob(mob/M,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(M), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+	if(iscarbon(M))
+		M.ex_act(280, null, P.weapon_cause_data, 350)
+
+/datum/ammo/energy/plasma/heavy/on_near_target(turf/T, obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_obj(obj/O,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(O), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
+/datum/ammo/energy/plasma/heavy/on_hit_turf(turf/T,obj/projectile/P)
+	. = ..()
+	cell_explosion(get_turf(T), 60, 60, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, P.weapon_cause_data)
+
 /datum/ammo/energy/yautja
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accurate_range = 12
@@ -103,8 +183,8 @@
 	icon_state = "shrapnel_plasma"
 	damage_type = BURN
 
-/datum/ammo/bullet/shrapnel/plasma/on_hit_mob(mob/hit_mob, obj/projectile/hit_projectile)
-	hit_mob.apply_effect(2, WEAKEN)
+/datum/ammo/bullet/shrapnel/plasma/on_hit_mob(mob/living/hit_mob, obj/projectile/hit_projectile)
+	hit_mob.Stun(2)
 
 /datum/ammo/energy/yautja/caster
 	name = "root caster bolt"
@@ -141,12 +221,8 @@
 		log_attack("[key_name(C)] was stunned by a high power stun bolt from [key_name(P.firer)] at [get_area(P)]")
 
 		if(ishuman(C))
-			var/mob/living/carbon/human/H = C
 			stun_time++
-			H.apply_effect(stun_time, WEAKEN)
-		else
-			M.apply_effect(stun_time, WEAKEN)
-
+		C.apply_effect(stun_time, WEAKEN)
 		C.apply_effect(stun_time, STUN)
 	..()
 
@@ -208,7 +284,7 @@
 
 /datum/ammo/energy/yautja/caster/sphere/stun/proc/do_area_stun(obj/projectile/P)
 	playsound(P, 'sound/weapons/wave.ogg', 75, 1, 25)
-	for (var/mob/living/carbon/M in view(src.stun_range, get_turf(P)))
+	FOR_DVIEW(var/mob/living/carbon/M, src.stun_range, get_turf(P), HIDE_INVISIBLE_OBSERVER)
 		var/stun_time = src.stun_time
 		log_attack("[key_name(M)] was stunned by a plasma immobilizer from [key_name(P.firer)] at [get_area(P)]")
 		if (isyautja(M))
@@ -217,12 +293,8 @@
 			continue
 		to_chat(M, SPAN_DANGER("A powerful electric shock ripples through your body, freezing you in place!"))
 		M.apply_effect(stun_time, STUN)
-
-		if (ishuman(M))
-			var/mob/living/carbon/human/H = M
-			H.apply_effect(stun_time, WEAKEN)
-		else
-			M.apply_effect(stun_time, WEAKEN)
+		M.apply_effect(stun_time, WEAKEN)
+	FOR_DVIEW_END
 
 /datum/ammo/energy/yautja/rifle/bolt
 	name = "plasma rifle bolt"
@@ -238,4 +310,11 @@
 	if(isxeno(hit_mob))
 		var/mob/living/carbon/xenomorph/xeno = hit_mob
 		xeno.apply_damage(damage * 0.75, BURN)
-		xeno.interference = 30
+		xeno.AddComponent(/datum/component/status_effect/interference, 30, 30)
+
+/datum/ammo/energy/yautja/rifle/bolt/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+

@@ -20,9 +20,6 @@
 /obj/item/frame/table/attackby(obj/item/W, mob/user)
 
 	..()
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		new /obj/item/stack/sheet/metal(user.loc)
-		qdel(src)
 
 	if(istype(W, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = W
@@ -59,7 +56,10 @@
 	if(istype(get_area(loc), /area/shuttle))  //HANGAR/SHUTTLE BUILDING
 		to_chat(user, SPAN_WARNING("No. This area is needed for the dropship."))
 		return
-
+	for(var/obj/object in OT)
+		if(object.density)
+			to_chat(user, SPAN_WARNING("[object] is blocking you from constructing [src]!"))
+			return
 	if(!do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
 		to_chat(user, SPAN_WARNING("Hold still while you're constructing a table!"))
 		return
@@ -81,16 +81,6 @@
 	matter = list("metal" = 15000) //A reinforced table. Two sheets of metal and four rods
 	table_type = /obj/structure/surface/table/reinforced
 
-/obj/item/frame/table/reinforced/attackby(obj/item/W, mob/user)
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		deconstruct()
-
-/obj/item/frame/table/reinforced/deconstruct(disassembled = TRUE)
-	if(disassembled)
-		new /obj/item/stack/sheet/metal(get_turf(src))
-		new /obj/item/stack/rods(get_turf(src))
-	return ..()
-
 /*
  * Wooden Table Parts
  */
@@ -100,6 +90,7 @@
 	desc = "A kit for a table, including a large, flat wooden surface and four legs. Some assembly required."
 	icon_state = "wood_tableparts"
 	flags_atom = FPRINT
+	matter = null
 	table_type = /obj/structure/surface/table/woodentable
 
 /obj/item/frame/table/wood/attackby(obj/item/W, mob/user)
@@ -114,10 +105,6 @@
 			new /obj/item/frame/table/gambling(get_turf(src))
 			qdel(src)
 
-/obj/item/frame/table/wood/deconstruct(disassembled = TRUE)
-	if(disassembled)
-		new /obj/item/stack/sheet/wood(get_turf(src))
-	return ..()
 
 /obj/item/frame/table/wood/poor
 	name = "poor wooden table parts"
@@ -140,23 +127,16 @@
 	desc = "A kit for a table, including a large, flat wooden and carpet surface and four legs. Some assembly required."
 	icon_state = "gamble_tableparts"
 	flags_atom = null
+	matter = null
 	table_type = /obj/structure/surface/table/gamblingtable
 
 /obj/item/frame/table/gambling/attackby(obj/item/W as obj, mob/user as mob)
 
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		deconstruct()
 	if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR))
 		to_chat(user, SPAN_NOTICE("You pry the carpet out of [src]."))
 		new /obj/item/stack/tile/carpet(get_turf(src))
 		new /obj/item/frame/table/wood(get_turf(src))
 		qdel(src)
-
-/obj/item/frame/table/gambling/deconstruct(disassembled = TRUE)
-	if(disassembled)
-		new /obj/item/stack/sheet/wood(get_turf(src))
-		new /obj/item/stack/tile/carpet(get_turf(src))
-	return ..()
 
 /*
  * Almayer Tables
@@ -165,8 +145,6 @@
 	name = "gray table parts"
 	icon_state = "table_parts"
 	table_type = /obj/structure/surface/table/almayer
-
-
 
 /*
  * Rack Parts
@@ -183,9 +161,6 @@
 
 /obj/item/frame/rack/attackby(obj/item/W, mob/user)
 	..()
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		new /obj/item/stack/sheet/metal(get_turf(src))
-		qdel(src)
 
 /obj/item/frame/rack/attack_self(mob/user)
 	..()

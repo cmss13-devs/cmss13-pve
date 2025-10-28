@@ -1,0 +1,4 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - qol: "OW Touch ups: Scrolling, use Steps for coords. More in-line with PvP."

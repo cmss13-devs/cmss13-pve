@@ -14,11 +14,11 @@
 	if(..())
 		return TRUE
 
-	if (mods["shift"] && mods["middle"])
+	if (mods[SHIFT_CLICK] && mods[MIDDLE_CLICK])
 		point_to(target)
 		return TRUE
 
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(target == src)
 			if(!can_reenter_corpse || !mind || !mind.current)
 				return
@@ -29,7 +29,7 @@
 		if(ismob(target) || isVehicle(target))
 			if(isxeno(target) && SSticker.mode.check_xeno_late_join(src)) //if it's a xeno and all checks are alright, we are gonna try to take their body
 				var/mob/living/carbon/xenomorph/xeno = target
-				if(xeno.stat == DEAD || is_admin_level(xeno.z) || xeno.aghosted)
+				if(xeno.stat == DEAD || should_block_game_interaction(xeno) || xeno.aghosted)
 					to_chat(src, SPAN_WARNING("You cannot join as [xeno]."))
 					do_observe(xeno)
 					return FALSE
@@ -49,7 +49,7 @@
 						var/message = "You have been dead for [DisplayTimeText(deathtime)]."
 						message = SPAN_WARNING("[message]")
 						to_chat(src, message)
-						to_chat(src, SPAN_WARNING("You must wait atleast 2.5 minutes before rejoining the game!"))
+						to_chat(src, SPAN_WARNING("You must wait at least 2.5 minutes before rejoining the game!"))
 						do_observe(target)
 						return FALSE
 
@@ -81,7 +81,7 @@
 	next_move = world.time + 8
 	// You are responsible for checking config.ghost_interaction when you override this function
 	// Not all of them require checking, see below
-	if(!mods["shift"])
+	if(!mods[SHIFT_CLICK])
 		target.attack_ghost(src)
 	return FALSE
 

@@ -12,7 +12,7 @@
 	deactive_state = "degoggles"
 	flags_armor_protection = 0
 	toggleable = TRUE
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_MEDIC
@@ -40,6 +40,7 @@
 		return TRUE
 
 /datum/action/item_action/view_publications/action_activate()
+	. = ..()
 	var/obj/item/clothing/glasses/hud/health/hud = holder_item
 	hud.tgui_interact(owner)
 
@@ -48,7 +49,7 @@
 
 /obj/item/clothing/glasses/hud/health/ui_data(mob/user)
 	var/list/data = list(
-		"published_documents" = chemical_data.research_publications,
+		"published_documents" = GLOB.chemical_data.research_publications,
 		"terminal_view" = FALSE
 	)
 	return data
@@ -74,7 +75,7 @@
 		if ("read_document")
 			var/print_type = params["print_type"]
 			var/print_title = params["print_title"]
-			var/obj/item/paper/research_report/report = chemical_data.get_report(print_type, print_title)
+			var/obj/item/paper/research_report/report = GLOB.chemical_data.get_report(print_type, print_title)
 			if(report)
 				report.read_paper(user)
 			return
@@ -98,7 +99,7 @@
 		return
 
 	if(href_list["read_document"])
-		var/obj/item/paper/research_report/report = chemical_data.research_documents[href_list["print_type"]][href_list["print_title"]]
+		var/obj/item/paper/research_report/report = GLOB.chemical_data.research_documents[href_list["print_type"]][href_list["print_title"]]
 		if(report)
 			report.read_paper(user)
 
@@ -109,7 +110,7 @@
 	deactive_state = "sensorhud_d"
 	flags_armor_protection = 0
 	toggleable = TRUE
-	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 	req_skill = SKILL_MEDICAL
 	req_skill_level = SKILL_MEDICAL_DEFAULT
@@ -126,7 +127,7 @@
 	deactive_state = "degoggles"
 	toggleable = TRUE
 	flags_armor_protection = 0
-	hud_type = MOB_HUD_SECURITY_ADVANCED
+	hud_type = list(MOB_HUD_SECURITY_ADVANCED)
 	actions_types = list(/datum/action/item_action/toggle)
 
 /obj/item/clothing/glasses/hud/security/prescription

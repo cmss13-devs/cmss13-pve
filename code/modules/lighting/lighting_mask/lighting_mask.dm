@@ -6,7 +6,7 @@
 /atom/movable/lighting_mask
 	name = ""
 	icon = LIGHTING_ICON_BIG
-	icon_state  = "light_big"
+	icon_state  = "light_normalized"
 
 	anchored = TRUE
 	plane = LIGHTING_PLANE
@@ -33,12 +33,34 @@
 	///Set to TRUE if you want the light to rotate with the owner
 	var/is_directional = FALSE
 
+	///Turfs that are being affected by this mask, this is for the sake of luminosity
+	var/list/turf/affecting_turfs
+	///list of mutable appearance shadows
+	var/list/mutable_appearance/shadows
+	var/times_calculated = 0
+
+	//Please dont change these
+	var/calculated_position_x
+	var/calculated_position_y
+
 /atom/movable/lighting_mask/Initialize(mapload, ...)
 	. = ..()
 	add_filter("pixel_smoother", 3, gauss_blur_filter(2))
 	add_filter("shadow_alpha_masking", 4, alpha_mask_filter(render_source = SHADOW_RENDER_TARGET, flags = MASK_INVERSE))
 
 /atom/movable/lighting_mask/Destroy()
+	//Make sure we werent destroyed in init
+	SSlighting.mask_queue -= src
+	//Remove from affecting turfs
+	if(affecting_turfs)
+		for(var/turf/thing as anything in affecting_turfs)
+			var/area/A = thing.loc
+			LAZYREMOVE(thing.hybrid_lights_affecting, src)
+			if(!A.base_lighting_alpha)
+				thing.luminosity -= 1
+		affecting_turfs = null
+	//Cut the shadows. Since they are overlays they will be deleted when cut from overlays.
+	LAZYCLEARLIST(shadows)
 	mask_holder = null
 	attached_atom = null
 	return ..()
@@ -69,7 +91,7 @@
 	// - Center the overlay image
 	// - Ok so apparently translate is affected by the scale we already did huh.
 	// ^ Future me here, its because it works as translate then scale since its backwards.
-	// ^ ^ Future future me here, it totally shouldnt since the translation component of a matrix is independant to the scale component.
+	// ^ ^ Future future me here, it totally shouldnt since the translation component of a matrix is independent to the scale component.
 	new_size_matrix.Translate(-128 + 16)
 	//Adjust for pixel offsets
 	var/invert_offsets = attached_atom.dir & (NORTH | EAST)
@@ -142,6 +164,7 @@
 ///rotating light mask, but only pointing in one direction
 /atom/movable/lighting_mask/rotating_conical
 	icon_state = "light_conical_rotating"
+	var/transform_time = 0
 
 /atom/movable/lighting_mask/ex_act(severity, target)
 	return

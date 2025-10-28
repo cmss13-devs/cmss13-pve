@@ -29,21 +29,12 @@
 
 	if(!admin_holder)
 		return
+	if(!isobserver(mob))
+		to_chat(usr, SPAN_WARNING("You must be a ghost to use this."))
 
-	if(istype(mob,/mob/dead/observer))
-		var/mob/dead/observer/ghost = mob
-		if(ghost.adminlarva == 0)
-			ghost.adminlarva = 1
-			to_chat(usr, SPAN_BOLDNOTICE("You have disabled your larva protection."))
-		else if(ghost.adminlarva == 1)
-			ghost.adminlarva = 0
-			to_chat(usr, SPAN_BOLDNOTICE("You have re-activated your larva protection."))
-		else
-			to_chat(usr, SPAN_BOLDNOTICE("Something went wrong tell a coder"))
-	else if(istype(mob,/mob/new_player))
-		to_chat(src, "<font color='red'>Error: Lose larva Protection: Can't lose larva protection whilst in the lobby. Observe first.</font>")
-	else
-		to_chat(src, "<font color='red'>Error: Lose larva Protection: You must be a ghost to use this.</font>")
+	var/mob/dead/observer/ghost = mob
+	ghost.admin_larva_protection = !ghost.admin_larva_protection
+	to_chat(usr, SPAN_BOLDNOTICE("You have [ghost.admin_larva_protection ? "en" : "dis"]abled your larva protection."))
 
 /client/proc/unban_panel()
 	set name = "Unban Panel"
@@ -103,7 +94,7 @@
 	if(body && !body.key)
 		body.key = "@[key]" //Haaaaaaaack. But the people have spoken. If it breaks; blame adminbus
 		if(body.client)
-			body.client.change_view(world_view_size) //reset view range to default.
+			body.client.change_view(GLOB.world_view_size) //reset view range to default.
 
 		//re-open STUI
 	if(new_STUI)
@@ -162,8 +153,22 @@
 		to_chat(usr, "Error: notes not yet migrated for that key. Please try again in 5 minutes.")
 		return
 
-	var/dat = "<html>"
-	dat += "<body>"
+	var/dat = {"
+	<table width='100%'>
+	<tr>
+	<td width='20%'>
+	<div align='center'>
+	<b>Search:</b>
+	</div>
+	</td>
+	<td width='80%'>
+	<input type='search' id='filter' onkeyup='handle_filter()' onblur='handle_filter()' name='filter_text' value='' style='width:99%;'>
+	</td>
+	</tr>
+	</table>
+	<br>
+	<table border=0 rules=all frame=void cellspacing=0 cellpadding=3 id='searchable'>
+	"}
 
 	var/list/datum/view_record/note_view/NL = DB_VIEW(/datum/view_record/note_view, DB_COMP("player_ckey", DB_EQUALS, key))
 	for(var/datum/view_record/note_view/N as anything in NL)
@@ -175,21 +180,43 @@
 		if(N.is_ban)
 			var/ban_text = N.ban_time ? "Banned for [N.ban_time] | " : ""
 			color = "#880000"
-			dat += "<font color=[color]>[ban_text][N.text]</font> <i>by [admin_ckey] ([N.admin_rank])</i>[confidential_text] on <i><font color=blue>[N.date] [NOTE_ROUND_ID(N)]</i></font> "
+			dat += "<tr><td><font color=[color]>[ban_text][N.text]</font> <i>by [admin_ckey] ([N.admin_rank])</i>[confidential_text] on <i><font color=blue>[N.date] [NOTE_ROUND_ID(N)]</i></font> "
 		else
 			if(N.is_confidential)
 				color = "#AA0055"
 
-			dat += "<font color=[color]>[N.text]</font> <i>by [admin_ckey] ([N.admin_rank])</i>[confidential_text] on <i><font color=blue>[N.date] [NOTE_ROUND_ID(N)]</i></font> "
-		dat += "<br><br>"
+			dat += "<tr><td><font color=[color]>[N.text]</font> <i>by [admin_ckey] ([N.admin_rank])</i>[confidential_text] on <i><font color=blue>[N.date] [NOTE_ROUND_ID(N)]</i></font> "
+		dat += "</td></tr>"
 
-	dat += "<br>"
-	dat += "<A href='?src=\ref[src];[HrefToken()];add_player_info=[key]'>Add Note</A><br>"
-	dat += "<A href='?src=\ref[src];[HrefToken()];add_player_info_confidential=[key]'>Add Confidential Note</A><br>"
-	dat += "<A href='?src=\ref[src];[HrefToken()];player_notes_all=[key]'>Show Complete Record</A><br>"
+	dat += "</table><br>"
+	dat += "<A href='byond://?src=\ref[src];[HrefToken()];add_player_info=[key]'>Add Note</A><br>"
+	dat += "<A href='byond://?src=\ref[src];[HrefToken()];add_player_info_confidential=[key]'>Add Confidential Note</A><br>"
+	dat += "<A href='byond://?src=\ref[src];[HrefToken()];player_notes_all=[key]'>Show Complete Record</A><br>"
 
-	dat += "</body></html>"
-	show_browser(usr, dat, "Admin record for [key]", "adminplayerinfo", "size=480x480")
+	show_browser(usr, dat, "Admin record for [key]", "adminplayerinfo", width = 480, height = 480)
+
+/datum/admins/proc/check_ckey(target_key as text)
+	set name = "Check CKey"
+	set category = "Admin"
+
+	var/mob/user = usr
+	if (!istype(src, /datum/admins))
+		src = user.client.admin_holder
+	if (!istype(src, /datum/admins) || !(rights & R_MOD))
+		to_chat(user, "Error: you are not an admin!")
+		return
+	target_key = ckey(target_key)
+	if(!target_key)
+		to_chat(user, "Error: No key detected!")
+		return
+	to_chat(user, SPAN_WARNING("Checking Ckey: [target_key]"))
+	var/list/keys = analyze_ckey(target_key)
+	if(!keys)
+		to_chat(user, SPAN_WARNING("No results for [target_key]."))
+		return
+	to_chat(user, SPAN_WARNING("Check CKey Results: [keys.Join(", ")]"))
+
+	log_admin("[key_name(user)] analyzed ckey '[target_key]'")
 
 /datum/admins/proc/sleepall()
 	set name = "Sleep All"
@@ -389,7 +416,7 @@
 	set name = "Admin Verbs - Show"
 	set category = "Admin"
 
-	add_verb(src, admin_verbs_hideable)
+	add_verb(src, GLOB.admin_verbs_hideable)
 	remove_verb(src, /client/proc/enable_admin_verbs)
 
 	if(!(admin_holder.rights & R_DEBUG))
@@ -402,7 +429,7 @@
 	set name = "Admin Verbs - Hide"
 	set category = "Admin"
 
-	remove_verb(src, admin_verbs_hideable)
+	remove_verb(src, GLOB.admin_verbs_hideable)
 	add_verb(src, /client/proc/enable_admin_verbs)
 
 /client/proc/strip_all_in_view()
@@ -421,7 +448,7 @@
 	if(tgui_alert(src, "Do you want to strip yourself as well?", "Confirmation", list("Yes", "No")) == "Yes")
 		strip_self = TRUE
 
-	for(var/mob/living/current_mob in view())
+	for(var/mob/living/current_mob in view(src))
 		if(!strip_self && usr == current_mob)
 			continue
 		for (var/obj/item/current_item in current_mob)
@@ -444,7 +471,7 @@
 	if(alert("This will rejuvenate ALL mobs within your view range. Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
 
-	for(var/mob/living/M in view())
+	for(var/mob/living/M in view(src))
 		M.rejuvenate(FALSE)
 
 	message_admins(WRAP_STAFF_LOG(usr, "ahealed everyone in [get_area(usr)] ([usr.x],[usr.y],[usr.z])."), usr.x, usr.y, usr.z)
@@ -462,7 +489,7 @@
 	if(alert("This will rejuvenate ALL humans within your view range. Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
 
-	for(var/mob/living/carbon/human/M in view())
+	for(var/mob/living/carbon/human/M in view(src))
 		M.rejuvenate(FALSE)
 
 	message_admins(WRAP_STAFF_LOG(usr, "ahealed all humans in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
@@ -479,7 +506,7 @@
 	if(alert("This will rejuvenate ALL revivable humans within your view range. Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
 
-	for(var/mob/living/carbon/human/M in view())
+	for(var/mob/living/carbon/human/M in view(src))
 		if(!ishuman_strict(M) && !ishumansynth_strict(M))
 			continue
 
@@ -505,7 +532,7 @@
 	if(alert("This will rejuvenate ALL xenos within your view range. Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
 
-	for(var/mob/living/carbon/xenomorph/X in view())
+	for(var/mob/living/carbon/xenomorph/X in view(src))
 		X.rejuvenate(FALSE)
 
 	message_admins(WRAP_STAFF_LOG(usr, "ahealed all xenos in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
@@ -518,20 +545,20 @@
 		return
 
 	var/dat = {"
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_area'>Jump to Area</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_turf'>Jump to Turf</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_mob'>Jump to Mob</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_obj'>Jump to Object</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_key'>Jump to Ckey</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_coord'>Jump to Coordinates</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=jump_to_offset_coord'>Jump to Offset Coordinates</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=get_mob'>Teleport Mob to You</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=get_key'>Teleport Ckey to You</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=teleport_mob_to_area'>Teleport Mob to Area</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=teleport_mobs_in_range'>Mass Teleport Mobs in Range</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=teleport_mobs_by_faction'>Mass Teleport Mobs to You by Faction</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=teleport_corpses'>Mass Teleport Corpses to You</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];teleport=teleport_items_by_type'>Mass Teleport Items to You by Type</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_area'>Jump to Area</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_turf'>Jump to Turf</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_mob'>Jump to Mob</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_obj'>Jump to Object</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_key'>Jump to Ckey</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_coord'>Jump to Coordinates</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=jump_to_offset_coord'>Jump to Offset Coordinates</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=get_mob'>Teleport Mob to You</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=get_key'>Teleport Ckey to You</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=teleport_mob_to_area'>Teleport Mob to Area</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=teleport_mobs_in_range'>Mass Teleport Mobs in Range</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=teleport_mobs_by_faction'>Mass Teleport Mobs to You by Faction</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=teleport_corpses'>Mass Teleport Corpses to You</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];teleport=teleport_items_by_type'>Mass Teleport Items to You by Type</A><BR>
 		<BR>
 		"}
 
@@ -552,9 +579,9 @@
 		return
 
 	var/dat = {"
-		<A href='?src=\ref[src];[HrefToken()];vehicle=remove_clamp'>Remove Vehicle Clamp</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];vehicle=remove_clamp'>Remove Vehicle Clamp</A><BR>
 		Forcibly removes vehicle clamp from vehicle selected from a list. Drops it under the vehicle.<BR>
-		<A href='?src=\ref[src];[HrefToken()];vehicle=repair_vehicle'>Repair Vehicle</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];vehicle=repair_vehicle'>Repair Vehicle</A><BR>
 		Fully restores vehicle modules and hull health.<BR>
 		"}
 
@@ -572,21 +599,21 @@
 
 /datum/admins/proc/in_view_panel()
 	var/dat = {"
-		<A href='?src=\ref[src];[HrefToken()];inviews=rejuvenateall'>Rejuvenate All Mobs In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=rejuvenateall'>Rejuvenate All Mobs In View</A><BR>
 		<BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=rejuvenatemarine'>Rejuvenate Only Humans In View</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=rejuvenaterevivemarine'>Rejuvenate Only Revivable Humans In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=rejuvenatemarine'>Rejuvenate Only Humans In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=rejuvenaterevivemarine'>Rejuvenate Only Revivable Humans In View</A><BR>
 		<BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=rejuvenatexeno'>Rejuvenate Only Xenos In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=rejuvenatexeno'>Rejuvenate Only Xenos In View</A><BR>
 		<BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=sleepall'>Sleep All In View</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=wakeall'>Wake All In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=sleepall'>Sleep All In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=wakeall'>Wake All In View</A><BR>
 
-		<A href='?src=\ref[src];[HrefToken()];inviews=directnarrateall'>Direct Narrate In View</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=alertall'>Alert Message In View</A><BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=subtlemessageall'>Subtle Message In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=directnarrateall'>Direct Narrate In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=alertall'>Alert Message In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=subtlemessageall'>Subtle Message In View</A><BR>
 		<BR>
-		<A href='?src=\ref[src];[HrefToken()];inviews=stripall'>Strip All Mobs In View</A><BR>
+		<A href='byond://?src=\ref[src];[HrefToken()];inviews=stripall'>Strip All Mobs In View</A><BR>
 		<BR>
 		"}
 
@@ -663,13 +690,13 @@
 
 /proc/set_lz_resin_allowed(allowed = TRUE)
 	if(allowed)
-		for(var/area/A in all_areas)
+		for(var/area/A in GLOB.all_areas)
 			if(A.flags_area & AREA_UNWEEDABLE)
 				continue
 			A.is_resin_allowed = TRUE
 		msg_admin_niche("Areas close to landing zones are now weedable.")
 	else
-		for(var/area/A in all_areas)
+		for(var/area/A in GLOB.all_areas)
 			if(A.flags_area & AREA_UNWEEDABLE)
 				continue
 			A.is_resin_allowed = initial(A.is_resin_allowed)
@@ -849,7 +876,7 @@
 	set name = "Toggle Working Joe Restrictions"
 	set category = "Admin.Flags"
 
-	if(!admin_holder || !check_rights(R_EVENT, FALSE))
+	if(!admin_holder || !check_rights(R_EVENT, TRUE))
 		return
 
 	if(!SSticker.mode)
@@ -858,3 +885,17 @@
 
 	SSticker.mode.toggleable_flags ^= MODE_BYPASS_JOE
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_BYPASS_JOE) ? "allowed players to bypass (except whitelist)" : "prevented players from bypassing"] Working Joe spawn conditions.")
+
+/client/proc/toggle_joe_respawns()
+	set name = "Toggle Working Joe Respawns"
+	set category = "Admin.Flags"
+
+	if(!admin_holder || !check_rights(R_EVENT, TRUE))
+		return
+
+	if(!SSticker.mode)
+		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
+		return
+
+	SSticker.mode.toggleable_flags ^= MODE_DISABLE_JOE_RESPAWN
+	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_JOE_RESPAWN) ? "disabled" : "enabled"] Working Joe respawns.")

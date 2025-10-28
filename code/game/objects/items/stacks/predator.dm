@@ -1,8 +1,8 @@
 
 /obj/item/stack/yautja_rope
-	name = "strange rope"
+	name = "rope"
 	singular_name = "rope meter"
-	desc = "This unassuming rope seems to be covered in markings depicting strange humanoid forms."
+	desc = "Good, strong rope."
 	icon = 'icons/obj/structures/machinery/power.dmi'
 	icon_state = "coil"
 	item_state = "coil"
@@ -20,10 +20,6 @@
 
 	if(mob_victim.mob_size != MOB_SIZE_HUMAN)
 		to_chat(user, SPAN_WARNING("[mob_victim] has the wrong body plan to hang up."))
-		return TRUE
-
-	if(!HAS_TRAIT(user, TRAIT_SUPER_STRONG))
-		to_chat(user, SPAN_WARNING("You're not strong enough to lift [mob_victim] up with a rope. Also, that's kind of fucked up."))
 		return TRUE
 
 	var/mob/living/carbon/human/victim = mob_victim

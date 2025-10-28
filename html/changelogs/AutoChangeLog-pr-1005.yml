@@ -1,0 +1,6 @@
+author: "SpartanBobby"
+delete-after: True
+changes:
+  - rscadd: "Adds multiple factions to the create HAI panel"
+  - rscadd: "Create HAI machinegunner, a copy of create sniper code containing machinegunners instead"
+  - rscadd: "Removes zombies ability to infect with claws, makes them take longer to revive"

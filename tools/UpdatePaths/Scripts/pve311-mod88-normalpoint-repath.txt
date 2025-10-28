@@ -1,0 +1,1 @@
+/obj/item/ammo_magazine/pistol/mod88 : /obj/item/ammo_magazine/pistol/mod88/normalpoint{@OLD}

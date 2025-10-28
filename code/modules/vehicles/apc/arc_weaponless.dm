@@ -41,14 +41,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/arc/weaponless/remove_seated_verbs(mob/living/M, seat)
@@ -65,14 +63,12 @@
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/arc/weaponless/initialize_cameras(change_tag = FALSE)
@@ -92,10 +88,10 @@
 	switch(HP.slot)
 		if(HDPT_SUPPORT) //flare
 			HP.muzzle_flash_pos = list(
-				"1" = list(-4, -40),
-				"2" = list(5, 5),
-				"4" = list(-25, 6),
-				"8" = list(25, -4)
+				"1" = list(-4, -46),
+				"2" = list(5, 11),
+				"4" = list(-31, 6),
+				"8" = list(31, -4)
 			)
 	return ..()
 

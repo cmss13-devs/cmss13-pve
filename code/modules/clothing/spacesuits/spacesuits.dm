@@ -32,7 +32,7 @@
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.02
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
-	allowed = list(/obj/item/device/flashlight,/obj/item/tank/emergency_oxygen,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/device/flashlight,/obj/item/tank/emergency_oxygen)
 	slowdown = 3
 	armor_melee = CLOTHING_ARMOR_NONE
 	armor_bullet = CLOTHING_ARMOR_NONE
@@ -47,7 +47,8 @@
 	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROT
 	siemens_coefficient = 0.9
-
+	valid_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
 	var/list/supporting_limbs //If not-null, automatically splints breaks. Checked when removing the suit.
 
 /obj/item/clothing/suit/space/equipped(mob/M)
@@ -65,7 +66,7 @@
 /obj/item/clothing/suit/space/proc/check_limb_support()
 
 	// If this isn't set, then we don't need to care.
-	if(!supporting_limbs || !supporting_limbs.len)
+	if(!LAZYLEN(supporting_limbs))
 		return
 
 	var/mob/living/carbon/human/H = src.loc

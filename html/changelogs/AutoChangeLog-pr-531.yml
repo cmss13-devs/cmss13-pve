@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "AN/RVS-52 CCD Television Sight System attachment"
+  - rscadd: "Two-point sling (cosmetic only) attachment"
+  - imageadd: "New sprite for the B8, ported from PVP so the old one could be used for the new scope"
+  - maptweak: "Scope added to the SctSrg storage bay for the Garrow"
+  - maptweak: "Scope added to the assistant squad leader room for the Rover (SL's room was too full of crap)"

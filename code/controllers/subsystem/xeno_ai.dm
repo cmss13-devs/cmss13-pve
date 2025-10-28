@@ -11,6 +11,43 @@ SUBSYSTEM_DEF(xeno_ai)
 
 	var/ai_kill = FALSE
 
+	//currently the only caste that has an actual targeting difference is facehugger
+	/// Assoc list of valid targets by hive & caste, in the form of: hive = (/caste = targets)
+	var/list/target_cache = list()
+
+/datum/controller/subsystem/xeno_ai/proc/get_valid_targets(mob/living/carbon/xenomorph/xeno)
+	var/datum/hive_status/hive = xeno.hive
+	LAZYINITLIST(target_cache[hive])
+
+	var/caste = xeno.type
+	if(target_cache[hive][caste])
+		return target_cache[hive][caste]
+
+	var/list/valid_targets = list()
+	target_cache[hive][caste] = valid_targets
+
+	for(var/mob/living/carbon/potential_target in GLOB.alive_mob_list)
+		if(!potential_target.ai_can_target(xeno))
+			continue
+
+		valid_targets += potential_target
+
+	for(var/obj/vehicle/multitile/potential_vehicle_target as anything in GLOB.all_multi_vehicles)
+		if(potential_vehicle_target.health <= 0)
+			continue
+
+		if(hive.faction_is_ally(potential_vehicle_target.vehicle_faction))
+			continue
+
+		if(!length(valid_targets & potential_vehicle_target.interior.get_passengers()))
+			continue
+
+		valid_targets += potential_vehicle_target
+
+	valid_targets += GLOB.all_active_defenses
+
+	return valid_targets
+
 /datum/controller/subsystem/xeno_ai/stat_entry(msg)
 	msg = "P:[length(ai_mobs)]"
 	return ..()
@@ -26,6 +63,10 @@ SUBSYSTEM_DEF(xeno_ai)
 	message_admins("[key_name_admin(usr)] [SSxeno_ai.ai_kill? "killed" : "revived"] all xeno AI.")
 
 /datum/controller/subsystem/xeno_ai/fire(resumed = FALSE)
+	for(var/datum/hive_status/hive as anything in target_cache)
+		for(var/caste as anything in target_cache[hive])
+			target_cache[hive][caste] = null
+
 	if(ai_kill)
 		return
 

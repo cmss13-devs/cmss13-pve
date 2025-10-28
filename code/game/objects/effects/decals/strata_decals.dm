@@ -1,6 +1,7 @@
 /obj/effect/decal/strata_decals
 	icon = 'icons/effects/strata_decals.dmi'
 	layer = TURF_LAYER
+	anchored = TRUE
 
 /obj/effect/decal/strata_decals/catwalk/prison //For finding and replacing prison catwalk objects since they nasty
 	icon = 'icons/turf/floors/strata_floor.dmi'
@@ -8,7 +9,6 @@
 	name = "catwalk"
 	layer = CATWALK_LAYER
 	desc = "These things have no depth to them, are they just, painted on?"
-	anchored = TRUE
 
 //////////////////OUTDOOR STUFF/////////////////
 
@@ -36,6 +36,7 @@
 	icon_state = ""
 	name = "a stain"
 	desc = "A nasty looking brown stain, could be coffee, soot, water damage. Who knows."
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/strata_decals/grime/grime1
 	icon_state = "grime1"
@@ -48,3 +49,7 @@
 
 /obj/effect/decal/strata_decals/grime/grime4
 	icon_state = "grime4"
+
+/obj/effect/decal/strata_decals/grime/grime4/game_plane
+	icon_state = "grime4"
+	plane = GAME_PLANE

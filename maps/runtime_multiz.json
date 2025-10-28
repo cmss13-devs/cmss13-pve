@@ -2,9 +2,6 @@
     "map_name": "USS Runtime",
     "map_path": "map_files/USS_Runtime_multiz",
     "map_file": "USS_Runtime_multiz.dmm",
-	"survivor_types": [
-        "/datum/equipment_preset/survivor/scientist/lv"
-    ],
     "traits": [{"Ground": true}, {"Ground": true}],
     "camouflage": "classic",
 	"disable_ship_map": true

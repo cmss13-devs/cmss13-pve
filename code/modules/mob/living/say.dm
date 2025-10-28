@@ -1,66 +1,69 @@
-var/list/department_radio_keys = list(
+GLOBAL_LIST_INIT(department_radio_keys, list(
 	":i" = RADIO_CHANNEL_INTERCOM, ".i" = RADIO_CHANNEL_INTERCOM, "#i" = RADIO_CHANNEL_INTERCOM,
 	":h" = RADIO_CHANNEL_DEPARTMENT, ".h" = RADIO_CHANNEL_DEPARTMENT, "#h" = RADIO_CHANNEL_DEPARTMENT,
 	":w" = RADIO_MODE_WHISPER, ".w" = RADIO_MODE_WHISPER, "#w" = RADIO_MODE_WHISPER,
+
 	":+" = RADIO_CHANNEL_SPECIAL, ".+" = RADIO_CHANNEL_SPECIAL, "#+" = RADIO_CHANNEL_SPECIAL, //activate radio-specific special functions
 
-	":m" = RADIO_CHANNEL_MEDSCI, ".m" = RADIO_CHANNEL_MEDSCI, "#m" = RADIO_CHANNEL_UPP_MED,
-	":n" = RADIO_CHANNEL_ENGI, ".n" = RADIO_CHANNEL_ENGI, "#n" = RADIO_CHANNEL_UPP_ENGI,
-	":g" = RADIO_CHANNEL_ALMAYER, ".g" = RADIO_CHANNEL_ALMAYER, "#g" = RADIO_CHANNEL_CLF_GEN,
-	":v" = RADIO_CHANNEL_COMMAND , ".v" = RADIO_CHANNEL_COMMAND , "#v" = RADIO_CHANNEL_UPP_CMD,
 	":a" = SQUAD_MARINE_1, ".a" = SQUAD_MARINE_1, "#a" = RADIO_CHANNEL_CLF_MED,
 	":b" = SQUAD_MARINE_2, ".b" = SQUAD_MARINE_2, "#b" = RADIO_CHANNEL_CLF_ENGI,
-	":c" = SQUAD_MARINE_3, ".c" = SQUAD_MARINE_3, "#c" = RADIO_CHANNEL_CLF_CMD,
-	":d" = SQUAD_MARINE_4, ".d" = SQUAD_MARINE_4, "#d" = RADIO_CHANNEL_CLF_CCT,
+	":c" = SQUAD_MARINE_3, ".c" = SQUAD_MARINE_3, "#c" = RADIO_CHANNEL_CIA,
+	":d" = SQUAD_MARINE_4, ".d" = SQUAD_MARINE_4, "#d" = RADIO_CHANNEL_MERC,
 	":e" = SQUAD_MARINE_5, ".e" = SQUAD_MARINE_5, "#e" = RADIO_CHANNEL_PMC_ENGI,
 	":f" = SQUAD_MARINE_CRYO, ".f" = SQUAD_MARINE_CRYO, "#f" = RADIO_CHANNEL_PMC_MED,
-	":p" = RADIO_CHANNEL_MP , ".p" = RADIO_CHANNEL_MP , "#p" = RADIO_CHANNEL_PMC_GEN,
-	":u" = RADIO_CHANNEL_REQ, ".u" = RADIO_CHANNEL_REQ, "#u" = RADIO_CHANNEL_UPP_GEN,
+	":g" = RADIO_CHANNEL_ALMAYER, ".g" = RADIO_CHANNEL_ALMAYER, "#g" = RADIO_CHANNEL_CLF_GEN,
 	":j" = RADIO_CHANNEL_JTAC, ".j" = RADIO_CHANNEL_JTAC, "#j" = RADIO_CHANNEL_UPP_CCT,
-	":t" = RADIO_CHANNEL_INTEL, ".t" = RADIO_CHANNEL_INTEL, "#t" = RADIO_CHANNEL_UPP_KDO,
-	":y" = RADIO_CHANNEL_WY, ".y" = RADIO_CHANNEL_WY, "#y" = RADIO_CHANNEL_WY,
-	":o" = RADIO_CHANNEL_COLONY, ".o" = RADIO_CHANNEL_COLONY, "#o" = RADIO_CHANNEL_PMC_CCT,
-	":z" = RADIO_CHANNEL_HIGHCOM, ".z" = RADIO_CHANNEL_HIGHCOM, "#z" = RADIO_CHANNEL_PMC_CMD,
 	":k" = SQUAD_SOF, ".k" = SQUAD_SOF, "#k" = RADIO_CHANNEL_WY_WO,
-	":q" = RADIO_CHANNEL_ROYAL_MARINE, ".q" = RADIO_CHANNEL_ROYAL_MARINE,
-	":r" = RADIO_CHANNEL_PROVOST, ".r" = RADIO_CHANNEL_PROVOST, "#r" = RADIO_CHANNEL_PROVOST,
+	"#l" = RADIO_CHANNEL_PROVOST, //l . and : reserved for Left hand
+	":m" = RADIO_CHANNEL_MEDSCI, ".m" = RADIO_CHANNEL_MEDSCI, "#m" = RADIO_CHANNEL_UPP_MED,
+	":n" = RADIO_CHANNEL_ENGI, ".n" = RADIO_CHANNEL_ENGI, "#n" = RADIO_CHANNEL_UPP_ENGI,
+	":o" = RADIO_CHANNEL_COLONY, ".o" = RADIO_CHANNEL_COLONY, "#o" = RADIO_CHANNEL_PMC_CCT,
+	":p" = RADIO_CHANNEL_MP , ".p" = RADIO_CHANNEL_MP , "#p" = RADIO_CHANNEL_PMC_GEN,
+	":q" = RADIO_CHANNEL_ROYAL_MARINE, ".q" = RADIO_CHANNEL_ROYAL_MARINE, "#q" = RADIO_CHANNEL_ROYAL_MARINE,
+	"#r" = RADIO_CHANNEL_YAUTJA, //r .r and :r reserved for Right hand
+	":s" = RADIO_CHANNEL_US_ARMY, ".s" = RADIO_CHANNEL_US_ARMY, "#s" = RADIO_CHANNEL_US_ARMY,
+	":t" = RADIO_CHANNEL_INTEL, ".t" = RADIO_CHANNEL_INTEL, "#t" = RADIO_CHANNEL_UPP_KDO,
+	":u" = RADIO_CHANNEL_REQ, ".u" = RADIO_CHANNEL_REQ, "#u" = RADIO_CHANNEL_UPP_GEN,
+	":v" = RADIO_CHANNEL_COMMAND , ".v" = RADIO_CHANNEL_COMMAND , "#v" = RADIO_CHANNEL_UPP_CMD,
+	":x" = RADIO_CHANNEL_USASF, ".x" = RADIO_CHANNEL_USASF, "#x" = RADIO_CHANNEL_USASF,
+	":y" = RADIO_CHANNEL_WY, ".y" = RADIO_CHANNEL_WY, "#y" = RADIO_CHANNEL_WY,
+	":z" = RADIO_CHANNEL_HIGHCOM, ".z" = RADIO_CHANNEL_HIGHCOM, "#z" = RADIO_CHANNEL_PMC_CMD,
 
-	":I" = RADIO_CHANNEL_INTERCOM, ".I" = RADIO_CHANNEL_INTERCOM, "#I" = RADIO_CHANNEL_INTERCOM,
-	":H" = RADIO_CHANNEL_DEPARTMENT, ".H" = RADIO_CHANNEL_DEPARTMENT, "#H" = RADIO_CHANNEL_DEPARTMENT,
-	":W" = RADIO_MODE_WHISPER, ".W" = RADIO_MODE_WHISPER, "#W" = RADIO_MODE_WHISPER,
-
-	":M" = RADIO_CHANNEL_MEDSCI, ".M" = RADIO_CHANNEL_MEDSCI, "#M" = RADIO_CHANNEL_UPP_MED,
-	":N" = RADIO_CHANNEL_ENGI, ".N" = RADIO_CHANNEL_ENGI, "#N" = RADIO_CHANNEL_UPP_ENGI,
-	":G" = RADIO_CHANNEL_ALMAYER, ".G" = RADIO_CHANNEL_ALMAYER, "#G" = RADIO_CHANNEL_CLF_GEN,
-	":V" = RADIO_CHANNEL_COMMAND, ".V" = RADIO_CHANNEL_COMMAND, "#V" = RADIO_CHANNEL_UPP_CMD,
-	":A" = SQUAD_MARINE_1, ".A" = SQUAD_MARINE_1, "#A" = RADIO_CHANNEL_CLF_MED,
-	":B" = SQUAD_MARINE_2, ".B" = SQUAD_MARINE_2, "#B" = RADIO_CHANNEL_CLF_ENGI,
-	":C" = SQUAD_MARINE_3, ".C" = SQUAD_MARINE_3, "#C" = RADIO_CHANNEL_CLF_CMD,
-	":D" = SQUAD_MARINE_4, ".D" = SQUAD_MARINE_4, "#D" = RADIO_CHANNEL_CLF_CCT,
-	":E" = SQUAD_MARINE_5, ".E" = SQUAD_MARINE_5, "#E" = RADIO_CHANNEL_PMC_ENGI,
-	":F" = SQUAD_MARINE_CRYO, ".F" = SQUAD_MARINE_CRYO, "#F" = RADIO_CHANNEL_PMC_MED,
-	":P" = RADIO_CHANNEL_MP, ".P" = RADIO_CHANNEL_MP, "#P" = RADIO_CHANNEL_PMC_GEN,
-	":U" = RADIO_CHANNEL_REQ, ".U" = RADIO_CHANNEL_REQ, "#U" = RADIO_CHANNEL_UPP_GEN,
-	":J" = RADIO_CHANNEL_JTAC, ".J" = RADIO_CHANNEL_JTAC, "#J" = RADIO_CHANNEL_UPP_CCT,
-	":T" = RADIO_CHANNEL_INTEL, ".T" = RADIO_CHANNEL_INTEL, "#T" = RADIO_CHANNEL_UPP_KDO,
-	":Y" = RADIO_CHANNEL_WY, ".Y" = RADIO_CHANNEL_WY, "#Y" = RADIO_CHANNEL_WY,
-	":O" = RADIO_CHANNEL_COLONY, ".O" = RADIO_CHANNEL_COLONY, "#O" = RADIO_CHANNEL_PMC_CCT,
-	":Z" = RADIO_CHANNEL_HIGHCOM, ".Z" = RADIO_CHANNEL_HIGHCOM, "#Z" = RADIO_CHANNEL_PMC_CMD,
-	":K" = SQUAD_SOF, ".K" = SQUAD_SOF, "#K" = RADIO_CHANNEL_WY_WO,
-	":Q" = RADIO_CHANNEL_ROYAL_MARINE, ".Q" = RADIO_CHANNEL_ROYAL_MARINE,
-	":R" = RADIO_CHANNEL_PROVOST, ".R" = RADIO_CHANNEL_PROVOST, "#R" = RADIO_CHANNEL_PROVOST,
-)
+	":0" = RADIO_CHANNEL_UA_GUARD, ".0" = RADIO_CHANNEL_UA_GUARD, "#0" = RADIO_CHANNEL_UA_GUARD,
+	":1" = RADIO_CHANNEL_USASF, ".1" = RADIO_CHANNEL_USASF, "#1" = RADIO_CHANNEL_USASF,
+	":2" = RADIO_CHANNEL_REBEL_UA, ".2" = RADIO_CHANNEL_REBEL_UA, "#2" = RADIO_CHANNEL_REBEL_UA,
+	":3" = RADIO_CHANNEL_REBEL_TWE, ".3" = RADIO_CHANNEL_REBEL_TWE, "#3" = RADIO_CHANNEL_REBEL_TWE,
+	//4-9 available, CLF not in use, channels available for overwrite.
+))
 
 /proc/channel_to_prefix(channel)
 	var/channel_key
-	for(var/key in department_radio_keys)
-		if(department_radio_keys[key] == channel)
+	for(var/key in GLOB.department_radio_keys)
+		if(GLOB.department_radio_keys[key] == channel)
 			channel_key = key
 			break
 	return channel_key
 
 /proc/prefix_to_channel(prefix)
-	return department_radio_keys[prefix]
+	return GLOB.department_radio_keys[lowertext(prefix)]
+
+/proc/filter_message(client/user, message)
+	if(!config.word_filter_regex)
+		return TRUE
+
+	if(config.word_filter_regex.Find(message))
+		to_chat(user,
+			html = "\n<font color='red' size='4'><b>-- Word Filter Message --</b></font>",
+			)
+		to_chat(user,
+			type = MESSAGE_TYPE_ADMINPM,
+			html = "\n<font color='red' size='4'><b>Your message has been automatically filtered due to its contents. Trying to circumvent this filter will get you banned.</b></font>",
+			)
+		SEND_SOUND(user, sound('sound/effects/adminhelp_new.ogg'))
+		log_admin("[user.ckey] triggered the chat filter with the following message: [message].")
+		return FALSE
+
+	return TRUE
 
 ///Shows custom speech bubbles for screaming, *warcry etc.
 /mob/living/proc/show_speech_bubble(bubble_name, bubble_type = bubble_icon)
@@ -76,10 +79,13 @@ var/list/department_radio_keys = list(
 /mob/living/proc/remove_speech_bubble(mutable_appearance/speech_bubble, list_of_mobs)
 	overlays -= speech_bubble
 
-/mob/living/say(message, datum/language/speaking = null, verb="says", alt_name="", italics=0, message_range = world_view_size, sound/speech_sound, sound_vol, nolog = 0, message_mode = null, bubble_type = bubble_icon)
+/mob/living/say(message, datum/language/speaking = null, verb="says", alt_name="", italics=0, message_range = GLOB.world_view_size, sound/speech_sound, sound_vol, nolog = 0, message_mode = null, bubble_type = bubble_icon)
 	var/turf/T
 
 	if(SEND_SIGNAL(src, COMSIG_LIVING_SPEAK, message, speaking, verb, alt_name, italics, message_range, speech_sound, sound_vol, nolog, message_mode) & COMPONENT_OVERRIDE_SPEAK) return
+
+	if(!filter_message(src, message))
+		return
 
 	message = process_chat_markup(message, list("~", "_"))
 
@@ -118,6 +124,13 @@ var/list/department_radio_keys = list(
 					listening += M
 					hearturfs += M.locs[1]
 					for(var/obj/O in M.contents)
+						var/obj/item/clothing/worn_item = O
+						if((O.flags_atom & USES_HEARING) || ((istype(worn_item) && worn_item.accessories)))
+							listening_obj |= O
+				else if(istype(I, /obj/structure/surface))
+					var/obj/structure/surface/table = I
+					hearturfs += table.locs[1]
+					for(var/obj/O in table.contents)
 						if(O.flags_atom & USES_HEARING)
 							listening_obj |= O
 				else if(istype(I, /obj/))
@@ -158,11 +171,11 @@ var/list/department_radio_keys = list(
 		if(message_mode) // we are talking into a radio
 			if(message_mode == "headset") // default value, means general
 				message_mode = "General"
-			log_say("[name != "Unknown" ? name : "([real_name])"] \[[message_mode]\]: [message] (CKEY: [key]) (JOB: [job])")
+			log_say("[name != "Unknown" ? name : "([real_name])"] \[[message_mode]\]: [message] (CKEY: [key]) (JOB: [job]) (AREA: [get_area_name(loc)])")
 		else // we talk normally
-			log_say("[name != "Unknown" ? name : "([real_name])"]: [message] (CKEY: [key]) (JOB: [job])")
+			log_say("[name != "Unknown" ? name : "([real_name])"]: [message] (CKEY: [key]) (JOB: [job]) (AREA: [get_area_name(loc)])")
 	else
-		log_say("[name != "Unknown" ? name : "([real_name])"]: [message] (CKEY: [key])")
+		log_say("[name != "Unknown" ? name : "([real_name])"]: [message] (CKEY: [key]) (AREA: [get_area_name(loc)])")
 
 	return 1
 

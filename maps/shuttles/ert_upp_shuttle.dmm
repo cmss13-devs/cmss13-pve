@@ -4,10 +4,25 @@
 	icon_state = "upp4"
 	},
 /area/shuttle/ert)
-"c" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
+"b" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 2
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/shuttle/ert)
+"c" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "e" = (
 /obj/docking_port/mobile/emergency_response/ert3,
@@ -16,24 +31,23 @@
 	opacity = 0
 	},
 /area/shuttle/ert)
+"f" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
 "g" = (
 /turf/closed/shuttle/ert{
 	icon_state = "upp5"
 	},
 /area/shuttle/ert)
-"h" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
-/obj/effect/landmark/ert_spawns/distress_upp,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/ert)
 "i" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin4"
-	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "j" = (
 /turf/closed/shuttle/ert{
@@ -41,9 +55,11 @@
 	},
 /area/shuttle/ert)
 "k" = (
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
+/obj/effect/attach_point/crew_weapon/midway{
+	attach_id = 9;
+	ship_tag = "dropship_upp"
 	},
+/turf/open/floor/strata/multi_tiles/southwest,
 /area/shuttle/ert)
 "l" = (
 /turf/closed/shuttle/ert{
@@ -56,15 +72,16 @@
 	icon_state = "upp23"
 	},
 /area/shuttle/ert)
-"n" = (
-/obj/structure/surface/rack,
-/obj/item/storage/firstaid/regular,
-/obj/effect/landmark/ert_spawns/distress_upp/item,
-/obj/item/storage/belt/medical/lifesaver/upp/full,
-/obj/item/device/healthanalyzer,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+"o" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
 	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 9;
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "p" = (
 /turf/closed/shuttle/ert{
@@ -83,9 +100,19 @@
 	},
 /area/shuttle/ert)
 "s" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
+/obj/structure/barricade/handrail/strata{
+	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"t" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "u" = (
 /turf/closed/shuttle/ert{
@@ -98,9 +125,7 @@
 	},
 /area/shuttle/ert)
 "w" = (
-/turf/closed/shuttle/ert{
-	icon_state = "upp2"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "x" = (
 /turf/closed/shuttle/ert{
@@ -123,21 +148,25 @@
 	},
 /area/shuttle/ert)
 "B" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
+/obj/structure/barricade/handrail/strata{
+	layer = 3.5
 	},
-/obj/effect/landmark/ert_spawns/distress_upp,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "C" = (
-/obj/structure/surface/rack,
-/obj/effect/landmark/ert_spawns/distress_upp/item,
-/obj/item/storage/toolbox/syndicate,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	layer = 3.3
 	},
+/obj/structure/gun_rack/type71,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"D" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "E" = (
 /turf/closed/shuttle/ert{
@@ -150,40 +179,60 @@
 	opacity = 0
 	},
 /area/shuttle/ert)
-"G" = (
-/obj/structure/machinery/door/airlock/almayer/generic,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
+"H" = (
+/obj/structure/largecrate/random/barrel/red{
+	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp);
+	anchored = 1
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "I" = (
 /turf/closed/shuttle/ert{
-	icon_state = "upp27"
+	icon_state = "upp27";
+	opacity = 0
 	},
 /area/shuttle/ert)
 "J" = (
-/obj/structure/surface/rack,
-/obj/item/storage/firstaid/adv{
-	pixel_x = 2;
-	pixel_y = -5
+/obj/structure/largecrate/supply/ammo/type71{
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_x = 1;
+	anchored = 1
 	},
-/obj/effect/landmark/ert_spawns/distress_upp/item,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/structure/largecrate/random/case{
+	stuff = list(/obj/item/weapon/shield/riot/metal,/obj/item/weapon/classic_baton);
+	parts_type = /obj/item/stack/sheet/metal;
+	pixel_y = 11;
+	pixel_x = 3;
+	anchored = 1
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "K" = (
 /turf/template_noop,
 /area/template_noop)
-"N" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin8"
+"L" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
 	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"M" = (
+/obj/structure/barricade/handrail/strata{
+	dir = 4;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "O" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
+/obj/structure/barricade/handrail/strata{
+	dir = 8
 	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_y = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/ert)
 "P" = (
 /turf/closed/shuttle/ert{
@@ -196,23 +245,22 @@
 	icon_state = "upp16"
 	},
 /area/shuttle/ert)
-"R" = (
-/obj/effect/landmark/ert_spawns/distress_upp,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
-/area/shuttle/ert)
-"S" = (
-/obj/structure/bed/chair/dropship/passenger,
-/obj/effect/landmark/ert_spawns/distress_upp,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
-/area/shuttle/ert)
 "T" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
 	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8;
+	can_buckle = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/shuttle/ert)
+"U" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 "V" = (
 /turf/closed/shuttle/ert{
@@ -220,41 +268,44 @@
 	opacity = 0
 	},
 /area/shuttle/ert)
+"W" = (
+/obj/structure/bed/chair/dropship/pilot{
+	dir = 1;
+	layer = 6
+	},
+/turf/open/floor/strata/multi_tiles/southwest,
+/area/shuttle/ert)
 "X" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/machinery/computer/shuttle/ert,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/ert)
 "Y" = (
-/obj/structure/machinery/door/airlock/almayer/generic{
-	dir = 2
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp{
+	id = "aft_door"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/floor/strata/floor3/east,
 /area/shuttle/ert)
 "Z" = (
-/obj/structure/surface/rack,
-/obj/effect/landmark/ert_spawns/distress_upp/item,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/belt/medical/lifesaver/upp/full,
-/obj/item/device/healthanalyzer,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
+/obj/effect/decal/warning_stripes{
+	icon_state = "E"
 	},
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	pixel_x = -9
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/shuttle/ert)
 
 (1,1,1) = {"
 K
 z
 a
-G
 Q
 a
 a
-G
+a
+a
 a
 j
 P
@@ -265,11 +316,11 @@ e
 K
 v
 C
-T
+U
 B
-B
-B
-T
+Z
+Z
+Z
 Z
 u
 a
@@ -280,57 +331,57 @@ A
 z
 q
 s
-R
-R
-R
-R
-R
+O
 i
-T
-T
+i
+i
+i
+i
+L
+L
 T
 Y
 "}
 (4,1,1) = {"
 I
 X
+W
+D
+w
 k
-S
-S
-S
-S
-S
+w
+w
 k
-O
-O
-O
+i
+i
+t
 w
 "}
 (5,1,1) = {"
 E
 m
 c
-R
-R
-R
-R
-R
-N
-T
-T
-T
-Y
+b
+i
+i
+i
+i
+i
+M
+M
+f
+w
 "}
 (6,1,1) = {"
 K
 v
 J
-T
-h
-h
-h
-T
-n
+H
+B
+o
+o
+o
+o
 y
 g
 g
@@ -340,11 +391,11 @@ x
 K
 E
 g
-G
 g
 g
 g
-G
+g
+g
 g
 p
 r

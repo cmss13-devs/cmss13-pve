@@ -40,8 +40,8 @@
 /obj/structure/dispenser/attack_hand(mob/user as mob)
 	user.set_interaction(src)
 	var/dat = "[src]<br><br>"
-	dat += "Oxygen tanks: [oxygentanks] - [oxygentanks ? "<A href='?src=\ref[src];oxygen=1'>Dispense</A>" : "empty"]<br>"
-	dat += "Phoron tanks: [phorontanks] - [phorontanks ? "<A href='?src=\ref[src];phoron=1'>Dispense</A>" : "empty"]"
+	dat += "Oxygen tanks: [oxygentanks] - [oxygentanks ? "<A href='byond://?src=\ref[src];oxygen=1'>Dispense</A>" : "empty"]<br>"
+	dat += "Phoron tanks: [phorontanks] - [phorontanks ? "<A href='byond://?src=\ref[src];phoron=1'>Dispense</A>" : "empty"]"
 	show_browser(user, dat, "Tank Storage Unit", "dispenser")
 	onclose(user, "dispenser")
 	return
@@ -95,7 +95,7 @@
 		if(href_list["oxygen"])
 			if(oxygentanks > 0)
 				var/obj/item/tank/oxygen/O
-				if(oxytanks.len == oxygentanks)
+				if(length(oxytanks) == oxygentanks)
 					O = oxytanks[1]
 					oxytanks.Remove(O)
 				else
@@ -107,7 +107,7 @@
 		if(href_list["phoron"])
 			if(phorontanks > 0)
 				var/obj/item/tank/phoron/P
-				if(platanks.len == phorontanks)
+				if(length(platanks) == phorontanks)
 					P = platanks[1]
 					platanks.Remove(P)
 				else

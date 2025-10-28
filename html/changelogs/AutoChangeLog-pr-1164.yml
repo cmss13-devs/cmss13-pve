@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Adds pilot visors to marine loadout selection."

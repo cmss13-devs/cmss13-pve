@@ -6,7 +6,6 @@
 	density = TRUE
 
 	damage_cap = HEALTH_WALL_REINFORCED
-	max_temperature = 6000
 
 	walltype = WALL_REINFORCED
 
@@ -19,10 +18,6 @@
 		user_as_xenomorph.do_nesting_host(attacker_grab.grabbed_thing, src)
 
 	if(hull)
-		return
-
-	if (!(istype(user, /mob/living/carbon/human) || isrobot(user) || SSticker) && SSticker.mode.name != "monkey")
-		to_chat(user, SPAN_WARNING("You don't have the dexterity to do this!"))
 		return
 
 	//get the user's location
@@ -137,7 +132,7 @@
 		user.visible_message(SPAN_NOTICE("[user] starts repairing the damage to [src]."),
 		SPAN_NOTICE("You start repairing the damage to [src]."))
 		playsound(src, 'sound/items/Welder.ogg', 25, 1)
-		if(do_after(user, max(5, round(damage / 5) * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION)), INTERRUPT_ALL, BUSY_ICON_FRIENDLY) && istype(src, /turf/closed/wall/r_wall))
+		if(do_after(user, max(5, floor(damage / 5) * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION)), INTERRUPT_ALL, BUSY_ICON_FRIENDLY) && istype(src, /turf/closed/wall/r_wall))
 			user.visible_message(SPAN_NOTICE("[user] finishes repairing the damage to [src]."),
 			SPAN_NOTICE("You finish repairing the damage to [src]."))
 			take_damage(-damage)

@@ -85,6 +85,7 @@
 	var/delete
 	var/temphtml
 	var/datum/health_scan/last_health_display
+	var/paper_left = 20
 
 /obj/structure/machinery/body_scanconsole/Initialize()
 	. = ..()
@@ -112,6 +113,23 @@
 		QDEL_NULL(connected)
 	. = ..()
 
+/obj/structure/machinery/body_scanconsole/proc/print_report(mob/living/user)
+	if(!last_health_display)
+		to_chat(user, "There is no scan data to print.")
+		return
+	if(paper_left <= 0)
+		to_chat(user, "[src] ran out of paper, and cannot print a report")
+		return
+	var/obj/item/paper/print_report = new /obj/item/paper
+	var/last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_BODYSCAN)
+	print_report.info += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.info_links += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
+	print_report.update_icon()
+	print_report.name = "\improper scan print-out of " + last_scan["patient"]
+	user.put_in_hands(print_report)
+	paper_left--
+	visible_message("\The [src] spits out a piece of paper.")
+
 
 /obj/structure/machinery/body_scanconsole/ex_act(severity)
 	switch(severity)
@@ -127,12 +145,12 @@
 	..()
 	if(stat & BROKEN)
 		icon_state = "body_scannerconsole-p"
+		return
+	if(stat & NOPOWER)
+		spawn(rand(0, 15))
+			icon_state = "body_scannerconsole-p"
 	else
-		if (stat & NOPOWER)
-			spawn(rand(0, 15))
-				src.icon_state = "body_scannerconsole-p"
-		else
-			icon_state = initial(icon_state)
+		icon_state = initial(icon_state)
 
 
 
@@ -186,7 +204,7 @@
 	visible_message(SPAN_NOTICE("\The [src] pings as it stores the scan report of [H.real_name]"))
 	playsound(src.loc, 'sound/machines/screen_output1.ogg', 25)
 
-	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE)
+	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE, associated_equipment = src)
 
 	return
 
@@ -204,7 +222,7 @@
 		"toxloss" = H.getToxLoss(),
 		"cloneloss" = H.getCloneLoss(),
 		"brainloss" = H.getBrainLoss(),
-		"knocked_out" = H.GetKnockOutValueNotADurationDoNotUse(),
+		"knocked_out" = H.GetKnockOutDuration(),
 		"bodytemp" = H.bodytemperature,
 		"inaprovaline_amount" = H.reagents.get_reagent_amount("inaprovaline"),
 		"dexalin_amount" = H.reagents.get_reagent_amount("dexalin"),
@@ -263,7 +281,7 @@
 	s_class = occ["brainloss"] < 1 ? INTERFACE_GOOD : INTERFACE_BAD
 	dat += "[SET_CLASS("&nbsp&nbspApprox. Brain Damage:", INTERFACE_PINK)] [SET_CLASS("[occ["brainloss"]]%", s_class)]<br><br>"
 
-	dat += "[SET_CLASS("Knocked Out Summary:", "#40628a")] [occ["knocked_out"]]% (approximately [round(occ["knocked_out"] / 5)] seconds left!)<br>"
+	dat += "[SET_CLASS("Knocked Out Summary:", "#40628a")] [occ["knocked_out"]]% (approximately [floor(occ["knocked_out"] * GLOBAL_STATUS_MULTIPLIER / (1 SECONDS))] seconds left!)<br>"
 	dat += "[SET_CLASS("Body Temperature:", "#40628a")] [occ["bodytemp"]-T0C]&deg;C ([occ["bodytemp"]*1.8-459.67]&deg;F)<br><HR>"
 
 	s_class = occ["blood_amount"] > 448 ? INTERFACE_OKAY : INTERFACE_BAD
@@ -333,7 +351,7 @@
 			open = "Open<br>"
 
 		var/unknown_body = 0
-		if (e.implants.len)
+		if (length(e.implants))
 			for(var/I in e.implants)
 				if(is_type_in_list(I,known_implants))
 					imp += "[I] implanted<br>"

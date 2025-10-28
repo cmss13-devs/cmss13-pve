@@ -1,0 +1,4 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "dropped PAIN_XENO_DRAG and PAIN_XENO_GRAB by 5 each"

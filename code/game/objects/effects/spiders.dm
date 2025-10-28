@@ -21,10 +21,10 @@
 	return
 
 /obj/effect/spider/attackby(obj/item/W, mob/user)
-	if(W.attack_verb.len)
-		visible_message(SPAN_DANGER("<B>\The [src] have been [pick(W.attack_verb)] with \the [W][(user ? "by [user]." : ".")]"))
+	if(LAZYLEN(W.attack_verb))
+		visible_message(SPAN_DANGER("[src] has been [pick(W.attack_verb)] with [W][(user ? " by [user]." : ".")]"))
 	else
-		visible_message(SPAN_DANGER("<B>\The [src] have been attacked with \the [W][(user ? "by [user]." : ".")]"))
+		visible_message(SPAN_DANGER("[src] has been attacked with [W][(user ? " by [user]." : ".")]"))
 
 	var/damage = W.force / 4
 
@@ -48,10 +48,9 @@
 	if(health <= 0)
 		qdel(src)
 
-/obj/effect/spider/fire_act(exposed_temperature, exposed_volume)
-	if(exposed_temperature > 300)
-		health -= 5
-		healthcheck()
+/obj/effect/spider/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
+	health -= dam
+	healthcheck(src)
 
 /obj/effect/spider/stickyweb
 	icon_state = "stickyweb1"
@@ -144,7 +143,7 @@
 	//=================
 	if(prob(25))
 		var/list/nearby = oview(5, src)
-		if(nearby.len)
+		if(length(nearby))
 			var/target_atom = pick(nearby)
 			walk_to(src, target_atom, 5)
 			if(prob(25))
@@ -170,7 +169,7 @@
 	//=================
 	if(prob(25))
 		var/list/nearby = oview(5, src)
-		if(nearby.len)
+		if(length(nearby))
 			var/target_atom = pick(nearby)
 			walk_to(src, target_atom, 5)
 			if(prob(25))
@@ -197,7 +196,7 @@
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web"
 	icon_state = "cocoon1"
-	health = 60
+	health = 30
 
 /obj/effect/decal/cleanable/spiderling_remains/New()
 	icon_state = pick("cocoon1","cocoon2","cocoon3")

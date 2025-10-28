@@ -1,0 +1,8 @@
+author: "tyeagg"
+delete-after: True
+changes:
+  - rscadd: "gm screen alert panel"
+  - rscadd: "toggle for gms for first drop blurb"
+  - rscadd: "emblem to first drop blurb"
+  - rscadd: "send screen alert action for leads"
+  - imageadd: "screen alert images and emblems"

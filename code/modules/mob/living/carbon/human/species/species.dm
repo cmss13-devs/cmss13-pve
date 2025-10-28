@@ -14,7 +14,8 @@
 	var/icobase_source // if we want to use sourcing system
 	var/deform_source
 	var/eyes = "eyes_s"   // Icon for eyes.
-	var/uses_ethnicity = FALSE  //Set to TRUE to load proper ethnicities and what have you
+	var/uses_skin_color = FALSE  //Set to TRUE to load proper skin_colors and what have you
+	var/special_body_types = FALSE
 
 	var/primitive   // Lesser form, if any (ie. monkey for humans)
 	var/tail    // Name of tail image in species effects icon file.
@@ -92,9 +93,12 @@
 		"eyes" =  /datum/internal_organ/eyes
 		)
 
-	var/knock_down_reduction = 1 //how much the knocked_down effect is reduced per Life call.
-	var/stun_reduction = 1 //how much the stunned effect is reduced per Life call.
-	var/knock_out_reduction = 1 //same thing
+	/// Factor of reduction of  KnockDown duration.
+	var/knock_down_reduction = 1
+	/// Factor of reduction of Stun duration.
+	var/stun_reduction = 1
+	/// Factor of reduction of  KnockOut duration.
+	var/knock_out_reduction = 1
 
 	/// If different from 1, a signal is registered on post_spawn().
 	var/weed_slowdown_mult = 1
@@ -183,28 +187,39 @@
 		QDEL_NULL(H.stamina)
 		H.stamina = new stamina_type(H)
 
-/datum/species/proc/hug(mob/living/carbon/human/H, mob/living/carbon/target, target_zone = "chest")
-	if(H.flags_emote)
+/datum/species/proc/hug(mob/living/carbon/human/human, mob/living/carbon/target, target_zone = "chest")
+	if(human.flags_emote)
 		return
 	var/t_him = target.p_them()
 
+	//answer the call
+	if(target.flags_emote & EMOTING_HIGH_FIVE)
+		attempt_high_five(human, target)
+		return
+	else if(target.flags_emote & EMOTING_FIST_BUMP)
+		attempt_fist_bump(human, target)
+		return
+	else if(target.flags_emote & EMOTING_ROCK_PAPER_SCISSORS)
+		attempt_rock_paper_scissors(human, target)
+		return
+
 	if(target_zone == "head")
-		attempt_rock_paper_scissors(H, target)
+		attempt_rock_paper_scissors(human, target)
 		return
 	else if(target_zone in list("l_arm", "r_arm"))
-		attempt_high_five(H, target)
+		attempt_high_five(human, target)
 		return
 	else if(target_zone in list("l_hand", "r_hand"))
-		attempt_fist_bump(H, target)
+		attempt_fist_bump(human, target)
 		return
-	else if(H.body_position == LYING_DOWN) // Keep other interactions above lying check for maximum awkwardness potential
-		H.visible_message(SPAN_NOTICE("[H] waves at [target] to make [t_him] feel better!"), \
+	else if(human.body_position == LYING_DOWN) // Keep other interactions above lying check for maximum awkwardness potential
+		human.visible_message(SPAN_NOTICE("[human] waves at [target] to make [t_him] feel better!"), \
 			SPAN_NOTICE("You wave at [target] to make [t_him] feel better!"), null, 4)
 	else if(target_zone == "groin")
-		H.visible_message(SPAN_NOTICE("[H] hugs [target] to make [t_him] feel better!"), \
+		human.visible_message(SPAN_NOTICE("[human] hugs [target] to make [t_him] feel better!"), \
 			SPAN_NOTICE("You hug [target] to make [t_him] feel better!"), null, 4)
 	else
-		H.visible_message(SPAN_NOTICE("[H] pats [target] on the back to make [t_him] feel better!"), \
+		human.visible_message(SPAN_NOTICE("[human] pats [target] on the back to make [t_him] feel better!"), \
 			SPAN_NOTICE("You pat [target] on the back to make [t_him] feel better!"), null, 4)
 	playsound(target, 'sound/weapons/thudswoosh.ogg', 25, 1, 5)
 
@@ -397,7 +412,7 @@
 
 /datum/species/proc/get_offset_overlay_image(spritesheet, mob_icon, mob_state, color, slot)
 	// If we don't actually need to offset this, don't bother with any of the generation/caching.
-	if(!spritesheet && equip_adjust.len && equip_adjust[slot] && LAZYLEN(equip_adjust[slot]))
+	if(!spritesheet && length(equip_adjust) && equip_adjust[slot] && LAZYLEN(equip_adjust[slot]))
 
 		// Check the cache for previously made icons.
 		var/image_key = "[mob_icon]-[mob_state]-[color]"
@@ -475,7 +490,7 @@
 /datum/species/proc/handle_blood_splatter(mob/living/carbon/human/human, splatter_dir)
 	var/color_override
 	if(human.special_blood)
-		var/datum/reagent/D = chemical_reagents_list[human.special_blood]
+		var/datum/reagent/D = GLOB.chemical_reagents_list[human.special_blood]
 		if(D)
 			color_override = D.color
 

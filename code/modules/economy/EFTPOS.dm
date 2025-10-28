@@ -13,7 +13,7 @@
 
 /obj/item/device/eftpos/Initialize()
 	. = ..()
-	machine_id = "[station_name] EFTPOS #[num_financial_terminals++]"
+	machine_id = "[MAIN_SHIP_NAME] EFTPOS #[GLOB.num_financial_terminals++]"
 	access_code = rand(1111,111111)
 	spawn(0)
 		print_reference()
@@ -59,7 +59,7 @@
 
 	//by default, connect to the station account
 	//the user of the EFTPOS device can change the target account though, and no-one will be the wiser (except whoever's being charged)
-	linked_account = station_account
+	linked_account = GLOB.station_account
 
 /obj/item/device/eftpos/proc/print_reference()
 	var/obj/item/paper/R = new(src.loc)
@@ -86,7 +86,7 @@
 	if(get_dist(src,user) <= 1)
 		var/dat = "<i>This terminal is</i> [machine_id]. <i>Report this code when contacting Weyland-Yutani IT Support</i><br>"
 		if(transaction_locked)
-			dat += "<a href='?src=\ref[src];choice=toggle_lock'>Back[transaction_paid ? "" : " (authentication required)"]</a><br><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=toggle_lock'>Back[transaction_paid ? "" : " (authentication required)"]</a><br><br>"
 
 			dat += "Transaction purpose: <b>[transaction_purpose]</b><br>"
 			dat += "Value: <b>$[transaction_amount]</b><br>"
@@ -95,16 +95,16 @@
 				dat += "<i>This transaction has been processed successfully.</i><hr>"
 			else
 				dat += "<i>Swipe your card below the line to finish this transaction.</i><hr>"
-				dat += "<a href='?src=\ref[src];choice=scan_card'>\[------\]</a>"
+				dat += "<a href='byond://?src=\ref[src];choice=scan_card'>\[------\]</a>"
 		else
-			dat += "<a href='?src=\ref[src];choice=toggle_lock'>Lock in new transaction</a><br><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=toggle_lock'>Lock in new transaction</a><br><br>"
 
-			dat += "Transaction purpose: <a href='?src=\ref[src];choice=trans_purpose'>[transaction_purpose]</a><br>"
-			dat += "Value: <a href='?src=\ref[src];choice=trans_value'>$[transaction_amount]</a><br>"
-			dat += "Linked account: <a href='?src=\ref[src];choice=link_account'>[linked_account ? linked_account.owner_name : "None"]</a><hr>"
-			dat += "<a href='?src=\ref[src];choice=change_code'>Change access code</a><br>"
-			dat += "<a href='?src=\ref[src];choice=change_id'>Change EFTPOS ID</a><br>"
-			dat += "Scan card to reset access code <a href='?src=\ref[src];choice=reset'>\[------\]</a>"
+			dat += "Transaction purpose: <a href='byond://?src=\ref[src];choice=trans_purpose'>[transaction_purpose]</a><br>"
+			dat += "Value: <a href='byond://?src=\ref[src];choice=trans_value'>$[transaction_amount]</a><br>"
+			dat += "Linked account: <a href='byond://?src=\ref[src];choice=link_account'>[linked_account ? linked_account.owner_name : "None"]</a><hr>"
+			dat += "<a href='byond://?src=\ref[src];choice=change_code'>Change access code</a><br>"
+			dat += "<a href='byond://?src=\ref[src];choice=change_id'>Change EFTPOS ID</a><br>"
+			dat += "Scan card to reset access code <a href='byond://?src=\ref[src];choice=reset'>\[------\]</a>"
 		show_browser(user, dat, eftpos_name, "eftpos")
 	else
 		close_browser(user,"eftpos")
@@ -136,7 +136,7 @@
 						T.purpose = (transaction_purpose ? transaction_purpose : "None supplied.")
 						T.amount = transaction_amount
 						T.source_terminal = machine_id
-						T.date = current_date_string
+						T.date = GLOB.current_date_string
 						T.time = worldtime2text()
 						linked_account.transaction_log.Add(T)
 					else
@@ -198,7 +198,7 @@
 						transaction_locked = 0
 						transaction_paid = 0
 					else
-						var/attempt_code = tgui_input_number(usr, "Enter EFTPOS access code", "Reset Transaction")
+						var/attempt_code = tgui_input_number(usr, "Enter EFTPOS access code", "Reset Transaction", 1000, 999999, 1000)
 						if(attempt_code == access_code)
 							transaction_locked = 0
 							transaction_paid = 0
@@ -234,7 +234,7 @@
 					var/attempt_pin = ""
 					var/datum/money_account/D = get_account(C.associated_account_number)
 					if(D.security_level)
-						attempt_pin = tgui_input_number(usr, "Enter pin code", "EFTPOS transaction")
+						attempt_pin = tgui_input_number(usr, "Enter pin code", "EFTPOS transaction", 1111, 111111, 1111)
 						D = null
 					D = attempt_account_access(C.associated_account_number, attempt_pin, 2)
 					if(D)
@@ -257,7 +257,7 @@
 								else
 									T.amount = "[transaction_amount]"
 								T.source_terminal = machine_id
-								T.date = current_date_string
+								T.date = GLOB.current_date_string
 								T.time = worldtime2text()
 								D.transaction_log.Add(T)
 								//
@@ -266,7 +266,7 @@
 								T.purpose = transaction_purpose
 								T.amount = "[transaction_amount]"
 								T.source_terminal = machine_id
-								T.date = current_date_string
+								T.date = GLOB.current_date_string
 								T.time = worldtime2text()
 								linked_account.transaction_log.Add(T)
 							else
