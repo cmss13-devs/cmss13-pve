@@ -11,13 +11,11 @@
 
 /obj/structure/machinery/computer/teleporter/Initialize()
 	. = ..()
+
 	src.id = "[rand(1000, 9999)]"
 	underlays.Cut()
 	underlays += image('icons/obj/structures/props/stationobjs.dmi', icon_state = "telecomp-wires")
-	return
 
-/obj/structure/machinery/computer/teleporter/Initialize()
-	. = ..()
 	var/obj/structure/machinery/teleport/station/station = locate(/obj/structure/machinery/teleport/station, get_step(src, dir))
 	var/obj/structure/machinery/teleport/hub/hub
 	if(station)
@@ -34,7 +32,6 @@
 /obj/structure/machinery/computer/teleporter/Destroy()
 	QDEL_NULL(locked)
 	. = ..()
-
 
 /obj/structure/machinery/computer/teleporter/attackby(I as obj, mob/living/user as mob)
 	if(istype(I, /obj/item/card/data/))
@@ -83,8 +80,8 @@
 
 	return
 
-/obj/structure/machinery/teleport/station/attack_remote()
-	src.attack_hand()
+/obj/structure/machinery/computer/teleport/station/attack_remote()
+	attack_hand()
 
 /obj/structure/machinery/computer/teleporter/attack_hand()
 	if(inoperable())
@@ -98,7 +95,7 @@
 		var/turf/T = get_turf(R)
 		if (!T)
 			continue
-		if(is_admin_level(T.z))
+		if(should_block_game_interaction(T))
 			continue
 		var/tmpname = T.loc.name
 		if(areaindex[tmpname])
@@ -118,7 +115,7 @@
 					continue
 			var/turf/T = get_turf(M)
 			if(T) continue
-			if(is_admin_level(T.z)) continue
+			if(should_block_game_interaction(T)) continue
 			var/tmpname = M.real_name
 			if(areaindex[tmpname])
 				tmpname = "[tmpname] ([++areaindex[tmpname]])"

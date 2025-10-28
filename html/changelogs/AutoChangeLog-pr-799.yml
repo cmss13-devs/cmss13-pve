@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Adds the M577A5 Armored Treatment Vehicle and ports hospital roller beds (they don't fold up)"
+  - balance: "The vehicle-specific Wey-Med & MM Blood dispensor have had their contents adjusted"
+  - imageadd: "New chassis sprite for the M577A5 & sprites for the smoke discharger array"
+  - mapadd: "M577A5 ATV interior"

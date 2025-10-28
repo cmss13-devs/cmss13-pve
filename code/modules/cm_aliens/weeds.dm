@@ -58,9 +58,9 @@
 	if(spread_on_semiweedable && weed_strength < WEED_LEVEL_HIVE)
 		if(color)
 			var/list/RGB = ReadRGB(color)
-			RGB[1] = Clamp(RGB[1] + 35, 0, 255)
-			RGB[2] = Clamp(RGB[2] + 35, 0, 255)
-			RGB[3] = Clamp(RGB[3] + 35, 0, 255)
+			RGB[1] = clamp(RGB[1] + 35, 0, 255)
+			RGB[2] = clamp(RGB[2] + 35, 0, 255)
+			RGB[3] = clamp(RGB[3] + 35, 0, 255)
 			color = rgb(RGB[1], RGB[2], RGB[3])
 		else
 			color = "#a1a1a1"
@@ -123,7 +123,7 @@
 	update_icon()
 
 /obj/effect/alien/weeds/node/weak
-	name = "weak resin node"
+	name = "weak weed node"
 	health = WEED_HEALTH_STANDARD
 	alpha = 127
 
@@ -186,7 +186,7 @@
 	SEND_SIGNAL(crossing_mob, COMSIG_MOB_WEED_SLOWDOWN, slowdata, src)
 	var/final_slowdown = slowdata["movement_slowdown"]
 
-	crossing_mob.next_move_slowdown += POSITIVE(final_slowdown)
+	crossing_mob.next_move_slowdown = max(crossing_mob.next_move_slowdown, POSITIVE(final_slowdown))
 
 // Uh oh, we might be dying!
 // I know this is bad proc naming but it was too good to pass on and it's only used in this file anyways
@@ -216,7 +216,7 @@
 		return
 
 	var/list/weeds = list()
-	for(var/dirn in cardinal)
+	for(var/dirn in GLOB.cardinals)
 		var/turf/T = get_step(src, dirn)
 		if(!istype(T))
 			continue
@@ -282,7 +282,7 @@
 
 		if(istype(O, /obj/structure/barricade)) //cades on tile we're trying to expand to
 			var/obj/structure/barricade/to_blocking_cade = O
-			if(to_blocking_cade.density && to_blocking_cade.dir == reverse_dir[direction] && to_blocking_cade.health >= (to_blocking_cade.maxhealth / 4))
+			if(to_blocking_cade.density && to_blocking_cade.dir == GLOB.reverse_dir[direction] && to_blocking_cade.health >= (to_blocking_cade.maxhealth / 4))
 				return FALSE
 
 		if(istype(O, /obj/structure/window/framed))
@@ -299,7 +299,7 @@
 	if(!U)
 		U = loc
 	if(istype(U))
-		for(var/dirn in cardinal)
+		for(var/dirn in GLOB.cardinals)
 			var/turf/T = get_step(U, dirn)
 
 			if(!istype(T))
@@ -313,7 +313,7 @@
 	overlays.Cut()
 
 	var/my_dir = 0
-	for(var/check_dir in cardinal)
+	for(var/check_dir in GLOB.cardinals)
 		var/turf/check = get_step(src, check_dir)
 
 		if(!istype(check))
@@ -372,26 +372,29 @@
 	if(QDELETED(attacking_item) || QDELETED(user) || (attacking_item.flags_item & NOBLUDGEON))
 		return 0
 
-	if(istype(src, /obj/effect/alien/weeds/node)) //The pain is real
-		to_chat(user, SPAN_WARNING("You hit \the [src] with \the [attacking_item]."))
-	else
-		to_chat(user, SPAN_WARNING("You cut \the [src] away with \the [attacking_item]."))
-
-	var/damage = attacking_item.force / 3
-	playsound(loc, "alien_resin_break", 25)
-
 	if(iswelder(attacking_item))
 		var/obj/item/tool/weldingtool/WT = attacking_item
 		if(WT.remove_fuel(2))
-			damage = WEED_HEALTH_STANDARD
+			if(istype(src, /obj/effect/alien/weeds/node))
+				to_chat(user, SPAN_WARNING("You hit [src] with [attacking_item]."))
+			else
+				to_chat(user, SPAN_WARNING("You cut [src] away with [attacking_item]."))
+			playsound(loc, "alien_resin_break", 25)
 			playsound(loc, 'sound/items/Welder.ogg', 25, 1)
+			user.animation_attack_on(src)
+			take_damage(WEED_HEALTH_STANDARD)
 	else
+		if(!attacking_item.force)
+			to_chat(user, SPAN_WARNING("You scrape ineffectively at [src] with [attacking_item]."))
+			return
+		to_chat(user, SPAN_NOTICE("You start clearing [src] away with [attacking_item]..."))
+		var/duration = (20 SECONDS) * (health / attacking_item.force * attacking_item.demolition_mod) //effectively applying attack damage to weed's health spread over 20 seconds
+		if(!do_after(user, duration, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			return
 		playsound(loc, "alien_resin_break", 25)
+		user.animation_attack_on(src)
+		take_damage(health)
 
-
-	user.animation_attack_on(src)
-
-	take_damage(damage)
 	return TRUE //don't call afterattack
 
 /obj/effect/alien/weeds/proc/take_damage(damage)
@@ -469,19 +472,24 @@
 
 
 /obj/effect/alien/weeds/node
-	name = "resin node"
-	desc = "A weird, pulsating node."
-	icon_state = "weednode"
+	desc = "Weird black weeds, slightly thicker than the rest..."
 	// Weed nodes start out with normal weed health and become stronger once they've stopped spreading
 	health = NODE_HEALTH_GROWING
 	flags_atom = OPENCONTAINER
 	layer = ABOVE_BLOOD_LAYER
 	plane = FLOOR_PLANE
 	var/static/staticnode
-	var/overlay_node = TRUE
+	var/overlay_node = FALSE
 
 	// Which weeds are being kept alive by this node?
 	var/list/obj/effect/alien/weeds/children = list()
+
+	/// Icon file for the nodes as game masters will see it
+	var/node_overlay_icon = 'icons/mob/xenos/weeds.dmi'
+	/// Specific icon state for the nodes as game masters will see it
+	var/node_overlay_icon_state = "weednode"
+	/// The actual image holder that sits on parent for game masters
+	var/image/node_image
 
 /obj/effect/alien/weeds/node/proc/add_child(obj/effect/alien/weeds/weed)
 	if(!weed || !istype(weed))
@@ -508,12 +516,12 @@
 
 /obj/effect/alien/weeds/node/proc/trap_destroyed()
 	SIGNAL_HANDLER
-	overlay_node = TRUE
+	overlay_node = FALSE
 	overlays += staticnode
 
-/obj/effect/alien/weeds/node/Initialize(mapload, obj/effect/alien/weeds/node/node, mob/living/carbon/xenomorph/xeno, datum/hive_status/hive)
-	if (istype(hive))
-		linked_hive = hive
+/obj/effect/alien/weeds/node/Initialize(mapload, hive, mob/living/carbon/xenomorph/xeno)
+	if (hive)
+		linked_hive = GLOB.hive_datum[hive]
 	else if (istype(xeno) && xeno.hive)
 		linked_hive = xeno.hive
 	else
@@ -548,6 +556,11 @@
 		if(weed_strength >= WEED_LEVEL_HIVE)
 			name = "hive node sac"
 
+	node_image = new(node_overlay_icon, src, node_overlay_icon_state, layer = ABOVE_FLY_LAYER)
+
+	for(var/client/game_master in GLOB.game_masters)
+		game_master.images |= node_image
+
 	create_reagents(30)
 	reagents.add_reagent(PLASMA_PURPLE, 30)
 
@@ -565,6 +578,8 @@
 		var/obj/effect/alien/weeds/W = X
 		remove_child(W)
 		addtimer(CALLBACK(W, PROC_REF(avoid_orphanage)), WEED_BASE_DECAY_SPEED + rand(0, 1 SECONDS)) // Slight variation whilst decaying
+	for(var/client/game_master in GLOB.game_masters)
+		game_master.images -= node_image
 
 	. = ..()
 
@@ -624,7 +639,7 @@
 	return
 
 /obj/effect/alien/weeds/node/pylon/cluster
-	spread_on_semiweedable = FALSE
+	spread_on_semiweedable = TRUE
 
 /obj/effect/alien/weeds/node/pylon/cluster/set_parent_damaged()
 	if(!resin_parent)

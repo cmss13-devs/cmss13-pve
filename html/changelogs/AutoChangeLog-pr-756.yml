@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Custom items now spawn in your lockers most of the time."

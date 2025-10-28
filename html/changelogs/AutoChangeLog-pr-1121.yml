@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - bugfix: "UACG headsets properly display Marshalls HUD"

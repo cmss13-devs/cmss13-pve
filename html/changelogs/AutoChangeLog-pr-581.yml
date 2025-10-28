@@ -1,0 +1,4 @@
+author: "Aerodinamique, AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Adds PMC platoon"

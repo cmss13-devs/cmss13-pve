@@ -19,8 +19,6 @@
 	melee_damage_upper = 15
 	attacktext = "punches"
 	a_intent = INTENT_HARM
-	var/corpse = /obj/effect/landmark/corpsespawner/russian
-	var/weapon1 = /obj/item/tool/kitchen/knife
 	min_oxy = 5
 	max_oxy = 0
 	min_tox = 0
@@ -37,8 +35,6 @@
 /mob/living/simple_animal/hostile/russian/ranged
 	icon_state = "russianranged"
 	icon_living = "russianranged"
-	corpse = /obj/effect/landmark/corpsespawner/russian/ranged
-	weapon1 = /obj/item/weapon/gun/pistol
 	ranged = 1
 	projectiletype = /obj/projectile
 	projectilesound = 'sound/weapons/Gunshot.ogg'
@@ -66,8 +62,6 @@
 	melee_damage_upper = 15
 	attacktext = "punches"
 	a_intent = INTENT_HARM
-	//var/corpse = /obj/effect/landmark/corpsespawner/russian
-	//var/weapon1 = /obj/item/tool/kitchen/knife
 	min_oxy = 5
 	max_oxy = 0
 	min_tox = 0
@@ -82,25 +76,8 @@
 
 
 /mob/living/simple_animal/hostile/UPP/ranged
-	//weapon1 = /obj/item/weapon/gun/projectile/mateba
 	ranged = 1
 	projectiletype = /obj/projectile
 	projectilesound = 'sound/weapons/Gunshot.ogg'
 	casingtype = null
 
-
-/mob/living/simple_animal/hostile/russian/death()
-	..()
-	if(corpse)
-		new corpse (src.loc)
-	if(weapon1)
-		new weapon1 (src.loc)
-	qdel(src)
-	return
-/*
-/mob/living/simple_animal/hostile/russian/UPP
-	name = "UPP Soldier"
-	icon_state = "uppmarine"
-	icon_living = "uppmarine"
-	icon_dead = "uppmarinedead"
-*/

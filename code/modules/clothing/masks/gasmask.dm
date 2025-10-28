@@ -1,7 +1,7 @@
 
 /obj/item/clothing/mask/gas
 	name = "gas mask"
-	desc = "A face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
+	desc = "A civilian grade, face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
 	icon_state = "gas_alt"
 	flags_inventory = COVERMOUTH | COVEREYES | ALLOWINTERNALS | BLOCKGASEFFECT | ALLOWREBREATH | ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDELOWHAIR
@@ -31,9 +31,58 @@
 	icon_state = "kutjevo_respirator"
 	item_state = "kutjevo_respirator"
 
+/obj/item/clothing/mask/gas/military
+	name = "\improper M5 gasmask"
+	desc = "The standard service gas mask of the USCM as part of a modernization program meant to replace the need for MOPP gear."
+	icon_state = "m5"
+	item_state = "m5"
+	flags_obj = OBJ_NO_HELMET_BAND|OBJ_IS_HELMET_GARB
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
+/obj/item/clothing/mask/gas/military/on_enter_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory |= BLOCKGASEFFECT
+	helmet_item.flags_inv_hide |= HIDEFACE
+
+/obj/item/clothing/mask/gas/military/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
+	..()
+	if(!istype(helmet_internal_inventory))
+		return
+	var/obj/item/clothing/head/helmet/helmet_item = helmet_internal_inventory.master_object
+
+	if(!istype(helmet_item))
+		return
+
+	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
+	helmet_item.flags_inv_hide &= ~(HIDEFACE)
+
+/obj/item/clothing/mask/gas/military/upp
+	name = "\improper ShMB/4 gasmask"
+	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+	icon_state = "pfb"
+	item_state = "pfb"
+
+/obj/item/clothing/mask/gas/pve_mopp
+	name = "\improper M2 MOPP mask"
+	desc = "The M2 MOPP mask includes a full covering cowl that securely attaches to the MOPP suit. It is capable of protecting of a variety of radiological and biological threats."
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	icon_state = "cbrn_hood"
+	item_state = "cbrn_hood"
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	item_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
 /obj/item/clothing/mask/gas/pmc
-	name = "\improper M8 pattern armored balaclava"
-	desc = "An armored balaclava designed to conceal both the identity of the operator and act as an air-filter."
+	name = "\improper tactical filtration mask"
+	desc = "A sophisticated filtration mask being tested for the military market but presently limited to Weyland-Yutani tactical teams."
 	item_state = "helmet"
 	icon_state = "pmc_mask"
 	anti_hug = 3
@@ -46,8 +95,8 @@
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_NONE
-	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH
-	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	flags_inv_hide = HIDEFACE
 	flags_equip_slot = SLOT_FACE
 
 /obj/item/clothing/mask/gas/pmc/marsoc
@@ -69,7 +118,6 @@
 	desc = "A superior balaclava worn by the Iron Bears."
 	icon_state = "bear_mask"
 	anti_hug = 2
-
 
 
 
@@ -95,6 +143,10 @@
 	icon_state = "swat"
 	siemens_coefficient = 0.7
 	flags_armor_protection = BODY_FLAG_FACE|BODY_FLAG_EYES
+
+/obj/item/clothing/mask/gas/swat/navy
+	name = "\improper flight mask"
+	desc = "A close-fitting mask used by pilots who might end up exposed to the vacuum of space during sorties."
 
 /obj/item/clothing/mask/gas/syndicate
 	name = "syndicate mask"
@@ -153,3 +205,4 @@
 	desc = "The L7 Gasmask used by members of the three world empires royal marines commando."
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR

@@ -1,6 +1,6 @@
 /obj/item/hardpoint/armor/snowplow
-	name = "Snowplow"
-	desc = "Clears a path in the snow for friendlies"
+	name = "\improper Snowplow"
+	desc = "Clears a path in the snow for friendlies."
 
 	icon_state = "snowplow"
 	disp_icon = "tank"

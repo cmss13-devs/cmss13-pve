@@ -1,0 +1,7 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "New prepared meal descriptions."
+  - rscadd: "Rebrands and adds more protein bars!"
+  - rscadd: "vendors now have cups and drink mix"
+  - rscdel: "Old prepared meal descriptions"

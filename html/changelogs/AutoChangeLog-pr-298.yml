@@ -1,0 +1,14 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "Changed the sprite of the E2. Now it's able to fit _stock attachments!_ It also just has the regular old folding stock by default now."
+  - rscadd: "Adds a new sprite for the integrated bipod of the E2"
+  - rscadd: "New E2 flavortext."
+  - qol: "E2 is now Semi/4RB/FA as it should be."
+  - balance: "The M41AE2 is now more similar to the M41A. It is less capable on the move, but once its bipod is down it can take full advantage of the 300rnd clipsize with stable full auto firing."
+  - balance: "The M41AE2 can now be onehanded! Hit accuracy is near zero, don't do this unless things are increeeeeedibly desperate."
+  - balance: "Magazine boxes now hold 4. As a result their detonation is basically catastrophic."
+  - bugfix: "Fixes the FA bug with the E2"
+  - code_imp: "Adds exception for the E2 to the RPM booster of the bipod"
+  - code_imp: "Adds some attachment modifiers for fa_max_scatter and fa_scatter_peak. Linear."
+  - maptweak: "Replaces the E2 holotarget spawn on LV522 Forecon with a regular ammo spawn."

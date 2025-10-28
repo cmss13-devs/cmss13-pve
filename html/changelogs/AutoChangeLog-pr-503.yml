@@ -1,0 +1,10 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - rscadd: "Internal Bleeding now instead starts as Arterial Bleeding, that sprays blood with a visual, audible and chatlog indication"
+  - qol: "Arterial Bleeds now show on help-intent self examine."
+  - balance: "Arterial Bleeds can have the spraying component mitigated by applying gauze or a trauma kit, turning them into a slower version of the old Internal Bleeding effect."
+  - balance: "Iron Pills have 7.5u of sugar in them."
+  - balance: "The IB treatment step now takes 7.5 seconds instead of 5 seconds."
+  - soundadd: "The sound for the above blood spray."
+  - imageadd: "The icons for each possible direction of the blood spray, to avoid overlays inheriting the turfs direction for their icon, due to blood optimization."

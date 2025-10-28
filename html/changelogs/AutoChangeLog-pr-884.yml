@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "hAI will no longer throw grenades made to be impact-fused by a UGL back at players"
+  - balance: "As above, is a balance change too"

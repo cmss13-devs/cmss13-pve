@@ -1,126 +1,148 @@
 /datum/paygrade/upp
 	name = "UPP Paygrade"
 	pay_multiplier = 0.1 //lol. lmao
+	default_faction = FACTION_UPP
 
 
 //UPP Enlisted
-/datum/paygrade/upp/ue0
-	paygrade = "UE0"
-	name = "Conscript"
-	pay_multiplier = 0.05
-	prefix = "Cnscr."
 
 /datum/paygrade/upp/ue1
-	paygrade = "UE1"
+	paygrade = PAY_SHORT_UE1
 	name = "Private"
-	prefix = "PVT."
+	prefix = "Pvt."
 
 /datum/paygrade/upp/ue2
-	paygrade = "UE2"
-	name = "Efreitor"
-	prefix = "Efr."
+	paygrade = PAY_SHORT_UE2
+	name = "Senior Private"
+	prefix = "SrPvt."
 	pay_multiplier = 0.2
 
 /datum/paygrade/upp/ue3
-	paygrade = "UE3"
-	name = "Korporal"
-	prefix = "Kpl."
+	paygrade = PAY_SHORT_UE3
+	name = "Corporal"
+	prefix = "Cpl."
 	pay_multiplier = 0.3
 
 /datum/paygrade/upp/ue4
-	paygrade = "UE4"
-	name = "Junior Serzhant"
-	prefix = "JrSzh."
+	paygrade = PAY_SHORT_UE4
+	name = "Junior Sergeant"
+	prefix = "JrSgt."
 	pay_multiplier = 0.5
 
 /datum/paygrade/upp/ue5
-	paygrade = "UE5"
-	name = "Serzhant"
-	prefix = "Szh."
+	paygrade = PAY_SHORT_UE5
+	name = "Sergeant"
+	prefix = "Sgt."
 	pay_multiplier = 0.7
 
 /datum/paygrade/upp/ue6
-	paygrade = "UE6"
-	name = "Master Serzhant"
-	prefix = "MSzh."
+	paygrade = PAY_SHORT_UE6
+	name = "Senior Sergeant"
+	prefix = "SrSgt."
 	pay_multiplier = 0.9
 
 /datum/paygrade/upp/ue7
-	paygrade = "UE7"
-	name = "Starshina"
-	prefix = "Strsh."
-	pay_multiplier = 1 //here comes the moneyyy
+	paygrade = PAY_SHORT_UE7
+	name = "Sergeant Major"
+	prefix = "SgtMaj."
+	pay_multiplier = 1
 
 //UPP Commandos
-/datum/paygrade/upp/uc1
-	paygrade = "UC1"
+/datum/paygrade/upp/uk1
+	paygrade = "UK1"
 	name = "Junior Kommando"
 	prefix = "JKdo."
 	pay_multiplier = 1.5
 
-/datum/paygrade/upp/uc2
-	paygrade = "UC2"
+/datum/paygrade/upp/uk2
+	paygrade = "UK2"
 	name = "2nd Kommando"
 	prefix = "2ndKdo."
 	pay_multiplier = 2
+	officer_grade = GRADE_OFFICER
 
-/datum/paygrade/upp/uc3
-	paygrade = "UC3"
+/datum/paygrade/upp/uk3
+	paygrade = "UK3"
 	name = "1st Kommando"
 	prefix = "1stKdo."
 	pay_multiplier = 2.5
+	officer_grade = GRADE_OFFICER
 
 //UPP Officers
 /datum/paygrade/upp/uo1
-	paygrade = "UO1"
-	name = "Leytenant"
-	prefix = "Lt."
+	paygrade = PAY_SHORT_UO1
+	name = "Junior Lieutenant"
+	prefix = "Jr. Lt."
 	pay_multiplier = 1.25
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo2
-	paygrade = "UO2"
-	name = "Senior Leytenant"
+	paygrade = PAY_SHORT_UO2
+	name = "Senior Lieutenant"
 	prefix = "Sr. LT."
 	pay_multiplier = 1.5
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo3
-	paygrade = "UO3"
-	name = "Kapitan"
-	prefix = "Kpt."
+	paygrade = PAY_SHORT_UO3
+	name = "Captain"
+	prefix = "Cpt."
 	pay_multiplier = 2
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo4
-	paygrade = "UO4"
-	name = "Mayjor."
-	prefix = "May."
+	paygrade = PAY_SHORT_UO4
+	name = "Major"
+	prefix = "Mjr."
 	pay_multiplier = 2.5
+	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/upp/uo4p
+	paygrade = PAY_SHORT_UO4P
+	name = "Political Commissar"
+	prefix = "Pol."
+	pay_multiplier = 5
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo5
-	paygrade = "UO5"
-	name = "Leytenant Kolonel"
-	prefix = "Lt. Kol."
+	paygrade = PAY_SHORT_UO5
+	name = "Lieutenant Colonel"
+	prefix = "Lt. Col."
 	pay_multiplier = 3
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo6
-	paygrade = "UO6"
-	name = "Kolonel"
-	prefix = "Kol."
+	paygrade = PAY_SHORT_UO6
+	name = "Colonel"
+	prefix = "Col."
 	pay_multiplier = 4
+	officer_grade = GRADE_OFFICER
 
 /datum/paygrade/upp/uo7
-	paygrade = "UO7"
-	name = "Mayjor General"
-	prefix = "May. Gen."
+	paygrade = PAY_SHORT_UO7
+	name = "Major General"
+	prefix = "Maj. Gen."
 	pay_multiplier = 5
+	officer_grade = GRADE_FLAG
 
 /datum/paygrade/upp/uo8
-	paygrade = "UO8"
-	name = "Leytenant General"
+	paygrade = PAY_SHORT_UO8
+	name = "Lieutenant General"
 	prefix = "Lt. Gen."
 	pay_multiplier = 6
+	officer_grade = GRADE_FLAG
 
 /datum/paygrade/upp/uo9
-	paygrade = "UO9"
+	paygrade = PAY_SHORT_UO9
 	name = "Army General"
 	prefix = "Gen."
 	pay_multiplier = 7
+	officer_grade = GRADE_FLAG
+
+//UPP Colonists
+
+/datum/paygrade/upp/militsiya
+	paygrade = PAY_SHORT_UC1
+	name = "Militsioner"
+	prefix = "Milit."
+	pay_multiplier = 0.3

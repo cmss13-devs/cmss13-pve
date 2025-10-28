@@ -755,3 +755,128 @@
 /datum/sprite_accessory/hair/taper
 	name = "Taper"
 	icon_state = "hair_taper"
+
+/datum/sprite_accessory/hair/gentlebraid
+	name = "Gentle Braid"
+	icon_state = "hair_braid3"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/close_cut
+	name = "Closecut"
+	icon_state = "hair_close_cut"
+	gender = MALE
+
+/datum/sprite_accessory/hair/shortbangs2
+	name = "Short Bangs 2"
+	icon_state = "hair_short_bangs"
+
+/datum/sprite_accessory/hair/bangs
+	name = "Long Bangs"
+	icon_state = "hair_bangs"
+
+/datum/sprite_accessory/hair/bangsreversed
+	name = "Long Bangs (Reversed)"
+	icon_state = "hair_reversed_bangs"
+
+/datum/sprite_accessory/hair/flowey
+	name = "Flowey Sides"
+	icon_state = "hair_flowey_sides"
+
+/datum/sprite_accessory/hair/twirly
+	name = "Twirly Hair"
+	icon_state = "hair_twirly"
+
+/datum/sprite_accessory/hair/ponytail9
+	name = "Ponytail 9"
+	icon_state = "hair_ponytail_9"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/ponytail10
+	name = "Ponytail 10"
+	icon_state = "hair_top_ponytail"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/firecracker
+	name = "Firecracker"
+	icon_state = "hair_firecracker"
+
+/datum/sprite_accessory/hair/slimtop
+	name = "Slim Top"
+	icon_state = "hair_slim_top"
+	gender = MALE
+
+/datum/sprite_accessory/hair/bun3
+	name = "Double Bun"
+	icon_state = "hair_space_buns"
+
+/datum/sprite_accessory/hair/diagonalbangs
+	name = "Diagonal Bangs"
+	icon_state = "hair_diagonal_bangs"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/bobcutovereye
+	name = "Bobcut Overeye"
+	icon_state = "hair_bobcut_overeye"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/shorthime
+	name = "Hime Cut Short"
+	icon_state = "hair_short_hime"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/emofringe
+	name = "Emo Fringe"
+	icon_state = "hair_emo_fringe"
+	gender = FEMALE
+
+/datum/sprite_accessory/hair/eighties
+	name = "The Eighties"
+	icon_state = "hair_80s"
+
+/datum/sprite_accessory/hair/overeyebowl
+	name = "Over Eye Bowlcut"
+	icon_state = "hair_overeyebowl"
+
+/datum/sprite_accessory/hair/zone
+	name = "Zone"
+	icon_state = "hair_zone"
+
+/datum/sprite_accessory/hair/gloomyshort
+	name = "Gloomy (Short)"
+	icon_state = "hair_gloomy_short"
+
+/datum/sprite_accessory/hair/gloomymedium
+	name = "Gloomy (Medium)"
+	icon_state = "hair_gloomy_medium"
+
+/datum/sprite_accessory/hair/gloomylonger
+	name = "Gloomy (Long)"
+	icon_state = "hair_gloomy_long"
+
+/datum/sprite_accessory/hair/volajushort
+	name = "Volaju (Short)"
+	icon_state = "hair_volaju"
+
+/datum/sprite_accessory/hair/volajulong
+	name = "Volaju (Long)"
+	icon_state = "hair_volajupompless"
+
+/datum/sprite_accessory/hair/modern
+	name = "Modern"
+	icon_state = "hair_modern"
+
+/datum/sprite_accessory/hair/jessica
+	name = "Jessica"
+	icon_state = "hair_jessica"
+
+/datum/sprite_accessory/hair/vriska
+	name = "Vriska"
+	icon_state = "hair_vriska"
+
+/datum/sprite_accessory/hair/fluffyshort
+	name = "Fluffy (Short)"
+	icon_state = "hair_fluffy"
+
+/datum/sprite_accessory/hair/fluffylong //ignore
+	name = "Fluffy (Long)"
+	icon_state = "hair_fluffy_long"

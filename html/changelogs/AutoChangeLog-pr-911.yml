@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "USASF Para-rescue presets are properly equipped now"

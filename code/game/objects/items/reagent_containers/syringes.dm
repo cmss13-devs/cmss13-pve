@@ -69,8 +69,8 @@
 
 	if (user.a_intent == INTENT_HARM && ismob(target))
 		var/mob/M = target
-		if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-			user.apply_effect(3, WEAKEN)
+		if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+			user.apply_effect(0.5, WEAKEN)
 			M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 			user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 			msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
@@ -82,13 +82,12 @@
 		syringestab(target, user)
 		return
 
-	var/injection_time = 2 SECONDS
+	var/injection_time = 10 SECONDS
 	if(user.skills)
-		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You aren't trained to use syringes..."))
-			return
+		if(!skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_TRAINED))
+			to_chat(user, SPAN_WARNING("You aren't trained to use syringes... better go slow."))
 		else
-			injection_time = (injection_time*user.get_skill_duration_multiplier(SKILL_MEDICAL))
+			injection_time = ((injection_time/5)*user.get_skill_duration_multiplier(SKILL_MEDICAL))
 
 
 	switch(mode)
@@ -227,6 +226,12 @@
 		overlays += injoverlay
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
+	if(istype(loc, /mob/living/carbon/human))
+		var/mob/living/carbon/human/person = loc
+		if(person.r_hand == src)
+			person.update_inv_r_hand()
+		if(person.l_hand == src)
+			person.update_inv_l_hand()
 
 	if(reagents.total_volume)
 		var/image/filling = image('icons/obj/items/reagentfillings.dmi', src, "syringe10")
@@ -258,20 +263,20 @@
 			return
 
 		if (target != user && target.getarmor(target_zone, ARMOR_MELEE) > 5 && prob(50))
-			for(var/mob/O in viewers(world_view_size, user))
+			for(var/mob/O in viewers(GLOB.world_view_size, user))
 				O.show_message(text(SPAN_DANGER("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), SHOW_MESSAGE_VISIBLE)
 			user.temp_drop_inv_item(src)
 			qdel(src)
 			return
 
-		for(var/mob/O in viewers(world_view_size, user))
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
 			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] in \the [hit_area] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
 
 		if(affecting.take_damage(3))
 			target:UpdateDamageIcon()
 
 	else
-		for(var/mob/O in viewers(world_view_size, user))
+		for(var/mob/O in viewers(GLOB.world_view_size, user))
 			O.show_message(text(SPAN_DANGER("<B>[user] stabs [target] with [src.name]!</B>")), SHOW_MESSAGE_VISIBLE)
 		target.take_limb_damage(3)// 7 is the same as crowbar punch
 
@@ -455,6 +460,16 @@
 	mode = SYRINGE_INJECT
 	update_icon()
 
+/obj/item/reagent_container/syringe/oxycodone
+	name = "syringe (oxycodone)"
+	desc = "Contains a small dose of potent painkiller."
+
+/obj/item/reagent_container/syringe/oxycodone/Initialize()
+	. = ..()
+	reagents.add_reagent("oxycodone",  5)
+	mode = SYRINGE_INJECT
+	update_icon()
+
 /obj/item/reagent_container/ld50_syringe/choral
 
 /obj/item/reagent_container/ld50_syringe/choral/Initialize()
@@ -494,5 +509,16 @@
 	. = ..()
 	reagents.add_reagent("inaprovaline", 7)
 	reagents.add_reagent("anti_toxin", 8)
+	mode = SYRINGE_INJECT
+	update_icon()
+
+/obj/item/reagent_container/syringe/leporazine_dermaline
+	name = "syringe (temperature stablization)"
+	desc = "Contains leporazine - used to stabilize body temperature, and dermaline - used to rapidly heal burns"
+
+/obj/item/reagent_container/syringe/leporazine_dermaline/Initialize()
+	. = ..()
+	reagents.add_reagent("leporazine", 5)
+	reagents.add_reagent("dermaline", 10)
 	mode = SYRINGE_INJECT
 	update_icon()

@@ -1,11 +1,14 @@
 GLOBAL_LIST_INIT_TYPED(undershirt_m, /datum/sprite_accessory/undershirt, setup_undershirt(MALE))
 GLOBAL_LIST_INIT_TYPED(undershirt_f, /datum/sprite_accessory/undershirt, setup_undershirt(FEMALE))
+GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt, setup_undershirt(null, TRUE))
 
-/proc/setup_undershirt(restricted_gender)
+/proc/setup_undershirt(restricted_gender, restricted)
 	var/list/undershirt_list = list()
 	for(var/undershirt_type in subtypesof(/datum/sprite_accessory/undershirt))
 		var/datum/sprite_accessory/undershirt/undershirt_datum = new undershirt_type
 		if(restricted_gender && undershirt_datum.gender != restricted_gender && (undershirt_datum.gender == MALE || undershirt_datum.gender == FEMALE))
+			continue
+		if(restricted && !undershirt_datum.restricted)
 			continue
 		if(undershirt_datum.camo_conforming)
 			undershirt_list["[undershirt_datum.name] (Camo Conforming)"] = undershirt_datum
@@ -28,6 +31,7 @@ GLOBAL_LIST_INIT_TYPED(undershirt_f, /datum/sprite_accessory/undershirt, setup_u
 /datum/sprite_accessory/undershirt
 	icon = 'icons/mob/humans/undershirt.dmi'
 	var/camo_conforming = FALSE
+	var/restricted = FALSE
 
 /datum/sprite_accessory/undershirt/proc/get_image(mob_gender)
 	var/selected_icon_state = icon_state
@@ -112,14 +116,54 @@ GLOBAL_LIST_INIT_TYPED(undershirt_f, /datum/sprite_accessory/undershirt, setup_u
 	gender = FEMALE
 	camo_conforming = TRUE
 
-/datum/sprite_accessory/undershirt/halter_top
-	name = "Haltertop"
-	icon_state = "halter"
-	gender = FEMALE
-	camo_conforming = TRUE
-
 /datum/sprite_accessory/undershirt/strapless_bra
 	name = "Strapless Bra"
 	icon_state = "strapless"
 	gender = FEMALE
 	camo_conforming = TRUE
+
+// Restricted
+
+/datum/sprite_accessory/undershirt/civilian
+	name = "undershirt"
+	icon_state = "undershirt"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/telnyashka
+	name = "Naval Infantry Telnyashka"
+	icon_state = "telnyashka_blue"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/telnyashka/territorial
+	name = "Territorial Guard Telnyashka"
+	icon_state = "telnyashka_green"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/telnyashka/interior
+	name = "Interior Forces Telnyashka"
+	icon_state = "telnyashka_red"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/marine
+	name = "Marine Undershirt"
+	icon_state = "undershirt_uscm"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/black
+	name = "Black Undershirt"
+	icon_state = "undershirt_black"
+	gender = NEUTER
+	restricted = TRUE
+
+/datum/sprite_accessory/undershirt/black/short
+	name = "Black Undershirt, Short"
+	icon_state = "undershirt_black_short"
+
+/datum/sprite_accessory/undershirt/black/long
+	name = "Black Undershirt, Long"
+	icon_state = "undershirt_black_long"

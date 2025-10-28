@@ -95,7 +95,7 @@
 
 	if(get_dist_euclidian(here_turf, target_turf) > 24)
 		userot = TRUE
-		rot = round(get_angle(here_turf, target_turf))
+		rot = floor(Get_Angle(here_turf, target_turf))
 	else
 		if(target_turf.z > here_turf.z)
 			pointer="caret-up"
@@ -177,13 +177,36 @@
 /datum/radar/advanced_pdtl/scan()
 	. = ..()
 	objects = list()
-	var/obj/item/clothing/accessory/pdt_bracelet/bracelet = typed_holder.linked_bracelet
+	var/obj/item/clothing/accessory/wrist/pdt_bracelet/bracelet = typed_holder.linked_bracelet
 	if(!bracelet)
 		return
 	objects += list(list(
 		ref = REF(bracelet),
 		name = bracelet.name,
 	))
+
+//A program that tracks GM objectives
+/datum/radar/signal_tracker
+	var/obj/item/tool/signal_tracker/typed_holder
+
+/datum/radar/signal_tracker/New(atom/holder)
+	. = ..()
+	typed_holder = holder
+
+/datum/radar/signal_tracker/find_atom()
+	for(var/list/cycled_objective in GLOB.game_master_objectives)
+		if(cycled_objective["object_ref"] == selected)
+			return locate(cycled_objective["object_ref"])
+
+/datum/radar/signal_tracker/scan()
+	. = ..()
+	objects = list()
+	for(var/list/cycled_objective in GLOB.game_master_objectives)
+		var/list/crewinfo = list(
+			ref = cycled_objective["object_ref"],
+			name = cycled_objective["objective_info"]
+			)
+		objects += list(crewinfo)
 
 ///A program that tracks crew members via suit sensors
 /datum/radar/lifeline
@@ -205,12 +228,12 @@
 			continue
 		var/crewmember_name = "Unknown"
 		var/crewmember_rank = "Unknown"
-		if(humanoid.wear_id)
-			var/obj/item/card/id/ID = humanoid.wear_id.GetID()
-			if(ID?.registered_name)
-				crewmember_name = ID.registered_name
-			if(ID?.assignment)
-				crewmember_rank = ID.assignment
+		var/obj/item/card/id/card = humanoid.get_idcard()
+		if(card)
+			if(card.registered_name)
+				crewmember_name = card.registered_name
+			if(card.assignment)
+				crewmember_rank = card.assignment
 		switch(humanoid.stat)
 			if(CONSCIOUS)
 				crewmember_name = "[crewmember_name] ([crewmember_rank]) (Conscious)"

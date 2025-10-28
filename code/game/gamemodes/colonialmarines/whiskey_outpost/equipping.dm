@@ -22,22 +22,6 @@ Stay alive, and Godspeed, commander!"}
 		marine_announcement("All forces, Ground Commander [H.real_name] is in command!")
 
 
-
-//*************************************
-//----------------SYNTHETIC-------------
-//*************************************/
-
-/datum/job/civilian/synthetic/whiskey
-	title = JOB_WO_SYNTH
-	gear_preset = /datum/equipment_preset/synth/uscm/wo
-
-/datum/job/civilian/synthetic/whiskey/generate_entry_message()
-	. = {"You are a Synthetic! You are held to a higher standard and are required to obey not only the Server Rules but Marine Law and Synthetic Rules. Failure to do so may result in your White-list Removal.
-You were deployed alongside the Dust Raiders to assist in engineering, medical, and diplomatic duties. Things seem to have taken a turn for the worst.
-Assist the humans in sending a signal to the remaining Dust Raiders on board the USS Alistoun, to inform them of the threat.
-Destruction in inevitable. At the very least, you can assist in preventing others from sharing the same fate."}
-
-
 //*************************************
 //---------EXECUITIVE OFFICER-----------
 //*************************************/
@@ -76,7 +60,7 @@ You must lead his Honor guard, his elite unit of marines, to protect the command
 	gear_preset = /datum/equipment_preset/wo/vhg
 
 /datum/job/command/bridge/whiskey/generate_entry_message(mob/living/carbon/human/H)
-	. = {"You were assigned to guard the commander in this hostile enviroment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
+	. = {"You were assigned to guard the commander in this hostile environment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
 You've survived through enough battles that you've been entrusted with more training, and can use overwatch consoles, as well as give orders.
 You're expected to defend not only the commander, but the bunker at large; leave the outside defenses to the marines.
 Glory to the commander. Glory to the USCM."}
@@ -90,7 +74,7 @@ Glory to the commander. Glory to the USCM."}
 	gear_preset = /datum/equipment_preset/wo/hgs
 
 /datum/job/command/tank_crew/whiskey/generate_entry_message(mob/living/carbon/human/H)
-	. = {"You were assigned to guard the commander in this hostile enviroment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
+	. = {"You were assigned to guard the commander in this hostile environment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
 You're expected to defend not only the commander, but the bunker at large; leave the outside defenses to the marines.
 You've been through much, and as such, have been given special-weapons training. Use it well.
 Glory to the commander. Glory to the USCM."}
@@ -104,7 +88,7 @@ Glory to the commander. Glory to the USCM."}
 	gear_preset = /datum/equipment_preset/wo/hg
 
 /datum/job/command/police/whiskey/generate_entry_message(mob/living/carbon/human/H)
-	. = {"You were assigned to guard the commander in this hostile enviroment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
+	. = {"You were assigned to guard the commander in this hostile environment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
 You're expected to defend not only the commander, but the bunker at large; leave the outside defenses to the marines.
 Glory to the commander. Glory to the USCM."}
 

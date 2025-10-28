@@ -1,9 +1,3 @@
-#define RANGE_TURFS(RADIUS, CENTER) \
-block( \
-	locate(max(CENTER.x-(RADIUS),1),   max(CENTER.y-(RADIUS),1),   CENTER.z), \
-	locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
-)
-
 //Admin perms are in global.dm.
 
 /// To make it even more clear that something is a bitfield.
@@ -12,7 +6,7 @@ block( \
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "ARES v3.2"
+#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -41,10 +35,24 @@ block( \
 #define MAP_ICE_COLONY_V3 "Shivas Snowball" //Ice Rework, low pop enabled.
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
+#define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
+#define MAP_TAIPEI_STATION "Taipei Station"
+#define MAP_LV295_BLACKSITE "LV295 Blacksite"
+#define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
+#define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
+#define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
+#define MAP_CANYON_32B "Canyon 32B"
+#define MAP_BIG_BLUE "Kleschers Research Site"
+#define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
+#define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
+#define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+#define MAP_BOSENMORI_BASHO "Bosenmori Basho"
+#define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
+#define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -89,6 +97,8 @@ block( \
 #define SEE_INVISIBLE_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 #define INVISIBILITY_LEVEL_TWO 45 //Used by some other stuff in code. It's really poorly organized.
 
+#define HIDE_INVISIBLE_OBSERVER 59 // define for when we want to hide all observer mobs.
+
 #define INVISIBILITY_OBSERVER 60
 #define SEE_INVISIBLE_OBSERVER 60
 
@@ -113,6 +123,8 @@ block( \
 #define SOUND_ADMIN_MEME (1<<6)
 #define SOUND_ADMIN_ATMOSPHERIC (1<<7)
 #define SOUND_ARES_MESSAGE (1<<8)
+#define SOUND_OBSERVER_ANNOUNCEMENTS (1<<9)
+#define SOUND_FAX_MACHINE (1<<10)
 
 //toggles_chat
 #define CHAT_OOC (1<<0)
@@ -129,6 +141,7 @@ block( \
 #define CHAT_FFATTACKLOGS (1<<11)
 #define CHAT_GHOSTHIVEMIND (1<<12)
 #define CHAT_NICHELOGS (1<<13)
+#define CHAT_LISTENINGBUG (1<<14)
 
 //toggles_ghost
 #define GHOST_HEALTH_SCAN  (1<<0)
@@ -156,6 +169,7 @@ block( \
 //toggles_admin
 /// Splits admin tabs in Statpanel
 #define SPLIT_ADMIN_TABS (1<<0)
+#define ADMIN_STEALTHMODE (1<<1)
 
 //=================================================
 
@@ -165,7 +179,7 @@ block( \
 
 #define TOGGLES_LANGCHAT_DEFAULT (LANGCHAT_SEE_EMOTES)
 
-#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC)
+#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC|SOUND_OBSERVER_ANNOUNCEMENTS|SOUND_FAX_MACHINE)
 
 #define TOGGLES_FLASHING_DEFAULT (FLASH_ROUNDSTART|FLASH_ROUNDEND|FLASH_CORPSEREVIVE|FLASH_ADMINPM|FLASH_UNNEST)
 
@@ -190,7 +204,7 @@ block( \
 /// how long in ticks we wait before assuming the docking controller is broken or blown up.
 #define DOCK_ATTEMPT_TIMEOUT 20 SECONDS
 #define DROPSHIP_WARMUP_TIME 10 SECONDS
-#define DROPSHIP_DROP_MSG_DELAY 30 SECONDS
+#define DROPSHIP_DROP_MSG_DELAY 5 SECONDS
 #define DROPSHIP_TRANSIT_DURATION 100 SECONDS
 #define DROPSHIP_CORSAT_DURATION 30 SECONDS
 #define ELEVATOR_TRANSIT_DURATION 5 SECONDS
@@ -275,6 +289,7 @@ block( \
 #define CEILING_PROTECTION_TIER_3 3
 #define CEILING_UNDERGROUND_BLOCK_CAS 3.1
 #define CEILING_UNDERGROUND_METAL_BLOCK_CAS 3.2
+#define CEILING_HULL_METAL 3.3
 
 /// Blocks OB fire
 #define CEILING_PROTECTION_TIER_4 4
@@ -286,7 +301,7 @@ block( \
 
 // Helpers
 /// Only use the CEILING_PROTECTION_TIER_X defines for `protection_level`
-#define CEILING_IS_PROTECTED(ceiling, protection_level) (ceiling >= protection_level)
+#define CEILING_IS_PROTECTED(ceiling, protection_level) ((ceiling) >= (protection_level))
 
 // Default font settings
 #define FONT_SIZE "5pt"
@@ -382,6 +397,9 @@ block( \
 #define WALL_DEVWALL "devwall"
 #define WALL_DEVWALL_R "devwall_r"
 #define WALL_HUNTERSHIP "metal"//DMI specific name
+#define WALL_AICORE "aiwall"
+#define WALL_UPP_GREEN "uppwall_interior"
+#define WALL_UPP_GREY "uppwall_interior"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
@@ -396,6 +414,7 @@ block( \
 #define FIRE_MISSION_WEAPON_REMOVED 8
 #define FIRE_MISSION_WEAPON_UNUSABLE 16
 #define FIRE_MISSION_WEAPON_OUT_OF_AMMO 32
+#define FIRE_MISSION_BAD_DIRECTION 64
 #define FIRE_MISSION_NOT_EXECUTABLE -1
 
 //Defines for firemission state
@@ -538,7 +557,7 @@ block( \
 /// `amount` - The number to get per time
 /// `time` - The time period in which to gain this amount
 /// To be used with delta_time. Multiplied by 10 to convert from deciseconds to seconds
-#define AMOUNT_PER_TIME(amount, time) ((amount / (time))*10)
+#define AMOUNT_PER_TIME(amount, time) (((amount) / (time))*10)
 
 // Local message mode. Used to decide wheter message should be dispatched on the radio.
 #define MESSAGE_MODE_LOCAL 1
@@ -557,3 +576,9 @@ block( \
 #define PERF_TOGGLE_SHUTTLES (1<<3)
 /// Disables loading Techwebs and additional Z-Levels
 #define PERF_TOGGLE_TECHWEBS (1<<4)
+
+/// Dropship Camos
+#define DROPSHIP_CAMO_TAN "Tan"
+#define DROPSHIP_CAMO_NAVY "Navy"
+#define DROPSHIP_CAMO_URBAN "Urban"
+#define DROPSHIP_CAMO_JUNGLE "Jungle"

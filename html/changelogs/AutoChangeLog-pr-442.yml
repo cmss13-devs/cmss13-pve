@@ -1,0 +1,7 @@
+author: "Zonespace (Code), Danilcus (Code), Zenith (Many voicelines), Unknown920 (Weakflamer code), Nauticall (Army squad presets), Aimless (Marine conversations), Amory (Voicelines)"
+delete-after: True
+changes:
+  - rscadd: "Added Human AI to the game. Find their tools in the Game Master tab."
+  - bugfix: "CLF rifles, shotguns, and SMGs were considered sidearms."
+  - bugfix: "Fixed runtimes with admin-spawned marines."
+  - balance: "Nanopaste no longer requires gun usage to allow for synths to self-apply it."

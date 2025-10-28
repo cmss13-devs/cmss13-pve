@@ -1,0 +1,12 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - rscadd: "ported over fishing code from PVP that fixes fishing rod code to work on oceans and rivers"
+  - rscadd: "new fish types"
+  - rscadd: "fish that are now guttable"
+  - rscadd: "fishing poles are now craftable"
+  - rscadd: "Yautja spears can be used to fish"
+  - rscadd: "changes to loot table to include less trash, more fish (there is still trash just not a landfill's worth)"
+  - maptweak: "minor changes to LV-624s and NVs to include basic fishing gear at a few spots"
+  - maptweak: "replaces the airlock at the cabin to the west of LV-624 with a curtain like the far north cabin (it was always unpowered)"
+  - maptweak: "LV-624 fitness dome pool is unfishable now"

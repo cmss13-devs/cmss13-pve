@@ -1,5 +1,6 @@
 #define TESLA_COIL_FIREDELAY 20
 #define TESLA_COIL_RANGE 3
+#define TESLA_COIL_RMC_RANGE 5
 #define TESLA_COIL_DAZE_EFFECT 5
 #define TESLA_COIL_SLOW_EFFECT 3
 
@@ -11,6 +12,7 @@
 	var/last_fired = 0
 	var/tesla_range = TESLA_COIL_RANGE
 	var/fire_delay = TESLA_COIL_FIREDELAY
+	var/attack_defenses = TRUE
 	handheld_type = /obj/item/defenses/handheld/tesla_coil
 	disassemble_time = 10
 	health = 150
@@ -20,11 +22,11 @@
 	has_camera = FALSE
 
 	choice_categories = list(
-		SENTRY_CATEGORY_IFF = list(FACTION_USCM, FACTION_WEYLAND, FACTION_HUMAN),
+		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
 	)
 
 	selected_categories = list(
-		SENTRY_CATEGORY_IFF = FACTION_USCM,
+		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
 
@@ -70,8 +72,8 @@
 /obj/structure/machinery/defenses/tesla_coil/proc/get_target()
 	targets = list()
 
-	for(var/mob/living/M in oview(tesla_range, src))
-		if(M.stat == DEAD || isrobot(M))
+	FOR_DOVIEW(var/mob/living/M, tesla_range, src, HIDE_INVISIBLE_OBSERVER)
+		if(M.stat == DEAD)
 			continue
 		if(HAS_TRAIT(M, TRAIT_CHARGING))
 			to_chat(M, SPAN_WARNING("You ignore some weird noises as you charge."))
@@ -81,10 +83,15 @@
 			continue
 
 		targets += M
+	FOR_DOVIEW_END
 
-	for(var/obj/structure/machinery/defenses/D in oview(tesla_range, src))
+	if(!attack_defenses)
+		return
+
+	FOR_DOVIEW(var/obj/structure/machinery/defenses/D, tesla_range, src, HIDE_INVISIBLE_OBSERVER)
 		if(D.turned_on)
 			targets += D
+	FOR_DOVIEW_END
 
 /obj/structure/machinery/defenses/tesla_coil/proc/fire(atoms)
 	if(!(world.time - last_fired >= fire_delay) || !turned_on)
@@ -125,7 +132,7 @@
 	if(!istype(M))
 		return FALSE
 
-	var/list/turf/path = getline2(src, M, include_from_atom = FALSE)
+	var/list/turf/path = get_line(src, M, include_start_atom = FALSE)
 
 	var/blocked = FALSE
 	for(var/turf/T in path)
@@ -157,6 +164,17 @@
 
 	. = ..()
 
+// For mapping
+/obj/structure/machinery/defenses/tesla_coil/premade
+	turned_on = TRUE
+	static = TRUE
+
+/obj/structure/machinery/defenses/tesla_coil/premade/attackby(obj/item/O, mob/user)
+	return
+
+/obj/structure/machinery/defenses/tesla_coil/premade/smart
+	attack_defenses = FALSE
+
 #define TESLA_COIL_STUN_FIRE_DELAY 3 SECONDS
 #define TESLA_COIL_STUN_EFFECT 1
 /obj/structure/machinery/defenses/tesla_coil/stun
@@ -173,6 +191,24 @@
 		M.set_effect(TESLA_COIL_STUN_EFFECT, WEAKEN)
 
 	M.set_effect(TESLA_COIL_DAZE_EFFECT * 1.5, DAZE) // 1.5x as effective as normal tesla
+
+/obj/structure/machinery/defenses/tesla_coil/stun/rmc
+	name = "\improper L33A1 TED device"
+	desc = "Tactical Electroshock Deterrence device, also simply called 'tedds' by those who use them. A perfected way of producing high-frequency & high-voltage, low-current electricity. Adaptave grounding in RMC equipment allows it to only hit hostile targets with a devastating shock."
+	tesla_range = TESLA_COIL_RMC_RANGE
+	fire_delay = TESLA_COIL_FIREDELAY
+	handheld_type = /obj/item/defenses/handheld/tesla_coil/stun/rmc
+	disassemble_time = 0.5 SECONDS
+
+	choice_categories = list(
+		SENTRY_CATEGORY_IFF = list(FACTION_TWE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
+	)
+
+	selected_categories = list(
+		SENTRY_CATEGORY_IFF = FACTION_TWE,
+	)
+
+
 
 #undef TESLA_COIL_STUN_FIRE_DELAY
 #define TESLA_COIL_MICRO_FIRE_DELAY 10

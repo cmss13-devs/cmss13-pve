@@ -12,8 +12,8 @@
 	icon_state = "metal"
 
 	var/mineralType = "metal"
-	var/state = 0 //closed, 1 == open
-	var/isSwitchingStates = 0
+	var/open = FALSE
+	var/isSwitchingStates = FALSE
 	var/hardness = 1
 	var/oreAmount = 7
 
@@ -25,16 +25,13 @@
 
 /obj/structure/mineral_door/Collided(atom/user)
 	..()
-	if(!state)
+	if(!open)
 		return TryToSwitchState(user)
 	return
 
 /obj/structure/mineral_door/attack_remote(mob/user as mob) //those aren't machinery, they're just big fucking slabs of a mineral
 	if(isRemoteControlling(user)) //so the AI can't open it
 		return
-	else if(isrobot(user)) //but cyborgs can
-		if(get_dist(user,src) <= 1) //not remotely though
-			return TryToSwitchState(user)
 
 /obj/structure/mineral_door/attack_hand(mob/user as mob)
 	return TryToSwitchState(user)
@@ -60,37 +57,44 @@
 			SwitchState()
 
 /obj/structure/mineral_door/proc/SwitchState()
-	if(state)
-		Close()
+	if(open)
+		close()
 	else
-		Open()
+		open()
 
-/obj/structure/mineral_door/proc/Open()
-	isSwitchingStates = 1
+/obj/structure/mineral_door/proc/open()
+	isSwitchingStates = TRUE
 	playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
 	flick("[mineralType]opening",src)
-	sleep(10)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+
+/obj/structure/mineral_door/proc/finish_open()
+	if(!loc)
+		return
 	density = FALSE
 	opacity = FALSE
-	state = 1
+	open = TRUE
 	update_icon()
-	isSwitchingStates = 0
+	isSwitchingStates = FALSE
 
-
-/obj/structure/mineral_door/proc/Close()
-	isSwitchingStates = 1
+/obj/structure/mineral_door/proc/close()
+	isSwitchingStates = TRUE
 	playsound(loc, 'sound/effects/stonedoor_openclose.ogg', 25, 1)
 	flick("[mineralType]closing",src)
-	sleep(10)
+	addtimer(CALLBACK(src, PROC_REF(finish_close)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+
+/obj/structure/mineral_door/proc/finish_close()
+	if(!loc)
+		return
 	density = TRUE
 	opacity = TRUE
-	state = 0
+	open = FALSE
 	update_icon()
-	isSwitchingStates = 0
+	isSwitchingStates = FALSE
 
 
 /obj/structure/mineral_door/update_icon()
-	if(state)
+	if(open)
 		icon_state = "[mineralType]open"
 	else
 		icon_state = mineralType
@@ -104,7 +108,7 @@
 			Dismantle()
 	else if(!(W.flags_item & NOBLUDGEON) && W.force)
 		user.animation_attack_on(src)
-		hardness -= W.force/100
+		hardness -= W.force/100 * W.demolition_mod
 		to_chat(user, "You hit the [name] with your [W.name]!")
 		CheckHardness()
 	else
@@ -175,7 +179,7 @@
 /obj/structure/mineral_door/transparent
 	opacity = FALSE
 
-/obj/structure/mineral_door/transparent/Close()
+/obj/structure/mineral_door/transparent/finish_close()
 	..()
 	opacity = FALSE
 
@@ -204,27 +208,35 @@
 	mineralType = "wood"
 	hardness = 1
 
-/obj/structure/mineral_door/wood/Open()
-	isSwitchingStates = 1
+/obj/structure/mineral_door/wood/open()
+	isSwitchingStates = TRUE
 	playsound(loc, 'sound/effects/doorcreaky.ogg', 25, 1)
 	flick("[mineralType]opening",src)
-	sleep(10)
+	addtimer(CALLBACK(src, PROC_REF(finish_open)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+
+/obj/structure/mineral_door/wood/finish_open()
+	if(!loc)
+		return
 	density = FALSE
 	opacity = FALSE
-	state = 1
+	open = TRUE
 	update_icon()
-	isSwitchingStates = 0
+	isSwitchingStates = FALSE
 
-/obj/structure/mineral_door/wood/Close()
-	isSwitchingStates = 1
+/obj/structure/mineral_door/wood/close()
+	isSwitchingStates = TRUE
 	playsound(loc, 'sound/effects/doorcreaky.ogg', 25, 1)
 	flick("[mineralType]closing",src)
-	sleep(10)
+	addtimer(CALLBACK(src, PROC_REF(finish_close)), 1 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+
+/obj/structure/mineral_door/wood/finish_close()
+	if(!loc)
+		return
 	density = TRUE
 	opacity = TRUE
-	state = 0
+	open = FALSE
 	update_icon()
-	isSwitchingStates = 0
+	isSwitchingStates = FALSE
 
 /obj/structure/mineral_door/wood/Dismantle(devastated = 0)
 	if(!devastated)
@@ -236,5 +248,5 @@
 /obj/structure/mineral_door/wood/open
 	density = FALSE
 	opacity = FALSE
-	state = 1
+	open = TRUE
 	icon_state = "woodopen"

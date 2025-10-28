@@ -1,7 +1,27 @@
+import { useEffect, useState } from 'react';
+
 import { useBackend, useSharedState } from '../backend';
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Icon,
+  ProgressBar,
+  Section,
+  Stack,
+} from '../components';
 import { Window } from '../layouts';
-import { Box, Button, Flex, Icon, ProgressBar, Section, Stack } from '../components';
-import { LaunchButton, CancelLaunchButton, DisabledScreen, InFlightCountdown, LaunchCountdown, NavigationProps, ShuttleRecharge, DockingPort } from './NavigationShuttle';
+import {
+  CancelLaunchButton,
+  DisabledScreen,
+  type DockingPort,
+  InFlightCountdown,
+  LaunchButton,
+  LaunchCountdown,
+  type NavigationProps,
+  ShuttleRecharge,
+} from './NavigationShuttle';
 
 const DoorStatusEnum = {
   SHUTTLE_DOOR_BROKEN: -1,
@@ -9,11 +29,11 @@ const DoorStatusEnum = {
   SHUTTLE_DOOR_LOCKED: 1,
 } as const;
 
-type DoorStatusEnums = typeof DoorStatusEnum[keyof typeof DoorStatusEnum];
+type DoorStatusEnums = (typeof DoorStatusEnum)[keyof typeof DoorStatusEnum];
 
 interface DoorStatus {
   id: string;
-  value: 0 | 1;
+  value: DoorStatusEnums;
 }
 
 interface AutomatedControl {
@@ -22,7 +42,13 @@ interface AutomatedControl {
   ground_lz: null | string;
 }
 
+type ShuttleRef = {
+  name: string;
+  id: string;
+};
+
 interface DropshipNavigationProps extends NavigationProps {
+  shuttle_id: string;
   door_status: Array<DoorStatus>;
   has_flight_optimisation?: 0 | 1;
   is_flight_optimised?: 0 | 1;
@@ -31,82 +57,101 @@ interface DropshipNavigationProps extends NavigationProps {
   primary_lz?: string;
   automated_control: AutomatedControl;
   has_flyby_skill: 0 | 1;
-
   playing_launch_announcement_alarm: boolean;
+  can_change_shuttle: 0 | 1;
+  alternative_shuttles: Array<ShuttleRef>;
 }
 
-const DropshipDoorControl = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+const DropshipDoorControl = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const in_flight =
     data.shuttle_mode === 'called' || data.shuttle_mode === 'pre-arrival';
   const disable_door_controls = in_flight;
-  const disable_normal_control = data.locked_down === 1;
   return (
     <Section
+      m="0"
+      mb="6px"
       title="Door Controls"
       buttons={data.door_status
         .filter((x) => x.id === 'all')
         .map((x) => (
           <>
-            {x.value === 0 && (
+            {x.value === DoorStatusEnum.SHUTTLE_DOOR_UNLOCKED && (
               <Button
                 disabled={disable_door_controls}
+                width="100%"
                 onClick={() =>
                   act('door-control', {
                     interaction: 'force-lock',
                     location: 'all',
                   })
                 }
-                icon="triangle-exclamation">
+                icon="triangle-exclamation"
+              >
                 Lockdown
               </Button>
             )}
 
-            {x.value === 1 && (
+            {x.value === DoorStatusEnum.SHUTTLE_DOOR_LOCKED && (
               <Button
                 disabled={disable_door_controls}
+                width="100%"
                 onClick={() =>
                   act('door-control', {
                     interaction: 'unlock',
                     location: 'all',
                   })
                 }
-                icon="triangle-exclamation">
+                icon="triangle-exclamation"
+              >
                 Lift Lockdown
               </Button>
             )}
           </>
-        ))}>
-      <Stack className="DoorControlStack">
+        ))}
+    >
+      <Stack justify="space-between" className="DoorControlStack">
         {data.door_status
           .filter((x) => x.id !== 'all')
           .map((x) => {
             const name = x.id.substr(0, 1).toLocaleUpperCase() + x.id.substr(1);
             return (
-              <Stack.Item key={x.id}>
+              <Stack.Item key={x.id} grow>
                 <>
-                  {x.value === 0 && (
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_BROKEN && (
+                    <Button disabled icon="ban" width="100%" textAlign="center">
+                      No response
+                    </Button>
+                  )}
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_UNLOCKED && (
                     <Button
+                      disabled={disable_door_controls}
+                      width="100%"
+                      textAlign="center"
                       onClick={() =>
                         act('door-control', {
                           interaction: 'force-lock',
                           location: x.id,
                         })
                       }
-                      icon="door-closed">
+                      icon="door-closed"
+                    >
                       Lock {name}
                     </Button>
                   )}
-                  {x.value === 1 && (
+                  {x.value === DoorStatusEnum.SHUTTLE_DOOR_LOCKED && (
                     <Button
                       disabled={disable_door_controls}
+                      width="100%"
+                      textAlign="center"
                       onClick={() =>
                         act('door-control', {
                           interaction: 'unlock',
                           location: x.id,
                         })
                       }
-                      icon="door-open">
+                      icon="door-open"
+                    >
                       Unlock {name}
                     </Button>
                   )}
@@ -119,22 +164,26 @@ const DropshipDoorControl = (_, context) => {
   );
 };
 
-export const DropshipDestinationSelection = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+export const DropshipDestinationSelection = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const [siteselection, setSiteSelection] = useSharedState<string | undefined>(
-    context,
     'target_site',
-    undefined
+    undefined,
   );
   return (
-    <Section
-      title="Flight Controls"
-      buttons={
-        <>
+    <Section m="0" mb="6px" title="Flight Controls">
+      <Stack justify="space-evenly">
+        <Stack.Item align="center">
           <CancelLaunchButton />
+        </Stack.Item>
+        <Stack.Item>
+          <Divider vertical />
+        </Stack.Item>
+        <Stack.Item align="center">
           <LaunchButton />
-        </>
-      }>
+        </Stack.Item>
+      </Stack>
+      <Divider />
       <Stack vertical className="DestinationSelector">
         <DestinationSelector
           options={data.destinations}
@@ -150,15 +199,15 @@ export const DropshipDestinationSelection = (_, context) => {
 };
 
 interface DestinationProps {
-  options: DockingPort[];
-  onClick: (value: string) => void;
-  selected?: string;
-  applyFilter?: boolean;
-  availableOnly?: boolean;
+  readonly options: DockingPort[];
+  readonly onClick: (value: string) => void;
+  readonly selected?: string;
+  readonly applyFilter?: boolean;
+  readonly availableOnly?: boolean;
 }
 
-const DestinationSelector = (props: DestinationProps, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+const DestinationSelector = (props: DestinationProps) => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
     <>
       {props.options
@@ -183,7 +232,8 @@ const DestinationSelector = (props: DestinationProps, context) => {
                   }
                   icon={x.id === data.primary_lz ? 'home' : undefined}
                   iconPosition="right"
-                  onClick={() => props.onClick(x.id)}>
+                  onClick={() => props.onClick(x.id)}
+                >
                   {x.name}
                 </Button>
               </Flex.Item>
@@ -194,10 +244,14 @@ const DestinationSelector = (props: DestinationProps, context) => {
   );
 };
 
-export const TouchdownCooldown = (_, context) => {
-  const { data } = useBackend<NavigationProps>(context);
+export const TouchdownCooldown = () => {
+  const { data } = useBackend<NavigationProps>();
   return (
-    <Section title={`Final Approach: ${data.target_destination}`}>
+    <Section
+      m="0"
+      mb="6px"
+      title={`Final Approach: ${data.target_destination}`}
+    >
       <div className="InFlightCountdown">
         <Stack vertical>
           <Stack.Item>
@@ -208,7 +262,8 @@ export const TouchdownCooldown = (_, context) => {
           <Stack.Item>
             <ProgressBar
               maxValue={data.max_pre_arrival_duration}
-              value={data.flight_time}>
+              value={data.flight_time}
+            >
               T-{data.flight_time}s
             </ProgressBar>
           </Stack.Item>
@@ -218,18 +273,19 @@ export const TouchdownCooldown = (_, context) => {
   );
 };
 
-const AutopilotConfig = (props, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
+const AutopilotConfig = () => {
+  const { data, act } = useBackend<DropshipNavigationProps>();
   const [automatedHangar, setAutomatedHangar] = useSharedState<
     string | undefined
-  >(context, 'autopilot_hangar', undefined);
+  >('autopilot_hangar', undefined);
   const [automatedLZ, setAutomatedLZ] = useSharedState<string | undefined>(
-    context,
     'autopilot_groundside',
-    undefined
+    undefined,
   );
   return (
     <Section
+      m="0"
+      mb="6px"
       title="Autopilot Control"
       buttons={
         <>
@@ -241,7 +297,8 @@ const AutopilotConfig = (props, context) => {
                   ground_id: automatedLZ,
                   delay: 30,
                 })
-              }>
+              }
+            >
               Enable
             </Button>
           )}
@@ -249,14 +306,15 @@ const AutopilotConfig = (props, context) => {
             <Button onClick={() => act('disable-automate')}>Disable</Button>
           )}
         </>
-      }>
+      }
+    >
       <Stack vertical className="DestinationSelector">
         <Stack.Item>From</Stack.Item>
         <DestinationSelector
           options={data.destinations.filter((x) =>
             data.automated_control.is_automated
               ? x.id === data.automated_control.hangar_lz
-              : true
+              : true,
           )}
           selected={automatedHangar}
           applyFilter={false}
@@ -274,7 +332,7 @@ const AutopilotConfig = (props, context) => {
           options={data.destinations.filter((x) =>
             data.automated_control.is_automated
               ? x.id === data.automated_control.ground_lz
-              : true
+              : true,
           )}
           selected={automatedLZ}
           applyFilter={false}
@@ -289,41 +347,42 @@ const AutopilotConfig = (props, context) => {
   );
 };
 
-const StopLaunchAnnouncementAlarm = (_, context) => {
-  const { act } = useBackend<NavigationProps>(context);
+const StopLaunchAnnouncementAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="ban"
       onClick={() => {
         act('stop_playing_launch_announcement_alarm');
-      }}>
+        act('button-push');
+      }}
+    >
       Stop Alarm
     </Button>
   );
 };
 
-const PlayLaunchAnnouncementAlarm = (_, context) => {
-  const { act } = useBackend<NavigationProps>(context);
+const PlayLaunchAnnouncementAlarm = () => {
+  const { act } = useBackend<NavigationProps>();
   return (
     <Button
       icon="rocket"
       onClick={() => {
         act('play_launch_announcement_alarm');
-      }}>
+        act('button-push');
+      }}
+    >
       Start Alarm
     </Button>
   );
 };
 
-const LaunchAnnouncementAlarm = (_, context) => {
-  const { data, act } = useBackend<DropshipNavigationProps>(context);
-  const [siteselection, setSiteSelection] = useSharedState<string | undefined>(
-    context,
-    'target_site',
-    undefined
-  );
+const LaunchAnnouncementAlarm = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
     <Section
+      m="0"
+      fitted
       title="Launch Announcement Alarm"
       buttons={
         !data.playing_launch_announcement_alarm ? (
@@ -336,15 +395,86 @@ const LaunchAnnouncementAlarm = (_, context) => {
   );
 };
 
-const RenderScreen = (props, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+const DropshipButton = (props: {
+  readonly shipId: string;
+  readonly shipName: string;
+  readonly disable: boolean;
+  readonly onClick: () => void;
+}) => {
+  const { act, data } = useBackend<DropshipNavigationProps>();
+  const match = props.shipId === data.shuttle_id;
+
   return (
-    <>
-      {data.can_set_automated === 1 && <AutopilotConfig />}
+    <Button
+      width="30%"
+      textAlign="center"
+      disabled={match || props.disable}
+      onClick={() => {
+        act('change_shuttle', { new_shuttle: props.shipId });
+        act('button-push');
+        props.onClick();
+      }}
+    >
+      {match && '['}
+      {props.shipName}
+      {match && ']'}
+    </Button>
+  );
+};
+
+const DropshipSelector = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
+  const [refreshTimeout, setRefreshTimeout] = useState<
+    NodeJS.Timeout | undefined
+  >(undefined);
+
+  useEffect(() => {
+    if (refreshTimeout) {
+      return () => clearTimeout(refreshTimeout);
+    }
+    return () => {};
+  }, [refreshTimeout]);
+
+  return (
+    <Section m="0" mb="6px" title="Select Dropship">
+      <Stack justify="space-evenly">
+        {data.alternative_shuttles
+          .sort((a, b) => a.id.localeCompare(b.id))
+          .map((x) => (
+            <DropshipButton
+              key={x.id}
+              shipId={x.id}
+              shipName={x.name}
+              disable={refreshTimeout !== undefined}
+              onClick={() => {
+                const freeze = setTimeout(
+                  () => setRefreshTimeout(undefined),
+                  2000,
+                );
+                setRefreshTimeout(freeze);
+              }}
+            />
+          ))}
+      </Stack>
+    </Section>
+  );
+};
+
+const RenderScreen = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
+  return (
+    <Section fill scrollable>
+      {data.alternative_shuttles.length > 0 && <DropshipSelector />}
       {data.shuttle_mode === 'idle' && <DropshipDestinationSelection />}
+      {data.shuttle_mode === 'idle' && data.can_set_automated === 1 && (
+        <AutopilotConfig />
+      )}
       {data.shuttle_mode === 'igniting' && <LaunchCountdown />}
       {data.shuttle_mode === 'pre-arrival' && <TouchdownCooldown />}
       {data.shuttle_mode === 'recharging' && <ShuttleRecharge />}
+      {data.shuttle_mode === 'recharging' && data.can_set_automated === 1 && (
+        <AutopilotConfig />
+      )}
       {data.shuttle_mode === 'called' && data.target_destination && (
         <InFlightCountdown />
       )}
@@ -352,18 +482,27 @@ const RenderScreen = (props, context) => {
         <DropshipDestinationSelection />
       )}
       {data.door_status.length > 0 && <DropshipDoorControl />}
-      {<LaunchAnnouncementAlarm />}
+      {data.alternative_shuttles.length === 0 && <LaunchAnnouncementAlarm />}
+    </Section>
+  );
+};
+
+const DropshipDisabledScreen = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
+  return (
+    <>
+      {data.alternative_shuttles.length > 0 && <DropshipSelector />}
+      <DisabledScreen />
     </>
   );
 };
 
-export const DropshipFlightControl = (props, context) => {
-  const { data } = useBackend<DropshipNavigationProps>(context);
+export const DropshipFlightControl = () => {
+  const { data } = useBackend<DropshipNavigationProps>();
   return (
-    <Window theme="crtgreen" height={500} width={700}>
+    <Window theme="crtgreen" height={550} width={700}>
       <Window.Content className="NavigationMenu">
-        {data.is_disabled === 1 && <DisabledScreen />}
-        {data.is_disabled === 0 && <RenderScreen />}
+        {data.is_disabled === 0 ? <RenderScreen /> : <DropshipDisabledScreen />}
       </Window.Content>
     </Window>
   );

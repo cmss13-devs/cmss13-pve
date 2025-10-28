@@ -16,6 +16,10 @@ map almayer
 	disabled
 endmap
 
+map firefly
+	disabled
+endmap
+
 map golden_arrow
 	default
 endmap
@@ -27,4 +31,13 @@ map rover
 endmap
 
 map golden_arrow_classic
+endmap
+
+map uscss_obsidian_falk
+endmap
+
+map uscss_onyx_karain
+endmap
+
+map hms_brynhild
 endmap

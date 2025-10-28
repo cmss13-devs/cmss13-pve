@@ -1,0 +1,10 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Grenade boxes for the Type 6, RDG-17, Type 8 WP, VOG 73 grenades, M42 MFHS, G-2 SEBB, M15 frag, M74 AGMF/AGMI/AGMS and 40mm HEDP/HEFA/baton/buckshot/incen, featuring closed, open, half-full & empty states"
+  - rscadd: "All other grenade boxes got a similar treatment, having sprites for their various states."
+  - qol: "Fixed the grenade armor webbings to accept the new grenade types"
+  - code_imp: "Grenade boxes swapped over to be magazine_box subtypes, with all the havoc that brings"
+  - rscdel: "The M40 HEFA box is no more. Let that meme die already"
+  - imageadd: "Sprites for the UPP boxes & contents"
+  - imageadd: "Sprite for cooking-off grenade boxes"

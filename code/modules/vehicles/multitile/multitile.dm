@@ -147,7 +147,7 @@
 	var/list/misc_multipliers = list(
 		"move" = 1.0,
 		"accuracy" = 1.0,
-		"cooldown" = 1
+		"cooldown" = 1,
 	)
 
 	//Changes how much damage the vehicle takes
@@ -158,7 +158,8 @@
 		"bullet" = 1.0,
 		"explosive" = 1.0,
 		"blunt" = 1.0,
-		"abstract" = 1.0) //abstract for when you just want to hurt it
+		"abstract" = 1.0,
+	) //abstract for when you just want to hurt it
 
 	// This is more important than you think.
 	// Explosive waves can propagate through the vehicle and hit it multiple times
@@ -259,17 +260,21 @@
 //Normal examine() but tells the player what is installed and if it's broken
 /obj/vehicle/multitile/get_examine_text(mob/user)
 	. = ..()
-	for(var/obj/item/hardpoint/H in hardpoints)
-		. += "There is \a [H] module installed."
-		H.examine(user, TRUE)
+	for(var/obj/item/hardpoint/attachment in hardpoints)
+		. += "There [attachment.p_are()] \a [attachment] module[attachment.p_s()] installed."
+		if(health <= 0)
+			. += "It's busted!\n"
+		else if(isobserver(user) || (ishuman(user) && (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE) || skillcheck(user, SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN))))
+			. += "It's at [round(attachment.get_integrity_percent(), 1)]% integrity!\n"
+		attachment.examine(user, TRUE)
 	if(clamped)
 		. += "There is a vehicle clamp attached."
 	if(isxeno(user) && interior)
 		var/passengers_amount = interior.passengers_taken_slots
-		for(var/datum/role_reserved_slots/RRS in interior.role_reserved_slots)
-			passengers_amount += RRS.taken
+		for(var/datum/role_reserved_slots/role_slots in interior.role_reserved_slots)
+			passengers_amount += role_slots.taken
 		if(passengers_amount > 0)
-			. += "You can sense approximately [passengers_amount] hosts inside."
+			. += "You can sense approximately [passengers_amount] host\s inside."
 
 /obj/vehicle/multitile/proc/load_hardpoints()
 	return
@@ -295,14 +300,14 @@
 		// Health check is done before the hardpoint takes damage
 		// This way, the frame won't take damage at the same time hardpoints break
 		if(H.can_take_damage())
-			H.take_damage(round(damage * get_dmg_multi(type)))
+			H.take_damage(floor(damage * get_dmg_multi(type)))
 			all_broken = FALSE
 
 	// If all hardpoints are broken, the vehicle frame begins taking full damage
 	if(all_broken)
 		health = max(0, health - damage * get_dmg_multi(type))
 	else //otherwise, 1/10th of damage lands on the hull
-		health = max(0, health - round(damage * get_dmg_multi(type) / 10))
+		health = max(0, health - floor(damage * get_dmg_multi(type) / 10))
 
 	if(ismob(attacker))
 		var/mob/M = attacker
@@ -336,11 +341,12 @@
 
 	// Checked here because we want to be able to null the mob in a seat
 	if(!istype(M))
-		return
+		return FALSE
 
 	M.set_interaction(src)
 	M.reset_view(src)
 	give_action(M, /datum/action/human_action/vehicle_unbuckle)
+	return TRUE
 
 /// Get crewmember of seat.
 /obj/vehicle/multitile/proc/get_seat_mob(seat)

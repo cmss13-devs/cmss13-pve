@@ -1,6 +1,6 @@
 // DEFINES
 ///Time until a zombie rises from the dead
-#define ZOMBIE_REVIVE_TIME 1 MINUTES
+#define ZOMBIE_REVIVE_TIME 3 MINUTES
 
 /datum/species/zombie
 	group = SPECIES_HUMAN
@@ -59,21 +59,22 @@
 	zombie.equip_to_slot_or_del(new /obj/item/weapon/zombie_claws(zombie), WEAR_L_HAND, TRUE)
 	zombie.equip_to_slot_or_del(new /obj/item/clothing/glasses/zombie_eyes(zombie), WEAR_EYES, TRUE)
 
-	var/datum/disease/black_goo/D = locate() in zombie.viruses
-	if(!D)
-		D = zombie.AddDisease(new /datum/disease/black_goo())
-	D.stage = 5
+	var/datum/disease/black_goo/zombie_infection = locate() in zombie.viruses
+	if(!zombie_infection)
+		zombie_infection = zombie.AddDisease(new /datum/disease/black_goo())
+	zombie_infection.stage = 4
 
-	var/datum/mob_hud/Hu = huds[MOB_HUD_MEDICAL_OBSERVER]
+	var/datum/mob_hud/Hu = GLOB.huds[MOB_HUD_MEDICAL_OBSERVER]
 	Hu.add_hud_to(zombie, zombie)
 
 	return ..()
 
 
+
 /datum/species/zombie/post_species_loss(mob/living/carbon/human/zombie)
 	..()
 	remove_from_revive(zombie)
-	var/datum/mob_hud/Hu = huds[MOB_HUD_MEDICAL_OBSERVER]
+	var/datum/mob_hud/Hu = GLOB.huds[MOB_HUD_MEDICAL_OBSERVER]
 	Hu.remove_hud_from(zombie, zombie)
 
 
@@ -94,11 +95,11 @@
 		var/obj/limb/head/head = zombie.get_limb("head")
 		if(!QDELETED(head) && !(head.status & LIMB_DESTROYED))
 			if(zombie.client)
-				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You will rise again in one minute.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
+				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You will rise again in three minutes.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
 			to_chat(zombie, SPAN_XENOWARNING("You fall... but your body is slowly regenerating itself."))
 			var/weak_ref = WEAKREF(zombie)
 			to_revive[weak_ref] = addtimer(CALLBACK(src, PROC_REF(revive_from_death), zombie, "[REF(zombie)]"), ZOMBIE_REVIVE_TIME, TIMER_STOPPABLE|TIMER_OVERRIDE|TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
-			revive_times[weak_ref] = world.time + 1 MINUTES
+			revive_times[weak_ref] = world.time + 3 MINUTES
 		else
 			if(zombie.client)
 				zombie.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>You are dead...</u></span><br>You lost your head. No reviving for you.", /atom/movable/screen/text/screen_text/command_order, rgb(155, 0, 200))
@@ -126,8 +127,8 @@
 /datum/species/zombie/proc/handle_alert_ghost(mob/living/carbon/human/zombie)
 	var/mob/dead/observer/ghost = zombie.get_ghost()
 	if(ghost?.client)
-		playsound_client(ghost.client, 'sound/effects/adminhelp_new.ogg')
-		to_chat(ghost, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("Your body has risen! (Verbs -> Ghost -> Re-enter corpse, or <a href='?src=\ref[ghost];reentercorpse=1'>click here!</a>)")))
+		playsound_client(ghost.client, 'sound/effects/revive_notify.ogg')
+		to_chat(ghost, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("Your body has risen! (Verbs -> Ghost -> Re-enter corpse, or <a href='byond://?src=\ref[ghost];reentercorpse=1'>click here!</a>)")))
 
 /datum/species/zombie/proc/remove_from_revive(mob/living/carbon/human/zombie)
 	var/weak_ref = WEAKREF(zombie)

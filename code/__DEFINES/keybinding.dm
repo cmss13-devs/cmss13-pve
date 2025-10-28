@@ -33,6 +33,7 @@
 //Client
 #define COMSIG_KB_CLIENT_GETHELP_DOWN "keybinding_client_gethelp_down"
 #define COMSIG_KB_CLIENT_SCREENSHOT_DOWN "keybinding_client_screenshot_down"
+#define COMSIG_KB_CLIENT_TOGGLEFULLSCREEN_DOWN "keybinding_client_togglefullscreen_down"
 #define COMSIG_KB_CLIENT_MINIMALHUD_DOWN "keybinding_client_minimalhud_down"
 
 //Communication
@@ -165,13 +166,14 @@
 #define COMSIG_KB_XENO_HIVE_STATUS "keybinding_hive_status"
 #define COMSIG_KB_XENO_HIDE "keybinding_hide"
 #define COMSIG_KB_XENO_EVOLVE "keybinding_evolve"
+#define COMSIG_KB_XENO_PURCHASE_STRAIN "keybinding_purchase_strain"
+
 // Yautja
 
 #define COMSIG_KB_YAUTJA_BUTCHER "keybinding_yautja_butcher"
 #define COMSIG_KB_YAUTJA_PRED_BUY "keybinding_yautja_pred_buy"
 #define COMSIG_KB_YAUTJA_MARK_PANEL "keybinding_yautja_mark_panel"
-#define COMSIG_KB_YAUTJA_MARK_FOR_HUNT "keybinding_yautja_mark_for_hunt"
-#define COMSIG_KB_YAUTJA_REMOVE_FROM_HUNT "keybinding_yautja_remove_from_hunt"
+#define COMSIG_KB_YAUTJA_TOGGLE_MARK_FOR_HUNT "keybinding_yautja_toggle_mark_for_hunt"
 
 // Yautja Bracer
 #define COMSIG_KB_YAUTJA_TOGGLE_NOTIFICATION_SOUND "keybinding_yautja_toggle_notification_sound"
@@ -192,6 +194,7 @@
 #define COMSIG_KB_YAUTJA_BRACERNAME "keybinding_yautja_bracername"
 #define COMSIG_KB_YAUTJA_IDCHIP "keybinding_yautja_idchip"
 #define COMSIG_KB_YAUTJA_LINK_BRACER "keybinding_yautja_link_bracer"
+#define COMSIG_KB_YAUTJA_CONTROL_FALCON "keybinding_yautja_control_falcon"
 
 //mask
 #define COMSIG_KB_YAUTJA_MASK_TOGGLE_ZOOM "keybinding_yautja_mask_toggle_zoom"
@@ -207,6 +210,14 @@
 #define COMSIG_KB_OBSERVER_JOIN_PREDATOR "keybinding_observer_join_pred"
 #define COMSIG_KB_OBSERVER_JOIN_LESSER_DRONE "keybinding_observer_join_lesser_drone"
 
+// Vehicles
+
+#define COMSIG_KB_VEHICLE_TOGGLE_LOCKS "keybinding_vehicle_toggle_locks"
+#define COMSIG_KB_VEHICLE_GET_STATUS "keybinding_vehicle_get_status"
+#define COMSIG_KB_VEHICLE_CHANGE_SELECTED_WEAPON "keybinding_change_selected_weapon"
+#define COMSIG_KB_VEHICLE_ACTIVATE_HORN "keybinding_activate_horn"
+#define COMSIG_KB_VEHICLE_RELOAD_WEAPON "keybinding_reload_weapon"
+
 #define CATEGORY_CLIENT "CLIENT"
 #define CATEGORY_EMOTE "EMOTE"
 #define CATEGORY_ADMIN "ADMIN"
@@ -217,6 +228,7 @@
 #define CATEGORY_HUMAN_INVENTORY "HUMAN INVENTORY"
 #define CATEGORY_ROBOT "ROBOT"
 #define CATEGORY_YAUTJA "YAUTJA"
+#define CATEGORY_VEHICLE "VEHICLES"
 #define CATEGORY_MISC "MISC"
 #define CATEGORY_MOVEMENT "MOVEMENT"
 #define CATEGORY_COMMUNICATION "COMMUNICATION"
@@ -234,7 +246,8 @@
 #define WEIGHT_ROBOT 30
 #define WEIGHT_XENO 30
 #define WEIGHT_MOB 40
-#define WEIGHT_LIVING 50
-#define WEIGHT_DEAD 60
-#define WEIGHT_EMOTE 70
+#define WEIGHT_VEHICLE 50
+#define WEIGHT_LIVING 60
+#define WEIGHT_DEAD 70
+#define WEIGHT_EMOTE 80
 #define WEIGHT_LOWEST 999

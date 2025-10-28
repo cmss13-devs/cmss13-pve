@@ -1,0 +1,5 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - qol: "Swiss army knife changes state when clicked with off hand"
+  - bugfix: "Razor no longer gets stuck in your pockets"

@@ -77,6 +77,11 @@
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
+/obj/item/ammo_magazine/rifle/tracer
+	name = "\improper M41A tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
 //M41A (MK1) TRUE AND ORIGINAL
 
@@ -89,18 +94,13 @@
 	default_ammo = /datum/ammo/bullet/rifle
 	ammo_band_icon = "+m41a_mk1_band"
 	ammo_band_icon_empty = "+m41a_mk1_band_e"
+	bonus_overlay = "m41a_mk1_overlay"
 
 /obj/item/ammo_magazine/rifle/m41aMK1/rubber
-	name = "\improper M41A Less Lethal magazine"
+	name = "\improper M41A rubber magazine"
 	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm less lethal rubber bullets. Be careful, they're LESS, lethal, not NON, lethal."
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
-
-/obj/item/ammo_magazine/rifle/m41aMK1/training
-	name = "\improper M41A training magazine"
-	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm training rounds."
-	default_ammo = /datum/ammo/bullet/rifle/rubber
-	ammo_band_color = AMMO_BAND_COLOR_TRAINING
 
 /obj/item/ammo_magazine/rifle/m41aMK1/ap
 	name = "\improper M41A AP magazine (10x24mm)"
@@ -131,65 +131,68 @@
 	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains wall-penetrating bullets."
 	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
+/obj/item/ammo_magazine/rifle/m41aMK1/recon
+	icon_state = "m41a_mk1_recon"
+	current_rounds = 95
+	bonus_overlay = "m41a_mk1_recon_overlay"
+
+/obj/item/ammo_magazine/rifle/m41aMK1/tracer
+	name = "\improper M41A MK1 tracer magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine filled with tracer bullets."
+	default_ammo = /datum/ammo/bullet/rifle/tracer
+
 //-------------------------------------------------------
-//M4RA, l42 reskin, same stats as before but different, lore friendly, shell.
+//M49A, l42 reskin, same stats as before but different, lore friendly, shell.
 
-/obj/item/ammo_magazine/rifle/m4ra
-	name = "\improper M4RA magazine (10x24mm)"
-	desc = "A magazine of standard 10x24mm rounds for use in the M4RA battle rifle."
-	icon_state = "m4ra"
-	default_ammo = /datum/ammo/bullet/rifle
-	max_rounds = 25
-	gun_type = /obj/item/weapon/gun/rifle/m4ra
-	ammo_band_icon = "+m4ra_band"
-	ammo_band_icon_empty = "+m4ra_band_e"
+/obj/item/ammo_magazine/rifle/m49a
+	name = "\improper M49A magazine (10x28mm)"
+	desc = "A magazine of standard 10x28mm rounds for use in the M49A battle rifle."
+	icon_state = "m49a"
+	caliber = "10x28mm"
+	default_ammo = /datum/ammo/bullet/rifle/heavy
+	max_rounds = 30
+	gun_type = /obj/item/weapon/gun/rifle/m49a
+	ammo_band_icon = "+m49a_band"
+	ammo_band_icon_empty = "+m49a_band_e"
 
-/obj/item/ammo_magazine/rifle/m4ra/ap
-	name = "\improper M4RA armor-piercing magazine (10x24mm)"
-	desc = "A magazine of armor-piercing 10x24mm rounds for use in the M4RA battle rifle."
-	default_ammo = /datum/ammo/bullet/rifle/ap
-	max_rounds = 25
+/obj/item/ammo_magazine/rifle/m49a/ap
+	name = "\improper M49A armor-piercing magazine (10x28mm)"
+	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M49A battle rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/ap
+	max_rounds = 30
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
-/obj/item/ammo_magazine/rifle/m4ra/ext
-	name = "\improper M4RA extended magazine (10x24mm)"
-	desc = "A magazine of armor-piercing 10x24mm rounds for use in the M4RA battle rifle. Holds an additional 10 rounds, up to 35."
-	icon_state = "m4ra_extended"
-	bonus_overlay = "m4ra_ex"
-	max_rounds = 35
+/obj/item/ammo_magazine/rifle/m49a/ext
+	name = "\improper M49A extended magazine (10x28mm)"
+	desc = "A magazine of armor-piercing 10x28mm rounds for use in the M49A battle rifle. Holds an additional 10 rounds, up to 40."
+	icon_state = "m49a_extended"
+	bonus_overlay = "m49a_ex"
+	max_rounds = 40
 
-/obj/item/ammo_magazine/rifle/m4ra/rubber
-	name = "M4RA rubber magazine (10x24mm)"
-	desc = "A magazine of less than lethal rubber 10x24mm rounds for use in the M4RA battle rifle."
+/obj/item/ammo_magazine/rifle/m49a/rubber
+	name = "M49A rubber magazine (10x28mm)"
+	desc = "A magazine of less than lethal rubber 10x28mm rounds for use in the M49A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/rubber
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
-/obj/item/ammo_magazine/rifle/m4ra/heap
-	name = "\improper M4RA high-explosive armor-piercing magazine (10x24mm)"
-	desc = "A magazine of high explosive armor piercing 10x24mm rounds for use in the M4RA battle rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heap
+/obj/item/ammo_magazine/rifle/m49a/heap
+	name = "\improper M49A high-explosive armor-piercing magazine (10x28mm)"
+	desc = "A magazine of high explosive armor piercing 10x28mm rounds for use in the M49A battle rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
-/obj/item/ammo_magazine/rifle/m4ra/penetrating
-	name = "\improper M4RA wall-penetrating magazine (10x24mm)"
-	desc = "A magazine of wall-penetrating 10x24mm rounds for use in the M4RA battle rifle."
+/obj/item/ammo_magazine/rifle/m49a/penetrating
+	name = "\improper M49A wall-penetrating magazine (10x28mm)"
+	desc = "A magazine of wall-penetrating 10x28mm rounds for use in the M49A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/ap/penetrating
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 
-/obj/item/ammo_magazine/rifle/m4ra/incendiary
-	name = "\improper M4RA incendiary magazine (10x24mm)"
-	desc = "A magazine of incendiary 10x24mm rounds for use in the M4RA battle rifle."
+/obj/item/ammo_magazine/rifle/m49a/incendiary
+	name = "\improper M49A incendiary magazine (10x28mm)"
+	desc = "A magazine of incendiary 10x28mm rounds for use in the M49A battle rifle."
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
-
-/obj/item/ammo_magazine/rifle/m4ra/pve
-	name = "\improper M4RA depleted uranium magazine (10x24mm)"
-	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x24mm rounds for use in the M4RA-R2 battle rifle."
-	icon_state = "m4ra"
-	default_ammo = /datum/ammo/bullet/rifle/m4ra/du
-	max_rounds = 30
-	gun_type = /obj/item/weapon/gun/rifle/m4ra/pve
-	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 //-------------------------------------------------------
 //XM40 AKA SOF RIFLE FROM HELL (It's an EM-2, a prototype of the real world L85A1 way back from the 1940s. We've given it a blue plastic shell and an integral suppressor)
@@ -198,7 +201,7 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd"
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
+	gun_type = /obj/item/weapon/gun/rifle/m41aMK1/xm40
 	default_ammo = /datum/ammo/bullet/rifle/ap
 
 /obj/item/ammo_magazine/rifle/xm40/heap
@@ -206,16 +209,15 @@
 	desc = "A stubby and wide, high-capacity double stack magazine used in the XM40 pulse rifle. Fires 10x24mm High Explosive Armor Piercing rounds, holding up to 60 + 1 in the chamber."
 	icon_state = "m40_sd_heap"
 	max_rounds = 60
-	gun_type = /obj/item/weapon/gun/rifle/m41a/elite/xm40
 	default_ammo = /datum/ammo/bullet/rifle/heap
 
 //-------------------------------------------------------
 //MAR-40 AK CLONE //AK47 and FN FAL together as one.
 
 /obj/item/ammo_magazine/rifle/mar40
-	name = "\improper MAR magazine (7.62x39mm)"
-	desc = "A 7.62x39mm magazine for the MAR series of firearms."
-	caliber = "7.62x39mm"
+	name = "\improper MAR magazine (8.8x29mm)"
+	desc = "A 8.8x29mm magazine for the MAR series of firearms."
+	caliber = "8.8x29mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mar40"
 	default_ammo = /datum/ammo/bullet/rifle/mar40
@@ -224,16 +226,16 @@
 	w_class = SIZE_MEDIUM
 
 /obj/item/ammo_magazine/rifle/mar40/extended
-	name = "\improper MAR extended magazine (7.62x39mm)"
-	desc = "A 7.62x39mm MAR magazine, this one carries more rounds than the average magazine."
+	name = "\improper MAR extended magazine (8.8x29mm)"
+	desc = "A 8.8x29mm magazine, this one carries more rounds than the average magazine."
 	max_rounds = 60
 	bonus_overlay = "mar40_ex"
 	icon_state = "mar40_extended"
 
 /obj/item/ammo_magazine/rifle/mar40/lmg
-	name = "\improper MAR drum magazine (7.62x39mm)"
-	desc = "A 7.62x39mm drum magazine for the MAR-50 LMG."
-	caliber = "7.62x39mm"
+	name = "\improper MAR drum magazine (8.8x29mm)"
+	desc = "A 8.8x29mm drum magazine for the MAR-50 LMG."
+	caliber = "8.8x29mm"
 	icon_state = "mar50"
 	max_rounds = 100
 	gun_type = /obj/item/weapon/gun/rifle/mar40/lmg
@@ -247,7 +249,7 @@
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/m16
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -260,7 +262,6 @@
 	caliber = "5.56x45mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m16"
-	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -271,7 +272,7 @@
 	name = "\improper M16 AP magazine"
 	desc = "An AP 5.56x45mm magazine for the M16 assault rifle and its clones. Holds 20 rounds."
 	caliber = "5.56x45mm"
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/m16/ap
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/m16
 	w_class = SIZE_MEDIUM
@@ -286,66 +287,103 @@
 	caliber = "7.62x51mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "ar10"
-	default_ammo = /datum/ammo/bullet/rifle
+	default_ammo = /datum/ammo/bullet/rifle/ar10
 	max_rounds = 20
 	gun_type = /obj/item/weapon/gun/rifle/ar10
 	w_class = SIZE_MEDIUM
 
 //-------------------------------------------------------
-//M41AE2 HEAVY PULSE RIFLE
-
-/obj/item/ammo_magazine/rifle/lmg
-	name = "\improper M41AE2 ammo box (10x24mm)"
-	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle."
-	icon_state = "m41ae2"
-	max_rounds = 300
-	gun_type = /obj/item/weapon/gun/rifle/lmg
-	flags_magazine = AMMUNITION_CANNOT_REMOVE_BULLETS|AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
-	ammo_band_icon = "+m41ae2_band"
-	ammo_band_icon_empty = "+m41ae2_band_e"
-
-/obj/item/ammo_magazine/rifle/lmg/holo_target
-	name = "\improper M41AE2 ammo box (10x24mm holo-target)"
-	desc = "A semi-rectangular box of holo-target rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/holo_target
-	max_rounds = 200
-	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
-
-/obj/item/ammo_magazine/rifle/lmg/heap
-	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
-	desc = "A semi-rectangular box of rounds for the M41AE2 Heavy Pulse Rifle. This one contains the standard Armor-Piercing explosive tipped round of the USCM."
-	default_ammo = /datum/ammo/bullet/rifle/heap
-	max_rounds = 300
-	gun_type = /obj/item/weapon/gun/rifle/lmg
-	ammo_band_color = AMMO_BAND_COLOR_HEAP
-
-//-------------------------------------------------------
 //UPP TYPE 71 RIFLE
 
 /obj/item/ammo_magazine/rifle/type71
-	name = "\improper Type 71 magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine for the Type 71 rifle."
-	caliber = "5.45x39mm"
+	name = "\improper Type 71 magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine for the Type 71 rifle."
+	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type71"
 	ammo_band_icon = "+type71_band"
 	ammo_band_icon_empty = "+type71_band_e"
-	default_ammo = /datum/ammo/bullet/rifle/type71
+	default_ammo = /datum/ammo/bullet/rifle/upp
 	max_rounds = 60
 	gun_type = /obj/item/weapon/gun/rifle/type71
 
+/obj/item/ammo_magazine/rifle/type71/rubber
+	name = "\improper Type 71 rubber magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing less-than-lethal rubber rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/rubber
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
 /obj/item/ammo_magazine/rifle/type71/ap
-	name = "\improper Type 71 AP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/ap
+	name = "\improper Type 71 AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
+/obj/item/ammo_magazine/rifle/type71/ap/penetrating
+	name = "\improper Type 71 AP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+
 /obj/item/ammo_magazine/rifle/type71/heap
-	name = "\improper Type 71 HEAP magazine (5.45x39mm)"
-	desc = "A 5.45x39mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
-	default_ammo = /datum/ammo/bullet/rifle/type71/heap
+	name = "\improper Type 71 HEAP magazine (10x27mm)"
+	desc = "A 10x27mm high-capacity casket magazine containing the standard high explosive armor piercing rounds for the Type 71 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+//-------------------------------------------------------
+//UPP AG80 RIFLE
+
+/obj/item/ammo_magazine/rifle/ag80
+	name = "\improper AG80 magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle."
+	caliber = "9.7x16mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ag80"
+	ammo_band_icon = "+ag80_band"
+	ammo_band_icon_empty = "+ag80_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/ag80 //need to reference the actual ammo designed for the carbine
+	max_rounds = 99
+	gun_type = /obj/item/weapon/gun/rifle/ag80
+
+/obj/item/ammo_magazine/rifle/ag80/ap
+	name = "\improper AG80 AP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with steelcore armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ag80/heap
+	name = "\improper AG80 HEAP magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with high-explosive armor piercing rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/ag80/rubber
+	name = "\improper AG80 rubber magazine (9.7x16mm)"
+	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with less-than lethal rubber rounds."
+	default_ammo = /datum/ammo/bullet/rifle/ag80/rubber //need to reference the actual ammo designed for the carbine
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+//-------------------------------------------------------
+//CANC LW-317 RIFLE
+
+/obj/item/ammo_magazine/rifle/lw317
+	name = "\improper LW-317 magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading magazine for the LW-317 carbine."
+	caliber = "6x38mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "lw317"
+	ammo_band_icon = "+lw317_band"
+	ammo_band_icon_empty = "+lw317_band_e"
+	default_ammo = /datum/ammo/bullet/rifle/lw317
+	max_rounds = 55
+	gun_type = /obj/item/weapon/gun/rifle/lw317
+
+/obj/item/ammo_magazine/rifle/lw317/ap
+	name = "\improper LW-317 AP magazine (6x38mm)"
+	desc = "A 6x38mm high-capacity top-loading armor-piercing magazine for the LW-317 carbine."
+	default_ammo = /datum/ammo/bullet/rifle/lw317/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+	bonus_overlay = "lw317apoverlay"
 //-------------------------------------------------------
 //L42A Battle Rifle
 
@@ -434,39 +472,45 @@
 	default_ammo = /datum/ammo/bullet/rifle/holo_target/hunting
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
+//M20A
+
+/obj/item/ammo_magazine/rifle/m20a
+	name = "\improper M20A magazine (10x24mm)"
+	desc = "A 10mm assault rifle magazine."
+	caliber = "10x24mm"
+	icon_state = "m20a"
+	default_ammo = /datum/ammo/bullet/rifle
+	max_rounds = 40
+	gun_type = /obj/item/weapon/gun/rifle/m20a
+	w_class = SIZE_MEDIUM
+	ammo_band_icon = "+m20a_band"
+	ammo_band_icon_empty = "+m20a_band_e"
 //-------------------------------------------------------
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/ammo_magazine/rifle/nsg23
-	name = "\improper NSG 23 magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine."
-	caliber = "10x24mm"
+	name = "\improper NSG 23 magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles."
+	caliber = "8.5x33mm"
+	default_ammo = /datum/ammo/bullet/rifle/twe
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
 	bonus_overlay = "nsg23_mag_overlay" //needs to be an overlay, as the mag has a hole that would be filled over by the ext overlay
-	max_rounds = 30
+	max_rounds = 65
 	gun_type = /obj/item/weapon/gun/rifle/nsg23
 	ammo_band_icon = "+nsg23_band"
 	ammo_band_icon_empty = "+nsg23_band_e"
 
-/obj/item/ammo_magazine/rifle/nsg23/extended
-	name = "\improper NSG 23 extended magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one contains 45 bullets."
-	icon_state = "nsg23_ext"
-	item_state = "nsg23_ext"
-	bonus_overlay = "nsg23_ext_overlay"
-	max_rounds = 45
-
 /obj/item/ammo_magazine/rifle/nsg23/ap
-	name = "\improper NSG 23 armor-piercing magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is armor piercing."
+	name = "\improper NSG 23 armor-piercing magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
-	name = "\improper NSG 23 HEAP magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
+	name = "\improper NSG 23 HEAP magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor-piercing explosive tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
@@ -494,6 +538,14 @@
 	max_rounds = 4
 	gun_type = /obj/item/weapon/gun/boltaction/vulture
 	w_class = SIZE_MEDIUM // maybe small? This shit's >4 inches long mind you
+	ammo_band_icon = "+vulture_band"
+	ammo_band_icon_empty = "+vulture_band_e"
+
+/obj/item/ammo_magazine/rifle/boltaction/vulture/holo_target
+	name = "\improper M707 \"Vulture\" holo-target magazine (20x102mm)"
+	desc = "A magazine for the M707 \"Vulture\" anti-matieriel rifle. Contains up to 4 massively oversized <b>IFF-CAPABLE</b> holo-targeting rounds, which excel at marking heavy targets to be attacked by allied ground forces. The logistical requirements for such capabilities heavily hinder the performance and stopping power of this round."
+	default_ammo =  /datum/ammo/bullet/sniper/anti_materiel/vulture/holo_target
+	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
 //=ROYAL MARINES=\\
 
@@ -536,3 +588,28 @@
 	item_state = "aug_dmr"
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+//--------------------------------------------------------
+//XM51 BREACHING SHOTGUN
+
+/obj/item/ammo_magazine/rifle/xm51
+	name = "\improper M1771 magazine (16g)"
+	desc = "A 16 gauge pump-action shotgun magazine."
+	icon_state = "xm51"
+	caliber = "16g"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/light
+	max_rounds = 12
+	gun_type = /obj/item/weapon/gun/rifle/xm51
+	transfer_handful_amount = 6
+
+/obj/item/ammo_magazine/rifle/isr
+	name = "\improper ISR box magazine (9.2x34mm)"
+	desc = "A 9.2x34mm box magazine for the ISR LMG."
+	caliber = "9.2x34mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
+	default_ammo = /datum/ammo/bullet/rifle/isr
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/isr

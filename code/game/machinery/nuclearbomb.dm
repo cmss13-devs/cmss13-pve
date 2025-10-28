@@ -1,5 +1,4 @@
-var/bomb_set = FALSE
-
+GLOBAL_VAR_INIT(bomb_set, FALSE)
 /obj/structure/machinery/nuclearbomb
 	name = "\improper Nuclear Fission Explosive"
 	desc = "Nuke the entire site from orbit, it's the only way to be sure. Too bad we don't have any orbital nukes."
@@ -59,7 +58,7 @@ var/bomb_set = FALSE
 		update_minimap_icon()
 		return PROCESS_KILL
 
-	bomb_set = TRUE //So long as there is one nuke timing, it means one nuke is armed.
+	GLOB.bomb_set = TRUE //So long as there is one nuke timing, it means one nuke is armed.
 	timeleft = explosion_time - world.time
 	if(world.time >= explosion_time)
 		explode()
@@ -90,7 +89,7 @@ var/bomb_set = FALSE
 	return XENO_ATTACK_ACTION
 
 /obj/structure/machinery/nuclearbomb/attackby(obj/item/O as obj, mob/user as mob)
-	if(anchored && timing && bomb_set && HAS_TRAIT(O, TRAIT_TOOL_WIRECUTTERS))
+	if(anchored && timing && GLOB.bomb_set && HAS_TRAIT(O, TRAIT_TOOL_WIRECUTTERS))
 		user.visible_message(SPAN_INFO("[user] begins to defuse \the [src]."), SPAN_INFO("You begin to defuse \the [src]. This will take some time..."))
 		if(do_after(user, 150 * user.get_skill_duration_multiplier(SKILL_ENGINEER), INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 			disable()
@@ -111,8 +110,8 @@ var/bomb_set = FALSE
 			return
 
 		if(isqueen(user))
-			if(timing && bomb_set)
-				user.visible_message(SPAN_INFO("[user] begins to defuse \the [src]."), SPAN_INFO("You begin to defuse \the [src]. This will take some time..."))
+			if(timing && GLOB.bomb_set)
+				user.visible_message(SPAN_INFO("[user] begins engulfing \the [src] with resin."), SPAN_INFO("You start regurgitating and engulfing the \the [src] with resin... stopping the electronics from working, this will take some time..."))
 				if(do_after(user, 5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
 					disable()
 			return
@@ -152,7 +151,7 @@ var/bomb_set = FALSE
 	data["command_lockout"] = command_lockout
 	data["allowed"] = allowed
 	data["being_used"] = being_used
-	data["decryption_complete"] = TRUE //this is overriden by techweb nuke UI_data later, this just makes it default to true
+	data["decryption_complete"] = TRUE //this is overridden by techweb nuke UI_data later, this just makes it default to true
 
 	return data
 
@@ -196,14 +195,14 @@ var/bomb_set = FALSE
 				timing = !timing
 				if(timing)
 					if(!safety)
-						bomb_set = TRUE
+						GLOB.bomb_set = TRUE
 						explosion_time = world.time + timeleft
 						update_minimap_icon()
 						start_processing()
 						announce_to_players()
 						message_admins("\The [src] has been activated by [key_name(ui.user, 1)] [ADMIN_JMP_USER(ui.user)]")
 					else
-						bomb_set = FALSE
+						GLOB.bomb_set = FALSE
 				else
 					disable()
 					message_admins("\The [src] has been deactivated by [key_name(ui.user, 1)] [ADMIN_JMP_USER(ui.user)]")
@@ -232,7 +231,7 @@ var/bomb_set = FALSE
 			being_used = FALSE
 			if(safety)
 				timing = FALSE
-				bomb_set = FALSE
+				GLOB.bomb_set = FALSE
 			. = TRUE
 
 		if("toggleCommandLockout")
@@ -330,45 +329,45 @@ var/bomb_set = FALSE
 			humans_other -= current_mob
 
 	if(timer_warning) //we check for timer warnings first
-		announcement_helper("WARNING.\n\nDETONATION IN [round(timeleft/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
-		announcement_helper("WARNING.\n\nDETONATION IN [round(timeleft/10)] SECONDS.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
+		announcement_helper("WARNING.\n\nDETONATION IN [floor(timeleft/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+		announcement_helper("WARNING.\n\nDETONATION IN [floor(timeleft/10)] SECONDS.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
 		//preds part
-		var/t_left = duration2text_sec(round(rand(timeleft - timeleft / 10, timeleft + timeleft / 10)))
-		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nYou have approximately [t_left] seconds to abandon the hunting grounds before activation of human Purification Device."))
+		var/t_left = duration2text_sec(floor(rand(timeleft - timeleft / 10, timeleft + timeleft / 10)))
+		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nYou have approximately [t_left] seconds to abandon the hunting grounds before activation of the human purification device."))
 		//xenos part
 		var/warning
 		if(timer_warning & NUKE_SHOW_TIMER_HALF)
-			warning = "Hive killer is halfway through preparation cycle!"
+			warning = "A shiver goes down our carapace as we feel the approaching end... the hive killer is halfway through its preparation cycle!"
 		else if(timer_warning & NUKE_SHOW_TIMER_MINUTE)
-			warning = "Hive killer is almost ready to trigger!"
+			warning = "Every sense in our form is screaming... the hive killer is almost ready to trigger!"
 		else
 			warning = "DISABLE IT! NOW!"
 		var/datum/hive_status/hive
 		for(var/hivenumber in GLOB.hive_datum)
 			hive = GLOB.hive_datum[hivenumber]
-			if(!hive.totalXenos.len)
+			if(!length(hive.totalXenos))
 				return
 			xeno_announcement(SPAN_XENOANNOUNCE(warning), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
 		return
 
 	var/datum/hive_status/hive
 	if(timing)
-		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE ACTIVATED.\n\nDETONATION IN [round(timeleft/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
-		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE ACTIVATED.\n\nDETONATION IN [round(timeleft/10)] SECONDS.", "HQ Nuclear Tracker", humans_other, 'sound/misc/notice1.ogg')
-		var/t_left = duration2text_sec(round(rand(timeleft - timeleft / 10, timeleft + timeleft / 10)))
-		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>A human Purification Device has been detected. You have approximately [t_left] to abandon the hunting grounds before it activates."))
+		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE ACTIVATED.\n\nDETONATION IN [floor(timeleft/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE ACTIVATED.\n\nDETONATION IN [floor(timeleft/10)] SECONDS.", "HQ Nuclear Tracker", humans_other, 'sound/misc/notice1.ogg')
+		var/t_left = duration2text_sec(floor(rand(timeleft - timeleft / 10, timeleft + timeleft / 10)))
+		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>A human purification device has been detected. You have approximately [t_left] to abandon the hunting grounds before it activates."))
 		for(var/hivenumber in GLOB.hive_datum)
 			hive = GLOB.hive_datum[hivenumber]
-			if(!hive.totalXenos.len)
+			if(!length(hive.totalXenos))
 				continue
 			xeno_announcement(SPAN_XENOANNOUNCE("The tallhosts have deployed a hive killer at [get_area_name(loc)]! Stop it at all costs!"), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
 	else
 		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DEACTIVATED.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
 		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DEACTIVATED.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
-		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>The human Purification Device's signature has disappeared."))
+		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>The human purification device's signature has disappeared."))
 		for(var/hivenumber in GLOB.hive_datum)
 			hive = GLOB.hive_datum[hivenumber]
-			if(!hive.totalXenos.len)
+			if(!length(hive.totalXenos))
 				continue
 			xeno_announcement(SPAN_XENOANNOUNCE("The hive killer has been disabled! Rejoice!"), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
 	return
@@ -378,7 +377,7 @@ var/bomb_set = FALSE
 
 /obj/structure/machinery/nuclearbomb/proc/disable()
 	timing = FALSE
-	bomb_set = FALSE
+	GLOB.bomb_set = FALSE
 	timeleft = initial(timeleft)
 	explosion_time = null
 	announce_to_players()
@@ -395,48 +394,62 @@ var/bomb_set = FALSE
 	safety = TRUE
 
 	playsound(src, 'sound/machines/Alarm.ogg', 75, 0, 30)
-	world << pick('sound/theme/nuclear_detonation1.ogg','sound/theme/nuclear_detonation2.ogg')
+	world << pick('sound/theme/nuclear_klaxon.ogg')
 
-	var/list/alive_mobs = list() //Everyone who will be destroyed on the zlevel(s).
-	var/list/dead_mobs = list() //Everyone who only needs to see the cinematic.
+	var/list/humans_other = GLOB.human_mob_list + GLOB.dead_mob_list
+	var/list/humans_uscm = list()
+	for(var/mob/current_mob as anything in humans_other)
+		if(current_mob.stat != CONSCIOUS || isyautja(current_mob))
+			humans_other -= current_mob
+			continue
+		if(current_mob.faction == FACTION_MARINE || current_mob.faction == FACTION_SURVIVOR) //separating marines from other factions. Survs go here too
+			humans_uscm += current_mob
+			humans_other -= current_mob
+	announcement_helper("IMMINENT NUCLEAR DETONATION.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/effects/ob_alert.ogg')
+	announcement_helper("IMMINENT NUCLEAR BLAST, DUCK AND COVER IMMEDIATELY.", "Colony Alert System", humans_other, 'sound/effects/ob_alert.ogg')
+
+	sleep(10 SECONDS)
+
+	var/list/mob/alive_mobs = list() //Everyone who will be destroyed on the zlevel(s).
+	var/list/mob/dead_mobs = list() //Everyone that needs embryos cleared
 	for(var/mob/current_mob as anything in GLOB.mob_list)
-		if(!current_mob?.loc)
-			continue
-		if(current_mob.stat == DEAD)
-			dead_mobs |= current_mob
-			continue
 		var/turf/current_turf = get_turf(current_mob)
-		if(z == current_turf.z)
+		if(current_turf?.z == z)
+			if(current_mob.stat == DEAD)
+				dead_mobs |= current_mob
+				continue
 			alive_mobs |= current_mob
-			shake_camera(current_mob, 110, 4)
 
-	for(var/mob/current_mob in alive_mobs)
-		if(current_mob && current_mob.loc)
-			var/turf/current_mob_turf = get_turf(current_mob)
-			if(z == current_mob_turf.z)
-				if(istype(current_mob.loc, /obj/structure/closet/secure_closet/freezer/fridge))
-					continue
-				current_mob.death(create_cause_data("nuclear explosion"))
+	for(var/datum/interior/interior in SSinterior.interiors)
+		if(!interior.exterior || interior.exterior.z != z)
+			continue
 
-	for(var/mob/current_mob in (alive_mobs + dead_mobs))
-		if(current_mob && current_mob.loc)
-			var/turf/current_mob_turf = get_turf(current_mob)
-			if(z == current_mob_turf.z)
-				if(istype(current_mob.loc, /obj/structure/closet/secure_closet/freezer/fridge))
-					continue
-				for(var/obj/item/alien_embryo/embryo in current_mob)
+		for(var/mob/living/passenger in interior.get_passengers())
+			if(!(passenger in (alive_mobs + dead_mobs)))
+				if(passenger.stat != DEAD)
+					passenger.death(create_cause_data("nuclear explosion"))
+				for(var/obj/item/alien_embryo/embryo in passenger)
 					qdel(embryo)
 
-	sleep(100)
-	cell_explosion(loc, 500, 150, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	for(var/mob/current_mob in alive_mobs)
+		if(istype(current_mob.loc, /obj/structure/closet/secure_closet/freezer/fridge))
+			continue
+		current_mob.death(create_cause_data("nuclear explosion"))
+
+	for(var/mob/living/current_mob in (alive_mobs + dead_mobs))
+		if(istype(current_mob.loc, /obj/structure/closet/secure_closet/freezer/fridge))
+			continue
+		for(var/obj/item/alien_embryo/embryo in current_mob)
+			qdel(embryo)
+
+	cell_explosion(loc, 500, 10, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name)))
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+	announcement_helper("NUCLEAR DETONATION DETECTED.", "Colony Alert System", humans_other, 'sound/misc/notice1.ogg')
 	qdel(src)
 	return TRUE
 
 /obj/structure/machinery/nuclearbomb/Destroy()
-	if(timing != -1)
-		message_admins("\The [src] has been unexpectedly deleted at ([x],[y],[x]). [ADMIN_JMP(src)]")
-		log_game("\The [src] has been unexpectedly deleted at ([x],[y],[x]).")
-	bomb_set = FALSE
+	GLOB.bomb_set = FALSE
 	SSminimaps.remove_marker(src)
 	return ..()
 
@@ -576,42 +589,42 @@ var/bomb_set = FALSE
 			announcement_helper("DECRYPTION COMPLETE", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
 			announcement_helper("DECRYPTION COMPLETE", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
 
-			yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nThe human Purification Device is able to be activated."))
+			yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nThe human purification device is able to be activated."))
 
 			var/datum/hive_status/hive
 			for(var/hivenumber in GLOB.hive_datum)
 				hive = GLOB.hive_datum[hivenumber]
 				if(!length(hive.totalXenos))
 					return
-				xeno_announcement(SPAN_XENOANNOUNCE("The hive killer is ready to be activated! Assault at once!"), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
+				xeno_announcement(SPAN_XENOANNOUNCE("We get a sense of impending doom... the hive killer is ready to be activated."), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
 			return
 
-		announcement_helper("DECRYPTION IN [round(decryption_time/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
-		announcement_helper("DECRYPTION IN [round(decryption_time/10)] SECONDS.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
+		announcement_helper("DECRYPTION IN [floor(decryption_time/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+		announcement_helper("DECRYPTION IN [floor(decryption_time/10)] SECONDS.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
 
 		//preds part
-		var/time_left = duration2text_sec(round(rand(decryption_time - decryption_time / 10, decryption_time + decryption_time / 10)))
-		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nYou have approximately [time_left] seconds to abandon the hunting grounds before human Purification Device is able to be activated."))
+		var/time_left = duration2text_sec(floor(rand(decryption_time - decryption_time / 10, decryption_time + decryption_time / 10)))
+		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nYou have approximately [time_left] seconds to abandon the hunting grounds before the human purification device is able to be activated."))
 
 		//xenos part
-		var/warning = "Hive killer is almost prepared to be activated!"
+		var/warning = "We are almost out of time, STOP THEM."
 		if(timer_warning & NUKE_DECRYPT_SHOW_TIMER_HALF)
-			warning = "Hive killer is halfway through its initial phase!"
+			warning = "The Hive grows restless! it's halfway done..."
 
 		var/datum/hive_status/hive
 		for(var/hivenumber in GLOB.hive_datum)
 			hive = GLOB.hive_datum[hivenumber]
-			if(!hive.totalXenos.len)
+			if(!length(hive.totalXenos))
 				return
 			xeno_announcement(SPAN_XENOANNOUNCE(warning), hive.hivenumber, XENO_GENERAL_ANNOUNCE)
 		return
 
 	var/datum/hive_status/hive
 	if(decrypting)
-		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DECRYPTION STARTED.\n\nDECRYPTION IN [round(decryption_time/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
-		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DECRYPTION STARTED.\n\nDECRYPTION IN [round(decryption_time/10)] SECONDS.", "HQ Nuclear Tracker", humans_other, 'sound/misc/notice1.ogg')
-		var/time_left = duration2text_sec(round(rand(decryption_time - decryption_time / 10, decryption_time + decryption_time / 10)))
-		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>A human Purification Device has been detected. You have approximately [time_left] before it finishes its initial phase."))
+		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DECRYPTION STARTED.\n\nDECRYPTION IN [floor(decryption_time/10)] SECONDS.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
+		announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE ORDNANCE DECRYPTION STARTED.\n\nDECRYPTION IN [floor(decryption_time/10)] SECONDS.", "HQ Nuclear Tracker", humans_other, 'sound/misc/notice1.ogg')
+		var/time_left = duration2text_sec(floor(rand(decryption_time - decryption_time / 10, decryption_time + decryption_time / 10)))
+		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>A human purification device has been detected. You have approximately [time_left] before it finishes its initial phase."))
 		for(var/hivenumber in GLOB.hive_datum)
 			hive = GLOB.hive_datum[hivenumber]
 			if(!length(hive.totalXenos))
@@ -621,7 +634,7 @@ var/bomb_set = FALSE
 
 	announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE DECRYPTION HALTED.", "[MAIN_AI_SYSTEM] Nuclear Tracker", humans_uscm, 'sound/misc/notice1.ogg')
 	announcement_helper("ALERT.\n\nNUCLEAR EXPLOSIVE DECRYPTION HALTED.", "HQ Intel Division", humans_other, 'sound/misc/notice1.ogg')
-	yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>The human Purification Device's signature has disappeared."))
+	yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!<br>The human purification device's signature has disappeared."))
 	for(var/hivenumber in GLOB.hive_datum)
 		hive = GLOB.hive_datum[hivenumber]
 		if(!length(hive.totalXenos))
@@ -636,3 +649,88 @@ var/bomb_set = FALSE
 
 	decrypting = FALSE
 	announce_to_players()
+
+/obj/structure/machinery/nuclearbomb/ADM
+	name = "\improper Tactical Atomic Demolition Munition"
+	desc = "Commonly referred to as a 'nuclear landmine' and colloquially as 'Heinz' for its cylindrical shape. The Mk-214 TADM is designed for discrete deployment in an area of operations to completely clear a several-mile radius around the blast point."
+	icon = 'icons/obj/items/marine-items.dmi'
+	icon_state = "adm"
+	pixel_x = 0
+	var/source_type = /obj/item/ADM
+
+/obj/structure/machinery/nuclearbomb/ADM/attackby(obj/item/item, mob/user)
+	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
+		if(user.action_busy)
+			return
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE))
+			to_chat(user, SPAN_WARNING("You do not know how to pack up [src] using a security tuner..."))
+			return
+		user.visible_message(SPAN_NOTICE("[user] starts packing up [src]."), \
+			SPAN_NOTICE("You begin packing up [src]..."))
+		playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
+		if(do_after(user, 5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src))
+			collapse(usr)
+		else
+			to_chat(user, SPAN_WARNING("You stop packing up [src]."))
+	return ..()
+
+/obj/structure/machinery/nuclearbomb/ADM/proc/collapse(mob/living/carbon/human/user)
+	var/obj/item/ADM = new source_type(loc)
+	if(istype(user))
+		user.visible_message(SPAN_NOTICE("[user] packs up [src]."),
+			SPAN_NOTICE("You pack up [src]."))
+		user.put_in_active_hand(ADM)
+	qdel(src)
+
+// ADM in hands
+/obj/item/ADM
+	name = "Mk-214 Tactical Atomic Demolition Munition"
+	desc = "A packed-up TADM awaiting deployment to bring some serious pain. Includes the console and arming keys for the warhead."
+	w_class = SIZE_LARGE
+	unacidable = TRUE
+	flags_equip_slot = SLOT_BACK
+	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
+	icon_state = "admpacked"
+	item_state = "admpacked"
+	icon = 'icons/obj/items/marine-items.dmi'
+
+/obj/item/ADM/attack_self(mob/user)
+	. = ..()
+
+	if(SSinterior.in_interior(user))
+		to_chat(usr, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
+		return
+	var/turf/Tile = get_step(user, user.dir)
+	var/blocked = FALSE
+	for(var/obj/Obj in Tile)
+		if(Obj.density)
+			blocked = TRUE
+			break
+	for(var/mob/Mob in Tile)
+		blocked = TRUE
+		break
+	if(istype(Tile, /turf/open))
+		var/turf/open/floor = Tile
+		if(!floor.allow_construction)
+			to_chat(user, SPAN_WARNING("You cannot deploy \a [src] here, find a more secure surface!"))
+			return FALSE
+	else
+		blocked = TRUE
+	if(blocked)
+		to_chat(usr, SPAN_WARNING("You need a clear, open area to deploy \a [src], something is blocking the way in front of you!"))
+		return
+
+	if(usr.action_busy)
+		return
+	user.visible_message(SPAN_NOTICE("[user] begins deploying [src]."),
+			SPAN_NOTICE("You begin deploying [src]."))
+	playsound(loc, list('sound/handling/armorequip_1.ogg', 'sound/handling/armorequip_2.ogg'), 25, 1)
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		to_chat(user, SPAN_WARNING("You were interrupted."))
+		return
+	user.visible_message(SPAN_NOTICE("[user] has finished deploying [src]."),
+			SPAN_NOTICE("You finish deploying [src]."))
+
+	var/obj/structure/machinery/nuclearbomb/ADM/planted = new(Tile)
+	planted.update_icon()
+	qdel(src)

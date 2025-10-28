@@ -1,0 +1,4 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Guns can be set to start on burst-fire, provided they're set up for it."

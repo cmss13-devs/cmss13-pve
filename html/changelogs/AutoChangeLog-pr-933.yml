@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "Messages ending in '!' and '?' change the verb from 'says' to 'shouts/yells/exclaims' or 'asks' again or their language equivalent."
+  - rscadd: "Scandinavian Language is now pickable as an character trait."

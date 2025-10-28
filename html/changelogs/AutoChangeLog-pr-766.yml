@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "answering an emote such as high-five no longer requires targeting a specific limb."
+  - qol: "Removed client window side padding to prevent accidental dragging"

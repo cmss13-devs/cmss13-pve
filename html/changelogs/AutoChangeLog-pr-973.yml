@@ -1,0 +1,9 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - rscadd: "Added Civilian Squad of Operations to all 4 subgroups (UA, UA LatAm, UPP and TWE)"
+  - qol: "Did a pass at updating all the squad makeups to make sure the right prop was being made the squad leader"
+  - bugfix: "Removed the Admin from the UPP Civilian squad, and replaced with another civilian"
+  - ui: "added scrolling bar to human squad spawner"
+  - bugfix: "thanks to Pandora's help, redefined something so that the UA Rebel squad appears properly"
+  - rscadd: "Added a new squad faction to the spawner; contractors. Base and covert variants."

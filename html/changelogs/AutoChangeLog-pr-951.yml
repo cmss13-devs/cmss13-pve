@@ -1,0 +1,4 @@
+author: "banana-battery"
+delete-after: True
+changes:
+  - rscadd: "added a little alcove tucked away in the Arrow's cargo-bay"

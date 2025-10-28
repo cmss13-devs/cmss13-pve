@@ -1,0 +1,4 @@
+author: "The32bitguy"
+delete-after: True
+changes:
+  - bugfix: "Human AI now check if a vehicle is in their friendly or neutral factions before targeting."

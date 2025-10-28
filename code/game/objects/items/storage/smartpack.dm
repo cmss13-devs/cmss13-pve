@@ -1,5 +1,5 @@
 #define BACKPACK_LIGHT_LEVEL 6
-#define PROTECTIVE_COST 50
+#define PROTECTIVE_COST 150
 #define REPAIR_COST 100
 #define IMMOBILE_COST 20
 
@@ -52,7 +52,7 @@
 	update_icon(usr)
 
 /obj/item/storage/backpack/marine/smartpack/clicked(mob/user, list/mods)
-	if(mods["ctrl"] && CAN_PICKUP(user, src))
+	if(mods[CTRL_CLICK] && CAN_PICKUP(user, src))
 		toggle_exoskeleton()
 		return TRUE
 	return ..()

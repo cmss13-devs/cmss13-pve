@@ -1,0 +1,4 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - admin: "Gamemasters can set LOOC cooldown now."

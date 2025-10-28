@@ -1,4 +1,10 @@
+#define LANGCHAT_LONGEST_TEXT 64
+#define LANGCHAT_WIDTH 96
+#define LANGCHAT_MAX_ALPHA 196
+
 /atom/var/langchat_height = 32 // abovetile usually
+/atom/var/langchat_max_length = LANGCHAT_LONGEST_TEXT
+/atom/var/langchat_width = LANGCHAT_WIDTH
 /atom/var/langchat_color = "#FFFFFF"
 /atom/var/langchat_styles = ""
 
@@ -10,10 +16,7 @@
 /mob/living/carbon/xenomorph/hivelord/langchat_height = 64
 /mob/living/carbon/xenomorph/defender/langchat_height = 48
 /mob/living/carbon/xenomorph/warrior/langchat_height = 48
-
-#define LANGCHAT_LONGEST_TEXT 64
-#define LANGCHAT_WIDTH 96
-#define LANGCHAT_MAX_ALPHA 196
+/mob/living/carbon/xenomorph/king/langchat_height = 64
 
 //pop defines
 #define LANGCHAT_DEFAULT_POP 0 //normal message
@@ -47,12 +50,12 @@
 				M.client.images -= langchat_image
 	langchat_listeners = null
 
-/atom/proc/langchat_set_x_offset()
-	langchat_image.maptext_x = world.icon_size / 2 - langchat_image.maptext_width / 2
-/atom/movable/langchat_set_x_offset()
-	langchat_image.maptext_x = bound_width / 2 - langchat_image.maptext_width / 2
-/mob/langchat_set_x_offset()
-	langchat_image.maptext_x = icon_size / 2 - langchat_image.maptext_width / 2
+/atom/proc/get_maxptext_x_offset(image/maptext_image)
+	return (world.icon_size / 2) - (maptext_image.maptext_width / 2)
+/atom/movable/get_maxptext_x_offset(image/maptext_image)
+	return (bound_width / 2) - (maptext_image.maptext_width / 2)
+/mob/get_maxptext_x_offset(image/maptext_image)
+	return (icon_size / 2) - (maptext_image.maptext_width / 2)
 
 ///Creates the image if one does not exist, resets settings that are modified by speech procs.
 /atom/proc/langchat_make_image(override_color = null)
@@ -64,7 +67,7 @@
 		langchat_image.maptext_y = langchat_height
 		langchat_image.maptext_height = 64
 		langchat_image.maptext_y -= LANGCHAT_MESSAGE_POP_Y_SINK
-		langchat_set_x_offset()
+		langchat_image.maptext_x = get_maxptext_x_offset(langchat_image)
 
 	langchat_image.pixel_y = 0
 	langchat_image.alpha = 0
@@ -93,9 +96,9 @@
 	var/image/r_icon
 	var/use_mob_style = TRUE
 	var/text_to_display = message
-	if(length(text_to_display) > LANGCHAT_LONGEST_TEXT)
-		text_to_display = copytext_char(text_to_display, 1, LANGCHAT_LONGEST_TEXT + 1) + "..."
-	var/timer = (length(text_to_display) / LANGCHAT_LONGEST_TEXT) * 4 SECONDS + 2 SECONDS
+	if(length(text_to_display) > langchat_max_length)
+		text_to_display = copytext_char(text_to_display, 1, langchat_max_length + 1) + "..."
+	var/timer = (length(text_to_display) / langchat_max_length) * 4 SECONDS + 2 SECONDS
 	if(additional_styles.Find("emote"))
 		additional_styles.Remove("emote")
 		use_mob_style = FALSE
@@ -108,8 +111,8 @@
 	text_to_display = "<span class='center [additional_styles != null ? additional_styles.Join(" ") : ""] [use_mob_style ? langchat_styles : ""] langchat'>[text_to_display]</span>"
 
 	langchat_image.maptext = text_to_display
-	langchat_image.maptext_width = LANGCHAT_WIDTH
-	langchat_set_x_offset()
+	langchat_image.maptext_width = langchat_width
+	langchat_image.maptext_x = get_maxptext_x_offset(langchat_image)
 
 	langchat_listeners = listeners
 	for(var/mob/M in langchat_listeners)
@@ -146,17 +149,17 @@
 	var/text_left = null
 	var/text_to_display = message
 
-	if(length(message) > LANGCHAT_LONGEST_TEXT)
-		text_to_display = copytext_char(message, 1, LANGCHAT_LONGEST_TEXT - 5) + "..."
-		text_left = "..." + copytext_char(message, LANGCHAT_LONGEST_TEXT - 5)
+	if(length(message) > langchat_max_length)
+		text_to_display = copytext_char(message, 1, langchat_max_length - 5) + "..."
+		text_left = "..." + copytext_char(message, langchat_max_length - 5)
 	var/timer = 6 SECONDS
 	if(text_left)
 		timer = 4 SECONDS
 	text_to_display = "<span class='center [langchat_styles] langchat_announce langchat'>[text_to_display]</span>"
 
 	langchat_image.maptext = text_to_display
-	langchat_image.maptext_width = LANGCHAT_WIDTH * 2
-	langchat_set_x_offset()
+	langchat_image.maptext_width = langchat_width * 2
+	langchat_image.maptext_x = get_maxptext_x_offset(langchat_image)
 
 	langchat_listeners = listeners
 	for(var/mob/M in langchat_listeners)

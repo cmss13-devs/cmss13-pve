@@ -14,16 +14,13 @@
 	center_of_mass = "x=16;y=6"
 	volume = 50
 
-/obj/item/reagent_container/food/condiment/attackby(obj/item/W, mob/user)
-	return
-
 /obj/item/reagent_container/food/condiment/attack(mob/M, mob/user)
 	if(!reagents?.total_volume)
 		to_chat(user, SPAN_DANGER("The [src.name] is empty!"))
 		return FALSE
 
 	if(M == user)
-		to_chat(M, SPAN_NOTICE(" You swallow some of contents of the [src]."))
+		to_chat(M, SPAN_NOTICE("You swallow some of contents of [src]."))
 
 	else if(istype(M, /mob/living/carbon/human))
 		user.affected_message(M,
@@ -52,7 +49,7 @@
 	playsound(M.loc,'sound/items/drink.ogg', 15, 1)
 	return TRUE
 
-/obj/item/reagent_container/food/condiment/attackby(obj/item/I as obj, mob/user as mob)
+/obj/item/reagent_container/food/condiment/attackby(obj/item/W, mob/living/user, list/mods)
 	return
 
 /obj/item/reagent_container/food/condiment/afterattack(obj/target, mob/user , flag)
@@ -80,15 +77,15 @@
 			to_chat(user, SPAN_DANGER("[src] is empty."))
 			return
 		if(target.reagents.total_volume >= target.reagents.maximum_volume)
-			to_chat(user, SPAN_DANGER("you can't add anymore to [target]."))
+			to_chat(user, SPAN_DANGER("You can't add any more to [target]."))
 			return
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this)
 		to_chat(user, SPAN_NOTICE(" You transfer [trans] units of the condiment to [target]."))
 
 /obj/item/reagent_container/food/condiment/on_reagent_change()
-	if(icon_state == "saltshakersmall" || icon_state == "peppermillsmall" || icon_state == "hotsauce_cholula" || icon_state == "hotsauce_franks" || icon_state == "hotsauce_sriracha" || icon_state == "hotsauce_tabasco" || icon_state == "coldsauce_cole")
+	if(icon_state == "saltshakersmall" || icon_state == "peppermillsmall" || icon_state == "hotsauce_cholula" || icon_state == "hotsauce_franks" || icon_state == "hotsauce_sriracha" || icon_state == "hotsauce_tabasco" || icon_state == "coldsauce_cole" || icon_state == "eggpowder" || icon_state == "milkpowder" || icon_state == "bjpowder" || icon_state == "ojpowder" || icon_state == "ajpowder" || icon_state == "wjpowder" || icon_state == "gjpowder" || icon_state == "pjpowder")
 		return
-	if(reagents.reagent_list.len > 0)
+	if(length(reagents.reagent_list) > 0)
 		switch(reagents.get_master_reagent_id())
 			if("ketchup")
 				name = "Ketchup"
@@ -131,7 +128,7 @@
 				center_of_mass = "x=16;y=6"
 			else
 				name = "Misc Condiment Bottle"
-				if (reagents.reagent_list.len==1)
+				if (length(reagents.reagent_list)==1)
 					desc = "Looks like it is [reagents.get_master_reagent_name()], but you are not sure."
 				else
 					desc = "A mixture of various condiments. [reagents.get_master_reagent_name()] is one of them."
@@ -202,7 +199,7 @@
 /obj/item/reagent_container/food/condiment/hotsauce/franks
 	name = "\improper Frank's Red Hot bottle"
 	desc = "A bottle of Weyland-Yutani brand Frank's Red Hot hot sauce."
-	desc_lore = "Supposedly designed as a middle-ground flavor between ketchup and cayenne, this brand of spicy goodness achieved critical acclaim throughout UA space within both colonies and vessels alike. The sudden and widespread adoption was curiously timed with the near-simultaneous shelving of the original Frank's 'ULTRA' hot sauce." 
+	desc_lore = "Supposedly designed as a middle-ground flavor between ketchup and cayenne, this brand of spicy goodness achieved critical acclaim throughout UA space within both colonies and vessels alike. The sudden and widespread adoption was curiously timed with the near-simultaneous shelving of the original Frank's 'ULTRA' hot sauce."
 	icon_state = "hotsauce_franks"
 	item_state = "hotsauce_franks"
 
@@ -236,3 +233,79 @@
 /obj/item/reagent_container/food/condiment/coldsauce/Initialize()
 	. = ..()
 	reagents.add_reagent("frostoil", 60)
+
+/obj/item/reagent_container/food/condiment/juice
+	name = "Juice Packet"
+	desc = "A small packet of dehydrated fruit-juice powder. Mix with water for a 'tasty' beverage. This one appears to be missing the label indicating what flavor it is however."
+	w_class = SIZE_TINY
+	icon_state = "bjpowder"
+	amount_per_transfer_from_this = 1
+	volume = 6
+
+/obj/item/reagent_container/food/condiment/juice/orange
+	name = "Orange Juice Packet"
+	desc = "A small packet of orange flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
+	icon_state = "ojpowder"
+
+/obj/item/reagent_container/food/condiment/juice/orange/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_orange_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/apple
+	name = "Apple Juice Packet"
+	desc = "A small packet of apple flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
+	icon_state = "ajpowder"
+
+/obj/item/reagent_container/food/condiment/juice/apple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_apple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/watermelon
+	name = "Watermelon Juice Packet"
+	desc = "A small packet of watermelon flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
+	icon_state = "wjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/watermelon/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_watermelon_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/grape
+	name = "Grape Juice Packet"
+	desc = "A small packet of grape flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
+	icon_state = "gjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/grape/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_grape_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/pineapple
+	name = "Pineapple Juice Packet"
+	desc = "A small packet of pineapple flavored drink mix, sweetened with sugar alcohols. For best results, mix with water instead of consuming standalone."
+	icon_state = "pjpowder"
+
+/obj/item/reagent_container/food/condiment/juice/pineapple/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_pineapple_juice", 6)
+
+/obj/item/reagent_container/food/condiment/juice/egg
+	name = "Powdered Egg Packet"
+	desc = "A small packet of dehydrated egg-whites and egg-yolk powder. Mix with water for a passable alternative to the real deal."
+	icon_state = "eggpowder"
+	volume = 12
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/egg/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_egg_powder", 12)
+
+/obj/item/reagent_container/food/condiment/juice/milk
+	name = "Dehydrated Milk Packet"
+	desc = "A small packet of dehydrated milk powder. Mix with water for a passable alternative to actual milk."
+	icon_state = "milkpowder"
+	amount_per_transfer_from_this = 1
+	volume = 12
+	w_class = SIZE_SMALL
+
+/obj/item/reagent_container/food/condiment/juice/milk/Initialize()
+	. = ..()
+	reagents.add_reagent("dehydrated_milk_powder", 12)

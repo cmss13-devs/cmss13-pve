@@ -1,0 +1,6 @@
+author: "nauticall, private-tristan, realforest2001"
+delete-after: True
+changes:
+  - rscadd: "Adds CIA, with TWE and UA Rebel Presets under \"Sapper\". As well as Intelligence Liaison Officer, MARSOC, and Generic Civvie, and UPP Rifleman and UPP Senior Lieutenant"
+  - rscdel: "Removes UAAC-TIS"
+  - bugfix: "Portable Vendors are now scrollable"

@@ -1,4 +1,5 @@
 import { classes } from 'common/react';
+
 import { useBackend } from '../backend';
 import { Box, Button, Flex, Section, Stack, Table } from '../components';
 import { BoxProps } from '../components/Box';
@@ -23,7 +24,7 @@ interface SquadMarineEntry {
 interface FireTeamEntry {
   name: string;
   total: number;
-  sqsgt?: SquadMarineEntry | [];
+  sqldr?: SquadMarineEntry | [];
   mar: SquadMarineEntry[];
 }
 
@@ -33,7 +34,7 @@ interface FireTeams {
 }
 
 interface SquadProps {
-  pltsgt?: SquadLeadEntry;
+  sctsgt?: SquadLeadEntry;
   fireteams: FireTeams;
   mar_free: SquadMarineEntry[];
   total_mar: number;
@@ -43,17 +44,17 @@ interface SquadProps {
   squad: string;
   partial_squad_ref: string;
   squad_color: string;
-  is_lead: 'pltsgt' | 'SQ1' | 'SQ2' | 0;
+  is_lead: 'sctsgt' | 'SQ1' | 'SQ2' | 'SQ3' | 'SQ4' | 0;
   objective: { primary?: string; secondary?: string };
 }
 
-const FireTeamLeadLabel = (props: { ftl: SquadMarineEntry }, context) => {
-  const { data } = useBackend<SquadProps>(context);
+const FireTeamLeadLabel = (props: { readonly ftl: SquadMarineEntry }) => {
+  const { data } = useBackend<SquadProps>();
   const { ftl } = props;
   return (
     <>
       <Stack.Item>
-        <span>Squad Sergeant:</span>
+        <span>Squad Leader:</span>
       </Stack.Item>
       <Stack.Item>
         <span
@@ -72,12 +73,12 @@ const FireTeamLeadLabel = (props: { ftl: SquadMarineEntry }, context) => {
   );
 };
 
-const FireTeamLead = (
-  props: { fireteam: FireTeamEntry; sqsgt: string },
-  context
-) => {
-  const { data, act } = useBackend<SquadProps>(context);
-  const fireteamLead = props.fireteam.sqsgt;
+const FireTeamLead = (props: {
+  readonly fireteam: FireTeamEntry;
+  readonly sqldr: string;
+}) => {
+  const { data, act } = useBackend<SquadProps>();
+  const fireteamLead = props.fireteam.sqldr;
   const isNotAssigned =
     fireteamLead === undefined ||
     fireteamLead instanceof Array ||
@@ -85,14 +86,14 @@ const FireTeamLead = (
 
   const assignedFireteamLead = fireteamLead as SquadMarineEntry;
 
-  const demote = () => act('demote_ftl', { target_ft: props.sqsgt });
+  const demote = () => act('demote_ftl', { target_ft: props.sqldr });
   return (
-    <Flex fill justify="space-between" className="TeamLeadFlex">
+    <Flex fill={1} justify="space-between" className="TeamLeadFlex">
       <Flex.Item>
         <Stack>
           {isNotAssigned && (
             <Stack.Item>
-              <span>Squad Sergeant: Unassigned</span>
+              <span>Squad Leader: Unassigned</span>
             </Stack.Item>
           )}
           {!isNotAssigned && <FireTeamLeadLabel ftl={assignedFireteamLead} />}
@@ -100,18 +101,18 @@ const FireTeamLead = (
       </Flex.Item>
       <Flex.Item>
         {assignedFireteamLead.name !== 'Not assigned' &&
-          data.is_lead === 'pltsgt' && <Button icon="xmark" onClick={demote} />}
+          data.is_lead === 'sctsgt' && <Button icon="xmark" onClick={demote} />}
       </Flex.Item>
     </Flex>
   );
 };
 
 interface FireteamBoxProps extends BoxProps {
-  name: string;
-  isEmpty: boolean;
+  readonly name: string;
+  readonly isEmpty: boolean;
 }
 
-const FireteamBox = (props: FireteamBoxProps, context) => {
+const FireteamBox = (props: FireteamBoxProps) => {
   return (
     <Box className={classes(['FireteamBox'])}>
       <div className="Title">{props.name}</div>
@@ -120,9 +121,9 @@ const FireteamBox = (props: FireteamBoxProps, context) => {
   );
 };
 
-const FireTeam = (props: { sqsgt: string }, context) => {
-  const { data, act } = useBackend<SquadProps>(context);
-  const fireteam: FireTeamEntry = data.fireteams[props.sqsgt];
+const FireTeam = (props: { readonly sqldr: string }) => {
+  const { data, act } = useBackend<SquadProps>();
+  const fireteam: FireTeamEntry = data.fireteams[props.sqldr];
 
   const members: SquadMarineEntry[] =
     fireteam === undefined
@@ -131,11 +132,11 @@ const FireTeam = (props: { sqsgt: string }, context) => {
 
   const isEmpty =
     members.length === 0 &&
-    (fireteam?.sqsgt instanceof Array ||
-      fireteam?.sqsgt?.name === 'Not assigned' ||
-      fireteam?.sqsgt?.name === 'Unassigned' ||
-      fireteam?.sqsgt?.name === undefined);
-  const rankList = ['Mar', 'ass', 'Med', 'Eng', 'SG', 'Spc', 'SqSgt', 'PltSgt'];
+    (fireteam?.sqldr instanceof Array ||
+      fireteam?.sqldr?.name === 'Not assigned' ||
+      fireteam?.sqldr?.name === 'Unassigned' ||
+      fireteam?.sqldr?.name === undefined);
+  const rankList = ['Mar', 'ass', 'Med', 'Eng', 'SG', 'Spc', 'SqLdr', 'PltSgt'];
   const rankSort = (a: SquadMarineEntry, b: SquadMarineEntry) => {
     if (a.rank === 'Mar' && b.rank === 'Mar') {
       return a.paygrade === 'PFC' ? -1 : 1;
@@ -154,9 +155,9 @@ const FireTeam = (props: { sqsgt: string }, context) => {
       <Flex direction="column">
         {!isEmpty && (
           <>
-            {props.sqsgt !== 'Unassigned' && (
+            {props.sqldr !== 'Unassigned' && (
               <Flex.Item>
-                <FireTeamLead fireteam={fireteam} sqsgt={props.sqsgt} />
+                <FireTeamLead fireteam={fireteam} sqldr={props.sqldr} />
               </Flex.Item>
             )}
             <Flex.Item>
@@ -165,9 +166,9 @@ const FireTeam = (props: { sqsgt: string }, context) => {
                   <TableCell className="RoleCell">Role</TableCell>
                   <TableCell className="RankCell">Rank</TableCell>
                   <TableCell className="MemberCell">Member</TableCell>
-                  {data.is_lead === 'pltsgt' && (
+                  {data.is_lead === 'sctsgt' && (
                     <TableCell className="ActionCell">
-                      {props.sqsgt === 'Unassigned' ? 'Assign FT' : 'Actions'}
+                      {props.sqldr === 'Unassigned' ? 'Assign FT' : 'Actions'}
                     </TableCell>
                   )}
                 </TableRow>
@@ -176,7 +177,7 @@ const FireTeam = (props: { sqsgt: string }, context) => {
                     <FireTeamMember
                       member={x}
                       key={x.name}
-                      team={props.sqsgt}
+                      team={props.sqldr}
                       fireteam={fireteam}
                     />
                   </TableRow>
@@ -190,16 +191,19 @@ const FireTeam = (props: { sqsgt: string }, context) => {
   );
 };
 
-const FireTeamMember = (
-  props: { member: SquadMarineEntry; team: string; fireteam?: FireTeamEntry },
-  context
-) => {
-  const { data, act } = useBackend<SquadProps>(context);
+const FireTeamMember = (props: {
+  readonly member: SquadMarineEntry;
+  readonly team: string;
+  readonly fireteam?: FireTeamEntry;
+}) => {
+  const { data, act } = useBackend<SquadProps>();
   const assignFT1 = { target_ft: 'SQ1', target_marine: props.member.name };
   const assignFT2 = { target_ft: 'SQ2', target_marine: props.member.name };
+  const assignFT3 = { target_ft: 'SQ3', target_marine: props.member.name };
+  const assignFT4 = { target_ft: 'SQ4', target_marine: props.member.name };
 
   const promote = () => {
-    const teamlead = props.fireteam?.sqsgt;
+    const teamlead = props.fireteam?.sqldr;
     if (teamlead !== undefined && !(teamlead instanceof Array)) {
       if (teamlead.name !== 'Not assigned') {
         act('demote_ftl', {
@@ -232,7 +236,7 @@ const FireTeamMember = (
       <TableCell>{props.member.paygrade}</TableCell>
       <TableCell>{props.member.name}</TableCell>
 
-      {data.is_lead === 'pltsgt' && (
+      {data.is_lead === 'sctsgt' && (
         <TableCell>
           <Stack fill justify="center">
             {props.team === 'Unassigned' && (
@@ -242,6 +246,12 @@ const FireTeamMember = (
                 </Stack.Item>
                 <Stack.Item>
                   <Button onClick={() => act('assign_ft', assignFT2)}>2</Button>
+                </Stack.Item>
+                <Stack.Item>
+                  <Button onClick={() => act('assign_ft', assignFT3)}>3</Button>
+                </Stack.Item>
+                <Stack.Item>
+                  <Button onClick={() => act('assign_ft', assignFT4)}>4</Button>
                 </Stack.Item>
               </>
             )}
@@ -262,8 +272,8 @@ const FireTeamMember = (
   );
 };
 
-const SquadObjectives = (props, context) => {
-  const { data } = useBackend<SquadProps>(context);
+const SquadObjectives = (props) => {
+  const { data } = useBackend<SquadProps>();
   const primaryObjective = data.objective?.primary ?? 'Unset';
   const secondaryObjective = data.objective?.secondary ?? 'Unset';
   return (
@@ -278,27 +288,28 @@ const SquadObjectives = (props, context) => {
   );
 };
 
-export const SquadInfo = (_, context) => {
-  const { config, data } = useBackend<SquadProps>(context);
-  const fireteams = ['SQ1', 'SQ2', 'Unassigned'];
+export const SquadInfo = () => {
+  const { config, data } = useBackend<SquadProps>();
+  const fireteams = ['SQ1', 'SQ2', 'SQ3', 'SQ4', 'Unassigned'];
 
   return (
-    <Window theme="usmc" width={680} height={675}>
+    <Window theme="usmc" width={710} height={675}>
       <Window.Content className="SquadInfo">
-        <Flex fill justify="space-around" direction="column">
+        <Flex fill={1} justify="space-around" direction="column">
           <Flex.Item>
             <Section
-              title={`${data.squad} Platoon Sergeant: ${
-                data.pltsgt?.name ?? 'None'
-              }`}>
+              title={`${data.squad} Section Sergeant: ${
+                data.sctsgt?.name ?? 'None'
+              }`}
+            >
               <SquadObjectives />
             </Section>
           </Flex.Item>
           <Flex.Item>
             <Section title="Squads">
-              <Box className="ftlFlex">
+              <Box width="100%" className="ftlFlex" fillPositionedParent>
                 {fireteams.map((x) => (
-                  <FireTeam sqsgt={x} key={x} />
+                  <FireTeam sqldr={x} key={x} />
                 ))}
               </Box>
             </Section>

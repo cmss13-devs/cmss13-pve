@@ -1,0 +1,5 @@
+author: "AmoryBlaine"
+delete-after: True
+changes:
+  - rscadd: "plain medic helmet"
+  - rscdel: "essentials, armor, MRE from medic vendor"

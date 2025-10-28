@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Crew Manifest works for non-USCM factions"
+  - ui: "Removes a few unused buttons on the main menu"

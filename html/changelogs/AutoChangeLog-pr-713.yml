@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "King no longer delivers the big steppy on contact with non-xenomorph mobs"
+  - imageadd: "Wounded icon-states for the king are added"

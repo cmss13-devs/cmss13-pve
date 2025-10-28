@@ -27,9 +27,23 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(src)
 		open_game_master_panel(src)
 
+/client/proc/toggle_barricade_creation()
+	set name = "Toggle Barricade Creation"
+	set category = "Game Master.Flags"
+
+	if(!check_rights(R_ADMIN))
+		return
+
+	if(!SSticker.mode)
+		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
+		return
+
+	SSticker.mode.toggleable_flags ^= MODE_NO_MAKE_BARRICADES
+	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES) ? "disabled" : "enabled"] Barricade Creation.")
+
 // Spawn stuff
 #define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
+#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
 #define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
@@ -48,6 +62,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 #define BEHAVIOR_CLICK_INTERCEPT_ACTION "behavior_click_intercept_action"
 #define OBJECTIVE_CLICK_INTERCEPT_ACTION "objective_click_intercept_action"
+#define RECORD_CREATE_CLICK_INTERCEPT_ACTION "record_create_click_intercept_action"
 
 
 /datum/game_master
@@ -100,6 +115,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	/// If we are currently using the click intercept for the objective section
 	var/objective_click_intercept = FALSE
 
+	// Record stuff
+	/// If we are currently using the click intercepts for record creation
+	var/record_create_click_intercept = FALSE
 
 	// Communication stuff
 
@@ -117,7 +135,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DO_NOT_DISTURB_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 
@@ -158,7 +176,11 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	data["game_master_objectives"] = length(GLOB.game_master_objectives) ? GLOB.game_master_objectives : ""
 
 	// Communication stuff
-	data["communication_clarity"] = GLOB.radio_communication_clarity
+	data["radio_clarity"] = GLOB.radio_communication_clarity
+	data["radio_clarity_example"] = stars("The quick brown fox jumped over the lazy dog.", GLOB.radio_communication_clarity)
+
+	// Record stuff
+	data["record_create_click_intercept"] = record_create_click_intercept
 
 	return data
 
@@ -211,6 +233,16 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 			reset_click_overrides()
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
+			return
+
+		if("toggle_click_record_creation")
+			if(record_create_click_intercept)
+				reset_click_overrides()
+				return
+
+			reset_click_overrides()
+			record_create_click_intercept = TRUE
+			current_click_intercept_action = RECORD_CREATE_CLICK_INTERCEPT_ACTION
 			return
 
 		if("delete_all_xenos")
@@ -294,7 +326,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 		if("use_game_master_phone")
 			game_master_phone.attack_hand(ui.user)
 
-		if("set_communication_clarity")
+		if("set_radio_clarity")
 			var/new_clarity = text2num(params["clarity"])
 			if(!isnum(new_clarity))
 				return
@@ -308,10 +340,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	if(user_client?.click_intercept == src)
 		user_client.click_intercept = null
 
-	spawn_click_intercept = FALSE
-	objective_click_intercept = FALSE
-	behavior_click_intercept = FALSE
-	current_click_intercept_action = null
+	reset_click_overrides()
 
 	for(var/datum/component/ai_behavior_override/override in GLOB.all_ai_behavior_overrides)
 		game_master_client.images -= override.behavior_image
@@ -341,7 +370,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 					qdel(object)
 				return TRUE
 
-			var/spawning_xeno_type = RoleAuthority.get_caste_by_text(selected_xeno)
+			var/spawning_xeno_type = GLOB.RoleAuthority.get_caste_by_text(selected_xeno)
 
 			if(!spawning_xeno_type)
 				to_chat(user, SPAN_NOTICE(SPAN_BOLD("Unable to find xeno type by name: [selected_xeno]")))
@@ -420,7 +449,13 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 				"object_ref" = object_ref,
 				))
 			return TRUE
-
+		if(RECORD_CREATE_CLICK_INTERCEPT_ACTION)
+			if(!ishuman(object))
+				return FALSE
+			var/mob/living/carbon/human/target = object
+			GLOB.data_core.manifest_inject(target)
+			to_chat(user, SPAN_NOTICE("Record created for [target.real_name]"))
+			return TRUE
 		else
 			if(LAZYACCESS(modifiers, MIDDLE_CLICK))
 				for(var/datum/game_master_submenu/submenu in current_submenus)
@@ -440,6 +475,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	spawn_click_intercept = FALSE
 	objective_click_intercept = FALSE
 	behavior_click_intercept = FALSE
+	record_create_click_intercept = FALSE
 	current_click_intercept_action = null
 
 /datum/game_master/proc/is_objective(atom/checked_object)

@@ -42,17 +42,12 @@
 			for (var/reagent in recipe.reagents)
 				acceptable_reagents |= reagent
 			if (recipe.items)
-				max_n_of_items = max(max_n_of_items,recipe.items.len)
+				max_n_of_items = max(max_n_of_items,length(recipe.items))
 
 		// This will do until I can think of a fun recipe to use dionaea in -
 		// will also allow anything using the holder item to be microwaved into
 		// impure carbon. ~Z
 		acceptable_items |= /obj/item/holder
-
-/obj/structure/machinery/initialize_pass_flags(datum/pass_flags_container/PF)
-	..()
-	if (PF)
-		PF.flags_can_pass_all = PASS_HIGH_OVER_ONLY|PASS_AROUND|PASS_OVER_THROW_ITEM
 
 //*******************
 //*   Item Adding
@@ -115,7 +110,7 @@
 	else if(operating)
 		to_chat(user, SPAN_DANGER("It's running!"))
 	else if(is_type_in_list(O,acceptable_items))
-		if (contents.len>=max_n_of_items)
+		if (length(contents)>=max_n_of_items)
 			to_chat(user, SPAN_DANGER("This [src] is full of ingredients, you cannot put more."))
 			return 1
 		if(istype(O, /obj/item/stack) && O:get_amount() > 1) // This is bad, but I can't think of how to change it
@@ -183,7 +178,7 @@
 		if (istype(contents_item, /obj/item/reagent_container/food/snacks/meat)) //any meat
 			items_measures[display_name] = "slab of meat"
 			items_measures_p[display_name] = "slabs of meat"
-		if (istype(contents_item, /obj/item/reagent_container/food/snacks/donkpocket))
+		if (istype(contents_item, /obj/item/reagent_container/food/snacks/microwavable/donkpocket))
 			display_name = "Turnovers"
 			items_measures[display_name] = "turnover"
 			items_measures_p[display_name] = "turnovers"
@@ -229,8 +224,9 @@
 //************************************/
 
 /obj/structure/machinery/microwave/proc/cook(time_multiplier = 1)
-	if(inoperable())
+	if(inoperable() || operating)
 		return
+
 	start()
 	if (reagents.total_volume==0 && !(locate(/obj) in contents)) //dry run
 		if (!wzhzhzh(10 * time_multiplier))
@@ -270,7 +266,7 @@
 			cooked.forceMove(src.loc)
 			return
 	else
-		var/halftime = round(recipe.time/10/2)
+		var/halftime = floor(recipe.time/10/2)
 		if (!wzhzhzh(halftime * time_multiplier))
 			abort()
 			return

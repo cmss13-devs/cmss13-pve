@@ -43,8 +43,6 @@
 	return ..()
 
 /obj/vehicle/multitile/apc/command/process()
-	. = ..()
-
 	var/turf/apc_turf = get_turf(src)
 	if(health == 0 || !visible_in_tacmap || !is_ground_level(apc_turf.z))
 		return
@@ -70,7 +68,7 @@
 /obj/vehicle/multitile/apc/command/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "Crewmen"
-	RRS.roles = list(JOB_CREWMAN, JOB_WO_CREWMAN, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN)
+	RRS.roles = list(JOB_TANK_CREW, JOB_WO_CREWMAN, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN)
 	RRS.total = 2
 	role_reserved_slots += RRS
 
@@ -105,7 +103,6 @@
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/command/remove_seated_verbs(mob/living/M, seat)
@@ -128,7 +125,6 @@
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
-			/obj/vehicle/multitile/proc/toggle_shift_click,
 		))
 
 /obj/vehicle/multitile/apc/command/initialize_cameras(change_tag = FALSE)
@@ -188,9 +184,9 @@
 
 //stole my own code from techpod_vendor
 /obj/vehicle/multitile/apc/command/proc/get_access_permission(mob/living/carbon/human/user)
-	if(SSticker.mode == GAMEMODE_WHISKEY_OUTPOST || master_mode == GAMEMODE_WHISKEY_OUTPOST)
+	if(SSticker.mode == GAMEMODE_WHISKEY_OUTPOST || GLOB.master_mode == GAMEMODE_WHISKEY_OUTPOST)
 		return TRUE
-	else if(SSticker.mode == "Distress Signal" || master_mode == "Distress Signal")
+	else if(SSticker.mode == "Distress Signal" || GLOB.master_mode == "Distress Signal")
 		if(techpod_access_settings_override)
 			return TRUE
 		else if(user.get_target_lock(techpod_faction_requirement))

@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Xenos grab-response tailswipes no longer WEAKEN, instead applying STUTTER"
+  - balance: "As above"

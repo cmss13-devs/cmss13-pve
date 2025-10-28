@@ -89,13 +89,13 @@
 //! ### SS initialization hints
 /**
  * Negative values incidate a failure or warning of some kind, positive are good.
- * 0 and 1 are unused so that TRUE and FALSE are guarenteed to be invalid values.
+ * 0 and 1 are unused so that TRUE and FALSE are guaranteed to be invalid values.
  */
 
 /// Subsystem failed to initialize entirely. Print a warning, log, and disable firing.
 #define SS_INIT_FAILURE -2
 
-/// The default return value which must be overriden. Will succeed with a warning.
+/// The default return value which must be overridden. Will succeed with a warning.
 #define SS_INIT_NONE -1
 
 /// Subsystem initialized sucessfully.
@@ -123,7 +123,9 @@
 #define SS_INIT_NIGHTMARE   21.5
 #define SS_INIT_TIMETRACK 21.1
 #define SS_INIT_HUMANS  21
+#define SS_INIT_WHO 20
 #define SS_INIT_POWER   19
+#define SS_INIT_PREDSHIPS 18
 #define SS_INIT_INFLUXMCSTATS 12
 #define SS_INIT_INFLUXSTATS 11
 #define SS_INIT_LIGHTING 10
@@ -138,16 +140,15 @@
 #define SS_INIT_INTERIOR 2.7
 #define SS_INIT_TECHTREE    2.5
 #define SS_INIT_RADIO 2
+#define SS_INIT_ASSETS 1
 #define SS_INIT_TIMER   100
 #define SS_INIT_UNSPECIFIED 0
-#define SS_INIT_ASSETS -20
 #define SS_INIT_TICKER -21
 #define SS_INIT_VOTE   -23
 #define SS_INIT_DATABASE   -27
 #define SS_INIT_ENTITYMANAGER   -28
 #define SS_INIT_PLAYTIME   -29
 #define SS_INIT_STICKY -30
-#define SS_INIT_PREDSHIPS  -31
 #define SS_INIT_OBJECTIVES -32
 #define SS_INIT_MINIMAP    -34
 #define SS_INIT_STATPANELS -98
@@ -162,6 +163,7 @@
 #define SS_PRIORITY_SOUND   250
 #define SS_PRIORITY_TICKER  200
 #define SS_PRIORITY_XENO_AI 185
+#define SS_PRIORITY_HUMAN_AI 182
 #define SS_PRIORITY_NIGHTMARE   180
 #define SS_PRIORITY_QUADTREE    160
 #define SS_PRIORITY_CHAT    155
@@ -171,7 +173,7 @@
 #define SS_PRIORITY_MOB 150
 #define SS_PRIORITY_XENO    149
 #define SS_PRIORITY_HUMAN   148
-#define SS_PRIORITY_XENO_PATHFINDING 130
+#define SS_PRIORITY_PATHFINDING 130
 #define SS_PRIORITY_STAMINA 126
 #define SS_PRIORITY_COMPONENT   125
 #define SS_PRIORITY_NANOUI  120
@@ -182,9 +184,11 @@
 #define SS_PRIORITY_FAST_OBJECTS   105
 #define SS_PRIORITY_OBJECTS 104
 #define SS_PRIORITY_DECORATOR    99
+#define SS_PRIORITY_EFFECTS        97
+#define SS_PRIORITY_FASTEFFECTS    96
 #define SS_PRIORITY_HIJACK 97
 #define SS_PRIORITY_POWER   95
-#define SS_PRIORITY_EFFECTS 92
+#define SS_PRIORITY_OLDEFFECTS 92
 #define SS_PRIORITY_MACHINERY   90
 #define SS_PRIORITY_FZ_TRANSITIONS 88
 #define SS_PRIORITY_ROUND_RECORDING 83

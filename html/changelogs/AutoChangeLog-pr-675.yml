@@ -1,0 +1,4 @@
+author: "mesnomer"
+delete-after: True
+changes:
+  - soundadd: "Added new pulse rifle sound. Old file is still in code."

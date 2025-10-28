@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "USASF M41 subtype"
+  - imageadd: "Recoloured sprites for the USASF OFSLO jumpsuit & US Army jumpsuit"

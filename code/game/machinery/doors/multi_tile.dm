@@ -1,13 +1,14 @@
 //Terribly sorry for the code doubling, but things go derpy otherwise.
 /obj/structure/machinery/door/airlock/multi_tile
 	width = 2
-	damage_cap = 650 // Bigger = more endurable
+	damage_cap = 2600 // Bigger = more endurable
 	assembly_type = /obj/structure/airlock_assembly/multi_tile
 
-/obj/structure/machinery/door/airlock/multi_tile/close() //Nasty as hell O(n^2) code but unfortunately necessary
+/obj/structure/machinery/door/airlock/multi_tile/close(forced = FALSE) //Nasty as hell O(n^2) code but unfortunately necessary
 	for(var/turf/turf_tile in locs)
 		for(var/obj/vehicle/multitile/vehicle_tile in turf_tile)
-			if(vehicle_tile) return 0
+			addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+			return FALSE
 
 	return ..()
 
@@ -243,6 +244,7 @@
 	var/queen_pryable = TRUE
 	var/obj/docking_port/mobile/marine_dropship/linked_dropship
 
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ex_act(severity)
 	return
 
@@ -261,14 +263,14 @@
 		var/datum/door_controller/single/control = linked_dropship.door_control.door_controllers[direction]
 		if (control.status != SHUTTLE_DOOR_BROKEN)
 			return ..()
-		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_ENGI))
+		if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED) && !skillcheck(user, SKILL_PILOT, SKILL_PILOT_TRAINED))
 			to_chat(user, SPAN_WARNING("You don't seem to understand how to restore a remote connection to [src]."))
 			return
 		if(user.action_busy)
 			return
 
 		to_chat(user, SPAN_WARNING("You begin to restore the remote connection to [src]."))
-		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
+		if(!do_after(user, (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED) ? 5 SECONDS : 8 SECONDS), INTERRUPT_ALL, BUSY_ICON_BUILD))
 			to_chat(user, SPAN_WARNING("You fail to restore a remote connection to [src]."))
 			return
 		unlock(TRUE)
@@ -278,10 +280,10 @@
 		return
 	..()
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock()
-	if(is_reserved_level(z))
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock(forced = FALSE)
+	if(is_reserved_level(z) && !forced)
 		return // in orbit
-	..()
+	return ..()
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/attack_alien(mob/living/carbon/xenomorph/xeno)
 	if(xeno.hive_pos != XENO_QUEEN)
@@ -291,6 +293,9 @@
 		return ..()
 
 	if(xeno.action_busy)
+		return
+
+	if(is_reserved_level(z)) //no prying in space even though it's funny
 		return
 
 	var/direction
@@ -314,7 +319,6 @@
 		if(control)
 			control.status = SHUTTLE_DOOR_BROKEN
 		unlock(TRUE)
-		open(1)
 		open(TRUE)
 		lock(TRUE)
 
@@ -326,6 +330,10 @@
 	name = "\improper Normandy cargo door"
 	icon = 'icons/obj/structures/doors/dropship2_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds3
+	name = "\improper Saipan cargo door"
+	icon = 'icons/obj/structures/doors/dropship3_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside
 	width = 2
 
@@ -333,19 +341,43 @@
 	name = "\improper Alamo crew hatch"
 	icon = 'icons/obj/structures/doors/dropship1_side2.dmi'
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
-	name = "\improper Midway crew hatch"
-
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2
 	name = "\improper Normandy crew hatch"
 	icon = 'icons/obj/structures/doors/dropship2_side2.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds3
+	name = "\improper Saipan crew hatch"
+	icon = 'icons/obj/structures/doors/dropship3_side2.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4
+	name = "\improper Midway cargo door"
+	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
+	name = "\improper Midway crew hatch"
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
 	name = "\improper Cyclone crew hatch"
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc
+	name = "\improper Cash Flow crew hatch"
+	icon = 'icons/obj/structures/doors/dropshippmc_side2.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/rmc
+	name = "\improper Gibraltar crew hatch"
+	icon = 'icons/obj/structures/doors/dropship_rmc_side2.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
 	name = "\improper Akademia Nauk cargo door"
 	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc
+	name = "\improper Cash Flow cargo door"
+	icon = 'icons/obj/structures/doors/dropshippmc_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/rmc
+	name = "\improper Gibraltar cargo door"
+	icon = 'icons/obj/structures/doors/dropship_rmc_cargo.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor
 	name = "bulkhead blast door"
@@ -380,7 +412,7 @@
 	open(TRUE)
 	lock(TRUE)
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/close()
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/lifeboat/close(forced = FALSE)
 	. = ..()
 	for(var/turf/self_turf as anything in locs)
 		var/turf/projected = get_ranged_target_turf(self_turf, throw_dir, 1)
@@ -631,3 +663,37 @@
 	opacity = FALSE
 	glass = TRUE
 
+/obj/structure/machinery/door/airlock/multi_tile/strata
+	name = "Secure Airlock"
+	icon = 'icons/obj/structures/doors/strata/strata_2x1.dmi'
+	opacity = TRUE
+	glass = FALSE
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_green.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_green/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
+	glass = TRUE
+
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_grey.dmi'
+	opacity = FALSE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass
+	name = "Glass Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility
+	name = "Airlock"
+	icon = 'icons/obj/structures/doors/upp/2x1upp_utility.dmi'
+	openspeed = 6

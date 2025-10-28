@@ -1,0 +1,5 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - rscadd: "New minimap color define, MINIMAP_ROAD. it's a light grey"
+  - bugfix: "asphalt turf now references this new minimap color"

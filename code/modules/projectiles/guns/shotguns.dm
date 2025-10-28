@@ -7,19 +7,24 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun
 	w_class = SIZE_LARGE
-	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	reload_sound = "shell_load"
-	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
-	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
-	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
 	accuracy_mult = 1.15
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	gun_category = GUN_CATEGORY_SHOTGUN
 	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
 	wield_delay = WIELD_DELAY_NORMAL //Shotguns are as hard to pull up as a rifle. They're quite bulky afterall
 	has_empty_icon = FALSE
 	has_open_icon = FALSE
 	fire_delay_group = list(FIRE_DELAY_GROUP_SHOTGUN)
+
+	fire_sound = 'sound/weapons/gun_shotgun.ogg'
+	reload_sound = "shell_load"
+	cocked_sound = 'sound/weapons/gun_shotgun_reload.ogg'
+	var/break_sound = 'sound/weapons/handling/gun_mou_open.ogg'
+	var/seal_sound = 'sound/weapons/handling/gun_mou_close.ogg'
+
+	map_specific_decoration = FALSE
 	var/gauge = "12g"
 
 /obj/item/weapon/gun/shotgun/Initialize(mapload, spawn_empty)
@@ -153,7 +158,6 @@ can cause issues with ammo types getting mixed up during the burst.
 		current_mag.chamber_position--
 		return in_chamber
 
-
 /obj/item/weapon/gun/shotgun/ready_in_chamber()
 	return ready_shotgun_tube()
 
@@ -229,7 +233,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	scatter = SCATTER_AMOUNT_TIER_5
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_3
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
@@ -237,15 +241,16 @@ can cause issues with ammo types getting mixed up during the burst.
 //TACTICAL SHOTGUN
 
 /obj/item/weapon/gun/shotgun/combat
-	name = "\improper MK221 tactical shotgun"
-	desc = "The Weyland-Yutani MK221 Shotgun, a semi-automatic shotgun with a quick fire rate."
+	name = "\improper M120 tactical shotgun"
+	desc = "A successor to the Benelli M4 Super 90, the M120 tactical shotgun is in service with the USCM due its easy maneuverability in close quarters, 12 gauge chambering, high firerate and integrated U1 underslung grenade launcher. While not part of the standard doctrine, they are common none the less. The internal tube magazine stores 6 shells and the U1 grenade launcher stores three grenades."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "mk221"
 	item_state = "mk221"
 
 	fire_sound = "gun_shotgun_tactical"
-	firesound_volume = 20
-	current_mag = /obj/item/ammo_magazine/internal/shotgun
+
+	flags_equip_slot = SLOT_BACK
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/bayonet/upp,
@@ -257,6 +262,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/stock/tactical,
+		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/combat/Initialize(mapload, spawn_empty)
@@ -264,26 +270,12 @@ can cause issues with ammo types getting mixed up during the burst.
 	if(current_mag && current_mag.current_rounds > 0)
 		load_into_chamber()
 
-/obj/item/weapon/gun/shotgun/combat/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/attached_gun/grenade/ugl = new(src)
-	var/obj/item/attachable/stock/tactical/stock = new(src)
-	ugl.flags_attach_features &= ~ATTACH_REMOVABLE
-	ugl.hidden = TRUE
-	ugl.Attach(src)
-	update_attachable(ugl.slot)
-	stock.hidden = FALSE
-	stock.Attach(src)
-	update_attachable(stock.slot)
-
 /obj/item/weapon/gun/shotgun/combat/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 11, "stock_y" = 13.)
-
-
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 21, "under_x" = 22, "under_y" = 14, "stock_x" = 11, "stock_y" = 13, "side_rail_x" = 23, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/shotgun/combat/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5*2)
+	set_fire_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -292,43 +284,32 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-
+	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/m120, /obj/item/attachable/stock/tactical)
 
 /obj/item/weapon/gun/shotgun/combat/get_examine_text(mob/user)
 	. = ..()
 	if(in_chamber) . += "It has a chambered round."
 
+/obj/item/weapon/gun/shotgun/combat/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/unloaded
+
+/obj/item/weapon/gun/shotgun/combat/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/slug
 
 /obj/item/weapon/gun/shotgun/combat/riot
-	name = "\improper MK221 riot shotgun"
-	icon_state = "mp220"
-	item_state = "mp220"
-	desc = "The Weyland-Yutani MK221 Shotgun, a semi-automatic shotgun with a quick fire rate. Equipped with a steel blue finish to signify use in riot control. It has been modified to only fire 20G beanbags."
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/combat/riot
-	gauge = "20g"
-
-/obj/item/weapon/gun/shotgun/combat/guard
-	desc = "The Weyland-Yutani MK221 Shotgun, a semi-automatic shotgun with a quick fire rate. Equipped with a red handle to signify its use with Military Police Honor Guards."
-	icon_state = "mp221"
-	item_state = "mp221"
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/buckshot
-
-/obj/item/weapon/gun/shotgun/combat/covert
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/extended_barrel)
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/buckshot
 
 //SOF MK210, an earlier developmental variant of the MK211 tactical used by USCM SOF.
 /obj/item/weapon/gun/shotgun/combat/marsoc
 	name = "\improper XM38 tactical shotgun"
-	desc = "Way back in 2168, Wey-Yu began testing the MK221. The USCM picked up an early prototype, and later adopted it with a limited military contract. But the USCM Special Operations Forces wasn't satisfied, and iterated on the early prototypes they had access to; eventually, their internal armorers and tinkerers produced the MK210, designated XM38, a lightweight folding shotgun that snaps to the belt. And to boot, it's fully automatic, made of stamped medal, and keeps the UGL. Truly an engineering marvel."
+	desc = "An ARMAT design adopted for testing by the Marine Raiders due to it's compact size, high firerate and integrated magnetic harness system. You might think the size would leave its magazine tube wanting, but through engineering magic, the XM38 is capable of holding six shells with its internal tube magazine."
 	icon_state = "mk210"
 	item_state = "mk210"
 
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/buckshot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/marsoc
 
 	flags_equip_slot = SLOT_WAIST|SLOT_BACK
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	auto_retrieval_slot = WEAR_J_STORE
 	start_automatic = TRUE
 
@@ -343,17 +324,16 @@ can cause issues with ammo types getting mixed up during the burst.
 			return TRUE
 	return ..()
 
-/*obj/item/weapon/gun/shotgun/combat/marsoc/handle_starting_attachment()
-	return */ //we keep the UGL
+/obj/item/weapon/gun/shotgun/combat/marsoc/handle_starting_attachment()
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 21, "under_x" = 14, "under_y" = 16, "stock_x" = 14, "stock_y" = 16, "side_rail_x" = 25, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/shotgun/combat/marsoc/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_6)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3 - HIT_ACCURACY_MULT_TIER_5
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
@@ -365,132 +345,102 @@ can cause issues with ammo types getting mixed up during the burst.
 //TYPE 23. SEMI-AUTO UPP SHOTGUN, BASED ON KS-23
 
 /obj/item/weapon/gun/shotgun/type23
-	name = "\improper Type 23 riot shotgun"
-	desc = "As UPP soldiers frequently reported being outmatched by enemy combatants, UPP High Command commissioned a large amount of Type 23 shotguns, originally used for quelling defector colony riots. This slow semi-automatic shotgun chambers 8 gauge, and packs a mean punch."
+	name = "\improper KS-29/4 combat shotgun"
+	desc = "A contemporary semi-automatic design based off of the KS-23, a Soviet-era pump-action riot shotgun chambered in 6 gauge shells. Updated for the UPP's Naval Infantry as a boarding gun, it was downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
-	icon_state = "type23"
-	item_state = "type23"
-	fire_sound = 'sound/weapons/gun_type23.ogg' //not perfect, too small
+	icon_state = "type23_tactical"
+	item_state = "type23_tactical"
+	fire_sound = 'sound/weapons/gun_type23.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/scope/upp,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/bayonet, // Muzzle
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/bayonet/upp,
 		/obj/item/attachable/verticalgrip, // Underbarrel
+		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/stock/type23, // Stock
+		/obj/item/attachable/flashlight, // Side Rail
 		)
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG|GUN_AUTO_EJECT_CASINGS
 	flags_equip_slot = SLOT_BACK
-	map_specific_decoration = FALSE
 	gauge = "8g"
 	starting_attachment_types = list(/obj/item/attachable/stock/type23)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = -1, "stock_y" = 17, "side_rail_x" = 25, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/shotgun/type23/set_gun_config_values()
 	..()
-	set_fire_delay(2.5 SECONDS)
+	set_fire_delay(FIRE_DELAY_TIER_8)
 	accuracy_mult = BASE_ACCURACY_MULT
-	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_4
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/shotgun/type23/breacher
-	random_spawn_chance = 100
-	random_rail_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/flashlight,
-	)
-	random_muzzle_chance = 100
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-	)
-	random_under_chance = 40
-	random_spawn_under = list(
-		/obj/item/attachable/verticalgrip,
-	)
+/obj/item/weapon/gun/shotgun/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
 
-/obj/item/weapon/gun/shotgun/type23/breacher/slug
+/obj/item/weapon/gun/shotgun/type23/unloaded/stored
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+	starting_attachment_types = null
+
+/obj/item/weapon/gun/shotgun/type23/slug
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
 
-/obj/item/weapon/gun/shotgun/type23/breacher/flechette
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/flechette
+/obj/item/weapon/gun/shotgun/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
 
-/obj/item/weapon/gun/shotgun/type23/dual
-	random_spawn_chance = 100
-	random_rail_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_muzzle_chance = 80
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/heavy_barrel,
-	)
-	random_under_chance = 100
-	random_spawn_under = list(
-		/obj/item/attachable/flashlight/grip,
-		/obj/item/attachable/verticalgrip,
-	)
-
-/obj/item/weapon/gun/shotgun/type23/dragon
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/dragonsbreath
-	random_spawn_chance = 100
-	random_rail_chance = 100
-	random_spawn_rail = list(
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_muzzle_chance = 70
-	random_spawn_muzzle = list(
-		/obj/item/attachable/bayonet/upp,
-		/obj/item/attachable/heavy_barrel,
-	)
-	random_under_chance = 100
-	random_spawn_under = list(
-		/obj/item/attachable/attached_gun/extinguisher,
-	)
-
-/obj/item/weapon/gun/shotgun/type23/riot_control
-	name = "\improper Type 23-R riot control shotgun"
-	desc = "This slow semi-automatic shotgun chambers 8 gauge, and packs a mean punch. The -R version is designed for UPP colony security personnel and handling colony rioting, sporting an integrated vertical grip but lacking in attachment choices."
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/beanbag
-	attachable_allowed = list(
-		/obj/item/attachable/reddot, //Rail
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-		/obj/item/attachable/verticalgrip, //Underbarrel
-		/obj/item/attachable/stock/type23, //Stock
-	)
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_INTERNAL_MAG
+/obj/item/weapon/gun/shotgun/pump/type23
+	name = "\improper KS-29 riot shotgun"
+	desc = "A contemporary pump-action design based off of the KS-23, a Soviet-era riot shotgun chambered in 6 gauge shells. Like its Naval Infantry sibling, it is downgraded to 8 gauge chambering in order to make it more controllable without much loss to overall firepower and allow for easier storage of large quantities of shells on the individual user. Its internal tube magazine can store 4 shells."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "type23_wood"
+	item_state = "type23_wood"
+	fire_sound = 'sound/weapons/gun_type23.ogg'
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
+	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 	flags_equip_slot = SLOT_BACK
-	map_specific_decoration = FALSE
 	gauge = "8g"
-	starting_attachment_types = list(/obj/item/attachable/stock/type23)
+	starting_attachment_types = list(/obj/item/attachable/stock/type23/wood)
 
-/obj/item/weapon/gun/shotgun/type23/riot_control/handle_starting_attachment()
-	. = ..()
-	var/obj/item/attachable/verticalgrip/integrated_grip = new(src)
-	integrated_grip.flags_attach_features &= ~ATTACH_REMOVABLE
-	integrated_grip.Attach(src)
-	update_attachable(integrated_grip.slot)
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 13, "rail_y" = 21, "under_x" = 24, "under_y" = 15, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 25, "side_rail_y" = 18)
 
-/obj/item/weapon/gun/shotgun/type23/pve
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/special
+/obj/item/weapon/gun/shotgun/pump/type23/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_4
+	scatter_unwielded = SCATTER_AMOUNT_TIER_1
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+
+/obj/item/weapon/gun/shotgun/pump/type23/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/unloaded
+
+/obj/item/weapon/gun/shotgun/pump/type23/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/slug
+
+/obj/item/weapon/gun/shotgun/pump/type23/riot
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23/riot
 
 //-------------------------------------------------------
 //DOUBLE SHOTTY
@@ -525,7 +475,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	additional_fire_group_delay = 1.5 SECONDS
 
 /obj/item/weapon/gun/shotgun/double/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14, "stock_x" = 13, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/shotgun/double/set_gun_config_values()
 	..()
@@ -621,6 +571,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 	if (current_mag.chamber_closed)
 		playsound(user, break_sound, 25, 1)
+		eject_casing()
 	else
 		playsound(user, seal_sound, 25, 1)
 
@@ -632,6 +583,63 @@ can cause issues with ammo types getting mixed up during the burst.
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
+
+/obj/item/weapon/gun/shotgun/double/upp
+	name = "\improper MP-122 'Olympiets' hunting shotgun"
+	desc = "A double barrel over-under shotgun produced by BaikalMech Factory. Mostly issued to colonists for protection against hostile fauna or hunting. Has a single scope mounting point right behind the barrel."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "olympiets"
+	item_state = "olympiets"
+	flags_equip_slot = SLOT_BACK
+	fire_sound = 'sound/weapons/gun_olympia.ogg'
+	attachable_allowed = list(
+		/obj/item/attachable/stock/olympiets,
+		/obj/item/attachable/olympiets_barrel,
+		/obj/item/attachable/scope/mini/hunting/upp,
+	)
+
+/obj/item/weapon/gun/shotgun/double/upp/handle_starting_attachment()
+	. = ..()
+	var/obj/item/attachable/stock/olympiets/stock = new(src)
+	stock.flags_attach_features &= ~ATTACH_REMOVABLE
+	stock.Attach(src)
+	update_attachable(stock.slot)
+
+	var/obj/item/attachable/olympiets_barrel/barrel = new(src)
+	barrel.flags_attach_features &= ~ATTACH_REMOVABLE
+	barrel.Attach(src)
+	update_attachable(barrel.slot)
+
+/obj/item/weapon/gun/shotgun/double/upp/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_fire_delay(FIRE_DELAY_TIER_11)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/shotgun/double/upp/open_chamber(mob/user, override)
+	..()
+	var/obj/item/attachable/olympiets_barrel/barrel = attachments["special"]
+	if(!barrel)
+		return
+	if(current_mag.chamber_closed)
+		attachable_offset["special_x"] = 35
+		attachable_offset["special_y"] = 17
+		barrel.attach_icon = "olympiets_barrel"
+	else
+		attachable_offset["special_x"] = 33
+		attachable_offset["special_y"] = 7
+		barrel.attach_icon = "olympiets_barrel_o"
+	update_icon()
+
+/obj/item/weapon/gun/shotgun/double/upp/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 9, "rail_y" = 22, "under_x" = 15, "under_y" = 14, "stock_x" = 16, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 17, "special_x" = 35, "special_y" = 17)
 
 /obj/item/weapon/gun/shotgun/double/damaged
 	name = "semi-sawn-off Spearhead Rival 78"
@@ -646,7 +654,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_1
-	damage_mult = BASE_BULLET_DAMAGE_MULT - BULLET_DAMAGE_MULT_TIER_7
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
@@ -659,7 +667,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16)
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 19, "rail_x" = 11, "rail_y" = 20, "under_x" = 15, "under_y" = 14,  "stock_x" = 18, "stock_y" = 16, "side_rail_x" = 19, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/shotgun/double/sawn/set_gun_config_values()
 	..()
@@ -669,7 +677,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_7
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_3
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1
 
@@ -713,7 +721,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	set_fire_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_7
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
@@ -786,11 +794,10 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/mou53,
 	)
-	map_specific_decoration = TRUE
 	civilian_usable_override = FALSE
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 11, "rail_y" = 21, "under_x" = 17, "under_y" = 15, "stock_x" = 10, "stock_y" = 9, "side_rail_x" = 20, "side_rail_y" = 17) //Weird stock values, make sure any new stock matches the old sprite placement in the .dmi
 
 
 /obj/item/weapon/gun/shotgun/double/mou53/set_gun_config_values()
@@ -841,6 +848,7 @@ can cause issues with ammo types getting mixed up during the burst.
 		return TRUE
 
 /datum/action/item_action/specialist/twobore_brace/action_activate()
+	. = ..()
 	var/obj/item/weapon/gun/shotgun/double/twobore/G = holder_item
 	if(G.braced)
 		return
@@ -1022,8 +1030,8 @@ can cause issues with ammo types getting mixed up during the burst.
 		if(!T) //Off edge of map.
 			throw_turfs.Remove(T)
 			continue
-		var/list/turf/path = getline2(get_step_towards(src, T), T) //Same path throw code will calculate from.
-		if(!path.len)
+		var/list/turf/path = get_line(get_step_towards(src, T), T) //Same path throw code will calculate from.
+		if(!length(path))
 			throw_turfs.Remove(T)
 			continue
 		var/prev_turf = start_turf
@@ -1069,15 +1077,14 @@ can cause issues with ammo types getting mixed up during the burst.
 //Shotguns in this category will need to be pumped each shot.
 
 /obj/item/weapon/gun/shotgun/pump
-	name = "\improper M37A2 pump shotgun"
-	desc = "An Armat Battlefield Systems classic design, the M37A2 combines close-range firepower with long term reliability. Requires a pump, which is a Unique Action."
+	name = "Ithaca 37 pump-action shotgun"
+	desc = "A customized Ithaca 37 hunting shotgun. Its wooden stock has been replaced with a bakelite pistol grip, and its barrel and magazine tube have been cut down to half their lengths for easier handling in close quarters at the cost of magazine size, only fitting four shells and one chambered."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m37"
 	item_state = "m37"
 	current_mag = /obj/item/ammo_magazine/internal/shotgun
 	flags_equip_slot = SLOT_BACK
 	fire_sound = 'sound/weapons/gun_shotgun.ogg'
-	firesound_volume = 60
 	var/pump_sound = "shotgunpump"
 	var/pump_delay //Higher means longer delay.
 	var/recent_pump //world.time to see when they last pumped it.
@@ -1103,23 +1110,23 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/flamer/advanced,
 		/obj/item/attachable/stock/shotgun,
+		/obj/item/attachable/sling,
 	)
-	map_specific_decoration = TRUE
 
 /obj/item/weapon/gun/shotgun/pump/Initialize(mapload, spawn_empty)
 	. = ..()
-	pump_delay = FIRE_DELAY_TIER_5*2
+	pump_delay = FIRE_DELAY_TIER_8
 	additional_fire_group_delay += pump_delay
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 20, "under_y" = 14, "stock_x" = 20, "stock_y" = 14, "side_rail_x" = 25, "side_rail_y" = 18)
 
 
 /obj/item/weapon/gun/shotgun/pump/set_gun_config_values()
 	..()
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	set_fire_delay(FIRE_DELAY_TIER_7 * 4)
+	set_fire_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -1128,7 +1135,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	wield_delay = WIELD_DELAY_MIN
+	//wield_delay = WIELD_DELAY_MIN
 
 /obj/item/weapon/gun/shotgun/pump/unique_action(mob/user)
 	pump_shotgun(user)
@@ -1167,6 +1174,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	ready_shotgun_tube()
 
 	playsound(user, pump_sound, 10, 1)
+	eject_casing()
 	recent_pump = world.time
 	if (in_chamber)
 		pumped = TRUE
@@ -1190,10 +1198,17 @@ can cause issues with ammo types getting mixed up during the burst.
 		pumped = FALSE
 	return ..()
 
-//-------------------------------------------------------
+/obj/item/weapon/gun/shotgun/pump
+	current_mag = /obj/item/ammo_magazine/internal/shotgun
 
-/obj/item/weapon/gun/shotgun/pump/special
-	current_mag = /obj/item/ammo_magazine/internal/shotgun/special
+/obj/item/weapon/gun/shotgun/pump/unloaded
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
+
+/obj/item/weapon/gun/shotgun/pump/stock
+	starting_attachment_types = list(/obj/item/attachable/stock/shotgun)
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/unloaded
+
+//-------------------------------------------------------
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube
 	name = "generic dual-tube pump shotgun"
@@ -1245,7 +1260,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb
 	name = "\improper HG 37-12 pump shotgun"
-	desc = "A eight-round pump action shotgun with four-round capacity dual internal tube magazines allowing for quick reloading and highly accurate fire. Used exclusively by Colonial Marshals. You can switch the active internal magazine by toggling the shotgun tube."
+	desc = "An eight-round pump action shotgun with four-round capacity dual internal tube magazines allowing for quick reloading and highly accurate fire. Standard issue shotgun of the Colonial Marshals Bureau. By toggling the shotgun tube, you can swap between the internal magazines."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "hg3712"
 	item_state = "hg3712"
@@ -1263,17 +1278,16 @@ can cause issues with ammo types getting mixed up during the burst.
 		/obj/item/attachable/attached_gun/flamer/advanced,
 	)
 	starting_attachment_types = list(/obj/item/attachable/stock/hg3712)
-	map_specific_decoration = FALSE
 	civilian_usable_override = TRUE // Come on. It's THE, er, other, survivor shotgun.
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10)
+	attachable_offset = list("muzzle_x" = 31, "muzzle_y" = 17,"rail_x" = 8, "rail_y" = 21, "under_x" = 22, "under_y" = 15, "stock_x" = 24, "stock_y" = 10, "side_rail_x" = 27, "side_rail_y" = 17)
 
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/set_gun_config_values()
 	..()
-	set_fire_delay(1.6 SECONDS)
+	set_fire_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_10
 	scatter = SCATTER_AMOUNT_TIER_6
@@ -1282,6 +1296,9 @@ can cause issues with ammo types getting mixed up during the burst.
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/slug
+	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/slug
 
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717
 	name = "\improper M37-17 pump shotgun"
@@ -1292,8 +1309,121 @@ can cause issues with ammo types getting mixed up during the burst.
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/cmb/m3717
 	starting_attachment_types = list(/obj/item/attachable/stock/hg3712/m3717)
 
-/obj/item/weapon/gun/shotgun/pump/dual_tube/cmb/m3717/set_gun_config_values()
-	..()
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_3
+//-------------------------------------------------------
+
 
 //-------------------------------------------------------
+//XM51, Breaching Scattergun, PVE Edition: civilian magfed shotgun
+
+/obj/item/weapon/gun/rifle/xm51
+	name = "\improper M1771 shotgun"
+	desc = "Full designation: Model 1771 Cobra Max Tactical. Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems meant for civilian and law-enforcement use. Failed its short USCM trials due to unreliability and was ridiculed heavily for having a 'tryhard' name."
+	icon_state = "xm51"
+	item_state = "xm51"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+
+	current_mag = /obj/item/ammo_magazine/rifle/xm51
+	attachable_allowed = list(
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/co2,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/stock/xm51,
+		/obj/item/attachable/stock/xm51/military,
+	)
+	flags_equip_slot = SLOT_BACK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_SHOTGUN
+	map_specific_decoration = FALSE
+
+	var/pump_delay //How long we have to wait before we can pump the shotgun again.
+	var/pump_sound = "shotgunpump"
+	var/message_delay = 1 SECONDS //To stop message spam when trying to pump the gun constantly.
+	var/burst_count = 0 //To detect when the burst fire is near its end.
+	COOLDOWN_DECLARE(allow_message)
+	COOLDOWN_DECLARE(allow_pump)
+
+/obj/item/weapon/gun/rifle/xm51/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 34, "muzzle_y" = 18, "rail_x" = 12, "rail_y" = 20, "under_x" = 24, "under_y" = 13, "stock_x" = 15, "stock_y" = 16)
+
+/obj/item/weapon/gun/rifle/xm51/set_gun_config_values()
+	..()
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	accuracy_mult = BASE_ACCURACY_MULT + 2*HIT_ACCURACY_MULT_TIER_8
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_6
+
+/obj/item/weapon/gun/rifle/xm51/Initialize(mapload, spawn_empty)
+	. = ..()
+	pump_delay = FIRE_DELAY_TIER_8
+	additional_fire_group_delay += pump_delay
+	remove_firemode(GUN_FIREMODE_BURSTFIRE)
+
+/obj/item/weapon/gun/rifle/xm51/unique_action(mob/user)
+	if(!COOLDOWN_FINISHED(src, allow_pump))
+		return
+	if(in_chamber)
+		if(COOLDOWN_FINISHED(src, allow_message))
+			to_chat(usr, SPAN_WARNING("<i>[src] already has a shell in the chamber!<i>"))
+			COOLDOWN_START(src, allow_message, message_delay)
+		return
+
+	playsound(user, pump_sound, 10, 1)
+	COOLDOWN_START(src, allow_pump, pump_delay)
+	ready_in_chamber()
+	burst_count = 0 //Reset the count for burst mode.
+
+/obj/item/weapon/gun/rifle/xm51/load_into_chamber(mob/user)
+	return in_chamber
+
+/obj/item/weapon/gun/rifle/xm51/reload_into_chamber(mob/user) //Don't chamber bullets after firing.
+	if(!current_mag)
+		update_icon()
+		return
+
+	in_chamber = null
+	if(current_mag.current_rounds <= 0 && flags_gun_features & GUN_AUTO_EJECTOR)
+		if (user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_OFF))
+			update_icon()
+	return 1
+
+/obj/item/weapon/gun/rifle/xm51/replace_magazine(mob/user, obj/item/ammo_magazine/magazine) //Don't chamber a round when reloading.
+	user.drop_inv_item_to_loc(magazine, src) //Click!
+	current_mag = magazine
+	replace_ammo(user,magazine)
+	user.visible_message(SPAN_NOTICE("[user] loads [magazine] into [src]!"),
+		SPAN_NOTICE("You load [magazine] into [src]!"), null, 3, CHAT_TYPE_COMBAT_ACTION)
+	if(reload_sound)
+		playsound(user, reload_sound, 25, 1, 5)
+
+/obj/item/weapon/gun/rifle/xm51/cock_gun(mob/user)
+	return
+
+/obj/item/weapon/gun/rifle/xm51/cock(mob/user) //Stops the "You cock the gun." message where nothing happens.
+	return
+
+/obj/item/weapon/gun/rifle/xm51/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51)
+
+/obj/item/weapon/gun/rifle/xm51/military
+	name = "\improper XM51 shotgun"
+	desc = "Magazine-fed, pump-action shotgun designed by ARMAT Battlefield Systems, also known as M1771 Cobra Max Tactical. This one is painted with a fresh coat of Humbrol 170."
+	icon_state = "xm51_military"
+	item_state = "xm51_military"
+
+/obj/item/weapon/gun/rifle/xm51/military/withstock
+	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)

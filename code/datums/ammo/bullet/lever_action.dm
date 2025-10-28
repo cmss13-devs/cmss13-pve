@@ -13,6 +13,7 @@
 	shell_speed = AMMO_SPEED_TIER_6
 	accurate_range = 14
 	handful_state = "lever_action_bullet"
+	shell_casing = /obj/effect/decal/ammo_casing
 
 //unused and not working. need to refactor MD code. Unobtainable.
 //intended mechanic is to have xenos hit with it show up very frequently on any MDs around
@@ -52,7 +53,7 @@
 /datum/ammo/bullet/lever_action/xm88
 	name = ".458 SOCOM round"
 
-	damage = 80
+	damage = 104
 	penetration = ARMOR_PENETRATION_TIER_2
 	accuracy = HIT_ACCURACY_TIER_1
 	shell_speed = AMMO_SPEED_TIER_6

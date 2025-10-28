@@ -83,7 +83,7 @@ Verbs related to getting fucking jacked, bro
 		if(!get_limb(zone))
 			extremities.Remove(zone)
 
-	if(extremities.len < 8)
+	if(length(extremities) < 8)
 		to_chat(src, SPAN_WARNING("How do you think you'll be able to do a pushup without two hands and feet to stand on? See a doctor!"))
 		return FALSE
 
@@ -101,7 +101,7 @@ Verbs related to getting fucking jacked, bro
 /mob/living/carbon/human/proc/calculate_stamina_loss_per_pushup(on_knees = FALSE)
 	//humans have 100 stamina
 	//default loss per pushup = 5 stamina
-	var/stamina_loss = 5
+	var/stamina_loss = 2
 	if(!skills || issynth(src))
 		return 0
 	switch(skills.get_skill_level(SKILL_ENDURANCE))

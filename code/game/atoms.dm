@@ -243,7 +243,7 @@ directive is properly returned.
 				pass |= istype(A, type)
 			if(!pass)
 				continue
-		if(A.contents.len)
+		if(length(A.contents))
 			found += A.search_contents_for(path,filter_path)
 	return found
 
@@ -392,11 +392,11 @@ Parameters are passed from New.
 		var/turf/opaque_turf = loc
 		opaque_turf.directional_opacity = ALL_CARDINALS // No need to recalculate it in this case, it's guaranteed to be on afterwards anyways.
 
-	pass_flags = pass_flags_cache[type]
+	pass_flags = GLOB.pass_flags_cache[type]
 	if (isnull(pass_flags))
 		pass_flags = new()
 		initialize_pass_flags(pass_flags)
-		pass_flags_cache[type] = pass_flags
+		GLOB.pass_flags_cache[type] = pass_flags
 	else
 		initialize_pass_flags()
 	Decorate(mapload)
@@ -424,7 +424,7 @@ Parameters are passed from New.
 	T.appearance = src.appearance
 	T.setDir(src.dir)
 
-	clones_t.Add(src)
+	GLOB.clones_t.Add(src)
 	src.clone = T
 
 // EFFECTS
@@ -533,11 +533,11 @@ Parameters are passed from New.
 		return TRUE
 
 	if(href_list["desc_lore"])
-		show_browser(usr, "<BODY><TT>[replacetext(desc_lore, "\n", "<BR>")]</TT></BODY>", name, name, "size=500x500")
+		show_browser(usr, "<BODY><TT>[replacetext(desc_lore, "\n", "<BR>")]</TT></BODY>", name, name, width = 500, height = 500)
 		onclose(usr, "[name]")
 
 ///This proc is called on atoms when they are loaded into a shuttle
-/atom/proc/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock, idnum, override=FALSE)
+/atom/proc/connect_to_shuttle(mapload, obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	return
 
 /**
@@ -568,7 +568,17 @@ Parameters are passed from New.
 		filters += filter(arglist(arguments))
 	UNSETEMPTY(filter_data)
 
-/atom/proc/transition_filter(name, time, list/new_params, easing, loop)
+/** Update a filter's parameter and animate this change. If the filter doesnt exist we won't do anything.
+ * Basically a [datum/proc/modify_filter] call but with animations. Unmodified filter parameters are kept.
+ *
+ * Arguments:
+ * * name - Filter name
+ * * new_params - New parameters of the filter
+ * * time - time arg of the BYOND animate() proc.
+ * * easing - easing arg of the BYOND animate() proc.
+ * * loop - loop arg of the BYOND animate() proc.
+ */
+/atom/proc/transition_filter(name, list/new_params, time, easing, loop)
 	var/filter = get_filter(name)
 	if(!filter)
 		return
@@ -823,4 +833,4 @@ Parameters are passed from New.
 	. = ..()
 	var/refid = REF(src)
 	. += "[VV_HREF_TARGETREF(refid, VV_HK_AUTO_RENAME, "<b id='name'>[src]</b>")]"
-	. += "<br><font size='1'><a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir' id='dir'>[dir2text(dir) || dir]</a> <a href='?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
+	. += "<br><font size='1'><a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='byond://?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir' id='dir'>[dir2text(dir) || dir]</a> <a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"

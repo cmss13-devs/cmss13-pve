@@ -1,0 +1,6 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - rscadd: "The M41A's UBGL now has actual chambering mechanics."
+  - qol: "The M41A's UBGL now loads with the pump forward and chambers the last inserted round when you pump it, instead of the first."
+  - spellcheck: "Replaces all mentions of the word breech for the M41A's UBGL, as it isn't a breechloader."

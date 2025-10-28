@@ -1,0 +1,11 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "added +1 to the skill level of all the usual suspects in the uscm.dm skills list, but I ignored MPs and officers aside from the SO."
+  - balance: "army SNCO and Heavy Gunner have been buffed (master)"
+  - balance: "civs are largely END 0. Police & Miners have END 1. When would they have done bootcamp?"
+  - bugfix: "Cleaned up the survivor-marshal list which had some dupes."
+  - balance: "reduced endurance on cmb deputies and marshals - they were higher than most marines"
+  - balance: "balanced some of the contractor endurance - largely lowered to END1 but the heavy/gunners have END2"
+  - balance: "mercenary/PMC dropped across the board. Mostly END1 but heavy/elite have END2"
+  - balance: "gave tank crew endurance in misc"

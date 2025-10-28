@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "US flag armor graffiti (in loadout selection now too)"
+  - rscadd: "UPP AT gunner gear preset"
+  - qol: "Various UPP presets that were missing them get MREs & can openers now"
+  - imageadd: "New UPP posters & gas mask. New can opener sprites"

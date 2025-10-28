@@ -26,16 +26,16 @@
 	new /obj/item/weapon/gun/smg/m39(src)
 	new /obj/item/ammo_box/magazine/m39(src)
 
-// 2 m4ra cabinet are in brig armory (m4ra guns and 12 mags)
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle
+// 2 m49a cabinet are in brig armory (m49a guns and 12 mags)
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle
 
-/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m4ra_rifle/Initialize()
+/obj/structure/closet/secure_closet/guncabinet/red/mp_armory_m49a_rifle/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/rifle/m4ra(src)
-	new /obj/item/weapon/gun/rifle/m4ra(src)
-	new /obj/item/weapon/gun/rifle/m4ra(src)
-	new /obj/item/weapon/gun/rifle/m4ra(src)
-	new /obj/item/ammo_box/magazine/m4ra(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/weapon/gun/rifle/m49a(src)
+	new /obj/item/ammo_box/magazine/m49a(src)
 
 // EXECUTION CHAMBER might add that here need to ask first... will reskin if asked.
 

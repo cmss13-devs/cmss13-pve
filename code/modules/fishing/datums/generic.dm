@@ -2,20 +2,34 @@ GLOBAL_LIST_EMPTY(fishing_loot_tables)
 
 /datum/fish_loot_table
 	var/list/common_fishable_atoms = list(
-		/obj/item/clothing/shoes/leather,
-		/obj/item/clothing/shoes/marine,
+		/obj/item/prop/scrap,
+		/obj/item/prop/rock,
+		/obj/item/trash/crushed_cup,
+		/obj/item/trash/cigbutt,
+		/obj/item/trash/cigbutt/ucigbutt,
+		/obj/item/reagent_container/food/snacks/fishable/worm,
+		/obj/item/reagent_container/food/snacks/fishable/shell/clam,
+		/obj/item/reagent_container/food/snacks/fishable/squid/sock,
+		/obj/item/reagent_container/food/snacks/fishable/urchin/purple,
+		/obj/item/reagent_container/food/snacks/fishable/fish/bluegill,
+		/obj/item/reagent_container/food/snacks/fishable/fish/salmon,
+		/obj/item/reagent_container/food/snacks/fishable/fish/white_perch
 	)
 	var/list/uncommon_fishable_atoms = list(
-		/obj/item/cell/high,
-		/obj/item/device/multitool
+		/obj/item/reagent_container/food/snacks/fishable/squid/whorl,
+		/obj/item/reagent_container/food/snacks/fishable/crab,
+		/obj/item/reagent_container/food/snacks/fishable/quadtopus,
+		/obj/item/reagent_container/food/snacks/fishable/fish/bass,
+		/obj/item/reagent_container/food/snacks/fishable/fish/catfish,
+		/obj/item/fish_bait,
+		/obj/item/storage/beer_pack
 	)
 	var/list/rare_fishable_atoms = list(
-		/obj/item/reagent_container/food/snacks/packaged_burrito
+		/obj/item/coin/silver,
+		/obj/item/reagent_container/food/snacks/fishable/urchin/red
 	)
 	var/list/ultra_rare_fishable_atoms = list(
-		/obj/item/card/data/clown,
-		/obj/item/reagent_container/food/snacks/clownburger,
-		/obj/item/reagent_container/pill/ultrazine/unmarked
+		/obj/item/reagent_container/food/snacks/fishable/quadtopus
 	)
 
 /datum/fish_loot_table/proc/return_caught_fish(common_weight, uncommon_weight, rare_weight, ultra_rare_weight)

@@ -1,6 +1,7 @@
 /// From /atom/proc/Decorate
 #define COMSIG_ATOM_DECORATED "atom_decorated"
-
+//from SSatoms InitAtom - Only if the  atom was not deleted or failed initialization and has a loc
+#define COMSIG_ATOM_AFTER_SUCCESSFUL_INITIALIZED_ON "atom_init_success_on"
 ///from base of atom/setDir(): (old_dir, new_dir). Called before the direction changes.
 #define COMSIG_ATOM_DIR_CHANGE "atom_dir_change"
 
@@ -56,6 +57,9 @@
 
 /// From /atom/proc/attack_hand()
 #define COMSIG_ATOM_ATTACK_HAND "atom_attack_hand"
+
+/// From /datum/action/item_action/rto_pack/use_phone/action_activate()
+#define COMSIG_ATOM_PHONE_BUTTON_USE "atom_phone_button_use"
 
 /// From /datum/component/phone/proc/picked_up_call() and /datum/component/phone/proc/post_call_phone()
 #define COMSIG_ATOM_PHONE_PICKED_UP "atom_phone_picked_up"

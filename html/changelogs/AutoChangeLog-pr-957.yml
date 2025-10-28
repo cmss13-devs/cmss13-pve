@@ -1,0 +1,4 @@
+author: "AlanParkerMasters"
+delete-after: True
+changes:
+  - rscadd: "flashlights, lamps, candles don't rotate when thrown"

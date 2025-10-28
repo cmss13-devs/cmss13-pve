@@ -1,0 +1,5 @@
+author: "AndroBetel"
+delete-after: True
+changes:
+  - rscadd: "Adds acid runner"
+  - imageadd: "Animated acid runner sprites by Pandora"

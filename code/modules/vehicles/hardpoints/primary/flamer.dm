@@ -1,6 +1,6 @@
 /obj/item/hardpoint/primary/flamer
-	name = "DRG-N Offensive Flamer Unit"
-	desc = "A primary weapon for the tank that spews fire everywhere."
+	name = "\improper DRG-N Offensive Flamer Unit"
+	desc = "A primary weapon for the tank that spews out ultra-thick napthal in a wide radius. The fuel burns intensely and relatively quickly, which allows for it to be used offensively by armoured vehicles."
 
 	icon_state = "drgn_flamer"
 	disp_icon = "tank"
@@ -10,10 +10,8 @@
 	health = 2000
 	firing_arc = 90
 
-	origins = list(0, -3)
-
 	ammo = new /obj/item/ammo_magazine/hardpoint/primary_flamer
-	max_clips = 1
+	max_clips = 3
 
 	px_offsets = list(
 		"1" = list(0, 21),
@@ -25,7 +23,7 @@
 	use_muzzle_flash = FALSE
 
 	scatter = 5
-	fire_delay = 2.0 SECONDS
+	fire_delay = 1.5 SECONDS
 
 /obj/item/hardpoint/primary/flamer/set_bullet_traits()
 	..()
@@ -33,9 +31,8 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
-/obj/item/hardpoint/primary/flamer/try_fire(target, user, params)
-	var/turf/origin_turf = get_origin_turf()
-	if(origin_turf == get_turf(target))
+/obj/item/hardpoint/primary/flamer/try_fire(atom/target, mob/living/user, params)
+	if(get_turf(target) in owner.locs)
 		to_chat(user, SPAN_WARNING("The target is too close."))
 		return NONE
 
