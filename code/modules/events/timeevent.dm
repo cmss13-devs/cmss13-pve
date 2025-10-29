@@ -80,6 +80,9 @@ GLOBAL_VAR(nuketimer_id)
 /proc/revert_timeloop_singleton(datum/timeloop_save/save)
 	set waitfor = FALSE
 
+	for(var/mob/living/carbon/xenomorph/xeno in GLOB.living_xeno_list)
+		xeno.Stun(50)
+
 	save.relevant_mob.Stun(100)
 	save.relevant_mob.timeloop_revert_overlay()
 	sleep(1.5 SECONDS)
@@ -118,7 +121,7 @@ GLOBAL_VAR(nuketimer_id)
 	sleep(0.1 SECONDS)
 	var/turf/T = get_turf(midway_port)
 
-	var/turf/T3 = locate(115, 54, 1 + GLOB.map_iteration) //hardcoded because fuck you
+	var/turf/T3 = locate(115, 60, 1 + GLOB.map_iteration) //hardcoded because fuck you
 
 	for(var/datum/timeloop_save/save as anything in GLOB.timeloop_saves)
 		var/turf/T2 = get_turf(save.relevant_mob)
@@ -136,6 +139,7 @@ GLOBAL_VAR(nuketimer_id)
 	light_color = "#0ab42f"
 	light_power = 4
 	light_range = 3
+	density = TRUE
 	indestructible = TRUE
 	unacidable = TRUE
 	var/mid_removal = FALSE
@@ -146,7 +150,7 @@ GLOBAL_VAR(nuketimer_id)
 		. += SPAN_NOTICE("A timer on the device reads \"[timeleft(SStimeloop.mainloop_timer_id) / 10] SECONDS UNTIL CYCLE\".")
 
 	if(GLOB.timeloop_power)
-		. += SPAN_NOTICE("There seems to be a strange, alien-looking powercell powering it... maybe it could be removed with a <b>wrench</b>?")
+		. += (SPAN_NOTICE("There seems to be a ") + "<span style='color: \"#c217b9\"'>strange, alien-looking powercell</span>" + SPAN_NOTICE(" powering it... maybe it could be removed with a <b>wrench</b>?"))
 
 /obj/structure/tdd/attackby(obj/item/W, mob/user)
 	. = ..()
@@ -193,9 +197,9 @@ GLOBAL_VAR(nuketimer_id)
 /obj/structure/machinery/nuclearbomb/emplaced/get_examine_text(mob/user)
 	. = ..()
 	if(!GLOB.nuketimer_started)
-		. += "A timer on [src] reads \"DETONATION IN [(timeleft(SStimeloop.mainloop_timer_id) / 10) + 120] SECONDS\"." //roughly
+		. += "A timer on [src] reads \"DETONATION IN [floor(timeleft(SStimeloop.mainloop_timer_id) / 10) + 120] SECONDS\"." //roughly
 	else
-		. += "A timer on [src] reads \"DETONATION IN [(timeleft(GLOB.nuketimer_id) / 10)] SECONDS\"."
+		. += "A timer on [src] reads \"DETONATION IN [floor(timeleft(GLOB.nuketimer_id) / 10)] SECONDS\"."
 
 
 /obj/structure/machinery/nuclearbomb/emplaced/update_icon()
@@ -214,9 +218,6 @@ GLOBAL_VAR(nuketimer_id)
 	return
 
 /obj/structure/machinery/nuclearbomb/emplaced/tgui_interact(mob/user, datum/tgui/ui)
-	return
-
-/obj/structure/machinery/nuclearbomb/emplaced/attackby(obj/item/O, mob/user)
 	return
 
 /obj/item/tdd_powersource
@@ -255,7 +256,7 @@ GLOBAL_VAR(nuketimer_id)
 /obj/structure/machinery/computer/shuttle/ert/tdd/get_examine_text(mob/user)
 	. = ..()
 	if(!charged)
-		. += SPAN_BOLDNOTICE("You see a socket for a power cell, though not of the shape you'd usually see.")
+		. += SPAN_BOLDNOTICE("You see a socket for a power cell, though not of the shape you'd usually see. It looks really fuckin' odd, ") + "<span style='color: \"#c217b9\"'>what</span> " + SPAN_BOLDNOTICE("would go in this?")
 
 /obj/structure/machinery/computer/shuttle/ert/tdd/attackby(obj/item/I, mob/user)
 	. = ..()
@@ -267,7 +268,7 @@ GLOBAL_VAR(nuketimer_id)
 		return
 
 	else if(istype(I, /obj/item/cell))
-		to_chat(user, SPAN_NOTICE("You can already tell this cell won't fit in the socket. You can't remember seeing a regular cell of this kind of shape, nevermind one with enough charge to power a dropship."))
+		to_chat(user, SPAN_NOTICE("You can already tell this cell won't fit in the socket. You can't remember seeing a regular cell of this kind of shape, nevermind one with enough charge to power a dropship. You'll have to") + "<span style='color: \"#c217b9\"'>find</span>" + SPAN_NOTICE("another one."))
 		return
 
 /obj/docking_port/stationary/wilhelm

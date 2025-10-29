@@ -264,7 +264,7 @@
 
 	random_spawn_chance = 0
 
-/obj/item/weapon/gun/rifle/m41a/elite/xm40/handle_starting_attachment()
+/obj/item/weapon/gun/rifle/m41aMK1/xm40/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/suppressor/xm40_integral/S = new(src)
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
@@ -278,10 +278,10 @@
 	H.Attach(src)
 	update_attachable(H.slot)
 
-/obj/item/weapon/gun/rifle/m41a/elite/xm40/set_gun_attachment_offsets()
+/obj/item/weapon/gun/rifle/m41aMK1/xm40/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 12, "rail_y" = 23, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
 
-/obj/item/weapon/gun/rifle/m41a/elite/xm40/set_gun_config_values()
+/obj/item/weapon/gun/rifle/m41aMK1/xm40/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
@@ -292,7 +292,7 @@
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 
-/obj/item/weapon/gun/rifle/m41a/elite/xm40/ap
+/obj/item/weapon/gun/rifle/m41aMK1/xm40/ap
 	current_mag = /obj/item/ammo_magazine/rifle/xm40
 //-------------------------------------------------------
 //M41A TRUE AND ORIGINAL

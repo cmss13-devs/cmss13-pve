@@ -75,7 +75,7 @@
 
 /obj/structure/machinery/prop/almayer/CICmap
 	name = "map table"
-	desc = "A table that displays a map of the current operation location."
+	desc = "A table that displays a map of the current operation location. Seems to be broken. Damn."
 	icon = 'icons/obj/structures/machinery/computer.dmi'
 	icon_state = "maptable"
 	anchored = TRUE
@@ -101,11 +101,13 @@
 /obj/structure/machinery/prop/almayer/CICmap/attack_hand(mob/user)
 	. = ..()
 
-	map.tgui_interact(user)
+	//map.tgui_interact(user)
+	to_chat(user, SPAN_WARNING("You recall a very strange incident involving a revolver and a few desk fans that ended up with this breaking. Well, shit."))
+	return
 
 /obj/structure/machinery/prop/almayer/CICmap/computer
 	name = "map terminal"
-	desc = "A terminal that displays a map of the current operation location."
+	desc = "A terminal that displays a map of the current operation location. It's broken, though."
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "cicmap_computer"
 	density = FALSE
@@ -128,12 +130,12 @@
 
 /obj/structure/machinery/prop/almayer/CICmap/toc
 	name = "tactical map screen"
-	desc = "A screen on the TOC computer displaying the tactical map."
+	desc = "A screen on the TOC computer displaying the tactical map. Busted, though."
 	icon_state =  "toc_map"
 
 /obj/structure/machinery/prop/almayer/CICmap/table
 	name = "map table"
-	desc = "A large flat map table used for planning operations. It's large enough it can even be used as a proper table."
+	desc = "A large flat map table used for planning operations. It may be broken, but at least it still works as a table. For now."
 	icon = 'icons/obj/structures/props/almayer_props96.dmi'
 	icon_state = "maptable"
 	layer = TABLE_LAYER
@@ -184,13 +186,6 @@
 	..()
 
 	overlays.Cut()
-
-	if(!(stat & NOPOWER))
-		var/image/source_image = image(src.icon, icon_state = "[icon_state]_e")
-		overlays += emissive_appearance(source_image.icon, source_image.icon_state)
-		overlays += mutable_appearance(source_image.icon, source_image.icon_state)
-		light_power = 1
-	else return
 
 /obj/structure/machinery/prop/almayer/CICmap/table/segment
 	icon = 'icons/obj/structures/props/maptable.dmi'
