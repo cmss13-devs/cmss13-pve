@@ -617,7 +617,7 @@
 "el" = (
 /obj/structure/bed,
 /obj/item/bedsheet/medical,
-/obj/effect/landmark/corpsespawner/scientist,
+/obj/effect/landmark/corpsespawner/doctor,
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
@@ -1603,7 +1603,7 @@
 /area/simulacrum/interior)
 "lu" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpsespawner/scientist,
+/obj/effect/landmark/corpsespawner/doctor,
 /turf/open/floor{
 	icon_state = "white"
 	},
@@ -5589,10 +5589,9 @@
 /area/simulacrum/interior)
 "Qr" = (
 /obj/structure/surface/table/reinforced,
-/obj/structure/machinery/power/apc/hyper{
+/obj/structure/machinery/power/apc/upgraded/no_power{
 	dir = 1;
-	pixel_y = 24;
-	start_charge = 0
+	pixel_y = 24
 	},
 /obj/item/device/flashlight/lamp,
 /turf/open/floor/corsat{

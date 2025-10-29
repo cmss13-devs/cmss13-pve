@@ -354,6 +354,9 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		"- %NAME% retired to colonial life on LV-522, Chance's Claim. A xenomorph outbreak would see %NAME% meet their fate in the xenomorph hive on August 23rd, 2192.",
 		"- Quiet and reserved after the incident, %NAME% retired from the USCM and served as the Chief Engineer on a LockMart & Welsun 3300B colony carrier, ferrying atmospheric processors to budding worlds. They passed on December 1st, 2210 in a vehicular accident.",
 		"- %NAME% never fully recovered from the stress experienced during the incident. %NAME% died on August 15th, 2182 of a heart attack.",
+		"- Breaking down right after the events of the mission, %NAME% found themselves transported back to Gateway station for a mental evaluation. %NAME% would later die at Blake Abernathy Memorial Hospital in orbit of Jupiter on October 2nd, 2262, having been restrained there ever since their mission to the desert planet. They were convinced that reality was in fact not.",
+		"- After the events on the desert planet, %NAME% transferred to an infantry division to separate themselves from anything to do with the event. %NAME% would die as one of 127 casualties in the Heyst incident.",
+		"- %NAME% is posthumously awarded this Medal of Valor for their actions taken during the Oil Wars on November 27th, 2183. They demonstrated exceptional bravery and self sacrifice in the line of duty, and they will not be forgotten. Camp %NAME% on Folsom's Hope is scheduled to enter operations in late 2184.",
 	)
 	var/list/final_fates = list()
 	for(var/savename in GLOB.simulacrum_playersaves)

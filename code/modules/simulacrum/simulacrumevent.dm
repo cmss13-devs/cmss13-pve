@@ -160,15 +160,21 @@
 	unacidable = TRUE
 	density = TRUE
 	opacity = TRUE
+	var/entries_left = 7
 
 /obj/structure/vaultdoor/attack_hand(mob/user)
 	. = ..()
+	if(entries_left <= 0)
+		to_chat(user, SPAN_WARNING("It is what was done. The sands of time continue on."))
+		return
+
 	to_chat(user, SPAN_NOTICE("You begin to go through the door..."))
 	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
 		return
 
 	to_chat(user, SPAN_NOTICE("You enter through the door into the pitch darkness. No going back now."))
 	user.forceMove(locate(4, 165, 2))
+	entries_left--
 
 /obj/structure/simulacrum_ladder
 	name = "ladder"
