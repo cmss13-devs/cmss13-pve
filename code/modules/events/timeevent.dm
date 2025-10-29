@@ -193,9 +193,15 @@ GLOBAL_VAR(nuketimer_id)
 	light_range = 3
 	indestructible = TRUE
 	anchored = TRUE
+	wrenchable = FALSE
+	var/break_desc = FALSE
 
 /obj/structure/machinery/nuclearbomb/emplaced/get_examine_text(mob/user)
 	. = ..()
+	if(break_desc)
+		. += "The timer on [src] seems to have shorted out. Running might be in order."
+		return
+
 	if(!GLOB.nuketimer_started)
 		. += "A timer on [src] reads \"DETONATION IN [floor(timeleft(SStimeloop.mainloop_timer_id) / 10) + 120] SECONDS\"." //roughly
 	else
