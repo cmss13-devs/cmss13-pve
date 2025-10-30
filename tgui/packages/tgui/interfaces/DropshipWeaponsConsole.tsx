@@ -296,10 +296,6 @@ const BaseMfdPanel = (props: MfdProps) => {
       bottomButtons={[
         {},
         {
-          children: otherPanelState !== 'map' ? 'MAPS' : undefined,
-          onClick: () => setPanelState('map'),
-        },
-        {
           children: otherPanelState !== 'camera' ? 'CAMS' : undefined,
           onClick: () => setPanelState('camera'),
         },

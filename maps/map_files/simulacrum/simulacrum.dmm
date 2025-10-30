@@ -4571,12 +4571,6 @@
 	},
 /area/simulacrum/interior)
 "HR" = (
-/obj/structure/machinery/computer/cameras{
-	desc = "The flight controls for a UD6 Dropship. these controls look pretty banged up, and there's some blood covering the screen..";
-	name = "\improper 'Tornado' flight controls";
-	network = null;
-	pixel_y = 21
-	},
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1
 	},
