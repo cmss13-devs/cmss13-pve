@@ -774,6 +774,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	button.overlays.Cut()
 	button.overlays += image('icons/obj/items/clothing/helmet_visors.dmi', button, action_icon_state)
 
+/obj/item/clothing/head/helmet/marine/cut
+	name = "modified M10 helmet"
+	icon_state = "helmet_cut"
+	item_state = "helmet_cut"
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/head/helmet/marine/tech
 	name = "\improper M10 technician helmet"
 	desc = "A modified M10 marine helmet for ComTechs. Features a toggleable welding screen for eye protection."

@@ -253,15 +253,20 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	if(linked_mob)
 		UnregisterSignal(linked_mob, COMSIG_HUMAN_UPDATE_SIGHT)
 		linked_mob.update_sight()
+		linked_mob.client.view = 7
+		linked_mob.lighting_plane_alpha = 255
+		linked_mob.sync_lighting_plane_alpha()
 
 	return ..()
 
 /mob/hologram/railgun/proc/see_only_turf(mob/living/carbon/human/H)
 	SIGNAL_HANDLER
 
-	H.see_in_dark = 50
-	H.sight = (SEE_TURFS|SEE_OBJS|BLIND)
+	H.lighting_plane_alpha = 150
+	H.sync_lighting_plane_alpha()
+	//H.sight = (SEE_TURFS|SEE_OBJS|BLIND)
 	H.see_invisible = SEE_INVISIBLE_MINIMUM
+	H.client.view = 20
 	return COMPONENT_OVERRIDE_UPDATE_SIGHT
 
 /mob/hologram/railgun/proc/allow_turf_entry(mob/self, turf/to_enter)
@@ -299,9 +304,9 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 	max_ammo = 1
 	ammo = 1
 	ammo_recharge_time = 5 SECONDS
-	fire_cooldown = 10 MINUTES	//So you know how long it takes betweenS
-	ammo_delay = 30 SECONDS
-	power = 1500
+	fire_cooldown = 1 MINUTES	//So you know how long it takes betweenS
+	ammo_delay = 15 SECONDS
+	power = 1000
 	range = 15
 	warning_color = "#ff0000"
 

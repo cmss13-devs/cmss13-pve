@@ -52,6 +52,11 @@
 	desc = "The standard M10 combat helmet is already water-resistant at depths of up to 10 meters. This makes the top potentially water-proof. At least it's something."
 	icon_state = "raincover"
 
+/obj/item/prop/helmetgarb/tinfoil
+	name = "experimental psi-protection helmet cover"
+	desc = "A thin layer of some weird soft metal. You feel stupid sinply holding this thing."
+	icon_state = "tinfoil"
+
 /obj/item/prop/helmetgarb/camocover
 	name = "jungle helmet cover"
 	desc = "A cover that goes over the top of an M10 pattern helmet to camoflauge it without needing the use of paints."
