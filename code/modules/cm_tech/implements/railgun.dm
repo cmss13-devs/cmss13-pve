@@ -254,7 +254,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 		UnregisterSignal(linked_mob, COMSIG_HUMAN_UPDATE_SIGHT)
 		linked_mob.update_sight()
 		linked_mob.client.view = 7
-		linked_mob.lighting_plane_alpha = 255
+		linked_mob.lighting_alpha = 255
 		linked_mob.sync_lighting_plane_alpha()
 
 	return ..()
@@ -262,7 +262,7 @@ GLOBAL_DATUM(railgun_eye_location, /datum/coords)
 /mob/hologram/railgun/proc/see_only_turf(mob/living/carbon/human/H)
 	SIGNAL_HANDLER
 
-	H.lighting_plane_alpha = 150
+	H.lighting_alpha = 150
 	H.sync_lighting_plane_alpha()
 	//H.sight = (SEE_TURFS|SEE_OBJS|BLIND)
 	H.see_invisible = SEE_INVISIBLE_MINIMUM
