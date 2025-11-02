@@ -5356,7 +5356,6 @@
 	},
 /area/whiskey_outpost/inside/supply)
 "ql" = (
-/obj/effect/landmark/corpsespawner/security,
 /obj/effect/decal/cleanable/blood,
 /obj/item/ammo_magazine/rifle/nsg23/heap,
 /turf/open/floor/corsat{
