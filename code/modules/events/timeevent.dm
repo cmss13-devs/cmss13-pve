@@ -295,3 +295,14 @@ GLOBAL_VAR(nuketimer_id)
 	id = "tdd_wilhelm_pad"
 	preferred_direction = SOUTH
 	port_direction = NORTH
+
+/mob/living/carbon/xenomorph/drone/ai
+
+/mob/living/carbon/xenomorph/drone/ai/New(loc, ...)
+	. = ..()
+	make_ai()
+
+/obj/effect/xeno_blocker
+
+/obj/effect/xeno_blocker/xeno_ai_obstacle(mob/living/carbon/xenomorph/X, direction, turf/target)
+	return INFINITY
