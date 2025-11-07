@@ -480,7 +480,7 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
-	light_color = COLOR_VIVID_RED
+	light_color = COLOR_SOFT_RED
 	light_power = 1.2
 
 /obj/item/clothing/suit/space/pressure/upp
