@@ -10,7 +10,7 @@
 
 	matter = list("metal" = 50,"glass" = 20)
 	light_color = "#dae2ff"
-	light_range = 5
+	light_range = 3
 	light_power = 1
 	ground_offset_x = 2
 	ground_offset_y = 6
@@ -318,7 +318,7 @@
 	can_be_broken = FALSE
 	rotation_on_throw = TRUE
 	var/burnt_out = FALSE
-	var/fuel = 16 MINUTES
+	var/fuel = 7 MINUTES
 	var/fuel_rate = AMOUNT_PER_TIME(1 SECONDS, 1 SECONDS)
 	var/on_damage = 7
 	var/ammo_datum = /datum/ammo/flare
@@ -376,19 +376,19 @@
 
 /obj/item/device/flashlight/flare/proc/flare_burn_down() //Controls the way in which flares slowly die out. Needs to be overriden by children, or they will be forced to use this light behavior.
 	switch(fuel) //The code belows controls the timing on a flares burn out, and the corresponding reduction in effective range.
-		if(15.25 MINUTES to 16 MINUTES)
-			set_light_range(7)
-		if(14.5 MINUTES to 15.24 MINUTES)
-			set_light_range(6)
-		if(6.5 MINUTES to 14.49 MINUTES)
+		if(6 MINUTES to 7 MINUTES)
 			set_light_range(5)
-		if(5.0 MINUTES to 6.49 MINUTES)
+		if(5 MINUTES to 6 MINUTES)
+			set_light_range(5)
+		if(4 MINUTES to 5 MINUTES)
 			set_light_range(4)
-		if(3.5 MINUTES to 4.99 MINUTES)
+		if(3 MINUTES to 4 MINUTES)
 			set_light_range(3)
-		if(2.0 MINUTES to 3.49 MINUTES)
+		if(2 MINUTES to 3 MINUTES)
+			set_light_range(3)
+		if(1 MINUTES to 2 MINUTES)
 			set_light_range(2)
-		if(0 MINUTES to 1.99 MINUTES)
+		if(0 MINUTES to 1 MINUTES)
 			set_light_range(1)
 			set_light_power(0.5) // A power of 2 results in no light at all, while .5 results in a small light.
 
@@ -514,13 +514,13 @@
 /obj/item/device/flashlight/flare/on/starshell_ash/flare_burn_down() // Starshell's own burn_down curve, overrides parent flare.
 	switch(fuel)
 		if(6.0 MINUTES to 6.5 MINUTES)
-			set_light_range(6)
-		if(2.5 MINUTES to 5.99 MINUTES)
-			set_light_range(5)
-		if(2.0 MINUTES to 2.49 MINUTES)
 			set_light_range(4)
-		if(1.5 MINUTES to 1.99 MINUTES)
+		if(2.5 MINUTES to 5.99 MINUTES)
+			set_light_range(4)
+		if(2.0 MINUTES to 2.49 MINUTES)
 			set_light_range(3)
+		if(1.5 MINUTES to 1.99 MINUTES)
+			set_light_range(2)
 		if(1.0 MINUTES to 1.49 MINUTES)
 			set_light_range(2)
 		if(0 MINUTES to 0.99 MINUTES)

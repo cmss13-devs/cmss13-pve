@@ -697,8 +697,8 @@
 		ACCESSORY_SLOT_DECORSHIN,
 	)
 
-	light_power = 3
-	light_range = 4
+	light_power = 0.9
+	light_range = 2.05
 	light_system = MOVABLE_LIGHT
 
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
