@@ -143,7 +143,7 @@
 	icon_state = "heads_cmo"
 	name = "\improper Command - CMO's Office"
 	minimap_color = MINIMAP_AREA_MEDBAY
-//
+//a
 /area/torch/bridgedeck/ce
 	icon_state = "heads_ce"
 	name = "\improper Engineering - CE's Office"
