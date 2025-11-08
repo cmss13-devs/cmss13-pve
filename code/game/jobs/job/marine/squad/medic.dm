@@ -150,6 +150,21 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/medic/ai/forecon
 
+//-- RMC Platoon --//
+//Medical Assistant//
+
+/datum/job/marine/medic/ai/rmc
+	title = JOB_TWE_RMC_MEDIC
+	gear_preset = /datum/equipment_preset/uscm/rmc/med
+	job_options = null
+	supervisors = "the section leader and troop commander"
+	entry_message_body = "You are a commando-trained member of the Royal Navy Medical Service, serving with the Royal Marines Commando forces. You tend the serious wounds of the Royal Marines under your charge and make sure they are healthy and active. Whilst you have the skills to rival doctors, you often lack the full compliment of equipment, but you stand between life and death when it matters.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sick Bay.</b>"
+
+/obj/effect/landmark/start/marine/medic/rmc
+	name = JOB_TWE_RMC_MEDIC
+	squad = SQUAD_RMC
+	job = /datum/job/marine/medic/ai/rmc
+
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT

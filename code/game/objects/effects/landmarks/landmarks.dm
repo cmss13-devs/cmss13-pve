@@ -433,6 +433,10 @@
 	name = "upp late join"
 	squad = SQUAD_UPP
 
+/obj/effect/landmark/late_join/rmc
+	name = "rmc late join"
+	squad = SQUAD_RMC
+
 /obj/effect/landmark/late_join/upp/Initialize(mapload, ...)
 	. = ..()
 

@@ -122,6 +122,7 @@
 #define DROPSHIP_TORNADO "dropship_tornado"
 #define DROPSHIP_TYPHOON "dropship_typhoon"
 #define DROPSHIP_TRIPOLI "dropship_tripoli"
+#define DROPSHIP_GIBRALTAR "dropship_gibraltar"
 
 #define ALMAYER_DROPSHIP_LZ1 "almayer-hangar-lz1"
 #define ALMAYER_DROPSHIP_LZ2 "almayer-hangar-lz2"
