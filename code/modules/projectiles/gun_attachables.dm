@@ -482,6 +482,24 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_4
 	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_4
 
+/obj/item/attachable/compensator/tetra
+	name = "'Tetra' muzzle brake"
+	desc = "Produced by WiseFire Inc., this oversized muzzle brake is intended for use with Beretta 92FS in order to drastically improve outdated caliber's performance over prolonged engagements. Significantly decreases scatter, recoil, and improves accuracy. Also can help in melee if you're desperate."
+	attach_icon = "tetracompensator"
+	icon_state = "tetracompensator"
+	pixel_shift_x = 13
+	pixel_shift_y = 15
+	melee_mod = 15
+
+/obj/item/attachable/compensator/tetra/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_6
+	recoil_mod = -RECOIL_AMOUNT_TIER_5
+
+	damage_falloff_mod = 0.5
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_6
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_6
 
 /obj/item/attachable/slavicbarrel
 	name = "sniper barrel"

@@ -2240,3 +2240,31 @@
 		FACTION_COLONIST,
 	)
 
+/datum/human_ai_faction/yautja
+	faction = "Yautja"
+
+
+	enter_combat_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	exit_combat_lines = list(
+		"*click2",
+		"*click"
+	)
+	need_healing_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	grenade_thrown_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	reload_internal_mag_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	reload_lines = list(
+		"*roar",
+		"*roar2"
+	)

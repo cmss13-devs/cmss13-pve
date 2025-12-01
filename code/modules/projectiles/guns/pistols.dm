@@ -23,6 +23,7 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/compensator,
+		/obj/item/attachable/compensator/tetra,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
