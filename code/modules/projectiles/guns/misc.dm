@@ -425,7 +425,7 @@
 	var/beam_cooldown = 0
 	///Delay before another beam can start again, in tenths of seconds
 	var/beam_delay = 20
-
+	var/beam_color = COLOR_PURPLE
 /obj/item/weapon/gun/XM99/M99
 	name = "M99A2 phased plasma pulse rifle"
 	desc = "No longer experimental, this plasma rifle has increased ammo capacity, rate of fire and less problems with overheating."
@@ -435,6 +435,23 @@
 /obj/item/weapon/gun/XM99/M99/set_gun_config_values()
 	..()
 	set_fire_delay(7)
+
+/obj/item/weapon/gun/XM99/laser
+	name = "RXF-M5 EVA pistol"
+	desc = "A high power focusing laser pistol designed for Extra-Vehicular Activity, though it works just about anywhere really. Derived from the same technology as laser welders. Issued by the Weyland-Yutani Corporation, but also available on the civilian market."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "rxfm5_eva"
+	item_state = "eva"
+	muzzleflash_iconstate = "muzzle_laser"
+	muzzle_flash_color = COLOR_LASER_RED
+	fire_sound = 'sound/weapons/gun_rxf.ogg'
+	current_mag = /obj/item/ammo_magazine/laser
+	map_specific_decoration = FALSE
+	beam_color = COLOR_RED
+
+/obj/item/weapon/gun/XM99/laser/set_gun_config_values()
+	..()
+	set_fire_delay(4)
 
 // Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
 /obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
@@ -540,7 +557,7 @@
 	if(current_mag.current_rounds <= 0)
 		return
 	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = beam_color, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
 //-------------------------------------------------------

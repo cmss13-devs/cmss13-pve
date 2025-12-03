@@ -71,6 +71,25 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
+/datum/ammo/energy/rxf
+	name = "laser bolt"
+	icon_state = "laser_new"
+	flags_ammo_behavior = AMMO_ENERGY
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 25
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_1 //It's a freaking plasma beam
+	accurate_range = 20
+	effective_range_max = 11
+	max_range = 20
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_RED
+
+
 /datum/ammo/energy/plasma
 	name = "plasma bolt"
 	icon_state = "arcane_barrage"
