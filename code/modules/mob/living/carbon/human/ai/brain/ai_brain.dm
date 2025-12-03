@@ -9,13 +9,13 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	var/medium_action_delay = 2 SECONDS
 	var/long_action_delay = 5 SECONDS
 	/// Global multiplier for all AI action delays
-	var/action_delay_mult = 1
+	var/action_delay_mult = 2 // Doubled from 1, gives hAI a believable time between actions
 
 	/// If TRUE, shoots until the target is dead. Else, stops when downed
 	var/shoot_to_kill = TRUE
 
 	/// Distance for view checks
-	var/view_distance = 7
+	var/view_distance = 6
 
 	/// Should we limit our FOV in case view_distance is more than 7
 	var/scope_vision = TRUE

@@ -174,6 +174,7 @@ Can look good elsewhere as well.*/
 
 
 /mob/living/proc/animation_attack_on(atom/A, pixel_offset = 8)
+	SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 	if(A.clone)
 		if(src.Adjacent(A.clone))
 			A = A.clone
@@ -244,6 +245,10 @@ Can look good elsewhere as well.*/
 		animate(transform = turn(matrix(transform), sway*2 * (sway_dir *= -1)), pixel_x = rand(-strength,strength), pixel_y = rand(-strength/3,strength/3), time = times, easing = JUMP_EASING)
 
 	animate(transform = turn(matrix(transform), sway * (sway_dir *= -1)), pixel_x = 0, pixel_y = 0, time = 0)//ease it back
+
+/mob/sway_jitter(times = 3, steps = 3, strength = 3, sway = 5)
+	SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
+	return ..()
 
 /mob/living/carbon/human/proc/animation_rappel()
 	var/pre_rappel_alpha = alpha

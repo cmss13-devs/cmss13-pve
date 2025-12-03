@@ -21,6 +21,10 @@
 
 	return screen
 
+/mob/proc/overlay_fullscreen_timer(duration, animated, category, type, severity)
+	overlay_fullscreen(category, type, severity)
+	addtimer(CALLBACK(src, PROC_REF(clear_fullscreen), category, animated), duration)
+
 /mob/proc/clear_fullscreen(category, animated = 10)
 	var/atom/movable/screen/fullscreen/screen = fullscreens[category]
 	if(!screen)
@@ -96,6 +100,20 @@
 	severity = 0
 	. = ..()
 
+/atom/movable/screen/fullscreen/black
+	icon_state = "black"
+	layer = INTRO_LAYER
+
+/atom/movable/screen/fullscreen/spawning_in
+	icon_state = "blackimageoverlay"
+	layer = INTRO_LAYER
+
+/atom/movable/screen/fullscreen/crt
+	icon_state = "crt"
+	layer = ABOVE_INTRO_LAYER
+	blend_mode = BLEND_OVERLAY
+	alpha = 150
+
 /atom/movable/screen/fullscreen/brute
 	icon_state = "brutedamageoverlay"
 	layer = FULLSCREEN_DAMAGE_LAYER
@@ -108,7 +126,7 @@
 	layer = FULLSCREEN_DAMAGE_LAYER
 
 /atom/movable/screen/fullscreen/flash/noise/nvg
-	alpha = 27.5
+	alpha = 5
 
 /atom/movable/screen/fullscreen/crit
 	icon_state = "passage"

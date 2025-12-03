@@ -1,0 +1,8 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "Halves the slowdown duration when breaking off of bipoding"
+  - qol: "Ups the fire-rate of the M41 HPR, tweaks to the full-auto scatter mod too"
+  - qol: "The HPR can now take M41A (mk1) magazines"
+  - balance: "As above, given that's a balance thing too"
+  - bugfix: "Makes it so the HPR bipod being deployed and retracted doesn't leave the weapon in a worse state stats-wise than it was prior"

@@ -14,7 +14,6 @@
 	throw_speed = SPEED_VERY_FAST
 	// claymores are now acidable.
 	flags_atom = FPRINT|CONDUCT
-	// antigrief off. kino fragging rp.
 	allowed_sensors = list(/obj/item/device/assembly/prox_sensor)
 	max_container_volume = 120
 	reaction_limits = list( "max_ex_power" = 105, "base_ex_falloff" = 60, "max_ex_shards" = 32,
@@ -23,6 +22,11 @@
 	)
 	angle = 60
 	use_dir = TRUE
+	var/shrapnel_count = 40
+	var/shrapnel_type = /datum/ammo/bullet/shrapnel/claymore
+	var/explosive_power = 60
+	var/explosive_falloff = 25
+	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 	var/iff_signal = FACTION_MARINE
 	var/triggered = FALSE
 	var/hard_iff_lock = FALSE
@@ -46,7 +50,6 @@
 	. = ..()
 	prime() //Same here. Don't care about the effect strength.
 
-
 //checks for things that would prevent us from placing the mine.
 /obj/item/explosive/mine/proc/check_for_obstacles(mob/living/user)
 	if(locate(/obj/item/explosive/mine) in get_turf(src))
@@ -59,8 +62,6 @@
 		to_chat(user, SPAN_WARNING("It's too cramped in here to deploy \a [src]."))
 		return TRUE
 
-
-
 //Arming
 /obj/item/explosive/mine/attack_self(mob/living/user)
 	if(!..())
@@ -70,11 +71,6 @@
 		return
 
 	if(active || user.action_busy)
-		return
-
-	if(antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(src, user))
-		to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from planting!"))
-		msg_admin_niche("[key_name(user)] attempted to plant \a [name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
 		return
 
 	user.visible_message(SPAN_NOTICE("[user] starts deploying [src]."),
@@ -107,7 +103,6 @@
 	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
 	activate_sensors()
 	update_icon()
-
 
 //Disarming
 /obj/item/explosive/mine/attackby(obj/item/W, mob/user)
@@ -223,9 +218,9 @@
 	set waitfor = 0
 
 	if(!customizable)
-		create_shrapnel(loc, 60, dir, angle, /datum/ammo/bullet/shrapnel/claymore, cause_data)
+		create_shrapnel(loc, shrapnel_count, dir, angle, shrapnel_type, cause_data)
 		// a claymore is essentially a block of C4 with metal in the front. Shit's fuckin nasty.
-		cell_explosion(loc, 120, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
+		cell_explosion(loc, explosive_power, explosive_falloff, falloff_mode, dir, cause_data)
 		qdel(src)
 	else
 		. = ..()
@@ -305,24 +300,15 @@
 /obj/item/explosive/mine/active/no_iff
 	iff_signal = null
 
-//low lethality claymore.
-/obj/item/explosive/mine/confetti
-
-/obj/item/explosive/mine/confetti/prime()
-	set waitfor = 0
-
-	if(!customizable)
-		create_shrapnel(loc, 15, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
-		// low lethality edition
-		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
-		qdel(src)
-	else
-		. = ..()
-		if(!QDELETED(src))
-			disarm()
+//Player-given claymore. More lethal than the other sort.
+/obj/item/explosive/mine/strong
+	name = "\improper M20A2 Claymore anti-personnel mine"
+	shrapnel_type = /datum/ammo/bullet/shrapnel/claymore/strong
+	explosive_power = 90
+	explosive_falloff = 35
 
 //ditto, but armed.
-/obj/item/explosive/mine/confetti/active
+/obj/item/explosive/mine/strong/active
 	icon_state = "m20_active"
 	base_icon_state = "m20"
 	map_deployed = TRUE
@@ -333,27 +319,19 @@
 	icon_state = "m20p"
 	iff_signal = FACTION_PMC
 	hard_iff_lock = TRUE
+	shrapnel_count = 50
 
 /obj/item/explosive/mine/pmc/active
 	icon_state = "m20p_active"
 	base_icon_state = "m20p"
 	map_deployed = TRUE
 
-//low lethality claymore the second, PMC version
-/obj/item/explosive/mine/pmc/confetti
-
-/obj/item/explosive/mine/pmc/confetti/prime()
-	set waitfor = 0
-
-	if(!customizable)
-		create_shrapnel(loc, 30, dir, angle, /datum/ammo/bullet/shrapnel/claymore/confetti, cause_data)
-		// low lethality edition
-		cell_explosion(loc, 60, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, dir, cause_data)
-		qdel(src)
-	else
-		. = ..()
-		if(!QDELETED(src))
-			disarm()
+/obj/item/explosive/mine/pmc/strong
+	name = "\improper M20A2P Claymore anti-personnel mine"
+	shrapnel_count = 60
+	shrapnel_type = /datum/ammo/bullet/shrapnel/claymore/strong
+	explosive_power = 90
+	explosive_falloff = 35
 
 /obj/item/explosive/mine/custom
 	name = "custom mine"

@@ -1,0 +1,4 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - bugfix: "Fixes M5 gasmask onmob."

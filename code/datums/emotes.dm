@@ -129,6 +129,11 @@
 			if(is_blind(viewer) && isdeaf(viewer))
 				to_chat(viewer, msg)
 
+	for(var/obj/item/implant/implant in user)
+		if(!implant.implanted)
+			continue
+		implant.trigger(key, user)
+
 	if(intentional)
 		if(emote_type & EMOTE_VISIBLE)
 			var/list/viewers = get_mobs_in_view(7, user)

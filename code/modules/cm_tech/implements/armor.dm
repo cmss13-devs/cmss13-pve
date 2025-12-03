@@ -216,14 +216,10 @@
 /obj/item/clothing/accessory/health/research_plate/on_attached(obj/item/clothing/attached_to, mob/living/carbon/human/user)
 	. = ..()
 	attached_uni = attached_to
+	RegisterSignal(user, COMSIG_MOB_ITEM_UNEQUIPPED, PROC_REF(on_removed_sig))
 
 /obj/item/clothing/accessory/health/research_plate/proc/can_recycle(mob/living/user) //override this proc for check if you can recycle the plate.
 	return FALSE
-
-
-/obj/item/clothing/accessory/health/research_plate/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
-	. = ..()
-	RegisterSignal(user, COMSIG_MOB_ITEM_UNEQUIPPED, PROC_REF(on_removed_sig))
 
 /obj/item/clothing/accessory/health/research_plate/on_removed(mob/living/user, obj/item/clothing/C)
 	. = ..()
@@ -327,7 +323,7 @@
 
 /obj/item/clothing/accessory/health/research_plate/emergency_injector/clicked(mob/user, list/mods)
 	. = ..()
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		var/text = "You toggle overdose protection "
 		if(od_protection_mode == EMERGENCY_PLATE_OD_PROTECTION_DYNAMIC)
 			od_protection_mode = EMERGENCY_PLATE_OD_PROTECTION_OFF

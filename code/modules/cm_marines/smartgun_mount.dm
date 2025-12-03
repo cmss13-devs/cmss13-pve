@@ -496,10 +496,6 @@
 	var/semiauto_cooldown_time = 0.2 SECONDS
 	var/iff_allowed = TRUE
 
-/obj/structure/machinery/m56d_hmg/get_examine_text(mob/user)
-	. = ..()
-	. += "It is currently set to <b>[gun_firemode]</b>."
-
 /obj/structure/machinery/m56d_hmg/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
@@ -551,6 +547,7 @@
 /obj/structure/machinery/m56d_hmg/get_examine_text(mob/user) //Let us see how much ammo we got in this thing.
 	. = ..()
 	if(ishuman(user) || HAS_TRAIT(user, TRAIT_OPPOSABLE_THUMBS))
+		. += "It is currently set to <b>[gun_firemode]</b>."
 		if(rounds)
 			. += SPAN_NOTICE("It has [rounds] round\s out of [rounds_max].")
 		else
@@ -1003,7 +1000,7 @@
 		user.unset_interaction()
 
 /obj/structure/machinery/m56d_hmg/clicked(mob/user, list/mods)
-	if (mods["ctrl"])
+	if (mods[CTRL_CLICK])
 		if(operator != user)
 			return ..()//only the operatore can toggle fire mode
 		if(!CAN_PICKUP(user, src))
@@ -1111,7 +1108,7 @@
 		return
 
 	var/list/modifiers = params2list(params)
-	if(modifiers["shift"] || modifiers["middle"] || modifiers["right"])
+	if(modifiers[SHIFT_CLICK] || modifiers[MIDDLE_CLICK] || modifiers[RIGHT_CLICK] || modifiers[BUTTON4] || modifiers[BUTTON5])
 		return
 
 	// Don't allow doing anything else if inside a container of some sort, like a locker.

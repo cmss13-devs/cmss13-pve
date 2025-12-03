@@ -100,7 +100,7 @@
 		QDEL_NULL(coord)
 
 /obj/item/device/binoculars/range/clicked(mob/user, list/mods)
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		stop_targeting(user)
@@ -110,19 +110,16 @@
 /obj/item/device/binoculars/range/handle_click(mob/living/carbon/human/user, atom/targeted_atom, list/mods)
 	if(!istype(user))
 		return
-	if(mods["ctrl"])
+	if(mods[CTRL_CLICK])
 		if(user.stat != CONSCIOUS)
 			to_chat(user, SPAN_WARNING("You cannot use [src] while incapacitated."))
 			return FALSE
 		if(SEND_SIGNAL(user, COMSIG_BINOCULAR_HANDLE_CLICK, src))
 			return FALSE
-		if(mods["click_catcher"])
+		if(mods[CLICK_CATCHER])
 			return FALSE
 		if(user.z != targeted_atom.z && !coord)
 			to_chat(user, SPAN_WARNING("You cannot get a direct laser from where you are."))
-			return FALSE
-		if(!(is_ground_level(targeted_atom.z)))
-			to_chat(user, SPAN_WARNING("INVALID TARGET: target must be on the surface."))
 			return FALSE
 		if(user.sight & SEE_TURFS)
 			var/list/turf/path = get_line(user, targeted_atom, include_start_atom = FALSE)
@@ -243,7 +240,7 @@
 	. += SPAN_NOTICE("[src] is currently set to [range_mode ? "range finder" : "CAS marking"] mode.")
 
 /obj/item/device/binoculars/range/designator/clicked(mob/user, list/mods)
-	if(mods["alt"])
+	if(mods[ALT_CLICK])
 		if(!CAN_PICKUP(user, src))
 			return ..()
 		toggle_bino_mode(user)
@@ -320,6 +317,7 @@
 
 	var/turf/TU = get_turf(targeted_atom)
 	var/area/targ_area = get_area(targeted_atom)
+	var/area/user_area = get_area(user) // Surely future-tech lets the the designator calculate C if it can get eyes on the dropship above too
 	if(!istype(TU)) return
 	var/is_outside = FALSE
 	switch(targ_area.ceiling)
@@ -327,12 +325,19 @@
 			is_outside = TRUE
 		if(CEILING_GLASS)
 			is_outside = TRUE
+	switch(user_area.ceiling)
+		if(CEILING_NONE)
+			if(targ_area.ceiling <= CEILING_PROTECTION_TIER_3)
+				is_outside = TRUE
+		if(CEILING_GLASS)
+			if(targ_area.ceiling <= CEILING_PROTECTION_TIER_3)
+				is_outside = TRUE
 
 	if (protected_by_pylon(TURF_PROTECTION_CAS, TU))
 		is_outside = FALSE
 
 	if(!is_outside && !range_mode) //rangefinding works regardless of ceiling
-		to_chat(user, SPAN_WARNING("INVALID TARGET: target must be visible from high altitude."))
+		to_chat(user, SPAN_WARNING("INVALID TARGET: target or user must be visible and engageable from high altitude."))
 		return
 	if(user.action_busy)
 		return
@@ -400,6 +405,9 @@
 /datum/action/item_action/switch_himat/action_activate()
 	. = ..()
 	var/obj/item/device/binoculars/range/designator/desig = holder_item
+	if(!length(desig.connected_himats))
+		to_chat(usr, SPAN_NOTICE("No HIMAT IDs found! Please connect to a HIMAT."))
+		return
 	desig.himat_id++
 	if(desig.himat_id > desig.connected_himats.len)
 		desig.himat_id = 1
@@ -456,21 +464,14 @@
 	cas_laser_overlay = "adv_laser_cas"
 	uses_camo = FALSE
 
-
-//IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in scout spec kit
-/obj/item/device/binoculars/range/designator/scout
-	name = "scout laser designator"
-	desc = "An improved laser designator, issued to USCM scouts, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes."
+//IMPROVED LASER DESIGNATER, faster cooldown, faster target acquisition, can be found only in spotter spec kit
+/obj/item/device/binoculars/range/designator/spotter
+	name = "spotter's laser designator"
+	desc = "A specially-designed laser designator, issued to spotters in a USCM scout-sniper team, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."
 	unacidable = TRUE
 	indestructible = TRUE
 	cooldown_duration = 80
 	target_acquisition_delay = 30
-
-/obj/item/device/binoculars/range/designator/spotter
-	name = "spotter's laser designator"
-	desc = "A specially-designed laser designator, issued to USCM spotters, with two modes: target marking for CAS with IR laser and rangefinding. Ctrl + Click turf to target something. Ctrl + Click designator to stop lasing. Alt + Click designator to switch modes. Additionally, a trained spotter can laze targets for a USCM marksman, increasing the speed of target acquisition. A targeting beam will connect the binoculars to the target, but it may inherit the user's cloak, if possible."
-	unacidable = TRUE
-	indestructible = TRUE
 	var/is_spotting = FALSE
 	var/spotting_time = 10 SECONDS
 	var/spotting_cooldown_delay = 5 SECONDS
@@ -515,18 +516,16 @@
 		return
 	var/mob/living/carbon/human/human = owner
 	if(human.selected_ability == src)
-		to_chat(human, "You will no longer use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will no longer use [name] with [human.get_ability_mouse_name()].")
 		button.icon_state = "template"
-		human.selected_ability = null
+		human.set_selected_ability(null)
 	else
-		to_chat(human, "You will now use [name] with \
-			[human.client && human.client.prefs && human.client.prefs.toggle_prefs & TOGGLE_MIDDLE_MOUSE_CLICK ? "middle-click" : "shift-click"].")
+		to_chat(human, "You will now use [name] with [human.get_ability_mouse_name()].")
 		if(human.selected_ability)
 			human.selected_ability.button.icon_state = "template"
-			human.selected_ability = null
+			human.set_selected_ability(null)
 		button.icon_state = "template_on"
-		human.selected_ability = src
+		human.set_selected_ability(src)
 
 /datum/action/item_action/specialist/spotter_target/can_use_action()
 	var/mob/living/carbon/human/human = owner
@@ -702,7 +701,7 @@
 		return FALSE
 
 	var/list/modifiers = params2list(params) //Only single clicks.
-	if(modifiers["middle"] || modifiers["shift"] || modifiers["alt"] || modifiers["ctrl"])
+	if(modifiers[MIDDLE_CLICK] || modifiers[SHIFT_CLICK] || modifiers[ALT_CLICK] || modifiers[CTRL_CLICK])
 		return FALSE
 
 	var/turf/SS = get_turf(src) //Stand Still, not what you're thinking.

@@ -122,12 +122,6 @@
 /datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
 	elevator_network = "Requisitions"
 
-/datum/map_template/shuttle/trijent_elevator/post_load(obj/docking_port/mobile/M)
-	. = ..()
-	var/obj/docking_port/mobile/trijent_elevator/elev = M
-	elev.elevator_network = elevator_network
-	log_debug("Adding network [elevator_network] to [M.id]")
-
 /datum/map_template/shuttle/trijent_elevator/golden_arrow
 	shuttle_id = "unused"
 

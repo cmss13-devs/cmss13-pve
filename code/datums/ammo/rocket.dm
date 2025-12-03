@@ -61,7 +61,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_9
 	accurate_range = 9
 	max_range = 11
-	damage = 250
+	damage = 150
 	shrapnel_chance = 5
 	shrapnel_type = /obj/item/large_shrapnel/at_rocket_dud
 	penetration= ARMOR_PENETRATION_TIER_10
@@ -74,6 +74,9 @@
 	mob.apply_effect(3, PARALYZE)
 	if(iscarbon(mob)) // Doesn't matter how built-different you are, it's an explosive rocket-propelled projectile hitting you.
 		mob.ex_act(650, null, projectile.weapon_cause_data, 100)
+	if(mob.mob_size >= MOB_SIZE_BIG) // Bonus vs BIG things
+		var/mob/living/alivent = mob
+		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
 	cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 	smoke.set_up(1, turf)
 	smoke.start()
@@ -137,8 +140,7 @@
 
 /datum/ammo/rocket/ap/anti_tank
 	name = "anti-tank rocket"
-	damage = 1000
-	damage_var_high = 100
+	damage = 200
 	vehicle_slowdown_time = 5 SECONDS
 
 /datum/ammo/rocket/ap/anti_tank/on_hit_obj(obj/object, obj/projectile/projectile)
@@ -156,40 +158,138 @@
 	return ..()
 
 /datum/ammo/rocket/ap/tank_towlauncher
-	max_range = 8
+	name = "anti-armor missile"
+	max_range = 16
 
 /datum/ammo/rocket/ap/tank_towlauncher/aa
 	name = "hypervelocity missile"
-	damage = 200
 	max_range = 16
 	shell_speed = AMMO_SPEED_TIER_8
 
+//USCM Hornet AA missile
+/datum/ammo/rocket/ap/anti_air
+	name = "hypervelocity anti-air missile"
+	damage = 250
+	max_range = 16
+	vehicle_slowdown_time = 4 SECONDS
+	shell_speed = AMMO_SPEED_TIER_8
+
+// UPP APC MISSILES
+/datum/ammo/rocket/ap/tank_towlauncher/hj35_launcher
+	icon_state = "hj35_missile"
+	max_range = 16
+
+//UPP TANK RAILGUN CANNON
+/datum/ammo/rocket/ap/railgun
+	name = "railgun round"
+	icon_state = "railgun"
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
+
+	accuracy = HIT_ACCURACY_TIER_5
+	accurate_range = 32
+	max_range = 32
+	damage = 250
+	damage_var_high = 120
+	shell_speed = AMMO_SPEED_TIER_6
+	vehicle_slowdown_time = 15 SECONDS
+	penetration= ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/rocket/ap/railgun/do_at_max_range(obj/projectile/projectile)
+	var/turf/turf = get_turf(projectile)
+	var/hit_something = 0
+	for(var/mob/mob in turf)
+		mob.ex_act(450, projectile.dir, projectile.weapon_cause_data, 40)
+		mob.apply_effect(3, WEAKEN)
+		mob.apply_effect(3, PARALYZE)
+		hit_something = 1
+		break
+	if(!hit_something)
+		for(var/obj/object in turf)
+			if(object.density)
+				object.ex_act(250, projectile.dir, projectile.weapon_cause_data, 200)
+				hit_something = 1
+				break
+	if(!hit_something)
+		turf.ex_act(150, projectile.dir, projectile.weapon_cause_data)
+	cell_explosion(turf, 550, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	smoke.set_up(1, turf)
+	smoke.start()
+
+/datum/ammo/rocket/ap/railgun/on_hit_obj(obj/object, obj/projectile/projectile)
+	if(istype(object, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = object
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("railgun round"))
+		mob.interior_crash_effect()
+		var/turf/turf = get_turf(mob.loc)
+		mob.ex_act(50, projectile.dir, projectile.weapon_cause_data, 50)
+		cell_explosion(get_turf(mob), 100, 40, EXPLOSION_FALLOFF_SHAPE_EXPONENTIAL, null, projectile.weapon_cause_data)
+		smoke.set_up(1, turf)
+		smoke.start()
+
+		return
+	return ..()
+
+//UPP Goose AA missile
+/datum/ammo/rocket/anti_air
+	name = "anti-air missile"
+	icon_state = "emblr"
+	damage = 100
+	max_range = 14
+	shell_speed = AMMO_SPEED_TIER_6
+
+//UA TANK CANNON
 /datum/ammo/rocket/ltb
 	name = "cannon round"
 	icon_state = "ltb"
-	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET|AMMO_STRIKES_SURFACE
+	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
 
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
 	max_range = 32
 	damage = 200
 	shell_speed = AMMO_SPEED_TIER_3
+	var/vehicle_slowdown_time = 10 SECONDS
 
 /datum/ammo/rocket/ltb/on_hit_mob(mob/mob, obj/projectile/projectile)
-	cell_explosion(get_turf(mob), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(mob), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	if(iscarbon(mob)) // Tank beats everything.
+		mob.ex_act(350, null, projectile.weapon_cause_data, 150)
+	if(mob.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/alivent = mob
+		alivent.apply_armoured_damage(damage*2.5, ARMOR_BOMB, BRUTE, null, penetration)
+	cell_explosion(get_turf(mob), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/on_hit_obj(obj/object, obj/projectile/projectile)
-	cell_explosion(get_turf(object), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(object), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	if(istype(object, /obj/vehicle/multitile))
+		var/obj/vehicle/multitile/mob = object
+		mob.next_move = world.time + vehicle_slowdown_time
+		playsound(mob, 'sound/effects/meteorimpact.ogg', 35)
+		mob.at_munition_interior_explosion_effect(cause_data = create_cause_data("Anti-Tank Rocket"))
+		mob.interior_crash_effect()
+		var/turf/turf = get_turf(mob.loc)
+		mob.ex_act(150, projectile.dir, projectile.weapon_cause_data, 100)
+		smoke.set_up(1, turf)
+		smoke.start()
+		return
+	cell_explosion(get_turf(object), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/on_hit_turf(turf/turf, obj/projectile/projectile)
-	cell_explosion(get_turf(turf), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(turf), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/do_at_max_range(obj/projectile/projectile)
-	cell_explosion(get_turf(projectile), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(projectile), 200, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 165, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 150, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+
+//UPP TANK CANNON
+/datum/ammo/rocket/ltb/p17702
+	name = "93mmm round"
+	icon_state = "p17702"
+
+	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/rocket/wp
 	name = "white phosphorous rocket"
@@ -320,3 +420,4 @@
 
 /datum/ammo/rocket/custom/do_at_max_range(obj/projectile/projectile)
 	prime(null, projectile)
+

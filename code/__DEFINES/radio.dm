@@ -43,7 +43,6 @@
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"
-#define RADIO_CHANNEL_CLF_CCT "CLF CCT"
 #define RADIO_CHANNEL_CLF_MED "CLF Med"
 #define RADIO_CHANNEL_CLF_ENGI "CLF Engi"
 
@@ -76,6 +75,8 @@
 #define RADIO_CHANNEL_VAI "VAI"
 #define RADIO_CHANNEL_CMB "CMB"
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
+#define RADIO_CHANNEL_CIA "CIA"
+#define RADIO_CHANNEL_MERC "Mercenaries"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 

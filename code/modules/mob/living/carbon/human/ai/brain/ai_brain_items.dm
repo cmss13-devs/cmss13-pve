@@ -267,13 +267,15 @@
 	item_slot_appraisal_loop(tied_human.r_store, "right_pocket")
 
 /datum/human_ai_brain/proc/appraise_armor()
-	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit/storage))
+	if(!istype(tied_human.wear_suit, /obj/item/clothing/suit))
 		return
 
-	if(istype(tied_human.wear_suit, /obj/item/clothing/suit/storage/marine) && tied_human.loc) // being in nullspace makes lights play weirdly
-		var/obj/item/clothing/suit/storage/marine/marine_armor = tied_human.wear_suit
-		if(!marine_armor.light_on)
-			marine_armor.turn_light(tied_human, TRUE)
+	if(istype(tied_human.wear_suit, /obj/item/clothing/suit) && tied_human.loc) // being in nullspace makes lights play weirdly
+		var/obj/item/clothing/suit/worn_armor = tied_human.wear_suit
+		if(!worn_armor.has_light)
+			return
+		else if(!worn_armor.light_on)
+			worn_armor.turn_light(tied_human, TRUE)
 
 	var/obj/item/clothing/suit/storage/storage_suit = tied_human.wear_suit
 	for(var/id in equipment_map)
@@ -284,7 +286,11 @@
 			equipment_map[id] -= item
 
 	RegisterSignal(storage_suit, COMSIG_PARENT_QDELETING, PROC_REF(on_item_delete), TRUE)
-	item_slot_appraisal_loop(storage_suit.pockets, "armor")
+	for(var/obj/item/clothing/accessory/storage/armour_webbing in storage_suit.accessories)
+		item_slot_appraisal_loop(armour_webbing, "armor")
+		return
+	if(storage_suit.get_pockets())
+		item_slot_appraisal_loop(storage_suit.pockets, "armor")
 
 /datum/human_ai_brain/proc/appraise_uniform()
 	var/obj/item/clothing/accessory/storage/located_storage = locate(/obj/item/clothing/accessory/storage) in tied_human.w_uniform.accessories

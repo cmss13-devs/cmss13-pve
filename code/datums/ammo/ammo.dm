@@ -98,6 +98,9 @@
 	/// Color of the light of the bullet
 	var/bullet_light_color = COLOR_WHITE
 
+	/// Type of empty shell casing
+	var/shell_casing = null
+
 /datum/ammo/New()
 	set_bullet_traits()
 
@@ -221,7 +224,6 @@
 			damage = armor_damage_reduction(GLOB.xeno_explosive, damage, total_explosive_resistance , 60, 0, 0.5, XNO.armor_integrity)
 			var/armor_punch = armor_break_calculation(GLOB.xeno_explosive, damage, total_explosive_resistance, 60, 0, 0.5, XNO.armor_integrity)
 			XNO.apply_armorbreak(armor_punch)
-
 		M.apply_damage(damage,damage_type)
 
 		if(XNO && length(XNO.xeno_shields))

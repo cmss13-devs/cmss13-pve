@@ -355,7 +355,7 @@
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/roller,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/machinery/light,
 /turf/open/floor/almayer/sterile_green_side,
 /area/adminlevel/chinook/medical)
@@ -2166,9 +2166,9 @@
 /obj/item/storage/belt/medical/lifesaver/full,
 /obj/item/storage/belt/medical/lifesaver/full,
 /obj/item/storage/belt/medical/lifesaver/full,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/almayer/sterile_green_side/west,
 /area/adminlevel/chinook/medical)
 "hZ" = (
@@ -11983,7 +11983,7 @@
 /obj/item/roller,
 /obj/item/roller,
 /obj/item/storage/belt/medical/lifesaver/full,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/item/clothing/glasses/hud/health,
 /turf/open/floor/almayer/sterile_green_corner,
 /area/adminlevel/chinook/medical)

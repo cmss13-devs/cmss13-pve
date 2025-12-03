@@ -521,21 +521,6 @@
 	visible_message(SPAN_WARNING("[name] has been squashed."),SPAN_WARNING("You hear a smack."))
 	qdel(src)
 
-/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype( W, /obj/item/toy/crayon ))
-		var/obj/item/toy/crayon/C = W
-		var/clr = C.colorName
-
-		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
-			to_chat(usr, SPAN_NOTICE(" The egg refuses to take on this color!"))
-			return
-
-		to_chat(usr, SPAN_NOTICE(" You color \the [src] [clr]"))
-		icon_state = "egg-[clr]"
-		egg_color = clr
-	else
-		..()
-
 /obj/item/reagent_container/food/snacks/egg/blue
 	icon_state = "egg-blue"
 	egg_color = "blue"
@@ -2466,6 +2451,29 @@
 	desc = "A wedge of mature Cheddar, tastes pretty nice. The cheese wheel it was cut from can't have gone far."
 	bitesize = 2
 
+/obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft
+	name = "packaged cheese-product slice"
+	desc = "A slice what legally has to be called 'cheese-product'. Not the nicest thing to eat, but can work in recipes in place of proper cheese. Ensure wrapper removal before consumption."
+	icon_state = "kruft_single"
+	bitesize = 2
+	package = TRUE
+
+/obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft/Initialize()
+	. = ..()
+	reagents.add_reagent("cheese", 5)
+	reagents.add_reagent("sodiumchloride", 1)
+	reagents.add_reagent("plasticide", 2)
+
+/obj/item/reagent_container/food/snacks/cheesewedge/mature/kraft/attack_self(mob/user)
+	..()
+
+	if(package)
+		playsound(src.loc,'sound/effects/pageturn2.ogg', 15, 1)
+		to_chat(user, SPAN_NOTICE("You pull the wrapping off of the 'cheese' slice!"))
+		reagents.remove_reagent("plasticide", 2)
+		package = FALSE
+		icon_state = "kruft_single-o"
+
 /obj/item/reagent_container/food/snacks/sliceable/cheesewheel/verymature
 	name = "aged cheese wheel"
 	desc = "A big wheel of delicious Cheddar, it has been aged for a long time and is pretty strong."
@@ -2956,12 +2964,28 @@
 		qdel(src)
 
 // Egg + flour = dough
-/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/reagent_container/food/snacks/flour))
+/obj/item/reagent_container/food/snacks/egg/attackby(obj/item/W, mob/living/user, list/mods)
+	if(istype(W, /obj/item/reagent_container/food/snacks/flour))
 		new /obj/item/reagent_container/food/snacks/dough(get_turf(src))
 		to_chat(user, "You make some dough.")
 		qdel(W)
 		qdel(src)
+		return TRUE
+
+	if(istype(W, /obj/item/toy/crayon))
+		var/obj/item/toy/crayon/C = W
+		var/clr = C.colorName
+
+		if(!(clr in list("blue","green","mime","orange","purple","rainbow","red","yellow")))
+			to_chat(usr, SPAN_NOTICE("The egg refuses to take on this color!"))
+			return
+
+		to_chat(usr, SPAN_NOTICE("You color [src] [clr]"))
+		icon_state = "egg-[clr]"
+		egg_color = clr
+		return TRUE
+
+	return ..()
 
 /obj/item/reagent_container/food/snacks/dough
 	name = "dough"
@@ -3129,8 +3153,19 @@
 		new /obj/item/reagent_container/food/snacks/rawsticks(get_turf(src))
 		to_chat(user, "You cut the potato.")
 		qdel(src)
-	else
-		..()
+		return TRUE
+
+	if(istype(W, /obj/item/stack/cable_coil))
+		var/obj/item/stack/cable_coil/C = W
+		if(C.use(5))
+			to_chat(user, SPAN_NOTICE("You add some cable to the potato and slide it inside the battery encasing."))
+			var/obj/item/cell/potato/pocell = new /obj/item/cell/potato(user.loc)
+			pocell.maxcharge = src.potency * 10
+			pocell.charge = pocell.maxcharge
+			qdel(src)
+			return TRUE
+
+	return ..()
 
 /obj/item/reagent_container/food/snacks/rawsticks
 	name = "raw potato sticks"

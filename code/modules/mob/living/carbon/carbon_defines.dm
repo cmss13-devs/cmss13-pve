@@ -27,6 +27,8 @@
 	var/list/active_transfusions = list()
 
 	var/datum/huntdata/hunter_data //Stores all information relating to Hunters for use with their HUD and other systems.
+	//Taken from update_icons
+	var/list/overlays_standing[TOTAL_LAYERS]
 
 /mob/living/carbon/vv_get_dropdown()
 	. = ..()

@@ -2,7 +2,7 @@
 	name = "Navy Paygrade"
 	rank_pin = /obj/item/clothing/accessory/ranks/navy
 	pay_multiplier = 1.8	//Less members but also more technical work, paid a bit better across the board
-	default_faction = FACTION_MARINE
+	default_faction = FACTION_NAVY
 
 // ENLISTED PAYGRADES
 

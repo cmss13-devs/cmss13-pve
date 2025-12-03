@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - rscadd: "Gives the PMC SG helmet BLOCKGASEFFECT"

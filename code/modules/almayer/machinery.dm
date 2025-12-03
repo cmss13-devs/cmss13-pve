@@ -51,10 +51,6 @@
 	stat |= BROKEN
 	update_icon()
 
-/obj/structure/machinery/prop/almayer/computer/power_change()
-	..()
-	update_icon()
-
 /obj/structure/machinery/prop/almayer/computer/update_icon()
 	..()
 	icon_state = initial(icon_state)
@@ -126,6 +122,10 @@
 	minimap_type = MINIMAP_FLAG_PMC
 	faction = FACTION_PMC
 
+/obj/structure/machinery/prop/almayer/CICmap/rmc
+	minimap_type = MINIMAP_FLAG_TWE
+	faction = FACTION_TWE
+
 /obj/structure/machinery/prop/almayer/CICmap/toc
 	name = "tactical map screen"
 	desc = "A screen on the TOC computer displaying the tactical map."
@@ -164,12 +164,12 @@
 	if(!click_data)
 		return
 
-	if(!click_data["icon-x"] || !click_data["icon-y"])
+	if(!click_data[ICON_X] || !click_data[ICON_Y])
 		return
 
 	// Calculation to apply new pixelshift.
-	var/mouse_x = text2num(click_data["icon-x"])-1 // Ranging from 0 to 31
-	var/mouse_y = text2num(click_data["icon-y"])-1
+	var/mouse_x = text2num(click_data[ICON_X])-1 // Ranging from 0 to 31
+	var/mouse_y = text2num(click_data[ICON_Y])-1
 
 	var/cell_x = clamp(floor(mouse_x/CELLSIZE), 0, CELLS-1) // Ranging from 0 to CELLS-1
 	var/cell_y = clamp(floor(mouse_y/CELLSIZE), 0, CELLS-1)

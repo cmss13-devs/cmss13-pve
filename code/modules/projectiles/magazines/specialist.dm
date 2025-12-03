@@ -45,14 +45,53 @@
 //M42C magazine
 
 /obj/item/ammo_magazine/sniper/elite
-	name = "\improper M42C marksman magazine (10x99mm)"
-	desc = "A magazine of specialized supersonic 10x99mm anti-tank rounds."
-	default_ammo = /datum/ammo/bullet/sniper/elite
+	name = "\improper M42C marksman magazine (10x28mm)"
+	desc = "A magazine of M252 HEAP match-grade 10x28mm ammo. An aimed shot with it will deal significant damage."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/heap/sniper
 	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
-	caliber = "10x99mm"
+	caliber = "10x28mm"
 	icon_state = "m42c"
 	max_rounds = 6
 
+/obj/item/ammo_magazine/sniper/elite/basic
+	name = "\improper M42C magazine (10x28mm)"
+	desc = "A magazine of M250 10x28mm ammunition. Not as effective as the match-grade kind, but still brings the hurt."
+	default_ammo = /datum/ammo/bullet/rifle/heavy
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+/obj/item/ammo_magazine/sniper/elite/incin
+	name = "\improper M42C incendiary magazine (10x28mm)"
+	desc = "A magazine of M254 incendiary match-grade 10x28mm ammo. An aimed shot with it will temporarily blind the target and kindle the blaze further."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/incendiary
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
+/obj/item/ammo_magazine/sniper/elite/flak
+	name = "\improper M42C flak magazine (10x28mm)"
+	desc = "A magazine of M257 HEFA match-grade 10x28mm ammo. An aimed shot with it will temporarily slow the target and minimize the backlash."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/flak
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/sniper/elite/overkill
+	name = "\improper M42C super-sonic magazine (10x28mm)"
+	desc = "A magazine of M252A1 HEAPSS match-grade 10x28mm ammo. Capable of penetrating through most infantry-level materiel. Depending on what you hit, it might even have enough energy to wound anything behind the target."
+	default_ammo = /datum/ammo/bullet/sniper/elite
+	gun_type = /obj/item/weapon/gun/rifle/sniper/elite
+	caliber = "10x28mm"
+	icon_state = "m42c"
+	max_rounds = 6
+	ammo_band_color = AMMO_BAND_COLOR_RUBBER
 
 //Type 88 //Based on the actual Dragunov designated marksman rifle.
 
@@ -65,38 +104,78 @@
 	default_ammo = /datum/ammo/bullet/sniper/upp
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/sniper/svd
+	ammo_band_icon = "+type88_band"
+	ammo_band_icon_empty = "+type88_band_e"
+
+/obj/item/ammo_magazine/sniper/svd/heap
+	name = "\improper Type-88 HV Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with HV rounds, that provide some additonal force and body armor penetration.."
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+	default_ammo = /datum/ammo/bullet/sniper/upp/heap
+
+/obj/item/ammo_magazine/sniper/svd/flak
+	name = "\improper Type-88 flak Magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the Type-88 designated marksman rifle. This one is loaded with flak rounds, which explode into spall on impact."
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+	default_ammo = /datum/ammo/bullet/sniper/upp/flak
+
+/obj/item/ammo_magazine/sniper/svd/flak/Initialize(mapload, spawn_empty)
+	. = ..()
+	desc = desc + SPAN_WARNING(" Be careful of collateral damage to friendlies caused by the spall.")
 
 /obj/item/ammo_magazine/sniper/svd/pve
 	name = "\improper Type-88 HP Magazine (7.62x54mmR)"
 	default_ammo = /datum/ammo/bullet/sniper/upp_pve
 
+//RMC DMR magazine
+
+/obj/item/ammo_magazine/sniper/rmc
+	name = "\improper L64A3 squash-head magazine (8.88x51mm Caseless)"
+	desc = "A magazine of L10A7 squash-head match-grade 8.88x51mm ammo. An aimed shot with it will deal significant damage."
+	caliber = "8.88x51mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
+	icon_state = "rmcdmr"
+	w_class = SIZE_MEDIUM
+	max_rounds = 25
+	default_ammo = /datum/ammo/bullet/rifle/heavy/rmcdmr
+	gun_type = /obj/item/weapon/gun/rifle/sniper/rmc
+	ammo_band_icon = "+rmcdmr_band"
+	ammo_band_icon_empty = "+rmcdmr_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
 //M49A magazines
 
 /obj/item/ammo_magazine/rifle/m49a/custom
 	name = "\improper A19 HV magazine (10x28mm)"
-	desc = "A magazine of A19 high velocity rounds for use in the M49A custom battle rifle. The M49A custom battle rifle is the only gun that can chamber these rounds."
+	desc = "A magazine of A19 high velocity rounds for use in the later-model M49A battle rifles. The M49A5 & M49A6 battle rifles are the only guns that can chamber these rounds."
 	icon_state = "a19"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec
 	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_icon = "+a19_band"
 	ammo_band_icon_empty = "+a19_band_e"
+	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
 /obj/item/ammo_magazine/rifle/m49a/custom/incendiary
 	name = "\improper A19 HV incendiary magazine (10x28mm)"
-	desc = "A magazine of A19 HV incendiary rounds for use in the M49A battle rifle. The M49A battle rifle is the only gun that can chamber these rounds."
+	desc = "A magazine of A19 HV incendiary rounds for use in the later-model M49A battle rifles. The M49A5 & M49A6 battle rifles are the only guns that can chamber these rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/incendiary
-	max_rounds = 30
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m49a/custom/impact
-	name = "\improper A19 HV high impact magazine (10x28mm)"
-	desc = "A magazine of A19 HV high impact rounds for use in the M49A battle rifle. The M49A battle rifle is the only gun that can chamber these rounds."
-	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/impact
-	max_rounds = 30
+/obj/item/ammo_magazine/rifle/m49a/custom/explosive
+	name = "\improper A19 HV explosive magazine (10x28mm)"
+	desc = "A magazine of A19 HV explosive rounds for use in the later-model M49A battle rifles. The M49A5 & M49A6 battle rifles are the only guns that can chamber these rounds."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/explosive
 	gun_type = /obj/item/weapon/gun/rifle/m49a_custom
-	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
+	ammo_band_color = AMMO_BAND_COLOR_EXPLOSIVE
+
+/obj/item/ammo_magazine/rifle/m49a/custom/pve
+	name = "\improper A19 HV depleted uranium magazine (10x28mm)"
+	desc = "A magazine of A19 HV wall-penetrating, body-penetrating, toxic 10x28mm rounds. Handloaded by Gateway armorers for use in the M49A6 battle rifle."
+	default_ammo = /datum/ammo/bullet/rifle/heavy/spec/du
+	gun_type = /obj/item/weapon/gun/rifle/m49a/pve
+	ammo_band_color = AMMO_BAND_COLOR_TOXIN
 
 //-------------------------------------------------------
 //SMARTGUN
@@ -117,12 +196,24 @@
 	default_ammo = /datum/ammo/bullet/rifle/heavy/dirty
 	gun_type = /obj/item/weapon/gun/smartgun
 
-/obj/item/ammo_magazine/smartgun/holo_targetting
-	name = "holotargetting smartgun drum"
-	desc = "Holotargetting rounds for use in the royal marines commando L56A2 smartgun."
-	icon_state = "m56_drum"
+/obj/item/ammo_magazine/smartgun/holo_targeting
+	name = "holotargeting smartgun drum"
+	desc = "Holotargeting rounds for use in the royal marines commando L58A3 smartgun. The drum itself is designed to only fit in L58A3 smartguns, and is marked with a blue X."
+	icon_state = "m56_drum_holo"
 	default_ammo = /datum/ammo/bullet/rifle/heavy/holo_target
 	gun_type = /obj/item/weapon/gun/smartgun/rmc
+
+/obj/item/ammo_magazine/smartgun/upp
+	name = "automated machinegun drum"
+	caliber = "12.7x40mm"
+	max_rounds = 250
+	desc = "Simple high-caliber 250 round machinegun drum."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "rfvs37"
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp_smartgun
+	gun_type = /obj/item/weapon/gun/smartgun/upp
+
+
 //-------------------------------------------------------
 //Flare gun. Close enough?
 /obj/item/ammo_magazine/internal/flare
@@ -395,6 +486,40 @@
 	default_ammo = /datum/ammo/rocket/wp/upp
 	gun_type = /obj/item/weapon/gun/launcher/rocket/upp
 	reload_delay = 85
+
+//-------------------------------------------------------
+//AA Missiles
+
+/obj/item/ammo_magazine/rocket/anti_air
+	name = "\improper 70mm 'Hornet' hypervelocity anti-air missile"
+	desc = "A thin missile designed to be fired by M579 ADS-C vehicles or launched from the SIM-118 MANPAD. A no-frills hypervelocity missile, the hornet relies on the kinetic energy it imparts on impact to take down targets."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon_state = "hornet"
+	default_ammo = /datum/ammo/rocket/ap/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/uscm
+
+/obj/item/ammo_magazine/rocket/anti_air/update_icon()
+	if(current_rounds <= 0)
+		qdel(src)
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/ammo_magazine/rocket/anti_air/upp
+	name = "\improper 92mm 'Goose' anti-air missile canister"
+	desc = "A squat missile canister for the EMBLR surface-to-air weapons system. Unlike it's USCM counterpart, the Goose carries a small but powerful warhead designed to spread a cloud of flechettes around it's target."
+	caliber = "missile"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "emblr"
+	default_ammo = /datum/ammo/rocket/anti_air
+	gun_type = /obj/item/weapon/gun/launcher/rocket/anti_air/upp
+
+/obj/item/ammo_magazine/rocket/anti_air/upp/update_icon()
+	..()
+	if(current_rounds <= 0)
+		name = "\improper spent 92mm missile canister"
+		desc = "A spent canister assembly for the EMBLR anti-air missile launcher."
+		icon_state = "emblr_e"
 
 //-------------------------------------------------------
 // XM99 power/fuel cells

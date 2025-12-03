@@ -5328,7 +5328,7 @@
 /area/bigredv2/caves/mining)
 "cBp" = (
 /obj/structure/surface/table,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/structure/pipes/vents/pump,
 /obj/item/reagent_container/spray/cleaner,
 /obj/structure/phone_base/colony_net{
@@ -14228,7 +14228,7 @@
 /turf/open/floor/whitegreenfull,
 /area/bigredv2/outside/medical)
 "keH" = (
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /turf/open/floor/whitegreencorner,
 /area/bigredv2/outside/medical)
 "keN" = (
@@ -23458,7 +23458,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/yellowfull,
 /area/bigredv2/outside/general_store)
@@ -28135,7 +28135,7 @@
 /area/bigredv2/outside/n)
 "vRd" = (
 /obj/structure/surface/table/reinforced,
-/obj/item/device/healthanalyzer,
+/obj/item/device/healthanalyzer/soul,
 /obj/effect/landmark/item_pool_spawner/survivor_ammo/buckshot,
 /turf/open/floor/white,
 /area/bigredv2/outside/medical)
@@ -30257,12 +30257,12 @@
 	dir = 4
 	},
 /obj/structure/closet/crate,
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
 /obj/item/ammo_magazine/rifle/nsg23/ap,
-/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/plating/platingdmg3/west,
 /area/bigredv2/caves/mining)
 "xGm" = (

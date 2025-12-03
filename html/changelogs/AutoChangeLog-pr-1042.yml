@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "VAI & Freelancer gear presets adjusted,"
+  - balance: "Weapon-chances for TWE & UA rebels have been tweaked"
+  - balance: "hAI view range has been tweaked slightly and their action-delay doubled"

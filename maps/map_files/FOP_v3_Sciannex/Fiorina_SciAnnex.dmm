@@ -868,7 +868,7 @@
 /turf/closed/wall/r_wall/prison_unmeltable,
 /area/fiorina/station/medbay)
 "aGa" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_10_1"
 	},
 /turf/open/floor/prison/sterile_white/southwest,
@@ -922,7 +922,7 @@
 /turf/open/floor/prison/darkyellowfull2/east,
 /area/fiorina/station/telecomm/lz1_tram)
 "aIH" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_8"
 	},
 /obj/structure/surface/table/reinforced/prison{
@@ -1095,7 +1095,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/lz/near_lzII)
 "aNZ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_6_1"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -1202,7 +1202,7 @@
 /turf/open/floor/prison/darkyellow2/southwest,
 /area/fiorina/station/flight_deck)
 "aRt" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5_1"
 	},
 /turf/open/floor/plating/prison,
@@ -1773,7 +1773,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/tumor/ice_lab)
 "bnx" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5"
 	},
 /turf/open/floor/prison/whitegreen/west,
@@ -2095,7 +2095,7 @@
 /turf/open/floor/prison/sterile_white/southwest,
 /area/fiorina/station/medbay)
 "bDJ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5_1"
 	},
 /obj/effect/decal/medical_decals{
@@ -3038,7 +3038,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/central_ring)
 "cnm" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /turf/open/floor/prison/whitegreenfull/southwest,
@@ -3302,7 +3302,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/telecomm/lz1_cargo)
 "cxC" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_1"
 	},
 /turf/open/floor/prison/whitegreenfull/southwest,
@@ -3533,7 +3533,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/security/wardens)
 "cIZ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5"
 	},
 /turf/open/floor/prison/darkyellow2/east,
@@ -3568,7 +3568,7 @@
 /turf/closed/wall/prison,
 /area/fiorina/station/research_cells)
 "cKv" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_8"
 	},
 /turf/open/floor/prison/floor_plate/southwest,
@@ -3774,7 +3774,7 @@
 /turf/open/floor/prison/yellowfull,
 /area/fiorina/station/lowsec)
 "cSi" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_7_1"
 	},
 /turf/open/floor/prison/sterile_white/southwest,
@@ -4111,7 +4111,7 @@
 /turf/open/floor/prison,
 /area/fiorina/station/central_ring)
 "deJ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 2;
 	icon_state = "casing_5"
 	},
@@ -4307,7 +4307,7 @@
 /area/fiorina/station/disco)
 "dlR" = (
 /obj/item/weapon/gun/smg/mp5,
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_6_1"
 	},
 /turf/open/floor/prison/floor_plate/southwest,
@@ -4403,7 +4403,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/lz/near_lzI)
 "doB" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_10_1"
 	},
@@ -4416,7 +4416,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/tumor/civres)
 "doK" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5"
 	},
 /obj/item/clothing/suit/armor/vest/security,
@@ -4771,7 +4771,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/fiorina/station/medbay)
 "dDa" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_7_1"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -5111,7 +5111,7 @@
 /area/fiorina/oob)
 "dRR" = (
 /obj/structure/platform,
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 2;
 	icon_state = "casing_5"
 	},
@@ -5261,7 +5261,7 @@
 /turf/open/floor/prison/redfull,
 /area/fiorina/station/security)
 "dXY" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_6"
 	},
 /turf/open/floor/prison/yellow/north,
@@ -7324,7 +7324,7 @@
 /area/fiorina/station/central_ring)
 "fsp" = (
 /obj/structure/inflatable/popped/door,
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /turf/open/floor/prison/sterile_white/southwest,
@@ -7879,7 +7879,7 @@
 /turf/open/floor/prison/blue/southwest,
 /area/fiorina/station/chapel)
 "fQB" = (
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_9_1"
 	},
 /obj/effect/spawner/random/gun/shotgun/highchance,
@@ -9357,7 +9357,7 @@
 /turf/open/floor/prison/whitegreen/northwest,
 /area/fiorina/station/medbay)
 "gWq" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /obj/structure/bed/chair/office/light{
@@ -12510,7 +12510,7 @@
 /turf/open/floor/prison/floor_plate/southwest,
 /area/fiorina/station/flight_deck)
 "jus" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "casing_6"
 	},
@@ -12631,7 +12631,7 @@
 /turf/open/floor/prison/blue/northwest,
 /area/fiorina/station/power_ring)
 "jAy" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_1"
 	},
 /obj/effect/landmark/survivor_spawner,
@@ -12658,7 +12658,7 @@
 /turf/open/floor/prison/bluefull,
 /area/fiorina/station/power_ring)
 "jBC" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_9_1"
 	},
 /turf/open/floor/prison/yellowcorner/west,
@@ -13343,7 +13343,7 @@
 /turf/open/floor/prison,
 /area/fiorina/station/power_ring)
 "kbi" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_10_1"
 	},
@@ -15397,7 +15397,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/power_ring)
 "lPz" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 2;
 	icon_state = "casing_5"
 	},
@@ -18661,7 +18661,7 @@
 /turf/open/floor/prison/yellow/west,
 /area/fiorina/station/lowsec)
 "owd" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /turf/open/floor/prison/darkyellow2,
@@ -19286,7 +19286,7 @@
 /area/fiorina/tumor/civres)
 "oVV" = (
 /obj/item/weapon/gun/rifle/m16,
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_5"
 	},
@@ -21769,7 +21769,7 @@
 /area/fiorina/station/civres_blue)
 "qUe" = (
 /obj/item/weapon/gun/shotgun/pump/dual_tube/cmb,
-/obj/item/ammo_casing/shell{
+/obj/effect/decal/ammo_casing/redshell{
 	icon_state = "shell_9_1"
 	},
 /obj/structure/barricade/metal{
@@ -23184,7 +23184,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/power_ring)
 "rVT" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /turf/open/floor/prison/sterile_white/southwest,
@@ -23248,7 +23248,7 @@
 /turf/open/floor/prison/whitegreen,
 /area/fiorina/station/medbay)
 "rZL" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_8"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -23723,7 +23723,7 @@
 /turf/open/floor/prison/darkyellow2,
 /area/fiorina/lz/near_lzI)
 "sud" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_10_1"
 	},
@@ -23820,7 +23820,7 @@
 /turf/open/floor/prison,
 /area/fiorina/tumor/aux_engi)
 "syN" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "cartridge_2"
 	},
@@ -24869,7 +24869,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/power_ring)
 "tvy" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_2"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -24940,7 +24940,7 @@
 /turf/open/floor/prison/darkyellow2/north,
 /area/fiorina/lz/near_lzI)
 "txY" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_1"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -25430,7 +25430,7 @@
 /turf/open/floor/prison/whitegreenfull/southwest,
 /area/fiorina/station/medbay)
 "tRu" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "casing_6"
 	},
@@ -25443,7 +25443,7 @@
 /turf/open/floor/prison/darkbrown2,
 /area/fiorina/station/park)
 "tRB" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "cartridge_2"
 	},
@@ -25654,7 +25654,7 @@
 /obj/structure/flora/grass/tallgrass/jungle/corner{
 	dir = 8
 	},
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "casing_6"
 	},
@@ -26325,7 +26325,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/transit_hub)
 "uEG" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5_1"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -26400,7 +26400,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/chapel)
 "uHj" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "cartridge_2"
 	},
@@ -26724,7 +26724,7 @@
 /turf/open/floor/prison/whitegreen,
 /area/fiorina/station/medbay)
 "uTM" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_6"
 	},
 /turf/open/floor/prison/floor_plate,
@@ -28468,7 +28468,7 @@
 /turf/open/floor/prison/greenfull/east,
 /area/fiorina/tumor/servers)
 "wmJ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_2"
 	},
 /turf/open/floor/prison/sterile_white/southwest,
@@ -29149,7 +29149,7 @@
 /turf/open/floor/carpet,
 /area/fiorina/station/security/wardens)
 "wMH" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 8;
 	icon_state = "cartridge_2"
 	},
@@ -29265,7 +29265,7 @@
 /turf/open/floor/prison/floor_plate,
 /area/fiorina/station/civres_blue)
 "wSu" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_5"
 	},
 /turf/open/floor/prison/darkyellow2/west,
@@ -29954,7 +29954,7 @@
 /turf/open/floor/prison/darkyellow2/southeast,
 /area/fiorina/station/flight_deck)
 "xwA" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "casing_6_1"
 	},
 /obj/item/weapon/gun/smg/mp5,
@@ -30723,7 +30723,7 @@
 /turf/open/floor/plating/prison,
 /area/fiorina/station/chapel)
 "ycJ" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 6;
 	icon_state = "casing_5"
 	},

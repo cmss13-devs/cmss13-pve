@@ -350,7 +350,7 @@
 /turf/open/floor/prison/whitegreen/east,
 /area/template_noop)
 "yM" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_1"
 	},
 /turf/open/floor/prison/whitegreenfull/southwest,

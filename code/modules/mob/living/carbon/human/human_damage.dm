@@ -24,6 +24,12 @@
 	med_hud_set_status()
 
 
+	if(health <= HEALTH_THRESHOLD_DEAD || (species.has_organ["brain"] && !has_brain()))
+		death(last_damage_data)
+		blinded = TRUE
+		silent = 0
+		return
+
 
 /mob/living/carbon/human/adjustBrainLoss(amount)
 

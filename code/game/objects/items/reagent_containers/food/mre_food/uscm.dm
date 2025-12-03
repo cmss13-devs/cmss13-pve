@@ -489,7 +489,7 @@
 /obj/item/reagent_container/food/drinks/cans/spread/update_icon()
 	overlays.Cut()
 	if(open)
-		icon_state = "spread_open"
+		icon_state = "[initial(icon_state)]_open"
 		if(reagents.total_volume)
 			overlays += mutable_appearance(icon, flavor)
 

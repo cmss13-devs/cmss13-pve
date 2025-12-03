@@ -1,0 +1,5 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - rscadd: "Harm Intent overriding PBs is now an opt in preference"
+  - bugfix: "Shotguns don't adhere to PB Override. Sort of \"fix\" an oversight where Grab Intent: One of the PB intents now, didn't get click drag override. By moving the PB intent to Disarm instead!"

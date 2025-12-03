@@ -357,7 +357,13 @@
 				break
 		if(acid_t) layer = acid_t.layer
 		else
-			acid_t = get_turf(loc)
+			var/atom/check_if_acidable = get_turf(loc)
+			if(check_if_acidable.unacidable)
+				STOP_PROCESSING(SSoldeffects, src)
+				animate(src, alpha = 0, 1 SECONDS)
+				QDEL_IN(src, 1 SECONDS)
+			else
+				acid_t = check_if_acidable
 
 /obj/effect/xenomorph/acid/Destroy()
 	acid_t = null

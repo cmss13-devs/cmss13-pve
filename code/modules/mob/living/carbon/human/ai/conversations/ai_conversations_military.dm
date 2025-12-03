@@ -1,5 +1,5 @@
 /datum/human_ai_conversation/faction/military
-	acceptable_factions = FACTION_LIST_MARINE
+	acceptable_factions = FACTION_LIST_UA
 
 /datum/human_ai_conversation/faction/military/radio
 	amount_ai_involved = 1

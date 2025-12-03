@@ -77,13 +77,6 @@
 		icon_state = initial(icon_state)
 		icon_state += "0"
 
-
-
-/obj/structure/machinery/computer/power_change()
-	..()
-	update_icon()
-
-
 /obj/structure/machinery/computer/proc/set_broken()
 	stat |= BROKEN
 	update_icon()

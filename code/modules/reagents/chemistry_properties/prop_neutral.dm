@@ -269,17 +269,32 @@
 	category = PROPERTY_TYPE_METABOLITE
 
 /datum/chem_property/neutral/hypothermic/process(mob/living/M, potency = 1, delta_time)
-	if(prob(5 * delta_time))
+	if(prob(5 * delta_time * potency))
 		M.emote("shiver")
-	M.bodytemperature = max(M.bodytemperature - POTENCY_MULTIPLIER_MEDIUM * potency,0)
+	if(ishuman(M))
+		var/mob/living/carbon/human/human_becoming_cold = M
+		human_becoming_cold.bodytemperature = max(human_becoming_cold.bodytemperature - POTENCY_MULTIPLIER_MEDIUM * potency, ((potency < 1) ? human_becoming_cold.species.body_temperature : 0))
+	else
+		M.bodytemperature = max(M.bodytemperature - POTENCY_MULTIPLIER_MEDIUM * potency, ((potency < 1) ? 309 : 0))
 	M.recalculate_move_delay = TRUE
 
 /datum/chem_property/neutral/hypothermic/process_overdose(mob/living/M, potency = 1)
-	M.bodytemperature = max(M.bodytemperature - POTENCY_MULTIPLIER_VHIGH * potency,0)
-	M.drowsyness  = max(M.drowsyness, 30)
+	if(ishuman(M))
+		var/mob/living/carbon/human/human_becoming_cold = M
+		human_becoming_cold.bodytemperature = max(human_becoming_cold.bodytemperature - POTENCY_MULTIPLIER_VHIGH * potency, ((potency < 1) ? human_becoming_cold.species.body_temperature : 0))
+	else
+		M.bodytemperature = max(M.bodytemperature - POTENCY_MULTIPLIER_VHIGH * potency, ((potency < 1) ? 309 : 0))
+	if(potency < 1)
+		M.dizziness = max(M.dizziness, 130)
+	else
+		M.drowsyness  = max(M.drowsyness, 30)
 
 /datum/chem_property/neutral/hypothermic/process_critical(mob/living/M, potency = 1, delta_time)
-	M.apply_effect(20, PARALYZE)
+	if(potency < 1)
+		M.apply_effect(20, PARALYZE)
+	else
+		M.apply_effect(20, DAZE)
+
 
 /datum/chem_property/neutral/balding
 	name = PROPERTY_BALDING

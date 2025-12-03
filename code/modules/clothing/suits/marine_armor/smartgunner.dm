@@ -7,21 +7,11 @@
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	storage_slots = 2
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_atom = NO_NAME_OVERRIDE
 	unacidable = TRUE
-	allowed = list(
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/mine,
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun/smartgun,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
+	allowed = list(/obj/item/weapon/gun/smartgun)
 	var/list/smartgun_back = list(
 		/obj/item/storage/large_holster/machete/smartgunner,
 	)
@@ -83,27 +73,36 @@
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
-	slowdown = SLOWDOWN_ARMOR_LIGHT
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_atom = NO_NAME_OVERRIDE
 	unacidable = TRUE
-	allowed = list(
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/mine,
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun/smartgun,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-	)
+	allowed = list(/obj/item/weapon/gun/smartgun)
 	var/list/smartgun_back = list(
-		/obj/item/storage/large_holster/machete/smartgunner,
-		/obj/item/weapon/gun/smartgun,
+		/obj/item/storage/large_holster/machete/smartgunner
 	)
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
-	restricted_accessory_slots = list(ACCESSORY_SLOT_SGPAINT, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_M56UTILITY, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
+	valid_accessory_slots = list(
+		ACCESSORY_SLOT_MEDAL,
+		ACCESSORY_SLOT_SGPAINT,
+		ACCESSORY_SLOT_M56UTILITY,
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_PONCHO,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORSHIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORGROIN,
+	)
+	restricted_accessory_slots = list(
+		ACCESSORY_SLOT_PAINT,
+		ACCESSORY_SLOT_SGPAINT,
+		ACCESSORY_SLOT_M56UTILITY,
+		ACCESSORY_SLOT_DECORNECK,
+		ACCESSORY_SLOT_DECORBRACER,
+		ACCESSORY_SLOT_DECORSHIN,
+		ACCESSORY_SLOT_DECORKNEE,
+		ACCESSORY_SLOT_DECORGROIN,
+	)
 
 /obj/item/clothing/suit/marine/smartgunner/Initialize()
 	. = ..()

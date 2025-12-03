@@ -60,12 +60,12 @@
 	desc = "A small glossy bottle of inaprovaline, a drug that artificially stimulates the respiratory reflex, reducing oxygen starvation during unconsciousness."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle19"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/inaprovaline/Initialize()
 	. = ..()
-	reagents.add_reagent("inaprovaline", 135)
+	reagents.add_reagent("inaprovaline", 140)
 
 /obj/item/reagent_container/glass/bottle/bicaridine
 	name = "\improper Bicaridine bottle"
@@ -83,12 +83,12 @@
 	desc = "A small glossy bottle full of Peridaxon, the novel blend of drugs that TEMPORARILY halts the symptoms of organ damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle4"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/peridaxon/Initialize()
 	. = ..()
-	reagents.add_reagent("peridaxon", 135)
+	reagents.add_reagent("peridaxon", 140)
 
 /obj/item/reagent_container/glass/bottle/tramadol
 	name = "\improper Tramadol bottle"
@@ -106,12 +106,12 @@
 	desc = "A small glossy bottle full of oxycodone, an aggressive analgesic. May be habit forming."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle2"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/oxycodone/Initialize()
 	. = ..()
-	reagents.add_reagent("oxycodone", 135)
+	reagents.add_reagent("oxycodone", 140)
 
 /obj/item/reagent_container/glass/bottle/tricordrazine
 	name = "\improper Tricordrazine bottle"
@@ -151,12 +151,12 @@
 	desc = "A small bottle filled with dexalin+. Hyper-condensed microcapsules quickly release oxygen into the bloodstream, immediately offsetting the effects of O2 deprivation."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle10"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/dexalinplus/Initialize()
 	. = ..()
-	reagents.add_reagent("dexalinp", 135)
+	reagents.add_reagent("dexalinp", 140)
 
 /obj/item/reagent_container/glass/bottle/spaceacillin
 	name = "\improper Spaceacillin bottle"
@@ -226,39 +226,39 @@
 	desc = "A small bottle of imidazoline and alkysine, used to heal brain and eye damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle19"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/imialk/Initialize()
 	. = ..()
-	reagents.add_reagent("imidazoline", 67.5)
-	reagents.add_reagent("alkysine", 67.5)
+	reagents.add_reagent("imidazoline", 70)
+	reagents.add_reagent("alkysine", 70)
 
 /obj/item/reagent_container/glass/bottle/merabica
 	name = "\improper Meralyne-Bicaridine bottle"
 	desc = "A small bottle of meralyne and bicaridine. Rapidly heals brute damage."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle17"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/merabica/Initialize()
 	. = ..()
-	reagents.add_reagent("bicaridine", 67.5)
-	reagents.add_reagent("meralyne", 67.5)
+	reagents.add_reagent("bicaridine", 70)
+	reagents.add_reagent("meralyne", 70)
 
 /obj/item/reagent_container/glass/bottle/keloderm
 	name = "\improper Kelotane-Dermaline bottle"
 	desc = "A small bottle of kelotane & dermaline, a pair of burn regrowth drugs."
 	icon = 'icons/obj/items/chemistry.dmi'
 	icon_state = "bottle15"
-	volume = 135
-	amount_per_transfer_from_this = 135
+	volume = 140
+	amount_per_transfer_from_this = 140
 
 /obj/item/reagent_container/glass/bottle/keloderm/Initialize()
 	. = ..()
-	reagents.add_reagent("kelotane", 67.5)
-	reagents.add_reagent("dermaline", 67.5)
+	reagents.add_reagent("kelotane", 70)
+	reagents.add_reagent("dermaline", 70)
 
 /obj/item/reagent_container/glass/bottle/mutagen
 	name = "unstable mutagen bottle"

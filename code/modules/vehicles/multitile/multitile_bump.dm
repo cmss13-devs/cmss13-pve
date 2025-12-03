@@ -258,12 +258,6 @@
 /obj/structure/prop/dam/torii/handle_vehicle_bump(obj/vehicle/multitile/V)
 	return FALSE
 
-/obj/structure/prop/dam/large_boulder/handle_vehicle_bump(obj/vehicle/multitile/V)
-	return FALSE
-
-/obj/structure/prop/dam/wide_boulder/handle_vehicle_bump(obj/vehicle/multitile/V)
-	return FALSE
-
 /obj/structure/flora/tree/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
 		return FALSE
@@ -299,7 +293,8 @@
 	// Driver needs access
 		var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
 		if(!requiresID() || (driver && allowed(driver)))
-			open(TRUE)
+			if(operating != DOOR_OPERATING_OPENING)
+				open(TRUE)
 			return FALSE
 	if(!unacidable)
 		visible_message(SPAN_DANGER("\The [V] pushes [src] over!"))
@@ -524,7 +519,7 @@
 
 /mob/living/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(is_mob_incapacitated(1))
-		apply_damage(7 + rand(0, 5), BRUTE)
+		apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
 		return TRUE
 
 	var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
@@ -547,17 +542,17 @@
 			apply_effect(0.5, WEAKEN)
 		else
 			apply_effect(2, WEAKEN)
-			apply_damage(5 + rand(0, 10), BRUTE)
+			apply_damage((5 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 			dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM)
 		apply_effect(3, WEAKEN)
-		apply_damage(10 + rand(0, 10), BRUTE)
+		apply_damage((10 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 		dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		apply_effect(5, WEAKEN)
-		apply_damage(15 + rand(0, 10), BRUTE)
+		apply_damage((15 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
 		dmg = TRUE
 
 	var/list/slots = V.get_activatable_hardpoints()
@@ -568,7 +563,7 @@
 		H.livingmob_interact(src)
 
 	apply_effect(3, WEAKEN)
-	apply_damage(7 + rand(0, 5), BRUTE)
+	apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
 	var/mob_moved = step(src, V.last_move_dir)
 
 	visible_message(SPAN_DANGER("\The [V] rams \the [src]!"), SPAN_DANGER("\The [V] rams you! Get out of the way!"))

@@ -215,6 +215,7 @@
 	force = 30
 	throwforce = 2
 	w_class = SIZE_LARGE
+	sharp = IS_SHARP_ITEM_BIG
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	dirt_overlay = "etool_overlay"
@@ -252,6 +253,13 @@
 	..()
 
 /obj/item/tool/shovel/etool/folded
+	folded = TRUE
+
+/obj/item/tool/shovel/etool/rmc
+	name = "2155 pattern entrenching tool"
+	desc = "A marine commando's best friend. Dually useful for digging foxholes and bashing in noggins. Folds in half for easier storage."
+
+/obj/item/tool/shovel/etool/rmc/folded
 	folded = TRUE
 
 /obj/item/tool/shovel/etool/upp

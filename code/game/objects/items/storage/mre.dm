@@ -12,7 +12,7 @@
 	w_class = SIZE_SMALL
 	can_hold = list()
 	storage_slots = 4
-	max_w_class = 0
+	max_w_class = SIZE_SMALL
 	use_sound = "rip"
 	var/trash_item = /obj/item/trash/uscm_mre
 	var/icon_closed = "mealpack"
@@ -139,6 +139,7 @@
 	. = ..()
 	isopened = FALSE
 	icon_state = icon_closed
+	set_can_hold()
 	RegisterSignal(src, COMSIG_ITEM_DROPPED, PROC_REF(try_forced_folding))
 
 /obj/item/storage/box/mre/proc/try_forced_folding(datum/source, mob/user)
@@ -149,12 +150,24 @@
 
 	if(locate(/obj/item/mre_food_packet) in src)
 		return
+	if(locate(/obj/item/reagent_container/food/snacks) in src)
+		return
+	if(locate(/obj/item/reagent_container/food/drinks/cans) in src)
+		return
 
 	UnregisterSignal(src, COMSIG_ITEM_DROPPED)
 	storage_close(user)
 	to_chat(user, SPAN_NOTICE("You throw away [src]."))
 	new trash_item(user.loc)
 	qdel(src)
+
+/obj/item/storage/box/mre/proc/set_can_hold()
+	for(var/item in contents)
+		can_hold += item
+		if(istype(item, /obj/item/mre_food_packet))
+			var/obj/item/mre_food_packet/food_packet = item
+			if(food_packet.contents_food)
+				can_hold += food_packet.contents_food
 
 /obj/item/storage/box/mre/update_icon()
 	if(!isopened)
@@ -296,7 +309,7 @@
 	should_have_spread = FALSE
 	should_have_cookie = FALSE
 	should_have_utencil = FALSE
-	should_have_drink = FALSE
+	should_have_drink = TRUE
 
 /obj/item/storage/box/mre/wy/choose_drink()
 	new /obj/item/reagent_container/food/drinks/cans/bugjuice(src)
@@ -355,3 +368,37 @@
 		/obj/item/reagent_container/food/drinks/cans/food/upp/rice,
 	)
 	return ..()
+
+
+///HUMANITARIAN DAILY RATION
+
+/obj/item/storage/box/mre/hdr
+	name = "\improper UA humanitarian daily ration"
+	desc = "HDR for short. Sometimes given out by armies of UA memberstates on conflicted colonies or during natural disasters. Vegeterian, two entrees, but no beverage powder. Menu is quite limited, too."
+	icon_state = "hdr_mealpack"
+	icon_closed = "hdr_mealpack"
+	icon_opened = "hdr_mealpackopened"
+	item_state = "hdr_mealpack"
+	trash_item = /obj/item/trash/hdr_mre
+	should_have_spread = TRUE
+	should_have_beverage = FALSE
+	should_have_utencil = TRUE
+	should_have_drink = FALSE
+	should_have_cigarettes = FALSE
+	should_have_matches = FALSE
+	should_have_cookie = FALSE
+	entree = /obj/item/mre_food_packet/entree/hdr
+	side = /obj/item/mre_food_packet/entree/hdr/two
+	snack = /obj/item/mre_food_packet/hdr/side
+	dessert = /obj/item/mre_food_packet/hdr/dessert
+
+/obj/item/storage/box/mre/hdr/choose_utencil()
+	new /obj/item/tool/kitchen/utensil/pspoon(src)
+
+/obj/item/storage/box/mre/hdr/choose_spread()
+	var/spread_type = rand(1, 2)
+	switch(spread_type)
+		if(1)
+			new /obj/item/reagent_container/food/drinks/cans/spread/strawberryjam(src)
+		if(2)
+			new /obj/item/reagent_container/food/drinks/cans/spread/sunflowerbutter(src)

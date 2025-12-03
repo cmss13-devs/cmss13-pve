@@ -1,6 +1,6 @@
 /obj/item/hardpoint/secondary/m56cupola
 	name = "\improper M56 Cupola"
-	desc = "A secondary weapon for tanks that shoots bullets"
+	desc = "A secondary remotely-controlled weapon system for tanks using a modified M56."
 
 	icon_state = "m56_cupola"
 	disp_icon = "tank"
@@ -11,7 +11,7 @@
 	firing_arc = 120
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola
-	max_clips = 1
+	max_clips = 3
 
 	muzzle_flash_pos = list(
 		"1" = list(8, -7),
@@ -32,3 +32,24 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+
+/obj/item/hardpoint/secondary/m56cupola/aev
+	name = "\improper Pintle-Mounted M56 RWS"
+	desc = "A remotely-controlled weapon system for armored engineering vehicles using a modified M56."
+	disp_icon_state = "m56pintle"
+
+	allowed_seat = VEHICLE_DRIVER
+
+	firing_arc = 150
+
+	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/aev
+	max_clips = 5
+
+	muzzle_flash_pos = list(
+		"1" = list(8, -1),
+		"2" = list(-7, -21),
+		"4" = list(13, -10),
+		"8" = list(-11, 1)
+	)
+
+	scatter = 2

@@ -126,7 +126,7 @@
 	force = 10
 	throwforce = 10
 
-/obj/item/tool/kitchen/utensil/knife/attack(target as mob, mob/living/user as mob)
+/obj/item/tool/kitchen/utensil/pknife/attack(target as mob, mob/living/user as mob)
 	. = ..()
 	if(.)
 		playsound(loc, 'sound/weapons/bladeslice.ogg', 25, 1, 5)
@@ -195,7 +195,6 @@
 	icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	flags_atom = FPRINT|CONDUCT
-	force = MELEE_FORCE_NORMAL
 	w_class = SIZE_SMALL
 	throwforce = 8
 	throw_speed = SPEED_VERY_FAST

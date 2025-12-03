@@ -314,7 +314,7 @@
 #define XENO_EVASION_HIGH 20
 
 // Speeds
-#define XENO_SPEED_QUEEN 0.6
+#define XENO_SPEED_QUEEN 0.5
 #define XENO_SPEED_TIER_1 0.4
 #define XENO_SPEED_TIER_2 0.2
 #define XENO_SPEED_TIER_3 0
@@ -432,7 +432,7 @@
 #define XENO_HEALTH_MOD_MED 60
 #define XENO_HEALTH_MOD_LARGE   80
 #define XENO_HEALTH_MOD_VERY_LARGE  100
-#define XENO_HEALTH_MOD_ACIDER  115
+#define XENO_HEALTH_MOD_ACIDER  -60
 
 // Armor mods. Use the above defines for some guidance
 // In general, +20 armor should be a little more than +20% effective HP, however,

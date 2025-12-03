@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - qol: "The swiss army knife now selects tools from a menu instead of at random"

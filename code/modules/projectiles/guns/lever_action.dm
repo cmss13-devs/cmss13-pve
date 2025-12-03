@@ -127,9 +127,9 @@ their unique feature is that a direct hit will buff your damage and firerate
 	wield_delay = 0 //for one-handed levering
 
 /obj/item/weapon/gun/lever_action/proc/reset_hit_buff(mob/user, one_hand_lever)
+	SIGNAL_HANDLER
 	if(!(flags_gun_lever_action & USES_STREAKS))
 		return
-	SIGNAL_HANDLER
 	streak = 0
 	lever_sound = initial(lever_sound)
 	lever_message = initial(lever_message)
@@ -151,18 +151,6 @@ their unique feature is that a direct hit will buff your damage and firerate
 	for(var/i = 1 to current_mag.max_rounds) //We want to make sure to populate the internal_mag.
 		current_mag.chamber_contents[i] = i > number_to_replace ? "empty" : current_mag.default_ammo
 	current_mag.chamber_position = current_mag.current_rounds //The position is always in the beginning [1]. It can move from there.
-
-/obj/item/weapon/gun/lever_action/proc/add_to_internal_mag(mob/user,selection) //bullets are added forward.
-	if(!current_mag)
-		return
-	current_mag.chamber_position++ //We move the position up when loading ammo. New rounds are always fired next, in order loaded.
-	current_mag.chamber_contents[current_mag.chamber_position] = selection //Just moves up one, unless the mag is full.
-	if(current_mag.current_rounds == 1 && !in_chamber) //The previous proc in the reload() cycle adds ammo, so the best workaround here,
-		update_icon() //This is not needed for now. Maybe we'll have loaded sprites at some point, but I doubt it. Also doesn't play well with double barrel.
-		ready_in_chamber()
-		cock_gun(user)
-	if(user) playsound(user, reload_sound, 25, TRUE)
-	return TRUE
 
 /obj/item/weapon/gun/lever_action/proc/empty_chamber(mob/user)
 	if(!current_mag)
@@ -221,32 +209,19 @@ their unique feature is that a direct hit will buff your damage and firerate
 		current_mag.chamber_position--
 		return in_chamber
 
-/obj/item/weapon/gun/lever_action/ready_in_chamber()
-	return ready_lever_action_internal_mag()
-
-/obj/item/weapon/gun/lever_action/reload_into_chamber(mob/user)
-	if(!active_attachable)
-		in_chamber = null
-
-		//Time to move the internal_mag position.
-		ready_in_chamber() //We're going to try and reload. If we don't get anything, icon change.
-		if(!current_mag.current_rounds && !in_chamber) //No rounds, nothing chambered.
-			update_icon()
-
-	return TRUE
-
 /obj/item/weapon/gun/lever_action/unique_action(mob/user)
 	work_lever(user)
 
 /obj/item/weapon/gun/lever_action/ready_in_chamber()
 	return
 
-/obj/item/weapon/gun/lever_action/add_to_internal_mag(mob/user, selection) //Load it on the go, nothing chambered.
+/obj/item/weapon/gun/lever_action/proc/add_to_internal_mag(mob/user, selection) //Load it on the go, nothing chambered.
 	if(!current_mag)
 		return
 	current_mag.chamber_position++
 	current_mag.chamber_contents[current_mag.chamber_position] = selection
 	playsound(user, reload_sound, 25, TRUE)
+	eject_casing()
 	return TRUE
 
 /obj/item/weapon/gun/lever_action/proc/work_lever(mob/living/carbon/human/user)
@@ -274,6 +249,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 			twohand_lever(user)
 
 		playsound(user, lever_sound, 25, TRUE)
+		eject_casing()
 		levered = TRUE
 
 /obj/item/weapon/gun/lever_action/proc/twohand_lever(mob/living/carbon/human/user)
@@ -509,9 +485,9 @@ their unique feature is that a direct hit will buff your damage and firerate
 	return empty_chamber(user)
 
 /obj/item/weapon/gun/lever_action/xm88/reset_hit_buff(mob/user, one_hand_lever)
+	..()
 	if(!(flags_gun_lever_action & USES_STREAKS))
 		return
-	SIGNAL_HANDLER
 	if(streak > 0)
 		to_chat(user, SPAN_WARNING("[src] beeps as it loses its targeting data, and returns to normal firing procedures."))
 	streak = 0

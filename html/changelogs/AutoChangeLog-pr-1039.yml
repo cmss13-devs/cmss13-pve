@@ -1,0 +1,8 @@
+author: "KoishiVibe"
+delete-after: True
+changes:
+  - rscadd: "New lorebits and names"
+  - rscdel: "Previous lorebits and names"
+  - qol: "Smartgunners can now Armor."
+  - code_imp: "Added groin, neck armor support to the M56 harness."
+  - refactor: "Just cleaned up the lists to make them as readable as the others."
