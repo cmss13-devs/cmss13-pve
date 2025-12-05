@@ -426,6 +426,8 @@
 	///Delay before another beam can start again, in tenths of seconds
 	var/beam_delay = 20
 	var/beam_color = COLOR_PURPLE
+	var/do_after_delay = 20
+
 /obj/item/weapon/gun/XM99/M99
 	name = "M99A2 phased plasma pulse rifle"
 	desc = "No longer experimental, this plasma rifle has increased ammo capacity, rate of fire and less problems with overheating."
@@ -442,12 +444,14 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "rxfm5_eva"
 	item_state = "eva"
+	flags_gun_features = GUN_AMMO_COUNTER
 	muzzleflash_iconstate = "muzzle_laser"
 	muzzle_flash_color = COLOR_LASER_RED
 	fire_sound = 'sound/weapons/gun_rxf.ogg'
 	current_mag = /obj/item/ammo_magazine/laser
 	map_specific_decoration = FALSE
 	beam_color = COLOR_RED
+	do_after_delay = 0
 
 /obj/item/weapon/gun/XM99/laser/set_gun_config_values()
 	..()
@@ -498,7 +502,7 @@
 
 	else
 		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		if(do_after(do_after_delay, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(plasma)
 			current_mag = plasma
 			plasma.forceMove(src)
