@@ -61,6 +61,11 @@ const ALTERNATE_ACTIONS: Record<string, AlternateAction> = {
     icon: 'mask-face',
     text: 'Toggle internals',
   },
+
+  open_storage: {
+    icon: 'briefcase',
+    text: 'Open storage',
+  },
 };
 
 type Slot = {
