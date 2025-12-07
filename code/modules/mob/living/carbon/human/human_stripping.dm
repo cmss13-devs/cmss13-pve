@@ -55,6 +55,8 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	var/timer = 1 SECONDS
 	if(sourcehuman.stat == CONSCIOUS)
 		timer = 5 SECONDS
+	if(istype(sourcehuman.back, /obj/item/storage/backpack/marine))
+		timer = 0.5 SECONDS
 	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
 		return
 
