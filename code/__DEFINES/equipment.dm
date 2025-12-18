@@ -163,6 +163,10 @@
 #define SMARTGUN_HARNESS (1<<13)
 ///Whether wearing this headset grants you the ability to use the IFF targetting system of the smartgun
 #define SMARTGUN_OPTIC (1<<14)
+//Ignores NOPRESSUREDMAGE for injectors, but is supposed to have a delay
+#define BYPASSFORINJECTOR (1<<14)
+//This stops damage from weather effects
+#define PROTECTFROMWEATHER (1<<15)
 
 //SUITS AND HELMETS====================================================================================
 
