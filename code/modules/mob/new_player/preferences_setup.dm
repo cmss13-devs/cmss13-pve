@@ -325,7 +325,7 @@
 		if(JOB_PMCPLAT_SMALL_STANDARD)
 			return /datum/equipment_preset/pmc/standard
 		if(JOB_PMCPLAT_SMALL_MEDIC)
-			return /datum/equipment_preset/pmc/medic
+			return /datum/equipment_preset/pmc/doctor
 //RMC Troop
 		if(JOB_TWE_RMC_RIFLEMAN)
 			return /datum/equipment_preset/royal_marine/standard
