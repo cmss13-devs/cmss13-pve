@@ -394,7 +394,10 @@
 				if(FACTION_UPP)
 					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Red Dawn<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/red_dawn)
 				if(FACTION_PMC)
-					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-15<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure)
+					if(human.assigned_squad && human.assigned_squad.name == SQUAD_PMCPLT_SMALL)
+						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-16<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure_small)
+					else
+						human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Azure-15<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/azure)
 				if(FACTION_TWE)
 					human.play_screen_text("<span class='maptext' style=font-size:24pt;text-align:left valign='top'><u>[uppertext(GLOB.round_statistics.round_name)]</u></span><br>" + "[SSmapping.configs[GROUND_MAP].map_name]<br>" + "[worldtime2text("hh:mm")], [time2text(REALTIMEOFDAY, "DD-MMM-[GLOB.game_year]")]<br>" + "Gamma Troop<br>" + "[human.job], [human]<br>", /atom/movable/screen/text/screen_text/picture/gamma_troop)
 			var/admin_names

@@ -105,7 +105,9 @@
 /turf/open/floor/corsat/red/north,
 /area/firefly/cafeteria)
 "aaq" = (
-/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	req_one_access = list(204)
+	},
 /turf/open/floor/corsat/yellow/north,
 /area/firefly/engineer)
 "aar" = (
@@ -3818,7 +3820,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	dir = 1;
 	req_access = null;
-	req_one_access_txt = "90;91;92"
+	req_one_access_txt = "216"
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/ares)
@@ -4689,7 +4691,8 @@
 /area/firefly/engineer)
 "axu" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/engidoor/glass{
-	dir = 2
+	dir = 2;
+	req_one_access = list(204)
 	},
 /turf/open/floor/corsat/marked,
 /area/firefly/engineer)
@@ -8911,10 +8914,6 @@
 	pixel_y = -6
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/device/helmet_visor{
-	pixel_x = 8;
-	pixel_y = 6
-	},
 /obj/item/circuitboard/solar_tracker{
 	pixel_x = -6;
 	pixel_y = 9
@@ -10002,7 +10001,8 @@
 	pixel_y = 2;
 	pixel_x = -5;
 	id = "squadarmory";
-	name = "gear lockers door-control"
+	name = "gear lockers door-control";
+	req_one_access_txt = "216"
 	},
 /turf/open/floor/carpet,
 /area/firefly/ptsgt)
@@ -10278,7 +10278,7 @@
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	dir = 1;
 	req_access = null;
-	req_one_access_txt = "90;91;92"
+	req_one_access_txt = "216"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
@@ -14057,10 +14057,19 @@
 "uwZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/m42c/heap,
+/obj/item/storage/box/guncase/m42c/heap{
+	pixel_x = 0;
+	pixel_y = -5
+	},
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper{
-	pixel_x = -6;
-	pixel_y = 10
+	pixel_x = -3;
+	pixel_y = 11
+	},
+/obj/item/device/helmet_visor{
+	pixel_x = 9;
+	pixel_y = 9;
+	name = "C/PAV-Mk.1 visor";
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
