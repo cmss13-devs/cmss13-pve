@@ -176,6 +176,62 @@
 	item_state_slots = list(WEAR_JACKET = "commando_armor")
 	unacidable = TRUE
 
+//=============================//PMCs Modular Armor\\==================================\\
+//=======================================================================\\
+
+/obj/item/clothing/suit/marine/veteran/pmc
+	name = "\improper WY tactical armor"
+	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
+	icon_state = "pmc_armor"
+	item_state = "pmc_armor"
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine/,
+		/obj/item/weapon/baton,
+		/obj/item/restraint/handcuffs,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/explosive/grenade,
+		/obj/item/storage/bible,
+		/obj/item/tool/crowbar,
+		/obj/item/storage/large_holster/katana,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/weapon/sword/machete,
+		/obj/item/attachable/bayonet,
+		/obj/item/device/motiondetector,
+		/obj/item/tool/crew_monitor,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/belt/gun/m4a3,
+		/obj/item/storage/belt/gun/m44,
+		/obj/item/storage/belt/gun/flaregun,
+		/obj/item/device/walkman,
+		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/xm51,
+	)
+	item_state_slots = list(WEAR_JACKET = "pmc_armor")
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+
+/obj/item/clothing/suit/marine/veteran/pmc/light
+	name = "\improper WY light tactical armor"
+	icon_state = "pmc_sniper"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
 
 //===========================//DISTRESS\\================================\\
 //=======================================================================\\

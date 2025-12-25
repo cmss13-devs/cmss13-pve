@@ -14069,7 +14069,8 @@
 	pixel_x = 9;
 	pixel_y = 9;
 	name = "C/PAV-Mk.1 visor";
-	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information.";
+	hud_type = list(14,15,17)
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)

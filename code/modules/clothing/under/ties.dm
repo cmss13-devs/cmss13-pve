@@ -1945,3 +1945,41 @@
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
+
+//===========================//CUSTOM PMC ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc
+	name = "\improper Tactical Webbing"
+	icon_state = "s_m3webbingsmall"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to W-Y tactical armor. This one is the slimmed down model designed for general purpose storage."
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppmags/pmc
+	name = "\improper Tactical Magazine Webbing"
+	desc = "A set of webbing pouches that can carry multiple magazines. Comes with clips to mount to the tactical armor system used by W-Y PMCs."
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc
+	storage_slots = 4
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/m41aMK1,
+		/obj/item/ammo_magazine/sniper/elite,
+		/obj/item/ammo_magazine/pistol/vp78,
+		/obj/item/ammo_magazine/pistol/vp70,
+		/obj/item/ammo_magazine/smg/m39,
+	)
+	bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/sniper,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/plasma,
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/pmc
+	name = "\improper Tactical Grenade Webbing"
+	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades, modified to mount comfortably to the W-Y tactical armor."
+	icon_state = "s_m3webbingm40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
+

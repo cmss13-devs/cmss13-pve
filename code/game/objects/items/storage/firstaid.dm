@@ -490,11 +490,11 @@
 
 /obj/item/storage/firstaid/softpack/surgical/pmc/fill_preset_inventory()
 	new /obj/item/tool/surgery/cautery(src)
-	new /obj/item/tool/surgery/hemostat(src)
-	new /obj/item/tool/surgery/retractor(src)
+	new /obj/item/tool/surgery/bonegel(src)
 	new /obj/item/tool/surgery/bonegel(src)
 	new /obj/item/tool/surgery/bonesetter(src)
 	new /obj/item/tool/surgery/FixOVein(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 
