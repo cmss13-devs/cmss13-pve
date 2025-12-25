@@ -4670,6 +4670,10 @@
 	pixel_x = -11;
 	pixel_y = 9
 	},
+/obj/item/ammo_magazine/sentry/wy/mini{
+	pixel_x = -16;
+	pixel_y = -9
+	},
 /turf/open/floor/corsat/yellow,
 /area/firefly/engineer)
 "axt" = (
@@ -4815,7 +4819,9 @@
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
+/obj/item/clothing/glasses/night/m56_goggles/no_nightvision{
+	hud_type = list(14,15,17)
+	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
