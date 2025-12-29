@@ -164,6 +164,8 @@
 	max_range = 7
 	max_duration = 50
 
+
+
 // This is gellie fuel. Green Flames.
 /obj/item/ammo_magazine/flamer_tank/gellied
 	name = "incinerator tank (B-Gel)"
@@ -286,6 +288,16 @@
 /obj/item/ammo_magazine/flamer_tank/smoke/acid
 	name = "custom incinerator smoke tank"
 	desc = "A tank holding powdered smoke that expands when exposed to an open flame and carries any chemicals along with it."
+	matter = list("metal" = 3750)
+	flamer_chem = "pacid"
+	custom = TRUE
+
+/obj/item/ammo_magazine/flamer_tank/smoke/upp/acid
+	name = "custom incinerator smoke tank"
+	desc = "A tank holding powdered smoke that expands when exposed to an open flame and carries any chemicals along with it."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "LPO80"
+	item_state = "LPO80"
 	matter = list("metal" = 3750)
 	flamer_chem = "pacid"
 	custom = TRUE

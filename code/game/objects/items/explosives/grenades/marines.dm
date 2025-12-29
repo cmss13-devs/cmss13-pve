@@ -207,6 +207,7 @@
 	shrapnel_count = 16
 	hand_throwable = FALSE
 	dual_purpose = FALSE
+	fuse_type = 1
 
 /*
 //================================================

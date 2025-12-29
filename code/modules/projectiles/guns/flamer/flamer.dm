@@ -949,3 +949,6 @@
 
 /obj/item/weapon/gun/flamer/acid
 	current_mag = /obj/item/ammo_magazine/flamer_tank/smoke/acid
+
+/obj/item/weapon/gun/flamer/upp/acid
+	current_mag = /obj/item/ammo_magazine/flamer_tank/smoke/upp/acid

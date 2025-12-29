@@ -1618,7 +1618,7 @@
 	name = "\improper M3 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to the M3 Pattern Marine armor standard for the USCMC. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "m3webbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	hold = /obj/item/storage/internal/accessory/webbing
 	slot = ACCESSORY_SLOT_M3UTILITY
 	flags_atom = NO_SNOW_TYPE
 
@@ -1628,12 +1628,10 @@
 		select_gamemode_skin(type)
 	update_icon()
 
-
-/obj/item/storage/internal/accessory/webbing/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/rifle,
-	)
+/obj/item/clothing/accessory/storage/webbing/m3/old
+	name = "\improper MACE Webbing"
+	icon_state = "macenormal"
+	desc = "Outdated Modular Assault Carrying Equipment, designed to be worn over M59 series of flak vests."
 
 /obj/item/clothing/accessory/storage/webbing/m3/mag
 	name = "\improper M3 Pattern Magazine Webbing"
@@ -1691,6 +1689,18 @@
 	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
 	icon_state = "m3webbingsmall"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
+	slot = ACCESSORY_SLOT_M3UTILITY
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/old
+	name = "\improper MACE Small Pouch Webbing"
+	icon_state = "macesmall"
+	desc = "An outdated Modular Assault Carrying Equipment, configured to carry a whole array of small items."
+
+/obj/item/clothing/accessory/storage/webbing/m3/drop
+	name = "\improper MACE Drop Pouch Webbing"
+	desc = "An unusual piece of kit, this Modular Assault Carrying Equipment webbing is configured to carry a single sizeable pouch."
+	icon_state = "macedrop"
+	hold = /obj/item/storage/internal/accessory/drop_pouch
 	slot = ACCESSORY_SLOT_M3UTILITY
 
 //Pre-load For Army Props
@@ -1922,7 +1932,7 @@
 	name = "\improper Type 78 Pattern Webbing"
 	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
 	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
+	hold = /obj/item/storage/internal/accessory/webbing
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 

@@ -379,6 +379,8 @@
 	name = "\improper Type 12 CANC armor"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
 	icon_state = "canc"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
@@ -389,10 +391,11 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	time_to_unequip = 10
 	time_to_equip = 10
-	flags_inventory = null
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12"
+	actions_types = list()
+	has_light = FALSE
 
 /obj/item/clothing/suit/marine/faction/UPP/CANC/Initialize(mapload)
 	. = ..()

@@ -245,7 +245,18 @@
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_4
 
-/datum/ammo/bullet/pkp/red
+/datum/ammo/bullet/m38
+	name = "12x30 bullet"
+	damage = 65
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	icon_state = "bullet_red"
+	ammo_glowing = TRUE
 	bullet_light_color = COLOR_SOFT_RED
+	penetration = ARMOR_PENETRATION_TIER_6
+	accuracy = HIT_ACCURACY_TIER_1
+	shell_speed = AMMO_SPEED_TIER_6
+	effective_range_max = 10
+	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	accurate_range = 14

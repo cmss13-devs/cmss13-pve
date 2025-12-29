@@ -87,7 +87,7 @@
 	icon_state = "m60"
 
 	matter = list("metal" = 10000)
-	default_ammo = /datum/ammo/bullet/pkp/red
+	default_ammo = /datum/ammo/bullet/m38
 	max_rounds = 150
 	reload_delay = 4
 	gun_type = /obj/item/weapon/gun/m60/m38

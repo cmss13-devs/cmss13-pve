@@ -934,6 +934,14 @@ Defined in conflicts.dm of the #defines folder.
 	else
 		. = ..()
 
+/obj/item/attachable/flashlight/tactical
+	name = "tactical flashlight"
+	desc = "Robust and handy tactical flashlight, produced by WiseFire Inc."
+	icon_state = "flashlight_tactical"
+	attach_icon = "flashlight_tactical_a"
+	original_state = "flashlight_tactical"
+	original_attach = "flashlight_tactical_a"
+
 /obj/item/attachable/flashlight/m20a
 	name = "integrated flashlight"
 	desc = "shouldnt be seeing this. . ."
@@ -2858,6 +2866,7 @@ Defined in conflicts.dm of the #defines folder.
 	size_mod = 0
 
 /obj/item/attachable/stock/m60/m38
+	name = "M38 stock"
 	icon_state = "m38_stock"
 	attach_icon = "m38_stock"
 

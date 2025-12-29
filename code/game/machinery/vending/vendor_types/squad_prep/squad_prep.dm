@@ -267,13 +267,16 @@
 		list("Boonie Hat, Desert", floor(scale * 15), /obj/item/clothing/head/cmcap/boonie/tan, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
+		list("MACE Webbing", 3, /obj/item/clothing/accessory/storage/webbing/m3/old, VENDOR_ITEM_REGULAR),
+		list("MACE Small Pouch Webbing", 3, /obj/item/clothing/accessory/storage/webbing/m3/small/old, VENDOR_ITEM_REGULAR),
+		list("MACE Drop Pouch Webbing", 1, /obj/item/clothing/accessory/storage/webbing/m3/drop, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", 4, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
 		list("Leg Pouch", 4, /obj/item/clothing/accessory/storage/smallpouch, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
 		list("M4 Pattern Marine Helmet", floor(scale * 15), /obj/item/clothing/head/helmet/marine/old, VENDOR_ITEM_REGULAR),
-		list("M59 Body Armor", round(scale * 10), /obj/item/clothing/suit/storage/marine/light/old, VENDOR_ITEM_REGULAR),
+		list("M59 Body Armor", round(scale * 10), /obj/item/clothing/suit/marine/light/old, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Assault Pack", floor(scale * 15), /obj/item/storage/backpack/marine/old, VENDOR_ITEM_REGULAR),
@@ -998,8 +1001,8 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/old/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("MRE", floor(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
-		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
+		list("MRE", floor(scale * 5), /obj/item/storage/box/mre/dog_war, VENDOR_ITEM_REGULAR),
+		list("MRE Box", floor(scale * 1), /obj/item/ammo_box/magazine/misc/mre/dog_war, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
 		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
