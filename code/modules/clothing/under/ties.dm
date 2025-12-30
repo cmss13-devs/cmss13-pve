@@ -1042,6 +1042,7 @@
 	var/obj/item/weapon/gun/current_gun
 	var/sheatheSound = 'sound/weapons/gun_pistol_sheathe.ogg'
 	var/drawSound = 'sound/weapons/gun_pistol_draw.ogg'
+	storage_slots = 4
 	storage_flags = STORAGE_ALLOW_QUICKDRAW|STORAGE_FLAGS_POUCH
 	can_hold = list(
 
@@ -1691,7 +1692,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
@@ -1700,7 +1701,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
@@ -1710,7 +1711,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/space
@@ -1810,7 +1811,7 @@
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/medic
 	name = "\improper M3-R Pattern Corpsman Webbing"
-	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
+	desc = "A large pouch with M3-R Pattern webbing clips designed to house medical equipment for Corpsmen attached to FORECON units, where resupply isn't readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 
@@ -1823,11 +1824,15 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 6
 	can_hold = list(
-		/obj/item/storage/surgical_case/regular,
-		/obj/item/reagent_container/blood,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/storage/surgical_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
-		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/blood,
+		/obj/item/bodybag,
 	)
 
 /obj/item/clothing/accessory/storage/webbing/m56

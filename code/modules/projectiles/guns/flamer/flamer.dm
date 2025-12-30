@@ -21,6 +21,11 @@
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
+	light_range = 2
+	light_power = 0.5
+	light_system = MOVABLE_LIGHT
+	light_color = LIGHT_COLOR_CANDLE
+	var/lit = FALSE
 
 	attachable_allowed = list( //give it some flexibility.
 		/obj/item/attachable/flashlight,
@@ -43,6 +48,8 @@
 /obj/item/weapon/gun/flamer/Initialize(mapload, spawn_empty)
 	. = ..()
 	update_icon()
+	set_light_on(lit)
+	gun_safety_handle()
 
 /obj/item/weapon/gun/flamer/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 0, "muzzle_y" = 0, "rail_x" = 11, "rail_y" = 20, "under_x" = 21, "under_y" = 14, "stock_x" = 0, "stock_y" = 0, "side_rail_x" = 24, "side_rail_y" = 19)
@@ -70,6 +77,20 @@
 	to_chat(user, SPAN_NOTICE("You [SPAN_BOLD(flags_gun_features & GUN_TRIGGER_SAFETY ? "extinguish" : "ignite")] the pilot light."))
 	playsound(user,'sound/weapons/handling/flamer_ignition.ogg', 25, 1)
 	update_icon()
+	if(!(flags_gun_features & GUN_TRIGGER_SAFETY))
+		lit = TRUE
+		set_light_on(lit)
+	else
+		lit = FALSE
+		set_light_on(lit)
+
+/obj/item/weapon/gun/flamer/proc/update_brightness(mob/user)
+	if(lit)
+		set_light_range(light_range)
+		set_light_on(TRUE)
+		update_icon()
+	else
+		set_light_on(FALSE)
 
 /obj/item/weapon/gun/flamer/get_examine_text(mob/user)
 	. = ..()

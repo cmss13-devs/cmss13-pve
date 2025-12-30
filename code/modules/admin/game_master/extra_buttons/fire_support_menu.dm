@@ -5,9 +5,9 @@
 #define MISSILE_ORDNANCE list("Banshee Missile", "Harpoon Missile", "Keeper Missile", "Napalm Missile", "Thermobaric Missile", "Widowmaker Missile")
 #define ORBITAL_ORDNANCE list("High Explosive OB", "Incendiary OB", "Cluster OB")
 #define MORTAR_ORDNANCE list("High Explosive Shell", "Incendiary Shell", "Fragmentation Shell", "Flare Shell", "Willy-Pete Shell", "Smoke Shell")
-#define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell")
+#define CHEMICAL_ORDNANCE list("CN-20 Missile", "Nerve Gas OB", "Nerve Gas Shell", "Cryogenic Neon OB")
 #define MISC_ORDNANCE list("Laser", "Minirocket", "Incendiary Minirocket",  "Sentry Drop", "25mm Multipurpose Strike", "25mm Armorpiercing Strike")
-#define THROWABLES_ORDNANCE list("HE", "HE - UPP", "HE - RMC", "Frag", "Incendiary", "Molotov", "Incendiary - RMC", "Smoke - White", "Smoke - Green", "Smoke - Red", "Smoke - UPP", "WP", "WP - UPP", "Ball-Breakers", "Nerve Gas", "LSD", "Tear Gas", "Metal Foam", "Flare", "Flare - UPP", "Flare - Signal")
+#define THROWABLES_ORDNANCE list("HE", "HE - UPP", "HE - RMC", "Frag", "Incendiary", "Molotov", "Incendiary - RMC", "Smoke - White", "Smoke - Green", "Smoke - Red", "Smoke - UPP", "WP", "WP - UPP", "Ball-Breakers", "Nerve Gas", "LSD", "Tear Gas", "Cryogenic Neon", "Metal Foam", "Flare", "Flare - UPP", "Flare - Signal")
 
 /client/proc/toggle_fire_support_menu()
 	set name = "Fire Support Menu"
@@ -251,6 +251,12 @@
 
 				return TRUE
 
+			if("Cryogenic Neon OB")
+				var/obj/structure/ob_ammo/warhead/cryo/ammo  = new()
+				handle_orbital_ordnance(target_turf, ammo)
+
+				return TRUE
+
 			//Mortar Shelling
 			if("High Explosive Shell")
 				var/obj/effect/overlay/temp/blinking_laser/target_lase = new(target_turf)
@@ -405,6 +411,12 @@
 
 			if("Tear Gas")
 				var/obj/item/explosive/grenade/tear/ammo = new (target_turf)
+				ammo.activate()
+
+				return TRUE
+
+			if("Cryogenic Neon")
+				var/obj/item/explosive/grenade/cryo/ammo = new (target_turf)
 				ammo.activate()
 
 				return TRUE
