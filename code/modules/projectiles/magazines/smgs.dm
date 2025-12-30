@@ -77,6 +77,12 @@
 	default_ammo = /datum/ammo/bullet/smg/pve
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
+/obj/item/ammo_magazine/smg/m39/squash
+	name = "\improper L6A2 Squash-Head magazine (9mm)"
+	max_rounds = 48
+	default_ammo = /datum/ammo/bullet/smg/squash
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.
 
@@ -192,8 +198,32 @@
 	caliber = "7.62x19mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "type64mag"
+	ammo_band_icon = "+type64mag_band"
+	ammo_band_icon_empty = "+type64mag_band_e"
 	max_rounds = 64
 	gun_type = /obj/item/weapon/gun/smg/bizon
+
+/obj/item/ammo_magazine/smg/bizon/ap
+	name = "\improper Type 64 AP Helical Magazine (7.62x19mm)"
+	desc = "A 64 round magazine of armor piercing rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
+	default_ammo = /datum/ammo/bullet/smg/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+	bonus_overlay = "type64_ap"
+
+/obj/item/ammo_magazine/smg/bizon/ap/penetrating
+	name = "\improper Type 64 wall-penetrating Helical Magazine (7.62x19mm)"
+	desc = "A 64 round magazine of wall-penetrating rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
+	default_ammo = /datum/ammo/bullet/smg/ap/penetrating
+	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
+	bonus_overlay = "type64_pen"
+
+
+/obj/item/ammo_magazine/smg/bizon/heap
+	name = "\improper Type 64 HEAP Helical Magazine (7.62x19mm)"
+	desc = "A 64 round magazine of high explosive armor piercing rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."
+	default_ammo = /datum/ammo/bullet/smg/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+	bonus_overlay = "type64_heap"
 
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.
@@ -267,30 +297,3 @@
 	w_class = SIZE_SMALL
 	max_rounds = 48
 	gun_type = /obj/item/weapon/gun/smg/nailgun
-
-//-------------------------------------------------------
-//P90, a classic SMG.
-
-/obj/item/ammo_magazine/smg/p90
-	name = "\improper FN P90 magazine (5.7×28mm)"
-	desc = "A 5.7×28mm magazine for the FN P90."
-	default_ammo = /datum/ammo/bullet/smg/p90
-	caliber = "5.7×28mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "p90"
-	w_class = SIZE_MEDIUM
-	gun_type = /obj/item/weapon/gun/smg/p90
-	max_rounds = 50
-//-------------------------------------------------------
-//P90, a classic SMG.(TWE version)
-
-/obj/item/ammo_magazine/smg/p90/twe
-	name = "\improper FN-TWE P90 AP magazine (5.7×28mm)"
-	desc = "A 5.7×28mm (AP) magazine for the FN-TWE P90."
-	default_ammo = /datum/ammo/bullet/smg/p90/twe_ap
-	caliber = "5.7×28mm"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
-	icon_state = "p90_twe"
-	w_class = SIZE_MEDIUM
-	gun_type = /obj/item/weapon/gun/smg/p90/twe
-	max_rounds = 50

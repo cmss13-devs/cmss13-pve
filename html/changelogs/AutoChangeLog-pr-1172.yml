@@ -1,0 +1,5 @@
+author: "Valiant1st"
+delete-after: True
+changes:
+  - rscadd: "Added the USA flag shoulder patch. Adds to the custom loadout option."
+  - imageadd: "USA flag shoulder patch icons."

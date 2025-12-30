@@ -146,6 +146,14 @@
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
+/datum/ammo/bullet/shrapnel/hornet_rounds/rmc
+	name = "holo-targeting pellet"
+	icon_state = "hornet_round"
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
+	damage = 10
+	holo_stacks = 30
+	accuracy = HIT_ACCURACY_TIER_5
+	max_range = 6
 
 /datum/ammo/bullet/shrapnel/incendiary
 	name = "flaming shrapnel"
@@ -273,7 +281,7 @@
 /datum/ammo/bullet/shrapnel/himat
 	accurate_range = 8
 	max_range = 8
-	damage = 75
+	damage = 95
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	accuracy = HIT_ACCURACY_TIER_MAX
 	icon_state = "shrapnel_light"

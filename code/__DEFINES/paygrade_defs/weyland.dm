@@ -7,9 +7,6 @@
 /// WYC2, Junior Executive
 #define PAY_SHORT_WYC2 "WYC2"
 
-/// WYC2, Pilot - Captain
-#define PAY_SHORT_WYPO2 "WYPO2"
-
 /// WYC3, Executive
 #define PAY_SHORT_WYC3 "WYC3"
 

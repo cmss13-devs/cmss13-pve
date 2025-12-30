@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - bugfix: "Old origins shouldn't linger and prevent eligability for UA loadout things"
+  - code_imp: "Adds a sanitisation check for the origins."

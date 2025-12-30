@@ -1,0 +1,7 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - balance: "T73 and M1911 damage upped slightly"
+  - balance: ".38 revolver and .44 automag have had damage lowered"
+  - balance: ".38 revolver no longer has a chance to send rounds careening off into the next post-code due to accuracy debuffs"
+  - bugfix: "NP92 now chambers the advertised 9x18mm, rather than 9x19mm"

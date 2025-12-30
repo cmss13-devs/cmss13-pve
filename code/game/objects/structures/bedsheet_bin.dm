@@ -75,8 +75,7 @@ LINEN BINS
 /obj/item/bedsheet/brown
 	icon_state = "sheetbrown"
 
-/obj/item/bedsheet/colorable
-	icon_state = "sheetce"
+
 
 
 /obj/structure/bedsheetbin

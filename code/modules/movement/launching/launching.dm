@@ -89,8 +89,6 @@
 
 	throwing = FALSE
 	rebounding = FALSE
-	if(loc)
-		SEND_SIGNAL(loc, COMSIG_TURF_THROW_ENDED_HERE, src)
 
 /atom/movable/proc/mob_launch_collision(mob/living/L)
 	if (!rebounding)

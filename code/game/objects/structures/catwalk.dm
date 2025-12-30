@@ -10,16 +10,9 @@
 	unslashable = TRUE
 	layer = CATWALK_LAYER
 
-/obj/structure/catwalk/lava_act()
-	return FALSE
-
 /obj/structure/catwalk/Initialize()
 	. = ..()
 	update_icon()
-	var/static/list/connections = list(
-		COMSIG_TURF_CHECK_COVERED = TYPE_PROC_REF(/atom/movable, turf_cover_check),
-	)
-	AddElement(/datum/element/connect_loc, connections)
 
 /obj/structure/catwalk/update_icon()
 	..()
@@ -55,9 +48,3 @@
 	icon = 'icons/turf/floors/catwalks.dmi'
 	icon_state = "catwalk0"
 	base_state = "catwalk0"
-
-/obj/structure/catwalk/grate
-	name = "grate"
-	icon = 'icons/turf/floors/filtration.dmi'
-	icon_state = "grate"
-	base_state = "grate"

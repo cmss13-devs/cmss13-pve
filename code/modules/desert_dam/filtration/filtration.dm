@@ -96,8 +96,8 @@ Each var depends on others
 
 
 /obj/effect/blocker/toxic_water/proc/update_turf()
-	if(istype(src.loc, /turf/open/liquid/water/river/desert))
-		var/turf/open/liquid/water/river/desert/R = src.loc
+	if(istype(src.loc, /turf/open/gm/river/desert))
+		var/turf/open/gm/river/desert/R = src.loc
 		R.toxic = src.toxic
 		R.update_icon()
 
@@ -117,9 +117,9 @@ Each var depends on others
 	if(toxic == 0)
 		return
 
-	if(istype(loc, /turf/open/liquid/water/river/desert))
-		var/turf/open/liquid/water/river/desert/R = loc
-		if(locate(/obj/structure/catwalk) in R)
+	if(istype(loc, /turf/open/gm/river/desert))
+		var/turf/open/gm/river/desert/R = loc
+		if(R.covered)
 			return
 	else
 		return
@@ -155,9 +155,9 @@ Each var depends on others
 		STOP_PROCESSING(SSobj, src)
 		return
 
-	if(istype(src.loc, /turf/open/liquid/water/river/desert))
-		var/turf/open/liquid/water/river/desert/R = loc
-		if(locate(/obj/structure/catwalk) in R)
+	if(istype(src.loc, /turf/open/gm/river/desert))
+		var/turf/open/gm/river/desert/R = loc
+		if(R.covered)
 			return
 	else
 		return

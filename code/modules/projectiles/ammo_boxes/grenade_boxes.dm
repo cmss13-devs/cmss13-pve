@@ -348,3 +348,50 @@
 	overlay_model_type = "model_vpg"
 	overlay_icon_type = "40mmap"
 	overlay_grenade_type = "upp_40mm_ap"
+
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/canister
+	name = "\improper VShG-80 Assault-Grenade grenade box"
+	desc = "A secure box holding 15 VShG-80 grenades. Don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/high_explosive/airburst/upp
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/airburst/upp)
+	overlay_model_type = "model_vsgh"
+	overlay_icon_type = "40mmbuck"
+	overlay_grenade_type = "upp_40mm_buck"
+
+/obj/item/ammo_box/magazine/nade_box/upp/ugl/incen
+	name = "\improper VTBG-44 Thermobaric grenade box"
+	desc = "A secure box holding 15 VTBG-44 grenades. Don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/incendiary/impact/upp
+	allowed_magazines = list( /obj/item/explosive/grenade/incendiary/impact/upp)
+	overlay_model_type = "model_vtbg"
+	overlay_icon_type = "40mmincend"
+	overlay_grenade_type = "upp_40mm_hiam"
+
+//--------------------RMC GRENADE BOXES
+
+/obj/item/ammo_box/magazine/nade_box/rmc
+	name = "\improper R2175/A HEDP grenade box"
+	desc = "A secure box holding 18 R2175/A HEDP grenades. Highly explosive, don't store near open flames."
+	num_of_magazines = 18
+	magazine_type = /obj/item/explosive/grenade/high_explosive/rmc
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/rmc)
+	icon_state = "base_rmc_nade"
+	overlay_model_type = "model_r2175"
+	overlay_icon_type = "rmchedp"
+	overlay_grenade_type = "rmc_hedp"
+
+/obj/item/ammo_box/magazine/nade_box/rmc/incen
+	name = "\improper R2175/B HIDP grenade box"
+	desc = "A secure box holding 18 R2175/B HIDP grenades. Highly flammable, don't store near open flames."
+	magazine_type = /obj/item/explosive/grenade/incendiary/rmc
+	allowed_magazines = list(/obj/item/explosive/grenade/incendiary/rmc)
+	overlay_icon_type = "rmchidp"
+	overlay_grenade_type = "rmc_hidp"
+
+/obj/item/ammo_box/magazine/nade_box/rmc/cn20
+	name = "\improper R2175/CN20 gas grenade box"
+	desc = "A secure box holding 18 R2175/CN20 nerve-gas grenades. Highly lethal, ensure caps are fitted securely before storage."
+	magazine_type = /obj/item/explosive/grenade/nerve_gas/xeno/rmc
+	allowed_magazines = list(/obj/item/explosive/grenade/nerve_gas/xeno/rmc)
+	overlay_icon_type = "rmcgas"
+	overlay_grenade_type = "rmc_cn20"

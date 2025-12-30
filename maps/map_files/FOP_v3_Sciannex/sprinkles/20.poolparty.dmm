@@ -10,7 +10,7 @@
 /turf/open/floor/wood,
 /area/template_noop)
 "bm" = (
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "bD" = (
 /obj/effect/decal/cleanable/blood,
@@ -51,7 +51,7 @@
 	pixel_x = -13;
 	pixel_y = 48
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "cT" = (
 /obj/structure/platform_decoration,
@@ -83,7 +83,7 @@
 /area/template_noop)
 "eN" = (
 /obj/item/toy/beach_ball,
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "fk" = (
 /obj/effect/decal/cleanable/blood,
@@ -425,7 +425,7 @@
 /obj/item/trash/crushed_cup{
 	pixel_x = -20
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "qG" = (
 /obj/item/trash/crushed_cup{
@@ -477,7 +477,7 @@
 /area/template_noop)
 "sG" = (
 /obj/structure/platform,
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "sI" = (
 /obj/item/toy/crossbow{
@@ -648,7 +648,7 @@
 	pixel_y = 5;
 	pixel_x = 11
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "yz" = (
 /obj/structure/grille,
@@ -754,7 +754,7 @@
 	pixel_x = -2;
 	pixel_y = 36
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "CR" = (
 /obj/structure/platform,
@@ -845,7 +845,7 @@
 	pixel_y = -65;
 	pixel_x = 29
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "IO" = (
 /obj/effect/decal/cleanable/blood,
@@ -981,7 +981,7 @@
 	pixel_x = -2;
 	pixel_y = -15
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "NE" = (
 /obj/structure/platform_decoration{
@@ -999,7 +999,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "NY" = (
 /turf/open/floor/prison/cell_stripe/east,
@@ -1013,11 +1013,11 @@
 	pixel_y = 13;
 	pixel_x = 45
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "PL" = (
 /obj/item/storage/belt/marine/quackers,
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "PS" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -1038,7 +1038,7 @@
 	pixel_y = 4;
 	pixel_x = 1
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/template_noop)
 "QJ" = (
 /turf/open/floor/prison/darkbrown2/west,

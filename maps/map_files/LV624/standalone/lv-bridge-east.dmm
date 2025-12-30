@@ -56,7 +56,7 @@
 /area/lv624/ground/river/central_river)
 "as" = (
 /obj/structure/flora/bush/ausbushes/var3/stalkybush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "at" = (
 /obj/effect/landmark/lv624/fog_blocker,
@@ -78,11 +78,11 @@
 /area/lv624/ground/river/central_river)
 "ay" = (
 /obj/effect/landmark/crap_item,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "aA" = (
 /obj/structure/flora/bush/ausbushes/var3/brflowers,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "aB" = (
 /obj/effect/landmark/lv624/fog_blocker,
@@ -106,7 +106,7 @@
 /turf/open/gm/coast/west,
 /area/lv624/ground/river/central_river)
 "aK" = (
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "aO" = (
 /obj/structure/fence,
@@ -114,7 +114,7 @@
 /area/lv624/ground/river/central_river)
 "aQ" = (
 /obj/structure/flora/bush/ausbushes/reedbush,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "aR" = (
 /turf/open/gm/coast/east,
@@ -208,7 +208,7 @@
 /area/lv624/ground/jungle/north_jungle)
 "pW" = (
 /obj/structure/flora/bush/ausbushes/var3/fullgrass,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "uc" = (
 /turf/open/gm/coast/beachcorner/north_west,
@@ -223,7 +223,7 @@
 /area/lv624/ground/river/central_river)
 "wu" = (
 /obj/structure/flora/jungle/alienplant1,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "Bv" = (
 /obj/effect/landmark/good_item,
@@ -250,11 +250,11 @@
 /area/lv624/ground/jungle/north_jungle)
 "HT" = (
 /obj/structure/flora/jungle/planttop1,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "Ir" = (
 /obj/structure/flora/bush/ausbushes/ppflowers,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "Jl" = (
 /obj/effect/landmark/lv624/fog_blocker,
@@ -284,7 +284,7 @@
 /area/lv624/ground/river/central_river)
 "YA" = (
 /obj/structure/flora/jungle/plantbot1,
-/turf/open/liquid/water/river,
+/turf/open/gm/river,
 /area/lv624/ground/river/central_river)
 "YL" = (
 /obj/structure/fence,

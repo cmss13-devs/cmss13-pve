@@ -274,6 +274,11 @@
 /obj/item/prop/magazine/dirty/torn/alt
 	icon_state = "poster3"
 
+/obj/item/prop/magazine/dropship
+	name = "Aerospace International Magazine: Issue August 2181"
+	desc = "A pretty cut and dry magazine about various aerospace craft that have just been put into service across multiple sectors. This one's got an article about the Three World Empire's latest acquisition."
+	desc_lore = "DAA.4 'Nimrod' dropship <BR> <BR> Dropship, Aerospace Assault mk.4 <BR> <BR> Purchased in limited numbers by the RMC, the Cheyenne (or 'Nimrod' as it was designated in TWE service) was extensively modified by the Augusta-Westland corporation before entering field trials, the twin F29-L-13 turbines being replaced with quad Rolls Royce RBZ.435 linear aerospikes. An extensive system of thrust-vectoring units improves manoeuvrability; handling is crisp in forward axes up to Mach 1.4 and below Mach 2.7 it remains agile. <BR> <BR> This, and a general mass reduction to accommodate the doctrinal emphasis on rapid force staging, has left the DAA.4 without the heavy weapons load as seen on the Cheyenne. <BR> <BR> While a sensor profile reduction effort has seen the Nimrod become significantly stealthier than the UD-4, in heavily defended AORs it regularly equips a large fitting of the Fencer TSAM for self protection. The rotary autocannon is retained."
+	icon_state = "poster26"
 
 //books
 /obj/item/prop/magazine/book
@@ -410,26 +415,3 @@
 	throwforce = 0.5
 	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
 	w_class = SIZE_LARGE
-
-
-// Massive Digger by dimdimich1996
-
-/obj/structure/prop/invuln/dense/excavator
-	name = "Model 30 Light Excavator"
-	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice orange color."
-	icon = 'icons/obj/structures/props/digger.dmi'
-	icon_state = "digger_orange"
-	layer = BIG_XENO_LAYER
-
-/obj/structure/prop/invuln/dense/excavator/gray
-	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice gray color."
-	icon_state = "digger_gray"
-
-/obj/structure/prop/invuln/dense/excavator/Initialize()
-	. = ..()
-	if(dir & (SOUTH|NORTH))
-		bound_height = 192
-		bound_width = 96
-	else
-		bound_height = 96
-		bound_width = 192

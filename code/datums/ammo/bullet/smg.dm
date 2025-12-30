@@ -26,6 +26,18 @@
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
+/datum/ammo/bullet/smg/squash
+	name = "squash-head submachinegun bullet"
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_3
+	effective_range_max = 7
+	damage_falloff = DAMAGE_FALLOFF_TIER_3
+	max_range = 14
+
+/datum/ammo/bullet/smg/squash/on_hit_mob(mob/entity, obj/projectile/bullet)
+	..()
+	slowdown(entity, bullet)
+
 /datum/ammo/bullet/smg/pve
 	name = "squash-head submachinegun duplex bullet"
 	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't
@@ -156,25 +168,3 @@
 	penetration = -ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	scatter = SCATTER_AMOUNT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_6
-
-
-/datum/ammo/bullet/smg/p90
-	name = "submachinegun bullet"
-
-	damage = 22
-	accurate_range = 5
-	effective_range_max = 8
-	penetration = ARMOR_PENETRATION_TIER_2
-	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6
-
-/datum/ammo/bullet/smg/p90/twe_ap
-	name = "armor-piercing submachinegun bullet"
-
-	damage = 26
-	accurate_range = 5
-	effective_range_max = 8
-	penetration = ARMOR_PENETRATION_TIER_4
-	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_6

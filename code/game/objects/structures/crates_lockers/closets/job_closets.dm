@@ -123,10 +123,11 @@
 
 /obj/structure/closet/secure_closet/smartgunner/Initialize()
 	. = ..()
-	new /obj/item/weapon/gun/smartgun(src)
+	new /obj/item/weapon/gun/smartgun/empty(src)
 	new /obj/item/smartgun_battery(src)
 	new /obj/item/clothing/suit/marine/smartgunner(src)
 	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
@@ -161,3 +162,39 @@
 	new /obj/item/device/radio/headset/almayer/marine(src)
 	new /obj/item/device/radio/headset/almayer/marine(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+
+/obj/structure/closet/secure_closet/rmc_troop_sergeant
+	name = "troop sergeant locker"
+	desc = "A secure storage unit for the senior sergeant of the Royal Marines Commando troop."
+	req_access = list(ACCESS_TWE_ARMORY, ACCESS_TWE_TLPREP)
+
+/obj/structure/closet/secure_closet/rmc_troop_sergeant/Initialize()
+	. = ..()
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/storage/backpack/rmc/frame(src)
+	new /obj/item/storage/firstaid/adv(src)
+	new /obj/item/ammo_box/magazine/nsg23(src)
+
+/obj/structure/closet/secure_closet/rmc_section_leader
+	name = "section leader locker"
+	desc = "A secure storage unit for the Royal Marines Commando section leader."
+	req_access = list(ACCESS_TWE_TLPREP, ACCESS_TWE_SQUAD_ONE)
+
+/obj/structure/closet/secure_closet/rmc_section_leader/Initialize()
+	. = ..()
+	new /obj/item/device/binoculars/range/designator(src)
+	new /obj/item/device/whistle(src)
+
+/obj/structure/closet/secure_closet/rmc_smartgunner
+	name = "smartgunner locker"
+	desc = "A secure storage unit for a Royal Marines Commando smartgunner."
+	req_access = list(ACCESS_TWE_SQUAD_TWO, ACCESS_TWE_HEVWEAPPREP)
+
+/obj/structure/closet/secure_closet/rmc_smartgunner/Initialize()
+	. = ..()
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
+	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
+	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
+	new /obj/item/clothing/glasses/night/m56_goggles/rmc(src)

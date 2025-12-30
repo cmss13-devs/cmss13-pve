@@ -218,16 +218,22 @@
 	icon_state = "tray"
 
 /obj/item/trash/USCMtray
-	name = "\improper USCM Tray"
-	desc = "Finished with its tour of duty."
+	name = "\improper empty meal tray"
+	desc = "An empty meal tray made of a space age plastoid. Commonly seen on the frontier and in military service."
 	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "tray"
+	icon_state = "mar_tray_empty"
 
 /obj/item/trash/UPPtray
 	name = "\improper UPP Tray"
 	desc = "Finished with its tour of duty."
 	icon = 'icons/obj/items/food.dmi'
 	icon_state = "upp_tray"
+
+/obj/item/trash/RMCtray
+	name = "\improper RMC Meal Tray"
+	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
+	icon = 'icons/obj/items/food_canteen.dmi'
+	icon_state = "rmc_tray_empty"
 
 
 //////////
@@ -265,6 +271,11 @@
 	desc = "A used tear gas grenade. This is trash."
 	icon_state = "grenade_spent"
 
+/obj/item/trash/grenade/gas/rmc
+	name = "spent R2175/CN20 gas grenade"
+	desc = "A used RMC CN20 gas grenade. This is trash."
+	icon_state = "grenade_spent"
+
 /obj/item/trash/grenade/Initialize()
 	. = ..()
 	animation_spin(5, 1,)
@@ -286,64 +297,3 @@
 	pixel_x = rand(-10,10)
 	pixel_y = rand(-10,10)
 	apply_transform(turn(transform,rand(0,360)))
-
-
-// Hybrisa
-/obj/item/trash/hybrisa
-	icon = 'icons/obj/structures/props/hybrisa/misc_props.dmi'
-	icon_state = ""
-
-// Cuppa Joe's Trash
-/obj/item/trash/hybrisa/cuppa_joes
-	icon = 'icons/obj/items/drinks.dmi'
-
-/obj/item/trash/hybrisa/cuppa_joes/lid
-	name = "Cuppa Joe's coffee cup lid"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon_state = "coffeecuppajoelid"
-	w_class = SIZE_TINY
-	throwforce = 1
-/obj/item/trash/hybrisa/cuppa_joes/empty_cup
-	name = "Empty Cuppa Joe's coffee cup"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon_state = "coffeecuppajoenolid"
-	w_class = SIZE_TINY
-	throwforce = 1
-
-/obj/item/trash/hybrisa/cuppa_joes/Initialize()
-	. = ..()
-	pixel_x = rand(-10,10)
-	pixel_y = rand(-10,10)
-	apply_transform(turn(transform,rand(0,360)))
-
-// Cuppa Joes no random axis
-/obj/item/trash/hybrisa/cuppa_joes_static/lid
-	name = "Cuppa Joe's coffee cup lid"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon = 'icons/obj/items/drinks.dmi'
-	icon_state = "coffeecuppajoelid"
-	w_class = SIZE_TINY
-	throwforce = 1
-/obj/item/trash/hybrisa/cuppa_joes_static/empty_cup
-	name = "Empty Cuppa Joe's coffee cup"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon = 'icons/obj/items/drinks.dmi'
-	icon_state = "coffeecuppajoenolid"
-	w_class = SIZE_TINY
-	throwforce = 1
-
-/obj/item/trash/hybrisa/cuppa_joes_static/empty_cup_stack
-	name = "Empty Cuppa Joe's coffee cup stack"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon = 'icons/obj/items/drinks.dmi'
-	icon_state = "coffeecuppajoestacknolid"
-	w_class = SIZE_TINY
-	throwforce = 1
-
-/obj/item/trash/hybrisa/cuppa_joes_static/lid_stack
-	name = "Cuppa Joe's coffee cup lid stack"
-	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
-	icon = 'icons/obj/items/drinks.dmi'
-	icon_state = "coffeecuppajoelidstack"
-	w_class = SIZE_TINY
-	throwforce = 1

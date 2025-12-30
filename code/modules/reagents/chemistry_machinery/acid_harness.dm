@@ -198,7 +198,7 @@
 
 /obj/structure/machinery/acid_core
 	name = "A.C.I.D. CORE"
-	use_power = USE_POWER_NONE
+	use_power = FALSE
 	var/obj/item/clothing/accessory/storage/black_vest/acid_harness/acid_harness
 	var/mob/living/carbon/human/user
 

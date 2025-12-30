@@ -196,7 +196,7 @@
 		WEAR_BODY = /obj/item/clothing/under/colonist/ua_civvies,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/armband/med,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/med,
-		WEAR_IN_BACK = /obj/item/storage/firstaid/adv,
+		WEAR_IN_BACK = /obj/item/storage/firstaid/softpack/adv,
 		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
 		WEAR_IN_BACK = /obj/item/roller,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
@@ -405,12 +405,12 @@
 /datum/equipment_preset/synth/survivor/detective_synth
 	name = "Survivor - Synthetic - Detective Synth"
 	equipment_to_spawn = list(
-		WEAR_HEAD = /obj/item/clothing/head/fedora,
+		WEAR_HEAD = /obj/item/clothing/head/det_hat,
 		WEAR_EYES = /obj/item/clothing/glasses/sunglasses/sechud,
 		WEAR_BODY = /obj/item/clothing/under/det,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/sec,
 		WEAR_IN_BACK = /obj/item/device/taperecorder,
-		WEAR_JACKET = /obj/item/clothing/suit/storage/CMB/trenchcoat,
+		WEAR_JACKET = /obj/item/clothing/suit/storage/det_suit/black,
 		WEAR_IN_JACKET = /obj/item/weapon/telebaton,
 		WEAR_WAIST = /obj/item/storage/belt/security/MP/full/synth,
 		WEAR_HANDS = /obj/item/clothing/gloves/black,
@@ -1101,11 +1101,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_R_STORE)
 	add_merc_weapon(new_human)
 	//backpack stuff
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular, WEAR_IN_BACK)
 
 /datum/equipment_preset/synth/working_joe/security_android/pmc
 	name = "Synthetic - PMC Security Android"

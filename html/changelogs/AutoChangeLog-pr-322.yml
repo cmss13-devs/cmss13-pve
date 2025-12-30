@@ -1,0 +1,4 @@
+author: "Ediblebomb"
+delete-after: True
+changes:
+  - code_imp: "Makes smoke code affect procs work based off of what parts of your body are actually protected, rather than being a mess with nothing standardized whatsoever"

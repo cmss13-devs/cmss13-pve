@@ -34,6 +34,9 @@
 
 	var/colony_camera_mapload = TRUE
 
+	/// If this camera should have innate EMP-proofing
+	var/emp_proof = FALSE
+
 	///Autonaming
 	var/autoname = FALSE
 	var/autonumber = 0 //camera number in area
@@ -250,7 +253,7 @@ GLOBAL_LIST_EMPTY_TYPED(all_cameras, /obj/structure/machinery/camera)
 /atom/proc/auto_turn()
 	//Automatically turns based on nearby walls.
 	var/turf/closed/wall/T = null
-	for(var/i = 1, i <= 8; i += i)
+	for(var/i = 1; i <= 8; i += i)
 		T = get_ranged_target_turf(src, i, 1)
 		if(istype(T))
 			//If someone knows a better way to do this, let me know. -Giacom

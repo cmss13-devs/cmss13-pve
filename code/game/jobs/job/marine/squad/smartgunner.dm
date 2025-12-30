@@ -131,10 +131,39 @@
 	name = JOB_PMCPLAT_SG
 	squad = SQUAD_PMCPLT
 
+/datum/job/marine/smartgunner/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_SG
+	gear_preset = /datum/equipment_preset/uscm/pmc/sg
+	job_options = null
+	total_positions = 1
+	spawn_positions = 1
+
+/obj/effect/landmark/start/marine/smartgunner/pmc/small
+	name = JOB_PMCPLAT_SMALL_SG
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/smartgunner/ai/pmc/small
+
 /obj/effect/landmark/start/marine/smartgunner/forecon
 	name = JOB_SQUAD_SMARTGUN_FORECON
 	job = JOB_SQUAD_SMARTGUN_FORECON
 	squad = SQUAD_LRRP
+
+//-- RMC Platoon --//
+//Smartgunner//
+
+/datum/job/marine/smartgunner/ai/rmc
+	title = JOB_TWE_RMC_SMARTGUNNER
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/rmc/sg
+	job_options = null
+	supervisors = "the team leader and troop commander"
+	entry_message_body = "You are a specialized automatic rifleman in the Royal Marines Commando. Your task is to provide heavy weapons support for the Rifle Section as part of the Fire Support Team.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/smartgunner/rmc
+	name = JOB_TWE_RMC_SMARTGUNNER
+	job = JOB_TWE_RMC_SMARTGUNNER
+	squad = SQUAD_RMC
 
 #undef SGT_VARIANT
 #undef JSGT_VARIANT

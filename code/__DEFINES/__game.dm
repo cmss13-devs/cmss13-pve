@@ -36,20 +36,23 @@
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
-#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
-#define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
+#define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
-#define MAP_TAIPAI "Taipei Way-Station" //mapjam LAGO
+#define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
 #define MAP_CANYON_32B "Canyon 32B"
+#define MAP_BIG_BLUE "Kleschers Research Site"
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+#define MAP_BOSENMORI_BASHO "Bosenmori Basho"
+#define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
+#define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -281,12 +284,12 @@
 #define CEILING_PROTECTION_TIER_2 2
 #define CEILING_UNDERGROUND_ALLOW_CAS 2.1
 #define CEILING_UNDERGROUND_METAL_ALLOW_CAS 2.2
-#define CEILING_HULL_METAL 2.3
 
 /// Blocks CAS fire
 #define CEILING_PROTECTION_TIER_3 3
 #define CEILING_UNDERGROUND_BLOCK_CAS 3.1
 #define CEILING_UNDERGROUND_METAL_BLOCK_CAS 3.2
+#define CEILING_HULL_METAL 3.3
 
 /// Blocks OB fire
 #define CEILING_PROTECTION_TIER_4 4

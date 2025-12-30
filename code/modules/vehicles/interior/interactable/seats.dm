@@ -129,6 +129,27 @@
 		manual_unbuckle(X)
 		return
 
+// Commander's seat
+// Mirror of drivers stuff as it isn't much more than a LARP seat
+/obj/structure/bed/chair/comfy/vehicle/commander
+	name = "commanders's seat"
+	desc = "Military-grade seat for armored vehicle commander with some controls, switches and indicators."
+	var/image/over_image = null
+	seat = VEHICLE_COMMANDER
+	required_skill = SKILL_VEHICLE_CREWMAN
+
+/obj/structure/bed/chair/comfy/vehicle/commander/do_buckle(mob/target, mob/user)
+	required_skill = vehicle.required_skill
+	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
+		if(target == user)
+			to_chat(user, SPAN_WARNING("You have no idea how to command this thing!"))
+		return FALSE
+
+	if(vehicle)
+		vehicle.vehicle_faction = target.faction
+
+	return ..()
+
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
 
@@ -444,13 +465,6 @@
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			break_seat()
 
-// White chairs
-
-/obj/structure/bed/chair/vehicle/white
-	name = "passenger seat"
-	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
-	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'
-
 /obj/structure/bed/chair/vehicle/toc
 	name = "overwatch chair"
 	desc = "A sturdy chair with a brace that lowers over the body. Prevents being flung around in vehicle during a crash and being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
@@ -536,3 +550,10 @@
 
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
 	name = "co-pilot seat"
+
+// GUNNER VAN Seat
+/obj/structure/bed/chair/comfy/vehicle/van_gunner
+	name = "gunner's seat"
+	desc = "Comfortable seat for a gunner."
+	seat = VEHICLE_GUNNER
+	required_skill = SKILL_VEHICLE_DEFAULT

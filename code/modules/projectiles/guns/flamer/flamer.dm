@@ -15,6 +15,7 @@
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	fire_sound = ""
 	flags_equip_slot = SLOT_BACK
+	flags_item = TWOHANDED|SMARTGUNNER_BACKPACK_OVERRIDE
 	w_class = SIZE_LARGE
 	force = 15
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
@@ -734,7 +735,6 @@
 			if(istype(SM))
 				SM.track_shot_hit(weapon_cause_data.cause_name)
 
-	AddComponent(/datum/component/submerge_modifier, 10)
 	RegisterSignal(SSdcs, COMSIG_GLOB_WEATHER_CHANGE, PROC_REF(update_in_weather_status))
 
 /obj/flamer_fire/Destroy()

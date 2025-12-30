@@ -4183,7 +4183,7 @@
 /area/fiorina/station/security)
 "dhy" = (
 /obj/structure/platform,
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/fiorina/station/park)
 "dhA" = (
 /obj/structure/machinery/vending/cigarette/koorlander,
@@ -5115,7 +5115,7 @@
 	dir = 2;
 	icon_state = "casing_5"
 	},
-/turf/open/liquid/water/red_pool,
+/turf/open/gm/river/red_pool,
 /area/fiorina/station/park)
 "dRV" = (
 /obj/structure/machinery/light/double/blue{
@@ -8232,7 +8232,7 @@
 "gdi" = (
 /obj/item/storage/belt/shotgun/full/quackers,
 /obj/effect/spawner/gibspawner/human,
-/turf/open/liquid/water/darkred_pool,
+/turf/open/gm/river/darkred_pool,
 /area/fiorina/station/park)
 "gdK" = (
 /obj/structure/largecrate/random/case/double,
@@ -9156,7 +9156,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/fiorina/station/park)
 "gNX" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -12765,7 +12765,7 @@
 /area/fiorina/station/park)
 "jFW" = (
 /obj/item/toy/beach_ball,
-/turf/open/liquid/water/red_pool,
+/turf/open/gm/river/red_pool,
 /area/fiorina/station/park)
 "jGd" = (
 /obj/structure/machinery/light/double/blue{
@@ -17715,7 +17715,7 @@
 /obj/structure/platform_decoration{
 	dir = 9
 	},
-/turf/open/liquid/water/river/desert/deep,
+/turf/open/gm/river/desert/deep,
 /area/fiorina/lz/near_lzII)
 "nKC" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -20584,7 +20584,7 @@
 /turf/open/floor/prison/darkbrownfull2,
 /area/fiorina/maintenance)
 "pYZ" = (
-/turf/open/liquid/water/pool,
+/turf/open/gm/river/pool,
 /area/fiorina/station/park)
 "pZm" = (
 /obj/structure/machinery/light/small{
@@ -20793,7 +20793,7 @@
 /obj/structure/platform_decoration{
 	dir = 6
 	},
-/turf/open/liquid/water/river/desert/deep,
+/turf/open/gm/river/desert/deep,
 /area/fiorina/lz/near_lzII)
 "qfh" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -21547,7 +21547,7 @@
 /turf/open/floor/wood,
 /area/fiorina/station/park)
 "qKl" = (
-/turf/open/liquid/water/darkred_pool,
+/turf/open/gm/river/darkred_pool,
 /area/fiorina/station/park)
 "qKo" = (
 /obj/item/tool/warning_cone,
@@ -21966,7 +21966,7 @@
 /turf/open/floor/almayer/plate,
 /area/fiorina/tumor/ship)
 "rcL" = (
-/turf/open/liquid/water/red_pool,
+/turf/open/gm/river/red_pool,
 /area/fiorina/station/park)
 "rcV" = (
 /obj/structure/machinery/light/double/blue{
@@ -22710,7 +22710,7 @@
 "rGa" = (
 /obj/item/storage/belt/marine/quackers,
 /obj/effect/spawner/gibspawner/human,
-/turf/open/liquid/water/darkred_pool,
+/turf/open/gm/river/darkred_pool,
 /area/fiorina/station/park)
 "rGf" = (
 /turf/open/auto_turf/sand/layer1,
@@ -26626,7 +26626,7 @@
 /obj/structure/platform_decoration{
 	dir = 5
 	},
-/turf/open/liquid/water/river/desert/deep,
+/turf/open/gm/river/desert/deep,
 /area/fiorina/lz/near_lzII)
 "uPO" = (
 /obj/structure/dropship_equipment/mg_holder,
@@ -26810,7 +26810,7 @@
 /obj/structure/platform_decoration{
 	dir = 10
 	},
-/turf/open/liquid/water/river/desert/deep,
+/turf/open/gm/river/desert/deep,
 /area/fiorina/lz/near_lzII)
 "uXm" = (
 /obj/item/inflatable/door,
@@ -27126,7 +27126,7 @@
 /obj/structure/platform{
 	dir = 1
 	},
-/turf/open/liquid/water/red_pool,
+/turf/open/gm/river/red_pool,
 /area/fiorina/station/park)
 "vjq" = (
 /turf/closed/shuttle/ert{
@@ -29482,7 +29482,7 @@
 /area/fiorina/station/flight_deck)
 "xdk" = (
 /obj/structure/platform,
-/turf/open/liquid/water/red_pool,
+/turf/open/gm/river/red_pool,
 /area/fiorina/station/park)
 "xdE" = (
 /obj/structure/window/framed/prison/reinforced/hull,

@@ -48,7 +48,7 @@
 /obj/structure/prop/dam/truck
 	name = "truck"
 	desc = "An old truck, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles.dmi'
 	icon_state = "truck"
 	bound_height = 64
 	bound_width = 64
@@ -71,7 +71,7 @@
 /obj/structure/prop/dam/van
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64
@@ -83,7 +83,7 @@
 
 /obj/structure/prop/dam/crane
 	name = "cargo crane"
-	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles.dmi'
 	icon_state = "crane"
 	bound_height = 64
 	bound_width = 64
@@ -787,7 +787,7 @@
 /obj/structure/prop/vehicles
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64
@@ -802,7 +802,7 @@
 
 /obj/structure/prop/vehicles/tank/twe
 	name = "\improper FV150 Shobo MKII"
-	desc = "The FV150 Shobo MKII is a Combat Reconnaissance Vehicle Tracked, abbreviated to CVR(T) in official documentation. It was co-developed in 2175 by Weyland-Yutani and Gallar Co., a Titan based heavy vehicle manufacturer. Taking into account lessons learned from the MkI's performance in the Australian Wars, major structual changes were made, and the MKII went into production in 2178. It is armed with a twin 30mm cannon and a L56A2 10x28mm coaxial, complimented by its ammunition stores of 170 rounds of 30mm and 1600 rounds of 10x28mm. The maximum speed of the Shobo is 60 mph, but on a standard deployment after the ammo stores are fully loaded and the terrain is taken into account, it consistently sits at 55mph."
+	desc = "The FV150 Shobo MKII is a Combat Reconnaissance Vehicle Tracked, abbreviated to CVR(T) in official documentation. It was co-developed in 2175 by Weyland-Yutani and Gallar Co., a Titan based heavy vehicle manufacturer. Taking into account lessons learned from the MkI's performance in the Australian Wars, major structual changes were made, and the MKII went into production in 2178. It is armed with a twin 30mm cannon and a L58A3 10x28mm coaxial, complimented by its ammunition stores of 170 rounds of 30mm and 1600 rounds of 10x28mm. The maximum speed of the Shobo is 60 mph, but on a standard deployment after the ammo stores are fully loaded and the terrain is taken into account, it consistently sits at 55mph."
 	icon = 'icons/obj/vehicles/twe_tank.dmi'
 	icon_state = "twe_tank"
 	density = TRUE

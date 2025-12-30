@@ -64,3 +64,14 @@
 	else
 		to_world("<B>The LOOC channel has been globally disabled!</B>")
 	message_admins("[key_name_admin(usr)] toggled LOOC.")
+
+/datum/admins/proc/setlooccooldoown()
+	set name = "Set LOOC Cooldown"
+	set desc = "Toggles LOOC Cooldown"
+	set category = "Server"
+
+	var/newcooldown = tgui_input_number(usr, "Set LOOC Cooldown in Seconds.", "Set LOOC CD", 60, 500, 0)
+	GLOB.looc_cooldown_time = newcooldown*10
+	for(var/client/client in GLOB.clients)
+		COOLDOWN_RESET(client, looc_cooldown)
+	message_admins("[key_name_admin(usr)] set LOOC cooldown to [newcooldown].")

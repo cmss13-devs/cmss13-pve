@@ -1454,6 +1454,9 @@
 		visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 			SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
 
+	if(istype(get_turf(src), /turf/open/gm/river))
+		ExtinguishMob()
+
 	if(fire_stacks > 0)
 		return
 
@@ -1698,7 +1701,7 @@
 			platoon = "Azure-15"
 		if(FACTION_TWE)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
-			platoon = "Royal Marine Corps"
+			platoon = "Gamma Troop"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)

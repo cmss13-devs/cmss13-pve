@@ -43,7 +43,7 @@
 	var/list/data = list()
 
 	data["defenses"] = lazy_ui_data
-	data["valid_factions"] = list(FACTION_MARINE, FACTION_UA_REBEL, FACTION_UPP, FACTION_CANC, FACTION_WY, FACTION_FREELANCER, FACTION_TWE, FACTION_TWE_REBEL)
+	data["valid_factions"] = list(FACTION_MARINE, FACTION_UA_REBEL, FACTION_UPP, FACTION_CANC, FACTION_WY, FACTION_FREELANCER, FACTION_TWE, FACTION_TWE_REBEL, FACTION_MERCENARY)
 
 	return data
 
@@ -193,10 +193,6 @@
 	icon_state = "wy_flamer"
 	path_to_spawn = /obj/structure/machinery/defenses/sentry/flamer/wy
 
-/datum/human_ai_defense/defense/sentry/wy/static_gun
-	name = "W-Y Sentry - Static"
-	icon_state = "wy_sentry_static"
-
 /datum/human_ai_defense/defense/sentry/wy/mini
 	name = "W-Y Sentry - Mini Sentry"
 	desc = /obj/structure/machinery/defenses/sentry/mini/wy::desc
@@ -208,6 +204,12 @@
 	desc = /obj/structure/machinery/defenses/sentry/dmr/wy::desc
 	icon_state = "wy_sentry_heavy"
 	path_to_spawn = /obj/structure/machinery/defenses/sentry/dmr/wy
+
+/datum/human_ai_defense/defense/sentry/wy/static_gun
+	name = "W-Y Sentry - Static"
+	desc = /obj/structure/machinery/defenses/sentry/premade/deployable/wy::desc
+	icon_state = "wy_sentry_static"
+	path_to_spawn = /obj/structure/machinery/defenses/sentry/premade/deployable/wy
 
 // Bell towers
 
