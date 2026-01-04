@@ -252,7 +252,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_engi, list(
 
 /obj/effect/essentials_set/pmcengi
 	spawned_gear_list = list(
-		/obj/item/defenses/handheld/sentry/wy/mini,
+		/obj/item/defenses/handheld/sentry/wy/mini/strikeforce,
 		/obj/item/storage/toolkit/full,
 		/obj/item/tool/shovel/etool/folded,
 	)
@@ -267,8 +267,6 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_pmc, list(
 		list("High-Capacity Power Cell", 2, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),
 		list("Metal x20", 5, /obj/item/stack/sheet/metal/med_small_stack, null, VENDOR_ITEM_REGULAR),
 		list("Plasteel x10", 5, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_REGULAR),
-		list("Plastic Explosive", 3, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
-		list("Breaching Charge", 5, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_REGULAR),
 		list("Sandbags x50", 15, /obj/item/stack/sandbags/, null, VENDOR_ITEM_REGULAR),
 		list("Super-Capacity Power Cell", 5, /obj/item/cell/super, null, VENDOR_ITEM_REGULAR),
 
@@ -277,6 +275,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_pmc, list(
 		list("M60 WPSI Phosphorus Grenade Packet (x5 grenades)", 10, /obj/item/storage/box/packet/phosphorus, null, VENDOR_ITEM_REGULAR),
 		list("M20A2P Mine Box (x5 mines)", 10, /obj/item/storage/box/explosive_mines/pmc, null, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock Grenade Packet (x3 grenades)",  10, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
+		list("Plastic Explosive", 3, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", 5, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/gear/engi/pmc
