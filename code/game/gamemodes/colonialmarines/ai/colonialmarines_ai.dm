@@ -43,11 +43,25 @@
 			GLOB.main_platoon_name = sq.name
 			GLOB.main_platoon_initial_name = sq.name
 
+	squad_limit += USCM_AUXILIARY_PLATOON
+	squad_limit += FORECON_AUXILIARY_PLATOON
+	squad_limit += UPP_AUXILIARY_PLATOON
+	squad_limit += PMC_AUXILIARY_PLATOON
+
 	for(var/datum/squad/squad in GLOB.RoleAuthority.squads)
 		if(squad.type in squad_limit)
 			continue
 		GLOB.RoleAuthority.squads -= squad
 		GLOB.RoleAuthority.squads_by_type -= squad.type
+
+	GLOB.RoleAuthority.squads += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += FORECON_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += UPP_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += PMC_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += FORECON_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += UPP_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += PMC_AUXILIARY_PLATOON
 
 	. = ..()
 
@@ -133,7 +147,6 @@ GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun-stakeout" = /obj
 											"M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified,\
 											"Cut down M79 grenade launcher" = /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff,\
 											"4 M15 grenades" = /obj/effect/essentials_set/m15_4_pack))
-
 
 /datum/game_mode/colonialmarines/ai/proc/spawn_personal_weapon()
 	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads

@@ -24,6 +24,27 @@
 	sub_squad = "Strike Team"
 	sub_leader = "Strike Leader"
 
+/datum/squad_type/forecon_squad
+	name = "Squad"
+	lead_name = "Squad Leader"
+	lead_icon = "leader"
+	sub_squad = "Team"
+	sub_leader = "Team Leader"
+
+/datum/squad_type/upp_squad
+	name = "Platoon"
+	lead_name = "Platoon Sergeant"
+	lead_icon = "leader"
+	sub_squad = "Squad"
+	sub_leader = "Squad Sergeant"
+
+/datum/squad_type/pmc_squad
+	name = "Taskforce"
+	lead_name = "Operations Leader"
+	lead_icon = "leader"
+	sub_squad = "Team"
+	sub_leader = "Team Leader"
+
 /datum/squad_type/rmc_troop
 	name = "Troop"
 	lead_name = "Troop Commander"
@@ -77,7 +98,7 @@
 	var/faction = FACTION_MARINE
 
 	/// What will the assistant squad leader be called
-	var/squad_type = "Platoon" //Referenced for aSL details. Squad/Team/Cell etc.
+	var/squad_type = "Section" //Referenced for aSL details. Squad/Team/Cell etc.
 	/// Squad leaders icon
 	var/lead_icon //Referenced for SL's 'L' icon. If nulled, won't override icon for aSLs.
 
@@ -154,6 +175,7 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 	faction = FACTION_UPP
+	squad_type = "Platoon"
 	squad_one_access = ACCESS_UPP_SQUAD_ONE
 	squad_two_access = ACCESS_UPP_SQUAD_TWO
 
@@ -161,6 +183,17 @@
 	. = ..()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/upp/secondary
+	name = SQUAD_UPP_2
+	equipment_color = "#dfab1c"
+	chat_color = "#e0c31a"
+	usable = FALSE
+
+/datum/squad/marine/upp/secondary/New()
+	. = ..()
+	//To stop this being renamed to the first-spawned-in unit and breaking things
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE)
 
 /datum/squad/marine/forecon
 	name = SQUAD_LRRP
@@ -171,15 +204,17 @@
 	chat_color = "#32CD32"
 	minimap_color = "#32CD32"
 	usable = TRUE
+	squad_type = "Squad"
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
 	chat_color = "#ffe650"
-	access = list(ACCESS_MARINE_BRAVO)
+	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = BRAVO_FREQ
+	use_stripe_overlay = FALSE
 	minimap_color = MINIMAP_SQUAD_BRAVO
-	usable = TRUE
+	usable = FALSE
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
@@ -253,6 +288,17 @@
 	active = FALSE
 	roundstart = FALSE
 	locked = TRUE
+
+/datum/squad/marine/sof/forecon
+	name = SQUAD_LRRP_2
+	use_stripe_overlay = FALSE
+	equipment_color = "#8f5e30"
+	chat_color = "#8f5e30"
+	minimap_color = "#8f5e30"
+	squad_type = "Squad"
+	access = list(ACCESS_MARINE_ALPHA)
+	usable = FALSE
+	locked = FALSE
 
 /datum/squad/marine/cbrn
 	name = SQUAD_CBRN
@@ -358,6 +404,13 @@
 	squad_one_access = ACCESS_PMC_SQUAD_ONE
 	squad_two_access = ACCESS_PMC_SQUAD_TWO
 	faction = FACTION_PMC
+	squad_type = "Taskforce"
+
+/datum/squad/marine/pmc/secondary
+	name = SQUAD_PMCPLT_2
+	chat_color = "#0fc777"
+	minimap_color = MINIMAP_SQUAD_ECHO
+	usable = FALSE
 
 /datum/squad/marine/pmc/small
 	name = SQUAD_PMCPLT_SMALL

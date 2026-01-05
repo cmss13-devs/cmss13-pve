@@ -1,0 +1,6 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "New squad datums"
+  - qol: "Enabling of extra squad datums from roundstart"
+  - bugfix: "Latespawn props shouldn't auto-assign to the base squad now"
