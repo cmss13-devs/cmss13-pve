@@ -120,8 +120,42 @@
 	)
 */
 /datum/human_ai_squad_preset/clf/canc
-	name = "CANC Rebel, Patrol"
+	name = "CANC Rebel, Rifles"
 	ai_to_spawn = list(
 		/datum/equipment_preset/canc/remnant/leader = 1,
 		/datum/equipment_preset/canc/remnant = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/smg
+	name = "CANC Rebel, SMGs"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/leader = 1,
+		/datum/equipment_preset/canc/remnant/smg = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/bigknife
+	name = "CANC Rebel, Big Knife Society"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/bigknife = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/warcrime
+	name = "CANC Rebel, Gas+SMG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/warcrimer = 1,
+		/datum/equipment_preset/canc/remnant/smg = 1,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/medic
+	name = "CANC Rebel, Medic+SMG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/medic = 1,
+		/datum/equipment_preset/canc/remnant/smg = 1,
+	)
+
+
+/datum/human_ai_squad_preset/clf/canc/machinegunner
+	name = "CANC Rebel, MG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/machinegunner = 1,
 	)

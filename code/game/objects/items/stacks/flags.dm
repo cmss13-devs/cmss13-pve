@@ -353,6 +353,20 @@
 	desc = "Black flag bearing a white Union of Progressive Peoples' seal."
 	icon_state = "flag_revanchists_planted"
 	flag_type = /obj/item/flag/plantable/revanchist
+
+/obj/item/flag/plantable/canc
+	name = "\improper CANC flag"
+	desc = "The flag of the Chinese/Asian-Nation Cooperative. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_canc"
+	flag_type = /obj/structure/flag/plantable/canc
+	faction = FACTION_CANC
+
+/obj/structure/flag/plantable/canc
+	name = "\improper CANC flag"
+	desc = "The flag of the Chinese/Asian-Nation Cooperative. One vision, one nation, one destiny."
+	icon_state = "flag_canc_planted"
+	flag_type = /obj/item/flag/plantable/canc
 // BRAZIL FLAG //
 //////////////////////////
 

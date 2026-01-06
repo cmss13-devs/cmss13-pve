@@ -104,6 +104,24 @@
 	languages = list(LANGUAGE_JAPANESE)
 	ethnicity = JAPANESE_ETHNICITY
 
+/datum/equipment_preset/colonist/miner/chinese
+	name = "Chinese Civilian Colonist, Blue-Collar (Miner)"
+	languages = list(LANGUAGE_CHINESE)
+	ethnicity = CHINESE_ETHNICITY
+
+/datum/equipment_preset/colonist/miner/chinese/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
+	add_worker_uniform(new_human)
+	//jacket
+	add_worker_jacket(new_human)
+	//limbs
+	add_worker_shoe(new_human)
+
 /datum/equipment_preset/colonist/construction
 	name = "US Civilian Colonist, Blue-Collar (Construction)"
 	assignment = "Construction Worker"
@@ -238,6 +256,26 @@
 	name = "TWE Colonist, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/cook/chinese
+	name = "Chinese Colonist, Blue-Collar (Cook)"
+	ethnicity = CHINESE_ETHNICITY
+	languages = list(LANGUAGE_CHINESE)
+
+/datum/equipment_preset/colonist/cook/chinese/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	//uniform
+	var/obj/item/clothing/under/color/white/uniform = new()
+	uniform.roll_suit_jacket(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
+	//limbs
+	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/chef
 	name = "US Civilian Colonist, Blue-Collar (Chef)"
@@ -549,6 +587,12 @@
 	name = "TWE Civilian Doctor, Scrubs"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/doctor/scrubs/chinese
+	name = "Chinese Civilian Doctor, Scrubs"
+	ethnicity = CHINESE_ETHNICITY
+	languages = list(LANGUAGE_CHINESE)
+
 
 /datum/equipment_preset/colonist/admin
 	name = "US Civilian Administrator"

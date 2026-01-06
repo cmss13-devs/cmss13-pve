@@ -58,6 +58,8 @@
 
 	var/ai_disallow_looting = FALSE
 
+	var/ai_civilian = FALSE
+
 
 
 /datum/equipment_preset/New()
