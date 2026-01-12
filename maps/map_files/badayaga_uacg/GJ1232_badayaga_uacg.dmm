@@ -5355,6 +5355,13 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside)
+"ja" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 3
+	},
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/dorms)
 "jb" = (
 /obj/structure/surface/rack,
 /obj/item/ashtray/plastic{
@@ -5753,6 +5760,18 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside)
+"jK" = (
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/dorms)
 "jL" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -11162,9 +11181,6 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside)
 "tC" = (
-/obj/structure/machinery/medical_pod/bodyscanner{
-	pixel_y = 6
-	},
 /turf/open/floor/plating/bare_catwalk,
 /area/badayaga/inside_underground/medical)
 "tD" = (
@@ -14613,11 +14629,6 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/command_rooms)
 "zG" = (
-/obj/structure/machinery/body_scanconsole{
-	pixel_y = 5;
-	dir = 4;
-	pixel_x = -1
-	},
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground/medical)
 "zH" = (
@@ -55640,7 +55651,7 @@ jP
 JW
 Us
 be
-LK
+lK
 MW
 oV
 st
@@ -55842,7 +55853,7 @@ JW
 JW
 Us
 Us
-cg
+jK
 xx
 lK
 st
@@ -56044,7 +56055,7 @@ JW
 JW
 MW
 be
-Ak
+ja
 Us
 PU
 LK
