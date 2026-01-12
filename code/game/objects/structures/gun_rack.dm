@@ -249,13 +249,25 @@
 	initial_stored = 0
 
 /obj/structure/gun_rack/m79
-	name = "M79 grenade launcher"
+	name = "M79 grenade launcher rack"
 	icon_state = "m79"
 	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five M79 grenade launchers."
 	max_stored = 5
 	initial_stored = 5
 	allowed_type = /obj/item/weapon/gun/launcher/grenade/m81/m79
 	populate_type = /obj/item/weapon/gun/launcher/grenade/m81/m79
+
+/obj/structure/gun_rack/m79/Empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m16
+	name = "M16 assault rifle launcher rack"
+	icon_state = "m16"
+	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five M16 assault rifles. You recognize this model as being a special commission order for the USS Sulaco."
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m16/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m16/unloaded
 
 /obj/structure/gun_rack/m79/Empty
 	initial_stored = 0
