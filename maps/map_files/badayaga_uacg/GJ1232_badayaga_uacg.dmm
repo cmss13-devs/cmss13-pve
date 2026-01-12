@@ -5355,13 +5355,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside)
-"ja" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	pixel_x = 3
-	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms)
 "jb" = (
 /obj/structure/surface/rack,
 /obj/item/ashtray/plastic{
@@ -5760,18 +5753,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside)
-"jK" = (
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
-	},
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/dorms)
 "jL" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -10350,6 +10331,11 @@
 	color = "#818181"
 	},
 /area/badayaga/outside)
+"sb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms)
 "sc" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -11687,6 +11673,18 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood_broken3,
 /area/badayaga/inside)
+"uz" = (
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/dorms)
 "uA" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -13391,6 +13389,13 @@
 	},
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/medical)
+"xI" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 3
+	},
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/dorms)
 "xJ" = (
 /obj/structure/stairs/perspective/kutjevo,
 /obj/structure/platform/kutjevo/smooth{
@@ -28265,7 +28270,10 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg/security;
+	squad = "Hailstorm"
+	},
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg/security,
 /obj/effect/landmark/start/marine/uacg/security,
@@ -55853,7 +55861,7 @@ JW
 JW
 Us
 Us
-jK
+uz
 xx
 lK
 st
@@ -56055,7 +56063,7 @@ JW
 JW
 MW
 be
-ja
+xI
 Us
 PU
 LK
@@ -57255,7 +57263,7 @@ Re
 dN
 Us
 vN
-Bx
+sb
 pF
 fg
 Hz

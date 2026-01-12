@@ -226,6 +226,12 @@
 	job = JOB_UACG_RIFLE
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/rifle1/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/standard(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -236,6 +242,12 @@
 	job = JOB_UACG_RIFLE
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/rifle2/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/white(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -246,6 +258,12 @@
 	job = JOB_UACG_RIFLE
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/rifle3/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/black(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -256,16 +274,45 @@
 	job = JOB_UACG_RIFLE
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/rifle4/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/inverted(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 	new /obj/item/storage/backpack/general_belt(src)
 	new /obj/item/attachable/sling(src)
 
+/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1/security
+	job = JOB_UACG_SCR_RIFLE
+
+/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1/security/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
+	new /obj/item/storage/box/guncase/uacg/inverted(src)
+	new /obj/item/storage/pouch/magazine(src)
+	new /obj/item/storage/backpack/marine/satchel(src)
+	new /obj/item/storage/belt/security/MP/colonist(src)
+	new /obj/item/prop/helmetgarb/riot_shield(src)
+	new /obj/item/attachable/sling(src)
+
 /obj/structure/closet/secure_closet/marine_personal/uacg/marksman1
 	job = JOB_UACG_DM
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/marksman1/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/standard(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -277,6 +324,12 @@
 	job = JOB_UACG_DM
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/marksman2/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/white(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -285,9 +338,15 @@
 	new /obj/item/storage/box/packet/smoke(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/gunner1
-	job = JOB_UACG_DM
+	job = JOB_UACG_GNR
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/gunner1/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/heavy(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
@@ -299,9 +358,33 @@
 	job = JOB_UACG_GNR
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/gunner2/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
 	new /obj/item/storage/box/guncase/uacg/heavy/black(src)
 	new /obj/item/storage/pouch/magazine(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 	new /obj/item/storage/backpack/general_belt(src)
 	new /obj/item/storage/pouch/magazine/pistol(src)
 	new /obj/item/attachable/sling(src)
+
+/obj/structure/closet/secure_closet/marine_personal/uacg/gunner1/security
+	job = JOB_UACG_SCR_GNR
+
+/obj/structure/closet/secure_closet/marine_personal/uacg/gunner1/security/spawn_gear()
+	new /obj/item/clothing/glasses/mgoggles/uacg(src)
+	new /obj/item/clothing/mask/rebreather/scarf(src)
+	new /obj/item/clothing/accessory/storage/holster/waist(src)
+	new /obj/item/storage/pouch/firstaid/full/alternate(src)
+	new /obj/item/storage/box/mre(src)
+	new /obj/item/device/flashlight/combat(src)
+	new /obj/item/storage/box/guncase/uacg/heavy(src)
+	new /obj/item/storage/pouch/magazine(src)
+	new /obj/item/storage/backpack/marine/satchel(src)
+	new /obj/item/storage/belt/security/MP/colonist(src)
+	new /obj/item/prop/helmetgarb/riot_shield(src)
+	new /obj/item/device/binoculars(src)
+	new /obj/item/storage/box/packet/smoke(src)
