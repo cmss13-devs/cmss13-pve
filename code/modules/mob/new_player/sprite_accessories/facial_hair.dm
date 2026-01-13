@@ -142,6 +142,10 @@
 	name = "Van Dyke Extended"
 	icon_state = "facial_vdkye_e"
 
+/datum/sprite_accessory/facial_hair/billy_goat
+	name = "Billy Goat"
+	icon_state = "facial_billy_goat"
+
 /datum/sprite_accessory/facial_hair/soulful_selleck
 	name = "Soulful Selleck"
 	icon_state = "facial_soulful_selleck"

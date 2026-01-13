@@ -44,6 +44,14 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	display_name = "Aviator shades"
 	path = /obj/item/clothing/glasses/sunglasses/aviator
 
+/datum/gear/eyewear/round_sunglasses
+	display_name = "Round sunglasses"
+	path = /obj/item/clothing/glasses/sunglasses/round_sunglasses
+
+/datum/gear/eyewear/round_sunglasses_red
+	display_name = "Red round sunglasses"
+	path = /obj/item/clothing/glasses/sunglasses/round_sunglasses_red
+
 /datum/gear/eyewear/eyepatch
 	display_name = "Eyepatch"
 	path = /obj/item/clothing/glasses/eyepatch

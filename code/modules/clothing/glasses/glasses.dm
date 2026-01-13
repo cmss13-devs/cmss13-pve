@@ -712,6 +712,20 @@
 	item_state = "aviator"
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/sunglasses/round_sunglasses
+	name = "Round sunglasses"
+	desc = "A pair of round sunglasses, or teashades. Very '60s."
+	icon_state = "round_sunglasses"
+	item_state = "round_sunglasses"
+	flags_equip_slot = SLOT_EYES|SLOT_FACE
+
+/obj/item/clothing/glasses/sunglasses/round_sunglasses_red
+	name = "Red round sunglasses"
+	desc = "A pair of round sunglasses, or teashades. Very '60s. Now in red."
+	icon_state = "round_sunglasses_red"
+	item_state = "round_sunglasses_red"
+	flags_equip_slot = SLOT_EYES|SLOT_FACE
+
 /obj/item/clothing/glasses/sunglasses/sechud
 	name = "Security HUD-Glasses"
 	desc = "Sunglasses wired up with the best nano-tech the USCM can muster out on the frontier. Displays information about any person you decree worthy of your gaze."
