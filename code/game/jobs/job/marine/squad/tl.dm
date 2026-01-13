@@ -90,10 +90,53 @@
 	squad = SQUAD_PMCPLT
 	job = /datum/job/marine/tl/ai/pmc
 
+/datum/job/marine/tl/ai/pmc/small
+	title = JOB_PMCPLAT_SMALL_FTL
+	gear_preset = /datum/equipment_preset/uscm/pmc/tl
+	job_options = null
+	total_positions = 1
+	spawn_positions = 1
+
+/obj/effect/landmark/start/marine/tl/pmc/small
+	name = JOB_PMCPLAT_SMALL_FTL
+	squad = SQUAD_PMCPLT_SMALL
+	job = /datum/job/marine/tl/ai/pmc/small
+
 /obj/effect/landmark/start/marine/tl/forecon
 	name = JOB_SQUAD_TEAM_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
+
+//-- RMC Platoon --//
+//Section/squad leader & team leader//
+
+/datum/job/marine/tl/ai/rmc
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_TWE_RMC_SECTIONLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/sl
+	job_options = null
+	supervisors = "the troop commander and troop sergeant"
+	entry_message_body = "You are the Section Leader for a Rifle Section of Royal Marines Commando. Your task is leading the Rifle Section, utilize available ordnance and detach the Fire-Support Team of your Section as needed.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/obj/effect/landmark/start/marine/tl/rmc
+	name = JOB_TWE_RMC_SECTIONLEADER
+	squad = SQUAD_RMC
+	job = /datum/job/marine/tl/ai/rmc
+
+/datum/job/marine/tl/ai/rmc2ic
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_TWE_RMC_TEAMLEADER
+	gear_preset = /datum/equipment_preset/uscm/rmc/tl
+	job_options = null
+	supervisors = "the section leader and troop commander"
+	entry_message_body = "You are the Team Leader for a Fire Support Team of Royal Marines Commando weapons specialists. Your task is coordinating the available ordnance your team is able to bring to bear. You may be expected to lead the Rifle Section should the Section Leader die.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b>"
+
+/obj/effect/landmark/start/marine/tl/rmc2ic
+	name = JOB_TWE_RMC_TEAMLEADER
+	squad = SQUAD_RMC
+	job = /datum/job/marine/tl/ai/rmc2ic
 
 #undef SSGT_VARIANT
 #undef SGT_VARIANT

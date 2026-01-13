@@ -58,7 +58,7 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/synth/uscm/forecon
-	name = "USCM FORECON Synthetic"
+	name = "USCM Reconnaissance Synthetic"
 	assignment = JOB_FORECON_SYN
 
 /datum/equipment_preset/synth/uscm/forecon/load_gear(mob/living/carbon/human/new_human) //Bishop from Aliens
@@ -66,6 +66,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/red(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/forecon(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon/synth(new_human), WEAR_L_EAR)
@@ -195,7 +196,7 @@
 		WEAR_BODY = /obj/item/clothing/under/colonist/ua_civvies,
 		WEAR_ACCESSORY = /obj/item/clothing/accessory/armband/med,
 		WEAR_BACK = /obj/item/storage/backpack/satchel/med,
-		WEAR_IN_BACK = /obj/item/storage/firstaid/adv,
+		WEAR_IN_BACK = /obj/item/storage/firstaid/softpack/adv,
 		WEAR_IN_BACK = /obj/item/tool/extinguisher/mini,
 		WEAR_IN_BACK = /obj/item/roller,
 		WEAR_JACKET = /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr,
@@ -1100,11 +1101,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/upp, WEAR_R_STORE)
 	add_merc_weapon(new_human)
 	//backpack stuff
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/stick, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular/response, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular, WEAR_IN_BACK)
 
 /datum/equipment_preset/synth/working_joe/security_android/pmc
 	name = "Synthetic - PMC Security Android"

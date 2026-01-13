@@ -18,6 +18,9 @@
 /datum/ammo/bullet/pistol/tiny
 	name = "light pistol bullet"
 
+/datum/ammo/bullet/pistol/upp
+	name = "9x18 bullet"
+
 /datum/ammo/bullet/pistol/tranq
 	name = "tranquilizer bullet"
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_RESIST
@@ -104,9 +107,20 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	accuracy = HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	damage = 50
+	damage = 55
 	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
+	name = "supersonic heavy pistol bullet"
+	shell_speed = AMMO_SPEED_TIER_5
+	damage = 60
+	penetration = ARMOR_PENETRATION_TIER_2
+
+/datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
+	. = ..()
+	slowdown(entity, bullet)
+	pushback(entity, bullet, 2)
 
 /datum/ammo/bullet/pistol/heavy/super //Commander's variant //Not messing with this, it can retain The Funny Values
 	name = ".50 heavy pistol bullet"

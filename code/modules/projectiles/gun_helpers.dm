@@ -305,7 +305,10 @@ DEFINES in setup.dm, referenced here.
 			return
 		if(istype(src, magazine.gun_type) || (magazine.type in src.accepted_ammo))
 			if(current_mag)
-				unload(user, FALSE, TRUE)
+				if(user.client?.prefs && (user.client?.prefs?.toggle_prefs & TOGGLE_AUTO_EJECT_MAGAZINE_TO_HAND))
+					unload(user)
+				else
+					unload(user, FALSE, TRUE)
 			to_chat(user, SPAN_NOTICE("You start a tactical reload."))
 			var/old_mag_loc = magazine.loc
 			var/tac_reload_time = 15

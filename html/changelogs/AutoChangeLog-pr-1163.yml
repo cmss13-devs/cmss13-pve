@@ -1,0 +1,5 @@
+author: "Max-023"
+delete-after: True
+changes:
+  - rscadd: "Added extra ammo dum to Smartgun Lockers"
+  - rscdel: "Removed ammo drum from the stored smartguns"

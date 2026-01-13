@@ -1,0 +1,8 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - balance: "AP Himat now doesn't make 600 Shrapnel over 1 second. Lowered to 160 Shrapnel over 5 seconds."
+  - balance: " SHARP Flechette lowered to 12 \"shrapnel\" buffed damage to 80 to compensate."
+  - bugfix: "Fix because 600 Shrapnel in one second tends to derail the MC. And lag out the server. Binos with no connected HIMATs trying to swap doesn't runtime."
+  - bugfix: "UPP Airburst incendiary will no longer explode if thrown at something"
+  - balance: "Designators can no longer CAS-lase onto regions that are impervious to CAS or OBs, even if stood out in the open looking into it"

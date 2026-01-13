@@ -1,0 +1,5 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - qol: "No more weird ranks as equipped rifleman or SG presets"
+  - bugfix: "Removed the weird variable rank stuff left present on the forecon PFC preset"

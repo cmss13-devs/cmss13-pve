@@ -57,6 +57,38 @@
 	name = "cop-car interior"
 	icon_state = "van"
 
+/area/interior/vehicle/van/armored
+	name = "armored van interior"
+	icon_state = "van"
+
 /area/interior/vehicle/arc
 	name = "\improper M540 ARC interior"
 	icon_state = "arc"
+
+/area/interior/vehicle/uppapc
+	name = "\improper UPP ZSL-68 interior"
+	icon_state = "upp_apc"
+
+/area/interior/vehicle/upptank
+	name = "\improper UPP tank interior"
+	icon_state = "upp_tank"
+
+/area/interior/vehicle/uppvan
+	name = "\improper UPP van interior"
+	icon_state = "upp_van"
+
+/area/interior/vehicle/uppvant
+	name = "\improper UPP van turret interior"
+	icon_state = "upp_vant"
+
+/area/interior/vehicle/uppvan/medical
+	name = "\improper UPP van medical interior"
+	icon_state = "upp_van_medical"
+
+/area/interior/vehicle/uppvan/logistics
+	name = "\improper UPP van logistics interior"
+	icon_state = "upp_van_logistics"
+
+/area/interior/vehicle/uppvan/prisoner
+	name = "\improper UPP van prisoner interior"
+	icon_state = "upp_van_prisoner"

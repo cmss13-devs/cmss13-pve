@@ -1,0 +1,4 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - bugfix: "AI Inv appraisal checks for pockets before looking through them, and checks for storage webbing before that."

@@ -215,6 +215,11 @@
 	desc = "An ammunition case containing 20 Type 71 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
 
+/obj/structure/largecrate/supply/ammo/nsg23
+	name = "\improper NSG L23A1 magazine case (x20)"
+	desc = "An ammunition case containing 20 NSG L23A1 magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/nsg23 = 20)
+
 /obj/structure/largecrate/supply/ammo/supply_drop
 	icon_state = "secure_crate_strapped"
 	desc = "An ammunition case containing everything you need."
@@ -275,6 +280,11 @@
 	name = "80mm flare mortar shell case (x25)"
 	desc = "A case containing twenty-five 80mm flare mortar shells."
 	supplies = list(/obj/item/mortar_shell/flare = 25)
+
+/obj/structure/largecrate/supply/explosives/mortar_smoke
+	name = "80mm smoke mortar shell case (x25)"
+	desc = "A case containing twenty-five 80mm smoke mortar shells."
+	supplies = list(/obj/item/mortar_shell/smoke = 25)
 
 /obj/structure/largecrate/supply/explosives/himat
 	name = "HIMAT missiles case (x25)"
@@ -368,6 +378,11 @@
 	name = "\improper P.A.C.M.A.N. crate"
 	desc = "A crate containing a P.A.C.M.A.N. generator, some fuel, and some cable coil to get your power up and going."
 	supplies = list(/obj/structure/machinery/power/port_gen/pacman = 1, /obj/item/stack/sheet/mineral/phoron/medium_stack = 1, /obj/item/stack/cable_coil/yellow = 3)
+
+/obj/structure/largecrate/supply/generator/super
+	name = "\improper S.U.P.E.R.P.A.C.M.A.N. crate"
+	desc = "A crate containing a S.U.P.E.R.P.A.C.M.A.N. generator, some fuel, a wrench and some cable coil to get your power up and going."
+	supplies = list(/obj/structure/machinery/power/port_gen/pacman/super = 1, /obj/item/stack/sheet/mineral/uranium/small_stack = 4, /obj/item/tool/wrench = 1, /obj/item/stack/cable_coil/pink = 3)
 
 /obj/structure/largecrate/supply/motiondetectors
 	name = "\improper motion detectors crate"

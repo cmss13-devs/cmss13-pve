@@ -43,7 +43,7 @@
 /obj/item/weapon/gun/launcher/rocket/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 70, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 150, GLOB.damage_boost_vehicles),
 	))
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_config_values()
@@ -171,7 +171,7 @@
 			to_chat(user, SPAN_WARNING("[src] is already empty!"))
 			return
 		to_chat(user, SPAN_NOTICE("You begin unloading [src]. Hold still..."))
-		if(do_after(user,current_mag.reload_delay, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		if(do_after(user, (current_mag.reload_delay/4), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			if(current_mag.current_rounds <= 0)
 				to_chat(user, SPAN_WARNING("You have already unloaded \the [src]."))
 				return
@@ -275,7 +275,7 @@
 /obj/item/weapon/gun/launcher/rocket/anti_tank/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 200, GLOB.damage_boost_vehicles),
 	))
 
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable //single shot and disposable
@@ -385,11 +385,11 @@
 	S.Attach(src)
 	update_attachables()
 
-	var/obj/item/attachable/magnetic_harness/Integrated = new(src)
-	Integrated.hidden = TRUE
-	Integrated.flags_attach_features &= ~ATTACH_REMOVABLE
-	Integrated.Attach(src)
-	update_attachable(Integrated.slot)
+	var/obj/item/attachable/scope/mini/army/scope = new(src)
+	scope.hidden = TRUE
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.Attach(src)
+	update_attachable(scope.slot)
 
 /obj/item/weapon/gun/launcher/rocket/upp/apply_bullet_effects(obj/projectile/projectile_to_fire, mob/user, i = 1, reflex = 0)
 	. = ..()

@@ -145,12 +145,14 @@
 		COMSIG_LIVING_PREIGNITION
 	), PROC_REF(cancel_fire))
 	var/image/cables = image('icons/obj/structures/droppod_32x64.dmi', src, "chute_cables_static")
+	cables.appearance_flags = KEEP_APART|RESET_TRANSFORM
 	overlays += cables
 	var/image/chute = image('icons/obj/structures/droppod_64x64.dmi', src, "chute_static")
 
 	chute.pixel_x -= 16
 	chute.pixel_y += 16
-
+	chute.appearance_flags = KEEP_APART|RESET_TRANSFORM
+	ADD_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
 	overlays += chute
 	pixel_z = 360
 	forceMove(target)
@@ -163,6 +165,8 @@
 	..()
 	if(client)
 		playsound_client(client, 'sound/items/fulton.ogg', src, 50, 1) //for some reason you don't hear the sound while dropping, maybe because of force move?
+	Stun(999)
+	addtimer(CALLBACK(src, PROC_REF(SetStun), 0, TRUE), 3.5 SECONDS)
 
 /atom/movable/proc/clear_parachute(image/cables, image/chute)
 	if(QDELETED(src))
@@ -181,6 +185,7 @@
 		if(atom == src)
 			continue
 		atom.Cross(src)
+	REMOVE_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
 
 /atom/movable/proc/clear_active_explosives()
 	for(var/obj/item/explosive/explosive in contents)
@@ -290,6 +295,10 @@
 
 /turf/open/space/transit/dropship/pmc
 	shuttle_tag = DROPSHIP_PMC
+	dir = SOUTH
+
+/turf/open/space/transit/dropship/gibraltar
+	shuttle_tag = DROPSHIP_GIBRALTAR
 	dir = SOUTH
 
 /turf/open/space/transit/dropship/upp

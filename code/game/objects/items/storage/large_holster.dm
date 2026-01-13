@@ -74,6 +74,9 @@
 /obj/item/storage/large_holster/m37/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/shotgun/pump(src)
 
+/obj/item/storage/large_holster/m37/full/noammo/fill_preset_inventory()
+	new /obj/item/weapon/gun/shotgun/pump/unloaded (src)
+
 /obj/item/storage/large_holster/machete
 	name = "\improper H5 pattern M2132 machete scabbard"
 	desc = "A large leather scabbard used to carry a M2132 machete. It can be strapped to the back or the armor."

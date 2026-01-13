@@ -352,6 +352,8 @@
 	color = COLOR_GRAY
 	chemfiresupp = TRUE
 	intensitymod = 0.15
+	rangefire = 2
+	durationfire = BURN_TIME_TIER_1-5
 	burncolor = "#ff356f"
 	burncolormod = 5
 	overdose = REAGENTS_OVERDOSE

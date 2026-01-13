@@ -1,0 +1,5 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - balance: "cocoons now only have 2x web health vs 4x"
+  - bugfix: "updated how webs check for flame dmg by not referencing temperature and instead referencing BURN_LEVEL_TIER"
