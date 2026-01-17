@@ -89,6 +89,7 @@
 /datum/equipment_preset/uacg/rifle/security
 	name = "Rear Line US Colonial Guardsman"
 	rank = JOB_UACG_SCR_RIFLE
+	assignment = "Rear Line Colonial Guardsman"
 
 /datum/equipment_preset/uacg/rifle/security/lance_corporal
 	name = parent_type::name + " (E3 Rank)"

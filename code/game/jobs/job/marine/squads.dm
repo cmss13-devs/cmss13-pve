@@ -474,7 +474,7 @@
 	minimap_color = MINIMAP_SQUAD_MILITIA
 	use_stripe_overlay = FALSE
 	radio_freq = GRD_2_FREQ
-	usable = TRUE
+	usable = FALSE
 	squad_one_access = ACCESS_UACG
 	squad_two_access = ACCESS_UACG
 	faction = FACTION_UACG

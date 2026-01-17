@@ -172,6 +172,27 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside)
+"ap" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/engineer/ai/uacg
+	},
+/obj/effect/landmark/start/marine/engineer/uacg,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms)
 "aq" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -789,10 +810,16 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/medic/uacg/triage,
 /obj/effect/landmark/start/marine/medic/uacg/triage,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/medic/ai/uacg/triage;
+	squad = "Triage"
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/medic/ai/uacg/triage;
+	squad = "Triage"
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "bo" = (
@@ -922,10 +949,14 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/tl/uacg,
 /obj/effect/landmark/start/marine/specialist/ai/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/specialist/ai/uacg
+	},
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms)
 "bB" = (
@@ -1159,10 +1190,11 @@
 /obj/structure/sign/poster/pinup{
 	pixel_x = 24
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "bV" = (
@@ -1214,10 +1246,15 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join{
+	job = "Colonial Guardsman Machinegunner"
+	},
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg,
 /obj/effect/landmark/start/marine/leader/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/leader/ai/uacg;
+	squad = "Prairie Dogs"
+	},
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms)
 "bZ" = (
@@ -2352,10 +2389,11 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms)
 "dQ" = (
@@ -4801,10 +4839,15 @@
 	},
 /obj/structure/bed,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/tl/uacg,
 /obj/effect/landmark/start/marine/medic/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/medic/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "hZ" = (
@@ -7111,6 +7154,27 @@
 	},
 /turf/open/floor/plating/wood_broken4,
 /area/badayaga/outside)
+"mh" = (
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/engineer/ai/uacg
+	},
+/obj/effect/landmark/start/marine/engineer/uacg,
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/dorms)
 "mk" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
@@ -8153,10 +8217,15 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/tl/uacg/triage,
+/obj/effect/landmark/late_join{
+	squad = "Triage";
+	job = /datum/job/marine/tl/ai/uacg/triage
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "op" = (
@@ -16957,10 +17026,14 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "DH" = (
@@ -18680,10 +18753,16 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/stmartgunner/ai/uacg/security;
+	squad = "Hailstorm"
+	},
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg/security,
 /obj/effect/landmark/start/marine/tl/uacg/fires,
+/obj/effect/landmark/late_join{
+	job = /obj/effect/landmark/start/marine/tl/uacg/fires;
+	squad = "Hailstorm"
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "GF" = (
@@ -19164,10 +19243,12 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/tl/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/smartgunner/ai/uacg,
+/obj/effect/landmark/start/marine/engineer/uacg/mortar,
+/obj/effect/landmark/start/marine/engineer/uacg/mortar,
+/obj/effect/landmark/late_join{
+	squad = "Hailstorm";
+	job = /datum/job/marine/engineer/ai/uacg/mortar
+	},
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms)
 "Hy" = (
@@ -21146,10 +21227,15 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/leader/uacg,
 /obj/effect/landmark/start/marine/specialist/ai/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/specialist/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/leader/ai/uacg;
+	squad = "Prairie Dogs"
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "KT" = (
@@ -22340,10 +22426,14 @@
 	layer = 3.5;
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
 /obj/effect/landmark/start/marine/tl/uacg,
 /obj/effect/landmark/start/marine/specialist/ai/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/specialist/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "MU" = (
@@ -23905,10 +23995,15 @@
 	layer = 3.5;
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/tl/uacg,
 /obj/effect/landmark/start/marine/medic/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/medic/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "PK" = (
@@ -24072,10 +24167,14 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "PV" = (
@@ -24210,6 +24309,23 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside)
+"Qe" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/effect/landmark/start/marine/tl/uacg,
+/obj/effect/landmark/start/marine/specialist/ai/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/specialist/ai/uacg
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms)
 "Qf" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 1
@@ -24724,10 +24840,15 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg,
 /obj/effect/landmark/start/marine/medic/uacg/triage,
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/medic/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "Rk" = (
@@ -25001,10 +25122,14 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg,
 /obj/effect/landmark/start/marine/tl/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	job = "Colonial Guardsman Machinegunner"
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "RK" = (
@@ -25315,10 +25440,16 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/tl/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/start/marine/smartgunner/ai/uacg/security,
+/obj/effect/landmark/start/marine/engineer/uacg,
+/obj/effect/landmark/start/marine/engineer/uacg,
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/engineer/ai/uacg
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/engineer/ai/uacg
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms)
 "Sd" = (
@@ -27924,10 +28055,11 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg,
-/obj/effect/landmark/start/marine/tl/uacg,
+/obj/effect/landmark/late_join{
+	job = "Colonial Guardsman Machinegunner"
+	},
+/obj/effect/landmark/start/marine/smartgunner/ai/uacg,
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms)
 "Wz" = (
@@ -28124,6 +28256,23 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood_broken2,
 /area/badayaga/inside)
+"WW" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/start/marine/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/standard/ai/uacg
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms)
 "WX" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood,
@@ -28274,7 +28423,6 @@
 	job = /datum/job/marine/standard/ai/uacg/security;
 	squad = "Hailstorm"
 	},
-/obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/start/marine/uacg/security,
 /obj/effect/landmark/start/marine/uacg/security,
 /turf/open/asphalt/cement_darkened,
@@ -28632,6 +28780,24 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside)
+"XR" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join{
+	squad = "Prairie Dogs";
+	job = /datum/job/marine/medic/ai/uacg
+	},
+/obj/effect/landmark/start/marine/tl/uacg,
+/obj/effect/landmark/start/marine/medic/uacg,
+/obj/effect/landmark/late_join{
+	job = /datum/job/marine/tl/ai/uacg
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms)
 "XS" = (
 /obj/structure/bed{
 	can_buckle = 0;
@@ -56065,7 +56231,7 @@ MW
 be
 xI
 Us
-PU
+WW
 LK
 oo
 MW
@@ -56663,13 +56829,13 @@ nC
 LT
 dP
 wd
-PJ
+XR
 pm
 bY
 MW
 dP
 wd
-MT
+Qe
 JK
 Hx
 wd
@@ -57681,7 +57847,7 @@ DG
 so
 Ri
 QF
-PU
+WW
 so
 bn
 QF
@@ -57868,7 +58034,7 @@ lw
 Wi
 tN
 MW
-PU
+WW
 xO
 hY
 xW
@@ -57876,7 +58042,7 @@ bU
 Bx
 Sc
 so
-PU
+WW
 QF
 Us
 MW
@@ -58276,7 +58442,7 @@ dP
 wd
 PJ
 JK
-dP
+mh
 wd
 PJ
 JK
@@ -59290,7 +59456,7 @@ bU
 Bx
 RJ
 so
-PU
+ap
 QF
 Us
 nZ
