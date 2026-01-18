@@ -192,30 +192,19 @@
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	allowed = list(
 		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
 		/obj/item/tank/emergency_oxygen,
 		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine/,
-		/obj/item/weapon/baton,
-		/obj/item/restraint/handcuffs,
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/tool/lighter,
-		/obj/item/explosive/grenade,
 		/obj/item/storage/bible,
-		/obj/item/tool/crowbar,
-		/obj/item/storage/large_holster/katana,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
 		/obj/item/storage/large_holster/machete,
 		/obj/item/storage/large_holster/m39,
-		/obj/item/weapon/sword/machete,
-		/obj/item/attachable/bayonet,
+		/obj/item/storage/belt/gun,
 		/obj/item/device/motiondetector,
-		/obj/item/tool/crew_monitor,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/storage/belt/gun/m4a3,
-		/obj/item/storage/belt/gun/m44,
-		/obj/item/storage/belt/gun/flaregun,
 		/obj/item/device/walkman,
-		/obj/item/storage/belt/gun/m39,
-		/obj/item/storage/belt/gun/xm51,
 	)
 	item_state_slots = list(WEAR_JACKET = "pmc_armor")
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
@@ -232,6 +221,37 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
+
+/obj/item/clothing/suit/marine/smartgunner/veteran/pmc
+	name = "\improper WY support gunner armor"
+	desc = "A heavy modification of the standard WY tactical armor, featuring additional plating on the extremities. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun, with mounting clips on the back plate."
+	icon_state = "heavy_armor"
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	allowed = list(
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/belt/marine/smartgunner,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/storage/belt/gun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+	)
+	item_state_slots = list(WEAR_JACKET = "heavy_armor")
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
 
 //===========================//DISTRESS\\================================\\
 //=======================================================================\\

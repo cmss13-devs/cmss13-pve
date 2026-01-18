@@ -148,6 +148,36 @@
 	},
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
+"aaw" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two{
+	faction = "PMC"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
+"aax" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three{
+	faction = "PMC"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
+"aay" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four{
+	faction = "PMC"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
+"aaz" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five{
+	faction = "PMC"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
+"aaA" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six{
+	faction = "PMC"
+	},
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
 "aaF" = (
 /obj/structure/barricade/handrail,
 /obj/structure/disposalpipe/segment{
@@ -4817,7 +4847,6 @@
 	},
 /obj/item/weapon/gun/smartgun/dirty,
 /obj/item/smartgun_battery,
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
 /obj/item/clothing/glasses/night/m56_goggles/no_nightvision{
 	hud_type = list(14,15,17)
@@ -4831,6 +4860,7 @@
 /obj/item/ammo_magazine/smartgun,
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/smartgun_battery,
+/obj/item/clothing/suit/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayg" = (
@@ -15290,7 +15320,9 @@
 /turf/open/floor/corsat/blue,
 /area/firefly/briefing)
 "xkb" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal,
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one{
+	faction = "PMC"
+	},
 /turf/open/floor/corsat/squares,
 /area/firefly/briefing)
 "xkr" = (
@@ -22103,7 +22135,7 @@ fDZ
 aev
 dYO
 aei
-aei
+aay
 xkb
 aqg
 ojo
@@ -22190,8 +22222,8 @@ fDZ
 aev
 eIg
 aei
-aei
-aei
+aaz
+aaw
 aei
 arj
 agc
@@ -22277,8 +22309,8 @@ jkn
 aev
 mJZ
 aei
-aei
-aei
+aaA
+aax
 aei
 sRw
 kmA
