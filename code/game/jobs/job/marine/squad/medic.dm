@@ -181,12 +181,13 @@
 /datum/job/marine/medic/ai/uacg/triage
 	title = JOB_UACG_MEDIC_TRIAGE
 	total_positions = 2
+	gear_preset = /datum/equipment_preset/uacg/medic/triage
 	supervisors = "the unit leader and doctor"
 
 /obj/effect/landmark/start/marine/medic/uacg/triage
-	name = JOB_UACG_MEDIC
+	name = JOB_UACG_MEDIC_TRIAGE
 	squad = SQUAD_MILITIA_4
-	job = /datum/job/marine/medic/ai/uacg/triage
+	job = /datum/equipment_preset/uacg/medic/triage
 
 #undef SGT_VARIANT
 #undef JSGT_VARIANT

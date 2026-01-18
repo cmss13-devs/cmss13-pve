@@ -706,6 +706,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 					uacg_echo.put_marine_in_squad(H, force_usable=TRUE)
 					return
 
+			if(JOB_UACG_CHAPLAIN)
+				var/datum/squad/marine/uacg_echo = get_squad_by_name(SQUAD_MILITIA_5)
+				if(!istype(uacg_echo)) //Something went horribly wrong!
+					to_chat(H, "Something went wrong with randomize_squad()! Tell a coder!")
+				else
+					uacg_echo.put_marine_in_squad(H, force_usable=TRUE)
+					return
+
 			if(JOB_UACG_ARMORY)
 				var/datum/squad/marine/uacg_echo = get_squad_by_name(SQUAD_MILITIA_5)
 				if(!istype(uacg_echo)) //Something went horribly wrong!

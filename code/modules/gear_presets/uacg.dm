@@ -99,6 +99,19 @@
 	name = parent_type::name + " (E1 Rank)"
 	paygrades = list(PAY_SHORT_AE1 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uacg/rifle/armory
+	name = "US Colonial Guard Weapons Technincian"
+	rank = JOB_UACG_ARMORY_LACKEY
+	assignment = "Colonial Guard Weapons Technincian"
+
+/datum/equipment_preset/uacg/rifle/armory/lance_corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uacg/rifle/armory/private
+	name = parent_type::name + " (E1 Rank)"
+	paygrades = list(PAY_SHORT_AE1 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uacg/marksman
@@ -181,7 +194,7 @@
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uacg/tech/mortar
-	name = "US Colonial Guardsman Mortarman"
+	name = "US Colonial Guard Mortarman"
 	assignment = "Colonial Guard Mortarman"
 	rank = JOB_UACG_MORTAR
 	skills = /datum/skills/combat_engineer
@@ -219,6 +232,22 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uacg/medic/triage
+	name = "US Colonial Guardsman Triage Medic"
+	assignment = "Colonial Guardsman Triage Medic"
+	rank = JOB_UACG_MEDIC_TRIAGE
+	skills = /datum/skills/medic
+	paygrades = list(PAY_SHORT_AE3 = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id/dogtag
+
+/datum/equipment_preset/uacg/medic/triage/greater_rank
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uacg/medic/triage/lower_rank
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uacg/leader
@@ -235,6 +264,24 @@
 	idtype = /obj/item/card/id/dogtag
 
 /datum/equipment_preset/uacg/leader/lesser_rank
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uacg/leader/triage
+	name = "US Colonial Guard Triage Leader"
+	assignment = "Colonial Guardsman Triage Leader"
+	rank = JOB_UACG_LEAD_MED
+
+/datum/equipment_preset/uacg/leader/triage/lesser_rank
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uacg/leader/fires
+	name = "US Colonial Guard Fires Leader"
+	assignment = "Colonial Guardsman Fires Leader"
+	rank = JOB_UACG_LEAD_FIRE
+
+/datum/equipment_preset/uacg/leader/fires/lesser_rank
 	name = parent_type::name + " (E4 Rank)"
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
@@ -260,6 +307,7 @@
 /datum/equipment_preset/uacg/senleader/armorer
 	name = "US Colonial Guard Armorer"
 	assignment = "Colonial Guardsman Armorer"
+	rank = JOB_UACG_ARMORY
 	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/dogtag
 
@@ -270,6 +318,7 @@
 /datum/equipment_preset/uacg/senleader/chaplain
 	name = "US Colonial Guard Chaplain"
 	assignment = "Colonial Guardsman Chaplain"
+	rank = JOB_UACG_CHAPLAIN
 	paygrades = list(PAY_SHORT_AE7 = JOB_PLAYTIME_TIER_0)
 	idtype = /obj/item/card/id/dogtag
 
@@ -299,6 +348,7 @@
 /datum/equipment_preset/uacg/officer/doctor
 	name = "US Colonial Guard Doctor"
 	assignment = "Colonial Guardsman Doctor"
+	rank = JOB_UACG_DOCTOR
 	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/doctor
 	idtype = /obj/item/card/id/dogtag
@@ -306,6 +356,7 @@
 /datum/equipment_preset/uacg/officer/messofficer
 	name = "US Colonial Guard Mess Officer"
 	assignment = "Colonial Guardsman Mess Officer"
+	rank = JOB_UACG_MESS
 	paygrades = list(PAY_SHORT_AO1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/lt
 	idtype = /obj/item/card/id/dogtag

@@ -465,7 +465,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_UACG_MESS "Colonial Guardsman Mess Officer"
 #define JOB_UACG_CHAPLAIN "Colonial Guardsman Chaplain"
 #define JOB_UACG_ARMORY "Colonial Guardsman Armorer"
-#define JOB_UACG_ARMORY_LACKEY "Colonial Guardsman Weapons Technician"
+#define JOB_UACG_ARMORY_LACKEY "Colonial Guard Weapons Technician"
 #define JOB_UACG_DOCTOR "Colonial Guardsman Doctor"
 
 #define UACG_JOB_LIST list(JOB_UACG_RIFLE, JOB_UACG_GNR, JOB_UACG_DM JOB_UACG_TECH, JOB_UACG_MEDIC, JOB_UACG_MEDIC_TRIAGE, JOB_UACG_LEAD, JOB_UACG_LEAD_FIRE, JOB_UACG_LEAD_MED, JOB_UACG_SENLEAD, JOB_UACG_OFFICER, JOB_UACG_ARMORY, JOB_UACG_ARMORY_LACKEY, JOB_UACG_DOCTOR)
