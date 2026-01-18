@@ -149,7 +149,6 @@
 
 /obj/effect/landmark/start/marine/tl/uacg
 	name = JOB_UACG_LEAD
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/tl/ai/uacg
 
 /datum/job/marine/tl/ai/uacg/fires

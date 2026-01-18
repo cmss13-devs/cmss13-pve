@@ -92,5 +92,4 @@
 
 /obj/effect/landmark/start/marine/specialist/ai/uacg
 	name = JOB_UACG_DM
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/specialist/ai/uacg

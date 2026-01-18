@@ -177,7 +177,6 @@
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg
 	name = JOB_UACG_GNR
 	job = JOB_UACG_GNR
-	squad = SQUAD_MILITIA
 
 /datum/job/marine/smartgunner/ai/uacg/security
 	title = JOB_UACG_SCR_GNR

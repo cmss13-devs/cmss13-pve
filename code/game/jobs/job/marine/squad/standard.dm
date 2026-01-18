@@ -169,7 +169,6 @@
 
 /obj/effect/landmark/start/marine/uacg
 	name = JOB_UACG_RIFLE
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/standard/ai/uacg
 
 /datum/job/marine/standard/ai/uacg/security
@@ -194,7 +193,7 @@
 /obj/effect/landmark/start/marine/uacg/armory
 	name = JOB_UACG_ARMORY_LACKEY
 	squad = SQUAD_MILITIA_5
-	job = /datum/job/marine/standard/ai/uacg
+	job = /datum/job/marine/standard/ai/uacg/armory
 
 #undef CPL_VARIANT
 #undef LCPL_VARIANT

@@ -176,7 +176,6 @@
 
 /obj/effect/landmark/start/marine/medic/uacg
 	name = JOB_UACG_MEDIC
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/medic/ai/uacg
 
 /datum/job/marine/medic/ai/uacg/triage

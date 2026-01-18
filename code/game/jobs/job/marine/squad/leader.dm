@@ -136,7 +136,6 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /obj/effect/landmark/start/marine/leader/uacg
 	name = JOB_UACG_SENLEAD
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/leader/ai/uacg
 
 /datum/job/marine/leader/ai/uacg/armorer
@@ -164,6 +163,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /obj/effect/landmark/start/marine/leader/uacg/chaplain
 	name = JOB_UACG_CHAPLAIN
+	squad = SQUAD_MILITIA_5
 	job = /datum/job/marine/leader/ai/uacg/chaplain
 
 #undef MSSGT_VARIANT

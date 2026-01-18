@@ -115,7 +115,6 @@
 
 /obj/effect/landmark/start/marine/engineer/uacg
 	name = JOB_UACG_TECH
-	squad = SQUAD_MILITIA
 	job = /datum/job/marine/engineer/ai/uacg
 
 /datum/job/marine/engineer/ai/uacg/mortar
