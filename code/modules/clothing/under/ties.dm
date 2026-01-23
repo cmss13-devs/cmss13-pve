@@ -1946,8 +1946,6 @@
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
 
-<<<<<<<<< Temporary merge branch 1
-=========
 //===========================// CUSTOM PMC ARMOR PLATES\\================================\\
 
 /obj/item/clothing/accessory/pmcpads
@@ -1991,7 +1989,6 @@
 	icon_state = "pmc_crotch"
 	item_state = "pmc_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
->>>>>>>>> Temporary merge branch 2
 
 //===========================//CUSTOM PMC ARMOR WEBBING\\================================\\
 
