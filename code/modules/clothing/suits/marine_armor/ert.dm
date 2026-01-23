@@ -142,6 +142,117 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
 
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator
+	name = "\improper M5Xg exoskeleton gunner armor"
+	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk. This variant is designed to support a M56 Smartgun."
+	icon_state = "commando_armor"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	item_state_slots = list(WEAR_JACKET = "commando_armor")
+	unacidable = TRUE
+
+/obj/item/clothing/suit/storage/marine/veteran/pmc/commando
+	name = "\improper M5X exoskeleton armor"
+	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk."
+	icon_state = "commando_armor"
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_inventory = BLOCK_KNOCKDOWN
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	item_state_slots = list(WEAR_JACKET = "commando_armor")
+	unacidable = TRUE
+
+//=============================//PMCs Modular Armor\\==================================\\
+//=======================================================================\\
+
+/obj/item/clothing/suit/marine/veteran/pmc
+	name = "\improper WY tactical armor"
+	desc = "A contender for service with the Royal Marine Commandos, it is presently, exclusively, field tested by Weyland-Yutani mercenaries."
+	icon_state = "pmc_armor"
+	item_state = "pmc_armor"
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/prop/prop_gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/storage/belt/gun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+	)
+	item_state_slots = list(WEAR_JACKET = "pmc_armor")
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+
+/obj/item/clothing/suit/marine/veteran/pmc/light
+	name = "\improper WY light tactical armor"
+	icon_state = "pmc_sniper"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
+	item_state_slots = list(WEAR_JACKET = "pmc_sniper")
+
+/obj/item/clothing/suit/marine/smartgunner/veteran/pmc
+	name = "\improper WY support gunner armor"
+	desc = "A heavy modification of the standard WY tactical armor, featuring additional plating on the extremities. Hooked up with harnesses and straps allowing the user to carry an M56 Smartgun, with mounting clips on the back plate."
+	icon_state = "heavy_armor"
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN|SMARTGUN_HARNESS
+	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	allowed = list(
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/storage/fancy/cigarettes,
+		/obj/item/tool/lighter,
+		/obj/item/storage/bible,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/belt/marine/smartgunner,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/large_holster/m39,
+		/obj/item/storage/belt/gun,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+	)
+	item_state_slots = list(WEAR_JACKET = "heavy_armor")
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT)
+
 //===========================//DISTRESS\\================================\\
 //=======================================================================\\
 
