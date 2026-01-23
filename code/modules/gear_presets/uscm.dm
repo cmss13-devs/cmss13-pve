@@ -794,7 +794,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/full(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/utility/tactical(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BELT)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
@@ -1013,8 +1013,8 @@
 	name = "USCM Scout Sniper, Shooter (Equipped)"
 	assignment = "Scout Sniper"
 	role_comm_title = "SctSnpr"
-	skills = /datum/skills/tl/recon
-	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/military/survivor/forecon_sharpshooter
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/sniper/load_gear(mob/living/carbon/human/new_human)
 	new_human.underwear = "Marine Boxers"
@@ -1063,7 +1063,7 @@
 	assignment = "Scout Sniper"
 	role_comm_title = "SctSnpr"
 	rank = JOB_SQUAD_SPOTTER
-	skills = /datum/skills/tl/recon
+	skills = /datum/skills/military/survivor/forecon_sharpshooter
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm/specialist_equipped/spotter/load_gear(mob/living/carbon/human/new_human)
@@ -1124,6 +1124,9 @@
 	role_comm_title = "CRMN"
 	skills = /datum/skills/tank_crew
 	minimap_icon = "vc"
+
+/datum/equipment_preset/uscm/tank/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
 
 /datum/equipment_preset/uscm/tank/load_gear(mob/living/carbon/human/new_human)
 	new_human.underwear = "Marine Boxers"

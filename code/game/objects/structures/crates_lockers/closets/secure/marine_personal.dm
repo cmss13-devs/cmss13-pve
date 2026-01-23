@@ -164,7 +164,7 @@
 	new /obj/item/clothing/head/cmcap/pmc(src)
 	new /obj/item/clothing/under/liaison_suit/formal(src)
 	new /obj/item/clothing/shoes/laceup(src)
-	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils/pmc/cmd(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)
 
 // ==Royal Marines== //

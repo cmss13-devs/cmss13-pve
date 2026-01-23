@@ -8754,16 +8754,16 @@
 	dir = 4;
 	light_power = 0.7
 	},
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
-/obj/item/storage/large_holster/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
+/obj/item/storage/belt/gun/m39,
 /turf/open/floor/corsat/plate,
 /area/firefly/squad_omega)
 "axd" = (
@@ -8775,7 +8775,6 @@
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/marine/veteran/pmc/smartgun,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
@@ -8789,6 +8788,7 @@
 	light_power = 0.7
 	},
 /obj/item/smartgun_battery,
+/obj/item/clothing/glasses/night/m56_goggles/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axe" = (
@@ -9106,7 +9106,6 @@
 /obj/item/smartgun_battery,
 /obj/item/clothing/suit/marine/veteran/pmc/smartgun,
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner,
-/obj/item/clothing/glasses/night/m56_goggles/no_nightvision,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
@@ -9116,6 +9115,7 @@
 /obj/item/ammo_magazine/smartgun,
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/smartgun_battery,
+/obj/item/clothing/glasses/night/m56_goggles/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayk" = (

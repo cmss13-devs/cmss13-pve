@@ -1050,6 +1050,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY|HELMET_GARB_OVERLAY
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/rmc
 	desc = "Standard issue high molecular density polymer combat helmet used by RMC. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1077,6 +1079,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	built_in_visors = list(new /obj/item/device/helmet_visor/pmc/alt)
+	start_down_visor_type = /obj/item/device/helmet_visor/pmc/alt
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc
 	name = "\improper Mk16 tactical helmet"

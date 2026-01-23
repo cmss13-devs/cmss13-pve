@@ -623,13 +623,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/grenadepack
 	name = "\improper USCM IMP M63A1 grenade satchel"
-	desc = "A secure satchel with dedicated grenade pouches meant to minimize risks of secondary ignition."
+	desc = "A secure satchel with dedicated partitions meant to minimize risks of secondary ignition of stored grenade packets."
 	icon_state = "grenadierpack"
 	overlays = list("+grenadierpack_unlocked")
 	worn_accessible = TRUE
-	max_storage_space = 36 //12 grenades
-	storage_slots = 12
-	can_hold = list(/obj/item/explosive/grenade)
+	storage_slots = 7
+	can_hold = list(/obj/item/explosive/grenade, /obj/item/storage/box/packet/)
+	max_w_class = SIZE_LARGE
 	is_id_lockable = TRUE
 	has_gamemode_skin = FALSE
 	xeno_types = null

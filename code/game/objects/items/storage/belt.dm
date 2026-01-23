@@ -127,6 +127,17 @@
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 	new /obj/item/device/multitool(src)
 
+/obj/item/storage/belt/utility/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool/hugetank(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/explosive/plastic(src)
 
 /obj/item/storage/belt/utility/atmostech/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
@@ -2519,6 +2530,7 @@
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	max_w_class = SIZE_LARGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(
