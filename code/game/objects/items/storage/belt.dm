@@ -1241,7 +1241,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/obj/item/weapon/gun/holster_slots = list(
+	var/list/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,
@@ -1287,8 +1287,9 @@
 		return
 	holstered_guns -= AM
 	for(var/slot in holster_slots)
-		if(AM == holster_slots[slot]["gun"])
-			holster_slots[slot]["gun"] = null
+		var/list/slot_data = holster_slots[slot]
+		if(AM == slot_data["gun"])
+			slot_data["gun"] = null
 
 			update_gun_icon(slot)
 			return
@@ -1308,7 +1309,8 @@
 
 /obj/item/storage/belt/gun/proc/update_gun_icon(slot) //We do not want to use regular update_icon as it's called for every item inserted. Not worth the icon math.
 	var/mob/living/carbon/human/user = loc
-	var/obj/item/weapon/gun/current_gun = holster_slots[slot]["gun"]
+	var/list/slot_data = holster_slots[slot]
+	var/obj/item/weapon/gun/current_gun = slot_data["gun"]
 	if(current_gun)
 		/*
 		Have to use a workaround here, otherwise images won't display properly at all times.
@@ -1327,19 +1329,19 @@
 					gun_underlay = image(icon, "d_" + current_gun.base_gun_icon)
 				if("classic")
 					gun_underlay = image(icon, "c_" + current_gun.base_gun_icon)
-		gun_underlay.pixel_x = holster_slots[slot]["icon_x"]
-		gun_underlay.pixel_y = holster_slots[slot]["icon_y"]
+		gun_underlay.pixel_x = slot_data["icon_x"]
+		gun_underlay.pixel_y = slot_data["icon_y"]
 		gun_underlay.color = current_gun.color
-		gun_underlay.transform = holster_slots[slot]["underlay_transform"]
-		holster_slots[slot]["underlay_sprite"] = gun_underlay
+		gun_underlay.transform = slot_data["underlay_transform"]
+		slot_data["underlay_sprite"] = gun_underlay
 		underlays += gun_underlay
 
 		icon_state += "_g"
 		item_state = icon_state
 	else
 		playsound(src, sheatheSound, 7, TRUE)
-		underlays -= holster_slots[slot]["underlay_sprite"]
-		holster_slots[slot]["underlay_sprite"] = null
+		underlays -= slot_data["underlay_sprite"]
+		slot_data["underlay_sprite"] = null
 
 		icon_state = copytext(icon_state,1,-2)
 		item_state = icon_state
