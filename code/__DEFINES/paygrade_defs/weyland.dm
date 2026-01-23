@@ -1,3 +1,5 @@
+// Paygrade shorthand defines, to allow clearer designation.
+
 // Weyland Yutani Corporate
 /// WYC1, Trainee
 #define PAY_SHORT_WYC1 "WYC1"
@@ -29,11 +31,8 @@
 /// WYC9, Chief Executive
 #define PAY_SHORT_WYC9 "WYC9"
 
-/// WYC10, Deputy Director
+/// WYC10, Director
 #define PAY_SHORT_WYC10 "WYC10"
-
-/// WYC11, Director
-#define PAY_SHORT_WYC11 "WYC11"
 
 // Weyland Yutani Private Military
 /// PMC-OP, Operator, standard PMC.
@@ -54,14 +53,11 @@
 /// PMC-VS, Vehicle Specialist
 #define PAY_SHORT_PMC_VS "PMC-VS"
 
-/// PMC-CCS, Crowd Control Specialist
-#define PAY_SHORT_PMC_CCS "PMC-CCS"
+/// PMC-XS, Xeno Specialist (Handler)
+#define PAY_SHORT_PMC_XS "PMC-XS"
 
 /// PMC-TL, Team Leader
 #define PAY_SHORT_PMC_TL "PMC-TL"
-
-/// PMC-FOL, Field Operations Leader
-#define PAY_SHORT_PMC_FOL "PMC-FOL"
 
 /// PMC-DOC, Trauma Surgeon
 #define PAY_SHORT_PMC_DOC "PMC-DOC"
@@ -83,17 +79,3 @@
 
 /// PMC-DIR, PMC Director
 #define PAY_SHORT_PMC_DIR "PMC-DIR"
-
-// Weyland Yutani Commandos
-
-/// WY-COM, Weyland-Yutani Commando
-#define PAY_SHORT_WY_COM "WY-COM"
-
-/// WY-COMLD Weyland-Yutani Commando Leader
-#define PAY_SHORT_WY_COMLD "WY-COMLD"
-
-/// WY-GUN, Weyland-Yutani Commando Gunner
-#define PAY_SHORT_WY_GUN "WY-GUN"
-
-/// WY-DOG, Weyland-Yutani Dog Catcher
-#define PAY_SHORT_WY_DOG "WY-DOG"

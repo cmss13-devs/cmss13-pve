@@ -1104,48 +1104,6 @@
 		"Corporate Liaison" = TRACKER_CL
 	)
 
-/obj/item/device/radio/headset/distress/pmc/commando
-	name = "W-Y commando headset"
-	desc = "A special headset used by unidentified operatives. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel, :y - Corporate."
-	icon_state = "pmc_headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc)
-	maximum_keys = 5
-
-/obj/item/device/radio/headset/distress/pmc/commando/leader
-	name = "W-Y commando leader headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
-
-/obj/item/device/radio/headset/distress/pmc/platoon
-	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
-	initial_keys = list(/obj/item/device/encryptionkey/pmc)
-	locate_setting = TRACKER_SL
-	inbuilt_tracking_options = list(
-		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_SL,
-		"Team Leader" = TRACKER_FTL,
-		"Landing Zone" = TRACKER_LZ
-	)
-
-/obj/item/device/radio/headset/distress/pmc/platoon/synth
-	name = "PMC synth headset"
-	desc = "A headset & HUD unit issued to corporate support synthetics. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
-	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
-	volume = RADIO_VOLUME_IMPORTANT
-	has_tracker = TRUE
-	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
-
-	inbuilt_tracking_options = list(
-		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_ASL,
-		"Landing Zone" = TRACKER_LZ
-	)
-
-/obj/item/device/radio/headset/distress/pmc/platoon/cmd
-	name = "overwatch headset"
-	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
-	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
-
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
 	desc = "A headset given to CBRN marines. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel"
@@ -1160,14 +1118,6 @@
 	frequency = FORECON_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 	ignore_z = TRUE
-	has_hud = TRUE
-
-/obj/item/device/radio/headset/distress/wy_android
-	name = "W-Y android headset"
-	desc = "A special headset used by unidentified androids. Channels are as follows: :o - colony :y - Corporate #pmc - PMC"
-	frequency = WY_WO_FREQ
-	icon_state = "ms_headset"
-	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
 	has_hud = TRUE
 
 /obj/item/device/radio/headset/distress/pmc/hvh

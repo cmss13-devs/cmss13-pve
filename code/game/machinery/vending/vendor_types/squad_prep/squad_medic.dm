@@ -291,16 +291,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 
 GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 
-		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),
-		list("Red Cross On White Paint", 0, /obj/item/clothing/accessory/paint/medic/wy, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
-		list("Red Cross On Black Paint", 0, /obj/item/clothing/accessory/paint/medic/wy/black, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
-
-		list("BELT", 0, null, null, null),
-		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/wy/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/standard/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Autoinjector Pouch (Full)", 0, /obj/item/storage/pouch/autoinjector/full/wy, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medical Kit Pouch (Full)", 0, /obj/item/storage/pouch/medkit/wy/full_advanced, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
@@ -372,6 +369,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_medic, list(
 // Chemical vendor
 
 GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
+
 		list("ESSENTIAL MEDICATION (CHOOSE 1)", 0, null, null, null),
 		list("Pill Bottle (Imidazoline-Alkysine)", 0, /obj/item/storage/pill_bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
 		list("Liquid Bottle (Imidazoline-Alkysine)", 0, /obj/item/reagent_container/glass/bottle/imialk, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_RECOMMENDED),
