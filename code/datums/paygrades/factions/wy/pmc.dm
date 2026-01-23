@@ -51,7 +51,7 @@
 /datum/paygrade/pmc/doctor
 	paygrade = PAY_SHORT_PMC_DOC
 	name = "Trauma Surgeon"
-	prefix = "SGN."
+	prefix = "Dr."
 	pay_multiplier = 4
 	officer_grade = GRADE_OFFICER
 

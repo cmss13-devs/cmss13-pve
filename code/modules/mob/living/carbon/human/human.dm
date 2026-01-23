@@ -1706,10 +1706,7 @@
 			platoon = "Red Dawn"
 		if(FACTION_PMC)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
-			if(assigned_squad && assigned_squad.name == SQUAD_PMCPLT_SMALL)
-				platoon = "Azure-16"
-			else
-				platoon = "Azure-15"
+			platoon = "Azure-15"
 		if(FACTION_TWE)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
 			platoon = "Gamma Troop"
