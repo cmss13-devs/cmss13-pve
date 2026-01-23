@@ -65,7 +65,7 @@
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 7)
 	pushback(M, P, 7)
-=========
+
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
 	icon_state = "bullet_blue"
@@ -77,7 +77,6 @@
 	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_8
 	accuracy = HIT_ACCURACY_TIER_5
->>>>>>>>> Temporary merge branch 2
 
 /datum/ammo/bullet/shotgun/beanbag
 	name = "beanbag slug"
