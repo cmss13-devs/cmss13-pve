@@ -756,6 +756,10 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/king
 		if(RUNNER_ACIDER)
 			M = /mob/living/carbon/xenomorph/runner/acider
+<<<<<<<<< Temporary merge branch 1
+		if(XENO_CASTE_WARRIOR_DRONE)
+			M = /mob/living/carbon/xenomorph/warrior_drone
+=========
 		if(PATHOGEN_CREATURE_BURSTER)
 			M = /mob/living/carbon/xenomorph/bloodburster
 		if(PATHOGEN_CREATURE_POPPER)

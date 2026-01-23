@@ -39,6 +39,18 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/slug/es7
+	name = "electrostatic solid slug"
+	icon_state = "bullet_blue"
+	handful_state = "es7_slug"
+	sound_miss = "energy_miss"
+	sound_bounce = "energy_bounce"
+	hit_effect_color = "#00aeff"
+	sound_override = 'sound/weapons/gun_es7lethal.ogg'
+	damage = 90
+	penetration = ARMOR_PENETRATION_TIER_8
+	accuracy = HIT_ACCURACY_TIER_5
+
 /datum/ammo/bullet/shotgun/slug/special
 	name = "shotgun slug, USCM magnum load"
 	handful_state = "special_slug"
@@ -53,6 +65,7 @@
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 7)
 	pushback(M, P, 7)
+=========
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
 	icon_state = "bullet_blue"
@@ -64,6 +77,7 @@
 	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_8
 	accuracy = HIT_ACCURACY_TIER_5
+>>>>>>>>> Temporary merge branch 2
 
 /datum/ammo/bullet/shotgun/beanbag
 	name = "beanbag slug"

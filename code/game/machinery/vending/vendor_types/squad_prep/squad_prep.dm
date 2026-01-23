@@ -307,7 +307,7 @@
 		list("PMC Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/pmc, VENDOR_ITEM_REGULAR),
 		list("Black Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine/veteran/pmc/black, VENDOR_ITEM_REGULAR),
-		list("PMC Radio Headset", round(scale * 15), /obj/item/device/radio/headset/almayer/marine/solardevils/pmc, VENDOR_ITEM_REGULAR),
+		list("PMC Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/pmc/platoon, VENDOR_ITEM_REGULAR),
 		list("Mk3 TOCU Headcam", floor(scale * 15), /obj/item/device/overwatch_camera/pmc, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),

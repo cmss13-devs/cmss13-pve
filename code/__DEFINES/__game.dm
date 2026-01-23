@@ -61,6 +61,9 @@
 #define MAP_JUNGLE_DELTA "Jungle Delta" //Featureless Jungle
 #define MAP_PROSPECTOR_CANYON "Prospector Canyon"//Mostly Featureless Desert canyon
 #define MAP_ARCTIC_VALLEY "Arctic Valley"//Featureless Arctic
+#define MAP_LV_671 "LV-671 Ark Borealis"
+#define MAP_OIL_DEPOT "Oil Depot"
+#define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
