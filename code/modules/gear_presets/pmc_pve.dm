@@ -4,7 +4,7 @@
 /datum/equipment_preset/uscm/pmc
 	name = "Tactical Unit"
 	paygrades = list("PMC-OP" = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "TU"
+	role_comm_title = "TacUnit"
 	access = list(ACCESS_WY_GENERAL)
 	faction_group = FACTION_LIST_WY
 	faction = FACTION_PMC
@@ -15,9 +15,9 @@
 	skills = /datum/skills/pfc
 
 /datum/equipment_preset/uscm/pmc/sl
-	name = "Field Operation Leader"
-	paygrades = list("PMC-FOL" = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "FOL"
+	name = "Operations Leader"
+	paygrades = list("PMC-OL" = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "OpLead"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 	assignment = JOB_PMCPLAT_LEADER
 	idtype = /obj/item/card/id/pmc
@@ -27,7 +27,7 @@
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
 	paygrades = list("PMC-TL" = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "TL"
+	role_comm_title = "TeamLead"
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_PMC_TL)
 	assignment = JOB_PMCPLAT_FTL
 	idtype = /obj/item/card/id/pmc
