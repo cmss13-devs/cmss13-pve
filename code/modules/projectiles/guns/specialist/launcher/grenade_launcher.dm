@@ -288,27 +288,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_3)
-
-/obj/item/weapon/gun/launcher/grenade/m92/scoped
-	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions. This one is outfitted with a low-power scope securely mounted to it."
-
-/obj/item/weapon/gun/launcher/grenade/m92/scoped/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/scope/mini/optic = new(src)
-	optic.hidden = FALSE
-	optic.flags_attach_features &= ~ATTACH_REMOVABLE
-	optic.Attach(src)
-	update_attachable(optic.slot)
-
-/obj/item/weapon/gun/launcher/grenade/m92/frag
-	preload = /obj/item/explosive/grenade/high_explosive/frag
-
-/obj/item/weapon/gun/launcher/grenade/m92/ied_he
-	preload = /obj/item/explosive/grenade/custom/large/ied_he
-
-/obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
-	preload = /obj/item/explosive/grenade/custom/incendiary_plus
+	set_fire_delay(FIRE_DELAY_TIER_1)
 
 //UPP DEDICATED GL
 
@@ -415,7 +395,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m81/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4 * 1.5)
+	set_fire_delay(FIRE_DELAY_TIER_4)
 
 /obj/item/weapon/gun/launcher/grenade/m81/on_pocket_removal()
 	..()
