@@ -301,6 +301,15 @@
 	optic.Attach(src)
 	update_attachable(optic.slot)
 
+/obj/item/weapon/gun/launcher/grenade/m92/frag
+	preload = /obj/item/explosive/grenade/high_explosive/frag
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_he
+	preload = /obj/item/explosive/grenade/custom/large/ied_he
+
+/obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
+	preload = /obj/item/explosive/grenade/custom/incendiary_plus
+
 //UPP DEDICATED GL
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp
@@ -333,6 +342,9 @@
 	grip.hidden = FALSE
 	grip.Attach(src)
 	update_attachable(grip.slot)
+
+/obj/item/weapon/gun/launcher/grenade/m92/upp/frag
+	preload = /obj/item/explosive/grenade/high_explosive/frag
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/stored
 	preload = null
