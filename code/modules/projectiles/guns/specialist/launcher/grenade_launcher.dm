@@ -149,10 +149,17 @@
 
 /obj/item/weapon/gun/launcher/grenade/able_to_fire(mob/living/user) //Skillchecks and fire blockers go in the child items.
 	. = ..()
-	if(!length(cylinder.contents))
-		to_chat(user, SPAN_WARNING("The [name] is empty."))
-		click_empty(user)
-		return FALSE
+	if(.)
+		if(!length(cylinder.contents))
+			to_chat(user, SPAN_WARNING("The [name] is empty."))
+			click_empty(user)
+			return FALSE
+		var/obj/item/explosive/grenade/G = cylinder.contents[1]
+		if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
+			to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
+			msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
+			return FALSE
+
 
 /obj/item/weapon/gun/launcher/grenade/afterattack(atom/target, mob/user, flag) //Not actually after the attack. After click, more like.
 	if(able_to_fire(user))
@@ -265,7 +272,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92
 	name = "\improper M92 grenade launcher"
-	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
+	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m92"
 	item_state = "m92"
@@ -274,13 +281,12 @@
 	matter = list("metal" = 6000)
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
 
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/scope/mini)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	map_specific_decoration = TRUE
 
 	is_lobbing = TRUE
-	throw_range = 20
-	internal_slots = 8
+	internal_slots = 6
 	direct_draw = FALSE
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_attachment_offsets()
@@ -309,6 +315,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92/ied_incendiary
 	preload = /obj/item/explosive/grenade/custom/incendiary_plus
+	set_fire_delay(FIRE_DELAY_TIER_1)
 
 //UPP DEDICATED GL
 
@@ -318,12 +325,10 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "m92_upp"
 	item_state = "m92_upp"
-	internal_slots = 6
 	flags_item = TWOHANDED
 	map_specific_decoration = FALSE
 	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
 	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
-	starting_attachment_types = list()
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
 	..()
@@ -342,9 +347,6 @@
 	grip.hidden = FALSE
 	grip.Attach(src)
 	update_attachable(grip.slot)
-
-/obj/item/weapon/gun/launcher/grenade/m92/upp/frag
-	preload = /obj/item/explosive/grenade/high_explosive/frag
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/stored
 	preload = null
@@ -380,7 +382,6 @@
 		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm,
 	)
 	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
-	starting_attachment_types = list()
 
 	is_lobbing = TRUE
 	internal_slots = 8

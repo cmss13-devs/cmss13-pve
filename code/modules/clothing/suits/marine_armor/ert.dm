@@ -142,41 +142,6 @@
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	item_state_slots = list(WEAR_JACKET = "heavy_armor")
 
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/terminator
-	name = "\improper M5Xg exoskeleton gunner armor"
-	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk. This variant is designed to support a M56 Smartgun."
-	icon_state = "commando_armor"
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
-	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	item_state_slots = list(WEAR_JACKET = "commando_armor")
-	unacidable = TRUE
-
-/obj/item/clothing/suit/storage/marine/veteran/pmc/commando
-	name = "\improper M5X exoskeleton armor"
-	desc = "A complex system of overlapping plates intended to render the wearer all but impervious to small arms fire. A passive exoskeleton supports the weight of the armor, allowing a human to carry its massive bulk."
-	icon_state = "commando_armor"
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
-	movement_compensation = SLOWDOWN_ARMOR_VERY_HEAVY
-	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_VERYHIGH
-	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
-	flags_inventory = BLOCK_KNOCKDOWN
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
-	item_state_slots = list(WEAR_JACKET = "commando_armor")
-	unacidable = TRUE
-
-
 //===========================//DISTRESS\\================================\\
 //=======================================================================\\
 

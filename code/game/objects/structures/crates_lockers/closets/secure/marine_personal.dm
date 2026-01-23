@@ -141,6 +141,8 @@
 	new /obj/item/clothing/under/marine/veteran/pmc(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/pmc(src)
 	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon(src)
+	new /obj/item/clothing/shoes/veteran/pmc/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/pmc/rifleman
 	job = JOB_SQUAD_MARINE
@@ -164,7 +166,7 @@
 	new /obj/item/clothing/head/beret/pmc(src)
 	new /obj/item/clothing/under/liaison_suit/formal(src)
 	new /obj/item/clothing/shoes/laceup(src)
-	new /obj/item/device/radio/headset/almayer/marine/solardevils/pmc/cmd(src)
+	new /obj/item/device/radio/headset/distress/pmc/platoon/cmd(src)
 	new /obj/item/clothing/suit/storage/jacket/marine/corporate/formal(src)
 
 // ==Royal Marines== //
