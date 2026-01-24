@@ -1131,13 +1131,6 @@
 	else
 		return ..()
 
-/obj/item/storage/belt/shotgun/wy
-	name = "\improper WY-TM406 pattern shotgun shell loading rig"
-	desc = "The WY-TM406 is the standard load-bearing equipment of the W-Y security forces. An ammunition belt designed to hold shotgun shells or individual bullets."
-	icon_state = "wy_shotgunbelt"
-	item_state = "wy_shotgunbelt"
-	flags_atom = FPRINT
-
 /obj/item/storage/belt/shotgun/upp
 	name = "\improper Type 42 pattern shotgun shell loading rig"
 	desc = "An ammunition belt designed to hold shotgun shells, primarily for the Type 23 shotgun."
@@ -1320,12 +1313,6 @@
 	else
 		return ..()
 
-/obj/item/storage/belt/grenade/wy
-	name="\improper WY-TM-386 pattern M40 Grenade rig"
-	desc="The WY-TM-386 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is designed to carry bulk quantities of M40 pattern and AGM pattern Grenades."
-	storage_slots = 20
-	max_storage_space = 60
-
 /obj/item/storage/belt/grenade/large
 	name="\improper M276 pattern M40 Grenade rig Mk. II"
 	desc="The M276 Mk. II is is an upgraded version of the M276 grenade rig, with more storage capacity."
@@ -1362,11 +1349,7 @@
 		new /obj/item/explosive/grenade/high_explosive/impact(src)
 		new /obj/item/explosive/grenade/high_explosive/airburst/buckshot(src)
 
-/obj/item/storage/belt/grenade/large/wy
-	name="\improper WY-TM-386 pattern M40 Grenade rig Mk. II"
-	desc="The WY-TM-386 Mk. II is is an upgraded version of the m40 grenade rig, with more storage capacity."
-	storage_slots = 25
-	max_storage_space = 75
+
 
 ////////////////////////////// GUN BELTS /////////////////////////////////////
 
@@ -1659,10 +1642,10 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/whiteout())
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rubber(src)
+	new /obj/item/ammo_magazine/pistol/vp78/penetrating(src)
+	new /obj/item/ammo_magazine/pistol/vp78/penetrating(src)
+	new /obj/item/ammo_magazine/pistol/vp78/penetrating(src)
+	new /obj/item/ammo_magazine/pistol/vp78/penetrating(src)
 
 /obj/item/storage/belt/gun/m4a3/m1911/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911())
@@ -1779,16 +1762,6 @@
 	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/forecon())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
-
-/obj/item/storage/belt/gun/m39/full/whiteout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/compact/heap(src))
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/m39/heap(src)
-
-/obj/item/storage/belt/gun/m39/full/whiteout_low_threat/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/m39/elite/compact(src))
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/m39/ap(src)
 
 #define MAXIMUM_MAGAZINE_COUNT 2
 
@@ -2398,15 +2371,6 @@
 	new /obj/item/ammo_magazine/pistol/vp78(src)
 	new /obj/item/ammo_magazine/smartgun(src)
 	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-
-/obj/item/storage/belt/gun/smartgunner/pmc/commando/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/commando())
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
-	new /obj/item/ammo_magazine/smartgun(src)
 
 /obj/item/storage/belt/gun/smartgunner/commando
 	name = "\improper WY-TM410 pattern 'Terminator' smartgunner sidearm rig"
@@ -2427,8 +2391,7 @@
 
 /obj/item/storage/belt/gun/smartgunner/commando/full/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/whiteout())
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary
-	new /obj/item/ammo_magazine/pistol/vp78/incendiary
+	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)
 	new /obj/item/ammo_magazine/smartgun/dirty(src)

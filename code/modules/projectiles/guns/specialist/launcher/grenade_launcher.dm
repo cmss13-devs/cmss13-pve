@@ -415,7 +415,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m81/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4)
+	set_fire_delay(FIRE_DELAY_TIER_4 * 1.5)
 
 /obj/item/weapon/gun/launcher/grenade/m81/on_pocket_removal()
 	..()

@@ -117,8 +117,8 @@
 	name = "\improper M7X gauntlets"
 	desc = "A pair of heavily armored gloves made to pair up the M7X Apesuit system."
 	icon_state = "combat_android_gloves"
-	item_state = "black"
-	item_state_slots = list(WEAR_HANDS = "black")
+	item_state = "gray"
+	item_state_slots = list(WEAR_HANDS = "gray")
 	siemens_coefficient = 0
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
 	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH

@@ -445,18 +445,6 @@
 	name = "\improper PMC black tactical cap"
 	icon_state = "pmc_hat_dark"
 
-/obj/item/clothing/head/cmcap/weyyu/guard
-	name = "\improper PMC guard tactical cap"
-	icon_state = "guard_cap"
-
-/obj/item/clothing/head/cmcap/weyyu/guard/crewman
-	name = "\improper PMC driver tactical cap"
-	icon_state = "guard_cap"
-
-/obj/item/clothing/head/cmcap/weyyu/guard/lead
-	name = "\improper PMC guard leader tactical cap"
-	icon_state = "guard_lead_cap"
-
 /obj/item/clothing/head/cmo
 	name = "\improper Chief Medical Officer's Peaked Cap"
 	desc = "A peaked cap given to high-ranking civilian medical officers. Looks just a touch silly."
@@ -625,6 +613,7 @@
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
+
 
 /obj/item/clothing/head/cmcap/pmc/fieldleader
 	name = "\improper PMC field officer beret"

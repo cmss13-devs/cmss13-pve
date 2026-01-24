@@ -1103,14 +1103,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc
 
-//=============================//PMC GUARD (POLICE)\\==================================\\
-//=======================================================================\\
-
-/obj/item/clothing/head/helmet/marine/veteran/pmc/guard
-	name = "\improper PMC riot guard helmet"
-	desc = "A modified 'Kame' helmet with protective platemask utilized by Weyland-Yutani PMC crowd control units."
-	icon_state = "guard_heavy_helmet"
-	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEALLHAIR
 
 //=============================//WY COMMANDOS\\==================================\\
 //=======================================================================\\
@@ -1212,6 +1204,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "An advanced technician helmet with a black finish, including advanced welding protection and resistance to industrial hazards, though it offers less kevlar against potential firefights."
 	icon_state = "pmc_engineer_helmet"
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
@@ -1226,7 +1219,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "commando_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
@@ -1255,23 +1248,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //=======================================================================\\
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/apesuit
-	name = "\improper M5X Apesuit helmet"
+	name = "\improper M5X apesuit helmet"
 	desc = "A fully enclosed, armored helmet made to complete the M5X exoskeleton armor."
 	icon_state = "apesuit_helmet"
 	item_state = "apesuit_helmet"
+	unacidable = 1
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_melee = CLOTHING_ARMOR_ULTRAHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|FULL_DECAP_PROTECTION
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	unacidable = TRUE
-	anti_hug = 100
 
 //=============================//WY COMBAT DROIDS\\==================================\\
 //=======================================================================\\

@@ -552,10 +552,6 @@
 /obj/item/storage/pouch/magazine/large/wy
 	icon_state = "wy_ammo_mag"
 
-/obj/item/storage/pouch/magazine/large/wy/pmc_m41a/fill_preset_inventory()
-	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/extended(src)
-
 /obj/item/storage/pouch/magazine/large/wy/pmc_m39/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/smg/m39/ap(src)
@@ -583,10 +579,6 @@
 /obj/item/storage/pouch/magazine/large/wy/pmc_rifle/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/ap(src)
-
-/obj/item/storage/pouch/magazine/large/wy/rifle_heap/fill_preset_inventory()
-	for(var/i = 1 to storage_slots)
-		new /obj/item/ammo_magazine/rifle/heap(src)
 
 /obj/item/storage/pouch/magazine/large/wy/mk1_heap/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
@@ -821,51 +813,6 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/brain_stimulant(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/redemption_stimulant(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/speed_stimulant(src)
-
-/obj/item/storage/pouch/medical/socmed/commando/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/stack/medical/splint/nano(src)
-	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
-	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
-	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
-	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/meralyne(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dermaline(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-
-/obj/item/storage/pouch/medical/socmed/commando_low_threat/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/stack/medical/splint(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/bicaridine(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/meralyne(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/kelotane(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dermaline(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
-
-/obj/item/storage/pouch/medical/socmed/commando/deathsquad/fill_preset_inventory()
-	new /obj/item/device/healthanalyzer(src)
-	new /obj/item/stack/medical/splint/nano(src)
-	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
-	new /obj/item/stack/medical/advanced/bruise_pack/upgraded(src)
-	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
-	new /obj/item/stack/medical/advanced/ointment/upgraded(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/meralyne(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/dermaline(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/tricord(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/speed_stimulant(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/brain_stimulant(src)
-	new /obj/item/reagent_container/hypospray/autoinjector/stimulant/redemption_stimulant(src)
 
 /obj/item/storage/pouch/medical/socmed/not_op/fill_preset_inventory()
 	new /obj/item/device/healthanalyzer(src)
@@ -1564,69 +1511,19 @@
 
 /obj/item/storage/pouch/tools/tactical/upp/fill_preset_inventory()
 	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/wirecutters/tactical(src)
-	new /obj/item/device/multitool/upp(src)
+	new /obj/item/tool/crowbar(src)
+	new /obj/item/tool/wirecutters(src)
+	new /obj/item/device/multitool(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/stack/cable_coil(src)
-	new /obj/item/stack/cable_coil(src)
-
-/obj/item/storage/pouch/tools/tactical/upp/dzho/fill_preset_inventory()
-	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/wirecutters/tactical(src)
-	new /obj/item/device/multitool/upp(src)
-	new /obj/item/tool/weldingtool(src)
-	new /obj/item/tool/screwdriver/tactical(src)
 	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/tools/uppsynth/fill_preset_inventory()
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar(src)
+	new /obj/item/tool/wirecutters(src)
 	new /obj/item/tool/weldingtool(src)
 	new /obj/item/tool/wrench(src)
-
-/obj/item/storage/pouch/tools/uppsynth/black
-	icon_state = "soctools"
-
-/obj/item/storage/pouch/tools/uppsynth/black/full/fill_preset_inventory()
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/wirecutters/tactical(src)
-	new /obj/item/tool/weldingtool(src)
-	new /obj/item/tool/wrench(src)
-
-/obj/item/storage/pouch/tools/tactical/sec
-	name = "tactical security pouch"
-	desc = "A custom fit security pouch, capable of fitting a variety of security tools in different compartments."
-	storage_slots = 5
-	can_hold = list(
-		/obj/item/explosive/grenade/flashbang,
-		/obj/item/explosive/grenade/custom/teargas,
-		/obj/item/reagent_container/spray/pepper,
-		/obj/item/restraint/handcuffs,
-		/obj/item/device/flash,
-		/obj/item/clothing/glasses,
-		/obj/item/reagent_container/food/snacks/donut/normal,
-		/obj/item/reagent_container/food/snacks/donut/jelly,
-		/obj/item/weapon/baton,
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/tool/lighter/zippo,
-		/obj/item/storage/fancy/cigarettes,
-		/obj/item/clothing/glasses/hud/security,
-		/obj/item/device/flashlight,
-		/obj/item/device/radio/headset,
-	)
-	bypass_w_limit = list(
-		/obj/item/weapon/gun/energy/taser,
-		/obj/item/weapon/baton,
-	)
-
-/obj/item/storage/pouch/tools/tactical/sec/full/fill_preset_inventory()
-	new /obj/item/weapon/baton(src)
-	new /obj/item/weapon/gun/energy/taser(src)
-	new /obj/item/device/flash(src)
-	new /obj/item/restraint/handcuffs(src)
-	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/stack/cable_coil(src)
 
 /obj/item/storage/pouch/sling
 	name = "sling strap"

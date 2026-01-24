@@ -8082,7 +8082,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avo" = (
-/obj/item/storage/backpack/pmc/backpack/commando/apesuit,
+/obj/item/storage/backpack/commando/apesuit,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avp" = (
@@ -8100,7 +8100,7 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avs" = (
-/obj/item/clothing/suit/marine/veteran/pmc/apesuit,
+/obj/item/clothing/suit/storage/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
 "avw" = (

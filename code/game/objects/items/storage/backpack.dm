@@ -1139,11 +1139,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/pmc/backpack/commando/leader
 	icon_state = "commando_leader_backpack"
 
-/obj/item/storage/backpack/pmc/backpack/commando/apesuit
-	name = "Dog Catcher bag"
-	desc = "A heavy-duty bag carried by Weyland-Yutani Dog Catchers."
-	icon_state = "apesuit_pack"
-
 /obj/item/storage/backpack/marine/engineerpack/ert/pmc
 	name = "\improper PMC technician welderpack"
 	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs. Features a small fueltank for quick blowtorch refueling."
@@ -1156,6 +1151,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "combat android powerpack"
 	desc = "A heavy-duty powerpack carried by Weyland-Yutani combat androids."
 	icon_state = "combat_android_powerpack"
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/commando/apesuit
+	name = "Dog Catcher bag"
+	desc = "A heavy-duty bag carried by Weyland-Yutani Dog Catchers."
+	icon_state = "apesuit_pack"
+	max_storage_space = 30
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/mcommander
