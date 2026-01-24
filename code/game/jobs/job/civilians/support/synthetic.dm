@@ -19,18 +19,6 @@
 		"[JOB_SYNTH][WHITELIST_LEADER]" = /datum/equipment_preset/synth/uscm
 	)
 
-/datum/job/civilian/synthetic/get_whitelist_status(client/player)
-	. = ..()
-	if(!.)
-		return
-
-	if(player.check_whitelist_status(WHITELIST_SYNTHETIC_LEADER))
-		return get_desired_status(player.prefs.synth_status, WHITELIST_LEADER)
-	if(player.check_whitelist_status(WHITELIST_SYNTHETIC_COUNCIL|WHITELIST_SYNTHETIC_COUNCIL_LEGACY))
-		return get_desired_status(player.prefs.synth_status, WHITELIST_COUNCIL)
-	if(player.check_whitelist_status(WHITELIST_SYNTHETIC))
-		return get_desired_status(player.prefs.synth_status, WHITELIST_NORMAL)
-
 /datum/job/civilian/synthetic/set_spawn_positions(count)
 	spawn_positions = synth_slot_formula(count)
 
