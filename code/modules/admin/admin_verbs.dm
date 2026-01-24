@@ -77,6 +77,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/toggle_ai,
 	/datum/admins/proc/toggle_human_ai,
 	/datum/admins/proc/create_human_ai_patrol,
+	/client/proc/toggle_human_ai_breathe_space,
 	/client/proc/open_human_ai_management_panel,
 	/client/proc/open_human_faction_management_panel,
 	/client/proc/open_human_defense_creator_panel,
@@ -164,6 +165,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/toggle_hardcore_perma,
 	/client/proc/toggle_bypass_joe_restriction,
 	/client/proc/toggle_joe_respawns,
+	/client/proc/toggle_all_human_breathe_space,
 	/datum/admins/proc/open_shuttlepanel
 ))
 
@@ -192,7 +194,8 @@ GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/datum/admins/proc/spawn_atom,
 	/client/proc/game_panel,
 	/client/proc/create_humans,
-	/client/proc/create_xenos
+	/client/proc/create_xenos,
+	/client/proc/create_pathogen_creatures,
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_server, list(

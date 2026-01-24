@@ -425,6 +425,8 @@
 				sound = pick('sound/weapons/gun_rmcdmr_1.ogg','sound/weapons/gun_rmcdmr_2.ogg','sound/weapons/gun_rmcdmr_3.ogg')
 			if("gun_jam_rack")
 				sound = pick('sound/weapons/handling/gun_jam_rack_1.ogg', 'sound/weapons/handling/gun_jam_rack_2.ogg', 'sound/weapons/handling/gun_jam_rack_3.ogg')
+			if("gun_seig_smg")
+				sound = pick('sound/weapons/sieg_smg_1.ogg', 'sound/weapons/sieg_smg_2.ogg', 'sound/weapons/sieg_smg_3.ogg', 'sound/weapons/sieg_smg_4.ogg')
 			//A:CM gun sounds
 			if("gun_shotgun_tactical")
 				sound = pick('sound/weapons/gun_shotgun_tactical_1.ogg','sound/weapons/gun_shotgun_tactical_2.ogg','sound/weapons/gun_shotgun_tactical_3.ogg','sound/weapons/gun_shotgun_tactical_4.ogg')
@@ -492,6 +494,9 @@
 				sound = pick('sound/voice/alien_roar_larva1.ogg','sound/voice/alien_roar_larva2.ogg')
 			if("queen")
 				sound = pick('sound/voice/alien_queen_command.ogg','sound/voice/alien_queen_command2.ogg','sound/voice/alien_queen_command3.ogg')
+			// Pathogen Creatures
+			if("neo_talk")
+				sound = pick('sound/pathogen_creatures/neo_talk1.ogg','sound/pathogen_creatures/neo_talk2.ogg','sound/pathogen_creatures/neo_talk3.ogg')
 			// Human
 			if("male_scream")
 				sound = pick('sound/voice/human_male_scream_1.ogg','sound/voice/human_male_scream_2.ogg','sound/voice/human_male_scream_3.ogg','sound/voice/human_male_scream_4.ogg',5;'sound/voice/human_male_scream_5.ogg',5;'sound/voice/human_jackson_scream.ogg',5;'sound/voice/human_ack_scream.ogg','sound/voice/human_male_scream_6.ogg')
