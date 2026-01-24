@@ -17,7 +17,7 @@
 	pay_multiplier = 2
 
 /datum/paygrade/wy_ranks/wycPO
-	paygrade = PAY_SHORT_WYPO2
+	paygrade = PAY_SHORT_WYC2
 	name = "Captain"
 	prefix = "Capt"
 	ranking = 1

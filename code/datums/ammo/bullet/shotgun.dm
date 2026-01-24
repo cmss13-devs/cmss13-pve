@@ -61,7 +61,6 @@
 	sound_miss = "energy_miss"
 	sound_bounce = "energy_bounce"
 	hit_effect_color = "#00aeff"
-	sound_override = 'sound/weapons/gun_es7lethal.ogg'
 	damage = 90
 	penetration = ARMOR_PENETRATION_TIER_8
 	accuracy = HIT_ACCURACY_TIER_5
