@@ -131,3 +131,6 @@ endmap
 
 map derelict_almayer_infested
 endmap
+
+map badayaga_ground
+endmap
