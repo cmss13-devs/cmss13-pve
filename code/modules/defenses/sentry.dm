@@ -275,7 +275,6 @@
 
 	if(O.force)
 		update_health(O.force/2)
-		playsound(loc, 'sound/effects/metalhit.ogg', 25, 1)
 	return ..()
 
 /obj/structure/machinery/defenses/sentry/destroyed_action()

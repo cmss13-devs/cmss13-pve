@@ -189,6 +189,3 @@
 
 		if (step_to(src, get_step(src, direction), 0))
 			break
-
-/obj/effect/decal/cleanable/blood/gibs/zombie
-	basecolor = BLOOD_COLOR_ZOMBIE

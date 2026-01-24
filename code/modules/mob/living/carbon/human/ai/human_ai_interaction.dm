@@ -101,27 +101,19 @@
 	if(!.)
 		return
 
-	if(locked || welded || (isElectrified() && !iszombie(ai_human)) || !arePowerSystemsOn() || panel_open)
+	if(locked || welded || isElectrified() || (stat & NOPOWER))
 		return LOCKED_DOOR_PENALTY
 
-	if(!check_access(ai_human.get_active_hand()) && !check_access(ai_human.wear_id) && !iszombie(ai_human))
+	if(!check_access(ai_human.get_active_hand()) && !check_access(ai_human.wear_id))
 		return LOCKED_DOOR_PENALTY
 
 	return DOOR_PENALTY
 
 /obj/structure/machinery/door/airlock/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if((welded || locked || isElectrified()) && !iszombie(ai_human))
+	if(locked || welded || isElectrified())
 		return ..()
 
-	if(!(arePowerSystemsOn() || !panel_open))
-		return
-
-	if(layer == DOOR_OPEN_LAYER)
-		return
-
-	if(iszombie(ai_human))
-		ai_human.a_intent_change(INTENT_DISARM)
-		ai_human.do_click(src, "", list())
+	if(!(stat & NOPOWER))
 		return
 
 	brain.holster_primary()
@@ -145,11 +137,10 @@
 		return TRUE
 
 	if(brain.faction_check(src))
-		if(!iszombie(ai_human))
-			var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
-			ai_human.a_intent = random_intent
-			if(get_ai_brain())
-				a_intent = random_intent
+		var/random_intent = pick(INTENT_DISARM, INTENT_HARM, INTENT_HELP, INTENT_DISARM, INTENT_HARM) // lower chance of help intent
+		ai_human.a_intent = random_intent
+		if(get_ai_brain())
+			a_intent = random_intent
 		return TRUE
 
 	if((body_position == LYING_DOWN) && (brain.current_target != src))
@@ -213,8 +204,6 @@
 	return BARRICADE_PENALTY
 
 /obj/structure/barricade/plasteel/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
-	if(iszombie(ai_human))
-		return ..()
 	if(!closed) // this means it's closed
 		ai_human.do_click(src, "", list())
 	else
@@ -237,9 +226,6 @@
 	. = ..()
 	if(!.)
 		return
-
-	if(iszombie(ai_human))
-		return OPEN_TURF_PENALTY
 
 	if(ai_human.on_fire)
 		return FIRE_PENALTY

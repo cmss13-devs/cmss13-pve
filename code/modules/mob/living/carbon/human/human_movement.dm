@@ -22,49 +22,38 @@
 	// Wheelchairs depend on different limbs than walking, which is...cute
 	if(istype(buckled, /obj/structure/bed/chair/wheelchair))
 		for(var/organ_name in list("l_hand","r_hand","l_arm","r_arm","chest","groin","head"))
-			var/obj/limb/check_limb = get_limb(organ_name)
-			if(!check_limb || !check_limb.is_usable())
+			var/obj/limb/E = get_limb(organ_name)
+			if(!E || !E.is_usable())
 				. += MOVE_REDUCTION_LIMB_DESTROYED
-			if(check_limb.status & LIMB_SPLINTED)
+			if(E.status & LIMB_SPLINTED)
 				. += MOVE_REDUCTION_LIMB_SPLINTED
-			else if(check_limb.status & LIMB_BROKEN)
+			else if(E.status & LIMB_BROKEN)
 				. += MOVE_REDUCTION_LIMB_BROKEN
 	else
-		if(shoes && !iszombie(src))
+		if(shoes)
 			. += shoes.slowdown
 
-		var/zombie_limb_slowdown = 0
-		if(!iszombie(src))
-			for(var/organ_name in list("l_foot","r_foot","l_leg","r_leg","chest","groin","head"))
-				var/obj/limb/check_limb = get_limb(organ_name)
+		for(var/organ_name in list("l_foot","r_foot","l_leg","r_leg","chest","groin","head"))
+			var/obj/limb/E = get_limb(organ_name)
+			if(!E || !E.is_usable())
+				. += MOVE_REDUCTION_LIMB_DESTROYED
+			// Splinted limbs are not as punishing
+			if(E.status & LIMB_SPLINTED)
+				. += MOVE_REDUCTION_LIMB_SPLINTED
+			else if(E.status & LIMB_BROKEN)
+				. += MOVE_REDUCTION_LIMB_BROKEN
 
-				if(!check_limb || !check_limb.is_usable())
-					. += MOVE_REDUCTION_LIMB_DESTROYED
-				// Splinted limbs are not as punishing
-				if(check_limb.status & LIMB_SPLINTED)
-					. += MOVE_REDUCTION_LIMB_SPLINTED
-				else if(check_limb.status & LIMB_BROKEN)
-					. += MOVE_REDUCTION_LIMB_BROKEN
-		else
-			if(src.on_fire)
-				zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_BROKEN
-			for(var/obj/limb/check_limb in limbs)
-				if(!check_limb || !check_limb.is_usable()) //Zombies might be made of paper, but they care less about losing limbs
-					zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_DESTROYED
-				else if(check_limb.status & LIMB_BROKEN)
-					zombie_limb_slowdown += ZOMBIE_MOVE_REDUCTION_LIMB_BROKEN
-		. += min(zombie_limb_slowdown, ZOMBIE_MOVE_REDUCTION_CAP) //Only care up to a point
 
 	var/hungry = (500 - nutrition)/5 // So overeat would be 100 and default level would be 80
-	if(hungry >= 50 && !iszombie(src)) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under
+	if(hungry >= 50) //Level where a yellow food pip shows up, aka hunger level 3 at 250 nutrition and under
 		reducible_tally += hungry/50 //Goes from a slowdown of 1 all the way to 2 for total starvation
 
 	//Equipment slowdowns
-	if(w_uniform && !iszombie(src))
+	if(w_uniform)
 		reducible_tally += w_uniform.slowdown
 		wear_slowdown_reduction += w_uniform.movement_compensation
 
-	if(wear_suit && !iszombie(src))
+	if(wear_suit)
 		reducible_tally += wear_suit.slowdown
 		wear_slowdown_reduction += wear_suit.movement_compensation
 

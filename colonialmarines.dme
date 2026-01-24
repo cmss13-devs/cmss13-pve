@@ -834,7 +834,6 @@
 #include "code\game\area\LV624.dm"
 #include "code\game\area\LV759_Hybrisa_Prospera.dm"
 #include "code\game\area\Oread_Garrison.dm"
-#include "code\game\area\LV671.dm"
 #include "code\game\area\prison.dm"
 #include "code\game\area\Prison_Station_FOP.dm"
 #include "code\game\area\prison_v3_fiorina.dm"

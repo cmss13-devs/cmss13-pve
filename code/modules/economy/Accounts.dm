@@ -24,14 +24,13 @@
 	var/datum/money_account/M = new()
 	M.owner_name = new_owner_name
 	M.remote_access_pin = rand(1111, 111111)
-	var/random_pay_multi = rand(0.4, 1.1)
-	M.money = starting_funds * (id_paygrade ? id_paygrade.pay_multiplier : random_pay_multi)
+	M.money = starting_funds * id_paygrade.pay_multiplier
 
 	//create an entry in the account transaction log for when it was created
 	var/datum/transaction/T = new()
 	T.target_name = new_owner_name
 	T.purpose = "Account creation"
-	T.amount = starting_funds * (id_paygrade ? id_paygrade.pay_multiplier : random_pay_multi)
+	T.amount = starting_funds * id_paygrade.pay_multiplier
 	//set a random date, time and location some time over the past few decades
 	T.date = "[num2text(rand(1,31))] [pick("January","February","March","April","May","June","July","August","September","October","November","December")], [GLOB.game_year - rand(0, 10)]"
 	T.time = "[rand(0,24)]:[rand(11,59)]"

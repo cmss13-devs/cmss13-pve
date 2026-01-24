@@ -1382,7 +1382,7 @@
 	max_w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_ALLOW_QUICKDRAW
 	///Array of holster slots and stats to use for them. First layer is "1", "2" etc. Guns are stored in both the slot and the holstered_guns list which keeps track of which was last inserted.
-	var/list/holster_slots = list(
+	var/list/obj/item/weapon/gun/holster_slots = list(
 		"1" = list(
 			"gun" = null,
 			"underlay_sprite" = null,
@@ -1428,9 +1428,8 @@
 		return
 	holstered_guns -= AM
 	for(var/slot in holster_slots)
-		var/list/slot_data = holster_slots[slot]
-		if(AM == slot_data["gun"])
-			slot_data["gun"] = null
+		if(AM == holster_slots[slot]["gun"])
+			holster_slots[slot]["gun"] = null
 
 			update_gun_icon(slot)
 			return
@@ -1450,8 +1449,7 @@
 
 /obj/item/storage/belt/gun/proc/update_gun_icon(slot) //We do not want to use regular update_icon as it's called for every item inserted. Not worth the icon math.
 	var/mob/living/carbon/human/user = loc
-	var/list/slot_data = holster_slots[slot]
-	var/obj/item/weapon/gun/current_gun = slot_data["gun"]
+	var/obj/item/weapon/gun/current_gun = holster_slots[slot]["gun"]
 	if(current_gun)
 		/*
 		Have to use a workaround here, otherwise images won't display properly at all times.
@@ -1470,19 +1468,19 @@
 					gun_underlay = image(icon, "d_" + current_gun.base_gun_icon)
 				if("classic")
 					gun_underlay = image(icon, "c_" + current_gun.base_gun_icon)
-		gun_underlay.pixel_x = slot_data["icon_x"]
-		gun_underlay.pixel_y = slot_data["icon_y"]
+		gun_underlay.pixel_x = holster_slots[slot]["icon_x"]
+		gun_underlay.pixel_y = holster_slots[slot]["icon_y"]
 		gun_underlay.color = current_gun.color
-		gun_underlay.transform = slot_data["underlay_transform"]
-		slot_data["underlay_sprite"] = gun_underlay
+		gun_underlay.transform = holster_slots[slot]["underlay_transform"]
+		holster_slots[slot]["underlay_sprite"] = gun_underlay
 		underlays += gun_underlay
 
 		icon_state += "_g"
 		item_state = icon_state
 	else
 		playsound(src, sheatheSound, 7, TRUE)
-		underlays -= slot_data["underlay_sprite"]
-		slot_data["underlay_sprite"] = null
+		underlays -= holster_slots[slot]["underlay_sprite"]
+		holster_slots[slot]["underlay_sprite"] = null
 
 		icon_state = copytext(icon_state,1,-2)
 		item_state = icon_state
@@ -1897,12 +1895,6 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/marksman(src)
 
-/obj/item/storage/belt/gun/m44/wy
-	name = "\improper WY-TM880 pattern general revolver holster rig"
-	desc = "The WY-TM880 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is universal and adjustable for different revolvers, along with six small pouches for speedloaders. It smells faintly of hay."
-	icon_state = "wy_m44r_holster"
-	has_gamemode_skin = FALSE
-
 /obj/item/storage/belt/gun/m44/spearhead/fill_preset_inventory()
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead())
 	for(var/i = 1 to storage_slots - 1)
@@ -1912,6 +1904,12 @@
 	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/hollowpoint())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/spearhead/hollowpoint(src)
+
+/obj/item/storage/belt/gun/m44/wy
+	name = "\improper WY-TM880 pattern general revolver holster rig"
+	desc = "The WY-TM880 is the standard load-bearing equipment of the W-Y security forces. It consists of a modular belt with various clips. This version is universal and adjustable for different revolvers, along with six small pouches for speedloaders. It smells faintly of hay."
+	icon_state = "wy_m44r_holster"
+	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/gun/m44/gunslinger
 	name = "custom-tooled gunslinger's belt"
