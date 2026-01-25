@@ -20,7 +20,7 @@
 #define ONE_ATMOSPHERE 101.325 //kPa
 
 // Pressure limits.
-#define MIN_BREATH_PRESSURE 16
+#define MIN_BREATH_PRESSURE 21
 #define HAZARD_HIGH_PRESSURE 550 // not used right now
 #define WARNING_HIGH_PRESSURE 325 // not used right now
 #define WARNING_LOW_PRESSURE  80  // This is when the yellow oxygen icon is displayed
