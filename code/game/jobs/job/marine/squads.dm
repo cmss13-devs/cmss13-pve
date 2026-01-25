@@ -830,8 +830,9 @@
 			assignment = JOB_UACG_LEAD
 			num_tl++
 			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ2", M)
-			assign_ft_leader("SQ2", M)
+			var/squad_number = (num_tl > 2) ? pick(1, 2, 3, 4) : num_tl
+			assign_fireteam("SQ[squad_number]", M)
+			assign_ft_leader("SQ[squad_number]", M)
 		if(JOB_UACG_GNR)
 			assignment = JOB_UACG_GNR
 			num_smartgun++

@@ -22,7 +22,7 @@
 		if(JOB_UACG_SCR_GNR)
 			hud_icon_state = "lmg"
 		if(JOB_UACG_MORTAR)
-			hud_icon_state = "atg"
+			hud_icon_state = "mortar"
 		if(JOB_UACG_TECH)
 			hud_icon_state = "cet"
 		if(JOB_UACG_ARMORY_LACKEY)
@@ -30,23 +30,23 @@
 		if(JOB_UACG_MEDIC)
 			hud_icon_state = "cmt"
 		if(JOB_UACG_MEDIC_TRIAGE)
-			hud_icon_state = "cmt"
+			hud_icon_state = "tmt"
 		if(JOB_UACG_LEAD)
 			hud_icon_state = "tl"
 		if(JOB_UACG_LEAD_FIRE)
-			hud_icon_state = "tl"
+			hud_icon_state = "mortartl"
 		if(JOB_UACG_LEAD_MED)
-			hud_icon_state = "tl"
+			hud_icon_state = "tsl"
 		if(JOB_UACG_SENLEAD)
 			hud_icon_state = "sl"
 		if(JOB_UACG_CHAPLAIN)
-			hud_icon_state = "sl"
+			hud_icon_state = "chp"
 		if(JOB_UACG_OFFICER)
 			hud_icon_state = "co"
 		if(JOB_UACG_MESS)
-			hud_icon_state = "co"
+			hud_icon_state = "mess"
 		if(JOB_UACG_DOCTOR)
-			hud_icon_state = "rsr"
+			hud_icon_state = "doc"
 		if(JOB_UACG_ARMORY)
 			hud_icon_state = "qm"
 	if(hud_icon_state)

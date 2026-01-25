@@ -474,10 +474,25 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
+/obj/item/clothing/accessory/patch/army/mortar
+	name = "Army Mortarman patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women with the MOS 11C."
+	icon_state = "mortarpatch"
+
+/obj/item/clothing/accessory/patch/army/sapper
+	name = "Army Sapper patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women with the MOS 12B."
+	icon_state = "armysapper_patch"
+
 /obj/item/clothing/accessory/patch/cmb/brazil_police
 	name = "Brazilian Colonial Military Police patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
 	icon_state = "brazilpolicepatch"
+
+/obj/item/clothing/accessory/patch/medic
+	name = "Medic patch"
+	desc = "A generic medical patch utilized both by members of the Red Cross Foundation and various sanctioned medical personnel."
+	icon_state = "medicpatch"
 
 //Flag patches
 /obj/item/clothing/accessory/patch/ua
@@ -1028,6 +1043,15 @@
 	max_w_class = SIZE_SMALL
 	storage_flags = NONE
 	storage_slots = 4
+
+/obj/item/clothing/accessory/storage/smallpouch/full
+	hold = /obj/item/storage/internal/accessory/smallpouch/full
+
+/obj/item/storage/internal/accessory/smallpouch/full/fill_preset_inventory()
+	new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless(src)
+	new /obj/item/stack/medical/ointment(src)
+	new /obj/item/stack/medical/bruise_pack(src)
 
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"

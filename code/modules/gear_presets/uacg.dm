@@ -58,7 +58,7 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/white, WEAR_BODY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/ua, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usa, WEAR_ACCESSORY)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
 	add_worker_gloves(new_human)

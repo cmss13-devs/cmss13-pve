@@ -247,6 +247,26 @@
 	new /obj/item/clothing/suit/marine/guard(src)
 	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/black(src)
 
+/obj/item/storage/box/guncase/uacg/medic/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic(src)
+
+/obj/item/storage/box/guncase/uacg/medic2/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic(src)
+
+/obj/item/storage/box/guncase/uacg/senlead/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard/white(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead(src)
+
+/obj/item/storage/box/guncase/uacg/senlead/black/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead/black(src)
+
+/obj/item/storage/box/guncase/uacg/standard/chaplain/fill_preset_inventory()
+	new /obj/item/clothing/suit/marine/guard(src)
+	new /obj/item/clothing/head/helmet/marine/veteran/ua_riot/chaplain(src)
+
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp
 	name = "\improper UnTech Surplus Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of standard UPP uniforms."

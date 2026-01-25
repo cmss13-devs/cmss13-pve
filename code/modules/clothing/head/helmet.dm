@@ -1131,6 +1131,15 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/ua_riot/medic
 	icon_state = "ua_riot_medic"
 
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead
+	icon_state = "ua_riot_sl"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/senlead/black
+	icon_state = "ua_riot_sl_black"
+
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/chaplain
+	icon_state = "ua_riot_chaplain"
+
 // KUTJEVO HELMET
 
 /obj/item/clothing/head/helmet/marine/veteran/kutjevo

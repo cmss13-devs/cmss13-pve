@@ -778,17 +778,41 @@
 		"Unit Leader" = TRACKER_FTL,
 	)
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/secondsquad
+	frequency = GRD_2_FREQ
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/uacg/medic
 	initial_keys = list(/obj/item/device/encryptionkey/med)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/secondsquad/medic
+	initial_keys = list(/obj/item/device/encryptionkey/med)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/triage
+	frequency = MED_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/fires
+	frequency = JTAC_FREQ
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/fires/lead
+	initial_keys = list(/obj/item/device/encryptionkey/guard/command)
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/uacg/senlead
 	initial_keys = list(/obj/item/device/encryptionkey/guard/command)
 
-/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/officer
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/secondsquad/senlead
 	initial_keys = list(/obj/item/device/encryptionkey/guard/command)
 
-/obj/item/device/radio/headset/almayer/marine/solardevils/uacg/officer/doctor
-	initial_keys = list(/obj/item/device/encryptionkey/guard/command,/obj/item/device/encryptionkey/med)
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacgofficer
+	name = "radio headset"
+	desc = "A command guard radio headset utilized by the colonial guard officers, being a similar model to those used by the US Army and US Colonial Marines."
+	frequency = COMM_FREQ
+	inbuilt_tracking_options = list(
+		"Acting Commander" = TRACKER_ASL,
+		"Executive Commander" = TRACKER_FTL,
+	)
+
+/obj/item/device/radio/headset/almayer/marine/solardevils/uacgofficer/doctor
+	initial_keys = list(/obj/item/device/encryptionkey/med)
 
 
 //############################## ALPHA ###############################

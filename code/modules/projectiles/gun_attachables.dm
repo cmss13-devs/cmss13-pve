@@ -2601,6 +2601,12 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "xm51_military_stock"
 	attach_icon = "xm51_military_stock_a"
 
+/obj/item/attachable/stock/xm51/gilded
+	name = "\improper XM51 stock"
+	desc = "A specialized stock designed for XM51 shotguns. Helps the user absorb the recoil of the weapon while also reducing scatter. This one trades out the military brown plastic with pure gold."
+	icon_state = "xm51_gilded_stock"
+	attach_icon = "xm51_gilded_stock_a"
+
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"
 	desc = "Increases the fire rate and burst amount on the VP70. Some versions act as a holster for the weapon when un-attached. This is a test item and should not be used in normal gameplay (yet)."
