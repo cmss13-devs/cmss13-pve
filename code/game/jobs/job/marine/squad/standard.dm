@@ -164,7 +164,7 @@
 	spawn_positions = 18
 	gear_preset = /datum/equipment_preset/uacg/rifle
 	job_options = null
-	supervisors = "the section leader and troop commander"
+	supervisors = "the unit leader and senior"
 	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a rifleman. Whether a veteran cycling out of service or a volunteer weekend warrior, you make up the bulk of the UACG.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
 
 /obj/effect/landmark/start/marine/uacg
@@ -175,7 +175,9 @@
 	title = JOB_UACG_SCR_RIFLE
 	total_positions = 2
 	spawn_positions = 2
+	supervisors = "the fires leader and officer"
 	gear_preset = /datum/equipment_preset/uacg/rifle/security
+	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a rifleman. You are specifically a Rear Line Guardsman, tasked with protecting the mortar pit and working under the Fires Leader. Should the need arise, you will also assist in subduing unruly Guardsmen until they chill out.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
 
 /obj/effect/landmark/start/marine/uacg/security
 	name = JOB_UACG_SCR_RIFLE
@@ -188,7 +190,7 @@
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uacg/rifle/armory
 	job_options = null
-	supervisors = "the armorer and troop commander"
+	supervisors = "the armorer and officer"
 	entry_message_body = "You are a member of the United Americas Colonial Guard, mobilized and deployed by UA Command from the reserves as a weapons technician to assist the armorer with arms maintenance and repairs.<br><b>You remember that you've stored your personal gear and uniform components in your locker.</b>"
 
 /obj/effect/landmark/start/marine/uacg/armory

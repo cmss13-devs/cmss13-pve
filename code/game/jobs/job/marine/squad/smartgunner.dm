@@ -172,7 +172,7 @@
 	gear_preset = /datum/equipment_preset/uacg/gunner
 	job_options = null
 	supervisors = "the team leader and troop commander"
-	entry_message_body = "You are a specialized machine gunner of the United Americas Colonial Guard. You are trained in the more dated mounted machine guns still in use of the CG, and pray that one day a smartgun system is integrated to spare your back.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+	entry_message_body = "You are a specialized machine gunner of the United Americas Colonial Guard. You are trained in the more dated mounted machine guns still in use of the CG, and pray that one day a smartgun system is integrated to spare your back.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be requisitioned from the armory.</b>"
 
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg
 	name = JOB_UACG_GNR
@@ -183,6 +183,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uacg/gunner/security
+	entry_message_body = "You are a specialized machine gunner of the United Americas Colonial Guard. You are trained in the more dated mounted machine guns still in use of the CG, and pray that one day a smartgun system is integrated to spare your back. As a Rear Line Gunner, your primary job is listening to the Fires Leader and protecting the mortar pit. Should the need arise, you will also assist in subduing unruly Guardsmen until they chill out.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be requisitioned from the armory.</b>"
 
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg/security
 	name = JOB_UACG_SCR_GNR

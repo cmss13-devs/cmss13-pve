@@ -112,3 +112,6 @@ endmap
 
 map badayaga_ground
 endmap
+
+map badayaga_ground_uacg
+endmap

@@ -111,7 +111,7 @@
 	gear_preset = /datum/equipment_preset/uacg/tech
 	job_options = null
 	supervisors = "the unit leader and senior leader"
-	entry_message_body = "You are a Technician of the Colonial Guard, expected to maintain the defenses and machinery utilized by your unit. You are also trained in demolitions and other combat engineering skills, giving you a flexible array of skills for building up and knocking down.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+	entry_message_body = "You are a Technician of the Colonial Guard, expected to maintain the defenses and machinery utilized by your unit. You are also trained in demolitions and other combat engineering skills, giving you a flexible array of skills for building up and knocking down.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that lethals and additional equipment can be requisitioned from the armory.</b>"
 
 /obj/effect/landmark/start/marine/engineer/uacg
 	name = JOB_UACG_TECH
@@ -121,7 +121,7 @@
 	title = JOB_UACG_MORTAR
 	gear_preset = /datum/equipment_preset/uacg/tech/mortar
 	supervisors = "the unit leader and officer"
-	entry_message_body = "You are a Mortarman of the Colonial Guard, an irregular role not usually called up to be filled. Your job is to man one of the mortar tubes and standby for firemissions, acting as the lightweight firesupport element to your fellow man.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+	entry_message_body = "You are a Mortarman of the Colonial Guard, an irregular role not usually called up to be filled. Your job is to man one of the mortar tubes and standby for firemissions, acting as the lightweight firesupport element to your fellow man.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armory. The mortars are already set up in the mortar pit on the surface.</b>"
 
 /obj/effect/landmark/start/marine/engineer/uacg/mortar
 	name = JOB_UACG_MORTAR

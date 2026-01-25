@@ -171,8 +171,8 @@
 	job_options = null
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the section leader and troop commander"
-	entry_message_body = "You are a reservist mobilized by the United Americas Colonial Guard for your background with providing medical treatment. While you are tasked to keep your members alive, you mainly are expected to stabilize wounds and assist with triage.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Sick Bay.</b>"
+	supervisors = "the unit leader and senior leader"
+	entry_message_body = "You are a reservist mobilized by the United Americas Colonial Guard for your background with providing medical treatment. While you are tasked to keep your members alive, you mainly are expected to stabilize wounds and assist with triage.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that other equipment can be located in the Sick Bay.</b>"
 
 /obj/effect/landmark/start/marine/medic/uacg
 	name = JOB_UACG_MEDIC
@@ -182,7 +182,8 @@
 	title = JOB_UACG_MEDIC_TRIAGE
 	total_positions = 2
 	gear_preset = /datum/equipment_preset/uacg/medic/triage
-	supervisors = "the unit leader and doctor"
+	supervisors = "the unit leader and officer"
+	entry_message_body = "You are a reservist mobilized by the United Americas Colonial Guard for your background with providing medical treatment. Unlike Combat Medics, you are specifically assigned to coordinate triage with the other Triage Medics and Triage Leader, and have priority over Combat Medics in treating wounded.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that other equipment can be located in the Sick Bay.</b>"
 
 /obj/effect/landmark/start/marine/medic/uacg/triage
 	name = JOB_UACG_MEDIC_TRIAGE

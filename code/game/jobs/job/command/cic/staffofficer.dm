@@ -123,7 +123,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	gear_preset = /datum/equipment_preset/uacg/officer
 	job_options = null
 	supervisors = "the company commander and UACG high command"
-	entry_message_body = "Your job is to conduct the briefing for the platoon, lead the operation, and listen to your superior officers.</a> You are in charge of the troop for the current operation and are supported by your Squadron Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Officers Quarters.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+	entry_message_body = "Your original Captain is dead and you have volunteered to pick up the reigns, and unfortunately so did the other Squad Officer. Your job is to coordinate with the other Officer and administer and oversee the operations of the stationed regimental detachment, and listen to your superior officers.</a> You are in charge of the platoon for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in your bunkroom, and that your equipment can be located in the Officers Quarters.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
 
 /obj/effect/landmark/start/bridge/uacg
 	name = JOB_UACG_OFFICER
@@ -144,7 +144,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	title = JOB_UACG_MESS
 	gear_preset = /datum/equipment_preset/uacg/officer/messofficer
 	supervisors = "the unit commander"
-	entry_message_body = "They needed a cook and you signed up. As a Colonial Guard Mess Officer, your authority only extends to what the menu is and what procurement is needed to get you the ingredients you need.<b>You remember that you've stored your personal gear and uniform in your office.</b>"
+	entry_message_body = "You signed on to be an Infantry Officer, but they needed a cook. As a Colonial Guard Mess Officer, your authority only extends to what the menu is and what procurement is needed to get you the ingredients you need.<b>You remember that you've stored your personal gear and uniform in your office.</b>"
 
 /obj/effect/landmark/start/bridge/uacg/mess
 	name = JOB_UACG_MESS
