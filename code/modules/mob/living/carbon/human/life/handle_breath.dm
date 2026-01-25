@@ -135,7 +135,8 @@ GLOBAL_VAR_INIT(all_human_breathe_space, FALSE)
 	var/safe_pressure_min = species.breath_pressure
 	var/datum/internal_organ/lungs =  internal_organs_by_name["lungs"]
 	// Lung damage increases the minimum safe pressure.
-	safe_pressure_min *= 1 + rand(1,5) * (min(3,lungs.damage/lungs.min_broken_damage) * (reagents.has_reagent("inaprovaline") ? 0.33 : 1))
+	if(!(chem_effect_flags & CHEM_EFFECT_ORGAN_STASIS))
+		safe_pressure_min *= 1 + rand(1,5) * (min(3,lungs.damage/lungs.min_broken_damage) * (reagents.has_reagent("inaprovaline") ? 0.33 : 1))
 	var/inhale_efficiency
 	if(air_info[3] == 0 || air_info[5] == 0) //stop divide by zero runtime
 		inhale_efficiency = 0

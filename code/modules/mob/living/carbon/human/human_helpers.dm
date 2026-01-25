@@ -408,7 +408,7 @@ f
 	return (item == wear_l_ear) || (item == wear_r_ear)
 
 /mob/living/carbon/human/proc/helmet_blocking_mouth()
-	if((head.flags_inventory & (COVERMOUTH | NOPRESSUREDMAGE)) == (COVERMOUTH | NOPRESSUREDMAGE))
+	if((head && head.flags_inventory & (COVERMOUTH | NOPRESSUREDMAGE)) == (COVERMOUTH | NOPRESSUREDMAGE))
 		return head
 	else
 		return FALSE
