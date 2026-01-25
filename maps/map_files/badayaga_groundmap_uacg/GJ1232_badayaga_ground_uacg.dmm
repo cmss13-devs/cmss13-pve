@@ -455,34 +455,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
-"aI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_x = -4;
-	pixel_y = 14
-	},
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_x = 1;
-	pixel_y = 13
-	},
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_y = 9;
-	pixel_x = -5
-	},
-/obj/item/storage/box/loadout/M9_loadout{
-	pixel_y = 18
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "aJ" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -722,10 +694,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"aZ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
 "ba" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -798,14 +766,6 @@
 	},
 /turf/open/floor/plating,
 /area/badayaga/outside/groundside)
-"be" = (
-/obj/structure/bed/chair/wood/normal{
-	dir = 1;
-	pixel_x = 11;
-	pixel_y = 14
-	},
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
 "bf" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 5;
@@ -850,8 +810,14 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "bj" = (
-/obj/structure/noticeboard,
-/turf/closed/wall/rock,
+/obj/structure/surface/table/reinforced/prison{
+	pixel_y = -1
+	},
+/obj/structure/machinery/computer/emails{
+	dir = 1;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "bk" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -892,6 +858,10 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
+"bn" = (
+/obj/structure/bed/sofa/pews,
+/turf/open/floor/wood/ship,
+/area/badayaga/inside_underground/dorms/groundside)
 "bo" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -941,12 +911,20 @@
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/mess/groundside)
 "br" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/officer/doctor{
-	pixel_y = 7;
-	pixel_x = -7
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/general/large{
+	pixel_y = 19
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/item/storage/pouch/general/large{
+	pixel_y = 12;
+	pixel_x = 8
+	},
+/obj/item/storage/pouch/general/large{
+	pixel_y = 2;
+	pixel_x = 5
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "bt" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -1133,12 +1111,11 @@
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/engineering/groundside)
 "bI" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/structure/bed/chair/wood/normal{
+	pixel_y = 4;
+	pixel_x = -19
 	},
-/obj/effect/landmark/start/marine/leader/uacg/chaplain,
-/turf/open/floor/wood/ship,
+/turf/open/floor/carpet,
 /area/badayaga/inside_underground/dorms/groundside)
 "bJ" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -1278,21 +1255,21 @@
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
 "bS" = (
-/obj/structure/bed,
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/suit/armor/vest/pilot{
+	pixel_y = 8;
+	pixel_x = -3
 	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/item/clothing/suit/armor/vest/pilot{
+	pixel_y = 5;
+	pixel_x = -4
 	},
-/obj/structure/sign/poster/art{
-	pixel_x = 23;
-	pixel_y = 11
+/obj/item/clothing/suit/armor/vest/pilot{
+	pixel_x = 2;
+	pixel_y = 1
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "bT" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -1523,15 +1500,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/badayaga/outside/groundside)
-"ck" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/marksman2{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/senlead2{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "cl" = (
 /obj/structure/stairs/perspective/kutjevo{
 	dir = 1
@@ -2209,16 +2177,6 @@
 	},
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
-"do" = (
-/obj/structure/bed/sofa/pews,
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
 "dp" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -2275,20 +2233,17 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "ds" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/backpack/marine/engineerpack/ert{
+	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."d";\tpixel_x = -3;\tpixel_y = 16\t},/obj/item/storage/backpack/marine/engineerpack/ert{\tdesc = "Asmall,lightweightpackforexpeditionsandshort-rangeoperations.Featuresasmallfueltankforquickblowtorchrefueling."d";
+	pixel_y = 6
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
+/obj/item/storage/backpack/marine/engineerpack/ert{
+	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."d";\tpixel_x = -3;\tpixel_y = 16\t},/obj/item/storage/backpack/marine/engineerpack/ert{\tdesc = "Asmall,lightweightpackforexpeditionsandshort-rangeoperations.Featuresasmallfueltankforquickblowtorchrefueling."d";
+	pixel_y = -1
 	},
-/obj/structure/girder/reinforced,
-/turf/open/gm/dirt3,
-/area/badayaga/outside/groundside)
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "dt" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -2392,18 +2347,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"dB" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/backpack/marine/engineerpack/ert{
-	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."d";\tpixel_x = -3;\tpixel_y = 16\t},/obj/item/storage/backpack/marine/engineerpack/ert{\tdesc = "Asmall,lightweightpackforexpeditionsandshort-rangeoperations.Featuresasmallfueltankforquickblowtorchrefueling."d";
-	pixel_y = 6
-	},
-/obj/item/storage/backpack/marine/engineerpack/ert{
-	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."d";\tpixel_x = -3;\tpixel_y = 16\t},/obj/item/storage/backpack/marine/engineerpack/ert{\tdesc = "Asmall,lightweightpackforexpeditionsandshort-rangeoperations.Featuresasmallfueltankforquickblowtorchrefueling."d";
-	pixel_y = -1
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "dC" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -2431,10 +2374,13 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "dD" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/bible,
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	req_access = list();
+	req_one_access = list()
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "dE" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -2541,22 +2487,28 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "dK" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4;
-	layer = 3.04
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_magazine/m60{
+	pixel_x = -8;
+	pixel_y = 9
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 4;
-	layer = 3.08;
-	pixel_x = 9;
-	do_not_adjust = 1
+/obj/item/ammo_magazine/m60{
+	pixel_x = 7;
+	pixel_y = 8
 	},
-/obj/structure/largecrate/random/case/double{
-	pixel_y = 9;
-	layer = 3.2
+/obj/item/ammo_magazine/m60{
+	pixel_x = -4;
+	pixel_y = 5
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/obj/item/ammo_magazine/m60{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/item/ammo_box/magazine/m41ae2/heap{
+	pixel_y = 14
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "dL" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -2802,15 +2754,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
-"ed" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/triagemedic2{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/triagemedic1{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "ee" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -3364,10 +3307,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"eQ" = (
-/obj/structure/machinery/photocopier,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "eR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/bare_catwalk,
@@ -3711,14 +3650,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "fw" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/gunner1{
-	pixel_x = -7
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/gunner2{
-	pixel_x = 8
-	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/medical/groundside)
 "fx" = (
 /obj/structure/flora/grass/tallgrass/ice/corner{
 	dir = 8;
@@ -3932,22 +3869,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
-"fS" = (
-/obj/structure/bed,
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/structure/sign/poster/blacklight{
-	pixel_x = 25;
-	pixel_y = 18
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "fT" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/stairs/perspective/kutjevo{
@@ -4375,15 +4296,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"gu" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/medic1{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead3{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "gv" = (
 /obj/effect/decal/strata_decals/grime/grime4,
 /turf/open/asphalt/cement_darkened,
@@ -4487,13 +4399,16 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "gE" = (
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
+/obj/structure/surface/table/reinforced/prison{
+	pixel_y = -1
 	},
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/machinery/faxmachine/uscm,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 8;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "gF" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -4546,12 +4461,10 @@
 /turf/closed/wall/hangar,
 /area/badayaga/inside_underground/command_rooms/groundside)
 "gI" = (
-/obj/structure/gun_rack/m39/unloaded{
-	pixel_y = 17;
-	can_block_movement = 0
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/bible,
+/turf/open/floor/wood/ship,
+/area/badayaga/inside_underground/dorms/groundside)
 "gJ" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -4566,20 +4479,13 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "gK" = (
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/prop/magazine/boots/n067{
+	pixel_x = -3;
+	pixel_y = 7
 	},
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/structure/sign/prop2{
-	pixel_y = 33;
-	pixel_x = 16
-	},
-/turf/open/floor/almayer_hull,
+/turf/open/floor/carpet,
 /area/badayaga/inside_underground/dorms/groundside)
 "gL" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -4808,14 +4714,22 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "he" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle4{
-	pixel_x = 8
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4;
+	layer = 3.04
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = -7
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	layer = 3.08;
+	pixel_x = 9;
+	do_not_adjust = 1
 	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/largecrate/random/case/double{
+	pixel_y = 9;
+	layer = 3.2
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "hf" = (
 /obj/structure/machinery/light/double{
 	light_color = "#e7c0a4";
@@ -4882,22 +4796,12 @@
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
 "hl" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4;
-	layer = 3.04
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	req_access = list();
+	req_one_access = list()
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 4;
-	layer = 3.08;
-	pixel_x = 9;
-	do_not_adjust = 1
-	},
-/obj/structure/largecrate/random/case/double{
-	pixel_y = 9;
-	layer = 3.2
-	},
-/turf/open/gm/dirt3,
-/area/badayaga/outside/groundside)
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "hm" = (
 /obj/item/prop/helmetgarb/rosary{
 	pixel_x = 5
@@ -4908,16 +4812,19 @@
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
 "hn" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -15
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4;
+	layer = 3.04
 	},
-/obj/structure/mirror{
-	pixel_x = -30;
-	pixel_y = -2
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	layer = 3.08;
+	pixel_x = 9;
+	do_not_adjust = 1
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/mess/groundside)
+/obj/structure/girder/reinforced,
+/turf/open/gm/dirt3,
+/area/badayaga/outside/groundside)
 "ho" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -5183,15 +5090,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"hL" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/tool/candle,
-/obj/item/tool/lighter{
-	pixel_y = 12;
-	pixel_x = 6
-	},
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
 "hM" = (
 /obj/structure/machinery/cm_vending/sorted/boozeomat{
 	pixel_y = 5;
@@ -5249,14 +5147,9 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "hS" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead2{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/medic2{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/window/framed/bunker,
+/turf/closed/wall/hangar,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "hT" = (
 /obj/structure/platform/kutjevo/smooth,
 /turf/open/floor/plating/wood,
@@ -5502,24 +5395,15 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "im" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4;
-	layer = 3.04
+/obj/structure/surface/table/reinforced/prison{
+	pixel_y = -1
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 4;
-	layer = 3.08;
-	pixel_x = 9;
-	do_not_adjust = 1
+/obj/structure/machinery/computer/emails{
+	dir = 8;
+	pixel_y = 5
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random/barrel/red{
-	layer = 3.4;
-	pixel_x = -7
-	},
-/obj/effect/vehicle_roof/pizza_van,
-/turf/open/gm/dirt3,
-/area/badayaga/inside/groundside)
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/mess/groundside)
 "in" = (
 /obj/effect/decal/cleanable/liquid_fuel,
 /obj/effect/decal/cleanable/liquid_fuel,
@@ -5731,12 +5615,20 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/medical/groundside)
 "iD" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/under/colonist/boilersuit/khaki{
+	pixel_x = 9;
+	pixel_y = 6
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/mess/groundside)
+/obj/item/clothing/under/colonist/boilersuit/khaki{
+	pixel_x = 9;
+	pixel_y = 3
+	},
+/obj/item/clothing/under/colonist/boilersuit/khaki{
+	pixel_x = 9
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "iE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -5754,18 +5646,6 @@
 	},
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
-"iF" = (
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
-	},
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/dorms/groundside)
 "iG" = (
 /obj/structure/machinery/door/airlock/almayer/secure/reinforced{
 	req_access = list();
@@ -5822,8 +5702,9 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "iL" = (
-/obj/structure/surface/table/almayer,
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "iM" = (
 /obj/effect/decal/strata_decals/grime/grime3,
@@ -6006,13 +5887,6 @@
 /obj/effect/decal/strata_decals/grime/grime3,
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground)
-"jh" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	req_access = list();
-	req_one_access = list()
-	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "ji" = (
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/mess/groundside)
@@ -6041,23 +5915,8 @@
 /turf/open/floor/plating/wood_broken6,
 /area/badayaga/inside_underground/mess/groundside)
 "jm" = (
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/obj/structure/surface/rack,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/pizzabox/margherita{
-	pixel_y = 7
-	},
-/obj/item/clothing/head/beret/cm/white/civilian{
-	pixel_y = 8;
-	pixel_x = -9
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/mess/groundside)
 "jn" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -6078,18 +5937,16 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "jo" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/magazine{
-	pixel_x = 9;
-	pixel_y = 12
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
-/obj/item/storage/pouch/magazine{
-	pixel_y = 5;
-	pixel_x = -2
-	},
-/obj/item/storage/pouch/magazine,
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/carpet,
+/area/badayaga/inside_underground/dorms/groundside)
 "jp" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -6119,12 +5976,7 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "jr" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/tools/pfc{
-	pixel_y = 12;
-	pixel_x = 4
-	},
-/obj/item/storage/pouch/tools/pfc,
+/obj/structure/surface/table/almayer,
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "js" = (
@@ -6142,15 +5994,9 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "jt" = (
-/obj/structure/surface/table/reinforced/prison{
-	pixel_y = -1
-	},
-/obj/structure/machinery/computer/emails{
-	dir = 8;
-	pixel_y = 5
-	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/mess/groundside)
+/obj/structure/noticeboard,
+/turf/closed/wall/rock,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "ju" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -6383,14 +6229,13 @@
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
 "jK" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = 8
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/gun_rack/m16{
+	pixel_y = 17;
+	can_block_movement = 0
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/tech4{
-	pixel_x = -7
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "jL" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -6418,20 +6263,11 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "jN" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
-	},
-/obj/structure/girder/reinforced,
-/turf/open/gm/dirt2,
-/area/badayaga/outside/groundside)
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "jO" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -6655,12 +6491,26 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "kl" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 8
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/structure/bed{
+	can_buckle = 0;
+	desc = "A lightweight support lattice.";
+	icon = 'icons/obj/structures/structures.dmi';
+	icon_state = "latticefull";
+	layer = 2.1;
+	name = "lattice"
+	},
+/obj/structure/toilet{
+	pixel_y = -1
+	},
+/obj/structure/curtain/open/shower{
+	pixel_y = 0;
+	pixel_x = 0
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/dorms/groundside)
 "km" = (
 /obj/structure/machinery/light/double{
 	dir = 8;
@@ -6675,14 +6525,38 @@
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/offices/groundside)
 "kn" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/medic2{
-	pixel_x = -7
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/head/cmcap/khaki{
+	pixel_x = -5;
+	pixel_y = -5
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead1{
-	pixel_x = 8
+/obj/item/clothing/head/cmcap/khaki{
+	pixel_x = -5
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/clothing/head/cmcap/khaki{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/cmcap/khaki/snow{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/obj/item/clothing/head/cmcap/khaki/snow{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/clothing/head/cmcap/khaki/snow{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "ko" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 1
@@ -6719,23 +6593,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood_broken3,
 /area/badayaga/inside/groundside)
-"ks" = (
-/obj/structure/bed,
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
-	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
-	},
-/obj/effect/landmark/start/marine/tl/uacg,
-/obj/effect/landmark/start/marine/specialist/ai/uacg,
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
 "kt" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/vehicle_roof/pizza_van,
@@ -6774,20 +6631,6 @@
 	},
 /turf/open/floor/plating/wood_broken2,
 /area/badayaga/outside/groundside)
-"ky" = (
-/obj/structure/gun_rack/flamer/unloaded{
-	pixel_x = -6;
-	pixel_y = -13
-	},
-/turf/closed/wall/hangar,
-/area/badayaga/inside_underground/platoonarmory/groundside)
-"kz" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	req_access = list();
-	req_one_access = list()
-	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "kA" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/vehicle_roof/pizza_van,
@@ -6991,29 +6834,12 @@
 /turf/open/floor/plating/wood_broken6,
 /area/badayaga/outside/groundside)
 "kR" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/shotgun{
-	pixel_y = -5;
-	pixel_x = -4
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 3
 	},
-/obj/item/storage/pouch/shotgun{
-	pixel_y = 17;
-	pixel_x = -6
-	},
-/obj/item/storage/pouch/shotgun{
-	pixel_y = 13;
-	pixel_x = 9
-	},
-/obj/item/storage/pouch/shotgun{
-	pixel_y = 9;
-	pixel_x = -5
-	},
-/obj/item/storage/pouch/shotgun{
-	pixel_y = 5;
-	pixel_x = 7
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/plating/wood_broken5,
+/area/badayaga/inside_underground/dorms/groundside)
 "kS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/kutjevo/smooth{
@@ -7238,18 +7064,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/badayaga/outside/groundside)
-"lj" = (
-/obj/structure/sign/poster/safety{
-	pixel_y = 34;
-	pixel_x = -7
-	},
-/obj/structure/sign/poster/hunk{
-	pixel_y = 37;
-	pixel_x = 13
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_broken7,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "lk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform_decoration/kutjevo/smooth{
@@ -7376,6 +7190,30 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
+"lv" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 8;
+	pixel_y = 15
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 2;
+	pixel_y = 13
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -9;
+	pixel_y = 8
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "lw" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer_hull,
@@ -7701,17 +7539,6 @@
 /obj/item/ammo_box/magazine/m20a/heap,
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
-"lY" = (
-/obj/structure/closet/secure_closet/guncabinet{
-	pixel_x = -4
-	},
-/obj/item/weapon/gun/rifle/xm51/gilded/withstock,
-/obj/item/ammo_magazine/rifle/xm51,
-/obj/item/ammo_magazine/rifle/xm51,
-/obj/item/ammo_magazine/rifle/xm51,
-/obj/item/ammo_magazine/rifle/xm51,
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "lZ" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -7796,15 +7623,11 @@
 /turf/open/floor/plating/wood_broken4,
 /area/badayaga/outside/groundside)
 "mh" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/gunner1/security{
-	pixel_x = -8;
-	pixel_y = -2
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead1/fires{
-	pixel_x = 7;
-	pixel_y = -2
-	},
-/turf/open/floor/carpet,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/bare_catwalk,
 /area/badayaga/inside_underground/dorms/groundside)
 "mi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -7815,11 +7638,13 @@
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "mj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/turf/open/floor/carpet,
+/area/badayaga/inside_underground/dorms/groundside)
 "mk" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
 	dir = 4
@@ -7927,20 +7752,36 @@
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/dorms/groundside)
 "ms" = (
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader{
-	pixel_x = -7
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/tool/candle,
+/obj/item/tool/lighter{
+	pixel_y = 12;
+	pixel_x = 6
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
-"mt" = (
-/obj/structure/closet/secure_closet/marine_personal/rifleman{
-	pixel_x = 8
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/triagemedic1{
-	pixel_x = -7
-	},
-/turf/open/asphalt/cement_darkened,
+/turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
+"mt" = (
+/obj/structure/surface/table/reinforced/prison{
+	pixel_y = -1
+	},
+/obj/item/paper_bin/uscm{
+	pixel_y = 6;
+	pixel_x = 10
+	},
+/obj/item/tool/pen/clicky{
+	pixel_y = 1;
+	pixel_x = 7
+	},
+/obj/item/tool/hand_labeler{
+	pixel_y = 7;
+	pixel_x = -2
+	},
+/obj/item/storage/fancy/cigarettes/laika{
+	pixel_y = 3;
+	pixel_x = -10
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "mu" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -7980,22 +7821,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
-"mw" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/suit/armor/vest/pilot{
-	pixel_y = 8;
-	pixel_x = -3
-	},
-/obj/item/clothing/suit/armor/vest/pilot{
-	pixel_y = 5;
-	pixel_x = -4
-	},
-/obj/item/clothing/suit/armor/vest/pilot{
-	pixel_x = 2;
-	pixel_y = 1
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "mx" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -8259,15 +8084,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"mT" = (
-/obj/structure/machinery/light/double{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
 "mU" = (
 /turf/open/floor/wood/wood_broken7,
 /area/badayaga/inside_underground/platoonarmory/groundside)
@@ -8346,10 +8162,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"nb" = (
-/obj/structure/bed/sofa/pews,
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "nc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/cobweb,
@@ -8382,18 +8194,27 @@
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
 "ng" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/sling{
-	pixel_x = 8;
-	pixel_y = 11
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
 	},
-/obj/item/storage/pouch/sling{
-	pixel_y = 5;
-	pixel_x = -6
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
 	},
-/obj/item/storage/pouch/sling,
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/structure/largecrate/random/barrel/red{
+	layer = 3.4;
+	pixel_x = -7
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "nh" = (
 /obj/structure/bed/stool{
 	pixel_y = 11;
@@ -8408,14 +8229,28 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood_broken5,
 /area/badayaga/inside/groundside)
-"nj" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
 "nk" = (
-/turf/closed/wall/wood,
-/area/badayaga/inside/groundside)
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/clothing/mask/tornscarf/snow{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/item/clothing/under/colonist/boilersuit/green{
+	pixel_y = -3
+	},
+/obj/item/clothing/mask/surgical{
+	pixel_y = 8;
+	pixel_x = -2
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms/groundside)
 "nl" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -8459,6 +8294,23 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground/offices/groundside)
 "np" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/loadout/HG45_civilian_loadout{
+	pixel_x = -1;
+	pixel_y = 9
+	},
+/obj/item/storage/box/loadout/HG45_civilian_loadout{
+	pixel_x = -4;
+	pixel_y = 15
+	},
+/obj/item/storage/box/loadout/Spearhead_loadout,
+/obj/item/storage/box/loadout/Spearhead_loadout{
+	pixel_y = 7;
+	pixel_x = 6
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
+"nq" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
 	layer = 3.04
@@ -8470,17 +8322,8 @@
 	do_not_adjust = 1
 	},
 /obj/structure/girder/reinforced,
-/turf/open/gm/dirt3,
+/turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
-"nq" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/etool{
-	pixel_y = 9;
-	pixel_x = 8
-	},
-/obj/item/storage/pouch/etool,
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "nr" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -8500,24 +8343,18 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "nt" = (
-/obj/structure/machinery/light/double{
-	dir = 4;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
 	},
-/obj/structure/surface/rack,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/mask/tornscarf/snow{
-	pixel_x = 5;
-	pixel_y = 12
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
-/obj/item/clothing/under/colonist/boilersuit/green{
-	pixel_y = -3
-	},
-/obj/item/clothing/mask/surgical{
-	pixel_y = 8;
-	pixel_x = -2
+/obj/structure/sign/poster/art{
+	pixel_x = 23;
+	pixel_y = 11
 	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
@@ -8556,13 +8393,12 @@
 /turf/open/floor/plating/wood_broken2,
 /area/badayaga/outside/groundside)
 "ny" = (
-/obj/structure/machinery/door/airlock/almayer/secure/autoname{
-	dir = 2;
-	req_access = list();
-	req_one_access = list()
+/obj/structure/gun_rack/m39/unloaded{
+	pixel_y = 17;
+	can_block_movement = 0
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/mess/groundside)
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "nz" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -8629,13 +8465,34 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
-"nF" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.4
+"nE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_x = -4;
+	pixel_y = 14
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_y = 5;
+	pixel_x = -5
+	},
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_x = 1;
+	pixel_y = 13
+	},
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_y = 9;
+	pixel_x = -5
+	},
+/obj/item/storage/box/loadout/M9_loadout{
+	pixel_y = 18
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "nG" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/plating,
@@ -8681,55 +8538,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/badayaga/inside_underground/command_rooms/groundside)
-"nM" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 8;
-	pixel_y = 9
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 5;
-	pixel_y = -2
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 2;
-	pixel_y = 5
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = -2;
-	pixel_y = 6
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/clothing/mask/gas/military,
-/obj/item/clothing/mask/gas/military{
-	pixel_x = -5;
-	pixel_y = 3
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 4;
-	pixel_y = 9
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/obj/item/clothing/mask/gas/military{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "nN" = (
 /obj/structure/bed/roller/hospital_empty{
 	dir = 8
@@ -8917,15 +8725,28 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood_broken6,
 /area/badayaga/outside/groundside)
-"od" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/gunner1{
-	pixel_x = -7
+"oe" = (
+/obj/structure/surface/table/reinforced/prison{
+	pixel_y = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/senlead1{
-	pixel_x = 8
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 2
 	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/storage/fancy/cigarettes/arcturian_ace{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/storage/fancy/cigarettes/arcturian_ace{
+	pixel_y = 4;
+	pixel_x = 2
+	},
+/obj/item/toy/deck/uno{
+	pixel_y = 8;
+	pixel_x = -11
+	},
+/turf/open/floor/carpet,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "of" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9110,28 +8931,14 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "ox" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/m60{
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/obj/item/ammo_magazine/m60{
-	pixel_x = 7;
-	pixel_y = 8
-	},
-/obj/item/ammo_magazine/m60{
-	pixel_x = -4;
-	pixel_y = 5
-	},
-/obj/item/ammo_magazine/m60{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/ammo_box/magazine/m41ae2/heap{
-	pixel_y = 14
+/obj/structure/bed/sofa/pews,
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
 /turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/area/badayaga/inside_underground/dorms/groundside)
 "oz" = (
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground)
@@ -9162,12 +8969,13 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "oC" = (
-/obj/structure/bed/chair/wood/normal{
-	pixel_y = 4;
-	pixel_x = -19
+/obj/structure/machinery/door/airlock/almayer/secure/autoname{
+	dir = 2;
+	req_access = list();
+	req_one_access = list()
 	},
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/mess/groundside)
 "oE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -9378,19 +9186,17 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "pe" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4;
-	layer = 3.04
+/obj/structure/sign/poster/safety{
+	pixel_y = 34;
+	pixel_x = -7
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 4;
-	layer = 3.08;
-	pixel_x = 9;
-	do_not_adjust = 1
+/obj/structure/sign/poster/hunk{
+	pixel_y = 37;
+	pixel_x = 13
 	},
-/obj/structure/girder/reinforced,
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/wood_broken7,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "pf" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -9933,16 +9739,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "pX" = (
-/obj/structure/surface/table/reinforced/prison{
-	pixel_y = -1
-	},
-/obj/structure/machinery/faxmachine/uscm,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 8;
-	pixel_y = 17
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
 /turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/area/badayaga/inside_underground/mess/groundside)
 "pY" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -10183,10 +9985,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating,
 /area/badayaga/inside/groundside)
-"qp" = (
-/obj/structure/bed/sofa/pews,
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
 "qr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -10483,41 +10281,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "qQ" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/helmetgarb/eye_drops{
-	pixel_y = 15;
-	pixel_x = -9
+/obj/structure/sign/poster/hero/voteno{
+	pixel_y = 33;
+	pixel_x = 7
 	},
-/obj/item/prop/helmetgarb/eye_drops{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/item/storage/fancy/cigarettes{
-	pixel_x = 4;
-	pixel_y = 11
-	},
-/obj/item/storage/fancy/cigarettes{
-	pixel_y = 5;
-	pixel_x = 2
-	},
-/obj/item/storage/fancy/cigarettes{
-	pixel_x = -4;
-	pixel_y = 2
-	},
-/obj/item/storage/fancy/cigarettes,
-/obj/item/storage/fancy/cigarettes{
-	pixel_x = 4
-	},
-/obj/item/storage/fancy/cigarettes,
-/obj/item/storage/fancy/cigarettes{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/storage/fancy/cigarettes,
-/obj/item/storage/fancy/cigarettes,
-/obj/item/storage/fancy/cigarettes,
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/dorms/groundside)
 "qR" = (
 /obj/structure/bed/chair/office,
 /turf/open/gm/dirt2,
@@ -10940,19 +10709,37 @@
 /area/badayaga/inside/groundside)
 "rF" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/loadout/M4A3_custom_loadout{
-	pixel_x = 4;
-	pixel_y = 12
+/obj/item/storage/pouch/explosive{
+	pixel_x = -7;
+	pixel_y = 20
 	},
-/obj/item/storage/box/loadout/M4A3_custom_loadout{
-	pixel_y = 2;
-	pixel_x = -1
+/obj/item/storage/pouch/explosive{
+	pixel_y = 14;
+	pixel_x = 6
 	},
-/obj/item/storage/box/loadout/M4A3_custom_loadout{
-	pixel_y = 9;
-	pixel_x = -4
+/obj/item/storage/pouch/explosive{
+	pixel_y = 8
 	},
-/turf/open/asphalt/cement_darkened,
+/obj/item/tool/lighter/zippo/blue{
+	pixel_x = -10
+	},
+/obj/item/tool/lighter/zippo/blue{
+	pixel_x = -5;
+	pixel_y = -7
+	},
+/obj/item/tool/lighter/zippo/executive{
+	pixel_y = 1;
+	pixel_x = 7
+	},
+/obj/item/tool/lighter/zippo{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/obj/item/tool/lighter/zippo{
+	pixel_x = 2;
+	pixel_y = -9
+	},
+/turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "rI" = (
 /obj/structure/barricade/wooden{
@@ -11014,15 +10801,6 @@
 	},
 /turf/open/floor/carpet,
 /area/badayaga/inside_underground/offices/groundside)
-"rR" = (
-/obj/structure/closet/secure_closet/marine_personal/smartgunner{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/squad_leader{
-	pixel_x = 8
-	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
 "rS" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -11128,9 +10906,9 @@
 /turf/open/floor/plating/wood_broken5,
 /area/badayaga/inside/groundside)
 "sa" = (
-/obj/item/lightstick/red/spoke/planted,
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/machinery/photocopier,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "sb" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -11173,13 +10951,16 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "sd" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/gunner2{
-	pixel_x = 8
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead3{
-	pixel_x = -7
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
 	},
-/turf/open/asphalt/cement_darkened,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet,
 /area/badayaga/inside_underground/dorms/groundside)
 "sf" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
@@ -11281,39 +11062,16 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "sq" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/explosive{
-	pixel_x = -7;
-	pixel_y = 20
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -15
 	},
-/obj/item/storage/pouch/explosive{
-	pixel_y = 14;
-	pixel_x = 6
+/obj/structure/mirror{
+	pixel_x = -30;
+	pixel_y = -2
 	},
-/obj/item/storage/pouch/explosive{
-	pixel_y = 8
-	},
-/obj/item/tool/lighter/zippo/blue{
-	pixel_x = -10
-	},
-/obj/item/tool/lighter/zippo/blue{
-	pixel_x = -5;
-	pixel_y = -7
-	},
-/obj/item/tool/lighter/zippo/executive{
-	pixel_y = 1;
-	pixel_x = 7
-	},
-/obj/item/tool/lighter/zippo{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/tool/lighter/zippo{
-	pixel_x = 2;
-	pixel_y = -9
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/mess/groundside)
 "sr" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -11729,16 +11487,13 @@
 /turf/open/floor/plating/wood_broken6,
 /area/badayaga/inside/groundside)
 "tb" = (
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet,
+/turf/open/floor/plating/bare_catwalk,
 /area/badayaga/inside_underground/dorms/groundside)
 "tc" = (
 /obj/structure/barricade/wooden{
@@ -11836,10 +11591,10 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "tm" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/item/storage/belt/medical/full/with_suture_and_graft,
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/structure/bed/chair/office/dark,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "tn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/catclock{
@@ -12063,17 +11818,24 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "tI" = (
-/obj/structure/surface/table/reinforced/prison,
-/obj/structure/machinery/computer/med_data/laptop{
+/obj/structure/platform/kutjevo/smooth{
 	dir = 4;
-	pixel_y = 3
+	layer = 3.04
 	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	pixel_x = -1
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	layer = 3.08;
+	pixel_x = 9;
+	do_not_adjust = 1
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/red{
+	layer = 3.4;
+	pixel_x = -7
+	},
+/obj/effect/vehicle_roof/pizza_van,
+/turf/open/gm/dirt3,
+/area/badayaga/inside/groundside)
 "tJ" = (
 /obj/structure/surface/table/almayer,
 /obj/item/storage/belt/utility/full{
@@ -12308,6 +12070,24 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
+"uj" = (
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
+	},
+/obj/structure/surface/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/pizzabox/margherita{
+	pixel_y = 7
+	},
+/obj/item/clothing/head/beret/cm/white/civilian{
+	pixel_y = 8;
+	pixel_x = -9
+	},
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms/groundside)
 "uk" = (
 /obj/structure/barricade/wooden{
 	dir = 1;
@@ -12443,12 +12223,21 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "uv" = (
-/obj/structure/sign/poster/hero/voteno{
-	pixel_y = 33;
-	pixel_x = 7
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/medical/groundside)
 "uw" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -12703,46 +12492,30 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "uR" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/marksman1{
-	pixel_x = -7
+/obj/structure/bed,
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
+	pixel_y = 13
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead2{
-	pixel_x = 8
+/obj/item/bedsheet/brown{
+	layer = 3.4
+	},
+/obj/structure/sign/poster/blacklight{
+	pixel_x = 25;
+	pixel_y = 18
 	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
 "uS" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/head/cmcap/khaki{
-	pixel_x = -5;
-	pixel_y = -5
-	},
-/obj/item/clothing/head/cmcap/khaki{
-	pixel_x = -5
-	},
-/obj/item/clothing/head/cmcap/khaki{
-	pixel_x = -5;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/cmcap/khaki/snow{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/obj/item/clothing/head/cmcap/khaki/snow{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/obj/item/clothing/head/cmcap/khaki/snow{
-	pixel_x = 6;
-	pixel_y = 7
-	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/double{
 	dir = 8;
 	light_color = "#e7c0a4";
 	light_power = 0.8;
 	light_range = 5
 	},
-/turf/open/floor/plating,
+/turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "uT" = (
 /obj/structure/bed{
@@ -12820,6 +12593,15 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
+"uZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door/airlock/almayer/secure/autoname{
+	dir = 2;
+	req_access = list();
+	req_one_access = list()
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "va" = (
 /obj/structure/bed{
 	can_buckle = 0;
@@ -12918,14 +12700,31 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground/offices/groundside)
 "vo" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/prop/magazine/boots/n067{
-	pixel_x = -3;
-	pixel_y = 7
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/prop/helmetgarb/riot_shield{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/prop/helmetgarb/riot_shield{
+	pixel_y = 6;
+	pixel_x = -3
+	},
+/obj/item/prop/helmetgarb/riot_shield{
+	pixel_x = 5;
+	pixel_y = 1
+	},
+/obj/item/prop/helmetgarb/riot_shield{
+	pixel_y = -2;
+	pixel_x = -3
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "vp" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -13555,41 +13354,15 @@
 /area/badayaga/outside/groundside)
 "wy" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5;
-	pixel_y = 8
+/obj/item/storage/pouch/sling{
+	pixel_x = 8;
+	pixel_y = 11
 	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5;
-	pixel_y = 4
+/obj/item/storage/pouch/sling{
+	pixel_y = 5;
+	pixel_x = -6
 	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5;
-	pixel_y = -4
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5;
-	pixel_y = -8
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
-	pixel_x = -5;
-	pixel_y = -12
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
-	pixel_x = 7;
-	pixel_y = 5
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
-	pixel_x = 7;
-	pixel_y = -1
-	},
+/obj/item/storage/pouch/sling,
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "wz" = (
@@ -13956,9 +13729,11 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "xq" = (
-/obj/item/lightstick/red/spoke/planted,
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/mess/groundside)
 "xr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/rack,
@@ -14116,25 +13891,10 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "xE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 1
-	},
-/obj/structure/surface/table/woodentable/poor,
-/obj/item/toy/deck{
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/obj/item/ashtray/plastic{
-	icon_state = "ashtray_full_bl";
-	pixel_x = -8;
-	pixel_y = -2
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/belt/medical/full/with_suture_and_graft,
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/medical/groundside)
 "xF" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/girder/displaced{
@@ -14321,10 +14081,6 @@
 	},
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
-"xW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood/wood_broken2,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "xX" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -14631,10 +14387,6 @@
 	},
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
-"yw" = (
-/obj/effect/landmark/observer_start,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/dorms/groundside)
 "yx" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/bed{
@@ -14998,26 +14750,17 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "yV" = (
-/obj/structure/surface/table/reinforced/prison{
-	pixel_y = -1
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/magazine{
+	pixel_x = 9;
+	pixel_y = 12
 	},
-/obj/structure/machinery/light/small{
-	dir = 4;
-	pixel_x = 2
+/obj/item/storage/pouch/magazine{
+	pixel_y = 5;
+	pixel_x = -2
 	},
-/obj/item/storage/fancy/cigarettes/arcturian_ace{
-	pixel_x = 8;
-	pixel_y = 11
-	},
-/obj/item/storage/fancy/cigarettes/arcturian_ace{
-	pixel_y = 4;
-	pixel_x = 2
-	},
-/obj/item/toy/deck/uno{
-	pixel_y = 8;
-	pixel_x = -11
-	},
-/turf/open/floor/carpet,
+/obj/item/storage/pouch/magazine,
+/turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "yW" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -15358,21 +15101,26 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "zv" = (
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
-	},
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
-/obj/structure/machinery/light/small{
+/obj/structure/platform/kutjevo/smooth{
 	dir = 4;
-	pixel_x = -1
+	layer = 3.04
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/medical/groundside)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	layer = 3.08;
+	pixel_x = 9;
+	do_not_adjust = 1
+	},
+/obj/structure/barricade/wooden{
+	dir = 1;
+	pixel_y = 19;
+	layer = 4.22;
+	do_not_adjust = 1
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "zx" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
@@ -15414,15 +15162,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"zA" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle2{
-	pixel_x = 8
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
 "zB" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -15522,33 +15261,43 @@
 /area/badayaga/inside/groundside)
 "zL" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 1;
-	pixel_y = 1
+/obj/item/ammo_magazine/m2c{
+	pixel_x = 10;
+	pixel_y = 18
 	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = 6;
-	pixel_y = 10
+/obj/item/ammo_magazine/m2c{
+	pixel_x = 9;
+	pixel_y = 11
 	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = -3;
-	pixel_y = 5
-	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_x = -3
-	},
-/obj/item/storage/fancy/cigarettes/wypacket{
-	pixel_y = -5;
+/obj/item/ammo_magazine/m2c{
+	pixel_y = 17;
 	pixel_x = -5
 	},
-/turf/open/floor/plating,
+/obj/item/ammo_magazine/m2c{
+	pixel_y = 11;
+	pixel_x = -7
+	},
+/obj/item/ammo_magazine/m2c{
+	pixel_y = 6;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/m2c{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/ammo_magazine/m2c{
+	pixel_y = 1;
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/m2c{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/obj/item/ammo_magazine/m2c{
+	pixel_y = -1;
+	pixel_x = -4
+	},
+/turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "zM" = (
 /obj/structure/girder/displaced,
@@ -15563,18 +15312,11 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "zO" = (
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 1;
-	pixel_y = 1
-	},
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/l42a/ap{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/space_heater{
 	pixel_y = 10
 	},
-/obj/item/ammo_box/magazine/l42a/ap,
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "zP" = (
@@ -15643,28 +15385,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
-/area/badayaga/outside/groundside)
-"zY" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
-	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
-	},
-/obj/structure/largecrate/random/barrel/brown{
-	pixel_x = 7;
-	pixel_y = 4
-	},
-/obj/structure/largecrate/random/barrel/red{
-	layer = 3.4;
-	pixel_x = -7
-	},
-/turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "zZ" = (
 /obj/structure/bed/roller/hospital_empty/bigrollerbloodempty,
@@ -15869,21 +15589,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "As" = (
-/obj/structure/mirror{
-	pixel_y = 35;
-	pixel_x = -1
-	},
-/obj/structure/sink{
-	pixel_y = 24;
-	layer = 3.1
-	},
 /obj/structure/machinery/light/small{
 	dir = 4;
-	pixel_x = -1
+	pixel_x = 3
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/area/badayaga/inside_underground/dorms/groundside)
 "At" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -16025,12 +15736,16 @@
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/badayaga/outside/groundside)
 "AG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/backpack/marine/satchel/rto/army{
+	pixel_y = 17;
+	pixel_x = -5
+	},
+/obj/item/storage/backpack/marine/satchel/rto/army{
+	pixel_y = 7
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "AH" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /obj/effect/vehicle_roof/pizza_van,
@@ -16131,13 +15846,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
-"AT" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	pixel_x = 3
-	},
-/turf/open/floor/carpet,
-/area/badayaga/inside_underground/dorms/groundside)
 "AU" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -16181,10 +15889,9 @@
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/badayaga/outside/groundside)
 "AX" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/senlead1/chaplain{
-	pixel_x = 11
-	},
-/turf/open/asphalt/cement_darkened,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet,
 /area/badayaga/inside_underground/dorms/groundside)
 "AY" = (
 /obj/structure/largecrate/random/mini/med{
@@ -16413,14 +16120,40 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "Bm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/helmetgarb/eye_drops{
+	pixel_y = 15;
+	pixel_x = -9
 	},
-/turf/open/asphalt/cement_darkened,
+/obj/item/prop/helmetgarb/eye_drops{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/obj/item/storage/fancy/cigarettes{
+	pixel_x = 4;
+	pixel_y = 11
+	},
+/obj/item/storage/fancy/cigarettes{
+	pixel_y = 5;
+	pixel_x = 2
+	},
+/obj/item/storage/fancy/cigarettes{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/fancy/cigarettes{
+	pixel_x = 4
+	},
+/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/fancy/cigarettes{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/fancy/cigarettes,
+/obj/item/storage/fancy/cigarettes,
+/turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "Bn" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -16725,12 +16458,10 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "BQ" = (
-/obj/structure/gun_rack/m39/unloaded{
-	pixel_y = 17;
-	can_block_movement = 0
-	},
+/obj/structure/bed/sofa/pews,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/area/badayaga/inside_underground/dorms/groundside)
 "BS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/bed/chair/office/dark{
@@ -16844,12 +16575,13 @@
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
 "Ce" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m16{
-	pixel_y = 17;
-	can_block_movement = 0
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/tools/pfc{
+	pixel_y = 12;
+	pixel_x = 4
 	},
-/turf/open/floor/plating/wood,
+/obj/item/storage/pouch/tools/pfc,
+/turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "Cf" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -17245,19 +16977,28 @@
 /turf/open/floor/plating/wood_broken4,
 /area/badayaga/inside/groundside)
 "CH" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/hpr/army{
-	pixel_y = 16
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
 	},
-/obj/item/storage/box/guncase/heavy/hpr/army{
-	pixel_y = 5
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
 	},
-/obj/item/storage/box/guncase/heavy/m41a{
-	pixel_y = 14;
-	pixel_x = 1
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = 7;
+	pixel_y = 4
 	},
-/turf/open/floor/wood/wood_broken4,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/structure/largecrate/random/barrel/red{
+	layer = 3.4;
+	pixel_x = -7
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "CI" = (
 /turf/open/floor/plating/bare_catwalk,
 /area/badayaga/inside_underground/platoonarmory/groundside)
@@ -17534,14 +17275,16 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "Dn" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1/security{
-	pixel_x = -8
+/obj/structure/closet/secure_closet/guncabinet{
+	pixel_x = -4
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1/security{
-	pixel_x = 7
-	},
-/turf/open/floor/plating/wood_broken5,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/weapon/gun/rifle/xm51/gilded/withstock,
+/obj/item/ammo_magazine/rifle/xm51,
+/obj/item/ammo_magazine/rifle/xm51,
+/obj/item/ammo_magazine/rifle/xm51,
+/obj/item/ammo_magazine/rifle/xm51,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Do" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -17635,14 +17378,28 @@
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/engineering/groundside)
 "Dy" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -8
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/suit/storage/webbing{
+	pixel_x = 4;
+	pixel_y = 9
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle4{
-	pixel_x = 7
+/obj/item/clothing/suit/storage/webbing{
+	pixel_y = 3;
+	pixel_x = -3
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/clothing/suit/storage/webbing{
+	pixel_x = 4
+	},
+/obj/item/clothing/suit/storage/webbing{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/clothing/suit/storage/webbing{
+	pixel_x = -1;
+	pixel_y = 9
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Dz" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -17871,14 +17628,21 @@
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/engineering/groundside)
 "DP" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -7
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle4{
-	pixel_x = 8
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/girder/reinforced,
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "DQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/platform/kutjevo/smooth{
@@ -18046,13 +17810,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
-"Ef" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	pixel_x = 3
-	},
-/turf/open/floor/plating/wood_broken5,
-/area/badayaga/inside_underground/dorms/groundside)
 "Eg" = (
 /obj/structure/bed/chair/wood/normal{
 	dir = 8;
@@ -18328,6 +18085,26 @@
 	},
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
+"EG" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
+	},
+/obj/structure/barricade/wooden{
+	dir = 1;
+	pixel_y = 19;
+	layer = 4.22;
+	do_not_adjust = 1
+	},
+/turf/open/floor/plating/wood,
+/area/badayaga/outside/groundside)
 "EH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -18420,13 +18197,14 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "EO" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/tech1{
-	pixel_x = -7
+/obj/structure/bed/sofa/pews,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/tech3{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
+/turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
 "EP" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -18519,28 +18297,14 @@
 /turf/open/floor/plating,
 /area/badayaga/inside/groundside)
 "EU" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/etool{
+	pixel_y = 9;
+	pixel_x = 8
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/random/barrel/brown{
-	pixel_x = 7;
-	pixel_y = 4
-	},
-/obj/structure/largecrate/random/barrel/red{
-	layer = 3.4;
-	pixel_x = -7
-	},
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/obj/item/storage/pouch/etool,
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "EV" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -18745,15 +18509,6 @@
 	},
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/badayaga/outside/groundside)
-"Fn" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle4{
-	pixel_x = 8
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = -7
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "Fo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -18895,14 +18650,19 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "FA" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = -7
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/hpr/army{
+	pixel_y = 16
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle2{
-	pixel_x = 8
+/obj/item/storage/box/guncase/heavy/hpr/army{
+	pixel_y = 5
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/storage/box/guncase/heavy/m41a{
+	pixel_y = 14;
+	pixel_x = 1
+	},
+/turf/open/floor/wood/wood_broken4,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "FB" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -18960,9 +18720,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
-"FG" = (
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/dorms/groundside)
 "FI" = (
 /obj/structure/flora/tree/dead/tree_6,
 /turf/open/auto_turf/snow/brown_base/layer3,
@@ -19169,26 +18926,19 @@
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "Gc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/suit/storage/webbing{
+/obj/item/storage/box/loadout/M4A3_custom_loadout{
 	pixel_x = 4;
-	pixel_y = 9
+	pixel_y = 12
 	},
-/obj/item/clothing/suit/storage/webbing{
-	pixel_y = 3;
-	pixel_x = -3
+/obj/item/storage/box/loadout/M4A3_custom_loadout{
+	pixel_y = 2;
+	pixel_x = -1
 	},
-/obj/item/clothing/suit/storage/webbing{
-	pixel_x = 4
+/obj/item/storage/box/loadout/M4A3_custom_loadout{
+	pixel_y = 9;
+	pixel_x = -4
 	},
-/obj/item/clothing/suit/storage/webbing{
-	pixel_x = -4;
-	pixel_y = -2
-	},
-/obj/item/clothing/suit/storage/webbing{
-	pixel_x = -1;
-	pixel_y = 9
-	},
-/turf/open/floor/plating,
+/turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "Gd" = (
 /obj/structure/platform/kutjevo/smooth,
@@ -19333,8 +19083,23 @@
 /turf/closed/wall/hangar,
 /area/badayaga/inside_underground/command_rooms/groundside)
 "Gp" = (
-/obj/structure/bed/sofa/pews,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/toy/deck{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = -8;
+	pixel_y = -2
+	},
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
 "Gr" = (
@@ -19467,11 +19232,17 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "GE" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/senlead1/armorer{
-	pixel_x = -7
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
 	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/area/badayaga/inside_underground/dorms/groundside)
 "GF" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -19785,6 +19556,21 @@
 /obj/structure/girder/reinforced,
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
+"Hg" = (
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1;
+	pixel_y = 1
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/l42a/ap{
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/l42a/ap,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Hh" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -19942,17 +19728,9 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"Hu" = (
-/turf/open/floor/plating/wood_broken5,
-/area/badayaga/inside_underground/dorms/groundside)
 "Hx" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/marksman2{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead2{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
 "Hy" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -19991,15 +19769,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
-"HB" = (
-/obj/structure/bed/sofa/pews,
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
 "HC" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -20104,27 +19873,9 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "HN" = (
-/obj/structure/surface/table/reinforced/prison{
-	pixel_y = -1
-	},
-/obj/item/paper_bin/uscm{
-	pixel_y = 6;
-	pixel_x = 10
-	},
-/obj/item/tool/pen/clicky{
-	pixel_y = 1;
-	pixel_x = 7
-	},
-/obj/item/tool/hand_labeler{
-	pixel_y = 7;
-	pixel_x = -2
-	},
-/obj/item/storage/fancy/cigarettes/laika{
-	pixel_y = 3;
-	pixel_x = -10
-	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/dorms/groundside)
 "HP" = (
 /obj/structure/bed/stool{
 	pixel_y = 17;
@@ -20376,26 +20127,29 @@
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground)
 "In" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4;
-	layer = 3.04
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/shotgun{
+	pixel_y = -5;
+	pixel_x = -4
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/barricade/sandbags/wired{
-	dir = 4;
-	layer = 3.08;
-	pixel_x = 9;
-	do_not_adjust = 1
+/obj/item/storage/pouch/shotgun{
+	pixel_y = 17;
+	pixel_x = -6
 	},
-/obj/structure/barricade/wooden{
-	dir = 1;
-	pixel_y = 19;
-	layer = 4.22;
-	do_not_adjust = 1
+/obj/item/storage/pouch/shotgun{
+	pixel_y = 13;
+	pixel_x = 9
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/obj/item/storage/pouch/shotgun{
+	pixel_y = 9;
+	pixel_x = -5
+	},
+/obj/item/storage/pouch/shotgun{
+	pixel_y = 5;
+	pixel_x = 7
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Ip" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -20479,13 +20233,27 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "It" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/space_heater{
-	pixel_y = 10
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
 	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
+	},
+/obj/structure/largecrate/random/barrel/black{
+	pixel_x = -9
+	},
+/obj/structure/largecrate/random/barrel/brown{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/effect/vehicle_roof/pizza_van,
+/turf/open/gm/dirt2,
+/area/badayaga/inside/groundside)
 "Iu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -20528,25 +20296,44 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "Iy" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5;
+	pixel_y = 8
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5;
+	pixel_y = 4
 	},
-/obj/structure/barricade/wooden{
-	dir = 1;
-	pixel_y = 19;
-	layer = 4.22;
-	do_not_adjust = 1
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5
 	},
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5;
+	pixel_y = -8
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot{
+	pixel_x = -5;
+	pixel_y = -12
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/item/clothing/head/helmet/marine/veteran/ua_riot/black{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Iz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood/wood_broken4,
@@ -20919,12 +20706,31 @@
 /area/badayaga/outside/groundside)
 "Jj" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/backpack/marine/satchel/rto/army{
-	pixel_y = 17;
-	pixel_x = -5
+/obj/structure/machinery/light/double{
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5;
+	dir = 1;
+	pixel_y = 1
 	},
-/obj/item/storage/backpack/marine/satchel/rto/army{
-	pixel_y = 7
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_x = -3
+	},
+/obj/item/storage/fancy/cigarettes/wypacket{
+	pixel_y = -5;
+	pixel_x = -5
 	},
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
@@ -21279,14 +21085,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"JS" = (
-/obj/structure/machinery/door/airlock/almayer/secure/autoname{
-	dir = 2;
-	req_access = list();
-	req_one_access = list()
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
 "JT" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -21344,27 +21142,12 @@
 	},
 /area/space)
 "JX" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
+/obj/structure/gun_rack/m20a/unloaded{
+	pixel_y = 17;
+	can_block_movement = 0
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
-	},
-/obj/structure/largecrate/random/barrel/black{
-	pixel_x = -9
-	},
-/obj/structure/largecrate/random/barrel/brown{
-	pixel_x = 7;
-	pixel_y = 4
-	},
-/obj/effect/vehicle_roof/pizza_van,
-/turf/open/gm/dirt2,
-/area/badayaga/inside/groundside)
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "JY" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -21886,25 +21669,7 @@
 /turf/open/floor/almayer_hull,
 /area/badayaga/inside_underground/platoonprep/groundside)
 "KS" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/obj/structure/bed{
-	can_buckle = 0;
-	desc = "A lightweight support lattice.";
-	icon = 'icons/obj/structures/structures.dmi';
-	icon_state = "latticefull";
-	layer = 2.1;
-	name = "lattice"
-	},
-/obj/structure/toilet{
-	pixel_y = -1
-	},
-/obj/structure/curtain/open/shower{
-	pixel_y = 0;
-	pixel_x = 0
-	},
-/turf/open/floor/plating,
+/turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
 "KT" = (
 /turf/open/floor/plating/bare_catwalk,
@@ -21988,21 +21753,25 @@
 /turf/open/asphalt/cement_sunbleached_darkened,
 /area/badayaga/inside_underground/command_rooms/groundside)
 "Ld" = (
-/obj/structure/bed,
-/obj/structure/bed{
-	buckling_y = 13;
-	layer = 3.5;
-	pixel_y = 13
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/misc/flares{
+	pixel_y = 18;
+	pixel_x = 9
 	},
-/obj/item/bedsheet/brown{
-	layer = 3.4
+/obj/item/ammo_box/magazine/misc/flares{
+	pixel_x = -6;
+	pixel_y = 12
 	},
-/obj/item/bedsheet/brown{
-	pixel_y = 13
+/obj/item/ammo_box/magazine/misc/flares{
+	pixel_y = 6;
+	pixel_x = 10
 	},
-/obj/effect/landmark/start/marine/engineer/uacg/mortar,
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/item/ammo_box/magazine/misc/flares{
+	pixel_y = -2;
+	pixel_x = -5
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Le" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -22037,11 +21806,20 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "Lg" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
 	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/mess/groundside)
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
+	},
+/obj/structure/girder/reinforced,
+/turf/open/gm/dirt2,
+/area/badayaga/outside/groundside)
 "Li" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -22205,15 +21983,8 @@
 /turf/open/floor/plating/wood_broken6,
 /area/badayaga/inside/groundside)
 "Ly" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/turf/open/floor/carpet,
+/obj/structure/bed/sofa/pews,
+/turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/dorms/groundside)
 "Lz" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
@@ -22360,6 +22131,21 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
+"LI" = (
+/obj/structure/platform/kutjevo/smooth{
+	dir = 8;
+	climb_delay = 1;
+	layer = 2.99
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	layer = 3.08;
+	pixel_x = -9;
+	do_not_adjust = 1
+	},
+/obj/structure/girder/reinforced,
+/turf/open/gm/dirt3,
+/area/badayaga/outside/groundside)
 "LL" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -23030,20 +22816,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "MR" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/general/large{
-	pixel_y = 19
+/obj/structure/machinery/light/small{
+	dir = 4;
+	pixel_x = 3
 	},
-/obj/item/storage/pouch/general/large{
-	pixel_y = 12;
-	pixel_x = 8
-	},
-/obj/item/storage/pouch/general/large{
-	pixel_y = 2;
-	pixel_x = 5
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/carpet,
+/area/badayaga/inside_underground/dorms/groundside)
 "MS" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -23106,11 +22884,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
-"Nb" = (
-/obj/structure/bed/chair/office/dark,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "Nc" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -23341,11 +23114,6 @@
 	},
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
-"Nt" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "Nu" = (
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/platoonarmory/groundside)
@@ -24874,15 +24642,12 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "Qh" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead1{
-	pixel_x = -7
+/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
+	req_access = list();
+	req_one_access = list()
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/medic1{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Qi" = (
 /obj/structure/barricade/wooden{
 	do_not_adjust = 1
@@ -25138,6 +24903,26 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
+"QF" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/pouch/flare{
+	pixel_x = -6;
+	pixel_y = 12
+	},
+/obj/item/storage/pouch/flare{
+	pixel_y = 12;
+	pixel_x = 7
+	},
+/obj/item/storage/pouch/flare{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/obj/item/storage/pouch/flare{
+	pixel_y = -2;
+	pixel_x = -4
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "QG" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -25321,31 +25106,9 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "QU" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/light/double{
-	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
-	},
-/obj/item/prop/helmetgarb/riot_shield{
-	pixel_y = 7;
-	pixel_x = 7
-	},
-/obj/item/prop/helmetgarb/riot_shield{
-	pixel_y = 6;
-	pixel_x = -3
-	},
-/obj/item/prop/helmetgarb/riot_shield{
-	pixel_x = 5;
-	pixel_y = 1
-	},
-/obj/item/prop/helmetgarb/riot_shield{
-	pixel_y = -2;
-	pixel_x = -3
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/dorms/groundside)
 "QV" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/m4a3{
@@ -25362,25 +25125,15 @@
 /turf/open/floor/plating,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "QX" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = -7
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/m60{
+	pixel_y = 19
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/tech2{
-	pixel_x = 8
+/obj/item/storage/box/guncase/heavy/m60{
+	pixel_y = 7
 	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/dorms/groundside)
-"QY" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -8;
-	pixel_y = -2
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead1/triage{
-	pixel_x = 7;
-	pixel_y = -2
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/floor/wood/ship,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "QZ" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/effect/vehicle_roof/pizza_van,
@@ -25431,13 +25184,8 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside_underground/command_rooms/groundside)
 "Ri" = (
-/obj/structure/machinery/door/airlock/almayer/secure/reinforced{
-	req_access = list();
-	req_one_access = list()
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/closed/wall/wood,
+/area/badayaga/inside/groundside)
 "Rm" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -25503,28 +25251,24 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "Rs" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/m60{
-	pixel_y = 19
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop{
+	dir = 4;
+	pixel_y = 3
 	},
-/obj/item/storage/box/guncase/heavy/m60{
-	pixel_y = 7
-	},
-/turf/open/floor/wood/ship,
-/area/badayaga/inside_underground/platoonarmory/groundside)
-"Rt" = (
-/obj/structure/machinery/light/double{
+/obj/structure/machinery/light/small{
 	dir = 8;
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5
+	pixel_x = -1
 	},
-/obj/structure/sign/poster/io{
-	pixel_x = -26;
-	pixel_y = 6
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/medical/groundside)
+"Rt" = (
+/obj/structure/gun_rack/m39/unloaded{
+	pixel_y = 17;
+	can_block_movement = 0
 	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
+/turf/open/asphalt/cement_darkened,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Ru" = (
 /obj/structure/platform_decoration/kutjevo/smooth,
 /obj/effect/decal/cleanable/dirt,
@@ -26136,6 +25880,55 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
+"Sn" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 5;
+	pixel_y = -2
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/clothing/mask/gas/military,
+/obj/item/clothing/mask/gas/military{
+	pixel_x = -5;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 6;
+	pixel_y = 2
+	},
+/obj/item/clothing/mask/gas/military{
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/turf/open/floor/plating,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Sp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -26465,15 +26258,6 @@
 	},
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"SW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/door/airlock/almayer/secure/autoname{
-	dir = 2;
-	req_access = list();
-	req_one_access = list()
-	},
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "SX" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -26760,13 +26544,8 @@
 /turf/open/floor/plating,
 /area/badayaga/inside/groundside)
 "Tq" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/marksman1{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/lead4{
-	pixel_x = 8
-	},
-/turf/open/floor/plating/bare_catwalk,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
 "Tr" = (
 /obj/structure/platform_decoration/kutjevo/smooth{
@@ -27110,15 +26889,8 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/badayaga/inside_underground/command_rooms/groundside)
 "TT" = (
-/obj/structure/surface/table/reinforced/prison{
-	pixel_y = -1
-	},
-/obj/structure/machinery/computer/emails{
-	dir = 1;
-	pixel_y = 4
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/plating/wood_broken5,
+/area/badayaga/inside_underground/dorms/groundside)
 "TU" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -27172,21 +26944,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/badayaga/outside/groundside)
-"Ua" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/clothing/under/colonist/boilersuit/khaki{
-	pixel_x = 9;
-	pixel_y = 6
-	},
-/obj/item/clothing/under/colonist/boilersuit/khaki{
-	pixel_x = 9;
-	pixel_y = 3
-	},
-/obj/item/clothing/under/colonist/boilersuit/khaki{
-	pixel_x = 9
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "Ub" = (
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood,
@@ -27692,11 +27449,10 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "UW" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -7
-	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle3{
-	pixel_x = 8
+/obj/structure/bed/chair/wood/normal{
+	dir = 1;
+	pixel_x = 11;
+	pixel_y = 14
 	},
 /turf/open/floor/carpet,
 /area/badayaga/inside_underground/dorms/groundside)
@@ -27849,12 +27605,13 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/inside/groundside)
 "Vk" = (
-/obj/structure/gun_rack/m20a/unloaded{
-	pixel_y = 17;
-	can_block_movement = 0
+/obj/structure/machinery/door/airlock/almayer/secure/autoname{
+	dir = 2;
+	req_access = list();
+	req_one_access = list()
 	},
-/turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/dorms/groundside)
 "Vl" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -28039,21 +27796,8 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "VH" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/loadout/HG45_civilian_loadout{
-	pixel_x = -1;
-	pixel_y = 9
-	},
-/obj/item/storage/box/loadout/HG45_civilian_loadout{
-	pixel_x = -4;
-	pixel_y = 15
-	},
-/obj/item/storage/box/loadout/Spearhead_loadout,
-/obj/item/storage/box/loadout/Spearhead_loadout{
-	pixel_y = 7;
-	pixel_x = 6
-	},
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood/wood_broken2,
 /area/badayaga/inside_underground/platoonarmory/groundside)
 "VK" = (
 /obj/structure/platform/kutjevo/smooth{
@@ -28444,26 +28188,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/cement_darkened,
 /area/badayaga/inside_underground/mess/groundside)
-"Wt" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/pouch/flare{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/obj/item/storage/pouch/flare{
-	pixel_y = 12;
-	pixel_x = 7
-	},
-/obj/item/storage/pouch/flare{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/obj/item/storage/pouch/flare{
-	pixel_y = -2;
-	pixel_x = -4
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "Wu" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -28693,21 +28417,18 @@
 /turf/open/floor/plating/wood_broken4,
 /area/badayaga/outside/groundside)
 "WT" = (
-/obj/structure/platform/kutjevo/smooth{
+/obj/structure/machinery/light/double{
 	dir = 8;
-	climb_delay = 1;
-	layer = 2.99
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 5
 	},
-/obj/structure/barricade/sandbags/wired{
-	dir = 8;
-	layer = 3.08;
-	pixel_x = -9;
-	do_not_adjust = 1
+/obj/structure/sign/poster/io{
+	pixel_x = -26;
+	pixel_y = 6
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/girder/reinforced,
-/turf/open/floor/plating/wood,
-/area/badayaga/outside/groundside)
+/turf/open/floor/plating/bare_catwalk,
+/area/badayaga/inside_underground/dorms/groundside)
 "WV" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -29087,45 +28808,13 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "XK" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/m2c{
-	pixel_x = 10;
-	pixel_y = 18
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
-/obj/item/ammo_magazine/m2c{
-	pixel_x = 9;
-	pixel_y = 11
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = 17;
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = 11;
-	pixel_x = -7
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = 6;
-	pixel_x = 6
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_x = -4;
-	pixel_y = 6
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = 1;
-	pixel_x = 8
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = 3;
-	pixel_x = -7
-	},
-/obj/item/ammo_magazine/m2c{
-	pixel_y = -1;
-	pixel_x = -4
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/effect/landmark/start/marine/leader/uacg/chaplain,
+/turf/open/floor/wood/ship,
+/area/badayaga/inside_underground/dorms/groundside)
 "XL" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -29317,16 +29006,29 @@
 /turf/open/floor/plating/wood,
 /area/badayaga/outside/groundside)
 "Ya" = (
-/obj/structure/window/framed/bunker,
+/obj/structure/platform/kutjevo/smooth{
+	dir = 4;
+	layer = 3.04
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	layer = 3.08;
+	pixel_x = 9;
+	do_not_adjust = 1
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_y = 9;
+	layer = 3.2
+	},
+/turf/open/gm/dirt3,
+/area/badayaga/outside/groundside)
+"Yb" = (
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = -6;
+	pixel_y = -13
+	},
 /turf/closed/wall/hangar,
 /area/badayaga/inside_underground/platoonarmory/groundside)
-"Yb" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/officer/mess{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/turf/open/floor/almayer_hull,
-/area/badayaga/inside_underground/mess/groundside)
 "Yd" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 1;
@@ -29362,29 +29064,21 @@
 /turf/open/gm/dirt3,
 /area/badayaga/inside/groundside)
 "Yg" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 8;
-	pixel_y = 15
-	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 2;
+/obj/structure/bed{
+	buckling_y = 13;
+	layer = 3.5;
 	pixel_y = 13
 	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = -9;
-	pixel_y = 8
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 6;
-	pixel_y = 7
+/obj/structure/sign/prop2{
+	pixel_y = 33;
+	pixel_x = 16
 	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/turf/open/floor/almayer_hull,
+/area/badayaga/inside_underground/dorms/groundside)
 "Yh" = (
 /obj/structure/platform/kutjevo/smooth,
 /obj/structure/barricade/sandbags/wired{
@@ -29487,14 +29181,6 @@
 /obj/effect/vehicle_roof/pizza_van,
 /turf/open/floor/plating/wood_broken5,
 /area/badayaga/inside/groundside)
-"Ys" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown{
-	layer = 3.4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wood,
-/area/badayaga/inside_underground/platoonarmory/groundside)
 "Yv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/tool/screwdriver{
@@ -29658,14 +29344,13 @@
 /turf/open/gm/dirt2,
 /area/badayaga/inside/groundside)
 "YM" = (
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle1{
-	pixel_x = -7
+/obj/structure/bed,
+/obj/item/bedsheet/brown{
+	layer = 3.4
 	},
-/obj/structure/closet/secure_closet/marine_personal/uacg/rifle2{
-	pixel_x = 8
-	},
-/turf/open/asphalt/cement_darkened,
-/area/badayaga/inside_underground/dorms/groundside)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "YN" = (
 /obj/structure/stairs/perspective/kutjevo,
 /obj/structure/platform/kutjevo/smooth{
@@ -30042,12 +29727,21 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "Zx" = (
+/obj/structure/mirror{
+	pixel_y = 35;
+	pixel_x = -1
+	},
+/obj/structure/sink{
+	pixel_y = 24;
+	layer = 3.1
+	},
 /obj/structure/machinery/light/small{
 	dir = 4;
-	pixel_x = 3
+	pixel_x = -1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/bare_catwalk,
-/area/badayaga/inside_underground/dorms/groundside)
+/area/badayaga/inside_underground/platoonarmory/groundside)
 "Zz" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 8;
@@ -30075,25 +29769,12 @@
 /turf/open/gm/dirt3,
 /area/badayaga/outside/groundside)
 "ZD" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/misc/flares{
-	pixel_y = 18;
-	pixel_x = 9
+/obj/structure/bed/chair/office/dark{
+	dir = 8
 	},
-/obj/item/ammo_box/magazine/misc/flares{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/obj/item/ammo_box/magazine/misc/flares{
-	pixel_y = 6;
-	pixel_x = 10
-	},
-/obj/item/ammo_box/magazine/misc/flares{
-	pixel_y = -2;
-	pixel_x = -5
-	},
-/turf/open/floor/plating,
-/area/badayaga/inside_underground/platoonarmory/groundside)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/wood,
+/area/badayaga/inside_underground/medical/groundside)
 "ZE" = (
 /obj/structure/platform/kutjevo/smooth{
 	dir = 4;
@@ -34000,7 +33681,7 @@ JW
 JW
 JW
 JW
-nk
+Ri
 Nn
 Ii
 Jy
@@ -34202,7 +33883,7 @@ JW
 JW
 JW
 JW
-nk
+Ri
 Nn
 Nn
 Nn
@@ -34607,7 +34288,7 @@ JW
 JW
 JW
 iB
-JX
+It
 Dq
 Mn
 cx
@@ -34809,7 +34490,7 @@ JW
 JW
 JW
 UV
-im
+tI
 qE
 lo
 jj
@@ -38242,9 +37923,9 @@ JW
 JW
 JW
 JW
-jN
-zY
-Iy
+Lg
+ng
+EG
 Gf
 HU
 ab
@@ -38444,9 +38125,9 @@ JW
 JW
 JW
 JW
-pe
-dK
-In
+nq
+he
+zv
 ej
 Oe
 VD
@@ -42484,7 +42165,7 @@ JW
 JW
 JW
 JW
-ds
+LI
 jI
 xD
 JM
@@ -47736,9 +47417,9 @@ JW
 JW
 JW
 JW
-WT
-EU
-Iy
+DP
+CH
+EG
 yb
 xD
 IW
@@ -47938,8 +47619,8 @@ JW
 JW
 JW
 JW
-np
-hl
+hn
+Ya
 oF
 qF
 hH
@@ -52795,9 +52476,9 @@ cd
 SI
 SM
 ft
-Yb
-hn
-Lg
+jm
+sq
+xq
 mE
 JW
 JW
@@ -52996,10 +52677,10 @@ Ug
 Mq
 nh
 PU
-ny
+oC
 aL
-iD
-jt
+pX
+im
 mE
 JW
 JW
@@ -53401,8 +53082,8 @@ mE
 mE
 wH
 Fs
-br
-tI
+hY
+Rs
 Fs
 Fs
 JW
@@ -53604,8 +53285,8 @@ mE
 mE
 Fs
 ke
-kl
-tm
+ZD
+xE
 Fs
 JW
 JW
@@ -53786,14 +53467,14 @@ JW
 JW
 JW
 gM
-Yg
-qQ
-sq
-QU
+lv
+Bm
+rF
+vo
 jF
-dB
-wy
-uS
+ds
+Iy
+kn
 jy
 oz
 mL
@@ -53804,10 +53485,10 @@ mL
 mL
 JW
 mE
-zv
+uv
 hY
 GT
-nF
+fw
 Fs
 JW
 JW
@@ -53992,7 +53673,7 @@ HA
 HA
 Gb
 tQ
-xW
+VH
 HA
 Gb
 tQ
@@ -54190,14 +53871,14 @@ JW
 JW
 JW
 jA
-zL
-ZD
-Wt
-jr
+Jj
+Ld
+QF
+Ce
 Nu
-mw
-MR
-Gc
+bS
+br
+Dy
 Zg
 Gu
 Fs
@@ -54589,19 +54270,19 @@ JW
 JW
 gM
 gM
-bj
-HN
-Nt
-eQ
+jt
+mt
+iL
+sa
 jA
-nq
-kR
-jo
-ng
+EU
+In
+yV
+wy
 kq
-Ua
-Jj
-nM
+iD
+AG
+Sn
 Zg
 Rb
 Fs
@@ -54790,17 +54471,17 @@ JW
 JW
 JW
 jA
-GE
-lY
-pX
-Nb
-TT
+Gb
+Dn
+gE
+tm
+bj
 jA
 jA
 jA
 jA
 jA
-jh
+Qh
 jA
 jA
 jA
@@ -54992,12 +54673,12 @@ JW
 JW
 JW
 jA
-As
+Zx
 ut
 HA
 BE
-Ys
-Ya
+YM
+hS
 lH
 BK
 dP
@@ -55195,11 +54876,11 @@ JW
 JW
 jA
 jA
-Ri
-Ya
-Ya
+dD
+hS
+hS
 jA
-ky
+Yb
 Gb
 jF
 tQ
@@ -55403,9 +55084,9 @@ lq
 aM
 Nu
 Gb
-rF
-VH
-aI
+Gc
+np
+nE
 HA
 tV
 qB
@@ -55800,19 +55481,19 @@ JW
 JW
 JW
 jA
-XK
+zL
 jX
 mi
 ly
 qJ
 gw
-Rs
+QX
 jA
-BQ
+Rt
 jA
 CT
-mj
-Bm
+jN
+uS
 gM
 Zg
 Sl
@@ -56008,15 +55689,15 @@ mn
 lJ
 KO
 kq
-CH
+FA
 jA
-gI
+ny
 jA
-Vk
-iL
+JX
+jr
 tQ
 BE
-It
+zO
 gM
 Rb
 Ex
@@ -56204,17 +55885,17 @@ JW
 JW
 JW
 jA
-zO
+Hg
 mU
 CI
 lL
 tQ
 Nu
-ox
+dK
 jA
-Ce
+jK
 jA
-Vk
+JX
 YR
 Xo
 jF
@@ -56242,12 +55923,12 @@ SA
 SA
 JW
 Lo
-KS
+kl
 fL
 MW
-Dn
+TT
 gi
-mh
+RP
 Lo
 JW
 JW
@@ -56417,7 +56098,7 @@ My
 lx
 HA
 kq
-SW
+uZ
 jF
 Xo
 mK
@@ -56445,11 +56126,11 @@ JW
 JW
 Lo
 Lo
-iF
-JS
+GE
+Vk
 YX
 RP
-Ly
+jo
 Lo
 JW
 JW
@@ -56609,7 +56290,7 @@ JW
 JW
 jA
 jA
-kz
+hl
 jA
 jA
 jA
@@ -56646,8 +56327,8 @@ JW
 JW
 JW
 MW
-KS
-Zx
+kl
+As
 Lo
 dE
 nA
@@ -56810,7 +56491,7 @@ JW
 JW
 JW
 jA
-ms
+Nu
 CI
 ac
 mR
@@ -56851,9 +56532,9 @@ Lo
 Lo
 MW
 Lo
-Dy
-AG
-QY
+fd
+mh
+fd
 MW
 JW
 JW
@@ -57012,7 +56693,7 @@ JW
 JW
 JW
 jA
-lj
+pe
 gw
 ac
 pN
@@ -57214,8 +56895,8 @@ JW
 JW
 JW
 gM
-Ys
-yV
+YM
+oe
 ac
 aE
 UH
@@ -57254,12 +56935,12 @@ MW
 mr
 vm
 Zs
-Rt
-Ld
+WT
+RA
 vm
 Zs
-mT
-ks
+tb
+RA
 MW
 JW
 JW
@@ -57447,21 +57128,21 @@ YX
 yq
 gi
 nA
-zA
+vm
 fd
-kn
+fd
 nA
-od
+KT
 Lo
-zA
+vm
 fd
-Hx
-nA
-rR
 fd
-uR
 nA
-Tq
+KT
+fd
+fd
+nA
+KT
 Lo
 JW
 JW
@@ -57654,7 +57335,7 @@ gi
 bG
 fk
 nA
-Hu
+TT
 nA
 YX
 fd
@@ -57663,7 +57344,7 @@ gi
 YX
 fd
 gi
-vo
+gK
 Lo
 JW
 JW
@@ -57850,22 +57531,22 @@ mY
 nA
 fX
 UB
-yw
+QU
 RP
 xR
 yt
 YX
 eF
 Lo
-uv
+qQ
 fL
 fd
 RP
 RP
-Hu
+TT
 fd
-oC
-gE
+bI
+mj
 Lo
 JW
 JW
@@ -58059,15 +57740,15 @@ Iz
 nA
 nA
 Lo
-FA
 fd
-mt
+fd
+fd
 fk
-DP
 fd
-ed
-aZ
-Fn
+fd
+fd
+Hx
+fd
 Lo
 JW
 JW
@@ -58250,15 +57931,15 @@ pm
 Yl
 IM
 MW
-UW
+RP
 nA
-Qh
+nA
 KT
-DP
 fd
-EO
 fd
-DP
+fd
+fd
+fd
 lK
 MW
 aa
@@ -58266,7 +57947,7 @@ Lr
 dE
 YX
 dE
-nt
+nk
 dE
 YX
 dE
@@ -58665,15 +58346,15 @@ Lo
 Lo
 eK
 Lo
-sa
+HN
 Za
 vm
 vm
-xq
+Tq
 Lo
 KM
-dD
-hL
+gI
+ms
 Lo
 JW
 JW
@@ -58856,14 +58537,14 @@ MW
 Lo
 Lo
 MW
-gK
+Yg
 vm
 Zs
-mT
+tb
 mr
 vm
 Zs
-mT
+tb
 RA
 eR
 Lo
@@ -58872,10 +58553,10 @@ vm
 vm
 Za
 nA
-JS
+Vk
 fd
-FG
-FG
+KS
+KS
 Lo
 JW
 JW
@@ -59055,29 +58736,29 @@ JW
 JW
 JW
 Lo
-KS
+kl
 fd
 MW
-he
+vm
 fd
-hS
-nA
-QX
 fd
-gu
 nA
-fw
+vm
+fd
+fd
+nA
+KT
 eX
 Lo
-nb
+Ly
 nA
-nb
-FG
-nb
+Ly
+KS
+Ly
 Lo
-AX
-Ef
-bI
+fd
+kR
+XK
 Lo
 JW
 JW
@@ -59258,24 +58939,24 @@ JW
 JW
 Lo
 Lo
-tb
-JS
+sd
+Vk
 fd
 gi
 vm
 KT
 fd
 fk
-nj
+AX
 RP
 nA
 nA
 Lo
-nb
+Ly
 nA
-qp
-Hu
-nb
+bn
+TT
+Ly
 Lo
 Lo
 Lo
@@ -59459,14 +59140,14 @@ JW
 JW
 JW
 MW
-KS
-AT
+kl
+MR
 Lo
-xE
-be
+Gp
+UW
 eR
-FG
-Hu
+KS
+TT
 nA
 RP
 gi
@@ -59664,22 +59345,22 @@ Lo
 Lo
 MW
 Lo
-YM
 fd
-ck
 fd
-YM
 fd
-sd
 fd
-jK
-aZ
+fd
+fd
+fd
+fd
+fd
+Hx
 MW
-nb
+Ly
 fk
-nb
+Ly
 fd
-Gp
+BQ
 Lo
 JW
 JW
@@ -59866,22 +59547,22 @@ JW
 JW
 JW
 Lo
-bS
+nt
 nA
 aa
 Lr
-fS
+uR
 nA
 aa
-jm
+uj
 dE
 fk
 Lo
-do
+EO
 fd
-qp
-aZ
-HB
+bn
+Hx
+ox
 Lo
 JW
 JW
