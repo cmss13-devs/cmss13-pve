@@ -10,9 +10,8 @@
 	health = 2000
 
 	type_multipliers = list(
-		"explosive" = 0.70,
-		"bullet" = 0.70,
-		"slash" = 0.70,
-		"blunt" = 0.50,
+		"explosive" = 0.7,
+		"bullet" = 0.8,
+		"blunt" = 0.8,
 		"all" = 0.9
 	)

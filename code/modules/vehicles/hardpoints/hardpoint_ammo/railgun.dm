@@ -1,6 +1,6 @@
 /obj/item/ammo_magazine/hardpoint/railgun
 	name = "Railgun Cannon Magazine"
-	desc = "A primary armament cannon magazine"
+	desc = "A magazine of advanced composite sabots for use in an experimental weapons system."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	caliber = "93mm" //Making this unique on purpose
 	icon_state = "railgun_4"

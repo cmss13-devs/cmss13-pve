@@ -13,14 +13,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave down";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -21
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -28,14 +28,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave up";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -22
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -1729,10 +1729,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
-"afi" = (
-/obj/effect/decal/prints,
-/turf/open/auto_turf/strata_grass/layer0,
-/area/redemptionvalley/valley/Westbound)
 "afj" = (
 /obj/effect/projector{
 	name = "redemption_south_western_cave_up";
@@ -1756,14 +1752,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -1783,11 +1779,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/strata_grass/layer0,
 /area/redemptionvalley/valley/Westbound)
-"afp" = (
-/obj/effect/decal/prints,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/auto_turf/sand_white/layer0,
-/area/redemptionvalley/caverns/east)
 "afq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1797,14 +1788,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -1842,14 +1833,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -1889,14 +1880,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -1927,10 +1918,235 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/gm/dirt2,
 /area/redemptionvalley/caverns/north)
+"afG" = (
+/turf/closed/void,
+/area/redemptionvalley/caverns/ruin)
+"afH" = (
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage south western cave down";
+	vector_x = 258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/east)
+"afI" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave down";
+	vector_x = 258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/east)
+"afJ" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave down";
+	vector_x = 258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/east)
+"afK" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave down";
+	vector_x = 258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/east)
+"afL" = (
+/turf/closed/void,
+/area/redemptionvalley/valley/cliff)
 "afM" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/uscm/north,
 /area/redemptionvalley/outpost/halls)
+"afN" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afO" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afP" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/effect/step_trigger/message{
+	message = "A strong current rushes below you";
+	name = "Waterfalls Warning";
+	once = 0
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afQ" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave up";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -22
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afR" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave up";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -22
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afS" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave up";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -22
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afT" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north cave";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afU" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north cave";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
+"afV" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north cave";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
+	},
+/turf/open/void,
+/area/redemptionvalley/caverns/north)
 "afY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -2184,14 +2400,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave up";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -22
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -3128,14 +3344,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -3504,14 +3720,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave up";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -3727,14 +3943,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage western cave up";
 	vector_x = -258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -3742,14 +3958,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -3896,14 +4112,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -3943,14 +4159,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -4332,14 +4548,14 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -4401,14 +4617,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave down";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -21
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -4809,14 +5025,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -5047,14 +5263,14 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -5231,14 +5447,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -6025,14 +6241,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave down";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -21
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -6121,14 +6337,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -6697,14 +6913,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage western cave up";
 	vector_x = -258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -7568,14 +7784,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -8171,6 +8387,13 @@
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage cliff";
+	vector_x = 10;
+	damage = 200;
+	vector_y = -10;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/valley/cliff)
 "hqV" = (
@@ -8238,14 +8461,14 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -8571,7 +8794,7 @@
 /turf/open/gm/dirt2,
 /area/redemptionvalley/caverns/north)
 "hOb" = (
-/obj/structure/largecrate/guns/merc,
+/obj/structure/largecrate/random,
 /turf/open/auto_turf/sand_white/layer0,
 /area/redemptionvalley/caverns/west)
 "hOi" = (
@@ -8672,14 +8895,14 @@
 	dir = 4
 	},
 /obj/structure/platform/kutjevo/rock,
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave down";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -21
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -8839,14 +9062,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -9306,6 +9529,12 @@
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
 	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
 "iLp" = (
@@ -9504,14 +9733,14 @@
 /area/redemptionvalley/valleyroof/hydro)
 "iVv" = (
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -9658,6 +9887,13 @@
 	dir = 1
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage cliff";
+	vector_x = 10;
+	damage = 200;
+	vector_y = -10;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/valley/cliff)
 "jcO" = (
@@ -9983,6 +10219,13 @@
 	dir = 8
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage cliff";
+	vector_x = 10;
+	damage = 200;
+	vector_y = -10;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/valley/cliff)
 "juT" = (
@@ -9993,14 +10236,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north east cave up";
+	damage = 50;
+	affect_ghosts = 0;
+	vector_y = -22
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -10608,14 +10851,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -11064,14 +11307,14 @@
 /area/redemptionvalley/valleyroof/housetwo)
 "kQz" = (
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave up";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -22
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -11104,6 +11347,12 @@
 	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -11157,14 +11406,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage north cave";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -11366,14 +11615,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -11394,14 +11643,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -11610,14 +11859,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -11955,14 +12204,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -12881,14 +13130,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -13038,6 +13287,12 @@
 	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -13551,14 +13806,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -13732,14 +13987,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave up";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -14531,14 +14786,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -14610,14 +14865,14 @@
 /area/redemptionvalley/valleyroof/cafe)
 "oZy" = (
 /obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -14807,14 +15062,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -14973,14 +15228,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -15084,14 +15339,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -15840,14 +16095,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage central cave";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/entry)
@@ -16629,14 +16884,14 @@
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
+	name = "fall damage western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -17387,14 +17642,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage north east cave down";
 	damage = 50;
 	affect_ghosts = 0;
 	vector_y = -21
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -17694,14 +17949,14 @@
 /area/redemptionvalley/valleyroof/company)
 "snH" = (
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage western cave up";
 	vector_x = -258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -19824,14 +20079,14 @@
 /area/redemptionvalley/valleyroof/admin)
 "uUC" = (
 /obj/structure/platform/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -19846,6 +20101,13 @@
 	dir = 4
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage cliff";
+	vector_x = 10;
+	damage = 200;
+	vector_y = -10;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/valley/cliff)
 "uVK" = (
@@ -19877,6 +20139,13 @@
 	dir = 4
 	},
 /obj/structure/blocker/forcefield/multitile_vehicles,
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage cliff";
+	vector_x = 10;
+	damage = 200;
+	vector_y = -10;
+	affect_ghosts = 0
+	},
 /turf/open/void,
 /area/redemptionvalley/valley/cliff)
 "uXV" = (
@@ -20473,14 +20742,14 @@
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 4
 	},
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -20533,6 +20802,12 @@
 	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -20804,14 +21079,14 @@
 /area/redemptionvalley/caverns/lake)
 "wdG" = (
 /obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/prop/invuln/darkness{
+	layer = 2.9
+	},
 /obj/effect/step_trigger/teleporter_vector/damage{
 	name = "fall damage south western cave down";
 	vector_x = 258;
 	damage = 50;
 	affect_ghosts = 0
-	},
-/obj/structure/prop/invuln/darkness{
-	layer = 2.9
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/east)
@@ -21078,14 +21353,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
 	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave up";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -21271,6 +21546,12 @@
 	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -21757,14 +22038,14 @@
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
-/obj/effect/step_trigger/teleporter_vector/damage{
-	name = "fall damage south western cave down";
-	vector_x = 258;
-	damage = 50;
-	affect_ghosts = 0
-	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage western cave up";
+	vector_x = -258;
+	damage = 50;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -22070,6 +22351,12 @@
 	},
 /obj/structure/prop/invuln/darkness{
 	layer = 2.9
+	},
+/obj/effect/step_trigger/teleporter_vector/damage{
+	name = "fall damage waterfalls";
+	vector_x = -258;
+	damage = 80;
+	affect_ghosts = 0
 	},
 /turf/open/void,
 /area/redemptionvalley/caverns/north)
@@ -24146,9 +24433,9 @@ ejm
 cOa
 cOa
 foB
-afl
+afK
 mNm
-pyb
+afI
 mtq
 ejm
 ejm
@@ -24398,7 +24685,7 @@ ejm
 cOa
 cOa
 foB
-cmd
+afJ
 eax
 wku
 mtq
@@ -24651,7 +24938,7 @@ cOa
 cOa
 mtq
 foB
-cmd
+afJ
 knj
 kqI
 ejm
@@ -27738,7 +28025,7 @@ ejm
 cOa
 cOa
 cOa
-afd
+cOa
 cOa
 ejm
 ejm
@@ -28267,7 +28554,7 @@ njX
 foB
 cmd
 piX
-fzP
+afH
 fzP
 fzP
 fzP
@@ -28519,7 +28806,7 @@ njX
 mtq
 wQg
 rcc
-fzP
+afH
 fzP
 fzP
 fzP
@@ -29757,7 +30044,7 @@ cOa
 ejm
 ejm
 cOa
-afp
+afc
 cOa
 ejm
 ejm
@@ -30277,7 +30564,7 @@ cOa
 cOa
 cOa
 cOa
-afd
+cOa
 cOa
 afc
 afc
@@ -30520,7 +30807,7 @@ afc
 afc
 afc
 cOa
-afd
+cOa
 afc
 afc
 cOa
@@ -31801,7 +32088,7 @@ ejm
 ejm
 cOa
 afc
-afd
+cOa
 cOa
 cOa
 ejm
@@ -32036,7 +32323,7 @@ ejm
 ejm
 ejm
 cOa
-afp
+afc
 cOa
 ejm
 ejm
@@ -32554,7 +32841,7 @@ ejm
 cOa
 afc
 afc
-afd
+cOa
 cOa
 ejm
 cOa
@@ -33046,7 +33333,7 @@ vUJ
 mxG
 mxG
 afo
-afi
+mxG
 mxG
 mxG
 mxG
@@ -34312,7 +34599,7 @@ igS
 igS
 hBN
 mxG
-afi
+mxG
 mxG
 ejm
 ejm
@@ -36584,7 +36871,7 @@ mxG
 cuW
 mxG
 mxG
-afi
+mxG
 jxW
 jxW
 mxG
@@ -38094,7 +38381,7 @@ rmH
 aat
 bUm
 mxG
-afi
+mxG
 mxG
 jxW
 mxG
@@ -64690,8 +64977,8 @@ cTX
 cTX
 cTX
 cTX
-cTX
-cTX
+afL
+afL
 hwg
 ejm
 ejm
@@ -64943,7 +65230,7 @@ cTX
 cTX
 cTX
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -65195,7 +65482,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -65447,7 +65734,7 @@ jNI
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -65699,7 +65986,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -65951,7 +66238,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -65959,7 +66246,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 qgO
@@ -66203,7 +66490,7 @@ jIl
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -66211,7 +66498,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+atE
 atE
 atE
 atE
@@ -66455,7 +66742,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -66463,8 +66750,8 @@ ejm
 ejm
 ejm
 ejm
-ejm
 tmO
+qgO
 qgO
 qgO
 qgO
@@ -66707,7 +66994,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -66716,7 +67003,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+tmO
 qgO
 qgO
 qgO
@@ -66959,16 +67246,16 @@ xiY
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
 ejm
 ejm
-ejm
-ejm
-qgO
-qgO
+tmO
+tmO
+tmO
+tmO
 qgO
 eZH
 kNS
@@ -67211,16 +67498,16 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
-ejm
-ejm
 ejm
 ejm
 ejm
 ejm
 tmO
 ejm
+tmO
+qgO
 qgO
 lLl
 lLl
@@ -67463,16 +67750,16 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
 ejm
-ejm
-ejm
 tmO
 tmO
 ejm
+tmO
+qgO
 qgO
 oXs
 lLl
@@ -67715,16 +68002,16 @@ hUH
 hca
 jci
 aWt
-cTX
+afL
 hwg
-ejm
-ejm
 ejm
 ejm
 ejm
 tmO
 ejm
 ejm
+qgO
+qgO
 qgO
 eZH
 lLl
@@ -67967,7 +68254,7 @@ hUH
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -67975,7 +68262,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 oXs
@@ -68219,7 +68506,7 @@ jpX
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -68227,7 +68514,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 qgO
@@ -68471,7 +68758,7 @@ hca
 hca
 jci
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -68479,7 +68766,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 bJw
 qgO
@@ -68723,7 +69010,7 @@ hca
 hqC
 uWG
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -68731,7 +69018,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 qgO
@@ -68975,7 +69262,7 @@ hca
 jci
 aWt
 aWt
-cTX
+afL
 hwg
 ejm
 ejm
@@ -68983,7 +69270,7 @@ ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 vfX
@@ -69227,14 +69514,14 @@ hca
 jci
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
 ejm
 ejm
 ejm
-ejm
+qgO
 qgO
 qgO
 qgO
@@ -69479,7 +69766,7 @@ hca
 jci
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -69731,7 +70018,7 @@ hca
 jci
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -69983,7 +70270,7 @@ hca
 jci
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -70235,7 +70522,7 @@ hqC
 uWG
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -70487,7 +70774,7 @@ uVs
 aWt
 aWt
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -70739,7 +71026,7 @@ uWG
 aWt
 ukM
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -70991,7 +71278,7 @@ aWt
 aWt
 ukM
 ukM
-cTX
+afL
 hwg
 ejm
 ejm
@@ -71242,8 +71529,8 @@ aWt
 aWt
 ukM
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 ejm
 ejm
@@ -71493,8 +71780,8 @@ ukM
 ukM
 ukM
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 hwg
 ejm
@@ -71743,9 +72030,9 @@ ukM
 ukM
 ukM
 ukM
-cTX
-cTX
-cTX
+afL
+afL
+afL
 hwg
 hwg
 hwg
@@ -71994,8 +72281,8 @@ aWt
 ukM
 ukM
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 hwg
 hwg
@@ -72245,8 +72532,8 @@ uWG
 aWt
 ukM
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 hwg
 ejm
@@ -72496,8 +72783,8 @@ aWt
 aWt
 aWt
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 hwg
 hwg
@@ -72747,8 +73034,8 @@ aWt
 ukM
 ukM
 ukM
-cTX
-cTX
+afL
+afL
 hwg
 hwg
 ejm
@@ -72966,8 +73253,8 @@ cTX
 cTX
 cTX
 cTX
+afL
 ukM
-ukM
 aWt
 aWt
 aWt
@@ -72992,14 +73279,14 @@ aWt
 aWt
 aWt
 aWt
-ukM
-ukM
-ukM
 ukM
 ukM
 ukM
-cTX
-cTX
+ukM
+ukM
+ukM
+afL
+afL
 hwg
 hwg
 hwg
@@ -73218,39 +73505,39 @@ cTX
 cTX
 cTX
 cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
-cTX
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
+afL
 hwg
 hwg
 hwg
@@ -75248,14 +75535,14 @@ ejm
 ejm
 qgO
 qgO
-ejm
 qgO
 qgO
 qgO
 qgO
 qgO
 qgO
-tzE
+qgO
+qgO
 qgO
 vfX
 qgO
@@ -75500,7 +75787,6 @@ qgO
 ejm
 qgO
 rWK
-ejm
 qgO
 qgO
 qgO
@@ -75510,6 +75796,7 @@ qgO
 qgO
 qgO
 qgO
+tzE
 qgO
 qgO
 qgO
@@ -75749,8 +76036,8 @@ ejm
 qgO
 qgO
 qgO
-qgO
-qgO
+ejm
+ejm
 qgO
 qgO
 qgO
@@ -75760,8 +76047,8 @@ bJw
 qgO
 qgO
 qgO
-qgO
-qgO
+tzE
+tzE
 eZH
 lLl
 lLl
@@ -88536,20 +88823,20 @@ cyU
 cyU
 cyU
 cyU
-chv
 cyU
 cyU
 cyU
 cyU
 cyU
 cyU
+cyU
 aaC
 aaC
 aaC
+acd
 aaC
 aaC
-aaC
-aaC
+aaF
 aaC
 aaC
 aaC
@@ -88784,34 +89071,34 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 cyU
 aaC
 aaC
+abt
+acd
+aaF
+aaF
+aaF
+aaC
+aaF
+aaF
 aaC
 aaC
 aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
+aaF
+aaF
+aaF
+aaF
 aaC
 aaC
 aaC
@@ -89034,44 +89321,44 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-uSb
-uSb
-uSb
-hbD
-hbD
-hbD
-cyU
-fSv
 cyU
 cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 aaC
 aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
+abt
 acd
+aaF
+aaG
+aaF
+aaF
+aaF
+aaF
+aaF
+aaC
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
 aaC
 aaC
+aaF
+aaF
+aaF
+aaC
+aaF
 aaC
 aaC
 aaC
@@ -89282,48 +89569,48 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-uSb
-uSb
-uSb
-uSb
-hbD
-hbD
-hbD
 cyU
 cyU
 cyU
 cyU
 cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
+abt
 abt
 acd
 aaF
+aaF
+aaF
+aaF
+aaF
+aaG
+aaF
+aaF
+aaF
+aaF
 aaC
+aaC
+aaF
+aaF
+aaF
+aaF
+aaF
+aaG
+aaF
+aaF
+aaF
 aaN
 aaC
 aaC
@@ -89533,47 +89820,47 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-uSb
-hbD
-hbD
-hbD
-hbD
-hbD
 cyU
 cyU
 cyU
 cyU
 cyU
 cyU
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
-aaC
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 aaC
 aaC
 abt
-acd
+aaC
+aaC
+aaF
+aaC
+aaC
+aaF
+aaF
+aaF
+aaF
+aaF
+aaC
+aaC
+aaC
+aaC
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
 aaF
 aaF
 aaF
@@ -89785,24 +90072,24 @@ cyU
 cyU
 cyU
 cyU
-fSv
-cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-cyU
-hbD
-hbD
 cyU
 cyU
 cyU
-hbD
 cyU
 cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 aaC
 aaC
 aaC
@@ -89823,11 +90110,11 @@ aaC
 aaC
 aaC
 aaC
-abt
-abt
-acd
+aaC
 aaF
 aaF
+aaF
+aaG
 aaF
 aaF
 aaC
@@ -90039,20 +90326,20 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
 cyU
 cyU
 cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 cyU
 cyU
 aaC
@@ -90076,9 +90363,9 @@ aaC
 aaC
 aaC
 aaC
-abt
 aaC
 aaC
+aaF
 aaF
 aaF
 aaF
@@ -90299,10 +90586,10 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
+cyU
 cyU
 cyU
 cyU
@@ -90331,7 +90618,7 @@ aaC
 aaC
 aaC
 aaC
-aaC
+aaF
 aaF
 aaF
 aaC
@@ -90548,14 +90835,14 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 cyU
 cyU
 cyU
@@ -90799,16 +91086,16 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 cyU
 cyU
 aaC
@@ -90875,7 +91162,7 @@ cqs
 cqs
 cqs
 cqs
-sqX
+afP
 iJT
 jBP
 aHB
@@ -91052,15 +91339,15 @@ hbD
 hbD
 hbD
 hbD
-hbD
-hbD
-hbD
-hbD
-hbD
-hbD
 cyU
 cyU
-hbD
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
+cyU
 cyU
 cyU
 aaC
@@ -91126,7 +91413,7 @@ aHB
 cqs
 cqs
 cqs
-sqX
+afP
 iJT
 jBP
 jBP
@@ -91302,12 +91589,12 @@ adl
 adl
 ads
 hbD
+cyU
 hbD
 hbD
-hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+cyU
 cyU
 cyU
 cyU
@@ -91322,12 +91609,12 @@ aaI
 aaH
 abC
 abD
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
 abs
 acr
 aaH
@@ -91377,7 +91664,7 @@ aHB
 cqs
 cqs
 cqs
-sqX
+afP
 iJT
 jBP
 jBP
@@ -91554,9 +91841,9 @@ adl
 uSb
 adv
 hbD
-hbD
-hbD
-hbD
+cyU
+cyU
+fSv
 cyU
 cyU
 cyU
@@ -91573,14 +91860,14 @@ aaE
 aaI
 abC
 abD
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
 abs
 acm
 aaE
@@ -91628,7 +91915,7 @@ aHB
 aHB
 aHB
 cqs
-sqX
+afP
 iJT
 jBP
 jBP
@@ -91810,8 +92097,8 @@ cyU
 cyU
 cyU
 cyU
-hbD
-hbD
+cyU
+cyU
 cyU
 cyU
 cyU
@@ -91824,16 +92111,16 @@ aaE
 aaV
 abe
 abF
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
 abt
 aaE
 aaC
@@ -92061,7 +92348,7 @@ adl
 hbD
 cyU
 hbD
-hbD
+cyU
 hbD
 hbD
 cyU
@@ -92076,16 +92363,16 @@ aaE
 acE
 abA
 abF
-abt
-abt
-abt
+afG
+afG
+afG
 abu
 acn
 acn
 abE
-abt
-abt
-abt
+afG
+afG
+afG
 abt
 aaE
 aaC
@@ -92328,8 +92615,8 @@ aaE
 abk
 abA
 abF
-abt
-abt
+afG
+afG
 abu
 abn
 abh
@@ -92580,8 +92867,8 @@ aaE
 aaE
 abB
 abF
-abt
-abt
+afG
+afG
 abm
 abh
 aaI
@@ -92832,8 +93119,8 @@ aaE
 aaE
 acC
 abF
-abt
-abt
+afG
+afG
 abm
 abh
 aaH
@@ -92884,7 +93171,7 @@ wDX
 kSd
 xEU
 cqs
-sqX
+afP
 iJT
 jBP
 aHB
@@ -93084,8 +93371,8 @@ aaE
 abh
 abA
 abF
-abt
-abt
+afG
+afG
 abs
 abl
 abh
@@ -93135,7 +93422,7 @@ kSd
 xEU
 cqs
 cqs
-sqX
+afP
 iJT
 jBP
 jBP
@@ -93336,16 +93623,16 @@ aaE
 abh
 abz
 abF
-abt
-abt
-abt
+afG
+afG
+afG
 abs
 acm
 acm
 abD
 abt
-abt
-abt
+afG
+afG
 abt
 aaE
 aaC
@@ -93386,7 +93673,7 @@ aHB
 aHB
 cqs
 cqs
-sqX
+afP
 iJT
 jBP
 jBP
@@ -93588,16 +93875,16 @@ aaE
 aaE
 abc
 abF
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
+afG
 abt
 aaE
 aaC
@@ -93637,7 +93924,7 @@ aHB
 aHB
 aHB
 aHB
-sqX
+afP
 iJT
 jBP
 jBP
@@ -93842,13 +94129,13 @@ aaI
 abG
 abE
 abt
-abt
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
+afG
 abu
 acn
 aaE
@@ -94094,12 +94381,12 @@ aaI
 aaH
 abG
 abE
-abt
-abt
-abt
-abt
-abt
-abt
+afG
+afG
+afG
+afG
+afG
+afG
 abu
 act
 aaH
@@ -100408,7 +100695,6 @@ aaE
 aaC
 aaC
 aaC
-aaC
 aaE
 aaE
 aaG
@@ -100418,10 +100704,11 @@ aaE
 aaE
 aaE
 aaE
+aaE
+aaE
 aaS
 aaE
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -100660,20 +100947,20 @@ aaE
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaG
 aaH
 aaE
 abC
+acm
+acm
 abl
 aaE
 aaH
 aaS
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -100912,20 +101199,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abC
 abD
+afG
+afG
 abs
 abl
 aaH
 aaX
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -101164,20 +101451,20 @@ aaI
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaH
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -101416,20 +101703,20 @@ aaI
 aaE
 aaC
 aaC
-aaC
 aaE
 aaI
 aaK
 aaH
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaH
 aaI
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -101668,20 +101955,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abG
 abE
+afG
+afG
 abu
 abn
 aaH
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -101920,20 +102207,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abb
 abF
+afG
+afG
 abm
 abb
 aaI
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -102172,20 +102459,20 @@ aaC
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abh
 abF
+afG
+afG
 abm
 abh
 aaH
 aaH
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -102424,20 +102711,20 @@ aaC
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abk
 abF
+afG
+afG
 abm
 abh
 aaH
 aaG
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -102676,20 +102963,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abb
 abF
+afG
+afG
 abm
 abb
 aaG
 aaY
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -102928,20 +103215,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abC
 abD
+afG
+afG
 abs
 abl
 aaJ
 aaS
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -103180,20 +103467,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaI
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -103432,20 +103719,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaG
 aaH
 aaH
 abG
 abE
+afG
+afG
 abu
 abn
 aaH
 aaH
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -103684,20 +103971,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aca
 aaS
 aaH
 abb
 abF
+afG
+afG
 abm
 abb
 aaH
 aaH
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -103936,20 +104223,20 @@ aaE
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaS
 aaH
 abk
 abF
+afG
+afG
 abm
 abk
 aaH
 aaK
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -104188,20 +104475,20 @@ aaE
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abk
 abF
+afG
+afG
 abm
 abh
 aaH
 aaH
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -104440,20 +104727,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaI
 abb
 abF
+afG
+afG
 abm
 abb
 aaI
 aaH
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -104692,20 +104979,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abC
 abD
+afG
+afG
 abs
 abl
 aaH
 aaI
 aaG
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -104944,20 +105231,20 @@ aaI
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaI
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaI
 aaS
 aaP
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -105196,20 +105483,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abG
 abE
+afG
+afG
 abu
 abn
 aaI
 aaS
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -105448,20 +105735,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaI
 aaH
 aaH
 abb
 abF
+afG
+afG
 abm
 abb
 aaI
 aaS
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -105700,20 +105987,20 @@ aaC
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaH
 abh
 abF
+afG
+afG
 abm
 abk
 aaH
 aaI
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -105729,9 +106016,9 @@ jBP
 jBP
 afF
 fur
-nZa
+afV
 fvo
-hup
+afT
 qap
 akQ
 afw
@@ -105952,20 +106239,20 @@ aaD
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaH
 abk
 abF
+afG
+afG
 abm
 abh
 aaH
 aaH
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -105982,7 +106269,7 @@ jBP
 afF
 fur
 fur
-hRJ
+afU
 qap
 qap
 rFs
@@ -106204,20 +106491,20 @@ aaC
 aaC
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abb
 abF
+afG
+afG
 abm
 abb
 aaI
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -106456,20 +106743,20 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaI
 abC
 abD
+afG
+afG
 abs
 abl
 aaI
 aaI
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -106708,20 +106995,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 abV
 aaH
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaH
 aaS
 aaS
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -106960,20 +107247,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 abF
-abt
-abt
+afG
+afG
+afG
+afG
 abm
 aaH
 aaS
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -107212,20 +107499,20 @@ aaI
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaJ
 aaH
 abG
 abE
+afG
+afG
 abu
 abn
 aaG
 aaZ
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -107464,20 +107751,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
 aaH
 aaE
 abG
+acn
+acn
 abn
 aaE
 aaH
 aaH
 aaI
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -107716,10 +108003,11 @@ aaE
 aaE
 aaC
 aaC
-aaC
 aaE
 aaE
 aaI
+aaE
+aaE
 aaE
 aaE
 aaE
@@ -107729,7 +108017,6 @@ aaE
 aaI
 aaV
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -107968,7 +108255,6 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaI
@@ -107976,12 +108262,13 @@ aaI
 aaE
 aaH
 aaH
+aaH
+aaH
 aaE
 aaH
 aaI
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -108220,20 +108507,20 @@ aaI
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaG
 aaH
 aaH
 aaH
+aaH
+aaH
 aaI
 aaH
 aaI
 aaH
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -108472,10 +108759,11 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaG
 aaW
+aaH
+aaH
 aaH
 aaH
 aaH
@@ -108485,7 +108773,6 @@ aaI
 aaP
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -108724,20 +109011,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
 aaE
 aaH
 aaH
 aaH
 aaE
 aaG
+aaG
+aaH
 aaI
 aaE
 aaH
 aaH
 aaH
 aaE
-aaC
 aaC
 aaC
 aaC
@@ -108976,20 +109263,20 @@ aaH
 aaE
 aaC
 aaC
-aaC
+aaE
 aaE
 aaE
 aaE
 aaE
 aaE
 aaG
-aaH
+aaG
 aaE
 aaE
 aaE
 aaE
 aaE
-aaC
+aaE
 aaC
 aaC
 aaC
@@ -111456,7 +111743,7 @@ aaC
 aaC
 aaE
 abf
-abf
+aaH
 aaE
 aaC
 aaC
@@ -111719,7 +112006,7 @@ aaC
 aaC
 aaE
 aaE
-abf
+aaH
 abX
 aaE
 aaE
@@ -112985,7 +113272,7 @@ abA
 aaI
 aaI
 aaI
-abX
+aaI
 aaI
 aaI
 abr
@@ -113258,7 +113545,7 @@ aaS
 aaH
 aaH
 aaH
-abf
+aaH
 aaI
 aaJ
 aaH
@@ -116249,7 +116536,7 @@ abA
 aaI
 aaI
 aaI
-abX
+aaI
 aaI
 aaI
 aaH
@@ -118087,7 +118374,7 @@ jBP
 fur
 fur
 otY
-xjK
+afQ
 fur
 jBP
 jBP
@@ -118589,9 +118876,9 @@ aHB
 aHB
 jBP
 fur
-nZa
+afS
 avm
-wuq
+afR
 fur
 jBP
 jBP
@@ -120625,7 +120912,7 @@ qap
 vpv
 qZR
 rYw
-xjK
+afN
 qap
 jBP
 jBP
@@ -121126,7 +121413,7 @@ aHB
 aHB
 jBP
 qap
-nZa
+afO
 eLh
 cOE
 qap
