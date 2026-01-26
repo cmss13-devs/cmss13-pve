@@ -4860,7 +4860,7 @@
 /obj/item/ammo_magazine/smartgun,
 /obj/item/storage/belt/marine/smartgunner,
 /obj/item/smartgun_battery,
-/obj/item/clothing/suit/marine/smartgunner/veteran/pmc,
+/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "ayg" = (
