@@ -772,6 +772,8 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/brute
 		if(XENO_CASTE_ALIEN)
 			M = /mob/living/carbon/xenomorph/alien
+		if(XENO_CASTE_WARRIOR_DRONE)
+			M = /mob/living/carbon/xenomorph/warrior_drone
 	return M
 
 
