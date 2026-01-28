@@ -713,46 +713,6 @@
 	)
 	locate_setting = TRACKER_RMCSL
 
-/obj/item/device/radio/headset/almayer/marine/solardevils/pmc
-	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
-	icon_state = "pmc_headset"
-	minimap_type = MINIMAP_FLAG_PMC
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
-	frequency = PMC_FREQ
-	misc_tracking = TRUE
-	initial_keys = list(/obj/item/device/encryptionkey/pmc)
-	inbuilt_tracking_options = list(
-		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_SL,
-		"Team Leader" = TRACKER_FTL,
-		"Landing Zone" = TRACKER_LZ
-	)
-
-/obj/item/device/radio/headset/almayer/marine/solardevils/pmc/synth
-	name = "PMC synth headset"
-	icon_state = "rmc_headset"
-	item_state = "rmc_headset"
-	desc = "A headset & HUD unit issued to corporate support synthetics. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
-	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
-	volume = RADIO_VOLUME_IMPORTANT
-	has_tracker = TRUE
-	misc_tracking = TRUE
-	locate_setting = TRACKER_PSL
-
-	inbuilt_tracking_options = list(
-		"Overwatch" = TRACKER_PLTCO,
-		"AZURE 15 Operation Leader" = TRACKER_PSL,
-		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
-		"Landing Zone" = TRACKER_LZ
-	)
-
-/obj/item/device/radio/headset/almayer/marine/solardevils/pmc/cmd
-	name = "overwatch headset"
-	icon_state = "rmc_headset"
-	item_state = "rmc_headset"
-	desc = "A special headset & HUD unit used to PMC Overwatch. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
-	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
-
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 

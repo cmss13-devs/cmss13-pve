@@ -17,7 +17,7 @@
 	var/last_fired = 0
 	var/fire_delay = 1
 
-	var/burst_fire_delay = 0.1
+	var/burst_fire_delay = 1
 
 	var/immobile = FALSE //Used for prebuilt ones.
 	var/obj/item/ammo_magazine/ammo = new /obj/item/ammo_magazine/sentry
@@ -39,7 +39,7 @@
 
 	var/damage_mult = 1
 	var/accuracy_mult = 0.5
-	var/burst = 2
+	var/burst = 5
 	handheld_type = /obj/item/defenses/handheld/sentry
 
 	/// timer triggered when sentry gun shoots at a target to not spam the laptop
@@ -51,12 +51,12 @@
 
 	/// action list is configurable for all subtypes, this is just an example
 	choice_categories = list(
-		// SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
+		SENTRY_CATEGORY_ROF = list(ROF_SINGLE, ROF_BURST, ROF_FULL_AUTO),
 		SENTRY_CATEGORY_IFF = list(FACTION_MARINE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN, FACTION_UPP),
 	)
 
 	selected_categories = list(
-		// SENTRY_CATEGORY_ROF = ROF_SINGLE,
+		SENTRY_CATEGORY_ROF = ROF_FULL_AUTO,
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
@@ -75,6 +75,9 @@
 
 	/// Delay sending no ammo messages
 	COOLDOWN_DECLARE(no_ammo_message_cooldown)
+
+	/// Delay sending the hAI-only target tracking messages
+	COOLDOWN_DECLARE(tracking_notice_cooldown)
 
 	/// Delay for the beep before firing after not firing for a while
 	COOLDOWN_DECLARE(beep_fire_sound_cooldown)
@@ -155,6 +158,8 @@
 	else
 		overlays += "[defense_type] [sentry_type]"
 
+	if(COOLDOWN_TIMELEFT(src, tracking_notice_cooldown) >= 14 SECONDS)
+		overlays+=new/obj/effect/overlay/danger
 
 /obj/structure/machinery/defenses/sentry/attack_hand_checks(mob/user)
 	if(immobile)
@@ -183,16 +188,16 @@
 	switch(level)
 		if(ROF_SINGLE)
 			burst = 1
-			accuracy_mult = 1
-			fire_delay = 4
+			accuracy_mult = 0.9
+			fire_delay = 5
 		if(ROF_BURST)
-			burst = 3
-			accuracy_mult = 0.6
-			fire_delay = 12
+			burst = 5
+			accuracy_mult = 0.7
+			fire_delay = 8
 		if(ROF_FULL_AUTO)
 			burst = 1
 			accuracy_mult = 0.5
-			fire_delay = 0.5
+			fire_delay = 1
 
 /obj/structure/machinery/defenses/sentry/get_examine_text(mob/user)
 	. = ..()
@@ -310,13 +315,20 @@
 		return
 
 	last_fired = world.time
-	COOLDOWN_START(src, beep_fire_sound_cooldown, (30 SECONDS))
+	COOLDOWN_START(src, beep_fire_sound_cooldown, (10 SECONDS))
 
 	if(QDELETED(owner_mob))
 		owner_mob = src
 
 	if(omni_directional)
 		setDir(get_dir(src, A))
+
+	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS) && COOLDOWN_FINISHED(src, tracking_notice_cooldown)) //Checks if hAI tweaks are on and if we haven't already pinged an alert recently
+		visible_message("[icon2html(src, viewers(src))] [SPAN_WARNING("The [name] emits a beep & begins turning to face it's target!")]")
+		COOLDOWN_START(src, tracking_notice_cooldown, (15 SECONDS))
+		update_icon() //Pop the warning overlay atop the sentry sprite itself
+		sleep(12) //A short delay for unlucky doorkickers to back out of the danger zone
+		update_icon() //Again, to remove the warning overlay
 
 	actual_fire(A, burst, FALSE)
 

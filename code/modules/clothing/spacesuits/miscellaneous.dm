@@ -505,6 +505,29 @@
 		var/list/possible_bands = subtypesof(/obj/item/clothing/accessory/armband)
 		var/obj/item/clothing/accessory/armband/new_band = pick(possible_bands)
 		attach_accessory(src, new_band)
+/obj/item/clothing/head/helmet/space/pressure/rmc
+	name = "\improper Ross-Smith Mk4 pressure helmet"
+	desc = "A heavy space helmet, designed to be worm alongside the Ross-Smith Mk4 pressure suit utilized by the Three World Empires Royal Marine Commando forces. Makes usage of camera systems and an internal display screen, rather than a toughened glass visor for visibility."
+	helmet_color = "helmet_rmc"
+	contained_sprite = TRUE
+	item_state = "pressure_helmet_rmc"
+	icon_state = "pressure_helmet_rmc"
+	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
+
+
+/obj/item/clothing/suit/space/pressure/rmc
+	name = "\improper Ross-Smith Mk4 pressure suit"
+	desc = "A heavy, bulky military-grade space suit utilized by the Three World Empires Royal Marine Commando forces."
+	contained_sprite = TRUE
+	item_state = "pressure_suit_rmc"
+	icon_state = "pressure_suit_rmc"
+	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	allowed = list(/obj/item/weapon/gun,/obj/item/weapon/baton,/obj/item/restraint/handcuffs,/obj/item/tank)
+	flags_inventory = SMARTGUN_HARNESS
+
 // Souto man
 
 /obj/item/clothing/suit/space/souto

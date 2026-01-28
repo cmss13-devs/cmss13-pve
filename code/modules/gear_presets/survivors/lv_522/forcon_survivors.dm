@@ -119,7 +119,7 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
 
 /datum/equipment_preset/survivor/forecon/standard
-	name = "Survivor - USCM Reconnaissance Marine"
+	name = "USCM Reconnaissance Marine (Survivor)"
 	assignment = JOB_FORECON_RIFLEMAN
 	rank = JOB_SQUAD_MARINE
 	role_comm_title = "RFN"
@@ -139,7 +139,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/radio
-	name = "Survivor - USCM Reconnaissance Radio Telephone Operator"
+	name = "USCM Reconnaissance Radio Telephone Operator (Survivor)"
 	assignment = JOB_FORECON_RTO
 	rank = JOB_SQUAD_RTO
 	role_comm_title = "RTO"
@@ -160,7 +160,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/tech
-	name = "Survivor - USCM Reconnaissance Support Technician"
+	name = "USCM Reconnaissance Support Technician (Survivor)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_FORECON_SUPPORT
 	rank = JOB_SQUAD_TECH
@@ -188,7 +188,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/corpsman
-	name = "Survivor - USCM Reconnaissance Corpsman"
+	name = "USCM Reconnaissance Corpsman (Survivor)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_FORECON_CORPSMAN
 	rank = JOB_SQUAD_MEDIC
@@ -216,7 +216,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/marksman
-	name = "Survivor - USCM Reconnaissance Designated Marksman"
+	name = "USCM Reconnaissance Designated Marksman (Survivor)"
 	assignment = JOB_FORECON_MARKSMAN
 	rank = JOB_SQUAD_SPOTTER
 	role_comm_title = "DM"
@@ -240,7 +240,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/smartgunner
-	name = "Survivor - USCM Reconnaissance Smartgunner"
+	name = "USCM Reconnaissance Smartgunner (Survivor)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_FORECON_SMARTGUNNER
 	rank = JOB_SQUAD_SMARTGUN
@@ -268,7 +268,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/sniper
-	name = "Survivor - USCM Reconnaissance Scout-Sniper (Shooter)"
+	name = "USCM Reconnaissance Scout-Sniper (Shooter) (Survivor)"
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_FORECON_SNIPER
 	rank = JOB_SQUAD_SPECIALIST
@@ -293,7 +293,7 @@
 ///*****************************//
 
 /datum/equipment_preset/survivor/forecon/spotter
-	name = "Survivor - USCM Reconnaissance Scout-Sniper (Spotter)"
+	name = "USCM Reconnaissance Scout-Sniper (Spotter) (Survivor)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	assignment = JOB_FORECON_SPOTTER
 	rank = JOB_SQUAD_SPOTTER
@@ -318,7 +318,7 @@
 //---------------------------\\
 
 /datum/equipment_preset/survivor/forecon/squad_leader
-	name = "Survivor - USCM Reconnaissance Squad Leader"
+	name = "USCM Reconnaissance Squad Leader (Survivor)"
 	assignment = JOB_FORECON_SL
 	rank = JOB_SQUAD_LEADER
 	role_comm_title = "SL"
@@ -339,7 +339,7 @@
 //---------------------------\\
 
 /datum/equipment_preset/survivor/forecon/major
-	name = "Survivor - USCM Reconnaissance Major"
+	name = "USCM Reconnaissance Major (Survivor)"
 	assignment = JOB_FORECON_CO
 	rank = JOB_CO
 	skills = /datum/skills/commander
@@ -358,7 +358,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/bottle/davenport(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/survivor/forecon/officer
-	name = "Survivor - USCM Reconnaissance Captain"
+	name = "USCM Reconnaissance Captain (Survivor)"
 	assignment = JOB_FORECON_XO
 	rank = JOB_XO
 	role_comm_title = "FORECON XO"
@@ -380,7 +380,7 @@
 //----------------------\\
 
 /datum/equipment_preset/synth/survivor/forecon
-	name = "Survivor - Synthetic - USCM Reconnaissance Synth"
+	name = "Synthetic - USCM Reconnaissance Synth (Survivor)"
 	assignment = JOB_FORECON_SYN
 	rank = JOB_SYNTH
 	faction = FACTION_MARINE
@@ -409,7 +409,7 @@
 	preset_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/forecon/synth(preset_human), WEAR_L_EAR)
 
 /datum/equipment_preset/synth/survivor/forecon/ranked
-	name = "Survivor - Synthetic - USCM Reconnaissance Synth (Ranked)"
+	name = "Synthetic - USCM Reconnaissance Synth (Ranked) (Survivor)"
 	paygrades = list(PAY_SHORT_MW2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/synth/survivor/forecon/ranked/load_gear(mob/living/carbon/human/preset_human)

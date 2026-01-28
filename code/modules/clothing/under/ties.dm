@@ -1743,6 +1743,17 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/small/marsoc
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/marsoc/fill_preset_inventory()
+	new /obj/item/storage/box/mre/fsr(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
@@ -1877,6 +1888,19 @@
 	desc = "A large pouch with M3-R Pattern webbing clips designed to house medical equipment for Corpsmen attached to FORECON units, where resupply isn't readily available."
 	icon_state = "m3rwebbingmedic"
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/storage/internal/accessory/black_vest/m3generic
 	cant_hold = list(

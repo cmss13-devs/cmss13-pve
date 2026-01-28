@@ -21,7 +21,7 @@
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
 	attachable_allowed = list(/obj/item/attachable/scope/mini/army) //4 tile zoom if used
 
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG|GUN_UNUSUAL_DESIGN
 	var/datum/effect_system/smoke_spread/smoke
 
 	flags_item = TWOHANDED|NO_CRYO_STORE
@@ -215,6 +215,7 @@
 	name = "\improper M5 RPG"
 	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses depending on the type of munitions loaded."
 	icon_state = "m5"
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_INTERNAL_MAG
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()

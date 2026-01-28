@@ -31,6 +31,7 @@
 			if(JOB_DROPSHIP_CREW_CHIEF) marine_rk = "dcc"
 			if(JOB_SQUAD_RTO) marine_rk = "rto"
 			if(JOB_MARINE_RAIDER) marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED) marine_rk = "socmed"
 			if(JOB_MARINE_RAIDER_SL) marine_rk = "soctl"
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
 			if(JOB_SQUAD_TECH) marine_rk = "tech"

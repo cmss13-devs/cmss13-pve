@@ -21,14 +21,13 @@
 	aim_slowdown = SLOWDOWN_ADS_INCINERATOR
 	current_mag = /obj/item/ammo_magazine/flamer_tank
 	start_automatic = TRUE
-	light_range = 2
+	light_range = 3
 	light_power = 0.5
 	light_system = MOVABLE_LIGHT
 	light_color = LIGHT_COLOR_CANDLE
 	var/lit = FALSE
 
 	attachable_allowed = list( //give it some flexibility.
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/sling,
 		/obj/item/attachable/attached_gun/extinguisher,
@@ -389,7 +388,6 @@
 	name = "\improper M240A3 incinerator unit"
 	desc = "A next-generation incinerator unit, the M240A3 is much lighter and dextrous than its predecessors thanks to the ceramic alloy construction. It can be slinged over a belt and usually comes equipped with EX-type fuel."
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
@@ -457,7 +455,6 @@
 	var/obj/item/storage/large_holster/fuelpack/fuelpack
 
 	attachable_allowed = list(
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/extinguisher,
 	)
