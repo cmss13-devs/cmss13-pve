@@ -3,6 +3,8 @@
 #define SGTMJR_VARIANT "Sergeant Major"
 #define SSGT_VARIANT "Staff Sergeant"
 #define SRSGT_VARIANT "Senior Sergeant"
+#define CAPTAIN_VARIANT "Captain"
+#define MAJOR_VARIANT "Major"
 
 /datum/job/marine/leader
 	title = JOB_SQUAD_LEADER
@@ -11,15 +13,17 @@
 	supervisors = "the acting commanding officer"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/leader
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/staff_sergeant
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/master_sergeant
+	gear_preset_tertiary =  /datum/equipment_preset/uscm/leader/staff_sergeant
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are responsible for the men and women of your entire section.</a> Make sure they are on task, working together, and communicating. You are also in charge of communicating with command and letting them know about the situation first hand. Keep out of harm's way.<br><b>You remember that you've stored your personal gear and uniform are located in the dorm or locker rooms.</b>"
 
-	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
+	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
 
 /datum/job/marine/leader/handle_job_options(option)
-	if(option != SSGT_VARIANT)
-		gear_preset = initial(gear_preset)
-	else
+	gear_preset = initial(gear_preset)
+	if(option == SSGT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == MSSGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
 /datum/job/marine/leader/whiskey
@@ -71,12 +75,12 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
-	gear_preset = /datum/equipment_preset/uscm/leader/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
-	job_options = list(GYSGT_VARIANT = "GYSGT", MSSGT_VARIANT = "MSSGT")
+	gear_preset = /datum/equipment_preset/uscm/leader/forecon/captain
+	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/major
+	job_options = list(CAPTAIN_VARIANT = "Captain", MAJOR_VARIANT = "Major")
 
 /datum/job/marine/leader/ai/forecon/handle_job_options(option)
-	if(option != GYSGT_VARIANT)
+	if(option != MAJOR_VARIANT)
 		gear_preset = initial(gear_preset)
 	else
 		gear_preset = gear_preset_secondary
@@ -130,3 +134,5 @@ OverrideTimelock(/datum/job/marine/leader, list(
 #undef SGTMJR_VARIANT
 #undef SSGT_VARIANT
 #undef SRSGT_VARIANT
+#undef CAPTAIN_VARIANT
+#undef MAJOR_VARIANT

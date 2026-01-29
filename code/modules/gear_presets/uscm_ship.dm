@@ -652,7 +652,7 @@
 	rank = JOB_SO
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "PltCo"
-	minimum_age = 25
+	minimum_age = 30
 	skills = /datum/skills/SO
 	minimap_icon = list("cic" = COLOR_SILVER)
 	minimap_background = MINIMAP_ICON_BACKGROUND_CIC
@@ -674,6 +674,10 @@
 /datum/equipment_preset/uscm_ship/so/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm_ship/so/higher_rank
+	name = parent_type::name + " (Higher Rank)"
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/uscm_ship/so/handle_late_join(mob/living/carbon/human/new_human, late_join)
 	if(late_join)

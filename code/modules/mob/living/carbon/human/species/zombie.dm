@@ -6,8 +6,8 @@
 	group = SPECIES_HUMAN
 	name = SPECIES_ZOMBIE
 	name_plural = "Zombies"
-	slowdown = 0.75
-	total_health = 500
+	slowdown = 0.35
+	total_health = 300
 	blood_color = BLOOD_COLOR_ZOMBIE
 	icobase = 'icons/mob/humans/species/r_goo_zed.dmi'
 	deform = 'icons/mob/humans/species/r_goo_zed.dmi'

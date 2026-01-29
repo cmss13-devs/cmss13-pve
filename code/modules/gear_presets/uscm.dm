@@ -351,13 +351,13 @@
 /datum/equipment_preset/uscm/tl/forecon
 	name = "FORECON Assistant Squad Leader"
 	assignment = JOB_SQUAD_TEAM_LEADER_FORECON
-	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ARSL"
 	skills = /datum/skills/tl/recon
 
-/datum/equipment_preset/uscm/tl/forecon/sergeant
-	name = parent_type::name + " (E5 Rank)"
-	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/tl/forecon/lthigh
+	name = parent_type::name + " (Higher Rank)"
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
 
 /*****************************************************************************************************/
 
@@ -406,6 +406,10 @@
 	name = parent_type::name + " (E6 Rank)"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/leader/master_sergeant
+	name = parent_type::name + " (E8 Rank)"
+	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm/leader/upp
 	name = "UPP Platoon Sergeant"
 	assignment = JOB_SQUAD_LEADER_UPP
@@ -423,15 +427,15 @@
 	name = parent_type::name + " (E6 Rank)"
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/leader/forecon
+/datum/equipment_preset/uscm/leader/forecon/captain
 	name = "FORECON Squad Leader"
 	assignment = JOB_SQUAD_LEADER_FORECON
-	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0)
+	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RSL"
 
-/datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
-	name = parent_type::name + " (E7 Rank)"
-	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+/datum/equipment_preset/uscm/leader/forecon/major
+	name = parent_type::name + " (Higher Rank)"
+	paygrades = list(PAY_SHORT_MO4 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON

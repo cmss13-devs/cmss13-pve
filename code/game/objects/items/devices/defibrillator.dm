@@ -1,3 +1,4 @@
+/* RUCM CHANGE
 /obj/item/device/defibrillator
 	name = "emergency defibrillator"
 	desc = "A handheld emergency defibrillator, used to restore fibrillating patients. Can optionally bring people back from the dead."
@@ -12,11 +13,11 @@
 
 	var/blocked_by_suit = TRUE
 	/// Min damage defib deals to victims' heart
-	var/min_heart_damage_dealt = 15
+	var/min_heart_damage_dealt = 3
 	/// Max damage defib deals to victims' heart
-	var/max_heart_damage_dealt = 20
+	var/max_heart_damage_dealt = 5
 	var/ready = 0
-	var/damage_heal_threshold = 20 //This is the maximum non-oxy damage the defibrillator will heal to get a patient above -100, in all categories
+	var/damage_heal_threshold = 12 //This is the maximum non-oxy damage the defibrillator will heal to get a patient above -100, in all categories
 	var/datum/effect_system/spark_spread/spark_system = new /datum/effect_system/spark_spread
 	var/charge_cost = 66 //How much energy is used.
 	var/obj/item/cell/dcell = null
@@ -168,7 +169,7 @@
 	if(istype(G) && G.client)
 		playsound_client(G.client, 'sound/effects/revive_notify.ogg')
 		to_chat(G, SPAN_BOLDNOTICE(FONT_SIZE_LARGE("Someone is trying to revive your body. Return to it if you want to be resurrected! \
-			(Verbs -> Ghost -> Re-enter corpse, or <a href='byond://?src=\ref[G];reentercorpse=1'>click here!</a>)")))
+			(Verbs -> Ghost -> Re-enter corpse, or <a href='?src=\ref[G];reentercorpse=1'>click here!</a>)")))
 
 	user.visible_message(SPAN_NOTICE("[user] starts setting up the paddles on [H]'s chest"), \
 		SPAN_HELPFUL("You start <b>setting up</b> the paddles on <b>[H]</b>'s chest."))
@@ -268,3 +269,4 @@
 	item_state = "defib"
 	w_class = SIZE_SMALL
 	charge_cost = 99
+*/
