@@ -60,6 +60,55 @@
 /obj/item/ammo_box/magazine/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/rubber
+	name = "magazine box (Rubber M41A X 10)"
+	overlay_ammo_type = "_rubber_mk1"
+	overlay_content = "_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/rubber
+
+/obj/item/ammo_box/magazine/large
+	name = "magazine box (M41A x 32)"
+	icon_state = "base_large"
+	overlay_ammo_type = "_reglarge"
+	overlay_gun_type = "_blank"
+	overlay_content = "_reglarge"
+	limit_per_tile = 1
+	flags_equip_slot = null
+	num_of_magazines = 32
+	var/move_delay_mult = 3
+	w_class = SIZE_MASSIVE
+
+/obj/item/ammo_box/magazine/large/pickup(mob/user, silent)
+	. = ..()
+	RegisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY, PROC_REF(handle_movedelay))
+
+/obj/item/ammo_box/magazine/large/proc/handle_movedelay(mob/user, list/movedata)
+	SIGNAL_HANDLER
+	if(locate(/obj/item/ammo_box/magazine/large) in user.contents)
+		movedata["move_delay"] += move_delay_mult
+
+/obj/item/ammo_box/magazine/large/dropped(mob/user, silent)
+	. = ..()
+	UnregisterSignal(user, COMSIG_HUMAN_POST_MOVE_DELAY)
+
+/obj/item/ammo_box/magazine/large/ap
+	name = "magazine box (AP M41A x 32)"
+	overlay_ammo_type = "_aplarge"
+	overlay_content = "_aplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/ap
+
+/obj/item/ammo_box/magazine/large/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/large/heap
+	name = "magazine box (HEAP M41A x 32)"
+	overlay_ammo_type = "_heaplarge"
+	overlay_content = "_heaplarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/heap
+
+/obj/item/ammo_box/magazine/large/heap/empty
+	empty = TRUE
+
 //-----------------------M20A Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/m20a

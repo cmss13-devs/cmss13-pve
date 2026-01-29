@@ -296,7 +296,7 @@
 			var/turf/mortar_turf = get_turf(src)
 			mortar_turf.ceiling_debris_check(2)
 
-			for(var/mob/mob in range(7))
+			for(var/mob/mob in range(6))
 				shake_camera(mob, 3, 1)
 
 			addtimer(CALLBACK(src, PROC_REF(handle_shell), target_turf, mortar_shell), travel_time)
@@ -585,7 +585,7 @@
 		shake_camera(mob, 3, 1)
 		if(ishuman(mob) && !HAS_TRAIT(mob, TRAIT_EAR_PROTECTION))
 			var/mob/living/carbon/human/human = mob
-			human.SetEarDeafness(max(human.ear_deaf, 25))
+			human.SetEarDeafness(max(human.ear_deaf, 15))
 			to_chat(human, SPAN_WARNING("Augh!! \The [src]'s launch blast resonates extremely loudly in your ears! You probably should have worn some sort of ear protection..."))
 	firing = TRUE
 	flick(icon_state + "_fire", src)

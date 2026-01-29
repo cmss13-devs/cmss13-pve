@@ -80,16 +80,6 @@
 	ert_paths = list(/datum/emergency_call/inspection_wy/lawyer) // "Lawyers - Corporate"
 	ert_short_names = list("SEND LAWYERS")
 
-// Corporate Security Bodyguard beacon available for 50 points at the CLs briefcase
-/obj/item/handheld_distress_beacon/bodyguard
-	name = "\improper Corporate Security Division handheld beacon"
-	desc = "An standard Corporate Security beacon. This one is branded with the Weyland-Yutani slogan, 'Building Better Worlds since 2099'. This one is branded with the Corporate Security Division symbol and provided to Executives stationed in very dangerous sites across the entire Galaxy."
-
-	beacon_type = "Bodyguard beacon"
-	recipient = "the Corporate Security Division"
-	ert_paths = list(/datum/emergency_call/goon/bodyguard) // "Weyland-Yutani Goon (Executive Bodyguard Detail)"
-	ert_short_names = list("SEND BODYGUARD")
-
 // Provost office distress beacon held by Inspectors+
 /obj/item/handheld_distress_beacon/provost
 	name = "\improper Provost Office handheld beacon"

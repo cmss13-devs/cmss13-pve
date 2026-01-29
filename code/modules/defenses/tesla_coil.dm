@@ -12,6 +12,8 @@
 	var/last_fired = 0
 	var/tesla_range = TESLA_COIL_RANGE
 	var/fire_delay = TESLA_COIL_FIREDELAY
+	health = 250
+	health_max = 250
 	var/attack_defenses = TRUE
 	handheld_type = /obj/item/defenses/handheld/tesla_coil
 	disassemble_time = 10

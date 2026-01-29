@@ -690,10 +690,11 @@
 	volume = RADIO_VOLUME_CRITICAL
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_RSL
 
 	inbuilt_tracking_options = list(
-		"Squad Leader" = TRACKER_ASL,
+		"Snake Eaters Squad Leader" = TRACKER_RSL,
+		"Ocelot Grapplers Squad Leader" = TRACKER_R2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -707,10 +708,10 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
 	inbuilt_tracking_options = list(
-		"Troop Commander" = TRACKER_PLTCO,
+		"Troop Commander" = TRACKER_RMCSL,
 		"Section/Team Leader" = TRACKER_FTL,
 	)
-	locate_setting = TRACKER_PLTCO
+	locate_setting = TRACKER_RMCSL
 
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
@@ -730,11 +731,12 @@
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_UPPSL
 
 	inbuilt_tracking_options = list(
 		"Platoon Commander" = TRACKER_PLTCO,
-		"Platoon Sergeant" = TRACKER_ASL,
+		"Red Dawn Platoon Sergeant" = TRACKER_UPPSL,
+		"Golden Embers Platoon Sergeant" = TRACKER_UPP2SL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
@@ -762,6 +764,8 @@
 	item_state = "upp_headset"
 	frequency = CLF_FREQ
 	has_hud = FALSE //Until we get CANC stuff, this'll do
+
+
 
 /obj/item/device/radio/headset/almayer/cia
 	name = "radio headset"
@@ -1030,6 +1034,20 @@
 	frequency = WY_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY)
 
+/obj/item/device/radio/headset/distress/WY/security
+	name = "WY corporate security headset"
+	desc = "A headset commonly worn by WY corporate security personnel."
+	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/wy_sec)
+
+/obj/item/device/radio/headset/distress/WY/security/guard
+	name = "WY personal protection headset"
+	desc = "Issued to Corporate Security personnel. Channels are as follows: :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel, :1 for WY Public, :y for WY Corporate and #y for WY Security."
+	misc_tracking = TRUE
+	locate_setting = TRACKER_CL
+	inbuilt_tracking_options = list(
+		"Corporate Liaison" = TRACKER_CL
+	)
+
 /obj/item/device/radio/headset/distress/dutch
 	name = "Dutch's Dozen headset"
 	desc = "A special headset used by small groups of trained operatives. Or terrorists. To access the colony channel, use :h."
@@ -1046,16 +1064,36 @@
 	has_hud = TRUE
 	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
 
+	has_tracker = TRUE
 	misc_tracking = TRUE
 	locate_setting = TRACKER_CL
 	inbuilt_tracking_options = list(
 		"Corporate Liaison" = TRACKER_CL
 	)
 
+/obj/item/device/radio/headset/distress/pmc/commando
+	name = "W-Y commando headset"
+	desc = "A special headset used by unidentified operatives. Channels are as follows: :g - public, :v - marine command, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad, :n - engineering, :m - medbay, :u - requisitions, :j - JTAC, :t - intel, :y - Corporate."
+	icon_state = "pmc_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc)
+	maximum_keys = 5
+
+/obj/item/device/radio/headset/distress/pmc/commando/leader
+	name = "W-Y commando leader headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom/cl, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
+
 /obj/item/device/radio/headset/distress/pmc/platoon
 	desc = "A special headset used by corporate PMCs.  Channels are as follows: #p - general, #y - WY."
+	item_state = "uscm_headset"
+	item_icons = list(
+		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
+		)
+	minimap_type = MINIMAP_FLAG_PMC
+	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
+	frequency = PMC_FREQ
+	misc_tracking = TRUE
 	initial_keys = list(/obj/item/device/encryptionkey/pmc)
-	locate_setting = TRACKER_SL
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
 		"Operation Leader" = TRACKER_SL,
@@ -1065,23 +1103,29 @@
 
 /obj/item/device/radio/headset/distress/pmc/platoon/synth
 	name = "PMC synth headset"
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
 	desc = "A headset & HUD unit issued to corporate support synthetics. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
 	volume = RADIO_VOLUME_IMPORTANT
 	has_tracker = TRUE
 	misc_tracking = TRUE
-	locate_setting = TRACKER_ASL
+	locate_setting = TRACKER_PSL
 
 	inbuilt_tracking_options = list(
 		"Overwatch" = TRACKER_PLTCO,
-		"Operation Leader" = TRACKER_ASL,
+		"AZURE 15 Operation Leader" = TRACKER_PSL,
+		"AZURE 16 Strike Operation Leader" = TRACKER_PSSL,
 		"Landing Zone" = TRACKER_LZ
 	)
 
 /obj/item/device/radio/headset/distress/pmc/platoon/cmd
 	name = "overwatch headset"
-	desc = "A special headset & HUD unit used to PMC Overwatch.  Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
+	desc = "A special headset & HUD unit used to PMC Overwatch. Channels are as follows: #p - general, #y - WY,  #z - command, #f - medical, #e - engineering, #o - JTAC."
 	initial_keys = list(/obj/item/device/encryptionkey/pmc/command)
+
 
 /obj/item/device/radio/headset/distress/cbrn
 	name = "\improper CBRN headset"
@@ -1097,6 +1141,14 @@
 	frequency = FORECON_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/mcom)
 	ignore_z = TRUE
+	has_hud = TRUE
+
+/obj/item/device/radio/headset/distress/wy_android
+	name = "W-Y android headset"
+	desc = "A special headset used by unidentified androids. Channels are as follows: :o - colony :y - Corporate #pmc - PMC"
+	frequency = WY_WO_FREQ
+	icon_state = "ms_headset"
+	initial_keys = list(/obj/item/device/encryptionkey/public, /obj/item/device/encryptionkey/WY, /obj/item/device/encryptionkey/pmc/command)
 	has_hud = TRUE
 
 /obj/item/device/radio/headset/distress/pmc/hvh

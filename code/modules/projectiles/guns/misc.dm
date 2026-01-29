@@ -360,7 +360,7 @@
 
 /obj/item/weapon/gun/XM99
 	name = "\improper XM99A phased plasma pulse rifle"
-	desc = "An experimental directed energy weapon system designed by Armat, the XM99A is a long-range prototype rifle that fires super-heated blasts of plasma."
+	desc = "An experimental directed energy weapon system designed by Armat, the XM99A is a long-range prototype rifle that fires super-heated blasts of plasma which releases tremendous thermal and kinetic energy at the point of impact. Beware of friendly forces near targets. Features a trigger cut-off system to minimize friendly fire incidents."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "xm99a"
 	item_state = "xm99a"
@@ -477,7 +477,7 @@
 
 /obj/item/weapon/gun/XM99/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
+	set_fire_delay(FIRE_DELAY_TIER_SNIPER)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT * 3 //you HAVE to be able to hit
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -488,7 +488,9 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 75, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
+	AddComponent(/datum/component/iff_fire_prevention)
 
 
 /obj/item/weapon/gun/XM99/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)

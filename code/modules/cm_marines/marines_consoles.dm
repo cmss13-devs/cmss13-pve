@@ -1007,25 +1007,24 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,
 
-				// 200-229: Visitors
+				// 200-231: Visitors
 				JOB_UPP_REPRESENTATIVE = 201,
 				JOB_TWE_REPRESENTATIVE = 201,
-				JOB_TIS_SA = 210,
-				JOB_TIS_IO = 211,
 				JOB_PMC_DIRECTOR = 220,
 				JOB_PMC_LEADER = 220,
 				JOB_PMC_LEAD_INVEST = 220,
 				JOB_PMC_SYNTH = 221,
-				JOB_PMC_XENO_HANDLER = 221,
 				JOB_PMC_SNIPER = 222,
 				JOB_PMC_GUNNER = 223,
 				JOB_PMC_MEDIC = 224,
 				JOB_PMC_INVESTIGATOR = 224,
 				JOB_PMC_ENGINEER = 225,
 				JOB_PMC_STANDARD = 226,
-				JOB_PMC_DOCTOR = 227,
-				JOB_WY_GOON_LEAD = 228,
-				JOB_WY_GOON = 229,
+				JOB_PMC_DETAINER = 227,
+				JOB_PMC_CROWD_CONTROL = 228,
+				JOB_PMC_DOCTOR = 229,
+				JOB_WY_GOON_LEAD = 230,
+				JOB_WY_GOON = 231,
 
 				// Appear at bottom of squad list
 				JOB_MARINE_RAIDER_SL = 130,
@@ -1074,9 +1073,8 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_WY_GOON = 32,
 				// 40-49: MedSci
 				JOB_PMC_SYNTH = 40,
-				JOB_PMC_XENO_HANDLER = 41,
-				JOB_PMC_DOCTOR = 42,
-				JOB_WY_GOON_RESEARCHER = 43,
+				JOB_PMC_DOCTOR = 41,
+				JOB_WY_GOON_RESEARCHER = 42,
 				// 50-59: Engineering & Vehicle Crew
 				JOB_PMC_CREWMAN = 51,
 				JOB_PMC_ENGINEER = 52,
@@ -1084,6 +1082,7 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_LEAD_INVEST = 60,
 				JOB_PMC_INVESTIGATOR = 61,
 				JOB_PMC_DETAINER = 62,
+				JOB_PMC_CROWD_CONTROL = 63,
 
 				// 70-79 PMCs Combat Team
 				JOB_PMC_LEADER = 70,
@@ -1091,6 +1090,12 @@ GLOBAL_LIST_EMPTY_TYPED(crewmonitor, /datum/crewmonitor)
 				JOB_PMC_GUNNER = 72,
 				JOB_PMC_MEDIC = 73,
 				JOB_PMC_STANDARD = 75,
+
+				// 80-89 W-Y Commando Combat Team
+				JOB_WY_COMMANDO_LEADER= 80,
+				JOB_WY_COMMANDO_GUNNER = 81,
+				JOB_WY_COMMANDO_DOGCATHER = 82,
+				JOB_WY_COMMANDO_STANDARD = 83,
 
 				// ANYTHING ELSE = UNKNOWN_JOB_ID, Unknowns/custom jobs will appear after civilians, and before stowaways
 				JOB_STOWAWAY = 999,

@@ -1,11 +1,12 @@
-// Paygrade shorthand defines, to allow clearer designation.
-
 // Weyland Yutani Corporate
 /// WYC1, Trainee
 #define PAY_SHORT_WYC1 "WYC1"
 
 /// WYC2, Junior Executive
 #define PAY_SHORT_WYC2 "WYC2"
+
+/// WYC2, Pilot - Captain
+#define PAY_SHORT_WYPO2 "WYPO2"
 
 /// WYC3, Executive
 #define PAY_SHORT_WYC3 "WYC3"
@@ -28,8 +29,11 @@
 /// WYC9, Chief Executive
 #define PAY_SHORT_WYC9 "WYC9"
 
-/// WYC10, Director
+/// WYC10, Deputy Director
 #define PAY_SHORT_WYC10 "WYC10"
+
+/// WYC11, Director
+#define PAY_SHORT_WYC11 "WYC11"
 
 // Weyland Yutani Private Military
 /// PMC-OP, Operator, standard PMC.
@@ -50,11 +54,14 @@
 /// PMC-VS, Vehicle Specialist
 #define PAY_SHORT_PMC_VS "PMC-VS"
 
-/// PMC-XS, Xeno Specialist (Handler)
-#define PAY_SHORT_PMC_XS "PMC-XS"
+/// PMC-CCS, Crowd Control Specialist
+#define PAY_SHORT_PMC_CCS "PMC-CCS"
 
 /// PMC-TL, Team Leader
 #define PAY_SHORT_PMC_TL "PMC-TL"
+
+/// PMC-FOL, Field Operations Leader
+#define PAY_SHORT_PMC_FOL "PMC-FOL"
 
 /// PMC-DOC, Trauma Surgeon
 #define PAY_SHORT_PMC_DOC "PMC-DOC"
@@ -62,17 +69,51 @@
 /// PMC-ENG, Technician
 #define PAY_SHORT_PMC_TEC "PMC-TEC"
 
-/// PMC-ELR, Elite Responder
-#define PAY_SHORT_PMC_ELR "PMC-ELR"
-
-/// PMC-ELM, Elite Medic
-#define PAY_SHORT_PMC_ELM "PMC-ELM"
-
-/// PMC-ELG, Elite Gunner
-#define PAY_SHORT_PMC_ELG "PMC-ELG"
-
-/// PMC-ETL, Elite Team Leader
-#define PAY_SHORT_PMC_ETL "PMC-ETL"
-
 /// PMC-DIR, PMC Director
 #define PAY_SHORT_PMC_DIR "PMC-DIR"
+
+// Weyland Yutani Commandos
+/// WY-COM, Weyland-Yutani Commando
+#define PAY_SHORT_WY_COM "WY-COM"
+
+/// WY-COMLD Weyland-Yutani Commando Leader
+#define PAY_SHORT_WY_COMLD "WY-COMLD"
+
+/// WY-GUN, Weyland-Yutani Commando Gunner
+#define PAY_SHORT_WY_GUN "WY-GUN"
+
+/// WY-DOG, Weyland-Yutani Dog Catcher
+#define PAY_SHORT_WY_DOG "WY-DOG"
+
+
+// Weyland Yutani Corporate Security
+
+/// WY-SEC Weyland-Yutani Security Officer
+#define PAY_SHORT_WY_SEC "WY-SEC"
+
+/// WY-SEC-SPEC Weyland-Yutani Security Specialist
+#define PAY_SHORT_WY_SEC_SPEC "WY-SEC-SPEC"
+
+/// WY-SEC-LEAD Weyland-Yutani Security Team Leader
+#define PAY_SHORT_WY_SEC_LEAD "WY-SEC-LEAD"
+
+/// WY-SEC-PSO Trainee Personal Protection Officer
+#define PAY_SHORT_WY_SEC_TPPO "WY-SEC-TPPO"
+
+/// WY-SEC-PPO Personal Protection Officer
+#define PAY_SHORT_WY_SEC_PPO "WY-SEC-PPO"
+
+/// WY-SEC-PPS Personal Protection Specialist
+#define PAY_SHORT_WY_SEC_PPS "WY-SEC-PPS"
+
+/// WY-SEC-PPC Personal Protection Coordinator
+#define PAY_SHORT_WY_SEC_PPC "WY-SEC-PPC"
+
+/// WY-SEC-DPO Directorate Protection Officer
+#define PAY_SHORT_WY_SEC_DPO "WY-SEC-DPO"
+
+/// WY-SEC-DPS Directorate Protection Specialist
+#define PAY_SHORT_WY_SEC_DPS "WY-SEC-DPS"
+
+/// WY-SEC-DPC Directorate Protection Coordinator
+#define PAY_SHORT_WY_SEC_DPC "WY-SEC-DPC"

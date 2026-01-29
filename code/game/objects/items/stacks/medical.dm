@@ -58,8 +58,8 @@
 	desc = "Some sterile gauze with hemostatic to wrap around bloody stumps and lacerations."
 	icon_state = "brutepack"
 	heal_brute = 5
-	amount = 10
-	max_amount = 10
+	amount = 15
+	max_amount = 15
 
 	stack_id = "bruise pack"
 
@@ -139,8 +139,8 @@
 	singular_name = "ointment"
 	icon_state = "ointment"
 	heal_burn = 5
-	amount = 10
-	max_amount = 10
+	amount = 15
+	max_amount = 15
 
 	stack_id = "ointment"
 

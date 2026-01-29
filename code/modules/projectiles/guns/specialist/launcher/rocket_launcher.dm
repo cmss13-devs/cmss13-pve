@@ -38,12 +38,13 @@
 	return ..()
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 18,"rail_x" = 6, "rail_y" = 19, "under_x" = 19, "under_y" = 14, "stock_x" = -6, "stock_y" = 16)
 
 /obj/item/weapon/gun/launcher/rocket/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 150, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/set_gun_config_values()
@@ -212,7 +213,7 @@
 //Marine M5 RPG, comes with baked in scope unlike the colony-made launcher
 /obj/item/weapon/gun/launcher/rocket/marine
 	name = "\improper M5 RPG"
-	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses."
+	desc = "The M5 RPG is the primary anti-armor weapon of the USCM. Used to take out light-tanks and enemy structures, the M5 RPG is a dangerous weapon with a variety of combat uses depending on the type of munitions loaded."
 
 /obj/item/weapon/gun/launcher/rocket/marine/handle_starting_attachment()
 	..()
@@ -275,12 +276,12 @@
 /obj/item/weapon/gun/launcher/rocket/anti_tank/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 200, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 250, GLOB.damage_boost_vehicles)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable //single shot and disposable
 	name = "\improper M83A2 SADAR"
-	desc = "The M83A2 SADAR is a lightweight one-shot anti-armor weapon capable of engaging enemy vehicles at ranges up to 1,000m. Fully disposable, the rocket's launcher is discarded after firing. When stowed (unique-action), the SADAR system consists of a watertight carbon-fiber composite blast tube, inside of which is an aluminum launch tube containing the missile. The weapon is fired by pushing a charge button on the trigger grip.  It is sighted and fired from the shoulder."
+	desc = "The M83A2 SADAR is a lightweight one-shot anti-armor weapon capable of engaging enemy vehicles, at ranges up to 1,000m. Fully disposable, the rocket's launcher is discarded after firing. When stowed (unique-action), the SADAR system consists of a watertight carbon-fiber composite blast tube, inside of which is an aluminum launch tube containing the missile. The weapon is fired by pushing a charge button on the trigger grip.  It is sighted and fired from the shoulder."
 	var/fired = FALSE
 
 /obj/item/weapon/gun/launcher/rocket/anti_tank/disposable/get_examine_text(mob/user)
@@ -411,6 +412,7 @@
 	. = ..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
 	))
 
 /obj/item/weapon/gun/launcher/rocket/anti_air

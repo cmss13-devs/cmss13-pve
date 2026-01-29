@@ -267,6 +267,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_rmc_engi, list(
 		/obj/item/storage/belt/gun/mortarbelt/rmc,
 		/obj/item/device/binoculars/range,
 		/obj/item/tool/wrench,
+		/obj/item/tool/screwdriver,
+		/obj/item/device/multitool,
 	)
 
 /obj/effect/essentials_set/rmcgl

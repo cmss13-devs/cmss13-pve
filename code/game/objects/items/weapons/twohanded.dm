@@ -309,7 +309,7 @@
 	icon_state = "d2_breacher"
 	item_state = "d2_breacher"
 	force = MELEE_FORCE_NORMAL
-	force_wielded = MELEE_FORCE_NORMAL
+	force_wielded = MELEE_FORCE_STRONG
 	w_class = SIZE_LARGE
 	flags_item = TWOHANDED
 	flags_equip_slot = SLOT_BACK

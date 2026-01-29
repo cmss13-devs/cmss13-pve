@@ -703,6 +703,10 @@
 			assignment = JOB_MARINE_RAIDER
 			if(name == JOB_MARINE_RAIDER)
 				assignment = "Special Operator"
+		if(JOB_MARINE_RAIDER_MED)
+			assignment = JOB_MARINE_RAIDER_MED
+			if(name == JOB_MARINE_RAIDER_MED)
+				assignment = "Special Amphibious Reconnaissance Corpsman"
 		if(JOB_MARINE_RAIDER_SL)
 			assignment = JOB_MARINE_RAIDER_SL
 			if(name == JOB_MARINE_RAIDER)

@@ -137,6 +137,12 @@
 	item_state = "hosblueclothes"
 	flags_jumpsuit = FALSE
 
+/obj/item/clothing/under/detective/grey
+	name = "\improper grey suit pants"
+	desc = "A washed out white shirt with a red tie and black slacks."
+	icon_state = "detective_grey"
+	worn_state = "detective_grey"
+
 /obj/item/clothing/under/rank/warden/navyblue
 	desc = "The insignia on this uniform tells you that this uniform belongs to the Warden."
 	name = "warden's uniform"

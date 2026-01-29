@@ -739,6 +739,11 @@
 	icon_state = "webbing"
 	hold = /obj/item/storage/internal/accessory/webbing
 
+/obj/item/clothing/accessory/storage/webbing/black
+	name = "black webbing"
+	icon_state = "webbing_black"
+	item_state = "webbing_black"
+
 /obj/item/clothing/accessory/storage/webbing/five_slots
 	hold = /obj/item/storage/internal/accessory/webbing/five_slots
 
@@ -1040,6 +1045,9 @@
 /obj/item/clothing/accessory/storage/droppouch/rmc
 	icon_state = "rmc_drop_pouch_alt"
 
+/obj/item/clothing/accessory/storage/droppouch/wy
+	icon_state = "wy_drop_pouch"
+
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
 	storage_slots = null
@@ -1063,6 +1071,9 @@
 
 /obj/item/clothing/accessory/storage/smallpouch/rmc
 	icon_state = "rmc_pouch_alt"
+
+/obj/item/clothing/accessory/storage/smallpouch/wy
+	icon_state = "wy_pouch"
 
 /obj/item/storage/internal/accessory/smallpouch
 	w_class = SIZE_LARGE
@@ -1585,6 +1596,17 @@
 	icon_state = "medic"
 	item_state = "medic"
 
+/obj/item/clothing/accessory/paint/medic/wy
+	name = "Weyland-Yutani doctor patch"
+	desc = "A patch worned on the armor by the PMC medics."
+	icon_state = "medic_wy"
+	item_state = "medic_wy"
+
+/obj/item/clothing/accessory/paint/medic/wy/black
+	name = "Weyland-Yutani black doctor patch"
+	icon_state = "medic_wy_black"
+	item_state = "medic_wy_black"
+
 /obj/item/clothing/accessory/paint/uaflag
 	name = "UA flag armor paint"
 	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
@@ -1723,6 +1745,17 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/small/marsoc
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/marsoc/fill_preset_inventory()
+	new /obj/item/storage/box/mre/fsr(src)
+	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/device/binoculars/range/designator(src)
+
 //Pre-load For Army Props
 //===
 /obj/item/clothing/accessory/storage/webbing/m3/small/army
@@ -1735,7 +1768,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
@@ -1744,7 +1777,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/explosive/plastic/breaching_charge(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
@@ -1754,7 +1787,7 @@
 	new /obj/item/storage/box/mre(src)
 	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
 	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
+	new /obj/item/tool/shovel/etool/folded(src)
 	new /obj/item/device/binoculars/range/designator(src)
 
 //===
@@ -1846,12 +1879,29 @@
 /obj/item/storage/internal/accessory/black_vest/m3generic/recon
 	storage_slots = 7
 	can_hold = list(
-		/obj/item/storage/surgical_case/regular,
-		/obj/item/reagent_container/blood,
+		/obj/item/storage/pill_bottle,
+		/obj/item/stack/medical,
+		/obj/item/reagent_container/hypospray,
+		/obj/item/storage/syringe_case,
+		/obj/item/storage/surgical_case,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
-		/obj/item/device/healthanalyzer,
+		/obj/item/reagent_container/blood,
+		/obj/item/bodybag,
 	)
+
+//Pre-load for MARSOC props
+/obj/item/clothing/accessory/storage/webbing/m3/recon/medic/marsoc
+	icon_state = "armywebbing"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/recon/marsoc/fill_preset_inventory()
+	new /obj/item/storage/surgical_case/regular(src)
+	new /obj/item/tool/surgery/surgical_line(src)
+	new /obj/item/tool/surgery/synthgraft(src)
+	new /obj/item/storage/syringe_case/regular(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
+	new /obj/item/reagent_container/blood/OMinus(src)
 
 /obj/item/clothing/accessory/storage/webbing/m56
 	name = "\improper Clip-on Pouch"
@@ -1989,3 +2039,189 @@
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
+//===========================// CUSTOM PMC ARMOR PLATES\\================================\\
+
+/obj/item/clothing/accessory/pmcpads
+	name = "\improper M4 Shoulder Pads"
+	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
+	icon_state = "pmc_arms"
+	item_state = "pmc_arms"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/pmcpads/light
+	name = "\improper M4 Light Shoulder Pads"
+	icon_state = "pmc_arms2"
+	item_state = "pmc_arms2"
+	slot = ACCESSORY_SLOT_DECORARMOR
+
+/obj/item/clothing/accessory/pmcpads/bracers
+	name = "\improper M4 Vambraces"
+	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
+	icon_state = "pmc_bracers"
+	item_state = "pmc_bracers"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/pmcpads/bracers/black
+	name = "\improper M4 Black Vambraces"
+	icon_state = "pmc_bracers2"
+	item_state = "pmc_bracers2"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/pmcpads/neckguard
+	name = "\improper PMC Armor Neckerchief"
+	desc = "A small neckerchief, for the Weyland Yutani PMC armor. Style is most important thing for contractor."
+	icon_state = "pmc_neckerchief"
+	item_state = "pmc_neckerchief"
+	slot = ACCESSORY_SLOT_DECORNECK
+
+/obj/item/clothing/accessory/pmcpads/greaves
+	name = "\improper M4 Greaves"
+	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
+	icon_state = "pmc_greaves"
+	item_state = "pmc_greaves"
+	slot = ACCESSORY_SLOT_DECORSHIN
+
+/obj/item/clothing/accessory/pmcpads/kneepads
+	name = "\improper M4 Kneepads"
+	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
+	icon_state = "pmc_kneepads"
+	item_state = "pmc_kneepads"
+	slot = ACCESSORY_SLOT_DECORKNEE
+
+/obj/item/clothing/accessory/pmcpads/crotch
+	name = "\improper M4 Lap Panel"
+	desc = "Attachable supplementary armor for the M4 armor system of Weyland Yutani PMC. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M4 cuirass."
+	icon_state = "pmc_crotch"
+	item_state = "pmc_crotch"
+	slot = ACCESSORY_SLOT_DECORGROIN
+
+//===========================//CUSTOM PMC ARMOR WEBBING\\================================\\
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc
+	name = "\improper 67 Pattern Webbing"
+	icon_state = "wy_webbing_small"
+	desc = "A set of webbing fully outfitted with pouches and pockets to carry a while array of small items, designed to attach to Weyland Yutani PMC armor."
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/presetone
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
+	new /obj/item/smartgun_battery(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc
+	name = "\improper 82 Pattern Magazine Webbing"
+	desc = "A set of webbing pouches that can carry five magazines. Comes with clips to mount to the standard armor system in use by the Weyland Yutani PMC."
+	icon_state = "wy_webbing_magazine"
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc
+	storage_slots = 5
+
+//Partial Pre-load For Props
+//===
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preset
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/one
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/one/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+	new /obj/item/ammo_magazine/smg/m39/ap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presettwo
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/two
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/two/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetthree
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/three
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/three/fill_preset_inventory()
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfour
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/four
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/four/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfive
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/five
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/five/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/extended(src)
+	new /obj/item/ammo_magazine/rifle/extended(src)
+	new /obj/item/ammo_magazine/rifle/extended(src)
+	new /obj/item/ammo_magazine/rifle/extended(src)
+	new /obj/item/ammo_magazine/rifle/extended(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetsix
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/six
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/six/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/ap(src)
+	new /obj/item/ammo_magazine/rifle/ap(src)
+	new /obj/item/ammo_magazine/rifle/ap(src)
+	new /obj/item/ammo_magazine/rifle/ap(src)
+	new /obj/item/ammo_magazine/rifle/ap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetseven
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/seven
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/seven/fill_preset_inventory()
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+	new /obj/item/ammo_magazine/rifle/heap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc
+	name = "\improper 41 Pattern Shell Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted for 12 gauge shotgun shells."
+	icon_state = "wy_webbing_shotgun"
+
+/obj/item/clothing/accessory/storage/webbing/m3/pmc
+	name = "\improper 68 Pattern Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles with 2 large pouches designed to attach to Weyland Yutani PMC armor. This one is designed for general purpose storage of any normal sized item."
+	icon_state = "wy_webbing_large"
+	hold = /obj/item/storage/internal/accessory/webbing/m3general/pmc
+
+/obj/item/storage/internal/accessory/webbing/m3general/pmc
+	storage_slots = 2
+	max_w_class = SIZE_MEDIUM
+	can_hold = list(
+		/obj/item, // First I wanted to make it an smartgun pouch, but why not just make it general storage for any normal size item then?
+	)
+
+/obj/item/clothing/accessory/storage/webbing/m3/pmc/synth_preset
+	hold = /obj/item/storage/internal/accessory/webbing/m3general/pmc/synth_preset
+
+/obj/item/storage/internal/accessory/webbing/m3general/pmc/synth_preset/fill_preset_inventory()
+	new /obj/item/weapon/telebaton(src)
+	new /obj/item/roller/surgical(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/m40/pmc
+	name = "\improper 76 Pattern Grenade Webbing"
+	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Weyland Yutani PMC armor. This webbing is fitted with loops for storing M40-hull grenades."
+	icon_state = "wy_webbing_m40"
+	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
+
+/obj/item/storage/internal/accessory/black_vest/m3grenade/pmc
+	storage_slots = 15

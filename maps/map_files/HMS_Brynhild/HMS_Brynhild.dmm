@@ -3120,9 +3120,14 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/closet/secure_closet/rmc_section_leader{
+/obj/structure/closet/secure_closet/rmc_troop_sergeant{
 	pixel_y = 15;
 	pixel_x = -5
+	pixel_x = -8
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = -8;
+	pixel_y = 31
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3186,13 +3191,9 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
 "gn" = (
-/obj/structure/closet/secure_closet/rmc_troop_sergeant{
+/obj/structure/closet/secure_closet/rmc_section_leader{
 	pixel_y = 15;
-	pixel_x = 6
-	},
-/obj/item/clothing/glasses/hud/health{
-	pixel_x = -14;
-	pixel_y = 23
+	pixel_x = -8
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -3272,14 +3273,6 @@
 	},
 /turf/open/space/basic,
 /area/space)
-"gx" = (
-/obj/structure/surface/rack{
-	pixel_y = -18;
-	pixel_x = -16;
-	layer = 2.81
-	},
-/turf/closed/wall/almayer/aicore/white/hull,
-/area/hms_brynhild/armoury)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
@@ -13606,6 +13599,10 @@
 	pixel_x = 3;
 	pixel_y = 0
 	},
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = -5;
+	pixel_y = -15
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
 "EN" = (
@@ -17981,13 +17978,17 @@
 	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/l54{
-	pixel_x = -5;
-	pixel_y = 8
+	pixel_x = -2;
+	pixel_y = 2
 	},
 /obj/item/ammo_box/magazine/vp78/rmc{
 	pixel_x = -2;
 	pixel_y = -3
 	},
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = -2;
+	pixel_y = 8
+},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "RA" = (
@@ -28262,7 +28263,7 @@ uO
 ny
 WY
 sf
-gx
+sw
 gn
 bm
 sw

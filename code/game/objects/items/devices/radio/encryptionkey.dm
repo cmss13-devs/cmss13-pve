@@ -275,6 +275,11 @@
 	channels = list(RADIO_CHANNEL_WY = TRUE)
 	tracking_options = list("Corporate Liaison" = TRACKER_CL)
 
+/obj/item/device/encryptionkey/wy_sec
+	name = "\improper Weyland-Yutani Security encryption key"
+	icon_state = "wy_sec_key"
+	channels = list(RADIO_CHANNEL_WY_PUB = TRUE, RADIO_CHANNEL_WY_SEC = TRUE)
+
 /obj/item/device/encryptionkey/pmc
 	name = "\improper Weyland-Yutani PMC Radio Encryption Key"
 	icon_state = "pmc_key"

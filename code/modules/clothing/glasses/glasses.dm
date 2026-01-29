@@ -263,6 +263,13 @@
 	item_state = "hipster_glasses"
 	flags_equip_slot = SLOT_EYES|SLOT_FACE
 
+/obj/item/clothing/glasses/regular/hippie
+	name = "Rounded Prescription Glasses"
+	desc = "Rounded glasses, makes you look smart and potentially reputable."
+	icon_state = "hippie_glasses"
+	item_state = "hippie_glasses"
+	flags_equip_slot = SLOT_EYES|SLOT_FACE
+
 /obj/item/clothing/glasses/threedglasses
 	desc = "A long time ago, people used these glasses to makes images from screens three-dimensional."
 	name = "3D glasses"

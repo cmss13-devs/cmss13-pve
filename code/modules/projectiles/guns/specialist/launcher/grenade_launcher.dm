@@ -149,16 +149,10 @@
 
 /obj/item/weapon/gun/launcher/grenade/able_to_fire(mob/living/user) //Skillchecks and fire blockers go in the child items.
 	. = ..()
-	if(.)
-		if(!length(cylinder.contents))
-			to_chat(user, SPAN_WARNING("The [name] is empty."))
-			click_empty(user)
-			return FALSE
-		var/obj/item/explosive/grenade/G = cylinder.contents[1]
-		if(G.antigrief_protection && user.faction == FACTION_MARINE && explosive_antigrief_check(G, user))
-			to_chat(user, SPAN_WARNING("\The [name]'s safe-area accident inhibitor prevents you from firing!"))
-			msg_admin_niche("[key_name(user)] attempted to prime \a [G.name] in [get_area(src)] [ADMIN_JMP(src.loc)]")
-			return FALSE
+	if(!length(cylinder.contents))
+		to_chat(user, SPAN_WARNING("The [name] is empty."))
+		click_empty(user)
+		return FALSE
 
 
 /obj/item/weapon/gun/launcher/grenade/afterattack(atom/target, mob/user, flag) //Not actually after the attack. After click, more like.
@@ -281,11 +275,12 @@
 	matter = list("metal" = 6000)
 	actions_types = list(/datum/action/item_action/toggle_firing_level)
 
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/scope/mini)
 	flags_item = TWOHANDED|NO_CRYO_STORE
 	map_specific_decoration = TRUE
 
 	is_lobbing = TRUE
+	throw_range = 20
 	internal_slots = 6
 	direct_draw = FALSE
 
@@ -294,7 +289,18 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4*4)
+	set_fire_delay(FIRE_DELAY_TIER_3)
+
+/obj/item/weapon/gun/launcher/grenade/m92/scoped
+	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions. This one is outfitted with a low-power scope securely mounted to it."
+
+/obj/item/weapon/gun/launcher/grenade/m92/scoped/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/optic = new(src)
+	optic.hidden = FALSE
+	optic.flags_attach_features &= ~ATTACH_REMOVABLE
+	optic.Attach(src)
+	update_attachable(optic.slot)
 
 //UPP DEDICATED GL
 
@@ -307,7 +313,7 @@
 	flags_item = TWOHANDED
 	map_specific_decoration = FALSE
 	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp, /obj/item/attachable/scope/mini)
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
 	..()
@@ -395,7 +401,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m81/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_4 * 1.5)
+	set_fire_delay(FIRE_DELAY_TIER_4)
 
 /obj/item/weapon/gun/launcher/grenade/m81/on_pocket_removal()
 	..()
