@@ -269,7 +269,7 @@
 	//uniform + armour
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/darkblue(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/merc(new_human), WEAR_JACKET)
-	if(prob(35))
+	if(prob(65))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/merc, WEAR_HEAD)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/corrections, WEAR_HEAD)
