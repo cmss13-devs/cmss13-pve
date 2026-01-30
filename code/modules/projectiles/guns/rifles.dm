@@ -1885,7 +1885,7 @@
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
-	recoil = RECOIL_AMOUNT_TIER_4
+	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
 	scatter = SCATTER_AMOUNT_TIER_7
 
@@ -1992,7 +1992,7 @@
 /obj/item/weapon/gun/rifle/r81m1a/m1d
 	name = "\improper R81M1D pulse squad automatic weapon"
 	desc = "A SAW variant of the M81M series of pulse rifles, the M81M1D sacrifices some accuracy for a higher rate of fire and larger magazine capacity, though at the cost of increased recoil. Favored by private military contractors and security details operating in high-threat environments. Produced by Orion Defence Systems."
-	item_state = "fal"
+	item_state = "fal_saw"
 	icon_state = "fal_saw"
 	attachable_allowed = list(
 		/obj/item/attachable/lasersight,
@@ -2012,7 +2012,7 @@
 
 /obj/item/weapon/gun/rifle/r81m1a/m1d/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_fire_delay(FIRE_DELAY_TIER_11)
 	set_burst_amount(BURST_AMOUNT_TIER_6)
 	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
