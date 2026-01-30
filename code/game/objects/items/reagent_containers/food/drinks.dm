@@ -418,12 +418,12 @@
 	center_of_mass = "x=15;y=13"
 
 /obj/item/reagent_container/food/drinks/coffeecup/uscm
-	name = "USCM coffee mug"
+	name = "\improper USCM coffee mug"
 	desc = "A red, white and blue coffee mug depicting the emblem of the USCM. Patriotic and bold, and commonly seen among veterans as a novelty."
 	icon_state = "uscmcup"
 
 /obj/item/reagent_container/food/drinks/coffeecup/wy
-	name = "Weyland-Yutani coffee mug"
+	name = "\improper Weyland-Yutani coffee mug"
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Either issued as corporate standard, or bought as a souvenir for people who love the Company oh so dearly. Probably the former."
 	icon_state = "wycup"
 
@@ -431,3 +431,12 @@
 	name = "plastic cup"
 	icon_state = "plasticcup"
 	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."
+
+
+// Hybrisa
+
+/obj/item/reagent_container/food/drinks/coffee/cuppa_joes
+	name = "\improper Cuppa Joe's coffee"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon_state = "coffeecuppajoe"
+	center_of_mass = "x=15;y=10"
