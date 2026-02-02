@@ -457,11 +457,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	flags_equip_slot = SLOT_BACK
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/p79s
 	attachable_allowed = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/stock/p79s,
-		/obj/item/attachable/sling,
 	)
 
 /obj/item/weapon/gun/shotgun/p79s/Initialize(mapload, spawn_empty)
