@@ -825,6 +825,7 @@
 #include "code\game\area\prison.dm"
 #include "code\game\area\Prison_Station_FOP.dm"
 #include "code\game\area\prison_v3_fiorina.dm"
+#include "code\game\area\pudong_bunker.dm"
 #include "code\game\area\redemption_valley.dm"
 #include "code\game\area\shiva.dm"
 #include "code\game\area\shuttles.dm"
@@ -2707,4 +2708,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+#include "maps\map_files\pudong_bunker\mi264_pudong_bunker.dmm"
 // END_INCLUDE
