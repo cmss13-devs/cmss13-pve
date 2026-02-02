@@ -147,6 +147,14 @@
 /obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/strata/floor3,
 /area/pudong/base/quarters)
+"aq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
 "ar" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -156,6 +164,14 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/galley)
+"as" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 5;
+	pixel_y = 2
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "at" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -165,6 +181,24 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
+"au" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/closet/crate,
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_x = 9
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_y = 6;
+	pixel_x = 6
+	},
+/obj/item/storage/fancy/cigar,
+/obj/item/tool/lighter/zippo/gold,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "av" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/strata/floor3,
@@ -178,6 +212,13 @@
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/pudong/base/bunker)
+"ax" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/trash/cigbutt{
+	pixel_y = 8
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "ay" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -197,6 +238,47 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"az" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 1;
+	pixel_y = -7
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"aA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/trash/cigbutt{
+	pixel_y = 8
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"aB" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"aC" = (
+/obj/item/stool{
+	pixel_y = 16
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"aD" = (
+/obj/item/trash/cigbutt{
+	pixel_y = 8
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"aE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aF" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker One Telephone";
@@ -209,6 +291,22 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
+"aG" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B7B5B"
+	},
+/obj/item/toy/deck,
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/item/device/flashlight/flare/upp{
+	pixel_y = 12
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aH" = (
 /obj/structure/sign/safety/landingzone{
 	pixel_y = 26
@@ -218,6 +316,18 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"aI" = (
+/obj/item/stool{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 15;
+	pixel_x = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -250,6 +360,22 @@
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/nco)
+"aL" = (
+/obj/item/trash/cigbutt{
+	pixel_y = 12;
+	pixel_x = 9
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"aM" = (
+/obj/item/stool{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aN" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -287,6 +413,13 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"aQ" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aR" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
@@ -305,6 +438,36 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
+"aU" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B7B5B"
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 2;
+	pixel_y = 19
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 12;
+	pixel_y = 20
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "aX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -1814,6 +1977,9 @@
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/item/storage/fancy/cigar/matchbook/brown{
+	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/quarters)
@@ -12698,7 +12864,7 @@ oA
 oA
 oA
 oA
-oA
+as
 Yd
 Ub
 Ub
@@ -12849,8 +13015,8 @@ Ub
 oA
 oA
 oA
-oA
-oA
+az
+au
 Ub
 Ub
 Ub
@@ -14828,7 +14994,7 @@ iN
 iN
 HO
 HO
-nL
+aq
 HO
 Ub
 Ub
@@ -14976,7 +15142,7 @@ nL
 nL
 nL
 Mf
-Mf
+aD
 nL
 nL
 nL
@@ -15129,7 +15295,7 @@ iN
 iN
 iN
 iN
-nL
+aA
 iN
 iN
 HO
@@ -15585,7 +15751,7 @@ Ub
 Ub
 Yd
 Ub
-oA
+ax
 oA
 Ub
 Ub
@@ -15883,14 +16049,14 @@ Ub
 Ub
 Ub
 Ub
-Yl
+Yd
 Yd
 Ub
 Ub
-Yd
-oA
-oA
-oA
+aL
+aE
+aB
+ax
 Yd
 Yd
 Yd
@@ -16039,11 +16205,11 @@ Ub
 Yd
 Yd
 Yd
+aM
+aG
+aC
 Yd
 Yd
-Yd
-Yd
-Ub
 Ub
 Yd
 Ub
@@ -16189,11 +16355,11 @@ Ub
 Ub
 Ub
 Ub
-Yd
-Yd
-Yd
-Yd
-Yd
+aU
+aQ
+oA
+aI
+oA
 Ub
 Ub
 Ub
@@ -16347,7 +16513,7 @@ Ub
 Ub
 Ub
 Ub
-Ub
+Yl
 Yd
 Yd
 Ub
