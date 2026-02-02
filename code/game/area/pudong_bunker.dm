@@ -22,7 +22,6 @@
 	temperature = T0C
 /area/pudong/exterior
 	name = "Pudong Exterior"
-	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	soundscape_playlist = SCAPE_PL_WIND
 	temperature = ICE_COLONY_TEMPERATURE
 /area/pudong/oob
@@ -30,54 +29,54 @@
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
 	requires_power = FALSE
 //==============================================================================BASE
-/area/pudong/maintenance
+/area/pudong/base/maintenance
 	name = "Pudong - Maintenance"
 	icon_state = "yellow"
-/area/pudong/power
+/area/pudong/base/power
 	name = "Pudong - Power Station"
 	icon_state = "engine_smes"
 	minimap_color = MINIMAP_AREA_ENGI_CAVE
 	soundscape_playlist = SCAPE_PL_ENG
-/area/pudong/engi
+/area/pudong/base/engi
 	name = "Pudong - Engineering"
 	icon_state = "engine"
 	minimap_color = MINIMAP_AREA_ENGI
 	soundscape_playlist = SCAPE_PL_ENG
-/area/pudong/server
+/area/pudong/base/server
 	name = "Pudong - Server Room"
 	icon_state = "bridge"
 	minimap_color = MINIMAP_AREA_COMMAND
 	soundscape_playlist = SCAPE_PL_CIC
-/area/pudong/quarters
+/area/pudong/base/quarters
 	name = "Pudong - Quarters"
 	icon_state = "green"
-/area/pudong/cryo
+/area/pudong/base/cryo
 	name = "Pudong - Cryogenic Storage"
 	icon_state = "cryo"
-/area/pudong/galley
+/area/pudong/base/galley
 	name = "Pudong - Galley"
 	icon_state = "green"
-/area/pudong/platoon
+/area/pudong/base/platoon
 	name = "Pudong - Platoon Commander's Office"
 	icon_state = "green"
-/area/pudong/briefing
+/area/pudong/base/briefing
 	name = "Pudong - Briefing Hall"
 	icon_state = "green"
-/area/pudong/armory
+/area/pudong/base/armory
 	name = "Pudong - Armory"
 	icon_state = "armory"
 	minimap_color = MINIMAP_AREA_SEC
-/area/pudong/nco
+/area/pudong/base/nco
 	name = "Pudong - Sergeants' Office"
 	icon_state = "security"
-/area/pudong/treatment
+/area/pudong/base/treatment
 	name = "Pudong - Treatment Space"
 	icon_state = "medbay"
 	minimap_color = MINIMAP_AREA_MEDBAY
-/area/pudong/hangar
+/area/pudong/base/hangar
 	name = "Pudong - Hangar Space"
 	icon_state = "purple"
-/area/pudong/bunker
+/area/pudong/base/bunker
 	name = "Pudong - Bunker System"
 	icon_state = "red"
 //===============================================================================CAVES
@@ -95,7 +94,7 @@
 	name = "Pudong Caverns"
 	icon_state = "east"
 //===============================================================================OOB
-/area/binhai/oob/buttons
+/area/pudong/oob/buttons
 	name = "Out of Bounds"
 	icon_state = "mech"
 	requires_power = FALSE

@@ -1,4 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/base/maintenance)
 "ab" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/toolbox/mechanical/green{
@@ -15,7 +18,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "ac" = (
 /obj/structure/dropship_equipment/paradrop_system,
 /obj/structure/machinery/light/small{
@@ -27,7 +30,10 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
+"ad" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
 "ae" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	pixel_y = 3;
@@ -50,13 +56,23 @@
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
+"af" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/exterior/cliff)
+"ag" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/snow/layer1,
+/area/pudong/exterior/cliff)
 "aj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ak" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -72,7 +88,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "al" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -86,7 +102,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ar" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -95,7 +111,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "at" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -104,11 +120,11 @@
 	id = "pudong_arm"
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "av" = (
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "aw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -117,7 +133,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "ay" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -136,7 +152,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "aF" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker One Telephone";
@@ -148,7 +164,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "aH" = (
 /obj/structure/sign/safety/landingzone{
 	pixel_y = 26
@@ -157,7 +173,7 @@
 	pixel_y = 39
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "aJ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -180,7 +196,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "aK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -189,7 +205,7 @@
 	},
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "aN" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -203,7 +219,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "aO" = (
 /obj/structure/surface/rack{
 	color = "#424a50"
@@ -222,11 +238,11 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "aP" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "aR" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/emails{
@@ -234,11 +250,11 @@
 	pixel_y = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "aS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "aT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -251,13 +267,13 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "bd" = (
 /obj/structure/sink{
 	pixel_y = 21
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "be" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -269,7 +285,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "bg" = (
 /obj/structure/platform_decoration/strata,
 /obj/structure/blocker/forcefield,
@@ -277,11 +293,11 @@
 /area/pudong/caves/depths)
 "bh" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "bj" = (
 /obj/structure/bed/chair/comfy/bench/south,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "bl" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -298,7 +314,7 @@
 	name = "\improper Bunker Access Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "bp" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
@@ -314,7 +330,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "bq" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_south,
@@ -327,7 +343,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "bu" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
@@ -342,7 +358,7 @@
 /obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
 /obj/item/smartgun_battery/upp,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "bv" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -350,7 +366,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "bw" = (
 /obj/structure/stairs{
 	dir = 4
@@ -364,17 +380,17 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "by" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "bz" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "bA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_south,
@@ -394,7 +410,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "bF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -405,7 +421,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "bI" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -414,11 +430,11 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "bJ" = (
 /obj/structure/largecrate/supply/medicine/medkits,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "bM" = (
 /obj/structure/platform/strata/metal{
 	dir = 4;
@@ -430,7 +446,7 @@
 "bQ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "bV" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -438,7 +454,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "bW" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -446,7 +462,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "cb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer0,
@@ -461,15 +477,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/treatment)
-"cg" = (
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/treatment)
 "ch" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -484,7 +492,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "cl" = (
 /obj/structure/stairs{
 	dir = 8
@@ -494,7 +502,7 @@
 	vector_y = -30
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "co" = (
 /turf/open/auto_turf/snow/layer3,
 /area/pudong/exterior/cliff)
@@ -513,7 +521,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "cr" = (
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
@@ -535,7 +543,7 @@
 /obj/item/clothing/mask/balaclava/threehole,
 /obj/item/clothing/mask/balaclava/threehole,
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "cu" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -543,7 +551,7 @@
 	layer = 2.5
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "cw" = (
 /obj/effect/projector{
 	name = "base_downarm";
@@ -555,7 +563,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "cz" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -570,7 +578,7 @@
 /area/pudong/exterior/cliff)
 "cE" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "cG" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -579,7 +587,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "cH" = (
 /obj/structure/gun_rack/type71/empty{
 	pixel_y = 16
@@ -596,7 +604,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "cK" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -628,7 +636,7 @@
 	pixel_x = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "cL" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -648,20 +656,20 @@
 	pixel_x = 5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "cO" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "cP" = (
 /obj/item/toy/deck,
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "cT" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -691,14 +699,14 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "cY" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
 /obj/structure/cargo_container/upp/tan/right,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "dc" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -713,7 +721,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "dd" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "pudong_defense_access";
@@ -733,7 +741,7 @@
 "df" = (
 /obj/structure/machinery/autolathe/full,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "dg" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = -13;
@@ -748,7 +756,7 @@
 	layer = 3.3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "dl" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -757,10 +765,10 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "dm" = (
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ds" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/horizontal{
@@ -768,20 +776,20 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "dw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "dy" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "pudong_server"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/server)
+/area/pudong/base/server)
 "dz" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood/vehicle{
 	name = "\improper MinZdrav Blood Dispenser";
@@ -790,7 +798,7 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "dE" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
@@ -799,7 +807,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "dG" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -813,14 +821,14 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "dH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "dI" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
@@ -828,14 +836,14 @@
 	dir = 2
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "dK" = (
 /obj/structure/janitorialcart,
 /obj/item/tool/mop{
 	pixel_x = 14
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "dL" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -850,7 +858,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "dN" = (
 /obj/structure/curtain/open/medical,
 /obj/effect/decal/medical_decals{
@@ -861,7 +869,7 @@
 	dir = 8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "dO" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	req_one_access_txt = "240;241";
@@ -871,13 +879,13 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "dP" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_green/glass{
 	name = "/improper Bunks"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "dS" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -896,28 +904,28 @@
 	pixel_y = 6
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "dU" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "dW" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ed" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "ef" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "pudong_engi"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/engi)
+/area/pudong/base/power)
 "ei" = (
 /obj/structure/sign/safety/south{
 	pixel_x = -18;
@@ -925,7 +933,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ej" = (
 /obj/structure/stairs{
 	dir = 4
@@ -935,7 +943,7 @@
 	vector_x = 34
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "em" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -946,7 +954,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "ep" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/west_east,
@@ -957,10 +965,10 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "et" = (
 /turf/closed/wall/strata_ice/dirty,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "ev" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -974,7 +982,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "ew" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -993,7 +1001,7 @@
 	dir = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "eA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1016,13 +1024,13 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "eC" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "eJ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -1034,7 +1042,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "eQ" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -1045,7 +1053,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "eR" = (
 /obj/structure/machinery/autodoc_console{
 	dir = 1;
@@ -1059,7 +1067,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "eW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1068,7 +1076,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fa" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -1089,27 +1097,27 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "fb" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "fc" = (
 /obj/structure/sign/safety/bathunisex{
 	pixel_x = -16
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "fd" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "ff" = (
 /obj/structure/barricade/metal{
 	layer = 3.1;
@@ -1119,7 +1127,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "fj" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -1129,19 +1137,19 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "fq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "fr" = (
 /turf/open/auto_turf/snow/layer2,
 /area/pudong/exterior/cavern)
@@ -1152,18 +1160,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "fv" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "fB" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -1176,7 +1184,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -1197,7 +1205,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/power)
+/area/pudong/base/power)
 "fI" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -1209,10 +1217,10 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "fJ" = (
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fK" = (
 /obj/structure/reagent_dispensers/fueltank{
 	layer = 2.97;
@@ -1220,7 +1228,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "fM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1239,7 +1247,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "fN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/blood/oil,
@@ -1251,7 +1259,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "fP" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -1262,7 +1270,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "fQ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -1276,14 +1284,14 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "fU" = (
 /obj/structure/bed/chair{
 	dir = 4;
 	pixel_x = 3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "fW" = (
 /turf/open/void,
 /area/pudong/caves/main)
@@ -1323,13 +1331,13 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ge" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "gg" = (
 /obj/structure/platform_decoration/strata{
 	dir = 1
@@ -1345,7 +1353,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "gp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -1354,7 +1362,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "gq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1367,7 +1375,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "gr" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -1380,7 +1388,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "gv" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -1392,7 +1400,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "gw" = (
 /obj/structure/filingcabinet{
 	pixel_x = -8;
@@ -1406,13 +1414,13 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "gD" = (
 /obj/item/storage/box/lights/bulbs{
 	pixel_x = 7
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "gG" = (
 /obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer3,
@@ -1423,7 +1431,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "gL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1435,7 +1443,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "gM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1443,7 +1451,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "gN" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -1452,7 +1460,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "gS" = (
 /obj/structure/platform/strata,
 /turf/open/auto_turf/snow/layer1,
@@ -1460,7 +1468,7 @@
 "gT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "gW" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -1471,7 +1479,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "gX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1479,12 +1487,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "gY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ha" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1506,7 +1514,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/power)
+/area/pudong/base/power)
 "hc" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -1519,7 +1527,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "hd" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker Four Telephone";
@@ -1531,7 +1539,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "he" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -1546,7 +1554,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "hf" = (
 /obj/structure/coatrack{
 	pixel_x = 9;
@@ -1554,7 +1562,7 @@
 	},
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "hg" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -1568,7 +1576,7 @@
 /obj/effect/landmark/start/marine/tl/upp,
 /obj/effect/landmark/late_join/upp,
 /turf/open/floor/carpet,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "hi" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -1576,7 +1584,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "hk" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
@@ -1588,7 +1596,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat/marked,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "hm" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -1597,7 +1605,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "hn" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
 	can_block_movement = 0;
@@ -1612,7 +1620,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "ht" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -1628,7 +1636,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "hv" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -1636,7 +1644,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "hD" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -1648,10 +1656,10 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "hE" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "hF" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Latrine"
@@ -1660,7 +1668,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "hJ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -1668,7 +1676,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "hM" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -1677,19 +1685,13 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/caves/main)
-"hP" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "pudong_engi"
-	},
-/turf/open/floor/corsat/marked,
-/area/pudong/power)
 "hR" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "pudong_lockdown_south";
 	name = "\improper Bunker Access Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "hS" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -1697,7 +1699,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "hX" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -1712,10 +1714,10 @@
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/power)
+/area/pudong/base/power)
 "if" = (
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "ih" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -1729,7 +1731,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "im" = (
 /obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer1,
@@ -1741,7 +1743,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "iq" = (
 /obj/item/ashtray/plastic{
 	icon_state = "ashtray_full_bl";
@@ -1764,7 +1766,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "is" = (
 /obj/structure/platform/strata,
 /obj/structure/platform/strata{
@@ -1780,7 +1782,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "iv" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -1792,7 +1794,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "iw" = (
 /obj/structure/barricade/handrail/wire,
 /obj/item/ammo_box/magazine/misc/flares/upp{
@@ -1805,7 +1807,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "iz" = (
 /obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer1,
@@ -1820,7 +1822,7 @@
 	pixel_x = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "iE" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -1832,10 +1834,10 @@
 	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "iG" = (
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "iH" = (
 /obj/structure/platform_decoration/strata{
 	dir = 8
@@ -1854,11 +1856,11 @@
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "iN" = (
 /obj/structure/girder,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "iP" = (
 /obj/structure/platform_decoration/strata,
 /obj/structure/blocker/forcefield,
@@ -1873,7 +1875,7 @@
 	vector_y = -34
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "iV" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire{
@@ -1881,7 +1883,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "iY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -1892,7 +1894,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "iZ" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
@@ -1916,7 +1918,7 @@
 	pixel_y = -4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "jb" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1925,13 +1927,13 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "jc" = (
 /obj/structure/machinery/power/terminal{
 	dir = 4
 	},
 /turf/open/floor/greengrid,
-/area/pudong/power)
+/area/pudong/base/power)
 "jg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -1940,7 +1942,7 @@
 	id = "pudong_hangar"
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "jh" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
@@ -1959,7 +1961,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ji" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -1984,7 +1986,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "jk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/sentryupp{
@@ -1995,7 +1997,7 @@
 	layer = 3.03
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "jl" = (
 /obj/structure/gun_rack/type71/unloaded{
 	pixel_y = 16;
@@ -2006,7 +2008,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "jm" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
@@ -2018,7 +2020,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "jn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -2035,7 +2037,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "js" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -2044,7 +2046,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "ju" = (
 /obj/structure/platform_decoration/strata,
 /obj/structure/blocker/forcefield,
@@ -2065,7 +2067,7 @@
 	dir = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "jy" = (
 /obj/structure/barricade/sandbags{
 	dir = 4
@@ -2079,7 +2081,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "jE" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire{
@@ -2087,7 +2089,7 @@
 	layer = 3.01
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "jH" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -2103,7 +2105,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "jL" = (
 /obj/structure/platform/strata{
 	dir = 4
@@ -2120,7 +2122,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "jQ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/computer{
@@ -2133,10 +2135,10 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "jS" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "kh" = (
 /obj/item/lightstick/red/spoke/planted{
 	pixel_x = 9;
@@ -2163,7 +2165,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "kr" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -2177,18 +2179,7 @@
 	pixel_y = -4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
-"ku" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8;
-	light_power = 0.4;
-	light_range = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/engi)
 "kv" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -2202,7 +2193,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "kw" = (
 /obj/structure/platform/strata/metal{
 	dir = 4;
@@ -2223,7 +2214,7 @@
 /obj/effect/landmark/start/bridge/upp,
 /obj/effect/landmark/late_join/upp,
 /turf/open/floor/carpet,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "ky" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -2233,7 +2224,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "kz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -2242,7 +2233,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "kB" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -2256,24 +2247,13 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "kH" = (
 /obj/structure/sign/safety/conference_room{
 	pixel_x = 32
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
-"kI" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1;
-	light_power = 0.4;
-	pixel_y = 20;
-	light_range = 4
-	},
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/briefing)
 "kM" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	layer = 2.99;
@@ -2289,7 +2269,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "kN" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -2300,7 +2280,7 @@
 	vector_x = 34
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "kQ" = (
 /obj/effect/projector{
 	name = "pudong_engup";
@@ -2312,7 +2292,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "kS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -2322,13 +2302,13 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "kV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "lk" = (
 /obj/structure/cargo_container/horizontal/blue/top{
 	pixel_x = 16
@@ -2341,7 +2321,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ll" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2350,14 +2330,14 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "lm" = (
 /obj/effect/projector{
 	name = "pudong_engdown";
 	vector_x = -19
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "ln" = (
 /obj/structure/platform_decoration/strata{
 	dir = 1
@@ -2370,15 +2350,16 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ls" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "lu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/blue{
 	icon_state = "6-8"
 	},
+/obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/exterior/cliff)
 "lv" = (
@@ -2396,11 +2377,11 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "lw" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "lB" = (
 /obj/structure/platform/strata,
 /obj/structure/blocker/forcefield,
@@ -2414,7 +2395,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "lE" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -2423,7 +2404,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "lI" = (
 /obj/structure/machinery/vending/cigarette/upp{
 	pixel_x = 1;
@@ -2435,7 +2416,7 @@
 	layer = 3.01
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "lO" = (
 /obj/structure/machinery/door_control{
 	name = "Server Vault Shutter Control";
@@ -2447,7 +2428,7 @@
 	icon_state = "1-2-4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/server)
+/area/pudong/base/server)
 "mb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -2456,7 +2437,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "mf" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -2468,26 +2449,26 @@
 	icon_state = "W"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "mv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "mw" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
 	layer = 3.01
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "mx" = (
 /obj/structure/machinery/telecomms/allinone,
 /obj/structure/machinery/door/window/brigdoor/westleft,
 /turf/open/floor/almayer/tcomms,
-/area/pudong/server)
+/area/pudong/base/server)
 "my" = (
 /turf/open/space/basic,
 /area/pudong/exterior/cliff)
@@ -2510,35 +2491,31 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "mC" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
-"mF" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/armory)
 "mG" = (
 /obj/structure/largecrate/random/case/double{
 	pixel_x = -4;
 	pixel_y = 2
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "mI" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "mK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
 	pixel_x = 1
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "mQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -2558,7 +2535,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "mS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2"
@@ -2577,11 +2554,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "mW" = (
 /obj/structure/closet/crate,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "mY" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -2592,7 +2569,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "mZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
@@ -2606,7 +2583,7 @@
 	pixel_y = 18
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "nd" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -2614,17 +2591,17 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "ng" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "pudong_hangarup";
 	vector_x = 34
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "nh" = (
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "nl" = (
 /obj/structure/toilet{
 	dir = 1
@@ -2649,7 +2626,7 @@
 	},
 /obj/structure/curtain/blue,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "nn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -2665,7 +2642,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "nq" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -2673,7 +2650,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "nt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -2698,7 +2675,7 @@
 /obj/item/clothing/mask/balaclava/threehole,
 /obj/item/clothing/mask/balaclava/threehole,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "nu" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -2711,11 +2688,11 @@
 	pixel_y = 13
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "nA" = (
 /obj/structure/machinery/cm_vending/clothing/medic/upp,
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "nB" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -2733,7 +2710,7 @@
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "nG" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -2746,25 +2723,25 @@
 	pixel_y = 18
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "nL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "nM" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "nS" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "\improper Lockdown Blast Door";
 	id = "pudong_lockdown_entry"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "nU" = (
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "nW" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -2773,7 +2750,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "nZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
@@ -2784,7 +2761,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "oa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -2798,7 +2775,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "ob" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -2811,27 +2788,27 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "oc" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	req_one_access_txt = "230"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "of" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "on" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "pudong_engdown";
 	vector_x = -19
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "oo" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -2842,7 +2819,7 @@
 	layer = 5.12
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "oy" = (
 /obj/structure/platform/strata,
 /obj/structure/platform/strata{
@@ -2863,7 +2840,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "oF" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -2872,7 +2849,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "oG" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -2880,21 +2857,21 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "oH" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "oI" = (
 /obj/effect/projector{
 	name = "base_downarm";
 	vector_y = -30
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "oT" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/server)
+/area/pudong/base/server)
 "oW" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -2905,7 +2882,7 @@
 	vector_x = -34
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "oX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -2920,14 +2897,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "oZ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "pa" = (
 /obj/structure/machinery/shower{
 	dir = 8;
@@ -2939,16 +2916,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
-"pd" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	light_power = 0.4;
-	light_range = 4
-	},
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/quarters)
 "pg" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -2960,7 +2928,7 @@
 	dir = 10
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ph" = (
 /obj/item/weapon/dart/green,
 /obj/item/weapon/dart/green{
@@ -2987,7 +2955,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "pk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer2,
@@ -3009,7 +2977,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "po" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -3022,7 +2990,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "ps" = (
 /obj/structure/sink{
 	dir = 4;
@@ -3032,11 +3000,11 @@
 	pixel_x = 26
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "pw" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "pC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3044,7 +3012,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "pD" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3054,7 +3022,7 @@
 	layer = 2.99
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "pG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3069,13 +3037,13 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "pH" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "pI" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -3087,14 +3055,14 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "pO" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
 	pixel_y = 2
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "pP" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -3105,7 +3073,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "pS" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -3114,15 +3082,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
-"pV" = (
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 1;
-	pixel_y = 10
-	},
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/armory)
 "pY" = (
 /obj/structure/platform_decoration/strata,
 /obj/structure/platform_decoration/strata{
@@ -3144,7 +3104,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "qb" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -3159,10 +3119,10 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "qd" = (
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "qe" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3180,11 +3140,11 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "qf" = (
 /obj/structure/curtain/open/medical,
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "qg" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -3203,13 +3163,13 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ql" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "qq" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -3220,27 +3180,27 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "qr" = (
 /obj/effect/projector{
 	name = "pudong_hangarup";
 	vector_x = 34
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "qt" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "qA" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
 	dir = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "qB" = (
 /turf/open/auto_turf/ice,
 /area/pudong/exterior/cavern)
@@ -3251,10 +3211,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "qG" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "qH" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -3273,13 +3233,13 @@
 	pixel_x = -2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "qI" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "qK" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -3296,7 +3256,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "qP" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Platoon Medic Office";
@@ -3304,17 +3264,17 @@
 	req_one_access_txt = "231;242"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "qU" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "qV" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "qW" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -3322,7 +3282,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "qY" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -3333,7 +3293,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "ra" = (
 /turf/closed/shuttle{
 	dir = 1;
@@ -3352,13 +3312,13 @@
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "rf" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "rk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -3377,13 +3337,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "rq" = (
 /obj/structure/bed/chair/comfy{
 	dir = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "rr" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -3404,14 +3364,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "rt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "ru" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -3420,14 +3380,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "rA" = (
 /obj/effect/projector{
 	name = "pudong_armup";
 	vector_x = 30
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "rE" = (
 /obj/structure/toilet{
 	dir = 1
@@ -3453,14 +3413,14 @@
 /obj/structure/curtain/blue,
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "rF" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper Lockdown Blast Door";
 	id = "pudong_lockdown_ext"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "rG" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/door_control/brbutton/alt{
@@ -3485,10 +3445,10 @@
 	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "rK" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "rL" = (
 /obj/structure/machinery/computer/med_data/laptop{
 	dir = 4;
@@ -3513,7 +3473,7 @@
 	pixel_x = 9
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "rN" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -3524,7 +3484,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/power)
+/area/pudong/base/power)
 "rQ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -3546,7 +3506,7 @@
 	pixel_y = 39
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "rT" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -3560,7 +3520,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "rU" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/cross{
@@ -3569,7 +3529,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "rY" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/landinglight/ds1/spoke{
@@ -3578,18 +3538,6 @@
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
-"sd" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 1;
-	light_power = 0.4;
-	pixel_y = 20;
-	light_range = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/hangar)
 "se" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3599,7 +3547,7 @@
 	icon_state = "W"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "sf" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire{
@@ -3608,7 +3556,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "sg" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -3622,7 +3570,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "si" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -3632,13 +3580,10 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
-"sl" = (
-/turf/closed/wall/upp_wall,
-/area/pudong/maintenance)
+/area/pudong/base/quarters)
 "sn" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "su" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -3650,7 +3595,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "sw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -3668,7 +3613,7 @@
 	pixel_y = 30
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "sx" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -3687,7 +3632,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "sE" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -3700,7 +3645,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "sH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -3708,7 +3653,7 @@
 	name = "\improper Bunker Access Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "sL" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/telecomms/relay/preset/tower/mapcomms,
@@ -3720,7 +3665,7 @@
 	density = 0
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "sS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -3732,10 +3677,10 @@
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "sU" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "sW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3750,7 +3695,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "sY" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
 	can_block_movement = 0;
@@ -3765,16 +3710,16 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "tf" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "tn" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "to" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -3789,7 +3734,7 @@
 	pixel_y = 11
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "tq" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -3797,14 +3742,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "tt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tu" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -3816,7 +3761,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "tw" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -3833,7 +3778,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "tx" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
 	can_block_movement = 0;
@@ -3844,7 +3789,7 @@
 	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "ty" = (
 /obj/structure/window/framed/upp/green,
 /obj/structure/machinery/door/poddoor/shutters/almayer{
@@ -3852,24 +3797,24 @@
 	id = "pudong_hangar"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tz" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "tC" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "upp_hangardown";
 	vector_x = -34
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tE" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/west_south,
@@ -3880,7 +3825,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "tJ" = (
 /obj/structure/platform/strata{
 	dir = 4
@@ -3897,7 +3842,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tL" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -3909,7 +3854,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "tM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -3919,7 +3864,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "tO" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -3928,7 +3873,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "tP" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
@@ -3936,7 +3881,7 @@
 	dir = 2
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "tT" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "pudong_armory2";
@@ -3957,7 +3902,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "tV" = (
 /obj/structure/stairs{
 	dir = 4;
@@ -3972,7 +3917,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "tW" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
 	can_block_movement = 0;
@@ -3983,7 +3928,7 @@
 	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "uc" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -3994,7 +3939,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "uf" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -4005,7 +3950,7 @@
 	id = "pudong_lockdown_ext"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "ug" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -4013,7 +3958,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "uk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
@@ -4030,14 +3975,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "us" = (
 /obj/structure/machinery/door/airlock/upp_utility,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "uu" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -4046,7 +3991,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "uz" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -4057,13 +4002,13 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "uA" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "uF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -4092,7 +4037,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "uH" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -4115,18 +4060,18 @@
 	pixel_x = -3
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "uI" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "uM" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/one{
 	pixel_x = -18
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "uQ" = (
 /obj/structure/phone_base/upp_net{
 	name = "Overwatch Telephone";
@@ -4138,7 +4083,7 @@
 	pixel_x = 9
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "uS" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = -20;
@@ -4150,7 +4095,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "uU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -4158,7 +4103,7 @@
 	id = "pudong_lockdown_int"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "uY" = (
 /obj/structure/stairs{
 	dir = 4;
@@ -4173,7 +4118,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "va" = (
 /obj/structure/sign/safety/galley{
 	pixel_x = 7;
@@ -4183,7 +4128,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "vf" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/faxmachine{
@@ -4205,7 +4150,7 @@
 	pixel_y = 12
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "vh" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -4213,7 +4158,7 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/item/tool/weldingtool/hugetank,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "vi" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -4232,7 +4177,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vm" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 2;
@@ -4240,7 +4185,7 @@
 	name = "\improper Equipment Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vo" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 1
@@ -4250,7 +4195,7 @@
 	id = "pudong_armory2"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vp" = (
 /obj/structure/machinery/power/port_gen/pacman,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4262,7 +4207,7 @@
 	},
 /obj/item/ashtray/plastic,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "vt" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -4283,38 +4228,35 @@
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vu" = (
 /obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
-"vw" = (
-/turf/open/floor/corsat,
-/area/pudong/hangar)
 "vB" = (
 /obj/structure/closet/crate,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "vD" = (
 /obj/effect/projector{
 	name = "pudong_engup";
 	vector_x = 19
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "vI" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "vL" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "vN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/prop/tableflag/upp{
@@ -4344,7 +4286,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "vO" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -4362,7 +4304,7 @@
 	pixel_x = -7
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "vQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4374,14 +4316,14 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vT" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper ss";
 	id = "pudong_defense_access"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vX" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -4395,17 +4337,17 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "vY" = (
 /obj/effect/projector{
 	name = "pudong_engdown";
 	vector_x = -19
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "wb" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "wc" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -4422,23 +4364,10 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "we" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/cryo)
-"wg" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 8;
-	light_power = 0.4;
-	light_range = 4
-	},
-/obj/structure/pipes/vents/pump{
-	dir = 4
-	},
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/cryo)
 "wh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_east,
@@ -4451,11 +4380,11 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "wt" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ww" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -4467,14 +4396,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "wx" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "wA" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -4484,11 +4413,11 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "wB" = (
 /obj/structure/machinery/power/smes/buildable/charged,
 /turf/open/floor/almayer/tcomms,
-/area/pudong/power)
+/area/pudong/base/power)
 "wE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4498,7 +4427,7 @@
 	height = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "wG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4510,7 +4439,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "wL" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e";
@@ -4522,14 +4451,14 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "wM" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
 	layer = 3.01
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "wQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -4545,13 +4474,13 @@
 	pixel_x = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "wS" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "wT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -4560,11 +4489,11 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "wU" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "wX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -4580,7 +4509,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "wZ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -4592,31 +4521,31 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "xc" = (
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "xf" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
 	id = "pudong_hangar_ext";
 	name = "/improper Hangar Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xn" = (
 /obj/item/dartboard{
 	pixel_y = -22
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "xu" = (
 /obj/structure/sign/safety/four{
 	pixel_x = 35
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "xv" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -4627,14 +4556,14 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "xw" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = 7;
 	pixel_y = 32
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "xx" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -4643,18 +4572,18 @@
 	pixel_y = -3
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xB" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "xE" = (
 /obj/structure/sign/safety/cryo{
 	pixel_y = 28;
 	pixel_x = 7
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "xL" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -4665,7 +4594,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/server)
+/area/pudong/base/server)
 "xM" = (
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cavern)
@@ -4680,7 +4609,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xO" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -4691,7 +4620,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xP" = (
 /obj/item/rappel_harness/extract/nauk,
 /obj/item/rappel_harness/extract/nauk,
@@ -4708,7 +4637,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xU" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -4719,7 +4648,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "xY" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/pudong/exterior/cavern)
@@ -4729,7 +4658,7 @@
 	pixel_x = 35
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "yd" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -4745,7 +4674,7 @@
 	layer = 3.01
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "yf" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -4761,7 +4690,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "yn" = (
 /obj/structure/platform/strata{
 	dir = 4
@@ -4779,7 +4708,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "yv" = (
 /obj/structure/bed/chair/comfy/bench/north,
 /obj/structure/machinery/light/small{
@@ -4789,7 +4718,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "yx" = (
 /obj/structure/cable/heavyduty/north_south,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -4809,23 +4738,23 @@
 /obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
 /obj/item/smartgun_battery/upp,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "yA" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper Lockdown Blast Door";
 	id = "pudong_lockdown_ext"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "yF" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "yG" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "yI" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -4843,20 +4772,20 @@
 	pixel_y = 11
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "yJ" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "yK" = (
 /obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
 	pixel_y = 17;
 	can_block_movement = 0
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "yP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -4865,7 +4794,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "yQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -4884,7 +4813,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "yR" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -4911,13 +4840,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "yS" = (
 /obj/structure/stairs{
 	dir = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "yU" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -4932,7 +4861,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "zd" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_green/glass{
 	dir = 1;
@@ -4942,7 +4871,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "zf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -4956,7 +4885,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/tcomms,
-/area/pudong/server)
+/area/pudong/base/server)
 "zg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -4965,7 +4894,7 @@
 	id = "pudong_eng"
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "zj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -4978,7 +4907,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "zl" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -4989,16 +4918,16 @@
 	pixel_y = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "zm" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "zr" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "zs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -5012,7 +4941,7 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "zu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -5022,7 +4951,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "zv" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -5035,7 +4964,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "zz" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/type71/large{
@@ -5052,16 +4981,16 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "zA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "zE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "zK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -5069,7 +4998,7 @@
 	name = "\improper Bunker Access Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "zL" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
 	can_block_movement = 0;
@@ -5080,7 +5009,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "zV" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8;
@@ -5097,7 +5026,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "zX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -5107,7 +5036,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "zY" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -5130,7 +5059,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "zZ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5140,7 +5069,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Aa" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire{
@@ -5149,12 +5078,12 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Ab" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ad" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalbottomleft";
@@ -5167,14 +5096,14 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ae" = (
 /obj/structure/sign/safety/south{
 	pixel_x = 32;
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Af" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -5182,7 +5111,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Ai" = (
 /obj/structure/closet/crate,
 /obj/item/fuel_cell,
@@ -5192,7 +5121,7 @@
 /obj/item/fuel_cell,
 /obj/item/fuel_cell,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "Ak" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -5214,7 +5143,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Am" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal{
@@ -5223,7 +5152,7 @@
 	},
 /obj/structure/barricade/metal,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "An" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5232,14 +5161,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Aq" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
 	layer = 3.01
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ar" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_south,
@@ -5248,7 +5177,7 @@
 "As" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Av" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -5256,7 +5185,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "AB" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -5274,7 +5203,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "AE" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -5290,7 +5219,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "AH" = (
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/exterior/cavern)
@@ -5304,7 +5233,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "AK" = (
 /obj/structure/platform_decoration/strata{
 	dir = 1
@@ -5327,7 +5256,7 @@
 "AN" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "AO" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -5336,7 +5265,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "AS" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -5352,7 +5281,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "AU" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
@@ -5363,7 +5292,7 @@
 	dir = 1
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "AV" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -5375,7 +5304,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "AX" = (
 /obj/structure/sign/safety/east{
 	pixel_x = -18
@@ -5389,7 +5318,7 @@
 	pixel_y = -6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Bc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -5402,7 +5331,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Bg" = (
 /obj/structure/machinery/shower{
 	dir = 4;
@@ -5414,7 +5343,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Bh" = (
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/caves/main)
@@ -5424,7 +5353,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Bp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5439,7 +5368,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Bt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -5454,7 +5383,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Bu" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5463,7 +5392,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Bv" = (
 /obj/structure/gun_rack/type71/unloaded{
 	pixel_y = 16;
@@ -5481,7 +5410,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Bw" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -5494,16 +5423,16 @@
 	dir = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "Bx" = (
 /obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "By" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Bz" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
 	req_one_access = list();
@@ -5511,7 +5440,7 @@
 	pixel_x = 7
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "BA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/lightstick/red/spoke/planted{
@@ -5530,7 +5459,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "BG" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -5549,24 +5478,24 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "BM" = (
 /obj/structure/machinery/door/airlock/multi_tile/upp_green/glass{
 	dir = 1;
 	name = "\improper Latrine"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "BO" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "BZ" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ca" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -5576,7 +5505,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Cb" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5594,10 +5523,10 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Cc" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Cf" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -5617,7 +5546,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Cg" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -5628,7 +5557,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ci" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -5638,7 +5567,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Cj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -5650,29 +5579,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
-"Cl" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Cp" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Cv" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -5697,7 +5610,7 @@
 "Cy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "CC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -5711,7 +5624,7 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "CH" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -5749,7 +5662,7 @@
 	pixel_x = 9
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "CI" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -5759,7 +5672,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "CK" = (
 /obj/structure/platform/strata{
 	dir = 4
@@ -5774,14 +5687,14 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "CS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "CX" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalleft"
@@ -5798,7 +5711,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "CZ" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
@@ -5810,7 +5723,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Da" = (
 /obj/structure/cargo_container/horizontal/blue/bottom{
 	pixel_x = 16
@@ -5819,17 +5732,17 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Dd" = (
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Dg" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	req_one_access_txt = "230"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Di" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -5850,14 +5763,14 @@
 	pixel_y = 39
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Dl" = (
 /obj/structure/prop/almayer/whiteboard{
 	pixel_y = 23;
 	density = 0
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Dm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -5870,7 +5783,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Dn" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -5884,7 +5797,7 @@
 /obj/effect/landmark/start/marine/smartgunner/upp,
 /obj/effect/landmark/late_join/upp,
 /turf/open/floor/carpet,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Do" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -5910,7 +5823,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "Ds" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/sentryupp{
@@ -5921,7 +5834,7 @@
 	layer = 3.03
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Dt" = (
 /turf/open/auto_turf/snow/layer3,
 /area/pudong/exterior/cavern)
@@ -5939,7 +5852,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Dw" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -5960,24 +5873,24 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Dz" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = -20;
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "DD" = (
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "DF" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "DI" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/three{
@@ -5985,10 +5898,10 @@
 	pixel_y = 32
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "DJ" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "DK" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -5997,7 +5910,7 @@
 	pixel_y = 10
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "DO" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -6008,7 +5921,7 @@
 	layer = 5.12
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "DR" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/vertical{
@@ -6017,11 +5930,11 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "DS" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "DU" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -6043,7 +5956,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "DV" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -6059,10 +5972,10 @@
 	},
 /obj/structure/largecrate/supply/supplies/sandbags,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "DW" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "Eq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -6072,17 +5985,17 @@
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ex" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Ey" = (
 /obj/structure/machinery/power/apc/power/north,
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "Ez" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -6092,7 +6005,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "EB" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -6101,20 +6014,20 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "EC" = (
 /obj/effect/projector{
 	name = "pudong_armup";
 	vector_x = 30
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "EE" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "EF" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -6125,7 +6038,7 @@
 	vector_x = 19
 	},
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "EG" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -6139,7 +6052,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "EJ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -6149,14 +6062,14 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "EL" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "EP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -6165,17 +6078,17 @@
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ES" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "EW" = (
 /obj/effect/projector{
 	name = "base_hangardown";
 	vector_y = -34
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "EX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -6192,7 +6105,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/server)
+/area/pudong/base/server)
 "Fa" = (
 /turf/open/auto_turf/snow/layer2,
 /area/pudong/caves/main)
@@ -6206,7 +6119,7 @@
 	pixel_y = 26
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Fc" = (
 /obj/structure/bed/chair{
 	can_buckle = 0;
@@ -6230,7 +6143,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Fd" = (
 /obj/structure/stairs{
 	dir = 8;
@@ -6247,13 +6160,13 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Fh" = (
 /obj/structure/bed/chair/comfy/teal{
 	dir = 8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Fi" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -6261,7 +6174,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "Fj" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -6281,7 +6194,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Fk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -6290,7 +6203,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Fl" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
@@ -6298,7 +6211,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Fm" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -6317,7 +6230,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Fo" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -6327,7 +6240,7 @@
 "Fr" = (
 /obj/structure/stairs,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Fu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire,
@@ -6350,7 +6263,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Fy" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -6363,7 +6276,7 @@
 	pixel_x = 5
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Fz" = (
 /obj/structure/fence{
 	health_max = 1500;
@@ -6385,7 +6298,7 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "FC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -6394,28 +6307,18 @@
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "FN" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "pudong_engup";
 	vector_x = 19
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "FP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
-"FQ" = (
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	light_power = 0.4;
-	light_range = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/quarters)
 "FR" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -6426,13 +6329,13 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "FT" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "FU" = (
 /obj/structure/machinery/computer/telecomms/server{
 	color = "#8B9490";
@@ -6444,7 +6347,7 @@
 	icon_state = "1-2-4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/server)
+/area/pudong/base/server)
 "FW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer1,
@@ -6466,14 +6369,14 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "FZ" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Ga" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -6484,7 +6387,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Gb" = (
 /obj/structure/bookcase{
 	density = 0;
@@ -6497,7 +6400,7 @@
 /obj/item/prop/magazine/book/inframaterialism,
 /obj/item/prop/magazine/book/theartofwar,
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Gd" = (
 /obj/structure/sign/safety/restrictedarea{
 	pixel_y = -26;
@@ -6507,10 +6410,7 @@
 	dir = 5
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
-"Ge" = (
-/turf/closed/wall/upp_wall/hull,
-/area/pudong/power)
+/area/pudong/base/armory)
 "Gf" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -6521,7 +6421,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Gk" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/snow/layer0,
@@ -6531,7 +6431,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Go" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker Two Telephone";
@@ -6542,10 +6442,10 @@
 	pixel_y = 32
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Gs" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "Gw" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/paper_bin{
@@ -6580,7 +6480,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Gy" = (
 /obj/structure/sink{
 	dir = 8;
@@ -6590,7 +6490,7 @@
 	pixel_x = -27
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Gz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/lightstick/red/spoke/planted{
@@ -6610,7 +6510,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "GC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -6625,7 +6525,7 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "GD" = (
 /obj/structure/sign/flag/upp{
 	dir = 1;
@@ -6637,7 +6537,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "GE" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -6647,7 +6547,7 @@
 	height = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "GI" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -6662,7 +6562,7 @@
 /obj/effect/landmark/late_join/upp,
 /obj/effect/landmark/late_join,
 /turf/open/floor/carpet,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "GM" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	req_one_access_txt = "240;241";
@@ -6673,7 +6573,7 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "GN" = (
 /obj/structure/stairs{
 	dir = 4;
@@ -6684,7 +6584,7 @@
 	vector_x = 30
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "GP" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -6695,13 +6595,13 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "GR" = (
 /obj/structure/machinery/power/monitor{
 	name = "Base Power Grid Monitoring"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "GS" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -6716,7 +6616,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "GY" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -6738,14 +6638,14 @@
 	pixel_x = -5
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Ha" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "upp_armdown";
 	vector_x = -30
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Hb" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
@@ -6764,13 +6664,13 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Hd" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Hg" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -6785,14 +6685,14 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Hh" = (
 /obj/structure/machinery/computer/telecomms/traffic{
 	density = 1;
 	color = "#8B9490"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Hi" = (
 /obj/structure/bedsheetbin{
 	pixel_x = -4;
@@ -6806,7 +6706,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Hk" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -6822,7 +6722,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Hm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -6830,7 +6730,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Hn" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -6845,7 +6745,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Hq" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -6856,25 +6756,14 @@
 	pixel_y = 2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
-"Hz" = (
-/obj/structure/prop/structure_lattice{
-	dir = 4
-	},
-/obj/structure/prop/structure_lattice{
-	dir = 4;
-	pixel_y = 13;
-	layer = 3.02
-	},
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "HE" = (
 /obj/structure/sink{
 	dir = 4;
 	pixel_x = 11
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "HF" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -6890,7 +6779,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "HJ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -6912,7 +6801,7 @@
 	pixel_y = 39
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "HL" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -6924,10 +6813,10 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "HO" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "HP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow2";
@@ -6950,11 +6839,11 @@
 	vector_x = -19
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "HZ" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Id" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -6972,13 +6861,13 @@
 	pixel_x = 7
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Ih" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Il" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -6989,7 +6878,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Im" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -6997,7 +6886,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ip" = (
 /obj/structure/gun_rack/type71/empty{
 	pixel_y = 16
@@ -7007,14 +6896,14 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Iq" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = 6;
 	pixel_y = -2
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ir" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -7025,7 +6914,7 @@
 	layer = 5.12
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Is" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/secure_data/noaccess{
@@ -7033,14 +6922,14 @@
 	pixel_y = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "Iu" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Ix" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -7051,7 +6940,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "IA" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -7060,14 +6949,14 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "IC" = (
 /obj/item/reagent_container/glass/bucket/janibucket{
 	pixel_x = -9;
 	pixel_y = -4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "IF" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -7075,7 +6964,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "IG" = (
 /obj/structure/gun_rack/type71/unloaded{
 	pixel_y = 16;
@@ -7086,11 +6975,11 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "IH" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "IT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer0,
@@ -7107,7 +6996,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Jh" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -7117,7 +7006,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Jj" = (
 /obj/structure/bedsheetbin{
 	icon_state = "linenbin-empty";
@@ -7132,7 +7021,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Jm" = (
 /obj/structure/platform/strata,
 /obj/structure/platform/strata{
@@ -7149,7 +7038,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/supplies/metal,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Jq" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -7159,7 +7048,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Jr" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -7169,7 +7058,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Jt" = (
 /obj/vehicle/powerloader/jd{
 	name = "\improper CosmosStal 12 Bogatyr Power Loader";
@@ -7178,11 +7067,11 @@
 	dir = 8
 	},
 /turf/open/floor/mech_bay_recharge_floor,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ju" = (
 /obj/structure/machinery/chem_dispenser/canteen/upp,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Jx" = (
 /obj/structure/sink{
 	dir = 4;
@@ -7192,27 +7081,27 @@
 	pixel_x = 26
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Jy" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "pudong_hangar_int";
 	name = "/improper Hangar Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "JA" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "JD" = (
 /obj/structure/machinery/iv_drip{
 	pixel_x = -8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "JE" = (
 /obj/effect/projector{
 	name = "pudong_hangarup";
@@ -7224,11 +7113,11 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "JF" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "JL" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -7240,7 +7129,7 @@
 	layer = 3.2
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "JO" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -7252,7 +7141,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "JS" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -7263,7 +7152,7 @@
 /area/pudong/exterior/cliff)
 "JV" = (
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "JX" = (
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
@@ -7273,14 +7162,14 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "JZ" = (
 /obj/effect/projector{
 	name = "base_downarm";
 	vector_y = -30
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ka" = (
 /turf/open/void,
 /area/pudong/caves/depths)
@@ -7290,14 +7179,7 @@
 	vector_x = 19
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
-"Kd" = (
-/obj/structure/machinery/door/airlock/upp_utility{
-	name = "\improper Maintenance Access";
-	req_one_access_txt = "230"
-	},
-/turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/engi)
 "Ke" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -7311,26 +7193,19 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
-"Kj" = (
-/obj/structure/machinery/door/airlock/upp_utility{
-	name = "\improper Maintenance Access";
-	req_one_access_txt = "230"
-	},
-/turf/open/floor/corsat/marked,
-/area/pudong/briefing)
+/area/pudong/base/armory)
 "Kl" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Km" = (
 /obj/structure/roof/cargocrane_tracks/horizontal/endcap1{
 	pixel_y = 14
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Kn" = (
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -7338,14 +7213,14 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Kq" = (
 /obj/structure/sign/safety/four{
 	pixel_x = -18
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Kr" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/snow/layer1,
@@ -7367,7 +7242,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ky" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -7383,7 +7258,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "KA" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -7392,11 +7267,11 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "KB" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "KE" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -7412,7 +7287,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "KJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -7424,7 +7299,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "KN" = (
 /obj/item/lightstick/red/spoke/planted{
 	layer = 3.1;
@@ -7440,11 +7315,11 @@
 	dir = 9
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "KP" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "KR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -7458,7 +7333,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "KU" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -7466,7 +7341,7 @@
 	name = "\improper Equipment Room Shutter"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "KV" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -7475,14 +7350,14 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "KX" = (
 /obj/effect/projector{
 	name = "pudong_hangarup";
 	vector_x = 34
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Lg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
@@ -7495,7 +7370,7 @@
 	},
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "Lq" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = 5;
@@ -7503,7 +7378,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Lr" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -7514,11 +7389,11 @@
 	pixel_x = -8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Lu" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Lv" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_x = -9;
@@ -7526,7 +7401,7 @@
 	dir = 2
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "Lx" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -7537,13 +7412,13 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Lz" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = -26
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "LF" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/pudong/exterior/cliff)
@@ -7557,12 +7432,12 @@
 	vector_x = -30
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "LI" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "LJ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -7573,7 +7448,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "LP" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -7593,11 +7468,11 @@
 	pixel_y = 7
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "LT" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "LU" = (
 /obj/structure/platform/strata{
 	dir = 4
@@ -7607,7 +7482,7 @@
 /area/pudong/caves/depths)
 "LV" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "LW" = (
 /obj/structure/machinery/prop/almayer/CICmap{
 	pixel_y = 2;
@@ -7620,7 +7495,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "LX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -7641,7 +7516,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Mb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal{
@@ -7650,7 +7525,7 @@
 	},
 /obj/structure/barricade/metal,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Mc" = (
 /obj/item/prop/magazine/book/uppbooklet{
 	pixel_x = 4;
@@ -7664,7 +7539,7 @@
 	color = "#8B7B5B"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Me" = (
 /obj/structure/sign/safety/south{
 	pixel_x = 7;
@@ -7675,10 +7550,10 @@
 	pixel_y = 39
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Mf" = (
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Mi" = (
 /obj/item/prop/almayer/box{
 	pixel_x = -4;
@@ -7686,7 +7561,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ml" = (
 /obj/structure/machinery/door/airlock/upp_grey{
 	name = "\improper Sergeants Room";
@@ -7696,17 +7571,17 @@
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "Mn" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ms" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Mt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -7720,7 +7595,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "Mv" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -7731,7 +7606,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Mw" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "pudong_lockdown_east";
@@ -7739,7 +7614,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Mz" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -7750,7 +7625,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "MA" = (
 /turf/open/void,
 /area/pudong/exterior/cliff)
@@ -7765,7 +7640,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "MF" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/uppfuel{
@@ -7788,14 +7663,14 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "MK" = (
 /obj/structure/machinery/vending/dinnerware{
 	pixel_y = 16;
 	density = 0
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "MN" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -7815,7 +7690,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "MP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -7825,7 +7700,7 @@
 	height = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "MQ" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -7845,7 +7720,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "MR" = (
 /obj/structure/platform/strata,
 /obj/structure/platform/strata{
@@ -7860,7 +7735,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "MW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/lightstick/red/spoke/planted{
@@ -7875,7 +7750,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "MZ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -7884,7 +7759,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Na" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/west_east,
@@ -7898,14 +7773,14 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Nd" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Nf" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -7915,7 +7790,7 @@
 	pixel_y = 8
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "Nh" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
@@ -7923,7 +7798,7 @@
 	dir = 2
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Nj" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
@@ -7933,21 +7808,21 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Nm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "No" = (
 /obj/effect/step_trigger/teleporter_vector{
 	name = "pudong_armup";
 	vector_x = 30
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Np" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -7969,7 +7844,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/power)
+/area/pudong/base/power)
 "Nr" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -7979,7 +7854,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Nt" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal{
@@ -7990,7 +7865,7 @@
 	pixel_x = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Nu" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -7999,7 +7874,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/largecrate/supply/supplies/sandbags,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "NA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8009,18 +7884,18 @@
 	pixel_y = 7
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ND" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "NH" = (
 /obj/structure/bed/chair,
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "NI" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -8032,13 +7907,13 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "NL" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "NM" = (
 /turf/open/floor/prison/bright_clean,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "NO" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -8046,13 +7921,13 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "NR" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "NT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -8071,7 +7946,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "NU" = (
 /obj/structure/machinery/computer/cryopod{
 	pixel_x = -6;
@@ -8079,7 +7954,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "Oa" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -8089,14 +7964,14 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ob" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = -7;
 	pixel_y = -1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Od" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -8104,34 +7979,34 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Of" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/greengrid,
-/area/pudong/power)
+/area/pudong/base/power)
 "Oj" = (
 /obj/structure/sign/flag/upp{
 	dir = 1;
 	pixel_y = 26
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Op" = (
 /obj/structure/bed/chair{
 	pixel_y = 4;
 	pixel_x = 3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Oq" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 1
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Os" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/south,
@@ -8142,16 +8017,16 @@
 	pixel_y = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ox" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "OB" = (
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "OE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -8161,14 +8036,14 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "OG" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = -20;
 	pixel_y = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "OH" = (
 /obj/structure/stairs{
 	dir = 8
@@ -8184,7 +8059,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "OL" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -8205,7 +8080,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "OO" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -8214,7 +8089,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "OQ" = (
 /obj/structure/platform/strata,
 /obj/structure/blocker/forcefield,
@@ -8222,7 +8097,7 @@
 /area/pudong/caves/main)
 "OR" = (
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "OT" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -8231,7 +8106,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "OV" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -8252,7 +8127,7 @@
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "OY" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -8265,7 +8140,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Pa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8274,7 +8149,7 @@
 	id = "pudong_tunnel"
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Pb" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -8292,7 +8167,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Pg" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -8307,7 +8182,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ph" = (
 /obj/item/tool/shovel/etool/upp{
 	pixel_x = -5;
@@ -8331,7 +8206,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Pk" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -8346,18 +8221,18 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Pv" = (
 /obj/structure/curtain/red,
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Pw" = (
 /obj/structure/sign/safety/restrictedarea{
 	pixel_x = -20;
 	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Px" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
 	can_block_movement = 0;
@@ -8372,14 +8247,14 @@
 	pixel_y = -1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Py" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Pz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/east_south,
@@ -8416,7 +8291,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "PB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8427,10 +8302,10 @@
 	layer = 3.01
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "PC" = (
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "PE" = (
 /obj/effect/step_trigger/message{
 	message = "Whoa! That's a long way down.";
@@ -8446,7 +8321,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "PG" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/lightstick/red/spoke/planted{
@@ -8478,7 +8353,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "PQ" = (
 /obj/structure/largecrate/random/secure{
 	pixel_x = 6;
@@ -8489,20 +8364,20 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "PU" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "PV" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -11
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "PW" = (
 /obj/structure/stairs{
 	dir = 8
@@ -8512,10 +8387,10 @@
 	vector_x = 30
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "PZ" = (
 /turf/open/floor/corsat/marked,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Qb" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -8530,7 +8405,7 @@
 	},
 /obj/structure/largecrate/supply/supplies/metal,
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Qc" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -8541,13 +8416,13 @@
 	pixel_x = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Qe" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 5
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Qf" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -8559,7 +8434,7 @@
 	pixel_x = 2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Qg" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -8567,7 +8442,7 @@
 	pixel_y = -1
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Qk" = (
 /obj/effect/projector{
 	name = "pudong_engdown";
@@ -8579,7 +8454,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Qo" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/sign/safety/maint{
@@ -8587,7 +8462,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Qt" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -8597,7 +8472,7 @@
 	},
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Qu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -8618,7 +8493,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Qy" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
@@ -8632,12 +8507,12 @@
 	},
 /obj/item/ashtray/plastic,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Qz" = (
 /obj/structure/machinery/power/apc/power/west,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "QA" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -8646,7 +8521,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "QB" = (
 /obj/structure/sign/safety/flightcontrol{
 	pixel_x = -18;
@@ -8657,7 +8532,7 @@
 	pixel_y = -7
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "QD" = (
 /obj/item/roller,
 /obj/item/storage/belt/medical/only_scanner,
@@ -8678,17 +8553,17 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "QI" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "QJ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "QK" = (
 /obj/structure/bed/chair/comfy{
 	dir = 1
@@ -8703,7 +8578,7 @@
 	dir = 4
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "QM" = (
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
@@ -8727,7 +8602,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "QP" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker Three Telephone";
@@ -8738,7 +8613,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "QU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire,
@@ -8755,7 +8630,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Rc" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -8765,7 +8640,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Re" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -8774,7 +8649,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Rh" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
@@ -8795,7 +8670,7 @@
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Rj" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -8809,10 +8684,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Rm" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Ro" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -8844,7 +8719,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "RA" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalbottomleft";
@@ -8853,11 +8728,11 @@
 	},
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "RB" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "RC" = (
 /obj/structure/stairs{
 	dir = 4
@@ -8867,11 +8742,11 @@
 	vector_x = 19
 	},
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "RG" = (
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "RH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/prop/invuln/lattice_prop{
@@ -8887,7 +8762,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "RI" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -8910,14 +8785,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/platoon)
-"RM" = (
-/obj/structure/machinery/door/airlock/upp_utility{
-	name = "\improper Maintenance Access";
-	req_one_access_txt = "230"
-	},
-/turf/open/floor/corsat/marked,
-/area/pudong/engi)
+/area/pudong/base/platoon)
 "RN" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -8926,7 +8794,7 @@
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "RO" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -8941,7 +8809,7 @@
 "RR" = (
 /obj/structure/machinery/fuelcell_recycler,
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "RS" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -8955,7 +8823,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "RT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -8974,7 +8842,7 @@
 	density = 0
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "RU" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -8986,12 +8854,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "RW" = (
 /obj/structure/barricade/metal,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "RX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/type73{
@@ -9011,7 +8879,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "RZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -9020,7 +8888,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Sc" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9035,7 +8903,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Sd" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -9070,7 +8938,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Sk" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -9080,15 +8948,15 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Sp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/space_heater,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Sq" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Su" = (
 /obj/structure/platform/strata/metal{
 	dir = 8
@@ -9101,7 +8969,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Sx" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -9112,7 +8980,7 @@
 	layer = 3.01
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Sz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/lightstick/red/spoke/planted{
@@ -9136,7 +9004,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/corsat,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "SB" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -9145,7 +9013,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "SE" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -9154,7 +9022,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "SF" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -9169,7 +9037,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "SH" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = 8;
@@ -9183,7 +9051,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "SL" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9193,26 +9061,13 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "SM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
-"SO" = (
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice2";
-	pixel_x = -6;
-	pixel_y = 18
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	icon_state = "lattice1";
-	pixel_x = -6;
-	pixel_y = -14
-	},
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/armory)
 "SQ" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
@@ -9220,7 +9075,7 @@
 	dir = 2
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "SS" = (
 /obj/structure/platform_decoration/strata{
 	dir = 4
@@ -9237,7 +9092,7 @@
 	dir = 5
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "SZ" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9248,17 +9103,17 @@
 	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Te" = (
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "Tf" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Th" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -9272,7 +9127,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Ti" = (
 /obj/structure/platform/strata,
 /obj/structure/platform/strata{
@@ -9291,7 +9146,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Tl" = (
 /obj/structure/machinery/prop/almayer/computer/PC{
 	desc = "A small desktop computer. Someone has switched to personal emails and disabled the inventory sort system.";
@@ -9300,7 +9155,7 @@
 	pixel_y = 22
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Tm" = (
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -9309,7 +9164,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Ts" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9318,7 +9173,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Tt" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -9334,7 +9189,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Tv" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -9345,7 +9200,7 @@
 	layer = 3.02
 	},
 /turf/open/floor/corsat,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Tw" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/barricade/handrail/wire{
@@ -9353,7 +9208,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Ty" = (
 /obj/structure/pipes/vents/pump{
 	dir = 4
@@ -9368,7 +9223,7 @@
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "TB" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -9382,7 +9237,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "TD" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/space)
@@ -9392,15 +9247,15 @@
 	layer = 3.01
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "TH" = (
 /obj/structure/window/framed/upp/green,
 /turf/open/floor/corsat/marked,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "TL" = (
 /obj/structure/machinery/power/apc/power/east,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "TN" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -9423,7 +9278,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Ua" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -9451,18 +9306,18 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Uh" = (
 /obj/structure/machinery/blackbox_recorder{
 	name = "blackbox processor"
 	},
 /obj/structure/machinery/door/window/brigdoor/westleft,
 /turf/open/floor/almayer/tcomms,
-/area/pudong/server)
+/area/pudong/base/server)
 "Ui" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Uj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning"
@@ -9476,23 +9331,23 @@
 	pixel_y = 14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ul" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Um" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Un" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Uo" = (
 /obj/structure/machinery/computer3/server/rack{
 	pixel_x = -5
@@ -9501,7 +9356,7 @@
 	dir = 4
 	},
 /turf/open/floor/almayer/tcomms,
-/area/pudong/server)
+/area/pudong/base/server)
 "Up" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -9522,7 +9377,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/power)
+/area/pudong/base/power)
 "Uq" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 8;
@@ -9551,7 +9406,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Uw" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/sign/safety/maint{
@@ -9559,13 +9414,13 @@
 	pixel_y = 1
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Uy" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
 /turf/open/floor/prison/bright_clean,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "UD" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -9585,14 +9440,14 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "UF" = (
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
 	layer = 3.01
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "UG" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9604,7 +9459,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "UH" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -9615,11 +9470,11 @@
 	icon_state = "W"
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "UI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "UJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -9627,23 +9482,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
-"UK" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice8";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/maintenance)
 "UL" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecalleft"
@@ -9653,7 +9492,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "UM" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "pudong_lockdown_north";
@@ -9661,7 +9500,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/marked,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "UR" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -9670,7 +9509,7 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "US" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control{
@@ -9688,10 +9527,10 @@
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "UX" = (
 /turf/open/floor/corsat/marked,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Vn" = (
 /turf/open/auto_turf/snow/layer3,
 /area/pudong/caves/main)
@@ -9700,7 +9539,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Vw" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -9710,12 +9549,12 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Vy" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Vz" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	name = "\improper Weapons Locker";
@@ -9723,7 +9562,7 @@
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "VB" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -9748,7 +9587,7 @@
 	},
 /obj/structure/curtain/blue,
 /turf/open/floor/plating/plating_catwalk/aicore/white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "VE" = (
 /obj/structure/cargo_container/horizontal/blue/middle{
 	pixel_x = 16
@@ -9761,7 +9600,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "VF" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = 6;
@@ -9769,7 +9608,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "VG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9780,17 +9619,17 @@
 	layer = 3.01
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "VJ" = (
 /obj/structure/bed/chair{
 	pixel_y = 13;
 	pixel_x = 6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "VL" = (
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "VO" = (
 /obj/structure/stairs{
 	dir = 4
@@ -9800,7 +9639,7 @@
 	vector_x = -19
 	},
 /turf/open/floor/corsat,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "VP" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -9815,10 +9654,10 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "VS" = (
 /turf/open/floor/prison/sterile_white,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "VT" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4;
@@ -9836,7 +9675,7 @@
 	pixel_y = 14
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "VW" = (
 /obj/effect/projector{
 	name = "base_hangardown";
@@ -9848,7 +9687,7 @@
 	light_range = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "VX" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -9858,7 +9697,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "VY" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -9878,7 +9717,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Wa" = (
 /obj/structure/machinery/autodoc_console{
 	pixel_y = 6
@@ -9892,7 +9731,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Wf" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -9900,7 +9739,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "Wh" = (
 /obj/structure/stairs{
 	dir = 8
@@ -9916,7 +9755,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Wi" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -9942,7 +9781,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Wl" = (
 /obj/structure/stairs{
 	dir = 4
@@ -9956,7 +9795,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/engi)
+/area/pudong/base/engi)
 "Wm" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9966,7 +9805,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Wq" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/two{
@@ -9974,7 +9813,7 @@
 	pixel_y = -26
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Ws" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -9994,7 +9833,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Wv" = (
 /obj/structure/sign/safety/maint{
 	pixel_x = 8;
@@ -10004,7 +9843,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Ww" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -10012,7 +9851,7 @@
 	name = "/improper Hangar Blast Door"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Wx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_west,
@@ -10029,13 +9868,13 @@
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/power)
+/area/pudong/base/power)
 "WB" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "WC" = (
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
 /obj/structure/machinery/light/small{
@@ -10045,7 +9884,7 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "WG" = (
 /obj/structure/platform_decoration/strata{
 	dir = 4
@@ -10067,7 +9906,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "WI" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -10078,12 +9917,12 @@
 	dir = 8
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "WK" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "WL" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_east,
@@ -10102,7 +9941,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "WP" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -10121,7 +9960,7 @@
 	invisibility = 100
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "WQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_west,
@@ -10133,7 +9972,7 @@
 	icon_state = "cargo_arrow2"
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "WT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10143,14 +9982,14 @@
 	height = 1
 	},
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "WU" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper Lockdown Blast Door";
 	id = "pudong_lockdown_int"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "WY" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -10166,7 +10005,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "WZ" = (
 /obj/structure/prop/structure_lattice{
 	dir = 4
@@ -10182,7 +10021,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/corsat,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Xa" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -10190,7 +10029,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Xb" = (
 /obj/structure/platform_decoration/strata{
 	dir = 1
@@ -10206,7 +10045,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "Xd" = (
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -10214,14 +10053,14 @@
 	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Xe" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_x = -9;
 	pixel_y = 6
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/cryo)
+/area/pudong/base/cryo)
 "Xg" = (
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
@@ -10238,7 +10077,7 @@
 /obj/item/clothing/suit/marine/faction/UPP/jacket,
 /obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/prison/bright_clean,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "Xi" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -10257,7 +10096,7 @@
 /area/pudong/exterior/cliff)
 "Xk" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Xl" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/north_east,
@@ -10279,10 +10118,10 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Xp" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/platoon)
+/area/pudong/base/platoon)
 "Xq" = (
 /obj/structure/platform/strata,
 /turf/open/auto_turf/snow/layer0,
@@ -10293,7 +10132,7 @@
 	},
 /obj/structure/cargo_container/upp/tan/left,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Xt" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -10311,7 +10150,7 @@
 	pixel_y = -6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Xv" = (
 /obj/structure/machinery/door_control{
 	name = "Server Vault Shutter Control";
@@ -10332,7 +10171,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "Xw" = (
 /obj/structure/machinery/door_control{
 	name = "Server Vault Shutter Control";
@@ -10352,7 +10191,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/server)
+/area/pudong/base/server)
 "Xx" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -10381,7 +10220,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/server)
+/area/pudong/base/server)
 "XB" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -10389,7 +10228,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "XG" = (
 /obj/structure/phone_base/upp_net{
 	name = "Flight Control Telephone";
@@ -10401,7 +10240,7 @@
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "XI" = (
 /obj/structure/largecrate/random/barrel/true_random{
 	pixel_x = -1;
@@ -10415,16 +10254,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
-"XJ" = (
-/obj/structure/barricade/handrail/wire{
-	layer = 3.1;
-	dir = 1;
-	pixel_y = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "XM" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty/east_south,
@@ -10443,11 +10273,11 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "XT" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "XV" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -10455,11 +10285,11 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "XW" = (
 /obj/effect/step_trigger/clone_cleaner,
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "XX" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -10470,14 +10300,14 @@
 	pixel_x = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Yc" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "pudong_server";
 	dir = 8
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/server)
+/area/pudong/base/server)
 "Yd" = (
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/depths)
@@ -10495,7 +10325,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Yg" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -10518,7 +10348,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Yh" = (
 /obj/structure/sign/safety/west{
 	pixel_x = 31
@@ -10532,7 +10362,7 @@
 	pixel_y = -6
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Yl" = (
 /obj/structure/tunnel,
 /turf/open/auto_turf/snow/layer0,
@@ -10568,7 +10398,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "Yp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -10581,11 +10411,11 @@
 	pixel_x = -11
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "YC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "YD" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -10600,7 +10430,7 @@
 /obj/effect/landmark/start/marine/medic/upp,
 /obj/effect/landmark/late_join/upp,
 /turf/open/floor/carpet,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "YF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -10613,7 +10443,7 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "YJ" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/prop/invuln/lattice_prop{
@@ -10627,7 +10457,7 @@
 	pixel_y = -14
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "YL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -10652,11 +10482,11 @@
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "YM" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "YN" = (
 /turf/closed/wall/strata_ice/dirty,
 /area/pudong/caves/main)
@@ -10667,18 +10497,18 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/maintenance)
+/area/pudong/base/maintenance)
 "YP" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "YS" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "YT" = (
 /obj/structure/gun_rack/uppflamer/unloaded{
 	pixel_x = -8;
@@ -10698,7 +10528,7 @@
 	light_range = 4
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "YU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/three{
@@ -10706,7 +10536,7 @@
 	pixel_y = -26
 	},
 /turf/open/floor/corsat,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "YV" = (
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -10716,7 +10546,7 @@
 	dir = 1
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "YW" = (
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
@@ -10726,25 +10556,25 @@
 	dir = 8
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Zb" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Maintenance Access";
 	req_one_access_txt = "240;244"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/nco)
+/area/pudong/base/nco)
 "Zd" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "Ze" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/floor3,
-/area/pudong/quarters)
+/area/pudong/base/quarters)
 "Zj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -10769,10 +10599,10 @@
 	icon_state = "1-2-8"
 	},
 /turf/open/floor/corsat/plate,
-/area/pudong/power)
+/area/pudong/base/power)
 "Zk" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "Zm" = (
 /obj/effect/step_trigger/clone_cleaner,
 /obj/structure/sign/safety/maint{
@@ -10780,7 +10610,7 @@
 	pixel_y = 1
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "Zp" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -10789,7 +10619,7 @@
 	pixel_y = 10
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "Zu" = (
 /obj/item/roller,
 /obj/item/roller,
@@ -10818,14 +10648,14 @@
 	light_range = 4
 	},
 /turf/open/floor/prison/sterile_white,
-/area/pudong/treatment)
+/area/pudong/base/treatment)
 "Zw" = (
 /obj/effect/projector{
 	name = "base_hangardown";
 	vector_y = -34
 	},
 /turf/open/floor/corsat/squares,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ZB" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -10835,7 +10665,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/briefing)
+/area/pudong/base/briefing)
 "ZI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/uppfuel{
@@ -10846,7 +10676,7 @@
 	layer = 3.03
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/armory)
+/area/pudong/base/armory)
 "ZK" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -10863,7 +10693,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
-/area/pudong/hangar)
+/area/pudong/base/hangar)
 "ZO" = (
 /obj/structure/platform/strata,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -10878,23 +10708,23 @@
 	pixel_y = -3
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "ZQ" = (
 /turf/open/floor/strata/multi_tiles/west,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 "ZR" = (
 /obj/structure/bed/chair{
 	dir = 8
 	},
 /turf/open/floor/strata/floor3,
-/area/pudong/galley)
+/area/pudong/base/galley)
 "ZY" = (
 /obj/structure/stairs,
 /turf/open/floor/corsat,
 /area/pudong/caves/main)
 "ZZ" = (
 /turf/open/floor/strata/multi_tiles/southeast,
-/area/pudong/bunker)
+/area/pudong/base/bunker)
 
 (1,1,1) = {"
 ra
@@ -12298,12 +12128,12 @@ oT
 Xw
 dI
 nL
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
+HO
+HO
+HO
+HO
+HO
+HO
 Bx
 wX
 kB
@@ -12448,18 +12278,18 @@ Uo
 zf
 oT
 Yc
-Ge
-Ge
-Ge
+ad
+ad
+ad
 rN
-Ge
-Ge
+ad
+ad
 rN
-Ge
-Ge
-mI
-mI
-RM
+ad
+ad
+ad
+HO
+oc
 mI
 tw
 EF
@@ -12600,16 +12430,16 @@ lO
 NR
 BC
 nh
-Ge
+ad
 wB
 wB
 yd
-Ge
-Ge
+ad
+ad
 fM
 wB
 wB
-mI
+ad
 it
 ND
 mI
@@ -12752,7 +12582,7 @@ XA
 eC
 Nf
 sM
-Ge
+ad
 Of
 Of
 yQ
@@ -12761,7 +12591,7 @@ ia
 WP
 Of
 Of
-mI
+ad
 Ai
 Mt
 mI
@@ -12904,7 +12734,7 @@ EX
 nd
 oT
 oT
-Ge
+ad
 Zj
 zs
 fG
@@ -12913,7 +12743,7 @@ zs
 Up
 zs
 CC
-mI
+ad
 Ky
 fE
 mI
@@ -13056,10 +12886,10 @@ FU
 fQ
 dy
 Xv
-hP
+ef
 EE
 RR
-Ge
+ad
 Ey
 aS
 GR
@@ -13208,7 +13038,7 @@ mx
 Uh
 oT
 oT
-Ge
+ad
 eA
 FA
 Np
@@ -13217,7 +13047,7 @@ FA
 ha
 FA
 pG
-mI
+ad
 US
 bI
 mI
@@ -13360,7 +13190,7 @@ oT
 oT
 oT
 oT
-Ge
+ad
 jc
 jc
 NT
@@ -13369,7 +13199,7 @@ Wz
 mQ
 jc
 jc
-mI
+ad
 Bz
 AN
 mI
@@ -13512,16 +13342,16 @@ Ub
 Ub
 Ub
 Ub
-Ge
+ad
 wB
 wB
 cp
-Ge
-Ge
+ad
+ad
 sw
 wB
 wB
-mI
+ad
 lD
 ge
 SQ
@@ -13664,16 +13494,16 @@ Ub
 Ub
 Ub
 Ub
-Ge
-Ge
-Ge
+ad
+ad
+ad
 rN
-Ge
-Ge
+ad
+ad
 rN
-Ge
-Ge
-mI
+ad
+ad
+ad
 df
 ab
 mI
@@ -13818,12 +13648,12 @@ Ub
 Ub
 Ub
 Ub
-Ge
-Ge
-Ge
-Ge
-Ge
-Ge
+ad
+ad
+ad
+ad
+ad
+ad
 Ub
 mI
 mI
@@ -14564,7 +14394,7 @@ Il
 uS
 dI
 nL
-ku
+Mz
 nL
 nL
 Mf
@@ -14871,13 +14701,13 @@ Bg
 Bg
 Bg
 NL
-kI
+FR
 nL
 bC
 Aq
 IF
 wX
-ku
+Mz
 HO
 Ir
 Lx
@@ -15175,7 +15005,7 @@ pa
 JL
 JL
 NL
-Il
+Lx
 NL
 VB
 bW
@@ -15189,10 +15019,10 @@ nL
 HO
 HO
 wS
-sl
+aa
 Lx
 Lx
-sl
+aa
 nL
 nL
 HO
@@ -15327,7 +15157,7 @@ NL
 NL
 NL
 NL
-Il
+Lx
 NL
 VB
 FP
@@ -15490,9 +15320,9 @@ VS
 Jj
 NL
 rk
-sl
-sl
-sl
+aa
+aa
+aa
 Xp
 gw
 Xg
@@ -15946,9 +15776,9 @@ PZ
 BM
 NL
 oc
-sl
-sl
-sl
+aa
+aa
+aa
 Xp
 Do
 LW
@@ -17018,7 +16848,7 @@ UX
 zd
 rK
 rK
-rK
+aa
 oc
 wb
 qq
@@ -17153,8 +16983,8 @@ Op
 Mc
 NL
 NL
-bh
-bh
+NL
+NL
 MK
 VL
 CZ
@@ -17170,7 +17000,7 @@ cE
 Vt
 ji
 iZ
-rK
+aa
 nL
 wb
 wb
@@ -17322,7 +17152,7 @@ cE
 Vt
 cE
 cE
-rK
+aa
 sg
 wb
 PW
@@ -17474,7 +17304,7 @@ OB
 pH
 OB
 ls
-rK
+aa
 TZ
 wb
 PW
@@ -17626,7 +17456,7 @@ ls
 yJ
 ls
 Iu
-rK
+aa
 Mf
 wb
 PW
@@ -17753,18 +17583,18 @@ XX
 dc
 Xa
 Wv
-sl
-sl
-sl
-sl
-sl
-sl
-sl
-sl
-sl
-sl
-sl
-sl
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+NL
+bh
+bh
 bh
 Tv
 bh
@@ -17778,7 +17608,7 @@ OB
 ls
 OB
 ls
-rK
+aa
 nL
 wb
 OH
@@ -17908,19 +17738,19 @@ QI
 dI
 Mf
 he
-cg
+tq
 yU
 nL
-ku
-cg
-cg
+Mz
+tq
+tq
 yU
 nL
 uu
-bh
-bh
-bh
-bh
+aa
+aa
+aa
+aa
 rK
 Nm
 AS
@@ -17930,7 +17760,7 @@ qH
 qH
 Fc
 qH
-rK
+aa
 MO
 wb
 PW
@@ -18071,18 +17901,18 @@ HO
 nL
 Mf
 nL
-cg
+tq
 eJ
 rK
 rK
 rK
-Kj
+oc
 rK
 rK
 rK
 rK
 rK
-rK
+aa
 nL
 wb
 No
@@ -18225,8 +18055,8 @@ HO
 HO
 at
 UJ
-cg
-cg
+tq
+tq
 yU
 Mf
 Mv
@@ -19295,12 +19125,12 @@ HO
 SL
 nL
 wX
-wg
+Bw
 nL
 bC
 SL
 jg
-HO
+Xk
 Xk
 Xk
 Xk
@@ -19444,7 +19274,7 @@ YN
 YN
 HO
 Lx
-pV
+Fi
 yF
 yF
 yF
@@ -19596,7 +19426,7 @@ YN
 YN
 HO
 Lx
-pV
+Fi
 yF
 yF
 rL
@@ -20483,7 +20313,7 @@ iP
 Jm
 Se
 de
-Us
+de
 de
 co
 co
@@ -20502,14 +20332,14 @@ YN
 HO
 HO
 HO
-SO
-HO
+gr
 Xk
+Xk
+Xk
+oo
 Xk
 oo
 Xk
-oo
-yF
 yF
 yF
 yF
@@ -20635,10 +20465,10 @@ lB
 Se
 de
 de
+ag
 FW
 FW
-FW
-iz
+cr
 co
 co
 co
@@ -20655,7 +20485,7 @@ HO
 SL
 nL
 Mf
-HO
+Xk
 oX
 Ez
 UF
@@ -20789,7 +20619,7 @@ de
 co
 FW
 sL
-IT
+af
 FW
 cr
 cr
@@ -20804,7 +20634,7 @@ YN
 YN
 HO
 Lx
-pV
+Fi
 Xk
 Xk
 Xk
@@ -20939,7 +20769,7 @@ lB
 Se
 de
 co
-FW
+ag
 Os
 bq
 bq
@@ -20956,7 +20786,7 @@ YN
 YN
 HO
 Lx
-XJ
+QA
 Xk
 yz
 bp
@@ -21090,7 +20920,7 @@ MA
 lB
 Se
 de
-Us
+de
 FW
 lu
 FW
@@ -21108,7 +20938,7 @@ YN
 YN
 HO
 HO
-SO
+gr
 Xk
 PA
 vm
@@ -21412,7 +21242,7 @@ YN
 YN
 HO
 Lx
-pV
+Fi
 Xk
 Xk
 Xk
@@ -22782,7 +22612,7 @@ YN
 YN
 HO
 nL
-Xk
+HO
 WT
 KR
 HO
@@ -22934,7 +22764,7 @@ jw
 YN
 HO
 Mf
-Xk
+HO
 HO
 TB
 Od
@@ -23085,7 +22915,7 @@ LF
 jw
 YN
 HO
-kI
+FR
 nL
 Oa
 wS
@@ -23241,14 +23071,14 @@ HO
 HO
 HO
 qA
-cg
+tq
 Oa
 bC
-cg
+tq
 qA
 Oa
 wX
-cg
+tq
 Rj
 HO
 YN
@@ -24161,18 +23991,18 @@ LF
 LF
 LF
 LF
-tE
-tE
-tE
-tE
-tE
-tE
-tE
-tE
-tE
-tE
-tE
-tE
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
 LF
 jw
 YN
@@ -24312,19 +24142,19 @@ LF
 LF
 LF
 LF
-tE
-tE
-sd
+HO
+HO
+AV
 tq
 Bw
-Cl
-vw
-vw
+wX
+Mf
+Mf
 Mz
-Cl
-mF
-pd
-tE
+wX
+nL
+uu
+HO
 LF
 jw
 YN
@@ -24464,8 +24294,8 @@ LF
 LF
 LF
 LF
-tE
-Hz
+HO
+Lx
 Fi
 GE
 tE
@@ -24475,8 +24305,8 @@ tE
 tE
 tE
 tE
-mF
-tE
+nL
+HO
 LF
 jw
 YN
@@ -24616,10 +24446,10 @@ LF
 LF
 LF
 LF
-tE
-tE
+HO
+HO
 gr
-tE
+HO
 tE
 tC
 tC
@@ -24628,7 +24458,7 @@ Zw
 Zw
 tE
 nG
-tE
+HO
 LF
 jw
 YN
@@ -24768,10 +24598,10 @@ LF
 LF
 LF
 LF
-tE
-Hz
+HO
+Lx
 QA
-mF
+nL
 tE
 tC
 tC
@@ -24779,8 +24609,8 @@ EW
 Zw
 Zw
 tE
-vw
-tE
+Mf
+HO
 LF
 jw
 jw
@@ -24917,12 +24747,12 @@ co
 LF
 Cv
 LF
-tE
-tE
-tE
-tE
-tE
-zr
+HO
+HO
+HO
+HO
+HO
+aa
 FR
 tE
 oW
@@ -24931,8 +24761,8 @@ tE
 iS
 iS
 tE
-FQ
-tE
+TZ
+HO
 LF
 LF
 LF
@@ -25069,13 +24899,13 @@ cr
 LF
 LF
 LF
-tE
+HO
 FR
-mF
-UK
-mF
-vw
-mF
+nL
+ht
+nL
+Mf
+nL
 tE
 wc
 oW
@@ -25083,8 +24913,8 @@ tE
 iS
 XR
 tE
-mF
-tE
+nL
+HO
 tE
 tE
 tE
@@ -25221,13 +25051,13 @@ cr
 cr
 tE
 tE
-tE
-Kd
+HO
+oc
 zr
 zr
 zr
-zr
-FQ
+aa
+TZ
 tE
 oW
 oW
@@ -25235,8 +25065,8 @@ tE
 iS
 iS
 tE
-vw
-tE
+Mf
+HO
 zr
 RB
 wA
@@ -25378,7 +25208,7 @@ jS
 Hh
 zr
 zr
-Hz
+Lx
 Fi
 tE
 oW
@@ -25388,7 +25218,7 @@ iS
 iS
 tE
 gr
-tE
+HO
 qd
 Cy
 RB
@@ -25530,7 +25360,7 @@ jS
 BZ
 jS
 zr
-zr
+aa
 rT
 tE
 oW
@@ -25539,8 +25369,8 @@ tE
 iS
 iS
 tE
-FQ
-tE
+TZ
+HO
 RU
 Cy
 RB
@@ -25682,8 +25512,8 @@ br
 Ox
 aP
 Qe
-zr
-FQ
+aa
+TZ
 tE
 tE
 tE
@@ -25691,8 +25521,8 @@ tE
 Rh
 xO
 tE
-vw
-tE
+Mf
+HO
 qd
 dm
 RB
@@ -25834,8 +25664,8 @@ tE
 uI
 uI
 us
-zr
-Kd
+aa
+oc
 tE
 tE
 Km
@@ -25843,8 +25673,8 @@ tE
 kv
 OO
 tE
-Kd
-tE
+oc
+HO
 zr
 Mn
 Mn
