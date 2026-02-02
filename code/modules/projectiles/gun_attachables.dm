@@ -2150,6 +2150,23 @@ Defined in conflicts.dm of the #defines folder.
 
 	matter = list("wood" = 2000)
 
+/obj/item/attachable/stock/p79s
+	name = "\improper P79S stock"
+	desc = "A stock made for the P79S semi-automatic shotgun."
+	icon = 'icons/obj/items/weapons/guns/attachments/attachments_pr.dmi'
+	icon_state = "p79s_stock"
+	hud_offset_mod = 6
+
+/obj/item/attachable/stock/p79s/New()
+	..()
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_1
+	recoil_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_mod = -SCATTER_AMOUNT_TIER_10
+	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
+	accuracy_unwielded_mod = HIT_ACCURACY_MULT_TIER_1
+	recoil_unwielded_mod = -RECOIL_AMOUNT_TIER_5
+	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_10
+
 /obj/item/attachable/stock/slavic
 	name = "wooden stock"
 	desc = "A non-standard heavy wooden stock for Slavic firearms."
@@ -2805,6 +2822,18 @@ Defined in conflicts.dm of the #defines folder.
 	name = "R81M1D barrel"
 	icon_state = "fal_sniper_barrel"
 	attach_icon = "fal_sniper_barrel"
+
+/obj/item/attachable/p79s_barrel
+	name = "P79S barrel"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/attachments_pr.dmi'
+	icon_state = "p79s_barrel"
+	attach_icon = "p79s_barrel"
+	slot = "special"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
+	size_mod = 0
 
 /obj/item/attachable/stock/type71
 	name = "Type 71 Stock"

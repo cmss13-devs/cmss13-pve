@@ -1848,7 +1848,7 @@
 // R81M1A Rifle
 /obj/item/weapon/gun/rifle/r81m1a
 	name = "\improper R81M1A pulse rifle"
-	desc = "The R81M1A highpower pulse rifle is a very popular weapon within the civilian market, previously rejected by the Royal Marine Commandos due to it's heavy recoil and mediocre accuracy compared to other rifles in its class. However, it remains a favorite among mercenaries and private military contractors for its high damage output and reliability in harsh conditions. Produced by Orion Defence Systems."
+	desc = "The R81M1A highpower pulse rifle is a very popular weapon within the civilian market, previously rejected by the Royal Marine Commandos due to it's slow rate of fire and mediocre accuracy compared to other rifles in its class. However, it remains a favorite among mercenaries and private military contractors for its high damage output and reliability in harsh conditions. Produced by Orion Defence Systems."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "fal"
 	item_state = "fal"
