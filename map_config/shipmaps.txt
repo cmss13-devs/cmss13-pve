@@ -42,5 +42,5 @@ endmap
 map hms_brynhild
 endmap
 
-map pudong_bunker
+map mi264_dong_bunker
 endmap
