@@ -113,3 +113,15 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
+
+/datum/map_template/interior/humvee
+	name = "JTMV-HWC"
+	interior_id = "humvee"
+
+/datum/map_template/interior/humvee/humvee_medical
+	name = "JTMV-Ambulance"
+	interior_id = "humvee_medical"
+
+/datum/map_template/interior/humvee/humvee_transport
+	name = "JTMV-Utility"
+	interior_id = "humvee_transport"

@@ -109,3 +109,8 @@
 
 	playsound(loc, 'sound/machines/hydraulics_3.ogg', 50)
 	to_chat(user, SPAN_NOTICE("You reload \the [HP]. Ammo: <b>[SPAN_HELPFUL(HP.ammo.current_rounds)]/[SPAN_HELPFUL(HP.ammo.max_rounds)]</b> | Mags: <b>[SPAN_HELPFUL(LAZYLEN(HP.backup_clips))]/[SPAN_HELPFUL(HP.max_clips)]</b>"))
+
+/obj/structure/weapons_loader/humvee
+	icon = 'icons/obj/vehicles/interiors/general_humvee.dmi'
+	density = FALSE
+	opacity = TRUE

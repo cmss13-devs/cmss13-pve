@@ -245,3 +245,22 @@
 	damage = 70
 	penetration = ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
+// humvee
+
+/datum/ammo/bullet/humvee_cannon
+	name = "remote-cannon bullet"
+	icon_state = "redbullet" //Red bullets to indicate friendly fire restriction
+	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_IGNORE_COVER
+
+	accurate_range = 22
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_8
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
+	max_range = 22
+	effective_range_max = 12
+	damage = 40
+	penetration = ARMOR_PENETRATION_TIER_6
+	damage_armor_punch = 0
+	pen_armor_punch = 0
+	shell_speed = 2*AMMO_SPEED_TIER_6
+	accuracy = HIT_ACCURACY_TIER_5
