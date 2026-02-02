@@ -33,9 +33,6 @@
 /area/pudong/maintenance
 	name = "Pudong - Maintenance"
 	icon_state = "yellow"
-/area/pudong/firststairs
-	name = "Pudong - First Floor Stairwell"
-	icon_state = "yellow"
 /area/pudong/power
 	name = "Pudong - Power Station"
 	icon_state = "engine_smes"
@@ -51,9 +48,6 @@
 	icon_state = "bridge"
 	minimap_color = MINIMAP_AREA_COMMAND
 	soundscape_playlist = SCAPE_PL_CIC
-/area/pudong/secondstairs
-	name = "Pudong - Second Floor Stairwell"
-	icon_state = "green"
 /area/pudong/quarters
 	name = "Pudong - Quarters"
 	icon_state = "green"
@@ -69,9 +63,6 @@
 /area/pudong/briefing
 	name = "Pudong - Briefing Hall"
 	icon_state = "green"
-/area/pudong/thirdstairs
-	name = "Pudong - Third Floor Stairwell"
-	icon_state = "armory"
 /area/pudong/armory
 	name = "Pudong - Armory"
 	icon_state = "armory"
@@ -83,9 +74,6 @@
 	name = "Pudong - Treatment Space"
 	icon_state = "medbay"
 	minimap_color = MINIMAP_AREA_MEDBAY
-/area/pudong/fourthstairs
-	name = "Pudong - Fourth Floor Stairwell"
-	icon_state = "purple"
 /area/pudong/hangar
 	name = "Pudong - Hangar Space"
 	icon_state = "purple"
