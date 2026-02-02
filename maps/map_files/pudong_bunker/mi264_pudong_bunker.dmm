@@ -67,6 +67,28 @@
 /obj/item/lightstick/red/variant/planted,
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
+"ah" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4;
+	invisibility = 100
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/pudong/base/bunker)
+"ai" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.8;
+	light_range = 4;
+	pixel_x = -13;
+	invisibility = 100
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/pudong/base/bunker)
 "aj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 6
@@ -103,6 +125,28 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"am" = (
+/obj/structure/machinery/space_heater/radiator/red,
+/turf/open/floor/strata/floor3,
+/area/pudong/base/hangar)
+"an" = (
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3,
+/area/pudong/base/briefing)
+"ao" = (
+/obj/structure/machinery/space_heater/radiator/red,
+/turf/open/floor/strata/floor3,
+/area/pudong/base/galley)
+"ap" = (
+/obj/structure/machinery/light/small{
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/machinery/space_heater/radiator/red,
+/turf/open/floor/strata/floor3,
+/area/pudong/base/quarters)
 "ar" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -461,6 +505,9 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
 /turf/open/floor/prison/sterile_white,
 /area/pudong/base/quarters)
 "cb" = (
@@ -499,7 +546,7 @@
 	},
 /obj/effect/projector{
 	name = "base_downarm";
-	vector_y = -30
+	vector_x = -30
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/armory)
@@ -555,7 +602,7 @@
 "cw" = (
 /obj/effect/projector{
 	name = "base_downarm";
-	vector_y = -30
+	vector_x = -30
 	},
 /obj/structure/machinery/light/small{
 	dir = 4;
@@ -1413,6 +1460,9 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/platoon)
 "gD" = (
@@ -1872,7 +1922,7 @@
 	},
 /obj/effect/projector{
 	name = "base_hangardown";
-	vector_y = -34
+	vector_x = -34
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/hangar)
@@ -2865,7 +2915,7 @@
 "oI" = (
 /obj/effect/projector{
 	name = "base_downarm";
-	vector_y = -30
+	vector_x = -30
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/pudong/base/armory)
@@ -3281,6 +3331,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/bunker)
 "qY" = (
@@ -3494,15 +3545,15 @@
 /obj/structure/sign/safety/stairs{
 	pixel_y = 26
 	},
-/obj/structure/sign/safety/east{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/ammunition{
 	pixel_x = 14;
 	pixel_y = 26
 	},
 /obj/structure/sign/safety/medical{
 	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/north{
 	pixel_y = 39
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -5110,6 +5161,9 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 8
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/quarters)
 "Ai" = (
@@ -5130,9 +5184,6 @@
 /obj/structure/sign/safety/stairs{
 	pixel_y = 26
 	},
-/obj/structure/sign/safety/west{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/commline_connection{
 	pixel_x = 14;
 	pixel_y = 39
@@ -5142,6 +5193,9 @@
 	pixel_y = 26
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/safety/north{
+	pixel_y = 39
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
 "Am" = (
@@ -5183,6 +5237,9 @@
 	dir = 8;
 	light_power = 0.8;
 	light_range = 4
+	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/quarters)
@@ -5755,11 +5812,11 @@
 	pixel_y = 26;
 	pixel_x = 14
 	},
-/obj/structure/sign/safety/west{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/fibre_optics{
 	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/south{
 	pixel_y = 39
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
@@ -6085,7 +6142,7 @@
 "EW" = (
 /obj/effect/projector{
 	name = "base_hangardown";
-	vector_y = -34
+	vector_x = -34
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/hangar)
@@ -6789,15 +6846,15 @@
 /obj/structure/sign/safety/stairs{
 	pixel_y = 26
 	},
-/obj/structure/sign/safety/east{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/cryo{
 	pixel_y = 26;
 	pixel_x = 14
 	},
 /obj/structure/sign/safety/galley{
 	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/south{
 	pixel_y = 39
 	},
 /turf/open/floor/strata/floor3,
@@ -6859,6 +6916,13 @@
 /obj/structure/sign/safety/four{
 	pixel_y = -37;
 	pixel_x = 7
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4;
+	invisibility = 100
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
@@ -7166,7 +7230,7 @@
 "JZ" = (
 /obj/effect/projector{
 	name = "base_downarm";
-	vector_y = -30
+	vector_x = -30
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/armory)
@@ -7414,8 +7478,10 @@
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "Lz" = (
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_x = -26
+/obj/structure/machinery/light/small{
+	dir = 8;
+	light_power = 0.8;
+	light_range = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/quarters)
@@ -7734,6 +7800,7 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/prison/sterile_white,
 /area/pudong/base/treatment)
 "MW" = (
@@ -7813,6 +7880,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
 	pixel_y = -1
+	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 8
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/briefing)
@@ -7953,6 +8023,9 @@
 	pixel_y = -2;
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -26
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/cryo)
 "Oa" = (
@@ -8042,6 +8115,9 @@
 	pixel_x = -20;
 	pixel_y = 1
 	},
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/galley)
 "OH" = (
@@ -8115,15 +8191,15 @@
 /obj/structure/sign/safety/stairs{
 	pixel_y = 26
 	},
-/obj/structure/sign/safety/west{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/cryo{
 	pixel_y = 26;
 	pixel_x = 14
 	},
 /obj/structure/sign/safety/galley{
 	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/north{
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/plate,
@@ -8662,11 +8738,11 @@
 	pixel_x = 14;
 	pixel_y = 26
 	},
-/obj/structure/sign/safety/west{
-	pixel_y = 39
-	},
 /obj/structure/sign/safety/medical{
 	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/south{
 	pixel_y = 39
 	},
 /turf/open/floor/corsat/squares,
@@ -8949,11 +9025,6 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
-"Sp" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/obj/structure/machinery/space_heater,
-/turf/open/floor/corsat,
-/area/pudong/base/bunker)
 "Sq" = (
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
@@ -9419,6 +9490,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/machinery/space_heater/radiator/red,
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/nco)
 "UD" = (
@@ -9679,7 +9751,7 @@
 "VW" = (
 /obj/effect/projector{
 	name = "base_hangardown";
-	vector_y = -34
+	vector_x = -34
 	},
 /obj/structure/machinery/light/small{
 	dir = 8;
@@ -9746,7 +9818,7 @@
 	},
 /obj/effect/projector{
 	name = "base_downarm";
-	vector_y = -30
+	vector_x = -30
 	},
 /obj/structure/machinery/light/small{
 	dir = 1;
@@ -10266,7 +10338,7 @@
 	},
 /obj/effect/projector{
 	name = "base_hangardown";
-	vector_y = -34
+	vector_x = -34
 	},
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
@@ -10652,7 +10724,7 @@
 "Zw" = (
 /obj/effect/projector{
 	name = "base_hangardown";
-	vector_y = -34
+	vector_x = -34
 	},
 /turf/open/floor/corsat/squares,
 /area/pudong/base/hangar)
@@ -16990,7 +17062,7 @@ VL
 CZ
 Qy
 zm
-VL
+ao
 rK
 DS
 DS
@@ -17147,7 +17219,7 @@ rK
 Fb
 wL
 zV
-cE
+an
 cE
 Vt
 cE
@@ -17284,7 +17356,7 @@ hg
 tf
 GI
 tf
-fb
+ap
 NL
 VJ
 tf
@@ -22211,7 +22283,7 @@ YN
 YN
 YN
 sU
-Sp
+gT
 zE
 zE
 Sq
@@ -23889,7 +23961,7 @@ Rm
 Rm
 Me
 ky
-LT
+ah
 LT
 ZQ
 hR
@@ -24797,7 +24869,7 @@ YN
 YN
 sU
 oD
-QJ
+ai
 QJ
 sU
 YN
@@ -25358,7 +25430,7 @@ jQ
 Ih
 jS
 BZ
-jS
+am
 zr
 aa
 rT
