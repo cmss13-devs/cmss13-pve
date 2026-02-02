@@ -170,9 +170,20 @@
 	total_positions = 4
 	spawn_positions = 4
 	gear_preset = /datum/equipment_preset/uacg/gunner
-	job_options = null
+	gear_preset_secondary = /datum/equipment_preset/uacg/gunner/lance_corporal
+	gear_preset_tertiary = /datum/equipment_preset/uacg/gunner/private
+	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "SPC")
 	supervisors = "the team leader and troop commander"
 	entry_message_body = "You are a specialized machine gunner of the United Americas Colonial Guard. You are trained in the more dated mounted machine guns still in use of the CG, and pray that one day a smartgun system is integrated to spare your back.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be requisitioned from the armory.</b>"
+
+/datum/job/marine/smartgunner/ai/uacg/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg
 	name = JOB_UACG_GNR
@@ -183,7 +194,18 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uacg/gunner/security
+	gear_preset_secondary = /datum/equipment_preset/uacg/gunner/security/lance_corporal
+	gear_preset_tertiary = /datum/equipment_preset/uacg/gunner/security/private
 	entry_message_body = "You are a specialized machine gunner of the United Americas Colonial Guard. You are trained in the more dated mounted machine guns still in use of the CG, and pray that one day a smartgun system is integrated to spare your back. As a Rear Line Gunner, your primary job is listening to the Fires Leader and protecting the mortar pit. Should the need arise, you will also assist in subduing unruly Guardsmen until they chill out.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be requisitioned from the armory.</b>"
+
+/datum/job/marine/smartgunner/ai/uacg/security/handle_job_options(option)
+	gear_preset = initial(gear_preset)
+	if(option == PVT_VARIANT)
+		gear_preset = gear_preset_tertiary
+	if(option == PFC_VARIANT)
+		gear_preset = gear_preset
+	if(option == LCPL_VARIANT)
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/smartgunner/ai/uacg/security
 	name = JOB_UACG_SCR_GNR

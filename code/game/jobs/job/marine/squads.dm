@@ -55,7 +55,7 @@
 /datum/squad_type/uacg_unit
 	name = "Squad"
 	lead_name = "Senior Leader"
-	lead_icon = "leader"
+	lead_icon = "sl"
 	sub_squad = "Unit"
 	sub_leader = "Unit Leader"
 
@@ -841,7 +841,7 @@
 		if(JOB_UACG_DM)
 			assignment = JOB_UACG_DM
 			num_specialists++
-			var/squad_number = (num_smartgun > 2) ? pick(2, 4) : num_specialists
+			var/squad_number = (num_specialists > 2) ? pick(2, 4) : num_specialists
 			assign_fireteam("SQ[squad_number]", M)
 
 //I am in pain

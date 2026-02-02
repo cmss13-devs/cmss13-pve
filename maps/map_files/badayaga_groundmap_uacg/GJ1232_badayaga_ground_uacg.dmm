@@ -28812,7 +28812,6 @@
 /obj/item/bedsheet/brown{
 	layer = 3.4
 	},
-/obj/effect/landmark/start/marine/leader/uacg/chaplain,
 /turf/open/floor/wood/ship,
 /area/badayaga/inside_underground/dorms/groundside)
 "XL" = (

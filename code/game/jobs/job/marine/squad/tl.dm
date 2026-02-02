@@ -142,10 +142,18 @@
 	total_positions = 8
 	spawn_positions = 8
 	title = JOB_UACG_LEAD
-	gear_preset = /datum/equipment_preset/uacg/leader
+	gear_preset = /datum/equipment_preset/uacg/leader/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uacg/leader
 	job_options = null
 	supervisors = "the officer and senior leader"
 	entry_message_body = "You are a unit leader of the United Americas Colonial Guard and are the equivocal to a squad leader in the active forces. You are expected to coordinate the maneuver and weapons elements of your unit, even if most deployments never involve having an OpFor and are just disaster recovery.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your lethal equipment can be requisitioned from the armory.</b>"
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+
+/datum/job/marine/tl/ai/uacg/handle_job_options(option)
+	if(option != CPL_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/uacg
 	name = JOB_UACG_LEAD
@@ -155,9 +163,17 @@
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_UACG_LEAD_FIRE
-	gear_preset = /datum/equipment_preset/uacg/leader/fires
+	gear_preset = /datum/equipment_preset/uacg/leader/fires/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uacg/leader/fires
 	supervisors = "the officer"
 	entry_message_body = "You are a unit leader of the United Americas Colonial Guard and are the equivocal to a squad leader in the active forces. You are expected to coordinate the fires unit you have been charged to lead, even if most deployments never involve having an OpFor and are just disaster recovery.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your lethal equipment can be requisitioned from the armory.</b>"
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+
+/datum/job/marine/tl/ai/uacg/fires/handle_job_options(option)
+	if(option != CPL_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/uacg/fires
 	name = JOB_UACG_LEAD_FIRE
@@ -168,9 +184,17 @@
 	total_positions = 1
 	spawn_positions = 1
 	title = JOB_UACG_LEAD_MED
-	gear_preset = /datum/equipment_preset/uacg/leader/triage
+	gear_preset = /datum/equipment_preset/uacg/leader/triage/lesser_rank
+	gear_preset_secondary = /datum/equipment_preset/uacg/leader/triage
 	supervisors = "the doctor and unit commander"
 	entry_message_body = "You are a unit leader of the United Americas Colonial Guard and are the equivocal to a squad leader in the active forces. You are expected to coordinate the medical unit you have been charged to lead, even if most deployments never involve having an OpFor and are just disaster recovery.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be requisitioned from the armory.</b>"
+	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
+
+/datum/job/marine/tl/ai/uacg/triage/handle_job_options(option)
+	if(option != CPL_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/uacg/triage
 	name = JOB_UACG_LEAD_MED

@@ -799,6 +799,7 @@
 	new /obj/item/storage/backpack/marine/satchel/rto(src)
 	new /obj/item/storage/backpack/general_belt(src)
 	new /obj/item/attachable/sling(src)
+	new /obj/item/device/binoculars/range/designator(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/senlead2
 	job = JOB_UACG_SENLEAD
@@ -818,6 +819,7 @@
 	new /obj/item/storage/backpack/marine/satchel/rto(src)
 	new /obj/item/storage/backpack/general_belt(src)
 	new /obj/item/attachable/sling(src)
+	new /obj/item/device/binoculars/range/designator(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uacg/senlead1/chaplain
 	job = JOB_UACG_CHAPLAIN
