@@ -3,7 +3,6 @@
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
 	exit_type = /obj/structure/interior_exit/vehicle/humvee/back/right;
-	name = "back right entrance marker";
 	pixel_x = -31;
 	tag = "back right";
 	icon_state = "carrier_backdoor2";
@@ -54,7 +53,6 @@
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 75;
 	exit_type = /obj/structure/interior_exit/vehicle/humvee/right;
-	name = "right entrance marker";
 	tag = "right";
 	pixel_x = -3;
 	pixel_y = -10;
@@ -93,7 +91,6 @@
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
 	exit_type = /obj/structure/interior_exit/vehicle/humvee/back/left;
-	name = "back left entrance marker";
 	pixel_x = -31;
 	tag = "back left";
 	icon_state = "carrier_backdoor1";
@@ -120,23 +117,22 @@
 	pixel_x = -19;
 	pixel_y = 14
 	},
-/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/humvee{
-	dir = 4;
-	pixel_x = -3;
-	pixel_y = 1;
-	buckling_x = -3;
-	buckling_y = 1
-	},
 /obj/effect/landmark/interior/spawn/entrance{
-	dir = 4;
+	dir = 1;
 	exit_type = /obj/structure/interior_exit/vehicle/humvee/left;
 	name = "left entrance marker";
 	tag = "left";
 	pixel_x = -3;
 	pixel_y = 14;
 	icon = 'icons/obj/vehicles/interiors/general_humvee.dmi';
-	icon_state = "exit_door1";
-	layer = 2.8
+	icon_state = "exit_door1"
+	},
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor/humvee{
+	dir = 4;
+	pixel_x = -3;
+	pixel_y = 1;
+	buckling_x = -3;
+	buckling_y = 1
 	},
 /obj/effect/landmark/interior/spawn/interior_viewport/humvee{
 	pixel_x = -3;
