@@ -535,3 +535,10 @@
 /obj/structure/machinery/computer/overwatch/almayer/arc
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "arcconsole"
+
+/obj/structure/machinery/prop/almayer/CICmap/humvee
+	name = "map terminal"
+	desc = "A terminal that displays a map of the current operation location."
+	icon = 'icons/obj/vehicles/interiors/general_humvee.dmi'
+	icon_state = "hummap1"
+	density = FALSE
