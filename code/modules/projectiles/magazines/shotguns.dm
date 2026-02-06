@@ -418,6 +418,7 @@ GLOBAL_LIST_INIT(shotgun_handfuls_12g_reasonable, list(
 
 /obj/item/ammo_magazine/handful/shotgun/medium
 	name = "handful of medium buckshot shells (10g)"
+	icon = 'icons/obj/items/weapons/guns/handful_pr.dmi'
 	icon_state = "medium_buck_5"
 	handful_state = "medium_buck"
 	max_rounds = 5
