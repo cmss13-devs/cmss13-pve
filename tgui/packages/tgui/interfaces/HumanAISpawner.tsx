@@ -6,6 +6,7 @@ import {
   Button,
   Collapsible,
   Divider,
+  Dropdown,
   Section,
   Stack,
 } from '../components';
@@ -19,6 +20,12 @@ type AIEquipmentPreset = {
 
 type BackendContext = {
   presets: { [key: string]: AIEquipmentPreset[] };
+  selected_faction: string;
+  selectable_factions: string[];
+  spawn_ai: boolean;
+  paradrop: boolean;
+  equipment_settings: string[];
+  selected_equipment: string;
 };
 
 export const HumanAISpawner = (props) => {
@@ -42,7 +49,13 @@ export const HumanAISpawner = (props) => {
                           selected={squad === chosenPreset}
                           width="100%"
                           key={squad.path}
-                          onClick={() => setPreset(squad)}
+                          onClick={() => {
+                            setPreset(squad);
+
+                            act('remember_path', {
+                              path: squad.path,
+                            });
+                          }}
                         >
                           {squad.name}
                         </Button>
@@ -65,12 +78,81 @@ export const HumanAISpawner = (props) => {
                         onClick={() =>
                           act('create_ai', {
                             path: chosenPreset.path,
+                            selected_faction: data.selected_faction,
+                            selected_equipment: data.selected_equipment,
                           })
                         }
                       >
                         Spawn
                       </Button>
                     </Stack.Item>
+                    <Stack.Item>
+                      <Dropdown
+                        options={data.selectable_factions}
+                        selected={data.selected_faction}
+                        displayText={
+                          <span
+                            style={{
+                              color: data.selected_faction
+                                ?.toLowerCase()
+                                .includes('Hive')
+                                ? 'purple'
+                                : data.selected_faction !== chosenPreset.faction
+                                  ? 'pink'
+                                  : 'white',
+                            }}
+                          >
+                            {data.selected_faction}
+                          </span>
+                        }
+                        onSelected={(selected_faction) => {
+                          act('set_selected_faction', {
+                            selected_faction: selected_faction,
+                            path: chosenPreset.path,
+                          });
+                        }}
+                      />
+                    </Stack.Item>
+                    <Button.Checkbox
+                      checked={data.spawn_ai}
+                      onClick={() => {
+                        act('human_spawn_ai_toggle');
+                      }}
+                    >
+                      AI
+                    </Button.Checkbox>
+                    <Button.Checkbox
+                      checked={data.paradrop}
+                      onClick={() => {
+                        act('paradrop_toggle');
+                      }}
+                    >
+                      Parachute
+                    </Button.Checkbox>
+                    <Dropdown
+                      options={data.equipment_settings}
+                      selected={data.selected_equipment}
+                      displayText={
+                        <span
+                          style={{
+                            color:
+                              data.selected_equipment === 'Birthday Suit'
+                                ? 'pink'
+                                : data.selected_equipment !== 'Full Equipment'
+                                  ? 'orange'
+                                  : 'white',
+                          }}
+                        >
+                          {data.selected_equipment}
+                        </span>
+                      }
+                      onSelected={(selected_equipment) => {
+                        act('set_selected_equipment', {
+                          selected_equipment: selected_equipment,
+                          path: chosenPreset.path,
+                        });
+                      }}
+                    />
                   </Stack>
                 ) : (
                   <div />
