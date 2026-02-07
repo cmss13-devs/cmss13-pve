@@ -1,15 +1,7 @@
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Collapsible,
-  Divider,
-  Dropdown,
-  Section,
-  Stack,
-} from '../components';
+import { Box, Button, Divider, Dropdown, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 type AIEquipmentPreset = {
@@ -24,36 +16,56 @@ type BackendContext = {
   selectable_factions: string[];
   spawn_ai: boolean;
   paradrop: boolean;
+  outfit: number;
+  desc: number;
+  spawn_click_intercept: boolean;
   equipment_settings: string[];
   selected_equipment: string;
+  species_settings: string[];
+  species_selected: string;
 };
 
 export const HumanAISpawner = (props) => {
   const { data, act } = useBackend<BackendContext>();
   const [chosenPreset, setPreset] = useState<AIEquipmentPreset | null>(null);
+  const [viewingFaction, setViewingFaction] = useState<string | null>(null);
   const { presets } = data;
+
+  const factionOptions = Object.keys(presets);
+
   return (
     <Window title="Human AI Spawner" width={800} height={900}>
       <Window.Content>
         <Stack fill vertical>
           <Stack fill>
+            {/* left panel*/}
             <Stack.Item grow mr={1}>
-              <Section fill scrollable>
-                {Object.keys(presets).map((dictKey) => (
-                  <Collapsible title={dictKey} key={dictKey} color="good">
-                    {presets[dictKey].map((squad) => (
-                      <Box pb={'12px'} key={squad.path}>
+              <Box mb={1}>
+                <Dropdown
+                  placeholder="Filter by Faction..."
+                  options={factionOptions}
+                  selected={viewingFaction}
+                  width="100%"
+                  onSelected={(value) => setViewingFaction(value)}
+                />
+              </Box>
+              <Section fill scrollable title="Presets">
+                <Divider />
+                {viewingFaction ? (
+                  <Box mt={1}>
+                    {presets[viewingFaction]?.map((squad) => (
+                      <Box pb="12px" key={squad.path}>
                         <Button
                           fontSize="15px"
                           textAlign="center"
-                          selected={squad === chosenPreset}
+                          selected={squad.path === chosenPreset?.path}
+                          // key={squad?.path}
                           width="100%"
-                          key={squad.path}
                           onClick={() => {
                             setPreset(squad);
-
                             act('remember_path', {
                               path: squad.path,
+                              selected_faction: data.selected_faction,
                             });
                           }}
                         >
@@ -61,20 +73,36 @@ export const HumanAISpawner = (props) => {
                         </Button>
                       </Box>
                     ))}
-                  </Collapsible>
-                ))}
+                  </Box>
+                ) : (
+                  <Box textAlign="center" italic color="label">
+                    Select a faction to view presets
+                  </Box>
+                )}
               </Section>
             </Stack.Item>
             <Divider vertical />
             <Stack.Item width="30%">
-              <Section title="Selected Preset">
+              <Section
+                title="Selected Preset"
+                buttons={
+                  <Button.Checkbox
+                    checked={data.desc}
+                    icon="eye-slash"
+                    onClick={() => act('hide_desc')}
+                  />
+                }
+              >
                 {chosenPreset !== null ? (
                   <Stack vertical>
-                    <Stack.Item>{chosenPreset.description}</Stack.Item>
+                    <Stack.Item>
+                      {data.desc === 1 && chosenPreset.description}
+                    </Stack.Item>
                     <Stack.Item>
                       <Button
                         textAlign="center"
                         width="100%"
+                        selected={data.spawn_click_intercept}
                         onClick={() =>
                           act('create_ai', {
                             path: chosenPreset.path,
@@ -83,11 +111,13 @@ export const HumanAISpawner = (props) => {
                           })
                         }
                       >
-                        Spawn
+                        {data.outfit === 1 ? 'Outfit' : 'Click Spawn'}
                       </Button>
+                      {/* path: selected_faction: etc get passed as the params["path"]*/}
                     </Stack.Item>
                     <Stack.Item>
                       <Dropdown
+                        width="100%"
                         options={data.selectable_factions}
                         selected={data.selected_faction}
                         displayText={
@@ -95,7 +125,7 @@ export const HumanAISpawner = (props) => {
                             style={{
                               color: data.selected_faction
                                 ?.toLowerCase()
-                                .includes('Hive')
+                                .includes('hive')
                                 ? 'purple'
                                 : data.selected_faction !== chosenPreset.faction
                                   ? 'pink'
@@ -113,14 +143,7 @@ export const HumanAISpawner = (props) => {
                         }}
                       />
                     </Stack.Item>
-                    <Button.Checkbox
-                      checked={data.spawn_ai}
-                      onClick={() => {
-                        act('human_spawn_ai_toggle');
-                      }}
-                    >
-                      AI
-                    </Button.Checkbox>
+
                     <Button.Checkbox
                       checked={data.paradrop}
                       onClick={() => {
@@ -129,7 +152,47 @@ export const HumanAISpawner = (props) => {
                     >
                       Parachute
                     </Button.Checkbox>
+                    <Button.Checkbox
+                      checked={data.outfit}
+                      onClick={() => {
+                        act('outfit');
+                      }}
+                    >
+                      Click gives outfit
+                    </Button.Checkbox>
+
+                    <Section title="Additional Options" />
                     <Dropdown
+                      width="100%"
+                      options={data.species_settings}
+                      selected={data.species_selected}
+                      displayText={
+                        <span
+                          style={{
+                            color:
+                              data.species_selected
+                                ?.toLowerCase()
+                                .includes('synth') ||
+                              data.selected_faction
+                                ?.toLowerCase()
+                                .includes('working joe')
+                                ? 'blue'
+                                : data.species_selected !== 'Human'
+                                  ? 'green'
+                                  : 'white',
+                          }}
+                        >
+                          {data.species_selected}
+                        </span>
+                      }
+                      onSelected={(species_selected) => {
+                        act('set_selected_species', {
+                          species_selected: species_selected,
+                        });
+                      }}
+                    />
+                    <Dropdown
+                      width="100%"
                       options={data.equipment_settings}
                       selected={data.selected_equipment}
                       displayText={
@@ -153,9 +216,19 @@ export const HumanAISpawner = (props) => {
                         });
                       }}
                     />
+                    <Button.Checkbox
+                      checked={data.spawn_ai}
+                      onClick={() => {
+                        act('human_spawn_ai_toggle');
+                      }}
+                    >
+                      AI
+                    </Button.Checkbox>
                   </Stack>
                 ) : (
-                  <div />
+                  <Box textAlign="center" italic color="label">
+                    No preset selected
+                  </Box>
                 )}
               </Section>
             </Stack.Item>
