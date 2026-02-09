@@ -1,7 +1,7 @@
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 
-GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
+//GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 
 /datum/human_ai_spawner_menu
 	var/static/list/lazy_ui_data = list()
@@ -20,24 +20,14 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 
 /datum/human_ai_spawner_menu/New()
 	usr.client.click_intercept = src
-	if(!length(GLOB.human_ai_equipment_presets))
+	if(!length(lazy_ui_data))
 		for(var/datum/human_ai_equipment_preset/preset_type as anything in subtypesof(/datum/human_ai_equipment_preset))
 			if(!preset_type::name || !preset_type::path)
 				continue
-
-			if(!lazy_ui_data[preset_type::faction])
-				lazy_ui_data[preset_type::faction] = list()
-
 			var/datum/human_ai_equipment_preset/preset_obj = new preset_type()
-			GLOB.human_ai_equipment_presets["[preset_type]"] = preset_obj
+			//GLOB.human_ai_equipment_presets["[preset_type]"] = preset_obj
+			add_preset(preset_obj.path, preset_obj.desc)
 
-			lazy_ui_data[preset_type::faction] += list(list(
-				"name" = preset_obj.name,
-				"description" = preset_obj.desc,
-				"path" = preset_type,
-				"faction" = preset_obj.faction,
-				"selected_equipment" = "Full Equipment"
-			))
 
 /datum/human_ai_spawner_menu/ui_close(mob/user)
 	. = ..()
@@ -56,20 +46,40 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 /datum/human_ai_spawner_menu/ui_state(mob/user)
 	return GLOB.admin_state
 
+
+/datum/human_ai_spawner_menu/proc/add_preset(datum/equipment_preset/preset, desc)
+	if(!lazy_ui_data[preset.faction])
+		lazy_ui_data[preset.faction] = list()
+
+	var/mob/living/carbon/human/ai_human = new() //things have learned to walk that ought to crawl
+	arm_equipment(ai_human, preset, TRUE)
+	var/species_of_this_preset = ai_human.get_species()
+	qdel(ai_human)//great holes are secretly dug where earths pores ought to suffice
+	lazy_ui_data[preset::faction] += list(list(
+		"name" = preset.name,
+		"description" = "[desc ? "Added Preset" : desc]",
+		"path" = preset.type,
+		"faction" = preset.faction,
+		"selected_equipment" = "Full Equipment",
+		"species" = species_of_this_preset
+	))
+
 /datum/human_ai_spawner_menu/ui_data(mob/user)
 	var/list/data = list()
-	var/datum/human_ai_equipment_preset/gotten_path = text2path(current_path)
+	var/datum/equipment_preset/gotten_path = text2path(current_path)
 	var/list/faction_list = lazy_ui_data[gotten_path.faction]
 	for(var/list/preset_data in faction_list)
 		if(preset_data["path"] == gotten_path)
 			data["selected_faction"] = preset_data["faction"] //update the dropdown to the value the faction is in our big list
 			data["selected_equipment"] = preset_data["selected_equipment"]
+			data["species_selected"] = preset_data["species"]
+			species = data["species_selected"]
 			break
 	data["spawn_ai"] = spawn_ai
 	data["paradrop"] = paradrop
 	data["desc"] = desc
 	data["outfit"] = outfit
-	data["species_selected"] = species
+	//data["species_selected"] = species
 	if(user.client.click_intercept != src && spawn_click_intercept)
 		user.client.click_intercept = src
 	data["spawn_click_intercept"] = spawn_click_intercept
@@ -110,6 +120,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			current_path = params["path"]
 			selected_equipment = params["selected_equipment"]
 			selected_faction = params["selected_faction"]
+			species = params["species_selected"]
 			SStgui.try_update_ui(usr, src, ui)
 		if("human_spawn_ai_toggle")
 			spawn_ai = !spawn_ai
@@ -121,6 +132,15 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			outfit = !outfit
 		if("set_selected_species")
 			species = params["species_selected"]
+			var/datum/equipment_preset/gotten_path = text2path(current_path)
+			if(!gotten_path)
+				return
+			var/list/faction_list = lazy_ui_data[gotten_path.faction]
+			for(var/list/preset_data in faction_list)
+				if(preset_data["path"] == gotten_path)
+					preset_data["species"] = params["species_selected"]
+					species = params["species_selected"]
+					return
 		if("set_selected_equipment")
 			var/datum/human_ai_equipment_preset/gotten_path = text2path(params["path"])
 			if(!gotten_path)
@@ -144,12 +164,14 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 			selected_faction = params["selected_faction"]
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
-
-
-
-
-
 			return TRUE
+		if("add_preset")
+			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
+			dresscode = GLOB.gear_name_presets_list[dresscode]
+			add_preset(dresscode, "Added Preset.")
+			ui.send_full_update()
+			var/f = TRUE
+			f = !f
 
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
@@ -157,7 +179,9 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 	if(spawn_click_intercept)
 		switch(current_click_intercept_action)
 			if(SPAWN_CLICK_INTERCEPT_ACTION)
-				var/datum/human_ai_equipment_preset/gotten_path = text2path(current_path)
+				//var/gotten_path
+				var/faction_of_preset
+				var/datum/equipment_preset/gotten_path = text2path(current_path)
 				var/randomise_appearance = TRUE
 				var/mob/living/carbon/human/ai_human
 
@@ -175,7 +199,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 
 				for(var/item in ai_human.get_equipped_items(TRUE))
 					qdel(item)
-				arm_equipment(ai_human, gotten_path::path, randomise_appearance, FALSE, mob_client = ai_human.client)
+				arm_equipment(ai_human, gotten_path, randomise_appearance, FALSE, mob_client = ai_human.client)
 				if(selected_equipment == "No Weapons")
 					ai_human.strip_weapons()
 				else if(selected_equipment == "Birthday Suit")
@@ -190,7 +214,7 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 					ai_human.set_species(species)
 					if(issynth(ai_human))
 						ai_human.set_skills(/datum/skills/synthetic)
-				if(selected_faction != gotten_path.faction)
+				if(selected_faction != faction_of_preset)
 					ai_human.faction = selected_faction
 					var/obj/item/card/id/faction_tags = ai_human.wear_id
 					if(faction_tags)
@@ -209,6 +233,8 @@ GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
 							if(faction_tags)
 								faction_tags.faction_group = list(selected_faction)
 				if(spawn_ai && !outfit)
+					if(iszombie(ai_human))
+						ai_human.strip_weapons()
 					ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
 					ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 

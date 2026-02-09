@@ -166,12 +166,12 @@
 	desc = "Colonist - Unarmed executive"
 	path = /datum/equipment_preset/colonist/whitecollar/exec
 
-/datum/human_ai_equipment_preset/colonist/whitecollar/exac/japanse
+/datum/human_ai_equipment_preset/colonist/whitecollar/exec/japanse
 	name = "TWE Colonist - Executive"
 	desc = "Colonist - Unarmed executive, japanese"
 	path = /datum/equipment_preset/colonist/whitecollar/exec/japanese
 
-/datum/human_ai_equipment_preset/colonist/whitecollar/exac/spanish
+/datum/human_ai_equipment_preset/colonist/whitecollar/exec/spanish
 	name = "Latam Colonist - Executive"
 	desc = "Colonist - Unarmed executive, spanish"
 	path = /datum/equipment_preset/colonist/whitecollar/exec/spanish

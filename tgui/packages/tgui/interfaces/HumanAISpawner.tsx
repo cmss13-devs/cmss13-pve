@@ -49,7 +49,20 @@ export const HumanAISpawner = (props) => {
                   onSelected={(value) => setViewingFaction(value)}
                 />
               </Box>
-              <Section fill scrollable title="Presets">
+              <Section
+                fill
+                scrollable
+                title="Presets"
+                buttons={
+                  <Button
+                    textAlign="center"
+                    width="100%"
+                    onClick={() => act('add_preset')}
+                  >
+                    Add Preset
+                  </Button>
+                }
+              >
                 <Divider />
                 {viewingFaction ? (
                   <Box mt={1}>
@@ -66,6 +79,8 @@ export const HumanAISpawner = (props) => {
                             act('remember_path', {
                               path: squad.path,
                               selected_faction: data.selected_faction,
+                              selected_equipment: data.selected_equipment,
+                              species_selected: data.species_selected,
                             });
                           }}
                         >
@@ -160,7 +175,6 @@ export const HumanAISpawner = (props) => {
                     >
                       Click gives outfit
                     </Button.Checkbox>
-
                     <Section title="Additional Options" />
                     <Dropdown
                       width="100%"
