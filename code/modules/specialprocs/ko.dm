@@ -35,9 +35,7 @@
 	human.Stun(100000000)
 	human.loc = null
 	human.SetEyeBlind(100000000)
-	save_human(human)
-	human.ghost_locked = TRUE
-	human.hudswitch_blocked = TRUE
+
 	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
 	message_admins("working so far!")
 	sleep(5 SECONDS)
@@ -71,6 +69,7 @@
 	sleep(7 SECONDS)
 	text_box.after_play()
 	body.after_play()
+	body2.after_play()
 	message_admins("END THE ROUND NOW")
 	sleep(15 SECONDS)
 	if(human.client)
