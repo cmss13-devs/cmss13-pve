@@ -1,4 +1,5 @@
 // This is in no means my own code, thank you to Zonespace who wrote it all up for me to take later!
+
 /proc/ko_everyone()
 	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(ko_single_mob), human)
