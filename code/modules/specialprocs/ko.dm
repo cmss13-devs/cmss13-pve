@@ -41,9 +41,6 @@
 		winset(human.client, "mainwindow.split", "splitter=1000")
 		winset(human.client, "infowindow", "is-visible=false")
 		winset(human.client, "outputwindow", "is-visible=false")
-	text_ending(human)
-
-/proc/text_ending(mob/living/carbon/human/human, should_roar)
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "EVACUATION OF COLONY 'CRUCIBLE' COMPLETE. SURFACE SCOURED DUE TO OVERWHELMING HOSTILE XENOFAUNA"
 	text_box.player = human.client
