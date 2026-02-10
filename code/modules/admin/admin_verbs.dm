@@ -178,6 +178,7 @@ GLOBAL_LIST_INIT(admin_verbs_major_event, list(
 	/client/proc/rerun_decorators,
 	/client/proc/toogle_door_control,
 	/client/proc/map_template_load,
+	/client/proc/ko_everyone_verb,
 	/client/proc/load_event_level,
 	/client/proc/cmd_fun_fire_ob,
 	/client/proc/map_template_upload,
