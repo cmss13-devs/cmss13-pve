@@ -17,6 +17,7 @@
 	var/selected_equipment
 	var/selected_faction
 	var/outfit = FALSE
+	var/mob/living/carbon/human/species_dummy
 
 /datum/human_ai_spawner_menu/New()
 	usr.client.click_intercept = src
@@ -50,11 +51,15 @@
 /datum/human_ai_spawner_menu/proc/add_preset(datum/equipment_preset/preset, desc)
 	if(!lazy_ui_data[preset.faction])
 		lazy_ui_data[preset.faction] = list()
-
-	var/mob/living/carbon/human/ai_human = new() //things have learned to walk that ought to crawl
-	arm_equipment(ai_human, preset, TRUE)
-	var/species_of_this_preset = ai_human.get_species()
-	qdel(ai_human)//great holes are secretly dug where earths pores ought to suffice
+	if(!species_dummy)
+		species_dummy = new() //things have learned to walk that ought to crawl
+	else
+		species_dummy.set_species("Human")
+	preset = GLOB.gear_path_presets_list[preset]
+	preset.load_race(species_dummy)
+	//arm_equipment(ai_human, preset, TRUE)
+	var/species_of_this_preset = species_dummy.get_species()
+	//qdel(ai_human)//great holes are secretly dug where earths pores ought to suffice
 	lazy_ui_data[preset::faction] += list(list(
 		"name" = preset.name,
 		"description" = "[desc ? "Added Preset" : desc]",
