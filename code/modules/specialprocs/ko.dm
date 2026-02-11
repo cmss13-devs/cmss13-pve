@@ -41,4 +41,4 @@
 		winset(human.client, "mainwindow.split", "splitter=1000")
 		winset(human.client, "infowindow", "is-visible=false")
 		winset(human.client, "outputwindow", "is-visible=false")
-		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(conclude_op), human.client)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(conclude_op), human)
