@@ -20,7 +20,7 @@
 	var/atom/movable/screen/text/screen_text/body2 = new /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary()
 	body2.text_to_play = "THE UNION HONOURS YOUR SACRIFICE."
 	body2.player = human.client
-	body2.color = "#c2ce54"
+	body2.color = "#af9231"
 	LAZYADD(human.client.screen_texts, body2)
 	body2.play_to_client()
 	sleep(7 SECONDS)
