@@ -37,7 +37,7 @@
 	human.SetEyeBlind(100000000)
 	message_admins("working so far!")
 	sleep(5 SECONDS)
-//	if(human.client) // devious shenanigans
+	if(human.client) // devious shenanigans
 		winset(human.client, "mainwindow.split", "splitter=1000")
 		winset(human.client, "infowindow", "is-visible=false")
 		winset(human.client, "outputwindow", "is-visible=false")
