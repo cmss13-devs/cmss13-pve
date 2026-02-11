@@ -35,10 +35,9 @@
 	human.Stun(100000000)
 	human.loc = null
 	human.SetEyeBlind(100000000)
-	message_admins("working so far!")
 	sleep(5 SECONDS)
 	if(human.client) // devious shenanigans
 		winset(human.client, "mainwindow.split", "splitter=1000")
 		winset(human.client, "infowindow", "is-visible=false")
 		winset(human.client, "outputwindow", "is-visible=false")
-		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(conclude_op), human)
+	conclude_op()
