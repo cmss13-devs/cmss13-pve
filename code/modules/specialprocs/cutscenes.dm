@@ -1,6 +1,6 @@
 /mob/living/carbon/human
 	var/in_cutscene = FALSE
-/proc/conclude_op(mob/living/carbon/human/human)
+/proc/simulacrum_text_ending_bad(mob/living/carbon/human/human)
 	human.in_cutscene = TRUE
 	sleep(5 SECONDS)
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
