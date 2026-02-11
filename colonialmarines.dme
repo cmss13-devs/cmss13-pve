@@ -2507,6 +2507,7 @@
 #include "code\modules\shuttles\shuttle_supply.dm"
 #include "code\modules\sorokyne\sorokyne_cold_water.dm"
 #include "code\modules\specialprocs\cutscenemiscs.dm"
+#include "code\modules\specialprocs\cutscenes.dm"
 #include "code\modules\specialprocs\ko.dm"
 #include "code\modules\statusbar\statusbar.dm"
 #include "code\modules\surgery\amputation.dm"
