@@ -11,7 +11,7 @@
 	text_box.play_to_client()
 	sleep(2.5 SECONDS)
 	var/atom/movable/screen/text/screen_text/body = new /atom/movable/screen/text/screen_text/simulacrum_message/body()
-	body.text_to_play = "PLATOON ELEMENT 'RED DAWN' ELIMINATED BY NUCLEAR BLAST. ANALYSIS INDICATES DEFENSIVE EFFORTS TO HAVE SAVED NUMBERS RANGING IN THE TENS OF THOUSANDS."
+	body.text_to_play = "PLATOON ELEMENT 'RED DAWN' ELIMINATED BY NUCLEAR BLAST. ANALYSIS INDICATES DEFENSIVE EFFORT OF KEY LOCATION TO HAVE SAVED NUMBERS RANGING IN THE HUNDREDS OF THOUSANDS."
 	body.player = human.client
 	body.color = "#982323"
 	LAZYADD(human.client.screen_texts, body)
@@ -27,8 +27,8 @@
 	text_box.after_play()
 	body.after_play()
 	body2.after_play()
-	message_admins("END THE ROUND NOW")
 	sleep(15 SECONDS)
+	message_admins("END THE ROUND NOW")
 	if(human.client)
 		winset(human.client, "infowindow", "is-visible=true")
 		winset(human.client, "outputwindow", "is-visible=true")

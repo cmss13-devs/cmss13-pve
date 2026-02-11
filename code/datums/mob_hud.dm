@@ -96,7 +96,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 // makes the client able to 'see' them whenever they're offscreen
 // somewhat confusingly
 /datum/mob_hud/proc/add_to_single_hud(mob/user, mob/target)
-	if(!user.client)
+	if(!user?.client)
 		return
 	for(var/i in hud_icons)
 		if(i in target.hud_list)
