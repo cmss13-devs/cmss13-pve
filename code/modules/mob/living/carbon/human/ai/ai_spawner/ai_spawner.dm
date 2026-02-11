@@ -164,7 +164,7 @@
 			selected_faction = params["selected_faction"]
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
-			user.client.click_intercept = src
+			usr.client.click_intercept = src
 			return TRUE
 		if("add_preset")
 			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
@@ -173,7 +173,7 @@
 
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
-	var/list/modifiers = params2list(params)
+	//var/list/modifiers = params2list(params)
 	if(spawn_click_intercept)
 		switch(current_click_intercept_action)
 			if(SPAWN_CLICK_INTERCEPT_ACTION)
