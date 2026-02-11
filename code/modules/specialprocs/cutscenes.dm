@@ -27,7 +27,7 @@
 	text_box.after_play()
 	body.after_play()
 	body2.after_play()
-	sleep(15 SECONDS)
+	sleep(5 SECONDS)
 	message_admins("END THE ROUND NOW")
 	if(human.client)
 		winset(human.client, "infowindow", "is-visible=true")
