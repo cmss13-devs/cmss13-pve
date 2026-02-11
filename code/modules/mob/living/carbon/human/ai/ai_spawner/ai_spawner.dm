@@ -47,22 +47,20 @@
 /datum/human_ai_spawner_menu/ui_state(mob/user)
 	return GLOB.admin_state
 
-
 /datum/human_ai_spawner_menu/proc/add_preset(datum/equipment_preset/preset, desc)
 	if(!lazy_ui_data[preset.faction])
 		lazy_ui_data[preset.faction] = list()
 	if(!species_dummy)
 		species_dummy = new() //things have learned to walk that ought to crawl
+		GLOB.peak_humans--
 	else
 		species_dummy.set_species("Human")
 	preset = GLOB.gear_path_presets_list[preset]
-	preset.load_race(species_dummy)
-	//arm_equipment(ai_human, preset, TRUE)
+	preset.load_race(species_dummy)//great holes are secretly dug where earths pores ought to suffice
 	var/species_of_this_preset = species_dummy.get_species()
-	//qdel(ai_human)//great holes are secretly dug where earths pores ought to suffice
 	lazy_ui_data[preset::faction] += list(list(
 		"name" = preset.name,
-		"description" = "[desc ? "Added Preset" : desc]",
+		"description" = "[desc ? desc : "Added Preset."]",
 		"path" = preset.type,
 		"faction" = preset.faction,
 		"selected_equipment" = "Full Equipment",
@@ -72,7 +70,7 @@
 /datum/human_ai_spawner_menu/ui_data(mob/user)
 	var/list/data = list()
 	var/datum/equipment_preset/gotten_path = text2path(current_path)
-	var/list/faction_list = lazy_ui_data[gotten_path.faction]
+	var/list/faction_list = lazy_ui_data[gotten_path?.faction] //runtime o'clock
 	for(var/list/preset_data in faction_list)
 		if(preset_data["path"] == gotten_path)
 			data["selected_faction"] = preset_data["faction"] //update the dropdown to the value the faction is in our big list
@@ -84,9 +82,6 @@
 	data["paradrop"] = paradrop
 	data["desc"] = desc
 	data["outfit"] = outfit
-	//data["species_selected"] = species
-	if(user.client.click_intercept != src && spawn_click_intercept)
-		user.client.click_intercept = src
 	data["spawn_click_intercept"] = spawn_click_intercept
 	return data
 
@@ -154,8 +149,8 @@
 			for(var/list/preset_data in faction_list)
 				if(preset_data["path"] == gotten_path)
 					preset_data["selected_equipment"] = params["selected_equipment"]
+					selected_equipment = params["selected_equipment"]
 					return
-			selected_equipment = params["selected_equipment"]
 		if("create_ai")
 			if(!params["path"])
 				return
@@ -169,14 +164,12 @@
 			selected_faction = params["selected_faction"]
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
+			user.client.click_intercept = src
 			return TRUE
 		if("add_preset")
 			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
 			dresscode = GLOB.gear_name_presets_list[dresscode]
-			add_preset(dresscode, "Added Preset.")
-			ui.send_full_update()
-			var/f = TRUE
-			f = !f
+			add_preset(dresscode)
 
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 

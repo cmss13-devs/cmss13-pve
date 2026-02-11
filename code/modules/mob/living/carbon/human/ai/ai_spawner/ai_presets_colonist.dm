@@ -31,16 +31,6 @@
 	desc = "Colonist - A US Federal prison guard armed with a pistol, spanish"
 	path = /datum/equipment_preset/colonist/security/prison/spanish
 
-/datum/human_ai_equipment_preset/colonist/security/colonial
-	name = "Colonist - US Colonial Guard"
-	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with an M20"
-	path = /datum/equipment_preset/colonist/security/guard
-
-/datum/human_ai_equipment_preset/colonist/security/colonial/spanish
-	name = "Colonist - US Colonial Guard Spanish"
-	desc = "Colonist - Also known as a UACG Militaman these are the rear echelon backbone of the UA, armed with an M20, spanish"
-	path = /datum/equipment_preset/colonist/security/guard/spanish
-
 /datum/human_ai_equipment_preset/colonist/bluecollar
 	name = "Colonist - Bluecollar"
 	desc = "Colonist - Bluecollar worker, unarmed"
