@@ -1,6 +1,6 @@
 /mob/living/carbon/human
 	var/in_cutscene = FALSE
-/proc/conclude_op(mob/living/carbon/human/human)
+/proc/conclude_op(mob/living/carbon/human)
 	human.in_cutscene = TRUE
 	var/atom/movable/screen/text/screen_text/text_box = new /atom/movable/screen/text/screen_text/simulacrum_message()
 	text_box.text_to_play = "EVACUATION OF COLONY 'CRUCIBLE' COMPLETE. SURFACE SCOURED DUE TO OVERWHELMING HOSTILE XENOFAUNA"
