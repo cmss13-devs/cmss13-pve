@@ -16,6 +16,7 @@
 	ko_everyone()
 
 /proc/ko_single_mob(mob/living/carbon/human)
+	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
 	to_chat(human, SPAN_BOLDWARNING("A horrific light shatters your retinas"))
 	human.clear_fullscreens()
 	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
@@ -34,7 +35,6 @@
 	human.Stun(100000000)
 	human.loc = null
 	human.SetEyeBlind(100000000)
-	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
 	message_admins("working so far!")
 	sleep(5 SECONDS)
 	if(human.client) // devious shenanigans
