@@ -1491,19 +1491,6 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 	specialty = "6B75 helmet"
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
-	name = "\improper 6B79 helmet"
-	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
-	icon_state = "upp_helmet_heavy"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_HIGHPLUS
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	specialty = "6B79 helmet"
-
 /obj/item/clothing/head/helmet/marine/veteran/UPP/old
 	name = "\improper 6B68 helmet"
 	desc = "An older variant of UPPAC helmet still utilized by Territorial Guard units and Interior Troops. Tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex."
@@ -1893,6 +1880,22 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_cold_protection = BODY_FLAG_HEAD
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = null
+
+/obj/item/clothing/head/helmet/upp/heavy
+	name = "\improper 6B82 heavy helmet"
+	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles. Usually carried alongside with 6B99-2 heavy assault armor."
+	icon_state = "upp_helmet_heavy"
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	anti_hug = 6
+	force = 20
+	flags_atom = NO_NAME_OVERRIDE
+	specialty = "6B82 helmet"
 
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2c cap"

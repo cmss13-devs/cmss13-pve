@@ -477,7 +477,7 @@
 	icon_state = "" //No sprite
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	show_flame = FALSE
-	light_range = 7
+	light_range = 18
 
 /obj/item/device/flashlight/flare/on/illumination/Initialize()
 	. = ..()

@@ -1648,6 +1648,28 @@
 
 #define MAXIMUM_MAGAZINE_COUNT 2
 
+/obj/item/storage/belt/gun/bizon
+	name = "\improper Type 49 SMG holster rig"
+	desc = "Special issue variant of Type 41 ammo belt with refitted holster for Type 64 Submachinegun.  Uncommonly issued to the UPPN and UPPA support and specialist personnel."
+	icon_state = "upp_smg"
+	item_state = "upp_smg"
+	storage_slots = 4
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/weapon/gun/smg/bizon,
+		/obj/item/ammo_magazine/smg/bizon,
+	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -8,
+			"icon_y" = -5))
+
+/obj/item/storage/belt/gun/m39/rmc
+	name = "\improper L110 pattern M39 holster rig"
+	desc = "A belt of finely-tooled leather, with holster & pouches for the L6A2 carriage and corresponding ammo."
+	icon_state = "rmc_smg"
+	item_state = "rmc_smg"
+
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
@@ -2533,8 +2555,9 @@
 	desc = "An L84 pattern load-bearing rig configured to carry support ammunition for either the L53A1 light mortar or L164A3 multiple grenade launcher, along with a sidearm & magazine. Made of special rot-resistant fabric."
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
+	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	max_w_class = SIZE_HUGE
+	max_w_class = SIZE_LARGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(

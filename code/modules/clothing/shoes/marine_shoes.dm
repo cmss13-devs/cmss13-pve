@@ -132,6 +132,7 @@
 	armor_bio = CLOTHING_ARMOR_HIGH
 	siemens_coefficient = 0.2
 	unacidable = TRUE
+	var/booted = FALSE
 
 /obj/item/clothing/shoes/veteran/pmc/commando/knife
 	spawn_item_type = /obj/item/attachable/bayonet/wy
