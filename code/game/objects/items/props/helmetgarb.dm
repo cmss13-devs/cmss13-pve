@@ -639,3 +639,9 @@
 	desc = "The complimentary, but not necessary googles, attachable to Mk10 open combat helmets. An additional protection to the eyes, be it a cold wind, or a spit from a rioting civilian. It's a true talent to be able to see through them easily, without HUD visor."
 	icon_state = "rmc_goggles"
 	flags_obj = OBJ_NO_HELMET_BAND
+
+/obj/item/prop/helmetgarb/frogmen_veil
+	name = "Frogmen tactical veil"
+	desc = "A net veil, most of the times used by special forces to break up the silhouette of the soldier at long ranges. And also it's very creepy to see one when fighting on the other side."
+	icon_state = "veil_frogmen"
+	flags_obj = OBJ_NO_HELMET_BAND

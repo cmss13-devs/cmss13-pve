@@ -320,6 +320,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/bug_spray = "bug_spray",
 	/obj/item/prop/helmetgarb/rmc_platemask = "rmc_platemask",
 	/obj/item/prop/helmetgarb/rmc_goggles = "rmc_goggles",
+	/obj/item/prop/helmetgarb/frogmen_veil = HELMET_GARB_RELAY_ICON_STATE,
 
 	// MISC
 	/obj/item/tool/pen = "helmet_pen_black",
@@ -1894,7 +1895,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = null
 
 /obj/item/clothing/head/helmet/upp/heavy
-	name = "\improper 6B82 heavy helmet"
+	name = "\improper 6B83 heavy helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles. Usually carried alongside with 6B99-2 heavy assault armor."
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_HIGHPLUS
@@ -1907,7 +1908,21 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	anti_hug = 6
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE
-	specialty = "6B82 helmet"
+	specialty = "6B83 helmet"
+
+/obj/item/clothing/head/helmet/upp/frogmen
+	name = "\improper 6B84 light helmet"
+	desc = " UPPA reconnaissance new helmet for multiple environments, and used mostly for NVG/IR system placement. Made using fabric-polymer technology, making it much lighter in comparison to the standard issue 6B82, sacrificing overall protection. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
+	icon_state = "upp_helmet_frogmen"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	specialty = "6B84 helmet"
 
 /obj/item/clothing/head/uppcap/civi
 	name = "\improper UL2c cap"
