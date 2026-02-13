@@ -94,6 +94,14 @@
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"
 
+/datum/map_template/interior/box_van
+	name = "Box Van"
+	interior_id = "box_van"
+
+/datum/map_template/interior/pizza_van
+	name = "Pizza-Galaxy Van"
+	interior_id = "pizza_van"
+
 /datum/map_template/interior/ambulance
 	name = "Ambulance"
 	interior_id = "ambulance"
@@ -113,3 +121,15 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
+
+/datum/map_template/interior/humvee
+	name = "JTMV-HWC"
+	interior_id = "humvee"
+
+/datum/map_template/interior/humvee/humvee_medical
+	name = "JTMV-Ambulance"
+	interior_id = "humvee_medical"
+
+/datum/map_template/interior/humvee/humvee_transport
+	name = "JTMV-Utility"
+	interior_id = "humvee_transport"

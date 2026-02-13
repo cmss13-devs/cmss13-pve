@@ -44,3 +44,16 @@
 /obj/structure/interior_viewport/terminal/tank
 	name = "Command & Control Terminal"
 	desc = "A terminal hooked up to the various sensors of the M579 ADS-C, featuring plenty of flashing buttons and whooping alarms alongside a more rudimentary external-view system."
+
+// Humvee version
+/obj/structure/interior_viewport/humvee
+	name = "humvee window"
+	desc = "Nothing beats the good old sheet of glass."
+	icon = 'icons/obj/vehicles/interiors/general_humvee.dmi'
+	icon_state = "viewport_door"
+
+/obj/structure/interior_viewport/humvee/windshield
+	name = "humvee window"
+	desc = "Nothing beats the good old sheet of glass."
+	icon = 'icons/obj/vehicles/interiors/general_humvee.dmi'
+	icon_state = "viewport_frontwindow_north"

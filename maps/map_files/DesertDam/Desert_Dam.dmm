@@ -14090,7 +14090,7 @@
 /area/desert_dam/exterior/river/riverside_central_north)
 "bdL" = (
 /obj/item/reagent_container/food/drinks/flask/detflask,
-/obj/item/clothing/head/det_hat,
+/obj/item/clothing/head/fedora/brown,
 /obj/structure/surface/table/woodentable/fancy,
 /turf/open/floor/interior/wood,
 /area/desert_dam/building/security/detective)

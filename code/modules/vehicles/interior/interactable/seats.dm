@@ -92,6 +92,9 @@
 	seat = VEHICLE_GUNNER
 	required_skill = SKILL_VEHICLE_CREWMAN
 
+/obj/structure/bed/chair/comfy/vehicle/gunner/humvee
+	required_skill = SKILL_VEHICLE_SMALL // less skill required as it's not complicated. Some driving required so you won't have everyone fighting over it, subject to change.
+
 /obj/structure/bed/chair/comfy/vehicle/gunner/do_buckle(mob/target, mob/user)
 	// Gunning always requires crewman-level skill
 	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
@@ -464,6 +467,13 @@
 				break_seat()
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			break_seat()
+
+// White chairs
+
+/obj/structure/bed/chair/vehicle/white
+	name = "passenger seat"
+	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'
 
 /obj/structure/bed/chair/vehicle/toc
 	name = "overwatch chair"
