@@ -179,6 +179,8 @@ GLOBAL_LIST_INIT(admin_verbs_major_event, list(
 	/client/proc/toogle_door_control,
 	/client/proc/map_template_load,
 	/client/proc/ko_everyone_verb,
+	/client/proc/cutscene_all_verb,
+	/client/proc/close_all_inventories,
 	/client/proc/end_game_bad,
 	/client/proc/load_event_level,
 	/client/proc/cmd_fun_fire_ob,

@@ -102,7 +102,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 
 /client/proc/close_all_inventories()
 	set name = "Close All Inventories"
-	set category = "Admin.Simulation"
+	set category = "Game Master.Extras"
 
 	if(!check_rights(R_EVENT))
 		return
@@ -113,3 +113,37 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 			SI.storage_close(save.tied_human)
 
 	to_chat(src, SPAN_NOTICE("Inventories closed."))
+
+/proc/cutscene_all()
+	for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cutscene_single_mob), human)
+
+/client/proc/cutscene_all_verb()
+	set name = "Play Cutscene"
+	set category = "Game Master.Extras"
+
+	if(!check_rights(R_EVENT))
+		return
+
+	if(tgui_input_list(src, "Play?", "KO?", list("yes", "no")) != "yes")
+		return
+
+	cutscene_all()
+
+/proc/cutscene_single_mob(mob/living/carbon/human/human)
+	human.clear_fullscreens()
+	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
+	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
+	overlay_screen.icon_state = "black"
+	human.Stun(100000000)
+	human.SetEyeBlind(100000000)
+	save_human(human)
+	human.ghost_locked = TRUE
+	human.hudswitch_blocked = TRUE
+	message_admins("close inventories now")
+	sleep(5 SECONDS)
+	if(human.client) // devious shenanigans
+		winset(human.client, "mainwindow.split", "splitter=1000")
+		winset(human.client, "infowindow", "is-visible=false")
+		winset(human.client, "outputwindow", "is-visible=false")
+	cutscene(human)

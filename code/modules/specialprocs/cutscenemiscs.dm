@@ -16,7 +16,7 @@
 	style_open = "<span class='langchat' style=font-size:16pt;valign='top';padding-left:40px>"
 
 /atom/movable/screen/text/screen_text/simulacrum_message/body/secondary
-	screen_loc = "LEFT,TOP-5"
+	screen_loc = "LEFT,TOP-7"
 
 /atom/movable/screen/text/screen_text/simulacrum_message/body/fatelist
 	maptext_height = 256
