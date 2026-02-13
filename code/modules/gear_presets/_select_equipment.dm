@@ -666,7 +666,7 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		/obj/item/clothing/under/colonist/boilersuit/white,
 		/obj/item/clothing/under/colonist/workwear/blue,
 		/obj/item/clothing/under/colonist/workwear/khaki,
-		/obj/item/clothing/under/marine/veteran/UPP,
+		/obj/item/clothing/under/marine/veteran/upp,
 		)
 	var/obj/item/clothing/under/uniform = new uniformpath
 	var/random_uniform = rand(1,2)
@@ -1589,7 +1589,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 /datum/equipment_preset/proc/add_upp_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
-	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,4)
 	switch(random_uniform)
 		if(1)
@@ -1815,7 +1815,7 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/headband/rebel,
 		/obj/item/clothing/head/uppcap/beret/guerilla,
-		/obj/item/clothing/head/helmet/marine/veteran/UPP/old,
+		/obj/item/clothing/head/helmet/marine/veteran/upp/old,
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 

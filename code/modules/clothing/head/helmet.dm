@@ -1474,7 +1474,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP
+/obj/item/clothing/head/helmet/marine/veteran/upp
 	name = "\improper 6B75 helmet"
 	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
 	icon_state = "upp_helmet"
@@ -1491,7 +1491,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 	specialty = "6B75 helmet"
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP/old
+/obj/item/clothing/head/helmet/marine/veteran/upp/old
 	name = "\improper 6B68 helmet"
 	desc = "An older variant of UPPAC helmet still utilized by Territorial Guard units and Interior Troops. Tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'

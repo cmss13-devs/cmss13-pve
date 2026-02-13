@@ -14570,8 +14570,8 @@
 	},
 /obj/item/clothing/head/uppcap/peaked/police,
 /obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
@@ -18435,8 +18435,8 @@
 	},
 /obj/item/clothing/head/uppcap/peaked/police,
 /obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -21801,8 +21801,8 @@
 	name = "equipment locker";
 	pixel_x = -5
 	},
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /obj/item/clothing/head/helmet/upp,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
@@ -25226,11 +25226,11 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = 13;
 	pixel_x = -7
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -26937,7 +26937,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/upp/jacket,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/machinery/recharger{
 	pixel_x = 5;
@@ -27871,9 +27871,9 @@
 /obj/item/clothing/accessory/storage/webbing/m3/uppmags,
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall,
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/standard,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
 "rlC" = (

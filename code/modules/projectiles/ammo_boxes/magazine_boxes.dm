@@ -622,7 +622,7 @@
 
 /obj/item/ammo_box/magazine/ag80
 	name = "magazine box (AG80 x 10)"
-	icon_state = "base_type64"
+	icon_state = "base_zhnk72"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_ag80"
@@ -1178,7 +1178,7 @@
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/ap
 
-/obj/item/ammo_box/magazine/type64/ap
+/obj/item/ammo_box/magazine/type64/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type64/heap
@@ -1187,7 +1187,7 @@
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/heap
 
-/obj/item/ammo_box/magazine/type64/heap
+/obj/item/ammo_box/magazine/type64/heap/empty
 	empty = TRUE
 
 //-----------------------ZhNK-72 Revolver Speedloader Box-----------------------

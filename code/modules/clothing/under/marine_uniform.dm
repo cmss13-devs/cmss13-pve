@@ -570,7 +570,7 @@
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
 	)
 
-/obj/item/clothing/under/marine/veteran/UPP
+/obj/item/clothing/under/marine/veteran/upp
 	name = "\improper UPP fatigues"
 	desc = "It's a set of standard-issue UPP Armed Collective combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform"
@@ -580,14 +580,14 @@
 	sensor_faction = FACTION_UPP
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
-/obj/item/clothing/under/marine/veteran/UPP/boiler
+/obj/item/clothing/under/marine/veteran/upp/boiler
 	name = "\improper UPP operations boilersuit"
 	desc = "It's a deep green boilersuit common with UPP Armed Collective personnel outside of combat zones but still featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_boiler"
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/pap
+/obj/item/clothing/under/marine/veteran/upp/pap
 	name = "\improper PaP service uniform"
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_pap"
@@ -596,14 +596,14 @@
 	sensor_faction = FACTION_LIST_UPP_COLONY
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/service
+/obj/item/clothing/under/marine/veteran/upp/service
 	name = "\improper UPP service uniform"
 	desc = "A pair of brown-green slacks coupled with a green shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/naval
+/obj/item/clothing/under/marine/veteran/upp/naval
 	name = "\improper UPP naval infantry uniform"
 	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	desc = "A pair of black bell bottom naval pants matched with a blue telnyashka."

@@ -2342,7 +2342,7 @@
 /obj/structure/prop/wooden_cross{
 	pixel_y = 13
 	},
-/obj/item/clothing/head/helmet/marine/veteran/UPP,
+/obj/item/clothing/head/helmet/marine/veteran/upp,
 /turf/open/mars/mars_dirt_5,
 /area/desert_dam/exterior/valley/bar_valley_dam)
 "Vc" = (

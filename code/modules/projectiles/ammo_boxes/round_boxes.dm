@@ -167,6 +167,42 @@
 	max_bullet_amount = 1500
 	caliber = "10x27mm"
 
+//----------------9.7x16mm Ammunition Boxes (for UPP AG80)------------------
+
+/obj/item/ammo_box/rounds/ag80
+	name = "\improper rifle ammunition box (10x27mm)"
+	desc = "A 9.7x16mm ammunition box. Used to refill AG80 magazines. It comes with a leather strap allowing to wear it on the back."
+	icon_state = "base_zhnk72"
+	overlay_gun_type = "_rounds_type71"
+	overlay_content = "_type71_reg"
+	caliber = "9.7x16mm"
+	default_ammo = /datum/ammo/bullet/rifle/ag80
+
+/obj/item/ammo_box/rounds/ag80/empty
+	empty = TRUE
+
+/obj/item/ammo_box/rounds/ag80/ap
+	name = "\improper rifle ammunition box (9.7x16mm AP)"
+	desc = "A 9.7x16mm armor-piercing ammunition box. Used to refill AG80 AP magazines. It comes with a leather strap allowing to wear it on the back."
+	icon_state = "base_zhnk72"
+	overlay_gun_type = "_rounds_type71"
+	overlay_content = "_type71_ap"
+	default_ammo = /datum/ammo/bullet/rifle/ag80/ap
+
+/obj/item/ammo_box/rounds/ag80/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/rounds/ag80/heap
+	name = "rifle ammunition box (9.7x16mm HEAP)"
+	desc = "A 9.7x16mm high-explosive armor-piercing ammunition box. Used to refill AG80 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
+	icon_state = "base_zhnk72"
+	overlay_gun_type = "_rounds_type71"
+	overlay_content = "_type71_heap"
+	default_ammo = /datum/ammo/bullet/rifle/ag80/heap
+
+/obj/item/ammo_box/rounds/ag80/heap/empty
+	empty = TRUE
+
 //----------------9mm Pistol Ammunition Boxes (for mod88, M4A3 pistols)------------------
 
 /obj/item/ammo_box/rounds/pistol
@@ -205,4 +241,33 @@
 	default_ammo = /datum/ammo/bullet/pistol/incendiary
 
 /obj/item/ammo_box/rounds/pistol/incen/empty
+	empty = TRUE
+
+//----------------8.5x33mm Rifle Ammunition Boxes (for NSG 23)------------------
+
+/obj/item/ammo_box/rounds/nsg23
+	name = "rifle ammunition box (8.5x33mm)"
+	icon_state = "base_nsg23"
+	desc = "A 8.5x33mm ammunition box. Used to refill NSG 23 magazines. It comes with a leather strap allowing to wear it on the back."
+	default_ammo = /datum/ammo/bullet/rifle/twe
+
+/obj/item/ammo_box/rounds/nsg23/empty
+	empty = TRUE
+
+/obj/item/ammo_box/rounds/nsg23/ap
+	name = "rifle ammunition box (8.5x33mm AP)"
+	desc = "A 8.5x33mm armor-piercing ammunition box. Used to refill NSG 23 magazines. It comes with a leather strap allowing to wear it on the back."
+	overlay_content = "_ap"
+	default_ammo = /datum/ammo/bullet/rifle/ap/twe
+
+/obj/item/ammo_box/rounds/nsg23/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/rounds/nsg23/heap
+	name = "rifle ammunition box (8.5x33mm HEAP)"
+	desc = "A 8.5x33mm high-explosive armor-piercing ammunition box. Used to refill NSG 23 magazines. It comes with a leather strap allowing to wear it on the back."
+	overlay_content = "_heap"
+	default_ammo = /datum/ammo/bullet/rifle/heap/twe
+
+/obj/item/ammo_box/rounds/nsg23/heap/empty
 	empty = TRUE

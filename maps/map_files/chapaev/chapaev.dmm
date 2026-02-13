@@ -1589,7 +1589,7 @@
 /obj/item/tool/crew_monitor{
 	faction = "UPP"
 	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/upp/jacket,
 /obj/item/clothing/suit/marine/lamp,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/platoon_commander_rooms)
@@ -1693,7 +1693,7 @@
 /area/golden_arrow/briefing)
 "dg" = (
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
@@ -2083,7 +2083,7 @@
 	dir = 4
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -2108,7 +2108,7 @@
 	pixel_y = 10;
 	layer = 5
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = -1;
 	pixel_x = -7
 	},
@@ -2152,7 +2152,7 @@
 /area/golden_arrow/briefing)
 "en" = (
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/golden_arrow/briefing)
@@ -2338,7 +2338,7 @@
 /area/golden_arrow/briefing)
 "eC" = (
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /obj/structure/barricade/handrail/strata{
 	dir = 8
@@ -4656,6 +4656,7 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
+/obj/item/storage/belt/gun/bizon,
 /obj/item/storage/box/guncase/heavy/smg/type64,
 /obj/item/ammo_box/magazine/type64,
 /turf/open/floor/strata/multi_tiles,
@@ -5017,7 +5018,7 @@
 	light_range = 5
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
@@ -5188,7 +5189,7 @@
 /area/golden_arrow/prep_hallway)
 "lp" = (
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
@@ -5649,7 +5650,7 @@
 	light_range = 5;
 	dir = 8
 	},
-/obj/structure/gun_rack/ag80/unloaded,
+/obj/structure/gun_rack/ag80/unloaded/platoon,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mt" = (
@@ -5673,8 +5674,8 @@
 	},
 /obj/item/ammo_box/magazine/type71,
 /obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
 /obj/structure/closet/crate/secure/upp/alt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -6639,7 +6640,7 @@
 /area/golden_arrow/hangar)
 "oM" = (
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo";
@@ -6653,7 +6654,7 @@
 	pixel_x = 1
 	},
 /obj/structure/largecrate/random/barrel/red{
-	stuff = list(/obj/item/clothing/under/marine/veteran/UPP,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
+	stuff = list(/obj/item/clothing/under/marine/veteran/upp,/obj/item/clothing/gloves/marine,/obj/item/clothing/gloves/marine/brown,/obj/item/clothing/gloves/marine/joe,/obj/item/clothing/shoes/marine/joe,/obj/item/clothing/shoes/marine/upp/guard,/obj/item/clothing/shoes/marine/upp)
 	},
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14

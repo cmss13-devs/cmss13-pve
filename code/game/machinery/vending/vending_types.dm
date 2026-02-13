@@ -563,7 +563,7 @@
 		/obj/item/restraint/handcuffs = 8,
 		/obj/item/reagent_container/spray/pepper = 4,
 		/obj/item/device/flashlight = 4,
-		/obj/item/storage/belt/security/MP/UPP = 4,
+		/obj/item/storage/belt/security/MP/upp = 4,
 		/obj/item/device/flash = 5,
 		/obj/item/storage/box/evidence = 6,
 		/obj/item/tape/regulation = 5,
