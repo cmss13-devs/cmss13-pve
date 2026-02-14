@@ -584,13 +584,13 @@
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
 		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(6)
-		target.Stun(6)
-		target.Slow(8)
+		target.KnockDown(5)
+		target.Stun(5)
+		target.Slow(7)
 	else
 		if(!isyautja(living_mob)) //Not predators.
-			living_mob.KnockDown(5)
-			living_mob.Stun(5)
-			living_mob.Superslow(7)
+			living_mob.KnockDown(4)
+			living_mob.Stun(4)
+			living_mob.Superslow(6)
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
