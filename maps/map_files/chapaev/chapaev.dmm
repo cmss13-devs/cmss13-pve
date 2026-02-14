@@ -4968,8 +4968,11 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/medical)
 "kQ" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
+/obj/structure/closet/secure_closet{
+	name = "Platoon Sergeant locker";
+	req_access_txt = "240"
+	pixel_x = -8;
+	can_block_movement = 0
 	},
 /obj/item/tool/crowbar/tactical,
 /obj/item/storage/box/zipcuffs/small{
@@ -4982,6 +4985,18 @@
 	pixel_y = 8;
 	pixel_x = -8
 	},
+/obj/item/weapon/gun/rifle/ak4047/unloaded/platoon,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/ammo_magazine/rifle/ak4047,
+/obj/item/storage/pouch/magazine/large,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "kR" = (
@@ -5745,6 +5760,10 @@
 	pixel_x = -3
 	},
 /obj/item/ammo_box/magazine/type73,
+/obj/item/stack/sheet/cardboard/medium_stack{
+	pixel_x = -7;
+	pixel_y = 0
+	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "my" = (
@@ -10009,7 +10028,7 @@
 	pixel_x = 11;
 	layer = 3
 	},
-/obj/item/weapon/gun/rifle/type71/unloaded{
+/obj/item/weapon/gun/rifle/type71/carbine/unloaded{
 	pixel_x = -1;
 	pixel_y = 6
 	},

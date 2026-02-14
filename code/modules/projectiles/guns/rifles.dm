@@ -1702,6 +1702,8 @@
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 13, "rail_y" = 23, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 22, "side_rail_y" = 18)
 
+/obj/item/weapon/gun/rifle/type71/carbine/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //UPP TYPE 73 RIFLE
@@ -1804,6 +1806,12 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 	damage_falloff_mult = 0
+
+/obj/item/weapon/gun/rifle/ak4047/unloaded
+	current_mag = null
+
+/obj/item/weapon/gun/rifle/ak4047/unloaded/platoon
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/ak4047/tactical
 	current_mag = /obj/item/ammo_magazine/rifle/ak4047
