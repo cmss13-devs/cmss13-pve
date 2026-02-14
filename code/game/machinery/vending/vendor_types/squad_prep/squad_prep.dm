@@ -940,6 +940,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/pmc
 	name = "\improper PMC Automated Utilities Squad Vendor"
 	desc = "An automated supply rack hooked up to a small storage of various utilities and tools. Can be accessed by any PMC Operator."
+	icon_state = "pmc_prep"
 	req_access = list(ACCESS_WY_GENERAL)
 	req_one_access = list()
 

@@ -1664,6 +1664,11 @@
 			"icon_x" = -8,
 			"icon_y" = -5))
 
+/obj/item/storage/belt/gun/bizon/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/bizon/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/bizon(src)
+
 /obj/item/storage/belt/gun/m39/rmc
 	name = "\improper L110 pattern M39 holster rig"
 	desc = "A belt of finely-tooled leather, with holster & pouches for the L6A2 carriage and corresponding ammo."
@@ -2365,8 +2370,15 @@
 	. = ..()
 	if(istype(item, /obj/item/ammo_magazine/pkp))
 		magazines--
-#undef MAXIMUM_MAGAZINE_COUNT
 
+/obj/item/storage/belt/gun/smartgunner/upp/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+#undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"

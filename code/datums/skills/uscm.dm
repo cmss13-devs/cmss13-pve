@@ -62,7 +62,15 @@ United States Colonial Marines
 		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
 	)
 
-
+/datum/skills/smartgunner/juggernaut // UPP 6B99-4 smartgunner
+	name = "Squad Juggernaut"
+	skills = list(
+		SKILL_CQC = SKILL_CQC_EXPERT,
+		SKILL_MELEE_WEAPONS = SKILL_MELEE_SUPER,
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_EXPERT,
+	)
 
 /datum/skills/specialist
 	name = "Squad Weapons Specialist"
@@ -71,6 +79,16 @@ United States Colonial Marines
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_ALL,
 		SKILL_MELEE_WEAPONS = SKILL_MELEE_TRAINED,
 		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+	)
+
+/datum/skills/specialist/heavy // UPP 6B99-2 operator
+	name = "Squad Heavy Weapons Specialist"
+	skills = list(
+		SKILL_CQC = SKILL_CQC_EXPERT,
+		SKILL_SPEC_WEAPONS = SKILL_SPEC_ALL,
+		SKILL_MELEE_WEAPONS = SKILL_MELEE_SUPER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_EXPERT,
 		SKILL_JTAC = SKILL_JTAC_BEGINNER,
 	)
 

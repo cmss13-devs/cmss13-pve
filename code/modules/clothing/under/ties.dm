@@ -2107,6 +2107,15 @@
 	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one
 
 /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/one/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/presettwo
+	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/pmc/two
+
+/obj/item/storage/internal/accessory/black_vest/m3generic/pmc/two/fill_preset_inventory()
+	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/ammo_magazine/pistol/vp78/incendiary(src)
 	new /obj/item/smartgun_battery(src)

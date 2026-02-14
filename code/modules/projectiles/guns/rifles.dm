@@ -102,7 +102,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
 	icon_state = "m41a2mk2"
 	item_state = "m41a2mk2"
-	current_mag = /obj/item/ammo_magazine/rifle/ap
+	current_mag = /obj/item/ammo_magazine/rifle/extended
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
 	aim_slowdown = SLOWDOWN_ADS_VERSATILE
 	wield_delay = WIELD_DELAY_FAST

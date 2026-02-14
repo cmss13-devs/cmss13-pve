@@ -1905,6 +1905,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
 	anti_hug = 6
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE

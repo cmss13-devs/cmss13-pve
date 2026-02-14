@@ -342,7 +342,7 @@
 		/obj/item/ammo_magazine/pkp,
 		)
 
-/obj/item/clothing/suit/marine/smartgunner/upp/Initialize(mapload)
+/obj/item/clothing/suit/marine/smartgunner/upp/standard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, FALSE)
