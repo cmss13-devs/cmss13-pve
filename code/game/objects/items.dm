@@ -717,7 +717,12 @@ cases. Override_icon_state should be a list.*/
 			if(WEAR_IN_HELMET)
 				if(human.head)
 					var/obj/item/clothing/head/helmet/marine/helmet = human.head
+					var/obj/item/clothing/head/helmet/upp/helmetupp = human.head
 					if(istype(helmet) && helmet.pockets)//not all helmuts have pockits
+						var/obj/item/storage/internal/internal_storage = helmet.pockets
+						if(internal_storage.can_be_inserted(src, human, TRUE))
+							return TRUE
+					if(istype(helmetupp) && helmet.pockets)//not all helmuts have pockits
 						var/obj/item/storage/internal/internal_storage = helmet.pockets
 						if(internal_storage.can_be_inserted(src, human, TRUE))
 							return TRUE

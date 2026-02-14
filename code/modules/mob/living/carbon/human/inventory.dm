@@ -388,7 +388,11 @@
 
 		if(WEAR_IN_HELMET)
 			var/obj/item/clothing/head/helmet/marine/helmet = head
+			var/obj/item/clothing/head/helmet/upp/helmetupp = head
 			if(istype(helmet) && helmet.pockets.storage_slots)
+				helmet.pockets.attempt_item_insertion(equipping_item, disable_warning, src)
+				helmet.update_icon()
+			if(istype(helmetupp) && helmet.pockets.storage_slots)
 				helmet.pockets.attempt_item_insertion(equipping_item, disable_warning, src)
 				helmet.update_icon()
 
