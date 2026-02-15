@@ -47,7 +47,7 @@
 	text_box.play_to_client()
 	sleep(2.5 SECONDS)
 	var/atom/movable/screen/text/screen_text/body = new /atom/movable/screen/text/screen_text/simulacrum_message/body()
-	body.text_to_play = "You spend the sixteen-hour night jumping between the hundreds of distress-signals across the planet. Out of twenty-three responses, you rescue five colonists."
+	body.text_to_play = "You spend the nine-hour night jumping between the hundreds of distress-signals across the planet. Out of twenty-three responses, you rescue five colonists."
 	body.player = human.client
 	body.color = "#ac561d"
 	LAZYADD(human.client.screen_texts, body)

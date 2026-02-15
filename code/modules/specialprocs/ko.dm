@@ -38,15 +38,14 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 /proc/ko_single_mob(mob/living/carbon/human/human)
 	human.clear_fullscreens()
 	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
-	to_chat(human, SPAN_BOLDWARNING("A horrific light shatters your retinas"))
+	to_chat(human, SPAN_BOLDWARNING("A horrific light permeates the world. A glowing ball of fire erupts far too close."))
 	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 	overlay_screen.icon_state = "passage9"
-	sleep(3 SECONDS)
-	overlay_screen.icon_state = "passage6"
 	sleep(2 SECONDS)
-	to_chat(human, SPAN_WARNING("The sphere of pure-white is still burnt into your eyes. The final dawn breaks a few hours early."))
+	overlay_screen.icon_state = "passage6"
+	sleep(1 SECONDS)
 	overlay_screen.icon_state = "passage5"
-	sleep(3 SECONDS)
+	sleep(2 SECONDS)
 	to_chat(human, SPAN_BOLDWARNING("The shockwave rips up the ground, advancing too fast to even process."))
 	overlay_screen.icon_state = "passage7"
 	sleep(2 SECONDS)
