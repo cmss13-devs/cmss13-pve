@@ -6183,7 +6183,8 @@
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
 	req_one_access = list();
 	pixel_y = 21;
-	pixel_x = 7
+	pixel_x = 7;
+	density = 0
 	},
 /turf/open/floor/corsat/plate,
 /area/pudong/base/engi)
