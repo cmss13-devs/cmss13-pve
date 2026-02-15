@@ -599,12 +599,6 @@
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/caves/main)
-"bd" = (
-/obj/structure/sink{
-	pixel_y = 21
-	},
-/turf/open/floor/prison/sterile_white,
-/area/pudong/base/treatment)
 "be" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -1090,6 +1084,10 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
+"cg" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/prison/sterile_white,
+/area/pudong/base/treatment)
 "ch" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -1105,6 +1103,39 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
+"ci" = (
+/obj/structure/machinery/space_heater/radiator/red{
+	dir = 4
+	},
+/turf/open/floor/prison/sterile_white,
+/area/pudong/base/treatment)
+"cj" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/machinery/iv_drip{
+	pixel_x = -8
+	},
+/turf/open/floor/prison/sterile_white,
+/area/pudong/base/treatment)
+"ck" = (
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/structure/machinery/medical_pod/sleeper{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/pudong/base/treatment)
 "cl" = (
 /obj/structure/stairs{
 	dir = 8
@@ -1115,6 +1146,47 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/armory)
+"cm" = (
+/obj/structure/machinery/sleep_console{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/pudong/base/treatment)
+"cn" = (
+/obj/structure/surface/table/almayer{
+	dir = 4;
+	flipped = 1
+	},
+/obj/item/storage/box/bodybags{
+	pixel_y = 14;
+	pixel_x = -4
+	},
+/obj/item/reagent_container/spray/cleaner{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/prison/sterile_white,
+/area/pudong/base/treatment)
 "co" = (
 /turf/open/auto_turf/snow/layer3,
 /area/pudong/exterior/cliff)
@@ -1135,6 +1207,13 @@
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/power)
+"cq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	pixel_y = -1
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
 "cr" = (
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/exterior/cliff)
@@ -1157,6 +1236,19 @@
 /obj/item/clothing/mask/balaclava/threehole,
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
+"ct" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	req_one_access_txt = "230";
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "pudong_prep";
+	name = "\improper Equipment Room Shutter"
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/armory)
 "cu" = (
 /obj/structure/platform/strata/metal{
 	dir = 1;
@@ -1165,6 +1257,20 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/briefing)
+"cv" = (
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
 "cw" = (
 /obj/effect/projector{
 	name = "base_downarm";
@@ -1582,20 +1688,6 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/base/maintenance)
-"ev" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S";
-	pixel_y = -1
-	},
-/obj/structure/machinery/light/small{
-	light_color = "#C02526";
-	color = "#C02526";
-	dir = 4;
-	light_power = 0.4;
-	light_range = 4
-	},
-/turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "ew" = (
 /obj/structure/platform/strata{
@@ -2215,7 +2307,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat/marked,
 /area/pudong/base/maintenance)
 "hm" = (
@@ -4584,7 +4675,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper Lockdown Blast Door";
 	id = "pudong_lockdown_ext"
@@ -7779,10 +7869,24 @@
 /turf/open/floor/strata/floor3,
 /area/pudong/base/briefing)
 "JD" = (
-/obj/structure/machinery/iv_drip{
-	pixel_x = -8
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = 5;
+	dir = 4;
+	pixel_x = -1
 	},
-/turf/open/floor/prison/sterile_white,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/treatment)
 "JE" = (
 /obj/effect/projector{
@@ -11320,33 +11424,22 @@
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
 "Zu" = (
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/storage/box/bodybags{
-	pixel_y = 14;
-	pixel_x = -4
-	},
-/obj/item/reagent_container/spray/cleaner{
-	pixel_x = 9;
-	pixel_y = 12
-	},
-/obj/structure/surface/table/almayer{
-	dir = 4;
-	flipped = 1
-	},
 /obj/structure/sign/safety/maint{
 	pixel_x = -20;
 	pixel_y = 1
 	},
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_y = 20;
-	light_power = 0.8;
-	light_range = 4
+/obj/structure/machinery/medical_pod/bodyscanner{
+	pixel_y = 6
 	},
-/turf/open/floor/prison/sterile_white,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 2
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/treatment)
 "Zw" = (
 /obj/effect/projector{
@@ -19666,8 +19759,8 @@ YN
 YN
 YN
 YN
-YN
-YN
+HO
+HO
 HO
 HO
 HO
@@ -19817,16 +19910,16 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 HO
 SL
 nL
 wX
-Bw
-nL
+wS
+cf
 bC
+Mf
+Mf
 SL
 jg
 Xk
@@ -19969,8 +20062,6 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 Lx
 Fi
@@ -19979,6 +20070,8 @@ yF
 yF
 yF
 hE
+yF
+yF
 Dg
 hE
 Xk
@@ -20121,8 +20214,6 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 Lx
 Fi
@@ -20130,6 +20221,8 @@ yF
 yF
 rL
 hE
+ck
+ci
 Zu
 RA
 hE
@@ -20273,8 +20366,6 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 HO
 EG
@@ -20282,6 +20373,8 @@ yF
 WC
 Fh
 TH
+cm
+nU
 JD
 pO
 dT
@@ -20421,8 +20514,6 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 HO
 HO
@@ -20435,6 +20526,8 @@ yK
 nU
 TH
 ez
+cg
+cg
 ST
 Wa
 Xk
@@ -20573,8 +20666,6 @@ YN
 YN
 YN
 YN
-YN
-YN
 HO
 Ir
 Lx
@@ -20586,6 +20677,8 @@ yF
 GY
 mK
 qP
+nU
+nU
 nU
 YW
 MS
@@ -20724,8 +20817,6 @@ jw
 YN
 YN
 YN
-YN
-HO
 HO
 HO
 MD
@@ -20739,6 +20830,8 @@ KU
 KU
 yF
 dz
+nU
+nU
 YW
 eR
 Xk
@@ -20876,11 +20969,9 @@ jw
 YN
 YN
 YN
-YN
 HO
-nL
-nL
-ev
+cf
+cq
 if
 HO
 HO
@@ -20890,7 +20981,9 @@ yF
 QD
 nA
 yF
-bd
+cn
+cj
+nU
 YW
 ce
 Xk
@@ -21029,15 +21122,15 @@ YN
 YN
 YN
 HO
-HO
 gr
+HO
 Xk
 Xk
 Xk
 Xk
 oo
 Xk
-oo
+Xk
 Xk
 yF
 yF
@@ -21181,15 +21274,15 @@ YN
 YN
 HO
 HO
-cf
-Mf
-Xk
+nL
+ct
+ES
 ca
 oX
 Ez
 UF
 Ez
-UF
+ES
 qb
 Ut
 WH
@@ -21333,7 +21426,7 @@ YN
 YN
 HO
 Lx
-Fi
+cv
 Xk
 Xk
 Xk
