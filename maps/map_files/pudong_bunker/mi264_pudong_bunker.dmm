@@ -37,11 +37,13 @@
 "ae" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	pixel_y = 3;
-	pixel_x = -5
+	pixel_x = -5;
+	req_one_access = list()
 	},
 /obj/structure/closet/secure_closet/engineering_electrical{
 	pixel_x = 10;
-	pixel_y = 3
+	pixel_y = 3;
+	req_one_access = list()
 	},
 /obj/structure/barricade/handrail/wire{
 	dir = 8;
@@ -75,6 +77,10 @@
 	light_power = 0.8;
 	light_range = 4;
 	invisibility = 100
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/bunker)
@@ -407,6 +413,22 @@
 	light_power = 0.8;
 	light_range = 4
 	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = 6;
+	pixel_y = -6
+	},
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/nco)
 "aP" = (
@@ -418,6 +440,7 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/depths)
 "aR" = (
@@ -466,8 +489,51 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster17";
+	name = "'Miss April' pinup";
+	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in Playboy Magazine.";
+	pixel_y = 34;
+	pixel_x = -3;
+	layer = 3.5;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster29";
+	name = "'Miss February' pinup";
+	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in Playboy Magazine.";
+	pixel_y = 37;
+	layer = 3.5;
+	pixel_x = 9;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/prop{
+	desc = "This poster features Jennifer Bentley standing on a beach in a lifeguard's uniform. She was the March 2180 centerfold in Playboy Magazine.";
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster12";
+	name = "'Miss March' pinup";
+	layer = 3.5;
+	pixel_y = 6;
+	pixel_x = 24
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/depths)
+"aV" = (
+/obj/item/stool{
+	pixel_x = -3
+	},
+/turf/open/floor/strata/floor3,
+/area/pudong/base/bunker)
+"aW" = (
+/obj/item/stool{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/turf/open/floor/strata/floor3,
+/area/pudong/base/bunker)
 "aX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -475,6 +541,64 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
+"aY" = (
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 10;
+	pixel_x = -7
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"aZ" = (
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 12;
+	pixel_x = -4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"ba" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/pudong/base/bunker)
+"bb" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 21;
+	pixel_x = -10
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/main)
+"bc" = (
+/obj/structure/sign/safety/north{
+	pixel_x = 32;
+	pixel_y = 8
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/two{
+	pixel_x = 44;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/three{
+	pixel_y = 8;
+	pixel_x = 44
+	},
+/turf/open/auto_turf/snow/layer1,
+/area/pudong/caves/main)
 "bd" = (
 /obj/structure/sink{
 	pixel_y = 21
@@ -493,6 +617,9 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
+"bf" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/caves/main)
 "bg" = (
 /obj/structure/platform_decoration/strata,
 /obj/structure/blocker/forcefield,
@@ -501,10 +628,25 @@
 "bh" = (
 /turf/closed/wall/upp_wall,
 /area/pudong/base/galley)
+"bi" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/bunker)
 "bj" = (
 /obj/structure/bed/chair/comfy/bench/south,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/quarters)
+"bk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/pudong/base/bunker)
 "bl" = (
 /obj/structure/platform/strata{
 	dir = 1
@@ -515,6 +657,23 @@
 /obj/structure/blocker/forcefield,
 /turf/open/void,
 /area/pudong/exterior/cliff)
+"bm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/pudong/base/bunker)
+"bn" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/pudong/base/bunker)
 "bo" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "pudong_lockdown_north";
@@ -551,6 +710,27 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"bs" = (
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/southeast,
+/area/pudong/base/bunker)
+"bt" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sign/flag/upp{
+	dir = 1;
+	pixel_y = 26
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
 "bu" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
@@ -588,6 +768,15 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/briefing)
+"bx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/pudong/base/bunker)
 "by" = (
 /obj/structure/bed/chair/comfy{
 	dir = 8
@@ -603,6 +792,18 @@
 /obj/structure/cable/heavyduty/north_south,
 /turf/open/auto_turf/snow/layer3,
 /area/pudong/exterior/cliff)
+"bB" = (
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 6;
+	pixel_x = -7
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
 "bC" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -618,6 +819,22 @@
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
+"bD" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"bE" = (
+/obj/structure/barricade/metal{
+	dir = 4;
+	pixel_x = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 9;
+	pixel_x = -4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
 "bF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -629,6 +846,19 @@
 	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
+"bG" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"bH" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lantern{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "bI" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -642,6 +872,21 @@
 /obj/structure/largecrate/supply/medicine/medkits,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
+"bK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 2;
+	pixel_y = 1
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"bL" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = -3
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
 "bM" = (
 /obj/structure/platform/strata/metal{
 	dir = 4;
@@ -650,10 +895,77 @@
 /obj/structure/stairs,
 /turf/open/floor/corsat,
 /area/pudong/caves/main)
+"bN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 6;
+	pixel_y = -9
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"bO" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = 3
+	},
+/turf/open/auto_turf/snow/layer0,
+/area/pudong/caves/depths)
+"bP" = (
+/obj/structure/barricade/metal{
+	layer = 3.1;
+	pixel_x = -1;
+	pixel_y = 10;
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 6
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
 "bQ" = (
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/galley)
+"bR" = (
+/obj/structure/barricade/metal{
+	layer = 3.1;
+	pixel_x = -1;
+	pixel_y = 10;
+	dir = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 2;
+	pixel_x = -6
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"bS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/pudong/base/armory)
+"bT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 8
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/pudong/base/armory)
+"bU" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/almayer/comp_open{
+	layer = 2.9;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/pudong/base/hangar)
 "bV" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -673,10 +985,89 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/pudong/base/quarters)
+"bX" = (
+/obj/item/stool{
+	pixel_y = 7;
+	pixel_x = -8
+	},
+/turf/open/floor/corsat/plate,
+/area/pudong/base/hangar)
+"bY" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/closet/crate/freezer/cooler{
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = -3;
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = -2;
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_y = 1;
+	pixel_x = -3
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -7
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/drinks/bottle/beer/craft/tazhushka{
+	pixel_x = -5;
+	pixel_y = -2
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"bZ" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	req_one_access_txt = "230";
+	dir = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"ca" = (
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 8;
+	layer = 3.2
+	},
+/turf/open/floor/strata/floor3,
+/area/pudong/base/armory)
 "cb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
+"cc" = (
+/obj/structure/machinery/recharge_station{
+	pixel_y = 13
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"cd" = (
+/obj/structure/machinery/recharge_station{
+	pixel_y = 13
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
 "ce" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -688,6 +1079,17 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/treatment)
+"cf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
 "ch" = (
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
@@ -730,6 +1132,7 @@
 	layer = 3.1;
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/power)
 "cr" = (
@@ -1142,6 +1545,10 @@
 	pixel_y = -3
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
 "ej" = (
@@ -1175,9 +1582,6 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/base/maintenance)
-"et" = (
-/turf/closed/wall/strata_ice/dirty,
 /area/pudong/base/maintenance)
 "ev" = (
 /obj/effect/decal/warning_stripes{
@@ -1467,6 +1871,10 @@
 /obj/structure/barricade/handrail/wire{
 	layer = 3.1;
 	dir = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
@@ -2471,10 +2879,9 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/briefing)
 "kM" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	layer = 2.99;
-	pixel_x = -4;
-	pixel_y = -17
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 4;
+	pixel_y = 7
 	},
 /obj/structure/closet/hydrant{
 	pixel_y = 32
@@ -3471,6 +3878,22 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = 6;
+	pixel_y = -6
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = 3;
+	pixel_y = 6
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/quarters)
 "qP" = (
@@ -3521,9 +3944,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 8;
-	pixel_y = 6
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 5;
+	pixel_y = 4
 	},
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
@@ -4537,7 +4960,8 @@
 "vT" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	name = "\improper ss";
-	id = "pudong_defense_access"
+	id = "pudong_defense_access";
+	dir = 8
 	},
 /turf/open/floor/corsat/marked,
 /area/pudong/base/armory)
@@ -4853,6 +5277,10 @@
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
 	},
+/obj/structure/sign/flag/upp{
+	dir = 1;
+	pixel_y = 26
+	},
 /turf/open/floor/corsat/plate,
 /area/pudong/base/hangar)
 "xU" = (
@@ -5029,6 +5457,7 @@
 	light_range = 4;
 	invisibility = 100
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/power)
 "yR" = (
@@ -5318,6 +5747,10 @@
 /obj/structure/sign/safety/south{
 	pixel_x = 32;
 	pixel_y = -3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
@@ -5846,6 +6279,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/power)
 "CH" = (
@@ -6193,7 +6627,10 @@
 	pixel_y = 20;
 	light_range = 4
 	},
-/obj/structure/largecrate/supply/supplies/sandbags,
+/obj/structure/largecrate/supply/supplies/sandbags{
+	pixel_x = -2;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
 "DW" = (
@@ -6702,6 +7139,14 @@
 	pixel_x = 7;
 	pixel_y = -3
 	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = -7;
+	pixel_y = -4
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
 "Gy" = (
@@ -6788,8 +7233,8 @@
 /area/pudong/base/quarters)
 "GM" = (
 /obj/structure/machinery/door/airlock/upp_grey{
-	req_one_access_txt = "240;241";
-	name = "\improper Platoon Commander's Office";
+	req_one_access_txt = "240;244";
+	name = "\improper Bunker Access Control";
 	dir = 2
 	},
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -6838,6 +7283,10 @@
 	layer = 3.01
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/pudong/base/armory)
 "GY" = (
@@ -7128,9 +7577,9 @@
 /turf/open/floor/strata/floor3,
 /area/pudong/base/bunker)
 "Iq" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 6;
-	pixel_y = -2
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = -5;
+	pixel_y = 2
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
@@ -7266,7 +7715,10 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate/supply/supplies/metal,
+/obj/structure/largecrate/supply/supplies/metal{
+	pixel_x = 1;
+	pixel_y = -2
+	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
 "Jq" = (
@@ -7516,6 +7968,11 @@
 	light_power = 0.4;
 	light_range = 4
 	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 8;
+	layer = 3.2
+	},
 /turf/open/floor/corsat/plate,
 /area/pudong/base/armory)
 "KJ" = (
@@ -7602,10 +8059,7 @@
 /turf/open/floor/prison/bright_clean,
 /area/pudong/base/platoon)
 "Lq" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 5;
-	pixel_y = 6
-	},
+/obj/structure/largecrate/random/barrel/red,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
@@ -8205,9 +8659,9 @@
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "Ob" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = -7;
-	pixel_y = -1
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 6;
+	pixel_y = -3
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/pudong/base/maintenance)
@@ -8954,9 +9408,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 6;
-	pixel_y = -2
+/obj/structure/largecrate/random/barrel/red{
+	pixel_y = 9;
+	pixel_x = 7
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9056,9 +9510,9 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
 	},
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 8;
-	pixel_y = 6
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = -4;
+	pixel_y = -1
 	},
 /obj/structure/roof/cargocrane_tracks/vertical/endcap1{
 	pixel_y = 14
@@ -9276,8 +9730,8 @@
 /turf/open/floor/corsat,
 /area/pudong/base/maintenance)
 "SH" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 8;
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 6;
 	pixel_y = 6
 	},
 /obj/structure/prop/invuln/lattice_prop{
@@ -9578,11 +10032,19 @@
 /area/pudong/base/briefing)
 "Um" = (
 /obj/effect/step_trigger/clone_cleaner,
+/obj/structure/sign/flag/upp{
+	dir = 1;
+	pixel_y = 26
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
 "Un" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600"
+	},
 /turf/open/floor/strata/floor3,
 /area/pudong/base/armory)
 "Uo" = (
@@ -9839,14 +10301,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/plate,
 /area/pudong/base/hangar)
-"VF" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/pudong/base/maintenance)
 "VG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -9975,6 +10429,14 @@
 	color = "#424a50";
 	density = 0;
 	pixel_y = -2
+	},
+/obj/item/prop{
+	desc = "An issue of Kosmicheskaya Pravda, the newspaper circulating in UPP-controlled space.";
+	icon = 'icons/obj/items/paper.dmi';
+	icon_state = "newspaper";
+	name = "Kosmicheskaya Pravda";
+	pixel_x = -7;
+	pixel_y = 2
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/pudong/base/platoon)
@@ -10480,9 +10942,8 @@
 /turf/open/floor/strata/floor3,
 /area/pudong/base/hangar)
 "XI" = (
-/obj/structure/largecrate/random/barrel/true_random{
-	pixel_x = -1;
-	layer = 3.1
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 3
 	},
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -11751,11 +12212,11 @@ TD
 jw
 Ub
 Ub
-Ub
-Ub
-Ub
-Ub
-Ub
+HO
+HO
+HO
+HO
+HO
 HO
 HO
 HO
@@ -11903,13 +12364,13 @@ TD
 jw
 Ub
 Ub
-Ub
-Ub
-Ub
-Ub
-Ub
 HO
-AV
+cc
+Mf
+nL
+nL
+bZ
+nL
 Mf
 nL
 nL
@@ -11938,8 +12399,8 @@ Ub
 Ub
 Ub
 Ub
-oA
-oA
+bL
+as
 Yd
 Ub
 Ub
@@ -12055,13 +12516,13 @@ TD
 jw
 Ub
 Ub
-Ub
-Ub
-Ub
-Ub
-Ub
 HO
-nL
+cd
+Mf
+Mf
+Mf
+HO
+be
 HO
 HO
 be
@@ -12089,8 +12550,8 @@ HO
 Ub
 Ub
 Ub
-oA
-oA
+bO
+bN
 oA
 Yd
 Yd
@@ -12207,9 +12668,9 @@ TD
 jw
 Ub
 Ub
-Ub
-Ub
-Ub
+HO
+Mf
+Mf
 oT
 oT
 HO
@@ -12696,7 +13157,7 @@ Mf
 rF
 nL
 nL
-nL
+bG
 nL
 nL
 nL
@@ -13012,7 +13473,7 @@ HO
 HO
 Ub
 Ub
-oA
+bK
 oA
 oA
 az
@@ -13449,7 +13910,7 @@ fB
 SQ
 nL
 HO
-VF
+Lq
 eq
 HO
 TZ
@@ -13467,7 +13928,7 @@ HO
 nL
 Mf
 wX
-nL
+bG
 nL
 nL
 nL
@@ -13920,7 +14381,7 @@ Py
 mv
 HO
 HO
-nL
+bG
 HO
 HO
 HO
@@ -14235,7 +14696,7 @@ gM
 YO
 HO
 HO
-Mf
+bD
 HO
 HO
 HO
@@ -14675,7 +15136,7 @@ Ub
 Ub
 Yd
 oA
-oA
+az
 oA
 oA
 nL
@@ -14826,12 +15287,12 @@ Ub
 Ub
 Ub
 Yd
+bN
 oA
-oA
-oA
+as
 Ub
 iN
-nL
+bG
 HO
 Ub
 Ub
@@ -15144,7 +15605,7 @@ nL
 Mf
 aD
 nL
-nL
+bG
 nL
 Mf
 HO
@@ -15902,8 +16363,8 @@ Yd
 Yd
 Yd
 Yd
-oA
-oA
+Ub
+Ub
 oA
 Yd
 Yd
@@ -16203,12 +16664,12 @@ Ub
 Ub
 Ub
 Yd
-Yd
-Yd
+oA
+oA
 aM
 aG
 aC
-Yd
+oA
 Yd
 Ub
 Yd
@@ -16357,7 +16818,7 @@ Ub
 Ub
 aU
 aQ
-oA
+bH
 aI
 oA
 Ub
@@ -18282,7 +18743,7 @@ HO
 HO
 HO
 HO
-et
+YN
 HO
 HO
 HO
@@ -20264,7 +20725,7 @@ YN
 YN
 YN
 YN
-YN
+HO
 HO
 HO
 MD
@@ -20416,8 +20877,8 @@ YN
 YN
 YN
 YN
-YN
 HO
+nL
 nL
 ev
 if
@@ -20569,8 +21030,8 @@ YN
 YN
 HO
 HO
-HO
 gr
+Xk
 Xk
 Xk
 Xk
@@ -20720,10 +21181,10 @@ YN
 YN
 HO
 HO
-SL
-nL
+cf
 Mf
 Xk
+ca
 oX
 Ez
 UF
@@ -20895,7 +21356,7 @@ AE
 RN
 GT
 jH
-wU
+bT
 Zk
 Xk
 Xk
@@ -21048,7 +21509,7 @@ oH
 Ae
 tU
 wU
-wU
+bS
 uU
 wU
 Zk
@@ -21352,7 +21813,7 @@ oH
 ei
 tU
 wU
-wU
+bS
 WU
 wU
 wU
@@ -22449,7 +22910,7 @@ YN
 YN
 YN
 sU
-gT
+bt
 zE
 zE
 Sq
@@ -23005,7 +23466,7 @@ Mf
 HO
 HO
 TB
-Od
+bY
 Xk
 oo
 Xk
@@ -23514,10 +23975,10 @@ sU
 sU
 sU
 sU
-oD
-QJ
-QJ
-sU
+bs
+bk
+bk
+bi
 sU
 sU
 sU
@@ -23967,7 +24428,7 @@ LT
 UM
 ZQ
 jr
-LT
+bx
 OE
 zE
 Sq
@@ -23975,7 +24436,7 @@ Rm
 Sq
 Sq
 Zp
-LT
+ba
 jr
 ZQ
 hR
@@ -24119,7 +24580,7 @@ ZQ
 zK
 LT
 LT
-LT
+bx
 OE
 Ig
 Rm
@@ -24271,7 +24732,7 @@ ZQ
 bo
 ZQ
 ZQ
-LT
+bx
 OE
 Sq
 zE
@@ -24279,7 +24740,7 @@ Rm
 Sq
 zE
 ky
-LT
+ba
 ZQ
 ZQ
 sH
@@ -24730,9 +25191,9 @@ YN
 sU
 sU
 sU
-QJ
-QJ
-ZZ
+bn
+bn
+bm
 sU
 sU
 sU
@@ -26137,7 +26598,7 @@ QM
 QM
 QM
 YN
-QM
+YN
 QM
 QM
 YN
@@ -26289,7 +26750,7 @@ QM
 QM
 QM
 QM
-YN
+QM
 QM
 YN
 YN
@@ -26813,7 +27274,7 @@ tE
 xP
 RB
 LI
-RB
+bU
 zr
 tM
 AO
@@ -26965,7 +27426,7 @@ tE
 ac
 qd
 RB
-qd
+bX
 zr
 CS
 tn
@@ -28111,7 +28572,7 @@ QM
 sU
 Sq
 Sq
-Sq
+aV
 RW
 QM
 QM
@@ -28686,7 +29147,7 @@ vu
 QM
 Bh
 Bh
-Bh
+bc
 Bh
 Bh
 Bh
@@ -28719,7 +29180,7 @@ QM
 sU
 Sq
 Sq
-Sq
+aW
 RW
 QM
 QM
@@ -28838,7 +29299,7 @@ QM
 Bh
 Bh
 QM
-QM
+bf
 QM
 Bh
 Bh
@@ -28989,9 +29450,9 @@ QM
 Bh
 Bh
 QM
-QM
+dg
 YN
-QM
+bb
 QM
 Bh
 Bh
@@ -30021,7 +30482,7 @@ Bh
 QM
 QM
 QM
-ff
+bP
 zE
 zE
 Sq
@@ -30629,7 +31090,7 @@ QM
 QM
 QM
 QM
-ff
+bR
 zE
 zE
 zE
@@ -32192,11 +32653,11 @@ Bh
 Bh
 sU
 Yf
-Yf
+aZ
 Yf
 sU
 Yf
-Yf
+aY
 Yf
 sU
 Bh
@@ -32323,11 +32784,11 @@ xM
 xM
 sU
 Yf
-Yf
+bE
 Yf
 sU
 Yf
-Yf
+bB
 Yf
 sU
 xM

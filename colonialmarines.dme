@@ -2708,5 +2708,4 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
-#include "maps\map_files\pudong_bunker\mi264_pudong_bunker.dmm"
 // END_INCLUDE
