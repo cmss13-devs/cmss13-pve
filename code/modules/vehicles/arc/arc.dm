@@ -17,7 +17,7 @@
 
 	interior_map = /datum/map_template/interior/arc
 
-	passengers_slots = 2 // 5 total. Reserved slots are added to passenger slots.
+	passengers_slots = 9
 	xenos_slots = 4
 
 	entrances = list(
@@ -150,25 +150,13 @@
 
 	return ..()
 
-/obj/vehicle/multitile/arc/load_role_reserved_slots()
-	var/datum/role_reserved_slots/RRS = new
-	RRS.category_name = "CIC Officer"
-	RRS.roles = list(JOB_SO, JOB_DI, JOB_XO, JOB_CO, JOB_GENERAL)
-	RRS.total = 2
-	role_reserved_slots += RRS
-
-	RRS = new
-	RRS.category_name = "Intelligence Officer"
-	RRS.roles = list(JOB_INTEL)
-	RRS.total = 1
-	role_reserved_slots += RRS
-
 /obj/vehicle/multitile/arc/set_seated_mob(seat, mob/living/M)
 	. = ..()
 	if(!.)
 		return
 
 	give_action(M, /datum/action/human_action/toggle_arc_antenna)
+	give_action(M, /datum/action/human_action/toggle_arc_turret)
 
 /obj/vehicle/multitile/arc/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -180,6 +168,7 @@
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/name_vehicle,
 		/obj/vehicle/multitile/arc/proc/toggle_antenna,
+		/obj/vehicle/multitile/arc/proc/toggle_turret,
 	))
 
 /obj/vehicle/multitile/arc/remove_seated_verbs(mob/living/M, seat)
@@ -192,6 +181,7 @@
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/name_vehicle,
 		/obj/vehicle/multitile/arc/proc/toggle_antenna,
+		/obj/vehicle/multitile/arc/proc/toggle_turret,
 	))
 	SStgui.close_user_uis(M, src)
 
@@ -241,23 +231,22 @@
 	user.forceMove(current_turf)
 	to_chat(user, SPAN_XENO("We crawl to the other side of [src]."))
 
-/*
-** PRESETS SPAWNERS
-*/
-/*
-/obj/effect/vehicle_spawner/arc
+
+// PRESETS SPAWNERS
+
+/obj/effect/vehicle_spawner/arc_legacy
 	name = "ARC Transport Spawner"
-	icon = 'icons/obj/vehicles/apc.dmi'
-	icon_state = "apc_base"
+	icon = 'icons/obj/vehicles/arc.dmi'
+	icon_state = "arc_base"
 	pixel_x = -48
 	pixel_y = -48
 
-/obj/effect/vehicle_spawner/arc/Initialize()
+/obj/effect/vehicle_spawner/arc_legacy/Initialize()
 	. = ..()
 	spawn_vehicle()
 	return INITIALIZE_HINT_QDEL
 
-/obj/effect/vehicle_spawner/arc/spawn_vehicle()
+/obj/effect/vehicle_spawner/arc_legacy/spawn_vehicle()
 	var/obj/vehicle/multitile/arc/ARC = new (loc)
 
 	load_misc(ARC)
@@ -265,8 +254,22 @@
 	handle_direction(ARC)
 	ARC.update_icon()
 
-/obj/effect/vehicle_spawner/arc/load_hardpoints(obj/vehicle/multitile/arc/vehicle)
+/obj/effect/vehicle_spawner/arc_legacy/load_hardpoints(obj/vehicle/multitile/arc/vehicle)
 	vehicle.add_hardpoint(new /obj/item/hardpoint/locomotion/arc_wheels)
 	vehicle.add_hardpoint(new /obj/item/hardpoint/primary/arc_sentry)
 	vehicle.add_hardpoint(new /obj/item/hardpoint/support/arc_antenna)
-*/
+
+//PRESET: default hardpoints, destroyed
+/obj/effect/vehicle_spawner/arc_legacy/decrepit/spawn_vehicle()
+	var/obj/vehicle/multitile/arc/ARC = new (loc)
+
+	load_misc(ARC)
+	load_hardpoints(ARC)
+	handle_direction(ARC)
+	load_damage(ARC)
+	ARC.update_icon()
+
+/obj/effect/vehicle_spawner/arc_legacy/decrepit/load_hardpoints(obj/vehicle/multitile/arc/vehicle)
+	vehicle.add_hardpoint(new /obj/item/hardpoint/locomotion/arc_wheels)
+	vehicle.add_hardpoint(new /obj/item/hardpoint/primary/arc_sentry)
+	vehicle.add_hardpoint(new /obj/item/hardpoint/support/arc_antenna)
