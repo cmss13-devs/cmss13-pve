@@ -1117,7 +1117,6 @@
 	item_state_slots = list(WEAR_JACKET = "guard_armor_spec")
 	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 
@@ -1134,7 +1133,7 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 
 /obj/item/clothing/suit/marine/veteran/pmc/leader
 	name = "\improper M4 pattern PMC leader armor"

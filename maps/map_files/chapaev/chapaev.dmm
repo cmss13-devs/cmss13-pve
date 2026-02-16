@@ -5761,8 +5761,8 @@
 	},
 /obj/item/ammo_box/magazine/type73,
 /obj/item/stack/sheet/cardboard/medium_stack{
-	pixel_x = -7;
-	pixel_y = 0
+	pixel_x = -15;
+	pixel_y = -8
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)

@@ -258,7 +258,7 @@
 		list("UPP Satchel", round(scale * 15), /obj/item/storage/backpack/lightpack/upp, VENDOR_ITEM_REGULAR),
 
 		list("RESTRICTED BACKPACKS", -1, null, null),
-		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto, VENDOR_ITEM_REGULAR),
+		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/upp_net, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
 		list("Type 41 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine/upp, VENDOR_ITEM_REGULAR),
@@ -375,6 +375,7 @@
 		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun/wy, VENDOR_ITEM_REGULAR),
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
 
 		list("MASK", -1, null, null, null),
@@ -1054,7 +1055,7 @@
 		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 2), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
-		list("AF-13 Underbarrel Shotgun", round(scale * 2), /obj/item/attachable/attached_gun/shotgun/af13, VENDOR_ITEM_REGULAR),
+		list("AF-13-B Underbarrel Shotgun", round(scale * 2), /obj/item/attachable/attached_gun/shotgun/af13b, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Flamer", round(scale * 2), /obj/item/attachable/attached_gun/flamer/advanced, VENDOR_ITEM_REGULAR),
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)

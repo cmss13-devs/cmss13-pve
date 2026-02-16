@@ -69,6 +69,10 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	desc = "It contains six VOG-73 fragmentation grenades."
 	content_type = /obj/item/explosive/grenade/high_explosive/impact/upp
 
+/obj/item/storage/box/packet/high_explosive/upp/impact/partial/fill_preset_inventory()
+	new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+
 /obj/item/storage/box/packet/high_explosive/upp/ap
 	name = "\improper VPG-77 AP grenade packet"
 	desc = "It contains six VPG-77 AP grenade grenades."

@@ -56,10 +56,15 @@
 	desc = "UPP RPG armed soldier, otherwise similarly equipped as standard"
 	path = /datum/equipment_preset/upp/rifleman/at
 
-/datum/human_ai_equipment_preset/upp/combat_synth
-	name = "UPP Synthetic Commando"
-	desc = "A strong commando synthetic equipped with several weapons. Its durability and firepower lets it take on multiple marines at once."
-	path = /datum/equipment_preset/upp/synth/commando
+/datum/human_ai_equipment_preset/upp/rifleman/heavy
+	name = "UPP Squad Heavy Rifleman"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/heavy
+
+/datum/human_ai_equipment_preset/upp/juggernaut
+	name = "UPP Squad Juggernaut"
+	desc = "A heavily armored UPP soldier equipped with 6B99-4 heavy armor and RVS-37 automated machinegun. Infantry's death incarnate on the battlefield.. Unless you have a grenade or two. (OH NO, IT'S JOHN UPP!! RUN!!)"
+	path = /datum/equipment_preset/upp/juggernaut
 
 /datum/human_ai_equipment_preset/upp/medic
 	name = "UPP Squad Sanitar"
@@ -80,7 +85,7 @@
 
 /datum/human_ai_equipment_preset/upp/military_police
 	name = "UPP - Military Police"
-	desc = "UPP - Military Police, armed with a T73."
+	desc = "UPP - Military Police, armed with a Type73."
 	path = /datum/equipment_preset/upp/military_police
 
 /datum/human_ai_equipment_preset/upp/officer

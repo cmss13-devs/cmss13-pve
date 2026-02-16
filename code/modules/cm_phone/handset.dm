@@ -25,6 +25,8 @@
 	. = ..()
 
 	src.phone_component = phone_component
+	if(src.phone_component.phone_icon)
+		icon_state = src.phone_component.phone_icon
 	src.holder = holder
 	attach_to(src.holder)
 
@@ -117,10 +119,10 @@
 
 	if(!to_raise)
 		raised = FALSE
-		item_state = "rpb_phone"
+		item_state = icon_state
 	else
 		raised = TRUE
-		item_state = "rpb_phone_ear"
+		item_state = "[icon_state]_ear"
 
 	user.update_inv_r_hand()
 	user.update_inv_l_hand()
@@ -178,5 +180,8 @@
 	zlevel_transfer = FALSE
 	UnregisterSignal(holder, COMSIG_MOVABLE_MOVED)
 	reset_tether()
+
+/obj/item/handset/upp
+	icon_state = "upp_rpb_phone"
 
 #undef HANDSET_RANGE

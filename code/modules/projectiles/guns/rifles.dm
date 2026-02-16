@@ -323,7 +323,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_10
@@ -347,6 +347,13 @@
 /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap
 	current_mag = /obj/item/ammo_magazine/rifle/nsg23/heap
 
+/obj/item/weapon/gun/rifle/nsg23/pmc_technician
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23,
+		/obj/item/attachable/stock/nsg23,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+	)
+
 /obj/item/weapon/gun/rifle/nsg23/rmc
 	name = "\improper NSG L23A1 pulse rifle"
 	desc = "Pulse action 8.5x33mm caseless assault rifle of the Royal Marine Commandos, personal friend of any Marine Commando. Comes with semi-auto and burst-fire firemodes and features an integrated 30mm grenade launcher that can hold two grenades on backup with one in the chamber."
@@ -367,7 +374,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_12)
+	set_burst_delay(FIRE_DELAY_TIER_SMG2)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9
@@ -516,7 +523,7 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_LMG)
 	set_burst_amount(BURST_AMOUNT_TIER_4)
-	set_burst_delay(FIRE_DELAY_TIER_11)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_9

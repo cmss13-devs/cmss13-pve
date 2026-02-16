@@ -690,6 +690,9 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
 
+/obj/item/storage/pouch/shotgun/wy
+	icon_state = "wy_medium_shotshells"
+
 /obj/item/storage/pouch/shotgun/large
 	name = "large shotgun shell pouch"
 	desc = "It can contain more handfuls of shells, or bullets if you choose to for some reason."
@@ -711,6 +714,9 @@
 /obj/item/storage/pouch/shotgun/large/buckshot/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+
+/obj/item/storage/pouch/shotgun/large/wy
+	icon_state = "wy_large_shotshells"
 
 /obj/item/storage/pouch/explosive
 	name = "explosive pouch"

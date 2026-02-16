@@ -1059,11 +1059,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
@@ -1078,13 +1079,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
 	name = "\improper Mk12 marksman helmet"
-	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_sniper_hat"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
-	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_sniper_hat"
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
@@ -1218,13 +1219,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/engineer
 	name = "\improper PMC Mk16 engineer helmet"
-	desc = "An advanced technician helmet with a black finish, including advanced welding protection and resistance to industrial hazards, though it offers less kevlar against potential firefights."
+	desc = "An advanced technician helmet with a black finish, including advanced welding protection and resistance to industrial hazards. Comes with long-range IR flashlight."
 	icon_state = "pmc_engineer_helmet"
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	eye_protection = EYE_PROTECTION_WELDING
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_heat_protection = BODY_FLAG_HEAD

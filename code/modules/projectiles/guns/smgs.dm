@@ -220,6 +220,10 @@
 	desc = "A Weyland-Yutani creation, this M-39 comes equipped in corporate white. Chambered in 9x19mm. This one had its IFF electronics removed."
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
+/obj/item/weapon/gun/smg/m39/corporate/crewman
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/lasersight)
+
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
