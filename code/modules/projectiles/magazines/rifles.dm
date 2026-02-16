@@ -366,13 +366,13 @@
 
 /obj/item/ammo_magazine/rifle/ak4047
 	name = "\improper AK-4047 magazine (10x27mm)"
-	desc = "A rugged and reliable 60-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	desc = "A rugged and reliable 45-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
 	caliber = "10x27mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	w_class = SIZE_MEDIUM
 	default_ammo = /datum/ammo/bullet/rifle/upp
-	max_rounds = 60
+	max_rounds = 45
 	gun_type = /obj/item/weapon/gun/rifle/ak4047
 	ammo_band_icon = "+ak4047_band"
 	ammo_band_icon_empty = "+ak4047_band_e"
