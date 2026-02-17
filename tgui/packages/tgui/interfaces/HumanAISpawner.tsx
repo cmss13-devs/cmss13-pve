@@ -40,8 +40,8 @@ export const HumanAISpawner = (props) => {
   const [chosenPreset, setPreset] = useState<AIEquipmentPreset | null>(null);
   const [viewingFaction, setViewingFaction] = useState<string | null>(null);
   const { presets } = data;
-  const [zombie_outer_wear_chance] = useState<Number>(
-    data.zombie_outer_wear_chance | 40,
+  const [zombieOuterWearChance, setZombieOuterWearChance] = useState(
+    data.zombie_outer_wear_chance,
   );
 
   const factionOptions = Object.keys(presets);
@@ -110,6 +110,7 @@ export const HumanAISpawner = (props) => {
               </Section>
             </Stack.Item>
             <Divider vertical />
+            {/* right panel*/}
             <Stack.Item width="30%">
               <Section
                 title="Selected Preset"
@@ -203,17 +204,18 @@ export const HumanAISpawner = (props) => {
                         </Stack.Item>
                         <Stack.Item grow>
                           <Slider
-                            inline
                             maxValue={100}
                             minValue={0}
-                            value={zombie_outer_wear_chance}
-                            onChange={act('zombie_outer_wear_chance', {
-                              zombie_outer_wear_chance:
-                                zombie_outer_wear_chance,
-                            })}
+                            value={data.zombie_outer_wear_chance}
+                            onChange={(e, value) =>
+                              act('zombie_outer_wear_chance', {
+                                zombie_outer_wear_chance: value,
+                              })
+                            }
                             unit={'%'}
+                            setZombieOuterWearChance
                             step={10}
-                            stepPixelSize={20}
+                            stepPixelSize={10}
                           />
                         </Stack.Item>
                       </Stack>
@@ -234,7 +236,7 @@ export const HumanAISpawner = (props) => {
                                 .includes('working joe')
                                 ? 'blue'
                                 : data.species_selected !== 'Human'
-                                  ? 'green'
+                                  ? 'olive'
                                   : 'white',
                           }}
                         >

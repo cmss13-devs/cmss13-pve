@@ -178,6 +178,7 @@
 			zombie_outer_wear = !zombie_outer_wear
 		if("zombie_outer_wear_chance")
 			zombie_outer_wear_chance = params["zombie_outer_wear_chance"]
+			SStgui.try_update_ui(usr, src, ui)
 
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
