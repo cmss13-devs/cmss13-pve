@@ -17,6 +17,8 @@
 	var/selected_equipment
 	var/selected_faction
 	var/outfit = FALSE
+	var/zombie_outer_wear = FALSE
+	var/zombie_outer_wear_chance = 40
 	var/mob/living/carbon/human/species_dummy
 
 /datum/human_ai_spawner_menu/New()
@@ -83,6 +85,8 @@
 	data["desc"] = desc
 	data["outfit"] = outfit
 	data["spawn_click_intercept"] = spawn_click_intercept
+	data["zombie_outer_wear"] = zombie_outer_wear
+	data["zombie_outer_wear_chance"] = zombie_outer_wear_chance
 	return data
 
 /datum/human_ai_spawner_menu/ui_static_data(mob/user)
@@ -170,6 +174,10 @@
 			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
 			dresscode = GLOB.gear_name_presets_list[dresscode]
 			add_preset(dresscode)
+		if("zombie_outer_wear")
+			zombie_outer_wear = !zombie_outer_wear
+		if("zombie_outer_wear_chance")
+			zombie_outer_wear_chance = params["zombie_outer_wear_chance"]
 
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
@@ -202,12 +210,28 @@
 					ai_human.strip_weapons()
 				else if(selected_equipment == "Birthday Suit")
 					ai_human.strip_all()
-
-
 				ai_human.face_dir(user.dir)
 				ai_human.forceMove(get_turf(object))
 				if(paradrop)
 					ai_human.paradrop()
+				if(species == "Zombie") //setting species to zombie throws off all of these
+					ai_human.strip_weapons()
+					if(!prob(zombie_outer_wear_chance) || !zombie_outer_wear)
+						qdel(ai_human.head)
+						qdel(ai_human.gloves)
+						qdel(ai_human.l_hand)
+						qdel(ai_human.r_hand)
+						qdel(ai_human.head)
+						qdel(ai_human.glasses)
+						qdel(ai_human.wear_mask)
+					else
+						INVOKE_NEXT_TICK(ai_human, TYPE_PROC_REF(/mob/living/carbon/human, equip_to_slot_or_del), ai_human.head, WEAR_HEAD)
+						qdel(ai_human.gloves)
+						qdel(ai_human.l_hand)
+						qdel(ai_human.r_hand)
+						qdel(ai_human.head)
+						qdel(ai_human.glasses)
+						qdel(ai_human.wear_mask)
 				if(species != ai_human.species) //might be redundant
 					ai_human.set_species(species)
 					if(issynth(ai_human))
@@ -230,9 +254,7 @@
 							ai_human.faction_group = list(selected_faction)
 							if(faction_tags)
 								faction_tags.faction_group = list(selected_faction)
-				if(spawn_ai && !outfit)
-					if(iszombie(ai_human))
-						ai_human.strip_weapons()
+				if(spawn_ai && !ai_human.ckey)
 					ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
 					ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 

@@ -1,7 +1,15 @@
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
-import { Box, Button, Divider, Dropdown, Section, Stack } from '../components';
+import {
+  Box,
+  Button,
+  Divider,
+  Dropdown,
+  Section,
+  Slider,
+  Stack,
+} from '../components';
 import { Window } from '../layouts';
 
 type AIEquipmentPreset = {
@@ -23,6 +31,8 @@ type BackendContext = {
   selected_equipment: string;
   species_settings: string[];
   species_selected: string;
+  zombie_outer_wear: boolean;
+  zombie_outer_wear_chance: number;
 };
 
 export const HumanAISpawner = (props) => {
@@ -30,6 +40,9 @@ export const HumanAISpawner = (props) => {
   const [chosenPreset, setPreset] = useState<AIEquipmentPreset | null>(null);
   const [viewingFaction, setViewingFaction] = useState<string | null>(null);
   const { presets } = data;
+  const [zombie_outer_wear_chance] = useState<Number>(
+    data.zombie_outer_wear_chance | 40,
+  );
 
   const factionOptions = Object.keys(presets);
 
@@ -176,6 +189,35 @@ export const HumanAISpawner = (props) => {
                       Click gives outfit
                     </Button.Checkbox>
                     <Section title="Additional Options" />
+                    {data.species_selected === 'Zombie' ? (
+                      <Stack align="baseline">
+                        <Stack.Item>
+                          <Button.Checkbox
+                            checked={data.zombie_outer_wear}
+                            onClick={() => {
+                              act('zombie_outer_wear');
+                            }}
+                          >
+                            Keep Helmets
+                          </Button.Checkbox>
+                        </Stack.Item>
+                        <Stack.Item grow>
+                          <Slider
+                            inline
+                            maxValue={100}
+                            minValue={0}
+                            value={zombie_outer_wear_chance}
+                            onChange={act('zombie_outer_wear_chance', {
+                              zombie_outer_wear_chance:
+                                zombie_outer_wear_chance,
+                            })}
+                            unit={'%'}
+                            step={10}
+                            stepPixelSize={20}
+                          />
+                        </Stack.Item>
+                      </Stack>
+                    ) : null}
                     <Dropdown
                       width="100%"
                       options={data.species_settings}
