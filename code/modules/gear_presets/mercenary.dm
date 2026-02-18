@@ -10,7 +10,7 @@
 
 /datum/equipment_preset/mercenary/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
+	access = get_access(ACCESS_LIST_EMERGENCY_RESPONSE, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND)
 
 
 /datum/equipment_preset/mercenary/load_name(mob/living/carbon/human/new_human)
