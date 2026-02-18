@@ -605,7 +605,7 @@
 	},
 /obj/item/storage/pouch/tools/tactical/upp,
 /obj/item/storage/toolbox/mechanical,
-/turf/open/floor/corsat,
+/turf/open/floor/corsat/plate,
 /area/pudong/base/maintenance)
 "be" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1179,8 +1179,7 @@
 /area/pudong/base/treatment)
 "cn" = (
 /obj/structure/surface/table/almayer{
-	dir = 4;
-	flipped = 1
+	dir = 4
 	},
 /obj/item/storage/box/bodybags{
 	pixel_y = 14;
@@ -1303,7 +1302,11 @@
 	color = "#8B9490"
 	},
 /obj/item/storage/firstaid/softpack/synth/upp,
-/turf/open/floor/corsat,
+/turf/open/floor/corsat/plate,
+/area/pudong/base/maintenance)
+"cy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
 /area/pudong/base/maintenance)
 "cz" = (
 /obj/structure/platform/strata{
@@ -1311,6 +1314,19 @@
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
+"cA" = (
+/turf/open/floor/corsat/plate,
+/area/pudong/base/maintenance)
+"cB" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/pudong/base/maintenance)
 "cD" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -4209,8 +4225,7 @@
 	pixel_y = 3
 	},
 /obj/structure/surface/table/almayer{
-	dir = 4;
-	flipped = 1
+	dir = 4
 	},
 /obj/item/ashtray/plastic{
 	pixel_x = 10;
@@ -4716,7 +4731,7 @@
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/upp
 	},
-/turf/open/space/basic,
+/turf/open/auto_turf/snow/layer0,
 /area/pudong/exterior/cliff)
 "ul" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8178,7 +8193,6 @@
 /area/pudong/caves/main)
 "Ll" = (
 /obj/structure/machinery/computer/overwatch/almayer{
-	density = 1;
 	faction = "UPP";
 	pixel_y = 22
 	},
@@ -12482,9 +12496,9 @@ Ub
 Ub
 HO
 cc
-SL
-nL
-nL
+cB
+cy
+cy
 bZ
 nL
 Mf
@@ -12634,9 +12648,9 @@ Ub
 Ub
 HO
 cd
-Mf
-Mf
-Mf
+cA
+cA
+cA
 HO
 be
 HO
@@ -26303,7 +26317,7 @@ cr
 PG
 FW
 FW
-FW
+IT
 IT
 IT
 IT
@@ -26756,7 +26770,7 @@ de
 de
 pk
 FW
-FW
+IT
 IT
 IT
 IT
@@ -26908,7 +26922,7 @@ co
 de
 pk
 FW
-FW
+IT
 IT
 IT
 IT
@@ -27061,7 +27075,7 @@ de
 pk
 pk
 pk
-FW
+IT
 IT
 IT
 IT
