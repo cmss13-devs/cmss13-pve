@@ -715,7 +715,7 @@
 /datum/equipment_preset/uscm_ship/so/upp/equipped/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "Naval Infantry Telnyashka"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp/command(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/naval, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp/naval(new_human), WEAR_BODY)
 	var/obj/item/clothing/under/marine/veteran/upp/naval/uniform = new()
 

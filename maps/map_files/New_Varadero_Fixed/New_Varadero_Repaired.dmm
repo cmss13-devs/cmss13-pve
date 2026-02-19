@@ -9233,7 +9233,7 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/obj/item/clothing/head/uppcap/peaked,
+/obj/item/clothing/head/cmcap/upp/peaked,
 /turf/open/floor/strata/grey_multi_tiles,
 /area/varadero/interior_protected/vessel)
 "idw" = (

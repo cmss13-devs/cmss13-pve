@@ -531,7 +531,7 @@
 //-----------------------Type71 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/type71
-	name = "magazine box (Type71 x 10)"
+	name = "magazine box (Type71 x 14)"
 	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
@@ -553,7 +553,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/ap
-	name = "magazine box (Type71 AP x 10)"
+	name = "magazine box (Type71 AP x 14)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/ap
@@ -562,7 +562,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/heap
-	name = "magazine box (Type71 HEAP x 10)"
+	name = "magazine box (Type71 HEAP x 14)"
 	overlay_ammo_type = "_type71_heap"
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/heap
@@ -622,7 +622,7 @@
 
 /obj/item/ammo_box/magazine/ag80
 	name = "magazine box (AG80 x 10)"
-	icon_state = "base_zhnk72"
+	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_ag80"
@@ -685,6 +685,48 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80/heap
 
 /obj/item/ammo_box/magazine/type71/large/ag80/heap/empty
+	empty = TRUE
+
+//-----------------------AK-4047 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/ak4047
+	name = "magazine box (AK-4047 x 14)"
+	icon_state = "base_type71"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ak4047"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 14
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047
+
+/obj/item/ammo_box/magazine/ak4047/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/ap
+	name = "magazine box (AK-4047 AP x 14)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/ap
+
+/obj/item/ammo_box/magazine/ak4047/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/heap
+	name = "magazine box (AK-4047 HEAP x 14)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/heap
+
+/obj/item/ammo_box/magazine/ak4047/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/incendiary
+	name = "magazine box (AK-4047 Incen x 14)"
+	overlay_ammo_type = "_type71_incend"
+	overlay_content = "_type71_incend"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/incendiary
+
+/obj/item/ammo_box/magazine/ak4047/incendiary/empty
 	empty = TRUE
 
 //-----------------------Nailgun Mag Box-----------------------

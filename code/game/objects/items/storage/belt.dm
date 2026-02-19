@@ -288,8 +288,8 @@
 /obj/item/storage/belt/medical/upp
 	name = "\improper Type 41 pattern medical storage rig"
 	desc = "The Type 41 is the standard load-bearing equipment of UPP military. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
-	icon_state = "medicalbelt_upp"
-	item_state = "upp_belt"
+	icon_state = "upp_medicalbelt"
+	item_state = "upp_medicalbelt"
 
 /obj/item/storage/belt/medical/upp/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -554,6 +554,63 @@
 	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/less_lesser/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/black
+	icon_state = "medicbag_black_u"
+	item_state = "medicbag_black_u"
+
+/obj/item/storage/belt/medical/lifesaver/upp/black/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/black/partial/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
 
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
@@ -1042,6 +1099,10 @@
 /obj/item/storage/belt/shotgun/upp/heavyslug/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/slug(src)
+
+/obj/item/storage/belt/shotgun/upp/heavybeanbag/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 
 /obj/item/storage/belt/shotgun/van_bandolier
 	name = "two bore bandolier"
@@ -2091,6 +2152,26 @@
 	for(var/total_storage_slots in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
 
+/obj/item/storage/belt/gun/type47/sof
+	name = "\improper Type 47-S pistol holster rig"
+	icon_state = "korovin_black_holster"
+	item_state = "upp_belt"
+
+/obj/item/storage/belt/gun/type47/sof/t73/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/t73(src)
+
+/obj/item/storage/belt/gun/type47/sof/t73/leader/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73/leader())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/t73_impact(src)
+
+/obj/item/storage/belt/gun/type47/sof/revolver/upp/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/upp(src)
+
 //Crazy Ivan's belt reskin
 /obj/item/storage/belt/gun/type47/ivan
 	name = "The Rack"
@@ -2589,7 +2670,7 @@
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 
-#define MAXIMUM_MORTARSHELL_COUNT 3
+#define MAXIMUM_MORTARSHELL_COUNT 6
 
 /obj/item/storage/belt/gun/mortarbelt/rmc
 	name = "\improper L84 pattern ammo load rig"

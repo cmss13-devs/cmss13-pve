@@ -3898,7 +3898,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13/New()
 	..()
-	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+	attachment_firing_delay = FIRE_DELAY_TIER_5*2.5
 
 /obj/item/attachable/attached_gun/shotgun/af13/get_examine_text(mob/user)
 	. = ..()
@@ -3907,9 +3907,9 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13/set_bullet_traits()
 	LAZYADD(traits_to_give_attached, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 1.5, GLOB.damage_boost_turfs),
 		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 10.8, GLOB.damage_boost_breaching),
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2, GLOB.damage_boost_pylons)
 	))
 
 /obj/item/attachable/attached_gun/shotgun/af13/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
@@ -3945,7 +3945,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13b/New()
 	..()
-	attachment_firing_delay = FIRE_DELAY_TIER_5*3
+	attachment_firing_delay = FIRE_DELAY_TIER_5*2.5
 
 /obj/item/attachable/attached_gun/shotgun/af13b/get_examine_text(mob/user)
 	. = ..()
@@ -3954,9 +3954,9 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/af13b/set_bullet_traits()
 	LAZYADD(traits_to_give_attached, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
-		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 3*10.8, GLOB.damage_boost_breaching), // 2-taps the R doors
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2*5, GLOB.damage_boost_pylons)
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 1.5, GLOB.damage_boost_turfs), // 3 hits to break down regular walls, about 6 to break down r-walls
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 2*10.8, GLOB.damage_boost_breaching), // 2-taps the R doors
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 2, GLOB.damage_boost_pylons)
 	))
 
 /obj/item/attachable/attached_gun/shotgun/af13b/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)

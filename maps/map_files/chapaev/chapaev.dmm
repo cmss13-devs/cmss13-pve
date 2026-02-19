@@ -4975,16 +4975,10 @@
 	can_block_movement = 0
 	},
 /obj/item/tool/crowbar/tactical,
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
-/obj/item/device/binoculars/range/designator,
+/obj/item/storage/box/zipcuffs/small,
+/obj/item/device/binoculars/range/designator/upp,
 /obj/item/deployable_beacon/red,
-/obj/item/device/whistle{
-	pixel_y = 8;
-	pixel_x = -8
-	},
+/obj/item/device/whistle,
 /obj/item/weapon/gun/rifle/ak4047/unloaded/platoon,
 /obj/item/ammo_magazine/rifle/ak4047,
 /obj/item/ammo_magazine/rifle/ak4047,

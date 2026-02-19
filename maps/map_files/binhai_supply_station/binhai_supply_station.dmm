@@ -1084,9 +1084,9 @@
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/basemil/lowerbunks)
 "awl" = (
@@ -2118,8 +2118,8 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
 /obj/item/clothing/shoes/marine/upp{
 	pixel_x = 4;
 	pixel_y = -3
@@ -4752,8 +4752,8 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
 /obj/item/clothing/shoes/marine/upp{
 	pixel_x = 4;
 	pixel_y = -3
@@ -23658,8 +23658,8 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
 /obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
@@ -27158,8 +27158,8 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
 /obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,

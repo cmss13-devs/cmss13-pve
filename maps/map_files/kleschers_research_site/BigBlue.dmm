@@ -36914,7 +36914,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/item/prop/magazine/book/littleredbook,
-/obj/item/clothing/head/uppcap/ushanka,
+/obj/item/clothing/head/cmcap/upp/ushanka,
 /turf/open/floor/strata/fake_wood,
 /area/kleschers/int_glass/bar)
 "ttY" = (

@@ -491,7 +491,7 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/alt, WEAR_HEAD)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/naval, WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,2)

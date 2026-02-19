@@ -121,7 +121,7 @@
 			add_facewrap(new_human)
 	//head
 	if(prob(50))
-		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/uppcap/boonie/canc)
+		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/cmcap/upp/boonie/canc)
 		new_human.equip_to_slot_or_del(new coolhat(new_human), WEAR_HEAD)
 	var/coolhairdo = pick("Bald", "Shaved Head", "Shaved Balding", "Shaved Mohawk", "Shaved Mohawk 2")
 	new_human.h_style = coolhairdo

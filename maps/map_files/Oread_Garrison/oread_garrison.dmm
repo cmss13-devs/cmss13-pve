@@ -3172,7 +3172,7 @@
 /area/Oread_Garrison/outside/jungle)
 "pF" = (
 /obj/item/flag/plantable/upp,
-/obj/item/clothing/head/uppcap/beret,
+/obj/item/clothing/head/cmcap/upp/beret,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/Oread_Garrison/outside/jungle)
 "pH" = (
