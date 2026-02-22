@@ -4176,7 +4176,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/lasersight/vp/New()
 	..()
-	accuracy_mod = HIT_ACCURACY_MULT_TIER_1
+	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	movement_onehanded_acc_penalty_mod = -MOVEMENT_ACCURACY_PENALTY_MULT_TIER_5
 	scatter_mod = -SCATTER_AMOUNT_TIER_10
 	scatter_unwielded_mod = -SCATTER_AMOUNT_TIER_9
