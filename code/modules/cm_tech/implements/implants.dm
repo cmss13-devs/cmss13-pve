@@ -133,7 +133,7 @@
 	implant_string = "your pupils dilating to unsettling levels."
 
 /obj/item/device/internal_implant/nvg
-	var/implant_health = 2
+	var/implant_health = 50
 
 /obj/item/device/internal_implant/nvg/on_implanted(mob/living/M)
 	. = ..()
@@ -247,8 +247,8 @@
 	implant_string = "your skin becoming significantly harder... That's going to hurt in a decade."
 
 /obj/item/device/internal_implant/subdermal_armor
-	var/burn_damage_mult = 0.9
-	var/brute_damage_mult = 0.85
+	var/burn_damage_mult = 0.8
+	var/brute_damage_mult = 0.7
 	var/bone_break_mult = 0.25
 
 /obj/item/device/internal_implant/subdermal_armor/on_implanted(mob/living/M)
