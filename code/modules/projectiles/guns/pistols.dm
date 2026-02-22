@@ -698,7 +698,7 @@
 /obj/item/weapon/gun/pistol/vp78/vp78m6/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 23, "under_x" = 21, "under_y" = 13, "stock_x" = 18, "stock_y" = 14)
 
-/obj/item/weapon/gun/pistol/vp78/vp78m6/set_gun_config_values()
+/obj/item/weapon/gun/pistol/vp78m6/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
