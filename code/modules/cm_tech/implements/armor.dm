@@ -209,6 +209,11 @@
 	armor_health = 400
 	armor_maxhealth = 400
 
+/obj/item/clothing/accessory/health/ceramic_plate/upp/sof
+	icon_state = "upp_sof_armor_plate_100"
+	base_icon_state = "upp_sof_armor_plate"
+	overlay_state = "upp_sof_armor_plate_100"
+
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"
 	desc = "A weak armor plate, only able to protect from a little bit of damage. Perhaps that will be enough."

@@ -718,6 +718,10 @@
 /obj/item/storage/pouch/shotgun/large/wy
 	icon_state = "wy_large_shotshells"
 
+/obj/item/storage/pouch/shotgun/large/wy/heavy/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
+
 /obj/item/storage/pouch/explosive
 	name = "explosive pouch"
 	desc = "It can carry grenades, plastic explosives, mine boxes, and other explosives."
@@ -1393,6 +1397,10 @@
 /obj/item/storage/pouch/flare/rmc/full/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/device/flashlight/flare/rmc(src)
+
+/obj/item/storage/pouch/flare/upp/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/device/flashlight/flare/upp(src)
 
 /obj/item/storage/pouch/radio
 	name = "radio pouch"

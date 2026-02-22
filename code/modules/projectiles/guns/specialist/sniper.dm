@@ -523,7 +523,7 @@
 	icon_state = "type88"
 	item_state = "type88"
 
-	fire_sound = 'sound/weapons/gun_mg.ogg'
+	fire_sound = "gun_svd"
 	current_mag = /obj/item/ammo_magazine/sniper/svd
 	attachable_allowed = list(
 		//Muzzle,

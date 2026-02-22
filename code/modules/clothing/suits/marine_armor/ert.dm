@@ -564,8 +564,8 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LIGHT
-	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3)
-	restricted_accessory_slots = list(, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PLATE3)
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
 
 /obj/item/clothing/suit/marine/faction/upp/sof/heavy
 	name = "\improper CCC5-L Heavy Tactical Vest"
@@ -580,13 +580,23 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 
+/obj/item/clothing/suit/marine/faction/upp/sof/heavy/standard
+// Armor with cosmetic attachies
+
+/obj/item/clothing/suit/marine/faction/upp/sof/heavy/standard/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/bracers_sof/bracers = new()
+	src.attach_accessory(null, bracers, TRUE)
+	var/obj/item/clothing/accessory/upppads/kneepads_sof/kneepads = new()
+	src.attach_accessory(null, kneepads, TRUE)
+
 /obj/item/clothing/suit/marine/faction/upp/sof/medium
 	name = "\improper CCC5-L plated tactical vest"
 	desc = "A lightweight UPP-issued armor vest designed for space operations forces. It features polymer-ceramic composite plating for improved protection while allowing greater mobility. Equipped with modular pouches for ammunition and gear, it ensures rapid access to essential supplies."
 	icon_state = "sof_vest_plate"
 	item_state = "sof_vest_plate"
 
-	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM

@@ -133,6 +133,31 @@
 	desc = "UPP military doctor, unarmed but still a member of the military"
 	path = /datum/equipment_preset/upp/mildoctor
 
+/datum/human_ai_equipment_preset/upp/sof
+	name = "UPP - SOF Rifleman"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and Type-73. Main force."
+	path = /datum/equipment_preset/upp/sof
+
+/datum/human_ai_equipment_preset/upp/sof_sapper
+	name = "UPP - SOF Sapper"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Engineering force."
+	path = /datum/equipment_preset/upp/sof/sapper
+
+/datum/human_ai_equipment_preset/upp/sof_medic
+	name = "UPP - SOF Medic"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Medical support."
+	path = /datum/equipment_preset/upp/sof/medic
+
+/datum/human_ai_equipment_preset/upp/sof_breacher
+	name = "UPP - SOF Breacher"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with KS-29/4 on buckshots and slugs, and Type-73. Assault force, and very deadly at close quarters."
+	path = /datum/equipment_preset/upp/sof/breacher
+
+/datum/human_ai_equipment_preset/upp/sof_squadlead
+	name = "UPP - SOF Squad Sergeant"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and ZhNK-72. Red beret, commanding other units."
+	path = /datum/equipment_preset/upp/sof/squadlead
+
 //Colonists
 
 /datum/human_ai_equipment_preset/upp/colonist

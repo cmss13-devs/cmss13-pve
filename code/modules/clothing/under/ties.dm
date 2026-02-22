@@ -1559,6 +1559,20 @@
 	item_state = "upp_crotch"
 	slot = ACCESSORY_SLOT_DECORGROIN
 
+/obj/item/clothing/accessory/upppads/bracers_sof
+	name = "\improper CCC5-L Arm Plates"
+	desc = "A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down. designed for the CCC5-L armor system."
+	icon_state = "upp_sof_bracers"
+	item_state = "upp_sof_bracers"
+	slot = ACCESSORY_SLOT_DECORBRACER
+
+/obj/item/clothing/accessory/upppads/kneepads_sof
+	name = "\improper CCC5-L Kneepads"
+	desc = "High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics. designed for the CCC5-L armor system."
+	icon_state = "upp_sof_thighguards"
+	item_state = "upp_sof_thighguards"
+	slot = ACCESSORY_SLOT_DECORKNEE
+
 //===========================//TWE CUSTOM ARMOR PLATES\\================================\\
 
 /obj/item/clothing/accessory/twepads

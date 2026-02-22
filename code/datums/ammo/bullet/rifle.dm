@@ -644,6 +644,8 @@
 
 /datum/ammo/bullet/rifle/ap/twe
 	name = "armor-piercing 8.5x33 bullet"
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_9
 
 /datum/ammo/bullet/rifle/heap/twe
 	name = "high-explosive armor-piercing 8.5x33 bullet"

@@ -180,7 +180,7 @@
 /obj/item/ammo_box/rounds/ag80
 	name = "\improper rifle ammunition box (10x27mm)"
 	desc = "A 9.7x16mm ammunition box. Used to refill AG80 magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_zhnk72"
+	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_reg"
 	caliber = "9.7x16mm"
@@ -256,6 +256,7 @@
 /obj/item/ammo_box/rounds/nsg23
 	name = "rifle ammunition box (8.5x33mm)"
 	icon_state = "base_nsg23"
+	caliber = "8.5x33mm"
 	desc = "A 8.5x33mm ammunition box. Used to refill NSG 23 magazines. It comes with a leather strap allowing to wear it on the back."
 	default_ammo = /datum/ammo/bullet/rifle/twe
 

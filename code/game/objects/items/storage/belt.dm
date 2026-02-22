@@ -975,11 +975,20 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/heap(src)
+
+/obj/item/storage/belt/marine/upp/black
+	icon_state = "upp_black_belt"
+	item_state = "upp_black_belt"
+
+/obj/item/storage/belt/marine/upp/black/full
+	icon_state = "upp_black_belt"
+	item_state = "upp_black_belt"
+
+/obj/item/storage/belt/marine/upp/black/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/ak4047(src)
 
 /obj/item/storage/belt/marine/wy
 	name = "\improper WY-TM402 pattern ammo load rig"
@@ -1003,20 +1012,12 @@
 	new /obj/item/ammo_magazine/smg/m39/extended(src)
 
 /obj/item/storage/belt/marine/wy/nsg23_pmc/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
 
 /obj/item/storage/belt/marine/wy/nsg23/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
-	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c

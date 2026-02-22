@@ -415,7 +415,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_tactical"
 	item_state = "type23_tactical"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
@@ -477,7 +477,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_wood"
 	item_state = "type23_wood"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
