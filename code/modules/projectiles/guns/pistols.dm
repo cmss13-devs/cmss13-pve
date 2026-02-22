@@ -657,7 +657,7 @@
 	current_mag = /obj/item/ammo_magazine/pistol/vp78/incendiary
 	starting_attachment_types = list(/obj/item/attachable/reflex)
 
-/obj/item/weapon/gun/pistol/vp78/vp78m6
+/obj/item/weapon/gun/pistol/vp78m6
 	name = "\improper VP78M6 pistol"
 	desc = "The VP78M6, often called the 'Mod Six', are enhanced variant of the VP78 combat pistol. Smoother trigger, formed grip, longer shrouded barrel. This M6 have been modified to have special counterweight in the receiver and under the barrel to resist muzzle climb, allowing for much better handling. Heavy and powerfull."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
@@ -667,6 +667,15 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
 	fire_sound = 'sound/weapons/gun_vp78m6_fire.ogg' // yes we are normalized bro -8db :D
 	force = 15
+
+	accepted_ammo = list(
+	/obj/item/ammo_magazine/pistol/vp78,
+	/obj/item/ammo_magazine/pistol/vp78/rmc,
+	/obj/item/ammo_magazine/pistol/vp78/toxin,
+	/obj/item/ammo_magazine/pistol/vp78/penetrating,
+	/obj/item/ammo_magazine/pistol/vp78/incendiary,
+	/obj/item/ammo_magazine/pistol/vp78/rubber,
+	)
 
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
