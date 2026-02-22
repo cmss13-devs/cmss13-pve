@@ -687,7 +687,7 @@
 		/obj/item/attachable/extended_barrel,
 	)
 
-/obj/item/weapon/gun/pistol/vp78/vp78m6/handle_starting_attachment()
+/obj/item/weapon/gun/pistol/vp78m6/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/lasersight/vp/attachment = new(src)
 	attachment.flags_attach_features &= ~ATTACH_REMOVABLE
@@ -695,7 +695,7 @@
 	attachment.Attach(src)
 	update_attachable(attachment.slot)
 
-/obj/item/weapon/gun/pistol/vp78/vp78m6/set_gun_attachment_offsets()
+/obj/item/weapon/gun/pistol/vp78m6/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 29, "muzzle_y" = 20,"rail_x" = 10, "rail_y" = 23, "under_x" = 21, "under_y" = 13, "stock_x" = 18, "stock_y" = 14)
 
 /obj/item/weapon/gun/pistol/vp78m6/set_gun_config_values()
