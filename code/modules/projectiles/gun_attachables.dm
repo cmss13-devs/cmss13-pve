@@ -922,7 +922,7 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/quickfire/New()
 	..()
 	scatter_mod = SCATTER_AMOUNT_TIER_8
-	delay_mod = -0.55 //+28~ fire-rate boost
+	delay_mod = -0.30
 	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_4
 	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_6
 
