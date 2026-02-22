@@ -180,6 +180,7 @@
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/lasersight,
@@ -413,6 +414,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/suppressor,
@@ -450,6 +452,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/heavy_barrel,
@@ -629,6 +632,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight/laser_light_combo,
 		/obj/item/attachable/extended_barrel,
@@ -704,6 +708,8 @@
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/lasersight/vp,
 		/obj/item/attachable/compensator,
@@ -823,6 +829,7 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	attachable_allowed = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/quickfire,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,

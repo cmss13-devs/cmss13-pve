@@ -911,6 +911,21 @@ Defined in conflicts.dm of the #defines folder.
 	else
 		. = ..()
 
+/obj/item/attachable/quickfire
+	name = "quickfire adapter"
+	desc = "An enhanced and upgraded autoloading mechanism to fire rounds more quickly."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	slot = "rail"
+	icon_state = "autoloader"
+	attach_icon = "autoloader_a"
+
+/obj/item/attachable/quickfire/New()
+	..()
+	scatter_mod = SCATTER_AMOUNT_TIER_8
+	delay_mod = -0.55 //+28~ fire-rate boost
+	accuracy_unwielded_mod = -HIT_ACCURACY_MULT_TIER_4
+	scatter_unwielded_mod = SCATTER_AMOUNT_TIER_6
+
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
 	desc = "Holy smokes RO man, they put a grip on a flashlight! \nReduces recoil and scatter by a tiny amount. Boosts accuracy by a tiny amount. Works as a light source."

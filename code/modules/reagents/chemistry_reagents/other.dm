@@ -135,7 +135,7 @@
 
 /datum/reagent/water/on_mob_life(mob/living/M)
 	. = ..()
-	if(ishuman(M) && volume >= 100 && prob(25))
+	if(ishuman(M) && volume >= 200 && prob(25))
 		var/mob/living/carbon/human/human = M
 		human.vomit()
 
