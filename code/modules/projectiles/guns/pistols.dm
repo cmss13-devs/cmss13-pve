@@ -107,6 +107,29 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
+/obj/item/weapon/gun/pistol/m4a3/m4a4
+	name = "\improper M4A4 service pistol"
+	desc = "An M4A4 service pistol, a standard issue sidearm of the USCM, an updated special forces edition of the previous A3 model. Fires 9mm pistol rounds."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m4a4"
+	item_state = "m4a4"
+	current_mag = /obj/item/ammo_magazine/pistol
+
+	starting_attachment_types = list(/obj/item/attachable/lasersight/micro, /obj/item/attachable/reddot/small,)
+
+/obj/item/weapon/gun/pistol/m4a3/m4a4/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 28, "muzzle_y" = 21,"rail_x" = 10, "rail_y" = 23, "under_x" = 21, "under_y" = 16, "stock_x" = 21, "stock_y" = 17)
+
+/obj/item/weapon/gun/pistol/m4a3/m4a4/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_12)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_6
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
+
 //L54A2, browning hi-power but in space
 
 /obj/item/weapon/gun/pistol/l54
@@ -659,7 +682,7 @@
 
 /obj/item/weapon/gun/pistol/vp78m6
 	name = "\improper VP78M6 pistol"
-	desc = "The VP78M6, often called the 'Mod Six', are enhanced variant of the VP78 combat pistol. Smoother trigger, formed grip, longer shrouded barrel. This M6 have been modified to have special counterweight in the receiver and under the barrel to resist muzzle climb, allowing for much better handling. Heavy and powerfull."
+	desc = "The VP78M6, often called the 'Mod Six', are enhanced variant of the VP78 combat pistol. Smoother trigger, formed grip, longer shrouded barrel. This M6 have been modified to have special counterweight in the receiver and under the barrel to resist muzzle climb, allowing for much better handling. Heavy and powerful."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "vp78m6"
 	item_state = "vp78m6"
