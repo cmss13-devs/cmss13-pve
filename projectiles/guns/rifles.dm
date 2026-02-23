@@ -2073,7 +2073,7 @@
 
 /obj/item/weapon/gun/rifle/ak4047
 	name = "\improper AK-4047 pulse assault rifle"
-	desc = "The first attempt of the UPP to make a pulse action equivalent to the M20 Pulse Rifle, the AK-4047 is a cheap and reliable substitute. As such, the weapon often winds up in the hands of mercenaries and insurgents. While not as accurate as western models, the AK-4047 is sturdier than the USCMC weapon. An AK-4047 still works after being thrown off a cliff and left underwater for a month."
+	desc = "An inexpensive precursor to the Type71, the AK-4047 is based off of a timeless design that has matured into the modern era. As it is slated to be out of service with the UPP by 2186, the weapon often winds up in the hands of mercenaries and insurgents wholesale. Not as accurate as western models, the AK-4047 is a robust competitor to the USCMC's lineup. You just can't beat the classics."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	item_state = "ak4047"
