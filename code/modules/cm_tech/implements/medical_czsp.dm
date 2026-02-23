@@ -48,8 +48,8 @@
 	icon_state = "burnkit_upgraded"
 	desc = "An upgraded burn treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical burns."
 
-	max_amount = 10
-	amount = 10
+	max_amount = 20
+	amount = 20
 
 /obj/item/stack/medical/advanced/ointment/upgraded/Initialize(mapload, ...)
 	. = ..()
@@ -63,8 +63,8 @@
 	icon_state = "traumakit_upgraded"
 	desc = "An upgraded trauma treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical wounds."
 
-	max_amount = 10
-	amount = 10
+	max_amount = 20
+	amount = 20
 
 /obj/item/stack/medical/advanced/bruise_pack/upgraded/Initialize(mapload, ...)
 	. = ..()
@@ -78,8 +78,8 @@
 	desc = "Advanced technology allows these splints to hold bones in place while being flexible and damage-resistant. These aren't plentiful, so use them sparingly on critical areas."
 
 	indestructible_splints = TRUE
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 
 	stack_id = "nano splint"
 
