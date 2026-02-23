@@ -621,7 +621,7 @@
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
 	icon_state = "ak4047"
 	default_ammo = /datum/ammo/bullet/rifle/heap
-	max_rounds = 40
+	max_rounds = 55
 	gun_type = /obj/item/weapon/gun/rifle/ak4047
 	ammo_band_icon = "+ak4047_band"
 	ammo_band_icon_empty = "+ak4047_band_e"
