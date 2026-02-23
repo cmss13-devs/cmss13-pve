@@ -25,7 +25,7 @@
 	var/snack2 = /obj/item/mre_food_packet/uscm/snack
 	var/dessert = /obj/item/mre_food_packet/uscm/dessert
 	var/dessert2 = /obj/item/mre_food_packet/uscm/dessert
-	var/should_have_drink = FALSE
+	var/should_have_drink = TRUE
 	var/should_have_cookie = TRUE
 	var/should_have_cigarettes = TRUE
 	//Used for some unique items that aren't falling under the main categories
@@ -231,6 +231,7 @@
 	side = /obj/item/mre_food_packet/twe/side
 	snack = /obj/item/mre_food_packet/twe/snack
 	dessert = /obj/item/mre_food_packet/twe/dessert
+	should_have_drink = TRUE
 
 /obj/item/storage/box/mre/twe/Initialize()
 	misc_item = pick(/obj/item/reagent_container/food/snacks/wrapped/twe_bar, /obj/item/storage/box/lemondrop)
@@ -284,9 +285,11 @@
 	snack2 = /obj/item/mre_food_packet/merc/snack
 	dessert = /obj/item/mre_food_packet/merc/dessert
 	dessert2 = /obj/item/mre_food_packet/merc/dessert
-	should_have_cigarettes = FALSE
-	should_have_matches = FALSE
+	should_have_cigarettes = TRUE
+	should_have_matches = TRUE
 	supersized = TRUE
+	should_have_utencil = TRUE
+	should_have_drink = TRUE
 
 /obj/item/storage/box/mre/fsr/choose_utencil()
 	new /obj/item/tool/kitchen/utensil/mre_spork/fsr(src)
