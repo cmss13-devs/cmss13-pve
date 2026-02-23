@@ -83,6 +83,14 @@
 	initial_stored = 0
 	allowed_type = /obj/item/ammo_magazine/hardpoint/m56_cupola/frontal_cannon
 
+/obj/structure/gun_rack/arc
+	name = "rotary cannon ammo storage compartment"
+	icon_state = "boyars"
+	desc = "A small compartment that stores ammunition for the ARC's 'Bleihagel RE-RE850 Frontal Rotary Cannon'."
+	max_stored = 2
+	initial_stored = 0
+	allowed_type = /obj/item/ammo_magazine/hardpoint/arc_sentry
+
 /obj/structure/gun_rack/apc/boyars
 	name = "dual cannon ammo storage compartment"
 	icon_state = "boyars"
