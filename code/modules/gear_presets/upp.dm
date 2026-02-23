@@ -67,7 +67,7 @@
 /datum/equipment_preset/upp/militia/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -143,7 +143,7 @@
 /datum/equipment_preset/upp/militia/medic/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -222,7 +222,7 @@
 /datum/equipment_preset/upp/militia/nco/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -281,7 +281,7 @@
 /datum/equipment_preset/upp/militia/tech/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -355,7 +355,7 @@
 /datum/equipment_preset/upp/militia/at/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -421,7 +421,7 @@
 /datum/equipment_preset/upp/militia/officer/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/ushanka, WEAR_HEAD)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
@@ -476,13 +476,11 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp, WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
-	var/random_uniform = rand(1,2)
-	switch(random_uniform)
-		if(1)
-			uniform.roll_suit_jacket(new_human)
-		if(2)
-			uniform.roll_suit_sleeves(new_human)
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(prob(50))
+		uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	else
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
 	//jacket
@@ -536,7 +534,11 @@
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/boonie, WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(prob(50))
+		uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	else
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/med, WEAR_ACCESSORY)
 	var/random_storage = rand(1,2)
@@ -600,11 +602,17 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/army, WEAR_HEAD)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(prob(50))
+		uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	else
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband, WEAR_ACCESSORY)
-
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/civ, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/compass, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/upp/folded, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/guard, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags, WEAR_ACCESSORY)
@@ -630,7 +638,7 @@
 /datum/equipment_preset/upp/militia/tech/plus/load_gear(mob/living/carbon/human/new_human)
 
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tan, WEAR_FACE)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
@@ -653,7 +661,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding, WEAR_IN_HELMET)
 	//uniform
 	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
-	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	if(prob(50))
+		uniform.roll_suit_sleeves(new_human)
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	else
+		new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
@@ -686,6 +698,8 @@
 
 /datum/equipment_preset/upp/militia/at/plus/load_gear(mob/living/carbon/human/new_human)
 
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	new_human.undershirt = "Territorial Guard Telnyashka"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/upp, WEAR_BACK)
@@ -1916,7 +1930,8 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles/upp, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/upp, WEAR_FACE)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/heavy, WEAR_HEAD)
 	//uniform
@@ -1956,7 +1971,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp/impact, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/upp, WEAR_FACE)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/heavy, WEAR_HEAD)
 	//uniform
