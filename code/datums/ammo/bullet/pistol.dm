@@ -13,6 +13,7 @@
 	damage = 40
 	penetration = ARMOR_PENETRATION_TIER_1
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	effective_range_max = 5
 	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/pistol/tiny
@@ -36,6 +37,7 @@
 	damage = 55
 	penetration = ARMOR_PENETRATION_TIER_4
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+	effective_range_max = 5
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
@@ -44,6 +46,7 @@
 	damage = 45
 	accuracy = HIT_ACCURACY_TIER_2
 	penetration= ARMOR_PENETRATION_TIER_4
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/ap/penetrating
 	name = "wall-penetrating 9x19 bullet"
@@ -51,6 +54,7 @@
 
 	damage = 45
 	penetration = ARMOR_PENETRATION_TIER_10
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/ap/penetrating/set_bullet_traits()
 	. = ..()
@@ -98,6 +102,7 @@
 	sound_override = null
 	damage = 15
 	stamina_damage = 35
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
 	slowdown(entity, bullet)
@@ -111,12 +116,14 @@
 	damage = 65
 	penetration = ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
 	name = "supersonic heavy pistol bullet"
 	shell_speed = AMMO_SPEED_TIER_5
 	damage = 85
 	penetration = ARMOR_PENETRATION_TIER_4
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/special/New()
 	..()
@@ -133,6 +140,7 @@
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_8
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact
 	name = ".50 high-impact pistol bullet"
@@ -144,6 +152,7 @@
 	name = ".50 high-impact armor piercing pistol bullet"
 	penetration = ARMOR_PENETRATION_TIER_10
 	damage = 130
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/upp
 	name = "high-impact pistol bullet"
@@ -151,6 +160,7 @@
 	penetration = ARMOR_PENETRATION_TIER_6
 	debilitate = list(0,1.5,0,0,0,1,0,0)
 	flags_ammo_behavior = AMMO_BALLISTIC
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/heavy/super/highimpact/New()
 	..()
@@ -167,6 +177,7 @@
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_3
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/incendiary
 	name = "incendiary pistol bullet"
@@ -176,6 +187,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	damage = 40
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/incendiary/set_bullet_traits()
 	..()
@@ -196,6 +208,7 @@
 	damage = 50
 	penetration = ARMOR_PENETRATION_TIER_4
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
+	effective_range_max = 5
 
 // Used by VP78 and Auto 9
 /datum/ammo/bullet/pistol/squash
@@ -207,8 +220,9 @@
 	damage = 60
 	penetration = ARMOR_PENETRATION_TIER_5
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
-	effective_range_max = 3 //hopefully this fixes the damage woes.
+	effective_range_max = 5 //hopefully this fixes the damage woes.
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/squash/toxin
 	name = "toxic squash-head pistol bullet"
@@ -233,6 +247,7 @@
 	name = "wall-penetrating squash-head pistol bullet"
 	shrapnel_chance = 0
 	penetration = ARMOR_PENETRATION_TIER_10
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/squash/penetrating/set_bullet_traits()
 	. = ..()
@@ -247,6 +262,7 @@
 	flags_ammo_behavior = AMMO_BALLISTIC
 	accuracy = HIT_ACCURACY_TIER_3
 	damage = 60
+	effective_range_max = 5
 
 /datum/ammo/bullet/pistol/squash/incendiary/set_bullet_traits()
 	..()
@@ -261,6 +277,7 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 	damage = 2
 	stamina_damage = 40
+	effective_range_max = 3
 
 /datum/ammo/bullet/pistol/mankey
 	name = "live monkey"
@@ -293,4 +310,5 @@
 	damage = 30
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+	effective_range_max = 5
 
