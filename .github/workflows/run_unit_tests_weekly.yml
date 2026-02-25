@@ -14,8 +14,15 @@ jobs:
       group: find_all_maps-${{ github.head_ref || github.run_id }}
     steps:
       - uses: actions/checkout@v3
+      - name: Check For Commits
+        id: check_commits
+        run: |
+          unset COMMITS_FOUND
+          if [[ `git log --since "8 days ago" --oneline -n 1` ]]; then COMMITS_FOUND=true; fi
+          echo "WORK_NEEDED=$COMMITS_FOUND" >> $GITHUB_OUTPUT
       - name: Find Maps
         id: map_finder
+        if: steps.check_commits.outputs.WORK_NEEDED
         run: |
           shopt -s extglob
           echo "$(ls -mw0 maps/!(*override*).json)" > maps_output.txt
