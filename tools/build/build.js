@@ -48,12 +48,21 @@ export const WarningParameter = new Juke.Parameter({
 export const DmMapsIncludeTarget = new Juke.Target({
   executes: async () => {
     const folders = [...Juke.glob("maps/**/*.dmm")];
-    const content =
+    const content_base =
       folders
+        .filter((file) => file.includes("map_files"))
         .map((file) => file.replace("maps/", ""))
         .map((file) => `#include "${file}"`)
         .join("\n") + "\n";
-    fs.writeFileSync("maps/templates.dm", content);
+    const content_extra =
+      folders
+        .filter((file) => !file.includes("map_files"))
+        .map((file) => file.replace("maps/", ""))
+        .map((file) => `#include "${file}"`)
+        .join("\n") + "\n";
+
+    fs.writeFileSync("maps/templates_base.dm", content_base);
+    fs.writeFileSync("maps/templates_extra.dm", content_extra);
   },
 });
 
