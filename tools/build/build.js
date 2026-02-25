@@ -50,13 +50,13 @@ export const DmMapsIncludeTarget = new Juke.Target({
     const folders = [...Juke.glob("maps/**/*.dmm")];
     const content_base =
       folders
-        .filter((file) => file.includes("map_files"))
+        .filter((file) => file.split("/").length == 4 && file.includes("map_files"))
         .map((file) => file.replace("maps/", ""))
         .map((file) => `#include "${file}"`)
         .join("\n") + "\n";
     const content_extra =
       folders
-        .filter((file) => !file.includes("map_files"))
+        .filter((file) => file.split("/").length != 4 || !file.includes("map_files"))
         .map((file) => file.replace("maps/", ""))
         .map((file) => `#include "${file}"`)
         .join("\n") + "\n";
@@ -82,8 +82,8 @@ export const DmTarget = new Juke.Target({
     NamedVersionFile,
   ],
   outputs: ({ get }) => {
-    if (get(DmVersionParameter)) {
-      return []; // Always rebuild when dm version is provided
+    if (get(DmVersionParameter) || get(DefineParameter).includes("ALL_MAPS")) {
+      return []; // Always rebuild when dm version or ALL_MAPS is provided
     }
     return [`${DME_NAME}.dmb`, `${DME_NAME}.rsc`];
   },
@@ -323,6 +323,8 @@ export const CleanTarget = new Juke.Target({
   executes: async () => {
     Juke.rm("*.{dmb,rsc}");
     Juke.rm("maps/templates.dm");
+    Juke.rm("maps/templates_base.dm");
+    Juke.rm("maps/templates_extra.dm");
   },
 });
 
