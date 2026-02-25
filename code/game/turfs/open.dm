@@ -533,6 +533,13 @@
 	baseturfs = /turf/open/gm/dirt2
 	minimap_color = MINIMAP_DIRT
 
+/turf/open/gm/dirt3
+	name = "dirt"
+	icon_state = "dirt"
+	baseturfs = /turf/open/gm/dirt2
+	minimap_color = MINIMAP_DIRT
+	color = "#818181"
+
 /turf/open/gm/dirtgrassborder
 	name = "grass"
 	icon_state = "grassdirt_edge"
@@ -1295,6 +1302,9 @@
 
 /turf/open/shuttle/dropship/light_grey_middle
 	icon_state = "rasputin13"
+
+/turf/open/shuttle/dropship/medium_grey_single_wide_left_to_right
+	icon_state = "rasputin14"
 
 /turf/open/shuttle/dropship/can_surgery
 	icon_state = "rasputin1"

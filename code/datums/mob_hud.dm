@@ -1,6 +1,6 @@
 /* HUD DATUMS */
 
-//GLOBAL HUD LIST
+//GLOBAL HUD LIST: This must be indexed in order (or the defines stringified so its an asslist)
 GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_SECURITY_BASIC = new /datum/mob_hud/security/basic(),
 	MOB_HUD_SECURITY_ADVANCED = new /datum/mob_hud/security/advanced(),
@@ -445,8 +445,12 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 			holder2.icon_state = "hudxeno"//Observer and admin HUD only
 			holder2_set = 1
 			var/obj/item/alien_embryo/E = locate(/obj/item/alien_embryo) in src
+			var/base_state = "infected"
 			if(E)
-				holder3.icon_state = "infected[E.stage]"
+				if(E.hivenumber == XENO_HIVE_PATHOGEN)
+					holder2.icon_state = "hudpathogen"
+					base_state = "spored"
+				holder3.icon_state = "[base_state][E.stage]"
 				var/datum/hive_status/hive = GLOB.hive_datum[E.hivenumber]
 
 				if(hive && hive.color)
