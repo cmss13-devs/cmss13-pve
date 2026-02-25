@@ -102,10 +102,12 @@ jobs:
           sudo dpkg --add-architecture i386
           sudo apt update || true
           sudo apt install -o APT::Immediate-Configure=false curl:i386
-      - name: Compile All Maps
+      - name: Compile All Base Maps
         run: |
           source $HOME/BYOND/byond/bin/byondsetup
           tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DALL_MAPS_STAGE_BASE
+      - name: Compile All Extra Maps
+        run: |
           tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DALL_MAPS_STAGE_EXTRA
 
   find_all_maps:
