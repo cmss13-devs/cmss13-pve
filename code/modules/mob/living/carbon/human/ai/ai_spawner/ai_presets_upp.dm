@@ -31,11 +31,6 @@
 	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
 	path = /datum/equipment_preset/upp/rifleman/heavy
 
-/datum/human_ai_equipment_preset/upp/juggernaut
-	name = "UPP Squad Juggernaut"
-	desc = "A heavily armored UPP soldier equipped with 6B99-4 heavy armor and RVS-37 automated machinegun. Infantry's death incarnate on the battlefield.. Unless you have a grenade or two. (OH NO, IT'S JOHN UPP!! RUN!!)"
-	path = /datum/equipment_preset/upp/juggernaut
-
 /datum/human_ai_equipment_preset/upp/medic
 	name = "UPP Squad Sanitar"
 	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
@@ -52,6 +47,21 @@
 	name = "UPP Platoon Sergeant"
 	desc = "The leader of a UPP Platoon. Functionally very similar to squad riflemen."
 	path = /datum/equipment_preset/upp/navallead
+
+/datum/human_ai_equipment_preset/upp/rifleman_heavy
+	name = "UPP Squad Heavy Rifleman"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/heavy
+
+/datum/human_ai_equipment_preset/upp/juggernaut
+	name = "UPP Squad Juggernaut"
+	desc = "A heavily armored UPP soldier equipped with 6B99-4 heavy armor and RVS-37 automated machinegun. Infantry's death incarnate on the battlefield.. Unless you have a grenade or two. (OH NO, IT'S JOHN UPP!! RUN!!)"
+	path = /datum/equipment_preset/upp/juggernaut
+
+/datum/human_ai_equipment_preset/upp/breacher_heavy
+	name = "UPP Squad Heavy Breacher"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 97 automatic shotgun. EXTREMELY DANGEROUS AT CLOSE RANGES. He WILL wipe 70% of the players in the squad."
+	path = /datum/equipment_preset/upp/breacher
 
 /datum/human_ai_equipment_preset/upp/military_police
 	name = "UPP - Military Police"

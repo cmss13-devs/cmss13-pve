@@ -1920,7 +1920,7 @@
 	rank = JOB_UPP_SPECIALIST
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/upp/specialist/juggernaut
-	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG)
 
 /datum/equipment_preset/upp/juggernaut/load_gear(mob/living/carbon/human/new_human)
 
@@ -1951,14 +1951,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/rifleman/heavy // OH NO, IT'S JOHN UPP JUNIOR!!
-	name = "UPP Specialized Weapons Operator, Heavy Rifleman (Equipped)"
+	name = "UPP Heavy Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Heavy Rifleman"
 	role_comm_title = "HVY-RFN"
 	rank = JOB_UPP_SPECIALIST
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/upp/heavy
-	access = list(ACCESS_UPP_GENERAL)
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG)
 
 /datum/equipment_preset/upp/rifleman/heavy/load_gear(mob/living/carbon/human/new_human)
 
@@ -1989,6 +1989,51 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/upp/breacher // OH NO, IT'S JOHN UPP JUNIOR!! (now with shotgun)
+	name = "UPP Heavy Breacher (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "Heavy Breacher"
+	role_comm_title = "HVY-BRCH"
+	rank = JOB_UPP_SPECIALIST
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_1)
+	skills = /datum/skills/upp/heavy
+	access = list(ACCESS_UPP_GENERAL, ACCESS_CIVILIAN_PUBLIC, ACCESS_CIVILIAN_BRIG)
+
+/datum/equipment_preset/upp/breacher/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/upp, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/heavy, WEAR_HEAD)
+	//uniform
+	add_upp_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/heavy, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/caws, WEAR_J_STORE)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/caws, WEAR_WAIST)
 
 //*****************************************************************************************************/
 // UPP SOF - SPACE OPERATIONAL FORCE

@@ -645,3 +645,38 @@
 	default_ammo = /datum/ammo/bullet/rifle/isr
 	max_rounds = 80
 	gun_type = /obj/item/weapon/gun/rifle/isr
+
+//--------------------------------------------------------
+// Type 97 UPP automatic shotgun (H&K CAWS)
+
+/obj/item/ammo_magazine/rifle/caws
+	name = "\improper Type 97 magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "caws"
+	caliber = "12g"
+	ammo_band_icon = "+caws_band"
+	ammo_band_icon_empty = "+caws_band_e"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	max_rounds = 20
+	gun_type = /obj/item/weapon/gun/rifle/caws
+	transfer_handful_amount = 5
+
+/obj/item/ammo_magazine/rifle/caws/slug
+	name = "\improper Type 97 slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/flechette
+	name = "\improper Type 97 flechette magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/rifle/caws/incendiary
+	name = "\improper Type 97 incendiary slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with incendiary slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT

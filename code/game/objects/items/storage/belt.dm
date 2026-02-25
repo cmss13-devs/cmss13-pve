@@ -978,6 +978,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/type71/heap(src)
 
+/obj/item/storage/belt/marine/upp/caws/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/caws(src)
+
 /obj/item/storage/belt/marine/upp/black
 	icon_state = "upp_black_belt"
 	item_state = "upp_black_belt"
