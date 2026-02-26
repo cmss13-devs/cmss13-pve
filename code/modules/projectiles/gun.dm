@@ -1769,7 +1769,7 @@ not all weapons use normal magazines etc. load_into_chamber() itself is designed
 		if(HAS_TRAIT(user, TRAIT_HUD_SIGHT))
 			skill_accuracy += 1
 		if(skill_accuracy)
-			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_3 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
+			gun_accuracy_mult += skill_accuracy * HIT_ACCURACY_MULT_TIER_4 // Accuracy mult increase/decrease per level is equal to attaching/removing a red dot sight
 	projectile_to_fire.accuracy = floor(projectile_to_fire.accuracy * gun_accuracy_mult) // Apply gun accuracy multiplier to projectile accuracy
 	projectile_to_fire.scatter += gun_scatter
 
