@@ -680,3 +680,23 @@
 	desc = "A 12 gauge automatic shotgun magazine loaded with incendiary slugs."
 	default_ammo = /datum/ammo/bullet/shotgun/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/caws/special
+	name = "\improper Type 97 magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon_state = "caws_special"
+	ammo_band_icon = "+caws_special_band"
+	ammo_band_icon_empty = "+caws_special_band_e"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/rifle/caws/special/slug
+	name = "\improper Type 97 slug magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug/special
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/special/flechette
+	name = "\improper Type 97 flechette magazine (12g DU)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette/special
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT

@@ -1516,3 +1516,72 @@
 
 /obj/item/ammo_box/magazine/mar50/empty
 	empty = TRUE
+
+//-----------------------Type 97 CAWS Auto-Shotgun Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/caws
+	name = "magazine box (Type97 x 8)"
+	icon_state = "base_type71"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_caws_reg"
+	overlay_gun_type = "_caws"
+	overlay_content = "_caws_reg"
+	num_of_magazines = 8
+	magazine_type = /obj/item/ammo_magazine/rifle/caws
+
+/obj/item/ammo_box/magazine/caws/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/slug
+	name = "magazine box (Type97 Slugs x 8)"
+	overlay_ammo_type = "_caws_slug"
+	overlay_content = "_caws_slug"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/slug
+
+/obj/item/ammo_box/magazine/caws/slug/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/flechette
+	name = "magazine box (Type97 Flechettes x 8)"
+	overlay_ammo_type = "_caws_flech"
+	overlay_content = "_caws_flech"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/flechette
+
+/obj/item/ammo_box/magazine/caws/flechette/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/incendiary
+	name = "magazine box (Type97 Incendiary x 8)"
+	overlay_ammo_type = "_caws_incen"
+	overlay_content = "_caws_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/incendiary
+
+/obj/item/ammo_box/magazine/caws/incendiary/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special
+	name = "magazine box (Type97 Magnum x 8)"
+	overlay_ammo_type = "_caws_special_reg"
+	overlay_content = "_caws_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special
+
+/obj/item/ammo_box/magazine/caws/special/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special/slug
+	name = "magazine box (Type97 Magnum Slugs x 8)"
+	overlay_ammo_type = "_caws_special_slug"
+	overlay_content = "_caws_slug"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special/slug
+
+/obj/item/ammo_box/magazine/caws/special/slug/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special/flechette
+	name = "magazine box (Type97 DU Flechettes x 8)"
+	overlay_ammo_type = "_caws_special_flech"
+	overlay_content = "_caws_flech"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special/flechette
+
+/obj/item/ammo_box/magazine/caws/special/flechette/empty
+	empty = TRUE
