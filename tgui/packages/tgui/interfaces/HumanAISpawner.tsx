@@ -1,3 +1,4 @@
+import { BooleanLike } from 'common/react';
 import { useState } from 'react';
 
 import { useBackend } from '../backend';
@@ -33,6 +34,9 @@ type BackendContext = {
   species_selected: string;
   zombie_outer_wear: boolean;
   zombie_outer_wear_chance: number;
+  zombie_delimb_multi: number;
+  ai_amount: number;
+  autoClean: BooleanLike;
 };
 
 export const HumanAISpawner = (props) => {
@@ -42,6 +46,13 @@ export const HumanAISpawner = (props) => {
   const { presets } = data;
   const [zombieOuterWearChance, setZombieOuterWearChance] = useState(
     data.zombie_outer_wear_chance,
+  );
+
+  const [disableAutoClean, setDisableAutoClean] = useState<BooleanLike>(
+    data.autoClean,
+  );
+  const [newZombieDelimbMulti, setZombieDelimbMulti] = useState<number | null>(
+    data.zombie_delimb_multi,
   );
 
   const factionOptions = Object.keys(presets);
@@ -199,7 +210,7 @@ export const HumanAISpawner = (props) => {
                               act('zombie_outer_wear');
                             }}
                           >
-                            Keep Helmets
+                            Helmet
                           </Button.Checkbox>
                         </Stack.Item>
                         <Stack.Item grow>
@@ -213,11 +224,35 @@ export const HumanAISpawner = (props) => {
                               })
                             }
                             unit={'%'}
-                            setZombieOuterWearChance
                             step={10}
                             stepPixelSize={10}
                           />
                         </Stack.Item>
+                      </Stack>
+                    ) : null}
+                    {data.species_selected === 'Zombie' ? (
+                      <Stack align="baseline">
+                        <Button.Checkbox
+                          textAlign="center"
+                          width="55%"
+                          checked={data.autoClean}
+                          onClick={() => act('auto_clean')}
+                        >
+                          Toggle Auto-Clean
+                        </Button.Checkbox>
+                        <Slider
+                          maxValue={2000}
+                          minValue={-100}
+                          value={data.zombie_delimb_multi * 100}
+                          onChange={(e, value) =>
+                            act('zombie_delimb_multi', {
+                              zombie_delimb_multi: value / 100,
+                            })
+                          }
+                          unit={'% delimb'}
+                          step={100}
+                          stepPixelSize={10}
+                        />
                       </Stack>
                     ) : null}
                     <Dropdown
@@ -289,6 +324,7 @@ export const HumanAISpawner = (props) => {
                   </Box>
                 )}
               </Section>
+              <Section />
             </Stack.Item>
           </Stack>
         </Stack>

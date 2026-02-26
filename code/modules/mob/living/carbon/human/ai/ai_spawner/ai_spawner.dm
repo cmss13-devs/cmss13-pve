@@ -7,6 +7,7 @@
 	var/static/list/lazy_ui_data = list()
 	//var/static/list/lazy_ui_data_
 	var/static/list/super_silly_pref_save = list()
+	var/viewing_faction
 	var/current_path
 	var/spawn_ai = TRUE
 	var/paradrop = FALSE
@@ -19,6 +20,8 @@
 	var/outfit = FALSE
 	var/zombie_outer_wear = FALSE
 	var/zombie_outer_wear_chance = 40
+	var/auto_clean = FALSE
+	var/zombie_delimb_multi = 1
 	var/mob/living/carbon/human/species_dummy
 
 /datum/human_ai_spawner_menu/New()
@@ -80,6 +83,7 @@
 			data["species_selected"] = preset_data["species"]
 			species = data["species_selected"]
 			break
+	data["viewing_faction"] = viewing_faction
 	data["spawn_ai"] = spawn_ai
 	data["paradrop"] = paradrop
 	data["desc"] = desc
@@ -87,6 +91,8 @@
 	data["spawn_click_intercept"] = spawn_click_intercept
 	data["zombie_outer_wear"] = zombie_outer_wear
 	data["zombie_outer_wear_chance"] = zombie_outer_wear_chance
+	data["autoClean"] = auto_clean
+	data["zombie_delimb_multi"] = zombie_delimb_multi
 	return data
 
 /datum/human_ai_spawner_menu/ui_static_data(mob/user)
@@ -119,7 +125,6 @@
 					preset_data["faction"] = params["selected_faction"]
 					selected_faction = params["selected_faction"]
 					return
-
 		if("remember_path")
 			current_path = params["path"]
 			selected_equipment = params["selected_equipment"]
@@ -179,14 +184,32 @@
 		if("zombie_outer_wear_chance")
 			zombie_outer_wear_chance = params["zombie_outer_wear_chance"]
 			SStgui.try_update_ui(usr, src, ui)
-
+		if("zombie_delimb_multi")
+			var/delimb_multi = clamp(text2num(params["zombie_delimb_multi"]), -1, 20)
+			if(delimb_multi <= 0)
+				delimb_multi = -1
+			if(delimb_multi == 1)
+				delimb_multi = 1
+			GLOB.gm_set_zombie_delimb_multi = delimb_multi
+			zombie_delimb_multi = delimb_multi
+			SStgui.try_update_ui(usr, src, ui)
+		if("auto_clean")
+			zombie_outer_wear = !zombie_outer_wear
+			if(auto_clean)
+				GLOB.gm_set_zombie_disable_auto_clean = TRUE
+			else
+				GLOB.gm_set_zombie_disable_auto_clean = FALSE
 /datum/human_ai_spawner_menu/proc/InterceptClickOn(mob/user, params, atom/object)
 
-	//var/list/modifiers = params2list(params)
+	var/list/modifiers = params2list(params)
 	if(spawn_click_intercept)
 		switch(current_click_intercept_action)
 			if(SPAWN_CLICK_INTERCEPT_ACTION)
-				//var/gotten_path
+				if(LAZYACCESS(modifiers, MIDDLE_CLICK))
+					if(ishuman(object))
+						var/mob/living/carbon/human/ai_human = object
+						if(!ai_human.ckey)
+							qdel(ai_human)
 				var/faction_of_preset
 				var/datum/equipment_preset/gotten_path = text2path(current_path)
 				var/randomise_appearance = TRUE
@@ -204,15 +227,17 @@
 							return
 					ai_human = object
 
-				for(var/item in ai_human.get_equipped_items(TRUE))
-					qdel(item)
+					for(var/item in ai_human.get_equipped_items(TRUE))
+						qdel(item)
 				arm_equipment(ai_human, gotten_path, randomise_appearance, FALSE, mob_client = ai_human.client)
 				if(selected_equipment == "No Weapons")
 					ai_human.strip_weapons()
 				else if(selected_equipment == "Birthday Suit")
 					ai_human.strip_all()
+
 				ai_human.face_dir(user.dir)
 				ai_human.forceMove(get_turf(object))
+
 				if(paradrop)
 					ai_human.paradrop()
 				if(species == "Zombie") //setting species to zombie throws off all of these
@@ -226,6 +251,23 @@
 						qdel(ai_human.glasses)
 						qdel(ai_human.wear_mask)
 					else
+						if(!ai_human.head) //this supposed helmeted zombie has NO helmet! NOTHING.
+							var/helmetpath = pick(
+								/obj/item/clothing/head/helmet/marine,
+								/obj/item/clothing/head/helmet/marine/reporter,
+								/obj/item/clothing/head/helmet/riot,
+								/obj/item/clothing/head/helmet/riot,
+								/obj/item/clothing/head/helmet/construction,
+								/obj/item/clothing/head/helmet/construction,
+								/obj/item/clothing/head/militia/bucket,
+								/obj/item/clothing/head/welding,
+								/obj/item/clothing/head/welding,
+								/obj/item/clothing/head/hardhat,
+								/obj/item/clothing/head/hardhat/dblue,
+								/obj/item/clothing/head/hardhat/red,
+								/obj/item/clothing/head/hardhat/white,
+								)
+							ai_human.head = new helmetpath(ai_human)
 						INVOKE_NEXT_TICK(ai_human, TYPE_PROC_REF(/mob/living/carbon/human, equip_to_slot_or_del), ai_human.head, WEAR_HEAD)
 						qdel(ai_human.gloves)
 						qdel(ai_human.l_hand)
