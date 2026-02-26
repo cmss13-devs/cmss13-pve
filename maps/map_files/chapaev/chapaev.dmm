@@ -4639,13 +4639,6 @@
 	light_power = 0.8;
 	light_range = 5
 	},
-/obj/item/storage/box/guncase/heavy/uppfuel{
-	pixel_y = 3
-	},
-/obj/item/storage/box/guncase/heavy/uppfuel{
-	pixel_y = 11;
-	layer = 3.03
-	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "jY" = (
@@ -4686,21 +4679,12 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 9;
-	pixel_x = 3
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 2
 	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = 9;
-	pixel_x = 3
-	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = -1;
-	pixel_x = 3
-	},
-/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
-	pixel_y = -1;
-	pixel_x = 3
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 10;
+	layer = 3.03
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -4739,11 +4723,11 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/prep_hallway)
 "kj" = (
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 2
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 3
 	},
-/obj/item/storage/box/guncase/heavy/sentryupp{
-	pixel_y = 10;
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 11;
 	layer = 3.03
 	},
 /obj/structure/machinery/light/small{
@@ -5120,7 +5104,11 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lf" = (
-/obj/item/ammo_box/magazine/type71/large/ag80,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/ag80,
+/obj/item/ammo_box/magazine/ag80,
+/obj/structure/closet/crate/secure/upp/alt,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lg" = (
@@ -5193,7 +5181,6 @@
 	light_range = 5;
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/type71/large,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lp" = (
@@ -5392,6 +5379,7 @@
 	pixel_x = 3
 	},
 /obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/zhnk,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lL" = (
@@ -5499,33 +5487,17 @@
 /area/golden_arrow/medical)
 "mc" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
+/obj/item/ammo_box/magazine/shotgun/upp/buckshot{
+	pixel_y = 0;
+	pixel_x = 0
 	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
+/obj/item/ammo_box/magazine/shotgun/upp{
 	pixel_y = 15;
-	pixel_x = -3
+	pixel_x = 0
 	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/shotgun/slug/heavy{
-	pixel_y = 15;
-	pixel_x = -3
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/ammo_magazine/shotgun/buckshot/heavy{
-	pixel_x = -4;
-	pixel_y = -1
+/obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath{
+	pixel_y = -15;
+	pixel_x = 0
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5681,19 +5653,22 @@
 	light_range = 5;
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/type71,
-/obj/item/ammo_box/magazine/ag80,
-/obj/item/ammo_box/magazine/ag80,
-/obj/structure/closet/crate/secure/upp/alt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mv" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/item/ammo_box/magazine/type71/large{
+/obj/item/ammo_box/magazine/type71/large/ag80{
+	pixel_x = 0;
 	pixel_y = -5
+	},
+/obj/item/ammo_box/magazine/type71/large{
+	pixel_x = 0;
+	pixel_y = 4
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5749,11 +5724,18 @@
 	icon_state = "S"
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/np92{
-	pixel_y = 11;
-	pixel_x = -3
+/obj/item/ammo_box/magazine/zhnk{
+	pixel_y = 18;
+	pixel_x = 2
 	},
-/obj/item/ammo_box/magazine/type73,
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_y = 0;
+	pixel_x = 2
+	},
 /obj/item/stack/sheet/cardboard/medium_stack{
 	pixel_x = -15;
 	pixel_y = -8
@@ -5770,7 +5752,6 @@
 	light_range = 5;
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/zhnk,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "mz" = (

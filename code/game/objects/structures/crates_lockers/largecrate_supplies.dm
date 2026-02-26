@@ -239,9 +239,9 @@
 	supplies = list(
 		/obj/item/ammo_box/magazine/type71 = 2,
 		/obj/item/ammo_box/magazine/ag80 = 2,
-		/obj/item/ammo_box/rounds/pkp = 2,
-		/obj/item/ammo_magazine/shotgun/buckshot/heavy = 3,
-		/obj/item/ammo_magazine/shotgun/slug/heavy = 3,
+		/obj/item/ammo_box/rounds/smartgun/upp = 2,
+		/obj/item/ammo_box/magazine/shotgun/upp/buckshot = 2,
+		/obj/item/ammo_box/magazine/shotgun/upp = 2,
 		/obj/item/storage/box/guncase/heavy/uppfuel = 1,
 		/obj/item/ammo_magazine/sentry/upp = 2,
 	)

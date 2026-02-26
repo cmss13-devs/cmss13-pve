@@ -161,6 +161,7 @@
 	desc = "A 10x27mm large ammunition box. Used to mostly to refill Type 71 and QYJ-72 box magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
+	overlay_content = "_type71_reg"
 	default_ammo = /datum/ammo/bullet/rifle/upp
 	bullet_amount = 1500
 	max_bullet_amount = 1500
@@ -279,4 +280,20 @@
 	default_ammo = /datum/ammo/bullet/rifle/heap/twe
 
 /obj/item/ammo_box/rounds/nsg23/heap/empty
+	empty = TRUE
+
+//----------------12.7x40mm Automated Machinegun Drum Ammunition Boxes------------------
+
+/obj/item/ammo_box/rounds/smartgun/upp
+	name = "\improper automated machinegun ammunition box (12.7x40mm)"
+	desc = "A 12.7x40mm ammunition box. Used to refill automated machinegun drum magazines. It comes with a leather strap allowing to wear it on the back."
+	icon_state = "base_type19"
+	overlay_gun_type = "_rounds_type71"
+	overlay_content = "_type71_reg"
+	caliber = "12.7x40mm"
+	default_ammo = /datum/ammo/bullet/rifle/heavy/upp_smartgun
+	bullet_amount = 1000
+	max_bullet_amount = 1000
+
+/obj/item/ammo_box/rounds/smartgun/upp/empty
 	empty = TRUE
