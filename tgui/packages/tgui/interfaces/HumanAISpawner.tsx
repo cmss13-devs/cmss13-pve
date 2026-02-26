@@ -238,7 +238,7 @@ export const HumanAISpawner = (props) => {
                           checked={data.autoClean}
                           onClick={() => act('auto_clean')}
                         >
-                          Toggle Auto-Clean
+                          Auto-Clean
                         </Button.Checkbox>
                         <Slider
                           maxValue={2000}
