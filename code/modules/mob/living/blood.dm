@@ -196,6 +196,8 @@
 	return BLOOD_COLOR_HUMAN
 
 /mob/living/carbon/xenomorph/get_blood_color()
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		return "#8B0000"
 	if(caste && caste.royal_caste)
 		return BLOOD_COLOR_XENO_ROYAL
 	return BLOOD_COLOR_XENO

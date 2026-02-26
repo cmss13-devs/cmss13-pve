@@ -56,6 +56,10 @@
 
 	var/list/uniform_sets = null
 
+	var/ai_disallow_looting = FALSE
+
+	var/ai_civilian = FALSE
+
 
 
 /datum/equipment_preset/New()
@@ -1746,12 +1750,8 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	if(!istype(new_human))
 		return
 	var/obj/item/clothing/under/marine/veteran/canc/uniform = new()
-	var/random_uniform = rand(1,3)
-	switch(random_uniform)
-		if(1)
-			uniform.roll_suit_jacket(new_human)
-		if(2)
-			uniform.roll_suit_sleeves(new_human)
+	if(prob(25))
+		uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 
 /datum/equipment_preset/proc/add_canc_rifle(mob/living/carbon/human/new_human)

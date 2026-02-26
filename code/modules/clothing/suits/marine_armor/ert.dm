@@ -283,6 +283,17 @@
 	var/obj/item/clothing/accessory/upppads/crotch/crotch = new()
 	src.attach_accessory(null, crotch, TRUE)
 
+/obj/item/clothing/suit/marine/faction/UPP/black
+	icon_state = "upp_armor_evil"
+
+/obj/item/clothing/suit/marine/faction/UPP/black/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/legs/black/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+	var/obj/item/clothing/accessory/upppads/crotch/black/crotch = new()
+	src.attach_accessory(null, crotch, TRUE)
+
+
 /obj/item/clothing/suit/marine/smartgunner/upp
 	name = "\improper 6B91-2 UPP armor"
 	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
@@ -351,15 +362,25 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B72-03 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/light/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/UPP/light/standard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
+/obj/item/clothing/suit/marine/faction/UPP/light/black
+	icon_state = "upp_armor_light_evil"
+
+/obj/item/clothing/suit/marine/faction/UPP/light/black/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/legs/black/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 
 /obj/item/clothing/suit/marine/faction/UPP/CANC
 	name = "\improper Type 12 CANC armor"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
 	icon_state = "canc"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
@@ -370,10 +391,11 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	time_to_unequip = 10
 	time_to_equip = 10
-	flags_inventory = null
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_DECORKNEE)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12"
+	actions_types = list()
+	has_light = FALSE
 
 /obj/item/clothing/suit/marine/faction/UPP/CANC/Initialize(mapload)
 	. = ..()

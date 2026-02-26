@@ -579,7 +579,17 @@
 		return NONE
 
 	if(!in_firing_arc(target))
-		to_chat(user, SPAN_WARNING("<b>The target is not within your firing arc!</b>"))
+		if(!owner.one_man_army)
+			to_chat(user, SPAN_WARNING("<b>The target is not within your firing arc!</b>"))
+			return NONE
+		else if(istype(loc, /obj/item/hardpoint/holder/tank_turret))
+			var/obj/item/hardpoint/holder/tank_turret/turret = loc
+			if(!turret)
+				to_chat(user, SPAN_WARNING("<b>Something is wrong!</b>"))
+				return NONE
+			var/rotate_to_dir = get_cardinal_dir(owner.loc, target)
+			turret.user_rotation(user, turning_angle(turret.dir, rotate_to_dir))
+			return NONE
 		return NONE
 
 	return handle_fire(target, user, params)

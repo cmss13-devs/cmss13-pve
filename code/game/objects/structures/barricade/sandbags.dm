@@ -20,10 +20,11 @@
 	if(direction)
 		setDir(direction)
 
-	if(dir == SOUTH)
-		pixel_y = -7
-	else if(dir == NORTH)
-		pixel_y = 7
+	if(has_offset)
+		if(dir == SOUTH)
+			pixel_y = -7
+		else if(dir == NORTH)
+			pixel_y = 7
 
 	. = ..(loc, user)
 
@@ -34,7 +35,7 @@
 	..()
 
 	icon_state = "sandbag[build_stage]"
-	if(dir > 2)
+	if(dir > 2 && has_offset)
 		layer = OBJ_LAYER //This prevents cades from becoming invisible under a north/south facing plasteel cade.
 
 /obj/structure/barricade/sandbags/update_damage_state()

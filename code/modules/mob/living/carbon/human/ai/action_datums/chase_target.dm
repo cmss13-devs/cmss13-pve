@@ -5,6 +5,8 @@
 /datum/ai_action/chase_target/get_weight(datum/human_ai_brain/brain)
 	if(brain.in_cover)
 		return 0
+	if(brain.civilian)
+		return 0
 
 	if(!brain.target_turf)
 		return 0

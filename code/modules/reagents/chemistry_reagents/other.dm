@@ -1105,3 +1105,57 @@
 	chemclass = CHEM_CLASS_SPECIAL
 	properties = list(PROPERTY_TRANSFORMATIVE = 4, PROPERTY_NUTRITIOUS = 3, PROPERTY_HEMOGENIC = 1)
 	flags = REAGENT_SCANNABLE
+
+/datum/reagent/flash_eating
+	name = "Flash Eating Bacteria"
+	id = "fbacteria"
+	description = "Solution of flash eating bacteria that can rapidly dispose of any corpse."
+	color = COLOR_PURPLE
+
+/datum/reagent/flash_eating/reaction_mob(mob/M, method=TOUCH, volume, permeable)
+	if(method == TOUCH && ishuman(M))
+		var/mob/living/carbon/human/human = M
+		for(var/obj/limb/limb in human.limbs)
+			var/obj/effect/xenomorph/acid/acid = new(limb, limb)
+			acid.ticks_left = rand(2, 4)
+
+/datum/reagent/pheromones
+	name = "Compound Purple-3"
+	id = "pheromones"
+	description = "An experimental chemical compound produced by Theta Team of USCM R&D departement. Tricks xenos into thinking you're one of their kind. Supposedly."
+	color = COLOR_PURPLE
+
+/datum/reagent/pheromones/reaction_mob(mob/M, method=TOUCH, volume, permeable)
+	if(method == TOUCH && ishuman(M))
+		var/mob/living/carbon/human/human = M
+		to_chat(human, SPAN_NOTICE("<font color='purple'>Sickly-sweet</font> scent engulfs your entire body..."))
+		for(var/obj/object in human.contents)
+			reaction_obj(object, 1)
+		human.regenerate_icons()
+		if(prob(5))
+			to_chat(human, SPAN_NOTICE("...and you feel extremely sick!"))
+			human.vomit_on_floor()
+
+/datum/reagent/pheromones/reaction_obj(obj/O, volume)
+	ADD_TRAIT(O, TRAIT_PHEROMONES_COVERED, TRAIT_SOURCE_ADMIN)
+	O.color = COLOR_PURPLE
+
+/datum/reagent/lithiumhydride
+	name = "Lithium-hydride"
+	id = "lithiumhydride"
+	description = "A common source of fuel for military-grade ship fusion plants. Normally stored in fine crystalline powder form. Extremely dense and reactive, handle with care."
+	reagent_state = SOLID
+	color = "#B0E0E6" // rgb: 103, 57, 16
+	chemfiresupp = TRUE
+	burncolor = "#6495ED"
+	explosive = TRUE
+	power = 4
+	falloff_modifier = 1
+	chemclass = CHEM_CLASS_UNCOMMON
+	properties = list(PROPERTY_FUELING = 7, PROPERTY_OXIDIZING = 5, PROPERTY_VISCOUS = 4, PROPERTY_CORROSIVE = 2)
+
+/datum/reagent/lithiumhydride/on_mob_life(mob/living/M) // Not a good idea, instantly messes you up from the inside out.
+	. = ..()
+	M.adjust_fire_stacks(max(M.fire_stacks, 15))
+	M.IgniteMob(TRUE)
+	to_chat(M, SPAN_DANGER("It burns! It burns worse than you could ever have imagined!"))

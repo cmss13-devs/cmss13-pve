@@ -6,6 +6,18 @@
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
 
+/datum/equipment_preset/colonist/load_status(mob/living/carbon/human/new_human, client/mob_client)
+	..()
+	if(prob(25))
+		add_survivor_weapon_pistol(new_human)
+	else if(prob(75))
+		add_rebel_ua_rifle(new_human)
+	else
+		add_rebel_ua_shotgun(new_human)
+	var/random_suit = pick(/obj/item/clothing/suit/armor/vest, /obj/item/clothing/suit/armor/vest/ballistic, /obj/item/clothing/suit/marine/guard)
+	if(prob(50))
+		new_human.equip_to_slot_or_del(new random_suit, WEAR_JACKET)
+
 /datum/equipment_preset/colonist/bluecollar
 
 	name = "US Civilian Colonist, Blue-Collar"
@@ -91,6 +103,24 @@
 	name = "TWE Civilian Colonist, Blue-Collar (Miner)"
 	languages = list(LANGUAGE_JAPANESE)
 	ethnicity = JAPANESE_ETHNICITY
+
+/datum/equipment_preset/colonist/miner/chinese
+	name = "Chinese Civilian Colonist, Blue-Collar (Miner)"
+	languages = list(LANGUAGE_CHINESE)
+	ethnicity = CHINESE_ETHNICITY
+
+/datum/equipment_preset/colonist/miner/chinese/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/hardhat(new_human), WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki(new_human), WEAR_BODY)
+	add_worker_uniform(new_human)
+	//jacket
+	add_worker_jacket(new_human)
+	//limbs
+	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/construction
 	name = "US Civilian Colonist, Blue-Collar (Construction)"
@@ -226,6 +256,26 @@
 	name = "TWE Colonist, Blue-Collar (Cook)"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/cook/chinese
+	name = "Chinese Colonist, Blue-Collar (Cook)"
+	ethnicity = CHINESE_ETHNICITY
+	languages = list(LANGUAGE_CHINESE)
+
+/datum/equipment_preset/colonist/cook/chinese/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	add_random_satchel(new_human)
+	//face
+	//uniform
+	var/obj/item/clothing/under/color/white/uniform = new()
+	uniform.roll_suit_jacket(new_human)
+	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
+	//jacket
+	new_human.equip_to_slot_or_del(new/obj/item/clothing/suit/chef/classic, WEAR_JACKET)
+	//limbs
+	add_worker_shoe(new_human)
 
 /datum/equipment_preset/colonist/chef
 	name = "US Civilian Colonist, Blue-Collar (Chef)"
@@ -537,6 +587,12 @@
 	name = "TWE Civilian Doctor, Scrubs"
 	ethnicity = JAPANESE_ETHNICITY
 	languages = list(LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/colonist/doctor/scrubs/chinese
+	name = "Chinese Civilian Doctor, Scrubs"
+	ethnicity = CHINESE_ETHNICITY
+	languages = list(LANGUAGE_CHINESE)
+
 
 /datum/equipment_preset/colonist/admin
 	name = "US Civilian Administrator"
@@ -1114,6 +1170,116 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
 
+/datum/equipment_preset/colonist/security/guard/mute
+	name = "John Mute"
+
+	uses_special_name = TRUE
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/colonist/security/guard/mute/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
+	new_human.gender = MALE
+	new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
+	new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+	new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+	new_human.change_real_name(new_human, "John 'Mute' Smithson")
+
+
+/datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+	add_facewrap(new_human)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/colonist/security/guard/mute
+	name = "John Mute"
+
+	uses_special_name = TRUE
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/colonist/security/guard/mute/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
+	new_human.gender = MALE
+	new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
+	new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+	new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+	new_human.change_real_name(new_human, "John 'Mute' Smithson")
+
+
+/datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "undershirt"
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+	add_facewrap(new_human)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/guard, WEAR_JACKET)
+	//waist
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	add_worker_gloves(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m20a, WEAR_J_STORE)
+
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m20a, WEAR_IN_R_STORE)
+
 /datum/equipment_preset/colonist/security/guard/spanish
 	name = "LatAm Colonial Guard"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
@@ -1426,6 +1592,49 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH)
 
+/datum/equipment_preset/colonist/security/guard/spanish/sleepyjim
+	name = "Sleepy Jim"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
+	uses_special_name = TRUE
+/datum/equipment_preset/colonist/security/guard/spanish/sleepyjim/load_name(mob/living/carbon/human/new_human, randomise, client/mob_client)
+	new_human.gender = MALE
+	new_human.skin_color = pick(45;"Tan 3",10;"Tan 2",15;"Dark 1",10;"Dark 3",10;"Melanated",5;"Pale 3",5;"Pale 2")
+	var/static/list/colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18),"BLUE" = list(29, 51, 65), "GREEN" = list(40, 61, 39), "STEEL" = list(46, 59, 54))
+	var/static/list/hair_colors = list("BLACK" = list(15, 15, 10), "BLACK" = list(15, 15, 10), "BROWN" = list(48, 38, 18), "BROWN" = list(48, 38, 18), "AUBURN" = list(77, 48, 36), "BLONDE" = list(95, 76, 44))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
+	new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
+	new_human.f_style = pick("Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "Shaved", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+	new_human.change_real_name(new_human, "Vito 'Sleepy Jim' Jimenez")
+
+/datum/equipment_preset/colonist/security/guard/spanish/sleepyjim/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/ears/earmuffs, WEAR_L_EAR)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/khaki, WEAR_HEAD)
+	//uniform
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/marine/e2, WEAR_ACCESSORY)
+	//jacket
+	//waist
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian, WEAR_FEET)
+	add_worker_gloves(new_human)
+
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 /datum/equipment_preset/colonist/security/guard/co/brazilian
 	name = "Brazilian Colonial Guard Officer"
 	ethnicity = BRAZILIAN_ETHNICITY
