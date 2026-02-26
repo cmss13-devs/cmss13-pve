@@ -46,3 +46,15 @@
 	owner.move_max_momentum = initial(owner.move_max_momentum)
 	owner.move_momentum_build_factor = initial(owner.move_momentum_build_factor)
 	owner.move_turn_momentum_loss_factor = initial(owner.move_turn_momentum_loss_factor)
+
+/obj/item/hardpoint/locomotion/treads/ridgeway
+	name = "\improper Heavy Treads"
+	desc = "These treads are made of a tougher steel-composite allow and are more durable. However, the extra weight slows the tank down slightly."
+
+	icon_state = "treads_ridgeway"
+	disp_icon = "tank"
+	disp_icon_state = "treads_ridgeway"
+
+	health = 4500
+
+	move_max_momentum = 5 //same top speed, but takes 5 tiles to reach it
