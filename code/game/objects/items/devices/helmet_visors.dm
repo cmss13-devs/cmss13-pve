@@ -481,14 +481,10 @@
 	user.client.color = "#FDE8D9"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = TRUE
-
 
 /obj/item/device/helmet_visor/sight/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
 
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE
