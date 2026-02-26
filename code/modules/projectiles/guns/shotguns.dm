@@ -1503,7 +1503,7 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/caws
 	name = "\improper Type 97 automatic shotgun"
-	desc = "The experimental magazine-fed automatic shotgun of the UPP, designed for extreme close quarters engagements. In comparison to the KS-29/4, the caliber was downgraded to the 12 gauge in order for the weapon to remain controllable during long or short bursts, tho this weapon still remain cubersome and too heavy for average soldier. However, only stupid would deny it's power and bloodlust in spaceships, buildings or even dark caves."
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "caws"
 	item_state = "caws"
@@ -1547,8 +1547,8 @@ can cause issues with ammo types getting mixed up during the burst.
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_3
-	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_3
 
 /obj/item/weapon/gun/rifle/caws/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 26, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
