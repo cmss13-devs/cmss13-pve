@@ -48,10 +48,9 @@
 	if(health <= 0)
 		qdel(src)
 
-/obj/effect/spider/fire_act(exposed_temperature, exposed_volume)
-	if(exposed_temperature > 300)
-		health -= 5
-		healthcheck()
+/obj/effect/spider/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
+	health -= dam
+	healthcheck(src)
 
 /obj/effect/spider/stickyweb
 	icon_state = "stickyweb1"
@@ -197,7 +196,7 @@
 	name = "cocoon"
 	desc = "Something wrapped in silky spider web"
 	icon_state = "cocoon1"
-	health = 60
+	health = 30
 
 /obj/effect/decal/cleanable/spiderling_remains/New()
 	icon_state = pick("cocoon1","cocoon2","cocoon3")

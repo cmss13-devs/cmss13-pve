@@ -133,7 +133,7 @@
 
 	next_move = world.time
 	if(A.Adjacent(src)) // If standing next to the atom clicked.
-		if(get_turf(A) == src.loc)
+		if(get_turf(A) == src.loc || (client && client.prefs && !(client.prefs.toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE)))
 			click_adjacent(A, W, mods)
 			return
 		else

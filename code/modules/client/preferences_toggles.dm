@@ -277,6 +277,7 @@
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_automatic_punctuation'>Toggle Automatic Punctuation</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_ability_deactivation'>Toggle Ability Deactivation</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_clickdrag_override'>Toggle Combat Click-Drag Override</a><br>",
+		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_pb_override'>Toggle Combat Point-Blank Override</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_dualwield'>Toggle Alternate-Fire Dual Wielding</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_middle_mouse_swap_hands'>Toggle Middle Mouse Swapping Hands</a><br>",
 		"<a href='byond://?src=\ref[src];action=proccall;procpath=/client/proc/toggle_vend_item_to_hand'>Toggle Vendors Vending to Hands</a><br>",
@@ -368,9 +369,17 @@
 /client/proc/toggle_clickdrag_override() //Toggle whether mousedown clicks immediately when on disarm or harm intent to prevent click-dragging from 'eating' attacks.
 	prefs.toggle_prefs ^= TOGGLE_COMBAT_CLICKDRAG_OVERRIDE
 	if(prefs.toggle_prefs & TOGGLE_COMBAT_CLICKDRAG_OVERRIDE)
-		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on disarm or harm intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
+		to_chat(src,SPAN_BOLDNOTICE( "Depressing the mouse button on Harm or Disarm intent will now click the target immediately, even if you hold it down -- unless you're click-dragging yourself, an ally, or an object in your inventory."))
 	else
 		to_chat(src,SPAN_BOLDNOTICE( "Click-dragging now blocks clicks from going through."))
+	prefs.save_preferences()
+
+/client/proc/toggle_pb_override() //Toggle gun attacks on an adjacent target go to autofire or PB.
+	prefs.toggle_prefs ^= TOGGLE_COMBAT_POINTBLANK_OVERRIDE
+	if(prefs.toggle_prefs & TOGGLE_COMBAT_POINTBLANK_OVERRIDE)
+		to_chat(src,SPAN_BOLDNOTICE( "Using Harm Intent with a gun on an target you sprite click next to you will now ensure you are autofiring instead of Point-Blanking. Disarm Intent will still have Point-Blanking."))
+	else
+		to_chat(src,SPAN_BOLDNOTICE( "You will point blank targets next to you on sprite click."))
 	prefs.save_preferences()
 
 ///Toggle whether dual-wielding fires both guns at once or swaps between them.

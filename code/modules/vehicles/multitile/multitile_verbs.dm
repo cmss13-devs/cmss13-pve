@@ -96,30 +96,11 @@
 	var/seat = V.get_mob_seat(M)
 	if(!seat)
 		return
-	if(seat != VEHICLE_DRIVER)
+	if(seat == VEHICLE_GUNNER) //Driver and Commander (if present) can control this
 		return
 
 	V.door_locked = !V.door_locked
 	to_chat(M, SPAN_NOTICE("You [V.door_locked ? "lock" : "unlock"] the vehicle doors."))
-
-//switches between SHIFT + Click and Middle Mouse Button Click to fire not selected currently weapon
-/obj/vehicle/multitile/proc/toggle_shift_click()
-	set name = "Toggle Middle/Shift Clicking"
-	set desc = "Toggles between using Middle Mouse Button click and Shift + Click to fire not currently selected weapon if possible."
-	set category = "Vehicle"
-
-	var/obj/vehicle/multitile/V = usr.interactee
-	if(!istype(V))
-		return
-	var/seat
-	for(var/vehicle_seat in V.seats)
-		if(V.seats[vehicle_seat] == usr)
-			seat = vehicle_seat
-			break
-	if(seat == VEHICLE_GUNNER)
-		V.vehicle_flags ^= VEHICLE_TOGGLE_SHIFT_CLICK_GUNNER
-		to_chat(usr, SPAN_NOTICE("You will fire not selected weapon with [(V.vehicle_flags & VEHICLE_TOGGLE_SHIFT_CLICK_GUNNER) ? "Shift + Click" : "Middle Mouse Button click"] now, if possible."))
-	return
 
 //opens vehicle status window with HP and ammo of hardpoints
 /obj/vehicle/multitile/proc/get_status_info()
@@ -229,8 +210,7 @@
 	<font color='#cd6500'><b><i>Driver verbs:</i></b></font><br> 1. <b>\"G: Activate Horn\"</b> - activates vehicle horn. Keep in mind, that vehicle horn is very loud and can be heard from afar by both allies and foes.<br> \
 	2. <b>\"G: Toggle Door Locks\"</b> - toggles vehicle's access restrictions. Crewman, Brig and Command accesses bypass these restrictions.<br> \
 	<font color=\"red\"><b><i>Gunner verbs:</i></b></font><br> 1. <b>\"A: Cycle Active Hardpoint\"</b> - works similarly to one above, except it automatically switches to next hardpoint in a list allowing you to switch faster.<br> \
-	2. <b>\"G: Toggle Middle/Shift Clicking\"</b> - toggles between using <i>Middle Mouse Button</i> click and <i>Shift + Click</i> to fire not currently selected weapon if possible.<br> \
-	3. <b>\"G: Toggle Turret Gyrostabilizer\"</b> - toggles Turret Gyrostabilizer allowing it to keep current direction ignoring hull turning. <i>(Exists only on vehicles with rotating turret, e.g. M34A2 Longstreet Light Tank)</i><br> \
+	2. <b>\"G: Toggle Turret Gyrostabilizer\"</b> - toggles Turret Gyrostabilizer allowing it to keep current direction ignoring hull turning. <i>(Exists only on vehicles with rotating turret, e.g. M34A2 Longstreet Light Tank)</i><br> \
 	<font color='#003300'><b><i>Support Gunner verbs:</i></b></font><br> 1. <b>\"Reload Firing Port Weapon\"</b> - initiates automated reloading process for M56 FPW. Requires a confirmation.<br> \
 	<font color='#cd6500'><b><i>Driver shortcuts:</i></b></font><br> 1. <b>\"CTRL + Click\"</b> - activates vehicle horn.<br> \
 	<font color=\"red\"><b><i>Gunner shortcuts:</i></b></font><br> 1. <b>\"ALT + Click\"</b> - toggles Turret Gyrostabilizer. <i>(Exists only on vehicles with rotating turret, e.g. M34A2 Longstreet Light Tank)</i><br>"
@@ -260,6 +240,14 @@
 	if(!T)
 		return
 	T.toggle_gyro(usr)
+
+	var/obj/item/hardpoint/holder/apc_turret/A = null
+	for(var/obj/item/hardpoint/holder/apc_turret/AT in V.hardpoints)
+		A = AT
+		break
+	if(!A)
+		return
+	A.toggle_gyro(usr)
 
 //single use verb that allows VCs to add a nickname in "" at the end of their vehicle name
 /obj/vehicle/multitile/proc/name_vehicle()
@@ -381,3 +369,4 @@
 			return
 
 	to_chat(user, SPAN_WARNING("Warning. No FPW for [seat] found, tell a dev!"))
+

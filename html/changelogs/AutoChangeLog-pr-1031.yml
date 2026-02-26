@@ -1,0 +1,5 @@
+author: "CactusMouth"
+delete-after: True
+changes:
+  - rscadd: "Adds the Territorial Guardsmen variants."
+  - code_imp: "Territorials found under the GM HAI segment."

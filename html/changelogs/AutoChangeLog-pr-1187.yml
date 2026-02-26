@@ -1,0 +1,4 @@
+author: "MistChristmas"
+delete-after: True
+changes:
+  - rscadd: "Small tweak so CIA and SOF Encryption key gets the SOF channel."

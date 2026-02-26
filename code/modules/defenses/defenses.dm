@@ -177,6 +177,9 @@
 			faction_group = FACTION_LIST_FREELANCER
 		if(FACTION_TWE)
 			faction_group = FACTION_LIST_TWE
+		if(FACTION_MERCENARY)
+			faction_group = FACTION_LIST_MERCENARY
+
 
 
 /obj/structure/machinery/defenses/start_processing()

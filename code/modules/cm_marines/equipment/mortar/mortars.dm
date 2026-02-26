@@ -612,3 +612,20 @@
 	)
 	mortar_type = /obj/structure/mortar/himat
 	has_camo = FALSE
+
+/obj/structure/mortar/rmc
+	name = "\improper L53A1 light mortar"
+	desc = "A manual, crew-operated light mortar system intended to provide mobile fire support for a troop of Royal Marines. Uses an advanced targeting computer. Insert round to fire."
+	icon_state = "mortar_l53a1"
+	travel_time = 3 SECONDS //Light mortar, quicker on target
+	has_camo = FALSE
+	kit_type = /obj/item/mortar_kit/rmc
+
+/obj/item/mortar_kit/rmc
+	name = "\improper L53A1 light mortar portable kit"
+	desc = "A manual, crew-operated light mortar system intended to provide mobile fire support for a troop of Royal Marines. Needs to be set down first"
+	icon_state = "mortar_l53a1_carry"
+	item_state = "mortar_l53a1_carry"
+	flags_equip_slot = SLOT_BACK
+	mortar_type = /obj/structure/mortar/rmc
+	has_camo = FALSE

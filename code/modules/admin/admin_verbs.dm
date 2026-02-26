@@ -39,6 +39,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/check_ckey,
 	/datum/admins/proc/toggleooc, /*toggles ooc on/off for everyone*/
 	/datum/admins/proc/togglelooc, /*toggles ooc on/off for everyone*/
+	/datum/admins/proc/setlooccooldoown,
 	/datum/admins/proc/toggledsay, /*toggles dsay on/off for everyone*/
 	/client/proc/check_antagonists,
 	/client/proc/check_round_status,

@@ -43,7 +43,7 @@
 	sharp = IS_SHARP_ITEM_ACCURATE
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_SMALL
-	force = 25
+	force = MELEE_FORCE_TIER_4
 	throw_speed = SPEED_FAST
 	throw_range = 2
 	throwforce = 40

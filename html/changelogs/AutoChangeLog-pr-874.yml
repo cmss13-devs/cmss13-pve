@@ -1,0 +1,12 @@
+author: "BonniePandora"
+delete-after: True
+changes:
+  - rscadd: "Scout-Sniper (Shooter), Scout-Sniper (AMR Shooter) & Scout-Sniper (Spotter) specialist kits in favour of the old scout, sniper & sniper(AMR) kits"
+  - rscadd: "New attachment for the M49A5, a targeting relay that functions like a mini-scope"
+  - rscadd: "New NVG goggles for the regular & AMR marksman to use"
+  - rscadd: "A SHARP operator specialist kit"
+  - qol: "Scout & spotter binocs were merged into one"
+  - qol: "Last of the item locks on specialist equipment are gone"
+  - balance: "The pyro armor provides a permanent fire immunity when worn. Brute resist may need tweaked downwards to give some manner of weakness"
+  - balance: "The ghillie armor now allows you to move whilst camoflaged & works as a cloak, but you'll still become visible if you fire whilst hidden too frequently. The scout cloak offers similar features but with less efficient stealth performance"
+  - imageadd: "New icons for the AMR, spotter and SHARP operator spec kits"

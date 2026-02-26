@@ -584,6 +584,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		intel_squad.put_marine_in_squad(H) //Found one, finish up
 		return
 
+	if(H.faction == FACTION_TWE)
+		var/datum/squad/rmc_squad = get_squad_by_name(SQUAD_RMC)
+		if(!rmc_squad || !istype(rmc_squad)) //Something went horribly wrong!
+			to_chat(H, "Something went wrong with randomize_squad()! Tell a coder!")
+			return
+		rmc_squad.put_marine_in_squad(H) //Found one, finish up
+		return
+
 	//Deal with non-standards first.
 	//Non-standards are distributed regardless of squad population.
 	//If the number of available positions for the job are more than max_whatever, it will break.

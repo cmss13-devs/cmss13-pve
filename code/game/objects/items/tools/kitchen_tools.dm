@@ -195,7 +195,6 @@
 	icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	flags_atom = FPRINT|CONDUCT
-	force = MELEE_FORCE_NORMAL
 	w_class = SIZE_SMALL
 	throwforce = 8
 	throw_speed = SPEED_VERY_FAST

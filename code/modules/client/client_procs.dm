@@ -46,6 +46,7 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	/client/proc/toggle_ammo_display_type,
 	/client/proc/toggle_ability_deactivation,
 	/client/proc/toggle_clickdrag_override,
+	/client/proc/toggle_pb_override,
 	/client/proc/toggle_dualwield,
 	/client/proc/toggle_middle_mouse_swap_hands,
 	/client/proc/toggle_vend_item_to_hand,
@@ -557,13 +558,6 @@ GLOBAL_LIST_INIT(whitelisted_client_procs, list(
 	GLOB.player_entities["[ckey]"] = P
 	// P.setup_save(ckey)
 	return P
-
-/proc/save_player_entities()
-	for(var/key_ref in GLOB.player_entities)
-		// var/datum/entity/player_entity/P = player_entities["[key_ref]"]
-		// P.save_statistics()
-	log_debug("STATISTICS: Statistics saving complete.")
-	message_admins("STATISTICS: Statistics saving complete.")
 
 /client/proc/clear_chat_spam_mute(warn_level = 1, message = FALSE, increase_warn = FALSE)
 	if(talked > warn_level)

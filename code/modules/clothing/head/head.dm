@@ -384,8 +384,8 @@
 	icon_state = "co_formalhat_black"
 
 /obj/item/clothing/head/cmcap/khaki
-	name = "\improper khaki USCM operations cap"
-	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in desert tan, the letters 'USCM' are boldy placed in black letters on the front."
+	name = "\improper khaki utility cap"
+	desc = "A khaki utility cap"
 	icon_state = "cap_khaki"
 
 /obj/item/clothing/head/cmcap/snow
@@ -402,6 +402,11 @@
 	name = "\improper green USCM operations cap"
 	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in OD green, the letters 'USCM' are boldy placed in black letters on the front."
 	icon_state = "cap_operations"
+
+/obj/item/clothing/head/cmcap/bridge/tan
+	name = "\improper khaki USCM operations cap"
+	desc = "A thicker headcover designed by the Colonial Marines to withstand the elements better out in the field or while performing maintenance. Thicker materials and colored in desert tan, the letters 'USCM' are boldy placed in black letters on the front."
+	icon_state = "cap_khaki"
 
 /obj/item/clothing/head/cmcap/flap
 	name = "\improper jungle expedition cap"
@@ -841,17 +846,19 @@
 	icon_state = "rmc_turban"
 	item_state = "rmc_turban"
 
-/obj/item/clothing/head/beret/royal_marine
+/obj/item/clothing/head/cmcap/royal_marine
 	name = "royal marine beret"
-	desc = "A green beret belonging to the royal marines commando. This beret symbolizes a royal marines ability to fight in any environment, desert, sea, artic or space a royal marine will always be ready."
+	desc = "A green beret worn by the TWE's Royal Marine Commandos. Wear it with pride."
 	icon_state = "rmc_beret"
 	item_state = "rmc_beret"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_marine_hat = HAT_GARB_OVERLAY
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
 	)
-
-/obj/item/clothing/head/beret/royal_marine/team_leader
-	icon_state = "rmc_beret_tl"
-	item_state = "rmc_beret_tl"
+	allowed_hat_items = list(
+		/obj/item/prop/helmetgarb/helmet_nvg = "icon_state",
+		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
+		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
+	)
