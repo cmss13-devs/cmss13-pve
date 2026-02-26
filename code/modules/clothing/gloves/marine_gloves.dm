@@ -48,7 +48,7 @@
 	icon_state = "black"
 	item_state = "bgloves"
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
