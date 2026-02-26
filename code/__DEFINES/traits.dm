@@ -245,6 +245,8 @@
 #define TRAIT_SPEC(spec_type) "t_spec_[spec_type]"
 /// If the mob won't drop items held in face slot when downed
 #define TRAIT_IRON_TEETH "t_iron_teeth"
+/// If the mob won't drop items held in face slot when downed
+#define TRAIT_HUD_SIGHT "t_hud_sight"
 /// When the mob is hiding near a wall
 #define TRAIT_WALL_HIDING "t_wall_hiding"
 
