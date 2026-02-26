@@ -56,7 +56,7 @@
 	unacidable = TRUE
 
 /obj/item/clothing/gloves/marine/specialist/upp
-	name = "\improper B99 defensive gauntlets"
+	name = "\improper 6B99 defensive gauntlets"
 
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"
