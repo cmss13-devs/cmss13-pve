@@ -40,7 +40,7 @@
 	return TRUE
 
 /// Called to see if this visor is a special non-HUD visor
-/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE)
+/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = )
 	if(attached_helmet == user.head && attached_helmet.active_visor == src)
 
 		if(!can_toggle(user))
@@ -481,8 +481,6 @@
 	user.client.color = "#FDE8D9"
 	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE
-
 
 /obj/item/device/helmet_visor/sight/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
@@ -491,4 +489,3 @@
 	user.client.color = initial(user.client.color)
 	user.clear_fullscreen("optic", 0.5 SECONDS)
 	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE
