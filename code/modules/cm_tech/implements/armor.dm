@@ -180,8 +180,8 @@
 	base_icon_state = "armor_plate"
 	overlay_state = "armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE
-	armor_health = 300
-	armor_maxhealth = 300
+	armor_health = 200
+	armor_maxhealth = 200
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe
 	name = "HASP armor plate"
@@ -190,8 +190,8 @@
 	base_icon_state = "rmc_armor_plate"
 	overlay_state = "rmc_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE2
-	armor_health = 350
-	armor_maxhealth = 350
+	armor_health = 250
+	armor_maxhealth = 250
 
 /obj/item/clothing/accessory/health/ceramic_plate/twe/wy
 	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, though this one has been painted white for service with Weyland Yutani's elite tactical teams. gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."
@@ -206,8 +206,8 @@
 	base_icon_state = "ceramic2"
 	overlay_state = "armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE3
-	armor_health = 400
-	armor_maxhealth = 400
+	armor_health = 300
+	armor_maxhealth = 300
 
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"

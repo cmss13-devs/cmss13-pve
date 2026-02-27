@@ -112,7 +112,8 @@
 	chemclass = CHEM_CLASS_BASIC
 	chemfiresupp = TRUE
 	intensitymod = -3
-	properties = list(PROPERTY_HEMOGENIC = 1)
+	properties = list(PROPERTY_HEMOGENIC = 0.1, PROPERTY_ANTITOXIC = 0.1)
+	flags = REAGENT_SCANNABLE
 
 /datum/reagent/water/reaction_turf(turf/T, volume)
 	if(!istype(T)) return
@@ -134,7 +135,7 @@
 
 /datum/reagent/water/on_mob_life(mob/living/M)
 	. = ..()
-	if(ishuman(M) && volume >= 100 && prob(25))
+	if(ishuman(M) && volume >= 200 && prob(25))
 		var/mob/living/carbon/human/human = M
 		human.vomit()
 

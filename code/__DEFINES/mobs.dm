@@ -1,7 +1,7 @@
 /// Multiplier for Stun/KD/KO/etc durations in new backend, due to old system being based on life ticks
 #define GLOBAL_STATUS_MULTIPLIER 20 // each in-code unit is worth 20ds of duration
 
-#define HEALTH_THRESHOLD_DEAD -200
+#define HEALTH_THRESHOLD_DEAD -300
 #define HEALTH_THRESHOLD_CRIT -100
 
 //Some mob defines below

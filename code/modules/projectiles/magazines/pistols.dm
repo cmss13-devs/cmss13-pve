@@ -158,7 +158,7 @@
 /obj/item/ammo_magazine/pistol/vp78/rmc
 	name = "\improper L165A1 Squash-Head magazine (9x19mm)"
 	default_ammo = /datum/ammo/bullet/pistol/squash
-	gun_type = /obj/item/weapon/gun/pistol/vp78/rmc
+	gun_type = /obj/item/weapon/gun/pistol/vp78
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 /obj/item/ammo_magazine/pistol/vp78/toxin

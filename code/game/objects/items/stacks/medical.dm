@@ -58,8 +58,8 @@
 	desc = "Some sterile gauze with hemostatic to wrap around bloody stumps and lacerations."
 	icon_state = "brutepack"
 	heal_brute = 5
-	amount = 15
-	max_amount = 15
+	amount = 20
+	max_amount = 20
 
 	stack_id = "bruise pack"
 
@@ -139,8 +139,8 @@
 	singular_name = "ointment"
 	icon_state = "ointment"
 	heal_burn = 5
-	amount = 15
-	max_amount = 15
+	amount = 20
+	max_amount = 20
 
 	stack_id = "ointment"
 
@@ -186,8 +186,8 @@
 	desc = "A trauma kit for severe injuries."
 	icon_state = "traumakit"
 	heal_brute = 12
-	amount = 10
-	max_amount = 10
+	amount = 20
+	max_amount = 20
 
 	stack_id = "advanced bruise pack"
 
@@ -315,8 +315,8 @@
 	desc = "A treatment kit for severe burns."
 	icon_state = "burnkit"
 	heal_burn = 12
-	amount = 10
-	max_amount = 10
+	amount = 20
+	max_amount = 20
 
 	stack_id = "burn kit"
 
@@ -392,8 +392,8 @@
 	singular_name = "medical splint"
 	desc = "A collection of different splints and securing gauze. What, did you think we only broke legs out here?"
 	icon_state = "splint"
-	amount = 5
-	max_amount = 5
+	amount = 10
+	max_amount = 10
 	stack_id = "splint"
 
 	var/indestructible_splints = FALSE
