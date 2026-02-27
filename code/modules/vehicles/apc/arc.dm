@@ -11,7 +11,7 @@
 	bound_width = 96
 	bound_height = 96
 
-	interior_map = /datum/map_template/interior/arc
+	interior_map = /datum/map_template/interior/arc_apc
 
 
 	passengers_slots = 9

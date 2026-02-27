@@ -4,36 +4,7 @@
 	opacity = 0
 	},
 /area/space)
-"q" = (
-/obj/structure/prop/vehicle/arc{
-	layer = 2.01;
-	mouse_opacity = 0
-	},
-/turf/closed/void{
-	opacity = 0
-	},
-/area/space)
-"r" = (
-/obj/structure/phone_base{
-	name = "ARC reciever";
-	phone_category = "Vehicles";
-	phone_id = "M540 Armoured Recon Carrier";
-	pixel_x = -13;
-	pixel_y = 15;
-	layer = 2.9
-	},
-/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
-	dir = 4
-	},
-/obj/structure/gun_rack/arc{
-	layer = 2.9;
-	density = 0;
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/turf/open/floor/almayer,
-/area/interior/vehicle/arc)
-"G" = (
+"c" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
 	dir = 1
@@ -44,22 +15,16 @@
 	},
 /turf/open/floor,
 /area/interior/vehicle/arc)
-"H" = (
-/obj/structure/bed/chair/vehicle{
-	dir = 4;
-	layer = 3.1;
-	pixel_y = 5
+"l" = (
+/obj/structure/prop/vehicle/arc{
+	layer = 2.01;
+	mouse_opacity = 0
 	},
-/obj/structure/machinery/prop/almayer/CICmap/arc{
-	pixel_x = 16
+/turf/closed/void{
+	opacity = 0
 	},
-/obj/structure/machinery/computer/overwatch/almayer/arc{
-	pixel_y = 5;
-	pixel_x = 20
-	},
-/turf/open/floor/almayer,
-/area/interior/vehicle/arc)
-"I" = (
+/area/space)
+"q" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
@@ -76,7 +41,28 @@
 	},
 /turf/open/floor,
 /area/interior/vehicle/arc)
-"N" = (
+"v" = (
+/obj/structure/phone_base{
+	name = "ARC reciever";
+	phone_category = "Vehicles";
+	phone_id = "M540 Armoured Recon Carrier";
+	pixel_x = -13;
+	pixel_y = 15;
+	layer = 2.9
+	},
+/obj/effect/landmark/interior/spawn/vehicle_driver_seat/armor{
+	dir = 4
+	},
+/obj/structure/gun_rack/apc/frontal{
+	desc = "A small compartment that stores ammunition for the ARC's 'Bleihagel RE-RE850 Frontal Rotary Cannon'.";
+	pixel_y = 6;
+	pixel_x = 2;
+	layer = 2.9;
+	density = 0
+	},
+/turf/open/floor/almayer,
+/area/interior/vehicle/arc)
+"A" = (
 /obj/effect/landmark/interior/spawn/entrance{
 	alpha = 50;
 	exit_type = /obj/structure/interior_exit/vehicle/arc;
@@ -86,7 +72,22 @@
 	},
 /turf/open/floor,
 /area/interior/vehicle/arc)
-"X" = (
+"S" = (
+/obj/structure/bed/chair/vehicle{
+	dir = 4;
+	layer = 3.1;
+	pixel_y = 5
+	},
+/obj/structure/machinery/prop/almayer/CICmap/arc{
+	pixel_x = 16
+	},
+/obj/structure/machinery/computer/overwatch/almayer/arc{
+	pixel_y = 5;
+	pixel_x = 20
+	},
+/turf/open/floor/almayer,
+/area/interior/vehicle/arc)
+"V" = (
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8
 	},
@@ -103,24 +104,24 @@
 a
 a
 a
-q
+l
 "}
 (2,1,1) = {"
 a
-X
-G
+V
+c
 a
 "}
 (3,1,1) = {"
 a
-I
-N
+q
+A
 a
 "}
 (4,1,1) = {"
 a
-r
-H
+v
+S
 a
 "}
 (5,1,1) = {"

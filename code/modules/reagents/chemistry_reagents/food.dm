@@ -14,7 +14,7 @@
 	nutriment_factor = 15 * REAGENTS_METABOLISM
 	color = "#664330" // rgb: 102, 67, 48
 	chemclass = CHEM_CLASS_NONE
-	properties = list(PROPERTY_NEOGENETIC = 0.2, PROPERTY_NUTRITIOUS = 2, PROPERTY_HEMOGENIC = 0.1)
+	properties = list(PROPERTY_NEOGENETIC = 0.1, PROPERTY_ANTICORROSIVE = 0.1, PROPERTY_NUTRITIOUS = 2, PROPERTY_HEMOGENIC = 0.1)
 	flags = REAGENT_SCANNABLE
 
 /datum/reagent/nutriment/egg

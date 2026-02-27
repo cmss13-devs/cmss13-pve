@@ -6,7 +6,7 @@
 
 //====== 10X24 Pulse Rifle
 /datum/ammo/bullet/rifle
-	name = " Light-Explosive 10x24 bullet"
+	name = "Light-Explosive 10x24 bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 50
 	penetration = ARMOR_PENETRATION_TIER_2

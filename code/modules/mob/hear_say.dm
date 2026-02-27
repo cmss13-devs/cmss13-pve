@@ -31,10 +31,13 @@
 		style = language.color
 
 	var/speaker_name = speaker.name
+	var/accent_icon = get_accent_icon() // RU PVE ADDITION
+
 	if(ishuman(speaker) && ishuman(src))
 		var/mob/living/carbon/human/H = speaker
 		speaker_name = H.GetVoice()
 		comm_paygrade = H.get_paygrade()
+		accent_icon = H.get_accent_icon(language) // RU PVE ADDITION
 
 	if(italics)
 		message = "<i>[message]</i>"
@@ -44,9 +47,11 @@
 		if(speaker == src)
 			to_chat(src, SPAN_WARNING("You cannot hear yourself speak!"))
 		else
-			to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[comm_paygrade][speaker_name]</span>[alt_name] talks but you cannot hear them."))
+//			to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[comm_paygrade][speaker_name]</span>[alt_name] talks but you cannot hear them."))
+			to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[accent_icon][comm_paygrade][speaker_name]</span>[alt_name] talks but you cannot hear them.")) // RU PVE EDIT
 	else
-		to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[comm_paygrade][speaker_name]</span>[alt_name] [verb], <span class='[style]'>\"[message]\"</span>"))
+//		to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[comm_paygrade][speaker_name]</span>[alt_name] [verb], <span class='[style]'>\"[message]\"</span>"))
+		to_chat(src, SPAN_LOCALSAY("<span class='prefix'>[accent_icon][comm_paygrade][speaker_name]</span>[alt_name] [verb], <span class='[style]'>\"[message]\"</span>")) // RU PVE EDIT
 		if (speech_sound && (get_dist(speaker, src) <= GLOB.world_view_size && src.z == speaker.z))
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
 			playsound_client(src.client, speech_sound, source, sound_vol, GET_RANDOM_FREQ)
@@ -66,7 +71,7 @@
 	var/comm_paygrade = ""
 
 	var/track = null
-
+	var/accent_icon = get_accent_icon() // RU PVE ADDITION
 	var/style = "body"
 
 	//non-verbal languages are garbled if you can't see the speaker. Yes, this includes if they are inside a closet.
@@ -98,13 +103,14 @@
 	if(!no_paygrade && istype(speaker, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = speaker
 		comm_paygrade = H.get_paygrade()
+		accent_icon = H.get_accent_icon(language) // RU PVE ADDITION
 		if(H.voice)
 			speaker_name = H.voice
-
 
 	if(hard_to_hear)
 		speaker_name = "unknown"
 		comm_paygrade = ""
+		accent_icon = "" // RU PVE ADDITION
 
 	if(istype(src, /mob/dead/observer))
 		if(speaker_name != speaker.real_name) //Announce computer and various stuff that broadcasts doesn't use it's real name but AI's can't pretend to be other mobs.
@@ -125,14 +131,18 @@
 			to_chat(src, SPAN_WARNING("You feel your headset vibrate but can hear nothing from it!"), type = MESSAGE_TYPE_RADIO)
 	else if(track)
 		if(!command)
-			to_chat(src, "[part_a][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO)
+//			to_chat(src, "[part_a][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO)
+			to_chat(src, "[part_a][accent_icon][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO) // RU PVE EDIT
 		else
-			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO)
+//			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO)
+			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][accent_icon][comm_paygrade][track][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO) // RU PVE EDIT
 	else
 		if(!command)
-			to_chat(src, "[part_a][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO)
+//			to_chat(src, "[part_a][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO)
+			to_chat(src, "[part_a][accent_icon][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span>", type = MESSAGE_TYPE_RADIO) // RU PVE EDIT
 		else
-			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO)
+//			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO)
+			to_chat(src, "<span class=\"[fontsize_style]\">[part_a][accent_icon][comm_paygrade][speaker_name][part_b][verb], <span class=\"[style]\">\"[message]\"</span></span></span></span>", type = MESSAGE_TYPE_RADIO) // RU PVE EDIT
 
 /mob/proc/hear_signlang(message, verb = "gestures", datum/language/language, mob/speaker = null)
 	var/comm_paygrade = ""

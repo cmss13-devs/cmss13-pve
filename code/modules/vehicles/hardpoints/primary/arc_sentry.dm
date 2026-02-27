@@ -10,7 +10,7 @@
 	activation_sounds = list('sound/weapons/gun_m60.ogg')
 
 	damage_multiplier = 0.1
-	health = 125
+	health = 300
 
 	origins = list(0, 0)
 
@@ -39,36 +39,38 @@
 	/// The currently focused sentry target
 	var/atom/movable/sentry_target = null
 	/// The range that this turret can shoot at the furthest
-	var/turret_range = 5
+	var/turret_range = 10
 	/// What factions this sentry is aligned with
 	var/faction_group = FACTION_LIST_UA
+	/// If the turret is currently active
+	var/active = FALSE
 
 /obj/item/hardpoint/primary/arc_sentry/on_install(obj/vehicle/multitile/vehicle)
 	. = ..()
-	RegisterSignal(owner, COMSIG_ARC_ANTENNA_TOGGLED, PROC_REF(toggle_processing))
-	toggle_processing() // We can't know that the antenna is in the same position as when the gun was removed
 
 /obj/item/hardpoint/primary/arc_sentry/on_uninstall(obj/vehicle/multitile/vehicle)
 	. = ..()
-	UnregisterSignal(owner, COMSIG_ARC_ANTENNA_TOGGLED)
 	STOP_PROCESSING(SSfastobj, src)
+	active = FALSE
 
 /obj/item/hardpoint/primary/arc_sentry/Destroy()
 	STOP_PROCESSING(SSfastobj, src)
 	sentry_target = null
 	return ..()
 
-/obj/item/hardpoint/primary/arc_sentry/proc/toggle_processing()
-	SIGNAL_HANDLER
+/obj/item/hardpoint/primary/arc_sentry/proc/toggle_active(mob/user)
 	if(!owner)
 		return
 
-	var/obj/vehicle/multitile/arc/vehicle = owner
-	if(vehicle.antenna_deployed)
+	active = !active
+	if(active)
 		START_PROCESSING(SSfastobj, src)
-
+		if(user)
+			to_chat(user, SPAN_NOTICE("You activate [src]."))
 	else
 		STOP_PROCESSING(SSfastobj, src)
+		if(user)
+			to_chat(user, SPAN_NOTICE("You deactivate [src]."))
 
 /obj/item/hardpoint/primary/arc_sentry/process()
 	for(var/mob/living/in_range_mob in range(turret_range, owner))

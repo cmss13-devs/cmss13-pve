@@ -1,6 +1,7 @@
 /datum/origin
 	var/name = ORIGIN_BASE
 	var/desc = "You were born somewhere, someplace. The area is known for doing things, you think."
+	var/tag_icon = "" // RU PVE ADDITION
 
 /datum/origin/proc/generate_human_name(gender = MALE)
 	return pick(gender == MALE ? GLOB.first_names_male : GLOB.first_names_female) + " " + pick(GLOB.last_names)

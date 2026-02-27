@@ -50,6 +50,7 @@
 	var/origin = ""
 	var/personal_faction = ""
 	var/religion = ""
+	var/accent_prefix = "" // RU PVE ADDITION
 
 	//Equipment slots
 	var/obj/item/clothing/suit/wear_suit = null

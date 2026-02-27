@@ -42,6 +42,10 @@
 	name = "ARC"
 	interior_id = "arc"
 
+/datum/map_template/interior/arc_apc
+	name = "ARC_APC"
+	interior_id = "arc_apc"
+
 /datum/map_template/interior/tank
 	name = "Tank"
 	interior_id = "tank"

@@ -11,6 +11,7 @@
 	damage = 75
 	penetration = ARMOR_PENETRATION_TIER_5
 	accuracy = HIT_ACCURACY_TIER_2
+	effective_range_max = 5
 	shell_casing = /obj/effect/decal/ammo_casing
 
 /datum/ammo/bullet/revolver/on_hit_mob(mob/entity, obj/projectile/bullet)
@@ -25,12 +26,14 @@
 	shrapnel_chance = 0
 	damage_falloff = 0
 	accurate_range = 12
+	effective_range_max = 5
 	accuracy = HIT_ACCURACY_MULT_TIER_6
 
 /datum/ammo/bullet/revolver/heavy
 	name = "heavy revolver bullet"
 
 	damage = 80
+	effective_range_max = 5
 	penetration = ARMOR_PENETRATION_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
 
@@ -41,6 +44,7 @@
 /datum/ammo/bullet/revolver/incendiary
 	name = "incendiary revolver bullet"
 	damage = 75
+	effective_range_max = 5
 
 /datum/ammo/bullet/revolver/incendiary/set_bullet_traits()
 	..()
@@ -70,6 +74,7 @@
 /datum/ammo/bullet/revolver/penetrating
 	name = "wall-penetrating revolver bullet"
 	shrapnel_chance = 0
+	effective_range_max = 5
 
 	penetration = ARMOR_PENETRATION_TIER_10
 
@@ -82,8 +87,9 @@
 /datum/ammo/bullet/revolver/upp
 	name = "heavy revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	penetration = ARMOR_PENETRATION_TIER_1
-	damage = 70
+	penetration = ARMOR_PENETRATION_TIER_4
+	effective_range_max = 5
+	damage = 90
 
 
 /datum/ammo/bullet/revolver/upp/shrapnel
@@ -100,6 +106,7 @@
 	penetration = -ARMOR_PENETRATION_TIER_1
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
 	shrapnel_chance = 100
+	effective_range_max = 5
 	shrapnel_type = /obj/item/shard/shrapnel/upp
 	//roughly 90 or so damage with the additional shrapnel, around 130 in total with primary round
 
@@ -115,12 +122,14 @@
 	penetration = -ARMOR_PENETRATION_TIER_2
 	scatter = SCATTER_AMOUNT_TIER_1
 	bonus_projectiles_amount = 0
+	effective_range_max = 5
 	shrapnel_type = /obj/item/shard/shrapnel/upp/bits
 
 /datum/ammo/bullet/revolver/small
 	name = "small revolver bullet"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
 	damage = 50
+	effective_range_max = 5
 	penetration = ARMOR_PENETRATION_TIER_3
 	shell_speed = AMMO_SPEED_TIER_5
 
@@ -129,6 +138,7 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 
 	damage = 75
+	effective_range_max = 5
 	penetration = -ARMOR_PENETRATION_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
@@ -136,6 +146,7 @@
 	name = ".454 heavy revolver bullet"
 
 	damage = 130
+	effective_range_max = 5
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_5
@@ -181,6 +192,7 @@
 /datum/ammo/bullet/revolver/webley //Mateba round without the knockdown.
 	name = ".455 Webley bullet"
 	damage = 60
+	effective_range_max = 5
 	damage_var_low = PROJECTILE_VARIANCE_TIER_8
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
 	penetration = ARMOR_PENETRATION_TIER_2

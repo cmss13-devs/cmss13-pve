@@ -1,6 +1,7 @@
 /datum/origin/twe
 	name = ORIGIN_TWE
 	desc = "You were born somewhere in the Three World Empire."
+	tag_icon = "twe" // RU PVE ADDITION
 
 /datum/origin/twe/blighty
 	name = ORIGIN_TWE_BLIGHTY
