@@ -1,36 +1,6 @@
 /datum/human_ai_equipment_preset/upp
 	faction = FACTION_UPP
 
-/datum/human_ai_equipment_preset/upp/militia
-	name = "UPP People's Territorial Guardsman"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
-	path = /datum/equipment_preset/upp/militia
-
-/datum/human_ai_equipment_preset/upp/militia/at
-	name = "UPP People's Territorial Guardsman Anti-Tank"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
-	path = /datum/equipment_preset/upp/militia/at
-
-/datum/human_ai_equipment_preset/upp/militia/medic
-	name = "UPP People's Territorial Guardsman Sanitar"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic medical supplies and training."
-	path = /datum/equipment_preset/upp/militia/medic
-
-/datum/human_ai_equipment_preset/upp/militia/tech
-	name = "UPP People's Territorial Guardsman Technician"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is equipped with some more basic technican supplies and training."
-	path = /datum/equipment_preset/upp/militia/tech
-
-/datum/human_ai_equipment_preset/upp/militia/nco
-	name = "UPP People's Territorial Guardsman Sergeant"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one leads the entire bundle of disorganised troops into battle."
-	path = /datum/equipment_preset/upp/militia/nco
-
-/datum/human_ai_equipment_preset/upp/militia/officer
-	name = "UPP People's Territorial Guardsman Officer"
-	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one manages the whole operation around the UPP Territorial Guard."
-	path = /datum/equipment_preset/upp/militia/officer
-
 /datum/human_ai_equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman"
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces."
@@ -56,10 +26,10 @@
 	desc = "UPP RPG armed soldier, otherwise similarly equipped as standard"
 	path = /datum/equipment_preset/upp/rifleman/at
 
-/datum/human_ai_equipment_preset/upp/combat_synth
-	name = "UPP Synthetic Commando"
-	desc = "A strong commando synthetic equipped with several weapons. Its durability and firepower lets it take on multiple marines at once."
-	path = /datum/equipment_preset/upp/synth/commando
+/datum/human_ai_equipment_preset/upp/rifleman/heavy
+	name = "UPP Squad Heavy Rifleman"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/heavy
 
 /datum/human_ai_equipment_preset/upp/medic
 	name = "UPP Squad Sanitar"
@@ -78,9 +48,24 @@
 	desc = "The leader of a UPP Platoon. Functionally very similar to squad riflemen."
 	path = /datum/equipment_preset/upp/navallead
 
+/datum/human_ai_equipment_preset/upp/rifleman_heavy
+	name = "UPP Squad Heavy Rifleman"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/heavy
+
+/datum/human_ai_equipment_preset/upp/juggernaut
+	name = "UPP Squad Juggernaut"
+	desc = "A heavily armored UPP soldier equipped with 6B99-4 heavy armor and RVS-37 automated machinegun. Infantry's death incarnate on the battlefield.. Unless you have a grenade or two. (OH NO, IT'S JOHN UPP!! RUN!!)"
+	path = /datum/equipment_preset/upp/juggernaut
+
+/datum/human_ai_equipment_preset/upp/breacher_heavy
+	name = "UPP Squad Heavy Breacher"
+	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 97 automatic shotgun. EXTREMELY DANGEROUS AT CLOSE RANGES. He WILL wipe 70% of the players in the squad."
+	path = /datum/equipment_preset/upp/breacher
+
 /datum/human_ai_equipment_preset/upp/military_police
 	name = "UPP - Military Police"
-	desc = "UPP - Military Police, armed with a T73."
+	desc = "UPP - Military Police, armed with a Type73."
 	path = /datum/equipment_preset/upp/military_police
 
 /datum/human_ai_equipment_preset/upp/officer
@@ -157,6 +142,31 @@
 	name = "UPP - Military Doctor"
 	desc = "UPP military doctor, unarmed but still a member of the military"
 	path = /datum/equipment_preset/upp/mildoctor
+
+/datum/human_ai_equipment_preset/upp/sof
+	name = "UPP - SOF Rifleman"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and Type-73. Main force."
+	path = /datum/equipment_preset/upp/sof
+
+/datum/human_ai_equipment_preset/upp/sof_sapper
+	name = "UPP - SOF Sapper"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Engineering force."
+	path = /datum/equipment_preset/upp/sof/sapper
+
+/datum/human_ai_equipment_preset/upp/sof_medic
+	name = "UPP - SOF Medic"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047. Medical support."
+	path = /datum/equipment_preset/upp/sof/medic
+
+/datum/human_ai_equipment_preset/upp/sof_breacher
+	name = "UPP - SOF Breacher"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with KS-29/4 on buckshots and slugs, and Type-73. Assault force, and very deadly at close quarters."
+	path = /datum/equipment_preset/upp/sof/breacher
+
+/datum/human_ai_equipment_preset/upp/sof_squadlead
+	name = "UPP - SOF Squad Sergeant"
+	desc = "UPP Space Operating Force. These guys are equipped with CCC5-L Compression suits, and armed with AK-4047 and ZhNK-72. Red beret, commanding other units."
+	path = /datum/equipment_preset/upp/sof/squadlead
 
 //Colonists
 

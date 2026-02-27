@@ -62,8 +62,6 @@ United States Colonial Marines
 		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
 	)
 
-
-
 /datum/skills/specialist
 	name = "Squad Weapons Specialist"
 	skills = list(

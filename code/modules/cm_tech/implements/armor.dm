@@ -202,12 +202,17 @@
 /obj/item/clothing/accessory/health/ceramic_plate/upp
 	name = "TNAP armor plate"
 	desc = "Titanium Nanocrystalline Alloy Plate is a modular clip-on armor plate, designed to provide additional protection for UPP combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate can stop almost any firearm rounds and have highest protection."
-	icon_state = "ceramic2_100"
-	base_icon_state = "ceramic2"
-	overlay_state = "armor_plate_100"
+	icon_state = "upp_armor_plate_100"
+	base_icon_state = "upp_armor_plate"
+	overlay_state = "upp_armor_plate_100"
 	slot = ACCESSORY_SLOT_PLATE3
 	armor_health = 300
 	armor_maxhealth = 300
+
+/obj/item/clothing/accessory/health/ceramic_plate/upp/sof
+	icon_state = "upp_sof_armor_plate_100"
+	base_icon_state = "upp_sof_armor_plate"
+	overlay_state = "upp_sof_armor_plate_100"
 
 /obj/item/clothing/accessory/health/scrap
 	name = "scrap metal"

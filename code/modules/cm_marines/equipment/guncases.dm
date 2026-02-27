@@ -1240,3 +1240,46 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/box/guncase/heavy/caws
+	name = "\improper Type 97 Automatic Shotgun case"
+	desc = "A case for storing a Type 97 automatic shotgun."
+	icon_state = "uppcawscase"
+	storage_slots = 10
+	can_hold = list(/obj/item/weapon/gun/rifle/caws, /obj/item/ammo_magazine/rifle/caws)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/caws/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/caws/stored(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+	new /obj/item/ammo_magazine/rifle/caws(src)
+
+/obj/item/storage/box/guncase/heavy/caws/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcase_lid_open")
+	else
+		overlays += image(icon, "uppcawscase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/rifle/caws) in contents)
+		overlays += image(icon, "+caws")
+	var/mag_tally = 0
+	for(var/obj/item/ammo_magazine/rifle/caws/mag in contents)
+		mag_tally++
+		if(mag_tally >= 2)
+			if(istype(mag, /obj/item/ammo_magazine/rifle/caws))
+				var/image/source_image = image(icon, "+caws_mag")
+				source_image.pixel_x = 0
+				overlays += source_image
+		if(mag_tally > 5)
+			if(istype(mag, /obj/item/ammo_magazine/rifle/caws))
+				var/image/source_image = image(icon, "+caws_mag")
+				source_image.pixel_x = 4
+				overlays += source_image

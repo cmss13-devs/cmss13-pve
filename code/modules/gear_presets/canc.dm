@@ -42,11 +42,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
 	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/t73, WEAR_IN_R_STORE)
 	add_canc_rifle(new_human)
@@ -84,7 +85,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e5(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
@@ -120,7 +121,7 @@
 			add_facewrap(new_human)
 	//head
 	if(prob(50))
-		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/uppcap/boonie/canc)
+		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/cmcap/upp/boonie/canc)
 		new_human.equip_to_slot_or_del(new coolhat(new_human), WEAR_HEAD)
 	var/coolhairdo = pick("Bald", "Shaved Head", "Shaved Balding", "Shaved Mohawk", "Shaved Mohawk 2")
 	new_human.h_style = coolhairdo
@@ -132,7 +133,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lw317/dmr(new_human), WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
@@ -170,11 +171,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_BELT)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/canc(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff/standard_fmj, WEAR_J_STORE)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/canc(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
@@ -211,7 +212,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/upp, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at, WEAR_IN_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/upp/at, WEAR_IN_J_STORE)
@@ -234,18 +235,20 @@
 	name = "CANC Rebel, Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = "Medic"
+	skills = /datum/skills/nurse // it buggered me they have medics.. with no medic skill. At least they're now just nurses with guns
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/canc/medic/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	if(new_human.disabilities & NEARSIGHTED)
@@ -267,7 +270,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e2(new_human), WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/upp/full, WEAR_WAIST)
 	//limbs
@@ -278,9 +281,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/tricordrazine, WEAR_IN_L_STORE)
-	add_canc_rifle(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/glass/bottle/tricordrazine, WEAR_IN_L_STORE)
+	add_canc_rifle_medic(new_human)
 	if(prob(30))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
@@ -302,7 +305,7 @@
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
 	var/random_civilian_shoe = rand(1,7)
 	switch(random_civilian_shoe)
@@ -340,7 +343,7 @@
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/canc(new_human), WEAR_JACKET)
 	//limbs
 	var/random_civilian_shoe = rand(1,7)
 	switch(random_civilian_shoe)

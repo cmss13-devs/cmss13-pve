@@ -203,19 +203,32 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 		/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
 	)
 
+/obj/effect/essentials_set/medic/upp
+	spawned_gear_list = list(
+		/obj/item/storage/firstaid/softpack/adv/upp,
+		/obj/item/storage/firstaid/softpack/adv/upp,
+		/obj/item/device/healthanalyzer/soul,
+		/obj/item/roller,
+		/obj/item/tool/surgery/surgical_line,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/storage/surgical_case/regular,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/accessory/armband/med,
+		/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
+		/obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated,
+	)
+
 GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
-		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic/upp, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
 		list("Medical Satchel", 0, /obj/item/storage/backpack/lightpack/upp, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("Type 41 Ammo Load Rig", 0, /obj/item/storage/belt/marine/upp, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("Type 47 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/type47, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("Type 41 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Type 41 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/upp/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -226,11 +239,10 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_medic, list(
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/upp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/medic/upp

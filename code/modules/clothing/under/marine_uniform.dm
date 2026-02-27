@@ -569,7 +569,7 @@
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
 	)
 
-/obj/item/clothing/under/marine/veteran/UPP
+/obj/item/clothing/under/marine/veteran/upp
 	name = "\improper UPP fatigues"
 	desc = "It's a set of standard-issue UPP Armed Collective combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform"
@@ -579,14 +579,14 @@
 	sensor_faction = FACTION_UPP
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
 
-/obj/item/clothing/under/marine/veteran/UPP/boiler
+/obj/item/clothing/under/marine/veteran/upp/boiler
 	name = "\improper UPP operations boilersuit"
 	desc = "It's a deep green boilersuit common with UPP Armed Collective personnel outside of combat zones but still featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_boiler"
 	worn_state = "upp_boiler"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/pap
+/obj/item/clothing/under/marine/veteran/upp/pap
 	name = "\improper PaP service uniform"
 	desc = "A pair of blue-grey slacks coupled with a blue shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_pap"
@@ -595,14 +595,14 @@
 	sensor_faction = FACTION_LIST_UPP_COLONY
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/service
+/obj/item/clothing/under/marine/veteran/upp/service
 	name = "\improper UPP service uniform"
 	desc = "A pair of brown-green slacks coupled with a green shirt, featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
 	icon_state = "upp_uniform_service"
 	worn_state = "upp_uniform_service"
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 
-/obj/item/clothing/under/marine/veteran/UPP/naval
+/obj/item/clothing/under/marine/veteran/upp/naval
 	name = "\improper UPP naval infantry uniform"
 	flags_armor_protection = BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	desc = "A pair of black bell bottom naval pants matched with a blue telnyashka."
@@ -610,7 +610,6 @@
 	worn_state = "upp_uniform_naval"
 	flags_jumpsuit = UNIFORM_SLEEVE_CUT
 	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_HOLSTER)
-
 
 /obj/item/clothing/under/marine/veteran/canc
 	name = "\improper CANC fatigues"
@@ -622,6 +621,30 @@
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_CANC
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+
+// UPP Army / Territorial Guard
+
+/obj/item/clothing/under/marine/veteran/upp/army
+	name = "\improper UPP army jungle fatigues"
+	desc =  "It's a set of standard-issue UPP Armed Collective combat fatigues with prolonged coat featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics. This particular set sports the jungle pattern of the UPP Army uniform."
+	icon_state = "upp_army_green_uniform"
+	worn_state = "upp_army_green_uniform"
+	suit_restricted = FALSE
+
+/obj/item/clothing/under/marine/veteran/upp/army/alt
+	name = "\improper UPP army fatigues"
+	desc = "It's a set of standard-issue UPP Armed Collective combat fatigues with prolonged coat featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics. This particular set sports the standard pattern of the UPP Army uniform."
+	icon_state = "upp_army_yellow_uniform"
+	worn_state = "upp_army_yellow_uniform"
+
+// UPP SOF
+
+/obj/item/clothing/under/marine/veteran/upp/sof
+	name = "\improper CCC5-L compression undersuit"
+	desc = "A temperature-regulating pressure suit forming the base layer of the CCC5-L system. It provides compression support, limited vacuum resistance, moisture-wicking properties, and NBC protection to sustain operators in hazardous conditions."
+	icon_state = "sof_uniform"
+	worn_state = "sof_uniform"
+	flags_jumpsuit = FALSE
 
 //=========================//Freelancer\\================================\\
 

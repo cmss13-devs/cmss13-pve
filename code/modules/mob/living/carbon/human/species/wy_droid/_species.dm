@@ -46,6 +46,7 @@
 /datum/species/synthetic/colonial/wy_droid/handle_post_spawn(mob/living/carbon/human/droid)
 	. = ..()
 	give_action(droid, /datum/action/droid_emote_panel)
+	droid.AddComponent(/datum/component/footstep, 4, 25, 11, 2, "heavy_jackboot")
 
 /datum/species/synthetic/colonial/wy_droid/open_emote_panel()
 	var/datum/droid_emote_panel/ui = new emote_panel_type(usr)

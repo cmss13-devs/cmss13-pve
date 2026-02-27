@@ -171,7 +171,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.2, PROPERTY_HEPATOPEUTIC = 0.2, PROPERTY_ANTIHALLUCINOGENIC = 2)
+	properties = list(PROPERTY_ANTITOXIC = 2, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_ANTIHALLUCINOGENIC = 2)
 
 /datum/reagent/medical/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
@@ -250,7 +250,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 0.2)
+	properties = list(PROPERTY_NEUROPEUTIC = 0.25)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -262,7 +262,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 0.2)
+	properties = list(PROPERTY_OCULOPEUTIC = 0.25)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
@@ -272,9 +272,9 @@
 	color = "#403142" // rgb: 64, 49, 66
 	overdose = LOWH_REAGENTS_OVERDOSE
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
-	custom_metabolism = AMOUNT_PER_TIME(1, 180 SECONDS)
+	custom_metabolism = AMOUNT_PER_TIME(1, 120 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
+	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
 
 /datum/reagent/medical/bicaridine // yes it cures IB, it's located in some other part of wound code for whatever reason
 	name = "Bicaridine"

@@ -360,6 +360,41 @@
 	desc = "A 9.7x16mm high-capacity magazine for the AG80 rifle. This one is loaded with less-than lethal rubber rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ag80/rubber //need to reference the actual ammo designed for the carbine
 	ammo_band_color = AMMO_BAND_COLOR_RUBBER
+
+//-------------------------------------------------------
+//UPP - Norcomm AK-4047 RIFLE
+
+/obj/item/ammo_magazine/rifle/ak4047
+	name = "\improper AK-4047 magazine (10x27mm)"
+	desc = "A rugged and reliable 45-round magazine designed for the AK-4047 series assault rifle. Built for durability, it can withstand harsh conditions and keep firing even in the worst environments."
+	caliber = "10x27mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "ak4047"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/rifle/upp
+	max_rounds = 45
+	gun_type = /obj/item/weapon/gun/rifle/ak4047
+	ammo_band_icon = "+ak4047_band"
+	ammo_band_icon_empty = "+ak4047_band_e"
+
+/obj/item/ammo_magazine/rifle/ak4047/ap
+	name = "\improper AK-4047 AP magazine (10x27mm)"
+	desc = "A 10x27mm magazine containing armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/ap
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/ak4047/heap
+	name = "\improper AK-4047 HEAP magazine (10x27mm)"
+	desc = "A 10x27mm magazine containing the standard high explosive armor piercing rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP
+
+/obj/item/ammo_magazine/rifle/ak4047/incendiary
+	name = "\improper AK-4047 incendiary magazine (10x27mm)"
+	desc = "A 10x27mm assault rifle magazine containing the incendiary rounds for the AK-4047 rifle."
+	default_ammo = /datum/ammo/bullet/rifle/upp/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
+
 //-------------------------------------------------------
 //CANC LW-317 RIFLE
 
@@ -502,13 +537,13 @@
 /obj/item/ammo_magazine/rifle/nsg23/ap
 	name = "\improper NSG 23 armor-piercing magazine (8.5x33mm)"
 	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor piercing rounds."
-	default_ammo = /datum/ammo/bullet/rifle/ap
+	default_ammo = /datum/ammo/bullet/rifle/ap/twe
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
 	name = "\improper NSG 23 HEAP magazine (8.5x33mm)"
 	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor-piercing explosive tipped rounds."
-	default_ammo = /datum/ammo/bullet/rifle/heap
+	default_ammo = /datum/ammo/bullet/rifle/heap/twe
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
 //--------------------------------------------------------
@@ -610,3 +645,58 @@
 	default_ammo = /datum/ammo/bullet/rifle/isr
 	max_rounds = 80
 	gun_type = /obj/item/weapon/gun/rifle/isr
+
+//--------------------------------------------------------
+// Type 97 UPP automatic shotgun (H&K CAWS)
+
+/obj/item/ammo_magazine/rifle/caws
+	name = "\improper Type 97 magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon_state = "caws"
+	caliber = "12g"
+	ammo_band_icon = "+caws_band"
+	ammo_band_icon_empty = "+caws_band_e"
+	w_class = SIZE_MEDIUM
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot
+	max_rounds = 20
+	gun_type = /obj/item/weapon/gun/rifle/caws
+	transfer_handful_amount = 5
+
+/obj/item/ammo_magazine/rifle/caws/slug
+	name = "\improper Type 97 slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/flechette
+	name = "\improper Type 97 flechette magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/rifle/caws/incendiary
+	name = "\improper Type 97 incendiary slug magazine (12g)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with incendiary slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/incendiary
+	ammo_band_color = AMMO_BAND_COLOR_HOLLOWPOINT
+
+/obj/item/ammo_magazine/rifle/caws/special
+	name = "\improper Type 97 magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine."
+	icon_state = "caws_special"
+	ammo_band_icon = "+caws_special_band"
+	ammo_band_icon_empty = "+caws_special_band_e"
+	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
+
+/obj/item/ammo_magazine/rifle/caws/special/slug
+	name = "\improper Type 97 slug magazine (12g Magnum)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with slugs."
+	default_ammo = /datum/ammo/bullet/shotgun/slug/special
+	ammo_band_color = AMMO_BAND_COLOR_AP
+
+/obj/item/ammo_magazine/rifle/caws/special/flechette
+	name = "\improper Type 97 flechette magazine (12g DU)"
+	desc = "A 12 gauge automatic shotgun magazine loaded with flechettes."
+	default_ammo = /datum/ammo/bullet/shotgun/flechette/special
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT

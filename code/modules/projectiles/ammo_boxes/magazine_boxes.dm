@@ -531,7 +531,7 @@
 //-----------------------Type71 Rifle Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/type71
-	name = "magazine box (Type71 x 10)"
+	name = "magazine box (Type71 x 14)"
 	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
@@ -553,7 +553,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/ap
-	name = "magazine box (Type71 AP x 10)"
+	name = "magazine box (Type71 AP x 14)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/ap
@@ -562,7 +562,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type71/heap
-	name = "magazine box (Type71 HEAP x 10)"
+	name = "magazine box (Type71 HEAP x 14)"
 	overlay_ammo_type = "_type71_heap"
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/type71/heap
@@ -622,7 +622,7 @@
 
 /obj/item/ammo_box/magazine/ag80
 	name = "magazine box (AG80 x 10)"
-	icon_state = "base_type64"
+	icon_state = "base_type71"
 	flags_equip_slot = SLOT_BACK
 	overlay_ammo_type = "_type71_reg"
 	overlay_gun_type = "_ag80"
@@ -685,6 +685,48 @@
 	magazine_type = /obj/item/ammo_magazine/rifle/ag80/heap
 
 /obj/item/ammo_box/magazine/type71/large/ag80/heap/empty
+	empty = TRUE
+
+//-----------------------AK-4047 Rifle Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/ak4047
+	name = "magazine box (AK-4047 x 14)"
+	icon_state = "base_type71"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_type71_reg"
+	overlay_gun_type = "_ak4047"
+	overlay_content = "_type71_reg"
+	num_of_magazines = 14
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047
+
+/obj/item/ammo_box/magazine/ak4047/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/ap
+	name = "magazine box (AK-4047 AP x 14)"
+	overlay_ammo_type = "_type71_ap"
+	overlay_content = "_type71_ap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/ap
+
+/obj/item/ammo_box/magazine/ak4047/ap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/heap
+	name = "magazine box (AK-4047 HEAP x 14)"
+	overlay_ammo_type = "_type71_heap"
+	overlay_content = "_type71_heap"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/heap
+
+/obj/item/ammo_box/magazine/ak4047/heap/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/ak4047/incendiary
+	name = "magazine box (AK-4047 Incen x 14)"
+	overlay_ammo_type = "_type71_incend"
+	overlay_content = "_type71_incend"
+	magazine_type = /obj/item/ammo_magazine/rifle/ak4047/incendiary
+
+/obj/item/ammo_box/magazine/ak4047/incendiary/empty
 	empty = TRUE
 
 //-----------------------Nailgun Mag Box-----------------------
@@ -929,13 +971,13 @@
 //-----------------------NSG 23 Rifle Mag Boxes-----------------------
 
 /obj/item/ammo_box/magazine/nsg23
-	name = "magazine box (NSG 23 x 16)"
+	name = "magazine box (NSG 23 x 12)"
 	flags_equip_slot = SLOT_BACK
 	icon_state = "base_nsg23"
 	overlay_gun_type = "_nsg23"
 	overlay_content = "_reg"
 	magazine_type = /obj/item/ammo_magazine/rifle/nsg23
-	num_of_magazines = 16
+	num_of_magazines = 12
 
 /obj/item/ammo_box/magazine/nsg23/empty
 	empty = TRUE
@@ -951,7 +993,7 @@
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/nsg23/heap
-	name = "magazine box (NSG 23 HEAP x 16)"
+	name = "magazine box (NSG 23 HEAP x 12)"
 	overlay_ammo_type = "_heap"
 	overlay_content = "_heap"
 	magazine_type = /obj/item/ammo_magazine/rifle/nsg23/heap
@@ -1178,7 +1220,7 @@
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/ap
 
-/obj/item/ammo_box/magazine/type64/ap
+/obj/item/ammo_box/magazine/type64/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type64/heap
@@ -1187,7 +1229,7 @@
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/heap
 
-/obj/item/ammo_box/magazine/type64/heap
+/obj/item/ammo_box/magazine/type64/heap/empty
 	empty = TRUE
 
 //-----------------------ZhNK-72 Revolver Speedloader Box-----------------------
@@ -1473,4 +1515,73 @@
 	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
 
 /obj/item/ammo_box/magazine/mar50/empty
+	empty = TRUE
+
+//-----------------------Type 97 CAWS Auto-Shotgun Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/caws
+	name = "magazine box (Type97 x 8)"
+	icon_state = "base_type71"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_caws_reg"
+	overlay_gun_type = "_caws"
+	overlay_content = "_caws_reg"
+	num_of_magazines = 8
+	magazine_type = /obj/item/ammo_magazine/rifle/caws
+
+/obj/item/ammo_box/magazine/caws/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/slug
+	name = "magazine box (Type97 Slugs x 8)"
+	overlay_ammo_type = "_caws_slug"
+	overlay_content = "_caws_slug"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/slug
+
+/obj/item/ammo_box/magazine/caws/slug/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/flechette
+	name = "magazine box (Type97 Flechettes x 8)"
+	overlay_ammo_type = "_caws_flech"
+	overlay_content = "_caws_flech"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/flechette
+
+/obj/item/ammo_box/magazine/caws/flechette/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/incendiary
+	name = "magazine box (Type97 Incendiary x 8)"
+	overlay_ammo_type = "_caws_incen"
+	overlay_content = "_caws_incen"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/incendiary
+
+/obj/item/ammo_box/magazine/caws/incendiary/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special
+	name = "magazine box (Type97 Magnum x 8)"
+	overlay_ammo_type = "_caws_special_reg"
+	overlay_content = "_caws_reg"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special
+
+/obj/item/ammo_box/magazine/caws/special/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special/slug
+	name = "magazine box (Type97 Magnum Slugs x 8)"
+	overlay_ammo_type = "_caws_special_slug"
+	overlay_content = "_caws_slug"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special/slug
+
+/obj/item/ammo_box/magazine/caws/special/slug/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/caws/special/flechette
+	name = "magazine box (Type97 DU Flechettes x 8)"
+	overlay_ammo_type = "_caws_special_flech"
+	overlay_content = "_caws_flech"
+	magazine_type = /obj/item/ammo_magazine/rifle/caws/special/flechette
+
+/obj/item/ammo_box/magazine/caws/special/flechette/empty
 	empty = TRUE

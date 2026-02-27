@@ -48,12 +48,15 @@
 	icon_state = "black"
 	item_state = "bgloves"
 	armor_melee = CLOTHING_ARMOR_VERYHIGH
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
 	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_rad = CLOTHING_ARMOR_ULTRAHIGH
 	armor_internaldamage = CLOTHING_ARMOR_ULTRAHIGH
 	unacidable = TRUE
+
+/obj/item/clothing/gloves/marine/specialist/upp
+	name = "\improper 6B99 defensive gauntlets"
 
 /obj/item/clothing/gloves/marine/M3G
 	name = "\improper M3-G4 Grenadier gloves"

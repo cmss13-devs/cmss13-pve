@@ -615,7 +615,7 @@
 	new_human.age = rand(21,45)
 
 /datum/equipment_preset/other/gladiator/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/gladiator, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chainshirt/hunter, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/gladiator, WEAR_JACKET)
@@ -641,7 +641,7 @@
 	rank = "Samnite"
 
 /datum/equipment_preset/other/gladiator/champion/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/gladiator, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chainshirt/hunter, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/gladiator, WEAR_JACKET)
@@ -667,7 +667,7 @@
 	rank = "Spartacus"
 
 /datum/equipment_preset/other/gladiator/leader/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/gladiator, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/chainshirt/hunter, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/armor/gladiator, WEAR_JACKET)

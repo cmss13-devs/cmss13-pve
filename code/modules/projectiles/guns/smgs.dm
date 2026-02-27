@@ -220,6 +220,10 @@
 	desc = "A Weyland-Yutani creation, this M-39 comes equipped in corporate white. Chambered in 9x19mm. This one had its IFF electronics removed."
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
 
+/obj/item/weapon/gun/smg/m39/corporate/crewman
+	current_mag = /obj/item/ammo_magazine/smg/m39/ap
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/lasersight)
+
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
@@ -493,23 +497,25 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	wield_delay = WIELD_DELAY_MIN
 	attachable_allowed = list(
-		/obj/item/attachable/suppressor, // Barrel
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/reddot, // Rail
-		/obj/item/attachable/reflex,
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/reflex/upp,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/scope/pve,
-		/obj/item/attachable/lasersight, // Under
-		/obj/item/attachable/lasersight/upp,
-		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/suppressor, // Barrel
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly, // under
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 27, "side_rail_y" = 18)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 20,"rail_x" = 18, "rail_y" = 23, "under_x" = 26, "under_y" = 15, "stock_x" = 26, "stock_y" = 15, "side_rail_x" = 20, "side_rail_y" = 18)
 
 /obj/item/weapon/gun/smg/bizon/set_gun_config_values()
 	..()

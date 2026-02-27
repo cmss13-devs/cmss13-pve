@@ -442,15 +442,15 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 
 /datum/gear/headwear/upp/cap
 	display_name = "UPP cap"
-	path = /obj/item/clothing/head/uppcap
+	path = /obj/item/clothing/head/cmcap/upp
 
 /datum/gear/headwear/upp/boonie
 	display_name = "UPP boonie"
-	path = /obj/item/clothing/head/uppcap/boonie
+	path = /obj/item/clothing/head/cmcap/upp/boonie
 
 /datum/gear/headwear/upp/ushanka
 	display_name = "UPP ushanka"
-	path = /obj/item/clothing/head/uppcap/ushanka
+	path = /obj/item/clothing/head/cmcap/upp/ushanka
 
 /datum/gear/headwear/rmc
 	allowed_origins = TWE_ORIGINS

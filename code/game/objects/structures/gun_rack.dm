@@ -211,6 +211,9 @@
 /obj/structure/gun_rack/ag80/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/ag80/unloaded/platoon
+	populate_type = /obj/item/weapon/gun/rifle/ag80/unloaded/platoon
+
 /obj/structure/gun_rack/nsg
 	name = "NSG L23A1 pulse rifle rack"
 	icon_state = "nsg"

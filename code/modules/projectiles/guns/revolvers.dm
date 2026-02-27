@@ -461,7 +461,7 @@
 	icon_state = "zhnk72"
 	item_state = "zhnk72"
 
-	fire_sound = 'sound/weapons/gun_kt42.ogg'
+	fire_sound = "gun_zhnk"
 	reload_sound = 'sound/weapons/handling/pkd_speed_load.ogg'
 	cocked_sound = 'sound/weapons/handling/pkd_cock.wav'
 	unload_sound = 'sound/weapons/handling/pkd_open_chamber.ogg'

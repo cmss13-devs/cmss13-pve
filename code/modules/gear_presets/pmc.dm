@@ -137,6 +137,12 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
+
+	if(new_human.disabilities & NEARSIGHTED)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
+
 	//head
 	if(prob(45))
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc, WEAR_HEAD)
@@ -168,7 +174,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/light/heavy/medic, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
 	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full/low_threat, WEAR_WAIST)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc/black, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
@@ -391,31 +397,29 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/regular, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/engineer, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preset, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/guard/vest, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding/superior, WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/balaclava, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert/pmc, WEAR_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/pmc, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldpack/minitank, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool/largetank, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/large_stack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/small_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/cable_coil, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/weyyu/guard/crewman, WEAR_HEAD)
 
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, WEAR_IN_HELMET)
-
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/wy/vp78, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/black/full, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/wy/pmc_m39, WEAR_L_STORE)
 
-	spawn_weapon(/obj/item/weapon/gun/smg/m39/elite, /obj/item/ammo_magazine/smg/m39/ap, new_human, 0, 0)
+	spawn_weapon(/obj/item/weapon/gun/smg/m39/corporate/crewman, /obj/item/ammo_magazine/smg/m39/ap, new_human, 0, 0)
 
 /*****************************************************************************************************/
 
@@ -440,8 +444,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/light/heavy/medic, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preset, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full/low_threat, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 
@@ -450,15 +453,16 @@
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/wy/vp70, WEAR_J_STORE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/m39, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/OMinus, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/blood/OMinus, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/wy/full_advanced, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pressurized_reagent_canister/oxycodone, WEAR_R_STORE) //surgery
@@ -478,9 +482,6 @@
 /datum/equipment_preset/pmc/technician/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/engineer, WEAR_HEAD)
 
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, WEAR_IN_HELMET)
-
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/balaclava, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/pmc, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/pmc/engineer, WEAR_BODY)
@@ -492,22 +493,22 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/engineer, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfour, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/wy/nsg23_pmc, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/wy/nsg23, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/pmc/black, WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding/superior, WEAR_EYES)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/pmc_technician, WEAR_J_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/ert/pmc, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry/wy/mini, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/defenses/handheld/sentry/wy/mini, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/metal/large_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/sandbags_empty/full, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/sheet/plasteel/large_stack, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/sebb, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/sebb, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
@@ -519,7 +520,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/device/multitool, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded, WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/lightreplacer, WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/construction/full/wy, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate/wy, WEAR_R_STORE)
 
 /*****************************************************************************************************/
 
@@ -544,6 +545,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
 	var/obj/item/storage/pouch/pistol/command/command_pouch = new(new_human)
 	command_pouch.desc = replacetext(command_pouch.desc, "Captains", "corporate PMC directors")
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/wy/vp70, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(command_pouch, WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/cotablet/pmc(new_human), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range(new_human), WEAR_IN_L_STORE)
@@ -620,7 +622,7 @@
 		new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor/pmc, WEAR_IN_BACK)
 		new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
 
-		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full, WEAR_WAIST)
+		new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full/low_threat, WEAR_WAIST)
 
 		new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical, WEAR_L_STORE)
 		new_human.equip_to_slot_or_del(new /obj/item/tool/screwdriver/tactical, WEAR_IN_L_STORE)
@@ -798,18 +800,19 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc, WEAR_BACK)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/wy/full/low_threat, WEAR_WAIST)
 
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription(new_human), WEAR_EYES)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
 
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/reagent_scanner, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul, WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/m39/elite, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/wy, WEAR_L_STORE)

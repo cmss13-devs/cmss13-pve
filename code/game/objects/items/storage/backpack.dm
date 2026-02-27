@@ -538,6 +538,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	flags_item = ITEM_OVERRIDE_NORTHFACE
 
 	var/phone_category = PHONE_MARINE
+	var/phone_icon // for unique handset icon_state
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
 
@@ -546,7 +547,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/rto/Initialize()
 	. = ..()
 
-	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE)
+	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE, phone_icon = phone_icon)
 	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
 	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
@@ -581,19 +582,35 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
-	name = "\improper UPP Radio Telephone Pack"
+	name = "\improper R-559 'Bagulnik' Radio Telephone Pack"
+	icon_state = "upp_rto_backpack"
+	item_state = "upp_rto_backpack"
+	phone_icon = "upp_rpb_phone"
 	networks_receive = list(FACTION_UPP)
 	networks_transmit = list(FACTION_UPP)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/upp)
+
+/datum/action/item_action/rto_pack/use_phone/upp/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "upp_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/upp/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/upp_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
 
 /obj/item/storage/backpack/marine/satchel/rto/small
 	name = "\improper USCM Small Radio Telephone Pack"
 	max_storage_space = 10
 
-/obj/item/storage/backpack/marine/satchel/rto/small/upp_net
-	name = "\improper UPP Radio Telephone Pack"
-	networks_receive = list(FACTION_UPP)
-	networks_transmit = list(FACTION_UPP)
-	phone_category = PHONE_UPP_SOLDIER
+/obj/item/storage/backpack/marine/satchel/rto/upp_net/small
+	name = "\improper R-559 'Bagulnik' Small Radio Telephone Pack"
+	max_storage_space = 10
 
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
@@ -1096,6 +1113,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/lightpack/five_slot
 	max_storage_space = 15
 
+/obj/item/storage/backpack/lightpack/black
+	icon_state = "ERT_satchel_black"
+
+/obj/item/storage/backpack/lightpack/black/five_slot
+	max_storage_space = 15
+
 /obj/item/storage/backpack/marine/engineerpack/ert
 	name = "\improper lightweight technician welderpack"
 	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."
@@ -1103,6 +1126,18 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	has_gamemode_skin = FALSE
 	worn_accessible = TRUE
 	max_fuel = 180
+
+/obj/item/storage/backpack/marine/engineerpack/ert/four_slot
+	max_fuel = 100
+	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black
+	icon_state = "ERT_satchel_welder_black"
+	max_storage_space = 20
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black/four_slot
+	max_fuel = 100
+	max_storage_space = 12
 
 /obj/item/storage/backpack/pmc
 	name = "\improper W-Y combat pack"

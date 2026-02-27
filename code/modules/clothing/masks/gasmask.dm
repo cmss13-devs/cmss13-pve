@@ -123,6 +123,7 @@
 
 /obj/item/clothing/mask/gas/pmc/upp
 	name = "\improper UPP armored commando balaclava"
+	desc = "A sturdy balaclava, equipped with compact air-filter."
 	icon_state = "upp_mask"
 
 /obj/item/clothing/mask/gas/pmc/leader

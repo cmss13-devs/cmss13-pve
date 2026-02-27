@@ -6438,7 +6438,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/head/uppcap/boonie,
+/obj/item/clothing/head/cmcap/upp/boonie,
 /obj/item/tool/stamp/approved{
 	pixel_x = -19;
 	pixel_y = 9
@@ -14568,10 +14568,10 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
@@ -18433,10 +18433,10 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southwest,
@@ -21801,8 +21801,8 @@
 	name = "equipment locker";
 	pixel_x = -5
 	},
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /obj/item/clothing/head/helmet/upp,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/floor3,
@@ -24362,9 +24362,9 @@
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_heavy/low_level_gen)
 "oNQ" = (
@@ -24457,7 +24457,7 @@
 "oRG" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/head/helmet/upp/alt,
-/obj/item/clothing/head/uppcap/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
 /obj/item/flag/plantable/upp,
 /obj/item/weapon/gun/revolver/upp,
 /obj/item/explosive/grenade/high_explosive/upp,
@@ -25226,11 +25226,11 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = 13;
 	pixel_x = -7
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval{
+/obj/item/clothing/under/marine/veteran/upp/naval{
 	pixel_y = 15;
 	pixel_x = 6
 	},
@@ -26937,7 +26937,7 @@
 /obj/structure/surface/table/almayer{
 	color = "#8B9490"
 	},
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/upp/jacket,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/machinery/recharger{
 	pixel_x = 5;
@@ -27871,9 +27871,9 @@
 /obj/item/clothing/accessory/storage/webbing/m3/uppmags,
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall,
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/standard,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /turf/open/floor/strata/multi_tiles/southwest,
 /area/sekhmet/int_reg/complex_operation)
 "rlC" = (
@@ -28645,7 +28645,7 @@
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/head/uppcap/ushanka{
+/obj/item/clothing/head/cmcap/upp/ushanka{
 	pixel_x = -13;
 	pixel_y = 6
 	},
@@ -30023,7 +30023,7 @@
 	layer = 3.02;
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/head/uppcap/peaked/mss{
+/obj/item/clothing/head/cmcap/upp/peaked/mss{
 	pixel_x = 11;
 	pixel_y = 15
 	},
@@ -33377,11 +33377,11 @@
 	icon_state = "tome";
 	pixel_x = 10
 	},
-/obj/item/clothing/head/uppcap/civi{
+/obj/item/clothing/head/cmcap/upp/civi{
 	pixel_x = -3;
 	pixel_y = 8
 	},
-/obj/item/clothing/head/uppcap/beret{
+/obj/item/clothing/head/cmcap/upp/beret{
 	pixel_x = -10;
 	pixel_y = 2
 	},
@@ -34247,7 +34247,7 @@
 	pixel_x = 7;
 	pixel_y = 5
 	},
-/obj/item/clothing/head/uppcap/peaked/mss{
+/obj/item/clothing/head/cmcap/upp/peaked/mss{
 	pixel_x = 5;
 	pixel_y = 8
 	},
@@ -34614,7 +34614,7 @@
 	icon_state = "S"
 	},
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
 /obj/structure/closet/secure_closet/personal{
 	pixel_x = -7;
 	can_be_stacked = 1;
@@ -37221,7 +37221,7 @@
 /obj/structure/surface/table/woodentable{
 	color = "#8B7B5B"
 	},
-/obj/item/clothing/head/uppcap/civi{
+/obj/item/clothing/head/cmcap/upp/civi{
 	pixel_x = -10;
 	pixel_y = 7
 	},

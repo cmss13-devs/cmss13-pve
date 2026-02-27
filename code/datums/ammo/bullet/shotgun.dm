@@ -39,6 +39,20 @@
 			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
 
+/datum/ammo/bullet/shotgun/slug/special
+	name = "shotgun slug, USCM magnum load"
+	handful_state = "special_slug"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	accurate_range = 10
+	max_range = 18
+	damage = 130
+	damage_armor_punch = 5
+	penetration = ARMOR_PENETRATION_TIER_8
+	firing_freq_offset = SOUND_FREQ_LOW
+
+/datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
+	knockback(M, P, 7)
+
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
 	icon_state = "bullet_blue"
@@ -167,6 +181,55 @@
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
 	damage = 50
+
+/datum/ammo/bullet/shotgun/flechette/special
+	name = "flechette shell, USCM DU type"
+	handful_state = "special_dart"
+	bonus_projectiles_type = /datum/ammo/bullet/shotgun/flechette_spread/special
+	max_range = 14
+	damage = 50
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_9
+	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_5
+
+/datum/ammo/bullet/shotgun/flechette/special/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/shotgun/flechette/special/on_hit_mob(mob/M,obj/projectile/P)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 15, toxic_buildup_dissipation = 0.3, max_buildup = 75)
+	knockback(M, P, 5)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.3, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
+
+/datum/ammo/bullet/shotgun/flechette_spread/special
+	name = "additional DU flechette"
+	icon_state = "flechette"
+
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
+	accuracy_var_high = PROJECTILE_VARIANCE_TIER_6
+	max_range = 14
+	damage = 50
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_9
+	scatter = SCATTER_AMOUNT_TIER_5
+
+/datum/ammo/bullet/shotgun/flechette_spread/special/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating)
+	))
+
+/datum/ammo/bullet/shotgun/flechette_spread/special/on_hit_mob(mob/M,obj/projectile/P)
+	M.AddComponent(/datum/component/status_effect/toxic_buildup, toxic_buildup = 10, toxic_buildup_dissipation = 0.3, max_buildup = 75)
+	if(M.mob_size >= MOB_SIZE_BIG)
+		var/mob/living/L = M
+		L.apply_armoured_damage(damage*1.2, ARMOR_BULLET, BRUTE, null, penetration) // As bugs don't take toxin damage, this should give it a little more oomf versus them
 
 /datum/ammo/bullet/shotgun/buckshot
 	name = "buckshot shell"

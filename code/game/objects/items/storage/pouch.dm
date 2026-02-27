@@ -690,6 +690,9 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/flechette(src)
 
+/obj/item/storage/pouch/shotgun/wy
+	icon_state = "wy_medium_shotshells"
+
 /obj/item/storage/pouch/shotgun/large
 	name = "large shotgun shell pouch"
 	desc = "It can contain more handfuls of shells, or bullets if you choose to for some reason."
@@ -711,6 +714,13 @@
 /obj/item/storage/pouch/shotgun/large/buckshot/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/buckshot(src)
+
+/obj/item/storage/pouch/shotgun/large/wy
+	icon_state = "wy_large_shotshells"
+
+/obj/item/storage/pouch/shotgun/large/wy/heavy/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/buckshot(src)
 
 /obj/item/storage/pouch/explosive
 	name = "explosive pouch"
@@ -1388,6 +1398,10 @@
 	for(var/i = 1 to storage_slots)
 		new /obj/item/device/flashlight/flare/rmc(src)
 
+/obj/item/storage/pouch/flare/upp/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/device/flashlight/flare/upp(src)
+
 /obj/item/storage/pouch/radio
 	name = "radio pouch"
 	storage_slots = 2
@@ -1500,6 +1514,17 @@
 		/obj/item/device/lightreplacer,
 	)
 
+/obj/item/storage/pouch/tools/black
+	icon_state = "soctools"
+
+/obj/item/storage/pouch/tools/black/full/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+
 /obj/item/storage/pouch/tools/tactical
 	name = "tactical tools pouch"
 	desc = "This particular toolkit full of sharp, heavy objects was designed for breaking into things rather than fixing them. Still does the latter pretty well, though."
@@ -1545,8 +1570,20 @@
 	new /obj/item/tool/screwdriver/tactical(src)
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool(src)
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+
+/obj/item/storage/pouch/tools/tactical/sof/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/weldingtool(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool/upp(src)
 	new /obj/item/tool/wrench(src)
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)

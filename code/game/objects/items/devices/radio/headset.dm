@@ -1191,7 +1191,7 @@
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/pmc/command, /obj/item/device/encryptionkey/commando)
 
 //UPP Headsets
-/obj/item/device/radio/headset/distress/UPP
+/obj/item/device/radio/headset/distress/upp
 	name = "UPP Naval Infantry headset"
 	desc = "A special headset used by UPP military."
 	frequency = UPP_FREQ
@@ -1199,38 +1199,38 @@
 	hud_type = list(MOB_HUD_FACTION_UPP)
 	minimap_type = MINIMAP_FLAG_UPP
 
-/obj/item/device/radio/headset/distress/UPP/territorial
+/obj/item/device/radio/headset/distress/upp/territorial
 	name = "UPP Territorial Guard headset"
 	desc = "A special headset used by the UPP's Territorial Guard. Lacks access to Naval Infantry channels. Also provides local colony comms. To access the colony channel use :o."
 	frequency = UPP_GRD_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 
-/obj/item/device/radio/headset/distress/UPP/cct
+/obj/item/device/radio/headset/distress/upp/cct
 	name = "UPP-CCT headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n engineering."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/engi)
 
-/obj/item/device/radio/headset/distress/UPP/medic
+/obj/item/device/radio/headset/distress/upp/medic
 	name = "UPP-MED headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #m - medical."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/medic)
 
-/obj/item/device/radio/headset/distress/UPP/command
+/obj/item/device/radio/headset/distress/upp/command
 	name = "UPP-CMD headset"
 	desc = "A special headset used by UPP military. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general."
 	initial_keys = list(/obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)
 
-/obj/item/device/radio/headset/distress/UPP/kdo
+/obj/item/device/radio/headset/distress/upp/kdo
 	name = "UPP-Kdo headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: #j - combat controller, #u - UPP general, #T - kommandos."
 	initial_keys = /obj/item/device/encryptionkey/upp/kdo
 
-/obj/item/device/radio/headset/distress/UPP/kdo/medic
+/obj/item/device/radio/headset/distress/upp/kdo/medic
 	name = "UPP-KdoM headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: :o - colony, #j - combat controller, #m - medical #u - UPP general, #T - kommandos."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony)
 
-/obj/item/device/radio/headset/distress/UPP/kdo/command
+/obj/item/device/radio/headset/distress/upp/kdo/command
 	name = "UPP-KdoC headset"
 	desc = "A specialist headset used by UPP kommandos. Channels are as follows: :o - colony, #j - combat controller, #n - engineering, #m - medical, #v - command, #u - UPP general, #T - kommandos."
 	initial_keys = list(/obj/item/device/encryptionkey/upp/kdo, /obj/item/device/encryptionkey/colony, /obj/item/device/encryptionkey/upp/command)

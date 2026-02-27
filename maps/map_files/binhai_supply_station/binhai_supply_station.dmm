@@ -1084,9 +1084,9 @@
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
 /obj/item/clothing/suit/storage/jacket/marine/upp/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
-/obj/item/clothing/head/uppcap/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
+/obj/item/clothing/head/cmcap/upp/peaked/mss,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/basemil/lowerbunks)
 "awl" = (
@@ -2118,8 +2118,8 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
 /obj/item/clothing/shoes/marine/upp{
 	pixel_x = 4;
 	pixel_y = -3
@@ -2128,8 +2128,8 @@
 	pixel_x = 4;
 	pixel_y = -3
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval,
-/obj/item/clothing/under/marine/veteran/UPP/naval,
+/obj/item/clothing/under/marine/veteran/upp/naval,
+/obj/item/clothing/under/marine/veteran/upp/naval,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/basemil/upperbunks)
 "bvF" = (
@@ -4681,7 +4681,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/binhai/caves/main)
 "dId" = (
-/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/faction/upp/jacket,
 /obj/item/storage/belt/gun/type47/np92,
 /obj/item/weapon/telebaton,
 /obj/item/storage/backpack/general_belt/upp,
@@ -4752,8 +4752,8 @@
 	},
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
 /obj/item/clothing/suit/storage/jacket/marine/upp/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
-/obj/item/clothing/head/uppcap/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
+/obj/item/clothing/head/cmcap/upp/beret/naval,
 /obj/item/clothing/shoes/marine/upp{
 	pixel_x = 4;
 	pixel_y = -3
@@ -4762,8 +4762,8 @@
 	pixel_x = 4;
 	pixel_y = -3
 	},
-/obj/item/clothing/under/marine/veteran/UPP/naval,
-/obj/item/clothing/under/marine/veteran/UPP/naval,
+/obj/item/clothing/under/marine/veteran/upp/naval,
+/obj/item/clothing/under/marine/veteran/upp/naval,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/fake_wood,
 /area/binhai/basemil/upperbunks)
@@ -15000,9 +15000,9 @@
 	},
 /obj/item/clothing/accessory/upppads/crotch,
 /obj/item/clothing/accessory/upppads/crotch,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /turf/open/floor/corsat,
 /area/binhai/basemil/lowerarmory)
 "mVA" = (
@@ -23658,10 +23658,10 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/warning_stripes{
@@ -26064,9 +26064,9 @@
 /obj/item/clothing/accessory/storage/webbing/m3/uppmags,
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall,
 /obj/item/clothing/accessory/storage/webbing/m3/uppgeneral,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
-/obj/item/clothing/suit/marine/faction/UPP/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
+/obj/item/clothing/suit/marine/faction/upp/light,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/plating,
 /area/binhai/main/paparmory)
@@ -27158,10 +27158,10 @@
 	pixel_x = -5;
 	pixel_y = 7
 	},
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/head/uppcap/peaked/police,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/head/cmcap/upp/peaked/police,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap,
 /obj/item/clothing/glasses/mgoggles/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/ammo_box/magazine/np92,
@@ -27681,10 +27681,10 @@
 /obj/item/clothing/accessory/upppads/crotch,
 /obj/item/clothing/accessory/upppads/crotch,
 /obj/item/clothing/accessory/upppads/crotch,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
-/obj/item/clothing/suit/marine/faction/UPP/standard,
+/obj/item/clothing/suit/marine/faction/upp/standard,
+/obj/item/clothing/suit/marine/faction/upp/standard,
+/obj/item/clothing/suit/marine/faction/upp/standard,
+/obj/item/clothing/suit/marine/faction/upp/standard,
 /turf/open/floor/corsat,
 /area/binhai/basemil/upperarmory)
 "xqi" = (

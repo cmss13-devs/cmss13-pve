@@ -367,21 +367,48 @@ GLOBAL_LIST_INIT_TYPED(cardboard_recipes, /datum/stack_recipe, list ( \
 		new/datum/stack_recipe("empty magazine box (ZhNK-72)", /obj/item/ammo_box/magazine/zhnk/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (Type64 Bizon)", /obj/item/ammo_box/magazine/type64/empty), \
+		new/datum/stack_recipe("empty magazine box (Type64 Bizon AP)", /obj/item/ammo_box/magazine/type64/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (Type64 Bizon HEAP)", /obj/item/ammo_box/magazine/type64/heap/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (S&W .38)", /obj/item/ammo_box/magazine/snw/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (NSG L23A1)", /obj/item/ammo_box/magazine/nsg23/empty), \
 		new/datum/stack_recipe("empty magazine box (NSG L23A1 AP)", /obj/item/ammo_box/magazine/nsg23/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (NSG L23A1 HEAP)", /obj/item/ammo_box/magazine/nsg23/heap/empty), \
+		null, \
+		new/datum/stack_recipe("empty rifle ammo box (8.5x33mm)", /obj/item/ammo_box/rounds/nsg23/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (8.5x33mm AP)", /obj/item/ammo_box/rounds/nsg23/ap/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (8.5x33mm HEAP)", /obj/item/ammo_box/rounds/nsg23/heap/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (Type71)", /obj/item/ammo_box/magazine/type71/empty), \
 		new/datum/stack_recipe("empty magazine box (Type71 AP)", /obj/item/ammo_box/magazine/type71/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (Type71 HEAP)", /obj/item/ammo_box/magazine/type71/heap/empty), \
 		null, \
 		new/datum/stack_recipe("empty magazine box (Type73)", /obj/item/ammo_box/magazine/type73/empty), \
 		new/datum/stack_recipe("empty magazine box (Type73 High-Impact)", /obj/item/ammo_box/magazine/type73/impact/empty), \
 		null, \
 		new/datum/stack_recipe("empty rifle ammo box (10x27mm)", /obj/item/ammo_box/rounds/type71/empty), \
 		new/datum/stack_recipe("empty rifle ammo box (10x27mm AP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
-
+		new/datum/stack_recipe("empty rifle ammo box (10x27mm HEAP)", /obj/item/ammo_box/rounds/type71/ap/empty), \
+		null, \
+		new/datum/stack_recipe("empty magazine box (AG80)", /obj/item/ammo_box/magazine/ag80/empty), \
+		new/datum/stack_recipe("empty magazine box (AG80 AP)", /obj/item/ammo_box/magazine/ag80/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (AG80 HEAP)", /obj/item/ammo_box/magazine/ag80/heap/empty), \
+		null, \
+		new/datum/stack_recipe("empty rifle ammo box (9.7x16mm)", /obj/item/ammo_box/rounds/ag80/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (9.7x16mm AP)", /obj/item/ammo_box/rounds/ag80/ap/empty), \
+		new/datum/stack_recipe("empty rifle ammo box (9.7x16mm HEAP)", /obj/item/ammo_box/rounds/ag80/heap/empty), \
+		null, \
+		new/datum/stack_recipe("empty magazine box (AK4047)", /obj/item/ammo_box/magazine/ak4047/empty), \
+		new/datum/stack_recipe("empty magazine box (AK4047 AP)", /obj/item/ammo_box/magazine/ak4047/ap/empty), \
+		new/datum/stack_recipe("empty magazine box (AK4047 HEAP)", /obj/item/ammo_box/magazine/ak4047/heap/empty), \
+		new/datum/stack_recipe("empty magazine box (AK4047 Incen)", /obj/item/ammo_box/magazine/ak4047/heap/empty), \
+		null, \
+		new/datum/stack_recipe("empty Type 23 shotgun shell box (8g Beanbag)", /obj/item/ammo_box/magazine/shotgun/upp/beanbag/empty), \
+		new/datum/stack_recipe("empty Type 23 shotgun shell box (8g Buckshot)", /obj/item/ammo_box/magazine/shotgun/upp/buckshot/empty), \
+		new/datum/stack_recipe("empty Type 23 shotgun shell box (8g Flechette)", /obj/item/ammo_box/magazine/shotgun/upp/flechette/empty), \
+		new/datum/stack_recipe("empty Type 23 shotgun shell box (8g Incendiary)", /obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath/empty), \
+		new/datum/stack_recipe("empty Type 23 shotgun shell box (8g Slugs)", /obj/item/ammo_box/magazine/shotgun/upp/empty), \
 
 		)) \
 ))

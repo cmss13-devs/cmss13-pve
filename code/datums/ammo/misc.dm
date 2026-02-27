@@ -272,7 +272,7 @@
 /datum/ammo/flare/starshell
 	name = "starshell ash"
 	icon_state = "starshell_bullet"
-	max_range = 5
+	max_range = 7
 	damage = 2.5
 	flare_type = /obj/item/device/flashlight/flare/on/starshell_ash
 

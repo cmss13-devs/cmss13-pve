@@ -69,6 +69,10 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	desc = "It contains six VOG-73 fragmentation grenades."
 	content_type = /obj/item/explosive/grenade/high_explosive/impact/upp
 
+/obj/item/storage/box/packet/high_explosive/upp/impact/partial/fill_preset_inventory()
+	new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+	new /obj/item/explosive/grenade/high_explosive/impact/upp(src)
+
 /obj/item/storage/box/packet/high_explosive/upp/ap
 	name = "\improper VPG-77 AP grenade packet"
 	desc = "It contains six VPG-77 AP grenade grenades."
@@ -209,7 +213,7 @@ GLOBAL_LIST_INIT(grenade_packets, list(
 	name = "\improper L103A1 20mm HE grenade packet"
 	desc = "It contains eight L103A1 20mm HE grenades. Handle with care."
 	w_class = SIZE_LARGE //No more bag-storing for these
-	storage_slots = 8
+	storage_slots = 12
 	icon_state = "rmc_packet"
 	packet_icon = "bfab-p"
 	content_type = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm

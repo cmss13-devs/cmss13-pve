@@ -43,7 +43,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack/commando, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/commando, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetseven, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/commando/deathsquad, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/wy, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/incendiary, WEAR_IN_BELT)
@@ -81,12 +80,11 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/commando_low_threat, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full/wy, WEAR_R_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack/commando, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/commando, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfive, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/corporate/commando/regular, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/wy, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
@@ -95,14 +93,15 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/black/full, WEAR_L_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/pmc, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/ointment, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BACK)
 
 
@@ -134,7 +133,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/sg, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/smartgun/commando, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/presetone, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/pmc/presettwo, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/l56a2/elite, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/smartgunner/full, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles, WEAR_EYES)
@@ -159,7 +158,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/commando_low_threat, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full/wy, WEAR_R_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/sg, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/smartgun/commando, WEAR_JACKET)
@@ -167,8 +166,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/l56a2, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/large_holster/machete/smartgunner/full, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m56_goggles, WEAR_EYES)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/pmc/commando, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_sg/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/pmc/full, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol/pmc_vp78, WEAR_L_STORE)
 
 /datum/equipment_preset/pmc/commando/leader
 	name = "Weyland-Yutani Commando (Leader) (!DEATHSQUAD!)"
@@ -227,7 +226,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack/commando/leader, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/leader, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/commando/leader, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetseven, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/commando/deathsquad, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/commando/full/deathsquad, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_L_STORE)
@@ -263,18 +261,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack/commando/leader, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando/leader, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/commando/leader, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetsix, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/commando, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/commando/full, WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/wy/pmc_rifle, WEAR_L_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/pmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/upgraded, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/whiteout/medical/commando, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
 
 
 /datum/equipment_preset/pmc/commando/dogcatcher
@@ -304,30 +300,28 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/extinguisher/mini, WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/restraint/handcuffs, WEAR_IN_ACCESSORY)
 
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medical/socmed/commando_low_threat, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/autoinjector/full/wy, WEAR_R_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/pmc/backpack/commando/apesuit, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/apesuit, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/pmc/apesuit, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/presetfive, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41a/elite/commando, WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/wy, WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/incendiary, WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/incendiary, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/incendiary, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/ap, WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/extended, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/black/full, WEAR_L_STORE)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/baton, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/cell/high, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/cell/high, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/cell/high, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/pmc, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/zipcuffs/small, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/pmc, WEAR_IN_BACK)
 
 /datum/equipment_preset/pmc/commando/dogcatcher/get_antag_clothing_equipment()
 	return list(

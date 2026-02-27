@@ -674,6 +674,7 @@
 		/obj/item/device/motiondetector,
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/gun/m39,
+		/obj/item/storage/belt/gun/bizon,
 	)
 	valid_accessory_slots = list(
 		ACCESSORY_SLOT_MEDAL,

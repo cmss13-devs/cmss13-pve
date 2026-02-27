@@ -288,8 +288,8 @@
 /obj/item/storage/belt/medical/upp
 	name = "\improper Type 41 pattern medical storage rig"
 	desc = "The Type 41 is the standard load-bearing equipment of UPP military. It consists of a modular belt with various clips. This version is a less common configuration, designed to transport medical supplies and pistol ammunition. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
-	icon_state = "medicalbelt_upp"
-	item_state = "upp_belt"
+	icon_state = "upp_medicalbelt"
+	item_state = "upp_medicalbelt"
 
 /obj/item/storage/belt/medical/upp/full/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
@@ -303,6 +303,9 @@
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
+/obj/item/storage/belt/medical/upp/only_scanner/fill_preset_inventory()
+	new /obj/item/device/healthanalyzer/soul(src)
 
 /obj/item/storage/belt/medical/lifesaver
 	name = "\improper M276 pattern lifesaver bag"
@@ -387,6 +390,29 @@
 	new /obj/item/storage/pill_bottle/alkysine(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
 
+/obj/item/storage/belt/medical/lifesaver/full/forecon/fill_preset_inventory()
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
 /obj/item/storage/belt/medical/lifesaver/wy
 	name = "\improper WY-TM625 pattern medical bag"
 	desc = "The WY-TM625 is the standard load-bearing equipment of the W-Y security forces. This configuration mounts a duffel bag filled with a range of injectors and light medical supplies, and is common among medics. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
@@ -428,28 +454,26 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/device/healthanalyzer(src)
 
-/obj/item/storage/belt/medical/lifesaver/full/forecon/fill_preset_inventory()
-	new /obj/item/storage/pill_bottle/bicaridine(src)
+/obj/item/storage/belt/medical/lifesaver/wy/full/low_threat/fill_preset_inventory()
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
-	new /obj/item/storage/pill_bottle/kelotane(src)
-	new /obj/item/storage/pill_bottle/tricord(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
-	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
-	new /obj/item/storage/pill_bottle/imialk(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/bruise_pack(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
-	new /obj/item/stack/medical/splint(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/storage/pill_bottle/alkysine(src)
+	new /obj/item/storage/pill_bottle/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
 
 /obj/item/storage/belt/medical/lifesaver/upp
 	name = "\improper Type 41 pattern lifesaver bag"
@@ -534,6 +558,63 @@
 	new /obj/item/storage/pill_bottle/tramadol(src)
 	new /obj/item/storage/pill_bottle/peridaxon(src)
 
+/obj/item/storage/belt/medical/lifesaver/upp/less_lesser/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/black
+	icon_state = "medicbag_black_u"
+	item_state = "medicbag_black_u"
+
+/obj/item/storage/belt/medical/lifesaver/upp/black/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/adrenaline(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/dexalin(src)
+	new /obj/item/storage/pill_bottle/antitox(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/iron(src)
+
+/obj/item/storage/belt/medical/lifesaver/upp/black/partial/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/bruise_pack(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/advanced/ointment(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/stack/medical/splint(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
+	new /obj/item/storage/pill_bottle/bicaridine(src)
+	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
+	new /obj/item/storage/pill_bottle/tramadol(src)
+
 /obj/item/storage/belt/security
 	name = "\improper duty belt"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This configuration is commonly seen among USCM Military Police and peacekeepers, though it can hold some light munitions."
@@ -594,11 +675,11 @@
 	new /obj/item/device/clue_scanner(src)
 	new /obj/item/restraint/handcuffs(src)
 
-/obj/item/storage/belt/security/MP/UPP
+/obj/item/storage/belt/security/MP/upp
 	name = "\improper Type 43 military police rig"
 	desc = "The Type 43 is the standard load-bearing equipment of the UPP. It consists of a modular belt with various clips. This version is filled with an array of small pouches, meant to carry non-lethal equipment and restraints."
 
-/obj/item/storage/belt/security/MP/UPP/full/fill_preset_inventory()
+/obj/item/storage/belt/security/MP/upp/full/fill_preset_inventory()
 	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/restraint/handcuffs(src)
@@ -897,11 +978,24 @@
 	new /obj/item/ammo_magazine/rifle/type71(src)
 
 /obj/item/storage/belt/marine/upp/heap/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
-	new /obj/item/ammo_magazine/rifle/type71/heap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/type71/heap(src)
+
+/obj/item/storage/belt/marine/upp/caws/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/caws(src)
+
+/obj/item/storage/belt/marine/upp/black
+	icon_state = "upp_black_belt"
+	item_state = "upp_black_belt"
+
+/obj/item/storage/belt/marine/upp/black/full
+	icon_state = "upp_black_belt"
+	item_state = "upp_black_belt"
+
+/obj/item/storage/belt/marine/upp/black/full/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/ak4047(src)
 
 /obj/item/storage/belt/marine/wy
 	name = "\improper WY-TM402 pattern ammo load rig"
@@ -925,12 +1019,12 @@
 	new /obj/item/ammo_magazine/smg/m39/extended(src)
 
 /obj/item/storage/belt/marine/wy/nsg23_pmc/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
+
+/obj/item/storage/belt/marine/wy/nsg23/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 // M56E HMG gunner belt
 /obj/item/storage/belt/marine/m2c
@@ -1013,6 +1107,10 @@
 /obj/item/storage/belt/shotgun/upp/heavyslug/fill_preset_inventory()
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/handful/shotgun/heavy/slug(src)
+
+/obj/item/storage/belt/shotgun/upp/heavybeanbag/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/handful/shotgun/heavy/beanbag(src)
 
 /obj/item/storage/belt/shotgun/van_bandolier
 	name = "two bore bandolier"
@@ -1648,6 +1746,33 @@
 
 #define MAXIMUM_MAGAZINE_COUNT 2
 
+/obj/item/storage/belt/gun/bizon
+	name = "\improper Type 49 SMG holster rig"
+	desc = "Special issue variant of Type 41 ammo belt with refitted holster for Type 64 Submachinegun.  Uncommonly issued to the UPPN and UPPA support and specialist personnel."
+	icon_state = "upp_smg"
+	item_state = "upp_smg"
+	storage_slots = 4
+	max_w_class = 5
+	can_hold = list(
+		/obj/item/weapon/gun/smg/bizon,
+		/obj/item/ammo_magazine/smg/bizon,
+	)
+	holster_slots = list(
+		"1" = list(
+			"icon_x" = -8,
+			"icon_y" = -5))
+
+/obj/item/storage/belt/gun/bizon/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/smg/bizon/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/smg/bizon(src)
+
+/obj/item/storage/belt/gun/m39/rmc
+	name = "\improper L110 pattern M39 holster rig"
+	desc = "A belt of finely-tooled leather, with holster & pouches for the L6A2 carriage and corresponding ammo."
+	icon_state = "rmc_smg"
+	item_state = "rmc_smg"
+
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
@@ -2035,6 +2160,26 @@
 	for(var/total_storage_slots in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/revolver/upp/shrapnel(src)
 
+/obj/item/storage/belt/gun/type47/sof
+	name = "\improper Type 47-S pistol holster rig"
+	icon_state = "korovin_black_holster"
+	item_state = "upp_belt"
+
+/obj/item/storage/belt/gun/type47/sof/t73/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/t73(src)
+
+/obj/item/storage/belt/gun/type47/sof/t73/leader/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73/leader())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/t73_impact(src)
+
+/obj/item/storage/belt/gun/type47/sof/revolver/upp/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/revolver/upp(src)
+
 //Crazy Ivan's belt reskin
 /obj/item/storage/belt/gun/type47/ivan
 	name = "The Rack"
@@ -2343,8 +2488,15 @@
 	. = ..()
 	if(istype(item, /obj/item/ammo_magazine/pkp))
 		magazines--
-#undef MAXIMUM_MAGAZINE_COUNT
 
+/obj/item/storage/belt/gun/smartgunner/upp/full/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/smartgun/upp(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+#undef MAXIMUM_MAGAZINE_COUNT
 
 /obj/item/storage/belt/gun/mortarbelt
 	name="\improper M276 pattern mortar operator belt"
@@ -2526,15 +2678,16 @@
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 
-#define MAXIMUM_MORTARSHELL_COUNT 3
+#define MAXIMUM_MORTARSHELL_COUNT 6
 
 /obj/item/storage/belt/gun/mortarbelt/rmc
 	name = "\improper L84 pattern ammo load rig"
 	desc = "An L84 pattern load-bearing rig configured to carry support ammunition for either the L53A1 light mortar or L164A3 multiple grenade launcher, along with a sidearm & magazine. Made of special rot-resistant fabric."
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
+	w_class = SIZE_HUGE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	max_w_class = SIZE_HUGE
+	max_w_class = SIZE_LARGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(

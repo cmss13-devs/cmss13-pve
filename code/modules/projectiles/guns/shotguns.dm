@@ -415,7 +415,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_tactical"
 	item_state = "type23_tactical"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(
 		/obj/item/attachable/reddot, // Rail
@@ -477,7 +477,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "type23_wood"
 	item_state = "type23_wood"
-	fire_sound = 'sound/weapons/gun_type23.ogg'
+	fire_sound = 'sound/weapons/gun_shotgun_heavy2.ogg'
 	current_mag = /obj/item/ammo_magazine/internal/shotgun/type23
 	attachable_allowed = list(/obj/item/attachable/stock/type23/wood)
 	flags_gun_features = GUN_CAN_POINTBLANK|GUN_INTERNAL_MAG
@@ -1497,3 +1497,62 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/xm51/military/withstock
 	starting_attachment_types = list(/obj/item/attachable/stock/xm51/military)
+
+//-------------------------------------------------------
+// Type-97 UPP automatic shotgun (H&K CAWS)
+
+/obj/item/weapon/gun/rifle/caws
+	name = "\improper Type 97 automatic shotgun"
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "caws"
+	item_state = "caws"
+	mouse_pointer = 'icons/effects/mouse_pointer/shotgun_mouse.dmi'
+
+	fire_sound = 'sound/weapons/gun_caws.ogg'
+	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
+	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
+	force = 20
+	starting_attachment_types = list(/obj/item/attachable/cawsbarrel)
+	current_mag = /obj/item/ammo_magazine/rifle/caws
+	attachable_allowed = list(
+		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/upp,
+		/obj/item/attachable/scope/mini/upp,
+		/obj/item/attachable/reddot/upp,
+		/obj/item/attachable/reflex/upp,
+		/obj/item/attachable/suppressor, // Muzzle // CAWS BARREL
+		/obj/item/attachable/verticalgrip/upp, // underbarrel
+		/obj/item/attachable/angledgrip/upp,
+		/obj/item/attachable/lasersight/upp, // Side Rail
+		/obj/item/attachable/flashlight,
+	)
+	flags_equip_slot = SLOT_BACK
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
+	gun_category = GUN_CATEGORY_SHOTGUN
+	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	wield_delay = WIELD_DELAY_VERY_SLOW // VERY heavy, need to commit to the fight beforehand
+	start_automatic = TRUE
+	map_specific_decoration = FALSE
+
+/obj/item/weapon/gun/rifle/caws/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/caws/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 26, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
+
+/obj/item/weapon/gun/rifle/caws/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY

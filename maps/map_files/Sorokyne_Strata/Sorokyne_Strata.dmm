@@ -4281,7 +4281,7 @@
 /turf/open/floor/strata/floor2,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "arb" = (
-/obj/item/storage/belt/security/MP/UPP,
+/obj/item/storage/belt/security/MP/upp,
 /turf/open/floor/strata/floor2,
 /area/strata/ug/interior/jungle/deep/structures/res)
 "arc" = (

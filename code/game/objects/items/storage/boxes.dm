@@ -683,7 +683,7 @@
 	icon = 'icons/obj/items/storage/packets.dmi'
 	storage_slots = 14
 	max_storage_space = 14
-	can_hold = list(/obj/item/device/flashlight/flare,/obj/item/device/flashlight/flare/signal)
+	can_hold = list(/obj/item/device/flashlight/flare/upp)
 
 /obj/item/storage/box/flare/upp/fill_preset_inventory()
 	for(var/i = 1 to max_storage_space)

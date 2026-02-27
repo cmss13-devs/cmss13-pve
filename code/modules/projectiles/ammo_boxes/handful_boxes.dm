@@ -36,6 +36,27 @@
 	overlay_content = "_buck"
 	magazine_type = /obj/item/ammo_magazine/shotgun/buckshot/special
 
+/obj/item/ammo_box/magazine/shotgun/special_buck/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/special_slug
+	name = "\improper shotgun shell box (Mgn. Slug x 100)"
+	icon_state = "base_spcslug"
+	overlay_content = "_slug"
+	magazine_type = /obj/item/ammo_magazine/shotgun/slug/special
+
+/obj/item/ammo_box/magazine/shotgun/special_slug/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/special_dart
+	name = "\improper shotgun shell box (DU Flechette x 100)"
+	icon_state = "base_spcdart"
+	overlay_content = "_flech"
+	magazine_type = /obj/item/ammo_magazine/shotgun/flechette/special
+
+/obj/item/ammo_box/magazine/shotgun/special_dart/empty
+	empty = TRUE
+
 /obj/item/ammo_box/magazine/shotgun/flechette
 	name = "\improper shotgun shell box (Flechette x 100)"
 	icon_state = "base_flech"
@@ -43,6 +64,9 @@
 	magazine_type = /obj/item/ammo_magazine/shotgun/flechette
 
 /obj/item/ammo_box/magazine/shotgun/flechette/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/special_flech/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/shotgun/incendiary
@@ -137,4 +161,53 @@
 	magazine_type = /obj/item/ammo_magazine/handful/lever_action/marksman
 
 /obj/item/ammo_box/magazine/lever_action/marksman/empty
+	empty = TRUE
+
+//-----------------------TYPE 23 SHELL BOXES-----------------------
+
+/obj/item/ammo_box/magazine/shotgun/upp
+	name = "\improper Type 23 shotgun shell box (Slugs 8g x 100)"
+	icon_state = "base_slug_upp"
+	overlay_gun_type = "_type23"
+	overlay_content = "_upp_slug"
+	magazine_type = /obj/item/ammo_magazine/shotgun/slug/heavy
+
+/obj/item/ammo_box/magazine/shotgun/upp/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/upp/buckshot
+	name = "\improper Type 23 shotgun shell box (Buckshot 8g x 100)"
+	icon_state = "base_buck_upp"
+	overlay_content = "_upp_buck"
+	magazine_type = /obj/item/ammo_magazine/shotgun/buckshot/heavy
+
+/obj/item/ammo_box/magazine/shotgun/upp/buckshot/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/upp/flechette
+	name = "\improper Type 23 shotgun shell box (Flechette 8g x 100)"
+	icon_state = "base_flech_upp"
+	overlay_content = "_upp_flech"
+	magazine_type = /obj/item/ammo_magazine/shotgun/flechette/heavy
+
+/obj/item/ammo_box/magazine/shotgun/upp/flechette/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath
+	name = "\improper Type 23 shotgun shell box (Dragon's breath 8g x 100)"
+	icon_state = "base_inc_upp"
+	overlay_content = "_upp_incen"
+	magazine_type = /obj/item/ammo_magazine/shotgun/slug/dragonsbreath
+
+/obj/item/ammo_box/magazine/shotgun/upp/dragonsbreath/empty
+	empty = TRUE
+
+/obj/item/ammo_box/magazine/shotgun/upp/beanbag
+	name = "\improper Type 23 shotgun shell box (Beanbag 8g x 100)"
+	icon_state = "base_bean_upp"
+	overlay_content = "_upp_bean"
+	magazine_type = /obj/item/ammo_magazine/shotgun/beanbag/heavy
+	can_explode = FALSE
+
+/obj/item/ammo_box/magazine/shotgun/upp/beanbag/empty
 	empty = TRUE

@@ -1008,18 +1008,23 @@
 	)
 	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
 	defense_type = "UPP"
+	health = 250
+	health_max = 250 // UPP strong
 	handheld_type = /obj/item/defenses/handheld/sentry/upp
-	fire_delay = 1.2
+	fire_delay = 0.2 SECONDS
+	damage_mult = 1.1
+	accuracy_mult = 0.75 // Much less ammo and ROF, every shot counts
 	firing_sound = 'sound/weapons/gun_type71.ogg'
 	ammo = new /obj/item/ammo_magazine/sentry/upp
 
 /obj/structure/machinery/defenses/sentry/upp/light
 	name = "UPP SDS-R8 Light Sentry"
 	defense_type = "Light"
-	fire_delay = 0.1 SECONDS
-	damage_mult = 0.3
-	health = 200
-	health_max = 200
+	fire_delay = 0.2 SECONDS
+	damage_mult = 0.6
+	accuracy_mult = 0.75
+	health = 250
+	health_max = 250
 	disassemble_time = 0.75 SECONDS
 	sentry_range = 5
 	omni_directional = FALSE

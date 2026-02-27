@@ -272,7 +272,7 @@
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT
 
-/obj/item/clothing/suit/marine/faction/UPP
+/obj/item/clothing/suit/marine/faction/upp
 	name = "\improper 6B90 pattern UPP armor"
 	desc = "Union frontline issue body armor. Part of protective complex Kuija-M, 6B90 is capable of rifle threats with new ultralight alloy plates over the vitals, while ballistic mesh inserts provide torso protection from shrapnel or ricochets. A small transmitter on the lower back supports low resolution video/audio and biotelemetry feeds for the TOC. While designed to be one size fits all, the support system proves difficult to comfortably adjust."
 	icon_state = "upp_armor"
@@ -291,15 +291,20 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR, ACCESSORY_SLOT_DECORGROIN, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C,  ACCESSORY_SLOT_DECORKNEE, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B90 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/standard/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/upp/standard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 	var/obj/item/clothing/accessory/upppads/crotch/crotch = new()
 	src.attach_accessory(null, crotch, TRUE)
 
+/obj/item/clothing/suit/marine/faction/upp/guard/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
+	src.attach_accessory(null, greaves, TRUE)
+
 /obj/item/clothing/suit/marine/smartgunner/upp
-	name = "\improper 6B91-2 UPP armor"
+	name = "\improper 6B91-2 pattern UPP armor"
 	desc = "Deep modification of the standard body armor, intended for Union machinegunners. Contains compact fire control computers and an encrypted data processing unit in the lower back, as well as an armored cable to connect to the machine gun. Covers all requirements to operate the weapon, but a common complaint is the bulkiness."
 	icon_state = "upp_armor_support"
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
@@ -342,12 +347,12 @@
 		/obj/item/ammo_magazine/pkp,
 		)
 
-/obj/item/clothing/suit/marine/smartgunner/upp/Initialize(mapload)
+/obj/item/clothing/suit/marine/smartgunner/upp/standard/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, FALSE)
 
-/obj/item/clothing/suit/marine/faction/UPP/light
+/obj/item/clothing/suit/marine/faction/upp/light
 	name = "\improper 6B72-03 pattern UPP armor"
 	desc = "Vintage UPP armor system Vadasz. Provides basic ballistic/shrapnel protection for armor crew or rear echelon forces with wraparound soft armor and ceramic composite chestplate. Lightweight, but lacking protection class and coverage. Still issued to the Territorial Guard and People's Armed Police tactical teams, and utilized by some spetznaz."
 	icon_state = "upp_armor_light"
@@ -366,12 +371,82 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B72-03 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/light/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/upp/light/armor
+
+/obj/item/clothing/suit/marine/faction/upp/light/armor/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 
-/obj/item/clothing/suit/marine/faction/UPP/CANC
+/obj/item/clothing/suit/marine/faction/upp/heavy
+	name = "\improper 6B99-2 pattern UPP heavy assault armor"
+	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. Due to the lack of powerful heat dispersion system, the suit becomes an oven to it's owner, and each step takes more and more strenght even with servo-assisters. Yet still, it is the best answer to the question of life and death."
+	icon_state = "upp_armor_heavy"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE|FPRINT|CONDUCT
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
+	flags_inventory = BLOCKSHARPOBJ|BLOCK_KNOCKDOWN
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
+	specialty = "\improper 6B99-2 pattern"
+
+/obj/item/clothing/suit/marine/smartgunner/upp/heavy
+	name = "\improper 6B99-4 pattern UPP heavy assault armor"
+	desc = "An extreme sidegrade of 6B92 armor, with the intent to increase soldier's survivability as much, as possible. An ablative layers of composite armor weighting more than 100 pounds, supported by the servo-assisters in each limb, and powered by the baterries for 24 hours of estimated work. This model kept the advanced computery and wire placement for the work with heavy machineguns without making suit itself too much heavy for the use. An extreme heat and bulkiness tho are still an issue."
+	icon_state = "upp_armor_heavy"
+	slowdown = SLOWDOWN_ARMOR_VERY_HEAVY
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS|BLOCK_KNOCKDOWN
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS|BODY_FLAG_FEET
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_VERYHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
+	specialty = "\improper 6B99-4 pattern"
+	allowed = list(
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine,
+		/obj/item/explosive/mine,
+		/obj/item/attachable/bayonet,
+		/obj/item/weapon/gun/pkp,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/storage/belt/gun/type47,
+		/obj/item/storage/belt/gun/bizon,
+	)
+
+	smartgun_back = list(
+		/obj/item/storage/large_holster/machete,
+		/obj/item/ammo_box,
+	)
+
+/obj/item/clothing/suit/storage/marine/smartgunner/upp/heavy/Initialize()
+	. = ..()
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/minigun,
+		/obj/item/ammo_magazine/pkp,
+		)
+
+/obj/item/clothing/suit/marine/faction/upp/canc
 	name = "\improper Type 12 CANC armor"
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
 	icon_state = "canc"
@@ -390,7 +465,7 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12"
 
-/obj/item/clothing/suit/marine/faction/UPP/CANC/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/upp/canc/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/webbing = new()
 	src.attach_accessory(null, webbing, TRUE)
@@ -414,7 +489,7 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper Type 12 CANC harness"
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket
+/obj/item/clothing/suit/marine/faction/upp/jacket
 	name = "\improper UH4 camouflaged jacket"
 	icon_state = "upp_coat"
 	desc = "Military jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
@@ -435,16 +510,120 @@
 	time_to_unequip = 5
 	time_to_equip = 5
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket/mp
+/obj/item/clothing/suit/marine/faction/upp/jacket/mp
 	name = "\improper UH4-P camouflaged jacket"
 	desc = "A UPP Military Police jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_mp"
 
-/obj/item/clothing/suit/marine/faction/UPP/jacket/pap
+/obj/item/clothing/suit/marine/faction/upp/jacket/pap
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
 
+// UPP Army / Territorial Guard
+
+/obj/item/clothing/suit/storage/marine/faction/upp/army
+
+	name = "\improper 6B80 personal body armor"
+	desc = "An older UPP personal armor system that's since been replaced by the UPP Army Standard 6B90 body armor. It is still used by certain UPP Army units that the UPP doesn't expect to see much combat."
+	storage_slots = 3
+	icon_state = "upp_armor_army_brown"
+	item_state = "upp_armor_army_brown"
+
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW // Goon stats
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+	flags_armor_protection = (BODY_FLAG_CHEST)
+	flags_cold_protection = (BODY_FLAG_CHEST)
+	flags_heat_protection = (BODY_FLAG_CHEST)
+
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+
+/obj/item/clothing/suit/storage/marine/faction/upp/army/simple
+	name = "6B70 personal body armour"
+	icon_state = "upp_generic_ballistic_armor"
+	item_state = "upp_generic_ballistic_armor"
+
+/obj/item/clothing/suit/storage/marine/faction/upp/army/alt
+	name = "6B75 personal body armour"
+	icon_state = "upp_ballistic_armor"
+	item_state = "upp_ballistic_armor"
+
+// UPP SOF
+
+/obj/item/clothing/suit/marine/faction/upp/sof
+	name = "\improper CCC5-L tactical vest"
+	desc = "A lightweight UPP-issued armor vest designed for space operations forces. It features polymer-ceramic composite plating for improved protection while allowing greater mobility. Equipped with modular pouches for ammunition and gear, it ensures rapid access to essential supplies."
+	icon_state = "sof_vest"
+	item_state = "sof_vest"
+	flags_armor_protection = (BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN|BODY_FLAG_LEGS)
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LIGHT
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
+	restricted_accessory_slots = list(, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORKNEE)
+
+/obj/item/clothing/suit/marine/faction/upp/sof/heavy
+	name = "\improper CCC5-L Heavy Tactical Vest"
+	desc = "A heavily reinforced UPP-issued tactical vest designed for space operations forces operating in high-risk environments. The CCC5-L Heavy-Plated Tactical Vest features additional polymer-ceramic composite plating across the chest and torso, providing superior protection against ballistic and explosive threats. Despite its bulk, the vest maintains a balance between protection and mobility, with modular pouches for quick access to essential gear."
+	icon_state = "sof_vest_plate_heavy"
+	item_state = "sof_vest_plate_heavy"
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
+	armor_bomb = CLOTHING_ARMOR_HIGHPLUS
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
+
+/obj/item/clothing/suit/marine/faction/upp/sof/heavy/standard
+// Armor with cosmetic attachies
+
+/obj/item/clothing/suit/marine/faction/upp/sof/heavy/standard/Initialize(mapload)
+	. = ..()
+	var/obj/item/clothing/accessory/upppads/bracers_sof/bracers = new()
+	src.attach_accessory(null, bracers, TRUE)
+	var/obj/item/clothing/accessory/upppads/kneepads_sof/kneepads = new()
+	src.attach_accessory(null, kneepads, TRUE)
+
+/obj/item/clothing/suit/marine/faction/upp/sof/medium
+	name = "\improper CCC5-L plated tactical vest"
+	desc = "A lightweight UPP-issued armor vest designed for space operations forces. It features polymer-ceramic composite plating for improved protection while allowing greater mobility. Equipped with modular pouches for ammunition and gear, it ensures rapid access to essential supplies."
+	icon_state = "sof_vest_plate"
+	item_state = "sof_vest_plate"
+
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+
+/obj/item/clothing/suit/marine/faction/upp/sof/medium/alt
+	icon_state = "sof_vest_alt"
+	item_state = "sof_vest_alt"
+
+/obj/item/clothing/suit/marine/faction/upp/sof/synth
+	name = "\improper CCC5-L synthetic tactical vest"
+	desc = "A lightweight UPP-issued armor vest designed for space operations forces. It features polymer-ceramic composite plating for improved protection while allowing greater mobility. Equipped with modular pouches for ammunition and gear, it ensures rapid access to essential supplies."
+	time_to_unequip = 0.5 SECONDS
+	time_to_equip = 1 SECONDS
+	armor_melee = CLOTHING_ARMOR_NONE
+	armor_bullet = CLOTHING_ARMOR_NONE
+	armor_laser = CLOTHING_ARMOR_NONE
+	armor_energy = CLOTHING_ARMOR_NONE
+	armor_bomb = CLOTHING_ARMOR_NONE
+	armor_bio = CLOTHING_ARMOR_NONE
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_NONE
+	slowdown = SLOWDOWN_ARMOR_SUPER_LIGHT
+
+/obj/item/clothing/suit/marine/faction/upp/sof/synth/Initialize()
+	flags_atom |= NO_NAME_OVERRIDE
+	flags_marine_armor |= SYNTH_ALLOWED
+	return ..()
 
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
@@ -795,6 +974,7 @@
 		/obj/item/device/walkman,
 		/obj/item/storage/belt/marine/rmc,
 		/obj/item/storage/belt/medical/rmc,
+		/obj/item/storage/belt/gun/m39/rmc,
 		/obj/item/storage/belt/gun/l905,
 		/obj/item/storage/belt/gun/mortarbelt/rmc,
 		/obj/item/storage/backpack/general_belt/rmc,
@@ -1047,7 +1227,6 @@
 	item_state_slots = list(WEAR_JACKET = "guard_armor_spec")
 	flags_bodypart_hidden = BODY_FLAG_CHEST|BODY_FLAG_LEGS|BODY_FLAG_ARMS
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	slowdown = SLOWDOWN_ARMOR_MEDIUM
 
@@ -1064,7 +1243,7 @@
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
-	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_VERY_LIGHT
 
 /obj/item/clothing/suit/marine/veteran/pmc/leader
 	name = "\improper M4 pattern PMC leader armor"

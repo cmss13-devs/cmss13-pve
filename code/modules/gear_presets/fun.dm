@@ -310,13 +310,13 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/ivan, WEAR_BACK)
 	//back filled with random guns, it's awesome
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp, WEAR_L_EAR)
 	//body + webbing
-	var/obj/item/clothing/under/marine/veteran/UPP/UPP = new()
+	var/obj/item/clothing/under/marine/veteran/upp/UPP = new()
 	var/obj/item/clothing/accessory/storage/webbing/W = new()
 	UPP.attach_accessory(new_human, W)
 	new_human.equip_to_slot_or_del(UPP, WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/jacket, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp/jacket, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/m60, WEAR_J_STORE)
 	//webbing
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/m60, WEAR_IN_ACCESSORY)
@@ -463,9 +463,9 @@
 	return new_human.gender == MALE ? pick(GLOB.first_names_male_upp) : pick(GLOB.first_names_female_upp)
 
 /datum/equipment_preset/fun/monkey/soldier/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/UPP(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/UPP(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/upp(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/upp(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/type71(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/type71(new_human), WEAR_IN_JACKET)

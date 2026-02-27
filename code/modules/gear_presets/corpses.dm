@@ -482,7 +482,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/UPP, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/upp, WEAR_L_EAR)
 	//head
 	var/maybeberet = rand(1,3)
 	switch(maybeberet)
@@ -491,9 +491,9 @@
 		if(2)
 			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/alt, WEAR_HEAD)
 		if(3)
-			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/uppcap/beret/naval, WEAR_HEAD)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/upp/beret/naval, WEAR_HEAD)
 	//uniform
-	var/obj/item/clothing/under/marine/veteran/UPP/uniform = new()
+	var/obj/item/clothing/under/marine/veteran/upp/uniform = new()
 	var/random_uniform = rand(1,2)
 	switch(random_uniform)
 		if(1)
@@ -504,7 +504,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/upp/naval, WEAR_ACCESSORY)
 	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/upp, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_JACKET)
 	//limbs

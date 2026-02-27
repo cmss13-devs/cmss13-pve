@@ -320,6 +320,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/prop/helmetgarb/bug_spray = "bug_spray",
 	/obj/item/prop/helmetgarb/rmc_platemask = "rmc_platemask",
 	/obj/item/prop/helmetgarb/rmc_goggles = "rmc_goggles",
+	/obj/item/prop/helmetgarb/frogmen_veil = HELMET_GARB_RELAY_ICON_STATE,
 
 	// MISC
 	/obj/item/tool/pen = "helmet_pen_black",
@@ -875,12 +876,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Helmet and faceplate component of the B18 armor system. Nanobonded carbonfiber laminated with ultrahigh molecular density polymer, with an integral rebreather and heads up display."
 	icon_state = "grenadier_helmet"
 	item_state = "grenadier_helmet"
-	armor_melee = CLOTHING_ARMOR_HIGHPLUS
-	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
 	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGH
-	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
 	unacidable = TRUE
 	anti_hug = 6
 	force = 20
@@ -1051,11 +1052,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_helmet"
 	flags_armor_protection = BODY_FLAG_HEAD
+	armor_melee = CLOTHING_ARMOR_HIGH
 	armor_bullet = CLOTHING_ARMOR_VERYHIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUM
 	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
@@ -1070,13 +1072,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper
 	name = "\improper Mk12 marksman helmet"
-	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC, though this one has been painted white for service with Weyland Yutani's elite tactical teams. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "pmc_sniper_hat"
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUMLOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc
-	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Better resistance to glancing hits from small arms and shrapnel than later models, but heavier too. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
+	desc = "A non-standard issue helmet used by marksmen & snipers of the RMC. Lacks an incorporated rebreather unit, owing to the open-face design. It incorporates a tactical camera, IFF signal transponder, and heads up display lens with night vision. Also features white/black hot IR viewing modes from the camera system."
 	icon_state = "rmc_sniper_hat"
 	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced/rmc/alt)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced/rmc/alt
@@ -1210,16 +1212,13 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/engineer
 	name = "\improper PMC Mk16 engineer helmet"
-	desc = "An advanced technician helmet with a black finish, including advanced welding protection and resistance to industrial hazards, though it offers less kevlar against potential firefights."
+	desc = "An advanced technician helmet with a black finish, including advanced welding protection and resistance to industrial hazards. Comes with long-range IR flashlight."
 	icon_state = "pmc_engineer_helmet"
-	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bomb = CLOTHING_ARMOR_MEDIUM
-	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	eye_protection = EYE_PROTECTION_WELDING
 	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES
 	flags_heat_protection = BODY_FLAG_HEAD
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROT
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/commando
@@ -1232,7 +1231,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	armor_internaldamage = CLOTHING_ARMOR_VERYHIGH
-	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	clothing_traits = list(TRAIT_EAR_PROTECTION)
 	anti_hug = 6
@@ -1479,7 +1478,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP
+/obj/item/clothing/head/helmet/marine/veteran/upp
 	name = "\improper 6B75 helmet"
 	desc = "Union combat helmet Almaz. Part of protective complex Kuija-M, constructed of a thin alloy shattering plate and para-aramid underlayers. The helmet includes cheek shields for shrapnel or ricochet protection, a low resolution camera system, hearing protection, and an integrated communications system. Ports for connecting infrared visors or night vision systems are also provided."
 	icon_state = "upp_helmet"
@@ -1496,20 +1495,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	built_in_visors = list(new /obj/item/device/helmet_visor/upp)
 	specialty = "6B75 helmet"
 
-/obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
-	name = "\improper 6B79 helmet"
-	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
-	icon_state = "upp_helmet_heavy"
-	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_energy = CLOTHING_ARMOR_MEDIUM
-	armor_bomb = CLOTHING_ARMOR_HIGH
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_HIGHPLUS
-	armor_internaldamage = CLOTHING_ARMOR_HIGHPLUS
-	specialty = "6B79 helmet"
-
-/obj/item/clothing/head/helmet/marine/veteran/UPP/old
+/obj/item/clothing/head/helmet/marine/veteran/upp/old
 	name = "\improper 6B68 helmet"
 	desc = "An older variant of UPPAC helmet still utilized by Territorial Guard units and Interior Troops. Tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
@@ -1520,6 +1506,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	clothing_traits = null
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	specialty = "6B68 helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/upp/army
+	name = "\improper 6B77 combat helmet"
+	desc = "An older version of the UPP Army's 6B82 combat helmet, still worn by certain units on planets the UPP deems less important."
+	icon_state = "upp_army_helmet"
+
+/obj/item/clothing/head/helmet/marine/veteran/upp/heavy/sof
+	name = "\improper CCC5-L composite helmet"
+	desc = "A UPP-manufactured combat helmet with a distinctive spherical design. Made from a reinforced polymer composite, it offers ballistic protection while incorporating an integrated HUD, encrypted comms, and a rebreather system. Its limited visor visibility is a tradeoff for enhanced durability."
+	icon_state = "sof_helmet"
+	armor_melee = CLOTHING_ARMOR_HIGHPLUS
+	armor_bullet = CLOTHING_ARMOR_ULTRAHIGHPLUS
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	flags_inv_hide = HIDEEARS|HIDEALLHAIR
 
 //==========================//UPP\\=================================\\
 //=======================================================================\\
@@ -1877,109 +1881,37 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Naval Infantry helmet for multiple environments. Alloy/para-aramid ballistic 'shell' comprised of three seperate plates held together with a complex liner system. Capable of being worn in tandem with an exoatmospheric fighting hood. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is identical to the one used for UPP uniforms."
 	icon_state = "upp_helmet_naval_alt"
 
-/obj/item/clothing/head/uppcap
-	name = "\improper UL2 cap"
-	desc = "Standard issue patrol cap of the UPP's military."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_cap"
-	item_icons = list(
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
-	)
-	siemens_coefficient = 2
-	flags_armor_protection = BODY_FLAG_HEAD
-	armor_melee = CLOTHING_ARMOR_VERYLOW
-	armor_bullet = CLOTHING_ARMOR_NONE
-	armor_laser = CLOTHING_ARMOR_NONE
-	armor_energy = CLOTHING_ARMOR_NONE
-	armor_bomb = CLOTHING_ARMOR_NONE
-	armor_bio = CLOTHING_ARMOR_NONE
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_NONE
-	flags_cold_protection = BODY_FLAG_HEAD
-	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
-	flags_inventory = null
+/obj/item/clothing/head/helmet/upp/heavy
+	name = "\improper 6B83 heavy helmet"
+	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles. Usually carried alongside with 6B99-2 heavy assault armor."
+	icon_state = "upp_helmet_heavy"
+	armor_melee = CLOTHING_ARMOR_VERYHIGH
+	armor_bullet = CLOTHING_ARMOR_GIGAHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_ULTRAHIGH
+	armor_bio = CLOTHING_ARMOR_HIGH
+	armor_rad = CLOTHING_ARMOR_HIGHPLUS
+	armor_internaldamage = CLOTHING_ARMOR_VERYHIGHPLUS
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	anti_hug = 6
+	force = 20
+	flags_atom = NO_NAME_OVERRIDE
+	specialty = "6B83 helmet"
 
-/obj/item/clothing/head/uppcap/civi
-	name = "\improper UL2c cap"
-	icon_state = "upp_cap_civi"
-
-/obj/item/clothing/head/uppcap/boonie
-	name = "\improper UL5 hat"
-	desc = "Standard issue soft brimmed hat for Territorial Guard units stationed in areas with extreme heat."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_boonie"
-
-/obj/item/clothing/head/uppcap/boonie/canc
-	name = "\improper boonie hat"
-	desc = "A boonie hat in CANC uniform colors."
-	icon_state = "canc_boonie"
-
-/obj/item/clothing/head/uppcap/beret/naval
-	name = "\improper UL4 Naval Infantry beret"
-	desc = "A black beret worn by the UPP's Naval Infantry. Wear it with pride."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_beret_naval"
-
-/obj/item/clothing/head/uppcap/beret/guerilla
-	name = "\improper red beret"
-	desc = "A red beret popular with communist revolutionaries."
-	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_beret_revolution"
-
-/obj/item/clothing/head/uppcap/beret
-	name = "\improper UL3 beret"
-	desc = "Standard issue beret of the UPP's military."
-	icon_state = "upp_beret"
-
-/obj/item/clothing/head/uppcap/peaked
-	name = "\improper UL3 peaked cap"
-	desc = "Standard issue peaked service cap of the UPP's military."
-	icon_state = "upp_peaked"
-
-/obj/item/clothing/head/uppcap/peaked/police
-	name = "\improper UL3 PaP peaked cap"
-	desc = "Standard issue peaked cap of the People's Armed Police."
-	icon_state = "upp_peaked_police"
-
-/obj/item/clothing/head/uppcap/peaked/mss
-	name = "\improper UL3 MSS peaked cap"
-	desc = "Standard issue peaked cap of the Ministry of Space Security."
-	icon_state = "upp_peaked_mss"
-
-/obj/item/clothing/head/uppcap/ushanka
-	name = "\improper UL2 ushanka"
-	desc = "Standard issue cold weather hat of the UPP's military."
-	icon_state = "upp_ushanka"
-	item_state = "upp_ushanka"
-	var/tied = FALSE
-	var/original_state = "upp_ushanka"
-	flags_inv_hide = HIDEEARS
-
-/obj/item/clothing/head/uppcap/ushanka/verb/flaps_up()
-	set name = "Tie Up/Down"
-	set category = "Object"
-	set src in usr
-	if(usr.is_mob_incapacitated())
-		return
-
-	tied = !tied
-	if(tied)
-		to_chat(usr, SPAN_NOTICE("You tie \the [src] up."))
-		icon_state += "_up"
-	else
-		to_chat(usr, SPAN_NOTICE("You untie \the [src]."))
-		icon_state = original_state
-
-
-
-	update_clothing_icon(src) //Update the on-mob icon.
-
-/obj/item/clothing/head/uppcap/ushanka/civi
-	name = "\improper UL2c ushanka"
-	icon_state = "upp_ushanka_civi"
-	item_state = "upp_ushanka_civi"
-	original_state = "upp_ushanka_civi"
-	flags_inv_hide = HIDEEARS
+/obj/item/clothing/head/helmet/upp/frogmen
+	name = "\improper 6B84 light helmet"
+	desc = " UPPA reconnaissance new helmet for multiple environments, and used mostly for NVG/IR system placement. Made using fabric-polymer technology, making it much lighter in comparison to the standard issue 6B82, sacrificing overall protection. A tactical datalink and A/V feeds are provided, alongside facilities for an infrared imager complex. Surprisingly comfortable. The fabric utilized for this model is rubbery and colored after the standard paint coating of UPP armor."
+	icon_state = "upp_helmet_frogmen"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+	armor_rad = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	specialty = "6B84 helmet"
 
 /obj/item/clothing/head/helmet/marine/veteran/van_bandolier
 	name = "pith helmet"

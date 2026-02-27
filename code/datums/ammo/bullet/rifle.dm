@@ -592,6 +592,22 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak/pkp)
 	))
 
+/datum/ammo/bullet/rifle/upp/incendiary
+	name = "Incendiary 10x27 bullet"
+	damage_type = BURN
+	shrapnel_chance = 0
+	flags_ammo_behavior = AMMO_BALLISTIC
+	damage = 55
+	shell_speed = AMMO_SPEED_TIER_4
+	accuracy = -HIT_ACCURACY_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_9
+
+/datum/ammo/bullet/rifle/upp/incendiary/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
+	))
+
 //10X31 AK500
 /datum/ammo/bullet/rifle/heavy/upp
 	name = "10x31 bullet"
@@ -628,6 +644,8 @@
 
 /datum/ammo/bullet/rifle/ap/twe
 	name = "armor-piercing 8.5x33 bullet"
+	damage = 55
+	penetration = ARMOR_PENETRATION_TIER_9
 
 /datum/ammo/bullet/rifle/heap/twe
 	name = "high-explosive armor-piercing 8.5x33 bullet"
