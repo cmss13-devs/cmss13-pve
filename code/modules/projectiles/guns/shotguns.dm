@@ -1548,7 +1548,7 @@ can cause issues with ammo types getting mixed up during the burst.
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_4
-	recoil_unwielded = RECOIL_AMOUNT_TIER_3
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
 /obj/item/weapon/gun/rifle/caws/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 26, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
