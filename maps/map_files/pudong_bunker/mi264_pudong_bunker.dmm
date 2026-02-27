@@ -1327,6 +1327,13 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/pudong/base/maintenance)
+"cC" = (
+/obj/structure/fence{
+	health_max = 500;
+	health = 500
+	},
+/turf/open/auto_turf/snow/layer2,
+/area/pudong/exterior/cliff)
 "cD" = (
 /obj/structure/platform/strata{
 	dir = 8
@@ -1436,8 +1443,8 @@
 /area/pudong/caves/main)
 "cU" = (
 /obj/structure/fence{
-	health_max = 1500;
-	health = 1500
+	health_max = 500;
+	health = 500
 	},
 /turf/open/auto_turf/snow/layer0,
 /area/pudong/caves/main)
@@ -7067,8 +7074,8 @@
 /area/pudong/base/quarters)
 "Fz" = (
 /obj/structure/fence{
-	health_max = 1500;
-	health = 1500
+	health_max = 500;
+	health = 500
 	},
 /turf/open/auto_turf/snow/layer1,
 /area/pudong/caves/main)
@@ -29515,8 +29522,8 @@ MA
 LF
 LF
 LF
-de
-de
+cC
+cC
 LF
 LF
 de
