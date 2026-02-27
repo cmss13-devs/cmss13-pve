@@ -970,6 +970,22 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 
 	return jobs_to_return
 
+// RU-PVE START
+
+/// Returns a list of all the proference's jobs set to the priority argument
+/datum/preferences/proc/get_job_by_priority(priority)
+	if(!length(job_preference_list))
+		ResetJobs()
+		return null
+
+	for(var/job in job_preference_list)
+		if(job_preference_list[job] == priority)
+			return job
+
+	return null
+
+// RU-PVE END
+
 /// Returns TRUE if any job has a priority other than NEVER, FALSE otherwise.
 /datum/preferences/proc/has_job_priorities()
 	if(!length(job_preference_list))
@@ -2214,6 +2230,7 @@ GLOBAL_LIST_INIT(bgstate_options, list(
 	character.f_style = f_style
 
 	character.origin = origin
+	character.accent_prefix = GLOB.origins[origin].tag_icon // RU PVE ADDITION
 	character.personal_faction = faction
 	character.religion = religion
 

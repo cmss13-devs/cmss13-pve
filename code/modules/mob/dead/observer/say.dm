@@ -31,6 +31,7 @@
 
 	var/style = "body"
 	var/comm_paygrade = ""
+	var/accent_icon = "" // RU PVE ADDITION
 
 	if(language)
 		style = language.color
@@ -40,6 +41,7 @@
 		var/mob/living/carbon/human/H = speaker
 		speaker_name = H.GetVoice()
 		comm_paygrade = H.get_paygrade()
+		accent_icon = H.get_accent_icon() // RU PVE ADDITION
 
 	if(italics)
 		message = "<i>[message]</i>"
@@ -58,7 +60,8 @@
 	if(client && client.prefs && client.prefs.toggles_chat & CHAT_GHOSTEARS && speaker.z == z && get_dist(speaker, src) <= GLOB.world_view_size)
 		message = "<b>[message]</b>"
 
-	to_chat(src, "<span class='game say'><span class='name'>[comm_paygrade][speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='[style]'>\"[message]\"</span></span></span>")
+//	to_chat(src, "<span class='game say'><span class='name'>[comm_paygrade][speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='[style]'>\"[message]\"</span></span></span>")
+	to_chat(src, "<span class='game say'><span class='name'>[accent_icon][comm_paygrade][speaker_name]</span>[alt_name] [track][verb], <span class='message'><span class='[style]'>\"[message]\"</span></span></span>")  // RU PVE EDIT
 	if (speech_sound && (get_dist(speaker, src) <= GLOB.world_view_size && src.z == speaker.z))
 		var/turf/source = speaker? get_turf(speaker) : get_turf(src)
 		playsound_client(client, speech_sound, source, sound_vol)

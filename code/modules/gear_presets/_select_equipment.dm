@@ -362,6 +362,7 @@
 		new_human.name = origin.correct_name(new_human.name, new_human.gender)
 	if(origin_override)
 		new_human.origin = origin_override
+		new_human.accent_prefix = GLOB.origins[origin_override].tag_icon // RU PVE ADDITION
 	load_skills(new_human, mob_client) //skills are set before equipment because of skill restrictions on certain clothes.
 	load_languages(new_human, mob_client)
 	load_age(new_human, mob_client)

@@ -594,6 +594,39 @@
 	name = "Well-worn Poncho"
 	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
 
+/obj/item/clothing/accessory/poncho/green/raicoat
+	name = "Rain Poncho"
+	desc = "Apparently this one is used more in particularly tropical climates."
+	icon_state = "r_poncho"
+
+/obj/item/clothing/accessory/poncho/green/raicoat/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
+	. = ..()
+	RegisterSignal(S, COMSIG_ITEM_EQUIPPED, PROC_REF(on_suit_equipped))
+	RegisterSignal(S, COMSIG_ITEM_UNEQUIPPED, PROC_REF(on_suit_unequipped))
+	if(ishuman(S.loc))
+		var/mob/living/carbon/human/H = S.loc
+		if(H.w_uniform == S || H.wear_suit == S)
+			H.remove_overlay(HAIR_LAYER)
+
+/obj/item/clothing/accessory/poncho/green/raicoat/on_removed(mob/living/carbon/human/user, obj/item/clothing/S)
+	. = ..()
+	UnregisterSignal(S, list(COMSIG_ITEM_EQUIPPED, COMSIG_ITEM_UNEQUIPPED))
+	if(ishuman(S.loc))
+		var/mob/living/carbon/human/H = S.loc
+		if(H.w_uniform == S || H.wear_suit == S)
+			H.apply_overlay(HAIR_LAYER)
+			H.update_hair()
+
+/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_equipped(datum/source, mob/living/carbon/human/user, slot)
+	SIGNAL_HANDLER
+	if(slot == WEAR_BODY || slot == WEAR_JACKET)
+		user.remove_overlay(HAIR_LAYER)
+
+/obj/item/clothing/accessory/poncho/green/raicoat/proc/on_suit_unequipped(datum/source, mob/living/carbon/human/user, slot)
+	SIGNAL_HANDLER
+	if(slot == WEAR_BODY || slot == WEAR_JACKET)
+		user.update_hair()
+
 /obj/item/clothing/accessory/bomb //Suicide vesst
 	name = "explosive vest"
 	desc = "Used by absolute madmen to cause terror and fear against others, haphazardly put together with C4 and a standard webbing vest."

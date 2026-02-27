@@ -536,6 +536,7 @@
 
 		list("ADDITIONAL CLOTHING", -1, null, null),
 		list("Poncho, Green", round(scale * 10), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
+		list("Rain Poncho, Green", round(scale * 10), /obj/item/clothing/accessory/poncho/green/raicoat, VENDOR_ITEM_REGULAR), // RU PVE ADDITION
 		list("Poncho, Brown", round(scale * 10), /obj/item/clothing/accessory/poncho/brown, VENDOR_ITEM_REGULAR),
 		list("Poncho, Black", round(scale * 10), /obj/item/clothing/accessory/poncho/black, VENDOR_ITEM_REGULAR),
 		list("Bandana, Jungle", round(scale * 5), /obj/item/clothing/head/cmbandana, VENDOR_ITEM_REGULAR),
@@ -916,7 +917,7 @@
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
 		list("M44 Speedloader (.44)", round(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
-		list("M44 Combat Revolver", round(scale *1), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
+		list("M44 Combat Revolver", round(scale *1), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),

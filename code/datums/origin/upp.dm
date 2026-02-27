@@ -1,7 +1,7 @@
 /datum/origin/upp
 	name = ORIGIN_UPP
 	desc = "You were born in the Union of Progressive Peoples."
-
+	tag_icon = "upp" // RU PVE ADDITION
 
 /datum/origin/upp/cradle
 	name = ORIGIN_UPP_CRADLE

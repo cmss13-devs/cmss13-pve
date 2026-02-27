@@ -1107,5 +1107,5 @@
 	var/confirm = tgui_alert(usr, "Are you sure you wish to send '[message]' to all players for [(duration / 10)] seconds?", "Confirm", list("Yes", "No"), 20 SECONDS)
 	if(confirm != "Yes")
 		return FALSE
-	show_blurb(GLOB.player_list, duration, message, TRUE, "center", "center", "#bd2020", "ADMIN")
+	show_blurb(GLOB.player_list, duration, message, TRUE, "center", "center", "#bd2020") // RU-PVE EDIT
 	message_admins("[key_name(usr)] sent an admin blurb alert to all players. Alert reads: '[message]' and lasts [(duration / 10)] seconds.")
