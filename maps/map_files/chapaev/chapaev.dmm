@@ -5211,7 +5211,7 @@
 	color = "#8B9490"
 	},
 /obj/item/roller,
-/obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/belt/medical/upp/only_scanner,
 /obj/item/storage/firstaid/softpack/upp{
 	pixel_x = 3;
 	pixel_y = 2
