@@ -86,6 +86,39 @@
 	update_icon()
 	SEND_SIGNAL(src, COMSIG_ARC_ANTENNA_TOGGLED)
 
+/obj/vehicle/multitile/arc/proc/toggle_turret(mob/toggler)
+	set name = "Toggle Sentry Turret"
+	set desc = "Toggles the automated sentry turret."
+	set category = "Vehicle"
+
+	var/mob/user = toggler || usr
+	if(!user || !istype(user))
+		return
+
+	var/obj/vehicle/multitile/arc/vehicle = user.interactee
+	if(!istype(vehicle))
+		return
+
+	var/seat
+	for(var/vehicle_seat in vehicle.seats)
+		if(vehicle.seats[vehicle_seat] == user)
+			seat = vehicle_seat
+			break
+
+	if(!seat)
+		return
+
+	if(vehicle.health < initial(vehicle.health) * 0.5)
+		to_chat(user, SPAN_WARNING("[vehicle]'s hull is too damaged to operate!"))
+		return
+
+	var/obj/item/hardpoint/primary/arc_sentry/turret = locate() in vehicle.hardpoints
+	if(!turret)
+		to_chat(user, SPAN_WARNING("[vehicle] has no sentry turret mounted!"))
+		return
+
+	turret.toggle_active(user)
+
 /obj/vehicle/multitile/arc/proc/open_arc_controls_guide()
 	set name = "Vehicle Controls Guide"
 	set desc = "MANDATORY FOR FIRST PLAY AS VEHICLE CREWMAN OR AFTER UPDATES."
