@@ -62,6 +62,9 @@ endmap
 map lv522_chances_claim_forecon
 endmap
 
+map cocytus_dam
+endmap
+
 map new_varadero
 endmap
 
