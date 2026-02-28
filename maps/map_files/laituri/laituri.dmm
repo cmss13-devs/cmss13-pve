@@ -696,6 +696,19 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"bl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/landmark/late_join/upp/forecon,
+/obj/effect/landmark/start/marine/rto/upp/forecon,
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/cryo_cells)
 "bm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -1296,7 +1309,7 @@
 	pixel_x = 2
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rifleman{
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rto{
 	pixel_x = -8
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -1460,10 +1473,6 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
-"cI" = (
-/obj/effect/landmark/start/marine/medic/upp/forecon,
-/turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/cryo_cells)
 "cJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -1682,6 +1691,18 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
+"cZ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/landmark/late_join/upp/forecon,
+/obj/effect/landmark/start/marine/rto/upp/forecon,
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/cryo_cells)
 "da" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/space)
@@ -2145,7 +2166,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rifleman{
+/obj/structure/closet/secure_closet/marine_personal/forecon_upp/rto{
 	pixel_x = -8
 	},
 /turf/open/floor/strata/multi_tiles,
@@ -4941,9 +4962,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/medical)
 "lc" = (
-/obj/item/weapon/gun/pkp/iff{
-	current_mag = null
-	},
 /obj/item/ammo_magazine/pkp,
 /obj/item/ammo_magazine/pkp/penetrating,
 /obj/item/storage/belt/gun/smartgunner/upp,
@@ -4963,6 +4981,7 @@
 	light_range = 5;
 	dir = 8
 	},
+/obj/item/weapon/gun/pkp/iff/para,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
 "ld" = (
@@ -13326,7 +13345,7 @@ bI
 ca
 zN
 zN
-bJ
+bl
 bI
 bF
 ac
@@ -14083,7 +14102,7 @@ cq
 bF
 cj
 ch
-cI
+zN
 bP
 bP
 zN
@@ -14238,7 +14257,7 @@ bM
 ce
 zN
 zN
-bL
+cZ
 bM
 bF
 ac

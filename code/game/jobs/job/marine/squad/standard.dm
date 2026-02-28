@@ -113,8 +113,8 @@
 
 /datum/job/marine/standard/ai/upp/forecon
 	title = JOB_SQUAD_MARINE_FORECON_UPP
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/upp/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/pfc/upp/forecon/senior_private
 	gear_preset_tertiary = /datum/equipment_preset/uscm/pfc/upp/forecon/junior_sergeant

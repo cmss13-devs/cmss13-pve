@@ -138,7 +138,7 @@
 // ==UPP FORECON aka SISSI== //
 
 /obj/structure/closet/secure_closet/marine_personal/forecon_upp/spawn_gear()
-	new /obj/item/clothing/head/uppcap/beret/naval(src)
+	new /obj/item/clothing/head/uppcap/beret/para(src)
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
 	new /obj/item/clothing/accessory/patch/upp/airborne(src)
