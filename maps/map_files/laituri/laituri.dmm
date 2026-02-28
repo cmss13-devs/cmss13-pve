@@ -4801,10 +4801,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/strata/floor2,
 /area/golden_arrow/prep_hallway)
-"kI" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
-/turf/open/floor/strata/floor2,
-/area/golden_arrow/prep_hallway)
 "kK" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -4972,10 +4968,6 @@
 "ld" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/strata,
-/area/golden_arrow/prep_hallway)
-"le" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
-/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lf" = (
 /obj/item/ammo_box/magazine/type71/large,
@@ -12824,9 +12816,9 @@ DL
 jU
 mw
 kl
-le
+DA
 kR
-kI
+sY
 lP
 lI
 lx
