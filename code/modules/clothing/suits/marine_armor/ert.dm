@@ -852,13 +852,14 @@
 	icon_state = "merc_medium"
 	item_state = "merc_medium"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_laser = CLOTHING_ARMOR_LOW
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
 
 /obj/item/clothing/suit/storage/marine/veteran/merc/light
@@ -884,8 +885,8 @@
 	)
 	icon_state = "merc_heavy"
 	item_state = "merc_heavy"
-	armor_melee = CLOTHING_ARMOR_HIGH
-	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_VERYHIGH
 	flags_inventory = BLOCK_KNOCKDOWN
