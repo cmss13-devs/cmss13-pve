@@ -35,7 +35,7 @@ type BackendContext = {
   zombie_outer_wear: boolean;
   zombie_outer_wear_chance: number;
   zombie_delimb_multi: number;
-  ai_amount: number;
+
   autoClean: BooleanLike;
 };
 
@@ -44,16 +44,6 @@ export const HumanAISpawner = (props) => {
   const [chosenPreset, setPreset] = useState<AIEquipmentPreset | null>(null);
   const [viewingFaction, setViewingFaction] = useState<string | null>(null);
   const { presets } = data;
-  const [zombieOuterWearChance, setZombieOuterWearChance] = useState(
-    data.zombie_outer_wear_chance,
-  );
-
-  const [disableAutoClean, setDisableAutoClean] = useState<BooleanLike>(
-    data.autoClean,
-  );
-  const [newZombieDelimbMulti, setZombieDelimbMulti] = useState<number | null>(
-    data.zombie_delimb_multi,
-  );
 
   const factionOptions = Object.keys(presets);
 
@@ -126,11 +116,20 @@ export const HumanAISpawner = (props) => {
               <Section
                 title="Selected Preset"
                 buttons={
-                  <Button.Checkbox
-                    checked={data.desc}
-                    icon="eye-slash"
-                    onClick={() => act('hide_desc')}
-                  />
+                  <span>
+                    {chosenPreset !== null ? (
+                      <span>
+                        <Button.Checkbox
+                          icon="trash"
+                          onClick={() =>
+                            act('delete_preset', {
+                              path: chosenPreset.path,
+                            })
+                          }
+                        />
+                      </span>
+                    ) : null}
+                  </span>
                 }
               >
                 {chosenPreset !== null ? (

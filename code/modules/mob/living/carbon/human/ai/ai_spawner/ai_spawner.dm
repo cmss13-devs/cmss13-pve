@@ -5,7 +5,7 @@
 
 /datum/human_ai_spawner_menu
 	var/static/list/lazy_ui_data = list()
-	//var/static/list/lazy_ui_data_
+	var/update_preset_list_now = FALSE
 	var/static/list/super_silly_pref_save = list()
 	var/viewing_faction
 	var/current_path
@@ -23,6 +23,7 @@
 	var/auto_clean = FALSE
 	var/zombie_delimb_multi = 1
 	var/mob/living/carbon/human/species_dummy
+
 
 /datum/human_ai_spawner_menu/New()
 	usr.client.click_intercept = src
@@ -60,7 +61,8 @@
 		GLOB.peak_humans--
 	else
 		species_dummy.set_species("Human")
-	preset = GLOB.gear_path_presets_list[preset]
+
+	preset = GLOB.gear_path_presets_list[preset.type]
 	preset.load_race(species_dummy)//great holes are secretly dug where earths pores ought to suffice
 	var/species_of_this_preset = species_dummy.get_species()
 	lazy_ui_data[preset::faction] += list(list(
@@ -93,6 +95,9 @@
 	data["zombie_outer_wear_chance"] = zombie_outer_wear_chance
 	data["autoClean"] = auto_clean
 	data["zombie_delimb_multi"] = zombie_delimb_multi
+	if(update_preset_list_now)
+		update_preset_list_now = FALSE
+		data["presets"] = lazy_ui_data
 	return data
 
 /datum/human_ai_spawner_menu/ui_static_data(mob/user)
@@ -137,6 +142,23 @@
 			paradrop = !paradrop
 		if("hide_desc")
 			desc = !desc
+		if("delete_preset")
+			var/datum/equipment_preset/preset_path = text2path(params["path"])
+			var/faction_i = 0
+			for(var/faction_name in lazy_ui_data)
+				faction_i++ //i feel like there is a better way to do this
+				if(faction_name == preset_path.faction)
+					var/list/faction_list = lazy_ui_data[faction_name]
+					var/preset_i = 0
+					for(var/list/preset_data in faction_list)
+						preset_i++ //sometimes it just works
+						if(preset_data["path"] == preset_path)
+							update_preset_list_now = TRUE
+							faction_list.Cut(preset_i, preset_i+1)
+							// remove entire faction if there are no more presets in it
+							if(!length(faction_list))
+								lazy_ui_data.Cut(faction_i, faction_i+1)
+							return
 		if("outfit")
 			outfit = !outfit
 		if("set_selected_species")
@@ -210,6 +232,9 @@
 						var/mob/living/carbon/human/ai_human = object
 						if(!ai_human.ckey)
 							qdel(ai_human)
+							return
+
+
 				var/faction_of_preset
 				var/datum/equipment_preset/gotten_path = text2path(current_path)
 				var/randomise_appearance = TRUE
