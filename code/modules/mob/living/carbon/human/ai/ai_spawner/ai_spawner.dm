@@ -33,7 +33,7 @@
 				continue
 			var/datum/human_ai_equipment_preset/preset_obj = new preset_type()
 			//GLOB.human_ai_equipment_presets["[preset_type]"] = preset_obj
-			add_preset(preset_obj.path, preset_obj.desc)
+			add_preset(preset_obj.path, preset_obj.desc, update_ui = FALSE)
 
 
 /datum/human_ai_spawner_menu/ui_close(mob/user)
@@ -53,7 +53,9 @@
 /datum/human_ai_spawner_menu/ui_state(mob/user)
 	return GLOB.admin_state
 
-/datum/human_ai_spawner_menu/proc/add_preset(datum/equipment_preset/preset, desc)
+/datum/human_ai_spawner_menu/proc/add_preset(datum/equipment_preset/preset, desc, update_ui = FALSE)
+	if(!preset)
+		return
 	if(!lazy_ui_data[preset.faction])
 		lazy_ui_data[preset.faction] = list()
 	if(!species_dummy)
@@ -65,6 +67,15 @@
 	preset = GLOB.gear_path_presets_list[preset.type]
 	preset.load_race(species_dummy)//great holes are secretly dug where earths pores ought to suffice
 	var/species_of_this_preset = species_dummy.get_species()
+	//check for dupes
+	var/list/faction_list = lazy_ui_data[preset::faction]
+	for(var/list/preset_data in faction_list)
+		if(preset_data["path"] == preset.type)
+			if(usr)
+				to_chat(usr, SPAN_WARNING("You can't add two of [preset.name]!"))
+			else
+				log_debug("A duplicate equipment preset given to human_ai_spawner_menu's internal preset dictionary. Path:[preset.type] ")
+			return
 	lazy_ui_data[preset::faction] += list(list(
 		"name" = preset.name,
 		"description" = "[desc ? desc : "Added Preset."]",
@@ -73,6 +84,9 @@
 		"selected_equipment" = "Full Equipment",
 		"species" = species_of_this_preset
 	))
+
+	if(update_ui)
+		update_preset_list_now = TRUE
 
 /datum/human_ai_spawner_menu/ui_data(mob/user)
 	var/list/data = list()
@@ -98,6 +112,7 @@
 	if(update_preset_list_now)
 		update_preset_list_now = FALSE
 		data["presets"] = lazy_ui_data
+
 	return data
 
 /datum/human_ai_spawner_menu/ui_static_data(mob/user)
@@ -200,7 +215,7 @@
 		if("add_preset")
 			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
 			dresscode = GLOB.gear_name_presets_list[dresscode]
-			add_preset(dresscode)
+			add_preset(dresscode, update_ui = TRUE)
 		if("zombie_outer_wear")
 			zombie_outer_wear = !zombie_outer_wear
 		if("zombie_outer_wear_chance")
@@ -232,8 +247,13 @@
 						var/mob/living/carbon/human/ai_human = object
 						if(!ai_human.ckey)
 							qdel(ai_human)
-							return
-
+					return
+				if(LAZYACCESS(modifiers, ALT_CLICK))
+					if(ishuman(object))
+						var/mob/living/carbon/human/ai_human = object
+						if(ai_human.assigned_equipment_preset)
+							add_preset(ai_human.assigned_equipment_preset.type, "ALT added preset.", update_ui = TRUE)
+					return
 
 				var/faction_of_preset
 				var/datum/equipment_preset/gotten_path = text2path(current_path)
