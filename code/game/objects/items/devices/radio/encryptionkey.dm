@@ -330,7 +330,7 @@
 /obj/item/device/encryptionkey/upp/forecon
 	name = "\improper UPP Recon Radio Encryption Key"
 	icon_state = "upp_key"
-	channels = list(RADIO_CHANNEL_UPP_FORECON = TRUE)
+	channels = list(RADIO_CHANNEL_UPP_RCN = TRUE)
 //---------------------------------------------------
 //CLF Keys
 /obj/item/device/encryptionkey/clf

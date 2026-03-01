@@ -55,7 +55,7 @@
 #define JOB_SQUAD_TEAM_LEADER_FORECON_UPP "Assistant Recon Squad Sergeant"
 #define JOB_SQUAD_LEADER_FORECON_UPP  "Recon Squad Sergeant"
 #define JOB_SQUAD_MEDIC_FORECON_UPP "Recon Sanitar"
-#define JOB_SQUAD_RTO_FORECON_UPP "Recon Radio Telephone Operator"
+#define JOB_SQUAD_RTO_FORECON_UPP "Recon Radio Transmissions Operator"
 #define JOB_SQUAD_MARINE_FORECON_UPP "Recon Infantryman"
 #define JOB_SQUAD_SMARTGUN_FORECON_UPP "Recon Machinegunner"
 

@@ -1473,6 +1473,10 @@
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"cI" = (
+/obj/item/device/binoculars/fire_support/upp,
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/prep_hallway)
 "cJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "door_warning";
@@ -3921,9 +3925,6 @@
 /area/golden_arrow/platoon_sergeant)
 "io" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/prop/almayer/CICmap/upp{
-	pixel_y = 6
-	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/platoon_sergeant)
 "iq" = (
@@ -4060,27 +4061,6 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
 "iG" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/structure/bed/chair{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = 2
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 8
-	},
 /obj/structure/machinery/light/small{
 	dir = 8;
 	light_color = "#e7c0a4";
@@ -4122,25 +4102,6 @@
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
-"iQ" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 3
-	},
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 2;
-	pixel_y = 6
-	},
-/turf/open/floor/strata/floor3,
-/area/golden_arrow/briefing)
 "iR" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/dorms)
@@ -4150,6 +4111,10 @@
 	light_range = 2;
 	light_color = "#e7c0a4";
 	invisibility = 100
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap/upp{
+	pixel_y = 6
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/briefing)
@@ -4301,7 +4266,7 @@
 "jx" = (
 /obj/structure/machinery/door/airlock/upp_utility{
 	name = "\improper Platoon Commander's Office";
-	req_one_access_txt = "241"
+	req_one_access_txt = "240;241"
 	},
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/platoon_commander_rooms)
@@ -4650,9 +4615,8 @@
 	light_range = 4
 	},
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/sniper/svd_iff/heap{
-	pixel_x = 1;
-	pixel_y = 11
+/obj/item/storage/box/guncase/heavy/sniper/svd_iff{
+	pixel_y = 7
 	},
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/prep_hallway)
@@ -5696,6 +5660,10 @@
 /obj/structure/machinery/recharger{
 	pixel_x = 5
 	},
+/obj/item/parachute{
+	pixel_y = -7;
+	pixel_x = -3
+	},
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "mL" = (
@@ -5920,13 +5888,20 @@
 	light_power = 0.8;
 	light_range = 5
 	},
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "ns" = (
-/obj/structure/surface/rack{
-	color = "#8B9490"
-	},
-/obj/item/storage/toolbox/mechanical,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/structure/closet/crate/secure/upp/alt,
 /turf/open/floor/strata/floor3,
 /area/golden_arrow/hangar)
 "nu" = (
@@ -12088,7 +12063,7 @@ jU
 jU
 jU
 jU
-jU
+cI
 iK
 iY
 mV
@@ -13461,8 +13436,8 @@ jK
 jy
 UG
 oH
-iQ
-iQ
+oH
+oH
 iG
 oH
 ir

@@ -275,7 +275,7 @@
 // if a generic UPP rto is ever added, these will need subtypes for upp/forecon
 
 /datum/equipment_preset/uscm/rto/upp
-	name = "UPP Recon Radio Telephone Operator"
+	name = "UPP Recon Radio Transmissions Operator"
 	assignment = JOB_SQUAD_RTO_FORECON_UPP
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)

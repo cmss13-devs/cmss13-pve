@@ -1,5 +1,6 @@
 #define STANDARD_MARINE_TO_TOTAL_SPAWN_RATIO 0.4
 
+#define JSGT_VARIANT "Junior Sergeant"
 #define CPL_VARIANT "Corporal"
 #define LCPL_VARIANT "Lance Corporal"
 #define PFC_VARIANT "Private First Class"

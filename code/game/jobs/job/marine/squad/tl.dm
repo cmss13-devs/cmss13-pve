@@ -1,4 +1,5 @@
 #define SSGT_VARIANT "Staff Sergeant"
+#define SRSGT_VARIANT "Senior Sergeant"
 #define SGT_VARIANT "Sergeant"
 #define CPL_VARIANT "Corporal"
 #define JSGT_VARIANT "Junior Sergeant"
