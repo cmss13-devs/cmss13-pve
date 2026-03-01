@@ -1698,7 +1698,7 @@
 			if(assigned_squad && assigned_squad.name == SQUAD_SISSI)
 				platoon = "Fox Stalkers"
 			else
-				platoon = "3rd Bat. 'Solar Devils"
+				platoon = "Red Dawn"
 		if(FACTION_PMC)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/wy
 			platoon = "Azure-15"

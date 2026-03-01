@@ -1630,9 +1630,9 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 
 /obj/item/clothing/head/uppcap/beret/para
 	name = "\improper UL6 Recon Infantry beret"
-	desc = "A green beret worn by the UPP's Recon Infantry. Wear it with pride."
+	desc = "A red beret worn by the UPP's Recon Infantry. Wear it with pride."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "beret_green"
+	icon_state = "upp_beret_revolution"
 
 /obj/item/clothing/head/uppcap/peaked
 	name = "\improper UL3 peaked cap"
