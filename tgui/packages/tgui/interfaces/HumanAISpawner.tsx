@@ -35,7 +35,7 @@ type BackendContext = {
   zombie_outer_wear: boolean;
   zombie_outer_wear_chance: number;
   zombie_delimb_multi: number;
-
+  clipboard: string;
   autoClean: BooleanLike;
 };
 
@@ -119,6 +119,12 @@ export const HumanAISpawner = (props) => {
                   <span>
                     {chosenPreset !== null ? (
                       <span>
+                        <Button.Checkbox
+                          icon="clipboard"
+                          onClick={() => {
+                            act('save');
+                          }}
+                        />
                         <Button.Checkbox
                           icon="trash"
                           onClick={() =>

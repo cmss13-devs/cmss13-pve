@@ -111,7 +111,7 @@
 	data["zombie_delimb_multi"] = zombie_delimb_multi
 	if(update_preset_list_now)
 		update_preset_list_now = FALSE
-		data["presets"] = lazy_ui_data
+		src.update_static_data_for_all_viewers()
 
 	return data
 
@@ -151,6 +151,14 @@
 			selected_faction = params["selected_faction"]
 			species = params["species_selected"]
 			SStgui.try_update_ui(usr, src, ui)
+		if("save")
+			var/file_name = "hAi_dictionary_[usr.ckey]-[length(lazy_ui_data)].txt"
+
+			var/file = file("tmp/[file_name]")
+
+			file << json_encode(lazy_ui_data)
+
+			usr << ftp(file, file_name)
 		if("human_spawn_ai_toggle")
 			spawn_ai = !spawn_ai
 		if("paradrop_toggle")
