@@ -92,9 +92,6 @@ export const HumanAISpawner = (props) => {
                             setPreset(squad);
                             act('remember_path', {
                               path: squad.path,
-                              selected_faction: data.selected_faction,
-                              selected_equipment: data.selected_equipment,
-                              species_selected: data.species_selected,
                             });
                           }}
                         >
@@ -118,6 +115,7 @@ export const HumanAISpawner = (props) => {
                 buttons={
                   <span>
                     {chosenPreset !== null ? (
+                      /*
                       <span>
                         <Button.Checkbox
                           icon="clipboard"
@@ -125,15 +123,15 @@ export const HumanAISpawner = (props) => {
                             act('save');
                           }}
                         />
-                        <Button.Checkbox
-                          icon="trash"
-                          onClick={() =>
-                            act('delete_preset', {
-                              path: chosenPreset.path,
-                            })
-                          }
-                        />
-                      </span>
+                        */
+                      <Button.Checkbox
+                        icon="trash"
+                        onClick={() =>
+                          act('delete_preset', {
+                            path: chosenPreset.path,
+                          })
+                        }
+                      />
                     ) : null}
                   </span>
                 }

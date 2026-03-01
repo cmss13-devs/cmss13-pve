@@ -97,7 +97,12 @@
 			data["selected_faction"] = preset_data["faction"] //update the dropdown to the value the faction is in our big list
 			data["selected_equipment"] = preset_data["selected_equipment"]
 			data["species_selected"] = preset_data["species"]
-			species = data["species_selected"]
+
+			//
+			selected_equipment = preset_data["selected_equipment"]
+			selected_faction = preset_data["selected_faction"]
+			species = preset_data["species_selected"]
+
 			break
 	data["viewing_faction"] = viewing_faction
 	data["spawn_ai"] = spawn_ai
@@ -144,13 +149,10 @@
 				if(preset_data["path"] == gotten_path)
 					preset_data["faction"] = params["selected_faction"]
 					selected_faction = params["selected_faction"]
-					return
+					return TRUE
 		if("remember_path")
 			current_path = params["path"]
-			selected_equipment = params["selected_equipment"]
-			selected_faction = params["selected_faction"]
-			species = params["species_selected"]
-			SStgui.try_update_ui(usr, src, ui)
+			return TRUE
 		if("save")
 			var/file_name = "hAi_dictionary_[usr.ckey]-[length(lazy_ui_data)].txt"
 
@@ -181,7 +183,7 @@
 							// remove entire faction if there are no more presets in it
 							if(!length(faction_list))
 								lazy_ui_data.Cut(faction_i, faction_i+1)
-							return
+							return TRUE
 		if("outfit")
 			outfit = !outfit
 		if("set_selected_species")
@@ -194,7 +196,7 @@
 				if(preset_data["path"] == gotten_path)
 					preset_data["species"] = params["species_selected"]
 					species = params["species_selected"]
-					return
+					return TRUE
 		if("set_selected_equipment")
 			var/datum/human_ai_equipment_preset/gotten_path = text2path(params["path"])
 			if(!gotten_path)
@@ -204,7 +206,7 @@
 				if(preset_data["path"] == gotten_path)
 					preset_data["selected_equipment"] = params["selected_equipment"]
 					selected_equipment = params["selected_equipment"]
-					return
+					return TRUE
 		if("create_ai")
 			if(!params["path"])
 				return
@@ -224,6 +226,7 @@
 			var/datum/equipment_preset/dresscode = tgui_input_list(ui.user, "Pick a Preset", "Equipment", GLOB.gear_name_presets_list)
 			dresscode = GLOB.gear_name_presets_list[dresscode]
 			add_preset(dresscode, update_ui = TRUE)
+			return TRUE
 		if("zombie_outer_wear")
 			zombie_outer_wear = !zombie_outer_wear
 		if("zombie_outer_wear_chance")
