@@ -35,8 +35,9 @@
 		cylinder.use_sound = use_sound
 		if(direct_draw)
 			cylinder.storage_flags ^= STORAGE_USING_DRAWING_METHOD
-		if(preload && !spawn_empty) for(var/i = 1 to cylinder.storage_slots)
-			new preload(cylinder)
+		if(preload && !spawn_empty)
+			for(var/i = 1 to cylinder.storage_slots)
+				new preload(cylinder)
 		update_icon()
 
 /obj/item/weapon/gun/launcher/Destroy(force)
