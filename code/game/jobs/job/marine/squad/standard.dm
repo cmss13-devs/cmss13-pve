@@ -186,6 +186,7 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+#undef JSGT_VARIANT
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT
