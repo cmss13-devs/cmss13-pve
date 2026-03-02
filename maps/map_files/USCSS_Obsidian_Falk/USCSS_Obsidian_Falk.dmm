@@ -1556,6 +1556,10 @@
 	},
 /turf/open/floor/corsat/squares,
 /area/firefly/hangar)
+"aeu" = (
+/obj/item/device/taperecorder/empty,
+/turf/open/floor/corsat/green/north,
+/area/firefly/cryo_cell)
 "aev" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/firefly/briefing)
@@ -5449,6 +5453,10 @@
 	},
 /turf/open/floor/corsat/red/west,
 /area/firefly/cafeteria)
+"aoO" = (
+/obj/item/tape/audio_log/pmc_instructions,
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
 "aoP" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
@@ -5524,6 +5532,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat/white/east,
 /area/firefly/cafeteria)
+"aoY" = (
+/obj/item/device/taperecorder/colony/empty,
+/turf/open/floor/corsat/squares,
+/area/firefly/briefing)
 "aoZ" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/dark_sterile,
@@ -14699,6 +14711,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med/tent{
 	pixel_y = 26
 	},
+/obj/item/device/taperecorder,
 /turf/open/floor/corsat/green/north,
 /area/firefly/cryo_cell)
 "gKW" = (
@@ -36069,7 +36082,7 @@ anL
 aoj
 adA
 aez
-aKv
+aeu
 adW
 anL
 axC
@@ -43500,7 +43513,7 @@ arP
 aeF
 dYO
 aei
-aei
+aoO
 xkb
 aqg
 ojo
@@ -43662,7 +43675,7 @@ rSm
 aeF
 eIg
 aei
-aei
+aoY
 aei
 aei
 arj

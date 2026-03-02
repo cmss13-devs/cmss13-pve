@@ -128,6 +128,19 @@
 	desc = "A classic switchblade with gold engraving. Just holding it makes you feel like a gangster."
 	icon_state = "switchblade"
 
+/obj/item/weapon/butterfly/switchblade/open	//Here for prisoner HAI
+	active = 1
+	name = "switchblade"
+	desc = "A classic switchblade with gold engraving. Just holding it makes you feel like a gangster."
+	icon_state = "switchblade_open"
+	force = MELEE_FORCE_STRONG //bay adjustments
+	throwforce = MELEE_FORCE_NORMAL
+	edge = 1
+	sharp = IS_SHARP_ITEM_ACCURATE
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	w_class = SIZE_MEDIUM
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+
 /obj/item/weapon/butterfly/katana
 	name = "katana"
 	desc = "A ancient weapon from Japan."

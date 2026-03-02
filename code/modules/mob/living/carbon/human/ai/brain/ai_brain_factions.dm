@@ -356,7 +356,7 @@
 		"COMPANY!",
 		"Sic Semper Tyrannis!",
 		"SIC SEMPER TYRANNIS!",
-		"TRAITORS!",
+		"SHIT! MARINES!!",
 		"COWARDS!",
 		"YOU FUCKIN' PIGS!",
 		"YOU FUCKIN' DOGS!",
@@ -372,7 +372,10 @@
 		"FREEDOM!",
 		"FREEDOM FOREVER!",
 		"THUS ALWAYS TO TYRANTS!",
-		"ALL THREATS; FOREIGN *AND* DOMESTIC!",
+		"FUCK YOU SOLDIER BOY!",
+		"You think we'll die here?!",
+		"Don't let them reach the hostages!",
+		"THIS PRISON WILL BE YOUR GRAVE!",
 	)
 	exit_combat_lines = list(
 		"CEASE FIRE!",

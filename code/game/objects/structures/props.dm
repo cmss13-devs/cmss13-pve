@@ -48,7 +48,7 @@
 /obj/structure/prop/dam/truck
 	name = "truck"
 	desc = "An old truck, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "truck"
 	bound_height = 64
 	bound_width = 64
@@ -71,7 +71,7 @@
 /obj/structure/prop/dam/van
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64
@@ -83,7 +83,7 @@
 
 /obj/structure/prop/dam/crane
 	name = "cargo crane"
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "crane"
 	bound_height = 64
 	bound_width = 64
@@ -384,6 +384,21 @@
 	icon_state = "structure_lattice"
 	unslashable = TRUE
 	density = TRUE //impassable by default
+
+/obj/structure/prop/bookshelf
+	name = "book shelf"
+	desc = "On closer inspection, everything on these shelves are made of plastic."
+	icon = 'icons/obj/structures/structures.dmi'
+	icon_state = "book-0"
+	unslashable = TRUE
+	density = TRUE //impassable by default
+	opacity = FALSE
+
+/obj/structure/prop/bookshelf/New()
+	..()
+	icon_state = pick("book-0","book-1","book-2","book-3","book-4","book-5")
+
+
 
 /obj/structure/prop/resin_prop
 	name = "resin coated object"
@@ -787,7 +802,7 @@
 /obj/structure/prop/vehicles
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64

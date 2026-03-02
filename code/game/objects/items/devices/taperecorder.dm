@@ -2,7 +2,7 @@
 	name = "tape recorder"
 	desc = "A device that can record dialogue using magnetic tapes. It automatically translates the content in playback."
 	icon = 'icons/obj/items/walkman.dmi'
-	icon_state = "taperecorder_idle"
+	icon_state = "taperecorder"
 	item_state = "analyzer"
 	w_class = SIZE_SMALL
 
@@ -136,7 +136,7 @@
 	return FALSE
 
 
-/obj/item/device/taperecorder/verb/ejectverb()
+/obj/item/device/taperecorder/proc/ejectverb()
 	set name = "Eject Tape"
 	set category = "Object"
 
@@ -149,16 +149,17 @@
 
 
 /obj/item/device/taperecorder/update_icon()
+	var/original_icon = initial(icon_state)
 	if(!mytape)
-		icon_state = "taperecorder_empty"
+		icon_state = "[original_icon]_empty"
 		return
 	if(recording)
-		icon_state = "taperecorder_recording"
+		icon_state = "[original_icon]_recording"
 		return
 	else if(playing)
-		icon_state = "taperecorder_playing"
+		icon_state = "[original_icon]_playing"
 		return
-	icon_state = "taperecorder_idle"
+	icon_state = "[original_icon]"
 	return
 
 
@@ -172,10 +173,7 @@
 		mytape.storedinfo += "\[[time2text(mytape.used_capacity,"mm:ss")]\] [mob_name] [verb], \"[italics ? "<i>" : null][message][italics ? "</i>" : null]\""
 
 
-/obj/item/device/taperecorder/verb/record()
-	set name = "Start Recording"
-	set category = "Object"
-
+obj/item/device/taperecorder/proc/record()
 	if(!can_use(usr))
 		return
 	if(!mytape || mytape.unspooled)
@@ -209,10 +207,7 @@
 		playsound(src, 'sound/items/taperecorder/taperecorder_stop.ogg', 50, FALSE)
 
 
-/obj/item/device/taperecorder/verb/stop()
-	set name = "Stop"
-	set category = "Object"
-
+/obj/item/device/taperecorder/proc/stop()
 	if(!can_use(usr))
 		return
 
@@ -228,10 +223,7 @@
 	update_icon()
 	update_sound()
 
-/obj/item/device/taperecorder/verb/play()
-	set name = "Play Tape"
-	set category = "Object"
-
+obj/item/device/taperecorder/proc/play()
 	if(!can_use(usr))
 		return
 	if(!mytape || mytape.unspooled)
@@ -307,9 +299,6 @@
 				eject(user)
 
 /obj/item/device/taperecorder/verb/print_transcript()
-	set name = "Print Transcript"
-	set category = "Object"
-
 	if(!length(mytape.storedinfo))
 		return
 	if(!can_use(usr))
@@ -340,6 +329,43 @@
 //empty tape recorders
 /obj/item/device/taperecorder/empty
 	starting_tape_type = null
+
+/obj/item/device/taperecorder/colony
+	name = "\improper Seegson C36 tape recorder"
+	desc = "A cheap plastic C-Series tape recorder, mass produced by Seegson for distribution all over civilised space. To save on money, they cannot print transcripts of their tapes. This one has clearly seen some wear and tear."
+	icon_state = "colonyrecorder"
+	canprint = FALSE
+
+/obj/item/device/taperecorder/colony/empty
+	starting_tape_type = null
+
+	/// list of typepaths for lore tapes
+	var/list/lore_tapes = list()
+
+
+/// do not use on maps
+/obj/item/device/taperecorder/colony/loadout
+	name = "\improper Seegson C36 tape recorder"
+	desc = "A cheap plastic C-Series tape recorder, mass produced by Seegson for distribution all over civilised space. To save on money, they cannot print transcripts of their tapes. You bought this one in a PX on Chinook before setting off."
+	starting_tape_type = /obj/item/tape/random/loadout
+	/// chance for it to spawn with no tape
+	var/spawn_empty_chance = 50
+	/// chance for it to spawn with a random LORE TAPE (if it does spawn with a tape) from the list below
+	var/spawn_lore_tape_chance = 20 // 10% chance
+
+	/// list of typepaths for lore tapes
+	var/list/lore_tapes = list()
+
+/obj/item/device/taperecorder/colony/loadout/Initialize(mapload)
+	if(prob(spawn_empty_chance))
+		desc += "\nLooks like the tape fell out somewhere. You'll have to find a new one."
+		starting_tape_type = null
+	else if(prob(spawn_lore_tape_chance) && lore_tapes.len)
+		var/lore_tape = pick(lore_tapes)
+		desc += "\nStrangely enough, the tape that came with it already seems partially used."
+		starting_tape_type = lore_tape
+	. = ..()
+
 
 /obj/item/tape
 	name = "tape"
@@ -411,8 +437,6 @@
 /obj/item/tape/Initialize(mapload)
 	. = ..()
 	initial_icon_state = icon_state //random tapes will set this after choosing their icon
-	if(prob(50))
-		tapeflip()
 	flipped_name = name
 	unflipped_name = name
 
@@ -498,12 +522,207 @@
 
 //Random color tapes
 /obj/item/tape/random
-	icon_state = "cassette_rainbow"
+	icon_state = "cassette_flip"
 
 /obj/item/tape/random/Initialize(mapload)
 	icon_state = "cassette_[pick(cassette_colors)]"
 	. = ..()
 
+/obj/item/tape/random/loadout
+	desc = "A small plastic tape. Jams often."
+	max_capacity = 10 MINUTES
+
 /obj/item/tape/regulation
 	name = "regulation tape"
 	icon_state = "cassette_regulation"
+
+
+
+/*
+// HOW TO MAKE A CUSTOM AUDIO LOG TAPE
+// for spawning on maps or putting in the loadout tape recorder
+// done by example
+// typepath here, make sure to make it a subtype of audio_log
+/obj/item/tape/audio_log/example
+// do name desc and icon state here
+// these are the lines that will be said on the tape. Put them in the provided format for speech, and you can do whatever you like with other sounds
+// remember that you can make the recorder say ANYTHING
+	storedinfo = list(
+		"\[00:03] Dana Summy says, \"Okay\"" ,
+		"\[00:05] Alaina Suni says, \"Sure\"",
+		"\[00:06] Dana Summy says, \"Yes\"",
+		"\[00:08] *gunshots*",
+	)
+// these are the timestamps of the above messages, put in the same order as you put the timestamps ideally
+// if you need two messages to play immediately after each other make their timestamps the same
+// these timestamps are in TICKS (1/10ths of a second)
+	timestamp = list(
+		30,
+		50,
+		60,
+		80,
+	)
+// how much of the tape has been used up
+// make this the biggest number on the timestamp list or 10 MINUTES if you don't want anything more to be recorded on the side.
+	used_capacity = 90
+// what the above tape produced when played in-game
+	Playback started.
+	[00:03] Dana Summy says, "Okay"
+	[00:05] Alaina Suni says, "Sure"
+	[00:06] Dana Summy says, "Yes"
+	[00:08] *gunshots*
+	End of recording.
+	Playback stopped.
+// have fun!
+*/
+
+/obj/item/tape/audio_log
+	name = "partially used tape" // RENAME!
+	desc = "A standard tape, made by the million in factories on Earth. This one has been partially used." // RENAME!
+	unacidable = TRUE // so that xenos can't delete the map lore >:(
+	flags_obj = NO_FLAGS // we don't want players fucking up the item
+	icon_state = "cassette_worstmap" // rename this to your icon state
+
+/obj/item/tape/audio_log/pmc_instructions
+	name = "operational instructions"
+	desc = "A tape containing instructions from recorded audio message sent to the USCSS Obsidian Falk."
+	icon_state = "cassette_regulation"
+	storedinfo = list(
+		"\[00:03] MU/TH/ER says, \"RECEIVING AUDIO MESSAGE VIA TELEMETRY.\"",
+		"\[00:06] Martin Kessler says, \"Good afternoon team of the USCSS Obsidian Falk, we hope you're well rested today for your assignment.\"",
+		"\[00:11] \"I'm Martin Kessler, your assigned handler for this mission.\"",
+		"\[00:16] \"Please hold any questions you may have for your ship-side handler until after you are done listening to this brief.\"",
+		"\[00:21] Martin Kessler takes an audible drag from a cigarette.",
+		"\[00:24] \"Due to the extremely sensitive nature of the facility, none of the information spoken of here will leave this room.\"",
+		"\[00:29] \"You're being paid off the books for your cooperation here.\"",
+		"\[00:34] \"Once you extract from the colony, you are to forget everything you saw.\"",
+		"\[00:38] \"This operation did not occur.\"",
+		"\[00:41] \"Am I clear?\"",
+		"\[00:44] Martin Kessler can be heard coughing and taking another drag off their cigarette.",
+		"\[00:46] \"That was rhetorical. I hope none of you answered. This isn't a phone call.\"",
+		"\[00:50] \"Your information here is on a 'need to know' basis. If I don't mention it, it's probably not important to you.\"",
+		"\[00:55] \"Currently, you're hovering over a colony that houses a facility in connection with our unnamed employer.\"",
+		"\[01:01] \"Preparations have been taken so your presence here is clandestine.\"",
+		"\[01:06] \"The Obsidian Falk's IFF is spoofing a USCM vessel to prevent you all from being shot down. Same goes for your dropship.\"",
+		"\[01:11] \"The colony is currently under heavy contest by USCM and UPP forces.\"",
+		"\[01:16] \"They are actively fighting one another down there in order to get a hold of the colony.\"",
+		"\[01:21] \"Both forces are not aware of the facilities actual purpose, but are attempting to secure it.\"",
+		"\[01:26] \"Facility security forces groundside are actively engaging armed forces attempting to gain entry of the facility.\"",
+		"\[01:30] \"There may be residents of the colony still present.\"",
+		"\[01:34] \"Rules of engagement are as follows:\"",
+		"\[01:37] \"Weapons free.\"",
+		"\[01:41] \"Anyone gets in your way, take them out.\"",
+		"\[01:46] \"I shouldn't need to say more, you know what to do.\"",
+		"\[01:51] \"Your main goal is to:\"",
+		"\[01:56] \"1.) Reach the facility,\"",
+		"\[02:01] \"2.)'Retire' anyone present at the facility,\"",
+		"\[02:06] \"3.) Destroy any critical evidence,\"",
+		"\[02:11] \"4.) Utilize the self-destruct device in the facility. A disk has been provided for authorization.\"",
+		"\[02:16] Martin Kessler can be heard taking their third drag.",
+		"\[02:20] \"Your visual presence here at the colony is of no matter to your employer.\"",
+		"\[02:25] \"All they do care about is plausible deniability.\"",
+		"\[02:30] \"So you will wear nothing identifiable down there. No IDs.\"",
+		"\[02:35] \"Do not be seen without a mask on by a camera, armed forces, whoever.\"",
+		"\[02:41] \"Outside of that, you are free to use anything you find or would like to gear-wise.\"",
+		"\[02:46] \"You are being provided with additional equipment due to the amount of hostiles you will be encountering down there.\"",
+		"\[02:53] \"Alright, onto the game plan.\"",
+		"\[02:57] \"You are being inserted far north of the colony to avoid chaos that is the city.\"",
+		"\[03:03] \"Be sure to use those parachutes.\"",
+		"\[03:08] \"Once you reach the city, you are to head far south-west of the colony.\"",
+		"\[03:13] \"The facility is located in a cavern. The main entrance may be compromised. We aren't sure.\"",
+		"\[03:19] \"If that entrance is not-accessible, either due to intense fighting or a cave-in,\"",
+		"\[03:25] \"You are to head around the colony, through the mining entrance of the facility, which is to the far south-east.\"",
+		"\[03:32] \"Once you reach it, you are to head west, through the caves.\"",
+		"\[03:37] \"Once your objectives are complete at the facility, you are to head back the way you came in.\"",
+		"\[03:43] \"You will extract via the medical landing zone to the far north-east. By the hospital.\"",
+		"\[03:48] \"A dropship will await you there.\"",
+		"\[03:53] Martin Kessler can be heard striking a match.",
+		"\[03:58] \"Now for specifics.\"",
+		"\[04:03] \"Your handler here on the ship can join you.\"",
+		"\[04:08] \"Your plan and tactics are your own, just follow the objectives.\"",
+		"\[04:13] \"You are not restricted from fighting any armed forces or whomever.\"",
+		"\[04:18] \"Just keep in mind it's a war down there. Those dropships will start firing on you if you make enough noise.\"",
+		"\[04:25] \"Anyone who is killed or captured will be disavowed.\"",
+		"\[04:30] \"We'll handle anyone that doesn't make it back here.\"",
+		"\[04:35] \"The Obsidian Falk is unable to provide assistance at all.\"",
+		"\[04:40] \"If you tried, you would be fired upon by the three USCM warships in the vicinity.\"",
+		"\[04:45] \"As for the facility...\"",
+		"\[04:50] \"Security personal. Workers, anyone.\"",
+		"\[04:55] \"Eliminate everything there. No-one there works for our employer further.\"",
+		"\[05:01] \"Destroy subjects, paperwork, devices, everything. This operation needs to be spotless.\"",
+		"\[05:07] \"Then use the disk.\"",
+		"\[05:13] \"Complete the operation in said guidelines and we'll all walk away richer.\"",
+		"\[05:17] \"Good luck.\"",
+		"\[05:23] *click*",
+		"\[05:28] MU/TH/ER says, \"END AUDIO MESSAGE.\"",
+	)
+	timestamp = list(
+		30,
+		60,
+		160,
+		260,
+		360,
+		460,
+		560,
+		660,
+		760,
+		860,
+		960,
+		1060,
+		1160,
+		1260,
+		1360,
+		1460,
+		1560,
+		1660,
+		1760,
+		1860,
+		1960,
+		2060,
+		2160,
+		2260,
+		2360,
+		2460,
+		2560,
+		2660,
+		2760,
+		2860,
+		2960,
+		3060,
+		3160,
+		3260,
+		3360,
+		3460,
+		3560,
+		3660,
+		3760,
+		3860,
+		3960,
+		4060,
+		4160,
+		4260,
+		4360,
+		4460,
+		4560,
+		4660,
+		4760,
+		4860,
+		4960,
+		5060,
+		5160,
+		5260,
+		5360,
+		5460,
+		5560,
+		5660,
+		5760,
+		5860,
+		5960,
+		6060,
+		6160,
+		6260,
+		6360,
+		6460,
+		6560,
+	)
+	used_capacity = 10 MINUTES

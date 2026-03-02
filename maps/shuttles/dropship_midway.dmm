@@ -27,9 +27,6 @@
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
-"dd" = (
-/turf/open/shuttle/dropship/light_grey_bottom_right,
-/area/shuttle/midway)
 "dB" = (
 /obj/structure/shuttle/part/midway/transparent{
 	icon_state = "7"
@@ -102,12 +99,15 @@
 	},
 /area/shuttle/midway)
 "kL" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
 	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -128,8 +128,11 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "mA" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -148,20 +151,16 @@
 	icon_state = "89b"
 	},
 /area/shuttle/midway)
-"oy" = (
-/obj/structure/bed/chair/dropship/passenger/folded{
-	pixel_y = 8;
-	buckling_y = 8
-	},
-/turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
-/area/shuttle/midway)
 "oB" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
-	},
 /obj/structure/machinery/light/double{
 	dir = 4;
 	pixel_y = -5
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -206,11 +205,14 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "tT" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
 /obj/structure/machinery/light/double{
 	dir = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -413,9 +415,6 @@
 /turf/template_noop,
 /area/shuttle/midway)
 "Gk" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 4
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 26;
 	pixel_x = 8
@@ -423,6 +422,12 @@
 /obj/structure/extinguisher_cabinet/lifeboat{
 	pixel_y = 27;
 	pixel_x = -4
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -509,8 +514,11 @@
 	},
 /area/shuttle/midway)
 "PW" = (
-/obj/structure/bed/chair/dropship/passenger{
-	dir = 8
+/obj/structure/bed/chair/vehicle{
+	pixel_x = 8
+	},
+/obj/structure/bed/chair/vehicle{
+	pixel_x = -8
 	},
 /turf/open/shuttle/dropship/medium_grey_single_wide_up_to_down,
 /area/shuttle/midway)
@@ -537,9 +545,6 @@
 /turf/closed/shuttle/midway/transparent{
 	icon_state = "28"
 	},
-/area/shuttle/midway)
-"TE" = (
-/turf/open/shuttle/dropship/light_grey_bottom_left,
 /area/shuttle/midway)
 "Uj" = (
 /obj/structure/vehicle_locker/movie{
@@ -684,7 +689,7 @@ vN
 Pc
 Ci
 XS
-TE
+XS
 CX
 NK
 XS
@@ -701,8 +706,8 @@ Vi
 vD
 Aa
 Bk
-oy
-Bk
+PW
+mA
 Ln
 fF
 Fd
@@ -720,7 +725,7 @@ ux
 ro
 Uj
 XS
-dd
+XS
 aP
 NK
 XS

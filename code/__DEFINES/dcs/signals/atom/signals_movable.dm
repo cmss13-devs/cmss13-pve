@@ -13,7 +13,7 @@
 /// From /atom/movable/proc/forceMove(): (atom/NewLoc)
 #define COMSIG_MOVABLE_FORCEMOVED "movable_forcemove"
 
-/// From /turf/open/gm/river/Entered(): (turf/open/gm/river/river, covered)
+/// From /turf/open/gm/river/Entered(): (/turf/open/liquid/water, covered)
 #define COMSIG_MOVABLE_ENTERED_RIVER "movable_entered_river"
 /// From /atom/movable/proc/doMove: I think it only works with forceMove so watch out
 #define COMSIG_MOVABLE_FORCEMOVE_PRE_CROSSED "movable_forcemove_pre_crossed"

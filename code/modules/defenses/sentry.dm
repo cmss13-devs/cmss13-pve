@@ -640,6 +640,42 @@
 	faction_group = null
 	ammo = new /obj/item/ammo_magazine/sentry
 
+/obj/structure/machinery/defenses/sentry/premade/dumb/prison
+	name = "Hacked WY 5-GSE3 Static Turret"
+	desc = "A hacked state-of-the-art, high-tech static, semi-automated turret with AI targeting capabilities from Weyland-Yutani. Looks like the prisoners modified these to fire on non-prisoners."
+	icon = 'icons/obj/structures/machinery/defenses/wy_static.dmi'
+	defense_type = "Static"
+	sentry_type = "wy_sentry"
+	faction_group = list(FACTION_UA_REBEL)
+	fire_delay = 1.2
+	ammo = new /obj/item/ammo_magazine/sentry/premade
+
+/obj/structure/machinery/defenses/sentry/premade/dumb/upp
+	name = "\improper UPPA 32-H sentry gun"
+	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an AK-500 Autocannon and a 350-round drum magazine."
+	icon_state = "upp_defense_base"
+	icon_on = "upp_defense_base"
+	icon_off = "upp_defense_base_off"
+	faction_group = FACTION_UPP
+	start_up_message = "Sentry mounted and loaded. Glory to the UPP."
+	defense_type = "UPP"
+	handheld_type = /obj/item/defenses/handheld/sentry/upp
+	fire_delay = 1.2
+	firing_sound = 'sound/weapons/gun_type71.ogg'
+	ammo = new /obj/item/ammo_magazine/sentry/upp
+
+/obj/structure/machinery/defenses/sentry/premade/dumb/upp/light
+	name = "UPP SDS-R8 Light Sentry"
+	defense_type = "Light"
+	fire_delay = 0.1 SECONDS
+	damage_mult = 0.3
+	health = 200
+	health_max = 200
+	disassemble_time = 0.75 SECONDS
+	sentry_range = 5
+	omni_directional = FALSE
+	handheld_type = /obj/item/defenses/handheld/sentry/upp/light
+
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable
 	name = "\improper UA-633 Static Gauss Turret"
@@ -657,26 +693,22 @@
 	. = ..()
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR)
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_NSPA)
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy
 	name = "WY 5-GSE3 Static Turret"
-	desc = "An old static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
+	desc = "A state-of-the-art, high-tech static, semi-automated turret with AI targeting capabilities from Weyland-Yutani."
 	icon = 'icons/obj/structures/machinery/defenses/wy_static.dmi'
 	defense_type = "Static"
 	sentry_type = "wy_sentry"
-	health = 350
-	health_max = 350
-	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY)
-	fire_delay = 0.6 SECONDS
-	damage_mult = 2
+	faction_group = list(FACTION_MARINE, FACTION_COLONIST, FACTION_SURVIVOR, FACTION_WY, FACTION_NSPA)
 
-/obj/structure/machinery/defenses/sentry/premade/deployable/wy/Initialize()
+/obj/structure/machinery/defenses/sentry/premade/deployable/colony/wy/Initialize()
 	. = ..()
 	choice_categories[SENTRY_CATEGORY_IFF] = list(SENTRY_FACTION_COLONY, SENTRY_FACTION_WEYLAND)
 	selected_categories[SENTRY_CATEGORY_IFF] = SENTRY_FACTION_COLONY

@@ -52,3 +52,43 @@
 	name = "UA Rebel Combat Android"
 	desc = "An illegal combat android for the UA rebel faction. Use this sparingly."
 	path = /datum/equipment_preset/synth/working_joe/security_android/ua_rebel
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner
+	name = "Unarmed Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/lunge
+	name = "Lunge Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/lunge
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/molotov
+	name = "Molotov Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/molotov
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/riot/shield
+	name = "Shield Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/riot/shield
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/riot/teargas
+	name = "Teargas Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/riot/teargas
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/riot/beanbag
+	name = "Beanbag Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/riot/beanbag
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/soldier
+	name = "Soldier Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/soldier
+
+/datum/human_ai_equipment_preset/clf/ua/prisoner/shotgunner
+	name = "Shotgunner Prisoner Rebel"
+	desc = "A rioting prisoner."
+	path = /datum/equipment_preset/rebel/prisoner/shotgunner

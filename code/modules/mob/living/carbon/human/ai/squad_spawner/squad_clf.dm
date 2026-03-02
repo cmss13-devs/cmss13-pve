@@ -94,3 +94,22 @@
 		/datum/equipment_preset/canc/remnant/leader = 1,
 		/datum/equipment_preset/canc/remnant = 2,
 	)
+
+/datum/human_ai_squad_preset/clf/prisoner
+	name = "Prisoner squad"
+	ai_to_spawn = list(
+		/datum/equipment_preset/rebel/prisoner= 5,
+	)
+
+/datum/human_ai_squad_preset/clf/prisoner/riot
+	name = "Prisoner riot squad"
+	ai_to_spawn = list(
+		/datum/equipment_preset/rebel/prisoner/riot/shield= 4,
+		/datum/equipment_preset/rebel/prisoner/riot/teargas= 3,
+	)
+
+/datum/human_ai_squad_preset/clf/prisoner/soldiers
+	name = "Prisoner soldier squad"
+	ai_to_spawn = list(
+		/datum/equipment_preset/rebel/prisoner/soldier= 2,
+	)

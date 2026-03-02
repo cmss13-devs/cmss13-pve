@@ -1,6 +1,36 @@
 /datum/human_ai_equipment_preset/marshal
 	faction = FACTION_MARSHAL
 
+/datum/human_ai_equipment_preset/marshal/nspa
+	name = "NSPA Officer"
+	desc = "A NSPA Officer with a pistol"
+	path = /datum/equipment_preset/cmb/nspa
+
+/datum/human_ai_equipment_preset/marshal/nspa/shotgunner
+	name = "NSPA Officer Shotgunner"
+	desc = "A NSPA Officer with a shotgun"
+	path = /datum/equipment_preset/cmb/nspa/shotgunner
+
+/datum/human_ai_equipment_preset/marshal/nspa/smg
+	name = "NSPA Officer SMG"
+	desc = "A NSPA Officer with a SMG"
+	path = /datum/equipment_preset/cmb/nspa/smg
+
+/datum/human_ai_equipment_preset/marshal/nspa/riot
+	name = "NSPA Officer Riot"
+	desc = "A NSPA Officer with beanbag shotty"
+	path = /datum/equipment_preset/cmb/nspa/riot
+
+/datum/human_ai_equipment_preset/marshal/nspa/riot/shield
+	name = "NSPA Officer Riot Shield"
+	desc = "A NSPA Officer with a riot shield"
+	path = /datum/equipment_preset/cmb/nspa/riot/shield
+
+/datum/human_ai_equipment_preset/marshal/nspa/riot/teargas
+	name = "NSPA Officer Riot Tear Gas"
+	desc = "A NSPA Officer with riot tear gas"
+	path = /datum/equipment_preset/cmb/nspa/riot/teargas
+
 /datum/human_ai_equipment_preset/marshal/deputy
 	name = "CMB Marshals - Deputy"
 	desc = "A CMB Deputy with a revolver"

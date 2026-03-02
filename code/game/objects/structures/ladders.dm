@@ -59,10 +59,10 @@
 		icon_state = "ladder11"
 
 	else if(up)
-		icon_state = "ladder10"
+		icon_state = "ladder12"
 
 	else if(down)
-		icon_state = "ladder01"
+		icon_state = "ladder13"
 
 	else //wtf make your ladders properly assholes
 		icon_state = "ladder00"

@@ -444,3 +444,15 @@
 	icon_state = "carpenters_hammer" //yay, it now has a sprite.
 	item_state = "carpenters_hammer"
 	desc = "Can be used to thwack nails into wooden objects to repair them."
+
+/obj/item/tool/dumbbell
+	name = "dumbbell"
+	desc = "Lift it for strength, or drop it on your toe for instant enlightenment, either way this dumbbell delivers results."
+	force = 12
+	throwforce = 12
+	icon_state = "dumbbell"
+	item_state = "dumbbell"
+
+/obj/item/tool/dumbbell/alt
+	icon_state = "dumbbell_2"
+	item_state = "dumbbell"

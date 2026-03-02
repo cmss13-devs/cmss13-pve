@@ -52,6 +52,7 @@
 	gender = NEUTER
 	icon_size = 48
 	black_market_value = KILL_MENDOZA
+	submerge_height_offset = 8
 	///How much to horizontally adjust the sprites of held item onmobs by. Based on icon size. Most xenos have hands about the same height as a human's.
 	var/xeno_inhand_item_offset
 	dead_black_market_value = 50
@@ -997,9 +998,6 @@
 	apply_effect(4, WEAKEN)
 	visible_message(SPAN_DANGER("[src] rolls on the floor, trying to put themselves out!"), \
 		SPAN_NOTICE("You stop, drop, and roll!"), null, 5)
-
-	if(istype(get_turf(src), /turf/open/gm/river))
-		ExtinguishMob()
 
 	if(fire_stacks > 0)
 		return

@@ -736,6 +736,21 @@ GLOBAL_LIST_EMPTY(personal_closets)
 		)
 	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
 
+/datum/equipment_preset/proc/add_prisoner_rebel_headband(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/helmetpath = pick(
+		/obj/item/clothing/head/durag/black,
+		/obj/item/clothing/head/durag,
+		/obj/item/clothing/head/skullcap,
+		/obj/item/clothing/head/headband/red,
+		/obj/item/clothing/head/headband/tan,
+		/obj/item/clothing/head/headband/rebel,
+		/obj/item/clothing/head/headband,
+		/obj/item/clothing/head/cmcap/corrections,
+		)
+	new_human.equip_to_slot_or_del(new helmetpath, WEAR_HEAD)
+
 /datum/equipment_preset/proc/add_rebel_twe_helmet(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
