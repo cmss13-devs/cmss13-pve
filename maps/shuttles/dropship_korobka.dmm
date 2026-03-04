@@ -96,7 +96,8 @@
 	},
 /obj/structure/machinery/light{
 	dir = 8;
-	pixel_x = -14
+	pixel_x = -14;
+	light_power = 0.8
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/korobka)
@@ -152,7 +153,8 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	pixel_x = 14
+	pixel_x = 14;
+	light_power = 0.8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "W";
@@ -179,7 +181,8 @@
 "wQ" = (
 /obj/structure/machinery/light{
 	dir = 4;
-	pixel_x = 14
+	pixel_x = 14;
+	light_power = 0.8
 	},
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1;
@@ -206,7 +209,9 @@
 "Cy" = (
 /obj/structure/machinery/light{
 	dir = 1;
-	pixel_y = 22
+	pixel_y = 22;
+	light_power = 0.8;
+	color = "#C02526"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)
@@ -232,7 +237,6 @@
 	dir = 1;
 	pixel_y = 12
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow/korobka,
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/korobka)
 "EO" = (
@@ -272,10 +276,6 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
-/obj/structure/machinery/camera/autoname/golden_arrow/korobka{
-	dir = 8;
-	pixel_x = 23
-	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/korobka)
 "Im" = (
@@ -295,7 +295,8 @@
 	},
 /obj/structure/machinery/light{
 	dir = 4;
-	pixel_x = 14
+	pixel_x = 14;
+	light_power = 0.8
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/shuttle/korobka)
@@ -322,7 +323,8 @@
 "KX" = (
 /obj/structure/machinery/light{
 	dir = 8;
-	pixel_x = -14
+	pixel_x = -14;
+	light_power = 0.8
 	},
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 1;
@@ -475,7 +477,8 @@
 	},
 /obj/structure/machinery/light{
 	dir = 8;
-	pixel_x = -14
+	pixel_x = -14;
+	light_power = 0.8
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
