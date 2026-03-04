@@ -210,8 +210,7 @@
 /obj/structure/machinery/light{
 	dir = 1;
 	pixel_y = 22;
-	light_power = 0.8;
-	color = "#C02526"
+	light_power = 0.8
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)

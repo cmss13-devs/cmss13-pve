@@ -360,7 +360,6 @@
 	name = "\improper 6B85-02 pattern UPP armor"
 	desc = "Experimental development of the aging UPP armor system Vadasz. Provides moderate ballistic/shrapnel protection for recon and special forces with wraparound soft armor and ceramic composite chestplate. Lightweight, whilst still providing adequate protection class and coverage. Unfortunately, the logistical costs involved prohibited mass production due to some exotic materials involved in the ceramite plating. It sees limited deployment amongst light infantry and recon elements."
 	icon_state = "upp_armor_light"
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH

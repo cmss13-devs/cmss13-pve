@@ -69,8 +69,10 @@
 /turf/open/space/basic,
 /area/golden_arrow/engineering)
 "dd" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname{
-	dir = 2
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 2;
+	req_one_access_txt = "230"
 	},
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
@@ -135,7 +137,11 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
 "dw" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname,
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 8;
+	req_one_access_txt = "230"
+	},
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4;
 	name = "\improper Maintenance Tunnels"
@@ -1287,9 +1293,6 @@
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
 "kE" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname{
-	dir = 2
-	},
 /obj/structure/machinery/door/airlock/upp_utility{
 	dir = 1;
 	name = "\improper Locker Room";
@@ -3450,16 +3453,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/cryo_cells)
 "rb" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
 /obj/structure/bed{
 	can_buckle = 0
 	},
@@ -3485,7 +3478,7 @@
 	pixel_y = 12;
 	pixel_x = 6
 	},
-/obj/structure/curtain/blue{
+/obj/structure/curtain/red/clean{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -3554,16 +3547,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "ri" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
 /obj/structure/bed{
 	can_buckle = 0
 	},
@@ -3584,7 +3567,7 @@
 /obj/item/prop/magazine/book/inframaterialism{
 	icon_state = "book_sop"
 	},
-/obj/structure/curtain/blue{
+/obj/structure/curtain/red/clean{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -4008,16 +3991,6 @@
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/platoon_commander_rooms)
 "rW" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
 /obj/structure/bed{
 	can_buckle = 0
 	},
@@ -4037,7 +4010,7 @@
 	},
 /obj/item/tool/lighter/random,
 /obj/item/storage/fancy/cigarettes/laika,
-/obj/structure/curtain/blue{
+/obj/structure/curtain/red/clean{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -4050,16 +4023,6 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/platoon_commander_rooms)
 "rZ" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	layer = 3.3;
-	pixel_y = 4
-	},
 /obj/structure/bed{
 	can_buckle = 0
 	},
@@ -4081,7 +4044,7 @@
 	pixel_x = 9;
 	pixel_y = -5
 	},
-/obj/structure/curtain/blue{
+/obj/structure/curtain/red/clean{
 	pixel_y = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -4350,13 +4313,13 @@
 	pixel_x = -7;
 	can_be_stacked = 1;
 	pixel_y = 15;
-	req_one_access_txt = "230"
+	req_access = list(230)
 	},
 /obj/structure/closet/secure_closet/personal{
 	pixel_x = 8;
 	can_be_stacked = 1;
 	pixel_y = 15;
-	req_one_access_txt = "230"
+	req_access = list(230)
 	},
 /obj/item/clothing/head/ushanka,
 /obj/item/clothing/head/uppcap/ushanka,
@@ -4376,29 +4339,31 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/dorms)
 "sy" = (
-/obj/structure/closet/secure_closet/personal{
-	pixel_x = -7;
-	can_be_stacked = 1;
-	pixel_y = 15;
-	req_one_access_txt = "230"
-	},
-/obj/structure/closet/secure_closet/personal{
-	pixel_x = 8;
-	can_be_stacked = 1;
-	pixel_y = 15;
-	req_one_access_txt = "230"
-	},
 /obj/item/clothing/head/uppcap/ushanka/civi,
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/shoes/marine/upp,
 /obj/item/clothing/under/marine/veteran/UPP/service,
 /obj/item/clothing/under/marine/veteran/UPP,
 /obj/item/clothing/under/marine/veteran/UPP/naval,
+/obj/structure/closet/secure_closet/personal{
+	pixel_x = -7;
+	can_be_stacked = 1;
+	pixel_y = 15;
+	req_access = list(230)
+	},
+/obj/structure/closet/secure_closet/personal{
+	pixel_x = 8;
+	can_be_stacked = 1;
+	pixel_y = 15;
+	req_access = list(230)
+	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/dorms)
 "sz" = (
-/obj/structure/machinery/door/airlock/prison_hatch/autoname{
-	dir = 2
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Maintenance Access";
+	dir = 2;
+	req_one_access_txt = "230"
 	},
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	name = "\improper Maintenance Tunnels"
@@ -6216,7 +6181,7 @@
 /obj/item/ammo_magazine/pkp/super_tracer,
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
-	req_access_txt = "243;237";
+	req_access_txt = "243";
 	pixel_x = -8;
 	can_block_movement = 0
 	},
@@ -6282,11 +6247,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "vP" = (
-/obj/structure/machinery/light/small{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 4
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff{
 	pixel_y = 7
@@ -6314,7 +6274,6 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
@@ -6349,7 +6308,6 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 4
 	},
@@ -6388,7 +6346,6 @@
 	pixel_y = -3
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
@@ -6420,7 +6377,6 @@
 	pixel_y = -3
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 4
 	},
@@ -6452,12 +6408,6 @@
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 8
-	},
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
@@ -6601,7 +6551,6 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 4
 	},
@@ -8701,12 +8650,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/golden_arrow/medical)
-"AC" = (
-/obj/structure/machinery/iv_drip{
-	pixel_y = -1
-	},
-/turf/open/floor/prison/sterile_white,
-/area/golden_arrow/medical)
 "AD" = (
 /obj/structure/machinery/sleep_console{
 	dir = 8;
@@ -8813,12 +8756,6 @@
 	pixel_y = 17;
 	can_block_movement = 0
 	},
-/obj/structure/machinery/light/small{
-	dir = 8;
-	light_power = 0.8;
-	light_range = 5;
-	light_color = "#e7c0a4"
-	},
 /turf/open/floor/prison/sterile_white,
 /area/golden_arrow/medical)
 "AO" = (
@@ -8835,6 +8772,17 @@
 	pixel_x = -5
 	},
 /obj/structure/machinery/power/apc/almayer/hardened/east,
+/obj/structure/machinery/iv_drip{
+	pixel_y = -1;
+	pixel_x = 7
+	},
+/obj/structure/machinery/light/small{
+	light_power = 0.8;
+	light_range = 4;
+	dir = 1;
+	light_color = "#e7c0a4";
+	pixel_y = 20
+	},
 /turf/open/floor/prison/sterile_white,
 /area/golden_arrow/medical)
 "AP" = (
@@ -15683,7 +15631,7 @@ Bh
 zX
 AR
 zX
-AC
+zX
 kM
 Ad
 zX
