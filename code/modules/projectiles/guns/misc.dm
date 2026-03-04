@@ -338,8 +338,9 @@
 
 /obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
 	..()
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
-	fa_max_scatter = SCATTER_AMOUNT_TIER_8
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
+	fa_max_scatter = SCATTER_AMOUNT_TIER_5
+	// gotta be a price for not needing the harness
 
 /obj/item/weapon/gun/pkp/iff/proc/toggle_lethal_mode(mob/user)
 	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
