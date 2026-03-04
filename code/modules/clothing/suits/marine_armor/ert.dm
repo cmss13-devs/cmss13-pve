@@ -429,7 +429,7 @@
 	name = "\improper PaP uniform jacket"
 	desc = "A People's Armed Police service jacket featuring small dispersed para-aramid inserts providing the barest of defensive functionality, and a Personal Light Unit rig."
 	icon_state = "upp_coat_pap"
-
+	flags_atom = NO_SNOW_TYPE
 
 //===========================//FREELANCER\\================================\\
 //=====================================================================\\
