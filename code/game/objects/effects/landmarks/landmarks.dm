@@ -607,7 +607,17 @@
 	var/mob/living/carbon/human/rebels = new /mob/living/carbon/human(loc)
 	if(!rebels.hud_used)
 		rebels.create_hud()
-	var/rebel_type = pick(60; /datum/equipment_preset/rebel/soldier, 60; /datum/equipment_preset/rebel/soldier/shotgun, 60; /datum/equipment_preset/rebel/at, 60; /datum/equipment_preset/rebel/sniper, 60; /datum/equipment_preset/rebel/soldier/machinegunner, 60; /datum/equipment_preset/rebel/medic, 60; /datum/equipment_preset/rebel/soldier/leader, 60; /datum/equipment_preset/rebel/soldier/flamer, 10; /datum/equipment_preset/rebel/soldier/lunge)
+	var/rebel_type = pick(
+		/datum/equipment_preset/rebel/soldier,
+		/datum/equipment_preset/rebel/soldier/shotgun,
+		80; /datum/equipment_preset/rebel/at,
+		75; /datum/equipment_preset/rebel/sniper,
+		75; /datum/equipment_preset/rebel/soldier/machinegunner,
+		75; /datum/equipment_preset/rebel/medic,
+		75; /datum/equipment_preset/rebel/soldier/leader,
+		75; /datum/equipment_preset/rebel/soldier/flamer,
+		25; /datum/equipment_preset/rebel/soldier/lunge
+	)
 	arm_equipment(rebels, rebel_type, randomise = TRUE, count_participant = TRUE, mob_client = observer.client, show_job_gear = TRUE)
 	to_chat(observer, SPAN_ROLE_HEADER("You are a United Americas Rebel!"))
 	to_chat(observer, SPAN_ROLE_BODY("The colony of Hybrisa has fallen into disarray. You have joined a shady group of rebels that are out to put an end to the existing government on the colony!"))
