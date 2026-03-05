@@ -968,7 +968,7 @@
 /obj/structure/machinery/computer/dropship_weapons/korobka
 	name = "\improper 'Korobka' weapons controls"
 	faction = FACTION_UPP
-	req_one_access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_LEADERSHIP, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT)
+	req_one_access = list(ACCESS_UPP_LEADERSHIP, ACCESS_UPP_ARMORY, ACCESS_UPP_FLIGHT)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_KOROBKA
 
