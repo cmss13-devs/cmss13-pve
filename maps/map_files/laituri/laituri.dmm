@@ -92,6 +92,48 @@
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
+"ai" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/forecon_upp,
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20;
+	invisibility = 100
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/prep_hallway)
+"aj" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	pixel_y = 22;
+	invisibility = 100
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ak" = (
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20;
+	invisibility = 100
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"al" = (
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20;
+	invisibility = 100
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/golden_arrow/hangar)
 "bn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -6263,8 +6305,8 @@
 	layer = 3.021
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -6363,8 +6405,8 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/prep_hallway)
@@ -6422,6 +6464,11 @@
 	pixel_x = 13;
 	pixel_y = -3
 	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	pixel_y = 22;
+	invisibility = 100
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "wa" = (
@@ -6432,8 +6479,8 @@
 	pixel_y = -3
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/prep_hallway)
@@ -6524,8 +6571,8 @@
 	pixel_x = -3
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -6560,6 +6607,12 @@
 	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20;
+	invisibility = 100
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -6604,8 +6657,8 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -6775,8 +6828,8 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
@@ -6871,8 +6924,8 @@
 /area/golden_arrow/motor_pool)
 "wX" = (
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/motor_pool)
@@ -6969,6 +7022,12 @@
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20;
+	invisibility = 100
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/motor_pool)
@@ -7428,8 +7487,8 @@
 	pixel_y = 12
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7453,8 +7512,8 @@
 "yf" = (
 /obj/structure/machinery/power/apc/almayer/hardened/south,
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7531,8 +7590,8 @@
 /area/golden_arrow/hangar)
 "yo" = (
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8041,8 +8100,8 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8103,8 +8162,8 @@
 /area/golden_arrow/hangar)
 "zp" = (
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	name = "ship-grade camera";
@@ -8312,6 +8371,11 @@
 	pixel_y = -23;
 	pixel_x = 1
 	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	pixel_y = 22;
+	invisibility = 100
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zP" = (
@@ -8337,6 +8401,11 @@
 	pixel_x = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	pixel_y = 22;
+	invisibility = 100
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zR" = (
@@ -8347,8 +8416,8 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8463,8 +8532,8 @@
 /area/golden_arrow/medical)
 "Ag" = (
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
@@ -8634,8 +8703,8 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8820,7 +8889,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "AR" = (
-/obj/structure/machinery/door/airlock/upp_utility{
+/obj/structure/machinery/door/airlock/upp_grey/window{
 	name = "\improper Sanitar Office";
 	req_one_access_txt = "231;242";
 	dir = 1
@@ -9148,8 +9217,8 @@
 	icon_state = "door_warning"
 	},
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -9292,8 +9361,8 @@
 /area/golden_arrow/hangar)
 "BN" = (
 /obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 4
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
@@ -12135,17 +12204,17 @@ BM
 mW
 DL
 mW
-mW
+al
 DL
 mW
 mW
 DL
-mW
-mW
-DL
-mW
+al
 mW
 DL
+mW
+mW
+ak
 mW
 mW
 ym
@@ -13062,7 +13131,7 @@ wq
 Aj
 DL
 zW
-zP
+aj
 zC
 ym
 DL
@@ -13959,17 +14028,17 @@ BN
 mW
 DL
 mW
-mW
+al
 DL
 mW
 mW
 DL
-mW
-mW
-DL
-mW
+al
 mW
 DL
+mW
+mW
+ak
 mW
 mW
 DL
@@ -15668,7 +15737,7 @@ wc
 vZ
 vy
 vT
-DA
+ai
 lP
 DA
 lP

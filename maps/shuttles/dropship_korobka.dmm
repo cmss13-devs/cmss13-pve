@@ -104,7 +104,8 @@
 "nj" = (
 /obj/structure/platform/mineral{
 	dir = 1;
-	color = "#464847"
+	color = "#464847";
+	climbable = 0
 	},
 /obj/structure/platform/mineral{
 	dir = 8;
@@ -141,7 +142,9 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
-/obj/structure/barricade/handrail/strata,
+/obj/structure/barricade/handrail/strata{
+	dir = 1
+	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)
 "qs" = (
@@ -374,7 +377,8 @@
 "Pv" = (
 /obj/structure/platform/mineral{
 	dir = 1;
-	color = "#464847"
+	color = "#464847";
+	climbable = 0
 	},
 /obj/structure/platform/mineral{
 	dir = 4;
@@ -402,7 +406,8 @@
 "Rs" = (
 /obj/structure/platform/mineral{
 	dir = 1;
-	color = "#464847"
+	color = "#464847";
+	climbable = 0
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow/korobka,
 /turf/open/floor/strata/floor3/east,
@@ -420,9 +425,6 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
-	},
-/obj/structure/barricade/handrail/strata{
-	layer = 3.5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)
