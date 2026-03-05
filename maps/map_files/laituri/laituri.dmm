@@ -2,9 +2,96 @@
 "aa" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/engineering)
+"ab" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#d6620f";
+	color = "#d6620f";
+	dir = 4;
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/engineering)
+"ac" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = 10
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = 10
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1;
+	pixel_y = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/cryo_cells)
+"ad" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	pixel_y = -2
+	},
+/turf/open/floor/corsat/squares,
+/area/golden_arrow/engineering)
+"ae" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice4";
+	pixel_x = -19;
+	pixel_y = -3
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = -3
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
 "af" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/engineering)
+"ag" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = -3
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/briefing)
+"ah" = (
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice12";
+	pixel_x = 13;
+	pixel_y = -3
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "bn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -80,8 +167,6 @@
 /turf/open/floor/corsat/marked,
 /area/golden_arrow/engineering)
 "de" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/tl/upp/forecon,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
@@ -99,8 +184,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
 "dh" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/leader/upp/forecon,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
@@ -498,8 +581,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/engineering)
 "gy" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/medic/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -512,8 +593,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "gG" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/smartgunner/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -554,9 +633,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/engineering)
 "hd" = (
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_y = 32
-	},
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
@@ -564,6 +640,12 @@
 	dir = 4;
 	name = "ship-grade camera";
 	network = list("Laituri")
+	},
+/obj/structure/machinery/light/small/blue{
+	light_power = 0.8;
+	light_range = 4;
+	dir = 1;
+	pixel_y = 20
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -581,6 +663,10 @@
 "hp" = (
 /obj/structure/sign/safety/water{
 	pixel_y = 32
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_y = 32;
+	pixel_x = 6
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -855,7 +941,8 @@
 	pixel_x = -13
 	},
 /obj/item/storage/firstaid/regular{
-	pixel_y = 30
+	pixel_y = 30;
+	pixel_x = 2
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
@@ -2261,8 +2348,7 @@
 	id = "prep2"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -4560,6 +4646,12 @@
 /obj/structure/sign/safety/bathunisex{
 	pixel_x = 32
 	},
+/obj/structure/prop/invuln/lattice_prop{
+	dir = 8;
+	icon_state = "lattice8";
+	pixel_x = 13;
+	pixel_y = -3
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/briefing)
 "sQ" = (
@@ -4934,18 +5026,6 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/canteen)
 "ty" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice4";
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
 /obj/structure/sign/safety/galley{
 	pixel_x = -20
 	},
@@ -4955,24 +5035,6 @@
 	c_tag = "Port Hallway, Barracks"
 	},
 /turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
-"tz" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/briefing)
-"tA" = (
-/obj/structure/prop/invuln/lattice_prop{
-	dir = 8;
-	icon_state = "lattice12";
-	pixel_x = 13;
-	pixel_y = 10
-	},
-/turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
 "tB" = (
 /obj/structure/prop/invuln/lattice_prop{
@@ -5977,8 +6039,7 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -6007,8 +6068,7 @@
 /area/golden_arrow/prep_hallway)
 "vu" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -6064,8 +6124,7 @@
 	id = "prep1"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -6100,8 +6159,7 @@
 	id = "prep1"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -6134,8 +6192,7 @@
 	id = "prep2"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -6206,7 +6263,6 @@
 	layer = 3.021
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 4
 	},
@@ -6218,7 +6274,6 @@
 	},
 /obj/item/storage/backpack/marine/satchel/rto/upp_net,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
@@ -6425,7 +6480,6 @@
 	pixel_x = 3
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 8
 	},
@@ -6470,7 +6524,6 @@
 	pixel_x = -3
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
 	light_range = 5;
 	dir = 4
 	},
@@ -6600,8 +6653,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/motor_pool)
@@ -6723,8 +6775,7 @@
 	pixel_y = 10
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -6797,8 +6848,7 @@
 "wS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
@@ -6821,8 +6871,7 @@
 /area/golden_arrow/motor_pool)
 "wX" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -6955,8 +7004,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -6973,8 +7021,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7089,16 +7136,14 @@
 	pixel_y = 3
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "xz" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7194,8 +7239,7 @@
 	pixel_y = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
 	dir = 1;
@@ -7237,8 +7281,7 @@
 /area/golden_arrow/hangar)
 "xN" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7342,8 +7385,7 @@
 /area/golden_arrow/hangar)
 "xZ" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -7386,8 +7428,7 @@
 	pixel_y = 12
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -7412,8 +7453,7 @@
 "yf" = (
 /obj/structure/machinery/power/apc/almayer/hardened/south,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -7485,15 +7525,13 @@
 	pixel_x = 32
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "yo" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -7552,8 +7590,7 @@
 	pixel_x = -2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7600,8 +7637,7 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7756,8 +7792,7 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7776,8 +7811,7 @@
 	pixel_x = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7805,8 +7839,7 @@
 	pixel_x = -2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7846,8 +7879,7 @@
 	pixel_x = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7913,8 +7945,7 @@
 	pixel_x = -2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -7926,8 +7957,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7945,8 +7975,7 @@
 "zc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -7972,8 +8001,7 @@
 /area/golden_arrow/hangar)
 "zg" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -8013,8 +8041,7 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8022,8 +8049,7 @@
 "zk" = (
 /obj/structure/closet/crate/secure/upp,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8047,8 +8073,7 @@
 	pixel_x = 1
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8070,8 +8095,7 @@
 	pixel_x = -18
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -8079,8 +8103,7 @@
 /area/golden_arrow/hangar)
 "zp" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /obj/structure/machinery/camera/autoname/golden_arrow{
@@ -8093,8 +8116,7 @@
 "zq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -8148,8 +8170,7 @@
 /area/golden_arrow/hangar)
 "zz" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -8216,8 +8237,7 @@
 "zI" = (
 /obj/structure/machinery/suit_storage_unit/pressure_suit/upp,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 1;
 	pixel_y = 20
 	},
@@ -8261,8 +8281,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8328,8 +8347,7 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8445,8 +8463,7 @@
 /area/golden_arrow/medical)
 "Ag" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/corsat/plate,
@@ -8582,8 +8599,7 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -8618,8 +8634,7 @@
 	pixel_y = 2
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -9123,8 +9138,7 @@
 	icon_state = "door_warning"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -9134,8 +9148,7 @@
 	icon_state = "door_warning"
 	},
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/strata/floor3/east,
@@ -9272,16 +9285,14 @@
 /area/golden_arrow/hangar)
 "BM" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
 "BN" = (
 /obj/structure/machinery/light/small/red{
-	light_power = 0.8;
-	light_range = 4;
+	light_range = 5;
 	dir = 4
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
@@ -16454,7 +16465,7 @@ cE
 cE
 ty
 tf
-rt
+ae
 cE
 cE
 sg
@@ -16604,9 +16615,9 @@ cE
 cE
 cE
 tR
-tz
-jL
 rt
+jL
+ag
 sE
 cE
 sg
@@ -16756,9 +16767,9 @@ uj
 kN
 ua
 fd
-tA
-cE
 ZS
+cE
+ah
 sF
 cE
 sg
@@ -16791,7 +16802,7 @@ bF
 iT
 dp
 ii
-ih
+ac
 hU
 eu
 hy
@@ -16803,7 +16814,7 @@ fL
 zN
 dp
 eZ
-eY
+ab
 ev
 ei
 ei
@@ -16908,9 +16919,9 @@ uk
 cE
 cE
 tT
-tz
-jL
 rt
+jL
+ag
 sG
 cE
 sg
@@ -17060,7 +17071,7 @@ cE
 cE
 cE
 cE
-tB
+rt
 tg
 sP
 cE
@@ -22110,7 +22121,7 @@ ju
 jh
 iI
 im
-im
+ad
 eb
 hW
 hM

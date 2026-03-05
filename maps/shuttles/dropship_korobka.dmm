@@ -141,6 +141,7 @@
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/barricade/handrail/strata,
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)
 "qs" = (
@@ -419,6 +420,9 @@
 	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
+	},
+/obj/structure/barricade/handrail/strata{
+	layer = 3.5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/shuttle/korobka)
