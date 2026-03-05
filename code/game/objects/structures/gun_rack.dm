@@ -70,6 +70,10 @@
 /obj/structure/gun_rack/type71/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/type71/carbine
+	allowed_type = /obj/item/weapon/gun/rifle/type71/carbine
+	populate_type = /obj/item/weapon/gun/rifle/type71/carbine
+
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
 	icon_state = "frontal"
