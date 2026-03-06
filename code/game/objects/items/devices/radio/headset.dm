@@ -727,6 +727,11 @@
 	)
 	locate_setting = TRACKER_RMCSL
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/hq
+	name = "Royal Marine Commando command headset"
+	desc = "A special headset used by the commanders of the TWE's elite Royal Marine Commandos."
+	initial_keys = list(/obj/item/device/encryptionkey/command)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 
