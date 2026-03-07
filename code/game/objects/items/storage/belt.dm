@@ -127,6 +127,17 @@
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 	new /obj/item/device/multitool(src)
 
+/obj/item/storage/belt/utility/tactical/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/tactical(src)
+	new /obj/item/tool/wrench(src)
+	new /obj/item/tool/weldingtool/hugetank(src)
+	new /obj/item/tool/crowbar/tactical(src)
+	new /obj/item/tool/wirecutters/tactical(src)
+	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
+	new /obj/item/device/multitool(src)
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/explosive/plastic(src)
 
 /obj/item/storage/belt/utility/atmostech/fill_preset_inventory()
 	new /obj/item/tool/screwdriver(src)
@@ -380,18 +391,18 @@
 	new /obj/item/storage/pill_bottle/bicaridine(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
 	new /obj/item/storage/pill_bottle/kelotane(src)
+	new /obj/item/storage/pill_bottle/tricord(src)
 	new /obj/item/storage/pill_bottle/tramadol(src)
-	new /obj/item/storage/pill_bottle/tramadol(src)
+	new /obj/item/storage/pill_bottle/inaprovaline(src)
 	new /obj/item/storage/pill_bottle/antitox(src)
-	new /obj/item/storage/pill_bottle/alkysine(src)
-	new /obj/item/storage/pill_bottle/imidazoline(src)
+	new /obj/item/storage/pill_bottle/imialk(src)
+	new /obj/item/storage/pill_bottle/peridaxon(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
-	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/stack/medical/splint(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
@@ -2229,6 +2240,24 @@
 		/obj/item/ammo_magazine/hardpoint/flare_launcher,
 	)
 
+/obj/item/storage/belt/marine/sharp
+	name = "\improper M103 pattern SHARP magazine belt"
+	desc = "A specially modified M103 pattern rig designed to hold P9 SHARP rifle magazines, instead of tank shells."
+	icon_state = "tankbelt"
+	item_state = "tankbelt"
+	item_state_slots = list(
+		WEAR_L_HAND = "utility",
+		WEAR_R_HAND = "utility")
+	storage_slots = 10
+	max_storage_space = 10
+	can_hold = list(
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/track,
+	)
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
 /obj/item/storage/belt/souto
 	name = "\improper Souto belt"
 	desc = "Souto Man's trusty utility belt with breakaway Souto cans. They cannot be put back."
@@ -2318,6 +2347,7 @@
 	icon_state = "mortarutility"
 	item_state = "s_mortarbelt"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	max_w_class = SIZE_HUGE
 	has_gamemode_skin = FALSE
 	holster_slots = list(
 		"1" = list(

@@ -135,8 +135,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define JOB_MARINE_RAIDER "Marine Raider"
 #define JOB_MARINE_RAIDER_SL "Marine Raider Team Lead"
+#define JOB_MARINE_RAIDER_MED "Marine Raider SARC"
 #define JOB_MARINE_RAIDER_CMD "Marine Raider Platoon Lead"
-#define JOB_MARINE_RAIDER_ROLES_LIST list(JOB_MARINE_RAIDER, JOB_MARINE_RAIDER_SL, JOB_MARINE_RAIDER_CMD)
+#define JOB_MARINE_RAIDER_ROLES_LIST list(JOB_MARINE_RAIDER, JOB_MARINE_RAIDER_MED, JOB_MARINE_RAIDER_SL, JOB_MARINE_RAIDER_CMD)
 
 #define JOB_HUMAN_ROLES  /datum/timelock/human
 
@@ -329,12 +330,16 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 //-------- FORECON --------//
 
 #define JOB_FORECON_CO "Reconnaissance Commander"
-#define JOB_FORECON_SL "Reconnaissance Squad Leader"
+#define JOB_FORECON_XO "Reconnaissance Officer"
 #define JOB_FORECON_SYN "Reconnaissance Synthetic"
+#define JOB_FORECON_SL "Reconnaissance Squad Leader"
 #define JOB_FORECON_SNIPER "Reconnaissance Sniper"
+#define JOB_FORECON_SPOTTER "Reconnaissance Spotter"
 #define JOB_FORECON_MARKSMAN "Reconnaissance Marksman"
 #define JOB_FORECON_SUPPORT "Reconnaissance Support Technician"
 #define JOB_FORECON_RIFLEMAN "Reconnaissance Rifleman"
+#define JOB_FORECON_RTO "Reconnaissance Radio Telephone Operator"
+#define JOB_FORECON_CORPSMAN "Reconnaissance Corpsman"
 #define JOB_FORECON_SMARTGUNNER "Reconnaissance Smartgunner"
 
 //-------- UPP --------//
@@ -396,7 +401,7 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_TWE_RMC_MARKSMAN "Scout Sniper"
 #define JOB_TWE_RMC_SMARTGUNNER "GPMG Gunner"
 #define JOB_TWE_RMC_BREACHER "Bombardment Specialist"
-#define JOB_TWE_RMC_TEAMLEADER "Team Leader"
+#define JOB_TWE_RMC_TEAMLEADER "Section 2iC"
 #define JOB_TWE_RMC_SECTIONLEADER "Section Leader"
 #define JOB_TWE_RMC_TROOPLEADER "Troop Sergeant"
 #define JOB_TWE_RMC_LIEUTENANT "Troop Commander"
