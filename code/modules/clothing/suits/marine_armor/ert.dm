@@ -361,6 +361,7 @@
 	desc = "Vintage CANC armor system. Provides basic ballistic/shrapnel protection."
 	icon_state = "canc"
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
+	flags_atom = NO_SNOW_TYPE
 	slowdown = SLOWDOWN_ARMOR_LIGHT
 	armor_melee = CLOTHING_ARMOR_MEDIUM
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
