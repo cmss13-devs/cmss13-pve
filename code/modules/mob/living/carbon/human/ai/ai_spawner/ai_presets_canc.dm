@@ -21,6 +21,11 @@
 	desc = "CANC Remnant Force rifleman, QYJ-72-I."
 	path = /datum/equipment_preset/canc/machinegunner
 
+/datum/human_ai_equipment_preset/canc/machinegunner/heap
+	name = "CANC Squad Machinegunner (HEAP)"
+	desc = "CANC Remnant Force rifleman, QYJ-72-I, HEAP"
+	path = /datum/equipment_preset/canc/machinegunner/heap
+
 /datum/human_ai_equipment_preset/canc/at
 	name = "CANC Squad Anti-Tank"
 	desc = "CANC Remnant Force rifleman, Rocket Launcher."
