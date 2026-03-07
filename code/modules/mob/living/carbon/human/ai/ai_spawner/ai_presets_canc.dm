@@ -41,6 +41,11 @@
 	desc = "CANC Remnant Force squad leader, Random Rifle"
 	path = /datum/equipment_preset/canc/remnant/leader
 
+/datum/human_ai_equipment_preset/canc/officer
+	name = "CANC Officer"
+	desc = "CANC Remnant Force officer, Random Rifle"
+	path = /datum/equipment_preset/canc/remnant/officer
+
 /datum/human_ai_equipment_preset/canc/marksman
 	name = "CANC Squad Marksman"
 	desc = "Type 88 DMR and a dream, make them pay for the Dog War."
