@@ -30,11 +30,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -72,12 +75,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
-	//head
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
 	add_canc_uniform(new_human)
@@ -113,11 +118,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	if(prob(50))
 		var/coolhat = pick(/obj/item/clothing/head/headband/red, /obj/item/clothing/head/cmcap/flap/canc, /obj/item/clothing/head/uppcap/boonie/canc)
@@ -158,11 +166,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -197,11 +208,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -238,11 +252,14 @@
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -291,14 +308,15 @@
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health/prescription, WEAR_EYES)
 	else
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	var/random_neckwear_canc = rand(1,4)
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	var/random_neckwear_canc = rand(1,4)
-	switch(random_neckwear_canc)
-		if(1,2)
-			add_neckerchief(new_human)
-		if(3)
-			add_facewrap(new_human)
+	else
+		switch(random_neckwear_canc)
+			if(1,2)
+				add_neckerchief(new_human)
+			if(3)
+				add_facewrap(new_human)
 	//head
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
 	//uniform
@@ -338,6 +356,8 @@
 	add_random_satchel(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
@@ -376,6 +396,8 @@
 	add_random_satchel(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 	//uniform
 	add_civilian_uniform(new_human)
 	//jacket
