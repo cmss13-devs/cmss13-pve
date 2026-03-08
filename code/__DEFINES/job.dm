@@ -226,6 +226,9 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 //-------- USASF --------//
 #define JOB_NAVY_CREWMAN "USASF Crewman"
+#define JOB_NAVY_MP "USASF Men At Arms"
+#define JOB_NAVY_SF "USASF Security Forces Rifleman"
+#define JOB_NAVY_SFL "USASF Security Forces Team Leader"
 #define JOB_NAVY_MEDIC "USASF Hospital Corpsman"
 #define JOB_NAVY_ENGI "USASF Engineering Technician"
 #define JOB_NAVY_SKITTLE "USASF Flight-Deck Crewman"

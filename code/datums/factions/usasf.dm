@@ -13,6 +13,12 @@
 	switch(_role)
 		if(JOB_NAVY_CREWMAN)
 			hud_icon_state = "crew"
+		if(JOB_NAVY_MP)
+			hud_icon_state = "mp"
+		if(JOB_NAVY_SF)
+			hud_icon_state = "sf"
+		if(JOB_NAVY_SFL)
+			hud_icon_state = "sfl"
 		if(JOB_NAVY_MEDIC)
 			hud_icon_state = "doc"
 		if(JOB_NAVY_ENGI)

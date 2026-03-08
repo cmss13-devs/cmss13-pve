@@ -527,6 +527,46 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 
+/obj/item/storage/belt/security/usasf
+	name = "\improper USASF duty belt"
+	desc = "Modelled on the standard belt system of the USCMC. It consists of a modular belt with various clips. This configuration is commonly seen among Men At Arms aboard both voidcraft and stations, though it can hold some munitions."
+	icon_state = "securitybelt"
+	item_state = "security"//Could likely use a better one.
+	item_state_slots = list(
+		WEAR_L_HAND = "s_marinebelt",
+		WEAR_R_HAND = "s_marinebelt")
+	storage_slots = 7
+	max_w_class = SIZE_MEDIUM
+	max_storage_space = 21
+	can_hold = list(
+		/obj/item/reagent_container/spray/pepper,
+		/obj/item/restraint/handcuffs,
+		/obj/item/device/flash,
+		/obj/item/clothing/glasses,
+		/obj/item/ammo_magazine,
+		/obj/item/weapon/baton,
+		/obj/item/weapon/gun/energy/taser,
+		/obj/item/device/flashlight,
+		/obj/item/device/clue_scanner,
+		/obj/item/notepad,
+	)
+
+/obj/item/storage/belt/security/usasf/full/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/pistol(src)
+	new /obj/item/ammo_magazine/pistol(src)
+
+/obj/item/storage/belt/security/usasf/heavy/fill_preset_inventory()
+	new /obj/item/weapon/baton(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/restraint/handcuffs(src)
+	new /obj/item/reagent_container/spray/pepper(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+
 /obj/item/storage/belt/security/MP
 	name = "\improper M276 pattern military police rig"
 	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is filled with an array of small pouches, meant to carry non-lethal equipment and restraints."
@@ -1484,11 +1524,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/m39/extended(src)
 
-#define MAXIMUM_MAGAZINE_COUNT 2
+#define MAXIMUM_MAGAZINE_COUNT 4
 
 /obj/item/storage/belt/gun/xm51
 	name = "\improper M276 pattern XM51 holster rig"
-	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing two magazines along with extra shells."
+	desc = "The M276 is the standard load-bearing equipment of the USCM. It consists of a modular belt with various clips. This version is for the XM51 breaching scattergun, allowing easier storage of the weapon. It features pouches for storing magazines along with extra shells."
 	icon_state = "xm51_holster"
 	has_gamemode_skin = FALSE
 	gun_has_gamemode_skin = FALSE
@@ -2295,7 +2335,7 @@
 	has_gamemode_skin = FALSE
 
 /obj/item/storage/belt/marine/rmc/nsg/fill_preset_inventory()
-	for(var/i in 1 to storage_slots)
+	for(var/i in 3 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
 /obj/item/storage/belt/medical/rmc

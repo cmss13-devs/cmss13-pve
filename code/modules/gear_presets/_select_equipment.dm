@@ -1742,6 +1742,14 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
 
+/datum/equipment_preset/proc/add_rmc_md(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/md_chance = rand(1,3)
+	switch(md_chance)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
+
 /datum/equipment_preset/proc/add_canc_uniform(mob/living/carbon/human/new_human)
 	if(!istype(new_human))
 		return
