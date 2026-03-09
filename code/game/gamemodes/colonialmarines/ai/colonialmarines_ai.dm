@@ -104,6 +104,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai/upp/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
@@ -123,7 +124,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/smartgunner/ai/pmc/small = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER),\
 		/datum/squad/marine/upp/forecon = list(/datum/job/marine/standard/ai/upp/forecon = JOB_SQUAD_MARINE,\
-		/datum/job/marine/standard/ai/rto/upp/forecon = JOB_SQUAD_RTO,\
+		/datum/job/marine/standard/ai/upp/rto/forecon = JOB_SQUAD_RTO,\
 		/datum/job/marine/leader/ai/upp/forecon = JOB_SQUAD_LEADER,\
 		/datum/job/marine/medic/ai/upp/forecon = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/upp/forecon = JOB_SQUAD_TEAM_LEADER,\

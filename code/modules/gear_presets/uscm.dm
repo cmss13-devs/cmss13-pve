@@ -272,12 +272,12 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
-// if a generic UPP rto is ever added, these will need subtypes for upp/forecon
+//*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto/upp
-	name = "UPP Recon Radio Transmissions Operator"
-	assignment = JOB_SQUAD_RTO_FORECON_UPP
-	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+	name = "UPP Radio Transmissions Operator"
+	assignment = JOB_SQUAD_UPP_RTO
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	faction_group = list(FACTION_UPP)
@@ -287,14 +287,23 @@
 
 	minimap_icon = "rto"
 
-/datum/equipment_preset/uscm/rto/upp/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
-
 /datum/equipment_preset/uscm/rto/upp/corporal
 	name = parent_type::name + " (E3 Rank)"
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 
-/datum/equipment_preset/uscm/rto/upp/senior_private
+/datum/equipment_preset/uscm/rto/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+
+/datum/equipment_preset/uscm/rto/upp/forecon
+	name = "UPP Recon Radio Transmissions Operator"
+	assignment = JOB_SQUAD_RTO_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/senior_private
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 
