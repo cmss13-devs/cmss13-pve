@@ -134,6 +134,151 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/hangar)
+"am" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "ship-grade camera";
+	network = list("Laituri");
+	c_tag = "Sanitar Office"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"an" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ao" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Suit Storage";
+	req_one_access_txt = "230"
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Tether Inner Airlock Blast Door";
+	id = "tetherinner";
+	dir = 8
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"ap" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"aq" = (
+/obj/structure/machinery/door_control{
+	id = "tetherinner";
+	name = "Tether Inner Airlock";
+	needs_power = 0;
+	pixel_x = -25
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ar" = (
+/obj/structure/sign/safety/zero_g{
+	pixel_x = 14;
+	pixel_y = 25
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 14;
+	pixel_y = 39
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"as" = (
+/obj/structure/machinery/suit_storage_unit/pressure_suit/upp,
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"at" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	name = "\improper Tether Access";
+	req_one_access_txt = "230";
+	dir = 2
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Tether Outer Airlock Blast Door";
+	id = "tetherouter";
+	dir = 2
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"au" = (
+/obj/structure/machinery/door_control{
+	id = "tetherouter";
+	name = "Tether Outer Airlock";
+	needs_power = 0;
+	pixel_y = -22;
+	pixel_x = -7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"av" = (
+/obj/structure/stairs/perspective{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"aw" = (
+/obj/structure/stairs/perspective{
+	dir = 1
+	},
+/obj/structure/barricade/handrail/strata{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ax" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 1;
+	pixel_y = 20
+	},
+/obj/structure/ladder{
+	id = "tether1";
+	height = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"ay" = (
+/obj/structure/sign/safety/south{
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/zero_g{
+	pixel_x = 14;
+	pixel_y = 32
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/hangar)
+"az" = (
+/obj/structure/foamed_metal/iron,
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/hangar)
 "bn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -160,8 +305,6 @@
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/cryo_cells)
 "bE" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
 /obj/effect/landmark/start/marine/rto/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -508,6 +651,7 @@
 /area/golden_arrow/briefing)
 "fB" = (
 /obj/effect/landmark/late_join/upp/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/cryo_cells)
 "fC" = (
@@ -535,6 +679,7 @@
 /area/golden_arrow/canteen)
 "fK" = (
 /obj/effect/landmark/late_join/upp/forecon,
+/obj/effect/landmark/late_join,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "fL" = (
@@ -542,7 +687,6 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "fM" = (
-/obj/effect/landmark/late_join/upp/forecon,
 /obj/effect/landmark/start/marine/upp/forecon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
@@ -597,12 +741,6 @@
 	can_block_movement = 0
 	},
 /turf/open/floor/strata/multi_tiles/west,
-/area/golden_arrow/cryo_cells)
-"gd" = (
-/obj/effect/landmark/late_join/upp/forecon,
-/obj/effect/landmark/late_join,
-/obj/effect/landmark/start/marine/upp/forecon,
-/turf/open/floor/strata/floor3/east,
 /area/golden_arrow/cryo_cells)
 "ge" = (
 /obj/effect/decal/warning_stripes{
@@ -7272,27 +7410,25 @@
 /turf/open/floor/mech_bay_recharge_floor,
 /area/golden_arrow/hangar)
 "xI" = (
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/item/parachute,
-/obj/structure/closet/crate/secure/upp/alt,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
 	},
+/obj/structure/closet/crate/secure/upp,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
+/obj/item/rappel_harness/extract/nauk,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "xJ" = (
 /obj/structure/surface/table/almayer{
 	color = "#aeaeae"
 	},
-/obj/item/parachute,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -7306,6 +7442,7 @@
 	network = list("Laituri");
 	c_tag = "Sanitar Office"
 	},
+/obj/item/rappel_harness/extract/nauk,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "xK" = (
@@ -7751,15 +7888,6 @@
 /obj/structure/surface/rack{
 	color = "#8B9490"
 	},
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
-/obj/item/rappel_harness/extract/nauk,
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
 	pixel_y = 1
@@ -7768,6 +7896,7 @@
 	icon_state = "E";
 	pixel_x = 1
 	},
+/obj/item/parachute,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "yE" = (
@@ -8029,7 +8158,7 @@
 	pixel_x = -2
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/strata/floor3/east,
+/turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/hangar)
 "zc" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8106,11 +8235,19 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zk" = (
-/obj/structure/closet/crate/secure/upp,
 /obj/structure/machinery/light/small/red{
 	light_range = 5;
 	dir = 8
 	},
+/obj/structure/closet/crate/secure/upp/alt,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
+/obj/item/parachute,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zl" = (
@@ -8185,6 +8322,12 @@
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 32
 	},
+/obj/structure/machinery/door_control{
+	id = "tetherinner";
+	name = "Tether Inner Airlock";
+	needs_power = 0;
+	pixel_x = 24
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zt" = (
@@ -8225,6 +8368,13 @@
 	pixel_x = 12
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	id = "tetherouter";
+	name = "Tether Outer Airlock";
+	needs_power = 0;
+	pixel_y = 30;
+	pixel_x = -7
+	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zz" = (
@@ -8288,18 +8438,6 @@
 /area/golden_arrow/hangar)
 "zH" = (
 /obj/structure/machinery/suit_storage_unit/pressure_suit/upp,
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/turf/open/floor/corsat/plate,
-/area/golden_arrow/hangar)
-"zI" = (
-/obj/structure/machinery/suit_storage_unit/pressure_suit/upp,
-/obj/structure/machinery/light/small/red{
-	light_range = 5;
-	dir = 1;
-	pixel_y = 20
-	},
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
 	},
@@ -17182,7 +17320,7 @@ bF
 bF
 fC
 gG
-gd
+fM
 fM
 fC
 bF
@@ -17998,7 +18136,7 @@ xx
 mI
 mI
 mI
-yV
+ao
 mI
 mI
 wD
@@ -18148,8 +18286,8 @@ mH
 mH
 xx
 mI
-zH
-xZ
+as
+aq
 yA
 yk
 xP
@@ -18452,7 +18590,7 @@ mV
 mH
 xx
 mI
-zI
+zH
 DL
 uU
 DL
@@ -18604,7 +18742,7 @@ mV
 mH
 xx
 mI
-zH
+as
 DL
 uU
 DL
@@ -19818,7 +19956,7 @@ mV
 mV
 mV
 mH
-mH
+mI
 xx
 mI
 zh
@@ -19964,13 +20102,13 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
+mH
+mH
+mH
+mH
+mH
+mI
 xx
 mI
 zh
@@ -20116,13 +20254,13 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
+az
+xx
+xx
+xx
+xx
+xx
 xx
 mI
 mI
@@ -20268,14 +20406,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
+mI
+mI
+mI
+mI
+mI
+mI
 mI
 mI
 za
@@ -20420,14 +20558,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
+mI
+mI
+yk
+zw
+yL
+mI
 mI
 mI
 yt
@@ -20572,16 +20710,16 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
 mI
+ax
+zW
+av
 DL
+xN
+mI
+ar
 zb
 DL
 mI
@@ -20724,18 +20862,18 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
 mI
-zq
-ym
+ay
+yi
+mI
+zg
 DL
+at
+yl
+ap
+am
 mI
 xx
 mH
@@ -20876,18 +21014,18 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
+mI
+ax
+zW
+aw
+DL
+au
 mI
 zy
 rx
-rx
+an
 mI
 xx
 mH
@@ -21028,14 +21166,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
+mI
+mI
+DL
+zw
+yL
+mI
 mI
 xT
 xT
@@ -21180,14 +21318,14 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
-xx
+az
+mI
+mI
+mI
+mI
+mI
+mI
 mI
 yp
 yp
@@ -21332,13 +21470,13 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
 mH
+az
+xx
+xx
+xx
+xx
+xx
 xx
 mI
 zz
@@ -21484,12 +21622,12 @@ mV
 mV
 mV
 mV
-mV
-mV
-mV
-mV
-mV
-mV
+mH
+mH
+mH
+mH
+mH
+mH
 mH
 xx
 mI
