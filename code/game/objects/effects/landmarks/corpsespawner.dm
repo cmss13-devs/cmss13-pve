@@ -195,3 +195,45 @@
 /obj/effect/landmark/corpsespawner/tyrargo/us_army_medic/burst
 	name = "Corpse - Burst - US Army - Trooper"
 	equip_path = /datum/equipment_preset/corpse/tyrargo/us_army_medic/burst
+
+///CM specific jobs///
+
+/obj/effect/landmark/corpsespawner/colonist //default is a colonist
+	name = "Colonist"
+	equip_path = /datum/equipment_preset/corpse/colonist
+
+/obj/effect/landmark/corpsespawner/colonist/burst
+	name = "Burst Colonist"
+	equip_path = /datum/equipment_preset/corpse/colonist/burst
+
+/obj/effect/landmark/corpsespawner/colonist/kutjevo
+	name = "Colonist Kutjevo"
+	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo
+
+/obj/effect/landmark/corpsespawner/colonist/kutjevo/burst
+	name = "Burst Colonist Kutjevo"
+	equip_path = /datum/equipment_preset/corpse/colonist/kutjevo/burst
+
+/obj/effect/landmark/corpsespawner/colonist/random
+	name = "Colonist Random"
+	equip_path = /datum/equipment_preset/corpse/colonist/random
+
+/obj/effect/landmark/corpsespawner/colonist/random/burst
+	name = "Burst Colonist Random"
+	equip_path = /datum/equipment_preset/corpse/colonist/random/burst
+
+/obj/effect/landmark/corpsespawner/ua_riot
+	name = "UA Officer"
+	equip_path = /datum/equipment_preset/corpse/ua_riot
+
+/obj/effect/landmark/corpsespawner/ua_riot/burst
+	name = "Burst UA Officer"
+	equip_path = /datum/equipment_preset/corpse/ua_riot/burst
+
+/obj/effect/landmark/corpsespawner/wy/manager
+	name = "Corporate Supervisor"
+	equip_path = /datum/equipment_preset/corpse/wy/manager
+
+/obj/effect/landmark/corpsespawner/wy/manager/burst
+	name = "Burst Corporate Supervisor"
+	equip_path = /datum/equipment_preset/corpse/wy/manager/burst

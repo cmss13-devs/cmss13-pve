@@ -1376,3 +1376,147 @@
 /datum/equipment_preset/corpse/tyrargo/us_army_medic/burst
 	name = "Corpse - Burst - US Army - Medic"
 	xenovictim = TRUE
+
+//*****************************************************************************************************/
+
+//Colonists
+
+/datum/equipment_preset/corpse/colonist
+	name = "Corpse - Colonist"
+
+/datum/equipment_preset/corpse/colonist/load_gear(mob/living/carbon/human/new_human)
+	add_ice_colony_survivor_equipment(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
+
+/datum/equipment_preset/corpse/colonist/burst
+	name = "Corpse - Burst Colonist"
+	xenovictim = TRUE
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/corpse/colonist/random
+	name = "Corpse - Colonist Random"
+
+/datum/equipment_preset/corpse/colonist/random/load_gear(mob/living/carbon/human/new_human)
+	var/random_surv_type = pick(SSmapping.configs[GROUND_MAP].survivor_types)
+	var/datum/equipment_preset/survivor/surv_equipment = new random_surv_type
+	surv_equipment.load_gear(new_human)
+
+/datum/equipment_preset/corpse/colonist/random/burst
+	name = "Corpse - Burst Colonist Random"
+	xenovictim = TRUE
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/corpse/colonist/kutjevo
+	name = "Corpse - Colonist Kutjevo"
+
+/datum/equipment_preset/corpse/colonist/kutjevo/load_gear(mob/living/carbon/human/new_human)
+
+	add_random_kutjevo_survivor_uniform(new_human)
+	add_random_kutjevo_survivor_equipment(new_human)
+	add_random_survivor_equipment(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/norm(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
+
+/datum/equipment_preset/corpse/colonist/kutjevo/burst
+	name = "Corpse - Burst Colonist Kutjevo"
+	xenovictim = TRUE
+
+//*****************************************************************************************************/
+
+//UA Riot Control Officer
+
+/datum/equipment_preset/corpse/ua_riot
+	name = "Corpse - UA Officer"
+	assignment = "United Americas Riot Officer"
+	idtype = /obj/item/card/id/silver
+	access = list(
+		ACCESS_CIVILIAN_PUBLIC,
+		ACCESS_CIVILIAN_LOGISTICS,
+		ACCESS_CIVILIAN_ENGINEERING,
+		ACCESS_CIVILIAN_RESEARCH,
+		ACCESS_CIVILIAN_BRIG,
+		ACCESS_CIVILIAN_MEDBAY,
+		ACCESS_CIVILIAN_COMMAND,
+	)
+
+/datum/equipment_preset/corpse/ua_riot/load_gear(mob/living/carbon/human/new_human)
+	var/random = rand(1,5)
+	add_ice_colony_survivor_equipment(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/ua_riot(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/sec(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/ua_riot(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/classic_baton(new_human), WEAR_WAIST)
+
+	switch(random)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses(new_human), WEAR_EYES)
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator(new_human), WEAR_EYES)
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
+		if(5)
+			new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/high_explosive/frag(new_human), WEAR_IN_BACK)
+
+
+/datum/equipment_preset/corpse/ua_riot/burst
+	name = "Corpse - Burst UA Officer"
+	xenovictim = TRUE
+
+//*****************************************************************************************************/
+
+//Colonial Supervisor
+
+/datum/equipment_preset/corpse/wy
+	flags = EQUIPMENT_PRESET_STUB
+
+/datum/equipment_preset/corpse/wy/manager
+	name = "Corpse - Corporate Supervisor"
+	assignment = "Colony Supervisor"
+	flags = EQUIPMENT_PRESET_EXTRA
+	paygrades = list(PAY_SHORT_WYC6 = JOB_PLAYTIME_TIER_0)
+	idtype = /obj/item/card/id/silver/clearance_badge/manager
+	faction_group = FACTION_LIST_WY
+	access = list(
+		ACCESS_WY_GENERAL,
+		ACCESS_WY_COLONIAL,
+		ACCESS_WY_LEADERSHIP,
+		ACCESS_WY_SECURITY,
+		ACCESS_WY_EXEC,
+		ACCESS_WY_RESEARCH,
+		ACCESS_WY_ENGINEERING,
+		ACCESS_WY_MEDICAL,
+		ACCESS_ILLEGAL_PIRATE,
+	)
+
+/datum/equipment_preset/corpse/wy/manager/load_gear(mob/living/carbon/human/new_human)
+	add_ice_colony_survivor_equipment(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/suit_jacket/manager(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable/liaison(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/manager(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/WY(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/manager(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/full(new_human), WEAR_R_STORE)
+	add_random_cl_survivor_loot(new_human)
+
+/datum/equipment_preset/corpse/wy/manager/burst
+	name = "Corpse - Burst Corporate Supervisor"
+	xenovictim = TRUE

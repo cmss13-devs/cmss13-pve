@@ -1207,7 +1207,7 @@
 /turf/open/asphalt,
 /area/desert_dam/exterior/valley/valley_medical)
 "aet" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/bright_clean2/southwest,
 /area/desert_dam/building/medical/morgue)
 "aeu" = (
@@ -1224,7 +1224,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/desert_dam/exterior/valley/valley_security)
 "aew" = (
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/medical/morgue)
 "aex" = (
@@ -20289,7 +20289,7 @@
 /area/desert_dam/building/cafeteria/cold_room)
 "fLD" = (
 /obj/structure/pipes/standard/simple/hidden/green,
-/obj/item/ammo_casing/bullet,
+/obj/effect/decal/ammo_casing/bullet,
 /turf/open/floor/prison/sterile_white/west,
 /area/desert_dam/building/medical/morgue)
 "fLL" = (
