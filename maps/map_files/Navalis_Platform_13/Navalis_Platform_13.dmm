@@ -13086,7 +13086,8 @@
 /area/navalis/indoors/ice_cavern)
 "aMz" = (
 /obj/structure/prop/invuln/dense/excavator{
-	dir = 4
+	dir = 4;
+	layer = 5
 	},
 /turf/open/auto_turf/hybrisa_auto_turf/layer1,
 /area/navalis/indoors/ice_cavern)
