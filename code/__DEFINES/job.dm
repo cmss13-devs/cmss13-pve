@@ -23,7 +23,6 @@
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
-#define SQUAD_ARMY "US Army"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"

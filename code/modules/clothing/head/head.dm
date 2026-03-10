@@ -868,6 +868,7 @@
 		/obj/item/prop/helmetgarb/helmet_nvg = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
+	)
 
 /obj/item/clothing/head/beret/royal_marine/team_leader
 	icon_state = "rmc_beret_tl"

@@ -2386,9 +2386,10 @@
 	new /obj/item/storage/box/packet/rmc/mini(src)
 	new /obj/item/storage/box/packet/rmc/mini/frag(src)
 	new /obj/item/storage/box/packet/rmc/mini/holo(src)
-
-#undef MAXIMUM_MORTARSHELL_COUNT
-		new /obj/item/ammo_magazine/pistol/vp78(src)
+	new /obj/item/ammo_magazine/pistol/vp78(src)
 
 /obj/item/storage/belt/gun/mateba/cmateba/black
 	flags_atom = NO_NAME_OVERRIDE
+
+#undef MAXIMUM_MORTARSHELL_COUNT
+

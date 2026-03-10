@@ -695,7 +695,7 @@
 	role_comm_title = "ARMY"
 	rank = JOB_ARMY_TROOPER
 	faction = FACTION_MARINE
-	faction_group = FACTION_LIST_MARINE
+	faction_group = FACTION_LIST_MARINE_TWE
 	flags = EQUIPMENT_PRESET_START_OF_ROUND
 
 /datum/equipment_preset/us_army/New()
