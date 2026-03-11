@@ -235,3 +235,10 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 		/obj/item/weapon/gun/revolver,
 	)
 	primary_weight = 1
+
+/datum/firearm_appraisal/plasmapistol
+	maximum_range = 9
+	gun_types = list(
+		/obj/item/weapon/gun/energy/yautja/plasmapistol,
+	)
+	primary_weight = 8

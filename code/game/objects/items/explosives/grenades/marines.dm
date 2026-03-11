@@ -197,6 +197,18 @@
 /obj/item/explosive/grenade/high_explosive/airburst/canister/launch_impact(atom/hit_atom)
 	return
 
+/obj/item/explosive/grenade/high_explosive/old
+	name = "\improper M74 20mm Grenade"
+	desc = "This grenade must be launched with a grenade launcher, and detonates once it reaches its destination."
+	icon_state = "grenade_m74_airburst_f"
+	item_state = "grenade_m74_airburst_f_active"
+	caliber = "20mm"
+	explosion_power = 75
+	shrapnel_count = 16
+	hand_throwable = FALSE
+	dual_purpose = FALSE
+	fuse_type = 1
+
 /*
 //================================================
 				Airburst Grenades
@@ -204,19 +216,19 @@
 */
 // M74 are the launcher-only variant. Flag with hand_throwable = FALSE.
 /obj/item/explosive/grenade/high_explosive/airburst
-	name = "\improper M74 AGM-F 40mm Grenade"
-	desc = "M74 - Airburst Grenade Munition - Fragmentation. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination. It disperses jagged shrapnel in a cone in front of itself, tearing through sinews and armor alike. Dispersion pattern is optimized against large target. Suffers from overpenetration on a direct hit."
+	name = "\improper M74 AGM-F 20mm Grenade"
+	desc = "M74 - Airburst Grenade Munition - Fragmentation. This grenade must be launched with a grenade launcher, and detonates once it reaches its destination.."
 	icon_state = "grenade_m74_airburst_f"
 	item_state = "grenade_m74_airburst_f_active"
 	caliber = "40x53mm"
-	explosion_power = 0
+	explosion_power = 30
 	explosion_falloff = 25
 	shrapnel_count = 16
 	det_time = 0 // Unused, because we don't use prime.
 	hand_throwable = FALSE
 	dual_purpose = FALSE
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
-	shrapnel_type = /datum/ammo/bullet/shrapnel/jagged
+	shrapnel_type = /datum/ammo/bullet/shrapnel/canister
 	var/direct_hit_shrapnel = 5
 	var/dispersion_angle = 40
 
@@ -972,7 +984,7 @@
 /obj/item/explosive/grenade/nerve_gas
 	name = "\improper CN20 canister grenade"
 	desc = "A canister grenade of deadly nerve gas. It is set to detonate in 4 seconds."
-	icon_state = "flashbang2"//temp icon
+	icon_state = "grenade_nerve"//temp icon
 	det_time = 40
 	item_state = "grenade_phos_clf"//temp icon
 	caliber = "non-standard"
@@ -1005,7 +1017,7 @@
 	qdel(src)
 
 /obj/item/explosive/grenade/nerve_gas/xeno
-	name = "\improper CN20-X canister grenade"
+	name = "\improper M40 NGDP nerve gas delivery grenade"
 	nerve_gas_type = /datum/effect_system/smoke_spread/cn20/xeno
 
 /*

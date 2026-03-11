@@ -71,6 +71,25 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	damage_falloff = DAMAGE_FALLOFF_TIER_8
 
+/datum/ammo/energy/rxf
+	name = "laser bolt"
+	icon_state = "laser_new"
+	flags_ammo_behavior = AMMO_ENERGY
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 25
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_1 //It's a freaking plasma beam
+	accurate_range = 20
+	effective_range_max = 11
+	max_range = 20
+	shell_speed = AMMO_SPEED_TIER_HITSCAN
+	scatter = SCATTER_AMOUNT_NONE
+	accuracy = HIT_ACCURACY_MULT_TIER_10
+	damage_falloff = DAMAGE_FALLOFF_TIER_1
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_RED
+
+
 /datum/ammo/energy/plasma
 	name = "plasma bolt"
 	icon_state = "arcane_barrage"
@@ -235,8 +254,8 @@
 
 	damage = 55
 
-	accurate_range = 8
-	max_range = 8
+	accurate_range = 24
+	max_range = 24
 
 	var/vehicle_slowdown_time = 5 SECONDS
 
@@ -268,7 +287,7 @@
 	max_range = 20
 
 	var/stun_range = 4 // Big
-	var/stun_time = 6
+	var/stun_time = 60
 
 /datum/ammo/energy/yautja/caster/sphere/stun/on_hit_mob(mob/M, obj/projectile/P)
 	do_area_stun(P)
@@ -288,12 +307,17 @@
 		var/stun_time = src.stun_time
 		log_attack("[key_name(M)] was stunned by a plasma immobilizer from [key_name(P.firer)] at [get_area(P)]")
 		if (isyautja(M))
-			stun_time -= 2
+			continue
 		if(ispredalien(M))
 			continue
-		to_chat(M, SPAN_DANGER("A powerful electric shock ripples through your body, freezing you in place!"))
+		to_chat(M, SPAN_DANGER("A powerful electric shock ripples through your body, overwhelming your senses!"))
 		M.apply_effect(stun_time, STUN)
 		M.apply_effect(stun_time, WEAKEN)
+		M.apply_effect(stun_time, PARALYZE)
+		var/obj/item/clothing/suit/suit = M.get_item_by_slot(WEAR_JACKET)
+		if(istype(suit, /obj/item/clothing/suit/marine))
+			var/obj/item/clothing/suit/marine/armour = suit
+			addtimer(CALLBACK(armour, TYPE_PROC_REF(/atom, turn_light), null, FALSE), 1 SECONDS)
 	FOR_DVIEW_END
 
 /datum/ammo/energy/yautja/rifle/bolt

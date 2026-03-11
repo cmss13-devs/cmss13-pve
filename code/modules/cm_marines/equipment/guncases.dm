@@ -563,6 +563,22 @@
 	if(locate(/obj/item/weapon/gun/XM99) in contents)
 		overlays += image(icon, "+xm99")
 
+/obj/item/storage/box/guncase/heavy/XM99/M99
+	name = "\improper M99A1 plasma rifle case"
+	desc = "A heavy case for storing an XM99A phased plasma pulse rifle, an experimental and deadly energy weapon system."
+	icon_state = "xm99case"
+	storage_slots = 7
+	can_hold = list(/obj/item/weapon/gun/XM99, /obj/item/attachable/scope/pve, /obj/item/ammo_magazine/plasma)
+
+/obj/item/storage/box/guncase/heavy/XM99/M99/fill_preset_inventory()
+	new /obj/item/weapon/gun/XM99/M99(src)
+	new /obj/item/attachable/scope/pve(src)
+	new /obj/item/ammo_magazine/plasma/m99(src)
+	new /obj/item/ammo_magazine/plasma/m99(src)
+	new /obj/item/ammo_magazine/plasma/m99(src)
+	new /obj/item/ammo_magazine/plasma/m99(src)
+	new /obj/item/ammo_magazine/plasma/m99(src)
+
 /obj/item/storage/box/guncase/heavy/hpr
 	name = "\improper M41AE2 heavy pulse rifle case"
 	desc = "A case storing an M41AE2 heavy pulse rifle, a heavier variant of the M41A designed for sustained automatic fire."

@@ -92,6 +92,7 @@
 	start_automatic = TRUE
 
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
+	var/list/cover_offset = list("open_x" = -2, "open_y" = 8, "closed_x" = -10, "closed_y" = 0)
 
 
 /obj/item/weapon/gun/m60/Initialize(mapload, spawn_empty)
@@ -151,9 +152,9 @@
 /obj/item/weapon/gun/m60/update_icon()
 	. = ..()
 	if(cover_open)
-		overlays += image("+[base_gun_icon]_cover_open", pixel_x = -2, pixel_y = 8)
+		overlays += image("+[base_gun_icon]_cover_open", pixel_x = cover_offset["open_x"], pixel_y = cover_offset["open_y"])
 	else
-		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = -10, pixel_y = 0)
+		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = cover_offset["closed_x"], pixel_y = cover_offset["closed_y"])
 
 /obj/item/weapon/gun/m60/able_to_fire(mob/living/user)
 	. = ..()
@@ -162,6 +163,41 @@
 			to_chat(user, SPAN_WARNING("You can't fire [src] with the feed cover open! <b>(alt-click to close)</b>"))
 			return FALSE
 
+/obj/item/weapon/gun/m60/m38
+	name = "M38 general purpose machinegun"
+	desc = "Once-standard USCM GPMG. Chambered in 12x30mm caseless, hard-hitting and extremely reliable."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m38"
+	item_state = "m38"
+	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	current_mag = /obj/item/ammo_magazine/m38
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	attachable_allowed = list(
+		/obj/item/attachable/m60barrel/m38,
+		/obj/item/attachable/bipod/m60/m38,
+		/obj/item/attachable/stock/m60/m38,
+		/obj/item/attachable/flashlight/tactical,
+	)
+	starting_attachment_types = list(/obj/item/attachable/m60barrel/m38, /obj/item/attachable/bipod/m60/m38, /obj/item/attachable/stock/m60/m38, /obj/item/attachable/flashlight/tactical)
+	cover_offset = list("open_x" = -3, "open_y" = 4, "closed_x" = 0, "closed_y" = 0)
+
+/obj/item/weapon/gun/m60/m38/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_10
+	fa_max_scatter = 3.5
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	empty_sound = 'sound/weapons/gun_empty.ogg'
+
+/obj/item/weapon/gun/m60/m38/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 36, "muzzle_y" = 20, "rail_x" = 0, "rail_y" = 0, "under_x" = 30, "under_y" = 14, "stock_x" = 8, "stock_y" = 16, "side_rail_x" = 30, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/pkp
 	name = "\improper QYJ-72 General Purpose Machine Gun"
@@ -340,6 +376,8 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/pkp/ap
+	current_mag = /obj/item/ammo_magazine/pkp/ap
 /obj/item/weapon/gun/pkp/iff/standard_fmj
 	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
 
@@ -394,7 +432,37 @@
 	var/beam_cooldown = 0
 	///Delay before another beam can start again, in tenths of seconds
 	var/beam_delay = 20
+	var/beam_color = COLOR_PURPLE
+	var/do_after_delay = 20
 
+/obj/item/weapon/gun/XM99/M99
+	name = "M99A2 phased plasma pulse rifle"
+	desc = "No longer experimental, this plasma rifle has increased ammo capacity, rate of fire and less problems with overheating."
+	current_mag = /obj/item/ammo_magazine/plasma/m99
+	fire_sound = 'sound/weapons/gun_xm99_short.ogg'
+
+/obj/item/weapon/gun/XM99/M99/set_gun_config_values()
+	..()
+	set_fire_delay(7)
+
+/obj/item/weapon/gun/XM99/laser
+	name = "RXF-M5 EVA pistol"
+	desc = "A high power focusing laser pistol designed for Extra-Vehicular Activity, though it works just about anywhere really. Derived from the same technology as laser welders. Issued by the Weyland-Yutani Corporation, but also available on the civilian market."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
+	icon_state = "rxfm5_eva"
+	item_state = "eva"
+	flags_gun_features = GUN_AMMO_COUNTER
+	muzzleflash_iconstate = "muzzle_laser"
+	muzzle_flash_color = COLOR_LASER_RED
+	fire_sound = 'sound/weapons/gun_rxf.ogg'
+	current_mag = /obj/item/ammo_magazine/laser
+	map_specific_decoration = FALSE
+	beam_color = COLOR_RED
+	do_after_delay = 0
+
+/obj/item/weapon/gun/XM99/laser/set_gun_config_values()
+	..()
+	set_fire_delay(4)
 
 // Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
 /obj/item/weapon/gun/XM99/load_into_chamber(mob/user)
@@ -441,7 +509,7 @@
 
 	else
 		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		if(do_after(do_after_delay, 20, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(plasma)
 			current_mag = plasma
 			plasma.forceMove(src)
@@ -500,7 +568,7 @@
 	if(current_mag.current_rounds <= 0)
 		return
 	plasma_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = plasma_beam_type, always_turn = TRUE)
-	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_PURPLE, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
+	animate(plasma_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = beam_color, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
 //-------------------------------------------------------

@@ -23,6 +23,7 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
 		/obj/item/attachable/compensator,
+		/obj/item/attachable/compensator/tetra,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
@@ -243,6 +244,26 @@
 	starting_attachment_types = list(/obj/item/attachable/lasersight)
 	current_mag = /obj/item/ammo_magazine/pistol/m1911/super
 
+/obj/item/weapon/gun/pistol/grizzly
+	name = "\improper Mark-V pistol"
+	desc = "Essentially an over-sized Colt 1911 chambered in .50AE, a few batches of Mark Five pistols were produced by some enterpreneurs around the colonies and marketed as supreme solution to wildlife and crime problem. At least it's not as cliche as the Desert Eagle."
+	icon_state = "grizzly"
+	item_state = "grizzly"
+	fire_sound = 'sound/weapons/gun_DE50.ogg'
+	current_mag = /obj/item/ammo_magazine/pistol/grizzly
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED
+
+/obj/item/weapon/gun/pistol/grizzly/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_5
+	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	recoil = RECOIL_AMOUNT_TIER_4
+
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
 // rebalanced - singlefire, very strong bullets but slow to fire and heavy recoil
 // redesigned - now rejected USCM sidearm model, utilized by Colonial Marshals and other stray groups.
@@ -372,6 +393,8 @@
 /obj/item/weapon/gun/pistol/np92/unloaded
 	current_mag = null
 
+/obj/item/weapon/gun/pistol/np92/suppressed/ap
+	current_mag = /obj/item/ammo_magazine/pistol/np92/ap
 //-------------------------------------------------------
 //Type 73 pistol
 //Its a TT
@@ -897,3 +920,4 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 	accuracy_mult = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+

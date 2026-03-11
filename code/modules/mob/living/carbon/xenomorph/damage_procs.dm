@@ -249,6 +249,8 @@
 /mob/living/carbon/xenomorph/proc/check_blood_splash(damage = 0, damtype = BRUTE, chancemod = 0, radius = 1)
 	if(!damage || !acid_blood_damage || world.time < acid_splash_last + acid_splash_cooldown || SSticker?.mode?.hardcore)
 		return FALSE
+	if(HAS_TRAIT(src, TRAIT_XENONID))
+		return FALSE
 	var/chance = 20 //base chance
 	if(damtype == BRUTE) chance += 5
 	chance += chancemod + (damage * 0.33)

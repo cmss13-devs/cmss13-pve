@@ -1,6 +1,35 @@
 /datum/human_ai_squad_preset/upp
 	faction = FACTION_UPP
 
+/datum/human_ai_squad_preset/upp/secsynth
+	name = "Synthetic Security, 3"
+	desc = "3 SMG-armed synthetics."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/synth/security = 3,
+	)
+
+/datum/human_ai_squad_preset/upp/secsynth/shotgun
+	name = "Synthetic Security+Shotgun"
+	desc = "2 SMG-armed synthetics, 1 shotgunner."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/synth/security = 2,
+		/datum/equipment_preset/upp/synth/security/shotgun = 1,
+	)
+
+/datum/human_ai_squad_preset/upp/secsynth/riot
+	name = "Synthetic Security Riot Control"
+	desc = "2 melee guys."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/synth/security/riot = 2,
+	)
+
+/datum/human_ai_squad_preset/upp/secsynth/unarmored
+	name = "Synthetic Security Unarmored"
+	desc = "3 pistolieros."
+	ai_to_spawn = list(
+		/datum/equipment_preset/upp/synth/security/unarmored = 3,
+	)
+
 /datum/human_ai_squad_preset/upp/militia
 	name = "Territorial Guard, Patrol"
 	desc = "Territorial Guard recon patrol armed with Type 71 rifles or KS29 pump-shotguns and carrying IFAKs containing gauze, ointment and injectors."

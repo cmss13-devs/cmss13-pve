@@ -507,6 +507,30 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
 				apply_overlay(i)
 
+		if(istype(head, /obj/item/clothing/head/helmet/marine/crysis) && istype(wear_suit, /obj/item/clothing/suit/marine/crysis))
+			var/obj/item/clothing/head/helmet/marine/crysis/marine_helmet = head
+			var/obj/item/clothing/suit/marine/crysis/marine_suit = wear_suit
+			var/image/helmet_overlay = image(marine_helmet.helmet_overlay_icon, "crysis_[marine_suit.current_mode]_overlay")
+			helmet_overlay.layer = -HEAD_SQUAD_LAYER
+			overlays_standing[HEAD_SQUAD_LAYER] = helmet_overlay
+			apply_overlay(HEAD_SQUAD_LAYER)
+
+			var/num_helmet_overlays = 0
+			for(var/i in 1 to length(marine_helmet.helmet_overlays))
+				// Add small numbers to the head garb layer so we don't have a layer conflict
+				// the i-1 bit is to make it 0-based, not 1-based like BYOND wants
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = image('icons/mob/humans/onmob/helmet_garb.dmi', src, marine_helmet.helmet_overlays[i])
+				num_helmet_overlays++
+
+			// null out the rest of the space allocated for helmet overlays
+			// God I hate 1-based indexing
+			for(var/i in num_helmet_overlays+1 to MAX_HEAD_GARB_ITEMS)
+				overlays_standing[HEAD_GARB_LAYER + (i-1)] = null
+
+			for(var/i in HEAD_GARB_LAYER to (HEAD_GARB_LAYER + MAX_HEAD_GARB_ITEMS - 1))
+				apply_overlay(i)
+
+
 #undef MAX_HEAD_GARB_ITEMS
 
 
@@ -581,6 +605,27 @@ Applied by gun suicide and high impact bullet executions, removed by rejuvenate,
 					squad_overlay.color = assigned_squad.equipment_color
 					overlays_standing[SUIT_SQUAD_LAYER] = squad_overlay
 					apply_overlay(SUIT_SQUAD_LAYER)
+
+			if(length(marine_armor.armor_overlays))
+				var/image/K
+				var/image/IMG
+				for(var/i in marine_armor.armor_overlays)
+					K = marine_armor.armor_overlays[i]
+					if(K)
+						if(!IMG)
+							IMG = image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+						else
+							IMG.overlays += image(K.icon,src,K.icon_state, "layer"= -SUIT_GARB_LAYER)
+				if(IMG)
+					overlays_standing[SUIT_GARB_LAYER] = IMG
+					apply_overlay(SUIT_GARB_LAYER)
+
+		if(istype(wear_suit, /obj/item/clothing/suit/marine/crysis))
+			var/obj/item/clothing/suit/marine/crysis/marine_armor = wear_suit
+			var/image/squad_overlay = image(marine_armor.squad_overlay_icon, icon_state = "crysis_[marine_armor.current_mode]_overlay")
+			squad_overlay.layer = -SUIT_SQUAD_LAYER
+			overlays_standing[SUIT_SQUAD_LAYER] = squad_overlay
+			apply_overlay(SUIT_SQUAD_LAYER)
 
 			if(length(marine_armor.armor_overlays))
 				var/image/K

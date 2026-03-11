@@ -79,6 +79,14 @@
 	gun_type = /obj/item/weapon/gun/pistol/m1911/socom/officer
 	ammo_band_color = AMMO_BAND_COLOR_HIGH_IMPACT
 
+/obj/item/ammo_magazine/pistol/grizzly
+	name = "\improper modified M1911 magazine (.50AE)"
+	default_ammo = /datum/ammo/bullet/pistol/deagle
+	caliber = ".50"
+	icon_state = "grizzly"//rename later
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/pistol/grizzly
+
 //-------------------------------------------------------
 //vp70 based off VP70
 
@@ -249,6 +257,9 @@
 	icon_state = "npz92tranqmag"
 	max_rounds = 12
 
+/obj/item/ammo_magazine/pistol/np92/ap
+	name = "\improper NP92 armor-piercing magazine (9x18mm Makarov)"
+	default_ammo = /datum/ammo/bullet/pistol/ap
 //-------------------------------------------------------
 //Type 73 pistol. //A TT
 

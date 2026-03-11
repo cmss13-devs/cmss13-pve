@@ -317,6 +317,7 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/attached_gun/grenade/mk1,
 		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/tracer,
 		/obj/item/attachable/sling,
 	)
 
@@ -515,7 +516,7 @@
 	item_state = "m20a"
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
-	fire_sound = "gun_oldpulse"
+	fire_sound = "gun_pulse"
 	current_mag = /obj/item/ammo_magazine/rifle/m20a
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
@@ -528,6 +529,8 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/m20a,
 		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/flashlight/m20a,
+		/obj/item/attachable/attached_gun/grenade/m20a,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -537,11 +540,11 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16, "special_x" = 16, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
@@ -549,13 +552,29 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 	damage_falloff_mult = 0
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 
 /obj/item/weapon/gun/rifle/m20a/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
+
+/obj/item/weapon/gun/rifle/m20a/old
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 20mm grenade launcher and an integrated flashlight."
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/old/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attached_gun/grenade/m20a/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.hidden = TRUE
+	S.Attach(src)
+	var/obj/item/attachable/flashlight/m20a/flashlight = new(src)
+	flashlight.flags_attach_features &= ~ATTACH_REMOVABLE
+	flashlight.Attach(src)
+	update_attachable(flashlight.slot)
 
 /obj/item/weapon/gun/rifle/m20a/merc
 	name = "\improper M20CW pulse carbine"
@@ -1267,6 +1286,8 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
+		/obj/item/attachable/stock/wisefire,
+		/obj/item/attachable/wisefire,
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/bipod/integral,
@@ -1345,15 +1366,16 @@
 	..()
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2//equal to m41a dmg
 
-/obj/item/weapon/gun/rifle/lmg/recon
-	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units, while sporting a vertical grip in place of an integrated bipod."
-	icon_state = "m41ae2_recon"
-	item_state = "m41ae2_recon"
+
+/obj/item/weapon/gun/rifle/lmg/guard
+	desc = "Heavy barreled higher capacity variant of the M41A. This one has been modified with aftermarket parts in order to install a rudimentary IFF-system."
+	starting_attachment_types = list(/obj/item/attachable/bipod/integral, /obj/item/attachable/stock/wisefire,/obj/item/attachable/wisefire)
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
+		/obj/item/attachable/bipod/integral,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/heavy_barrel,
@@ -1362,6 +1384,35 @@
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/sling,
+		/obj/item/attachable/stock/wisefire,
+		/obj/item/attachable/wisefire,
+	)
+
+/obj/item/weapon/gun/rifle/lmg/guard/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 10, "rail_y" = 23, "under_x" = 26, "under_y" = 16, "stock_x" = 27, "stock_y" = 10, "side_rail_x" = 24, "side_rail_y" = 16)
+
+
+/obj/item/weapon/gun/rifle/lmg/recon
+	desc = "Heavy barreled higher capacity variant of the M41A. Greater sustained firepower and total ammunition carried, offset by removal of the grenade launcher and worsened handling. This one is painted in a fresh coat of the newer Humbrol 76 camouflage and is used by Force Reconnaissance units, while sporting a vertical grip in place of an integrated bipod."
+	icon_state = "m41ae2_recon"
+	item_state = "m41ae2_recon"
+
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/bipod/integral,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/scope/pve,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/stock/wisefire,
+		/obj/item/attachable/wisefire,
 	)
 	starting_attachment_types = list(
 		/obj/item/attachable/stock/rifle/collapsible,
@@ -1447,7 +1498,7 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/type71/carbine
-	name = "\improper Type 71 'Commando' pulse rifle"
+	name = "\improper Type 71C pulse rifle"
 	desc = "A much rarer variant of the Type 71, this version contains an integrated suppressor, integrated scope, and extensive fine-tuning. Many parts have been replaced, filed down, and improved upon. As a result, this variant is rarely seen outside of commando units."
 	icon_state = "type73"
 	item_state = "type73"
@@ -1460,13 +1511,23 @@
 	attachable_allowed = list(
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/verticalgrip/upp,
+		/obj/item/attachable/scope/mini/upp,
 	)
 	random_spawn_chance = 0
 	random_spawn_rail = list()
 	random_spawn_muzzle = list()
 	bonus_overlay_x = 1
 	bonus_overlay_y = 0
-	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/type73suppressor, /obj/item/attachable/scope/mini/upp)
+	starting_attachment_types = list(/obj/item/attachable/type73suppressor)
+
+
+/obj/item/weapon/gun/rifle/type71/carbine/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/scope/mini/upp/scope = new(src)
+	scope.flags_attach_features &= ~ATTACH_REMOVABLE
+	scope.hidden = TRUE
+	scope.Attach(src)
+	update_attachable(scope.slot)
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_config_values()
 	..()
@@ -1481,6 +1542,10 @@
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 22, "under_x" = 23, "under_y" = 14, "stock_x" = 21, "stock_y" = 18, "side_rail_x" = 24, "side_rail_y" = 17)
+
+
+/obj/item/weapon/gun/rifle/type71/carbine/ap
+	current_mag = /obj/item/ammo_magazine/rifle/type71/ap
 
 /obj/item/weapon/gun/rifle/lw317
 	name = "\improper LW-317 pulse carbine"
@@ -1560,6 +1625,7 @@
 	scope.Attach(src)
 	update_attachable(scope.slot)
 
+
 	//-------------------------------------------------------
 
 //M49A Battle Rifle, standard USCM DMR
@@ -1588,6 +1654,7 @@
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/army,
+		/obj/item/attachable/scope/mini/cag,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/sling,
@@ -1735,17 +1802,60 @@
 	current_mag = null
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
+/obj/item/weapon/gun/rifle/m49a/cag
+	name = "M49A2 advanced battle rifle"
+	icon = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_obj.dmi'
+	desc = "M49A2 ABR was developed after a study conducted by UAAC-SOG during the Dog Wars, not long after the initial introduction of M49A as the designated marksman's rifle. Mostly issued to special forces, A2 version features improved internal components and lethal two-shot hyperburst mechanism, ensuring whatever you were aiming at definetely dies."
+	icon_state = "m49a_custom"
+	item_state = "m49a_custom"
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/heap
+	starting_attachment_types = list(/obj/item/attachable/scope/mini/cag, /obj/item/attachable/suppressor)
+
+/obj/item/weapon/gun/rifle/m49a/cag/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/m49a_barrel_custom/integrated = new(src)
+	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
+	if(old_barrel)
+		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
+		qdel(old_barrel)
+	integrated.Attach(src)
+	update_attachable(integrated.slot)
+
+
+/obj/item/weapon/gun/rifle/m49a/cag/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	recoil = RECOIL_AMOUNT_TIER_5
+	damage_falloff_mult = 0
+
+	item_icons = list(
+		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand.dmi',
+		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand.dmi',
+		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/jungle/back.dmi'
+	)
+
+/obj/item/weapon/gun/rifle/m49a/cag/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 21, "under_x" = 30, "under_y" = 11, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 31, "side_rail_y" = 18, "special_x" = 37, "special_y" = 16)
+
+
 //-------------------------------------------------------
 
 //L42A Battle Rifle
 
 /obj/item/weapon/gun/rifle/l42a
-	name = "\improper L42A pulse rifle"
-	desc = "The L42A pulse rifle, despite its age, remains a common 'sporting' rifle among UA citizens and a reliable alternative to more contemporary rifles for many mercenaries."
+	name = "\improper XM24A pulse rifle"
+	desc = "XM24A was developed by Lindenthal-Ehrenfeld Militärindustrie under the designation of L42. It is currently undergoing field-testing in the USCMC as a marskman rifle replacement."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "l42mk1"
 	item_state = "l42mk1"
-	fire_sound = 'sound/weapons/gun_m39.ogg'
+	fire_sound = 'sound/weapons/gun_carbine.ogg'
 	reload_sound = 'sound/weapons/handling/l42_reload.ogg'
 	unload_sound = 'sound/weapons/handling/l42_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/l42a
@@ -1792,6 +1902,10 @@
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
 
+/obj/item/weapon/gun/rifle/l42a/marine
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine, /obj/item/attachable/scope/mini)
+	map_specific_decoration = FALSE
+
 //-------------------------------------------------------
 //-------------------------------------------------------
 //ABR-40 hunting rifle
@@ -1832,10 +1946,10 @@
 // Identical to the L42 in stats, *except* for extra recoil and scatter that are nulled by keeping the stock on.
 /obj/item/weapon/gun/rifle/l42a/abr40/set_gun_config_values()
 	..()
+	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
 	accuracy_mult = (BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5) - HIT_ACCURACY_MULT_TIER_10
 	recoil = RECOIL_AMOUNT_TIER_4
 	scatter = (SCATTER_AMOUNT_TIER_8) + SCATTER_AMOUNT_TIER_5
-
 
 /obj/item/weapon/gun/rifle/l42a/abr40/tactical
 	desc = "The civilian version of the L42A battle rifle that is often wielded by Marines. Almost identical and even cross-compatible with L42 magazines, just don't take the stock off. This rifle seems to have unique tacticool blue-black furniture alongside some miscellaneous aftermarket modding."
@@ -2065,3 +2179,32 @@
 
 /obj/item/weapon/gun/rifle/isr/modded
 	starting_attachment_types = list(/obj/item/attachable/stock/isr, /obj/item/attachable/isr_barrel, /obj/item/attachable/flashlight, /obj/item/attachable/reddot)
+
+/obj/item/weapon/gun/rifle/type51
+	name = "\improper Type 51 pulse rifle"
+	desc = "An aging UPP caseless pulse rifle, lacking many features of contemporary alternatives. Chambered in 10x27mm."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon_state = "type51"
+	item_state = "type51"
+	fire_sound = 'sound/weapons/gun_type71.ogg'
+	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
+	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
+	current_mag = /obj/item/ammo_magazine/rifle/type51
+	attachable_allowed = list()
+
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/type51/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 22, "under_x" = 21, "under_y" = 14, "stock_x" = 22, "stock_y" = 14)
+
+/obj/item/weapon/gun/rifle/type51/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_burst_amount(BURST_AMOUNT_TIER_2)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_4
