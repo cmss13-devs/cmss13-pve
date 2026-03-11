@@ -19,7 +19,7 @@ jobs:
         id: check_commits
         run: |
           unset COMMITS_FOUND
-          if [[ `git log --since "10 seconds ago" --oneline -n 1` ]]; then COMMITS_FOUND=true; fi
+          if [[ `git log --since "8 days ago" --oneline -n 1` ]]; then COMMITS_FOUND=true; fi
           echo "WORK_NEEDED=$COMMITS_FOUND" >> $GITHUB_OUTPUT
       - name: Find Maps
         id: map_finder
