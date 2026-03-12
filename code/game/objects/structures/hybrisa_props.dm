@@ -2801,11 +2801,11 @@
 
 // Car Factory
 
-/obj/structure/prop/hybrisa/Factory
+/obj/structure/prop/hybrisa/factory
 	icon = 'icons/obj/structures/props/industrial/factory.dmi'
 	icon_state = "factory_roboticarm"
 
-/obj/structure/prop/hybrisa/Factory/Robotic_arm
+/obj/structure/prop/hybrisa/factory/robotic_arm
 	name = "robotic arm"
 	desc = "A robotic arm used in the construction of 'Meridian' Automobiles."
 	icon_state = "factory_roboticarm"
@@ -2813,14 +2813,15 @@
 	bound_height = 32
 	anchored = TRUE
 
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped
 	icon_state = "factory_roboticarm2"
 
-/obj/structure/prop/hybrisa/Factory/Conveyor_belt
+/obj/structure/prop/hybrisa/factory/conveyor_belt
 	name = "large conveyor belt"
 	desc = "A large conveyor belt used in industrial factories."
 	icon_state = "factory_conveyer"
 	density = FALSE
+	health = 25
 
 // Hybrisa Lattice
 /obj/structure/roof/hybrisa/lattice_prop

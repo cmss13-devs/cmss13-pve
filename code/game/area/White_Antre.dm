@@ -35,6 +35,9 @@
 	minimap_color = MINIMAP_AREA_OOB
 	requires_power = FALSE
 
+/area/white_antre/oob/outdoors
+	ceiling = CEILING_NO_PROTECTION
+
 // Landing Zone
 
 /area/white_antre/landing_zone

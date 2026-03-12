@@ -13394,18 +13394,18 @@
 /turf/open/floor/plating/catwalk/rusted,
 /area/navalis/oob/powered)
 "aNB" = (
-/obj/effect/landmark/lv624/fog_blocker/infinite,
+/obj/structure/blocker/fog,
 /obj/structure/barricade/handrail/strata/navalis{
 	dir = 4
 	},
 /turf/open/gm/river/no_overlay/ocean_no_slowdown,
 /area/navalis/oob/powered)
 "aNC" = (
-/obj/effect/landmark/lv624/fog_blocker/infinite,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/no_overlay/ocean,
 /area/navalis/oob/powered)
 "aND" = (
-/obj/effect/landmark/lv624/fog_blocker/infinite,
+/obj/structure/blocker/fog,
 /obj/structure/barricade/handrail/strata/navalis{
 	dir = 8
 	},
@@ -21332,7 +21332,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 8;
 	pixel_y = 2;
 	pixel_x = 5;
@@ -27211,7 +27211,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	level = 5;
 	pixel_x = -15;
 	desc = "A robotic arm used to assist in operating and repairing the internal mining equipment."
@@ -36563,7 +36563,7 @@
 /turf/open/floor/half_plate/green/north,
 /area/navalis/outdoors/landing_zone_1)
 "wIw" = (
-/obj/effect/landmark/lv624/fog_blocker/infinite,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/no_overlay/ocean,
 /area/navalis/oob/water/far)
 "wJv" = (

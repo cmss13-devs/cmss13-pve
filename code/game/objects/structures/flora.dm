@@ -495,6 +495,11 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	icon_tag = "brflowers"
 	layer = BELOW_MOB_LAYER
 
+/obj/structure/flora/bush/ausbushes/var3/ppflowers
+	icon_state = "ppflowers_1"
+	icon_tag = "ppflowers"
+	layer = BELOW_MOB_LAYER
+
 /obj/structure/flora/bush/ausbushes/var3/sparsegrass
 	icon_state = "sparsegrass_1"
 	icon_tag = "sparsegrass"

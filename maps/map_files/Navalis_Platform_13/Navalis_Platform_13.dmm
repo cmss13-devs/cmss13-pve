@@ -27855,7 +27855,7 @@
 /turf/open/floor/roof_weedable,
 /area/navalis/outdoors/exterior/com_ext/upper)
 "fEv" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	dir = 8;
 	layer = 4.2;
 	pixel_y = 5;
@@ -28180,7 +28180,7 @@
 	icon_state = "E";
 	pixel_x = 2
 	},
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 8;
 	pixel_y = 2;
 	pixel_x = 5;
@@ -39710,7 +39710,7 @@
 	icon_state = "W";
 	pixel_x = -1
 	},
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	level = 5;
 	pixel_x = -15;
 	desc = "A robotic arm used to assist in operating and repairing the internal mining equipment."
@@ -43879,7 +43879,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/navalis/outdoors/exterior/log_ext/upper)
 "pjV" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	dir = 4;
 	layer = 4.2;
 	pixel_y = 6;
@@ -49620,7 +49620,7 @@
 /turf/closed/wall/hybrisa/colony,
 /area/navalis/indoors/industrial/refinery)
 "swC" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	dir = 8;
 	pixel_y = 3;
 	pixel_x = -7;
@@ -49873,7 +49873,7 @@
 /turf/open/floor/prison/bluefull/west,
 /area/navalis/indoors/logistic/workshop)
 "sED" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm/Flipped{
+/obj/structure/prop/hybrisa/factory/robotic_arm/flipped{
 	pixel_y = 5;
 	pixel_x = -24
 	},
@@ -55113,7 +55113,7 @@
 /turf/open/hybrisa/street/cement3,
 /area/navalis/indoors/logistic/lower_deck/port)
 "vym" = (
-/obj/structure/prop/hybrisa/Factory/Robotic_arm{
+/obj/structure/prop/hybrisa/factory/robotic_arm{
 	layer = 4.2;
 	pixel_y = 5;
 	level = 5;
@@ -57278,7 +57278,7 @@
 /turf/open/floor/corsat/marked,
 /area/navalis/indoors/command/upper_deck/starboard)
 "wIw" = (
-/obj/effect/landmark/lv624/fog_blocker/infinite,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/no_overlay/ocean,
 /area/navalis/oob/water/far)
 "wIx" = (
