@@ -238,7 +238,7 @@
 /turf/open/floor/prison/darkbrown2/east,
 /area/tyrargo/indoors/sewer_treatment/upper)
 "aaJ" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "aaK" = (
@@ -964,8 +964,8 @@
 /turf/open/hybrisa/street/asphalt,
 /area/tyrargo/indoors/museum_storage/upper)
 "acS" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/colony_streets/north_east)
 "acT" = (
@@ -1145,12 +1145,12 @@
 /turf/open/floor/plating/wood,
 /area/tyrargo/landing_zone_1/ceiling)
 "ads" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "adt" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "adu" = (
@@ -1239,8 +1239,8 @@
 /turf/closed/wall/rock,
 /area/tyrargo/oob/outdoors)
 "adD" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "adE" = (
@@ -2031,7 +2031,7 @@
 /area/tyrargo/outdoors/colony_exterior/south_east)
 "afS" = (
 /obj/structure/blocker/invisible_wall/water,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/desert/deep/no_slowdown,
 /area/tyrargo/oob/outdoors)
 "afT" = (
@@ -2073,7 +2073,7 @@
 /area/tyrargo/outdoors/outskirts_road/central)
 "afX" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 1
 	},
@@ -2546,7 +2546,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 4;
@@ -2594,7 +2594,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 1
@@ -4206,7 +4206,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -5745,7 +5745,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -6522,7 +6522,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/prop{
 	desc = "A primary armament cannon magazine";
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi';
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi';
 	icon_state = "ltbcannon_0";
 	name = "LTB Cannon Magazine";
 	pixel_x = 16;
@@ -6538,7 +6538,7 @@
 	},
 /obj/item/prop{
 	desc = "A primary armament cannon magazine";
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi';
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi';
 	icon_state = "ltbcannon_0";
 	name = "LTB Cannon Magazine";
 	pixel_x = 9;
@@ -6927,7 +6927,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/oob/outdoors)
 "arT" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/prop/rock{
 	density = 0;
 	pixel_x = 2;
@@ -6936,7 +6936,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "arU" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/platform_decoration/stone/kutjevo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
@@ -6947,7 +6947,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "arW" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0;
 	dir = 1;
@@ -7325,7 +7325,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 4;
@@ -7514,7 +7514,7 @@
 /turf/open/floor/almayer_hull,
 /area/tyrargo/indoors/sewer_treatment/ground)
 "att" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/cement2,
 /area/tyrargo/oob/outdoors)
 "atu" = (
@@ -7527,7 +7527,7 @@
 /turf/open/floor/almayer_hull,
 /area/tyrargo/indoors/bar/upper/external)
 "atv" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/oob/outdoors)
 "atw" = (
@@ -7565,7 +7565,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -7768,7 +7768,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 3;
@@ -8096,8 +8096,8 @@
 /area/tyrargo/oob/outdoors)
 "auz" = (
 /obj/effect/decal/hybrisa/road/lines3,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/prop/rock{
 	density = 0;
 	dir = 1;
@@ -8130,11 +8130,11 @@
 /turf/open/asphalt,
 /area/tyrargo/outdoors/colony_streets/north_west)
 "auC" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/colony_streets/north_east)
 "auD" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/prop/rock{
 	density = 0;
 	pixel_x = 2;
@@ -8191,7 +8191,7 @@
 /turf/open/asphalt,
 /area/tyrargo/outdoors/colony_streets/north)
 "auI" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0;
 	pixel_x = 2;
@@ -8208,7 +8208,7 @@
 /area/tyrargo/outdoors/colony_streets/east)
 "auK" = (
 /obj/structure/blocker/invisible_wall,
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "auL" = (
@@ -8994,7 +8994,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -14008,12 +14008,12 @@
 /turf/open/hybrisa/street/asphalt,
 /area/tyrargo/indoors/museum_storage/ground)
 "aJy" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/fsb_south)
 "aJz" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/fsb_south)
@@ -15265,7 +15265,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 1
 	},
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/floor/almayer_hull,
 /area/tyrargo/landing_zone_2/east_trench)
@@ -15515,7 +15515,7 @@
 	icon_state = "fullgrass_1";
 	layer = 2.9
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk/west,
 /area/tyrargo/oob/outdoors)
 "aMY" = (
@@ -15748,7 +15748,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -15878,9 +15878,9 @@
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/tyrargo/outdoors/outskirts/central)
 "aNH" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "aNI" = (
@@ -15914,8 +15914,8 @@
 	density = 0;
 	icon_state = "brown_alt"
 	},
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/hybrisa/misc/fire/fire2{
 	pixel_x = -32;
 	pixel_y = 5
@@ -16317,13 +16317,13 @@
 /turf/open/floor/interior/wood/alt,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "aOA" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "aOB" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "aOC" = (
@@ -17182,7 +17182,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -17671,9 +17671,9 @@
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/tyrargo/outdoors/outskirts/east)
 "aRk" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "aRl" = (
@@ -18450,7 +18450,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts_road/east)
 "aSY" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/east)
@@ -18485,7 +18485,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/landing_zone_2)
 "aTg" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/fsb_north)
@@ -18848,7 +18848,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 6;
@@ -19195,7 +19195,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -19435,7 +19435,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/west)
 "aUC" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
@@ -19509,9 +19509,9 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "aUL" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/west)
 "aUM" = (
@@ -19550,8 +19550,8 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "aUR" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
@@ -21379,7 +21379,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_1)
 "aYc" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/central)
 "aYd" = (
@@ -23862,9 +23862,9 @@
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/tyrargo/outdoors/outskirts/central)
 "bcG" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -23875,9 +23875,9 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bcH" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bcI" = (
@@ -25240,19 +25240,19 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_2/east_trench)
 "bfq" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/landing_zone_2/east_trench)
 "bfr" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/landing_zone_2/east_trench)
 "bfs" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/landing_zone_2/east_trench)
@@ -25282,12 +25282,12 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_2)
 "bfv" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/landing_zone_2/east_trench)
 "bfw" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/landing_zone_2/east_trench)
@@ -25379,7 +25379,7 @@
 /obj/structure/stairs/multiz/down{
 	dir = 1
 	},
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/floor/almayer_hull,
 /area/tyrargo/landing_zone_2/east_trench)
@@ -25627,7 +25627,7 @@
 /area/tyrargo/landing_zone_2/ceiling)
 "bgm" = (
 /obj/structure/platform_decoration/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "bgn" = (
@@ -25680,7 +25680,7 @@
 /area/tyrargo/landing_zone_2)
 "bgt" = (
 /obj/effect/decal/cleanable/blood/xeno,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "bgu" = (
@@ -25709,9 +25709,9 @@
 /turf/open/floor/prison/cell_stripe,
 /area/tyrargo/landing_zone_2/ceiling)
 "bgw" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -26059,8 +26059,8 @@
 	density = 0;
 	icon_state = "brown_alt"
 	},
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/hybrisa/misc/fire/fire2{
 	pixel_x = -32
 	},
@@ -26122,7 +26122,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.03;
 	name = "M56D heavy machine gun nest";
@@ -26488,9 +26488,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "bic" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
@@ -26565,13 +26565,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "bik" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "bil" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
@@ -27018,7 +27018,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -27080,9 +27080,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts/north_east_usasf)
 "bju" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2/road)
@@ -27112,12 +27112,12 @@
 /area/tyrargo/landing_zone_2)
 "bjy" = (
 /obj/item/stack/barbed_wire,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2/road)
 "bjz" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -27158,14 +27158,14 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/landing_zone_2/east_trench)
 "bjE" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/effect/spawner/gibspawner/xeno,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2/road)
 "bjF" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2/road)
@@ -27908,7 +27908,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -28030,8 +28030,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/central)
 "blw" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
@@ -28117,8 +28117,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts_road/central)
 "blD" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -28501,7 +28501,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -28533,7 +28533,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -29975,10 +29975,10 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "bph" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/spawner/gibspawner/xeno,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
@@ -30479,7 +30479,7 @@
 /turf/open/asphalt/cement/cement12,
 /area/tyrargo/outdoors/colony_streets/north_west)
 "bqa" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/decal/cleanable/blood/xeno,
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
@@ -30489,9 +30489,9 @@
 /obj/effect/decal/hybrisa/bloodtrail{
 	dir = 4
 	},
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bqc" = (
@@ -30543,8 +30543,8 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts_road/west)
 "bqg" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0;
 	pixel_x = 6;
@@ -30553,7 +30553,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bqh" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/platform_decoration/stone/kutjevo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
@@ -30561,15 +30561,15 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
 	pixel_x = 1;
 	pixel_y = 1
 	},
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bqj" = (
@@ -30582,9 +30582,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts/central)
 "bqk" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
@@ -31356,7 +31356,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -31399,7 +31399,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -31445,7 +31445,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -31524,7 +31524,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -31992,8 +31992,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "btC" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "btD" = (
@@ -32047,14 +32047,14 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "btG" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "btH" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "btI" = (
@@ -32178,9 +32178,9 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/oob/outdoors)
 "bua" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "bub" = (
@@ -32288,7 +32288,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "buu" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "buv" = (
@@ -32305,7 +32305,7 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "buy" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "buz" = (
@@ -32823,9 +32823,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_2)
 "bvV" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2/road)
 "bvW" = (
@@ -33255,9 +33255,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/landing_zone_2)
 "bwY" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
@@ -33345,22 +33345,22 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/landing_zone_2)
 "bxn" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
 "bxo" = (
 /obj/structure/platform_decoration/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
 "bxp" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
 "bxq" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
 "bxr" = (
@@ -33404,7 +33404,7 @@
 /area/tyrargo/landing_zone_2)
 "bxy" = (
 /obj/effect/decal/cleanable/blood/xeno,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_2)
 "bxz" = (
@@ -33485,22 +33485,22 @@
 /turf/open/hybrisa/street/asphalt,
 /area/tyrargo/indoors/museum_storage/upper)
 "bxN" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "bxO" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "bxP" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/effect/spawner/gibspawner/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "bxQ" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "bxR" = (
@@ -33614,9 +33614,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/north_west_usasf)
 "byj" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -34633,8 +34633,8 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAs" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAt" = (
@@ -34771,16 +34771,16 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAI" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAJ" = (
 /turf/closed/wall/rock/brown,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAK" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAL" = (
@@ -34835,13 +34835,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAS" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAT" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bAU" = (
@@ -37795,9 +37795,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/east)
 "bHT" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/east)
 "bHU" = (
@@ -37869,9 +37869,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts_road/east)
 "bIf" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "bIg" = (
@@ -37934,9 +37934,9 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts_road/west)
 "bIl" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
@@ -38008,9 +38008,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bIz" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bIA" = (
@@ -38092,7 +38092,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts_road/central)
 "bIP" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/platform_decoration/stone/kutjevo/east,
 /obj/structure/prop/rock,
 /turf/open/auto_turf/sand_white/layer0,
@@ -38281,8 +38281,8 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts_road/east)
 "bJk" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/east)
@@ -38554,12 +38554,12 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/landing_zone_1)
 "bJQ" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bJR" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bJS" = (
@@ -38656,9 +38656,9 @@
 /turf/closed/wall/rock/brown,
 /area/tyrargo/landing_zone_1)
 "bKg" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bKh" = (
@@ -38731,8 +38731,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_1)
 "bKm" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bKn" = (
@@ -38792,12 +38792,12 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_1)
 "bKw" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bKx" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/landing_zone_1)
 "bKy" = (
@@ -38939,7 +38939,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/outskirts/east)
 "bKS" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/fsb_north)
@@ -39400,8 +39400,8 @@
 /turf/open/floor/interior/wood,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "bMm" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "bMn" = (
@@ -39429,13 +39429,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "bMs" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "bMt" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "bMu" = (
@@ -39529,8 +39529,8 @@
 /turf/open/floor/interior/wood,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "bMH" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/east)
 "bMI" = (
@@ -39629,7 +39629,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -39754,12 +39754,12 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/underground/bunker/ammo_dump_connection)
 "bNq" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNr" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNs" = (
@@ -39829,8 +39829,8 @@
 /turf/closed/wall/rock/brown,
 /area/tyrargo/outdoors/outskirts/central)
 "bND" = (
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNE" = (
@@ -39902,13 +39902,13 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_1)
 "bNM" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNN" = (
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNO" = (
@@ -39938,17 +39938,17 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/landing_zone_1)
 "bNT" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNU" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNV" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bNW" = (
@@ -40927,8 +40927,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/central)
 "bQr" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bQs" = (
@@ -41053,9 +41053,9 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/central)
 "bQI" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "bQJ" = (
@@ -47273,7 +47273,7 @@
 	pixel_x = -4;
 	pixel_y = 22
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/floor/prison/floor_plate,
 /area/tyrargo/oob)
 "cjr" = (
@@ -48860,8 +48860,8 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/outskirts/east)
 "coJ" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/east)
@@ -48990,7 +48990,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/tyrargo/outdoors/colony_streets/north_west)
 "cpg" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/east)
@@ -49019,7 +49019,7 @@
 /turf/open/hybrisa/street/cement3,
 /area/tyrargo/indoors/museum_storage/ground)
 "cpn" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts/east)
@@ -49040,7 +49040,7 @@
 /turf/open/asphalt/cement/cement3,
 /area/tyrargo/outdoors/colony_streets/north)
 "cps" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/tyrargo/oob/outdoors)
@@ -49238,7 +49238,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/east)
 "cpX" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/east)
@@ -49372,7 +49372,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts_road/east)
 "cqt" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/snow/brown_base/layer1,
 /area/tyrargo/oob/outdoors)
@@ -49567,13 +49567,13 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/tyrargo/outdoors/colony_streets/north_east)
 "crf" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/east)
 "crg" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/east)
@@ -49953,13 +49953,13 @@
 /turf/open/hybrisa/street/sidewalk,
 /area/tyrargo/outdoors/colony_streets/north_east)
 "csm" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/colony_streets/north_east)
 "csn" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
@@ -50674,7 +50674,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/colony_exterior/north_east)
 "cuV" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "cuW" = (
@@ -51818,7 +51818,7 @@
 /turf/open/floor/corsat/marked,
 /area/tyrargo/outdoors/colony_exterior/north_east)
 "czc" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
@@ -52098,7 +52098,7 @@
 	desc = "Empty and useless now.";
 	dir = 1;
 	icon = 'icons/obj/items/casings.dmi';
-	icon_state = "shell_10_1";
+	icon_state = "redshell_10_1";
 	name = "spent casings"
 	},
 /obj/item/weapon/gun/shotgun/pump,
@@ -52524,7 +52524,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -52648,8 +52648,8 @@
 /turf/open/floor/hybrisa/wood/darkerwood,
 /area/tyrargo/indoors/apartment/south_upper)
 "cCI" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/east)
@@ -54306,7 +54306,7 @@
 /turf/open/floor/wood,
 /area/tyrargo/indoors/bar/ground)
 "cJc" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/auto_turf/strata_grass,
@@ -54361,7 +54361,7 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/army_staging)
 "cJi" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/prop/tyrargo/illuminator{
 	icon_state = "floodlight-on";
@@ -54467,7 +54467,7 @@
 /turf/open/gm/river/desert/shallow_edge/southeast,
 /area/tyrargo/outdoors/outskirts/river)
 "cJu" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/tyrargo/outdoors/army_staging)
 "cJv" = (
@@ -54772,7 +54772,7 @@
 /area/tyrargo/oob)
 "cJP" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "cJQ" = (
@@ -54943,11 +54943,11 @@
 /area/tyrargo/outdoors/army_staging)
 "cKp" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/oob)
 "cKq" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/oob)
 "cKr" = (
@@ -55056,7 +55056,7 @@
 /turf/open/floor/interior/wood,
 /area/tyrargo/landing_zone_2/east_trench)
 "cKE" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk/west,
 /area/tyrargo/oob/outdoors)
 "cKF" = (
@@ -55203,7 +55203,7 @@
 /area/tyrargo/outdoors/army_staging)
 "cKV" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/army_staging)
@@ -55630,11 +55630,11 @@
 	pixel_x = -7;
 	pixel_y = 16
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/tyrargo/oob/outdoors)
 "cMh" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/brown_base/layer2,
 /area/tyrargo/oob/outdoors)
 "cMi" = (
@@ -55653,7 +55653,7 @@
 	pixel_x = -6;
 	pixel_y = 6
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/tyrargo/oob/outdoors)
 "cMj" = (
@@ -55662,14 +55662,14 @@
 	pixel_x = 7;
 	pixel_y = 5
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "cMk" = (
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 1
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "cMl" = (
@@ -55677,11 +55677,11 @@
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 4
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "cMm" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/snow/brown_base/layer3,
 /area/tyrargo/oob/outdoors)
 "cMn" = (
@@ -56558,7 +56558,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -56763,7 +56763,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -57010,7 +57010,7 @@
 /turf/open/floor/prison/darkyellowcorners2/north,
 /area/tyrargo/indoors/mall)
 "cQm" = (
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/platform_decoration/stone/kutjevo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
@@ -57528,17 +57528,17 @@
 /area/tyrargo/outdoors/army_staging)
 "cSb" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/outdoors/army_staging)
 "cSc" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/outdoors/outskirts_road/central)
 "cSd" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/closed/wall/r_wall/bunker/floodgate{
 	desc = "A huge chunk of reinforced metal used to separate rooms. This one appears to be specially reinforced.";
 	name = "bunker superdense wall"
@@ -58770,7 +58770,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -58847,12 +58847,12 @@
 /area/tyrargo/outdoors/colony_exterior/north_west)
 "cVH" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/landing_zone_1/no_mans_land)
 "cVI" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/landing_zone_1/west_trench)
 "cVJ" = (
@@ -59562,7 +59562,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -60098,11 +60098,11 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts/east)
 "cYQ" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/floor/prison/floor_plate,
 /area/tyrargo/oob)
 "cYR" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/gm/river/desert/tyrargo/deep/no_slowdown,
 /area/tyrargo/oob)
 "cYS" = (
@@ -61387,7 +61387,7 @@
 /turf/open/floor/interior/wood,
 /area/tyrargo/outdoors/outskirts/fsb_north)
 "dcf" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/tyrargo/oob)
 "dcg" = (
@@ -62172,7 +62172,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "ded" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 1
 	},
@@ -62193,11 +62193,11 @@
 /area/tyrargo/oob/outdoors)
 "def" = (
 /obj/effect/decal/grass_overlay/grass1/dark,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "deg" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/effect/decal/grass_overlay/grass1/dark,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
@@ -62212,7 +62212,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/oob/outdoors)
 "dei" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 1
 	},
@@ -62310,11 +62310,11 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/army_staging)
 "dep" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob)
 "deq" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 8
 	},
@@ -62375,7 +62375,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/outdoors/army_staging)
 "dey" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/blocker/invisible_wall,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 8
@@ -62476,7 +62476,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -62969,7 +62969,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -63462,7 +63462,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -63805,7 +63805,7 @@
 /area/tyrargo/outdoors/colony_streets/north_west)
 "dhZ" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/floodgate{
 	icon_state = "0,3"
 	},
@@ -64496,7 +64496,7 @@
 /area/tyrargo/landing_zone_1/comms)
 "dki" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open_space,
 /area/tyrargo/landing_zone_1)
 "dkj" = (
@@ -65450,7 +65450,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -72646,7 +72646,7 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/tyrargo/oob)
 "dEz" = (
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/floor/plating/platingdmg1,
 /area/tyrargo/oob)
 "dEA" = (
@@ -73616,7 +73616,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 15
@@ -83841,7 +83841,7 @@
 	pixel_x = -4;
 	pixel_y = 22
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/floor/prison/floor_plate,
 /area/tyrargo/oob)
 "egU" = (
@@ -83881,7 +83881,7 @@
 	layer = 6;
 	pixel_x = -26
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk/north,
 /area/tyrargo/oob/outdoors)
 "egZ" = (
@@ -83906,7 +83906,7 @@
 	layer = 6;
 	pixel_x = -26
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/prop/hybrisa/misc/fire/fire1{
 	color = "#ffa700";
 	layer = 7;
@@ -83990,7 +83990,7 @@
 	layer = 6;
 	pixel_x = -26
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/prop/hybrisa/misc/fire/fire2{
 	color = "#FF7700";
 	icon = 'icons/effects/fire.dmi';
@@ -84073,7 +84073,7 @@
 	layer = 6;
 	pixel_x = -26
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /obj/structure/prop/hybrisa/misc/fire/fire2{
 	color = "#FF7700";
 	icon = 'icons/effects/fire.dmi';
@@ -84102,7 +84102,7 @@
 	layer = 6;
 	pixel_x = -26
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk,
 /area/tyrargo/oob/outdoors)
 "ehn" = (
@@ -84601,13 +84601,13 @@
 	dir = 8;
 	layer = 3.2
 	},
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "eiE" = (
 /obj/effect/decal/cleanable/generic,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk,
 /area/tyrargo/oob/outdoors)
 "eiF" = (
@@ -84624,8 +84624,8 @@
 	pixel_y = 14
 	},
 /obj/structure/blocker/invisible_wall,
-/obj/structure/platform/stone/kutjevo,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "eiH" = (
@@ -84668,7 +84668,7 @@
 /area/tyrargo/oob/outdoors)
 "eiK" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "eiL" = (
@@ -84752,7 +84752,7 @@
 /obj/structure/prop/hybrisa/vehicles/Meridian/Black{
 	icon_state = "meridian_black_damage_5"
 	},
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "eiR" = (
@@ -84832,7 +84832,7 @@
 	light_color = "#FF7700"
 	},
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "eiX" = (
@@ -84860,26 +84860,26 @@
 	pixel_y = 14
 	},
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/hybrisa/street/sidewalk,
 /area/tyrargo/oob/outdoors)
 "eja" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "ejb" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/structure/blocker/invisible_wall,
 /obj/structure/blocker/forcefield/vehicles,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "ejc" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/oob/outdoors)
 "ejd" = (
@@ -84943,7 +84943,7 @@
 /turf/closed/wall/strata_outpost,
 /area/tyrargo/indoors/museum_storage/upper)
 "ejr" = (
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open_space,
 /area/tyrargo/indoors/museum_storage/upper)
 "ejs" = (
@@ -85103,7 +85103,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -85448,7 +85448,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 2.8;
 	name = "M56D heavy machine gun nest";
@@ -85780,7 +85780,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 6;
@@ -86184,7 +86184,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 15
@@ -86280,7 +86280,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 15
@@ -86466,7 +86466,7 @@
 "hnP" = (
 /obj/item/prop{
 	desc = "A primary armament cannon magazine";
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi';
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi';
 	icon_state = "ltbcannon_0";
 	name = "LTB Cannon Magazine";
 	pixel_x = 9;
@@ -86637,7 +86637,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 4;
@@ -86888,9 +86888,9 @@
 /turf/open/asphalt/cement,
 /area/tyrargo/outdoors/colony_streets/north)
 "igi" = (
-/obj/structure/platform/stone/kutjevo,
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo/east,
+/obj/structure/platform/stone/tyrargo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo/east,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts_road/west)
 "ijY" = (
@@ -87037,8 +87037,8 @@
 /area/tyrargo/underground/museum_carpark)
 "iGC" = (
 /obj/effect/decal/cleanable/blood/xeno,
-/obj/structure/platform/stone/kutjevo/east,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/east,
+/obj/structure/platform/stone/tyrargo,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)
 "iHh" = (
@@ -87332,7 +87332,7 @@
 "jtu" = (
 /obj/item/prop{
 	desc = "A primary armament cannon magazine";
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi';
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi';
 	icon_state = "ltbcannon_1";
 	name = "LTB Cannon Magazine";
 	pixel_x = 3;
@@ -87599,7 +87599,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 15
@@ -87700,7 +87700,7 @@
 /obj/item/prop{
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_y = 20
@@ -88109,7 +88109,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 4;
@@ -88921,8 +88921,8 @@
 /turf/open/floor/hybrisa/tile/tileblue,
 /area/tyrargo/indoors/apartment/south_ground)
 "mOi" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/tyrargo/outdoors/outskirts/central)
 "mOM" = (
@@ -89074,7 +89074,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 6;
@@ -89367,7 +89367,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -90363,8 +90363,8 @@
 /turf/open/hybrisa/street/sidewalkfull,
 /area/tyrargo/outdoors/colony_streets/south_west)
 "psN" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -90526,7 +90526,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 3.8;
 	name = "M56D heavy machine gun nest";
@@ -90602,7 +90602,7 @@
 /obj/item/prop{
 	desc = "An M83 SADAR Anti-Tank RPG. This one has been expended.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/rocket_launchers.dmi';
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi';
 	icon_state = "m83a2";
 	layer = 4.1;
 	name = "M83 SADAR (expended)";
@@ -91747,7 +91747,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	layer = 4.1;
 	name = "M56D heavy machine gun nest";
@@ -91849,7 +91849,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 8;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 4;
@@ -92354,7 +92354,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 4;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 3;
@@ -92421,7 +92421,7 @@
 	anchored = 1;
 	desc = "A M56D heavy machine gun mounted upon a small reinforced post with sandbags to provide a small machine gun nest for all your defensive needs. This one is no longer functional.";
 	dir = 1;
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/hmg.dmi';
+	icon = 'icons/turf/whiskeyoutpost.dmi';
 	icon_state = "M56D";
 	name = "M56D heavy machine gun nest";
 	pixel_x = 5;
@@ -92808,7 +92808,7 @@
 /turf/open/floor/prison/ramptop/north,
 /area/tyrargo/indoors/sewer_treatment/upper)
 "tZL" = (
-/obj/structure/platform/stone/kutjevo/north,
+/obj/structure/platform/stone/tyrargo/north,
 /obj/effect/decal/grass_overlay/grass1/dark{
 	dir = 8
 	},
@@ -92841,7 +92841,7 @@
 "ueO" = (
 /obj/item/prop{
 	desc = "A primary armament cannon magazine";
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/vehicles.dmi';
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi';
 	icon_state = "ltbcannon_0";
 	name = "LTB Cannon Magazine";
 	pixel_x = -2;
@@ -93875,8 +93875,8 @@
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/colony_streets/east)
 "vLz" = (
-/obj/structure/platform/stone/kutjevo/west,
-/obj/structure/platform/stone/kutjevo,
+/obj/structure/platform/stone/tyrargo/west,
+/obj/structure/platform/stone/tyrargo,
 /obj/structure/prop/rock{
 	density = 0
 	},
@@ -94148,7 +94148,7 @@
 /area/tyrargo/outdoors/colony_streets/south_west)
 "wiH" = (
 /obj/structure/blocker/invisible_wall,
-/obj/effect/landmark/lv624/fog_blocker/long,
+/obj/structure/blocker/fog,
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tyrargo/oob/outdoors)
 "wiU" = (
@@ -94465,8 +94465,8 @@
 /turf/open/auto_turf/strata_grass,
 /area/tyrargo/outdoors/colony_streets/south_west)
 "wMe" = (
-/obj/structure/platform/stone/kutjevo/north,
-/obj/structure/platform/stone/kutjevo/west,
+/obj/structure/platform/stone/tyrargo/north,
+/obj/structure/platform/stone/tyrargo/west,
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/auto_turf/sand_white/layer0,
 /area/tyrargo/outdoors/outskirts/central)

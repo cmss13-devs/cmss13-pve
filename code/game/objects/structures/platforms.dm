@@ -675,6 +675,21 @@
 /obj/structure/platform/stone/mineral/west
 	dir = WEST
 
+// Tyrargo Rock
+
+/obj/structure/platform/stone/tyrargo
+	name = "rock edge"
+	desc = "A solid chunk of desolate rocks. Looks like you could climb it."
+	icon_state = "tyrargo_rock_platform"
+
+/obj/structure/platform/stone/tyrargo/north
+	dir = NORTH
+/obj/structure/platform/stone/tyrargo/east
+	dir = EAST
+/obj/structure/platform/stone/tyrargo/west
+	dir = WEST
+
+//--//
 
 /obj/structure/platform/stone/sandstone
 	name = "sandstone platform"
