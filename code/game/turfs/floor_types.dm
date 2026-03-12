@@ -449,6 +449,142 @@
 /turf/open/floor/almayer/blackfull2
 	icon_state = "blackfull2"
 
+// All PURPLE tiles, unused no more (normal, smooth edge, corners, full, full smooth)
+
+/turf/open/floor/almayer/purple
+	icon_state = "purple"
+
+/turf/open/floor/almayer/purple/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purple/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purple/east
+	dir = EAST
+
+/turf/open/floor/almayer/purple/west
+	dir = WEST
+
+/turf/open/floor/almayer/purple/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/purple/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/purple/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/purple/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/purple2
+	icon_state = "purple2"
+
+/turf/open/floor/almayer/purple2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purple2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purple2/east
+	dir = EAST
+
+/turf/open/floor/almayer/purple2/west
+	dir = WEST
+
+/turf/open/floor/almayer/purple2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/purple2/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/purple2/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/purple2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/purple2smooth
+	icon_state = "purple2_smooth"
+
+/turf/open/floor/almayer/purple2smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purple2smooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purple2smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/purple2smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/purple2smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/purple2smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/purple2smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/purple2smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/purple2smooth2
+	icon_state = "purple2_smooth2"
+
+/turf/open/floor/almayer/purple2smooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purple2smooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purple2smooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/purple2smooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/purple2smooth3
+	icon_state = "purple2_smooth3"
+
+/turf/open/floor/almayer/purple2smooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purple2smooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purple2smooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/purple2smooth3/west
+	dir = WEST
+
+/turf/open/floor/almayer/purplecorner
+	icon_state = "purplecorner"
+
+/turf/open/floor/almayer/purplecorner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/purplecorner/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/purplecorner/east
+	dir = EAST
+
+/turf/open/floor/almayer/purplecorner/west
+	dir = WEST
+
+/turf/open/floor/almayer/purplefull
+	icon_state = "purplefull"
+
+/turf/open/floor/almayer/purplefull2
+	icon_state = "purplefull2"
+
+// Other stuff that ain't the tiles mentioned above
+
 /turf/open/floor/almayer/cargo
 	icon_state = "cargo"
 
@@ -628,11 +764,193 @@
 /turf/open/floor/almayer/red/southwest
 	dir = SOUTHWEST
 
+// All SILVER tiles (normal, smooth edge, smooth borderless, smooth ends, corners, full, full smooth)
+
 /turf/open/floor/almayer/silver
 	icon_state = "silver"
 
+/turf/open/floor/almayer/silver/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver/north/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver/south/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver/east/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver/west/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/silver/northeast/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/silver/northwest/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/silver/southeast/no_build
+	allow_construction = FALSE
+
 /turf/open/floor/almayer/silver/southwest
 	dir = SOUTHWEST
+
+/turf/open/floor/almayer/silver/southwest/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silver2
+	icon_state = "silver2"
+
+/turf/open/floor/almayer/silver2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/silver2/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/silver2/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/silver2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/silver2smooth
+	icon_state = "silver2_smooth"
+
+/turf/open/floor/almayer/silver2smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/silver2smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/silver2smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/silver2smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/silver2smooth2
+	icon_state = "silver2_smooth2"
+
+/turf/open/floor/almayer/silver2smooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2smooth3
+	icon_state = "silver2_smooth3"
+
+/turf/open/floor/almayer/silver2smooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth3/west
+	dir = WEST
+
+/turf/open/floor/almayer/silvercorner
+	icon_state = "silvercorner"
+
+/turf/open/floor/almayer/silvercorner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silvercorner/north/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silvercorner/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silvercorner/south/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silvercorner/east
+	dir = EAST
+
+/turf/open/floor/almayer/silvercorner/east/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silvercorner/west
+	dir = WEST
+
+/turf/open/floor/almayer/silvercorner/west/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/silvercornersmooth
+	icon_state = "silvercorner_smooth"
+
+/turf/open/floor/almayer/silvercornersmooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silvercornersmooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silvercornersmooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/silvercornersmooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/silverfull
+	icon_state = "silverfull"
+
+/turf/open/floor/almayer/silverfull2
+	icon_state = "silverfull2"
 
 /turf/open/floor/almayer/sterile_green_side
 	icon_state = "sterile_green_side"
@@ -696,6 +1014,90 @@
 
 /turf/open/floor/almayer/redcorner/north
 	dir = NORTH
+
+/turf/open/floor/almayer/silver2
+	icon_state = "silver2"
+
+/turf/open/floor/almayer/silver2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/silver2/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/silver2/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/silver2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/silver2smooth
+	icon_state = "silver2_smooth"
+
+/turf/open/floor/almayer/silver2smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/silver2smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/silver2smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/silver2smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/silver2smooth2
+	icon_state = "silver2_smooth2"
+
+/turf/open/floor/almayer/silver2smooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/silver2smooth3
+	icon_state = "silver2_smooth3"
+
+/turf/open/floor/almayer/silver2smooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/silver2smooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/silver2smooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/silver2smooth3/west
+	dir = WEST
 
 /turf/open/floor/almayer/silver/north
 	dir = NORTH
@@ -1012,6 +1414,122 @@
 /turf/open/floor/almayer/floor
 	icon_state = "floor"
 
+
+// All GREY tiles (full, smooth edge, smooth edge borderless, smooth edge corner, smooth edge ends)
+
+/turf/open/floor/almayer/floor
+	icon_state = "floor"
+
+/turf/open/floor/almayer/flooredge
+	icon_state = "floor_edge"
+
+/turf/open/floor/almayer/flooredge/north
+	dir = NORTH
+
+/turf/open/floor/almayer/flooredge/north/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/flooredge/south/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/east
+	dir = EAST
+
+/turf/open/floor/almayer/flooredge/east/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/west
+	dir = WEST
+
+/turf/open/floor/almayer/flooredge/west/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/flooredge/northeast/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/flooredge/northwest/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/flooredge/southwest/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredge/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/flooredge/southeast/no_build
+	allow_construction = FALSE
+
+/turf/open/floor/almayer/flooredgesmooth
+	icon_state = "floor_edge_smooth"
+
+/turf/open/floor/almayer/flooredgesmooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/flooredgesmooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/flooredgesmooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/flooredgesmooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/flooredgesmooth/west
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/flooredgesmooth/west
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/flooredgesmooth/west
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/flooredgesmooth/west
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/flooredgesmooth2
+	icon_state = "floor_edge_smooth2"
+
+/turf/open/floor/almayer/flooredgesmooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/flooredgesmooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/flooredgesmooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/flooredgesmooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/flooredgesmooth3
+	icon_state = "floor_edge_smooth3"
+
+/turf/open/floor/almayer/flooredgesmooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/flooredgesmooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/flooredgesmooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/flooredgesmooth3/west
+	dir = WEST
+
+// ends here for now
+
 /turf/open/floor/almayer/greenfull
 	icon_state = "greenfull"
 
@@ -1029,6 +1547,155 @@
 
 /turf/open/floor/almayer/redfull2
 	icon_state = "redfull2"
+
+// All EMERALD (not purple you fool, emerald) tiles (normal, smooth edge, smooth borderless, smooth ends, corners, full, full smooth)
+
+/turf/open/floor/almayer/emerald
+	icon_state = "emerald"
+
+/turf/open/floor/almayer/emerald/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emerald/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emerald/east
+	dir = EAST
+
+/turf/open/floor/almayer/emerald/west
+	dir = WEST
+
+/turf/open/floor/almayer/emerald/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/emerald/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/emerald/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/emerald/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/emerald2
+	icon_state = "emerald2"
+
+/turf/open/floor/almayer/emerald2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emerald2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emerald2/east
+	dir = EAST
+
+/turf/open/floor/almayer/emerald2/west
+	dir = WEST
+
+/turf/open/floor/almayer/emerald2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/emerald2/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/emerald2/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/emerald2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/emerald2smooth
+	icon_state = "emerald2_smooth"
+
+/turf/open/floor/almayer/emerald2smooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emerald2smooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emerald2smooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/emerald2smooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/emerald2smooth/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer/emerald2smooth/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer/emerald2smooth/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer/emerald2smooth/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer/emerald2smooth2
+	icon_state = "emerald2_smooth2"
+
+/turf/open/floor/almayer/emerald2smooth2/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emerald2smooth2/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emerald2smooth2/east
+	dir = EAST
+
+/turf/open/floor/almayer/emerald2smooth2/west
+	dir = WEST
+
+/turf/open/floor/almayer/emerald2smooth3
+	icon_state = "emerald2_smooth3"
+
+/turf/open/floor/almayer/emerald2smooth3/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emerald2smooth3/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emerald2smooth3/east
+	dir = EAST
+
+/turf/open/floor/almayer/emerald2smooth3/west
+	dir = WEST
+
+/turf/open/floor/almayer/emeraldcorner
+	icon_state = "emeraldcorner"
+
+/turf/open/floor/almayer/emeraldcorner/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emeraldcorner/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emeraldcorner/east
+	dir = EAST
+
+/turf/open/floor/almayer/emeraldcorner/west
+	dir = WEST
+
+/turf/open/floor/almayer/emeraldcornersmooth
+	icon_state = "emeraldcorner_smooth"
+
+/turf/open/floor/almayer/emeraldcornersmooth/north
+	dir = NORTH
+
+/turf/open/floor/almayer/emeraldcornersmooth/south
+	dir = SOUTH
+
+/turf/open/floor/almayer/emeraldcornersmooth/east
+	dir = EAST
+
+/turf/open/floor/almayer/emeraldcornersmooth/west
+	dir = WEST
+
+/turf/open/floor/almayer/emeraldfull
+	icon_state = "emeraldfull"
+
+/turf/open/floor/almayer/emeraldfull2
+	icon_state = "emeraldfull2"
 
 /turf/open/floor/almayer/silverfull
 	icon_state = "silverfull"
@@ -4269,3 +4936,10 @@
 
 /turf/open/floor/half_plate/dark_yellow/west
 	dir = WEST
+
+/turf/open/floor/strata/gray_multi_tiles/pred
+	color = "#5e5d5d"
+	icon_state = "multi_tiles"
+
+/turf/open/floor/strata/gray_multi_tiles/south/pred
+	dir = SOUTH

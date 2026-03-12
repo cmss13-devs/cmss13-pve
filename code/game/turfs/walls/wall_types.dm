@@ -470,6 +470,11 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 /turf/closed/wall/mineral/bone/is_weedable()
 	return NOT_WEEDABLE
 
+/turf/closed/wall/mineral/bone_resin/k_series //mineral wall because, reasons bro.
+	desc = "A wall made of molted resin. Seems these yellow xenomorphs are fast builders."
+	color = "#ffff80"
+/turf/closed/wall/mineral/bone
+
 //Misc walls
 
 /turf/closed/wall/cult
@@ -818,6 +823,10 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	name = "tutorial resin wall"
 	desc = "Weird slime solidified into a wall. Remarkably resilient."
 	hivenumber = XENO_HIVE_TUTORIAL
+
+/turf/closed/wall/resin/kseries
+	color = "#ffff80"
+	hivenumber = XENO_HIVE_K_SERIES
 
 /turf/closed/wall/resin/tutorial/attack_alien(mob/living/carbon/xenomorph/xeno)
 	return

@@ -87,6 +87,7 @@
 #define SOUND_ECHO_REVERB_OFF list(0, 0, -10000, -10000, 0, 0.0, 0, 0.25, 1.5, 1.0, 0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, 0) //-10000 to Room & RoomHF makes enviromental reverb effectively inaudible
 
 #define AMBIENCE_SHIP 'sound/ambience/shipambience.ogg'
+#define AMBIENCE_SHIP_ALT 'sound/ambience/shipambience1.ogg'
 #define AMBIENCE_JUNGLE 'sound/ambience/ambienceLV624.ogg'
 #define AMBIENCE_RIVER  'sound/ambience/ambienceriver.ogg'
 #define AMBIENCE_MALL 'sound/ambience/medbay1.ogg'
@@ -142,3 +143,8 @@
 #define AMBIENCE_TYRARGO_SEWER_CITY 'sound/ambience/tyrargo_sewer_ambience.ogg'
 
 #define SCAPE_PL_TYRARGO_SEWER list('sound/ambience/tyrargo_underground_1.ogg','sound/ambience/tyrargo_underground_2.ogg','sound/ambience/tyrargo_underground_3.ogg','sound/ambience/tyrargo_underground_4.ogg')
+#define SCAPE_PL_TYRARGO_ALERT list('sound/ambience/tyrargo_alert_1.ogg', 'sound/ambience/tyrargo_alert_2.ogg', 'sound/ambience/tyrargo_alert_3.ogg', 'sound/ambience/tyrargo_alert_4.ogg', 'sound/ambience/tyrargo_alert_5.ogg', 'sound/ambience/tyrargo_alert_6.ogg')
+
+// White Antre Soundscapes
+#define AMBIENCE_ANTRE 'sound/ambience/venir_hallway.ogg'
+#define AMBIENCE_ANTRE_ADJACENT 'sound/ambience/venir_hallway_adjacent.ogg'

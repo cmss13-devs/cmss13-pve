@@ -173,6 +173,82 @@
 	can_bloody = FALSE
 	supports_surgery = FALSE
 
+//Slipery slope
+/turf/open/slippery
+	name = "sloped roof"
+	icon = 'icons/turf/floors/floors.dmi'
+	icon_state = "grass1"
+
+
+/turf/open/slippery/Entered(atom/movable/crosser)
+	. = ..()
+	if(isobserver(crosser) || crosser.anchored)
+		return
+
+	if(!(isitem(crosser) || isliving(crosser)))
+		return
+
+	INVOKE_ASYNC(crosser, TYPE_PROC_REF(/atom/movable, throw_atom), (get_step(src, dir)), 50, SPEED_FAST, null, TRUE)
+
+/turf/open/slippery/hull
+	name = "sloped roof"
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "outerhull"
+
+/turf/open/slippery/hull/dir
+	icon_state = "outerhull_dir"
+
+/turf/open/slippery/hull/dir/southwest
+	dir = SOUTHWEST
+
+/turf/open/slippery/hull/dir/north
+	dir = NORTH
+
+/turf/open/slippery/hull/dir/east
+	dir = EAST
+
+/turf/open/slippery/hull/dir/northeast
+	dir = NORTHEAST
+
+/turf/open/slippery/hull/dir/southeast
+	dir = SOUTHEAST
+
+/turf/open/slippery/hull/dir/west
+	dir = WEST
+
+/turf/open/slippery/hull/dir/northwest
+	dir = NORTHWEST
+
+/turf/open/slippery/roof
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "outerhull"
+	name = "roof"
+	allow_construction = FALSE
+
+/turf/open/slippery/roof/dir
+	icon_state = "outerhull_dir"
+
+/turf/open/slippery/roof/dir/southwest
+	dir = SOUTHWEST
+
+/turf/open/slippery/roof/dir/north
+	dir = NORTH
+
+/turf/open/slippery/roof/dir/east
+	dir = EAST
+
+/turf/open/slippery/roof/dir/northeast
+	dir = NORTHEAST
+
+/turf/open/slippery/roof/dir/southeast
+	dir = SOUTHEAST
+
+/turf/open/slippery/roof/dir/west
+	dir = WEST
+
+/turf/open/slippery/roof/dir/northwest
+	dir = NORTHWEST
+
 // Prison grass
 /turf/open/organic/grass
 	name = "grass"
@@ -1398,6 +1474,15 @@
 
 /turf/open/shuttle/escapepod/floor2
 	icon_state = "floor2"
+
+/turf/open/shuttle/escapepod/floor2/north
+	dir = NORTH
+
+/turf/open/shuttle/escapepod/floor2/east
+	dir = EAST
+
+/turf/open/shuttle/escapepod/floor2/west
+	dir = WEST
 
 /turf/open/shuttle/escapepod/floor4
 	icon_state = "floor4"

@@ -208,6 +208,9 @@
 		/obj/item/stack/medical/splint,
 	)
 
+/obj/item/storage/pouch/firstaid/wy
+	icon_state = "wy_firstaid"
+
 /obj/item/storage/pouch/firstaid/full
 	desc = "Contains some basic first aid supplies."
 
@@ -848,6 +851,9 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/tramadol(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/emergency(src)
+
+/obj/item/storage/pouch/autoinjector/full/wy
+	icon_state = "wy_medicpack"
 
 /obj/item/storage/pouch/syringe
 	name = "syringe pouch"

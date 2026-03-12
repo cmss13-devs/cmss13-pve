@@ -707,3 +707,38 @@
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
 	icon = 'icons/obj/structures/props/catclock.dmi'
 	icon_state = "cat_clock_motion"
+
+
+//===================//
+//      Calendar     //
+//=================//
+
+/obj/structure/sign/calendar
+	name = "wall calendar"
+	desc = "Classic office decoration and a place to stare at maniacally."
+	icon_state = "calendar_civ"
+	var/calendar_faction
+
+/obj/structure/sign/catclock/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("The [src] reads: [worldtime2text()]")
+
+/obj/structure/sign/calendar/upp
+	icon_state = "calendar_upp"
+	desc = "Classic office decoration with a spot to stare at maniacally. Features a UPP logo, written in Russian."
+	calendar_faction = FACTION_UPP
+
+/obj/structure/sign/calendar/wy
+	icon_state = "calendar_wy"
+	desc = "Classic office decoration and a place to stare at maniacally, produced by Weyland-Yutani."
+	calendar_faction = FACTION_WY
+
+/obj/structure/sign/calendar/twe
+	icon_state = "calendar_twe"
+	desc = "Classic office decoration and a place to stare at maniacally, has a pattern resembling a Union Jack on it."
+	calendar_faction = FACTION_TWE
+
+/obj/structure/sign/calendar/ua
+	icon_state = "calendar_ua"
+	desc = "Classic office decoration and a place to stare at maniacally, has a vertically placed UA flag and some army symbolics."
+	calendar_faction = FACTION_MARINE

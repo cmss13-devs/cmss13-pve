@@ -174,6 +174,12 @@
 	desc = "A labeled blueprint of the UA city Tyrargo Rift"
 	html_link = "images/7/79/Tyrargo_Rift.png"
 
+/obj/item/map/white_antre_map
+	name = "\improper White Antre Research Facility map"
+	desc = "An overview of the White Antre facility schematics."
+	html_link = "images/d/da/White_Antre_Research_Facility.png"
+	color = "cyan"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -212,6 +218,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
 		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
+		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map()
 	)
 
 //used by marine equipment machines to spawn the correct map.
