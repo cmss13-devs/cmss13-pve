@@ -588,6 +588,28 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	walltype = WALL_JUNGLE_UPDATED //Not a metal wall
 	hull = 1
 
+/turf/closed/wall/strata_ice/forest
+	name = "forest vegetation"
+	icon = 'icons/turf/walls/forest_veg.dmi'
+	icon_state = "forest_veg"
+	desc = "Exceptionally dense vegetation that you can't see through."
+	walltype = WALL_FOREST //Thick forest, not metal.
+	hull = 1
+
+/turf/closed/wall/strata_ice/forest/rock
+	name = "rock columns"
+	icon_state = "rock_forest"
+	desc = "Exceptionally dense rock formations."
+	walltype = WALL_FOREST_ROCK //Rock but near a forest not jungle.
+	hull = 1
+
+/turf/closed/wall/strata_ice/forest/rock/dirty
+	name = "rock columns"
+	icon_state = "rock_forest_dirty"
+	desc = "Exceptionally dense rock formations."
+	walltype = WALL_FOREST_ROCK_DIRTY //Dirty rock but near a forest not jungle.
+	hull = 1
+
 /turf/closed/wall/strata_outpost_ribbed //this guy is our reinforced replacement
 	name = "ribbed outpost walls"
 	icon = 'icons/turf/walls/strata_outpost.dmi'

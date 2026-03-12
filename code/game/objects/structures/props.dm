@@ -1338,6 +1338,9 @@
 	unacidable = TRUE
 	explo_proof = TRUE
 
+/obj/structure/prop/vehicles/tank/truck/broken
+	icon_state = "van_broken"
+
 /obj/structure/prop/vehicles/tank/truck/base
 
 /obj/structure/prop/vehicles/tank/truck/base/broken
@@ -1361,6 +1364,9 @@
 	unslashable = TRUE
 	unacidable = TRUE
 	explo_proof = TRUE
+
+/obj/structure/prop/vehicles/tank/apc/destroyed
+	icon_state = "apc_destroyed"
 
 /obj/structure/prop/vehicles/tank/apc/base
 
@@ -1398,6 +1404,39 @@
 
 /obj/structure/prop/vehicles/tank/miltruck/wheeled/destroyed
 	icon_state = "miltruck_1_destroyed"
+
+// USCM HUMVEE
+
+/obj/structure/prop/vehicles/tank/humvee
+	name = "\improper M540-B Armored Recon Carrier"
+	desc = "An M540-B Armored Recon Carrier. A lightly armored reconnaissance and intelligence vehicle. This vehicle has been immobilised."
+	icon = 'icons/obj/vehicles/humvee_prop.dmi'
+	icon_state = "humvee_base"
+	density = FALSE
+	unslashable = TRUE
+	unacidable = TRUE
+	explo_proof = TRUE
+
+/obj/structure/prop/vehicles/tank/humvee/destroyed
+	icon_state = "humvee_base_wreck"
+
+/obj/structure/prop/vehicles/tank/humvee/transport
+	icon_state = "humvee_carrier"
+
+/obj/structure/prop/vehicles/tank/humvee/transport/destroyed
+	icon_state = "humvee_carrier_wreck"
+
+/obj/structure/prop/vehicles/tank/humvee/medical
+	icon_state = "humvee_med"
+
+/obj/structure/prop/vehicles/tank/humvee/medical/destroyed
+	icon_state = "humvee_med_wreck"
+
+/obj/structure/prop/vehicles/tank/humvee/turret
+	icon_state = "humvee_gun"
+
+/obj/structure/prop/vehicles/tank/humvee/turret/destroyed
+	icon_state = "humvee_gun_wreck"
 
 // USCM Infantry Fighting Vehicle
 
@@ -1602,3 +1641,152 @@
 
 /obj/structure/prop/vehicles/tank/longstreet/module/artillerymod/destroyed
 	icon_state = "artillerymod_destroyed"
+
+
+// USCM Static Defense Prop
+
+/obj/structure/prop/turret
+	name = "\improper UH-46 Heavy Sentry Gun"
+	desc = "Large weapons system platform designed to deploy multiple types of automated defense systems. This one has been rendered permanently non-functional."
+	icon = 'icons/obj/structures/props/static_defence_prop.dmi'
+	icon_state = "gun_platform"
+	layer = XENO_HIDING_LAYER
+	bound_height = 32
+	bound_width = 64
+	density = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	explo_proof = TRUE
+
+/obj/structure/prop/turret/missile
+	icon_state = "missile_platform"
+
+//overhead prop sets
+
+/obj/structure/prop/invuln/overhead
+	layer = ABOVE_FLY_LAYER
+	icon = 'icons/obj/structures/props/industrial/overhead_ducting.dmi'
+	icon_state = "flammable_pipe_1"
+
+/obj/structure/prop/invuln/overhead/flammable_pipe
+	name = "dense fuel line"
+	desc = "Likely to be incredibly flammable."
+	density = TRUE
+
+/obj/structure/prop/invuln/overhead/flammable_pipe/fly
+	density = FALSE
+
+
+/obj/structure/prop/static_tank
+	name = "liquid tank"
+	desc = "Warning, contents under pressure!"
+	icon = 'icons/obj/structures/props/industrial/generic_props.dmi'
+	icon_state = "tank"
+	density = TRUE
+
+/obj/structure/prop/static_tank/fuel
+	desc = "It contains Decatuxole-Hypospaldirol. A non-volatile liquid fuel type that tastes like oranges. Can't really be used for anything outside of atmos-rocket boosters."
+	icon_state = "weldtank_old"
+
+/obj/structure/prop/static_tank/water
+	desc = "It contains non-potable water. A label on the side instructs you to boil before consumption. It smells vaguely like the showers on the Almayer."
+	icon_state = "watertank_old"
+
+/obj/structure/prop/broken_arcade
+	desc = "You can't see anything behind the screen, it looks half human and half machine."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "arcadeb"
+	name = "Spirit Phone, The Game, The Movie: II"
+
+//INVULNERABLE PROPS
+
+/obj/structure/prop/invuln
+	layer = ABOVE_MOB_LAYER
+	density = TRUE
+	icon = 'icons/obj/structures/props/ice_colony/props.dmi'
+	icon_state = "ice_tray"
+
+/obj/structure/prop/invuln/catwalk_support
+	name = "support lattice"
+	icon_state = "support_lattice"
+	desc = "The middle of a large set of steel support girders."
+	density = FALSE
+
+/obj/structure/prop/invuln/minecart_tracks
+	name = "rails"
+	icon_state = "rail"
+	icon = 'icons/obj/structures/props/mining.dmi'
+	density =  0
+	desc = "Minecarts and rail vehicles go on these."
+	layer = 3
+
+/obj/structure/prop/invuln/minecart_tracks/bumper
+	name = "rail bumpers"
+	icon_state = "rail_bumpers"
+	desc = "This (usually) stops minecarts and other rail vehicles at the end of a line of track."
+
+/obj/structure/prop/invuln/dense
+	density = TRUE
+
+/obj/structure/prop/invuln/dense/catwalk_support
+	name = "support lattice"
+	icon_state = "support_lattice"
+	desc = "The base of a large set of steel support girders."
+
+/obj/structure/prop/invuln/dense/ice_tray
+	name = "ice slab tray"
+	icon_state = "ice_tray"
+	desc = "It is a tray filled with slabs of dark ice."
+
+/obj/structure/prop/invuln/ice_prefab
+	name = "prefabricated structure"
+	desc = "This structure is made of metal support rods and robust poly-kevlon plastics. A derivative of the stuff used in UA ballistics vests, USCM and UPP uniforms. The loose walls roll with each gust of wind."
+	icon = 'icons/obj/structures/props/ice_colony/fabs_tileset.dmi'
+	icon_state = "fab"
+	density = TRUE
+	layer = 3
+	bound_width = 32
+	bound_height = 32
+
+/obj/structure/prop/invuln/ice_prefab/trim
+	layer = ABOVE_MOB_LAYER
+	density = FALSE
+
+/obj/structure/prop/invuln/ice_prefab/roof_greeble
+	icon = 'icons/obj/structures/props/ice_colony/fabs_greebles.dmi'
+	icon_state = "antenna"
+	layer = ABOVE_MOB_LAYER
+	desc = "Windsocks, Air-Con units, solarpanels, oh my!"
+	density = FALSE
+
+
+/obj/structure/prop/invuln/ice_prefab/standalone
+	density = TRUE
+	icon = 'icons/obj/structures/props/ice_colony/fabs_64.dmi'
+	icon_state = "orange"//instance icons
+	layer = 3
+	bound_width = 64
+	bound_height = 64
+
+/obj/structure/prop/invuln/ice_prefab/standalone/trim
+	icon_state = "orange_trim"//instance icons
+	layer = ABOVE_MOB_LAYER
+	density = FALSE
+
+/obj/structure/prop/invuln/remote_console_pod
+	name = "Remote Console Pod"
+	desc = "A drop pod used to launch remote piloting equipment to USCM areas of operation."
+	icon = 'icons/obj/structures/droppod_32x64.dmi'
+	icon_state = "techpod_open"
+	layer = DOOR_CLOSED_LAYER
+
+///Decorative fire.
+/obj/structure/prop/invuln/fire
+	name = "fire"
+	desc = "That isn't going out any time soon."
+	color = "#FF7700"
+	icon = 'icons/effects/fire.dmi'
+	icon_state = "dynamic_2"
+	layer = MOB_LAYER
+	light_range = 3
+	light_on = TRUE

@@ -1466,6 +1466,9 @@
 /turf/open/shuttle/escapepod/floor1/east
 	dir = EAST
 
+/turf/open/shuttle/escapepod/floor1/west
+	dir = WEST
+
 /turf/open/shuttle/escapepod/floor11
 	icon_state = "floor11"
 
@@ -1482,6 +1485,18 @@
 	dir = EAST
 
 /turf/open/shuttle/escapepod/floor2/west
+	dir = WEST
+
+/turf/open/shuttle/escapepod/floor3
+	icon_state = "floor3"
+
+/turf/open/shuttle/escapepod/floor3/north
+	dir = NORTH
+
+/turf/open/shuttle/escapepod/floor3/east
+	dir = EAST
+
+/turf/open/shuttle/escapepod/floor3/west
 	dir = WEST
 
 /turf/open/shuttle/escapepod/floor4

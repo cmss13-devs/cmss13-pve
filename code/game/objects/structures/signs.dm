@@ -5,13 +5,14 @@
 	density = FALSE
 	unslashable = TRUE
 	layer = WALL_OBJ_LAYER
+	var/deconstructable = TRUE
 
 /obj/structure/sign/ex_act(severity)
 	deconstruct(FALSE)
 	return
 
 /obj/structure/sign/attackby(obj/item/tool as obj, mob/user as mob) //deconstruction
-	if(HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double))
+	if(deconstructable && HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double) && !QDELETED(src))
 		to_chat(user, "You unfasten the sign with your [tool].")
 		var/obj/item/sign/S = new(src.loc)
 		S.name = name
@@ -90,6 +91,24 @@
 
 /obj/structure/sign/double/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
+
+/obj/structure/sign/uacqs
+	name = "\improper UACQS Plaque"
+	desc = "A UACQS sign."
+	icon_state = "roplaque"
+	deconstructable = FALSE
+
+/obj/structure/sign/uacqs/New(loc, ...)
+	. = ..()
+	desc = "1) These premises are under the operation of the United Americas Commission for Quality and Standards.<br>2) Access to these premises are regulated by UACQS personnel, or the regulating authority of the region.<br>[SPAN_RED("3) In accordance with Civil Law, firearms are not permitted in these premises.")]"
+
+/obj/structure/sign/minefield
+	name = "\improper MINEFIELD WARNING"
+	desc = "A warning sign indicating the presence of a minefield!"
+	icon_state = "minefield"
+
+/obj/structure/sign/minefield/alt
+	icon_state = "mines_warning"
 
 //============//
 //  Banners  //

@@ -4943,3 +4943,60 @@
 
 /turf/open/floor/strata/gray_multi_tiles/south/pred
 	dir = SOUTH
+
+
+//Outerhull
+
+/turf/open/floor/almayer_hull
+	icon = 'icons/turf/almayer.dmi'
+	icon_state = "outerhull"
+	name = "hull"
+	allow_construction = FALSE
+
+/turf/open/floor/almayer_hull/outerhull_dir
+	icon_state = "outerhull_dir"
+
+/turf/open/floor/almayer_hull/outerhull_dir/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer_hull/outerhull_dir/north
+	dir = NORTH
+
+/turf/open/floor/almayer_hull/outerhull_dir/east
+	dir = EAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir/west
+	dir = WEST
+
+/turf/open/floor/almayer_hull/outerhull_dir/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt
+	icon_state = "outerhull_dir_alt"
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/north
+	dir = NORTH
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/east
+	dir = EAST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/west
+	dir = WEST
+
+/turf/open/floor/almayer_hull/outerhull_dir_alt/northwest
+	dir = NORTHWEST

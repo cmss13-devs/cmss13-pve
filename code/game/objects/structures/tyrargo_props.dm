@@ -294,3 +294,24 @@
 /turf/open/gm/river/desert/tyrargo/deep/covered
 	covered = TRUE
 	icon = 'icons/turf/floors/desert_water_covered.dmi'
+
+// Prop Generator
+
+/obj/structure/prop/tyrargo/gen
+	name = "\improper expended UE-11 Generator Unit"
+	desc = "Special power module designed to be a backup generator in the event of a transformer malfunction. This generator has already been expended."
+	icon = 'icons/obj/structures/props/tyrargo_props.dmi'
+	icon_state = "gen"
+	density = TRUE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	anchored = TRUE
+
+/obj/structure/prop/hybrisa/vehicles/Armored_Truck/trr
+	name = "Throop Rescue and Recovery truck"
+	desc = "Emergency response vehicle used by the Throop Rescue and Recovery organization. A private group that assists in rapid response, search and rescue operations."
+	icon = 'icons/obj/structures/props/vehicles/armored_truck_trr.dmi'
+	icon_state = "armored_truck_trr"
+	bound_height = 32
+	layer = 4.2
