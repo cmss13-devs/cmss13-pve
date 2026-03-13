@@ -100,8 +100,8 @@
 
 			//
 			selected_equipment = preset_data["selected_equipment"]
-			selected_faction = preset_data["selected_faction"]
-			species = preset_data["species_selected"]
+			selected_faction = preset_data["faction"]
+			species = preset_data["species"]
 
 			break
 	data["viewing_faction"] = viewing_faction
@@ -301,8 +301,10 @@
 					if(!prob(zombie_outer_wear_chance) || !zombie_outer_wear)
 						qdel(ai_human.head)
 						qdel(ai_human.gloves)
-						qdel(ai_human.l_hand)
-						qdel(ai_human.r_hand)
+						if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
+							qdel(ai_human.l_hand)
+						if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
+							qdel(ai_human.r_hand)
 						qdel(ai_human.head)
 						qdel(ai_human.glasses)
 						qdel(ai_human.wear_mask)

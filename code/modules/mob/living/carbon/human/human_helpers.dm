@@ -498,7 +498,7 @@ f
 
 				continue
 
-		if(istype(current_item, /obj/item/weapon))
+		if(istype(current_item, /obj/item/weapon) && !istype(current_item, /obj/item/weapon/zombie_claws))
 			qdel(current_item)
 			continue
 
