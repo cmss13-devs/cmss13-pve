@@ -103,11 +103,10 @@
 	gun_type = /obj/item/weapon/gun/pistol/vp70
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
-/obj/item/ammo_magazine/pistol/vp70/extended // Unused
+/obj/item/ammo_magazine/pistol/vp70/extended
 	name = "\improper vp70 extended magazine (9x19mm)"
 	icon_state = "vp70_mag_ex"
-	default_ammo = /datum/ammo/bullet/pistol
-	caliber = "9x19mm"
+	max_rounds = 32
 
 /obj/item/ammo_magazine/pistol/vp70/toxin
 	name = "\improper vp70 toxic magazine (9x19mm)"

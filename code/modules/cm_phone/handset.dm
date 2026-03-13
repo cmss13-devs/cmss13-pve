@@ -181,7 +181,4 @@
 	UnregisterSignal(holder, COMSIG_MOVABLE_MOVED)
 	reset_tether()
 
-/obj/item/handset/upp
-	icon_state = "upp_rpb_phone"
-
 #undef HANDSET_RANGE

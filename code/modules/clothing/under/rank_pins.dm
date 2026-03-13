@@ -512,6 +512,11 @@
 	rank_short = PAY_SHORT_RMO7
 	icon_state = "ranks_flagofficer"
 
+/obj/item/clothing/accessory/ranks/rmc/o8
+	name = "rank boards"
+	rank_short = PAY_SHORT_RMO8
+	icon_state = "ranks_flagofficer"
+
 /*################################################
 ################# SPECIAL  #################
 ################################################*/

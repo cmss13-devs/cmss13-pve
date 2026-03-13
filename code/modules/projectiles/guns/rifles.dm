@@ -238,39 +238,6 @@
 	current_mag = /obj/item/ammo_magazine/rifle/ap
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/stock/rifle/collapsible)
 
-/obj/item/weapon/gun/rifle/m41a/corporate
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
-	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'
-	item_icons = list(
-		WEAR_L_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_lefthand.dmi',
-		WEAR_R_HAND = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_righthand.dmi',
-		WEAR_BACK = 'icons/obj/items/weapons/guns/guns_by_map/snow/back.dmi',
-		WEAR_J_STORE = 'icons/obj/items/weapons/guns/guns_by_map/snow/suit_slot.dmi'
-	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_WY_RESTRICTED
-	map_specific_decoration = FALSE
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
-
-/obj/item/weapon/gun/rifle/m41a/corporate/no_lock //for PMC nightmares.
-	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. This one had its IFF electronics removed."
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-
-/obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
-	current_mag = /obj/item/ammo_magazine/rifle/ap
-	random_spawn_rail = list(
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
-		/obj/item/attachable/magnetic_harness,
-	)
-	random_spawn_muzzle = list(
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/bayonet,
-		/obj/item/attachable/extended_barrel,
-	)
-
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/attached_gun/flamer/advanced)
-
 //-------------------------------------------------------
 //NSG 23 ASSAULT RIFLE - RMC PRIMARY RIFLE
 
@@ -409,6 +376,48 @@
 		/obj/item/attachable/suppressor,
 	)
 
+// IASF blue reskin for NSG.
+
+/obj/item/weapon/gun/rifle/nsg23/l23
+	name = "\improper NSG L23 pulse rifle"
+	desc = "Pulse action 8.5x33mm caseless assault rifle of the Imperial Armed Space Forces. Comes with semi-auto, automatic and burst-fire firemodes. This one is painted in TWE's purple-blue camouflage."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
+	icon_state = "l23"
+	item_state = "l23"
+	starting_attachment_types = list(/obj/item/attachable/stock/nsg23/l23)
+
+	random_spawn_chance = 100 //L23 always spawns with attachments
+	random_spawn_under = list(
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/attached_gun/flamer/advanced,
+		/obj/item/attachable/attached_gun/shotgun/af13,
+	)
+	random_spawn_rail = list(
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/scope/mini/nsg23/rmc,
+	)
+
+/obj/item/weapon/gun/rifle/nsg23/l23/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0
+	fa_max_scatter = SCATTER_AMOUNT_TIER_7
+
+/obj/item/weapon/gun/rifle/nsg23/l23/iasf
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/mini/nsg23/rmc,
+		/obj/item/attachable/attached_gun/grenade/nsg/preloaded,
+		/obj/item/attachable/stock/nsg23/rmc,
+	)
 
 //M40-SD AKA SOF RIFLE FROM HELL (It's actually an M41A, don't tell!)
 
@@ -804,9 +813,9 @@
 
 /obj/item/weapon/gun/rifle/m20a/merc/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
 	scatter = SCATTER_AMOUNT_TIER_9
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_7
 
@@ -2263,12 +2272,12 @@
 //=OLD ROYAL MARINES RIFLES=\\
 
 /obj/item/weapon/gun/rifle/rmc_f90
-	name = "\improper F903A1 Rifle"
-	desc = "The old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	name = "\improper F903 Rifle"
+	desc = "The old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23, the royal marines were the only modern military to not use a pulse weapon. Uses 5.5x50mm ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "aug"
 	item_state = "aug"
-	fire_sound = "gun_pulse"
+	fire_sound = "gun_f90"
 	reload_sound = 'sound/weapons/handling/m41_reload.ogg'
 	unload_sound = 'sound/weapons/handling/m41_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/rifle/rmc_f90
@@ -2286,9 +2295,10 @@
 		/obj/item/attachable/heavy_barrel,
 		/obj/item/attachable/magnetic_harness,
 	)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 	map_specific_decoration = FALSE
 	aim_slowdown = SLOWDOWN_ADS_QUICK
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/rmc_f90/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 21, "under_x" = 24, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 16)
@@ -2306,10 +2316,11 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	damage_falloff_mult = 0.5
 
 /obj/item/weapon/gun/rifle/rmc_f90/a_grip
 	name = "\improper F903A2 Rifle"
-	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23, the royal marines were the only modern military to not use a pulse weapon. Uses 5.5x50mm ammunition."
 	icon_state = "aug_com"
 	item_state = "aug_com"
 	attachable_allowed = list(
@@ -2329,10 +2340,11 @@
 
 /obj/item/weapon/gun/rifle/rmc_f90/scope
 	name = "\improper F903A1 Marksman Rifle"
-	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Only accepts smaller 20-round magazines of 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23, the royal marines were the only modern military to not use a pulse weapon. Only accepts smaller 30-round magazines of 5.5x50mm ammunition."
 	icon_state = "aug_dmr"
 	item_state = "aug_dmr"
 	attachable_allowed = null
+	start_automatic = FALSE
 	current_mag = /obj/item/ammo_magazine/rifle/rmc_f90/marksman
 
 /obj/item/weapon/gun/rifle/rmc_f90/scope/set_gun_config_values()
@@ -2343,7 +2355,7 @@
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_8
 	scatter_unwielded = SCATTER_AMOUNT_TIER_2
-	damage_mult = BASE_BULLET_DAMAGE_MULT
+	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 	damage_falloff_mult = 0
 
@@ -2365,9 +2377,12 @@
 	update_attachable(f90_scope.slot)
 	update_attachable(f90_dmr_barrel.slot)
 
+/obj/item/weapon/gun/rifle/rmc_f90/scope/ap
+	current_mag = /obj/item/ammo_magazine/rifle/rmc_f90/marksman/ap
+
 /obj/item/weapon/gun/rifle/rmc_f90/shotgun
 	name = "\improper F903A1/B 'Breacher' Rifle"
-	desc = "A variant of the old standard-issue rifle of the royal marines fitted with an underbarrel shotgun, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23A1, the royal marines were the only modern military to not use a pulse weapon. Uses 10x24mm caseless ammunition."
+	desc = "A variant of the old standard-issue rifle of the royal marines fitted with an underbarrel shotgun, now commonly seen in the hands of private military contractors or insurgent groups. Prior to the adoption of the L23, the royal marines were the only modern military to not use a pulse weapon. Uses 5.5x50mm ammunition."
 	icon_state = "aug_mkey"
 	item_state = "aug_mkey"
 	attachable_allowed = list(

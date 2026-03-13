@@ -172,7 +172,7 @@
 	. = ..()
 	new /obj/item/device/binoculars/range/designator(src)
 	new /obj/item/storage/backpack/rmc/frame(src)
-	new /obj/item/storage/firstaid/adv(src)
+	new /obj/item/storage/firstaid/softpack/adv(src)
 	new /obj/item/ammo_box/magazine/nsg23(src)
 
 /obj/structure/closet/secure_closet/rmc_section_leader

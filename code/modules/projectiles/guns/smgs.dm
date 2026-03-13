@@ -113,7 +113,7 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/smg)
 
 /obj/item/weapon/gun/smg/m39/tactical
-	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable/suppressor)
+	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip,/obj/item/attachable)
 
 /obj/item/weapon/gun/smg/m39/tactical/ap
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible,/obj/item/attachable/reflex,/obj/item/attachable/verticalgrip)
@@ -849,8 +849,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "p90"
 	item_state = "p90"
-
-	fire_sound = 'sound/weapons/p90.ogg'
+	fire_sound = "gun_p90"
 	current_mag = /obj/item/ammo_magazine/smg/p90
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -863,7 +862,7 @@
 		/obj/item/attachable/scope/mini,
 		)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/p90/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
@@ -878,7 +877,6 @@
 	scatter = SCATTER_AMOUNT_TIER_4
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5
 
@@ -888,12 +886,12 @@
 
 /obj/item/weapon/gun/smg/p90/twe
 	name = "\improper FN-TWE P90 submachinegun"
-	desc = "A variation of the FN P90 submachine gun. Used by mercenaries and royal marines commandos. This weapon only accepts the AP variation of the 5.7×28mm rounds."
+	desc = "A variation of the FN P90 submachine gun with auto-ejection system. Used by mercenaries and royal marines commandos. Only accepts the AP variation of the 5.7×28mm rounds. This one is painted in TWE's purple-blue camouflage."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
 	icon_state = "p90_twe"
 	item_state = "p90_twe"
 
-	fire_sound = 'sound/weapons/p90.ogg'
+	fire_sound = "gun_p90"
 	current_mag = /obj/item/ammo_magazine/smg/p90/twe
 	attachable_allowed = list(
 		/obj/item/attachable/suppressor, // Barrel
@@ -904,12 +902,14 @@
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/lasersight, // Side Rail
+		/obj/item/attachable/flashlight,
 		)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ANTIQUE
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/p90/twe/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 17,"rail_x" = 22, "rail_y" = 24, "under_x" = 23, "under_y" = 15, "stock_x" = 28, "stock_y" = 17, "side_rail_x" = 23, "side_rail_y" = 16)
 
 /obj/item/weapon/gun/smg/p90/twe/set_gun_config_values()
 	..()
@@ -921,6 +921,5 @@
 	scatter = SCATTER_AMOUNT_TIER_4
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_7
 	scatter_unwielded = SCATTER_AMOUNT_TIER_3
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_4
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
 	fa_max_scatter = SCATTER_AMOUNT_TIER_10 + 0.5

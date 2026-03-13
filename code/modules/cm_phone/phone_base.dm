@@ -47,6 +47,10 @@
 /obj/structure/phone_base/hidden
 	do_not_disturb = PHONE_DND_FORCED
 
+/obj/structure/phone_base/pmc
+	networks_receive = list(FACTION_PMC)
+	networks_transmit = list(FACTION_PMC)
+
 /obj/structure/phone_base/no_dnd
 	do_not_disturb = PHONE_DND_FORBIDDEN
 
@@ -58,6 +62,10 @@
 
 /obj/structure/phone_base/rotary/no_dnd
 	do_not_disturb = PHONE_DND_FORBIDDEN
+
+/obj/structure/phone_base/rotary/no_dnd/pmc
+	networks_receive = list(FACTION_PMC)
+	networks_transmit = list(FACTION_PMC)
 
 /obj/structure/phone_base/touchtone
 	name = "touch-tone telephone"

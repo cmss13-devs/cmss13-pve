@@ -615,6 +615,67 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
+/obj/item/storage/backpack/marine/satchel/rto/twe_net
+	name = "\improper Wireless Set No.207 Radio Telephone Pack"
+	icon_state = "rmc_rto_backpack"
+	item_state = "rmc_rto_backpack"
+	phone_icon = "rmc_rpb_phone"
+	networks_receive = list(FACTION_TWE)
+	networks_transmit = list(FACTION_TWE)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/twe)
+	max_storage_space = 18
+	worn_accessible = FALSE
+	bag_open_time = 2 SECONDS
+
+/datum/action/item_action/rto_pack/use_phone/twe/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "rmc_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/twe/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/twe_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
+
+/obj/item/storage/backpack/marine/satchel/rto/twe_net/small
+	name = "\improper Wireless Set No.207 Small Radio Telephone Pack"
+	max_storage_space = 14
+
+/obj/item/storage/backpack/marine/satchel/rto/pmc_net
+	name = "\improper Wireless Set No.208 Radio Telephone Pack"
+	icon_state = "pmc_rto_backpack"
+	item_state = "pmc_rto_backpack"
+	phone_icon = "pmc_rpb_phone"
+	networks_receive = list(FACTION_PMC)
+	networks_transmit = list(FACTION_PMC)
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone/pmc)
+	max_storage_space = 24
+	worn_accessible = FALSE
+	bag_open_time = 2 SECONDS
+
+/datum/action/item_action/rto_pack/use_phone/pmc/New(mob/living/user, obj/item/holder)
+	..()
+	name = "Use Phone"
+	button.name = name
+	button.overlays.Cut()
+	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "pmc_rpb_phone")
+	button.overlays += phone_overlay
+
+/datum/action/item_action/rto_pack/use_phone/pmc/action_activate()
+	. = ..()
+	for(var/obj/item/storage/backpack/marine/satchel/rto/pmc_net/radio_backpack in owner)
+		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		return
+
+/obj/item/storage/backpack/marine/satchel/rto/pmc_net/small
+	name = "\improper Wireless Set No.208 Small Radio Telephone Pack"
+	max_storage_space = 18
+
+
 /obj/item/storage/backpack/marine/smock
 	name = "\improper M3 sniper's smock"
 	desc = "A specially-designed smock with pockets for all your sniper needs."
@@ -1156,14 +1217,6 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "pmc_backpack"
 	max_storage_space = 24
 	worn_accessible = FALSE
-
-/obj/item/storage/backpack/pmc/backpack/rto_broken
-	name = "\improper Broken WY Radio Telephone Pack"
-	desc = "A heavy-duty extended-pack, used for telecommunications between central command. Commonly carried by RTOs. This one bears the logo of Weyland Yutani and internal systems seem to completely fried and broken."
-	icon_state = "pmc_broken_rto"
-	item_state = "pmc_broken_rto"
-	flags_atom = FPRINT
-	flags_item = ITEM_OVERRIDE_NORTHFACE
 
 /obj/item/storage/backpack/pmc/backpack/commando
 	name = "\improper W-Y Commando combat backpack"

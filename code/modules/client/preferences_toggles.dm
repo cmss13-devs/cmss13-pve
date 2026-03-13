@@ -664,7 +664,7 @@
 	set category = "Preferences.Ghost"
 	set desc = "Use to change which HUDs you want to have by default when you become an observer."
 
-	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction US Army HUD", "Faction USASF HUD", "Faction CMB HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction CLF HUD"))
+	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD prefs", list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Faction US Army HUD", "Faction USASF HUD", "Faction CMB HUD", "Faction UPP HUD", "Faction Wey-Yu HUD", "Faction TWE HUD", "Faction IASF HUD", "Faction CLF HUD"))
 	if(!hud_choice)
 		return
 	prefs.observer_huds[hud_choice] = !prefs.observer_huds[hud_choice]
@@ -697,6 +697,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_WY]
 		if("Faction TWE HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_TWE]
+		if("Faction IASF HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_IASF]
 		if("Faction CLF HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_CLF]
 		if("Faction UACG HUD")

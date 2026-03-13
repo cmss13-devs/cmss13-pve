@@ -27,7 +27,7 @@
 	desc = "A magazine of rounds for the M41AE2 Heavy Pulse Rifle."
 	caliber = "10x24mm"
 	icon_state = "m41ae2"
-	default_ammo = /datum/ammo/bullet/rifle/tracer
+	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	flags_magazine = AMMUNITION_REFILLABLE|AMMUNITION_SLAP_TRANSFER
@@ -39,7 +39,7 @@
 /obj/item/ammo_magazine/hpr_box/holo_target
 	name = "\improper M41AE2 ammo box (10x24mm holo-target)"
 	desc = "A magazine of holo-target rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/holo_target/tracer
+	default_ammo = /datum/ammo/bullet/rifle/holo_target
 	max_rounds = 300
 	ammo_band_color = AMMO_BAND_COLOR_HOLOTARGETING
 
@@ -47,7 +47,7 @@
 /obj/item/ammo_magazine/hpr_box/ap
 	name = "\improper M41AE2 AP ammo box (10x24mm)"
 	desc = "A magazine of steelcore armor piercing rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/ap/tracer
+	default_ammo = /datum/ammo/bullet/rifle/ap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
@@ -55,7 +55,7 @@
 /obj/item/ammo_magazine/hpr_box/heap
 	name = "\improper M41AE2 HEAP ammo box (10x24mm)"
 	desc = "A magazine of M903 armor piercing high explosive rounds for the M41AE2 Heavy Pulse Rifle."
-	default_ammo = /datum/ammo/bullet/rifle/heap/tracer
+	default_ammo = /datum/ammo/bullet/rifle/heap
 	max_rounds = 300
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
@@ -88,8 +88,9 @@
 	ammo_band_icon = "+qjy72_band"
 	ammo_band_icon = "+qjy72_band_e"
 	matter = list("metal" = 10000)
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap
 	max_rounds = 250
+	w_class = SIZE_MEDIUM
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
 
@@ -109,7 +110,7 @@
 /obj/item/ammo_magazine/pkp/standard_fmj
 	name = "QYJ-72 ammo box (10x27mm)"
 	desc = "A 250 round box of ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
-	default_ammo = /datum/ammo/bullet/rifle/upp/tracer
+	default_ammo = /datum/ammo/bullet/rifle/upp
 
 /obj/item/ammo_magazine/pkp/super_tracer
 	name = "QYJ-72 ammo box (10x27mm magnesium tracer HEAP)"

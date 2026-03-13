@@ -2637,6 +2637,10 @@
 	for(var/i in 1 to storage_slots)
 		new /obj/item/ammo_magazine/rifle/nsg23(src)
 
+/obj/item/storage/belt/marine/rmc/f90/fill_preset_inventory()
+	for(var/i in 1 to storage_slots)
+		new /obj/item/ammo_magazine/rifle/rmc_f90(src)
+
 /obj/item/storage/belt/medical/rmc
 	name = "\improper L75 pattern medical storage rig"
 	desc = "The L75 is the standard load-bearing equipment of the RMC. It consists of a modular belt with spacious pouches attached that are designed to transport bulkier medical supplies. \nRight click its sprite and click \"toggle belt mode\" to take pills out of bottles by simply clicking them."
@@ -2677,6 +2681,11 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78/rmc())
 	for(var/i in 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
+
+/obj/item/storage/belt/gun/l905/l54/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/pistol/l54())
+	for(var/i in 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/pistol/l54(src)
 
 #define MAXIMUM_MORTARSHELL_COUNT 6
 

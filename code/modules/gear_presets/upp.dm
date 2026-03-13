@@ -1,6 +1,6 @@
 /datum/equipment_preset/upp
 	name = FACTION_UPP
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN)
 	faction = FACTION_UPP
 	idtype = /obj/item/card/id/dogtag
 	origin_override = ORIGIN_UPP
@@ -14,21 +14,18 @@
 	var/last_name
 	//gender checks
 	if(new_human.gender == MALE)
-		if(prob(40))
+		if(prob(25))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
 			first_name = "[pick(GLOB.first_names_male_upp)]"
 		new_human.f_style = pick("3 O'clock Shadow", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache")
 	else
-		if(prob(40))
+		if(prob(25))
 			first_name = "[capitalize(randomly_generate_chinese_word(1))]"
 		else
 			first_name = "[pick(GLOB.first_names_female_upp)]"
 	//surname
-	if(prob(35))
-		last_name = "[capitalize(randomly_generate_chinese_word(pick(20;1, 80;2)))]"
-	else
-		last_name = "[pick(GLOB.last_names_upp)]"
+	last_name = "[pick(GLOB.last_names_upp)]"
 	//put them together
 	random_name = "[first_name] [last_name]"
 
@@ -931,18 +928,18 @@
 	add_upp_head(new_human)
 	//uniform
 	add_upp_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/standard, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff/standard_fmj, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/upp, WEAR_R_STORE)
 	//waist
 	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
@@ -965,18 +962,18 @@
 	add_upp_head(new_human)
 	//uniform
 	add_upp_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch/upp, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_ACCESSORY)
 	//jacket
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp/standard, WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_JACKET)
 	//limbs
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/upp, WEAR_R_STORE)
 	//waist
 	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
@@ -1817,9 +1814,9 @@
 	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/nerve_gas, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military/upp, WEAR_FACE)
@@ -1948,6 +1945,9 @@
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/smartgunner/upp/full, WEAR_WAIST)
 
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/rifleman/heavy // OH NO, IT'S JOHN UPP JUNIOR!!
@@ -1989,6 +1989,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/full, WEAR_WAIST)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
 
 //*****************************************************************************************************/
 
@@ -2034,6 +2037,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full, WEAR_R_STORE)
 	//waist
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/upp/caws, WEAR_WAIST)
+
+	var/obj/item/device/internal_implant/subdermal_armor/implant = new()
+	implant.on_implanted(new_human)
 
 //*****************************************************************************************************/
 // UPP SOF - SPACE OPERATIONAL FORCE

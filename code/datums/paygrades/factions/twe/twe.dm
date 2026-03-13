@@ -124,3 +124,11 @@
 	pay_multiplier = 10
 	rank_pin = /obj/item/clothing/accessory/ranks/rmc/o7
 	officer_grade = GRADE_FLAG
+
+/datum/paygrade/twe/o8
+	paygrade = PAY_SHORT_RMO8
+	name = "General"
+	prefix = "Gen"
+	pay_multiplier = 15
+	rank_pin = /obj/item/clothing/accessory/ranks/rmc/o8
+	officer_grade = GRADE_FLAG

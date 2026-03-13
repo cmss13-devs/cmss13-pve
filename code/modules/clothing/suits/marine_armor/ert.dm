@@ -419,32 +419,6 @@
 	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_PLATE3, ACCESSORY_SLOT_ARMOR_C)
 	restricted_accessory_slots = list(ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_PLATE3)
 	specialty = "\improper 6B99-4 pattern"
-	allowed = list(
-		/obj/item/tank/emergency_oxygen,
-		/obj/item/device/flashlight,
-		/obj/item/ammo_magazine,
-		/obj/item/explosive/mine,
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/gun/pkp,
-		/obj/item/storage/backpack/general_belt,
-		/obj/item/device/motiondetector,
-		/obj/item/device/walkman,
-		/obj/item/storage/large_holster/machete,
-		/obj/item/storage/belt/gun/type47,
-		/obj/item/storage/belt/gun/bizon,
-	)
-
-	smartgun_back = list(
-		/obj/item/storage/large_holster/machete,
-		/obj/item/ammo_box,
-	)
-
-/obj/item/clothing/suit/storage/marine/smartgunner/upp/heavy/Initialize()
-	. = ..()
-	pockets.bypass_w_limit = list(
-		/obj/item/ammo_magazine/minigun,
-		/obj/item/ammo_magazine/pkp,
-		)
 
 /obj/item/clothing/suit/marine/faction/upp/canc
 	name = "\improper Type 12 CANC armor"

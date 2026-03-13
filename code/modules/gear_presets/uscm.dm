@@ -122,7 +122,7 @@
 	assignment = JOB_SQUAD_MARINE_UPP
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -181,7 +181,7 @@
 	assignment = JOB_SQUAD_SMARTGUN_UPP
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "MG"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -276,7 +276,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MEDPREP, ACCESS_UPP_MEDICAL)
 	assignment = JOB_SQUAD_MEDIC_UPP
 	role_comm_title = "PltStr"
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 
@@ -337,7 +337,7 @@
 	role_comm_title = "SqSgt"
 	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
-	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	languages = list(LANGUAGE_RUSSIAN)
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 

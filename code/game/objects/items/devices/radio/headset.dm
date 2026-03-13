@@ -713,6 +713,16 @@
 	)
 	locate_setting = TRACKER_RMCSL
 
+/obj/item/device/radio/headset/almayer/marine/solardevils/rmc/iasf
+	name = "IASF headset"
+	desc = "A robust headset used by the TWE's Imperial Armed Space Force."
+	icon_state = "rmc_headset"
+	item_state = "rmc_headset"
+	minimap_type = MINIMAP_FLAG_TWE
+	frequency = IASF_FREQ
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF, MOB_HUD_FACTION_WY)
+
 /obj/item/device/radio/headset/almayer/marine/solardevils/foxtrot
 	frequency = CRYO_FREQ
 

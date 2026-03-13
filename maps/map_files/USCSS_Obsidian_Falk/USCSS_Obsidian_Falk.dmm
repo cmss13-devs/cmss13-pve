@@ -9128,9 +9128,9 @@
 /turf/open/floor/corsat/squares,
 /area/firefly/squad_omega)
 "ayl" = (
-/obj/structure/gun_rack/m41a2/elite/unloaded/platoon,
+/obj/structure/gun_rack/m41a2_elite/unloaded/platoon,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/gun_rack/m41a2/elite/unloaded/platoon{
+/obj/structure/gun_rack/m41a2_elite/unloaded/platoon{
 	pixel_y = 27
 	},
 /turf/open/floor/corsat/cargo,
@@ -11692,7 +11692,7 @@
 /obj/structure/platform{
 	dir = 8
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Maintenance Wing Communications Receiver";
 	pixel_x = -25;
 	pixel_y = 2
@@ -13383,10 +13383,10 @@
 /area/firefly/co)
 "foQ" = (
 /obj/structure/pipes/vents/scrubber/on,
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	pixel_y = 31;
 	name = "Supply Wing Communications Receiver";
-	phone_category = "Golden Arrow";
+	phone_category = "Supply";
 	phone_id = "Supply Bay";
 	pixel_x = -6;
 	layer = 6
@@ -14202,7 +14202,7 @@
 	pixel_x = 5
 	},
 /obj/structure/surface/table/reinforced/black,
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Synthetic Preparations Communications Receiver";
 	pixel_x = -11;
 	pixel_y = 33
@@ -14399,7 +14399,7 @@
 	pixel_x = 1;
 	pixel_y = 17
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Power Substation Communications Receiver";
 	pixel_x = -8;
 	pixel_y = 26;
@@ -14439,7 +14439,7 @@
 	pixel_x = 3;
 	pixel_y = 11
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Firing Range Communications Receiver";
 	pixel_x = 4;
 	pixel_y = 30
@@ -16437,7 +16437,7 @@
 	layer = 4;
 	pixel_x = 6
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Azure-15 Armory Communications Receiver";
 	pixel_x = -8;
 	pixel_y = 30
@@ -20178,7 +20178,7 @@
 	pixel_x = 5;
 	pixel_y = 1
 	},
-/obj/structure/phone_base/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd/pmc{
 	name = "Overwatch Communications Receiver";
 	phone_category = "Command";
 	phone_id = "Overwatch";
@@ -22035,7 +22035,7 @@
 /obj/item/paper/manifest{
 	pixel_x = 1
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Operations Wing Communications Receiver";
 	pixel_x = -8;
 	pixel_y = 30
@@ -25220,7 +25220,7 @@
 /area/firefly/cafeteria)
 "spi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base/rotary/no_dnd{
+/obj/structure/phone_base/rotary/no_dnd/pmc{
 	phone_category = "Supply";
 	phone_id = "Supply Bay";
 	pixel_y = 6;
@@ -26867,7 +26867,7 @@
 	pixel_x = -7;
 	pixel_y = 8
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Re-Entry Vehicle Bay Communications Receiver";
 	pixel_x = 7;
 	pixel_y = 9
@@ -30226,7 +30226,7 @@
 	pixel_y = 28;
 	pixel_x = 6
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	name = "Medical Wing Communications Receiver";
 	pixel_x = -8;
 	pixel_y = 31

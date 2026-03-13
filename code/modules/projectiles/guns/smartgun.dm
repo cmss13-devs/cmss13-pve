@@ -538,7 +538,7 @@
 	fa_scatter_peak = FULL_AUTO_SCATTER_PEAK_TIER_10
 	fa_max_scatter = SCATTER_AMOUNT_NONE
 
-/obj/item/weapon/gun/smartgun/l56a2
+/obj/item/weapon/gun/smartgun/l56a2 // Frozen till modularization, don't know what to do with PVP smartguns honestly, since they don't have feed-cover, they just put new bins in and cock it
 	name = "\improper L56A2 smartgun"
 	desc = "The actual firearm in the 4-piece L56A2 Smartgun System. If you have this, you're about to bring some serious pain to anyone in your way."
 	desc_lore = "Originally produced for the Three World Empires Royal Marines forces, it mostly ended up in hands of W-Y PMCs and other affiliated forces, with Three World Empire giving preference for other design, that is still produced by W-Y regardless. Compared to more commonly used M56A2, it has improved recoil control, better electronics and advanced tracking software."
@@ -685,6 +685,13 @@
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
 	current_mag = null
+
+/obj/item/weapon/gun/smartgun/rmc/iasf
+	current_mag = /obj/item/ammo_magazine/smartgun
+	ammo = /obj/item/ammo_magazine/smartgun
+	ammo_primary = /datum/ammo/bullet/rifle/heavy/tracer //Toggled ammo type
+	ammo_secondary = /datum/ammo/bullet/rifle/heavy/ap/tracer ///Toggled ammo type
+	ammo_tertiary = /datum/ammo/bullet/rifle/heavy/impdet
 
 /obj/item/weapon/gun/smartgun/silenced
 	name = "XM56A4 smartgun"

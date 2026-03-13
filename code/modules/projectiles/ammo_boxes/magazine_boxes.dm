@@ -488,6 +488,16 @@
 /obj/item/ammo_box/magazine/vp70/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/vp70/extended
+	name = "magazine box (Ext VP70 x 12)"
+	overlay_ammo_type = "_ext"
+	num_of_magazines = 12
+	magazine_type = /obj/item/ammo_magazine/pistol/vp70/extended
+
+/obj/item/ammo_box/magazine/vp70/extended/empty
+	empty = TRUE
+
+
 //-----------------------VP78 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/vp78

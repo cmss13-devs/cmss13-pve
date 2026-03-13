@@ -1250,7 +1250,7 @@
 	max_w_class = SIZE_HUGE
 
 /obj/item/storage/box/guncase/heavy/caws/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/caws/stored(src)
+	new /obj/item/weapon/gun/rifle/caws/auto/stored(src)
 	new /obj/item/ammo_magazine/rifle/caws(src)
 	new /obj/item/ammo_magazine/rifle/caws(src)
 	new /obj/item/ammo_magazine/rifle/caws(src)

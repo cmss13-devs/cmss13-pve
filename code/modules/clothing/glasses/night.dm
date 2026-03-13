@@ -100,7 +100,7 @@
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_IASF)
 
 /obj/item/clothing/glasses/night/m42_hms/no_nvg
 	name = "\improper M42 head-mounted sight"
@@ -256,7 +256,7 @@
 	darkness_view = 0
 	vision_flags = 0
 	lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF, MOB_HUD_FACTION_WY)
 
 /obj/item/clothing/glasses/night/m56_goggles/pmc
 	name = "\improper M56A3 head mounted sight"

@@ -3122,7 +3122,6 @@
 	},
 /obj/structure/closet/secure_closet/rmc_troop_sergeant{
 	pixel_y = 15;
-	pixel_x = -5
 	pixel_x = -8
 	},
 /obj/item/clothing/glasses/hud/health{
@@ -3514,18 +3513,15 @@
 "gY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/rmcsmg{
+	pixel_x = 2;
+	pixel_y = 22
+	},
+/obj/item/storage/box/guncase/heavy/rmcsmg{
 	pixel_x = 3;
 	pixel_y = 10
 	},
-/obj/item/storage/box/guncase/heavy/rmcsmg{
-	pixel_x = 0;
-	pixel_y = -2
-	},
-/obj/item/ammo_box/magazine/m39/squash{
-	pixel_y = -12;
-	pixel_x = 6;
-	layer = 3.03
-	},
+/obj/item/storage/belt/gun/m39/rmc,
+/obj/item/storage/belt/gun/m39/rmc,
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
 	light_color = "#dae2ff"
@@ -4988,17 +4984,16 @@
 /area/hms_brynhild/supply)
 "jT" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/storage/box/guncase/heavy/motiondetectors/rmc{
-	pixel_x = 2;
-	pixel_y = 1
-	},
 /obj/item/ammo_box/magazine/vp78/rmc{
 	pixel_x = -2;
-	pixel_y = 14
+	pixel_y = 16
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc{
+	pixel_x = 2
 	},
 /obj/item/ammo_box/magazine/vp78/rmc{
 	pixel_x = 4;
-	pixel_y = 7
+	pixel_y = 8
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -7677,13 +7672,17 @@
 /area/hms_brynhild/lower_cargo)
 "pA" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/l54{
-	pixel_x = -1;
-	pixel_y = 7
+/obj/item/ammo_box/magazine/m39/squash{
+	pixel_y = 17;
+	pixel_x = 3
 	},
-/obj/item/ammo_box/magazine/l54{
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/shotgun/buckshot{
 	pixel_x = 4;
-	pixel_y = -2
+	pixel_y = -1
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -13591,17 +13590,13 @@
 /area/hms_brynhild/prep_hallway)
 "EM" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/vp70{
+/obj/item/ammo_box/magazine/vp70/extended{
 	pixel_x = 5;
-	pixel_y = 9
+	pixel_y = 12
 	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_x = 3;
-	pixel_y = 0
-	},
-/obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = -5;
-	pixel_y = -15
+/obj/item/ammo_box/magazine/vp70/extended{
+	pixel_x = 2;
+	pixel_y = 3
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury)
@@ -17974,21 +17969,23 @@
 "Ry" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/ammo_box/magazine/nade_box/rmc/incen{
-	pixel_x = 18;
+	pixel_x = 20;
 	pixel_y = 6
 	},
-/obj/item/ammo_box/magazine/l54{
-	pixel_x = -2;
-	pixel_y = 2
+/obj/item/ammo_box/magazine/vp78/rmc{
+	pixel_y = 6
 	},
 /obj/item/ammo_box/magazine/vp78/rmc{
-	pixel_x = -2;
-	pixel_y = -3
+	pixel_y = 15
+	},
+/obj/item/ammo_box/magazine/m39/squash{
+	pixel_x = -6;
+	pixel_y = -2
 	},
 /obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = -2;
-	pixel_y = 8
-},
+	pixel_y = 7;
+	pixel_x = -6
+	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "RA" = (
@@ -18543,8 +18540,8 @@
 "Tv" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/ammo_box/magazine/nade_box/rmc/cn20{
-	pixel_x = 6;
-	pixel_y = 8
+	pixel_x = 8;
+	pixel_y = 7
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)

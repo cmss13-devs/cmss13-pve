@@ -79,7 +79,7 @@
 	pixel_y = 16;
 	pixel_x = 6
 	},
-/obj/structure/phone_base{
+/obj/structure/phone_base/pmc{
 	dir = 4;
 	pixel_x = -19;
 	pixel_y = 12;

@@ -2070,6 +2070,7 @@
 	storage_slots = 5
 	can_hold = list(
 		/obj/item/ammo_magazine/rifle/nsg23,
+		/obj/item/ammo_magazine/rifle/rmc_f90,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/pistol/vp78,
 		/obj/item/ammo_magazine/pistol/vp70,
@@ -2247,6 +2248,16 @@
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
 	new /obj/item/ammo_magazine/rifle/heap(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/mag/pmc/preseteight
+	hold = /obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight
+
+/obj/item/storage/internal/accessory/webbing/m3mag/pmc/eight/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
+	new /obj/item/ammo_magazine/smg/m39(src)
 
 /obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun/pmc
 	name = "\improper 41 Pattern Shell Webbing"

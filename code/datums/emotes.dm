@@ -104,7 +104,7 @@
 			return
 		if(!HAS_TRAIT(user, TRAIT_EMOTE_CD_EXEMPT))
 			TIMER_COOLDOWN_START(user, type, audio_cooldown)
-			S_TIMER_COOLDOWN_START(user, COOLDOWN_MOB_AUDIO, 20 SECONDS) // We won't ever want to stop this except during qdel
+			S_TIMER_COOLDOWN_START(user, COOLDOWN_MOB_AUDIO, 8 SECONDS) // We won't ever want to stop this except during qdel
 		playsound(user, tmp_sound, volume, vary)
 
 	log_emote("[user.name]/[user.key] : [msg ? msg : key]")

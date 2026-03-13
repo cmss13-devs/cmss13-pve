@@ -6,28 +6,6 @@
 /////////////////////// UNDER ///////////////////////
 ////////////////////////////////////////////////////
 
-// HYBRISA - GOONS
-
-/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa
-	name = "\improper WY corporate security uniform"
-	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by what are known as 'goons'."
-	icon_state = "hybrisa_uniform"
-	worn_state = "hybrisa_uniform"
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-
-	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
-	)
-
-/obj/item/clothing/under/marine/veteran/pmc/corporate/hybrisa/lead
-	desc = "An armored uniform worn by Weyland-Yutani corporate security members. This variant is commonly worn by the lead of the 'goonsquad', as they are colloquially known."
-	icon_state = "lead_hybrisa_uniform"
-	worn_state = "lead_hybrisa_uniform"
-
-	item_icons = list(
-		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
-	)
-
 // CMB Police Officer
 
 /obj/item/clothing/under/hybrisa
@@ -259,25 +237,6 @@
 
 /////////////////////// Hats & Helmets ///////////////////////
 /////////////////////////////////////////////////////////////
-
-// HYBRISA - GOONS
-
-/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa
-	name = "\improper WY corporate security helmet"
-	desc = "A basic skull-helm with a orange saftey vison fitted. Worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar."
-	icon_state = "helmet_black"
-	item_state = "helmet_black"
-
-/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/lead
-	desc = "A basic skull-helm with a orange saftey vison fitted. Worn by corporate security assets. This variant is worn by low-level guards that have too much brainmatter to fit into the old one. Or so they say."
-	icon_state = "lead_helmet_black"
-	item_state = "lead_helmet_black"
-
-/obj/item/clothing/head/helmet/marine/veteran/pmc/corporate/hybrisa/brown
-	name = "\improper WY corporate security helmet"
-	desc = "A basic skull-helm with a orange saftey vison fitted. Worn by corporate security assets, graded to protect your head from an unruly scientist armed with a crowbar."
-	icon_state = "helmet_brown"
-	item_state = "helmet_brown"
 
 // CMB Police Hats
 

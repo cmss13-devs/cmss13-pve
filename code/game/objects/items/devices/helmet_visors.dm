@@ -87,9 +87,9 @@
 	hud_type = list(MOB_HUD_FACTION_UPP)
 
 /obj/item/device/helmet_visor/twe
-	name = "squad optic"
-	desc = "An insertable visor HUD into a standard RMC helmet."
-	hud_type = list(MOB_HUD_FACTION_TWE)
+	name = "HBS visor"
+	desc = "One of the older programm visors issued to the IASF forces of Three World Empire. Provides a basic amount of information."
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF)
 
 /obj/item/device/helmet_visor/pmc
 	name = "C/PAV-Mk.1 visor"
@@ -130,7 +130,7 @@
 /obj/item/device/helmet_visor/medical/advanced/rmc
 	name = "HBVS visor"
 	desc = "One of the few successful components from the otherwise disastrous Commando Upgrade Program ran in the mid 2170s, the head-mounted, biomonitor vision system comes as standard in all RMC helmets."
-	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF, MOB_HUD_MEDICAL_ADVANCED)
 	icon_state = "hud_sight"
 	action_icon_string = "hud_sight_down"
 	helmet_overlay = "hud_sight_full"
@@ -391,7 +391,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/rmc
 	name = "HIBVS night-sight visor"
 	desc = "A heavily modified version of the standard HBVS, that offers infrared night-vision capabilities alongside the existent biomonitoring systems."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_IASF, MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_rmc"
 	power_use = 0
 	visor_glows = FALSE

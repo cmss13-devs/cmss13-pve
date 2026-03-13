@@ -3174,6 +3174,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "nsg23_stock"
 	slot = "stock"
+	flags_attach_features = NO_FLAGS
 	wield_delay_mod = WIELD_DELAY_NONE
 	melee_mod = 5
 	size_mod = 2
@@ -3185,6 +3186,10 @@ Defined in conflicts.dm of the #defines folder.
 	name = "NSG L23A1 stock"
 	desc = "If you can read this, someone screwed up. Go Github this and bug a coder."
 	icon_state = "rmc_nsg23_stock"
+
+/obj/item/attachable/stock/nsg23/l23
+	name = "NSG L23 stock"
+	icon_state = "l23_stock"
 
 /obj/item/attachable/stock/isr
 	name = "ISR stock"

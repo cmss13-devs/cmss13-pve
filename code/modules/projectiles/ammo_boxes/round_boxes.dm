@@ -179,7 +179,7 @@
 //----------------9.7x16mm Ammunition Boxes (for UPP AG80)------------------
 
 /obj/item/ammo_box/rounds/ag80
-	name = "\improper rifle ammunition box (10x27mm)"
+	name = "\improper rifle ammunition box (9.7x16mm)"
 	desc = "A 9.7x16mm ammunition box. Used to refill AG80 magazines. It comes with a leather strap allowing to wear it on the back."
 	icon_state = "base_type71"
 	overlay_gun_type = "_rounds_type71"
@@ -193,8 +193,6 @@
 /obj/item/ammo_box/rounds/ag80/ap
 	name = "\improper rifle ammunition box (9.7x16mm AP)"
 	desc = "A 9.7x16mm armor-piercing ammunition box. Used to refill AG80 AP magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_zhnk72"
-	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_ap"
 	default_ammo = /datum/ammo/bullet/rifle/ag80/ap
 
@@ -204,8 +202,6 @@
 /obj/item/ammo_box/rounds/ag80/heap
 	name = "rifle ammunition box (9.7x16mm HEAP)"
 	desc = "A 9.7x16mm high-explosive armor-piercing ammunition box. Used to refill AG80 HEAP magazines. It comes with a leather strap allowing to wear it on the back."
-	icon_state = "base_zhnk72"
-	overlay_gun_type = "_rounds_type71"
 	overlay_content = "_type71_heap"
 	default_ammo = /datum/ammo/bullet/rifle/ag80/heap
 

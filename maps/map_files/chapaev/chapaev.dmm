@@ -5181,6 +5181,10 @@
 	light_range = 5;
 	dir = 1
 	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/ammo_box/rounds/smartgun/upp,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "lp" = (
@@ -5643,18 +5647,6 @@
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/medical)
-"mu" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "S"
-	},
-/obj/structure/machinery/light/double{
-	light_color = "#e7c0a4";
-	light_power = 0.8;
-	light_range = 5;
-	dir = 1
-	},
-/turf/open/floor/strata/multi_tiles,
-/area/golden_arrow/prep_hallway)
 "mv" = (
 /obj/structure/surface/rack{
 	color = "#8B9490"
@@ -15525,7 +15517,7 @@ mT
 mT
 mM
 jU
-mu
+my
 uF
 uF
 uF

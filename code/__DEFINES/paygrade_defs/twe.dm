@@ -48,3 +48,6 @@
 
 /// RM07, Brigadier
 #define PAY_SHORT_RMO7 "RMO7"
+
+/// RM08, General
+#define PAY_SHORT_RMO8 "RMO8"

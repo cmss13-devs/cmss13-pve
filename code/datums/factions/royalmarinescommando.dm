@@ -72,7 +72,7 @@
 /datum/faction/royal_marines_commando/get_antag_guns_snowflake_equipment()
 	return list(
 		list("PRIMARY FIREARMS", 0, null, null, null),
-		list("F903A1 Rifle", 20, /obj/item/weapon/gun/rifle/rmc_f90, null, VENDOR_ITEM_REGULAR),
+		list("F903 Rifle", 20, /obj/item/weapon/gun/rifle/rmc_f90, null, VENDOR_ITEM_REGULAR),
 		list("F903A2 Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/a_grip, null, VENDOR_ITEM_REGULAR),
 		list("F903A1 Marksman Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/scope, null, VENDOR_ITEM_REGULAR),
 		list("F903A1/B 'Breacher' Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/shotgun, null, VENDOR_ITEM_REGULAR),
@@ -111,7 +111,7 @@
 /datum/faction/royal_marines_commando/get_antag_guns_sorted_equipment()
 	return list(
 		list("PRIMARY FIREARMS", -1, null, null),
-		list("F903A1 Rifle", 20, /obj/item/weapon/gun/rifle/rmc_f90, null, VENDOR_ITEM_REGULAR),
+		list("F903 Rifle", 20, /obj/item/weapon/gun/rifle/rmc_f90, null, VENDOR_ITEM_REGULAR),
 		list("F903A2 Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/a_grip, null, VENDOR_ITEM_REGULAR),
 		list("F903A1 Marksman Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/scope, null, VENDOR_ITEM_REGULAR),
 		list("F903A1/B 'Breacher' Rifle", 30, /obj/item/weapon/gun/rifle/rmc_f90/shotgun, null, VENDOR_ITEM_REGULAR),

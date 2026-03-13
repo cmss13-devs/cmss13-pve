@@ -1501,9 +1501,9 @@ can cause issues with ammo types getting mixed up during the burst.
 //-------------------------------------------------------
 // Type-97 UPP automatic shotgun (H&K CAWS)
 
-/obj/item/weapon/gun/rifle/caws
-	name = "\improper Type 97 automatic shotgun"
-	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle."
+/obj/item/weapon/gun/rifle/caws // supposed to be used by HAI, to not have jam chance (see lower)
+	name = "\improper Type 97M automatic shotgun"
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle. This model was modified to have lower rate of fire, but with significantly less chance of jamming."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "caws"
 	item_state = "caws"
@@ -1538,9 +1538,9 @@ can cause issues with ammo types getting mixed up during the burst.
 
 /obj/item/weapon/gun/rifle/caws/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_7)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_10)
+	set_burst_delay(FIRE_DELAY_TIER_9)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
 	scatter = SCATTER_AMOUNT_TIER_8
@@ -1554,5 +1554,64 @@ can cause issues with ammo types getting mixed up during the burst.
 	attachable_offset = list("muzzle_x" = 35, "muzzle_y" = 16,"rail_x" = 15, "rail_y" = 22,	 "under_x" = 26, "under_y" = 12, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 25, "side_rail_y" = 17)
 
 /obj/item/weapon/gun/rifle/caws/stored
+	current_mag = null
+	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY
+
+#define CAWS_UNJAM_CHANCE 65
+
+/obj/item/weapon/gun/rifle/caws/auto // meant to be used by players, has a jam chance you need to have in mind when fighting
+	name = "\improper Type 97 automatic shotgun"
+	desc = "An experimental magazine fed automatic shotgun developed by the UPP, designed for extreme close encounters. While firing a smaller gauge than the more common KS-29/4 (12g compared to 8g) the Type-97 makes up for this with a superior automatic fire-rate and reduced felt recoil, even when firing in long bursts. While more controllable, it remains cumbersome to most common soldiers, however few would deny its effectiveness in close-quarters-battle."
+	var/jammed = FALSE
+
+/obj/item/weapon/gun/rifle/caws/auto/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_7
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
+	scatter_unwielded = SCATTER_AMOUNT_TIER_3
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_4
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/rifle/caws/auto/Fire(atom/target, mob/living/user, params, reflex = 0, dual_wield)
+	var/obj/item/ammo_magazine/rifle/caws/caws_mag =  current_mag
+	if(jammed)
+		if(world.time % 3)
+			playsound(src, 'sound/weapons/handling/gun_jam_click.ogg', 35, TRUE)
+			to_chat(user, SPAN_WARNING("Your gun is jammed! Mash Unique-Action to unjam it!"))
+			balloon_alert(user, "*jammed*")
+		return NONE
+	else if(prob(caws_mag.jam_chance))
+		jammed = TRUE
+		playsound(src, 'sound/weapons/handling/gun_jam_initial_click.ogg', 50, FALSE)
+		user.visible_message(SPAN_DANGER("[src] makes a noticeable clicking noise!"), SPAN_HIGHDANGER("\The [src] suddenly jams and refuses to fire! Mash Unique-Action to unjam it."))
+		balloon_alert(user, "*jammed*")
+		return NONE
+	else
+		return ..()
+
+/obj/item/weapon/gun/rifle/caws/auto/unique_action(mob/user)
+	if(jammed)
+		if(prob(CAWS_UNJAM_CHANCE))
+			to_chat(user, SPAN_GREEN("You successfully unjam \the [src]!"))
+			playsound(src, 'sound/weapons/handling/gun_jam_rack_success.ogg', 50, FALSE)
+			jammed = FALSE
+			cock_cooldown += 1 SECONDS //so they dont accidentally cock a bullet away
+			balloon_alert(user, "*unjammed!*")
+		else
+			to_chat(user, SPAN_NOTICE("You start wildly racking the bolt back and forth attempting to unjam \the [src]!"))
+			playsound(src, "gun_jam_rack", 50, FALSE)
+			balloon_alert(user, "*rack*")
+		return
+	. = ..()
+
+#undef CAWS_UNJAM_CHANCE
+
+/obj/item/weapon/gun/rifle/caws/auto/stored
 	current_mag = null
 	flags_gun_features = /obj/item/weapon/gun/rifle/caws::flags_gun_features | GUN_TRIGGER_SAFETY
