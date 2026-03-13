@@ -574,6 +574,68 @@
 	desc = "A commercial grade freezer."
 	icon_state = "freezerupper"
 	density = TRUE
+	health = 30
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer1
+	icon_state = "freezerupper"
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer2
+	icon_state = "freezerlower"
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer3
+	icon_state = "freezermid"
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer4
+	icon_state = "freezerupper1"
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer5
+	icon_state = "freezerlower1"
+
+/obj/structure/prop/hybrisa/supermart/freezer/freezer6
+	icon_state = "freezermid1"
+
+//Yes, I know these are just copies of the same stuff on Hybrisa, I'll fix them later
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket
+	name = "basket"
+	desc = "A basket."
+	icon_state = "supermarketbasketempty"
+	health = 5
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/empty
+	name = "basket"
+	desc = "A basket."
+	icon_state = "supermarketbasketempty"
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/oranges
+	name = "basket"
+	desc = "A basket full of oranges."
+	icon_state = "supermarketbasket1"
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/pears
+	name = "basket"
+	desc = "A basket full of pears."
+	icon_state = "supermarketbasket2"
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/carrots
+	name = "basket"
+	desc = "A basket full of carrots."
+	icon_state = "supermarketbasket3"
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/melons
+	name = "basket"
+	desc = "A basket full of melons."
+	icon_state = "supermarketbasket4"
+
+/obj/structure/prop/hybrisa/supermart/supermartfruitbasket/apples
+	name = "basket"
+	desc = "A basket full of apples."
+	icon_state = "supermarketbasket5"
+
+/obj/structure/prop/hybrisa/supermart/freezer
+	name = "commercial freezer"
+	desc = "A commercial grade freezer."
+	icon_state = "freezerupper"
+	density = TRUE
 
 /obj/structure/prop/hybrisa/supermart/freezer/supermartfreezer1
 	icon_state = "freezerupper"

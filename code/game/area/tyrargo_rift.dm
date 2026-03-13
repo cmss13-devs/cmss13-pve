@@ -420,8 +420,12 @@
 /area/tyrargo/outdoors/outskirts/north_east_usasf
 	name = "Outskirts  - North-East Anderson Airbase"
 
+/area/tyrargo/outdoors/outskirts/north_east_usasf/weedkiller
+
 /area/tyrargo/outdoors/outskirts/central
 	name = "Outskirts  - Central"
+
+/area/tyrargo/outdoors/outskirts/central/landing_zone
 
 /area/tyrargo/outdoors/outskirts/east
 	name = "Outskirts  - East"
@@ -505,6 +509,15 @@
 	name = "City Sewers - North"
 
 // Underground Other
+
+/area/tyrargo/underground/oob_area
+	name = "Disconnected Underground Bunker Network"
+	minimap_color = MINIMAP_AREA_OOB
+	icon_state = "Holodeck"
+	ceiling = CEILING_MAX
+	is_resin_allowed = FALSE
+	flags_area = AREA_NOTUNNEL
+	requires_power = FALSE
 
 /area/tyrargo/underground/engineering
 	name = "Sector F: Power Plant - Underground"

@@ -44,6 +44,10 @@
 	name = "Corpse - Doctor, Scrubs"
 	equip_path = /datum/equipment_preset/corpse/doctor/scrubs
 
+/obj/effect/landmark/corpsespawner/engineer
+	name = "Engineer"
+	equip_path = /datum/equipment_preset/corpse/engineer
+
 /obj/effect/landmark/corpsespawner/security
 	name = "Corpse - Security Guard, Wey-Yu"
 	equip_path = /datum/equipment_preset/colonist/corpse/security

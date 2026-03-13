@@ -853,6 +853,19 @@
 /obj/structure/platform_decoration/stone/soro/west
 	dir = WEST
 
+//TYRARGO
+
+/obj/structure/platform_decoration/stone/tyrargo
+	name = "rock corner"
+	desc = "Solid chunks of desolate rocks."
+	icon_state = "tyrargo_rock_platform_deco"
+
+/obj/structure/platform_decoration/stone/tyrargo/north
+	dir = NORTH
+/obj/structure/platform_decoration/stone/tyrargo/east
+	dir = EAST
+/obj/structure/platform_decoration/stone/tyrargo/west
+	dir = WEST
 
 /obj/structure/platform_decoration/stone/mineral
 	icon_state = "stone_deco"
