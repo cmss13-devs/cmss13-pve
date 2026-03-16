@@ -57,7 +57,7 @@
 /turf/closed/cordon
 	name = "world border"
 	icon = 'icons/turf/shuttle.dmi'
-	icon_state = "pclosed"
+	icon_state = "pwall"
 	layer = ABOVE_TURF_LAYER
 	baseturfs = /turf/closed/cordon
 

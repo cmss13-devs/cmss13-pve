@@ -1684,6 +1684,9 @@
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
 
+/obj/item/weapon/gun/rifle/m49a/army/full
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/heap
+
 /obj/item/weapon/gun/rifle/m49a/forecon
 	name = "\improper M49A2 battle rifle"
 	desc = "An early modification of the M49A marksman rifle, the A2 has a tweaked gas-system and fire-control-group, giving it better cyclic rate and a two round burst-fire mode. Fielded almost exclusively by FORECON units in the USCM. This one is painted in a fresh coat of the newer Humbrol 76 camouflage."
