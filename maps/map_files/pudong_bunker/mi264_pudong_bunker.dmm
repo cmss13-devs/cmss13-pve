@@ -8201,7 +8201,8 @@
 "Ll" = (
 /obj/structure/machinery/computer/overwatch/almayer{
 	faction = "UPP";
-	pixel_y = 22
+	pixel_y = 22;
+	can_block_movement = 0
 	},
 /obj/structure/bed/chair/comfy,
 /turf/open/floor/prison/bright_clean,
