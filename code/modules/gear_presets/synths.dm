@@ -1268,7 +1268,7 @@
 	rank = JOB_COLONIST
 	skills = /datum/skills/infiltrator_synthetic
 	idtype = /obj/item/card/id/lanyard
-	languages = list(LANGUAGE_XENOMORPH, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_SPANISH)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE, LANGUAGE_SPANISH, LANGUAGE_XENOMORPH)
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/synth/hybrid/New()
@@ -1290,7 +1290,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack/predator(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/bruise_pack/predator(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/ointment/predator(new_human), WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/advanced/ointment/predator(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/medical/splint/nano(new_human), WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/butterfly(new_human), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight(new_human), WEAR_IN_L_STORE)

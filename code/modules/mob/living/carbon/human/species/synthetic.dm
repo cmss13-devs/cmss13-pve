@@ -151,11 +151,11 @@
 
 	total_health = 125 //Tougher than a human, but not quite full bug level
 
-	body_temperature = 350
+	body_temperature = 250
 
 	mob_flags = KNOWS_TECHNOLOGY|NOBIOSCAN
-	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL|HAS_UNDERWEAR
-
+	flags = NO_BREATHE|NO_CLONE_LOSS|NO_POISON|NO_NEURO|NO_SHRAPNEL|SPECIAL_BONEBREAK|HAS_HARDCRIT|HAS_UNDERWEAR
+	flags_sight = SEE_MOBS
 	blood_color = "#550303"
 
 	has_organ = list(
@@ -179,6 +179,10 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/synthetic/proc/toggle_HUD,
 		/mob/living/carbon/human/proc/toggle_inherent_nightvison,
+		/mob/living/carbon/human/proc/psychic_whisper,
+		/mob/living/carbon/human/proc/gut,
+		/mob/living/carbon/human/proc/commune,
+		/mob/living/carbon/human/proc/tackle,
 	)
 
 /datum/species/synthetic/hybrid/handle_on_fire(humanoidmob)
@@ -186,11 +190,11 @@
 	INVOKE_ASYNC(humanoidmob, TYPE_PROC_REF(/mob, emote), pick("pain", "scream"))
 
 /datum/species/synthetic/hybrid/handle_post_spawn(mob/living/carbon/human/hybrid)
+	. = ..()
 	GLOB.alive_human_list -= hybrid
 	hybrid.universal_understand = 1
 
 	hybrid.blood_type = "???"
-	hybrid.h_style = "Standard"
 	for(var/obj/limb/limb in hybrid.limbs)
 		switch(limb.name)
 			if("groin","chest")
