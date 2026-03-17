@@ -61,6 +61,7 @@
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/ap(src)
 	new /obj/item/ammo_magazine/rocket/wp(src)
+	new /obj/item/ammo_magazine/rocket/smoke(src)
 	// skills
 	new /obj/item/pamphlet/skill/loader(src)
 
@@ -151,7 +152,7 @@
 	new /obj/item/storage/box/packet/canister(src)
 	new /obj/item/storage/box/packet/flare(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/clothing/suit/storage/marine/M3G(src)
+	new /obj/item/clothing/suit/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
 
 /obj/item/storage/box/spec/sharp_operator
@@ -165,23 +166,29 @@
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
 	new /obj/item/ammo_magazine/rifle/sharp/explosive(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/sharp/incendiary(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
 	new /obj/item/ammo_magazine/rifle/sharp/flechette(src)
+	new /obj/item/storage/belt/marine/sharp(src)
 	new /obj/item/clothing/gloves/marine/M3G(src)
-	new /obj/item/clothing/suit/storage/marine/M3G(src)
+	new /obj/item/clothing/suit/marine/M3G(src)
 	new /obj/item/clothing/head/helmet/marine/grenadier(src)
+	new /obj/item/device/multitool(src)
 
 //maybe put in req for later use?
 /obj/item/storage/box/spec/B18
-	name = "\improper B18 heavy armor case"
-	desc = "A large case containing the experimental B18 armor platform. Handle with care, it's more expensive than all of Delta combined.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
+	name = "\improper Future Warrior equipment case"
+	desc = "A large case containing the flagship components of the 'Future Warrior' program; a set of superheavy power-assisted armor, and an experimental rifle with fire-control-system. Handle with care, they're each individually more expensive than a platoon's worth of M41A rifles.\nDrag this sprite onto yourself to open it up! NOTE: You cannot put items back inside this case."
 	kit_overlay = "b18"
 
 /obj/item/storage/box/spec/B18/fill_preset_inventory()
 	new /obj/item/clothing/gloves/marine/specialist(src)
 	new /obj/item/clothing/head/helmet/marine/specialist(src)
-	new /obj/item/clothing/suit/storage/marine/specialist(src)
+	new /obj/item/clothing/suit/marine/specialist(src)
+	new /obj/item/weapon/gun/rifle/m46c(src)
 
 //-----------------SPEC KIT BOX------------------
 //For events/WO, allows the user to choose a specalist kit out of available ones in spec_kit_boxes_left list in gloabl_lists.dm

@@ -52,6 +52,7 @@
 
 /datum/ammo/bullet/shotgun/slug/special/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 7)
+	pushback(M, P, 7)
 
 /datum/ammo/bullet/shotgun/slug/es7
 	name = "electrostatic solid slug"
@@ -160,7 +161,6 @@
 	damage_var_high = PROJECTILE_VARIANCE_TIER_8
 	penetration = ARMOR_PENETRATION_TIER_5
 	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_3
-	handful_state = "flechette_shell"
 	multiple_handful_name = TRUE
 
 /datum/ammo/bullet/shotgun/flechette/on_hit_mob(mob/M,obj/projectile/P)
@@ -181,6 +181,9 @@
 
 /datum/ammo/bullet/shotgun/flechette_spread/awesome
 	damage = 50
+	max_range = 5
+	damage_var_low = PROJECTILE_VARIANCE_TIER_10
+	damage_var_high = PROJECTILE_VARIANCE_TIER_5
 
 /datum/ammo/bullet/shotgun/flechette/special
 	name = "flechette shell, USCM DU type"
@@ -256,6 +259,7 @@
 
 /datum/ammo/bullet/shotgun/buckshot/on_hit_mob(mob/M,obj/projectile/P)
 	knockback(M, P, 3)
+
 /datum/ammo/bullet/shotgun/buckshot/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob

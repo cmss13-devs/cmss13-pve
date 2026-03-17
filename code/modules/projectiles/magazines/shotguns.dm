@@ -204,6 +204,9 @@ also doesn't really matter. You can only reload them with handfuls.
 /obj/item/ammo_magazine/internal/shotgun/unloaded
 	current_rounds = 0
 
+/obj/item/ammo_magazine/internal/shotgun/unloaded/full_length
+	max_rounds = 6
+
 /obj/item/ammo_magazine/internal/shotgun/double //For a double barrel.
 	max_rounds = 2
 	current_rounds = 0

@@ -273,6 +273,8 @@
 		new_human.age = minimum_age
 
 /datum/equipment_preset/proc/load_rank(mob/living/carbon/human/new_human, client/mob_client)//Beagle-Code
+	if(isnull(paygrades))
+		return null
 	if(paygrades.len == 1)
 		return paygrades[1]
 	var/playtime
@@ -330,7 +332,7 @@
 		ID.blood_type = new_human.blood_type
 	else
 		ID.blood_type = null
-	ID.paygrade = load_rank(new_human, mob_client) || ID.paygrade
+	ID.paygrade = load_rank(new_human, mob_client)
 	var/datum/money_account/acct = create_account(new_human, rand(30, 50), GLOB.paygrades[ID.paygrade])
 	ID.associated_account_number = acct.account_number
 	ID.uniform_sets = uniform_sets
@@ -1745,6 +1747,14 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 			uniform.roll_suit_sleeves(new_human)
 	new_human.equip_to_slot_or_del(uniform, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+/datum/equipment_preset/proc/add_rmc_md(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/md_chance = rand(1,3)
+	switch(md_chance)
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/proc/add_iasf_uniform(mob/living/carbon/human/new_human)
 	var/obj/item/clothing/under/marine/veteran/iasf/uniform = new()

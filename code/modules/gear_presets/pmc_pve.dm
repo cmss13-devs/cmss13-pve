@@ -21,7 +21,7 @@
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_SENIOR_LEAD, ACCESS_WY_ARMORY)
 	assignment = JOB_PMCPLAT_LEADER
 	rank = JOB_SQUAD_LEADER
-	skills = /datum/skills/pmc/director
+	skills = /datum/skills/SL
 
 /datum/equipment_preset/uscm/pmc/tl
 	name = "Team Leader"
@@ -30,7 +30,7 @@
 	access = list(ACCESS_WY_GENERAL, ACCESS_WY_PMC_TL)
 	assignment = JOB_PMCPLAT_FTL
 	rank = JOB_SQUAD_TEAM_LEADER
-	skills = /datum/skills/pmc/SL
+	skills = /datum/skills/tl
 
 /datum/equipment_preset/uscm/pmc/sg
 	name = "Heavy Weapons Specialist"

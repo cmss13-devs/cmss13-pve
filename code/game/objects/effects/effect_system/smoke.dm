@@ -505,8 +505,8 @@
 		to_chat(creature, SPAN_WARNING("Your training protects you from the tear gas!"))
 	else
 		to_chat(creature, SPAN_WARNING("You feel the sting of the tear gas!"))
-		creature.AdjustEyeBlur(25)
-		creature.AdjustEyeBlind(10)
+		creature.AdjustEyeBlur(2)
+		creature.AdjustEyeBlind(1)
 
 	creature.emote("scream")
 	creature.apply_effect(3, SLOW)

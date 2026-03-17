@@ -250,7 +250,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_NEUROPEUTIC = 0.25)
+	properties = list(PROPERTY_NEUROPEUTIC = 1)
 
 /datum/reagent/medical/imidazoline
 	name = "Imidazoline"
@@ -262,7 +262,7 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_critical = REAGENTS_OVERDOSE_CRITICAL
 	chemclass = CHEM_CLASS_UNCOMMON
-	properties = list(PROPERTY_OCULOPEUTIC = 0.25)
+	properties = list(PROPERTY_OCULOPEUTIC = 1)
 
 /datum/reagent/medical/peridaxon
 	name = "Peridaxon"
@@ -274,7 +274,7 @@
 	overdose_critical = LOWH_REAGENTS_OVERDOSE_CRITICAL
 	custom_metabolism = AMOUNT_PER_TIME(1, 120 SECONDS)
 	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
+	properties = list(PROPERTY_ORGANSTABILIZE = 3, PROPERTY_CARDIOPEUTIC = 0.25, PROPERTY_HEPATOPEUTIC = 0.25, PROPERTY_NEPHROPEUTIC = 0.25, PROPERTY_PNEUMOPEUTIC = 0.25)
 
 /datum/reagent/medical/bicaridine // yes it cures IB, it's located in some other part of wound code for whatever reason
 	name = "Bicaridine"

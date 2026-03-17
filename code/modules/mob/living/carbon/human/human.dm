@@ -115,7 +115,7 @@
 			. += "Primary Objective: [html_decode(assigned_squad.primary_objective)]"
 		if(assigned_squad.secondary_objective)
 			. += "Secondary Objective: [html_decode(assigned_squad.secondary_objective)]"
-	if(job in GLOB.ROLES_USCM)
+	if((job in GLOB.ROLES_USCM) || (job in GLOB.ROLES_RMCTROOP))
 		. += ""
 		. += "<a href='byond://?MapView=1'>View Tactical Map</a>"
 	if(mobility_aura)
@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")

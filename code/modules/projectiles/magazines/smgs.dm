@@ -243,6 +243,10 @@
 	bonus_overlay = "mac15_ext"
 	max_rounds = 50
 
+/obj/item/ammo_magazine/smg/mac15/extended/terror
+	name = "\improper MAC-15 cursed magazine (9mm)"
+	default_ammo = /datum/ammo/xeno_container
+
 //-------------------------------------------------------
 // the real UZI
 

@@ -388,9 +388,17 @@
 			if(!do_after(src, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				to_chat(src, SPAN_WARNING("You need to set up the high toss!"))
 				return
+			animation_attack_on(target, 6)
+			//The volume of the sound takes the minimum between the distance thrown or the max range an item, but no more than 15. Short throws are quieter. Invisible mobs do no sound.
+			if(alpha >= 50)
+				playsound(src, "throwing", min(5*min(get_dist(loc,target),thrown_thing.throw_range), 15), vary = TRUE, sound_range = 6)
 			drop_inv_item_on_ground(I, TRUE)
 			thrown_thing.throw_atom(target, thrown_thing.throw_range, SPEED_SLOW, src, spin_throw, HIGH_LAUNCH)
 		else
+			animation_attack_on(target, 6)
+			//The volume of the sound takes the minimum between the distance thrown or the max range an item, but no more than 15. Short throws are quieter. Invisible mobs do no sound.
+			if(alpha >= 50)
+				playsound(src, "throwing", min(5*min(get_dist(loc,target),thrown_thing.throw_range), 15), vary = TRUE, sound_range = 6)
 			drop_inv_item_on_ground(I, TRUE)
 			thrown_thing.throw_atom(target, thrown_thing.throw_range, thrown_thing.throw_speed, src, spin_throw)
 
@@ -543,3 +551,33 @@
 		set_lying_angle(pick(90, 270))
 	else
 		set_lying_angle(new_lying_angle)
+
+///Used for shifting a target mob to the user. Use positive values. Proc will handle the direction. If no pixel_amount_y is given it will use pixel_amount_x
+/mob/living/carbon/proc/pixel_shift_target_mob(mob/target, pixel_amount_x, pixel_amount_y = null)
+	if(pixel_amount_y == null)
+		pixel_amount_y = pixel_amount_x
+	switch(get_dir(src, target))
+		if(NORTH)
+			target.pixel_y -= pixel_amount_y
+		if(EAST)
+			target.pixel_x -= pixel_amount_x
+		if(SOUTH)
+			target.pixel_y += pixel_amount_y
+		if(WEST)
+			target.pixel_x += pixel_amount_x
+		if(NORTHEAST)
+			target.pixel_x -= pixel_amount_x
+			target.pixel_y -= pixel_amount_y
+		if(NORTHWEST)
+			target.pixel_y -= pixel_amount_y
+			target.pixel_x += pixel_amount_x
+		if(SOUTHEAST)
+			target.pixel_y += pixel_amount_y
+			target.pixel_x -= pixel_amount_x
+		if(SOUTHWEST)
+			target.pixel_y += pixel_amount_y
+			target.pixel_x += pixel_amount_x
+
+/mob/living/carbon/proc/reset_pixel_shift()
+	src.pixel_y = 0
+	src.pixel_x = 0

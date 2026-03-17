@@ -283,8 +283,6 @@
 	src.reagents.reaction(target, INGEST)
 	var/syringestab_amount_transferred = (reagents.total_volume - 2)
 	src.reagents.trans_to(target, syringestab_amount_transferred)
-	src.desc += " It is broken."
-	src.mode = SYRINGE_BROKEN
 	src.add_mob_blood(target)
 	src.add_fingerprint(usr)
 	src.update_icon()

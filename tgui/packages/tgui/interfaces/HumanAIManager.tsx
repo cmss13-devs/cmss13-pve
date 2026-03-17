@@ -400,7 +400,7 @@ const SquadReadout = (props) => {
 export const HumanAIManager = (props) => {
   return (
     <Window width={1850} height={610} title="Human AI Manager">
-      <Window.Content>
+      <Window.Content scrollable>
         <AIContext />
       </Window.Content>
     </Window>

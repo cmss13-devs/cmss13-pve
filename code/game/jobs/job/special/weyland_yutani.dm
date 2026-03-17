@@ -120,3 +120,28 @@
 /datum/job/special/wey_yu/pmc/commando_dogcatcher
 	title = JOB_WY_COMMANDO_DOGCATHER
 	gear_preset = /datum/equipment_preset/pmc/commando/dogcatcher
+
+// GOONS //
+
+/datum/job/special/wey_yu/goon
+	supervisors = "Weyland-Yutani Corporate Security"
+
+/datum/job/special/wey_yu/goon/standard
+	title = JOB_WY_GOON
+	gear_preset = /datum/equipment_preset/goon/standard
+
+/datum/job/special/wey_yu/goon/medic
+	title = JOB_WY_GOON_MEDIC
+	gear_preset = /datum/equipment_preset/goon/medic
+
+/datum/job/special/wey_yu/goon/engineer
+	title = JOB_WY_GOON_TECH
+	gear_preset = /datum/equipment_preset/goon/engineer
+
+/datum/job/special/wey_yu/goon/lead
+	title = JOB_WY_GOON_LEAD
+	gear_preset = /datum/equipment_preset/goon/lead
+
+/datum/job/special/wey_yu/goon/researcher
+	title = JOB_WY_RESEARCHER
+	gear_preset = /datum/equipment_preset/goon/researcher

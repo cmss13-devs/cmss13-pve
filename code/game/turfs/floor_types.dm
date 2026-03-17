@@ -1406,10 +1406,23 @@
 /turf/open/floor/almayer_hull/blackfull
 	icon_state = "blackfull"
 
+/turf/open/floor/almayer_hull/corner
+	icon_state = "blackfull_corner"
 
+/turf/open/floor/almayer_hull/corner/northeast
+	dir = NORTHEAST
 
+/turf/open/floor/almayer_hull/corner/southeast
+	dir = SOUTHEAST
 
+/turf/open/floor/almayer_hull/corner/northwest
+	dir = NORTHWEST
 
+/turf/open/floor/almayer_hull/corner/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/almayer_hull/glass
+	icon_state = "blackfull_glass"
 
 //////////////////////////////////////////////////////////////////////
 

@@ -692,6 +692,7 @@
 	AddComponent(/datum/component/iff_fire_prevention)
 
 //---ability actions--\\
+
 /datum/action/item_action/rmcdmr/action_activate()
 	. = ..()
 	var/obj/item/weapon/gun/rifle/sniper/rmc/smartrifle = holder_item
@@ -724,6 +725,7 @@
 	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 // -- ability actions procs -- \\
+
 /obj/item/weapon/gun/rifle/sniper/rmc/proc/toggle_iff(mob/user)
 	iff_enabled = !iff_enabled
 	to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You [iff_enabled? "enable": "disable"] the IFF on [src]."))

@@ -335,6 +335,12 @@
 	if(!.)
 		return
 
+/*
+	if(user.client?.view > 7)
+		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
+		return FALSE
+*/
+
 	if(!NVG_VISOR_USAGE(FALSE))
 		to_chat(user, SPAN_NOTICE("Your [src] is out of power! You'll need to recharge it."))
 		return FALSE
@@ -353,6 +359,21 @@
 		user.see_in_dark = 12
 	user.lighting_alpha = lighting_alpha
 	user.sync_lighting_plane_alpha()
+
+/obj/item/device/helmet_visor/night_vision/proc/change_view(mob/user, new_size)
+	SIGNAL_HANDLER
+	if(new_size > 20) // cannot use loooong-range optics with NVO
+		var/obj/item/clothing/head/helmet/marine/attached_helmet = loc
+		if(!istype(attached_helmet))
+			return
+		deactivate_visor(attached_helmet, user)
+		to_chat(user, SPAN_NOTICE("You deactivate [src] on [attached_helmet]."))
+		playsound_client(user.client, toggle_off_sound, null, 75)
+		attached_helmet.active_visor = null
+		attached_helmet.update_icon()
+		var/datum/action/item_action/cycle_helmet_huds/cycle_action = locate() in attached_helmet.actions
+		if(cycle_action)
+			cycle_action.set_default_overlay()
 
 #undef NVG_VISOR_USAGE
 

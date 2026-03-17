@@ -8142,10 +8142,6 @@
 /obj/item/clothing/gloves/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
 /area/firefly/cafeteria)
-"avr" = (
-/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc/apesuit,
-/turf/open/floor/corsat/squares,
-/area/firefly/cafeteria)
 "avs" = (
 /obj/item/clothing/suit/marine/veteran/pmc/apesuit,
 /turf/open/floor/corsat/squares,
@@ -8791,7 +8787,6 @@
 	dir = 8;
 	light_power = 0.7
 	},
-/obj/item/smartgun_battery,
 /turf/open/floor/corsat/cargo,
 /area/firefly/squad_omega)
 "axe" = (
@@ -22223,7 +22218,10 @@
 /area/firefly/supply)
 "pgD" = (
 /obj/structure/medical_supply_link/green,
-/obj/structure/machinery/cm_vending/sorted/medical/no_access,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access{
+	req_one_access = list(202);
+	hackable = 0
+	},
 /turf/open/floor/corsat/purple/north,
 /area/firefly/medical)
 "pgE" = (
@@ -36523,7 +36521,7 @@ fDZ
 acQ
 avw
 avs
-avr
+adk
 avn
 avo
 acQ
@@ -43685,9 +43683,9 @@ rNE
 sQd
 rNE
 aev
-rNE
 sQd
 rNE
+sQd
 aev
 siC
 aei

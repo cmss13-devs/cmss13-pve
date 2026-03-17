@@ -266,7 +266,7 @@
 
 /obj/item/weapon/gun/launcher/grenade/m92
 	name = "\improper M92 grenade launcher"
-	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
+	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "m92"
 	item_state = "m92"
@@ -281,7 +281,7 @@
 
 	is_lobbing = TRUE
 	throw_range = 20
-	internal_slots = 6
+	internal_slots = 8
 	direct_draw = FALSE
 
 /obj/item/weapon/gun/launcher/grenade/m92/set_gun_attachment_offsets()
@@ -292,7 +292,7 @@
 	set_fire_delay(FIRE_DELAY_TIER_3)
 
 /obj/item/weapon/gun/launcher/grenade/m92/scoped
-	desc = "A heavy, 6-shot grenade launcher used by the Colonial Marines for area denial and big explosions. This one is outfitted with a low-power scope securely mounted to it."
+	desc = "A heavy, 8-shot grenade launcher used by the Colonial Marines for area denial and big explosions. This one is outfitted with a low-power scope securely mounted to it."
 
 /obj/item/weapon/gun/launcher/grenade/m92/scoped/handle_starting_attachment()
 	..()
@@ -310,10 +310,12 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
 	icon_state = "m92_upp"
 	item_state = "m92_upp"
+	internal_slots = 6
 	flags_item = TWOHANDED
 	map_specific_decoration = FALSE
 	preload = /obj/item/explosive/grenade/high_explosive/impact/upp
-	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp, /obj/item/attachable/scope/mini)
+	attachable_allowed = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/sling, /obj/item/attachable/verticalgrip/upp)
+	starting_attachment_types = list()
 
 /obj/item/weapon/gun/launcher/grenade/m92/upp/set_gun_config_values()
 	..()
@@ -367,6 +369,7 @@
 		/obj/item/explosive/grenade/high_explosive/impact/heap/rmc20mm,
 	)
 	preload = /obj/item/explosive/grenade/high_explosive/impact/rmc20mm
+	starting_attachment_types = list()
 
 	is_lobbing = TRUE
 	internal_slots = 12

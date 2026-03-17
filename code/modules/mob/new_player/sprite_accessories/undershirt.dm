@@ -103,6 +103,10 @@ GLOBAL_LIST_INIT_TYPED(undershirt_restricted, /datum/sprite_accessory/undershirt
 
 /datum/sprite_accessory/undershirt/telnyashka
 	name = "Naval Infantry Telnyashka"
+	icon_state = "telnyashka_black"
+
+/datum/sprite_accessory/undershirt/telnyashka/paratrooper
+	name = "Airborne Telnyashka"
 	icon_state = "telnyashka_blue"
 
 /datum/sprite_accessory/undershirt/telnyashka/territorial
