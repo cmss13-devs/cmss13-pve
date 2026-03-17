@@ -165,9 +165,6 @@
 		if(!H.shoes && prob(50))
 			H.contract_disease(new /datum/disease/black_goo)
 
-
-
-
 /obj/effect/decal/cleanable/mucus
 	name = "mucus"
 	desc = "Disgusting mucus."
@@ -178,3 +175,27 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mucus"
 	random_icon_states = list("mucus")
+
+//Hybrisa Dirt & Grime
+/obj/effect/decal/cleanable/Hybrisa
+	gender = PLURAL
+	density = FALSE
+	anchored = TRUE
+	layer = TURF_LAYER
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/effect/decal/cleanable/hybrisa/dirt
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "dirt"
+
+/obj/effect/decal/cleanable/hybrisa/dirt_2
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "dirt_2"
+
+/obj/effect/decal/cleanable/hybrisa/bloodtrail
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "bloodtrail"
+
+/obj/effect/decal/cleanable/hybrisa/trash
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "trash_1"

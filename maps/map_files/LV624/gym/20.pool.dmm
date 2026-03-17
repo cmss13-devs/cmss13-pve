@@ -21,7 +21,7 @@
 /area/lv624/ground/jungle/central_jungle)
 "iv" = (
 /obj/item/toy/inflatable_duck,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/lazarus/fitness)
 "iJ" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
@@ -120,7 +120,7 @@
 /area/lv624/lazarus/fitness)
 "yO" = (
 /obj/item/toy/beach_ball,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/lazarus/fitness)
 "Bv" = (
 /obj/structure/machinery/light{
@@ -147,7 +147,7 @@
 /turf/open/floor,
 /area/lv624/lazarus/fitness)
 "EG" = (
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/lazarus/fitness)
 "Fx" = (
 /obj/structure/window_frame/colony,
@@ -206,7 +206,7 @@
 /area/lv624/lazarus/fitness)
 "Ou" = (
 /obj/effect/landmark/survivor_spawner,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/lazarus/fitness)
 "Pw" = (
 /turf/open/gm/dirt,
@@ -296,7 +296,7 @@
 /area/lv624/lazarus/fitness)
 "Zo" = (
 /obj/effect/landmark/good_item,
-/turf/open/gm/river,
+/turf/open/liquid/water/river,
 /area/lv624/lazarus/fitness)
 "ZM" = (
 /obj/structure/fence,

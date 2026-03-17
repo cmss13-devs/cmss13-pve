@@ -7164,13 +7164,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/platoon_commander_rooms)
-"axN" = (
-/obj/effect/landmark/observer_start,
-/obj/structure/disposalpipe/segment{
-	dir = 1
-	},
-/turf/open/floor/almayer,
-/area/golden_arrow/cryo_cells)
 "axO" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/recharger{
@@ -25349,7 +25342,7 @@ alP
 atN
 abe
 abg
-axN
+abg
 abe
 abe
 apV
