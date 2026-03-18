@@ -72,7 +72,7 @@
 		"abstract" = 1,
 	)
 
-	explosive_resistance = 800
+	explosive_resistance = 1000
 
 /obj/vehicle/multitile/tank/ridgeway/initialize_cameras(change_tag = FALSE)
 	if(!camera)

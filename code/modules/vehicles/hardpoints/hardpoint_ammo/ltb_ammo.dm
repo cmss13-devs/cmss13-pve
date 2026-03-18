@@ -12,7 +12,7 @@
 	icon_state = "ltbcannon_[current_rounds]"
 
 /obj/item/ammo_magazine/hardpoint/ltb_cannon/ridgeway
-	name = "Ridgeway Cannon Magazine"
+	name = "115mm Ridgeway Cannon Magazine"
 	desc = "A magazine of high-explosive, anti-tank cannon rounds."
 	caliber = "115mm" //Making this unique on purpose
 	icon_state = "ridgewaycannon_6"

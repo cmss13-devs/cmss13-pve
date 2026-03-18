@@ -293,7 +293,7 @@
 
 //RIDGEWAY TANK CANNON
 /datum/ammo/rocket/ltb/ridgeway
-	name = "cannon round"
+	name = "115mm round"
 	icon_state = "ridgeway"
 	flags_ammo_behavior = AMMO_EXPLOSIVE|AMMO_ROCKET
 
@@ -310,8 +310,8 @@
 	if(mob.mob_size >= MOB_SIZE_BIG)
 		var/mob/living/alivent = mob
 		alivent.apply_armoured_damage(damage*15, ARMOR_BOMB, BRUTE, null, penetration)
-	cell_explosion(get_turf(mob), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(mob), 170, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 175, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(mob), 160, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/ridgeway/on_hit_obj(obj/object, obj/projectile/projectile)
 	if(istype(object, /obj/vehicle/multitile))
@@ -325,16 +325,16 @@
 		smoke.set_up(1, turf)
 		smoke.start()
 		return
-	cell_explosion(get_turf(object), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(object), 170, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), 175, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(object), 160, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/ridgeway/on_hit_turf(turf/turf, obj/projectile/projectile)
-	cell_explosion(get_turf(turf), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(turf), 170, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 175, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(turf), 160, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 /datum/ammo/rocket/ltb/ridgeway/do_at_max_range(obj/projectile/projectile)
-	cell_explosion(get_turf(projectile), 220, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
-	cell_explosion(get_turf(projectile), 170, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 175, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	cell_explosion(get_turf(projectile), 160, 100, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
 
 
 /datum/ammo/rocket/wp
