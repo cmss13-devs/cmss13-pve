@@ -1,8 +1,7 @@
 // Plasma cannon for ridgeway tank
 /obj/item/hardpoint/primary/cannon/plasmacannon
-	name = "\improper Plasma Cannon"
-	desc = "A primary weapon for UPP tanks that fires hypervelocity sabots."
-	desc_lore = "An experimental chemical-railgun developed in a secreted orbital facility outside of Sol for hard targets, such as bunkers or dedicated armour. Using a high-efficiency hypergolic propellant as the first stage, which is then accelerated to blistering velocities by the magnetic rails. Thanks to excessive energy requirements, the turret internals were significantly remodelled to account for the capacitors and dedicated generator. Suffers from wear-through issues on barrels, and heat-masking."
+	name = "\improper Boyars PARS 177 PDW"
+	desc = "The Boyars PARS 177 Point-Defence-Weapon is a 20kW phased plasma directed energy weapon used to defend the M40 Ridgeway from aerospace craft, missiles, and unofficially, visible hostile infantry. A welcome improvement over older laser based systems employed by the M22 Jackson and M34 Longstreet, providing hard-kill ability capable of downing aircraft and flash-vaporizing infantry."
 
 	icon = 'icons/obj/vehicles/hardpoints/tank.dmi'
 	icon_state = "plasma_cannon"
@@ -23,8 +22,7 @@
 		"8" = list(-35, 2)
 	)
 
-	use_muzzle_flash = TRUE
-	angle_muzzleflash = FALSE
+	use_muzzle_flash = FALSE
 	muzzleflash_icon_state = "muzzle_flash_blue"
 
 	muzzle_flash_pos = list(

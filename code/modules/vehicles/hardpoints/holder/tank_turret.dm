@@ -306,8 +306,8 @@
 
 // Rideway turret
 /obj/item/hardpoint/holder/tank_turret/ridgeway
-	name = "\improper M34A2-A Multipurpose Turret"
-	desc = "The centerpiece of the tank. Designed to support quick installation and deinstallation of various tank weapon modules. Has inbuilt flare deployment system."
+	name = "\improper M40 Ridgeway Turret"
+	desc = "  The turret of the M40 Ridgeway heavy tank. A significant improvement over older vehicles, the Ridgeway is capable of deploying vastly superior weapons, defensive systems, optics and sensors without sacrificing on its armour or taking on excessive weight."
 
 	icon = 'icons/obj/vehicles/ridgeway.dmi'
 	icon_state = "tank_turret_0"
