@@ -1899,6 +1899,10 @@
 /obj/item/weapon/gun/rifle/r81m1a/modded
 	starting_attachment_types = list(/obj/item/attachable/bayonet, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
 
+/obj/item/weapon/gun/rifle/r81m1a/unloaded
+	current_mag = null
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+
 // R81M1B Marksman Rifle
 /obj/item/weapon/gun/rifle/r81m1a/m1b
 	name = "\improper R81M1B pulse marksman rifle"
