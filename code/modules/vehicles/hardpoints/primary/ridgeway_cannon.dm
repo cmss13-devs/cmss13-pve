@@ -10,7 +10,7 @@
 	health = 2000
 	firing_arc = 75
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/ltb_cannon/ridgeway
+	ammo = new /obj/item/ammo_magazine/hardpoint/ridgewaycannon
 	max_clips = 6
 
 	px_offsets = list(

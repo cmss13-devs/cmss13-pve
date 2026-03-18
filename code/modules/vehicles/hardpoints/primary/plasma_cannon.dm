@@ -13,7 +13,7 @@
 	firing_arc = 60
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/plasmacannon
-	max_clips = 2
+	max_clips = 3
 
 	px_offsets = list(
 		"1" = list(0, 46),

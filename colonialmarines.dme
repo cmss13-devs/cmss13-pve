@@ -2623,6 +2623,7 @@
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\plasma_cannon.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\primary_flamer_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\railgun.dm"
+#include "code\modules\vehicles\hardpoints\hardpoint_ammo\ridgewaycannon_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\secondary_flamer_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\smoke_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\t60p3m.dm"
