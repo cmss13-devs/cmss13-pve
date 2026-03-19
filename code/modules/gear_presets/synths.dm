@@ -1277,6 +1277,7 @@
 
 /datum/equipment_preset/synth/hybrid/load_race(mob/living/carbon/human/new_human)
 	new_human.set_species("Hybrid")
+	new_human.h_style = pick("Undercut, Top", "CIA", "Mulder", "Pixie Cut Left", "Pixie Cut Right", "Scully", "Pvt. Redding", "Bun", "Short Bangs")
 
 /datum/equipment_preset/synth/hybrid/load_skills(mob/living/carbon/human/new_human)
 		new_human.set_skills(/datum/skills/infiltrator_synthetic)
