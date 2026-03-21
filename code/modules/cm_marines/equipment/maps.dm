@@ -199,6 +199,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_LV818_FEATURELESS_JUNGLE = new /obj/item/map/lv522_map (),
 		MAP_TAIPEI = new /obj/item/map/taipei(),
 		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
+		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
 	)
 
 //used by marine equipment machines to spawn the correct map.

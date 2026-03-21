@@ -53,6 +53,7 @@
 #define MAP_LV818_FEATURELESS_JUNGLE "LV818 Featureless Jungle"
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
+#define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

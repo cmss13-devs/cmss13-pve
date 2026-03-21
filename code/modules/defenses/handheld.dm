@@ -272,6 +272,10 @@
 	icon_state = "Stun tesla_coil_handheld"
 	defense_type = /obj/structure/machinery/defenses/tesla_coil/stun
 
+/obj/item/defenses/handheld/tesla_coil/stun/rmc
+	name = "handheld L33A1 TED device"
+	defense_type = /obj/structure/machinery/defenses/tesla_coil/stun/rmc
+
 /obj/item/defenses/handheld/tesla_coil/micro
 	name = "handheld 25S micro tesla coil"
 	icon_state = "Micro tesla_coil_handheld"

@@ -768,3 +768,6 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/colony.dmi'
 	icon_state = "spearhead_black"
 	item_state = "spearhead_black"
+
+/obj/item/weapon/gun/revolver/spearhead/black/hollowpoint
+	current_mag = /obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint

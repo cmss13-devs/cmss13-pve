@@ -1,7 +1,7 @@
 // Van MG
 /obj/item/hardpoint/primary/van_mg
 	name = "\improper Adjusted M56 Cupola"
-	desc = "A secondary weapon for tanks that shoots bullets, this one has been slightly adjusted to fit onto an Armored Van."
+	desc = "A remotely-controlled weapon system for armored vehicles using a modified M56."
 
 	icon_state = "m56_cupola"
 	disp_icon = "van"
