@@ -303,3 +303,11 @@
 		data += list(H.get_tgui_info())
 
 	return data
+
+
+/obj/item/hardpoint/holder/tank_turret/wolfpack
+	accepted_hardpoints = list(
+		// primaries
+		/obj/item/hardpoint/primary/cannon,
+		// secondaries
+	)
