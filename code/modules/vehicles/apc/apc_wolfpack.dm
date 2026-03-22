@@ -1,17 +1,17 @@
 
 /obj/vehicle/multitile/apc/wolfpack
-	name = "M577A3 Armored Personnel Carrier"
-	desc = "An M577A3 Armored Personnel Carrier complete with a tactical operations center. Entrance on the right."
+	name = "M577A3E2 Mobile Gun System"
+	desc = "An M577A3E2 Mobile Gun System complete with a tactical operations center. Entrance on the right."
 
-	icon = 'icons/obj/vehicles/movieapc.dmi'
-	icon_state = "apc_base_movie"
+	icon = 'icons/obj/vehicles/apc_wolfpack.dmi'
+	icon_state = "apc_base_wolfpack"
 	pixel_x = -64
 	pixel_y = -64
 
 	bound_width = 96
 	bound_height = 96
 
-	interior_map = /datum/map_template/interior/apc_movie
+	interior_map = /datum/map_template/interior/apc_wolfpack
 
 
 	passengers_slots = 20
@@ -30,7 +30,6 @@
 		VEHICLE_DRIVER = null,
 		VEHICLE_GUNNER = null,
 	)
-
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 2.6,
@@ -44,12 +43,15 @@
 	wall_ram_damage = 100
 	vehicle_ram_multiplier = 10
 	hardpoints_allowed = list(
-		/obj/item/hardpoint/holder/tank_turret,
+		/obj/item/hardpoint/holder/tank_turret/wolfpack,
 		/obj/item/hardpoint/secondary/frontalcannon,
-		/obj/item/hardpoint/support/flare_launcher,
+		/obj/item/hardpoint/support/artillery_module,
 		/obj/item/hardpoint/locomotion/apc_wheels,
 	)
 
+	move_max_momentum = 2.3
+	move_momentum_build_factor = 1.5
+	move_turn_momentum_loss_factor = 0.7
 
 /obj/vehicle/multitile/apc/wolfpack/add_seated_verbs(mob/living/M, seat)
 	if(!M.client)
@@ -62,14 +64,13 @@
 	if(seat == VEHICLE_DRIVER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
-			/obj/vehicle/multitile/proc/switch_hardpoint,
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
 		))
 
 /obj/vehicle/multitile/apc/wolfpack/remove_seated_verbs(mob/living/M, seat)
@@ -84,15 +85,56 @@
 	if(seat == VEHICLE_DRIVER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/activate_horn,
 		))
 	else if(seat == VEHICLE_GUNNER)
-		remove_verb(M.client, list(
-			/obj/vehicle/multitile/proc/switch_hardpoint,
+		remove_verb(,.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+			/obj/vehicle/multitile/proc/switch_hardpoint,
 		))
+
+/obj/vehicle/multitile/apc/wolfpack/relaymove(mob/user, direction)
+	if(user == seats[VEHICLE_DRIVER])
+		return ..()
+
+	if(user != seats[VEHICLE_GUNNER])
+		return FALSE
+
+	var/obj/item/hardpoint/holder/tank_turret/wolfpack/turret = null
+	for(var/obj/item/hardpoint/holder/tank_turret/wolfpack/tonkturret in hardpoints)
+		turret = tonkturret
+		break
+	if(!turret)
+		return FALSE
+
+	if(direction == GLOB.reverse_dir[turret.dir] || direction == turret.dir)
+		return FALSE
+
+	turret.user_rotation(user, turning_angle(turret.dir, direction))
+	update_icon()
+
+	return TRUE
+
+/obj/vehicle/multitile/apc/wolfpack/MouseDrop_T(mob/dropped, mob/user)
+	. = ..()
+	if((dropped != user) || !isxeno(user))
+		return
+
+	if(health > 0)
+		to_chat(user, SPAN_XENO("We can't jump over [src] until it is destroyed!"))
+		return
+
+	var/turf/current_turf = get_turf(user)
+	var/dir_to_go = get_dir(current_turf, src)
+	for(var/i in 1 to 3)
+		current_turf = get_step(current_turf, dir_to_go)
+		if(!(current_turf in locs))
+			break
+
+		if(current_turf.density)
+			to_chat(user, SPAN_XENO("The path over [src] is obstructed!"))
+			return
 
 /obj/vehicle/multitile/apc/wolfpack/initialize_cameras(change_tag = FALSE)
 	if(!camera)
@@ -132,23 +174,19 @@
 			)
 	return ..()
 
-/*
-** PRESETS SPAWNERS
-*/
 /obj/effect/vehicle_spawner/apc_wolfpack
 	name = "Wolfpack APC Spawner"
-	icon = 'icons/obj/vehicles/movieapc.dmi'
-	icon_state = "apc_base_movie"
+	icon = 'icons/obj/vehicles/apc_wolfpack.dmi'
+	icon_state = "apc_base_wolfpack"
 	pixel_x = -64
 	pixel_y = -64
 
-/obj/effect/vehicle_spawner/wolfpack/Initialize()
+/obj/effect/vehicle_spawner/apc_wolfpack/Initialize()
 	. = ..()
 	spawn_vehicle()
 	qdel(src)
 
-//PRESET: no hardpoints
-/obj/effect/vehicle_spawner/wolfpack/spawn_vehicle()
+/obj/effect/vehicle_spawner/apc_wolfpack/spawn_vehicle()
 	var/obj/vehicle/multitile/apc/wolfpack/APC = new (loc)
 
 	load_misc(APC)
@@ -157,28 +195,10 @@
 	APC.update_icon()
 
 //PRESET: only wheels installed
-/obj/effect/vehicle_spawner/apc_wolfpack/plain/load_hardpoints(obj/vehicle/multitile/apc/wolfpack/V)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
-
-//PRESET: default hardpoints, destroyed
-/obj/effect/vehicle_spawner/apc_wolfpack/decrepit/spawn_vehicle()
-	var/obj/vehicle/multitile/apc/wolfpack/APC = new (loc)
-
-	load_misc(APC)
-	load_hardpoints(APC)
-	handle_direction(APC)
-	load_damage(APC)
-	APC.update_icon()
-
-/obj/effect/vehicle_spawner/apc_wolfpack/decrepit/load_hardpoints(obj/vehicle/multitile/apc/wolfpack/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/dualcannon)
+/obj/effect/vehicle_spawner/apc_wolfpack/plain/load_hardpoints(obj/vehicle/multitile/apc/movie/V)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret/wolfpack)
 	V.add_hardpoint(new /obj/item/hardpoint/secondary/frontalcannon)
-	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
-
-//PRESET: default hardpoints
-/obj/effect/vehicle_spawner/apc_wolfpack/fixed/load_hardpoints(obj/vehicle/multitile/apc/wolfpack/V)
-	V.add_hardpoint(new /obj/item/hardpoint/primary/dualcannon)
-	V.add_hardpoint(new /obj/item/hardpoint/secondary/frontalcannon)
-	V.add_hardpoint(new /obj/item/hardpoint/support/flare_launcher)
-	V.add_hardpoint(new /obj/item/hardpoint/locomotion/apc_wheels)
+	V.add_hardpoint(new /obj/item/hardpoint/support/artillery_module)
+	for(var/obj/item/hardpoint/holder/tank_turret/wolfpack/tonkturret in V.hardpoints)
+		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon/wolfpack)
