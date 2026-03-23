@@ -17,6 +17,11 @@
 	pixel_y = -5;
 	layer = 2.01
 	},
+/obj/structure/prop/invuln/ice_prefab/roof_greeble{
+	icon_state = "vent6";
+	pixel_x = -2;
+	pixel_y = -11
+	},
 /turf/open/void/vehicle,
 /area/space)
 "c" = (
@@ -33,7 +38,7 @@
 	},
 /obj/item/toy/handcard/aceofspades{
 	pixel_x = -8;
-	pixel_y = 7
+	pixel_y = -3
 	},
 /turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
@@ -288,7 +293,8 @@
 	},
 /obj/structure/prop/ice_colony/hula_girl{
 	pixel_y = 9;
-	pixel_x = -12
+	pixel_x = -12;
+	layer = 3.5
 	},
 /obj/item/ashtray/plastic{
 	pixel_y = 6;
@@ -299,8 +305,8 @@
 	pixel_x = 10
 	},
 /obj/item/tool/pen/red/clicky{
-	pixel_y = 19;
-	pixel_x = 4
+	pixel_y = 8;
+	pixel_x = 2
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
