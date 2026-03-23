@@ -36,6 +36,7 @@
 
 /obj/item/device/assembly/prox_sensor/active
 	name = "armed proximity sensor"
+	range = 3
 
 /obj/item/device/assembly/prox_sensor/active/New()
     ..()
