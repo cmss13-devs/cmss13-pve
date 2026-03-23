@@ -34,6 +34,15 @@
 	update_icon()
 	return secured
 
+/obj/item/device/assembly/prox_sensor/active
+	name = "armed proximity sensor"
+
+/obj/item/device/assembly/prox_sensor/active/New()
+    ..()
+    secured = TRUE
+    scanning = TRUE
+    update_icon()
+    START_PROCESSING(SSobj, src)
 
 /obj/item/device/assembly/prox_sensor/HasProximity(atom/movable/AM)
 	if((!holder && !secured) || !scanning || cooldown>0 || delaying)
