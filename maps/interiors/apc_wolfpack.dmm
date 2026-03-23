@@ -31,6 +31,10 @@
 	pixel_y = 12;
 	pixel_x = 7
 	},
+/obj/item/toy/handcard/aceofspades{
+	pixel_x = -8;
+	pixel_y = 7
+	},
 /turf/open/shuttle/vehicle/floor_1_3,
 /area/interior/vehicle/apc/movie)
 "d" = (
@@ -84,6 +88,13 @@
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
+"i" = (
+/obj/structure/interior_wall/apc{
+	icon_state = "wall_tally";
+	opacity = 0
+	},
+/turf/open/space/basic,
+/area/space)
 "j" = (
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
@@ -120,26 +131,17 @@
 	pixel_y = 12
 	},
 /obj/structure/interior_wall/apc{
-	icon_state = "corner_smaller_R";
-	opacity = 0
-	},
-/obj/structure/interior_wall/apc{
-	icon_state = "corner_smaller_L";
-	opacity = 0;
-	pixel_y = 18
-	},
-/obj/structure/interior_wall/apc{
-	icon_state = "corner_smaller_L";
-	opacity = 0;
-	pixel_y = 2
-	},
-/obj/structure/interior_wall/apc{
-	icon_state = "corner_smaller_L";
-	opacity = 0
-	},
-/obj/structure/interior_wall/apc{
 	icon_state = "wheel_front_top_2";
 	layer = 2.01
+	},
+/obj/structure/interior_wall/apc{
+	icon_state = "intersection_1";
+	opacity = 0
+	},
+/obj/structure/interior_wall/apc{
+	icon_state = "corner_small_L";
+	opacity = 0;
+	pixel_y = 11
 	},
 /turf/open/space/basic,
 /area/space)
@@ -284,13 +286,25 @@
 	pixel_x = 6;
 	pixel_y = -10
 	},
+/obj/structure/prop/ice_colony/hula_girl{
+	pixel_y = 9;
+	pixel_x = -12
+	},
+/obj/item/ashtray/plastic{
+	pixel_y = 6;
+	pixel_x = 10
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 13;
+	pixel_x = 10
+	},
+/obj/item/tool/pen/red/clicky{
+	pixel_y = 19;
+	pixel_x = 4
+	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "G" = (
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8;
-	pixel_y = 14
-	},
 /obj/structure/bed/chair/vehicle{
 	pixel_x = -8;
 	pixel_y = 14
@@ -299,17 +313,20 @@
 	pixel_y = 30;
 	pixel_x = -8
 	},
-/obj/effect/landmark/interior/spawn/interior_viewport{
+/obj/structure/bed/chair/vehicle{
 	pixel_x = 8;
-	pixel_y = 26;
-	layer = 3
+	pixel_y = 14
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/apc/movie)
 "H" = (
 /obj/structure/interior_wall/apc{
-	icon_state = "corner_inverse_R";
+	icon_state = "corner_inverse_R_1";
 	opacity = 0
+	},
+/obj/structure/sign/poster/pinup{
+	pixel_x = 7;
+	layer = 2.5
 	},
 /turf/open/space/basic,
 /area/space)
@@ -345,6 +362,13 @@
 	icon_state = "intersection_2";
 	opacity = 0;
 	pixel_y = -20
+	},
+/obj/item/ammo_box/magazine/mk1/large/ap/empty{
+	pixel_y = 3
+	},
+/obj/item/toy/deck{
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /turf/open/shuttle/vehicle,
 /area/space)
@@ -495,7 +519,7 @@ E
 "}
 (2,1,1) = {"
 V
-p
+i
 v
 j
 L
