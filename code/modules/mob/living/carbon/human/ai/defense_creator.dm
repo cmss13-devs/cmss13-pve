@@ -330,6 +330,12 @@
 	icon_state = "sebb"
 	path_to_spawn = /obj/item/explosive/mine/sebb/active
 
+/datum/human_ai_defense/mine/prox_sensor
+	name = "Proximity Sensor"
+	desc = /obj/item/device/assembly/prox_sensor::desc
+	icon_state = "prox"
+	path_to_spawn = /obj/item/device/assembly/prox_sensor/active
+
 /datum/human_ai_defense/mine/m760ap
 	name = "Weak M760 Blast Mine"
 	desc = /obj/item/explosive/mine/m760ap/active::desc
