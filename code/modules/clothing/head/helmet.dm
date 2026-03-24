@@ -1969,4 +1969,4 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/snowman
 	icon_state = "s_ghillie_coif"
 	item_state = "s_ghillie_coif"
-
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE

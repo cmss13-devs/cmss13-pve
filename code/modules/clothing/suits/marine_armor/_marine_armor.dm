@@ -1041,6 +1041,7 @@
 	icon_state = "s_ghillie_armor"
 
 /obj/item/clothing/suit/marine/snowman/canc
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/snowman/canc/Initialize(mapload)
 	. = ..()
@@ -1056,6 +1057,7 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
 	)
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/armoured_rad/canc
 
