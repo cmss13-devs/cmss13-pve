@@ -1965,3 +1965,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+/obj/item/clothing/head/helmet/marine/snowman
+	icon_state = "s_ghillie_coif"
+	item_state = "s_ghillie_coif"
+
