@@ -1,0 +1,6 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - maptweak: "fixed all the cave rope drop teleporters to be their correct version (noob/lazy mapper)"
+  - maptweak: "fixed the valley ruins open voids to have some closed voids so xenos aren't just scrambling over open ground. Some lite ruin adjustments to account for this."
+  - maptweak: "added closed voids to the clifftop overlook & added some new teleporters to the ledge there so it feels more like you're looking out over a drop."

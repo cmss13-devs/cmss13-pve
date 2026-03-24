@@ -1,0 +1,6 @@
+author: "Yorkoh"
+delete-after: True
+changes:
+  - maptweak: "Golden Arrow Medical Prep gets +1 standard-issue softpack first-aid kit"
+  - maptweak: "Rover Medical Prep gets +1 standard-issue softpack first-aid kit"
+  - maptweak: "Firefly Medical Prep gets a standard-issue softpack first-aid kit (had none before)"

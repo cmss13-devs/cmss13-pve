@@ -11,10 +11,10 @@
 
 	health = 1500
 
-	move_delay = VEHICLE_SPEED_SUPERFAST
-	move_max_momentum = 2
+	move_delay = VEHICLE_SPEED_VERYFAST
+	move_max_momentum = 2.5
 	move_momentum_build_factor = 1.5
-	move_turn_momentum_loss_factor = 0.5
+	move_turn_momentum_loss_factor = 0.8
 
 /obj/item/hardpoint/locomotion/apc_wheels/arc
 	name = "ARC Wheels"
@@ -24,6 +24,11 @@
 	icon_state = "tires"
 	disp_icon = "arc"
 	disp_icon_state = "arc_wheels"
+
+	move_delay = VEHICLE_SPEED_SUPERFAST
+	move_max_momentum = 3
+	move_momentum_build_factor = 1.8
+	move_turn_momentum_loss_factor = 0.5
 
 // UPP APC
 /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels

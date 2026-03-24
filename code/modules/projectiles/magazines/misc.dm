@@ -88,7 +88,7 @@
 	ammo_band_icon = "+qjy72_band"
 	ammo_band_icon = "+qjy72_band_e"
 	matter = list("metal" = 10000)
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer
 	max_rounds = 250
 	reload_delay = 12
 	gun_type = /obj/item/weapon/gun/pkp
@@ -106,16 +106,21 @@
 	else
 		to_chat(usr, "The [src] needs to be empty before you can configure it for reloading with HEAP 10x27mm rounds")
 
+/obj/item/ammo_magazine/pkp/standard_fmj
+	name = "QYJ-72 ammo box (10x27mm)"
+	desc = "A 250 round box of ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
+	default_ammo = /datum/ammo/bullet/rifle/upp/tracer
+
 /obj/item/ammo_magazine/pkp/super_tracer
 	name = "QYJ-72 ammo box (10x27mm magnesium tracer HEAP)"
 	desc = "A 250 round box of HEAP ammunition with magnesium tracers for the UPP's standard GPMG, the QYJ-72. Leaves a lingering light source where the bullet hits. Chambered in 10x27mm."
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg/super_tracer
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer/super_tracer
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/pkp/penetrating
 	name = "QYJ-72 ammo box (10x27mm wall-penetrating)"
 	desc = "A 250 round box of wall-penetrating ammunition for the UPP's standard GPMG, the QYJ-72. Chambered in 10x27mm."
-	default_ammo = /datum/ammo/bullet/rifle/upp/heap/mg/penetrating
+	default_ammo = /datum/ammo/bullet/rifle/upp/heap/tracer/penetrating
 	reload_delay = 6
 	ammo_band_color = AMMO_BAND_COLOR_PENETRATING
 

@@ -1,0 +1,23 @@
+{
+    "map_name": "SI-391 Sekhmet Swamp",
+    "short_name": "Sekhmet",
+    "map_path": "map_files/SI391_Sekhmet_Swamp",
+    "map_file": "SI391_Sekhmet_Swamp.dmm",
+    "webmap_url": "LV624",
+
+    "weather_holder": "/datum/weather_ss_map_holder/si391_sekhmet_swamp",
+
+    "map_item_type": "/obj/item/map/lazarus_landing_map",
+
+    "camouflage": "jungle",
+
+    "traits": [{ "Ground": true }],
+
+    "gamemodes": [
+        "Distress Signal",
+        "Hunter Games",
+        "Hive Wars",
+        "Faction Clash",
+        "Infection"
+    ]
+}

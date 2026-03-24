@@ -1,0 +1,7 @@
+author: "lordloko, Valiant1st"
+delete-after: True
+changes:
+  - rscadd: "added new Brazilian-themed preset props with their own, exclusive flavor."
+  - code_imp: "changed hai spawner to say that they are \"Hispanic\" and not \"Spanish\" CMBs and UACG"
+  - imageadd: "added some new patch icons (by Valiant1st)"
+  - imageadd: "added Brazilian flag icons (by Valiant1st)"

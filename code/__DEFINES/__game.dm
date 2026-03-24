@@ -42,12 +42,17 @@
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
+#define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
 #define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
-#define MAP_TAIPAI "Taipei Way-Station" //mapjam LAGO
+#define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
 #define MAP_CANYON_32B "Canyon 32B"
+#define MAP_BIG_BLUE "Kleschers Research Site"
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+#define MAP_BOSENMORI_BASHO "Bosenmori Basho"
+#define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
+#define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

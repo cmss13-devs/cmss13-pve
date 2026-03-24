@@ -129,6 +129,27 @@
 		manual_unbuckle(X)
 		return
 
+// Commander's seat
+// Mirror of drivers stuff as it isn't much more than a LARP seat
+/obj/structure/bed/chair/comfy/vehicle/commander
+	name = "commanders's seat"
+	desc = "Military-grade seat for armored vehicle commander with some controls, switches and indicators."
+	var/image/over_image = null
+	seat = VEHICLE_COMMANDER
+	required_skill = SKILL_VEHICLE_CREWMAN
+
+/obj/structure/bed/chair/comfy/vehicle/commander/do_buckle(mob/target, mob/user)
+	required_skill = vehicle.required_skill
+	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
+		if(target == user)
+			to_chat(user, SPAN_WARNING("You have no idea how to command this thing!"))
+		return FALSE
+
+	if(vehicle)
+		vehicle.vehicle_faction = target.faction
+
+	return ..()
+
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
 

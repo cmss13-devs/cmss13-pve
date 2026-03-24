@@ -202,6 +202,31 @@
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 	new /obj/item/ammo_magazine/flamer_tank/weak(src)
 
+/obj/item/storage/box/guncase/m42c
+	name = "\improper M42C scoped rifle case"
+	desc = "A gun case containing an M42C Scoped Rifle and several magazines."
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/m42c/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+	new /obj/item/ammo_magazine/sniper/elite/basic(src)
+
+/obj/item/storage/box/guncase/m42c/heap
+
+/obj/item/storage/box/guncase/m42c/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/sniper/elite/heap(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+	new /obj/item/ammo_magazine/sniper/elite(src)
+
 //------------ heavy cases
 
 /obj/item/storage/box/guncase/heavy
@@ -250,6 +275,19 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
+	name = "\improper UA 571-C-WY sentry guncase"
+	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/pmc_platoon, /obj/item/ammo_magazine/sentry, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/pmc_platoon/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/pmc_platoon(src)
+	new /obj/item/ammo_magazine/sentry(src)
+	new /obj/item/device/sentry_computer(src)
+
+
 /obj/item/storage/box/guncase/heavy/sentryupp
 	name = "\improper UPPAC 32-H sentry gun case"
 	desc = "A gun case containing the UPPAC 32-H sentry unit, a spare drum, and a sentry laptop."
@@ -265,7 +303,7 @@
 /obj/item/storage/box/guncase/heavy/sentryupp/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "uppsentrycase_lid")
 		return
@@ -324,7 +362,7 @@
 /obj/item/storage/box/guncase/heavy/shotgun/type23/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "ks29case_lid")
 		return
@@ -409,20 +447,20 @@
 
 /obj/item/storage/box/guncase/heavy/m49a_pve
 	name = "\improper M49A6 battle rifle case"
-	desc = "A large case for storing an M49A6, a modified USCM battle rifle equipped with depleted uranium bullets."
+	desc = "A large case for storing an M49A6, a modified USCM battle rifle capable of firing the brutal A19 depleted uranium bullets."
 	icon_state = "r2case"
-	storage_slots = 7
-	can_hold = list(/obj/item/weapon/gun/rifle/m49a/pve, /obj/item/ammo_magazine/rifle/m49a/pve)
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/rifle/m49a/pve, /obj/item/ammo_magazine/rifle/m49a/custom, /obj/item/ammo_magazine/rifle/m49a/custom/explosive, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, /obj/item/ammo_magazine/rifle/m49a/custom/pve)
 
 /obj/item/storage/box/guncase/heavy/m49a_pve/fill_preset_inventory()
 	new /obj/item/weapon/gun/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
-	new /obj/item/ammo_magazine/rifle/m49a/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/pve(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
 
 /obj/item/storage/box/guncase/heavy/m49a_pve/update_icon()
 	overlays.Cut()
@@ -553,6 +591,33 @@
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 
+/obj/item/storage/box/guncase/heavy/rmcsmg
+	name = "\improper L6A2 SMG CQWS case"
+	desc = "A heavy case for storing an L6A2 Close-Quarters-Weapon-System, along with several magazines of squad-head ammunition for it."
+	icon_state = "rmcsmgcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/weapon/gun/smg/m39/elite/rmc, /obj/item/ammo_magazine/smg/m39/squash)
+
+/obj/item/storage/box/guncase/heavy/rmcsmg/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/m39/elite/rmc(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+	new /obj/item/ammo_magazine/smg/m39/squash(src)
+
+/obj/item/storage/box/guncase/heavy/rmcsmg/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "rmcbigcase_lid_open")
+	else
+		overlays += image(icon, "rmcsmgcase_lid")
+		return
+	if(locate(/obj/item/weapon/gun/smg/m39/elite/rmc) in contents)
+		overlays += image(icon, "+l6a2")
+	if(locate(/obj/item/ammo_magazine/smg/m39/squash) in contents)
+		overlays += image(icon, "+mags")
+
 /obj/item/storage/box/guncase/heavy/motiondetectors
 	name = "\improper motion detectors case"
 	desc = "A case containing four individual handheld motion detectors."
@@ -590,6 +655,20 @@
 		var/image/source_image = image(src.icon, "+md")
 		source_image.pixel_x = 18
 		overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc
+	name = "\improper motion detectors case"
+	desc = "A case containing four individual handheld motion detectors."
+	icon_state = "mdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/hacked/pmc)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/pmc/fill_preset_inventory()
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+	new /obj/item/device/motiondetector/hacked/pmc(src)
+
 
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp
 	name = "\improper motion detectors case"
@@ -629,6 +708,44 @@
 		source_image.pixel_x = 18
 		overlays += source_image
 
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc
+	name = "\improper motion detectors case"
+	desc = "A case containing four L107 handheld motion detectors."
+	icon_state = "rmcmdcase"
+	storage_slots = 4
+	can_hold = list(/obj/item/device/motiondetector/hacked/twe)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc/fill_preset_inventory()
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+	new /obj/item/device/motiondetector/hacked/twe(src)
+
+/obj/item/storage/box/guncase/heavy/motiondetectors/rmc/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "rmcbigcase_lid_open")
+	else
+		overlays += image(icon, "rmcmdcase_lid")
+		return
+
+	if(length(contents) >= storage_slots)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 0
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.75)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 6
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.5)
+		var/image/source_image = image(icon, "+md")
+		source_image.pixel_x = 12
+		overlays += source_image
+	if(length(contents) >= storage_slots * 0.25)
+		var/image/source_image = image(src.icon, "+md")
+		source_image.pixel_x = 18
+		overlays += source_image
 
 /obj/item/storage/box/guncase/heavy/fuel
 	name = "\improper M240A1 fuel canister case"
@@ -686,6 +803,21 @@
 						var/image/source_image = image(icon, "+fuel")
 						source_image.pixel_x = tank_tally*8-8-(24)
 						overlays += source_image
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc
+	name = "\improper M240A1 fuel canister case"
+	desc = "A heavy case containing six EX-fuel canisters for the M240A1 incinerator unit."
+	icon_state = "fuelcase"
+	storage_slots = 6
+	can_hold = list(/obj/item/ammo_magazine/flamer_tank/EX)
+
+/obj/item/storage/box/guncase/heavy/fuel/pmc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
+	new /obj/item/ammo_magazine/flamer_tank/EX(src)
 
 /obj/item/storage/box/guncase/heavy/uppfuel
 	name = "\improper LPO80 fuel canister case"
@@ -897,17 +1029,38 @@
 
 /obj/item/storage/box/guncase/nsg23_marine
 	name = "\improper NSG-23 assault rifle case"
-	desc = "A gun case containing a NSG 23 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
+	desc = "A gun case containing a NSG L23A1 assault rifle. While usually seen in the hands of PMCs, this weapon is sometimes issued to USCM personnel."
 	storage_slots = 6
-	can_hold = list(/obj/item/weapon/gun/rifle/nsg23/no_lock, /obj/item/ammo_magazine/rifle/nsg23)
+	can_hold = /obj/item/ammo_magazine/rifle/nsg23
 
 /obj/item/storage/box/guncase/nsg23_marine/fill_preset_inventory()
-	new /obj/item/weapon/gun/rifle/nsg23/no_lock(src)
+	new /obj/item/weapon/gun/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23/ap(src)
-	new /obj/item/ammo_magazine/rifle/nsg23/extended(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
 	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+	new /obj/item/ammo_magazine/rifle/nsg23(src)
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap
+
+/obj/item/storage/box/guncase/nsg23_marine/pve/heap/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/nsg23/no_lock/pve/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+	new /obj/item/ammo_magazine/rifle/nsg23/heap(src)
+
 
 /obj/item/storage/box/guncase/m3717
 	name = "\improper M37-17 pump shotgun case"

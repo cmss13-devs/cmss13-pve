@@ -107,6 +107,7 @@ $_channel_map: (
   'rmc': $rmc,
   'pfa': $pfa,
   'jsc': $jsc,
+  'mercs': $security,
 );
 
 $channel_keys: map.keys($_channel_map) !default;

@@ -932,6 +932,9 @@
 /obj/structure/machinery/door/airlock/hatch/cockpit/pmc
 	icon = 'icons/obj/structures/doors/dropshippmc_pilot.dmi'
 
+/obj/structure/machinery/door/airlock/hatch/cockpit/rmc
+	icon = 'icons/obj/structures/doors/dropship_rmc_pilot.dmi'
+
 //PRISON AIRLOCKS
 /obj/structure/machinery/door/airlock/prison
 	name = "cell Door"
