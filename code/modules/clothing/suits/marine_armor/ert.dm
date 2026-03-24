@@ -356,7 +356,7 @@
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)
 
-/obj/item/clothing/suit/marine/faction/UPP/para
+/obj/item/clothing/suit/marine/faction/UPP/recon
 	name = "\improper 6B85-02 pattern UPP armor"
 	desc = "Experimental development of the aging UPP armor system Vadasz. Provides moderate ballistic/shrapnel protection for recon and special forces with wraparound soft armor and ceramic composite chestplate. Lightweight, whilst still providing adequate protection class and coverage. Unfortunately, the logistical costs involved prohibited mass production due to some exotic materials involved in the ceramite plating. It sees limited deployment amongst light infantry and recon elements."
 	icon_state = "upp_armor_light"
@@ -377,7 +377,7 @@
 	restricted_accessory_slots = list(ACCESSORY_SLOT_DECORARMOR,ACCESSORY_SLOT_DECORBRACER, ACCESSORY_SLOT_DECORNECK, ACCESSORY_SLOT_DECORSHIN, ACCESSORY_SLOT_M3UTILITY, ACCESSORY_SLOT_PAINT, ACCESSORY_SLOT_DECORKNEE)
 	specialty = "\improper 6B85-02 pattern"
 
-/obj/item/clothing/suit/marine/faction/UPP/para/Initialize(mapload)
+/obj/item/clothing/suit/marine/faction/UPP/recon/Initialize(mapload)
 	. = ..()
 	var/obj/item/clothing/accessory/upppads/legs/greaves = new()
 	src.attach_accessory(null, greaves, TRUE)

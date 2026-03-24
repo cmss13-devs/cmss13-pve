@@ -1628,11 +1628,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "Standard issue beret of the UPP's military."
 	icon_state = "upp_beret"
 
-/obj/item/clothing/head/uppcap/beret/para
+/obj/item/clothing/head/uppcap/beret/recon
 	name = "\improper UL6 Recon Infantry beret"
 	desc = "A red beret worn by the UPP-SOF \"Rozbójnik\" Group. Wear it with pride."
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	icon_state = "upp_beret_revolution"
+	icon_state = "upp_beret_recon"
 
 /obj/item/clothing/head/uppcap/peaked
 	name = "\improper UL3 peaked cap"

@@ -324,7 +324,7 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("6B85-02 Pattern Vest", round(scale * 10), /obj/item/clothing/suit/marine/faction/UPP/para, VENDOR_ITEM_REGULAR),
+		list("6B85-02 Pattern Vest", round(scale * 10), /obj/item/clothing/suit/marine/faction/UPP/recon, VENDOR_ITEM_REGULAR),
 		list("6B90 Arm Plates", round(scale * 10), /obj/item/clothing/accessory/upppads, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
