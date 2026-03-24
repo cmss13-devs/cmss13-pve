@@ -843,7 +843,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/merc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/merc, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/merc, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
 	//uniform + armour
@@ -899,7 +899,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/merc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/merc, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/merc, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
 	//uniform + armour
@@ -957,7 +957,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot/metal, WEAR_BACK)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/merc, WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/merc, WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/merc, WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
 	//uniform + armour

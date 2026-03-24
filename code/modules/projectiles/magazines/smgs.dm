@@ -135,9 +135,18 @@
 	caliber = "10x20mm"
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "mp47a2"
+	bonus_overlay = "mp47a2_overlay"
 	max_rounds = 25
 	gun_type = /obj/item/weapon/gun/smg/mp47a2
 	default_ammo = /datum/ammo/bullet/smg/mp47a2
+
+/obj/item/ammo_magazine/smg/mp47a2/extended
+	name = "\improper MP47A2 extended magazine (10x20mm)"
+	desc = "A 10x20mm extended magazine for the MP47A2."
+	caliber = "10x20mm"
+	icon_state = "mp47a2-ext"
+	bonus_overlay = "mp47a2-ext_overlay"
+	max_rounds = 55
 
 //-------------------------------------------------------
 //PPSH //Based on the PPSh-41.
