@@ -1042,6 +1042,9 @@
 
 /obj/item/clothing/suit/marine/snowman/canc
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
 /obj/item/clothing/suit/marine/snowman/canc/Initialize(mapload)
 	. = ..()
@@ -1058,6 +1061,9 @@
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi'
 	)
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
 
 /obj/item/clothing/suit/marine/armoured_rad/canc
 
