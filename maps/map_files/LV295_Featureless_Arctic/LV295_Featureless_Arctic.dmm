@@ -1,25 +1,25 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "bz" = (
 /turf/closed/wall/strata_ice/dirty,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 "jm" = (
 /turf/open/auto_turf/snow/layer3,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 "CU" = (
 /mob/living/simple_animal/bat{
 	name = "Featureless Arctic"
 	},
 /turf/closed/wall/strata_ice/dirty,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 "Dg" = (
 /turf/open/auto_turf/snow/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 "DU" = (
 /turf/open/auto_turf/snow/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 "FV" = (
 /turf/open/auto_turf/ice/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/lv295/outdoors)
 
 (1,1,1) = {"
 bz
