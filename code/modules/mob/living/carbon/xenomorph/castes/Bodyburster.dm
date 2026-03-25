@@ -250,6 +250,90 @@
 /datum/action/xeno_action/activable/headbite/bodyburster/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	return parent.check_additional_ai_activation(AGGRESSION_HEADBITE) && DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
 
+/mob/living/carbon/xenomorph/bodyburster/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
+	..()
+	if (pass_flags_container)
+		pass_flags_container.flags_pass |= PASS_FLAGS_CRAWLER
+
+
+/mob/living/carbon/xenomorph/bodyburster/cause_unbearable_pain(mob/living/carbon/victim)
+	if(loc != victim)
+		return
+	if(prob(80))
+		victim.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+	victim.visible_message(SPAN_DANGER("\The [victim] goes deathly pale, sweat beading across their skin."),
+						SPAN_DANGER(pick("YOU FEEL DEATHLY COLD!", "YOU FEEL WHITE HOT!", "MAKE IT STOP!", "SOMETHING IS WRONG WITH YOUR BODY!")))
+	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(1, 3) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
+
+/mob/living/carbon/xenomorph/bodyburster/chest_burst(mob/living/carbon/victim)
+	set waitfor = 0
+	if(victim.chestburst || loc != victim)
+		return
+	victim.mob_flags |= BODY_BURSTING
+	victim.chestburst = TRUE
+	to_chat(src, SPAN_DANGER("We start emerging from [victim]'s body!"))
+	if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
+		victim.apply_effect(20, DAZE)
+	victim.visible_message(SPAN_DANGER("\The [victim] starts to shake uncontrollably, their flesh giving way for a new form!"),
+						SPAN_DANGER("You feel your body churn and shift!"))
+	victim.make_jittery(300)
+	sleep(30)
+	if(!victim || !victim.loc)
+		return//host could've been deleted, or we could've been removed from host.
+	if(loc != victim)
+		victim.chestburst = 0
+		return
+	if(ishuman(victim) || isyautja(victim))
+		victim.emote("burstscream")
+	sleep(25) //Sound delay
+	victim.update_burst()
+	sleep(10) //Sprite delay
+	if(!victim || !victim.loc)
+		return
+	if(loc != victim)
+		victim.chestburst = 0 //if a doc removes the larva during the sleep(10), we must remove the 'bursting' overlay on the human
+		victim.update_burst()
+		return
+
+	var/burstcount = 0
+
+	victim.spawn_gibs()
+
+	for(var/mob/living/carbon/xenomorph/bodyburster/burster_embryo in victim)
+		var/datum/hive_status/hive = GLOB.hive_datum[burster_embryo.hivenumber]
+		burster_embryo.forceMove(get_turf(victim)) //moved to the turf directly so we don't get stuck inside a cryopod or another mob container.
+		playsound(burster_embryo, pick('sound/voice/alien_chestburst.ogg','sound/voice/alien_chestburst2.ogg'), 25) && playsound(burster_embryo, 'sound/voice/alien_roar_unused.ogg', 50)
+
+		if(burster_embryo.client)
+			burster_embryo.set_lighting_alpha_from_prefs(burster_embryo.client)
+
+		burster_embryo.attack_log += "\[[time_stamp()]\]<font color='red'> bodybursted from [key_name(victim)] in [get_area_name(burster_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]</font>"
+		victim.attack_log += "\[[time_stamp()]\]<font color='orange'> Was bodybursted in [get_area_name(burster_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]. The larva was [key_name(burster_embryo)].</font>"
+
+		if(burstcount)
+			step(burster_embryo, pick(GLOB.cardinals))
+
+		if(GLOB.round_statistics && (ishuman(victim)) && (SSticker.current_state == GAME_STATE_PLAYING) && (ROUND_TIME > 1 MINUTES))
+			GLOB.round_statistics.total_larva_burst++
+		GLOB.larva_burst_by_hive[hive] = (GLOB.larva_burst_by_hive[hive] || 0) + 1
+		burstcount++
+
+		if(!victim.first_xeno)
+			if(hive.hive_orders)
+				to_chat(burster_embryo, SPAN_XENOHIGHDANGER("The unknown force guides us to our new form..."))
+				to_chat(burster_embryo, SPAN_XENOHIGHDANGER("\"[hive.hive_orders]\""))
+			log_attack("[key_name(victim)] bodyburst in [get_area_name(burster_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]. The bodyburster was [key_name(burster_embryo)].") //this is so that admins are not spammed with los logs
+
+	for(var/obj/item/alien_embryo/AE in victim)
+		qdel(AE)
+
+	var/datum/cause_data/cause = create_cause_data("bodybursting", src)
+		victim.gib(cause)
+
+/obj/item/alien_embryo/bodyburster
+	icon = 'icons/mob/xenos/bodyburster.dmi'
+	flags_embryo = FLAG_EMBRYO_HYBRID
+
 #undef AGGRESSION_MINIMUM
 #undef AGGRESSION_MAXIMUM
 #undef AGGRESSION_INCREMENT_CAP

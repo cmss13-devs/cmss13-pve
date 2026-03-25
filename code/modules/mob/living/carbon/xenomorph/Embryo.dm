@@ -47,6 +47,9 @@
 		qdel(src)
 		return FALSE
 
+	if((flags_embryo & FLAG_EMBRYO_HYBRID) && icon != 'icons/mob/xenos/bodyburster.dmi')
+		icon = 'icons/mob/xenos/bodyburster.dmi'
+
 	if(loc != affected_mob) //Our location is not the host
 		affected_mob.status_flags &= ~(XENO_HOST)
 		STOP_PROCESSING(SSobj, src)
@@ -60,15 +63,15 @@
 		if(ishuman(affected_mob))
 			var/mob/living/carbon/human/affected_human = affected_mob
 			if(world.time > affected_human.timeofdeath + affected_human.revive_grace_period) //Can't be defibbed.
-				var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-				if(larva_embryo)
-					larva_embryo.chest_burst(affected_mob)
+				var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob
+				if(embryo)
+					embryo.chest_burst(affected_mob)
 				qdel(src)
 				return FALSE
 		else
-			var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-			if(larva_embryo)
-				larva_embryo.chest_burst(affected_mob)
+			var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob
+			if(embryo)
+				embryo.chest_burst(affected_mob)
 			STOP_PROCESSING(SSobj, src)
 			return FALSE
 
@@ -105,28 +108,51 @@
 	switch(stage)
 		if(2)
 			if(prob(4))
-				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
+												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
+					affected_mob.make_jittery(105)
+				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
 					affected_mob.apply_effect(1, PARALYZE)
 					affected_mob.make_jittery(105)
 					affected_mob.take_limb_damage(1)
-			if(prob(2))
-				var/message = SPAN_WARNING("[pick("Your chest hurts a little bit", "Your stomach hurts")].")
-				to_chat(affected_mob, message)
+
+			else if(prob(2))
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					var/message = SPAN_WARNING("[pick("Your skin prickles a little bit", "Your bones have a flicker of pain")].")
+					to_chat(affected_mob, message)
+				else
+					var/message = SPAN_WARNING("[pick("Your chest hurts a little bit", "Your stomach hurts")].")
+					to_chat(affected_mob, message)
 		if(3)
 			if(prob(2))
-				var/message = SPAN_WARNING("[pick("Your throat feels sore", "Mucous runs down the back of your throat")].")
-				to_chat(affected_mob, message)
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					var/message = SPAN_WARNING("[pick("A trickle of sweat runs down your back", "Your muscles and bones ache.")].")
+					to_chat(affected_mob, message)
+				else
+					var/message = SPAN_WARNING("[pick("Your throat feels sore", "Mucous runs down the back of your throat")].")
+					to_chat(affected_mob, message)
 			else if(prob(1))
 				to_chat(affected_mob, SPAN_WARNING("Your muscles ache."))
 				if(prob(20))
 					affected_mob.take_limb_damage(1)
 			else if(prob(2))
-				affected_mob.emote("[pick("sneeze", "cough")]")
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					affected_mob.emote("[pick("shiver", "twitch")]")
+				else
+					affected_mob.emote("[pick("sneeze", "cough")]")
 			if(prob(5))
-				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
+												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
+					affected_mob.apply_effect(2, AGONY)
+					affected_mob.make_jittery(105)
+				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("\The [affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
@@ -142,7 +168,13 @@
 				if(prob(50))
 					affected_mob.emote("scream")
 			if(prob(6))
-				if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
+				if(flags_embryo & FLAG_EMBRYO_HYBRID)
+					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
+												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
+					affected_mob.apply_effect(2, AGONY)
+					affected_mob.make_jittery(105)
+				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
 												SPAN_DANGER("You feel something moving inside you! You start shaking uncontrollably!"))
@@ -154,9 +186,9 @@
 		if(7) // Stage 6 is while we are trying to find a candidate in become_larva
 			larva_autoburst_countdown--
 			if(!larva_autoburst_countdown)
-				var/mob/living/carbon/xenomorph/larva/larva_embryo = locate() in affected_mob
-				if(larva_embryo)
-					larva_embryo.chest_burst(affected_mob)
+				var/mob/living/carbon/xenomorph/embryo = locate() in affected_mob
+				if(embryo)
+					embryo.chest_burst(affected_mob)
 
 ///We look for a candidate. If found, we spawn the candidate as a larva
 ///Order of priority is bursted individual (if xeno is enabled), then player hugger, then random candidate, and then it's up for grabs and spawns braindead
@@ -239,14 +271,16 @@
 							break
 
 	// Spawn the larva
-	var/mob/living/carbon/xenomorph/larva/new_xeno
+	var/mob/living/carbon/xenomorph/new_xeno
 
 	if(isyautja(affected_mob) || (flags_embryo & FLAG_EMBRYO_PREDATOR))
 		new_xeno = new /mob/living/carbon/xenomorph/larva/predalien(affected_mob)
 		yautja_announcement(SPAN_YAUTJABOLDBIG("WARNING!\n\nAn abomination has been detected at [get_area_name(new_xeno)]. It is a stain upon our purity and is unfit for life. Exterminate it immediately.\n\nHeavy Armory unlocked."))
 		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_ARMORY_OPENED)
+	if(flags_embryo & FLAG_EMBRYO_HYBRID)
+		new_xeno = new /mob/living/carbon/xenomorph/bodyburster(affected_mob)
 	else
-		new_xeno = new(affected_mob)
+		new_xeno = new /mob/living/carbon/xenomorph/larva(affected_mob)
 
 	if(hive)
 		hive.add_xeno(new_xeno)
@@ -282,7 +316,10 @@
 
 	stage = 7 // Begin the autoburst countdown
 
-/mob/living/carbon/xenomorph/larva/proc/cause_unbearable_pain(mob/living/carbon/victim)
+/mob/living/carbon/xenomorph/proc/cause_unbearable_pain(mob/living/carbon/victim)
+	return
+
+/mob/living/carbon/xenomorph/larva/cause_unbearable_pain(mob/living/carbon/victim)
 	if(loc != victim)
 		return
 	victim.emote("scream")
@@ -292,7 +329,10 @@
 	to_chat(victim, message)
 	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(1, 3) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
 
-/mob/living/carbon/xenomorph/larva/proc/chest_burst(mob/living/carbon/victim)
+/mob/living/carbon/xenomorph/proc/chest_burst(mob/living/carbon/victim)
+	return
+
+/mob/living/carbon/xenomorph/larva/chest_burst(mob/living/carbon/victim)
 	set waitfor = 0
 	if(victim.chestburst || loc != victim)
 		return
