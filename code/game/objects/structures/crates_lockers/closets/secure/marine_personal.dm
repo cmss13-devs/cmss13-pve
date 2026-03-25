@@ -141,7 +141,7 @@
 	new /obj/item/clothing/head/uppcap/beret/recon(src)
 	new /obj/item/clothing/under/marine/veteran/UPP(src)
 	new /obj/item/clothing/shoes/marine/upp(src)
-	new /obj/item/clothing/accessory/patch/upp/airborne(src)
+	new /obj/item/clothing/accessory/patch/upp/recon(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/upp/forecon(src)
 
 /obj/structure/closet/secure_closet/marine_personal/forecon_upp/rifleman

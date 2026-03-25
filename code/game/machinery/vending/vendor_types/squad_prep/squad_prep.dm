@@ -383,7 +383,7 @@
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/upp, VENDOR_ITEM_REGULAR),
 		list("Prescription ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles/upp/prescription, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
-		list("UPP Airborne Reconnaissance Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp/airborne, VENDOR_ITEM_REGULAR),
+		list("UPP 'Rozbójnik' Group Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp/recon, VENDOR_ITEM_REGULAR),
 		list("UPPAC Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/upp, VENDOR_ITEM_REGULAR),
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
