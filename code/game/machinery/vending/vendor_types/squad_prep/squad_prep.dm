@@ -1018,7 +1018,7 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/mercenary/populate_product_list(scale)
 	listed_products = list(
 		list("FOOD", -1, null, null),
-		list("Extended Patrol MRE", round(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
+		list("MRE", round(scale * 5), /obj/item/storage/box/mre, VENDOR_ITEM_REGULAR),
 		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
