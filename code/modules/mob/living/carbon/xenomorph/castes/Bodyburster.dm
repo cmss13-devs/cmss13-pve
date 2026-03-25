@@ -9,8 +9,8 @@
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
-	armor_deflection = XENO_ARMOR_TIER_2
-	evasion = XENO_EVASION_HIGH
+	armor_deflection = XENO_ARMOR_TIER_3
+	evasion = XENO_EVASION_MEDIUM
 	speed = XENO_SPEED_TIER_7
 
 	evolves_to = list()
@@ -187,8 +187,8 @@
 
 /datum/action/xeno_action/activable/fling/bodyburster
 	default_ai_action = TRUE
-	ai_prob_chance = 25
-	xeno_cooldown = 20 SECONDS
+	ai_prob_chance = 35
+	xeno_cooldown = 15 SECONDS
 
 /datum/action/xeno_action/activable/fling/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	/// We have a home turf to fling to.
@@ -245,7 +245,7 @@
 /datum/action/xeno_action/activable/headbite/bodyburster
 	default_ai_action = TRUE
 	ai_prob_chance = 95 // Absolutely DEAD if the alien is angry enough.
-	xeno_cooldown = 45 SECONDS // Don't want to chain these, as unlikely as that could be.
+	xeno_cooldown = 30 SECONDS // Don't want to chain these, as unlikely as that could be.
 
 /datum/action/xeno_action/activable/headbite/bodyburster/process_ai(mob/living/carbon/xenomorph/parent, delta_time)
 	return parent.check_additional_ai_activation(AGGRESSION_HEADBITE) && DT_PROB(ai_prob_chance, delta_time) && use_ability_async(parent.current_target)
@@ -259,11 +259,11 @@
 /mob/living/carbon/xenomorph/bodyburster/cause_unbearable_pain(mob/living/carbon/victim)
 	if(loc != victim)
 		return
-	if(prob(80))
-		victim.pain.apply_pain(PAIN_CHESTBURST_WEAK)
-	victim.visible_message(SPAN_DANGER("\The [victim] goes deathly pale, sweat beading across their skin."),
-						SPAN_DANGER(pick("YOU FEEL DEATHLY COLD!", "YOU FEEL WHITE HOT!", "MAKE IT STOP!", "SOMETHING IS WRONG WITH YOUR BODY!")))
-	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(1, 3) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
+	if(prob(15))
+		victim.pain.apply_pain(PAIN_XENO_DRAG)
+	victim.visible_message(SPAN_DANGER("\The [victim] is deathly pale, sweat beading across their skin."),
+						SPAN_DANGER(pick("YOU FEEL DEATHLY COLD!", "YOU ARE BURNING UP!", "MAKE IT STOP!", "SOMETHING IS WRONG WITH YOUR BODY!", "YOUR MUSCLES SHIVER AND TWITCH UNCONTROLLABLY!", "YOUR BONES FEEL LIKE THEY ARE BREAKING!", "YOU CAN'T BREATHE!", "EVERYTHING HURTS!")))
+	addtimer(CALLBACK(src, PROC_REF(cause_unbearable_pain), victim), rand(3, 5) SECONDS, TIMER_UNIQUE|TIMER_NO_HASH_WAIT)
 
 /mob/living/carbon/xenomorph/bodyburster/chest_burst(mob/living/carbon/victim)
 	set waitfor = 0
@@ -273,11 +273,11 @@
 	victim.chestburst = TRUE
 	to_chat(src, SPAN_DANGER("We start emerging from [victim]'s body!"))
 	if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
-		victim.apply_effect(20, DAZE)
-	victim.visible_message(SPAN_DANGER("\The [victim] starts to shake uncontrollably, their flesh giving way for a new form!"),
-						SPAN_DANGER("You feel your body churn and shift!"))
-	victim.make_jittery(300)
-	sleep(30)
+		victim.apply_effect(20, SUPERSLOW)
+	victim.visible_message(SPAN_DANGER("\The [victim] starts to shake uncontrollably, their flesh giving way to a new form!"),
+						SPAN_DANGER("YOU FEEL YOUR BODY CHURN AND SHIFT!"))
+	victim.make_jittery(200)
+	sleep(10)
 	if(!victim || !victim.loc)
 		return//host could've been deleted, or we could've been removed from host.
 	if(loc != victim)
@@ -288,6 +288,7 @@
 	sleep(25) //Sound delay
 	victim.update_burst()
 	sleep(10) //Sprite delay
+	playsound(victim, 'sound/effects/gibbed.ogg', 50)
 	if(!victim || !victim.loc)
 		return
 	if(loc != victim)
@@ -302,7 +303,7 @@
 	for(var/mob/living/carbon/xenomorph/bodyburster/burster_embryo in victim)
 		var/datum/hive_status/hive = GLOB.hive_datum[burster_embryo.hivenumber]
 		burster_embryo.forceMove(get_turf(victim)) //moved to the turf directly so we don't get stuck inside a cryopod or another mob container.
-		playsound(burster_embryo, pick('sound/voice/alien_chestburst.ogg','sound/voice/alien_chestburst2.ogg'), 25) && playsound(burster_embryo, 'sound/voice/alien_roar_unused.ogg', 50)
+		playsound(burster_embryo, pick('sound/voice/alien_roar1.ogg', 'sound/voice/alien_roar2.ogg', 'sound/voice/alien_roar3.ogg', 'sound/voice/alien_roar4.ogg', 'sound/voice/alien_roar5.ogg', 'sound/voice/alien_roar6.ogg'), 30)
 
 		if(burster_embryo.client)
 			burster_embryo.set_lighting_alpha_from_prefs(burster_embryo.client)
@@ -324,11 +325,16 @@
 				to_chat(burster_embryo, SPAN_XENOHIGHDANGER("\"[hive.hive_orders]\""))
 			log_attack("[key_name(victim)] bodyburst in [get_area_name(burster_embryo)] at X[victim.x], Y[victim.y], Z[victim.z]. The bodyburster was [key_name(burster_embryo)].") //this is so that admins are not spammed with los logs
 
+	for(var/list/obj/limb/limbs in victim)
+		if(istype(limbs, /obj/limb/chest) || istype(limbs, /obj/limb/groin))
+			continue
+		qdel(limbs)
+
 	for(var/obj/item/alien_embryo/AE in victim)
 		qdel(AE)
 
 	var/datum/cause_data/cause = create_cause_data("bodybursting", src)
-		victim.gib(cause)
+	victim.gib(cause)
 
 /obj/item/alien_embryo/bodyburster
 	icon = 'icons/mob/xenos/bodyburster.dmi'

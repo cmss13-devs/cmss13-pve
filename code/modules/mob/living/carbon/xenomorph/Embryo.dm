@@ -94,6 +94,8 @@
 				counter += 0.11 * hive.larva_gestation_multiplier * delta_time
 		else if(HAS_TRAIT(affected_mob, TRAIT_NESTED)) //Hosts who are nested in resin nests provide an ideal setting, larva grows faster
 			counter += 1.5 * hive.larva_gestation_multiplier * delta_time //Currently twice as much, can be changed
+		else if(flags_embryo & FLAG_EMBRYO_HYBRID) //Hosts who have hybrid DNA in them grow faster
+			counter += 3 * hive.larva_gestation_multiplier * delta_time //very fast
 		else
 			if(stage < 5)
 				counter += 1 * hive.larva_gestation_multiplier * delta_time
@@ -111,8 +113,8 @@
 				if(flags_embryo & FLAG_EMBRYO_HYBRID)
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
-												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
-					affected_mob.make_jittery(105)
+												SPAN_DANGER("You feel a slight ache in your bones, and your hairs stand on end."))
+					affected_mob.make_jittery(50)
 				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
@@ -123,7 +125,7 @@
 
 			else if(prob(2))
 				if(flags_embryo & FLAG_EMBRYO_HYBRID)
-					var/message = SPAN_WARNING("[pick("Your skin prickles a little bit", "Your bones have a flicker of pain")].")
+					var/message = SPAN_WARNING("[pick("Your skin prickles and twitches", "You feel an odd sensation in your bones")].")
 					to_chat(affected_mob, message)
 				else
 					var/message = SPAN_WARNING("[pick("Your chest hurts a little bit", "Your stomach hurts")].")
@@ -131,7 +133,7 @@
 		if(3)
 			if(prob(2))
 				if(flags_embryo & FLAG_EMBRYO_HYBRID)
-					var/message = SPAN_WARNING("[pick("A trickle of sweat runs down your back", "Your muscles and bones ache.")].")
+					var/message = SPAN_WARNING("[pick("A trickle of sweat runs down your back", "Your muscles and bones ache")].")
 					to_chat(affected_mob, message)
 				else
 					var/message = SPAN_WARNING("[pick("Your throat feels sore", "Mucous runs down the back of your throat")].")
@@ -147,11 +149,11 @@
 					affected_mob.emote("[pick("sneeze", "cough")]")
 			if(prob(5))
 				if(flags_embryo & FLAG_EMBRYO_HYBRID)
-					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+					affected_mob.pain.apply_pain(PAIN_XENO_DRAG)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
-												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
-					affected_mob.apply_effect(2, AGONY)
-					affected_mob.make_jittery(105)
+												SPAN_DANGER("You feel your muscles contort and tremble, and your bones twitch!"))
+					affected_mob.apply_effect(10, DAZE)
+					affected_mob.make_jittery(75)
 				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("\The [affected_mob] starts shaking uncontrollably!"), \
@@ -169,11 +171,11 @@
 					affected_mob.emote("scream")
 			if(prob(6))
 				if(flags_embryo & FLAG_EMBRYO_HYBRID)
-					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
+					affected_mob.pain.apply_pain(PAIN_XENO_GRAB)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts to shiver and tremble!"), \
-												SPAN_DANGER("You feel your bones ache, and your body begins to convulse!"))
-					affected_mob.apply_effect(2, AGONY)
-					affected_mob.make_jittery(105)
+												SPAN_DANGER("You feel your bones crack and shift, and your body begins to convulse!"))
+					affected_mob.apply_effect(20, DAZE)
+					affected_mob.make_jittery(100)
 				else if(!HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
 					affected_mob.pain.apply_pain(PAIN_CHESTBURST_WEAK)
 					affected_mob.visible_message(SPAN_DANGER("[affected_mob] starts shaking uncontrollably!"), \
