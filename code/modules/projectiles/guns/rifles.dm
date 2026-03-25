@@ -1864,6 +1864,7 @@
 		/obj/item/attachable/bayonet/co2,
 		/obj/item/attachable/reddot, // Rail
 		/obj/item/attachable/reflex,
+		/obj/item/attachable/verticalgrip, // Bottom rail
 		/obj/item/attachable/lasersight, // Side Rail
 		/obj/item/attachable/flashlight,
 	)
@@ -1874,7 +1875,7 @@
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/r81m1a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 46, "muzzle_y" = 20,"rail_x" = 11, "rail_y" = 21, "under_x" = 30, "under_y" = 13, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 18, "special_x" = 30, "special_y" = 16)
+	attachable_offset = list("muzzle_x" = 46, "muzzle_y" = 20,"rail_x" = 11, "rail_y" = 21, "under_x" = 27, "under_y" = 15, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 18, "special_x" = 30, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/r81m1a/set_gun_config_values()
 	..()
@@ -1897,7 +1898,7 @@
 	update_attachable(integrated.slot)
 
 /obj/item/weapon/gun/rifle/r81m1a/modded
-	starting_attachment_types = list(/obj/item/attachable/bayonet, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
+	starting_attachment_types = list(/obj/item/attachable/bayonet, /obj/item/attachable/reflex, /obj/item/attachable/lasersight, /obj/item/attachable/verticalgrip)
 
 /obj/item/weapon/gun/rifle/r81m1a/unloaded
 	current_mag = null
