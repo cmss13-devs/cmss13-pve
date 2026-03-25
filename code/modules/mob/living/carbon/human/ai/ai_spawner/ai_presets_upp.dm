@@ -6,6 +6,11 @@
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work."
 	path = /datum/equipment_preset/upp/militia
 
+/datum/human_ai_equipment_preset/upp/militia/rto
+	name = "UPP People's Territorial Guardsman RTO"
+	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one is a radio transmissions operator."
+	path = /datum/equipment_preset/upp/militia/rto
+
 /datum/human_ai_equipment_preset/upp/militia/at
 	name = "UPP People's Territorial Guardsman Anti-Tank"
 	desc = "The auxiliary troop of the UPP, armed with second hand equipment for more basic work. This one has an AT launcher."
@@ -45,6 +50,16 @@
 	name = "UPP Squad Rifleman - EVA"
 	desc = "The standard UPP soldier. These guys are equipped well enough to fight most forces. EVA equipped"
 	path = /datum/equipment_preset/upp/rifleman/eva
+
+/datum/human_ai_equipment_preset/upp/rto
+	name = "UPP Squad RTO"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto
+
+/datum/human_ai_equipment_preset/upp/rto/ag80
+	name = "UPP Squad RTO - AG80"
+	desc = "The standard UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/ag80
 
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"

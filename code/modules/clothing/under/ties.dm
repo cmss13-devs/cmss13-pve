@@ -439,6 +439,11 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 173rd Airborne Reconnaissance Platoon."
 	icon_state = "vdvpatch"
 
+/obj/item/clothing/accessory/patch/upp/recon
+	name = "UPP 'Rozbójnik' Group patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 'Rozbójnik' Group who specialise in reconnaissance operations."
+	icon_state = "uppreconpatch"
+
 /obj/item/clothing/accessory/patch/upp/naval
 	name = "UPP Naval Infantry patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
