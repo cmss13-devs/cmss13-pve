@@ -4,38 +4,38 @@
 	name = "Featureless Desert"
 	},
 /turf/closed/wall/solaris/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "bb" = (
 /obj/structure/flora/grass/desert/lightgrass_6,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "bc" = (
 /obj/structure/flora/grass/desert/heavy,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "bd" = (
 /obj/structure/flora/grass/desert/lightgrass_9,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "be" = (
 /obj/structure/flora/grass/desert/lightgrass_1,
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "ky" = (
 /turf/open/auto_turf/sand/layer0,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "CU" = (
 /turf/closed/wall/solaris/rock,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "Dg" = (
 /turf/open/auto_turf/sand/layer2,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "JQ" = (
 /turf/open/auto_turf/sand/layer1,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 "XM" = (
 /turf/open/mars_cave/mars_cave_2,
-/area/lv624/ground/barrens/central_barrens)
+/area/kutjevo/exterior/scrubland)
 
 (1,1,1) = {"
 CU
