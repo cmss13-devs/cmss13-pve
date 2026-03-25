@@ -303,6 +303,9 @@
 	for(var/mob/living/carbon/xenomorph/bodyburster/burster_embryo in victim)
 		var/datum/hive_status/hive = GLOB.hive_datum[burster_embryo.hivenumber]
 		burster_embryo.forceMove(get_turf(victim)) //moved to the turf directly so we don't get stuck inside a cryopod or another mob container.
+		var/list/splitname = splittext(victim.real_name, " ")
+		burster_embryo.name = "[splitname[1]]omorph ([burster_embryo.nicknumber])"
+		burster_embryo.real_name = burster_embryo.name
 		playsound(burster_embryo, pick('sound/voice/alien_roar1.ogg', 'sound/voice/alien_roar2.ogg', 'sound/voice/alien_roar3.ogg', 'sound/voice/alien_roar4.ogg', 'sound/voice/alien_roar5.ogg', 'sound/voice/alien_roar6.ogg'), 30)
 
 		if(burster_embryo.client)
