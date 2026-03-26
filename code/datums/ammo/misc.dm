@@ -391,6 +391,7 @@
 	damage_type = BRUTE
 	shrapnel_type = /obj/item/sharp
 	flags_ammo_behavior = AMMO_SPECIAL_EMBED|AMMO_NO_DEFLECT|AMMO_STRIKES_SURFACE_ONLY|AMMO_HITS_TARGET_TURF
+	icon = 'icons/obj/items/weapons/1218_projectiles.dmi'
 	icon_state = "sharp_explosive_dart"
 	handful_state = "sharp_explosive"
 	var/embed_object = /obj/item/sharp/explosive

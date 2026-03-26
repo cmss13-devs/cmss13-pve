@@ -554,6 +554,7 @@
 
 /obj/item/ammo_magazine/rifle/sharp
 	name = "sharp rifle magazine"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
 	icon_state = "sharp_explosive_mag"
 	item_state = "sharprifle"
 

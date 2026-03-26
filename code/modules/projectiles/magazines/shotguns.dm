@@ -94,18 +94,21 @@ GLOBAL_LIST_INIT(shotgun_boxes_12g, list(
 /obj/item/ammo_magazine/shotgun/buckshot/special
 	name = "box of buckshot shells, USCM special type"
 	desc = "A box filled with buckshot spread shotgun shells, USCM special type. 12 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
 	icon_state = "spcbuck"
 	default_ammo = /datum/ammo/bullet/shotgun/buckshot/special
 
 /obj/item/ammo_magazine/shotgun/slug/special
 	name = "box of shotgun slugs, USCM magnum load"
 	desc = "A box filled with heavy-hitting shotgun shells. USCM magnum load. 12 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
 	icon_state = "spcslug"
 	default_ammo = /datum/ammo/bullet/shotgun/slug/special
 
 /obj/item/ammo_magazine/shotgun/flechette/special
 	name = "box of flechette shells, USCM DU type"
 	desc = "A box filled with depleted uranium flechette shotgun shells. 12 Gauge."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
 	icon_state = "spcflech"
 	default_ammo = /datum/ammo/bullet/shotgun/flechette/special
 
