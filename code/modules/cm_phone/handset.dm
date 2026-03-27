@@ -25,7 +25,7 @@
 	. = ..()
 
 	src.phone_component = phone_component
-	if(src.phone_component.phone_icon)
+	if(src.phone_component?.phone_icon)
 		icon_state = src.phone_component.phone_icon
 	src.holder = holder
 	attach_to(src.holder)

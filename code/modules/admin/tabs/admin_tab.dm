@@ -537,6 +537,36 @@
 
 	message_admins(WRAP_STAFF_LOG(usr, "ahealed all xenos in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
 
+/client/proc/toggle_frozen_in_view()
+	set name = "Freeze in View"
+	set category = "Admin.InView"
+	set hidden = TRUE
+
+	if(!admin_holder || !(admin_holder.rights & R_MOD))
+		to_chat(src, "Only administrators may use this command.")
+		return
+
+	for(var/mob/living/M in view(src))
+		if(!HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
+			ADD_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+
+	message_admins(WRAP_STAFF_LOG(usr, "frozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
+
+/client/proc/toggle_unfrozen_in_view()
+	set name = "Unfreeze in View"
+	set category = "Admin.InView"
+	set hidden = TRUE
+
+	if(!admin_holder || !(admin_holder.rights & R_MOD))
+		to_chat(src, "Only administrators may use this command.")
+		return
+
+	for(var/mob/living/M in view(src))
+		if(HAS_TRAIT_FROM(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN))
+			REMOVE_TRAIT(M, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
+
+	message_admins(WRAP_STAFF_LOG(usr, "unfrozed humans in view in [get_area(usr)] ([usr.x],[usr.y],[usr.z])"), usr.x, usr.y, usr.z)
+
 // ----------------------------
 // PANELS
 // ----------------------------

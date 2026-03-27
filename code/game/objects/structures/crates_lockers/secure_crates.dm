@@ -160,6 +160,32 @@
 	icon_locked = "secure_locked_ammo"
 	icon_unlocked = "secure_unlocked_ammo"
 
+/obj/structure/closet/crate/secure/gear/parachutes
+	name = "secure parachutes crate"
+	desc = "A secure gear crate, containing multiple parachutes."
+	icon_state = "secure_locked_ammo"
+	icon_opened = "secure_open_ammo"
+	icon_locked = "secure_locked_ammo"
+	icon_unlocked = "secure_unlocked_ammo"
+
+/obj/structure/closet/crate/secure/gear/parachutes/Initialize()
+	. = ..()
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+	new /obj/item/parachute(src)
+
 /obj/structure/closet/crate/secure/hydrosec
 	name = "secure hydroponics crate"
 	desc = "A crate with a lock on it, painted in the scheme of the station's botanists."

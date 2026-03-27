@@ -26,6 +26,7 @@
 
 /turf
 	icon = 'icons/turf/floors/floors.dmi'
+	plane = TURF_PLANE
 	var/intact_tile = 1 //used by floors to distinguish floor with/without a floortile(e.g. plating).
 	var/can_bloody = TRUE //Can blood spawn on this turf?
 	var/list/linked_pylons
@@ -63,6 +64,8 @@
 	///Lazylist of movable atoms providing opacity sources.
 	var/list/atom/movable/opacity_sources
 
+	vis_flags = VIS_INHERIT_PLANE
+
 	/// Is fishing allowed on this turf
 	var/fishing_allowed = FALSE
 
@@ -88,6 +91,15 @@
 
 	levelupdate()
 
+	var/turf/above = SSmapping.get_turf_above(src)
+	var/turf/below = SSmapping.get_turf_below(src)
+
+	if(above)
+		above.multiz_new(dir=DOWN)
+
+	if(below)
+		below.multiz_new(dir=UP)
+
 	pass_flags = GLOB.pass_flags_cache[type]
 	if (isnull(pass_flags))
 		pass_flags = new()
@@ -110,7 +122,42 @@
 	if(opacity)
 		directional_opacity = ALL_CARDINALS
 
-	return INITIALIZE_HINT_NORMAL
+	if(istransparentturf(src))
+		return INITIALIZE_HINT_LATELOAD
+	else
+		return INITIALIZE_HINT_NORMAL
+
+/turf/LateInitialize(mapload)
+	update_vis_contents()
+
+/obj/vis_contents_holder
+	plane = OPEN_SPACE_PLANE_START
+	vis_flags = VIS_HIDE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/vis_contents_holder/Initialize(mapload, vis, offset, backdrop = TRUE)
+	. = ..()
+	plane -= offset
+	vis_contents += GLOB.openspace_backdrop_one_for_all
+	vis_contents += vis
+	name = null // Makes it invisible on right click
+
+/turf/proc/update_vis_contents()
+	if(!istransparentturf(src))
+		return
+
+	vis_contents.Cut()
+	for(var/obj/vis_contents_holder/holder in src)
+		qdel(holder)
+
+	var/turf/below = SSmapping.get_turf_below(src)
+	var/depth = 0
+	while(below)
+		new /obj/vis_contents_holder(src, below, depth)
+		if(!istransparentturf(below))
+			break
+		below = SSmapping.get_turf_below(below)
+		depth++
 
 /turf/Destroy(force)
 	if(hybrid_lights_affecting)
@@ -125,6 +172,15 @@
 	for(var/cleanable_type in cleanables)
 		var/obj/effect/decal/cleanable/C = cleanables[cleanable_type]
 		C.cleanup_cleanable()
+
+	var/turf/above = SSmapping.get_turf_above(src)
+	var/turf/below = SSmapping.get_turf_below(src)
+	if(above)
+		above.multiz_del(dir=DOWN)
+
+	if(below)
+		below.multiz_del(dir=UP)
+
 	if(force)
 		..()
 		//this will completely wipe turf state
@@ -136,6 +192,12 @@
 		return
 	flags_atom &= ~INITIALIZED
 	..()
+
+/turf/proc/multiz_new(dir)
+	return
+
+/turf/proc/multiz_del(dir)
+	return
 
 /turf/vv_get_dropdown()
 	. = ..()
@@ -284,6 +346,13 @@
 		if ((!fd1 || blocking_dir & fd1) && (!fd2 || blocking_dir & fd2))
 			if(!mover.Collide(A))
 				return FALSE
+	if(mover.move_intentionally && istype(src, /turf/open_space) && istype(mover,/mob/living))
+		var/turf/open_space/space = src
+		var/mob/living/climber = mover
+		if(climber.a_intent == INTENT_HARM)
+			return TRUE
+		space.climb_down(climber)
+		return FALSE
 
 	return TRUE //Nothing found to block so return success!
 
@@ -417,9 +486,8 @@
 	qdel(src) //Just get the side effects and call Destroy
 	var/turf/W = new path(src)
 
-	for(var/i in W.contents)
-		var/datum/A = i
-		SEND_SIGNAL(A, COMSIG_ATOM_TURF_CHANGE, src)
+	for(var/atom/movable/thing as anything in W.contents)
+		SEND_SIGNAL(thing, COMSIG_ATOM_TURF_CHANGE, src)
 
 	if(new_baseturfs)
 		W.baseturfs = new_baseturfs
@@ -880,3 +948,41 @@ GLOBAL_LIST_INIT(blacklisted_automated_baseturfs, typecacheof(list(
 	if(T.name != name)
 		T.name = name
 	return T
+
+/turf/proc/on_throw_end(atom/movable/thrown_atom)
+	return TRUE
+
+/turf/proc/z_impact(mob/living/victim, height, stun_modifier = 1, damage_modifier = 1, fracture_modifier = 0)
+	if(ishuman_strict(victim))
+		var/mob/living/carbon/human/human_victim = victim
+		if (stun_modifier > 0)
+			human_victim.KnockDown(3 * height * stun_modifier)
+			human_victim.Stun(3 * height * stun_modifier)
+			human_victim.Slow(5 * height * stun_modifier)
+
+		if (damage_modifier > 0)
+			var/total_damage = ((20 * height) ** 1.3) * damage_modifier
+			human_victim.apply_damage(total_damage / 2, BRUTE, "r_leg")
+			human_victim.apply_damage(total_damage / 2, BRUTE, "l_leg")
+
+		if (fracture_modifier > 0)
+			var/obj/limb/leg/found_rleg = locate(/obj/limb/leg/l_leg) in human_victim.limbs
+			var/obj/limb/leg/found_lleg = locate(/obj/limb/leg/r_leg) in human_victim.limbs
+
+			found_rleg?.fracture(100 * fracture_modifier)
+			found_lleg?.fracture(100 * fracture_modifier)
+
+	if(isxeno(victim))
+		var/mob/living/carbon/xenomorph/xeno_victim = victim
+		if(stun_modifier > 0)
+			if(xeno_victim.mob_size >= MOB_SIZE_BIG)
+				xeno_victim.KnockDown(height * 3.5 * stun_modifier)
+				xeno_victim.Stun( height * 3.5 * stun_modifier)
+				xeno_victim.Slow(height * 6 * stun_modifier)
+			else
+				xeno_victim.KnockDown(height * 0.5 * stun_modifier)
+				xeno_victim.Stun( height * 0.5 * stun_modifier)
+				xeno_victim.Slow(height * 2.5 * stun_modifier)
+
+	if(damage_modifier > 0.5)
+		playsound(loc, "slam", 50, 1)

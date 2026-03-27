@@ -356,6 +356,13 @@
 	reagents.add_reagent("water", 118)
 	reagents.add_reagent("hooch", 2)
 
+
+/obj/item/reagent_container/food/drinks/flask/marine/army
+	name = "\improper US Army flask"
+	icon_state = "flask_army"
+	item_state = "flask_army"
+	desc = "A metal flask embossed with the US Army logo and probably filled with a slurry of water, motor oil, and medicinal alcohol. Albiet, higher quality motor oil compared to Marine rations."
+
 /obj/item/reagent_container/food/drinks/flask/weylandyutani
 	name = "\improper Weyland-Yutani flask"
 	desc = "A metal flask embossed with Weyland-Yutani's signature logo that some corporate bootlicker probably ordered to be stocked in USS military vessels' canteen vendors."

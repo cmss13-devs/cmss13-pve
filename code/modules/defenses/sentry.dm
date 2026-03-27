@@ -626,6 +626,25 @@
 	fire_delay = 5
 	burst = 1
 
+/obj/structure/machinery/defenses/sentry/premade/lowammo
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/clf_defenses.dmi'
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/lowammo/random
+	name = "\improper UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon_state = "premade" //for the map editor only
+	faction_group = FACTION_LIST_UA
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
 /obj/structure/machinery/defenses/sentry/premade/Initialize()
 	. = ..()
 	if(selected_categories[SENTRY_CATEGORY_IFF])
@@ -652,6 +671,23 @@
 	desc = "A deployable, semi-automated turret with AI targeting capabilities. Armed with an M30 Autocannon and a high-capacity drum magazine. This one's IFF system has been disabled, and it will open fire on any targets within range."
 	faction_group = null
 	ammo = new /obj/item/ammo_magazine/sentry
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy
+	name = "\improper Static UA-577 Gauss Turret"
+	immobile = TRUE
+	turned_on = TRUE
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "premade"
+	sentry_type = "wy_sentry"
+	faction_group = list(FACTION_LIST_WY, FACTION_COLONIST, FACTION_SURVIVOR)
+	ammo = new /obj/item/ammo_magazine/sentry/premade/lowammo
+	static = TRUE
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random
+
+/obj/structure/machinery/defenses/sentry/premade/antre_wy/random/Initialize()
+	. = ..()
+	ammo.current_rounds = rand(40,60)
 
 //the turret inside a static sentry deployment system
 /obj/structure/machinery/defenses/sentry/premade/deployable

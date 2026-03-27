@@ -137,6 +137,66 @@ EXTERIOR is FUCKING FREEZING, and refers to areas out in the open and or exposed
 
 /area/strata/ag/exterior/research_decks
 	name = "Outpost Decks"
+
+/area/strata/exterior/marsh/spring_marshes
+	name = "Geothermal Springs Marshes"
+
+/area/strata/exterior/marsh/water_marshes
+	name = "Geothermal Water Marshes"
+
+/area/strata/exterior/marsh/island_marshes
+	name = "Geothermal Island Marshes"
+	is_landing_zone = TRUE
+
+/area/strata/exterior/marsh/relay_marshes
+	name = "Geothermal Relay Marshes"
+	is_landing_zone = TRUE
+
+/area/strata/exterior/marsh/center
+	name = "Geothermal Springs"
+	icon_state = "marshcenter"
+
+/area/strata/exterior/marsh/river
+	name = "Geothermal River"
+	icon_state = "marshriver"
+
+/area/strata/exterior/marsh/crash
+	name = "Geothermal Crashed Dropship"
+	icon_state = "marshship"
+
+/area/strata/exterior/marsh/water
+	name = "Geothermal Water"
+	icon_state = "marshwater"
+
+//-Outside "interiors"
+
+/area/strata/interior/vanyard
+	name = "Flight Control Vehicle Yard"
+	icon_state = "garage"
+
+/area/strata/exterior/tcomms_mining_caves
+	name = "Mining Pathway Relay"
+	icon_state = "tcomms1"
+/area/strata/exterior/tcomms_vehicle_yard
+	name = "Vehicle Yard Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_geosprings
+	name = "Geothermal Springs Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_crashed_dropship
+	name = "Crashed Dropship Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_engineering_parts_storage
+	name = "Engineering - Parts Storage Platform Relay"
+	icon_state = "tcomms1"
+
+//-Outpost
+
+/area/strata/exterior/outpost_decks
+	name = "Outpost - Decks"
 	icon_state = "rdecks"
 	is_resin_allowed = TRUE
 	minimap_color = MINIMAP_AREA_RESEARCH

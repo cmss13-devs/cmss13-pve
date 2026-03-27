@@ -1042,6 +1042,7 @@
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 10), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
 		list("L96 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare/rmc, VENDOR_ITEM_REGULAR),
+		list("M89-S Signal Flare Pack", round(scale * 1), /obj/item/storage/box/flare/signal, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARMS", -1, null, null),
 		list("VP70 Combat Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/vp70/unloaded, VENDOR_ITEM_REGULAR),

@@ -76,6 +76,14 @@
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/pltco(src)
 
+/obj/structure/closet/secure_closet/marine_personal/pilot
+	job = JOB_DROPSHIP_PILOT
+
+/obj/structure/closet/secure_closet/marine_personal/pilot/spawn_gear()
+	new /obj/item/clothing/under/marine/officer/pilot(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
+
 // ==UPP== //
 
 /obj/structure/closet/secure_closet/marine_personal/upp/spawn_gear()
@@ -228,3 +236,6 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+/obj/structure/closet/secure_closet/marine_personal/rmc/pilot
+	job = JOB_TWE_RMC_PILOT

@@ -319,6 +319,7 @@
 		/datum/action/xeno_action/activable/info_marker/queen,
 		/datum/action/xeno_action/onclick/manage_hive,
 		/datum/action/xeno_action/onclick/send_thoughts,
+		/datum/action/xeno_action/onclick/toggle_seethrough,
 	)
 
 	inherent_verbs = list(
@@ -354,6 +355,7 @@
 		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
 		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
 		/datum/action/xeno_action/onclick/shift_spits,
+		/datum/action/xeno_action/onclick/toggle_seethrough,
 		//second macro
 	)
 
@@ -362,6 +364,7 @@
 		/datum/action/xeno_action/onclick/screech, //custom macro, Screech
 		/datum/action/xeno_action/activable/xeno_spit/queen_macro, //third macro
 		/datum/action/xeno_action/onclick/shift_spits, //second macro
+		/datum/action/xeno_action/onclick/toggle_seethrough,
 	)
 	claw_type = CLAW_TYPE_VERY_SHARP
 
@@ -416,6 +419,11 @@
 	AUTOWIKI_SKIP(TRUE)
 
 	hivenumber = XENO_HIVE_DELTA
+
+/mob/living/carbon/xenomorph/queen/k_series
+	AUTOWIKI_SKIP(TRUE)
+
+	hivenumber = XENO_HIVE_K_SERIES
 
 /mob/living/carbon/xenomorph/queen/mutated
 	AUTOWIKI_SKIP(TRUE)

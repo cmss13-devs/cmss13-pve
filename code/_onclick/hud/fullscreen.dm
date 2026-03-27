@@ -131,6 +131,9 @@
 /atom/movable/screen/fullscreen/flash/noise/nvg
 	alpha = 5
 
+/atom/movable/screen/fullscreen/flash/noise/optic
+	alpha = 20
+
 /atom/movable/screen/fullscreen/crit
 	icon_state = "passage"
 	layer = FULLSCREEN_CRIT_LAYER

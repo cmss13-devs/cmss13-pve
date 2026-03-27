@@ -234,7 +234,7 @@
 		return FALSE
 	var/mob/living/carbon/xenomorph/X = owner
 	if(isstorage(A.loc) || X.contains(A) || istype(A, /atom/movable/screen)) return FALSE
-	if(A.z != X.z)
+	if(!SSmapping.same_z_map(A.z, X.z))
 		to_chat(owner, SPAN_XENOWARNING("This area is too far away to affect!"))
 		return
 	apply_cooldown()
@@ -272,7 +272,7 @@
 	if(isstorage(A.loc) || X.contains(A) || istype(A, /atom/movable/screen)) return FALSE
 	var/turf/target_turf = get_turf(A)
 
-	if(target_turf.z != X.z)
+	if(!SSmapping.same_z_map(target_turf.z, X.z))
 		to_chat(X, SPAN_XENOWARNING("This area is too far away to affect!"))
 		return
 	if(!X.hive.allow_no_queen_actions && (!X.hive.living_xeno_queen || X.hive.living_xeno_queen.z != X.z))
@@ -407,6 +407,15 @@
 
 	if (!tracks_target)
 		A = get_turf(A)
+
+	if(A.z != X.z && X.mob_size >= MOB_SIZE_BIG)
+		if (!do_after(X, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+			return
+
+	//everyone gets (extra) timer to pounce up
+	if(A.z > X.z)
+		if (!do_after(X, 0.5 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE))
+			return
 
 	apply_cooldown()
 
@@ -621,7 +630,7 @@
 		to_chat(X, SPAN_XENOWARNING("It's too early to spread the hive this far."))
 		return FALSE
 
-	if(T.z != X.z)
+	if(!SSmapping.same_z_map(T.z, X.z))
 		to_chat(X, SPAN_XENOWARNING("This area is too far away to affect!"))
 		return FALSE
 
@@ -678,7 +687,7 @@
 		qdel(structure_template)
 		return FALSE
 
-	var/queen_on_zlevel = !X.hive.living_xeno_queen || X.hive.living_xeno_queen.z == T.z
+	var/queen_on_zlevel = !X.hive.living_xeno_queen || SSmapping.same_z_map(X.hive.living_xeno_queen.z, T.z)
 	if(!queen_on_zlevel)
 		to_chat(X, SPAN_WARNING("Our link to the Queen is too weak here. She is on another world."))
 		qdel(structure_template)
@@ -925,6 +934,9 @@
 
 	if (world.time <= stabbing_xeno.next_move)
 		return FALSE
+
+	if(stabbing_xeno.z != targetted_atom.z)
+		return
 
 	var/distance = get_dist(stabbing_xeno, targetted_atom)
 	if(distance > stab_range)

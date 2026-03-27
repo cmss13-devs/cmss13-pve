@@ -40,7 +40,7 @@
 	return TRUE
 
 /// Called to see if this visor is a special non-HUD visor
-/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE )
+/obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE)
 	if(attached_helmet == user.head && attached_helmet.active_visor == src)
 
 		if(!can_toggle(user))
@@ -64,14 +64,14 @@
 
 /// Called by toggle_visor() to activate the visor's effects
 /obj/item/device/helmet_visor/proc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	if(isnull(GLOB.huds[hud_type]?.hudusers[user]))
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
 		current_mob_hud.add_hud_to(user, attached_helmet)
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	if(!isnull(GLOB.huds[hud_type]?.hudusers[user]))
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+	for(var/type in hud_type)
+		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
 		current_mob_hud.remove_hud_from(user, attached_helmet)
 
 /obj/item/device/helmet_visor/process(delta_time)
@@ -81,21 +81,86 @@
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
 	return SPAN_NOTICE("\A [name] is flipped down.")
 
+/obj/item/device/helmet_visor/ua
+	name = "AN/PAV-70 visor"
+	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Fitted as-standard in almost all helmets in use by UA forces."
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
+
+//fucking mess
+/obj/item/device/helmet_visor/ua/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/ua/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
 /obj/item/device/helmet_visor/upp
 	name = "KKV-66M visor"
 	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
 	hud_type = list(MOB_HUD_FACTION_UPP)
+
+//fucking mess
+/obj/item/device/helmet_visor/upp/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/upp/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/twe
 	name = "HBS visor"
 	desc = "One of the older programm visors issued to the IASF forces of Three World Empire. Provides a basic amount of information."
 	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_IASF)
 
+//fucking mess
+/obj/item/device/helmet_visor/twe/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/twe/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
 /obj/item/device/helmet_visor/pmc
 	name = "C/PAV-Mk.1 visor"
 	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Modified by corporate technicians to display relevant information."
 	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_PMC)
 	helmet_overlay = "hud_sight_right"
+
+//fucking mess
+/obj/item/device/helmet_visor/pmc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = "#E0FFFF"
+	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/optic)
+	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
+
+/obj/item/device/helmet_visor/pmc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	. = ..()
+
+	user.client.color = initial(user.client.color)
+	user.clear_fullscreen("optic", 0.5 SECONDS)
+	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
 
 /obj/item/device/helmet_visor/pmc/alt
 	name = "C/PAV-Mk.2 visor"
@@ -491,24 +556,3 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow_marine"
-
-/obj/item/device/helmet_visor/sight
-	name = "sight optic"
-	desc = "A standard M10 pattern helmet optic that grants its user point and shoot capabilities and provides tactical squad HUD display."
-
-/obj/item/device/helmet_visor/sight/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.color = "#FDE8D9"
-	user.overlay_fullscreen("optic", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	ADD_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE
-
-/obj/item/device/helmet_visor/sight/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	. = ..()
-
-	user.client.mouse_pointer_icon = initial(user.client.mouse_pointer_icon)
-	user.client.color = initial(user.client.color)
-	user.clear_fullscreen("optic", 0.5 SECONDS)
-	REMOVE_TRAIT(user, TRAIT_HUD_SIGHT, src)
-	user.face_mouse = FALSE

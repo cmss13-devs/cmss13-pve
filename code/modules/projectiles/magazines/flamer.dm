@@ -297,6 +297,15 @@
 	custom = TRUE
 	max_rounds = 150
 
+/obj/item/ammo_magazine/flamer_tank/survivor
+	name = "improvised flamer tank"
+	desc = "A repurposed tank from heavy welding equipment, holding a flammable mix similar to napalm."
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "flamer_fuel"
+
+/obj/item/ammo_magazine/flamer_tank/survivor/empty
+	flamer_chem = null
+
 /obj/item/ammo_magazine/flamer_tank/flammenwerfer
 	name = "FW3 heavy incinerator tank"
 	desc = "A heavy, high capacity tank utilized by the Flammenwerfer 3 Heavy Incineration Unit. This one has a blue, heat-resistant Weyland-Yutani logo on it."

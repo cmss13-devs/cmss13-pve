@@ -348,6 +348,8 @@
 			return /datum/equipment_preset/royal_marine/troopsergeant
 		if(JOB_TWE_RMC_LIEUTENANT)
 			return /datum/equipment_preset/royal_marine/lieuteant
+		if(JOB_TWE_RMC_PILOT)
+			return /datum/equipment_preset/royal_marine/aircrewman
 
 	return /datum/equipment_preset/uscm/private_equipped
 

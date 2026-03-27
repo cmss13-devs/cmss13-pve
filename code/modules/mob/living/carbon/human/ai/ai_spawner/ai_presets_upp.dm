@@ -26,16 +26,6 @@
 	desc = "UPP RPG armed soldier, otherwise similarly equipped as standard"
 	path = /datum/equipment_preset/upp/rifleman/at
 
-/datum/human_ai_equipment_preset/upp/rifleman/heavy
-	name = "UPP Squad Heavy Rifleman"
-	desc = "A heavily armored UPP soldier equipped with 6B99-2 heavy armor and Type 71. These guys are equipped well enough to fight most forces."
-	path = /datum/equipment_preset/upp/rifleman/heavy
-
-/datum/human_ai_equipment_preset/upp/combat_synth
-	name = "UPP Synthetic Commando"
-	desc = "A strong commando synthetic equipped with several weapons. Its durability and firepower lets it take on multiple marines at once."
-	path = /datum/equipment_preset/upp/synth/commando
-
 /datum/human_ai_equipment_preset/upp/medic
 	name = "UPP Squad Sanitar"
 	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."

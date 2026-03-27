@@ -702,6 +702,7 @@
 	/obj/item/ammo_magazine/pistol/vp78/toxin,
 	/obj/item/ammo_magazine/pistol/vp78/penetrating,
 	/obj/item/ammo_magazine/pistol/vp78/incendiary,
+	/obj/item/ammo_magazine/pistol/vp78/heap,
 	/obj/item/ammo_magazine/pistol/vp78/rubber,
 	)
 
@@ -813,6 +814,11 @@ It is a modified Beretta 93R, and can fire three-round burst or single fire. Whe
 /obj/item/weapon/gun/pistol/b92fs/modded
 	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/reflex)
 
+/obj/item/weapon/gun/pistol/vp78/army
+	starting_attachment_types = list(/obj/item/attachable/extended_barrel, /obj/item/attachable/reflex)
+
+/obj/item/weapon/gun/pistol/vp78/army/heap
+	current_mag = /obj/item/ammo_magazine/pistol/vp78/heap
 
 //-------------------------------------------------------
 //DEAGLE //This one is obvious.

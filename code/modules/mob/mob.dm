@@ -54,6 +54,7 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
+	vis_flags |= VIS_INHERIT_PLANE
 	GLOB.last_mob_gid++
 	gid = GLOB.last_mob_gid
 
@@ -486,6 +487,9 @@
 			return FALSE
 		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
+		animation_attack_on(AM)
+		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+		flick_attack_overlay(AM, "grab")
 
 	if(!QDELETED(AM.pulledby) && !QDELETED(M))
 		visible_message(SPAN_WARNING("[src] has broken [AM.pulledby]'s grip on [M]!"), null, null, 5)
@@ -553,13 +557,7 @@
 		if(!M.can_be_pulled_by(src))
 			return
 	else if(istype(AM, /obj))
-		if(recently_grabbed > world.time)
-			return FALSE
-		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
-		animation_attack_on(AM)
-		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-		flick_attack_overlay(AM, "grab")
 
 	pulling = AM
 	AM.pulledby = src

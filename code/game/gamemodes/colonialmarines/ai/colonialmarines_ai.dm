@@ -131,6 +131,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
 		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
 		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
+		/datum/job/command/pilot/dropship_pilot/ai/rmc = JOB_TWE_RMC_PILOT,\
 		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\

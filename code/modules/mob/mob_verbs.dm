@@ -221,3 +221,38 @@
 	set category = "IC"
 
 	stop_pulling()
+
+
+/mob/living/verb/look_up()
+	set name = "Look Up"
+	set category = "IC"
+
+	if(observed_atom)
+		QDEL_NULL(observed_atom)
+		return
+
+	if(!client)
+		return
+
+	if(client.view != world.view)
+		to_chat(src, SPAN_WARNING("You cannot look up while zoomed!"))
+		return
+
+
+	if(HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
+		to_chat(src, SPAN_WARNING("We cannot look up here, we are burrowed!"))
+		return
+
+	if(!isturf(loc))
+		to_chat(src, SPAN_WARNING("You cannot look up here."))
+		return
+
+	var/turf/above = locate(x, y, z+1)
+
+	if(!istransparentturf(above))
+		to_chat(src, SPAN_WARNING("You cannot look up here."))
+		return
+
+	var/mob/hologram/look_up/observed_hologram = new(above, src)
+
+	observed_atom = observed_hologram

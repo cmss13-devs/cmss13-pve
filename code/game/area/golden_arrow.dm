@@ -14,8 +14,16 @@
 	soundscape_playlist = SCAPE_PL_HANGAR
 	soundscape_interval = 50
 
+/area/golden_arrow/pilot_workshop
+	name = "\improper Deployment Workshop"
+	icon_state = "dropshiprepair"
+
 /area/golden_arrow/platoon_commander_rooms
 	name = "\improper Platoon Commander's Rooms"
+	icon_state = "livingspace"
+
+/area/golden_arrow/pilot_room
+	name = "\improper Pilot Room"
 	icon_state = "livingspace"
 
 /area/golden_arrow/medical

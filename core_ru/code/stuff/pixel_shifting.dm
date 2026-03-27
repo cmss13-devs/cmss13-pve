@@ -93,6 +93,6 @@
 	unpixel_shift()
 	. = ..()
 
-/mob/Move(n, direct)
+/mob/Move(atom/n, direct)
 	unpixel_shift()
 	. = ..()

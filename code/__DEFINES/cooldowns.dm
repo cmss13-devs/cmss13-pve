@@ -6,6 +6,8 @@
 #define COOLDOWN_LIGHT "cooldown_light"
 #define COOLDOWN_HUD_ORDER "hud_order"
 
+#define COOLDOWN_PRINTER_ERROR "cooldown_printer_error"
+
 //Define for ship alt
 #define COOLDOWN_ALTITUDE_CHANGE "altitude_change"
 

@@ -1489,3 +1489,13 @@
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+
+/obj/item/device/radio/headset/almayer/sof/survivor_army
+	name = "US Army headset"
+	desc = "Issued exclusively to Army troopers."
+	icon_state = "soc_headset"
+	frequency = ARMY_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/soc/army)
+	volume = RADIO_VOLUME_QUIET
+	has_hud = TRUE
+	hud_type = MOB_HUD_FACTION_MARINE

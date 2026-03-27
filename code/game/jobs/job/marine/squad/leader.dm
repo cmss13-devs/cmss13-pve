@@ -75,7 +75,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 
 /datum/job/marine/leader/ai/forecon
 	title = JOB_SQUAD_LEADER_FORECON
-	gear_preset = /datum/equipment_preset/uscm/leader/forecon/captain
+	gear_preset = /datum/equipment_preset/uscm/leader/forecon
 	gear_preset_secondary = /datum/equipment_preset/uscm/leader/forecon/major
 	job_options = list(CAPTAIN_VARIANT = "Captain", MAJOR_VARIANT = "Major")
 

@@ -197,6 +197,15 @@ MILITARY NONCOMBATANT
 		SKILL_INTEL = SKILL_INTEL_TRAINED,
 	)
 
+/datum/skills/pilot/ai
+	name = "Pilot Officer"
+	additional_skills = list(
+		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
+		SKILL_FIREMAN = SKILL_FIREMAN_TRAINED,
+		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_TRAINED,
+	)
+
 /datum/skills/crew_chief
 	name = "Dropship Crew Chief"
 	skills = list(

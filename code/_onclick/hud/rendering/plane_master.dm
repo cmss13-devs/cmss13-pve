@@ -30,6 +30,18 @@
 	if(!isnull(render_relay_plane))
 		relay_render_to_plane(mymob, render_relay_plane)
 
+/atom/movable/screen/plane_master/turf
+	name = "turf plane master"
+	plane = TURF_PLANE
+	appearance_flags = PLANE_MASTER
+	blend_mode = BLEND_OVERLAY
+
+/atom/movable/screen/plane_master/turf/backdrop(mob/mymob)
+	. = ..()
+	remove_filter("AO")
+	if(istype(mymob) && mymob?.client?.prefs?.toggle_prefs & TOGGLE_AMBIENT_OCCLUSION)
+		add_filter("AO", 1, drop_shadow_filter(x = 0, y = -2, size = 4, color = "#04080FAA"))
+
 /atom/movable/screen/plane_master/floor
 	name = "floor plane master"
 	plane = FLOOR_PLANE
@@ -54,6 +66,29 @@
 	plane = ABOVE_GAME_PLANE
 	appearance_flags = PLANE_MASTER //should use client color
 	blend_mode = BLEND_OVERLAY
+
+/atom/movable/screen/plane_master/above_blackness
+	name = "above blackness plane master"
+	plane = ABOVE_BLACKNESS_PLANE
+	appearance_flags = PLANE_MASTER
+	blend_mode = BLEND_OVERLAY
+
+/atom/movable/screen/plane_master/above_blackness/Initialize(mapload, ...)
+	. = ..()
+
+	add_filter("above_blur", 1, angular_blur_filter(0, 0, 0.3))
+
+/atom/movable/screen/plane_master/above_blackness_backdrop
+	name = "above blackness backdrop plane master"
+	plane = ABOVE_BLACKNESS_BACKDROP_PLANE
+	appearance_flags = PLANE_MASTER
+	blend_mode = BLEND_MULTIPLY
+	alpha = 125
+
+/atom/movable/screen/plane_master/above_blackness_backdrop/Initialize()
+	. = ..()
+
+	add_filter("inset_shadow", 1, drop_shadow_filter(color = "#04080FAA", size = -20))
 
 /atom/movable/screen/plane_master/ghost
 	name = "ghost plane master"
@@ -196,3 +231,33 @@
 	plane = DISPLACEMENT_PLATE_RENDER_LAYER
 	render_target = DISPLACEMENT_PLATE_RENDER_TARGET
 	render_relay_plane = null
+
+/atom/movable/screen/plane_master/open_space
+	name = "open space plane"
+	plane = OPEN_SPACE_PLANE_START
+
+/atom/movable/screen/plane_master/open_space/Initialize(mapload, offset)
+	name = "open space plane [offset]"
+	plane -= offset
+	. = ..()
+	add_filter("multizblur", 1, gauss_blur_filter(0.5 + 0.25 * (offset + 1)))
+
+/atom/movable/screen/plane_master/openspace_backdrop
+	name = "open space plane master"
+	plane = OPENSPACE_BACKDROP_PLANE
+	appearance_flags = PLANE_MASTER
+	blend_mode = BLEND_MULTIPLY
+	alpha = 255
+
+/atom/movable/screen/plane_master/openspace_backdrop/Initialize()
+	. = ..()
+	filters = list()
+	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -10)
+	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -15)
+	filters += filter(type = "drop_shadow", color = "#04080FAA", size = -20)
+
+/atom/movable/screen/plane_master/seethrough
+	name = "Seethrough"
+	plane = SEETHROUGH_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	plane = SEETHROUGH_PLANE

@@ -167,6 +167,13 @@
 	current_mag = /obj/item/ammo_magazine/rifle/heap
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/magnetic_harness, /obj/item/attachable/angledgrip, /obj/item/attachable/suppressor)
 
+/obj/item/weapon/gun/rifle/m41a/army
+	current_mag = /obj/item/ammo_magazine/rifle/heap/empty
+	starting_attachment_types = list(/obj/item/attachable/reddot, /obj/item/attachable/attached_gun/grenade, /obj/item/attachable/stock/rifle/collapsible)
+
+/obj/item/weapon/gun/rifle/m41a/army/full
+	current_mag = /obj/item/ammo_magazine/rifle/heap
+
 /obj/item/weapon/gun/rifle/m41a/corporate
 	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition."
 	icon = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_obj.dmi'
@@ -193,10 +200,10 @@
 
 /obj/item/weapon/gun/rifle/m41a/corporate/detainer //for chem ert
 	current_mag = /obj/item/ammo_magazine/rifle
+	random_rail_chance = 50
 	random_spawn_rail = list(
 		/obj/item/attachable/reddot,
 		/obj/item/attachable/reflex,
-		/obj/item/attachable/flashlight,
 	)
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible, /obj/item/attachable/lasersight)
 
@@ -2032,6 +2039,9 @@
 	desc = "The M49A battle rifle is a designated marksman rifle used by multiple branches of the UA armed forces. Sporting a bullpup configuration, the M49A battle rifle is perfect for reconnaissance and fire support teams."
 	current_mag = /obj/item/ammo_magazine/rifle/m49a/ap
 	starting_attachment_types = list(/obj/item/attachable/scope/mini/army, /obj/item/attachable/extended_barrel, /obj/item/attachable/angledgrip)
+
+/obj/item/weapon/gun/rifle/m49a/army/full
+	current_mag = /obj/item/ammo_magazine/rifle/m49a/heap
 
 /obj/item/weapon/gun/rifle/m49a/forecon
 	name = "\improper M49A2 battle rifle"

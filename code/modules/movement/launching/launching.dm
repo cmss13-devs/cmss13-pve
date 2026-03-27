@@ -153,7 +153,14 @@
 	if(SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_LAUNCH, LM) & COMPONENT_LAUNCH_CANCEL)
 		return
 
+	flags_atom |= NO_ZFALL
+
 	launch_towards(LM)
+
+	flags_atom &= ~NO_ZFALL
+	var/turf/end_turf = get_turf(src)
+	if(end_turf)
+		end_turf.on_throw_end(src)
 
 // Proc for throwing or propelling movable atoms towards a target
 /atom/movable/proc/launch_towards(datum/launch_metadata/LM)
@@ -181,8 +188,12 @@
 	throwing = TRUE
 
 	add_temp_pass_flags(pass_flags)
-
-	var/turf/start_turf = get_step_towards(src, LM.target)
+	var/turf/start_turf
+	var/turf/above = SSmapping.get_turf_above(loc)
+	if(LM.target.z > z && istype(above, /turf/open_space))
+		start_turf = above
+	else
+		start_turf = get_step_towards(src, LM.target)
 	var/list/turf/path = get_line(start_turf, LM.target)
 	var/last_loc = loc
 

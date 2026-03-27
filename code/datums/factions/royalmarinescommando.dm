@@ -33,6 +33,8 @@
 			hud_icon_state = "medic"
 		if(JOB_TWE_RMC_ENGI)
 			hud_icon_state = "engi"
+		if(JOB_TWE_RMC_PILOT)
+			hud_icon_state = "pilot"
 	if(hud_icon_state)
 		holder.overlays += image('icons/mob/hud/marine_hud.dmi', H, "rmc_[hud_icon_state]")
 
@@ -50,6 +52,7 @@
 			if(JOB_TWE_RMC_SECTIONLEADER) hud_icon_state = "sectionleader"
 			if(JOB_TWE_RMC_TROOPLEADER) hud_icon_state = "troopleader"
 			if(JOB_TWE_RMC_LIEUTENANT) hud_icon_state = "lieutenant"
+			if(JOB_TWE_RMC_PILOT) hud_icon_state = "pilot"
 		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H || squad.fireteam_leaders["SQ4"] == H)
 			H.langchat_styles = "langchat_smaller_bolded"
 		else

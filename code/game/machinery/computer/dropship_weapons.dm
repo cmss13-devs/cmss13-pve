@@ -956,9 +956,10 @@
 
 /obj/structure/machinery/computer/dropship_weapons/gibraltar
 	name = "\improper 'Gibraltar' weapons controls"
-	req_one_access = list(ACCESS_TWE_LEADERSHIP, ACCESS_TWE_ARMORY, ACCESS_WY_FLIGHT)
+	req_one_access = list(ACCESS_TWE_LEADERSHIP, ACCESS_TWE_ARMORY, ACCESS_TWE_FLIGHT)
 	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
 	shuttle_tag = DROPSHIP_GIBRALTAR
+	faction = FACTION_TWE
 
 /obj/structure/machinery/computer/dropship_weapons/gibraltar/small
 	icon = 'icons/obj/structures/machinery/computer.dmi'

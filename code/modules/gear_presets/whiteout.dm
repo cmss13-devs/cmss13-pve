@@ -19,7 +19,7 @@
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/pmc/w_y_whiteout/load_race(mob/living/carbon/human/new_human)
-	new_human.set_species(SYNTH_COMBAT)
+	new_human.set_species(SYNTH_WY_COMBAT)
 	new_human.allow_gun_usage = TRUE //To allow usage of Guns/Grenades
 	new_human.r_eyes = 78
 	new_human.g_eyes = 74

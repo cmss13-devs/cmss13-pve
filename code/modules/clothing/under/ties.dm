@@ -548,6 +548,11 @@
 	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
 	icon_state = "topography_honor"
 
+/obj/item/clothing/accessory/patch/army/armor
+	name = "Army Armor patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	icon_state = "armorpatch"
+
 //misc
 
 /obj/item/clothing/accessory/dogtags

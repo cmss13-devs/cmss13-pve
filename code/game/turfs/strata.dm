@@ -266,6 +266,12 @@
 /turf/open/floor/strata/blue3/north
 	dir = NORTH
 
+/turf/open/floor/strata/blue3/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/strata/blue3/northwest
+	dir = NORTHWEST
+
 /turf/open/floor/strata/damaged3
 	icon_state = "damaged3"
 

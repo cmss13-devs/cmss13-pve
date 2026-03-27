@@ -79,3 +79,60 @@ COLONIAL LIBERATION FRONT
 		SKILL_JTAC = SKILL_JTAC_TRAINED,
 		SKILL_SPEC_WEAPONS = SKILL_SPEC_SMARTGUN,
 	)
+
+/*
+------------------
+CLF SPECIAL FORCES
+------------------
+*/
+
+/datum/skills/clf_special_forces/regular
+	name = "Insurgent Operative"
+	skills = list(
+		SKILL_CQC = SKILL_CQC_SKILLED,
+		SKILL_ENGINEER = SKILL_ENGINEER_TRAINED,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_ENGI,
+		SKILL_FIREMAN = SKILL_FIREMAN_EXPERT,
+		SKILL_POWERLOADER = SKILL_POWERLOADER_TRAINED,
+		SKILL_VEHICLE = SKILL_VEHICLE_SMALL,
+		SKILL_JTAC = SKILL_JTAC_BEGINNER,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_TRAINED,
+		SKILL_FIREARMS = SKILL_FIREARMS_TRAINED,
+		SKILL_MEDICAL = SKILL_MEDICAL_TRAINED,
+	)
+
+/datum/skills/clf_special_forces/regular/combat_engineer
+	name = "Insurgent Operative Technician"
+	skills = list(
+		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
+		SKILL_CONSTRUCTION = SKILL_CONSTRUCTION_MASTER,
+		SKILL_VEHICLE = SKILL_VEHICLE_CREWMAN,
+	)
+
+/datum/skills/clf_special_forces/regular/combat_medic
+	name = "Insurgent Operative Medic"
+	skills = list(
+		SKILL_MEDICAL = SKILL_MEDICAL_MEDIC,
+		SKILL_SURGERY = SKILL_SURGERY_TRAINED,
+	)
+
+/datum/skills/clf_special_forces/regular/specialist
+	name = "Insurgent Operative Specialist"
+	skills = list(
+		SKILL_JTAC = SKILL_JTAC_TRAINED,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
+		SKILL_FIREARMS = SKILL_FIREARMS_EXPERT,
+	)
+
+/datum/skills/clf_special_forces/regular/team_leader
+	name = "Insurgent Operative Leader"
+	skills = list(
+		SKILL_ENGINEER = SKILL_ENGINEER_ENGI,
+		SKILL_ENDURANCE = SKILL_ENDURANCE_MASTER,
+		SKILL_CQC = SKILL_CQC_EXPERT,
+		SKILL_LEADERSHIP = SKILL_LEAD_EXPERT,
+		SKILL_SURGERY = SKILL_SURGERY_NOVICE,
+		SKILL_JTAC = SKILL_JTAC_MASTER,
+		SKILL_INTEL = SKILL_INTEL_TRAINED,
+		SKILL_PILOT = SKILL_PILOT_EXPERT,
+	)

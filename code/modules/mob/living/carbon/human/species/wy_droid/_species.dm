@@ -1,7 +1,7 @@
 // Synth used for W-Y Deathsquads
 /datum/species/synthetic/colonial/wy_droid
-	name = SYNTH_COMBAT
-	name_plural = "WY Combat Androids"
+	name = SYNTH_WY_COMBAT
+	name_plural = "W-Y Combat Androids"
 	uses_skin_color = FALSE
 	special_body_types = FALSE
 	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_EMOTE_CD_EXEMPT, TRAIT_UNSTRIPPABLE) //No IRON_TEETH because they have no teeth (literally)

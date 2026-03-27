@@ -497,7 +497,6 @@
 /obj/item/ammo_box/magazine/vp70/extended/empty
 	empty = TRUE
 
-
 //-----------------------VP78 Pistol Mag Box-----------------------
 
 /obj/item/ammo_box/magazine/vp78

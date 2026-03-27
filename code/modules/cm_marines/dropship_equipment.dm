@@ -21,6 +21,7 @@
 	var/skill_required = SKILL_PILOT_TRAINED
 	var/combat_equipment = TRUE
 
+	var/faction = FACTION_MARINE
 
 /obj/structure/dropship_equipment/Destroy()
 	QDEL_NULL(ammo_equipped)
@@ -1316,7 +1317,7 @@
 	color = "#17d17a"
 
 /obj/structure/dropship_equipment/paradrop_system/attack_hand(mob/living/carbon/human/user)
-	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[FACTION_MARINE]
+	var/datum/cas_iff_group/cas_group = GLOB.cas_groups[faction]
 	var/list/targets = cas_group.cas_signals
 
 	if(!LAZYLEN(targets))

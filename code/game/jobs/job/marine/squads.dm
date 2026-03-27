@@ -333,6 +333,17 @@
 	active = TRUE
 	roundstart = FALSE
 	usable = TRUE
+
+/datum/squad/marine/army
+	name = SQUAD_ARMY
+	equipment_color = "#349c30"
+	chat_color = "#349c30"
+	radio_freq = ARMY_FREQ
+	minimap_color = "#349c30"
+	minimap_color = MINIMAP_SQUAD_ARMY
+
+	active = FALSE
+	roundstart = FALSE
 	locked = TRUE
 
 //############################### UPP Squads
@@ -788,6 +799,8 @@
 			num_engineers++
 		if(JOB_TWE_RMC_TROOPLEADER)
 			assignment = JOB_TWE_RMC_TROOPLEADER
+		if(JOB_TWE_RMC_PILOT)
+			assignment = JOB_TWE_RMC_PILOT
 
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)

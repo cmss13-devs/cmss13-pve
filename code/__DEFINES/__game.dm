@@ -40,6 +40,8 @@
 #define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
+#define MAP_TYRARGO_RIFT "Tyrargo Rift"
+#define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"
@@ -58,6 +60,9 @@
 #define MAP_LV_671 "LV-671 Ark Borealis"
 #define MAP_OIL_DEPOT "Oil Depot"
 #define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
+
+#define MAP_NAVALIS "Navalis Platform 13"//multiz version
+#define MAP_NAVALIS_SINGLE "Navalis Platform 13 (singlez)" //singlez version
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
@@ -380,6 +385,9 @@
 #define WALL_STRATA_ICE "strata_ice"
 #define WALL_STRATA_ICE_DIRTY "strata_ice_dirty"
 #define WALL_JUNGLE_UPDATED "jungle_veg"
+#define WALL_FOREST "forest_veg"
+#define WALL_FOREST_ROCK "rock_forest"
+#define WALL_FOREST_ROCK_DIRTY "rock_forest_dirty"
 #define WALL_STRATA_OUTPOST_RIBBED "strata_ribbed_outpost_"
 #define WALL_STRATA_OUTPOST_BARE "strata_bare_outpost_"
 #define WALL_SHIVA_ICE "shiva_ice"

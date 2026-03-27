@@ -259,6 +259,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	/obj/item/clothing/glasses/mgoggles/green/prescription = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/mgoggles/upp/prescription = HELMET_GARB_RELAY_ICON_STATE,
+	/obj/item/clothing/glasses/mgoggles/clf_riot_shield = HELMET_GARB_RELAY_ICON_STATE,
 	/obj/item/clothing/glasses/sunglasses = "sunglasses",
 	/obj/item/clothing/glasses/sunglasses/prescription = "sunglasses",
 	/obj/item/clothing/glasses/sunglasses/aviator = "aviator",
@@ -416,7 +417,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	var/helmet_overlay_icon = 'icons/mob/humans/onmob/head_1.dmi'
 
 	///Any visors built into the helmet
-	var/list/built_in_visors = list(new /obj/item/device/helmet_visor/sight)
+	var/list/built_in_visors = list(new /obj/item/device/helmet_visor/ua)
 
 	///Any visors that have been added into the helmet
 	var/list/inserted_visors = list()
@@ -711,6 +712,11 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 				if(length(total_visors) > iterator)
 					var/obj/item/device/helmet_visor/next_visor = total_visors[iterator + 1]
 
+					if(!isnull(GLOB.huds[next_visor.hud_type]?.hudusers[user]))
+						iterator++
+						skipped_hud = TRUE
+						continue
+
 					if(!next_visor.can_toggle(user))
 						iterator++
 						skipped_hud = TRUE
@@ -727,6 +733,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 			iterator++
 
 	for(var/obj/item/device/helmet_visor/new_visor in total_visors)
+		if(!isnull(GLOB.huds[new_visor.hud_type]?.hudusers[user]))
+			continue
 
 		if(!new_visor.can_toggle(user))
 			continue
@@ -772,7 +780,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A modified M10 marine helmet for ComTechs. Features a toggleable welding screen for eye protection."
 	icon_state = "tech_helmet"
 	specialty = "M10 technician"
-	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/welding_visor)
+	built_in_visors = list(new /obj/item/device/helmet_visor/ua, new /obj/item/device/helmet_visor/welding_visor)
 
 /obj/item/clothing/head/helmet/marine/grey
 	desc = "A standard M10 Pattern Helmet. This one has not had a camouflage pattern applied to it yet. There is a built-in camera on the right side."
@@ -806,7 +814,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inventory = BLOCKSHARPOBJ
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 	specialty = "M50 tanker"
-	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/welding_visor/tanker)
+	built_in_visors = list(new /obj/item/device/helmet_visor/ua, new /obj/item/device/helmet_visor/welding_visor/tanker)
 
 /obj/item/clothing/head/helmet/marine/medic
 	name = "\improper M10 corpsman helmet"
@@ -865,6 +873,23 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_atom = NO_NAME_OVERRIDE
 	max_inserted_visors = 2
+
+/obj/item/clothing/head/helmet/marine/rto/army
+	name = "\improper Personal body armor system helmet"
+	desc = "The personal body armor system helmet is the standard issue combat helmet for the US Army. Selected over the M12 pattern helmet during combat trials, it offers allegedly superior protection compared to the M12 series, at over four times the cost. Though its far more uncomfortable to wear."
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/UA.dmi',
+	)
+	icon_state = "army_helmet"
+	item_state = "army_helmet"
+	specialty = "Personal body armor system"
+
+/obj/item/clothing/head/helmet/marine/rto/army/engi
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/welding_visor)
+
+/obj/item/clothing/head/helmet/marine/rto/army/medic
+	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced)
 
 /obj/item/clothing/head/helmet/marine/rto/intel
 	name = "\improper XM12 pattern intelligence helmet"
@@ -989,7 +1014,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M10 pattern captain"
 	flags_atom = NO_SNOW_TYPE
-	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
+	built_in_visors = list(new /obj/item/device/helmet_visor/ua, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
 
 /obj/item/clothing/head/helmet/marine/MP
 	name = "\improper M10 pattern MP helmet"
@@ -1013,7 +1038,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "helmet"
 	item_state = "helmet"
 	flags_atom = NO_NAME_OVERRIDE
-	built_in_visors = list(new /obj/item/device/helmet_visor/sight, new /obj/item/device/helmet_visor/medical/advanced)
+	built_in_visors = list(new /obj/item/device/helmet_visor/ua, new /obj/item/device/helmet_visor/medical/advanced)
 
 /obj/item/clothing/head/helmet/marine/MP/provost/marshal
 	name = "\improper Provost Marshal Cap"
@@ -2250,3 +2275,34 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
 
+//===========================//CLF - SPECIAL FORCES\\================================\\
+//=====================================================================\\
+
+/obj/item/clothing/head/helmet/marine/veteran/clf
+	name = "\improper repainted M10 pattern helmet"
+	desc = "A M10 helmet that has been repainted with a darker color scheme, and has been modified by its user. This custom model is used by the few professional members of the Colonial Liberation Front."
+	icon_state = "clf_m10"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/CLF.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/CLF.dmi'
+	)
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_HIGH
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	clothing_traits = list(TRAIT_EAR_PROTECTION)
+	flags_atom = NO_NAME_OVERRIDE
+
+/obj/item/clothing/head/helmet/marine/veteran/clf/heavy
+	name = "\improper repainted reinforced M10 pattern helmet"
+	desc = "A repainted M10 helmet that has been seen a complete overhaul of its exterior design to shove on as much protection as possible. This custom model is used by the few professional members of the Colonial Liberation Front."
+	icon_state = "clf_heavy_m10"
+	armor_bullet = CLOTHING_ARMOR_HIGHPLUS
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+
+/obj/item/clothing/head/helmet/marine/veteran/clf/riot
+	name = "\improper repainted RC6 helmet"
+	desc = "A Riot Control 6 helmet that has been repainted with a darker color scheme, and has been modified by its user. This custom model is used by the few professional members of the Colonial Liberation Front."
+	icon_state = "clf_riot"

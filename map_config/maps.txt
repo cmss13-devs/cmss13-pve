@@ -22,6 +22,9 @@ endmap
 map bigredv2
 endmap
 
+map bigred_multiz
+endmap
+
 map prison_station_fop
 endmap
 
@@ -62,6 +65,9 @@ endmap
 map lv522_chances_claim_forecon
 endmap
 
+map tyrargo_rift
+endmap
+
 map lv759_hybrisa_prospera
 	minplayers 130
 endmap
@@ -78,6 +84,9 @@ endmap
 map derelict_almayer
 endmap
 
+map white_antre_research_facility
+endmap
+
 map whiskey_outpost_v2
 endmap
 
@@ -88,6 +97,12 @@ map si391_sekhmet_swamp
 endmap
 
 map bmg290_otogi_egress_point
+endmap
+
+map navalis_platform_13
+endmap
+
+map navalis_platform_13_singlez
 endmap
 
 map canyon_32b

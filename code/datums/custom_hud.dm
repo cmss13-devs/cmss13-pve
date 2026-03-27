@@ -39,6 +39,10 @@
 	var/ui_gun_attachment = "EAST-3:-10,1:+5"
 	var/ui_gun_unique = "EAST-3:-4,1:+2"
 
+	//layer change
+	var/ui_layer_up = "EAST-2:8,2:4"
+	var/ui_layer_down = "EAST-2:8,2:4"
+
 	//Frame related placements
 	var/UI_FRAME_LOC = "EAST-3:0,14:15"
 

@@ -482,7 +482,7 @@
 		INVOKE_NEXT_TICK(src, PROC_REF(add_minimap_marker))
 
 	//Sight
-	sight |= SEE_MOBS
+	sight |= (SEE_MOBS|SEE_BLACKNESS|SEE_TURFS)
 	see_invisible = SEE_INVISIBLE_LIVING
 	see_in_dark = 12
 
@@ -1129,3 +1129,12 @@
 	if(new_player.mind)
 		new_player.mind_initialize()
 		new_player.mind.transfer_to(target, TRUE)
+
+/mob/living/carbon/xenomorph/onZImpact(turf/impact_turf, height)
+	if(mob_size >= MOB_SIZE_BIG)
+		KnockDown(height * 5)
+		Stun(height * 5)
+
+		var/total_damage = (60 * height) ** 1.3
+		apply_damage(total_damage / 2, BRUTE)
+		playsound(impact_turf.loc, "slam", 50, 1)

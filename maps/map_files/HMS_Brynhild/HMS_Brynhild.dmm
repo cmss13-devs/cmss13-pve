@@ -3272,6 +3272,13 @@
 	},
 /turf/open/space/basic,
 /area/space)
+"gx" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/armoury_station)
 "gy" = (
 /turf/open/floor/almayer/empty/golden_arrow,
 /area/hms_brynhild/cargo_shuttle/upper)
@@ -5298,6 +5305,15 @@
 	},
 /turf/open/floor/elevatorshaft,
 /area/hms_brynhild/lower_hangar)
+"kB" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/bed/chair/comfy{
+	dir = 4
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury_station)
 "kC" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -5556,6 +5572,15 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/lower_hangar)
+"le" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/emails{
+	dir = 8;
+	pixel_y = 5;
+	pixel_x = 0
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury_station)
 "lf" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -5837,15 +5862,12 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/dorms)
 "lI" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow"
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
+/area/hms_brynhild/armoury_station)
 "lJ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -6523,6 +6545,12 @@
 /obj/item/device/defibrillator/upgraded,
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
+"ne" = (
+/obj/structure/sign/calendar/twe{
+	pixel_x = 32
+	},
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury_station)
 "nf" = (
 /obj/structure/roof/cargocrane_tracks/cross{
 	pixel_y = 14
@@ -6557,18 +6585,6 @@
 /obj/item/tool/kitchen/can_opener,
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/canteen)
-"ni" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NW-out";
-	pixel_y = 2;
-	pixel_x = -1
-	},
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
 "nj" = (
 /obj/structure/reagent_dispensers/fueltank{
 	layer = 2.97
@@ -6782,8 +6798,8 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/armoury_station)
 "nE" = (
 /obj/structure/platform{
 	dir = 1
@@ -6866,6 +6882,16 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/cryo_cells)
+"nP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/prison/bright_clean,
+/area/hms_brynhild/armoury_station)
 "nQ" = (
 /obj/structure/machinery/power/apc/almayer/south,
 /obj/structure/cable/heavyduty,
@@ -6927,6 +6953,9 @@
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
+"nX" = (
+/turf/closed/wall/almayer/aicore/white/hull,
+/area/hms_brynhild/pilot_workshop)
 "nY" = (
 /obj/structure/platform_decoration{
 	dir = 1
@@ -6942,6 +6971,15 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
+"nZ" = (
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door";
+	closed_layer = 3.3;
+	open_layer = 3.3
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/supply)
 "oa" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -7027,6 +7065,12 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_hangar)
+"oi" = (
+/obj/vehicle/powerloader/ft{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_marked,
+/area/hms_brynhild/pilot_workshop)
 "oj" = (
 /obj/vehicle/powerloader/ft{
 	dir = 4
@@ -7373,6 +7417,18 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
+"oV" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/prison/floor_plate,
+/area/hms_brynhild/pilot_workshop)
 "oW" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_y = 27
@@ -8056,6 +8112,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/lower_hangar)
+"qo" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/supply)
 "qp" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -8125,6 +8191,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/hms_brynhild/hangar)
+"qx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/supply)
 "qy" = (
 /turf/open/floor/prison,
 /area/hms_brynhild/briefing)
@@ -8211,6 +8286,16 @@
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/motor_pool)
+"qH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 1
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "qI" = (
 /obj/structure/barricade/handrail/type_b{
 	dir = 8
@@ -8252,6 +8337,9 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/lower_hangar)
+"qN" = (
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "qO" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -8426,6 +8514,14 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/lower_cargo)
+"ri" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2";
+	dir = 1
+	},
+/obj/structure/machinery/light/small/blue,
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "rj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4
@@ -8511,6 +8607,15 @@
 	},
 /turf/closed/wall/almayer/aicore/white/hull,
 /area/hms_brynhild/dorms)
+"rr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/supply)
 "rs" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -8594,6 +8699,15 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
+"rz" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/supply)
 "rA" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -9126,6 +9240,14 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/lower_cargo)
+"sA" = (
+/obj/structure/stairs/perspective{
+	color = "#5f5b54";
+	icon_state = "p_stair_full";
+	dir = 1
+	},
+/turf/open/floor/prison/cell_stripe/north,
+/area/hms_brynhild/pilot_workshop)
 "sB" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -9711,6 +9833,10 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
+"tH" = (
+/obj/structure/platform/metal/almayer,
+/turf/open/floor/prison/darkbrown3,
+/area/hms_brynhild/pilot_workshop)
 "tI" = (
 /obj/structure/closet/emcloset/legacy,
 /turf/open/floor/prison/bright_clean,
@@ -9764,11 +9890,14 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "tO" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Hangar Lockdown Blast Door"
-	},
 /obj/structure/roof/cargocrane_tracks/vertical{
 	pixel_y = 14
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door";
+	closed_layer = 3.3;
+	open_layer = 3.3
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
@@ -9919,6 +10048,56 @@
 	},
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/dorms)
+"ug" = (
+/obj/structure/platform_decoration/metal/almayer/north,
+/obj/structure/surface/rack,
+/obj/item/parachute{
+	pixel_y = 8
+	},
+/obj/item/parachute{
+	pixel_y = 8
+	},
+/obj/item/parachute{
+	pixel_y = 8
+	},
+/obj/item/parachute{
+	pixel_y = 8
+	},
+/obj/item/parachute{
+	pixel_y = 8
+	},
+/obj/item/parachute{
+	pixel_y = 1
+	},
+/obj/item/parachute{
+	pixel_y = 1
+	},
+/obj/item/parachute{
+	pixel_y = 1
+	},
+/obj/item/parachute{
+	pixel_y = 1
+	},
+/obj/item/parachute{
+	pixel_y = 1
+	},
+/obj/item/parachute{
+	pixel_y = -6
+	},
+/obj/item/parachute{
+	pixel_y = -6
+	},
+/obj/item/parachute{
+	pixel_y = -6
+	},
+/obj/item/parachute{
+	pixel_y = -6
+	},
+/obj/item/parachute{
+	pixel_y = -6
+	},
+/turf/open/floor/prison/darkbrowncorners3/west,
+/area/hms_brynhild/pilot_workshop)
 "uh" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -10023,6 +10202,16 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
+"us" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	network = list("Brynhild", "Gibraltar");
+	pixel_x = -4;
+	pixel_y = -2;
+	dir = 1
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "ut" = (
 /turf/open/floor/prison,
 /area/hms_brynhild/dorms)
@@ -10030,6 +10219,26 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/kutjevo/fake_wood,
 /area/hms_brynhild/canteen)
+"uv" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/prop/magazine/boots/n160{
+	pixel_x = 5;
+	pixel_y = 18
+	},
+/obj/item/prop/helmetgarb/flair_initech{
+	pixel_x = -9;
+	pixel_y = 15
+	},
+/obj/item/toy/deck{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/coffee{
+	pixel_x = -14;
+	pixel_y = 2
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "uw" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10098,6 +10307,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/cryo_cells)
+"uD" = (
+/obj/structure/window/framed/almayer/aicore/white{
+	name = "reinforced window"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/corsat,
+/area/hms_brynhild/pilot_workshop)
 "uE" = (
 /obj/effect/decal/siding{
 	icon_state = "siding2"
@@ -10131,6 +10349,18 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/medical)
+"uI" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
+"uJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "uK" = (
 /obj/structure/bed{
 	can_buckle = 0
@@ -10156,6 +10386,12 @@
 	},
 /turf/open/floor/almayer/edge/southeast,
 /area/hms_brynhild/dorms)
+"uL" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
 "uM" = (
 /obj/structure/surface/table/reinforced/prison{
 	color = "#ffe6e6"
@@ -10204,6 +10440,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/armoury_station)
+"uP" = (
+/obj/structure/pipes/vents/pump{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "uQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo"
@@ -10288,6 +10533,26 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
+"va" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/computer/emails{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vb" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/supply)
 "vc" = (
 /obj/structure/prop/almayer/cannon_cable_connector{
 	desc = "A connector for the large cables.";
@@ -10323,6 +10588,18 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/dorms)
+"vg" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/supply)
 "vh" = (
 /obj/structure/ship_ammo/heavygun{
 	pixel_x = 0;
@@ -10334,6 +10611,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/hangar)
+"vi" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/supply)
 "vj" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -10344,6 +10630,21 @@
 	},
 /turf/open/floor/kutjevo/tan/plate,
 /area/hms_brynhild/cryo_cells)
+"vk" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/machinery/door/airlock/upp_grey{
+	name = "Deployment Workshop"
+	},
+/turf/open/floor/plating/plating_catwalk/aicore,
+/area/hms_brynhild/pilot_workshop)
 "vl" = (
 /obj/effect/landmark/start/marine/leader/rmc,
 /obj/effect/landmark/late_join,
@@ -10361,6 +10662,39 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/hms_brynhild/medical)
+"vn" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vo" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vp" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
 "vq" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -10389,6 +10723,51 @@
 /obj/item/weapon/gun/smg/nailgun,
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/supply)
+"vu" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vv" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/phone_base/rotary{
+	name = "Aircrew Workshop Telephone";
+	phone_category = "Brynhild";
+	phone_id = "Aircrew Workshop";
+	pixel_y = 10;
+	pixel_x = -6
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle{
+	pixel_x = 9;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/cans/tube/blackberry{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	network = list("Brynhild");
+	dir = 8
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vw" = (
+/obj/structure/platform/metal/almayer/east,
+/obj/structure/platform/metal/almayer,
+/obj/structure/platform_decoration/metal/almayer/southeast,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
 "vx" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -10419,6 +10798,16 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/hangar)
+"vA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vB" = (
+/turf/open/floor/prison/cell_stripe/north,
+/area/hms_brynhild/pilot_workshop)
 "vC" = (
 /obj/structure/machinery/power/apc/almayer/west,
 /obj/structure/sign/safety/rewire{
@@ -10467,6 +10856,29 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/supply)
+"vG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 0
+	},
+/turf/open/floor/prison,
+/area/hms_brynhild/pilot_workshop)
+"vH" = (
+/obj/structure/platform/metal/almayer/west,
+/obj/structure/platform/metal/almayer,
+/obj/structure/platform_decoration/metal/almayer/southwest,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
+"vI" = (
+/obj/structure/platform/metal/almayer/east,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
 "vJ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -10505,9 +10917,38 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/motor_pool)
+"vM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/dropship_equipment/fuel/cooling_system{
+	layer = 3.5;
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 1
+	},
+/turf/open/floor/prison/floor_marked,
+/area/hms_brynhild/pilot_workshop)
 "vN" = (
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/supply)
+"vO" = (
+/obj/structure/machinery/part_fabricator/dropship{
+	req_access = list(295)
+	},
+/obj/structure/sign/safety/hazard{
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = 15;
+	pixel_y = 32
+	},
+/turf/open/floor/corsat/marked,
+/area/hms_brynhild/pilot_workshop)
 "vP" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10515,6 +10956,12 @@
 /obj/structure/dropship_equipment/weapon/rocket_pod,
 /turf/open/floor/prison/floor_marked,
 /area/hms_brynhild/hangar)
+"vQ" = (
+/obj/structure/machinery/prop/almayer/computer{
+	pixel_y = 20
+	},
+/turf/open/floor/corsat/marked,
+/area/hms_brynhild/pilot_workshop)
 "vR" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -10542,6 +10989,23 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/canteen)
+"vU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_y = 0
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/fire_haz{
+	pixel_x = 15;
+	pixel_y = 32
+	},
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_one_access = null
+	},
+/turf/open/floor/prison/floor_marked,
+/area/hms_brynhild/pilot_workshop)
 "vV" = (
 /obj/structure/stairs/perspective{
 	color = "#6e6e6e"
@@ -10560,6 +11024,13 @@
 	},
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/prep_hallway)
+"vX" = (
+/obj/structure/platform/metal/almayer/west,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/pilot_workshop)
 "vY" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -10570,6 +11041,27 @@
 	},
 /turf/open/floor/prison,
 /area/hms_brynhild/hangar)
+"vZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/supply)
+"wa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate,
+/area/hms_brynhild/supply)
 "wb" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S"
@@ -10597,6 +11089,16 @@
 	},
 /turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/armoury_station)
+"we" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/hms_brynhild/supply)
 "wf" = (
 /turf/open/floor/almayer_hull/outerhull_dir/southwest,
 /area/space)
@@ -10640,6 +11142,15 @@
 	dir = 8
 	},
 /turf/open/floor/prison,
+/area/hms_brynhild/supply)
+"wj" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	name = "\improper Hangar Lockdown Blast Door"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
 "wk" = (
 /obj/structure/largecrate/random/secure,
@@ -11828,6 +12339,9 @@
 /area/hms_brynhild/briefing)
 "Ad" = (
 /obj/structure/bed/chair/comfy/lime,
+/obj/structure/sign/calendar/twe{
+	pixel_x = -32
+	},
 /turf/open/floor/kutjevo/colors,
 /area/hms_brynhild/shared_office)
 "Af" = (
@@ -12528,13 +13042,16 @@
 /turf/open/floor/almayer/pod_landing_floor,
 /area/hms_brynhild/hangar)
 "Cj" = (
-/obj/structure/machinery/door/poddoor/almayer/locked{
-	name = "\improper Hangar Lockdown Blast Door"
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/poddoor/almayer/open{
+	dir = 2;
+	name = "\improper Hangar Lockdown Blast Door";
+	closed_layer = 3.3;
+	open_layer = 3.3
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/supply)
 "Ck" = (
@@ -12712,11 +13229,17 @@
 /turf/closed/wall/almayer/outer,
 /area/hms_brynhild/engineering)
 "CE" = (
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
+/obj/structure/window/framed/almayer/aicore/white{
+	name = "reinforced window"
 	},
-/turf/open/floor/almayer/plate,
-/area/hms_brynhild/prep_hallway)
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "squadarmory";
+	name = "\improper Gear Lockers";
+	pixel_y = -4
+	},
+/turf/open/floor/corsat,
+/area/hms_brynhild/armoury_station)
 "CF" = (
 /turf/closed/wall/r_wall/biodome/biodome_unmeltable,
 /area/hms_brynhild/medical)
@@ -12983,13 +13506,11 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/disposal{
-	density = 0;
-	layer = 3.2;
-	pixel_y = 16
+/obj/structure/flora/pottedplant{
+	icon_state = "pottedplant_10"
 	},
 /turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
+/area/hms_brynhild/armoury_station)
 "Ds" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/storage/bible{
@@ -13896,16 +14417,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/hms_brynhild/cryo_cells)
-"FA" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
 "FB" = (
 /obj/structure/machinery/power/smes/buildable,
 /obj/structure/machinery/power/smes/buildable{
@@ -14535,16 +15046,22 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/cryo_cells)
 "Hy" = (
-/obj/structure/machinery/door/airlock/upp_utility{
-	dir = 1;
-	req_one_access_txt = "300";
-	name = "Armoury Station"
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/aicore,
+/obj/structure/machinery/door/airlock/upp_grey{
+	req_one_access_txt = "295;301;306;310";
+	name = "Aircrew Equipment Station";
+	dir = 1
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "squadarmory";
+	name = "\improper Gear Lockers";
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate,
 /area/hms_brynhild/armoury_station)
 "Hz" = (
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -14627,10 +15144,6 @@
 /turf/open/floor/prison/floor_plate,
 /area/hms_brynhild/lower_cargo)
 "HF" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "N";
-	pixel_y = 2
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -15594,7 +16107,12 @@
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/hangar)
 "Kd" = (
-/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader,
+/obj/structure/closet/secure_closet/marine_personal/rmc/troop_leader{
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/rmc/pilot{
+	pixel_x = -8
+	},
 /turf/open/floor/almayer/plate,
 /area/hms_brynhild/cryo_cells)
 "Ke" = (
@@ -16654,11 +17172,9 @@
 /turf/open/floor/almayer/aicore/glowing,
 /area/hms_brynhild/ai_interface)
 "Nx" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "cargo_arrow"
-	},
+/obj/structure/machinery/cm_vending/clothing/pilot_officer/ai/rmc,
 /turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
+/area/hms_brynhild/armoury_station)
 "Ny" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -18447,6 +18963,7 @@
 	dir = 8;
 	network = list("Brynhild")
 	},
+/obj/structure/machinery/disposal,
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "Tb" = (
@@ -19492,8 +20009,8 @@
 /turf/open/floor/prison/bright_clean,
 /area/hms_brynhild/armoury_station)
 "Wm" = (
-/obj/effect/landmark/start/marine/tl/rmc,
 /obj/effect/landmark/late_join,
+/obj/effect/landmark/start/pilot/dropship_pilot/ai/rmc,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/hms_brynhild/cryo_cells)
 "Wn" = (
@@ -19502,17 +20019,6 @@
 "Wp" = (
 /turf/closed/wall/almayer/aicore/white,
 /area/hms_brynhild/cryo_cells)
-"Wq" = (
-/obj/effect/decal/warning_stripes{
-	icon_state = "NE-out";
-	pixel_y = 2;
-	pixel_x = 1
-	},
-/obj/structure/pipes/vents/pump{
-	dir = 1
-	},
-/turf/open/floor/prison/bright_clean,
-/area/hms_brynhild/prep_hallway)
 "Wr" = (
 /turf/closed/wall/almayer/outer,
 /area/hms_brynhild/synthcloset)
@@ -20058,15 +20564,21 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/door/firedoor/border_only/almayer{
-	dir = 2
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer/plate,
-/area/hms_brynhild/prep_hallway)
+/obj/structure/window/framed/almayer/aicore/white{
+	name = "reinforced window"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	id = "squadarmory";
+	name = "\improper Gear Lockers";
+	pixel_y = -4
+	},
+/turf/open/floor/corsat,
+/area/hms_brynhild/armoury_station)
 "XY" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -27557,7 +28069,7 @@ Jr
 Jr
 Jr
 Jr
-Wq
+YL
 vW
 ph
 lh
@@ -27694,9 +28206,9 @@ bn
 lK
 bn
 Hy
-Yw
+nP
 nD
-cF
+gx
 lI
 XW
 HF
@@ -27835,13 +28347,13 @@ VA
 Wl
 dM
 SZ
-XA
-Dq
-Er
-La
-Nx
 CE
-Pt
+Dq
+ne
+kB
+VA
+Jr
+Er
 aT
 La
 xA
@@ -27980,10 +28492,10 @@ sw
 sw
 sw
 sw
-iY
+le
 Nx
 CE
-FA
+La
 td
 Er
 xA
@@ -28125,7 +28637,7 @@ sw
 sw
 sw
 sw
-ni
+aS
 aT
 Er
 xA
@@ -31784,9 +32296,9 @@ BP
 BP
 BP
 BP
-MU
+AQ
 zY
-th
+cY
 kO
 ih
 IR
@@ -31926,9 +32438,9 @@ BP
 BP
 BP
 BP
-MU
+AQ
 VT
-oS
+qo
 Mc
 EE
 sP
@@ -32068,9 +32580,9 @@ BP
 BP
 BP
 BP
-MU
+AQ
 zY
-th
+cY
 kO
 ih
 zY
@@ -32210,9 +32722,9 @@ BP
 BP
 BP
 BP
-MU
+AQ
 zY
-th
+cY
 kO
 ih
 zY
@@ -32629,13 +33141,13 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+AQ
+AQ
+AQ
+AQ
+AQ
+AQ
+AQ
 AQ
 AQ
 AQ
@@ -32771,17 +33283,17 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-MU
-zY
-th
+AQ
+cY
 kO
+ih
+zY
+zY
+vb
+zY
+zY
+cY
+nZ
 ih
 IR
 zx
@@ -32913,16 +33425,16 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-MU
-VT
-oS
+AQ
+qo
+we
+vZ
+xg
+ns
+TO
+ns
+rr
+qo
 Cj
 vx
 xP
@@ -33055,16 +33567,16 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-MU
-zY
-th
+AQ
+qx
+wj
+wa
+UG
+mC
+vg
+mC
+rz
+qx
 tO
 ux
 UG
@@ -33197,17 +33709,17 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-MU
-zY
-th
+AQ
+cY
 kO
+ih
+zY
+zY
+vi
+zY
+zY
+cY
+nZ
 PU
 bz
 Xj
@@ -33339,17 +33851,17 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
 AQ
 AQ
 AQ
-AQ
+nX
+nX
+uD
+vk
+uD
+nX
+nX
+nX
 AQ
 Le
 ai
@@ -33484,15 +33996,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-AQ
+nX
+vI
+vw
+vn
+qN
+sA
+qH
+oi
+nX
 AQ
 hN
 hN
@@ -33626,15 +34138,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+vM
+vA
+vo
+uI
+tH
+qN
+oV
+nX
 AQ
 hN
 hN
@@ -33768,15 +34280,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+vO
+vB
+vp
+uJ
+sA
+ri
+oi
+nX
 AQ
 AQ
 AQ
@@ -33910,15 +34422,15 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+vQ
+vB
+vp
+uL
+ug
+nX
+nX
+nX
 Gg
 yz
 yz
@@ -34052,13 +34564,13 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+vU
+vG
+vu
+uP
+us
+nX
 BP
 BP
 Gg
@@ -34194,13 +34706,13 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+vX
+vH
+vv
+va
+uv
+nX
 BP
 BP
 Gg
@@ -34336,13 +34848,13 @@ BP
 BP
 BP
 BP
-BP
-BP
-BP
-BP
-BP
-BP
-BP
+nX
+nX
+nX
+nX
+nX
+nX
+nX
 BP
 BP
 Gg

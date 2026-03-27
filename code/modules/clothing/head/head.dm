@@ -82,6 +82,13 @@
 /obj/item/clothing/head/beret/cm/black
 	icon_state = "beret_black"
 
+/obj/item/clothing/head/beret/cm/black/army
+	name = "US Army beret"
+	desc = "The proud tradition of the US Army 1st Air Cav using black berets for their troopers is maintained since the 20th century."
+
+/obj/item/clothing/head/beret/marine/commander/black/army
+	name = "army major black beret"
+
 /obj/item/clothing/head/beret/cm/green
 	icon_state = "beret_green"
 
@@ -1006,6 +1013,19 @@
 		/obj/item/prop/helmetgarb/helmet_nvg = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
+	)
+
+/obj/item/clothing/head/beret/royal_marine/team_leader
+	icon_state = "rmc_beret_tl"
+	item_state = "rmc_beret_tl"
+
+/obj/item/clothing/head/cavalry
+	name = "\improper US cavalry hat"
+	desc = "Also known as Cavalry Stetson, this hat is a symbol of tradition and remembrence of heroism that is ongoing from as far as 19th century. Even though cavalry divison had cashed in its horses for choppers, choppers for dropships, and gone tear-assing around space, looking for the shit."
+	icon_state = "cavalry"
+	icon = 'icons/obj/items/clothing/hats/hats_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats_by_faction/UA.dmi'
 	)
 
 /obj/item/clothing/head/beret/royal_marine_pvp

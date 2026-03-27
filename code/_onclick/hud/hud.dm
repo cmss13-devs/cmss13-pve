@@ -46,6 +46,9 @@
 	var/atom/movable/screen/toggle_burst
 	var/atom/movable/screen/unique_action
 
+	var/atom/movable/screen/layer_up
+	var/atom/movable/screen/layer_down
+
 	var/atom/movable/screen/zone_sel/zone_sel
 	var/atom/movable/screen/pull_icon
 	var/atom/movable/screen/throw_icon
@@ -78,8 +81,14 @@
 	mymob = owner
 	hide_actions_toggle = new
 
-	for(var/mytype in subtypesof(/atom/movable/screen/plane_master)- /atom/movable/screen/plane_master/rendering_plate)
+	for(var/mytype in subtypesof(/atom/movable/screen/plane_master)- /atom/movable/screen/plane_master/rendering_plate - /atom/movable/screen/plane_master/open_space)
 		var/atom/movable/screen/plane_master/instance = new mytype()
+		plane_masters["[instance.plane]"] = instance
+		if(owner.client)
+			instance.backdrop(mymob)
+
+	for(var/z_level in 0 to OPEN_SPACE_PLANE_START - OPEN_SPACE_PLANE_END)
+		var/atom/movable/screen/plane_master/open_space/instance = new(null, z_level)
 		plane_masters["[instance.plane]"] = instance
 		if(owner.client)
 			instance.backdrop(mymob)
@@ -141,6 +150,9 @@
 	eject_mag = null
 	toggle_burst = null
 	unique_action = null
+
+	layer_up = null
+	layer_down = null
 
 	zone_sel = null
 	pull_icon = null

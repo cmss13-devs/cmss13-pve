@@ -88,6 +88,10 @@
 	name = "\improper Weapon-Maintenance Station"
 	icon_state = "alpha"
 
+/area/hms_brynhild/pilot_workshop
+	name = "\improper Deployment Workshop"
+	icon_state = "dropshiprepair"
+
 /area/hms_brynhild/ai_interface
 	name = "\improper Human AI Interface"
 	icon_state = "airoom"
