@@ -1404,3 +1404,24 @@
 
 /obj/item/ammo_box/magazine/mar50/empty
 	empty = TRUE
+
+//-----------------------R81M1 Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/r81
+	name = "magazine box (R81M1 x 12)"
+	icon_state = "base_r81"
+	flags_equip_slot = SLOT_BACK
+	overlay_gun_type = "_r81"
+	overlay_content = "_r81"
+	overlay_ammo_type = ""
+	num_of_magazines = 12
+	magazine_type = /obj/item/ammo_magazine/rifle/r81m1
+
+/obj/item/ammo_box/magazine/r81/update_icon()
+	if(overlays)
+		overlays.Cut()
+	overlays += image(icon, icon_state = "[icon_state]_lid") //adding lid
+	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
+
+/obj/item/ammo_box/magazine/r81/empty
+	empty = TRUE
