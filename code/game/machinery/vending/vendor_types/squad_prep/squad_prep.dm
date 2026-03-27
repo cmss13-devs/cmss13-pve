@@ -1053,10 +1053,12 @@
 
 		list("SIDEARMS", -1, null, null), //can never go without the beretta
 		list("Beretta 92FS M9 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/b92fs, VENDOR_ITEM_REGULAR),
+		list("ES4 Electrostatic Pistol", round(scale * 3), /obj/item/weapon/gun/pistol/es4/unloaded, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", -1, null, null),
 		list("Beretta 92FS M9 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/b92fs, VENDOR_ITEM_REGULAR),
+		list("ES4 Stun Magazine (9mm)", round(scale * 10), /obj/item/ammo_magazine/pistol/es4, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
@@ -1087,6 +1089,7 @@
 		list("Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("DP MK60-TAC Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/veteran/merc, VENDOR_ITEM_REGULAR),
 		list("Uniformed Cap", round(scale * 10), /obj/item/clothing/head/cmcap/corrections, VENDOR_ITEM_REGULAR),
+		list("Holobadge", round(scale * 10), /obj/item/clothing/accessory/holobadge/cord, VENDOR_ITEM_REGULAR),
 		list("Radio Headset", round(scale * 10) ,/obj/item/device/radio/headset/distress/merc, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
