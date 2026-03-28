@@ -10,7 +10,6 @@
 	ceiling = CEILING_GLASS
 	minimap_color = MINIMAP_AREA_COLONY
 	ceiling_muffle = FALSE
-	unoviable_timer = FALSE
 
 //parent types
 
@@ -26,7 +25,7 @@
 	icon_state = "base_icon"
 	ceiling = CEILING_NONE
 	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL|AREA_CONTAINMENT|AREA_UNWEEDABLE|AREA_NOBURROW
+	flags_area = AREA_NOTUNNEL|AREA_CONTAINMENT|AREA_UNWEEDABLE
 	requires_power = FALSE
 	ambience_exterior = SCAPE_ABYSSAL_EXTERIOR
 	minimap_color = MINIMAP_AREA_GLASS
@@ -40,7 +39,7 @@
 	icon_state = "oob"
 	ceiling = CEILING_MAX
 	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL|AREA_NOBURROW
+	flags_area = AREA_NOTUNNEL
 	ambience_exterior = SCAPE_ABYSSAL_EXTERIOR
 	minimap_color = MINIMAP_AREA_SPACE
 	requires_power = FALSE
@@ -58,7 +57,6 @@
 	is_resin_allowed =  FALSE
 	is_landing_zone = TRUE
 	minimap_color = MINIMAP_AREA_LZ
-	linked_lz = DROPSHIP_LZ1
 
 //// Interior Station \\\\
 
@@ -104,7 +102,6 @@
 
 /area/abyssal/interior/maintenance/west
 	name = "Abyssal - Port - Maintenance"
-	linked_lz = DROPSHIP_LZ1
 
 /area/abyssal/interior/maintenance/south
 	name = "Abyssal - Aft - Maintenance"
@@ -138,13 +135,11 @@
 /area/abyssal/interior/arrivals
 	name = "Abyssal - Arrivals Wing"
 	icon_state = "station1"
-	linked_lz = DROPSHIP_LZ1
 	minimap_color = MINIMAP_AREA_CELL_MED
 
 /area/abyssal/interior/cargo
 	name = "Abyssal - Cargo Wing"
 	icon_state = "station1"
-	linked_lz = DROPSHIP_LZ1
 	minimap_color = MINIMAP_AREA_SHIP
 
 /area/abyssal/interior/atmo
@@ -229,7 +224,7 @@
 	icon_state = "maints"
 	ceiling = CEILING_MAX
 	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL|AREA_NOBURROW
+	flags_area = AREA_NOTUNNEL
 	minimap_color = MINIMAP_AREA_GLASS
 	ambience_exterior = SCAPE_ABYSSAL_EXTERIOR
 	requires_power = FALSE

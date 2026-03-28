@@ -18,14 +18,12 @@
 	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. Looks virtually indestructible."
 	icon_state = "hwall"
 	walltype = WALL_REINFORCED
-	turf_flags = TURF_HULL
 
 /turf/closed/wall/abyssal/standard/temphull
 	name = "heavy reinforced hull"
 	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. This wall appears to have had an extra layer of sheeting slid over."
 	icon_state = "tempwall"
 	damage_cap = HEALTH_WALL_REINFORCED
-	turf_flags = TURF_HULL
 
 /turf/closed/wall/abyssal/standard/temphull/Initialize()
 	. = ..()
@@ -54,14 +52,12 @@
 	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. Looks virtually indestructible."
 	icon_state = "hwall"
 	walltype = WALL_REINFORCED
-	turf_flags = TURF_HULL
 
 /turf/closed/wall/abyssal/blue/temphull
 	name = "heavy reinforced hull"
 	desc = "A huge chunk of ultra-reinforced metal used to separate rooms. This wall appears to have had an extra layer of sheeting slid over."
 	icon_state = "tempwall"
 	damage_cap = HEALTH_WALL_REINFORCED
-	turf_flags = TURF_HULL
 
 /turf/closed/wall/abyssal/blue/temphull/Initialize()
 	. = ..()

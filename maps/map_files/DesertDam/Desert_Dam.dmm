@@ -13049,7 +13049,7 @@
 /area/desert_dam/exterior/valley/valley_wilderness)
 "aYA" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/computer/objective{
+/obj/structure/machinery/computer/disk_reader{
 	dir = 4
 	},
 /turf/open/floor/wood,
@@ -16733,7 +16733,7 @@
 /area/desert_dam/interior/dam_interior/tech_storage)
 "bma" = (
 /obj/structure/surface/table/woodentable,
-/obj/structure/machinery/computer/objective,
+/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/wood,
 /area/desert_dam/building/administration/meetingrooom)
 "bmb" = (
@@ -17004,7 +17004,7 @@
 /area/desert_dam/exterior/landing_pad_one)
 "bna" = (
 /obj/structure/surface/table,
-/obj/structure/machinery/computer/objective{
+/obj/structure/machinery/computer/disk_reader{
 	dir = 4
 	},
 /turf/open/floor/wood,
@@ -39911,7 +39911,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
 /obj/item/reagent_container/food/snacks/cookie,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
 "dyT" = (
@@ -40201,7 +40201,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/bun,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -40854,7 +40854,7 @@
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
@@ -40924,7 +40924,7 @@
 /area/desert_dam/building/dorms/hallway_westwing)
 "dGD" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
@@ -49595,7 +49595,7 @@
 /area/desert_dam/exterior/rock)
 "ugJ" = (
 /obj/structure/surface/table,
-/obj/structure/machinery/computer/objective,
+/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/prison/red/north,
 /area/desert_dam/building/water_treatment_one/lobby)
 "uhf" = (

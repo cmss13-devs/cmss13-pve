@@ -577,7 +577,7 @@
 /obj/item/tool/crowbar/red{
 	pixel_x = -4
 	},
-/obj/item/tool/weldingtool/screen{
+/obj/item/tool/weldingtool{
 	pixel_x = 8;
 	pixel_y = 6
 	},
@@ -779,7 +779,7 @@
 "Xh" = (
 /obj/effect/decal/hybrisa/dirt_2,
 /obj/item/trash/cigbutt,
-/mob/living/simple_animal/small/cat/blackcat{
+/mob/living/simple_animal/cat/blackcat{
 	dir = 8;
 	name = "Sebastian"
 	},
