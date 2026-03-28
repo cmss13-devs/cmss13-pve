@@ -788,7 +788,7 @@
 /area/desert_dam/exterior/valley/valley_medical)
 "acT" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/structure/machinery/computer/objective{
+/obj/structure/machinery/computer/disk_reader{
 	dir = 4
 	},
 /turf/open/floor/wood,
@@ -1869,7 +1869,7 @@
 /area/desert_dam/interior/dam_interior/central_tunnel)
 "agP" = (
 /obj/structure/surface/table/woodentable,
-/obj/structure/machinery/computer/objective,
+/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/wood,
 /area/desert_dam/building/administration/meetingrooom)
 "agQ" = (
@@ -1973,7 +1973,7 @@
 /area/desert_dam/exterior/landing_pad_one)
 "ahh" = (
 /obj/structure/surface/table,
-/obj/structure/machinery/computer/objective{
+/obj/structure/machinery/computer/disk_reader{
 	dir = 4
 	},
 /turf/open/floor/wood,
@@ -5703,7 +5703,7 @@
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/candy,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
@@ -19587,7 +19587,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/candy,
 /obj/item/reagent_container/food/snacks/bun,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -27027,7 +27027,7 @@
 /area/desert_dam/exterior/landing_pad_one)
 "jRK" = (
 /obj/structure/surface/table,
-/obj/structure/machinery/computer/objective,
+/obj/structure/machinery/computer/disk_reader,
 /turf/open/floor/prison/red/north,
 /area/desert_dam/building/water_treatment_one/lobby)
 "jRN" = (
@@ -33205,7 +33205,7 @@
 /area/desert_dam/building/substation/southwest)
 "nGn" = (
 /obj/structure/surface/table,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
@@ -43549,7 +43549,7 @@
 /obj/structure/surface/table,
 /obj/item/reagent_container/food/snacks/chips,
 /obj/item/reagent_container/food/snacks/cookie,
-/obj/item/reagent_container/food/snacks/donkpocket,
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket,
 /turf/open/floor/prison/kitchen/southwest,
 /area/desert_dam/building/cafeteria/cafeteria)
 "tWQ" = (
