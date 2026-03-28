@@ -446,7 +446,7 @@
 /area/abyssal/interior/command)
 "abr" = (
 /obj/effect/decal/hybrisa/dirt_2,
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /turf/open/floor/corsat,
@@ -3996,7 +3996,7 @@
 /turf/open/floor/darkpurple2,
 /area/abyssal/interior/science)
 "alq" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /obj/effect/decal/hybrisa/dirt_2,
@@ -4014,7 +4014,7 @@
 /turf/open/floor/hybrisa/tile/darkbrown_bigtile/north,
 /area/abyssal/interior/maintenance/north)
 "alt" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /obj/effect/decal/hybrisa/dirt_2,
@@ -4907,7 +4907,7 @@
 /turf/open/floor/station/metal/floor/alt3/west,
 /area/abyssal/interior/arrivals)
 "anH" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /turf/open/floor/corsat,
@@ -6028,7 +6028,7 @@
 "aqo" = (
 /obj/structure/machinery/light/blue,
 /obj/effect/decal/hybrisa/dirt_2,
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /turf/open/floor/corsat,
@@ -6967,7 +6967,7 @@
 /turf/open/floor/engine,
 /area/abyssal/interior/maintenance/west)
 "asr" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /obj/effect/decal/hybrisa/dirt_2,
@@ -27208,7 +27208,7 @@
 /turf/open/floor/plating/plating_catwalk/shiva,
 /area/abyssal/interior/hydro)
 "nNq" = (
-/obj/structure/machinery/suit_storage_unit/compression_suit{
+/obj/structure/machinery/suit_storage_unit/pressure_suit{
 	needs_power = 0
 	},
 /obj/effect/decal/hybrisa/dirt_2,
