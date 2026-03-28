@@ -237,6 +237,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
 		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
+		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
 		MAP_LV_671 = new /obj/item/map/lv_671(),
 		MAP_OIL_DEPOT = new /obj/item/map/oil_depot(),
 		MAP_DERELICT_ALMAYER_INFESTED = new /obj/item/map/almayer/infested()

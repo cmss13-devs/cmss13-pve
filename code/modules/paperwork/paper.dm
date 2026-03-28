@@ -611,6 +611,23 @@
 	name = "GRENADES NOTICE!"
 	info = "Since you useless tossers can't be trusted with the damn gas grenades, them and the other grenades have been moved to the munitions locker over by the weapons maintenance stations."
 
+/obj/item/paper/abyssal/captain
+	name = "Captains Directive"
+
+/obj/item/paper/abyssal/captain/Initialize(mapload, photo_list)
+	. = ..()
+
+	info = "<center> <br> <b><small>Con-Amalagated Corporation</b></small> <br> <b><large>Orders For Captain: Con-AM 81 'Abyssal'</large></b> <br> <small>No.02</small></center> <hr> <br> Date: 2182 <br> <b><large>On Recovery Of Unidentified Craft<large></b>  <hr> We have recieved your communique regarding the recovery of the possible xenocraft. Its transfer into Con-Am secure custody is considered priority 1. We are dispatching a Con-Am Security Service force to your station to transfer it off-station.<br><br> Your directive is to ensure its safe harbour until the recovery team arrives. You must render every effort to ensure the safety of the craft. You and your crew will be well rewarded for your efforts.  <hr><small><i>FOR SANCTIONED USE ONLY</i></small>"
+
+/obj/item/paper/abyssal/liaison
+	name = "Liaison Directive"
+
+/obj/item/paper/abyssal/liaison/Initialize(mapload, photo_list)
+	. = ..()
+
+	info = "<center> <br> <b><small>Con-Amalagated Corporation</b></small> <br> <b><large>Orders For Liaison: Con-AM 81 'Abyssal'</large></b> <br> <small>No.02</small></center> <hr> <br> Date: 2182 <br> <b><large>On Recovery Of Unidentified Craft<large></b>  <hr> We have recieved your Captains communique regarding the recovery of a possible xenocraft. Its transfer into Con-Am secure custody is considered priority 1. We are dispatching a Con-Am Security Service force to your station to transfer it off-station.<br><br> Your directive is to ensure its safe harbour until the recovery team arrives. You must render every effort to ensure the safety of the craft. You and your crew will be well rewarded for your efforts.  <hr><small><i>FOR SANCTIONED USE ONLY</i></small>"
+
+
 /obj/item/paper/crumpled
 	name = "paper scrap"
 	icon_state = "scrap"

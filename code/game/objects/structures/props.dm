@@ -971,10 +971,6 @@
 	icon_state = "water"
 	density = 0
 
-/obj/structure/prop/invuln/pipe_water/Initialize(mapload)
-	. = ..()
-	desc = "The [is_mainship_level(z) ? copytext(MAIN_SHIP_NAME, 5) : "colony"] has sprung a leak!"
-
 /obj/structure/prop/invuln/lattice_prop
 	desc = "A lightweight support lattice."
 	name = "lattice"
@@ -982,132 +978,6 @@
 	icon_state = "lattice0"
 	density = FALSE
 	layer = RIPPLE_LAYER
-
-/obj/structure/prop/wooden_cross
-	name = "wooden cross"
-	desc = "A wooden grave marker. Is it more respectful because someone made it by hand, or less, because it's crude and misshapen?"
-	icon = 'icons/obj/structures/props/crosses.dmi'
-	icon_state = "cross1"
-	density = FALSE
-	health = 30
-	var/inscription
-	var/obj/item/helmet
-	///This is for cross dogtags.
-	var/tagged = FALSE
-	///This is for cross engraving/writing.
-	var/engraved = FALSE
-	var/dogtag_name
-	var/dogtag_blood
-	var/dogtag_assign
-
-/obj/structure/prop/wooden_cross/Destroy()
-	if(helmet)
-		helmet.forceMove(loc)
-		helmet = null
-	if(tagged)
-		var/obj/item/dogtag/new_info_tag = new(loc)
-		new_info_tag.fallen_names = list(dogtag_name)
-		new_info_tag.fallen_assgns = list(dogtag_assign)
-		new_info_tag.fallen_blood_types = list(dogtag_blood)
-		GLOB.fallen_list_cross -= dogtag_name
-	return ..()
-
-/obj/structure/prop/wooden_cross/attackby(obj/item/W, mob/living/user)
-	if(istype(W, /obj/item/dogtag))
-		var/obj/item/dogtag/dog = W
-		if(!tagged)
-			tagged = TRUE
-			user.visible_message(SPAN_NOTICE("[user] drapes [W] around [src]."))
-			dogtag_name = popleft(dog.fallen_names)
-			dogtag_assign = popleft(dog.fallen_assgns)
-			dogtag_blood = popleft(dog.fallen_blood_types)
-			GLOB.fallen_list_cross += dogtag_name
-			update_icon()
-			if(!length(dog.fallen_names))
-				qdel(dog)
-			else
-				return
-		else
-			to_chat(user, SPAN_WARNING("There's already a dog tag on [src]!"))
-			balloon_alert(user, "already a tag here!")
-
-	if(istype(W, /obj/item/clothing/head))
-		if(helmet)
-			to_chat(user, SPAN_WARNING("[helmet] is already resting atop [src]!"))
-			return
-		if(!user.drop_inv_item_to_loc(W, src))
-			return
-		helmet = W
-		dir = SOUTH
-		var/image/visual_overlay = W.get_mob_overlay(null, WEAR_HEAD)
-		visual_overlay.pixel_y = -10 //Base image is positioned to go on a human's head.
-		overlays += visual_overlay
-		to_chat(user, SPAN_NOTICE("You set \the [W] atop \the [src]."))
-		return
-
-	if(user.a_intent == INTENT_HARM)
-		..()
-		if(W.force && !(W.flags_item & NOBLUDGEON))
-			playsound(src, 'sound/effects/woodhit.ogg', 25, 1)
-			update_health(W.force)
-		return
-
-	if(W.sharp || W.edge || HAS_TRAIT(W, TRAIT_TOOL_PEN) || istype(W, /obj/item/tool/hand_labeler))
-		var/action_msg
-		var/time_multiplier
-		if(W.sharp || W.edge)
-			action_msg = "carve something into"
-			time_multiplier = 3
-		else
-			action_msg = "write something on"
-			time_multiplier = 2
-
-		var/message = sanitize(input(user, "What do you write on [src]?", "Inscription"))
-		if(!message)
-			return
-		user.visible_message(SPAN_NOTICE("[user] begins to [action_msg] [src]."),\
-			SPAN_NOTICE("You begin to [action_msg] [src]."), null, 4)
-
-		if(!do_after(user, length(message) * time_multiplier, INTERRUPT_ALL, BUSY_ICON_GENERIC))
-			to_chat(user, SPAN_WARNING("You were interrupted!"))
-		else
-			user.visible_message(SPAN_NOTICE("[user] uses \his [W.name] to [action_msg] [src]."),\
-				SPAN_NOTICE("You [action_msg] [src] with your [W.name]."), null, 4)
-			if(inscription)
-				inscription += "\n[message]"
-			else
-				inscription = message
-				engraved = TRUE
-
-/obj/structure/prop/wooden_cross/get_examine_text(mob/user)
-	. = ..()
-	. += (tagged ? "There's a dog tag draped around the cross. The dog tag reads, \"[dogtag_name] - [dogtag_assign] - [dogtag_blood]\"." : "There's no dog tag draped around the cross.")
-	. += (engraved ? "There's something carved into it. It reads: \"[inscription]\"" : "There's nothing carved into it.")
-
-/obj/structure/prop/wooden_cross/attack_hand(mob/user)
-	if(helmet)
-		helmet.forceMove(loc)
-		user.put_in_hands(helmet)
-		to_chat(user, SPAN_NOTICE("You lift \the [helmet] off of \the [src]."))
-		helmet = null
-		overlays.Cut()
-
-/obj/structure/prop/wooden_cross/attack_alien(mob/living/carbon/xenomorph/M)
-	M.animation_attack_on(src)
-	update_health(rand(M.melee_damage_lower, M.melee_damage_upper))
-	playsound(src, 'sound/effects/woodhit.ogg', 25, 1)
-	if(health <= 0)
-		M.visible_message(SPAN_DANGER("[M] slices [src] apart!"), \
-		SPAN_DANGER("You slice [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
-	else
-		M.visible_message(SPAN_DANGER("[M] slashes [src]!"), \
-		SPAN_DANGER("You slash [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
-	return XENO_ATTACK_ACTION
-
-/obj/structure/prop/wooden_cross/update_icon()
-	if(tagged)
-		overlays += mutable_appearance('icons/obj/structures/props/crosses.dmi', "cross_overlay")
-
 
 /obj/structure/prop/invuln/rope
 	name = "rope"
@@ -1790,3 +1660,226 @@
 	layer = MOB_LAYER
 	light_range = 3
 	light_on = TRUE
+
+/obj/structure/prop/invuln/fusion_reactor
+	name = "\improper S-52 fusion reactor"
+	desc = "A Westingland S-52 Fusion Reactor. Takes fuels cells and converts them to power. Also produces a large amount of heat."
+	icon = 'icons/obj/structures/machinery/fusion_eng.dmi'
+	icon_state = "off"
+
+/obj/structure/prop/invuln/pipe_water
+	name = "pipe water"
+	desc = ""
+	icon = 'icons/obj/structures/props/watercloset.dmi'
+	icon_state = "water"
+	density = 0
+
+/obj/structure/prop/invuln/pipe_water/Initialize(mapload)
+	. = ..()
+	desc = "The [is_mainship_level(z) ? copytext(MAIN_SHIP_NAME, 5) : "colony"] has sprung a leak!"
+
+/obj/structure/prop/invuln/lattice_prop
+	desc = "A lightweight support lattice."
+	name = "lattice"
+	icon = 'icons/obj/structures/props/smoothlattice.dmi'
+	icon_state = "lattice0"
+	density = FALSE
+	layer = RIPPLE_LAYER
+
+/obj/structure/prop/wooden_cross
+	name = "wooden cross"
+	desc = "A wooden grave marker. Is it more respectful because someone made it by hand, or less, because it's crude and misshapen?"
+	icon = 'icons/obj/structures/props/furniture/crosses.dmi'
+	icon_state = "cross1"
+	density = FALSE
+	health = 30
+	var/inscription
+	var/obj/item/helmet
+	///This is for cross dogtags.
+	var/tagged = FALSE
+	///This is for cross engraving/writing.
+	var/engraved = FALSE
+	var/dogtag_name
+	var/dogtag_blood
+	var/dogtag_assign
+
+/obj/structure/prop/wooden_cross/Destroy()
+	if(helmet)
+		helmet.forceMove(loc)
+		helmet = null
+	if(tagged)
+		var/obj/item/dogtag/new_info_tag = new(loc)
+		new_info_tag.fallen_names = list(dogtag_name)
+		new_info_tag.fallen_assgns = list(dogtag_assign)
+		new_info_tag.fallen_blood_types = list(dogtag_blood)
+	return ..()
+
+/obj/structure/prop/wooden_cross/attackby(obj/item/W, mob/living/user)
+	if(istype(W, /obj/item/dogtag))
+		var/obj/item/dogtag/dog = W
+		if(!tagged)
+			tagged = TRUE
+			user.visible_message(SPAN_NOTICE("[user] drapes [W] around [src]."))
+			dogtag_name = popleft(dog.fallen_names)
+			dogtag_assign = popleft(dog.fallen_assgns)
+			dogtag_blood = popleft(dog.fallen_blood_types)
+			if(!(dogtag_name in GLOB.fallen_list_cross))
+				GLOB.fallen_list_cross += dogtag_name
+			update_icon()
+			if(!length(dog.fallen_names))
+				qdel(dog)
+			else
+				return
+		else
+			to_chat(user, SPAN_WARNING("There's already a dog tag on [src]!"))
+			balloon_alert(user, "already a tag here!")
+
+	if(istype(W, /obj/item/clothing/head))
+		if(helmet)
+			to_chat(user, SPAN_WARNING("[helmet] is already resting atop [src]!"))
+			return
+		if(!user.drop_inv_item_to_loc(W, src))
+			return
+		helmet = W
+		dir = SOUTH
+		var/image/visual_overlay = W.get_mob_overlay(null, WEAR_HEAD)
+		visual_overlay.pixel_y = -10 //Base image is positioned to go on a human's head.
+		overlays += visual_overlay
+		to_chat(user, SPAN_NOTICE("You set \the [W] atop \the [src]."))
+		return
+
+	if(user.a_intent == INTENT_HARM)
+		. = ..()
+		if(W.force && !(W.flags_item & NOBLUDGEON))
+			playsound(src, 'sound/effects/woodhit.ogg', 25, 1)
+			update_health(W.force)
+		return
+
+	if(W.sharp || W.edge || HAS_TRAIT(W, TRAIT_TOOL_PEN) || istype(W, /obj/item/tool/hand_labeler))
+		var/action_msg
+		var/time_multiplier
+		if(W.sharp || W.edge)
+			action_msg = "carve something into"
+			time_multiplier = 3
+		else
+			action_msg = "write something on"
+			time_multiplier = 2
+
+		var/message = sanitize(input(user, "What do you write on [src]?", "Inscription"))
+		if(!message)
+			return
+		user.visible_message(SPAN_NOTICE("[user] begins to [action_msg] [src]."),
+			SPAN_NOTICE("You begin to [action_msg] [src]."), null, 4)
+
+		if(!do_after(user, length(message) * time_multiplier, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+			to_chat(user, SPAN_WARNING("You were interrupted!"))
+		else
+			user.visible_message(SPAN_NOTICE("[user] uses \his [W.name] to [action_msg] [src]."),
+				SPAN_NOTICE("You [action_msg] [src] with your [W.name]."), null, 4)
+			if(inscription)
+				inscription += "\n[message]"
+			else
+				inscription = message
+				engraved = TRUE
+
+/obj/structure/prop/wooden_cross/get_examine_text(mob/user)
+	. = ..()
+	. += (tagged ? "There's a dog tag draped around the cross. The dog tag reads, \"[dogtag_name] - [dogtag_assign] - [dogtag_blood]\"." : "There's no dog tag draped around the cross.")
+	. += (engraved ? "There's something carved into it. It reads: \"[inscription]\"" : "There's nothing carved into it.")
+
+/obj/structure/prop/wooden_cross/attack_hand(mob/user)
+	if(helmet)
+		helmet.forceMove(loc)
+		user.put_in_hands(helmet)
+		to_chat(user, SPAN_NOTICE("You lift \the [helmet] off of \the [src]."))
+		helmet = null
+		overlays.Cut()
+
+/obj/structure/prop/wooden_cross/attack_alien(mob/living/carbon/xenomorph/M)
+	M.animation_attack_on(src)
+	update_health(rand(M.melee_damage_lower, M.melee_damage_upper))
+	playsound(src, 'sound/effects/woodhit.ogg', 25, 1)
+	if(health <= 0)
+		M.visible_message(SPAN_DANGER("[M] slices [src] apart!"),
+		SPAN_DANGER("You slice [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	else
+		M.visible_message(SPAN_DANGER("[M] slashes [src]!"),
+		SPAN_DANGER("You slash [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	return XENO_ATTACK_ACTION
+
+/obj/structure/prop/wooden_cross/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable || health <= 0)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	update_health(xeno.melee_damage_upper)
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+		SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] strikes [src] with its tail!"),
+		SPAN_DANGER("We strike [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	return TAILSTAB_COOLDOWN_NORMAL
+
+/obj/structure/prop/wooden_cross/update_icon()
+	if(tagged)
+		overlays += mutable_appearance('icons/obj/structures/props/furniture/crosses.dmi', "cross_overlay")
+
+
+/obj/structure/prop/invuln/rope
+	name = "rope"
+	desc = "A secure rope looks like someone might've been hiding out on those rocks."
+	icon = 'icons/obj/structures/props/dropship/dropship_equipment.dmi'
+	icon_state = "rope"
+	density = FALSE
+
+/obj/structure/prop/pred_flight
+	name = "hunter flight console"
+	desc = "A console designed by the Hunters to assist in flight pathing and navigation."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "overwatch"
+	density = TRUE
+
+// Body Bag Pile
+
+/obj/structure/prop/body_bag_pile
+	name = "bodybag pile"
+	desc = "A grim mound of body bags stacked haphazardly."
+	icon = 'icons/obj/structures/props/64x64_bodybag_pile.dmi'
+	icon_state = "bodybag_pile"
+	bound_height = 64
+	bound_width = 64
+	density = TRUE
+	layer = BIG_XENO_LAYER
+
+/obj/structure/prop/body_bag_pile/charred
+	name = "charred bodybag pile"
+	desc = "A grim mound of body bags stacked haphazardly, their surfaces blackened and blistered from intense heat. The contents are partially burned."
+	icon = 'icons/obj/structures/props/64x64_bodybag_pile.dmi'
+	icon_state = "bodybag_pile"
+	bound_height = 64
+	bound_width = 64
+	density = TRUE
+	dir = 4
+	layer = BIG_XENO_LAYER
+
+/obj/effect/decal/large_stain
+	name = "large stain"
+	desc = FALSE
+	icon = 'icons/obj/structures/props/64x64_bodybag_pile.dmi'
+	icon_state = "large_stain"
+	layer = TURF_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/obj/structure/prop/misc/lit_cable
+	name = "power cable surface connector"
+	desc = "Manual connection point to the station's powernet, emits a low level of light."
+	icon = 'icons/obj/pipes/power_cond_heavy.dmi'
+	icon_state = "node"
+	layer = ABOVE_WEED_LAYER
+	plane = FLOOR_PLANE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	light_on = TRUE
+	light_color = "#BB3F3F"
+	light_range = 2
+	light_power = 1

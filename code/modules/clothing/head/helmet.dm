@@ -2306,3 +2306,18 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper repainted RC6 helmet"
 	desc = "A Riot Control 6 helmet that has been repainted with a darker color scheme, and has been modified by its user. This custom model is used by the few professional members of the Colonial Liberation Front."
 	icon_state = "clf_riot"
+
+/obj/item/clothing/head/helmet/marine/veteran/royal_marine/medic
+	name = "\improper L5A2 ballistic medic helmet"
+	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system. This one comes with an advanced medical HUD and a dark-green patch on the back, denoting that the wearer is a corpsman."
+	icon_state = "rmc_helm_medic"
+	item_state = "rmc_helm_medic"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical/advanced)
+	start_down_visor_type = /obj/item/device/helmet_visor/medical/advanced
+
+/obj/item/clothing/head/helmet/marine/veteran/abyssal_security
+	name = "security helmet"
+	desc = "Standard issue helmet issued to Con-Am security forces."
+	icon_state = "sec_helmet"
+	item_state = "sec_helmet"
+	flags_inv_hide = HIDETOPHAIR
