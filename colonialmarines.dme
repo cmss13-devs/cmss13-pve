@@ -776,6 +776,7 @@
 #include "code\datums\weather\weather_map_holders\lv295_blacksite.dm"
 #include "code\datums\weather\weather_map_holders\lv522_chances_claim.dm"
 #include "code\datums\weather\weather_map_holders\lv624.dm"
+#include "code\datums\weather\weather_map_holders\lv624_lazarus_landing.dm"
 #include "code\datums\weather\weather_map_holders\lv759_hybrisa_prospera.dm"
 #include "code\datums\weather\weather_map_holders\navalis_platform_13.dm"
 #include "code\datums\weather\weather_map_holders\new_varadero.dm"

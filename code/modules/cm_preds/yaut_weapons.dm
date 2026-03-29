@@ -689,6 +689,13 @@
 	base_icon_state = "ancient_shield_temple"
 	item_state = "ancient_shield_temple"
 
+/obj/item/weapon/shield/riot/yautja/ancient/alt
+	name = "ancient shield"
+	desc = "A large, ornately crafted shield forged from an unknown alloy. The colossal metal skull of a Xenomorph dominates the center, its jagged edges and hollow eyes giving it a fearsome presence. The masterful craftsmanship and weathered battle scars whisper of long-forgotten hunts and a legacy etched in blood."
+	icon_state = "ancient_shield_alt"
+	base_icon_state = "ancient_shield_alt"
+	item_state = "ancient_shield_alt"
+
 /*#########################################
 ########### Two Handed Weapons ############
 #########################################*/
@@ -863,6 +870,18 @@
 	attack_verb = list("chopped", "torn", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
+/obj/item/weapon/yautja/duelknife
+	name = "duelling knife"
+	desc = "A length of leather-bound wood studded with razor-sharp teeth. How crude."
+	embeddable = FALSE
+	icon_state = "duelling_knife"
+	item_state = "duelling_knife"
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("ripped", "torn", "cut")
+	force = 25
+	throwforce = MELEE_FORCE_STRONG
+	edge = 1
+	attack_speed = 12
 
 /*#########################################
 ############## Ranged Weapons #############

@@ -416,7 +416,7 @@
 	dir = 4;
 	pixel_y = -2
 	},
-/obj/structure/reagent_dispensers/tank/fuel,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lazarus/secure_storage)
 "hn" = (

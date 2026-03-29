@@ -809,7 +809,7 @@
 	pixel_y = 6;
 	anchored = 1
 	},
-/obj/item/tool/pen/multicolor/fountain,
+/obj/item/tool/pen/fountain,
 /obj/item/prop/colony/usedbandage{
 	dir = 9;
 	pixel_x = 5;

@@ -532,7 +532,7 @@
 	name = "colossal warrior statue"
 	desc = "A towering stone effigy of an unknown warrior, clutching a spear-like weapon. It's made from a smooth dark stone, seemingly unweathered from the passage of time."
 	anchored = TRUE
-	layer = BIG_XENO_LAYER
+	layer = BILLBOARD_LAYER
 	density = FALSE
 
 /obj/structure/prop/hunter/ancient_temple/giant_statue/base
@@ -554,7 +554,7 @@
 	name = "stone statue"
 	desc = "A tall stone effigy of an unknown warrior."
 	anchored = TRUE
-	layer = BIG_XENO_LAYER
+	layer = BILLBOARD_LAYER
 	density = TRUE
 
 /obj/structure/prop/hunter/ancient_temple/small_statue/grey
@@ -608,7 +608,7 @@
 	name = "large bars"
 	desc = "large bars"
 	anchored = TRUE
-	layer = BIG_XENO_LAYER
+	layer = ABOVE_LEDGE_LAYER
 	density = TRUE
 	bound_width = 64
 	bound_height = 64
@@ -627,7 +627,7 @@
 	name = "large bars"
 	desc = "large bars"
 	anchored = TRUE
-	layer = BIG_XENO_LAYER
+	layer = ABOVE_LEDGE_LAYER
 	density = TRUE
 	bound_width = 64
 	bound_height = 64

@@ -135,6 +135,8 @@
 #define BILLBOARD_LAYER 4.13
 /// For WEATHER
 #define WEATHER_LAYER 4.14
+//I hate ledges
+#define ABOVE_LEDGE_LAYER 4.21
 
 //#define FLY_LAYER 5
 
