@@ -375,6 +375,12 @@
 /obj/item/clothing/head/cmcap/boonie/snow
 	icon_state = "booniehat_snow"
 
+/obj/item/clothing/head/cmcap/boonie/fisherman
+	name = "\improper fisherman's boonie hat"
+	desc = "A floppy boonie hat with hooks, lines, and sinkers tucked around the band—clearly the choice of a seasoned angler. Offers shade from the sun and some rain protection."
+	icon_state = "booniehat_fisher"
+	flags_atom = FPRINT|NO_SNOW_TYPE
+
 /obj/item/clothing/head/cmcap/co
 	name = "\improper USCM Commanding officer cap"
 	icon_state = "cocap"

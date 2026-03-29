@@ -32,6 +32,10 @@
 	name = "Corpse - Prisoner"
 	equip_path = /datum/equipment_preset/corpse/prisoner
 
+/obj/effect/landmark/corpsespawner/chef
+	name = "Chef"
+	equip_path = /datum/equipment_preset/corpse/chef
+
 /obj/effect/landmark/corpsespawner/riot
 	name = "Corpse - Security Guard, UA Colonial Guard"
 	equip_path = /datum/equipment_preset/corpse/riot
@@ -44,6 +48,10 @@
 	name = "Corpse - Doctor, Scrubs"
 	equip_path = /datum/equipment_preset/corpse/doctor/scrubs
 
+/obj/effect/landmark/corpsespawner/scientist
+	name = "Scientist"
+	equip_path = /datum/equipment_preset/corpse/scientist
+
 /obj/effect/landmark/corpsespawner/engineer
 	name = "Engineer"
 	equip_path = /datum/equipment_preset/corpse/engineer
@@ -51,6 +59,10 @@
 /obj/effect/landmark/corpsespawner/security
 	name = "Corpse - Security Guard, Wey-Yu"
 	equip_path = /datum/equipment_preset/colonist/corpse/security
+
+/obj/effect/landmark/corpsespawner/security/liaison
+	name = "Corporate Liaison"
+	equip_path = /datum/equipment_preset/corpse/liaison
 
 //FORECON
 /obj/effect/landmark/corpsespawner/forecon_spotter
@@ -81,6 +93,10 @@
 /obj/effect/landmark/corpsespawner/hybrisa/civilian_office/burst
 	name = "Corpse - Burst - Civilian - Office Worker"
 	equip_path = /datum/equipment_preset/corpse/hybrisa/civilian_office/burst
+
+/obj/effect/landmark/corpsespawner/wygoon
+	name = "Weyland-Yutani Corporate Security Officer"
+	equip_path = /datum/equipment_preset/corpse/pmc/goon
 
 // Weymart
 

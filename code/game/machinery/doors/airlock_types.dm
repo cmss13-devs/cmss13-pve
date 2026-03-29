@@ -206,7 +206,7 @@
 
 /obj/structure/machinery/door/airlock/sandstone
 	name = "\improper Sandstone Airlock"
-	icon = 'icons/obj/structures/doors/Doorsand.dmi'
+	icon = 'icons/obj/structures/doors/hunter/colorable_ancient_temple_door.dmi'
 	mineral = "sandstone"
 
 /obj/structure/machinery/door/airlock/science/colony
@@ -1137,3 +1137,97 @@
 	openspeed = 6
 	req_access = null
 	req_one_access = null
+	icon = 'icons/obj/structures/doors/upp/upp_commandgreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+
+/obj/structure/machinery/door/airlock/upp/cic/solid/autoname
+	autoname = TRUE
+
+// UPP grey doors
+
+/obj/structure/machinery/door/airlock/grey_upp
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/grey_upp/glass
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/dark_grey_glass_door.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/grey_upp/glass/autoname
+	req_access = null
+	opacity = FALSE
+	glass = TRUE
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/grey_upp/solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/dark_grey_solid_door.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/grey_upp/solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/grey_upp/utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/dark_grey_utility_door.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/grey_upp/utility/autoname
+	req_access = null
+	opacity = TRUE
+	glass = FALSE
+	autoname = TRUE
+
+// LV Doors
+
+/obj/structure/machinery/door/airlock/light_grey_lv
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/light_grey_lv/glass
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/light_grey_glass_door.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/light_grey_lv/glass/autoname
+	req_access = null
+	opacity = FALSE
+	glass = TRUE
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/light_grey_lv/solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/light_grey_solid_door.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/light_grey_lv/solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/light_grey_lv/utility
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/light_grey_utility_door.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/light_grey_lv/utility/autoname
+	req_access = null
+	opacity = TRUE
+	glass = FALSE
+	autoname = TRUE

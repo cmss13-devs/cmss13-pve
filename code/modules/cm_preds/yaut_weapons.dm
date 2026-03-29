@@ -682,6 +682,13 @@
 	actions_types = list(/datum/action/item_action/toggle/use)
 	unacidable = TRUE
 
+/obj/item/weapon/shield/riot/yautja/ancient/temple
+	name = "ancient shield"
+	desc = "A large, ancient shield forged from an unknown alloy. Its time-worn surface and masterful craftsmanship hint at a forgotten purpose and a history lost to time."
+	icon_state = "ancient_shield_temple"
+	base_icon_state = "ancient_shield_temple"
+	item_state = "ancient_shield_temple"
+
 /*#########################################
 ########### Two Handed Weapons ############
 #########################################*/
@@ -792,6 +799,69 @@
 	icon_state = "glaive_alt"
 	item_state = "glaive_alt"
 	flags_item = NOSHIELD|TWOHANDED
+
+/obj/item/weapon/twohanded/yautja/glaive/longaxe
+	name = "longaxe"
+	desc = "A frighteningly big axe. The blade edge is chipped and gnarled from thousands of bone-crushing blows."
+	icon_state = "longaxe"
+	item_state = "longaxe"
+
+/obj/item/weapon/yautja/sword/damaged
+	name = "ancient sword"
+	desc = "A huge, powerful blade. Mysterious writing is carved into the weapon. This one is ancient and has suffered serious acid damage, making it near-useless."
+	icon_state = "clansword_alt"
+	force = MELEE_FORCE_NORMAL
+	throwforce = MELEE_FORCE_WEAK
+
+/*#########################################
+########### Duelling Weaponry #############
+#########################################*/
+
+/obj/item/weapon/yautja/duelsword
+	name = "duelling blade"
+	desc = "A primitive yet deadly sword used in yautja rituals and duels. Though crude compared to their advanced weaponry, its sharp edge demands respect."
+	embeddable = FALSE
+	icon_state = "duelling_sword"
+	item_state = "duelling_sword"
+	force = MELEE_FORCE_STRONG
+	throwforce = MELEE_FORCE_WEAK
+	sharp = IS_SHARP_ITEM_BIG
+	edge = 1
+	w_class = SIZE_LARGE
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	attack_speed = 9
+
+
+/obj/item/weapon/yautja/duelclub
+	name = "duelling club"
+	desc = "A crude metal club adorned with a skull. Used as a non-lethal training weapon for young yautja honing their combat skills."
+	icon_state = "duelling_club"
+	item_state = "duelling_club"
+	sharp = 0
+	edge = 0
+	w_class = SIZE_MEDIUM
+	force = MELEE_FORCE_STRONG
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 7
+	throwforce = 7
+	attack_verb = list("smashed", "beaten", "slammed", "struck", "smashed", "battered", "cracked")
+	hitsound = 'sound/weapons/genhit3.ogg'
+
+/obj/item/weapon/yautja/duelaxe
+	name = "duelling hatchet"
+	desc = "A short ceremonial duelling hatchet. Designed for ritual combat or settling disputes among Yautja. It features a keen edge capable of cleaving flesh or bone. Though smaller than traditional Yautja weapons."
+	icon_state = "duelling_hatchet"
+	item_state = "duelling_hatchet"
+	force = MELEE_FORCE_NORMAL
+	w_class = SIZE_SMALL
+	throwforce = 20
+	throw_speed = SPEED_VERY_FAST
+	throw_range = 4
+	sharp = IS_SHARP_ITEM_BIG
+	edge = 1
+	attack_verb = list("chopped", "torn", "cut")
+	hitsound = 'sound/weapons/bladeslice.ogg'
 
 
 /*#########################################

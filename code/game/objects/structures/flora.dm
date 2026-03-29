@@ -91,6 +91,8 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	qdel(src)
 
 /obj/structure/flora/ex_act(power)
+	if(explo_proof)
+		return
 	if(power >= EXPLOSION_THRESHOLD_VLOW)
 		deconstruct(FALSE)
 
@@ -154,13 +156,34 @@ PLANT_CUT_MACHETE = 3 = Needs at least a machete to be cut down
 	desc = "What an enormous tree!"
 	density = FALSE
 	layer = ABOVE_XENO_LAYER
+	explo_proof = TRUE
+	unacidable = TRUE
 
 // LV-624's Yggdrasil Tree
-/obj/structure/flora/tree/jungle/bigtreeTR
-	icon_state = "bigtreeTR"
 
-/obj/structure/flora/tree/jungle/bigtreeTL
+/obj/structure/roof/flora/tree/jungle/bigtreeTR
+	icon_state = "bigtreeTR"
+	name = "huge tree"
+	icon = 'icons/obj/structures/props/natural/vegetation/ground_map64.dmi'
+	desc = "What an enormous tree!"
+	density = FALSE
+	layer = ABOVE_XENO_LAYER
+	bound_height = 128
+	bound_width = 128
+	explo_proof = TRUE
+	unacidable = TRUE
+
+/obj/structure/roof/flora/tree/jungle/bigtreeTL
 	icon_state = "bigtreeTL"
+	name = "huge tree"
+	icon = 'icons/obj/structures/props/natural/vegetation/ground_map64.dmi'
+	desc = "What an enormous tree!"
+	density = FALSE
+	layer = ABOVE_XENO_LAYER
+	bound_height = 128
+	bound_width = 128
+	explo_proof = TRUE
+	unacidable = TRUE
 
 /obj/structure/flora/tree/jungle/bigtreeBOT
 	icon_state = "bigtreeBOT"
@@ -384,6 +407,13 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	fire_flag = FLORA_BURN_SPREAD_ALL
 
 /obj/structure/flora/grass/tallgrass/crop/corner
+/obj/structure/flora/grass/tallgrass/jungle_alt_2
+	color = "#9ac68c"
+	icon_state = "tallgrass"
+	desc = "A clump of vibrant jungle grasses"
+	fire_flag = FLORA_BURN_SPREAD_ONCE
+
+/obj/structure/flora/grass/tallgrass/jungle_alt_2/corner
 	icon_state = "tallgrass_corner"
 	overlay_type = "tallgrass_overlay_corner"
 	center = FALSE
@@ -487,6 +517,11 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/bush/ausbushes/ppflowers
 	icon_state = "ppflowers_1"
 	icon_tag = "ppflowers"
+	layer = BELOW_MOB_LAYER
+
+/obj/structure/flora/bush/ausbushes/ywflowers
+	icon_state = "ywflowers_1"
+	icon_tag = "ywflowers"
 	layer = BELOW_MOB_LAYER
 
 /*
@@ -672,11 +707,12 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	icon_state = "" //will this break it?? - Nope
 	density = TRUE
 
-//light vines
+// Light Vines - Can see through
+
 /obj/structure/flora/jungle/vines
 	name = "vines"
 	desc = "A mass of twisted vines."
-	icon = 'icons/effects/spacevines.dmi'
+	icon = 'icons/effects/vines/original_vines.dmi'
 	icon_state = "light_1"
 	icon_tag = "light"
 	variations = 3
@@ -695,7 +731,42 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 	icon_state = "light_3"
 	icon_tag = "light"
 
-//heavy hide you
+/obj/structure/flora/jungle/vines/blue
+	name = "vines"
+	desc = "A mass of twisted vines."
+	icon = 'icons/effects/vines/blue_vines.dmi'
+
+/obj/structure/flora/jungle/vines/blue/light_1
+	icon_state = "light_1"
+	icon_tag = "light"
+
+/obj/structure/flora/jungle/vines/blue/light_2
+	icon_state = "light_2"
+	icon_tag = "light"
+
+/obj/structure/flora/jungle/vines/blue/light_3
+	icon_state = "light_3"
+	icon_tag = "light"
+
+/obj/structure/flora/jungle/vines/dead
+	name = "dead vines"
+	desc = "A mass of twisted dead vines."
+	icon = 'icons/effects/vines/dead_vines.dmi'
+
+/obj/structure/flora/jungle/vines/dead/light_1
+	icon_state = "light_1"
+	icon_tag = "light"
+
+/obj/structure/flora/jungle/vines/dead/light_2
+	icon_state = "light_2"
+	icon_tag = "light"
+
+/obj/structure/flora/jungle/vines/dead/light_3
+	icon_state = "light_3"
+	icon_tag = "light"
+
+// Heavy Vines - no visibility
+
 /obj/structure/flora/jungle/vines/heavy
 	desc = "A thick, coiled mass of twisted vines."
 	opacity = TRUE
@@ -706,6 +777,30 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/jungle/vines/heavy/New()
 	..()
 	icon_state = pick("heavy_1","heavy_2","heavy_3","heavy_4","heavy_5","heavy_6")
+
+/obj/structure/flora/jungle/vines/blue/heavy
+	desc = "A thick, coiled mass of twisted vines."
+	opacity = TRUE
+	icon_state = "heavy_6"
+	icon_tag = "heavy"
+	variations = 6
+
+/obj/structure/flora/jungle/vines/blue/heavy/New()
+	..()
+	icon_state = pick("heavy_1","heavy_2","heavy_3","heavy_4","heavy_5","heavy_6")
+
+/obj/structure/flora/jungle/vines/dead/heavy
+	desc = "A thick, coiled mass of twisted dead vines."
+	opacity = TRUE
+	icon_state = "heavy_6"
+	icon_tag = "heavy"
+	variations = 6
+
+/obj/structure/flora/jungle/vines/dead/heavy/New()
+	..()
+	icon_state = pick("heavy_1","heavy_2","heavy_3","heavy_4","heavy_5","heavy_6")
+
+// Thick Bush
 
 /obj/structure/flora/jungle/thickbush
 	name = "dense vegetation"

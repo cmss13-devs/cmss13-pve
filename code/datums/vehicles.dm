@@ -93,6 +93,13 @@
 /datum/map_template/interior/pizza_van
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"
+/datum/map_template/interior/white_van
+	name = "Weyland-Yutani Van"
+	interior_id = "white_van"
+
+/datum/map_template/interior/clf_van
+	name = "CLF Technical"
+	interior_id = "clf_van"
 
 /datum/map_template/interior/box_van
 	name = "Box Van"
