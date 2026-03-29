@@ -923,82 +923,68 @@
 	item_icons = list(
 		WEAR_BODY = 'icons/mob/humans/onmob/uniform_1.dmi',
 	)
-
 /obj/item/clothing/under/marine/reporter/black
 	icon_state = "cc_black"
 	worn_state = "cc_black"
-
 /obj/item/clothing/under/marine/reporter/orange
 	icon_state = "cc_orange"
 	worn_state = "cc_orange"
-
 /obj/item/clothing/under/marine/reporter/red
 	icon_state = "cc_red"
 	worn_state = "cc_red"
-
 /obj/item/clothing/under/twe_suit
 	name = "representative's fine suit"
 	desc = "A stiff, stylish blue suit commonly worn by gentlemen from the Three World Empire. Expertly crafted to make you look as important as possible."
 	icon_state = "twe_suit"
 	worn_state = "twe_suit"
-
 /obj/item/clothing/under/stowaway
 	name = "dirty suit"
 	desc = "A stiff, stylish tan suit commonly worn by businessmen from the Weyland-Yutani corporation. Expertly crafted to make you look like a prick."
 	icon_state = "stowaway_uniform"
 	worn_state = "stowaway_uniform"
-
 /obj/item/clothing/under/rank/chef/exec
 	name = "\improper Weyland-Yutani suit"
 	desc = "A formal white undersuit."
 	flags_jumpsuit = FALSE
-
 /obj/item/clothing/under/rank/synthetic
 	name = "\improper USCM Support Uniform"
 	desc = "A simple uniform made for Synthetic crewmembers."
 	icon_state = "rdalt"
 	worn_state = "rdalt"
 	flags_jumpsuit = FALSE
-
 /obj/item/clothing/under/rank/synthetic/frontier
 	name = "\improper frontier jumpsuit"
 	desc = "A cargo jumpsuit dressed down for full range of motion and state-of-the-art frontier temperature control. It's the best thing an engineer can wear in the Outer Veil."
 	icon_state = "synth_cargo_light"
 	worn_state = "synth_cargo_light"
 	displays_id = FALSE
-
 /obj/item/clothing/under/rank/synthetic/utility
 	name = "\improper UA utility uniform"
 	desc = "A green-on-green utility uniform, popularly issued to UA contract workers on the frontier."
 	icon_state = "synth_green_utility"
 	worn_state = "synth_green_utility"
 	displays_id = FALSE
-
 /obj/item/clothing/under/rank/synthetic/utility/yellow
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with yellow suspenders, made for shipside crew."
 	icon_state = "synth_yellow_utility"
 	worn_state = "synth_yellow_utility"
-
 /obj/item/clothing/under/rank/synthetic/utility/red
 	name = "\improper utility uniform"
 	desc = "A grey utility uniform with red suspenders and blue jeans, the sign of a veteran laborer, or someone not paid by the hour."
 	icon_state = "synth_red_utility"
 	worn_state = "synth_red_utility"
-
 /obj/item/clothing/under/rank/synthetic/utility/blue
 	name = "\improper utility uniform"
 	desc = "A blue utility uniform with teal suspenders and rugged pants."
 	icon_state = "synth_blue_utility"
 	worn_state = "synth_blue_utility"
-
 /obj/item/clothing/under/rank/synthetic/councillor
 	name = "\improper USCM Pristine Support Uniform"
 	desc = "A nicely handcrafted uniform made for Synthetic crewmembers."
 	icon_state = "synth_councillor"
 	worn_state = "synth_councillor"
 	displays_id = FALSE
-
 /obj/item/clothing/under/rank/synthetic/flight
 	name = "tactical flightsuit"
 	desc = "A flightsuit with plenty of leather straps, pouches, and other essential gear."
@@ -1008,11 +994,9 @@
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_cold_protection = ICE_PLANET_MIN_COLD_PROT
-
 /obj/item/clothing/under/rank/synthetic/old
 	icon_state = "rdalt_s"
 	worn_state = "rdalt_s"
-
 /obj/item/clothing/under/rank/synthetic/joe
 	name = "\improper Working Joe Uniform"
 	desc = "A cheap uniform made for Synthetic labor. Tomorrow, Together."
@@ -1020,30 +1004,24 @@
 	worn_state = "working_joe"
 	flags_item = NO_CRYO_STORE
 	var/obj/structure/machinery/camera/camera
-
 /obj/item/clothing/under/rank/synthetic/joe/Initialize()
 	. = ..()
 	camera = new /obj/structure/machinery/camera/autoname/almayer/containment/ares(src)
-
 /obj/item/clothing/under/rank/synthetic/joe/Destroy()
 	QDEL_NULL(camera)
 	return ..()
-
 /obj/item/clothing/under/rank/synthetic/joe/equipped(mob/living/carbon/human/mob, slot)
 	if(camera)
 		camera.c_tag = mob.name
 	..()
-
 /obj/item/clothing/under/rank/synthetic/joe/dropped(mob/living/carbon/human/mob)
 	if(camera)
 		camera.c_tag = "3RR0R"
 	..()
-
 /obj/item/clothing/under/rank/synthetic/joe/get_examine_text(mob/user)
 	. = ..()
 	if(camera)
 		. += SPAN_ORANGE("There is a small camera mounted to the front.")
-
 /obj/item/clothing/under/rank/synthetic/joe/engi
 	name = "\improper Working Joe Hazardous Uniform"
 	desc = "A reinforced uniform used for Synthetic labor in hazardous areas. Tomorrow, Together."
@@ -1065,7 +1043,6 @@
 	worn_state = "working_joe_overalls"
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	unacidable = TRUE
-
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/under/marine/veteran/royal_marine
