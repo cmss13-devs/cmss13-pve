@@ -1066,6 +1066,27 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	unacidable = TRUE
 
+//Vanguard Arrow "UNIFORMS"
+
+/obj/item/clothing/under/vai/plaid
+	name = "\improper Plaid shirt and denim pants"
+	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
+	item_state = "obj_plaid"
+	worn_state = "plaid"
+	contained_sprite = TRUE
+	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
+
+/obj/item/clothing/under/vai/flower
+	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
+	desc = "A simple outfit composed of a Blue Hawaiian shirt and khaki cargo pants, favored by dads and private contractors."
+	item_state = "obj_blu"
+	worn_state = "blueflower"
+
+/obj/item/clothing/under/vai/flower/green
+	name = "\improper Green Hawaiian shirt and denim pants"
+	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
+	item_state = "obj_green"
+	worn_state = "greenflower"
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/under/marine/veteran/royal_marine
@@ -1335,25 +1356,3 @@
 	worn_state = "army_jumpsuit"
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
-
-//Vanguard Arrow "UNIFORMS"
-
-/obj/item/clothing/under/vai/plaid
-	name = "\improper Plaid shirt and denim pants"
-	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
-	item_state = "obj_plaid"
-	worn_state = "plaid"
-	contained_sprite = TRUE
-	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
-
-/obj/item/clothing/under/vai/flower
-	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
-	desc = "A simple outfit composed of a Blue Hawaiian shirt and khaki cargo pants, favored by dads and private contractors."
-	item_state = "obj_blu"
-	worn_state = "blueflower"
-
-/obj/item/clothing/under/vai/flower/green
-	name = "\improper Green Hawaiian shirt and denim pants"
-	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
-	item_state = "obj_green"
-	worn_state = "greenflower"
