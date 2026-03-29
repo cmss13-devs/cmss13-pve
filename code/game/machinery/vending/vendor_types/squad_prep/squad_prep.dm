@@ -605,7 +605,7 @@
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		)
 
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai/
 	name = "\improper Vanguard Arrow Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of assorted inert items."
 	icon_state = "uscm_gear"
@@ -614,7 +614,7 @@
 	listed_products = list()
 	hackable = TRUE
 
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai/uniform
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai/populate_product_list(scale)
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
 		list("Marine Combat Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
