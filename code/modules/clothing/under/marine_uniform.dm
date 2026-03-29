@@ -1341,21 +1341,24 @@
 /obj/item/clothing/under/vai/plaid
 	name = "\improper Plaid shirt and denim pants"
 	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
-	icon_state = "flanel"
-	item_state = "flanel"
-	worn_state = "flanel"
+	icon_state = "obj_plaid"
+	item_state = "obj_plaid"
+	worn_state = "plaid"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	contained_sprite = TRUE
+	icon = 'icons/mob/humans/onmob/contained/VAI.dmi'
 
 /obj/item/clothing/under/vai/flower
 	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
 	desc = "A simple outfit composed of a Blue Hawaiian shirt and khaki cargo pants, favored by dads and private contractors."
-	icon_state = "blueflower"
-	item_state = "blueflower"
+	icon_state = "obj_blu"
+	item_state = "obj_blu"
 	worn_state = "blueflower"
 
 
 /obj/item/clothing/under/vai/flower/green
 	name = "\improper Green Hawaiian shirt and denim pants"
 	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
-	icon_state = "greenflower"
-	item_state = "greenflower"
+	icon_state = "obj_green"
+	item_state = "obj_green"
 	worn_state = "greenflower"
