@@ -1339,6 +1339,7 @@
 //Vanguard Arrow "UNIFORMS"
 
 /obj/item/clothing/under/vai/plaid
+	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
 	name = "\improper Plaid shirt and denim pants"
 	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
 	icon_state = "obj_plaid"
@@ -1346,7 +1347,6 @@
 	worn_state = "plaid"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	contained_sprite = TRUE
-	icon = 'icons/mob/humans/onmob/contained/VAI.dmi'
 
 /obj/item/clothing/under/vai/flower
 	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
