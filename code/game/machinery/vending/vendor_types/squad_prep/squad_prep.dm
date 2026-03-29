@@ -609,17 +609,16 @@
 	name = "\improper Vanguard Arrow Uniform Vendor"
 	desc = "An automated supply rack hooked up to a small storage of assorted inert items."
 	icon_state = "uscm_gear"
-	req_access = list()
+	req_access = list(ACCESS_PRESS)
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
-	vendor_theme = VENDOR_THEME_COMPANY
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai/uniform
 	listed_products = list(
 		list("STANDARD EQUIPMENT", -1, null, null, null),
 		list("Marine Combat Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
-		list("Plaid Shirt & Denim Pants", round(scale * 10), /obj/item/clothing/under/vai/plaid, VENDOR_ITEM_RECOMMENDE),
+		list("Plaid Shirt & Denim Pants", round(scale * 10), /obj/item/clothing/under/vai/plaid, VENDOR_ITEM_RECOMMENDED),
 		list("Blue Hawaiian Shirt & Khaki Pants", round(scale * 10), /obj/item/clothing/under/vai/flower, VENDOR_ITEM_REGULAR),
 		list("Green Hawaiian Shirt & Denim Pants", round(scale * 10), /obj/item/clothing/under/vai/flower/green, VENDOR_ITEM_REGULAR),
 		list("Red T-Shirt Uniform", round(scale * 10), /obj/item/clothing/under/tshirt/r_bla, VENDOR_ITEM_REGULAR),
