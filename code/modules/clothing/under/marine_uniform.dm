@@ -1336,3 +1336,26 @@
 	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+//Vanguard Arrow "UNIFORMS"
+
+/obj/item/clothing/under/vai/plaid
+	name = "\improper Plaid shirt and denim pants"
+	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
+	icon_state = "flanel"
+	item_state = "flanel"
+	worn_state = "flanel"
+
+/obj/item/clothing/under/vai/flower
+	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
+	desc = "A simple outfit composed of a Blue Hawaiian shirt and khaki cargo pants, favored by dads and private contractors."
+	icon_state = "blueflower"
+	item_state = "blueflower"
+	worn_state = "blueflower"
+
+
+/obj/item/clothing/under/vai/flower/green
+	name = "\improper Green Hawaiian shirt and denim pants"
+	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
+	icon_state = "greenflower"
+	item_state = "greenflower"
+	worn_state = "greenflower"

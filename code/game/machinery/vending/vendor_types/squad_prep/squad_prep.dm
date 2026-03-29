@@ -605,6 +605,68 @@
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai
+	name = "\improper Vanguard Arrow Uniform Vendor"
+	desc = "An automated supply rack hooked up to a small storage of assorted inert items."
+	icon_state = "uscm_gear"
+	req_access = list()
+	req_one_access = list()
+	listed_products = list()
+	hackable = TRUE
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/vai/uniform
+	listed_products = list(
+		list("STANDARD EQUIPMENT", -1, null, null, null),
+		list("Marine Combat Boots", floor(scale * 15), /obj/item/clothing/shoes/marine/knife, VENDOR_ITEM_REGULAR),
+		list("Plaid Shirt & Denim Pants", round(scale * 10), /obj/item/clothing/under/vai/plaid, VENDOR_ITEM_RECOMMENDE),
+		list("Blue Hawaiian Shirt & Khaki Pants", round(scale * 10), /obj/item/clothing/under/vai/flower, VENDOR_ITEM_REGULAR),
+		list("Green Hawaiian Shirt & Denim Pants", round(scale * 10), /obj/item/clothing/under/vai/flower/green, VENDOR_ITEM_REGULAR),
+		list("Red T-Shirt Uniform", round(scale * 10), /obj/item/clothing/under/tshirt/r_bla, VENDOR_ITEM_REGULAR),
+		list("Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
+		list("Fingerless Combat Gloves", round(scale * 10), /obj/item/clothing/gloves/marine/fingerless, VENDOR_ITEM_RECOMMENDED),
+		list("Radio Headset", round(scale * 10), /obj/item/device/radio/headset/distress/contractor, VENDOR_ITEM_REGULAR),
+
+		list("WEBBINGS", -1, null, null),
+		list("Type 78 Pattern Small Pouch Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppsmall, VENDOR_ITEM_REGULAR),
+		list("82 Pattern Magazine Webbing", round(scale * 10), /obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc, VENDOR_ITEM_REGULAR),
+		list("Drop Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/droppouch/rmc, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", round(scale * 4), /obj/item/clothing/accessory/storage/smallpouch/rmc, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
+
+		list("ARMOR", -1, null, null),
+		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
+		list("Kestrel Leg Guards", round(scale * 10), /obj/item/clothing/accessory/twepads/legs, VENDOR_ITEM_REGULAR),
+
+		list("BACKPACK", -1, null, null, null),
+		list("IMP Backpack", round(scale * 10), /obj/item/storage/backpack/marine/standard, VENDOR_ITEM_RECOMMENDED),
+		list("Lightweight Combat Pack", round(scale * 8), /obj/item/storage/backpack/lightpack, VENDOR_ITEM_REGULAR),
+
+		list("BELTS", -1, null, null),
+		list("M276 Pattern Ammo Load Rig", floor(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
+		list("M276 G8-A General Utility Pouch", floor(scale * 15), /obj/item/storage/backpack/general_belt, VENDOR_ITEM_REGULAR),
+		list("M276 Pattern General Pistol Holster Rig", floor(scale * 15), /obj/item/storage/belt/gun/m4a3, VENDOR_ITEM_REGULAR),
+		list("L70 Pattern Ammo Load Rig", round(scale * 10), /obj/item/storage/belt/marine/rmc, VENDOR_ITEM_REGULAR),
+		list("L165 Gunbelt", round(scale * 10), /obj/item/storage/belt/gun/l905, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES", -1, null, null, null),
+		list("Flare Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/flare/rmc/full, VENDOR_ITEM_REGULAR),
+		list("Tactical Medical Pouch (full)", floor(scale * 5), /obj/item/storage/pouch/medical/socmed/not_op, VENDOR_ITEM_REGULAR), //Flares...
+		list("Large Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/large, VENDOR_ITEM_REGULAR),
+		list("Tactical Tool Pouch", floor(scale * 5), /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
+		list("Large Pistol Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
+		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("Sling Pouch", floor(scale * 2), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
+
+		list("MASK", -1, null, null, null),
+		list("Balaclava", round(scale * 15), /obj/item/clothing/mask/balaclava, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS", -1, null, null, null),
+		list("BiMex Polarized Shades(Black)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_REGULAR),
+		list("BiMex Polarized Shades(Yellow)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/orange, VENDOR_ITEM_REGULAR),
+		list("BiMex Polarized Shades(Classic)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/classic, VENDOR_ITEM_REGULAR),
+		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
+		)
 
 //--------------SQUAD SPECIFIC VERSIONS--------------
 //Those vendors aren't being used i will make them us the main vendor a parent to avoid having four different
