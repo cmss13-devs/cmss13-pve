@@ -92,3 +92,7 @@
 /area/interior/vehicle/uppvan/prisoner
 	name = "\improper UPP van prisoner interior"
 	icon_state = "upp_van_prisoner"
+
+/area/interior/vehicle/twe_tank
+	name = "\improper TWE tank interior"
+	icon_state = "tank"
