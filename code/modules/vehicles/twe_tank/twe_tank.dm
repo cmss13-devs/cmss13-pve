@@ -251,8 +251,8 @@
 		TT.add_hardpoint(new /obj/item/hardpoint/primary/autocannon/twe_tank)
 		break
 
-//PRESET: default hardpoints, No Armor
-/obj/effect/vehicle_spawner/twe_tank/fixed/non_armor/load_hardpoints(obj/vehicle/multitile/tank/V)
+//PRESET: default hardpoints
+/obj/effect/vehicle_spawner/twe_tank/fixed/armed/load_hardpoints(obj/vehicle/multitile/tank/V)
 	V.add_hardpoint(new /obj/item/hardpoint/support/smoke_launcher/twe_tank)
 	V.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola/twe_tank)
 	V.add_hardpoint(new /obj/item/hardpoint/locomotion/treads)
