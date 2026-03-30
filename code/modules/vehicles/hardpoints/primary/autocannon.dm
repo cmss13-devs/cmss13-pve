@@ -57,12 +57,6 @@
 		"8" = list(0, 0)
 	)
 
-	muzzle_flash_pos = list(
-		"1" = list(0, 22),
-		"2" = list(12, -32),
-		"4" = list(22, 0),
-		"8" = list(-22, 0)
-	)
 
 /obj/item/hardpoint/primary/autocannon/twe_tank/set_bullet_traits()
 	..()

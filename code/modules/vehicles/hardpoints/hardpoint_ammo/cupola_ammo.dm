@@ -52,12 +52,12 @@
 	name = "L98 Hull MG Magazine"
 	desc = "An expanded box of 500, 10x28mm caseless rounds for the L98 hull machine gun."
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/twe_ammo.dmi'
-	icon_state = "mounted_cupola"
+	icon_state = "mounted_cupola_1"
 	max_rounds = 500
 	gun_type = /obj/item/hardpoint/secondary/m56cupola/twe_tank
 
 /obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank/update_icon()
 	if(current_rounds > 0)
-		icon_state = "mounted_cupola"
+		icon_state = "mounted_cupola_1"
 	else
-		icon_state = "mounted_cupola_empty"
+		icon_state = "mounted_cupola_0"
