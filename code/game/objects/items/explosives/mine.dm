@@ -394,6 +394,7 @@
 	name = "M760 antipersonnel landmine"
 	desc = "A standard issue American antipersonnel landmine. Minimum metal and blast-resistant, with integrated anti-tamper features. Due to counter-demining design, it contains little primary fragmentation liner."
 	icon_state = "m760"
+	icon = 'icons/obj/structures/souto_land.dmi'
 	angle = 360
 	var/disarmed = FALSE
 	explosive_power = 60
@@ -535,6 +536,7 @@
 /obj/item/explosive/mine/m5a3betty
 	name = "M5A2 bounding mine"
 	desc = "An intelligent blast-resistant bounding landmine with enhanced fragmentation."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "m5"
 	angle = 360
 	var/disarmed = FALSE
@@ -675,6 +677,7 @@
 /obj/item/explosive/mine/fzd91
 	name = "FZD-91 Landmine"
 	desc = "Regular issue area denial landmine for Union of Progressive Peoples' forces in the field. Powerful, with a strong fragmentation liner. Produced by Gruppo Meccanico Militare Vasella."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "fzd91"
 	angle = 360
 	var/disarmed = FALSE
@@ -812,6 +815,7 @@
 /obj/item/explosive/mine/tn13
 	name = "TN-13"
 	desc = "A simple vintage landmine. It has no intelligent or electronic components, and is easily disarmed. Formerly produced by the Oberon Mechanical Concern's military ordinance division. While not in use anymore, vast stockpiles still exist."
+	icon = 'icons/obj/structures/souto_land.dmi'
 	icon_state = "tn13"
 	angle = 360
 	var/disarmed = FALSE
