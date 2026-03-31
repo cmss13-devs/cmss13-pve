@@ -85,7 +85,7 @@
 	icon_state = "cave"
 //===============================================================================EXTERIOR
 /area/bandakar/exterior/cavern
-	name = "Bandakar Caverns"
+	name = "Bandakar Canyon"
 	icon_state = "east"
 //===============================================================================OOB
 /area/bandakar/oob/buttons
