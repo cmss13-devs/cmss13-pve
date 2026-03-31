@@ -452,7 +452,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "dN" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand/layer1,
@@ -938,7 +938,7 @@
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "jg" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -996,7 +996,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "jW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -1327,7 +1327,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "oj" = (
 /obj/structure/platform/kutjevo/rock,
 /turf/open/desert/rock,
@@ -1560,7 +1560,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "qK" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sink{
@@ -1595,7 +1595,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "rc" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
@@ -1693,7 +1693,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "sf" = (
 /obj/structure/gun_rack/uppflamer/unloaded{
 	pixel_x = 7;
@@ -2149,7 +2149,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "xh" = (
 /obj/structure/machinery/cryopod/big{
 	pixel_x = -9;
@@ -2506,7 +2506,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "An" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -2641,6 +2641,20 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
 /area/bandakar/base/power)
+"BV" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 12;
+	pixel_x = 9
+	},
+/turf/open/desert/rock,
+/area/bandakar/exterior/cavern)
 "Cb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cargo_container/upp/tan/mid,
@@ -2675,7 +2689,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "Ct" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -2748,6 +2762,14 @@
 	},
 /turf/open/auto_turf/sand/layer0,
 /area/bandakar/tent/treatment)
+"CX" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/trash/cigbutt,
+/turf/open/desert/rock,
+/area/bandakar/exterior/cavern)
 "Dd" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -3106,7 +3128,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "HO" = (
 /obj/structure/gun_rack/type71/unloaded{
 	pixel_y = 16;
@@ -3183,7 +3205,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "Il" = (
 /obj/structure/sign/safety/west{
 	pixel_y = 32
@@ -3289,7 +3311,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "JV" = (
 /turf/open/auto_turf/sand/layer1,
 /area/bandakar/exterior/cavern)
@@ -3520,7 +3542,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "Me" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -3528,7 +3550,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "Mo" = (
 /obj/structure/tent/big{
 	color = "#ffa31a"
@@ -3839,7 +3861,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "QW" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -4140,7 +4162,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/bunker)
+/area/bandakar/tent/bunker)
 "Vr" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/computer/cryopod{
@@ -19656,7 +19678,7 @@ Zs
 Zs
 wa
 wa
-tp
+BV
 Sq
 uk
 PK
@@ -19757,7 +19779,7 @@ Zs
 Zs
 Zs
 Zs
-wa
+CX
 km
 oj
 uk
