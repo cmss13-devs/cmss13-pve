@@ -5,6 +5,7 @@
 	icon_state = "lv-626"
 	can_build_special = TRUE
 	minimap_color = MINIMAP_AREA_COLONY
+	temperature = TROPICAL_TEMP
 	powernet_name = "bandakar"
 //======================================================================================PARENT
 /area/bandakar/base
@@ -13,12 +14,11 @@
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_playlist = SCAPE_PL_ENG
 	base_muffle = MUFFLE_MEDIUM
-	temperature = TROPICAL_TEMP
 /area/bandakar/tent
 	name = "Bandakar Tents"
+	ceiling = CEILING_GLASS
 	soundscape_playlist = AMBIENCE_BIGRED
 	base_muffle = MUFFLE_LOW
-	temperature = TROPICAL_TEMP
 /area/bandakar/caves
 	name = "Bandakar Caves"
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS
@@ -30,7 +30,6 @@
 	name = "Bandakar Exterior"
 	soundscape_playlist = AMBIENCE_BIGRED
 	base_muffle = MUFFLE_LOW
-	temperature = T90C
 /area/bandakar/oob
 	name = "OOB"
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS

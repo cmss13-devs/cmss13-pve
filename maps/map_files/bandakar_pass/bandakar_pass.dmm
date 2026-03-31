@@ -161,6 +161,51 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
 /area/bandakar/caves/main)
+"ay" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 11;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"az" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -8;
+	pixel_y = 17
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"aA" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"aB" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_y = 1;
+	pixel_x = 14
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/exterior/cavern)
+"aC" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -10
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/exterior/cavern)
+"aD" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = 6;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"aE" = (
+/obj/item/lightstick/red/spoke/planted{
+	pixel_x = -11;
+	pixel_y = -4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
 "aQ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -14702,7 +14747,7 @@ Rv
 uk
 uk
 JV
-JV
+aB
 JV
 uk
 uk
@@ -14898,14 +14943,14 @@ JV
 JV
 uk
 uk
+aD
 Rv
 Rv
 Rv
 Rv
 Rv
-Rv
-Rv
-Rv
+aA
+aA
 Rv
 Rv
 Rv
@@ -15123,7 +15168,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+ay
 uk
 JV
 Rv
@@ -15325,7 +15370,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+aA
 Rv
 Rv
 Rv
@@ -15427,8 +15472,8 @@ Rv
 Rv
 Rv
 Rv
-Rv
-Rv
+aA
+aA
 Rv
 Rv
 Rv
@@ -15529,7 +15574,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+aA
 Rv
 Rv
 Rv
@@ -15735,7 +15780,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+az
 uk
 JV
 Rv
@@ -15917,15 +15962,15 @@ dN
 JV
 PK
 JV
+aE
 Rv
 Rv
 Rv
 Rv
 Rv
 Rv
-Rv
-Rv
-Rv
+aA
+aA
 Rv
 Rv
 Rv
@@ -16130,7 +16175,7 @@ JV
 JV
 PK
 PK
-JV
+aC
 JV
 uk
 uk
@@ -16453,7 +16498,7 @@ JV
 PK
 JV
 JV
-ab
+JV
 Rv
 Rv
 Rv
@@ -16759,7 +16804,7 @@ yY
 ah
 JV
 PK
-ab
+JV
 Rv
 Rv
 Rv
