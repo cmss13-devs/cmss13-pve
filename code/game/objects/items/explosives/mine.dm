@@ -1003,6 +1003,10 @@
 	return
 
 /obj/item/explosive/mine/sharp/set_tripwire()
+	if(!active && !tripwire)
+		for(var/direction in CARDINAL_ALL_DIRS)
+			var/tripwire_loc = get_turf(get_step(loc,direction))
+			tripwire = new(tripwire_loc)
 			tripwire.linked_claymore = src
 			active = TRUE
 
@@ -1047,6 +1051,13 @@
 
 /obj/item/explosive/mine/sharp/attack_self(mob/living/user)
 	if(disarmed)
+		return
+	. = ..()
+
+/obj/item/explosive/mine/sharp/deploy_mine(mob/user)
+	if(disarmed)
+		return
+	if(!hard_iff_lock && user)
 		iff_signal = user.faction
 
 	cause_data = create_cause_data(initial(name), user)
@@ -1054,6 +1065,12 @@
 		user.drop_inv_item_on_ground(src)
 	setDir(user ? user.dir : dir) //The direction it is planted in is the direction the user faces at that time
 	activate_sensors()
+	update_icon()
+	for(var/mob/living/carbon/mob in range(1, src))
+		src.try_to_prime(mob)
+
+/obj/item/explosive/mine/sharp/attack_alien()
+	if(disarmed)
 		..()
 	else
 		return
