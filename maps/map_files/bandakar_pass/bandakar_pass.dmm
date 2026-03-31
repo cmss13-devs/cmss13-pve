@@ -1,0 +1,24682 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ad" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/armory)
+"ae" = (
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = -4;
+	pixel_y = -1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"ag" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"ak" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"am" = (
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"as" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"at" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -14
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"aQ" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"ba" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
+	density = 0;
+	pixel_y = 22;
+	req_one_access = list()
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"bk" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"bu" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/type73{
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 7
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"bv" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"bB" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/trash/cigbutt{
+	pixel_y = 8
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"bP" = (
+/obj/item/trash/cigbutt{
+	pixel_y = 12;
+	pixel_x = 9
+	},
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"bR" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"cm" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B7B5B"
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 2;
+	pixel_y = 19
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 12;
+	pixel_y = 20
+	},
+/obj/item/reagent_container/food/drinks/bottle/vodka/stolichnaya{
+	pixel_x = 9;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/drinkingglass{
+	icon_state = "shotglass";
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster17";
+	name = "'Miss April' pinup";
+	desc = "This poster features Juliette Simmons. She was the April 2179 centerfold in Playboy Magazine.";
+	pixel_y = 34;
+	pixel_x = -3;
+	layer = 3.5;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/prop{
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster29";
+	name = "'Miss February' pinup";
+	desc = "This poster features Miranda Noel. She was the February 2180 centerfold in Playboy Magazine.";
+	pixel_y = 37;
+	layer = 3.5;
+	pixel_x = 9;
+	can_block_movement = 0
+	},
+/obj/structure/machinery/prop{
+	desc = "This poster features Jennifer Bentley standing on a beach in a lifeguard's uniform. She was the March 2180 centerfold in Playboy Magazine.";
+	icon = 'icons/obj/structures/props/posters.dmi';
+	icon_state = "poster12";
+	name = "'Miss March' pinup";
+	layer = 3.5;
+	pixel_y = 6;
+	pixel_x = 24
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"cn" = (
+/obj/structure/flora/bush/desert/cactus{
+	icon_state = "cactus_4"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"cs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"cw" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"cz" = (
+/obj/item/stool{
+	pixel_y = 16
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"cD" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
+"cE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type71/large{
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/type71/large{
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"cF" = (
+/obj/structure/tent/big{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"cJ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"cN" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/base/engi)
+"cT" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"dh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"dk" = (
+/obj/item/ammo_box/magazine/type71{
+	pixel_y = 7;
+	pixel_x = 6
+	},
+/obj/item/ammo_box/magazine/type71{
+	pixel_y = -2;
+	pixel_x = -4
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"ds" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/medical_pod/bodyscanner{
+	pixel_y = 6
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"dt" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/galley)
+"du" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/trash/upp_mre,
+/obj/item/trash/upp_mre{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/trash/upp_mre{
+	pixel_y = 8;
+	pixel_x = -5
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"dw" = (
+/turf/closed/wall/kutjevo/rock,
+/area/pudong/base/maintenance)
+"dI" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"dK" = (
+/obj/structure/phone_base/upp_net{
+	name = "Bunker West Telephone";
+	phone_category = "Bandakar";
+	phone_id = "Bunker West";
+	networks_receive = list("USCM","UPP");
+	networks_transmit = list("USCM","UPP");
+	dir = 8;
+	pixel_x = 18
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"dN" = (
+/obj/structure/flora/bush/desert,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"dT" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 13
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"dY" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/toolbox/mechanical/green{
+	pixel_y = 10;
+	pixel_x = -6
+	},
+/obj/item/device/lightreplacer{
+	pixel_x = 7
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"eb" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/briefing)
+"ec" = (
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"em" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"ep" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/reagent_dispensers/fueltank/gas,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"eq" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"eu" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"ez" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"eB" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"eE" = (
+/obj/structure/machinery/shower{
+	dir = 4;
+	layer = 3.2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"eF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 13;
+	pixel_x = -3
+	},
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"eG" = (
+/obj/structure/machinery/power/apc/power/south,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"eL" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/quarters)
+"eM" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/cryo)
+"eN" = (
+/obj/structure/sign/safety/north{
+	pixel_x = -18;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -32;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = -18;
+	pixel_y = 6
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"fa" = (
+/obj/structure/sign/safety/galley{
+	pixel_x = -17
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"fe" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/supply/medicine/medkits,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"fo" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/treatment)
+"fz" = (
+/obj/item/storage/bag/trash{
+	pixel_y = -5;
+	pixel_x = -8
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"fB" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/ammo_box/magazine/misc/flares/upp,
+/obj/item/ammo_box/magazine/misc/flares/upp{
+	pixel_y = 12
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"fJ" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"fS" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 2
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"fT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/armory)
+"ga" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "bandakar_armory";
+	name = "\improper Armory Shutter"
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/armory)
+"gk" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/marked,
+/area/pudong/exterior/cavern)
+"gn" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"gp" = (
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
+	pixel_y = 11;
+	pixel_x = -1
+	},
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
+	pixel_y = 2;
+	pixel_x = 3
+	},
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"gr" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"gt" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 32
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"gv" = (
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 11;
+	pixel_x = -6
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"gG" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"gH" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -4
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"gM" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"gQ" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/treatment)
+"gS" = (
+/obj/structure/tent/big{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"hd" = (
+/obj/item/tool/crowbar/tactical{
+	pixel_y = 15
+	},
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = 12
+	},
+/obj/item/device/binoculars/range/designator{
+	pixel_y = 17
+	},
+/obj/item/deployable_beacon/red{
+	pixel_y = 21
+	},
+/obj/item/device/whistle{
+	pixel_y = 22;
+	pixel_x = -8
+	},
+/obj/structure/surface/rack{
+	pixel_y = 18;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 20;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"he" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_y = 6
+	},
+/obj/item/prop/helmetgarb/bug_spray{
+	pixel_x = 3
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"hg" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"hj" = (
+/obj/structure/flora/tree/joshua,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"hF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"hG" = (
+/turf/open/asphalt/cement,
+/area/pudong/exterior/cavern)
+"hY" = (
+/obj/structure/machinery/computer/overwatch/almayer{
+	faction = "UPP";
+	pixel_y = 22;
+	can_block_movement = 0
+	},
+/obj/structure/bed/chair/comfy,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"hZ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_x = 3
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"ib" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/dropship_equipment/paradrop_system,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"il" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"ip" = (
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"ix" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"iy" = (
+/obj/structure/sign/safety/west{
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/conference_room{
+	pixel_y = 25;
+	pixel_x = 14
+	},
+/obj/structure/sign/safety/galley{
+	pixel_x = 14;
+	pixel_y = 38
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"iE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cargo_container/upp/tan/left,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"iK" = (
+/obj/structure/machinery/sleep_console{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"iL" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/bunker)
+"jg" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"jq" = (
+/obj/structure/machinery/power/apc/power/north,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"jx" = (
+/obj/structure/target,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"jy" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 32
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"jD" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/power/port_gen/pacman/super{
+	pixel_y = 9
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"jN" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"jW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = -6;
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"kl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"km" = (
+/obj/item/storage/bag/trash{
+	pixel_y = 1;
+	pixel_x = 5
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"kw" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/base/platoon)
+"kB" = (
+/obj/structure/barricade/sandbags{
+	dir = 4
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"kH" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "WestRoad";
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/exterior/cavern)
+"kM" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "pudong_engi"
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/power)
+"kQ" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"kR" = (
+/obj/structure/machinery/door/poddoor/almayer/locked{
+	dir = 4
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/exterior/cavern)
+"kY" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 3;
+	light_range = 4;
+	invisibility = 100
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"la" = (
+/obj/structure/barricade/razorwire,
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"ld" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"le" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"ln" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"lp" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"lv" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"lB" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
+	req_one_access = list();
+	pixel_y = 21;
+	pixel_x = 7;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"lE" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"lF" = (
+/obj/structure/toilet{
+	pixel_y = 16
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"lN" = (
+/obj/structure/gun_rack/uppflamer/unloaded{
+	pixel_x = 7;
+	pixel_y = 16;
+	can_block_movement = 0;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"lQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"mi" = (
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"mn" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"mp" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 8;
+	layer = 3.2
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 20;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"mt" = (
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"mL" = (
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"nm" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/exterior/cavern)
+"nn" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/vending/dinnerware{
+	pixel_y = 16;
+	density = 0
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"nr" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_y = -14
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 3;
+	light_range = 4;
+	invisibility = 100
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"nR" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"nW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/storage/fancy/cigarettes/laika{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/storage/fancy/cigar/matchbook/brown,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"og" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/prop/almayer/CICmap{
+	pixel_y = 2;
+	pixel_x = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"oh" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/bunker)
+"oj" = (
+/obj/structure/platform/kutjevo/rock,
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"ok" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4;
+	invisibility = 100
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"ol" = (
+/turf/open/asphalt/cement_sunbleached,
+/area/pudong/exterior/cavern)
+"ou" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/vending/cigarette/upp{
+	pixel_x = 1;
+	pixel_y = 15;
+	density = 0
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"oz" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"oF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"oJ" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/prop/static_tank/water{
+	pixel_y = 13
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"oV" = (
+/obj/structure/sign/safety/medical{
+	pixel_y = 39;
+	pixel_x = -31
+	},
+/obj/structure/sign/safety/south{
+	pixel_y = 32;
+	pixel_x = -17
+	},
+/obj/structure/sign/safety/landingzone{
+	pixel_x = -31;
+	pixel_y = 25
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"pf" = (
+/obj/structure/girder,
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"pn" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/prop/magazine/book/theartofwar{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"po" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/overhead_pipe,
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = -8
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	pixel_y = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/prop/invuln/pipe_water,
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"pp" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"pw" = (
+/obj/structure/machinery/power/smes/buildable/charged,
+/turf/open/floor/almayer/tcomms,
+/area/pudong/base/power)
+"px" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = 6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"pP" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"qb" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/autodoc_console{
+	pixel_y = 6
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"qd" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = -14
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"qo" = (
+/turf/closed/wall/upp_wall,
+/area/pudong/base/maintenance)
+"qt" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"qv" = (
+/obj/structure/machinery/shower{
+	dir = 8;
+	layer = 3.2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"qz" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/platoon)
+"qD" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"qG" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
+	},
+/turf/open/floor/almayer,
+/area/pudong/base/power)
+"qH" = (
+/obj/item/stool{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"qK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -11
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"qN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"qQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 20;
+	pixel_x = 9
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"qX" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/metal/plasteel/wired,
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"rc" = (
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;237"
+	},
+/obj/item/weapon/gun/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
+/obj/item/smartgun_battery/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"rg" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/prop/helmetgarb/compass{
+	pixel_y = 4;
+	pixel_x = 5
+	},
+/obj/item/prop/helmetgarb/trimmed_wire,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"rq" = (
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"rt" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/ashtray/plastic,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"rw" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"rU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/almayer/cannon_cables{
+	name = "cables"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"rY" = (
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"sa" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"sc" = (
+/obj/item/stool{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/bunker)
+"sf" = (
+/obj/structure/gun_rack/uppflamer/unloaded{
+	pixel_x = 7;
+	pixel_y = 16;
+	can_block_movement = 0;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = -6;
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"so" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"sp" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/treatment)
+"sz" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"sJ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"sZ" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/briefing)
+"tk" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sign/safety/cryo{
+	pixel_y = 28;
+	pixel_x = 7
+	},
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"tn" = (
+/obj/structure/closet/secure_closet{
+	name = "machinegunner locker";
+	req_access_txt = "243;238"
+	},
+/obj/item/weapon/gun/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/ammo_magazine/smartgun/upp,
+/obj/item/storage/belt/gun/smartgunner/upp,
+/obj/item/clothing/suit/marine/smartgunner/upp,
+/obj/item/clothing/glasses/night/m56_goggles/upp/no_nightvision,
+/obj/item/smartgun_battery/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"tp" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"tt" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"ty" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
+"tF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cargo_container/upp/tan/right,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"tU" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"tY" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/iv_drip,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"tZ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 2
+	},
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 10;
+	layer = 3.03
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"uh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"uk" = (
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"uo" = (
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/paper_bin{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/folder/red{
+	pixel_y = 7;
+	pixel_x = -10
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/tool/pen/clicky{
+	desc = "It's a normal black ink pen.";
+	pixel_x = -8
+	},
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"uH" = (
+/obj/structure/sign/banners/upp_flag,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/galley)
+"uT" = (
+/obj/structure/toilet{
+	pixel_y = 16
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"uW" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/galley)
+"vc" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/turf/open/floor/greengrid,
+/area/pudong/base/power)
+"vd" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"vg" = (
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp,
+/obj/item/storage/box/guncase/heavy/motiondetectors/upp{
+	pixel_y = 8;
+	layer = 3.2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"vh" = (
+/obj/item/storage/belt/gun/type47/np92,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access_txt = "240";
+	req_access = null;
+	can_block_movement = 0;
+	name = "equipment locker";
+	pixel_x = 27
+	},
+/obj/item/storage/backpack/lightpack/upp,
+/obj/item/tool/crew_monitor{
+	faction = "UPP"
+	},
+/obj/item/clothing/suit/marine/faction/UPP/jacket,
+/obj/item/clothing/suit/marine/lamp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"vk" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/almayer/whiteboard,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"vH" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"vI" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"vT" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"vW" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4;
+	light_power = 0.4;
+	light_range = 4;
+	invisibility = 100
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"vY" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/treatment)
+"wa" = (
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"wc" = (
+/obj/item/stool{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 15;
+	pixel_x = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"we" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
+"wm" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 2
+	},
+/obj/item/storage/box/guncase/heavy/sentryupp{
+	pixel_y = 10;
+	layer = 3.03
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"wq" = (
+/obj/structure/closet/crate,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/item/fuel_cell,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"wr" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"wF" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"wJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/armory)
+"wY" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"xa" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/medical_pod/autodoc{
+	pixel_y = 6
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"xd" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"xh" = (
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -9;
+	pixel_y = 6;
+	dir = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"xu" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"xC" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"xE" = (
+/obj/structure/ladder{
+	id = "bandakar_lockers"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"xN" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/type73{
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/np92{
+	pixel_y = 11;
+	pixel_x = -6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"xS" = (
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"yi" = (
+/obj/structure/gun_rack/type71/unloaded{
+	pixel_y = 16;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 20;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"yl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"ys" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"yu" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/phone_base/upp_net{
+	name = "Treatment Telephone";
+	phone_category = "Bandakar";
+	phone_id = "Treatment";
+	networks_receive = list("USCM","UPP");
+	networks_transmit = list("USCM","UPP");
+	dir = 8;
+	pixel_x = 18
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"yv" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"yw" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"yF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/prop/tableflag/upp{
+	pixel_y = -1;
+	pixel_x = 10
+	},
+/obj/item/paper_bin{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/item/clipboard{
+	pixel_x = -9;
+	pixel_y = 2
+	},
+/obj/item/tool/pen/clicky{
+	desc = "It's a normal black ink pen.";
+	pixel_x = -8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/briefing)
+"yJ" = (
+/obj/structure/surface/rack{
+	pixel_y = 18;
+	density = 0
+	},
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
+	pixel_y = 22;
+	pixel_x = -1
+	},
+/obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
+	pixel_y = 15;
+	pixel_x = 3
+	},
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = 1;
+	pixel_y = 20
+	},
+/obj/item/ammo_magazine/shotgun/slug/heavy{
+	pixel_y = 15;
+	pixel_x = -3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"yP" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"yS" = (
+/obj/structure/prop/dam/boulder/boulder1,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"yT" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_y = 3
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"yY" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stack/sandbags_empty/full,
+/obj/item/stack/sandbags_empty/full{
+	pixel_y = 6;
+	pixel_x = -6
+	},
+/obj/item/stack/sandbags_empty/full{
+	pixel_y = 6;
+	pixel_x = 4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"zb" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/static_tank/water,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"zn" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"zp" = (
+/obj/structure/ladder{
+	id = "bandakar_eng";
+	height = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 4
+	},
+/obj/structure/sign/safety/maint{
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"zv" = (
+/obj/structure/flora/tree/joshua,
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"zy" = (
+/obj/item/storage/backpack/marine/ammo_rack{
+	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
+	name = "\improper makeshift ammo rack"
+	},
+/obj/item/ammo_box/magazine/nade_box/upp/smoke{
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"zA" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"zC" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join/upp,
+/obj/effect/landmark/start/marine/tl/upp,
+/obj/effect/landmark/start/marine/smartgunner/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"zF" = (
+/obj/structure/ladder{
+	id = "bandakar_eng"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 4
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_y = 38;
+	pixel_x = 8
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/maintenance)
+"zV" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_y = 30
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"zZ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/roller,
+/obj/item/storage/belt/medical/only_scanner,
+/obj/item/storage/firstaid/softpack/upp{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/obj/item/storage/firstaid/softpack/upp{
+	pixel_y = 5;
+	pixel_x = -8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Ab" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/body_scanconsole{
+	pixel_y = 6;
+	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Ae" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"An" = (
+/obj/structure/surface/rack{
+	color = "#424a50";
+	density = 0
+	},
+/obj/item/storage/pouch/tools/full{
+	pixel_y = 13;
+	pixel_x = -6
+	},
+/obj/item/storage/pouch/tools/full{
+	pixel_x = 4
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 5
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_y = 20;
+	light_power = 0.8;
+	light_range = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"Aw" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/galley)
+"AC" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"AE" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"AQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 11
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"AX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
+"Bb" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"Bl" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"Bq" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
+	pixel_y = 17;
+	can_block_movement = 0
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Bt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 2;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"Cb" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cargo_container/upp/tan/mid,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"Cd" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join/upp,
+/obj/effect/landmark/start/marine/medic/upp,
+/obj/effect/landmark/start/marine/leader/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Ch" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/cryo)
+"Cl" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/bunker)
+"Ct" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/briefing)
+"Cz" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"CB" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/galley)
+"CC" = (
+/obj/structure/machinery/door/poddoor/almayer/closed{
+	id = "WestRoad";
+	dir = 4
+	},
+/obj/structure/blocker/invisible_wall,
+/turf/open/floor/corsat/marked,
+/area/pudong/exterior/cavern)
+"CE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"CL" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -9;
+	pixel_y = 6
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"CV" = (
+/obj/item/storage/box/bodybags{
+	pixel_y = 14;
+	pixel_x = -4
+	},
+/obj/item/roller{
+	pixel_y = 26
+	},
+/obj/structure/surface/rack{
+	pixel_y = 18;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/roller{
+	pixel_y = 26
+	},
+/obj/item/roller{
+	pixel_y = 26
+	},
+/obj/item/roller{
+	pixel_y = 26
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Dd" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"Df" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/largecrate/random/secure{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"Di" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"DI" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/upp
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"DK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"DM" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/structure/sink{
+	pixel_y = 22
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"DN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"DP" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/engi)
+"DV" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"Ek" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/sign/safety/high_voltage{
+	pixel_y = 38;
+	pixel_x = 8
+	},
+/obj/structure/sign/safety/east{
+	pixel_x = 8;
+	pixel_y = 24
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"EG" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp{
+	pixel_x = -8
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp,
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp{
+	pixel_x = 8
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp{
+	pixel_y = 7;
+	pixel_x = 5
+	},
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp{
+	pixel_y = 7;
+	pixel_x = -3
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"Ff" = (
+/obj/structure/machinery/fuelcell_recycler,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"Fh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/clothing/under/marine/veteran/UPP/naval{
+	pixel_y = -1;
+	pixel_x = -5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Fj" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/exterior/cavern)
+"Fr" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"FL" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = -6;
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"Ga" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Gc" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -8;
+	can_block_movement = 0
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"Gk" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 6
+	},
+/obj/item/storage/box/guncase/heavy/shotgun/type23{
+	pixel_y = 13;
+	pixel_x = 1;
+	layer = 3.03
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"Gu" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/greengrid,
+/area/pudong/base/power)
+"GI" = (
+/obj/item/ammo_magazine/shotgun/buckshot/heavy{
+	pixel_x = 3;
+	pixel_y = 10
+	},
+/obj/item/ammo_magazine/shotgun/slug/heavy{
+	pixel_y = -2;
+	pixel_x = -3
+	},
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"GQ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"GR" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"GV" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	pixel_y = 18;
+	density = 0
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = -4;
+	pixel_y = 22
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = -4;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = 5;
+	pixel_y = 22
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = 5;
+	pixel_y = 14
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"GW" = (
+/obj/structure/flora/grass/desert/lightgrass_3,
+/obj/structure/flora/grass/desert/heavygrass_4,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Hf" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/ammo_box/magazine/misc/mre/upp,
+/obj/item/ammo_box/magazine/misc/mre/upp{
+	pixel_y = 10
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"Ht" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"Hv" = (
+/obj/structure/phone_base/upp_net{
+	name = "Overwatch Telephone";
+	phone_category = "Bandakar";
+	phone_id = "Overwatch";
+	pixel_y = 28;
+	networks_receive = list("USCM","UPP");
+	networks_transmit = list("USCM","UPP");
+	pixel_x = 9
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 11;
+	pixel_x = -6
+	},
+/obj/structure/machinery/door_control{
+	name = "Armory Shutter Control";
+	id = "bandakar_armory";
+	pixel_x = -24;
+	pixel_y = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"Hw" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 1;
+	pixel_x = 3
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"HG" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/platoon_leader{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"HJ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/ammo_box/magazine/type71,
+/obj/item/ammo_box/magazine/type71{
+	pixel_y = 8
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"HM" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/bunker)
+"HO" = (
+/obj/structure/gun_rack/type71/unloaded{
+	pixel_y = 16;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"HS" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/closet/crate/secure/upp,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"HW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 5
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"HY" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"Ig" = (
+/obj/structure/ladder{
+	id = "bandakar_lockers";
+	height = 1
+	},
+/obj/structure/sign/safety/south{
+	pixel_x = 14;
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/storage{
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/cryo{
+	pixel_y = 38
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/quarters)
+"Ii" = (
+/obj/structure/phone_base/upp_net{
+	name = "Bunker East Telephone";
+	phone_category = "Bandakar";
+	phone_id = "Bunker East";
+	networks_receive = list("USCM","UPP");
+	networks_transmit = list("USCM","UPP");
+	pixel_x = -18;
+	dir = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"Il" = (
+/obj/structure/sign/safety/west{
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/one{
+	pixel_x = 14;
+	pixel_y = 38
+	},
+/obj/structure/sign/safety/two{
+	pixel_x = 14;
+	pixel_y = 24
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Iq" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/maintenance)
+"It" = (
+/obj/structure/prop/static_tank/water,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Ix" = (
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"IQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4;
+	invisibility = 100
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"IX" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/item/toy/deck,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Jh" = (
+/obj/structure/machinery/power/monitor{
+	name = "Base Power Grid Monitoring"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"Jt" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/armory)
+"JB" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"JK" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"JT" = (
+/obj/item/stool{
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"JV" = (
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"JW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_x = 3
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"Kc" = (
+/obj/structure/largecrate/random/barrel/red{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"Kf" = (
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -3;
+	pixel_y = 10
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"Kh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/vehicle/powerloader/jd{
+	name = "\improper CosmosStal 12 Bogatyr Power Loader";
+	color = "#A2B4AC";
+	desc = "The CosmosStal 12 Bogatyr Power Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects based on the Caterpillar P-5000, first designed in January 29, 2025 by the Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere.";
+	dir = 1;
+	pixel_y = 4
+	},
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 8
+	},
+/obj/structure/prop/ice_colony/ground_wire,
+/obj/structure/prop/ice_colony/ground_wire{
+	dir = 4;
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"Kl" = (
+/obj/item/stool{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"Kr" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/power)
+"Ky" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/prop/almayer/comp_open{
+	layer = 2.9;
+	pixel_y = 1
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"KJ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"KM" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"KV" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/faxmachine{
+	name = "\improper UPP Military Fax Machine";
+	network = "UPP Encrypted Network";
+	target_department = "UPP High Command";
+	pixel_y = -2
+	},
+/obj/item/device/flashlight/lamp{
+	pixel_x = -8;
+	layer = 5;
+	anchored = 1;
+	pixel_y = 15
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"KY" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/clothing/accessory/armband/med{
+	pixel_x = -8
+	},
+/obj/item/device/flashlight/pen{
+	pixel_y = 8;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Lc" = (
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 20;
+	pixel_x = 9
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Le" = (
+/obj/structure/flora/grass/desert/heavygrass_4,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Lh" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/power/apc/power/north,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"Lj" = (
+/turf/closed/wall/kutjevo/rock,
+/area/pudong/base/quarters)
+"Ll" = (
+/obj/structure/closet/secure_closet/engineering_welding{
+	pixel_y = 3;
+	pixel_x = -5;
+	req_one_access = list()
+	},
+/obj/structure/closet/secure_closet/engineering_electrical{
+	pixel_x = 10;
+	pixel_y = 3;
+	req_one_access = list()
+	},
+/obj/structure/barricade/handrail/wire{
+	dir = 8;
+	layer = 3.01
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_y = 26;
+	pixel_x = 14
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"Ly" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/prop/static_tank/water,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"LC" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"LJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/engi)
+"Mc" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"Md" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"Me" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/bunker)
+"Mo" = (
+/obj/structure/tent/big{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"Mv" = (
+/obj/structure/machinery/medical_pod/sleeper{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"My" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
+	pixel_x = -8;
+	can_block_movement = 0
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"MA" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/exterior/cavern)
+"MG" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/engi)
+"MT" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"Nc" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_y = -14
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 3;
+	light_range = 4;
+	invisibility = 100
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"Ne" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
+	name = "Akademia Nauk Remote Control Console";
+	shuttleId = "dropship_upp";
+	pixel_x = -6;
+	light_color = "#cf91a2";
+	light_range = 1;
+	dir = 8;
+	pixel_y = 10
+	},
+/obj/structure/machinery/prop/almayer/CICmap{
+	density = 0;
+	dir = 8;
+	icon_state = "shuttle";
+	layer = 2.99;
+	name = "Tactical Map Display";
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"Nq" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"Nz" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"NA" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/tool/weldingtool/hugetank,
+/obj/item/storage/toolbox/mechanical,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"NN" = (
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"NO" = (
+/turf/closed/shuttle{
+	dir = 1;
+	icon_state = "pwall"
+	},
+/area/space)
+"NR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/reactor{
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/power)
+"Oe" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"Oi" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join/upp,
+/obj/effect/landmark/start/bridge/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"OF" = (
+/turf/closed/wall/kutjevo/rock,
+/area/pudong/exterior/cavern)
+"OM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"OU" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/platoon)
+"Pn" = (
+/obj/item/trash/cigbutt{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"Pw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/structure/closet/hydrant{
+	pixel_y = 32
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"Px" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/stool{
+	pixel_y = 4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"PA" = (
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/effect/landmark/late_join/upp,
+/obj/effect/landmark/start/marine/upp,
+/obj/effect/landmark/start/marine/upp,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"PK" = (
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"PQ" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "S";
+	layer = 3.3
+	},
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 4;
+	light_power = 0.4;
+	light_range = 4;
+	invisibility = 100
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/power)
+"PS" = (
+/obj/structure/tent/big{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Qg" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/cm_vending/clothing/medic/upp,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"Qk" = (
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"QB" = (
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -7
+	},
+/obj/structure/sign/safety/maint{
+	pixel_x = -20;
+	pixel_y = 1
+	},
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"QD" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "bandakar_armory2";
+	name = "\improper Secondary Armory Shutter"
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/armory)
+"QE" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/bunker)
+"QW" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"Rp" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B";
+	pixel_y = 3
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/clipboard{
+	pixel_y = 8;
+	pixel_x = -4
+	},
+/obj/item/clipboard{
+	pixel_y = -2;
+	pixel_x = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"Rv" = (
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/exterior/cavern)
+"RD" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"RH" = (
+/obj/structure/flora/bush/desert,
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"RN" = (
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"Se" = (
+/turf/closed/wall/kutjevo/rock,
+/area/space)
+"Sf" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"Sq" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"Sr" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 3
+	},
+/obj/item/storage/box/guncase/heavy/uppfuel{
+	pixel_y = 11;
+	layer = 3.03
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 1;
+	light_power = 0.4;
+	pixel_y = 20;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"Ss" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"SI" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"SN" = (
+/obj/structure/surface/rack{
+	color = "#424a50";
+	density = 0
+	},
+/obj/item/device/multitool/upp{
+	pixel_x = -4
+	},
+/obj/item/device/multitool/upp{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"SR" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "bandakar_armory2";
+	name = "secondary armory";
+	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow2"
+	},
+/turf/open/floor/corsat,
+/area/pudong/oob)
+"SU" = (
+/obj/structure/girder,
+/turf/open/desert/rock,
+/area/pudong/base/quarters)
+"Ta" = (
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -18
+	},
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"Te" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"Tx" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"Tz" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/barricade/handrail/wire{
+	layer = 3.1;
+	dir = 1;
+	pixel_y = 10
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/galley)
+"TF" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/desert/rock,
+/area/pudong/exterior/cavern)
+"TM" = (
+/obj/structure/sign/safety/galley{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"Ua" = (
+/obj/structure/sign/safety/conference_room{
+	pixel_y = 32;
+	pixel_x = 14
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Ub" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"Uy" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/chem_dispenser/canteen/upp,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"Uz" = (
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"UH" = (
+/obj/item/trash/cigbutt{
+	pixel_y = 12;
+	pixel_x = 9
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"UM" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"UP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/door_control{
+	name = "Reactor Shutter Control";
+	id = "pudong_engi";
+	pixel_y = 32;
+	pixel_x = -8
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_y = 32;
+	pixel_x = 14
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/base/engi)
+"UU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/power/apc/power/south,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/turf/open/desert/rock,
+/area/pudong/base/platoon)
+"UV" = (
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -18
+	},
+/obj/item/device/flashlight/lamp/tripod/grey,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8";
+	layer = 2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"Va" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out";
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = -6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"Ve" = (
+/obj/item/stool{
+	pixel_y = 6
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/bunker)
+"Vr" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/computer/cryopod{
+	pixel_x = -6;
+	pixel_y = -2;
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/corsat,
+/area/pudong/base/cryo)
+"VA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_x = 6;
+	pixel_y = 18
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_x = 6;
+	pixel_y = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4"
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/floor/corsat,
+/area/pudong/base/power)
+"VF" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lantern{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"VN" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = 20;
+	pixel_x = 9
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/briefing)
+"VR" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
+	},
+/turf/open/floor/corsat/marked,
+/area/pudong/base/power)
+"VV" = (
+/obj/structure/sign/safety/north{
+	pixel_x = -18;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -32;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = -18;
+	pixel_y = 6
+	},
+/obj/structure/tent_curtain{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/maintenance)
+"Wu" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/pudong/base/power)
+"WG" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/light/small{
+	light_color = "#C02526";
+	color = "#C02526";
+	dir = 8;
+	light_power = 0.4;
+	light_range = 4
+	},
+/turf/open/desert/rock,
+/area/pudong/base/armory)
+"WZ" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"Xc" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"Xg" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/largecrate/random/case/double,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"XO" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2";
+	layer = 2
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/treatment)
+"XP" = (
+/obj/structure/barricade/razorwire,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"XU" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/hangar)
+"XV" = (
+/obj/structure/fence,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"XW" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = 8;
+	pixel_y = -8
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/base/quarters)
+"XZ" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/surface/table/almayer{
+	color = "#EBD9B7"
+	},
+/obj/item/trash/UPPtray{
+	pixel_y = 4;
+	pixel_x = -5
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/galley)
+"Ye" = (
+/obj/structure/largecrate/supply/supplies/water,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Yl" = (
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/quarters)
+"Yn" = (
+/obj/structure/surface/rack{
+	color = "#8B7B5B"
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"Ys" = (
+/obj/structure/sign/safety/conference_room{
+	pixel_x = -17
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"YG" = (
+/obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
+	can_block_movement = 0;
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
+	can_block_movement = 0;
+	pixel_x = 8
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"YL" = (
+/obj/structure/barricade/sandbags{
+	dir = 4
+	},
+/obj/structure/flora/grass/desert/lightgrass_3,
+/turf/open/auto_turf/sand/layer1,
+/area/pudong/exterior/cavern)
+"YN" = (
+/obj/structure/machinery/autolathe/full,
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat,
+/area/pudong/base/engi)
+"YS" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall,
+/area/pudong/base/hangar)
+"Zk" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_x = -3;
+	pixel_y = 10
+	},
+/turf/open/desert/rock,
+/area/pudong/base/maintenance)
+"Zs" = (
+/turf/closed/wall/kutjevo/rock,
+/area/pudong/caves/main)
+"ZD" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/item/device/flashlight/lamp/tripod/grey{
+	pixel_y = -7;
+	pixel_x = -4
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/pudong/base/quarters)
+"ZJ" = (
+/obj/structure/sign/safety/galley{
+	pixel_x = -17
+	},
+/turf/open/auto_turf/sand/layer2,
+/area/pudong/exterior/cavern)
+"ZS" = (
+/obj/structure/surface/table/almayer{
+	color = "#8B7B5B"
+	},
+/obj/item/toy/deck,
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/item/device/flashlight/flare/upp{
+	pixel_y = 12
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/pudong/caves/main)
+"ZT" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/closed/wall/upp_wall/hull,
+/area/pudong/base/galley)
+
+(1,1,1) = {"
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+"}
+(2,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+gk
+gk
+gk
+gk
+gk
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(3,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(4,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(5,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(6,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(7,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(8,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(9,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(10,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(11,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+kH
+kH
+kH
+kH
+kH
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(12,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(13,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(14,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(15,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+JV
+JV
+JV
+uk
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(16,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(17,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(18,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(19,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Le
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(20,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+PK
+Rv
+Rv
+Rv
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(21,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+uk
+JV
+JV
+PK
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(22,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+cn
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(23,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(24,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(25,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(26,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(27,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+uk
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(28,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(29,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+hj
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+Le
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(30,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(31,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(32,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Le
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(33,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(34,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(35,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+JV
+PK
+uk
+Rv
+Rv
+Rv
+JV
+PK
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(36,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+Zs
+Zs
+Zs
+JV
+PK
+uk
+Rv
+Rv
+uk
+PK
+PK
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(37,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(38,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(39,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+JV
+Le
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+PK
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(40,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(41,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+Le
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(42,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+uk
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(43,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+PK
+PK
+Rv
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(44,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(45,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(46,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+PK
+uk
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(47,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Le
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(48,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+vH
+JV
+JV
+iL
+iL
+iL
+iL
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(49,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+vH
+JV
+mL
+JV
+TF
+JV
+JV
+Md
+Cl
+oh
+xd
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(50,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+JV
+TF
+JV
+mL
+JV
+TF
+JV
+JV
+Md
+Ve
+Cl
+xd
+Rv
+JV
+hj
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(51,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+hj
+Rv
+Rv
+Rv
+uk
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+JV
+JV
+JV
+hj
+JV
+PK
+JV
+TF
+uk
+xS
+uk
+pp
+uk
+uk
+Md
+xd
+xd
+Me
+Rv
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(52,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+dN
+Rv
+Rv
+Rv
+uk
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+pp
+Rv
+Rv
+Rv
+Rv
+cn
+uk
+iL
+QE
+QE
+iL
+Rv
+JV
+JV
+PK
+JV
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(53,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+PK
+PK
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+dN
+JV
+PK
+Le
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+uk
+uk
+Rv
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(54,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+cn
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+PK
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+uk
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(55,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+PK
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(56,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+vH
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+cn
+yS
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(57,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+xS
+JV
+TF
+uk
+uk
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(58,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+yS
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+hj
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+vH
+JV
+mL
+JV
+TF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(59,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+JV
+JV
+JV
+uk
+cn
+Rv
+Rv
+Rv
+uk
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+hj
+JV
+JV
+JV
+JV
+JV
+TF
+JV
+mL
+JV
+TF
+JV
+JV
+iL
+Ae
+Ae
+iL
+JV
+JV
+JV
+Rv
+JV
+dN
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(60,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+JV
+Le
+PK
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+JV
+JV
+JV
+Le
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+TF
+JV
+mL
+JV
+TF
+JV
+JV
+Md
+xd
+xd
+Me
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+PK
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(61,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+OF
+OF
+JV
+OF
+JV
+OF
+OF
+OF
+OF
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+OF
+JV
+JV
+PK
+PK
+PK
+JV
+JV
+JV
+PK
+JV
+dN
+JV
+PK
+TF
+JV
+mL
+JV
+TF
+JV
+JV
+Md
+JT
+xd
+xd
+Rv
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(62,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+OF
+OF
+OF
+JV
+JV
+JV
+dN
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+TF
+JV
+mL
+JV
+TF
+JV
+JV
+Md
+xd
+dK
+xd
+JV
+dN
+JV
+JV
+OF
+OF
+JV
+JV
+hj
+JV
+JV
+Rv
+Rv
+uk
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(63,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+hj
+JV
+JV
+dN
+JV
+JV
+PK
+JV
+TF
+JV
+mL
+JV
+pp
+JV
+JV
+iL
+iL
+iL
+iL
+JV
+JV
+JV
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(64,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+OF
+OF
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+JV
+pp
+JV
+mL
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+dN
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(65,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+OF
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+PK
+PK
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+hj
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(66,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+OF
+OF
+JV
+JV
+PK
+PK
+PK
+PK
+PK
+PK
+JV
+JV
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+OF
+OF
+OF
+OF
+JV
+JV
+Le
+JV
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(67,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+OF
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+OF
+OF
+OF
+JV
+JV
+PK
+PK
+dN
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(68,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+dN
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+dN
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(69,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+dN
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+OF
+JV
+PK
+JV
+JV
+JV
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+dN
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(70,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Uz
+ip
+ip
+ip
+ip
+ip
+ip
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(71,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Le
+PK
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+ip
+ip
+ip
+ip
+ip
+ip
+ip
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(72,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+JV
+PK
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+RD
+KM
+KM
+KM
+KM
+Oe
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(73,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+dN
+JV
+JV
+PK
+JV
+JV
+JV
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RD
+KM
+KM
+KM
+KM
+KM
+Oe
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(74,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(75,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+OF
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+JV
+uk
+cn
+Rv
+Rv
+Rv
+PK
+JV
+JV
+hj
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(76,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(77,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(78,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+dN
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(79,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(80,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+PK
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(81,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(82,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+hj
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(83,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(84,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(85,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(86,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+dN
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(87,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+hj
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(88,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+uk
+uk
+Rv
+Rv
+PK
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(89,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+Jt
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(90,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+yJ
+ec
+Jt
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+PK
+PK
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(91,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Gk
+yl
+yl
+cE
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(92,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Sr
+yl
+yl
+tZ
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+uk
+uk
+JV
+JV
+hj
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(93,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+sf
+hg
+kY
+Bl
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+dN
+JV
+OF
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+cn
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(94,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+Jt
+yi
+ec
+yl
+vg
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+uk
+uk
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(95,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+SR
+Jt
+HO
+yl
+yl
+yl
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+uk
+uk
+uk
+JV
+JV
+sZ
+sZ
+AE
+AE
+AE
+AE
+sZ
+sZ
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(96,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+Jt
+Jt
+QD
+QD
+QD
+Jt
+Jt
+Jt
+Zs
+Zs
+Zs
+Zs
+Zs
+uk
+JV
+JV
+PK
+dN
+JV
+sZ
+HW
+yP
+yP
+yP
+yP
+gH
+sZ
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Le
+JV
+Rv
+Rv
+Rv
+JV
+Le
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(97,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+wm
+WG
+yl
+yl
+yl
+WG
+bu
+Jt
+Zs
+Zs
+Zs
+uk
+uk
+uk
+JV
+JV
+PK
+PK
+JV
+AE
+yP
+yF
+Ct
+Ct
+Ct
+Ct
+eb
+JV
+JV
+uk
+uk
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+Rv
+uk
+JV
+PK
+PK
+dN
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(98,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+mp
+ec
+yl
+eq
+yl
+ec
+HJ
+Jt
+ZT
+ZT
+ZT
+DV
+DV
+DV
+DV
+dt
+dt
+PK
+JV
+AE
+vk
+Ct
+yP
+Ct
+Ct
+Ct
+eb
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Rv
+Rv
+Rv
+JV
+JV
+PK
+JV
+JV
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(99,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+tn
+ec
+yl
+wF
+yl
+ec
+vI
+Jt
+ZT
+EG
+qK
+vT
+vT
+vT
+vT
+kl
+dt
+TM
+JV
+AE
+yP
+Ct
+Ct
+Ct
+Ct
+Ct
+AE
+JV
+uk
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+hj
+PK
+Le
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(100,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+hd
+ec
+yl
+eq
+yl
+ec
+HS
+Jt
+ZT
+XZ
+qN
+mn
+hZ
+hZ
+hZ
+vT
+DV
+JV
+JV
+sZ
+Dd
+yP
+Ct
+yP
+yP
+VN
+sZ
+JV
+JV
+JV
+Rv
+Rv
+JV
+JV
+JV
+OF
+JV
+JV
+OF
+OF
+JV
+dN
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+yS
+JV
+JV
+Le
+PK
+JV
+JV
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(101,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+rc
+ec
+yl
+wF
+yl
+ec
+zy
+Jt
+uW
+ou
+mn
+mn
+SI
+yT
+cJ
+vT
+DV
+JV
+JV
+sZ
+sZ
+AE
+eb
+eb
+AE
+sZ
+sZ
+Ua
+JV
+JV
+Rv
+Rv
+uk
+uk
+JV
+JV
+JV
+uk
+uk
+uk
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(102,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+qd
+Nc
+Jt
+at
+nr
+Jt
+fT
+CB
+nn
+mn
+mn
+DN
+DN
+LC
+vT
+Ix
+uk
+uk
+Ys
+JV
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+YS
+qD
+qD
+qD
+qD
+qD
+YS
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(103,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+cE
+ec
+yl
+eq
+yl
+ec
+Gk
+wJ
+CB
+Uy
+vT
+vT
+sz
+mn
+mn
+mn
+Ix
+Rv
+uk
+JV
+Rv
+Rv
+JV
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+bv
+Rv
+Rv
+uk
+JV
+JV
+nm
+Il
+Rv
+Rv
+Rv
+PK
+PK
+qD
+ak
+ak
+ak
+ak
+ak
+qD
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(104,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Sr
+ec
+yl
+wF
+yl
+ec
+GI
+wJ
+CB
+JK
+mn
+Tz
+JW
+JW
+JW
+vT
+Ix
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+dN
+JV
+Rv
+Rv
+Rv
+bv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+uk
+PK
+JV
+qD
+ak
+ib
+ep
+ep
+ak
+qD
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(105,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+lN
+ec
+yl
+eq
+yl
+ec
+gp
+wJ
+CB
+JK
+mn
+rw
+cJ
+rt
+cJ
+vT
+Ix
+Rv
+Rv
+Rv
+uk
+uk
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+qD
+Kh
+rU
+jD
+NA
+ak
+qD
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(106,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+yi
+ec
+yl
+wF
+yl
+ec
+xN
+wJ
+CB
+JK
+mn
+mn
+LC
+DN
+DN
+mn
+DV
+uk
+Rv
+Rv
+JV
+JV
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+qD
+ak
+XU
+Hw
+Ky
+ak
+qD
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(107,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+HO
+yl
+yl
+yl
+yl
+yl
+dk
+wJ
+CB
+EG
+dT
+mn
+vT
+mn
+mn
+kl
+uH
+uk
+uk
+Rv
+Rv
+JV
+PK
+hj
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+dN
+JV
+qD
+ak
+ak
+ak
+ak
+ak
+qD
+JV
+Le
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(108,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Jt
+Jt
+ga
+ga
+ga
+ga
+ga
+wJ
+ad
+Aw
+dt
+DV
+Ix
+Ix
+Ix
+DV
+dt
+dt
+PK
+JV
+Rv
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+DI
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+qD
+ak
+ak
+ak
+ak
+ak
+qD
+JV
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(109,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Ta
+le
+le
+le
+le
+le
+UV
+Iq
+uk
+ZJ
+uk
+Rv
+Rv
+Rv
+JV
+fa
+PK
+PK
+JV
+Rv
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+JV
+qD
+ak
+ak
+ak
+ak
+ak
+qD
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(110,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+pf
+le
+le
+le
+rY
+rY
+Nq
+tt
+VV
+uk
+uk
+uk
+JV
+Rv
+Rv
+uk
+uk
+JV
+PK
+PK
+JV
+Rv
+Rv
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+qD
+ak
+KJ
+ak
+gn
+ak
+qD
+PK
+PK
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(111,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+qo
+Ek
+le
+le
+le
+rY
+le
+lQ
+em
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+nm
+iy
+Rv
+Rv
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+qD
+ak
+iE
+Df
+KJ
+ak
+qD
+JV
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(112,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+pf
+le
+Bb
+jy
+ix
+ix
+gt
+Xc
+sa
+lE
+lE
+lE
+lE
+lE
+lE
+hF
+Rv
+JV
+nm
+nm
+JV
+Rv
+Rv
+JV
+PK
+PK
+JV
+Rv
+bv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+qD
+ak
+Cb
+fe
+KJ
+ak
+qD
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(113,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+DP
+DP
+DP
+dw
+le
+kw
+kw
+gr
+gr
+kw
+qz
+Zs
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+yw
+hF
+Rv
+eN
+JV
+oV
+Rv
+Rv
+dN
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+bv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+qD
+ak
+tF
+ez
+Xg
+ak
+qD
+JV
+JV
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(114,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+pw
+pw
+dh
+Kr
+Kr
+Pw
+pw
+pw
+Kr
+Di
+Cz
+cN
+pf
+le
+OU
+Hv
+DK
+DK
+uo
+qz
+Zs
+uk
+uk
+uk
+uk
+PK
+JV
+Rv
+yw
+hF
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+PK
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Rv
+Rv
+uk
+Rv
+Rv
+Rv
+uk
+JV
+YS
+qD
+qD
+qD
+qD
+qD
+YS
+JV
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(115,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+Gu
+Gu
+vW
+VR
+VR
+PQ
+Gu
+Gu
+Kr
+wq
+rq
+cN
+pf
+le
+OU
+hY
+og
+DK
+UU
+qz
+Zs
+uk
+uk
+uk
+JV
+PK
+PK
+PK
+Rv
+yw
+lE
+lE
+lE
+hF
+JV
+JV
+JV
+hj
+JV
+dN
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+uk
+uk
+uk
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(116,1,1) = {"
+NO
+Zs
+Zs
+Zs
+AX
+jW
+gG
+Va
+gG
+gG
+so
+gG
+JB
+Kr
+FL
+OM
+cN
+pf
+le
+OU
+Ne
+KV
+vh
+Rp
+qz
+Zs
+Zs
+uk
+JV
+PA
+mi
+PS
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+gM
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+PK
+dN
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+PK
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+PK
+dN
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(117,1,1) = {"
+NO
+Zs
+Zs
+Zs
+we
+il
+Ff
+Kr
+jq
+ag
+Jh
+il
+il
+kM
+Te
+eG
+cN
+Bb
+le
+OU
+kw
+kw
+qz
+qz
+qz
+Zs
+Zs
+uk
+JV
+he
+dI
+mi
+JV
+JV
+Rv
+Rv
+JV
+Rv
+yw
+hF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+PK
+JV
+PK
+JV
+JV
+JV
+JV
+Rv
+Rv
+uk
+JV
+PK
+PK
+PK
+uk
+Rv
+Rv
+Rv
+uk
+uk
+PK
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(118,1,1) = {"
+NO
+Zs
+Zs
+Zs
+ty
+VA
+Ub
+Bt
+Ub
+Ub
+ln
+Ub
+px
+Kr
+UP
+jg
+cN
+Ll
+Te
+bk
+Ss
+zp
+DP
+Zs
+Zs
+Zs
+uk
+uk
+JV
+zC
+mi
+mi
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+yw
+hF
+JV
+JV
+JV
+vY
+vY
+sp
+sp
+vY
+sp
+sp
+sp
+vY
+sp
+sp
+vY
+vY
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+PK
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(119,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+vc
+vc
+IQ
+VR
+NR
+ok
+vc
+vc
+Kr
+lB
+Ss
+GR
+Te
+Ss
+AC
+cs
+MT
+DP
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+zC
+mi
+Mo
+Rv
+Rv
+Rv
+eL
+aQ
+aQ
+aQ
+eL
+yw
+lE
+hF
+JV
+vY
+GQ
+GQ
+fo
+fo
+fo
+fo
+fo
+xa
+GQ
+Ab
+GQ
+vY
+JV
+uk
+Rv
+Rv
+Rv
+uk
+JV
+JV
+Yn
+Yn
+cF
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(120,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+pw
+pw
+sJ
+Kr
+Kr
+zV
+pw
+pw
+cD
+ba
+Sf
+MG
+An
+SN
+LJ
+Kc
+zb
+DP
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+rg
+XW
+mi
+Rv
+Rv
+JV
+aQ
+qv
+Ht
+qv
+cw
+Rv
+JV
+gM
+JV
+Ga
+GQ
+GQ
+uh
+KY
+zZ
+yu
+GQ
+qb
+GQ
+ds
+GQ
+sp
+Rv
+Rv
+Rv
+JV
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(121,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+Kr
+YN
+dY
+DP
+DP
+DP
+DP
+DP
+DP
+DP
+Zs
+Zs
+Zs
+JV
+JV
+JV
+zC
+mi
+mi
+Rv
+Rv
+JV
+Ly
+eL
+po
+eL
+oJ
+Rv
+JV
+yw
+lE
+pP
+qt
+gQ
+Bq
+XO
+qt
+gQ
+GV
+as
+tY
+vY
+CV
+Ga
+Rv
+JV
+PK
+JV
+JV
+Rv
+Rv
+JV
+yY
+yY
+JV
+JV
+PK
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(122,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+DP
+DP
+DP
+DP
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Cd
+mi
+Mo
+Rv
+Rv
+Rv
+aQ
+eE
+Ht
+eE
+cw
+Rv
+JV
+JV
+JV
+Ga
+GQ
+GQ
+yv
+Qg
+GQ
+fS
+GQ
+Nz
+GQ
+Mv
+GQ
+sp
+JV
+JV
+PK
+PK
+JV
+JV
+Rv
+Rv
+JV
+JV
+JV
+PK
+PK
+uk
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(123,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+nW
+ZD
+mt
+JV
+JV
+Rv
+eL
+cw
+cw
+cw
+eL
+Rv
+dN
+PK
+JV
+vY
+GQ
+GQ
+GQ
+GQ
+GQ
+uh
+GQ
+wr
+GQ
+iK
+GQ
+vY
+Rv
+uk
+JV
+JV
+fB
+Hf
+gS
+Rv
+JV
+JV
+PK
+JV
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(124,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Oi
+mt
+mt
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+JV
+PK
+JV
+vY
+vY
+sp
+sp
+vY
+sp
+sp
+sp
+vY
+sp
+sp
+vY
+vY
+Rv
+Rv
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+zn
+am
+cF
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(125,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+JV
+Ye
+Ye
+JV
+Rv
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(126,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Iq
+Iq
+Iq
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+eL
+eL
+eL
+JV
+Rv
+JV
+JV
+vd
+mi
+PS
+Rv
+JV
+PK
+JV
+dN
+JV
+PK
+JV
+JV
+JV
+PK
+dN
+JV
+PK
+PK
+JV
+PK
+PK
+PK
+JV
+Rv
+Rv
+uk
+JV
+JV
+Rv
+JV
+ae
+ys
+JV
+Rv
+Rv
+Rv
+uk
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(127,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+Zs
+Zs
+Iq
+zF
+le
+pf
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+lv
+UM
+QW
+Rv
+Rv
+JV
+JV
+IX
+oF
+mi
+Rv
+JV
+Le
+JV
+PK
+PK
+JV
+uk
+uk
+uk
+uk
+PK
+PK
+YL
+kB
+kB
+kB
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(128,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+RN
+Zs
+Zs
+Iq
+le
+Zk
+le
+pf
+dw
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+tU
+UM
+gv
+Rv
+JV
+JV
+JV
+vd
+mi
+mi
+Rv
+JV
+JV
+JV
+hj
+JV
+JV
+uk
+cn
+Rv
+Rv
+PK
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+Rv
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+cn
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(129,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+UH
+Px
+eu
+Zs
+Zs
+Zs
+rY
+bB
+le
+rY
+pf
+pf
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+YG
+UM
+WZ
+JV
+JV
+JV
+JV
+vd
+mi
+Mo
+Rv
+JV
+dN
+JV
+JV
+PK
+cn
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(130,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wY
+Kl
+ZS
+cz
+Zs
+Zs
+Zs
+dw
+rY
+rY
+rY
+rY
+pf
+pf
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+Gc
+UM
+WZ
+Rv
+JV
+JV
+JV
+pn
+eB
+mi
+Rv
+JV
+JV
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+yS
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(131,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+cm
+oz
+VF
+wc
+wY
+RN
+RN
+Zs
+pf
+Pn
+pf
+pf
+xu
+rY
+rY
+pf
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+Tx
+UM
+Kf
+Rv
+JV
+dN
+JV
+vd
+mi
+mi
+Rv
+Rv
+JV
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(132,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+RN
+RN
+Zs
+RN
+RN
+Zs
+RN
+RN
+Zs
+Zs
+Zs
+pf
+rY
+rY
+pf
+Zs
+Zs
+Zs
+Zs
+Zs
+eL
+ld
+UM
+QW
+Rv
+JV
+JV
+JV
+vd
+mi
+Mo
+Rv
+Rv
+JV
+JV
+dN
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+PK
+PK
+JV
+uk
+uk
+uk
+JV
+PK
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+uk
+uk
+JV
+JV
+OF
+OF
+JV
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(133,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+Zs
+Zs
+Zs
+RN
+RN
+bP
+Zs
+Zs
+Zs
+Zs
+Zs
+dw
+rY
+rY
+dw
+Zs
+Zs
+Zs
+Zs
+eL
+Ig
+UM
+Lc
+Rv
+Rv
+JV
+JV
+Fh
+qQ
+mi
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+Le
+PK
+JV
+JV
+JV
+jx
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+dN
+JV
+uk
+uk
+JV
+JV
+dN
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(134,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+RN
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+dw
+rY
+dw
+Zs
+Zs
+Zs
+Zs
+eL
+eL
+eL
+eL
+JV
+Rv
+JV
+JV
+vd
+mt
+mt
+JV
+JV
+Rv
+Rv
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+jx
+JV
+PK
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+Le
+PK
+JV
+JV
+Zs
+JV
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(135,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+Yl
+NN
+Yl
+Yl
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Rv
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+JV
+OF
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+dN
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(136,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+HG
+CE
+QB
+Yl
+Zs
+Zs
+Zs
+Zs
+Le
+Le
+JV
+JV
+Rv
+OF
+OF
+JV
+JV
+OF
+JV
+PK
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+jx
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(137,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+kQ
+CE
+NN
+Lj
+Zs
+Zs
+Zs
+Zs
+PK
+Fj
+cT
+Fj
+Rv
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(138,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+zA
+CE
+CE
+SU
+Zs
+Zs
+Zs
+Zs
+Le
+cT
+nR
+uT
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+dN
+uk
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+Le
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(139,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+My
+CE
+eF
+SU
+SU
+Zs
+Zs
+Zs
+PK
+It
+Fj
+DM
+Rv
+lp
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+uk
+Rv
+Rv
+Rv
+uk
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(140,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+Mc
+CE
+CE
+SU
+Zs
+Zs
+Zs
+Zs
+PK
+cT
+nR
+lF
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+cn
+Rv
+Rv
+uk
+JV
+PK
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(141,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+HY
+CE
+NN
+Lj
+Zs
+Zs
+Zs
+Zs
+PK
+It
+Fj
+DM
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+Le
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(142,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+xE
+CE
+bR
+Yl
+Zs
+Zs
+Zs
+Zs
+GW
+fJ
+nR
+lF
+JV
+Rv
+PK
+PK
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+uk
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+Le
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+dN
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(143,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Yl
+Yl
+tk
+Yl
+Yl
+Zs
+Zs
+Zs
+Zs
+PK
+Fj
+cT
+Fj
+JV
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+uk
+Rv
+Rv
+Rv
+RD
+Oe
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+dN
+JV
+JV
+PK
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(144,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eM
+Vr
+Ch
+CL
+eM
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+Le
+JV
+JV
+Rv
+JV
+dN
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+PK
+Le
+PK
+JV
+OF
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(145,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eM
+Lh
+Fr
+AQ
+eM
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+cn
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+RD
+KM
+Oe
+Rv
+Rv
+Rv
+Qk
+Qk
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Zs
+JV
+JV
+PK
+JV
+JV
+JV
+dN
+PK
+PK
+PK
+OF
+JV
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(146,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eM
+xh
+xh
+xh
+eM
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+uk
+uk
+uk
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+XV
+XV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+uk
+uk
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(147,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+eM
+eM
+eM
+eM
+eM
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+xC
+Sq
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+Qk
+Qk
+Qk
+Rv
+Rv
+Rv
+PK
+JV
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+cn
+Rv
+Rv
+Rv
+Rv
+uk
+uk
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(148,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+du
+Sq
+Rv
+uk
+PK
+PK
+OF
+OF
+OF
+JV
+JV
+JV
+Rv
+Rv
+Rv
+JV
+PK
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+PK
+dN
+JV
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(149,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+fz
+tp
+Sq
+uk
+uk
+PK
+JV
+OF
+OF
+OF
+PK
+JV
+Rv
+Rv
+Rv
+uk
+PK
+OF
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+vH
+PK
+PK
+PK
+JV
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(150,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+wa
+tp
+Sq
+uk
+PK
+PK
+OF
+OF
+OF
+PK
+JV
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+TF
+JV
+JV
+dN
+uk
+Rv
+Rv
+Rv
+Rv
+cn
+Rv
+Rv
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+OF
+PK
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(151,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+km
+oj
+uk
+JV
+Le
+OF
+OF
+OF
+JV
+PK
+Rv
+Rv
+Rv
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+XP
+JV
+TF
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+PK
+PK
+JV
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+PK
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(152,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+wa
+oj
+uk
+JV
+JV
+OF
+OF
+OF
+JV
+PK
+Rv
+Rv
+Rv
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+vH
+JV
+XP
+JV
+TF
+uk
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+yS
+JV
+JV
+hj
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(153,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+oj
+uk
+JV
+JV
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+iL
+iL
+iL
+iL
+JV
+JV
+TF
+JV
+la
+uk
+pp
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(154,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+wa
+oj
+uk
+JV
+PK
+OF
+OF
+OF
+OF
+JV
+cn
+Rv
+Rv
+Rv
+JV
+JV
+xd
+Ii
+xd
+qX
+JV
+JV
+TF
+JV
+la
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+cn
+uk
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(155,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+oj
+uk
+JV
+zv
+JV
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+Cl
+Cl
+qH
+qX
+JV
+JV
+pp
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(156,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+uk
+JV
+JV
+JV
+OF
+OF
+OF
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+HM
+Cl
+xd
+qX
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(157,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+OF
+OF
+JV
+yS
+Rv
+Rv
+Rv
+Rv
+Rv
+iL
+QE
+QE
+iL
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+XP
+uk
+vH
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+uk
+uk
+JV
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(158,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+XV
+XV
+XV
+OF
+OF
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+vH
+uk
+XP
+JV
+TF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(159,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+OF
+OF
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+TF
+JV
+XP
+JV
+pp
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(160,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+OF
+OF
+PK
+PK
+PK
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+TF
+JV
+XP
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+dN
+JV
+JV
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(161,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+JV
+Le
+JV
+PK
+hj
+JV
+JV
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+iL
+Ae
+Ae
+iL
+JV
+TF
+JV
+XP
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+cn
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(162,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+JV
+PK
+PK
+JV
+JV
+PK
+PK
+JV
+JV
+uk
+uk
+JV
+Rv
+Me
+Cl
+xd
+qX
+JV
+TF
+JV
+XP
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(163,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+Cl
+Cl
+sc
+qX
+JV
+TF
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+uk
+JV
+dN
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(164,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+dN
+JV
+yS
+Rv
+cn
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+xd
+jN
+xd
+qX
+JV
+pp
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(165,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+PK
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+iL
+iL
+iL
+iL
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(166,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(167,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+dN
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(168,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(169,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+PK
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(170,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(171,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+OF
+OF
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(172,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+uk
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+OF
+OF
+JV
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+uk
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+cn
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(173,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+cn
+Rv
+Rv
+Rv
+JV
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(174,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+JV
+JV
+Zs
+JV
+PK
+JV
+uk
+cn
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+PK
+PK
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(175,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+uk
+uk
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(176,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+Le
+yS
+Rv
+Rv
+Rv
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(177,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+PK
+Rv
+Rv
+Rv
+uk
+uk
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+Le
+PK
+PK
+JV
+zv
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(178,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+uk
+Rv
+Rv
+Rv
+uk
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+uk
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+uk
+uk
+JV
+JV
+JV
+OF
+JV
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+dN
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(179,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+uk
+uk
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(180,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+uk
+uk
+Rv
+Rv
+Rv
+PK
+PK
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+OF
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+dN
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(181,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+dN
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(182,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+PK
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(183,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+PK
+uk
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(184,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+uk
+uk
+Rv
+Rv
+Rv
+Rv
+PK
+Le
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+dN
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+PK
+JV
+PK
+dN
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(185,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+PK
+JV
+JV
+JV
+hj
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+PK
+PK
+PK
+PK
+JV
+JV
+cn
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(186,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+OF
+OF
+OF
+OF
+OF
+OF
+OF
+JV
+OF
+OF
+OF
+OF
+JV
+OF
+OF
+OF
+OF
+PK
+Le
+PK
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+PK
+PK
+PK
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+PK
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(187,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+OF
+JV
+PK
+PK
+PK
+PK
+JV
+JV
+OF
+JV
+JV
+JV
+OF
+OF
+JV
+PK
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+PK
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+dN
+JV
+Rv
+Rv
+Rv
+JV
+PK
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(188,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+cn
+Rv
+Rv
+Rv
+Rv
+Le
+PK
+JV
+JV
+PK
+dN
+JV
+JV
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+PK
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(189,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+PK
+PK
+JV
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+dN
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+JV
+Rv
+Rv
+Rv
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(190,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+MA
+kR
+kR
+kR
+kR
+kR
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(191,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+PK
+PK
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+JV
+JV
+JV
+PK
+PK
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(192,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+Rv
+JV
+PK
+JV
+yS
+Rv
+JV
+PK
+PK
+dN
+JV
+JV
+PK
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(193,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+RH
+JV
+JV
+Rv
+Rv
+Rv
+Rv
+cn
+JV
+JV
+JV
+PK
+JV
+dN
+JV
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(194,1,1) = {"
+NO
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+JV
+JV
+JV
+JV
+JV
+PK
+JV
+JV
+PK
+PK
+Le
+JV
+JV
+JV
+Zs
+Zs
+Zs
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(195,1,1) = {"
+NO
+Se
+Se
+Se
+Se
+Se
+Se
+Se
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+PK
+JV
+JV
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(196,1,1) = {"
+NO
+Se
+qG
+qG
+qG
+qG
+qG
+Se
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+JV
+JV
+PK
+JV
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(197,1,1) = {"
+NO
+Se
+qG
+Wu
+qG
+qG
+qG
+Se
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(198,1,1) = {"
+NO
+Se
+qG
+qG
+qG
+qG
+qG
+Se
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+hG
+ol
+ol
+ol
+hG
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(199,1,1) = {"
+NO
+Se
+Se
+Se
+Se
+Se
+Se
+Se
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+MA
+CC
+CC
+CC
+CC
+CC
+MA
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+NO
+"}
+(200,1,1) = {"
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+NO
+"}

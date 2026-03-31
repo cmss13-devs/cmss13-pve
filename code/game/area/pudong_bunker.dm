@@ -12,7 +12,6 @@
 	ceiling = CEILING_REINFORCED_METAL
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	soundscape_playlist = AMBIENCE_SHIP
-	powernet_name = "base"
 /area/pudong/caves
 	name = "Pudong Caves"
 	ceiling = CEILING_UNDERGROUND_BLOCK_CAS

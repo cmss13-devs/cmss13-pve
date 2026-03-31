@@ -801,6 +801,7 @@
 #include "code\game\area\almayer.dm"
 #include "code\game\area\areas.dm"
 #include "code\game\area\areas_event.dm"
+#include "code\game\area\bandakar_pass.dm"
 #include "code\game\area\BigRed.dm"
 #include "code\game\area\binhai_supply_station.dm"
 #include "code\game\area\BMG290_Otogi_Egress_Point.dm"
