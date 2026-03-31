@@ -516,6 +516,8 @@
 
 /obj/structure/prop/hunter/hellhound/proc/summon_hellhound(mob/user)
 	var/mob/living/carbon/xenomorph/hellhound/new_hellhound = new(loc, null, XENO_HIVE_YAUTJA)
+	var/datum/behavior_delegate/hellhound_base/hound_owner = new_hellhound.behavior_delegate
+	hound_owner.pred_owner = user
 	notify_ghosts(header = "Hellhound", message = "A hellhound has been called in [get_area(user)] by [user.real_name] click play as hellhound to play as one.", extra_large = TRUE)
 	qdel(src)
 	return
