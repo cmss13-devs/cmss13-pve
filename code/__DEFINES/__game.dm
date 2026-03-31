@@ -45,6 +45,7 @@
 #define MAP_TYRARGO_RIFT "Tyrargo Rift"
 #define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
+#define MAP_CAPE_RIVER "Cape River Mining Colony"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"
@@ -289,6 +290,7 @@
 /// Blocks mortar placement, lasing, and medevac
 #define CEILING_PROTECTION_TIER_1 1
 #define CEILING_METAL 1.1
+#define CEILING_SANDSTONE_ALLOW_CAS 1.2
 
 /// Blocks CAS signals, supply drops, fultoning, and mortar fire
 #define CEILING_PROTECTION_TIER_2 2

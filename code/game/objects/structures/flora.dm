@@ -947,3 +947,91 @@ ICEY GRASS. IT LOOKS LIKE IT'S MADE OF ICE.
 /obj/structure/flora/tree/tyrargo_small/tree_stump
 	icon_state = "tree_stump"
 	density = FALSE
+
+/obj/structure/flora/jungle/thickbush/large_jungle_bush/attack_alien(mob/living/carbon/xenomorph/current_xenomorph)
+	if(unslashable)
+		return XENO_NO_DELAY_ACTION
+	current_xenomorph.animation_attack_on(src)
+	playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
+	current_xenomorph.visible_message(SPAN_DANGER("[current_xenomorph] slashes at [src]!"),
+	SPAN_DANGER("We slash at [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	update_health(rand(current_xenomorph.melee_damage_lower, current_xenomorph.melee_damage_upper))
+	return XENO_ATTACK_ACTION
+
+/obj/structure/flora/jungle/thickbush/large_jungle_bush/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/vegetation_hit.ogg', 25, 1)
+	xeno.visible_message(SPAN_DANGER("[xeno] slashes at [src] with its tail!"),
+	SPAN_DANGER("We slash at [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	update_health(xeno.melee_damage_upper)
+	return TAILSTAB_COOLDOWN_NORMAL
+
+/*
+
+	Canyon Bushes
+
+*/
+
+/obj/structure/flora/bush/canyon
+	name = "bush"
+	icon = 'icons/obj/structures/props/natural/vegetation/canyon_flora.dmi'
+	desc = "A small, leafy bush."
+	icon_state = "green_small_bush"
+	cut_level = PLANT_CUT_KNIFE
+	layer = ABOVE_XENO_LAYER
+
+/obj/structure/flora/bush/canyon/bush
+	icon_state = "green_small_bush"
+
+/obj/structure/flora/bush/canyon/bush/alt1
+	icon_state = "orange_small_bush"
+
+/obj/structure/flora/bush/canyon/bush/alt2
+	icon_state = "yellow_small_bush"
+
+/obj/structure/flora/bush/canyon/tree
+	name = "small tree"
+	desc = "A small, leafy tree."
+	icon_state = "green_small_tree"
+
+/obj/structure/flora/bush/canyon/tree/alt1
+	icon_state = "orange_small_tree"
+
+/obj/structure/flora/bush/canyon/tree/alt2
+	icon_state = "yellow_small_tree"
+
+/obj/structure/flora/bush/canyon/grass_green
+	name = "grass"
+	desc = "A small patch of grass."
+	icon_state = "green_grass_1"
+
+/obj/structure/flora/bush/canyon/grass_green/alt1
+	icon_state = "green_grass_2"
+
+/obj/structure/flora/bush/canyon/grass_green/alt2
+	icon_state = "green_grass_3"
+
+/obj/structure/flora/bush/canyon/grass_orange
+	name = "grass"
+	desc = "A small patch of grass."
+	icon_state = "orange_grass_1"
+
+/obj/structure/flora/bush/canyon/grass_orange/alt1
+	icon_state = "orange_grass_2"
+
+/obj/structure/flora/bush/canyon/grass_orange/alt2
+	icon_state = "orange_grass_3"
+
+/obj/structure/flora/bush/canyon/grass_yellow
+	name = "grass"
+	desc = "A small patch of grass."
+	icon_state = "yellow_grass_1"
+
+/obj/structure/flora/bush/canyon/grass_yellow/alt1
+	icon_state = "yellow_grass_2"
+
+/obj/structure/flora/bush/canyon/grass_yellow/alt2
+	icon_state = "yellow_grass_3"
+
+

@@ -185,6 +185,18 @@
 	html_link = "images/d/da/White_Antre_Research_Facility.png"
 	color = "cyan"
 
+/obj/item/map/cape_river
+	name = "\improper Cape River map"
+	desc = "A labeled blueprint of the Con-Am mining outpost Cape River"
+	html_link = "images/4/46/Cape_River.png"
+	color = "red"
+
+/obj/item/map/galaxy
+	name = "\improper Galaxy map"
+	desc = "A diagrammatic map of the milky way, laid out by sector."
+	html_link = "images/9/9e/Galaxy_Map.png"
+	color = "#005eab"
+
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
@@ -226,6 +238,8 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
 		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map(),
 		MAP_CONAM_81_ABYSSAL = new /obj/item/map/new_varadero(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
+		MAP_CAPE_RIVER = new /obj/item/map/cape_river()
 	)
 
 //used by marine equipment machines to spawn the correct map.

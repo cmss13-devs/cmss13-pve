@@ -158,3 +158,5 @@
 
 #define AMBIENCE_ANCIENT_TEMPLE_DEEP 'sound/ambience/ancient_temple_ruins_deep.ogg'
 #define AMBIENCE_ANCIENT_TEMPLE_SURFACE 'sound/ambience/ancient_temple_ruins_surface.ogg'
+// Cape River
+#define AMBIENCE_CULT 'sound/soundscape/eerie1.ogg'

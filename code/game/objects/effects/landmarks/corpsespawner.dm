@@ -64,6 +64,18 @@
 	name = "Corporate Liaison"
 	equip_path = /datum/equipment_preset/corpse/liaison
 
+/obj/effect/landmark/corpsespawner/administrator
+	name = "Colony Administrator"
+	equip_path = /datum/equipment_preset/corpse/administrator
+
+/obj/effect/landmark/corpsespawner/clf
+	name = "Colonial Liberation Front Soldier"
+	equip_path = /datum/equipment_preset/corpse/clf
+
+/obj/effect/landmark/corpsespawner/miner
+	name = "Shaft Miner"
+	equip_path = /datum/equipment_preset/corpse/miner
+
 //FORECON
 /obj/effect/landmark/corpsespawner/forecon_spotter
 	name = "USCM Reconnaissance Spotter"

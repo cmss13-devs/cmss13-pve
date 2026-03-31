@@ -4381,6 +4381,12 @@
 /turf/open/floor/green/northeast
 	dir = NORTHEAST
 
+/turf/open/floor/green/south
+	dir = SOUTH
+
+/turf/open/floor/green/west
+	dir = WEST
+
 /turf/open/floor/greencorner
 	icon_state = "greencorner"
 
@@ -4997,6 +5003,15 @@
 /turf/open/floor/darkgreen2/northwest
 	dir = NORTHWEST
 
+/turf/open/floor/darkgreen2/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/darkgreen2/southwest
+	dir = SOUTHWEST
+
+/turf/open/floor/darkgreen2/southeast
+	dir = SOUTHEAST
+
 /turf/open/floor/darkpurple2/northwest
 	dir = NORTHWEST
 
@@ -5008,6 +5023,18 @@
 
 /turf/open/floor/darkyellow2/northwest
 	dir = NORTHWEST
+
+/turf/open/floor/green/northwest
+	dir = NORTHWEST
+
+/turf/open/floor/green/northeast
+	dir = NORTHEAST
+
+/turf/open/floor/green/southeast
+	dir = SOUTHEAST
+
+/turf/open/floor/green/southwest
+	dir = SOUTHWEST
 
 /turf/open/floor/green/northwest
 	dir = NORTHWEST
@@ -5124,6 +5151,9 @@
 
 /turf/open/floor/darkbluecorners2/east
 	dir = EAST
+
+/turf/open/floor/darkbluecorners2/south
+	dir = SOUTH
 
 /turf/open/floor/darkbluecorners2/west
 	dir = WEST
