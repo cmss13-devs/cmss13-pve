@@ -45,5 +45,5 @@ endmap
 map mi264_pudong_bunker
 endmap
 
-map mi410_bandakar_pass_staging_ground
+map mi410_bandakar_pass
 endmap
