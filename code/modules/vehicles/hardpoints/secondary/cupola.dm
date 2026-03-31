@@ -64,7 +64,7 @@
 
 	allowed_seat = VEHICLE_DRIVER
 
-	firing_arc = 150
+	firing_arc = 75
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/twe_tank
 	max_clips = 5
