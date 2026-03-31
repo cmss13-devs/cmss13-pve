@@ -72,6 +72,9 @@ endmap
 map lv759_hybrisa_prospera_repaired
 endmap
 
+map cocytus_dam
+endmap
+
 map new_varadero
 endmap
 
