@@ -77,6 +77,9 @@
 /area/bandakar/tent/storage
 	name = "Bandakar - Storage"
 	icon_state = "purple"
+/area/bandakar/base/bunker
+	name = "Bandakar - Bunkers"
+	icon_state = "red"
 //===============================================================================CAVES
 /area/bandakar/caves/main
 	name = "Bandakar Caves"

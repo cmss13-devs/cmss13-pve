@@ -1,36 +1,127 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/tent/storage)
+"ab" = (
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/exterior/cavern)
+"ac" = (
+/obj/item/lightstick/red/variant/planted,
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
 "ad" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "ae" = (
 /obj/structure/largecrate/random/barrel/red{
 	pixel_x = -4;
 	pixel_y = -1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
+"af" = (
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/tent/storage)
 "ag" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
+"ah" = (
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/tent/storage)
+"ai" = (
+/obj/structure/sign/safety/two{
+	pixel_x = 7;
+	pixel_y = 24
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"aj" = (
+/obj/structure/sign/safety/one{
+	pixel_x = 7;
+	pixel_y = 24
+	},
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/exterior/cavern)
 "ak" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
-"am" = (
-/obj/structure/largecrate/random/barrel/red{
-	pixel_x = 4;
-	pixel_y = 7
+/area/bandakar/tent/storage)
+"al" = (
+/obj/structure/sign/safety/four{
+	pixel_y = -24;
+	pixel_x = 7
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
+"am" = (
+/obj/structure/largecrate/supply/supplies/metal,
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/tent/storage)
+"an" = (
+/obj/structure/sign/safety/three{
+	pixel_x = 7;
+	pixel_y = -24
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"ao" = (
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 3;
+	pixel_x = -1
+	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 8;
+	pixel_y = 6;
+	pixel_x = -2
+	},
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/tent/briefing)
+"ap" = (
+/obj/structure/sign/safety/three{
+	pixel_y = 38
+	},
+/obj/structure/sign/safety/four{
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/east{
+	pixel_x = 14;
+	pixel_y = 32
+	},
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"aq" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer0,
+/area/bandakar/exterior/cavern)
+"ar" = (
+/obj/item/device/flashlight/lamp/tripod/grey,
+/turf/open/auto_turf/sand/layer1,
+/area/bandakar/exterior/cavern)
 "as" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey,
@@ -41,7 +132,7 @@
 	icon_state = "1-2-4-8"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "at" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
@@ -53,7 +144,23 @@
 	pixel_y = -14
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
+"au" = (
+/turf/open/desert/rock,
+/area/bandakar/base/maintenance)
+"av" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/desert/rock,
+/area/bandakar/base/maintenance)
+"aw" = (
+/obj/structure/girder,
+/turf/open/desert/rock,
+/area/bandakar/base/maintenance)
+"ax" = (
+/obj/effect/decal/strata_decals/catwalk/prison,
+/turf/open/desert/rock,
+/area/bandakar/caves/main)
 "aQ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -62,7 +169,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "ba" = (
 /obj/structure/machinery/cm_vending/sorted/tech/electronics_storage{
 	density = 0;
@@ -77,7 +184,7 @@
 	layer = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "bk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
@@ -85,7 +192,7 @@
 	layer = 2
 	},
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "bu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -99,33 +206,34 @@
 	pixel_y = 7
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "bv" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "bB" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/trash/cigbutt{
 	pixel_y = 8
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/caves/main)
 "bP" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 12;
 	pixel_x = 9
 	},
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "bR" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
 	pixel_x = 5;
 	pixel_y = 7
 	},
+/obj/structure/machinery/power/apc/power/south,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "cm" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
@@ -185,13 +293,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "cn" = (
 /obj/structure/flora/bush/desert/cactus{
 	icon_state = "cactus_4"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "cs" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -200,7 +308,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "cw" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -209,21 +317,21 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "cz" = (
 /obj/item/stool{
 	pixel_y = 16
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "cD" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2";
 	layer = 2
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "cE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/type71/large{
@@ -234,13 +342,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "cF" = (
 /obj/structure/tent/big{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "cJ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -250,10 +358,10 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "cN" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "cT" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
@@ -263,7 +371,7 @@
 	},
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "dh" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -276,7 +384,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "dk" = (
 /obj/item/ammo_box/magazine/type71{
 	pixel_y = 7;
@@ -289,7 +397,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "ds" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/medical_pod/bodyscanner{
@@ -299,13 +407,13 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "dt" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "du" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
@@ -320,10 +428,7 @@
 	pixel_x = -5
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
-"dw" = (
-/turf/closed/wall/kutjevo/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/exterior/cavern)
 "dI" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -331,7 +436,7 @@
 	pixel_y = 4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "dK" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker West Telephone";
@@ -343,12 +448,15 @@
 	pixel_x = 18
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "dN" = (
 /obj/structure/flora/bush/desert,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "dT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -358,7 +466,7 @@
 	pixel_y = 13
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "dY" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/toolbox/mechanical/green{
@@ -377,7 +485,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "eb" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -386,16 +494,17 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "ec" = (
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "em" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "ep" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/reagent_dispensers/fueltank/gas,
@@ -403,17 +512,17 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "eq" = (
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "eu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "ez" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random/barrel/red{
@@ -424,7 +533,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "eB" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -432,7 +541,7 @@
 	pixel_y = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "eE" = (
 /obj/structure/machinery/shower{
 	dir = 4;
@@ -443,7 +552,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "eF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -451,21 +560,21 @@
 	pixel_x = -3
 	},
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "eG" = (
 /obj/structure/machinery/power/apc/power/south,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "eL" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "eM" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "eN" = (
 /obj/structure/sign/safety/north{
 	pixel_x = -18;
@@ -484,13 +593,13 @@
 	pixel_y = 6
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "fa" = (
 /obj/structure/sign/safety/galley{
 	pixel_x = -17
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "fe" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/supply/medicine/medkits,
@@ -498,33 +607,38 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "fo" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "fz" = (
 /obj/item/storage/bag/trash{
 	pixel_y = -5;
 	pixel_x = -8
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "fB" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B";
 	pixel_y = 3
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
-/obj/item/ammo_box/magazine/misc/flares/upp,
+/obj/item/ammo_box/magazine/misc/flares/upp{
+	pixel_x = -4
+	},
 /obj/item/ammo_box/magazine/misc/flares/upp{
 	pixel_y = 12
 	},
+/obj/item/ammo_box/magazine/misc/flares/upp{
+	pixel_x = 4
+	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "fJ" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
@@ -533,7 +647,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "fS" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sink{
@@ -545,13 +659,13 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "fT" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "ga" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -559,14 +673,14 @@
 	name = "\improper Armory Shutter"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "gk" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/corsat/marked,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "gn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/blood/oil,
@@ -574,7 +688,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "gp" = (
 /obj/item/ammo_magazine/shotgun/slug/dragonsbreath{
 	pixel_y = 11;
@@ -590,7 +704,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "gr" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
@@ -608,7 +722,7 @@
 	layer = 2
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "gv" = (
 /obj/item/device/flashlight/lamp/tripod/grey{
 	pixel_y = 11;
@@ -618,7 +732,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "gG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -633,7 +747,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "gH" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -643,7 +757,7 @@
 	pixel_x = -4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "gM" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
@@ -651,7 +765,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "gQ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -661,13 +775,13 @@
 	layer = 2
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "gS" = (
 /obj/structure/tent/big{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "hd" = (
 /obj/item/tool/crowbar/tactical{
 	pixel_y = 15
@@ -700,7 +814,7 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "he" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -714,7 +828,7 @@
 	pixel_x = 3
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "hg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
@@ -723,21 +837,21 @@
 	pixel_y = -14
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "hj" = (
 /obj/structure/flora/tree/joshua,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "hF" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "hG" = (
 /turf/open/asphalt/cement,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "hY" = (
 /obj/structure/machinery/computer/overwatch/almayer{
 	faction = "UPP";
@@ -758,7 +872,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "ib" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -766,17 +880,17 @@
 	},
 /obj/structure/dropship_equipment/paradrop_system,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "il" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "ip" = (
 /obj/structure/barricade/razorwire{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "ix" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
@@ -784,7 +898,7 @@
 	layer = 2
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "iy" = (
 /obj/structure/sign/safety/west{
 	pixel_y = 32
@@ -798,7 +912,7 @@
 	pixel_y = 38
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "iE" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cargo_container/upp/tan/left,
@@ -806,7 +920,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "iK" = (
 /obj/structure/machinery/sleep_console{
 	dir = 4;
@@ -818,8 +932,11 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "iL" = (
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/closed/wall/upp_wall/hull,
 /area/pudong/base/bunker)
 "jg" = (
@@ -831,16 +948,16 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "jq" = (
 /obj/structure/machinery/power/apc/power/north,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "jx" = (
 /obj/structure/target,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "jy" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/restrictedarea{
@@ -850,7 +967,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "jD" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/power/port_gen/pacman/super{
@@ -861,7 +978,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "jN" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -875,6 +992,9 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "jW" = (
@@ -896,7 +1016,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "kl" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey,
@@ -904,14 +1024,14 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "km" = (
 /obj/item/storage/bag/trash{
 	pixel_y = 1;
 	pixel_x = 5
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "kw" = (
 /turf/closed/wall/upp_wall,
 /area/pudong/base/platoon)
@@ -920,20 +1040,20 @@
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "kH" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "WestRoad";
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "kM" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	id = "pudong_engi"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "kQ" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
 	can_block_movement = 0;
@@ -945,13 +1065,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "kR" = (
 /obj/structure/machinery/door/poddoor/almayer/locked{
 	dir = 4
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "kY" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
@@ -969,11 +1089,11 @@
 	invisibility = 100
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "la" = (
 /obj/structure/barricade/razorwire,
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "ld" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -988,11 +1108,11 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "le" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "ln" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -1014,11 +1134,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
-"lp" = (
-/obj/item/device/flashlight/lamp/tripod/grey,
-/turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/base/power)
 "lv" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
 	can_block_movement = 0;
@@ -1033,7 +1149,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "lB" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage{
 	req_one_access = list();
@@ -1044,7 +1160,7 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "lE" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2";
@@ -1052,7 +1168,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "lF" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -1071,7 +1187,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "lN" = (
 /obj/structure/gun_rack/uppflamer/unloaded{
 	pixel_x = 7;
@@ -1081,7 +1197,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "lQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
@@ -1089,17 +1205,17 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "mi" = (
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "mn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "mp" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
@@ -1116,19 +1232,19 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "mt" = (
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "mL" = (
 /obj/structure/barricade/razorwire{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "nm" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "nn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/vending/dinnerware{
@@ -1139,7 +1255,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "nr" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice1";
@@ -1154,8 +1270,9 @@
 	light_range = 4;
 	invisibility = 100
 	},
+/obj/structure/machinery/power/apc/power/south,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "nR" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -1170,7 +1287,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "nW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -1183,7 +1300,7 @@
 	},
 /obj/item/storage/fancy/cigar/matchbook/brown,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "og" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/prop/almayer/CICmap{
@@ -1206,12 +1323,15 @@
 	pixel_y = -1
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer0,
 /area/pudong/base/bunker)
 "oj" = (
 /obj/structure/platform/kutjevo/rock,
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "ok" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/warning_stripes{
@@ -1232,10 +1352,10 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "ol" = (
 /turf/open/asphalt/cement_sunbleached,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "ou" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/vending/cigarette/upp{
@@ -1247,7 +1367,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "oz" = (
 /obj/item/trash/cigbutt{
 	pixel_x = 1;
@@ -1255,7 +1375,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "oF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -1263,7 +1383,7 @@
 	pixel_y = -8
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "oJ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -1272,7 +1392,7 @@
 	pixel_y = 13
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "oV" = (
 /obj/structure/sign/safety/medical{
 	pixel_y = 39;
@@ -1286,12 +1406,13 @@
 	pixel_x = -31;
 	pixel_y = 25
 	},
+/obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "pf" = (
 /obj/structure/girder,
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/caves/main)
 "pn" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -1303,7 +1424,7 @@
 	pixel_y = 6
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "po" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/overhead_pipe,
@@ -1318,7 +1439,7 @@
 	},
 /obj/structure/prop/invuln/pipe_water,
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "pp" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -1328,11 +1449,11 @@
 	dir = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "pw" = (
 /obj/structure/machinery/power/smes/buildable/charged,
 /turf/open/floor/almayer/tcomms,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "px" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -1348,7 +1469,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "pP" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -1362,7 +1483,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "qb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/autodoc_console{
@@ -1376,7 +1497,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "qd" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice2";
@@ -1387,10 +1508,10 @@
 	pixel_y = -14
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "qo" = (
 /turf/closed/wall/upp_wall,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "qt" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -1401,7 +1522,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "qv" = (
 /obj/structure/machinery/shower{
 	dir = 8;
@@ -1412,7 +1533,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "qz" = (
 /turf/closed/wall/upp_wall/hull,
 /area/pudong/base/platoon)
@@ -1421,20 +1542,23 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "qG" = (
 /obj/structure/machinery/power/reactor{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/almayer,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "qH" = (
 /obj/item/stool{
 	pixel_y = 1;
 	pixel_x = 3
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "qK" = (
@@ -1447,7 +1571,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "qN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -1455,7 +1579,7 @@
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "qQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -1463,10 +1587,13 @@
 	pixel_x = 9
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "qX" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/floor/corsat,
 /area/pudong/base/bunker)
 "rc" = (
@@ -1484,7 +1611,7 @@
 /obj/item/smartgun_battery/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "rg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -1497,7 +1624,7 @@
 	},
 /obj/item/prop/helmetgarb/trimmed_wire,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "rq" = (
 /obj/structure/machinery/light/small{
 	light_color = "#C02526";
@@ -1508,7 +1635,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "rt" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -1519,7 +1646,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "rw" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -1531,7 +1658,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "rU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/almayer/cannon_cables{
@@ -1541,10 +1668,10 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "rY" = (
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/caves/main)
 "sa" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2";
@@ -1555,13 +1682,16 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "sc" = (
 /obj/item/stool{
 	pixel_y = 1;
 	pixel_x = 3
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer0,
 /area/pudong/base/bunker)
 "sf" = (
@@ -1583,7 +1713,7 @@
 	pixel_y = -14
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "so" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -1604,7 +1734,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "sp" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -1613,7 +1743,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "sz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -1624,7 +1754,7 @@
 	pixel_y = -8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "sJ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -1638,13 +1768,13 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "sZ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "tk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/cryo{
@@ -1652,7 +1782,7 @@
 	pixel_x = 7
 	},
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "tn" = (
 /obj/structure/closet/secure_closet{
 	name = "machinegunner locker";
@@ -1668,13 +1798,13 @@
 /obj/item/smartgun_battery/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "tp" = (
 /obj/structure/platform_decoration/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "tt" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
@@ -1682,13 +1812,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "ty" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "tF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cargo_container/upp/tan/right,
@@ -1696,7 +1826,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "tU" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/squad_leader{
 	can_block_movement = 0;
@@ -1711,7 +1841,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "tY" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/iv_drip,
@@ -1723,7 +1853,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "tZ" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/sentryupp{
@@ -1741,7 +1871,7 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "uh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey,
@@ -1749,10 +1879,10 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "uk" = (
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "uo" = (
 /obj/structure/surface/table/almayer{
 	color = "#EBD9B7"
@@ -1782,7 +1912,7 @@
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "uT" = (
 /obj/structure/toilet{
 	pixel_y = 16
@@ -1801,7 +1931,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "uW" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -1810,13 +1940,13 @@
 	icon_state = "2-4"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "vc" = (
 /obj/structure/machinery/power/terminal{
 	dir = 4
 	},
 /turf/open/floor/greengrid,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "vd" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -1829,7 +1959,7 @@
 /obj/effect/landmark/late_join/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "vg" = (
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp,
 /obj/item/storage/box/guncase/heavy/motiondetectors/upp{
@@ -1844,7 +1974,7 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "vh" = (
 /obj/item/storage/belt/gun/type47/np92,
 /obj/structure/closet/secure_closet/guncabinet{
@@ -1870,7 +2000,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "vH" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
@@ -1880,7 +2010,7 @@
 	dir = 8
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "vI" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -1893,14 +2023,14 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "vT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "vW" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -1921,16 +2051,16 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "vY" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "wa" = (
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "wc" = (
 /obj/item/stool{
 	pixel_x = -6;
@@ -1942,14 +2072,14 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "we" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
 	layer = 2
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "wm" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/sentryupp{
@@ -1961,7 +2091,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "wq" = (
 /obj/structure/closet/crate,
 /obj/item/fuel_cell,
@@ -1972,7 +2102,7 @@
 /obj/item/fuel_cell,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "wr" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 1;
@@ -1987,22 +2117,18 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "wF" = (
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "wJ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/armory)
-"wY" = (
-/obj/effect/decal/strata_decals/catwalk/prison,
-/turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/base/armory)
 "xa" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/medical_pod/autodoc{
@@ -2016,9 +2142,12 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "xd" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "xh" = (
@@ -2029,20 +2158,20 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "xu" = (
 /obj/item/trash/cigbutt{
 	pixel_x = 8;
 	pixel_y = -4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/caves/main)
 "xC" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "xE" = (
 /obj/structure/ladder{
 	id = "bandakar_lockers"
@@ -2051,7 +2180,7 @@
 	icon_state = "cargo"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "xN" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/type73{
@@ -2069,13 +2198,13 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "xS" = (
 /obj/structure/barricade/razorwire{
 	dir = 1
 	},
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "yi" = (
 /obj/structure/gun_rack/type71/unloaded{
 	pixel_y = 16;
@@ -2091,15 +2220,15 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "yl" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "ys" = (
 /obj/structure/largecrate/random/case/double,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "yu" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/phone_base/upp_net{
@@ -2115,7 +2244,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "yv" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp,
@@ -2123,14 +2252,14 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "yw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "yF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -2156,7 +2285,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "yJ" = (
 /obj/structure/surface/rack{
 	pixel_y = 18;
@@ -2187,18 +2316,18 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "yP" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "yS" = (
 /obj/structure/prop/dam/boulder/boulder1,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "yT" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -2212,7 +2341,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "yY" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B";
@@ -2229,16 +2358,16 @@
 	pixel_x = 4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "zb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/static_tank/water,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "zn" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "zp" = (
 /obj/structure/ladder{
 	id = "bandakar_eng";
@@ -2256,12 +2385,12 @@
 	pixel_y = -24
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "zv" = (
 /obj/structure/flora/tree/joshua,
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "zy" = (
 /obj/item/storage/backpack/marine/ammo_rack{
 	desc = "This ammo rack has been handcrafted by one of the ship's sappers. Union's ingenuity at it's finest.";
@@ -2277,7 +2406,7 @@
 	pixel_y = 3
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "zA" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
 	can_block_movement = 0;
@@ -2289,7 +2418,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "zC" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -2304,7 +2433,7 @@
 /obj/effect/landmark/start/marine/smartgunner/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "zF" = (
 /obj/structure/ladder{
 	id = "bandakar_eng"
@@ -2321,7 +2450,7 @@
 	pixel_x = 8
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "zV" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -2336,7 +2465,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "zZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -2356,7 +2485,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Ab" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/body_scanconsole{
@@ -2367,11 +2496,14 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Ae" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 8
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/bunker)
@@ -2402,7 +2534,7 @@
 	layer = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Aw" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -2411,7 +2543,7 @@
 	icon_state = "1-8"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "AC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -2424,7 +2556,7 @@
 	layer = 2
 	},
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "AE" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -2433,7 +2565,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "AQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
@@ -2443,17 +2575,17 @@
 	pixel_y = 11
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "AX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Bb" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Bl" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -2471,7 +2603,7 @@
 	pixel_y = -14
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "Bq" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/sorted/medical/no_access/upp{
@@ -2486,7 +2618,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Bt" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SE-out";
@@ -2508,7 +2640,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Cb" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cargo_container/upp/tan/mid,
@@ -2516,7 +2648,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "Cd" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -2531,14 +2663,17 @@
 /obj/effect/landmark/start/marine/leader/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Ch" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "Cl" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer0,
 /area/pudong/base/bunker)
 "Ct" = (
@@ -2547,7 +2682,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "Cz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random/barrel/red{
@@ -2555,7 +2690,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "CB" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -2565,7 +2700,7 @@
 	layer = 2
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "CC" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
 	id = "WestRoad";
@@ -2573,11 +2708,11 @@
 	},
 /obj/structure/blocker/invisible_wall,
 /turf/open/floor/corsat/marked,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "CE" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "CL" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cryopod/big{
@@ -2585,7 +2720,7 @@
 	pixel_y = 6
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "CV" = (
 /obj/item/storage/box/bodybags{
 	pixel_y = 14;
@@ -2612,7 +2747,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Dd" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -2623,7 +2758,7 @@
 	pixel_y = -1
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "Df" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/largecrate/random/secure{
@@ -2634,19 +2769,19 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "Di" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "DI" = (
 /obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
 	roundstart_template = /datum/map_template/shuttle/upp
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "DK" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
@@ -2662,7 +2797,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "DN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair{
@@ -2672,10 +2807,10 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "DP" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "DV" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
@@ -2684,7 +2819,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "Ek" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/sign/safety/high_voltage{
@@ -2696,7 +2831,7 @@
 	pixel_y = 24
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "EG" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -2722,12 +2857,12 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "Ff" = (
 /obj/structure/machinery/fuelcell_recycler,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Fh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -2739,13 +2874,7 @@
 	pixel_x = -5
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
-"Fj" = (
-/obj/effect/vehicle_roof/van{
-	color = "#ffa31a"
-	},
-/turf/closed/wall/upp_wall,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "Fr" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/strata_decals/catwalk/prison,
@@ -2753,7 +2882,7 @@
 	icon_state = "1-2-4"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "FL" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -2770,7 +2899,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Ga" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
@@ -2779,7 +2908,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Gc" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
 	pixel_x = -8;
@@ -2794,7 +2923,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Gk" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/shotgun/type23{
@@ -2807,14 +2936,14 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "Gu" = (
 /obj/structure/machinery/power/terminal{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/greengrid,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "GI" = (
 /obj/item/ammo_magazine/shotgun/buckshot/heavy{
 	pixel_x = 3;
@@ -2836,21 +2965,21 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "GQ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "GR" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "GV" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -2881,12 +3010,12 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "GW" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
 /obj/structure/flora/grass/desert/heavygrass_4,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Hf" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B";
@@ -2898,14 +3027,14 @@
 	pixel_y = 10
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "Ht" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Hv" = (
 /obj/structure/phone_base/upp_net{
 	name = "Overwatch Telephone";
@@ -2939,7 +3068,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "HG" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/platoon_commander{
 	can_block_movement = 0;
@@ -2951,7 +3080,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "HJ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -2969,10 +3098,13 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "HM" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer0,
 /area/pudong/base/bunker)
 "HO" = (
@@ -2982,7 +3114,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "HS" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/closet/crate/secure/upp,
@@ -2996,7 +3128,7 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "HW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -3006,7 +3138,7 @@
 	pixel_x = 5
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "HY" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -3018,7 +3150,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Ig" = (
 /obj/structure/ladder{
 	id = "bandakar_lockers";
@@ -3035,7 +3167,7 @@
 	pixel_y = 38
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Ii" = (
 /obj/structure/phone_base/upp_net{
 	name = "Bunker East Telephone";
@@ -3047,6 +3179,9 @@
 	dir = 4
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "Il" = (
@@ -3062,17 +3197,17 @@
 	pixel_y = 24
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Iq" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "It" = (
 /obj/structure/prop/static_tank/water,
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "Ix" = (
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
@@ -3081,7 +3216,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "IQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "S";
@@ -3101,7 +3236,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "IX" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/rack{
@@ -3110,17 +3245,17 @@
 	},
 /obj/item/toy/deck,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Jh" = (
 /obj/structure/machinery/power/monitor{
 	name = "Base Power Grid Monitoring"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Jt" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "JB" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -3136,7 +3271,7 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "JK" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/sorted/marine_food/upp,
@@ -3144,17 +3279,20 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "JT" = (
 /obj/item/stool{
 	pixel_y = 6
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "JV" = (
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "JW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair{
@@ -3165,7 +3303,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "Kc" = (
 /obj/structure/largecrate/random/barrel/red{
 	pixel_x = 4;
@@ -3177,7 +3315,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Kf" = (
 /obj/item/device/flashlight/lamp/tripod/grey{
 	pixel_x = -3;
@@ -3187,7 +3325,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Kh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/vehicle/powerloader/jd{
@@ -3210,7 +3348,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "Kl" = (
 /obj/item/stool{
 	pixel_x = 6;
@@ -3218,10 +3356,10 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "Kr" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Ky" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -3235,7 +3373,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "KJ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/reagent_dispensers/watertank,
@@ -3243,7 +3381,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "KM" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -3252,7 +3390,7 @@
 	dir = 8
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "KV" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/faxmachine{
@@ -3290,7 +3428,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Lc" = (
 /obj/item/device/flashlight/lamp/tripod/grey{
 	pixel_y = 20;
@@ -3300,11 +3438,11 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Le" = (
 /obj/structure/flora/grass/desert/heavygrass_4,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Lh" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/power/apc/power/north,
@@ -3312,10 +3450,10 @@
 	icon_state = "1-2-4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "Lj" = (
 /turf/closed/wall/kutjevo/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Ll" = (
 /obj/structure/closet/secure_closet/engineering_welding{
 	pixel_y = 3;
@@ -3337,14 +3475,14 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Ly" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /obj/structure/prop/static_tank/water,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "LC" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair{
@@ -3354,13 +3492,13 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "LJ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Mc" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -3372,17 +3510,23 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Md" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 1
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/bunker)
 "Me" = (
 /obj/item/device/flashlight/lamp/tripod/grey,
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer1,
 /area/pudong/base/bunker)
 "Mo" = (
@@ -3390,7 +3534,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Mv" = (
 /obj/structure/machinery/medical_pod/sleeper{
 	dir = 8;
@@ -3401,7 +3545,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "My" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/corpsman{
 	pixel_x = -8;
@@ -3413,17 +3557,17 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "MA" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "MG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2";
 	layer = 2
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "MT" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3438,7 +3582,7 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Nc" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/prop/invuln/lattice_prop{
@@ -3455,7 +3599,7 @@
 	invisibility = 100
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "Ne" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/shuttle/dropship/flight/remote_control{
@@ -3482,7 +3626,7 @@
 "Nq" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Nz" = (
 /obj/structure/machinery/autodoc_console{
 	dir = 1;
@@ -3497,7 +3641,7 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "NA" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -3509,10 +3653,10 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "NN" = (
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "NO" = (
 /turf/closed/shuttle{
 	dir = 1;
@@ -3526,7 +3670,7 @@
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Oe" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 4
@@ -3536,7 +3680,7 @@
 	},
 /obj/structure/platform/kutjevo/rock,
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Oi" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -3550,10 +3694,10 @@
 /obj/effect/landmark/start/bridge/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "OF" = (
 /turf/closed/wall/kutjevo/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "OM" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NW-out";
@@ -3570,7 +3714,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "OU" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8";
@@ -3584,7 +3728,7 @@
 	pixel_y = 5
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/caves/main)
 "Pw" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "NE-out";
@@ -3600,7 +3744,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Px" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/stool{
@@ -3608,7 +3752,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "PA" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -3623,11 +3767,11 @@
 /obj/effect/landmark/start/marine/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "PK" = (
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "PQ" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -3647,13 +3791,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "PS" = (
 /obj/structure/tent/big{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Qg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/cm_vending/clothing/medic/upp,
@@ -3661,13 +3805,13 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "Qk" = (
 /obj/structure/barricade/razorwire{
 	dir = 4
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "QB" = (
 /obj/item/device/flashlight/lamp/tripod/grey{
 	pixel_x = -7
@@ -3677,7 +3821,7 @@
 	pixel_y = 1
 	},
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "QD" = (
 /obj/structure/machinery/door/poddoor/shutters/almayer{
 	dir = 4;
@@ -3685,11 +3829,14 @@
 	name = "\improper Secondary Armory Shutter"
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "QE" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/metal/plasteel/wired{
 	dir = 4
+	},
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
 	},
 /turf/open/floor/corsat,
 /area/pudong/base/bunker)
@@ -3698,7 +3845,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Rp" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B";
@@ -3717,7 +3864,7 @@
 /area/pudong/base/platoon)
 "Rv" = (
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "RD" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
@@ -3729,15 +3876,12 @@
 	dir = 8
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "RH" = (
 /obj/structure/flora/bush/desert,
 /obj/structure/flora/grass/desert/lightgrass_3,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
-"RN" = (
-/turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/exterior/cavern)
 "Se" = (
 /turf/closed/wall/kutjevo/rock,
 /area/space)
@@ -3749,14 +3893,14 @@
 	layer = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Sq" = (
 /obj/structure/platform/kutjevo/rock{
 	dir = 8
 	},
 /obj/structure/platform/kutjevo/rock,
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Sr" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/storage/box/guncase/heavy/uppfuel{
@@ -3776,12 +3920,12 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "Ss" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "SI" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -3791,7 +3935,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "SN" = (
 /obj/structure/surface/rack{
 	color = "#424a50";
@@ -3810,7 +3954,7 @@
 	layer = 2
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "SR" = (
 /obj/structure/machinery/door_control/brbutton/alt{
 	id = "bandakar_armory2";
@@ -3821,22 +3965,22 @@
 	icon_state = "cargo_arrow2"
 	},
 /turf/open/floor/corsat,
-/area/pudong/oob)
+/area/bandakar/oob/buttons)
 "SU" = (
 /obj/structure/girder,
 /turf/open/desert/rock,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Ta" = (
 /obj/structure/sign/safety/ammunition{
 	pixel_x = -18
 	},
 /obj/item/device/flashlight/lamp/tripod/grey,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Te" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "Tx" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/rifleman{
 	can_block_movement = 0;
@@ -3851,7 +3995,7 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Tz" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/barricade/handrail/wire{
@@ -3863,28 +4007,28 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "TF" = (
 /obj/structure/platform/kutjevo/rock,
 /obj/structure/platform/kutjevo/rock{
 	dir = 1
 	},
 /turf/open/desert/rock,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "TM" = (
 /obj/structure/sign/safety/galley{
 	pixel_x = 7;
 	pixel_y = 30
 	},
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Ua" = (
 /obj/structure/sign/safety/conference_room{
 	pixel_y = 32;
 	pixel_x = 14
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "Ub" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -3900,7 +4044,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Uy" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/chem_dispenser/canteen/upp,
@@ -3908,13 +4052,13 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "Uz" = (
 /obj/structure/barricade/razorwire{
 	dir = 8
 	},
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "UH" = (
 /obj/item/trash/cigbutt{
 	pixel_y = 12;
@@ -3922,14 +4066,14 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "UM" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "UP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door_control{
@@ -3944,7 +4088,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "UU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/power/apc/power/south,
@@ -3965,7 +4109,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Va" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "SW-out";
@@ -3986,12 +4130,15 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "Ve" = (
 /obj/item/stool{
 	pixel_y = 6
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/vehicle_roof/van{
+	color = "#ffa31a"
+	},
 /turf/open/auto_turf/sand/layer0,
 /area/pudong/base/bunker)
 "Vr" = (
@@ -4005,7 +4152,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/corsat,
-/area/pudong/base/cryo)
+/area/bandakar/base/cryo)
 "VA" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E";
@@ -4026,7 +4173,7 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/floor/corsat,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "VF" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lantern{
@@ -4034,7 +4181,7 @@
 	pixel_y = 3
 	},
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "VN" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -4045,14 +4192,14 @@
 	pixel_x = 9
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/briefing)
+/area/bandakar/tent/briefing)
 "VR" = (
 /obj/structure/machinery/power/reactor{
 	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
 	desc = "ProgMash produced generator made for heavy use by frontier colonies."
 	},
 /turf/open/floor/corsat/marked,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "VV" = (
 /obj/structure/sign/safety/north{
 	pixel_x = -18;
@@ -4073,12 +4220,13 @@
 /obj/structure/tent_curtain{
 	color = "#ffa31a"
 	},
+/obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Wu" = (
 /obj/structure/machinery/telecomms/relay/preset/tower,
 /turf/open/floor/almayer,
-/area/pudong/base/power)
+/area/bandakar/base/power)
 "WG" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/machinery/light/small{
@@ -4089,20 +4237,20 @@
 	light_range = 4
 	},
 /turf/open/desert/rock,
-/area/pudong/base/armory)
+/area/bandakar/base/armory)
 "WZ" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Xc" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Xg" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -4110,7 +4258,7 @@
 	},
 /obj/structure/largecrate/random/case/double,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "XO" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/bed/chair{
@@ -4124,11 +4272,11 @@
 	layer = 2
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/treatment)
+/area/bandakar/tent/treatment)
 "XP" = (
 /obj/structure/barricade/razorwire,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "XU" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/vehicle_roof/van{
@@ -4139,11 +4287,11 @@
 	pixel_y = -8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "XV" = (
 /obj/structure/fence,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "XW" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -4151,7 +4299,7 @@
 	pixel_y = -8
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "XZ" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/structure/surface/table/almayer{
@@ -4168,15 +4316,16 @@
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
+/obj/structure/machinery/power/apc/power/north,
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 "Ye" = (
 /obj/structure/largecrate/supply/supplies/water,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "Yl" = (
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "Yn" = (
 /obj/structure/surface/rack{
 	color = "#8B7B5B"
@@ -4191,13 +4340,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/storage)
 "Ys" = (
 /obj/structure/sign/safety/conference_room{
 	pixel_x = -17
 	},
 /turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "YG" = (
 /obj/structure/closet/secure_closet/marine_personal/upp/smartgunner{
 	can_block_movement = 0;
@@ -4212,26 +4361,19 @@
 	color = "#ffa31a"
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
-"YL" = (
-/obj/structure/barricade/sandbags{
-	dir = 4
-	},
-/obj/structure/flora/grass/desert/lightgrass_3,
-/turf/open/auto_turf/sand/layer1,
-/area/pudong/exterior/cavern)
+/area/bandakar/tent/quarters)
 "YN" = (
 /obj/structure/machinery/autolathe/full,
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/corsat,
-/area/pudong/base/engi)
+/area/bandakar/base/engi)
 "YS" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall,
-/area/pudong/base/hangar)
+/area/bandakar/tent/storage)
 "Zk" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -4239,10 +4381,10 @@
 	pixel_y = 10
 	},
 /turf/open/desert/rock,
-/area/pudong/base/maintenance)
+/area/bandakar/base/maintenance)
 "Zs" = (
 /turf/closed/wall/kutjevo/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "ZD" = (
 /obj/effect/decal/strata_decals/catwalk/prison,
 /obj/item/device/flashlight/lamp/tripod/grey{
@@ -4250,13 +4392,13 @@
 	pixel_x = -4
 	},
 /turf/open/auto_turf/sand/layer0,
-/area/pudong/base/quarters)
+/area/bandakar/tent/quarters)
 "ZJ" = (
 /obj/structure/sign/safety/galley{
 	pixel_x = -17
 	},
 /turf/open/auto_turf/sand/layer2,
-/area/pudong/exterior/cavern)
+/area/bandakar/exterior/cavern)
 "ZS" = (
 /obj/structure/surface/table/almayer{
 	color = "#8B7B5B"
@@ -4272,13 +4414,13 @@
 	},
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
-/area/pudong/caves/main)
+/area/bandakar/caves/main)
 "ZT" = (
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
 /turf/closed/wall/upp_wall/hull,
-/area/pudong/base/galley)
+/area/bandakar/tent/galley)
 
 (1,1,1) = {"
 NO
@@ -9236,7 +9378,7 @@ Md
 Cl
 oh
 xd
-JV
+ab
 JV
 JV
 JV
@@ -9542,7 +9684,7 @@ iL
 QE
 QE
 iL
-Rv
+ai
 JV
 JV
 PK
@@ -9645,7 +9787,7 @@ JV
 uk
 uk
 Rv
-JV
+ab
 JV
 PK
 PK
@@ -9855,7 +9997,7 @@ Rv
 JV
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -10166,7 +10308,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+ac
 JV
 JV
 JV
@@ -10255,11 +10397,11 @@ iL
 Ae
 Ae
 iL
-JV
+aj
 JV
 JV
 Rv
-JV
+ab
 dN
 JV
 JV
@@ -10460,7 +10602,7 @@ JT
 xd
 xd
 Rv
-JV
+ab
 JV
 JV
 JV
@@ -10774,7 +10916,7 @@ OF
 JV
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -11282,7 +11424,7 @@ dN
 JV
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -11694,7 +11836,7 @@ Oe
 Rv
 Rv
 Rv
-JV
+ab
 JV
 JV
 JV
@@ -12509,7 +12651,7 @@ JV
 uk
 Rv
 Rv
-Rv
+ac
 JV
 JV
 JV
@@ -13119,7 +13261,7 @@ JV
 JV
 JV
 uk
-Rv
+ac
 Rv
 Rv
 JV
@@ -13838,7 +13980,7 @@ uk
 Rv
 Rv
 Rv
-Rv
+ac
 JV
 JV
 JV
@@ -14319,8 +14461,8 @@ yP
 Ct
 Ct
 Ct
-Ct
-Ct
+ao
+ao
 AE
 JV
 uk
@@ -14345,7 +14487,7 @@ Zs
 Zs
 Zs
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -14421,7 +14563,7 @@ Dd
 yP
 Ct
 yP
-yP
+ao
 VN
 sZ
 JV
@@ -15416,12 +15558,12 @@ Zs
 Zs
 Zs
 Zs
-pf
+aw
 le
 le
 le
-rY
-rY
+au
+au
 Nq
 tt
 VV
@@ -15477,7 +15619,7 @@ JV
 qD
 ak
 KJ
-ak
+aa
 gn
 ak
 qD
@@ -15523,8 +15665,8 @@ Ek
 le
 le
 le
-rY
-le
+au
+au
 lQ
 em
 Rv
@@ -15620,7 +15762,7 @@ Zs
 Zs
 Zs
 Zs
-pf
+aw
 le
 Bb
 jy
@@ -15722,8 +15864,8 @@ Kr
 DP
 DP
 DP
-dw
-le
+qo
+av
 kw
 kw
 gr
@@ -15824,7 +15966,7 @@ Kr
 Di
 Cz
 cN
-pf
+aw
 le
 OU
 Hv
@@ -15926,7 +16068,7 @@ Kr
 wq
 rq
 cN
-pf
+aw
 le
 OU
 hY
@@ -15978,7 +16120,7 @@ JV
 JV
 Rv
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -16028,7 +16170,7 @@ Kr
 FL
 OM
 cN
-pf
+aw
 le
 OU
 Ne
@@ -16085,7 +16227,7 @@ Rv
 Rv
 Rv
 Rv
-JV
+ab
 PK
 PK
 dN
@@ -16285,7 +16427,7 @@ JV
 PK
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -16385,7 +16527,7 @@ JV
 Yn
 Yn
 cF
-JV
+ab
 Rv
 Rv
 Rv
@@ -16453,7 +16595,7 @@ XW
 mi
 Rv
 Rv
-JV
+ar
 aQ
 qv
 Ht
@@ -16484,9 +16626,9 @@ Rv
 Rv
 JV
 JV
-Rv
-Rv
-Rv
+af
+af
+af
 Rv
 Rv
 JV
@@ -16588,10 +16730,10 @@ Rv
 JV
 yY
 yY
-JV
+ah
 JV
 PK
-JV
+ab
 Rv
 Rv
 Rv
@@ -16663,7 +16805,7 @@ eE
 Ht
 eE
 cw
-Rv
+aq
 JV
 JV
 JV
@@ -16790,7 +16932,7 @@ fB
 Hf
 gS
 Rv
-JV
+ab
 JV
 PK
 JV
@@ -16888,15 +17030,15 @@ Rv
 Rv
 JV
 JV
-JV
-Rv
-Rv
+ah
+af
+af
 Rv
 JV
 zn
 am
 cF
-JV
+ab
 Rv
 Rv
 Rv
@@ -16992,12 +17134,12 @@ Rv
 JV
 Ye
 Ye
-JV
+ah
 Rv
 JV
-Rv
-Rv
-Rv
+af
+af
+af
 Rv
 Rv
 Rv
@@ -17099,7 +17241,7 @@ Rv
 JV
 ae
 ys
-JV
+ah
 Rv
 Rv
 Rv
@@ -17142,7 +17284,7 @@ Zs
 Zs
 Zs
 Zs
-RN
+rY
 Zs
 Zs
 Iq
@@ -17185,7 +17327,7 @@ uk
 uk
 PK
 PK
-YL
+kB
 kB
 kB
 kB
@@ -17205,7 +17347,7 @@ JV
 Rv
 Rv
 Rv
-JV
+ab
 JV
 JV
 OF
@@ -17243,16 +17385,16 @@ Zs
 Zs
 Zs
 Zs
-RN
-RN
+rY
+rY
 Zs
 Zs
 Iq
 le
 Zk
-le
+ax
 pf
-dw
+Zs
 Zs
 Zs
 Zs
@@ -17298,7 +17440,7 @@ Rv
 Rv
 Rv
 Rv
-JV
+ab
 Rv
 JV
 PK
@@ -17344,7 +17486,7 @@ Zs
 Zs
 Zs
 Zs
-RN
+rY
 UH
 Px
 eu
@@ -17353,7 +17495,7 @@ Zs
 Zs
 rY
 bB
-le
+ax
 rY
 pf
 pf
@@ -17446,14 +17588,14 @@ Zs
 Zs
 Zs
 Zs
-wY
+ax
 Kl
 ZS
 cz
 Zs
 Zs
 Zs
-dw
+Zs
 rY
 rY
 rY
@@ -17551,9 +17693,9 @@ cm
 oz
 VF
 wc
-wY
-RN
-RN
+ax
+rY
+rY
 Zs
 pf
 Pn
@@ -17650,15 +17792,15 @@ Zs
 Zs
 Zs
 Zs
-RN
-RN
-RN
+rY
+rY
+rY
 Zs
-RN
-RN
+rY
+rY
 Zs
-RN
-RN
+rY
+rY
 Zs
 Zs
 Zs
@@ -17753,22 +17895,22 @@ Zs
 Zs
 Zs
 Zs
-RN
+rY
 Zs
 Zs
 Zs
-RN
-RN
+rY
+rY
 bP
 Zs
 Zs
 Zs
 Zs
 Zs
-dw
+Zs
 rY
 rY
-dw
+Zs
 Zs
 Zs
 Zs
@@ -17860,17 +18002,17 @@ Zs
 Zs
 Zs
 Zs
-RN
-Zs
-Zs
-Zs
-Zs
-Zs
-Zs
-Zs
-dw
 rY
-dw
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+Zs
+rY
+Zs
 Zs
 Zs
 Zs
@@ -17996,7 +18138,7 @@ Rv
 Rv
 Rv
 Rv
-JV
+ab
 JV
 OF
 JV
@@ -18093,8 +18235,8 @@ OF
 JV
 PK
 JV
-JV
-Rv
+nm
+ap
 Rv
 Rv
 Rv
@@ -18183,9 +18325,9 @@ Zs
 Zs
 Zs
 PK
-Fj
+eL
 cT
-Fj
+eL
 Rv
 JV
 OF
@@ -18196,7 +18338,7 @@ OF
 JV
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -18388,10 +18530,10 @@ Zs
 Zs
 PK
 It
-Fj
+eL
 DM
 Rv
-lp
+JV
 OF
 OF
 OF
@@ -18493,7 +18635,7 @@ cT
 nR
 lF
 Rv
-JV
+ar
 JV
 OF
 OF
@@ -18507,7 +18649,7 @@ cn
 Rv
 Rv
 uk
-JV
+ab
 PK
 JV
 JV
@@ -18592,7 +18734,7 @@ Zs
 Zs
 PK
 It
-Fj
+eL
 DM
 Rv
 Rv
@@ -18605,7 +18747,7 @@ OF
 OF
 JV
 PK
-JV
+ab
 Rv
 Rv
 Rv
@@ -18795,9 +18937,9 @@ Zs
 Zs
 Zs
 PK
-Fj
+eL
 cT
-Fj
+eL
 JV
 Rv
 JV
@@ -18915,7 +19057,7 @@ JV
 Rv
 Rv
 Rv
-JV
+ab
 JV
 JV
 OF
@@ -19115,7 +19257,7 @@ OF
 OF
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -19523,7 +19665,7 @@ OF
 OF
 OF
 PK
-JV
+ab
 Rv
 Rv
 Rv
@@ -19731,7 +19873,7 @@ PK
 Rv
 Rv
 Rv
-JV
+ab
 dN
 JV
 Zs
@@ -20039,7 +20181,7 @@ Rv
 Rv
 Rv
 Rv
-JV
+ab
 Cl
 Cl
 qH
@@ -20243,7 +20385,7 @@ Rv
 Rv
 Rv
 Rv
-Rv
+an
 iL
 QE
 QE
@@ -20444,7 +20586,7 @@ OF
 OF
 JV
 JV
-JV
+ab
 Rv
 Rv
 Rv
@@ -20656,7 +20798,7 @@ cn
 Rv
 Rv
 Rv
-Rv
+al
 iL
 Ae
 Ae
@@ -20754,11 +20896,11 @@ JV
 PK
 PK
 JV
-JV
+ab
 uk
 uk
 JV
-Rv
+ac
 Me
 Cl
 xd
