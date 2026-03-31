@@ -2423,6 +2423,7 @@
 	},
 /obj/effect/landmark/late_join/upp,
 /obj/effect/decal/strata_decals/catwalk/prison,
+/obj/effect/landmark/late_join,
 /turf/open/auto_turf/sand/layer1,
 /area/bandakar/tent/quarters)
 "vg" = (
