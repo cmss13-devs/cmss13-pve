@@ -60,6 +60,7 @@
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 	claw_type = 0 // No claws at all
+	acid_blood_damage = 15
 
 	icon_xeno = 'icons/mob/xenos/facehugger.dmi'
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
