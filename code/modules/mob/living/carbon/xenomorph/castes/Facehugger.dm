@@ -33,7 +33,7 @@
 	mob_flags = NOBIOSCAN
 	see_in_dark = 8
 	tier = 0  //Facehuggers don't count towards Pop limits
-	acid_blood_damage = 5
+	acid_blood_damage = 15
 	crit_health = -25
 	crit_grace_time = 0
 	mob_size = MOB_SIZE_SMALL
@@ -60,7 +60,6 @@
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 	claw_type = 0 // No claws at all
-	acid_blood_damage = 15
 
 	icon_xeno = 'icons/mob/xenos/facehugger.dmi'
 	icon_xenonid = 'icons/mob/xenonids/facehugger.dmi'
