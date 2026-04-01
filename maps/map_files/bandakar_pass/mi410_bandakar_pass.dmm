@@ -4867,7 +4867,7 @@
 /turf/open/auto_turf/sand/layer0,
 /area/bandakar/tent/galley)
 "Ye" = (
-/obj/structure/largecrate/supply/supplies/water,
+/obj/structure/largecrate/supply/supplies/water/upp,
 /turf/open/auto_turf/sand/layer1,
 /area/bandakar/tent/storage)
 "Yn" = (
