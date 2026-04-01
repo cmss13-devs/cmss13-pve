@@ -471,7 +471,7 @@
 
 /obj/item/clothing/accessory/patch/army/armor
 	name = "Army Armor patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Regiment."
 	icon_state = "armorpatch"
 
 /obj/item/clothing/accessory/patch/cmb/brazil_police

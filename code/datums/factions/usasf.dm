@@ -28,7 +28,11 @@
 		if(JOB_NAVY_JTAC)
 			hud_icon_state = "jfo"
 		if(JOB_NAVY_PARA_TECH)
-			hud_icon_state = "para"
+			hud_icon_state = "parat"
+		if(JOB_NAVY_PARA_MED)
+			hud_icon_state = "param"
+		if(JOB_NAVY_PARA_LEAD)
+			hud_icon_state = "paral"
 		if(JOB_NAVY_SYNTH)
 			hud_icon_state = "syn"
 		if(JOB_NAVY_PILOT)
