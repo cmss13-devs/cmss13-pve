@@ -685,7 +685,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/mgoggles/orange(new_human), WEAR_IN_HELMET)
 
 /datum/equipment_preset/synth/working_joe/upp/combat/canc/snowman
-	name = "CANC Dzho Automaton - Combat"
+	name = "CANC Dzho Automaton - Snowman Combat"
 	faction = FACTION_CANC
 	faction_group = list(FACTION_LIST_CANC)
 
@@ -821,3 +821,36 @@
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton
+	name = "CANC Skeleton - Combat"
+	faction = FACTION_CANC
+	faction_group = list(FACTION_LIST_CANC)
+	joe_type = SCARY_SKELETON
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/load_gear(mob/living/carbon/human/new_human)
+	new_human.set_species(joe_type)
+	new_human.undershirt = null
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/kitchen/can_opener(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	if(prob(65))
+		add_neckerchief(new_human)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc(new_human), WEAR_HEAD)
+	//uniform
+	add_canc_uniform(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/canc/e1(new_human), WEAR_ACCESSORY)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	add_canc_rifle(new_human)

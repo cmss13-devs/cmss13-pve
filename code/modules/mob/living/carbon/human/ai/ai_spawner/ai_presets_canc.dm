@@ -95,3 +95,8 @@
 	name = "Snowman CANC Combat Android"
 	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/snowman
+
+/datum/human_ai_equipment_preset/canc/combat_android/snowman
+	name = "CANC Skeleton"
+	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
+	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton
