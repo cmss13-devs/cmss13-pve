@@ -2,16 +2,16 @@
 	caste_type = XENO_CASTE_BODYBURSTER
 	tier = 2
 
-	melee_damage_lower = XENO_DAMAGE_TIER_3
+	melee_damage_lower = XENO_DAMAGE_TIER_4
 	melee_damage_upper = XENO_DAMAGE_TIER_5
 	melee_vehicle_damage = XENO_DAMAGE_TIER_4
-	max_health = XENO_HEALTH_TIER_4
+	max_health = XENO_HEALTH_TIER_2
 	plasma_gain = XENO_PLASMA_GAIN_TIER_8
 	plasma_max = XENO_PLASMA_TIER_10
-	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_2
+	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_4
 	armor_deflection = XENO_ARMOR_TIER_3
 	evasion = XENO_EVASION_MEDIUM
-	speed = XENO_SPEED_TIER_7
+	speed = XENO_SPEED_RAPTOR
 
 	evolves_to = list()
 	deevolves_to = list()
@@ -44,8 +44,8 @@
 
 	icon_xeno = 'icons/mob/xenos/bodyburster.dmi'
 	icon_xenonid = 'icons/mob/xenonids/warrior.dmi'
-	acid_blood_damage = 40 /// Better than drone worse than soldier
-	acid_blood_spatter = FALSE /// We dont want that for these guys
+	acid_blood_damage = 45 /// yowch!
+	acid_blood_spatter = TRUE /// They should be dangerous in close quarters
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	weed_food_states = list("Warrior_1","Warrior_2","Warrior_3")

@@ -226,6 +226,7 @@
 #define XENO_ARMOR_TIER_4 35
 #define XENO_ARMOR_TIER_5 40
 #define XENO_ARMOR_TIER_7 50
+#define XENO_ARMOR_TIER_9 60
 
 // Explosive armor (think explosion resistance)
 #define XENO_NO_EXPLOSIVE_ARMOR 0
@@ -318,11 +319,13 @@
 #define XENO_SPEED_QUEEN 0.5
 #define XENO_SPEED_TIER_1 0.4
 #define XENO_SPEED_TIER_2 0.2
+#define XENO_SPEED_LANKY 0.1
 #define XENO_SPEED_TIER_3 0
 #define XENO_SPEED_TIER_4 -0.2
 #define XENO_SPEED_TIER_5 -0.4
 #define XENO_SPEED_TIER_6 -0.6
 #define XENO_SPEED_TIER_7 -0.8
+#define XENO_SPEED_RAPTOR -0.9
 #define XENO_SPEED_HELLHOUND -1
 #define XENO_SPEED_TIER_8 -1.4
 #define XENO_SPEED_TIER_9 -1.6

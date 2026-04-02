@@ -2,16 +2,16 @@
 	caste_type = XENO_CASTE_LANKY
 	tier = 3
 
-	melee_damage_lower = XENO_DAMAGE_TIER_5
-	melee_damage_upper = XENO_DAMAGE_TIER_5
+	melee_damage_lower = XENO_DAMAGE_TIER_6
+	melee_damage_upper = XENO_DAMAGE_TIER_6
 	melee_vehicle_damage = XENO_DAMAGE_TIER_5 * 10
 	max_health = XENO_HEALTH_IMMORTAL
 	plasma_gain = XENO_PLASMA_GAIN_TIER_7
 	plasma_max = XENO_PLASMA_TIER_8
 	xeno_explosion_resistance = XENO_EXPLOSIVE_ARMOR_TIER_10
-	armor_deflection = XENO_ARMOR_TIER_5
+	armor_deflection = XENO_ARMOR_TIER_9
 	evasion = XENO_EVASION_NONE
-	speed = XENO_SPEED_TIER_2
+	speed = XENO_SPEED_LANKY
 	heal_standing = 0.66
 
 	evolution_allowed = TRUE
