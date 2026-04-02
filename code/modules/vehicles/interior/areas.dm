@@ -96,3 +96,11 @@
 /area/interior/vehicle/twe_tank
 	name = "\improper TWE tank interior"
 	icon_state = "tank"
+
+/area/interior/vehicle/twe_apc
+	name = "\improper TWE APC interior"
+	icon_state = "apc"
+
+/area/interior/vehicle/twe_apc/command
+	name = "\improper TWE Command APC interior"
+	icon_state = "apc"

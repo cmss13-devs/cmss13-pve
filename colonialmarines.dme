@@ -2688,6 +2688,7 @@
 #include "code\modules\vehicles\tank\interior.dm"
 #include "code\modules\vehicles\tank\tank.dm"
 #include "code\modules\vehicles\twe_tank\interior.dm"
+#include "code\modules\vehicles\twe_tank\twe_apc.dm"
 #include "code\modules\vehicles\twe_tank\twe_tank.dm"
 #include "code\modules\vehicles\uppapc\interior.dm"
 #include "code\modules\vehicles\uppapc\uppapc.dm"
