@@ -133,3 +133,15 @@
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/human
 
 	blood_color = BLOOD_COLOR_HUMAN
+
+//My thing
+
+/datum/species/synthetic/spooky_skeleton
+	name = SCARY_SKELETON
+	uses_skin_color = FALSE
+	special_body_types = FALSE
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_INTENT_EYES, TRAIT_IRON_TEETH)
+
+	hair_color = "#000000"
+	icobase = 'icons/mob/humans/species/r_skeleton.dmi'
+	deform = 'icons/mob/humans/species/r_skeleton.dmi'
