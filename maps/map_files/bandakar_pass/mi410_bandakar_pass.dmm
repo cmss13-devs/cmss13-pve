@@ -1412,7 +1412,7 @@
 /obj/effect/vehicle_roof/van{
 	color = "#ffa31a"
 	},
-/turf/closed/wall/upp_wall/hull,
+/turf/closed/wall/upp_wall,
 /area/bandakar/tent/bunker)
 "jq" = (
 /obj/structure/machinery/power/apc/power/north,
@@ -2404,7 +2404,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
-/turf/closed/wall/upp_wall/hull,
+/turf/closed/wall/upp_wall,
 /area/bandakar/tent/galley)
 "vc" = (
 /obj/structure/machinery/power/terminal{
@@ -3013,7 +3013,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
-/turf/closed/wall/upp_wall/hull,
+/turf/closed/wall/upp_wall,
 /area/bandakar/tent/galley)
 "AC" = (
 /obj/effect/decal/warning_stripes{
@@ -3198,7 +3198,7 @@
 	icon_state = "4-8";
 	layer = 2
 	},
-/turf/closed/wall/upp_wall/hull,
+/turf/closed/wall/upp_wall,
 /area/bandakar/tent/galley)
 "CC" = (
 /obj/structure/machinery/door/poddoor/almayer/closed{
@@ -4960,12 +4960,6 @@
 /obj/effect/decal/strata_decals/catwalk/prison,
 /turf/open/desert/rock,
 /area/bandakar/caves/main)
-"ZT" = (
-/obj/effect/vehicle_roof/van{
-	color = "#ffa31a"
-	},
-/turf/closed/wall/upp_wall/hull,
-/area/bandakar/tent/galley)
 
 (1,1,1) = {"
 NO
@@ -14888,9 +14882,9 @@ bi
 ec
 HJ
 Jt
-ZT
-ZT
-ZT
+dt
+dt
+dt
 DV
 DV
 DV
@@ -14990,7 +14984,7 @@ yl
 ec
 vI
 Jt
-ZT
+dt
 EG
 qK
 vT
@@ -15092,7 +15086,7 @@ yl
 ec
 HS
 Jt
-ZT
+dt
 XZ
 qN
 mn
@@ -16205,7 +16199,7 @@ Zs
 Zs
 Zs
 Zs
-qo
+Iq
 Ek
 le
 bn
