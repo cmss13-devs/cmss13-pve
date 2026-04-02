@@ -854,3 +854,102 @@
 	//pockets
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	add_canc_rifle(new_human)
+
+/obj/item/clothing/head/helmet/marine/veteran/canc/nasel
+	name = "simple helmet"
+	desc = "a steel nasel helm"
+	icon = 'icons/obj/items/clothing/skeletal_armour.dmi'
+	icon_state = "nasal"
+	contained_sprite = TRUE
+
+/obj/item/clothing/head/helmet/marine/veteran/canc/nasel/houndskull
+	icon_state = "hounskull"
+
+/obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk
+	name = "hauberk"
+	desc = "an outer garment of riveted chainlinks."
+	icon = 'icons/obj/items/clothing/skeletal_armour.dmi'
+	icon_state = "overhauberk"
+	contained_sprite = TRUE
+
+/obj/item/clothing/under/marine/veteran/canc/hauberk
+	name = "hauberk"
+	desc = "an outer garment of riveted chainlinks."
+	icon = 'icons/obj/items/clothing/skeletal_armour.dmi'
+	icon_state = "underhauberk"
+	contained_sprite = TRUE
+
+/obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk/scale
+	name = "scailmail"
+	desc = "an outer garment of overlapping scaleplates."
+	icon_state = "scale"
+
+/obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk/fluted
+	name = "fluted curiass"
+	desc = "a solid cuiress from around the 16th century."
+	icon_state = "flutedcuirass"
+
+/obj/item/clothing/gloves/marine/brown/chain
+	name = "chain gauntlets"
+	desc = "steel chainmail gauntlets."
+	icon = 'icons/obj/items/clothing/skeletal_armour.dmi'
+	icon_state = "cgloves"
+	contained_sprite = TRUE
+
+/obj/item/clothing/shoes/marine/upp/guard/steel
+	name = "steel plate boots"
+	desc = "armoured steel boots from a bygone era."
+	icon = 'icons/obj/items/clothing/skeletal_armour.dmi'
+	icon_state = "shalfplateboots"
+	contained_sprite = TRUE
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/dated
+	name = "CANC Skeleton - Combat ROVGE"
+	faction = FACTION_CANC
+	faction_group = list(FACTION_LIST_CANC)
+	joe_type = SCARY_SKELETON
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/dated/load_gear(mob/living/carbon/human/new_human)
+	new_human.set_species(joe_type)
+	new_human.undershirt = null
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	//head
+	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/nasel(new_human), WEAR_HEAD)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/nasel/houndskull(new_human), WEAR_HEAD)
+	//uniform
+	//jacket
+	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk(new_human), WEAR_JACKET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk/scale(new_human), WEAR_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/steel(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/chain(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/sword(new_human), WEAR_R_HAND)
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/knight
+	name = "CANC Skeleton - Combat KNIGHT ROVGE"
+	faction = FACTION_CANC
+	faction_group = list(FACTION_LIST_CANC)
+	joe_type = SCARY_SKELETON
+
+/datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/knight/load_gear(mob/living/carbon/human/new_human)
+	new_human.set_species(joe_type)
+	new_human.undershirt = null
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/canc/nasel/houndskull(new_human), WEAR_HEAD)
+	//uniform
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/faction/UPP/CANC/hauberk/fluted(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/canc/hauberk(new_human), WEAR_BODY)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp/guard/steel(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/chain(new_human), WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/sword/claymore(new_human), WEAR_R_HAND)

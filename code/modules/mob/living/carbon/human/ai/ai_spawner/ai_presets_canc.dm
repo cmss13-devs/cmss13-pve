@@ -96,7 +96,17 @@
 	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/snowman
 
-/datum/human_ai_equipment_preset/canc/combat_android/snowman
+/datum/human_ai_equipment_preset/canc/combat_android/skeleton
 	name = "CANC Skeleton"
 	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
 	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton
+
+/datum/human_ai_equipment_preset/canc/combat_android/skeleton/dated
+	name = "CANC Skeleton Dated"
+	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
+	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/dated
+
+/datum/human_ai_equipment_preset/canc/combat_android/skeleton/knight
+	name = "CANC Skeleton Dated Knight"
+	desc = "A CANC Combat Android, these are illegal and should be used sparingly."
+	path = /datum/equipment_preset/synth/working_joe/upp/combat/canc/skeleton/knight
