@@ -72,7 +72,7 @@
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 
 	misc_multipliers = list(
-		"move" = 0.6,
+		"move" = 0.8,
 		"accuracy" = 1,
 		"cooldown" = 1
 	)
