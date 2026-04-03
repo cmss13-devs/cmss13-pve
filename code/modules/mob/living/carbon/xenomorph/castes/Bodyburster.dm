@@ -28,7 +28,7 @@
 /mob/living/carbon/xenomorph/bodyburster
 	caste_type = XENO_CASTE_BODYBURSTER
 	name = XENO_CASTE_BODYBURSTER
-	desc = "A horrific abberation of the usual alien, with an armored carapace."
+	desc = "A horrific abberation of the usual alien, with an armored carapace. The human skull is almost clearly visible within its head, and bits of skin and gore still cling to crevices in its body."
 	icon = 'icons/mob/xenos/bodyburster.dmi'
 	icon_size = 48
 	icon_state = "Normal Bodyburster Walking"
