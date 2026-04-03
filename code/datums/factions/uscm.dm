@@ -240,6 +240,15 @@
 				marine_rk = "leader"
 			if(JOB_SQUAD_RTO)
 				marine_rk = "rto"
+			// MARSOC stuff
+			if(JOB_MARINE_RAIDER)
+				marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED)
+				marine_rk = "socmed"
+			if(JOB_MARINE_RAIDER_SL)
+				marine_rk = "soctl"
+			if(JOB_MARINE_RAIDER_CMD)
+				marine_rk = "soccmd"
 			// FORECON surv specific stuff
 			if(JOB_FORECON_SL)
 				marine_rk = "leader"
