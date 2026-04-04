@@ -60,14 +60,14 @@
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 1.8,
-		"slash" = 1.1,
-		"bullet" = 0.6,
-		"explosive" = 0.8,
-		"blunt" = 0.8,
+		"slash" = 0.8,
+		"bullet" = 0.5,
+		"explosive" = 0.6,
+		"blunt" = 0.5,
 		"abstract" = 1,
 	)
 
-	explosive_resistance = 150
+	explosive_resistance = 300
 	wall_ram_damage = 150
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
 

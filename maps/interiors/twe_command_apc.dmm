@@ -58,6 +58,10 @@
 	pixel_x = -8;
 	pixel_y = -20
 	},
+/obj/structure/bed/chair/vehicle{
+	dir = 1;
+	pixel_x = 12
+	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)
 "G" = (

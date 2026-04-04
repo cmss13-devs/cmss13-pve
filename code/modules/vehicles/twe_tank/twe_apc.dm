@@ -234,7 +234,7 @@
 
 	interior_map = /datum/map_template/interior/twe_apc/command
 
-	passengers_slots = 2
+	passengers_slots = 3
 	revivable_dead_slots = 1
 	xenos_slots = 1
 
