@@ -83,6 +83,7 @@
 	name = "M38 belt box (12x30mm caseless)"
 	desc = "Heavy high-capacity belt box for M38 GPMG."
 	caliber = "12x30"
+	w_class = SIZE_MEDIUM
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
 	icon_state = "m60"
 
