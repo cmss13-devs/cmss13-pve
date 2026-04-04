@@ -20,6 +20,25 @@
 	var/list/map_variants_roll_accessories = list("s_")
 	layer = UPPER_ITEM_LAYER
 
+	//speciality does NOTHING if you have NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT), override_icon_state[] = null)
+	if(!(flags_atom & NO_NAME_OVERRIDE))
+		name = "[specialty]"
+		if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+			name += " cold-weather uniform"
+		else
+			name += " uniform"
+	if(!(flags_atom & NO_SNOW_TYPE))
+		select_gamemode_skin(type, override_icon_state, new_protection)
+	. = ..() //Done after above in case gamemode skin is missing sprites.
+
+/obj/item/clothing/under/marine/set_sensors(mob/user)
+	if(!skillcheckexplicit(user, SKILL_ANTAG, SKILL_ANTAG_AGENT))
+		to_chat(user, SPAN_WARNING("The sensors in \the [src] can't be modified."))
+		return
+	. = ..()
+
 /obj/item/clothing/under/vai/plaid
 	name = "\improper Plaid shirt and denim pants"
 	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
