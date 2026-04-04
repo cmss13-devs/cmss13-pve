@@ -211,9 +211,7 @@
 	pixel_x = 16;
 	pixel_y = 16
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "bt" = (
 /obj/effect/decal/warning_stripes{
@@ -489,9 +487,7 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "dx" = (
 /obj/structure/machinery/door/airlock/almayer/command/reinforced{
@@ -542,9 +538,7 @@
 	name = "ship-grade camera"
 	},
 /obj/structure/machinery/vending/walkman,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "dX" = (
 /obj/structure/machinery/light{
@@ -619,9 +613,7 @@
 	layer = 3.5;
 	pixel_y = 15
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "eE" = (
 /obj/structure/bed/chair/comfy,
@@ -1458,9 +1450,7 @@
 	pixel_x = 16;
 	pixel_y = -15
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "kB" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -2074,12 +2064,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"ox" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/almayer{
-	icon_state = "cargo"
-	},
-/area/golden_arrow/prep_hallway)
 "oA" = (
 /obj/structure/machinery/shower{
 	dir = 8
@@ -2388,9 +2372,7 @@
 /area/golden_arrow/hangar)
 "qZ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "cargo_arrow"
-	},
+/turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/dorms)
 "ra" = (
 /obj/structure/cargo_container/arious/mid,
@@ -3389,9 +3371,7 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/effect/landmark/personal_weapon,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "yq" = (
 /obj/effect/decal/warning_stripes{
@@ -3456,9 +3436,7 @@
 /obj/structure/closet,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "yE" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
@@ -3781,9 +3759,7 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Aj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4059,9 +4035,7 @@
 /obj/structure/machinery/power/apc/almayer{
 	dir = 8
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Cj" = (
 /obj/structure/surface/table/almayer,
@@ -4089,9 +4063,7 @@
 	pixel_x = -3;
 	pixel_y = 14
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Cn" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4185,9 +4157,7 @@
 /area/golden_arrow/hangar)
 "Dm" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "cargo_arrow"
-	},
+/turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/dorms)
 "Do" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4272,9 +4242,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "DR" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4422,9 +4390,7 @@
 /area/golden_arrow/engineering)
 "Ex" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ey" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4730,9 +4696,7 @@
 /obj/structure/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ga" = (
 /obj/effect/decal/warning_stripes{
@@ -4767,9 +4731,7 @@
 	layer = 3.1;
 	pixel_y = 22
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Gd" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4993,9 +4955,7 @@
 /obj/structure/machinery/alarm/almayer{
 	dir = 1
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Ht" = (
 /obj/effect/decal/warning_stripes{
@@ -5226,9 +5186,7 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "IN" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
@@ -7140,9 +7098,7 @@
 /obj/item/bedsheet/brown{
 	pixel_y = 13
 	},
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "WM" = (
 /obj/structure/machinery/firealarm{
@@ -7193,9 +7149,7 @@
 	serial_number = 12
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/almayer{
-	icon_state = "plate"
-	},
+/turf/open/floor/almayer/plate,
 /area/golden_arrow/dorms)
 "Xc" = (
 /obj/structure/machinery/shower{
@@ -16700,7 +16654,7 @@ Vp
 Vp
 Vp
 Vp
-ox
+op
 Jc
 TC
 GG
