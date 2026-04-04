@@ -36,10 +36,14 @@
 #define MAP_RUNTIME "USS Runtime"
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
+#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
+#define MAP_LV759_HYBRISA_PROSPERA_REPAIRED "LV-759 Hybrisa Prospera Repaired"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
 #define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
+#define MAP_LV522_LUKES_LANDING "LV-522 Lukes Landing"
+#define MAP_LV522_CHANCES_CLAIM_LUKES_LANDING "LV-522 Chances Claim & Lukes Landing"
 #define MAP_TAIPEI_STATION "Taipei Station"
 #define MAP_LV295_BLACKSITE "LV295 Blacksite"
 #define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
@@ -50,9 +54,16 @@
 #define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
 #define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
 #define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
+#define MAP_LV818_FEATURELESS_JUNGLE "LV818 Featureless Jungle"
 #define MAP_BOSENMORI_BASHO "Bosenmori Basho"
 #define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
 #define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_LV_671 "LV-671 Ark Borealis"
+#define MAP_OIL_DEPOT "Oil Depot"
+#define MAP_DERELICT_ALMAYER_INFESTED "Infested Almayer"
+#define MAP_JUNGLE_DELTA "Jungle Delta" //Featureless Jungle
+#define MAP_PROSPECTOR_CANYON "Prospector Canyon"//Mostly Featureless Desert canyon
+#define MAP_ARCTIC_VALLEY "Arctic Valley"//Featureless Arctic
 
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"

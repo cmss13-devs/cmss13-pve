@@ -340,6 +340,46 @@
 	child.hivenumber = hugger_hive
 	INVOKE_ASYNC(child, TYPE_PROC_REF(/obj/item/clothing/mask/facehugger, leap_at_nearest_target))
 
+/datum/ammo/xeno_container
+	name = "xenomorph shell"
+	ping = null
+	damage_type = BRUTE
+	var/xeno_hive = XENO_HIVE_NORMAL
+	var/bug_type = /mob/living/carbon/xenomorph/drone
+	icon_state = "hornet_round"
+
+	damage = 15
+	accuracy = HIT_ACCURACY_TIER_3
+	max_range = 6
+
+/datum/ammo/xeno_container/on_hit_mob(mob/M,obj/projectile/P)
+	spawn_bug(get_turf(P))
+
+/datum/ammo/xeno_container/on_hit_obj(obj/O,obj/projectile/P)
+	spawn_bug(get_turf(P))
+
+/datum/ammo/xeno_container/on_hit_turf(turf/T,obj/projectile/P)
+	spawn_bug(get_turf(P))
+
+/datum/ammo/xeno_container/do_at_max_range(obj/projectile/P)
+	spawn_bug(get_turf(P))
+
+/datum/ammo/xeno_container/proc/spawn_bug(turf/T)
+	var/mob/living/carbon/xenomorph/xeno = new bug_type(T)
+	xeno.hivenumber = xeno_hive
+
+/datum/ammo/xeno_container/crusher
+	name = "big xenomorph shell"
+	xeno_hive = XENO_HIVE_NORMAL
+	bug_type = /mob/living/carbon/xenomorph/crusher
+	icon_state = "baton_slug"
+
+/datum/ammo/xeno_container/king
+	name = "huge xenomorph shell"
+	xeno_hive = XENO_HIVE_NORMAL
+	bug_type = /mob/living/carbon/xenomorph/king
+	icon_state = "ltb"
+
 /*
 //========
 					SHARP Dart Ammo

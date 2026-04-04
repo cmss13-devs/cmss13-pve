@@ -108,6 +108,10 @@ GLOBAL_LIST_INIT(resin_build_order_ovipositor, list(
 	/datum/resin_construction/resin_obj/resin_spike
 ))
 
+GLOBAL_LIST_INIT(resin_build_order_pathogen_overmind, list(
+	/datum/resin_construction/resin_obj/popper_cocoon
+))
+
 //Xeno Leader Mark Meanings
 GLOBAL_LIST_INIT_TYPED(resin_mark_meanings, /datum/xeno_mark_define, setup_resin_mark_meanings())
 
@@ -217,7 +221,8 @@ GLOBAL_LIST_INIT_TYPED(hive_datum, /datum/hive_status, list(
 	XENO_HIVE_FORSAKEN = new /datum/hive_status/forsaken(),
 	XENO_HIVE_YAUTJA = new /datum/hive_status/yautja(),
 	XENO_HIVE_RENEGADE = new /datum/hive_status/corrupted/renegade(),
-	XENO_HIVE_TUTORIAL = new /datum/hive_status/tutorial()
+	XENO_HIVE_TUTORIAL = new /datum/hive_status/tutorial(),
+	XENO_HIVE_PATHOGEN = new /datum/hive_status/pathogen(),
 ))
 
 GLOBAL_LIST_INIT(xeno_evolve_times, setup_xeno_evolve_times())
@@ -322,6 +327,15 @@ GLOBAL_LIST_INIT(wj_emotes, setup_working_joe_emotes())
 GLOBAL_LIST_EMPTY(hj_categories)
 /// dict ("category" : (emotes)) of every hj emote typepath
 GLOBAL_LIST_INIT(hj_emotes, setup_hazard_joe_emotes())
+/// list of categories for upp joes
+GLOBAL_LIST_EMPTY(uppj_categories)
+/// dict ("category" : (emotes)) of every uppj emote typepath
+GLOBAL_LIST_INIT(uppj_emotes, setup_upp_joe_emotes())
+/// list of categories for wy combat droids
+GLOBAL_LIST_EMPTY(wy_droid_categories)
+/// dict ("category" : (emotes)) of every wy droid emote typepath
+GLOBAL_LIST_INIT(wy_droid_emotes, setup_wy_droid_emotes())
+
 
 /proc/cached_params_decode(params_data, decode_proc)
 	. = GLOB.paramslist_cache[params_data]
@@ -592,6 +606,32 @@ GLOBAL_LIST_INIT_TYPED(specialist_set_datums, /datum/specialist_set, setup_speci
 
 		if(!(initial(emote.category) in GLOB.hj_categories))
 			GLOB.hj_categories += initial(emote.category)
+
+		emotes_to_add += emote
+	return emotes_to_add
+
+/// Setup for UPP joe emotes and category list, returns data for uppj_emotes
+/proc/setup_upp_joe_emotes()
+	var/list/emotes_to_add = list()
+	for(var/datum/emote/living/carbon/human/synthetic/working_joe/emote as anything in subtypesof(/datum/emote/living/carbon/human/synthetic/working_joe))
+		if(!(initial(emote.joe_flag) & UPP_JOE_EMOTE) || !initial(emote.key) || !initial(emote.say_message))
+			continue
+
+		if(!(initial(emote.category) in GLOB.uppj_categories))
+			GLOB.uppj_categories += initial(emote.category)
+
+		emotes_to_add += emote
+	return emotes_to_add
+
+/// Setup for WY droid emotes and category list, returns data for wy_droid_emotes
+/proc/setup_wy_droid_emotes()
+	var/list/emotes_to_add = list()
+	for(var/datum/emote/living/carbon/human/synthetic/colonial/wy_droid/emote as anything in subtypesof(/datum/emote/living/carbon/human/synthetic/colonial/wy_droid))
+		if(!initial(emote.key) || !initial(emote.say_message))
+			continue
+
+		if(!(initial(emote.category) in GLOB.wy_droid_categories))
+			GLOB.wy_droid_categories += initial(emote.category)
 
 		emotes_to_add += emote
 	return emotes_to_add

@@ -48,7 +48,7 @@
 /obj/structure/prop/dam/truck
 	name = "truck"
 	desc = "An old truck, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "truck"
 	bound_height = 64
 	bound_width = 64
@@ -71,7 +71,7 @@
 /obj/structure/prop/dam/van
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64
@@ -83,7 +83,7 @@
 
 /obj/structure/prop/dam/crane
 	name = "cargo crane"
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "crane"
 	bound_height = 64
 	bound_width = 64
@@ -787,7 +787,7 @@
 /obj/structure/prop/vehicles
 	name = "van"
 	desc = "An old van, seems to be broken down."
-	icon = 'icons/obj/structures/props/vehicles.dmi'
+	icon = 'icons/obj/structures/props/vehicles/vehicles.dmi'
 	icon_state = "van"
 	bound_height = 64
 	bound_width = 64
@@ -1216,3 +1216,25 @@
 	mouse_opacity = 0
 	layer = 6
 	density = 0
+
+/obj/structure/prop/invuln/prop_fog //scary fog effect for cool scary places pick from these 3 see what works better for ur area
+	name = "Fog Prop"
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "smoke"
+	layer = 6 //above marines and other stuff
+	density = 0
+	mouse_opacity = 0
+	opacity = 0
+
+/obj/structure/prop/invuln/prop_fog/smoke
+	name = "Smoke Prop"
+	icon = 'icons/effects/96x96.dmi'
+	icon_state = "smoke"
+	pixel_x = -29
+	pixel_y = -29
+	layer = 6.1 
+
+/obj/structure/prop/invuln/prop_fog/mist
+	name = "Mist Prop"
+	icon = 'icons/obj/structures/props/watercloset.dmi'
+	icon_state = "mist"

@@ -886,7 +886,7 @@
 		return NEUTER
 	return gender
 
-/mob/living/carbon/human/revive(keep_viruses)
+/mob/living/carbon/human/revive(keep_viruses, is_zombie = FALSE)
 	var/obj/limb/head/h = get_limb("head")
 	if(QDELETED(h))
 		h = get_limb("synthetic head")
@@ -1180,7 +1180,15 @@
 		TRACKER_CSL = /datum/squad/marine/charlie,
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
-		TRACKER_FSL = /datum/squad/marine/cryo
+		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_RSL = /datum/squad/marine/forecon,
+		TRACKER_R2SL = /datum/squad/marine/sof/forecon,
+		TRACKER_RMCSL = /datum/squad/marine/rmc,
+		TRACKER_PSL = /datum/squad/marine/pmc,
+		TRACKER_P2SL = /datum/squad/marine/pmc/secondary,
+		TRACKER_PSSL = /datum/squad/marine/pmc/small,
+		TRACKER_UPPSL = /datum/squad/marine/upp,
+		TRACKER_UPP2SL = /datum/squad/marine/upp/secondary
 	)
 	switch(tracker_setting)
 		if(TRACKER_SL)
