@@ -881,6 +881,15 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE
 
+/obj/item/clothing/head/helmet/marine/old
+	name = "\improper M4 pattern helmet"
+	desc = "Older model of USCMC-issued helmet."
+	icon_state = "old_helmet"
+	flags_atom = NO_SNOW_TYPE
+	specialty = "M4 pattern marine"
+	built_in_visors = list()
+	start_down_visor_type = null
+
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"
 	desc = "Strictly speaking, the M12 is more of an offshoot of the B-series armor systems, and is fully enclosed, with hearing protection and anti-impact liquid armor layers to cushion blast. USCMC assault teams sometimes use these in close combat, grenade heavy operations."

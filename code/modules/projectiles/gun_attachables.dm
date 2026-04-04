@@ -570,6 +570,11 @@ Defined in conflicts.dm of the #defines folder.
 	accuracy_mod = HIT_ACCURACY_MULT_TIER_3
 	scatter_mod = -SCATTER_AMOUNT_TIER_8
 
+/obj/item/attachable/m60barrel/m38
+	name = "M38 barrel"
+	icon_state = "m38_barrel"
+	hud_offset_mod = -6
+
 /obj/item/attachable/mar50barrel
 	name = "MAR-50 barrel"
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
@@ -874,6 +879,24 @@ Defined in conflicts.dm of the #defines folder.
 		qdel(src) //Delete da old flashlight
 	else
 		. = ..()
+
+/obj/item/attachable/flashlight/tactical
+	name = "tactical flashlight"
+	desc = "Robust and handy tactical flashlight, produced by WiseFire Inc."
+	icon_state = "flashlight_tactical"
+	attach_icon = "flashlight_tactical_a"
+	original_state = "flashlight_tactical"
+	original_attach = "flashlight_tactical_a"
+
+/obj/item/attachable/flashlight/m20a
+	name = "integrated flashlight"
+	desc = "shouldnt be seeing this. . ."
+	icon = 'icons/obj/items/weapons/guns/attachments/under.dmi'
+	icon_state = "m20a_flashlight"
+	slot = "special"
+	attach_icon = "m20a_flashlight_a"
+	original_state = "m20a_flashlight"
+	original_attach = "m20a_flashlight_a"
 
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
@@ -2768,6 +2791,10 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 15
 	size_mod = 0
 
+/obj/item/attachable/stock/m60/m38
+	name = "M38 stock"
+	icon_state = "m38_stock"
+	attach_icon = "m38_stock"
 
 /obj/item/attachable/stock/ppsh
 	name = "PPSh-17b stock"
@@ -3551,6 +3578,20 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 1
 	loaded_grenades = list(new/obj/item/explosive/grenade/high_explosive/impact/upp(src))
 
+/obj/item/attachable/attached_gun/grenade/m20a
+	name = "\improper M20 integrated grenade launcher"
+	desc = "Unorthodox design, this single-round grenade launchers was made specifically for use with Type 71 pulse rifles. It can be quickly connected to electronic firing mechanism of the rifle, albeit wiring is prone to failures."
+	icon_state = "m20a"
+	attach_icon = "m20a"
+	caliber = "20mm"
+	current_rounds = 0
+	max_rounds = 3
+	max_range = 14
+	attachment_firing_delay = 5
+	pixel_shift_x = 20
+	pixel_shift_y = 13
+	has_breech = FALSE
+
 //"ammo/flamethrower" is a bullet, but the actual process is handled through fire_attachment, linked through Fire().
 /obj/item/attachable/attached_gun/flamer
 	name = "mini flamethrower"
@@ -4231,6 +4272,9 @@ Defined in conflicts.dm of the #defines folder.
 	attach_icon = "bipod_m60_a"
 
 	flags_attach_features = ATTACH_ACTIVATION
+
+/obj/item/attachable/bipod/m60/m38
+	attach_icon = "bipod_m38_a"
 
 /obj/item/attachable/bipod/vulture
 	name = "heavy bipod"

@@ -92,7 +92,7 @@
 	start_automatic = TRUE
 
 	var/cover_open = FALSE //if the gun's feed-cover is open or not.
-
+	var/list/cover_offset = list("open_x" = -2, "open_y" = 8, "closed_x" = -10, "closed_y" = 0)
 
 /obj/item/weapon/gun/m60/Initialize(mapload, spawn_empty)
 	. = ..()
@@ -151,9 +151,9 @@
 /obj/item/weapon/gun/m60/update_icon()
 	. = ..()
 	if(cover_open)
-		overlays += image("+[base_gun_icon]_cover_open", pixel_x = -2, pixel_y = 8)
+		overlays += image("+[base_gun_icon]_cover_open", pixel_x = cover_offset["open_x"], pixel_y = cover_offset["open_y"])
 	else
-		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = -10, pixel_y = 0)
+		overlays += image("+[base_gun_icon]_cover_closed", pixel_x = cover_offset["closed_x"], pixel_y = cover_offset["closed_y"])
 
 /obj/item/weapon/gun/m60/able_to_fire(mob/living/user)
 	. = ..()
@@ -584,3 +584,21 @@
 	explosion_delay_sharp = !explosion_delay_sharp
 	playsound(source, 'sound/weapons/handling/gun_burst_toggle.ogg', 15, 1)
 	to_chat(source, SPAN_NOTICE("You [explosion_delay_sharp ? SPAN_BOLD("enable") : SPAN_BOLD("disable")] [src]'s delayed fire mode. Explosive ammo will blow up in [explosion_delay_sharp ? SPAN_BOLD("five seconds") : SPAN_BOLD("one second")]."))
+
+/obj/item/weapon/gun/m60/m38
+	name = "M38 general purpose machinegun"
+	desc = "Once-standard USCM GPMG. Chambered in 12x30mm caseless, hard-hitting and extremely reliable."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon_state = "m38"
+	item_state = "m38"
+	fire_sound = 'sound/weapons/gun_hpr.ogg'
+	current_mag = /obj/item/ammo_magazine/m38
+	aim_slowdown = SLOWDOWN_ADS_LMG
+	attachable_allowed = list(
+		/obj/item/attachable/m60barrel/m38,
+		/obj/item/attachable/bipod/m60/m38,
+		/obj/item/attachable/stock/m60/m38,
+		/obj/item/attachable/flashlight/tactical,
+	)
+	starting_attachment_types = list(/obj/item/attachable/m60barrel/m38, /obj/item/attachable/bipod/m60/m38, /obj/item/attachable/stock/m60/m38, /obj/item/attachable/flashlight/tactical)
+	cover_offset = list("open_x" = -3, "open_y" = 4, "closed_x" = 0, "closed_y" = 0)

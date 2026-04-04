@@ -528,6 +528,8 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/stock/m20a,
 		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/flashlight/m20a,
+		/obj/item/attachable/attached_gun/grenade/m20a,
 	)
 
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
@@ -537,11 +539,11 @@
 	map_specific_decoration = FALSE
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16)
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 19,"rail_x" = 12, "rail_y" = 20, "under_x" = 18, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 23, "side_rail_y" = 16, "special_x" = 16, "special_y" = 16)
 
 /obj/item/weapon/gun/rifle/m20a/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_9)
+	set_fire_delay(FIRE_DELAY_TIER_10)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_10)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_5
@@ -549,13 +551,29 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_4
 	damage_falloff_mult = 0
-	scatter = SCATTER_AMOUNT_TIER_8
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_9
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 
 /obj/item/weapon/gun/rifle/m20a/unloaded
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 	current_mag = null
 	starting_attachment_types = list(/obj/item/attachable/stock/m20a,/obj/item/attachable/attached_gun/shotgun/m20a/unloaded)
+
+/obj/item/weapon/gun/rifle/m20a/old
+	desc = "USCMC assault rifle chambered in 10x24 caseless, complete with an integrated 20mm grenade launcher and an integrated flashlight."
+	starting_attachment_types = list(/obj/item/attachable/stock/m20a)
+	start_automatic = TRUE
+
+/obj/item/weapon/gun/rifle/m20a/old/handle_starting_attachment()
+	..()
+	var/obj/item/attachable/attached_gun/grenade/m20a/S = new(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.hidden = TRUE
+	S.Attach(src)
+	var/obj/item/attachable/flashlight/m20a/flashlight = new(src)
+	flashlight.flags_attach_features &= ~ATTACH_REMOVABLE
+	flashlight.Attach(src)
+	update_attachable(flashlight.slot)
 
 /obj/item/weapon/gun/rifle/m20a/merc
 	name = "\improper M20CW pulse carbine"
@@ -1791,6 +1809,14 @@
 
 /obj/item/weapon/gun/rifle/l42a/training
 	current_mag = /obj/item/ammo_magazine/rifle/l42a/rubber
+
+/obj/item/weapon/gun/rifle/l42a/old
+	name = "\improper XM24A pulse rifle"
+	desc = "XM24A was developed by Lindenthal-Ehrenfeld Militärindustrie under the designation of L42. It is currently undergoing field-testing in the USCMC as a marskman rifle replacement."
+	current_mag = /obj/item/ammo_magazine/rifle/l42a/heap
+	fire_sound = 'sound/weapons/gun_carbine.ogg'
+	starting_attachment_types = list(/obj/item/attachable/stock/carbine, /obj/item/attachable/scope/mini)
+	map_specific_decoration = FALSE
 
 //-------------------------------------------------------
 //-------------------------------------------------------
