@@ -1,5 +1,5 @@
 //DOG WAR USCM MRE
-
+//Most descriptions invented by Ivan_The_Red
 /obj/item/mre_food_packet/dog_war
 	icon = 'icons/obj/items/food/mre_food/dog_war.dmi'
 
@@ -78,7 +78,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/tube/orange
 	name = "S-Ration vitamin paste (orange)"
-	desc = "Leave this one out in the sun for about an hour and it becomes fairly tasty to drink in water. Turns green when you do this though. Held inside a tube with screw-on cap, nominally orange adjacent in colour.."
+	desc = "Leave this one out in the sun for about an hour and it becomes fairly tasty to drink in water. Turns green when you do this though. Held inside a tube with screw-on cap, nominally orange adjacent in colour."
 	flavor = "paste_orange"
 
 /obj/item/reagent_container/food/drinks/cans/tube/orange/Initialize()
