@@ -602,3 +602,21 @@
 	)
 	starting_attachment_types = list(/obj/item/attachable/m60barrel/m38, /obj/item/attachable/bipod/m60/m38, /obj/item/attachable/stock/m60/m38, /obj/item/attachable/flashlight/tactical)
 	cover_offset = list("open_x" = -3, "open_y" = 4, "closed_x" = 0, "closed_y" = 0)
+
+/obj/item/weapon/gun/m60/m38/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_SMG)
+	set_burst_amount(BURST_AMOUNT_TIER_5)
+	set_burst_delay(FIRE_DELAY_TIER_LMG)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_10
+	fa_max_scatter = 3.5
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_10
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	empty_sound = 'sound/weapons/gun_empty.ogg'
+
+/obj/item/weapon/gun/m60/m38/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 36, "muzzle_y" = 20, "rail_x" = 0, "rail_y" = 0, "under_x" = 30, "under_y" = 14, "stock_x" = 8, "stock_y" = 16, "side_rail_x" = 30, "side_rail_y" = 16)
