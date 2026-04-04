@@ -1,5 +1,3 @@
-//Vanguard Arrow "UNIFORMS"
-
 /obj/item/clothing/under/vai/plaid
 	name = "\improper Plaid shirt and denim pants"
 	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
