@@ -2295,9 +2295,7 @@
 	name = "\improper Dorms"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "ql" = (
 /obj/structure/machinery/light{
@@ -5947,9 +5945,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/cryo_cells)
 "OK" = (
-/turf/open/floor/almayer{
-	icon_state = "test_floor4"
-	},
+/turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/dorms)
 "OM" = (
 /obj/structure/surface/table/almayer,
