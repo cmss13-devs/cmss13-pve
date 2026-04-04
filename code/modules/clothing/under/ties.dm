@@ -1945,3 +1945,20 @@
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
 	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+
+/obj/item/clothing/accessory/storage/webbing/m3/old
+	name = "\improper MACE Webbing"
+	icon_state = "macenormal"
+	desc = "Outdated Modular Assault Carrying Equipment, designed to be worn over M59 series of flak vests."
+
+/obj/item/clothing/accessory/storage/webbing/m3/small/old
+	name = "\improper MACE Small Pouch Webbing"
+	icon_state = "macesmall"
+	desc = "An outdated Modular Assault Carrying Equipment, configured to carry a whole array of small items."
+
+/obj/item/clothing/accessory/storage/webbing/m3/drop
+	name = "\improper MACE Drop Pouch Webbing"
+	desc = "An unusual piece of kit, this Modular Assault Carrying Equipment webbing is configured to carry a single sizeable pouch."
+	icon_state = "macedrop"
+	hold = /obj/item/storage/internal/accessory/drop_pouch
+	slot = ACCESSORY_SLOT_M3UTILITY

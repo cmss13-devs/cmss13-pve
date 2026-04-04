@@ -881,6 +881,15 @@
 /obj/item/clothing/suit/marine/light/standard
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 
+/obj/item/clothing/suit/marine/light/old
+	name = "M59 body armor"
+	desc = "Simple USCMC armored vest, featuring liquid-armor packs, made to protect the troops from incoming projectiles up to intermediate cartridges."
+	icon_state = "oldmarinevest"
+	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_marine_armor = NO_FLAGS
+	armor_variation = 0
+	actions_types = list()
+	has_light = FALSE
 
 /obj/item/clothing/suit/marine/heavy
 	name = "\improper M3-H pattern heavy armor"
