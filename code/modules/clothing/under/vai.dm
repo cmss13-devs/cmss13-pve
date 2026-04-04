@@ -1,4 +1,4 @@
-/obj/item/clothing/under/marine/vai
+/obj/item/clothing/under/vai
 	name = "\improper VAI parensuit"
 	desc = "You shouldn't be seeing this."
 	siemens_coefficient = 0.9
