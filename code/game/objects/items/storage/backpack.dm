@@ -623,13 +623,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/grenadepack
 	name = "\improper USCM IMP M63A1 grenade satchel"
-	desc = "A secure satchel with dedicated grenade pouches meant to minimize risks of secondary ignition."
+	desc = "A secure satchel with dedicated partitions meant to minimize risks of secondary ignition of stored grenade packets."
 	icon_state = "grenadierpack"
 	overlays = list("+grenadierpack_unlocked")
 	worn_accessible = TRUE
-	max_storage_space = 36 //12 grenades
-	storage_slots = 12
-	can_hold = list(/obj/item/explosive/grenade)
+	storage_slots = 7
+	can_hold = list(/obj/item/explosive/grenade, /obj/item/storage/box/packet/)
+	max_w_class = SIZE_LARGE
 	is_id_lockable = TRUE
 	has_gamemode_skin = FALSE
 	xeno_types = null
@@ -970,7 +970,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "satchel_marine_welder"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/marine/engineerpack/welder_chestrig
@@ -980,7 +980,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	item_state = "welder_chestrig"
 	max_storage_space = 12
 	has_gamemode_skin = FALSE
-	max_fuel = 100
+	max_fuel = 210
 	worn_accessible = TRUE
 
 // Pyrotechnician Spec backpack fuel tank
@@ -1070,11 +1070,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 /obj/item/storage/backpack/marine/engineerpack/ert
 	name = "\improper lightweight technician welderpack"
-	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."
+	desc = "A small, lightweight pack for expeditions and short-range operations. Features a compact fueltank for quick blowtorch refueling."
 	icon_state = "ERT_satchel_welder"
 	has_gamemode_skin = FALSE
 	worn_accessible = TRUE
-	max_fuel = 180
+	max_fuel = 210
+	max_storage_space = 12
 
 /obj/item/storage/backpack/commando
 	name = "commando bag"
@@ -1199,7 +1200,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_sapper"
 	item_state = "backpack_sapper"
 	max_storage_space = 18
-	max_fuel = 150
+	max_fuel = 100
 	worn_accessible = TRUE
 
 /obj/item/storage/backpack/rmc/light
