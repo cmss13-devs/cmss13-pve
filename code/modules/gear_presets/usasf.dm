@@ -6,6 +6,7 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH)
 	///Gives the sailors their radios
 	var/headset_type = /obj/item/device/radio/headset/distress/USASF
+	var/rankpin_type = /obj/item/clothing/accessory/ranks/navy/e3
 	idtype = /obj/item/card/id/ //Shipboard duties & loose-hanging items do NOT mix
 
 /datum/equipment_preset/usasf/load_name(mob/living/carbon/human/new_human, randomise)
@@ -48,6 +49,7 @@
 /datum/equipment_preset/usasf/crew/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/brown/fingerless(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
@@ -56,6 +58,7 @@
 /datum/equipment_preset/usasf/crew/snipe
 	name = "USASF Damage-Control Crewman"
 	paygrades = list(PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_0)
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e4
 
 /datum/equipment_preset/usasf/crew/snipe/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
@@ -74,9 +77,11 @@
 	assignment = JOB_NAVY_MP
 	role_comm_title = "MAA"
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e5
 
 /datum/equipment_preset/usasf/crew/armsman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/MP(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/usasf/full(new_human), WEAR_WAIST)
@@ -122,6 +127,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/spray/pepper(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/engi(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mpsec(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/medium/rto/navy(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/xm51(new_human), WEAR_WAIST)
@@ -157,6 +163,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/smokebomb/red(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/standard/navy(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster/waist(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3, WEAR_IN_ACCESSORY)
@@ -186,6 +193,7 @@
 	assignment = JOB_NAVY_SFL
 	paygrades = list(PAY_SHORT_NE4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SF-TL"
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e4
 
 /datum/equipment_preset/usasf/crew/infantry/nco/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator/monocular(new_human), WEAR_IN_BACK)
@@ -198,6 +206,7 @@
 	paygrades = list(PAY_SHORT_NE5 = JOB_PLAYTIME_TIER_0)
 	assignment = "USASF Security Forces EVA Specialist"
 	role_comm_title = "SF-EVA"
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e5
 
 /datum/equipment_preset/usasf/crew/infantry/eva/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tank/oxygen/red(new_human), WEAR_BACK) //placeholder until the spacesuits projects adds back the jetpacks
@@ -220,6 +229,7 @@
 	role_comm_title = "FltCR"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flight_crew
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e5
 
 /datum/equipment_preset/usasf/crew/flight/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
@@ -257,6 +267,7 @@
 
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/rank/medical/lightblue(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/navy/e4(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/medgreen(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/latex(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/white(new_human), WEAR_FEET)
@@ -275,10 +286,12 @@
 	role_comm_title = "Tech"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/eng_tech
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e6
 
 /datum/equipment_preset/usasf/engi/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/navy/tech(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/yellow(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
@@ -317,11 +330,13 @@
 	rank = JOB_NAVY_PARA_LEAD
 	role_comm_title = "PJ-SL"
 	flags = EQUIPMENT_PRESET_EXTRA
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e9
 
 /datum/equipment_preset/usasf/helljumper/squadlead/load_gear(mob/living/carbon/human/new_human)
 
 //Uniform & accessories
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
@@ -344,11 +359,13 @@
 	name = "USASF Para-Rescue Support Technician"
 	role_comm_title = "PJ-ENGR"
 	flags = EQUIPMENT_PRESET_EXTRA
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e8
 
 /datum/equipment_preset/usasf/helljumper/technical/load_gear(mob/living/carbon/human/new_human)
 
 //Uniform & accessories
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
@@ -369,11 +386,13 @@
 	rank = JOB_NAVY_PARA_MED
 	role_comm_title = "PJ-MED"
 	flags = EQUIPMENT_PRESET_EXTRA
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e8
 
 /datum/equipment_preset/usasf/helljumper/medical/load_gear(mob/living/carbon/human/new_human) //Redefined between the subtypes due to weirdness, only way for it to apply
 
 //Uniform & accessories
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight/para(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf/helljumper(new_human), WEAR_ACCESSORY)
 //Armor, webbing & weapon
@@ -400,11 +419,13 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/jtac
 	idtype = /obj/item/card/id/dogtag
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o2
 
 /datum/equipment_preset/usasf/jtac/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command/attache(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/intel/navy(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/rto/navy(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/black_vest(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
@@ -427,6 +448,7 @@
 /datum/equipment_preset/usasf/jtac/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NE9 = JOB_PLAYTIME_TIER_0)
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/e9
 
 //*****************************************************************************************************/
 
@@ -439,10 +461,12 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navypilot
 	idtype = /obj/item/card/id/dogtag
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o1
 
 /datum/equipment_preset/usasf/pilot/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/pilot/flight(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/swat/navy(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
@@ -464,6 +488,7 @@
 /datum/equipment_preset/usasf/pilot/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NW1 = JOB_PLAYTIME_TIER_0)
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/w1
 
 //*****************************************************************************************************/
 
@@ -476,10 +501,12 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/officer
 	idtype = /obj/item/card/id/silver
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o3
 
 /datum/equipment_preset/usasf/officer/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/navy/officer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/techofficer(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
@@ -488,6 +515,7 @@
 /datum/equipment_preset/usasf/officer/lesser_rank
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NO2 = JOB_PLAYTIME_TIER_0)
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o2
 
 //*****************************************************************************************************/
 
@@ -499,10 +527,12 @@
 	role_comm_title = "FB"
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/flightboss
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o2
 
 /datum/equipment_preset/usasf/flightboss/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/navy/officer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/usasf(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/hazardvest/usasf/yellow(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/upp/marinepilot(new_human), WEAR_HEAD)
@@ -523,11 +553,13 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycengi
 	idtype = /obj/item/card/id/silver
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o4
 
 /datum/equipment_preset/usasf/chief_engineer/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/navy/officer(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/engine(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/chiefofficer(new_human), WEAR_HEAD)
@@ -550,6 +582,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/navycommander
 	idtype = /obj/item/card/id/gold
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o6
 
 /datum/equipment_preset/usasf/CO/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/USASF/command(new_human), WEAR_L_EAR)
@@ -559,6 +592,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/marine/peaked/captain/black(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/army/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new rankpin_type(new_human), WEAR_ACCESSORY)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911(new_human), WEAR_WAIST)
@@ -568,4 +602,5 @@
 	name = parent_type::name + " (Lesser Rank)"
 	paygrades = list(PAY_SHORT_NO5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CDR"
+	rankpin_type = /obj/item/clothing/accessory/ranks/navy/o5
 
