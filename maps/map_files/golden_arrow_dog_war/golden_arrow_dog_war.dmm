@@ -2270,7 +2270,9 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "pV" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	layer = 4
+	},
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/canteen)
 "pW" = (
@@ -3339,10 +3341,15 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoon_sergeant)
 "xZ" = (
-/obj/structure/closet/secure_closet/platoon_sergeant,
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(12);
+	name = "section sergeant locker"
+	},
+/obj/item/device/whistle,
+/obj/item/device/binoculars/range/designator/sergeant,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoon_sergeant)
 "yd" = (
@@ -4045,9 +4052,6 @@
 	layer = 2;
 	pixel_x = -13;
 	pixel_y = 14
-	},
-/obj/item/prop/magazine/boots/n054{
-	pixel_x = 29
 	},
 /obj/item/prop/magazine/dirty/torn{
 	pixel_x = -6;
@@ -5087,9 +5091,6 @@
 /area/golden_arrow/hangar)
 "IA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/prop/magazine/boots/n054{
-	pixel_x = 29
-	},
 /obj/structure/closet/secure_closet{
 	req_access_txt = "14;40";
 	req_one_access = list();
