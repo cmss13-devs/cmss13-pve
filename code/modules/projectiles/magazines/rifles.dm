@@ -472,7 +472,7 @@
 //M20A
 
 /obj/item/ammo_magazine/rifle/m20a
-	name = "\improper M20A HEAP magazine (10x24mm)"
+	name = "\improper M20A magazine (10x24mm)"
 	desc = "A 10mm assault rifle magazine."
 	caliber = "10x24mm"
 	icon_state = "m20a"

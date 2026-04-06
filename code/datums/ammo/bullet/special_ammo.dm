@@ -260,3 +260,9 @@
 	effective_range_max = 10
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 	accurate_range = 14
+
+/datum/ammo/bullet/m38/heap
+	name = "high-explosive armor-piercing 12x30 bullet"
+	damage = 80
+	bullet_light_color = COLOR_RED
+	penetration = ARMOR_PENETRATION_TIER_9
