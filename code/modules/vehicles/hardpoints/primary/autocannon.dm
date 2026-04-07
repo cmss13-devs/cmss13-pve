@@ -35,19 +35,19 @@
 	))
 
 /obj/item/hardpoint/primary/autocannon/twe_tank
-	name = "\improper L26A2 75mm Autocannon"
+	name = "\improper L26A2 45mm Autocannon"
 	desc = "Tosubishi Heavy Industrial Manufacturing main gun for the FV150. Its rapid fire rate and multipurpose ammunition offers stopping power against infantry, structures, and medium armor. Careful use can even disable tanks."
 	icon = 'icons/obj/vehicles/hardpoints/twe_tank.dmi'
-	icon_state = "light_autocannon"
+	icon_state = "heavy_autocannon"
 	disp_icon = "tank"
-	disp_icon_state = "light_autocannon"
+	disp_icon_state = "heavy_autocannon"
 
 	allowed_seat = VEHICLE_GUNNER
 
 	firing_arc = 75
-	fire_delay = 0.4 SECONDS
+	fire_delay = 0.6 SECONDS
 
-	ammo = new /obj/item/ammo_magazine/hardpoint/light_autocannon
+	ammo = new /obj/item/ammo_magazine/hardpoint/heavy_autocannon
 	max_clips = 3
 
 	px_offsets = list(
@@ -62,5 +62,5 @@
 	..()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 10, GLOB.damage_boost_vehicles),
+		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 25, GLOB.damage_boost_vehicles),
 	))

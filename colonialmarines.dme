@@ -2618,7 +2618,7 @@
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\flare_launcher_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\gl_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\hardpoint_ammo.dm"
-#include "code\modules\vehicles\hardpoints\hardpoint_ammo\light_autocannon.dm"
+#include "code\modules\vehicles\hardpoints\hardpoint_ammo\heavy_autocannon.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\ltb_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\minigun_ammo.dm"
 #include "code\modules\vehicles\hardpoints\hardpoint_ammo\p17702.dm"
