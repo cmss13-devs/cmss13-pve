@@ -882,8 +882,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/old
-	name = "\improper M4 pattern helmet"
-	desc = "Older model of USCMC-issued helmet."
+	name = "\improper M118 APPS pattern helmet"
+	desc = "Advanced Personnel Protective System armored helmet designed by NAMCo. While durable and easy to produce, this helmet featured a simple night-vision capable shooting optic, basic radio microphone and rudimentary tactical camera."
 	icon_state = "old_helmet"
 	flags_atom = NO_SNOW_TYPE
 	specialty = "M4 pattern marine"
