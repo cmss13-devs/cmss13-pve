@@ -4,8 +4,8 @@
 /area/space)
 "F" = (
 /obj/structure/prop/vehicle/twe_tank{
-	pixel_x = -18;
-	pixel_y = -20
+	pixel_x = -20;
+	pixel_y = -21
 	},
 /obj/structure/phone_base{
 	dir = 4;
