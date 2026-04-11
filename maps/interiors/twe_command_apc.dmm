@@ -57,13 +57,13 @@
 	name = "back entrance marker";
 	tag = "rear"
 	},
-/obj/structure/prop/vehicle/twe_tank/apc{
-	pixel_x = -8;
-	pixel_y = -20
-	},
 /obj/structure/bed/chair/vehicle{
 	dir = 1;
 	pixel_x = 12
+	},
+/obj/structure/prop/vehicle/twe_tank/apc{
+	pixel_x = -20;
+	pixel_y = -19
 	},
 /turf/open/shuttle/vehicle/floor_2,
 /area/interior/vehicle/twe_apc/command)

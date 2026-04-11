@@ -55,8 +55,8 @@
 /area/interior/vehicle/twe_apc)
 "L" = (
 /obj/structure/prop/vehicle/twe_tank/apc{
-	pixel_x = -5;
-	pixel_y = -20
+	pixel_x = -18;
+	pixel_y = -19
 	},
 /obj/effect/landmark/interior/spawn/entrance{
 	dir = 8;
