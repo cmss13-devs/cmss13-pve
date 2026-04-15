@@ -1,6 +1,8 @@
 /obj/item/clothing/under/vai
 	name = "\improper VAI parensuit"
 	desc = "You shouldn't be seeing this."
+	contained_sprite = TRUE
+	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
 	siemens_coefficient = 0.9
 	icon_state = "marine_jumpsuit"
 	worn_state = "marine_jumpsuit"
@@ -21,17 +23,14 @@
 	desc = "A simple outfit composed of a plaid shirt and denim jeans, favored by lumberjacks and private contractors."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
-	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
 	item_state = "obj_plaid"
 	worn_state = "plaid"
-	contained_sprite = TRUE
 
 /obj/item/clothing/under/vai/flower
 	name = "\improper Blue Hawaiian shirt and khaki cargo pants"
 	desc = "A simple outfit composed of a Blue Hawaiian shirt and khaki cargo pants, favored by dads and private contractors."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
 	item_state = "obj_blu"
 	worn_state = "blueflower"
 
@@ -40,6 +39,5 @@
 	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
 	item_state = "obj_green"
 	worn_state = "greenflower"
