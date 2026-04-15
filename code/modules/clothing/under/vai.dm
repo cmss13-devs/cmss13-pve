@@ -1,11 +1,6 @@
 /obj/item/clothing/under/vai
-	name = "\improper VAI parensuit"
-	desc = "You shouldn't be seeing this."
 	contained_sprite = TRUE
 	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
-	siemens_coefficient = 0.9
-	icon_state = "marine_jumpsuit"
-	worn_state = "marine_jumpsuit"
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -15,8 +10,6 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_LOW
 	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
-	drop_sound = "armorequip"
-	///Makes it so that we can see the right name in the vendor.
 
 /obj/item/clothing/under/vai/plaid
 	name = "\improper Plaid shirt and denim pants"
