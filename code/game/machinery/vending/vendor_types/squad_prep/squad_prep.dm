@@ -635,7 +635,7 @@
 
 		list("ARMOR", -1, null, null),
 		list("M09 custom Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/sof, VENDOR_ITEM_RECOMMENDED),
-		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_REGULAR),
+		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_RECOMMENDED),
 		list("Kestrel Leg Guards", round(scale * 10), /obj/item/clothing/accessory/twepads/legs, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
@@ -660,8 +660,10 @@
 
 		list("MASK", -1, null, null, null),
 		list("Balaclava", round(scale * 15), /obj/item/clothing/mask/balaclava, VENDOR_ITEM_REGULAR),
+		list("Tactical Filtration Mask", round(scale * 15), /obj/item/clothing/mask/gas/pmc, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
+		list("Tactical M3 night vision goggles"),round(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc
 		list("BiMex Polarized Shades(Black)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_REGULAR),
 		list("BiMex Polarized Shades(Yellow)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/orange, VENDOR_ITEM_REGULAR),
 		list("BiMex Polarized Shades(Classic)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/classic, VENDOR_ITEM_REGULAR),
