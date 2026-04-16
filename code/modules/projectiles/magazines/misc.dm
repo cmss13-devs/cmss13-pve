@@ -92,10 +92,10 @@
 	max_rounds = 150
 	reload_delay = 4
 	gun_type = /obj/item/weapon/gun/m60/m38
-	ammo_band_icon = "+m38_band"
-	ammo_band_icon_empty = "+m38_band_e"
+	ammo_band_icon = "+m60_band"
+	ammo_band_icon_empty = "+m60_band_e"
 
-/obj/item/ammo_magazine/m38
+/obj/item/ammo_magazine/m38/heap
 	name = "M38 HEAP belt box (12x30mm caseless)"
 	desc = "Heavy high-capacity belt box for M38 GPMG filled with high-explosive armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/m38/heap
