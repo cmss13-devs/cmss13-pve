@@ -663,7 +663,7 @@
 		list("Tactical Filtration Mask", round(scale * 15), /obj/item/clothing/mask/gas/pmc, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
-		list("Tactical M3 night vision goggles"),round(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc
+		list("Tactical M3 night vision goggles",round(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc, VENDOR_ITEM_RECOMMENDED),
 		list("BiMex Polarized Shades(Black)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big, VENDOR_ITEM_REGULAR),
 		list("BiMex Polarized Shades(Yellow)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/orange, VENDOR_ITEM_REGULAR),
 		list("BiMex Polarized Shades(Classic)", round(scale * 10), /obj/item/clothing/glasses/sunglasses/big/classic, VENDOR_ITEM_REGULAR),
