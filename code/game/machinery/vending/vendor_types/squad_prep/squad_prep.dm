@@ -1073,16 +1073,14 @@
 		)
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/vai
-	name = "\improper Vanguard Arrow Uniform Vendor"
-	desc = "An automated supply rack hooked up to a storage of general supplies."
-	icon_state = "uscm_gear"
+	name = "\improper Vanguard Arrow Utilities Vendor"
+	desc = "An automated supply rack hooked up to a storage of general supplies and ammo."
 	req_access = list(ACCESS_PRESS)
 	req_one_access = list()
 	listed_products = list()
 	hackable = TRUE
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/vai/populate_product_list(scale)
-
 	listed_products = list(
 		list("FOOD", -1, null, null),
 		list("Extended Patrol MRE", round(scale * 5), /obj/item/storage/box/mre/fsr, VENDOR_ITEM_REGULAR),
