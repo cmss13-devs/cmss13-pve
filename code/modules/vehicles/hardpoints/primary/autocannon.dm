@@ -44,7 +44,7 @@
 
 	allowed_seat = VEHICLE_GUNNER
 
-	firing_arc = 75
+	firing_arc = 90
 	fire_delay = 0.6 SECONDS
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/heavy_autocannon
