@@ -304,10 +304,6 @@
 "bD" = (
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/cryo_cells)
-"bE" = (
-/obj/effect/landmark/start/marine/rto/upp/forecon,
-/turf/open/floor/strata/floor3/east,
-/area/golden_arrow/cryo_cells)
 "bF" = (
 /turf/closed/wall/upp_wall/grey,
 /area/golden_arrow/cryo_cells)
@@ -1940,12 +1936,12 @@
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/prep_hallway)
 "mq" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /obj/structure/prop/invuln/overhead_pipe{
 	dir = 4;
 	pixel_y = 10;
 	pixel_x = -13
 	},
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/canteen)
 "ms" = (
@@ -5377,7 +5373,6 @@
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/canteen)
 "tN" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /obj/structure/barricade/handrail/strata{
 	dir = 8
 	},
@@ -5386,10 +5381,10 @@
 	pixel_y = 10;
 	pixel_x = -13
 	},
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/canteen)
 "tP" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food/upp,
 /obj/structure/machinery/light/small{
 	light_power = 0.8;
 	light_range = 4;
@@ -5402,6 +5397,7 @@
 	pixel_y = 10;
 	pixel_x = -13
 	},
+/obj/structure/machinery/cm_vending/sorted/marine_food/upp/recon,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/canteen)
 "tQ" = (
@@ -6721,13 +6717,17 @@
 	pixel_y = 8;
 	pixel_x = -8
 	},
-/obj/item/storage/box/zipcuffs/small{
-	pixel_x = 5;
-	pixel_y = -1
-	},
 /obj/item/tool/hand_labeler{
 	pixel_y = -3;
 	pixel_x = -9
+	},
+/obj/item/facepaint/sniper{
+	pixel_x = 6;
+	pixel_y = -2
+	},
+/obj/item/storage/box/zipcuffs/small{
+	pixel_x = 5;
+	pixel_y = -1
 	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
@@ -16708,7 +16708,7 @@ bF
 bF
 fy
 gy
-bE
+ph
 fK
 fy
 bF
