@@ -364,10 +364,16 @@
 			if(user.faction == FACTION_UPP)
 				return get_sfx("male_upp_warcry")
 			else
+			if(user.faction == FACTION_TWE)
+				return get_sfx("male_twe_warcry")
+			else
 				return get_sfx("male_warcry")
 		else
 			if(user.faction == FACTION_UPP)
 				return get_sfx("female_upp_warcry")
+			else
+			if(user.faction == FACTION_TWE)
+				return get_sfx("male_twe_warcry")
 			else
 				return get_sfx("female_warcry")
 
