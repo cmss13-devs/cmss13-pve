@@ -657,7 +657,17 @@ GLOBAL_VAR_INIT(bomb_set, FALSE)
 	icon_state = "adm"
 	pixel_x = 0
 	var/source_type = /obj/item/ADM
+
+/obj/structure/machinery/nuclearbomb/ADM/sixty
 	timeleft = 60 MINUTES
+
+/obj/structure/machinery/nuclearbomb/ADM/thirty
+
+	timeleft = 30 MINUTES
+
+/obj/structure/machinery/nuclearbomb/ADM/fifteen
+
+	timeleft = 15 MINUTES
 
 /obj/structure/machinery/nuclearbomb/ADM/attackby(obj/item/item, mob/user)
 	if(HAS_TRAIT(item, TRAIT_TOOL_MULTITOOL))
