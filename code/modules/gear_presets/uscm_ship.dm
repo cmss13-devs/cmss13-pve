@@ -722,6 +722,7 @@
 /datum/equipment_preset/uscm_ship/so/mss
 	name = "MSS Operative Agent (PltCo)"
 	assignment = JOB_UPP_AGENT
+	rank = JOB_UPP_AGENT
 	skills = /datum/skills/upp/agent
 	idtype = /obj/item/card/id/silver
 	role_comm_title = "MSS-OP"
@@ -1156,4 +1157,4 @@
 
 /datum/equipment_preset/uscm_ship/advisor_upp/New()
 	. = ..()
-	access = get_access(ACCESS_LIST_MARINE_LIAISON)
+	access = get_access(ACCESS_LIST_UPP_LIAISON)
