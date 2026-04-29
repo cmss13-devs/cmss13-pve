@@ -178,6 +178,16 @@ GLOBAL_LIST_EMPTY(gear_datums_by_name)
 	path = /obj/item/clothing/mask/gas //Civ market gas-mask, no longer USCM locked
 	cost = 1
 
+/datum/gear/mask/breath
+	display_name = "Close fit rebreather"
+	path = /obj/item/clothing/mask/breath
+	cost = 1
+
+/datum/gear/mask/rebreather
+	display_name = "Conventional rebreather"
+	path = /obj/item/clothing/mask/rebreather
+	cost = 1
+
 /datum/gear/mask/scarf_black
 	display_name = "Scarf, black"
 	path = /obj/item/clothing/mask/tornscarf/black
