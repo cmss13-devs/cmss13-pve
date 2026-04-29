@@ -1,0 +1,219 @@
+name: CI Suite
+on:
+  pull_request:
+    branches:
+    - master
+  merge_group:
+  push:
+    branches:
+    - master
+jobs:
+  run_linters:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Run Linters
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency:
+      group: run_linters-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore SpacemanDMM cache
+        uses: actions/cache@v4
+        with:
+          path: ~/SpacemanDMM
+          key: ${{ runner.os }}-spacemandmm-${{ hashFiles('dependencies.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-spacemandmm-
+      - name: Setup Node
+        uses: ./.github/actions/setup_node
+        with:
+          restore-yarn-cache: true
+      - name: Restore Bootstrap cache
+        uses: actions/cache@v4
+        with:
+          path: tools/bootstrap/.cache
+          key: ${{ runner.os }}-bootstrap-${{ hashFiles('tools/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-bootstrap-
+      - name: Restore Rust cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cargo
+          key: ${{ runner.os }}-rust-${{ hashFiles('dependencies.sh')}}
+          restore-keys: |
+            ${{ runner.os }}-rust-
+      - name: Install Tools
+        run: |
+          pip3 install setuptools
+          bash tools/ci/install_spaceman_dmm.sh dreamchecker
+          cargo install ripgrep --features pcre2
+          tools/bootstrap/python -c ''
+      - name: Run Linters
+        run: |
+          bash tools/ci/check_filedirs.sh colonialmarines.dme
+          bash tools/ci/check_changelogs.sh
+          bash tools/ci/check_grep.sh
+          bash tools/ci/check_misc.sh
+          tools/bootstrap/python tools/ci/validate_dme.py < colonialmarines.dme
+          tools/bootstrap/python -m tools.maplint.source --github
+          tools/build/build --ci lint tgui-test
+          tools/bootstrap/python -m dmi.test
+          tools/bootstrap/python -m mapmerge2.dmm_test
+          ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+      - name: Annotate Lints
+        uses: yogstation13/DreamAnnotate@v2
+        if: success() || failure()
+        with:
+          outputFile: output-annotations.txt
+
+
+  odlint:
+    name: Lint with OpenDream
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9
+      - uses: actions/checkout@v4
+      - uses: robinraju/release-downloader@v1.9
+        with:
+          repository: "OpenDreamProject/OpenDream"
+          tag: "latest"
+          fileName: "DMCompiler_linux-x64.tar.gz"
+          extract: true
+      - run: ./DMCompiler_linux-x64/DMCompiler --suppress-unimplemented colonialmarines.dme
+
+  compile_all_maps:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Compile Maps
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: ./.github/actions/setup_node
+      - name: Restore BYOND from Cache
+        uses: ./.github/actions/restore_or_install_byond
+      - name: Install curl
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update || true
+          sudo apt install -o APT::Immediate-Configure=false curl:i386
+      - name: Compile All Base Maps
+        run: |
+          source $HOME/BYOND/byond/bin/byondsetup
+          tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DALL_MAPS_STAGE_BASE
+      - name: Compile All Extra Maps
+        run: |
+          source $HOME/BYOND/byond/bin/byondsetup
+          tools/build/build --ci dm -DCIBUILDING -DCITESTING -DALL_MAPS -DALL_MAPS_STAGE_EXTRA
+
+  find_all_maps:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Find Maps to Test
+    runs-on: ubuntu-latest
+    outputs:
+      maps: ${{ steps.map_finder.outputs.maps }}
+      alternate_tests: ${{ steps.alternate_test_finder.outputs.alternate_tests }}
+    concurrency:
+      group: find_all_maps-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v3
+      - name: Find Maps
+        id: map_finder
+        run: |
+          shopt -s extglob
+          echo "$(ls -mw0 maps/!(*override*).json)" > maps_output.txt
+          sed -i -e s+maps/+\"+g -e s+.json+\"+g maps_output.txt
+          echo "Ignored Maps: $(cat .github/maps_to_ignore.txt)"
+          cat .github/maps_to_ignore.txt | sed -r 's/\s*//g' | xargs -i sed -ri 's/(, "{}")|("{}", )//g' maps_output.txt
+          echo "Maps: $(cat maps_output.txt)"
+          echo "maps={\"paths\":[$(cat maps_output.txt)]}" >> $GITHUB_OUTPUT
+      - name: Find Alternate Tests
+        id: alternate_test_finder
+        run: |
+          ALTERNATE_TESTS_JSON=$(jq -nRc '[inputs | capture("^(?<major>[0-9]+)\\.(?<minor>[0-9]+): (?<map>.+)$")]' .github/alternate_byond_versions.txt)
+          echo "alternate_tests=$ALTERNATE_TESTS_JSON" >> $GITHUB_OUTPUT
+      - name: Set up BYOND cache
+        uses: ./.github/actions/restore_or_install_byond
+
+  run_all_tests:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Unit Tests
+    needs: [find_all_maps]
+    strategy:
+      fail-fast: false
+      matrix:
+        map: ${{ fromJSON(needs.find_all_maps.outputs.maps).paths }}
+    concurrency:
+      group: run_all_tests-${{ github.head_ref || github.run_id }}-${{ matrix.map }}
+      cancel-in-progress: true
+    uses: ./.github/workflows/run_unit_tests.yml
+    with:
+      map: ${{ matrix.map }}
+
+  run_alternate_tests:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') && needs.find_all_maps.outputs.alternate_tests != '[]' )
+    name: Alternate Tests
+    needs: [find_all_maps]
+    strategy:
+      fail-fast: false
+      matrix:
+        setup: ${{ fromJSON(needs.find_all_maps.outputs.alternate_tests) }}
+    concurrency:
+      group: run_all_tests-${{ github.head_ref || github.run_id }}-${{ matrix.setup.major }}.${{ matrix.setup.minor }}-${{ matrix.setup.map }}
+      cancel-in-progress: true
+    uses: ./.github/workflows/run_unit_tests.yml
+    with:
+      map: ${{ matrix.setup.map }}
+      major: ${{ matrix.setup.major }}
+      minor: ${{ matrix.setup.minor }}
+
+  check_alternate_tests:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') && needs.find_all_maps.outputs.alternate_tests != '[]' )
+    name: Check Alternate Tests
+    needs: [run_alternate_tests]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Alternate tests passed.
+
+  test_windows:
+    if: ( !contains(github.event.head_commit.message, '[ci skip]') )
+    name: Windows Build
+    runs-on: windows-latest
+    timeout-minutes: 30
+    concurrency:
+      group: test_windows-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: ./.github/actions/setup_node
+        with:
+          restore-yarn-cache: true
+      - name: Configure BYOND version from inputs
+        if: ${{ inputs.major }}
+        shell: bash
+        run: |
+          echo "BYOND_MAJOR=${{ inputs.major }}" >> $GITHUB_ENV
+          echo "BYOND_MINOR=${{ inputs.minor }}" >> $GITHUB_ENV
+      - name: Configure BYOND version from dependencies.sh
+        if: ${{ !inputs.major }}
+        shell: bash
+        run: |
+          source dependencies.sh
+          echo "BYOND_MAJOR=$BYOND_MAJOR" >> $GITHUB_ENV
+          echo "BYOND_MINOR=$BYOND_MINOR" >> $GITHUB_ENV
+      - name: Restore BYOND cache
+        uses: actions/cache@v4
+        with:
+          path: C:\\byond
+          key: ${{ runner.os }}-byond-${{ env.BYOND_MAJOR }}-${{ env.BYOND_MINOR }}
+      - name: Compile
+        run: pwsh tools/ci/build.ps1
+        env:
+          DM_EXE: "C:\\byond\\bin\\dm.exe"
