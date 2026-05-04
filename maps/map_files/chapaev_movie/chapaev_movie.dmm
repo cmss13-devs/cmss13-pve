@@ -698,6 +698,18 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/golden_arrow/engineering)
+"bl" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "S"
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	light_color = "#e7c0a4";
+	light_power = 0.8;
+	light_range = 4
+	},
+/turf/open/floor/strata/multi_tiles,
+/area/golden_arrow/hangar)
 "bm" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/airlock/upp_utility{
@@ -8466,6 +8478,7 @@
 /area/golden_arrow/dorms)
 "QA" = (
 /obj/item/hardpoint/locomotion/apc_wheels/zsl_wheels,
+/obj/item/ammo_magazine/hardpoint/turret_smoke/uppapc,
 /turf/open/space/basic,
 /area/space)
 "Rl" = (
@@ -11856,7 +11869,7 @@ uU
 tu
 nq
 mI
-ni
+bl
 DL
 Rl
 DL

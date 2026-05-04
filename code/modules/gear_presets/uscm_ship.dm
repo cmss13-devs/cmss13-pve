@@ -1140,8 +1140,10 @@
 	idtype = /obj/item/card/id/lanyard
 	access = list(ACCESS_UPP_GENERAL)
 	faction = FACTION_UPP
+	faction_group = list(FACTION_UPP)
 	assignment = JOB_UPP_ADVISOR
 	rank = JOB_UPP_ADVISOR
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
 	paygrades = list(PAY_SHORT_CIV = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "CS"
 	skills = /datum/skills/civilian/advisor
