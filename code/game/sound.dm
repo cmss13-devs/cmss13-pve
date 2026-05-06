@@ -516,7 +516,7 @@
 			if("female_upp_warcry")
 				sound = pick('sound/voice/upp_warcry/warcry_female_1.ogg', 'sound/voice/upp_warcry/warcry_female_2.ogg')
 			if("female_twe_warcry")
-				sound = pick('sound/voice/twe_warcry/warcry_female_1', 'sound/voice/twe_warcry/warcry_female_2', 'sound/voice/twe_warcry/warcry_female_3.ogg', 'sound/voice/twe_warcry/warcry_female_4', 'sound/voice/twe_warcry/warcry_female_5')
+				sound = pick('sound/voice/twe_warcry/warcry_female_1.ogg', 'sound/voice/twe_warcry/warcry_female_2.ogg', 'sound/voice/twe_warcry/warcry_female_3.ogg', 'sound/voice/twe_warcry/warcry_female_4.ogg', 'sound/voice/twe_warcry/warcry_female_5.ogg')
 			if("rtb_handset")
 				sound = pick('sound/machines/telephone/rtb_handset_1.ogg', 'sound/machines/telephone/rtb_handset_2.ogg', 'sound/machines/telephone/rtb_handset_3.ogg', 'sound/machines/telephone/rtb_handset_4.ogg', 'sound/machines/telephone/rtb_handset_5.ogg')
 			if("talk_phone")

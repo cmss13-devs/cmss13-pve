@@ -15,7 +15,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = XENO_DAMAGE_TIER_1
 	melee_damage_upper = XENO_DAMAGE_TIER_2
-	attacktext = "Slashes"
+	attacktext = "slashes"
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/alien_claw_flesh1.ogg'
 	min_oxy = 0
