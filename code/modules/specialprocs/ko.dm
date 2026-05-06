@@ -24,7 +24,7 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(ko_single_mob), human)
 
 /client/proc/ko_everyone_verb()
-	set name = "Launch Nuke"
+	set name = "Blow Up The Rover"
 	set category = "Game Master.Extras"
 
 	if(!check_rights(R_EVENT))
@@ -38,16 +38,16 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 /proc/ko_single_mob(mob/living/carbon/human/human)
 	human.clear_fullscreens()
 	human.hud_used.show_hud(HUD_STYLE_NOHUD, human)
-	to_chat(human, SPAN_BOLDWARNING("Oh fuck"))
+	to_chat(human, SPAN_BOLDWARNING("The Rover writhes beneath your feet..."))
 	var/atom/movable/screen/fullscreen/overlay_screen = human.overlay_fullscreen("simulacrum_ko", /atom/movable/screen/fullscreen/impaired)
 	overlay_screen.icon_state = "passage9"
 	sleep(1 SECONDS)
-	to_chat(human, SPAN_BOLDWARNING("The flash of thermonuclear fusion hits you too fast; there's no pain, just the flick of a lightswitch."))
+	to_chat(human, SPAN_BOLDWARNING("Something detonates. You're not sure what. It doesn't matter."))
 	overlay_screen.icon_state = "impaired_overlay8"
 	human.Stun(100000000)
 	human.loc = null
 	human.SetEyeBlind(100000000)
-	human.ghost_locked = TRUE
+	//human.ghost_locked = TRUE
 	human.hudswitch_blocked = TRUE
 	message_admins("Cutscene initialized")
 	sleep(5 SECONDS)
@@ -65,7 +65,6 @@ GLOBAL_DATUM_INIT(simulation_controller, /datum/simulation_controller, new)
 		to_chat(src, SPAN_BOLDWARNING("You cannot leave your corpse at this time."))
 		return
 	return ..()
-
 
 /client/proc/end_game_bad()
 	set name = "Game End"
