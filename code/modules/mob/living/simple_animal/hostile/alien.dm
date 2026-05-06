@@ -1,5 +1,5 @@
 /mob/living/simple_animal/hostile/alien
-	name = "Tung Tung Tung Sahur"
+	name = "Drone"
 	var/caste_name = null
 	desc = "A builder of hives. Only drones may evolve into Queens."
 	icon = 'icons/mob/xenos/drone.dmi'
@@ -15,7 +15,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = XENO_DAMAGE_TIER_1
 	melee_damage_upper = XENO_DAMAGE_TIER_2
-	attacktext = "bashes"
+	attacktext = "Slashes"
 	a_intent = INTENT_HARM
 	attack_sound = 'sound/weapons/alien_claw_flesh1.ogg'
 	min_oxy = 0
