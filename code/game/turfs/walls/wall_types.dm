@@ -1363,6 +1363,14 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall covered in jagged ribs."
 	hull = 1
 
+/turf/closed/wall/jockey
+	name = "strange structure"
+	desc = "A nigh indestructible structure, looks like nothing you can do will penetrate it."
+	icon = 'icons/turf/walls/engineership.dmi'
+	icon_state = "metal"
+	hull = TRUE
+	walltype = WALL_JOCKEY
+
 /turf/closed/wall/upp_wall/grey
 	name = "reinforced walls"
 	icon = 'icons/turf/walls/upp_grey.dmi'

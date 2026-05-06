@@ -392,6 +392,7 @@
 #define WALL_SOLARIS_ROCK "solaris_rock"
 #define WALL_KUTJEVO_ROCK "rock"
 #define WALL_KUTJEVO_ROCK_BORDER "rock_border"
+#define WALL_JOCKEY "metal"
 #define WALL_KUTJEVO_COLONY "colony"
 #define WALL_KUTJEVO_COLONYR "colonyr"
 #define WALL_DEVWALL "devwall"
