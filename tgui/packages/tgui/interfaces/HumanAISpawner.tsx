@@ -146,6 +146,7 @@ export const HumanAISpawner = (props) => {
                         textAlign="center"
                         width="100%"
                         selected={data.spawn_click_intercept}
+                        tooltip="RMB spawns on ghost."
                         onClick={() =>
                           act('create_ai', {
                             path: chosenPreset.path,
@@ -153,6 +154,16 @@ export const HumanAISpawner = (props) => {
                             selected_equipment: data.selected_equipment,
                           })
                         }
+                        onAuxClick={(e) => {
+                          if (e.button === 2) { // 2 means RMB
+                          act('create_ai', {
+                            path: chosenPreset.path,
+                            selected_faction: data.selected_faction,
+                            selected_equipment: data.selected_equipment,
+                            spawn_now: true,
+                          });
+                          }
+                        }}
                       >
                         {data.outfit === 1 ? 'Outfit' : 'Click Spawn'}
                       </Button>
