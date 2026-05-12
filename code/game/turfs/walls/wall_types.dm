@@ -1386,3 +1386,13 @@ INITIALIZE_IMMEDIATE(/turf/closed/wall/indestructible/splashscreen)
 	desc = "A thick and chunky metal wall. The surface is barren and imposing."
 	hull = 1
 
+/turf/closed/wall/lavaland
+	name = "lavaland"
+	icon = 'icons/turf/walls/lava_walls.dmi'
+
+/turf/closed/wall/lavaland/rock
+	name = "basalt wall"
+	desc = "A wall made up of heavy volcanic rock."
+	icon_state = "basalt_rock"
+	walltype = WALL_BASALT
+	hull = 1
