@@ -87,6 +87,7 @@
 	icon_state = "pmc_mask"
 	anti_hug = 3
 	vision_impair = VISION_IMPAIR_WEAK // best in the biz
+	ignore_zoom_tint = TRUE // they can use scopes
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -207,3 +208,4 @@
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
 	vision_impair = VISION_IMPAIR_MED // not as good as PMC but good
+	ignore_zoom_tint = TRUE // they can use scopes
