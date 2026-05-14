@@ -85,7 +85,7 @@
 	light_power = 3
 	light_range = 4
 	light_color = LIGHT_COLOR_TUNGSTEN
-	light_system = DIRECTIONAL_LIGHT
+	light_system = MOVABLE_LIGHT
 
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 	var/locate_cooldown = 0 //Cooldown for SL locator
@@ -699,7 +699,7 @@
 
 	light_power = 3
 	light_range = 4
-	light_system = DIRECTIONAL_LIGHT
+	light_system = MOVABLE_LIGHT
 
 	var/flashlight_cooldown = 0 //Cooldown for toggling the light
 	var/locate_cooldown = 0 //Cooldown for SL locator
