@@ -1200,6 +1200,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/veteran/UPP/heavy
 	name = "\improper 6B79 helmet"
 	desc = "EVA-capable enclosed helmet of the UPP's Naval Infantry. Despite offering a higher armor rating, this helmet's cumbersome design kept it from retaining a larger role in the equipment of the Naval Infantry, and instead is largely reserved for heavy weapons operators and other specialist roles."
+	vision_impair = VISION_IMPAIR_WEAK
+	ignore_zoom_tint = TRUE // they can use scopes
 	icon_state = "upp_helmet_heavy"
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
