@@ -485,6 +485,7 @@
 	icon_state = launcher_sprite
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/proc/missile_launch(mob/living/user)
+	update_icon()
 	message_admins(FONT_SIZE_XL("[user] launched an anti-air missile from their [src]!"), user.x, user.y, user.z)
 
 /obj/item/weapon/gun/launcher/rocket/anti_air/proc/hit_announce(sound_turf, hit_type, missile_name)
@@ -501,7 +502,7 @@
 				if(current_mob.client)
 					playsound_client(current_mob.client, 'sound/weapons/fire_support/spnkr_aa_crash.ogg', src, 25)
 			if(hit_type == "miss") // redudant but i wasn't sure how best to get the random choice to work
-				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] miss its target!"))
+				to_chat(current_mob, SPAN_HIGHDANGER("You see the [missile_name] arc towards the target, but the shuttle fires off countermeasures and the missile misses its target!"))
 
 //
 
