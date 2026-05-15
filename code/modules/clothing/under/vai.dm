@@ -30,3 +30,17 @@
 	desc = "A simple outfit composed of a Green Hawaiian shirt which depicts palms and denim jeans, favored by tourists and private contractors."
 	icon_state = "greenflower"
 	worn_state = "greenflower"
+
+/obj/item/clothing/head/helmet/marine/sof/vai
+	name = "\improper M09 Custom Helmet"
+	desc = "Partially due to old stocks, partially due to preference. USCM MARSOC commando ballistic helmet, customized and updated to mission requirements."
+	icon_state = "marsoc_helmet"
+	icon = 'icons/mob/humans/onmob/contained/vai.dmi'
+	contained_sprite = TRUE
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_HIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	flags_atom = NO_NAME_OVERRIDE
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/security)
+	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider

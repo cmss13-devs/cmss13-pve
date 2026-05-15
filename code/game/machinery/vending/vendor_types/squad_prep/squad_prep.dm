@@ -634,7 +634,7 @@
 		list("Shoulder Holster", round(max(1,(scale * 0.5))), /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
 
 		list("ARMOR", -1, null, null),
-		list("M09 custom Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/sof, VENDOR_ITEM_RECOMMENDED),
+		list("M09 custom Helmet", round(scale * 10), /obj/item/clothing/head/helmet/marine/sof/vai, VENDOR_ITEM_RECOMMENDED),
 		list("Kestrel Armoured Cuirass", round(scale * 10), /obj/item/clothing/suit/marine/veteran/royal_marine, VENDOR_ITEM_RECOMMENDED),
 		list("Kestrel Leg Guards", round(scale * 10), /obj/item/clothing/accessory/twepads/legs, VENDOR_ITEM_REGULAR),
 
