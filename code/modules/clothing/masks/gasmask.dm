@@ -22,6 +22,8 @@
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	siemens_coefficient = 0.9
 	vision_impair = VISION_IMPAIR_HIGH // putting them on for their benefits should have a drawback and feel more immersive
+	var/vision_impair_on_store = VISION_IMPAIR_NONE
+	var/ignore_zoom_tint_on_store = FALSE
 	var/gas_filter_strength = 1 //For gas mask filters
 	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide")
 
@@ -51,6 +53,15 @@
 	helmet_item.flags_inventory |= BLOCKGASEFFECT
 	helmet_item.flags_inv_hide |= HIDEFACE
 
+	vision_impair_on_store = helmet_item.vision_impair
+	ignore_zoom_tint_on_store = helmet_item.ignore_zoom_tint
+	helmet_item.vision_impair = vision_impair
+	helmet_item.ignore_zoom_tint = ignore_zoom_tint
+
+	var/mob/living/carbon/human/H = helmet_item.loc
+	if(H)
+		H.update_tint()
+
 /obj/item/clothing/mask/gas/military/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
 	if(!istype(helmet_internal_inventory))
@@ -62,6 +73,15 @@
 
 	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
 	helmet_item.flags_inv_hide &= ~(HIDEFACE)
+
+	helmet_item.vision_impair = vision_impair_on_store
+	helmet_item.ignore_zoom_tint = ignore_zoom_tint_on_store
+	vision_impair_on_store = VISION_IMPAIR_NONE
+	ignore_zoom_tint_on_store = FALSE
+
+	var/mob/living/carbon/human/H = helmet_item.loc
+	if(H)
+		H.update_tint()
 
 /obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
