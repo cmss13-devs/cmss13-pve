@@ -103,11 +103,13 @@
 			if(hud_used.oxygen_icon)
 				if(hal_screwyhud == 3 || oxygen_alert > 0.55)
 					hud_used.oxygen_icon.icon_state = "oxy1"
+					hud_used.oxygen_icon.icon = hud_used.ui_datum.ui_style_icon
 				else if(oxygen_alert > 0.15)
 					hud_used.oxygen_icon.icon_state = "oxy0.5"
+					hud_used.oxygen_icon.icon = 'icons/mob/hud/oxyhalf.dmi'
 				else
 					hud_used.oxygen_icon.icon_state = "oxy0"
-
+					hud_used.oxygen_icon.icon = hud_used.ui_datum.ui_style_icon
 			check_status_effects()
 
 			if(hud_used.pulse_line)
