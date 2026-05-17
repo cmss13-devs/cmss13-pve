@@ -1,7 +1,8 @@
 /* HUD DATUMS */
 
-//GLOBAL HUD LIST
-GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
+//GLOBAL HUD LIST: (note no assertion ensures all huds are unique so be sure you never reuse the same index)
+// flatten_numeric_alist(alist) is used to ensure the define matches the index and they're sequential defines
+GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, flatten_numeric_alist(alist(
 	MOB_HUD_SECURITY_BASIC = new /datum/mob_hud/security/basic(),
 	MOB_HUD_SECURITY_ADVANCED = new /datum/mob_hud/security/advanced(),
 	MOB_HUD_MEDICAL_BASIC = new /datum/mob_hud/medical/basic(),
@@ -24,7 +25,7 @@ GLOBAL_LIST_INIT_TYPED(huds, /datum/mob_hud, list(
 	MOB_HUD_HUNTER = new /datum/mob_hud/hunter_hud(),
 	MOB_HUD_HUNTER_CLAN = new /datum/mob_hud/hunter_clan(),
 	MOB_HUD_EXECUTE = new /datum/mob_hud/execute_hud(),
-	))
+	)))
 
 /datum/mob_hud
 	var/list/mob/hudmobs = list() //list of all mobs which display this hud
