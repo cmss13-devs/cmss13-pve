@@ -707,3 +707,37 @@ GLOBAL_LIST_INIT(rbarrel_color_list, list(COLOR_SILVER,
 	new /obj/item/clothing/suit/armor/vest(src)
 	new /obj/item/clothing/suit/armor/bulletproof(src)
 	new /obj/item/weapon/shield/riot(src)
+
+
+//fancy ds13 crates.
+
+/obj/structure/largecrate/ds
+	name = "Supply crate"
+	desc = "A shiny supply crate."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "crate_ds_blue1"
+
+/obj/structure/largecrate/ds/Initialize()
+	. = ..()
+	new /obj/item/spacecash/bundle(src)
+
+/obj/structure/largecrate/ds/blue_vertical
+	icon_state = "crate_ds_blue2"
+
+/obj/structure/largecrate/ds/blue_diagonal
+	icon_state = "crate_ds_blue3"
+
+/obj/structure/largecrate/ds/blue_diagonal_alt
+	icon_state = "crate_ds_blue4"
+
+/obj/structure/largecrate/ds/green_horizontal
+	icon_state = "crate_ds_green1"
+
+/obj/structure/largecrate/ds/green_vertical
+	icon_state = "crate_ds_green2"
+
+/obj/structure/largecrate/ds/green_diagonal
+	icon_state = "crate_ds_green3"
+
+/obj/structure/largecrate/ds/green_diagonal_alt
+	icon_state = "crate_ds_green4"
