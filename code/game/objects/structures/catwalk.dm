@@ -48,3 +48,4 @@
 	icon = 'icons/turf/floors/catwalks.dmi'
 	icon_state = "catwalk0"
 	base_state = "catwalk0"
+

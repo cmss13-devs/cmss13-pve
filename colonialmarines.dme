@@ -861,6 +861,7 @@
 #include "code\game\cas_manager\datums\cas_signal.dm"
 #include "code\game\deadspace13\closets.dm"
 #include "code\game\deadspace13\doors.dm"
+#include "code\game\deadspace13\growth_tank.dm"
 #include "code\game\deadspace13\machinery.dm"
 #include "code\game\deadspace13\objects.dm"
 #include "code\game\deadspace13\signs.dm"

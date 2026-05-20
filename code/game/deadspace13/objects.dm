@@ -27,3 +27,11 @@
 	density = 0
 	anchored = 1
 	can_buckle = 1
+
+/obj/machinery/microscope
+	name = "high powered electron microscope"
+	desc = "A highly advanced microscope capable of zooming up to 3000x."
+	icon = 'icons/obj/forensics.dmi'
+	icon_state = "microscope"
+	anchored = 1
+	density = 1
