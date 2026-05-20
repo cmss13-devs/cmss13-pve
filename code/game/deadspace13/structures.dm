@@ -35,3 +35,18 @@
 	// This is intended to lower SSlighting load
 	opacity = FALSE
 	indestructible = TRUE
+
+
+/obj/structure/reagent_dispensers/biomass
+	name = "biomass storage"
+	desc = "It is every citizen's final duty to go into the tanks, and to become one with all the people."
+	icon = 'icons/obj/machines/ds13/bpl.dmi'
+	icon_state = "tank"
+	density = TRUE
+	anchored = TRUE
+
+/obj/machinery/recycling_tank
+	name = "recycling tank"
+	desc = "A organic-breakdown machine that takes organic matter and turns it into a substance known simply as 'biomass' which it then automatically feeds into the storage tank next to it."
+	icon = 'icons/obj/machines/ds13/bpl.dmi'
+	icon_state = "biogen-empty"
