@@ -1,7 +1,7 @@
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 
-//GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
+GLOBAL_LIST_EMPTY(pre_start_humanAI)
 
 /datum/human_ai_spawner_menu
 	var/static/list/lazy_ui_data = list()
@@ -27,6 +27,7 @@
 
 /datum/human_ai_spawner_menu/New()
 	usr.client.click_intercept = src
+	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(post_round_start))
 	if(!length(lazy_ui_data))
 		for(var/datum/human_ai_equipment_preset/preset_type as anything in subtypesof(/datum/human_ai_equipment_preset))
 			if(!preset_type::name || !preset_type::path)
@@ -289,6 +290,9 @@
 
 		for(var/item in ai_human.get_equipped_items(TRUE))
 			qdel(item)
+	if(SSticker.current_state == 1) //round hasn't started yet so brain won't be there
+		GLOB.pre_start_humanAI.Add(ai_human)
+	//	return
 	arm_equipment(ai_human, gotten_path, randomise_appearance, FALSE, mob_client = ai_human.client)
 	if(selected_equipment == "No Weapons")
 		ai_human.strip_weapons()
@@ -320,6 +324,7 @@
 		ai_human.strip_all()
 	ai_human.face_dir(user.dir)
 	ai_human.forceMove(get_turf(object))
+
 
 	if(paradrop)
 		ai_human.paradrop()
@@ -386,6 +391,17 @@
 		ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
 		ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 
+/datum/human_ai_spawner_menu/proc/post_round_start()
+	SIGNAL_HANDLER
+
+	for(var/mob/living/carbon/human/ai_human in GLOB.pre_start_humanAI)
+		for(var/comp in ai_human.datum_components )
+			var/monster = ai_human.datum_components[comp]
+			if(istype(ai_human.datum_components[comp], /datum/component/human_ai))
+				ai_human.datum_components[comp].Initialize()
+
+
+
 /client/proc/open_human_ai_spawner_panel()
 	set name = "Create Human AI"
 	set category = "Game Master.HumanAI"
@@ -395,8 +411,7 @@
 
 	if(!SSticker.mode)
 		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
-		return
-
+	//	return
 	if(human_spawn_menu)
 		human_spawn_menu.tgui_interact(mob)
 		return

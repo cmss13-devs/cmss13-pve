@@ -170,12 +170,17 @@
 
 	var/free_the_humans = FALSE
 	var/offer_as_ert = FALSE
+	var/use_player_slots = FALSE
 	var/make_hai = FALSE
 	if(href_list["spawn_as"] == "freed")
 		free_the_humans = TRUE
 
 	else if(href_list["spawn_as"] == "ert")
 		offer_as_ert = TRUE
+
+	else if(href_list["spawn_as"] == "ert_slot")
+		offer_as_ert = TRUE
+		use_player_slots = TRUE
 
 	if(href_list["spawn_as"] == "hai")
 		make_hai = TRUE
@@ -274,7 +279,7 @@
 			if(ar_prompt == "Yes")
 				announce_receipt = TRUE
 
-			em_call.activate(quiet_launch, announce_receipt)
+			em_call.activate(quiet_launch, announce_receipt, use_player_slot_appearance = use_player_slots)
 
 		message_admins("[key_name_admin(usr)] created [humans_to_spawn] humans as [job_name] at [get_area(initial_spot)]")
 

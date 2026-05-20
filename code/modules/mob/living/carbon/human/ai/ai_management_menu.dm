@@ -161,8 +161,8 @@
 		return
 
 	if(!SSticker.mode)
-		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
-		return
+		to_chat(src, SPAN_WARNING("The round hasn't started yet! hAi will be inert, and features like squads spawns and mangagement will not work until round start."))
+	//	return
 
 	var/mob/living/carbon/human/ai_human = new()
 	ai_human.AddComponent(/datum/component/human_ai)
