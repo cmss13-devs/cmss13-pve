@@ -15,3 +15,15 @@
 	icon_state = "pod_chair_preview"
 	color = "#FFFFFF"
 
+/obj/structure/surface/rack/dark
+	color = "#5c5b5b"
+
+/obj/structure/handrail
+	name = "handrail"
+	desc = "A safety railing with buckles to secure yourself to when floor isn't stable enough."
+	icon = 'icons/obj/stationobjs.dmi'
+	icon_state = "handrail"
+	plane = ROOF_PLANE
+	density = 0
+	anchored = 1
+	can_buckle = 1
