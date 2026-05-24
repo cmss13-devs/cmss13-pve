@@ -62,3 +62,9 @@ endmap
 
 map _event5_golden_arrow
 endmap
+
+map _event7_alaska
+endmap
+
+map _event7_improvised_blackstone_bridge
+endmap

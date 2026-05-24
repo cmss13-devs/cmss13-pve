@@ -1,0 +1,9 @@
+{
+    "map_name": "Blackstone Bridge",
+    "map_path": "map_files/EVENTS",
+    "map_file": "_event7_Improvised_Blackstone_Bridge.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/alpha",
+    "weather_holder": "/datum/weather_ss_map_holder/lv759_hybrisa_prospera"
+}

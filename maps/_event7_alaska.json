@@ -1,0 +1,9 @@
+{
+    "map_name": "USS Alaska",
+    "map_path": "map_files/EVENTS",
+    "map_file": "_event7_alaska.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/rover/",
+    "platoon": "/datum/squad/marine/raider"
+}
