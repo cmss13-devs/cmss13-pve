@@ -11,6 +11,7 @@
 /obj/structure/bed/chair/tram
 	name = "bench"
 	desc = "A rusting tram bench. Sturdy enough to protect passengers from sudden changes in acceleration."
+	icon = 'icons/obj/furniture.dmi'
 	icon_state = "trambench"
 	color = "#FFFFFF"
 
@@ -50,3 +51,20 @@
 	desc = "A organic-breakdown machine that takes organic matter and turns it into a substance known simply as 'biomass' which it then automatically feeds into the storage tank next to it."
 	icon = 'icons/obj/machines/ds13/bpl.dmi'
 	icon_state = "biogen-empty"
+
+/obj/structure/shuttle
+	name = "shuttle"
+	icon = 'icons/turf/shuttle.dmi'
+
+/obj/structure/shuttle/window
+	name = "shuttle window"
+	icon = 'icons/obj/podwindows.dmi'
+	icon_state = "1"
+	density = 1
+	opacity = 0
+	anchored = 1
+
+/obj/structure/shuttle/window/pod
+	name = "escape pod window"
+	icon = 'icons/obj/podwindows2.dmi'
+	icon_state = "p_window"

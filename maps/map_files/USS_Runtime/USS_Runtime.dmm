@@ -17,6 +17,11 @@
 /obj/effect/landmark/start/requisition,
 /turf/open/floor/almayer/plating,
 /area/event)
+"f" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/turf/open/floor/almayer/plating,
+/area/event)
 "h" = (
 /obj/effect/landmark/start/police,
 /turf/open/floor/almayer/plating,
@@ -284,7 +289,7 @@ b
 b
 b
 b
-b
+f
 b
 b
 b
