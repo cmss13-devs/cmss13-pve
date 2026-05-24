@@ -1245,5 +1245,63 @@
 	autoname = TRUE
 
 
-/////Dead Space
+// Dead Space airlocks
 
+/obj/structure/machinery/door/airlock/ds
+	name = "\improper Secure Airlock"
+	icon = 'icons/obj/doors/station/door_medsec.dmi'
+	openspeed = 5
+	req_access = null
+	dir = SOUTH
+
+/obj/structure/machinery/door/airlock/ds/cargo
+
+/obj/structure/machinery/door/airlock/ds/civilian
+
+/obj/structure/machinery/door/airlock/ds/command
+
+/obj/structure/machinery/door/airlock/ds/engineering
+
+/obj/structure/machinery/door/airlock/ds/external
+	icon = 'icons/obj/doors/external/door.dmi'
+
+/obj/structure/machinery/door/airlock/ds/external/bolted
+	locked = TRUE
+
+/obj/structure/machinery/door/airlock/ds/external/glass
+	opacity = 0
+	glass = 1
+
+/obj/structure/machinery/door/airlock/ds/freezer
+
+/obj/structure/machinery/door/airlock/ds/hatch
+	icon = 'icons/obj/doors/hatch/door.dmi'
+
+/obj/structure/machinery/door/airlock/ds/maintenance
+
+/obj/structure/machinery/door/airlock/ds/medical
+
+/obj/structure/machinery/door/airlock/ds/virology
+
+/obj/structure/machinery/door/airlock/ds/mining
+
+/obj/structure/machinery/door/airlock/ds/multi_tile/civilian/tram
+	icon = 'icons/obj/doors/double/doortram.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/ds/civilian/tram
+	icon = 'icons/obj/doors/station/door_tram.dmi'
+	opacity = FALSE
+	glass = TRUE
+
+/obj/structure/machinery/door/airlock/ds/research
+
+/obj/structure/machinery/door/airlock/ds/security
+
+/obj/structure/machinery/door/airlock/ds/shuttle
+	icon = 'icons/obj/doors/external/pod.dmi'
+
+/obj/structure/machinery/door/airlock/ds/vault/engineering
+
+/obj/structure/machinery/door/airlock/ds/vault/security

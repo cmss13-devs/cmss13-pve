@@ -210,7 +210,7 @@
 /area/ishimura/upper/maintenance/aft_starboard)
 "acU" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Gym"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -339,7 +339,7 @@
 /area/ishimura/lower/misc/bathroom/fore/female)
 "aeA" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -470,7 +470,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/cargo/bay)
 "agC" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Sleep Block Commons"
 	},
@@ -608,7 +608,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Mining Director's Office Maintenance";
 	req_access = list(104)
 	},
@@ -931,7 +931,7 @@
 /area/ishimura/upper/maintenance/fore_port)
 "ams" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/engineering,
+/obj/structure/machinery/door/airlock/ds/engineering,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1322,7 +1322,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Bay"
 	},
 /turf/simulated/floor/dank/tech,
@@ -1949,7 +1949,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "aFj" = (
@@ -2009,7 +2009,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -2796,7 +2796,7 @@
 /area/ishimura/upper/engineering/atmospherics)
 "aQo" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_9_hatch";
 	name = "Escape Pod Door"
@@ -2875,7 +2875,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Bridge"
 	},
@@ -2886,7 +2886,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Bathroom"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -3042,7 +3042,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Hangar Entrance Hallway"
 	},
@@ -3140,7 +3140,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	dir = 8;
 	name = "Research Supply Storage Maintenance"
 	},
@@ -3238,7 +3238,7 @@
 	icon_state = "pdoor0";
 	id = "engine_monitoring"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Engine Airlock One"
 	},
@@ -3288,7 +3288,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/engineering/substation/crew)
 "aXT" = (
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "topdeck_airlock_outer";
@@ -3395,7 +3395,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Spare Storage"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -3490,7 +3490,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/mining/briefing)
 "baZ" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_1_berth_hatch";
@@ -3549,7 +3549,7 @@
 /area/ishimura/eva/prep)
 "bbG" = (
 /obj/effect/floor_decal/corner/grey/mono,
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	name = "Research Wing"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -4400,7 +4400,7 @@
 /area/ishimura/lower/cargo/bay)
 "bpG" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_3_hatch";
 	name = "Escape Pod Door"
@@ -4517,7 +4517,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Chief Security Officer's Office"
 	},
 /turf/simulated/floor/dank/hardwood/alt,
@@ -5475,7 +5475,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "eva_smes1_inner";
@@ -5709,7 +5709,7 @@
 /turf/simulated/floor/dank/golf_brown,
 /area/ishimura/lower/cargo/bay)
 "bKE" = (
-/obj/machinery/door/airlock/hatch,
+/obj/structure/machinery/door/airlock/ds/hatch,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ishimura/lower/cargo/disposals)
 "bKI" = (
@@ -5988,7 +5988,7 @@
 /area/ishimura/upper/security/checkpoint/ladders)
 "bNS" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -6002,7 +6002,7 @@
 /turf/simulated/open,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "bNT" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/dank/mono,
@@ -6064,7 +6064,7 @@
 /turf/simulated/floor/dank,
 /area/ishimura/eva)
 "bOV" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -6145,7 +6145,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Executive Quarters Checkpoint"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -6172,7 +6172,7 @@
 "bQi" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
 "bQv" = (
@@ -6393,7 +6393,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	dir = 8;
 	name = "Locker Room"
 	},
@@ -6746,7 +6746,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Lobby"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -6759,7 +6759,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Isolation Room Two"
 	},
@@ -7032,7 +7032,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -7098,7 +7098,7 @@
 	},
 /obj/structure/bed/chair{
 	dir = 4;
-	
+
 	},
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
@@ -7301,7 +7301,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Bartender's Quarters";
 	req_access = list(48)
 	},
@@ -7921,7 +7921,7 @@
 	icon_state = "tramwarning1";
 	dir = 5
 	},
-/obj/machinery/door/airlock/multi_tile/civilian/tram{
+/obj/structure/machinery/door/airlock/ds/multi_tile/civilian/tram{
 	name = "\improper Tram"
 	},
 /turf/simulated/open,
@@ -7968,7 +7968,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Bridge Officer's Bunks"
 	},
 /turf/simulated/floor/tiled/monotile{
@@ -8068,7 +8068,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Cafeteria Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -8152,7 +8152,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Janitor Closet";
 	req_access = list(6)
@@ -8249,7 +8249,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/lower/crew/hydroponics)
 "czM" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor/dank/mono,
 /area/ishimura/tramdeck/tram/station/forward)
 "czP" = (
@@ -8541,7 +8541,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Hangar Checkpoint"
 	},
 /turf/simulated/floor/dank/rectangles,
@@ -8594,7 +8594,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Gym Maintenance"
 	},
@@ -8687,7 +8687,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hangar Flight Reception"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -8747,7 +8747,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Bridge Entrance Hallway";
 	req_access = list()
@@ -8881,7 +8881,7 @@
 /area/ishimura/lower/cargo/bay)
 "cKe" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Abandoned Switching Station"
 	},
 /obj/structure/cable/green{
@@ -9049,7 +9049,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Men's Bathroom Maintenance"
 	},
@@ -9091,7 +9091,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/engineering/smes/engine)
 "cNs" = (
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Escape Hangar"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -9408,7 +9408,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "cSy" = (
@@ -9878,7 +9878,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Telecommunications Outer Airlock"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9966,7 +9966,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	name = "Cargo Lobby"
 	},
 /turf/simulated/floor/dank/grater,
@@ -10215,7 +10215,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	id_tag = "engi_bolt";
 	name = "Engine Monitoring Room"
@@ -10274,7 +10274,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -10422,7 +10422,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/tramdeck/tram/station/forward)
 "diz" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_7_berth_hatch";
@@ -10434,7 +10434,7 @@
 /area/ishimura/lower/maintenance/starboard)
 "diB" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -10512,7 +10512,7 @@
 	},
 /area/ishimura/upper/security/brig)
 "djF" = (
-/obj/machinery/door/airlock/freezer{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Cafeteria Freezer";
 	req_access = list(6)
@@ -10527,7 +10527,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/station/aft)
 "djM" = (
@@ -10758,7 +10758,7 @@
 /turf/simulated/floor/dank/heavy,
 /area/ishimura/tramdeck/switchingstation/lower)
 "dnP" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "dnU" = (
@@ -11025,7 +11025,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Bathroom Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -11510,7 +11510,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "dyV" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "ADS_airlock_inner";
@@ -11731,7 +11731,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Sleep Block C"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -11903,7 +11903,7 @@
 /turf/simulated/floor/dank/rivets,
 /area/ishimura/lower/engineering/storage_closet/air)
 "dFw" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Shower"
 	},
@@ -12472,7 +12472,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Large Storage Room Maintenance"
 	},
@@ -12631,7 +12631,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Lower Engineering Bay"
 	},
@@ -12748,7 +12748,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Spare Air Circulation Storage"
 	},
@@ -13241,7 +13241,7 @@
 /turf/simulated/floor/carpet/blue2,
 /area/ishimura/lower/crew/messhall/bar/quarters)
 "dZE" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_5_berth_hatch";
@@ -13388,7 +13388,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Bay"
 	},
 /turf/simulated/floor/dank/tech,
@@ -13632,7 +13632,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Fore Hallway Maintenance"
 	},
 /obj/structure/disposalpipe/segment,
@@ -13762,7 +13762,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 4;
 	name = "Bridge Security Checkpoint"
 	},
@@ -13798,7 +13798,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Bunk Room"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -14073,7 +14073,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Bathroom"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -14402,7 +14402,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ishimura/upper/engineering/tcomms)
 "ewt" = (
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Bioprosthetics Lab";
 	req_access = list();
 	req_one_access = list(2,3)
@@ -14536,7 +14536,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "E.V.A Deck Access"
 	},
@@ -14861,7 +14861,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "eBo" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Mid-Station Maintenance"
 	},
 /obj/structure/cable/green{
@@ -14987,7 +14987,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Evidence Lockup"
 	},
@@ -15202,7 +15202,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor,
@@ -15499,7 +15499,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Tool Storage Maintenance";
 	req_access = list(5)
@@ -15692,7 +15692,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Reception"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -15712,7 +15712,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Power Storage"
 	},
@@ -15930,7 +15930,7 @@
 "eRA" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -16045,7 +16045,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Hangar Control Hallway"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -16111,7 +16111,7 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/vault/engineering{
+/obj/structure/machinery/door/airlock/ds/vault/engineering{
 	name = "Hydrogen Tank Storage"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -17343,7 +17343,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Janitor Closet";
 	req_access = list(6)
@@ -17440,7 +17440,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "fpL" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Decommissioned Hydroponics Storage"
 	},
 /obj/item/taperoll/engineering/applied,
@@ -17525,7 +17525,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Security Reception";
 	req_one_access = list()
@@ -17645,7 +17645,7 @@
 /turf/simulated/floor/dank/hardwood/alt,
 /area/ishimura/lower/crew/sleepblock/executive/quarters/first_lieutenant)
 "ftp" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Mid-Station Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -17653,7 +17653,7 @@
 "ftq" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -18171,7 +18171,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Paint Storage"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -18397,7 +18397,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Engineering Bay Maintenance";
 	req_access = list(5)
 	},
@@ -18560,7 +18560,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
 "fIz" = (
@@ -18666,7 +18666,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Bridge Entrance Hallway";
 	req_access = list()
@@ -18926,7 +18926,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite Decontamination Airlock"
 	},
@@ -19177,7 +19177,7 @@
 /obj/structure/machinery/door/firedoor,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -19512,7 +19512,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ishimura/upper/engineering/tcomms)
 "gbm" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/ishimura/lower/mining/shuttlebay/starboard)
@@ -19527,7 +19527,7 @@
 "gbH" = (
 /obj/structure/girder/displaced,
 /obj/structure/foamedmetal,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "gbI" = (
@@ -19612,7 +19612,7 @@
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -19624,7 +19624,7 @@
 /obj/structure/pipes/standard/simple/hidden/red{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Atmospherics"
 	},
@@ -19743,7 +19743,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Janitor Closet Maintenance";
 	req_access = list(1,6)
 	},
@@ -19933,7 +19933,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Meeting Room"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -20301,7 +20301,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/freezer{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Executive Freezer"
 	},
@@ -20541,7 +20541,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Women's Bathroom"
 	},
@@ -20606,7 +20606,7 @@
 	},
 /area/shuttle/escape_pod1/station)
 "gqZ" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Power Storage Maintenance"
 	},
@@ -20964,7 +20964,7 @@
 /turf/simulated/floor/dank/rectangles,
 /area/ishimura/lower/security/escape)
 "gxq" = (
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Machining Room Storage"
 	},
 /turf/simulated/floor,
@@ -21032,7 +21032,7 @@
 /turf/simulated/floor/dank/slides,
 /area/ishimura/upper/misc/hallway/fore)
 "gys" = (
-/obj/machinery/door/airlock/engineering,
+/obj/structure/machinery/door/airlock/ds/engineering,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -21090,7 +21090,7 @@
 	},
 /area/ishimura/lower/crew/hydroponics)
 "gzu" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Shower"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -21610,7 +21610,7 @@
 /turf/simulated/floor/dank/rivets,
 /area/ishimura/upper/engineering/engine_room)
 "gIv" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Midship Maintenance"
 	},
 /obj/structure/cable/green{
@@ -21627,7 +21627,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "gIw" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
 "gIz" = (
@@ -21676,7 +21676,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	id_tag = "engi_bolt";
 	name = "Engine Monitoring Room"
@@ -21691,7 +21691,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/crew/messhall)
 "gJm" = (
-/obj/machinery/door/airlock/external/bolted,
+/obj/structure/machinery/door/airlock/ds/external/bolted,
 /turf/simulated/floor/plating,
 /area/ishimura/lower/maintenance/starboard)
 "gJu" = (
@@ -21859,7 +21859,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Escape Lounge"
 	},
@@ -21880,7 +21880,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Hangar Flight Reception"
 	},
@@ -21943,7 +21943,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/upper/misc/hangar/reception)
 "gOa" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Mid-Station Maintenance"
 	},
 /obj/structure/cable/green{
@@ -21959,7 +21959,7 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/vault/engineering{
+/obj/structure/machinery/door/airlock/ds/vault/engineering{
 	name = "Nitrous Oxide Storage"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -22005,7 +22005,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite"
 	},
@@ -22153,7 +22153,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "eva_smes2_outer";
@@ -22321,7 +22321,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Security Reception Station"
 	},
@@ -22344,7 +22344,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/security/checkpoint/crew)
 "gVG" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Smoking Lounge"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -22372,7 +22372,7 @@
 /turf/simulated/floor/dank/maint_left,
 /area/ishimura/upper/security/brig)
 "gVP" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -22402,7 +22402,7 @@
 /area/ishimura/lower/misc/bathroom/aft)
 "gWi" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hydroponics Bay";
 	req_access = list(6)
 	},
@@ -22956,7 +22956,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Sleep Block Commons Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -22970,7 +22970,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "eva_smes3_inner";
@@ -23002,7 +23002,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Breakroom Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -23011,7 +23011,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Bioprosthetics Lab";
 	req_access = list();
 	req_one_access = list(2,3)
@@ -23125,7 +23125,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/tramdeck/tram/station/aft)
 "hiv" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Garbage Pit"
 	},
 /turf/simulated/floor/plating,
@@ -23334,7 +23334,7 @@
 	icon_state = "shutter0";
 	id = "armory_main"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 4;
 	name = "Primary Armory";
 	req_access = list(2)
@@ -23359,7 +23359,7 @@
 "hma" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8;
-	
+
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
@@ -23378,7 +23378,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Sleep Block A"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -23612,7 +23612,7 @@
 /area/ishimura/lower/crew/messhall)
 "hoz" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Abandoned Switching Station"
 	},
 /turf/simulated/open,
@@ -23913,7 +23913,7 @@
 /turf/simulated/floor/dank/bathr,
 /area/ishimura/lower/misc/bathroom/fore/female)
 "hsK" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Escape Wing"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -24048,7 +24048,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Cyrogenic Isolation"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -24074,7 +24074,7 @@
 /turf/simulated/floor/dank/golf_gray,
 /area/ishimura/lower/engineering/storage_closet/electronics)
 "hwu" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Mid-Station Maintenance"
 	},
 /obj/structure/cable/green{
@@ -24316,7 +24316,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Escape Wing Maintenance"
 	},
@@ -24426,7 +24426,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Repair Supply Storage"
 	},
@@ -24441,7 +24441,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/vault/security{
+/obj/structure/machinery/door/airlock/ds/vault/security{
 	name = "Emergency Armory"
 	},
 /obj/machinery/door/blast/shutters{
@@ -24941,7 +24941,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/misc/observationroom)
 "hIs" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Stall"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -24968,7 +24968,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "eva_smes3_outer";
@@ -25094,7 +25094,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Escape Hangar"
 	},
 /turf/simulated/floor/dank/hardwood/alt,
@@ -25605,7 +25605,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/upper/security/brig)
 "hTC" = (
-/obj/machinery/door/airlock/hatch{
+/obj/structure/machinery/door/airlock/ds/hatch{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile{
@@ -25779,7 +25779,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Brig Supply Room"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -25809,7 +25809,7 @@
 /area/ishimura/lower/engineering/bay)
 "hWL" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_1_hatch";
 	name = "Escape Pod Door"
@@ -25846,7 +25846,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "hXU" = (
@@ -25952,7 +25952,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Secondary Supply Storage"
 	},
@@ -26105,7 +26105,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Machining Room Storage"
 	},
 /turf/simulated/floor/tiled,
@@ -26171,7 +26171,7 @@
 "ibC" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -26944,7 +26944,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Crew Quarters Checkpoint"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -27390,14 +27390,14 @@
 	icon_state = "pdoor0";
 	id = "engine_monitoring"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engine SMES Room"
 	},
 /turf/simulated/floor,
 /area/ishimura/upper/engineering/smes/engine)
 "iuO" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "EVA Equipment Prep"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -27449,7 +27449,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Hangar Flight Reception"
 	},
@@ -27478,7 +27478,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Machining Room"
 	},
@@ -27527,7 +27527,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -28137,7 +28137,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Power Storage"
 	},
 /turf/simulated/floor/plating,
@@ -28461,7 +28461,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Foreman's Office Maintenance";
 	req_access = list(56)
@@ -28508,7 +28508,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite"
 	},
@@ -28596,7 +28596,7 @@
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "topdeck_airlock_inner";
@@ -28803,7 +28803,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Bridge"
 	},
@@ -29159,7 +29159,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	dir = 8;
 	name = "Chemistry"
 	},
@@ -29395,7 +29395,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underaftmaintenance)
 "iWr" = (
-/obj/machinery/door/airlock/vault/security{
+/obj/structure/machinery/door/airlock/ds/vault/security{
 	dir = 8;
 	name = "Secondary Armory"
 	},
@@ -29430,7 +29430,7 @@
 	},
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8;
-	
+
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ishimura/upper/engineering/tcomms)
@@ -29853,7 +29853,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hangar Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -29932,7 +29932,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/vault/security{
+/obj/structure/machinery/door/airlock/ds/vault/security{
 	dir = 8;
 	name = "Secondary Armory"
 	},
@@ -29988,7 +29988,7 @@
 /obj/structure/pipes/standard/simple/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Airlock Pressure Room"
 	},
@@ -30023,7 +30023,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Power Storage Maintenance"
 	},
@@ -30134,7 +30134,7 @@
 /turf/simulated/wall/r_wall,
 /area/ishimura/upper/maintenance/central)
 "jfT" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/switchingstation/lower)
 "jfU" = (
@@ -30277,7 +30277,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -30434,7 +30434,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Airlock Pressure Room"
 	},
@@ -30800,7 +30800,7 @@
 /turf/simulated/open,
 /area/ishimura/tramdeck/tram/tunnel)
 "jtO" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Smoking Lounge"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -30819,7 +30819,7 @@
 /turf/simulated/open,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jtZ" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -31000,7 +31000,7 @@
 	},
 /area/ishimura/lower/crew/messhall)
 "jxV" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Cryogenic Storage"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -31237,7 +31237,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Cafeteria"
 	},
 /turf/simulated/floor/lino,
@@ -31350,7 +31350,7 @@
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "jEq" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Shuttle Bay One";
 	req_access = list();
 	req_one_access = list(46,2,3,4)
@@ -31429,7 +31429,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Temporary Waste Storage"
 	},
 /turf/simulated/floor/dank/grater,
@@ -31552,7 +31552,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Medical Security Station"
 	},
@@ -31971,7 +31971,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 1;
 	id_tag = "interrogation";
 	name = "Interrogation Room"
@@ -32046,7 +32046,7 @@
 /turf/simulated/open,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jNC" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_9_berth_hatch";
@@ -32146,7 +32146,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Cryogenic Storage Maintenance"
 	},
 /obj/structure/disposalpipe/segment,
@@ -32271,7 +32271,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 1;
 	id_tag = "sec_ent_outer";
 	name = "Security Entrance"
@@ -32385,7 +32385,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Spare Engineering Supplies Maintenance"
 	},
@@ -33038,7 +33038,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Escape Wing"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -33090,7 +33090,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 4;
 	name = "Bridge Security Checkpoint"
 	},
@@ -33108,7 +33108,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "kep" = (
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	id_tag = "sec_ent_inner";
 	name = "Security Entrance"
@@ -33328,7 +33328,7 @@
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Paint Storage Maintenance"
 	},
 /obj/structure/cable/green{
@@ -33356,7 +33356,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 1;
 	id_tag = null;
 	name = "Interrogation Observation Room"
@@ -33517,7 +33517,7 @@
 /turf/simulated/floor/shuttle/pod,
 /area/shuttle/escape_pod2/station)
 "kkV" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
@@ -33604,7 +33604,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Security Reception";
 	req_one_access = list()
@@ -33758,7 +33758,7 @@
 	icon_state = "shutter0";
 	id = "armory_main"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 4;
 	name = "Primary Armory";
 	req_access = list(2)
@@ -33997,7 +33997,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	id_tag = "med_exit";
 	name = "Clinic Main Entrance";
@@ -34043,7 +34043,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/ishimura/external/channel/first)
 "ktT" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Tram Control Office"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -34096,7 +34096,7 @@
 "kuT" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -34165,7 +34165,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite Decontamination Airlock"
 	},
@@ -34223,7 +34223,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hydroponics Storage";
 	req_access = list(6)
 	},
@@ -34449,7 +34449,7 @@
 	icon_state = "tramwarning4";
 	dir = 5
 	},
-/obj/machinery/door/airlock/multi_tile/civilian/tram{
+/obj/structure/machinery/door/airlock/ds/multi_tile/civilian/tram{
 	name = "\improper Tram"
 	},
 /turf/simulated/open,
@@ -34495,7 +34495,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Executive Quarters Checkpoint Maintenance";
 	req_access = list(2)
@@ -34520,7 +34520,7 @@
 /area/ishimura/lower/misc/hallway/aft)
 "kBI" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_4_hatch";
 	name = "Escape Pod Door"
@@ -34927,7 +34927,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/upper/misc/breakroom)
 "kJu" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "kJB" = (
@@ -35111,7 +35111,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/maintenance/fore_central)
 "kLB" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Midship Maintenance"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -35125,7 +35125,7 @@
 /turf/simulated/floor/dank/hardwood/alt,
 /area/ishimura/lower/crew/sleepblock/executive/quarters/captain)
 "kLQ" = (
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Bioprosthetics Lab";
 	req_access = list();
 	req_one_access = list(2,3)
@@ -35192,7 +35192,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/maintenance/aft_port)
 "kNj" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Garbage Pit"
 	},
 /turf/simulated/floor/plating,
@@ -36134,7 +36134,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Atmospherics"
 	},
@@ -36692,7 +36692,7 @@
 	icon_state = "trammiddle";
 	dir = 5
 	},
-/obj/machinery/door/airlock/civilian/tram{
+/obj/structure/machinery/door/airlock/ds/civilian/tram{
 	dir = 4;
 	name = "Tram Maintenance Compartment";
 	req_access = list(5)
@@ -36718,7 +36718,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ishimura/upper/engineering/atmospherics)
 "lop" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Observation Room Maintenance"
 	},
@@ -37423,7 +37423,7 @@
 /area/ishimura/upper/misc/escape)
 "lzd" = (
 /obj/structure/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	name = "Biolab"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -37952,7 +37952,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ishimura/eva/ADS)
 "lEF" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/simulated/floor,
@@ -37968,7 +37968,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Hub Room"
 	},
@@ -38048,7 +38048,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Sleep Block Commons Maintenance"
 	},
@@ -38345,7 +38345,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Engineering Lobby Maintenance";
 	req_access = list(5)
@@ -38647,7 +38647,7 @@
 /turf/simulated/floor/dank/grater,
 /area/ishimura/lower/misc/hallway/escape_executive)
 "lPe" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Small Storage Room"
 	},
 /obj/structure/cable/green{
@@ -38673,7 +38673,7 @@
 /turf/simulated/floor/dank/bathr,
 /area/ishimura/lower/misc/bathroom/fore/male)
 "lPo" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 4
 	},
 /obj/structure/cable/white{
@@ -38702,7 +38702,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	dir = 8;
 	name = "Research Supply Storage"
 	},
@@ -38761,7 +38761,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "lQR" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Clinic";
 	req_access = newlist()
 	},
@@ -38817,7 +38817,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Bunk Room"
 	},
@@ -38954,7 +38954,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Port Substation"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -39005,7 +39005,7 @@
 /turf/simulated/open,
 /area/ishimura/tramdeck/tram/tunnel)
 "lVz" = (
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "ADS_airlock_outer";
@@ -39069,7 +39069,7 @@
 /area/ishimura/upper/maintenance/fore_central)
 "lWI" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Observation Room Maintenance"
 	},
@@ -39137,7 +39137,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Escape Wing Maintenance"
 	},
@@ -39147,7 +39147,7 @@
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/vault/engineering{
+/obj/structure/machinery/door/airlock/ds/vault/engineering{
 	name = "Carbon Dioxide Storage"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -39170,7 +39170,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Hangar Control Room Two"
 	},
@@ -39233,7 +39233,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Auxillary Atmospheric Storage"
 	},
 /turf/simulated/floor/dank/heavy,
@@ -39380,7 +39380,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/misc/abandon_surgery)
 "mcp" = (
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Escape Hangar"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -39760,7 +39760,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /obj/structure/catwalk,
@@ -40029,7 +40029,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Large Storage Room Maintenance"
 	},
@@ -40115,7 +40115,7 @@
 /area/ishimura/upper/command/bridge)
 "moC" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hangar Entrance Hallway"
 	},
 /turf/simulated/floor/dank/rectangles,
@@ -40488,7 +40488,7 @@
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "mrT" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -40846,7 +40846,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "mxm" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Tram Control Office"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -40880,7 +40880,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Foreman's Office"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -40890,7 +40890,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/mining/mining_bay)
 "mxD" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Stall"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -41316,7 +41316,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "mEz" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 1;
 	id_tag = "sec_ent_outer";
 	name = "Security Entrance"
@@ -41487,7 +41487,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "mGj" = (
@@ -41683,7 +41683,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/crew/sleepblock/executive)
 "mKh" = (
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	locked = 1;
 	name = "Disused Security Post"
 	},
@@ -42047,7 +42047,7 @@
 /area/ishimura/upper/engineering/hub)
 "mPn" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /turf/simulated/open,
@@ -42062,7 +42062,7 @@
 /turf/simulated/floor/dank/bathr,
 /area/ishimura/upper/misc/bathroom)
 "mPF" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Observation Room Maintenance"
 	},
@@ -42323,7 +42323,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Bay"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -42661,7 +42661,7 @@
 /obj/structure/machinery/portable_atmospherics/canister/sleeping_agent,
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8;
-	
+
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ishimura/upper/engineering/atmospherics/storage)
@@ -42779,7 +42779,7 @@
 "naM" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "naS" = (
@@ -42874,7 +42874,7 @@
 /turf/simulated/floor/dank/slides,
 /area/ishimura/upper/engineering/prep)
 "ncR" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_6_berth_hatch";
@@ -42920,7 +42920,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	id_tag = "sec_ent_inner";
 	name = "Security Entrance"
@@ -43485,7 +43485,7 @@
 /turf/simulated/floor/dank/medical,
 /area/ishimura/upper/medical/surgery/one)
 "nll" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "nlA" = (
@@ -43885,7 +43885,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hydroponics Bay";
 	req_access = list(6)
 	},
@@ -44396,7 +44396,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Kitchen";
 	req_access = list(47)
@@ -44464,7 +44464,7 @@
 /turf/simulated/floor/dank/grater,
 /area/ishimura/upper/security/brig)
 "nzx" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Smoking Lounge"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -44781,7 +44781,7 @@
 /turf/simulated/wall/r_wall,
 /area/ishimura/lower/misc/bathroom/fore/female)
 "nEd" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Decommissioned Hydroponics Storage"
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -44853,7 +44853,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "nFj" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_2_hatch";
 	name = "Escape Pod Door"
@@ -45066,7 +45066,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ishimura/upper/research)
 "nKp" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -45123,7 +45123,7 @@
 /area/ishimura/lower/crew/messhall)
 "nLu" = (
 /obj/structure/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	name = "Biolab"
 	},
 /turf/simulated/floor/tiled/white/monotile,
@@ -45467,7 +45467,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/maintenance/starboard)
 "nQH" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /turf/simulated/floor/tiled/monotile{
 	incorruptible = 1
 	},
@@ -45654,7 +45654,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Bartender's Quarters";
 	req_access = list(48)
@@ -46231,7 +46231,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	dir = 8;
 	name = "Chief Science Officer's Office"
 	},
@@ -46315,7 +46315,7 @@
 "ofh" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Midship Maintenance"
 	},
 /obj/structure/cable/green{
@@ -46560,7 +46560,7 @@
 /turf/simulated/floor/dank/rivets,
 /area/ishimura/upper/engineering/hub)
 "ojI" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "ojN" = (
@@ -46585,7 +46585,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -46691,7 +46691,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/maintenance/fore_port)
 "omi" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	name = "Executive Shuttle Airlock"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -47577,7 +47577,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -47603,7 +47603,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Escape Lounge"
 	},
@@ -47798,7 +47798,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Women's Bathroom Maintenance"
 	},
@@ -48011,7 +48011,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ishimura/upper/medical)
 "oDx" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_8_berth_hatch";
@@ -48208,7 +48208,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Lower Engineering Bay"
 	},
@@ -48244,7 +48244,7 @@
 /area/ishimura/lower/mining/shuttle/two)
 "oHm" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_8_hatch";
 	name = "Escape Pod Door"
@@ -48263,7 +48263,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Engineering Bay Maintenance";
 	req_access = list(5)
 	},
@@ -48572,7 +48572,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hangar Maintenance"
 	},
@@ -48751,7 +48751,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Shuttle Bay One";
 	req_access = list();
 	req_one_access = list(46,2,3,4)
@@ -49180,7 +49180,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Spare Electronics Storage"
 	},
@@ -49226,7 +49226,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "oXy" = (
-/obj/machinery/door/airlock/hatch{
+/obj/structure/machinery/door/airlock/ds/hatch{
 	dir = 8
 	},
 /obj/structure/cable{
@@ -49260,7 +49260,7 @@
 /area/ishimura/upper/engineering/bay)
 "oXN" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -49438,7 +49438,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/maintenance/starboard)
 "oZG" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/foremaintenance)
 "oZM" = (
@@ -49677,7 +49677,7 @@
 /turf/simulated/floor/reinforced,
 /area/space)
 "pdX" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Shower"
 	},
@@ -49761,7 +49761,7 @@
 /area/ishimura/upper/security/forensics)
 "pfd" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -50192,7 +50192,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	id_tag = "med_exit";
 	name = "Clinic Main Entrance";
@@ -50421,7 +50421,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Security Station Maintenance";
 	req_access = list(2)
 	},
@@ -50589,7 +50589,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite Decontamination Airlock"
 	},
@@ -50934,7 +50934,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/ishimura/lower/crew/messhall/kitchen/freezer)
 "puJ" = (
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	dir = 8;
 	name = "Research Wing"
 	},
@@ -51281,7 +51281,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "pyD" = (
-/obj/machinery/door/airlock/maintenance,
+/obj/structure/machinery/door/airlock/ds/maintenance,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -51368,7 +51368,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "First Lieutenant's Quarters";
 	req_one_access = list(57)
 	},
@@ -51564,7 +51564,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "pDD" = (
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	name = "Research Wing"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -51743,7 +51743,7 @@
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "pFQ" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Bay"
 	},
 /turf/simulated/floor/dank/tech{
@@ -51845,7 +51845,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Hangar Entrance Hallway"
 	},
@@ -51898,7 +51898,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Aft Hallway Maintenance"
 	},
@@ -52063,7 +52063,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/vault/engineering{
+/obj/structure/machinery/door/airlock/ds/vault/engineering{
 	name = "Telecommunications"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -52146,7 +52146,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Ladder Security Station"
 	},
@@ -52687,7 +52687,7 @@
 /obj/structure/catwalk,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -53101,7 +53101,7 @@
 "qco" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/undertunnel/uttt)
 "qct" = (
@@ -53464,7 +53464,7 @@
 /turf/simulated/wall/r_wall,
 /area/ishimura/lower/engineering/airlock/one)
 "qkz" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/machinery/door/firedoor/border_only,
 /turf/simulated/floor/dank/rectangles,
 /area/ishimura/lower/crew/messhall)
@@ -53731,7 +53731,7 @@
 /turf/simulated/floor/dank/rivets,
 /area/ishimura/upper/security/checkpoint/hangar)
 "qow" = (
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 1;
 	name = "Forensics Lab"
 	},
@@ -53860,7 +53860,7 @@
 	icon_state = "pdoor0";
 	id = "engine_monitoring"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Engine Airlock Two"
 	},
@@ -54047,7 +54047,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "qsr" = (
-/obj/machinery/door/airlock/research{
+/obj/structure/machinery/door/airlock/ds/research{
 	name = "Protective Suit Storage"
 	},
 /obj/structure/machinery/door/firedoor,
@@ -54102,7 +54102,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Equipment Room"
 	},
 /turf/simulated/floor/dank/grater,
@@ -54189,7 +54189,7 @@
 /area/ishimura/tramdeck/tram/misc/auxcargostor)
 "quD" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	name = "Cargo Lobby";
 	req_access = list()
 	},
@@ -54414,7 +54414,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/research/storage)
 "qya" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/tunnel)
 "qyb" = (
@@ -54507,7 +54507,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "qzq" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_6_hatch";
 	name = "Escape Pod Door"
@@ -54553,7 +54553,7 @@
 /turf/simulated/floor/dank/hardwood/alt,
 /area/ishimura/upper/medical/senior_medical_office)
 "qAM" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underaftmaintenance)
 "qAP" = (
@@ -54615,7 +54615,7 @@
 /turf/simulated/floor/dank/golf_brown,
 /area/ishimura/lower/security/escape)
 "qBM" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Midship Maintenance"
 	},
 /turf/simulated/floor,
@@ -54650,7 +54650,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Spare Battery Storage"
 	},
@@ -54975,7 +54975,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/pipes/standard/simple/hidden,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "EVA Equipment Prep"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -55232,7 +55232,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	name = "Disposals Room"
 	},
 /turf/simulated/floor/dank/grater,
@@ -55328,7 +55328,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	name = "Supply Officer's Office";
 	req_access = list(103)
 	},
@@ -55490,7 +55490,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	dir = 8;
 	name = "Locker Room"
 	},
@@ -56503,7 +56503,7 @@
 /turf/simulated/floor/dank/slides,
 /area/ishimura/lower/crew/messhall)
 "reG" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Tram Control Office"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -56544,7 +56544,7 @@
 /area/ishimura/upper/maintenance/central)
 "rfo" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Escape Hangar"
 	},
 /turf/simulated/floor/dank/hardwood/alt,
@@ -57175,7 +57175,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underaftmaintenance)
 "rpA" = (
@@ -57445,7 +57445,7 @@
 /area/ishimura/lower/security/checkpoint/executive)
 "rtw" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Shuttle Bay Two";
 	req_access = list();
 	req_one_access = list(46,2,3,4)
@@ -57469,7 +57469,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	dir = 8;
 	name = "Cargo Bay"
 	},
@@ -57522,7 +57522,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Secondary Supply Storage"
 	},
 /turf/simulated/floor/tiled/monotile{
@@ -57754,7 +57754,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Escape Lounge Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -57814,7 +57814,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Security Maintenance";
 	req_access = list(2)
 	},
@@ -58039,7 +58039,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Engineering Port Substation Maintenance";
 	req_access = list(5)
 	},
@@ -58182,7 +58182,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Engineering Security Station"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -58211,7 +58211,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/freezer{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Cafeteria Freezer"
 	},
@@ -58287,7 +58287,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Executive Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -58321,7 +58321,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hangar Entrance Hallway"
 	},
 /turf/simulated/floor/dank/rectangles,
@@ -58521,7 +58521,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Isolation Wing"
 	},
@@ -58737,7 +58737,7 @@
 "rOH" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -58774,7 +58774,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Breakroom"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -58784,7 +58784,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/security/escape/one)
 "rPa" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Shower"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -58915,7 +58915,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Quarantine Room One"
 	},
@@ -59117,7 +59117,7 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Secondary Supply Storage Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -59136,7 +59136,7 @@
 "rUZ" = (
 /obj/structure/pipes/vents/scrubber/on{
 	dir = 8;
-	
+
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ishimura/upper/engineering/atmospherics/storage)
@@ -59225,7 +59225,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Security Station Maintenance";
 	req_access = list(2)
 	},
@@ -59589,7 +59589,7 @@
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "sbU" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Executive Cafeteria"
 	},
 /turf/simulated/floor/lino,
@@ -59901,7 +59901,7 @@
 /area/ishimura/lower/crew/sleepblock/a)
 "sgu" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Observation Room Maintenance"
 	},
@@ -59948,7 +59948,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/undermidmaintenance)
 "sgT" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Bay"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -60177,7 +60177,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Mining Bay Maintenance";
 	req_access = list(46)
@@ -60202,7 +60202,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ishimura/upper/medical)
 "slL" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_4_berth_hatch";
@@ -60230,7 +60230,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	name = "Autopsy Room";
 	req_access = list();
@@ -60864,7 +60864,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Breakroom"
 	},
 /turf/simulated/floor/dank/rectangles,
@@ -61878,7 +61878,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Janitor Closet Maintenance";
 	req_access = list(1,6)
 	},
@@ -62132,7 +62132,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Men's Bathroom"
 	},
@@ -62177,7 +62177,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ishimura/lower/cargo/disposals)
 "sVo" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "topdeck_airlock_inner";
@@ -62511,7 +62511,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Chief Engineer's Office"
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -63159,13 +63159,13 @@
 	},
 /area/ishimura/upper/misc/hallway/fore)
 "tkM" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/station/aft)
 "tkS" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -63345,7 +63345,7 @@
 	},
 /area/ishimura/lower/mining/mining_bay)
 "tnd" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Tram Control Office"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -63546,7 +63546,7 @@
 /turf/simulated/wall/r_wall/hull,
 /area/ishimura/tramdeck/tram/undertunnel/underaftmaintenance)
 "tqp" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_3_berth_hatch";
@@ -63692,7 +63692,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	name = "Senior Medical Officer's Office";
 	req_access = newlist();
@@ -63987,7 +63987,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "eva_smes1_outer";
@@ -64489,7 +64489,7 @@
 	},
 /area/ishimura/lower/misc/hallway/escape_executive)
 "tHH" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -64872,7 +64872,7 @@
 /area/ishimura/upper/misc/janitorcloset/aft)
 "tPp" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Brig Supply Room"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -65142,7 +65142,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "tUN" = (
-/obj/machinery/door/airlock/virology{
+/obj/structure/machinery/door/airlock/ds/freezer{
 	dir = 8;
 	name = "Quarantine Suite Decontamination Airlock"
 	},
@@ -65154,7 +65154,7 @@
 "tUV" = (
 /obj/structure/bed/chair{
 	dir = 4;
-	
+
 	},
 /turf/simulated/floor/dank/heavy,
 /area/ishimura/tramdeck/switchingstation/lower)
@@ -65254,7 +65254,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Surgical Suite One";
 	req_access = list();
 	req_one_access = list(2,13)
@@ -65484,13 +65484,13 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Bunk Room"
 	},
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/crew/sleepblock/executive/quarters/bridge_officers)
 "tZx" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 8;
 	frequency = 1380;
 	id_tag = "eva_smes2_inner";
@@ -65528,7 +65528,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Power Storage Maintenance"
 	},
@@ -65735,7 +65735,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Sleep Block Commons"
 	},
@@ -65746,7 +65746,7 @@
 /area/ishimura/lower/crew/sleepblock/commons)
 "udM" = (
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Hangar Flight Reception"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -65828,7 +65828,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -65923,7 +65923,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Bathroom"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -66001,7 +66001,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hyrdoponics Bay Maintenance";
 	req_access = list(6)
 	},
@@ -66204,7 +66204,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Hub Room"
 	},
@@ -66325,7 +66325,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/misc/janitorcloset/aft)
 "umQ" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/ishimura/lower/mining/shuttlebay/port)
@@ -66620,7 +66620,7 @@
 /area/ishimura/upper/misc/hangar)
 "ura" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -66767,7 +66767,7 @@
 /area/ishimura/tramdeck/switchingstation/lower)
 "uty" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_7_hatch";
 	name = "Escape Pod Door"
@@ -66900,7 +66900,7 @@
 /turf/simulated/floor/airless,
 /area/ishimura/eva/solar)
 "uvE" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Decommissioned Hydroponics Storage"
 	},
 /obj/item/taperoll/engineering/applied,
@@ -67800,7 +67800,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -67916,7 +67916,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Bathroom"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -67973,7 +67973,7 @@
 "uJZ" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
 /turf/simulated/open,
@@ -68374,7 +68374,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -68717,7 +68717,7 @@
 "uWK" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Medical Supply Storage";
 	req_access = list();
 	req_one_access = list(2,3)
@@ -68868,7 +68868,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 4;
 	name = "Hydroponics Bay";
 	req_access = list(6)
@@ -68942,7 +68942,7 @@
 /turf/simulated/floor/reinforced,
 /area/ishimura/hull)
 "vaq" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Stall"
 	},
@@ -68961,7 +68961,7 @@
 	},
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/vault/engineering{
+/obj/structure/machinery/door/airlock/ds/vault/engineering{
 	name = "Spare Tank Storage"
 	},
 /obj/machinery/door/blast/shutters{
@@ -69030,7 +69030,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Engineering Equipment Room"
 	},
 /turf/simulated/floor/dank/grater,
@@ -69137,7 +69137,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor,
@@ -69341,7 +69341,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Isolation Room One"
 	},
@@ -69368,7 +69368,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/engineering/airlock/one)
 "vfN" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	frequency = 1380;
 	hackProof = 1;
 	id_tag = "escape_pod_7_berth_hatch";
@@ -69399,7 +69399,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -69945,7 +69945,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	dir = 8;
 	name = "Cargo Bay"
 	},
@@ -70127,7 +70127,7 @@
 /area/ishimura/upper/maintenance/fore_central)
 "vss" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Auxillary Atmospheric Storage"
 	},
 /turf/simulated/floor/dank/heavy,
@@ -70139,7 +70139,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/upper/misc/hallway/escape)
 "vsY" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "vta" = (
@@ -70179,7 +70179,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "vtw" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Smoking Lounge"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
@@ -70267,7 +70267,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Processing Room"
 	},
 /obj/structure/disposalpipe/segment,
@@ -70335,7 +70335,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Sleep Block B"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -70357,7 +70357,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Changing Room";
 	req_access = list();
 	req_one_access = list(2,3)
@@ -70507,7 +70507,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -70775,7 +70775,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ishimura/upper/engineering/spare_storage/starboard)
 "vBL" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	name = "Executive Shuttle Airlock"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -70893,7 +70893,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Shuttle Bay Two";
 	req_access = list();
 	req_one_access = list(46,2,3,4)
@@ -70901,7 +70901,7 @@
 /turf/simulated/floor/dank/tech,
 /area/ishimura/lower/mining/shuttlebay/starboard)
 "vCZ" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /obj/structure/cable/yellow{
 	d1 = 1;
 	d2 = 2;
@@ -70928,7 +70928,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	name = "Clinic Reception";
 	req_access = list();
@@ -70966,7 +70966,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	dir = 8;
 	name = "Engineering  Security Station"
 	},
@@ -71020,7 +71020,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Surgical Suite Two";
 	req_access = list();
 	req_one_access = list(2,13)
@@ -71193,7 +71193,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Crew Quarters Checkpoint Maintenance";
 	req_access = list(2)
@@ -71527,7 +71527,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/tramdeck/tram/undertunnel/utama)
 "vMh" = (
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	dir = 8;
 	name = "Cargo Bay"
 	},
@@ -72161,7 +72161,7 @@
 /obj/structure/machinery/door/firedoor{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Quarantine Room Two"
 	},
@@ -72252,7 +72252,7 @@
 "vWV" = (
 /obj/structure/bed/chair{
 	dir = 4;
-	
+
 	},
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
@@ -72284,7 +72284,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Engine Airlock Two"
 	},
@@ -72316,7 +72316,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	name = "Clinic";
 	req_access = newlist()
 	},
@@ -72412,7 +72412,7 @@
 /area/shuttle/escape_pod7/station)
 "vZt" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8
 	},
 /obj/structure/pipes/standard/simple/hidden{
@@ -72528,7 +72528,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hallway Maintenance"
 	},
@@ -72609,7 +72609,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Hangar Security Maintenance";
 	req_access = list(2)
@@ -72834,7 +72834,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Medical Reception Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -72871,7 +72871,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/lower/misc/observationroom)
 "wfs" = (
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	d1 = 1;
@@ -72992,7 +72992,7 @@
 /area/ishimura/upper/medical)
 "wib" = (
 /obj/effect/floor_decal/pod,
-/obj/machinery/door/airlock/shuttle{
+/obj/structure/machinery/door/airlock/ds/shuttle{
 	frequency = 1380;
 	id_tag = "escape_pod_5_hatch";
 	name = "Escape Pod Door"
@@ -73213,7 +73213,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -73636,7 +73636,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/medical{
+/obj/structure/machinery/door/airlock/ds/medical{
 	dir = 8;
 	name = "Clinic Reception";
 	req_access = list();
@@ -73741,7 +73741,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	name = "Captain's Quarters";
 	req_access = newlist();
 	req_one_access = list(100)
@@ -74316,7 +74316,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Machining Room"
 	},
@@ -74465,7 +74465,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Engineering Breakroom Maintenance";
 	req_access = list(5)
@@ -74490,7 +74490,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Executive Quarters"
 	},
@@ -74584,7 +74584,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "wHy" = (
@@ -74803,7 +74803,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -74901,7 +74901,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	dir = 8;
 	name = "Engine Airlock One"
 	},
@@ -75161,7 +75161,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/mining{
+/obj/structure/machinery/door/airlock/ds/mining{
 	name = "Mining Director's Office"
 	},
 /obj/machinery/door/blast/shutters/open{
@@ -75611,7 +75611,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/upper/security/forensics)
 "wYB" = (
-/obj/machinery/door/airlock/external{
+/obj/structure/machinery/door/airlock/ds/external{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "ADS_airlock_inner";
@@ -76076,7 +76076,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Laundry Room"
 	},
@@ -76941,7 +76941,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/undertunnel/underforemaintenance)
 "xux" = (
@@ -77121,7 +77121,7 @@
 /turf/simulated/floor/dank/rivets,
 /area/ishimura/lower/engineering/bay)
 "xyB" = (
-/obj/machinery/door/airlock/external,
+/obj/structure/machinery/door/airlock/ds/external,
 /turf/simulated/floor/tiled/monotile{
 	incorruptible = 1
 	},
@@ -77260,7 +77260,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/civilian,
+/obj/structure/machinery/door/airlock/ds/civilian,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -77417,7 +77417,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/engineering{
+/obj/structure/machinery/door/airlock/ds/engineering{
 	name = "Machining Room Storage"
 	},
 /turf/simulated/floor/tiled,
@@ -77661,7 +77661,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Gym"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
@@ -78049,7 +78049,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Bathroom"
 	},
 /turf/simulated/floor/dank/bathr,
@@ -78070,7 +78070,7 @@
 /area/ishimura/eva)
 "xLM" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/engineering,
+/obj/structure/machinery/door/airlock/ds/engineering,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -78388,7 +78388,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ishimura/upper/command/bridge)
 "xRf" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	dir = 8;
 	name = "Stall"
 	},
@@ -78457,7 +78457,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
+/obj/structure/machinery/door/airlock/ds/command{
 	dir = 8;
 	name = "Hangar Control Room One"
 	},
@@ -78904,7 +78904,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only,
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Hallway Maintenance"
 	},
 /turf/simulated/floor/plating,
@@ -79006,7 +79006,7 @@
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "yas" = (
 /obj/structure/catwalk,
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
 /obj/structure/machinery/door/firedoor/border_only{
@@ -79095,7 +79095,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/security{
+/obj/structure/machinery/door/airlock/ds/security{
 	name = "Crew Quarters Checkpoint"
 	},
 /turf/simulated/floor/dank/hardwood,
@@ -79425,7 +79425,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/maintenance/central)
 "yfq" = (
-/obj/machinery/door/airlock/maintenance{
+/obj/structure/machinery/door/airlock/ds/maintenance{
 	dir = 4;
 	name = "Executive Freezer Maintenance";
 	req_access = list(11)
@@ -79487,7 +79487,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/lower/maintenance/starboard)
 "ygi" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Large Storage Room"
 	},
 /obj/structure/cable/green{
@@ -79853,7 +79853,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /obj/structure/pipes/standard/simple/hidden/supply,
-/obj/machinery/door/airlock/cargo{
+/obj/structure/machinery/door/airlock/ds/cargo{
 	name = "Cargo Lobby";
 	req_access = list()
 	},
@@ -79876,7 +79876,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/external/glass{
+/obj/structure/machinery/door/airlock/ds/external/glass{
 	dir = 4;
 	frequency = 1380;
 	id_tag = "topdeck_airlock_outer";
@@ -79885,7 +79885,7 @@
 /turf/simulated/floor/reinforced,
 /area/ishimura/eva/airlock)
 "ylE" = (
-/obj/machinery/door/airlock/civilian{
+/obj/structure/machinery/door/airlock/ds/civilian{
 	name = "Cryogenic Storage"
 	},
 /obj/structure/cable{
